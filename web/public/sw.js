@@ -1,11 +1,14 @@
-// ==========================================================================
-// STARK ENGLISH SINGULARITY HUD — SERVICE WORKER
-// 100% Offline Capability, Stale-While-Revalidate Caching, SPA Navigation
-// ==========================================================================
+/**
+ * STARK // English Singularity HUD - Service Worker
+ * Architecture: 100% Offline Progressive Web App
+ * Cache-First for App Shell | Stale-While-Revalidate for Assets & Fonts
+ */
 
-const CACHE_NAME = 'stark-eng-hud-v1';
+const CACHE_VERSION = 'v1.0.0';
+const SHELL_CACHE = `stark-shell-${CACHE_VERSION}`;
+const ASSETS_CACHE = `stark-assets-${CACHE_VERSION}`;
 
-const STATIC_SHELL = [
+const SHELL_RESOURCES = [
   '/',
   '/index.html',
   '/manifest.json',
@@ -14,75 +17,119 @@ const STATIC_SHELL = [
   '/icon-512.png'
 ];
 
-// Install: Cache critical application shell
+// 1. Installation: Pre-cache core architectural app shell
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      console.log('[SW] Pre-caching static shell assets');
-      return cache.addAll(STATIC_SHELL);
-    }).then(() => self.skipWaiting())
+    caches.open(SHELL_CACHE).then((cache) => {
+      return cache.addAll(SHELL_RESOURCES);
+    }).then(() => {
+      return self.skipWaiting();
+    })
   );
 });
 
-// Activate: Purge obsolete cache versions
+// 2. Activation: Clean stale caches and take immediate control of clients
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((keys) => {
+    caches.keys().then((cacheNames) => {
       return Promise.all(
-        keys.map((key) => {
-          if (key !== CACHE_NAME) {
-            console.log('[SW] Evicting deprecated cache:', key);
-            return caches.delete(key);
-          }
-        })
+        cacheNames
+          .filter((name) => name !== SHELL_CACHE && name !== ASSETS_CACHE)
+          .map((staleName) => {
+            console.log(`[PWA SW] Purging obsolete cache: ${staleName}`);
+            return caches.delete(staleName);
+          })
       );
-    }).then(() => self.clients.claim())
+    }).then(() => {
+      return self.clients.claim();
+    })
   );
 });
 
-// Fetch: Strategic Stale-While-Revalidate & Offline Navigation
+// 3. Fetch Strategy: Cache-First for Shell, Stale-While-Revalidate for Assets & Fonts
 self.addEventListener('fetch', (event) => {
-  const req = event.request;
+  // Only process HTTP/HTTPS GET requests
+  if (event.request.method !== 'GET') return;
 
-  // Only handle HTTP/HTTPS GET requests
-  if (req.method !== 'GET') return;
-  if (!req.url.startsWith('http://') && !req.url.startsWith('https://')) return;
+  const url = new URL(event.request.url);
 
-  // 1. Navigation requests (SPA page loads) -> Network first with cache fallback
-  if (req.mode === 'navigate') {
+  // Ignore non-http/https requests (e.g. chrome-extension:)
+  if (!url.protocol.startsWith('http')) return;
+
+  const isNavigation = event.request.mode === 'navigate';
+  const isFont = url.hostname.includes('fonts.googleapis.com') ||
+                 url.hostname.includes('fonts.gstatic.com') ||
+                 url.pathname.match(/\.(woff2?|ttf|otf|eot)$/i);
+  const isStaticAsset = url.pathname.includes('/assets/') ||
+                        url.pathname.match(/\.(js|css|json|png|jpg|jpeg|svg|webp|ico|wav|mp3)$/i);
+
+  // STRATEGY A: Offline App Shell (Cache-First)
+  // Navigation requests and explicit shell paths
+  if (isNavigation || SHELL_RESOURCES.includes(url.pathname)) {
     event.respondWith(
-      fetch(req)
-        .then((networkRes) => {
-          const resClone = networkRes.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(req, resClone));
+      caches.open(SHELL_CACHE).then(async (cache) => {
+        const cached = await cache.match(event.request);
+        if (cached) {
+          // Revalidate shell in background
+          fetch(event.request).then((networkRes) => {
+            if (networkRes && networkRes.status === 200) {
+              cache.put(event.request, networkRes.clone());
+            }
+          }).catch(() => {/* Offline */});
+          return cached;
+        }
+
+        try {
+          const networkRes = await fetch(event.request);
+          if (networkRes && networkRes.status === 200) {
+            cache.put(event.request, networkRes.clone());
+          }
           return networkRes;
-        })
-        .catch(() => {
-          return caches.match(req).then((cached) => {
-            return cached || caches.match('/index.html') || caches.match('/');
-          });
-        })
+        } catch (err) {
+          // Offline fallback for navigation requests
+          const fallback = await cache.match('/index.html') || await cache.match('/');
+          if (fallback) return fallback;
+          throw err;
+        }
+      })
     );
     return;
   }
 
-  // 2. Static Assets, Scripts, Styles, Fonts & Curriculum Data -> Stale-While-Revalidate
-  event.respondWith(
-    caches.match(req).then((cachedResponse) => {
-      const fetchPromise = fetch(req)
-        .then((networkResponse) => {
-          if (networkResponse && networkResponse.status === 200) {
-            const responseClone = networkResponse.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(req, responseClone));
+  // STRATEGY B: Assets & Typography (Stale-While-Revalidate)
+  if (isFont || isStaticAsset) {
+    event.respondWith(
+      caches.open(ASSETS_CACHE).then(async (cache) => {
+        const cachedResponse = await cache.match(event.request);
+
+        const fetchPromise = fetch(event.request).then((networkResponse) => {
+          // Opaque responses (type: 'opaque') are accepted for cross-origin fonts (Google Fonts)
+          if (networkResponse && (networkResponse.status === 200 || networkResponse.type === 'opaque')) {
+            cache.put(event.request, networkResponse.clone());
           }
           return networkResponse;
-        })
-        .catch((err) => {
-          // If offline and not in cache
-          return cachedResponse;
+        }).catch(() => {
+          return null;
         });
 
-      return cachedResponse || fetchPromise;
+        // Serve cached version immediately if available; otherwise wait for network
+        return cachedResponse || (await fetchPromise);
+      })
+    );
+    return;
+  }
+
+  // Default fallback for any remaining requests: Network-First with cache fallback
+  event.respondWith(
+    fetch(event.request).catch(async () => {
+      return caches.match(event.request);
     })
   );
+});
+
+// 4. Message Listener: Support manual SKIP_WAITING prompts
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });

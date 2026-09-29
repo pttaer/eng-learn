@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "parse": "node scripts/parse-curriculum.cjs",
-    "prebuild": "node scripts/parse-curriculum.cjs",
+    "icons": "node scripts/generate-icons.cjs",
+    "prebuild": "node scripts/parse-curriculum.cjs && node scripts/generate-icons.cjs",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"

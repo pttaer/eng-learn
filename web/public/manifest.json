@@ -1,13 +1,20 @@
 {
-  "name": "STARK English Singularity HUD",
-  "short_name": "ENG HUD",
-  "description": "Binary Monochrome English Mastery System & Living Sea Urchin HUD",
+  "name": "STARK // English Singularity HUD",
+  "short_name": "STARK HUD",
+  "description": "Architectural Binary Monochrome English Mastery HUD & Spaced Repetition Neural Interface.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "orientation": "any",
   "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
     {
       "src": "/icon-192.png",
       "sizes": "192x192",
@@ -19,11 +26,10 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
-    },
-    {
-      "src": "/icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
     }
+  ],
+  "categories": [
+    "education",
+    "productivity"
   ]
 }

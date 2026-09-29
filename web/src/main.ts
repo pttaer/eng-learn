@@ -13,6 +13,7 @@ import { CollocationsDossier } from './modules/collocations-dossier';
 import { GrammarDossier } from './modules/grammar-dossier';
 import { MissionLog } from './modules/mission-log';
 import { StorageManager } from './utils/storage';
+import { registerServiceWorker } from './core/pwa';
 import collocationsData from './assets/data/collocations.json';
 
 class App {
@@ -232,4 +233,5 @@ class App {
 // Bootstrap Application on DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
   new App();
+  registerServiceWorker();
 });
