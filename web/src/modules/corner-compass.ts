@@ -18,7 +18,7 @@ export class CornerCompass {
           <span class="compass-item-code">00</span>
           <span class="compass-item-label">CORE</span>
         </button>
-        <button class="compass-menu-item" data-route="read" title="Collocations & Lexicon">
+        <button class="compass-menu-item" data-route="read" title="Intensive Reading & Sentence Mining">
           <span class="compass-item-code">01</span>
           <span class="compass-item-label">READ</span>
         </button>
@@ -34,8 +34,16 @@ export class CornerCompass {
           <span class="compass-item-code">04</span>
           <span class="compass-item-label">SPEAK</span>
         </button>
-        <button class="compass-menu-item" data-route="habits" title="30-Day Mission Log">
+        <button class="compass-menu-item" data-route="vocab" title="Roguelike Vocabulary Engine">
           <span class="compass-item-code">05</span>
+          <span class="compass-item-label">VOCAB</span>
+        </button>
+        <button class="compass-menu-item" data-route="colloc" title="1,000 Collocations Vault">
+          <span class="compass-item-code">06</span>
+          <span class="compass-item-label">COLLOC</span>
+        </button>
+        <button class="compass-menu-item" data-route="habits" title="30-Day Mission Log">
+          <span class="compass-item-code">07</span>
           <span class="compass-item-label">HABITS</span>
         </button>
       </div>

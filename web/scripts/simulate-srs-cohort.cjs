@@ -191,6 +191,89 @@ function runPerfectRetentionTest() {
 }
 
 // -----------------------------------------------------------------------------
+// 5.5 TEST SUITE 2.5: REMIND CARD SAMPLING & TIER MODIFIERS
+// -----------------------------------------------------------------------------
+
+function runRemindCardAndTierTest() {
+  printSubHeader('ROGUELIKE REMIND CARD SAMPLING & DIFFICULTY TIER MODIFIERS');
+
+  // Test Tier Modifiers (createInitialState & rateCard)
+  const cardL1 = SRSEngine.createInitialState('card-lvl-1', 1);
+  const cardL2 = SRSEngine.createInitialState('card-lvl-2', 2);
+  const cardL3 = SRSEngine.createInitialState('card-lvl-3', 3);
+  const cardL4 = SRSEngine.createInitialState('card-lvl-4', 4);
+
+  assert.strictEqual(cardL1.easeFactor, 2.5, 'Level 1 must start with EF 2.50');
+  assert.strictEqual(cardL2.easeFactor, 2.5, 'Level 2 must start with EF 2.50');
+  assert.strictEqual(cardL3.easeFactor, 2.3, 'Level 3 (C2/GRE) must start with EF 2.30');
+  assert.strictEqual(cardL4.easeFactor, 2.3, 'Level 4 must start with EF 2.30');
+
+  // Test rateCard with new card and level parameter
+  const ratedL3 = SRSEngine.rateCard(undefined, 'card-rated-l3', 'good', 3);
+  assert.strictEqual(ratedL3.easeFactor, 2.3, 'New card rated at Level 3 must inherit initial EF 2.30');
+
+  console.log(`  Tier Ease Factors : L1/L2=2.50 | L3/L4=2.30 (Cognitive load modifier verified)`);
+
+  // Test Remind Card Sampling
+  const now = Date.now();
+
+  const testDeck = [
+    { id: 'c1', level: 1 }, // Earlier level than 2, never reviewed -> eligible
+    { id: 'c2', level: 2 }, // Current level 2, no lapses -> ineligible
+    { id: 'c3', level: 2 }, // Current level 2, has lapses, reviewed 3h ago -> eligible
+    { id: 'c4', level: 1 }, // Earlier level, reviewed 30 mins ago -> INELIGIBLE (reviewed < 2h)
+    { id: 'c5', level: 3 }  // Higher level -> ineligible
+  ];
+
+  const cardStates = {
+    c2: {
+      cardId: 'c2', repetitions: 3, interval: 15, easeFactor: 2.5,
+      lastReviewed: now - 3 * 3600 * 1000, dueDate: now + 86400000,
+      totalReviews: 3, totalLapses: 0
+    },
+    c3: {
+      cardId: 'c3', repetitions: 1, interval: 1, easeFactor: 2.1,
+      lastReviewed: now - 3 * 3600 * 1000, dueDate: now + 86400000,
+      totalReviews: 4, totalLapses: 2 // Has lapses!
+    },
+    c4: {
+      cardId: 'c4', repetitions: 2, interval: 6, easeFactor: 2.5,
+      lastReviewed: now - 30 * 60 * 1000, dueDate: now + 86400000, // 30m ago!
+      totalReviews: 2, totalLapses: 0
+    }
+  };
+
+  // Sample multiple times to verify pool contains only c1 or c3
+  const sampledIds = new Set();
+  for (let i = 0; i < 50; i++) {
+    const picked = SRSEngine.getRemindCard(testDeck, cardStates, 2);
+    assert.notStrictEqual(picked, null, 'Should find eligible candidate');
+    assert.ok(picked.id === 'c1' || picked.id === 'c3', `Illegal card sampled: ${picked.id}`);
+    sampledIds.add(picked.id);
+  }
+
+  assert.ok(sampledIds.has('c1'), 'c1 should be sampled (prior level)');
+  assert.ok(sampledIds.has('c3'), 'c3 should be sampled (previous lapses)');
+
+  // Test empty candidate scenario
+  const emptyDeck = [{ id: 'c-high', level: 2 }];
+  const emptyStates = {
+    'c-high': {
+      cardId: 'c-high', repetitions: 1, interval: 1, easeFactor: 2.5,
+      lastReviewed: now - 1000, dueDate: now + 86400000,
+      totalReviews: 1, totalLapses: 0
+    }
+  };
+  const nullResult = SRSEngine.getRemindCard(emptyDeck, emptyStates, 2);
+  assert.strictEqual(nullResult, null, 'Must return null when zero candidates match');
+
+  console.log(`  Remind Sampling   : Evaluated across 50 trials. Exclusions & prioritization verified`);
+  console.log(`  2-Hour Guard      : [PASS] Excluded recently reviewed cards (< 2h)`);
+  console.log(`  Candidate Matrix  : [PASS] Accurately sampled prior tiers & lapse histories`);
+  console.log(`  Null Edge Case    : [PASS] Returned null cleanly on empty eligible pool`);
+}
+
+// -----------------------------------------------------------------------------
 // 6. TEST SUITE 3: 1,000 SYNTHETIC LEARNERS COHORT SIMULATION (30 DAYS)
 // -----------------------------------------------------------------------------
 
@@ -427,6 +510,7 @@ function main() {
 
   runLapseStressTest();
   runPerfectRetentionTest();
+  runRemindCardAndTierTest();
   runCohortSimulation();
 
   const elapsedMs = Date.now() - startTime;

@@ -11,7 +11,7 @@ export interface CollocationItem {
   category: 'EVERYDAY' | 'BUSINESS' | 'ACADEMIC' | 'IDIOMS';
 }
 
-export class LexiconDossier {
+export class CollocationsDossier {
   private container: HTMLElement;
   private currentList: CollocationItem[] = [];
   private currentIndex: number = 0;
@@ -22,7 +22,7 @@ export class LexiconDossier {
 
   constructor() {
     this.container = document.createElement('div');
-    this.container.className = 'dossier-workspace dossier-lexicon interactive';
+    this.container.className = 'dossier-workspace dossier-collocations interactive';
     this.filterCards();
   }
 
@@ -56,7 +56,7 @@ export class LexiconDossier {
       <div class="dossier-control-bar">
         <div class="dossier-tabs">
           <button class="hud-btn filter-tab ${this.activeCategory === 'DUE' ? 'active' : ''}" data-cat="DUE">[⚡ SRS DUE BATCH (20)]</button>
-          <button class="hud-btn filter-tab ${this.activeCategory === 'ALL' ? 'active' : ''}" data-cat="ALL">[ALL 1000]</button>
+          <button class="hud-btn filter-tab ${this.activeCategory === 'ALL' ? 'active' : ''}" data-cat="ALL">[ALL 1,000]</button>
           <button class="hud-btn filter-tab ${this.activeCategory === 'EVERYDAY' ? 'active' : ''}" data-cat="EVERYDAY">[EVERYDAY]</button>
           <button class="hud-btn filter-tab ${this.activeCategory === 'BUSINESS' ? 'active' : ''}" data-cat="BUSINESS">[BUSINESS]</button>
           <button class="hud-btn filter-tab ${this.activeCategory === 'ACADEMIC' ? 'active' : ''}" data-cat="ACADEMIC">[ACADEMIC]</button>
@@ -69,7 +69,7 @@ export class LexiconDossier {
       <div class="dossier-card-slot"></div>
       <div class="dossier-nav-bar">
         <button class="hud-btn nav-btn-prev">[ ← PREV ]</button>
-        <span class="telemetry-value card-counter">INDEX [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]</span>
+        <span class="telemetry-value card-counter">VAULT [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]</span>
         <button class="hud-btn nav-btn-next">[ NEXT → ]</button>
       </div>
     `;
@@ -99,35 +99,38 @@ export class LexiconDossier {
       this.renderCurrentCard();
       const counter = this.container.querySelector('.card-counter');
       if (counter) {
-        counter.textContent = `INDEX [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]`;
+        counter.textContent = `VAULT [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]`;
       }
     });
 
-    // Prev / Next
-    this.container.querySelector('.nav-btn-prev')?.addEventListener('click', () => {
-      if (this.currentIndex > 0) {
-        this.currentIndex -= 1;
-        this.renderCurrentCard();
-      }
-    });
+    // Navigation buttons
+    const prevBtn = this.container.querySelector('.nav-btn-prev');
+    const nextBtn = this.container.querySelector('.nav-btn-next');
 
-    this.container.querySelector('.nav-btn-next')?.addEventListener('click', () => {
-      if (this.currentIndex < this.currentList.length - 1) {
-        this.currentIndex += 1;
-        this.renderCurrentCard();
-      }
-    });
+    prevBtn?.addEventListener('click', () => this.navigateCard(-1));
+    nextBtn?.addEventListener('click', () => this.navigateCard(1));
   }
 
-  public renderCurrentCard(): void {
+  private navigateCard(delta: number): void {
+    if (this.currentList.length === 0) return;
+    this.currentIndex = (this.currentIndex + delta + this.currentList.length) % this.currentList.length;
+    this.renderCurrentCard();
+    const counter = this.container.querySelector('.card-counter');
+    if (counter) {
+      counter.textContent = `VAULT [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]`;
+    }
+  }
+
+  private renderCurrentCard(): void {
     const slot = this.container.querySelector('.dossier-card-slot');
     if (!slot) return;
     slot.innerHTML = '';
 
     if (this.currentList.length === 0) {
       slot.innerHTML = `
-        <div style="font-family: var(--font-mono); font-size: var(--text-sm); text-align: center; padding: 48px; border: 1px dashed var(--ink-primary);">
-          [NO COLLOCATIONS MATCH SEARCH CRITERIA]
+        <div class="empty-state-notice">
+          <div class="telemetry-label">[ZERO RECORDS MATCH QUERY]</div>
+          <p>No collocation entries found matching the filter criteria.</p>
         </div>
       `;
       return;
@@ -136,14 +139,13 @@ export class LexiconDossier {
     const item = this.currentList[this.currentIndex];
     const srsState = StorageManager.getCardState(item.id);
     let statusBadge: 'NEW' | 'REVIEW' | 'MASTERED' = 'NEW';
-
     if (srsState) {
       statusBadge = srsState.repetitions >= 3 ? 'MASTERED' : 'REVIEW';
     }
 
-    const cardHandle = AtomicCard.create({
+    this.currentCardHandle = AtomicCard.create({
       id: item.id,
-      pillar: 'READ',
+      pillar: 'COLLOC',
       category: item.category,
       indexStr: `[ ${String(item.index).padStart(4, '0')} / 1000 ]`,
       statusBadge,
@@ -155,59 +157,64 @@ export class LexiconDossier {
       back: {
         promptLabel: 'TARGET MEANING & USAGE',
         mainText: item.vietnamese,
-        subText: `Core category: ${item.category}`
+        subText: `Core Category: ${item.category}`
       },
       audioText: item.phrase,
-      onRate: (rating) => {
-        const nextState = SRSEngine.rateCard(srsState, item.id, rating);
-        StorageManager.setCardState(item.id, nextState);
-
-        // Advance to next card
-        if (this.currentIndex < this.currentList.length - 1) {
-          this.currentIndex += 1;
-          this.renderCurrentCard();
-        } else if (this.onBatchComplete) {
-          this.onBatchComplete();
-        }
+      onRate: (rating: 'again' | 'good') => {
+        this.handleRate(item.id, rating);
       }
     });
 
-    this.currentCardHandle = cardHandle;
-    slot.appendChild(cardHandle.element);
-
-    const counter = this.container.querySelector('.card-counter');
-    if (counter) {
-      counter.textContent = `INDEX [ ${this.currentIndex + 1} / ${this.currentList.length} ]`;
-    }
+    slot.appendChild(this.currentCardHandle.element);
   }
 
-  public handleGlobalKey(key: string): boolean {
-    if (!this.currentCardHandle) return false;
+  private handleRate(cardId: string, rating: 'again' | 'good'): void {
+    const srsState = StorageManager.getCardState(cardId);
+    const nextCardState = SRSEngine.rateCard(srsState, cardId, rating);
+    StorageManager.setCardState(cardId, nextCardState);
 
-    // Do not capture hotkeys if user is typing in search input
-    const active = document.activeElement;
-    if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA')) {
-      return false;
+    // If reviewing in DUE queue and completed all
+    if (this.activeCategory === 'DUE') {
+      this.filterCards();
+      if (this.currentList.length === 0 && this.onBatchComplete) {
+        this.onBatchComplete();
+        return;
+      }
     }
 
-    if (key === ' ' || key === 'Space') {
-      this.currentCardHandle.flip();
-      return true;
-    }
-    if (key === '1' || key === 'ArrowLeft') {
-      this.currentCardHandle.rate('again');
-      return true;
-    }
-    if (key === '2' || key === 'ArrowRight') {
-      this.currentCardHandle.rate('good');
-      return true;
-    }
-    return false;
+    // Auto advance to next card
+    this.navigateCard(1);
   }
 
   public focusSearch(): void {
     const input = this.container.querySelector('.dossier-search-input') as HTMLInputElement;
     input?.focus();
     input?.select();
+  }
+
+  public handleGlobalKey(key: string): boolean {
+    if (key === 'ArrowRight' || key === 'l') {
+      this.navigateCard(1);
+      return true;
+    }
+    if (key === 'ArrowLeft' || key === 'h') {
+      this.navigateCard(-1);
+      return true;
+    }
+    if (this.currentCardHandle) {
+      if (key === ' ') {
+        this.currentCardHandle.flip();
+        return true;
+      }
+      if (key === '1') {
+        this.currentCardHandle.rate('again');
+        return true;
+      }
+      if (key === '2') {
+        this.currentCardHandle.rate('good');
+        return true;
+      }
+    }
+    return false;
   }
 }

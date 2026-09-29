@@ -314,4 +314,11 @@ fs.writeFileSync(
   'utf-8'
 );
 console.log(`[PARSER] Generated habits.json with ${days.length} days.`);
+
+// ----------------------------------------------------
+// 5 & 6. Generate vocabulary.json & reading.json
+// ----------------------------------------------------
+require('./generate-vocab-reading.cjs');
+
 console.log('[PARSER] All curriculum files successfully compiled.');
+

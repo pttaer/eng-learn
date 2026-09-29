@@ -1,0 +1,475 @@
+{
+  "title": "Intensive Reading & Contextual Sentence Mining Dossier",
+  "pedagogy": "4-Pass Intensive Deconstruction & i+1 Spaced Repetition Mining (Krashen Hypothesis & Syntactic Reverse Engineering)",
+  "articles": [
+    {
+      "id": "reading-art-1",
+      "title": "The Epistemic Commons and the Economics of Synthetic Abundance",
+      "stage": "Stage 3: Advanced Competency (CEFR C1)",
+      "cefrLevel": "C1",
+      "genre": "Philosophy of Technology & Epistemology",
+      "source": "Adapted from long-form essays in The Atlantic & Aeon Essays",
+      "wordCount": 420,
+      "readingTime": "3.5 min @ 120 WPM (Intensive)",
+      "content": "In an era defined by the ubiquitous proliferation of generative synthetic media, the human epistemic commons faces an unprecedented structural crisis. For centuries, institutional trust rested upon an implicit perceptual heuristic: seeing was believing. When an evidentiary recording captured a physical event, judicial bodies and civic assemblies could legitimately anchor their deliberative judgment upon its factual veracity.\n\nToday, however, algorithmic generation tools have rendered authentic audio-visual artifacts virtually indistinguishable from synthesized illusions. This disruption does not merely deceive the gullible; rather, its most pernicious consequence is what legal scholars term the \"liar’s dividend.\" When any recording can be convincingly fabricated, culpable actors can effortlessly dismiss genuine documentation of wrongdoing as algorithmic forgery. Consequently, the social contract descends into pervasive cynicism, where skepticism ceases to be a healthy intellectual virtue and degenerates into an excuse for total disengagement.\n\nTo mitigate this epistemic decay, technologists advocate for cryptographic provenance standards anchored directly into hardware recording chips. Yet technological barriers alone cannot restore civic coherence. Unless educational systems institutionalize rigorous critical literacy—training citizens to scrutinize rhetorical intent, trace citation genealogies, and distinguish empirical verification from seductive resonance—society risks fracturing into insular echo chambers that obviate the very possibility of consensus reality.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Generative AI degrades public trust not only by deceiving individuals but by enabling wrongdoers to dismiss real evidence (the liar’s dividend), requiring both cryptographic hardware verification and deep cognitive literacy to defend.",
+          "markedLexicalTargets": [
+            "epistemic commons",
+            "ubiquitous proliferation",
+            "perceptual heuristic",
+            "factual veracity",
+            "pernicious consequence",
+            "liar’s dividend",
+            "culpable actors",
+            "cryptographic provenance",
+            "obviate consensus reality"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "Why is the \"liar’s dividend\" described as the most pernicious consequence of synthetic media?",
+              "answer": "It allows guilty individuals to avoid accountability by claiming that authentic incriminating evidence is merely an AI fabrication."
+            },
+            {
+              "question": "What technological solution is proposed in paragraph 3?",
+              "answer": "Cryptographic provenance standards embedded directly into camera and recording hardware."
+            },
+            {
+              "question": "According to the author, why is technology alone insufficient to preserve the epistemic commons?",
+              "answer": "Without critical literacy to evaluate intent and evidence, society will still fracture into cynical echo chambers."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "When any recording can be convincingly fabricated, culpable actors can effortlessly dismiss genuine documentation of wrongdoing as algorithmic forgery.",
+            "coreSVO": {
+              "subject": "culpable actors",
+              "verb": "can dismiss",
+              "objectOrComplement": "genuine documentation of wrongdoing as algorithmic forgery"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Adverbial Clause of Condition / Time",
+                "clause": "When any recording can be convincingly fabricated",
+                "function": "Establishes the structural technological precondition for bad-faith denial."
+              }
+            ],
+            "syntacticAnalysis": "Fronted subordinate temporal clause (\"When...\") sets the stage; main clause employs paired adverbs (\"convincingly\", \"effortlessly\") and nominal compounds (\"algorithmic forgery\") to emphasize the asymmetric ease of bad-faith defense."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "Unless educational systems institutionalize rigorous critical literacy—training citizens to scrutinize rhetorical intent, trace citation genealogies, and distinguish empirical verification from seductive resonance—society risks fracturing into insular echo chambers that obviate the very possibility of consensus reality.",
+            "coreSVO": {
+              "subject": "society",
+              "verb": "risks",
+              "objectOrComplement": "fracturing into insular echo chambers"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Conditional Subordinate Clause",
+                "clause": "Unless educational systems institutionalize rigorous critical literacy",
+                "function": "Sets the non-negotiable educational intervention."
+              },
+              {
+                "type": "Parenthetical Participial Elaborations (Em-dash)",
+                "clause": "training citizens to scrutinize..., trace..., and distinguish...",
+                "function": "Triadic parallel verbal infinitive phrases delineating the exact cognitive actions."
+              },
+              {
+                "type": "Relative Restrictive Clause",
+                "clause": "that obviate the very possibility of consensus reality",
+                "function": "Qualifies the fatal civilizational consequence of the echo chambers."
+              }
+            ],
+            "syntacticAnalysis": "Periodic sentence structure with em-dash appositive expansion. The syntactic tension builds through the triadic verbs (\"scrutinize\", \"trace\", \"distinguish\") before resolving into the existential main clause risk."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-art1-1",
+            "targetWord": "epistemic",
+            "partOfSpeech": "adjective",
+            "ipa": "/ˌep.ɪˈstiː.mɪk/",
+            "definition": "Relating to knowledge or to the degree of its validation and grounds for truth.",
+            "vietnamese": "thuộc về tri thức luận, liên quan đến tính xác thực của nhận thức",
+            "contextSentence": "In an era defined by the ubiquitous proliferation of generative synthetic media, the human epistemic commons faces an unprecedented structural crisis.",
+            "collocations": [
+              "epistemic commons",
+              "epistemic crisis",
+              "epistemic vigilance",
+              "epistemic framework"
+            ],
+            "etymology": "Greek episteme (knowledge, understanding) from epistasthai (to know how)."
+          },
+          {
+            "id": "mine-art1-2",
+            "targetWord": "pernicious",
+            "partOfSpeech": "adjective",
+            "ipa": "/pəˈnɪʃ.əs/",
+            "definition": "Having a harmful effect, especially in a gradual, insidious, or subtle way.",
+            "vietnamese": "nguy hại ngấm ngầm, độc hại ăn sâu dần theo thời gian",
+            "contextSentence": "This disruption does not merely deceive the gullible; rather, its most pernicious consequence is what legal scholars term the \"liar’s dividend.\"",
+            "collocations": [
+              "pernicious consequence",
+              "pernicious influence",
+              "pernicious myth"
+            ],
+            "etymology": "Latin perniciosus (destructive), from pernicies (ruin, destruction)."
+          },
+          {
+            "id": "mine-art1-3",
+            "targetWord": "veracity",
+            "partOfSpeech": "noun",
+            "ipa": "/vəˈræs.ə.ti/",
+            "definition": "Conformity to facts; accuracy, truthfulness, and habitual adherence to truth.",
+            "vietnamese": "tính xác thực, chân thực, sự phù hợp với sự thật khách quan",
+            "contextSentence": "Civic assemblies could legitimately anchor their deliberative judgment upon its factual veracity.",
+            "collocations": [
+              "factual veracity",
+              "question the veracity of",
+              "verify the veracity"
+            ],
+            "etymology": "Latin veracitas from verax (truthful), from verus (true)."
+          },
+          {
+            "id": "mine-art1-4",
+            "targetWord": "obviate",
+            "partOfSpeech": "verb",
+            "ipa": "/ˈɒb.vi.eɪt/",
+            "definition": "Remove a need or difficulty; anticipate and make unnecessary.",
+            "vietnamese": "loại bỏ sự cần thiết của điều gì, thủ tiêu khả năng",
+            "contextSentence": "Society risks fracturing into insular echo chambers that obviate the very possibility of consensus reality.",
+            "collocations": [
+              "obviate the need for",
+              "obviate the possibility of",
+              "effectively obviate"
+            ],
+            "etymology": "Latin obviare (act to meet or prevent), from ob (against) + via (way)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "Generative media fundamentally erodes institutional trust by providing culpable actors with plausible deniability (the liar’s dividend). Countering this epistemic decay requires not merely cryptographic hardware provenance standards, but cultivating rigorous civic critical literacy to evaluate evidence, lest hyper-polarized echo chambers permanently obviate consensus reality.",
+          "incorporatedVocabulary": [
+            "epistemic",
+            "liar’s dividend",
+            "provenance",
+            "obviate",
+            "veracity"
+          ],
+          "syntacticReconstruction": "Although hardware-level cryptographic signatures can verify digital provenance, they cannot forestall democratic paralysis unless citizens cultivate the analytical acumen to scrutinize rhetorical manipulation."
+        }
+      }
+    },
+    {
+      "id": "reading-art-2",
+      "title": "Cognitive Bandwidth, Subvocalization, and the Mechanics of Deep Reading",
+      "stage": "Stage 4: Mastery & Polymathy (CEFR C2)",
+      "cefrLevel": "C2",
+      "genre": "Cognitive Neurobiology & Educational Psychology",
+      "source": "Adapted from Nature Neuroscience Commentary & Cognitive Literary Theory",
+      "wordCount": 460,
+      "readingTime": "3.8 min @ 120 WPM (Intensive)",
+      "content": "The human brain did not evolve a dedicated neurological circuit for deciphering printed typography; instead, literacy is an extraordinary feat of neuronal recycling, repurposing visual object recognition pathways alongside ancient phonological and semantic networks. Consequently, the transition from laborious decoding to effortless sight recognition hinges entirely upon how cognitive bandwidth is allocated across working memory.\n\nAt foundational stages, readers are bottlenecked by subvocalization—the covert auditory articulation of every printed syllable in the mind's inner ear. While subvocalization provides essential phonological scaffolding for novice comprehenders grappling with complex syntax, its persistence at advanced stages imposes a severe velocity ceiling of roughly two hundred words per minute. True reading mastery requires suppressing this involuntary acoustic simulation on familiar syntactic terrain, thereby liberating cognitive resources for high-order inference, contextual synthesis, and rhetorical evaluation.\n\nMoreover, deliberate reading differs profoundly from the distracted skimming conditioned by digital hyperlinks. In extensive reading, immersion in rich syntactic architectures cultivates deep cognitive patience, allowing the brain to internalize subtle register shifts and sentence structures organically through Krashen’s celebrated input hypothesis ($i+1$). Conversely, intensive reading acts as the surgeon’s scalpel: by subjecting difficult paragraphs to rigorous clause deconstruction and active sentence mining, the polymath converts fleeting encounters with unfamiliar lexical items into durable, retrievable engrams. Without this dual equilibrium between extensive immersion and intensive dissection, genuine polyglot fluency remains an elusive mirage.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Reading is an acquired neuronal recycling process where overcoming the speed limit of subvocalization frees working memory for high-level analysis; true mastery demands a balanced regime of extensive immersion and intensive syntactic dissection.",
+          "markedLexicalTargets": [
+            "neuronal recycling",
+            "cognitive bandwidth",
+            "subvocalization",
+            "phonological scaffolding",
+            "involuntary acoustic simulation",
+            "high-order inference",
+            "input hypothesis",
+            "retrievable engrams"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "Why does the text state that the human brain did not evolve a dedicated reading circuit?",
+              "answer": "Because reading is an evolutionary recent invention that repurposes existing visual and phonological brain regions (neuronal recycling)."
+            },
+            {
+              "question": "What is the role of subvocalization, and why does it become a hindrance at advanced stages?",
+              "answer": "It helps novices decode words through inner speech, but caps reading speed at ~200 WPM, consuming cognitive bandwidth needed for higher inference."
+            },
+            {
+              "question": "What metaphor illustrates the complementary nature of extensive and intensive reading?",
+              "answer": "Extensive reading provides deep cognitive immersion (rich terrain), while intensive reading functions as the surgeon’s scalpel (precise clause dissection)."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "While subvocalization provides essential phonological scaffolding for novice comprehenders grappling with complex syntax, its persistence at advanced stages imposes a severe velocity ceiling of roughly two hundred words per minute.",
+            "coreSVO": {
+              "subject": "its persistence at advanced stages",
+              "verb": "imposes",
+              "objectOrComplement": "a severe velocity ceiling of roughly two hundred words per minute"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Concessive Adverbial Clause",
+                "clause": "While subvocalization provides essential phonological scaffolding for novice comprehenders",
+                "function": "Acknowledges the pedagogical utility of subvocalization for beginners before contrasting its advanced drawback."
+              },
+              {
+                "type": "Participial Phrase Modifier",
+                "clause": "grappling with complex syntax",
+                "function": "Post-modifies \"novice comprehenders\", describing their cognitive struggle."
+              }
+            ],
+            "syntacticAnalysis": "Concessive introductory clause (\"While...\") balances the tension between developmental necessity and long-term limitation. Main clause utilizes nominal abstractions (\"persistence\", \"velocity ceiling\") to establish quantitative clarity."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "By subjecting difficult paragraphs to rigorous clause deconstruction and active sentence mining, the polymath converts fleeting encounters with unfamiliar lexical items into durable, retrievable engrams.",
+            "coreSVO": {
+              "subject": "the polymath",
+              "verb": "converts",
+              "objectOrComplement": "fleeting encounters with unfamiliar lexical items into durable, retrievable engrams"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Instrumental Prepositional Participial Phrase",
+                "clause": "By subjecting difficult paragraphs to rigorous clause deconstruction and active sentence mining",
+                "function": "Specifies the deliberate procedural methodology."
+              }
+            ],
+            "syntacticAnalysis": "Fronted instrumental phrase leads directly into the transformative verb \"converts X into Y\", contrasting the ephemeral (\"fleeting encounters\") with the permanent (\"durable, retrievable engrams\")."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-art2-1",
+            "targetWord": "subvocalization",
+            "partOfSpeech": "noun",
+            "ipa": "/ˌsʌb.vəʊ.kəl.aɪˈzeɪ.ʃən/",
+            "definition": "The internal, silent articulation of words while reading.",
+            "vietnamese": "sự phát âm thầm trong đầu khi đọc chữ",
+            "contextSentence": "At foundational stages, readers are bottlenecked by subvocalization—the covert auditory articulation of every printed syllable in the mind's inner ear.",
+            "collocations": [
+              "suppress subvocalization",
+              "eliminate subvocalization",
+              "auditory subvocalization"
+            ],
+            "etymology": "Prefix sub- (under) + vocalize (utter sound, Latin vocalis)."
+          },
+          {
+            "id": "mine-art2-2",
+            "targetWord": "scaffolding",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈskæf.əl.dɪŋ/",
+            "definition": "Temporary support provided to learners to assist them in achieving higher levels of comprehension.",
+            "vietnamese": "khung nâng đỡ sư phạm, giá đỡ hỗ trợ học tập tạm thời",
+            "contextSentence": "Subvocalization provides essential phonological scaffolding for novice comprehenders grappling with complex syntax.",
+            "collocations": [
+              "instructional scaffolding",
+              "cognitive scaffolding",
+              "phonological scaffolding"
+            ],
+            "etymology": "Old French eschafaut (viewing platform, scaffold)."
+          },
+          {
+            "id": "mine-art2-3",
+            "targetWord": "engram",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈen.ɡræm/",
+            "definition": "A hypothetical permanent trace left by an experience in the brain’s neural tissue; a memory trace.",
+            "vietnamese": "dấu vết ký ức thần kinh, vết hằn ký ức sinh học trong não",
+            "contextSentence": "The polymath converts fleeting encounters with unfamiliar lexical items into durable, retrievable engrams.",
+            "collocations": [
+              "memory engram",
+              "neural engram",
+              "retrievable engrams"
+            ],
+            "etymology": "Greek en (in) + gramma (letter, that which is written)."
+          },
+          {
+            "id": "mine-art2-4",
+            "targetWord": "subordinate",
+            "partOfSpeech": "adjective / verb",
+            "ipa": "/səˈbɔː.dɪ.nət/",
+            "definition": "Lower in rank, importance, or syntactic dependency.",
+            "vietnamese": "phụ thuộc, thứ yếu (trong cú pháp: mệnh đề phụ)",
+            "contextSentence": "Immersion in rich syntactic architectures allows the brain to parse complex subordinate clauses without conscious strain.",
+            "collocations": [
+              "subordinate clause",
+              "subordinate conjunction",
+              "subordinate role"
+            ],
+            "etymology": "Latin sub- (under) + ordinare (to order, rank)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "Reading recruits repurposed neural pathways where early subvocalization establishes vital phonological scaffolding yet restricts reading velocity if unsuppressed. Achieving polymathic reading demands balancing extensive immersion for intuitive pattern absorption with intensive clause dissection to forge durable, retrievable memory engrams from challenging syntax.",
+          "incorporatedVocabulary": [
+            "subvocalization",
+            "scaffolding",
+            "engram",
+            "neuronal recycling",
+            "velocity ceiling"
+          ],
+          "syntacticReconstruction": "Rather than treating subvocalization as a permanent deficit, advanced readers leverage it selectively for dense poetic prose while suppressing it during analytical scanning."
+        }
+      }
+    },
+    {
+      "id": "reading-art-3",
+      "title": "The Architecture of Solitude and Attention in Knowledge Work",
+      "stage": "Stage 3: Advanced Competency (CEFR C1)",
+      "cefrLevel": "C1",
+      "genre": "Cultural Sociology & Deep Work Philosophy",
+      "source": "Adapted from Cal Newport & Joan Didion essay anthologies",
+      "wordCount": 440,
+      "readingTime": "3.6 min @ 120 WPM (Intensive)",
+      "content": "In the contemporary knowledge economy, hyper-connectivity is frequently conflated with organizational velocity. Open-plan offices and asynchronous notification streams promise frictionless collaboration, yet their insidious side effect is the systematic fragmentation of human attention. When deep, uninterrupted solitude is eliminated from daily practice, cognitive throughput degrades from rigorous original synthesis into reactive, performative busywork.\n\nPsychologists observe that switching focus between collaborative pings and analytical contemplation leaves an exhausting residue known as \"attention residue.\" Even a brief five-second glance at an inbox notification traps working memory in a compromised state for over fifteen minutes. Under such fragmented conditions, knowledge workers lose the capacity for sustained syntactic immersion—the precise mental patience required to draft airtight legal briefs, deconstruct complex mathematical proofs, or read dense philosophical treatises without drifting into digital escapism.\n\nReclaiming cognitive autonomy requires institutionalizing deliberate boundaries. Elite practitioners do not merely resist distraction through sheer willpower; they architect low-entropy physical and digital sanctuaries. By scheduling multi-hour blocks of sacred monastic silence and treating attention as a finite, non-renewable capital asset, the modern intellectual safeguards the psychological conditions under which profound insight can quietly germinate.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Constant workplace connectivity destroys the sustained solitude necessary for complex knowledge work via attention residue, requiring deliberate environmental architecture rather than mere willpower to defend deep cognitive focus.",
+          "markedLexicalTargets": [
+            "conflated with",
+            "insidious side effect",
+            "cognitive throughput",
+            "attention residue",
+            "syntactic immersion",
+            "cognitive autonomy",
+            "low-entropy sanctuaries",
+            "germinate"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "What false equivalence does the knowledge economy make regarding connectivity?",
+              "answer": "It mistakenly conflates hyper-connectivity with genuine organizational velocity."
+            },
+            {
+              "question": "How does \"attention residue\" impair analytical capability?",
+              "answer": "Even a 5-second distraction leaves working memory partially tied up with the previous task for over 15 minutes."
+            },
+            {
+              "question": "What is the author's view on willpower versus environmental design?",
+              "answer": "Willpower is insufficient; elite practitioners succeed by deliberately architecting low-entropy, distraction-free physical and digital sanctuaries."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "Open-plan offices and asynchronous notification streams promise frictionless collaboration, yet their insidious side effect is the systematic fragmentation of human attention.",
+            "coreSVO": {
+              "subject": "Open-plan offices and asynchronous notification streams / their insidious side effect",
+              "verb": "promise / is",
+              "objectOrComplement": "frictionless collaboration / the systematic fragmentation of human attention"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Coordinated Adversative Compound Sentence",
+                "clause": "yet their insidious side effect is...",
+                "function": "Contrasts corporate marketing promises against the harsh neurological reality."
+              }
+            ],
+            "syntacticAnalysis": "Compound coordination linked by the adversative conjunction \"yet\". The syntactic juxtaposition pits the aspirational adjective \"frictionless\" directly against the damning nominal phrase \"systematic fragmentation\"."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "By scheduling multi-hour blocks of sacred monastic silence and treating attention as a finite, non-renewable capital asset, the modern intellectual safeguards the psychological conditions under which profound insight can quietly germinate.",
+            "coreSVO": {
+              "subject": "the modern intellectual",
+              "verb": "safeguards",
+              "objectOrComplement": "the psychological conditions"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Compound Gerund Prepositional Phrase",
+                "clause": "By scheduling multi-hour blocks... and treating attention...",
+                "function": "Specifies the twin operational habits of elite intellectual defense."
+              },
+              {
+                "type": "Relative Clause with Fronted Preposition",
+                "clause": "under which profound insight can quietly germinate",
+                "function": "Modifies \"psychological conditions\", expressing the fertile environment for creativity."
+              }
+            ],
+            "syntacticAnalysis": "Fronted compound participial phrases establish the dual disciplines of time-blocking and philosophical re-evaluation. The sentence concludes with organic metaphorical imagery (\"quietly germinate\")."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-art3-1",
+            "targetWord": "conflate",
+            "partOfSpeech": "verb",
+            "ipa": "/kənˈfleɪt/",
+            "definition": "Combine two or more separate ideas, entities, or arguments into one, often erroneously.",
+            "vietnamese": "đánh đồng, trộn lẫn hai khái niệm riêng biệt làm một",
+            "contextSentence": "In the contemporary knowledge economy, hyper-connectivity is frequently conflated with organizational velocity.",
+            "collocations": [
+              "conflate two concepts",
+              "erroneously conflated",
+              "conflate correlation with causation"
+            ],
+            "etymology": "Latin conflat- (blown together), from con- (together) + flare (to blow)."
+          },
+          {
+            "id": "mine-art3-2",
+            "targetWord": "insidious",
+            "partOfSpeech": "adjective",
+            "ipa": "/ɪnˈsɪd.i.əs/",
+            "definition": "Proceeding in a gradual, subtle way, but with very harmful effects.",
+            "vietnamese": "nguy hiểm ngấm ngầm, có tác hại âm thầm mà khôn lường",
+            "contextSentence": "Open-plan offices promise frictionless collaboration, yet their insidious side effect is the systematic fragmentation of attention.",
+            "collocations": [
+              "insidious threat",
+              "insidious nature",
+              "insidious disease"
+            ],
+            "etymology": "Latin insidiosus, from insidiae (ambush, plot)."
+          },
+          {
+            "id": "mine-art3-3",
+            "targetWord": "residue",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈrez.ɪ.djuː/",
+            "definition": "A small amount of something that remains after the main part has gone or been taken.",
+            "vietnamese": "phần tàn dư, cặn bã còn vương lại",
+            "contextSentence": "Switching focus between collaborative pings and contemplation leaves an exhausting residue known as \"attention residue.\"",
+            "collocations": [
+              "attention residue",
+              "toxic residue",
+              "chemical residue"
+            ],
+            "etymology": "Old French residu, from Latin residuum (that which remains)."
+          },
+          {
+            "id": "mine-art3-4",
+            "targetWord": "germinate",
+            "partOfSpeech": "verb",
+            "ipa": "/ˈdʒɜː.mɪ.neɪt/",
+            "definition": "Begin to grow and put out shoots after a period of dormancy; or come into inception (of an idea).",
+            "vietnamese": "nảy mầm, đâm chồi, bắt đầu hình thành và phát triển (ý tưởng)",
+            "contextSentence": "The modern intellectual safeguards the psychological conditions under which profound insight can quietly germinate.",
+            "collocations": [
+              "germinate an idea",
+              "seeds germinate",
+              "allowed to germinate"
+            ],
+            "etymology": "Latin germinat- (sprouted), from germen (sprout, germ)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "Modern organizations erroneously conflate constant communication with velocity, producing cognitive fragmentation and debilitating attention residue. Shielding analytical throughput demands establishing low-entropy monastic routines where attention is guarded as finite capital, providing the deep uninterrupted space required for breakthrough insights to germinate.",
+          "incorporatedVocabulary": [
+            "conflate",
+            "attention residue",
+            "low-entropy",
+            "germinate",
+            "cognitive throughput"
+          ],
+          "syntacticReconstruction": "Rather than succumbing to performative responsiveness, high-value contributors insulate their working memory through scheduled offline sanctuaries."
+        }
+      }
+    }
+  ]
+}

@@ -19,23 +19,32 @@ export interface SRSCardState {
 
 export interface SRSDeckItem {
   id: string;
+  level?: number;
   [key: string]: any;
 }
 
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
+const TWO_HOURS_MS = 2 * 60 * 60 * 1000;
 const MIN_EASE_FACTOR = 1.3;
 const DEFAULT_EASE_FACTOR = 2.5;
+const TIER3_DEFAULT_EASE_FACTOR = 2.3;
 
 export class SRSEngine {
   /**
    * Initializes a default state for a new card.
+   * Higher difficulty levels (Level >= 3, e.g. C2/GRE) start with default Ease Factor 2.30
+   * (instead of 2.50) to reflect intrinsic cognitive load.
    */
-  public static createInitialState(cardId: string): SRSCardState {
+  public static createInitialState(cardId: string, level: number = 1): SRSCardState {
+    const easeFactor = (typeof level === 'number' && level >= 3)
+      ? TIER3_DEFAULT_EASE_FACTOR
+      : DEFAULT_EASE_FACTOR;
+
     return {
       cardId,
       repetitions: 0,
       interval: 0,
-      easeFactor: DEFAULT_EASE_FACTOR,
+      easeFactor,
       lastReviewed: 0,
       dueDate: Date.now(), // Due immediately
       totalReviews: 0,
@@ -51,11 +60,12 @@ export class SRSEngine {
   public static rateCard(
     currentState: SRSCardState | undefined,
     cardId: string,
-    rating: SRSRating
+    rating: SRSRating,
+    level: number = 1
   ): SRSCardState {
     const state: SRSCardState = currentState
       ? { ...currentState }
-      : this.createInitialState(cardId);
+      : this.createInitialState(cardId, level);
 
     const now = Date.now();
     state.lastReviewed = now;
@@ -110,6 +120,54 @@ export class SRSEngine {
     overdue.sort((a, b) => cardStates[a.id].dueDate - cardStates[b.id].dueDate);
 
     return [...overdue, ...unseen].slice(0, limit);
+  }
+
+  /**
+   * Roguelike surprise Remind Card injection.
+   * Samples a card to test and reinforce long-term retention:
+   * - Must be from an earlier level (level < currentLevel) OR have previous lapses (totalLapses > 0).
+   * - Guard: Ensures the card has NOT been reviewed in the last 2 hours.
+   * Returns null if no eligible candidates exist.
+   */
+  public static getRemindCard<T extends SRSDeckItem = SRSDeckItem>(
+    deck: T[],
+    cardStates: Record<string, SRSCardState>,
+    currentLevel: number
+  ): T | null {
+    const now = Date.now();
+
+    const candidates = deck.filter(item => {
+      const state = cardStates[item.id];
+
+      // Guard: Exclude if reviewed in the last 2 hours
+      if (state && state.lastReviewed > 0 && (now - state.lastReviewed < TWO_HOURS_MS)) {
+        return false;
+      }
+
+      // Check item difficulty level
+      let itemLevel = 1;
+      if (typeof item.level === 'number') {
+        itemLevel = item.level;
+      } else if (item.category) {
+        const cat = String(item.category).toUpperCase();
+        if (cat === 'EVERYDAY') itemLevel = 1;
+        else if (cat === 'BUSINESS') itemLevel = 2;
+        else if (cat === 'ACADEMIC') itemLevel = 3;
+        else if (cat === 'IDIOMS') itemLevel = 4;
+      }
+
+      const isEarlierLevel = itemLevel < currentLevel;
+      const hasLapses = !!(state && state.totalLapses > 0);
+
+      return isEarlierLevel || hasLapses;
+    });
+
+    if (candidates.length === 0) {
+      return null;
+    }
+
+    const randomIndex = Math.floor(Math.random() * candidates.length);
+    return candidates[randomIndex];
   }
 
   /**

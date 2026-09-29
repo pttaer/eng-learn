@@ -1,6 +1,6 @@
 import { AudioSynthesizer } from './audio-synthesizer';
 
-export type PillarId = 'singularity' | 'read' | 'write' | 'listen' | 'speak';
+export type PillarId = 'singularity' | 'read' | 'write' | 'listen' | 'speak' | 'vocab' | 'colloc';
 
 export interface PillarGateway {
   id: PillarId;
@@ -43,10 +43,12 @@ export class SeaUrchin {
 
   private initGateways(): void {
     this.gateways = [
-      { id: 'read', label: 'READ', code: '01', angle: -Math.PI / 2, distance: 75, x: 0, y: 0, radius: 24, hovered: false },
-      { id: 'write', label: 'WRITE', code: '02', angle: 0, distance: 75, x: 0, y: 0, radius: 24, hovered: false },
-      { id: 'listen', label: 'LISTEN', code: '03', angle: Math.PI / 2, distance: 75, x: 0, y: 0, radius: 24, hovered: false },
-      { id: 'speak', label: 'SPEAK', code: '04', angle: Math.PI, distance: 75, x: 0, y: 0, radius: 24, hovered: false },
+      { id: 'read', label: 'READ', code: '01', angle: -Math.PI / 2, distance: 88, x: 0, y: 0, radius: 22, hovered: false },
+      { id: 'write', label: 'WRITE', code: '02', angle: -Math.PI / 6, distance: 88, x: 0, y: 0, radius: 22, hovered: false },
+      { id: 'listen', label: 'LISTEN', code: '03', angle: Math.PI / 6, distance: 88, x: 0, y: 0, radius: 22, hovered: false },
+      { id: 'speak', label: 'SPEAK', code: '04', angle: Math.PI / 2, distance: 88, x: 0, y: 0, radius: 22, hovered: false },
+      { id: 'vocab', label: 'VOCAB', code: '05', angle: (5 * Math.PI) / 6, distance: 88, x: 0, y: 0, radius: 22, hovered: false },
+      { id: 'colloc', label: 'COLLOC', code: '06', angle: -(5 * Math.PI) / 6, distance: 88, x: 0, y: 0, radius: 22, hovered: false },
     ];
   }
 

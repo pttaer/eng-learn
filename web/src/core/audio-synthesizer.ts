@@ -7,7 +7,9 @@ export type SoundEffectType =
   | 'urchin-hum'
   | 'flip'
   | 'absorb'
-  | 'alarm';
+  | 'alarm'
+  | 'remind-drop'
+  | 'level-up';
 
 export class AudioSynthesizer {
   private static ctx: AudioContext | null = null;
@@ -173,6 +175,12 @@ export class AudioSynthesizer {
       case 'alarm':
         this.playAlarm(t);
         break;
+      case 'remind-drop':
+        this.playRemindDrop(t);
+        break;
+      case 'level-up':
+        this.playLevelUp(t);
+        break;
       default:
         break;
     }
@@ -328,6 +336,71 @@ export class AudioSynthesizer {
 
     osc.start(t);
     osc.stop(t + 0.13);
+  }
+
+  /**
+   * Glitch/warp frequency chirp (480Hz -> 180Hz drop with high-pass modulation, 100ms) for Remind Card injection.
+   */
+  private static playRemindDrop(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+    const osc = this.ctx.createOscillator();
+    const filter = this.ctx.createBiquadFilter();
+    const gain = this.ctx.createGain();
+
+    osc.type = 'sawtooth';
+    osc.frequency.setValueAtTime(480, t);
+    osc.frequency.exponentialRampToValueAtTime(180, t + 0.09);
+
+    filter.type = 'highpass';
+    filter.frequency.setValueAtTime(700, t);
+    filter.frequency.exponentialRampToValueAtTime(220, t + 0.09);
+    filter.Q.setValueAtTime(3.5, t);
+
+    // Micro-attack from EPSILON baseline, then decay back to EPSILON baseline (100ms total)
+    gain.gain.setValueAtTime(this.EPSILON, t);
+    gain.gain.exponentialRampToValueAtTime(0.3, t + 0.004);
+    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.095);
+
+    osc.connect(filter);
+    filter.connect(gain);
+    gain.connect(this.masterGain);
+
+    osc.start(t);
+    osc.stop(t + 0.10);
+  }
+
+  /**
+   * Ascending resonant arpeggio/chime (440Hz -> 660Hz -> 880Hz, 240ms) for vocabulary tier ascension.
+   */
+  private static playLevelUp(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+
+    const notes = [
+      { freq: 440, start: 0, dur: 0.09, peak: 0.25 },
+      { freq: 660, start: 0.07, dur: 0.09, peak: 0.28 },
+      { freq: 880, start: 0.14, dur: 0.10, peak: 0.32 }
+    ];
+
+    notes.forEach(({ freq, start, dur, peak }) => {
+      const osc = this.ctx!.createOscillator();
+      const gain = this.ctx!.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, t + start);
+
+      const nStart = t + start;
+      const nEnd = nStart + dur;
+
+      gain.gain.setValueAtTime(this.EPSILON, nStart);
+      gain.gain.exponentialRampToValueAtTime(peak, nStart + 0.005);
+      gain.gain.exponentialRampToValueAtTime(this.EPSILON, nEnd - 0.005);
+
+      osc.connect(gain);
+      gain.connect(this.masterGain!);
+
+      osc.start(nStart);
+      osc.stop(nEnd);
+    });
   }
 
   /**

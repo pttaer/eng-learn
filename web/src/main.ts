@@ -4,10 +4,12 @@ import { PerspectiveCanvas } from './core/perspective-canvas';
 import { Router, RouteId } from './core/router';
 import { HeaderHUD } from './modules/header-hud';
 import { CornerCompass } from './modules/corner-compass';
-import { LexiconDossier } from './modules/lexicon-dossier';
+import { ReadingDossier } from './modules/reading-dossier';
 import { WritingDossier } from './modules/writing-dossier';
 import { ListeningDossier } from './modules/listening-dossier';
 import { SpeakingDossier } from './modules/speaking-dossier';
+import { VocabularyDossier } from './modules/vocabulary-dossier';
+import { CollocationsDossier } from './modules/collocations-dossier';
 import { MissionLog } from './modules/mission-log';
 import { StorageManager } from './utils/storage';
 import collocationsData from './assets/data/collocations.json';
@@ -18,10 +20,12 @@ class App {
   private cornerCompass: CornerCompass;
   private perspectiveCanvas: PerspectiveCanvas;
 
-  private lexiconDossier: LexiconDossier;
+  private readingDossier: ReadingDossier;
   private writingDossier: WritingDossier;
   private listeningDossier: ListeningDossier;
   private speakingDossier: SpeakingDossier;
+  private vocabularyDossier: VocabularyDossier;
+  private collocationsDossier: CollocationsDossier;
   private missionLog: MissionLog;
 
   private workspaceMount: HTMLElement;
@@ -44,18 +48,22 @@ class App {
     this.cornerCompass = new CornerCompass();
     document.getElementById('compass-mount')?.appendChild(this.cornerCompass.getElement());
 
-    // 3. Initialize Study Dossiers
-    this.lexiconDossier = new LexiconDossier();
+    // 3. Initialize Study Dossiers (6 Pillars + Habits)
+    this.readingDossier = new ReadingDossier();
     this.writingDossier = new WritingDossier();
     this.listeningDossier = new ListeningDossier();
     this.speakingDossier = new SpeakingDossier();
+    this.vocabularyDossier = new VocabularyDossier();
+    this.collocationsDossier = new CollocationsDossier();
     this.missionLog = new MissionLog();
 
     // Bind Completion Rituals
-    this.lexiconDossier.onBatchComplete = () => this.showCompletionReceipt('READ // COLLOCATIONS');
-    this.writingDossier.onBatchComplete = () => this.showCompletionReceipt('WRITE // FRANKLIN COPYWORK');
-    this.listeningDossier.onBatchComplete = () => this.showCompletionReceipt('LISTEN // ACTIVE TRANSCRIPTION');
-    this.speakingDossier.onBatchComplete = () => this.showCompletionReceipt('SPEAK // 4-3-2 DRILL');
+    this.readingDossier.onBatchComplete = () => this.showCompletionReceipt('READ // INTENSIVE 4-PASS COMPLETE');
+    this.writingDossier.onBatchComplete = () => this.showCompletionReceipt('WRITE // FRANKLIN COPYWORK COMPLETE');
+    this.listeningDossier.onBatchComplete = () => this.showCompletionReceipt('LISTEN // ACTIVE TRANSCRIPTION COMPLETE');
+    this.speakingDossier.onBatchComplete = () => this.showCompletionReceipt('SPEAK // 4-3-2 DRILL COMPLETE');
+    this.vocabularyDossier.onBatchComplete = () => this.showCompletionReceipt('VOCAB // ROGUELIKE RUN COMPLETE');
+    this.collocationsDossier.onBatchComplete = () => this.showCompletionReceipt('COLLOC // 1,000 VAULT BATCH COMPLETE');
     this.missionLog.onDayCompleted = (day) => this.showCompletionReceipt(`MISSION DAY ${day}`);
 
     // 4. Initialize Router
@@ -102,8 +110,8 @@ class App {
 
     switch (route) {
       case 'read':
-        this.workspaceMount.appendChild(this.lexiconDossier.render());
-        this.activeDossierHandle = this.lexiconDossier;
+        this.workspaceMount.appendChild(this.readingDossier.render());
+        this.activeDossierHandle = this.readingDossier;
         break;
       case 'write':
         this.workspaceMount.appendChild(this.writingDossier.render());
@@ -116,6 +124,14 @@ class App {
       case 'speak':
         this.workspaceMount.appendChild(this.speakingDossier.render());
         this.activeDossierHandle = this.speakingDossier;
+        break;
+      case 'vocab':
+        this.workspaceMount.appendChild(this.vocabularyDossier.render());
+        this.activeDossierHandle = this.vocabularyDossier;
+        break;
+      case 'colloc':
+        this.workspaceMount.appendChild(this.collocationsDossier.render());
+        this.activeDossierHandle = this.collocationsDossier;
         break;
       case 'habits':
         this.workspaceMount.appendChild(this.missionLog.render());
@@ -135,14 +151,14 @@ class App {
         return;
       }
 
-      // Ctrl+K opens / focuses search
+      // Ctrl+K opens / focuses Collocations Vault instant search
       if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
-        if (this.router.getCurrentRoute() !== 'read') {
-          this.router.navigate('read');
-          setTimeout(() => this.lexiconDossier.focusSearch(), 50);
+        if (this.router.getCurrentRoute() !== 'colloc') {
+          this.router.navigate('colloc');
+          setTimeout(() => this.collocationsDossier.focusSearch(), 50);
         } else {
-          this.lexiconDossier.focusSearch();
+          this.collocationsDossier.focusSearch();
         }
         return;
       }
