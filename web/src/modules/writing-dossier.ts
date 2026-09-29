@@ -249,19 +249,19 @@ export class WritingDossier {
             <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; background: rgba(0,0,0,0.02); border: 1px solid var(--border-hairline); padding: 12px 16px; border-radius: 4px; margin-bottom: 20px; font-family: var(--font-mono); font-size: 12px; text-align: center;">
               <div>
                 <div class="telemetry-label">ACCURACY</div>
-                <div style="font-size: 16px; font-weight: 700;">${metrics.accuracyPct}%</div>
+                <div class="val-accuracy" style="font-size: 16px; font-weight: 700;">${metrics.accuracyPct}%</div>
               </div>
               <div>
                 <div class="telemetry-label">NET WPM</div>
-                <div style="font-size: 16px; font-weight: 700;">${metrics.netWpm}</div>
+                <div class="val-wpm" style="font-size: 16px; font-weight: 700;">${metrics.netWpm}</div>
               </div>
               <div>
                 <div class="telemetry-label">ERRORS</div>
-                <div style="font-size: 16px; font-weight: 700; color: ${metrics.errorCount === 0 ? 'var(--accent-gold)' : '#dc2626'};">${metrics.errorCount}</div>
+                <div class="val-errors" style="font-size: 16px; font-weight: 700; color: ${metrics.errorCount === 0 ? 'var(--accent-gold)' : '#dc2626'};">${metrics.errorCount}</div>
               </div>
               <div>
                 <div class="telemetry-label">TIME</div>
-                <div style="font-size: 16px; font-weight: 700;">${metrics.elapsedSec}s</div>
+                <div class="val-time" style="font-size: 16px; font-weight: 700;">${metrics.elapsedSec}s</div>
               </div>
             </div>
 
@@ -391,7 +391,8 @@ export class WritingDossier {
     // Step 3: SRS Rating buttons
     this.container.querySelectorAll('.btn-rate-srs').forEach(btn => {
       btn.addEventListener('click', () => {
-        const rating = parseInt((btn as HTMLElement).dataset.rating || '3', 10);
+        const ratingRaw = parseInt((btn as HTMLElement).dataset.rating || '3', 10);
+        const rating: 'again' | 'good' = ratingRaw >= 3 ? 'good' : 'again';
         AudioSynthesizer.play('absorb');
 
         // Update SRS State

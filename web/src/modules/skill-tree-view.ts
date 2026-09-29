@@ -1,12 +1,11 @@
-import { SKILL_BRANCHES, SkillNode, BranchId } from '../core/skill-tree-data';
-import { SkillTreeEngine, NodeStatus, SummitProgress } from '../core/skill-tree-engine';
+import { SKILL_BRANCHES } from '../core/skill-tree-data';
+import { SkillTreeEngine, SummitProgress } from '../core/skill-tree-engine';
 import { RouteId } from '../core/router';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 
 export class SkillTreeView {
   private container: HTMLElement;
   public onNavigate?: (route: RouteId) => void;
-  private selectedNode: SkillNode | null = null;
 
   constructor() {
     this.container = document.createElement('div');
@@ -53,7 +52,7 @@ export class SkillTreeView {
     return this.container;
   }
 
-  private renderWorkoutBanner(progress: SummitProgress): string {
+  private renderWorkoutBanner(_progress: SummitProgress): string {
     return `
       <div class="workout-banner" style="background: var(--bg-surface); border: 1px solid var(--border-solid); padding: 20px 24px; border-radius: 4px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
         <div style="flex: 1; min-width: 280px;">
@@ -138,7 +137,6 @@ export class SkillTreeView {
     // Render 25 Interactive Perk Stars
     for (const node of nodes) {
       const status = SkillTreeEngine.getNodeStatus(node.id);
-      const mastery = SkillTreeEngine.getNodeMasteryPct(node.id);
 
       let circleFill = 'var(--bg-surface)';
       let circleStroke = 'var(--border-solid)';
@@ -233,7 +231,7 @@ export class SkillTreeView {
 
     // SVG Node clicks
     this.container.querySelectorAll('.constellation-node').forEach(nodeEl => {
-      nodeEl.addEventListener('click', (e) => {
+      nodeEl.addEventListener('click', () => {
         const nodeId = (nodeEl as HTMLElement).dataset.nodeId;
         if (nodeId) {
           this.openNodeModal(nodeId);
@@ -247,7 +245,6 @@ export class SkillTreeView {
     const node = allNodes.find(n => n.id === nodeId);
     if (!node) return;
 
-    this.selectedNode = node;
     const status = SkillTreeEngine.getNodeStatus(node.id);
     const mastery = SkillTreeEngine.getNodeMasteryPct(node.id);
     const prereqStatus = SkillTreeEngine.getPrerequisiteStatus(node.id);

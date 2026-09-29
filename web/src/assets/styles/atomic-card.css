@@ -1,36 +1,60 @@
 /* ==========================================================================
-   UNIVERSAL ATOMIC CARD STANDARD (CSS 3D ENGINE)
-   Strict Binary Monochrome, 3D Perspective, Parallax Tilt
+   UNIVERSAL ATOMIC CARD STANDARD (CSS 3D ENGINE & FLUID ERGONOMICS)
+   Strict Binary Monochrome, 3D Perspective, Container Queries, Fluid Clamp
+   WCAG 2.2 AAA Accessibility & Fitts's Law Target Sizing (ENG-23)
    ========================================================================== */
 
-.atomic-card-perspective-wrapper {
-  perspective: 1000px;
+:root {
+  --card-width-fluid: clamp(340px, 92vw, 760px);
+  --card-height-fluid: clamp(420px, 58vh, 520px);
+  --card-padding-fluid: clamp(16px, 3.5vw, 32px);
+}
+
+/* Slot as Container Context */
+.dossier-card-slot {
+  container-type: inline-size;
+  container-name: card-slot;
   width: 100%;
-  max-width: 720px;
-  height: 440px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.atomic-card-perspective-wrapper {
+  perspective: 1200px;
+  width: var(--card-width-fluid);
+  max-width: 760px;
+  min-height: var(--card-height-fluid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
 .atomic-card-container {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: var(--card-height-fluid);
   transform-style: preserve-3d;
   transition: transform var(--duration-fast) var(--ease-snappy);
-  cursor: pointer;
+  user-select: none;
+  contain: layout style;
+  touch-action: manipulation;
 }
 
-.atomic-card-inner {
+.atomic-card-inner,
+.atomic-card-flipper {
   position: relative;
   width: 100%;
   height: 100%;
+  min-height: inherit;
   transform-style: preserve-3d;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
 }
 
-.atomic-card-inner.is-flipped {
+.atomic-card-inner.is-flipped,
+.atomic-card-flipper.is-flipped {
   transform: rotateY(180deg);
 }
 
@@ -41,18 +65,24 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--bg-surface);
-  border: var(--border-width) solid var(--border-solid);
+  min-height: inherit;
+  background: var(--bg-card, #ffffff);
+  border: var(--border-width) solid var(--border-solid, #000000);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: var(--space-32);
+  padding: var(--card-padding-fluid);
+  box-sizing: border-box;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  touch-action: manipulation;
 }
 
-.card-face-back {
+.card-face-back,
+.card-face.face-back {
   transform: rotateY(180deg);
 }
 
@@ -64,8 +94,9 @@
   left: -1px;
   width: 8px;
   height: 8px;
-  border-top: 2px solid var(--border-solid);
-  border-left: 2px solid var(--border-solid);
+  border-top: 2px solid var(--border-solid, #000000);
+  border-left: 2px solid var(--border-solid, #000000);
+  pointer-events: none;
 }
 
 .card-face::after {
@@ -75,12 +106,14 @@
   right: -1px;
   width: 8px;
   height: 8px;
-  border-bottom: 2px solid var(--border-solid);
-  border-right: 2px solid var(--border-solid);
+  border-bottom: 2px solid var(--border-solid, #000000);
+  border-right: 2px solid var(--border-solid, #000000);
+  pointer-events: none;
 }
 
 /* Zone 1: Top Telemetry Header */
-.card-header-bar {
+.card-header-bar,
+.card-header-hud {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,48 +124,64 @@
   font-size: var(--text-xs);
 }
 
-.card-meta-left {
+.card-meta-left,
+.header-left {
   display: flex;
   align-items: center;
   gap: var(--space-8);
 }
 
-.card-badge-status {
+.card-badge-status,
+.card-status-badge {
   padding: 2px 8px;
   font-size: var(--text-2xs);
   border: 1px solid var(--ink-primary);
   text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
-.card-meta-right {
+.card-meta-right,
+.header-right {
   display: flex;
   align-items: center;
   gap: var(--space-12);
 }
 
-.card-audio-btn {
+.card-audio-btn,
+.btn-audio-speak {
   background: transparent;
   border: 1px solid var(--border-hairline);
+  min-width: 44px;
+  min-height: 44px;
   padding: 4px 10px;
   font-size: var(--text-xs);
   font-family: var(--font-mono);
   cursor: pointer;
   outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
   transition: all var(--duration-micro);
+  box-sizing: border-box;
+  touch-action: manipulation;
 }
 
-.card-audio-btn:hover {
+.card-audio-btn:hover,
+.btn-audio-speak:hover {
   background: var(--ink-primary);
   color: var(--ink-inverted);
 }
 
 /* Zone 2 & 4: Body Content Areas */
-.card-body {
+.card-body,
+.card-content-slot {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: var(--space-20) 0;
+  padding: var(--space-16) 0;
   overflow-y: auto;
 }
 
@@ -146,10 +195,11 @@
 
 .card-main-text {
   font-family: var(--font-sans);
-  font-size: var(--text-2xl);
+  font-size: clamp(20px, 3.2vw, 28px);
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.35;
   color: var(--ink-primary);
+  word-break: break-word;
 }
 
 .card-sub-text {
@@ -160,27 +210,39 @@
   margin-top: var(--space-12);
 }
 
-.card-ipa-text {
+.card-ipa-text,
+.card-phonetic-text {
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   color: var(--ink-muted);
   margin-top: var(--space-6);
 }
 
-/* Zone 5: Universal Bottom Dock */
-.card-bottom-dock {
+.card-explanation {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--ink-secondary);
+  margin-top: var(--space-8);
+}
+
+/* Zone 5: Universal Bottom Dock & Rating Bar */
+.card-bottom-dock,
+.card-action-dock,
+.card-rating-dock {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   border-top: 1px solid var(--border-hairline);
   padding-top: var(--space-16);
-  gap: var(--space-16);
+  gap: var(--space-12);
 }
 
 .dock-btn {
   flex: 1;
-  height: 44px;
+  min-height: 44px;
+  min-width: 44px;
   background: var(--bg-surface);
   border: 1.5px solid var(--border-solid);
   font-family: var(--font-mono);
@@ -194,6 +256,8 @@
   justify-content: center;
   gap: var(--space-8);
   transition: all var(--duration-micro);
+  box-sizing: border-box;
+  touch-action: manipulation;
 }
 
 .dock-btn:hover {
@@ -208,4 +272,40 @@
 .dock-btn-flip {
   flex: 1.4;
   border-width: 1.5px;
+}
+
+/* ==========================================================================
+   CONTAINER QUERIES FOR COMPACT VIEWPORTS (< 520px)
+   ========================================================================== */
+
+@container (max-width: 520px) {
+  .card-face {
+    padding: 16px;
+  }
+
+  .card-header-bar,
+  .card-header-hud {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .card-badge-status,
+  .card-status-badge {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+
+  .card-bottom-dock,
+  .card-action-dock,
+  .card-rating-dock {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .dock-btn,
+  .card-rating-dock .hud-btn {
+    width: 100%;
+    min-height: 48px;
+  }
 }

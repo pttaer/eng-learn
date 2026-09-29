@@ -1,4 +1,5 @@
 import { StorageManager } from '../utils/storage';
+import { HapticEngine } from './haptic-engine';
 
 export type SoundEffectType =
   | 'click'
@@ -9,17 +10,32 @@ export type SoundEffectType =
   | 'absorb'
   | 'alarm'
   | 'remind-drop'
-  | 'level-up';
+  | 'level-up'
+  | 'chime'
+  | 'ping'
+  | 'tick'
+  | 'gateway-hover'
+  | 'streak-fire';
 
+export type SoundEffect = SoundEffectType;
+
+/**
+ * Procedural Web Audio API Engine & Web Speech Telemetry Subsystem.
+ * Features zero-latency context priming on initial interaction, Pythagorean Just Intonation
+ * harmonic arpeggios, exponential ADSR amplitude envelopes, mobile haptic feedback,
+ * and unified HUD master volume / decibel bus.
+ */
 export class AudioSynthesizer {
   private static ctx: AudioContext | null = null;
   private static masterGain: GainNode | null = null;
   private static isMuted: boolean = false;
+  private static masterVolume: number = 0.8; // 0.0 to 1.0 (defaults to 80% / -2dB)
   private static humOscillator: OscillatorNode | null = null;
   private static humGain: GainNode | null = null;
   private static initialized: boolean = false;
+  private static isPrimed: boolean = false;
 
-  // Non-zero baseline constant to prevent DAC pop & AudioParam exponential ramp errors
+  // Non-zero baseline constant to prevent DAC DC pop & AudioParam exponential ramp exceptions
   private static readonly EPSILON = 0.001;
   private static readonly MUTE_FLOOR = 0.0001;
   private static readonly NORMAL_GAIN = 0.45;
@@ -30,30 +46,44 @@ export class AudioSynthesizer {
   private static activeUtterance: SpeechSynthesisUtterance | null = null;
 
   /**
-   * Initializes AudioContext and Web Speech subsystem on first user gesture.
+   * Initializes AudioContext, zero-latency priming listeners, and Web Speech subsystem.
    */
   public static init(): void {
     if (this.initialized) return;
 
-    this.isMuted = StorageManager.isSoundMuted();
+    // Restore saved volume and mute states
+    try {
+      this.isMuted = StorageManager.isSoundMuted();
+      const savedVol = localStorage.getItem('eng_master_volume');
+      if (savedVol !== null) {
+        const parsed = parseFloat(savedVol);
+        if (!isNaN(parsed) && parsed >= 0 && parsed <= 1) {
+          this.masterVolume = parsed;
+        }
+      }
+    } catch {
+      this.isMuted = false;
+      this.masterVolume = 0.8;
+    }
+
     this.initSpeechVoices();
 
     const unlockEvents = ['pointerdown', 'touchstart', 'touchend', 'click', 'keydown'];
 
-    const unlockAudio = async () => {
+    const primeAudio = async () => {
       try {
         await this.ensureActiveContext();
         if (this.ctx && this.ctx.state === 'running') {
-          // Remove listeners once successfully unlocked and running
-          unlockEvents.forEach((evt) => window.removeEventListener(evt, unlockAudio));
+          this.isPrimed = true;
+          unlockEvents.forEach((evt) => window.removeEventListener(evt, primeAudio));
         }
       } catch (err) {
-        console.warn('[AUDIO] Audio unlock attempt failed:', err);
+        console.warn('[AUDIO] Audio prime attempt failed:', err);
       }
     };
 
     unlockEvents.forEach((evt) => {
-      window.addEventListener(evt, unlockAudio, { passive: true });
+      window.addEventListener(evt, primeAudio, { passive: true });
     });
 
     // Handle tab visibility resume
@@ -69,22 +99,23 @@ export class AudioSynthesizer {
   }
 
   /**
-   * Ensures AudioContext exists and is actively running.
+   * Ensures AudioContext exists and is actively running with zero-latency priming.
    */
   public static async ensureActiveContext(): Promise<AudioContext | null> {
     if (typeof window === 'undefined') return null;
 
-    if (!this.ctx) {
+    if (!this.ctx || this.ctx.state === 'closed') {
       try {
         const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
         if (!AudioCtx) return null;
 
         this.ctx = new AudioCtx();
         this.masterGain = this.ctx.createGain();
-        this.masterGain.gain.setValueAtTime(
-          this.isMuted ? this.MUTE_FLOOR : this.NORMAL_GAIN,
-          this.ctx.currentTime
-        );
+        const effectiveGain = this.isMuted
+          ? this.MUTE_FLOOR
+          : Math.max(this.EPSILON, this.masterVolume * this.NORMAL_GAIN);
+
+        this.masterGain.gain.setValueAtTime(effectiveGain, this.ctx.currentTime);
         this.masterGain.connect(this.ctx.destination);
 
         // Track context state transitions
@@ -94,7 +125,6 @@ export class AudioSynthesizer {
           }
         });
 
-        // Start subtle urchin ambient hum if already running
         if (this.ctx.state === 'running') {
           this.startUrchinHum();
         }
@@ -111,30 +141,81 @@ export class AudioSynthesizer {
           this.startUrchinHum();
         }
       } catch {
-        // Will resume on subsequent user interaction
+        // Will resume on subsequent user gesture
       }
     }
 
     return this.ctx;
   }
 
+  /**
+   * Toggles master audio mute state with smooth exponential ramping.
+   */
   public static toggleMute(): boolean {
     this.isMuted = StorageManager.toggleSoundMute();
-    if (this.masterGain && this.ctx) {
-      const now = this.ctx.currentTime;
-      this.masterGain.gain.cancelScheduledValues(now);
-      const currentGain = Math.max(this.MUTE_FLOOR, this.masterGain.gain.value);
-      this.masterGain.gain.setValueAtTime(currentGain, now);
-      const targetGain = this.isMuted ? this.MUTE_FLOOR : this.NORMAL_GAIN;
-      this.masterGain.gain.exponentialRampToValueAtTime(targetGain, now + 0.03);
-    }
+    this.applyVolumeToBus();
+    try {
+      localStorage.setItem('eng_master_muted', String(this.isMuted));
+    } catch {}
     return this.isMuted;
+  }
+
+  public static setMuted(state: boolean): void {
+    this.isMuted = state;
+    this.applyVolumeToBus();
+    try {
+      localStorage.setItem('eng_master_muted', String(this.isMuted));
+    } catch {}
   }
 
   public static isMute(): boolean {
     return this.isMuted;
   }
 
+  public static getMuteState(): boolean {
+    return this.isMuted;
+  }
+
+  public static isAudioPrimed(): boolean {
+    return this.isPrimed;
+  }
+
+  /**
+   * Sets master volume level (0.0 to 1.0) and adjusts the master gain bus.
+   */
+  public static setMasterVolume(val: number): void {
+    this.masterVolume = Math.max(0, Math.min(1, val));
+    this.applyVolumeToBus();
+    try {
+      localStorage.setItem('eng_master_volume', String(this.masterVolume));
+    } catch {}
+  }
+
+  public static getVolume(): number {
+    return this.masterVolume;
+  }
+
+  private static applyVolumeToBus(): void {
+    if (!this.masterGain || !this.ctx) return;
+    try {
+      const now = this.ctx.currentTime;
+      this.masterGain.gain.cancelScheduledValues(now);
+      const currentGain = Math.max(this.MUTE_FLOOR, this.masterGain.gain.value);
+      this.masterGain.gain.setValueAtTime(currentGain, now);
+
+      const targetGain = this.isMuted
+        ? this.MUTE_FLOOR
+        : Math.max(this.EPSILON, this.masterVolume * this.NORMAL_GAIN);
+
+      this.masterGain.gain.exponentialRampToValueAtTime(targetGain, now + 0.03);
+    } catch {
+      // Degrade gracefully
+    }
+  }
+
+  /**
+   * Plays a designated procedural sound effect with haptic tactile accompaniment.
+   */
   public static play(type: SoundEffectType): void {
     if (this.isMuted) return;
 
@@ -158,28 +239,51 @@ export class AudioSynthesizer {
 
     switch (type) {
       case 'click':
-        this.playClick(t);
+        this.playTactileMicroClick(t);
+        HapticEngine.trigger('selection');
         break;
       case 'implosion':
         this.playImplosion(t);
+        HapticEngine.trigger('medium');
         break;
       case 'void-open':
         this.playVoidOpen(t);
+        HapticEngine.trigger('light');
         break;
       case 'flip':
         this.playFlip(t);
+        HapticEngine.trigger('light');
         break;
       case 'absorb':
         this.playAbsorb(t);
+        HapticEngine.trigger('success');
         break;
       case 'alarm':
         this.playAlarm(t);
+        HapticEngine.trigger('warning');
         break;
       case 'remind-drop':
         this.playRemindDrop(t);
+        HapticEngine.trigger('medium');
         break;
       case 'level-up':
-        this.playLevelUp(t);
+      case 'streak-fire':
+        this.playHarmonicArpeggio(t);
+        HapticEngine.trigger('success');
+        break;
+      case 'chime':
+        this.playBellChime(t, 587.33); // D5
+        HapticEngine.trigger('light');
+        break;
+      case 'ping':
+        this.playBellChime(t, 880.0); // A5
+        HapticEngine.trigger('light');
+        break;
+      case 'tick':
+        this.playMetronomeTick(t);
+        break;
+      case 'gateway-hover':
+        this.playGatewayResonance(t);
         break;
       default:
         break;
@@ -187,32 +291,228 @@ export class AudioSynthesizer {
   }
 
   /**
-   * 1800Hz sine burst with micro-attack and exponential decay to non-zero baseline (0.001).
+   * Tactile 8-10ms micro-click with triangle wave and exponential decay.
    */
-  private static playClick(t: number): void {
+  private static playTactileMicroClick(t: number): void {
     if (!this.ctx || !this.masterGain) return;
     const osc = this.ctx.createOscillator();
     const gain = this.ctx.createGain();
 
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(1800, t);
-    osc.frequency.exponentialRampToValueAtTime(800, t + 0.012);
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(1200, t);
+    osc.frequency.exponentialRampToValueAtTime(300, t + 0.008);
 
-    // Micro-attack (2ms) from EPSILON baseline, then decay to EPSILON baseline
     gain.gain.setValueAtTime(this.EPSILON, t);
-    gain.gain.exponentialRampToValueAtTime(0.3, t + 0.002);
-    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.015);
+    gain.gain.exponentialRampToValueAtTime(0.28, t + 0.001);
+    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.012);
 
     osc.connect(gain);
     gain.connect(this.masterGain);
 
     osc.start(t);
-    osc.stop(t + 0.016);
+    osc.stop(t + 0.014);
   }
 
   /**
-   * Vacuum pop: Pitch drops from 320Hz down to 45Hz over 70ms with lowpass filter and pop-free envelope.
+   * Card Flip Whoosh: Resonant mechanical flip snap.
    */
+  private static playFlip(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(440, t);
+    osc.frequency.exponentialRampToValueAtTime(220, t + 0.035);
+
+    gain.gain.setValueAtTime(this.EPSILON, t);
+    gain.gain.exponentialRampToValueAtTime(0.25, t + 0.002);
+    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.04);
+
+    osc.connect(gain);
+    gain.connect(this.masterGain);
+
+    osc.start(t);
+    osc.stop(t + 0.045);
+  }
+
+  /**
+   * Collocation Absorption: Resonant downward-to-upward bandpass sweep.
+   */
+  private static playAbsorb(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+    const osc = this.ctx.createOscillator();
+    const filter = this.ctx.createBiquadFilter();
+    const gain = this.ctx.createGain();
+
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(880, t);
+    osc.frequency.exponentialRampToValueAtTime(440, t + 0.18);
+
+    filter.type = 'bandpass';
+    filter.frequency.setValueAtTime(600, t);
+    filter.Q.setValueAtTime(3.0, t);
+
+    gain.gain.setValueAtTime(this.EPSILON, t);
+    gain.gain.exponentialRampToValueAtTime(0.35, t + 0.004);
+    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.22);
+
+    osc.connect(filter);
+    filter.connect(gain);
+    gain.connect(this.masterGain);
+
+    osc.start(t);
+    osc.stop(t + 0.24);
+  }
+
+  /**
+   * Pythagorean Just Intonation Success Arpeggio:
+   * Root (440Hz), Major Third 5:4 (550Hz), Perfect Fifth 3:2 (660Hz), Octave 2:1 (880Hz).
+   */
+  private static playHarmonicArpeggio(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+
+    const root = 440;
+    const notes = [
+      { freq: root, delay: 0.0, dur: 0.28, peak: 0.22 },
+      { freq: root * 1.25, delay: 0.055, dur: 0.28, peak: 0.24 }, // 550 Hz
+      { freq: root * 1.5, delay: 0.11, dur: 0.32, peak: 0.26 },  // 660 Hz
+      { freq: root * 2.0, delay: 0.165, dur: 0.38, peak: 0.3 }   // 880 Hz
+    ];
+
+    notes.forEach(({ freq, delay, dur, peak }) => {
+      const osc = this.ctx!.createOscillator();
+      const gain = this.ctx!.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, t + delay);
+
+      const nStart = t + delay;
+      const nEnd = nStart + dur;
+
+      gain.gain.setValueAtTime(this.EPSILON, nStart);
+      gain.gain.exponentialRampToValueAtTime(peak, nStart + 0.004);
+      gain.gain.exponentialRampToValueAtTime(this.EPSILON, nEnd - 0.005);
+
+      osc.connect(gain);
+      gain.connect(this.masterGain!);
+
+      osc.start(nStart);
+      osc.stop(nEnd);
+    });
+  }
+
+  private static playBellChime(t: number, freq: number): void {
+    if (!this.ctx || !this.masterGain) return;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(freq, t);
+
+    gain.gain.setValueAtTime(this.EPSILON, t);
+    gain.gain.exponentialRampToValueAtTime(0.22, t + 0.003);
+    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.3);
+
+    osc.connect(gain);
+    gain.connect(this.masterGain);
+
+    osc.start(t);
+    osc.stop(t + 0.32);
+  }
+
+  private static playMetronomeTick(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(800, t);
+
+    gain.gain.setValueAtTime(this.EPSILON, t);
+    gain.gain.exponentialRampToValueAtTime(0.12, t + 0.001);
+    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.02);
+
+    osc.connect(gain);
+    gain.connect(this.masterGain);
+
+    osc.start(t);
+    osc.stop(t + 0.025);
+  }
+
+  private static playWarningPulse(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+
+    [0, 0.12].forEach((offset) => {
+      const osc = this.ctx!.createOscillator();
+      const gain = this.ctx!.createGain();
+
+      osc.type = 'square';
+      osc.frequency.setValueAtTime(260, t + offset);
+
+      gain.gain.setValueAtTime(this.EPSILON, t + offset);
+      gain.gain.exponentialRampToValueAtTime(0.12, t + offset + 0.002);
+      gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + offset + 0.08);
+
+      osc.connect(gain);
+      gain.connect(this.masterGain!);
+
+      osc.start(t + offset);
+      osc.stop(t + offset + 0.09);
+    });
+  }
+
+  private static playAlarm(t: number): void {
+    this.playWarningPulse(t);
+  }
+
+  private static playRemindDrop(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+    const osc = this.ctx.createOscillator();
+    const filter = this.ctx.createBiquadFilter();
+    const gain = this.ctx.createGain();
+
+    osc.type = 'sawtooth';
+    osc.frequency.setValueAtTime(480, t);
+    osc.frequency.exponentialRampToValueAtTime(180, t + 0.09);
+
+    filter.type = 'highpass';
+    filter.frequency.setValueAtTime(700, t);
+    filter.frequency.exponentialRampToValueAtTime(220, t + 0.09);
+    filter.Q.setValueAtTime(3.5, t);
+
+    gain.gain.setValueAtTime(this.EPSILON, t);
+    gain.gain.exponentialRampToValueAtTime(0.3, t + 0.004);
+    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.095);
+
+    osc.connect(filter);
+    filter.connect(gain);
+    gain.connect(this.masterGain);
+
+    osc.start(t);
+    osc.stop(t + 0.1);
+  }
+
+  private static playGatewayResonance(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(220, t);
+    osc.frequency.linearRampToValueAtTime(228, t + 0.08);
+
+    gain.gain.setValueAtTime(this.EPSILON, t);
+    gain.gain.linearRampToValueAtTime(0.1, t + 0.03);
+    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.12);
+
+    osc.connect(gain);
+    gain.connect(this.masterGain);
+
+    osc.start(t);
+    osc.stop(t + 0.14);
+  }
+
   private static playImplosion(t: number): void {
     if (!this.ctx || !this.masterGain) return;
     const osc = this.ctx.createOscillator();
@@ -239,9 +539,6 @@ export class AudioSynthesizer {
     osc.stop(t + 0.08);
   }
 
-  /**
-   * Dual-oscillator reverse-whoosh: 110Hz/165Hz -> 480Hz/720Hz crescendo with smooth baseline.
-   */
   private static playVoidOpen(t: number): void {
     if (!this.ctx || !this.masterGain) return;
     const osc1 = this.ctx.createOscillator();
@@ -270,142 +567,6 @@ export class AudioSynthesizer {
     osc2.stop(t + 0.26);
   }
 
-  /**
-   * 440Hz -> 220Hz soft mechanical card snap with pop-free ramp.
-   */
-  private static playFlip(t: number): void {
-    if (!this.ctx || !this.masterGain) return;
-    const osc = this.ctx.createOscillator();
-    const gain = this.ctx.createGain();
-
-    osc.type = 'triangle';
-    osc.frequency.setValueAtTime(440, t);
-    osc.frequency.exponentialRampToValueAtTime(220, t + 0.035);
-
-    gain.gain.setValueAtTime(this.EPSILON, t);
-    gain.gain.exponentialRampToValueAtTime(0.25, t + 0.002);
-    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.04);
-
-    osc.connect(gain);
-    gain.connect(this.masterGain);
-
-    osc.start(t);
-    osc.stop(t + 0.045);
-  }
-
-  /**
-   * Upward resonant chime (520Hz -> 1040Hz) with 220ms decay to non-zero baseline.
-   */
-  private static playAbsorb(t: number): void {
-    if (!this.ctx || !this.masterGain) return;
-    const osc = this.ctx.createOscillator();
-    const gain = this.ctx.createGain();
-
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(520, t);
-    osc.frequency.exponentialRampToValueAtTime(1040, t + 0.18);
-
-    gain.gain.setValueAtTime(this.EPSILON, t);
-    gain.gain.exponentialRampToValueAtTime(0.3, t + 0.004);
-    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.22);
-
-    osc.connect(gain);
-    gain.connect(this.masterGain);
-
-    osc.start(t);
-    osc.stop(t + 0.23);
-  }
-
-  /**
-   * Alert tone (880Hz) with attack and decay ramps to non-zero baseline.
-   */
-  private static playAlarm(t: number): void {
-    if (!this.ctx || !this.masterGain) return;
-    const osc = this.ctx.createOscillator();
-    const gain = this.ctx.createGain();
-
-    osc.type = 'square';
-    osc.frequency.setValueAtTime(880, t);
-
-    gain.gain.setValueAtTime(this.EPSILON, t);
-    gain.gain.exponentialRampToValueAtTime(0.15, t + 0.002);
-    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.12);
-
-    osc.connect(gain);
-    gain.connect(this.masterGain);
-
-    osc.start(t);
-    osc.stop(t + 0.13);
-  }
-
-  /**
-   * Glitch/warp frequency chirp (480Hz -> 180Hz drop with high-pass modulation, 100ms) for Remind Card injection.
-   */
-  private static playRemindDrop(t: number): void {
-    if (!this.ctx || !this.masterGain) return;
-    const osc = this.ctx.createOscillator();
-    const filter = this.ctx.createBiquadFilter();
-    const gain = this.ctx.createGain();
-
-    osc.type = 'sawtooth';
-    osc.frequency.setValueAtTime(480, t);
-    osc.frequency.exponentialRampToValueAtTime(180, t + 0.09);
-
-    filter.type = 'highpass';
-    filter.frequency.setValueAtTime(700, t);
-    filter.frequency.exponentialRampToValueAtTime(220, t + 0.09);
-    filter.Q.setValueAtTime(3.5, t);
-
-    // Micro-attack from EPSILON baseline, then decay back to EPSILON baseline (100ms total)
-    gain.gain.setValueAtTime(this.EPSILON, t);
-    gain.gain.exponentialRampToValueAtTime(0.3, t + 0.004);
-    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.095);
-
-    osc.connect(filter);
-    filter.connect(gain);
-    gain.connect(this.masterGain);
-
-    osc.start(t);
-    osc.stop(t + 0.10);
-  }
-
-  /**
-   * Ascending resonant arpeggio/chime (440Hz -> 660Hz -> 880Hz, 240ms) for vocabulary tier ascension.
-   */
-  private static playLevelUp(t: number): void {
-    if (!this.ctx || !this.masterGain) return;
-
-    const notes = [
-      { freq: 440, start: 0, dur: 0.09, peak: 0.25 },
-      { freq: 660, start: 0.07, dur: 0.09, peak: 0.28 },
-      { freq: 880, start: 0.14, dur: 0.10, peak: 0.32 }
-    ];
-
-    notes.forEach(({ freq, start, dur, peak }) => {
-      const osc = this.ctx!.createOscillator();
-      const gain = this.ctx!.createGain();
-
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(freq, t + start);
-
-      const nStart = t + start;
-      const nEnd = nStart + dur;
-
-      gain.gain.setValueAtTime(this.EPSILON, nStart);
-      gain.gain.exponentialRampToValueAtTime(peak, nStart + 0.005);
-      gain.gain.exponentialRampToValueAtTime(this.EPSILON, nEnd - 0.005);
-
-      osc.connect(gain);
-      gain.connect(this.masterGain!);
-
-      osc.start(nStart);
-      osc.stop(nEnd);
-    });
-  }
-
-  /**
-   * Continuous sub-bass 65Hz hum for Sea Urchin singularity with pop-free fade-in.
-   */
   private static startUrchinHum(): void {
     if (!this.ctx || !this.masterGain || this.humOscillator) return;
     try {
@@ -415,7 +576,6 @@ export class AudioSynthesizer {
       this.humOscillator.type = 'sine';
       this.humOscillator.frequency.setValueAtTime(65, this.ctx.currentTime);
 
-      // Soft fade-in from EPSILON baseline to 0.06
       this.humGain.gain.setValueAtTime(this.EPSILON, this.ctx.currentTime);
       this.humGain.gain.exponentialRampToValueAtTime(0.06, this.ctx.currentTime + 0.2);
 
@@ -431,9 +591,6 @@ export class AudioSynthesizer {
   // WEB SPEECH API TELEMETRY & VOICE DIALECT FALLBACK SUBSYSTEM
   // =========================================================================
 
-  /**
-   * Pre-fetches and registers voices for Web Speech synthesis across browsers.
-   */
   public static initSpeechVoices(): void {
     if (this.speechInitialized || typeof window === 'undefined' || !('speechSynthesis' in window)) {
       return;
@@ -458,14 +615,6 @@ export class AudioSynthesizer {
     this.speechInitialized = true;
   }
 
-  /**
-   * Resolves the best available English voice with graceful fallbacks:
-   * 1. Exact 'en-US'
-   * 2. Any US English dialect variant
-   * 3. Fallback to British English 'en-GB'
-   * 4. Fallback to any English dialect (en-CA, en-AU, etc.)
-   * 5. Fallback to browser/system default voice
-   */
   public static getPreferredEnglishVoice(): SpeechSynthesisVoice | null {
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
 
@@ -504,10 +653,6 @@ export class AudioSynthesizer {
     return available[0] || null;
   }
 
-  /**
-   * Synthesizes speech with robust voice resolution, queue clearing, and dialect fallbacks.
-   * Safe across Lexicon, Listening, Speaking, and Writing dossiers.
-   */
   public static speak(text: string, rate: number = 0.95): void {
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
       console.warn('[SPEECH] Web Speech API not supported in this environment.');
@@ -515,7 +660,6 @@ export class AudioSynthesizer {
     }
 
     try {
-      // Cancel previous utterance to prevent queue deadlock in Chromium/WebKit
       window.speechSynthesis.cancel();
 
       const utterance = new SpeechSynthesisUtterance(text);
@@ -530,7 +674,6 @@ export class AudioSynthesizer {
 
       utterance.rate = rate;
 
-      // Keep active reference to avoid Chromium GC bug during speech playback
       this.activeUtterance = utterance;
       utterance.onend = () => {
         this.activeUtterance = null;
@@ -550,4 +693,3 @@ export class AudioSynthesizer {
     return this.activeUtterance;
   }
 }
-

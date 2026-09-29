@@ -1,6 +1,6 @@
 import { AudioSynthesizer } from './audio-synthesizer';
 
-export interface CardConfig {
+export interface AtomicCardConfig {
   id: string;
   pillar: string;
   category: string;
@@ -8,14 +8,18 @@ export interface CardConfig {
   statusBadge: 'NEW' | 'REVIEW' | 'MASTERED';
   front: {
     promptLabel?: string;
-    mainText: string;
+    mainText?: string;
     subText?: string;
+    phoneticText?: string;
+    pacingHint?: string;
     customContent?: HTMLElement;
   };
   back: {
     promptLabel?: string;
-    mainText: string;
+    mainText?: string;
     subText?: string;
+    explanation?: string;
+    formula?: string;
     ipa?: string;
     customContent?: HTMLElement;
   };
@@ -24,44 +28,69 @@ export interface CardConfig {
   onFlip?: (isFlipped: boolean) => void;
 }
 
+export type CardConfig = AtomicCardConfig;
+
+export interface AtomicCardHandle {
+  element: HTMLElement;
+  flip: () => void;
+  rate: (rating: 'again' | 'good') => void;
+  isFlipped: () => boolean;
+  focus: () => void;
+  destroy: () => void;
+}
+
 export class AtomicCard {
-  public static create(config: CardConfig): {
-    element: HTMLElement;
-    flip: () => void;
-    rate: (rating: 'again' | 'good') => void;
-    isFlipped: () => boolean;
-  } {
+  public static create(config: AtomicCardConfig): AtomicCardHandle {
     const wrapper = document.createElement('div');
     wrapper.className = 'atomic-card-perspective-wrapper interactive';
 
     const container = document.createElement('div');
     container.className = 'atomic-card-container';
+    container.id = `card-${config.id}`;
+    container.setAttribute('role', 'region');
+    container.setAttribute('aria-roledescription', 'flashcard');
+    container.setAttribute('aria-label', `${config.pillar} Drill: ${config.category} ${config.indexStr}`);
 
-    const inner = document.createElement('div');
-    inner.className = 'atomic-card-inner';
+    const flipper = document.createElement('div');
+    flipper.className = 'atomic-card-inner atomic-card-flipper';
+    flipper.setAttribute('aria-live', 'polite');
 
     let isFlipped = false;
 
-    // --- Helper: Pronunciation via Web Speech API with dialect fallback ---
+    // Pronunciation via Web Speech API with dialect fallback
     const speakText = (text: string) => {
       AudioSynthesizer.speak(text, 0.95);
     };
 
-    // --- Flip Action ---
+    // Flip Action & Focus Management
     const doFlip = () => {
       isFlipped = !isFlipped;
-      if (isFlipped) {
-        inner.classList.add('is-flipped');
-      } else {
-        inner.classList.remove('is-flipped');
+      flipper.classList.toggle('is-flipped', isFlipped);
+      faceFront.setAttribute('aria-hidden', String(isFlipped));
+      faceBack.setAttribute('aria-hidden', String(!isFlipped));
+
+      const flipBtn = faceFront.querySelector('.btn-flip-trigger') as HTMLButtonElement | null;
+      if (flipBtn) {
+        flipBtn.setAttribute('aria-expanded', String(isFlipped));
       }
+
       AudioSynthesizer.play('flip');
       if (config.onFlip) {
         config.onFlip(isFlipped);
       }
+
+      // Shift focus to primary action on the revealed face
+      setTimeout(() => {
+        if (isFlipped) {
+          const target = faceBack.querySelector('.btn-rate-good') as HTMLElement | null;
+          target?.focus();
+        } else {
+          flipBtn?.focus();
+        }
+      }, 150);
     };
 
-    // --- Rate Action ---
+    // Rate Action
     const doRate = (rating: 'again' | 'good') => {
       AudioSynthesizer.play(rating === 'good' ? 'click' : 'alarm');
       if (config.onRate) {
@@ -73,19 +102,20 @@ export class AtomicCard {
     // 1. FRONT FACE
     // ==========================================
     const faceFront = document.createElement('div');
-    faceFront.className = 'card-face card-face-front';
+    faceFront.className = 'card-face card-face-front face-front';
+    faceFront.setAttribute('aria-hidden', 'false');
 
     // Header Zone
     const frontHeader = document.createElement('div');
-    frontHeader.className = 'card-header-bar';
+    frontHeader.className = 'card-header-bar card-header-hud';
     frontHeader.innerHTML = `
-      <div class="card-meta-left">
-        <span>[${config.pillar} // ${config.category}]</span>
-        <span class="card-badge-status">${config.statusBadge}</span>
+      <div class="card-meta-left header-left">
+        <span class="telemetry-badge">[${config.pillar} // ${config.category}]</span>
+        <span class="card-badge-status card-status-badge">${config.statusBadge}</span>
       </div>
-      <div class="card-meta-right">
-        <span>${config.indexStr}</span>
-        ${config.audioText ? `<button class="card-audio-btn" title="Pronounce">🔊 AUDIO</button>` : ''}
+      <div class="card-meta-right header-right">
+        <span class="card-index-counter">${config.indexStr}</span>
+        ${config.audioText ? `<button type="button" class="card-audio-btn btn-audio-speak" aria-label="Listen to pronunciation of prompt" title="Listen (P)">🔊 AUDIO</button>` : ''}
       </div>
     `;
 
@@ -97,48 +127,49 @@ export class AtomicCard {
       });
     }
 
-    // Body Zone
+    // Body Content Zone
     const frontBody = document.createElement('div');
-    frontBody.className = 'card-body';
+    frontBody.className = 'card-body card-content-slot';
     if (config.front.customContent) {
       frontBody.appendChild(config.front.customContent);
     } else {
       frontBody.innerHTML = `
         <div class="card-prompt-label">${config.front.promptLabel || 'CHALLENGE // PROMPT'}</div>
-        <div class="card-main-text">${config.front.mainText}</div>
+        <div class="card-main-text">${config.front.mainText || ''}</div>
         ${config.front.subText ? `<div class="card-sub-text">${config.front.subText}</div>` : ''}
+        ${config.front.phoneticText ? `<div class="card-ipa-text card-phonetic-text">${config.front.phoneticText}</div>` : ''}
       `;
     }
 
-    // Dock Zone
+    // Bottom Action Dock
     const frontDock = document.createElement('div');
-    frontDock.className = 'card-bottom-dock';
+    frontDock.className = 'card-bottom-dock card-action-dock';
     frontDock.innerHTML = `
-      <button class="dock-btn dock-btn-again">[ ✗ ] AGAIN <span class="kbd-badge">1</span></button>
-      <button class="dock-btn dock-btn-flip">[ ⟳ FLIP REVEAL ] <span class="kbd-badge">SPACE</span></button>
-      <button class="dock-btn dock-btn-good">[ ✓ ] GOOD <span class="kbd-badge">2</span></button>
+      <button type="button" class="dock-btn dock-btn-again btn-rate-again" aria-label="Rate repetition Again: failed recall, reset interval">[ ✗ ] AGAIN <span class="kbd-badge">1</span></button>
+      <button type="button" class="dock-btn dock-btn-flip btn-flip-trigger" aria-expanded="false" aria-label="Flip card to view answer targets">[ ⟳ FLIP REVEAL ] <span class="kbd-badge">SPACE</span></button>
+      <button type="button" class="dock-btn dock-btn-good btn-rate-good" aria-label="Rate repetition Good: successful recall, advance interval">[ ✓ ] GOOD <span class="kbd-badge">2</span></button>
     `;
 
-    frontDock.querySelector('.dock-btn-again')?.addEventListener('click', (e) => {
+    frontDock.querySelector('.btn-rate-again')?.addEventListener('click', (e) => {
       e.stopPropagation();
       doRate('again');
     });
 
-    // Card Body Click flips card (unless clicking on interactive controls)
+    frontDock.querySelector('.btn-flip-trigger')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      doFlip();
+    });
+
+    frontDock.querySelector('.btn-rate-good')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      doRate('good');
+    });
+
+    // Body click flips card (unless user clicked on interactive elements)
     frontBody.addEventListener('click', (e) => {
       const target = e.target as HTMLElement;
       if (target.closest('button') || target.closest('textarea') || target.closest('input')) return;
       doFlip();
-    });
-
-    frontDock.querySelector('.dock-btn-flip')?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      doFlip();
-    });
-
-    frontDock.querySelector('.dock-btn-good')?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      doRate('good');
     });
 
     faceFront.appendChild(frontHeader);
@@ -149,17 +180,18 @@ export class AtomicCard {
     // 2. BACK FACE
     // ==========================================
     const faceBack = document.createElement('div');
-    faceBack.className = 'card-face card-face-back';
+    faceBack.className = 'card-face card-face-back face-back';
+    faceBack.setAttribute('aria-hidden', 'true');
 
     const backHeader = document.createElement('div');
-    backHeader.className = 'card-header-bar';
+    backHeader.className = 'card-header-bar card-header-hud';
     backHeader.innerHTML = `
-      <div class="card-meta-left">
-        <span>[${config.pillar} // RESOLUTION]</span>
+      <div class="card-meta-left header-left">
+        <span class="telemetry-badge">[${config.pillar} // RESOLUTION]</span>
       </div>
-      <div class="card-meta-right">
-        <span>${config.indexStr}</span>
-        ${config.audioText ? `<button class="card-audio-btn" title="Pronounce">🔊 AUDIO</button>` : ''}
+      <div class="card-meta-right header-right">
+        <span class="card-index-counter">${config.indexStr}</span>
+        ${config.audioText ? `<button type="button" class="card-audio-btn btn-audio-speak" aria-label="Listen to pronunciation of prompt" title="Listen (P)">🔊 AUDIO</button>` : ''}
       </div>
     `;
 
@@ -172,42 +204,42 @@ export class AtomicCard {
     }
 
     const backBody = document.createElement('div');
-    backBody.className = 'card-body';
+    backBody.className = 'card-body card-content-slot';
     if (config.back.customContent) {
       backBody.appendChild(config.back.customContent);
     } else {
       backBody.innerHTML = `
         <div class="card-prompt-label">${config.back.promptLabel || 'RESOLUTION // TRANSLATION'}</div>
-        <div class="card-main-text">${config.back.mainText}</div>
+        <div class="card-main-text">${config.back.mainText || ''}</div>
         ${config.back.ipa ? `<div class="card-ipa-text">${config.back.ipa}</div>` : ''}
+        ${config.back.explanation ? `<div class="card-explanation">${config.back.explanation}</div>` : ''}
         ${config.back.subText ? `<div class="card-sub-text">${config.back.subText}</div>` : ''}
       `;
     }
 
     const backDock = document.createElement('div');
-    backDock.className = 'card-bottom-dock';
+    backDock.className = 'card-bottom-dock card-rating-dock';
     backDock.innerHTML = `
-      <button class="dock-btn dock-btn-again">[ ✗ ] AGAIN <span class="kbd-badge">1</span></button>
-      <button class="dock-btn dock-btn-flip">[ ⟳ FLIP RETURN ] <span class="kbd-badge">SPACE</span></button>
-      <button class="dock-btn dock-btn-good">[ ✓ ] GOOD <span class="kbd-badge">2</span></button>
+      <button type="button" class="dock-btn dock-btn-again btn-rate-again" aria-label="Rate repetition Again: failed recall, reset interval">[ ✗ ] AGAIN <span class="kbd-badge">1</span></button>
+      <button type="button" class="dock-btn dock-btn-flip btn-flip-back" aria-label="Flip card back to prompt face">[ ⟳ FLIP RETURN ] <span class="kbd-badge">SPACE</span></button>
+      <button type="button" class="dock-btn dock-btn-good btn-rate-good" aria-label="Rate repetition Good: successful recall, advance interval">[ ✓ ] GOOD <span class="kbd-badge">2</span></button>
     `;
 
-    backDock.querySelector('.dock-btn-again')?.addEventListener('click', (e) => {
+    backDock.querySelector('.btn-rate-again')?.addEventListener('click', (e) => {
       e.stopPropagation();
       doRate('again');
     });
 
-    backDock.querySelector('.dock-btn-flip')?.addEventListener('click', (e) => {
+    backDock.querySelector('.btn-flip-back')?.addEventListener('click', (e) => {
       e.stopPropagation();
       doFlip();
     });
 
-    backDock.querySelector('.dock-btn-good')?.addEventListener('click', (e) => {
+    backDock.querySelector('.btn-rate-good')?.addEventListener('click', (e) => {
       e.stopPropagation();
       doRate('good');
     });
 
-    // Back Body Click flips card back (unless clicking on interactive controls)
     backBody.addEventListener('click', (e) => {
       const target = e.target as HTMLElement;
       if (target.closest('button') || target.closest('textarea') || target.closest('input')) return;
@@ -218,18 +250,19 @@ export class AtomicCard {
     faceBack.appendChild(backBody);
     faceBack.appendChild(backDock);
 
-    inner.appendChild(faceFront);
-    inner.appendChild(faceBack);
-    container.appendChild(inner);
+    flipper.appendChild(faceFront);
+    flipper.appendChild(faceBack);
+    container.appendChild(flipper);
     wrapper.appendChild(container);
 
     // ==========================================
     // 3. GYRO 3D PARALLAX TILT
     // ==========================================
     let tiltRaf: number | null = null;
-    const maxTilt = 7; // degrees
+    const maxTilt = 7;
 
     const onPointerMove = (e: PointerEvent) => {
+      if (e.pointerType === 'touch') return; // Do not apply parallax gyro tilt on touch screens
       if (tiltRaf) cancelAnimationFrame(tiltRaf);
 
       tiltRaf = requestAnimationFrame(() => {
@@ -259,7 +292,19 @@ export class AtomicCard {
       element: wrapper,
       flip: doFlip,
       rate: doRate,
-      isFlipped: () => isFlipped
+      isFlipped: () => isFlipped,
+      focus: () => {
+        const activeBtn = isFlipped
+          ? (faceBack.querySelector('.btn-rate-good') as HTMLElement)
+          : (faceFront.querySelector('.btn-flip-trigger') as HTMLElement);
+        activeBtn?.focus();
+      },
+      destroy: () => {
+        if (tiltRaf) cancelAnimationFrame(tiltRaf);
+        container.removeEventListener('pointermove', onPointerMove);
+        container.removeEventListener('pointerleave', onPointerLeave);
+        wrapper.remove();
+      }
     };
   }
 }

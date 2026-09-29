@@ -1,4 +1,4 @@
-import { SKILL_BRANCHES, SkillNode, BranchId } from './skill-tree-data';
+import { SKILL_BRANCHES, SkillNode } from './skill-tree-data';
 import { StorageManager } from '../utils/storage';
 
 export type NodeStatus = 'locked' | 'unlocked' | 'mastered';

@@ -32,8 +32,11 @@ export class CursorTracker {
   private static reducedMotion: boolean = false;
 
   public static init(): void {
-    // Native cursor enabled - bypass custom reticle DOM to eliminate pointer lag and text occlusion
-    return; // Custom reticle disabled
+    if (this.isInitialized) return;
+    this.isInitialized = true;
+    this.checkReducedMotion();
+    this.bindEvents();
+    this.startRAF();
   }
 
   private static checkReducedMotion(): void {
@@ -44,22 +47,6 @@ export class CursorTracker {
         this.reducedMotion = e.matches;
       });
     }
-  }
-
-  private static createCursorDOM(): void {
-    let existing = document.getElementById('custom-cursor');
-    if (!existing) {
-      existing = document.createElement('div');
-      existing.id = 'custom-cursor';
-      existing.innerHTML = `
-        <div class="cursor-dot"></div>
-        <div class="cursor-ring"></div>
-        <div class="cursor-bracket-left"></div>
-        <div class="cursor-bracket-right"></div>
-      `;
-      document.body.appendChild(existing);
-    }
-    this.cursorEl = existing;
   }
 
   private static bindEvents(): void {

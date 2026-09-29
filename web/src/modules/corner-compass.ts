@@ -59,8 +59,55 @@ export class CornerCompass {
     this.canvas = this.element.querySelector('.compass-canvas') as HTMLCanvasElement;
     this.ctx = this.canvas.getContext('2d')!;
 
+    this.applySafePositioning();
     this.bindEvents();
+    this.bindTouchInteractions();
     this.startMiniUrchinLoop();
+  }
+
+  private applySafePositioning(): void {
+    // Elevate above iOS Home Indicator and dynamic gesture areas with safe-area fallback
+    this.element.style.position = 'fixed';
+    this.element.style.bottom = 'max(24px, calc(env(safe-area-inset-bottom, 0px) + 16px))';
+    this.element.style.right = 'max(24px, calc(env(safe-area-inset-right, 0px) + 16px))';
+    this.element.style.zIndex = 'var(--z-modal-lens, 90)';
+    this.element.style.userSelect = 'none';
+    (this.element.style as any).webkitUserSelect = 'none';
+    this.element.style.touchAction = 'manipulation';
+  }
+
+  private bindTouchInteractions(): void {
+    const trigger = this.element.querySelector('.compass-trigger') as HTMLElement | null;
+    if (trigger) {
+      trigger.setAttribute('role', 'button');
+      trigger.setAttribute('aria-label', 'Toggle 7-Pillar Radial Quick Navigation');
+      trigger.setAttribute('aria-expanded', 'false');
+      trigger.setAttribute('tabindex', '0');
+
+      // 44x44px+ touch hitbox acquisition with tactile touch feedback
+      trigger.addEventListener('touchstart', (e: TouchEvent) => {
+        e.stopPropagation();
+        this.element.classList.add('compass-active-touch');
+        trigger.classList.add('trigger-touched');
+      }, { passive: true });
+
+      trigger.addEventListener('touchend', (e: TouchEvent) => {
+        e.stopPropagation();
+        this.element.classList.remove('compass-active-touch');
+        trigger.classList.remove('trigger-touched');
+      }, { passive: true });
+    }
+
+    const items = this.element.querySelectorAll('.compass-menu-item');
+    items.forEach(item => {
+      item.addEventListener('touchstart', () => {
+        item.classList.add('compass-item-touched');
+      }, { passive: true });
+
+      item.addEventListener('touchend', () => {
+        item.classList.remove('compass-item-touched');
+      }, { passive: true });
+    });
   }
 
   public getElement(): HTMLElement {
@@ -68,17 +115,26 @@ export class CornerCompass {
   }
 
   private bindEvents(): void {
-    const trigger = this.element.querySelector('.compass-trigger');
+    const trigger = this.element.querySelector('.compass-trigger') as HTMLElement | null;
     const menu = this.element.querySelector('.compass-radial-menu') as HTMLElement;
 
-    trigger?.addEventListener('click', (e) => {
+    const toggleMenu = (e: Event) => {
       e.stopPropagation();
       this.isMenuOpen = !this.isMenuOpen;
+      trigger?.setAttribute('aria-expanded', String(this.isMenuOpen));
       AudioSynthesizer.play('click');
       if (this.isMenuOpen) {
         menu.classList.add('menu-open');
       } else {
         menu.classList.remove('menu-open');
+      }
+    };
+
+    trigger?.addEventListener('click', toggleMenu);
+    trigger?.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu(e);
       }
     });
 
@@ -89,6 +145,7 @@ export class CornerCompass {
         const route = (item as HTMLElement).dataset.route || 'singularity';
         AudioSynthesizer.play('void-open');
         this.isMenuOpen = false;
+        trigger?.setAttribute('aria-expanded', 'false');
         menu.classList.remove('menu-open');
 
         if (this.onNavigate) {
@@ -101,6 +158,7 @@ export class CornerCompass {
     window.addEventListener('click', () => {
       if (this.isMenuOpen) {
         this.isMenuOpen = false;
+        trigger?.setAttribute('aria-expanded', 'false');
         menu.classList.remove('menu-open');
       }
     });

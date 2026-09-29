@@ -84,13 +84,14 @@ export class PerspectiveCanvas {
   private resize(): void {
     this.width = window.innerWidth;
     this.height = window.innerHeight;
-    this.dpr = window.devicePixelRatio || 1;
+    this.dpr = Math.max(1, Math.min(window.devicePixelRatio || 1, 3));
 
-    this.canvas.width = this.width * this.dpr;
-    this.canvas.height = this.height * this.dpr;
+    this.canvas.width = Math.floor(this.width * this.dpr);
+    this.canvas.height = Math.floor(this.height * this.dpr);
     this.canvas.style.width = `${this.width}px`;
     this.canvas.style.height = `${this.height}px`;
 
+    this.ctx.setTransform(1, 0, 0, 1, 0, 0);
     this.ctx.scale(this.dpr, this.dpr);
   }
 
@@ -137,6 +138,10 @@ export class PerspectiveCanvas {
 
   private bindEvents(): void {
     window.addEventListener('resize', () => this.resize());
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      const dprMedia = window.matchMedia(`(resolution: ${window.devicePixelRatio || 1}dppx)`);
+      dprMedia.addEventListener?.('change', () => this.resize());
+    }
 
     this.canvas.addEventListener('click', (e: MouseEvent) => {
       const rect = this.canvas.getBoundingClientRect();
@@ -270,23 +275,29 @@ export class PerspectiveCanvas {
     }, 180);
   }
 
+  private lastFrameTime: number = performance.now();
+
   private startLoop(): void {
-    const render = () => {
-      this.update();
+    const render = (now: number) => {
+      const rawDt = (now - this.lastFrameTime) / 1000;
+      this.lastFrameTime = now;
+      const dt = Math.min(rawDt > 0 ? rawDt : 0.016, 0.033);
+
+      this.update(dt);
       this.draw();
       requestAnimationFrame(render);
     };
     requestAnimationFrame(render);
   }
 
-  private update(): void {
+  private update(dt: number = 0.016): void {
     const mouseX = CursorTracker.x;
     const mouseY = CursorTracker.y;
     const cx = this.width / 2;
     const cy = this.height / 2;
 
-    // Update Urchin
-    this.urchin.update(cx, cy, mouseX, mouseY);
+    // Update Urchin with exact dt
+    this.urchin.update(cx, cy, mouseX, mouseY, dt);
 
     // Update Floating Entities
     for (let i = this.entities.length - 1; i >= 0; i--) {
