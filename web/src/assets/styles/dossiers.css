@@ -322,9 +322,21 @@
   flex-wrap: wrap;
 }
 
+/* Ergonomic Natural Scrolling for Reading & Grammar */
+.dossier-reading,
+.dossier-grammar {
+  height: auto;
+  min-height: 100%;
+  justify-content: flex-start;
+  overflow-y: visible;
+  padding-bottom: var(--space-32);
+}
+
 .reading-content-slot {
   width: 100%;
   min-height: 420px;
+  height: auto;
+  overflow: visible;
 }
 
 .reading-pass1-layout {
@@ -332,6 +344,18 @@
   gap: var(--space-24);
   width: 100%;
   align-items: flex-start;
+}
+
+/* Calm Document Reader (ENG-28) - 68ch Eye-Comfort Measure & Relaxed Typography */
+.calm-reader {
+  max-width: 68ch;
+  line-height: 1.75;
+  font-size: 17px;
+  color: var(--ink-primary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  padding: var(--space-24);
+  box-shadow: 0 2px 12px rgba(17, 17, 17, 0.02);
 }
 
 .reading-text-pane {
@@ -361,18 +385,163 @@
 
 .reading-paragraph {
   max-width: 68ch;
-  font-size: var(--text-sm);
-  line-height: 1.62;
-  margin-bottom: var(--space-16);
+  font-size: 17px;
+  line-height: 1.75;
+  margin-bottom: var(--space-20);
   color: var(--ink-primary);
   text-wrap: pretty;
 }
 
+/* Clickable Vocabulary Targets */
+.vocab-target,
 .reading-target-word {
-  background: transparent;
-  color: inherit;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink-primary);
+  background: rgba(202, 138, 4, 0.12);
+  border-bottom: 2px solid var(--accent-gold, #ca8a04);
+  padding: 1px 4px;
+  border-radius: 2px;
+  transition: all var(--duration-micro) ease;
+  user-select: text;
+  text-decoration: none;
+  display: inline;
+}
+
+.vocab-target:hover,
+.vocab-target:focus-visible,
+.reading-target-word:hover {
+  background: var(--accent-gold, #ca8a04);
+  color: #ffffff;
+  outline: none;
+}
+
+.vocab-target.active {
+  background: var(--ink-primary);
+  color: var(--ink-inverted);
+  border-bottom-color: var(--accent-gold, #ca8a04);
+}
+
+/* Vocabulary Footnote / Side Drawer */
+.vocab-drawer-container {
+  width: 100%;
+}
+
+.vocab-drawer {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-solid);
+  padding: var(--space-16);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: all var(--duration-fast) var(--ease-snappy);
+  animation: fadeInVocabDrawer 0.2s ease;
+}
+
+@keyframes fadeInVocabDrawer {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.vocab-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border-hairline);
+  padding-bottom: var(--space-8);
+  margin-bottom: var(--space-12);
+  gap: var(--space-8);
+}
+
+.vocab-drawer-title-cluster {
+  flex: 1;
+}
+
+.vocab-drawer-word {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
   font-weight: 700;
-  border-bottom: 2px solid var(--ink-primary);
+  color: var(--ink-primary);
+  margin: 2px 0;
+  letter-spacing: -0.01em;
+}
+
+.vocab-drawer-pos {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  color: var(--ink-muted);
+}
+
+.vocab-drawer-actions {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.vocab-drawer-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.vocab-drawer-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vocab-field-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.vocab-field-value {
+  font-size: var(--text-xs);
+  line-height: 1.55;
+  color: var(--ink-primary);
+}
+
+.vocab-vietnamese-field {
+  background: rgba(202, 138, 4, 0.08);
+  border-left: 3px solid var(--accent-gold, #ca8a04);
+  padding: var(--space-8) var(--space-12);
+  border-radius: 0 2px 2px 0;
+}
+
+.vocab-vietnamese-field .vietnamese-meaning {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--ink-primary);
+}
+
+.vocab-colloc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: 4px;
+}
+
+.colloc-pill {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  padding: 2px 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  color: var(--ink-primary);
+  border-radius: 2px;
+}
+
+.vocab-drawer-empty {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-muted);
+  text-align: center;
+  padding: var(--space-20) var(--space-12);
+  border: 1px dashed var(--border-hairline);
+  background: var(--bg-surface);
 }
 
 .reading-sidebar-pane {
@@ -992,6 +1161,36 @@
   line-height: 1.6;
 }
 
+/* Grammar Dossier Ergonomics & Unclipped Vertical Scrolling (ENG-28) */
+.dossier-grammar .dossier-card-slot {
+  min-height: 480px;
+  height: auto;
+}
+
+.dossier-grammar .atomic-card-perspective-wrapper {
+  max-width: 760px;
+  width: 100%;
+  min-height: 520px;
+  height: auto;
+}
+
+.dossier-grammar .atomic-card-container {
+  min-height: 520px;
+  height: auto;
+}
+
+.dossier-grammar .card-face {
+  min-height: 520px;
+  overflow-y: auto;
+  padding: var(--space-20) var(--space-24);
+}
+
+.grammar-front-content,
+.grammar-back-content {
+  width: 100%;
+  max-width: 68ch;
+}
+
 /* ==========================================================================
    SKYRIM-STYLE CONSTELLATION SKILL TREE & WORKOUT BANNER
    ========================================================================== */
@@ -1053,4 +1252,258 @@
   transform: translateY(-2px);
   border-color: var(--accent-gold) !important;
 }
+
+/* ==========================================================================
+   COLLOCATIONS & LEXICON VAULT STYLES (TASK 6)
+   Dual-View Studio: Active SRS Drill & Full 1,000 Searchable Lexicon
+   Soft-Paper Palette: #fafaf9 canvas, #111111 deep charcoal ink, #ca8a04 gold
+   ========================================================================== */
+
+.collocations-mode-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--border-hairline);
+  gap: var(--space-12);
+}
+
+.view-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.view-mode-toggle .view-toggle-btn {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  padding: 8px 16px;
+  border: 1px solid var(--border-solid);
+  background: var(--bg-surface);
+  color: var(--ink-secondary);
+  cursor: pointer;
+  transition: all var(--duration-micro);
+}
+
+.view-mode-toggle .view-toggle-btn:hover {
+  border-color: var(--ink-primary);
+  color: var(--ink-primary);
+}
+
+.view-mode-toggle .view-toggle-btn.active {
+  background: var(--ink-primary);
+  color: var(--bg-canvas);
+  border-color: var(--ink-primary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.lexicon-badge-summary {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+}
+
+/* Dictionary Table View */
+.lexicon-table-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  padding: var(--space-16);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+}
+
+.lexicon-table-header-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  color: var(--ink-muted);
+  border-bottom: 1px solid var(--border-hairline);
+  padding-bottom: var(--space-8);
+}
+
+.lexicon-table-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border-hairline);
+  max-height: 640px;
+  overflow-y: auto;
+}
+
+.lexicon-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  text-align: left;
+}
+
+.lexicon-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--bg-canvas);
+}
+
+.lexicon-table th {
+  padding: 10px 14px;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  color: var(--ink-secondary);
+  border-bottom: 2px solid var(--border-solid);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.lexicon-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-hairline);
+  color: var(--ink-primary);
+  vertical-align: middle;
+}
+
+.lexicon-row {
+  transition: background-color var(--duration-micro);
+}
+
+.lexicon-row:hover {
+  background-color: rgba(202, 138, 4, 0.06);
+}
+
+.lexicon-col-index {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-muted);
+  text-align: center;
+}
+
+.lexicon-col-phrase {
+  font-weight: 600;
+  color: var(--ink-primary);
+}
+
+.colloc-cat-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 2px;
+  border: 1px solid var(--border-hairline);
+  background: var(--bg-canvas);
+  color: var(--ink-secondary);
+  white-space: nowrap;
+}
+
+.colloc-cat-badge.cat-business {
+  border-color: rgba(202, 138, 4, 0.4);
+  color: #a16207;
+}
+
+.colloc-cat-badge.cat-academic {
+  border-color: rgba(37, 99, 235, 0.3);
+  color: #2563eb;
+}
+
+.colloc-cat-badge.cat-idioms {
+  border-color: rgba(147, 51, 234, 0.3);
+  color: #7c3aed;
+}
+
+.lexicon-col-vn {
+  color: var(--ink-secondary);
+}
+
+.lexicon-col-audio,
+.lexicon-col-drill,
+.lexicon-col-status {
+  text-align: center;
+}
+
+.btn-speak-colloc {
+  background: transparent;
+  border: 1px solid var(--border-hairline);
+  border-radius: 3px;
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 1;
+  transition: all var(--duration-micro);
+}
+
+.btn-speak-colloc:hover {
+  background: rgba(202, 138, 4, 0.15);
+  border-color: var(--accent-gold);
+  transform: scale(1.08);
+}
+
+.colloc-status-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.colloc-status-badge.status-new {
+  background: rgba(17, 17, 17, 0.05);
+  color: var(--ink-muted);
+}
+
+.colloc-status-badge.status-review {
+  background: rgba(202, 138, 4, 0.15);
+  color: #b45309;
+}
+
+.colloc-status-badge.status-mastered {
+  background: rgba(16, 185, 129, 0.15);
+  color: #047857;
+}
+
+.btn-drill-row {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 4px 8px;
+  border: 1px solid var(--border-hairline);
+  background: var(--bg-surface);
+  cursor: pointer;
+  transition: all var(--duration-micro);
+}
+
+.btn-drill-row:hover {
+  background: var(--ink-primary);
+  color: var(--bg-canvas);
+  border-color: var(--ink-primary);
+}
+
+.lexicon-pagination-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border-hairline);
+}
+
+.lexicon-pagination-bar .page-indicator {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-secondary);
+}
+
+.lexicon-empty-cell {
+  text-align: center;
+  padding: var(--space-32) !important;
+  color: var(--ink-muted);
+}
+
 

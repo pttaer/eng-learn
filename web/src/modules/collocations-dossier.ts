@@ -1,6 +1,7 @@
 import { AtomicCard } from '../core/atomic-card';
 import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
+import { AudioSynthesizer } from '../core/audio-synthesizer';
 import collocationsData from '../assets/data/collocations.json';
 
 export interface CollocationItem {
@@ -11,6 +12,8 @@ export interface CollocationItem {
   category: 'EVERYDAY' | 'BUSINESS' | 'ACADEMIC' | 'IDIOMS';
 }
 
+export type CollocationViewMode = 'drill' | 'dictionary';
+
 export class CollocationsDossier {
   private container: HTMLElement;
   private currentList: CollocationItem[] = [];
@@ -18,6 +21,9 @@ export class CollocationsDossier {
   private activeCategory: string = 'ALL';
   private searchQuery: string = '';
   private currentCardHandle: any = null;
+  private viewMode: CollocationViewMode = 'dictionary';
+  private currentPage: number = 1;
+  private pageSize: number = 50;
   public onBatchComplete?: () => void;
 
   constructor() {
@@ -26,14 +32,27 @@ export class CollocationsDossier {
     this.filterCards();
   }
 
+  public playAudio(text: string): void {
+    AudioSynthesizer.speak(text);
+  }
+
+  private escapeHtml(str: string): string {
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
   private filterCards(): void {
     const rawDeck = collocationsData as CollocationItem[];
     let list: CollocationItem[] = [];
 
-    if (this.activeCategory === 'DUE') {
+    if (this.viewMode === 'drill' && this.activeCategory === 'DUE') {
       const states = StorageManager.loadState().cardStates;
       list = SRSEngine.getDueCards(rawDeck, states, 20);
-    } else if (this.activeCategory !== 'ALL') {
+    } else if (this.activeCategory !== 'ALL' && this.activeCategory !== 'DUE') {
       list = rawDeck.filter(item => item.category === this.activeCategory);
     } else {
       list = [...rawDeck];
@@ -49,13 +68,24 @@ export class CollocationsDossier {
 
     this.currentList = list;
     this.currentIndex = 0;
+    this.currentPage = 1;
   }
 
   public render(): HTMLElement {
     this.container.innerHTML = `
+      <div class="collocations-mode-header">
+        <div class="view-mode-toggle">
+          <button class="hud-btn view-toggle-btn ${this.viewMode === 'drill' ? 'active' : ''}" data-view="drill">[⚡ ACTIVE SRS DRILL]</button>
+          <button class="hud-btn view-toggle-btn ${this.viewMode === 'dictionary' ? 'active' : ''}" data-view="dictionary">[📖 FULL 1,000 LEXICON]</button>
+        </div>
+        <div class="lexicon-badge-summary">
+          <span class="telemetry-value">TOTAL: 1,000 COLLOCATIONS</span>
+        </div>
+      </div>
+
       <div class="dossier-control-bar">
         <div class="dossier-tabs">
-          <button class="hud-btn filter-tab ${this.activeCategory === 'DUE' ? 'active' : ''}" data-cat="DUE">[⚡ SRS DUE BATCH (20)]</button>
+          ${this.viewMode === 'drill' ? `<button class="hud-btn filter-tab ${this.activeCategory === 'DUE' ? 'active' : ''}" data-cat="DUE">[⚡ SRS DUE BATCH (20)]</button>` : ''}
           <button class="hud-btn filter-tab ${this.activeCategory === 'ALL' ? 'active' : ''}" data-cat="ALL">[ALL 1,000]</button>
           <button class="hud-btn filter-tab ${this.activeCategory === 'EVERYDAY' ? 'active' : ''}" data-cat="EVERYDAY">[EVERYDAY]</button>
           <button class="hud-btn filter-tab ${this.activeCategory === 'BUSINESS' ? 'active' : ''}" data-cat="BUSINESS">[BUSINESS]</button>
@@ -63,9 +93,24 @@ export class CollocationsDossier {
           <button class="hud-btn filter-tab ${this.activeCategory === 'IDIOMS' ? 'active' : ''}" data-cat="IDIOMS">[IDIOMS]</button>
         </div>
         <div class="dossier-search-wrapper">
-          <input type="text" class="dossier-search-input" placeholder="SEARCH 1,000 COLLOCATIONS... (CTRL+K)" value="${this.searchQuery}" />
+          <input type="text" class="dossier-search-input" placeholder="SEARCH 1,000 COLLOCATIONS... (CTRL+K)" value="${this.escapeHtml(this.searchQuery)}" />
         </div>
       </div>
+
+      ${this.viewMode === 'drill' ? this.getDrillHtml() : this.getDictionaryHtml()}
+    `;
+
+    this.bindEvents();
+    if (this.viewMode === 'drill') {
+      this.renderCurrentCard();
+    } else {
+      this.bindDictionaryTableEvents();
+    }
+    return this.container;
+  }
+
+  private getDrillHtml(): string {
+    return `
       <div class="dossier-card-slot"></div>
       <div class="dossier-nav-bar">
         <button class="hud-btn nav-btn-prev">[ ← PREV ]</button>
@@ -73,13 +118,96 @@ export class CollocationsDossier {
         <button class="hud-btn nav-btn-next">[ NEXT → ]</button>
       </div>
     `;
+  }
 
-    this.bindEvents();
-    this.renderCurrentCard();
-    return this.container;
+  private getDictionaryHtml(): string {
+    const totalItems = this.currentList.length;
+    const totalPages = Math.max(1, Math.ceil(totalItems / this.pageSize));
+    if (this.currentPage > totalPages) this.currentPage = totalPages;
+    const startIndex = (this.currentPage - 1) * this.pageSize;
+    const pageItems = this.currentList.slice(startIndex, startIndex + this.pageSize);
+    const endIndex = Math.min(startIndex + pageItems.length, totalItems);
+
+    return `
+      <div class="lexicon-table-container">
+        <div class="lexicon-table-header-info">
+          <span class="telemetry-label">LEXICON ARCHIVE // ${totalItems} ENTRIES</span>
+          <span class="telemetry-label">DISPLAYING ${totalItems > 0 ? startIndex + 1 : 0}–${endIndex} OF ${totalItems}</span>
+        </div>
+        <div class="lexicon-table-scroll-wrapper">
+          <table class="lexicon-table">
+            <thead>
+              <tr>
+                <th style="width: 60px; text-align: center;">#</th>
+                <th>COLLOCATION PHRASE</th>
+                <th style="width: 110px;">CATEGORY</th>
+                <th>VIETNAMESE TRANSLATION</th>
+                <th style="width: 80px; text-align: center;">AUDIO</th>
+                <th style="width: 110px; text-align: center;">SRS STATUS</th>
+                <th style="width: 80px; text-align: center;">PRACTICE</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${pageItems.length === 0 ? `
+                <tr>
+                  <td colspan="7" class="lexicon-empty-cell">
+                    <div class="telemetry-label">[ZERO RECORDS MATCH QUERY]</div>
+                    <p>No collocation entries found matching the filter criteria.</p>
+                  </td>
+                </tr>
+              ` : pageItems.map(item => {
+                const srsState = StorageManager.getCardState(item.id);
+                let statusBadge: 'NEW' | 'REVIEW' | 'MASTERED' = 'NEW';
+                if (srsState) {
+                  statusBadge = srsState.repetitions >= 3 ? 'MASTERED' : 'REVIEW';
+                }
+                return `
+                  <tr class="lexicon-row" data-id="${item.id}">
+                    <td class="lexicon-col-index">${String(item.index).padStart(4, '0')}</td>
+                    <td class="lexicon-col-phrase"><strong>${this.escapeHtml(item.phrase)}</strong></td>
+                    <td class="lexicon-col-cat"><span class="colloc-cat-badge cat-${item.category.toLowerCase()}">${item.category}</span></td>
+                    <td class="lexicon-col-vn">${this.escapeHtml(item.vietnamese)}</td>
+                    <td class="lexicon-col-audio">
+                      <button class="hud-btn btn-speak-colloc" data-phrase="${this.escapeHtml(item.phrase)}" title="Listen to pronunciation [${this.escapeHtml(item.phrase)}]">🔊</button>
+                    </td>
+                    <td class="lexicon-col-status">
+                      <span class="colloc-status-badge status-${statusBadge.toLowerCase()}">${statusBadge}</span>
+                    </td>
+                    <td class="lexicon-col-drill">
+                      <button class="hud-btn btn-drill-row" data-id="${item.id}" title="Practice in SRS Drill">DRILL ⚡</button>
+                    </td>
+                  </tr>
+                `;
+              }).join('')}
+            </tbody>
+          </table>
+        </div>
+        <div class="lexicon-pagination-bar">
+          <button class="hud-btn page-btn-prev" ${this.currentPage <= 1 ? 'disabled' : ''}>[ ← PREV 50 ]</button>
+          <span class="telemetry-value page-indicator">PAGE ${this.currentPage} / ${totalPages} (${totalItems > 0 ? startIndex + 1 : 0}–${endIndex} of ${totalItems})</span>
+          <button class="hud-btn page-btn-next" ${this.currentPage >= totalPages ? 'disabled' : ''}>[ NEXT 50 → ]</button>
+        </div>
+      </div>
+    `;
   }
 
   private bindEvents(): void {
+    // View mode toggle buttons
+    const viewButtons = this.container.querySelectorAll('.view-toggle-btn');
+    viewButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const mode = (btn as HTMLElement).dataset.view as CollocationViewMode;
+        if (mode && mode !== this.viewMode) {
+          this.viewMode = mode;
+          if (this.viewMode === 'dictionary' && this.activeCategory === 'DUE') {
+            this.activeCategory = 'ALL';
+          }
+          this.filterCards();
+          this.render();
+        }
+      });
+    });
+
     // Category tabs
     const tabs = this.container.querySelectorAll('.filter-tab');
     tabs.forEach(tab => {
@@ -96,19 +224,96 @@ export class CollocationsDossier {
     searchInput?.addEventListener('input', (e) => {
       this.searchQuery = (e.target as HTMLInputElement).value;
       this.filterCards();
-      this.renderCurrentCard();
-      const counter = this.container.querySelector('.card-counter');
-      if (counter) {
-        counter.textContent = `VAULT [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]`;
+      if (this.viewMode === 'drill') {
+        this.renderCurrentCard();
+        const counter = this.container.querySelector('.card-counter');
+        if (counter) {
+          counter.textContent = `VAULT [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]`;
+        }
+      } else {
+        this.updateDictionaryView();
       }
     });
 
-    // Navigation buttons
-    const prevBtn = this.container.querySelector('.nav-btn-prev');
-    const nextBtn = this.container.querySelector('.nav-btn-next');
+    // Drill navigation buttons
+    if (this.viewMode === 'drill') {
+      const prevBtn = this.container.querySelector('.nav-btn-prev');
+      const nextBtn = this.container.querySelector('.nav-btn-next');
+      prevBtn?.addEventListener('click', () => this.navigateCard(-1));
+      nextBtn?.addEventListener('click', () => this.navigateCard(1));
+    }
+  }
 
-    prevBtn?.addEventListener('click', () => this.navigateCard(-1));
-    nextBtn?.addEventListener('click', () => this.navigateCard(1));
+  private updateDictionaryView(): void {
+    const tableContainer = this.container.querySelector('.lexicon-table-container');
+    if (!tableContainer) return;
+
+    const temp = document.createElement('div');
+    temp.innerHTML = this.getDictionaryHtml();
+    const newContainer = temp.firstElementChild as HTMLElement;
+    if (newContainer) {
+      tableContainer.replaceWith(newContainer);
+      this.bindDictionaryTableEvents();
+    }
+  }
+
+  private bindDictionaryTableEvents(): void {
+    const prevBtn = this.container.querySelector('.page-btn-prev');
+    const nextBtn = this.container.querySelector('.page-btn-next');
+
+    prevBtn?.addEventListener('click', () => {
+      if (this.currentPage > 1) {
+        this.currentPage--;
+        this.updateDictionaryView();
+      }
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      const totalPages = Math.max(1, Math.ceil(this.currentList.length / this.pageSize));
+      if (this.currentPage < totalPages) {
+        this.currentPage++;
+        this.updateDictionaryView();
+      }
+    });
+
+    // Audio speak buttons
+    const speakBtns = this.container.querySelectorAll('.btn-speak-colloc');
+    speakBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const phrase = (btn as HTMLElement).dataset.phrase;
+        if (phrase) {
+          this.playAudio(phrase);
+        }
+      });
+    });
+
+    // Drill row buttons
+    const drillBtns = this.container.querySelectorAll('.btn-drill-row');
+    drillBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const cardId = (btn as HTMLElement).dataset.id;
+        if (cardId) {
+          this.jumpToDrill(cardId);
+        }
+      });
+    });
+  }
+
+  private jumpToDrill(cardId: string): void {
+    this.viewMode = 'drill';
+    const foundIndex = this.currentList.findIndex(item => item.id === cardId);
+    if (foundIndex >= 0) {
+      this.currentIndex = foundIndex;
+    } else {
+      this.activeCategory = 'ALL';
+      this.searchQuery = '';
+      this.filterCards();
+      const idx = this.currentList.findIndex(item => item.id === cardId);
+      this.currentIndex = idx >= 0 ? idx : 0;
+    }
+    this.render();
   }
 
   private navigateCard(delta: number): void {
@@ -193,6 +398,25 @@ export class CollocationsDossier {
   }
 
   public handleGlobalKey(key: string): boolean {
+    if (this.viewMode === 'dictionary') {
+      if (key === 'ArrowRight' || key === 'PageDown') {
+        const totalPages = Math.max(1, Math.ceil(this.currentList.length / this.pageSize));
+        if (this.currentPage < totalPages) {
+          this.currentPage++;
+          this.updateDictionaryView();
+          return true;
+        }
+      }
+      if (key === 'ArrowLeft' || key === 'PageUp') {
+        if (this.currentPage > 1) {
+          this.currentPage--;
+          this.updateDictionaryView();
+          return true;
+        }
+      }
+      return false;
+    }
+
     if (key === 'ArrowRight' || key === 'l') {
       this.navigateCard(1);
       return true;
