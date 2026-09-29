@@ -320,5 +320,11 @@ console.log(`[PARSER] Generated habits.json with ${days.length} days.`);
 // ----------------------------------------------------
 require('./generate-vocab-reading.cjs');
 
+// ----------------------------------------------------
+// 7. Generate grammar.json (Pillar 07)
+// ----------------------------------------------------
+require('./generate-grammar.cjs');
+
 console.log('[PARSER] All curriculum files successfully compiled.');
+
 

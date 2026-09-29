@@ -10,6 +10,7 @@ import { ListeningDossier } from './modules/listening-dossier';
 import { SpeakingDossier } from './modules/speaking-dossier';
 import { VocabularyDossier } from './modules/vocabulary-dossier';
 import { CollocationsDossier } from './modules/collocations-dossier';
+import { GrammarDossier } from './modules/grammar-dossier';
 import { MissionLog } from './modules/mission-log';
 import { StorageManager } from './utils/storage';
 import collocationsData from './assets/data/collocations.json';
@@ -26,6 +27,7 @@ class App {
   private speakingDossier: SpeakingDossier;
   private vocabularyDossier: VocabularyDossier;
   private collocationsDossier: CollocationsDossier;
+  private grammarDossier: GrammarDossier;
   private missionLog: MissionLog;
 
   private workspaceMount: HTMLElement;
@@ -55,6 +57,7 @@ class App {
     this.speakingDossier = new SpeakingDossier();
     this.vocabularyDossier = new VocabularyDossier();
     this.collocationsDossier = new CollocationsDossier();
+    this.grammarDossier = new GrammarDossier();
     this.missionLog = new MissionLog();
 
     // Bind Completion Rituals
@@ -64,6 +67,7 @@ class App {
     this.speakingDossier.onBatchComplete = () => this.showCompletionReceipt('SPEAK // 4-3-2 DRILL COMPLETE');
     this.vocabularyDossier.onBatchComplete = () => this.showCompletionReceipt('VOCAB // ROGUELIKE RUN COMPLETE');
     this.collocationsDossier.onBatchComplete = () => this.showCompletionReceipt('COLLOC // 1,000 VAULT BATCH COMPLETE');
+    this.grammarDossier.onBatchComplete = () => this.showCompletionReceipt('GRAMMAR // ADVANCED SYNTACTIC MATRIX COMPLETE');
     this.missionLog.onDayCompleted = (day) => this.showCompletionReceipt(`MISSION DAY ${day}`);
 
     // 4. Initialize Router
@@ -133,6 +137,10 @@ class App {
         this.workspaceMount.appendChild(this.collocationsDossier.render());
         this.activeDossierHandle = this.collocationsDossier;
         break;
+      case 'grammar':
+        this.workspaceMount.appendChild(this.grammarDossier.render());
+        this.activeDossierHandle = this.grammarDossier;
+        break;
       case 'habits':
         this.workspaceMount.appendChild(this.missionLog.render());
         this.activeDossierHandle = this.missionLog;
@@ -150,6 +158,11 @@ class App {
         this.router.navigate('singularity');
         return;
       }
+
+      // Ignore shortcuts if user is typing inside an input, textarea, or contenteditable
+      const target = e.target as HTMLElement;
+      const isInput = target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable);
+      if (isInput) return;
 
       // Ctrl+K opens / focuses Collocations Vault instant search
       if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
