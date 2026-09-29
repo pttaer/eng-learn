@@ -2,22 +2,58 @@
   "name": "eng-singularity",
   "version": "1.0.0",
   "private": true,
+  "description": "English Singularity - C2 Native English Mastery System",
+  "author": "English Singularity Team",
+  "main": "electron/main.cjs",
   "type": "module",
   "scripts": {
     "parse": "node scripts/parse-curriculum.cjs",
-    "icons": "node scripts/generate-icons.cjs",
-    "prebuild": "node scripts/parse-curriculum.cjs && node scripts/generate-icons.cjs",
+    "icons": "node scripts/generate-icons.cjs && node scripts/generate-ico.cjs",
+    "prebuild": "node scripts/parse-curriculum.cjs && node scripts/generate-icons.cjs && node scripts/generate-ico.cjs",
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "electron:start": "electron .",
+    "dist:win": "npm run build && electron-builder --win nsis"
   },
   "dependencies": {
     "animejs": "^3.2.2"
   },
   "devDependencies": {
     "@types/animejs": "^3.1.12",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
     "puppeteer-core": "^25.12.0",
     "typescript": "^5.5.4",
     "vite": "^5.4.2"
+  },
+  "build": {
+    "appId": "com.english.singularity",
+    "productName": "English Singularity",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "public/icon.ico",
+      "public/icon-512.png",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "public/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "English Singularity",
+      "uninstallDisplayName": "English Singularity",
+      "runAfterFinish": true
+    }
   }
 }
