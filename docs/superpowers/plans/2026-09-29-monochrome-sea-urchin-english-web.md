@@ -97,15 +97,15 @@ E:\Eng\web/
 - Produces: `habits.json` (30 daily habit checklist tasks across 4 phases).
 - Produces: CSS custom variables (`--bg-white`, `--ink-black`, `--border-1px`, `--space-8`, `--space-16`, etc.).
 
-- [ ] **Step 1: Create `package.json` with dependencies and prebuild hook**
+- [x] **Step 1: Create `package.json` with dependencies and prebuild hook**
   Include `"vite": "^5.4.0"`, `"typescript": "^5.5.0"`, `"animejs": "^4.0.0"`. Set `"scripts": { "prebuild": "node scripts/parse-curriculum.cjs", "dev": "vite", "build": "tsc && vite build" }`.
-- [ ] **Step 2: Build `parse-curriculum.cjs`**
+- [x] **Step 2: Build `parse-curriculum.cjs`**
   Script reads `E:\Eng\collocations.md` (extracts all 1,000 items), `practice_drills.md`, `listening.md`, and `daily_practice_plan.md`, formatting them into structured JSON files under `src/assets/data/`.
-- [ ] **Step 3: Execute parser and verify output count**
+- [x] **Step 3: Execute parser and verify output count**
   Run `node web/scripts/parse-curriculum.cjs` and verify `collocations.json` contains exactly 1,000 objects.
-- [ ] **Step 4: Create `variables.css` and `hud-base.css`**
+- [x] **Step 4: Create `variables.css` and `hud-base.css`**
   Implement strict binary monochrome design tokens (`#FFFFFF` and `#000000`), 8pt modular scale, typography font families (`JetBrains Mono` and `Inter`), and reset styles.
-- [ ] **Step 5: Verify build configuration**
+- [x] **Step 5: Verify build configuration**
   Run `npm install` and verify TypeScript compiles without error.
 
 ---
@@ -123,13 +123,13 @@ E:\Eng\web/
 - Produces: `StorageManager.exportBackup(): string`
 - Produces: `StorageManager.importBackup(json: string): boolean`
 
-- [ ] **Step 1: Implement SM-2 algorithm in `srs-engine.ts`**
+- [x] **Step 1: Implement SM-2 algorithm in `srs-engine.ts`**
   Implement SuperMemo-2 mathematical formulation:
   - If `again` (`[ ✗ ]`): Reset repetitions $n = 0$, interval $I = 1$ day, reduce $EF = \max(1.3, EF - 0.2)$.
   - If `good` (`[ ✓ ]`): If $n=0 \rightarrow I=1$; if $n=1 \rightarrow I=6$; if $n \ge 2 \rightarrow I = \text{round}(I \times EF)$. Increment $n$.
-- [ ] **Step 2: Implement `storage.ts` with local persistence**
+- [x] **Step 2: Implement `storage.ts` with local persistence**
   Manage `localStorage` key `STARK_ENG_STATE`. Automatically serialize and deserialize card review dates, streak counters, and completed habit days. Include JSON import/export functions.
-- [ ] **Step 3: Create unit verification script**
+- [x] **Step 3: Create unit verification script**
   Verify interval escalation: Day 0 (again) $\rightarrow$ Day 1 $\rightarrow$ Day 6 $\rightarrow$ Day 15 based on simulated `good` ratings.
 
 ---
@@ -144,13 +144,13 @@ E:\Eng\web/
 - Produces: `SoundFX.play(type: 'urchin-hum' | 'click' | 'implosion' | 'void-open' | 'flip' | 'absorb' | 'alarm'): void`
 - Produces: `SoundFX.toggleMute(): boolean`
 
-- [ ] **Step 1: Implement procedural synthesis in `audio-synthesizer.ts`**
+- [x] **Step 1: Implement procedural synthesis in `audio-synthesizer.ts`**
   - `click`: 1800Hz sine burst with 8ms exponential decay.
   - `implosion`: Pitch drop from 320Hz down to 60Hz over 60ms with lowpass filter.
   - `void-open`: Dual-oscillator reverse-whoosh (120Hz $\rightarrow$ 480Hz crescendo with white noise texture).
   - `urchin-hum`: 65Hz continuous sub-bass sine wave with subtle LFO modulation.
   - `flip`: 400Hz soft mechanical card snap.
-- [ ] **Step 2: Implement user-gesture lazy initialization & mute toggle**
+- [x] **Step 2: Implement user-gesture lazy initialization & mute toggle**
   Ensure browser does not throw audio policy warning. Auto-resume context on first `pointerdown`. Add mute persistence to `localStorage`.
 
 ---
@@ -167,13 +167,13 @@ E:\Eng\web/
 - Produces: `PerspectiveCanvas.updateAndDraw(ctx, mouseX, mouseY): void`
 - Produces: `CursorTracker.init(): void`
 
-- [ ] **Step 1: Implement Crosshair Cursor Tracker (`cursor-tracker.ts`)**
+- [x] **Step 1: Implement Crosshair Cursor Tracker (`cursor-tracker.ts`)**
   Replace mouse cursor with 1px black center dot + lag-smoothed rotating outer reticle. Gated by `requestAnimationFrame`. Automatically expands into `[ + ]` targeting brackets over interactive nodes.
-- [ ] **Step 2: Implement Sea Urchin with Magnetic Spines (`sea-urchin.ts`)**
+- [x] **Step 2: Implement Sea Urchin with Magnetic Spines (`sea-urchin.ts`)**
   Render solid black core with 96 radial needle spines. Spines calculate angular delta to cursor position and dynamically bend/reach toward it. On direct hover, spines part outward into an open crown revealing 4 pillar buttons (`READ`, `WRITE`, `LISTEN`, `SPEAK`).
-- [ ] **Step 3: Implement 2.5D Perspective Canvas (`perspective-canvas.ts`)**
+- [x] **Step 3: Implement 2.5D Perspective Canvas (`perspective-canvas.ts`)**
   Render fine hairline background grid with pseudo-3D horizon. Spawn floating vague objects drifting from perimeter at varying Z-depths (3:1 decoy-to-learning ratio).
-- [ ] **Step 4: Implement Decoy Micro-Implosion & Black-Light Inverted Void Lens**
+- [x] **Step 4: Implement Decoy Micro-Implosion & Black-Light Inverted Void Lens**
   - Hovering a decoy collapses it to a zero-point dot with hairline shockwave within 120ms.
   - Hovering a learning artifact triggers the black light eruption: concentric black shockwave rings ripple outward, opening a circular black lens displaying the learning item with an `[ABSORB]` action button.
 
@@ -190,15 +190,15 @@ E:\Eng\web/
 - Produces: `AtomicCard.flip(cardEl: HTMLElement): void`
 - Produces: `AtomicCard.rate(cardEl: HTMLElement, rating: 'again' | 'good'): void`
 
-- [ ] **Step 1: Create 3D CSS Card Structure in `atomic-card.css`**
+- [x] **Step 1: Create 3D CSS Card Structure in `atomic-card.css`**
   Implement `.atomic-card-container` with `perspective: 1000px`, `.atomic-card-inner` with `transform-style: preserve-3d`, and `.card-face-front` / `.card-face-back` with `backface-visibility: hidden`.
-- [ ] **Step 2: Standardize the 5 Component Zones**
+- [x] **Step 2: Standardize the 5 Component Zones**
   - Zone 1: Top Telemetry Bar (`[PILLAR // CATEGORY]`, Index `[042 / 1000]`, Audio trigger `[🔊]`).
   - Zone 2: Front Challenge Face.
   - Zone 3: 180° Y-Axis Flip using Anime.js spring physics (`rotateY: 180`, `stiffness: 140, damping: 16`).
   - Zone 4: Back Resolution Face (Vietnamese, IPA, diff, or rubric).
   - Zone 5: Universal Bottom Dock (`[ ✗ ] Again (1)` | `[ ⟳ Flip (Space) ]` | `[ ✓ ] Good (2)`).
-- [ ] **Step 3: Implement Gyro Parallax Tilt**
+- [x] **Step 3: Implement Gyro Parallax Tilt**
   Cards subtly tilt in 3D (`rotateX(±6deg) rotateY(±6deg)`) following mouse coordinates relative to card center.
 
 ---
@@ -217,13 +217,13 @@ E:\Eng\web/
 - Produces: `ListeningDossier.render(): HTMLElement` (3-Pass transcription cards)
 - Produces: `SpeakingDossier.render(): HTMLElement` (4-3-2 Circular timer + live mic waveform)
 
-- [ ] **Step 1: Build Lexicon Dossier (`lexicon-dossier.ts`)**
+- [x] **Step 1: Build Lexicon Dossier (`lexicon-dossier.ts`)**
   Displays 1,000 collocations via Universal Atomic Card. Includes domain filter tabs (`[ALL]`, `[EVERYDAY]`, `[BUSINESS]`, `[ACADEMIC]`, `[IDIOMS]`), instant search input, and Web Speech API audio pronunciation button. Integrates directly with SM-2 engine.
-- [ ] **Step 2: Build Writing Dossier (`writing-dossier.ts`)**
+- [x] **Step 2: Build Writing Dossier (`writing-dossier.ts`)**
   Presents Franklin Copywork exercises. Front shows master sentence to memorize. Pressing `Space` flips to an input field to reconstruct the sentence from memory. Submitting displays a side-by-side monochrome character diff highlighting omissions and additions.
-- [ ] **Step 3: Build Listening Dossier (`listening-dossier.ts`)**
+- [x] **Step 3: Build Listening Dossier (`listening-dossier.ts`)**
   Interactive 3-Pass Active Transcription cards: Pass 1 (Gist note-taking), Pass 2 (Word-for-word text input), Pass 3 (Phonetic connected-speech reveal).
-- [ ] **Step 4: Build Speaking Dossier (`speaking-dossier.ts`)**
+- [x] **Step 4: Build Speaking Dossier (`speaking-dossier.ts`)**
   Interactive Nation 4-3-2 timer with circular SVG countdown gauge (Round 1: 4m, Round 2: 3m, Round 3: 2m). Integrates browser `navigator.mediaDevices.getUserMedia` to render a real-time circular voice waveform dancing to user speech in pure black ink.
 
 ---
@@ -241,15 +241,15 @@ E:\Eng\web/
 **Interfaces:**
 - Produces: Complete, fully functional, buildable web application in `E:\Eng\web`.
 
-- [ ] **Step 1: Build 30-Day Mission Log (`mission-log.ts`)**
+- [x] **Step 1: Build 30-Day Mission Log (`mission-log.ts`)**
   Horizontal 2.5D carousel of 30 day-cards. Each card has checkable daily training goals. Completing a day updates the streak counter and sends an energy pulse to the urchin.
-- [ ] **Step 2: Build Corner Compass & Radial HUD (`corner-compass.ts`)**
+- [x] **Step 2: Build Corner Compass & Radial HUD (`corner-compass.ts`)**
   When zoomed into any dossier, the miniature sea urchin sits in the corner. Hovering/clicking expands a micro-radial dial with 5 icons (`HOME`, `READ`, `WRITE`, `LISTEN`, `SPEAK`) for instant switching.
-- [ ] **Step 3: Build Session Completion Ritual (`main.ts`)**
+- [x] **Step 3: Build Session Completion Ritual (`main.ts`)**
   When a card review batch or daily habit set is finished, the deck contracts into a black beam absorbed by the sea urchin, triggering a full-canvas black-light shockwave and presenting an architectural telemetry receipt (`[BATCH COMPLETE]`, `[RETENTION ACCURACY]`, `[STREAK: +1]`).
-- [ ] **Step 4: Implement Master Keyboard Shortcuts**
+- [x] **Step 4: Implement Master Keyboard Shortcuts**
   Wire global hotkeys: `Space` (flip/timer), `1`/`←` (Again), `2`/`→` (Good), `Esc` (return to urchin singularity), `Ctrl+K` (instant collocation search).
-- [ ] **Step 5: Shell Assembly & Production Build Verification**
+- [x] **Step 5: Shell Assembly & Production Build Verification**
   Assemble `index.html` and `main.ts`. Run `npm run build` and confirm a clean, zero-warning production build in `dist/`.
 
 ---
