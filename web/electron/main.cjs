@@ -13,7 +13,7 @@ function createWindow() {
     height: 860,
     minWidth: 1024,
     minHeight: 720,
-    title: 'English Singularity // C2 Native Mastery',
+    title: 'STARK // English Singularity HUD',
     icon: iconPath,
     backgroundColor: '#fafaf9',
     autoHideMenuBar: true,
@@ -22,7 +22,7 @@ function createWindow() {
       nodeIntegration: false,
       contextIsolation: true,
       webSecurity: true,
-      devTools: !app.isPackaged
+      devTools: true
     }
   });
 
@@ -40,8 +40,24 @@ function createWindow() {
     return { action: 'deny' };
   });
 
+  // Diagnostics: Catch load failures and render errors
+  mainWindow.webContents.on('did-fail-load', (_e, code, desc, url) => {
+    console.error(`[DESKTOP LOAD ERROR] ${code} (${desc}) on ${url}`);
+  });
+
+  mainWindow.webContents.on('console-message', (_e, level, message, line, sourceId) => {
+    console.log(`[RENDERER ${level}] ${message} (${sourceId}:${line})`);
+  });
+
+  // F12 to toggle DevTools
+  mainWindow.webContents.on('before-input-event', (_e, input) => {
+    if (input.key === 'F12' && input.type === 'keyDown') {
+      mainWindow.webContents.toggleDevTools();
+    }
+  });
+
   const distIndex = path.join(__dirname, '../dist/index.html');
-  mainWindow.loadFile(distIndex);
+  mainWindow.loadFile(distIndex, { hash: 'tree' });
 
   mainWindow.once('ready-to-show', () => {
     mainWindow.show();

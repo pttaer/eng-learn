@@ -8,8 +8,8 @@ export interface PWAUpdateEventDetail {
 }
 
 export function registerServiceWorker(): void {
-  // Boundary check: Zero console errors on unsupported browsers
-  if (!('serviceWorker' in navigator)) {
+  // Boundary check: Zero console errors on unsupported browsers or file:// desktop runtime
+  if (!('serviceWorker' in navigator) || window.location.protocol === 'file:') {
     return;
   }
 
