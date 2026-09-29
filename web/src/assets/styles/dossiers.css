@@ -11,6 +11,7 @@
   flex-direction: column;
   align-items: center;
   gap: var(--space-16);
+  contain: layout style;
   animation: fadeInDossier var(--duration-fast) var(--ease-snappy);
 }
 
@@ -63,8 +64,10 @@
 .dossier-card-slot {
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
-  min-height: 430px;
+  min-height: clamp(420px, 58vh, 520px);
+  contain: layout size;
 }
 
 /* Dossier Bottom Navigation Bar */
@@ -188,17 +191,21 @@
 
 .corner-compass-container {
   position: fixed;
-  bottom: var(--space-24);
-  right: var(--space-24);
+  bottom: max(var(--space-24), calc(env(safe-area-inset-bottom, 0px) + 16px));
+  right: max(var(--space-24), calc(env(safe-area-inset-right, 0px) + 16px));
   z-index: var(--z-modal-lens);
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .compass-trigger {
   width: 60px;
   height: 60px;
+  min-width: 44px;
+  min-height: 44px;
   border: 1px solid var(--border-solid);
   background: var(--bg-surface);
   border-radius: 50%;
@@ -208,6 +215,8 @@
   cursor: pointer;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   transition: transform var(--duration-fast);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .compass-trigger:hover {
@@ -237,7 +246,9 @@
   background: var(--bg-surface);
   color: var(--ink-primary);
   border: 1px solid var(--border-solid);
-  padding: 6px 12px;
+  padding: 8px 14px;
+  min-height: 44px;
+  box-sizing: border-box;
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   display: flex;
@@ -247,6 +258,8 @@
   outline: none;
   transition: all var(--duration-micro);
   white-space: nowrap;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .compass-menu-item:hover {
@@ -323,6 +336,7 @@
 
 .reading-text-pane {
   flex: 1;
+  max-width: 68ch;
   background: var(--bg-surface);
   border: 1px solid var(--border-hairline);
   padding: var(--space-24);
@@ -333,6 +347,7 @@
   font-size: var(--text-base);
   font-weight: 700;
   margin: var(--space-4) 0;
+  text-wrap: balance;
 }
 
 .reading-source-line {
@@ -345,10 +360,12 @@
 }
 
 .reading-paragraph {
+  max-width: 68ch;
   font-size: var(--text-sm);
-  line-height: 1.7;
+  line-height: 1.62;
   margin-bottom: var(--space-16);
   color: var(--ink-primary);
+  text-wrap: pretty;
 }
 
 .reading-target-word {
@@ -709,3 +726,331 @@
   font-weight: 700;
   border-left: 3px solid #000000;
 }
+
+/* ==========================================================================
+   TYPOGRAPHIC PEDAGOGY & INFORMATION ARCHITECTURE (ENG-25)
+   Strict 68ch Reading Measure, Tabular Numerals, Proofread Diffs, Scaffolding
+   ========================================================================== */
+
+/* Universal Tabular Numerals */
+.telemetry-value,
+.card-counter,
+.timer-display-text,
+.compression-table td,
+.val-wpm,
+.val-accuracy,
+.val-time,
+.val-errors,
+.step-badge,
+.word-count-badge,
+.svo-value,
+.reading-meta-telemetry .telemetry-value,
+.mine-counter {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Strict 68ch Reading Measure & Balanced Titles */
+.reading-article-body,
+.reading-text-pane,
+.reading-body,
+.franklin-master-pane .model-text-content,
+.synthesis-precis-box,
+.grammar-analysis-box,
+.grammar-exemplar-box {
+  max-width: 68ch;
+  line-height: 1.62;
+  text-wrap: pretty;
+}
+
+.card-prompt-label,
+.pane-header,
+.syntax-header {
+  text-wrap: balance;
+}
+
+/* Franklin Copywork Split-Diff Console */
+.franklin-split-console {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  width: 100%;
+}
+
+.franklin-master-pane {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  padding: var(--space-16);
+}
+
+.franklin-master-pane.blind-active .model-text-content {
+  filter: blur(8px);
+  user-select: none;
+  opacity: 0.25;
+  transition: all var(--duration-fast) var(--ease-snappy);
+}
+
+.franklin-telemetry-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px dashed var(--border-hairline);
+  border-bottom: 1px dashed var(--border-hairline);
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.02);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.franklin-editor-pane {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  width: 100%;
+}
+
+.franklin-input-textarea {
+  width: 100%;
+  border: 1px solid var(--border-solid);
+  padding: 12px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+  resize: vertical;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #000000;
+  outline: none;
+}
+
+.franklin-input-textarea:focus {
+  border-color: #000000;
+}
+
+.franklin-diff-output {
+  border: 1px solid var(--border-solid);
+  padding: 12px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.7;
+  background: #ffffff;
+  word-break: break-word;
+}
+
+/* Proofreading Diff Tokens */
+.diff-token-match {
+  color: #000000;
+}
+
+.diff-token-delete {
+  background: #000000;
+  color: #ffffff;
+  text-decoration: line-through;
+  padding: 0 4px;
+  margin: 0 1px;
+  border-radius: 1px;
+  display: inline-block;
+  line-height: 1.4;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.diff-token-insert {
+  border-bottom: 2px solid #000000;
+  font-weight: 700;
+  padding: 0 2px;
+  margin: 0 1px;
+  display: inline-block;
+  line-height: 1.4;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.diff-success-banner {
+  background: #000000;
+  color: #ffffff;
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Stepped 4-Pass Scaffolding */
+.reading-pass-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid var(--border-hairline);
+  padding: 8px 0;
+  margin-bottom: 16px;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.stepper-step {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+.stepper-step.active {
+  border-color: #000000;
+  background: #000000;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.stepper-step.completed {
+  border-color: var(--border-solid);
+  color: var(--ink-primary);
+  font-weight: 600;
+}
+
+.stepper-arrow {
+  font-family: var(--font-mono);
+  color: var(--ink-muted);
+}
+
+.pass-progression-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-hairline);
+  margin-top: 24px;
+}
+
+/* Pass 1 Skim Timer & Focus Mode */
+.skim-timer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border: 1px solid #000000;
+  background: #000000;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.reading-body.skim-focused .reading-paragraph:not(:first-child) {
+  opacity: 0.25;
+  filter: blur(1.5px);
+  transition: all var(--duration-fast) var(--ease-snappy);
+}
+
+/* Grammar Matrix Formula Card & Repair Diff */
+.grammar-formula-bar {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  background: #000000;
+  color: #ffffff;
+  padding: 8px 12px;
+  margin: 10px 0;
+  letter-spacing: -0.01em;
+  word-break: break-word;
+}
+
+.grammar-vietnamese-callout {
+  border-left: 3px solid #000000;
+  background: rgba(0, 0, 0, 0.02);
+  padding: 8px 12px;
+  margin: 10px 0;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.grammar-vietnamese-callout strong {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.grammar-repair-diff-box {
+  border: 1px solid var(--border-solid);
+  padding: 10px 12px;
+  margin: 10px 0;
+  background: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   SKYRIM-STYLE CONSTELLATION SKILL TREE & WORKOUT BANNER
+   ========================================================================== */
+
+.skill-tree-view {
+  width: 100%;
+  contain: layout style;
+}
+
+.workout-banner {
+  box-shadow: 0 2px 8px rgba(17, 17, 17, 0.04);
+}
+
+.constellation-container {
+  box-shadow: 0 4px 16px rgba(17, 17, 17, 0.06);
+}
+
+.constellation-node {
+  transition: transform var(--duration-fast) var(--ease-snappy);
+}
+
+.constellation-node:hover {
+  transform: scale(1.18);
+}
+
+.node-locked {
+  opacity: 0.45;
+  filter: grayscale(1);
+}
+
+.node-unlocked .node-circle {
+  animation: pulseGoldRing 2.4s ease-in-out infinite;
+}
+
+@keyframes pulseGoldRing {
+  0%, 100% {
+    stroke: var(--ink-primary);
+    stroke-width: 2px;
+  }
+  50% {
+    stroke: var(--accent-gold);
+    stroke-width: 3.5px;
+  }
+}
+
+.node-mastered .node-circle {
+  box-shadow: 0 0 12px var(--accent-star-glow);
+}
+
+.constellation-line {
+  transition: stroke var(--duration-fast);
+}
+
+.branch-summary-card {
+  transition: transform var(--duration-micro), border-color var(--duration-micro);
+}
+
+.branch-summary-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-gold) !important;
+}
+

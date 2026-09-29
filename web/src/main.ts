@@ -4,6 +4,7 @@ import { PerspectiveCanvas } from './core/perspective-canvas';
 import { Router, RouteId } from './core/router';
 import { HeaderHUD } from './modules/header-hud';
 import { CornerCompass } from './modules/corner-compass';
+import { SkillTreeView } from './modules/skill-tree-view';
 import { ReadingDossier } from './modules/reading-dossier';
 import { WritingDossier } from './modules/writing-dossier';
 import { ListeningDossier } from './modules/listening-dossier';
@@ -22,6 +23,7 @@ class App {
   private cornerCompass: CornerCompass;
   private perspectiveCanvas: PerspectiveCanvas;
 
+  private skillTreeView: SkillTreeView;
   private readingDossier: ReadingDossier;
   private writingDossier: WritingDossier;
   private listeningDossier: ListeningDossier;
@@ -51,7 +53,8 @@ class App {
     this.cornerCompass = new CornerCompass();
     document.getElementById('compass-mount')?.appendChild(this.cornerCompass.getElement());
 
-    // 3. Initialize Study Dossiers (6 Pillars + Habits)
+    // 3. Initialize Study Dossiers (Skill Tree + 6 Pillars + Habits)
+    this.skillTreeView = new SkillTreeView();
     this.readingDossier = new ReadingDossier();
     this.writingDossier = new WritingDossier();
     this.listeningDossier = new ListeningDossier();
@@ -78,6 +81,11 @@ class App {
   }
 
   private bindNavigation(): void {
+    // Skill Tree navigation
+    this.skillTreeView.onNavigate = (route) => {
+      this.router.navigate(route);
+    };
+
     // Canvas & Urchin navigation
     this.perspectiveCanvas.onNavigate = (pillar) => {
       this.router.navigate(pillar as RouteId);
@@ -119,9 +127,13 @@ class App {
 
     // Active workspace in foreground
     this.workspaceMount.classList.add('workspace-active');
-    this.cornerCompass.setVisible(true);
+    this.cornerCompass.setVisible(route !== 'tree');
 
     switch (route) {
+      case 'tree':
+        this.workspaceMount.appendChild(this.skillTreeView.render());
+        this.activeDossierHandle = this.skillTreeView;
+        break;
       case 'read':
         this.workspaceMount.appendChild(this.readingDossier.render());
         this.activeDossierHandle = this.readingDossier;
@@ -161,10 +173,10 @@ class App {
 
   private bindKeyboardShortcuts(): void {
     window.addEventListener('keydown', (e: KeyboardEvent) => {
-      // Escape returns to Sea Urchin Core
+      // Escape returns to Constellation Tree
       if (e.key === 'Escape') {
         AudioSynthesizer.play('click');
-        this.router.navigate('singularity');
+        this.router.navigate('tree');
         return;
       }
 
