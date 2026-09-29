@@ -92,6 +92,11 @@ class App {
       this.router.navigate(route as RouteId);
     };
 
+    // Header Back to Tree navigation
+    this.headerHud.onNavigateToTree = () => {
+      this.router.navigate('tree');
+    };
+
     // Route listener
     this.router.onRoute((route) => {
       this.handleRouteChange(route);
