@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STARK // English Singularity HUD</title>
+
+  <!-- Google Fonts: JetBrains Mono & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="/src/assets/styles/variables.css" />
+  <link rel="stylesheet" href="/src/assets/styles/hud-base.css" />
+  <link rel="stylesheet" href="/src/assets/styles/atomic-card.css" />
+  <link rel="stylesheet" href="/src/assets/styles/dossiers.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- 2.5D Living Canvas Layer -->
+    <div id="canvas-container">
+      <canvas id="canvas-2d"></canvas>
+    </div>
+
+    <!-- Architectural HUD Telemetry Overlay -->
+    <div id="hud-overlay">
+      <!-- 4 Corner Hairline Brackets -->
+      <div class="corner-bracket corner-tl"></div>
+      <div class="corner-bracket corner-tr"></div>
+      <div class="corner-bracket corner-bl"></div>
+      <div class="corner-bracket corner-br"></div>
+
+      <!-- Mount for Top Telemetry Bar -->
+      <div id="hud-header-mount"></div>
+
+      <!-- Mount for Active Study Dossier / Workspace -->
+      <main id="workspace-mount"></main>
+    </div>
+
+    <!-- Mount for Corner Compass Mini-Urchin -->
+    <div id="compass-mount"></div>
+  </div>
+
+  <!-- Main Entry Script -->
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

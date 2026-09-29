@@ -1,0 +1,21 @@
+{
+  "name": "eng-singularity",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "parse": "node scripts/parse-curriculum.cjs",
+    "prebuild": "node scripts/parse-curriculum.cjs",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "animejs": "^3.2.2"
+  },
+  "devDependencies": {
+    "@types/animejs": "^3.1.12",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2"
+  }
+}

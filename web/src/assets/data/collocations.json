@@ -1,0 +1,7002 @@
+[
+  {
+    "id": "colloc-1",
+    "index": 1,
+    "phrase": "pay attention to",
+    "vietnamese": "chú ý đến, để tâm tới",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-2",
+    "index": 2,
+    "phrase": "make a decision",
+    "vietnamese": "đưa ra quyết định",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-3",
+    "index": 3,
+    "phrase": "make an effort",
+    "vietnamese": "nỗ lực, cố gắng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-4",
+    "index": 4,
+    "phrase": "make a mistake",
+    "vietnamese": "phạm sai lầm",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-5",
+    "index": 5,
+    "phrase": "make progress",
+    "vietnamese": "đạt được tiến bộ, tiến triển",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-6",
+    "index": 6,
+    "phrase": "make a promise",
+    "vietnamese": "hứa, đưa ra lời hứa",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-7",
+    "index": 7,
+    "phrase": "make money",
+    "vietnamese": "kiếm tiền",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-8",
+    "index": 8,
+    "phrase": "make a living",
+    "vietnamese": "kiếm sống",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-9",
+    "index": 9,
+    "phrase": "make a choice",
+    "vietnamese": "lựa chọn, đưa ra sự chọn lựa",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-10",
+    "index": 10,
+    "phrase": "make an appointment",
+    "vietnamese": "đặt lịch hẹn",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-11",
+    "index": 11,
+    "phrase": "make an excuse",
+    "vietnamese": "viện cớ, bào chữa",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-12",
+    "index": 12,
+    "phrase": "make an inquiry",
+    "vietnamese": "thắc mắc, hỏi thăm thông tin",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-13",
+    "index": 13,
+    "phrase": "make a phone call",
+    "vietnamese": "gọi một cuộc điện thoại",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-14",
+    "index": 14,
+    "phrase": "make an announcement",
+    "vietnamese": "đưa ra thông báo",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-15",
+    "index": 15,
+    "phrase": "make a difference",
+    "vietnamese": "tạo nên sự khác biệt",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-16",
+    "index": 16,
+    "phrase": "make sense",
+    "vietnamese": "có lý, hợp lý, dễ hiểu",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-17",
+    "index": 17,
+    "phrase": "make sense of",
+    "vietnamese": "hiểu được, nắm bắt được ý nghĩa",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-18",
+    "index": 18,
+    "phrase": "make friends",
+    "vietnamese": "kết bạn, làm quen",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-19",
+    "index": 19,
+    "phrase": "make room for",
+    "vietnamese": "nhường chỗ cho, tạo không gian cho",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-20",
+    "index": 20,
+    "phrase": "make an impression",
+    "vietnamese": "tạo ấn tượng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-21",
+    "index": 21,
+    "phrase": "make arrangements",
+    "vietnamese": "sắp xếp, thu xếp",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-22",
+    "index": 22,
+    "phrase": "make an exception",
+    "vietnamese": "tạo ra ngoại lệ",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-23",
+    "index": 23,
+    "phrase": "make a suggestion",
+    "vietnamese": "đưa ra gợi ý, đề xuất",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-24",
+    "index": 24,
+    "phrase": "make a point",
+    "vietnamese": "nêu ra một quan điểm, chứng minh một điều",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-25",
+    "index": 25,
+    "phrase": "make ends meet",
+    "vietnamese": "kiếm đủ sống, trang trải qua ngày",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-26",
+    "index": 26,
+    "phrase": "do homework",
+    "vietnamese": "làm bài tập về nhà",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-27",
+    "index": 27,
+    "phrase": "do housework",
+    "vietnamese": "làm việc nhà",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-28",
+    "index": 28,
+    "phrase": "do business",
+    "vietnamese": "làm ăn, kinh doanh",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-29",
+    "index": 29,
+    "phrase": "do research",
+    "vietnamese": "tiến hành nghiên cứu",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-30",
+    "index": 30,
+    "phrase": "do someone a favor",
+    "vietnamese": "giúp đỡ ai một việc",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-31",
+    "index": 31,
+    "phrase": "do someone good",
+    "vietnamese": "có lợi cho ai, tốt cho ai",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-32",
+    "index": 32,
+    "phrase": "do harm",
+    "vietnamese": "gây hại",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-33",
+    "index": 33,
+    "phrase": "do damage",
+    "vietnamese": "gây thiệt hại",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-34",
+    "index": 34,
+    "phrase": "do one's best",
+    "vietnamese": "nỗ lực hết sức, cố gắng hết mình",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-35",
+    "index": 35,
+    "phrase": "do the dishes",
+    "vietnamese": "rửa bát đĩa",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-36",
+    "index": 36,
+    "phrase": "do the laundry",
+    "vietnamese": "giặt quần áo",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-37",
+    "index": 37,
+    "phrase": "do the shopping",
+    "vietnamese": "đi mua sắm, mua nhu yếu phẩm",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-38",
+    "index": 38,
+    "phrase": "do exercise",
+    "vietnamese": "tập thể dục",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-39",
+    "index": 39,
+    "phrase": "do justice to",
+    "vietnamese": "lột tả hết vẻ đẹp, đánh giá xứng đáng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-40",
+    "index": 40,
+    "phrase": "do wonders",
+    "vietnamese": "mang lại hiệu quả kỳ diệu",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-41",
+    "index": 41,
+    "phrase": "do a good job",
+    "vietnamese": "làm tốt công việc",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-42",
+    "index": 42,
+    "phrase": "do an experiment",
+    "vietnamese": "làm thí nghiệm",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-43",
+    "index": 43,
+    "phrase": "do a survey",
+    "vietnamese": "thực hiện cuộc khảo sát",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-44",
+    "index": 44,
+    "phrase": "do market research",
+    "vietnamese": "nghiên cứu thị trường",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-45",
+    "index": 45,
+    "phrase": "do an interview",
+    "vietnamese": "thực hiện phỏng vấn",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-46",
+    "index": 46,
+    "phrase": "do an audit",
+    "vietnamese": "kiểm toán, thanh tra",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-47",
+    "index": 47,
+    "phrase": "do the cooking",
+    "vietnamese": "nấu nướng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-48",
+    "index": 48,
+    "phrase": "do an internship",
+    "vietnamese": "đi thực tập",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-49",
+    "index": 49,
+    "phrase": "do volunteer work",
+    "vietnamese": "làm công việc tình nguyện",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-50",
+    "index": 50,
+    "phrase": "do without",
+    "vietnamese": "sống thiếu, chấp nhận không có",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-51",
+    "index": 51,
+    "phrase": "take a break",
+    "vietnamese": "nghỉ giải lao",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-52",
+    "index": 52,
+    "phrase": "take a chance",
+    "vietnamese": "nắm lấy cơ hội, mạo hiểm thử",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-53",
+    "index": 53,
+    "phrase": "take a risk",
+    "vietnamese": "chấp nhận rủi ro",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-54",
+    "index": 54,
+    "phrase": "take a look",
+    "vietnamese": "nhìn qua, xem qua",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-55",
+    "index": 55,
+    "phrase": "take a seat",
+    "vietnamese": "ngồi xuống",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-56",
+    "index": 56,
+    "phrase": "take a shower",
+    "vietnamese": "tắm vòi sen",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-57",
+    "index": 57,
+    "phrase": "take a bath",
+    "vietnamese": "tắm bồn",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-58",
+    "index": 58,
+    "phrase": "take a nap",
+    "vietnamese": "chợp mắt, ngủ trưa",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-59",
+    "index": 59,
+    "phrase": "take a rest",
+    "vietnamese": "nghỉ ngơi",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-60",
+    "index": 60,
+    "phrase": "take a walk",
+    "vietnamese": "đi dạo",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-61",
+    "index": 61,
+    "phrase": "take an exam",
+    "vietnamese": "tham gia kỳ thi",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-62",
+    "index": 62,
+    "phrase": "take notes",
+    "vietnamese": "ghi chép, ghi chú",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-63",
+    "index": 63,
+    "phrase": "take advantage of",
+    "vietnamese": "tận dụng, lợi dụng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-64",
+    "index": 64,
+    "phrase": "take care of",
+    "vietnamese": "chăm sóc, trông nom, giải quyết",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-65",
+    "index": 65,
+    "phrase": "take part in",
+    "vietnamese": "tham gia vào",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-66",
+    "index": 66,
+    "phrase": "take place",
+    "vietnamese": "diễn ra, xảy ra",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-67",
+    "index": 67,
+    "phrase": "take time",
+    "vietnamese": "tốn thời gian, mất thời gian",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-68",
+    "index": 68,
+    "phrase": "take turns",
+    "vietnamese": "luân phiên, thay phiên nhau",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-69",
+    "index": 69,
+    "phrase": "take action",
+    "vietnamese": "hành động, thực hiện biện pháp",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-70",
+    "index": 70,
+    "phrase": "take measures",
+    "vietnamese": "áp dụng các biện pháp",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-71",
+    "index": 71,
+    "phrase": "take steps",
+    "vietnamese": "thực hiện từng bước",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-72",
+    "index": 72,
+    "phrase": "take responsibility",
+    "vietnamese": "chịu trách nhiệm",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-73",
+    "index": 73,
+    "phrase": "take blame",
+    "vietnamese": "nhận lỗi, chịu sự khiển trách",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-74",
+    "index": 74,
+    "phrase": "take credit",
+    "vietnamese": "nhận công trạng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-75",
+    "index": 75,
+    "phrase": "take effect",
+    "vietnamese": "có hiệu lực, phát huy tác dụng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-76",
+    "index": 76,
+    "phrase": "take medicine",
+    "vietnamese": "uống thuốc",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-77",
+    "index": 77,
+    "phrase": "take someone's advice",
+    "vietnamese": "nghe theo lời khuyên của ai",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-78",
+    "index": 78,
+    "phrase": "take for granted",
+    "vietnamese": "coi là hiển nhiên",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-79",
+    "index": 79,
+    "phrase": "take into account",
+    "vietnamese": "tính đến, xét đến",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-80",
+    "index": 80,
+    "phrase": "take into consideration",
+    "vietnamese": "cân nhắc, xem xét kỹ",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-81",
+    "index": 81,
+    "phrase": "have a baby",
+    "vietnamese": "sinh con",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-82",
+    "index": 82,
+    "phrase": "have a chat",
+    "vietnamese": "trò chuyện, tán gẫu",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-83",
+    "index": 83,
+    "phrase": "have a conversation",
+    "vietnamese": "có cuộc trò chuyện",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-84",
+    "index": 84,
+    "phrase": "have a discussion",
+    "vietnamese": "thảo luận",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-85",
+    "index": 85,
+    "phrase": "have an argument",
+    "vietnamese": "tranh cãi",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-86",
+    "index": 86,
+    "phrase": "have a dispute",
+    "vietnamese": "xảy ra tranh chấp",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-87",
+    "index": 87,
+    "phrase": "have a quarrel",
+    "vietnamese": "cãi cọ",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-88",
+    "index": 88,
+    "phrase": "have a meeting",
+    "vietnamese": "họp",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-89",
+    "index": 89,
+    "phrase": "have a party",
+    "vietnamese": "mở tiệc, tổ chức tiệc",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-90",
+    "index": 90,
+    "phrase": "have a meal",
+    "vietnamese": "dùng bữa, ăn cơm",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-91",
+    "index": 91,
+    "phrase": "have breakfast",
+    "vietnamese": "ăn sáng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-92",
+    "index": 92,
+    "phrase": "have lunch",
+    "vietnamese": "ăn trưa",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-93",
+    "index": 93,
+    "phrase": "have dinner",
+    "vietnamese": "ăn tối",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-94",
+    "index": 94,
+    "phrase": "have a drink",
+    "vietnamese": "uống nước, uống rượu",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-95",
+    "index": 95,
+    "phrase": "have a coffee",
+    "vietnamese": "uống cà phê",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-96",
+    "index": 96,
+    "phrase": "have a problem",
+    "vietnamese": "gặp vấn đề",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-97",
+    "index": 97,
+    "phrase": "have trouble",
+    "vietnamese": "gặp rắc rối, khó khăn",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-98",
+    "index": 98,
+    "phrase": "have difficulty",
+    "vietnamese": "gặp khó khăn",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-99",
+    "index": 99,
+    "phrase": "have fun",
+    "vietnamese": "vui vẻ",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-100",
+    "index": 100,
+    "phrase": "have a good time",
+    "vietnamese": "có khoảng thời gian vui vẻ",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-101",
+    "index": 101,
+    "phrase": "have sympathy",
+    "vietnamese": "đồng cảm, thông cảm",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-102",
+    "index": 102,
+    "phrase": "have an effect on",
+    "vietnamese": "có tác động đến",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-103",
+    "index": 103,
+    "phrase": "have an impact on",
+    "vietnamese": "có ảnh hưởng sâu sắc đến",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-104",
+    "index": 104,
+    "phrase": "have an influence on",
+    "vietnamese": "có sức ảnh hưởng tới",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-105",
+    "index": 105,
+    "phrase": "have doubts",
+    "vietnamese": "nghi ngờ",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-106",
+    "index": 106,
+    "phrase": "have faith in",
+    "vietnamese": "có niềm tin vào",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-107",
+    "index": 107,
+    "phrase": "have confidence in",
+    "vietnamese": "tự tin vào",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-108",
+    "index": 108,
+    "phrase": "have patience",
+    "vietnamese": "kiên nhẫn",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-109",
+    "index": 109,
+    "phrase": "have access to",
+    "vietnamese": "có quyền truy cập, tiếp cận",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-110",
+    "index": 110,
+    "phrase": "have second thoughts",
+    "vietnamese": "đắn đo suy nghĩ lại",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-111",
+    "index": 111,
+    "phrase": "get a job",
+    "vietnamese": "kiếm được việc làm",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-112",
+    "index": 112,
+    "phrase": "get a promotion",
+    "vietnamese": "được thăng chức",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-113",
+    "index": 113,
+    "phrase": "get a raise",
+    "vietnamese": "được tăng lương",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-114",
+    "index": 114,
+    "phrase": "get fired",
+    "vietnamese": "bị sa thải",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-115",
+    "index": 115,
+    "phrase": "get hired",
+    "vietnamese": "được tuyển dụng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-116",
+    "index": 116,
+    "phrase": "get started",
+    "vietnamese": "bắt đầu",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-117",
+    "index": 117,
+    "phrase": "get lost",
+    "vietnamese": "bị lạc đường",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-118",
+    "index": 118,
+    "phrase": "get married",
+    "vietnamese": "kết hôn",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-119",
+    "index": 119,
+    "phrase": "get divorced",
+    "vietnamese": "ly hôn",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-120",
+    "index": 120,
+    "phrase": "get dressed",
+    "vietnamese": "mặc quần áo",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-121",
+    "index": 121,
+    "phrase": "get ready",
+    "vietnamese": "chuẩn bị sẵn sàng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-122",
+    "index": 122,
+    "phrase": "get sick",
+    "vietnamese": "bị ốm",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-123",
+    "index": 123,
+    "phrase": "get well",
+    "vietnamese": "bình phục, khỏi bệnh",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-124",
+    "index": 124,
+    "phrase": "get pregnant",
+    "vietnamese": "mang thai",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-125",
+    "index": 125,
+    "phrase": "get drunk",
+    "vietnamese": "say rượu",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-126",
+    "index": 126,
+    "phrase": "get angry",
+    "vietnamese": "tức giận",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-127",
+    "index": 127,
+    "phrase": "get upset",
+    "vietnamese": "buồn phiền, bực bội",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-128",
+    "index": 128,
+    "phrase": "get dark",
+    "vietnamese": "trời tối dần",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-129",
+    "index": 129,
+    "phrase": "get cold",
+    "vietnamese": "trời lạnh dần",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-130",
+    "index": 130,
+    "phrase": "get late",
+    "vietnamese": "trời về muộn",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-131",
+    "index": 131,
+    "phrase": "get old",
+    "vietnamese": "già đi",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-132",
+    "index": 132,
+    "phrase": "get in touch",
+    "vietnamese": "giữ liên lạc, liên hệ",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-133",
+    "index": 133,
+    "phrase": "get the impression",
+    "vietnamese": "có cảm tưởng, ấn tượng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-134",
+    "index": 134,
+    "phrase": "get the message",
+    "vietnamese": "hiểu ra vấn đề, hiểu thông điệp",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-135",
+    "index": 135,
+    "phrase": "get rid of",
+    "vietnamese": "loại bỏ, tống khứ",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-136",
+    "index": 136,
+    "phrase": "give a call",
+    "vietnamese": "gọi điện thoại",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-137",
+    "index": 137,
+    "phrase": "give a presentation",
+    "vietnamese": "thuyết trình",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-138",
+    "index": 138,
+    "phrase": "give a speech",
+    "vietnamese": "đọc diễn văn, phát biểu",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-139",
+    "index": 139,
+    "phrase": "give a lecture",
+    "vietnamese": "giảng bài, thuyết giảng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-140",
+    "index": 140,
+    "phrase": "give advice",
+    "vietnamese": "đưa ra lời khuyên",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-141",
+    "index": 141,
+    "phrase": "give an explanation",
+    "vietnamese": "giải thích",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-142",
+    "index": 142,
+    "phrase": "give a reason",
+    "vietnamese": "nêu lý do",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-143",
+    "index": 143,
+    "phrase": "give an answer",
+    "vietnamese": "trả lời",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-144",
+    "index": 144,
+    "phrase": "give permission",
+    "vietnamese": "cấp phép, cho phép",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-145",
+    "index": 145,
+    "phrase": "give a warning",
+    "vietnamese": "đưa ra cảnh báo",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-146",
+    "index": 146,
+    "phrase": "give instructions",
+    "vietnamese": "hướng dẫn",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-147",
+    "index": 147,
+    "phrase": "give evidence",
+    "vietnamese": "đưa ra bằng chứng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-148",
+    "index": 148,
+    "phrase": "give feedback",
+    "vietnamese": "phản hồi, góp ý",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-149",
+    "index": 149,
+    "phrase": "give a hand",
+    "vietnamese": "giúp một tay",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-150",
+    "index": 150,
+    "phrase": "give a lift",
+    "vietnamese": "cho đi nhờ xe",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-151",
+    "index": 151,
+    "phrase": "give a ride",
+    "vietnamese": "chở đi, cho quá giang",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-152",
+    "index": 152,
+    "phrase": "give a hug",
+    "vietnamese": "ôm một cái",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-153",
+    "index": 153,
+    "phrase": "give a kiss",
+    "vietnamese": "hôn một cái",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-154",
+    "index": 154,
+    "phrase": "give priority to",
+    "vietnamese": "ưu tiên cho",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-155",
+    "index": 155,
+    "phrase": "give thought to",
+    "vietnamese": "suy nghĩ về",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-156",
+    "index": 156,
+    "phrase": "give birth",
+    "vietnamese": "sinh con",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-157",
+    "index": 157,
+    "phrase": "give up hope",
+    "vietnamese": "từ bỏ hy vọng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-158",
+    "index": 158,
+    "phrase": "give rise to",
+    "vietnamese": "gây ra, làm dấy lên",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-159",
+    "index": 159,
+    "phrase": "give way to",
+    "vietnamese": "nhường đường cho, chịu thua trước",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-160",
+    "index": 160,
+    "phrase": "give credit to",
+    "vietnamese": "công nhận công lao của",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-161",
+    "index": 161,
+    "phrase": "pay a visit",
+    "vietnamese": "đến thăm, ghé thăm",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-162",
+    "index": 162,
+    "phrase": "pay cash",
+    "vietnamese": "trả bằng tiền mặt",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-163",
+    "index": 163,
+    "phrase": "pay by card",
+    "vietnamese": "thanh toán qua thẻ",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-164",
+    "index": 164,
+    "phrase": "pay interest",
+    "vietnamese": "trả lãi suất",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-165",
+    "index": 165,
+    "phrase": "pay a fine",
+    "vietnamese": "nộp phạt",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-166",
+    "index": 166,
+    "phrase": "pay respect to",
+    "vietnamese": "bày tỏ sự tôn kính đối với",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-167",
+    "index": 167,
+    "phrase": "pay tribute to",
+    "vietnamese": "tưởng nhớ, tôn vinh",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-168",
+    "index": 168,
+    "phrase": "pay a compliment",
+    "vietnamese": "khen ngợi",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-169",
+    "index": 169,
+    "phrase": "keep a secret",
+    "vietnamese": "giữ bí mật",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-170",
+    "index": 170,
+    "phrase": "keep a promise",
+    "vietnamese": "giữ lời hứa",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-171",
+    "index": 171,
+    "phrase": "keep a diary",
+    "vietnamese": "viết nhật ký",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-172",
+    "index": 172,
+    "phrase": "keep in touch",
+    "vietnamese": "giữ liên lạc",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-173",
+    "index": 173,
+    "phrase": "keep calm",
+    "vietnamese": "giữ bình tĩnh",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-174",
+    "index": 174,
+    "phrase": "keep quiet",
+    "vietnamese": "giữ im lặng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-175",
+    "index": 175,
+    "phrase": "keep safe",
+    "vietnamese": "giữ an toàn",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-176",
+    "index": 176,
+    "phrase": "keep track of",
+    "vietnamese": "theo dõi tiến trình",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-177",
+    "index": 177,
+    "phrase": "keep pace with",
+    "vietnamese": "bắt kịp tốc độ",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-178",
+    "index": 178,
+    "phrase": "keep an eye on",
+    "vietnamese": "để mắt đến, trông chừng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-179",
+    "index": 179,
+    "phrase": "catch a cold",
+    "vietnamese": "bị cảm lạnh",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-180",
+    "index": 180,
+    "phrase": "catch a bus",
+    "vietnamese": "bắt xe buýt",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-181",
+    "index": 181,
+    "phrase": "catch a train",
+    "vietnamese": "bắt tàu hỏa",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-182",
+    "index": 182,
+    "phrase": "catch a flight",
+    "vietnamese": "bắt chuyến bay",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-183",
+    "index": 183,
+    "phrase": "catch fire",
+    "vietnamese": "bắt lửa, bốc cháy",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-184",
+    "index": 184,
+    "phrase": "catch someone's eye",
+    "vietnamese": "thu hút ánh nhìn của ai",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-185",
+    "index": 185,
+    "phrase": "catch sight of",
+    "vietnamese": "thoáng nhìn thấy",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-186",
+    "index": 186,
+    "phrase": "hold a meeting",
+    "vietnamese": "tổ chức cuộc họp",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-187",
+    "index": 187,
+    "phrase": "hold an event",
+    "vietnamese": "tổ chức sự kiện",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-188",
+    "index": 188,
+    "phrase": "hold an election",
+    "vietnamese": "tổ chức bầu cử",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-189",
+    "index": 189,
+    "phrase": "hold hands",
+    "vietnamese": "nắm tay",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-190",
+    "index": 190,
+    "phrase": "hold one's breath",
+    "vietnamese": "nín thở",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-191",
+    "index": 191,
+    "phrase": "set an alarm",
+    "vietnamese": "cài báo thức",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-192",
+    "index": 192,
+    "phrase": "set a goal",
+    "vietnamese": "đặt ra mục tiêu",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-193",
+    "index": 193,
+    "phrase": "set a target",
+    "vietnamese": "đặt chỉ tiêu",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-194",
+    "index": 194,
+    "phrase": "set an example",
+    "vietnamese": "làm gương",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-195",
+    "index": 195,
+    "phrase": "set a record",
+    "vietnamese": "lập kỷ lục",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-196",
+    "index": 196,
+    "phrase": "set a date",
+    "vietnamese": "ấn định ngày",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-197",
+    "index": 197,
+    "phrase": "set a trap",
+    "vietnamese": "đặt bẫy",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-198",
+    "index": 198,
+    "phrase": "set fire to",
+    "vietnamese": "châm lửa đốt",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-199",
+    "index": 199,
+    "phrase": "set free",
+    "vietnamese": "trả tự do",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-200",
+    "index": 200,
+    "phrase": "break a rule",
+    "vietnamese": "phá vỡ quy tắc",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-201",
+    "index": 201,
+    "phrase": "break the law",
+    "vietnamese": "vi phạm pháp luật",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-202",
+    "index": 202,
+    "phrase": "break a habit",
+    "vietnamese": "từ bỏ một thói quen",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-203",
+    "index": 203,
+    "phrase": "break a record",
+    "vietnamese": "phá vỡ kỷ lục",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-204",
+    "index": 204,
+    "phrase": "break a promise",
+    "vietnamese": "thất hứa",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-205",
+    "index": 205,
+    "phrase": "break someone's heart",
+    "vietnamese": "làm tan nát trái tim ai",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-206",
+    "index": 206,
+    "phrase": "break the ice",
+    "vietnamese": "phá vỡ sự ngượng ngùng ban đầu",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-207",
+    "index": 207,
+    "phrase": "break the news",
+    "vietnamese": "báo tin quan trọng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-208",
+    "index": 208,
+    "phrase": "run a business",
+    "vietnamese": "điều hành doanh nghiệp",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-209",
+    "index": 209,
+    "phrase": "run a company",
+    "vietnamese": "quản lý một công ty",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-210",
+    "index": 210,
+    "phrase": "run a campaign",
+    "vietnamese": "triển khai chiến dịch",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-211",
+    "index": 211,
+    "phrase": "run an errand",
+    "vietnamese": "đi làm việc vặt",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-212",
+    "index": 212,
+    "phrase": "run a test",
+    "vietnamese": "chạy thử nghiệm",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-213",
+    "index": 213,
+    "phrase": "run a marathon",
+    "vietnamese": "chạy cự ly marathon",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-214",
+    "index": 214,
+    "phrase": "run out of",
+    "vietnamese": "cạn kiệt, hết sạch",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-215",
+    "index": 215,
+    "phrase": "run into trouble",
+    "vietnamese": "gặp rắc rối",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-216",
+    "index": 216,
+    "phrase": "come to an end",
+    "vietnamese": "kết thúc",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-217",
+    "index": 217,
+    "phrase": "come to a conclusion",
+    "vietnamese": "đi đến kết luận",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-218",
+    "index": 218,
+    "phrase": "come to a decision",
+    "vietnamese": "đi đến quyết định",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-219",
+    "index": 219,
+    "phrase": "come to an agreement",
+    "vietnamese": "đạt được thỏa thuận",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-220",
+    "index": 220,
+    "phrase": "come into effect",
+    "vietnamese": "có hiệu lực",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-221",
+    "index": 221,
+    "phrase": "go on strike",
+    "vietnamese": "đình công",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-222",
+    "index": 222,
+    "phrase": "go on holiday",
+    "vietnamese": "đi nghỉ mát",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-223",
+    "index": 223,
+    "phrase": "go on a diet",
+    "vietnamese": "ăn kiêng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-224",
+    "index": 224,
+    "phrase": "go bankrupt",
+    "vietnamese": "phá sản",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-225",
+    "index": 225,
+    "phrase": "go bald",
+    "vietnamese": "bị hói đầu",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-226",
+    "index": 226,
+    "phrase": "go blind",
+    "vietnamese": "bị mù",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-227",
+    "index": 227,
+    "phrase": "go deaf",
+    "vietnamese": "bị điếc",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-228",
+    "index": 228,
+    "phrase": "go mad",
+    "vietnamese": "phát điên",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-229",
+    "index": 229,
+    "phrase": "go missing",
+    "vietnamese": "bị mất tích",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-230",
+    "index": 230,
+    "phrase": "ask a question",
+    "vietnamese": "đặt câu hỏi",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-231",
+    "index": 231,
+    "phrase": "answer the door",
+    "vietnamese": "ra mở cửa",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-232",
+    "index": 232,
+    "phrase": "answer the phone",
+    "vietnamese": "nhấc máy trả lời điện thoại",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-233",
+    "index": 233,
+    "phrase": "tell the truth",
+    "vietnamese": "nói thật",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-234",
+    "index": 234,
+    "phrase": "tell a lie",
+    "vietnamese": "nói dối",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-235",
+    "index": 235,
+    "phrase": "tell a story",
+    "vietnamese": "kể một câu chuyện",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-236",
+    "index": 236,
+    "phrase": "tell a joke",
+    "vietnamese": "kể chuyện cười",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-237",
+    "index": 237,
+    "phrase": "tell the difference",
+    "vietnamese": "phân biệt sự khác nhau",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-238",
+    "index": 238,
+    "phrase": "tell the time",
+    "vietnamese": "xem giờ, đọc giờ",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-239",
+    "index": 239,
+    "phrase": "solve a problem",
+    "vietnamese": "giải quyết vấn đề",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-240",
+    "index": 240,
+    "phrase": "resolve a conflict",
+    "vietnamese": "hòa giải xung đột",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-241",
+    "index": 241,
+    "phrase": "meet requirements",
+    "vietnamese": "đáp ứng các yêu cầu",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-242",
+    "index": 242,
+    "phrase": "meet expectations",
+    "vietnamese": "đáp ứng kỳ vọng",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-243",
+    "index": 243,
+    "phrase": "meet a deadline",
+    "vietnamese": "kịp thời hạn",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-244",
+    "index": 244,
+    "phrase": "miss a deadline",
+    "vietnamese": "trễ thời hạn",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-245",
+    "index": 245,
+    "phrase": "miss an opportunity",
+    "vietnamese": "bỏ lỡ cơ hội",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-246",
+    "index": 246,
+    "phrase": "miss a flight",
+    "vietnamese": "nhỡ chuyến bay",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-247",
+    "index": 247,
+    "phrase": "lose weight",
+    "vietnamese": "giảm cân",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-248",
+    "index": 248,
+    "phrase": "gain weight",
+    "vietnamese": "tăng cân",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-249",
+    "index": 249,
+    "phrase": "raise awareness",
+    "vietnamese": "nâng cao nhận thức",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-250",
+    "index": 250,
+    "phrase": "draw attention",
+    "vietnamese": "thu hút sự chú ý",
+    "category": "EVERYDAY"
+  },
+  {
+    "id": "colloc-251",
+    "index": 251,
+    "phrase": "seal a deal",
+    "vietnamese": "chốt hợp đồng / ký kết thỏa thuận thành công",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-252",
+    "index": 252,
+    "phrase": "strike a deal",
+    "vietnamese": "đạt được thỏa thuận",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-253",
+    "index": 253,
+    "phrase": "broker a deal",
+    "vietnamese": "làm trung gian dàn xếp thỏa thuận",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-254",
+    "index": 254,
+    "phrase": "close a deal",
+    "vietnamese": "kết thúc đàm phán và hoàn tất giao dịch",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-255",
+    "index": 255,
+    "phrase": "drive a hard bargain",
+    "vietnamese": "đàm phán chặt chẽ / ép giá gắt gao",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-256",
+    "index": 256,
+    "phrase": "strike a bargain",
+    "vietnamese": "đạt được thỏa hiệp có lợi về giá cả và điều khoản",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-257",
+    "index": 257,
+    "phrase": "reach a consensus",
+    "vietnamese": "đạt được sự đồng thuận chung",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-258",
+    "index": 258,
+    "phrase": "reach an impasse",
+    "vietnamese": "lâm vào ngõ cụt / bế tắc đàm phán",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-259",
+    "index": 259,
+    "phrase": "break the deadlock",
+    "vietnamese": "phá vỡ thế bế tắc đàm phán",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-260",
+    "index": 260,
+    "phrase": "make concessions",
+    "vietnamese": "chấp nhận nhượng bộ trong đàm phán",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-261",
+    "index": 261,
+    "phrase": "find common ground",
+    "vietnamese": "tìm kiếm tiếng nói chung / điểm tương đồng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-262",
+    "index": 262,
+    "phrase": "draft a contract",
+    "vietnamese": "soạn thảo dự thảo hợp đồng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-263",
+    "index": 263,
+    "phrase": "draw up an agreement",
+    "vietnamese": "lập biên bản thỏa thuận / lập hợp đồng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-264",
+    "index": 264,
+    "phrase": "enter into an agreement",
+    "vietnamese": "chính thức ký kết / tham gia thỏa thuận",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-265",
+    "index": 265,
+    "phrase": "sign a contract",
+    "vietnamese": "ký kết hợp đồng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-266",
+    "index": 266,
+    "phrase": "renew a contract",
+    "vietnamese": "gia hạn hợp đồng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-267",
+    "index": 267,
+    "phrase": "breach a contract",
+    "vietnamese": "vi phạm các điều khoản hợp đồng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-268",
+    "index": 268,
+    "phrase": "terminate a contract",
+    "vietnamese": "chấm dứt hiệu lực hợp đồng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-269",
+    "index": 269,
+    "phrase": "null and void",
+    "vietnamese": "vô hiệu / không có giá trị pháp lý",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-270",
+    "index": 270,
+    "phrase": "legally binding",
+    "vietnamese": "có tính chất ràng buộc về mặt pháp lý",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-271",
+    "index": 271,
+    "phrase": "terms and conditions",
+    "vietnamese": "các điều khoản và điều kiện",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-272",
+    "index": 272,
+    "phrase": "the fine print",
+    "vietnamese": "điều khoản in chữ nhỏ / điều khoản ẩn",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-273",
+    "index": 273,
+    "phrase": "non-disclosure agreement",
+    "vietnamese": "thỏa thuận bảo mật thông tin (NDA)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-274",
+    "index": 274,
+    "phrase": "letter of intent",
+    "vietnamese": "thư bày tỏ ý định hợp tác (LOI)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-275",
+    "index": 275,
+    "phrase": "contractual obligation",
+    "vietnamese": "nghĩa vụ ràng buộc theo hợp đồng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-276",
+    "index": 276,
+    "phrase": "fulfill an obligation",
+    "vietnamese": "thực hiện đầy đủ nghĩa vụ cam kết",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-277",
+    "index": 277,
+    "phrase": "default on an obligation",
+    "vietnamese": "không hoàn thành nghĩa vụ đã cam kết",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-278",
+    "index": 278,
+    "phrase": "penalty clause",
+    "vietnamese": "điều khoản phạt vi phạm hợp đồng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-279",
+    "index": 279,
+    "phrase": "escape clause",
+    "vietnamese": "điều khoản cho phép thoái thác / hủy ngang hợp đồng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-280",
+    "index": 280,
+    "phrase": "confidentiality clause",
+    "vietnamese": "điều khoản bảo mật thông tin",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-281",
+    "index": 281,
+    "phrase": "indemnity clause",
+    "vietnamese": "điều khoản bồi thường thiệt hại",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-282",
+    "index": 282,
+    "phrase": "force majeure clause",
+    "vietnamese": "điều khoản miễn trách nhiệm do bất khả kháng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-283",
+    "index": 283,
+    "phrase": "counter-offer",
+    "vietnamese": "lời đề nghị giá ngược lại / phản đề xuất",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-284",
+    "index": 284,
+    "phrase": "win-win solution",
+    "vietnamese": "giải pháp đôi bên cùng có lợi",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-285",
+    "index": 285,
+    "phrase": "zero-sum game",
+    "vietnamese": "trò chơi có tổng bằng không (kẻ được người mất)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-286",
+    "index": 286,
+    "phrase": "gain a competitive edge",
+    "vietnamese": "tạo lập / giành được lợi thế cạnh tranh",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-287",
+    "index": 287,
+    "phrase": "gain market share",
+    "vietnamese": "gia tăng thị phần",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-288",
+    "index": 288,
+    "phrase": "corner the market",
+    "vietnamese": "lũng đoạn / thống lĩnh toàn bộ thị trường",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-289",
+    "index": 289,
+    "phrase": "penetrate the market",
+    "vietnamese": "thâm nhập thị trường",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-290",
+    "index": 290,
+    "phrase": "niche market",
+    "vietnamese": "thị trường ngách",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-291",
+    "index": 291,
+    "phrase": "saturated market",
+    "vietnamese": "thị trường đã bão hòa",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-292",
+    "index": 292,
+    "phrase": "target market",
+    "vietnamese": "thị trường mục tiêu",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-293",
+    "index": 293,
+    "phrase": "emerging market",
+    "vietnamese": "thị trường mới nổi",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-294",
+    "index": 294,
+    "phrase": "tap into a market",
+    "vietnamese": "khai thác một thị trường tiềm năng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-295",
+    "index": 295,
+    "phrase": "capture market share",
+    "vietnamese": "chiếm lĩnh thị phần",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-296",
+    "index": 296,
+    "phrase": "fierce competition",
+    "vietnamese": "sự cạnh tranh khốc liệt",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-297",
+    "index": 297,
+    "phrase": "cutthroat competition",
+    "vietnamese": "cạnh tranh tàn khốc / không khoan nhượng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-298",
+    "index": 298,
+    "phrase": "unfair competition",
+    "vietnamese": "cạnh tranh không lành mạnh",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-299",
+    "index": 299,
+    "phrase": "competitive advantage",
+    "vietnamese": "lợi thế cạnh tranh vượt trội",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-300",
+    "index": 300,
+    "phrase": "core competency",
+    "vietnamese": "năng lực cốt lõi của doanh nghiệp",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-301",
+    "index": 301,
+    "phrase": "unique selling proposition",
+    "vietnamese": "điểm bán hàng độc nhất (USP)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-302",
+    "index": 302,
+    "phrase": "value proposition",
+    "vietnamese": "tuyên ngôn / đề xuất giá trị",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-303",
+    "index": 303,
+    "phrase": "brand equity",
+    "vietnamese": "tài sản thương hiệu",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-304",
+    "index": 304,
+    "phrase": "brand awareness",
+    "vietnamese": "mức độ nhận diện thương hiệu",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-305",
+    "index": 305,
+    "phrase": "brand loyalty",
+    "vietnamese": "lòng trung thành với thương hiệu",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-306",
+    "index": 306,
+    "phrase": "build brand recognition",
+    "vietnamese": "xây dựng độ nhận biết thương hiệu",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-307",
+    "index": 307,
+    "phrase": "launch a campaign",
+    "vietnamese": "khởi động một chiến dịch tiếp thị",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-308",
+    "index": 308,
+    "phrase": "roll out a product",
+    "vietnamese": "tung sản phẩm mới ra thị trường diện rộng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-309",
+    "index": 309,
+    "phrase": "recall a product",
+    "vietnamese": "thu hồi sản phẩm bị lỗi kỹ thuật",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-310",
+    "index": 310,
+    "phrase": "customer retention",
+    "vietnamese": "giữ chân khách hàng trung thành",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-311",
+    "index": 311,
+    "phrase": "customer acquisition cost",
+    "vietnamese": "chi phí để có được một khách hàng mới (CAC)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-312",
+    "index": 312,
+    "phrase": "customer lifetime value",
+    "vietnamese": "giá trị trọn đời của một khách hàng (CLV)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-313",
+    "index": 313,
+    "phrase": "churn rate",
+    "vietnamese": "tỷ lệ khách hàng rời bỏ dịch vụ",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-314",
+    "index": 314,
+    "phrase": "word of mouth",
+    "vietnamese": "tiếp thị truyền miệng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-315",
+    "index": 315,
+    "phrase": "cold calling",
+    "vietnamese": "tiếp cận chào hàng qua điện thoại tới khách hàng chưa biết trước",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-316",
+    "index": 316,
+    "phrase": "generate leads",
+    "vietnamese": "tìm kiếm / thu thập đầu mối khách hàng tiềm năng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-317",
+    "index": 317,
+    "phrase": "sales pitch",
+    "vietnamese": "bài thuyết trình chào bán sản phẩm",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-318",
+    "index": 318,
+    "phrase": "close a sale",
+    "vietnamese": "chốt thương vụ bán hàng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-319",
+    "index": 319,
+    "phrase": "after-sales service",
+    "vietnamese": "dịch vụ hậu mãi chăm sóc khách hàng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-320",
+    "index": 320,
+    "phrase": "price war",
+    "vietnamese": "cuộc chiến cạnh tranh phá giá",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-321",
+    "index": 321,
+    "phrase": "predatory pricing",
+    "vietnamese": "định giá săn mồi nhằm triệt hạ đối thủ cạnh tranh",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-322",
+    "index": 322,
+    "phrase": "premium pricing",
+    "vietnamese": "chiến lược định giá cao cấp",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-323",
+    "index": 323,
+    "phrase": "loss leader",
+    "vietnamese": "sản phẩm chấp nhận bán lỗ để thu hút lượng khách hàng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-324",
+    "index": 324,
+    "phrase": "price gouging",
+    "vietnamese": "hành vi tăng giá trục lợi trong bối cảnh khan hiếm",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-325",
+    "index": 325,
+    "phrase": "supply chain disruption",
+    "vietnamese": "sự đứt gãy trong chuỗi cung ứng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-326",
+    "index": 326,
+    "phrase": "supply chain management",
+    "vietnamese": "quản trị chuỗi cung ứng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-327",
+    "index": 327,
+    "phrase": "bottleneck in production",
+    "vietnamese": "nút thắt cổ chai làm chậm tiến độ sản xuất",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-328",
+    "index": 328,
+    "phrase": "economies of scale",
+    "vietnamese": "tính kinh tế theo quy mô (sản lượng càng lớn chi phí đơn vị càng giảm)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-329",
+    "index": 329,
+    "phrase": "just-in-time delivery",
+    "vietnamese": "giao hàng đúng thời điểm cần thiết (JIT)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-330",
+    "index": 330,
+    "phrase": "lead time",
+    "vietnamese": "thời gian chờ từ khi đặt hàng đến khi nhận hàng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-331",
+    "index": 331,
+    "phrase": "inventory turnover",
+    "vietnamese": "tốc độ quay vòng hàng tồn kho",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-332",
+    "index": 332,
+    "phrase": "procurement process",
+    "vietnamese": "quy trình thu mua vật tư và trang thiết bị",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-333",
+    "index": 333,
+    "phrase": "quality assurance",
+    "vietnamese": "đảm bảo chất lượng (QA)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-334",
+    "index": 334,
+    "phrase": "quality control",
+    "vietnamese": "kiểm soát chất lượng thành phẩm (QC)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-335",
+    "index": 335,
+    "phrase": "standard operating procedure",
+    "vietnamese": "quy trình thao tác chuẩn (SOP)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-336",
+    "index": 336,
+    "phrase": "turnaround time",
+    "vietnamese": "thời gian xử lý và hoàn tất một quy trình công việc",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-337",
+    "index": 337,
+    "phrase": "streamline operations",
+    "vietnamese": "tinh giản hóa và tối ưu hóa bộ máy vận hành",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-338",
+    "index": 338,
+    "phrase": "cut operating costs",
+    "vietnamese": "cắt giảm các khoản chi phí vận hành",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-339",
+    "index": 339,
+    "phrase": "overhead costs",
+    "vietnamese": "chi phí quản lý gián tiếp / chi phí cố định thường xuyên",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-340",
+    "index": 340,
+    "phrase": "raise capital",
+    "vietnamese": "huy động vốn đầu tư kinh doanh",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-341",
+    "index": 341,
+    "phrase": "secure funding",
+    "vietnamese": "bảo đảm được nguồn vốn tài trợ",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-342",
+    "index": 342,
+    "phrase": "venture capital",
+    "vietnamese": "nguồn vốn đầu tư mạo hiểm",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-343",
+    "index": 343,
+    "phrase": "angel investor",
+    "vietnamese": "nhà đầu tư thiên thần",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-344",
+    "index": 344,
+    "phrase": "seed funding",
+    "vietnamese": "vòng gọi vốn hạt giống ban đầu",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-345",
+    "index": 345,
+    "phrase": "series A funding",
+    "vietnamese": "vòng gọi vốn đầu tư giai đoạn Series A",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-346",
+    "index": 346,
+    "phrase": "initial public offering",
+    "vietnamese": "chào bán cổ phiếu lần đầu ra công chúng (IPO)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-347",
+    "index": 347,
+    "phrase": "go public",
+    "vietnamese": "chính thức niêm yết cổ phiếu trên sàn giao dịch chứng khoán",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-348",
+    "index": 348,
+    "phrase": "delist from the exchange",
+    "vietnamese": "hủy niêm yết cổ phiếu khỏi sàn chứng khoán",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-349",
+    "index": 349,
+    "phrase": "blue-chip stocks",
+    "vietnamese": "cổ phiếu blue-chip của các tập đoàn đầu ngành vững chắc",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-350",
+    "index": 350,
+    "phrase": "bull market",
+    "vietnamese": "thị trường chứng khoán giá lên (thị trường bò tót)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-351",
+    "index": 351,
+    "phrase": "bear market",
+    "vietnamese": "thị trường chứng khoán giá xuống (thị trường gấu)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-352",
+    "index": 352,
+    "phrase": "market volatility",
+    "vietnamese": "mức độ biến động thất thường của thị trường tài chính",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-353",
+    "index": 353,
+    "phrase": "portfolio diversification",
+    "vietnamese": "đa dạng hóa danh mục đầu tư tài chính",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-354",
+    "index": 354,
+    "phrase": "asset allocation",
+    "vietnamese": "chiến lược phân bổ tỷ trọng tài sản",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-355",
+    "index": 355,
+    "phrase": "return on investment",
+    "vietnamese": "tỷ suất hoàn vốn đầu tư (ROI)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-356",
+    "index": 356,
+    "phrase": "return on equity",
+    "vietnamese": "tỷ suất sinh lời trên vốn chủ sở hữu (ROE)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-357",
+    "index": 357,
+    "phrase": "capital expenditure",
+    "vietnamese": "chi phí vốn đầu tư tài sản cố định (CapEx)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-358",
+    "index": 358,
+    "phrase": "operational expenditure",
+    "vietnamese": "chi phí hoạt động vận hành thường xuyên (OpEx)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-359",
+    "index": 359,
+    "phrase": "profit margin",
+    "vietnamese": "biên lợi nhuận",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-360",
+    "index": 360,
+    "phrase": "gross margin",
+    "vietnamese": "tỷ suất lợi nhuận gộp",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-361",
+    "index": 361,
+    "phrase": "net profit",
+    "vietnamese": "lợi nhuận ròng sau thuế",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-362",
+    "index": 362,
+    "phrase": "balance sheet",
+    "vietnamese": "bảng cân đối kế toán",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-363",
+    "index": 363,
+    "phrase": "income statement",
+    "vietnamese": "báo cáo kết quả hoạt động sản xuất kinh doanh",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-364",
+    "index": 364,
+    "phrase": "cash flow statement",
+    "vietnamese": "báo cáo lưu chuyển tiền tệ",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-365",
+    "index": 365,
+    "phrase": "positive cash flow",
+    "vietnamese": "dòng tiền ròng dương",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-366",
+    "index": 366,
+    "phrase": "negative cash flow",
+    "vietnamese": "dòng tiền ròng âm (thâm hụt dòng tiền)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-367",
+    "index": 367,
+    "phrase": "cash burn rate",
+    "vietnamese": "tốc độ tiêu hao ngân quỹ tiền mặt hàng tháng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-368",
+    "index": 368,
+    "phrase": "break-even point",
+    "vietnamese": "điểm hòa vốn",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-369",
+    "index": 369,
+    "phrase": "balance the books",
+    "vietnamese": "cân đối sổ sách thu chi kế toán",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-370",
+    "index": 370,
+    "phrase": "cook the books",
+    "vietnamese": "xào nấu / làm giả số liệu sổ sách kế toán",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-371",
+    "index": 371,
+    "phrase": "audit the accounts",
+    "vietnamese": "tiến hành kiểm toán sổ sách tài chính",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-372",
+    "index": 372,
+    "phrase": "financial irregularity",
+    "vietnamese": "sai phạm hoặc bất thường trong quản lý tài chính",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-373",
+    "index": 373,
+    "phrase": "write off bad debts",
+    "vietnamese": "xóa sổ các khoản nợ khó đòi",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-374",
+    "index": 374,
+    "phrase": "default on a loan",
+    "vietnamese": "vỡ nợ / không thể thực hiện nghĩa vụ trả nợ vay",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-375",
+    "index": 375,
+    "phrase": "service a debt",
+    "vietnamese": "trả lãi và vốn gốc định kỳ cho khoản nợ",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-376",
+    "index": 376,
+    "phrase": "debt restructuring",
+    "vietnamese": "thực hiện tái cơ cấu các khoản nợ vay",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-377",
+    "index": 377,
+    "phrase": "leveraged buyout",
+    "vietnamese": "thâu tóm công ty bằng vốn vay sử dụng đòn bẩy tài chính (LBO)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-378",
+    "index": 378,
+    "phrase": "credit rating",
+    "vietnamese": "xếp hạng mức độ tín nhiệm tín dụng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-379",
+    "index": 379,
+    "phrase": "credit crunch",
+    "vietnamese": "tình trạng thắt chặt tín dụng đột ngột",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-380",
+    "index": 380,
+    "phrase": "liquidity crisis",
+    "vietnamese": "cuộc khủng hoảng thanh khoản",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-381",
+    "index": 381,
+    "phrase": "declare bankruptcy",
+    "vietnamese": "chính thức tuyên bố phá sản",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-382",
+    "index": 382,
+    "phrase": "file for bankruptcy",
+    "vietnamese": "nộp đơn lên tòa án xin mở thủ tục phá sản",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-383",
+    "index": 383,
+    "phrase": "file for Chapter 11",
+    "vietnamese": "nộp đơn xin tái cấu trúc nợ theo Chương 11 Luật Phá sản Mỹ",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-384",
+    "index": 384,
+    "phrase": "liquidate assets",
+    "vietnamese": "tiến hành thanh lý / phát mại tài sản",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-385",
+    "index": 385,
+    "phrase": "put into receivership",
+    "vietnamese": "đặt dưới quyền quản lý của người quản tài viên tiếp quản tài sản",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-386",
+    "index": 386,
+    "phrase": "freeze assets",
+    "vietnamese": "ra lệnh phong tỏa tài sản",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-387",
+    "index": 387,
+    "phrase": "tax deduction",
+    "vietnamese": "khoản chi phí được khấu trừ thuế",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-388",
+    "index": 388,
+    "phrase": "tax exemption",
+    "vietnamese": "được hưởng chế độ miễn thuế",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-389",
+    "index": 389,
+    "phrase": "tax haven",
+    "vietnamese": "thiên đường thuế (quốc gia / vùng lãnh thổ thuế suất cực thấp)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-390",
+    "index": 390,
+    "phrase": "tax evasion",
+    "vietnamese": "hành vi trốn thuế (bất hợp pháp)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-391",
+    "index": 391,
+    "phrase": "tax avoidance",
+    "vietnamese": "việc tối ưu hóa tránh thuế (hợp pháp thông qua kẽ hở luật)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-392",
+    "index": 392,
+    "phrase": "fiscal year",
+    "vietnamese": "năm tài chính / niên độ kế toán",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-393",
+    "index": 393,
+    "phrase": "fiscal stimulus",
+    "vietnamese": "gói kích thích tài khóa của chính phủ",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-394",
+    "index": 394,
+    "phrase": "monetary policy",
+    "vietnamese": "chính sách tiền tệ do ngân hàng trung ương điều hành",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-395",
+    "index": 395,
+    "phrase": "interest rate hike",
+    "vietnamese": "quyết định tăng lãi suất",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-396",
+    "index": 396,
+    "phrase": "hedge against inflation",
+    "vietnamese": "biện pháp phòng vệ chống rủi ro lạm phát",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-397",
+    "index": 397,
+    "phrase": "bottom line",
+    "vietnamese": "kết quả kinh doanh lợi nhuận sau cùng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-398",
+    "index": 398,
+    "phrase": "corporate governance",
+    "vietnamese": "cơ chế quản trị doanh nghiệp",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-399",
+    "index": 399,
+    "phrase": "board of directors",
+    "vietnamese": "hội đồng quản trị",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-400",
+    "index": 400,
+    "phrase": "executive committee",
+    "vietnamese": "ban điều hành doanh nghiệp",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-401",
+    "index": 401,
+    "phrase": "chief executive officer",
+    "vietnamese": "tổng giám đốc điều hành (CEO)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-402",
+    "index": 402,
+    "phrase": "chief financial officer",
+    "vietnamese": "giám đốc tài chính (CFO)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-403",
+    "index": 403,
+    "phrase": "chief operating officer",
+    "vietnamese": "giám đốc vận hành (COO)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-404",
+    "index": 404,
+    "phrase": "shareholder value",
+    "vietnamese": "giá trị gia tăng cho các cổ đông",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-405",
+    "index": 405,
+    "phrase": "dividend payout",
+    "vietnamese": "việc thực hiện chi trả cổ tức",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-406",
+    "index": 406,
+    "phrase": "majority shareholder",
+    "vietnamese": "cổ đông nắm quyền biểu quyết chi phối đa số",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-407",
+    "index": 407,
+    "phrase": "minority interest",
+    "vietnamese": "quyền lợi của nhóm cổ đông thiểu số",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-408",
+    "index": 408,
+    "phrase": "proxy voting",
+    "vietnamese": "thực hiện quyền biểu quyết thông qua người được ủy quyền",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-409",
+    "index": 409,
+    "phrase": "annual general meeting",
+    "vietnamese": "đại hội đồng cổ đông thường niên (AGM)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-410",
+    "index": 410,
+    "phrase": "corporate takeover",
+    "vietnamese": "thương vụ mua lại thâu tóm doanh nghiệp",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-411",
+    "index": 411,
+    "phrase": "hostile takeover",
+    "vietnamese": "thương vụ thâu tóm thù địch (chống lại ban điều hành hiện tại)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-412",
+    "index": 412,
+    "phrase": "poison pill",
+    "vietnamese": "chiến thuật viên thuốc độc (biện pháp phòng thủ chống thâu tóm)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-413",
+    "index": 413,
+    "phrase": "merger and acquisition",
+    "vietnamese": "hoạt động sáp nhập và mua lại doanh nghiệp (M&A)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-414",
+    "index": 414,
+    "phrase": "joint venture",
+    "vietnamese": "thành lập công ty liên doanh",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-415",
+    "index": 415,
+    "phrase": "strategic alliance",
+    "vietnamese": "thiết lập liên minh mang tính chiến lược",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-416",
+    "index": 416,
+    "phrase": "parent company",
+    "vietnamese": "công ty mẹ",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-417",
+    "index": 417,
+    "phrase": "subsidiary company",
+    "vietnamese": "công ty con",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-418",
+    "index": 418,
+    "phrase": "holding company",
+    "vietnamese": "công ty mẹ dạng nắm giữ cổ phần kiểm soát",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-419",
+    "index": 419,
+    "phrase": "spin-off company",
+    "vietnamese": "công ty thành lập từ việc tách ra khỏi doanh nghiệp mẹ",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-420",
+    "index": 420,
+    "phrase": "corporate social responsibility",
+    "vietnamese": "trách nhiệm xã hội của doanh nghiệp (CSR)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-421",
+    "index": 421,
+    "phrase": "environmental, social, and governance",
+    "vietnamese": "tiêu chuẩn môi trường, xã hội và quản trị doanh nghiệp (ESG)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-422",
+    "index": 422,
+    "phrase": "sustainable business model",
+    "vietnamese": "mô hình hoạt động kinh doanh bền vững",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-423",
+    "index": 423,
+    "phrase": "business continuity plan",
+    "vietnamese": "kế hoạch bảo đảm duy trì hoạt động kinh doanh liên tục",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-424",
+    "index": 424,
+    "phrase": "contingency plan",
+    "vietnamese": "phương án dự phòng ứng phó rủi ro",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-425",
+    "index": 425,
+    "phrase": "exit strategy",
+    "vietnamese": "chiến lược thoái lui / bán vốn rút lui khỏi dự án",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-426",
+    "index": 426,
+    "phrase": "track record",
+    "vietnamese": "lịch sử thành tích và năng lực đã được chứng minh",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-427",
+    "index": 427,
+    "phrase": "conduct due diligence",
+    "vietnamese": "tiến hành thẩm định pháp lý và tài chính chuyên sâu",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-428",
+    "index": 428,
+    "phrase": "fiduciary duty",
+    "vietnamese": "nghĩa vụ ủy thác trung thực và tận tụy",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-429",
+    "index": 429,
+    "phrase": "conflict of interest",
+    "vietnamese": "tình trạng xung đột lợi ích",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-430",
+    "index": 430,
+    "phrase": "insider trading",
+    "vietnamese": "hành vi giao dịch cổ phiếu dựa trên tin tức nội gián",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-431",
+    "index": 431,
+    "phrase": "whistle-blower protection",
+    "vietnamese": "cơ chế pháp lý bảo vệ người tố giác sai phạm nội bộ",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-432",
+    "index": 432,
+    "phrase": "regulatory compliance",
+    "vietnamese": "sự tuân thủ các quy định quản lý của pháp luật",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-433",
+    "index": 433,
+    "phrase": "comply with regulations",
+    "vietnamese": "chấp hành đầy đủ các quy định pháp luật",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-434",
+    "index": 434,
+    "phrase": "breach of compliance",
+    "vietnamese": "hành vi vi phạm quy chuẩn tuân thủ",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-435",
+    "index": 435,
+    "phrase": "cut through red tape",
+    "vietnamese": "loại bỏ các rào cản thủ tục hành chính quan liêu rườm rà",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-436",
+    "index": 436,
+    "phrase": "bureaucratic hurdle",
+    "vietnamese": "trở ngại xuất phát từ thủ tục hành chính",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-437",
+    "index": 437,
+    "phrase": "obtain regulatory approval",
+    "vietnamese": "xin được sự phê duyệt chính thức của cơ quan có thẩm quyền",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-438",
+    "index": 438,
+    "phrase": "impose sanctions",
+    "vietnamese": "áp đặt các biện pháp chế tài trừng phạt kinh tế",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-439",
+    "index": 439,
+    "phrase": "heavy fine",
+    "vietnamese": "mức tiền phạt hành chính rất nặng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-440",
+    "index": 440,
+    "phrase": "file a lawsuit",
+    "vietnamese": "chính thức nộp đơn khởi kiện ra tòa",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-441",
+    "index": 441,
+    "phrase": "initiate litigation",
+    "vietnamese": "bắt đầu tiến hành các thủ tục khởi kiện tố tụng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-442",
+    "index": 442,
+    "phrase": "bring charges against",
+    "vietnamese": "đưa ra lời cáo buộc pháp lý chống lại đối tượng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-443",
+    "index": 443,
+    "phrase": "drop the charges",
+    "vietnamese": "bãi bỏ toàn bộ các cáo buộc",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-444",
+    "index": 444,
+    "phrase": "settle out of court",
+    "vietnamese": "thực hiện thỏa thuận hòa giải ngoài tòa án",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-445",
+    "index": 445,
+    "phrase": "out-of-court settlement",
+    "vietnamese": "thỏa thuận dàn xếp vụ việc ngoài khuôn khổ xét xử tòa án",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-446",
+    "index": 446,
+    "phrase": "class action lawsuit",
+    "vietnamese": "vụ khởi kiện tập thể đại diện cho nhiều nguyên đơn",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-447",
+    "index": 447,
+    "phrase": "award damages",
+    "vietnamese": "tuyên phán quyết buộc bồi thường thiệt hại",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-448",
+    "index": 448,
+    "phrase": "punitive damages",
+    "vietnamese": "khoản tiền bồi thường mang tính trừng phạt răn đe",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-449",
+    "index": 449,
+    "phrase": "legal liability",
+    "vietnamese": "trách nhiệm pháp lý theo luật",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-450",
+    "index": 450,
+    "phrase": "limited liability",
+    "vietnamese": "chế độ trách nhiệm hữu hạn",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-451",
+    "index": 451,
+    "phrase": "power of attorney",
+    "vietnamese": "văn bản ủy quyền đại diện pháp luật",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-452",
+    "index": 452,
+    "phrase": "subpoena a witness",
+    "vietnamese": "tống đạt lệnh trát triệu tập nhân chứng ra trước tòa",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-453",
+    "index": 453,
+    "phrase": "circumstantial evidence",
+    "vietnamese": "hệ thống chứng cứ gián tiếp",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-454",
+    "index": 454,
+    "phrase": "burden of proof",
+    "vietnamese": "nghĩa vụ đưa ra chứng cứ chứng minh",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-455",
+    "index": 455,
+    "phrase": "beyond a reasonable doubt",
+    "vietnamese": "vượt qua mọi nghi ngờ hợp lý (tiêu chuẩn chứng minh án hình sự)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-456",
+    "index": 456,
+    "phrase": "retain legal counsel",
+    "vietnamese": "thuê luật sư chuyên trách đại diện pháp lý",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-457",
+    "index": 457,
+    "phrase": "intellectual property rights",
+    "vietnamese": "quyền đối với các tài sản sở hữu trí tuệ",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-458",
+    "index": 458,
+    "phrase": "patent infringement",
+    "vietnamese": "hành vi xâm phạm quyền đối với bằng sáng chế",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-459",
+    "index": 459,
+    "phrase": "copyright violation",
+    "vietnamese": "hành vi vi phạm bản quyền tác giả",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-460",
+    "index": 460,
+    "phrase": "trademark registration",
+    "vietnamese": "thủ tục nộp đơn đăng ký bảo hộ nhãn hiệu",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-461",
+    "index": 461,
+    "phrase": "proprietary technology",
+    "vietnamese": "công nghệ độc quyền thuộc sở hữu của doanh nghiệp",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-462",
+    "index": 462,
+    "phrase": "trade secret",
+    "vietnamese": "thông tin bí mật kinh doanh được bảo hộ",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-463",
+    "index": 463,
+    "phrase": "cease and desist letter",
+    "vietnamese": "thư yêu cầu dừng ngay hành vi vi phạm pháp luật",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-464",
+    "index": 464,
+    "phrase": "public domain",
+    "vietnamese": "thuộc về phạm vi tài sản công cộng (hết hạn bảo hộ quyền tác giả)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-465",
+    "index": 465,
+    "phrase": "recruit top talent",
+    "vietnamese": "thu hút và chiêu mộ những nhân tài xuất sắc nhất",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-466",
+    "index": 466,
+    "phrase": "headhunt an executive",
+    "vietnamese": "săn tìm nhân sự lãnh đạo điều hành cấp cao",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-467",
+    "index": 467,
+    "phrase": "fill a vacancy",
+    "vietnamese": "tuyển dụng ứng viên thích hợp vào vị trí còn trống",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-468",
+    "index": 468,
+    "phrase": "job description",
+    "vietnamese": "bản mô tả chi tiết vị trí công việc (JD)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-469",
+    "index": 469,
+    "phrase": "competitive salary package",
+    "vietnamese": "chế độ lương bổng và đãi ngộ có tính cạnh tranh cao",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-470",
+    "index": 470,
+    "phrase": "employee benefits",
+    "vietnamese": "các chế độ phúc lợi dành cho người lao động",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-471",
+    "index": 471,
+    "phrase": "onboard new hires",
+    "vietnamese": "tiến hành tiếp nhận và hội nhập nhân viên mới",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-472",
+    "index": 472,
+    "phrase": "probationary period",
+    "vietnamese": "thời gian thử việc theo quy định",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-473",
+    "index": 473,
+    "phrase": "performance appraisal",
+    "vietnamese": "hoạt động đánh giá kết quả hoàn thành công việc",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-474",
+    "index": 474,
+    "phrase": "key performance indicator",
+    "vietnamese": "chỉ số đánh giá hiệu quả công việc then chốt (KPI)",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-475",
+    "index": 475,
+    "phrase": "professional development",
+    "vietnamese": "đào tạo nâng cao trình độ chuyên môn nghiệp vụ",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-476",
+    "index": 476,
+    "phrase": "career progression",
+    "vietnamese": "lộ trình thăng tiến nghề nghiệp rõ ràng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-477",
+    "index": 477,
+    "phrase": "glass ceiling",
+    "vietnamese": "rào cản vô hình hạn chế cơ hội thăng tiến của phụ nữ/thiểu số",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-478",
+    "index": 478,
+    "phrase": "pay disparity",
+    "vietnamese": "sự chênh lệch bất hợp lý về mức thu nhập",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-479",
+    "index": 479,
+    "phrase": "equal opportunity employer",
+    "vietnamese": "nhà tuyển dụng cam kết tạo cơ hội việc làm bình đẳng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-480",
+    "index": 480,
+    "phrase": "code of conduct",
+    "vietnamese": "bộ quy tắc ứng xử chuẩn mực của tổ chức",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-481",
+    "index": 481,
+    "phrase": "disciplinary hearing",
+    "vietnamese": "phiên điều trần xem xét xử lý kỷ luật lao động",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-482",
+    "index": 482,
+    "phrase": "wrongful termination",
+    "vietnamese": "hành vi đơn phương sa thải người lao động trái luật",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-483",
+    "index": 483,
+    "phrase": "severance package",
+    "vietnamese": "chế độ trợ cấp thôi việc cho người lao động",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-484",
+    "index": 484,
+    "phrase": "golden handshake",
+    "vietnamese": "khoản tiền chi trả hậu hĩnh khi lãnh đạo cấp cao rời nhiệm sở",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-485",
+    "index": 485,
+    "phrase": "lay off workers",
+    "vietnamese": "cắt giảm / cho nhân viên nghỉ việc hàng loạt vì lý do tái cơ cấu",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-486",
+    "index": 486,
+    "phrase": "downsize the workforce",
+    "vietnamese": "chủ động cắt giảm tinh gọn quy mô lực lượng lao động",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-487",
+    "index": 487,
+    "phrase": "fire someone on the spot",
+    "vietnamese": "sa thải ai đó ngay lập tức tại chỗ vì vi phạm nghiêm trọng",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-488",
+    "index": 488,
+    "phrase": "tender one's resignation",
+    "vietnamese": "chính thức nộp đơn xin từ chức",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-489",
+    "index": 489,
+    "phrase": "hand in one's notice",
+    "vietnamese": "nộp thông báo xin nghỉ việc đúng thời hạn quy định",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-490",
+    "index": 490,
+    "phrase": "labor union",
+    "vietnamese": "tổ chức công đoàn đại diện cho người lao động",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-491",
+    "index": 491,
+    "phrase": "collective bargaining",
+    "vietnamese": "tiến trình thương lượng tập thể giữa công đoàn và giới chủ",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-492",
+    "index": 492,
+    "phrase": "go on strike",
+    "vietnamese": "tham gia bãi công / đình công tập thể",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-493",
+    "index": 493,
+    "phrase": "work-to-rule",
+    "vietnamese": "hình thức đình công bằng cách làm đúng quy tắc tối thiểu",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-494",
+    "index": 494,
+    "phrase": "staff turnover rate",
+    "vietnamese": "tỷ lệ thay thế / biến động nhân sự",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-495",
+    "index": 495,
+    "phrase": "workplace burnout",
+    "vietnamese": "hội chứng kiệt sức vì căng thẳng công việc kéo dài",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-496",
+    "index": 496,
+    "phrase": "work-life balance",
+    "vietnamese": "sự cân bằng giữa áp lực công việc và đời sống cá nhân",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-497",
+    "index": 497,
+    "phrase": "remote working",
+    "vietnamese": "hình thức làm việc từ xa",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-498",
+    "index": 498,
+    "phrase": "hot-desking",
+    "vietnamese": "cơ chế chia sẻ bàn làm việc linh hoạt",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-499",
+    "index": 499,
+    "phrase": "meet a tight deadline",
+    "vietnamese": "hoàn thành xuất sắc nhiệm vụ kịp thời hạn rất gấp rút",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-500",
+    "index": 500,
+    "phrase": "miss a deadline",
+    "vietnamese": "bị trễ / không hoàn thành công việc đúng thời hạn chót",
+    "category": "BUSINESS"
+  },
+  {
+    "id": "colloc-501",
+    "index": 501,
+    "phrase": "corroborate evidence",
+    "vietnamese": "củng cố/chứng thực bằng chứng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-502",
+    "index": 502,
+    "phrase": "formulate a hypothesis",
+    "vietnamese": "hình thành giả thuyết",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-503",
+    "index": 503,
+    "phrase": "test a hypothesis",
+    "vietnamese": "kiểm nghiệm giả thuyết",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-504",
+    "index": 504,
+    "phrase": "refute a hypothesis",
+    "vietnamese": "bác bỏ giả thuyết",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-505",
+    "index": 505,
+    "phrase": "empirical evidence",
+    "vietnamese": "bằng chứng thực nghiệm",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-506",
+    "index": 506,
+    "phrase": "anecdotal evidence",
+    "vietnamese": "bằng chứng mang tính giai thoại/truyền miệng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-507",
+    "index": 507,
+    "phrase": "compelling evidence",
+    "vietnamese": "bằng chứng thuyết phục",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-508",
+    "index": 508,
+    "phrase": "conclusive evidence",
+    "vietnamese": "bằng chứng có tính kết luận/xác thực",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-509",
+    "index": 509,
+    "phrase": "circumstantial evidence",
+    "vietnamese": "bằng chứng gián tiếp/suy đoán",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-510",
+    "index": 510,
+    "phrase": "gather empirical data",
+    "vietnamese": "thu thập dữ liệu thực nghiệm",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-511",
+    "index": 511,
+    "phrase": "conduct an experiment",
+    "vietnamese": "tiến hành thí nghiệm",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-512",
+    "index": 512,
+    "phrase": "replicate an experiment",
+    "vietnamese": "tái lập/lặp lại thí nghiệm",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-513",
+    "index": 513,
+    "phrase": "peer-reviewed journal",
+    "vietnamese": "tạp chí bình duyệt đồng cấp",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-514",
+    "index": 514,
+    "phrase": "literature review",
+    "vietnamese": "tổng quan tài liệu nghiên cứu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-515",
+    "index": 515,
+    "phrase": "theoretical framework",
+    "vietnamese": "khung lý thuyết",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-516",
+    "index": 516,
+    "phrase": "conceptual framework",
+    "vietnamese": "khung khái niệm",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-517",
+    "index": 517,
+    "phrase": "methodology section",
+    "vietnamese": "phần phương pháp luận",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-518",
+    "index": 518,
+    "phrase": "quantitative research",
+    "vietnamese": "nghiên cứu định lượng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-519",
+    "index": 519,
+    "phrase": "qualitative research",
+    "vietnamese": "nghiên cứu định tính",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-520",
+    "index": 520,
+    "phrase": "mixed-methods approach",
+    "vietnamese": "phương pháp tiếp cận hỗn hợp",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-521",
+    "index": 521,
+    "phrase": "pilot study",
+    "vietnamese": "nghiên cứu thử nghiệm/tiền trạm",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-522",
+    "index": 522,
+    "phrase": "longitudinal study",
+    "vietnamese": "nghiên cứu theo chiều dọc/dài hạn",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-523",
+    "index": 523,
+    "phrase": "cross-sectional study",
+    "vietnamese": "nghiên cứu cắt ngang",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-524",
+    "index": 524,
+    "phrase": "double-blind trial",
+    "vietnamese": "thử nghiệm mù đôi",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-525",
+    "index": 525,
+    "phrase": "randomized controlled trial",
+    "vietnamese": "thử nghiệm đối chứng ngẫu nhiên",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-526",
+    "index": 526,
+    "phrase": "control group",
+    "vietnamese": "nhóm đối chứng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-527",
+    "index": 527,
+    "phrase": "experimental group",
+    "vietnamese": "nhóm thực nghiệm",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-528",
+    "index": 528,
+    "phrase": "sample size",
+    "vietnamese": "quy mô mẫu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-529",
+    "index": 529,
+    "phrase": "representative sample",
+    "vietnamese": "mẫu mang tính đại diện",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-530",
+    "index": 530,
+    "phrase": "random sampling",
+    "vietnamese": "lấy mẫu ngẫu nhiên",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-531",
+    "index": 531,
+    "phrase": "stratified sampling",
+    "vietnamese": "lấy mẫu phân tầng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-532",
+    "index": 532,
+    "phrase": "sampling bias",
+    "vietnamese": "thiên lệch lấy mẫu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-533",
+    "index": 533,
+    "phrase": "subject to scrutiny",
+    "vietnamese": "chịu sự xem xét kỹ lưỡng/thẩm định",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-534",
+    "index": 534,
+    "phrase": "rigor of the study",
+    "vietnamese": "tính chặt chẽ/nghiêm ngặt của nghiên cứu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-535",
+    "index": 535,
+    "phrase": "establish validity",
+    "vietnamese": "xác lập tính hiệu lực/giá trị khoa học",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-536",
+    "index": 536,
+    "phrase": "ensure reliability",
+    "vietnamese": "đảm bảo độ tin cậy",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-537",
+    "index": 537,
+    "phrase": "independent variable",
+    "vietnamese": "biến độc lập",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-538",
+    "index": 538,
+    "phrase": "dependent variable",
+    "vietnamese": "biến phụ thuộc",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-539",
+    "index": 539,
+    "phrase": "confounding variable",
+    "vietnamese": "biến gây nhiễu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-540",
+    "index": 540,
+    "phrase": "operational definition",
+    "vietnamese": "định nghĩa thao tác hóa",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-541",
+    "index": 541,
+    "phrase": "statistical significance",
+    "vietnamese": "ý nghĩa thống kê",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-542",
+    "index": 542,
+    "phrase": "statistically significant",
+    "vietnamese": "có ý nghĩa thống kê",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-543",
+    "index": 543,
+    "phrase": "p-value threshold",
+    "vietnamese": "ngưỡng giá trị p",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-544",
+    "index": 544,
+    "phrase": "standard deviation",
+    "vietnamese": "độ lệch chuẩn",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-545",
+    "index": 545,
+    "phrase": "normal distribution",
+    "vietnamese": "phân phối chuẩn",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-546",
+    "index": 546,
+    "phrase": "bell curve",
+    "vietnamese": "đường cong hình chuông",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-547",
+    "index": 547,
+    "phrase": "data visualization",
+    "vietnamese": "trực quan hóa dữ liệu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-548",
+    "index": 548,
+    "phrase": "raw data",
+    "vietnamese": "dữ liệu thô",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-549",
+    "index": 549,
+    "phrase": "aggregate data",
+    "vietnamese": "tập hợp/tổng hợp dữ liệu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-550",
+    "index": 550,
+    "phrase": "crunch the numbers",
+    "vietnamese": "xử lý/tính toán các con số",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-551",
+    "index": 551,
+    "phrase": "identify an anomaly",
+    "vietnamese": "phát hiện điểm bất thường",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-552",
+    "index": 552,
+    "phrase": "detect outliers",
+    "vietnamese": "phát hiện các giá trị ngoại lai",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-553",
+    "index": 553,
+    "phrase": "positive correlation",
+    "vietnamese": "tương quan thuận",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-554",
+    "index": 554,
+    "phrase": "negative correlation",
+    "vietnamese": "tương quan nghịch",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-555",
+    "index": 555,
+    "phrase": "causal relationship",
+    "vietnamese": "mối quan hệ nhân quả",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-556",
+    "index": 556,
+    "phrase": "correlation does not imply causation",
+    "vietnamese": "tương quan không đồng nghĩa nhân quả",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-557",
+    "index": 557,
+    "phrase": "predictive analytics",
+    "vietnamese": "phân tích dự đoán",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-558",
+    "index": 558,
+    "phrase": "descriptive analytics",
+    "vietnamese": "phân tích mô tả",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-559",
+    "index": 559,
+    "phrase": "prescriptive analytics",
+    "vietnamese": "phân tích đề xuất/chỉ định",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-560",
+    "index": 560,
+    "phrase": "quantitative analysis",
+    "vietnamese": "phân tích định lượng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-561",
+    "index": 561,
+    "phrase": "qualitative analysis",
+    "vietnamese": "phân tích định tính",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-562",
+    "index": 562,
+    "phrase": "regression model",
+    "vietnamese": "mô hình hồi quy",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-563",
+    "index": 563,
+    "phrase": "confidence interval",
+    "vietnamese": "khoảng tin cậy",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-564",
+    "index": 564,
+    "phrase": "margin of error",
+    "vietnamese": "biên độ sai số",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-565",
+    "index": 565,
+    "phrase": "statistical inference",
+    "vietnamese": "suy luận thống kê",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-566",
+    "index": 566,
+    "phrase": "variance analysis",
+    "vietnamese": "phân tích phương sai",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-567",
+    "index": 567,
+    "phrase": "clean the dataset",
+    "vietnamese": "làm sạch bộ dữ liệu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-568",
+    "index": 568,
+    "phrase": "data scrubbing",
+    "vietnamese": "lọc rửa/chuẩn hóa dữ liệu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-569",
+    "index": 569,
+    "phrase": "data pipeline",
+    "vietnamese": "đường ống dẫn dữ liệu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-570",
+    "index": 570,
+    "phrase": "data mining",
+    "vietnamese": "khai phá dữ liệu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-571",
+    "index": 571,
+    "phrase": "extrapolate data",
+    "vietnamese": "ngoại suy dữ liệu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-572",
+    "index": 572,
+    "phrase": "interpolate points",
+    "vietnamese": "nội suy các điểm dữ liệu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-573",
+    "index": 573,
+    "phrase": "cluster analysis",
+    "vietnamese": "phân tích cụm",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-574",
+    "index": 574,
+    "phrase": "principal component analysis",
+    "vietnamese": "phân tích thành phần chính",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-575",
+    "index": 575,
+    "phrase": "cross-tabulation",
+    "vietnamese": "lập bảng chéo",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-576",
+    "index": 576,
+    "phrase": "exploratory data analysis",
+    "vietnamese": "phân tích dữ liệu khám phá",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-577",
+    "index": 577,
+    "phrase": "longitudinal trend",
+    "vietnamese": "xu hướng theo chiều thời gian",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-578",
+    "index": 578,
+    "phrase": "exponential growth",
+    "vietnamese": "tăng trưởng theo cấp số nhân",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-579",
+    "index": 579,
+    "phrase": "linear progression",
+    "vietnamese": "tiến trình tuyến tính",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-580",
+    "index": 580,
+    "phrase": "plateau at",
+    "vietnamese": "chững lại/đạt trạng thái bình ổn ở mức",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-581",
+    "index": 581,
+    "phrase": "steep incline",
+    "vietnamese": "sự gia tăng dốc đứng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-582",
+    "index": 582,
+    "phrase": "sharp decline",
+    "vietnamese": "sự sụt giảm mạnh mẽ",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-583",
+    "index": 583,
+    "phrase": "fluctuating pattern",
+    "vietnamese": "mô hình dao động",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-584",
+    "index": 584,
+    "phrase": "erratic behavior",
+    "vietnamese": "hành vi thất thường/không ổn định",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-585",
+    "index": 585,
+    "phrase": "baseline measurement",
+    "vietnamese": "phép đo đường cơ sở/chuẩn đối sánh ban đầu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-586",
+    "index": 586,
+    "phrase": "benchmark against",
+    "vietnamese": "đối chuẩn/so chuẩn với",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-587",
+    "index": 587,
+    "phrase": "performance metrics",
+    "vietnamese": "các chỉ số đo lường hiệu suất",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-588",
+    "index": 588,
+    "phrase": "key performance indicator",
+    "vietnamese": "chỉ số đánh giá hiệu quả then chốt (KPI)",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-589",
+    "index": 589,
+    "phrase": "telemetry data",
+    "vietnamese": "dữ liệu viễn trắc/giám sát từ xa",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-590",
+    "index": 590,
+    "phrase": "real-time analytics",
+    "vietnamese": "phân tích theo thời gian thực",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-591",
+    "index": 591,
+    "phrase": "cutting-edge technology",
+    "vietnamese": "công nghệ tiên tiến nhất/tối tân",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-592",
+    "index": 592,
+    "phrase": "state-of-the-art facility",
+    "vietnamese": "cơ sở vật chất hiện đại bậc nhất",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-593",
+    "index": 593,
+    "phrase": "disruptive technology",
+    "vietnamese": "công nghệ đột phá làm thay đổi thị trường",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-594",
+    "index": 594,
+    "phrase": "obsolete technology",
+    "vietnamese": "công nghệ lỗi thời",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-595",
+    "index": 595,
+    "phrase": "backward compatibility",
+    "vietnamese": "khả năng tương thích ngược",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-596",
+    "index": 596,
+    "phrase": "cross-platform compatibility",
+    "vietnamese": "khả năng tương thích đa nền tảng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-597",
+    "index": 597,
+    "phrase": "legacy system",
+    "vietnamese": "hệ thống kế thừa/hệ thống cũ",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-598",
+    "index": 598,
+    "phrase": "proprietary software",
+    "vietnamese": "phần mềm độc quyền",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-599",
+    "index": 599,
+    "phrase": "open-source software",
+    "vietnamese": "phần mềm mã nguồn mở",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-600",
+    "index": 600,
+    "phrase": "source code",
+    "vietnamese": "mã nguồn",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-601",
+    "index": 601,
+    "phrase": "deploy an application",
+    "vietnamese": "triển khai ứng dụng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-602",
+    "index": 602,
+    "phrase": "system downtime",
+    "vietnamese": "thời gian hệ thống ngừng hoạt động",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-603",
+    "index": 603,
+    "phrase": "system uptime",
+    "vietnamese": "thời gian hệ thống hoạt động liên tục",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-604",
+    "index": 604,
+    "phrase": "single point of failure",
+    "vietnamese": "điểm lỗi đơn lẻ gây tê liệt toàn hệ thống",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-605",
+    "index": 605,
+    "phrase": "high availability",
+    "vietnamese": "tính sẵn sàng cao",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-606",
+    "index": 606,
+    "phrase": "fault tolerance",
+    "vietnamese": "khả năng chịu lỗi",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-607",
+    "index": 607,
+    "phrase": "load balancing",
+    "vietnamese": "cân bằng tải",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-608",
+    "index": 608,
+    "phrase": "cloud computing",
+    "vietnamese": "điện toán đám mây",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-609",
+    "index": 609,
+    "phrase": "distributed architecture",
+    "vietnamese": "kiến trúc phân tán",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-610",
+    "index": 610,
+    "phrase": "microservices architecture",
+    "vietnamese": "kiến trúc vi dịch vụ",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-611",
+    "index": 611,
+    "phrase": "monolithic architecture",
+    "vietnamese": "kiến trúc nguyên khối",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-612",
+    "index": 612,
+    "phrase": "application programming interface",
+    "vietnamese": "giao diện lập trình ứng dụng (API)",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-613",
+    "index": 613,
+    "phrase": "technical debt",
+    "vietnamese": "nợ kỹ thuật",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-614",
+    "index": 614,
+    "phrase": "code refactoring",
+    "vietnamese": "tái cấu trúc mã nguồn",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-615",
+    "index": 615,
+    "phrase": "continuous integration",
+    "vietnamese": "tích hợp liên tục (CI)",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-616",
+    "index": 616,
+    "phrase": "continuous deployment",
+    "vietnamese": "triển khai liên tục (CD)",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-617",
+    "index": 617,
+    "phrase": "automated testing",
+    "vietnamese": "kiểm thử tự động",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-618",
+    "index": 618,
+    "phrase": "unit test",
+    "vietnamese": "kiểm thử đơn vị",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-619",
+    "index": 619,
+    "phrase": "integration test",
+    "vietnamese": "kiểm thử tích hợp",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-620",
+    "index": 620,
+    "phrase": "end-to-end testing",
+    "vietnamese": "kiểm thử toàn trình",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-621",
+    "index": 621,
+    "phrase": "bug fixing",
+    "vietnamese": "sửa lỗi phần mềm",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-622",
+    "index": 622,
+    "phrase": "version control",
+    "vietnamese": "quản lý phiên bản",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-623",
+    "index": 623,
+    "phrase": "commit changes",
+    "vietnamese": "ghi nhận/lưu thay đổi vào kho mã",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-624",
+    "index": 624,
+    "phrase": "branch out",
+    "vietnamese": "tách nhánh mã nguồn",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-625",
+    "index": 625,
+    "phrase": "merge conflict",
+    "vietnamese": "xung đột khi gộp mã",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-626",
+    "index": 626,
+    "phrase": "pull request",
+    "vietnamese": "yêu cầu gộp mã",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-627",
+    "index": 627,
+    "phrase": "code review",
+    "vietnamese": "duyệt mã nguồn",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-628",
+    "index": 628,
+    "phrase": "deprecate a feature",
+    "vietnamese": "ngừng hỗ trợ/loại bỏ dần một tính năng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-629",
+    "index": 629,
+    "phrase": "bandwidth limitation",
+    "vietnamese": "giới hạn băng thông",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-630",
+    "index": 630,
+    "phrase": "latency issues",
+    "vietnamese": "vấn đề độ trễ",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-631",
+    "index": 631,
+    "phrase": "throughput rate",
+    "vietnamese": "tốc độ thông lượng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-632",
+    "index": 632,
+    "phrase": "cache memory",
+    "vietnamese": "bộ nhớ đệm",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-633",
+    "index": 633,
+    "phrase": "memory leak",
+    "vietnamese": "rò rỉ bộ nhớ",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-634",
+    "index": 634,
+    "phrase": "buffer overflow",
+    "vietnamese": "tràn bộ đệm",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-635",
+    "index": 635,
+    "phrase": "race condition",
+    "vietnamese": "tình trạng tranh đoạt tài nguyên",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-636",
+    "index": 636,
+    "phrase": "deadlock condition",
+    "vietnamese": "tình trạng bế tắc/khóa chết tiến trình",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-637",
+    "index": 637,
+    "phrase": "database schema",
+    "vietnamese": "lược đồ cơ sở dữ liệu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-638",
+    "index": 638,
+    "phrase": "relational database",
+    "vietnamese": "cơ sở dữ liệu quan hệ",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-639",
+    "index": 639,
+    "phrase": "query optimization",
+    "vietnamese": "tối ưu hóa truy vấn",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-640",
+    "index": 640,
+    "phrase": "data redundancy",
+    "vietnamese": "dư thừa dữ liệu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-641",
+    "index": 641,
+    "phrase": "cybersecurity breach",
+    "vietnamese": "sự cố vi phạm an ninh mạng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-642",
+    "index": 642,
+    "phrase": "data breach",
+    "vietnamese": "vụ rò rỉ/đánh cắp dữ liệu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-643",
+    "index": 643,
+    "phrase": "security vulnerability",
+    "vietnamese": "lỗ hổng bảo mật",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-644",
+    "index": 644,
+    "phrase": "zero-day vulnerability",
+    "vietnamese": "lỗ hổng zero-day/chưa có bản vá",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-645",
+    "index": 645,
+    "phrase": "patch a vulnerability",
+    "vietnamese": "vá lỗ hổng bảo mật",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-646",
+    "index": 646,
+    "phrase": "end-to-end encryption",
+    "vietnamese": "mã hóa đầu cuối",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-647",
+    "index": 647,
+    "phrase": "public key cryptography",
+    "vietnamese": "mật mã học khóa công khai",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-648",
+    "index": 648,
+    "phrase": "cryptographic hash",
+    "vietnamese": "hàm băm mật mã học",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-649",
+    "index": 649,
+    "phrase": "brute-force attack",
+    "vietnamese": "tấn công vét cạn/dò mật khẩu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-650",
+    "index": 650,
+    "phrase": "denial-of-service attack",
+    "vietnamese": "tấn công từ chối dịch vụ (DoS)",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-651",
+    "index": 651,
+    "phrase": "phishing attack",
+    "vietnamese": "tấn công giả mạo/lừa đảo trực tuyến",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-652",
+    "index": 652,
+    "phrase": "malware infection",
+    "vietnamese": "nhiễm phần mềm độc hại",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-653",
+    "index": 653,
+    "phrase": "ransomware demand",
+    "vietnamese": "yêu cầu tiền chuộc từ mã độc tống tiền",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-654",
+    "index": 654,
+    "phrase": "unauthorized access",
+    "vietnamese": "truy cập trái phép",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-655",
+    "index": 655,
+    "phrase": "access control list",
+    "vietnamese": "danh sách kiểm soát truy cập",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-656",
+    "index": 656,
+    "phrase": "two-factor authentication",
+    "vietnamese": "xác thực hai yếu tố (2FA)",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-657",
+    "index": 657,
+    "phrase": "multi-factor authentication",
+    "vietnamese": "xác thực đa yếu tố (MFA)",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-658",
+    "index": 658,
+    "phrase": "biometric authentication",
+    "vietnamese": "xác thực sinh trắc học",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-659",
+    "index": 659,
+    "phrase": "firewall configuration",
+    "vietnamese": "cấu hình tường lửa",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-660",
+    "index": 660,
+    "phrase": "intrusion detection",
+    "vietnamese": "phát hiện xâm nhập",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-661",
+    "index": 661,
+    "phrase": "security protocol",
+    "vietnamese": "giao thức bảo mật",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-662",
+    "index": 662,
+    "phrase": "digital certificate",
+    "vietnamese": "chứng chỉ số/chứng thực điện tử",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-663",
+    "index": 663,
+    "phrase": "identity theft",
+    "vietnamese": "đánh cắp danh tính",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-664",
+    "index": 664,
+    "phrase": "sensitive information",
+    "vietnamese": "thông tin nhạy cảm",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-665",
+    "index": 665,
+    "phrase": "proprietary information",
+    "vietnamese": "thông tin độc quyền",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-666",
+    "index": 666,
+    "phrase": "safeguard data",
+    "vietnamese": "bảo vệ/gìn giữ an toàn dữ liệu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-667",
+    "index": 667,
+    "phrase": "penetration testing",
+    "vietnamese": "kiểm thử xâm nhập/đánh giá bảo mật",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-668",
+    "index": 668,
+    "phrase": "ethical hacking",
+    "vietnamese": "hacker mũ trắng/tấn công giả định hợp pháp",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-669",
+    "index": 669,
+    "phrase": "packet loss",
+    "vietnamese": "mất gói tin mạng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-670",
+    "index": 670,
+    "phrase": "network latency",
+    "vietnamese": "độ trễ mạng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-671",
+    "index": 671,
+    "phrase": "network congestion",
+    "vietnamese": "nghẽn mạng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-672",
+    "index": 672,
+    "phrase": "local area network",
+    "vietnamese": "mạng cục bộ (LAN)",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-673",
+    "index": 673,
+    "phrase": "domain name system",
+    "vietnamese": "hệ thống phân giải tên miền (DNS)",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-674",
+    "index": 674,
+    "phrase": "virtual private network",
+    "vietnamese": "mạng riêng ảo (VPN)",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-675",
+    "index": 675,
+    "phrase": "proxy server",
+    "vietnamese": "máy chủ ủy quyền",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-676",
+    "index": 676,
+    "phrase": "artificial intelligence",
+    "vietnamese": "trí tuệ nhân tạo (AI)",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-677",
+    "index": 677,
+    "phrase": "machine learning model",
+    "vietnamese": "mô hình học máy",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-678",
+    "index": 678,
+    "phrase": "deep learning architecture",
+    "vietnamese": "kiến trúc học sâu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-679",
+    "index": 679,
+    "phrase": "artificial neural network",
+    "vietnamese": "mạng nơ-ron nhân tạo",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-680",
+    "index": 680,
+    "phrase": "convolutional neural network",
+    "vietnamese": "mạng nơ-ron tích chập (CNN)",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-681",
+    "index": 681,
+    "phrase": "recurrent neural network",
+    "vietnamese": "mạng nơ-ron hồi quy (RNN)",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-682",
+    "index": 682,
+    "phrase": "large language model",
+    "vietnamese": "mô hình ngôn ngữ lớn (LLM)",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-683",
+    "index": 683,
+    "phrase": "natural language processing",
+    "vietnamese": "xử lý ngôn ngữ tự nhiên (NLP)",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-684",
+    "index": 684,
+    "phrase": "computer vision",
+    "vietnamese": "thị giác máy tính",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-685",
+    "index": 685,
+    "phrase": "training data",
+    "vietnamese": "dữ liệu huấn luyện",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-686",
+    "index": 686,
+    "phrase": "test dataset",
+    "vietnamese": "bộ dữ liệu kiểm thử",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-687",
+    "index": 687,
+    "phrase": "validation set",
+    "vietnamese": "tập kiểm định",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-688",
+    "index": 688,
+    "phrase": "supervised learning",
+    "vietnamese": "học có giám sát",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-689",
+    "index": 689,
+    "phrase": "unsupervised learning",
+    "vietnamese": "học không giám sát",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-690",
+    "index": 690,
+    "phrase": "reinforcement learning",
+    "vietnamese": "học tăng cường",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-691",
+    "index": 691,
+    "phrase": "model training",
+    "vietnamese": "huấn luyện mô hình",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-692",
+    "index": 692,
+    "phrase": "fine-tuning a model",
+    "vietnamese": "tinh chỉnh mô hình",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-693",
+    "index": 693,
+    "phrase": "overfitting the data",
+    "vietnamese": "quá khớp dữ liệu/học vẹt dữ liệu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-694",
+    "index": 694,
+    "phrase": "underfitting the model",
+    "vietnamese": "chưa khớp mô hình/thiếu khớp",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-695",
+    "index": 695,
+    "phrase": "loss function",
+    "vietnamese": "hàm mất mát",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-696",
+    "index": 696,
+    "phrase": "gradient descent",
+    "vietnamese": "thuật toán hạ dốc độ dốc",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-697",
+    "index": 697,
+    "phrase": "hyperparameter tuning",
+    "vietnamese": "tinh chỉnh siêu tham số",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-698",
+    "index": 698,
+    "phrase": "feature extraction",
+    "vietnamese": "trích xuất đặc trưng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-699",
+    "index": 699,
+    "phrase": "feature engineering",
+    "vietnamese": "kỹ nghệ đặc trưng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-700",
+    "index": 700,
+    "phrase": "bias in algorithms",
+    "vietnamese": "thiên kiến trong thuật toán",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-701",
+    "index": 701,
+    "phrase": "algorithmic fairness",
+    "vietnamese": "tính công bằng của thuật toán",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-702",
+    "index": 702,
+    "phrase": "ethical AI",
+    "vietnamese": "trí tuệ nhân tạo có đạo đức",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-703",
+    "index": 703,
+    "phrase": "generative AI",
+    "vietnamese": "trí tuệ nhân tạo tạo sinh",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-704",
+    "index": 704,
+    "phrase": "prompt engineering",
+    "vietnamese": "kỹ thuật thiết kế câu lệnh/prompt",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-705",
+    "index": 705,
+    "phrase": "hallucination rate",
+    "vietnamese": "tỷ lệ tạo ảo giác/bịa đặt của AI",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-706",
+    "index": 706,
+    "phrase": "inference latency",
+    "vietnamese": "độ trễ suy luận",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-707",
+    "index": 707,
+    "phrase": "computational complexity",
+    "vietnamese": "độ phức tạp tính toán",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-708",
+    "index": 708,
+    "phrase": "parameter count",
+    "vietnamese": "số lượng tham số",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-709",
+    "index": 709,
+    "phrase": "token limit",
+    "vietnamese": "giới hạn số lượng token",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-710",
+    "index": 710,
+    "phrase": "latent space",
+    "vietnamese": "không gian tiềm ẩn",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-711",
+    "index": 711,
+    "phrase": "vector embedding",
+    "vietnamese": "nhúng vector",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-712",
+    "index": 712,
+    "phrase": "cosine similarity",
+    "vietnamese": "độ tương đồng cosine",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-713",
+    "index": 713,
+    "phrase": "semantic search",
+    "vietnamese": "tìm kiếm theo ngữ nghĩa",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-714",
+    "index": 714,
+    "phrase": "autonomous system",
+    "vietnamese": "hệ thống tự hành",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-715",
+    "index": 715,
+    "phrase": "human-in-the-loop",
+    "vietnamese": "con người can thiệp trong quy trình tự động",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-716",
+    "index": 716,
+    "phrase": "breakthrough discovery",
+    "vietnamese": "phát hiện mang tính đột phá",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-717",
+    "index": 717,
+    "phrase": "paradigm shift",
+    "vietnamese": "sự chuyển dịch hệ hình/khuôn mẫu tư duy",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-718",
+    "index": 718,
+    "phrase": "seminal work",
+    "vietnamese": "công trình mang tính bước ngoặt/khởi xướng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-719",
+    "index": 719,
+    "phrase": "groundbreaking research",
+    "vietnamese": "nghiên cứu đột phá/tiên phong",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-720",
+    "index": 720,
+    "phrase": "landmark study",
+    "vietnamese": "nghiên cứu mang tính bước ngoặt",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-721",
+    "index": 721,
+    "phrase": "pioneer a technique",
+    "vietnamese": "tiên phong trong một kỹ thuật",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-722",
+    "index": 722,
+    "phrase": "scientific consensus",
+    "vietnamese": "sự đồng thuận khoa học",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-723",
+    "index": 723,
+    "phrase": "peer review process",
+    "vietnamese": "quy trình bình duyệt đồng cấp",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-724",
+    "index": 724,
+    "phrase": "academic integrity",
+    "vietnamese": "sự liêm chính học thuật",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-725",
+    "index": 725,
+    "phrase": "plagiarism detection",
+    "vietnamese": "phát hiện đạo văn",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-726",
+    "index": 726,
+    "phrase": "cite a source",
+    "vietnamese": "trích dẫn nguồn tài liệu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-727",
+    "index": 727,
+    "phrase": "bibliographical reference",
+    "vietnamese": "tài liệu tham khảo thư mục",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-728",
+    "index": 728,
+    "phrase": "scholarly journal",
+    "vietnamese": "tạp chí học thuật chuyên ngành",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-729",
+    "index": 729,
+    "phrase": "conference proceedings",
+    "vietnamese": "kỷ yếu hội nghị khoa học",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-730",
+    "index": 730,
+    "phrase": "call for papers",
+    "vietnamese": "thông báo kêu gọi nộp bài báo khoa học",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-731",
+    "index": 731,
+    "phrase": "submit a manuscript",
+    "vietnamese": "nộp bản thảo bài báo",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-732",
+    "index": 732,
+    "phrase": "publish findings",
+    "vietnamese": "công bố các phát hiện/kết quả nghiên cứu",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-733",
+    "index": 733,
+    "phrase": "draw a conclusion",
+    "vietnamese": "rút ra kết luận",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-734",
+    "index": 734,
+    "phrase": "reach a conclusion",
+    "vietnamese": "đi đến kết luận",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-735",
+    "index": 735,
+    "phrase": "valid conclusion",
+    "vietnamese": "kết luận có cơ sở vững chắc",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-736",
+    "index": 736,
+    "phrase": "tentative conclusion",
+    "vietnamese": "kết luận sơ bộ/chưa dứt khoát",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-737",
+    "index": 737,
+    "phrase": "fallacious reasoning",
+    "vietnamese": "lập luận ngụy biện/sai lầm",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-738",
+    "index": 738,
+    "phrase": "deductive reasoning",
+    "vietnamese": "lập luận diễn dịch",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-739",
+    "index": 739,
+    "phrase": "inductive reasoning",
+    "vietnamese": "lập luận quy nạp",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-740",
+    "index": 740,
+    "phrase": "intellectual property",
+    "vietnamese": "sở hữu trí tuệ",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-741",
+    "index": 741,
+    "phrase": "patent infringement",
+    "vietnamese": "vi phạm bằng sáng chế",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-742",
+    "index": 742,
+    "phrase": "file a patent",
+    "vietnamese": "nộp đơn đăng ký bằng sáng chế",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-743",
+    "index": 743,
+    "phrase": "genetic modification",
+    "vietnamese": "biến đổi gen",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-744",
+    "index": 744,
+    "phrase": "cellular mechanism",
+    "vietnamese": "cơ chế tế bào",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-745",
+    "index": 745,
+    "phrase": "clinical trial",
+    "vietnamese": "thử nghiệm lâm sàng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-746",
+    "index": 746,
+    "phrase": "adverse reaction",
+    "vietnamese": "phản ứng có hại/tác dụng phụ nghiêm trọng",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-747",
+    "index": 747,
+    "phrase": "environmental impact",
+    "vietnamese": "tác động môi trường",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-748",
+    "index": 748,
+    "phrase": "ecological balance",
+    "vietnamese": "sự cân bằng sinh thái",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-749",
+    "index": 749,
+    "phrase": "carbon footprint",
+    "vietnamese": "dấu chân carbon",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-750",
+    "index": 750,
+    "phrase": "renewable energy",
+    "vietnamese": "năng lượng tái tạo",
+    "category": "ACADEMIC"
+  },
+  {
+    "id": "colloc-751",
+    "index": 751,
+    "phrase": "burst into tears",
+    "vietnamese": "òa khóc nức nở",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-752",
+    "index": 752,
+    "phrase": "burst out laughing",
+    "vietnamese": "bật cười lớn / cười phá lên",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-753",
+    "index": 753,
+    "phrase": "bottle up emotions",
+    "vietnamese": "kìm nén cảm xúc trong lòng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-754",
+    "index": 754,
+    "phrase": "express one's feelings",
+    "vietnamese": "bộc lộ cảm xúc",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-755",
+    "index": 755,
+    "phrase": "conceal one's feelings",
+    "vietnamese": "che giấu cảm xúc",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-756",
+    "index": 756,
+    "phrase": "hurt someone's feelings",
+    "vietnamese": "làm tổn thương cảm xúc của ai",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-757",
+    "index": 757,
+    "phrase": "mixed feelings",
+    "vietnamese": "cảm xúc vui buồn lẫn lộn",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-758",
+    "index": 758,
+    "phrase": "strong feelings",
+    "vietnamese": "cảm xúc mãnh liệt / quan điểm dứt khoát",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-759",
+    "index": 759,
+    "phrase": "hard feelings",
+    "vietnamese": "sự giận dữ, ác cảm, hiềm khích",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-760",
+    "index": 760,
+    "phrase": "deep regret",
+    "vietnamese": "sự hối hận sâu sắc",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-761",
+    "index": 761,
+    "phrase": "sense of guilt",
+    "vietnamese": "cảm giác tội lỗi, cắn rứt lương tâm",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-762",
+    "index": 762,
+    "phrase": "pang of guilt",
+    "vietnamese": "sự cắn rứt, nhói đau của lương tâm",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-763",
+    "index": 763,
+    "phrase": "fly into a rage",
+    "vietnamese": "nổi trận lôi đình, bốc hỏa",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-764",
+    "index": 764,
+    "phrase": "blind rage",
+    "vietnamese": "cơn thịnh nộ mù quáng, mất kiểm soát",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-765",
+    "index": 765,
+    "phrase": "fit of temper",
+    "vietnamese": "cơn nóng giận nhất thời",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-766",
+    "index": 766,
+    "phrase": "lose one's temper",
+    "vietnamese": "mất bình tĩnh, nổi nóng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-767",
+    "index": 767,
+    "phrase": "keep one's temper",
+    "vietnamese": "giữ được bình tĩnh, kiềm chế cơn giận",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-768",
+    "index": 768,
+    "phrase": "control one's temper",
+    "vietnamese": "kiểm soát tính nóng nảy",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-769",
+    "index": 769,
+    "phrase": "vent one's anger",
+    "vietnamese": "xả giận, trút cơn giận",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-770",
+    "index": 770,
+    "phrase": "seething with anger",
+    "vietnamese": "sôi sục căm giận",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-771",
+    "index": 771,
+    "phrase": "suppress one's anger",
+    "vietnamese": "kìm hãm cơn thịnh nộ",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-772",
+    "index": 772,
+    "phrase": "overcome with grief",
+    "vietnamese": "bị nỗi đau buồn nhấn chìm",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-773",
+    "index": 773,
+    "phrase": "profound sadness",
+    "vietnamese": "nỗi buồn sâu sắc, khôn nguôi",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-774",
+    "index": 774,
+    "phrase": "sigh of relief",
+    "vietnamese": "tiếng thở phào nhẹ nhõm",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-775",
+    "index": 775,
+    "phrase": "breathe a sigh of relief",
+    "vietnamese": "thở phào nhẹ nhõm",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-776",
+    "index": 776,
+    "phrase": "sense of relief",
+    "vietnamese": "cảm giác trút được gánh nặng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-777",
+    "index": 777,
+    "phrase": "high spirits",
+    "vietnamese": "tinh thần phấn chấn, vui vẻ",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-778",
+    "index": 778,
+    "phrase": "low spirits",
+    "vietnamese": "tâm trạng ủ rũ, chán nản",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-779",
+    "index": 779,
+    "phrase": "lift someone's spirits",
+    "vietnamese": "nâng cao tinh thần, làm ai vui lên",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-780",
+    "index": 780,
+    "phrase": "damp someone's spirits",
+    "vietnamese": "làm giảm bớt nhuệ khí, làm ai cụt hứng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-781",
+    "index": 781,
+    "phrase": "infectious laugh",
+    "vietnamese": "nụ cười có sức lan tỏa, lây truyền",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-782",
+    "index": 782,
+    "phrase": "beam with pride",
+    "vietnamese": "cười rạng rỡ vì tự hào",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-783",
+    "index": 783,
+    "phrase": "swell with pride",
+    "vietnamese": "tràn ngập niềm tự hào",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-784",
+    "index": 784,
+    "phrase": "swallow one's pride",
+    "vietnamese": "dẹp lòng tự ái sang một bên",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-785",
+    "index": 785,
+    "phrase": "hurt someone's pride",
+    "vietnamese": "xúc phạm lòng tự trọng của ai",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-786",
+    "index": 786,
+    "phrase": "wounded pride",
+    "vietnamese": "lòng tự ái bị tổn thương",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-787",
+    "index": 787,
+    "phrase": "trembling with fear",
+    "vietnamese": "run rẩy vì sợ hãi",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-788",
+    "index": 788,
+    "phrase": "petrified with fear",
+    "vietnamese": "sợ chết khiếp / sợ chết trân",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-789",
+    "index": 789,
+    "phrase": "overcome with fear",
+    "vietnamese": "bị nỗi sợ hãi lấn át",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-790",
+    "index": 790,
+    "phrase": "allay someone's fears",
+    "vietnamese": "xoa dịu nỗi sợ hãi của ai",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-791",
+    "index": 791,
+    "phrase": "harbor suspicions",
+    "vietnamese": "nuôi dưỡng mối nghi ngờ",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-792",
+    "index": 792,
+    "phrase": "arouse suspicion",
+    "vietnamese": "làm dấy lên sự nghi ngờ",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-793",
+    "index": 793,
+    "phrase": "confirm someone's suspicions",
+    "vietnamese": "xác nhận mối nghi ngờ của ai là đúng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-794",
+    "index": 794,
+    "phrase": "green with envy",
+    "vietnamese": "vô cùng ghen tị / ghen tức đỏ mắt",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-795",
+    "index": 795,
+    "phrase": "consume with jealousy",
+    "vietnamese": "bị ghen tuông thiêu đốt",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-796",
+    "index": 796,
+    "phrase": "utter despair",
+    "vietnamese": "sự tuyệt vọng tột cùng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-797",
+    "index": 797,
+    "phrase": "plunge into despair",
+    "vietnamese": "rơi vào tuyệt vọng sâu sắc",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-798",
+    "index": 798,
+    "phrase": "gleam of hope",
+    "vietnamese": "tia hy vọng le lói",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-799",
+    "index": 799,
+    "phrase": "dash someone's hopes",
+    "vietnamese": "dập tắt hy vọng của ai",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-800",
+    "index": 800,
+    "phrase": "build up someone's hopes",
+    "vietnamese": "nhen nhóm hy vọng cho ai",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-801",
+    "index": 801,
+    "phrase": "overwhelming joy",
+    "vietnamese": "niềm vui ngập tràn",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-802",
+    "index": 802,
+    "phrase": "jump for joy",
+    "vietnamese": "nhảy cẫng lên vì sung sướng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-803",
+    "index": 803,
+    "phrase": "tears of joy",
+    "vietnamese": "những giọt nước mắt hạnh phúc",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-804",
+    "index": 804,
+    "phrase": "sense of wonder",
+    "vietnamese": "cảm giác kinh ngạc, trầm trồ ngưỡng mộ",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-805",
+    "index": 805,
+    "phrase": "mood swings",
+    "vietnamese": "sự thay đổi tâm trạng thất thường",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-806",
+    "index": 806,
+    "phrase": "state of mind",
+    "vietnamese": "trạng thái tâm lý / tâm thế",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-807",
+    "index": 807,
+    "phrase": "frame of mind",
+    "vietnamese": "tâm trạng / góc nhìn tinh thần",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-808",
+    "index": 808,
+    "phrase": "peace of mind",
+    "vietnamese": "sự an tâm, thanh thản trong tâm hồn",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-809",
+    "index": 809,
+    "phrase": "presence of mind",
+    "vietnamese": "sự nhanh trí, bình tĩnh trong tình huống bất ngờ",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-810",
+    "index": 810,
+    "phrase": "slip of the tongue",
+    "vietnamese": "lời nói lỡ miệng, sơ suất khi nói",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-811",
+    "index": 811,
+    "phrase": "slip of the mind",
+    "vietnamese": "sự đãng trí, quên tạm thời",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-812",
+    "index": 812,
+    "phrase": "train of thought",
+    "vietnamese": "mạch suy nghĩ",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-813",
+    "index": 813,
+    "phrase": "line of reasoning",
+    "vietnamese": "mạch lập luận, chuỗi suy luận logic",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-814",
+    "index": 814,
+    "phrase": "lose one's train of thought",
+    "vietnamese": "đứt đoạn mạch suy nghĩ",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-815",
+    "index": 815,
+    "phrase": "bear in mind",
+    "vietnamese": "ghi nhớ trong tâm trí",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-816",
+    "index": 816,
+    "phrase": "cross someone's mind",
+    "vietnamese": "thoáng qua trong tâm trí ai",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-817",
+    "index": 817,
+    "phrase": "ease someone's mind",
+    "vietnamese": "trấn an tâm trí ai, xoa dịu lo âu",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-818",
+    "index": 818,
+    "phrase": "speak one's mind",
+    "vietnamese": "nói thẳng suy nghĩ của mình",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-819",
+    "index": 819,
+    "phrase": "change one's mind",
+    "vietnamese": "thay đổi ý định / quyết định",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-820",
+    "index": 820,
+    "phrase": "open-minded",
+    "vietnamese": "có tư duy cởi mở, sẵn sàng tiếp thu",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-821",
+    "index": 821,
+    "phrase": "narrow-minded",
+    "vietnamese": "hẹp hòi, thiển cận",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-822",
+    "index": 822,
+    "phrase": "cognitive dissonance",
+    "vietnamese": "sự bất hòa nhận thức",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-823",
+    "index": 823,
+    "phrase": "cognitive decline",
+    "vietnamese": "sự suy giảm nhận thức",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-824",
+    "index": 824,
+    "phrase": "subconscious mind",
+    "vietnamese": "tâm trí tiềm thức",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-825",
+    "index": 825,
+    "phrase": "conscious effort",
+    "vietnamese": "nỗ lực có ý thức",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-826",
+    "index": 826,
+    "phrase": "psychological trauma",
+    "vietnamese": "chấn thương tâm lý",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-827",
+    "index": 827,
+    "phrase": "emotional distress",
+    "vietnamese": "nỗi đau khổ, khủng hoảng tinh thần",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-828",
+    "index": 828,
+    "phrase": "nervous breakdown",
+    "vietnamese": "cơn suy nhược thần kinh",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-829",
+    "index": 829,
+    "phrase": "anxiety disorder",
+    "vietnamese": "chứng rối loạn lo âu",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-830",
+    "index": 830,
+    "phrase": "panic attack",
+    "vietnamese": "cơn hoảng loạn đột ngột",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-831",
+    "index": 831,
+    "phrase": "cope with stress",
+    "vietnamese": "đương đầu với căng thẳng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-832",
+    "index": 832,
+    "phrase": "relieve stress",
+    "vietnamese": "giải tỏa áp lực, xả stress",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-833",
+    "index": 833,
+    "phrase": "induce stress",
+    "vietnamese": "gây ra áp lực căng thẳng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-834",
+    "index": 834,
+    "phrase": "chronic stress",
+    "vietnamese": "căng thẳng mãn tính kéo dài",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-835",
+    "index": 835,
+    "phrase": "emotional resilience",
+    "vietnamese": "khả năng phục hồi cảm xúc / sự kiên cường tâm lý",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-836",
+    "index": 836,
+    "phrase": "mental fatigue",
+    "vietnamese": "sự kiệt quệ tinh thần / mệt mỏi trí óc",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-837",
+    "index": 837,
+    "phrase": "mental agility",
+    "vietnamese": "sự nhạy bén, linh hoạt của trí tuệ",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-838",
+    "index": 838,
+    "phrase": "mental health awareness",
+    "vietnamese": "nhận thức về sức khỏe tâm thần",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-839",
+    "index": 839,
+    "phrase": "seek therapy",
+    "vietnamese": "tìm kiếm sự trị liệu tâm lý",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-840",
+    "index": 840,
+    "phrase": "self-esteem",
+    "vietnamese": "lòng tự trọng, sự tự tôn",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-841",
+    "index": 841,
+    "phrase": "low self-esteem",
+    "vietnamese": "lòng tự trọng thấp / mặc cảm tự ti",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-842",
+    "index": 842,
+    "phrase": "boost self-esteem",
+    "vietnamese": "nâng cao lòng tự tôn, tự tin",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-843",
+    "index": 843,
+    "phrase": "inferiority complex",
+    "vietnamese": "mặc cảm tự ti / phức cảm tự ti",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-844",
+    "index": 844,
+    "phrase": "superiority complex",
+    "vietnamese": "phức cảm tự tôn / ảo tưởng thượng đẳng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-845",
+    "index": 845,
+    "phrase": "defense mechanism",
+    "vietnamese": "cơ chế tự vệ tâm lý",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-846",
+    "index": 846,
+    "phrase": "confirmation bias",
+    "vietnamese": "thiên kiến xác nhận",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-847",
+    "index": 847,
+    "phrase": "gut feeling",
+    "vietnamese": "linh tính, trực giác mách bảo",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-848",
+    "index": 848,
+    "phrase": "intuitive grasp",
+    "vietnamese": "sự thấu hiểu bằng trực giác",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-849",
+    "index": 849,
+    "phrase": "sharpen the mind",
+    "vietnamese": "rèn luyện tư duy sắc bén",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-850",
+    "index": 850,
+    "phrase": "clear one's mind",
+    "vietnamese": "giải tỏa đầu óc, tịnh tâm",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-851",
+    "index": 851,
+    "phrase": "haunt someone's mind",
+    "vietnamese": "ám ảnh tâm trí ai",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-852",
+    "index": 852,
+    "phrase": "occupy someone's mind",
+    "vietnamese": "chiếm trọn tâm trí ai",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-853",
+    "index": 853,
+    "phrase": "wander off",
+    "vietnamese": "tâm trí lang thang, mất tập trung",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-854",
+    "index": 854,
+    "phrase": "short-term memory",
+    "vietnamese": "trí nhớ ngắn hạn",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-855",
+    "index": 855,
+    "phrase": "photographic memory",
+    "vietnamese": "trí nhớ chụp hình, nhớ siêu phàm như ảnh chụp",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-856",
+    "index": 856,
+    "phrase": "social cohesion",
+    "vietnamese": "sự gắn kết xã hội",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-857",
+    "index": 857,
+    "phrase": "social mobility",
+    "vietnamese": "sự dịch chuyển xã hội (về tầng lớp/thu nhập)",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-858",
+    "index": 858,
+    "phrase": "social stratification",
+    "vietnamese": "sự phân tầng xã hội",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-859",
+    "index": 859,
+    "phrase": "social fabric",
+    "vietnamese": "kết cấu xã hội, nền tảng gắn kết xã hội",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-860",
+    "index": 860,
+    "phrase": "social stigma",
+    "vietnamese": "định kiến xã hội, kỳ thị xã hội",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-861",
+    "index": 861,
+    "phrase": "marginalize communities",
+    "vietnamese": "gạt ra ngoài lề xã hội các cộng đồng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-862",
+    "index": 862,
+    "phrase": "vulnerable groups",
+    "vietnamese": "các nhóm dân cư dễ bị tổn thương",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-863",
+    "index": 863,
+    "phrase": "ethnic minority",
+    "vietnamese": "dân tộc thiểu số",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-864",
+    "index": 864,
+    "phrase": "cultural heritage",
+    "vietnamese": "di sản văn hóa",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-865",
+    "index": 865,
+    "phrase": "cultural assimilation",
+    "vietnamese": "sự đồng hóa văn hóa",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-866",
+    "index": 866,
+    "phrase": "cultural diversity",
+    "vietnamese": "sự đa dạng văn hóa",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-867",
+    "index": 867,
+    "phrase": "generation gap",
+    "vietnamese": "khoảng cách thế hệ",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-868",
+    "index": 868,
+    "phrase": "civic engagement",
+    "vietnamese": "sự tham gia của công dân vào đời sống xã hội",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-869",
+    "index": 869,
+    "phrase": "public outcry",
+    "vietnamese": "sự phản đối kịch liệt từ công chúng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-870",
+    "index": 870,
+    "phrase": "civil unrest",
+    "vietnamese": "bất ổn dân sự, bạo động xã hội",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-871",
+    "index": 871,
+    "phrase": "mass migration",
+    "vietnamese": "làn sóng di cư ồ ạt",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-872",
+    "index": 872,
+    "phrase": "refugee crisis",
+    "vietnamese": "cuộc khủng hoảng người tị nạn",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-873",
+    "index": 873,
+    "phrase": "demographic shift",
+    "vietnamese": "sự dịch chuyển nhân khẩu học",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-874",
+    "index": 874,
+    "phrase": "aging population",
+    "vietnamese": "dân số già hóa",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-875",
+    "index": 875,
+    "phrase": "birth rate",
+    "vietnamese": "tỷ lệ sinh",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-876",
+    "index": 876,
+    "phrase": "life expectancy",
+    "vietnamese": "tuổi thọ trung bình",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-877",
+    "index": 877,
+    "phrase": "poverty line",
+    "vietnamese": "chuẩn nghèo, ranh giới nghèo khó",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-878",
+    "index": 878,
+    "phrase": "fall below the poverty line",
+    "vietnamese": "rơi xuống dưới chuẩn nghèo",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-879",
+    "index": 879,
+    "phrase": "eradicate poverty",
+    "vietnamese": "xóa bỏ hoàn toàn đói nghèo",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-880",
+    "index": 880,
+    "phrase": "alleviate poverty",
+    "vietnamese": "xóa đói giảm nghèo, xoa dịu cảnh nghèo",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-881",
+    "index": 881,
+    "phrase": "wealth gap",
+    "vietnamese": "khoảng cách giàu nghèo",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-882",
+    "index": 882,
+    "phrase": "income inequality",
+    "vietnamese": "bất bình đẳng về thu nhập",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-883",
+    "index": 883,
+    "phrase": "living standards",
+    "vietnamese": "mức sống, tiêu chuẩn đời sống",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-884",
+    "index": 884,
+    "phrase": "cost of living",
+    "vietnamese": "chi phí sinh hoạt",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-885",
+    "index": 885,
+    "phrase": "affordable housing",
+    "vietnamese": "nhà ở giá cả phải chăng, vừa túi tiền",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-886",
+    "index": 886,
+    "phrase": "urban sprawl",
+    "vietnamese": "sự đô thị hóa mất kiểm soát / bành trướng đô thị",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-887",
+    "index": 887,
+    "phrase": "brain drain",
+    "vietnamese": "nạn chảy máu chất xám",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-888",
+    "index": 888,
+    "phrase": "human trafficking",
+    "vietnamese": "nạn buôn bán người",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-889",
+    "index": 889,
+    "phrase": "juvenile delinquency",
+    "vietnamese": "tội phạm vị thành niên",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-890",
+    "index": 890,
+    "phrase": "crime rate",
+    "vietnamese": "tỷ lệ tội phạm",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-891",
+    "index": 891,
+    "phrase": "deter crime",
+    "vietnamese": "răn đe, ngăn ngừa tội phạm",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-892",
+    "index": 892,
+    "phrase": "petty crime",
+    "vietnamese": "tội phạm vặt",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-893",
+    "index": 893,
+    "phrase": "violent crime",
+    "vietnamese": "tội phạm bạo lực",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-894",
+    "index": 894,
+    "phrase": "organized crime",
+    "vietnamese": "tội phạm có tổ chức",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-895",
+    "index": 895,
+    "phrase": "capital punishment",
+    "vietnamese": "án phạt tử hình",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-896",
+    "index": 896,
+    "phrase": "community service",
+    "vietnamese": "lao động công ích",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-897",
+    "index": 897,
+    "phrase": "law enforcement",
+    "vietnamese": "lực lượng thực thi pháp luật",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-898",
+    "index": 898,
+    "phrase": "gender equality",
+    "vietnamese": "bình đẳng giới",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-899",
+    "index": 899,
+    "phrase": "gender bias",
+    "vietnamese": "định kiến giới",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-900",
+    "index": 900,
+    "phrase": "glass ceiling",
+    "vietnamese": "rào cản vô hình kìm hãm thăng tiến",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-901",
+    "index": 901,
+    "phrase": "domestic violence",
+    "vietnamese": "bạo lực gia đình",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-902",
+    "index": 902,
+    "phrase": "peer pressure",
+    "vietnamese": "áp lực từ bạn bè đồng trang lứa",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-903",
+    "index": 903,
+    "phrase": "substance abuse",
+    "vietnamese": "lạm dụng chất kích thích / ma túy",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-904",
+    "index": 904,
+    "phrase": "rehabilitation program",
+    "vietnamese": "chương trình phục hồi nhân phẩm / cai nghiện",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-905",
+    "index": 905,
+    "phrase": "welfare state",
+    "vietnamese": "nhà nước phúc lợi",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-906",
+    "index": 906,
+    "phrase": "climate change",
+    "vietnamese": "biến đổi khí hậu",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-907",
+    "index": 907,
+    "phrase": "global warming",
+    "vietnamese": "hiện tượng nóng lên toàn cầu",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-908",
+    "index": 908,
+    "phrase": "greenhouse effect",
+    "vietnamese": "hiệu ứng nhà kính",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-909",
+    "index": 909,
+    "phrase": "greenhouse gas emissions",
+    "vietnamese": "khí thải nhà kính",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-910",
+    "index": 910,
+    "phrase": "carbon footprint",
+    "vietnamese": "dấu chân carbon (lượng phát thải carbon)",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-911",
+    "index": 911,
+    "phrase": "carbon neutral",
+    "vietnamese": "trung hòa carbon",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-912",
+    "index": 912,
+    "phrase": "fossil fuels",
+    "vietnamese": "nhiên liệu hóa thạch",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-913",
+    "index": 913,
+    "phrase": "renewable energy",
+    "vietnamese": "năng lượng tái tạo",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-914",
+    "index": 914,
+    "phrase": "alternative energy",
+    "vietnamese": "năng lượng thay thế",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-915",
+    "index": 915,
+    "phrase": "energy consumption",
+    "vietnamese": "mức tiêu thụ năng lượng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-916",
+    "index": 916,
+    "phrase": "solar energy",
+    "vietnamese": "năng lượng mặt trời",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-917",
+    "index": 917,
+    "phrase": "wind power",
+    "vietnamese": "năng lượng gió",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-918",
+    "index": 918,
+    "phrase": "ozone layer",
+    "vietnamese": "tầng ozon",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-919",
+    "index": 919,
+    "phrase": "depletion of the ozone layer",
+    "vietnamese": "sự suy giảm, thủng tầng ozon",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-920",
+    "index": 920,
+    "phrase": "air pollution",
+    "vietnamese": "ô nhiễm không khí",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-921",
+    "index": 921,
+    "phrase": "water contamination",
+    "vietnamese": "sự ô nhiễm nguồn nước",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-922",
+    "index": 922,
+    "phrase": "soil degradation",
+    "vietnamese": "sự suy thoái độ phì nhiêu của đất",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-923",
+    "index": 923,
+    "phrase": "toxic waste",
+    "vietnamese": "chất thải độc hại",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-924",
+    "index": 924,
+    "phrase": "hazardous substances",
+    "vietnamese": "các chất nguy hại",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-925",
+    "index": 925,
+    "phrase": "waste disposal",
+    "vietnamese": "việc xử lý rác thải",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-926",
+    "index": 926,
+    "phrase": "illegal dumping",
+    "vietnamese": "hành vi xả rác bừa bãi trái phép",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-927",
+    "index": 927,
+    "phrase": "landfill site",
+    "vietnamese": "bãi chôn lấp rác thải",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-928",
+    "index": 928,
+    "phrase": "biodegradable packaging",
+    "vietnamese": "bao bì tự phân hủy sinh học",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-929",
+    "index": 929,
+    "phrase": "single-use plastics",
+    "vietnamese": "đồ nhựa dùng một lần",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-930",
+    "index": 930,
+    "phrase": "recycle waste",
+    "vietnamese": "tái chế rác thải",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-931",
+    "index": 931,
+    "phrase": "circular economy",
+    "vietnamese": "nền kinh tế tuần hoàn",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-932",
+    "index": 932,
+    "phrase": "natural habitat",
+    "vietnamese": "môi trường sống tự nhiên",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-933",
+    "index": 933,
+    "phrase": "habitat destruction",
+    "vietnamese": "sự hủy hoại môi trường sống",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-934",
+    "index": 934,
+    "phrase": "loss of biodiversity",
+    "vietnamese": "sự mất mát đa dạng sinh học",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-935",
+    "index": 935,
+    "phrase": "endangered species",
+    "vietnamese": "các loài có nguy cơ tuyệt chủng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-936",
+    "index": 936,
+    "phrase": "on the verge of extinction",
+    "vietnamese": "trên bờ vực tuyệt chủng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-937",
+    "index": 937,
+    "phrase": "poaching of wildlife",
+    "vietnamese": "săn trộm động vật hoang dã",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-938",
+    "index": 938,
+    "phrase": "wildlife conservation",
+    "vietnamese": "bảo tồn động vật hoang dã",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-939",
+    "index": 939,
+    "phrase": "nature reserve",
+    "vietnamese": "khu bảo tồn thiên nhiên",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-940",
+    "index": 940,
+    "phrase": "deforestation",
+    "vietnamese": "nạn phá rừng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-941",
+    "index": 941,
+    "phrase": "afforestation",
+    "vietnamese": "việc trồng rừng / gây rừng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-942",
+    "index": 942,
+    "phrase": "logging industry",
+    "vietnamese": "ngành khai thác gỗ",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-943",
+    "index": 943,
+    "phrase": "sustainable development",
+    "vietnamese": "phát triển bền vững",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-944",
+    "index": 944,
+    "phrase": "ecological balance",
+    "vietnamese": "sự cân bằng sinh thái",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-945",
+    "index": 945,
+    "phrase": "environmental degradation",
+    "vietnamese": "sự suy thoái môi trường",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-946",
+    "index": 946,
+    "phrase": "natural disaster",
+    "vietnamese": "thảm họa thiên nhiên",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-947",
+    "index": 947,
+    "phrase": "flash flood",
+    "vietnamese": "lũ quét, lũ ống",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-948",
+    "index": 948,
+    "phrase": "prolonged drought",
+    "vietnamese": "hạn hán kéo dài",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-949",
+    "index": 949,
+    "phrase": "forest fire",
+    "vietnamese": "cháy rừng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-950",
+    "index": 950,
+    "phrase": "torrential rain",
+    "vietnamese": "mưa như trút nước, mưa xối xả",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-951",
+    "index": 951,
+    "phrase": "extreme weather events",
+    "vietnamese": "các hiện tượng thời tiết cực đoan",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-952",
+    "index": 952,
+    "phrase": "rising sea levels",
+    "vietnamese": "mực nước biển dâng cao",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-953",
+    "index": 953,
+    "phrase": "melting glaciers",
+    "vietnamese": "các dòng sông băng tan chảy",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-954",
+    "index": 954,
+    "phrase": "oil spill",
+    "vietnamese": "sự cố tràn dầu",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-955",
+    "index": 955,
+    "phrase": "green initiatives",
+    "vietnamese": "các sáng kiến xanh, thân thiện môi trường",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-956",
+    "index": 956,
+    "phrase": "by leaps and bounds",
+    "vietnamese": "tiến bộ nhảy vọt, rất nhanh chóng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-957",
+    "index": 957,
+    "phrase": "few and far between",
+    "vietnamese": "hiếm có, ít khi xảy ra",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-958",
+    "index": 958,
+    "phrase": "once in a blue moon",
+    "vietnamese": "năm thì mười họa, hiếm hoi",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-959",
+    "index": 959,
+    "phrase": "safe and sound",
+    "vietnamese": "bình an vô sự, an toàn lành lặn",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-960",
+    "index": 960,
+    "phrase": "part and parcel",
+    "vietnamese": "phần thiết yếu không thể tách rời",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-961",
+    "index": 961,
+    "phrase": "ups and downs",
+    "vietnamese": "những thăng trầm trong cuộc sống",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-962",
+    "index": 962,
+    "phrase": "ins and outs",
+    "vietnamese": "toàn bộ ngóc ngách, chi tiết phức tạp",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-963",
+    "index": 963,
+    "phrase": "pros and cons",
+    "vietnamese": "những ưu và nhược điểm",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-964",
+    "index": 964,
+    "phrase": "give and take",
+    "vietnamese": "sự nhân nhượng, có qua có lại",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-965",
+    "index": 965,
+    "phrase": "trial and error",
+    "vietnamese": "phương pháp thử và sai",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-966",
+    "index": 966,
+    "phrase": "wear and tear",
+    "vietnamese": "hao mòn tự nhiên do sử dụng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-967",
+    "index": 967,
+    "phrase": "hustle and bustle",
+    "vietnamese": "sự ồn ào náo nhiệt, nhộn nhịp",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-968",
+    "index": 968,
+    "phrase": "peace and quiet",
+    "vietnamese": "sự yên bình, tĩnh lặng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-969",
+    "index": 969,
+    "phrase": "hit the nail on the head",
+    "vietnamese": "nói đúng trọng tâm, gãi đúng chỗ ngứa",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-970",
+    "index": 970,
+    "phrase": "cut corners",
+    "vietnamese": "đi đường tắt, làm ẩu để tiết kiệm",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-971",
+    "index": 971,
+    "phrase": "bite the bullet",
+    "vietnamese": "cắn răng chịu đựng để hoàn thành",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-972",
+    "index": 972,
+    "phrase": "see eye to eye",
+    "vietnamese": "hoàn toàn đồng tình, cùng chung quan điểm",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-973",
+    "index": 973,
+    "phrase": "bend over backwards",
+    "vietnamese": "tận tụy hết sức, dốc lòng giúp đỡ",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-974",
+    "index": 974,
+    "phrase": "burn the midnight oil",
+    "vietnamese": "thức khuya làm việc, cày đêm",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-975",
+    "index": 975,
+    "phrase": "call it a day",
+    "vietnamese": "dừng tay nghỉ, kết thúc ngày làm việc",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-976",
+    "index": 976,
+    "phrase": "play devil's advocate",
+    "vietnamese": "đóng vai kẻ phản biện để kiểm tra lập luận",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-977",
+    "index": 977,
+    "phrase": "take it with a grain of salt",
+    "vietnamese": "tiếp nhận một cách thận trọng, có chọn lọc",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-978",
+    "index": 978,
+    "phrase": "on the same page",
+    "vietnamese": "đồng thuận, hiểu ý nhau",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-979",
+    "index": 979,
+    "phrase": "off the top of one's head",
+    "vietnamese": "nói ngay theo trí nhớ, không kiểm tra lại",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-980",
+    "index": 980,
+    "phrase": "at the drop of a hat",
+    "vietnamese": "ngay tức khắc, không chút do dự",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-981",
+    "index": 981,
+    "phrase": "leave no stone unturned",
+    "vietnamese": "tìm kiếm cặn kẽ mọi ngóc ngách",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-982",
+    "index": 982,
+    "phrase": "through thick and thin",
+    "vietnamese": "cùng nhau vượt qua mọi gian nan thử thách",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-983",
+    "index": 983,
+    "phrase": "back to the drawing board",
+    "vietnamese": "làm lại từ đầu sau khi thất bại",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-984",
+    "index": 984,
+    "phrase": "best of both worlds",
+    "vietnamese": "dung hòa được lợi thế của cả hai bên",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-985",
+    "index": 985,
+    "phrase": "read between the lines",
+    "vietnamese": "đọc vị ẩn ý, hiểu ý tại ngôn ngoại",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-986",
+    "index": 986,
+    "phrase": "out of the blue",
+    "vietnamese": "hoàn toàn bất ngờ, từ trên trời rơi xuống",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-987",
+    "index": 987,
+    "phrase": "in the blink of an eye",
+    "vietnamese": "trong chớp mắt, thoắt cái",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-988",
+    "index": 988,
+    "phrase": "ring a bell",
+    "vietnamese": "nghe quen quen, gợi nhớ lại",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-989",
+    "index": 989,
+    "phrase": "rule of thumb",
+    "vietnamese": "nguyên tắc ngón tay cái, kinh nghiệm thực tế",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-990",
+    "index": 990,
+    "phrase": "food for thought",
+    "vietnamese": "ý tưởng đáng để suy ngẫm sâu xa",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-991",
+    "index": 991,
+    "phrase": "in the long run",
+    "vietnamese": "về lâu về dài",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-992",
+    "index": 992,
+    "phrase": "in the short term",
+    "vietnamese": "trong ngắn hạn, trước mắt",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-993",
+    "index": 993,
+    "phrase": "for the time being",
+    "vietnamese": "tạm thời vào lúc này",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-994",
+    "index": 994,
+    "phrase": "as a matter of fact",
+    "vietnamese": "trên thực tế, thật ra là",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-995",
+    "index": 995,
+    "phrase": "by all means",
+    "vietnamese": "bằng mọi giá, chắc chắn rồi",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-996",
+    "index": 996,
+    "phrase": "on second thought",
+    "vietnamese": "nghĩ kỹ lại thì",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-997",
+    "index": 997,
+    "phrase": "touch wood",
+    "vietnamese": "trộm vía, mong may mắn tiếp tục",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-998",
+    "index": 998,
+    "phrase": "so far so good",
+    "vietnamese": "mọi chuyện đến giờ vẫn tốt đẹp",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-999",
+    "index": 999,
+    "phrase": "last but not least",
+    "vietnamese": "cuối cùng nhưng không kém phần quan trọng",
+    "category": "IDIOMS"
+  },
+  {
+    "id": "colloc-1000",
+    "index": 1000,
+    "phrase": "without further ado",
+    "vietnamese": "không để mất thêm thời gian, bắt đầu ngay",
+    "category": "IDIOMS"
+  }
+]

@@ -1,0 +1,303 @@
+/* ==========================================================================
+   HUD BASE & ARCHITECTURAL STYLES
+   Binary Monochrome, 1px Hairlines, Iron Man HUD Telemetry
+   ========================================================================== */
+
+@import './variables.css';
+
+/* Universal Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-canvas);
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  cursor: none; /* Replaced by custom crosshair reticle */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ink-primary);
+}
+
+/* Base Canvas Shell */
+#app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-canvas-bg);
+  pointer-events: auto;
+}
+
+#canvas-2d {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* HUD Overlay Layer */
+#hud-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-hud-base);
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-24);
+}
+
+/* Make interactive HUD elements clickable */
+.interactive {
+  pointer-events: auto;
+}
+
+/* Telemetry Typography & Monospace Labeling */
+.telemetry-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.telemetry-value {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: var(--ink-primary);
+}
+
+/* HUD Header Navigation Bar */
+.hud-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 48px;
+  border-bottom: var(--border-width) solid var(--border-hairline);
+  padding-bottom: var(--space-12);
+}
+
+.hud-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.hud-brand-title {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hud-status-badge {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  padding: 2px 6px;
+  border: var(--border-width) solid var(--ink-primary);
+  background: var(--bg-canvas);
+  color: var(--ink-primary);
+}
+
+.hud-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+/* Architectural Button Styling */
+.hud-btn {
+  background: var(--bg-canvas);
+  color: var(--ink-primary);
+  border: var(--border-width) solid var(--ink-primary);
+  padding: var(--space-8) var(--space-16);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  transition: transform var(--duration-fast) var(--ease-snappy), background var(--duration-fast), color var(--duration-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.hud-btn:hover {
+  background: var(--ink-primary);
+  color: var(--ink-inverted);
+}
+
+.hud-btn:active {
+  transform: scale(0.98);
+}
+
+.hud-btn.active {
+  background: var(--ink-primary);
+  color: var(--ink-inverted);
+}
+
+/* Keyboard Shortcut Badge */
+.kbd-badge {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  padding: 1px 4px;
+  border: 1px solid currentColor;
+  opacity: 0.85;
+}
+
+/* Corner HUD Brackets */
+.corner-bracket {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--ink-primary);
+  pointer-events: none;
+}
+
+.corner-tl { top: var(--space-12); left: var(--space-12); border-right: none; border-bottom: none; }
+.corner-tr { top: var(--space-12); right: var(--space-12); border-left: none; border-bottom: none; }
+.corner-bl { bottom: var(--space-12); left: var(--space-12); border-right: none; border-top: none; }
+.corner-br { bottom: var(--space-12); right: var(--space-12); border-left: none; border-top: none; }
+
+/* Workspace Mount Area */
+#workspace-mount {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 120px);
+  z-index: var(--z-card-layer);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-24);
+}
+
+.workspace-active {
+  pointer-events: auto !important;
+}
+
+/* Crosshair Reticle Cursor */
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transform: translate(-50%, -50%);
+  transition: width var(--duration-micro), height var(--duration-micro);
+}
+
+.cursor-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  background-color: var(--ink-primary);
+  transform: translate(-50%, -50%);
+}
+
+.cursor-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--ink-secondary);
+  border-radius: 50%;
+  animation: spinSlow 12s linear infinite;
+}
+
+.cursor-bracket-left, .cursor-bracket-right {
+  position: absolute;
+  top: 3px;
+  width: 4px;
+  height: 18px;
+  border-top: 1px solid var(--ink-primary);
+  border-bottom: 1px solid var(--ink-primary);
+  opacity: 0;
+  transition: opacity var(--duration-fast), transform var(--duration-fast);
+}
+
+.cursor-bracket-left {
+  left: -8px;
+  border-left: 1px solid var(--ink-primary);
+}
+
+.cursor-bracket-right {
+  right: -8px;
+  border-right: 1px solid var(--ink-primary);
+}
+
+.cursor-locked .cursor-bracket-left {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+.cursor-locked .cursor-bracket-right {
+  opacity: 1;
+  transform: translateX(-4px);
+}
+
+.cursor-locked .cursor-ring {
+  border-color: var(--ink-primary);
+  border-style: dashed;
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Reduced Motion Fallback */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

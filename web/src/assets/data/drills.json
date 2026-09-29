@@ -1,0 +1,787 @@
+{
+  "speaking": [
+    {
+      "id": "speaking-1",
+      "index": 1,
+      "title": "The Automation Paradox in Knowledge Work",
+      "prompt": "As artificial intelligence automates cognitive and analytical tasks, assess whether human expertise will be amplified or degraded over the next decade.",
+      "mode": "4-3-2 Fluency Drill",
+      "anchor": "Past baseline (manual analysis) → Present disruption (generative tools) → Future equilibrium (human-in-the-loop critical judgment)",
+      "collocations": "disruptive technology, cognitive bandwidth, human-in-the-loop, single point of failure",
+      "phonetic": "Nuclear stress on contrastive verbs: 'AMPLIFIED versus DEGRADED'; crisp catenation across 'human-in-the-loop'."
+    },
+    {
+      "id": "speaking-2",
+      "index": 2,
+      "title": "Remote Work and Corporate Velocity",
+      "prompt": "Does asynchronous distributed work inherently diminish organizational agility and creative serendipity, or does it maximize deep productivity?",
+      "mode": "2-Minute Impromptu Jamming",
+      "anchor": "Thesis (agility vs. deep focus) → Structural trade-off (communication friction) → Strategic resolution (hybrid cadence)",
+      "collocations": "organizational velocity, deep work, asynchronous communication, trade-off",
+      "phonetic": "Downward terminal intonation on declarative claims; avoid upward question inflections on non-questions."
+    },
+    {
+      "id": "speaking-3",
+      "index": 3,
+      "title": "Algorithmic Echo Chambers and Societal Polarization",
+      "prompt": "Evaluate the extent to which recommender systems and algorithmic curation are fracturing social consensus and civic discourse.",
+      "mode": "4-3-2 Fluency Drill",
+      "anchor": "Root cause (engagement-driven algorithms) → Psychological mechanism (confirmation bias) → Societal fallout & systemic remediation",
+      "collocations": "algorithmic bias, confirmation bias, civic discourse, polarization",
+      "phonetic": "Elision of /t/ in 'fracturing social consensus'; rhythmic pulsing on polysyllabic nominalizations."
+    },
+    {
+      "id": "speaking-4",
+      "index": 4,
+      "title": "The Ethics of Gene Editing (CRISPR)",
+      "prompt": "Should genetic engineering in humans be restricted exclusively to therapeutic cures, or is human enhancement an inevitable technological progression?",
+      "mode": "2-Minute Impromptu Jamming",
+      "anchor": "Dichotomy (therapeutic necessity vs. enhancement hubris) → Slippery slope argument → Regulatory governance framework",
+      "collocations": "genetic modification, ethical boundary, slippery slope, regulatory framework",
+      "phonetic": "Deliberate pause before the pivot word 'However'; clear articulation of initial consonant clusters /str/ in 'strictly restricted'."
+    },
+    {
+      "id": "speaking-5",
+      "index": 5,
+      "title": "The Viability of Universal Basic Income (UBI)",
+      "prompt": "Analyze whether Universal Basic Income provides a necessary safety net against technological unemployment or creates macroeconomic disincentives to labor.",
+      "mode": "4-3-2 Fluency Drill",
+      "anchor": "Economic justification (safety net against displacement) → Counter-argument (fiscal inflation & labor disincentive) → Balanced synthesis",
+      "collocations": "economic safety net, fiscal sustainability, labor participation, inflationary pressure",
+      "phonetic": "Equal stress on compound terms 'Universal Basic Income'; maintain steady breath support across long compound sentences."
+    },
+    {
+      "id": "speaking-6",
+      "index": 6,
+      "title": "Monopoly Power of Big Tech Platforms",
+      "prompt": "Argue whether global tech conglomerates constitute natural utilities that require aggressive antitrust breakup or dynamic drivers of capital reinvestment.",
+      "mode": "2-Minute Impromptu Jamming",
+      "anchor": "Market dominance reality → Anti-competitive harm (stifled innovation) → Regulatory dilemma (utility status vs. market dynamism)",
+      "collocations": "antitrust scrutiny, monopolistic practices, market barrier, capital expenditure",
+      "phonetic": "Contrastive stress: 'regulators seek to DISMANTLE, while executives seek to DEFEND'."
+    },
+    {
+      "id": "speaking-7",
+      "index": 7,
+      "title": "Standardized Testing versus Holistic Evaluation",
+      "prompt": "Critique the role of standardized academic testing in higher education admissions in light of equity, predictive validity, and student potential.",
+      "mode": "4-3-2 Fluency Drill",
+      "anchor": "Original objective (objective benchmark) → Inherent systemic bias (socioeconomic disparity) → Modern alternative (portfolio & diagnostic evaluation)",
+      "collocations": "standardized testing, predictive validity, socioeconomic disparity, holistic assessment",
+      "phonetic": "Catenation in 'standardized-testing-in-higher-education'; suppress vocal filler ('um', 'like') during transitions."
+    },
+    {
+      "id": "speaking-8",
+      "index": 8,
+      "title": "The Commercialization of Space Exploration",
+      "prompt": "Assess whether private commercial aerospace enterprises are accelerating humanity's cosmic expansion or creating an ungoverned domain of corporate exploitation.",
+      "mode": "2-Minute Impromptu Jamming",
+      "anchor": "State-led stagnation → Private agility and capital infusion → Geopolitical and legal vacuums needing treaty frameworks",
+      "collocations": "space exploration, private enterprise, capital infusion, legal vacuum",
+      "phonetic": "Upward pitch reset at the onset of major structural transitions ('First and foremost', 'Crucially')."
+    },
+    {
+      "id": "speaking-9",
+      "index": 9,
+      "title": "Cashless Economies and Financial Surveillance",
+      "prompt": "Discuss the societal trade-offs between the transactional efficiency of digital payments and the systematic erosion of financial privacy.",
+      "mode": "4-3-2 Fluency Drill",
+      "anchor": "Operational convenience → State and corporate surveillance risks → Vulnerability of marginalized demographics without digital literacy",
+      "collocations": "transactional efficiency, financial surveillance, central bank digital currency, digital divide",
+      "phonetic": "Distinct vowel length in 'cashless' vs. 'financial'; sharp glottal stop control."
+    },
+    {
+      "id": "speaking-10",
+      "index": 10,
+      "title": "Urban Density versus Suburban Sprawl",
+      "prompt": "Defend high-density, transit-oriented urbanism against the suburban ideal from environmental, economic, and mental well-being perspectives.",
+      "mode": "2-Minute Impromptu Jamming",
+      "anchor": "Ecological imperative (carbon footprint) → Municipal economics (infrastructure cost) → Human connectivity vs. isolation",
+      "collocations": "transit-oriented development, carbon footprint, suburban sprawl, municipal infrastructure",
+      "phonetic": "Pacing variation: accelerate through supporting examples, decelerate on core takeaway axioms."
+    },
+    {
+      "id": "speaking-11",
+      "index": 11,
+      "title": "Degrowth versus Green Growth Economics",
+      "prompt": "Can continuous GDP growth be decoupled from environmental degradation through clean technology, or must developed nations embrace economic degrowth?",
+      "mode": "4-3-2 Fluency Drill",
+      "anchor": "Ecological limits of growth → The technological decoupling fallacy → The socioeconomic realignment required for steady-state economics",
+      "collocations": "decoupling economic growth, ecological balance, renewable energy transition, circular economy",
+      "phonetic": "Nuclear stress on opposing economic paradigms: 'GREEN GROWTH versus RADICAL DEGROWTH'."
+    },
+    {
+      "id": "speaking-12",
+      "index": 12,
+      "title": "Surveillance Capitalism and Predictive Behavioral Modeling",
+      "prompt": "How does the commercial extraction of behavioral surplus reshape individual human autonomy and democratic decision-making?",
+      "mode": "2-Minute Impromptu Jamming",
+      "anchor": "Data extraction mechanism → Predictive behavioral modification → Subversion of consumer and voter sovereignty",
+      "collocations": "behavioral surplus, predictive analytics, unauthorized access, democratic integrity",
+      "phonetic": "Rhythmic cadence on 3-part rule of three: 'monitored, modeled, and manipulated'."
+    },
+    {
+      "id": "speaking-13",
+      "index": 13,
+      "title": "The Crisis of Reproducibility in Modern Science",
+      "prompt": "Investigate why a substantial fraction of published peer-reviewed studies fail replication and propose concrete institutional remedies.",
+      "mode": "4-3-2 Fluency Drill",
+      "anchor": "Perverse academic incentives ('publish or perish') → Statistical malpractices (p-hacking, publication bias) → Structural reform (open data, pre-registration)",
+      "collocations": "replicate an experiment, statistical significance, p-value threshold, peer-reviewed journal",
+      "phonetic": "Crisp schwa reductions in unstressed syllables: 'reproducibility', 'methodology', 'experiment'."
+    },
+    {
+      "id": "speaking-14",
+      "index": 14,
+      "title": "Censorship versus Content Moderation on Public Squares",
+      "prompt": "Where should the boundary lie between protecting freedom of expression and curbing malicious disinformation on digital platforms?",
+      "mode": "2-Minute Impromptu Jamming",
+      "anchor": "Free speech absolutism vs. harm prevention → The gatekeeping dilemma of private tech platforms → Transparent democratic oversight",
+      "collocations": "freedom of expression, public interest, content moderation, malicious disinformation",
+      "phonetic": "Clear articulation of final consonant stops: /d/ in 'protecting freedom of speech and public trust'."
+    },
+    {
+      "id": "speaking-15",
+      "index": 15,
+      "title": "The Longevity Economy and Demographics",
+      "prompt": "How will unprecedented population aging in developed societies reshape pension solvency, healthcare delivery, and generational wealth distribution?",
+      "mode": "4-3-2 Fluency Drill",
+      "anchor": "Demographic inversion (shrinking workforce) → Fiscal strain on healthcare & pensions → Innovations in automated eldercare and retirement age reforms",
+      "collocations": "demographic dividend, pension solvency, healthcare infrastructure, generational equity",
+      "phonetic": "Maintain energetic pitch variety across statistical explanations to avoid monotone pacing."
+    },
+    {
+      "id": "speaking-16",
+      "index": 16,
+      "title": "Neurotechnology and Cognitive Liberty",
+      "prompt": "As brain-computer interfaces (BCIs) advance from medical restoration to consumer applications, what legal frameworks must be erected to protect neural privacy?",
+      "mode": "2-Minute Impromptu Jamming",
+      "anchor": "Technological horizon (medical to consumer BCIs) → The threat of neural surveillance → Legal codification of cognitive liberty",
+      "collocations": "brain-computer interface, cognitive liberty, neural privacy, cutting-edge technology",
+      "phonetic": "Contrastive emphasis: 'protect not merely PHYSICAL actions, but INNER THOUGHTS'."
+    },
+    {
+      "id": "speaking-17",
+      "index": 17,
+      "title": "The Value of a Humanities Degree in a STEM-Centric Era",
+      "prompt": "In an employment market dominated by technical and engineering skills, defend the intrinsic and pragmatic utility of philosophy, literature, and history.",
+      "mode": "4-3-2 Fluency Drill",
+      "anchor": "Perceived economic obsolescence → Foundational competencies (critical hermeneutics, ethical reasoning, rhetorical synthesis) → The human moat against automation",
+      "collocations": "critical thinking, ethical reasoning, qualitative analysis, holistic education",
+      "phonetic": "Smooth legato delivery across literary terminology; emphatic beats on pragmatic verbs."
+    },
+    {
+      "id": "speaking-18",
+      "index": 18,
+      "title": "Decentralized Finance (DeFi) vs. Traditional Banking",
+      "prompt": "Evaluate whether decentralized permissionless financial protocols will fundamentally disintermediate central banking or remain volatile speculative arenas.",
+      "mode": "2-Minute Impromptu Jamming",
+      "anchor": "Core promise (trustless disintermediation) → Structural flaws (liquidity crises, regulatory arbitrage, hacks) → Eventual hybrid institutional adoption",
+      "collocations": "decentralized finance, systemic risk, smart contract, regulatory arbitrage",
+      "phonetic": "Accented nuclear syllable on 'DIS-inter-MEDI-ate'; avoid rushing through financial acronyms."
+    },
+    {
+      "id": "speaking-19",
+      "index": 19,
+      "title": "Fast Fashion and Environmental Externalities",
+      "prompt": "Examine the psychological consumer drivers behind fast fashion and delineate effective fiscal or regulatory mechanisms to curtail its environmental toll.",
+      "mode": "4-3-2 Fluency Drill",
+      "anchor": "Hyper-accelerated production & disposable culture → Ecological devastation (microplastics, water pollution, landfill waste) → Extended producer responsibility laws",
+      "collocations": "environmental impact, carbon footprint, consumerist culture, regulatory mandate",
+      "phonetic": "Vivid emotional resonance on descriptive nouns; sharp metric-focused delivery on regulatory solutions."
+    },
+    {
+      "id": "speaking-20",
+      "index": 20,
+      "title": "The Nuclear Energy Renaissance",
+      "prompt": "Should advanced small modular nuclear reactors (SMRs) be central to national decarbonization grids despite lingering public anxieties regarding waste and safety?",
+      "mode": "2-Minute Impromptu Jamming",
+      "anchor": "Intermittent renewables limitation → Baseload zero-carbon stability of nuclear → Next-gen safety profiles overcoming historical stigmas",
+      "collocations": "nuclear reactor, baseload power, zero-carbon grid, public perception",
+      "phonetic": "Firm, authoritative chest resonance on engineering facts; empathetic softening when addressing 'public anxiety'."
+    },
+    {
+      "id": "speaking-21",
+      "index": 21,
+      "title": "Algorithmic Warfare and Autonomous Weaponry",
+      "prompt": "Argue for or against an international non-proliferation treaty strictly banning autonomous weapons systems capable of selecting and engaging targets without human authorization.",
+      "mode": "4-3-2 Fluency Drill",
+      "anchor": "Lethal autonomy deployment → Moral vacuum of algorithmic kill decisions → Geopolitical verification hurdles and deterrence imperatives",
+      "collocations": "autonomous system, human-in-the-loop, international treaty, lethal autonomous weapons",
+      "phonetic": "Solemn, measured tempo; strict avoidance of glib tone; crisp enunciation of /s/ clusters in 'systems'."
+    },
+    {
+      "id": "speaking-22",
+      "index": 22,
+      "title": "The Gig Economy: Flexibility or Precarity?",
+      "prompt": "Do on-demand platform labor models liberate workers with schedule autonomy or institutionalize labor exploitation devoid of benefits and collective bargaining?",
+      "mode": "2-Minute Impromptu Jamming",
+      "anchor": "The gig worker's promise of autonomy → The grim reality of algorithmic management and wage precarity → Modernizing portable worker benefits",
+      "collocations": "labor flexibility, economic precarity, collective bargaining, algorithmic management",
+      "phonetic": "Antithetical balancing in cadence: 'offering the ILLUSION of independence, but the REALITY of vulnerability'."
+    },
+    {
+      "id": "speaking-23",
+      "index": 23,
+      "title": "The Psychology of Misinformation Sharing",
+      "prompt": "Why do emotionally provocative false narratives disseminate significantly faster through digital networks than verified factual corrections, and how can cognitive resilience be built?",
+      "mode": "4-3-2 Fluency Drill",
+      "anchor": "Evolutionary wiring (negativity & novelty bias) → Algorithmic engagement amplification → Inoculation theory & lateral reading pedagogy",
+      "collocations": "virality mechanism, cognitive bias, media literacy, peer-reviewed evidence",
+      "phonetic": "Dynamic pitch variation emphasizing contrasting speeds: 'EXPONENTIALLY faster than truth'."
+    },
+    {
+      "id": "speaking-24",
+      "index": 24,
+      "title": "Urban Congestion Pricing Schemes",
+      "prompt": "Evaluate the equity and environmental efficiency of charging dynamic tolls on vehicles entering dense metropolitan centers.",
+      "mode": "2-Minute Impromptu Jamming",
+      "anchor": "Gridlock and particulate pollution baseline → Price elasticity mechanism and behavior modification → Mitigating regressivity via transit reinvestment",
+      "collocations": "congestion pricing, urban mobility, regressive taxation, environmental dividend",
+      "phonetic": "Intonation drop on end-of-clause economic terms: '...reinvested directly into PUBLIC TRANSIT'."
+    },
+    {
+      "id": "speaking-25",
+      "index": 25,
+      "title": "The Future of Monolingualism in a Globalized Era",
+      "prompt": "Does the rapid development of real-time machine translation render foreign language acquisition obsolete, or will linguistic mastery remain an irreplaceable cultural bridge?",
+      "mode": "4-3-2 Fluency Drill",
+      "anchor": "Technological milestone (instantaneous earpiece translation) → Pragmatic utility vs. cultural hermeneutics → Nuance, empathy, and neuroplastic dividends",
+      "collocations": "natural language processing, cultural nuance, cognitive reserve, language acquisition",
+      "phonetic": "Deliberate articulation of phonemes across 'neuroplastic', 'hermeneutic', and 'nuance'."
+    },
+    {
+      "id": "speaking-26",
+      "index": 26,
+      "title": "Consumerism versus Voluntary Simplicity",
+      "prompt": "Analyze the psychological and environmental implications of shifting from hyper-consumerism to voluntary simplicity or minimalism in post-industrial societies.",
+      "mode": "2-Minute Impromptu Jamming",
+      "anchor": "Hedonic treadmill of consumer accumulation → Psychological exhaustion & ecological throughput → Intentional curation of material dependency",
+      "collocations": "hedonic treadmill, conspicuous consumption, voluntary simplicity, ecological footprint",
+      "phonetic": "Contrasting pace: hurried cadence mimicking consumerist frenzy, switching to measured tranquility when describing simplicity."
+    },
+    {
+      "id": "speaking-27",
+      "index": 27,
+      "title": "Intellectual Property in the Generative AI Era",
+      "prompt": "Does training machine learning models on copyrighted creative works constitute legal 'fair use' or widespread digital theft of artistic labor?",
+      "mode": "4-3-2 Fluency Drill",
+      "anchor": "Fair use doctrine (transformative value) → Economic harm to living creators → Establishing statutory licensing regimes for AI datasets",
+      "collocations": "intellectual property, fair use, copyright infringement, generative AI",
+      "phonetic": "Clear vocal punctuation around legal citations and statutory principles."
+    },
+    {
+      "id": "speaking-28",
+      "index": 28,
+      "title": "The Crisis of Trust in Public Health Institutions",
+      "prompt": "Examine the systemic causes of eroding public compliance with medical recommendations during health crises and outline a blueprint for rebuilding credibility.",
+      "mode": "2-Minute Impromptu Jamming",
+      "anchor": "Mixed public health messaging & institutional opacity → Weaponization of uncertainty by partisan actors → Radical transparency and decentralized community liaisons",
+      "collocations": "public health, institutional trust, scientific consensus, empirical evidence",
+      "phonetic": "Warm, authoritative tone; avoid condescension; maintain steady cadence on solutions."
+    },
+    {
+      "id": "speaking-29",
+      "index": 29,
+      "title": "Corporate ESG Metrics: Authentic Reform or Greenwashing?",
+      "prompt": "Determine whether Environmental, Social, and Governance (ESG) ratings genuinely channel capital toward sustainable enterprises or serve as a marketing facade.",
+      "mode": "4-3-2 Fluency Drill",
+      "anchor": "Rise of socially conscious investment → Methodological opacity and greenwashing loopholes → Mandatory standardized regulatory auditing",
+      "collocations": "sustainable enterprise, regulatory scrutiny, corporate accountability, greenwashing",
+      "phonetic": "Rhythmic accent on acronym letters: 'E-S-G'; sharp downward inflection on 'greenwashing'."
+    },
+    {
+      "id": "speaking-30",
+      "index": 30,
+      "title": "The Philosophy of Deep Time and Civilizational Longevity",
+      "prompt": "How can modern democratic societies, inherently governed by short electoral and quarterly financial cycles, cultivate long-term stewardship for future millennia?",
+      "mode": "2-Minute Impromptu Jamming",
+      "anchor": "Short-termist trap (quarterly capitalism & election cycles) → Existential risks (climate, bio-threats, AI) → Constitutional representation for future generations",
+      "collocations": "existential risk, intergenerational equity, civilizational resilience, long-term stewardship",
+      "phonetic": "Resonant, expansive pacing; deliberate rhetorical pauses before visionary conclusions."
+    }
+  ],
+  "writing": [
+    {
+      "id": "writing-1",
+      "index": 1,
+      "title": "The Epistemic Hazards of Synthetic Information",
+      "question": "Examine how the proliferation of hyper-realistic generative synthetic media threatens the epistemic foundations of judicial proceedings and public accountability.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Academic Jurisprudence / Legal Philosophy",
+      "masterSentence": "The ubiquitous proliferation of generative synthetic media fundamentally corrodes the epistemic integrity of modern jurisprudence by rendering authentic audio-visual evidence indistinguishable from fabricated artifacts.",
+      "meal": {
+        "m": "The ubiquitous proliferation of generative synthetic media fundamentally corrodes the epistemic integrity of modern jurisprudence by rendering authentic audio-visual evidence indistinguishable from fabricated artifacts.",
+        "e": "In federal courts, defense counsels have increasingly leveraged the 'liar's dividend'—a defense strategy whereby culpable defendants escape liability by alleging genuine surveillance footage is an AI deepfake.",
+        "a": "Because digital forensic toolkits invariably lag behind diffusion-model capabilities, evidentiary gatekeepers can no longer rely on traditional perceptual heuristics, forcing juries to operate in an epistemic vacuum where verifiable reality is conflated with algorithmic illusion.",
+        "l": "Consequently, unless strict cryptographic provenance standards are institutionalized at the hardware layer, the judicial system risks descending into a state of structural paralysis where no recording commands legal legitimacy."
+      },
+      "stylistic": "Nominalization chains ('proliferation', 'jurisprudence'), passive inversion, correlative contrast ('no longer... but rather')."
+    },
+    {
+      "id": "writing-2",
+      "index": 2,
+      "title": "Algorithmic Pricing and Consumer Surplus",
+      "question": "Analyze the economic ramifications of personalized first-degree dynamic price discrimination deployed by monopolistic e-commerce platforms.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Econometric & Antitrust Analysis",
+      "masterSentence": "Automated first-degree price discrimination enables dominant digital marketplaces to systematically expropriate consumer surplus and convert it into pure producer surplus through granular behavioral surveillance.",
+      "meal": {
+        "m": "Automated first-degree price discrimination enables dominant digital marketplaces to systematically expropriate consumer surplus and convert it into pure producer surplus through granular behavioral surveillance.",
+        "e": "Empirical pricing audits across major airline and hospitality aggregators demonstrate price discrepancies exceeding 35% for identical bookings based solely on user browsing history, device telemetry, and zip-code demographic profiling.",
+        "a": "By processing these high-dimensional data streams through predictive willingness-to-pay algorithms, platforms eradicate the traditional single-price market equilibrium, extracting the maximum financial reservation threshold from each transacting individual.",
+        "l": "This algorithmic rent extraction undermines market efficiency, effectively replacing transparent competition with opaque, asymmetric price exploitation."
+      },
+      "stylistic": "Compound adjectives ('high-dimensional', 'single-price'), precise economic vocabulary, causative linking."
+    },
+    {
+      "id": "writing-3",
+      "index": 3,
+      "title": "The Meritocracy Trap in Modern Higher Education",
+      "question": "Critique the assertion that meritocratic credentialism functions as a neutral vehicle for upward social mobility.",
+      "mode": "Franklin Copywork & Stylistic Deconstruction",
+      "register": "Critical Sociology / Public Policy",
+      "masterSentence": "Far from functioning as an egalitarian engine of upward mobility, contemporary meritocratic credentialism has largely ossified into a dynastic sorting mechanism that legitimizes inherited socioeconomic privilege.",
+      "meal": {
+        "m": "Far from functioning as an egalitarian engine of upward mobility, contemporary meritocratic credentialism has largely ossified into a dynastic sorting mechanism that legitimizes inherited socioeconomic privilege.",
+        "e": "Data from elite university admissions reveals that children from families in the top one percent are disproportionately represented by a factor of seventy-seven compared to peers from the bottom quintile, despite identical academic test percentiles.",
+        "a": "This disparity stems from the systemic privatization of preparatory capital—ranging from bespoke standardized-test tutoring to curated extracurricular portfolios—which wealthy dynasties deploy to convert financial assets into unassailable academic credentials.",
+        "l": "In doing so, meritocracy conceals structural inequality beneath a veneer of individual virtue, leaving the disenfranchised to blame their own perceived inadequacies for systemic exclusion."
+      },
+      "stylistic": "Balanced antithesis, evocative metaphor ('egalitarian engine', 'dynastic sorting mechanism'), periodic cadence."
+    },
+    {
+      "id": "writing-4",
+      "index": 4,
+      "title": "Architectural Determinism in Workplace Productivity",
+      "question": "Evaluate the psychological and cognitive impacts of open-plan office layouts on high-concentration engineering output.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Cognitive Ergonomics & Organizational Design",
+      "masterSentence": "The architectural dogma of the open-plan office degrades cognitive throughput by subjecting knowledge workers to unceasing sensory fragmentation and chronic attention residue.",
+      "meal": {
+        "m": "The architectural dogma of the open-plan office degrades cognitive throughput by subjecting knowledge workers to unceasing sensory fragmentation and chronic attention residue.",
+        "e": "A landmark biometric study by Harvard researchers documented a 70% decrease in face-to-face interpersonal interactions and a corresponding 67% surge in asynchronous digital messaging following an enterprise transition to an open configuration.",
+        "a": "When engineers are exposed to ambient acoustic intrusion, the prefrontal cortex must continuously expend metabolic energy filtering irrelevant linguistic signals, preventing the attainment of sustained flow states essential for deep algorithmic synthesis.",
+        "l": "Ultimately, the spatial configuration designed to foster collaborative serendipity achieves the perverse inverse: an alienated workforce cloistered behind noise-canceling headphones."
+      },
+      "stylistic": "Sensory imagery ('sensory fragmentation', 'acoustic intrusion'), paradox structure, fronted adverbial clauses."
+    },
+    {
+      "id": "writing-5",
+      "index": 5,
+      "title": "The Geopolitics of Critical Mineral Supply Chains",
+      "question": "Discuss the vulnerability of Western industrial decarbonization strategies to geographical choke-points in lithium and rare-earth mineral processing.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Geopolitical Strategy & Global Economics",
+      "masterSentence": "Western clean-energy roadmaps remain profoundly fragile due to an acute geographic centralization of critical mineral refining that grants rival sovereign actors unilateral leverage over global energy transitions.",
+      "meal": {
+        "m": "Western clean-energy roadmaps remain profoundly fragile due to an acute geographic centralization of critical mineral refining that grants rival sovereign actors unilateral leverage over global energy transitions.",
+        "e": "While lithium extraction is distributed across Australia and South America, over 70% of global chemical refining capacity for battery-grade lithium and 90% of rare-earth magnet production resides within Chinese industrial clusters.",
+        "a": "This processing bottleneck implies that any geopolitical escalation or retaliatory export restriction could instantaneously sever the supply line of permanent magnets and battery packs, crippling Western electric vehicle manufacturing overnight.",
+        "l": "True energy independence therefore necessitates not merely erecting domestic solar arrays, but reshoring the ecologically punishing smelting and chemical infrastructure that underpins them."
+      },
+      "stylistic": "Contrastive conjunctions ('while', 'therefore'), high-yield political economy collocations, conditional deduction."
+    },
+    {
+      "id": "writing-6",
+      "index": 6,
+      "title": "Antibiotic Resistance and Intensive Livestock Farming",
+      "question": "Investigate how prophylactic antimicrobial administration in factory farming accelerates global microbial resistance.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Epidemiological Science & Environmental Health",
+      "masterSentence": "The routine prophylactic administration of sub-therapeutic antibiotics in industrial livestock operations creates an ideal evolutionary breeding ground for multi-drug-resistant pathogen strains.",
+      "meal": {
+        "m": "The routine prophylactic administration of sub-therapeutic antibiotics in industrial livestock operations creates an ideal evolutionary breeding ground for multi-drug-resistant pathogen strains.",
+        "e": "Agricultural sector audits indicate that over 70% of medically important antimicrobial agents manufactured worldwide are administered not to treat diagnosed animal pathologies, but to artificially stimulate animal growth and prevent infections in crowded confinement.",
+        "a": "By subjecting trillions of commensal bacteria to chronic, non-lethal selective pressure, this practice rapidly selects for resistance plasmids that horizontal gene transfer subsequently transmits into human zoonotic pathogens.",
+        "l": "Failing to decouple livestock commerce from antimicrobial dependency will inexorably usher in a post-antibiotic medical paradigm where routine clinical procedures carry fatal infection risks."
+      },
+      "stylistic": "Scientific precision, causative verbs ('accelerates', 'selects for', 'transmits'), grave cautionary closure."
+    },
+    {
+      "id": "writing-7",
+      "index": 7,
+      "title": "The Financialization of Urban Housing Markets",
+      "question": "Analyze the consequences of treating residential real estate as a speculative global asset class rather than fundamental social infrastructure.",
+      "mode": "Franklin Copywork & Stylistic Deconstruction",
+      "register": "Urban Political Economy",
+      "masterSentence": "The financialization of municipal residential real estate transforms shelter from an essential civic good into a speculative capital haven, structurally decoupling housing prices from domestic earning power.",
+      "meal": {
+        "m": "The financialization of municipal residential real estate transforms shelter from an essential civic good into a speculative capital haven, structurally decoupling housing prices from domestic earning power.",
+        "e": "In metropolitan centers such as London, Toronto, and Sydney, institutional private-equity trusts expanded residential portfolios by over 400% between 2012 and 2022, while real median wage growth stagnated below 4% over the same duration.",
+        "a": "When institutional investors with access to near-zero-cost international liquidity bid against working-class domestic wage earners, price Discovery reflects cross-border asset management yields rather than local community affordability, permanently pricing generations out of homeownership.",
+        "l": "This dynamic exacerbates generational wealth fractures, hollowing out urban cores and relegating essential labor to distant, under-resourced peripheries."
+      },
+      "stylistic": "Parallelism, syntactic compounding, sharp register contrast ('essential civic good' vs. 'speculative capital haven')."
+    },
+    {
+      "id": "writing-8",
+      "index": 8,
+      "title": "Attention Scarcity in the Notification Economy",
+      "question": "How does the commercial monetization of micro-interactions erode cognitive endurance and intellectual rigor?",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Neuropsychology & Media Theory",
+      "masterSentence": "The digital attention economy deliberately re-engineers human cognitive ecology by exchanging sustained analytical focus for ephemeral bursts of dopamine-driven behavioral feedback.",
+      "meal": {
+        "m": "The digital attention economy deliberately re-engineers human cognitive ecology by exchanging sustained analytical focus for ephemeral bursts of dopamine-driven behavioral feedback.",
+        "e": "Neurocognitive telemetry reveals that the average office professional shifts visual focus or encounters a push-notification interruption every forty-seven seconds, requiring upwards of twenty minutes to reconstruct prior cognitive context.",
+        "a": "This pervasive interruption cadence prevents the brain from recruiting slow-wave executive circuitry required for syntactically dense reading or conceptual synthesis, effectively conditioning the neural architecture to tolerate only fragmented, bite-sized stimuli.",
+        "l": "As a consequence, society suffers a progressive atrophy of deep intellectual endurance, compromising its capacity to deliberate on nuanced existential challenges."
+      },
+      "stylistic": "Precise anatomical/cognitive terminology, vivid causal verbs ('re-engineers', 'conditioning', 'atrophy')."
+    },
+    {
+      "id": "writing-9",
+      "index": 9,
+      "title": "The Social Cost of Carbon in Fiscal Policy",
+      "question": "Defend the mandatory integration of the Social Cost of Carbon (SCC) into public infrastructure capital allocation frameworks.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Environmental Economics & Public Finance",
+      "masterSentence": "Mandating an aggressive Social Cost of Carbon metric within federal procurement decisions is indispensable to correct the pervasive market failure that treats planetary atmospheric capacity as a cost-free waste repository.",
+      "meal": {
+        "m": "Mandating an aggressive Social Cost of Carbon metric within federal procurement decisions is indispensable to correct the pervasive market failure that treats planetary atmospheric capacity as a cost-free waste repository.",
+        "e": "Recent integrated assessment climate modeling published by the EPA revised the estimated marginal damage of emitting a metric ton of carbon dioxide upward from $51 to $190, reflecting updated projections of agricultural disruption and climate-induced mortality.",
+        "a": "When public authorities calculate project viability using an artificially deflated or non-existent carbon cost, carbon-intensive infrastructure appears spuriously economical, effectively subsidizing long-term climate damage with short-term public capital.",
+        "l": "Internalizing this catastrophic externality ensures that public expenditures actively advance the ecological transition rather than locking in decades of fossil dependency."
+      },
+      "stylistic": "Regulatory jargon, nominal compounding, clear transition logic."
+    },
+    {
+      "id": "writing-10",
+      "index": 10,
+      "title": "Algorithmic Injustice in Predictive Policing",
+      "question": "Examine how predictive policing algorithms entrench historical socioeconomic and racial disparities under the guise of mathematical objectivity.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Data Ethics & Critical Criminology",
+      "masterSentence": "Predictive policing algorithms do not illuminate objective crime hazards; rather, they construct self-fulfilling feedback loops that mathematicalize and amplify historic patterns of selective law enforcement.",
+      "meal": {
+        "m": "Predictive policing algorithms do not illuminate objective crime hazards; rather, they construct self-fulfilling feedback loops that mathematicalize and amplify historic patterns of selective law enforcement.",
+        "e": "In cities utilizing predictive patrol dispatchers, historical arrest data heavily weighted toward low-level drug infractions prompted software systems to assign police patrols back to historically over-policed neighborhoods at triple the rate of affluent districts with comparable drug usage rates.",
+        "a": "Because algorithms accept historical arrest records as an unproblematic proxy for true criminality, heightened police concentration inevitably yields more recorded offenses in those designated zones, which is then fed back into the model to validate the initial bias.",
+        "l": "Under the deceptive armor of mathematical neutrality, automated systems effectively disguise discriminatory enforcement as incontrovertible statistical necessity."
+      },
+      "stylistic": "Antithetical balancing ('not... rather...'), precise terminology ('self-fulfilling feedback loops', 'proxy'), striking closing metaphor."
+    },
+    {
+      "id": "writing-11",
+      "index": 11,
+      "title": "The Illusion of Corporate Neutrality in Civic Crises",
+      "question": "Analyze whether multinational corporations can maintain apolitical neutrality during periods of intense geopolitical conflict or domestic civil rights unrest.",
+      "mode": "Franklin Copywork & Stylistic Deconstruction",
+      "register": "Corporate Governance & Business Ethics",
+      "masterSentence": "In an era of hyper-connected supply chains and stakeholder capitalism, corporate silence during severe humanitarian or civil crises no longer signals impartiality, but rather represents a tacit endorsement of the prevailing status quo.",
+      "meal": {
+        "m": "In an era of hyper-connected supply chains and stakeholder capitalism, corporate silence during severe humanitarian or civil crises no longer signals impartiality, but rather represents a tacit endorsement of the prevailing status quo.",
+        "e": "Following the onset of international sanctions during geopolitical invasions, consumer boycott campaigns forced major consumer brands that initially attempted to remain neutral to divest hundreds of millions of dollars in regional assets within weeks.",
+        "a": "Because commercial entities operate as powerful civic actors with immense lobbying power and cultural sway, a corporate refusal to take an ethical stance constitutes an active economic calculation to protect market share at the expense of moral accountability.",
+        "l": "Neutrality in the face of egregious human rights infringements is an untenable myth; commercial survival increasingly demands deliberate moral coherence."
+      },
+      "stylistic": "Parallel contrasts, assertive topic sentence, crisp concluding axiom."
+    },
+    {
+      "id": "writing-12",
+      "index": 12,
+      "title": "Neuroplasticity and Adult Second Language Acquisition",
+      "question": "Challenge the biological critical period hypothesis by highlighting adult cognitive advantages in secondary linguistic acquisition.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Applied Linguistics & Cognitive Psychology",
+      "masterSentence": "While early childhood confers superior phonological flexibility, mature adult learners possess sophisticated metacognitive and syntactic processing capabilities that compensate for diminished instinctual neuroplasticity.",
+      "meal": {
+        "m": "While early childhood confers superior phonological flexibility, mature adult learners possess sophisticated metacognitive and syntactic processing capabilities that compensate for diminished instinctual neuroplasticity.",
+        "e": "Comparative neurolinguistic trials demonstrate that adult second-language learners acquire complex morphological rules and abstract grammatical frameworks nearly three times faster than adolescent cohorts when exposed to structured analytical instruction.",
+        "a": "Adults leverage an expansive existing native conceptual schema, deploying conscious pattern recognition and mnemonic architecture to systematically deconstruct target-language syntax rather than relying exclusively on brute associative exposure.",
+        "l": "Consequently, second language mastery in adulthood is not biologically precluded, but hinges upon pedagogical frameworks that honor analytical cognitive maturity rather than mimicking infantile immersion."
+      },
+      "stylistic": "Syntactic concessions ('While... nevertheless...'), domain-specific vocabulary, strong causal coherence."
+    },
+    {
+      "id": "writing-13",
+      "index": 13,
+      "title": "Technological Sovereign Autarky vs. Interdependent Globalization",
+      "question": "Critique the strategic viability of advanced economies pursuing total technological independence in semiconductor fabrication.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Industrial Policy & Geopolitics",
+      "masterSentence": "The pursuit of total semiconductor self-sufficiency represents an economically unviable illusion that ignores the hyper-specialized, multi-national division of labor inherent to modern microelectronics fabrication.",
+      "meal": {
+        "m": "The pursuit of total semiconductor self-sufficiency represents an economically unviable illusion that ignores the hyper-specialized, multi-national division of labor inherent to modern microelectronics fabrication.",
+        "e": "A single advanced extreme ultraviolet (EUV) lithography scanner requires over 100,000 discrete components sourced from roughly 5,000 distinct suppliers across three continents, with core optics and laser systems exclusively monopolized by German and American specialists.",
+        "a": "Attempting to duplicate this entire vertical ecosystem within domestic sovereign borders incurs staggering capital redundancies, crippling unit economics and depriving domestic designers of the global talent and innovation synergies that fuel chip performance.",
+        "l": "Strategic resilience cannot be achieved through isolationist autarky; it demands cultivating deep, redundant alliances among interdependent technological democracies."
+      },
+      "stylistic": "Numerical evidence integration, strong nominalization, contrastive strategic resolution."
+    },
+    {
+      "id": "writing-14",
+      "index": 14,
+      "title": "The Commodification of Wilderness in Ecotourism",
+      "question": "Examine whether commercial ecotourism genuinely preserves fragile ecosystems or commodifies and degrades pristine natural habitats.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Environmental Sociology & Conservation Biology",
+      "masterSentence": "Ecotourism frequently degenerates into an ecological paradox, wherein the commercial monetizing of pristine biodiversity inflicts irreversible environmental degradation upon the very habitats it purports to protect.",
+      "meal": {
+        "m": "Ecotourism frequently degenerates into an ecological paradox, wherein the commercial monetizing of pristine biodiversity inflicts irreversible environmental degradation upon the very habitats it purports to protect.",
+        "e": "Field studies across East African wildlife sanctuaries revealed that high-density luxury safari convoys disrupted apex predator hunting success rates by 38% and caused catastrophic soil compaction across critical migration corridors.",
+        "a": "To satisfy the affluent consumer's appetite for frictionless wilderness encounters, operators construct energy-intensive accommodations and access infrastructure, converting fragile biosphere refuges into curated, hyper-trafficked entertainment preserves.",
+        "l": "True ecological stewardship requires demarcating inviolable wild zones entirely off-limits to market consumption, rather than sanitizing mass tourism with the greenwashed banner of conservation."
+      },
+      "stylistic": "Evocative adjectives ('frictionless', 'hyper-trafficked'), moral urgency, cohesive transition."
+    },
+    {
+      "id": "writing-15",
+      "index": 15,
+      "title": "The Pedagogy of Generative AI in Academic Assessment",
+      "question": "How must academic institutions redesign assessment frameworks in response to large language model capabilities?",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Pedagogical Philosophy & Educational Policy",
+      "masterSentence": "The emergence of large language models obliterates the diagnostic validity of the traditional take-home essay, necessitating a paradigm shift toward oral defense, real-time synthesis, and process-based evaluation.",
+      "meal": {
+        "m": "The emergence of large language models obliterates the diagnostic validity of the traditional take-home essay, necessitating a paradigm shift toward oral defense, real-time synthesis, and process-based evaluation.",
+        "e": "In randomized blind trials, modern AI generation systems consistently scored in the top quintile of undergraduate humanities take-home examinations while generating zero detectable syntactic or grammatical anomalies.",
+        "a": "Because text generation has been commodified into a instantaneous push-button utility, evaluating student capability solely through the finalized text product measures tool fluency rather than internal cognitive digestion.",
+        "l": "To cultivate genuine intellect, academia must abandon passive product-based grading and revive the Socratic dialogical tradition where scholars must defend and stress-test their ideas under live scrutiny."
+      },
+      "stylistic": "Socratic allusion, assertive verb choices ('obliterates', 'commodified'), forward-looking imperative."
+    },
+    {
+      "id": "writing-16",
+      "index": 16,
+      "title": "The Myth of Clean Coal and Carbon Capture",
+      "question": "Evaluate the viability of Carbon Capture and Storage (CCS) applied to thermal coal generation versus direct renewable deployment.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Energy Economics & Public Policy",
+      "masterSentence": "Retrofitting thermal coal power plants with Carbon Capture and Storage (CCS) represents an expensive technological distraction that artificially prolongs the lifespan of obsolete, high-emission assets.",
+      "meal": {
+        "m": "Retrofitting thermal coal power plants with Carbon Capture and Storage (CCS) represents an expensive technological distraction that artificially prolongs the lifespan of obsolete, high-emission assets.",
+        "e": "Operational audits of global commercial power-sector CCS installations indicate that capturing 90% of flue-gas carbon consumes nearly 30% of the plant's total energy output, inflating the levelized cost of electricity far beyond utility-scale solar and battery storage.",
+        "a": "This parasitic energy penalty, combined with monumental capital expenditure for pipeline transportation and geological sequestration, renders captured coal power economically non-viable when compared against the plummeting cost curve of zero-emission renewables.",
+        "l": "Channeling public subsidies into post-combustion capture squanders precious fiscal capital that should be deployed toward modernizing grid flexibility and transmission lines."
+      },
+      "stylistic": "Domain jargon ('parasitic energy penalty', 'levelized cost'), crisp comparative syntax."
+    },
+    {
+      "id": "writing-17",
+      "index": 17,
+      "title": "Restorative Justice vs. Retributive Incarceration",
+      "question": "Defend restorative justice frameworks against punitive carceral regimes in reducing long-term recidivism.",
+      "mode": "Franklin Copywork & Stylistic Deconstruction",
+      "register": "Criminology & Social Ethics",
+      "masterSentence": "Restorative justice models dramatically outperform retributive carceral systems in curtailing recidivism because they address the interpersonal rupture and psychosocial roots of crime rather than imposing passive dehumanization.",
+      "meal": {
+        "m": "Restorative justice models dramatically outperform retributive carceral systems in curtailing recidivism because they address the interpersonal rupture and psychosocial roots of crime rather than imposing passive dehumanization.",
+        "e": "Meta-analyses across European justice systems reveal that victim-offender mediation programs achieve a 34% reduction in repeat violent offenses compared to traditional correctional sentences of equal severity.",
+        "a": "While penal incarceration isolates individuals within criminogenic environments that sever social bonds and employability, restorative conferences force offenders to confront the human impact of their actions and construct concrete restitution compacts.",
+        "l": "By transforming punishment from state-inflicted vengeance into active civic accountability, restorative frameworks heal victim trauma while successfully reintegrating the offender into the civil body."
+      },
+      "stylistic": "Balanced clauses, vivid vocabulary ('criminogenic environments', 'state-inflicted vengeance'), moral clarity."
+    },
+    {
+      "id": "writing-18",
+      "index": 18,
+      "title": "The Epistemology of Big Data and Theory-Free Science",
+      "question": "Critique the claim that massive datasets and pattern-matching algorithms render traditional theoretical hypothesis testing obsolete.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Philosophy of Science & Computational Analytics",
+      "masterSentence": "The provocative assertion that big data pattern discovery renders the scientific method obsolete conflates mere statistical correlation with true causal comprehension.",
+      "meal": {
+        "m": "The provocative assertion that big data pattern discovery renders the scientific method obsolete conflates mere statistical correlation with true causal comprehension.",
+        "e": "In computational genomics, blind neural network models trained on millions of nucleotide sequences frequently identify spurious correlations between non-coding DNA markers and disease phenotypes that vanish entirely when subjected to laboratory cellular knockout experiments.",
+        "a": "Without an underlying causal hypothesis and a rigorous theoretical framework to guide data interpretation, machine learning systems inevitably optimize for ambient noise and sampling biases inherent in observational datasets.",
+        "l": "Far from supplanting theory, massive data repositories make foundational scientific hypothesis formulation more indispensable than ever to prevent researchers from wandering through mirages of coincidental correlation."
+      },
+      "stylistic": "Philosophical distinction ('correlation vs causation'), precise scientific imagery, memorable closing metaphor ('mirages of coincidental correlation')."
+    },
+    {
+      "id": "writing-19",
+      "index": 19,
+      "title": "Urban Heat Islands and Spatial Environmental Injustice",
+      "question": "Examine how historical municipal zoning practices and redlining exacerbate modern climate vulnerabilities across marginalized neighborhoods.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Urban Geography & Environmental Justice",
+      "masterSentence": "Modern urban heat island vulnerabilities are not neutral geographic accidents; they reflect the enduring legacy of racist historical redlining policies that starved marginalized districts of vegetative canopy and permeable infrastructure.",
+      "meal": {
+        "m": "Modern urban heat island vulnerabilities are not neutral geographic accidents; they reflect the enduring legacy of racist historical redlining policies that starved marginalized districts of vegetative canopy and permeable infrastructure.",
+        "e": "Satellite thermal imaging across 108 American metropolitan centers demonstrates that historically redlined neighborhoods are consistently up to 13°F hotter during peak heatwaves than their historically favored, tree-lined counterparts.",
+        "a": "Decades of disinvestment resulted in high concentrations of asphalt paving, elevated industrial zoning, and an almost total absence of municipal tree planting, creating dense thermal sinks that trap solar radiation and degrade respiratory health.",
+        "l": "Urban climate resilience plans must therefore prioritize targeted spatial re-greening as a moral act of restorative civil rights rather than a decorative civic amenity."
+      },
+      "stylistic": "Moral and historical framing, high-density scientific evidence, declarative conviction."
+    },
+    {
+      "id": "writing-20",
+      "index": 20,
+      "title": "The Privatization of Space Governance",
+      "question": "Discuss the hazards of allowing commercial spaceflight entities to dictate operational norms in low Earth orbit and lunar resource rights.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "International Space Law & Astropolitics",
+      "masterSentence": "Permitting private commercial aerospace conglomerates to establish de facto governance in orbital and lunar domains threatens to transform the celestial commons into a lawless frontier of corporate enclosure.",
+      "meal": {
+        "m": "Permitting private commercial aerospace conglomerates to establish de facto governance in orbital and lunar domains threatens to transform the celestial commons into a lawless frontier of corporate enclosure.",
+        "e": "Mega-constellations launched by private entities currently account for over 60% of all active satellites in low Earth orbit, regularly forcing international astronomical observatories to discard deep-space imagery corrupted by orbital light pollution and radio interference.",
+        "a": "Because international space treaties such as the 1967 Outer Space Treaty were drafted exclusively for sovereign states, commercial actors exploit regulatory loopholes to claim proprietary orbital slots and stake speculative claims on water ice deposits without democratic oversight.",
+        "l": "Without a robust, multilateral regulatory regime with enforceable enforcement mechanisms, humankind risks repeating the tragic historical cycles of colonial resource exploitation beyond Earth's atmosphere."
+      },
+      "stylistic": "Historical parallels ('celestial commons', 'colonial resource exploitation'), legal vocabulary, cohesive sequencing."
+    },
+    {
+      "id": "writing-21",
+      "index": 21,
+      "title": "The Psychological Toll of Algorithmic Management in Logistics",
+      "question": "Analyze the human and cognitive consequences of real-time algorithmic tracking on warehouse and fulfillment workers.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Labor Economics & Occupational Health",
+      "masterSentence": "The deployment of algorithmic surveillance systems in fulfillment centers reduces manual laborers to physiological components of an automated machine, inflicting acute musculoskeletal degradation and psychological alienation.",
+      "meal": {
+        "m": "The deployment of algorithmic surveillance systems in fulfillment centers reduces manual laborers to physiological components of an automated machine, inflicting acute musculoskeletal degradation and psychological alienation.",
+        "e": "Workplace safety investigations in automated distribution hubs reveal that injury rates for workers monitored by second-by-second 'time-off-task' scanners are more than double the national industry average for traditional logistics facilities.",
+        "a": "By stripping frontline workers of all pacing discretion and treating natural biological necessities as algorithmic infractions, these software control systems generate chronic sympathetic nervous system activation and severe cognitive burnout.",
+        "l": "Elevating enterprise fulfillment velocity at the expense of baseline human physiology represents a modern manifestation of digital sweatshop exploitation that demands strict statutory limits on automated pacing."
+      },
+      "stylistic": "Biomedical vocabulary ('musculoskeletal degradation', 'sympathetic nervous system activation'), hard-hitting sociological critique."
+    },
+    {
+      "id": "writing-22",
+      "index": 22,
+      "title": "Central Bank Digital Currencies (CBDCs) and Authoritarian Control",
+      "question": "Evaluate the existential civil liberty threats posed by programmable fiat currencies managed by centralized banking authorities.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Political Philosophy & Monetary Economics",
+      "masterSentence": "While central bank digital currencies promise unprecedented monetary policy precision, their programmable architecture creates an insidious instrument for totalitarian surveillance and behavioral control.",
+      "meal": {
+        "m": "While central bank digital currencies promise unprecedented monetary policy precision, their programmable architecture creates an insidious instrument for totalitarian surveillance and behavioral control.",
+        "e": "Experimental pilot implementations of state-backed digital currencies have integrated automated expiration dates and geographic spending restrictions, effectively preventing citizens from using funds outside authorized municipality boundaries.",
+        "a": "Unlike physical cash, which preserves transactional anonymity and individual sovereignty, a centralized ledger grants state authorities the technical capability to instantaneously freeze assets or penalize dissidents with the click of an administrative key.",
+        "l": "Surrendering financial anonymity in the name of modernization risks constructing an unescapable digital panopticon wherein financial survival is contingent upon absolute political conformity."
+      },
+      "stylistic": "Orwellian allusion ('digital panopticon'), stark contrasting clauses, powerful concluding cadence."
+    },
+    {
+      "id": "writing-23",
+      "index": 23,
+      "title": "The Crisis of Attention in Modern Literature and Long-Form Prose",
+      "question": "How does the ubiquity of hyper-condensed digital media alter the reading and writing of contemporary long-form fiction and essays?",
+      "mode": "Franklin Copywork & Stylistic Deconstruction",
+      "register": "Literary Criticism & Cultural Hermeneutics",
+      "masterSentence": "The digital epoch's relentless acceleration of communicative velocity has hollowed out the cultural ecosystem required for sustained contemplation, endangering the survival of complex, multi-layered prose.",
+      "meal": {
+        "m": "The digital epoch's relentless acceleration of communicative velocity has hollowed out the cultural ecosystem required for sustained contemplation, endangering the survival of complex, multi-layered prose.",
+        "e": "Publishing industry analytics reveal that average paragraph lengths in popular fiction have contracted by more than 50% over the past four decades, accompanied by an unprecedented collapse in the sales of experimental, syntactically challenging literary works.",
+        "a": "As digital interfaces train the human eye to skim for quick informational utility rather than savor polyphonic resonance, authors increasingly face commercial pressures to excise deliberate subordinate clauses, contemplative digressions, and psychological ambiguity in favor of rapid narrative pacing.",
+        "l": "In sacrificing the meditative depth of the periodic sentence, modern literature risks forfeiting its most distinctive gift: the capacity to articulate the nuanced, contradictory depths of the human interior."
+      },
+      "stylistic": "Lyrical cadences, literary allusions, syntactically complex periodic structure."
+    },
+    {
+      "id": "writing-24",
+      "index": 24,
+      "title": "The Fallacy of Corporate Social Responsibility (CSR)",
+      "question": "Critique the paradigm of voluntary corporate social responsibility as a substitute for mandatory government environmental and labor regulation.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Corporate Jurisprudence & Political Economy",
+      "masterSentence": "Voluntary Corporate Social Responsibility (CSR) campaigns function primarily as cosmetic public relations shields designed to preempt rigorous statutory regulation while leaving extractive core business models entirely untouched.",
+      "meal": {
+        "m": "Voluntary Corporate Social Responsibility (CSR) campaigns function primarily as cosmetic public relations shields designed to preempt rigorous statutory regulation while leaving extractive core business models entirely untouched.",
+        "e": "Corporate disclosures from the world's top fossil fuel enterprises indicate that while advertising budgets showcasing green investments increased by over 300% in five years, actual capital allocation to zero-carbon projects remained below 3% of aggregate expenditures.",
+        "a": "Because publicly traded corporations are legally bound to maximize shareholder returns, executives cannot voluntarily prioritize ecological preservation or living wages whenever doing so threatens short-term profitability, rendering voluntary self-policing fundamentally contradictory.",
+        "l": "Genuine socioeconomic accountability cannot be outsourced to corporate benevolence; it requires the coercive, democratic power of the state to impose binding legal mandates with punitive consequences."
+      },
+      "stylistic": "Scathing critique, sharp numerical contrast, unyielding logical progression."
+    },
+    {
+      "id": "writing-25",
+      "index": 25,
+      "title": "Genetic Determinism and Predictive Health Insurance",
+      "question": "Analyze the societal risks of allowing private health and life insurers to utilize polygenic risk scores in underwriting actuarial policies.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Bioethics & Actuarial Science",
+      "masterSentence": "Permitting private insurance underwriters to integrate polygenic risk scores into policy pricing will establish a permanent genetic underclass systematically excluded from affordable medical coverage.",
+      "meal": {
+        "m": "Permitting private insurance underwriters to integrate polygenic risk scores into policy pricing will establish a permanent genetic underclass systematically excluded from affordable medical coverage.",
+        "e": "Actuarial simulation models reveal that using polygenic screening to price oncology policies would raise annual insurance premiums by more than 800% for individuals carrying common hereditary markers, pricing tens of millions out of baseline insurance markets.",
+        "a": "Because genetic architecture is entirely non-modifiable and inherited, conditioning access to medical risk-pooling on biological inheritance subverts the fundamental moral purpose of insurance: the social distribution of unavoidable misfortune.",
+        "l": "Without robust legislative firewalls strictly prohibiting genetic underwriting, society will institutionalize a dystopian biological caste system where healthcare access is dictated at the moment of conception."
+      },
+      "stylistic": "Bioethical authority, vivid phrasing ('permanent genetic underclass', 'biological caste system'), urgent ethical imperative."
+    },
+    {
+      "id": "writing-26",
+      "index": 26,
+      "title": "The Dark Side of High-Frequency Trading in Capital Markets",
+      "question": "Assess whether automated algorithmic high-frequency trading (HFT) enhances market liquidity or introduces predatory instability.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Quantitative Finance & Market Microstructure",
+      "masterSentence": "Far from providing durable market liquidity, algorithmic high-frequency trading operates as a predatory tax on capital formation, injecting systemic fragility and latency arbitrage into financial markets.",
+      "meal": {
+        "m": "Far from providing durable market liquidity, algorithmic high-frequency trading operates as a predatory tax on capital formation, injecting systemic fragility and latency arbitrage into financial markets.",
+        "e": "During historical flash crashes, algorithmic market makers withdrew hundreds of billions of dollars in bids within milliseconds of initial volatility spikes, causing premier blue-chip equities to plummet by over 60% before recovering minutes later.",
+        "a": "Because HFT firms deploy colocation servers and proprietary algorithms to front-run institutional orders, their liquidity is phantom in nature—readily available during calm trading conditions, but evaporating instantaneously when genuine market stabilization is required.",
+        "l": "Regulators must introduce financial transaction taxes and minimum resting times for quotes to dismantle these parasitic latency schemes and restore genuine stability to public capital exchanges."
+      },
+      "stylistic": "Technical precision ('latency arbitrage', 'phantom liquidity', 'colocation servers'), active verb dynamics."
+    },
+    {
+      "id": "writing-27",
+      "index": 27,
+      "title": "Decolonizing Academic Curricula in Western Universities",
+      "question": "Examine the academic and epistemological necessity of decentering Eurocentric canons within university humanities and social sciences.",
+      "mode": "Franklin Copywork & Stylistic Deconstruction",
+      "register": "Epistemology & Postcolonial Theory",
+      "masterSentence": "Decentering Eurocentric curricula in university education is not an exercise in ideological censorship, but an urgent intellectual necessity to dismantle the parochial illusion that Western thought represents the universal human experience.",
+      "meal": {
+        "m": "Decentering Eurocentric curricula in university education is not an exercise in ideological censorship, but an urgent intellectual necessity to dismantle the parochial illusion that Western thought represents the universal human experience.",
+        "e": "Curricular audits across major humanities departments in the Anglophone sphere reveal that non-Western authors and philosophical traditions constitute less than 8% of mandatory reading lists, despite representing over 80% of human global history.",
+        "a": "By systematically omitting rich non-Western philosophical, historiographical, and literary heritages, universities instill a distorted epistemological chauvinism that leaves graduates ill-equipped to comprehend the pluriverse of ideas shaping an interconnected 21st century.",
+        "l": "Broadening the canon revitalizes the university's core mission: subjecting all intellectual traditions to rigorous inquiry, cross-pollination, and shared discovery."
+      },
+      "stylistic": "Philosophical nuance, balanced rhythmic sentence structure, dignified declarative ending."
+    },
+    {
+      "id": "writing-28",
+      "index": 28,
+      "title": "The Crisis of Solitude in an Hyper-Connected Age",
+      "question": "Defend the essential psychological necessity of voluntary solitude against the incessant noise of ubiquitous connectivity.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Existential Psychology & Philosophy",
+      "masterSentence": "The systematic eradication of solitude in modern hyper-connected culture deprives the human consciousness of the psychological sanctuary indispensable for original self-discovery and emotional regulation.",
+      "meal": {
+        "m": "The systematic eradication of solitude in modern hyper-connected culture deprives the human consciousness of the psychological sanctuary indispensable for original self-discovery and emotional regulation.",
+        "e": "Psychological experiments conducted at the University of Virginia found that over 65% of participants preferred administering painful electrical shocks to themselves rather than sitting alone in a quiet room with their thoughts for fifteen minutes.",
+        "a": "In the absence of quiet, unmediated reflection, the psyche loses its capacity to integrate emotional memory and cultivate authentic interior convictions, falling prey to compulsive external validation and the mimetic desires of social networks.",
+        "l": "Reclaiming the art of solitude is therefore not a misanthropic retreat, but a vital act of spiritual preservation that protects the boundaries of the human soul."
+      },
+      "stylistic": "Psychological depth, poignant empirical hook, resonant philosophical resolution."
+    },
+    {
+      "id": "writing-29",
+      "index": 29,
+      "title": "The Fallacy of Infinite Economic Growth on a Finite Planet",
+      "question": "Demonstrate why physical thermodynamic limits invalidate neoclassical models of indefinite material and economic throughput.",
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "register": "Ecological Economics & Thermodynamics",
+      "masterSentence": "Neoclassical economic dogma's premise of compounding material growth represents a thermodynamic impossibility that treats ecological biospheres as mere externalities to an abstracted mathematical model.",
+      "meal": {
+        "m": "Neoclassical economic dogma's premise of compounding material growth represents a thermodynamic impossibility that treats ecological biospheres as mere externalities to an abstracted mathematical model.",
+        "e": "Over the past half-century of accelerating industrial output, humanity has breached six of the nine recognized planetary boundaries, triggering irreversible rates of topsoil erosion, species extinction, and ocean acidification.",
+        "a": "Because all economic value creation requires the conversion of low-entropy natural resources into high-entropy manufactured waste, technological efficiency improvements inevitably generate Jevons paradoxes that expand rather than diminish absolute resource consumption.",
+        "l": "Survival requires replacing the cancerous imperative of exponential GDP growth with steady-state ecological economics that operate within the regenerative boundaries of the Earth."
+      },
+      "stylistic": "Scientific rigor ('low-entropy', 'Jevons paradox', 'planetary boundaries'), unflinching rhetorical force."
+    },
+    {
+      "id": "writing-30",
+      "index": 30,
+      "title": "Autonomous AI Science and the Future of Discovery",
+      "question": "Assess whether autonomous AI research platforms will accelerate the pace of human discovery or displace human scientists into passive observers.",
+      "mode": "Franklin Copywork & Stylistic Deconstruction",
+      "register": "Philosophy of Technology & Scientific Methodology",
+      "masterSentence": "The transition from AI as an analytical assistant to an autonomous researcher running end-to-end scientific pipelines promises to compress centuries of scientific discovery into decades, while fundamentally challenging human intellectual primacy.",
+      "meal": {
+        "m": "The transition from AI as an analytical assistant to an autonomous researcher running end-to-end scientific pipelines promises to compress centuries of scientific discovery into decades, while fundamentally challenging human intellectual primacy.",
+        "e": "Autonomous biological discovery platforms have already generated, synthesized, and experimentally validated hundreds of novel antibiotic and catalyst candidates in automated wet labs without human manual intervention at any phase of the experimental cycle.",
+        "a": "While these systems drastically accelerate the exploration of massive chemical and biological search spaces that dwarf human cognitive capacity, their opaque decision-making architectures risk creating a world of 'black-box science' where humanity possesses functional cures without understanding the underlying mechanistic principles.",
+        "l": "To safeguard scientific truth, the future of discovery must not surrender foundational epistemological understanding in exchange for brute algorithmic utility."
+      },
+      "stylistic": "Antithetical balancing, conceptual precision ('intellectual primacy', 'black-box science'), compelling philosophical warning."
+    }
+  ],
+  "rubricSummary": " Granular Self-Evaluation Rubrics & Scoring Matrices\n\nTo guarantee steady progression, every recorded speaking drill and written draft must be evaluated against standardized scoring criteria.\n\n## 1. Speaking Performance Rubric (20-Point Scale)\n\nGrade your recorded monologue across four dimensions (1 to 5 points each).\n\n| Dimension | 1 - Novice | 2 - Developing | 3 - Competent | 4 - Advanced | 5 - Mastery |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| **1. Fluency & Pacing** (Temporal Compression) | Constant halting; pauses >3s; heavy reliance on verbal crutches (*um, ah, like*). | Frequent hesitation; uneven delivery; struggles to compress time in 4-3-2. | Steady flow; minor pauses at clause boundaries; noticeable speed-up in 3m and 2m. | Smooth, rhythmic flow; zero disruptive fillers; effortless compression across rounds. | Native-velocity cadenced delivery; pauses are purely rhetorical; flawless time compression. |\n| **2. Phonetics & Prosody** (Articulatory Mechanics) | Flat pitch; slurred consonant clusters; heavy L1 interference; misplaced stress. | Monotone delivery; frequent misplaced nuclear stress; choppy word-by-word delivery. | Clear segmental sounds; basic sentence stress; some linking/catenation across words. | Expressive pitch contours; natural connected speech (elision, weak forms, catenation). | Flawless nuclear stress placement; rich prosodic variety; effortless vocal authority. |\n| **3. Lexical Precision** (Collocational Density) | Vague, generic words (*goo"
+}
