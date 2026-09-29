@@ -2,6 +2,7 @@ import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { SkillTreeEngine } from '../core/skill-tree-engine';
+import { MotionEngine } from '../core/motion-engine';
 import drillsData from '../assets/data/drills.json';
 
 export interface WritingItem {
@@ -162,6 +163,26 @@ export class WritingDossier {
     `;
 
     this.bindEvents(item);
+
+    // Choreograph step entrance animation
+    const copyworkCard = this.container.querySelector('.copywork-card') as HTMLElement | null;
+    if (copyworkCard) {
+      MotionEngine.fadeSlideIn(copyworkCard);
+    }
+
+    // Dynamic number rollups for Accuracy % and Net WPM in Step 3
+    if (this.currentStep === 'diff') {
+      const metrics = calculateWritingMetrics(item.masterSentence, this.typedContent, this.elapsedSeconds);
+      const accEl = this.container.querySelector('.val-accuracy') as HTMLElement | null;
+      const wpmEl = this.container.querySelector('.val-wpm') as HTMLElement | null;
+      if (accEl) {
+        MotionEngine.tweenNumber(accEl, 0, metrics.accuracyPct, '%');
+      }
+      if (wpmEl) {
+        MotionEngine.tweenNumber(wpmEl, 0, metrics.netWpm);
+      }
+    }
+
     return this.container;
   }
 

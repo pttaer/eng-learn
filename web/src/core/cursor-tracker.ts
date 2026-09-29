@@ -32,6 +32,7 @@ export class CursorTracker {
   private static reducedMotion: boolean = false;
 
   public static init(): void {
+    // Native cursor enabled - DOM reticle insertion disabled
     if (this.isInitialized) return;
     this.isInitialized = true;
     this.checkReducedMotion();

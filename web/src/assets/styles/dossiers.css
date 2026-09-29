@@ -1209,11 +1209,26 @@
 }
 
 .constellation-node {
+  transform-box: fill-box;
+  transform-origin: center;
   transition: transform var(--duration-fast) var(--ease-snappy);
 }
 
 .constellation-node:hover {
-  transform: scale(1.18);
+  filter: drop-shadow(0 0 6px rgba(202, 138, 4, 0.45));
+}
+
+.constellation-node .node-circle {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: stroke var(--duration-fast), fill var(--duration-fast);
+}
+
+.val-progress-pct {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--accent-gold);
 }
 
 .node-locked {
@@ -1241,6 +1256,7 @@
 }
 
 .constellation-line {
+  stroke-linecap: round;
   transition: stroke var(--duration-fast);
 }
 

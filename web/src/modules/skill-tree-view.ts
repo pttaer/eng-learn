@@ -1,7 +1,9 @@
+import anime from 'animejs';
 import { SKILL_BRANCHES } from '../core/skill-tree-data';
-import { SkillTreeEngine, SummitProgress } from '../core/skill-tree-engine';
+import { SkillTreeEngine } from '../core/skill-tree-engine';
 import { RouteId } from '../core/router';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
+import { MotionEngine } from '../core/motion-engine';
 
 export class SkillTreeView {
   private container: HTMLElement;
@@ -18,7 +20,7 @@ export class SkillTreeView {
     this.container.innerHTML = `
       <div class="skill-tree-shell" style="width: 100%; max-width: 1100px; margin: 0 auto; padding-bottom: 60px;">
         <!-- 1. Today's 15-Minute Workout Banner -->
-        ${this.renderWorkoutBanner(progress)}
+        ${this.renderWorkoutBanner()}
 
         <!-- 2. Constellation Header & Progress -->
         <div class="tree-header-card" style="margin-top: 24px; text-align: center; border: 1px solid var(--border-hairline); background: var(--bg-surface); padding: 24px; border-radius: 4px;">
@@ -32,7 +34,7 @@ export class SkillTreeView {
           <div style="display: inline-flex; align-items: center; gap: 24px; font-family: var(--font-mono); font-size: 13px; background: rgba(0,0,0,0.03); padding: 8px 20px; border-radius: 99px;">
             <span>RANK: <strong style="color: var(--ink-primary);">${progress.currentRank}</strong></span>
             <span>•</span>
-            <span>SUMMIT PROGRESS: <strong style="color: var(--accent-gold);">${progress.masteredCount} / ${progress.totalNodes} PERKS (${progress.progressPct}%)</strong></span>
+            <span>SUMMIT PROGRESS: <strong style="color: var(--accent-gold);">${progress.masteredCount} / ${progress.totalNodes} PERKS (<span class="val-progress-pct">${progress.progressPct}%</span>)</strong></span>
           </div>
         </div>
 
@@ -49,10 +51,32 @@ export class SkillTreeView {
     `;
 
     this.bindEvents();
+
+    // Procedural entrance animations via MotionEngine
+    setTimeout(() => {
+      // 1. Procedurally illuminate SVG connecting lines
+      const lines = this.container.querySelectorAll('.constellation-line');
+      if (lines.length > 0) {
+        MotionEngine.drawSvgLines(lines as any);
+      }
+
+      // 2. Stagger star node entrance with elastic bounce
+      const nodes = this.container.querySelectorAll('.constellation-node');
+      if (nodes.length > 0) {
+        MotionEngine.staggerEntrance(nodes as any, { from: 'bottom', delayStep: 30 });
+      }
+
+      // 3. Roll up summit progress counter
+      const progressEl = this.container.querySelector('.val-progress-pct') as HTMLElement | null;
+      if (progressEl) {
+        MotionEngine.tweenNumber(progressEl, 0, progress.progressPct, '%');
+      }
+    }, 40);
+
     return this.container;
   }
 
-  private renderWorkoutBanner(_progress: SummitProgress): string {
+  private renderWorkoutBanner(): string {
     return `
       <div class="workout-banner" style="background: var(--bg-surface); border: 1px solid var(--border-solid); padding: 20px 24px; border-radius: 4px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
         <div style="flex: 1; min-width: 280px;">
@@ -110,7 +134,7 @@ export class SkillTreeView {
       }
     }
 
-    // Connect top Level 5 nodes of all branches to the C2 SUMMIT Apex (50%, 4%)
+    // Connect top Level 5 nodes of all branches to the C2 SUMMIT Apex (50%, 5%)
     const summitX = 50;
     const summitY = 5;
     for (const node of nodes.filter(n => n.level === 5)) {
@@ -121,6 +145,7 @@ export class SkillTreeView {
           stroke="rgba(202, 138, 4, 0.4)"
           stroke-width="1.5"
           stroke-dasharray="4,4"
+          class="constellation-line"
         />
       `;
     }
@@ -229,9 +254,41 @@ export class SkillTreeView {
       });
     });
 
-    // SVG Node clicks
+    // SVG Node clicks & hover animations
     this.container.querySelectorAll('.constellation-node').forEach(nodeEl => {
+      const circleEl = nodeEl.querySelector('.node-circle');
+
+      nodeEl.addEventListener('mouseenter', () => {
+        if (!MotionEngine.isReducedMotion() && circleEl) {
+          anime({
+            targets: circleEl,
+            scale: 1.25,
+            duration: 250,
+            easing: 'easeOutQuad'
+          });
+        }
+      });
+
+      nodeEl.addEventListener('mouseleave', () => {
+        if (!MotionEngine.isReducedMotion() && circleEl) {
+          anime({
+            targets: circleEl,
+            scale: 1.0,
+            duration: 200,
+            easing: 'easeOutQuad'
+          });
+        }
+      });
+
       nodeEl.addEventListener('click', () => {
+        if (!MotionEngine.isReducedMotion()) {
+          anime({
+            targets: nodeEl,
+            scale: [0.92, 1.08, 1.0],
+            duration: 350,
+            easing: 'easeOutElastic(1, 0.5)'
+          });
+        }
         const nodeId = (nodeEl as HTMLElement).dataset.nodeId;
         if (nodeId) {
           this.openNodeModal(nodeId);
@@ -316,6 +373,11 @@ export class SkillTreeView {
     `;
 
     document.body.appendChild(modal);
+
+    const cardEl = modal.querySelector('.completion-receipt-card') as HTMLElement;
+    if (cardEl) {
+      MotionEngine.springModal(modal, cardEl);
+    }
 
     modal.querySelector('.btn-close-modal')?.addEventListener('click', () => {
       modal.remove();

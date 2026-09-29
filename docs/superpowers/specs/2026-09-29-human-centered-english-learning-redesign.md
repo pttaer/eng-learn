@@ -1,203 +1,169 @@
-# Human-Centered English Learning Platform Redesign Specification
+# English Mastery Platform: The Constellation Skill Tree & Human Ergonomics
 
-**Status:** Approved via `/grill-me` Architectural Interview  
-**Date:** 2026-09-29  
-**Target:** [`web/src/`](file:///E:/Eng/web/src/)  
-**Standard:** Clean Minimalist Monochrome (`#000000` / `#ffffff`), WCAG 2.2 AAA, Native OS Ergonomics, Zero Sci-Fi Jargon.
-
----
-
-## 1. Executive Summary & Problem Diagnosis
-
-The English Singularity web platform was built with complex 2.5D perspective mathematics, audio synthesis, and spaced repetition algorithms. However, user feedback from real 60-second learning trials revealed that the user experience felt like an alien sci-fi terminal rather than an inviting, effective tool for mastering English:
-
-1. **Intimidating Onboarding:** Learners land on an abstract geometric sea urchin with bristling spines, floating decoy shards, and cold military telemetry (`STARK // ENG SINGULARITY [NODE: SINGULARITY]`), with zero guidance on what to do first.
-2. **Trapped Navigation:** No visible `[ ← Back to Home ]` button exists inside study modules. Learners are forced to guess the developer `Escape` shortcut or decode a tiny rotating dial in the bottom right corner.
-3. **Robotic Jargon:** Interfaces are cluttered with internal developer telemetry (`COGNITIVE LOAD FACTOR EF 2.50 (CANONICAL)`, `SYNTACTIC DRILL RUN 0 TRANSFORMATIONS`).
-4. **Missing Copywork Mechanics:** The Writing module claims to teach Benjamin Franklin Copywork but lacks a text input area, reducing the exercise to a passive flashcard. Long prompt sentences are vertically clipped by fixed card boundaries.
-5. **Floaty, Lagged Cursor:** Overriding the native mouse with `cursor: none` and a custom spring-physics reticle causes clicks, text selection, and typing to feel floaty and unresponsive.
-6. **Cramped Collocations Exploration:** Studying 1,000 items one card at a time with a truncated search input (`SEARCH 1,000 COI`) is exhausting.
-
-This specification details the comprehensive **Human-Centered Redesign** that preserves the elegant binary monochrome aesthetic while transforming the application into a calm, focused, and intuitive study platform.
+**Specification Document:** `SPEC-2026-09-29-CONSTELLATION-ENG`  
+**Target User Persona:** Upper-Intermediate to Advanced Learner (CEFR B2/C1 aiming for C2 / Native-Level Nuance)  
+**Core Architectural Pillars:** Skyrim-Style Prerequisite Skill Tree, Real Interactive Practice Consoles, Calm Human Ergonomics.  
+**Visual & Interaction Standard:** Clean Minimalist Monochrome (`#111111` on `#fafaf9`), Native OS Mouse Ergonomics, Natural Document Scrolling, Zero Sci-Fi Gimmicks.
 
 ---
 
-## 2. Shared Architectural Decisions (Interview Consensus)
+## 1. Executive Summary & Persona Profile
 
-| Domain | Legacy State | Redesigned Standard |
+### 1.1 The Advanced Learner Problem
+The student using this application is **already good at English**. They can converse, write emails, and read articles. However, they are stuck on the **intermediate-to-advanced plateau**:
+- They want to sound articulate, authoritative, and nuanced (C1/C2), but revert to basic grammatical patterns when writing or speaking.
+- They know advanced words individually, but struggle with natural collocations and preposition hubs.
+- They want a **clear, visual map of mastery**: *"What specific skills separate me from native-level fluency? Exactly what do I need to unlock next to reach the top?"*
+
+### 1.2 The Solution
+We transform the platform from an abstract sci-fi HUD into a **Skyrim-style English Skill Constellation** paired with dedicated, distraction-free practice studios:
+1. **The Constellation Skill Tree:** An interactive RPG-style milestone progression tree where learning nodes have clear prerequisites and visual unlock paths leading to C2 Summit Mastery.
+2. **Real Interactive Practice:** Replacing passive flashcards with real tools — an active Franklin Copywork typing editor with live diffs, a searchable 1,000-collocation lexicon, and a 3-stage speaking studio.
+3. **Calm, Premium UX:** Native OS cursor, clear header navigation (`[ ← Back to Tree ]`), soft eye-friendly contrast, and natural scrolling.
+
+---
+
+## 2. The Skyrim-Style Constellation Skill Tree (`#tree`)
+
+### 2.1 The Visual & Interactive Metaphor
+Instead of an abstract twitching sea urchin, the primary curriculum map is rendered as an elegant **Interactive Constellation Skill Tree** (SVG / Canvas):
+- **Branches (Constellations):** 5 dedicated branches radiate upward toward the "C2 Mastery Summit":
+  1. **Branch I: Syntactic Architecture (Grammar)**
+  2. **Branch II: Lexical Precision (1,000 Collocations & Vocab)**
+  3. **Branch III: Rhetoric & Franklin Copywork (Writing)**
+  4. **Branch IV: Prosody & Spontaneous Fluency (Speaking)**
+  5. **Branch V: Epistemic Deconstruction (Reading)**
+- **Connecting Filaments (Branches):** Crisp lines connect parent nodes to dependent child nodes. As prerequisites are met, the filament illuminates.
+
+### 2.2 Node States & Prerequisite Gating
+Each perk node exists in one of three states:
+1. **LOCKED (Dimmed, Lock Icon):**
+   - Prerequisites not yet fulfilled.
+   - Clicking reveals a clean modal: *"LOCKED: Requires [Parent Skill Name] at 80% Mastery (Current: 45%). Complete 2 more review drills to unlock."*
+2. **UNLOCKED / READY TO TRAIN (Pulsing Outline, Active Pointer):**
+   - All prerequisites satisfied.
+   - Clicking opens the Perk Dossier with a direct **`[ Start Practice Drill → ]`** CTA that launches the student into that specific skill's practice module.
+3. **MASTERED (Illuminated Star, Solid Fill):**
+   - Student has achieved $\ge 80\%$ retention or 3 consecutive "Good" ratings in spaced repetition.
+   - Unlocks dependent higher-tier perks.
+
+### 2.3 The 5 Master Skill Constellations & Prerequisite Trees
+
+#### Branch I: Syntactic Architecture (Grammar)
+```
+[Level 1: Core Fronting] ──> [Level 2: Negative Inversion (Seldom/Rarely)] ──> [Level 3: Restrictive Inversion (Only after/Not until)]
+                                                                                       │
+                                                                                       ▼
+[Level 5: Master C2 Stylistic Condensation] <── [Level 4: Hypothetical Inversion (Had we known / Were you to)]
+```
+
+#### Branch II: Lexical Precision (Collocations & Vocab)
+```
+[Perk 1: Core Action Verbs] ──> [Perk 2: Business & Legal Hubs] ──> [Perk 3: Academic & Research Collocations]
+                                                                              │
+                                                                              ▼
+[Perk 5: High Idiomatic Nuance] <── [Perk 4: Prepositional Finesse (Bear on / Pertain to)]
+```
+
+#### Branch III: Rhetoric & Copywork (Writing)
+```
+[Perk 1: SVO Clarity & Clausal Balance] ──> [Perk 2: Periodic Sentences & Suspense] ──> [Perk 3: Franklin Antithesis & Parallelism]
+                                                                                                  │
+                                                                                                  ▼
+[Perk 5: Forensic C2 Essay Synthesis] <── [Perk 4: MEAL Argument Architecture]
+```
+
+#### Branch IV: Prosody & Spontaneity (Speaking)
+```
+[Perk 1: Nuclear Tonic Stress] ──> [Perk 2: Connected Speech & Catenation] ──> [Perk 3: Nation 4-3-2 Fluency (Pacing)]
+                                                                                         │
+                                                                                         ▼
+[Perk 5: Unrehearsed C2 Debate Rhetoric] <── [Perk 4: Collocation Injection Under Pressure]
+```
+
+#### Branch V: Epistemic Deconstruction (Reading)
+```
+[Perk 1: Rapid Gist & Skeleton] ──> [Perk 2: Lexical Target Extraction] ──> [Perk 3: Syntactic Reverse-Engineering]
+                                                                                      │
+                                                                                      ▼
+[Perk 5: Hermeneutic C2 Synthesis] <── [Perk 4: Rhetorical Intent & Biases]
+```
+
+---
+
+## 3. Dedicated Practice Studios (No More "Everything is a Flashcard")
+
+Each skill node in the tree launches the learner into a dedicated, fit-for-purpose practice studio.
+
+### 3.1 Writing Studio: True Benjamin Franklin Copywork
+* **Step 1 (Analyze):** Display the model sentence with grammatical breakdown and stylistic notes.
+* **Step 2 (Recall & Type):** Model hides. Student types in a generous auto-focused `<textarea>` with character and word counters.
+* **Step 3 (Instant Split-Diff):** Side-by-side comparison with word-level Myers/Hirschberg diff highlighting:
+  - Exact matches in crisp black ink.
+  - Missed words (`[-deleted-]`) in strike-through.
+  - Extra or incorrect words (`{+inserted+}`) in highlighted badges.
+  - Accuracy %, WPM, and pedagogical tip explaining the contrast.
+  - Self-rating updates the Constellation node's mastery score.
+
+### 3.2 Collocations Studio: Dual View (Drill + Full Lexicon)
+* **View A: Active SRS Drill:** High-focus cards featuring the collocation, preposition cues, audio pronunciation, and real example sentences.
+* **View B: Full 1,000 Searchable Dictionary:** Fast table with live search (English & Vietnamese), category filters (`Everyday`, `Business`, `Academic`, `Idioms`), and audio speaker on every row.
+
+### 3.3 Speaking Studio: 3-Stage 4-3-2 Flow
+* **Stage 1 (Prep):** 15-second countdown with native model audio and 4 target collocation chips.
+* **Stage 2 (Speak):** Clean countdown timer (4 min $\rightarrow$ 3 min $\rightarrow$ 2 min) with live audio level visualizer.
+* **Stage 3 (Review):** Immediate playback of student take vs. native model, with detected collocation checklist and pacing metrics.
+
+### 3.4 Reading Studio: Calm Document Reader
+* Relaxed reading typography: `68ch` measure, `1.65` line height, generous paragraph spacing.
+* Clickable vocabulary targets: clicking any underlined term reveals natural Vietnamese meaning and collocation partners in a clean side drawer.
+* Optional unhurried 60s skim timer (no forced cutoffs).
+
+---
+
+## 4. Ergonomics, Sensory & Navigation Overhaul
+
+| Problem Area | Legacy Flaw | New Human Standard |
 | :--- | :--- | :--- |
-| **Cursor & Pointer** | `cursor: none` + Canvas spring crosshair | **Native OS Cursor** (`default`, `pointer`, `text`). Zero input lag. |
-| **Header Navigation** | Telemetry nodes (`[NODE: WRITE]`), no back button | **Permanent `[ ← Home ]` Button**, clear title (`Writing & Copywork`), Mute & Streak. |
-| **Wayfinding Widget** | Corner Compass with 8px label | **Retired**. Clean header navigation is the single source of truth. |
-| **Home Dashboard** | Only Sea Urchin in center | **Dual Mode**: "Today's Guided Workout" (15 min) + Interactive Urchin Gateways. |
-| **Writing (Franklin)** | Passive flashcard with cut-off text | **Two-Step Studio**: Read Prompt → Hide & Type in Textarea → Instant Split-Diff. |
-| **Collocations & Vocab** | Flashcard-only with truncated search | **Dual View**: Toggle between "Daily Flashcards" and "Searchable Dictionary". |
-| **Reading & Grammar** | Robotic telemetry badges, dense walls | **Human Typography**: Clean rule callouts, Vietnamese translations, relaxed reading. |
-| **Speaking Studio** | Fixed card crammed with 6 sub-widgets | **3-Stage Clean Flow**: 1) Prepare & Collocations → 2) Record & Timer → 3) Review & Check. |
-| **Audio Feedback** | Constant oscillator clicks on every button | **Speech-First**: Clean TTS on [Audio] click, silent navigation, gentle completion chime. |
+| **Cursor** | Custom canvas reticle, `cursor: none` | **Native OS pointer** (`default`, `pointer`, `text`). Zero input lag. |
+| **Navigation** | No back button; secret `Esc` key only | **Prominent `[ ← Back to Tree ]`** top-left on every single page. |
+| **Page Layout** | `overflow: hidden`, fixed 720x440 card | **Natural document scrolling**; containers expand to fit content. |
+| **Color & Eye Strain** | Harsh `#000000` on `#ffffff` glare | **Soft Paper Ink:** Deep charcoal `#111111` on soft warm white `#fafaf9` with Dark Mode. |
+| **Audio Noise** | Synthesized beeps on every click | **Silent navigation**; audio plays *only* when user clicks [Speaker] or finishes a daily milestone. |
+| **Telemetry Bloat** | Digital clock, JSON buttons, `EF 2.50` | Clean header: `Day X of 30`, `Streak: X Days`, `Sound Toggle`, `Settings`. |
 
 ---
 
-## 3. Detailed Component Specifications
+## 5. Home Dashboard & The Daily 15-Minute Workout
 
-### 3.1 Global Shell & Navigation (`header-hud.ts`, `hud-base.css`)
-
-1. **Native Cursor Restoration:**
-   - Remove `cursor: none` from `html, body`.
-   - Remove `CursorTracker` canvas reticle overlay or set to inactive.
-   - Enforce standard interactive cursor rules: `cursor: pointer` on buttons/tabs, `cursor: text` on inputs/textareas, `cursor: default` on canvas.
-
-2. **Persistent Header Navigation Bar:**
-   - **Left Section:**
-     - On Home screen (`#singularity`): Clean brand mark `ENGLISH SINGULARITY` with subtitle `Mastery Platform`.
-     - Inside any module (`#read`, `#write`, `#listen`, `#speak`, `#vocab`, `#colloc`, `#grammar`, `#habits`): Prominent **`[ ← Home ]`** button (`.hud-btn-back`) with keyboard shortcut hint (`Esc`).
-     - Module Title badge in clean plain English: e.g. `Pillar 02 // Writing & Copywork`.
-   - **Right Section:**
-     - `Streak: 0 Days` (clean tabular numbers).
-     - `Sound: On / Mute` toggle button.
-     - `[ Backup ]` dropdown for Export/Import JSON.
-   - **Mobile Viewport Hardening:**
-     - Replace dense horizontal cluster with responsive wrap and 44px minimum touch targets. Eliminate overlapping text and clipping.
-
-3. **Retire Corner Compass:**
-   - Remove the bottom-right corner compass widget from DOM and CSS to eliminate visual clutter and touch conflicts with OS gesture bars.
+When the student opens the application:
+1. **Header:** Clean branding (`ENGLISH MASTERY`), current level/rank (`C1 Scholar`), streak counter (`🔥 5 Days`), sound toggle.
+2. **Top Banner: Today's 15-Minute Daily Workout:**
+   - A single clean checklist with progress indicator:
+     - `[✓] 10 Collocations`
+     - `[ ] 1 Franklin Copywork (Inversion)`
+     - `[ ] 1 Speaking Take (4-3-2)`
+   - Primary Action Button: **`[ CONTINUE TODAY'S WORKOUT → ]`**.
+3. **Main Canvas: The Constellation Skill Tree:**
+   - Full interactive visualization of all 5 skill branches radiating to the summit.
+   - Shows locked nodes, unlocked available drills, and mastered star perks.
+   - Student can click any unlocked node to jump directly into focused deliberate practice.
 
 ---
 
-### 3.2 Home Screen: "Today's Guided Workout" Hub (`main.ts`, `perspective-canvas.ts`)
+## 6. Verification & Acceptance Criteria
 
-1. **Guided Daily Workout Card:**
-   - Render a calm, centered dashboard card below or alongside the Sea Urchin:
-     - **Title:** `TODAY'S 15-MINUTE WORKOUT`
-     - **Daily Checklist:**
-       1. `[ ] 5 Collocations` (Everyday & Business hubs)
-       2. `[ ] 1 Reading Article` (Intensive 4-Pass)
-       3. `[ ] 1 Franklin Copywork` (Structure reconstruction)
-       4. `[ ] 1 Speaking Drill` (4-3-2 Fluency)
-     - **Primary Action:** Large prominent button: **`[ START TODAY'S LESSON ]`** which launches the student directly into the first pending daily task.
-2. **Interactive Urchin Gateways:**
-   - Retain the living geometric Sea Urchin with 7 radial gateway nodes (READ, WRITE, LISTEN, SPEAK, VOCAB, COLLOC, GRAMMAR).
-   - Display items due directly on the gateway nodes (e.g. `COLLOC (5 DUE)`).
-   - Students can click any node to explore freely outside the guided workout.
-
----
-
-### 3.3 Pillar 02: True Benjamin Franklin Copywork Studio (`writing-dossier.ts`)
-
-1. **Step 1: Understand the Model Sentence & Argument:**
-   - Display prompt topic and register (e.g., *Academic Jurisprudence / Legal Philosophy*).
-   - Display model exemplar sentence with generous line height and clean typography.
-   - Display MEAL structural argument hints (Main idea, Evidence, Analysis, Link).
-   - Action Button: **`[ START RECALL & TYPING ]`** (Shortcut: `Enter`).
-
-2. **Step 2: Blind Recall & Active Typing:**
-   - Hide the full model sentence (leaving only brief topic cues).
-   - Render a generous, auto-focused textarea (`.copywork-textarea`):
-     - `placeholder="Type the sentence from memory. Focus on sentence structure, syntactic connectors, and precision..."`
-     - Clean monospace/sans typography, min-height 120px, responsive width up to 720px.
-   - Telemetry strip above textarea: Live word counter, character counter, elapsed timer.
-   - Action Button: **`[ SUBMIT & COMPARE DIFF ]`** (Shortcut: `Ctrl+Enter`).
-
-3. **Step 3: Split-Diff Comparison & Metric Evaluation:**
-   - Execute Myers/Hirschberg Longest Common Subsequence (LCS) character/word diff:
-     - Exact matches: Neutral crisp ink.
-     - Missed words (Deletions): Strike-through with subtle outline.
-     - Extra/misspelled words (Insertions): Underlined or highlighted badge.
-   - Metrics display:
-     - **Accuracy %**: Calculated based on Levenshtein/LCS match ratio.
-     - **WPM**: Net typing speed.
-     - **Error Count**: Mismatched tokens.
-   - Self-Scoring SM-2 Bar: `[ Again (1) ]` / `[ Good (2) ]` to update spaced repetition schedule and automatically advance to the next prompt.
-
----
-
-### 3.4 Pillars 05 & 06: Dual-View Collocations & Vocab Vault (`collocations-dossier.ts`, `vocabulary-dossier.ts`)
-
-1. **View Mode Switcher:**
-   - Prominent toggle tabs at top of dossier:
-     - **`[ DAILY FLASHCARDS ]`**: For active SRS review sessions (cards due today).
-     - **`[ FULL DICTIONARY (1,000) ]`**: For browsing, searching, and reference.
-
-2. **Full Dictionary View:**
-   - Instant search input with clear placeholder: `Search 1,000 collocations in English or Vietnamese...`.
-   - Category pill filters: `[ All ]`, `[ Everyday Verbs ]`, `[ Business & Law ]`, `[ Academic & Tech ]`, `[ Idioms & Social ]`.
-   - Clean, paginated table/card list (25 items per page):
-     - English Collocation (bold, audio speaker button).
-     - Vietnamese Meaning (natural idiomatic translation).
-     - Preposition & Structural Pattern (e.g., `pay attention + to + [noun]`).
-     - Mastery Status indicator (`New`, `Learning`, `Mastered`).
-
-3. **Daily Flashcard View:**
-   - Card dimensions expanded with dynamic content sizing (no text clipping).
-   - Front: Collocation in large clear typography, preposition prompt, and prompt context.
-   - Back: Vietnamese meaning, complete exemplar sentence, and SRS rating bar.
-
----
-
-### 3.5 Pillar 01 Reading & Pillar 07 Grammar: Calm, Human Typography (`reading-dossier.ts`, `grammar-dossier.ts`)
-
-1. **Grammar Dossier:**
-   - Eliminate robotic labels (`COGNITIVE LOAD FACTOR`, `SYNTACTIC DRILL RUN`).
-   - Clear, friendly header: `Grammar Focus: Inversion & Emphasis` with CEFR indicator (`C1`).
-   - Bold formula callout box: `Hardly + had + Subject + Past Participle + when...`.
-   - Exemplar sentence with side-by-side Vietnamese structural comparison.
-   - Interactive syntactic repair challenge: Click to reveal the master transformation.
-
-2. **Reading Dossier:**
-   - Safe paragraph parsing supporting string and array structures (bug fixed).
-   - Unhurried reading mode: Optional 60-second skim timer, but no mandatory cutoff.
-   - Generous reading measure (`68ch`), relaxed line-height (`1.65`), clear paragraph spacing.
-   - Interactive vocabulary highlights: Clicking marked target phrases displays Vietnamese definitions and usage context.
-
----
-
-### 3.6 Pillar 04: 3-Stage Speaking Cockpit (`speaking-dossier.ts`)
-
-1. **Stage 1: Preparation (15s):**
-   - Clean prompt text displayed in commanding typography.
-   - Native exemplar audio button (`[ Listen to Model ]`).
-   - 4 Target Collocation chips with plain pronunciation hints.
-   - Action: `[ Ready to Speak ]`.
-
-2. **Stage 2: Fluency Recording (Nation 4-3-2):**
-   - Circular countdown timer (4 min Round 1, 3 min Round 2, 2 min Round 3).
-   - Live visual audio level meter (reassures student that microphone is capturing).
-   - Live collocation spotter highlighting phrases as the student utters them.
-   - Action: `[ Finish Speaking ]`.
-
-3. **Stage 3: Review & Progression:**
-   - Synchronized audio replay: Play student take vs native exemplar.
-   - Collocation checklist showing detected collocations.
-   - 3-round compression comparison metrics (word count and fluency increase).
-   - SM-2 score bar to save session.
-
----
-
-### 3.7 Sound & Sensory Polish (`audio-synthesizer.ts`)
-
-1. **Silent Navigation:**
-   - Remove synthesized oscillator beep on routine navigation clicks and button hovers.
-2. **High-Fidelity Speech Audio:**
-   - Web Speech API dialect selection (en-US / en-GB) on speaker buttons.
-3. **Gentle Milestone Chime:**
-   - Harmonic, soft completion chime only when completing a full exercise or daily workout.
-4. **Header Mute Control:**
-   - One-click global mute button in the top navigation bar.
-
----
-
-## 4. Verification & Acceptance Criteria
-
-1. **Human Usability (The 60-Second Test):**
-   - A new student opening the app can immediately identify what to do via "Today's Guided Workout".
-   - A student can enter any module and navigate back to Home with a single click on `[ ← Home ]`.
-   - The native mouse pointer feels snappy, responsive, and familiar with zero lag.
-2. **Copywork Functionality:**
-   - Student can type into a real textarea, press Submit, and see an accurate word-by-word diff against the model sentence with accuracy and WPM metrics.
-3. **Responsive & Visual Invariants:**
-   - Zero text clipping or vertical overflow on cards across all 8 modules.
-   - Zero horizontal scrollbars across desktop (1440x900) and mobile (375x812).
-   - All 5 automated unit test suites pass 100%.
-   - Headless browser QA (`web/scripts/browser-qa-test.cjs`) executes with zero console errors and zero network failures.
-4. **Production Build:**
-   - `npm run build` compiles cleanly with zero TypeScript or Vite errors in $< 2.0\text{s}$.
+1. **The 60-Second Human Test:**
+   - Learner immediately understands their level, current streak, and what to do next.
+   - Learner can navigate to any skill and return to the Constellation Tree with a single click on `[ ← Back to Tree ]`.
+   - Native OS mouse pointer feels snappy, responsive, and familiar with zero lag.
+2. **Skill Tree Interactivity:**
+   - Prerequisite logic strictly enforced: locked nodes cannot be trained until parents reach mastery threshold.
+   - Clicking unlocked nodes launches the exact matching practice module.
+   - Completing drills updates node mastery and illuminates the branch.
+3. **Copywork & Input Integrity:**
+   - Real typing in a textarea with instant Myers/Hirschberg split-diff evaluation.
+   - Zero text clipping on prompt sentences across any screen width.
+4. **Browser QA & Performance:**
+   - Zero console errors, zero network failures, zero horizontal overflow.
+   - Production bundle compiles in $< 2.0\text{s}$ with 0 errors.

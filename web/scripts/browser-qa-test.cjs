@@ -3,6 +3,8 @@ const puppeteer = require('puppeteer-core');
 const fs = require('fs');
 const path = require('path');
 const assert = require('assert');
+const http = require('http');
+const { spawn, execSync } = require('child_process');
 
 const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const TARGET_URL = 'http://localhost:4173/';
@@ -12,10 +14,52 @@ if (!fs.existsSync(SCREENSHOTS_DIR)) {
   fs.mkdirSync(SCREENSHOTS_DIR, { recursive: true });
 }
 
+function isServerListening(url) {
+  return new Promise(resolve => {
+    const req = http.get(url, res => {
+      resolve(true);
+    });
+    req.on('error', () => resolve(false));
+    req.setTimeout(1000, () => {
+      req.destroy();
+      resolve(false);
+    });
+  });
+}
+
 async function runBrowserQA() {
-  console.log('=== END-TO-END HEADLESS BROWSER QA TEST SUITE (ENG-29) ===');
+  console.log('=== END-TO-END HEADLESS BROWSER QA TEST SUITE (ENG-32) ===');
   console.log(`Connecting to Chrome binary: ${CHROME_PATH}`);
   console.log(`Target URL: ${TARGET_URL}`);
+
+  let serverProcess = null;
+  const isRunning = await isServerListening(TARGET_URL);
+  if (!isRunning) {
+    console.log(`Preview server not found on ${TARGET_URL}. Starting Vite preview server...`);
+    const distDir = path.join(__dirname, '../dist');
+    if (!fs.existsSync(distDir)) {
+      console.log('Building production bundle before starting preview...');
+      execSync('npm run build', { cwd: path.join(__dirname, '..'), stdio: 'inherit' });
+    }
+    const viteBin = path.join(__dirname, '../node_modules/vite/bin/vite.js');
+    serverProcess = spawn(process.execPath, [viteBin, 'preview', '--port', '4173', '--strictPort'], {
+      cwd: path.join(__dirname, '..'),
+      stdio: 'ignore'
+    });
+
+    let ready = false;
+    for (let i = 0; i < 40; i++) {
+      await new Promise(r => setTimeout(r, 250));
+      if (await isServerListening(TARGET_URL)) {
+        ready = true;
+        console.log(`✓ Vite preview server is up and responsive on ${TARGET_URL}`);
+        break;
+      }
+    }
+    if (!ready) {
+      throw new Error(`Timed out waiting for Vite preview server on ${TARGET_URL}`);
+    }
+  }
 
   const browser = await puppeteer.launch({
     executablePath: CHROME_PATH,
@@ -327,8 +371,101 @@ async function runBrowserQA() {
     await page.screenshot({ path: shot10, fullPage: false });
     console.log(`✓ Screenshot 10 saved: ${shot10}`);
 
+    // Reset viewport back to desktop
+    await page.setViewport({ width: 1440, height: 900, deviceScaleFactor: 1 });
+
+    // ------------------------------------------------------------------------
+    // TEST 12: GLOBAL SPATIAL VIEW TRANSITIONS & ZERO UNCAUGHT ANIMATIONS
+    // ------------------------------------------------------------------------
+    console.log('\n[TEST 12: GLOBAL SPATIAL VIEW TRANSITIONS & TEARDOWN VERIFICATION]');
+    const allViews = [
+      { route: 'read', selector: '.dossier-reading', name: 'Calm Reading Dossier' },
+      { route: 'write', selector: '.dossier-writing', name: 'Franklin Copywork Studio' },
+      { route: 'listen', selector: '.dossier-listening', name: 'Active Listening Dossier' },
+      { route: 'speak', selector: '.dossier-speaking', name: 'Acoustic Speaking Studio' },
+      { route: 'vocab', selector: '.dossier-vocabulary', name: 'Roguelike Vocabulary Vault' },
+      { route: 'colloc', selector: '.dossier-collocations', name: '1000 Collocations Vault' },
+      { route: 'grammar', selector: '.dossier-grammar', name: 'Syntactic Grammar Matrix' },
+      { route: 'habits', selector: '.dossier-habits', name: '30-Day Daily Habit Tracker' },
+      { route: 'tree', selector: '.skill-tree-view', name: 'Constellation Skill Tree' }
+    ];
+
+    for (const v of allViews) {
+      await page.evaluate(r => { window.location.hash = `#${r}`; }, v.route);
+      await page.waitForSelector(v.selector, { timeout: 4000 });
+      const isActive = await page.$eval('#workspace-mount', el => el.classList.contains('workspace-active'));
+      assert(isActive, `#workspace-mount must have .workspace-active on #${v.route}`);
+      console.log(`  ✓ Route #${v.route} (${v.name}) mounted cleanly with spatial transition`);
+    }
+
+    // Stress-test rapid view switching to ensure MotionEngine.cancelAll() avoids zombie animations
+    console.log('- Stress testing rapid view switching and cancelAll() teardown...');
+    await page.evaluate(() => {
+      window.location.hash = '#write';
+      window.location.hash = '#vocab';
+      window.location.hash = '#grammar';
+      window.location.hash = '#tree';
+    });
+    await page.waitForSelector('.skill-tree-view', { timeout: 4000 });
+    await new Promise(r => setTimeout(r, 400));
+    console.log('✓ Rapid view switching teardown executed with zero uncaught animation rejections');
+
+    // Screenshot 11: All Views Navigation
+    const shot11 = path.join(SCREENSHOTS_DIR, '11-all-views-navigation.png');
+    await page.screenshot({ path: shot11, fullPage: false });
+    console.log(`✓ Screenshot 11 saved: ${shot11}`);
+
+    // ------------------------------------------------------------------------
+    // TEST 13: ACCESSIBILITY PREFERS-REDUCED-MOTION COMPLIANCE
+    // ------------------------------------------------------------------------
+    console.log('\n[TEST 13: ACCESSIBILITY PREFERS-REDUCED-MOTION COMPLIANCE]');
+    await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }]);
+
+    const isReduced = await page.evaluate(() => {
+      return (window.MotionEngine && typeof window.MotionEngine.isReducedMotion === 'function')
+        ? window.MotionEngine.isReducedMotion()
+        : window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    });
+    console.log(`- Reduced motion detected by MotionEngine: ${isReduced}`);
+    assert.strictEqual(isReduced, true, 'MotionEngine.isReducedMotion() must be true under prefers-reduced-motion: reduce');
+
+    // Navigate to a view under reduced motion
+    await page.evaluate(() => { window.location.hash = '#read'; });
+    await page.waitForSelector('.dossier-reading', { timeout: 3000 });
+
+    const mountStyle = await page.evaluate(() => {
+      const mount = document.getElementById('workspace-mount');
+      return {
+        opacity: mount ? getComputedStyle(mount).opacity : null,
+        transform: mount ? getComputedStyle(mount).transform : null
+      };
+    });
+    console.log(`- Workspace mount style under reduced motion: opacity=${mountStyle.opacity}, transform=${mountStyle.transform}`);
+    assert.strictEqual(mountStyle.opacity, '1', 'Workspace mount opacity must be 1 under reduced motion');
+
+    // Screenshot 12: Reduced Motion
+    const shot12 = path.join(SCREENSHOTS_DIR, '12-reduced-motion-mode.png');
+    await page.screenshot({ path: shot12, fullPage: false });
+    console.log(`✓ Screenshot 12 saved: ${shot12}`);
+
+    // Reset media features to no-preference
+    await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'no-preference' }]);
+    const isNormal = await page.evaluate(() => {
+      return (window.MotionEngine && typeof window.MotionEngine.isReducedMotion === 'function')
+        ? window.MotionEngine.isReducedMotion()
+        : window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    });
+    assert.strictEqual(isNormal, false, 'MotionEngine.isReducedMotion() must be false under normal settings');
+    console.log('✓ prefers-reduced-motion compliance verified');
+
   } finally {
     await browser.close();
+    if (serverProcess) {
+      console.log('Tearing down local Vite preview server...');
+      try {
+        serverProcess.kill();
+      } catch (e) {}
+    }
   }
 
   // --------------------------------------------------------------------------
@@ -347,8 +484,8 @@ async function runBrowserQA() {
   assert.strictEqual(consoleErrors.length, 0, 'Must have 0 critical console errors');
   assert.strictEqual(networkFailures.length, 0, 'Must have 0 network request failures');
 
-  console.log('\n[PASS] All End-to-End Headless Browser QA tests passed cleanly with 100% compliance.');
-  console.log('10 visual regression screenshots successfully captured in web/screenshots/.');
+  console.log('\n[PASS] All 13 End-to-End Headless Browser QA tests passed cleanly with 100% compliance.');
+  console.log('12 visual regression screenshots successfully captured in web/screenshots/.');
   return 0;
 }
 

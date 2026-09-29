@@ -2,6 +2,7 @@ import { AudioSynthesizer } from './core/audio-synthesizer';
 import { CursorTracker } from './core/cursor-tracker';
 import { PerspectiveCanvas } from './core/perspective-canvas';
 import { Router, RouteId } from './core/router';
+import { MotionEngine } from './core/motion-engine';
 import { HeaderHUD } from './modules/header-hud';
 import { CornerCompass } from './modules/corner-compass';
 import { SkillTreeView } from './modules/skill-tree-view';
@@ -16,6 +17,9 @@ import { MissionLog } from './modules/mission-log';
 import { StorageManager } from './utils/storage';
 import { registerServiceWorker } from './core/pwa';
 import collocationsData from './assets/data/collocations.json';
+
+// Expose MotionEngine to window for automated headless testing & telemetry inspection
+(window as any).MotionEngine = MotionEngine;
 
 class App {
   private router: Router;
@@ -112,6 +116,7 @@ class App {
   }
 
   private handleRouteChange(route: RouteId): void {
+    MotionEngine.cancelAll();
     if (this.activeDossierHandle && typeof this.activeDossierHandle.teardown === 'function') {
       this.activeDossierHandle.teardown();
     }
@@ -169,6 +174,8 @@ class App {
       default:
         break;
     }
+
+    MotionEngine.fadeSlideIn(this.workspaceMount, 'up');
   }
 
   private bindKeyboardShortcuts(): void {
@@ -252,6 +259,7 @@ class App {
 
 // Bootstrap Application on DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
+  (window as any).MotionEngine = MotionEngine;
   new App();
   registerServiceWorker();
 });

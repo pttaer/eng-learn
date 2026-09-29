@@ -151,4 +151,8 @@ export class MotionEngine {
     }
     this.activeAnimations = [];
   }
+
+  public static getActiveAnimationCount(): number {
+    return this.activeAnimations.length;
+  }
 }
