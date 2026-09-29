@@ -13,18 +13,25 @@
 }
 
 html, body {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: var(--bg-canvas);
-  color: var(--ink-primary);
+  max-width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--bg-canvas, #fafaf9);
+  color: var(--ink-primary, #111111);
   font-family: var(--font-sans);
   font-size: var(--text-base);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  user-select: none;
-  cursor: none; /* Replaced by custom crosshair reticle */
+  user-select: text;
+  cursor: default; /* Snappy native OS pointer restored */
+  overscroll-behavior-y: auto;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* Custom Scrollbar */
@@ -44,11 +51,39 @@ html, body {
 /* Base Canvas Shell */
 #app {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  padding-top: max(12px, env(safe-area-inset-top, 0px));
+  padding-bottom: max(12px, env(safe-area-inset-bottom, 0px));
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* Reserved Slot Geometry: Zero Layout Shift on Dynamic Module Mounting */
+.dossier-workspace {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  position: relative;
+  contain: layout style;
+}
+
+.dossier-card-slot {
+  width: 100%;
+  min-height: clamp(420px, 58vh, 520px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  contain: layout size;
 }
 
 #canvas-container {
@@ -79,7 +114,8 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: var(--space-24);
+  padding: max(16px, env(safe-area-inset-top, 0px)) max(20px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left, 0px));
+  box-sizing: border-box;
 }
 
 /* Make interactive HUD elements clickable */
@@ -144,12 +180,85 @@ html, body {
   gap: var(--space-16);
 }
 
-/* Architectural Button Styling */
-.hud-btn {
+/* Master Volume HUD Cluster */
+.hud-volume-cluster {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  height: var(--touch-target-min, 44px);
+  padding: 0 var(--space-12);
+  border: var(--border-width) solid var(--ink-primary);
   background: var(--bg-canvas);
   color: var(--ink-primary);
-  border: var(--border-width) solid var(--ink-primary);
+  box-sizing: border-box;
+}
+
+.hud-volume-cluster .btn-sound-toggle {
+  background: transparent;
+  border: none;
+  color: var(--ink-primary);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: var(--space-4) 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hud-volume-cluster .btn-sound-toggle:hover {
+  text-decoration: underline;
+}
+
+.hud-volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 72px;
+  height: 2px;
+  background: var(--ink-primary);
+  outline: none;
+  cursor: pointer;
+}
+
+.hud-volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: var(--ink-primary);
+  border: 1px solid var(--bg-canvas);
+  cursor: pointer;
+}
+
+.hud-volume-slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: var(--ink-primary);
+  border: 1px solid var(--bg-canvas);
+  cursor: pointer;
+}
+
+.hud-volume-pct {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  min-width: 36px;
+  text-align: right;
+  color: var(--ink-primary);
+}
+
+/* Architectural Button Styling with 44px Minimum Hitboxes & Touch Cushion */
+.hud-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--touch-target-min, 44px);
+  min-height: var(--touch-target-min, 44px);
   padding: var(--space-8) var(--space-16);
+  border: var(--border-width) solid var(--ink-primary);
+  background: var(--bg-canvas);
+  color: var(--ink-primary);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   letter-spacing: 0.08em;
@@ -157,9 +266,19 @@ html, body {
   cursor: pointer;
   outline: none;
   transition: transform var(--duration-fast) var(--ease-snappy), background var(--duration-fast), color var(--duration-fast);
-  display: inline-flex;
-  align-items: center;
   gap: var(--space-8);
+  box-sizing: border-box;
+  touch-action: manipulation;
+}
+
+/* Touch cushion pseudo-element: Expands hit target on compact screens without changing visual geometry */
+.hud-btn::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  bottom: -6px;
+  left: -6px;
+  right: -6px;
 }
 
 .hud-btn:hover {
@@ -168,12 +287,21 @@ html, body {
 }
 
 .hud-btn:active {
-  transform: scale(0.98);
+  transform: translateY(1px) scale(0.98);
 }
 
 .hud-btn.active {
   background: var(--ink-primary);
   color: var(--ink-inverted);
+}
+
+/* Dual-Layer Coaxial Focus Ring for WCAG 2.2 AAA */
+.hud-btn:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #000000 !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 5px #ffffff !important;
 }
 
 /* Keyboard Shortcut Badge */
@@ -185,50 +313,34 @@ html, body {
   opacity: 0.85;
 }
 
-/* Corner HUD Brackets */
+/* Corner HUD Brackets - Hidden for calm human layout */
 .corner-bracket {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border: 1px solid var(--ink-primary);
-  pointer-events: none;
+  display: none;
 }
-
-.corner-tl { top: var(--space-12); left: var(--space-12); border-right: none; border-bottom: none; }
-.corner-tr { top: var(--space-12); right: var(--space-12); border-left: none; border-bottom: none; }
-.corner-bl { bottom: var(--space-12); left: var(--space-12); border-right: none; border-top: none; }
-.corner-br { bottom: var(--space-12); right: var(--space-12); border-left: none; border-top: none; }
 
 /* Workspace Mount Area */
 #workspace-mount {
-  position: absolute;
-  top: 72px;
-  left: 0;
+  position: relative;
   width: 100%;
-  height: calc(100vh - 120px);
+  min-height: calc(100dvh - 80px);
   z-index: var(--z-card-layer);
-  pointer-events: none;
+  pointer-events: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: var(--space-24);
+  justify-content: flex-start;
+  padding: var(--space-20) var(--space-16);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .workspace-active {
   pointer-events: auto !important;
 }
 
-/* Crosshair Reticle Cursor */
+/* Crosshair Reticle Cursor - Disabled in favor of native OS pointer */
 #custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 24px;
-  height: 24px;
-  pointer-events: none;
-  z-index: var(--z-cursor);
-  transform: translate(-50%, -50%);
-  transition: width var(--duration-micro), height var(--duration-micro);
+  display: none !important;
 }
 
 .cursor-dot {
@@ -299,5 +411,77 @@ html, body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   INVERTED VOID LENS (HIGH-FOCUS BLACK LIGHT MASK)
+   ========================================================================== */
+
+.void-lens-active {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.void-lens-active .card-face {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.08) !important;
+}
+
+.void-lens-active .hud-btn {
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.void-lens-active .hud-btn:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.void-lens-active .hud-brand-title,
+.void-lens-active .telemetry-label,
+.void-lens-active .telemetry-value,
+.void-lens-active .corner-bracket {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+@keyframes voidLensEngage {
+  0% {
+    filter: invert(0);
+  }
+  100% {
+    filter: invert(1);
+  }
+}
+
+.void-lens-transition {
+  animation: voidLensEngage 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Subpixel Seam Prevention & Hardware Compositor Layer Isolation */
+.card-face,
+.atomic-card-container,
+.dossier-workspace,
+.dossier-card-slot {
+  box-sizing: border-box;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Explicit PWA Standalone Display Overrides */
+@media all and (display-mode: standalone) {
+  body {
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  #app {
+    padding-top: max(20px, env(safe-area-inset-top, 0px));
+    padding-bottom: max(20px, env(safe-area-inset-bottom, 0px));
   }
 }

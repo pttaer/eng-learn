@@ -5,22 +5,33 @@
    ========================================================================== */
 
 :root {
-  /* Strict Binary Palette */
-  --bg-canvas: #ffffff;
+  /* Warm Paper & Deep Charcoal Ink Palette */
+  --bg-canvas: #fafaf9;
   --bg-surface: #ffffff;
   --bg-card: #ffffff;
-  --bg-inverted: #000000;
+  --bg-inverted: #111111;
+  --bg-paper: #fafaf9;
   
-  --ink-primary: #000000;
-  --ink-secondary: rgba(0, 0, 0, 0.78);
-  --ink-muted: rgba(0, 0, 0, 0.68);
-  --ink-inverted: #ffffff;
+  --ink-primary: #111111;
+  --ink-secondary: rgba(17, 17, 17, 0.78);
+  --ink-muted: rgba(17, 17, 17, 0.62);
+  --ink-inverted: #fafaf9;
+
+  /* Constellation & Star Accents */
+  --accent-gold: #ca8a04;
+  --accent-star: #eab308;
+  --accent-star-glow: rgba(234, 179, 8, 0.35);
 
   /* Architectural Borders & Lines */
-  --border-hairline: rgba(0, 0, 0, 0.12);
-  --border-subtle: rgba(0, 0, 0, 0.24);
-  --border-solid: #000000;
+  --border-hairline: rgba(17, 17, 17, 0.12);
+  --border-subtle: rgba(17, 17, 17, 0.24);
+  --border-solid: #111111;
   --border-width: 1px;
+
+  /* Touch Target & Ergonomics (WCAG 2.2 AAA & Fitts's Law) */
+  --touch-target-min: 44px;
+  --focus-ring-inner: #000000;
+  --focus-ring-outer: #ffffff;
 
   /* 8pt Spatial Scale & Hygiene Tokens */
   --space-2: 2px;
