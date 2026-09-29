@@ -99,6 +99,9 @@ class App {
   }
 
   private handleRouteChange(route: RouteId): void {
+    if (this.activeDossierHandle && typeof this.activeDossierHandle.teardown === 'function') {
+      this.activeDossierHandle.teardown();
+    }
     this.headerHud.updateTelemetry(route);
     this.workspaceMount.innerHTML = '';
     this.activeDossierHandle = null;
