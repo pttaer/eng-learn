@@ -146,7 +146,7 @@ export class SpeakingDossier {
       <div class="card-prompt-label">PROSODIC & PHONETIC TARGETS</div>
       <div style="margin-bottom: 12px; font-family: var(--font-sans); font-size: 14px;">
         <strong>Target Collocations to Activate:</strong>
-        <div style="font-family: var(--font-mono); font-size: 12px; background: #fafafa; border: 1px solid var(--border-hairline); padding: 8px; margin-top: 6px;">
+        <div style="font-family: var(--font-mono); font-size: 12px; background: #ffffff; border: 1px solid var(--border-hairline); padding: 8px; margin-top: 6px;">
           ${item.collocations}
         </div>
       </div>

@@ -155,7 +155,7 @@
 }
 
 .mission-task-item.task-checked {
-  background: #f8f8f8;
+  background: #ffffff;
   border-color: var(--ink-primary);
 }
 

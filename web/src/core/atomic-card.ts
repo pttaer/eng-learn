@@ -124,6 +124,13 @@ export class AtomicCard {
       doRate('again');
     });
 
+    // Card Body Click flips card (unless clicking on interactive controls)
+    frontBody.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      if (target.closest('button') || target.closest('textarea') || target.closest('input')) return;
+      doFlip();
+    });
+
     frontDock.querySelector('.dock-btn-flip')?.addEventListener('click', (e) => {
       e.stopPropagation();
       doFlip();
@@ -148,7 +155,7 @@ export class AtomicCard {
     backHeader.className = 'card-header-bar';
     backHeader.innerHTML = `
       <div class="card-meta-left">
-        <span>[RESOLUTION // VIETNAMESE & IPA]</span>
+        <span>[${config.pillar} // RESOLUTION]</span>
       </div>
       <div class="card-meta-right">
         <span>${config.indexStr}</span>
@@ -198,6 +205,13 @@ export class AtomicCard {
     backDock.querySelector('.dock-btn-good')?.addEventListener('click', (e) => {
       e.stopPropagation();
       doRate('good');
+    });
+
+    // Back Body Click flips card back (unless clicking on interactive controls)
+    backBody.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      if (target.closest('button') || target.closest('textarea') || target.closest('input')) return;
+      doFlip();
     });
 
     faceBack.appendChild(backHeader);

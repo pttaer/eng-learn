@@ -164,13 +164,13 @@ function runPerfectRetentionTest() {
   const cardId = 'card-perfect-test-001';
   let state = SRSEngine.createInitialState(cardId);
   const expectedProgression = [
-    { rep: 1, interval: 1, ef: 2.6 },
-    { rep: 2, interval: 6, ef: 2.7 },
-    { rep: 3, interval: 16, ef: 2.8 },   // round(6 * 2.7) = 16.2 -> 16
-    { rep: 4, interval: 45, ef: 2.9 },   // round(16 * 2.8) = 44.8 -> 45
-    { rep: 5, interval: 131, ef: 3.0 },  // round(45 * 2.9) = 130.5 -> 131
-    { rep: 6, interval: 393, ef: 3.1 },  // round(131 * 3.0) = 393
-    { rep: 7, interval: 1218, ef: 3.2 }  // round(393 * 3.1) = 1218.3 -> 1218
+    { rep: 1, interval: 1, ef: 2.5 },
+    { rep: 2, interval: 6, ef: 2.5 },
+    { rep: 3, interval: 15, ef: 2.5 },   // round(6 * 2.5) = 15
+    { rep: 4, interval: 38, ef: 2.5 },   // round(15 * 2.5) = 37.5 -> 38
+    { rep: 5, interval: 95, ef: 2.5 },   // round(38 * 2.5) = 95
+    { rep: 6, interval: 238, ef: 2.5 },  // round(95 * 2.5) = 237.5 -> 238
+    { rep: 7, interval: 595, ef: 2.5 }   // round(238 * 2.5) = 595
   ];
 
   for (let idx = 0; idx < expectedProgression.length; idx++) {
@@ -184,8 +184,8 @@ function runPerfectRetentionTest() {
   }
 
   console.log(`  Repetitions Steps : 1 -> 7 sequential successful recalls`);
-  console.log(`  Interval Ladder   : 1d -> 6d -> 16d -> 45d -> 131d -> 393d -> 1218d`);
-  console.log(`  Ease Factor Rise  : 2.50 -> 3.20 (+0.10 ease bonus per review)`);
+  console.log(`  Interval Ladder   : 1d -> 6d -> 15d -> 38d -> 95d -> 238d -> 595d`);
+  console.log(`  Ease Factor Stable: 2.50 (Canonical SM-2 Grade 4 retains constant EF)`);
   console.log(`  Exponential Growth: Validated. Compound growth rate matches SM-2 spec`);
   console.log(`  Verification      : [PASS] Zero lapses, deterministic curve verified`);
 }

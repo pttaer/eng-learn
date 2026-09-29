@@ -79,8 +79,7 @@ export class SRSEngine {
         state.interval = Math.round(state.interval * state.easeFactor);
       }
       state.repetitions += 1;
-      // Slight ease bonus for consistent mastery
-      state.easeFactor = Number((state.easeFactor + 0.1).toFixed(2));
+      // Grade 4 ('good'): Ease Factor remains unchanged in SM-2 formula (ΔEF = 0)
       state.dueDate = now + (state.interval * ONE_DAY_MS);
     }
 
@@ -103,16 +102,14 @@ export class SRSEngine {
       return state.dueDate <= now;
     });
 
-    // Sort by most overdue first, unseen cards next
-    dueList.sort((a, b) => {
-      const stateA = cardStates[a.id];
-      const stateB = cardStates[b.id];
-      const dueA = stateA ? stateA.dueDate : 0;
-      const dueB = stateB ? stateB.dueDate : 0;
-      return dueA - dueB;
-    });
+    // Split into overdue review cards vs. unseen new cards
+    const overdue = dueList.filter(item => !!cardStates[item.id]);
+    const unseen = dueList.filter(item => !cardStates[item.id]);
 
-    return dueList.slice(0, limit);
+    // Sort overdue: oldest due date first
+    overdue.sort((a, b) => cardStates[a.id].dueDate - cardStates[b.id].dueDate);
+
+    return [...overdue, ...unseen].slice(0, limit);
   }
 
   /**

@@ -27,10 +27,16 @@ export class LexiconDossier {
   }
 
   private filterCards(): void {
-    let list = collocationsData as CollocationItem[];
+    const rawDeck = collocationsData as CollocationItem[];
+    let list: CollocationItem[] = [];
 
-    if (this.activeCategory !== 'ALL') {
-      list = list.filter(item => item.category === this.activeCategory);
+    if (this.activeCategory === 'DUE') {
+      const states = StorageManager.loadState().cardStates;
+      list = SRSEngine.getDueCards(rawDeck, states, 20);
+    } else if (this.activeCategory !== 'ALL') {
+      list = rawDeck.filter(item => item.category === this.activeCategory);
+    } else {
+      list = [...rawDeck];
     }
 
     if (this.searchQuery.trim().length > 0) {
@@ -49,6 +55,7 @@ export class LexiconDossier {
     this.container.innerHTML = `
       <div class="dossier-control-bar">
         <div class="dossier-tabs">
+          <button class="hud-btn filter-tab ${this.activeCategory === 'DUE' ? 'active' : ''}" data-cat="DUE">[⚡ SRS DUE BATCH (20)]</button>
           <button class="hud-btn filter-tab ${this.activeCategory === 'ALL' ? 'active' : ''}" data-cat="ALL">[ALL 1000]</button>
           <button class="hud-btn filter-tab ${this.activeCategory === 'EVERYDAY' ? 'active' : ''}" data-cat="EVERYDAY">[EVERYDAY]</button>
           <button class="hud-btn filter-tab ${this.activeCategory === 'BUSINESS' ? 'active' : ''}" data-cat="BUSINESS">[BUSINESS]</button>

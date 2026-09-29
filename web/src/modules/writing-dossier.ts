@@ -111,7 +111,7 @@ export class WritingDossier {
       <div style="margin-top: 8px; display: flex; justify-content: flex-end;">
         <button class="hud-btn btn-run-diff" style="padding: 4px 12px; font-size: 11px;">[ VERIFY DIFF ]</button>
       </div>
-      <div class="diff-output-console" style="margin-top: 8px; min-height: 48px; max-height: 80px; overflow-y: auto; font-family: var(--font-mono); font-size: 11px; border: 1px solid var(--border-hairline); padding: 6px; background: #fafafa;">
+      <div class="diff-output-console" style="margin-top: 8px; min-height: 48px; max-height: 80px; overflow-y: auto; font-family: var(--font-mono); font-size: 11px; border: 1px solid var(--border-hairline); padding: 6px; background: #ffffff;">
         <span style="color: var(--ink-muted);">[DIFF CONSOLE]: Click Verify to compare against original text.</span>
       </div>
     `;
