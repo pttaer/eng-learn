@@ -161,6 +161,9 @@ export class SpeakingDossier {
     // Wire Timer buttons
     frontEl.querySelector('.btn-timer-toggle')?.addEventListener('click', (e) => {
       e.stopPropagation();
+      if (this.audioCtx && this.audioCtx.state === 'suspended') {
+        this.audioCtx.resume().catch(() => {});
+      }
       this.toggleTimer(frontEl);
     });
 
@@ -283,6 +286,9 @@ export class SpeakingDossier {
         this.micStream = stream;
         const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
         this.audioCtx = new AudioCtx();
+        if (this.audioCtx.state === 'suspended') {
+          this.audioCtx.resume().catch(() => {});
+        }
         const source = this.audioCtx.createMediaStreamSource(stream);
         this.analyser = this.audioCtx.createAnalyser();
         this.analyser.fftSize = 128;

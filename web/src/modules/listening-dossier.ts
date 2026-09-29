@@ -1,6 +1,7 @@
 import { AtomicCard } from '../core/atomic-card';
 import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
+import { AudioSynthesizer } from '../core/audio-synthesizer';
 import listeningData from '../assets/data/listening.json';
 
 export class ListeningDossier {
@@ -88,13 +89,7 @@ export class ListeningDossier {
     `;
 
     const speak = (rate: number) => {
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-        const ut = new SpeechSynthesisUtterance(item.audioText);
-        ut.lang = 'en-US';
-        ut.rate = rate;
-        window.speechSynthesis.speak(ut);
-      }
+      AudioSynthesizer.speak(item.audioText, rate);
     };
 
     frontEl.querySelector('.btn-play-audio')?.addEventListener('click', (e) => {

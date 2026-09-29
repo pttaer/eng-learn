@@ -42,15 +42,9 @@ export class AtomicCard {
 
     let isFlipped = false;
 
-    // --- Helper: Pronunciation via Web Speech API ---
+    // --- Helper: Pronunciation via Web Speech API with dialect fallback ---
     const speakText = (text: string) => {
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'en-US';
-        utterance.rate = 0.95;
-        window.speechSynthesis.speak(utterance);
-      }
+      AudioSynthesizer.speak(text, 0.95);
     };
 
     // --- Flip Action ---

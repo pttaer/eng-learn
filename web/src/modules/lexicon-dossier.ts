@@ -177,6 +177,12 @@ export class LexiconDossier {
   public handleGlobalKey(key: string): boolean {
     if (!this.currentCardHandle) return false;
 
+    // Do not capture hotkeys if user is typing in search input
+    const active = document.activeElement;
+    if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA')) {
+      return false;
+    }
+
     if (key === ' ' || key === 'Space') {
       this.currentCardHandle.flip();
       return true;

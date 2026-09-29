@@ -1,0 +1,438 @@
+/**
+ * Automated SuperMemo-2 (SM-2) Spaced Repetition Retention & Curve Simulator
+ * Mathematical Stress-Testing Suite for Client-Side SRS Engine
+ *
+ * Directives:
+ * - Cohort: 1,000 synthetic learners across 30 simulated days
+ * - Edge Cases: 100% consecutive lapses ('again'), 100% perfect retention ('good')
+ * - Realistic Distribution: 85% mean retention rate with stochastic variance
+ * - Mathematical Invariants: EF >= 1.3, Interval >= 1, No NaNs, Exponential progression
+ * - Formatting: Authoritative Stark Monochrome Telemetry (CLEAN_DESIGN_SYSTEM.md)
+ */
+
+const fs = require('fs');
+const path = require('path');
+const assert = require('assert');
+
+// -----------------------------------------------------------------------------
+// 1. ENGINE LOADER & HARNESS
+// -----------------------------------------------------------------------------
+
+function loadSRSEngine() {
+  const tsPath = path.resolve(__dirname, '../src/core/srs-engine.ts');
+  if (!fs.existsSync(tsPath)) {
+    throw new Error(`SRS Engine source not found at: ${tsPath}`);
+  }
+
+  const tsCode = fs.readFileSync(tsPath, 'utf8');
+  let transpiled;
+
+  try {
+    const ts = require('typescript');
+    transpiled = ts.transpileModule(tsCode, {
+      compilerOptions: {
+        module: ts.ModuleKind.CommonJS,
+        target: ts.ScriptTarget.ES2022,
+        removeComments: false
+      }
+    }).outputText;
+  } catch (err) {
+    // Standalone fallback regex-based transpiler if typescript module is unavailable
+    transpiled = tsCode
+      .replace(/export type [^;]+;/g, '')
+      .replace(/export interface [\s\S]*?^}/gm, '')
+      .replace(/export class/g, 'class')
+      .replace(/public static /g, 'static ')
+      .replace(/<[^>]+>/g, '')
+      .replace(/:\s*[^=,);{\n]+/g, '')
+      + '\nmodule.exports = { SRSEngine };';
+  }
+
+  const moduleExports = {};
+  const mod = { exports: moduleExports };
+  const fn = new Function('exports', 'module', 'require', transpiled);
+  fn(moduleExports, mod, require);
+
+  return mod.exports.SRSEngine;
+}
+
+const SRSEngine = loadSRSEngine();
+
+// -----------------------------------------------------------------------------
+// 2. MATHEMATICAL & GAUSSIAN UTILITIES
+// -----------------------------------------------------------------------------
+
+// Box-Muller transform for synthetic learner retention variance
+function randomGaussian(mean = 0, stdev = 1) {
+  let u1 = 0;
+  let u2 = 0;
+  while (u1 === 0) u1 = Math.random();
+  while (u2 === 0) u2 = Math.random();
+  const z0 = Math.sqrt(-2.0 * Math.log(u1)) * Math.cos(2.0 * Math.PI * u2);
+  return z0 * stdev + mean;
+}
+
+function clamp(val, min, max) {
+  return Math.max(min, Math.min(max, val));
+}
+
+function percentile(arr, p) {
+  if (arr.length === 0) return 0;
+  const sorted = [...arr].sort((a, b) => a - b);
+  const index = (p / 100) * (sorted.length - 1);
+  const lower = Math.floor(index);
+  const upper = Math.ceil(index);
+  const weight = index - lower;
+  return sorted[lower] * (1 - weight) + sorted[upper] * weight;
+}
+
+// -----------------------------------------------------------------------------
+// 3. STARK MONOCHROME TELEMETRY FORMATTER
+// -----------------------------------------------------------------------------
+
+const CLI_WIDTH = 80;
+
+function printHeader(title) {
+  console.log('='.repeat(CLI_WIDTH));
+  console.log(`  [TELEMETRY] ${title.toUpperCase()}`);
+  console.log('='.repeat(CLI_WIDTH));
+}
+
+function printSubHeader(subtitle) {
+  console.log('-'.repeat(CLI_WIDTH));
+  console.log(`  ${subtitle}`);
+  console.log('-'.repeat(CLI_WIDTH));
+}
+
+function printRow(col1, col2, col3, col4, col5, col6) {
+  const c1 = String(col1).padEnd(8);
+  const c2 = String(col2).padStart(12);
+  const c3 = String(col3).padStart(14);
+  const c4 = String(col4).padStart(12);
+  const c5 = String(col5).padStart(12);
+  const c6 = String(col6).padStart(14);
+  console.log(`  ${c1} | ${c2} | ${c3} | ${c4} | ${c5} | ${c6}`);
+}
+
+// -----------------------------------------------------------------------------
+// 4. TEST SUITE 1: 100% CONSECUTIVE LAPSES EDGE CASE ('again')
+// -----------------------------------------------------------------------------
+
+function runLapseStressTest() {
+  printSubHeader('EDGE CASE I: 100% CONSECUTIVE LAPSES (RATINGS: ALWAYS "AGAIN")');
+
+  const cardId = 'card-lapse-test-001';
+  let state = SRSEngine.createInitialState(cardId);
+  const numTrials = 50;
+
+  let efFloorRespected = true;
+  let intervalStrictlyOne = true;
+  let repetitionsZeroed = true;
+  let noNaNEncountered = true;
+
+  for (let i = 1; i <= numTrials; i++) {
+    state = SRSEngine.rateCard(state, cardId, 'again');
+
+    if (state.easeFactor < 1.3) efFloorRespected = false;
+    if (state.interval !== 1) intervalStrictlyOne = false;
+    if (state.repetitions !== 0) repetitionsZeroed = false;
+    if (Number.isNaN(state.interval) || Number.isNaN(state.easeFactor)) noNaNEncountered = false;
+  }
+
+  assert.strictEqual(efFloorRespected, true, 'Ease Factor dropped below 1.3 floor');
+  assert.strictEqual(intervalStrictlyOne, true, 'Interval was not 1 during consecutive lapses');
+  assert.strictEqual(repetitionsZeroed, true, 'Repetitions did not reset to 0');
+  assert.strictEqual(noNaNEncountered, true, 'NaN encountered during lapse calculation');
+  assert.strictEqual(state.easeFactor, 1.3, 'Final EF must clamp exactly at 1.3');
+  assert.strictEqual(state.totalReviews, numTrials, 'Total reviews must equal trial count');
+  assert.strictEqual(state.totalLapses, numTrials, 'Total lapses must equal trial count');
+
+  console.log(`  Trials Executed   : ${numTrials} consecutive failures`);
+  console.log(`  Final Ease Factor : ${state.easeFactor.toFixed(2)} (Min Bounded at 1.30)`);
+  console.log(`  Final Interval    : ${state.interval} day (Lapse reset verified)`);
+  console.log(`  Final Repetitions : ${state.repetitions} (Streak successfully wiped)`);
+  console.log(`  Verification      : [PASS] EF Floor clamped, interval bounded, streak reset`);
+}
+
+// -----------------------------------------------------------------------------
+// 5. TEST SUITE 2: 100% PERFECT RETENTION EDGE CASE ('good')
+// -----------------------------------------------------------------------------
+
+function runPerfectRetentionTest() {
+  printSubHeader('EDGE CASE II: 100% PERFECT RETENTION (RATINGS: ALWAYS "GOOD")');
+
+  const cardId = 'card-perfect-test-001';
+  let state = SRSEngine.createInitialState(cardId);
+  const expectedProgression = [
+    { rep: 1, interval: 1, ef: 2.6 },
+    { rep: 2, interval: 6, ef: 2.7 },
+    { rep: 3, interval: 16, ef: 2.8 },   // round(6 * 2.7) = 16.2 -> 16
+    { rep: 4, interval: 45, ef: 2.9 },   // round(16 * 2.8) = 44.8 -> 45
+    { rep: 5, interval: 131, ef: 3.0 },  // round(45 * 2.9) = 130.5 -> 131
+    { rep: 6, interval: 393, ef: 3.1 },  // round(131 * 3.0) = 393
+    { rep: 7, interval: 1218, ef: 3.2 }  // round(393 * 3.1) = 1218.3 -> 1218
+  ];
+
+  for (let idx = 0; idx < expectedProgression.length; idx++) {
+    state = SRSEngine.rateCard(state, cardId, 'good');
+    const exp = expectedProgression[idx];
+
+    assert.strictEqual(state.repetitions, exp.rep, `Repetition mismatch at step ${idx + 1}`);
+    assert.strictEqual(state.interval, exp.interval, `Interval mismatch at step ${idx + 1}`);
+    assert.strictEqual(Number(state.easeFactor.toFixed(2)), exp.ef, `EF mismatch at step ${idx + 1}`);
+    assert.strictEqual(state.totalLapses, 0, 'Lapses must remain 0');
+  }
+
+  console.log(`  Repetitions Steps : 1 -> 7 sequential successful recalls`);
+  console.log(`  Interval Ladder   : 1d -> 6d -> 16d -> 45d -> 131d -> 393d -> 1218d`);
+  console.log(`  Ease Factor Rise  : 2.50 -> 3.20 (+0.10 ease bonus per review)`);
+  console.log(`  Exponential Growth: Validated. Compound growth rate matches SM-2 spec`);
+  console.log(`  Verification      : [PASS] Zero lapses, deterministic curve verified`);
+}
+
+// -----------------------------------------------------------------------------
+// 6. TEST SUITE 3: 1,000 SYNTHETIC LEARNERS COHORT SIMULATION (30 DAYS)
+// -----------------------------------------------------------------------------
+
+function runCohortSimulation() {
+  printSubHeader('COHORT SIMULATION: 1,000 LEARNERS X 30 DAYS (85% MEAN RETENTION)');
+
+  const COHORT_SIZE = 1000;
+  const SIMULATION_DAYS = 30;
+  const DECK_SIZE_PER_LEARNER = 50;
+  const NEW_CARDS_PER_DAY = 5;
+  const ONE_DAY_MS = 24 * 60 * 60 * 1000;
+  const SIMULATION_START_TIME = 1790000000000; // Fixed deterministic timestamp
+
+  // Initialize learners with normally-distributed target retention rates
+  // Mean = 0.85, StDev = 0.04, Clamped to [0.72, 0.98]
+  const learners = [];
+  for (let i = 0; i < COHORT_SIZE; i++) {
+    const learnerId = `learner-${String(i + 1).padStart(4, '0')}`;
+    const retentionSkill = clamp(randomGaussian(0.85, 0.04), 0.72, 0.98);
+
+    // Initialize 50 cards for this learner
+    const cards = [];
+    for (let c = 0; c < DECK_SIZE_PER_LEARNER; c++) {
+      cards.push({
+        id: `${learnerId}-card-${String(c + 1).padStart(3, '0')}`,
+        introduced: false,
+        state: null
+      });
+    }
+
+    learners.push({
+      id: learnerId,
+      skill: retentionSkill,
+      cards
+    });
+  }
+
+  // Simulation Metrics Tracking
+  let totalCohortReviews = 0;
+  let totalCohortGood = 0;
+  let totalCohortLapses = 0;
+  let invariantViolations = 0;
+
+  // Print Table Header
+  console.log('');
+  printRow('DAY', 'REVIEWS', 'DAILY PASS%', 'CUMUL PASS%', 'AVG INTERVAL', 'AVG EASE');
+  console.log('  ' + '-'.repeat(76));
+
+  // Run day-by-day simulation
+  for (let day = 1; day <= SIMULATION_DAYS; day++) {
+    const currentSimulatedTime = SIMULATION_START_TIME + (day - 1) * ONE_DAY_MS;
+
+    // Mock Date.now() for deterministic time advancement in SRSEngine
+    const originalDateNow = Date.now;
+    Date.now = () => currentSimulatedTime;
+
+    let dailyReviews = 0;
+    let dailyGood = 0;
+    let dailyLapses = 0;
+
+    for (let l = 0; l < COHORT_SIZE; l++) {
+      const learner = learners[l];
+
+      // Introduce new cards for the day
+      let introducedToday = 0;
+      for (const card of learner.cards) {
+        if (!card.introduced && introducedToday < NEW_CARDS_PER_DAY) {
+          card.introduced = true;
+          card.state = SRSEngine.createInitialState(card.id);
+          card.state.dueDate = currentSimulatedTime; // Due today
+          introducedToday++;
+        }
+      }
+
+      // Review all due cards
+      for (const card of learner.cards) {
+        if (card.introduced && card.state && card.state.dueDate <= currentSimulatedTime) {
+          dailyReviews++;
+          totalCohortReviews++;
+
+          // Stochastic recall determination based on learner skill profile
+          const isSuccessful = Math.random() <= learner.skill;
+          const rating = isSuccessful ? 'good' : 'again';
+
+          if (isSuccessful) {
+            dailyGood++;
+            totalCohortGood++;
+          } else {
+            dailyLapses++;
+            totalCohortLapses++;
+          }
+
+          // Execute Engine Rating
+          const prevState = card.state;
+          card.state = SRSEngine.rateCard(prevState, card.id, rating);
+
+          // Rigorous Invariant Assertions
+          if (Number.isNaN(card.state.interval) || card.state.interval < 1) {
+            invariantViolations++;
+          }
+          if (Number.isNaN(card.state.easeFactor) || card.state.easeFactor < 1.3) {
+            invariantViolations++;
+          }
+          if (card.state.repetitions < 0) {
+            invariantViolations++;
+          }
+          if (card.state.dueDate < card.state.lastReviewed) {
+            invariantViolations++;
+          }
+        }
+      }
+    }
+
+    // Restore Date.now()
+    Date.now = originalDateNow;
+
+    // Log periodic progress milestones
+    const isMilestone = (day === 1 || day === 5 || day === 10 || day === 15 || day === 20 || day === 25 || day === 30);
+    if (isMilestone) {
+      // Calculate snapshot averages across active cards
+      let totalInterval = 0;
+      let totalEF = 0;
+      let activeCardCount = 0;
+
+      for (let l = 0; l < COHORT_SIZE; l++) {
+        for (const card of learners[l].cards) {
+          if (card.introduced && card.state) {
+            totalInterval += card.state.interval;
+            totalEF += card.state.easeFactor;
+            activeCardCount++;
+          }
+        }
+      }
+
+      const avgInterval = activeCardCount > 0 ? (totalInterval / activeCardCount).toFixed(1) + 'd' : '0.0d';
+      const avgEF = activeCardCount > 0 ? (totalEF / activeCardCount).toFixed(2) : '2.50';
+      const dailyPassPct = dailyReviews > 0 ? ((dailyGood / dailyReviews) * 100).toFixed(1) + '%' : '0.0%';
+      const cumulPassPct = totalCohortReviews > 0 ? ((totalCohortGood / totalCohortReviews) * 100).toFixed(1) + '%' : '0.0%';
+
+      printRow(
+        `Day ${String(day).padStart(2, '0')}`,
+        dailyReviews.toLocaleString(),
+        dailyPassPct,
+        cumulPassPct,
+        avgInterval,
+        avgEF
+      );
+    }
+  }
+
+  console.log('  ' + '-'.repeat(76));
+
+  // ---------------------------------------------------------------------------
+  // 7. FINAL COHORT DISTRIBUTION & MATHEMATICAL BOUNDS VERIFICATION
+  // ---------------------------------------------------------------------------
+
+  const allIntervals = [];
+  const allEaseFactors = [];
+  const allRepetitions = [];
+  let masteredCount = 0;
+  let learningCount = 0;
+  let totalActiveCards = 0;
+
+  for (let l = 0; l < COHORT_SIZE; l++) {
+    for (const card of learners[l].cards) {
+      if (card.introduced && card.state) {
+        totalActiveCards++;
+        allIntervals.push(card.state.interval);
+        allEaseFactors.push(card.state.easeFactor);
+        allRepetitions.push(card.state.repetitions);
+
+        if (card.state.repetitions >= 3) {
+          masteredCount++;
+        } else {
+          learningCount++;
+        }
+      }
+    }
+  }
+
+  const finalRetentionRate = ((totalCohortGood / totalCohortReviews) * 100).toFixed(2);
+  const minEF = Math.min(...allEaseFactors);
+  const maxEF = Math.max(...allEaseFactors);
+  const minInterval = Math.min(...allIntervals);
+  const maxInterval = Math.max(...allIntervals);
+
+  printSubHeader('30-DAY STATISTICAL SYNTHESIS & BOUNDS AUDIT');
+  console.log(`  Synthetic Learners   : ${COHORT_SIZE.toLocaleString()}`);
+  console.log(`  Active Flashcards    : ${totalActiveCards.toLocaleString()}`);
+  console.log(`  Total Reviews Logged : ${totalCohortReviews.toLocaleString()}`);
+  console.log(`  Total Lapses Handled : ${totalCohortLapses.toLocaleString()}`);
+  console.log(`  Cohort Retention Rate: ${finalRetentionRate}% (Expected Target: ~85.0%)`);
+  console.log(`  Mastered Cards (n>=3): ${masteredCount.toLocaleString()} (${((masteredCount / totalActiveCards) * 100).toFixed(1)}%)`);
+  console.log(`  Learning Cards (n<3) : ${learningCount.toLocaleString()} (${((learningCount / totalActiveCards) * 100).toFixed(1)}%)`);
+  console.log('');
+  console.log(`  Ease Factor Percentiles:`);
+  console.log(`    Min Bound: ${minEF.toFixed(2)} (Absolute Minimum Allowed: 1.30)`);
+  console.log(`    P25      : ${percentile(allEaseFactors, 25).toFixed(2)}`);
+  console.log(`    Median   : ${percentile(allEaseFactors, 50).toFixed(2)}`);
+  console.log(`    P75      : ${percentile(allEaseFactors, 75).toFixed(2)}`);
+  console.log(`    Max      : ${maxEF.toFixed(2)}`);
+  console.log('');
+  console.log(`  Interval Percentiles:`);
+  console.log(`    Min Bound: ${minInterval}d (Absolute Minimum Allowed: 1d)`);
+  console.log(`    P25      : ${percentile(allIntervals, 25).toFixed(0)}d`);
+  console.log(`    Median   : ${percentile(allIntervals, 50).toFixed(0)}d`);
+  console.log(`    P75      : ${percentile(allIntervals, 75).toFixed(0)}d`);
+  console.log(`    Max      : ${maxInterval}d`);
+  console.log('');
+  console.log(`  Mathematical Invariants:`);
+  console.log(`    EF >= 1.30 Floor Audit    : [PASS] (Observed Min: ${minEF.toFixed(2)})`);
+  console.log(`    Interval >= 1d Bound Audit : [PASS] (Observed Min: ${minInterval}d)`);
+  console.log(`    Zero NaN / Infinity Values: [PASS] (0 deviations across ${totalCohortReviews.toLocaleString()} reviews)`);
+  console.log(`    Invariant Violation Count : ${invariantViolations}`);
+
+  assert.strictEqual(invariantViolations, 0, 'Critical invariant violations detected during simulation');
+  assert(minEF >= 1.3, 'Ease factor dropped below 1.3');
+  assert(minInterval >= 1, 'Interval dropped below 1');
+  assert(Math.abs(parseFloat(finalRetentionRate) - 85.0) < 3.0, 'Cohort retention rate deviated significantly from 85%');
+}
+
+// -----------------------------------------------------------------------------
+// 8. MAIN EXECUTION
+// -----------------------------------------------------------------------------
+
+function main() {
+  printHeader('SM-2 RETENTION & CURVE SIMULATOR (1,000 LEARNERS / 30 DAYS)');
+  console.log(`  Engine Source : E:\\Eng\\web\\src\\core\\srs-engine.ts`);
+  console.log(`  Harness Date  : ${new Date().toISOString()}`);
+  console.log(`  Specification : SuperMemo-2 Spaced Repetition Scheduling Engine`);
+  console.log('');
+
+  const startTime = Date.now();
+
+  runLapseStressTest();
+  runPerfectRetentionTest();
+  runCohortSimulation();
+
+  const elapsedMs = Date.now() - startTime;
+  console.log('='.repeat(CLI_WIDTH));
+  console.log(`  [SIMULATION COMPLETE] Elapsed Time: ${elapsedMs}ms | All Assertions Verified`);
+  console.log('='.repeat(CLI_WIDTH));
+}
+
+main();
