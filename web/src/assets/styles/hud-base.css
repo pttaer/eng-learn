@@ -53,12 +53,16 @@ html, body {
   position: relative;
   width: 100%;
   max-width: 100%;
+  height: 100vh;
+  height: 100dvh;
   min-height: 100dvh;
+  max-height: 100dvh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding-top: max(12px, env(safe-area-inset-top, 0px));
-  padding-bottom: max(12px, env(safe-area-inset-bottom, 0px));
+  overflow: hidden;
+  padding-top: max(10px, env(safe-area-inset-top, 0px));
+  padding-bottom: max(10px, env(safe-area-inset-bottom, 0px));
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
@@ -94,12 +98,23 @@ html, body {
   height: 100%;
   z-index: var(--z-canvas-bg);
   pointer-events: auto;
+  transition: opacity var(--duration-fast) var(--ease-snappy);
 }
 
 #canvas-2d {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+/* Fullscreen Confetti Particle Celebration Canvas */
+#confettiCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100005;
 }
 
 /* HUD Overlay Layer */
@@ -113,9 +128,10 @@ html, body {
   pointer-events: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: max(16px, env(safe-area-inset-top, 0px)) max(20px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left, 0px));
+  justify-content: flex-start;
+  padding: max(10px, env(safe-area-inset-top, 0px)) max(18px, env(safe-area-inset-right, 0px)) max(10px, env(safe-area-inset-bottom, 0px)) max(18px, env(safe-area-inset-left, 0px));
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Make interactive HUD elements clickable */
@@ -322,16 +338,23 @@ button:focus-visible,
 #workspace-mount {
   position: relative;
   width: 100%;
-  min-height: calc(100dvh - 80px);
+  flex: 1 1 auto;
+  min-height: 0;
   z-index: var(--z-card-layer);
   pointer-events: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: var(--space-20) var(--space-16);
+  padding: var(--space-12) var(--space-16);
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+#workspace-mount.tree-mode {
+  padding: 4px 16px 6px 16px;
+  overflow-y: hidden;
+  height: 100%;
 }
 
 .workspace-active {

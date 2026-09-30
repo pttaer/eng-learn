@@ -15,7 +15,9 @@ export type SoundEffectType =
   | 'ping'
   | 'tick'
   | 'gateway-hover'
-  | 'streak-fire';
+  | 'streak-fire'
+  | 'tour-step'
+  | 'tour-fanfare';
 
 export type SoundEffect = SoundEffectType;
 
@@ -284,6 +286,14 @@ export class AudioSynthesizer {
         break;
       case 'gateway-hover':
         this.playGatewayResonance(t);
+        break;
+      case 'tour-step':
+        this.playTourStep(t);
+        HapticEngine.trigger('light');
+        break;
+      case 'tour-fanfare':
+        this.playTourFanfare(t);
+        HapticEngine.trigger('success');
         break;
       default:
         break;
@@ -585,6 +595,64 @@ export class AudioSynthesizer {
     } catch {
       // Ignored if browser blocks background oscillator
     }
+  }
+
+  /**
+   * Tour Step: Ascending micro-tone blip (587.33Hz -> 880Hz, 65ms).
+   */
+  private static playTourStep(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(587.33, t);
+    osc.frequency.exponentialRampToValueAtTime(880.0, t + 0.055);
+
+    gain.gain.setValueAtTime(this.EPSILON, t);
+    gain.gain.exponentialRampToValueAtTime(0.24, t + 0.003);
+    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.06);
+
+    osc.connect(gain);
+    gain.connect(this.masterGain);
+
+    osc.start(t);
+    osc.stop(t + 0.065);
+  }
+
+  /**
+   * Tour Fanfare: 4-note ascending major arpeggio (C5 -> E5 -> G5 -> C6, Just Intonation, 480ms).
+   */
+  private static playTourFanfare(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+
+    const notes = [
+      { freq: 523.25, delay: 0.0, dur: 0.22, peak: 0.22 },      // C5
+      { freq: 654.06, delay: 0.08, dur: 0.22, peak: 0.24 },     // E5 (5/4)
+      { freq: 784.88, delay: 0.16, dur: 0.24, peak: 0.26 },     // G5 (3/2)
+      { freq: 1046.50, delay: 0.24, dur: 0.24, peak: 0.30 }     // C6 (2/1)
+    ];
+
+    notes.forEach(({ freq, delay, dur, peak }) => {
+      const osc = this.ctx!.createOscillator();
+      const gain = this.ctx!.createGain();
+
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(freq, t + delay);
+
+      const nStart = t + delay;
+      const nEnd = nStart + dur;
+
+      gain.gain.setValueAtTime(this.EPSILON, nStart);
+      gain.gain.exponentialRampToValueAtTime(peak, nStart + 0.005);
+      gain.gain.exponentialRampToValueAtTime(this.EPSILON, nEnd - 0.005);
+
+      osc.connect(gain);
+      gain.connect(this.masterGain!);
+
+      osc.start(nStart);
+      osc.stop(nEnd);
+    });
   }
 
   // =========================================================================

@@ -16,10 +16,14 @@ import { GrammarDossier } from './modules/grammar-dossier';
 import { MissionLog } from './modules/mission-log';
 import { StorageManager } from './utils/storage';
 import { registerServiceWorker } from './core/pwa';
+import { ParticleCanvas } from './core/particle-canvas';
+import { SpotlightTour } from './core/spotlight-tour';
 import collocationsData from './assets/data/collocations.json';
 
-// Expose MotionEngine to window for automated headless testing & telemetry inspection
+// Expose MotionEngine, ParticleCanvas and SpotlightTour to window for automated headless testing & telemetry inspection
 (window as any).MotionEngine = MotionEngine;
+(window as any).ParticleCanvas = ParticleCanvas;
+(window as any).SpotlightTour = SpotlightTour;
 
 class App {
   private router: Router;
@@ -49,6 +53,11 @@ class App {
 
     const canvasEl = document.getElementById('canvas-2d') as HTMLCanvasElement;
     this.perspectiveCanvas = new PerspectiveCanvas(canvasEl, collocationsData);
+
+    const confettiEl = document.getElementById('confettiCanvas') as HTMLCanvasElement;
+    if (confettiEl) {
+      ParticleCanvas.init(confettiEl);
+    }
 
     // 2. Initialize HUD Components
     this.headerHud = new HeaderHUD();
@@ -82,6 +91,15 @@ class App {
     this.router = new Router();
     this.bindNavigation();
     this.bindKeyboardShortcuts();
+
+    // 5. Automatic First-Run Spotlight Onboarding Tour Prompt
+    if (!localStorage.getItem('eng_onboarding_completed') && !SpotlightTour.isCompleted()) {
+      setTimeout(() => {
+        if (!localStorage.getItem('eng_onboarding_completed') && !SpotlightTour.isCompleted() && !document.getElementById('tour-welcome-toast')) {
+          this.showWelcomeToast();
+        }
+      }, 700);
+    }
   }
 
   private bindNavigation(): void {
@@ -122,20 +140,24 @@ class App {
     }
     this.headerHud.updateTelemetry(route);
     this.workspaceMount.innerHTML = '';
+    this.workspaceMount.classList.remove('tree-mode');
     this.activeDossierHandle = null;
 
     if (route === 'singularity') {
+      this.perspectiveCanvas.setVisible(true);
       this.workspaceMount.classList.remove('workspace-active');
       this.cornerCompass.setVisible(false);
       return;
     }
 
-    // Active workspace in foreground
+    // Active workspace in foreground: hide background canvas to eliminate overlapping collision
+    this.perspectiveCanvas.setVisible(false);
     this.workspaceMount.classList.add('workspace-active');
     this.cornerCompass.setVisible(route !== 'tree');
 
     switch (route) {
       case 'tree':
+        this.workspaceMount.classList.add('tree-mode');
         this.workspaceMount.appendChild(this.skillTreeView.render());
         this.activeDossierHandle = this.skillTreeView;
         break;
@@ -254,6 +276,44 @@ class App {
     });
 
     document.body.appendChild(modal);
+  }
+
+  private showWelcomeToast(): void {
+    const existing = document.getElementById('tour-welcome-toast');
+    if (existing) existing.remove();
+
+    const toast = document.createElement('div');
+    toast.id = 'tour-welcome-toast';
+    toast.className = 'tour-welcome-toast interactive';
+    toast.innerHTML = `
+      <div class="toast-title">
+        <span>🎮</span>
+        <span>ORIENTATION ADVISORY</span>
+      </div>
+      <p class="toast-desc">
+        Welcome to English Singularity. Would you like a 60-second interactive guided tour of your command telemetry, skill tree, and habit loop?
+      </p>
+      <div class="toast-actions">
+        <button class="hud-btn btn-toast-dismiss" style="padding: 4px 10px; font-size: 11px;">
+          DISMISS
+        </button>
+        <button class="hud-btn btn-toast-start" style="padding: 4px 12px; font-size: 11px; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
+          START TOUR →
+        </button>
+      </div>
+    `;
+
+    toast.querySelector('.btn-toast-dismiss')?.addEventListener('click', () => {
+      SpotlightTour.setCompleted(true);
+      toast.remove();
+    });
+
+    toast.querySelector('.btn-toast-start')?.addEventListener('click', () => {
+      toast.remove();
+      SpotlightTour.start(true);
+    });
+
+    document.body.appendChild(toast);
   }
 }
 

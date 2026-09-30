@@ -1,6 +1,7 @@
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { SRSEngine } from '../core/srs-engine';
+import { SpotlightTour } from '../core/spotlight-tour';
 
 export class HeaderHUD {
   private element: HTMLElement;
@@ -51,7 +52,8 @@ export class HeaderHUD {
         </div>
       </div>
 
-      <div class="hud-actions" style="display: flex; gap: 12px; align-items: center;">
+      <div class="hud-actions header-actions" style="display: flex; gap: 12px; align-items: center;">
+        <button class="hud-btn btn-launch-tour" title="Launch Interactive Game Tour" aria-label="Launch Game Tour">[ 🎮 TOUR ]</button>
         <button class="hud-btn btn-sound-toggle" title="Toggle audio mute" aria-label="Toggle audio mute">[ ${isMuted ? '🔇 MUTED' : '🔊 SOUND'} ]</button>
         <button class="hud-btn btn-settings" title="Settings & Data Management" aria-label="Settings">[ ⚙ SETTINGS ]</button>
       </div>
@@ -61,6 +63,11 @@ export class HeaderHUD {
   }
 
   private bindEvents(): void {
+    const tourBtn = this.element.querySelector('.btn-launch-tour') as HTMLButtonElement | null;
+    tourBtn?.addEventListener('click', () => {
+      SpotlightTour.start(true);
+    });
+
     const soundBtn = this.element.querySelector('.btn-sound-toggle') as HTMLButtonElement | null;
     soundBtn?.addEventListener('click', () => {
       const muted = AudioSynthesizer.toggleMute();
@@ -100,6 +107,9 @@ export class HeaderHUD {
         </p>
 
         <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;">
+          <button class="hud-btn btn-restart-tour" style="padding: 12px; justify-content: center; font-weight: 600; color: var(--accent-gold);">
+            [ 🎮 RE-RUN GAME ONBOARDING TOUR ]
+          </button>
           <button class="hud-btn btn-backup-export" style="padding: 12px; justify-content: center; font-weight: 600;">
             [ 📥 EXPORT PROGRESS BACKUP (JSON) ]
           </button>
@@ -116,6 +126,11 @@ export class HeaderHUD {
     `;
 
     document.body.appendChild(modal);
+
+    modal.querySelector('.btn-restart-tour')?.addEventListener('click', () => {
+      modal.remove();
+      SpotlightTour.start(true);
+    });
 
     modal.querySelector('.btn-modal-close')?.addEventListener('click', () => {
       modal.remove();
