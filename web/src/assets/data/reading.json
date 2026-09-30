@@ -1,6 +1,6 @@
 {
   "title": "Intensive Reading & Contextual Sentence Mining Dossier",
-  "pedagogy": "4-Pass Intensive Deconstruction & i+1 Spaced Repetition Mining (Krashen Hypothesis & Syntactic Reverse Engineering)",
+  "pedagogy": "4-Pass Intensive Deconstruction & i+1 Spaced Repetition Mining",
   "articles": [
     {
       "id": "reading-art-1",
@@ -89,7 +89,7 @@
         ],
         "pass3SentenceMining": [
           {
-            "id": "mine-art1-1",
+            "id": "mine-reading-art-1-1",
             "targetWord": "epistemic",
             "partOfSpeech": "adjective",
             "ipa": "/ˌep.ɪˈstiː.mɪk/",
@@ -105,7 +105,7 @@
             "etymology": "Greek episteme (knowledge, understanding) from epistasthai (to know how)."
           },
           {
-            "id": "mine-art1-2",
+            "id": "mine-reading-art-1-2",
             "targetWord": "pernicious",
             "partOfSpeech": "adjective",
             "ipa": "/pəˈnɪʃ.əs/",
@@ -120,7 +120,7 @@
             "etymology": "Latin perniciosus (destructive), from pernicies (ruin, destruction)."
           },
           {
-            "id": "mine-art1-3",
+            "id": "mine-reading-art-1-3",
             "targetWord": "veracity",
             "partOfSpeech": "noun",
             "ipa": "/vəˈræs.ə.ti/",
@@ -135,7 +135,7 @@
             "etymology": "Latin veracitas from verax (truthful), from verus (true)."
           },
           {
-            "id": "mine-art1-4",
+            "id": "mine-reading-art-1-4",
             "targetWord": "obviate",
             "partOfSpeech": "verb",
             "ipa": "/ˈɒb.vi.eɪt/",
@@ -244,7 +244,7 @@
         ],
         "pass3SentenceMining": [
           {
-            "id": "mine-art2-1",
+            "id": "mine-reading-art-2-1",
             "targetWord": "subvocalization",
             "partOfSpeech": "noun",
             "ipa": "/ˌsʌb.vəʊ.kəl.aɪˈzeɪ.ʃən/",
@@ -259,7 +259,7 @@
             "etymology": "Prefix sub- (under) + vocalize (utter sound, Latin vocalis)."
           },
           {
-            "id": "mine-art2-2",
+            "id": "mine-reading-art-2-2",
             "targetWord": "scaffolding",
             "partOfSpeech": "noun",
             "ipa": "/ˈskæf.əl.dɪŋ/",
@@ -274,7 +274,7 @@
             "etymology": "Old French eschafaut (viewing platform, scaffold)."
           },
           {
-            "id": "mine-art2-3",
+            "id": "mine-reading-art-2-3",
             "targetWord": "engram",
             "partOfSpeech": "noun",
             "ipa": "/ˈen.ɡræm/",
@@ -289,7 +289,7 @@
             "etymology": "Greek en (in) + gramma (letter, that which is written)."
           },
           {
-            "id": "mine-art2-4",
+            "id": "mine-reading-art-2-4",
             "targetWord": "subordinate",
             "partOfSpeech": "adjective / verb",
             "ipa": "/səˈbɔː.dɪ.nət/",
@@ -398,7 +398,7 @@
         ],
         "pass3SentenceMining": [
           {
-            "id": "mine-art3-1",
+            "id": "mine-reading-art-3-1",
             "targetWord": "conflate",
             "partOfSpeech": "verb",
             "ipa": "/kənˈfleɪt/",
@@ -413,7 +413,7 @@
             "etymology": "Latin conflat- (blown together), from con- (together) + flare (to blow)."
           },
           {
-            "id": "mine-art3-2",
+            "id": "mine-reading-art-3-2",
             "targetWord": "insidious",
             "partOfSpeech": "adjective",
             "ipa": "/ɪnˈsɪd.i.əs/",
@@ -428,7 +428,7 @@
             "etymology": "Latin insidiosus, from insidiae (ambush, plot)."
           },
           {
-            "id": "mine-art3-3",
+            "id": "mine-reading-art-3-3",
             "targetWord": "residue",
             "partOfSpeech": "noun",
             "ipa": "/ˈrez.ɪ.djuː/",
@@ -443,7 +443,7 @@
             "etymology": "Old French residu, from Latin residuum (that which remains)."
           },
           {
-            "id": "mine-art3-4",
+            "id": "mine-reading-art-3-4",
             "targetWord": "germinate",
             "partOfSpeech": "verb",
             "ipa": "/ˈdʒɜː.mɪ.neɪt/",

@@ -89,7 +89,7 @@ function compileGrammar() {
           let val = m[2].trim();
           if (val.startsWith('`') && val.endsWith('`')) val = val.slice(1, -1);
           if (key === 'ID') item.id = val;
-          else if (key === 'Mode') item.mode = val;
+          else if (key === 'Mode') item.mode = (val === 'SYNTACTIC_REPAIR') ? 'SYNTACTIC_PRECISION' : val;
           else if (key === 'Level') item.level = parseInt(val, 10);
           else if (key === 'Prompt') item.promptSentence = val;
           else if (key === 'Transformation') item.targetTransformation = val;
@@ -144,6 +144,14 @@ function compileVocabulary() {
           else if (key === 'Suffix') item.breakdown.suffix = val;
           else if (key === 'Derivatives') item.breakdown.derivationalFamily = val.split(',').map(s => s.trim());
           else if (key === 'Morphology') item.breakdown.morphologyAnalysis = val;
+          else if (key === 'CEFR Rank') item.breakdown.cefrRank = val;
+          else if (key === 'Collocates') item.breakdown.collocates = val;
+          else if (key === 'Synonyms') item.breakdown.synonyms = val.split(',').map(s => s.trim());
+          else if (key === 'Register') item.breakdown.register = val;
+          else if (key === 'Verb') item.breakdown.verb = val;
+          else if (key === 'Particle') item.breakdown.particle = val;
+          else if (key === 'Semantic Archetype') item.breakdown.semanticArchetype = val;
+          else if (key === 'Particle Logic') item.breakdown.particleLogic = val;
           else if (key === 'Remind Candidate') item.isRemindCandidate = (val.toLowerCase() === 'true');
         }
       });
@@ -152,6 +160,8 @@ function compileVocabulary() {
   });
 
   if (allItems.length > 0) {
+    const modeOrder = { ROOT_FORGE: 1, CEFR_ASCENT: 2, PARTICLE_LAB: 3 };
+    allItems.sort((a, b) => (modeOrder[a.mode] || 99) - (modeOrder[b.mode] || 99) || a.id.localeCompare(b.id, undefined, { numeric: true }));
     fs.writeFileSync(path.join(DATA_DIR, 'vocabulary.json'), JSON.stringify(allItems, null, 2), 'utf8');
     console.log(`[COMPILE] vocabulary.json: ${allItems.length} items`);
   }
@@ -319,7 +329,7 @@ function compileReading() {
     }
 
     // Extract Sentence Mining
-    const mineMatch = body.match(/##\s+Sentence Mining\r?\n([\s\S]*)$/);
+    const mineMatch = body.match(/##\s+Sentence Mining\r?\n([\s\S]*?)(?=\r?\n##\s+Synthesis|$)/);
     if (mineMatch) {
       const mBody = mineMatch[1];
       const cards = mBody.split(/###\s+/).slice(1);
@@ -355,10 +365,25 @@ function compileReading() {
       });
     }
 
+    // Extract Synthesis (Pass 4)
+    const synthMatch = body.match(/##\s+Synthesis\r?\n([\s\S]*)$/);
+    if (synthMatch) {
+      const sText = synthMatch[1];
+      const synth = { modelPrécis: '', incorporatedVocabulary: [], syntacticReconstruction: '' };
+      const pM = sText.match(/-\s+\*\*(?:Model Précis|Model Precis)\*\*:\s*(.*)/);
+      if (pM) synth.modelPrécis = pM[1].trim();
+      const vM = sText.match(/-\s+\*\*Incorporated Vocabulary\*\*:\s*(.*)/);
+      if (vM) synth.incorporatedVocabulary = vM[1].split(',').map(s => s.trim());
+      const rM = sText.match(/-\s+\*\*Syntactic Reconstruction\*\*:\s*(.*)/);
+      if (rM) synth.syntacticReconstruction = rM[1].trim();
+      article.fourPassProtocol.pass4Synthesis = synth;
+    }
+
     readingData.articles.push(article);
   });
 
   if (readingData.articles.length > 0) {
+    readingData.articles.sort((a, b) => a.id.localeCompare(b.id));
     fs.writeFileSync(path.join(DATA_DIR, 'reading.json'), JSON.stringify(readingData, null, 2), 'utf8');
     console.log(`[COMPILE] reading.json: ${readingData.articles.length} articles`);
   }

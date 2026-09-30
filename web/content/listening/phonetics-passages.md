@@ -34,17 +34,14 @@
 
 ## 3. Active Transcription Protocol (3-Pass)
 
-### Pass 1: undefined
+### Pass 1: Gist Capture
 - **Focus**: Macro meaning, 1.0x playback, no pauses. Write 3 bullet summary.
-- **Action**: undefined
 
-### Pass 2: undefined
+### Pass 2: Micro-Verbatim Transcription
 - **Focus**: Loop 5-8 second chunks, 0.8x-1.0x. Type verbatim text.
-- **Action**: undefined
 
-### Pass 3: undefined
+### Pass 3: Phonetic Gap Analysis
 - **Focus**: Compare against transcript, mark red highlights for elision/linking.
-- **Action**: undefined
 
 ## 4. Structured Dataset
 

@@ -1,9 +1,9 @@
 [
   {
+    "title": "Negative Inversion with 'Seldom'",
     "id": "gram-inv-1",
     "mode": "INVERSION_EMPHASIS",
     "level": 1,
-    "title": "Negative Inversion with 'Seldom'",
     "promptSentence": "The executive team seldom realized how vulnerable their supply chain had become.",
     "targetTransformation": "Seldom did the executive team realize how vulnerable their supply chain had become.",
     "grammaticalCue": "Fronting the negative frequency adverb 'seldom' triggers subject-auxiliary inversion.",
@@ -13,10 +13,10 @@
     "exemplarContext": "Seldom did the board intervene in day-to-day algorithmic trading executions unless predetermined risk thresholds were breached."
   },
   {
+    "title": "Negative Inversion with 'Rarely'",
     "id": "gram-inv-2",
     "mode": "INVERSION_EMPHASIS",
     "level": 1,
-    "title": "Negative Inversion with 'Rarely'",
     "promptSentence": "Central banks rarely adjust benchmark lending rates without prior forward guidance.",
     "targetTransformation": "Rarely do central banks adjust benchmark lending rates without prior forward guidance.",
     "grammaticalCue": "Fronting 'rarely' requires present auxiliary 'do' before plural subject 'central banks'.",
@@ -26,10 +26,10 @@
     "exemplarContext": "Rarely do early-stage biotech startups achieve profitability prior to Phase III clinical trials."
   },
   {
+    "title": "Correlative Inversion with 'Hardly... when'",
     "id": "gram-inv-3",
     "mode": "INVERSION_EMPHASIS",
     "level": 1,
-    "title": "Correlative Inversion with 'Hardly... when'",
     "promptSentence": "The lead engineer had hardly deployed the hotfix when the secondary database crashed.",
     "targetTransformation": "Hardly had the lead engineer deployed the hotfix when the secondary database crashed.",
     "grammaticalCue": "Negative time adverb 'hardly' at the front inverts the past perfect auxiliary 'had'.",
@@ -39,10 +39,10 @@
     "exemplarContext": "Hardly had the regulatory mandate taken effect when arbitrageurs identified legal loopholes."
   },
   {
+    "title": "Conditional Inversion Type 1 ('Should...')",
     "id": "gram-inv-4",
     "mode": "INVERSION_EMPHASIS",
     "level": 1,
-    "title": "Conditional Inversion Type 1 ('Should...')",
     "promptSentence": "If you encounter any anomalous discrepancies in the audit log, notify security immediately.",
     "targetTransformation": "Should you encounter any anomalous discrepancies in the audit log, notify security immediately.",
     "grammaticalCue": "Omit 'if' and invert modal auxiliary 'should' to the front in conditional clauses.",
@@ -52,10 +52,10 @@
     "exemplarContext": "Should market volatility exceed five standard deviations, circuit breakers automatically halt trading."
   },
   {
+    "title": "It-Cleft Sentence for Subject Focus",
     "id": "gram-inv-5",
     "mode": "INVERSION_EMPHASIS",
     "level": 1,
-    "title": "It-Cleft Sentence for Subject Focus",
     "promptSentence": "Systemic misalignment of economic incentives caused the subprime mortgage meltdown.",
     "targetTransformation": "It was systemic misalignment of economic incentives that caused the subprime mortgage meltdown.",
     "grammaticalCue": "Wrap focal subject inside 'It was [Subject] that [Predicate]' cleft syntax.",
@@ -65,10 +65,10 @@
     "exemplarContext": "It was reckless leverage rather than technological failure that precipitated the exchange's collapse."
   },
   {
+    "title": "Negative Inversion with 'Not only... but also'",
     "id": "gram-inv-6",
     "mode": "INVERSION_EMPHASIS",
     "level": 2,
-    "title": "Negative Inversion with 'Not only... but also'",
     "promptSentence": "The new framework not only halved query latencies, but it also reduced server energy consumption.",
     "targetTransformation": "Not only did the new framework halve query latencies, but it also reduced server energy consumption.",
     "grammaticalCue": "Fronting 'Not only' forces auxiliary inversion in the first coordinate clause.",
@@ -78,10 +78,10 @@
     "exemplarContext": "Not only did the court overturn the administrative injunction, but it also assessed punitive damages against the petitioner."
   },
   {
+    "title": "Conditional Inversion Type 2 ('Were...')",
     "id": "gram-inv-7",
     "mode": "INVERSION_EMPHASIS",
     "level": 2,
-    "title": "Conditional Inversion Type 2 ('Were...')",
     "promptSentence": "If the consortium were to withdraw funding, the infrastructure project would stall indefinitely.",
     "targetTransformation": "Were the consortium to withdraw funding, the infrastructure project would stall indefinitely.",
     "grammaticalCue": "Omit 'if' and invert subjunctive copula 'were' with infinitive complement.",
@@ -91,10 +91,10 @@
     "exemplarContext": "Were sovereign bond yields to spike unpredictably, refinancing costs across municipalities would double."
   },
   {
+    "title": "Wh-Cleft / Pseudo-Cleft with 'What...'",
     "id": "gram-inv-8",
     "mode": "INVERSION_EMPHASIS",
     "level": 2,
-    "title": "Wh-Cleft / Pseudo-Cleft with 'What...'",
     "promptSentence": "We fundamentally need an impartial oversight committee with statutory subpoena power.",
     "targetTransformation": "What we fundamentally need is an impartial oversight committee with statutory subpoena power.",
     "grammaticalCue": "Convert sentence to pseudo-cleft with relative free clause 'What we need is...'.",
@@ -104,10 +104,10 @@
     "exemplarContext": "What institutional investors crave during macroeconomic turbulence is predictability rather than heroic intervention."
   },
   {
+    "title": "Prepositional Phrase Fronting with Full Inversion",
     "id": "gram-inv-9",
     "mode": "INVERSION_EMPHASIS",
     "level": 2,
-    "title": "Prepositional Phrase Fronting with Full Inversion",
     "promptSentence": "A massive archive of encrypted state correspondence lay beneath the limestone citadel.",
     "targetTransformation": "Beneath the limestone citadel lay a massive archive of encrypted state correspondence.",
     "grammaticalCue": "Front spatial prepositional phrase; invert full lexical intransitive verb before subject.",
@@ -117,10 +117,10 @@
     "exemplarContext": "Across the negotiating table sat three veteran diplomats determined to resist territorial concessions."
   },
   {
+    "title": "Inversion with 'Under no circumstances'",
     "id": "gram-inv-10",
     "mode": "INVERSION_EMPHASIS",
     "level": 2,
-    "title": "Inversion with 'Under no circumstances'",
     "promptSentence": "Employees must not disclose unreleased fiscal projections to third-party analysts under any circumstances.",
     "targetTransformation": "Under no circumstances must employees disclose unreleased fiscal projections to third-party analysts.",
     "grammaticalCue": "Negative prepositional phrase 'Under no circumstances' fronted with modal inversion.",
@@ -130,10 +130,10 @@
     "exemplarContext": "Under no circumstances should production credentials be committed to public code repositories."
   },
   {
+    "title": "Conditional Inversion Type 3 ('Had...')",
     "id": "gram-inv-11",
     "mode": "INVERSION_EMPHASIS",
     "level": 3,
-    "title": "Conditional Inversion Type 3 ('Had...')",
     "promptSentence": "If the intelligence analysts had synthesized the intercepted telemetry earlier, the attack might have been averted.",
     "targetTransformation": "Had the intelligence analysts synthesized the intercepted telemetry earlier, the attack might have been averted.",
     "grammaticalCue": "Omit 'if' and invert past perfect auxiliary 'had' before complex subject noun phrase.",
@@ -143,10 +143,10 @@
     "exemplarContext": "Had the committee audited off-balance-sheet vehicles, the liquidity crisis would have been arrested."
   },
   {
+    "title": "Negative Inversion with 'Not until...'",
     "id": "gram-inv-12",
     "mode": "INVERSION_EMPHASIS",
     "level": 3,
-    "title": "Negative Inversion with 'Not until...'",
     "promptSentence": "The public did not understand the systemic ecological ramifications of microplastics until peer-reviewed longitudinal studies emerged.",
     "targetTransformation": "Not until peer-reviewed longitudinal studies emerged did the public understand the systemic ecological ramifications of microplastics.",
     "grammaticalCue": "Front 'Not until [time clause]'; invert auxiliary 'did' in the subsequent main clause.",
@@ -156,10 +156,10 @@
     "exemplarContext": "Not until the forensic ledger was subpoenaed did regulators comprehend the magnitude of the embezzlement."
   },
   {
+    "title": "Comparative / Degree Inversion with 'So / Such... that'",
     "id": "gram-inv-13",
     "mode": "INVERSION_EMPHASIS",
     "level": 3,
-    "title": "Comparative / Degree Inversion with 'So / Such... that'",
     "promptSentence": "The macroeconomic shock was so severe that sovereign bond yields plunged to historic lows.",
     "targetTransformation": "So severe was the macroeconomic shock that sovereign bond yields plunged to historic lows.",
     "grammaticalCue": "Front intensive adjective phrase 'So severe'; invert copular verb 'was' before subject.",
@@ -169,10 +169,10 @@
     "exemplarContext": "So entrenched was the bureaucratic inertia that three successive cabinet reshuffles failed to enforce reform."
   },
   {
+    "title": "All-Cleft & Reverse Wh-Cleft",
     "id": "gram-inv-14",
     "mode": "INVERSION_EMPHASIS",
     "level": 3,
-    "title": "All-Cleft & Reverse Wh-Cleft",
     "promptSentence": "The founder simply requested a fair arbitration hearing before an independent magistrate.",
     "targetTransformation": "All the founder requested was a fair arbitration hearing before an independent magistrate.",
     "grammaticalCue": "Structure sentence with restrictive universal cleft 'All [Subject] [Verb] was [Noun Phrase]'.",
@@ -182,10 +182,10 @@
     "exemplarContext": "All the dissident scientists demanded was an unredacted publication of the clinical trial datasets."
   },
   {
+    "title": "Fronted Participial Phrase with Subject-Verb Inversion",
     "id": "gram-inv-15",
     "mode": "INVERSION_EMPHASIS",
     "level": 3,
-    "title": "Fronted Participial Phrase with Subject-Verb Inversion",
     "promptSentence": "The fundamental question of algorithmic sovereignty lies embedded within these dense legislative amendments.",
     "targetTransformation": "Embedded within these dense legislative amendments lies the fundamental question of algorithmic sovereignty.",
     "grammaticalCue": "Front participle phrase 'Embedded within...'; invert unaccusative verb 'lies' before subject.",
@@ -195,10 +195,10 @@
     "exemplarContext": "Concealed beneath layers of corporate shell companies was the beneficial owner of the sanctioned assets."
   },
   {
+    "title": "Mandative Subjunctive with 'Demand that'",
     "id": "gram-subj-1",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 1,
-    "title": "Mandative Subjunctive with 'Demand that'",
     "promptSentence": "The regulatory commission demands that the exchange operator halts trading immediately.",
     "targetTransformation": "The regulatory commission demands that the exchange operator halt trading immediately.",
     "grammaticalCue": "Verbs of demand require base bare form of the verb in the dependent 'that' clause.",
@@ -208,10 +208,10 @@
     "exemplarContext": "The treaty demands that each signatory state submit annual emissions inventories to verification inspectors."
   },
   {
+    "title": "Mandative Subjunctive with 'Recommend that'",
     "id": "gram-subj-2",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 1,
-    "title": "Mandative Subjunctive with 'Recommend that'",
     "promptSentence": "Independent auditors recommend that management revises their revenue recognition schedules.",
     "targetTransformation": "Independent auditors recommend that management revise their revenue recognition schedules.",
     "grammaticalCue": "Verb 'recommend' triggers subjunctive bare infinitive 'revise' regardless of subject number.",
@@ -221,10 +221,10 @@
     "exemplarContext": "Physicians recommend that every adult patient undergo preventive coronary artery screening after age forty."
   },
   {
+    "title": "Unreal Past with 'Wish + Past Simple'",
     "id": "gram-subj-3",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 1,
-    "title": "Unreal Past with 'Wish + Past Simple'",
     "promptSentence": "The lead architect regrets that the system relies on a monolithic architecture.",
     "targetTransformation": "The lead architect wishes the system did not rely on a monolithic architecture.",
     "grammaticalCue": "Express counterfactual present desire using 'wish + past tense' to signal distance from reality.",
@@ -234,10 +234,10 @@
     "exemplarContext": "Economists wish central bank governors possessed more granular tools than blunt interest rate levers."
   },
   {
+    "title": "Unreal Past with 'Wish + Past Perfect'",
     "id": "gram-subj-4",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 1,
-    "title": "Unreal Past with 'Wish + Past Perfect'",
     "promptSentence": "The founders regret that they sold fifty-one percent of equity during the seed round.",
     "targetTransformation": "The founders wish they had not sold fifty-one percent of equity during the seed round.",
     "grammaticalCue": "Past regret requires past-on-past counterfactual tense 'had + past participle'.",
@@ -247,10 +247,10 @@
     "exemplarContext": "Diplomats wished both belligerents had ratified the ceasefire before artillery strikes resumed."
   },
   {
+    "title": "Fixed Subjunctive Idiom 'Be that as it may'",
     "id": "gram-subj-5",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 1,
-    "title": "Fixed Subjunctive Idiom 'Be that as it may'",
     "promptSentence": "Even if that is true, we must nevertheless enforce the statutory compliance sanctions.",
     "targetTransformation": "Be that as it may, we must nevertheless enforce the statutory compliance sanctions.",
     "grammaticalCue": "Use archaic formulaic subjunctive clause 'Be that as it may' as a concessive discourse transition.",
@@ -260,10 +260,10 @@
     "exemplarContext": "Be that as it may, historical precedents cannot excuse deliberate accounting fraud."
   },
   {
+    "title": "Impersonal Mandative 'It is imperative that...'",
     "id": "gram-subj-6",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 2,
-    "title": "Impersonal Mandative 'It is imperative that...'",
     "promptSentence": "It is imperative that every flight controller remains vigilant during severe weather diversions.",
     "targetTransformation": "It is imperative that every flight controller remain vigilant during severe weather diversions.",
     "grammaticalCue": "Adjectives of necessity ('imperative', 'vital') govern bare base verbs in 'that' complements.",
@@ -273,10 +273,10 @@
     "exemplarContext": "It is imperative that the server cluster maintain nine-nines uptime throughout the holiday shopping spike."
   },
   {
+    "title": "Impersonal Mandative 'It is essential that...'",
     "id": "gram-subj-7",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 2,
-    "title": "Impersonal Mandative 'It is essential that...'",
     "promptSentence": "It is essential that the forensic analyst documents the chain of custody for all hard drives.",
     "targetTransformation": "It is essential that the forensic analyst document the chain of custody for all hard drives.",
     "grammaticalCue": "Adjective 'essential' strips third-person '-s' in formal subjunctive clause.",
@@ -286,10 +286,10 @@
     "exemplarContext": "It is essential that sovereign wealth funds disclose political risk exposures to international credit rating agencies."
   },
   {
+    "title": "Unreal Comparison with 'As if / As though'",
     "id": "gram-subj-8",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 2,
-    "title": "Unreal Comparison with 'As if / As though'",
     "promptSentence": "The CEO acted like the antitrust lawsuit was an irrelevant nuisance.",
     "targetTransformation": "The CEO acted as if the antitrust lawsuit were an irrelevant nuisance.",
     "grammaticalCue": "Formal counterfactual comparison replaces informal 'like' with 'as if' and subjunctive 'were'.",
@@ -299,10 +299,10 @@
     "exemplarContext": "The authoritarian regime conducted elections as though popular consent were genuinely being solicited."
   },
   {
+    "title": "Idiomatic Unreal Structure 'It is high time that...'",
     "id": "gram-subj-9",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 2,
-    "title": "Idiomatic Unreal Structure 'It is high time that...'",
     "promptSentence": "The legislature should finally modernize antiquated consumer privacy legislation.",
     "targetTransformation": "It is high time the legislature modernized antiquated consumer privacy legislation.",
     "grammaticalCue": "'It is high time' takes past simple verb to express overdue action with gentle reproach.",
@@ -312,10 +312,10 @@
     "exemplarContext": "It is high time corporate governance frameworks acknowledged the existential risks of unaligned automation."
   },
   {
+    "title": "Formulaic Subjunctive 'Come what may'",
     "id": "gram-subj-10",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 2,
-    "title": "Formulaic Subjunctive 'Come what may'",
     "promptSentence": "Whatever happens, the scientific expedition will press on toward the subglacial lake.",
     "targetTransformation": "Come what may, the scientific expedition will press on toward the subglacial lake.",
     "grammaticalCue": "Replace concessive conditional clause with classic formulaic subjunctive 'Come what may'.",
@@ -325,10 +325,10 @@
     "exemplarContext": "Come what may, the central bank must defend currency parity against speculative short attacks."
   },
   {
+    "title": "Passive Mandative Subjunctive 'Be done'",
     "id": "gram-subj-11",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 3,
-    "title": "Passive Mandative Subjunctive 'Be done'",
     "promptSentence": "The ethical charter decrees that the training dataset is purged of unconsented biometrics.",
     "targetTransformation": "The ethical charter decrees that the training dataset be purged of unconsented biometrics.",
     "grammaticalCue": "Combine passive voice with mandative subjunctive: 'be + past participle'.",
@@ -338,10 +338,10 @@
     "exemplarContext": "International law stipulates that prisoners of war be treated with humane dignity under all conditions."
   },
   {
+    "title": "Mixed Conditional (Past Cause -> Present Result)",
     "id": "gram-subj-12",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 3,
-    "title": "Mixed Conditional (Past Cause -> Present Result)",
     "promptSentence": "Because the developers did not architect modular microservices in 2021, the application is unmaintainable today.",
     "targetTransformation": "Had the developers architected modular microservices in 2021, the application would not be unmaintainable today.",
     "grammaticalCue": "Blend inverted past perfect condition ('Had... architected') with present modal result ('would be').",
@@ -351,10 +351,10 @@
     "exemplarContext": "Had regulators capped subprime securitization ratios in 2005, the global financial system would enjoy greater stability today."
   },
   {
+    "title": "Mixed Conditional (Permanent Trait -> Past Counterfactual)",
     "id": "gram-subj-13",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 3,
-    "title": "Mixed Conditional (Permanent Trait -> Past Counterfactual)",
     "promptSentence": "Because the lead negotiator is not fluent in Mandarin, she misunderstood the subtle contractual nuance yesterday.",
     "targetTransformation": "Were the lead negotiator fluent in Mandarin, she would not have misunderstood the subtle contractual nuance yesterday.",
     "grammaticalCue": "Invert present subjunctive 'Were [Subject] [Adj]' linked to past modal perfect result 'would have [V3]'.",
@@ -364,10 +364,10 @@
     "exemplarContext": "Were sovereign debt markets less liquid, yesterday's treasury auction would have triggered widespread bond market panic."
   },
   {
+    "title": "Concessive Subjunctive 'Suffice it to say'",
     "id": "gram-subj-14",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 3,
-    "title": "Concessive Subjunctive 'Suffice it to say'",
     "promptSentence": "It is enough to say that the subsequent investigation revealed catastrophic governance failures.",
     "targetTransformation": "Suffice it to say that the subsequent investigation revealed catastrophic governance failures.",
     "grammaticalCue": "Use classical formulaic subjunctive 'Suffice it to say' for concise rhetorical summary.",
@@ -377,10 +377,10 @@
     "exemplarContext": "Suffice it to say that the trial testimony permanently dismantled the defense counsel's alibi."
   },
   {
+    "title": "Negative Subjunctive with 'Lest... (should) be'",
     "id": "gram-subj-15",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 3,
-    "title": "Negative Subjunctive with 'Lest... (should) be'",
     "promptSentence": "The treasury diversified dollar reserves so that they would not be caught unprepared by sanctions.",
     "targetTransformation": "The treasury diversified dollar reserves lest they be caught unprepared by sanctions.",
     "grammaticalCue": "Replace 'so that... not' with negative subordinator 'lest' governing bare subjunctive 'be caught'.",
@@ -390,10 +390,10 @@
     "exemplarContext": "Engineers added physical thermal breakers lest the reactor core suffer uncontained coolant runaway."
   },
   {
+    "title": "Present Participle Clause for Simultaneous Action",
     "id": "gram-cond-1",
     "mode": "CLAUSAL_CONDENSATION",
     "level": 1,
-    "title": "Present Participle Clause for Simultaneous Action",
     "promptSentence": "The lead investigator reviewed the transaction logs and he discovered three unauthorized wire transfers.",
     "targetTransformation": "Reviewing the transaction logs, the lead investigator discovered three unauthorized wire transfers.",
     "grammaticalCue": "Condense coordinated clause into fronted present participial adjunct ('Reviewing...').",
@@ -403,10 +403,10 @@
     "exemplarContext": "Scanning the horizon through infrared binoculars, the coast guard spotted the adrift life raft."
   },
   {
+    "title": "Past Participle Clause for Passive Condition",
     "id": "gram-cond-2",
     "mode": "CLAUSAL_CONDENSATION",
     "level": 1,
-    "title": "Past Participle Clause for Passive Condition",
     "promptSentence": "When the algorithm was trained on biased historical data, it systematically penalized minority applicants.",
     "targetTransformation": "Trained on biased historical data, the algorithm systematically penalized minority applicants.",
     "grammaticalCue": "Strip conjunction and passive copula, opening sentence directly with past participle phrase.",
@@ -416,10 +416,10 @@
     "exemplarContext": "Deprived of access to foreign capital markets, the sanctioned regime turned to domestic bond monetization."
   },
   {
+    "title": "Reduced Relative Clause with Present Participle",
     "id": "gram-cond-3",
     "mode": "CLAUSAL_CONDENSATION",
     "level": 1,
-    "title": "Reduced Relative Clause with Present Participle",
     "promptSentence": "All candidates who are seeking admission to the doctoral fellowship must submit three peer recommendations.",
     "targetTransformation": "All candidates seeking admission to the doctoral fellowship must submit three peer recommendations.",
     "grammaticalCue": "Eliminate relative pronoun 'who' and auxiliary 'are', leaving active participle 'seeking'.",
@@ -429,10 +429,10 @@
     "exemplarContext": "Passengers arriving on transatlantic flights must present biometric declaration barcodes."
   },
   {
+    "title": "Reduced Relative Clause with Past Participle",
     "id": "gram-cond-4",
     "mode": "CLAUSAL_CONDENSATION",
     "level": 1,
-    "title": "Reduced Relative Clause with Past Participle",
     "promptSentence": "The infrastructure bill which was passed by the Senate will revitalize crumbling bridge corridors.",
     "targetTransformation": "The infrastructure bill passed by the Senate will revitalize crumbling bridge corridors.",
     "grammaticalCue": "Omit relative pronoun 'which' and auxiliary 'was' to create a tight participial post-modifier.",
@@ -442,10 +442,10 @@
     "exemplarContext": "The settlement agreed upon by both litigants averts a costly five-week federal jury trial."
   },
   {
+    "title": "Prepositional Participial Phrase ('Upon arriving...')",
     "id": "gram-cond-5",
     "mode": "CLAUSAL_CONDENSATION",
     "level": 1,
-    "title": "Prepositional Participial Phrase ('Upon arriving...')",
     "promptSentence": "As soon as the foreign dignitary arrived at the summit venue, she was escorted to the bilateral chambers.",
     "targetTransformation": "Upon arriving at the summit venue, the foreign dignitary was escorted to the bilateral chambers.",
     "grammaticalCue": "Condense temporal clause with preposition 'Upon / On' followed by gerund-participle.",
@@ -455,10 +455,10 @@
     "exemplarContext": "Upon reviewing the quarterly earnings reconciliation, the board voted unanimously to authorize a share buyback."
   },
   {
+    "title": "Perfect Participle Clause for Prior Action",
     "id": "gram-cond-6",
     "mode": "CLAUSAL_CONDENSATION",
     "level": 2,
-    "title": "Perfect Participle Clause for Prior Action",
     "promptSentence": "Because she had exhausted all administrative appeals, the claimant filed a federal constitutional lawsuit.",
     "targetTransformation": "Having exhausted all administrative appeals, the claimant filed a federal constitutional lawsuit.",
     "grammaticalCue": "Convert prior causal clause into perfect participle 'Having + past participle'.",
@@ -468,10 +468,10 @@
     "exemplarContext": "Having secured unanimous shareholder endorsement, the management board executed the cross-border merger."
   },
   {
+    "title": "Passive Perfect Participle Clause",
     "id": "gram-cond-7",
     "mode": "CLAUSAL_CONDENSATION",
     "level": 2,
-    "title": "Passive Perfect Participle Clause",
     "promptSentence": "After it had been stress-tested under extreme simulated market liquidity freezes, the risk model was cleared.",
     "targetTransformation": "Having been stress-tested under extreme simulated market liquidity freezes, the risk model was cleared.",
     "grammaticalCue": "Combine perfect and passive aspect into 'Having been + past participle'.",
@@ -481,10 +481,10 @@
     "exemplarContext": "Having been scrutinized by federal ethics monitors for six months, the proposed acquisition received regulatory blessing."
   },
   {
+    "title": "Concessive Participle Clause ('Although warned...')",
     "id": "gram-cond-8",
     "mode": "CLAUSAL_CONDENSATION",
     "level": 2,
-    "title": "Concessive Participle Clause ('Although warned...')",
     "promptSentence": "Although they were repeatedly warned about impending credit tightening, the directors continued borrowing.",
     "targetTransformation": "Although repeatedly warned about impending credit tightening, the directors continued borrowing.",
     "grammaticalCue": "Retain concessive subordinator 'Although' but drop subject pronoun and auxiliary verb.",
@@ -494,10 +494,10 @@
     "exemplarContext": "Although severely battered by post-pandemic supply chain disruptions, the automaker preserved operating profitability."
   },
   {
+    "title": "Absolute Construction with Noun + Participle",
     "id": "gram-cond-9",
     "mode": "CLAUSAL_CONDENSATION",
     "level": 2,
-    "title": "Absolute Construction with Noun + Participle",
     "promptSentence": "Because the market close was rapidly approaching, day traders liquidated their speculative derivative calls.",
     "targetTransformation": "The market close rapidly approaching, day traders liquidated their speculative derivative calls.",
     "grammaticalCue": "Create an absolute clause: noun phrase subject + participle phrase, grammatically independent of main clause.",
@@ -507,10 +507,10 @@
     "exemplarContext": "All quorum hurdles successfully cleared, the parliamentary assembly proceeded to ratify the constitution."
   },
   {
+    "title": "Verbless Adjective Clause for Conciseness",
     "id": "gram-cond-10",
     "mode": "CLAUSAL_CONDENSATION",
     "level": 2,
-    "title": "Verbless Adjective Clause for Conciseness",
     "promptSentence": "Because he was aware of the severe geopolitical risks, the ambassador spoke with calculated discretion.",
     "targetTransformation": "Aware of the severe geopolitical risks, the ambassador spoke with calculated discretion.",
     "grammaticalCue": "Drop causal conjunction and copula, starting directly with adjective complement 'Aware of...'.",
@@ -520,10 +520,10 @@
     "exemplarContext": "Anxious to avoid diplomatic confrontation, the envoy offered a compromise communique."
   },
   {
+    "title": "Absolute Construction with Preposition 'With + Noun + Participle'",
     "id": "gram-cond-11",
     "mode": "CLAUSAL_CONDENSATION",
     "level": 3,
-    "title": "Absolute Construction with Preposition 'With + Noun + Participle'",
     "promptSentence": "Because inflation rates were escalating and bond yields were cratering, the pension fund reassessed allocations.",
     "targetTransformation": "With inflation rates escalating and bond yields cratering, the pension fund reassessed allocations.",
     "grammaticalCue": "Use preposition 'With' to govern compound absolute participial complements.",
@@ -533,10 +533,10 @@
     "exemplarContext": "With venture valuations contracting and interest rates ascending, early-stage startups pivoted toward immediate cash generation."
   },
   {
+    "title": "Negative Perfect Participle Clause",
     "id": "gram-cond-12",
     "mode": "CLAUSAL_CONDENSATION",
     "level": 3,
-    "title": "Negative Perfect Participle Clause",
     "promptSentence": "Because the analysts had not anticipated the sudden export ban, they scrambled to revise earnings projections.",
     "targetTransformation": "Not having anticipated the sudden export ban, the analysts scrambled to revise earnings projections.",
     "grammaticalCue": "Position negative particle 'Not' immediately before the perfect participle 'having anticipated'.",
@@ -546,10 +546,10 @@
     "exemplarContext": "Not having received written confirmation from the ministry, the general refused to mobilize reserve brigades."
   },
   {
+    "title": "Double Participle Sandwich for Rapid Narrative Pacing",
     "id": "gram-cond-13",
     "mode": "CLAUSAL_CONDENSATION",
     "level": 3,
-    "title": "Double Participle Sandwich for Rapid Narrative Pacing",
     "promptSentence": "As she was pursued by regulatory hounds and abandoned by institutional backers, the CEO stepped down.",
     "targetTransformation": "Pursued by regulatory hounds and abandoned by institutional backers, the CEO stepped down.",
     "grammaticalCue": "Coordinate two passive participle phrases in parallel before the primary subject.",
@@ -559,10 +559,10 @@
     "exemplarContext": "Stunned by the unexpected verdict and facing immediate extradition, the fugitive collapsed in open court."
   },
   {
+    "title": "Absolute Construction Expressing Metric Outcome",
     "id": "gram-cond-14",
     "mode": "CLAUSAL_CONDENSATION",
     "level": 3,
-    "title": "Absolute Construction Expressing Metric Outcome",
     "promptSentence": "The conglomerate executed the debt refinancing package, and its net debt-to-equity ratio fell to 1.2.",
     "targetTransformation": "The conglomerate executed the debt refinancing package, its net debt-to-equity ratio falling to 1.2.",
     "grammaticalCue": "Attach post-clausal absolute construction with present participle showing mathematical consequence.",
@@ -572,10 +572,10 @@
     "exemplarContext": "The central bank unexpectedly cut benchmark rates by fifty basis points, equity indices surging three percent within seconds."
   },
   {
+    "title": "Reduced Concessive Clause with Ellipsis ('Though seemingly intractable...')",
     "id": "gram-cond-15",
     "mode": "CLAUSAL_CONDENSATION",
     "level": 3,
-    "title": "Reduced Concessive Clause with Ellipsis ('Though seemingly intractable...')",
     "promptSentence": "Although it was seemingly an intractable logistical deadlock, the dispute was resolved within forty-eight hours.",
     "targetTransformation": "Though seemingly an intractable logistical deadlock, the dispute was resolved within forty-eight hours.",
     "grammaticalCue": "Retain concessive 'Though' while ellipting expletive subject 'it' and copula 'was'.",
@@ -585,10 +585,10 @@
     "exemplarContext": "Though initially a modest regional initiative, the economic corridor evolved into a trillion-dollar trade artery."
   },
   {
+    "title": "Correction of Faulty Parallelism in Series",
     "id": "gram-prec-1",
     "mode": "SYNTACTIC_PRECISION",
     "level": 1,
-    "title": "Correction of Faulty Parallelism in Series",
     "promptSentence": "The audit revealed that the branch was inflating invoices, concealed debts, and to bribe local officials.",
     "targetTransformation": "The audit revealed that the branch was inflating invoices, concealing debts, and bribing local officials.",
     "grammaticalCue": "Harmonize all coordinate verbal complements into parallel gerund-participle (-ing) forms.",
@@ -598,10 +598,10 @@
     "exemplarContext": "Effective executives excel at distilling complex data, communicating clear visions, and empowering autonomous teams."
   },
   {
+    "title": "Correction of Correlative Parallelism ('Not only... but also')",
     "id": "gram-prec-2",
     "mode": "SYNTACTIC_PRECISION",
     "level": 1,
-    "title": "Correction of Correlative Parallelism ('Not only... but also')",
     "promptSentence": "The policy change not only alienated key enterprise customers, but also it generated meager recurring revenues.",
     "targetTransformation": "The policy change not only alienated key enterprise customers, but also generated meager recurring revenues.",
     "grammaticalCue": "Ensure constituents following 'not only' and 'but also' share identical grammatical categories (Verb Phrase).",
@@ -611,10 +611,10 @@
     "exemplarContext": "The novel antitrust decree seeks not only to penalize past anti-competitive collusion, but also to forestall future market concentration."
   },
   {
+    "title": "Fixing Unintentional Tense Shifts in Narrative Discourse",
     "id": "gram-prec-3",
     "mode": "SYNTACTIC_PRECISION",
     "level": 1,
-    "title": "Fixing Unintentional Tense Shifts in Narrative Discourse",
     "promptSentence": "The lead engineer detected anomalous telemetry spikes, and immediately he isolates the compromised gateway.",
     "targetTransformation": "The lead engineer detected anomalous telemetry spikes and immediately isolated the compromised gateway.",
     "grammaticalCue": "Eliminate arbitrary shift from past tense 'detected' to present tense 'isolates'.",
@@ -624,10 +624,10 @@
     "exemplarContext": "The forensic investigator examined the encrypted drive, recovered the deleted private key, and compiled the final report."
   },
   {
+    "title": "Eliminating Passive Wordiness via Direct Transitive Verbs",
     "id": "gram-prec-4",
     "mode": "SYNTACTIC_PRECISION",
     "level": 1,
-    "title": "Eliminating Passive Wordiness via Direct Transitive Verbs",
     "promptSentence": "An analysis of the quarterly logistics telemetry was conducted by the operations optimization squad.",
     "targetTransformation": "The operations optimization squad analyzed the quarterly logistics telemetry.",
     "grammaticalCue": "Convert clunky passive nominalization ('An analysis was conducted by...') into vigorous active transitive verb.",
@@ -637,10 +637,10 @@
     "exemplarContext": "The appellate court vacated the lower tribunal's patent injunction."
   },
   {
+    "title": "Coordinated Adverbial Parallelism",
     "id": "gram-prec-5",
     "mode": "SYNTACTIC_PRECISION",
     "level": 1,
-    "title": "Coordinated Adverbial Parallelism",
     "promptSentence": "The spokesperson addressed the accusations calmly, thoroughly, and in a professional manner.",
     "targetTransformation": "The spokesperson addressed the accusations calmly, thoroughly, and professionally.",
     "grammaticalCue": "Harmonize prepositional phrase 'in a professional manner' into clean parallel '-ly' adverb.",
@@ -650,10 +650,10 @@
     "exemplarContext": "The negotiation team argued their counter-proposals persuasively, tenaciously, and diplomatically."
   },
   {
+    "title": "Dangling Modifier with Introductory Participial Phrase",
     "id": "gram-prec-6",
     "mode": "SYNTACTIC_PRECISION",
     "level": 2,
-    "title": "Dangling Modifier with Introductory Participial Phrase",
     "promptSentence": "Approaching the international border crossing, the travelers' passports were inspected by biometric cameras.",
     "targetTransformation": "Approaching the international border crossing, the travelers had their passports inspected by biometric cameras.",
     "grammaticalCue": "Ensure grammatical subject immediately following introductory participle is the agent performing the action.",
@@ -663,10 +663,10 @@
     "exemplarContext": "Synthesizing fifteen longitudinal demographic studies, the researchers demonstrated a sharp correlation between urbanization and declining birth rates."
   },
   {
+    "title": "Misplaced Modifier with Adverbial Quantifier ('Only')",
     "id": "gram-prec-7",
     "mode": "SYNTACTIC_PRECISION",
     "level": 2,
-    "title": "Misplaced Modifier with Adverbial Quantifier ('Only')",
     "promptSentence": "The compliance officer only flagged three fraudulent wire transfers during the audit.",
     "targetTransformation": "The compliance officer flagged only three fraudulent wire transfers during the audit.",
     "grammaticalCue": "Place focus adverb 'only' directly adjacent to the numerical noun phrase it restricts.",
@@ -676,10 +676,10 @@
     "exemplarContext": "The appellate court granted certiorari to only one constitutional claim among the dozen raised."
   },
   {
+    "title": "Faulty Comparison / Illogical Parallelism ('More than that of')",
     "id": "gram-prec-8",
     "mode": "SYNTACTIC_PRECISION",
     "level": 2,
-    "title": "Faulty Comparison / Illogical Parallelism ('More than that of')",
     "promptSentence": "The computational throughput of our distributed cluster is substantially higher than our primary competitor.",
     "targetTransformation": "The computational throughput of our distributed cluster is substantially higher than that of our primary competitor.",
     "grammaticalCue": "Use pro-form 'that of' to prevent comparing an abstract metric ('throughput') directly against a company.",
@@ -689,10 +689,10 @@
     "exemplarContext": "The fuel efficiency of modular molten-salt reactors far exceeds that of conventional light-water facilities."
   },
   {
+    "title": "Split Infinitive Resolution in Formal Register",
     "id": "gram-prec-9",
     "mode": "SYNTACTIC_PRECISION",
     "level": 2,
-    "title": "Split Infinitive Resolution in Formal Register",
     "promptSentence": "The statutory directive instructs administrators to strictly and without exception enforce the embargo.",
     "targetTransformation": "The statutory directive instructs administrators to enforce the embargo strictly and without exception.",
     "grammaticalCue": "Relocate lengthy adverbial phrase outside the 'to + verb' infinitive nexus in formal legal prose.",
@@ -702,10 +702,10 @@
     "exemplarContext": "The regulatory body resolved to prosecute rogue currency speculators vigorously and transparently."
   },
   {
+    "title": "Restrictive vs. Non-Restrictive Precision ('Which' vs 'That')",
     "id": "gram-prec-10",
     "mode": "SYNTACTIC_PRECISION",
     "level": 2,
-    "title": "Restrictive vs. Non-Restrictive Precision ('Which' vs 'That')",
     "promptSentence": "All proprietary trade secrets, which were acquired during the joint venture, must be returned.",
     "targetTransformation": "All proprietary trade secrets that were acquired during the joint venture must be returned.",
     "grammaticalCue": "Use restrictive pronoun 'that' without commas to define an essential subset of trade secrets.",
@@ -715,10 +715,10 @@
     "exemplarContext": "Assets that are subject to sovereign freeze orders cannot be collateralized in repo markets."
   },
   {
+    "title": "Dangling Gerund Phrase after Prepositional Opener",
     "id": "gram-prec-11",
     "mode": "SYNTACTIC_PRECISION",
     "level": 3,
-    "title": "Dangling Gerund Phrase after Prepositional Opener",
     "promptSentence": "After dissecting the malware payload, the zero-day vulnerability was successfully patched by our security team.",
     "targetTransformation": "After dissecting the malware payload, our security team successfully patched the zero-day vulnerability.",
     "grammaticalCue": "Make the human actor ('our security team') the matrix subject following prepositional gerund phrase.",
@@ -728,10 +728,10 @@
     "exemplarContext": "Upon completing the forensic autopsy of the insolvent exchange, the court-appointed liquidator filed for Chapter 11 protections."
   },
   {
+    "title": "Squinting Modifier Disambiguation",
     "id": "gram-prec-12",
     "mode": "SYNTACTIC_PRECISION",
     "level": 3,
-    "title": "Squinting Modifier Disambiguation",
     "promptSentence": "Board members who review compensation packages frequently express severe dissatisfaction.",
     "targetTransformation": "Board members who frequently review compensation packages express severe dissatisfaction.",
     "grammaticalCue": "Disambiguate adverb 'frequently' so it clearly modifies either the relative clause or the main verb.",
@@ -741,10 +741,10 @@
     "exemplarContext": "Executives who consistently communicate clear architectural boundaries inspire enduring organizational trust."
   },
   {
+    "title": "Deliberate Rhetorical Ellipsis in Comparative Contrast",
     "id": "gram-prec-13",
     "mode": "SYNTACTIC_PRECISION",
     "level": 3,
-    "title": "Deliberate Rhetorical Ellipsis in Comparative Contrast",
     "promptSentence": "The senior partner authored eight landmark antitrust briefs, while the junior associate authored only two landmark antitrust briefs.",
     "targetTransformation": "The senior partner authored eight landmark antitrust briefs; the junior associate, only two.",
     "grammaticalCue": "Ellipt identical verb and noun phrase using comma of gapping and semicolon coordination.",
@@ -754,10 +754,10 @@
     "exemplarContext": "The treasury secretary advocated bold fiscal expansion; the central bank governor, immediate austerity."
   },
   {
+    "title": "Subjunctive-Indicative Mood Collision Correction",
     "id": "gram-prec-14",
     "mode": "SYNTACTIC_PRECISION",
     "level": 3,
-    "title": "Subjunctive-Indicative Mood Collision Correction",
     "promptSentence": "The charter requires that every delegate is registered and that each votes according to their constituency.",
     "targetTransformation": "The charter requires that every delegate be registered and that each vote according to their constituency.",
     "grammaticalCue": "Harmonize coordinated mandative subjunctive clauses into invariant bare forms 'be' and 'vote'.",
@@ -767,10 +767,10 @@
     "exemplarContext": "The treaty mandates that verification inspectors be granted unimpeded access and that host governments abstain from interference."
   },
   {
+    "title": "Asymmetrical Nominalization vs. Verbal Coordination",
     "id": "gram-prec-15",
     "mode": "SYNTACTIC_PRECISION",
     "level": 3,
-    "title": "Asymmetrical Nominalization vs. Verbal Coordination",
     "promptSentence": "The transformation plan entails the restructuring of internal debt and to divest non-core semiconductor assets.",
     "targetTransformation": "The transformation plan entails restructuring internal debt and divesting non-core semiconductor assets.",
     "grammaticalCue": "Eliminate clash between prepositional noun phrase 'the restructuring of' and infinitive 'to divest'.",

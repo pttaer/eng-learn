@@ -12,7 +12,7 @@
     "content:watch": "node scripts/compile-content.cjs --watch",
     "test:content": "node scripts/verify-content-pipeline.cjs",
     "icons": "node scripts/generate-icons.cjs && node scripts/generate-ico.cjs",
-    "prebuild": "node scripts/compile-content.cjs && node scripts/parse-curriculum.cjs && node scripts/generate-icons.cjs && node scripts/generate-ico.cjs",
+    "prebuild": "node scripts/compile-content.cjs && node scripts/generate-icons.cjs && node scripts/generate-ico.cjs",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
