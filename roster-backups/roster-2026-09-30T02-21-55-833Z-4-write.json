@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "savedAt": "2026-09-30T10:47:26.290Z",
+  "savedAt": "2026-09-30T02:20:18.451Z",
   "agents": [
     {
       "id": "god",
@@ -156,5 +156,5 @@
   ],
   "restorable": [],
   "queues": {},
-  "selectedId": "god"
+  "selectedId": "jim-mum0qdlb"
 }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "savedAt": "2026-09-30T10:47:26.290Z",
+  "savedAt": "2026-09-28T10:33:19.267Z",
   "agents": [
     {
       "id": "god",
@@ -12,7 +12,7 @@
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
       "status": "idle",
-      "action": "running the floor",
+      "action": "awaiting",
       "progress": 0,
       "currentStation": "desk",
       "ptyId": "pty-god",
@@ -30,15 +30,15 @@
       "project": "E:\\Eng",
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
-      "status": "idle",
-      "action": "starting up",
+      "status": "working",
+      "action": "edit",
       "progress": 0,
-      "currentStation": "desk",
+      "currentStation": "shelf",
       "ptyId": "pty-jim-mul1meuh",
       "command": "agy --model \"Gemini 3.8 Flash (Medium)\" --dangerously-skip-permissions",
       "provider": "antigravity",
       "model": "Gemini 3.8 Flash (Medium)",
-      "archived": false
+      "carrying": "Edit"
     },
     {
       "id": "dwight-mul1u508",
@@ -49,15 +49,15 @@
       "project": "E:\\Eng",
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
-      "status": "idle",
-      "action": "starting up",
+      "status": "working",
+      "action": "edit",
       "progress": 0,
-      "currentStation": "desk",
+      "currentStation": "shelf",
       "ptyId": "pty-dwight-mul1u508",
       "command": "agy --model \"Gemini 3.8 Flash (Medium)\" --dangerously-skip-permissions",
       "provider": "antigravity",
       "model": "Gemini 3.8 Flash (Medium)",
-      "archived": false
+      "carrying": "Edit"
     },
     {
       "id": "andy-mul1ug04",
@@ -69,14 +69,13 @@
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
       "status": "idle",
-      "action": "starting up",
+      "action": "idle",
       "progress": 0,
-      "currentStation": "desk",
+      "currentStation": "shelf",
       "ptyId": "pty-andy-mul1ug04",
       "command": "agy --model \"Gemini 3.8 Flash (Medium)\" --dangerously-skip-permissions",
       "provider": "antigravity",
-      "model": "Gemini 3.8 Flash (Medium)",
-      "archived": false
+      "model": "Gemini 3.8 Flash (Medium)"
     },
     {
       "id": "phyllis-mul1ur07",
@@ -87,34 +86,15 @@
       "project": "E:\\Eng",
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
-      "status": "idle",
-      "action": "starting up",
+      "status": "working",
+      "action": "edit",
       "progress": 0,
-      "currentStation": "desk",
+      "currentStation": "shelf",
       "ptyId": "pty-phyllis-mul1ur07",
       "command": "agy --model \"Gemini 3.8 Flash (Medium)\" --dangerously-skip-permissions",
       "provider": "antigravity",
       "model": "Gemini 3.8 Flash (Medium)",
-      "archived": false
-    },
-    {
-      "id": "jim-mum0qdlb",
-      "name": "JimMA",
-      "character": "jim",
-      "accent": "sky",
-      "description": "a fresh harness",
-      "project": "E:\\Eng",
-      "tmuxTarget": "",
-      "cwd": "E:\\Eng",
-      "status": "idle",
-      "action": "starting up",
-      "progress": 0,
-      "currentStation": "desk",
-      "ptyId": "pty-jim-mum0qdlb",
-      "command": "agy --model \"Gemini 3.8 Flash (Medium)\" --dangerously-skip-permissions",
-      "provider": "antigravity",
-      "model": "Gemini 3.8 Flash (Medium)",
-      "archived": false
+      "carrying": "Edit"
     }
   ],
   "archived": [
@@ -134,27 +114,9 @@
       "provider": "claude",
       "model": "claude-opus-5-5",
       "archived": true
-    },
-    {
-      "id": "michael-mum0t4d1",
-      "name": "Mic",
-      "character": "michael",
-      "accent": "sky",
-      "description": "a fresh harness",
-      "project": "E:\\Eng",
-      "tmuxTarget": "",
-      "cwd": "E:\\Eng",
-      "goal": "Audit plan of god ONLY",
-      "status": "idle",
-      "action": "archived",
-      "progress": 0,
-      "command": "agy --model \"Claude Opus 4.6 (Thinking)\" --dangerously-skip-permissions",
-      "provider": "antigravity",
-      "model": "Claude Opus 4.6 (Thinking)",
-      "archived": true
     }
   ],
   "restorable": [],
   "queues": {},
-  "selectedId": "god"
+  "selectedId": "phyllis-mul1ur07"
 }

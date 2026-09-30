@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "savedAt": "2026-09-30T10:47:26.290Z",
+  "savedAt": "2026-09-30T09:12:32.948Z",
   "agents": [
     {
       "id": "god",
@@ -155,6 +155,15 @@
     }
   ],
   "restorable": [],
-  "queues": {},
+  "queues": {
+    "andy-mul1ug04": [
+      {
+        "id": "q-1790759552443-4",
+        "text": "You have new hive inbox message(s) — at least: 2026-09-30T09-12-29-349Z-244596. Read your inbox, act on what is pending there, and move handled ones to inbox/.done/. Your inbox directory is authoritative: work everything still pending in it, and if a named id is already in inbox/.done/ you handled it on an earlier turn and can ignore that one. Act autonomously; only message god if you genuinely need a decision.",
+        "ts": 1790759552443,
+        "precondition": "inbox-nonempty"
+      }
+    ]
+  },
   "selectedId": "god"
 }

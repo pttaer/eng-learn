@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "savedAt": "2026-09-30T10:47:26.290Z",
+  "savedAt": "2026-09-30T03:43:50.785Z",
   "agents": [
     {
       "id": "god",
@@ -11,8 +11,8 @@
       "project": "hive",
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
-      "status": "idle",
-      "action": "running the floor",
+      "status": "working",
+      "action": "ning c",
       "progress": 0,
       "currentStation": "desk",
       "ptyId": "pty-god",
@@ -30,15 +30,16 @@
       "project": "E:\\Eng",
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
-      "status": "idle",
-      "action": "starting up",
+      "status": "working",
+      "action": "read",
       "progress": 0,
-      "currentStation": "desk",
+      "currentStation": "shelf",
       "ptyId": "pty-jim-mul1meuh",
       "command": "agy --model \"Gemini 3.8 Flash (Medium)\" --dangerously-skip-permissions",
       "provider": "antigravity",
       "model": "Gemini 3.8 Flash (Medium)",
-      "archived": false
+      "archived": false,
+      "carrying": "Read"
     },
     {
       "id": "dwight-mul1u508",
@@ -49,15 +50,16 @@
       "project": "E:\\Eng",
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
-      "status": "idle",
-      "action": "starting up",
+      "status": "working",
+      "action": "read",
       "progress": 0,
-      "currentStation": "desk",
+      "currentStation": "shelf",
       "ptyId": "pty-dwight-mul1u508",
       "command": "agy --model \"Gemini 3.8 Flash (Medium)\" --dangerously-skip-permissions",
       "provider": "antigravity",
       "model": "Gemini 3.8 Flash (Medium)",
-      "archived": false
+      "archived": false,
+      "carrying": "Read"
     },
     {
       "id": "andy-mul1ug04",
@@ -68,15 +70,16 @@
       "project": "E:\\Eng",
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
-      "status": "idle",
-      "action": "starting up",
+      "status": "working",
+      "action": "read",
       "progress": 0,
-      "currentStation": "desk",
+      "currentStation": "shelf",
       "ptyId": "pty-andy-mul1ug04",
       "command": "agy --model \"Gemini 3.8 Flash (Medium)\" --dangerously-skip-permissions",
       "provider": "antigravity",
       "model": "Gemini 3.8 Flash (Medium)",
-      "archived": false
+      "archived": false,
+      "carrying": "Read"
     },
     {
       "id": "phyllis-mul1ur07",
@@ -87,15 +90,16 @@
       "project": "E:\\Eng",
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
-      "status": "idle",
-      "action": "starting up",
+      "status": "working",
+      "action": "edit",
       "progress": 0,
-      "currentStation": "desk",
+      "currentStation": "shelf",
       "ptyId": "pty-phyllis-mul1ur07",
       "command": "agy --model \"Gemini 3.8 Flash (Medium)\" --dangerously-skip-permissions",
       "provider": "antigravity",
       "model": "Gemini 3.8 Flash (Medium)",
-      "archived": false
+      "archived": false,
+      "carrying": "Edit"
     },
     {
       "id": "jim-mum0qdlb",
@@ -106,15 +110,16 @@
       "project": "E:\\Eng",
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
-      "status": "idle",
-      "action": "starting up",
+      "status": "working",
+      "action": "bash",
       "progress": 0,
-      "currentStation": "desk",
+      "currentStation": "terminal",
       "ptyId": "pty-jim-mum0qdlb",
       "command": "agy --model \"Gemini 3.8 Flash (Medium)\" --dangerously-skip-permissions",
       "provider": "antigravity",
       "model": "Gemini 3.8 Flash (Medium)",
-      "archived": false
+      "archived": false,
+      "carrying": "Bash"
     }
   ],
   "archived": [
@@ -155,6 +160,15 @@
     }
   ],
   "restorable": [],
-  "queues": {},
+  "queues": {
+    "dwight-mul1u508": [
+      {
+        "id": "q-1790739830271-3",
+        "text": "You have new hive inbox message(s) — at least: 2026-09-30T03-43-46-843Z-3ca008. Read your inbox, act on what is pending there, and move handled ones to inbox/.done/. Your inbox directory is authoritative: work everything still pending in it, and if a named id is already in inbox/.done/ you handled it on an earlier turn and can ignore that one. Act autonomously; only message god if you genuinely need a decision.",
+        "ts": 1790739830271,
+        "precondition": "inbox-nonempty"
+      }
+    ]
+  },
   "selectedId": "god"
 }
