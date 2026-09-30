@@ -204,7 +204,7 @@ export const SKILL_BRANCHES: Record<BranchId, SkillBranch> = {
         prerequisites: [],
         masteryThreshold: 80,
         x: 50,
-        y: 84
+        y: 82
       },
       {
         id: 'wri-2',

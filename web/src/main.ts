@@ -47,9 +47,21 @@ class App {
   constructor() {
     this.workspaceMount = document.getElementById('workspace-mount')!;
 
+    // 0. Initialize theme
+    const savedTheme = localStorage.getItem('eng_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
     // 1. Initialize Subsystems
     AudioSynthesizer.init();
     CursorTracker.init();
+
+    // Global Micro-Interactions: Tactile audio feedback on button clicks
+    document.addEventListener('click', (e) => {
+      const target = (e.target as HTMLElement)?.closest('button, .hud-btn, .dock-btn, .compass-menu-item, .branch-summary-card');
+      if (target) {
+        AudioSynthesizer.play('click');
+      }
+    }, { capture: true });
 
     const canvasEl = document.getElementById('canvas-2d') as HTMLCanvasElement;
     this.perspectiveCanvas = new PerspectiveCanvas(canvasEl, collocationsData);

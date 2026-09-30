@@ -73,9 +73,9 @@ export class SpeakingDossier {
       </div>
       <div class="dossier-card-slot"></div>
       <div class="dossier-nav-bar">
-        <button class="hud-btn nav-btn-prev">[ ← PREV PROMPT ]</button>
-        <span class="telemetry-value card-counter">PROMPT [ ${this.currentIndex + 1} / ${this.items.length} ]</span>
-        <button class="hud-btn nav-btn-next">[ NEXT PROMPT → ]</button>
+        <button class="hud-btn nav-btn-prev">← Prev Prompt</button>
+        <span class="telemetry-value card-counter">PROMPT ${this.currentIndex + 1} / ${this.items.length}</span>
+        <button class="hud-btn nav-btn-next">Next Prompt →</button>
       </div>
     `;
 
@@ -208,25 +208,25 @@ export class SpeakingDossier {
           <div style="position: relative; width: 64px; height: 64px;">
             <svg viewBox="0 0 36 36" style="width: 100%; height: 100%; transform: rotate(-90deg);">
               <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                fill="none" stroke="rgba(0, 0, 0, 0.12)" stroke-width="2.5" />
+                fill="none" stroke="var(--border-subtle)" stroke-width="2.5" />
               <path class="timer-progress-ring" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                fill="none" stroke="#000000" stroke-width="2.5" stroke-dasharray="100, 100" />
+                fill="none" stroke="var(--accent-gold)" stroke-width="2.5" stroke-dasharray="100, 100" />
             </svg>
             <div class="timer-display-text" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 13px; font-weight: 700;">
               ${this.formatTime(this.secondsRemaining)}
             </div>
           </div>
           <div style="display: flex; gap: 4px; margin-top: 6px;">
-            <button type="button" class="hud-btn btn-timer-toggle" style="padding: 2px 8px; font-size: 10px;">[ ${this.isTimerRunning ? 'PAUSE' : 'START'} ]</button>
-            <button type="button" class="hud-btn btn-take-complete" style="padding: 2px 8px; font-size: 10px;" ${!this.isTimerRunning ? 'disabled' : ''}>[ STOP ]</button>
+            <button type="button" class="hud-btn btn-timer-toggle" style="padding: 2px 8px; font-size: 10px;">${this.isTimerRunning ? '⏸ Pause' : '▶ Start'}</button>
+            <button type="button" class="hud-btn btn-take-complete" style="padding: 2px 8px; font-size: 10px;" ${!this.isTimerRunning ? 'disabled' : ''}>⏹ Stop</button>
           </div>
         </div>
 
         <!-- Dual-Trace Oscilloscope Canvas -->
         <div class="speaking-oscilloscope-container" style="flex: 1; margin-top: 0;">
           <div class="oscilloscope-header">
-            <span>[TRACK 1: NATIVE BENCHMARK F₀]</span>
-            <span>[TRACK 2: ${this.isTimerRunning ? 'LIVE MIC TAKE' : (this.latestAnalysis ? 'STUDENT PITCH PROFILE' : 'STUDENT TAKE IDLE')}]</span>
+            <span>TRACK 1: NATIVE BENCHMARK F₀</span>
+            <span>TRACK 2: ${this.isTimerRunning ? 'LIVE MIC TAKE' : (this.latestAnalysis ? 'STUDENT PITCH PROFILE' : 'STUDENT TAKE IDLE')}</span>
           </div>
           <canvas class="speaking-waveform-canvas" width="480" height="72"></canvas>
         </div>
@@ -241,16 +241,16 @@ export class SpeakingDossier {
             <span>COLLOC: <strong>${perf.spottedCollocations}/${perf.totalCollocations}</strong></span>
           </div>
           <div class="post-take-actions">
-            <button type="button" class="hud-btn btn-play-exemplar" style="font-size: 10px; padding: 2px 8px;">[ ▶ EXEMPLAR ]</button>
-            <button type="button" class="hud-btn btn-play-take" style="font-size: 10px; padding: 2px 8px;">[ ▶ YOUR TAKE ]</button>
-            <button type="button" class="hud-btn btn-stop-audio" style="font-size: 10px; padding: 2px 8px;">[ ⏹ STOP ]</button>
+            <button type="button" class="hud-btn btn-play-exemplar" style="font-size: 10px; padding: 2px 8px;">▶ Exemplar</button>
+            <button type="button" class="hud-btn btn-play-take" style="font-size: 10px; padding: 2px 8px;">▶ Your Take</button>
+            <button type="button" class="hud-btn btn-stop-audio" style="font-size: 10px; padding: 2px 8px;">⏹ Stop</button>
             ${this.currentRoundIdx < 2 ? `
-              <button type="button" class="hud-btn btn-advance-round" style="font-size: 10px; padding: 2px 10px; background: #000000; color: #ffffff;">
-                [ ADVANCE TO ROUND ${this.currentRoundIdx + 2} (${this.rounds[this.currentRoundIdx + 1] / 60} MIN) → ]
+              <button type="button" class="hud-btn btn-advance-round" style="font-size: 10px; padding: 2px 10px; background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none;">
+                Advance to Round ${this.currentRoundIdx + 2} (${this.rounds[this.currentRoundIdx + 1] / 60} min) →
               </button>
             ` : `
-              <button type="button" class="hud-btn btn-view-matrix" style="font-size: 10px; padding: 2px 10px; background: #000000; color: #ffffff;">
-                [ VIEW 3-ROUND COMPRESSION MATRIX → ]
+              <button type="button" class="hud-btn btn-view-matrix" style="font-size: 10px; padding: 2px 10px; background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none;">
+                View 3-Round Compression Matrix →
               </button>
             `}
           </div>
@@ -385,7 +385,7 @@ export class SpeakingDossier {
       <!-- Target Collocations Reference -->
       <div style="margin-top: 12px; font-family: var(--font-sans); font-size: 13px;">
         <strong>Target Collocations:</strong>
-        <div style="font-family: var(--font-mono); font-size: 12px; background: #ffffff; border: 1px solid var(--border-hairline); padding: 6px 10px; margin-top: 4px;">
+        <div style="font-family: var(--font-mono); font-size: 12px; background: var(--bg-surface-sunk); border: 1px solid var(--border-subtle); color: var(--ink-primary); border-radius: 4px; padding: 6px 10px; margin-top: 4px;">
           ${item.collocations}
         </div>
       </div>
@@ -533,8 +533,13 @@ export class SpeakingDossier {
 
       ctx.clearRect(0, 0, w, h);
 
+      const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+      const gridColor = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.08)';
+      const track1Color = isDark ? '#fb923c' : '#c2410c';
+      const track2Color = isDark ? '#34d399' : '#059669';
+
       // Center divider & measurement grid
-      ctx.strokeStyle = 'rgba(0, 0, 0, 0.08)';
+      ctx.strokeStyle = gridColor;
       ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.moveTo(0, halfH);
@@ -547,7 +552,7 @@ export class SpeakingDossier {
 
       // TRACK 1: Native Benchmark Intonation (Top Half: 0 to halfH)
       ctx.save();
-      ctx.strokeStyle = '#000000';
+      ctx.strokeStyle = track1Color;
       ctx.lineWidth = 1.5;
       ctx.setLineDash([3, 3]);
       ctx.beginPath();
@@ -566,7 +571,7 @@ export class SpeakingDossier {
 
       // TRACK 2: Student Take (Bottom Half: halfH to h)
       ctx.save();
-      ctx.strokeStyle = '#000000';
+      ctx.strokeStyle = track2Color;
       ctx.lineWidth = 1.5;
       ctx.beginPath();
       const track2Mid = halfH + halfH * 0.5;

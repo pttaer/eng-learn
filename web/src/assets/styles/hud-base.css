@@ -21,8 +21,13 @@ html, body {
   min-height: 100dvh;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: var(--bg-canvas, #fafaf9);
-  color: var(--ink-primary, #111111);
+  background-color: var(--bg-canvas);
+  background-image:
+    radial-gradient(1200px circle at 15% -5%, color-mix(in srgb, var(--accent-gold) 7%, transparent), transparent 70%),
+    radial-gradient(900px circle at 85% 15%, color-mix(in srgb, var(--accent-cyan) 5%, transparent), transparent 60%),
+    radial-gradient(1000px circle at 50% 100%, color-mix(in srgb, var(--accent-gold) 4%, transparent), transparent 70%);
+  background-attachment: fixed;
+  color: var(--ink-primary);
   font-family: var(--font-sans);
   font-size: var(--text-base);
   line-height: 1.5;
@@ -45,7 +50,11 @@ html, body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--ink-primary);
+  background: var(--border-subtle);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold);
 }
 
 /* Base Canvas Shell */
@@ -184,10 +193,13 @@ html, body {
 .hud-status-badge {
   font-family: var(--font-mono);
   font-size: var(--text-2xs);
-  padding: 2px 6px;
-  border: var(--border-width) solid var(--ink-primary);
-  background: var(--bg-canvas);
-  color: var(--ink-primary);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--ink-secondary);
+  font-weight: 600;
+  letter-spacing: 0.06em;
 }
 
 .hud-actions {
@@ -263,7 +275,7 @@ html, body {
   color: var(--ink-primary);
 }
 
-/* Architectural Button Styling with 44px Minimum Hitboxes & Touch Cushion */
+/* Modern HUD Controls with 44px Minimum Hitboxes & Tactile Dynamics */
 .hud-btn {
   position: relative;
   display: inline-flex;
@@ -272,16 +284,19 @@ html, body {
   min-width: var(--touch-target-min, 44px);
   min-height: var(--touch-target-min, 44px);
   padding: var(--space-8) var(--space-16);
-  border: var(--border-width) solid var(--ink-primary);
-  background: var(--bg-canvas);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  background: var(--bg-surface);
   color: var(--ink-primary);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   cursor: pointer;
   outline: none;
-  transition: transform var(--duration-fast) var(--ease-snappy), background var(--duration-fast), color var(--duration-fast);
+  box-shadow: var(--shadow-btn);
+  transition: transform var(--duration-fast) var(--ease-snappy), background var(--duration-fast), color var(--duration-fast), border-color var(--duration-fast), box-shadow var(--duration-fast);
   gap: var(--space-8);
   box-sizing: border-box;
   touch-action: manipulation;
@@ -298,35 +313,67 @@ html, body {
 }
 
 .hud-btn:hover {
-  background: var(--ink-primary);
-  color: var(--ink-inverted);
+  background: var(--bg-card);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow);
 }
 
 .hud-btn:active {
-  transform: translateY(1px) scale(0.98);
+  transform: scale(0.96) translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .hud-btn.active {
-  background: var(--ink-primary);
-  color: var(--ink-inverted);
+  background: var(--accent-gold);
+  color: var(--bg-canvas);
+  border-color: var(--accent-gold);
+  box-shadow: var(--shadow-glow);
+}
+
+/* High-Contrast Dedicated Styling for Back to Constellation Tree */
+.hud-btn.btn-back-tree {
+  background: var(--bg-card) !important;
+  border: 1.5px solid var(--accent-gold) !important;
+  color: var(--ink-primary) !important;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hud-btn.btn-back-tree:hover {
+  background: var(--accent-gold) !important;
+  color: var(--bg-canvas) !important;
+  border-color: var(--accent-gold) !important;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow);
 }
 
 /* Dual-Layer Coaxial Focus Ring for WCAG 2.2 AAA */
 .hud-btn:focus-visible,
 button:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2px solid #000000 !important;
-  outline-offset: 3px !important;
-  box-shadow: 0 0 0 5px #ffffff !important;
+  outline: 2px solid var(--focus-ring-inner) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px var(--focus-ring-outer) !important;
 }
 
 /* Keyboard Shortcut Badge */
 .kbd-badge {
   font-family: var(--font-mono);
   font-size: var(--text-2xs);
-  padding: 1px 4px;
-  border: 1px solid currentColor;
-  opacity: 0.85;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-sunk);
+  color: var(--ink-secondary);
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 /* Corner HUD Brackets - Hidden for calm human layout */

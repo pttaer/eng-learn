@@ -21,7 +21,7 @@ export class ListeningDossier {
     this.container.innerHTML = `
       <div class="dossier-control-bar">
         <div class="dossier-tabs">
-          <span class="telemetry-label">[PILLAR 03 // ACTIVE TRANSCRIPTION & PHONETICS]</span>
+          <span class="telemetry-label">Pillar 03 · Active Transcription & Phonetics</span>
         </div>
         <div class="dossier-status-pill">
           <span class="telemetry-value">3-PASS ACTIVE PROTOCOL</span>
@@ -29,9 +29,9 @@ export class ListeningDossier {
       </div>
       <div class="dossier-card-slot"></div>
       <div class="dossier-nav-bar">
-        <button class="hud-btn nav-btn-prev">[ ← PREV PASSAGE ]</button>
-        <span class="telemetry-value card-counter">PASSAGE [ ${this.currentIndex + 1} / ${this.passages.length} ]</span>
-        <button class="hud-btn nav-btn-next">[ NEXT PASSAGE → ]</button>
+        <button class="hud-btn nav-btn-prev">← Prev Passage</button>
+        <span class="telemetry-value card-counter">Passage ${this.currentIndex + 1} / ${this.passages.length}</span>
+        <button class="hud-btn nav-btn-next">Next Passage →</button>
       </div>
     `;
 
@@ -74,17 +74,17 @@ export class ListeningDossier {
     const frontEl = document.createElement('div');
     frontEl.className = 'listening-front';
     frontEl.innerHTML = `
-      <div class="card-prompt-label">PASS 1 & 2 // ACTIVE AUDIO TRANSCRIPTION</div>
+      <div class="card-prompt-label">Pass 1 & 2 · Active Audio Transcription</div>
       <div style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; margin-bottom: 8px;">
         Topic: ${item.title}
       </div>
       <div style="display: flex; gap: 8px; margin-bottom: 12px;">
-        <button class="hud-btn btn-play-audio" style="font-size: 11px; padding: 4px 10px;">[ ▶ PLAY 1.0X ]</button>
-        <button class="hud-btn btn-play-slow" style="font-size: 11px; padding: 4px 10px;">[ ⏵ PLAY 0.8X ]</button>
+        <button class="hud-btn btn-play-audio" style="font-size: 11px; padding: 4px 10px;">▶ Play 1.0x</button>
+        <button class="hud-btn btn-play-slow" style="font-size: 11px; padding: 4px 10px;">⏵ Play 0.8x</button>
       </div>
-      <textarea class="listening-transcribe-box" placeholder="Pass 2: Transcribe word-for-word here..." rows="3" style="width: 100%; font-family: var(--font-mono); font-size: 12px; padding: 8px; border: 1px solid var(--ink-primary); background: #ffffff; color: #000000; outline: none; resize: none;"></textarea>
+      <textarea class="listening-transcribe-box" placeholder="Pass 2: Transcribe word-for-word here..." rows="3" style="width: 100%; font-family: var(--font-mono); font-size: 12px; padding: 10px; border: 1px solid var(--border-subtle); background: var(--bg-surface-sunk); color: var(--ink-primary); border-radius: 6px; outline: none; resize: none;"></textarea>
       <div style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted); margin-top: 6px;">
-        Listen at least twice before pressing [FLIP / SPACE] to reveal phonetic analysis.
+        Listen at least twice before pressing Space / Flip to reveal phonetic analysis.
       </div>
     `;
 
@@ -106,11 +106,11 @@ export class ListeningDossier {
     const backEl = document.createElement('div');
     backEl.className = 'listening-back';
     backEl.innerHTML = `
-      <div class="card-prompt-label">PASS 3 // PHONETIC GAP ANALYSIS & TRANSCRIPT</div>
+      <div class="card-prompt-label">Pass 3 · Phonetic Gap Analysis & Transcript</div>
       <div class="card-main-text" style="font-size: 14px; font-weight: 600; margin-bottom: 6px;">
         "${item.audioText}"
       </div>
-      <div class="card-ipa-text" style="font-size: 11px; margin-bottom: 8px; background: #000000; color: #ffffff; padding: 4px 8px;">
+      <div class="card-ipa-text" style="font-size: 11px; margin-bottom: 8px; background: var(--bg-surface-sunk); color: var(--accent-gold); border: 1px solid var(--border-subtle); border-radius: 4px; padding: 4px 8px;">
         IPA: ${item.ipa}
       </div>
       <div style="font-family: var(--font-mono); font-size: 11px; line-height: 1.4; border-top: 1px dashed var(--border-hairline); padding-top: 6px;">
@@ -123,7 +123,7 @@ export class ListeningDossier {
       id: item.id,
       pillar: 'LISTEN',
       category: 'PHONETICS',
-      indexStr: `[ 0${this.currentIndex + 1} / 03 ]`,
+      indexStr: `0${this.currentIndex + 1} / 03`,
       statusBadge,
       front: {
         customContent: frontEl,
@@ -152,7 +152,7 @@ export class ListeningDossier {
 
     const counter = this.container.querySelector('.card-counter');
     if (counter) {
-      counter.textContent = `PASSAGE [ ${this.currentIndex + 1} / ${this.passages.length} ]`;
+      counter.textContent = `Passage ${this.currentIndex + 1} / ${this.passages.length}`;
     }
   }
 

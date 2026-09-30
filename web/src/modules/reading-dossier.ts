@@ -345,7 +345,7 @@ export class ReadingDossier {
         <div class="dossier-tabs article-tabs">
           ${this.articles.map((art, idx) => `
             <button class="hud-btn article-tab ${idx === this.currentArticleIndex ? 'active' : ''}" data-idx="${idx}">
-              [ART 0${idx + 1}: ${art.title.slice(0, 20).toUpperCase()}...]
+              Art 0${idx + 1}: ${art.title.length > 20 ? art.title.slice(0, 18) + '…' : art.title}
             </button>
           `).join('')}
         </div>
@@ -364,10 +364,10 @@ export class ReadingDossier {
           const statusPrefix = isCompleted ? '✓ ' : '';
           return `
             <button class="stepper-step ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''}" data-pass="${cfg.pass}">
-              <span class="step-badge">[${statusPrefix}${cfg.badge}]</span>
+              <span class="step-badge">${statusPrefix}${cfg.badge}</span>
             </button>
           `;
-        }).join('<span class="stepper-arrow">──></span>')}
+        }).join('<span class="stepper-arrow">→</span>')}
       </div>
 
       <div class="reading-content-slot"></div>
@@ -523,7 +523,7 @@ export class ReadingDossier {
     if (!info) {
       slot.innerHTML = `
         <div class="vocab-drawer-empty">
-          <div class="telemetry-label" style="margin-bottom: 6px;">[VOCABULARY DRAWER]</div>
+          <div class="telemetry-label" style="margin-bottom: 6px;">Vocabulary Drawer</div>
           <p>Click any highlighted term in the essay to reveal Vietnamese translation & collocations.</p>
         </div>
       `;
@@ -534,13 +534,13 @@ export class ReadingDossier {
       <div class="vocab-drawer" role="dialog" aria-label="Vocabulary definition for ${this.escapeHtml(info.targetWord)}">
         <div class="vocab-drawer-header">
           <div class="vocab-drawer-title-cluster">
-            <span class="telemetry-label">[LEXICAL TARGET // FOOTNOTE]</span>
+            <span class="telemetry-label">Lexical Target · Footnote</span>
             <h3 class="vocab-drawer-word">${this.escapeHtml(info.targetWord)}</h3>
             <span class="vocab-drawer-pos">${this.escapeHtml(info.partOfSpeech)}${info.ipa ? ` • ${this.escapeHtml(info.ipa)}` : ''}</span>
           </div>
           <div class="vocab-drawer-actions">
-            <button type="button" class="hud-btn btn-vocab-speak" title="Listen to pronunciation">[ 🔊 LISTEN ]</button>
-            <button type="button" class="hud-btn btn-close-drawer" title="Close drawer">[ ✕ CLOSE ]</button>
+            <button type="button" class="hud-btn btn-vocab-speak" title="Listen to pronunciation">🔊 Listen</button>
+            <button type="button" class="hud-btn btn-close-drawer" title="Close drawer">✕ Close</button>
           </div>
         </div>
         <div class="vocab-drawer-body">
@@ -629,11 +629,11 @@ export class ReadingDossier {
           <strong class="timer-display-text val-time" style="font-size: 13px;">00:${String(this.skimSecondsRemaining).padStart(2, '0')}</strong>
         </div>
         <div style="display: flex; gap: 8px;">
-          <button class="hud-btn btn-toggle-timer" style="padding: 2px 8px; font-size: 10px; background: #ffffff; color: #000000;">
-            ${this.isSkimTimerRunning ? '[ PAUSE TIMER ]' : '[ START 60S SKIM ]'}
+          <button class="hud-btn btn-toggle-timer" style="padding: 4px 12px; font-size: 11px;">
+            ${this.isSkimTimerRunning ? '⏸ Pause Timer' : '⏱ Start 60s Skim'}
           </button>
-          <button class="hud-btn btn-toggle-focus" style="padding: 2px 8px; font-size: 10px; background: transparent; color: #ffffff; border-color: #ffffff;">
-            ${this.isFocusModeActive ? '[ UNBLUR DETAIL ]' : '[ FOCUS HEADINGS ]'}
+          <button class="hud-btn btn-toggle-focus" style="padding: 4px 12px; font-size: 11px;">
+            ${this.isFocusModeActive ? '👁 Unblur Detail' : '🎯 Focus Headings'}
           </button>
         </div>
       </div>
@@ -642,7 +642,7 @@ export class ReadingDossier {
         <!-- Calm Document Reader (Strict 68ch measure & relaxed 1.75 line-height) -->
         <article class="calm-reader reading-text-pane" style="max-width: 68ch;">
           <div class="reading-header">
-            <span class="telemetry-label">[STAGE ${article.stage}]</span>
+            <span class="telemetry-label">STAGE ${article.stage}</span>
             <h2 class="reading-article-title">${article.title}</h2>
             <div class="reading-source-line">${article.genre} • Source: ${article.source}</div>
           </div>
@@ -651,8 +651,8 @@ export class ReadingDossier {
           </div>
 
           <div class="pass-progression-bar">
-            <button class="hud-btn btn-proceed-next" style="padding: 6px 14px;">
-              [ PROCEED TO PASS 2: SKELETON → ]
+            <button class="hud-btn btn-proceed-next" style="padding: 8px 18px; font-weight: 700;">
+              Proceed to Pass 2: Skeleton →
             </button>
           </div>
         </article>
@@ -662,12 +662,12 @@ export class ReadingDossier {
           <div class="vocab-drawer-slot"></div>
 
           <div class="reading-sidebar-card">
-            <div class="telemetry-label">[THESIS GIST]</div>
+            <div class="telemetry-label">Thesis Gist</div>
             <p class="reading-gist-text" style="font-size: 13px; line-height: 1.5; margin-top: 6px;">${data.thesisGist}</p>
           </div>
 
           <div class="reading-sidebar-card">
-            <div class="telemetry-label">[MARKED LEXICAL TARGETS (${data.markedLexicalTargets.length})]</div>
+            <div class="telemetry-label">Marked Lexical Targets (${data.markedLexicalTargets.length})</div>
             <div class="reading-tag-cloud">
               ${data.markedLexicalTargets.map((t: string) => `
                 <button type="button" class="reading-tag vocab-chip" data-word="${this.escapeHtml(t)}">
@@ -678,12 +678,12 @@ export class ReadingDossier {
           </div>
 
           <div class="reading-sidebar-card">
-            <div class="telemetry-label">[COMPREHENSION CHECKS]</div>
+            <div class="telemetry-label" style="margin-bottom: 8px;">COMPREHENSION CHECKS</div>
             ${data.comprehensionChecks.map((check: any, idx: number) => `
               <div class="comp-check-item">
                 <div class="comp-question">${idx + 1}. ${check.question}</div>
                 <details class="comp-answer-reveal">
-                  <summary class="hud-btn-link">[REVEAL VERIFICATION]</summary>
+                  <summary class="hud-btn-link" style="cursor: pointer; color: var(--accent-gold); font-weight: 600;">Reveal Verification</summary>
                   <p class="comp-answer">${check.answer}</p>
                 </details>
               </div>
@@ -738,13 +738,14 @@ export class ReadingDossier {
     const proceedBtn = slot.querySelector('.btn-proceed-next');
 
     toggleTimerBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
       if (this.isSkimTimerRunning) {
         if (this.skimTimerInterval) clearInterval(this.skimTimerInterval);
         this.isSkimTimerRunning = false;
-        toggleTimerBtn.textContent = '[ RESUME SKIM ]';
+        toggleTimerBtn.textContent = '▶ Resume Skim';
       } else {
         this.isSkimTimerRunning = true;
-        toggleTimerBtn.textContent = '[ PAUSE TIMER ]';
+        toggleTimerBtn.textContent = '⏸ Pause Timer';
         this.skimTimerInterval = setInterval(() => {
           if (this.skimSecondsRemaining > 0) {
             this.skimSecondsRemaining -= 1;
@@ -753,20 +754,21 @@ export class ReadingDossier {
             clearInterval(this.skimTimerInterval);
             this.isSkimTimerRunning = false;
             AudioSynthesizer.play('chime');
-            toggleTimerBtn.textContent = '[ SKIM COMPLETED ]';
+            toggleTimerBtn.textContent = '✓ Skim Completed';
           }
         }, 1000);
       }
     });
 
     toggleFocusBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
       this.isFocusModeActive = !this.isFocusModeActive;
       if (this.isFocusModeActive) {
         readingBody?.classList.add('skim-focused');
-        toggleFocusBtn.textContent = '[ UNBLUR DETAIL ]';
+        toggleFocusBtn.textContent = '👁 Unblur Detail';
       } else {
         readingBody?.classList.remove('skim-focused');
-        toggleFocusBtn.textContent = '[ FOCUS HEADINGS ]';
+        toggleFocusBtn.textContent = '🎯 Focus Headings';
       }
     });
 
@@ -782,14 +784,14 @@ export class ReadingDossier {
     slot.innerHTML = `
       <div class="reading-syntax-layout">
         <div class="syntax-intro-bar">
-          <span class="telemetry-label">[PASS 2: CLAUSAL & SYNTACTIC ARCHITECTURE]</span>
+          <span class="telemetry-label">Pass 2 · Clausal & Syntactic Architecture</span>
           <p class="syntax-subtitle">Deconstructing core subject-verb-object predicates and subordinate functional clauses.</p>
         </div>
         <div class="syntax-cards-grid">
           ${dissections.map((d, idx) => `
             <div class="syntax-card">
               <div class="syntax-header">
-                <span class="telemetry-label">DISSECTION [0${idx + 1}]</span>
+                <span class="telemetry-label">Dissection 0${idx + 1}</span>
               </div>
               <blockquote class="syntax-sentence" style="max-width: 68ch; line-height: 1.62;">"${d.sentence}"</blockquote>
 
@@ -810,7 +812,7 @@ export class ReadingDossier {
 
               ${d.subordinateClauses && d.subordinateClauses.length > 0 ? `
                 <div class="syntax-clauses-box">
-                  <div class="telemetry-label" style="margin-bottom: 8px;">[SUBORDINATE CLAUSES]</div>
+                  <div class="telemetry-label" style="margin-bottom: 8px;">Subordinate Clauses</div>
                   ${d.subordinateClauses.map((c: any) => `
                     <div class="sub-clause-item">
                       <div class="clause-type">${c.type}</div>
@@ -822,7 +824,7 @@ export class ReadingDossier {
               ` : ''}
 
               <div class="syntax-rhetoric-box">
-                <span class="telemetry-label">[RHETORICAL ANALYSIS]</span>
+                <span class="telemetry-label">Rhetorical Analysis</span>
                 <p class="syntax-analysis-text" style="max-width: 68ch; line-height: 1.5;">${d.syntacticAnalysis}</p>
               </div>
             </div>
@@ -830,8 +832,8 @@ export class ReadingDossier {
         </div>
 
         <div class="pass-progression-bar">
-          <button class="hud-btn btn-proceed-next" style="padding: 6px 14px;">
-            [ PROCEED TO PASS 3: LEXICAL MINING → ]
+          <button class="hud-btn btn-proceed-next" style="padding: 8px 18px; font-weight: 700;">
+            Proceed to Pass 3: Lexical Mining →
           </button>
         </div>
       </div>
@@ -846,7 +848,7 @@ export class ReadingDossier {
 
   private renderPass3SentenceMining(slot: Element, miningCards: any[]): void {
     if (miningCards.length === 0) {
-      slot.innerHTML = `<div class="empty-state-notice"><div class="telemetry-label">[NO MINING CARDS]</div></div>`;
+      slot.innerHTML = `<div class="empty-state-notice"><div class="telemetry-label">NO MINING CARDS</div></div>`;
       return;
     }
 
@@ -854,15 +856,15 @@ export class ReadingDossier {
     slot.innerHTML = `
       <div class="reading-mining-layout">
         <div class="dossier-nav-bar" style="margin-bottom: 16px;">
-          <button class="hud-btn mine-btn-prev">[ ← PREV CARD ]</button>
-          <span class="telemetry-value mine-counter">MINED ITEM [ ${this.miningCardIndex + 1} / ${miningCards.length} ]</span>
-          <button class="hud-btn mine-btn-next">[ NEXT CARD → ]</button>
+          <button class="hud-btn mine-btn-prev">← Prev Card</button>
+          <span class="telemetry-value mine-counter">MINED ITEM ${this.miningCardIndex + 1} / ${miningCards.length}</span>
+          <button class="hud-btn mine-btn-next">Next Card →</button>
         </div>
         <div class="mining-card-mount"></div>
 
         <div class="pass-progression-bar" style="margin-top: 16px;">
-          <button class="hud-btn btn-proceed-next" style="padding: 6px 14px;">
-            [ PROCEED TO PASS 4: CRITICAL SYNTHESIS → ]
+          <button class="hud-btn btn-proceed-next" style="padding: 8px 18px; font-weight: 700;">
+            Proceed to Pass 4: Critical Synthesis →
           </button>
         </div>
       </div>
@@ -880,8 +882,8 @@ export class ReadingDossier {
     this.currentCardHandle = AtomicCard.create({
       id: item.id,
       pillar: 'READ',
-      category: `i+1 MINING [${item.partOfSpeech.toUpperCase()}]`,
-      indexStr: `[ ${this.miningCardIndex + 1} / ${miningCards.length} ]`,
+      category: `i+1 MINING · ${item.partOfSpeech.toUpperCase()}`,
+      indexStr: `${this.miningCardIndex + 1} / ${miningCards.length}`,
       statusBadge,
       front: {
         promptLabel: `CONTEXTUAL TARGET // ${item.partOfSpeech.toUpperCase()}`,
@@ -937,7 +939,7 @@ export class ReadingDossier {
     slot.innerHTML = `
       <div class="reading-synthesis-layout">
         <div class="synthesis-card">
-          <div class="telemetry-label">[PASS 4: 50-WORD BENCHMARK PRÉCIS]</div>
+          <div class="telemetry-label">Pass 4 · 50-Word Benchmark Précis</div>
           <blockquote class="synthesis-precis-box" style="max-width: 68ch; line-height: 1.62;">
             ${synthesis.modelPrécis}
           </blockquote>
@@ -947,20 +949,20 @@ export class ReadingDossier {
         </div>
 
         <div class="synthesis-card">
-          <div class="telemetry-label">[INTEGRATED TARGET VOCABULARY]</div>
+          <div class="telemetry-label">Integrated Target Vocabulary</div>
           <div class="reading-tag-cloud" style="margin-top: 12px;">
             ${synthesis.incorporatedVocabulary.map((v: string) => `<span class="reading-tag active">${v}</span>`).join('')}
           </div>
         </div>
 
         <div class="synthesis-card">
-          <div class="telemetry-label">[REVERSE-ENGINEERING RECONSTRUCTION PROMPT]</div>
+          <div class="telemetry-label">Reverse-Engineering Reconstruction Prompt</div>
           <p class="synthesis-reconstruction-prompt" style="max-width: 68ch; line-height: 1.62;">
             ${synthesis.reconstructionPrompt || 'Close this dossier. In your notebook or writing buffer, reconstruct the central thesis of the article in exactly 3 complex sentences utilizing at least 3 of the mined vocabulary items.'}
           </p>
           <div style="margin-top: 16px;">
-            <button class="hud-btn btn-finish-reading" style="padding: 8px 16px;">
-              [ COMPLETE INTENSIVE PASS & LOG TO RECORD ]
+            <button class="hud-btn btn-finish-reading" style="padding: 10px 20px; font-weight: 700; background: var(--accent-gold); color: var(--bg-canvas); border: none; box-shadow: var(--shadow-glow);">
+              Complete Intensive Pass & Log to Record
             </button>
           </div>
         </div>

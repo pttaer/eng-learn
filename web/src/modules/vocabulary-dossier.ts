@@ -51,21 +51,21 @@ export class VocabularyDossier {
       <div class="dossier-control-bar">
         <div class="dossier-tabs vocab-mode-tabs">
           <button class="hud-btn mode-tab ${this.activeMode === 'ROOT_FORGE' ? 'active' : ''}" data-mode="ROOT_FORGE">
-            [MODE A: ROOT FORGE]
+            Mode A: Root Forge
           </button>
           <button class="hud-btn mode-tab ${this.activeMode === 'CEFR_ASCENT' ? 'active' : ''}" data-mode="CEFR_ASCENT">
-            [MODE B: CEFR ASCENT]
+            Mode B: CEFR Ascent
           </button>
           <button class="hud-btn mode-tab ${this.activeMode === 'PARTICLE_LAB' ? 'active' : ''}" data-mode="PARTICLE_LAB">
-            [MODE C: PARTICLE LAB]
+            Mode C: Particle Lab
           </button>
         </div>
 
         <div class="vocab-level-selector">
           <span class="telemetry-label" style="margin-right: 8px;">DIFFICULTY:</span>
-          <button class="hud-btn level-tab ${this.activeLevel === 1 ? 'active' : ''}" data-lvl="1">[LVL 1: BASELINE]</button>
-          <button class="hud-btn level-tab ${this.activeLevel === 2 ? 'active' : ''}" data-lvl="2">[LVL 2: ADVANCED]</button>
-          <button class="hud-btn level-tab ${this.activeLevel === 3 ? 'active' : ''}" data-lvl="3">[LVL 3: MASTERY (C2)]</button>
+          <button class="hud-btn level-tab ${this.activeLevel === 1 ? 'active' : ''}" data-lvl="1">Lvl 1: Baseline</button>
+          <button class="hud-btn level-tab ${this.activeLevel === 2 ? 'active' : ''}" data-lvl="2">Lvl 2: Advanced</button>
+          <button class="hud-btn level-tab ${this.activeLevel === 3 ? 'active' : ''}" data-lvl="3">Lvl 3: Mastery (C2)</button>
         </div>
       </div>
 
@@ -87,9 +87,9 @@ export class VocabularyDossier {
       <div class="dossier-card-slot"></div>
 
       <div class="dossier-nav-bar">
-        <button class="hud-btn nav-btn-prev">[ ← PREV ]</button>
-        <span class="telemetry-value card-counter">NODE [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]</span>
-        <button class="hud-btn nav-btn-next">[ NEXT → ]</button>
+        <button class="hud-btn nav-btn-prev">← Prev</button>
+        <span class="telemetry-value card-counter">NODE ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}</span>
+        <button class="hud-btn nav-btn-next">Next →</button>
       </div>
     `;
 

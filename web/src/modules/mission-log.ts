@@ -39,9 +39,9 @@ export class MissionLog {
         <div class="mission-day-card-slot"></div>
       </div>
       <div class="dossier-nav-bar">
-        <button class="hud-btn nav-btn-prev-day">[ ← PREV DAY ]</button>
-        <span class="telemetry-value active-day-indicator">DAY [ ${this.activeDayIndex + 1} / 30 ]</span>
-        <button class="hud-btn nav-btn-next-day">[ NEXT DAY → ]</button>
+        <button class="hud-btn nav-btn-prev-day">← Prev Day</button>
+        <span class="telemetry-value active-day-indicator">DAY ${this.activeDayIndex + 1} / 30</span>
+        <button class="hud-btn nav-btn-next-day">Next Day →</button>
       </div>
     `;
 

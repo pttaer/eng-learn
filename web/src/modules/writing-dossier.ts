@@ -153,11 +153,11 @@ export class WritingDossier {
 
         <!-- Bottom Navigation & Counter -->
         <div class="dossier-nav-bar" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-hairline); padding-top: 16px; margin-top: 12px;">
-          <button class="hud-btn nav-btn-prev" ${this.currentIndex === 0 ? 'disabled' : ''}>[ ← PREV PROMPT ]</button>
-          <span class="telemetry-value card-counter" style="font-family: var(--font-mono);">
-            PROMPT [ ${this.currentIndex + 1} / ${this.items.length} ]
+          <button class="hud-btn nav-btn-prev" ${this.currentIndex === 0 ? 'disabled' : ''}>← Prev Prompt</button>
+          <span class="telemetry-value card-counter" style="font-family: var(--font-mono); font-size: 13px;">
+            PROMPT ${this.currentIndex + 1} / ${this.items.length}
           </span>
-          <button class="hud-btn nav-btn-next" ${this.currentIndex === this.items.length - 1 ? 'disabled' : ''}>[ NEXT PROMPT → ]</button>
+          <button class="hud-btn nav-btn-next" ${this.currentIndex === this.items.length - 1 ? 'disabled' : ''}>Next Prompt →</button>
         </div>
       </div>
     `;
@@ -190,10 +190,10 @@ export class WritingDossier {
     switch (this.currentStep) {
       case 'analyze':
         return `
-          <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 28px; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+          <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 28px; border-radius: 8px; box-shadow: var(--shadow-card);">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
-              <span class="telemetry-label">[STEP 1 // DECONSTRUCT RHETORICAL ARCHITECTURE]</span>
-              <button class="hud-btn btn-speak-model" style="padding: 4px 10px; font-size: 11px;" title="Listen to Native Pronunciation">[ 🔊 PLAY MODEL ]</button>
+              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">STEP 1 // DECONSTRUCT RHETORICAL ARCHITECTURE</span>
+              <button class="hud-btn btn-speak-model" style="padding: 4px 12px; font-size: 11px;" title="Listen to Native Pronunciation">🔊 Play Model</button>
             </div>
 
             <div class="model-sentence-display" style="font-size: 21px; line-height: 1.6; font-weight: 500; color: var(--ink-primary); max-width: 68ch; margin: 16px 0 20px 0; border-left: 3px solid var(--accent-gold); padding-left: 16px;">
@@ -201,8 +201,8 @@ export class WritingDossier {
             </div>
 
             <!-- MEAL Structural Decomposition -->
-            <div class="meal-blueprint-box" style="border: 1px solid var(--border-hairline); padding: 16px; background: rgba(0, 0, 0, 0.02); border-radius: 4px; margin-bottom: 20px;">
-              <div class="telemetry-label" style="margin-bottom: 10px;">[MEAL STRUCTURAL SCAFFOLDING]</div>
+            <div class="meal-blueprint-box" style="border: 1px solid var(--border-hairline); padding: 16px; background: var(--bg-surface-sunk); border-radius: 6px; margin-bottom: 20px;">
+              <div class="telemetry-label" style="margin-bottom: 10px;">MEAL STRUCTURAL SCAFFOLDING</div>
               <div style="display: grid; grid-template-columns: 32px 1fr; gap: 8px 12px; font-size: 13px; line-height: 1.5;">
                 <strong style="font-family: var(--font-mono); color: var(--accent-gold);">M:</strong> <span>${item.meal.m}</span>
                 <strong style="font-family: var(--font-mono); color: var(--accent-gold);">E:</strong> <span>${item.meal.e}</span>
@@ -215,21 +215,21 @@ export class WritingDossier {
               <strong>Rhetorical Commentary:</strong> ${item.stylistic}
             </div>
 
-            <button class="hud-btn btn-proceed-type" style="width: 100%; justify-content: center; background: var(--ink-primary); color: var(--ink-inverted); padding: 14px 0; font-size: 14px; font-weight: 600; border: none; cursor: pointer;">
-              [ MEMORIZED — HIDE MODEL & START TYPING → ]
+            <button class="hud-btn btn-proceed-type" style="width: 100%; justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 14px 0; font-size: 14px; font-weight: 700; border: none; cursor: pointer; border-radius: 6px; box-shadow: var(--shadow-glow);">
+              Memorized — Hide Model & Start Typing →
             </button>
           </div>
         `;
 
       case 'type':
         return `
-          <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 28px; border-radius: 4px;">
+          <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 28px; border-radius: 8px; box-shadow: var(--shadow-card);">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-              <span class="telemetry-label">[STEP 2 // RECONSTRUCT FROM MEMORY]</span>
-              <button class="hud-btn btn-peek-model" style="padding: 4px 10px; font-size: 11px;">[ 👁 PEEK MODEL (2s) ]</button>
+              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">STEP 2 // RECONSTRUCT FROM MEMORY</span>
+              <button class="hud-btn btn-peek-model" style="padding: 4px 12px; font-size: 11px;">👁 Peek Model (2s)</button>
             </div>
 
-            <div id="peek-container" style="display: none; font-size: 15px; line-height: 1.5; color: var(--ink-muted); padding: 12px; background: rgba(0,0,0,0.03); border: 1px dashed var(--border-hairline); margin-bottom: 16px; border-radius: 4px;">
+            <div id="peek-container" style="display: none; font-size: 15px; line-height: 1.5; color: var(--ink-muted); padding: 12px; background: var(--bg-surface-sunk); border: 1px dashed var(--border-subtle); margin-bottom: 16px; border-radius: 6px;">
               "${item.masterSentence}"
             </div>
 
@@ -241,7 +241,7 @@ export class WritingDossier {
               class="copywork-input"
               rows="6"
               placeholder="Reconstruct the complete master sentence from memory..."
-              style="width: 100%; font-family: var(--font-sans); font-size: 17px; line-height: 1.65; padding: 16px; border: 1px solid var(--border-solid); border-radius: 4px; box-sizing: border-box; resize: vertical; outline: none; background: var(--bg-canvas);"
+              style="width: 100%; font-family: var(--font-sans); font-size: 17px; line-height: 1.65; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 6px; box-sizing: border-box; resize: vertical; outline: none; background: var(--bg-canvas); color: var(--ink-primary);"
             >${this.typedContent}</textarea>
 
             <div class="typing-telemetry-bar" style="display: flex; justify-content: space-between; align-items: center; margin: 12px 0 20px 0; font-family: var(--font-mono); font-size: 12px; color: var(--ink-muted);">
@@ -249,8 +249,8 @@ export class WritingDossier {
               <span id="elapsed-timer">TIME: 00:00</span>
             </div>
 
-            <button class="hud-btn btn-evaluate-type" style="width: 100%; justify-content: center; background: var(--ink-primary); color: var(--ink-inverted); padding: 14px 0; font-size: 14px; font-weight: 600; border: none; cursor: pointer;">
-              [ EVALUATE RECONSTRUCTION → ]
+            <button class="hud-btn btn-evaluate-type" style="width: 100%; justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 14px 0; font-size: 14px; font-weight: 700; border: none; cursor: pointer; border-radius: 6px; box-shadow: var(--shadow-glow);">
+              Evaluate Reconstruction →
             </button>
           </div>
         `;
@@ -260,17 +260,17 @@ export class WritingDossier {
         const tokens = computeDiffTokens(item.masterSentence, this.typedContent);
 
         return `
-          <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 28px; border-radius: 4px;">
+          <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 28px; border-radius: 8px; box-shadow: var(--shadow-card);">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-              <span class="telemetry-label">[STEP 3 // MYERS/HIRSCHBERG SPLIT-DIFF EVALUATION]</span>
+              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">STEP 3 // MYERS/HIRSCHBERG SPLIT-DIFF EVALUATION</span>
               <span class="telemetry-value" style="color: var(--accent-gold); font-size: 16px; font-weight: 700;">ACCURACY: ${metrics.accuracyPct}%</span>
             </div>
 
             <!-- Fluency Metrics Bar -->
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; background: rgba(0,0,0,0.02); border: 1px solid var(--border-hairline); padding: 12px 16px; border-radius: 4px; margin-bottom: 20px; font-family: var(--font-mono); font-size: 12px; text-align: center;">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; background: var(--bg-surface-sunk); border: 1px solid var(--border-hairline); padding: 12px 16px; border-radius: 6px; margin-bottom: 20px; font-family: var(--font-mono); font-size: 12px; text-align: center;">
               <div>
                 <div class="telemetry-label">ACCURACY</div>
-                <div class="val-accuracy" style="font-size: 16px; font-weight: 700;">${metrics.accuracyPct}%</div>
+                <div class="val-accuracy" style="font-size: 16px; font-weight: 700; color: var(--good);">${metrics.accuracyPct}%</div>
               </div>
               <div>
                 <div class="telemetry-label">NET WPM</div>
@@ -278,7 +278,7 @@ export class WritingDossier {
               </div>
               <div>
                 <div class="telemetry-label">ERRORS</div>
-                <div class="val-errors" style="font-size: 16px; font-weight: 700; color: ${metrics.errorCount === 0 ? 'var(--accent-gold)' : '#dc2626'};">${metrics.errorCount}</div>
+                <div class="val-errors" style="font-size: 16px; font-weight: 700; color: ${metrics.errorCount === 0 ? 'var(--good)' : 'var(--critical)'};">${metrics.errorCount}</div>
               </div>
               <div>
                 <div class="telemetry-label">TIME</div>
@@ -288,28 +288,28 @@ export class WritingDossier {
 
             <!-- Original Exemplar -->
             <div style="margin-bottom: 16px;">
-              <div class="telemetry-label" style="margin-bottom: 6px;">[ORIGINAL EXEMPLAR]</div>
-              <div style="font-size: 16px; line-height: 1.6; padding: 12px; background: rgba(0,0,0,0.02); border-left: 3px solid var(--accent-gold); border-radius: 2px;">
+              <div class="telemetry-label" style="margin-bottom: 6px;">ORIGINAL EXEMPLAR</div>
+              <div style="font-size: 16px; line-height: 1.6; padding: 14px; background: var(--bg-surface-sunk); border-left: 3px solid var(--accent-gold); border-radius: 4px; color: var(--ink-primary);">
                 "${item.masterSentence}"
               </div>
             </div>
 
             <!-- Side-by-Side Highlighted Diff -->
             <div style="margin-bottom: 24px;">
-              <div class="telemetry-label" style="margin-bottom: 6px;">[YOUR RECONSTRUCTION & CORRECTIONS]</div>
-              <div class="copywork-diff-container" style="font-size: 16px; line-height: 1.8; padding: 14px; border: 1px solid var(--border-hairline); border-radius: 4px; background: var(--bg-canvas);">
+              <div class="telemetry-label" style="margin-bottom: 6px;">YOUR RECONSTRUCTION & CORRECTIONS</div>
+              <div class="copywork-diff-container" style="font-size: 16px; line-height: 1.8; padding: 14px; border: 1px solid var(--border-subtle); border-radius: 6px; background: var(--bg-canvas);">
                 ${this.renderDiffHTML(tokens)}
               </div>
             </div>
 
             <!-- Self-Assessment SRS Rating Bar -->
             <div style="border-top: 1px solid var(--border-hairline); padding-top: 16px;">
-              <div class="telemetry-label" style="text-align: center; margin-bottom: 12px;">[LOG RETENTION RATING // UPDATE CONSTELLATION MASTERY]</div>
+              <div class="telemetry-label" style="text-align: center; margin-bottom: 12px;">LOG RETENTION RATING // UPDATE CONSTELLATION MASTERY</div>
               <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
-                <button class="hud-btn btn-rate-srs" data-rating="0" style="padding: 10px 0; justify-content: center; font-size: 12px;">[ AGAIN (0) ]</button>
-                <button class="hud-btn btn-rate-srs" data-rating="2" style="padding: 10px 0; justify-content: center; font-size: 12px;">[ HARD (2) ]</button>
-                <button class="hud-btn btn-rate-srs" data-rating="3" style="padding: 10px 0; justify-content: center; font-size: 12px; font-weight: 700;">[ GOOD (3) ]</button>
-                <button class="hud-btn btn-rate-srs" data-rating="5" style="padding: 10px 0; justify-content: center; font-size: 12px; color: var(--accent-gold); font-weight: 700;">[ EASY (5) ]</button>
+                <button class="hud-btn btn-rate-srs" data-rating="0" style="padding: 10px 0; justify-content: center; font-size: 12px; border-radius: 6px;"><span style="color: var(--critical); font-weight: 700;">✗</span> Again (1)</button>
+                <button class="hud-btn btn-rate-srs" data-rating="2" style="padding: 10px 0; justify-content: center; font-size: 12px; border-radius: 6px;"><span style="color: var(--warning); font-weight: 700;">▲</span> Hard (2)</button>
+                <button class="hud-btn btn-rate-srs" data-rating="3" style="padding: 10px 0; justify-content: center; font-size: 12px; font-weight: 700; border-radius: 6px;"><span style="color: var(--good); font-weight: 700;">✓</span> Good (3)</button>
+                <button class="hud-btn btn-rate-srs" data-rating="5" style="padding: 10px 0; justify-content: center; font-size: 12px; color: var(--accent-gold); font-weight: 700; border-radius: 6px;">★ Easy (4)</button>
               </div>
             </div>
           </div>

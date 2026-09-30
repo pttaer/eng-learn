@@ -75,8 +75,8 @@ export class CollocationsDossier {
     this.container.innerHTML = `
       <div class="collocations-mode-header">
         <div class="view-mode-toggle">
-          <button class="hud-btn view-toggle-btn ${this.viewMode === 'drill' ? 'active' : ''}" data-view="drill">[⚡ ACTIVE SRS DRILL]</button>
-          <button class="hud-btn view-toggle-btn ${this.viewMode === 'dictionary' ? 'active' : ''}" data-view="dictionary">[📖 FULL 1,000 LEXICON]</button>
+          <button class="hud-btn view-toggle-btn ${this.viewMode === 'drill' ? 'active' : ''}" data-view="drill">⚡ Active SRS Drill</button>
+          <button class="hud-btn view-toggle-btn ${this.viewMode === 'dictionary' ? 'active' : ''}" data-view="dictionary">📖 Full 1,000 Lexicon</button>
         </div>
         <div class="lexicon-badge-summary">
           <span class="telemetry-value">TOTAL: 1,000 COLLOCATIONS</span>
@@ -85,12 +85,12 @@ export class CollocationsDossier {
 
       <div class="dossier-control-bar">
         <div class="dossier-tabs">
-          ${this.viewMode === 'drill' ? `<button class="hud-btn filter-tab ${this.activeCategory === 'DUE' ? 'active' : ''}" data-cat="DUE">[⚡ SRS DUE BATCH (20)]</button>` : ''}
-          <button class="hud-btn filter-tab ${this.activeCategory === 'ALL' ? 'active' : ''}" data-cat="ALL">[ALL 1,000]</button>
-          <button class="hud-btn filter-tab ${this.activeCategory === 'EVERYDAY' ? 'active' : ''}" data-cat="EVERYDAY">[EVERYDAY]</button>
-          <button class="hud-btn filter-tab ${this.activeCategory === 'BUSINESS' ? 'active' : ''}" data-cat="BUSINESS">[BUSINESS]</button>
-          <button class="hud-btn filter-tab ${this.activeCategory === 'ACADEMIC' ? 'active' : ''}" data-cat="ACADEMIC">[ACADEMIC]</button>
-          <button class="hud-btn filter-tab ${this.activeCategory === 'IDIOMS' ? 'active' : ''}" data-cat="IDIOMS">[IDIOMS]</button>
+          ${this.viewMode === 'drill' ? `<button class="hud-btn filter-tab ${this.activeCategory === 'DUE' ? 'active' : ''}" data-cat="DUE">⚡ SRS Due (20)</button>` : ''}
+          <button class="hud-btn filter-tab ${this.activeCategory === 'ALL' ? 'active' : ''}" data-cat="ALL">All 1,000</button>
+          <button class="hud-btn filter-tab ${this.activeCategory === 'EVERYDAY' ? 'active' : ''}" data-cat="EVERYDAY">Everyday</button>
+          <button class="hud-btn filter-tab ${this.activeCategory === 'BUSINESS' ? 'active' : ''}" data-cat="BUSINESS">Business</button>
+          <button class="hud-btn filter-tab ${this.activeCategory === 'ACADEMIC' ? 'active' : ''}" data-cat="ACADEMIC">Academic</button>
+          <button class="hud-btn filter-tab ${this.activeCategory === 'IDIOMS' ? 'active' : ''}" data-cat="IDIOMS">Idioms</button>
         </div>
         <div class="dossier-search-wrapper">
           <input type="text" class="dossier-search-input" placeholder="SEARCH 1,000 COLLOCATIONS... (CTRL+K)" value="${this.escapeHtml(this.searchQuery)}" />
@@ -113,9 +113,9 @@ export class CollocationsDossier {
     return `
       <div class="dossier-card-slot"></div>
       <div class="dossier-nav-bar">
-        <button class="hud-btn nav-btn-prev">[ ← PREV ]</button>
-        <span class="telemetry-value card-counter">VAULT [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]</span>
-        <button class="hud-btn nav-btn-next">[ NEXT → ]</button>
+        <button class="hud-btn nav-btn-prev">← Prev</button>
+        <span class="telemetry-value card-counter">VAULT ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}</span>
+        <button class="hud-btn nav-btn-next">Next →</button>
       </div>
     `;
   }
@@ -151,7 +151,7 @@ export class CollocationsDossier {
               ${pageItems.length === 0 ? `
                 <tr>
                   <td colspan="7" class="lexicon-empty-cell">
-                    <div class="telemetry-label">[ZERO RECORDS MATCH QUERY]</div>
+                    <div class="telemetry-label">Zero records match query</div>
                     <p>No collocation entries found matching the filter criteria.</p>
                   </td>
                 </tr>
@@ -183,9 +183,9 @@ export class CollocationsDossier {
           </table>
         </div>
         <div class="lexicon-pagination-bar">
-          <button class="hud-btn page-btn-prev" ${this.currentPage <= 1 ? 'disabled' : ''}>[ ← PREV 50 ]</button>
+          <button class="hud-btn page-btn-prev" ${this.currentPage <= 1 ? 'disabled' : ''}>← Prev 50</button>
           <span class="telemetry-value page-indicator">PAGE ${this.currentPage} / ${totalPages} (${totalItems > 0 ? startIndex + 1 : 0}–${endIndex} of ${totalItems})</span>
-          <button class="hud-btn page-btn-next" ${this.currentPage >= totalPages ? 'disabled' : ''}>[ NEXT 50 → ]</button>
+          <button class="hud-btn page-btn-next" ${this.currentPage >= totalPages ? 'disabled' : ''}>Next 50 →</button>
         </div>
       </div>
     `;
@@ -334,7 +334,7 @@ export class CollocationsDossier {
     if (this.currentList.length === 0) {
       slot.innerHTML = `
         <div class="empty-state-notice">
-          <div class="telemetry-label">[ZERO RECORDS MATCH QUERY]</div>
+          <div class="telemetry-label">Zero records match query</div>
           <p>No collocation entries found matching the filter criteria.</p>
         </div>
       `;

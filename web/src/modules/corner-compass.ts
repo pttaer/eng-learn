@@ -182,9 +182,14 @@ export class CornerCompass {
 
     ctx.clearRect(0, 0, 60, 60);
 
+    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    const goldColor = isDark ? '#fb923c' : '#ca8a04';
+    const coreColor = isDark ? '#f59e0b' : '#111111';
+    const centerColor = isDark ? '#080a0f' : '#ffffff';
+
     // Needle Spines
-    ctx.strokeStyle = '#000000';
-    ctx.lineWidth = 1;
+    ctx.strokeStyle = goldColor;
+    ctx.lineWidth = 1.2;
 
     for (let i = 0; i < spineCount; i++) {
       const angle = (i / spineCount) * Math.PI * 2 + this.angleOffset;
@@ -201,16 +206,23 @@ export class CornerCompass {
       ctx.stroke();
     }
 
+    // Outer subtle halo
+    ctx.beginPath();
+    ctx.arc(cx, cy, rCore + 3, 0, Math.PI * 2);
+    ctx.strokeStyle = isDark ? 'rgba(251, 146, 60, 0.35)' : 'rgba(202, 138, 4, 0.25)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
     // Core
     ctx.beginPath();
     ctx.arc(cx, cy, rCore, 0, Math.PI * 2);
-    ctx.fillStyle = '#000000';
+    ctx.fillStyle = coreColor;
     ctx.fill();
 
     // Center micro dot
     ctx.beginPath();
     ctx.arc(cx, cy, 2, 0, Math.PI * 2);
-    ctx.fillStyle = '#ffffff';
+    ctx.fillStyle = centerColor;
     ctx.fill();
   }
 

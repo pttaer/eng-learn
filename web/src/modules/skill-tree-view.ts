@@ -18,33 +18,17 @@ export class SkillTreeView {
     const progress = SkillTreeEngine.calculateSummitProgress();
 
     this.container.innerHTML = `
-      <div class="skill-tree-shell" style="width: 100%; max-width: 1100px; margin: 0 auto; padding-bottom: 60px;">
-        <!-- 1. Today's 15-Minute Workout Banner -->
+      <div class="skill-tree-shell" style="width: 100%; max-width: 1200px; height: 100%; margin: 0 auto; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+        <!-- 1. Unified Command Header & Today's 15-Minute Workout -->
         ${this.renderWorkoutBanner()}
 
-        <!-- 2. Constellation Header & Progress -->
-        <div class="tree-header-card" style="margin-top: 24px; text-align: center; border: 1px solid var(--border-hairline); background: var(--bg-surface); padding: 24px; border-radius: 4px;">
-          <div class="telemetry-label" style="letter-spacing: 0.16em; margin-bottom: 8px;">[THE SKYRIM CONSTELLATION ROADMAP]</div>
-          <h1 style="font-size: 26px; font-weight: 700; margin-bottom: 8px; font-family: var(--font-sans);">
-            The Path to C2 Native Mastery
-          </h1>
-          <p style="font-size: 15px; color: var(--ink-muted); max-width: 68ch; margin: 0 auto 16px auto; line-height: 1.6;">
-            Every node represents an advanced linguistic capability. Master prerequisites to unlock higher-tier rhetorical and syntactic perks.
-          </p>
-          <div style="display: inline-flex; align-items: center; gap: 24px; font-family: var(--font-mono); font-size: 13px; background: rgba(0,0,0,0.03); padding: 8px 20px; border-radius: 99px;">
-            <span>RANK: <strong style="color: var(--ink-primary);">${progress.currentRank}</strong></span>
-            <span>•</span>
-            <span>SUMMIT PROGRESS: <strong style="color: var(--accent-gold);">${progress.masteredCount} / ${progress.totalNodes} PERKS (<span class="val-progress-pct">${progress.progressPct}%</span>)</strong></span>
-          </div>
-        </div>
-
-        <!-- 3. Constellation Visualizer Canvas/SVG -->
-        <div class="constellation-container" style="position: relative; width: 100%; height: 640px; margin-top: 24px; background: var(--bg-surface); border: 1px solid var(--border-hairline); border-radius: 4px; overflow: hidden;">
+        <!-- 2. Constellation Visualizer Canvas/SVG -->
+        <div class="constellation-container" style="position: relative; width: 100%; flex: 1 1 0; min-height: 0; margin-top: 6px; margin-bottom: 6px; background: radial-gradient(circle at 50% 25%, color-mix(in srgb, var(--accent-gold) 6%, transparent), transparent 75%), var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-card);">
           ${this.renderConstellationSVG()}
         </div>
 
-        <!-- 4. 5 Branches Reference Grid -->
-        <div class="branches-summary-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 24px;">
+        <!-- 3. 5 Branches Reference Grid -->
+        <div class="branches-summary-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; flex: 0 0 auto;">
           ${this.renderBranchesSummary()}
         </div>
       </div>
@@ -63,7 +47,7 @@ export class SkillTreeView {
       // 2. Stagger star node entrance with elastic bounce
       const nodes = this.container.querySelectorAll('.constellation-node');
       if (nodes.length > 0) {
-        MotionEngine.staggerEntrance(nodes as any, { from: 'bottom', delayStep: 30 });
+        MotionEngine.staggerEntrance(nodes as any, { from: 'bottom', delayStep: 25 });
       }
 
       // 3. Roll up summit progress counter
@@ -77,34 +61,69 @@ export class SkillTreeView {
   }
 
   private renderWorkoutBanner(): string {
+    const progress = SkillTreeEngine.calculateSummitProgress();
     return `
-      <div class="workout-banner" style="background: var(--bg-surface); border: 1px solid var(--border-solid); padding: 20px 24px; border-radius: 4px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
-        <div style="flex: 1; min-width: 280px;">
-          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-            <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">★ TODAY'S 15-MINUTE WORKOUT</span>
-            <span class="telemetry-label">• 2 OF 3 DRILLS REMAINING</span>
+      <div class="workout-banner tree-command-panel" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 16px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; gap: 12px; box-shadow: var(--shadow-card); flex: 0 0 auto;">
+        <div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px;">
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <span class="telemetry-label" style="letter-spacing: 0.12em; font-size: 10px; color: var(--accent-gold); font-weight: 700;">✦ THE SKYRIM CONSTELLATION ROADMAP ✦</span>
+            <span class="hud-status-badge" style="font-size: 10px; padding: 2px 8px; border-radius: 4px;">
+              RANK: <strong>${progress.currentRank}</strong>
+            </span>
+            <span class="hud-status-badge" style="font-size: 10px; padding: 2px 8px; border-radius: 4px; border-color: var(--accent-gold); color: var(--accent-gold);">
+              SUMMIT: <strong class="val-progress-pct">${progress.progressPct}%</strong> (${progress.masteredCount}/${progress.totalNodes} PERKS)
+            </span>
           </div>
-          <div style="display: flex; gap: 16px; font-size: 14px; margin-top: 8px; flex-wrap: wrap;">
-            <div style="display: flex; align-items: center; gap: 6px;">
-              <span style="color: var(--accent-gold); font-weight: 700;">✓</span> <span>10 Collocations Reviewed</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 6px; color: var(--ink-secondary);">
-              <span style="opacity: 0.5;">○</span> <span>1 Franklin Copywork (Inversion)</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 6px; color: var(--ink-secondary);">
-              <span style="opacity: 0.5;">○</span> <span>1 Speaking Take (4-3-2 Fluency)</span>
-            </div>
+          <div style="display: flex; align-items: baseline; gap: 8px; overflow: hidden;">
+            <h1 style="font-size: 16px; font-weight: 700; margin: 0; font-family: var(--font-sans); color: var(--ink-primary); letter-spacing: -0.01em; white-space: nowrap;">
+              The Path to C2 Native Mastery
+            </h1>
+            <span style="font-size: 12px; color: var(--ink-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+              — Master prerequisite engrams to unlock higher-tier syntactic and rhetorical perks.
+            </span>
           </div>
         </div>
-        <button class="hud-btn btn-continue-workout" style="background: var(--ink-primary); color: var(--ink-inverted); padding: 12px 24px; font-weight: 600; font-size: 14px; border: none; cursor: pointer;">
-          [ CONTINUE TODAY'S WORKOUT → ]
-        </button>
+
+        <div style="flex: 0 0 auto; display: flex; align-items: center; gap: 12px; background: var(--bg-surface-sunk); border: 1px solid var(--border-hairline); border-radius: 6px; padding: 6px 14px;">
+          <div style="display: flex; flex-direction: column; gap: 2px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-size: 10px;">★ TODAY'S 15-MINUTE WORKOUT</span>
+              <span class="telemetry-label" style="font-size: 10px;">2 OF 3 DRILLS REMAINING</span>
+            </div>
+            <div style="display: flex; gap: 10px; font-size: 11px; color: var(--ink-secondary);">
+              <div style="display: flex; align-items: center; gap: 3px;">
+                <span style="color: var(--accent-gold); font-weight: 700;">✓</span> <span>10 Collocations Reviewed</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 3px; opacity: 0.75;">
+                <span>○</span> <span>1 Franklin Copywork (Inversion)</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 3px; opacity: 0.75;">
+                <span>○</span> <span>1 Speaking Take (4-3-2 Fluency)</span>
+              </div>
+            </div>
+          </div>
+          <button class="hud-btn btn-continue-workout" style="justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 6px 16px; min-height: 34px; font-weight: 700; font-size: 11px; border: none; cursor: pointer; border-radius: 6px; white-space: nowrap; box-shadow: var(--shadow-glow);">
+            Continue Today's Workout →
+          </button>
+        </div>
       </div>
     `;
   }
 
+  private formatNodeLabel(title: string): [string, string] {
+    if (title.includes('(')) {
+      const parts = title.split('(');
+      return [parts[0].trim(), `(${parts[1]}`];
+    }
+    const words = title.split(' ');
+    if (words.length <= 2 || title.length <= 15) {
+      return [title, ''];
+    }
+    const mid = Math.ceil(words.length / 2);
+    return [words.slice(0, mid).join(' '), words.slice(mid).join(' ')];
+  }
+
   private renderConstellationSVG(): string {
-    // Generate connecting lines (filaments) and star nodes in SVG
     const nodes = SkillTreeEngine.getAllNodes();
     let linesSvg = '';
     let nodesSvg = '';
@@ -116,14 +135,14 @@ export class SkillTreeView {
         const prereq = nodes.find(n => n.id === prereqId);
         if (prereq) {
           const isMastered = nodeStatus === 'mastered' || SkillTreeEngine.getNodeStatus(prereq.id) === 'mastered';
-          const strokeColor = isMastered ? 'var(--accent-gold)' : 'rgba(17, 17, 17, 0.15)';
-          const strokeWidth = isMastered ? '2' : '1';
+          const strokeColor = isMastered ? 'var(--accent-gold)' : 'var(--border-subtle)';
+          const strokeWidth = isMastered ? '2.5' : '1.2';
           const strokeDash = isMastered ? 'none' : '3,3';
 
           linesSvg += `
             <line
-              x1="${prereq.x}%" y1="${prereq.y}%"
-              x2="${node.x}%" y2="${node.y}%"
+              x1="${prereq.x * 10}" y1="${prereq.y * 7}"
+              x2="${node.x * 10}" y2="${node.y * 7}"
               stroke="${strokeColor}"
               stroke-width="${strokeWidth}"
               stroke-dasharray="${strokeDash}"
@@ -134,17 +153,18 @@ export class SkillTreeView {
       }
     }
 
-    // Connect top Level 5 nodes of all branches to the C2 SUMMIT Apex (50%, 5%)
-    const summitX = 50;
-    const summitY = 5;
+    // Connect top Level 5 nodes of all branches to the C2 SUMMIT Apex (500, 35)
+    const summitPxX = 500;
+    const summitPxY = 35;
     for (const node of nodes.filter(n => n.level === 5)) {
       linesSvg += `
         <line
-          x1="${node.x}%" y1="${node.y}%"
-          x2="${summitX}%" y2="${summitY}%"
-          stroke="rgba(202, 138, 4, 0.4)"
-          stroke-width="1.5"
+          x1="${node.x * 10}" y1="${node.y * 7}"
+          x2="${summitPxX}" y2="${summitPxY}"
+          stroke="var(--accent-gold)"
+          stroke-width="1.8"
           stroke-dasharray="4,4"
+          opacity="0.55"
           class="constellation-line"
         />
       `;
@@ -152,60 +172,76 @@ export class SkillTreeView {
 
     // Apex Summit Star
     const summitSvg = `
-      <g class="constellation-apex" style="cursor: pointer;" transform="translate(${summitX * 10}, ${summitY * 6.4})">
-        <circle cx="0" cy="0" r="14" fill="var(--bg-surface)" stroke="var(--accent-gold)" stroke-width="2" />
-        <circle cx="0" cy="0" r="7" fill="var(--accent-gold)" />
-        <text x="0" y="26" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700" fill="var(--accent-gold)">C2 SUMMIT</text>
+      <g class="constellation-apex" style="cursor: pointer;" transform="translate(${summitPxX}, ${summitPxY})">
+        <circle cx="0" cy="0" r="22" fill="url(#summitGlow)" />
+        <circle cx="0" cy="0" r="14" fill="var(--bg-card)" stroke="var(--accent-gold)" stroke-width="2.5" />
+        <circle cx="0" cy="0" r="6" fill="var(--accent-gold)" />
+        <text x="0" y="24" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700" fill="var(--accent-gold)">★ C2 SUMMIT ★</text>
       </g>
     `;
 
-    // Render 25 Interactive Perk Stars
+    // Render 25 Interactive Perk Stars with Full 2-Line Titles (Zero Truncation)
     for (const node of nodes) {
       const status = SkillTreeEngine.getNodeStatus(node.id);
 
-      let circleFill = 'var(--bg-surface)';
-      let circleStroke = 'var(--border-solid)';
+      let circleFill = 'var(--bg-card)';
+      let circleStroke = 'var(--accent-gold)';
+      let strokeWidth = '2';
       let symbol = `${node.level}`;
       let cursorClass = 'node-unlocked';
+      let haloSvg = '';
+      let textFill = 'var(--accent-gold)';
 
       if (status === 'mastered') {
         circleFill = 'var(--accent-gold)';
-        circleStroke = 'var(--accent-gold)';
+        circleStroke = 'var(--accent-star)';
+        strokeWidth = '2.5';
         cursorClass = 'node-mastered';
         symbol = '★';
+        textFill = '#ffffff';
+        haloSvg = `<circle cx="0" cy="0" r="20" fill="none" stroke="var(--accent-gold)" stroke-width="1.5" opacity="0.45" class="star-halo" />`;
       } else if (status === 'locked') {
-        circleFill = 'var(--bg-canvas)';
-        circleStroke = 'rgba(17, 17, 17, 0.25)';
+        circleFill = 'var(--bg-surface-sunk)';
+        circleStroke = 'var(--border-subtle)';
+        strokeWidth = '1.5';
         cursorClass = 'node-locked';
         symbol = '🔒';
+        textFill = 'var(--ink-muted)';
       }
 
-      // Percentage coordinate to SVG coordinate (1000 x 640 viewBox)
       const cx = node.x * 10;
-      const cy = node.y * 6.4;
+      const cy = node.y * 7;
+      const [line1, line2] = this.formatNodeLabel(node.title);
 
       nodesSvg += `
         <g class="constellation-node ${cursorClass}" data-node-id="${node.id}" transform="translate(${cx}, ${cy})" style="cursor: pointer;">
-          <circle cx="0" cy="0" r="15" fill="${circleFill}" stroke="${circleStroke}" stroke-width="2" class="node-circle" />
-          <text x="0" y="4" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700" fill="${status === 'mastered' ? '#ffffff' : 'var(--ink-primary)'}">
+          <title>${node.title} (Level ${node.level} - CEFR ${node.cefrLevel})</title>
+          ${haloSvg}
+          <circle cx="0" cy="0" r="14" fill="${circleFill}" stroke="${circleStroke}" stroke-width="${strokeWidth}" class="node-circle" />
+          <text x="0" y="4" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700" fill="${textFill}">
             ${symbol}
           </text>
-          <text x="0" y="24" text-anchor="middle" font-family="var(--font-sans)" font-size="10" font-weight="600" fill="var(--ink-secondary)" class="node-title-label">
-            ${node.title.length > 24 ? node.title.slice(0, 22) + '...' : node.title}
+          <text x="0" y="24" text-anchor="middle" font-family="var(--font-sans)" font-size="9.5" font-weight="600" fill="${status === 'locked' ? 'var(--ink-muted)' : 'var(--ink-secondary)'}" class="node-title-label">
+            <tspan x="0" dy="0">${line1}</tspan>
+            ${line2 ? `<tspan x="0" dy="10.5">${line2}</tspan>` : ''}
           </text>
         </g>
       `;
     }
 
     return `
-      <svg viewBox="0 0 1000 640" style="width: 100%; height: 100%; display: block;" preserveAspectRatio="xMidYMid meet">
+      <svg viewBox="0 0 1000 620" style="width: 100%; height: 100%; display: block;" preserveAspectRatio="xMidYMid meet">
         <defs>
+          <filter id="starGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+          </filter>
           <radialGradient id="summitGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="rgba(202, 138, 4, 0.25)" />
-            <stop offset="100%" stop-color="rgba(202, 138, 4, 0)" />
+            <stop offset="0%" stop-color="var(--accent-gold)" stop-opacity="0.4" />
+            <stop offset="100%" stop-color="var(--accent-gold)" stop-opacity="0" />
           </radialGradient>
         </defs>
-        <circle cx="500" cy="32" r="160" fill="url(#summitGlow)" />
+        <circle cx="500" cy="35" r="140" fill="url(#summitGlow)" />
         ${linesSvg}
         ${summitSvg}
         ${nodesSvg}
@@ -217,17 +253,27 @@ export class SkillTreeView {
     return Object.values(SKILL_BRANCHES).map(branch => {
       const branchNodes = branch.nodes;
       const masteredInBranch = branchNodes.filter(n => SkillTreeEngine.getNodeStatus(n.id) === 'mastered').length;
+      const pct = Math.round((masteredInBranch / 5) * 100);
       return `
-        <div class="branch-summary-card" data-route="${branch.routeTarget}" style="background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 14px; border-radius: 4px; cursor: pointer;">
-          <div style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-gold); font-weight: 700; margin-bottom: 4px;">
-            ${branch.name.toUpperCase()}
+        <div class="branch-summary-card" data-route="${branch.routeTarget}" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: 6px; cursor: pointer; transition: transform 0.18s, border-color 0.18s, box-shadow 0.18s; display: flex; flex-direction: column; justify-content: space-between; min-height: 50px; box-shadow: var(--shadow-btn);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+            <span style="font-family: var(--font-mono); font-size: 10.5px; color: var(--accent-gold); font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 78%;">
+              ✦ ${branch.name.toUpperCase()}
+            </span>
+            <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--ink-primary);">
+              ${pct}%
+            </span>
           </div>
-          <div style="font-size: 13px; font-weight: 600; margin-bottom: 6px;">
+          <div style="font-size: 11px; font-weight: 500; margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ink-secondary);">
             ${branch.tagline}
           </div>
-          <div style="font-size: 12px; color: var(--ink-muted); display: flex; justify-content: space-between;">
-            <span>Level: ${masteredInBranch + 1} of 5</span>
-            <span>${Math.round((masteredInBranch / 5) * 100)}%</span>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted); white-space: nowrap;">
+              Lv ${masteredInBranch + 1}/5 (${masteredInBranch}/5)
+            </span>
+            <div style="flex: 1; height: 4px; background: var(--border-hairline); border-radius: 2px; overflow: hidden;">
+              <div style="width: ${pct}%; height: 100%; background: var(--accent-gold); border-radius: 2px; box-shadow: 0 0 6px var(--accent-gold-soft);"></div>
+            </div>
           </div>
         </div>
       `;
@@ -281,6 +327,7 @@ export class SkillTreeView {
       });
 
       nodeEl.addEventListener('click', () => {
+        AudioSynthesizer.play('click');
         if (!MotionEngine.isReducedMotion()) {
           anime({
             targets: nodeEl,
@@ -316,13 +363,13 @@ export class SkillTreeView {
     const branch = SKILL_BRANCHES[node.branchId];
 
     modal.innerHTML = `
-      <div class="completion-receipt-card" style="max-width: 540px; width: 92%; text-align: left;">
+      <div class="completion-receipt-card" style="max-width: 540px; width: 92%; text-align: left; background: var(--bg-surface); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-card);">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-          <span class="telemetry-label" style="color: var(--accent-gold);">[${branch.name.toUpperCase()} // LEVEL ${node.level}]</span>
-          <span class="hud-status-badge" style="background: var(--ink-primary); color: var(--ink-inverted); font-size: 11px;">CEFR ${node.cefrLevel}</span>
+          <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">✦ ${branch.name.toUpperCase()} // LEVEL ${node.level}</span>
+          <span class="hud-status-badge" style="background: var(--accent-gold); color: var(--bg-canvas); font-size: 11px; font-weight: 700; border-color: var(--accent-gold);">CEFR ${node.cefrLevel}</span>
         </div>
 
-        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 4px; font-family: var(--font-sans);">
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 4px; font-family: var(--font-sans); color: var(--ink-primary);">
           ${node.title}
         </h2>
         <div style="font-family: var(--font-mono); font-size: 12px; color: var(--ink-muted); margin-bottom: 16px;">
@@ -335,8 +382,8 @@ export class SkillTreeView {
 
         <!-- Prerequisite / Gating Box -->
         ${status === 'locked' && prereqStatus ? `
-          <div style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.25); padding: 12px 16px; border-radius: 4px; margin-bottom: 20px;">
-            <div style="font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: #dc2626; margin-bottom: 4px;">
+          <div style="background: var(--critical-soft); border: 1px solid var(--critical); padding: 12px 16px; border-radius: 6px; margin-bottom: 20px;">
+            <div style="font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--critical); margin-bottom: 4px;">
               🔒 LOCKED — PREREQUISITE REQUIRED
             </div>
             <div style="font-size: 13px; color: var(--ink-primary); line-height: 1.5;">
@@ -344,29 +391,29 @@ export class SkillTreeView {
             </div>
           </div>
         ` : `
-          <div style="background: rgba(202, 138, 4, 0.08); border: 1px solid rgba(202, 138, 4, 0.25); padding: 12px 16px; border-radius: 4px; margin-bottom: 20px;">
+          <div style="background: var(--accent-gold-soft); border: 1px solid var(--accent-gold); padding: 12px 16px; border-radius: 6px; margin-bottom: 20px;">
             <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 12px; font-weight: 700; margin-bottom: 6px;">
               <span style="color: var(--accent-gold);">★ MASTERY RETENTION:</span>
-              <span>${mastery}% / 80%</span>
+              <span style="color: var(--ink-primary);">${mastery}% / 80%</span>
             </div>
-            <div style="width: 100%; height: 6px; background: rgba(0,0,0,0.1); border-radius: 3px; overflow: hidden;">
-              <div style="width: ${mastery}%; height: 100%; background: var(--accent-gold);"></div>
+            <div style="width: 100%; height: 6px; background: var(--border-hairline); border-radius: 3px; overflow: hidden;">
+              <div style="width: ${mastery}%; height: 100%; background: var(--accent-gold); border-radius: 3px; box-shadow: 0 0 8px var(--accent-gold-soft);"></div>
             </div>
           </div>
         `}
 
         <div style="display: flex; gap: 12px; margin-top: 8px;">
           ${status !== 'locked' ? `
-            <button class="hud-btn btn-launch-drill" style="flex: 1; justify-content: center; background: var(--ink-primary); color: var(--ink-inverted); padding: 12px; font-weight: 600; border: none; cursor: pointer;">
-              [ START PRACTICE DRILL → ]
+            <button class="hud-btn btn-launch-drill" style="flex: 1; justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 12px; font-weight: 700; border: none; cursor: pointer; border-radius: 6px; box-shadow: var(--shadow-glow);">
+              Start Practice Drill →
             </button>
           ` : `
-            <button class="hud-btn btn-train-prereq" style="flex: 1; justify-content: center; background: var(--border-solid); color: var(--ink-inverted); padding: 12px; font-weight: 600; border: none; cursor: pointer;">
-              [ TRAIN PREREQUISITE FIRST → ]
+            <button class="hud-btn btn-train-prereq" style="flex: 1; justify-content: center; background: var(--bg-surface-sunk); color: var(--ink-primary); padding: 12px; font-weight: 600; border: 1px solid var(--border-subtle); cursor: pointer; border-radius: 6px;">
+              Train Prerequisite First →
             </button>
           `}
-          <button class="hud-btn btn-close-modal" style="padding: 12px 20px; justify-content: center; cursor: pointer;">
-            [ CLOSE ]
+          <button class="hud-btn btn-close-modal" style="padding: 12px 20px; justify-content: center; cursor: pointer; border-radius: 6px;">
+            Close
           </button>
         </div>
       </div>
@@ -380,6 +427,7 @@ export class SkillTreeView {
     }
 
     modal.querySelector('.btn-close-modal')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
       modal.remove();
     });
 

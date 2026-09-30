@@ -58,24 +58,24 @@ export class GrammarDossier {
       <div class="dossier-control-bar">
         <div class="dossier-tabs grammar-mode-tabs">
           <button class="hud-btn mode-tab ${this.activeMode === 'INVERSION_EMPHASIS' ? 'active' : ''}" data-mode="INVERSION_EMPHASIS">
-            [MODE A: INVERSION]
+            Mode A: Inversion
           </button>
           <button class="hud-btn mode-tab ${this.activeMode === 'SUBJUNCTIVE_UNREAL' ? 'active' : ''}" data-mode="SUBJUNCTIVE_UNREAL">
-            [MODE B: SUBJUNCTIVE]
+            Mode B: Subjunctive
           </button>
           <button class="hud-btn mode-tab ${this.activeMode === 'CLAUSAL_CONDENSATION' ? 'active' : ''}" data-mode="CLAUSAL_CONDENSATION">
-            [MODE C: CONDENSATION]
+            Mode C: Condensation
           </button>
           <button class="hud-btn mode-tab ${this.activeMode === 'SYNTACTIC_PRECISION' ? 'active' : ''}" data-mode="SYNTACTIC_PRECISION">
-            [MODE D: PRECISION]
+            Mode D: Precision
           </button>
         </div>
 
         <div class="grammar-level-selector">
           <span class="telemetry-label" style="margin-right: 8px;">TIER:</span>
-          <button class="hud-btn level-tab ${this.activeLevel === 1 ? 'active' : ''}" data-lvl="1">[LVL 1: BASELINE]</button>
-          <button class="hud-btn level-tab ${this.activeLevel === 2 ? 'active' : ''}" data-lvl="2">[LVL 2: ADVANCED]</button>
-          <button class="hud-btn level-tab ${this.activeLevel === 3 ? 'active' : ''}" data-lvl="3">[LVL 3: MASTERY (C2)]</button>
+          <button class="hud-btn level-tab ${this.activeLevel === 1 ? 'active' : ''}" data-lvl="1">Lvl 1: Baseline</button>
+          <button class="hud-btn level-tab ${this.activeLevel === 2 ? 'active' : ''}" data-lvl="2">Lvl 2: Advanced</button>
+          <button class="hud-btn level-tab ${this.activeLevel === 3 ? 'active' : ''}" data-lvl="3">Lvl 3: Mastery (C2)</button>
         </div>
       </div>
 
@@ -97,9 +97,9 @@ export class GrammarDossier {
       <div class="dossier-card-slot"></div>
 
       <div class="dossier-nav-bar">
-        <button class="hud-btn nav-btn-prev">[ ← PREV ]</button>
-        <span class="telemetry-value card-counter">SYNTAX NODE [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]</span>
-        <button class="hud-btn nav-btn-next">[ NEXT → ]</button>
+        <button class="hud-btn nav-btn-prev">← Prev</button>
+        <span class="telemetry-value card-counter">SYNTAX NODE ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}</span>
+        <button class="hud-btn nav-btn-next">Next →</button>
       </div>
     `;
 

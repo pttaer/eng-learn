@@ -62,6 +62,8 @@ export class PerspectiveCanvas {
 
   public onNavigate?: (pillar: PillarId) => void;
   public onAbsorptionStreak?: () => void;
+  private running: boolean = true;
+  private animFrameId: number | null = null;
 
   constructor(canvas: HTMLCanvasElement, collocations: any[]) {
     this.canvas = canvas;
@@ -278,16 +280,51 @@ export class PerspectiveCanvas {
   private lastFrameTime: number = performance.now();
 
   private startLoop(): void {
+    if (!this.running) return;
     const render = (now: number) => {
+      if (!this.running) return;
       const rawDt = (now - this.lastFrameTime) / 1000;
       this.lastFrameTime = now;
       const dt = Math.min(rawDt > 0 ? rawDt : 0.016, 0.033);
 
       this.update(dt);
       this.draw();
-      requestAnimationFrame(render);
+      this.animFrameId = requestAnimationFrame(render);
     };
-    requestAnimationFrame(render);
+    this.animFrameId = requestAnimationFrame(render);
+  }
+
+  public setVisible(visible: boolean): void {
+    const container = document.getElementById('canvas-container');
+    if (visible) {
+      if (container) {
+        container.style.display = 'block';
+        container.style.opacity = '1';
+        container.style.pointerEvents = 'auto';
+      }
+      this.canvas.style.display = 'block';
+      if (!this.running) {
+        this.running = true;
+        this.lastFrameTime = performance.now();
+        this.startLoop();
+      }
+    } else {
+      if (container) {
+        container.style.display = 'none';
+        container.style.opacity = '0';
+        container.style.pointerEvents = 'none';
+      }
+      this.canvas.style.display = 'none';
+      this.running = false;
+      if (this.animFrameId !== null) {
+        cancelAnimationFrame(this.animFrameId);
+        this.animFrameId = null;
+      }
+    }
+  }
+
+  public isVisible(): boolean {
+    return this.running;
   }
 
   private update(dt: number = 0.016): void {
