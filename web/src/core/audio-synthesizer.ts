@@ -34,6 +34,17 @@ export class AudioSynthesizer {
   private static masterVolume: number = 0.8; // 0.0 to 1.0 (defaults to 80% / -2dB)
   private static humOscillator: OscillatorNode | null = null;
   private static humGain: GainNode | null = null;
+
+  // Zen Immersion Mode Focus Drone Nodes (40Hz Gamma binaural beat + soft pink noise)
+  private static focusHumGain: GainNode | null = null;
+  private static focusHumOsc1: OscillatorNode | null = null;
+  private static focusHumOsc2: OscillatorNode | null = null;
+  private static focusHumSubOsc: OscillatorNode | null = null;
+  private static focusHumNoiseSource: AudioBufferSourceNode | null = null;
+  private static focusHumFilter: BiquadFilterNode | null = null;
+  private static isFocusHumRunning: boolean = false;
+  private static focusStopTimer: any = null;
+
   private static initialized: boolean = false;
   private static isPrimed: boolean = false;
 
@@ -122,13 +133,15 @@ export class AudioSynthesizer {
 
         // Track context state transitions
         this.ctx.addEventListener('statechange', () => {
-          if (this.ctx?.state === 'running' && !this.humOscillator) {
-            this.startUrchinHum();
+          if (this.ctx?.state === 'running') {
+            if (!this.humOscillator) this.startUrchinHum();
+            if (this.isFocusHumRunning && !this.focusHumGain) this.initFocusHumNodes();
           }
         });
 
         if (this.ctx.state === 'running') {
           this.startUrchinHum();
+          if (this.isFocusHumRunning && !this.focusHumGain) this.initFocusHumNodes();
         }
       } catch (err) {
         console.warn('[AUDIO] Web Audio API initialization failed:', err);
@@ -141,6 +154,9 @@ export class AudioSynthesizer {
         await this.ctx.resume();
         if (!this.humOscillator) {
           this.startUrchinHum();
+        }
+        if (this.isFocusHumRunning && !this.focusHumGain) {
+          this.initFocusHumNodes();
         }
       } catch {
         // Will resume on subsequent user gesture
@@ -595,6 +611,204 @@ export class AudioSynthesizer {
     } catch {
       // Ignored if browser blocks background oscillator
     }
+  }
+
+  /**
+   * Starts gentle 40Hz binaural audio drone with soft pink noise at gain 0.04
+   * for Zen Focus Mode.
+   */
+  public static startFocusHum(): void {
+    this.isFocusHumRunning = true;
+    if (this.focusStopTimer) {
+      clearTimeout(this.focusStopTimer);
+      this.focusStopTimer = null;
+    }
+
+    if (!this.ctx || this.ctx.state === 'suspended') {
+      this.ensureActiveContext()
+        .then(() => {
+          if (!this.isFocusHumRunning || !this.ctx || !this.masterGain) return;
+          this.initFocusHumNodes();
+        })
+        .catch(() => {});
+      return;
+    }
+
+    this.initFocusHumNodes();
+  }
+
+  /**
+   * Stops the Zen Focus Mode audio drone with smooth exponential ramp-down and clean node teardown.
+   */
+  public static stopFocusHum(): void {
+    this.isFocusHumRunning = false;
+    if (this.focusStopTimer) {
+      clearTimeout(this.focusStopTimer);
+      this.focusStopTimer = null;
+    }
+
+    if (!this.ctx || !this.focusHumGain) {
+      this.cleanupFocusHumNodes();
+      return;
+    }
+
+    try {
+      const t = this.ctx.currentTime;
+      this.focusHumGain.gain.cancelScheduledValues(t);
+      const curVal = Math.max(this.MUTE_FLOOR, this.focusHumGain.gain.value);
+      this.focusHumGain.gain.setValueAtTime(curVal, t);
+      this.focusHumGain.gain.exponentialRampToValueAtTime(this.MUTE_FLOOR, t + 0.35);
+
+      this.focusStopTimer = setTimeout(() => {
+        if (!this.isFocusHumRunning) {
+          this.cleanupFocusHumNodes();
+        }
+      }, 380);
+    } catch {
+      this.cleanupFocusHumNodes();
+    }
+  }
+
+  public static isFocusHumActive(): boolean {
+    return this.isFocusHumRunning;
+  }
+
+  private static initFocusHumNodes(): void {
+    if (!this.ctx || !this.masterGain || this.focusHumGain) return;
+
+    try {
+      const ctx = this.ctx;
+      const t = ctx.currentTime;
+
+      // Master focus gain clamped to 0.04
+      const masterFocusGain = ctx.createGain();
+      masterFocusGain.gain.setValueAtTime(this.EPSILON, t);
+      masterFocusGain.gain.exponentialRampToValueAtTime(0.04, t + 0.5);
+      masterFocusGain.connect(this.masterGain);
+      this.focusHumGain = masterFocusGain;
+
+      // 1. Binaural Beat Pair: 200 Hz (Left) and 240 Hz (Right) -> 40 Hz Gamma difference
+      const osc1 = ctx.createOscillator();
+      osc1.type = 'sine';
+      osc1.frequency.setValueAtTime(200, t);
+
+      const osc2 = ctx.createOscillator();
+      osc2.type = 'sine';
+      osc2.frequency.setValueAtTime(240, t);
+
+      const hasPanner = typeof ctx.createStereoPanner === 'function';
+      if (hasPanner) {
+        const pan1 = ctx.createStereoPanner();
+        pan1.pan.setValueAtTime(-0.8, t);
+        osc1.connect(pan1);
+        pan1.connect(masterFocusGain);
+
+        const pan2 = ctx.createStereoPanner();
+        pan2.pan.setValueAtTime(0.8, t);
+        osc2.connect(pan2);
+        pan2.connect(masterFocusGain);
+      } else {
+        osc1.connect(masterFocusGain);
+        osc2.connect(masterFocusGain);
+      }
+
+      // 2. Direct 40Hz sub-bass sine tone
+      const subOsc = ctx.createOscillator();
+      subOsc.type = 'sine';
+      subOsc.frequency.setValueAtTime(40, t);
+      const subGain = ctx.createGain();
+      subGain.gain.setValueAtTime(0.5, t);
+      subOsc.connect(subGain);
+      subGain.connect(masterFocusGain);
+
+      // 3. Soft Pink Noise floor (Kellet filter algorithm)
+      const sampleRate = ctx.sampleRate || 44100;
+      const bufferSize = Math.floor(sampleRate * 2); // 2-second looped buffer
+      const noiseBuffer = ctx.createBuffer(1, bufferSize, sampleRate);
+      const data = noiseBuffer.getChannelData(0);
+      let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        b0 = 0.99886 * b0 + white * 0.0555179;
+        b1 = 0.99332 * b1 + white * 0.0750759;
+        b2 = 0.96900 * b2 + white * 0.1538520;
+        b3 = 0.86650 * b3 + white * 0.3104856;
+        b4 = 0.55000 * b4 + white * 0.5329522;
+        b5 = -0.7616 * b5 - white * 0.0168980;
+        data[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.04;
+        b6 = white * 0.115926;
+      }
+
+      const noiseSource = ctx.createBufferSource();
+      noiseSource.buffer = noiseBuffer;
+      noiseSource.loop = true;
+
+      const noiseFilter = ctx.createBiquadFilter();
+      noiseFilter.type = 'lowpass';
+      noiseFilter.frequency.setValueAtTime(320, t);
+
+      noiseSource.connect(noiseFilter);
+      noiseFilter.connect(masterFocusGain);
+
+      // Start sound sources
+      osc1.start(t);
+      osc2.start(t);
+      subOsc.start(t);
+      noiseSource.start(t);
+
+      this.focusHumOsc1 = osc1;
+      this.focusHumOsc2 = osc2;
+      this.focusHumSubOsc = subOsc;
+      this.focusHumNoiseSource = noiseSource;
+      this.focusHumFilter = noiseFilter;
+    } catch (err) {
+      console.warn('[AUDIO] Error initializing focus hum nodes:', err);
+      this.cleanupFocusHumNodes();
+    }
+  }
+
+  private static cleanupFocusHumNodes(): void {
+    try {
+      if (this.focusHumOsc1) {
+        this.focusHumOsc1.stop();
+        this.focusHumOsc1.disconnect();
+      }
+    } catch {}
+    try {
+      if (this.focusHumOsc2) {
+        this.focusHumOsc2.stop();
+        this.focusHumOsc2.disconnect();
+      }
+    } catch {}
+    try {
+      if (this.focusHumSubOsc) {
+        this.focusHumSubOsc.stop();
+        this.focusHumSubOsc.disconnect();
+      }
+    } catch {}
+    try {
+      if (this.focusHumNoiseSource) {
+        this.focusHumNoiseSource.stop();
+        this.focusHumNoiseSource.disconnect();
+      }
+    } catch {}
+    try {
+      if (this.focusHumFilter) {
+        this.focusHumFilter.disconnect();
+      }
+    } catch {}
+    try {
+      if (this.focusHumGain) {
+        this.focusHumGain.disconnect();
+      }
+    } catch {}
+
+    this.focusHumOsc1 = null;
+    this.focusHumOsc2 = null;
+    this.focusHumSubOsc = null;
+    this.focusHumNoiseSource = null;
+    this.focusHumFilter = null;
+    this.focusHumGain = null;
   }
 
   /**

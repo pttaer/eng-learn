@@ -3,6 +3,9 @@ import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { SRSEngine } from '../core/srs-engine';
 import { SpotlightTour } from '../core/spotlight-tour';
+import { ProgressionEngine } from '../core/progression-engine';
+import { ProgressionModal } from './progression-modal';
+import { ZenMode } from '../core/zen-mode';
 
 const ROUTE_NAMES: Record<string, string> = { read: 'READING', write: 'WRITING', listen: 'LISTENING', speak: 'SPEAKING', vocab: 'VOCABULARY', colloc: 'COLLOCATIONS', grammar: 'GRAMMAR', habits: 'DAILY HABITS', singularity: 'SINGULARITY' };
 
@@ -26,6 +29,23 @@ export class HeaderHUD {
     document.documentElement.setAttribute('data-theme', this.currentTheme);
 
     this.render();
+
+    // Live update trigger pill when XP or Level changes
+    ProgressionEngine.onProgressUpdate((progState) => {
+      const pill = this.element.querySelector('.btn-progression-pill');
+      if (pill) {
+        pill.innerHTML = `<span style="color: var(--accent-gold); font-size: 11px;">⚡</span> LVL ${progState.level} • ${progState.xp} XP`;
+      }
+      const streakEl = this.element.querySelector('.telemetry-streak');
+      if (streakEl) {
+        streakEl.textContent = `🔥 ${progState.streak} DAYS`;
+      }
+    });
+
+    // Live update Zen button state when toggled via hotkey Z or elsewhere
+    ZenMode.onChange((active) => {
+      this.updateZenButtonState(active);
+    });
   }
 
   public getElement(): HTMLElement {
@@ -37,6 +57,7 @@ export class HeaderHUD {
     const stats = SRSEngine.calculateStats(1000, state.cardStates);
     const isMuted = AudioSynthesizer.isMute();
     const isTree = this.currentRoute === 'tree' || this.currentRoute === 'singularity';
+    const progression = ProgressionEngine.getState();
 
     this.element.innerHTML = `
       <div class="hud-brand" style="display: flex; align-items: center; gap: 12px;">
@@ -56,7 +77,7 @@ export class HeaderHUD {
       <div class="hud-telemetry-cluster" style="display: flex; gap: 20px; align-items: center;">
         <div class="telemetry-item" title="Consecutive days you finished the daily workout" style="display: flex; align-items: center; gap: 6px;">
           <span class="telemetry-label" style="font-size: 11px;">STREAK:</span>
-          <span class="telemetry-value telemetry-streak" style="color: var(--accent-gold); font-weight: 700;">${icon('flame')} ${state.streak.currentStreak} DAYS</span>
+          <span class="telemetry-value telemetry-streak" style="color: var(--accent-gold); font-weight: 700;">${icon('flame')} ${progression.streak || state.streak.currentStreak} DAYS</span>
         </div>
         <div class="telemetry-item" title="Your goal: C2 mastery, the top of the skill tree" style="display: flex; align-items: center; gap: 6px;">
           <span class="telemetry-label" style="font-size: 11px;">SUMMIT:</span>
@@ -69,6 +90,10 @@ export class HeaderHUD {
       </div>
 
       <div class="hud-actions header-actions" style="display: flex; gap: 8px; align-items: center;">
+        <button class="hud-btn btn-progression-pill" title="RPG Progression & Daily Quests" aria-label="RPG Progression">
+          ${icon('zap')} LVL ${progression.level} • ${progression.xp} XP
+        </button>
+        <button class="hud-btn btn-zen-toggle ${ZenMode.isZen() ? 'active' : ''}" title="Toggle Zen Immersion Mode (Hotkey: Z)" aria-label="Toggle Zen Immersion Mode" aria-pressed="${ZenMode.isZen()}">${HeaderHUD.zenLabel(ZenMode.isZen())}</button>
         <button class="hud-btn btn-theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">${this.themeLabel()}</button>
         <button class="hud-btn btn-launch-tour" title="Launch Interactive Game Tour" aria-label="Launch Game Tour">${icon('compass')}<span class="btn-label"> Tour</span></button>
         <button class="hud-btn btn-sound-toggle" title="Toggle audio mute" aria-label="Toggle audio mute">${HeaderHUD.soundLabel(isMuted)}</button>
@@ -87,6 +112,19 @@ export class HeaderHUD {
     return muted ? `${icon('mute')}<span class="btn-label"> Muted</span>` : `${icon('volume')}<span class="btn-label"> Sound</span>`;
   }
 
+  private static zenLabel(active: boolean): string {
+    return active ? 'ZEN <span class="zen-dot" style="color: var(--accent-gold); margin-left: 2px;">●</span>' : 'ZEN';
+  }
+
+  private updateZenButtonState(active: boolean): void {
+    const zenBtn = this.element.querySelector('.btn-zen-toggle') as HTMLButtonElement | null;
+    if (zenBtn) {
+      zenBtn.classList.toggle('active', active);
+      zenBtn.setAttribute('aria-pressed', String(active));
+      zenBtn.innerHTML = HeaderHUD.zenLabel(active);
+    }
+  }
+
   private toggleTheme(): void {
     this.currentTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', this.currentTheme);
@@ -99,6 +137,18 @@ export class HeaderHUD {
   }
 
   private bindEvents(): void {
+    const progBtn = this.element.querySelector('.btn-progression-pill');
+    progBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      ProgressionModal.open();
+    });
+
+    const zenBtn = this.element.querySelector('.btn-zen-toggle') as HTMLButtonElement | null;
+    zenBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      ZenMode.toggle();
+    });
+
     const themeBtn = this.element.querySelector('.btn-theme-toggle') as HTMLButtonElement | null;
     themeBtn?.addEventListener('click', () => {
       this.toggleTheme();

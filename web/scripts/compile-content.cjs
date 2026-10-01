@@ -114,7 +114,7 @@ function compileGrammar() {
 function compileVocabulary() {
   const dir = path.join(CONTENT_DIR, 'vocabulary');
   if (!fs.existsSync(dir)) return;
-  const files = fs.readdirSync(dir).filter(f => f.endsWith('.md')).sort();
+  const files = fs.readdirSync(dir).filter(f => f.endsWith('.md') && f !== 'awl-corpus.md').sort();
   if (files.length === 0) return;
   const allItems = [];
 
@@ -164,6 +164,94 @@ function compileVocabulary() {
     allItems.sort((a, b) => (modeOrder[a.mode] || 99) - (modeOrder[b.mode] || 99) || a.id.localeCompare(b.id, undefined, { numeric: true }));
     fs.writeFileSync(path.join(DATA_DIR, 'vocabulary.json'), JSON.stringify(allItems, null, 2), 'utf8');
     console.log(`[COMPILE] vocabulary.json: ${allItems.length} items`);
+  }
+}
+
+// 3b. Lexicon Dictionary Compiler (AWL 500 Corpus & O(1) Index)
+function compileLexicon() {
+  const awlFile = path.join(CONTENT_DIR, 'vocabulary', 'awl-corpus.md');
+  const lexiconDict = {};
+
+  // 1. Ingest AWL 500 Corpus
+  if (fs.existsSync(awlFile)) {
+    const content = fs.readFileSync(awlFile, 'utf8');
+    const lines = content.split(/\r?\n/);
+    lines.forEach(line => {
+      const trimmed = line.trim();
+      if (!trimmed.startsWith('|') || trimmed.includes('Index') || trimmed.includes(':---')) return;
+      const parts = trimmed.split('|').map(p => p.trim()).filter(Boolean);
+      if (parts.length >= 8) {
+        const index = parseInt(parts[0], 10);
+        const word = parts[1].trim();
+        const pos = parts[2].trim();
+        const ipa = parts[3].trim();
+        const root = parts[4].trim();
+        const definition = parts[5].trim();
+        const vietnamese = parts[6].trim();
+        const collocations = parts[7].split(',').map(s => s.trim()).filter(Boolean);
+        const level = index <= 150 ? 1 : (index <= 350 ? 2 : 3);
+        const key = word.toLowerCase();
+
+        lexiconDict[key] = {
+          id: `awl-${index}`,
+          word: word,
+          ipa: ipa,
+          pos: pos,
+          partOfSpeech: pos,
+          root: root,
+          definition: definition,
+          vietnamese: vietnamese,
+          collocations: collocations,
+          level: level,
+          contextSentence: collocations.length > 0 ? `Exemplar collocation: ${collocations[0]}.` : ''
+        };
+      }
+    });
+  }
+
+  // 2. Ingest / Merge Vocabulary Items from vocabulary.json
+  const vocabJsonPath = path.join(DATA_DIR, 'vocabulary.json');
+  if (fs.existsSync(vocabJsonPath)) {
+    try {
+      const vocabItems = JSON.parse(fs.readFileSync(vocabJsonPath, 'utf8'));
+      if (Array.isArray(vocabItems)) {
+        vocabItems.forEach(item => {
+          if (!item || !item.wordOrChunk) return;
+          const key = item.wordOrChunk.toLowerCase().trim();
+          const collocs = item.breakdown?.collocates
+            ? (Array.isArray(item.breakdown.collocates) ? item.breakdown.collocates : String(item.breakdown.collocates).split(',').map(s => s.trim()))
+            : (item.breakdown?.derivationalFamily || []);
+
+          if (!lexiconDict[key]) {
+            lexiconDict[key] = {
+              id: item.id,
+              word: item.wordOrChunk,
+              ipa: item.ipa || '',
+              pos: item.mode === 'PARTICLE_LAB' ? 'phrasal verb' : (item.breakdown?.suffix?.includes('adjective') ? 'adj' : (item.breakdown?.suffix?.includes('noun') ? 'noun' : 'word')),
+              partOfSpeech: item.mode === 'PARTICLE_LAB' ? 'phrasal verb' : 'word',
+              root: item.breakdown?.root || item.breakdown?.morphologyAnalysis || '',
+              definition: item.definition || '',
+              vietnamese: item.vietnamese || '',
+              collocations: collocs,
+              level: item.level || 2,
+              contextSentence: item.contextSentence || ''
+            };
+          } else {
+            if (!lexiconDict[key].contextSentence && item.contextSentence) {
+              lexiconDict[key].contextSentence = item.contextSentence;
+            }
+          }
+        });
+      }
+    } catch (e) {
+      console.warn('[COMPILE WARN] Failed to merge vocabulary into lexicon-dictionary:', e.message);
+    }
+  }
+
+  const keys = Object.keys(lexiconDict);
+  if (keys.length > 0) {
+    fs.writeFileSync(path.join(DATA_DIR, 'lexicon-dictionary.json'), JSON.stringify(lexiconDict, null, 2), 'utf8');
+    console.log(`[COMPILE] lexicon-dictionary.json: ${keys.length} entries indexed.`);
   }
 }
 
@@ -420,6 +508,7 @@ function compileAll() {
   compileCollocations();
   compileGrammar();
   compileVocabulary();
+  compileLexicon();
   compileDrills();
   compileReading();
   compileListening();

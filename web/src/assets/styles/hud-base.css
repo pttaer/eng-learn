@@ -574,3 +574,81 @@ html[data-motion="reduce"] {
 @media (max-width: 760px) {
   .workout-panel, .workout-tasks { flex-direction: column !important; align-items: stretch !important; }
 }
+
+/* ==========================================================================
+   ZEN IMMERSION FOCUS MODE (Hotkey 'Z')
+   Viewport dimming, 65ch reading measure focus, auxiliary nav dimming
+   ========================================================================== */
+
+body.zen-active,
+#app.zen-active {
+  background-color: #030303 !important;
+  background-image: none !important;
+}
+
+#app,
+#canvas-container,
+.corner-bracket,
+#compass-mount,
+.hud-telemetry-cluster,
+.hud-actions .hud-btn {
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#app.zen-active #canvas-container {
+  opacity: 0.08;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+#app.zen-active .corner-bracket,
+#app.zen-active #compass-mount {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Auxiliary HUD controls dim during Zen mode to eliminate visual distractions */
+#app.zen-active .btn-theme-toggle,
+#app.zen-active .btn-launch-tour,
+#app.zen-active .btn-settings,
+#app.zen-active .btn-progression-pill {
+  opacity: 0.25;
+}
+
+#app.zen-active .btn-theme-toggle:hover,
+#app.zen-active .btn-launch-tour:hover,
+#app.zen-active .btn-settings:hover,
+#app.zen-active .btn-progression-pill:hover {
+  opacity: 1;
+}
+
+/* Zen Button Active Indicator & Styling */
+.hud-btn.btn-zen-toggle.active {
+  background: var(--accent-gold) !important;
+  color: #000000 !important;
+  border-color: var(--accent-gold) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 14px rgba(212, 160, 23, 0.45) !important;
+}
+
+/* Center and clamp reading measure to 65ch in Zen mode */
+#app.zen-active .dossier-workspace {
+  max-width: 72ch;
+  transition: max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#app.zen-active .reading-measure,
+#app.zen-active .reading-container,
+#app.zen-active .article-body,
+#app.zen-active .copywork-console,
+#app.zen-active .calm-prose,
+#app.zen-active .atomic-card-container {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+  transition: max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+

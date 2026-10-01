@@ -53,6 +53,55 @@ export class SRSEngine {
   }
 
   /**
+   * Adds or bookmarks a card into the SRS deck with an initial state.
+   * If already present, returns the existing state.
+   */
+  public static addCard(
+    cardId: string,
+    level: number = 1,
+    cardStates?: Record<string, SRSCardState>
+  ): SRSCardState {
+    if (cardStates) {
+      if (!cardStates[cardId]) {
+        cardStates[cardId] = this.createInitialState(cardId, level);
+      }
+      return cardStates[cardId];
+    }
+
+    if (typeof window !== 'undefined' && (window as any).StorageManager) {
+      const sm = (window as any).StorageManager;
+      if (typeof sm.getCardState === 'function' && typeof sm.setCardState === 'function') {
+        const existing = sm.getCardState(cardId);
+        if (existing) return existing;
+        const state = this.createInitialState(cardId, level);
+        sm.setCardState(cardId, state);
+        return state;
+      }
+    }
+
+    if (typeof localStorage !== 'undefined') {
+      try {
+        const raw = localStorage.getItem('STARK_ENG_STATE');
+        const parsed = raw ? JSON.parse(raw) : {};
+        parsed.cardStates = parsed.cardStates || {};
+        if (parsed.cardStates[cardId]) {
+          return parsed.cardStates[cardId];
+        }
+        const state = this.createInitialState(cardId, level);
+        parsed.cardStates[cardId] = state;
+        parsed.totalCardsReviewed = (parsed.totalCardsReviewed || 0) + 1;
+        parsed.lastSyncTimestamp = Date.now();
+        localStorage.setItem('STARK_ENG_STATE', JSON.stringify(parsed));
+        return state;
+      } catch {
+        // Fallback
+      }
+    }
+
+    return this.createInitialState(cardId, level);
+  }
+
+  /**
    * Calculates next SM-2 interval and updates card state based on user rating.
    * Rating 'again': Resets repetitions to 0, interval to 1 day, decreases EF.
    * Rating 'good': Increments repetitions, calculates exponential interval, increases EF.

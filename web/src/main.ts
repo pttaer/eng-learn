@@ -19,12 +19,21 @@ import { StorageManager } from './utils/storage';
 import { registerServiceWorker } from './core/pwa';
 import { ParticleCanvas } from './core/particle-canvas';
 import { SpotlightTour } from './core/spotlight-tour';
+import { ProgressionEngine } from './core/progression-engine';
+import { ProgressionModal } from './modules/progression-modal';
+import { ZenMode } from './core/zen-mode';
+import { LexiconDrawer } from './modules/lexicon-drawer';
 import collocationsData from './assets/data/collocations.json';
 
-// Expose MotionEngine, ParticleCanvas and SpotlightTour to window for automated headless testing & telemetry inspection
+// Expose engines to window for automated headless testing & telemetry inspection
 (window as any).MotionEngine = MotionEngine;
 (window as any).ParticleCanvas = ParticleCanvas;
 (window as any).SpotlightTour = SpotlightTour;
+(window as any).ProgressionEngine = ProgressionEngine;
+(window as any).ProgressionModal = ProgressionModal;
+(window as any).ZenMode = ZenMode;
+(window as any).LexiconDrawer = LexiconDrawer;
+(window as any).StorageManager = StorageManager;
 
 class App {
   private router: Router;
@@ -56,6 +65,8 @@ class App {
     // 1. Initialize Subsystems
     AudioSynthesizer.init();
     CursorTracker.init();
+    ZenMode.init();
+    LexiconDrawer.init();
 
     // Global Micro-Interactions: Tactile audio feedback on button clicks
     document.addEventListener('click', (e) => {
@@ -92,14 +103,45 @@ class App {
     this.missionLog = new MissionLog();
 
     // Bind Completion Rituals
-    this.readingDossier.onBatchComplete = () => this.showCompletionReceipt('READ // INTENSIVE 4-PASS COMPLETE');
-    this.writingDossier.onBatchComplete = () => this.showCompletionReceipt('WRITE // FRANKLIN COPYWORK COMPLETE');
-    this.listeningDossier.onBatchComplete = () => this.showCompletionReceipt('LISTEN // ACTIVE TRANSCRIPTION COMPLETE');
-    this.speakingDossier.onBatchComplete = () => this.showCompletionReceipt('SPEAK // 4-3-2 DRILL COMPLETE');
-    this.vocabularyDossier.onBatchComplete = () => this.showCompletionReceipt('VOCAB // ROGUELIKE RUN COMPLETE');
-    this.collocationsDossier.onBatchComplete = () => this.showCompletionReceipt('COLLOC // 1,000 VAULT BATCH COMPLETE');
-    this.grammarDossier.onBatchComplete = () => this.showCompletionReceipt('GRAMMAR // ADVANCED SYNTACTIC MATRIX COMPLETE');
-    this.missionLog.onDayCompleted = (day) => this.showCompletionReceipt(`MISSION DAY ${day}`);
+    this.readingDossier.onBatchComplete = () => {
+      ProgressionEngine.recordActivity('reading', 1);
+      ProgressionEngine.addXP(50);
+      this.showCompletionReceipt('READ // INTENSIVE 4-PASS COMPLETE');
+    };
+    this.writingDossier.onBatchComplete = () => {
+      ProgressionEngine.recordActivity('copywork', 1);
+      ProgressionEngine.addXP(75);
+      this.showCompletionReceipt('WRITE // FRANKLIN COPYWORK COMPLETE');
+    };
+    this.listeningDossier.onBatchComplete = () => {
+      ProgressionEngine.recordActivity('studio', 1);
+      ProgressionEngine.addXP(50);
+      this.showCompletionReceipt('LISTEN // ACTIVE TRANSCRIPTION COMPLETE');
+    };
+    this.speakingDossier.onBatchComplete = () => {
+      ProgressionEngine.recordActivity('studio', 1);
+      ProgressionEngine.addXP(75);
+      this.showCompletionReceipt('SPEAK // 4-3-2 DRILL COMPLETE');
+    };
+    this.vocabularyDossier.onBatchComplete = () => {
+      ProgressionEngine.recordActivity('srs', 5);
+      ProgressionEngine.addXP(50);
+      this.showCompletionReceipt('VOCAB // ROGUELIKE RUN COMPLETE');
+    };
+    this.collocationsDossier.onBatchComplete = () => {
+      ProgressionEngine.recordActivity('srs', 10);
+      ProgressionEngine.addXP(50);
+      this.showCompletionReceipt('COLLOC // 1,000 VAULT BATCH COMPLETE');
+    };
+    this.grammarDossier.onBatchComplete = () => {
+      ProgressionEngine.recordActivity('studio', 1);
+      ProgressionEngine.addXP(50);
+      this.showCompletionReceipt('GRAMMAR // ADVANCED SYNTACTIC MATRIX COMPLETE');
+    };
+    this.missionLog.onDayCompleted = (day) => {
+      ProgressionEngine.addXP(100);
+      this.showCompletionReceipt(`MISSION DAY ${day}`);
+    };
 
     // 4. Initialize Router
     this.router = new Router();
