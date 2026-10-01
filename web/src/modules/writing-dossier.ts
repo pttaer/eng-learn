@@ -114,6 +114,7 @@ export class WritingDossier {
   private typedContent: string = '';
   private timerInterval: any = null;
   private elapsedSeconds: number = 0;
+  private lastKeystrokeTime: number = 0;
   public onBatchComplete?: () => void;
 
   constructor() {
@@ -388,6 +389,14 @@ export class WritingDossier {
       const counterEl = this.container.querySelector('#char-word-counter');
       if (counterEl) {
         counterEl.textContent = `${chars} CHARS | ${words} WORDS`;
+      }
+
+      // Procedural mechanical keystroke acoustics with debounce & slight pitch variance
+      const now = performance.now();
+      if (now - this.lastKeystrokeTime >= 35) {
+        this.lastKeystrokeTime = now;
+        const pitchMod = 0.94 + Math.random() * 0.12;
+        AudioSynthesizer.playMechanicalClick(pitchMod);
       }
     });
 

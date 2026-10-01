@@ -594,4 +594,341 @@ export class PerspectiveCanvas {
 
     ctx.restore();
   }
+
+  /**
+   * Static convenience hook to initialize specular 3D card tilt and glare across the application.
+   */
+  public static initCardTilt(): void {
+    CardTiltController.init();
+  }
+
+  /**
+   * Static convenience hook to initialize drifting deep-space nebula starfield canvas.
+   */
+  public static initNebula(canvas: HTMLCanvasElement): NebulaCanvas {
+    return new NebulaCanvas(canvas);
+  }
+}
+
+/**
+ * SPECULAR 3D CARD TILT & HOLOGRAPHIC GLARE CONTROLLER
+ * Tracks pointer movement over cards (.atomic-card, .atomic-card-container, .dossier-card),
+ * calculating 3D perspective tilt (rotateX, rotateY) and holographic specular sheen
+ * coordinates (--glare-x, --glare-y, --glare-opacity) with smooth spring return.
+ */
+export class CardTiltController {
+  private static initialized: boolean = false;
+  private static activeCard: HTMLElement | null = null;
+  private static isReducedMotion: boolean = false;
+
+  public static init(): void {
+    if (this.initialized || typeof window === 'undefined') return;
+    this.initialized = true;
+
+    this.checkReducedMotion();
+    window.matchMedia?.('(prefers-reduced-motion: reduce)')?.addEventListener?.('change', (e) => {
+      this.isReducedMotion = e.matches;
+      if (this.isReducedMotion && this.activeCard) {
+        this.resetTilt(this.activeCard);
+        this.activeCard = null;
+      }
+    });
+
+    document.addEventListener('pointermove', (e: PointerEvent) => {
+      if (this.isReducedMotion) return;
+
+      const target = e.target as HTMLElement | null;
+      const card = target?.closest?.('.atomic-card, .atomic-card-container, .dossier-card') as HTMLElement | null;
+
+      if (card) {
+        if (this.activeCard && this.activeCard !== card) {
+          this.resetTilt(this.activeCard);
+        }
+        this.activeCard = card;
+        this.handleMove(e, card);
+      } else if (this.activeCard) {
+        this.resetTilt(this.activeCard);
+        this.activeCard = null;
+      }
+    }, { passive: true });
+
+    document.addEventListener('pointerleave', () => {
+      if (this.activeCard) {
+        this.resetTilt(this.activeCard);
+        this.activeCard = null;
+      }
+    }, { passive: true });
+  }
+
+  private static checkReducedMotion(): void {
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      this.isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+  }
+
+  public static calculateTilt(clientX: number, clientY: number, card: HTMLElement): {
+    rotateX: number;
+    rotateY: number;
+    glareX: number;
+    glareY: number;
+    glareOpacity: number;
+  } {
+    const rect = card.getBoundingClientRect();
+    if (rect.width === 0 || rect.height === 0) {
+      return { rotateX: 0, rotateY: 0, glareX: 50, glareY: 50, glareOpacity: 0 };
+    }
+
+    const relX = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+    const relY = Math.max(0, Math.min(1, (clientY - rect.top) / rect.height));
+
+    const normX = (relX - 0.5) * 2; // -1 to 1
+    const normY = (relY - 0.5) * 2; // -1 to 1
+
+    const MAX_TILT = 7.5; // degrees
+    let rotateX = -normY * MAX_TILT;
+    let rotateY = normX * MAX_TILT;
+    if (Math.abs(rotateX) < 1e-5) rotateX = 0;
+    if (Math.abs(rotateY) < 1e-5) rotateY = 0;
+
+    const glareX = relX * 100;
+    const glareY = relY * 100;
+    const dist = Math.min(1, Math.hypot(normX, normY) / Math.SQRT2);
+    const glareOpacity = 0.15 + dist * 0.45;
+
+    return { rotateX, rotateY, glareX, glareY, glareOpacity };
+  }
+
+  public static handleMove(e: PointerEvent, card: HTMLElement): void {
+    if (this.isReducedMotion) return;
+
+    card.classList.remove('is-mouse-out');
+    const { rotateX, rotateY, glareX, glareY, glareOpacity } = this.calculateTilt(e.clientX, e.clientY, card);
+
+    card.style.setProperty('--card-rotate-x', `${rotateX.toFixed(2)}deg`);
+    card.style.setProperty('--card-rotate-y', `${rotateY.toFixed(2)}deg`);
+    card.style.setProperty('--glare-x', `${glareX.toFixed(1)}%`);
+    card.style.setProperty('--glare-y', `${glareY.toFixed(1)}%`);
+    card.style.setProperty('--glare-opacity', glareOpacity.toFixed(2));
+    card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateZ(6px)`;
+  }
+
+  public static resetTilt(card: HTMLElement): void {
+    card.classList.add('is-mouse-out');
+    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
+    card.style.setProperty('--glare-opacity', '0');
+    card.style.setProperty('--card-rotate-x', '0deg');
+    card.style.setProperty('--card-rotate-y', '0deg');
+  }
+}
+
+export interface NebulaStar {
+  x: number; // Normalized 0 to 1
+  y: number; // Normalized 0 to 1
+  size: number;
+  baseAlpha: number;
+  twinkleSpeed: number;
+  phase: number;
+  isGold: boolean;
+}
+
+export interface NebulaPuff {
+  x: number; // Normalized 0 to 1
+  y: number; // Normalized 0 to 1
+  vx: number;
+  vy: number;
+  radius: number;
+  r: number;
+  g: number;
+  b: number;
+  alpha: number;
+  phase: number;
+  pulseSpeed: number;
+}
+
+/**
+ * DRIFTING DEEP-SPACE NEBULA STARFIELD CANVAS
+ * Renders an ambient celestial nebula with drifting gas clouds and twinkling star clusters
+ * behind the Skyrim Constellation Tree at 60fps.
+ */
+export class NebulaCanvas {
+  private canvas: HTMLCanvasElement;
+  private ctx: CanvasRenderingContext2D;
+  private stars: NebulaStar[] = [];
+  private puffs: NebulaPuff[] = [];
+  private animId: number | null = null;
+  private running: boolean = false;
+  private width: number = 0;
+  private height: number = 0;
+  private dpr: number = 1;
+  private lastTime: number = performance.now();
+  private resizeObserver: ResizeObserver | null = null;
+  private isReducedMotion: boolean = false;
+
+  constructor(canvas: HTMLCanvasElement) {
+    this.canvas = canvas;
+    this.ctx = canvas.getContext('2d', { alpha: true })!;
+    this.checkReducedMotion();
+    this.initStars();
+    this.initPuffs();
+    this.resize();
+
+    if (typeof ResizeObserver !== 'undefined' && canvas.parentElement) {
+      this.resizeObserver = new ResizeObserver(() => this.resize());
+      this.resizeObserver.observe(canvas.parentElement);
+    }
+    window.addEventListener('resize', () => this.resize());
+
+    this.start();
+  }
+
+  private checkReducedMotion(): void {
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      this.isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+  }
+
+  private initStars(): void {
+    const starCount = 80;
+    this.stars = [];
+    for (let i = 0; i < starCount; i++) {
+      this.stars.push({
+        x: Math.random(),
+        y: Math.random(),
+        size: Math.random() < 0.2 ? 1.8 + Math.random() * 1.2 : 0.8 + Math.random() * 0.8,
+        baseAlpha: 0.2 + Math.random() * 0.5,
+        twinkleSpeed: 1 + Math.random() * 2.5,
+        phase: Math.random() * Math.PI * 2,
+        isGold: Math.random() < 0.25
+      });
+    }
+  }
+
+  private initPuffs(): void {
+    // Ethereal nebula gas clouds in gold, cyan, and cosmic indigo
+    this.puffs = [
+      { x: 0.25, y: 0.30, vx: 0.0015, vy: -0.001, radius: 240, r: 251, g: 146, b: 60, alpha: 0.055, phase: 0.2, pulseSpeed: 0.8 },
+      { x: 0.70, y: 0.25, vx: -0.0012, vy: 0.0015, radius: 260, r: 56, g: 189, b: 248, alpha: 0.045, phase: 1.5, pulseSpeed: 0.7 },
+      { x: 0.50, y: 0.65, vx: 0.001, vy: 0.0012, radius: 280, r: 139, g: 92, b: 246, alpha: 0.040, phase: 3.1, pulseSpeed: 0.9 },
+      { x: 0.85, y: 0.70, vx: -0.0015, vy: -0.001, radius: 220, r: 251, g: 191, b: 36, alpha: 0.045, phase: 4.2, pulseSpeed: 0.75 },
+      { x: 0.15, y: 0.80, vx: 0.0018, vy: -0.0012, radius: 200, r: 56, g: 189, b: 248, alpha: 0.035, phase: 5.0, pulseSpeed: 0.85 }
+    ];
+  }
+
+  public resize(): void {
+    const rect = this.canvas.getBoundingClientRect();
+    this.width = rect.width || window.innerWidth;
+    this.height = rect.height || window.innerHeight;
+    this.dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    this.canvas.width = Math.floor(this.width * this.dpr);
+    this.canvas.height = Math.floor(this.height * this.dpr);
+
+    this.ctx.setTransform(1, 0, 0, 1, 0, 0);
+    this.ctx.scale(this.dpr, this.dpr);
+
+    if (this.isReducedMotion) {
+      this.draw(performance.now(), 0);
+    }
+  }
+
+  public start(): void {
+    if (this.running) return;
+    this.running = true;
+    this.lastTime = performance.now();
+
+    if (this.isReducedMotion) {
+      this.draw(this.lastTime, 0);
+      return;
+    }
+
+    const loop = (now: number) => {
+      if (!this.running) return;
+      const dt = Math.min((now - this.lastTime) / 1000, 0.05);
+      this.lastTime = now;
+
+      this.draw(now, dt);
+      this.animId = requestAnimationFrame(loop);
+    };
+
+    this.animId = requestAnimationFrame(loop);
+  }
+
+  public stop(): void {
+    this.running = false;
+    if (this.animId !== null) {
+      cancelAnimationFrame(this.animId);
+      this.animId = null;
+    }
+  }
+
+  public destroy(): void {
+    this.stop();
+    this.resizeObserver?.disconnect();
+    this.resizeObserver = null;
+  }
+
+  private draw(now: number, dt: number): void {
+    const ctx = this.ctx;
+    const w = this.width;
+    const h = this.height;
+
+    ctx.clearRect(0, 0, w, h);
+
+    // 1. Draw Ethereal Nebula Gas Clouds
+    for (const puff of this.puffs) {
+      if (dt > 0) {
+        puff.x += puff.vx * dt;
+        puff.y += puff.vy * dt;
+
+        // Soft wrap within view bounds + margin
+        if (puff.x < -0.15) puff.x = 1.15;
+        if (puff.x > 1.15) puff.x = -0.15;
+        if (puff.y < -0.15) puff.y = 1.15;
+        if (puff.y > 1.15) puff.y = -0.15;
+      }
+
+      const cx = puff.x * w;
+      const cy = puff.y * h;
+      const pulse = 1 + 0.08 * Math.sin(now * 0.001 * puff.pulseSpeed + puff.phase);
+      const rad = puff.radius * pulse;
+
+      const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, rad);
+      grad.addColorStop(0, `rgba(${puff.r}, ${puff.g}, ${puff.b}, ${puff.alpha})`);
+      grad.addColorStop(0.5, `rgba(${puff.r}, ${puff.g}, ${puff.b}, ${puff.alpha * 0.45})`);
+      grad.addColorStop(1, `rgba(${puff.r}, ${puff.g}, ${puff.b}, 0)`);
+
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(cx, cy, rad, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // 2. Draw Twinkling Cosmic Starfield
+    for (const star of this.stars) {
+      const sx = star.x * w;
+      const sy = star.y * h;
+
+      const twinkle = Math.sin(now * 0.0018 * star.twinkleSpeed + star.phase);
+      const alpha = Math.max(0.12, Math.min(0.95, star.baseAlpha + twinkle * 0.35));
+
+      ctx.save();
+      ctx.globalAlpha = alpha;
+
+      if (star.isGold) {
+        ctx.fillStyle = '#fbbf24';
+        ctx.shadowColor = 'rgba(251, 191, 36, 0.6)';
+        ctx.shadowBlur = 4;
+      } else {
+        ctx.fillStyle = '#e0f2fe';
+        ctx.shadowColor = 'rgba(56, 189, 248, 0.4)';
+        ctx.shadowBlur = 2;
+      }
+
+      ctx.beginPath();
+      ctx.arc(sx, sy, star.size, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.restore();
+    }
+  }
 }

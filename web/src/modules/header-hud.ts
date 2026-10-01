@@ -14,6 +14,7 @@ export class HeaderHUD {
   private currentRoute: string = 'tree';
   private currentTheme: 'dark' | 'light' = 'dark';
   public onNavigateToTree?: () => void;
+  public onNavigateToBlitz?: () => void;
 
   constructor() {
     this.element = document.createElement('header');
@@ -90,6 +91,9 @@ export class HeaderHUD {
       </div>
 
       <div class="hud-actions header-actions" style="display: flex; gap: 8px; align-items: center;">
+        <button class="hud-btn btn-blitz" title="Launch 60-Second Roguelike Speed Blitz Mode" aria-label="Speed Blitz Mode" style="border-color: var(--accent-gold); color: var(--accent-gold); font-weight: 700;">
+          <span style="color: var(--accent-gold); font-size: 11px;">⚡</span> BLITZ
+        </button>
         <button class="hud-btn btn-progression-pill" title="RPG Progression & Daily Quests" aria-label="RPG Progression">
           ${icon('zap')} LVL ${progression.level} • ${progression.xp} XP
         </button>
@@ -137,6 +141,16 @@ export class HeaderHUD {
   }
 
   private bindEvents(): void {
+    const blitzBtn = this.element.querySelector('.btn-blitz') as HTMLButtonElement | null;
+    blitzBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      if (this.onNavigateToBlitz) {
+        this.onNavigateToBlitz();
+      } else {
+        window.location.hash = '#blitz';
+      }
+    });
+
     const progBtn = this.element.querySelector('.btn-progression-pill');
     progBtn?.addEventListener('click', () => {
       AudioSynthesizer.play('click');

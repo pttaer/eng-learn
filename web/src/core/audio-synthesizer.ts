@@ -17,7 +17,10 @@ export type SoundEffectType =
   | 'gateway-hover'
   | 'streak-fire'
   | 'tour-step'
-  | 'tour-fanfare';
+  | 'tour-fanfare'
+  | 'mechanical-click'
+  | 'streak-chime'
+  | 'xp-pickup';
 
 export type SoundEffect = SoundEffectType;
 
@@ -44,6 +47,9 @@ export class AudioSynthesizer {
   private static focusHumFilter: BiquadFilterNode | null = null;
   private static isFocusHumRunning: boolean = false;
   private static focusStopTimer: any = null;
+
+  // Mechanical Keystroke Shared Buffer
+  private static clickNoiseBuffer: AudioBuffer | null = null;
 
   private static initialized: boolean = false;
   private static isPrimed: boolean = false;
@@ -311,9 +317,231 @@ export class AudioSynthesizer {
         this.playTourFanfare(t);
         HapticEngine.trigger('success');
         break;
+      case 'mechanical-click':
+        this.dispatchMechanicalClick(1.0);
+        break;
+      case 'streak-chime':
+        this.dispatchStreakChime(1);
+        break;
+      case 'xp-pickup':
+        this.dispatchXpPickup();
+        break;
       default:
         break;
     }
+  }
+
+  /**
+   * Procedural Mechanical Keystroke Sound:
+   * Combines high-frequency bandpass-filtered noise burst (transient switch click)
+   * with a 120Hz resonant sine bottom-out thock.
+   * Zero external audio files required.
+   */
+  public static playMechanicalClick(pitchMod: number = 1.0): void {
+    if (this.isMuted) return;
+
+    if (!this.ctx || this.ctx.state === 'suspended') {
+      this.ensureActiveContext()
+        .then(() => {
+          if (!this.isMuted && this.ctx && this.ctx.state === 'running') {
+            this.dispatchMechanicalClick(pitchMod);
+          }
+        })
+        .catch(() => {});
+      return;
+    }
+
+    this.dispatchMechanicalClick(pitchMod);
+  }
+
+  private static getClickNoiseBuffer(ctx: AudioContext): AudioBuffer {
+    if (!this.clickNoiseBuffer || this.clickNoiseBuffer.sampleRate !== ctx.sampleRate) {
+      const len = Math.floor(ctx.sampleRate * 0.04); // 40ms buffer
+      const buf = ctx.createBuffer(1, len, ctx.sampleRate);
+      const data = buf.getChannelData(0);
+      for (let i = 0; i < len; i++) {
+        data[i] = Math.random() * 2 - 1;
+      }
+      this.clickNoiseBuffer = buf;
+    }
+    return this.clickNoiseBuffer;
+  }
+
+  private static dispatchMechanicalClick(pitchMod: number = 1.0): void {
+    if (!this.ctx || !this.masterGain || this.isMuted) return;
+    const ctx = this.ctx;
+    const t = ctx.currentTime;
+    const clampedMod = Math.max(0.6, Math.min(1.8, pitchMod));
+
+    try {
+      // 1. High-frequency click transient (Bandpass filtered noise burst)
+      const noiseBuffer = this.getClickNoiseBuffer(ctx);
+      const noiseSource = ctx.createBufferSource();
+      noiseSource.buffer = noiseBuffer;
+
+      const clickFilter = ctx.createBiquadFilter();
+      clickFilter.type = 'bandpass';
+      clickFilter.frequency.setValueAtTime(3200 * clampedMod, t);
+      clickFilter.Q.setValueAtTime(2.8, t);
+
+      const clickGain = ctx.createGain();
+      clickGain.gain.setValueAtTime(this.EPSILON, t);
+      clickGain.gain.exponentialRampToValueAtTime(0.24, t + 0.001);
+      clickGain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.015);
+
+      noiseSource.connect(clickFilter);
+      clickFilter.connect(clickGain);
+      clickGain.connect(this.masterGain);
+
+      noiseSource.start(t);
+      noiseSource.stop(t + 0.018);
+
+      // 2. Resonant Bottom-out Thock (120Hz resonant body with pitch drop)
+      const thockOsc = ctx.createOscillator();
+      thockOsc.type = 'sine';
+      thockOsc.frequency.setValueAtTime(120 * clampedMod, t);
+      thockOsc.frequency.exponentialRampToValueAtTime(55 * clampedMod, t + 0.035);
+
+      const thockFilter = ctx.createBiquadFilter();
+      thockFilter.type = 'lowpass';
+      thockFilter.frequency.setValueAtTime(320 * clampedMod, t);
+
+      const thockGain = ctx.createGain();
+      thockGain.gain.setValueAtTime(this.EPSILON, t);
+      thockGain.gain.exponentialRampToValueAtTime(0.36, t + 0.0015);
+      thockGain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.040);
+
+      thockOsc.connect(thockFilter);
+      thockFilter.connect(thockGain);
+      thockGain.connect(this.masterGain);
+
+      thockOsc.start(t);
+      thockOsc.stop(t + 0.042);
+
+      HapticEngine.trigger('selection');
+    } catch (err) {
+      // Graceful fallback in test environments
+    }
+  }
+
+  /**
+   * Streak Combo Chime:
+   * Ascending Just Intonation harmonic arpeggio escalating with combo multiplier.
+   */
+  public static playStreakChime(comboCount: number = 1): void {
+    if (this.isMuted) return;
+
+    if (!this.ctx || this.ctx.state === 'suspended') {
+      this.ensureActiveContext()
+        .then(() => {
+          if (!this.isMuted && this.ctx && this.ctx.state === 'running') {
+            this.dispatchStreakChime(comboCount);
+          }
+        })
+        .catch(() => {});
+      return;
+    }
+
+    this.dispatchStreakChime(comboCount);
+  }
+
+  private static dispatchStreakChime(comboCount: number = 1): void {
+    if (!this.ctx || !this.masterGain || this.isMuted) return;
+    const ctx = this.ctx;
+    const t = ctx.currentTime;
+
+    try {
+      // Just Intonation harmonic ratios: 1/1, 5/4 (major third), 3/2 (perfect fifth), 15/8, 2/1 (octave)
+      const baseFreq = 440 * (comboCount >= 10 ? 1.25 : 1.0);
+      const allRatios = [1.0, 1.25, 1.5, 1.875, 2.0];
+      const noteCount = Math.min(5, Math.max(2, Math.floor(comboCount / 3) + 2));
+
+      for (let i = 0; i < noteCount; i++) {
+        const freq = baseFreq * allRatios[i];
+        const delay = i * 0.045;
+        const dur = 0.24;
+
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, t + delay);
+
+        const nStart = t + delay;
+        const nEnd = nStart + dur;
+
+        gain.gain.setValueAtTime(this.EPSILON, nStart);
+        gain.gain.exponentialRampToValueAtTime(0.25, nStart + 0.003);
+        gain.gain.exponentialRampToValueAtTime(this.EPSILON, nEnd - 0.005);
+
+        osc.connect(gain);
+        gain.connect(this.masterGain);
+
+        osc.start(nStart);
+        osc.stop(nEnd);
+      }
+
+      HapticEngine.trigger('success');
+    } catch {}
+  }
+
+  /**
+   * XP Pickup Chime:
+   * Sparkling ascending crystal chime for XP increments.
+   */
+  public static playXpPickup(): void {
+    if (this.isMuted) return;
+
+    if (!this.ctx || this.ctx.state === 'suspended') {
+      this.ensureActiveContext()
+        .then(() => {
+          if (!this.isMuted && this.ctx && this.ctx.state === 'running') {
+            this.dispatchXpPickup();
+          }
+        })
+        .catch(() => {});
+      return;
+    }
+
+    this.dispatchXpPickup();
+  }
+
+  private static dispatchXpPickup(): void {
+    if (!this.ctx || !this.masterGain || this.isMuted) return;
+    const ctx = this.ctx;
+    const t = ctx.currentTime;
+
+    try {
+      // 3 ascending crystal tones: 784Hz (G5), 1046.5Hz (C6), 1318.5Hz (E6)
+      const notes = [
+        { freq: 783.99, delay: 0.0, dur: 0.18, peak: 0.20 },
+        { freq: 1046.50, delay: 0.05, dur: 0.20, peak: 0.22 },
+        { freq: 1318.51, delay: 0.10, dur: 0.26, peak: 0.25 }
+      ];
+
+      notes.forEach(({ freq, delay, dur, peak }) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, t + delay);
+
+        const nStart = t + delay;
+        const nEnd = nStart + dur;
+
+        gain.gain.setValueAtTime(this.EPSILON, nStart);
+        gain.gain.exponentialRampToValueAtTime(peak, nStart + 0.003);
+        gain.gain.exponentialRampToValueAtTime(this.EPSILON, nEnd - 0.005);
+
+        osc.connect(gain);
+        gain.connect(this.masterGain!);
+
+        osc.start(nStart);
+        osc.stop(nEnd);
+      });
+
+      HapticEngine.trigger('light');
+    } catch {}
   }
 
   /**

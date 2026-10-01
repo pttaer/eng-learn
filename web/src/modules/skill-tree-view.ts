@@ -6,9 +6,11 @@ import { RouteId } from '../core/router';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { MotionEngine } from '../core/motion-engine';
 import { StorageManager } from '../utils/storage';
+import { NebulaCanvas } from '../core/perspective-canvas';
 
 export class SkillTreeView {
   private container: HTMLElement;
+  private nebulaCanvas: NebulaCanvas | null = null;
   public onNavigate?: (route: RouteId) => void;
 
   constructor() {
@@ -24,9 +26,12 @@ export class SkillTreeView {
         <!-- 1. Unified Command Header & Today's 15-Minute Workout -->
         ${this.renderWorkoutBanner()}
 
-        <!-- 2. Constellation Visualizer Canvas/SVG -->
+        <!-- 2. Constellation Visualizer Canvas/SVG with Starfield Nebula Backdrop -->
         <div class="constellation-container" style="position: relative; width: 100%; flex: 1 1 0; min-height: 0; margin-top: 6px; margin-bottom: 6px; background: radial-gradient(circle at 50% 25%, color-mix(in srgb, var(--accent-gold) 6%, transparent), transparent 75%), var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-card);">
-          ${this.renderConstellationSVG()}
+          <canvas class="constellation-nebula-canvas" id="constellation-nebula-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></canvas>
+          <div class="constellation-svg-wrapper" style="position: relative; width: 100%; height: 100%; z-index: 2; display: flex; align-items: center; justify-content: center;">
+            ${this.renderConstellationSVG()}
+          </div>
         </div>
 
         <!-- 3. 5 Branches Reference Grid -->
@@ -37,6 +42,15 @@ export class SkillTreeView {
     `;
 
     this.bindEvents();
+
+    // Initialize Deep-Space Starfield Nebula
+    const nebulaEl = this.container.querySelector('.constellation-nebula-canvas') as HTMLCanvasElement | null;
+    if (nebulaEl) {
+      if (this.nebulaCanvas) {
+        this.nebulaCanvas.destroy();
+      }
+      this.nebulaCanvas = new NebulaCanvas(nebulaEl);
+    }
 
     // Procedural entrance animations via MotionEngine
     setTimeout(() => {
@@ -83,6 +97,13 @@ export class SkillTreeView {
       { route: 'speak' as RouteId, ok: done.speaking >= 1, label: '1 Speaking Take (4-3-2 Fluency)' }
     ];
     return { tasks, left: tasks.filter(t => !t.ok).length, next: tasks.find(t => !t.ok)?.route ?? ('tree' as RouteId) };
+  }
+
+  public teardown(): void {
+    if (this.nebulaCanvas) {
+      this.nebulaCanvas.destroy();
+      this.nebulaCanvas = null;
+    }
   }
 
   private renderWorkoutBanner(): string {

@@ -46,7 +46,7 @@ export class AtomicCard {
     wrapper.className = 'atomic-card-perspective-wrapper interactive';
 
     const container = document.createElement('div');
-    container.className = 'atomic-card-container';
+    container.className = 'atomic-card-container atomic-card dossier-card';
     container.id = `card-${config.id}`;
     container.setAttribute('role', 'region');
     container.setAttribute('aria-roledescription', 'flashcard');

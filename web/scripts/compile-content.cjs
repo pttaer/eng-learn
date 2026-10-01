@@ -114,7 +114,7 @@ function compileGrammar() {
 function compileVocabulary() {
   const dir = path.join(CONTENT_DIR, 'vocabulary');
   if (!fs.existsSync(dir)) return;
-  const files = fs.readdirSync(dir).filter(f => f.endsWith('.md') && f !== 'awl-corpus.md').sort();
+  const files = fs.readdirSync(dir).filter(f => f.endsWith('.md') && f !== 'awl-corpus.md' && f !== 'rhetoric-figures.md').sort();
   if (files.length === 0) return;
   const allItems = [];
 
@@ -248,10 +248,91 @@ function compileLexicon() {
     }
   }
 
+  // 3. Ingest Rhetorical Figures into Lexicon Dictionary
+  const rhetoricFile = path.join(CONTENT_DIR, 'vocabulary', 'rhetoric-figures.md');
+  if (fs.existsSync(rhetoricFile)) {
+    const content = fs.readFileSync(rhetoricFile, 'utf8');
+    const lines = content.split(/\r?\n/);
+    lines.forEach(line => {
+      const trimmed = line.trim();
+      if (!trimmed.startsWith('|') || trimmed.includes('Index') || trimmed.includes(':---')) return;
+      const parts = trimmed.split('|').map(p => p.trim()).filter(Boolean);
+      if (parts.length >= 8) {
+        const index = parseInt(parts[0], 10);
+        const figure = parts[1].trim();
+        const category = parts[2].trim();
+        const etymology = parts[3].trim();
+        const syntacticFormula = parts[4].trim();
+        const classicalExemplar = parts[5].trim();
+        const vietnamese = parts[6].trim();
+        const key = figure.toLowerCase();
+
+        if (!lexiconDict[key]) {
+          lexiconDict[key] = {
+            id: `rhetoric-${index}`,
+            word: figure,
+            ipa: '',
+            pos: 'rhetorical device',
+            partOfSpeech: 'rhetorical device',
+            root: etymology,
+            definition: `${category}: ${syntacticFormula}`,
+            vietnamese: vietnamese,
+            collocations: [figure, category],
+            level: 3,
+            contextSentence: classicalExemplar
+          };
+        }
+      }
+    });
+  }
+
   const keys = Object.keys(lexiconDict);
   if (keys.length > 0) {
     fs.writeFileSync(path.join(DATA_DIR, 'lexicon-dictionary.json'), JSON.stringify(lexiconDict, null, 2), 'utf8');
     console.log(`[COMPILE] lexicon-dictionary.json: ${keys.length} entries indexed.`);
+  }
+}
+
+// 3c. Master Rhetorical Figures Compiler (100 Entries)
+function compileRhetoric() {
+  const rhetoricFile = path.join(CONTENT_DIR, 'vocabulary', 'rhetoric-figures.md');
+  if (!fs.existsSync(rhetoricFile)) return;
+  const content = fs.readFileSync(rhetoricFile, 'utf8');
+  const lines = content.split(/\r?\n/);
+  const allRhetoric = [];
+
+  lines.forEach(line => {
+    const trimmed = line.trim();
+    if (!trimmed.startsWith('|') || trimmed.includes('Index') || trimmed.includes(':---')) return;
+    const parts = trimmed.split('|').map(p => p.trim()).filter(Boolean);
+    if (parts.length >= 8) {
+      const index = parseInt(parts[0], 10);
+      const figure = parts[1].trim();
+      const category = parts[2].trim();
+      const etymology = parts[3].trim();
+      const syntacticFormula = parts[4].trim();
+      const classicalExemplar = parts[5].trim();
+      const vietnamese = parts[6].trim();
+      const executiveApplication = parts[7].trim();
+
+      allRhetoric.push({
+        id: `rhetoric-${index}`,
+        index: index,
+        figure: figure,
+        category: category,
+        etymology: etymology,
+        syntacticFormula: syntacticFormula,
+        classicalExemplar: classicalExemplar,
+        vietnamese: vietnamese,
+        executiveApplication: executiveApplication
+      });
+    }
+  });
+
+  if (allRhetoric.length > 0) {
+    allRhetoric.sort((a, b) => a.index - b.index);
+    fs.writeFileSync(path.join(DATA_DIR, 'rhetoric.json'), JSON.stringify(allRhetoric, null, 2), 'utf8');
+    console.log(`[COMPILE] rhetoric.json: ${allRhetoric.length} rhetorical figures`);
   }
 }
 
@@ -508,6 +589,7 @@ function compileAll() {
   compileCollocations();
   compileGrammar();
   compileVocabulary();
+  compileRhetoric();
   compileLexicon();
   compileDrills();
   compileReading();

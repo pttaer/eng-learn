@@ -23,6 +23,8 @@ import { ProgressionEngine } from './core/progression-engine';
 import { ProgressionModal } from './modules/progression-modal';
 import { ZenMode } from './core/zen-mode';
 import { LexiconDrawer } from './modules/lexicon-drawer';
+import { BlitzDossier } from './modules/blitz-dossier';
+import { CardTiltController, NebulaCanvas } from './core/perspective-canvas';
 import collocationsData from './assets/data/collocations.json';
 
 // Expose engines to window for automated headless testing & telemetry inspection
@@ -33,7 +35,10 @@ import collocationsData from './assets/data/collocations.json';
 (window as any).ProgressionModal = ProgressionModal;
 (window as any).ZenMode = ZenMode;
 (window as any).LexiconDrawer = LexiconDrawer;
+(window as any).BlitzDossier = BlitzDossier;
 (window as any).StorageManager = StorageManager;
+(window as any).CardTiltController = CardTiltController;
+(window as any).NebulaCanvas = NebulaCanvas;
 
 class App {
   private router: Router;
@@ -50,6 +55,7 @@ class App {
   private collocationsDossier: CollocationsDossier;
   private grammarDossier: GrammarDossier;
   private missionLog: MissionLog;
+  private blitzDossier: BlitzDossier;
 
   private workspaceMount: HTMLElement;
   private activeDossierHandle: any = null;
@@ -67,6 +73,7 @@ class App {
     CursorTracker.init();
     ZenMode.init();
     LexiconDrawer.init();
+    CardTiltController.init();
 
     // Global Micro-Interactions: Tactile audio feedback on button clicks
     document.addEventListener('click', (e) => {
@@ -101,8 +108,12 @@ class App {
     this.collocationsDossier = new CollocationsDossier();
     this.grammarDossier = new GrammarDossier();
     this.missionLog = new MissionLog();
+    this.blitzDossier = new BlitzDossier();
 
     // Bind Completion Rituals
+    this.blitzDossier.onBatchComplete = () => {
+      this.showCompletionReceipt('BLITZ // 60-SECOND SPRINT COMPLETE');
+    };
     this.readingDossier.onBatchComplete = () => {
       ProgressionEngine.recordActivity('reading', 1);
       ProgressionEngine.addXP(50);
@@ -183,6 +194,11 @@ class App {
       this.router.navigate('tree');
     };
 
+    // Header Blitz navigation
+    this.headerHud.onNavigateToBlitz = () => {
+      this.router.navigate('blitz');
+    };
+
     // Route listener
     this.router.onRoute((route) => {
       this.handleRouteChange(route);
@@ -248,6 +264,10 @@ class App {
       case 'habits':
         this.workspaceMount.appendChild(this.missionLog.render());
         this.activeDossierHandle = this.missionLog;
+        break;
+      case 'blitz':
+        this.workspaceMount.appendChild(this.blitzDossier.render());
+        this.activeDossierHandle = this.blitzDossier;
         break;
       default:
         break;

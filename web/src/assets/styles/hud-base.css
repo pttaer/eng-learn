@@ -652,3 +652,40 @@ body.zen-active,
   transition: max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* ==========================================================================
+   DEEP-SPACE STARFIELD NEBULA & SPECULAR CARD SHIMMER (ENG-49)
+   ========================================================================== */
+
+/* Drifting Starfield Nebula Canvas behind Skyrim Constellation Tree */
+.constellation-nebula-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.constellation-svg-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* 3D Specular Sheen Root Defaults */
+:root {
+  --glare-x: 50%;
+  --glare-y: 50%;
+  --glare-opacity: 0;
+  --card-rotate-x: 0deg;
+  --card-rotate-y: 0deg;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .constellation-nebula-canvas {
+    animation: none !important;
+  }
+}
+

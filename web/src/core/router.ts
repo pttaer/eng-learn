@@ -1,4 +1,4 @@
-export type RouteId = 'tree' | 'read' | 'write' | 'listen' | 'speak' | 'vocab' | 'colloc' | 'grammar' | 'habits' | 'singularity';
+export type RouteId = 'tree' | 'read' | 'write' | 'listen' | 'speak' | 'vocab' | 'colloc' | 'grammar' | 'habits' | 'singularity' | 'blitz';
 
 export type RouteChangeHandler = (route: RouteId) => void;
 
@@ -21,7 +21,7 @@ export class Router {
 
   private resolveRoute(): void {
     const rawHash = window.location.hash.replace(/^#\/?/, '').toLowerCase();
-    const validRoutes: RouteId[] = ['tree', 'read', 'write', 'listen', 'speak', 'vocab', 'colloc', 'grammar', 'habits', 'singularity'];
+    const validRoutes: RouteId[] = ['tree', 'read', 'write', 'listen', 'speak', 'vocab', 'colloc', 'grammar', 'habits', 'singularity', 'blitz'];
 
     const matched = validRoutes.find(r => r === rawHash) || 'tree';
     this.currentRoute = matched;

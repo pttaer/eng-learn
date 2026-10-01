@@ -2693,3 +2693,668 @@ html[data-motion="reduce"] {
     transition: none !important;
   }
 }
+
+/* ==========================================================================
+   60-SECOND ROGUELIKE SPEED BLITZ MODE (ENG-51)
+   ========================================================================== */
+
+.blitz-dossier-shell {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-20, 20px) var(--space-16, 16px);
+  box-sizing: border-box;
+}
+
+/* 1. Ready Briefing Card */
+.blitz-ready-card,
+.blitz-summary-card {
+  width: 100%;
+  max-width: 680px;
+  background: var(--bg-surface, #0f1117);
+  border: 1px solid var(--border-solid, #27272a);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  border-radius: 8px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  backdrop-filter: blur(16px);
+  animation: blitzCardFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes blitzCardFadeIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.blitz-badge-cluster,
+.summary-badge-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.blitz-glow-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent-gold, #ca8a04);
+  background: rgba(202, 138, 4, 0.12);
+  border: 1px solid var(--accent-gold, #ca8a04);
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.blitz-high-score-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  color: var(--ink-secondary, #d4d4d8);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-hairline, #27272a);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.blitz-high-score-badge strong {
+  color: var(--accent-gold, #ca8a04);
+}
+
+.blitz-new-record-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 700;
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid #22c55e;
+  padding: 4px 12px;
+  border-radius: 4px;
+  animation: recordGlowPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes recordGlowPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(34, 197, 94, 0.2); }
+  50% { box-shadow: 0 0 18px rgba(34, 197, 94, 0.5); }
+}
+
+.blitz-ready-title,
+.blitz-summary-title {
+  font-family: var(--font-sans, system-ui);
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 800;
+  color: var(--ink-primary, #f4f4f5);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.blitz-ready-desc {
+  font-family: var(--font-sans, system-ui);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-secondary, #a1a1aa);
+  max-width: 540px;
+  margin: 0;
+}
+
+.blitz-mechanics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.blitz-mechanic-card {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-hairline, #27272a);
+  border-radius: 6px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.mechanic-icon {
+  font-size: 20px;
+}
+
+.mechanic-title {
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-primary, #f4f4f5);
+  text-transform: uppercase;
+}
+
+.mechanic-detail {
+  font-family: var(--font-sans, system-ui);
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--ink-muted, #71717a);
+}
+
+.mechanic-detail kbd,
+.blitz-hotkey-hint kbd {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-hairline, #3f3f46);
+  padding: 1px 4px;
+  border-radius: 3px;
+  color: var(--accent-gold, #ca8a04);
+}
+
+.blitz-ready-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.blitz-start-btn {
+  min-height: 48px;
+  width: 100%;
+  max-width: 340px;
+  background: var(--accent-gold, #ca8a04);
+  color: #000;
+  font-family: var(--font-mono, monospace);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  box-shadow: 0 4px 18px rgba(202, 138, 4, 0.35);
+}
+
+.blitz-start-btn:hover {
+  background: #eab308;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(202, 138, 4, 0.55);
+}
+
+.blitz-hotkey-hint {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  color: var(--ink-muted, #71717a);
+}
+
+/* 2. Active Arena Cockpit */
+.blitz-arena-shell {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  animation: blitzArenaEnter 0.25s ease;
+}
+
+@keyframes blitzArenaEnter {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.blitz-hud-strip {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-hairline, #27272a);
+  border-radius: 8px;
+  padding: 10px 24px;
+}
+
+.blitz-hud-metric {
+  display: flex;
+  flex-direction: column;
+  min-width: 90px;
+}
+
+.blitz-hud-metric.text-right {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.metric-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--ink-muted, #71717a);
+}
+
+.metric-value {
+  font-family: var(--font-mono, monospace);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--ink-primary, #f4f4f5);
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-score {
+  color: var(--accent-gold, #ca8a04);
+}
+
+.metric-accuracy {
+  color: #22c55e;
+}
+
+/* Circular SVG Timer */
+.blitz-circular-timer-wrap {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.blitz-timer-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.timer-track {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 6;
+}
+
+.timer-progress {
+  fill: none;
+  stroke: var(--accent-gold, #ca8a04);
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.85s linear, stroke 0.3s ease;
+}
+
+.timer-number-overlay {
+  font-family: var(--font-mono, monospace);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--ink-primary, #f4f4f5);
+  letter-spacing: -0.02em;
+  z-index: 2;
+  font-variant-numeric: tabular-nums;
+}
+
+.blitz-circular-timer-wrap.is-urgent {
+  animation: blitzTimerPulse 0.9s infinite ease-in-out;
+}
+
+.blitz-circular-timer-wrap.is-urgent .timer-progress {
+  stroke: #ef4444 !important;
+}
+
+.blitz-circular-timer-wrap.is-urgent .timer-number-overlay {
+  color: #ef4444;
+}
+
+@keyframes blitzTimerPulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.4)); }
+  50% { transform: scale(1.08); filter: drop-shadow(0 0 16px rgba(239, 68, 68, 0.8)); }
+}
+
+/* Combo Gauge Multiplier */
+.blitz-combo-gauge-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.blitz-combo-pill {
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.blitz-combo-pill.multiplier-1 {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-hairline, #27272a);
+  color: var(--ink-secondary, #a1a1aa);
+}
+
+.blitz-combo-pill.multiplier-2 {
+  background: rgba(202, 138, 4, 0.15);
+  border: 1px solid var(--accent-gold, #ca8a04);
+  color: var(--accent-gold, #ca8a04);
+  box-shadow: 0 0 16px rgba(202, 138, 4, 0.35);
+}
+
+.blitz-combo-pill.multiplier-3 {
+  background: rgba(249, 115, 22, 0.2);
+  border: 1px solid #f97316;
+  color: #f97316;
+  box-shadow: 0 0 24px rgba(249, 115, 22, 0.5);
+}
+
+.blitz-combo-pill.multiplier-4 {
+  background: rgba(234, 179, 8, 0.25);
+  border: 1px solid #eab308;
+  color: #eab308;
+  box-shadow: 0 0 32px rgba(234, 179, 8, 0.7);
+  animation: comboPulseFire 1.2s infinite ease-in-out;
+}
+
+@keyframes comboPulseFire {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(234, 179, 8, 0.5)); }
+  50% { transform: scale(1.04); filter: drop-shadow(0 0 22px rgba(234, 179, 8, 0.8)); }
+}
+
+/* Prompt Card */
+.blitz-card-mount {
+  width: 100%;
+}
+
+.blitz-prompt-card {
+  width: 100%;
+  background: var(--bg-surface, #0f1117);
+  border: 1px solid var(--border-solid, #27272a);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.prompt-category-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent-gold, #ca8a04);
+  text-transform: uppercase;
+}
+
+.prompt-stem-text {
+  font-family: var(--font-sans, system-ui);
+  font-size: clamp(18px, 2.8vw, 24px);
+  font-weight: 600;
+  color: var(--ink-primary, #f4f4f5);
+  line-height: 1.5;
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.prompt-stem-text .stem-highlight {
+  color: var(--accent-gold, #ca8a04);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.prompt-stem-text .stem-definition {
+  font-style: italic;
+  color: var(--ink-secondary, #d4d4d8);
+  font-weight: 500;
+}
+
+/* Choices Grid */
+.blitz-choices-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+.blitz-choice-btn {
+  min-height: 56px;
+  padding: 12px 16px;
+  background: var(--bg-card, #18181b);
+  border: 1.5px solid var(--border-solid, #27272a);
+  border-radius: 6px;
+  color: var(--ink-primary, #f4f4f5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  user-select: none;
+}
+
+.blitz-choice-btn:hover {
+  border-color: var(--accent-gold, #ca8a04);
+  background: rgba(202, 138, 4, 0.1);
+  transform: translateY(-2px);
+}
+
+.blitz-choice-btn:active {
+  transform: translateY(0);
+}
+
+.choice-key-tag {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--ink-muted, #71717a);
+  letter-spacing: 0.05em;
+}
+
+.choice-text {
+  font-family: var(--font-sans, system-ui);
+  font-size: clamp(14px, 2vw, 17px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  word-break: break-word;
+}
+
+/* Rapid Flash Micro-States */
+.blitz-choice-btn.flash-correct {
+  background: rgba(34, 197, 94, 0.28) !important;
+  border-color: #22c55e !important;
+  color: #ffffff !important;
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+}
+
+.blitz-choice-btn.flash-wrong {
+  background: rgba(239, 68, 68, 0.28) !important;
+  border-color: #ef4444 !important;
+  color: #ffffff !important;
+  transform: scale(0.98);
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+}
+
+.blitz-choice-btn.flash-correct-hint {
+  border-color: #22c55e !important;
+  background: rgba(34, 197, 94, 0.12) !important;
+}
+
+/* 3. Summary Scoreboard Card */
+.summary-score-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.hero-score-number {
+  font-family: var(--font-mono, monospace);
+  font-size: clamp(48px, 8vw, 64px);
+  font-weight: 800;
+  color: var(--accent-gold, #ca8a04);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.hero-score-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-muted, #71717a);
+  letter-spacing: 0.12em;
+}
+
+.summary-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+.summary-stat-box {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-hairline, #27272a);
+  border-radius: 6px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--ink-muted, #71717a);
+}
+
+.stat-val {
+  font-family: var(--font-mono, monospace);
+  font-size: 22px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-val.highlight-green { color: #22c55e; }
+.stat-val.highlight-gold { color: var(--accent-gold, #ca8a04); }
+.stat-val.highlight-purple { color: #c084fc; }
+
+.stat-sub {
+  font-family: var(--font-sans, system-ui);
+  font-size: 11px;
+  color: var(--ink-muted, #71717a);
+}
+
+.summary-action-cluster {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.blitz-action-btn {
+  min-height: 48px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-family: var(--font-mono, monospace);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-restart-blitz {
+  background: var(--accent-gold, #ca8a04);
+  color: #000;
+  border: none;
+}
+
+.btn-restart-blitz:hover {
+  background: #eab308;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(202, 138, 4, 0.4);
+}
+
+.btn-return-tree {
+  background: transparent;
+  border: 1px solid var(--border-solid, #27272a);
+  color: var(--ink-primary, #f4f4f5);
+}
+
+.btn-return-tree:hover {
+  border-color: var(--border-solid, #52525b);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* 4. Coaxial Focus Ring for WCAG 2.2 AAA */
+.blitz-start-btn:focus-visible,
+.blitz-choice-btn:focus-visible,
+.blitz-action-btn:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px #ffffff;
+}
+
+/* 5. Mobile Responsiveness */
+@media (max-width: 768px) {
+  .blitz-mechanics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blitz-choices-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blitz-choice-btn {
+    min-height: 52px;
+  }
+
+  .summary-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-action-cluster {
+    flex-direction: column;
+  }
+
+  .blitz-action-btn {
+    width: 100%;
+  }
+}
+
+/* 6. Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .blitz-ready-card,
+  .blitz-summary-card,
+  .blitz-arena-shell,
+  .blitz-circular-timer-wrap,
+  .blitz-combo-pill,
+  .blitz-choice-btn,
+  .blitz-new-record-badge {
+    animation: none !important;
+    transition: none !important;
+  }
+}

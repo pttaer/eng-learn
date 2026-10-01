@@ -11089,5 +11089,1605 @@
     "collocations": [],
     "level": 1,
     "contextSentence": "The museum uses interactive models to get across how earthquakes actually form."
+  },
+  "chiasmus": {
+    "id": "rhetoric-1",
+    "word": "Chiasmus",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek khiasmos (crossing, diagonal arrangement), from khiazein (to mark with an X, chi).",
+    "definition": "Scheme of Balance: [A - B] : [B' - A'] (Criss-cross syntactic structure without identical word repetition).",
+    "vietnamese": "Phép đối chéo cú pháp (đối xứng chữ X); đảo trật tự ngữ pháp giữa hai vế để tạo nhịp điệu nhã nhặn và chiều sâu triết lý.",
+    "collocations": [
+      "Chiasmus",
+      "Scheme of Balance"
+    ],
+    "level": 3,
+    "contextSentence": "'By day the frolic, and the dance by night.' — Samuel Johnson, The Vanity of Human Wishes."
+  },
+  "antimetabole": {
+    "id": "rhetoric-2",
+    "word": "Antimetabole",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek anti- (against) + metabole (turning about, change).",
+    "definition": "Scheme of Balance: [Word A ... Word B] -> [Word B ... Word A] (Strict lexical inversion across parallel clauses).",
+    "vietnamese": "Phép điệp đảo từ vựng; lặp lại chính xác các từ nhưng đổi ngược vị trí nhằm tạo ra sự hoán đổi ý nghĩa sâu sắc và dứt khoát.",
+    "collocations": [
+      "Antimetabole",
+      "Scheme of Balance"
+    ],
+    "level": 3,
+    "contextSentence": "'Ask not what your country can do for you—ask what you can do for your country.' — John F. Kennedy."
+  },
+  "anaphora": {
+    "id": "rhetoric-3",
+    "word": "Anaphora",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek ana- (back, again) + pherein (to carry, bear).",
+    "definition": "Scheme of Repetition: [Anchor X ... Clause 1], [Anchor X ... Clause 2], [Anchor X ... Clause 3].",
+    "vietnamese": "Phép điệp ngữ đầu câu (thủ vĩ tương ứng); lặp từ/ngữ ở đầu các vế liên tiếp nhằm dồn nén cảm xúc và tăng cường uy lực thuyết phục.",
+    "collocations": [
+      "Anaphora",
+      "Scheme of Repetition"
+    ],
+    "level": 3,
+    "contextSentence": "'We shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields.' — Winston Churchill."
+  },
+  "epistrophe": {
+    "id": "rhetoric-4",
+    "word": "Epistrophe",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek epi- (upon, in addition) + strophe (turning). Also termed Epiphora.",
+    "definition": "Scheme of Repetition: [Clause 1 ... Anchor Y], [Clause 2 ... Anchor Y], [Clause 3 ... Anchor Y].",
+    "vietnamese": "Phép điệp ngữ cuối câu; lặp lại từ hoặc ngữ ở cuối các mệnh đề liên tiếp để tạo âm hưởng vang vọng và khắc sâu kết luận.",
+    "collocations": [
+      "Epistrophe",
+      "Scheme of Repetition"
+    ],
+    "level": 3,
+    "contextSentence": "'...government of the people, by the people, for the people, shall not perish from the earth.' — Abraham Lincoln."
+  },
+  "symploce": {
+    "id": "rhetoric-5",
+    "word": "Symploce",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek syn- (together) + plekein (to plait, intertwine).",
+    "definition": "Scheme of Repetition: [Anchor X ... Anchor Y], [Anchor X ... Anchor Y] (Combination of Anaphora + Epistrophe).",
+    "vietnamese": "Phép song điệp thủ vĩ; kết hợp điệp đầu và điệp đuôi đồng thời, tạo nên cấu trúc lồng ghép đóng khung mệnh đề cực kỳ chặt chẽ.",
+    "collocations": [
+      "Symploce",
+      "Scheme of Repetition"
+    ],
+    "level": 3,
+    "contextSentence": "'When there is talk of hatred, let us stand up and talk against it. When there is talk of violence, let us stand up and talk against it.' — Bill Clinton."
+  },
+  "anadiplosis": {
+    "id": "rhetoric-6",
+    "word": "Anadiplosis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek ana- (again) + diplooun (to double).",
+    "definition": "Scheme of Repetition: [Clause 1 ... Word A] -> [Word A ... Clause 2] (End of clause repeats at start of next).",
+    "vietnamese": "Phép điệp liên hoàn (điệp đầu nối đuôi); từ cuối câu trước trở thành từ mở đầu câu sau, tạo chuỗi nhân quả mắt xích không thể tách rời.",
+    "collocations": [
+      "Anadiplosis",
+      "Scheme of Repetition"
+    ],
+    "level": 3,
+    "contextSentence": "'Fear leads to anger. Anger leads to hate. Hate leads to suffering.' — Yoda / George Lucas."
+  },
+  "epanalepsis": {
+    "id": "rhetoric-7",
+    "word": "Epanalepsis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek epi- (in addition) + ana- (again) + lambanein (to take).",
+    "definition": "Scheme of Repetition: [Anchor X ... intervening text ... Anchor X] (Beginning repeated at end).",
+    "vietnamese": "Phép điệp vòng tròn; từ mở đầu câu được lặp lại ở chính cuối câu đó, tạo ấn tượng tuần hoàn khép kín hoặc chân lý tất yếu.",
+    "collocations": [
+      "Epanalepsis",
+      "Scheme of Repetition"
+    ],
+    "level": 3,
+    "contextSentence": "'Blood hath bought blood, and blows have answer'd blows.' — William Shakespeare, King John."
+  },
+  "polysyndeton": {
+    "id": "rhetoric-8",
+    "word": "Polysyndeton",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek poly- (many) + syndetos (bound together with conjunctions).",
+    "definition": "Scheme of Addition: [Item 1] AND [Item 2] AND [Item 3] AND [Item 4] (Deliberate abundance of conjunctions).",
+    "vietnamese": "Phép liên từ trùng điệp; cố tình lặp lại liên từ nối nhiều lần nhằm tạo cảm giác dồn dập, tích tụ sức nặng và quy mô to lớn.",
+    "collocations": [
+      "Polysyndeton",
+      "Scheme of Addition"
+    ],
+    "level": 3,
+    "contextSentence": "'And the rain descended, and the floods came, and the winds blew, and beat upon that house...' — Matthew 7:27."
+  },
+  "asyndeton": {
+    "id": "rhetoric-9",
+    "word": "Asyndeton",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek a- (not, without) + syndetos (bound together).",
+    "definition": "Scheme of Omission: [Item 1], [Item 2], [Item 3], [Item 4] (Omission of coordinating conjunctions).",
+    "vietnamese": "Phép tỉnh lược liên từ; lược bỏ hoàn toàn các liên từ nối giữa các vế câu nhằm tạo nhịp văn dồn dập, gãy gọn, dứt khoát.",
+    "collocations": [
+      "Asyndeton",
+      "Scheme of Omission"
+    ],
+    "level": 3,
+    "contextSentence": "'Veni, vidi, vici. (I came, I saw, I conquered.)' — Julius Caesar."
+  },
+  "zeugma": {
+    "id": "rhetoric-10",
+    "word": "Zeugma",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek zeugnunai (to yoke, join together).",
+    "definition": "Scheme of Wordplay: [Verb V] governs both [Concrete Noun A] and [Abstract Noun B] with dual senses.",
+    "vietnamese": "Phép ách ngữ (dùng một động/tính từ chi phối hai danh từ với hai sắc thái nghĩa đen và nghĩa bóng khác nhau); tạo bất ngờ và ý vị sâu cay.",
+    "collocations": [
+      "Zeugma",
+      "Scheme of Wordplay"
+    ],
+    "level": 3,
+    "contextSentence": "'She arrived in a taxi and a state of utter distress.' — P.G. Wodehouse."
+  },
+  "syllepsis": {
+    "id": "rhetoric-11",
+    "word": "Syllepsis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek syn- (together) + lambanein (to take). Closely related to Zeugma.",
+    "definition": "Scheme of Wordplay: [Verb V] is grammatically or semantically incongruous with one of two governed objects.",
+    "vietnamese": "Phép đồng chấp ngữ nghĩa; một từ đơn lẻ kết nối hai thực thể một cách bất cân xứng giữa vật lý cụ thể và tâm lý trừu tượng.",
+    "collocations": [
+      "Syllepsis",
+      "Scheme of Wordplay"
+    ],
+    "level": 3,
+    "contextSentence": "'He carried a strobe light and the responsibility for the lives of his men.' — Tim O'Brien, The Things They Carried."
+  },
+  "litotes": {
+    "id": "rhetoric-12",
+    "word": "Litotes",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek litos (plain, small, slender).",
+    "definition": "Trope of Understatement: Denying the contrary: NOT + [Negative Adj/Adv] = Emphatic Positive.",
+    "vietnamese": "Phép nói giảm qua phủ định hai lần; dùng sự phủ định của điều tiêu cực để khẳng định mạnh mẽ một sự thật tích cực, giữ thái độ khiêm nhường.",
+    "collocations": [
+      "Litotes",
+      "Trope of Understatement"
+    ],
+    "level": 3,
+    "contextSentence": "'A citizen of no mean city.' — Acts 21:39 (St. Paul meaning a very famous city)."
+  },
+  "hypophora": {
+    "id": "rhetoric-13",
+    "word": "Hypophora",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek hypo- (under) + pherein (to carry, put forward).",
+    "definition": "Discursive Strategy: [Question Q posed by speaker] -> [Immediate direct Answer A supplied by speaker].",
+    "vietnamese": "Phép tự vấn tự đáp; diễn giả tự đặt câu hỏi rồi lập tức tự trả lời nhằm dẫn dắt luồng tư duy của thính giả theo quỹ đạo định sẵn.",
+    "collocations": [
+      "Hypophora",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'What is our aim? I can answer in one word: It is victory, victory at all costs.' — Winston Churchill."
+  },
+  "procatalepsis": {
+    "id": "rhetoric-14",
+    "word": "Procatalepsis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek pro- (before) + katalambanein (to seize upon, anticipate). Also termed Prolepsis.",
+    "definition": "Discursive Strategy: [Anticipate opponent's counterargument] -> [Preemptively refute and neutralize it].",
+    "vietnamese": "Phép đón đầu phản bác; lường trước luận điểm công kích của đối phương và bẻ gãy nó ngay trong phần trình bày của mình.",
+    "collocations": [
+      "Procatalepsis",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'Now, someone will say: 'Yes, but what about the cost?' To that objection I reply...' — Cicero."
+  },
+  "antithesis": {
+    "id": "rhetoric-15",
+    "word": "Antithesis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek anti- (against) + tithenai (to place, set).",
+    "definition": "Scheme of Balance: [Idea A in Structure X] opposed to [Idea B in parallel Structure X'].",
+    "vietnamese": "Phép tương phản đối lập; đặt hai khái niệm trái ngược nhau trong hai vế câu có cấu trúc ngữ pháp song song để làm nổi bật sự thật.",
+    "collocations": [
+      "Antithesis",
+      "Scheme of Balance"
+    ],
+    "level": 3,
+    "contextSentence": "'To err is human; to forgive, divine.' — Alexander Pope, An Essay on Criticism."
+  },
+  "oxymoron": {
+    "id": "rhetoric-16",
+    "word": "Oxymoron",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek oxys (sharp) + moros (foolish, dull) -> literally 'pointedly foolish'.",
+    "definition": "Trope of Meaning: [Adjective contradictory to Noun] juxtaposed into a single semantic unit.",
+    "vietnamese": "Phép nghịch hợp; ghép hai từ ngữ có ý nghĩa đối lập chan chát cạnh nhau để tạo một nghĩa mới đầy nghịch lý thâm thúy.",
+    "collocations": [
+      "Oxymoron",
+      "Trope of Meaning"
+    ],
+    "level": 3,
+    "contextSentence": "'O brawling love! O loving hate! ... O heavy lightness! serious vanity!' — William Shakespeare, Romeo and Juliet."
+  },
+  "paradox": {
+    "id": "rhetoric-17",
+    "word": "Paradox",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek para- (contrary to) + doxa (opinion, expectation).",
+    "definition": "Trope of Meaning: [Proposition that appears self-contradictory yet expresses a profound truth].",
+    "vietnamese": "Phép nghịch biện; mệnh đề thoạt nghe có vẻ vô lý hoặc phản trực giác nhưng khi suy ngẫm lại bộc lộ một quy luật chân lý sâu xa.",
+    "collocations": [
+      "Paradox",
+      "Trope of Meaning"
+    ],
+    "level": 3,
+    "contextSentence": "'The swiftest traveler is he that goes afoot.' — Henry David Thoreau, Walden."
+  },
+  "hyperbaton": {
+    "id": "rhetoric-18",
+    "word": "Hyperbaton",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek hyper- (over) + bainein (to step) -> 'stepping over'.",
+    "definition": "Scheme of Word Order: Inversion or displacement of conventional syntactic word order for dramatic emphasis.",
+    "vietnamese": "Phép đảo loạn cú pháp; cố tình xáo trộn trật tự thông thường của từ ngữ trong câu nhằm tạo điểm nhấn kịch tính và thu hút chú ý.",
+    "collocations": [
+      "Hyperbaton",
+      "Scheme of Word Order"
+    ],
+    "level": 3,
+    "contextSentence": "'Some rise by sin, and some by virtue fall.' — William Shakespeare, Measure for Measure."
+  },
+  "anastrophe": {
+    "id": "rhetoric-19",
+    "word": "Anastrophe",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek ana- (back, upside down) + strephein (to turn).",
+    "definition": "Scheme of Word Order: Inversion of natural word order, particularly placing an adjective after its noun or verb before subject.",
+    "vietnamese": "Phép đảo ngược từ loại; đảo danh-tính từ hoặc động-chủ từ để tạo ngữ điệu trang nghiêm, thi vị hoặc cổ kính.",
+    "collocations": [
+      "Anastrophe",
+      "Scheme of Word Order"
+    ],
+    "level": 3,
+    "contextSentence": "'Deep into that darkness peering, long I stood there wondering, fearing...' — Edgar Allan Poe, The Raven."
+  },
+  "parenthesis": {
+    "id": "rhetoric-20",
+    "word": "Parenthesis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek para- (beside) + en- (in) + tithenai (to place).",
+    "definition": "Scheme of Insertion: [Main Clause Start ... (Extraneous qualifying information) ... Main Clause End].",
+    "vietnamese": "Phép chêm xen cú pháp; chèn một cụm từ hoặc mệnh đề phụ giải thích vào giữa một câu hoàn chỉnh mà không làm hỏng cấu trúc chính.",
+    "collocations": [
+      "Parenthesis",
+      "Scheme of Insertion"
+    ],
+    "level": 3,
+    "contextSentence": "'And what is so rare as a day in June? / Then, if ever, come perfect days.' — James Russell Lowell."
+  },
+  "apposition": {
+    "id": "rhetoric-21",
+    "word": "Apposition",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin ad- (to) + ponere (to place) -> appositio.",
+    "definition": "Scheme of Insertion: [Noun Phrase 1], [Noun Phrase 2 adjacent clarifying or renaming 1].",
+    "vietnamese": "Phép đồng vị ngữ; đặt hai danh từ/cụm danh từ liền kề nhau để một bên bổ nghĩa và xác định bản chất cho bên kia.",
+    "collocations": [
+      "Apposition",
+      "Scheme of Insertion"
+    ],
+    "level": 3,
+    "contextSentence": "'John of Gaunt, time-honored Lancaster.' — William Shakespeare, Richard II."
+  },
+  "ellipsis": {
+    "id": "rhetoric-22",
+    "word": "Ellipsis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek elleipein (to leave out, fall short).",
+    "definition": "Scheme of Omission: [Subject/Verb omitted in second clause because clearly understood from first].",
+    "vietnamese": "Phép tỉnh lược ngữ pháp; lược bỏ từ ngữ đã xuất hiện ở vế trước nhằm tránh lặp thừa và tăng tính hàm súc cô đọng.",
+    "collocations": [
+      "Ellipsis",
+      "Scheme of Omission"
+    ],
+    "level": 3,
+    "contextSentence": "'To err is human; to forgive, divine.' (Omission of 'is' in second clause)."
+  },
+  "aposiopesis": {
+    "id": "rhetoric-23",
+    "word": "Aposiopesis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek apo- (away) + siopan (to be silent) -> 'becoming silent'.",
+    "definition": "Scheme of Omission: [Sentence breaks off abruptly before completion, leaving thought unsaid].",
+    "vietnamese": "Phép đứt mạch ngôn từ; đột ngột ngừng câu giữa chừng khi cảm xúc lên đến đỉnh điểm hoặc ngụ ý những điều không thể nói hết.",
+    "collocations": [
+      "Aposiopesis",
+      "Scheme of Omission"
+    ],
+    "level": 3,
+    "contextSentence": "'She looked at the contract, realized the trap, and then... but words fail to describe the betrayal.'"
+  },
+  "paralipsis": {
+    "id": "rhetoric-24",
+    "word": "Paralipsis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek para- (beside) + leipein (to leave). Also known as Apophasis or Praeteritio.",
+    "definition": "Trope of Irony: [Stating that one will not mention topic X, thereby drawing maximum attention to X].",
+    "vietnamese": "Phép nói tránh giả vờ; tuyên bố sẽ không đề cập đến một sự việc nhưng qua đó lại nhấn mạnh và phơi bày chính sự việc đó.",
+    "collocations": [
+      "Paralipsis",
+      "Trope of Irony"
+    ],
+    "level": 3,
+    "contextSentence": "'I will not speak of his embezzlements, his deceit, nor his failed past ventures.' — Classical oratory."
+  },
+  "epizeuxis": {
+    "id": "rhetoric-25",
+    "word": "Epizeuxis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek epi- (upon) + zeugnunai (to yoke, join together).",
+    "definition": "Scheme of Repetition: [Word A], [Word A], [Word A] (Immediate contiguous repetition with zero intervening words).",
+    "vietnamese": "Phép điệp từ liền kề; lặp lại một từ nhiều lần liên tiếp không có từ chen giữa nhằm nhấn mạnh tột cùng tính khẩn cấp hoặc ám ảnh.",
+    "collocations": [
+      "Epizeuxis",
+      "Scheme of Repetition"
+    ],
+    "level": 3,
+    "contextSentence": "'Words, words, words.' — William Shakespeare, Hamlet."
+  },
+  "diacope": {
+    "id": "rhetoric-26",
+    "word": "Diacope",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek dia- (through) + koptein (to cut) -> 'cutting in two'.",
+    "definition": "Scheme of Repetition: [Word A] ... [intervening word(s)] ... [Word A] (Repetition broken by brief insert).",
+    "vietnamese": "Phép điệp từ xen kẽ; lặp lại từ hoặc cụm từ được ngăn cách bởi một hoặc vài từ ngắn ở giữa nhằm tạo nhịp đập cảm xúc mãnh liệt.",
+    "collocations": [
+      "Diacope",
+      "Scheme of Repetition"
+    ],
+    "level": 3,
+    "contextSentence": "'Bond. James Bond.' / 'A horse! a horse! my kingdom for a horse!' — William Shakespeare, Richard III."
+  },
+  "polyptoton": {
+    "id": "rhetoric-27",
+    "word": "Polyptoton",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek poly- (many) + ptosis (case, inflection).",
+    "definition": "Scheme of Repetition: Repetition of words derived from the same morphological root in different grammatical forms.",
+    "vietnamese": "Phép điệp gốc từ (đồng nguyên tự); lặp lại các biến thể từ vựng cùng chung một gốc hình thái trong cùng một câu.",
+    "collocations": [
+      "Polyptoton",
+      "Scheme of Repetition"
+    ],
+    "level": 3,
+    "contextSentence": "'With eager feeding food doth choke the feeder.' — William Shakespeare, Richard II."
+  },
+  "antanaclasis": {
+    "id": "rhetoric-28",
+    "word": "Antanaclasis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek anti- (against) + anaklan (to bend back, reflect).",
+    "definition": "Scheme of Wordplay: Repeating a single word within a sentence, but shifting its meaning on the repetition.",
+    "vietnamese": "Phép biến nghĩa điệp từ; lặp lại cùng một từ ngữ nhưng mỗi lần xuất hiện lại mang một nét nghĩa hoàn toàn khác nhau.",
+    "collocations": [
+      "Antanaclasis",
+      "Scheme of Wordplay"
+    ],
+    "level": 3,
+    "contextSentence": "'If we do not hang together, we shall most assuredly hang separately.' — Benjamin Franklin."
+  },
+  "paronomasia": {
+    "id": "rhetoric-29",
+    "word": "Paronomasia",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek para- (beside) + onomazein (to name) -> 'play on words'.",
+    "definition": "Scheme of Wordplay: A rhetorical pun exploiting words with similar sounds but completely different definitions.",
+    "vietnamese": "Phép chơi chữ đồng âm/gần âm; khai thác sự tương đồng về ngữ âm giữa các từ có nghĩa khác biệt để tạo sự dí dỏm sâu cay.",
+    "collocations": [
+      "Paronomasia",
+      "Scheme of Wordplay"
+    ],
+    "level": 3,
+    "contextSentence": "'A little more than kin, and less than kind.' — William Shakespeare, Hamlet."
+  },
+  "metaphor": {
+    "id": "rhetoric-30",
+    "word": "Metaphor",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek meta- (across, over) + pherein (to carry).",
+    "definition": "Trope of Comparison: [Target Concept A] IS directly stated as [Source Vehicle B] without 'like' or 'as'.",
+    "vietnamese": "Phép ẩn dụ; chuyển đổi trường nghĩa từ đối tượng này sang đối tượng khác một cách trực tiếp không dùng từ so sánh, kích thích liên tưởng.",
+    "collocations": [
+      "Metaphor",
+      "Trope of Comparison"
+    ],
+    "level": 3,
+    "contextSentence": "'All the world's a stage, and all the men and women merely players.' — William Shakespeare."
+  },
+  "simile": {
+    "id": "rhetoric-31",
+    "word": "Simile",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin similis (like, resembling).",
+    "definition": "Trope of Comparison: [Target Concept A] is compared to [Source Concept B] using explicit markers 'like' or 'as'.",
+    "vietnamese": "Phép so sánh tu từ; đối chiếu hai đối tượng khác loại qua các từ so sánh như 'như', 'tựa như' để làm sáng tỏ phẩm chất.",
+    "collocations": [
+      "Simile",
+      "Trope of Comparison"
+    ],
+    "level": 3,
+    "contextSentence": "'O my Luve is like a red, red rose / That's newly sprung in June.' — Robert Burns."
+  },
+  "metonymy": {
+    "id": "rhetoric-32",
+    "word": "Metonymy",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek meta- (change) + onyma (name).",
+    "definition": "Trope of Substitution: Substituting the name of an attribute or closely associated adjunct for that of the thing meant.",
+    "vietnamese": "Phép hoán dụ cận kề; dùng một dấu hiệu, thuộc tính hoặc vật gắn liền mật thiết để đại diện cho toàn bộ đối tượng.",
+    "collocations": [
+      "Metonymy",
+      "Trope of Substitution"
+    ],
+    "level": 3,
+    "contextSentence": "'The pen is mightier than the sword.' — Edward Bulwer-Lytton (pen = discourse; sword = military force)."
+  },
+  "synecdoche": {
+    "id": "rhetoric-33",
+    "word": "Synecdoche",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek syn- (together) + ekdekhesthai (to understand, take up).",
+    "definition": "Trope of Substitution: A part is used to represent the whole, or the whole is used to represent a part.",
+    "vietnamese": "Phép hoán dụ bộ phận; dùng một phần cụ thể để chỉ toàn thể hoặc ngược lại nhằm tạo hình ảnh trực quan sinh động.",
+    "collocations": [
+      "Synecdoche",
+      "Trope of Substitution"
+    ],
+    "level": 3,
+    "contextSentence": "'All hands on deck.' (hands = sailors / entire individuals)."
+  },
+  "catachresis": {
+    "id": "rhetoric-34",
+    "word": "Catachresis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek kata- (down, against) + khresthai (to use) -> 'misuse, strained metaphor'.",
+    "definition": "Trope of Meaning: A highly paradoxical, strained, or mixed metaphor deliberately used for arresting cognitive effect.",
+    "vietnamese": "Phép ẩn dụ nghịch dị (dùng từ trái khoáy); kết hợp hình ảnh mâu thuẫn kỳ lạ nhằm gây ấn tượng thị giác và kích hoạt tư duy người nghe.",
+    "collocations": [
+      "Catachresis",
+      "Trope of Meaning"
+    ],
+    "level": 3,
+    "contextSentence": "'To take arms against a sea of troubles...' — William Shakespeare, Hamlet."
+  },
+  "personification": {
+    "id": "rhetoric-35",
+    "word": "Personification",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin persona (mask, person) + facere (to make). Also termed Prosopopoeia.",
+    "definition": "Trope of Meaning: Attributing human qualities, volition, or emotional agency to non-human entities or abstract concepts.",
+    "vietnamese": "Phép nhân hóa; gán ghép hành vi, tâm tư tình cảm của con người cho sự vật vô tri, máy móc hoặc khái niệm trừu tượng.",
+    "collocations": [
+      "Personification",
+      "Trope of Meaning"
+    ],
+    "level": 3,
+    "contextSentence": "'Time and tide wait for no man.' — Proverb."
+  },
+  "anthropomorphism": {
+    "id": "rhetoric-36",
+    "word": "Anthropomorphism",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek anthropos (human) + morphe (form).",
+    "definition": "Trope of Meaning: Treating non-human animals, deities, or objects as literally having human physical form and motivations.",
+    "vietnamese": "Phép nhân hình hóa; miêu tả sự vật hoặc sinh vật như thể chúng thực sự có nhân hình và động cơ tâm lý như con người.",
+    "collocations": [
+      "Anthropomorphism",
+      "Trope of Meaning"
+    ],
+    "level": 3,
+    "contextSentence": "'The engine groaned, coughed in protest, and stubbornly refused to ignite.'"
+  },
+  "hyperbole": {
+    "id": "rhetoric-37",
+    "word": "Hyperbole",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek hyper- (beyond, over) + ballein (to throw).",
+    "definition": "Trope of Exaggeration: Exaggerated statements or claims not meant to be taken literally, used for rhetorical emphasis.",
+    "vietnamese": "Phép ngoa dụ (nói quá); phóng đại tính chất, quy mô của sự vật hiện tượng nhằm khắc sâu ấn tượng và gia tăng sức truyền cảm.",
+    "collocations": [
+      "Hyperbole",
+      "Trope of Exaggeration"
+    ],
+    "level": 3,
+    "contextSentence": "'I loved Ophelia: forty thousand brothers could not, with all their quantity of love, make up my sum.' — William Shakespeare."
+  },
+  "meiosis": {
+    "id": "rhetoric-38",
+    "word": "Meiosis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek meioun (to lessen, diminish).",
+    "definition": "Trope of Understatement: Belittling or downplaying the gravity, scale, or significance of an enormous event.",
+    "vietnamese": "Phép nói giảm mức độ; miêu tả một đại họa hoặc sự kiện kinh hoàng bằng ngôn từ nhẹ nhàng tối giản để tạo hiệu ứng mỉa mai.",
+    "collocations": [
+      "Meiosis",
+      "Trope of Understatement"
+    ],
+    "level": 3,
+    "contextSentence": "'It's just a flesh wound.' — Monty Python and the Holy Grail (referring to a severed arm)."
+  },
+  "euphemism": {
+    "id": "rhetoric-39",
+    "word": "Euphemism",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek eu- (good, well) + pheme (speech, speaking).",
+    "definition": "Trope of Softening: A mild or indirect word or expression substituted for one considered harsh, blunt, or offensive.",
+    "vietnamese": "Phép uyển ngữ (nói khéo); dùng từ ngữ nhẹ nhàng, gián tiếp để tránh gây đau buồn, xúc phạm hoặc né tránh cảm giác thô lỗ.",
+    "collocations": [
+      "Euphemism",
+      "Trope of Softening"
+    ],
+    "level": 3,
+    "contextSentence": "'Passed away' instead of 'died'; 'letting employees go' instead of 'firing'."
+  },
+  "dysphemism": {
+    "id": "rhetoric-40",
+    "word": "Dysphemism",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek dys- (bad, abnormal) + pheme (speech).",
+    "definition": "Trope of Pejorative: A derogatory or unpleasant term used instead of a pleasant or neutral one; reverse of euphemism.",
+    "vietnamese": "Phép miệt thị ngữ; cố tình dùng từ ngữ thô ráp, tiêu cực thay cho từ trung tính để châm biếm, phê phán hoặc biểu thị khinh miệt.",
+    "collocations": [
+      "Dysphemism",
+      "Trope of Pejorative"
+    ],
+    "level": 3,
+    "contextSentence": "'Snail mail' for physical postal delivery; 'grease monkey' for auto mechanic."
+  },
+  "irony": {
+    "id": "rhetoric-41",
+    "word": "Irony",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek eironeia (dissimulation, assumed ignorance).",
+    "definition": "Trope of Contrast: Expression of meaning by using language that signifies the opposite, typically for humor or emphasis.",
+    "vietnamese": "Phép nghịch mỉa (mỉa mai tình huống/ngữ nghĩa); dùng lời lẽ biểu đạt trái ngược với bản chất thực tế nhằm làm nổi bật mâu thuẫn trớ trêu.",
+    "collocations": [
+      "Irony",
+      "Trope of Contrast"
+    ],
+    "level": 3,
+    "contextSentence": "'Water, water, everywhere, / Nor any drop to drink.' — S.T. Coleridge, The Rime of the Ancient Mariner."
+  },
+  "sarcasm": {
+    "id": "rhetoric-42",
+    "word": "Sarcasm",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek sarkazein (to tear flesh, bite the lips in rage).",
+    "definition": "Trope of Mockery: The use of irony to mock, convey contempt, or wound an opponent directly.",
+    "vietnamese": "Phép châm biếm đả kích; hình thức mỉa mai gay gắt có chủ đích làm tổn thương, bộc lộ sự khinh khi hoặc phản bác không khoan nhượng.",
+    "collocations": [
+      "Sarcasm",
+      "Trope of Mockery"
+    ],
+    "level": 3,
+    "contextSentence": "'Oh, a brilliant strategy indeed—let us bankrupt our operating reserves on untested promotional billboards!'"
+  },
+  "apostrophe": {
+    "id": "rhetoric-43",
+    "word": "Apostrophe",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek apo- (away) + strephein (to turn) -> 'turning away'.",
+    "definition": "Discursive Strategy: Speaker turns aside from the direct audience to address an absent person, deity, or abstract idea.",
+    "vietnamese": "Phép hô ngữ cảm thán; diễn giả bất ngờ quay sang kêu gọi, trò chuyện trực tiếp với một người vắng mặt hoặc một khái niệm trừu tượng.",
+    "collocations": [
+      "Apostrophe",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'O death, where is thy sting? O grave, where is thy victory?' — 1 Corinthians 15:55."
+  },
+  "erotema": {
+    "id": "rhetoric-44",
+    "word": "Erotema",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek erotan (to ask a question). Rhetorical Question.",
+    "definition": "Discursive Strategy: A question asked for effect or to lay down a presupposition, without expectation of a reply.",
+    "vietnamese": "Phép câu hỏi tu từ; đặt câu hỏi không nhằm tìm kiếm câu trả lời mà để khẳng định một chân lý hiển nhiên không thể bác bỏ.",
+    "collocations": [
+      "Erotema",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'If you prick us, do we not bleed? If you tickle us, do we not laugh?' — William Shakespeare, The Merchant of Venice."
+  },
+  "pleonasm": {
+    "id": "rhetoric-45",
+    "word": "Pleonasm",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek pleonazein (to be superfluous, abundant).",
+    "definition": "Scheme of Redundancy: The use of more words than are necessary to convey meaning, for stylistic emphasis or vividness.",
+    "vietnamese": "Phép thừa từ tu từ; dùng nhiều từ hơn mức cần thiết về mặt logic ngữ nghĩa nhằm khắc họa sống động hoặc nhấn mạnh triệt để.",
+    "collocations": [
+      "Pleonasm",
+      "Scheme of Redundancy"
+    ],
+    "level": 3,
+    "contextSentence": "'I saw it with my own eyes.' / 'Black darkness enveloped the terrain.'"
+  },
+  "tautology": {
+    "id": "rhetoric-46",
+    "word": "Tautology",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek tauto- (the same) + logos (word, saying).",
+    "definition": "Scheme of Redundancy: The unnecessary repetition of an idea, statement, or word in immediately synonymous terms.",
+    "vietnamese": "Phép trùng ngôn tu từ; lặp lại cùng một ý tưởng bằng các từ đồng nghĩa liền kề, tạo hiệu ứng dứt khoát hoặc nhịp điệu dân gian.",
+    "collocations": [
+      "Tautology",
+      "Scheme of Redundancy"
+    ],
+    "level": 3,
+    "contextSentence": "'A free gift' / 'Adequate enough' / 'They arrived one after another in succession.'"
+  },
+  "periphrasis": {
+    "id": "rhetoric-47",
+    "word": "Periphrasis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek peri- (around) + phrazein (to declare, speak).",
+    "definition": "Trope of Circumlocution: Use of an indirect, roundabout, or multi-word expression in place of a single concise word.",
+    "vietnamese": "Phép nói vòng (uyển khúc ngữ); dùng cụm từ miêu tả đặc trưng thay vì gọi trực tiếp tên sự vật để tạo vẻ trang trọng hoặc gợi cảm.",
+    "collocations": [
+      "Periphrasis",
+      "Trope of Circumlocution"
+    ],
+    "level": 3,
+    "contextSentence": "'The elongated yellow fruit' for banana; 'the city that never sleeps' for New York."
+  },
+  "kenning": {
+    "id": "rhetoric-48",
+    "word": "Kenning",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Old Norse kenna (to know, perceive, name).",
+    "definition": "Trope of Poetic Compound: A figurative, multi-part metaphor used in Old English and Norse poetry in place of a simple noun.",
+    "vietnamese": "Phép định danh thi ca; dùng cụm từ ghép hình tượng cổ để thay thế cho một danh từ phổ thông, tạo phong vị sử thi tráng lệ.",
+    "collocations": [
+      "Kenning",
+      "Trope of Poetic Compound"
+    ],
+    "level": 3,
+    "contextSentence": "'Whale-road' for the sea; 'sky-candle' for the sun; 'battle-sweat' for blood."
+  },
+  "onomatopoeia": {
+    "id": "rhetoric-49",
+    "word": "Onomatopoeia",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek onoma (name) + poiein (to make).",
+    "definition": "Phonaesthetic Figure: The formation of a word from a sound associated with what is named.",
+    "vietnamese": "Phép từ tượng thanh; sáng tạo từ ngữ mô phỏng trực tiếp âm thanh tự nhiên của đối tượng nhằm khơi dậy thính giác người đọc.",
+    "collocations": [
+      "Onomatopoeia",
+      "Phonaesthetic Figure"
+    ],
+    "level": 3,
+    "contextSentence": "'The moan of doves in immemorial elms, / And murmuring of innumerable bees.' — Alfred, Lord Tennyson."
+  },
+  "alliteration": {
+    "id": "rhetoric-50",
+    "word": "Alliteration",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin ad- (to) + littera (letter) -> alliteratio.",
+    "definition": "Phonaesthetic Figure: Repetition of the same initial consonant sound in successive or closely associated words.",
+    "vietnamese": "Phép điệp phụ âm đầu; lặp lại âm đầu của các từ liên tiếp nhằm tạo nhạc tính, nhịp điệu hài hòa và sự dễ nhớ cho câu khẩu hiệu.",
+    "collocations": [
+      "Alliteration",
+      "Phonaesthetic Figure"
+    ],
+    "level": 3,
+    "contextSentence": "'Peter Piper picked a peck of pickled peppers.' / 'Doom, despair, and devastation.'"
+  },
+  "assonance": {
+    "id": "rhetoric-51",
+    "word": "Assonance",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin ad- (to) + sonare (to sound) -> assonare.",
+    "definition": "Phonaesthetic Figure: Repetition of identical or similar vowel sounds in nearby words with different consonants.",
+    "vietnamese": "Phép điệp nguyên âm; lặp lại nguyên âm trong các âm tiết liền kề để tạo âm hưởng êm dịu, ngân vang và tăng tính biểu cảm.",
+    "collocations": [
+      "Assonance",
+      "Phonaesthetic Figure"
+    ],
+    "level": 3,
+    "contextSentence": "'Hear the mellow wedding bells...' — Edgar Allan Poe, The Bells."
+  },
+  "consonance": {
+    "id": "rhetoric-52",
+    "word": "Consonance",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin con- (together) + sonare (to sound).",
+    "definition": "Phonaesthetic Figure: Repetition of identical consonant sounds in nearby words, especially at the end of syllables.",
+    "vietnamese": "Phép điệp phụ âm cuối/thân; lặp lại phụ âm ở giữa hoặc cuối từ để tạo cấu trúc âm thanh chắc chắn, đanh thép và chặt chẽ.",
+    "collocations": [
+      "Consonance",
+      "Phonaesthetic Figure"
+    ],
+    "level": 3,
+    "contextSentence": "'A stroke of luck' / 'The stroke of thick black ink.'"
+  },
+  "cacophony": {
+    "id": "rhetoric-53",
+    "word": "Cacophony",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek kakos (bad, harsh) + phone (sound, voice).",
+    "definition": "Phonaesthetic Figure: The deliberate use of harsh, discordant, guttural sounds to evoke turbulence, chaos, or disgust.",
+    "vietnamese": "Phép nghịch âm chói tai; cố tình dùng các âm thanh gắt gỏng, thô ráp để gợi lên không khí hỗn loạn, bạo lực hoặc khủng hoảng.",
+    "collocations": [
+      "Cacophony",
+      "Phonaesthetic Figure"
+    ],
+    "level": 3,
+    "contextSentence": "'Beware the Jabberwock, my son! / The jaws that bite, the claws that catch!' — Lewis Carroll."
+  },
+  "euphony": {
+    "id": "rhetoric-54",
+    "word": "Euphony",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek eu- (good, well) + phone (sound).",
+    "definition": "Phonaesthetic Figure: The use of words and phrases that produce a pleasing, smooth, and harmonious acoustic effect.",
+    "vietnamese": "Phép thuận âm êm ái; lựa chọn từ ngữ có âm thanh nhẹ nhàng, du dương, dễ nghe để tạo cảm giác an tâm, thư thái và cao quý.",
+    "collocations": [
+      "Euphony",
+      "Phonaesthetic Figure"
+    ],
+    "level": 3,
+    "contextSentence": "'Season of mists and mellow fruitfulness, / Close bosom-friend of the maturing sun...' — John Keats, To Autumn."
+  },
+  "climax": {
+    "id": "rhetoric-55",
+    "word": "Climax",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek klimax (ladder, staircase). Also termed Auxesis.",
+    "definition": "Scheme of Order: Arrangement of words, phrases, or clauses in an ascending order of importance, force, or intensity.",
+    "vietnamese": "Phép tiến thoái tam cấp (tiệm tiến tăng tiến); sắp xếp các vế câu theo trật tự tăng dần về mức độ quan trọng hoặc cảm xúc.",
+    "collocations": [
+      "Climax",
+      "Scheme of Order"
+    ],
+    "level": 3,
+    "contextSentence": "'I came, I saw, I conquered.' / 'Look up! Shake off the dust! Stand forth! Reign!'"
+  },
+  "anticlimax": {
+    "id": "rhetoric-56",
+    "word": "Anticlimax",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek anti- (against) + klimax (ladder). Also termed Bathos.",
+    "definition": "Scheme of Order: A sudden transition in discourse from an important, elevated idea to a ludicrous or trivial one.",
+    "vietnamese": "Phép tụt dốc tu từ; bất ngờ chuyển từ không khí trang nghiêm, bi tráng sang một chi tiết tầm thường vụn vặt để gây cười hoặc châm biếm.",
+    "collocations": [
+      "Anticlimax",
+      "Scheme of Order"
+    ],
+    "level": 3,
+    "contextSentence": "'He lost his family, his fortune, his country, and his fountain pen.'"
+  },
+  "tricolon": {
+    "id": "rhetoric-57",
+    "word": "Tricolon",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek tri- (three) + kolon (limb, clause) -> 'three-limbed'.",
+    "definition": "Scheme of Rhythm: A rhetorical series composed of three parallel words, phrases, or clauses of equal length.",
+    "vietnamese": "Phép tam đoạn luật (quy tắc bộ ba); kết hợp ba vế câu song song có độ dài và nhịp điệu tương đồng để tạo tính thẩm mỹ hoàn chỉnh.",
+    "collocations": [
+      "Tricolon",
+      "Scheme of Rhythm"
+    ],
+    "level": 3,
+    "contextSentence": "'Life, liberty, and the pursuit of happiness.' — US Declaration of Independence."
+  },
+  "tetracolon": {
+    "id": "rhetoric-58",
+    "word": "Tetracolon",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek tetra- (four) + kolon (limb, clause).",
+    "definition": "Scheme of Rhythm: A rhetorical series composed of four parallel words, phrases, or clauses.",
+    "vietnamese": "Phép tứ đoạn luận; cấu trúc chuỗi bốn vế câu đối xứng nhằm tạo sự chắc chắn, vững chãi như một chiếc bàn bốn chân.",
+    "collocations": [
+      "Tetracolon",
+      "Scheme of Rhythm"
+    ],
+    "level": 3,
+    "contextSentence": "'That government of the people, by the people, for the people, shall not perish from the earth.' (Lincoln expanded cadence)."
+  },
+  "isocolon": {
+    "id": "rhetoric-59",
+    "word": "Isocolon",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek isos (equal) + kolon (clause).",
+    "definition": "Scheme of Rhythm: A sentence or series composed of two or more clauses of strictly equal length and grammatical structure.",
+    "vietnamese": "Phép đối cân xứng ngữ đoạn; các mệnh đề có số lượng âm tiết và cấu trúc ngữ pháp hoàn toàn bằng nhau, tạo nhịp điệu toán học.",
+    "collocations": [
+      "Isocolon",
+      "Scheme of Rhythm"
+    ],
+    "level": 3,
+    "contextSentence": "'An envious heart makes a treacherous ear.' — Zora Neale Hurston, Their Eyes Were Watching God."
+  },
+  "bicolon": {
+    "id": "rhetoric-60",
+    "word": "Bicolon",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin bi- (two) + Greek kolon (clause).",
+    "definition": "Scheme of Rhythm: A rhetorical sentence composed of two parallel clauses of equivalent cadence or syntactic shape.",
+    "vietnamese": "Phép nhị đoạn luật; kết hợp hai vế câu đối sánh ngắn gọn, xúc tích, tạo nên những câu châm ngôn ghi nhớ tức thì.",
+    "collocations": [
+      "Bicolon",
+      "Scheme of Rhythm"
+    ],
+    "level": 3,
+    "contextSentence": "'Garbage in, garbage out.' / 'Buy low, sell high.'"
+  },
+  "hendiatris": {
+    "id": "rhetoric-61",
+    "word": "Hendiatris",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek hen dia treis (one through three).",
+    "definition": "Scheme of Balance: Three words expressing one single comprehensive idea (classic tripartite formula).",
+    "vietnamese": "Phép tam ngữ quy nhất; dùng ba từ đơn độc lập liên kết lại để cùng diễn đạt trọn vẹn một ý niệm cốt lõi duy nhất.",
+    "collocations": [
+      "Hendiatris",
+      "Scheme of Balance"
+    ],
+    "level": 3,
+    "contextSentence": "'Wine, women, and song.' / 'Citius, Altius, Fortius (Faster, Higher, Stronger).' — Olympic motto."
+  },
+  "hendiadys": {
+    "id": "rhetoric-62",
+    "word": "Hendiadys",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek hen dia dyoin (one through two).",
+    "definition": "Scheme of Grammar: Expressing a single complex idea by joining two nouns with 'and' instead of using an adjective and a noun.",
+    "vietnamese": "Phép nhị danh tương hợp; dùng hai danh từ nối bằng liên từ 'and' thay vì dùng tính từ bổ nghĩa cho danh từ, tạo vẻ trang nghiêm.",
+    "collocations": [
+      "Hendiadys",
+      "Scheme of Grammar"
+    ],
+    "level": 3,
+    "contextSentence": "'Sound and fury' (instead of furious sound); 'nice and warm' (nicely warm)."
+  },
+  "anthimeria": {
+    "id": "rhetoric-63",
+    "word": "Anthimeria",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek anti- (against) + meros (part).",
+    "definition": "Trope of Grammar: The substitution of one part of speech for another, most commonly using a noun as a verb.",
+    "vietnamese": "Phép chuyển loại từ ngữ; dùng danh từ như một động từ (hoặc ngược lại) để tạo sự mới mẻ, linh hoạt và ngôn ngữ hiện đại.",
+    "collocations": [
+      "Anthimeria",
+      "Trope of Grammar"
+    ],
+    "level": 3,
+    "contextSentence": "'Google it.' / 'The thunder would not peace at my bidding.' — William Shakespeare, King Lear."
+  },
+  "enallage": {
+    "id": "rhetoric-64",
+    "word": "Enallage",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek en- (in) + allassein (to change).",
+    "definition": "Scheme of Grammar: A deliberate grammatical substitution of one case, person, gender, number, or tense for another.",
+    "vietnamese": "Phép sai lạc ngữ pháp có chủ ý; cố ý sử dụng sai quy tắc ngữ pháp thông thường để tạo dấu ấn thương hiệu hoặc giọng điệu tự nhiên.",
+    "collocations": [
+      "Enallage",
+      "Scheme of Grammar"
+    ],
+    "level": 3,
+    "contextSentence": "'We was robbed!' / 'Think different.' — Apple campaign (adverb replaced by adjective)."
+  },
+  "hypallage": {
+    "id": "rhetoric-65",
+    "word": "Hypallage",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek hypo- (under) + allassein (to change, exchange). Transferred Epithet.",
+    "definition": "Trope of Transference: An adjective qualifying a noun other than the person or thing it is actually describing.",
+    "vietnamese": "Phép chuyển dịch định ngữ; gắn tính từ chỉ trạng thái của chủ thể vào một danh từ phụ xung quanh nhằm gợi tả không gian tâm trạng.",
+    "collocations": [
+      "Hypallage",
+      "Trope of Transference"
+    ],
+    "level": 3,
+    "contextSentence": "'The plowman homeward plods his weary way.' (The way is not weary; the plowman is)."
+  },
+  "synesthesia": {
+    "id": "rhetoric-66",
+    "word": "Synesthesia",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek syn- (together) + aisthesis (sensation, perception).",
+    "definition": "Trope of Sensation: Describing one kind of sensation in terms of another (e.g. sound as color, taste as geometry).",
+    "vietnamese": "Phép chuyển đổi cảm giác; dùng giác quan này để miêu tả kích thích của giác quan khác, tạo nên thế giới biểu cảm đa chiều.",
+    "collocations": [
+      "Synesthesia",
+      "Trope of Sensation"
+    ],
+    "level": 3,
+    "contextSentence": "'The loud perfume' / 'A sweet voice' / 'Cold, sharp sunlight.'"
+  },
+  "epiphonema": {
+    "id": "rhetoric-67",
+    "word": "Epiphonema",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek epi- (upon) + phonein (to call out).",
+    "definition": "Discursive Strategy: A pithy, striking summary or moral sentiment added at the conclusion of a discourse or argument.",
+    "vietnamese": "Phép lời bình kết luận; câu đúc kết triết lý ngắn gọn, súc tích được đặt ở cuối một đoạn lập luận để chốt lại toàn bộ vấn đề.",
+    "collocations": [
+      "Epiphonema",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'Tantaene animis caelestibus irae? (Can heavenly minds harbor such bitter wrath?)' — Virgil, Aeneid."
+  },
+  "sententia": {
+    "id": "rhetoric-68",
+    "word": "Sententia",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin sentire (to feel, judge) -> sentence, maxim, aphorism.",
+    "definition": "Discursive Strategy: Quoting a well-known maxim, proverb, or universal philosophical truth to reinforce an argument.",
+    "vietnamese": "Phép dẫn dụng châm ngôn; trích dẫn một câu tục ngữ, danh ngôn phổ quát để làm chỗ dựa thẩm quyền đạo đức cho luận điểm.",
+    "collocations": [
+      "Sententia",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'A house divided against itself cannot stand.' — Abraham Lincoln (quoting Matthew 12:25)."
+  },
+  "exemplum": {
+    "id": "rhetoric-69",
+    "word": "Exemplum",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin exemplum (sample, model, example).",
+    "definition": "Discursive Strategy: An anecdote, case study, or historical instance introduced to substantiate an abstract general thesis.",
+    "vietnamese": "Phép dẫn chứng minh họa; kể một câu chuyện ngắn, nghiên cứu tình huống hoặc bài học lịch sử để chứng minh cho luận đề trừu tượng.",
+    "collocations": [
+      "Exemplum",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'Consider the fall of Rome, where debasement of currency preceded political disintegration...'"
+  },
+  "amplificatio": {
+    "id": "rhetoric-70",
+    "word": "Amplificatio",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin amplus (large) + facere (to make). Amplification.",
+    "definition": "Discursive Strategy: Expanding and elaborating an argument by adding vivid descriptive layers and escalating weight.",
+    "vietnamese": "Phép khuếch đại nghị luận; bồi đắp thêm nhiều lớp chi tiết, luận cứ và tính từ mạnh để tăng thêm sức nặng ngàn cân cho lời buộc tội.",
+    "collocations": [
+      "Amplificatio",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'He was not merely an offender; he was a traitor, a destroyer of institutional trust, and a murderer of peace.'"
+  },
+  "enumeratio": {
+    "id": "rhetoric-71",
+    "word": "Enumeratio",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin e- (out) + numerus (number).",
+    "definition": "Discursive Strategy: Detailing parts, causes, effects, or consequences by listing them item by item.",
+    "vietnamese": "Phép liệt kê tường tận; bóc tách một vấn đề thành từng chi tiết, nguyên nhân hoặc hệ quả cụ thể theo thứ tự rành mạch.",
+    "collocations": [
+      "Enumeratio",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'Who shall separate us from the love of Christ? Shall tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword?'"
+  },
+  "distinctio": {
+    "id": "rhetoric-72",
+    "word": "Distinctio",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin dis- (apart) + stinguere (to prick, mark) -> distinctio.",
+    "definition": "Discursive Strategy: Explicitly defining or clarifying the intended meaning of an ambiguous term to forestall confusion.",
+    "vietnamese": "Phép minh định ngữ nghĩa; làm rõ ranh giới ngữ nghĩa của một từ ngữ để tránh sự ngộ nhận hoặc đánh tráo khái niệm của đối phương.",
+    "collocations": [
+      "Distinctio",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'When I speak of liquidity, I do not mean speculative crypto tokens; I mean cold hard cash in Tier-1 central banks.'"
+  },
+  "aporia": {
+    "id": "rhetoric-73",
+    "word": "Aporia",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek a- (without) + poros (passage, way) -> 'helplessness, impasse'.",
+    "definition": "Discursive Strategy: An expression of simulated doubt or deliberation, questioning how to begin, proceed, or judge.",
+    "vietnamese": "Phép lưỡng lự tu từ; diễn giả bày tỏ sự phân vân, khó xử trước một ngã ba đường để tạo sự đồng cảm và lôi cuốn người nghe cùng suy ngẫm.",
+    "collocations": [
+      "Aporia",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'Whether he was the most audacious genius or the most reckless gambler of our time, I know not where to begin...'"
+  },
+  "anacoluthon": {
+    "id": "rhetoric-74",
+    "word": "Anacoluthon",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek an- (not) + akolouthos (following) -> 'inconsistent, not following'.",
+    "definition": "Scheme of Disruption: An abrupt change of syntactic structure within the same sentence, leaving the opening grammatically incomplete.",
+    "vietnamese": "Phép đứt gãy cú pháp; bất ngờ chuyển hướng cấu trúc câu giữa chừng để biểu đạt sự chuyển biến đột ngột trong dòng suy tưởng.",
+    "collocations": [
+      "Anacoluthon",
+      "Scheme of Disruption"
+    ],
+    "level": 3,
+    "contextSentence": "'He who hesitates—well, the market moves too fast for hesitation.'"
+  },
+  "chrestomathy": {
+    "id": "rhetoric-75",
+    "word": "Chrestomathy",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek khrestos (useful) + mathein (to learn).",
+    "definition": "Pedagogical Compilation: A collection of choice literary or educational passages used especially in acquiring language mastery.",
+    "vietnamese": "Tuyển tập tinh hoa học thuật; tập hợp các đoạn văn mẫu mực nhất từ các bậc thầy nhằm mục đích rèn luyện văn phong C2.",
+    "collocations": [
+      "Chrestomathy",
+      "Pedagogical Compilation"
+    ],
+    "level": 3,
+    "contextSentence": "'A volume of foundational essays compiled for polyglots and rhetorical scholars.'"
+  },
+  "polysyllogism": {
+    "id": "rhetoric-76",
+    "word": "Polysyllogism",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek poly- (many) + syllogismos (reckoning together).",
+    "definition": "Logical Architecture: A chain of syllogisms in which the conclusion of each becomes the premise of the next.",
+    "vietnamese": "Phép tam đoạn luận liên hoàn; chuỗi các tam đoạn luận mắt xích trong đó kết luận của luận thức trước làm tiền đề cho luận thức sau.",
+    "collocations": [
+      "Polysyllogism",
+      "Logical Architecture"
+    ],
+    "level": 3,
+    "contextSentence": "'All humans are mortal; Socrates is human; therefore Socrates is mortal. All mortal beings require caution; therefore Socrates requires caution.'"
+  },
+  "enthymeme": {
+    "id": "rhetoric-77",
+    "word": "Enthymeme",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek en- (in) + thymos (mind) -> 'in the mind'.",
+    "definition": "Logical Architecture: A syllogism with one premise or the conclusion implicitly omitted because widely understood.",
+    "vietnamese": "Phép giản lược tiền đề; bỏ qua một tiền đề hiển nhiên mà người nghe tự hiểu ngầm trong đầu để lập luận trở nên sắc bén, ngắn gọn.",
+    "collocations": [
+      "Enthymeme",
+      "Logical Architecture"
+    ],
+    "level": 3,
+    "contextSentence": "'With a name like Smucker's, it has to be good.' (Omitted premise: Companies with funny names must make excellent products)."
+  },
+  "sorites": {
+    "id": "rhetoric-78",
+    "word": "Sorites",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek soros (heap) -> 'a heap of arguments'.",
+    "definition": "Logical Architecture: A polysyllogism consisting of a series of propositions where the predicate of each becomes the subject of the next.",
+    "vietnamese": "Phép suy luận chuỗi dồn tích; một chuỗi các mệnh đề logic nối tiếp nhau như một đống tích lũy dẫn đến kết luận chung cuộc không thể chối cãi.",
+    "collocations": [
+      "Sorites",
+      "Logical Architecture"
+    ],
+    "level": 3,
+    "contextSentence": "'Dictators suppress speech; suppressed speech breeds resentment; resentment breeds rebellion; rebellion overthrows dictators.'"
+  },
+  "epimone": {
+    "id": "rhetoric-79",
+    "word": "Epimone",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek epi- (upon) + menein (to stay, dwell) -> 'dwelling on a point'.",
+    "definition": "Discursive Strategy: Persistent dwelling on a single point or question, repeating it emphatically to imprint it into memory.",
+    "vietnamese": "Phép trì hoãn bám riết luận điểm; liên tục nhắc đi nhắc lại một vấn đề cốt lõi nhằm gây áp lực tinh thần và không cho đối phương né tránh.",
+    "collocations": [
+      "Epimone",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'Why did you not verify the logs? Why did you dismiss the alerts? Why, when warned, did you do nothing?'"
+  },
+  "commoratio": {
+    "id": "rhetoric-80",
+    "word": "Commoratio",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin con- (together) + morari (to delay, linger).",
+    "definition": "Discursive Strategy: Dwelling on a strong point by repeating it multiple times using different words and expressions.",
+    "vietnamese": "Phép đồng nghĩa trì hoãn; lặp lại cùng một luận điểm quan trọng bằng nhiều cách diễn đạt khác nhau để khắc sâu vào tâm trí thính giả.",
+    "collocations": [
+      "Commoratio",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'He is gone, departed, vanished, disappeared from our midst.'"
+  },
+  "epanorthosis": {
+    "id": "rhetoric-81",
+    "word": "Epanorthosis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek epi- (in addition) + ana- (again) + orthoun (to set straight). Correctio.",
+    "definition": "Discursive Strategy: Immediate self-correction or retraction of a statement just made, in order to replace it with a stronger one.",
+    "vietnamese": "Phép tự đính chính tăng cấp; tự sửa lại lời mình vừa nói bằng một từ ngữ mạnh hơn nhằm thể hiện sự trung thực và mức độ nghiêm trọng.",
+    "collocations": [
+      "Epanorthosis",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'I am troubled by this proposal—nay, I am completely horrified by it.'"
+  },
+  "parataxis": {
+    "id": "rhetoric-82",
+    "word": "Parataxis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek para- (beside) + taxis (arrangement).",
+    "definition": "Syntactic Architecture: Placing clauses one after another without subordinating conjunctions; equal syntactic coordination.",
+    "vietnamese": "Cú pháp bình đẳng liên kết; đặt các câu đơn độc lập cạnh nhau không dùng liên từ phụ thuộc, tạo phong cách văn xuôi Hemingway gãy gọn.",
+    "collocations": [
+      "Parataxis",
+      "Syntactic Architecture"
+    ],
+    "level": 3,
+    "contextSentence": "'The sun set. The wind rose. The servers went dark.'"
+  },
+  "hypotaxis": {
+    "id": "rhetoric-83",
+    "word": "Hypotaxis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek hypo- (under) + taxis (arrangement).",
+    "definition": "Syntactic Architecture: Syntactic subordination of clauses to express complex logical, temporal, and causal relationships.",
+    "vietnamese": "Cú pháp phụ thuộc đa tầng; lồng ghép nhiều mệnh đề phụ thuộc (nhượng bộ, nguyên nhân, thời gian) để biểu đạt tư duy học thuật C2.",
+    "collocations": [
+      "Hypotaxis",
+      "Syntactic Architecture"
+    ],
+    "level": 3,
+    "contextSentence": "'Although the quarterly revenue exceeded expectations, because operational overhead surged dramatically, net margin contracted.'"
+  },
+  "periodic sentence": {
+    "id": "rhetoric-84",
+    "word": "Periodic Sentence",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek periodos (circuit, complete cycle).",
+    "definition": "Syntactic Architecture: A sentence that withholds its main clausal subject and verb until the very end, building rhetorical tension.",
+    "vietnamese": "Câu chu kỳ hoãn kết; trì hoãn mệnh đề chính đến tận cuối câu, đẩy căng thẳng cú pháp lên đỉnh điểm trước khi giải phóng ý nghĩa.",
+    "collocations": [
+      "Periodic Sentence",
+      "Syntactic Architecture"
+    ],
+    "level": 3,
+    "contextSentence": "'Unburdened by legacy technical debt, fortified by seventy million in seed capital, and guided by veteran cryptographers, the startup launched.'"
+  },
+  "cumulative sentence": {
+    "id": "rhetoric-85",
+    "word": "Cumulative Sentence",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin cumulus (heap, pile) -> loose sentence.",
+    "definition": "Syntactic Architecture: A sentence that begins with its main independent clause and then accumulates subordinate modifying phrases.",
+    "vietnamese": "Câu tích lũy tiến cấp; mở đầu bằng mệnh đề chính rồi bồi đắp liên tục các cụm phân từ bổ nghĩa phía sau, tạo dòng chảy tự nhiên.",
+    "collocations": [
+      "Cumulative Sentence",
+      "Syntactic Architecture"
+    ],
+    "level": 3,
+    "contextSentence": "'The platform achieved record throughput today, handling fifty million concurrent sockets, routing telemetry without latency, and delighting users.'"
+  },
+  "epiplexis": {
+    "id": "rhetoric-86",
+    "word": "Epiplexis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek epi- (upon) + plessein (to strike).",
+    "definition": "Discursive Strategy: Asking questions in order to reproach, grieve, or castigate rather than to solicit information.",
+    "vietnamese": "Phép chất vấn khiển trách; đặt câu hỏi dồn dập nhằm mục đích quở trách, thức tỉnh lương tâm hoặc vạch tội đối phương.",
+    "collocations": [
+      "Epiplexis",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'Why do you sleep, when the enemy is at the gates? How long will you abuse our patience?' — Cicero against Catiline."
+  },
+  "bdelygmia": {
+    "id": "rhetoric-87",
+    "word": "Bdelygmia",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek bdelyssomai (to feel sick, abominate).",
+    "definition": "Discursive Strategy: A litany of abusive, contemptuous, or disgust-filled language directed at an adversary or vice.",
+    "vietnamese": "Phép bài xích ghê tởm; một tràng từ ngữ bộc lộ sự khinh bỉ tột cùng và ghê tởm trước cái xấu, sự phản bội hoặc thói đạo đức giả.",
+    "collocations": [
+      "Bdelygmia",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'Thou art a boil, a plague sore, an embossed carbuncle in my corrupted blood.' — William Shakespeare, King Lear."
+  },
+  "invective": {
+    "id": "rhetoric-88",
+    "word": "Invective",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin in- (against) + vehere (to carry) -> invectivus.",
+    "definition": "Discursive Strategy: Harsh, abusive, or deeply critical language used to attack or denounce a person or institution.",
+    "vietnamese": "Văn phong công kích kịch liệt; sử dụng ngôn từ đanh thép, trực diện để lên án và hạ bệ nhân cách hoặc sai phạm của đối tượng.",
+    "collocations": [
+      "Invective",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'A knave, a rascal, an eater of broken meats; a base, proud, shallow, beggarly, three-suited, hundred-pound, filthy knave.' — King Lear."
+  },
+  "tapinosis": {
+    "id": "rhetoric-89",
+    "word": "Tapinosis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek tapeinos (low, humble, base).",
+    "definition": "Trope of Degradation: Calling something by an inappropriately debasing, degrading, or contemptuous low-register name.",
+    "vietnamese": "Phép hạ thấp phẩm giá; dùng từ ngữ thô thiển hoặc tầm thường để giáng cấp đối tượng cao quý nhằm bộc lộ sự bất kính hoặc chế giễu.",
+    "collocations": [
+      "Tapinosis",
+      "Trope of Degradation"
+    ],
+    "level": 3,
+    "contextSentence": "'Referring to a celebrated academic institution as a diploma mill' / 'Calling a cathedral a barn.'"
+  },
+  "antirrhesis": {
+    "id": "rhetoric-90",
+    "word": "Antirrhesis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek anti- (against) + rhesis (speech, saying).",
+    "definition": "Discursive Strategy: Rejecting an argument or opinion with deliberate contempt, scorning it as absurd on its face.",
+    "vietnamese": "Phép bác bỏ khinh thị; gạt phắt một luận điểm của đối phương và coi nó là điều ngớ ngẩn, xúc phạm trí tuệ thông thường.",
+    "collocations": [
+      "Antirrhesis",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'To suggest that cutting our security perimeter improves system speed is an insult to elementary computer science.'"
+  },
+  "synchoresis": {
+    "id": "rhetoric-91",
+    "word": "Synchoresis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek syn- (with) + chorein (to make room, concede). Concession.",
+    "definition": "Discursive Strategy: Conceding an undeniable point to an opponent in order to strengthen one's own broader argument.",
+    "vietnamese": "Phép nhân nhượng chiến thuật; thừa nhận một điểm đúng của đối phương nhằm tạo uy tín khách quan trước khi tung đòn quyết định.",
+    "collocations": [
+      "Synchoresis",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'I admit that competitor X delivers a flashier user interface; yet in raw transaction reliability, our platform is unassailable.'"
+  },
+  "parrhesia": {
+    "id": "rhetoric-92",
+    "word": "Parrhesia",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek pan (all) + rhesis (speech) -> 'candid speech, speaking freely'.",
+    "definition": "Discursive Strategy: Speaking boldly, frankly, and without euphemism, risking offense to speak unvarnished truth.",
+    "vietnamese": "Phép bộc trực dũng cảm; dám nói thẳng thắn toàn bộ sự thật gai góc, không né tránh, không dùng uyển ngữ dù biết có thể gây chấn động.",
+    "collocations": [
+      "Parrhesia",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'Let us dispense with corporate euphemisms: our flagship product has failed in the marketplace, and we must pivot.'"
+  },
+  "euphemos": {
+    "id": "rhetoric-93",
+    "word": "Euphemos",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek eu- (well) + pheme (voice) -> solemn benediction or auspicious invocation.",
+    "definition": "Discursive Strategy: A solemn blessing or auspicious statement designed to consecrate a beginning or invite good fortune.",
+    "vietnamese": "Phép chúc tụng cát tường; lời chúc phúc trang trọng nhằm mở đầu một sứ mệnh vĩ đại hoặc phong thánh cho một cam kết chung.",
+    "collocations": [
+      "Euphemos",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'May prosperity attend your enterprise and honor crown your endeavors.'"
+  },
+  "dialogismus": {
+    "id": "rhetoric-94",
+    "word": "Dialogismus",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek dialogismos (conversation, consideration).",
+    "definition": "Discursive Strategy: Speaking as someone else or imagining a conversation between two hypothetical individuals.",
+    "vietnamese": "Phép đối thoại giả định; tự dàn dựng cuộc đối thoại giữa hai nhân vật để trình bày các quan điểm đối lập một cách sinh động.",
+    "collocations": [
+      "Dialogismus",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'The skeptic asks: 'Will this scale?' The engineer responds: 'It has already scaled to ten million transactions without latency.''"
+  },
+  "sermocinatio": {
+    "id": "rhetoric-95",
+    "word": "Sermocinatio",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin sermo (speech, talk) -> imaginary speech.",
+    "definition": "Discursive Strategy: Inventing a speech in character for an entity, person, or group to dramatically convey their inner perspective.",
+    "vietnamese": "Phép hóa thân phát ngôn; đặt lời thoại tượng trưng vào miệng của một đối tượng để làm nổi bật tâm trạng hoặc tình thế cấp bách.",
+    "collocations": [
+      "Sermocinatio",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'If our codebase could speak, it would plead for a total refactor; it would weep at three thousand lines of spaghetti dependencies.'"
+  },
+  "ethopoeia": {
+    "id": "rhetoric-96",
+    "word": "Ethopoeia",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek ethos (character) + poiein (to make). Character portrayal.",
+    "definition": "Discursive Strategy: The portrayal of the emotional state, moral character, and manners of a person through their distinctive speech.",
+    "vietnamese": "Phép khắc họa tính cách qua khẩu khí; tái hiện thần thái và đạo đức của một con người qua cách sử dụng ngôn từ đặc trưng của họ.",
+    "collocations": [
+      "Ethopoeia",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'He spoke in the clipped, unhurried cadence of a seasoned naval captain who had weathered hundred-foot waves without flinching.'"
+  },
+  "charientismos": {
+    "id": "rhetoric-97",
+    "word": "Charientismos",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek kharienzesthai (to show favor, jest pleasantly).",
+    "definition": "Trope of Graceful Irony: Softening a harsh, bitter truth through pleasant, witty, or graceful banter.",
+    "vietnamese": "Phép châm biếm duyên dáng; dùng sự hài hước tao nhã và nụ cười thanh lịch để giảm nhẹ đòn giáng của một sự thật tàn nhẫn.",
+    "collocations": [
+      "Charientismos",
+      "Trope of Graceful Irony"
+    ],
+    "level": 3,
+    "contextSentence": "'It is a great advantage to have done nothing, but one should not abuse it.' — Antoine de Rivarol."
+  },
+  "dirimens copulatio": {
+    "id": "rhetoric-98",
+    "word": "Dirimens Copulatio",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Latin dirimere (to separate) + copulatio (joining). Balance through counter-weight.",
+    "definition": "Scheme of Balance: A series of balancing statements: 'not only X, but also Y', or balancing praise with critique.",
+    "vietnamese": "Phép liên kết đối xứng lưỡng phân; dùng kết cấu 'không những... mà còn...' để mở rộng tầm vóc hoặc cân bằng giữa lời khen và phê bình.",
+    "collocations": [
+      "Dirimens Copulatio",
+      "Scheme of Balance"
+    ],
+    "level": 3,
+    "contextSentence": "'He was not only a daring battlefield commander, but also a meticulous scholar of military history.'"
+  },
+  "metabasis": {
+    "id": "rhetoric-99",
+    "word": "Metabasis",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek meta- (across) + bainein (to step). Transition.",
+    "definition": "Discursive Strategy: A brief transition in discourse that summarizes what has been said and announces what is to follow.",
+    "vietnamese": "Phép chuyển đoạn hành văn; tóm lược nhanh gọn phần đã trình bày rồi thông báo dứt khoát chủ đề tiếp theo, giữ thính giả tập trung.",
+    "collocations": [
+      "Metabasis",
+      "Discursive Strategy"
+    ],
+    "level": 3,
+    "contextSentence": "'You have heard the historical precedent; now let us examine our immediate economic dilemma.'"
+  },
+  "parelcon": {
+    "id": "rhetoric-100",
+    "word": "Parelcon",
+    "ipa": "",
+    "pos": "rhetorical device",
+    "partOfSpeech": "rhetorical device",
+    "root": "Greek para- (beside) + helkein (to drag along) -> 'pleonastic addition'.",
+    "definition": "Scheme of Addition: The addition of an unnecessary particle, syllable, or redundant filler word for rhythmic or emphatic color.",
+    "vietnamese": "Phép đệm từ tu từ; thêm các từ đệm nhã nhặn vào câu để làm mềm âm điệu, tạo thời gian ngẫm nghĩ hoặc tăng vẻ trang trọng.",
+    "collocations": [
+      "Parelcon",
+      "Scheme of Addition"
+    ],
+    "level": 3,
+    "contextSentence": "'Even so' / 'As it were' / 'For what it is worth.'"
   }
 }

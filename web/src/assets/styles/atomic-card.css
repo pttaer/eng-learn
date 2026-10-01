@@ -326,3 +326,66 @@
     min-height: 48px;
   }
 }
+
+/* ==========================================================================
+   SPECULAR 3D TILT & HOLOGRAPHIC SHEEN (ENG-49)
+   Authoritative Reference: CLEAN_DESIGN_SYSTEM.md & ui-ux-pro-max
+   ========================================================================== */
+
+.atomic-card,
+.atomic-card-container,
+.dossier-card {
+  --glare-x: 50%;
+  --glare-y: 50%;
+  --glare-opacity: 0;
+  --card-rotate-x: 0deg;
+  --card-rotate-y: 0deg;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.12s ease-out, box-shadow 0.2s ease;
+}
+
+/* Smooth spring return on mouseleave */
+.atomic-card.is-mouse-out,
+.atomic-card-container.is-mouse-out,
+.dossier-card.is-mouse-out {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease !important;
+}
+
+/* Holographic specular sheen reflection */
+.atomic-card::after,
+.atomic-card-container::after,
+.dossier-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 480px at var(--glare-x, 50%) var(--glare-y, 50%),
+    rgba(255, 255, 255, calc(var(--glare-opacity, 0) * 0.4)) 0%,
+    rgba(251, 191, 36, calc(var(--glare-opacity, 0) * 0.25)) 25%,
+    rgba(56, 189, 248, calc(var(--glare-opacity, 0) * 0.2)) 50%,
+    transparent 80%
+  );
+  mix-blend-mode: screen;
+  opacity: var(--glare-opacity, 0);
+  transition: opacity 0.2s ease;
+  z-index: 15;
+}
+
+/* Reduced motion bypass */
+@media (prefers-reduced-motion: reduce) {
+  .atomic-card,
+  .atomic-card-container,
+  .dossier-card {
+    transform: none !important;
+    transition: none !important;
+  }
+  .atomic-card::after,
+  .atomic-card-container::after,
+  .dossier-card::after {
+    display: none !important;
+    opacity: 0 !important;
+  }
+}

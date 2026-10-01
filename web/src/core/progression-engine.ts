@@ -290,6 +290,12 @@ export class ProgressionEngine {
       } catch {
         // Safe fallback in test environments
       }
+    } else {
+      try {
+        AudioSynthesizer.playXpPickup();
+      } catch {
+        // Safe fallback in test environments
+      }
     }
 
     this.persist(this.state);
