@@ -111,25 +111,25 @@ function renderHudIconPng(size) {
 
     const dCenter = Math.hypot(x - cx, y - cy);
 
-    // Center Gold Core
+    // Center Accent Core
     if (dCenter <= rCore) {
       if (dCenter <= rDot) return [250, 250, 249, 255];
       if (dCenter <= rAperture) return [17, 17, 17, 255];
-      return [202, 138, 4, 255]; // #ca8a04
+      return [165, 180, 252, 255]; // #a5b4fc
     }
 
     // Rings
     if (Math.abs(dCenter - rInner) < 1.0 * scale) return [250, 250, 249, 100];
-    if (Math.abs(dCenter - rMid) < 1.0 * scale) return [202, 138, 4, 180];
+    if (Math.abs(dCenter - rMid) < 1.0 * scale) return [165, 180, 252, 180];
     if (Math.abs(dCenter - rOuter) < 1.2 * scale) return [250, 250, 249, 80];
 
     // Spines
     for (const s of spines) {
       if (s.dotR > 0 && Math.hypot(x - s.x2, y - s.y2) <= s.dotR) {
-        return [202, 138, 4, 255];
+        return [165, 180, 252, 255];
       }
       if (distToSegment(x, y, s.x1, s.y1, s.x2, s.y2) <= s.width / 2) {
-        return s.isMajor ? [202, 138, 4, 220] : [250, 250, 249, 140];
+        return s.isMajor ? [165, 180, 252, 220] : [250, 250, 249, 140];
       }
     }
 
@@ -145,7 +145,7 @@ function renderHudIconPng(size) {
     const inBR = (nearRight && y >= size - bPad - bLen && y <= size - bPad) || (nearBottom && x >= size - bPad - bLen && x <= size - bPad);
 
     if (inTL || inTR || inBL || inBR) {
-      return [202, 138, 4, 255];
+      return [165, 180, 252, 255];
     }
 
     return [17, 17, 17, 255];
