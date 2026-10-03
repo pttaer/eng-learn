@@ -46,10 +46,10 @@ expectedTargets.forEach((target) => {
 });
 
 // Assert directional arrows & classes
-assert(tourSource.includes('👈'), 'FAIL: Pointer glyph 👈 (arrow-left) missing');
-assert(tourSource.includes('👉'), 'FAIL: Pointer glyph 👉 (arrow-right) missing');
-assert(tourSource.includes('👆'), 'FAIL: Pointer glyph 👆 (arrow-top) missing');
-assert(tourSource.includes('👇'), 'FAIL: Pointer glyph 👇 (arrow-bottom) missing');
+assert(tourSource.includes('←'), 'FAIL: Pointer glyph ← (arrow-left) missing');
+assert(tourSource.includes('→'), 'FAIL: Pointer glyph → (arrow-right) missing');
+assert(tourSource.includes('↑'), 'FAIL: Pointer glyph ↑ (arrow-top) missing');
+assert(tourSource.includes('↓'), 'FAIL: Pointer glyph ↓ (arrow-bottom) missing');
 
 assert(tourSource.includes('arrow-left'), 'FAIL: arrow-left class missing');
 assert(tourSource.includes('arrow-right'), 'FAIL: arrow-right class missing');
@@ -118,35 +118,35 @@ function calculatePlacement(rect, cardWidth, cardHeight, viewportWidth, viewport
     cardLeft = rect.right + 48;
     cardTop = Math.min(maxTop, Math.max(minTop, targetMidY - cardHeight / 2));
     arrowClass = 'arrow-left';
-    arrowGlyph = '👈';
+    arrowGlyph = '←';
     arrowLeft = Math.max(rect.right + 4, cardLeft - 32);
     arrowTop = Math.min(cardTop + cardHeight - 32, Math.max(cardTop + 14, targetMidY - 13));
   } else if (spaceLeft >= cardWidth + 48) {
     cardLeft = rect.left - cardWidth - 48;
     cardTop = Math.min(maxTop, Math.max(minTop, targetMidY - cardHeight / 2));
     arrowClass = 'arrow-right';
-    arrowGlyph = '👉';
+    arrowGlyph = '→';
     arrowLeft = Math.min(rect.left - 28, cardLeft + cardWidth + 4);
     arrowTop = Math.min(cardTop + cardHeight - 32, Math.max(cardTop + 14, targetMidY - 13));
   } else if (spaceBottom >= cardHeight + 48) {
     cardLeft = Math.min(viewportWidth - cardWidth - 14, Math.max(14, targetMidX - cardWidth / 2));
     cardTop = Math.min(maxTop, rect.bottom + 48);
     arrowClass = 'arrow-top';
-    arrowGlyph = '👆';
+    arrowGlyph = '↑';
     arrowLeft = Math.min(cardLeft + cardWidth - 28, Math.max(cardLeft + 16, targetMidX - 13));
     arrowTop = Math.max(rect.bottom + 4, cardTop - 28);
   } else if (spaceTop >= cardHeight + 48) {
     cardLeft = Math.min(viewportWidth - cardWidth - 14, Math.max(14, targetMidX - cardWidth / 2));
     cardTop = Math.max(minTop, rect.top - cardHeight - 48);
     arrowClass = 'arrow-bottom';
-    arrowGlyph = '👇';
+    arrowGlyph = '↓';
     arrowLeft = Math.min(cardLeft + cardWidth - 28, Math.max(cardLeft + 16, targetMidX - 13));
     arrowTop = Math.min(rect.top - 28, cardTop + cardHeight + 4);
   } else {
     cardLeft = Math.min(viewportWidth - cardWidth - 20, Math.max(20, viewportWidth - cardWidth - 30));
     cardTop = Math.min(maxTop, viewportHeight - cardHeight - 20);
     arrowClass = 'arrow-top';
-    arrowGlyph = '👆';
+    arrowGlyph = '↑';
     arrowLeft = Math.min(cardLeft + cardWidth - 30, Math.max(cardLeft + 20, targetMidX - 13));
     arrowTop = Math.max(minTop, cardTop - 28);
   }
@@ -166,7 +166,7 @@ const cH = 220;
 const leftTarget = { left: 40, top: 300, right: 240, bottom: 400, width: 200, height: 100 };
 const res1 = calculatePlacement(leftTarget, cW, cH, vpW, vpH);
 assert.strictEqual(res1.arrowClass, 'arrow-left', 'Scenario 1 should place card right with arrow-left');
-assert.strictEqual(res1.arrowGlyph, '👈', 'Scenario 1 arrow glyph must be 👈');
+assert.strictEqual(res1.arrowGlyph, '←', 'Scenario 1 arrow glyph must be 👈');
 assert(res1.cardLeft >= leftTarget.right, 'Card must be placed to the right of element');
 assert(res1.arrowLeft >= leftTarget.right, 'Arrow must sit between element and card');
 
@@ -174,21 +174,21 @@ assert(res1.arrowLeft >= leftTarget.right, 'Arrow must sit between element and c
 const rightTarget = { left: 1200, top: 300, right: 1400, bottom: 400, width: 200, height: 100 };
 const res2 = calculatePlacement(rightTarget, cW, cH, vpW, vpH);
 assert.strictEqual(res2.arrowClass, 'arrow-right', 'Scenario 2 should place card left with arrow-right');
-assert.strictEqual(res2.arrowGlyph, '👉', 'Scenario 2 arrow glyph must be 👉');
+assert.strictEqual(res2.arrowGlyph, '→', 'Scenario 2 arrow glyph must be 👉');
 assert(res2.cardLeft + cW <= rightTarget.left, 'Card must be placed to the left of element');
 
 // Scenario 3: Wide target spanning horizontally at top -> Card placed BELOW -> Arrow points UP (👆)
 const topTarget = { left: 250, top: 20, right: 1200, bottom: 80, width: 950, height: 60 };
 const res3 = calculatePlacement(topTarget, cW, cH, vpW, vpH);
 assert.strictEqual(res3.arrowClass, 'arrow-top', 'Scenario 3 should place card below with arrow-top');
-assert.strictEqual(res3.arrowGlyph, '👆', 'Scenario 3 arrow glyph must be 👆');
+assert.strictEqual(res3.arrowGlyph, '↑', 'Scenario 3 arrow glyph must be 👆');
 assert(res3.cardTop >= topTarget.bottom, 'Card must be placed below the target element');
 
 // Scenario 4: Wide target spanning horizontally at bottom -> Card placed ABOVE -> Arrow points DOWN (👇)
 const bottomTarget = { left: 250, top: 780, right: 1200, bottom: 880, width: 950, height: 100 };
 const res4 = calculatePlacement(bottomTarget, cW, cH, vpW, vpH);
 assert.strictEqual(res4.arrowClass, 'arrow-bottom', 'Scenario 4 should place card above with arrow-bottom');
-assert.strictEqual(res4.arrowGlyph, '👇', 'Scenario 4 arrow glyph must be 👇');
+assert.strictEqual(res4.arrowGlyph, '↓', 'Scenario 4 arrow glyph must be 👇');
 assert(res4.cardTop + cH <= bottomTarget.top, 'Card must be placed above the target element');
 
 // Viewport Boundary Invariant Check across all scenarios

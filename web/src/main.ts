@@ -1,3 +1,4 @@
+import { icon } from './utils/icons';
 import { AudioSynthesizer } from './core/audio-synthesizer';
 import { CursorTracker } from './core/cursor-tracker';
 import { PerspectiveCanvas } from './core/perspective-canvas';
@@ -299,7 +300,7 @@ class App {
     toast.className = 'tour-welcome-toast interactive';
     toast.innerHTML = `
       <div class="toast-title">
-        <span>🎮</span>
+        <span>${icon('compass', 16)}</span>
         <span>ORIENTATION ADVISORY</span>
       </div>
       <p class="toast-desc">

@@ -1,3 +1,4 @@
+import { icon } from '../utils/icons';
 import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
@@ -193,7 +194,7 @@ export class WritingDossier {
           <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 28px; border-radius: 8px; box-shadow: var(--shadow-card);">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
               <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">STEP 1 // DECONSTRUCT RHETORICAL ARCHITECTURE</span>
-              <button class="hud-btn btn-speak-model" style="padding: 4px 12px; font-size: 11px;" title="Listen to Native Pronunciation">🔊 Play Model</button>
+              <button class="hud-btn btn-speak-model" style="padding: 4px 12px; font-size: 11px;" title="Listen to Native Pronunciation">${icon('volume')} Play Model</button>
             </div>
 
             <div class="model-sentence-display" style="font-size: 21px; line-height: 1.6; font-weight: 500; color: var(--ink-primary); max-width: 68ch; margin: 16px 0 20px 0; border-left: 3px solid var(--accent-gold); padding-left: 16px;">
@@ -226,7 +227,7 @@ export class WritingDossier {
           <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 28px; border-radius: 8px; box-shadow: var(--shadow-card);">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
               <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">STEP 2 // RECONSTRUCT FROM MEMORY</span>
-              <button class="hud-btn btn-peek-model" style="padding: 4px 12px; font-size: 11px;">👁 Peek Model (2s)</button>
+              <button class="hud-btn btn-peek-model" style="padding: 4px 12px; font-size: 11px;">${icon('eye')} Peek Model (2s)</button>
             </div>
 
             <div id="peek-container" style="display: none; font-size: 15px; line-height: 1.5; color: var(--ink-muted); padding: 12px; background: var(--bg-surface-sunk); border: 1px dashed var(--border-subtle); margin-bottom: 16px; border-radius: 6px;">

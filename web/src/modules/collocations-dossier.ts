@@ -1,3 +1,4 @@
+import { icon } from '../utils/icons';
 import { AtomicCard } from '../core/atomic-card';
 import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
@@ -75,8 +76,8 @@ export class CollocationsDossier {
     this.container.innerHTML = `
       <div class="collocations-mode-header">
         <div class="view-mode-toggle">
-          <button class="hud-btn view-toggle-btn ${this.viewMode === 'drill' ? 'active' : ''}" data-view="drill">⚡ Active SRS Drill</button>
-          <button class="hud-btn view-toggle-btn ${this.viewMode === 'dictionary' ? 'active' : ''}" data-view="dictionary">📖 Full 1,000 Lexicon</button>
+          <button class="hud-btn view-toggle-btn ${this.viewMode === 'drill' ? 'active' : ''}" data-view="drill">${icon('zap')} Active SRS Drill</button>
+          <button class="hud-btn view-toggle-btn ${this.viewMode === 'dictionary' ? 'active' : ''}" data-view="dictionary">${icon('book')} Full 1,000 Lexicon</button>
         </div>
         <div class="lexicon-badge-summary">
           <span class="telemetry-value">TOTAL: 1,000 COLLOCATIONS</span>
@@ -85,7 +86,7 @@ export class CollocationsDossier {
 
       <div class="dossier-control-bar">
         <div class="dossier-tabs">
-          ${this.viewMode === 'drill' ? `<button class="hud-btn filter-tab ${this.activeCategory === 'DUE' ? 'active' : ''}" data-cat="DUE">⚡ SRS Due (20)</button>` : ''}
+          ${this.viewMode === 'drill' ? `<button class="hud-btn filter-tab ${this.activeCategory === 'DUE' ? 'active' : ''}" data-cat="DUE">${icon('zap')} SRS Due (20)</button>` : ''}
           <button class="hud-btn filter-tab ${this.activeCategory === 'ALL' ? 'active' : ''}" data-cat="ALL">All 1,000</button>
           <button class="hud-btn filter-tab ${this.activeCategory === 'EVERYDAY' ? 'active' : ''}" data-cat="EVERYDAY">Everyday</button>
           <button class="hud-btn filter-tab ${this.activeCategory === 'BUSINESS' ? 'active' : ''}" data-cat="BUSINESS">Business</button>
@@ -168,13 +169,13 @@ export class CollocationsDossier {
                     <td class="lexicon-col-cat"><span class="colloc-cat-badge cat-${item.category.toLowerCase()}">${item.category}</span></td>
                     <td class="lexicon-col-vn">${this.escapeHtml(item.vietnamese)}</td>
                     <td class="lexicon-col-audio">
-                      <button class="hud-btn btn-speak-colloc" data-phrase="${this.escapeHtml(item.phrase)}" title="Listen to pronunciation [${this.escapeHtml(item.phrase)}]">🔊</button>
+                      <button class="hud-btn btn-speak-colloc" data-phrase="${this.escapeHtml(item.phrase)}" title="Listen to pronunciation [${this.escapeHtml(item.phrase)}]" aria-label="Listen to pronunciation">${icon('volume')}</button>
                     </td>
                     <td class="lexicon-col-status">
                       <span class="colloc-status-badge status-${statusBadge.toLowerCase()}">${statusBadge}</span>
                     </td>
                     <td class="lexicon-col-drill">
-                      <button class="hud-btn btn-drill-row" data-id="${item.id}" title="Practice in SRS Drill">DRILL ⚡</button>
+                      <button class="hud-btn btn-drill-row" data-id="${item.id}" title="Practice in SRS Drill">DRILL</button>
                     </td>
                   </tr>
                 `;

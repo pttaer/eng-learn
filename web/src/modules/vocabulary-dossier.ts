@@ -171,7 +171,7 @@ export class VocabularyDossier {
 
     let categoryLabel = `${item.mode.replace('_', ' ')} [LVL ${item.level}]`;
     if (isRemind) {
-      categoryLabel = `⚡ SURPRISE FLASH REMIND`;
+      categoryLabel = `SURPRISE FLASH REMIND`;
     }
 
     let backSubText = '';

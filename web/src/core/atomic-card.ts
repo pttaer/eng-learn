@@ -1,3 +1,4 @@
+import { icon } from '../utils/icons';
 import { AudioSynthesizer } from './audio-synthesizer';
 
 export interface AtomicCardConfig {
@@ -115,7 +116,7 @@ export class AtomicCard {
       </div>
       <div class="card-meta-right header-right">
         <span class="card-index-counter">${config.indexStr}</span>
-        ${config.audioText ? `<button type="button" class="card-audio-btn btn-audio-speak" aria-label="Listen to pronunciation of prompt" title="Listen (P)">🔊 AUDIO</button>` : ''}
+        ${config.audioText ? `<button type="button" class="card-audio-btn btn-audio-speak" aria-label="Listen to pronunciation of prompt" title="Listen (P)">${icon('volume')} AUDIO</button>` : ''}
       </div>
     `;
 
@@ -191,7 +192,7 @@ export class AtomicCard {
       </div>
       <div class="card-meta-right header-right">
         <span class="card-index-counter">${config.indexStr}</span>
-        ${config.audioText ? `<button type="button" class="card-audio-btn btn-audio-speak" aria-label="Listen to pronunciation of prompt" title="Listen (P)">🔊 AUDIO</button>` : ''}
+        ${config.audioText ? `<button type="button" class="card-audio-btn btn-audio-speak" aria-label="Listen to pronunciation of prompt" title="Listen (P)">${icon('volume')} AUDIO</button>` : ''}
       </div>
     `;
 

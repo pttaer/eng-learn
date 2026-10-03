@@ -1,3 +1,4 @@
+import { icon } from '../utils/icons';
 import { AtomicCard } from '../core/atomic-card';
 import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
@@ -539,7 +540,7 @@ export class ReadingDossier {
             <span class="vocab-drawer-pos">${this.escapeHtml(info.partOfSpeech)}${info.ipa ? ` • ${this.escapeHtml(info.ipa)}` : ''}</span>
           </div>
           <div class="vocab-drawer-actions">
-            <button type="button" class="hud-btn btn-vocab-speak" title="Listen to pronunciation">🔊 Listen</button>
+            <button type="button" class="hud-btn btn-vocab-speak" title="Listen to pronunciation">${icon('volume')} Listen</button>
             <button type="button" class="hud-btn btn-close-drawer" title="Close drawer">✕ Close</button>
           </div>
         </div>
@@ -633,7 +634,7 @@ export class ReadingDossier {
             ${this.isSkimTimerRunning ? '⏸ Pause Timer' : '⏱ Start 60s Skim'}
           </button>
           <button class="hud-btn btn-toggle-focus" style="padding: 4px 12px; font-size: 11px;">
-            ${this.isFocusModeActive ? '👁 Unblur Detail' : '🎯 Focus Headings'}
+            ${this.isFocusModeActive ? icon('eye') + ' Unblur Detail' : icon('target') + ' Focus Headings'}
           </button>
         </div>
       </div>
@@ -765,10 +766,10 @@ export class ReadingDossier {
       this.isFocusModeActive = !this.isFocusModeActive;
       if (this.isFocusModeActive) {
         readingBody?.classList.add('skim-focused');
-        toggleFocusBtn.textContent = '👁 Unblur Detail';
+        toggleFocusBtn.innerHTML = icon('eye') + ' Unblur Detail';
       } else {
         readingBody?.classList.remove('skim-focused');
-        toggleFocusBtn.textContent = '🎯 Focus Headings';
+        toggleFocusBtn.innerHTML = icon('target') + ' Focus Headings';
       }
     });
 

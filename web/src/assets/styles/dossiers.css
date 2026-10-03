@@ -1259,6 +1259,14 @@
   box-shadow: 0 2px 8px rgba(17, 17, 17, 0.04);
 }
 
+/* Halo keeps branch lines from striking through node labels */
+.constellation-container .node-title-label {
+  paint-order: stroke;
+  stroke: var(--bg-surface);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
 .constellation-container {
   box-shadow: 0 4px 16px rgba(17, 17, 17, 0.06);
 }

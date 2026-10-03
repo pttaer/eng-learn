@@ -1,3 +1,4 @@
+import { icon } from '../utils/icons';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { SRSEngine } from '../core/srs-engine';
@@ -53,7 +54,7 @@ export class HeaderHUD {
       <div class="hud-telemetry-cluster" style="display: flex; gap: 20px; align-items: center;">
         <div class="telemetry-item" style="display: flex; align-items: center; gap: 6px;">
           <span class="telemetry-label" style="font-size: 11px;">STREAK:</span>
-          <span class="telemetry-value telemetry-streak" style="color: var(--accent-gold); font-weight: 700;">🔥 ${state.streak.currentStreak} DAYS</span>
+          <span class="telemetry-value telemetry-streak" style="color: var(--accent-gold); font-weight: 700;">${icon('flame')} ${state.streak.currentStreak} DAYS</span>
         </div>
         <div class="telemetry-item" style="display: flex; align-items: center; gap: 6px;">
           <span class="telemetry-label" style="font-size: 11px;">SUMMIT:</span>
@@ -66,14 +67,22 @@ export class HeaderHUD {
       </div>
 
       <div class="hud-actions header-actions" style="display: flex; gap: 8px; align-items: center;">
-        <button class="hud-btn btn-theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">${this.currentTheme === 'dark' ? '☀️ Light' : '🌙 Dark'}</button>
-        <button class="hud-btn btn-launch-tour" title="Launch Interactive Game Tour" aria-label="Launch Game Tour">🎮 Tour</button>
-        <button class="hud-btn btn-sound-toggle" title="Toggle audio mute" aria-label="Toggle audio mute">${isMuted ? '🔇 Muted' : '🔊 Sound'}</button>
-        <button class="hud-btn btn-settings" title="Settings & Data Management" aria-label="Settings">⚙ Settings</button>
+        <button class="hud-btn btn-theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">${this.themeLabel()}</button>
+        <button class="hud-btn btn-launch-tour" title="Launch Interactive Game Tour" aria-label="Launch Game Tour">${icon('compass')} Tour</button>
+        <button class="hud-btn btn-sound-toggle" title="Toggle audio mute" aria-label="Toggle audio mute">${HeaderHUD.soundLabel(isMuted)}</button>
+        <button class="hud-btn btn-settings" title="Settings & Data Management" aria-label="Settings">${icon('settings')} Settings</button>
       </div>
     `;
 
     this.bindEvents();
+  }
+
+  private themeLabel(): string {
+    return this.currentTheme === 'dark' ? `${icon('sun')} Light` : `${icon('moon')} Dark`;
+  }
+
+  private static soundLabel(muted: boolean): string {
+    return muted ? `${icon('mute')} Muted` : `${icon('volume')} Sound`;
   }
 
   private toggleTheme(): void {
@@ -83,7 +92,7 @@ export class HeaderHUD {
     AudioSynthesizer.play('click');
     const themeBtn = this.element.querySelector('.btn-theme-toggle');
     if (themeBtn) {
-      themeBtn.textContent = this.currentTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+      themeBtn.innerHTML = this.themeLabel();
     }
   }
 
@@ -104,7 +113,7 @@ export class HeaderHUD {
       const muted = AudioSynthesizer.toggleMute();
       AudioSynthesizer.play('click');
       if (soundBtn) {
-        soundBtn.textContent = muted ? '🔇 Muted' : '🔊 Sound';
+        soundBtn.innerHTML = HeaderHUD.soundLabel(muted);
       }
     });
 
@@ -142,13 +151,13 @@ export class HeaderHUD {
 
         <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px;">
           <button class="hud-btn btn-restart-tour" style="padding: 12px; justify-content: center; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
-            🎮 Re-run Game Onboarding Tour
+            ${icon('compass')} Re-run Onboarding Tour
           </button>
           <button class="hud-btn btn-backup-export" style="padding: 12px; justify-content: center; font-weight: 600;">
-            📥 Export Progress Backup (JSON)
+            ${icon('download')} Export Progress Backup (JSON)
           </button>
           <button class="hud-btn btn-backup-import" style="padding: 12px; justify-content: center; font-weight: 600;">
-            📤 Restore from Backup (JSON)
+            ${icon('upload')} Restore from Backup (JSON)
           </button>
           <input type="file" class="backup-file-input" accept=".json,application/json" style="display: none;" />
         </div>

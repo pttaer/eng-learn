@@ -14,7 +14,7 @@ export const TOUR_STEPS: TourStep[] = [
   {
     target: '.hud-telemetry-cluster',
     fallbackTarget: '.app-header',
-    title: '🔥 Neural Engram Telemetry',
+    title: 'Neural Engram Telemetry',
     desc: 'Track your daily study streak, overall C2 Summit completion percentage, and active SM-2 retention rate across all 1,000 collocations and grammar rules.',
     badge: 'STEP 1 OF 6 // DIRECTIVE HUD',
     route: 'tree'
@@ -54,7 +54,7 @@ export const TOUR_STEPS: TourStep[] = [
   {
     target: '.hud-actions',
     fallbackTarget: '.header-actions',
-    title: '⚙ Sensory Settings & Backup Sync',
+    title: 'Sensory Settings & Backup Sync',
     desc: 'Toggle Pythagorean Just-Intonation procedural soundscapes, export your JSON progress backup, or restore across multiple desktop and mobile devices.',
     badge: 'STEP 6 OF 6 // SYSTEM',
     route: 'tree'
@@ -121,7 +121,7 @@ export class SpotlightTour {
       overlay.className = 'tour-overlay';
       overlay.innerHTML = `
         <div class="tour-spotlight" id="tourSpotlight"></div>
-        <div class="tour-arrow" id="tourArrow">👈</div>
+        <div class="tour-arrow" id="tourArrow">←</div>
         <div class="tour-card" id="tourCard">
           <div class="tour-card-header">
             <span class="tour-step-badge" id="tourStepBadge">Step 1 of 6</span>
@@ -341,7 +341,7 @@ export class SpotlightTour {
     const nextBtn = this.overlay.querySelector('#tourNextBtn') as HTMLElement | null;
     if (nextBtn) {
       const isLast = this.currentStepIndex === totalSteps - 1;
-      nextBtn.textContent = isLast ? 'Finish 🚀' : 'Next →';
+      nextBtn.textContent = isLast ? 'Finish' : 'Next →';
     }
 
     // Position spotlight and arrow with animation frame
@@ -421,7 +421,7 @@ export class SpotlightTour {
     arrowLeft: number;
     arrowTop: number;
     arrowClass: 'arrow-left' | 'arrow-right' | 'arrow-top' | 'arrow-bottom';
-    arrowGlyph: '👈' | '👉' | '👆' | '👇';
+    arrowGlyph: '←' | '→' | '↑' | '↓';
   } {
     const minTop = 14;
     const maxTop = Math.max(minTop, viewportHeight - cardHeight - 16);
@@ -438,41 +438,41 @@ export class SpotlightTour {
     let arrowLeft: number;
     let arrowTop: number;
     let arrowClass: 'arrow-left' | 'arrow-right' | 'arrow-top' | 'arrow-bottom';
-    let arrowGlyph: '👈' | '👉' | '👆' | '👇';
+    let arrowGlyph: '←' | '→' | '↑' | '↓';
 
     if (spaceRight >= cardWidth + 48) {
       cardLeft = rect.right + 48;
       cardTop = Math.min(maxTop, Math.max(minTop, targetMidY - cardHeight / 2));
       arrowClass = 'arrow-left';
-      arrowGlyph = '👈';
+      arrowGlyph = '←';
       arrowLeft = Math.max(rect.right + 4, cardLeft - 32);
       arrowTop = Math.min(cardTop + cardHeight - 32, Math.max(cardTop + 14, targetMidY - 13));
     } else if (spaceLeft >= cardWidth + 48) {
       cardLeft = rect.left - cardWidth - 48;
       cardTop = Math.min(maxTop, Math.max(minTop, targetMidY - cardHeight / 2));
       arrowClass = 'arrow-right';
-      arrowGlyph = '👉';
+      arrowGlyph = '→';
       arrowLeft = Math.min(rect.left - 28, cardLeft + cardWidth + 4);
       arrowTop = Math.min(cardTop + cardHeight - 32, Math.max(cardTop + 14, targetMidY - 13));
     } else if (spaceBottom >= cardHeight + 48) {
       cardLeft = Math.min(viewportWidth - cardWidth - 14, Math.max(14, targetMidX - cardWidth / 2));
       cardTop = Math.min(maxTop, rect.bottom + 48);
       arrowClass = 'arrow-top';
-      arrowGlyph = '👆';
+      arrowGlyph = '↑';
       arrowLeft = Math.min(cardLeft + cardWidth - 28, Math.max(cardLeft + 16, targetMidX - 13));
       arrowTop = Math.max(rect.bottom + 4, cardTop - 28);
     } else if (spaceTop >= cardHeight + 48) {
       cardLeft = Math.min(viewportWidth - cardWidth - 14, Math.max(14, targetMidX - cardWidth / 2));
       cardTop = Math.max(minTop, rect.top - cardHeight - 48);
       arrowClass = 'arrow-bottom';
-      arrowGlyph = '👇';
+      arrowGlyph = '↓';
       arrowLeft = Math.min(cardLeft + cardWidth - 28, Math.max(cardLeft + 16, targetMidX - 13));
       arrowTop = Math.min(rect.top - 28, cardTop + cardHeight + 4);
     } else {
       cardLeft = Math.min(viewportWidth - cardWidth - 20, Math.max(20, viewportWidth - cardWidth - 30));
       cardTop = Math.min(maxTop, viewportHeight - cardHeight - 20);
       arrowClass = 'arrow-top';
-      arrowGlyph = '👆';
+      arrowGlyph = '↑';
       arrowLeft = Math.min(cardLeft + cardWidth - 30, Math.max(cardLeft + 20, targetMidX - 13));
       arrowTop = Math.max(minTop, cardTop - 28);
     }

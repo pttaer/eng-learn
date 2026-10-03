@@ -1,3 +1,4 @@
+import { icon } from '../utils/icons';
 import anime from 'animejs';
 import { SKILL_BRANCHES } from '../core/skill-tree-data';
 import { SkillTreeEngine } from '../core/skill-tree-engine';
@@ -66,7 +67,7 @@ export class SkillTreeView {
       <div class="workout-banner tree-command-panel" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 16px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; gap: 12px; box-shadow: var(--shadow-card); flex: 0 0 auto;">
         <div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px;">
           <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-            <span class="telemetry-label" style="letter-spacing: 0.12em; font-size: 10px; color: var(--accent-gold); font-weight: 700;">✦ THE SKYRIM CONSTELLATION ROADMAP ✦</span>
+            <span class="telemetry-label" style="letter-spacing: 0.12em; font-size: 10px; color: var(--accent-gold); font-weight: 700;">✦ CONSTELLATION ROADMAP ✦</span>
             <span class="hud-status-badge" style="font-size: 10px; padding: 2px 8px; border-radius: 4px;">
               RANK: <strong>${progress.currentRank}</strong>
             </span>
@@ -176,7 +177,7 @@ export class SkillTreeView {
         <circle cx="0" cy="0" r="22" fill="url(#summitGlow)" />
         <circle cx="0" cy="0" r="14" fill="var(--bg-card)" stroke="var(--accent-gold)" stroke-width="2.5" />
         <circle cx="0" cy="0" r="6" fill="var(--accent-gold)" />
-        <text x="0" y="24" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700" fill="var(--accent-gold)">★ C2 SUMMIT ★</text>
+        <text x="0" y="24" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700" fill="var(--accent-gold)" class="node-title-label">★ C2 SUMMIT ★</text>
       </g>
     `;
 
@@ -205,7 +206,7 @@ export class SkillTreeView {
         circleStroke = 'var(--border-subtle)';
         strokeWidth = '1.5';
         cursorClass = 'node-locked';
-        symbol = '🔒';
+        symbol = '';
         textFill = 'var(--ink-muted)';
       }
 
@@ -221,6 +222,7 @@ export class SkillTreeView {
           <text x="0" y="4" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700" fill="${textFill}">
             ${symbol}
           </text>
+          ${status === 'locked' ? `<g transform="translate(-6, -6)" style="color: var(--ink-muted)">${icon('lock', 12)}</g>` : ''}
           <text x="0" y="24" text-anchor="middle" font-family="var(--font-sans)" font-size="9.5" font-weight="600" fill="${status === 'locked' ? 'var(--ink-muted)' : 'var(--ink-secondary)'}" class="node-title-label">
             <tspan x="0" dy="0">${line1}</tspan>
             ${line2 ? `<tspan x="0" dy="10.5">${line2}</tspan>` : ''}
@@ -384,7 +386,7 @@ export class SkillTreeView {
         ${status === 'locked' && prereqStatus ? `
           <div style="background: var(--critical-soft); border: 1px solid var(--critical); padding: 12px 16px; border-radius: 6px; margin-bottom: 20px;">
             <div style="font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--critical); margin-bottom: 4px;">
-              🔒 LOCKED — PREREQUISITE REQUIRED
+              ${icon('lock', 12)} LOCKED — PREREQUISITE REQUIRED
             </div>
             <div style="font-size: 13px; color: var(--ink-primary); line-height: 1.5;">
               Requires mastery in <strong>${prereqStatus.prereqName}</strong> (Current: ${prereqStatus.currentPct}% / Required: ${prereqStatus.requiredPct}%). Complete review drills in that skill first to unlock.
