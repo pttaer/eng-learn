@@ -215,17 +215,16 @@ class App {
 
   private bindKeyboardShortcuts(): void {
     window.addEventListener('keydown', (e: KeyboardEvent) => {
-      // Escape returns to Constellation Tree
-      if (e.key === 'Escape') {
-        AudioSynthesizer.play('click');
-        this.router.navigate('tree');
-        return;
-      }
+      // Tour and other overlays claim keys via preventDefault
+      if (e.defaultPrevented) return;
 
-      // Ignore shortcuts if user is typing inside an input, textarea, or contenteditable
+      // Ignore shortcuts if user is typing inside an input, textarea, or contenteditable; Escape just leaves the field
       const target = e.target as HTMLElement;
       const isInput = target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable);
-      if (isInput) return;
+      if (isInput) {
+        if (e.key === 'Escape') target.blur();
+        return;
+      }
 
       // Ctrl+K opens / focuses Collocations Vault instant search
       if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
@@ -245,6 +244,13 @@ class App {
         if (handled && e.key === ' ') {
           e.preventDefault(); // Prevent page scroll on Space
         }
+        if (handled) return;
+      }
+
+      // Unclaimed Escape returns to Constellation Tree
+      if (e.key === 'Escape' && this.router.getCurrentRoute() !== 'tree') {
+        AudioSynthesizer.play('click');
+        this.router.navigate('tree');
       }
     });
   }

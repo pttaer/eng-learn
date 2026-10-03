@@ -189,7 +189,7 @@ export class SpotlightTour {
 
     // Attach keyboard listener
     this.boundKeyHandler = (e: KeyboardEvent) => this.handleKeyDown(e);
-    window.addEventListener('keydown', this.boundKeyHandler);
+    window.addEventListener('keydown', this.boundKeyHandler, true); // capture: runs before app shortcuts
 
     // Attach resize & scroll listeners
     this.boundResizeHandler = () => this.updateLayout();
@@ -261,7 +261,7 @@ export class SpotlightTour {
     document.body.classList.remove('tour-scrolling');
 
     if (this.boundKeyHandler) {
-      window.removeEventListener('keydown', this.boundKeyHandler);
+      window.removeEventListener('keydown', this.boundKeyHandler, true);
       this.boundKeyHandler = null;
     }
     if (this.boundResizeHandler) {
