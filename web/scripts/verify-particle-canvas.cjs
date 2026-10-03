@@ -38,8 +38,8 @@ assert(source.includes('0.014'), 'FAIL: Opacity decay constant 0.014 missing');
 assert(source.includes('- 3'), 'FAIL: Initial upward velocity bias (- 3) missing');
 
 // Assert color palette
-assert(source.includes('#ca8a04'), 'FAIL: Primary gold (#ca8a04) missing');
-assert(source.includes('#eab308'), 'FAIL: Radiant gold (#eab308) missing');
+assert(source.includes('#5b5bd6'), 'FAIL: Primary accent (#5b5bd6) missing');
+assert(source.includes('#a5b4fc'), 'FAIL: Pastel accent (#a5b4fc) missing');
 assert(source.includes('#fef08a'), 'FAIL: Pale gold (#fef08a) missing');
 
 // Assert shapes
@@ -99,7 +99,7 @@ class TestParticleCanvas {
   static isRunning = false;
   static animFrameId = null;
 
-  static COLORS = ['#ca8a04', '#eab308', '#fef08a', '#111111', '#ffffff'];
+  static COLORS = ['#5b5bd6', '#a5b4fc', '#ddd6fe', '#111111', '#ffffff'];
   static SHAPES = ['star', 'rect', 'circle'];
 
   static init(canvas) {

@@ -31,7 +31,7 @@ export const SKILL_BRANCHES: Record<BranchId, SkillBranch> = {
     id: 'grammar',
     name: 'Syntactic Architecture',
     tagline: 'Inversion, Fronting & Clausal Mastery',
-    color: '#ca8a04',
+    color: '#5b5bd6',
     routeTarget: 'grammar',
     nodes: [
       {
@@ -110,7 +110,7 @@ export const SKILL_BRANCHES: Record<BranchId, SkillBranch> = {
     id: 'collocations',
     name: 'Lexical Precision',
     tagline: '1,000 High-Frequency Collocations & Hubs',
-    color: '#ca8a04',
+    color: '#5b5bd6',
     routeTarget: 'colloc',
     nodes: [
       {
@@ -189,7 +189,7 @@ export const SKILL_BRANCHES: Record<BranchId, SkillBranch> = {
     id: 'writing',
     name: 'Rhetoric & Franklin Copywork',
     tagline: 'Deliberate Reconstruction & Clausal Cadence',
-    color: '#ca8a04',
+    color: '#5b5bd6',
     routeTarget: 'write',
     nodes: [
       {
@@ -268,7 +268,7 @@ export const SKILL_BRANCHES: Record<BranchId, SkillBranch> = {
     id: 'speaking',
     name: 'Prosody & Spontaneous Fluency',
     tagline: 'Nation 4-3-2 Compression & Stress Timbre',
-    color: '#ca8a04',
+    color: '#5b5bd6',
     routeTarget: 'speak',
     nodes: [
       {
@@ -347,7 +347,7 @@ export const SKILL_BRANCHES: Record<BranchId, SkillBranch> = {
     id: 'reading',
     name: 'Epistemic Deconstruction',
     tagline: 'Hermeneutic Analysis & Syntactic Mining',
-    color: '#ca8a04',
+    color: '#5b5bd6',
     routeTarget: 'read',
     nodes: [
       {

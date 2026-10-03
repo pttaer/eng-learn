@@ -183,8 +183,8 @@ export class CornerCompass {
     ctx.clearRect(0, 0, 60, 60);
 
     const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-    const goldColor = isDark ? '#fb923c' : '#ca8a04';
-    const coreColor = isDark ? '#f59e0b' : '#111111';
+    const goldColor = isDark ? '#a5b4fc' : '#5b5bd6';
+    const coreColor = isDark ? '#c4b5fd' : '#111111';
     const centerColor = isDark ? '#080a0f' : '#ffffff';
 
     // Needle Spines
@@ -209,7 +209,7 @@ export class CornerCompass {
     // Outer subtle halo
     ctx.beginPath();
     ctx.arc(cx, cy, rCore + 3, 0, Math.PI * 2);
-    ctx.strokeStyle = isDark ? 'rgba(251, 146, 60, 0.35)' : 'rgba(202, 138, 4, 0.25)';
+    ctx.strokeStyle = isDark ? 'rgba(165, 180, 252, 0.35)' : 'rgba(91, 91, 214, 0.25)';
     ctx.lineWidth = 1;
     ctx.stroke();
 

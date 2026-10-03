@@ -21,7 +21,7 @@ export class ParticleCanvas {
   private static particles: Particle[] = [];
   private static animFrameId: number | null = null;
 
-  public static readonly COLORS = ['#ca8a04', '#eab308', '#fef08a', '#111111', '#ffffff'];
+  public static readonly COLORS = ['#5b5bd6', '#a5b4fc', '#ddd6fe', '#111111', '#ffffff'];
   public static readonly SHAPES: ('star' | 'rect' | 'circle')[] = ['star', 'rect', 'circle'];
 
   public static init(canvas?: HTMLCanvasElement | null): void {

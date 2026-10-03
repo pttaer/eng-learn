@@ -535,7 +535,7 @@ export class SpeakingDossier {
 
       const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
       const gridColor = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.08)';
-      const track1Color = isDark ? '#fb923c' : '#c2410c';
+      const track1Color = isDark ? '#a5b4fc' : '#5b5bd6';
       const track2Color = isDark ? '#34d399' : '#059669';
 
       // Center divider & measurement grid

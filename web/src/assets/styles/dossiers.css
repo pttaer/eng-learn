@@ -407,8 +407,8 @@
   cursor: pointer;
   font-weight: 600;
   color: var(--ink-primary);
-  background: rgba(202, 138, 4, 0.12);
-  border-bottom: 2px solid var(--accent-gold, #ca8a04);
+  background: color-mix(in srgb, var(--accent-gold) 12%, transparent);
+  border-bottom: 2px solid var(--accent-gold);
   padding: 1px 4px;
   border-radius: 2px;
   transition: all var(--duration-micro) ease;
@@ -420,7 +420,7 @@
 .vocab-target:hover,
 .vocab-target:focus-visible,
 .reading-target-word:hover {
-  background: var(--accent-gold, #ca8a04);
+  background: var(--accent-gold);
   color: #ffffff;
   outline: none;
 }
@@ -428,7 +428,7 @@
 .vocab-target.active {
   background: var(--ink-primary);
   color: var(--ink-inverted);
-  border-bottom-color: var(--accent-gold, #ca8a04);
+  border-bottom-color: var(--accent-gold);
 }
 
 /* Vocabulary Footnote / Side Drawer */
@@ -514,8 +514,8 @@
 }
 
 .vocab-vietnamese-field {
-  background: rgba(202, 138, 4, 0.08);
-  border-left: 3px solid var(--accent-gold, #ca8a04);
+  background: color-mix(in srgb, var(--accent-gold) 8%, transparent);
+  border-left: 3px solid var(--accent-gold);
   padding: var(--space-8) var(--space-12);
   border-radius: 0 2px 2px 0;
 }
@@ -1278,7 +1278,7 @@
 }
 
 .constellation-node:hover {
-  filter: drop-shadow(0 0 6px rgba(202, 138, 4, 0.45));
+  filter: drop-shadow(0 0 6px color-mix(in srgb, var(--accent-gold) 45%, transparent));
 }
 
 .constellation-node .node-circle {
@@ -1335,7 +1335,7 @@
 /* ==========================================================================
    COLLOCATIONS & LEXICON VAULT STYLES (TASK 6)
    Dual-View Studio: Active SRS Drill & Full 1,000 Searchable Lexicon
-   Soft-Paper Palette: #fafaf9 canvas, #111111 deep charcoal ink, #ca8a04 gold
+   Soft-Paper Palette: #fafaf9 canvas, #111111 deep charcoal ink, periwinkle accent
    ========================================================================== */
 
 .collocations-mode-header {
@@ -1454,7 +1454,7 @@
 }
 
 .lexicon-row:hover {
-  background-color: rgba(202, 138, 4, 0.06);
+  background-color: color-mix(in srgb, var(--accent-gold) 6%, transparent);
 }
 
 .lexicon-col-index {
@@ -1483,7 +1483,7 @@
 }
 
 .colloc-cat-badge.cat-business {
-  border-color: rgba(202, 138, 4, 0.4);
+  border-color: color-mix(in srgb, var(--accent-gold) 40%, transparent);
   color: #a16207;
 }
 
@@ -1519,7 +1519,7 @@
 }
 
 .btn-speak-colloc:hover {
-  background: rgba(202, 138, 4, 0.15);
+  background: color-mix(in srgb, var(--accent-gold) 15%, transparent);
   border-color: var(--accent-gold);
   transform: scale(1.08);
 }
@@ -1540,7 +1540,7 @@
 }
 
 .colloc-status-badge.status-review {
-  background: rgba(202, 138, 4, 0.15);
+  background: color-mix(in srgb, var(--accent-gold) 15%, transparent);
   color: #b45309;
 }
 
@@ -1606,8 +1606,8 @@
 .tour-spotlight {
   position: fixed;
   border-radius: var(--radius-sm, 8px);
-  box-shadow: 0 0 0 9999px rgba(10, 10, 12, 0.85), 0 0 16px var(--accent-gold, #ca8a04);
-  border: 2px solid var(--accent-gold, #ca8a04);
+  box-shadow: 0 0 0 9999px rgba(10, 10, 12, 0.85), 0 0 16px var(--accent-gold);
+  border: 2px solid var(--accent-gold);
   pointer-events: auto;
   cursor: pointer;
   transition: top 0.32s cubic-bezier(0.2, 0, 0, 1),
@@ -1623,7 +1623,7 @@
 
 .tour-spotlight:hover {
   border-color: #ffffff;
-  box-shadow: 0 0 0 9999px rgba(10, 10, 12, 0.85), 0 0 28px var(--accent-gold, #ca8a04), inset 0 0 18px rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 9999px rgba(10, 10, 12, 0.85), 0 0 28px var(--accent-gold), inset 0 0 18px rgba(255, 255, 255, 0.12);
 }
 
 .tour-spotlight:active {
@@ -1635,7 +1635,7 @@
   position: absolute;
   inset: -4px;
   border-radius: calc(var(--radius-sm, 8px) + 3px);
-  border: 1.5px solid var(--accent-gold, #ca8a04);
+  border: 1.5px solid var(--accent-gold);
   opacity: 0.6;
   animation: tourGlowPulse 2s infinite ease-in-out;
   pointer-events: none;
@@ -1657,8 +1657,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-gold, #ca8a04);
-  text-shadow: 0 0 12px var(--accent-gold, #ca8a04);
+  color: var(--accent-gold);
+  text-shadow: 0 0 12px var(--accent-gold);
   pointer-events: auto;
   cursor: pointer;
   transition: top 0.32s cubic-bezier(0.2, 0, 0, 1),
@@ -1707,9 +1707,9 @@
   background: rgba(20, 20, 24, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--accent-gold, #ca8a04);
+  border: 1px solid var(--accent-gold);
   border-radius: var(--radius, 8px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(202, 138, 4, 0.15);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 20px color-mix(in srgb, var(--accent-gold) 15%, transparent);
   padding: 16px 18px;
   display: flex;
   flex-direction: column;
@@ -1747,9 +1747,9 @@
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent-gold, #ca8a04);
-  background: rgba(202, 138, 4, 0.15);
-  border: 1px solid rgba(202, 138, 4, 0.3);
+  color: var(--accent-gold);
+  background: color-mix(in srgb, var(--accent-gold) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-gold) 30%, transparent);
   padding: 3px 8px;
   border-radius: 4px;
 }
@@ -1816,7 +1816,7 @@
 
 .tour-mini-bar {
   height: 100%;
-  background: var(--accent-gold, #ca8a04);
+  background: var(--accent-gold);
   border-radius: 2px;
   transition: width 0.25s ease;
 }
@@ -1851,15 +1851,15 @@
 }
 
 .tour-btn-next {
-  background: var(--accent-gold, #ca8a04);
-  border-color: var(--accent-gold, #ca8a04);
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
   color: #111111;
   font-weight: 800;
 }
 
 .tour-btn-next:hover {
-  background: #eab308;
-  border-color: #eab308;
+  background: var(--accent-star);
+  border-color: var(--accent-star);
 }
 
 @media (prefers-reduced-motion: reduce) {

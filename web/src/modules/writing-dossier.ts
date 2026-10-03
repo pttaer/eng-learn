@@ -325,7 +325,7 @@ export class WritingDossier {
       } else if (token.type === 'delete') {
         return `<span class="diff-delete" style="color: #dc2626; text-decoration: line-through; background: rgba(220, 38, 38, 0.1); padding: 0 2px;">${this.escapeHTML(token.value)}</span>`;
       } else {
-        return `<span class="diff-insert" style="color: #ca8a04; font-weight: 700; background: rgba(202, 138, 4, 0.15); padding: 0 2px;">${this.escapeHTML(token.value)}</span>`;
+        return `<span class="diff-insert" style="color: var(--accent-gold); font-weight: 700; background: var(--accent-gold-soft); padding: 0 2px;">${this.escapeHTML(token.value)}</span>`;
       }
     }).join('');
   }

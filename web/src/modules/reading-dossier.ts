@@ -643,7 +643,7 @@ export class ReadingDossier {
         <!-- Calm Document Reader (Strict 68ch measure & relaxed 1.75 line-height) -->
         <article class="calm-reader reading-text-pane" style="max-width: 68ch;">
           <div class="reading-header">
-            <span class="telemetry-label">STAGE ${article.stage}</span>
+            <span class="telemetry-label"></span>
             <h2 class="reading-article-title">${article.title}</h2>
             <div class="reading-source-line">${article.genre} • Source: ${article.source}</div>
           </div>

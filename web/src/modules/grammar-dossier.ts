@@ -236,7 +236,7 @@ export class GrammarDossier {
       <!-- Contrastive Advanced Register Exemplar -->
       <div class="grammar-exemplar-box" style="margin-top: 8px;">
         <span class="telemetry-label">[CONTRASTIVE EXEMPLAR IN ADVANCED REGISTER]:</span>
-        <blockquote style="font-style: italic; border-left: 2px solid var(--accent-gold, #ca8a04); padding-left: 10px; margin: 6px 0; font-size: 13px; line-height: 1.5;">
+        <blockquote style="font-style: italic; border-left: 2px solid var(--accent-gold); padding-left: 10px; margin: 6px 0; font-size: 13px; line-height: 1.5;">
           "${item.exemplarContext}"
         </blockquote>
       </div>

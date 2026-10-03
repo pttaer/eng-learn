@@ -20,10 +20,10 @@
   --ink-inverted: #080a0f;
 
   /* Constellation & Star Accents */
-  --accent-gold: #fb923c;
-  --accent-gold-soft: rgba(251, 146, 60, 0.16);
-  --accent-star: #fbbf24;
-  --accent-star-glow: rgba(251, 191, 36, 0.45);
+  --accent-gold: #a5b4fc;
+  --accent-gold-soft: rgba(165, 180, 252, 0.16);
+  --accent-star: #c4b5fd;
+  --accent-star-glow: rgba(196, 181, 253, 0.45);
   --accent-cyan: #38bdf8;
   --accent-cyan-soft: rgba(56, 189, 248, 0.16);
 
@@ -43,12 +43,12 @@
 
   /* Elevation Shadows & Luminous Glows */
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.55), 0 0 1px rgba(255, 255, 255, 0.14);
-  --shadow-glow: 0 0 16px rgba(251, 146, 60, 0.25);
+  --shadow-glow: 0 0 16px rgba(165, 180, 252, 0.25);
   --shadow-btn: 0 2px 8px rgba(0, 0, 0, 0.40);
 
   /* Touch Target & Ergonomics (WCAG 2.2 AAA & Fitts's Law) */
   --touch-target-min: 44px;
-  --focus-ring-inner: #fb923c;
+  --focus-ring-inner: #a5b4fc;
   --focus-ring-outer: #080a0f;
 
   /* 8pt Spatial Scale & Hygiene Tokens */
@@ -110,10 +110,10 @@ html[data-theme="light"] {
   --ink-inverted: #fafaf9;
 
   /* Constellation & Star Accents */
-  --accent-gold: #ca8a04;
-  --accent-gold-soft: rgba(202, 138, 4, 0.12);
-  --accent-star: #eab308;
-  --accent-star-glow: rgba(234, 179, 8, 0.35);
+  --accent-gold: #5b5bd6;
+  --accent-gold-soft: rgba(91, 91, 214, 0.10);
+  --accent-star: #8b8ff0;
+  --accent-star-glow: rgba(139, 143, 240, 0.35);
   --accent-cyan: #0284c7;
   --accent-cyan-soft: rgba(2, 132, 199, 0.12);
 
@@ -133,7 +133,7 @@ html[data-theme="light"] {
 
   /* Elevation Shadows & Luminous Glows */
   --shadow-card: 0 2px 10px rgba(15, 23, 42, 0.05);
-  --shadow-glow: 0 0 12px rgba(202, 138, 4, 0.2);
+  --shadow-glow: 0 0 12px rgba(91, 91, 214, 0.18);
   --shadow-btn: 0 1px 3px rgba(15, 23, 42, 0.08);
 
   --focus-ring-inner: #0f172a;
