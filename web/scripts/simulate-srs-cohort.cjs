@@ -7,7 +7,7 @@
  * - Edge Cases: 100% consecutive lapses ('again'), 100% perfect retention ('good')
  * - Realistic Distribution: 85% mean retention rate with stochastic variance
  * - Mathematical Invariants: EF >= 1.3, Interval >= 1, No NaNs, Exponential progression
- * - Formatting: Authoritative Stark Monochrome Telemetry (CLEAN_DESIGN_SYSTEM.md)
+ * - Formatting: Authoritative Stark Monochrome Telemetry (docs/CLEAN_DESIGN_SYSTEM.md)
  */
 
 const fs = require('fs');

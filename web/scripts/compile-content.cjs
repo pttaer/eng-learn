@@ -39,7 +39,7 @@ function compileCollocations() {
   const allItems = [];
   
   files.forEach(file => {
-    const content = fs.readFileSync(path.join(dir, file), 'utf8');
+    const content = fs.readFileSync(path.join(dir, file), 'utf8').replace(/\r\n/g, '\n');
     const lines = content.split(/\r?\n/);
     lines.forEach(line => {
       const trimmed = line.trim();
@@ -74,7 +74,7 @@ function compileGrammar() {
   const allRules = [];
 
   files.forEach(file => {
-    const content = fs.readFileSync(path.join(dir, file), 'utf8');
+    const content = fs.readFileSync(path.join(dir, file), 'utf8').replace(/\r\n/g, '\n');
     const sections = content.split(/^##\s+/m).slice(1);
     
     sections.forEach(sec => {
@@ -119,7 +119,7 @@ function compileVocabulary() {
   const allItems = [];
 
   files.forEach(file => {
-    const content = fs.readFileSync(path.join(dir, file), 'utf8');
+    const content = fs.readFileSync(path.join(dir, file), 'utf8').replace(/\r\n/g, '\n');
     const sections = content.split(/^##\s+/m).slice(1);
 
     sections.forEach(sec => {
@@ -175,7 +175,7 @@ function compileDrills() {
 
   const speakFile = path.join(dir, 'speaking-prompts.md');
   if (fs.existsSync(speakFile)) {
-    const content = fs.readFileSync(speakFile, 'utf8');
+    const content = fs.readFileSync(speakFile, 'utf8').replace(/\r\n/g, '\n');
     content.split(/^##\s+/m).slice(1).forEach(sec => {
       const lines = sec.split(/\r?\n/);
       const title = lines[0].trim();
@@ -200,7 +200,7 @@ function compileDrills() {
 
   const writeFile = path.join(dir, 'writing-prompts.md');
   if (fs.existsSync(writeFile)) {
-    const content = fs.readFileSync(writeFile, 'utf8');
+    const content = fs.readFileSync(writeFile, 'utf8').replace(/\r\n/g, '\n');
     content.split(/^##\s+/m).slice(1).forEach(sec => {
       const lines = sec.split(/\r?\n/);
       const title = lines[0].trim();
@@ -255,7 +255,7 @@ function compileReading() {
   };
 
   files.forEach(file => {
-    const raw = fs.readFileSync(path.join(dir, file), 'utf8');
+    const raw = fs.readFileSync(path.join(dir, file), 'utf8').replace(/\r\n/g, '\n');
     const { meta, body } = parseFrontmatter(raw);
     
     // Extract passage
@@ -393,7 +393,7 @@ function compileReading() {
 function compileListening() {
   const filePath = path.join(CONTENT_DIR, 'listening', 'phonetics-passages.md');
   if (!fs.existsSync(filePath)) return;
-  const raw = fs.readFileSync(filePath, 'utf8');
+  const raw = fs.readFileSync(filePath, 'utf8').replace(/\r\n/g, '\n');
   const jsonMatch = raw.match(/```json\r?\n([\s\S]*?)\r?\n```/);
   if (jsonMatch) {
     const data = JSON.parse(jsonMatch[1]);
@@ -405,7 +405,7 @@ function compileListening() {
 function compileHabits() {
   const filePath = path.join(CONTENT_DIR, 'habits', 'daily-plan.md');
   if (!fs.existsSync(filePath)) return;
-  const raw = fs.readFileSync(filePath, 'utf8');
+  const raw = fs.readFileSync(filePath, 'utf8').replace(/\r\n/g, '\n');
   const jsonMatch = raw.match(/```json\r?\n([\s\S]*?)\r?\n```/);
   if (jsonMatch) {
     const data = JSON.parse(jsonMatch[1]);

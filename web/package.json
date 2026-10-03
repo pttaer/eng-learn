@@ -7,7 +7,6 @@
   "main": "electron/main.cjs",
   "type": "module",
   "scripts": {
-    "parse": "node scripts/parse-curriculum.cjs",
     "content:compile": "node scripts/compile-content.cjs",
     "content:watch": "node scripts/compile-content.cjs --watch",
     "test:content": "node scripts/verify-content-pipeline.cjs",
