@@ -10,6 +10,18 @@ export interface HabitDay {
   tasks: string[];
 }
 
+// Habit tasks are authored in markdown: render the inline subset, drop links (they point at local files).
+export function formatTask(md: string): string {
+  return md
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+    .replace(/\$([^$]+)\$/g, '$1');
+}
+
 export class MissionLog {
   private container: HTMLElement;
   private days: HabitDay[] = [];
@@ -111,7 +123,7 @@ export class MissionLog {
               return `
                 <label class="mission-task-item ${isChecked ? 'task-checked' : ''}" data-idx="${tIdx}">
                   <input type="checkbox" class="task-checkbox" ${isChecked ? 'checked' : ''} />
-                  <span class="task-text">${task}</span>
+                  <span class="task-text">${formatTask(task)}</span>
                 </label>
               `;
             }).join('')}
