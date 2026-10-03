@@ -72,3 +72,22 @@ Context: the monochrome "#FFF/#000" design system has been replaced by a dark-na
 | 6 | Every habit day has 3 tasks | open (drift) | days 6,10,17,20,23,24,25,27,28,29,30 have 2 tasks |
 | 7 | Listening 4 rules / 4 accents / 3 steps / 3 passages | resolved | jq 4/4/3/3 |
 | 8 | Source markdown `E:\Eng\*.md` | obsolete | source is now `web/content/**` compiled by `scripts/compile-content.cjs:63` |
+
+## Update 2026-10-03 (UI/UX pass)
+
+Resolved since the table above:
+- accessibility #2 Escape: now runs only when unclaimed; blurs inputs; tour listens in capture phase (`main.ts`, `spotlight-tour.ts`).
+- 6-pillar/accessibility compass hidden menu: closed menu is `inert` (`corner-compass.ts`).
+- Tree keyboard access: nodes + branch cards are focusable buttons with Enter/Space (`skill-tree-view.ts`).
+- Reduced motion (#8, #9) is now an in-app setting (Settings → Motion, `html[data-motion="reduce"]`), on by owner's request; OS flag no longer disables motion.
+- Habits raw markdown / dead `file:///E:` links: rendered via `formatTask()` (`mission-log.ts`); source links still exist in `web/content/habits/daily-plan.md`.
+- Service worker pinned users to stale builds (cache-first navigations) → network-first (`public/sw.js` v1.1.0).
+
+Still open:
+- Listening pillar is a stub (3 one-sentence passages).
+- Collocations: 9 duplicates, no example sentences, many A2/B1 items.
+- Habits: 11 days have 2 tasks instead of 3.
+- `cognitive-bandwidth.md` overstates subvocalization suppression.
+- Hidden card face buttons still focusable (accessibility #4); `--ink-muted` light 4.56:1 misses AAA.
+- Large files (`reading-dossier.ts` ~1000 lines, `audio-synthesizer.ts`, `speaking-dossier.ts`) not split — deferred; no feature work needs it yet.
+- anime.js still v3.2.2; v4 has a new API (migration = rewrite `motion-engine.ts` + direct calls).
