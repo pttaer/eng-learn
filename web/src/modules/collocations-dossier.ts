@@ -3,6 +3,7 @@ import { AtomicCard } from '../core/atomic-card';
 import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
+import { MotionEngine } from '../core/motion-engine';
 import collocationsData from '../assets/data/collocations.json';
 
 export interface CollocationItem {
@@ -259,6 +260,7 @@ export class CollocationsDossier {
   }
 
   private bindDictionaryTableEvents(): void {
+    MotionEngine.riseIn(this.container.querySelectorAll('.lexicon-row'), 12);
     const prevBtn = this.container.querySelector('.page-btn-prev');
     const nextBtn = this.container.querySelector('.page-btn-next');
 

@@ -1,5 +1,6 @@
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
+import { MotionEngine } from '../core/motion-engine';
 import habitsData from '../assets/data/habits.json';
 
 export interface HabitDay {
@@ -168,6 +169,10 @@ export class MissionLog {
 
         this.renderDayPicker();
         this.renderActiveDayCard();
+        if (checked) {
+          const ticked = this.container.querySelector(`.mission-task-item[data-idx="${idx}"]`) as HTMLElement | null;
+          if (ticked) MotionEngine.pop(ticked);
+        }
       });
     });
 

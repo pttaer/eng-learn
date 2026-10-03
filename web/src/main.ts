@@ -51,6 +51,7 @@ class App {
     // 0. Initialize theme
     const savedTheme = localStorage.getItem('eng_theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
+    if (localStorage.getItem('eng_motion') === 'reduce') document.documentElement.dataset.motion = 'reduce';
 
     // 1. Initialize Subsystems
     AudioSynthesizer.init();

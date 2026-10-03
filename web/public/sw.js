@@ -4,7 +4,7 @@
  * Cache-First for App Shell | Stale-While-Revalidate for Assets & Fonts
  */
 
-const CACHE_VERSION = 'v1.0.0';
+const CACHE_VERSION = 'v1.1.0';
 const SHELL_CACHE = `stark-shell-${CACHE_VERSION}`;
 const ASSETS_CACHE = `stark-assets-${CACHE_VERSION}`;
 
@@ -63,22 +63,11 @@ self.addEventListener('fetch', (event) => {
   const isStaticAsset = url.pathname.includes('/assets/') ||
                         url.pathname.match(/\.(js|css|json|png|jpg|jpeg|svg|webp|ico|wav|mp3)$/i);
 
-  // STRATEGY A: Offline App Shell (Cache-First)
-  // Navigation requests and explicit shell paths
+  // STRATEGY A: App Shell (Network-First, cache fallback offline)
+  // Cache-first here pinned users to an old index.html (and its old hashed bundles) after every update.
   if (isNavigation || SHELL_RESOURCES.includes(url.pathname)) {
     event.respondWith(
       caches.open(SHELL_CACHE).then(async (cache) => {
-        const cached = await cache.match(event.request);
-        if (cached) {
-          // Revalidate shell in background
-          fetch(event.request).then((networkRes) => {
-            if (networkRes && networkRes.status === 200) {
-              cache.put(event.request, networkRes.clone());
-            }
-          }).catch(() => {/* Offline */});
-          return cached;
-        }
-
         try {
           const networkRes = await fetch(event.request);
           if (networkRes && networkRes.status === 200) {
@@ -86,8 +75,7 @@ self.addEventListener('fetch', (event) => {
           }
           return networkRes;
         } catch (err) {
-          // Offline fallback for navigation requests
-          const fallback = await cache.match('/index.html') || await cache.match('/');
+          const fallback = await cache.match(event.request) || await cache.match('/index.html') || await cache.match('/');
           if (fallback) return fallback;
           throw err;
         }

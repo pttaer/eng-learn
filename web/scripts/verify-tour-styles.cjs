@@ -104,8 +104,8 @@ console.log('✓ Mobile responsive layout adaptation verified');
 
 // 8. Reduced Motion Compliance (WCAG 2.2 AAA)
 assert(
-  tourCss.includes('@media (prefers-reduced-motion: reduce)'),
-  'prefers-reduced-motion: reduce must be explicitly handled'
+  tourCss.includes('html[data-motion="reduce"]'),
+  'In-app reduce-motion scope must be explicitly handled'
 );
 assert(
   tourCss.includes('animation: none !important') && tourCss.includes('transition: none !important'),

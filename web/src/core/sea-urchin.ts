@@ -74,13 +74,8 @@ export class SeaUrchin {
   }
 
   private checkReducedMotion(): void {
-    if (typeof window !== 'undefined' && window.matchMedia) {
-      const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-      this.reducedMotion = mq.matches;
-      mq.addEventListener('change', (e) => {
-        this.reducedMotion = e.matches;
-      });
-    }
+    // In-app setting (Settings → Motion), not the OS flag
+    this.reducedMotion = typeof document !== 'undefined' && document.documentElement.dataset.motion === 'reduce';
   }
 
   private initSpines(): void {

@@ -159,6 +159,9 @@ export class HeaderHUD {
           <button class="hud-btn btn-backup-import" style="padding: 12px; justify-content: center; font-weight: 600;">
             ${icon('upload')} Restore from Backup (JSON)
           </button>
+          <button class="hud-btn btn-motion-toggle" style="padding: 12px; justify-content: center; font-weight: 600;" aria-pressed="${document.documentElement.dataset.motion === 'reduce'}">
+            ${icon('zap')} <span class="motion-label">${document.documentElement.dataset.motion === 'reduce' ? 'Motion: Reduced' : 'Motion: Full'}</span>
+          </button>
           <input type="file" class="backup-file-input" accept=".json,application/json" style="display: none;" />
         </div>
 
@@ -174,6 +177,17 @@ export class HeaderHUD {
       AudioSynthesizer.play('click');
       modal.remove();
       SpotlightTour.start(true);
+    });
+
+    modal.querySelector('.btn-motion-toggle')?.addEventListener('click', (e) => {
+      const root = document.documentElement;
+      const reduce = root.dataset.motion !== 'reduce';
+      if (reduce) root.dataset.motion = 'reduce'; else delete root.dataset.motion;
+      localStorage.setItem('eng_motion', reduce ? 'reduce' : 'full');
+      const btn = e.currentTarget as HTMLElement;
+      btn.setAttribute('aria-pressed', String(reduce));
+      btn.querySelector('.motion-label')!.textContent = reduce ? 'Motion: Reduced' : 'Motion: Full';
+      AudioSynthesizer.play('click');
     });
 
     modal.querySelector('.btn-modal-close')?.addEventListener('click', () => {

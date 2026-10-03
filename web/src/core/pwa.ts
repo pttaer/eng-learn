@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 /**
  * STARK // English Singularity HUD - Progressive Web App Registration
  * Handles Service Worker lifecycle, offline readiness telemetry, and background updates.
@@ -9,7 +10,7 @@ export interface PWAUpdateEventDetail {
 
 export function registerServiceWorker(): void {
   // Boundary check: Zero console errors on unsupported browsers or file:// desktop runtime
-  if (!('serviceWorker' in navigator) || window.location.protocol === 'file:') {
+  if (!('serviceWorker' in navigator) || window.location.protocol === 'file:' || import.meta.env.DEV) {
     return;
   }
 

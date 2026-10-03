@@ -1862,7 +1862,7 @@
   border-color: var(--accent-star);
 }
 
-@media (prefers-reduced-motion: reduce) {
+html[data-motion="reduce"] {
   .tour-spotlight,
   .tour-arrow,
   .tour-card,
@@ -1875,3 +1875,10 @@
 
 
 
+
+/* SVG halos scale around their own centre when breathing */
+.star-halo,
+.summit-halo {
+  transform-box: fill-box;
+  transform-origin: center;
+}

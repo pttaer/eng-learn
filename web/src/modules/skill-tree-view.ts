@@ -51,6 +51,11 @@ export class SkillTreeView {
         MotionEngine.staggerEntrance(nodes as any, { from: 'bottom', delayStep: 25 });
       }
 
+      // Branch cards rise in, their bars fill, mastered halos breathe
+      MotionEngine.riseIn(this.container.querySelectorAll('.branch-summary-card'), 60);
+      MotionEngine.fillBars(this.container.querySelectorAll('.branch-bar'));
+      MotionEngine.breathe(this.container.querySelectorAll('.star-halo, .summit-halo'));
+
       // 3. Roll up summit progress counter
       const progressEl = this.container.querySelector('.val-progress-pct') as HTMLElement | null;
       if (progressEl) {
@@ -174,7 +179,7 @@ export class SkillTreeView {
     // Apex Summit Star
     const summitSvg = `
       <g class="constellation-apex" style="cursor: pointer;" transform="translate(${summitPxX}, ${summitPxY})">
-        <circle cx="0" cy="0" r="22" fill="url(#summitGlow)" />
+        <circle cx="0" cy="0" r="22" fill="url(#summitGlow)" class="summit-halo" />
         <circle cx="0" cy="0" r="14" fill="var(--bg-card)" stroke="var(--accent-gold)" stroke-width="2.5" />
         <circle cx="0" cy="0" r="6" fill="var(--accent-gold)" />
         <text x="0" y="24" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700" fill="var(--accent-gold)" class="node-title-label">★ C2 SUMMIT ★</text>
@@ -199,7 +204,7 @@ export class SkillTreeView {
         strokeWidth = '2.5';
         cursorClass = 'node-mastered';
         symbol = '★';
-        textFill = '#ffffff';
+        textFill = 'var(--bg-canvas)';
         haloSvg = `<circle cx="0" cy="0" r="20" fill="none" stroke="var(--accent-gold)" stroke-width="1.5" opacity="0.45" class="star-halo" />`;
       } else if (status === 'locked') {
         circleFill = 'var(--bg-surface-sunk)';
@@ -257,7 +262,7 @@ export class SkillTreeView {
       const masteredInBranch = branchNodes.filter(n => SkillTreeEngine.getNodeStatus(n.id) === 'mastered').length;
       const pct = Math.round((masteredInBranch / 5) * 100);
       return `
-        <div class="branch-summary-card" data-route="${branch.routeTarget}" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: 6px; cursor: pointer; transition: transform 0.18s, border-color 0.18s, box-shadow 0.18s; display: flex; flex-direction: column; justify-content: space-between; min-height: 50px; box-shadow: var(--shadow-btn);">
+        <div class="branch-summary-card" data-route="${branch.routeTarget}" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: 6px; cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s; display: flex; flex-direction: column; justify-content: space-between; min-height: 50px; box-shadow: var(--shadow-btn);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
             <span style="font-family: var(--font-mono); font-size: 10.5px; color: var(--accent-gold); font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 78%;">
               ✦ ${branch.name.toUpperCase()}
@@ -274,7 +279,7 @@ export class SkillTreeView {
               Lv ${masteredInBranch + 1}/5 (${masteredInBranch}/5)
             </span>
             <div style="flex: 1; height: 4px; background: var(--border-hairline); border-radius: 2px; overflow: hidden;">
-              <div style="width: ${pct}%; height: 100%; background: var(--accent-gold); border-radius: 2px; box-shadow: 0 0 6px var(--accent-gold-soft);"></div>
+              <div class="branch-bar" data-pct="${pct}" style="width: ${pct}%; height: 100%; background: var(--accent-gold); border-radius: 2px; box-shadow: 0 0 6px var(--accent-gold-soft);"></div>
             </div>
           </div>
         </div>
@@ -293,6 +298,8 @@ export class SkillTreeView {
 
     // Branch cards click
     this.container.querySelectorAll('.branch-summary-card').forEach(el => {
+      el.addEventListener('mouseenter', () => MotionEngine.lift(el as HTMLElement, true));
+      el.addEventListener('mouseleave', () => MotionEngine.lift(el as HTMLElement, false));
       el.addEventListener('click', () => {
         const route = (el as HTMLElement).dataset.route as RouteId;
         AudioSynthesizer.play('click');
@@ -310,9 +317,9 @@ export class SkillTreeView {
         if (!MotionEngine.isReducedMotion() && circleEl) {
           anime({
             targets: circleEl,
-            scale: 1.25,
-            duration: 250,
-            easing: 'easeOutQuad'
+            scale: 1.3,
+            duration: 600,
+            easing: 'easeOutElastic(1, 0.6)'
           });
         }
       });
@@ -322,8 +329,8 @@ export class SkillTreeView {
           anime({
             targets: circleEl,
             scale: 1.0,
-            duration: 200,
-            easing: 'easeOutQuad'
+            duration: 320,
+            easing: 'easeOutQuart'
           });
         }
       });

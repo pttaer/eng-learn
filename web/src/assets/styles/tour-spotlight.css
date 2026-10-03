@@ -445,7 +445,7 @@
 }
 
 /* --- Reduced Motion Compliance (WCAG 2.2 AAA) --- */
-@media (prefers-reduced-motion: reduce) {
+html[data-motion="reduce"] {
   .tour-overlay,
   .tour-spotlight,
   .tour-arrow,
