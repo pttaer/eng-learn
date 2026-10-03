@@ -66,6 +66,7 @@ export class ParticleCanvas {
 
   public static burst(originX?: number, originY?: number, count = 75): void {
     if (typeof window === 'undefined') return;
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
     if (!this.canvas || !this.ctx) {
       this.init();
     }

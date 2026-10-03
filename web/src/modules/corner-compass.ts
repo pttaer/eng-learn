@@ -13,7 +13,7 @@ export class CornerCompass {
     this.element.className = 'corner-compass-container interactive';
 
     this.element.innerHTML = `
-      <div class="compass-radial-menu">
+      <div class="compass-radial-menu" inert>
         <button class="compass-menu-item" data-route="singularity" title="Return to Urchin Singularity">
           <span class="compass-item-code">00</span>
           <span class="compass-item-label">CORE</span>
@@ -124,9 +124,9 @@ export class CornerCompass {
       trigger?.setAttribute('aria-expanded', String(this.isMenuOpen));
       AudioSynthesizer.play('click');
       if (this.isMenuOpen) {
-        menu.classList.add('menu-open');
+        menu.classList.add('menu-open'); (menu as HTMLElement).inert = false;
       } else {
-        menu.classList.remove('menu-open');
+        menu.classList.remove('menu-open'); (menu as HTMLElement).inert = true;
       }
     };
 
@@ -146,7 +146,7 @@ export class CornerCompass {
         AudioSynthesizer.play('void-open');
         this.isMenuOpen = false;
         trigger?.setAttribute('aria-expanded', 'false');
-        menu.classList.remove('menu-open');
+        menu.classList.remove('menu-open'); (menu as HTMLElement).inert = true;
 
         if (this.onNavigate) {
           this.onNavigate(route);
@@ -159,7 +159,7 @@ export class CornerCompass {
       if (this.isMenuOpen) {
         this.isMenuOpen = false;
         trigger?.setAttribute('aria-expanded', 'false');
-        menu.classList.remove('menu-open');
+        menu.classList.remove('menu-open'); (menu as HTMLElement).inert = true;
       }
     });
   }
