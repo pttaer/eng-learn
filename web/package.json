@@ -17,7 +17,9 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "electron:start": "electron .",
-    "dist:win": "npm run build && electron-builder --win nsis"
+    "dist:win": "npm run build && electron-builder --win nsis",
+    "test": "tsc --noEmit && node scripts/run-verify.cjs",
+    "test:installer": "node scripts/verify-installer-artifact.cjs"
   },
   "dependencies": {
     "animejs": "^3.2.2"
