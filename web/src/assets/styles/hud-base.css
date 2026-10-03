@@ -555,3 +555,22 @@ button:focus-visible,
     padding-bottom: max(20px, env(safe-area-inset-bottom, 0px));
   }
 }
+
+/* Narrow viewports: icon-only actions, drop telemetry, keep header on one row */
+@media (max-width: 760px) {
+  .hud-header { gap: var(--space-8, 8px); }
+  .hud-header .btn-label,
+  .hud-header .hud-telemetry-cluster,
+  .hud-header .hud-rank-badge,
+  .hud-header .active-route-badge { display: none !important; }
+  .hud-header .hud-btn { padding: 6px 10px; }
+  .hud-brand-title { font-size: 12px !important; white-space: nowrap; }
+}
+
+@media (max-width: 760px) {
+  .workout-banner { flex-direction: column !important; align-items: stretch !important; }
+  .workout-banner > * { width: 100%; }
+}
+@media (max-width: 760px) {
+  .workout-panel, .workout-tasks { flex-direction: column !important; align-items: stretch !important; }
+}

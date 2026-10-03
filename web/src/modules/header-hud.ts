@@ -40,7 +40,7 @@ export class HeaderHUD {
       <div class="hud-brand" style="display: flex; align-items: center; gap: 12px;">
         ${!isTree ? `
           <button class="hud-btn btn-back-tree" title="Return to Constellation Tree" aria-label="Return to Constellation Tree">
-            ← Back to Constellation Tree
+            ←<span class="btn-label"> Back to Constellation</span> Tree
           </button>
           <span class="hud-status-badge active-route-badge" style="font-size: 11px;">STUDIO: ${this.currentRoute.toUpperCase()}</span>
         ` : `
@@ -68,9 +68,9 @@ export class HeaderHUD {
 
       <div class="hud-actions header-actions" style="display: flex; gap: 8px; align-items: center;">
         <button class="hud-btn btn-theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">${this.themeLabel()}</button>
-        <button class="hud-btn btn-launch-tour" title="Launch Interactive Game Tour" aria-label="Launch Game Tour">${icon('compass')} Tour</button>
+        <button class="hud-btn btn-launch-tour" title="Launch Interactive Game Tour" aria-label="Launch Game Tour">${icon('compass')}<span class="btn-label"> Tour</span></button>
         <button class="hud-btn btn-sound-toggle" title="Toggle audio mute" aria-label="Toggle audio mute">${HeaderHUD.soundLabel(isMuted)}</button>
-        <button class="hud-btn btn-settings" title="Settings & Data Management" aria-label="Settings">${icon('settings')} Settings</button>
+        <button class="hud-btn btn-settings" title="Settings & Data Management" aria-label="Settings">${icon('settings')}<span class="btn-label"> Settings</span></button>
       </div>
     `;
 
@@ -78,11 +78,11 @@ export class HeaderHUD {
   }
 
   private themeLabel(): string {
-    return this.currentTheme === 'dark' ? `${icon('sun')} Light` : `${icon('moon')} Dark`;
+    return this.currentTheme === 'dark' ? `${icon('sun')}<span class="btn-label"> Light</span>` : `${icon('moon')}<span class="btn-label"> Dark</span>`;
   }
 
   private static soundLabel(muted: boolean): string {
-    return muted ? `${icon('mute')} Muted` : `${icon('volume')} Sound`;
+    return muted ? `${icon('mute')}<span class="btn-label"> Muted</span>` : `${icon('volume')}<span class="btn-label"> Sound</span>`;
   }
 
   private toggleTheme(): void {

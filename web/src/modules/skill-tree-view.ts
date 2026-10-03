@@ -85,13 +85,13 @@ export class SkillTreeView {
           </div>
         </div>
 
-        <div style="flex: 0 0 auto; display: flex; align-items: center; gap: 12px; background: var(--bg-surface-sunk); border: 1px solid var(--border-hairline); border-radius: 6px; padding: 6px 14px;">
+        <div class="workout-panel" style="flex: 0 0 auto; display: flex; align-items: center; gap: 12px; background: var(--bg-surface-sunk); border: 1px solid var(--border-hairline); border-radius: 6px; padding: 6px 14px;">
           <div style="display: flex; flex-direction: column; gap: 2px;">
             <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
               <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-size: 10px;">★ TODAY'S 15-MINUTE WORKOUT</span>
               <span class="telemetry-label" style="font-size: 10px;">2 OF 3 DRILLS REMAINING</span>
             </div>
-            <div style="display: flex; gap: 10px; font-size: 11px; color: var(--ink-secondary);">
+            <div class="workout-tasks" style="display: flex; gap: 10px; font-size: 11px; color: var(--ink-secondary);">
               <div style="display: flex; align-items: center; gap: 3px;">
                 <span style="color: var(--accent-gold); font-weight: 700;">✓</span> <span>10 Collocations Reviewed</span>
               </div>
