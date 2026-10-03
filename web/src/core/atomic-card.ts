@@ -69,6 +69,8 @@ export class AtomicCard {
       flipper.classList.toggle('is-flipped', isFlipped);
       faceFront.setAttribute('aria-hidden', String(isFlipped));
       faceBack.setAttribute('aria-hidden', String(!isFlipped));
+      faceFront.inert = isFlipped;
+      faceBack.inert = !isFlipped;
 
       const flipBtn = faceFront.querySelector('.btn-flip-trigger') as HTMLButtonElement | null;
       if (flipBtn) {
@@ -181,6 +183,7 @@ export class AtomicCard {
     // 2. BACK FACE
     // ==========================================
     const faceBack = document.createElement('div');
+    faceBack.inert = true; // hidden face must not take focus until flipped
     faceBack.className = 'card-face card-face-back face-back';
     faceBack.setAttribute('aria-hidden', 'true');
 
