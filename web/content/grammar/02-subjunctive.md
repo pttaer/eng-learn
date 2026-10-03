@@ -180,3 +180,39 @@
 - **Analysis**: 'Lest' is an intrinsically negative conjunction of prevention meaning 'for fear that'. It traditionally governs the bare subjunctive ('lest they be caught') without auxiliary 'not'.
 - **Exemplar**: Engineers added physical thermal breakers lest the reactor core suffer uncontained coolant runaway.
 
+## Counterfactual Dependence with 'Were it not for...'
+- **ID**: gram-subj-16
+- **Mode**: SUBJUNCTIVE_UNREAL
+- **Level**: 1
+- **Prompt**: If the emergency credit line did not exist, the airline would already be insolvent.
+- **Transformation**: Were it not for the emergency credit line, the airline would already be insolvent.
+- **Grammatical Cue**: Replace 'If X did not exist' with the fixed inverted subjunctive 'Were it not for + noun phrase'.
+- **Vietnamese**: Cấu trúc 'Were it not for + danh từ' (Nếu không nhờ có / Nếu không vì...): diễn tả điều kiện trái với hiện tại; dạng quá khứ tương ứng là 'Had it not been for'.
+- **Formula**: `Were it not for + Noun Phrase, Subject + would/could + Base Verb...`
+- **Analysis**: The clause uses dummy 'it' with subjunctive 'were' inverted in place of 'if', so the noun phrase after 'for' names the single factor on which the whole situation depends. For past counterfactuals the form becomes 'Had it not been for + noun phrase, subject + would have + past participle'. 'But for + noun phrase' is a terser, equally formal alternative that works for both time frames, while the uninverted 'If it were not for' is acceptable in neutral registers.
+- **Exemplar**: Were it not for the volunteers who staff the night shifts, the shelter could not remain open through the winter.
+
+## Negative Mandative Subjunctive ('that he not be...')
+- **ID**: gram-subj-17
+- **Mode**: SUBJUNCTIVE_UNREAL
+- **Level**: 2
+- **Prompt**: The tribunal insists that the witness does not discuss her testimony with the press.
+- **Transformation**: The tribunal insists that the witness not discuss her testimony with the press.
+- **Grammatical Cue**: In a negative mandative clause, place 'not' directly before the bare verb: no 'do' support and no third-person '-s'.
+- **Vietnamese**: Thể giả định mệnh lệnh dạng phủ định: đặt 'not' ngay trước động từ nguyên mẫu (not discuss, not be), không dùng trợ động từ 'do/does'.
+- **Formula**: `Subject + insist/request/require/recommend + that + Subject + not + Base Verb (or not be + Past Participle)...`
+- **Analysis**: Because the subjunctive verb carries no tense, it cannot take do-support, so negation is simply 'not' plus the base form ('that she not attend', 'that the files not be released'). With 'insist', the mood also disambiguates meaning: indicative 'insisted that he was innocent' asserts a fact, whereas subjunctive 'insisted that he be present' issues a demand. American formal usage strongly prefers this subjunctive; British English accepts it in formal writing but more often uses 'should not discuss', and the indicative is also heard in casual British speech.
+- **Exemplar**: The family requested that the minister's private letters not be published until after their mother's death.
+
+## Archaic Optative 'Would that...'
+- **ID**: gram-subj-18
+- **Mode**: SUBJUNCTIVE_UNREAL
+- **Level**: 3
+- **Prompt**: I wish the founders had foreseen how fragile their governance model would prove.
+- **Transformation**: Would that the founders had foreseen how fragile their governance model would prove.
+- **Grammatical Cue**: Replace 'I wish' with the literary optative 'Would that'; keep the backshifted tense (past perfect for past regret).
+- **Vietnamese**: Cấu trúc ước nguyện cổ 'Would that...' (Giá mà...): thay cho 'I wish'; dùng quá khứ đơn hoặc 'were' cho ước muốn ở hiện tại và quá khứ hoàn thành cho sự tiếc nuối về quá khứ.
+- **Formula**: `Would that + Subject + were/Past Simple (present wish) | Past Perfect (past regret)...`
+- **Analysis**: 'Would that' descends from an elliptical 'I would (wish) that' and now functions as a fixed optative formula with no overt subject. It follows the same tense backshift as 'wish': 'Would that it were true' for the present, 'Would that they had listened' for the past. The structure is markedly literary or elegiac; in contemporary prose it signals deliberate rhetorical heightening and would sound affected in a routine report.
+- **Exemplar**: Would that every reform were as easy to implement as it is to announce.
+

@@ -873,6 +873,477 @@
     "isRemindCandidate": false
   },
   {
+    "wordOrChunk": "fidelity",
+    "breakdown": {
+      "prefix": "None (root-initial)",
+      "root": "fid (Latin fides: faith, trust)",
+      "suffix": "-ity (noun-forming: state, quality)",
+      "derivationalFamily": [
+        "infidelity",
+        "confide",
+        "confidant",
+        "diffident",
+        "perfidious"
+      ],
+      "morphologyAnalysis": "fid (faith) + -el- (from fidelis: faithful) + -ity (state) -> the state of keeping faith"
+    },
+    "id": "vocab-rf-41",
+    "mode": "ROOT_FORGE",
+    "level": 1,
+    "ipa": "/fɪˈdel.ə.ti/",
+    "definition": "Faithfulness to a person, cause, or belief; or the degree of exactness with which something is copied or reproduced.",
+    "vietnamese": "sự trung thành, lòng chung thủy; độ trung thực (của bản dịch, bản sao, âm thanh)",
+    "contextSentence": "The translator aimed for fidelity to the poet's rhythm as much as to his literal meaning.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "incredulous",
+    "breakdown": {
+      "prefix": "in- (Latin: not)",
+      "root": "cred (Latin credere: to believe, trust)",
+      "suffix": "-ulous (adjective-forming: inclined to)",
+      "derivationalFamily": [
+        "incredulity",
+        "credulous",
+        "credible",
+        "credence",
+        "credential"
+      ],
+      "morphologyAnalysis": "in- (not) + cred (believe) + -ulous (inclined to) -> not inclined to believe"
+    },
+    "id": "vocab-rf-42",
+    "mode": "ROOT_FORGE",
+    "level": 2,
+    "ipa": "/ɪnˈkred.jə.ləs/",
+    "definition": "Unwilling or unable to believe something; showing disbelief.",
+    "vietnamese": "hoài nghi, không thể tin nổi, tỏ vẻ ngờ vực",
+    "contextSentence": "The villagers listened with incredulous faces as the engineer explained that the river would be diverted around their valley.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "eloquent",
+    "breakdown": {
+      "prefix": "e- / ex- (Latin: out)",
+      "root": "loqu (Latin loqui: to speak)",
+      "suffix": "-ent (adjective-forming: performing an action)",
+      "derivationalFamily": [
+        "eloquence",
+        "eloquently",
+        "colloquial",
+        "soliloquy"
+      ],
+      "morphologyAnalysis": "e- (out) + loqu (speak) + -ent -> speaking out fluently and forcefully"
+    },
+    "id": "vocab-rf-43",
+    "mode": "ROOT_FORGE",
+    "level": 1,
+    "ipa": "/ˈel.ə.kwənt/",
+    "definition": "Fluent, expressive, and persuasive in speaking or writing; clearly expressing a feeling.",
+    "vietnamese": "hùng hồn, có tài hùng biện, diễn đạt lưu loát và thuyết phục",
+    "contextSentence": "Her eloquent tribute at the memorial service moved even strangers to tears.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "loquacious",
+    "breakdown": {
+      "prefix": "None (root-initial)",
+      "root": "loqu (Latin loqui: to speak)",
+      "suffix": "-acious (adjective-forming: inclined to, abounding in)",
+      "derivationalFamily": [
+        "loquacity",
+        "loquaciously",
+        "interlocutor",
+        "circumlocution"
+      ],
+      "morphologyAnalysis": "loqu (speak) + -acious (abounding in) -> overflowing with speech"
+    },
+    "id": "vocab-rf-44",
+    "mode": "ROOT_FORGE",
+    "level": 3,
+    "ipa": "/ləˈkweɪ.ʃəs/",
+    "definition": "Tending to talk a great deal; very talkative.",
+    "vietnamese": "nói nhiều, lắm lời, ba hoa",
+    "contextSentence": "Our loquacious taxi driver narrated the history of every bridge we crossed on the way to the airport.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "subvert",
+    "breakdown": {
+      "prefix": "sub- (Latin: under, from below)",
+      "root": "vert (Latin vertere: to turn)",
+      "suffix": "None (zero suffix)",
+      "derivationalFamily": [
+        "subversion",
+        "subversive",
+        "avert",
+        "invert",
+        "convert"
+      ],
+      "morphologyAnalysis": "sub- (from below) + vert (turn) -> turn over from underneath"
+    },
+    "id": "vocab-rf-45",
+    "mode": "ROOT_FORGE",
+    "level": 3,
+    "ipa": "/səbˈvɜːt/",
+    "definition": "Undermine the power, authority, or principles of an established system or institution; overturn conventions from within.",
+    "vietnamese": "lật đổ, phá hoại ngầm, làm đảo lộn từ bên trong",
+    "contextSentence": "The novel subverts the conventions of the detective story by revealing the culprit on the very first page.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "inadvertent",
+    "breakdown": {
+      "prefix": "in- (Latin: not) + ad- (Latin: toward)",
+      "root": "vert (Latin vertere: to turn)",
+      "suffix": "-ent (adjective-forming)",
+      "derivationalFamily": [
+        "inadvertently",
+        "inadvertence",
+        "advert",
+        "adverse",
+        "advertise"
+      ],
+      "morphologyAnalysis": "in- (not) + ad- (toward) + vert (turn) + -ent -> not turning one's attention toward"
+    },
+    "id": "vocab-rf-46",
+    "mode": "ROOT_FORGE",
+    "level": 2,
+    "ipa": "/ˌɪn.ədˈvɜː.tənt/",
+    "definition": "Not resulting from deliberate intention or planning; unintentional, often through lack of attention.",
+    "vietnamese": "vô ý, sơ suất, không cố ý",
+    "contextSentence": "An inadvertent click on reply-all sent the confidential salary list to the entire department.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "impending",
+    "breakdown": {
+      "prefix": "im- / in- (Latin: upon, over)",
+      "root": "pend (Latin pendere: to hang)",
+      "suffix": "-ing (participial adjective)",
+      "derivationalFamily": [
+        "impend",
+        "pendulum",
+        "pendant",
+        "suspend",
+        "pending"
+      ],
+      "morphologyAnalysis": "im- (over) + pend (hang) + -ing -> hanging over, about to fall"
+    },
+    "id": "vocab-rf-47",
+    "mode": "ROOT_FORGE",
+    "level": 2,
+    "ipa": "/ɪmˈpen.dɪŋ/",
+    "definition": "(Of an event, typically an unpleasant one) about to happen; imminent.",
+    "vietnamese": "sắp xảy ra, đang treo lơ lửng trước mắt",
+    "contextSentence": "Dark clouds massing over the bay warned the fishermen of the impending storm.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "compendium",
+    "breakdown": {
+      "prefix": "com- (Latin: together)",
+      "root": "pend (Latin pendere: to weigh)",
+      "suffix": "-ium (Latin neuter noun ending)",
+      "derivationalFamily": [
+        "compendious",
+        "expend",
+        "stipend",
+        "compensate"
+      ],
+      "morphologyAnalysis": "com- (together) + pend (weigh) + -ium -> what is weighed together, hence a saving or abridgement"
+    },
+    "id": "vocab-rf-48",
+    "mode": "ROOT_FORGE",
+    "level": 3,
+    "ipa": "/kəmˈpen.di.əm/",
+    "definition": "A collection of concise but detailed information about a particular subject, especially in a single book.",
+    "vietnamese": "bản tóm lược toàn diện, sách tổng hợp, tuyển tập",
+    "contextSentence": "Her grandmother's handwritten compendium of herbal remedies covered everything from fevers to insect bites.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "proscribe",
+    "breakdown": {
+      "prefix": "pro- (Latin: before, in public)",
+      "root": "scrib (Latin scribere: to write)",
+      "suffix": "None (zero suffix)",
+      "derivationalFamily": [
+        "proscription",
+        "proscriptive",
+        "prescribe",
+        "transcribe",
+        "inscribe"
+      ],
+      "morphologyAnalysis": "pro- (publicly) + scrib (write) -> post a written public notice of condemnation, as in Roman outlaw lists"
+    },
+    "id": "vocab-rf-49",
+    "mode": "ROOT_FORGE",
+    "level": 3,
+    "ipa": "/prəʊˈskraɪb/",
+    "definition": "Forbid something, especially by law; denounce or condemn officially.",
+    "vietnamese": "cấm đoán (bằng luật), lên án chính thức, đặt ra ngoài vòng pháp luật",
+    "contextSentence": "The new regulations proscribe the sale of wild-caught songbirds in city markets.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "circumscribe",
+    "breakdown": {
+      "prefix": "circum- (Latin: around)",
+      "root": "scrib (Latin scribere: to write, draw)",
+      "suffix": "None (zero suffix)",
+      "derivationalFamily": [
+        "circumscribed",
+        "circumscription",
+        "describe",
+        "manuscript"
+      ],
+      "morphologyAnalysis": "circum- (around) + scrib (draw) -> draw a line around to set limits"
+    },
+    "id": "vocab-rf-50",
+    "mode": "ROOT_FORGE",
+    "level": 3,
+    "ipa": "/ˈsɜː.kəm.skraɪb/",
+    "definition": "Restrict something within limits; in geometry, draw a figure around another so that it touches it at points without cutting it.",
+    "vietnamese": "giới hạn, khoanh vùng hạn chế; (hình học) vẽ ngoại tiếp",
+    "contextSentence": "Her freedom to work was tightly circumscribed by the terms of her student visa.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "gregarious",
+    "breakdown": {
+      "prefix": "None (root-initial)",
+      "root": "greg (Latin grex, gregis: flock, herd)",
+      "suffix": "-arious (adjective-forming: belonging to, connected with)",
+      "derivationalFamily": [
+        "gregariousness",
+        "congregate",
+        "segregate",
+        "aggregate"
+      ],
+      "morphologyAnalysis": "greg (flock) + -arious (belonging to) -> belonging to the flock"
+    },
+    "id": "vocab-rf-51",
+    "mode": "ROOT_FORGE",
+    "level": 2,
+    "ipa": "/ɡrɪˈɡeə.ri.əs/",
+    "definition": "Fond of company; sociable. (Of animals) living in flocks or herds.",
+    "vietnamese": "thích giao du, hòa đồng; (động vật) sống theo bầy đàn",
+    "contextSentence": "Gregarious by nature, he knew the name of every stallholder in the night market within a month of arriving.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "egregious",
+    "breakdown": {
+      "prefix": "e- / ex- (Latin: out of)",
+      "root": "greg (Latin grex, gregis: flock, herd)",
+      "suffix": "-ious (adjective-forming: characterized by)",
+      "derivationalFamily": [
+        "egregiously",
+        "egregiousness",
+        "gregarious",
+        "congregation"
+      ],
+      "morphologyAnalysis": "e- (out of) + greg (flock) + -ious -> standing out from the flock; once praise, now only censure"
+    },
+    "id": "vocab-rf-52",
+    "mode": "ROOT_FORGE",
+    "level": 3,
+    "ipa": "/ɪˈɡriː.dʒəs/",
+    "definition": "Outstandingly bad; shocking and flagrant.",
+    "vietnamese": "tồi tệ quá mức, trắng trợn, sai lầm rành rành",
+    "contextSentence": "Publishing the wrong set of exam results was an egregious error that cost the board its credibility.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "susceptible",
+    "breakdown": {
+      "prefix": "sus- / sub- (Latin: under, up from below)",
+      "root": "cept (Latin capere: to take, seize)",
+      "suffix": "-ible (adjective-forming: capable of)",
+      "derivationalFamily": [
+        "susceptibility",
+        "accept",
+        "intercept",
+        "perceive",
+        "capture"
+      ],
+      "morphologyAnalysis": "sus- (up from under) + cept (take) + -ible -> capable of taking on an influence"
+    },
+    "id": "vocab-rf-53",
+    "mode": "ROOT_FORGE",
+    "level": 1,
+    "ipa": "/səˈsep.tə.bəl/",
+    "definition": "Likely to be influenced, harmed, or affected by a particular thing.",
+    "vietnamese": "dễ bị ảnh hưởng, dễ mắc phải, nhạy cảm với",
+    "contextSentence": "Young rice seedlings are highly susceptible to cold snaps in early spring.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "incipient",
+    "breakdown": {
+      "prefix": "in- (Latin: into, upon)",
+      "root": "cip (Latin capere: to take, via incipere: to begin)",
+      "suffix": "-ient (adjective-forming: in the act of)",
+      "derivationalFamily": [
+        "incipience",
+        "inception",
+        "recipient",
+        "participate"
+      ],
+      "morphologyAnalysis": "in- (upon) + cip (take) + -ient -> taking something in hand, just beginning"
+    },
+    "id": "vocab-rf-54",
+    "mode": "ROOT_FORGE",
+    "level": 3,
+    "ipa": "/ɪnˈsɪp.i.ənt/",
+    "definition": "In an initial stage; beginning to happen or develop.",
+    "vietnamese": "chớm nở, mới manh nha, ở giai đoạn ban đầu",
+    "contextSentence": "Experienced teachers can often spot incipient reading difficulties long before any formal diagnosis.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "intermittent",
+    "breakdown": {
+      "prefix": "inter- (Latin: between)",
+      "root": "mitt (Latin mittere: to send, let go)",
+      "suffix": "-ent (adjective-forming)",
+      "derivationalFamily": [
+        "intermittently",
+        "intermission",
+        "transmit",
+        "emit",
+        "remittance"
+      ],
+      "morphologyAnalysis": "inter- (between) + mitt (let go) + -ent -> letting go at intervals in between"
+    },
+    "id": "vocab-rf-55",
+    "mode": "ROOT_FORGE",
+    "level": 2,
+    "ipa": "/ˌɪn.təˈmɪt.ənt/",
+    "definition": "Occurring at irregular intervals; not continuous or steady.",
+    "vietnamese": "lúc có lúc không, gián đoạn, không liên tục",
+    "contextSentence": "Intermittent showers throughout the afternoon kept interrupting the village football final.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "emissary",
+    "breakdown": {
+      "prefix": "e- / ex- (Latin: out)",
+      "root": "miss (Latin mittere, missus: to send)",
+      "suffix": "-ary (noun-forming: person connected with)",
+      "derivationalFamily": [
+        "emission",
+        "emit",
+        "mission",
+        "missive",
+        "dismiss"
+      ],
+      "morphologyAnalysis": "e- (out) + miss (sent) + -ary (person) -> one who is sent out"
+    },
+    "id": "vocab-rf-56",
+    "mode": "ROOT_FORGE",
+    "level": 2,
+    "ipa": "/ˈem.ɪ.sər.i/",
+    "definition": "A person sent on a special mission, usually as a diplomatic representative.",
+    "vietnamese": "phái viên, sứ giả, người được cử đi làm nhiệm vụ đặc biệt",
+    "contextSentence": "The king sent a trusted emissary across the mountains to negotiate the release of the captured merchants.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "tenacious",
+    "breakdown": {
+      "prefix": "None (root-initial)",
+      "root": "ten (Latin tenere: to hold)",
+      "suffix": "-acious (adjective-forming: inclined to)",
+      "derivationalFamily": [
+        "tenacity",
+        "tenant",
+        "tenable",
+        "retain",
+        "detain"
+      ],
+      "morphologyAnalysis": "ten (hold) + -acious (inclined to) -> inclined to hold fast"
+    },
+    "id": "vocab-rf-57",
+    "mode": "ROOT_FORGE",
+    "level": 1,
+    "ipa": "/təˈneɪ.ʃəs/",
+    "definition": "Holding firmly to something; persistent and determined, not easily giving up.",
+    "vietnamese": "bền bỉ, kiên trì, bám riết không buông",
+    "contextSentence": "A tenacious local reporter spent six years tracing where the flood relief money had actually gone.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "inconsequential",
+    "breakdown": {
+      "prefix": "in- (Latin: not) + con- (Latin: together, with)",
+      "root": "sequ (Latin sequi: to follow)",
+      "suffix": "-ential (adjective-forming: relating to)",
+      "derivationalFamily": [
+        "consequence",
+        "consequential",
+        "sequel",
+        "sequence"
+      ],
+      "morphologyAnalysis": "in- (not) + con- (with) + sequ (follow) + -ential -> not followed by any consequence"
+    },
+    "id": "vocab-rf-58",
+    "mode": "ROOT_FORGE",
+    "level": 2,
+    "ipa": "/ɪnˌkɒn.sɪˈkwen.ʃəl/",
+    "definition": "Not important or significant; trivial.",
+    "vietnamese": "không đáng kể, vụn vặt, chẳng quan trọng",
+    "contextSentence": "What seemed an inconsequential remark at dinner turned out to be the first hint of his resignation.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "obsequious",
+    "breakdown": {
+      "prefix": "ob- (Latin: toward, in the way of)",
+      "root": "sequ (Latin sequi: to follow)",
+      "suffix": "-ious (adjective-forming)",
+      "derivationalFamily": [
+        "obsequiousness",
+        "obsequiously",
+        "sequential",
+        "consecutive"
+      ],
+      "morphologyAnalysis": "ob- (toward) + sequ (follow) + -ious -> following after someone compliantly"
+    },
+    "id": "vocab-rf-59",
+    "mode": "ROOT_FORGE",
+    "level": 3,
+    "ipa": "/əbˈsiː.kwi.əs/",
+    "definition": "Excessively eager to please or obey; servile.",
+    "vietnamese": "khúm núm, xu nịnh, quỵ lụy",
+    "contextSentence": "The waiter's obsequious bowing cooled noticeably once he learned we were not the mayor's guests.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "pseudonym",
+    "breakdown": {
+      "prefix": "pseudo- (Greek: false)",
+      "root": "nym (Greek onyma / onoma: name)",
+      "suffix": "None (zero suffix)",
+      "derivationalFamily": [
+        "pseudonymous",
+        "anonymous",
+        "synonym",
+        "antonym",
+        "eponym"
+      ],
+      "morphologyAnalysis": "pseudo- (false) + nym (name) -> false name"
+    },
+    "id": "vocab-rf-60",
+    "mode": "ROOT_FORGE",
+    "level": 1,
+    "ipa": "/ˈsjuː.də.nɪm/",
+    "definition": "A fictitious name, especially one used by an author instead of their real name.",
+    "vietnamese": "bút danh, tên giả",
+    "contextSentence": "Several of the country's best-loved poets published under pseudonyms to slip past the censors.",
+    "isRemindCandidate": false
+  },
+  {
     "wordOrChunk": "mitigate",
     "breakdown": {
       "cefrRank": "B2 / AWL Sublist 2",
@@ -1713,6 +2184,426 @@
     "isRemindCandidate": true
   },
   {
+    "wordOrChunk": "tenuous",
+    "breakdown": {
+      "cefrRank": "C2 / Academic & Literary",
+      "collocates": "tenuous link, tenuous connection, tenuous grasp, tenuous hold on power",
+      "synonyms": [
+        "flimsy",
+        "slight",
+        "shaky"
+      ],
+      "register": "Academic Argument & Journalism"
+    },
+    "id": "vocab-cefr-41",
+    "mode": "CEFR_ASCENT",
+    "level": 2,
+    "ipa": "/ˈten.ju.əs/",
+    "definition": "Very weak or slight; lacking a sound basis (of a link, argument, or hold on something).",
+    "vietnamese": "mong manh, lỏng lẻo, thiếu cơ sở vững chắc",
+    "contextSentence": "The prosecution's case rested on a tenuous link between the defendant and a phone found near the scene.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "cogent",
+    "breakdown": {
+      "cefrRank": "C2 / Academic & Literary",
+      "collocates": "cogent argument, cogent case, cogent reason, cogent analysis",
+      "synonyms": [
+        "compelling",
+        "persuasive",
+        "well-reasoned"
+      ],
+      "register": "Academic Writing & Legal Argument"
+    },
+    "id": "vocab-cefr-42",
+    "mode": "CEFR_ASCENT",
+    "level": 2,
+    "ipa": "/ˈkəʊ.dʒənt/",
+    "definition": "(Of an argument or case) clear, logical, and convincing.",
+    "vietnamese": "chặt chẽ và thuyết phục, có sức nặng về lập luận",
+    "contextSentence": "Her cogent case for rent control won over even the doubters on the housing committee.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "tacit",
+    "breakdown": {
+      "cefrRank": "C2 / Academic & Literary",
+      "collocates": "tacit approval, tacit agreement, tacit consent, tacit knowledge",
+      "synonyms": [
+        "implicit",
+        "unspoken",
+        "understood"
+      ],
+      "register": "Political Analysis & Philosophy"
+    },
+    "id": "vocab-cefr-43",
+    "mode": "CEFR_ASCENT",
+    "level": 2,
+    "ipa": "/ˈtæs.ɪt/",
+    "definition": "Understood or implied without being directly stated.",
+    "vietnamese": "ngầm hiểu, mặc nhiên, không nói ra thành lời",
+    "contextSentence": "By saying nothing at the meeting, the minister gave tacit approval to the cuts.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "ambivalent",
+    "breakdown": {
+      "cefrRank": "C1 / Academic & Literary",
+      "collocates": "deeply ambivalent, ambivalent about, ambivalent attitude, ambivalent feelings",
+      "synonyms": [
+        "conflicted",
+        "equivocal",
+        "torn"
+      ],
+      "register": "Psychology & Social Commentary"
+    },
+    "id": "vocab-cefr-44",
+    "mode": "CEFR_ASCENT",
+    "level": 2,
+    "ipa": "/æmˈbɪv.ə.lənt/",
+    "definition": "Having mixed or contradictory feelings about something or someone.",
+    "vietnamese": "có cảm xúc lẫn lộn, phân vân giữa hai thái độ trái ngược",
+    "contextSentence": "Many villagers are ambivalent about the new dam: it brings electricity but floods their ancestral farmland.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "exacerbate",
+    "breakdown": {
+      "cefrRank": "C1 / Academic & Literary",
+      "collocates": "exacerbate the problem, exacerbate tensions, exacerbate symptoms, further exacerbate",
+      "synonyms": [
+        "aggravate",
+        "worsen",
+        "compound"
+      ],
+      "register": "Policy, Medicine & Environmental Science"
+    },
+    "id": "vocab-cefr-45",
+    "mode": "CEFR_ASCENT",
+    "level": 2,
+    "ipa": "/ɪɡˈzæs.ə.beɪt/",
+    "definition": "Make a problem, bad situation, or negative feeling worse.",
+    "vietnamese": "làm trầm trọng thêm, khiến tình hình xấu đi",
+    "contextSentence": "Clearing mangroves for shrimp farms has exacerbated coastal erosion across the delta.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "untenable",
+    "breakdown": {
+      "cefrRank": "C2 / Academic & Literary",
+      "collocates": "untenable position, untenable situation, morally untenable, render untenable",
+      "synonyms": [
+        "indefensible",
+        "unsustainable",
+        "insupportable"
+      ],
+      "register": "Political & Academic Debate"
+    },
+    "id": "vocab-cefr-46",
+    "mode": "CEFR_ASCENT",
+    "level": 2,
+    "ipa": "/ʌnˈten.ə.bəl/",
+    "definition": "(Of a position, theory, or situation) not able to be maintained or defended against attack or objection.",
+    "vietnamese": "không thể đứng vững, không thể bảo vệ hay duy trì được",
+    "contextSentence": "Once the leaked emails surfaced, the chairman's position became untenable and he resigned within a week.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "specious",
+    "breakdown": {
+      "cefrRank": "C2 / GRE Mastery",
+      "collocates": "specious argument, specious reasoning, specious claim, specious logic",
+      "synonyms": [
+        "spurious",
+        "misleading",
+        "sophistical"
+      ],
+      "register": "Logic, Rhetoric & Critical Reviews"
+    },
+    "id": "vocab-cefr-47",
+    "mode": "CEFR_ASCENT",
+    "level": 3,
+    "ipa": "/ˈspiː.ʃəs/",
+    "definition": "Superficially plausible but actually wrong or misleading.",
+    "vietnamese": "nghe có vẻ hợp lý nhưng thực chất sai lệch, đúng ở bề ngoài",
+    "contextSentence": "The advertisement relied on the specious reasoning that anything natural must be safe.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "perfunctory",
+    "breakdown": {
+      "cefrRank": "C2 / GRE Mastery",
+      "collocates": "perfunctory glance, perfunctory nod, perfunctory inspection, perfunctory apology",
+      "synonyms": [
+        "cursory",
+        "token",
+        "half-hearted"
+      ],
+      "register": "Literary Narrative & Formal Description"
+    },
+    "id": "vocab-cefr-48",
+    "mode": "CEFR_ASCENT",
+    "level": 3,
+    "ipa": "/pəˈfʌŋk.tər.i/",
+    "definition": "Carried out with minimal effort or reflection, merely as a routine duty.",
+    "vietnamese": "làm cho có, qua loa đại khái, chiếu lệ",
+    "contextSentence": "After a perfunctory glance at my passport, the border guard waved me through.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "ostensible",
+    "breakdown": {
+      "cefrRank": "C2 / GRE Mastery",
+      "collocates": "ostensible purpose, ostensible reason, ostensible aim, ostensibly neutral",
+      "synonyms": [
+        "apparent",
+        "professed",
+        "purported"
+      ],
+      "register": "Journalism & Historical Analysis"
+    },
+    "id": "vocab-cefr-49",
+    "mode": "CEFR_ASCENT",
+    "level": 3,
+    "ipa": "/ɒˈsten.sə.bəl/",
+    "definition": "Stated or appearing to be true, but not necessarily so.",
+    "vietnamese": "bề ngoài, trên danh nghĩa, được viện dẫn công khai (nhưng chưa chắc là thật)",
+    "contextSentence": "The ostensible purpose of the trip was trade talks, but the delegation spent most of its time on the golf course.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "belie",
+    "breakdown": {
+      "cefrRank": "C2 / GRE Mastery",
+      "collocates": "belie the fact, belie one's age, appearance belies, belie expectations",
+      "synonyms": [
+        "contradict",
+        "disguise",
+        "misrepresent"
+      ],
+      "register": "Literary & Journalistic Prose"
+    },
+    "id": "vocab-cefr-50",
+    "mode": "CEFR_ASCENT",
+    "level": 3,
+    "ipa": "/bɪˈlaɪ/",
+    "definition": "Fail to give a true impression of something; or show something to be false.",
+    "vietnamese": "che giấu bản chất thật, tạo ấn tượng sai lệch; chứng tỏ điều gì là sai",
+    "contextSentence": "His gentle, soft-spoken manner belies a ruthless instinct for negotiation.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "eschew",
+    "breakdown": {
+      "cefrRank": "C2 / GRE Mastery",
+      "collocates": "eschew violence, eschew publicity, eschew jargon, eschew ornament",
+      "synonyms": [
+        "shun",
+        "forgo",
+        "abstain from"
+      ],
+      "register": "Formal Writing & Arts Criticism"
+    },
+    "id": "vocab-cefr-51",
+    "mode": "CEFR_ASCENT",
+    "level": 3,
+    "ipa": "/ɪsˈtʃuː/",
+    "definition": "Deliberately avoid using or doing something, often on principle.",
+    "vietnamese": "cố tình tránh xa, kiêng dùng (vì nguyên tắc)",
+    "contextSentence": "The poet eschews rhyme altogether, preferring the loose rhythms of everyday speech.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "preclude",
+    "breakdown": {
+      "cefrRank": "C2 / Academic & Literary",
+      "collocates": "preclude the possibility, preclude someone from, effectively preclude, preclude further action",
+      "synonyms": [
+        "prohibit",
+        "forestall",
+        "rule out"
+      ],
+      "register": "Legal & Academic Prose"
+    },
+    "id": "vocab-cefr-52",
+    "mode": "CEFR_ASCENT",
+    "level": 3,
+    "ipa": "/prɪˈkluːd/",
+    "definition": "Prevent something from happening or make it impossible; rule out in advance.",
+    "vietnamese": "ngăn trước, loại trừ khả năng, khiến điều gì không thể xảy ra",
+    "contextSentence": "A teenage conviction for shoplifting does not necessarily preclude someone from serving on a school board.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "gainsay",
+    "breakdown": {
+      "cefrRank": "C2 / GRE Mastery",
+      "collocates": "no gainsaying, cannot gainsay, hard to gainsay, gainsay the evidence",
+      "synonyms": [
+        "deny",
+        "dispute",
+        "contradict"
+      ],
+      "register": "Formal & Literary (somewhat archaic)"
+    },
+    "id": "vocab-cefr-53",
+    "mode": "CEFR_ASCENT",
+    "level": 3,
+    "ipa": "/ˌɡeɪnˈseɪ/",
+    "definition": "Deny or contradict a fact or statement; speak against (usually used with a negative).",
+    "vietnamese": "phủ nhận, bác bỏ, cãi lại (thường dùng ở dạng phủ định)",
+    "contextSentence": "There is no gainsaying the courage of the volunteers who stayed behind during the floods.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "recalcitrant",
+    "breakdown": {
+      "cefrRank": "C2 / GRE Mastery",
+      "collocates": "recalcitrant pupil, recalcitrant member states, recalcitrant attitude, recalcitrant debtor",
+      "synonyms": [
+        "unruly",
+        "defiant",
+        "refractory"
+      ],
+      "register": "Politics, Education & Management"
+    },
+    "id": "vocab-cefr-54",
+    "mode": "CEFR_ASCENT",
+    "level": 3,
+    "ipa": "/rɪˈkæl.sɪ.trənt/",
+    "definition": "Stubbornly uncooperative toward authority, control, or discipline.",
+    "vietnamese": "ngoan cố, cứng đầu, bất hợp tác với cấp trên hay quy định",
+    "contextSentence": "The teacher's patience eventually won over even the most recalcitrant pupils in the class.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "sanguine",
+    "breakdown": {
+      "cefrRank": "C2 / GRE Mastery",
+      "collocates": "sanguine about, sanguine outlook, less sanguine, sanguine view",
+      "synonyms": [
+        "optimistic",
+        "hopeful",
+        "buoyant"
+      ],
+      "register": "Formal Commentary & Literary"
+    },
+    "id": "vocab-cefr-55",
+    "mode": "CEFR_ASCENT",
+    "level": 3,
+    "ipa": "/ˈsæŋ.ɡwɪn/",
+    "definition": "Optimistic or positive, especially in an apparently bad or difficult situation.",
+    "vietnamese": "lạc quan, tin tưởng (kể cả khi tình hình không mấy sáng sủa)",
+    "contextSentence": "The coach remained sanguine about the team's chances despite losing their top scorer to injury.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "quixotic",
+    "breakdown": {
+      "cefrRank": "C2 / GRE Mastery",
+      "collocates": "quixotic quest, quixotic campaign, quixotic attempt, quixotic idealism",
+      "synonyms": [
+        "idealistic",
+        "impractical",
+        "starry-eyed"
+      ],
+      "register": "Literary Allusion & Political Commentary"
+    },
+    "id": "vocab-cefr-56",
+    "mode": "CEFR_ASCENT",
+    "level": 3,
+    "ipa": "/kwɪkˈsɒt.ɪk/",
+    "definition": "Exceedingly idealistic; unrealistic and impractical in the pursuit of noble aims.",
+    "vietnamese": "viển vông, lý tưởng hóa thái quá, kiểu Đôn Ki-hô-tê",
+    "contextSentence": "His quixotic campaign to ban cars from the old quarter attracted admiration but very few votes.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "desultory",
+    "breakdown": {
+      "cefrRank": "C2 / GRE Mastery",
+      "collocates": "desultory conversation, desultory attempt, desultory fashion, desultory reading",
+      "synonyms": [
+        "aimless",
+        "haphazard",
+        "half-hearted"
+      ],
+      "register": "Literary Narrative"
+    },
+    "id": "vocab-cefr-57",
+    "mode": "CEFR_ASCENT",
+    "level": 3,
+    "ipa": "/ˈdes.əl.tər.i/",
+    "definition": "Lacking a plan, purpose, or enthusiasm; passing aimlessly from one thing to another.",
+    "vietnamese": "rời rạc, tản mạn, thiếu mục đích và nhiệt tình",
+    "contextSentence": "After a few desultory attempts at conversation, the two strangers on the night bus lapsed into silence.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "laconic",
+    "breakdown": {
+      "cefrRank": "C2 / GRE Mastery",
+      "collocates": "laconic reply, laconic wit, laconic style, laconic manner",
+      "synonyms": [
+        "terse",
+        "succinct",
+        "taciturn"
+      ],
+      "register": "Literary Characterization"
+    },
+    "id": "vocab-cefr-58",
+    "mode": "CEFR_ASCENT",
+    "level": 3,
+    "ipa": "/ləˈkɒn.ɪk/",
+    "definition": "Using very few words; concise to the point of seeming blunt or mysterious.",
+    "vietnamese": "kiệm lời, ngắn gọn súc tích",
+    "contextSentence": "Famously laconic, the old fisherman answered every question about the storm with a shrug and a single word.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "obdurate",
+    "breakdown": {
+      "cefrRank": "C2 / GRE Mastery",
+      "collocates": "obdurate refusal, remain obdurate, obdurate opposition, obdurate silence",
+      "synonyms": [
+        "obstinate",
+        "unyielding",
+        "adamant"
+      ],
+      "register": "Formal & Literary Prose"
+    },
+    "id": "vocab-cefr-59",
+    "mode": "CEFR_ASCENT",
+    "level": 3,
+    "ipa": "/ˈɒb.djə.rət/",
+    "definition": "Stubbornly refusing to change one's opinion or course of action.",
+    "vietnamese": "cố chấp, sắt đá, không chịu lay chuyển",
+    "contextSentence": "Despite weeks of protests, the council remained obdurate and refused to reopen the public library.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "mercurial",
+    "breakdown": {
+      "cefrRank": "C2 / GRE Mastery",
+      "collocates": "mercurial temperament, mercurial genius, mercurial personality, mercurial talent",
+      "synonyms": [
+        "capricious",
+        "temperamental",
+        "fickle"
+      ],
+      "register": "Character Description & Arts Journalism"
+    },
+    "id": "vocab-cefr-60",
+    "mode": "CEFR_ASCENT",
+    "level": 3,
+    "ipa": "/mɜːˈkjʊə.ri.əl/",
+    "definition": "Subject to sudden or unpredictable changes of mood or mind.",
+    "vietnamese": "thất thường, sớm nắng chiều mưa, tính khí khó đoán",
+    "contextSentence": "The orchestra admired the mercurial conductor's brilliance but dreaded his sudden outbursts at rehearsal.",
+    "isRemindCandidate": false
+  },
+  {
     "wordOrChunk": "scale up",
     "breakdown": {
       "verb": "scale (adjust size/grade)",
@@ -2390,6 +3281,346 @@
     "definition": "Continue moving forward or making progress, especially in a determined manner despite difficulties.",
     "vietnamese": "kiên cường tiến bước, tiếp tục bền bỉ vượt gian khó",
     "contextSentence": "Despite debilitating headwinds and freezing sleet, the expedition pressed on toward the mountain ridge.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "gloss over",
+    "breakdown": {
+      "verb": "gloss (give a smooth, shiny surface)",
+      "particle": "OVER",
+      "semanticArchetype": "Covering a surface to hide what lies beneath",
+      "particleLogic": "OVER pictures a smooth, shiny layer passed across the top of a flaw so the eye slides past it."
+    },
+    "id": "vocab-pl-41",
+    "mode": "PARTICLE_LAB",
+    "level": 3,
+    "ipa": "/ɡlɒs ˈəʊ.vər/",
+    "definition": "Treat a problem, fault, or embarrassing fact briefly or superficially so as to avoid drawing attention to it.",
+    "vietnamese": "lướt qua, cố tình bỏ qua hoặc che đậy chi tiết khó chịu",
+    "contextSentence": "The official history of the school glosses over the decades when it refused to admit girls.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "paper over",
+    "breakdown": {
+      "verb": "paper (cover a wall with wallpaper)",
+      "particle": "OVER",
+      "semanticArchetype": "Concealing cracks beneath a thin covering",
+      "particleLogic": "OVER evokes wallpaper pasted across cracked plaster: the surface looks whole while the damage remains underneath."
+    },
+    "id": "vocab-pl-42",
+    "mode": "PARTICLE_LAB",
+    "level": 3,
+    "ipa": "/ˈpeɪ.pər ˈəʊ.vər/",
+    "definition": "Hide a problem or disagreement temporarily without actually resolving it.",
+    "vietnamese": "che đậy tạm thời, xoa dịu bề ngoài mà không giải quyết tận gốc",
+    "contextSentence": "The coalition partners papered over their differences on immigration just long enough to win the election.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "mull over",
+    "breakdown": {
+      "verb": "mull (ponder, turn over in the mind)",
+      "particle": "OVER",
+      "semanticArchetype": "Turning a matter over repeatedly in the mind",
+      "particleLogic": "OVER conveys rotation and repeated coverage: the idea is turned over and examined from every side."
+    },
+    "id": "vocab-pl-43",
+    "mode": "PARTICLE_LAB",
+    "level": 2,
+    "ipa": "/mʌl ˈəʊ.vər/",
+    "definition": "Think about something carefully and at length before reaching a decision.",
+    "vietnamese": "nghiền ngẫm, cân nhắc kỹ lưỡng trước khi quyết định",
+    "contextSentence": "She spent the weekend mulling over the job offer from a university on the other side of the country.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "win over",
+    "breakdown": {
+      "verb": "win (gain, succeed in obtaining)",
+      "particle": "OVER",
+      "semanticArchetype": "Bringing someone across to your side",
+      "particleLogic": "OVER marks a change of position from one side to the other, like crossing over a dividing line."
+    },
+    "id": "vocab-pl-44",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "ipa": "/wɪn ˈəʊ.vər/",
+    "definition": "Persuade someone to support or agree with you, especially after initial opposition or doubt.",
+    "vietnamese": "thuyết phục được, lôi kéo ai về phía mình",
+    "contextSentence": "The young chef's simple, honest cooking won over even the town's most conservative diners.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "follow through",
+    "breakdown": {
+      "verb": "follow (go after, pursue)",
+      "particle": "THROUGH",
+      "semanticArchetype": "Completion from beginning to end",
+      "particleLogic": "THROUGH traces a path that enters at one end and exits at the other: the action is carried along its full length, not abandoned midway."
+    },
+    "id": "vocab-pl-45",
+    "mode": "PARTICLE_LAB",
+    "level": 2,
+    "ipa": "/ˈfɒl.əʊ θruː/",
+    "definition": "Continue an action or plan until it is completed; carry out a promise or threat.",
+    "vietnamese": "thực hiện đến nơi đến chốn, theo đuổi tới cùng",
+    "contextSentence": "The government announced ambitious plans for rural clinics but never followed through with the funding.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "muddle through",
+    "breakdown": {
+      "verb": "muddle (act in a confused, disorganized way)",
+      "particle": "THROUGH",
+      "semanticArchetype": "Disorderly passage to the far side",
+      "particleLogic": "THROUGH guarantees eventual arrival at the end, while the verb admits the route was messy."
+    },
+    "id": "vocab-pl-46",
+    "mode": "PARTICLE_LAB",
+    "level": 3,
+    "ipa": "/ˈmʌd.əl θruː/",
+    "definition": "Manage to cope or succeed despite lacking proper planning, skill, or resources.",
+    "vietnamese": "xoay xở cho qua, lóng ngóng nhưng rồi cũng vượt qua được",
+    "contextSentence": "With no instructions and a toddler underfoot, we somehow muddled through assembling the bookcase.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "scrape through",
+    "breakdown": {
+      "verb": "scrape (rub against a rough or hard surface)",
+      "particle": "THROUGH",
+      "semanticArchetype": "Squeezing through a narrow gap",
+      "particleLogic": "THROUGH marks reaching the other side, while scrape suggests brushing the edges of an opening barely wide enough."
+    },
+    "id": "vocab-pl-47",
+    "mode": "PARTICLE_LAB",
+    "level": 2,
+    "ipa": "/skreɪp θruː/",
+    "definition": "Succeed in passing an exam or getting through a difficult situation by a very narrow margin.",
+    "vietnamese": "đỗ sát nút, vượt qua một cách chật vật",
+    "contextSentence": "He barely revised for his chemistry finals and only scraped through with the minimum pass mark.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "see through",
+    "breakdown": {
+      "verb": "see (perceive with the eyes)",
+      "particle": "THROUGH",
+      "semanticArchetype": "Visual penetration of a disguise",
+      "particleLogic": "THROUGH means passing beyond a surface barrier: perception pierces the deceptive facade to what lies behind it."
+    },
+    "id": "vocab-pl-48",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "ipa": "/siː θruː/",
+    "definition": "Recognize the true nature of someone or something and not be deceived by it.",
+    "vietnamese": "nhìn thấu, nhận ra bản chất thật (không bị lừa)",
+    "contextSentence": "Voters quickly saw through the candidate's promise to cut taxes and raise spending at the same time.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "claw back",
+    "breakdown": {
+      "verb": "claw (scratch or grasp with claws)",
+      "particle": "BACK",
+      "semanticArchetype": "Effortful return of lost possession",
+      "particleLogic": "BACK marks return to a previous owner or position; claw adds the image of grabbing it piece by piece against resistance."
+    },
+    "id": "vocab-pl-49",
+    "mode": "PARTICLE_LAB",
+    "level": 3,
+    "ipa": "/klɔː bæk/",
+    "definition": "Regain something lost, such as money, ground, or support, gradually and with great effort; or recover money already paid out.",
+    "vietnamese": "giành lại từng chút một một cách chật vật; thu hồi khoản tiền đã chi trả",
+    "contextSentence": "After a disastrous first half, the visiting team clawed back two goals in the final ten minutes.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "fall back on",
+    "breakdown": {
+      "verb": "fall (drop, move downward or backward)",
+      "particle": "BACK",
+      "semanticArchetype": "Retreat to a reserve position",
+      "particleLogic": "BACK denotes retreating to a prepared position behind the front line, which then supports you (ON)."
+    },
+    "id": "vocab-pl-50",
+    "mode": "PARTICLE_LAB",
+    "level": 2,
+    "ipa": "/fɔːl bæk ɒn/",
+    "definition": "Turn to something or someone for support when other options have failed.",
+    "vietnamese": "dựa vào, cầu viện đến (phương án dự phòng)",
+    "contextSentence": "When the harvest failed, families fell back on their savings and the vegetables in their home gardens.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "cut back",
+    "breakdown": {
+      "verb": "cut (sever with a blade)",
+      "particle": "BACK",
+      "semanticArchetype": "Pruning to an earlier, smaller extent",
+      "particleLogic": "BACK comes from pruning plants back toward the stem, returning them to a smaller, earlier size."
+    },
+    "id": "vocab-pl-51",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "ipa": "/kʌt bæk/",
+    "definition": "Reduce the amount of something, especially spending or consumption.",
+    "vietnamese": "cắt giảm (chi tiêu, mức tiêu thụ)",
+    "contextSentence": "Her doctor advised her to cut back on salt and coffee after the blood pressure check.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "fritter away",
+    "breakdown": {
+      "verb": "fritter (break into small fragments)",
+      "particle": "AWAY",
+      "semanticArchetype": "Gradual dispersal into nothing",
+      "particleLogic": "AWAY signals progressive loss and disappearance; fritter adds the image of breaking a whole into tiny wasted pieces."
+    },
+    "id": "vocab-pl-52",
+    "mode": "PARTICLE_LAB",
+    "level": 3,
+    "ipa": "/ˈfrɪt.ər əˈweɪ/",
+    "definition": "Waste time, money, or energy gradually on trivial things.",
+    "vietnamese": "phung phí dần dần, tiêu xài hoang phí vào những thứ vụn vặt",
+    "contextSentence": "He frittered away his inheritance on gadgets and holidays and had nothing left by thirty.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "chip away at",
+    "breakdown": {
+      "verb": "chip (break small pieces off a hard surface)",
+      "particle": "AWAY",
+      "semanticArchetype": "Incremental erosion of a solid mass",
+      "particleLogic": "AWAY marks continuous removal, while AT points to the target being worn down bit by bit."
+    },
+    "id": "vocab-pl-53",
+    "mode": "PARTICLE_LAB",
+    "level": 2,
+    "ipa": "/tʃɪp əˈweɪ æt/",
+    "definition": "Gradually reduce or weaken something through persistent small efforts.",
+    "vietnamese": "bào mòn dần, từng bước làm suy yếu hoặc giảm bớt",
+    "contextSentence": "She chipped away at her student debt by tutoring every weekend for three years.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "whittle away",
+    "breakdown": {
+      "verb": "whittle (carve wood by shaving off small slices)",
+      "particle": "AWAY",
+      "semanticArchetype": "Shaving a block down toward nothing",
+      "particleLogic": "AWAY expresses steady diminishing; the carving image shows something shrinking slice by slice."
+    },
+    "id": "vocab-pl-54",
+    "mode": "PARTICLE_LAB",
+    "level": 3,
+    "ipa": "/ˈwɪt.əl əˈweɪ/",
+    "definition": "Gradually reduce the size, amount, or strength of something through repeated small reductions.",
+    "vietnamese": "gọt dần, làm hao mòn từng chút một",
+    "contextSentence": "Successive amendments whittled away the protections that the original law had given to tenants.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "cave in",
+    "breakdown": {
+      "verb": "cave (collapse, hollow out)",
+      "particle": "IN",
+      "semanticArchetype": "Structural collapse inward under pressure",
+      "particleLogic": "IN shows walls or a roof falling inward under load; resistance gives way the same way under social pressure."
+    },
+    "id": "vocab-pl-55",
+    "mode": "PARTICLE_LAB",
+    "level": 2,
+    "ipa": "/keɪv ɪn/",
+    "definition": "Collapse inward; figuratively, give in to pressure or demands after a period of resistance.",
+    "vietnamese": "sụp đổ; (nghĩa bóng) nhượng bộ, đầu hàng trước sức ép",
+    "contextSentence": "After three weeks of strikes, management caved in and agreed to restore the night-shift bonus.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "factor in",
+    "breakdown": {
+      "verb": "factor (treat as a contributing element; in mathematics, a multiplier)",
+      "particle": "IN",
+      "semanticArchetype": "Inclusion within a calculation",
+      "particleLogic": "IN marks entry into a container: the item is placed inside the equation or plan."
+    },
+    "id": "vocab-pl-56",
+    "mode": "PARTICLE_LAB",
+    "level": 2,
+    "ipa": "/ˈfæk.tər ɪn/",
+    "definition": "Include something as a relevant element when making a calculation, plan, or decision.",
+    "vietnamese": "tính đến, đưa vào cân nhắc hoặc tính toán",
+    "contextSentence": "When you budget for the trip, remember to factor in airport transfers and visa fees.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "rein in",
+    "breakdown": {
+      "verb": "rein (control a horse with reins)",
+      "particle": "IN",
+      "semanticArchetype": "Pulling a runaway force back under control",
+      "particleLogic": "IN depicts drawing the reins toward the rider's body, pulling a galloping horse inward to a controlled pace."
+    },
+    "id": "vocab-pl-57",
+    "mode": "PARTICLE_LAB",
+    "level": 3,
+    "ipa": "/reɪn ɪn/",
+    "definition": "Restrict or bring under control something that is excessive or unruly.",
+    "vietnamese": "kiềm chế, kìm hãm, siết lại trong tầm kiểm soát",
+    "contextSentence": "The new governor promised to rein in public spending without closing rural schools.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "skirt around",
+    "breakdown": {
+      "verb": "skirt (go along the edge of)",
+      "particle": "AROUND",
+      "semanticArchetype": "Circling the perimeter without entering",
+      "particleLogic": "AROUND describes a path that follows the outer edge of an obstacle and never crosses into its center."
+    },
+    "id": "vocab-pl-58",
+    "mode": "PARTICLE_LAB",
+    "level": 3,
+    "ipa": "/skɜːt əˈraʊnd/",
+    "definition": "Avoid dealing with or talking directly about a difficult or awkward subject.",
+    "vietnamese": "né tránh, lảng tránh, nói vòng vo quanh vấn đề",
+    "contextSentence": "The interview skirted around the actor's legal troubles and focused instead on his new film.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "come across as",
+    "breakdown": {
+      "verb": "come (move toward)",
+      "particle": "ACROSS",
+      "semanticArchetype": "Transmission of an impression to an observer",
+      "particleLogic": "ACROSS traces the image traveling over the gap between speaker and listener; AS names the form in which it arrives."
+    },
+    "id": "vocab-pl-59",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "ipa": "/kʌm əˈkrɒs æz/",
+    "definition": "Give a particular impression to other people.",
+    "vietnamese": "tạo ấn tượng là, có vẻ như (trong mắt người khác)",
+    "contextSentence": "He doesn't mean to be rude, but his short emails can come across as cold.",
+    "isRemindCandidate": true
+  },
+  {
+    "wordOrChunk": "get across",
+    "breakdown": {
+      "verb": "get (cause to move or arrive)",
+      "particle": "ACROSS",
+      "semanticArchetype": "Delivering a message over a divide",
+      "particleLogic": "ACROSS marks successful passage from one side to the other: the idea crosses from the speaker's mind into the listener's."
+    },
+    "id": "vocab-pl-60",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "ipa": "/ɡet əˈkrɒs/",
+    "definition": "Communicate an idea successfully so that it is understood.",
+    "vietnamese": "truyền đạt được, làm cho người khác hiểu",
+    "contextSentence": "The museum uses interactive models to get across how earthquakes actually form.",
     "isRemindCandidate": false
   }
 ]

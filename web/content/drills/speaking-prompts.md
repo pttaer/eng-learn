@@ -270,3 +270,93 @@
 - **Collocations**: existential risk, intergenerational equity, civilizational resilience, long-term stewardship
 - **Phonetic**: Resonant, expansive pacing; deliberate rhetorical pauses before visionary conclusions.
 
+## Disagreeing Diplomatically with a Senior Colleague
+- **ID**: speaking-31
+- **Index**: 31
+- **Mode**: 4-3-2 Fluency Drill
+- **Prompt**: Your line manager proposes launching a product two months early to beat a competitor, but you believe the quality risks are serious. Persuade them to reconsider without undermining their authority.
+- **Anchor**: Acknowledge the goal (shared ambition to lead the market) → Reframe the risk (concrete consequences of shipping early) → Offer a face-saving alternative (phased or limited release)
+- **Collocations**: with all due respect, I take your point, play devil's advocate, a calculated risk, meet someone halfway
+- **Phonetic**: Fall-rise on concessive openers ('I SEE the logic ↘↗') to signal that a 'but' is coming; deliver the critical clause on a gentle low fall rather than a sharp high fall, which sounds confrontational.
+
+## Breaking Bad News with Tact
+- **ID**: speaking-32
+- **Index**: 32
+- **Mode**: 2-Minute Impromptu Jamming
+- **Prompt**: You have to tell a long-standing team member that their role is being eliminated in a restructuring. Deliver the news clearly and compassionately, without offering false hope.
+- **Anchor**: Signal and state (a brief warning, then the decision in one plain sentence) → Explain and absorb (the reasons, then a pause for their reaction) → Support and next steps (concrete help and a clear timeline)
+- **Collocations**: I'm afraid I have some difficult news, it was not an easy decision, through no fault of your own, take all the time you need, explore the options
+- **Phonetic**: Slow the tempo and lower the pitch range on the key sentence; keep it in a single tone unit with a clear final fall so the message is not softened into ambiguity, then leave a full pause.
+
+## The Turning Point: Narrating a Personal Story
+- **ID**: speaking-33
+- **Index**: 33
+- **Mode**: 4-3-2 Fluency Drill
+- **Prompt**: Recount a moment that changed the direction of your life or career, making clear what you believed before, what happened, and how you see it now.
+- **Anchor**: Backstory (past perfect and 'used to': who I had been) → The pivotal moment (past simple and past continuous: what happened) → Reflection (present perfect and present simple: what has changed since)
+- **Collocations**: little did I know, in hindsight, a defining moment, it finally clicked, it dawned on me
+- **Phonetic**: Mark the climax with a pause before the key clause and a high-onset fall on the pivotal word; use weak forms /həd/ and /wəz/ in the backstory so that stressed content words carry the rhythm.
+
+## Persuading an Unconvinced Audience
+- **ID**: speaking-34
+- **Index**: 34
+- **Mode**: 2-Minute Impromptu Jamming
+- **Prompt**: You are presenting a four-day working week pilot to a room of department heads who are openly doubtful. Win them over in two minutes.
+- **Anchor**: Concede their concern (name the strongest objection first) → Reframe with a low-risk test (a time-limited pilot with clear success measures) → Call to action (the specific decision you want today)
+- **Collocations**: I'm well aware that, the burden of proof, a low-risk trial, by the same token, what have we got to lose
+- **Phonetic**: Use contrastive stress to pivot from their view to yours ('YOU see a cost; I see an INVESTMENT'); end the call to action on a decisive fall, not a rising tone that invites refusal.
+
+## Explaining a Complex Idea to a Twelve-Year-Old
+- **ID**: speaking-35
+- **Index**: 35
+- **Mode**: 4-3-2 Fluency Drill
+- **Prompt**: Explain to a curious twelve-year-old how vaccines train the immune system, without jargon and without talking down to them.
+- **Anchor**: Relatable analogy (a wanted poster for germs) → Mechanism in plain steps (practice run, memory, faster response) → Check understanding (invite a question and restate the idea in one line)
+- **Collocations**: think of it like, in other words, the gist of it, it boils down to, does that make sense
+- **Phonetic**: Keep tone units short with one nucleus each; use a rising tone on check questions ('Does that make SENSE? ↗'); place stress on the analogy keyword rather than on technical terms.
+
+## Negotiating a Compromise Between Two Teams
+- **ID**: speaking-36
+- **Index**: 36
+- **Mode**: 2-Minute Impromptu Jamming
+- **Prompt**: Two departments both claim the same limited budget for the coming year. As the mediator, propose a compromise that both sides can accept.
+- **Anchor**: Map interests (what each team actually needs, not what it demands) → Explore trade-offs (sequencing, shared resources, conditions) → Package deal (restate the agreement and confirm commitment from both sides)
+- **Collocations**: common ground, a sticking point, split the difference, a win-win outcome, on condition that
+- **Phonetic**: Fall-rise on conditional offers ('IF we can agree on timing ↘↗...'); keep a level, unhurried pitch to project neutrality; stress the contrasting possessives ('YOUR team... OUR side').
+
+## Raising a Glass: A Retirement Toast
+- **ID**: speaking-37
+- **Index**: 37
+- **Mode**: 4-3-2 Fluency Drill
+- **Prompt**: Give a toast at the retirement dinner of a mentor who shaped your early career, balancing warmth, light-hearted wit and sincerity.
+- **Anchor**: Hook anecdote (a vivid first memory of them) → Tribute (their qualities and their impact on others) → Toast (a forward-looking wish and the invitation to raise glasses)
+- **Collocations**: it gives me great pleasure, leave a lasting legacy, go above and beyond, words cannot do justice, please join me in raising a glass
+- **Phonetic**: Pause just before punchlines and before the final toast; use the weak form /tə/ in 'Here's to Sam' so that the name carries the nuclear stress on a warm, wide fall.
+
+## Handling a Hostile Question at a Press Conference
+- **ID**: speaking-38
+- **Index**: 38
+- **Mode**: 2-Minute Impromptu Jamming
+- **Prompt**: After you announce a product recall, a journalist accuses your company of covering up the defect for months. Respond calmly and honestly without becoming defensive.
+- **Anchor**: Acknowledge and bridge (validate the concern without repeating the accusation) → Address the substance (what was known, when, and what was done) → Pivot to commitment (concrete corrective steps and accountability)
+- **Collocations**: I understand why you would ask, let me be absolutely clear, with the benefit of hindsight, take full responsibility, the facts are as follows
+- **Phonetic**: Keep the pitch range narrow and the tempo steady; avoid rising intonation on factual statements, which sounds uncertain; place nuclear stress on verbs of commitment ('we WILL publish the findings').
+
+## Hedging an Uncertain Forecast
+- **ID**: speaking-39
+- **Index**: 39
+- **Mode**: 4-3-2 Fluency Drill
+- **Prompt**: Your director asks whether next year's sales will recover, but the data are mixed. Give a balanced forecast that is honest about uncertainty yet still useful for planning.
+- **Anchor**: Best estimate (with an explicit level of confidence) → Key assumptions and risks (what could push the figure up or down) → Planning recommendation (scenarios and trigger points for review)
+- **Collocations**: in all likelihood, barring any major shocks, err on the side of caution, by and large, a fair degree of uncertainty
+- **Phonetic**: Fall-rise on hedges ('PROBably ↘↗') to signal reservation; stress modals of probability ('it MAY recover'); replace fillers with short silent pauses between tone units.
+
+## Critiquing a Work You Admire but Question
+- **ID**: speaking-40
+- **Index**: 40
+- **Mode**: 2-Minute Impromptu Jamming
+- **Prompt**: Describe a film, painting or novel you consider significant but flawed, assessing both its artistic achievement and its shortcomings.
+- **Anchor**: Context and premise (what the work sets out to do) → Achievement (craft, imagery, performance) → Reservations and verdict (where it falls short and why it still matters)
+- **Collocations**: strike a chord, a tour de force, fall flat, verge on the sentimental, stand the test of time
+- **Phonetic**: Contrastive stress on evaluative pairs ('visually STUNNING but dramatically THIN'); fall-rise on the concessive 'admittedly'; slow the tempo for the final verdict.
+

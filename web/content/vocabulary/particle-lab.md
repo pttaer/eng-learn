@@ -600,3 +600,303 @@
 - **Particle Logic**: ON signifies continuity along the trajectory despite resistance.
 - **Remind Candidate**: false
 
+## gloss over
+- **ID**: vocab-pl-41
+- **Mode**: PARTICLE_LAB
+- **Level**: 3
+- **Word**: gloss over
+- **IPA**: /ɡlɒs ˈəʊ.vər/
+- **Definition**: Treat a problem, fault, or embarrassing fact briefly or superficially so as to avoid drawing attention to it.
+- **Vietnamese**: lướt qua, cố tình bỏ qua hoặc che đậy chi tiết khó chịu
+- **Context**: The official history of the school glosses over the decades when it refused to admit girls.
+- **Verb**: gloss (give a smooth, shiny surface)
+- **Particle**: OVER
+- **Semantic Archetype**: Covering a surface to hide what lies beneath
+- **Particle Logic**: OVER pictures a smooth, shiny layer passed across the top of a flaw so the eye slides past it.
+- **Remind Candidate**: true
+
+## paper over
+- **ID**: vocab-pl-42
+- **Mode**: PARTICLE_LAB
+- **Level**: 3
+- **Word**: paper over
+- **IPA**: /ˈpeɪ.pər ˈəʊ.vər/
+- **Definition**: Hide a problem or disagreement temporarily without actually resolving it.
+- **Vietnamese**: che đậy tạm thời, xoa dịu bề ngoài mà không giải quyết tận gốc
+- **Context**: The coalition partners papered over their differences on immigration just long enough to win the election.
+- **Verb**: paper (cover a wall with wallpaper)
+- **Particle**: OVER
+- **Semantic Archetype**: Concealing cracks beneath a thin covering
+- **Particle Logic**: OVER evokes wallpaper pasted across cracked plaster: the surface looks whole while the damage remains underneath.
+- **Remind Candidate**: true
+
+## mull over
+- **ID**: vocab-pl-43
+- **Mode**: PARTICLE_LAB
+- **Level**: 2
+- **Word**: mull over
+- **IPA**: /mʌl ˈəʊ.vər/
+- **Definition**: Think about something carefully and at length before reaching a decision.
+- **Vietnamese**: nghiền ngẫm, cân nhắc kỹ lưỡng trước khi quyết định
+- **Context**: She spent the weekend mulling over the job offer from a university on the other side of the country.
+- **Verb**: mull (ponder, turn over in the mind)
+- **Particle**: OVER
+- **Semantic Archetype**: Turning a matter over repeatedly in the mind
+- **Particle Logic**: OVER conveys rotation and repeated coverage: the idea is turned over and examined from every side.
+- **Remind Candidate**: false
+
+## win over
+- **ID**: vocab-pl-44
+- **Mode**: PARTICLE_LAB
+- **Level**: 1
+- **Word**: win over
+- **IPA**: /wɪn ˈəʊ.vər/
+- **Definition**: Persuade someone to support or agree with you, especially after initial opposition or doubt.
+- **Vietnamese**: thuyết phục được, lôi kéo ai về phía mình
+- **Context**: The young chef's simple, honest cooking won over even the town's most conservative diners.
+- **Verb**: win (gain, succeed in obtaining)
+- **Particle**: OVER
+- **Semantic Archetype**: Bringing someone across to your side
+- **Particle Logic**: OVER marks a change of position from one side to the other, like crossing over a dividing line.
+- **Remind Candidate**: false
+
+## follow through
+- **ID**: vocab-pl-45
+- **Mode**: PARTICLE_LAB
+- **Level**: 2
+- **Word**: follow through
+- **IPA**: /ˈfɒl.əʊ θruː/
+- **Definition**: Continue an action or plan until it is completed; carry out a promise or threat.
+- **Vietnamese**: thực hiện đến nơi đến chốn, theo đuổi tới cùng
+- **Context**: The government announced ambitious plans for rural clinics but never followed through with the funding.
+- **Verb**: follow (go after, pursue)
+- **Particle**: THROUGH
+- **Semantic Archetype**: Completion from beginning to end
+- **Particle Logic**: THROUGH traces a path that enters at one end and exits at the other: the action is carried along its full length, not abandoned midway.
+- **Remind Candidate**: false
+
+## muddle through
+- **ID**: vocab-pl-46
+- **Mode**: PARTICLE_LAB
+- **Level**: 3
+- **Word**: muddle through
+- **IPA**: /ˈmʌd.əl θruː/
+- **Definition**: Manage to cope or succeed despite lacking proper planning, skill, or resources.
+- **Vietnamese**: xoay xở cho qua, lóng ngóng nhưng rồi cũng vượt qua được
+- **Context**: With no instructions and a toddler underfoot, we somehow muddled through assembling the bookcase.
+- **Verb**: muddle (act in a confused, disorganized way)
+- **Particle**: THROUGH
+- **Semantic Archetype**: Disorderly passage to the far side
+- **Particle Logic**: THROUGH guarantees eventual arrival at the end, while the verb admits the route was messy.
+- **Remind Candidate**: false
+
+## scrape through
+- **ID**: vocab-pl-47
+- **Mode**: PARTICLE_LAB
+- **Level**: 2
+- **Word**: scrape through
+- **IPA**: /skreɪp θruː/
+- **Definition**: Succeed in passing an exam or getting through a difficult situation by a very narrow margin.
+- **Vietnamese**: đỗ sát nút, vượt qua một cách chật vật
+- **Context**: He barely revised for his chemistry finals and only scraped through with the minimum pass mark.
+- **Verb**: scrape (rub against a rough or hard surface)
+- **Particle**: THROUGH
+- **Semantic Archetype**: Squeezing through a narrow gap
+- **Particle Logic**: THROUGH marks reaching the other side, while scrape suggests brushing the edges of an opening barely wide enough.
+- **Remind Candidate**: false
+
+## see through
+- **ID**: vocab-pl-48
+- **Mode**: PARTICLE_LAB
+- **Level**: 1
+- **Word**: see through
+- **IPA**: /siː θruː/
+- **Definition**: Recognize the true nature of someone or something and not be deceived by it.
+- **Vietnamese**: nhìn thấu, nhận ra bản chất thật (không bị lừa)
+- **Context**: Voters quickly saw through the candidate's promise to cut taxes and raise spending at the same time.
+- **Verb**: see (perceive with the eyes)
+- **Particle**: THROUGH
+- **Semantic Archetype**: Visual penetration of a disguise
+- **Particle Logic**: THROUGH means passing beyond a surface barrier: perception pierces the deceptive facade to what lies behind it.
+- **Remind Candidate**: false
+
+## claw back
+- **ID**: vocab-pl-49
+- **Mode**: PARTICLE_LAB
+- **Level**: 3
+- **Word**: claw back
+- **IPA**: /klɔː bæk/
+- **Definition**: Regain something lost, such as money, ground, or support, gradually and with great effort; or recover money already paid out.
+- **Vietnamese**: giành lại từng chút một một cách chật vật; thu hồi khoản tiền đã chi trả
+- **Context**: After a disastrous first half, the visiting team clawed back two goals in the final ten minutes.
+- **Verb**: claw (scratch or grasp with claws)
+- **Particle**: BACK
+- **Semantic Archetype**: Effortful return of lost possession
+- **Particle Logic**: BACK marks return to a previous owner or position; claw adds the image of grabbing it piece by piece against resistance.
+- **Remind Candidate**: true
+
+## fall back on
+- **ID**: vocab-pl-50
+- **Mode**: PARTICLE_LAB
+- **Level**: 2
+- **Word**: fall back on
+- **IPA**: /fɔːl bæk ɒn/
+- **Definition**: Turn to something or someone for support when other options have failed.
+- **Vietnamese**: dựa vào, cầu viện đến (phương án dự phòng)
+- **Context**: When the harvest failed, families fell back on their savings and the vegetables in their home gardens.
+- **Verb**: fall (drop, move downward or backward)
+- **Particle**: BACK
+- **Semantic Archetype**: Retreat to a reserve position
+- **Particle Logic**: BACK denotes retreating to a prepared position behind the front line, which then supports you (ON).
+- **Remind Candidate**: false
+
+## cut back
+- **ID**: vocab-pl-51
+- **Mode**: PARTICLE_LAB
+- **Level**: 1
+- **Word**: cut back
+- **IPA**: /kʌt bæk/
+- **Definition**: Reduce the amount of something, especially spending or consumption.
+- **Vietnamese**: cắt giảm (chi tiêu, mức tiêu thụ)
+- **Context**: Her doctor advised her to cut back on salt and coffee after the blood pressure check.
+- **Verb**: cut (sever with a blade)
+- **Particle**: BACK
+- **Semantic Archetype**: Pruning to an earlier, smaller extent
+- **Particle Logic**: BACK comes from pruning plants back toward the stem, returning them to a smaller, earlier size.
+- **Remind Candidate**: false
+
+## fritter away
+- **ID**: vocab-pl-52
+- **Mode**: PARTICLE_LAB
+- **Level**: 3
+- **Word**: fritter away
+- **IPA**: /ˈfrɪt.ər əˈweɪ/
+- **Definition**: Waste time, money, or energy gradually on trivial things.
+- **Vietnamese**: phung phí dần dần, tiêu xài hoang phí vào những thứ vụn vặt
+- **Context**: He frittered away his inheritance on gadgets and holidays and had nothing left by thirty.
+- **Verb**: fritter (break into small fragments)
+- **Particle**: AWAY
+- **Semantic Archetype**: Gradual dispersal into nothing
+- **Particle Logic**: AWAY signals progressive loss and disappearance; fritter adds the image of breaking a whole into tiny wasted pieces.
+- **Remind Candidate**: true
+
+## chip away at
+- **ID**: vocab-pl-53
+- **Mode**: PARTICLE_LAB
+- **Level**: 2
+- **Word**: chip away at
+- **IPA**: /tʃɪp əˈweɪ æt/
+- **Definition**: Gradually reduce or weaken something through persistent small efforts.
+- **Vietnamese**: bào mòn dần, từng bước làm suy yếu hoặc giảm bớt
+- **Context**: She chipped away at her student debt by tutoring every weekend for three years.
+- **Verb**: chip (break small pieces off a hard surface)
+- **Particle**: AWAY
+- **Semantic Archetype**: Incremental erosion of a solid mass
+- **Particle Logic**: AWAY marks continuous removal, while AT points to the target being worn down bit by bit.
+- **Remind Candidate**: false
+
+## whittle away
+- **ID**: vocab-pl-54
+- **Mode**: PARTICLE_LAB
+- **Level**: 3
+- **Word**: whittle away
+- **IPA**: /ˈwɪt.əl əˈweɪ/
+- **Definition**: Gradually reduce the size, amount, or strength of something through repeated small reductions.
+- **Vietnamese**: gọt dần, làm hao mòn từng chút một
+- **Context**: Successive amendments whittled away the protections that the original law had given to tenants.
+- **Verb**: whittle (carve wood by shaving off small slices)
+- **Particle**: AWAY
+- **Semantic Archetype**: Shaving a block down toward nothing
+- **Particle Logic**: AWAY expresses steady diminishing; the carving image shows something shrinking slice by slice.
+- **Remind Candidate**: false
+
+## cave in
+- **ID**: vocab-pl-55
+- **Mode**: PARTICLE_LAB
+- **Level**: 2
+- **Word**: cave in
+- **IPA**: /keɪv ɪn/
+- **Definition**: Collapse inward; figuratively, give in to pressure or demands after a period of resistance.
+- **Vietnamese**: sụp đổ; (nghĩa bóng) nhượng bộ, đầu hàng trước sức ép
+- **Context**: After three weeks of strikes, management caved in and agreed to restore the night-shift bonus.
+- **Verb**: cave (collapse, hollow out)
+- **Particle**: IN
+- **Semantic Archetype**: Structural collapse inward under pressure
+- **Particle Logic**: IN shows walls or a roof falling inward under load; resistance gives way the same way under social pressure.
+- **Remind Candidate**: false
+
+## factor in
+- **ID**: vocab-pl-56
+- **Mode**: PARTICLE_LAB
+- **Level**: 2
+- **Word**: factor in
+- **IPA**: /ˈfæk.tər ɪn/
+- **Definition**: Include something as a relevant element when making a calculation, plan, or decision.
+- **Vietnamese**: tính đến, đưa vào cân nhắc hoặc tính toán
+- **Context**: When you budget for the trip, remember to factor in airport transfers and visa fees.
+- **Verb**: factor (treat as a contributing element; in mathematics, a multiplier)
+- **Particle**: IN
+- **Semantic Archetype**: Inclusion within a calculation
+- **Particle Logic**: IN marks entry into a container: the item is placed inside the equation or plan.
+- **Remind Candidate**: false
+
+## rein in
+- **ID**: vocab-pl-57
+- **Mode**: PARTICLE_LAB
+- **Level**: 3
+- **Word**: rein in
+- **IPA**: /reɪn ɪn/
+- **Definition**: Restrict or bring under control something that is excessive or unruly.
+- **Vietnamese**: kiềm chế, kìm hãm, siết lại trong tầm kiểm soát
+- **Context**: The new governor promised to rein in public spending without closing rural schools.
+- **Verb**: rein (control a horse with reins)
+- **Particle**: IN
+- **Semantic Archetype**: Pulling a runaway force back under control
+- **Particle Logic**: IN depicts drawing the reins toward the rider's body, pulling a galloping horse inward to a controlled pace.
+- **Remind Candidate**: true
+
+## skirt around
+- **ID**: vocab-pl-58
+- **Mode**: PARTICLE_LAB
+- **Level**: 3
+- **Word**: skirt around
+- **IPA**: /skɜːt əˈraʊnd/
+- **Definition**: Avoid dealing with or talking directly about a difficult or awkward subject.
+- **Vietnamese**: né tránh, lảng tránh, nói vòng vo quanh vấn đề
+- **Context**: The interview skirted around the actor's legal troubles and focused instead on his new film.
+- **Verb**: skirt (go along the edge of)
+- **Particle**: AROUND
+- **Semantic Archetype**: Circling the perimeter without entering
+- **Particle Logic**: AROUND describes a path that follows the outer edge of an obstacle and never crosses into its center.
+- **Remind Candidate**: true
+
+## come across as
+- **ID**: vocab-pl-59
+- **Mode**: PARTICLE_LAB
+- **Level**: 1
+- **Word**: come across as
+- **IPA**: /kʌm əˈkrɒs æz/
+- **Definition**: Give a particular impression to other people.
+- **Vietnamese**: tạo ấn tượng là, có vẻ như (trong mắt người khác)
+- **Context**: He doesn't mean to be rude, but his short emails can come across as cold.
+- **Verb**: come (move toward)
+- **Particle**: ACROSS
+- **Semantic Archetype**: Transmission of an impression to an observer
+- **Particle Logic**: ACROSS traces the image traveling over the gap between speaker and listener; AS names the form in which it arrives.
+- **Remind Candidate**: true
+
+## get across
+- **ID**: vocab-pl-60
+- **Mode**: PARTICLE_LAB
+- **Level**: 1
+- **Word**: get across
+- **IPA**: /ɡet əˈkrɒs/
+- **Definition**: Communicate an idea successfully so that it is understood.
+- **Vietnamese**: truyền đạt được, làm cho người khác hiểu
+- **Context**: The museum uses interactive models to get across how earthquakes actually form.
+- **Verb**: get (cause to move or arrive)
+- **Particle**: ACROSS
+- **Semantic Archetype**: Delivering a message over a divide
+- **Particle Logic**: ACROSS marks successful passage from one side to the other: the idea crosses from the speaker's mind into the listener's.
+- **Remind Candidate**: false
+

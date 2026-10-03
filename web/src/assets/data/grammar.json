@@ -195,6 +195,45 @@
     "exemplarContext": "Concealed beneath layers of corporate shell companies was the beneficial owner of the sanctioned assets."
   },
   {
+    "title": "Negative Inversion with 'Little did...'",
+    "id": "gram-inv-16",
+    "mode": "INVERSION_EMPHASIS",
+    "level": 1,
+    "promptSentence": "The shareholders did not suspect that the merger talks had already collapsed behind closed doors.",
+    "targetTransformation": "Little did the shareholders suspect that the merger talks had already collapsed behind closed doors.",
+    "grammaticalCue": "Fronting the negative adverb 'little' (meaning 'not at all') triggers do-support inversion: 'did + subject + base verb'.",
+    "vietnamese": "Đảo ngữ với 'Little did': 'Little' mang nghĩa phủ định 'hoàn toàn không'; đưa lên đầu câu, đảo trợ động từ 'did' lên trước chủ ngữ và đưa động từ chính về nguyên mẫu.",
+    "formula": "Little + do/does/did + Subject + Verb of Knowledge or Expectation (know/suspect/imagine/dream)...",
+    "analysis": "Here 'little' is not a quantifier but a negative degree adverb equivalent to 'not at all'; like other negative adverbials, it forces subject-auxiliary inversion when fronted. It combines almost exclusively with verbs of knowledge and expectation (know, suspect, imagine, dream) and typically creates dramatic irony by contrasting a character's ignorance with what the reader already knows.",
+    "exemplarContext": "Little did the young clerk imagine that the ledger he was copying would one day convict his employer."
+  },
+  {
+    "title": "Restrictive Inversion with 'Only after...'",
+    "id": "gram-inv-17",
+    "mode": "INVERSION_EMPHASIS",
+    "level": 2,
+    "promptSentence": "The board approved the acquisition only after the due-diligence report had been independently verified.",
+    "targetTransformation": "Only after the due-diligence report had been independently verified did the board approve the acquisition.",
+    "grammaticalCue": "Front the restrictive adjunct 'Only after [clause]'; invert the auxiliary in the main clause, never inside the 'after' clause.",
+    "vietnamese": "Đảo ngữ với 'Only after/Only when': Mệnh đề hoặc cụm từ đi sau 'Only' giữ nguyên trật tự; chỉ đảo trợ động từ ở mệnh đề chính.",
+    "formula": "Only after/when/once/if + Clause or Phrase + Auxiliary + Subject + Main Verb...",
+    "analysis": "'Only' restricts the truth of the proposition to a single condition or moment and so carries an implicit negative ('not before that'); fronting the whole restrictive adjunct therefore triggers inversion in the matrix clause. When 'only' modifies the subject itself, however, no inversion occurs ('Only the auditor noticed the error'), because the focused element is the subject and there is nothing to invert around it.",
+    "exemplarContext": "Only when the last hostage had been released did the negotiators allow themselves to sleep."
+  },
+  {
+    "title": "Degree Inversion with 'Such + be + Noun Phrase'",
+    "id": "gram-inv-18",
+    "mode": "INVERSION_EMPHASIS",
+    "level": 3,
+    "promptSentence": "The public backlash was so intense that the ministry withdrew the bill within a week.",
+    "targetTransformation": "Such was the intensity of the public backlash that the ministry withdrew the bill within a week.",
+    "grammaticalCue": "Front predicative 'Such'; invert the copula before an abstract-noun subject ('the intensity of...'); the verb agrees with that following subject.",
+    "vietnamese": "Đảo ngữ với 'Such + be + cụm danh từ + that': Đưa 'Such' lên đầu câu, đảo động từ 'be' lên trước chủ ngữ là danh từ trừu tượng (the intensity of...), theo sau là mệnh đề kết quả.",
+    "formula": "Such + be (agreeing with the following subject) + Noun Phrase Subject + that + Result Clause...",
+    "analysis": "Unlike 'So + adjective + be + subject', the 'such' pattern fronts a pro-form standing for the degree itself, so the original adjective usually has to be recast as an abstract noun ('intense' becomes 'the intensity of'). Because the real subject follows the verb, agreement is easily mishandled: 'Such were the pressures on the team that...' requires plural 'were'. The construction suits formal narrative and rhetoric in which the result clause forms the climax.",
+    "exemplarContext": "Such were the delays at the border that perishable cargo had to be destroyed before it reached the market."
+  },
+  {
     "title": "Mandative Subjunctive with 'Demand that'",
     "id": "gram-subj-1",
     "mode": "SUBJUNCTIVE_UNREAL",
@@ -388,6 +427,45 @@
     "formula": "Subject + Verb... + lest + Subject + (should) + Base Verb...",
     "analysis": "'Lest' is an intrinsically negative conjunction of prevention meaning 'for fear that'. It traditionally governs the bare subjunctive ('lest they be caught') without auxiliary 'not'.",
     "exemplarContext": "Engineers added physical thermal breakers lest the reactor core suffer uncontained coolant runaway."
+  },
+  {
+    "title": "Counterfactual Dependence with 'Were it not for...'",
+    "id": "gram-subj-16",
+    "mode": "SUBJUNCTIVE_UNREAL",
+    "level": 1,
+    "promptSentence": "If the emergency credit line did not exist, the airline would already be insolvent.",
+    "targetTransformation": "Were it not for the emergency credit line, the airline would already be insolvent.",
+    "grammaticalCue": "Replace 'If X did not exist' with the fixed inverted subjunctive 'Were it not for + noun phrase'.",
+    "vietnamese": "Cấu trúc 'Were it not for + danh từ' (Nếu không nhờ có / Nếu không vì...): diễn tả điều kiện trái với hiện tại; dạng quá khứ tương ứng là 'Had it not been for'.",
+    "formula": "Were it not for + Noun Phrase, Subject + would/could + Base Verb...",
+    "analysis": "The clause uses dummy 'it' with subjunctive 'were' inverted in place of 'if', so the noun phrase after 'for' names the single factor on which the whole situation depends. For past counterfactuals the form becomes 'Had it not been for + noun phrase, subject + would have + past participle'. 'But for + noun phrase' is a terser, equally formal alternative that works for both time frames, while the uninverted 'If it were not for' is acceptable in neutral registers.",
+    "exemplarContext": "Were it not for the volunteers who staff the night shifts, the shelter could not remain open through the winter."
+  },
+  {
+    "title": "Negative Mandative Subjunctive ('that he not be...')",
+    "id": "gram-subj-17",
+    "mode": "SUBJUNCTIVE_UNREAL",
+    "level": 2,
+    "promptSentence": "The tribunal insists that the witness does not discuss her testimony with the press.",
+    "targetTransformation": "The tribunal insists that the witness not discuss her testimony with the press.",
+    "grammaticalCue": "In a negative mandative clause, place 'not' directly before the bare verb: no 'do' support and no third-person '-s'.",
+    "vietnamese": "Thể giả định mệnh lệnh dạng phủ định: đặt 'not' ngay trước động từ nguyên mẫu (not discuss, not be), không dùng trợ động từ 'do/does'.",
+    "formula": "Subject + insist/request/require/recommend + that + Subject + not + Base Verb (or not be + Past Participle)...",
+    "analysis": "Because the subjunctive verb carries no tense, it cannot take do-support, so negation is simply 'not' plus the base form ('that she not attend', 'that the files not be released'). With 'insist', the mood also disambiguates meaning: indicative 'insisted that he was innocent' asserts a fact, whereas subjunctive 'insisted that he be present' issues a demand. American formal usage strongly prefers this subjunctive; British English accepts it in formal writing but more often uses 'should not discuss', and the indicative is also heard in casual British speech.",
+    "exemplarContext": "The family requested that the minister's private letters not be published until after their mother's death."
+  },
+  {
+    "title": "Archaic Optative 'Would that...'",
+    "id": "gram-subj-18",
+    "mode": "SUBJUNCTIVE_UNREAL",
+    "level": 3,
+    "promptSentence": "I wish the founders had foreseen how fragile their governance model would prove.",
+    "targetTransformation": "Would that the founders had foreseen how fragile their governance model would prove.",
+    "grammaticalCue": "Replace 'I wish' with the literary optative 'Would that'; keep the backshifted tense (past perfect for past regret).",
+    "vietnamese": "Cấu trúc ước nguyện cổ 'Would that...' (Giá mà...): thay cho 'I wish'; dùng quá khứ đơn hoặc 'were' cho ước muốn ở hiện tại và quá khứ hoàn thành cho sự tiếc nuối về quá khứ.",
+    "formula": "Would that + Subject + were/Past Simple (present wish) | Past Perfect (past regret)...",
+    "analysis": "'Would that' descends from an elliptical 'I would (wish) that' and now functions as a fixed optative formula with no overt subject. It follows the same tense backshift as 'wish': 'Would that it were true' for the present, 'Would that they had listened' for the past. The structure is markedly literary or elegiac; in contemporary prose it signals deliberate rhetorical heightening and would sound affected in a routine report.",
+    "exemplarContext": "Would that every reform were as easy to implement as it is to announce."
   },
   {
     "title": "Present Participle Clause for Simultaneous Action",
@@ -585,6 +663,45 @@
     "exemplarContext": "Though initially a modest regional initiative, the economic corridor evolved into a trillion-dollar trade artery."
   },
   {
+    "title": "Infinitival Relative Clause after Ordinals ('the first to...')",
+    "id": "gram-cond-16",
+    "mode": "CLAUSAL_CONDENSATION",
+    "level": 1,
+    "promptSentence": "She was the first engineer who identified the race condition in the payment service.",
+    "targetTransformation": "She was the first engineer to identify the race condition in the payment service.",
+    "grammaticalCue": "After an ordinal, a superlative or 'only', reduce the subject relative clause 'who + finite verb' to a to-infinitive.",
+    "vietnamese": "Rút gọn mệnh đề quan hệ bằng 'to + V' sau số thứ tự (the first, the last), so sánh nhất hoặc 'the only'.",
+    "formula": "the first/last/next/only/Superlative + Noun + to-Infinitive...",
+    "analysis": "When the head noun is restricted by an ordinal, a superlative or 'only', a subject relative clause can be condensed into a to-infinitive whose understood subject is the head noun itself. The infinitive is tenseless, so time reference is inferred from the main clause, and a passive relative condenses to 'to be + past participle' ('the last item to be approved').",
+    "exemplarContext": "The ministry was the last government agency to move its records off paper ledgers."
+  },
+  {
+    "title": "Causal Participle Clause with 'Being + Adjective'",
+    "id": "gram-cond-17",
+    "mode": "CLAUSAL_CONDENSATION",
+    "level": 2,
+    "promptSentence": "Because the senior partner was unfamiliar with the jurisdiction, she deferred to local counsel.",
+    "targetTransformation": "Being unfamiliar with the jurisdiction, the senior partner deferred to local counsel.",
+    "grammaticalCue": "Replace 'Because + subject + be + adjective' with a fronted 'Being + adjective' phrase that shares the main-clause subject.",
+    "vietnamese": "Rút gọn mệnh đề chỉ nguyên nhân bằng 'Being + tính từ': hai vế phải cùng chủ ngữ; 'Being' làm rõ quan hệ nhân quả.",
+    "formula": "Being + Adjective Phrase, Subject + Main Verb...",
+    "analysis": "A 'being' clause attached to a stative adjective is read almost always as causal, because a state cannot easily be construed as an action happening alongside the main event. 'Being' can sometimes be dropped to yield a verbless clause ('Unfamiliar with the jurisdiction, ...'), but retaining it makes the reason relation explicit. As with all participle clauses, the implied subject must be the subject of the main clause, or the modifier dangles.",
+    "exemplarContext": "Being acutely aware of the reputational stakes, the editor delayed publication until every source had been verified."
+  },
+  {
+    "title": "Subordinator-Retained Reduced Clause ('Once ratified...')",
+    "id": "gram-cond-18",
+    "mode": "CLAUSAL_CONDENSATION",
+    "level": 3,
+    "promptSentence": "Once the amendment has been ratified by both chambers, it cannot be revoked without a referendum.",
+    "targetTransformation": "Once ratified by both chambers, the amendment cannot be revoked without a referendum.",
+    "grammaticalCue": "Keep the subordinator 'once' but delete the subject and the auxiliary 'has been', leaving the bare past participle.",
+    "vietnamese": "Rút gọn mệnh đề trạng ngữ nhưng giữ liên từ (once, when, if, unless, while): lược bỏ chủ ngữ và 'be', chỉ còn phân từ, tính từ hoặc cụm giới từ.",
+    "formula": "Once/When/If/Unless/While/Until + Past Participle / Adjective / Prepositional Phrase, Subject + Main Verb...",
+    "analysis": "Subordinators such as 'once', 'when', 'if', 'unless' and 'until' can survive the ellipsis of subject plus 'be', yielding a compact clause that keeps a precise logical relation which a bare participle would leave vague. Fixed verbless forms like 'When in doubt', 'If in doubt' and 'If necessary' follow the same pattern. The ellipted subject must be recoverable as the main-clause subject: 'Once ratified, voters cannot revoke the amendment' wrongly implies that the voters were ratified.",
+    "exemplarContext": "When in doubt, the duty officer escalates the alert rather than closing it."
+  },
+  {
     "title": "Correction of Faulty Parallelism in Series",
     "id": "gram-prec-1",
     "mode": "SYNTACTIC_PRECISION",
@@ -778,5 +895,44 @@
     "formula": "Subject + entails + Gerund Phrase 1 and Gerund Phrase 2",
     "analysis": "Pairing a Latinate nominalization with an infinitive phrase produces clumsy, asymmetric syntax. Harmonizing both coordinate objects into direct gerund phrases creates aerodynamic structural balance.",
     "exemplarContext": "The turnaround strategy necessitates renegotiating credit terms and consolidating redundant manufacturing facilities."
+  },
+  {
+    "title": "Subject-Verb Agreement with 'The number of' vs 'A number of'",
+    "id": "gram-prec-16",
+    "mode": "SYNTACTIC_PRECISION",
+    "level": 1,
+    "promptSentence": "The number of complaints lodged against the contractor have tripled, and a number of residents is now considering legal action.",
+    "targetTransformation": "The number of complaints lodged against the contractor has tripled, and a number of residents are now considering legal action.",
+    "grammaticalCue": "'The number' is a singular head noun; in 'a number of', the plural noun after 'of' is the head and governs the verb.",
+    "vietnamese": "Hòa hợp chủ ngữ và động từ: 'The number of + danh từ số nhiều' (con số) đi với động từ số ít; 'A number of + danh từ số nhiều' (một số, nhiều) đi với động từ số nhiều.",
+    "formula": "The number of + Plural Noun + Singular Verb | A number of + Plural Noun + Plural Verb",
+    "analysis": "In 'the number of complaints', the head is 'number' (a single quantity), so the verb is singular despite the plural noun and the intervening modifier 'lodged against the contractor'. 'A number of' has become a fixed quantifier meaning 'several', so the following plural noun is the notional head and takes a plural verb. Similar head-identification problems arise with 'the majority of' and 'none of', where usage varies: 'none of the reports is' is the traditional formal choice, but 'none of the reports are' is also standard.",
+    "exemplarContext": "The number of applicants has fallen sharply, yet a number of universities are still expanding their intake."
+  },
+  {
+    "title": "Ambiguous Pronoun Reference Resolution",
+    "id": "gram-prec-17",
+    "mode": "SYNTACTIC_PRECISION",
+    "level": 2,
+    "promptSentence": "When the chief executive met the auditor, she insisted that her figures were accurate.",
+    "targetTransformation": "The chief executive insisted to the auditor that her own figures were accurate.",
+    "grammaticalCue": "Two singular female antecedents precede 'she' and 'her'; restructure so that the intended referent is the only salient candidate.",
+    "vietnamese": "Sửa lỗi đại từ quy chiếu mơ hồ: khi có hai danh từ cùng giống, cùng số đứng trước, cần lặp lại danh từ hoặc tái cấu trúc câu để đại từ chỉ có một tiền ngữ duy nhất.",
+    "formula": "Repeat the antecedent noun | Recast so the antecedent is the clause subject | Bind the possessive with 'own' or use a reflexive",
+    "analysis": "A pronoun is ambiguous whenever more than one preceding noun phrase matches it in person, number and gender; readers then default to the subject or to the most recent noun, and either guess may be wrong. Repair strategies include repeating the noun, recasting the sentence so that the intended antecedent is the subject of the same clause, or adding 'own' to tie the possessive to that subject. Singular 'they' can create the same ambiguity when both antecedents are unspecified for gender.",
+    "exemplarContext": "When the minister briefed the ambassador, the ambassador asked for the proposal in writing."
+  },
+  {
+    "title": "Faulty Predication ('The reason is because')",
+    "id": "gram-prec-18",
+    "mode": "SYNTACTIC_PRECISION",
+    "level": 3,
+    "promptSentence": "The reason the pilot project stalled is because the regional offices were never consulted.",
+    "targetTransformation": "The reason the pilot project stalled is that the regional offices were never consulted.",
+    "grammaticalCue": "After 'The reason... is', use a 'that' clause; 'because' duplicates the causal meaning already carried by 'reason'.",
+    "vietnamese": "Sửa lỗi vị ngữ không tương hợp: sau 'The reason... is' dùng mệnh đề 'that', không dùng 'because' vì bản thân 'reason' đã mang nghĩa nguyên nhân.",
+    "formula": "The reason (why/that) + Clause + is + that + Clause | Subject + Verb + because + Clause",
+    "analysis": "The copula 'is' equates its subject with its complement, so the complement should be a noun-like element: a 'that' clause qualifies, whereas a 'because' clause is an adverbial of cause, producing both a predication mismatch and a redundancy. 'The reason is because' is common in speech and even appears in respected writers, but it is widely censured in edited formal prose. The cleaner alternatives are 'The reason is that...' or simply 'The project stalled because...'.",
+    "exemplarContext": "The reason the merger failed was that the two firms could never agree on who would make the final decisions."
   }
 ]

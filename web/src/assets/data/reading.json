@@ -470,6 +470,610 @@
           "syntacticReconstruction": "Rather than succumbing to performative responsiveness, high-value contributors insulate their working memory through scheduled offline sanctuaries."
         }
       }
+    },
+    {
+      "id": "reading-art-4",
+      "title": "The Cartography of Return: Memory, Place, and the Indifferent Street",
+      "stage": "Stage 4: Mastery & Polymathy (CEFR C2)",
+      "cefrLevel": "C2",
+      "genre": "Literary Non-Fiction & Essay on Memory and Place",
+      "source": "Original passage written for English Singularity",
+      "wordCount": 440,
+      "readingTime": "3.7 min @ 120 WPM (Intensive)",
+      "content": "She had expected the street to be smaller, as everyone warns you it will be, but she had not expected it to be indifferent. The plane trees still leaned over the pavement at the same conspiratorial angle, their bark peeling away in pale, map-like continents, and the bakery on the corner still exhaled its warm, yeasty breath into the morning. Yet nothing acknowledged her. Strangers passed with their dogs and their shopping, and a boy on a bicycle swerved around her without a glance, as though she were merely another obstacle in the ordinary choreography of the morning. The street had carried on without consulting her, accruing new paint, new railings, a pharmacy where the cobbler's shop had been, and it seemed faintly impertinent that it should have done so.\n\nWas it the place that had changed, or merely the instrument through which she had once perceived it? Memory, she knew, is not an archive but a palimpsest: each act of recollection scrapes away a little of the original inscription and writes something new over the abraded surface. The house she had carried with her for thirty years was not this house at all, but a composite, stitched together from photographs, from her mother's anecdotes, from the half-remembered texture of a banister polished by small, impatient hands. To stand before the real façade was to watch two images fail to coincide, like a double exposure in which neither figure will consent to recede.\n\nAnd still there were moments of uncanny fidelity. As she passed the iron gate, its latch gave the same arthritic click, and for an instant the intervening decades collapsed with a vertiginous lurch. Writers have long dwelt on such involuntary returns, Proust's madeleine being only the most celebrated, because they suggest that the past is not irretrievably lost but merely dormant, folded into objects and sounds that wait, with a kind of mineral patience, for the right person to pass by. She stood very still, half afraid that any movement would break the spell.\n\nPerhaps, she thought, this was what home had always meant: not a location but a relation, a tacit pact between a body and the spaces that had shaped it. The pact could lapse, but it could not be entirely rescinded. She did not knock on the door. Whoever lived there now would have their own private geography of the rooms, their own creaking stair and favourite window, and she had no wish to trespass on it. It was enough to have heard the gate, to have felt the old street register her presence, however faintly, before it resumed its unhurried business of forgetting.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Returning to a childhood street reveals that remembered places are reconstructions rather than records, yet certain sensory triggers can momentarily restore the past, suggesting that home is a lasting relation between body and space rather than a fixed location.",
+          "markedLexicalTargets": [
+            "conspiratorial angle",
+            "accruing",
+            "impertinent",
+            "palimpsest",
+            "abraded surface",
+            "double exposure",
+            "uncanny fidelity",
+            "vertiginous lurch",
+            "involuntary returns",
+            "tacit pact",
+            "rescinded"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "What surprises the narrator most about the street on her return?",
+              "answer": "Not that it seems smaller, which she expected, but that it seems indifferent to her, having changed and carried on without acknowledging her."
+            },
+            {
+              "question": "Why does the passage compare memory to a palimpsest rather than an archive?",
+              "answer": "Because each act of remembering partly erases and rewrites the original impression, so the remembered house is a composite built from photographs, anecdotes and fragments rather than a faithful record."
+            },
+            {
+              "question": "What does the click of the gate latch illustrate?",
+              "answer": "An involuntary memory, like Proust's madeleine, in which a sensory detail suddenly collapses the intervening decades and suggests the past is dormant rather than lost."
+            },
+            {
+              "question": "How does the narrator finally redefine \"home\"?",
+              "answer": "As a relation rather than a location: a tacit pact between a body and the spaces that shaped it, which can lapse but never be fully cancelled."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "Memory, she knew, is not an archive but a palimpsest: each act of recollection scrapes away a little of the original inscription and writes something new over the abraded surface.",
+            "coreSVO": {
+              "subject": "Memory / each act of recollection",
+              "verb": "is / scrapes away ... and writes",
+              "objectOrComplement": "not an archive but a palimpsest / a little of the original inscription ... something new"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Parenthetical Comment Clause",
+                "clause": "she knew",
+                "function": "Filters the general claim through the character's consciousness, a hallmark of free indirect style."
+              },
+              {
+                "type": "Explanatory Appositive Clause after Colon",
+                "clause": "each act of recollection scrapes away a little of the original inscription and writes something new over the abraded surface",
+                "function": "Unpacks the palimpsest metaphor into a concrete process of erasure and overwriting."
+              }
+            ],
+            "syntacticAnalysis": "The correlative frame \"not X but Y\" sets up a corrective metaphor, and the colon licenses an independent clause that elaborates it. The interpolated \"she knew\" blurs narrator and character, so a general truth about memory reads as the character's private conviction."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "To stand before the real façade was to watch two images fail to coincide, like a double exposure in which neither figure will consent to recede.",
+            "coreSVO": {
+              "subject": "To stand before the real façade",
+              "verb": "was",
+              "objectOrComplement": "to watch two images fail to coincide"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Infinitival Subject Clause",
+                "clause": "To stand before the real façade",
+                "function": "Turns an action into the grammatical subject, framing the experience as a general condition."
+              },
+              {
+                "type": "Relative Clause with Fronted Preposition",
+                "clause": "in which neither figure will consent to recede",
+                "function": "Modifies \"a double exposure\", personifying the competing images as stubborn agents."
+              }
+            ],
+            "syntacticAnalysis": "The balanced \"to X was to Y\" equation presents perception as a definition. The closing simile shifts into photographic imagery, and the personifying verb \"consent\" lends the clash between memory and reality a note of wilfulness."
+          },
+          {
+            "sentenceIndex": 3,
+            "sentence": "Writers have long dwelt on such involuntary returns, Proust's madeleine being only the most celebrated, because they suggest that the past is not irretrievably lost but merely dormant, folded into objects and sounds that wait, with a kind of mineral patience, for the right person to pass by. She stood very still, half afraid that any movement would break the spell.",
+            "coreSVO": {
+              "subject": "Writers",
+              "verb": "have long dwelt on",
+              "objectOrComplement": "such involuntary returns"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Absolute Construction",
+                "clause": "Proust's madeleine being only the most celebrated",
+                "function": "Supplies a canonical literary example without interrupting the main clause."
+              },
+              {
+                "type": "Adverbial Clause of Reason",
+                "clause": "because they suggest that the past is not irretrievably lost but merely dormant",
+                "function": "Explains why writers are drawn to involuntary memory."
+              },
+              {
+                "type": "Nominal That-Clause",
+                "clause": "that the past is not irretrievably lost but merely dormant",
+                "function": "Serves as the object of \"suggest\", stating the central claim."
+              },
+              {
+                "type": "Restrictive Relative Clause",
+                "clause": "that wait, with a kind of mineral patience, for the right person to pass by",
+                "function": "Modifies \"objects and sounds\", animating them with a geological stillness."
+              }
+            ],
+            "syntacticAnalysis": "A cumulative sentence that keeps extending rightward through an absolute phrase, a causal clause, a participial phrase (\"folded into...\") and a relative clause. The oxymoronic \"mineral patience\" attributes waiting to inert matter, enacting the dormancy it describes."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-art-4-1",
+            "targetWord": "palimpsest",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈpæl.ɪmp.sest/",
+            "definition": "A manuscript on which earlier writing has been scraped away and overwritten; figuratively, something that bears visible traces of earlier layers beneath its present form.",
+            "vietnamese": "bản viết đè lên bản cũ; (nghĩa bóng) thứ mang nhiều lớp dấu vết chồng chất của quá khứ",
+            "contextSentence": "Memory, she knew, is not an archive but a palimpsest: each act of recollection scrapes away a little of the original inscription and writes something new over the abraded surface.",
+            "collocations": [
+              "a palimpsest of memories",
+              "urban palimpsest",
+              "cultural palimpsest",
+              "read the city as a palimpsest"
+            ],
+            "etymology": "Greek palimpsestos (scraped again), from palin (again) + psen (to rub smooth)."
+          },
+          {
+            "id": "mine-reading-art-4-2",
+            "targetWord": "impertinent",
+            "partOfSpeech": "adjective",
+            "ipa": "/ɪmˈpɜː.tɪ.nənt/",
+            "definition": "Not showing proper respect; presumptuous or rude, especially in a way that oversteps one's position.",
+            "vietnamese": "xấc xược, hỗn láo, thiếu tôn trọng",
+            "contextSentence": "The street had carried on without consulting her, accruing new paint, new railings, a pharmacy where the cobbler's shop had been, and it seemed faintly impertinent that it should have done so.",
+            "collocations": [
+              "impertinent question",
+              "impertinent remark",
+              "faintly impertinent",
+              "an impertinent child"
+            ],
+            "etymology": "Late Latin impertinens (not belonging), from in- (not) + pertinere (to relate to, concern)."
+          },
+          {
+            "id": "mine-reading-art-4-3",
+            "targetWord": "vertiginous",
+            "partOfSpeech": "adjective",
+            "ipa": "/vɜːˈtɪdʒ.ɪ.nəs/",
+            "definition": "Causing or relating to a dizzying sensation, as of height or sudden movement; figuratively, disorientingly rapid or extreme.",
+            "vietnamese": "gây chóng mặt, choáng váng, cao chót vót đến hoa mắt",
+            "contextSentence": "As she passed the iron gate, its latch gave the same arthritic click, and for an instant the intervening decades collapsed with a vertiginous lurch.",
+            "collocations": [
+              "vertiginous drop",
+              "vertiginous heights",
+              "vertiginous sensation",
+              "vertiginous rise"
+            ],
+            "etymology": "Latin vertiginosus (suffering from dizziness), from vertigo (a whirling), from vertere (to turn)."
+          },
+          {
+            "id": "mine-reading-art-4-4",
+            "targetWord": "rescind",
+            "partOfSpeech": "verb",
+            "ipa": "/rɪˈsɪnd/",
+            "definition": "Formally revoke, cancel, or repeal an agreement, law, or decision.",
+            "vietnamese": "hủy bỏ, thu hồi, bãi bỏ (một thỏa thuận, quyết định)",
+            "contextSentence": "The pact could lapse, but it could not be entirely rescinded.",
+            "collocations": [
+              "rescind a decision",
+              "rescind an order",
+              "rescind a contract",
+              "rescind an offer"
+            ],
+            "etymology": "Latin rescindere (to cut off, annul), from re- (back) + scindere (to split)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "Revisiting a childhood street, the narrator finds it impertinently indifferent and recognises that the house she remembers is a palimpsest, rewritten by every act of recollection. Yet a single vertiginous sensory cue can revive the dormant past, implying that home is a tacit bodily pact with place that may lapse but can never be wholly rescinded.",
+          "incorporatedVocabulary": [
+            "palimpsest",
+            "impertinent",
+            "vertiginous",
+            "rescind",
+            "tacit pact"
+          ],
+          "syntacticReconstruction": "To return to a remembered place is to read a palimpsest whose later layers, however faithfully we try to scrape them away, will not consent to disappear."
+        }
+      }
+    },
+    {
+      "id": "reading-art-5",
+      "title": "Rules, Discretion, and the Quiet Authority of Precedent",
+      "stage": "Stage 4: Mastery & Polymathy (CEFR C2)",
+      "cefrLevel": "C2",
+      "genre": "Legal & Political Philosophy (Argumentative Essay)",
+      "source": "Original passage written for English Singularity",
+      "wordCount": 441,
+      "readingTime": "3.7 min @ 120 WPM (Intensive)",
+      "content": "Few ideals command such reflexive assent as the rule of law, yet few are so frequently misunderstood. In its popular rendering, the ideal demands that officials apply fixed, publicly promulgated rules mechanically, leaving no room for personal judgment. On this view, discretion is not a supplement to legality but its antithesis: wherever an official may choose, the argument runs, arbitrary power lurks.\n\nThere is undeniable force in this position. Rules render state power predictable, allowing citizens to plan their lives in the knowledge of how coercion will be deployed. They also constrain the partiality of officials, who might otherwise indulge prejudice under the guise of wisdom. Where discretion is broad, similar cases may be decided differently according to the temperament of whoever happens to preside, and such inconsistency corrodes public confidence in the impartiality of courts. Legal theorists since A. V. Dicey have treated the submission of government to general rules as a bulwark against tyranny, and the historical record offers ample grounds for that wariness.\n\nNevertheless, the conception of law as a closed system of self-applying rules collapses under scrutiny. Rules are drafted in general language by legislators who cannot foresee every contingency, and general language is irreducibly open-textured. In a celebrated example from twentieth-century jurisprudence, a rule forbidding vehicles in a park says nothing conclusive about bicycles, ambulances, or a decommissioned military truck mounted as a war memorial. Faced with such penumbral cases, a judge must exercise judgment whether she admits it or not. To deny this is not to eliminate discretion but merely to drive it underground, where it operates unacknowledged and therefore unaccountable.\n\nIt is here that the doctrine of precedent reveals its quiet sophistication. Admittedly, precedent can ossify error, binding later courts to reasoning that was flawed at its inception, and critics are right to deplore the inertia this can produce. But the obligation to follow prior decisions, or to distinguish them with articulated reasons, does not abolish discretion; it disciplines it. A court that wishes to depart from an earlier ruling must explain why the earlier reasoning no longer persuades, and that explanation is itself exposed to criticism, appeal, and scholarly commentary. Each judgment becomes a public commitment against which future judgments can be measured, so that discretion, rather than vanishing, is gradually converted into a body of reasoned and contestable norms.\n\nThe rule of law, then, is better understood not as the triumph of rules over judgment but as the insistence that judgment be exercised transparently, consistently, and in a form that others can scrutinise. Discretion that must justify itself is not the enemy of legality; it is one of its most demanding expressions.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Although rules make state power predictable and restrain partiality, no system of rules can apply itself; discretion is therefore unavoidable, and the doctrine of precedent preserves the rule of law not by eliminating judgment but by forcing it to be reasoned, public, and consistent.",
+          "markedLexicalTargets": [
+            "reflexive assent",
+            "publicly promulgated",
+            "antithesis",
+            "partiality",
+            "bulwark against tyranny",
+            "open-textured",
+            "penumbral cases",
+            "ossify error",
+            "contestable norms"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "What is the \"popular rendering\" of the rule of law that the author challenges?",
+              "answer": "The view that officials must apply fixed, published rules mechanically, so that any room for official choice counts as arbitrary power."
+            },
+            {
+              "question": "Which merits of strict rules does the author concede in paragraph 2?",
+              "answer": "Rules make state coercion predictable so citizens can plan their lives, and they restrain officials from acting on prejudice disguised as wisdom."
+            },
+            {
+              "question": "Why does the author argue that discretion cannot be eliminated?",
+              "answer": "Because rules are written in general, open-textured language that cannot anticipate every case, so judges facing borderline cases must exercise judgment; denying this only hides discretion and makes it unaccountable."
+            },
+            {
+              "question": "How does precedent, in the author's view, reconcile discretion with the rule of law?",
+              "answer": "By requiring courts to follow or explicitly distinguish earlier decisions, it turns each judgment into a public commitment, converting discretion into a body of reasoned, contestable norms."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "On this view, discretion is not a supplement to legality but its antithesis: wherever an official may choose, the argument runs, arbitrary power lurks.",
+            "coreSVO": {
+              "subject": "discretion / arbitrary power",
+              "verb": "is / lurks",
+              "objectOrComplement": "not a supplement to legality but its antithesis"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Adverbial Clause of Place",
+                "clause": "wherever an official may choose",
+                "function": "Generalises the condition under which arbitrary power is said to appear."
+              },
+              {
+                "type": "Parenthetical Reporting Clause",
+                "clause": "the argument runs",
+                "function": "Attributes the claim to the opposing view, signalling authorial distance before the rebuttal."
+              }
+            ],
+            "syntacticAnalysis": "The fronted stance marker \"On this view\" and the reporting parenthesis \"the argument runs\" frame the whole sentence as a position the author is about to contest. The \"not X but Y\" correlative and the brooding verb \"lurks\" dramatise the opponent's suspicion of discretion."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "Admittedly, precedent can ossify error, binding later courts to reasoning that was flawed at its inception, and critics are right to deplore the inertia this can produce.",
+            "coreSVO": {
+              "subject": "precedent / critics",
+              "verb": "can ossify / are",
+              "objectOrComplement": "error / right to deplore the inertia"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Participial Phrase of Result",
+                "clause": "binding later courts to reasoning that was flawed at its inception",
+                "function": "Spells out the concrete consequence of ossified error."
+              },
+              {
+                "type": "Restrictive Relative Clause",
+                "clause": "that was flawed at its inception",
+                "function": "Specifies which reasoning is problematic."
+              },
+              {
+                "type": "Contact Relative Clause",
+                "clause": "this can produce",
+                "function": "Modifies \"the inertia\" with the relative pronoun omitted."
+              }
+            ],
+            "syntacticAnalysis": "The sentence adverb \"Admittedly\" flags a concession, granting the critics' strongest point in full before the adversative \"But\" of the next sentence pivots to rebuttal. Conceding generously in this way strengthens the credibility of the counter-argument."
+          },
+          {
+            "sentenceIndex": 3,
+            "sentence": "To deny this is not to eliminate discretion but merely to drive it underground, where it operates unacknowledged and therefore unaccountable.",
+            "coreSVO": {
+              "subject": "To deny this",
+              "verb": "is",
+              "objectOrComplement": "not to eliminate discretion but merely to drive it underground"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Infinitival Subject Clause",
+                "clause": "To deny this",
+                "function": "Nominalises the opposing position so it can be evaluated."
+              },
+              {
+                "type": "Non-Restrictive Relative Clause",
+                "clause": "where it operates unacknowledged and therefore unaccountable",
+                "function": "Describes the hidden space in which denied discretion continues to function."
+              }
+            ],
+            "syntacticAnalysis": "The equative \"to X is not to Y but to Z\" redefines the opponent's move and exposes its unintended effect. The final pair \"unacknowledged and therefore unaccountable\" builds a causal chain through alliteration and the connective \"therefore\"."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-art-5-1",
+            "targetWord": "promulgate",
+            "partOfSpeech": "verb",
+            "ipa": "/ˈprɒm.əl.ɡeɪt/",
+            "definition": "Make a law, decree, or idea officially known and in force by formal public announcement.",
+            "vietnamese": "ban hành, công bố chính thức (luật, sắc lệnh)",
+            "contextSentence": "In its popular rendering, the ideal demands that officials apply fixed, publicly promulgated rules mechanically, leaving no room for personal judgment.",
+            "collocations": [
+              "promulgate a law",
+              "promulgate regulations",
+              "publicly promulgated",
+              "promulgate a doctrine"
+            ],
+            "etymology": "Latin promulgare (to make publicly known), possibly from pro- (forth) + mulgere (to milk, draw out)."
+          },
+          {
+            "id": "mine-reading-art-5-2",
+            "targetWord": "bulwark",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈbʊl.wək/",
+            "definition": "A defensive wall; figuratively, a person, institution, or principle that protects against danger or attack.",
+            "vietnamese": "thành lũy, bức tường thành bảo vệ, chỗ dựa vững chắc",
+            "contextSentence": "Legal theorists since A. V. Dicey have treated the submission of government to general rules as a bulwark against tyranny, and the historical record offers ample grounds for that wariness.",
+            "collocations": [
+              "a bulwark against tyranny",
+              "a bulwark of democracy",
+              "serve as a bulwark",
+              "last bulwark"
+            ],
+            "etymology": "Middle Dutch bolwerc, from bole (tree trunk, plank) + werc (work)."
+          },
+          {
+            "id": "mine-reading-art-5-3",
+            "targetWord": "penumbral",
+            "partOfSpeech": "adjective",
+            "ipa": "/pɪˈnʌm.brəl/",
+            "definition": "Belonging to a partially shaded border zone; in legal theory, describing borderline cases that fall outside the clear core meaning of a rule.",
+            "vietnamese": "thuộc vùng nửa tối; (luật học) thuộc vùng ranh giới mơ hồ, không rõ ràng",
+            "contextSentence": "Faced with such penumbral cases, a judge must exercise judgment whether she admits it or not.",
+            "collocations": [
+              "penumbral cases",
+              "penumbral zone",
+              "penumbral meaning",
+              "penumbral rights"
+            ],
+            "etymology": "Modern Latin penumbra, from Latin paene (almost) + umbra (shadow)."
+          },
+          {
+            "id": "mine-reading-art-5-4",
+            "targetWord": "ossify",
+            "partOfSpeech": "verb",
+            "ipa": "/ˈɒs.ɪ.faɪ/",
+            "definition": "Turn into bone; figuratively, become or make rigid and resistant to change.",
+            "vietnamese": "xơ cứng hóa, làm trở nên cứng nhắc, bảo thủ, khó thay đổi",
+            "contextSentence": "Admittedly, precedent can ossify error, binding later courts to reasoning that was flawed at its inception, and critics are right to deplore the inertia this can produce.",
+            "collocations": [
+              "ossify error",
+              "ossified institutions",
+              "ossified thinking",
+              "become ossified"
+            ],
+            "etymology": "French ossifier, from Latin os, oss- (bone) + -ficare (to make)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "Rules publicly promulgated in advance are a genuine bulwark against arbitrary power, but general language cannot settle penumbral cases, so judicial discretion is inescapable. Precedent may ossify error, yet by obliging courts to follow or distinguish earlier rulings it converts discretion into reasoned, accountable norms, which is what the rule of law truly requires.",
+          "incorporatedVocabulary": [
+            "promulgate",
+            "bulwark",
+            "penumbral",
+            "ossify",
+            "open-textured"
+          ],
+          "syntacticReconstruction": "While precedent may well ossify the occasional error, to abandon it would not be to banish discretion but merely to relocate it where no one could hold it to account."
+        }
+      }
+    },
+    {
+      "id": "reading-art-6",
+      "title": "Counting the Uncountable: The Tentative Science of Measuring Biodiversity",
+      "stage": "Stage 4: Mastery & Polymathy (CEFR C2)",
+      "cefrLevel": "C2",
+      "genre": "Ecology & Empirical Science Writing (Academic Hedging)",
+      "source": "Original passage written for English Singularity",
+      "wordCount": 431,
+      "readingTime": "3.6 min @ 120 WPM (Intensive)",
+      "content": "At first glance, measuring biodiversity might appear to be a simple matter of counting species. In practice, the task is considerably more fraught. Many organisms are small, cryptic, or only seasonally active, and a substantial proportion of the planet's species, particularly among insects, fungi, and microorganisms, are thought to remain undescribed. Any tally of species in a given habitat is therefore best regarded not as a census but as an estimate, and one whose reliability depends heavily on how the sampling was conducted.\n\nEcologists have long recognised that the number of species recorded tends to rise with sampling effort. A plot surveyed for a single afternoon will almost inevitably yield fewer species than the same plot surveyed across several seasons, which means that raw counts from different studies may not be directly comparable. To mitigate this, researchers frequently construct species accumulation curves, plotting cumulative species against effort; where such a curve appears to level off, it is reasonable to infer that most common species have been detected, although rare taxa may still be missing. Statistical estimators, such as those that extrapolate from the number of species observed only once or twice, can provide a plausible lower bound on true richness, but they rest on assumptions that may not hold in every system. Different estimators applied to the same data may also produce noticeably different figures.\n\nRichness is, moreover, only one dimension of diversity. Two communities containing identical numbers of species may differ markedly if, in one, a single species is overwhelmingly dominant. Indices that incorporate evenness, such as the Shannon and Simpson measures, attempt to capture this distinction, although their values are sensitive to methodological choices and can be difficult to interpret in isolation. Some ecologists have therefore advocated reporting a family of related measures, often expressed as effective numbers of species, rather than privileging any single index. Each choice reflects a judgment about which aspects of diversity matter most.\n\nNewer techniques appear to offer partial remedies, at least for certain groups of organisms. Environmental DNA sampling, in which genetic fragments shed by organisms are recovered from water or soil, can detect elusive species that conventional surveys might overlook. Yet such methods introduce uncertainties of their own: DNA may persist or drift after an organism has departed, and reference databases remain incomplete, so that a detection is perhaps more cautiously interpreted as consistent with a species' presence than as conclusive proof of it. The prevailing view, insofar as one can be discerned, is that no single method suffices, and that estimates of biodiversity are most credible when several imperfect approaches converge.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Biodiversity cannot simply be counted; species tallies are effort-dependent estimates, richness ignores evenness, and even new genetic methods carry their own uncertainties, so credible assessments appear to require several imperfect methods that converge.",
+          "markedLexicalTargets": [
+            "fraught",
+            "cryptic",
+            "undescribed",
+            "sampling effort",
+            "species accumulation curves",
+            "extrapolate",
+            "lower bound",
+            "evenness",
+            "privileging",
+            "environmental DNA",
+            "consistent with",
+            "converge"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "Why does the author call a species tally \"an estimate\" rather than \"a census\"?",
+              "answer": "Because many species are hidden, seasonal or still undescribed, and the number recorded depends heavily on how much and how well the habitat was sampled."
+            },
+            {
+              "question": "What does a levelling species accumulation curve allow researchers to infer, and what caveat applies?",
+              "answer": "That most common species have probably been detected, although rare taxa may still be missing."
+            },
+            {
+              "question": "Why is species richness alone an incomplete measure of diversity?",
+              "answer": "Because two communities with the same number of species can differ greatly in evenness, for example if one species overwhelmingly dominates one community."
+            },
+            {
+              "question": "Why is an environmental DNA detection described only as \"consistent with\" a species' presence?",
+              "answer": "Because DNA can persist or drift after the organism has left and reference databases are incomplete, so a detection is not conclusive proof."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "Any tally of species in a given habitat is therefore best regarded not as a census but as an estimate, and one whose reliability depends heavily on how the sampling was conducted.",
+            "coreSVO": {
+              "subject": "Any tally of species in a given habitat",
+              "verb": "is best regarded",
+              "objectOrComplement": "not as a census but as an estimate"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Possessive Relative Clause",
+                "clause": "whose reliability depends heavily on how the sampling was conducted",
+                "function": "Qualifies the appositive \"one\" (an estimate) by naming the condition on which its trustworthiness rests."
+              },
+              {
+                "type": "Nominal Wh-Clause",
+                "clause": "how the sampling was conducted",
+                "function": "Functions as the object of the preposition \"on\", locating uncertainty in method."
+              }
+            ],
+            "syntacticAnalysis": "The passive \"is best regarded\" is a characteristic hedge, recommending an interpretation rather than asserting a fact. The appended \"and one whose...\" uses the pro-form \"one\" to re-open the noun \"estimate\" and add a qualification, a typical academic move."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "To mitigate this, researchers frequently construct species accumulation curves, plotting cumulative species against effort; where such a curve appears to level off, it is reasonable to infer that most common species have been detected, although rare taxa may still be missing.",
+            "coreSVO": {
+              "subject": "researchers / it",
+              "verb": "construct / is",
+              "objectOrComplement": "species accumulation curves / reasonable to infer that most common species have been detected"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Infinitive of Purpose",
+                "clause": "To mitigate this",
+                "function": "States the methodological problem the curves address."
+              },
+              {
+                "type": "Participial Phrase",
+                "clause": "plotting cumulative species against effort",
+                "function": "Explains how the curves are built."
+              },
+              {
+                "type": "Adverbial Clause of Condition",
+                "clause": "where such a curve appears to level off",
+                "function": "Sets the hedged condition for the inference."
+              },
+              {
+                "type": "Nominal That-Clause",
+                "clause": "that most common species have been detected",
+                "function": "Serves as the object of \"infer\"."
+              },
+              {
+                "type": "Concessive Adverbial Clause",
+                "clause": "although rare taxa may still be missing",
+                "function": "Limits the inference with a modal caveat."
+              }
+            ],
+            "syntacticAnalysis": "Layered hedging operates throughout: \"appears to\", the impersonal \"it is reasonable to infer\", and the modal \"may\" each weaken the claim to precisely the strength the evidence supports. The semicolon divides method from inference."
+          },
+          {
+            "sentenceIndex": 3,
+            "sentence": "Yet such methods introduce uncertainties of their own: DNA may persist or drift after an organism has departed, and reference databases remain incomplete, so that a detection is perhaps more cautiously interpreted as consistent with a species' presence than as conclusive proof of it.",
+            "coreSVO": {
+              "subject": "such methods / DNA / reference databases / a detection",
+              "verb": "introduce / may persist or drift / remain / is interpreted",
+              "objectOrComplement": "uncertainties of their own / incomplete / as consistent with a species' presence"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Adverbial Clause of Time",
+                "clause": "after an organism has departed",
+                "function": "Specifies when misleading DNA traces may arise."
+              },
+              {
+                "type": "Adverbial Clause of Result",
+                "clause": "so that a detection is perhaps more cautiously interpreted as consistent with a species' presence than as conclusive proof of it",
+                "function": "Draws the methodological consequence of the stated uncertainties."
+              }
+            ],
+            "syntacticAnalysis": "The colon introduces two coordinated sources of error, and the result clause stacks hedges (\"perhaps\", \"more cautiously\", \"consistent with\") into a comparative frame that contrasts weak and strong evidential claims."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-art-6-1",
+            "targetWord": "fraught",
+            "partOfSpeech": "adjective",
+            "ipa": "/frɔːt/",
+            "definition": "Full of difficulties, risks, or complications; (of a situation) causing or affected by anxiety.",
+            "vietnamese": "đầy rẫy khó khăn, chồng chất trở ngại, căng thẳng",
+            "contextSentence": "In practice, the task is considerably more fraught.",
+            "collocations": [
+              "fraught with difficulty",
+              "fraught with danger",
+              "a fraught relationship",
+              "politically fraught"
+            ],
+            "etymology": "Middle English, past participle of fraughten (to load a ship), from Middle Dutch vracht (cargo, freight)."
+          },
+          {
+            "id": "mine-reading-art-6-2",
+            "targetWord": "cryptic",
+            "partOfSpeech": "adjective",
+            "ipa": "/ˈkrɪp.tɪk/",
+            "definition": "Having a hidden or ambiguous meaning; in biology, serving to camouflage an organism or making it hard to detect or distinguish.",
+            "vietnamese": "bí ẩn, khó nhận ra; (sinh học) có khả năng ngụy trang, ẩn mình",
+            "contextSentence": "Many organisms are small, cryptic, or only seasonally active, and a substantial proportion of the planet's species, particularly among insects, fungi, and microorganisms, are thought to remain undescribed.",
+            "collocations": [
+              "cryptic species",
+              "cryptic coloration",
+              "cryptic message",
+              "cryptic remark"
+            ],
+            "etymology": "Late Latin crypticus, from Greek kryptikos (hidden), from kryptein (to hide)."
+          },
+          {
+            "id": "mine-reading-art-6-3",
+            "targetWord": "extrapolate",
+            "partOfSpeech": "verb",
+            "ipa": "/ɪkˈstræp.ə.leɪt/",
+            "definition": "Extend known data or trends to estimate values beyond the observed range; infer the unknown from the known.",
+            "vietnamese": "ngoại suy, suy rộng từ dữ liệu đã biết",
+            "contextSentence": "Statistical estimators, such as those that extrapolate from the number of species observed only once or twice, can provide a plausible lower bound on true richness, but they rest on assumptions that may not hold in every system. Different estimators applied to the same data may also produce noticeably different figures.",
+            "collocations": [
+              "extrapolate from data",
+              "extrapolate a trend",
+              "extrapolate beyond the range",
+              "cautiously extrapolate"
+            ],
+            "etymology": "Coined from extra- (outside) + interpolate, from Latin interpolare (to refurbish, alter)."
+          },
+          {
+            "id": "mine-reading-art-6-4",
+            "targetWord": "privilege",
+            "partOfSpeech": "verb",
+            "ipa": "/ˈprɪv.əl.ɪdʒ/",
+            "definition": "Treat one thing as more important or authoritative than others, often without sufficient justification.",
+            "vietnamese": "đặt ưu tiên, coi trọng hơn hẳn, ưu ái một yếu tố so với các yếu tố khác",
+            "contextSentence": "Some ecologists have therefore advocated reporting a family of related measures, often expressed as effective numbers of species, rather than privileging any single index. Each choice reflects a judgment about which aspects of diversity matter most.",
+            "collocations": [
+              "privilege one interpretation over another",
+              "privilege theory over practice",
+              "privileging any single index"
+            ],
+            "etymology": "Latin privilegium (a law for an individual), from privus (private) + lex, leg- (law)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "Measuring biodiversity is more fraught than it appears: cryptic and undescribed organisms make every tally an effort-dependent estimate, statistical tools can only extrapolate a plausible lower bound, and richness ignores evenness. Because no single index or method deserves privileging, the most credible estimates are likely to be those on which several imperfect approaches converge.",
+          "incorporatedVocabulary": [
+            "fraught",
+            "cryptic",
+            "extrapolate",
+            "privilege",
+            "consistent with"
+          ],
+          "syntacticReconstruction": "Although environmental DNA may appear to resolve the problem of cryptic species, its detections are perhaps best interpreted as consistent with presence rather than as proof of it."
+        }
+      }
     }
   ]
 }

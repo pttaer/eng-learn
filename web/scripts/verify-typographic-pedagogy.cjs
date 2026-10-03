@@ -166,12 +166,12 @@ console.log('✓ Stepped 4-Pass reading data structure verified.');
 const grammarJsonPath = path.resolve(__dirname, '../src/assets/data/grammar.json');
 assert(fs.existsSync(grammarJsonPath), 'grammar.json not found');
 const grammarData = JSON.parse(fs.readFileSync(grammarJsonPath, 'utf-8'));
-assert.strictEqual(grammarData.length, 60, 'Expected exactly 60 grammar items');
+assert.strictEqual(grammarData.length, 72, 'Expected exactly 72 grammar items');
 
 const requiredModes = ['INVERSION_EMPHASIS', 'SUBJUNCTIVE_UNREAL', 'CLAUSAL_CONDENSATION', 'SYNTACTIC_PRECISION'];
 for (const mode of requiredModes) {
   const items = grammarData.filter(i => i.mode === mode);
-  assert.strictEqual(items.length, 15, `Expected 15 items in mode ${mode}, found ${items.length}`);
+  assert.strictEqual(items.length, 18, `Expected 18 items in mode ${mode}, found ${items.length}`);
 }
 
 for (const item of grammarData) {
@@ -179,7 +179,7 @@ for (const item of grammarData) {
   assert(item.vietnamese && item.vietnamese.trim().length > 0, `Item ${item.id} missing vietnamese callout`);
   assert(item.promptSentence && item.targetTransformation, `Item ${item.id} missing transformation pair`);
 }
-console.log('✓ Grammar formula callouts and 60-item matrix verified.');
+console.log('✓ Grammar formula callouts and 72-item matrix verified.');
 
 // ============================================================================
 // 6. Verification of TypeScript Dossier Modules

@@ -299,6 +299,106 @@
       "anchor": "Short-termist trap (quarterly capitalism & election cycles) → Existential risks (climate, bio-threats, AI) → Constitutional representation for future generations",
       "collocations": "existential risk, intergenerational equity, civilizational resilience, long-term stewardship",
       "phonetic": "Resonant, expansive pacing; deliberate rhetorical pauses before visionary conclusions."
+    },
+    {
+      "title": "Disagreeing Diplomatically with a Senior Colleague",
+      "id": "speaking-31",
+      "index": 31,
+      "mode": "4-3-2 Fluency Drill",
+      "prompt": "Your line manager proposes launching a product two months early to beat a competitor, but you believe the quality risks are serious. Persuade them to reconsider without undermining their authority.",
+      "anchor": "Acknowledge the goal (shared ambition to lead the market) → Reframe the risk (concrete consequences of shipping early) → Offer a face-saving alternative (phased or limited release)",
+      "collocations": "with all due respect, I take your point, play devil's advocate, a calculated risk, meet someone halfway",
+      "phonetic": "Fall-rise on concessive openers ('I SEE the logic ↘↗') to signal that a 'but' is coming; deliver the critical clause on a gentle low fall rather than a sharp high fall, which sounds confrontational."
+    },
+    {
+      "title": "Breaking Bad News with Tact",
+      "id": "speaking-32",
+      "index": 32,
+      "mode": "2-Minute Impromptu Jamming",
+      "prompt": "You have to tell a long-standing team member that their role is being eliminated in a restructuring. Deliver the news clearly and compassionately, without offering false hope.",
+      "anchor": "Signal and state (a brief warning, then the decision in one plain sentence) → Explain and absorb (the reasons, then a pause for their reaction) → Support and next steps (concrete help and a clear timeline)",
+      "collocations": "I'm afraid I have some difficult news, it was not an easy decision, through no fault of your own, take all the time you need, explore the options",
+      "phonetic": "Slow the tempo and lower the pitch range on the key sentence; keep it in a single tone unit with a clear final fall so the message is not softened into ambiguity, then leave a full pause."
+    },
+    {
+      "title": "The Turning Point: Narrating a Personal Story",
+      "id": "speaking-33",
+      "index": 33,
+      "mode": "4-3-2 Fluency Drill",
+      "prompt": "Recount a moment that changed the direction of your life or career, making clear what you believed before, what happened, and how you see it now.",
+      "anchor": "Backstory (past perfect and 'used to': who I had been) → The pivotal moment (past simple and past continuous: what happened) → Reflection (present perfect and present simple: what has changed since)",
+      "collocations": "little did I know, in hindsight, a defining moment, it finally clicked, it dawned on me",
+      "phonetic": "Mark the climax with a pause before the key clause and a high-onset fall on the pivotal word; use weak forms /həd/ and /wəz/ in the backstory so that stressed content words carry the rhythm."
+    },
+    {
+      "title": "Persuading an Unconvinced Audience",
+      "id": "speaking-34",
+      "index": 34,
+      "mode": "2-Minute Impromptu Jamming",
+      "prompt": "You are presenting a four-day working week pilot to a room of department heads who are openly doubtful. Win them over in two minutes.",
+      "anchor": "Concede their concern (name the strongest objection first) → Reframe with a low-risk test (a time-limited pilot with clear success measures) → Call to action (the specific decision you want today)",
+      "collocations": "I'm well aware that, the burden of proof, a low-risk trial, by the same token, what have we got to lose",
+      "phonetic": "Use contrastive stress to pivot from their view to yours ('YOU see a cost; I see an INVESTMENT'); end the call to action on a decisive fall, not a rising tone that invites refusal."
+    },
+    {
+      "title": "Explaining a Complex Idea to a Twelve-Year-Old",
+      "id": "speaking-35",
+      "index": 35,
+      "mode": "4-3-2 Fluency Drill",
+      "prompt": "Explain to a curious twelve-year-old how vaccines train the immune system, without jargon and without talking down to them.",
+      "anchor": "Relatable analogy (a wanted poster for germs) → Mechanism in plain steps (practice run, memory, faster response) → Check understanding (invite a question and restate the idea in one line)",
+      "collocations": "think of it like, in other words, the gist of it, it boils down to, does that make sense",
+      "phonetic": "Keep tone units short with one nucleus each; use a rising tone on check questions ('Does that make SENSE? ↗'); place stress on the analogy keyword rather than on technical terms."
+    },
+    {
+      "title": "Negotiating a Compromise Between Two Teams",
+      "id": "speaking-36",
+      "index": 36,
+      "mode": "2-Minute Impromptu Jamming",
+      "prompt": "Two departments both claim the same limited budget for the coming year. As the mediator, propose a compromise that both sides can accept.",
+      "anchor": "Map interests (what each team actually needs, not what it demands) → Explore trade-offs (sequencing, shared resources, conditions) → Package deal (restate the agreement and confirm commitment from both sides)",
+      "collocations": "common ground, a sticking point, split the difference, a win-win outcome, on condition that",
+      "phonetic": "Fall-rise on conditional offers ('IF we can agree on timing ↘↗...'); keep a level, unhurried pitch to project neutrality; stress the contrasting possessives ('YOUR team... OUR side')."
+    },
+    {
+      "title": "Raising a Glass: A Retirement Toast",
+      "id": "speaking-37",
+      "index": 37,
+      "mode": "4-3-2 Fluency Drill",
+      "prompt": "Give a toast at the retirement dinner of a mentor who shaped your early career, balancing warmth, light-hearted wit and sincerity.",
+      "anchor": "Hook anecdote (a vivid first memory of them) → Tribute (their qualities and their impact on others) → Toast (a forward-looking wish and the invitation to raise glasses)",
+      "collocations": "it gives me great pleasure, leave a lasting legacy, go above and beyond, words cannot do justice, please join me in raising a glass",
+      "phonetic": "Pause just before punchlines and before the final toast; use the weak form /tə/ in 'Here's to Sam' so that the name carries the nuclear stress on a warm, wide fall."
+    },
+    {
+      "title": "Handling a Hostile Question at a Press Conference",
+      "id": "speaking-38",
+      "index": 38,
+      "mode": "2-Minute Impromptu Jamming",
+      "prompt": "After you announce a product recall, a journalist accuses your company of covering up the defect for months. Respond calmly and honestly without becoming defensive.",
+      "anchor": "Acknowledge and bridge (validate the concern without repeating the accusation) → Address the substance (what was known, when, and what was done) → Pivot to commitment (concrete corrective steps and accountability)",
+      "collocations": "I understand why you would ask, let me be absolutely clear, with the benefit of hindsight, take full responsibility, the facts are as follows",
+      "phonetic": "Keep the pitch range narrow and the tempo steady; avoid rising intonation on factual statements, which sounds uncertain; place nuclear stress on verbs of commitment ('we WILL publish the findings')."
+    },
+    {
+      "title": "Hedging an Uncertain Forecast",
+      "id": "speaking-39",
+      "index": 39,
+      "mode": "4-3-2 Fluency Drill",
+      "prompt": "Your director asks whether next year's sales will recover, but the data are mixed. Give a balanced forecast that is honest about uncertainty yet still useful for planning.",
+      "anchor": "Best estimate (with an explicit level of confidence) → Key assumptions and risks (what could push the figure up or down) → Planning recommendation (scenarios and trigger points for review)",
+      "collocations": "in all likelihood, barring any major shocks, err on the side of caution, by and large, a fair degree of uncertainty",
+      "phonetic": "Fall-rise on hedges ('PROBably ↘↗') to signal reservation; stress modals of probability ('it MAY recover'); replace fillers with short silent pauses between tone units."
+    },
+    {
+      "title": "Critiquing a Work You Admire but Question",
+      "id": "speaking-40",
+      "index": 40,
+      "mode": "2-Minute Impromptu Jamming",
+      "prompt": "Describe a film, painting or novel you consider significant but flawed, assessing both its artistic achievement and its shortcomings.",
+      "anchor": "Context and premise (what the work sets out to do) → Achievement (craft, imagery, performance) → Reservations and verdict (where it falls short and why it still matters)",
+      "collocations": "strike a chord, a tour de force, fall flat, verge on the sentimental, stand the test of time",
+      "phonetic": "Contrastive stress on evaluative pairs ('visually STUNNING but dramatically THIN'); fall-rise on the concessive 'admittedly'; slow the tempo for the final verdict."
     }
   ],
   "writing": [
@@ -735,7 +835,7 @@
       "stylistic": "Philosophical nuance, balanced rhythmic sentence structure, dignified declarative ending."
     },
     {
-      "title": "The Crisis of Solitude in an Hyper-Connected Age",
+      "title": "The Crisis of Solitude in a Hyper-Connected Age",
       "meal": {
         "m": "The systematic eradication of solitude in modern hyper-connected culture deprives the human consciousness of the psychological sanctuary indispensable for original self-discovery and emotional regulation.",
         "e": "Psychological experiments conducted at the University of Virginia found that over 65% of participants preferred administering painful electrical shocks to themselves rather than sitting alone in a quiet room with their thoughts for fifteen minutes.",
@@ -781,6 +881,166 @@
       "register": "Philosophy of Technology & Scientific Methodology",
       "masterSentence": "The transition from AI as an analytical assistant to an autonomous researcher running end-to-end scientific pipelines promises to compress centuries of scientific discovery into decades, while fundamentally challenging human intellectual primacy.",
       "stylistic": "Antithetical balancing, conceptual precision ('intellectual primacy', 'black-box science'), compelling philosophical warning."
+    },
+    {
+      "title": "A Formal Complaint about Unresolved Heating Failures",
+      "meal": {
+        "m": "Despite three written assurances since November, the heating system in our building remains unreliable, and I must now ask you to treat this matter as a formal complaint.",
+        "e": "On each occasion, an engineer attended, replaced a single component and left within the hour; on each occasion, the system failed again within days, leaving elderly residents on the upper floors without heating during the coldest weeks of the year.",
+        "a": "This pattern suggests that the underlying fault has never been diagnosed, only its symptoms addressed, and that your service agreement is being observed in letter rather than in spirit.",
+        "l": "I therefore request a full inspection by an independent engineer within fourteen days, together with written confirmation of the remedial work proposed, failing which I shall refer the matter to the relevant ombudsman."
+      },
+      "id": "writing-31",
+      "index": 31,
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "question": "Write the central paragraph of a formal letter to a building management company complaining that repeated heating failures have not been resolved despite earlier assurances.",
+      "register": "Formal Correspondence / Complaint",
+      "masterSentence": "Despite three written assurances since November, the heating system in our building remains unreliable, and I must now ask you to treat this matter as a formal complaint.",
+      "stylistic": "Measured formality without hostility, deliberate parallel repetition ('on each occasion'), the formal conditional 'failing which', precise deadlines and requests."
+    },
+    {
+      "title": "Recommending a Trial Scheme in an Internal Report",
+      "meal": {
+        "m": "On balance, it is recommended that flexible start times be introduced on a six-month trial basis, subject to agreed core hours and a formal review at the end of the period.",
+        "e": "Feedback gathered from team leaders during the consultation indicated that the main obstacles to punctuality were childcare drop-offs and unreliable commuter services rather than any lack of commitment among staff.",
+        "a": "Allowing staff to begin at any point between 7.30 and 10.00, while requiring attendance during core hours, would address these practical constraints without compromising collaboration or client coverage.",
+        "l": "Should the review show no loss of productivity, the scheme could be made permanent; should problems emerge, the trial structure allows it to be withdrawn without contractual complications."
+      },
+      "id": "writing-32",
+      "index": 32,
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "question": "Write the recommendation paragraph of an internal report advising senior management on whether to introduce flexible start times for office staff.",
+      "register": "Business Report / Recommendation",
+      "masterSentence": "On balance, it is recommended that flexible start times be introduced on a six-month trial basis, subject to agreed core hours and a formal review at the end of the period.",
+      "stylistic": "Impersonal passive ('it is recommended that'), mandative subjunctive ('be introduced'), paired inverted conditionals ('Should the review...; should problems...'), balanced alternatives."
+    },
+    {
+      "title": "Reviewing an Ambitious Debut Novel",
+      "meal": {
+        "m": "For all its dazzling sentences, the novel never quite decides what story it wants to tell, and its brilliance arrives in flashes rather than as a sustained illumination.",
+        "e": "The opening chapters, set in a fading seaside town, are rendered with such sensory precision that the reader can almost taste the salt; yet the second half abandons this world for a hurried conspiracy plot that feels borrowed from another book.",
+        "a": "The problem is not a lack of talent but a surplus of ambition: the author seems reluctant to sacrifice any idea, and the narrative sags under the weight of competing intentions.",
+        "l": "Still, few debuts announce a voice this distinctive, and readers willing to forgive its excesses will find a writer worth following."
+      },
+      "id": "writing-33",
+      "index": 33,
+      "mode": "Franklin Copywork & Stylistic Deconstruction",
+      "question": "Write the evaluative paragraph of a review of a debut novel that is stylistically ambitious but structurally uneven.",
+      "register": "Literary Review / Arts Journalism",
+      "masterSentence": "For all its dazzling sentences, the novel never quite decides what story it wants to tell, and its brilliance arrives in flashes rather than as a sustained illumination.",
+      "stylistic": "Concessive opener ('For all its...'), sustained light-and-flash imagery, antithesis ('not a lack of talent but a surplus of ambition'), a balanced closing verdict."
+    },
+    {
+      "title": "A Tribute to a Community Doctor",
+      "meal": {
+        "m": "For forty years, Ellen Marsh served this town as its family doctor in the conviction that listening was the most powerful instrument she carried.",
+        "e": "Patients recall consultations that ran well beyond their allotted time, house calls made through snowdrifts, and her habit of remembering the names of children she had delivered long after they had children of their own.",
+        "a": "Such devotion was not sentimental but clinical: she understood that an accurate diagnosis often depends on a patient feeling unhurried enough to mention the symptom they consider too trivial to raise.",
+        "l": "She leaves behind a generation who were not merely treated but known, and a standard of care against which her successors will measure themselves for years to come."
+      },
+      "id": "writing-34",
+      "index": 34,
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "question": "Write a paragraph for a local newspaper paying tribute to a recently deceased family doctor who served the same community for four decades.",
+      "register": "Obituary / Tribute",
+      "masterSentence": "For forty years, Ellen Marsh served this town as its family doctor in the conviction that listening was the most powerful instrument she carried.",
+      "stylistic": "Elegiac yet restrained tone, a concrete tricolon of memories, the 'not merely... but' contrast, a forward-looking close with a fronted preposition ('against which')."
+    },
+    {
+      "title": "Making the Case in a Cover Letter",
+      "meal": {
+        "m": "Over the past five years, I have learned that successful projects depend less on rigid plans than on the ability to keep diverse teams aligned when circumstances change.",
+        "e": "In my current role, I took over a delayed system migration involving three external vendors, introduced a weekly cross-team review, and renegotiated the delivery schedule so that the most critical services moved first.",
+        "a": "The experience taught me that transparency about setbacks builds more trust than optimistic reporting, and that stakeholders are far more forgiving of bad news delivered early than of surprises delivered late.",
+        "l": "I would welcome the opportunity to bring this approach to your team, particularly as you expand your portfolio of cross-border projects."
+      },
+      "id": "writing-35",
+      "index": 35,
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "question": "Write the central paragraph of a cover letter for a project manager position, demonstrating relevant achievement without sounding boastful.",
+      "register": "Professional Correspondence / Job Application",
+      "masterSentence": "Over the past five years, I have learned that successful projects depend less on rigid plans than on the ability to keep diverse teams aligned when circumstances change.",
+      "stylistic": "Modest first-person framing ('I have learned'), concrete action verbs in a tricolon, comparative balance ('less on... than on', 'delivered early... delivered late'), a courteous forward-looking close."
+    },
+    {
+      "title": "Executive Summary of a Customer Retention Review",
+      "meal": {
+        "m": "This review finds that customer losses stem primarily from a poor onboarding experience rather than from pricing, and it proposes three targeted measures to reverse the trend within two quarters.",
+        "e": "Exit interviews and support records repeatedly describe new users struggling to configure the service in their first two weeks, while departing customers seldom cite cost as their main reason for leaving.",
+        "a": "The implication is that discounting, the remedy most often proposed internally, would reduce revenue without addressing the actual cause of dissatisfaction.",
+        "l": "The board is therefore asked to approve investment in guided onboarding, proactive check-ins during the first month and a simplified setup process, as detailed in Sections 3 to 5."
+      },
+      "id": "writing-36",
+      "index": 36,
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "question": "Write the opening paragraph of an executive summary for a board reviewing why a subscription service is losing long-term customers.",
+      "register": "Executive Summary / Corporate Reporting",
+      "masterSentence": "This review finds that customer losses stem primarily from a poor onboarding experience rather than from pricing, and it proposes three targeted measures to reverse the trend within two quarters.",
+      "stylistic": "Front-loaded findings, impersonal reporting verbs ('finds', 'proposes'), contrastive 'rather than', an explicit request for a decision with cross-references."
+    },
+    {
+      "title": "An Op-Ed Opening in Support of Public Libraries",
+      "meal": {
+        "m": "Walk into any public library on a weekday morning and you will find the clearest rebuttal to the claim that libraries have outlived their purpose.",
+        "e": "A retired engineer is learning to video-call his grandchildren; a teenager without internet access at home is finishing her coursework; a newly arrived family is completing residency forms with the help of a librarian who speaks their language.",
+        "a": "None of these people has come for books alone; they have come for the one public space that asks nothing of them but quiet, and that offers in return access, expertise and dignity.",
+        "l": "To cut library budgets on the assumption that the internet has made them redundant is to mistake the building for the service, and to abandon precisely those citizens the internet has left behind."
+      },
+      "id": "writing-37",
+      "index": 37,
+      "mode": "Franklin Copywork & Stylistic Deconstruction",
+      "question": "Write the opening paragraph of a newspaper opinion piece arguing that public libraries deserve renewed funding.",
+      "register": "Opinion Journalism / Op-Ed",
+      "masterSentence": "Walk into any public library on a weekday morning and you will find the clearest rebuttal to the claim that libraries have outlived their purpose.",
+      "stylistic": "Imperative-conditional hook ('Walk into... and you will find'), a cinematic tricolon of vignettes separated by semicolons, singular agreement after 'None of these people has', an infinitival subject in the closing antithesis."
+    },
+    {
+      "title": "Reflecting on a Failure that Taught More than Success",
+      "meal": {
+        "m": "It took the collapse of my first business to teach me that confidence and competence are not the same thing, however often they are mistaken for each other.",
+        "e": "I had launched the venture with a polished pitch and a loyal circle of supporters, yet within eighteen months I was closing its doors, having ignored every warning about cash flow because the warnings did not fit the story I was telling myself.",
+        "a": "Looking back, the failure was less a matter of bad luck than of selective attention: I listened to the voices that confirmed my plans and quietly dismissed the ones that questioned them.",
+        "l": "I still take risks, but I now seek out the most doubtful person in the room before committing, because I have learned that the objection I least want to hear is usually the one I most need to answer."
+      },
+      "id": "writing-38",
+      "index": 38,
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "question": "Write a paragraph for a reflective personal essay about a failure that ultimately proved more instructive than any success.",
+      "register": "Reflective Personal Essay",
+      "masterSentence": "It took the collapse of my first business to teach me that confidence and competence are not the same thing, however often they are mistaken for each other.",
+      "stylistic": "Cleft-style opening ('It took... to teach me'), candid first-person retrospection, a perfect participle clause ('having ignored'), a chiastic close ('least want... most need')."
+    },
+    {
+      "title": "Proposing a Community Garden",
+      "meal": {
+        "m": "We propose to transform the disused lot on Mill Street into a community garden that would provide fresh produce, outdoor learning space and a shared meeting point for residents of all ages.",
+        "e": "Our residents' association has already secured volunteer commitments from local families, a nearby primary school has expressed interest in weekly gardening lessons, and a hardware supplier has offered tools at cost.",
+        "a": "Because the plot currently attracts illegal dumping and must be cleared periodically at public expense, the project would convert a recurring liability into a maintained asset at minimal cost to the council.",
+        "l": "We therefore request a three-year lease of the site at a nominal rent, with a progress report submitted to the council at the end of each growing season."
+      },
+      "id": "writing-39",
+      "index": 39,
+      "mode": "MEAL Single-Paragraph Deep-Dive",
+      "question": "Write the core paragraph of a proposal to a local council requesting the use of a vacant plot for a community garden.",
+      "register": "Proposal / Community Funding Request",
+      "masterSentence": "We propose to transform the disused lot on Mill Street into a community garden that would provide fresh produce, outdoor learning space and a shared meeting point for residents of all ages.",
+      "stylistic": "Collective 'we' voice, conditional 'would' for proposed outcomes, a tricolon of community backing, cost-benefit reframing ('a recurring liability into a maintained asset')."
+    },
+    {
+      "title": "A Public Apology after a Data Breach",
+      "meal": {
+        "m": "We let our customers down, and we are sorry: protecting your personal information is our responsibility, and on this occasion we failed to meet it.",
+        "e": "Last week, an outside party gained unlawful access to a database containing the names, email addresses and phone numbers of some of our customers; no payment details or passwords were stored in that system.",
+        "a": "We have closed the vulnerability, engaged independent security specialists to review our systems and informed the relevant data protection authority, but we know that these steps do not undo the anxiety this incident has caused.",
+        "l": "Every affected customer will be contacted directly with guidance on protecting themselves, and we will publish the findings of the independent review in full once it is complete."
+      },
+      "id": "writing-40",
+      "index": 40,
+      "mode": "Franklin Copywork & Stylistic Deconstruction",
+      "question": "Write the key paragraph of a public statement in which a company issues an apology to customers after a data breach exposed their contact details.",
+      "register": "Crisis Communication / Public Apology",
+      "masterSentence": "We let our customers down, and we are sorry: protecting your personal information is our responsibility, and on this occasion we failed to meet it.",
+      "stylistic": "An unhedged first-person apology placed first, short declarative clauses, plain vocabulary instead of legal euphemism, concrete commitments in the future simple."
     }
   ],
   "rubricSummary": " Granular Self-Evaluation Rubrics & Scoring Matrices\n\nTo guarantee steady progression, every recorded speaking drill and written draft must be evaluated against standardized scoring criteria.\n\n## 1. Speaking Performance Rubric (20-Point Scale)\n\nGrade your recorded monologue across four dimensions (1 to 5 points each).\n\n| Dimension | 1 - Novice | 2 - Developing | 3 - Competent | 4 - Advanced | 5 - Mastery |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| **1. Fluency & Pacing** (Temporal Compression) | Constant halting; pauses >3s; heavy reliance on verbal crutches (*um, ah, like*). | Frequent hesitation; uneven delivery; struggles to compress time in 4-3-2. | Steady flow; minor pauses at clause boundaries; noticeable speed-up in 3m and 2m. | Smooth, rhythmic flow; zero disruptive fillers; effortless compression across rounds. | Native-velocity cadenced delivery; pauses are purely rhetorical; flawless time compression. |\n| **2. Phonetics & Prosody** (Articulatory Mechanics) | Flat pitch; slurred consonant clusters; heavy L1 interference; misplaced stress. | Monotone delivery; frequent misplaced nuclear stress; choppy word-by-word delivery. | Clear segmental sounds; basic sentence stress; some linking/catenation across words. | Expressive pitch contours; natural connected speech (elision, weak forms, catenation). | Flawless nuclear stress placement; rich prosodic variety; effortless vocal authority. |\n| **3. Lexical Precision** (Collocational Density) | Vague, generic words (*goo"

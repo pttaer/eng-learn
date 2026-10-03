@@ -180,3 +180,39 @@
 - **Analysis**: Pairing a Latinate nominalization with an infinitive phrase produces clumsy, asymmetric syntax. Harmonizing both coordinate objects into direct gerund phrases creates aerodynamic structural balance.
 - **Exemplar**: The turnaround strategy necessitates renegotiating credit terms and consolidating redundant manufacturing facilities.
 
+## Subject-Verb Agreement with 'The number of' vs 'A number of'
+- **ID**: gram-prec-16
+- **Mode**: SYNTACTIC_REPAIR
+- **Level**: 1
+- **Prompt**: The number of complaints lodged against the contractor have tripled, and a number of residents is now considering legal action.
+- **Transformation**: The number of complaints lodged against the contractor has tripled, and a number of residents are now considering legal action.
+- **Grammatical Cue**: 'The number' is a singular head noun; in 'a number of', the plural noun after 'of' is the head and governs the verb.
+- **Vietnamese**: Hòa hợp chủ ngữ và động từ: 'The number of + danh từ số nhiều' (con số) đi với động từ số ít; 'A number of + danh từ số nhiều' (một số, nhiều) đi với động từ số nhiều.
+- **Formula**: `The number of + Plural Noun + Singular Verb | A number of + Plural Noun + Plural Verb`
+- **Analysis**: In 'the number of complaints', the head is 'number' (a single quantity), so the verb is singular despite the plural noun and the intervening modifier 'lodged against the contractor'. 'A number of' has become a fixed quantifier meaning 'several', so the following plural noun is the notional head and takes a plural verb. Similar head-identification problems arise with 'the majority of' and 'none of', where usage varies: 'none of the reports is' is the traditional formal choice, but 'none of the reports are' is also standard.
+- **Exemplar**: The number of applicants has fallen sharply, yet a number of universities are still expanding their intake.
+
+## Ambiguous Pronoun Reference Resolution
+- **ID**: gram-prec-17
+- **Mode**: SYNTACTIC_REPAIR
+- **Level**: 2
+- **Prompt**: When the chief executive met the auditor, she insisted that her figures were accurate.
+- **Transformation**: The chief executive insisted to the auditor that her own figures were accurate.
+- **Grammatical Cue**: Two singular female antecedents precede 'she' and 'her'; restructure so that the intended referent is the only salient candidate.
+- **Vietnamese**: Sửa lỗi đại từ quy chiếu mơ hồ: khi có hai danh từ cùng giống, cùng số đứng trước, cần lặp lại danh từ hoặc tái cấu trúc câu để đại từ chỉ có một tiền ngữ duy nhất.
+- **Formula**: `Repeat the antecedent noun | Recast so the antecedent is the clause subject | Bind the possessive with 'own' or use a reflexive`
+- **Analysis**: A pronoun is ambiguous whenever more than one preceding noun phrase matches it in person, number and gender; readers then default to the subject or to the most recent noun, and either guess may be wrong. Repair strategies include repeating the noun, recasting the sentence so that the intended antecedent is the subject of the same clause, or adding 'own' to tie the possessive to that subject. Singular 'they' can create the same ambiguity when both antecedents are unspecified for gender.
+- **Exemplar**: When the minister briefed the ambassador, the ambassador asked for the proposal in writing.
+
+## Faulty Predication ('The reason is because')
+- **ID**: gram-prec-18
+- **Mode**: SYNTACTIC_REPAIR
+- **Level**: 3
+- **Prompt**: The reason the pilot project stalled is because the regional offices were never consulted.
+- **Transformation**: The reason the pilot project stalled is that the regional offices were never consulted.
+- **Grammatical Cue**: After 'The reason... is', use a 'that' clause; 'because' duplicates the causal meaning already carried by 'reason'.
+- **Vietnamese**: Sửa lỗi vị ngữ không tương hợp: sau 'The reason... is' dùng mệnh đề 'that', không dùng 'because' vì bản thân 'reason' đã mang nghĩa nguyên nhân.
+- **Formula**: `The reason (why/that) + Clause + is + that + Clause | Subject + Verb + because + Clause`
+- **Analysis**: The copula 'is' equates its subject with its complement, so the complement should be a noun-like element: a 'that' clause qualifies, whereas a 'because' clause is an adverbial of cause, producing both a predication mismatch and a redundancy. 'The reason is because' is common in speech and even appears in respected writers, but it is widely censured in edited formal prose. The cleaner alternatives are 'The reason is that...' or simply 'The project stalled because...'.
+- **Exemplar**: The reason the merger failed was that the two firms could never agree on who would make the final decisions.
+

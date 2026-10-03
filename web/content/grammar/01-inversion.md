@@ -180,3 +180,39 @@
 - **Analysis**: Participle inversion achieves graceful syntactic cohesion by linking backwards to prior context via the participle phrase while reserving the end-position for a heavy, conceptually novel noun phrase.
 - **Exemplar**: Concealed beneath layers of corporate shell companies was the beneficial owner of the sanctioned assets.
 
+## Negative Inversion with 'Little did...'
+- **ID**: gram-inv-16
+- **Mode**: INVERSION_EMPHASIS
+- **Level**: 1
+- **Prompt**: The shareholders did not suspect that the merger talks had already collapsed behind closed doors.
+- **Transformation**: Little did the shareholders suspect that the merger talks had already collapsed behind closed doors.
+- **Grammatical Cue**: Fronting the negative adverb 'little' (meaning 'not at all') triggers do-support inversion: 'did + subject + base verb'.
+- **Vietnamese**: Đảo ngữ với 'Little did': 'Little' mang nghĩa phủ định 'hoàn toàn không'; đưa lên đầu câu, đảo trợ động từ 'did' lên trước chủ ngữ và đưa động từ chính về nguyên mẫu.
+- **Formula**: `Little + do/does/did + Subject + Verb of Knowledge or Expectation (know/suspect/imagine/dream)...`
+- **Analysis**: Here 'little' is not a quantifier but a negative degree adverb equivalent to 'not at all'; like other negative adverbials, it forces subject-auxiliary inversion when fronted. It combines almost exclusively with verbs of knowledge and expectation (know, suspect, imagine, dream) and typically creates dramatic irony by contrasting a character's ignorance with what the reader already knows.
+- **Exemplar**: Little did the young clerk imagine that the ledger he was copying would one day convict his employer.
+
+## Restrictive Inversion with 'Only after...'
+- **ID**: gram-inv-17
+- **Mode**: INVERSION_EMPHASIS
+- **Level**: 2
+- **Prompt**: The board approved the acquisition only after the due-diligence report had been independently verified.
+- **Transformation**: Only after the due-diligence report had been independently verified did the board approve the acquisition.
+- **Grammatical Cue**: Front the restrictive adjunct 'Only after [clause]'; invert the auxiliary in the main clause, never inside the 'after' clause.
+- **Vietnamese**: Đảo ngữ với 'Only after/Only when': Mệnh đề hoặc cụm từ đi sau 'Only' giữ nguyên trật tự; chỉ đảo trợ động từ ở mệnh đề chính.
+- **Formula**: `Only after/when/once/if + Clause or Phrase + Auxiliary + Subject + Main Verb...`
+- **Analysis**: 'Only' restricts the truth of the proposition to a single condition or moment and so carries an implicit negative ('not before that'); fronting the whole restrictive adjunct therefore triggers inversion in the matrix clause. When 'only' modifies the subject itself, however, no inversion occurs ('Only the auditor noticed the error'), because the focused element is the subject and there is nothing to invert around it.
+- **Exemplar**: Only when the last hostage had been released did the negotiators allow themselves to sleep.
+
+## Degree Inversion with 'Such + be + Noun Phrase'
+- **ID**: gram-inv-18
+- **Mode**: INVERSION_EMPHASIS
+- **Level**: 3
+- **Prompt**: The public backlash was so intense that the ministry withdrew the bill within a week.
+- **Transformation**: Such was the intensity of the public backlash that the ministry withdrew the bill within a week.
+- **Grammatical Cue**: Front predicative 'Such'; invert the copula before an abstract-noun subject ('the intensity of...'); the verb agrees with that following subject.
+- **Vietnamese**: Đảo ngữ với 'Such + be + cụm danh từ + that': Đưa 'Such' lên đầu câu, đảo động từ 'be' lên trước chủ ngữ là danh từ trừu tượng (the intensity of...), theo sau là mệnh đề kết quả.
+- **Formula**: `Such + be (agreeing with the following subject) + Noun Phrase Subject + that + Result Clause...`
+- **Analysis**: Unlike 'So + adjective + be + subject', the 'such' pattern fronts a pro-form standing for the degree itself, so the original adjective usually has to be recast as an abstract noun ('intense' becomes 'the intensity of'). Because the real subject follows the verb, agreement is easily mishandled: 'Such were the pressures on the team that...' requires plural 'were'. The construction suits formal narrative and rhetoric in which the result clause forms the climax.
+- **Exemplar**: Such were the delays at the border that perishable cargo had to be destroyed before it reached the market.
+

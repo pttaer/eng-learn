@@ -351,7 +351,7 @@
 - **L**: Broadening the canon revitalizes the university's core mission: subjecting all intellectual traditions to rigorous inquiry, cross-pollination, and shared discovery.
 - **Stylistic**: Philosophical nuance, balanced rhythmic sentence structure, dignified declarative ending.
 
-## The Crisis of Solitude in an Hyper-Connected Age
+## The Crisis of Solitude in a Hyper-Connected Age
 - **ID**: writing-28
 - **Index**: 28
 - **Mode**: MEAL Single-Paragraph Deep-Dive
@@ -389,4 +389,134 @@
 - **A**: While these systems drastically accelerate the exploration of massive chemical and biological search spaces that dwarf human cognitive capacity, their opaque decision-making architectures risk creating a world of 'black-box science' where humanity possesses functional cures without understanding the underlying mechanistic principles.
 - **L**: To safeguard scientific truth, the future of discovery must not surrender foundational epistemological understanding in exchange for brute algorithmic utility.
 - **Stylistic**: Antithetical balancing, conceptual precision ('intellectual primacy', 'black-box science'), compelling philosophical warning.
+
+## A Formal Complaint about Unresolved Heating Failures
+- **ID**: writing-31
+- **Index**: 31
+- **Mode**: MEAL Single-Paragraph Deep-Dive
+- **Question**: Write the central paragraph of a formal letter to a building management company complaining that repeated heating failures have not been resolved despite earlier assurances.
+- **Register**: Formal Correspondence / Complaint
+- **Master Sentence**: Despite three written assurances since November, the heating system in our building remains unreliable, and I must now ask you to treat this matter as a formal complaint.
+- **M**: Despite three written assurances since November, the heating system in our building remains unreliable, and I must now ask you to treat this matter as a formal complaint.
+- **E**: On each occasion, an engineer attended, replaced a single component and left within the hour; on each occasion, the system failed again within days, leaving elderly residents on the upper floors without heating during the coldest weeks of the year.
+- **A**: This pattern suggests that the underlying fault has never been diagnosed, only its symptoms addressed, and that your service agreement is being observed in letter rather than in spirit.
+- **L**: I therefore request a full inspection by an independent engineer within fourteen days, together with written confirmation of the remedial work proposed, failing which I shall refer the matter to the relevant ombudsman.
+- **Stylistic**: Measured formality without hostility, deliberate parallel repetition ('on each occasion'), the formal conditional 'failing which', precise deadlines and requests.
+
+## Recommending a Trial Scheme in an Internal Report
+- **ID**: writing-32
+- **Index**: 32
+- **Mode**: MEAL Single-Paragraph Deep-Dive
+- **Question**: Write the recommendation paragraph of an internal report advising senior management on whether to introduce flexible start times for office staff.
+- **Register**: Business Report / Recommendation
+- **Master Sentence**: On balance, it is recommended that flexible start times be introduced on a six-month trial basis, subject to agreed core hours and a formal review at the end of the period.
+- **M**: On balance, it is recommended that flexible start times be introduced on a six-month trial basis, subject to agreed core hours and a formal review at the end of the period.
+- **E**: Feedback gathered from team leaders during the consultation indicated that the main obstacles to punctuality were childcare drop-offs and unreliable commuter services rather than any lack of commitment among staff.
+- **A**: Allowing staff to begin at any point between 7.30 and 10.00, while requiring attendance during core hours, would address these practical constraints without compromising collaboration or client coverage.
+- **L**: Should the review show no loss of productivity, the scheme could be made permanent; should problems emerge, the trial structure allows it to be withdrawn without contractual complications.
+- **Stylistic**: Impersonal passive ('it is recommended that'), mandative subjunctive ('be introduced'), paired inverted conditionals ('Should the review...; should problems...'), balanced alternatives.
+
+## Reviewing an Ambitious Debut Novel
+- **ID**: writing-33
+- **Index**: 33
+- **Mode**: Franklin Copywork & Stylistic Deconstruction
+- **Question**: Write the evaluative paragraph of a review of a debut novel that is stylistically ambitious but structurally uneven.
+- **Register**: Literary Review / Arts Journalism
+- **Master Sentence**: For all its dazzling sentences, the novel never quite decides what story it wants to tell, and its brilliance arrives in flashes rather than as a sustained illumination.
+- **M**: For all its dazzling sentences, the novel never quite decides what story it wants to tell, and its brilliance arrives in flashes rather than as a sustained illumination.
+- **E**: The opening chapters, set in a fading seaside town, are rendered with such sensory precision that the reader can almost taste the salt; yet the second half abandons this world for a hurried conspiracy plot that feels borrowed from another book.
+- **A**: The problem is not a lack of talent but a surplus of ambition: the author seems reluctant to sacrifice any idea, and the narrative sags under the weight of competing intentions.
+- **L**: Still, few debuts announce a voice this distinctive, and readers willing to forgive its excesses will find a writer worth following.
+- **Stylistic**: Concessive opener ('For all its...'), sustained light-and-flash imagery, antithesis ('not a lack of talent but a surplus of ambition'), a balanced closing verdict.
+
+## A Tribute to a Community Doctor
+- **ID**: writing-34
+- **Index**: 34
+- **Mode**: MEAL Single-Paragraph Deep-Dive
+- **Question**: Write a paragraph for a local newspaper paying tribute to a recently deceased family doctor who served the same community for four decades.
+- **Register**: Obituary / Tribute
+- **Master Sentence**: For forty years, Ellen Marsh served this town as its family doctor in the conviction that listening was the most powerful instrument she carried.
+- **M**: For forty years, Ellen Marsh served this town as its family doctor in the conviction that listening was the most powerful instrument she carried.
+- **E**: Patients recall consultations that ran well beyond their allotted time, house calls made through snowdrifts, and her habit of remembering the names of children she had delivered long after they had children of their own.
+- **A**: Such devotion was not sentimental but clinical: she understood that an accurate diagnosis often depends on a patient feeling unhurried enough to mention the symptom they consider too trivial to raise.
+- **L**: She leaves behind a generation who were not merely treated but known, and a standard of care against which her successors will measure themselves for years to come.
+- **Stylistic**: Elegiac yet restrained tone, a concrete tricolon of memories, the 'not merely... but' contrast, a forward-looking close with a fronted preposition ('against which').
+
+## Making the Case in a Cover Letter
+- **ID**: writing-35
+- **Index**: 35
+- **Mode**: MEAL Single-Paragraph Deep-Dive
+- **Question**: Write the central paragraph of a cover letter for a project manager position, demonstrating relevant achievement without sounding boastful.
+- **Register**: Professional Correspondence / Job Application
+- **Master Sentence**: Over the past five years, I have learned that successful projects depend less on rigid plans than on the ability to keep diverse teams aligned when circumstances change.
+- **M**: Over the past five years, I have learned that successful projects depend less on rigid plans than on the ability to keep diverse teams aligned when circumstances change.
+- **E**: In my current role, I took over a delayed system migration involving three external vendors, introduced a weekly cross-team review, and renegotiated the delivery schedule so that the most critical services moved first.
+- **A**: The experience taught me that transparency about setbacks builds more trust than optimistic reporting, and that stakeholders are far more forgiving of bad news delivered early than of surprises delivered late.
+- **L**: I would welcome the opportunity to bring this approach to your team, particularly as you expand your portfolio of cross-border projects.
+- **Stylistic**: Modest first-person framing ('I have learned'), concrete action verbs in a tricolon, comparative balance ('less on... than on', 'delivered early... delivered late'), a courteous forward-looking close.
+
+## Executive Summary of a Customer Retention Review
+- **ID**: writing-36
+- **Index**: 36
+- **Mode**: MEAL Single-Paragraph Deep-Dive
+- **Question**: Write the opening paragraph of an executive summary for a board reviewing why a subscription service is losing long-term customers.
+- **Register**: Executive Summary / Corporate Reporting
+- **Master Sentence**: This review finds that customer losses stem primarily from a poor onboarding experience rather than from pricing, and it proposes three targeted measures to reverse the trend within two quarters.
+- **M**: This review finds that customer losses stem primarily from a poor onboarding experience rather than from pricing, and it proposes three targeted measures to reverse the trend within two quarters.
+- **E**: Exit interviews and support records repeatedly describe new users struggling to configure the service in their first two weeks, while departing customers seldom cite cost as their main reason for leaving.
+- **A**: The implication is that discounting, the remedy most often proposed internally, would reduce revenue without addressing the actual cause of dissatisfaction.
+- **L**: The board is therefore asked to approve investment in guided onboarding, proactive check-ins during the first month and a simplified setup process, as detailed in Sections 3 to 5.
+- **Stylistic**: Front-loaded findings, impersonal reporting verbs ('finds', 'proposes'), contrastive 'rather than', an explicit request for a decision with cross-references.
+
+## An Op-Ed Opening in Support of Public Libraries
+- **ID**: writing-37
+- **Index**: 37
+- **Mode**: Franklin Copywork & Stylistic Deconstruction
+- **Question**: Write the opening paragraph of a newspaper opinion piece arguing that public libraries deserve renewed funding.
+- **Register**: Opinion Journalism / Op-Ed
+- **Master Sentence**: Walk into any public library on a weekday morning and you will find the clearest rebuttal to the claim that libraries have outlived their purpose.
+- **M**: Walk into any public library on a weekday morning and you will find the clearest rebuttal to the claim that libraries have outlived their purpose.
+- **E**: A retired engineer is learning to video-call his grandchildren; a teenager without internet access at home is finishing her coursework; a newly arrived family is completing residency forms with the help of a librarian who speaks their language.
+- **A**: None of these people has come for books alone; they have come for the one public space that asks nothing of them but quiet, and that offers in return access, expertise and dignity.
+- **L**: To cut library budgets on the assumption that the internet has made them redundant is to mistake the building for the service, and to abandon precisely those citizens the internet has left behind.
+- **Stylistic**: Imperative-conditional hook ('Walk into... and you will find'), a cinematic tricolon of vignettes separated by semicolons, singular agreement after 'None of these people has', an infinitival subject in the closing antithesis.
+
+## Reflecting on a Failure that Taught More than Success
+- **ID**: writing-38
+- **Index**: 38
+- **Mode**: MEAL Single-Paragraph Deep-Dive
+- **Question**: Write a paragraph for a reflective personal essay about a failure that ultimately proved more instructive than any success.
+- **Register**: Reflective Personal Essay
+- **Master Sentence**: It took the collapse of my first business to teach me that confidence and competence are not the same thing, however often they are mistaken for each other.
+- **M**: It took the collapse of my first business to teach me that confidence and competence are not the same thing, however often they are mistaken for each other.
+- **E**: I had launched the venture with a polished pitch and a loyal circle of supporters, yet within eighteen months I was closing its doors, having ignored every warning about cash flow because the warnings did not fit the story I was telling myself.
+- **A**: Looking back, the failure was less a matter of bad luck than of selective attention: I listened to the voices that confirmed my plans and quietly dismissed the ones that questioned them.
+- **L**: I still take risks, but I now seek out the most doubtful person in the room before committing, because I have learned that the objection I least want to hear is usually the one I most need to answer.
+- **Stylistic**: Cleft-style opening ('It took... to teach me'), candid first-person retrospection, a perfect participle clause ('having ignored'), a chiastic close ('least want... most need').
+
+## Proposing a Community Garden
+- **ID**: writing-39
+- **Index**: 39
+- **Mode**: MEAL Single-Paragraph Deep-Dive
+- **Question**: Write the core paragraph of a proposal to a local council requesting the use of a vacant plot for a community garden.
+- **Register**: Proposal / Community Funding Request
+- **Master Sentence**: We propose to transform the disused lot on Mill Street into a community garden that would provide fresh produce, outdoor learning space and a shared meeting point for residents of all ages.
+- **M**: We propose to transform the disused lot on Mill Street into a community garden that would provide fresh produce, outdoor learning space and a shared meeting point for residents of all ages.
+- **E**: Our residents' association has already secured volunteer commitments from local families, a nearby primary school has expressed interest in weekly gardening lessons, and a hardware supplier has offered tools at cost.
+- **A**: Because the plot currently attracts illegal dumping and must be cleared periodically at public expense, the project would convert a recurring liability into a maintained asset at minimal cost to the council.
+- **L**: We therefore request a three-year lease of the site at a nominal rent, with a progress report submitted to the council at the end of each growing season.
+- **Stylistic**: Collective 'we' voice, conditional 'would' for proposed outcomes, a tricolon of community backing, cost-benefit reframing ('a recurring liability into a maintained asset').
+
+## A Public Apology after a Data Breach
+- **ID**: writing-40
+- **Index**: 40
+- **Mode**: Franklin Copywork & Stylistic Deconstruction
+- **Question**: Write the key paragraph of a public statement in which a company issues an apology to customers after a data breach exposed their contact details.
+- **Register**: Crisis Communication / Public Apology
+- **Master Sentence**: We let our customers down, and we are sorry: protecting your personal information is our responsibility, and on this occasion we failed to meet it.
+- **M**: We let our customers down, and we are sorry: protecting your personal information is our responsibility, and on this occasion we failed to meet it.
+- **E**: Last week, an outside party gained unlawful access to a database containing the names, email addresses and phone numbers of some of our customers; no payment details or passwords were stored in that system.
+- **A**: We have closed the vulnerability, engaged independent security specialists to review our systems and informed the relevant data protection authority, but we know that these steps do not undo the anxiety this incident has caused.
+- **L**: Every affected customer will be contacted directly with guidance on protecting themselves, and we will publish the findings of the independent review in full once it is complete.
+- **Stylistic**: An unhedged first-person apology placed first, short declarative clauses, plain vocabulary instead of legal euphemism, concrete commitments in the future simple.
 

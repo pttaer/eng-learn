@@ -640,3 +640,323 @@
 - **Morphology**: de- (away) + tract (pull) -> pull value away from something
 - **Remind Candidate**: false
 
+## fidelity
+- **ID**: vocab-rf-41
+- **Mode**: ROOT_FORGE
+- **Level**: 1
+- **Word**: fidelity
+- **IPA**: /fɪˈdel.ə.ti/
+- **Definition**: Faithfulness to a person, cause, or belief; or the degree of exactness with which something is copied or reproduced.
+- **Vietnamese**: sự trung thành, lòng chung thủy; độ trung thực (của bản dịch, bản sao, âm thanh)
+- **Context**: The translator aimed for fidelity to the poet's rhythm as much as to his literal meaning.
+- **Prefix**: None (root-initial)
+- **Root**: fid (Latin fides: faith, trust)
+- **Suffix**: -ity (noun-forming: state, quality)
+- **Derivatives**: infidelity, confide, confidant, diffident, perfidious
+- **Morphology**: fid (faith) + -el- (from fidelis: faithful) + -ity (state) -> the state of keeping faith
+- **Remind Candidate**: false
+
+## incredulous
+- **ID**: vocab-rf-42
+- **Mode**: ROOT_FORGE
+- **Level**: 2
+- **Word**: incredulous
+- **IPA**: /ɪnˈkred.jə.ləs/
+- **Definition**: Unwilling or unable to believe something; showing disbelief.
+- **Vietnamese**: hoài nghi, không thể tin nổi, tỏ vẻ ngờ vực
+- **Context**: The villagers listened with incredulous faces as the engineer explained that the river would be diverted around their valley.
+- **Prefix**: in- (Latin: not)
+- **Root**: cred (Latin credere: to believe, trust)
+- **Suffix**: -ulous (adjective-forming: inclined to)
+- **Derivatives**: incredulity, credulous, credible, credence, credential
+- **Morphology**: in- (not) + cred (believe) + -ulous (inclined to) -> not inclined to believe
+- **Remind Candidate**: true
+
+## eloquent
+- **ID**: vocab-rf-43
+- **Mode**: ROOT_FORGE
+- **Level**: 1
+- **Word**: eloquent
+- **IPA**: /ˈel.ə.kwənt/
+- **Definition**: Fluent, expressive, and persuasive in speaking or writing; clearly expressing a feeling.
+- **Vietnamese**: hùng hồn, có tài hùng biện, diễn đạt lưu loát và thuyết phục
+- **Context**: Her eloquent tribute at the memorial service moved even strangers to tears.
+- **Prefix**: e- / ex- (Latin: out)
+- **Root**: loqu (Latin loqui: to speak)
+- **Suffix**: -ent (adjective-forming: performing an action)
+- **Derivatives**: eloquence, eloquently, colloquial, soliloquy
+- **Morphology**: e- (out) + loqu (speak) + -ent -> speaking out fluently and forcefully
+- **Remind Candidate**: false
+
+## loquacious
+- **ID**: vocab-rf-44
+- **Mode**: ROOT_FORGE
+- **Level**: 3
+- **Word**: loquacious
+- **IPA**: /ləˈkweɪ.ʃəs/
+- **Definition**: Tending to talk a great deal; very talkative.
+- **Vietnamese**: nói nhiều, lắm lời, ba hoa
+- **Context**: Our loquacious taxi driver narrated the history of every bridge we crossed on the way to the airport.
+- **Prefix**: None (root-initial)
+- **Root**: loqu (Latin loqui: to speak)
+- **Suffix**: -acious (adjective-forming: inclined to, abounding in)
+- **Derivatives**: loquacity, loquaciously, interlocutor, circumlocution
+- **Morphology**: loqu (speak) + -acious (abounding in) -> overflowing with speech
+- **Remind Candidate**: false
+
+## subvert
+- **ID**: vocab-rf-45
+- **Mode**: ROOT_FORGE
+- **Level**: 3
+- **Word**: subvert
+- **IPA**: /səbˈvɜːt/
+- **Definition**: Undermine the power, authority, or principles of an established system or institution; overturn conventions from within.
+- **Vietnamese**: lật đổ, phá hoại ngầm, làm đảo lộn từ bên trong
+- **Context**: The novel subverts the conventions of the detective story by revealing the culprit on the very first page.
+- **Prefix**: sub- (Latin: under, from below)
+- **Root**: vert (Latin vertere: to turn)
+- **Suffix**: None (zero suffix)
+- **Derivatives**: subversion, subversive, avert, invert, convert
+- **Morphology**: sub- (from below) + vert (turn) -> turn over from underneath
+- **Remind Candidate**: true
+
+## inadvertent
+- **ID**: vocab-rf-46
+- **Mode**: ROOT_FORGE
+- **Level**: 2
+- **Word**: inadvertent
+- **IPA**: /ˌɪn.ədˈvɜː.tənt/
+- **Definition**: Not resulting from deliberate intention or planning; unintentional, often through lack of attention.
+- **Vietnamese**: vô ý, sơ suất, không cố ý
+- **Context**: An inadvertent click on reply-all sent the confidential salary list to the entire department.
+- **Prefix**: in- (Latin: not) + ad- (Latin: toward)
+- **Root**: vert (Latin vertere: to turn)
+- **Suffix**: -ent (adjective-forming)
+- **Derivatives**: inadvertently, inadvertence, advert, adverse, advertise
+- **Morphology**: in- (not) + ad- (toward) + vert (turn) + -ent -> not turning one's attention toward
+- **Remind Candidate**: true
+
+## impending
+- **ID**: vocab-rf-47
+- **Mode**: ROOT_FORGE
+- **Level**: 2
+- **Word**: impending
+- **IPA**: /ɪmˈpen.dɪŋ/
+- **Definition**: (Of an event, typically an unpleasant one) about to happen; imminent.
+- **Vietnamese**: sắp xảy ra, đang treo lơ lửng trước mắt
+- **Context**: Dark clouds massing over the bay warned the fishermen of the impending storm.
+- **Prefix**: im- / in- (Latin: upon, over)
+- **Root**: pend (Latin pendere: to hang)
+- **Suffix**: -ing (participial adjective)
+- **Derivatives**: impend, pendulum, pendant, suspend, pending
+- **Morphology**: im- (over) + pend (hang) + -ing -> hanging over, about to fall
+- **Remind Candidate**: false
+
+## compendium
+- **ID**: vocab-rf-48
+- **Mode**: ROOT_FORGE
+- **Level**: 3
+- **Word**: compendium
+- **IPA**: /kəmˈpen.di.əm/
+- **Definition**: A collection of concise but detailed information about a particular subject, especially in a single book.
+- **Vietnamese**: bản tóm lược toàn diện, sách tổng hợp, tuyển tập
+- **Context**: Her grandmother's handwritten compendium of herbal remedies covered everything from fevers to insect bites.
+- **Prefix**: com- (Latin: together)
+- **Root**: pend (Latin pendere: to weigh)
+- **Suffix**: -ium (Latin neuter noun ending)
+- **Derivatives**: compendious, expend, stipend, compensate
+- **Morphology**: com- (together) + pend (weigh) + -ium -> what is weighed together, hence a saving or abridgement
+- **Remind Candidate**: false
+
+## proscribe
+- **ID**: vocab-rf-49
+- **Mode**: ROOT_FORGE
+- **Level**: 3
+- **Word**: proscribe
+- **IPA**: /prəʊˈskraɪb/
+- **Definition**: Forbid something, especially by law; denounce or condemn officially.
+- **Vietnamese**: cấm đoán (bằng luật), lên án chính thức, đặt ra ngoài vòng pháp luật
+- **Context**: The new regulations proscribe the sale of wild-caught songbirds in city markets.
+- **Prefix**: pro- (Latin: before, in public)
+- **Root**: scrib (Latin scribere: to write)
+- **Suffix**: None (zero suffix)
+- **Derivatives**: proscription, proscriptive, prescribe, transcribe, inscribe
+- **Morphology**: pro- (publicly) + scrib (write) -> post a written public notice of condemnation, as in Roman outlaw lists
+- **Remind Candidate**: true
+
+## circumscribe
+- **ID**: vocab-rf-50
+- **Mode**: ROOT_FORGE
+- **Level**: 3
+- **Word**: circumscribe
+- **IPA**: /ˈsɜː.kəm.skraɪb/
+- **Definition**: Restrict something within limits; in geometry, draw a figure around another so that it touches it at points without cutting it.
+- **Vietnamese**: giới hạn, khoanh vùng hạn chế; (hình học) vẽ ngoại tiếp
+- **Context**: Her freedom to work was tightly circumscribed by the terms of her student visa.
+- **Prefix**: circum- (Latin: around)
+- **Root**: scrib (Latin scribere: to write, draw)
+- **Suffix**: None (zero suffix)
+- **Derivatives**: circumscribed, circumscription, describe, manuscript
+- **Morphology**: circum- (around) + scrib (draw) -> draw a line around to set limits
+- **Remind Candidate**: false
+
+## gregarious
+- **ID**: vocab-rf-51
+- **Mode**: ROOT_FORGE
+- **Level**: 2
+- **Word**: gregarious
+- **IPA**: /ɡrɪˈɡeə.ri.əs/
+- **Definition**: Fond of company; sociable. (Of animals) living in flocks or herds.
+- **Vietnamese**: thích giao du, hòa đồng; (động vật) sống theo bầy đàn
+- **Context**: Gregarious by nature, he knew the name of every stallholder in the night market within a month of arriving.
+- **Prefix**: None (root-initial)
+- **Root**: greg (Latin grex, gregis: flock, herd)
+- **Suffix**: -arious (adjective-forming: belonging to, connected with)
+- **Derivatives**: gregariousness, congregate, segregate, aggregate
+- **Morphology**: greg (flock) + -arious (belonging to) -> belonging to the flock
+- **Remind Candidate**: false
+
+## egregious
+- **ID**: vocab-rf-52
+- **Mode**: ROOT_FORGE
+- **Level**: 3
+- **Word**: egregious
+- **IPA**: /ɪˈɡriː.dʒəs/
+- **Definition**: Outstandingly bad; shocking and flagrant.
+- **Vietnamese**: tồi tệ quá mức, trắng trợn, sai lầm rành rành
+- **Context**: Publishing the wrong set of exam results was an egregious error that cost the board its credibility.
+- **Prefix**: e- / ex- (Latin: out of)
+- **Root**: greg (Latin grex, gregis: flock, herd)
+- **Suffix**: -ious (adjective-forming: characterized by)
+- **Derivatives**: egregiously, egregiousness, gregarious, congregation
+- **Morphology**: e- (out of) + greg (flock) + -ious -> standing out from the flock; once praise, now only censure
+- **Remind Candidate**: true
+
+## susceptible
+- **ID**: vocab-rf-53
+- **Mode**: ROOT_FORGE
+- **Level**: 1
+- **Word**: susceptible
+- **IPA**: /səˈsep.tə.bəl/
+- **Definition**: Likely to be influenced, harmed, or affected by a particular thing.
+- **Vietnamese**: dễ bị ảnh hưởng, dễ mắc phải, nhạy cảm với
+- **Context**: Young rice seedlings are highly susceptible to cold snaps in early spring.
+- **Prefix**: sus- / sub- (Latin: under, up from below)
+- **Root**: cept (Latin capere: to take, seize)
+- **Suffix**: -ible (adjective-forming: capable of)
+- **Derivatives**: susceptibility, accept, intercept, perceive, capture
+- **Morphology**: sus- (up from under) + cept (take) + -ible -> capable of taking on an influence
+- **Remind Candidate**: false
+
+## incipient
+- **ID**: vocab-rf-54
+- **Mode**: ROOT_FORGE
+- **Level**: 3
+- **Word**: incipient
+- **IPA**: /ɪnˈsɪp.i.ənt/
+- **Definition**: In an initial stage; beginning to happen or develop.
+- **Vietnamese**: chớm nở, mới manh nha, ở giai đoạn ban đầu
+- **Context**: Experienced teachers can often spot incipient reading difficulties long before any formal diagnosis.
+- **Prefix**: in- (Latin: into, upon)
+- **Root**: cip (Latin capere: to take, via incipere: to begin)
+- **Suffix**: -ient (adjective-forming: in the act of)
+- **Derivatives**: incipience, inception, recipient, participate
+- **Morphology**: in- (upon) + cip (take) + -ient -> taking something in hand, just beginning
+- **Remind Candidate**: true
+
+## intermittent
+- **ID**: vocab-rf-55
+- **Mode**: ROOT_FORGE
+- **Level**: 2
+- **Word**: intermittent
+- **IPA**: /ˌɪn.təˈmɪt.ənt/
+- **Definition**: Occurring at irregular intervals; not continuous or steady.
+- **Vietnamese**: lúc có lúc không, gián đoạn, không liên tục
+- **Context**: Intermittent showers throughout the afternoon kept interrupting the village football final.
+- **Prefix**: inter- (Latin: between)
+- **Root**: mitt (Latin mittere: to send, let go)
+- **Suffix**: -ent (adjective-forming)
+- **Derivatives**: intermittently, intermission, transmit, emit, remittance
+- **Morphology**: inter- (between) + mitt (let go) + -ent -> letting go at intervals in between
+- **Remind Candidate**: false
+
+## emissary
+- **ID**: vocab-rf-56
+- **Mode**: ROOT_FORGE
+- **Level**: 2
+- **Word**: emissary
+- **IPA**: /ˈem.ɪ.sər.i/
+- **Definition**: A person sent on a special mission, usually as a diplomatic representative.
+- **Vietnamese**: phái viên, sứ giả, người được cử đi làm nhiệm vụ đặc biệt
+- **Context**: The king sent a trusted emissary across the mountains to negotiate the release of the captured merchants.
+- **Prefix**: e- / ex- (Latin: out)
+- **Root**: miss (Latin mittere, missus: to send)
+- **Suffix**: -ary (noun-forming: person connected with)
+- **Derivatives**: emission, emit, mission, missive, dismiss
+- **Morphology**: e- (out) + miss (sent) + -ary (person) -> one who is sent out
+- **Remind Candidate**: false
+
+## tenacious
+- **ID**: vocab-rf-57
+- **Mode**: ROOT_FORGE
+- **Level**: 1
+- **Word**: tenacious
+- **IPA**: /təˈneɪ.ʃəs/
+- **Definition**: Holding firmly to something; persistent and determined, not easily giving up.
+- **Vietnamese**: bền bỉ, kiên trì, bám riết không buông
+- **Context**: A tenacious local reporter spent six years tracing where the flood relief money had actually gone.
+- **Prefix**: None (root-initial)
+- **Root**: ten (Latin tenere: to hold)
+- **Suffix**: -acious (adjective-forming: inclined to)
+- **Derivatives**: tenacity, tenant, tenable, retain, detain
+- **Morphology**: ten (hold) + -acious (inclined to) -> inclined to hold fast
+- **Remind Candidate**: false
+
+## inconsequential
+- **ID**: vocab-rf-58
+- **Mode**: ROOT_FORGE
+- **Level**: 2
+- **Word**: inconsequential
+- **IPA**: /ɪnˌkɒn.sɪˈkwen.ʃəl/
+- **Definition**: Not important or significant; trivial.
+- **Vietnamese**: không đáng kể, vụn vặt, chẳng quan trọng
+- **Context**: What seemed an inconsequential remark at dinner turned out to be the first hint of his resignation.
+- **Prefix**: in- (Latin: not) + con- (Latin: together, with)
+- **Root**: sequ (Latin sequi: to follow)
+- **Suffix**: -ential (adjective-forming: relating to)
+- **Derivatives**: consequence, consequential, sequel, sequence
+- **Morphology**: in- (not) + con- (with) + sequ (follow) + -ential -> not followed by any consequence
+- **Remind Candidate**: false
+
+## obsequious
+- **ID**: vocab-rf-59
+- **Mode**: ROOT_FORGE
+- **Level**: 3
+- **Word**: obsequious
+- **IPA**: /əbˈsiː.kwi.əs/
+- **Definition**: Excessively eager to please or obey; servile.
+- **Vietnamese**: khúm núm, xu nịnh, quỵ lụy
+- **Context**: The waiter's obsequious bowing cooled noticeably once he learned we were not the mayor's guests.
+- **Prefix**: ob- (Latin: toward, in the way of)
+- **Root**: sequ (Latin sequi: to follow)
+- **Suffix**: -ious (adjective-forming)
+- **Derivatives**: obsequiousness, obsequiously, sequential, consecutive
+- **Morphology**: ob- (toward) + sequ (follow) + -ious -> following after someone compliantly
+- **Remind Candidate**: true
+
+## pseudonym
+- **ID**: vocab-rf-60
+- **Mode**: ROOT_FORGE
+- **Level**: 1
+- **Word**: pseudonym
+- **IPA**: /ˈsjuː.də.nɪm/
+- **Definition**: A fictitious name, especially one used by an author instead of their real name.
+- **Vietnamese**: bút danh, tên giả
+- **Context**: Several of the country's best-loved poets published under pseudonyms to slip past the censors.
+- **Prefix**: pseudo- (Greek: false)
+- **Root**: nym (Greek onyma / onoma: name)
+- **Suffix**: None (zero suffix)
+- **Derivatives**: pseudonymous, anonymous, synonym, antonym, eponym
+- **Morphology**: pseudo- (false) + nym (name) -> false name
+- **Remind Candidate**: false
+

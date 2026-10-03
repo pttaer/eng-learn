@@ -600,3 +600,303 @@
 - **Register**: Historiography & Philosophy
 - **Remind Candidate**: true
 
+## tenuous
+- **ID**: vocab-cefr-41
+- **Mode**: CEFR_ASCENT
+- **Level**: 2
+- **Word**: tenuous
+- **IPA**: /ˈten.ju.əs/
+- **Definition**: Very weak or slight; lacking a sound basis (of a link, argument, or hold on something).
+- **Vietnamese**: mong manh, lỏng lẻo, thiếu cơ sở vững chắc
+- **Context**: The prosecution's case rested on a tenuous link between the defendant and a phone found near the scene.
+- **CEFR Rank**: C2 / Academic & Literary
+- **Collocates**: tenuous link, tenuous connection, tenuous grasp, tenuous hold on power
+- **Synonyms**: flimsy, slight, shaky
+- **Register**: Academic Argument & Journalism
+- **Remind Candidate**: true
+
+## cogent
+- **ID**: vocab-cefr-42
+- **Mode**: CEFR_ASCENT
+- **Level**: 2
+- **Word**: cogent
+- **IPA**: /ˈkəʊ.dʒənt/
+- **Definition**: (Of an argument or case) clear, logical, and convincing.
+- **Vietnamese**: chặt chẽ và thuyết phục, có sức nặng về lập luận
+- **Context**: Her cogent case for rent control won over even the doubters on the housing committee.
+- **CEFR Rank**: C2 / Academic & Literary
+- **Collocates**: cogent argument, cogent case, cogent reason, cogent analysis
+- **Synonyms**: compelling, persuasive, well-reasoned
+- **Register**: Academic Writing & Legal Argument
+- **Remind Candidate**: false
+
+## tacit
+- **ID**: vocab-cefr-43
+- **Mode**: CEFR_ASCENT
+- **Level**: 2
+- **Word**: tacit
+- **IPA**: /ˈtæs.ɪt/
+- **Definition**: Understood or implied without being directly stated.
+- **Vietnamese**: ngầm hiểu, mặc nhiên, không nói ra thành lời
+- **Context**: By saying nothing at the meeting, the minister gave tacit approval to the cuts.
+- **CEFR Rank**: C2 / Academic & Literary
+- **Collocates**: tacit approval, tacit agreement, tacit consent, tacit knowledge
+- **Synonyms**: implicit, unspoken, understood
+- **Register**: Political Analysis & Philosophy
+- **Remind Candidate**: false
+
+## ambivalent
+- **ID**: vocab-cefr-44
+- **Mode**: CEFR_ASCENT
+- **Level**: 2
+- **Word**: ambivalent
+- **IPA**: /æmˈbɪv.ə.lənt/
+- **Definition**: Having mixed or contradictory feelings about something or someone.
+- **Vietnamese**: có cảm xúc lẫn lộn, phân vân giữa hai thái độ trái ngược
+- **Context**: Many villagers are ambivalent about the new dam: it brings electricity but floods their ancestral farmland.
+- **CEFR Rank**: C1 / Academic & Literary
+- **Collocates**: deeply ambivalent, ambivalent about, ambivalent attitude, ambivalent feelings
+- **Synonyms**: conflicted, equivocal, torn
+- **Register**: Psychology & Social Commentary
+- **Remind Candidate**: false
+
+## exacerbate
+- **ID**: vocab-cefr-45
+- **Mode**: CEFR_ASCENT
+- **Level**: 2
+- **Word**: exacerbate
+- **IPA**: /ɪɡˈzæs.ə.beɪt/
+- **Definition**: Make a problem, bad situation, or negative feeling worse.
+- **Vietnamese**: làm trầm trọng thêm, khiến tình hình xấu đi
+- **Context**: Clearing mangroves for shrimp farms has exacerbated coastal erosion across the delta.
+- **CEFR Rank**: C1 / Academic & Literary
+- **Collocates**: exacerbate the problem, exacerbate tensions, exacerbate symptoms, further exacerbate
+- **Synonyms**: aggravate, worsen, compound
+- **Register**: Policy, Medicine & Environmental Science
+- **Remind Candidate**: false
+
+## untenable
+- **ID**: vocab-cefr-46
+- **Mode**: CEFR_ASCENT
+- **Level**: 2
+- **Word**: untenable
+- **IPA**: /ʌnˈten.ə.bəl/
+- **Definition**: (Of a position, theory, or situation) not able to be maintained or defended against attack or objection.
+- **Vietnamese**: không thể đứng vững, không thể bảo vệ hay duy trì được
+- **Context**: Once the leaked emails surfaced, the chairman's position became untenable and he resigned within a week.
+- **CEFR Rank**: C2 / Academic & Literary
+- **Collocates**: untenable position, untenable situation, morally untenable, render untenable
+- **Synonyms**: indefensible, unsustainable, insupportable
+- **Register**: Political & Academic Debate
+- **Remind Candidate**: false
+
+## specious
+- **ID**: vocab-cefr-47
+- **Mode**: CEFR_ASCENT
+- **Level**: 3
+- **Word**: specious
+- **IPA**: /ˈspiː.ʃəs/
+- **Definition**: Superficially plausible but actually wrong or misleading.
+- **Vietnamese**: nghe có vẻ hợp lý nhưng thực chất sai lệch, đúng ở bề ngoài
+- **Context**: The advertisement relied on the specious reasoning that anything natural must be safe.
+- **CEFR Rank**: C2 / GRE Mastery
+- **Collocates**: specious argument, specious reasoning, specious claim, specious logic
+- **Synonyms**: spurious, misleading, sophistical
+- **Register**: Logic, Rhetoric & Critical Reviews
+- **Remind Candidate**: true
+
+## perfunctory
+- **ID**: vocab-cefr-48
+- **Mode**: CEFR_ASCENT
+- **Level**: 3
+- **Word**: perfunctory
+- **IPA**: /pəˈfʌŋk.tər.i/
+- **Definition**: Carried out with minimal effort or reflection, merely as a routine duty.
+- **Vietnamese**: làm cho có, qua loa đại khái, chiếu lệ
+- **Context**: After a perfunctory glance at my passport, the border guard waved me through.
+- **CEFR Rank**: C2 / GRE Mastery
+- **Collocates**: perfunctory glance, perfunctory nod, perfunctory inspection, perfunctory apology
+- **Synonyms**: cursory, token, half-hearted
+- **Register**: Literary Narrative & Formal Description
+- **Remind Candidate**: false
+
+## ostensible
+- **ID**: vocab-cefr-49
+- **Mode**: CEFR_ASCENT
+- **Level**: 3
+- **Word**: ostensible
+- **IPA**: /ɒˈsten.sə.bəl/
+- **Definition**: Stated or appearing to be true, but not necessarily so.
+- **Vietnamese**: bề ngoài, trên danh nghĩa, được viện dẫn công khai (nhưng chưa chắc là thật)
+- **Context**: The ostensible purpose of the trip was trade talks, but the delegation spent most of its time on the golf course.
+- **CEFR Rank**: C2 / GRE Mastery
+- **Collocates**: ostensible purpose, ostensible reason, ostensible aim, ostensibly neutral
+- **Synonyms**: apparent, professed, purported
+- **Register**: Journalism & Historical Analysis
+- **Remind Candidate**: true
+
+## belie
+- **ID**: vocab-cefr-50
+- **Mode**: CEFR_ASCENT
+- **Level**: 3
+- **Word**: belie
+- **IPA**: /bɪˈlaɪ/
+- **Definition**: Fail to give a true impression of something; or show something to be false.
+- **Vietnamese**: che giấu bản chất thật, tạo ấn tượng sai lệch; chứng tỏ điều gì là sai
+- **Context**: His gentle, soft-spoken manner belies a ruthless instinct for negotiation.
+- **CEFR Rank**: C2 / GRE Mastery
+- **Collocates**: belie the fact, belie one's age, appearance belies, belie expectations
+- **Synonyms**: contradict, disguise, misrepresent
+- **Register**: Literary & Journalistic Prose
+- **Remind Candidate**: true
+
+## eschew
+- **ID**: vocab-cefr-51
+- **Mode**: CEFR_ASCENT
+- **Level**: 3
+- **Word**: eschew
+- **IPA**: /ɪsˈtʃuː/
+- **Definition**: Deliberately avoid using or doing something, often on principle.
+- **Vietnamese**: cố tình tránh xa, kiêng dùng (vì nguyên tắc)
+- **Context**: The poet eschews rhyme altogether, preferring the loose rhythms of everyday speech.
+- **CEFR Rank**: C2 / GRE Mastery
+- **Collocates**: eschew violence, eschew publicity, eschew jargon, eschew ornament
+- **Synonyms**: shun, forgo, abstain from
+- **Register**: Formal Writing & Arts Criticism
+- **Remind Candidate**: true
+
+## preclude
+- **ID**: vocab-cefr-52
+- **Mode**: CEFR_ASCENT
+- **Level**: 3
+- **Word**: preclude
+- **IPA**: /prɪˈkluːd/
+- **Definition**: Prevent something from happening or make it impossible; rule out in advance.
+- **Vietnamese**: ngăn trước, loại trừ khả năng, khiến điều gì không thể xảy ra
+- **Context**: A teenage conviction for shoplifting does not necessarily preclude someone from serving on a school board.
+- **CEFR Rank**: C2 / Academic & Literary
+- **Collocates**: preclude the possibility, preclude someone from, effectively preclude, preclude further action
+- **Synonyms**: prohibit, forestall, rule out
+- **Register**: Legal & Academic Prose
+- **Remind Candidate**: false
+
+## gainsay
+- **ID**: vocab-cefr-53
+- **Mode**: CEFR_ASCENT
+- **Level**: 3
+- **Word**: gainsay
+- **IPA**: /ˌɡeɪnˈseɪ/
+- **Definition**: Deny or contradict a fact or statement; speak against (usually used with a negative).
+- **Vietnamese**: phủ nhận, bác bỏ, cãi lại (thường dùng ở dạng phủ định)
+- **Context**: There is no gainsaying the courage of the volunteers who stayed behind during the floods.
+- **CEFR Rank**: C2 / GRE Mastery
+- **Collocates**: no gainsaying, cannot gainsay, hard to gainsay, gainsay the evidence
+- **Synonyms**: deny, dispute, contradict
+- **Register**: Formal & Literary (somewhat archaic)
+- **Remind Candidate**: true
+
+## recalcitrant
+- **ID**: vocab-cefr-54
+- **Mode**: CEFR_ASCENT
+- **Level**: 3
+- **Word**: recalcitrant
+- **IPA**: /rɪˈkæl.sɪ.trənt/
+- **Definition**: Stubbornly uncooperative toward authority, control, or discipline.
+- **Vietnamese**: ngoan cố, cứng đầu, bất hợp tác với cấp trên hay quy định
+- **Context**: The teacher's patience eventually won over even the most recalcitrant pupils in the class.
+- **CEFR Rank**: C2 / GRE Mastery
+- **Collocates**: recalcitrant pupil, recalcitrant member states, recalcitrant attitude, recalcitrant debtor
+- **Synonyms**: unruly, defiant, refractory
+- **Register**: Politics, Education & Management
+- **Remind Candidate**: false
+
+## sanguine
+- **ID**: vocab-cefr-55
+- **Mode**: CEFR_ASCENT
+- **Level**: 3
+- **Word**: sanguine
+- **IPA**: /ˈsæŋ.ɡwɪn/
+- **Definition**: Optimistic or positive, especially in an apparently bad or difficult situation.
+- **Vietnamese**: lạc quan, tin tưởng (kể cả khi tình hình không mấy sáng sủa)
+- **Context**: The coach remained sanguine about the team's chances despite losing their top scorer to injury.
+- **CEFR Rank**: C2 / GRE Mastery
+- **Collocates**: sanguine about, sanguine outlook, less sanguine, sanguine view
+- **Synonyms**: optimistic, hopeful, buoyant
+- **Register**: Formal Commentary & Literary
+- **Remind Candidate**: true
+
+## quixotic
+- **ID**: vocab-cefr-56
+- **Mode**: CEFR_ASCENT
+- **Level**: 3
+- **Word**: quixotic
+- **IPA**: /kwɪkˈsɒt.ɪk/
+- **Definition**: Exceedingly idealistic; unrealistic and impractical in the pursuit of noble aims.
+- **Vietnamese**: viển vông, lý tưởng hóa thái quá, kiểu Đôn Ki-hô-tê
+- **Context**: His quixotic campaign to ban cars from the old quarter attracted admiration but very few votes.
+- **CEFR Rank**: C2 / GRE Mastery
+- **Collocates**: quixotic quest, quixotic campaign, quixotic attempt, quixotic idealism
+- **Synonyms**: idealistic, impractical, starry-eyed
+- **Register**: Literary Allusion & Political Commentary
+- **Remind Candidate**: false
+
+## desultory
+- **ID**: vocab-cefr-57
+- **Mode**: CEFR_ASCENT
+- **Level**: 3
+- **Word**: desultory
+- **IPA**: /ˈdes.əl.tər.i/
+- **Definition**: Lacking a plan, purpose, or enthusiasm; passing aimlessly from one thing to another.
+- **Vietnamese**: rời rạc, tản mạn, thiếu mục đích và nhiệt tình
+- **Context**: After a few desultory attempts at conversation, the two strangers on the night bus lapsed into silence.
+- **CEFR Rank**: C2 / GRE Mastery
+- **Collocates**: desultory conversation, desultory attempt, desultory fashion, desultory reading
+- **Synonyms**: aimless, haphazard, half-hearted
+- **Register**: Literary Narrative
+- **Remind Candidate**: false
+
+## laconic
+- **ID**: vocab-cefr-58
+- **Mode**: CEFR_ASCENT
+- **Level**: 3
+- **Word**: laconic
+- **IPA**: /ləˈkɒn.ɪk/
+- **Definition**: Using very few words; concise to the point of seeming blunt or mysterious.
+- **Vietnamese**: kiệm lời, ngắn gọn súc tích
+- **Context**: Famously laconic, the old fisherman answered every question about the storm with a shrug and a single word.
+- **CEFR Rank**: C2 / GRE Mastery
+- **Collocates**: laconic reply, laconic wit, laconic style, laconic manner
+- **Synonyms**: terse, succinct, taciturn
+- **Register**: Literary Characterization
+- **Remind Candidate**: false
+
+## obdurate
+- **ID**: vocab-cefr-59
+- **Mode**: CEFR_ASCENT
+- **Level**: 3
+- **Word**: obdurate
+- **IPA**: /ˈɒb.djə.rət/
+- **Definition**: Stubbornly refusing to change one's opinion or course of action.
+- **Vietnamese**: cố chấp, sắt đá, không chịu lay chuyển
+- **Context**: Despite weeks of protests, the council remained obdurate and refused to reopen the public library.
+- **CEFR Rank**: C2 / GRE Mastery
+- **Collocates**: obdurate refusal, remain obdurate, obdurate opposition, obdurate silence
+- **Synonyms**: obstinate, unyielding, adamant
+- **Register**: Formal & Literary Prose
+- **Remind Candidate**: false
+
+## mercurial
+- **ID**: vocab-cefr-60
+- **Mode**: CEFR_ASCENT
+- **Level**: 3
+- **Word**: mercurial
+- **IPA**: /mɜːˈkjʊə.ri.əl/
+- **Definition**: Subject to sudden or unpredictable changes of mood or mind.
+- **Vietnamese**: thất thường, sớm nắng chiều mưa, tính khí khó đoán
+- **Context**: The orchestra admired the mercurial conductor's brilliance but dreaded his sudden outbursts at rehearsal.
+- **CEFR Rank**: C2 / GRE Mastery
+- **Collocates**: mercurial temperament, mercurial genius, mercurial personality, mercurial talent
+- **Synonyms**: capricious, temperamental, fickle
+- **Register**: Character Description & Arts Journalism
+- **Remind Candidate**: false
+

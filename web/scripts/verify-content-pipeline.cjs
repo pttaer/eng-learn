@@ -20,26 +20,26 @@ assert(collocations[0].id && collocations[0].phrase && collocations[0].vietnames
 // 3. Validate grammar.json
 const grammar = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'grammar.json'), 'utf8'));
 assert(Array.isArray(grammar), 'grammar must be an array');
-assert.strictEqual(grammar.length, 60, `Expected 60 grammar rules, got ${grammar.length}`);
+assert.strictEqual(grammar.length, 72, `Expected 72 grammar rules, got ${grammar.length}`);
 assert(grammar[0].id && grammar[0].promptSentence && grammar[0].targetTransformation && grammar[0].formula, 'Grammar item schema mismatch');
 
 // 4. Validate vocabulary.json
 const vocab = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'vocabulary.json'), 'utf8'));
 assert(Array.isArray(vocab), 'vocabulary must be an array');
-assert.strictEqual(vocab.length, 120, `Expected 120 vocabulary items, got ${vocab.length}`);
+assert.strictEqual(vocab.length, 180, `Expected 180 vocabulary items, got ${vocab.length}`);
 assert(vocab[0].id && vocab[0].wordOrChunk && vocab[0].definition && vocab[0].breakdown, 'Vocabulary item schema mismatch');
 
 // 5. Validate drills.json
 const drills = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'drills.json'), 'utf8'));
 assert(Array.isArray(drills.speaking), 'drills.speaking must be an array');
-assert.strictEqual(drills.speaking.length, 30, `Expected 30 speaking drills, got ${drills.speaking.length}`);
+assert.strictEqual(drills.speaking.length, 40, `Expected 40 speaking drills, got ${drills.speaking.length}`);
 assert(Array.isArray(drills.writing), 'drills.writing must be an array');
-assert.strictEqual(drills.writing.length, 30, `Expected 30 writing drills, got ${drills.writing.length}`);
+assert.strictEqual(drills.writing.length, 40, `Expected 40 writing drills, got ${drills.writing.length}`);
 
 // 6. Validate reading.json
 const reading = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'reading.json'), 'utf8'));
 assert(Array.isArray(reading.articles), 'reading.articles must be an array');
-assert(reading.articles.length >= 3, `Expected at least 3 reading articles, got ${reading.articles.length}`);
+assert(reading.articles.length >= 6, `Expected at least 6 reading articles, got ${reading.articles.length}`);
 assert(reading.articles[0].fourPassProtocol.pass1ColdRead.comprehensionChecks.length > 0, 'Pass 1 checks missing');
 assert(reading.articles[0].fourPassProtocol.pass2SyntaxDissection.length > 0, 'Pass 2 syntax dissection missing');
 assert(reading.articles[0].fourPassProtocol.pass3SentenceMining.length > 0, 'Pass 3 sentence mining missing');

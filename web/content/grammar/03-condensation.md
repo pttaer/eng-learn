@@ -180,3 +180,39 @@
 - **Analysis**: Syntactic ellipsis eliminates empty expletives ('it was') in introductory concessive clauses, throwing maximum semantic weight directly onto the descriptive noun phrase complement.
 - **Exemplar**: Though initially a modest regional initiative, the economic corridor evolved into a trillion-dollar trade artery.
 
+## Infinitival Relative Clause after Ordinals ('the first to...')
+- **ID**: gram-cond-16
+- **Mode**: CLAUSAL_CONDENSATION
+- **Level**: 1
+- **Prompt**: She was the first engineer who identified the race condition in the payment service.
+- **Transformation**: She was the first engineer to identify the race condition in the payment service.
+- **Grammatical Cue**: After an ordinal, a superlative or 'only', reduce the subject relative clause 'who + finite verb' to a to-infinitive.
+- **Vietnamese**: Rút gọn mệnh đề quan hệ bằng 'to + V' sau số thứ tự (the first, the last), so sánh nhất hoặc 'the only'.
+- **Formula**: `the first/last/next/only/Superlative + Noun + to-Infinitive...`
+- **Analysis**: When the head noun is restricted by an ordinal, a superlative or 'only', a subject relative clause can be condensed into a to-infinitive whose understood subject is the head noun itself. The infinitive is tenseless, so time reference is inferred from the main clause, and a passive relative condenses to 'to be + past participle' ('the last item to be approved').
+- **Exemplar**: The ministry was the last government agency to move its records off paper ledgers.
+
+## Causal Participle Clause with 'Being + Adjective'
+- **ID**: gram-cond-17
+- **Mode**: CLAUSAL_CONDENSATION
+- **Level**: 2
+- **Prompt**: Because the senior partner was unfamiliar with the jurisdiction, she deferred to local counsel.
+- **Transformation**: Being unfamiliar with the jurisdiction, the senior partner deferred to local counsel.
+- **Grammatical Cue**: Replace 'Because + subject + be + adjective' with a fronted 'Being + adjective' phrase that shares the main-clause subject.
+- **Vietnamese**: Rút gọn mệnh đề chỉ nguyên nhân bằng 'Being + tính từ': hai vế phải cùng chủ ngữ; 'Being' làm rõ quan hệ nhân quả.
+- **Formula**: `Being + Adjective Phrase, Subject + Main Verb...`
+- **Analysis**: A 'being' clause attached to a stative adjective is read almost always as causal, because a state cannot easily be construed as an action happening alongside the main event. 'Being' can sometimes be dropped to yield a verbless clause ('Unfamiliar with the jurisdiction, ...'), but retaining it makes the reason relation explicit. As with all participle clauses, the implied subject must be the subject of the main clause, or the modifier dangles.
+- **Exemplar**: Being acutely aware of the reputational stakes, the editor delayed publication until every source had been verified.
+
+## Subordinator-Retained Reduced Clause ('Once ratified...')
+- **ID**: gram-cond-18
+- **Mode**: CLAUSAL_CONDENSATION
+- **Level**: 3
+- **Prompt**: Once the amendment has been ratified by both chambers, it cannot be revoked without a referendum.
+- **Transformation**: Once ratified by both chambers, the amendment cannot be revoked without a referendum.
+- **Grammatical Cue**: Keep the subordinator 'once' but delete the subject and the auxiliary 'has been', leaving the bare past participle.
+- **Vietnamese**: Rút gọn mệnh đề trạng ngữ nhưng giữ liên từ (once, when, if, unless, while): lược bỏ chủ ngữ và 'be', chỉ còn phân từ, tính từ hoặc cụm giới từ.
+- **Formula**: `Once/When/If/Unless/While/Until + Past Participle / Adjective / Prepositional Phrase, Subject + Main Verb...`
+- **Analysis**: Subordinators such as 'once', 'when', 'if', 'unless' and 'until' can survive the ellipsis of subject plus 'be', yielding a compact clause that keeps a precise logical relation which a bare participle would leave vague. Fixed verbless forms like 'When in doubt', 'If in doubt' and 'If necessary' follow the same pattern. The ellipted subject must be recoverable as the main-clause subject: 'Once ratified, voters cannot revoke the amendment' wrongly implies that the voters were ratified.
+- **Exemplar**: When in doubt, the duty officer escalates the alert rather than closing it.
+
