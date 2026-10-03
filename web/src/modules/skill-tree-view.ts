@@ -214,7 +214,7 @@ export class SkillTreeView {
       const [line1, line2] = this.formatNodeLabel(node.title);
 
       nodesSvg += `
-        <g class="constellation-node ${cursorClass}" data-node-id="${node.id}" transform="translate(${cx}, ${cy})" style="cursor: pointer;">
+        <g transform="translate(${cx}, ${cy})"><g class="constellation-node ${cursorClass}" data-node-id="${node.id}" style="cursor: pointer;">
           <title>${node.title} (Level ${node.level} - CEFR ${node.cefrLevel})</title>
           ${haloSvg}
           <circle cx="0" cy="0" r="14" fill="${circleFill}" stroke="${circleStroke}" stroke-width="${strokeWidth}" class="node-circle" />
@@ -225,7 +225,7 @@ export class SkillTreeView {
             <tspan x="0" dy="0">${line1}</tspan>
             ${line2 ? `<tspan x="0" dy="10.5">${line2}</tspan>` : ''}
           </text>
-        </g>
+        </g></g>
       `;
     }
 

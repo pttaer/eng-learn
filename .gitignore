@@ -1,2 +1,3 @@
 web/release/
 web/screenshots/
+.playwright-mcp/
