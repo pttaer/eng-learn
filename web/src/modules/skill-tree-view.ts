@@ -220,7 +220,7 @@ export class SkillTreeView {
       const [line1, line2] = this.formatNodeLabel(node.title);
 
       nodesSvg += `
-        <g transform="translate(${cx}, ${cy})"><g class="constellation-node ${cursorClass}" data-node-id="${node.id}" style="cursor: pointer;">
+        <g transform="translate(${cx}, ${cy})"><g class="constellation-node ${cursorClass}" data-node-id="${node.id}" style="cursor: pointer;" tabindex="0" role="button" aria-label="${node.title} (${status})">
           <title>${node.title} (Level ${node.level} - CEFR ${node.cefrLevel})</title>
           ${haloSvg}
           <circle cx="0" cy="0" r="14" fill="${circleFill}" stroke="${circleStroke}" stroke-width="${strokeWidth}" class="node-circle" />
@@ -262,7 +262,7 @@ export class SkillTreeView {
       const masteredInBranch = branchNodes.filter(n => SkillTreeEngine.getNodeStatus(n.id) === 'mastered').length;
       const pct = Math.round((masteredInBranch / 5) * 100);
       return `
-        <div class="branch-summary-card" data-route="${branch.routeTarget}" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: 6px; cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s; display: flex; flex-direction: column; justify-content: space-between; min-height: 50px; box-shadow: var(--shadow-btn);">
+        <div class="branch-summary-card" data-route="${branch.routeTarget}" tabindex="0" role="button" aria-label="Open ${branch.name}" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: 6px; cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s; display: flex; flex-direction: column; justify-content: space-between; min-height: 50px; box-shadow: var(--shadow-btn);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
             <span style="font-family: var(--font-mono); font-size: 10.5px; color: var(--accent-gold); font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 78%;">
               ✦ ${branch.name.toUpperCase()}
@@ -288,6 +288,14 @@ export class SkillTreeView {
   }
 
   private bindEvents(): void {
+    this.container.addEventListener('keydown', (e: KeyboardEvent) => {
+      const el = (e.target as Element).closest('.constellation-node, .branch-summary-card');
+      if (el && (e.key === 'Enter' || e.key === ' ')) {
+        e.preventDefault();
+        el.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      }
+    });
+
     // Continue workout button
     this.container.querySelector('.btn-continue-workout')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');

@@ -1882,3 +1882,10 @@ html[data-motion="reduce"] {
   transform-box: fill-box;
   transform-origin: center;
 }
+
+.constellation-node:focus-visible,
+.branch-summary-card:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
