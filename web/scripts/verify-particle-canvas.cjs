@@ -40,7 +40,7 @@ assert(source.includes('- 3'), 'FAIL: Initial upward velocity bias (- 3) missing
 // Assert color palette
 assert(source.includes('#5b5bd6'), 'FAIL: Primary accent (#5b5bd6) missing');
 assert(source.includes('#a5b4fc'), 'FAIL: Pastel accent (#a5b4fc) missing');
-assert(source.includes('#fef08a'), 'FAIL: Pale gold (#fef08a) missing');
+assert(source.includes('#ddd6fe'), 'FAIL: Pale lavender (#ddd6fe) missing');
 
 // Assert shapes
 assert(source.includes('star'), 'FAIL: Star shape missing');
