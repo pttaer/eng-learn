@@ -152,7 +152,7 @@
 | 897 | law enforcement | lực lượng thực thi pháp luật | IDIOMS |
 | 898 | gender equality | bình đẳng giới | IDIOMS |
 | 899 | gender bias | định kiến giới | IDIOMS |
-| 900 | glass ceiling | rào cản vô hình kìm hãm thăng tiến | IDIOMS |
+| 900 | sticky floor | "sàn dính" (rào cản ở bậc thấp) | IDIOMS |
 | 901 | domestic violence | bạo lực gia đình | IDIOMS |
 | 902 | peer pressure | áp lực từ bạn bè đồng trang lứa | IDIOMS |
 | 903 | substance abuse | lạm dụng chất kích thích / ma túy | IDIOMS |
@@ -162,10 +162,10 @@
 | 907 | global warming | hiện tượng nóng lên toàn cầu | IDIOMS |
 | 908 | greenhouse effect | hiệu ứng nhà kính | IDIOMS |
 | 909 | greenhouse gas emissions | khí thải nhà kính | IDIOMS |
-| 910 | carbon footprint | dấu chân carbon (lượng phát thải carbon) | IDIOMS |
+| 910 | water footprint | lượng nước tiêu thụ gián tiếp | IDIOMS |
 | 911 | carbon neutral | trung hòa carbon | IDIOMS |
 | 912 | fossil fuels | nhiên liệu hóa thạch | IDIOMS |
-| 913 | renewable energy | năng lượng tái tạo | IDIOMS |
+| 913 | geothermal energy | năng lượng địa nhiệt | IDIOMS |
 | 914 | alternative energy | năng lượng thay thế | IDIOMS |
 | 915 | energy consumption | mức tiêu thụ năng lượng | IDIOMS |
 | 916 | solar energy | năng lượng mặt trời | IDIOMS |
@@ -196,7 +196,7 @@
 | 941 | afforestation | việc trồng rừng / gây rừng | IDIOMS |
 | 942 | logging industry | ngành khai thác gỗ | IDIOMS |
 | 943 | sustainable development | phát triển bền vững | IDIOMS |
-| 944 | ecological balance | sự cân bằng sinh thái | IDIOMS |
+| 944 | trophic cascade | phản ứng dây chuyền trong hệ sinh thái | IDIOMS |
 | 945 | environmental degradation | sự suy thoái môi trường | IDIOMS |
 | 946 | natural disaster | thảm họa thiên nhiên | IDIOMS |
 | 947 | flash flood | lũ quét, lũ ống | IDIOMS |

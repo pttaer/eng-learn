@@ -244,7 +244,7 @@
 | 489 | hand in one's notice | nộp thông báo xin nghỉ việc đúng thời hạn quy định | BUSINESS |
 | 490 | labor union | tổ chức công đoàn đại diện cho người lao động | BUSINESS |
 | 491 | collective bargaining | tiến trình thương lượng tập thể giữa công đoàn và giới chủ | BUSINESS |
-| 492 | go on strike | tham gia bãi công / đình công tập thể | BUSINESS |
+| 492 | stage a walkout | tổ chức cuộc bãi công | BUSINESS |
 | 493 | work-to-rule | hình thức đình công bằng cách làm đúng quy tắc tối thiểu | BUSINESS |
 | 494 | staff turnover rate | tỷ lệ thay thế / biến động nhân sự | BUSINESS |
 | 495 | workplace burnout | hội chứng kiệt sức vì căng thẳng công việc kéo dài | BUSINESS |
@@ -252,4 +252,4 @@
 | 497 | remote working | hình thức làm việc từ xa | BUSINESS |
 | 498 | hot-desking | cơ chế chia sẻ bàn làm việc linh hoạt | BUSINESS |
 | 499 | meet a tight deadline | hoàn thành xuất sắc nhiệm vụ kịp thời hạn rất gấp rút | BUSINESS |
-| 500 | miss a deadline | bị trễ / không hoàn thành công việc đúng thời hạn chót | BUSINESS |
+| 500 | blow a deadline | lỡ hạn chót | BUSINESS |

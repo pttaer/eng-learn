@@ -11,7 +11,7 @@
 | 506 | anecdotal evidence | bằng chứng mang tính giai thoại/truyền miệng | ACADEMIC |
 | 507 | compelling evidence | bằng chứng thuyết phục | ACADEMIC |
 | 508 | conclusive evidence | bằng chứng có tính kết luận/xác thực | ACADEMIC |
-| 509 | circumstantial evidence | bằng chứng gián tiếp/suy đoán | ACADEMIC |
+| 509 | hearsay evidence | bằng chứng nghe đồn | ACADEMIC |
 | 510 | gather empirical data | thu thập dữ liệu thực nghiệm | ACADEMIC |
 | 511 | conduct an experiment | tiến hành thí nghiệm | ACADEMIC |
 | 512 | replicate an experiment | tái lập/lặp lại thí nghiệm | ACADEMIC |
@@ -90,7 +90,7 @@
 | 585 | baseline measurement | phép đo đường cơ sở/chuẩn đối sánh ban đầu | ACADEMIC |
 | 586 | benchmark against | đối chuẩn/so chuẩn với | ACADEMIC |
 | 587 | performance metrics | các chỉ số đo lường hiệu suất | ACADEMIC |
-| 588 | key performance indicator | chỉ số đánh giá hiệu quả then chốt (KPI) | ACADEMIC |
+| 588 | leading indicator | chỉ số dẫn dắt | ACADEMIC |
 | 589 | telemetry data | dữ liệu viễn trắc/giám sát từ xa | ACADEMIC |
 | 590 | real-time analytics | phân tích theo thời gian thực | ACADEMIC |
 | 591 | cutting-edge technology | công nghệ tiên tiến nhất/tối tân | ACADEMIC |
@@ -243,7 +243,7 @@
 | 738 | deductive reasoning | lập luận diễn dịch | ACADEMIC |
 | 739 | inductive reasoning | lập luận quy nạp | ACADEMIC |
 | 740 | intellectual property | sở hữu trí tuệ | ACADEMIC |
-| 741 | patent infringement | vi phạm bằng sáng chế | ACADEMIC |
+| 741 | trademark dilution | làm suy giảm nhãn hiệu | ACADEMIC |
 | 742 | file a patent | nộp đơn đăng ký bằng sáng chế | ACADEMIC |
 | 743 | genetic modification | biến đổi gen | ACADEMIC |
 | 744 | cellular mechanism | cơ chế tế bào | ACADEMIC |

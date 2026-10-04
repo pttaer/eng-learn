@@ -3439,8 +3439,8 @@
   {
     "id": "colloc-492",
     "index": 492,
-    "phrase": "go on strike",
-    "vietnamese": "tham gia bãi công / đình công tập thể",
+    "phrase": "stage a walkout",
+    "vietnamese": "tổ chức cuộc bãi công",
     "category": "BUSINESS"
   },
   {
@@ -3495,8 +3495,8 @@
   {
     "id": "colloc-500",
     "index": 500,
-    "phrase": "miss a deadline",
-    "vietnamese": "bị trễ / không hoàn thành công việc đúng thời hạn chót",
+    "phrase": "blow a deadline",
+    "vietnamese": "lỡ hạn chót",
     "category": "BUSINESS"
   },
   {
@@ -3558,8 +3558,8 @@
   {
     "id": "colloc-509",
     "index": 509,
-    "phrase": "circumstantial evidence",
-    "vietnamese": "bằng chứng gián tiếp/suy đoán",
+    "phrase": "hearsay evidence",
+    "vietnamese": "bằng chứng nghe đồn",
     "category": "ACADEMIC"
   },
   {
@@ -4111,8 +4111,8 @@
   {
     "id": "colloc-588",
     "index": 588,
-    "phrase": "key performance indicator",
-    "vietnamese": "chỉ số đánh giá hiệu quả then chốt (KPI)",
+    "phrase": "leading indicator",
+    "vietnamese": "chỉ số dẫn dắt",
     "category": "ACADEMIC"
   },
   {
@@ -5182,8 +5182,8 @@
   {
     "id": "colloc-741",
     "index": 741,
-    "phrase": "patent infringement",
-    "vietnamese": "vi phạm bằng sáng chế",
+    "phrase": "trademark dilution",
+    "vietnamese": "làm suy giảm nhãn hiệu",
     "category": "ACADEMIC"
   },
   {
@@ -6295,8 +6295,8 @@
   {
     "id": "colloc-900",
     "index": 900,
-    "phrase": "glass ceiling",
-    "vietnamese": "rào cản vô hình kìm hãm thăng tiến",
+    "phrase": "sticky floor",
+    "vietnamese": "\"sàn dính\" (rào cản ở bậc thấp)",
     "category": "IDIOMS"
   },
   {
@@ -6365,8 +6365,8 @@
   {
     "id": "colloc-910",
     "index": 910,
-    "phrase": "carbon footprint",
-    "vietnamese": "dấu chân carbon (lượng phát thải carbon)",
+    "phrase": "water footprint",
+    "vietnamese": "lượng nước tiêu thụ gián tiếp",
     "category": "IDIOMS"
   },
   {
@@ -6386,8 +6386,8 @@
   {
     "id": "colloc-913",
     "index": 913,
-    "phrase": "renewable energy",
-    "vietnamese": "năng lượng tái tạo",
+    "phrase": "geothermal energy",
+    "vietnamese": "năng lượng địa nhiệt",
     "category": "IDIOMS"
   },
   {
@@ -6603,8 +6603,8 @@
   {
     "id": "colloc-944",
     "index": 944,
-    "phrase": "ecological balance",
-    "vietnamese": "sự cân bằng sinh thái",
+    "phrase": "trophic cascade",
+    "vietnamese": "phản ứng dây chuyền trong hệ sinh thái",
     "category": "IDIOMS"
   },
   {

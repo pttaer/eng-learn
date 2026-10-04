@@ -16,6 +16,9 @@ const collocations = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'collocation
 assert(Array.isArray(collocations), 'collocations must be an array');
 assert.strictEqual(collocations.length, 1000, `Expected 1000 collocations, got ${collocations.length}`);
 assert(collocations[0].id && collocations[0].phrase && collocations[0].vietnamese && collocations[0].category, 'Collocation item schema mismatch');
+const phrases = collocations.map(c => c.phrase.toLowerCase());
+const dupes = phrases.filter((p, i) => phrases.indexOf(p) !== i);
+assert.strictEqual(dupes.length, 0, `Duplicate collocations: ${dupes.join(", ")}`);
 
 // 3. Validate grammar.json
 const grammar = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'grammar.json'), 'utf8'));
