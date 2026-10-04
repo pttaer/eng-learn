@@ -51,7 +51,7 @@ assert(reading.articles[0].fourPassProtocol.pass3SentenceMining.length > 0, 'Pas
 const listening = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'listening.json'), 'utf8'));
 assert(Array.isArray(listening.rules), 'listening.rules must be an array');
 assert(Array.isArray(listening.samplePassages), 'listening.samplePassages must be an array');
-assert(listening.samplePassages.length >= 3, `Expected at least 3 listening passages, got ${listening.samplePassages.length}`);
+assert(listening.samplePassages.length >= 9, `Expected at least 9 listening passages, got ${listening.samplePassages.length}`);
 
 console.log('[TEST] PASSED: All 7 content datasets satisfy production schema and count invariants.');
 const habits = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'habits.json'), 'utf8'));
