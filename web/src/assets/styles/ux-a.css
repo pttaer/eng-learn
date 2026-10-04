@@ -1,0 +1,12 @@
+/* ux-a: agent-owned overrides */
+.dossier-reading .article-tabs { flex-wrap: wrap; }
+.dossier-reading .article-tab,
+.dossier-reading .stepper-step,
+.dossier-reading .hud-btn,
+.dossier-reading .reading-meta-telemetry .telemetry-value,
+.dossier-reading .lexicon-table th { white-space: normal; overflow-wrap: anywhere; }
+.dossier-reading .reading-meta-telemetry { flex-wrap: wrap; }
+@media (max-width: 600px) {
+  .dossier-reading .hud-btn, .dossier-reading .vocab-chip, .dossier-reading .stepper-step { min-height: 44px; }
+  .dossier-reading .dossier-control-bar { flex-wrap: wrap; gap: 8px; }
+}

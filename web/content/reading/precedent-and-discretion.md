@@ -63,7 +63,7 @@ The rule of law, then, is better understood not as the triumph of rules over jud
 - **Subordinate Clauses**:
   - [Infinitival Subject Clause]: To deny this | Nominalises the opposing position so it can be evaluated.
   - [Non-Restrictive Relative Clause]: where it operates unacknowledged and therefore unaccountable | Describes the hidden space in which denied discretion continues to function.
-- **Analysis**: The equative "to X is not to Y but to Z" redefines the opponent's move and exposes its unintended effect. The final pair "unacknowledged and therefore unaccountable" builds a causal chain through alliteration and the connective "therefore".
+- **Analysis**: The equative "to X is not to Y but to Z" redefines the opponent's move and exposes its unintended effect. The final pair "unacknowledged and therefore unaccountable" builds a causal chain through the parallel un- prefixes and the connective "therefore".
 
 ## Sentence Mining
 ### promulgate

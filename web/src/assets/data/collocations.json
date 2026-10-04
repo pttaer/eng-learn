@@ -5175,8 +5175,8 @@
   {
     "id": "colloc-740",
     "index": 740,
-    "phrase": "intellectual property",
-    "vietnamese": "sở hữu trí tuệ",
+    "phrase": "patent pending",
+    "vietnamese": "đang chờ cấp bằng sáng chế",
     "category": "ACADEMIC"
   },
   {
@@ -5560,7 +5560,7 @@
   {
     "id": "colloc-795",
     "index": 795,
-    "phrase": "consume with jealousy",
+    "phrase": "consumed with jealousy",
     "vietnamese": "bị ghen tuông thiêu đốt",
     "category": "IDIOMS"
   },
@@ -5672,8 +5672,8 @@
   {
     "id": "colloc-811",
     "index": 811,
-    "phrase": "slip of the mind",
-    "vietnamese": "sự đãng trí, quên tạm thời",
+    "phrase": "slip of the pen",
+    "vietnamese": "lỗi viết sai do sơ ý",
     "category": "IDIOMS"
   },
   {
@@ -5966,7 +5966,7 @@
   {
     "id": "colloc-853",
     "index": 853,
-    "phrase": "wander off",
+    "phrase": "let one's mind wander",
     "vietnamese": "tâm trí lang thang, mất tập trung",
     "category": "IDIOMS"
   },

@@ -47,7 +47,7 @@
 | 792 | arouse suspicion | làm dấy lên sự nghi ngờ | IDIOMS |
 | 793 | confirm someone's suspicions | xác nhận mối nghi ngờ của ai là đúng | IDIOMS |
 | 794 | green with envy | vô cùng ghen tị / ghen tức đỏ mắt | IDIOMS |
-| 795 | consume with jealousy | bị ghen tuông thiêu đốt | IDIOMS |
+| 795 | consumed with jealousy | bị ghen tuông thiêu đốt | IDIOMS |
 | 796 | utter despair | sự tuyệt vọng tột cùng | IDIOMS |
 | 797 | plunge into despair | rơi vào tuyệt vọng sâu sắc | IDIOMS |
 | 798 | gleam of hope | tia hy vọng le lói | IDIOMS |
@@ -63,7 +63,7 @@
 | 808 | peace of mind | sự an tâm, thanh thản trong tâm hồn | IDIOMS |
 | 809 | presence of mind | sự nhanh trí, bình tĩnh trong tình huống bất ngờ | IDIOMS |
 | 810 | slip of the tongue | lời nói lỡ miệng, sơ suất khi nói | IDIOMS |
-| 811 | slip of the mind | sự đãng trí, quên tạm thời | IDIOMS |
+| 811 | slip of the pen | lỗi viết sai do sơ ý | IDIOMS |
 | 812 | train of thought | mạch suy nghĩ | IDIOMS |
 | 813 | line of reasoning | mạch lập luận, chuỗi suy luận logic | IDIOMS |
 | 814 | lose one's train of thought | đứt đoạn mạch suy nghĩ | IDIOMS |
@@ -105,7 +105,7 @@
 | 850 | clear one's mind | giải tỏa đầu óc, tịnh tâm | IDIOMS |
 | 851 | haunt someone's mind | ám ảnh tâm trí ai | IDIOMS |
 | 852 | occupy someone's mind | chiếm trọn tâm trí ai | IDIOMS |
-| 853 | wander off | tâm trí lang thang, mất tập trung | IDIOMS |
+| 853 | let one's mind wander | tâm trí lang thang, mất tập trung | IDIOMS |
 | 854 | short-term memory | trí nhớ ngắn hạn | IDIOMS |
 | 855 | photographic memory | trí nhớ chụp hình, nhớ siêu phàm như ảnh chụp | IDIOMS |
 | 856 | social cohesion | sự gắn kết xã hội | IDIOMS |

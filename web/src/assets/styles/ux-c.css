@@ -1,0 +1,11 @@
+/* ux-c: agent-owned overrides */
+
+/* ux-c: wrap learner text, scroll tables, 44px targets on phones */
+.lexicon-table td, .lexicon-table th { overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  .lexicon-table th { white-space: normal; }
+  .lexicon-table { display: block; overflow-x: auto; max-width: 100%; }
+  .colloc-cat-badge { white-space: normal; }
+  .stepper-step { white-space: normal; }
+  .stepper-step, .lexicon-table button, .colloc-card button { min-height: 44px; }
+}

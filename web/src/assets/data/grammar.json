@@ -382,11 +382,11 @@
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 3,
     "promptSentence": "Because the developers did not architect modular microservices in 2021, the application is unmaintainable today.",
-    "targetTransformation": "Had the developers architected modular microservices in 2021, the application would not be unmaintainable today.",
+    "targetTransformation": "Had the developers architected modular microservices in 2021, the application would be maintainable today.",
     "grammaticalCue": "Blend inverted past perfect condition ('Had... architected') with present modal result ('would be').",
     "vietnamese": "Câu điều kiện trộn (Quá khứ tác động Hiện tại): Mệnh đề điều kiện dùng Type 3, mệnh đề kết quả dùng Type 2.",
     "formula": "Had + Subject + Past Participle..., Subject + would (not) + Base Verb + today/now",
-    "analysis": "A mixed conditional bridges temporal domains: the antecedent is counterfactual past ('Had they architected'), while the consequent refers to current ongoing counterfactual reality ('would not be').",
+    "analysis": "A mixed conditional bridges temporal domains: the antecedent is counterfactual past ('Had they architected'), while the consequent refers to current ongoing counterfactual reality ('would be').",
     "exemplarContext": "Had regulators capped subprime securitization ratios in 2005, the global financial system would enjoy greater stability today."
   },
   {

@@ -1,0 +1,14 @@
+/* ux-b: agent-owned overrides */
+.oscilloscope-header { flex-wrap: wrap; gap: 4px 12px; }
+.post-take-strip, .post-take-metrics, .post-take-actions, .collocation-radar-strip { flex-wrap: wrap; }
+.radar-chip { white-space: normal; text-align: left; overflow-wrap: anywhere; }
+.copywork-studio textarea { min-height: 140px; }
+.copywork-studio .model-sentence-display, .copywork-diff-container { overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  .copywork-studio .hud-btn, .btn-advance-round, .btn-view-matrix, .post-take-actions .hud-btn,
+  .btn-timer-toggle, .btn-take-complete, .nav-btn-prev, .nav-btn-next { min-height: 44px !important; font-size: 13px !important; }
+  .post-take-actions .hud-btn { flex: 1 1 100%; justify-content: center; white-space: normal; height: auto; }
+  .post-take-metrics { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .speaking-oscilloscope-container { min-width: 0; flex-basis: 100% !important; }
+  .radar-chip { min-height: 44px; }
+}

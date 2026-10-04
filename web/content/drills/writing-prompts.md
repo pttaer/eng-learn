@@ -8,10 +8,10 @@
 - **Register**: Academic Jurisprudence / Legal Philosophy
 - **Master Sentence**: The ubiquitous proliferation of generative synthetic media fundamentally corrodes the epistemic integrity of modern jurisprudence by rendering authentic audio-visual evidence indistinguishable from fabricated artifacts.
 - **M**: The ubiquitous proliferation of generative synthetic media fundamentally corrodes the epistemic integrity of modern jurisprudence by rendering authentic audio-visual evidence indistinguishable from fabricated artifacts.
-- **E**: In federal courts, defense counsels have increasingly leveraged the 'liar's dividend'—a defense strategy whereby culpable defendants escape liability by alleging genuine surveillance footage is an AI deepfake.
+- **E**: In federal courts, defense counsel have increasingly leveraged the 'liar's dividend'—a defense strategy whereby culpable defendants escape liability by alleging genuine surveillance footage is an AI deepfake.
 - **A**: Because digital forensic toolkits invariably lag behind diffusion-model capabilities, evidentiary gatekeepers can no longer rely on traditional perceptual heuristics, forcing juries to operate in an epistemic vacuum where verifiable reality is conflated with algorithmic illusion.
 - **L**: Consequently, unless strict cryptographic provenance standards are institutionalized at the hardware layer, the judicial system risks descending into a state of structural paralysis where no recording commands legal legitimacy.
-- **Stylistic**: Nominalization chains ('proliferation', 'jurisprudence'), passive inversion, correlative contrast ('no longer... but rather').
+- **Stylistic**: Nominalization chains ('proliferation', 'jurisprudence'), passive inversion, causal 'Because... can no longer rely' construction.
 
 ## Algorithmic Pricing and Consumer Surplus
 - **ID**: writing-2
@@ -87,7 +87,7 @@
 - **Master Sentence**: The financialization of municipal residential real estate transforms shelter from an essential civic good into a speculative capital haven, structurally decoupling housing prices from domestic earning power.
 - **M**: The financialization of municipal residential real estate transforms shelter from an essential civic good into a speculative capital haven, structurally decoupling housing prices from domestic earning power.
 - **E**: In metropolitan centers such as London, Toronto, and Sydney, institutional private-equity trusts expanded residential portfolios by over 400% between 2012 and 2022, while real median wage growth stagnated below 4% over the same duration.
-- **A**: When institutional investors with access to near-zero-cost international liquidity bid against working-class domestic wage earners, price Discovery reflects cross-border asset management yields rather than local community affordability, permanently pricing generations out of homeownership.
+- **A**: When institutional investors with access to near-zero-cost international liquidity bid against working-class domestic wage earners, price discovery reflects cross-border asset management yields rather than local community affordability, permanently pricing generations out of homeownership.
 - **L**: This dynamic exacerbates generational wealth fractures, hollowing out urban cores and relegating essential labor to distant, under-resourced peripheries.
 - **Stylistic**: Parallelism, syntactic compounding, sharp register contrast ('essential civic good' vs. 'speculative capital haven').
 
@@ -126,7 +126,7 @@
 - **Master Sentence**: Predictive policing algorithms do not illuminate objective crime hazards; rather, they construct self-fulfilling feedback loops that mathematicalize and amplify historic patterns of selective law enforcement.
 - **M**: Predictive policing algorithms do not illuminate objective crime hazards; rather, they construct self-fulfilling feedback loops that mathematicalize and amplify historic patterns of selective law enforcement.
 - **E**: In cities utilizing predictive patrol dispatchers, historical arrest data heavily weighted toward low-level drug infractions prompted software systems to assign police patrols back to historically over-policed neighborhoods at triple the rate of affluent districts with comparable drug usage rates.
-- **A**: Because algorithms accept historical arrest records as an unproblematic proxy for true criminality, heightened police concentration inevitably yields more recorded offenses in those designated zones, which is then fed back into the model to validate the initial bias.
+- **A**: Because algorithms accept historical arrest records as an unproblematic proxy for true criminality, heightened police concentration inevitably yields more recorded offenses in those designated zones, which are then fed back into the model to validate the initial bias.
 - **L**: Under the deceptive armor of mathematical neutrality, automated systems effectively disguise discriminatory enforcement as incontrovertible statistical necessity.
 - **Stylistic**: Antithetical balancing ('not... rather...'), precise terminology ('self-fulfilling feedback loops', 'proxy'), striking closing metaphor.
 
@@ -191,7 +191,7 @@
 - **Master Sentence**: The emergence of large language models obliterates the diagnostic validity of the traditional take-home essay, necessitating a paradigm shift toward oral defense, real-time synthesis, and process-based evaluation.
 - **M**: The emergence of large language models obliterates the diagnostic validity of the traditional take-home essay, necessitating a paradigm shift toward oral defense, real-time synthesis, and process-based evaluation.
 - **E**: In randomized blind trials, modern AI generation systems consistently scored in the top quintile of undergraduate humanities take-home examinations while generating zero detectable syntactic or grammatical anomalies.
-- **A**: Because text generation has been commodified into a instantaneous push-button utility, evaluating student capability solely through the finalized text product measures tool fluency rather than internal cognitive digestion.
+- **A**: Because text generation has been commodified into an instantaneous push-button utility, evaluating student capability solely through the finalized text product measures tool fluency rather than internal cognitive digestion.
 - **L**: To cultivate genuine intellect, academia must abandon passive product-based grading and revive the Socratic dialogical tradition where scholars must defend and stress-test their ideas under live scrutiny.
 - **Stylistic**: Socratic allusion, assertive verb choices ('obliterates', 'commodified'), forward-looking imperative.
 
@@ -257,7 +257,7 @@
 - **M**: Permitting private commercial aerospace conglomerates to establish de facto governance in orbital and lunar domains threatens to transform the celestial commons into a lawless frontier of corporate enclosure.
 - **E**: Mega-constellations launched by private entities currently account for over 60% of all active satellites in low Earth orbit, regularly forcing international astronomical observatories to discard deep-space imagery corrupted by orbital light pollution and radio interference.
 - **A**: Because international space treaties such as the 1967 Outer Space Treaty were drafted exclusively for sovereign states, commercial actors exploit regulatory loopholes to claim proprietary orbital slots and stake speculative claims on water ice deposits without democratic oversight.
-- **L**: Without a robust, multilateral regulatory regime with enforceable enforcement mechanisms, humankind risks repeating the tragic historical cycles of colonial resource exploitation beyond Earth's atmosphere.
+- **L**: Without a robust, multilateral regulatory regime with enforceable sanctions, humankind risks repeating the tragic historical cycles of colonial resource exploitation beyond Earth's atmosphere.
 - **Stylistic**: Historical parallels ('celestial commons', 'colonial resource exploitation'), legal vocabulary, cohesive sequencing.
 
 ## The Psychological Toll of Algorithmic Management in Logistics
@@ -359,7 +359,7 @@
 - **Register**: Existential Psychology & Philosophy
 - **Master Sentence**: The systematic eradication of solitude in modern hyper-connected culture deprives the human consciousness of the psychological sanctuary indispensable for original self-discovery and emotional regulation.
 - **M**: The systematic eradication of solitude in modern hyper-connected culture deprives the human consciousness of the psychological sanctuary indispensable for original self-discovery and emotional regulation.
-- **E**: Psychological experiments conducted at the University of Virginia found that over 65% of participants preferred administering painful electrical shocks to themselves rather than sitting alone in a quiet room with their thoughts for fifteen minutes.
+- **E**: Psychological experiments conducted at the University of Virginia found that 67% of men and 25% of women chose to give themselves painful electric shocks rather than sit alone in a quiet room with their thoughts for fifteen minutes.
 - **A**: In the absence of quiet, unmediated reflection, the psyche loses its capacity to integrate emotional memory and cultivate authentic interior convictions, falling prey to compulsive external validation and the mimetic desires of social networks.
 - **L**: Reclaiming the art of solitude is therefore not a misanthropic retreat, but a vital act of spiritual preservation that protects the boundaries of the human soul.
 - **Stylistic**: Psychological depth, poignant empirical hook, resonant philosophical resolution.
@@ -381,7 +381,7 @@
 - **ID**: writing-30
 - **Index**: 30
 - **Mode**: Franklin Copywork & Stylistic Deconstruction
-- **Question**: Assess whether autonomous AI research platforms will accelerate the pace of human discovery or displace human scientists into passive observers.
+- **Question**: Assess whether autonomous AI research platforms will accelerate the pace of human discovery or reduce human scientists to passive observers.
 - **Register**: Philosophy of Technology & Scientific Methodology
 - **Master Sentence**: The transition from AI as an analytical assistant to an autonomous researcher running end-to-end scientific pipelines promises to compress centuries of scientific discovery into decades, while fundamentally challenging human intellectual primacy.
 - **M**: The transition from AI as an analytical assistant to an autonomous researcher running end-to-end scientific pipelines promises to compress centuries of scientific discovery into decades, while fundamentally challenging human intellectual primacy.

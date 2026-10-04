@@ -242,7 +242,7 @@
 | 737 | fallacious reasoning | lập luận ngụy biện/sai lầm | ACADEMIC |
 | 738 | deductive reasoning | lập luận diễn dịch | ACADEMIC |
 | 739 | inductive reasoning | lập luận quy nạp | ACADEMIC |
-| 740 | intellectual property | sở hữu trí tuệ | ACADEMIC |
+| 740 | patent pending | đang chờ cấp bằng sáng chế | ACADEMIC |
 | 741 | trademark dilution | làm suy giảm nhãn hiệu | ACADEMIC |
 | 742 | file a patent | nộp đơn đăng ký bằng sáng chế | ACADEMIC |
 | 743 | genetic modification | biến đổi gen | ACADEMIC |

@@ -54,7 +54,7 @@ Perhaps, she thought, this was what home had always meant: not a location but a 
 - **Analysis**: The balanced "to X was to Y" equation presents perception as a definition. The closing simile shifts into photographic imagery, and the personifying verb "consent" lends the clash between memory and reality a note of wilfulness.
 
 ### Sentence 3
-- **Sentence**: Writers have long dwelt on such involuntary returns, Proust's madeleine being only the most celebrated, because they suggest that the past is not irretrievably lost but merely dormant, folded into objects and sounds that wait, with a kind of mineral patience, for the right person to pass by. She stood very still, half afraid that any movement would break the spell.
+- **Sentence**: Writers have long dwelt on such involuntary returns, Proust's madeleine being only the most celebrated, because they suggest that the past is not irretrievably lost but merely dormant, folded into objects and sounds that wait, with a kind of mineral patience, for the right person to pass by.
 - **Subject**: Writers
 - **Verb**: have long dwelt on
 - **Object**: such involuntary returns
@@ -63,7 +63,7 @@ Perhaps, she thought, this was what home had always meant: not a location but a 
   - [Adverbial Clause of Reason]: because they suggest that the past is not irretrievably lost but merely dormant | Explains why writers are drawn to involuntary memory.
   - [Nominal That-Clause]: that the past is not irretrievably lost but merely dormant | Serves as the object of "suggest", stating the central claim.
   - [Restrictive Relative Clause]: that wait, with a kind of mineral patience, for the right person to pass by | Modifies "objects and sounds", animating them with a geological stillness.
-- **Analysis**: A cumulative sentence that keeps extending rightward through an absolute phrase, a causal clause, a participial phrase ("folded into...") and a relative clause. The oxymoronic "mineral patience" attributes waiting to inert matter, enacting the dormancy it describes.
+- **Analysis**: A cumulative sentence that keeps extending rightward through an absolute phrase, a causal clause, a participial phrase ("folded into...") and a relative clause. The metaphor "mineral patience" attributes waiting to inert matter, enacting the dormancy it describes.
 
 ## Sentence Mining
 ### palimpsest
@@ -103,6 +103,6 @@ Perhaps, she thought, this was what home had always meant: not a location but a 
 - **Etymology**: Latin rescindere (to cut off, annul), from re- (back) + scindere (to split).
 
 ## Synthesis
-- **Model Précis**: Revisiting a childhood street, the narrator finds it impertinently indifferent and recognises that the house she remembers is a palimpsest, rewritten by every act of recollection. Yet a single vertiginous sensory cue can revive the dormant past, implying that home is a tacit bodily pact with place that may lapse but can never be wholly rescinded.
+- **Model Précis**: Revisiting a childhood street, the narrator finds it impertinently indifferent and recognises that the house she remembers is a palimpsest, rewritten by every act of recollection. Yet a single sensory cue can revive the dormant past with a vertiginous lurch, implying that home is a tacit bodily pact with place that may lapse but can never be wholly rescinded.
 - **Incorporated Vocabulary**: palimpsest, impertinent, vertiginous, rescind, tacit pact
 - **Syntactic Reconstruction**: To return to a remembered place is to read a palimpsest whose later layers, however faithfully we try to scrape them away, will not consent to disappear.

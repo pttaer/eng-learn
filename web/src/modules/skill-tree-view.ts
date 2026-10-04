@@ -183,6 +183,15 @@ export class SkillTreeView {
       </g>
     `;
 
+    // Labels of near neighbours in one row would collide: alternate them above/below the star.
+    const labelAbove = new Set<string>();
+    const placed: typeof nodes = [];
+    for (const n of [...nodes].sort((p, q) => p.y - q.y || p.x - q.x)) {
+      const clash = placed.some(o => Math.abs(o.y - n.y) * 7 < 26 && Math.abs(o.x - n.x) * 10 < 120 && !labelAbove.has(o.id));
+      if (clash) labelAbove.add(n.id);
+      placed.push(n);
+    }
+
     // Render 25 Interactive Perk Stars with Full 2-Line Titles (Zero Truncation)
     for (const node of nodes) {
       const status = SkillTreeEngine.getNodeStatus(node.id);
@@ -225,7 +234,7 @@ export class SkillTreeView {
             ${symbol}
           </text>
           ${status === 'locked' ? `<g transform="translate(-6, -6)" style="color: var(--ink-muted)">${icon('lock', 12)}</g>` : ''}
-          <text x="0" y="24" text-anchor="middle" font-family="var(--font-sans)" font-size="9.5" font-weight="600" fill="${status === 'locked' ? 'var(--ink-muted)' : 'var(--ink-secondary)'}" class="node-title-label">
+          <text x="0" y="${labelAbove.has(node.id) ? (line2 ? -29.5 : -19) : 24}" text-anchor="middle" font-family="var(--font-sans)" font-size="9.5" font-weight="600" fill="${status === 'locked' ? 'var(--ink-muted)' : 'var(--ink-secondary)'}" class="node-title-label">
             <tspan x="0" dy="0">${line1}</tspan>
             ${line2 ? `<tspan x="0" dy="10.5">${line2}</tspan>` : ''}
           </text>
@@ -261,7 +270,7 @@ export class SkillTreeView {
       return `
         <div class="branch-summary-card" data-route="${branch.routeTarget}" tabindex="0" role="button" aria-label="Open ${branch.name}" title="${branch.name} — ${branch.tagline}" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: 6px; cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s; display: flex; flex-direction: column; justify-content: space-between; min-height: 50px; box-shadow: var(--shadow-btn);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-            <span style="font-family: var(--font-mono); font-size: 10.5px; color: var(--accent-gold); font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 78%;">
+            <span style="font-family: var(--font-mono); font-size: 10.5px; color: var(--accent-gold); font-weight: 700; line-height: 1.25; max-width: 78%;">
               ✦ ${branch.name.toUpperCase()}
             </span>
             <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--ink-primary);">

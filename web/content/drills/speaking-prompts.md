@@ -25,7 +25,7 @@
 - **Prompt**: Evaluate the extent to which recommender systems and algorithmic curation are fracturing social consensus and civic discourse.
 - **Anchor**: Root cause (engagement-driven algorithms) → Psychological mechanism (confirmation bias) → Societal fallout & systemic remediation
 - **Collocations**: algorithmic bias, confirmation bias, civic discourse, polarization
-- **Phonetic**: Elision of /t/ in 'fracturing social consensus'; rhythmic pulsing on polysyllabic nominalizations.
+- **Phonetic**: Smooth linking across 'fracturing social consensus'; rhythmic pulsing on polysyllabic nominalizations.
 
 ## The Ethics of Gene Editing (CRISPR)
 - **ID**: speaking-4
@@ -34,7 +34,7 @@
 - **Prompt**: Should genetic engineering in humans be restricted exclusively to therapeutic cures, or is human enhancement an inevitable technological progression?
 - **Anchor**: Dichotomy (therapeutic necessity vs. enhancement hubris) → Slippery slope argument → Regulatory governance framework
 - **Collocations**: genetic modification, ethical boundary, slippery slope, regulatory framework
-- **Phonetic**: Deliberate pause before the pivot word 'However'; clear articulation of initial consonant clusters /str/ in 'strictly restricted'.
+- **Phonetic**: Deliberate pause before the pivot word 'However'; clear articulation of the /str/ cluster in 'restricted'.
 
 ## The Viability of Universal Basic Income (UBI)
 - **ID**: speaking-5
@@ -43,7 +43,7 @@
 - **Prompt**: Analyze whether Universal Basic Income provides a necessary safety net against technological unemployment or creates macroeconomic disincentives to labor.
 - **Anchor**: Economic justification (safety net against displacement) → Counter-argument (fiscal inflation & labor disincentive) → Balanced synthesis
 - **Collocations**: economic safety net, fiscal sustainability, labor participation, inflationary pressure
-- **Phonetic**: Equal stress on compound terms 'Universal Basic Income'; maintain steady breath support across long compound sentences.
+- **Phonetic**: Primary stress on the final noun of the compound 'Universal Basic INcome'; maintain steady breath support across long compound sentences.
 
 ## Monopoly Power of Big Tech Platforms
 - **ID**: speaking-6
@@ -51,7 +51,7 @@
 - **Mode**: 2-Minute Impromptu Jamming
 - **Prompt**: Argue whether global tech conglomerates constitute natural utilities that require aggressive antitrust breakup or dynamic drivers of capital reinvestment.
 - **Anchor**: Market dominance reality → Anti-competitive harm (stifled innovation) → Regulatory dilemma (utility status vs. market dynamism)
-- **Collocations**: antitrust scrutiny, monopolistic practices, market barrier, capital expenditure
+- **Collocations**: antitrust scrutiny, monopolistic practices, barrier to entry, capital expenditure
 - **Phonetic**: Contrastive stress: 'regulators seek to DISMANTLE, while executives seek to DEFEND'.
 
 ## Standardized Testing versus Holistic Evaluation
@@ -79,7 +79,7 @@
 - **Prompt**: Discuss the societal trade-offs between the transactional efficiency of digital payments and the systematic erosion of financial privacy.
 - **Anchor**: Operational convenience → State and corporate surveillance risks → Vulnerability of marginalized demographics without digital literacy
 - **Collocations**: transactional efficiency, financial surveillance, central bank digital currency, digital divide
-- **Phonetic**: Distinct vowel length in 'cashless' vs. 'financial'; sharp glottal stop control.
+- **Phonetic**: Stress the first syllable of 'CASHless' and the second of 'fiNANcial'; release the final /s/ cleanly.
 
 ## Urban Density versus Suburban Sprawl
 - **ID**: speaking-10
@@ -105,8 +105,8 @@
 - **Mode**: 2-Minute Impromptu Jamming
 - **Prompt**: How does the commercial extraction of behavioral surplus reshape individual human autonomy and democratic decision-making?
 - **Anchor**: Data extraction mechanism → Predictive behavioral modification → Subversion of consumer and voter sovereignty
-- **Collocations**: behavioral surplus, predictive analytics, unauthorized access, democratic integrity
-- **Phonetic**: Rhythmic cadence on 3-part rule of three: 'monitored, modeled, and manipulated'.
+- **Collocations**: behavioral surplus, predictive analytics, data harvesting, democratic integrity
+- **Phonetic**: Rhythmic cadence on the rule of three: 'monitored, modeled, and manipulated'.
 
 ## The Crisis of Reproducibility in Modern Science
 - **ID**: speaking-13
@@ -132,7 +132,7 @@
 - **Mode**: 4-3-2 Fluency Drill
 - **Prompt**: How will unprecedented population aging in developed societies reshape pension solvency, healthcare delivery, and generational wealth distribution?
 - **Anchor**: Demographic inversion (shrinking workforce) → Fiscal strain on healthcare & pensions → Innovations in automated eldercare and retirement age reforms
-- **Collocations**: demographic dividend, pension solvency, healthcare infrastructure, generational equity
+- **Collocations**: ageing population, pension solvency, healthcare infrastructure, generational equity
 - **Phonetic**: Maintain energetic pitch variety across statistical explanations to avoid monotone pacing.
 
 ## Neurotechnology and Cognitive Liberty
@@ -160,7 +160,7 @@
 - **Prompt**: Evaluate whether decentralized permissionless financial protocols will fundamentally disintermediate central banking or remain volatile speculative arenas.
 - **Anchor**: Core promise (trustless disintermediation) → Structural flaws (liquidity crises, regulatory arbitrage, hacks) → Eventual hybrid institutional adoption
 - **Collocations**: decentralized finance, systemic risk, smart contract, regulatory arbitrage
-- **Phonetic**: Accented nuclear syllable on 'DIS-inter-MEDI-ate'; avoid rushing through financial acronyms.
+- **Phonetic**: Accented nuclear syllable on 'dis-inter-MEE-di-ate'; avoid rushing through financial acronyms.
 
 ## Fast Fashion and Environmental Externalities
 - **ID**: speaking-19

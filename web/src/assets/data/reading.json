@@ -172,16 +172,16 @@
       "source": "Adapted from Nature Neuroscience Commentary & Cognitive Literary Theory",
       "wordCount": 460,
       "readingTime": "3.8 min @ 120 WPM (Intensive)",
-      "content": "The human brain did not evolve a dedicated neurological circuit for deciphering printed typography; instead, literacy is an extraordinary feat of neuronal recycling, repurposing visual object recognition pathways alongside ancient phonological and semantic networks. Consequently, the transition from laborious decoding to effortless sight recognition hinges entirely upon how cognitive bandwidth is allocated across working memory.\n\nAt foundational stages, readers are bottlenecked by subvocalization—the covert auditory articulation of every printed syllable in the mind's inner ear. While subvocalization provides essential phonological scaffolding for novice comprehenders grappling with complex syntax, its persistence at advanced stages imposes a severe velocity ceiling of roughly two hundred words per minute. True reading mastery requires suppressing this involuntary acoustic simulation on familiar syntactic terrain, thereby liberating cognitive resources for high-order inference, contextual synthesis, and rhetorical evaluation.\n\nMoreover, deliberate reading differs profoundly from the distracted skimming conditioned by digital hyperlinks. In extensive reading, immersion in rich syntactic architectures cultivates deep cognitive patience, allowing the brain to internalize subtle register shifts and sentence structures organically through Krashen’s celebrated input hypothesis ($i+1$). Conversely, intensive reading acts as the surgeon’s scalpel: by subjecting difficult paragraphs to rigorous clause deconstruction and active sentence mining, the polymath converts fleeting encounters with unfamiliar lexical items into durable, retrievable engrams. Without this dual equilibrium between extensive immersion and intensive dissection, genuine polyglot fluency remains an elusive mirage.",
+      "content": "The human brain did not evolve a dedicated neurological circuit for deciphering printed typography; instead, literacy is an extraordinary feat of neuronal recycling, repurposing visual object recognition pathways alongside ancient phonological and semantic networks. Consequently, the transition from laborious decoding to effortless sight recognition depends heavily on how cognitive bandwidth is allocated across working memory.\n\nAt foundational stages, readers lean heavily on subvocalization—the covert auditory articulation of printed words in the mind's inner ear. While subvocalization provides essential phonological scaffolding for novice comprehenders grappling with complex syntax, its persistence at advanced stages imposes a velocity ceiling of roughly two hundred words per minute. Yet research does not support the claim that eliminating it is desirable; subvocalization remains largely automatic and contributes to comprehension, especially for difficult text, and speed-reading programs that promise to suppress it have shown little evidence of preserving understanding. Mastery therefore lies not in silencing inner speech but in making decoding so fluent on familiar syntactic terrain that working memory is freed for high-order inference, contextual synthesis, and rhetorical evaluation.\n\nMoreover, deliberate reading differs profoundly from the distracted skimming conditioned by digital hyperlinks. In extensive reading, immersion in rich syntactic architectures cultivates deep cognitive patience, allowing the brain to internalize subtle register shifts and sentence structures organically through Krashen’s celebrated input hypothesis ($i+1$). Conversely, intensive reading acts as the surgeon’s scalpel: by subjecting difficult paragraphs to rigorous clause deconstruction and active sentence mining, the polymath converts fleeting encounters with unfamiliar lexical items into durable, retrievable engrams. Without this dual equilibrium between extensive immersion and intensive dissection, genuine polyglot fluency remains an elusive mirage.",
       "fourPassProtocol": {
         "pass1ColdRead": {
-          "thesisGist": "Reading is an acquired neuronal recycling process where overcoming the speed limit of subvocalization frees working memory for high-level analysis; true mastery demands a balanced regime of extensive immersion and intensive syntactic dissection.",
+          "thesisGist": "Reading is an acquired neuronal recycling process where fluent decoding frees working memory for high-level analysis, and subvocalization is a normal aid rather than a flaw to eliminate; true mastery demands a balanced regime of extensive immersion and intensive syntactic dissection.",
           "markedLexicalTargets": [
             "neuronal recycling",
             "cognitive bandwidth",
             "subvocalization",
             "phonological scaffolding",
-            "involuntary acoustic simulation",
+            "inner speech",
             "high-order inference",
             "input hypothesis",
             "retrievable engrams"
@@ -192,23 +192,23 @@
               "answer": "Because reading is an evolutionary recent invention that repurposes existing visual and phonological brain regions (neuronal recycling)."
             },
             {
-              "question": "What is the role of subvocalization, and why does it become a hindrance at advanced stages?",
-              "answer": "It helps novices decode words through inner speech, but caps reading speed at ~200 WPM, consuming cognitive bandwidth needed for higher inference."
+              "question": "What is the role of subvocalization, and what limitation does it carry at advanced stages?",
+              "answer": "It gives novices phonological scaffolding for decoding and remains a normal part of comprehension; at the same time it is linked to a speed ceiling (roughly 200-300 WPM), so the goal is fluent decoding that frees bandwidth for inference, not eliminating inner speech."
             },
             {
               "question": "What metaphor illustrates the complementary nature of extensive and intensive reading?",
-              "answer": "Extensive reading provides deep cognitive immersion (rich terrain), while intensive reading functions as the surgeon’s scalpel (precise clause dissection)."
+              "answer": "Extensive reading provides deep cognitive immersion, while intensive reading functions as the surgeon’s scalpel (precise clause dissection)."
             }
           ]
         },
         "pass2SyntaxDissection": [
           {
             "sentenceIndex": 1,
-            "sentence": "While subvocalization provides essential phonological scaffolding for novice comprehenders grappling with complex syntax, its persistence at advanced stages imposes a severe velocity ceiling of roughly two hundred words per minute.",
+            "sentence": "While subvocalization provides essential phonological scaffolding for novice comprehenders grappling with complex syntax, its persistence at advanced stages imposes a velocity ceiling of roughly two hundred words per minute.",
             "coreSVO": {
               "subject": "its persistence at advanced stages",
               "verb": "imposes",
-              "objectOrComplement": "a severe velocity ceiling of roughly two hundred words per minute"
+              "objectOrComplement": "a velocity ceiling of roughly two hundred words per minute"
             },
             "subordinateClauses": [
               {
@@ -250,13 +250,13 @@
             "ipa": "/ˌsʌb.vəʊ.kəl.aɪˈzeɪ.ʃən/",
             "definition": "The internal, silent articulation of words while reading.",
             "vietnamese": "sự phát âm thầm trong đầu khi đọc chữ",
-            "contextSentence": "At foundational stages, readers are bottlenecked by subvocalization—the covert auditory articulation of every printed syllable in the mind's inner ear.",
+            "contextSentence": "At foundational stages, readers are bottlenecked by subvocalization—the covert auditory articulation of printed words in the mind's inner ear.",
             "collocations": [
-              "suppress subvocalization",
-              "eliminate subvocalization",
-              "auditory subvocalization"
+              "habitual subvocalization",
+              "inner-speech subvocalization",
+              "reduce subvocalization"
             ],
-            "etymology": "Prefix sub- (under) + vocalize (utter sound, Latin vocalis)."
+            "etymology": "Prefix sub- (under) + vocalize (to utter; from Latin vox/vocalis, voice)."
           },
           {
             "id": "mine-reading-art-2-2",
@@ -278,7 +278,7 @@
             "targetWord": "engram",
             "partOfSpeech": "noun",
             "ipa": "/ˈen.ɡræm/",
-            "definition": "A hypothetical permanent trace left by an experience in the brain’s neural tissue; a memory trace.",
+            "definition": "A hypothesized physical trace left by an experience in the brain’s neural tissue; a memory trace.",
             "vietnamese": "dấu vết ký ức thần kinh, vết hằn ký ức sinh học trong não",
             "contextSentence": "The polymath converts fleeting encounters with unfamiliar lexical items into durable, retrievable engrams.",
             "collocations": [
@@ -305,7 +305,7 @@
           }
         ],
         "pass4Synthesis": {
-          "modelPrécis": "Reading recruits repurposed neural pathways where early subvocalization establishes vital phonological scaffolding yet restricts reading velocity if unsuppressed. Achieving polymathic reading demands balancing extensive immersion for intuitive pattern absorption with intensive clause dissection to forge durable, retrievable memory engrams from challenging syntax.",
+          "modelPrécis": "Reading recruits repurposed neural pathways where subvocalization provides vital phonological scaffolding while also tying reading speed to inner-speech pace. Achieving polymathic reading demands balancing extensive immersion for intuitive pattern absorption with intensive clause dissection to forge durable, retrievable memory engrams from challenging syntax.",
           "incorporatedVocabulary": [
             "subvocalization",
             "scaffolding",
@@ -313,7 +313,7 @@
             "neuronal recycling",
             "velocity ceiling"
           ],
-          "syntacticReconstruction": "Rather than treating subvocalization as a permanent deficit, advanced readers leverage it selectively for dense poetic prose while suppressing it during analytical scanning."
+          "syntacticReconstruction": "Rather than treating subvocalization as a deficit, advanced readers rely on it for dense or poetic prose and read familiar material faster without trying to silence it."
         }
       }
     },
@@ -326,7 +326,7 @@
       "source": "Adapted from Cal Newport & Joan Didion essay anthologies",
       "wordCount": 440,
       "readingTime": "3.6 min @ 120 WPM (Intensive)",
-      "content": "In the contemporary knowledge economy, hyper-connectivity is frequently conflated with organizational velocity. Open-plan offices and asynchronous notification streams promise frictionless collaboration, yet their insidious side effect is the systematic fragmentation of human attention. When deep, uninterrupted solitude is eliminated from daily practice, cognitive throughput degrades from rigorous original synthesis into reactive, performative busywork.\n\nPsychologists observe that switching focus between collaborative pings and analytical contemplation leaves an exhausting residue known as \"attention residue.\" Even a brief five-second glance at an inbox notification traps working memory in a compromised state for over fifteen minutes. Under such fragmented conditions, knowledge workers lose the capacity for sustained syntactic immersion—the precise mental patience required to draft airtight legal briefs, deconstruct complex mathematical proofs, or read dense philosophical treatises without drifting into digital escapism.\n\nReclaiming cognitive autonomy requires institutionalizing deliberate boundaries. Elite practitioners do not merely resist distraction through sheer willpower; they architect low-entropy physical and digital sanctuaries. By scheduling multi-hour blocks of sacred monastic silence and treating attention as a finite, non-renewable capital asset, the modern intellectual safeguards the psychological conditions under which profound insight can quietly germinate.",
+      "content": "In the contemporary knowledge economy, hyper-connectivity is frequently conflated with organizational velocity. Open-plan offices and asynchronous notification streams promise frictionless collaboration, yet their insidious side effect is the systematic fragmentation of human attention. When deep, uninterrupted solitude is eliminated from daily practice, cognitive throughput degrades from rigorous original synthesis into reactive, performative busywork.\n\nPsychologists observe that switching focus between collaborative pings and analytical contemplation leaves an exhausting residue known as \"attention residue.\" Even a brief glance at an inbox notification can leave part of working memory tied to the interrupted task, and studies suggest full refocusing after an interruption can take many minutes. Under such fragmented conditions, knowledge workers lose the capacity for sustained syntactic immersion—the precise mental patience required to draft airtight legal briefs, deconstruct complex mathematical proofs, or read dense philosophical treatises without drifting into digital escapism.\n\nReclaiming cognitive autonomy requires institutionalizing deliberate boundaries. Elite practitioners do not merely resist distraction through sheer willpower; they architect low-entropy physical and digital sanctuaries. By scheduling multi-hour blocks of sacred monastic silence and treating attention as a scarce, finite resource, the modern intellectual safeguards the psychological conditions under which profound insight can quietly germinate.",
       "fourPassProtocol": {
         "pass1ColdRead": {
           "thesisGist": "Constant workplace connectivity destroys the sustained solitude necessary for complex knowledge work via attention residue, requiring deliberate environmental architecture rather than mere willpower to defend deep cognitive focus.",
@@ -347,7 +347,7 @@
             },
             {
               "question": "How does \"attention residue\" impair analytical capability?",
-              "answer": "Even a 5-second distraction leaves working memory partially tied up with the previous task for over 15 minutes."
+              "answer": "Even a brief distraction can leave working memory partly tied up with the previous task, and regaining full focus can take many minutes."
             },
             {
               "question": "What is the author's view on willpower versus environmental design?",
@@ -375,7 +375,7 @@
           },
           {
             "sentenceIndex": 2,
-            "sentence": "By scheduling multi-hour blocks of sacred monastic silence and treating attention as a finite, non-renewable capital asset, the modern intellectual safeguards the psychological conditions under which profound insight can quietly germinate.",
+            "sentence": "By scheduling multi-hour blocks of sacred monastic silence and treating attention as a scarce, finite resource, the modern intellectual safeguards the psychological conditions under which profound insight can quietly germinate.",
             "coreSVO": {
               "subject": "the modern intellectual",
               "verb": "safeguards",
@@ -563,7 +563,7 @@
           },
           {
             "sentenceIndex": 3,
-            "sentence": "Writers have long dwelt on such involuntary returns, Proust's madeleine being only the most celebrated, because they suggest that the past is not irretrievably lost but merely dormant, folded into objects and sounds that wait, with a kind of mineral patience, for the right person to pass by. She stood very still, half afraid that any movement would break the spell.",
+            "sentence": "Writers have long dwelt on such involuntary returns, Proust's madeleine being only the most celebrated, because they suggest that the past is not irretrievably lost but merely dormant, folded into objects and sounds that wait, with a kind of mineral patience, for the right person to pass by.",
             "coreSVO": {
               "subject": "Writers",
               "verb": "have long dwelt on",
@@ -591,7 +591,7 @@
                 "function": "Modifies \"objects and sounds\", animating them with a geological stillness."
               }
             ],
-            "syntacticAnalysis": "A cumulative sentence that keeps extending rightward through an absolute phrase, a causal clause, a participial phrase (\"folded into...\") and a relative clause. The oxymoronic \"mineral patience\" attributes waiting to inert matter, enacting the dormancy it describes."
+            "syntacticAnalysis": "A cumulative sentence that keeps extending rightward through an absolute phrase, a causal clause, a participial phrase (\"folded into...\") and a relative clause. The metaphor \"mineral patience\" attributes waiting to inert matter, enacting the dormancy it describes."
           }
         ],
         "pass3SentenceMining": [
@@ -661,7 +661,7 @@
           }
         ],
         "pass4Synthesis": {
-          "modelPrécis": "Revisiting a childhood street, the narrator finds it impertinently indifferent and recognises that the house she remembers is a palimpsest, rewritten by every act of recollection. Yet a single vertiginous sensory cue can revive the dormant past, implying that home is a tacit bodily pact with place that may lapse but can never be wholly rescinded.",
+          "modelPrécis": "Revisiting a childhood street, the narrator finds it impertinently indifferent and recognises that the house she remembers is a palimpsest, rewritten by every act of recollection. Yet a single sensory cue can revive the dormant past with a vertiginous lurch, implying that home is a tacit bodily pact with place that may lapse but can never be wholly rescinded.",
           "incorporatedVocabulary": [
             "palimpsest",
             "impertinent",
@@ -786,7 +786,7 @@
                 "function": "Describes the hidden space in which denied discretion continues to function."
               }
             ],
-            "syntacticAnalysis": "The equative \"to X is not to Y but to Z\" redefines the opponent's move and exposes its unintended effect. The final pair \"unacknowledged and therefore unaccountable\" builds a causal chain through alliteration and the connective \"therefore\"."
+            "syntacticAnalysis": "The equative \"to X is not to Y but to Z\" redefines the opponent's move and exposes its unintended effect. The final pair \"unacknowledged and therefore unaccountable\" builds a causal chain through the parallel un- prefixes and the connective \"therefore\"."
           }
         ],
         "pass3SentenceMining": [
@@ -906,7 +906,7 @@
             },
             {
               "question": "Why is species richness alone an incomplete measure of diversity?",
-              "answer": "Because two communities with the same number of species can differ greatly in evenness, for example if one species overwhelmingly dominates one community."
+              "answer": "Because two communities with the same number of species can differ greatly in evenness, for example if one species overwhelmingly dominates."
             },
             {
               "question": "Why is an environmental DNA detection described only as \"consistent with\" a species' presence?",

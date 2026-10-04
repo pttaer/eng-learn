@@ -28,7 +28,7 @@ Newer techniques appear to offer partial remedies, at least for certain groups o
 - Q: What does a levelling species accumulation curve allow researchers to infer, and what caveat applies?
   A: That most common species have probably been detected, although rare taxa may still be missing.
 - Q: Why is species richness alone an incomplete measure of diversity?
-  A: Because two communities with the same number of species can differ greatly in evenness, for example if one species overwhelmingly dominates one community.
+  A: Because two communities with the same number of species can differ greatly in evenness, for example if one species overwhelmingly dominates.
 - Q: Why is an environmental DNA detection described only as "consistent with" a species' presence?
   A: Because DNA can persist or drift after the organism has left and reference databases are incomplete, so a detection is not conclusive proof.
 

@@ -137,11 +137,11 @@
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 3
 - **Prompt**: Because the developers did not architect modular microservices in 2021, the application is unmaintainable today.
-- **Transformation**: Had the developers architected modular microservices in 2021, the application would not be unmaintainable today.
+- **Transformation**: Had the developers architected modular microservices in 2021, the application would be maintainable today.
 - **Grammatical Cue**: Blend inverted past perfect condition ('Had... architected') with present modal result ('would be').
 - **Vietnamese**: Câu điều kiện trộn (Quá khứ tác động Hiện tại): Mệnh đề điều kiện dùng Type 3, mệnh đề kết quả dùng Type 2.
 - **Formula**: `Had + Subject + Past Participle..., Subject + would (not) + Base Verb + today/now`
-- **Analysis**: A mixed conditional bridges temporal domains: the antecedent is counterfactual past ('Had they architected'), while the consequent refers to current ongoing counterfactual reality ('would not be').
+- **Analysis**: A mixed conditional bridges temporal domains: the antecedent is counterfactual past ('Had they architected'), while the consequent refers to current ongoing counterfactual reality ('would be').
 - **Exemplar**: Had regulators capped subprime securitization ratios in 2005, the global financial system would enjoy greater stability today.
 
 ## Mixed Conditional (Permanent Trait -> Past Counterfactual)

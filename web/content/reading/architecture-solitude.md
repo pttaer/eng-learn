@@ -12,9 +12,9 @@ readingTime: "3.6 min @ 120 WPM (Intensive)"
 # Passage
 In the contemporary knowledge economy, hyper-connectivity is frequently conflated with organizational velocity. Open-plan offices and asynchronous notification streams promise frictionless collaboration, yet their insidious side effect is the systematic fragmentation of human attention. When deep, uninterrupted solitude is eliminated from daily practice, cognitive throughput degrades from rigorous original synthesis into reactive, performative busywork.
 
-Psychologists observe that switching focus between collaborative pings and analytical contemplation leaves an exhausting residue known as "attention residue." Even a brief five-second glance at an inbox notification traps working memory in a compromised state for over fifteen minutes. Under such fragmented conditions, knowledge workers lose the capacity for sustained syntactic immersion—the precise mental patience required to draft airtight legal briefs, deconstruct complex mathematical proofs, or read dense philosophical treatises without drifting into digital escapism.
+Psychologists observe that switching focus between collaborative pings and analytical contemplation leaves an exhausting residue known as "attention residue." Even a brief glance at an inbox notification can leave part of working memory tied to the interrupted task, and studies suggest full refocusing after an interruption can take many minutes. Under such fragmented conditions, knowledge workers lose the capacity for sustained syntactic immersion—the precise mental patience required to draft airtight legal briefs, deconstruct complex mathematical proofs, or read dense philosophical treatises without drifting into digital escapism.
 
-Reclaiming cognitive autonomy requires institutionalizing deliberate boundaries. Elite practitioners do not merely resist distraction through sheer willpower; they architect low-entropy physical and digital sanctuaries. By scheduling multi-hour blocks of sacred monastic silence and treating attention as a finite, non-renewable capital asset, the modern intellectual safeguards the psychological conditions under which profound insight can quietly germinate.
+Reclaiming cognitive autonomy requires institutionalizing deliberate boundaries. Elite practitioners do not merely resist distraction through sheer willpower; they architect low-entropy physical and digital sanctuaries. By scheduling multi-hour blocks of sacred monastic silence and treating attention as a scarce, finite resource, the modern intellectual safeguards the psychological conditions under which profound insight can quietly germinate.
 
 ## Cold Read
 - **Thesis**: Constant workplace connectivity destroys the sustained solitude necessary for complex knowledge work via attention residue, requiring deliberate environmental architecture rather than mere willpower to defend deep cognitive focus.
@@ -24,7 +24,7 @@ Reclaiming cognitive autonomy requires institutionalizing deliberate boundaries.
 - Q: What false equivalence does the knowledge economy make regarding connectivity?
   A: It mistakenly conflates hyper-connectivity with genuine organizational velocity.
 - Q: How does "attention residue" impair analytical capability?
-  A: Even a 5-second distraction leaves working memory partially tied up with the previous task for over 15 minutes.
+  A: Even a brief distraction can leave working memory partly tied up with the previous task, and regaining full focus can take many minutes.
 - Q: What is the author's view on willpower versus environmental design?
   A: Willpower is insufficient; elite practitioners succeed by deliberately architecting low-entropy, distraction-free physical and digital sanctuaries.
 
@@ -39,7 +39,7 @@ Reclaiming cognitive autonomy requires institutionalizing deliberate boundaries.
 - **Analysis**: Compound coordination linked by the adversative conjunction "yet". The syntactic juxtaposition pits the aspirational adjective "frictionless" directly against the damning nominal phrase "systematic fragmentation".
 
 ### Sentence 2
-- **Sentence**: By scheduling multi-hour blocks of sacred monastic silence and treating attention as a finite, non-renewable capital asset, the modern intellectual safeguards the psychological conditions under which profound insight can quietly germinate.
+- **Sentence**: By scheduling multi-hour blocks of sacred monastic silence and treating attention as a scarce, finite resource, the modern intellectual safeguards the psychological conditions under which profound insight can quietly germinate.
 - **Subject**: the modern intellectual
 - **Verb**: safeguards
 - **Object**: the psychological conditions
