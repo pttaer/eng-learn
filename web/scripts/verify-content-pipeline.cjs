@@ -54,3 +54,5 @@ assert(Array.isArray(listening.samplePassages), 'listening.samplePassages must b
 assert(listening.samplePassages.length >= 3, `Expected at least 3 listening passages, got ${listening.samplePassages.length}`);
 
 console.log('[TEST] PASSED: All 7 content datasets satisfy production schema and count invariants.');
+const habits = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'habits.json'), 'utf8'));
+habits.days.forEach(d => assert(d.tasks.length >= 3, `Day ${d.day} has ${d.tasks.length} tasks`));
