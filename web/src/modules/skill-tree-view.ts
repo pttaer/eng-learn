@@ -5,6 +5,7 @@ import { SkillTreeEngine } from '../core/skill-tree-engine';
 import { RouteId } from '../core/router';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { MotionEngine } from '../core/motion-engine';
+import { StorageManager } from '../utils/storage';
 
 export class SkillTreeView {
   private container: HTMLElement;
@@ -66,8 +67,27 @@ export class SkillTreeView {
     return this.container;
   }
 
+  // Today's drills are counted from real review timestamps, not placeholders.
+  private getWorkout() {
+    const start = new Date().setHours(0, 0, 0, 0);
+    const done = { colloc: 0, writing: 0, speaking: 0 };
+    for (const [id, st] of Object.entries(StorageManager.loadState().cardStates)) {
+      if (!st || st.lastReviewed < start) continue;
+      if (id.startsWith('colloc-')) done.colloc++;
+      else if (id.startsWith('writing-')) done.writing++;
+      else if (id.startsWith('speaking-')) done.speaking++;
+    }
+    const tasks = [
+      { route: 'colloc' as RouteId, ok: done.colloc >= 10, label: `${Math.min(done.colloc, 10)}/10 Collocations Reviewed` },
+      { route: 'write' as RouteId, ok: done.writing >= 1, label: '1 Franklin Copywork (Inversion)' },
+      { route: 'speak' as RouteId, ok: done.speaking >= 1, label: '1 Speaking Take (4-3-2 Fluency)' }
+    ];
+    return { tasks, left: tasks.filter(t => !t.ok).length, next: tasks.find(t => !t.ok)?.route ?? ('tree' as RouteId) };
+  }
+
   private renderWorkoutBanner(): string {
     const progress = SkillTreeEngine.calculateSummitProgress();
+    const workout = this.getWorkout();
     return `
       <div class="workout-banner tree-command-panel" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 16px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; gap: 12px; box-shadow: var(--shadow-card); flex: 0 0 auto;">
         <div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px;">
@@ -91,18 +111,13 @@ export class SkillTreeView {
           <div style="display: flex; flex-direction: column; gap: 2px;">
             <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
               <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-size: 10px;">★ TODAY'S 15-MINUTE WORKOUT</span>
-              <span class="telemetry-label" style="font-size: 10px;">2 OF 3 DRILLS REMAINING</span>
+              <span class="telemetry-label" style="font-size: 10px;">${workout.left === 0 ? 'ALL 3 DRILLS DONE' : workout.left + ' OF 3 DRILLS REMAINING'}</span>
             </div>
             <div class="workout-tasks" style="display: flex; gap: 10px; font-size: 11px; color: var(--ink-secondary);">
-              <div style="display: flex; align-items: center; gap: 3px;">
-                <span style="color: var(--accent-gold); font-weight: 700;">✓</span> <span>10 Collocations Reviewed</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 3px; opacity: 0.75;">
-                <span>○</span> <span>1 Franklin Copywork (Inversion)</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 3px; opacity: 0.75;">
-                <span>○</span> <span>1 Speaking Take (4-3-2 Fluency)</span>
-              </div>
+              ${workout.tasks.map(t => `
+              <div style="display: flex; align-items: center; gap: 3px;${t.ok ? '' : ' opacity: 0.75;'}">
+                <span${t.ok ? ' style="color: var(--accent-gold); font-weight: 700;"' : ''}>${t.ok ? '✓' : '○'}</span> <span>${t.label}</span>
+              </div>`).join('')}
             </div>
           </div>
           <button class="hud-btn btn-continue-workout" style="justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 6px 16px; min-height: 34px; font-weight: 700; font-size: 11px; border: none; cursor: pointer; border-radius: 6px; white-space: nowrap; box-shadow: var(--shadow-glow);">
@@ -306,7 +321,7 @@ export class SkillTreeView {
     this.container.querySelector('.btn-continue-workout')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
       if (this.onNavigate) {
-        this.onNavigate('write'); // Jump into Franklin Copywork
+        this.onNavigate(this.getWorkout().next); // first unfinished drill
       }
     });
 

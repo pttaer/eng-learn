@@ -91,3 +91,7 @@ Still open:
 - Hidden card face buttons still focusable (accessibility #4); `--ink-muted` light 4.56:1 misses AAA.
 - Large files (`reading-dossier.ts` ~1000 lines, `audio-synthesizer.ts`, `speaking-dossier.ts`) not split — deferred; no feature work needs it yet.
 - anime.js still v3.2.2; v4 has a new API (migration = rewrite `motion-engine.ts` + direct calls).
+
+## Update 2026-10-05 (UX + content accuracy pass)
+Resolved: tree label overlap, branch-name/tagline/article-title truncation (wrap everywhere), phone/tablet overflow at 320/390/768, reading screen stacking on phones, grammar formulas ending in a literal "...", hardcoded counters (listening "/03", speaking "/30", collocation "/1000"), static "daily workout" panel now computed from today's real reviews, confusing "Lv 2/5 (1/5)" label, ~45 content fixes (collocations, writing/speaking prompts, grammar double negative, reading articles incl. subvocalization framing, vocabulary examples, 9 listening notes).
+Still open: collocations have no example sentences; light-mode muted ink on the sunk surface is ~6.9:1; daily-plan.md checklist section unsynced with its JSON block for 11 days; installer needs a Defender exclusion for web/release before `npm run dist:win`; anime.js v3->v4; big-file split (reading-dossier.ts ~1000 lines).
