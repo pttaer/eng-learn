@@ -1,4 +1,5 @@
 import { StorageManager } from '../utils/storage';
+import { icon } from '../utils/icons';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { MotionEngine } from '../core/motion-engine';
 import habitsData from '../assets/data/habits.json';
@@ -52,9 +53,9 @@ export class MissionLog {
         <div class="mission-day-card-slot"></div>
       </div>
       <div class="dossier-nav-bar">
-        <button class="hud-btn nav-btn-prev-day">← Prev Day</button>
+        <button class="hud-btn nav-btn-prev-day">${icon('arrowLeft')} Prev Day</button>
         <span class="telemetry-value active-day-indicator">DAY ${this.activeDayIndex + 1} / 30</span>
-        <button class="hud-btn nav-btn-next-day">Next Day →</button>
+        <button class="hud-btn nav-btn-next-day">Next Day ${icon('arrowRight')}</button>
       </div>
     `;
 

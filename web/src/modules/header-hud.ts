@@ -4,6 +4,8 @@ import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { SRSEngine } from '../core/srs-engine';
 import { SpotlightTour } from '../core/spotlight-tour';
 
+const ROUTE_NAMES: Record<string, string> = { read: 'READING', write: 'WRITING', listen: 'LISTENING', speak: 'SPEAKING', vocab: 'VOCABULARY', colloc: 'COLLOCATIONS', grammar: 'GRAMMAR', habits: 'DAILY HABITS', singularity: 'SINGULARITY' };
+
 export class HeaderHUD {
   private element: HTMLElement;
   private currentRoute: string = 'tree';
@@ -40,9 +42,9 @@ export class HeaderHUD {
       <div class="hud-brand" style="display: flex; align-items: center; gap: 12px;">
         ${!isTree ? `
           <button class="hud-btn btn-back-tree" title="Return to Constellation Tree" aria-label="Return to Constellation Tree">
-            ←<span class="btn-label"> Back to Constellation</span> Tree
+            ${icon('arrowLeft')}<span class="btn-label"> Back to Constellation</span> Tree
           </button>
-          <span class="hud-status-badge active-route-badge" style="font-size: 11px;">STUDIO: ${this.currentRoute.toUpperCase()}</span>
+          <span class="hud-status-badge active-route-badge" style="font-size: 11px;">${ROUTE_NAMES[this.currentRoute] ?? this.currentRoute.toUpperCase()}</span>
         ` : `
           <span class="hud-brand-title" style="font-size: 15px; font-weight: 700; letter-spacing: 0.1em; display: inline-flex; align-items: center; gap: 8px;">
             <span style="color: var(--accent-gold); font-size: 13px;">✦</span> ENGLISH MASTERY
@@ -52,15 +54,15 @@ export class HeaderHUD {
       </div>
 
       <div class="hud-telemetry-cluster" style="display: flex; gap: 20px; align-items: center;">
-        <div class="telemetry-item" style="display: flex; align-items: center; gap: 6px;">
+        <div class="telemetry-item" title="Consecutive days you finished the daily workout" style="display: flex; align-items: center; gap: 6px;">
           <span class="telemetry-label" style="font-size: 11px;">STREAK:</span>
           <span class="telemetry-value telemetry-streak" style="color: var(--accent-gold); font-weight: 700;">${icon('flame')} ${state.streak.currentStreak} DAYS</span>
         </div>
-        <div class="telemetry-item" style="display: flex; align-items: center; gap: 6px;">
+        <div class="telemetry-item" title="Your goal: C2 mastery, the top of the skill tree" style="display: flex; align-items: center; gap: 6px;">
           <span class="telemetry-label" style="font-size: 11px;">SUMMIT:</span>
           <span class="telemetry-value" style="font-weight: 700;">C2 MASTERY</span>
         </div>
-        <div class="telemetry-item" style="display: flex; align-items: center; gap: 6px;">
+        <div class="telemetry-item" title="Share of flashcard reviews you recalled correctly" style="display: flex; align-items: center; gap: 6px;">
           <span class="telemetry-label" style="font-size: 11px;">RETENTION:</span>
           <span class="telemetry-value telemetry-retention" style="color: var(--good); font-weight: 700;">${stats.retentionRate}%</span>
         </div>

@@ -653,7 +653,7 @@ export class ReadingDossier {
 
           <div class="pass-progression-bar">
             <button class="hud-btn btn-proceed-next" style="padding: 8px 18px; font-weight: 700;">
-              Proceed to Pass 2: Skeleton →
+              Proceed to Pass 2: Skeleton ${icon('arrowRight')}
             </button>
           </div>
         </article>
@@ -834,7 +834,7 @@ export class ReadingDossier {
 
         <div class="pass-progression-bar">
           <button class="hud-btn btn-proceed-next" style="padding: 8px 18px; font-weight: 700;">
-            Proceed to Pass 3: Lexical Mining →
+            Proceed to Pass 3: Lexical Mining ${icon('arrowRight')}
           </button>
         </div>
       </div>
@@ -857,15 +857,15 @@ export class ReadingDossier {
     slot.innerHTML = `
       <div class="reading-mining-layout">
         <div class="dossier-nav-bar" style="margin-bottom: 16px;">
-          <button class="hud-btn mine-btn-prev">← Prev Card</button>
+          <button class="hud-btn mine-btn-prev">${icon('arrowLeft')} Prev Card</button>
           <span class="telemetry-value mine-counter">MINED ITEM ${this.miningCardIndex + 1} / ${miningCards.length}</span>
-          <button class="hud-btn mine-btn-next">Next Card →</button>
+          <button class="hud-btn mine-btn-next">Next Card ${icon('arrowRight')}</button>
         </div>
         <div class="mining-card-mount"></div>
 
         <div class="pass-progression-bar" style="margin-top: 16px;">
           <button class="hud-btn btn-proceed-next" style="padding: 8px 18px; font-weight: 700;">
-            Proceed to Pass 4: Critical Synthesis →
+            Proceed to Pass 4: Critical Synthesis ${icon('arrowRight')}
           </button>
         </div>
       </div>

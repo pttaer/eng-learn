@@ -84,10 +84,7 @@ export class SkillTreeView {
             <h1 style="font-size: 16px; font-weight: 700; margin: 0; font-family: var(--font-sans); color: var(--ink-primary); letter-spacing: -0.01em; white-space: nowrap;">
               The Path to C2 Native Mastery
             </h1>
-            <span style="font-size: 12px; color: var(--ink-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-              — Master prerequisite engrams to unlock higher-tier syntactic and rhetorical perks.
-            </span>
-          </div>
+            </div>
         </div>
 
         <div class="workout-panel" style="flex: 0 0 auto; display: flex; align-items: center; gap: 12px; background: var(--bg-surface-sunk); border: 1px solid var(--border-hairline); border-radius: 6px; padding: 6px 14px;">
@@ -109,7 +106,7 @@ export class SkillTreeView {
             </div>
           </div>
           <button class="hud-btn btn-continue-workout" style="justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 6px 16px; min-height: 34px; font-weight: 700; font-size: 11px; border: none; cursor: pointer; border-radius: 6px; white-space: nowrap; box-shadow: var(--shadow-glow);">
-            Continue Today's Workout →
+            Continue Today's Workout ${icon('arrowRight')}
           </button>
         </div>
       </div>
@@ -262,7 +259,7 @@ export class SkillTreeView {
       const masteredInBranch = branchNodes.filter(n => SkillTreeEngine.getNodeStatus(n.id) === 'mastered').length;
       const pct = Math.round((masteredInBranch / 5) * 100);
       return `
-        <div class="branch-summary-card" data-route="${branch.routeTarget}" tabindex="0" role="button" aria-label="Open ${branch.name}" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: 6px; cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s; display: flex; flex-direction: column; justify-content: space-between; min-height: 50px; box-shadow: var(--shadow-btn);">
+        <div class="branch-summary-card" data-route="${branch.routeTarget}" tabindex="0" role="button" aria-label="Open ${branch.name}" title="${branch.name} — ${branch.tagline}" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: 6px; cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s; display: flex; flex-direction: column; justify-content: space-between; min-height: 50px; box-shadow: var(--shadow-btn);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
             <span style="font-family: var(--font-mono); font-size: 10.5px; color: var(--accent-gold); font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 78%;">
               ✦ ${branch.name.toUpperCase()}
@@ -271,7 +268,7 @@ export class SkillTreeView {
               ${pct}%
             </span>
           </div>
-          <div style="font-size: 11px; font-weight: 500; margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ink-secondary);">
+          <div style="font-size: 11px; font-weight: 500; margin-bottom: 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.35; color: var(--ink-secondary);">
             ${branch.tagline}
           </div>
           <div style="display: flex; align-items: center; gap: 8px;">
@@ -422,11 +419,11 @@ export class SkillTreeView {
         <div style="display: flex; gap: 12px; margin-top: 8px;">
           ${status !== 'locked' ? `
             <button class="hud-btn btn-launch-drill" style="flex: 1; justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 12px; font-weight: 700; border: none; cursor: pointer; border-radius: 6px; box-shadow: var(--shadow-glow);">
-              Start Practice Drill →
+              Start Practice Drill ${icon('arrowRight')}
             </button>
           ` : `
             <button class="hud-btn btn-train-prereq" style="flex: 1; justify-content: center; background: var(--bg-surface-sunk); color: var(--ink-primary); padding: 12px; font-weight: 600; border: 1px solid var(--border-subtle); cursor: pointer; border-radius: 6px;">
-              Train Prerequisite First →
+              Train Prerequisite First ${icon('arrowRight')}
             </button>
           `}
           <button class="hud-btn btn-close-modal" style="padding: 12px 20px; justify-content: center; cursor: pointer; border-radius: 6px;">

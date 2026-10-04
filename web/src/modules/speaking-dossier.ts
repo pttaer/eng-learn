@@ -1,4 +1,5 @@
 import { AtomicCard } from '../core/atomic-card';
+import { icon } from '../utils/icons';
 import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
@@ -73,9 +74,9 @@ export class SpeakingDossier {
       </div>
       <div class="dossier-card-slot"></div>
       <div class="dossier-nav-bar">
-        <button class="hud-btn nav-btn-prev">← Prev Prompt</button>
+        <button class="hud-btn nav-btn-prev">${icon('arrowLeft')} Prev Prompt</button>
         <span class="telemetry-value card-counter">PROMPT ${this.currentIndex + 1} / ${this.items.length}</span>
-        <button class="hud-btn nav-btn-next">Next Prompt →</button>
+        <button class="hud-btn nav-btn-next">Next Prompt ${icon('arrowRight')}</button>
       </div>
     `;
 
@@ -246,11 +247,11 @@ export class SpeakingDossier {
             <button type="button" class="hud-btn btn-stop-audio" style="font-size: 10px; padding: 2px 8px;">⏹ Stop</button>
             ${this.currentRoundIdx < 2 ? `
               <button type="button" class="hud-btn btn-advance-round" style="font-size: 10px; padding: 2px 10px; background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none;">
-                Advance to Round ${this.currentRoundIdx + 2} (${this.rounds[this.currentRoundIdx + 1] / 60} min) →
+                Advance to Round ${this.currentRoundIdx + 2} (${this.rounds[this.currentRoundIdx + 1] / 60} min) ${icon('arrowRight')}
               </button>
             ` : `
               <button type="button" class="hud-btn btn-view-matrix" style="font-size: 10px; padding: 2px 10px; background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none;">
-                View 3-Round Compression Matrix →
+                View 3-Round Compression Matrix ${icon('arrowRight')}
               </button>
             `}
           </div>

@@ -154,11 +154,11 @@ export class WritingDossier {
 
         <!-- Bottom Navigation & Counter -->
         <div class="dossier-nav-bar" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-hairline); padding-top: 16px; margin-top: 12px;">
-          <button class="hud-btn nav-btn-prev" ${this.currentIndex === 0 ? 'disabled' : ''}>← Prev Prompt</button>
+          <button class="hud-btn nav-btn-prev" ${this.currentIndex === 0 ? 'disabled' : ''}>${icon('arrowLeft')} Prev Prompt</button>
           <span class="telemetry-value card-counter" style="font-family: var(--font-mono); font-size: 13px;">
             PROMPT ${this.currentIndex + 1} / ${this.items.length}
           </span>
-          <button class="hud-btn nav-btn-next" ${this.currentIndex === this.items.length - 1 ? 'disabled' : ''}>Next Prompt →</button>
+          <button class="hud-btn nav-btn-next" ${this.currentIndex === this.items.length - 1 ? 'disabled' : ''}>Next Prompt ${icon('arrowRight')}</button>
         </div>
       </div>
     `;
@@ -217,7 +217,7 @@ export class WritingDossier {
             </div>
 
             <button class="hud-btn btn-proceed-type" style="width: 100%; justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 14px 0; font-size: 14px; font-weight: 700; border: none; cursor: pointer; border-radius: 6px; box-shadow: var(--shadow-glow);">
-              Memorized — Hide Model & Start Typing →
+              Memorized — Hide Model & Start Typing ${icon('arrowRight')}
             </button>
           </div>
         `;
@@ -251,7 +251,7 @@ export class WritingDossier {
             </div>
 
             <button class="hud-btn btn-evaluate-type" style="width: 100%; justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 14px 0; font-size: 14px; font-weight: 700; border: none; cursor: pointer; border-radius: 6px; box-shadow: var(--shadow-glow);">
-              Evaluate Reconstruction →
+              Evaluate Reconstruction ${icon('arrowRight')}
             </button>
           </div>
         `;

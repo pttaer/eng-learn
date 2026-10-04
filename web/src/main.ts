@@ -318,7 +318,7 @@ class App {
           DISMISS
         </button>
         <button class="hud-btn btn-toast-start" style="padding: 4px 12px; font-size: 11px; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
-          START TOUR →
+          START TOUR ${icon('arrowRight')}
         </button>
       </div>
     `;

@@ -1,4 +1,5 @@
 import { AtomicCard } from '../core/atomic-card';
+import { icon } from '../utils/icons';
 import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
@@ -29,9 +30,9 @@ export class ListeningDossier {
       </div>
       <div class="dossier-card-slot"></div>
       <div class="dossier-nav-bar">
-        <button class="hud-btn nav-btn-prev">← Prev Passage</button>
+        <button class="hud-btn nav-btn-prev">${icon('arrowLeft')} Prev Passage</button>
         <span class="telemetry-value card-counter">Passage ${this.currentIndex + 1} / ${this.passages.length}</span>
-        <button class="hud-btn nav-btn-next">Next Passage →</button>
+        <button class="hud-btn nav-btn-next">Next Passage ${icon('arrowRight')}</button>
       </div>
     `;
 

@@ -20,10 +20,10 @@ export class CollocationsDossier {
   private container: HTMLElement;
   private currentList: CollocationItem[] = [];
   private currentIndex: number = 0;
-  private activeCategory: string = 'ALL';
+  private activeCategory: string = 'DUE';
   private searchQuery: string = '';
   private currentCardHandle: any = null;
-  private viewMode: CollocationViewMode = 'dictionary';
+  private viewMode: CollocationViewMode = 'drill';
   private currentPage: number = 1;
   private pageSize: number = 50;
   public onBatchComplete?: () => void;
@@ -115,9 +115,9 @@ export class CollocationsDossier {
     return `
       <div class="dossier-card-slot"></div>
       <div class="dossier-nav-bar">
-        <button class="hud-btn nav-btn-prev">← Prev</button>
+        <button class="hud-btn nav-btn-prev">${icon('arrowLeft')} Prev</button>
         <span class="telemetry-value card-counter">VAULT ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}</span>
-        <button class="hud-btn nav-btn-next">Next →</button>
+        <button class="hud-btn nav-btn-next">Next ${icon('arrowRight')}</button>
       </div>
     `;
   }
@@ -185,9 +185,9 @@ export class CollocationsDossier {
           </table>
         </div>
         <div class="lexicon-pagination-bar">
-          <button class="hud-btn page-btn-prev" ${this.currentPage <= 1 ? 'disabled' : ''}>← Prev 50</button>
+          <button class="hud-btn page-btn-prev" ${this.currentPage <= 1 ? 'disabled' : ''}>${icon('arrowLeft')} Prev 50</button>
           <span class="telemetry-value page-indicator">PAGE ${this.currentPage} / ${totalPages} (${totalItems > 0 ? startIndex + 1 : 0}–${endIndex} of ${totalItems})</span>
-          <button class="hud-btn page-btn-next" ${this.currentPage >= totalPages ? 'disabled' : ''}>Next 50 →</button>
+          <button class="hud-btn page-btn-next" ${this.currentPage >= totalPages ? 'disabled' : ''}>Next 50 ${icon('arrowRight')}</button>
         </div>
       </div>
     `;
