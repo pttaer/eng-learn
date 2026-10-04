@@ -1889,3 +1889,14 @@ html[data-motion="reduce"] {
   outline-offset: 4px;
   border-radius: 6px;
 }
+
+/* Phones: wrap control rows instead of clipping them, keep icons and search usable */
+@media (max-width: 600px) {
+  .collocations-mode-header { flex-wrap: wrap; gap: 8px; }
+  .view-mode-toggle .view-toggle-btn { flex: 1 1 0; }
+  .view-mode-toggle .view-toggle-btn svg, .hud-btn svg { flex-shrink: 0; }
+  .dossier-control-bar { flex-wrap: wrap; }
+  .dossier-search-wrapper { flex: 1 1 100%; min-width: 0; }
+  .dossier-search-input { width: 100%; box-sizing: border-box; min-height: 44px; }
+  .dossier-workspace { padding-bottom: 88px; }
+}
