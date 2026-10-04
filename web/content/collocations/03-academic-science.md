@@ -44,7 +44,7 @@
 | 539 | confounding variable | biến gây nhiễu | ACADEMIC |
 | 540 | operational definition | định nghĩa thao tác hóa | ACADEMIC |
 | 541 | statistical significance | ý nghĩa thống kê | ACADEMIC |
-| 542 | statistically significant | có ý nghĩa thống kê | ACADEMIC |
+| 542 | reject the null hypothesis | bác bỏ giả thuyết không | ACADEMIC |
 | 543 | p-value threshold | ngưỡng giá trị p | ACADEMIC |
 | 544 | standard deviation | độ lệch chuẩn | ACADEMIC |
 | 545 | normal distribution | phân phối chuẩn | ACADEMIC |
@@ -198,7 +198,7 @@
 | 693 | overfitting the data | quá khớp dữ liệu/học vẹt dữ liệu | ACADEMIC |
 | 694 | underfitting the model | chưa khớp mô hình/thiếu khớp | ACADEMIC |
 | 695 | loss function | hàm mất mát | ACADEMIC |
-| 696 | gradient descent | thuật toán hạ dốc độ dốc | ACADEMIC |
+| 696 | gradient descent | thuật toán giảm dần theo độ dốc (gradient) | ACADEMIC |
 | 697 | hyperparameter tuning | tinh chỉnh siêu tham số | ACADEMIC |
 | 698 | feature extraction | trích xuất đặc trưng | ACADEMIC |
 | 699 | feature engineering | kỹ nghệ đặc trưng | ACADEMIC |

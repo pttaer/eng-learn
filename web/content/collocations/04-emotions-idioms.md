@@ -27,12 +27,12 @@
 | 772 | overcome with grief | bị nỗi đau buồn nhấn chìm | IDIOMS |
 | 773 | profound sadness | nỗi buồn sâu sắc, khôn nguôi | IDIOMS |
 | 774 | sigh of relief | tiếng thở phào nhẹ nhõm | IDIOMS |
-| 775 | breathe a sigh of relief | thở phào nhẹ nhõm | IDIOMS |
+| 775 | wave of relief | cảm giác nhẹ nhõm dâng trào | IDIOMS |
 | 776 | sense of relief | cảm giác trút được gánh nặng | IDIOMS |
 | 777 | high spirits | tinh thần phấn chấn, vui vẻ | IDIOMS |
 | 778 | low spirits | tâm trạng ủ rũ, chán nản | IDIOMS |
 | 779 | lift someone's spirits | nâng cao tinh thần, làm ai vui lên | IDIOMS |
-| 780 | damp someone's spirits | làm giảm bớt nhuệ khí, làm ai cụt hứng | IDIOMS |
+| 780 | dampen someone's spirits | làm giảm bớt nhuệ khí, làm ai cụt hứng | IDIOMS |
 | 781 | infectious laugh | nụ cười có sức lan tỏa, lây truyền | IDIOMS |
 | 782 | beam with pride | cười rạng rỡ vì tự hào | IDIOMS |
 | 783 | swell with pride | tràn ngập niềm tự hào | IDIOMS |
@@ -247,7 +247,7 @@
 | 992 | in the short term | trong ngắn hạn, trước mắt | IDIOMS |
 | 993 | for the time being | tạm thời vào lúc này | IDIOMS |
 | 994 | as a matter of fact | trên thực tế, thật ra là | IDIOMS |
-| 995 | by all means | bằng mọi giá, chắc chắn rồi | IDIOMS |
+| 995 | by all means | cứ tự nhiên, tất nhiên rồi | IDIOMS |
 | 996 | on second thought | nghĩ kỹ lại thì | IDIOMS |
 | 997 | touch wood | trộm vía, mong may mắn tiếp tục | IDIOMS |
 | 998 | so far so good | mọi chuyện đến giờ vẫn tốt đẹp | IDIOMS |

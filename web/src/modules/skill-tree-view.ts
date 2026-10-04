@@ -277,7 +277,7 @@ export class SkillTreeView {
               ${pct}%
             </span>
           </div>
-          <div style="font-size: 11px; font-weight: 500; margin-bottom: 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.35; color: var(--ink-secondary);">
+          <div style="font-size: 11px; font-weight: 500; margin-bottom: 6px; line-height: 1.35; color: var(--ink-secondary);">
             ${branch.tagline}
           </div>
           <div style="display: flex; align-items: center; gap: 8px;">

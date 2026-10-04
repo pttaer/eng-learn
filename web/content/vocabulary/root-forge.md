@@ -56,7 +56,7 @@
 - **IPA**: /ˈkrɒn.ɪ.kəl/
 - **Definition**: A factual written account of important or historical events in the order of their occurrence.
 - **Vietnamese**: biên niên sử, ghi chép lịch sử theo trình tự thời gian
-- **Context**: The memoir chronicles the rise and collapse of the dot-com bubble.
+- **Context**: The memoir is a vivid chronicle of the rise and collapse of the dot-com bubble.
 - **Prefix**: None (root-initial)
 - **Root**: chron (Greek: time)
 - **Suffix**: -icle (diminutive/noun-forming: instrument, record)

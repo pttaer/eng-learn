@@ -197,7 +197,7 @@
 | 442 | bring charges against | đưa ra lời cáo buộc pháp lý chống lại đối tượng | BUSINESS |
 | 443 | drop the charges | bãi bỏ toàn bộ các cáo buộc | BUSINESS |
 | 444 | settle out of court | thực hiện thỏa thuận hòa giải ngoài tòa án | BUSINESS |
-| 445 | out-of-court settlement | thỏa thuận dàn xếp vụ việc ngoài khuôn khổ xét xử tòa án | BUSINESS |
+| 445 | reach a settlement | đạt được thỏa thuận dàn xếp vụ việc | BUSINESS |
 | 446 | class action lawsuit | vụ khởi kiện tập thể đại diện cho nhiều nguyên đơn | BUSINESS |
 | 447 | award damages | tuyên phán quyết buộc bồi thường thiệt hại | BUSINESS |
 | 448 | punitive damages | khoản tiền bồi thường mang tính trừng phạt răn đe | BUSINESS |

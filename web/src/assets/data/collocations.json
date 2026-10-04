@@ -506,7 +506,7 @@
   {
     "id": "colloc-73",
     "index": 73,
-    "phrase": "take blame",
+    "phrase": "take the blame",
     "vietnamese": "nhận lỗi, chịu sự khiển trách",
     "category": "EVERYDAY"
   },
@@ -906,7 +906,7 @@
     "id": "colloc-130",
     "index": 130,
     "phrase": "get late",
-    "vietnamese": "trời về muộn",
+    "vietnamese": "trở nên muộn, trời đã khuya",
     "category": "EVERYDAY"
   },
   {
@@ -3110,8 +3110,8 @@
   {
     "id": "colloc-445",
     "index": 445,
-    "phrase": "out-of-court settlement",
-    "vietnamese": "thỏa thuận dàn xếp vụ việc ngoài khuôn khổ xét xử tòa án",
+    "phrase": "reach a settlement",
+    "vietnamese": "đạt được thỏa thuận dàn xếp vụ việc",
     "category": "BUSINESS"
   },
   {
@@ -3789,8 +3789,8 @@
   {
     "id": "colloc-542",
     "index": 542,
-    "phrase": "statistically significant",
-    "vietnamese": "có ý nghĩa thống kê",
+    "phrase": "reject the null hypothesis",
+    "vietnamese": "bác bỏ giả thuyết không",
     "category": "ACADEMIC"
   },
   {
@@ -4868,7 +4868,7 @@
     "id": "colloc-696",
     "index": 696,
     "phrase": "gradient descent",
-    "vietnamese": "thuật toán hạ dốc độ dốc",
+    "vietnamese": "thuật toán giảm dần theo độ dốc (gradient)",
     "category": "ACADEMIC"
   },
   {
@@ -5420,8 +5420,8 @@
   {
     "id": "colloc-775",
     "index": 775,
-    "phrase": "breathe a sigh of relief",
-    "vietnamese": "thở phào nhẹ nhõm",
+    "phrase": "wave of relief",
+    "vietnamese": "cảm giác nhẹ nhõm dâng trào",
     "category": "IDIOMS"
   },
   {
@@ -5455,7 +5455,7 @@
   {
     "id": "colloc-780",
     "index": 780,
-    "phrase": "damp someone's spirits",
+    "phrase": "dampen someone's spirits",
     "vietnamese": "làm giảm bớt nhuệ khí, làm ai cụt hứng",
     "category": "IDIOMS"
   },
@@ -6961,7 +6961,7 @@
     "id": "colloc-995",
     "index": 995,
     "phrase": "by all means",
-    "vietnamese": "bằng mọi giá, chắc chắn rồi",
+    "vietnamese": "cứ tự nhiên, tất nhiên rồi",
     "category": "IDIOMS"
   },
   {

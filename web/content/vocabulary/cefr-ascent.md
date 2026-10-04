@@ -338,7 +338,7 @@
 - **IPA**: /ˈpɔɪ.njənt/
 - **Definition**: Evoking a keen sense of sadness or regret; deeply touching and sharp in impact.
 - **Vietnamese**: chua xót, thấm thía, làm thắt lòng
-- **Context**: The documentary delivers a poignant critique of how deindustrialization hollowed out rural communities.
+- **Context**: The documentary delivers a poignant portrait of how deindustrialization hollowed out rural communities.
 - **CEFR Rank**: C1
 - **Collocates**: poignant reminder, poignant portrait, poignant irony
 - **Synonyms**: affecting, piercing, evocative

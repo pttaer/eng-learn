@@ -75,7 +75,7 @@
 | 70 | take measures | áp dụng các biện pháp | EVERYDAY |
 | 71 | take steps | thực hiện từng bước | EVERYDAY |
 | 72 | take responsibility | chịu trách nhiệm | EVERYDAY |
-| 73 | take blame | nhận lỗi, chịu sự khiển trách | EVERYDAY |
+| 73 | take the blame | nhận lỗi, chịu sự khiển trách | EVERYDAY |
 | 74 | take credit | nhận công trạng | EVERYDAY |
 | 75 | take effect | có hiệu lực, phát huy tác dụng | EVERYDAY |
 | 76 | take medicine | uống thuốc | EVERYDAY |
@@ -132,7 +132,7 @@
 | 127 | get upset | buồn phiền, bực bội | EVERYDAY |
 | 128 | get dark | trời tối dần | EVERYDAY |
 | 129 | get cold | trời lạnh dần | EVERYDAY |
-| 130 | get late | trời về muộn | EVERYDAY |
+| 130 | get late | trở nên muộn, trời đã khuya | EVERYDAY |
 | 131 | get old | già đi | EVERYDAY |
 | 132 | get in touch | giữ liên lạc, liên hệ | EVERYDAY |
 | 133 | get the impression | có cảm tưởng, ấn tượng | EVERYDAY |
