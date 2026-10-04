@@ -65,3 +65,34 @@
   .constellation-container { overflow-x: auto !important; overflow-y: hidden; min-height: 360px !important; -webkit-overflow-scrolling: touch; }
   .constellation-container > svg { width: 820px !important; min-width: 820px; height: 100% !important; }
 }
+
+/* Tablets and small phones: header never runs off-screen; level selector wraps */
+@media (max-width: 1100px) {
+  .header-actions .btn-label { display: none; }
+  .header-actions { flex-shrink: 0; }
+}
+@media (max-width: 360px) {
+  .hud-brand-title { display: none; }
+  .header-actions { gap: 4px !important; }
+}
+.vocab-level-selector, .grammar-level-selector { flex-wrap: wrap; }
+@media (max-width: 900px) {
+  .btn-back-tree .btn-label { display: none; }
+  .workout-panel { flex-wrap: wrap !important; }
+  .workout-panel .btn-continue-workout { flex: 1 1 100%; }
+}
+@media (max-width: 360px) { .hud-rank-badge { display: none; } }
+@media (max-width: 900px) { .workout-panel { max-width: 100%; flex: 1 1 auto !important; } .workout-panel .workout-tasks { flex-wrap: wrap; } }
+@media (max-width: 360px) {
+  .header-actions .hud-btn { padding: 6px 8px !important; min-width: 40px; }
+  .hud-header, header.hud-header { gap: 6px !important; padding-left: 8px !important; padding-right: 8px !important; }
+}
+@media (max-width: 900px) { .workout-panel > div:first-child { flex: 1 1 240px !important; min-width: 0; } .skill-tree-shell h1 { white-space: normal !important; } }
+@media (max-width: 360px) { .hud-brand-title { display: none !important; } .hud-rank-badge { display: none !important; } }
+@media (max-width: 360px) { .hud-header { flex-wrap: wrap !important; } .hud-brand { min-width: 0; flex: 1 1 auto; } .hud-actions { margin-left: auto; } }
+@media (max-width: 900px) { .workout-panel .btn-continue-workout { white-space: normal !important; max-width: 100%; text-align: center; box-sizing: border-box; } }
+@media (max-width: 900px) {
+  .workout-panel { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; }
+  .workout-panel > * { min-width: 0; max-width: 100%; }
+  .workout-panel .workout-tasks { flex-wrap: wrap; }
+}

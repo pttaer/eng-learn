@@ -355,7 +355,7 @@ export class CollocationsDossier {
       id: item.id,
       pillar: 'COLLOC',
       category: item.category,
-      indexStr: `[ ${String(item.index).padStart(4, '0')} / 1000 ]`,
+      indexStr: `[ ${this.currentIndex + 1} / ${this.currentList.length} ]`,
       statusBadge,
       front: {
         promptLabel: 'COLLOCATION // RECALL MEANING',
