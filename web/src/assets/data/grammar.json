@@ -8,7 +8,7 @@
     "targetTransformation": "Seldom did the executive team realize how vulnerable their supply chain had become.",
     "grammaticalCue": "Fronting the negative frequency adverb 'seldom' triggers subject-auxiliary inversion.",
     "vietnamese": "Đảo ngữ với Seldom: đưa trạng từ phủ định lên đầu câu, đảo trợ động từ 'did' lên trước chủ ngữ.",
-    "formula": "Seldom + Auxiliary Verb + Subject + Main Verb (Base Form)...",
+    "formula": "Seldom + Auxiliary Verb + Subject + Main Verb (Base Form)",
     "analysis": "When negative frequency adverbs ('seldom', 'rarely', 'scarcely') are moved to the sentence-initial position for rhetorical emphasis, English requires standard subject-auxiliary inversion in the main clause.",
     "exemplarContext": "Seldom did the board intervene in day-to-day algorithmic trading executions unless predetermined risk thresholds were breached."
   },
@@ -21,7 +21,7 @@
     "targetTransformation": "Rarely do central banks adjust benchmark lending rates without prior forward guidance.",
     "grammaticalCue": "Fronting 'rarely' requires present auxiliary 'do' before plural subject 'central banks'.",
     "vietnamese": "Đảo ngữ với Rarely: đưa 'Rarely' lên đầu câu, mượn trợ động từ 'do' đặt trước danh từ số nhiều.",
-    "formula": "Rarely + do/does + Subject + Main Verb...",
+    "formula": "Rarely + do/does + Subject + Main Verb",
     "analysis": "In present simple declarative statements with full lexical verbs, fronting 'rarely' obligates the insertion of 'do' or 'does' immediately preceding the noun phrase subject.",
     "exemplarContext": "Rarely do early-stage biotech startups achieve profitability prior to Phase III clinical trials."
   },
@@ -34,7 +34,7 @@
     "targetTransformation": "Hardly had the lead engineer deployed the hotfix when the secondary database crashed.",
     "grammaticalCue": "Negative time adverb 'hardly' at the front inverts the past perfect auxiliary 'had'.",
     "vietnamese": "Đảo ngữ với cấu trúc Vừa mới... thì (Hardly had + S + V3 when S + V2).",
-    "formula": "Hardly + had + Subject + Past Participle... + when + Subject + Simple Past Verb...",
+    "formula": "Hardly + had + Subject + Past Participle... + when + Subject + Simple Past Verb",
     "analysis": "Used to describe an event immediately followed by another. The first past event requires past perfect inverted syntax ('Hardly had [subject] [participle]'), followed by the subordinate time conjunction 'when'.",
     "exemplarContext": "Hardly had the regulatory mandate taken effect when arbitrageurs identified legal loopholes."
   },
@@ -73,7 +73,7 @@
     "targetTransformation": "Not only did the new framework halve query latencies, but it also reduced server energy consumption.",
     "grammaticalCue": "Fronting 'Not only' forces auxiliary inversion in the first coordinate clause.",
     "vietnamese": "Đảo ngữ với 'Not only': Đảo trợ động từ ở vế đầu; vế sau giữ nguyên trật tự thông thường.",
-    "formula": "Not only + Auxiliary + Subject + Main Verb..., but [Subject] also + Verb...",
+    "formula": "Not only + Auxiliary + Subject + Main Verb..., but [Subject] also + Verb",
     "analysis": "When 'not only' begins the sentence, the first clause undergoes obligatory inversion ('did the framework halve'), while the second coordinate clause introduced by 'but' retains normal canonical declarative order.",
     "exemplarContext": "Not only did the court overturn the administrative injunction, but it also assessed punitive damages against the petitioner."
   },
@@ -86,7 +86,7 @@
     "targetTransformation": "Were the consortium to withdraw funding, the infrastructure project would stall indefinitely.",
     "grammaticalCue": "Omit 'if' and invert subjunctive copula 'were' with infinitive complement.",
     "vietnamese": "Đảo ngữ câu điều kiện loại 2: Đảo 'Were' lên đầu câu thay cho 'If', động từ chính chuyển thành 'to-V'.",
-    "formula": "Were + Subject + to-Infinitive..., Subject + would/could + Base Verb...",
+    "formula": "Were + Subject + to-Infinitive..., Subject + would/could + Base Verb",
     "analysis": "Omitting the conditional subordinator 'if' and advancing subjunctive 'were' creates a sleek, elevated hypothetical proposition indicating low subjective probability.",
     "exemplarContext": "Were sovereign bond yields to spike unpredictably, refinancing costs across municipalities would double."
   },
@@ -125,7 +125,7 @@
     "targetTransformation": "Under no circumstances must employees disclose unreleased fiscal projections to third-party analysts.",
     "grammaticalCue": "Negative prepositional phrase 'Under no circumstances' fronted with modal inversion.",
     "vietnamese": "Đảo ngữ với 'Under no circumstances': Tuyệt đối trong bất kỳ hoàn cảnh nào cũng không được làm gì.",
-    "formula": "Under no circumstances + Modal Auxiliary (must/should/may) + Subject + Base Verb...",
+    "formula": "Under no circumstances + Modal Auxiliary (must/should/may) + Subject + Base Verb",
     "analysis": "Categorical negative adjuncts fronted for legal or regulatory imperative force modal inversion ('must employees disclose'), leaving no semantic ambiguity regarding strict compliance.",
     "exemplarContext": "Under no circumstances should production credentials be committed to public code repositories."
   },
@@ -138,7 +138,7 @@
     "targetTransformation": "Had the intelligence analysts synthesized the intercepted telemetry earlier, the attack might have been averted.",
     "grammaticalCue": "Omit 'if' and invert past perfect auxiliary 'had' before complex subject noun phrase.",
     "vietnamese": "Đảo ngữ câu điều kiện loại 3: Bỏ 'if', đảo 'Had' lên đầu câu trước chủ ngữ để diễn tả giả định quá khứ.",
-    "formula": "Had + Subject + Past Participle..., Subject + would/might/could have + Past Participle...",
+    "formula": "Had + Subject + Past Participle..., Subject + would/might/could have + Past Participle",
     "analysis": "Third conditional inversion ('Had [subject] [participle]') eliminates conversational 'if', establishing a sharp counterfactual premise characteristic of rigorous academic historiography and legal analysis.",
     "exemplarContext": "Had the committee audited off-balance-sheet vehicles, the liquidity crisis would have been arrested."
   },
@@ -151,7 +151,7 @@
     "targetTransformation": "Not until peer-reviewed longitudinal studies emerged did the public understand the systemic ecological ramifications of microplastics.",
     "grammaticalCue": "Front 'Not until [time clause]'; invert auxiliary 'did' in the subsequent main clause.",
     "vietnamese": "Đảo ngữ với 'Not until': Mệnh đề sau 'Not until' giữ nguyên, chỉ đảo trợ động từ ở mệnh đề chính.",
-    "formula": "Not until + Subordinate Clause/Time Expression + Auxiliary + Subject + Main Verb...",
+    "formula": "Not until + Subordinate Clause/Time Expression + Auxiliary + Subject + Main Verb",
     "analysis": "A common pitfall is attempting to invert the subordinate time clause. Correct grammar leaves the 'until' clause uninverted and applies auxiliary inversion exclusively to the governing matrix clause ('did the public understand').",
     "exemplarContext": "Not until the forensic ledger was subpoenaed did regulators comprehend the magnitude of the embezzlement."
   },
@@ -164,7 +164,7 @@
     "targetTransformation": "So severe was the macroeconomic shock that sovereign bond yields plunged to historic lows.",
     "grammaticalCue": "Front intensive adjective phrase 'So severe'; invert copular verb 'was' before subject.",
     "vietnamese": "Đảo ngữ với 'So... that': Đưa 'So + Adj' lên đầu câu, đảo động từ to-be lên trước chủ ngữ.",
-    "formula": "So + Adjective + be + Subject + that + Result Clause...",
+    "formula": "So + Adjective + be + Subject + that + Result Clause",
     "analysis": "Fronting the degree adverb 'so' alongside its predicate adjective shifts emotional intensity to the forefront of the sentence, requiring inversion of the copula before introducing the consequential 'that' clause.",
     "exemplarContext": "So entrenched was the bureaucratic inertia that three successive cabinet reshuffles failed to enforce reform."
   },
@@ -203,7 +203,7 @@
     "targetTransformation": "Little did the shareholders suspect that the merger talks had already collapsed behind closed doors.",
     "grammaticalCue": "Fronting the negative adverb 'little' (meaning 'not at all') triggers do-support inversion: 'did + subject + base verb'.",
     "vietnamese": "Đảo ngữ với 'Little did': 'Little' mang nghĩa phủ định 'hoàn toàn không'; đưa lên đầu câu, đảo trợ động từ 'did' lên trước chủ ngữ và đưa động từ chính về nguyên mẫu.",
-    "formula": "Little + do/does/did + Subject + Verb of Knowledge or Expectation (know/suspect/imagine/dream)...",
+    "formula": "Little + do/does/did + Subject + Verb of Knowledge or Expectation (know/suspect/imagine/dream)",
     "analysis": "Here 'little' is not a quantifier but a negative degree adverb equivalent to 'not at all'; like other negative adverbials, it forces subject-auxiliary inversion when fronted. It combines almost exclusively with verbs of knowledge and expectation (know, suspect, imagine, dream) and typically creates dramatic irony by contrasting a character's ignorance with what the reader already knows.",
     "exemplarContext": "Little did the young clerk imagine that the ledger he was copying would one day convict his employer."
   },
@@ -216,7 +216,7 @@
     "targetTransformation": "Only after the due-diligence report had been independently verified did the board approve the acquisition.",
     "grammaticalCue": "Front the restrictive adjunct 'Only after [clause]'; invert the auxiliary in the main clause, never inside the 'after' clause.",
     "vietnamese": "Đảo ngữ với 'Only after/Only when': Mệnh đề hoặc cụm từ đi sau 'Only' giữ nguyên trật tự; chỉ đảo trợ động từ ở mệnh đề chính.",
-    "formula": "Only after/when/once/if + Clause or Phrase + Auxiliary + Subject + Main Verb...",
+    "formula": "Only after/when/once/if + Clause or Phrase + Auxiliary + Subject + Main Verb",
     "analysis": "'Only' restricts the truth of the proposition to a single condition or moment and so carries an implicit negative ('not before that'); fronting the whole restrictive adjunct therefore triggers inversion in the matrix clause. When 'only' modifies the subject itself, however, no inversion occurs ('Only the auditor noticed the error'), because the focused element is the subject and there is nothing to invert around it.",
     "exemplarContext": "Only when the last hostage had been released did the negotiators allow themselves to sleep."
   },
@@ -229,7 +229,7 @@
     "targetTransformation": "Such was the intensity of the public backlash that the ministry withdrew the bill within a week.",
     "grammaticalCue": "Front predicative 'Such'; invert the copula before an abstract-noun subject ('the intensity of...'); the verb agrees with that following subject.",
     "vietnamese": "Đảo ngữ với 'Such + be + cụm danh từ + that': Đưa 'Such' lên đầu câu, đảo động từ 'be' lên trước chủ ngữ là danh từ trừu tượng (the intensity of...), theo sau là mệnh đề kết quả.",
-    "formula": "Such + be (agreeing with the following subject) + Noun Phrase Subject + that + Result Clause...",
+    "formula": "Such + be (agreeing with the following subject) + Noun Phrase Subject + that + Result Clause",
     "analysis": "Unlike 'So + adjective + be + subject', the 'such' pattern fronts a pro-form standing for the degree itself, so the original adjective usually has to be recast as an abstract noun ('intense' becomes 'the intensity of'). Because the real subject follows the verb, agreement is easily mishandled: 'Such were the pressures on the team that...' requires plural 'were'. The construction suits formal narrative and rhetoric in which the result clause forms the climax.",
     "exemplarContext": "Such were the delays at the border that perishable cargo had to be destroyed before it reached the market."
   },
@@ -242,7 +242,7 @@
     "targetTransformation": "The regulatory commission demands that the exchange operator halt trading immediately.",
     "grammaticalCue": "Verbs of demand require base bare form of the verb in the dependent 'that' clause.",
     "vietnamese": "Thể giả định mệnh lệnh với 'demand': Động từ trong mệnh đề 'that' luôn ở dạng nguyên mẫu không 'to'.",
-    "formula": "Subject + demand + that + Subject + Base Form of Verb (no -s, no modal)...",
+    "formula": "Subject + demand + that + Subject + Base Form of Verb (no -s, no modal)",
     "analysis": "In formal American and international English, the mandative subjunctive strips third-person singular inflection ('halt', not 'halts') and modal auxiliaries in content clauses governed by verbs of urgency, order, or demand.",
     "exemplarContext": "The treaty demands that each signatory state submit annual emissions inventories to verification inspectors."
   },
@@ -255,7 +255,7 @@
     "targetTransformation": "Independent auditors recommend that management revise their revenue recognition schedules.",
     "grammaticalCue": "Verb 'recommend' triggers subjunctive bare infinitive 'revise' regardless of subject number.",
     "vietnamese": "Thể giả định với 'recommend': Dùng động từ nguyên mẫu 'revise' thay vì thêm '-s/es'.",
-    "formula": "Subject + recommend + that + Subject + Base Verb...",
+    "formula": "Subject + recommend + that + Subject + Base Verb",
     "analysis": "Verbs expressing recommendation ('recommend', 'suggest', 'advise') take subjunctive complements where the predicate expresses a proposed ideal rather than an established factual truth.",
     "exemplarContext": "Physicians recommend that every adult patient undergo preventive coronary artery screening after age forty."
   },
@@ -268,7 +268,7 @@
     "targetTransformation": "The lead architect wishes the system did not rely on a monolithic architecture.",
     "grammaticalCue": "Express counterfactual present desire using 'wish + past tense' to signal distance from reality.",
     "vietnamese": "Ước muốn trái ngược với thực tại ở hiện tại: Dùng 'wish + Past Simple' (did not rely).",
-    "formula": "Subject + wish(es) + (that) + Subject + Simple Past Verb (signaling counterfactuality)...",
+    "formula": "Subject + wish(es) + (that) + Subject + Simple Past Verb (signaling counterfactuality)",
     "analysis": "The unreal past tense functions as a modal preterite, encoding subjective distance from current reality rather than chronological past time.",
     "exemplarContext": "Economists wish central bank governors possessed more granular tools than blunt interest rate levers."
   },
@@ -281,7 +281,7 @@
     "targetTransformation": "The founders wish they had not sold fifty-one percent of equity during the seed round.",
     "grammaticalCue": "Past regret requires past-on-past counterfactual tense 'had + past participle'.",
     "vietnamese": "Ước muốn trái ngược với sự việc trong quá khứ: Dùng 'wish + Past Perfect' (had not sold).",
-    "formula": "Subject + wish(es) + (that) + Subject + had (not) + Past Participle...",
+    "formula": "Subject + wish(es) + (that) + Subject + had (not) + Past Participle",
     "analysis": "When expressing counterfactual regret about an unchangeable historical past event, English shifts from simple past to the modal pluperfect ('had not sold').",
     "exemplarContext": "Diplomats wished both belligerents had ratified the ceasefire before artillery strikes resumed."
   },
@@ -307,7 +307,7 @@
     "targetTransformation": "It is imperative that every flight controller remain vigilant during severe weather diversions.",
     "grammaticalCue": "Adjectives of necessity ('imperative', 'vital') govern bare base verbs in 'that' complements.",
     "vietnamese": "Thể giả định với tính từ bắt buộc 'It is imperative that + S + V(bare)'.",
-    "formula": "It is imperative that + Subject + Base Verb...",
+    "formula": "It is imperative that + Subject + Base Verb",
     "analysis": "Evaluative adjectives expressing necessity ('imperative', 'essential', 'mandatory') demand the uninflected subjunctive base verb in the subordinate clause.",
     "exemplarContext": "It is imperative that the server cluster maintain nine-nines uptime throughout the holiday shopping spike."
   },
@@ -320,7 +320,7 @@
     "targetTransformation": "It is essential that the forensic analyst document the chain of custody for all hard drives.",
     "grammaticalCue": "Adjective 'essential' strips third-person '-s' in formal subjunctive clause.",
     "vietnamese": "Thể giả định với tính từ 'essential': Động từ 'document' không chia theo chủ ngữ số ít.",
-    "formula": "It is essential that + Subject + Base Verb...",
+    "formula": "It is essential that + Subject + Base Verb",
     "analysis": "Subjunctive 'document' emphasizes the institutional obligation as a normative rule rather than a description of an ongoing factual observation.",
     "exemplarContext": "It is essential that sovereign wealth funds disclose political risk exposures to international credit rating agencies."
   },
@@ -333,7 +333,7 @@
     "targetTransformation": "The CEO acted as if the antitrust lawsuit were an irrelevant nuisance.",
     "grammaticalCue": "Formal counterfactual comparison replaces informal 'like' with 'as if' and subjunctive 'were'.",
     "vietnamese": "So sánh không có thực với 'as if / as though': Dùng 'were' thay cho 'was' để nhấn mạnh tính giả định.",
-    "formula": "Subject + Verb + as if / as though + Subject + were (Subjunctive Past)...",
+    "formula": "Subject + Verb + as if / as though + Subject + were (Subjunctive Past)",
     "analysis": "In academic and elevated stylistic prose, counterfactual manners or states are linked using 'as if' paired with the traditional subjunctive 'were' (regardless of singular subject) to signal deliberate departure from reality.",
     "exemplarContext": "The authoritarian regime conducted elections as though popular consent were genuinely being solicited."
   },
@@ -346,7 +346,7 @@
     "targetTransformation": "It is high time the legislature modernized antiquated consumer privacy legislation.",
     "grammaticalCue": "'It is high time' takes past simple verb to express overdue action with gentle reproach.",
     "vietnamese": "Cấu trúc đã đến lúc muộn màng: 'It is high time + S + Past Simple'.",
-    "formula": "It is (high / about) time + Subject + Simple Past Verb...",
+    "formula": "It is (high / about) time + Subject + Simple Past Verb",
     "analysis": "This idiomatic construction employs the modal preterite ('modernized') to indicate that the appropriate moment for action has already passed, injecting urgency and mild criticism.",
     "exemplarContext": "It is high time corporate governance frameworks acknowledged the existential risks of unaligned automation."
   },
@@ -372,7 +372,7 @@
     "targetTransformation": "The ethical charter decrees that the training dataset be purged of unconsented biometrics.",
     "grammaticalCue": "Combine passive voice with mandative subjunctive: 'be + past participle'.",
     "vietnamese": "Thể giả định bị động: Dùng 'be + V3' (be purged) thay vì 'is/are purged' trong mệnh đề mệnh lệnh.",
-    "formula": "Subject + decree/order/mandate + that + Subject + be + Past Participle...",
+    "formula": "Subject + decree/order/mandate + that + Subject + be + Past Participle",
     "analysis": "When a passive construction falls inside a mandative subjunctive clause, the auxiliary copula remains invariant 'be' (never inflected as 'is', 'are', or 'was').",
     "exemplarContext": "International law stipulates that prisoners of war be treated with humane dignity under all conditions."
   },
@@ -398,7 +398,7 @@
     "targetTransformation": "Were the lead negotiator fluent in Mandarin, she would not have misunderstood the subtle contractual nuance yesterday.",
     "grammaticalCue": "Invert present subjunctive 'Were [Subject] [Adj]' linked to past modal perfect result 'would have [V3]'.",
     "vietnamese": "Câu điều kiện trộn (Bản chất hiện tại tác động Quá khứ): Điều kiện dùng Type 2, kết quả dùng Type 3.",
-    "formula": "Were + Subject + Adjective/Noun..., Subject + would (not) have + Past Participle...",
+    "formula": "Were + Subject + Adjective/Noun..., Subject + would (not) have + Past Participle",
     "analysis": "Here, the antecedent describes an enduring state or characteristic in the present ('Were she fluent'), while the consequent evaluates an unfulfilled counterfactual outcome in the historical past ('would not have misunderstood').",
     "exemplarContext": "Were sovereign debt markets less liquid, yesterday's treasury auction would have triggered widespread bond market panic."
   },
@@ -411,7 +411,7 @@
     "targetTransformation": "Suffice it to say that the subsequent investigation revealed catastrophic governance failures.",
     "grammaticalCue": "Use classical formulaic subjunctive 'Suffice it to say' for concise rhetorical summary.",
     "vietnamese": "Thành ngữ giả định cổ 'Suffice it to say that...' (Chỉ cần nói rằng... là đủ hiểu).",
-    "formula": "Suffice it to say that + Clause...",
+    "formula": "Suffice it to say that + Clause",
     "analysis": "A fossilized third-person singular present subjunctive verb ('suffice', meaning 'let it suffice') functioning as an elevated discourse marker to truncate lengthy narratives while conveying gravity.",
     "exemplarContext": "Suffice it to say that the trial testimony permanently dismantled the defense counsel's alibi."
   },
@@ -424,7 +424,7 @@
     "targetTransformation": "The treasury diversified dollar reserves lest they be caught unprepared by sanctions.",
     "grammaticalCue": "Replace 'so that... not' with negative subordinator 'lest' governing bare subjunctive 'be caught'.",
     "vietnamese": "Thể giả định với liên từ 'Lest' (E rằng, vì sợ rằng): Mệnh đề sau 'lest' dùng động từ nguyên mẫu.",
-    "formula": "Subject + Verb... + lest + Subject + (should) + Base Verb...",
+    "formula": "Subject + Verb... + lest + Subject + (should) + Base Verb",
     "analysis": "'Lest' is an intrinsically negative conjunction of prevention meaning 'for fear that'. It traditionally governs the bare subjunctive ('lest they be caught') without auxiliary 'not'.",
     "exemplarContext": "Engineers added physical thermal breakers lest the reactor core suffer uncontained coolant runaway."
   },
@@ -437,7 +437,7 @@
     "targetTransformation": "Were it not for the emergency credit line, the airline would already be insolvent.",
     "grammaticalCue": "Replace 'If X did not exist' with the fixed inverted subjunctive 'Were it not for + noun phrase'.",
     "vietnamese": "Cấu trúc 'Were it not for + danh từ' (Nếu không nhờ có / Nếu không vì...): diễn tả điều kiện trái với hiện tại; dạng quá khứ tương ứng là 'Had it not been for'.",
-    "formula": "Were it not for + Noun Phrase, Subject + would/could + Base Verb...",
+    "formula": "Were it not for + Noun Phrase, Subject + would/could + Base Verb",
     "analysis": "The clause uses dummy 'it' with subjunctive 'were' inverted in place of 'if', so the noun phrase after 'for' names the single factor on which the whole situation depends. For past counterfactuals the form becomes 'Had it not been for + noun phrase, subject + would have + past participle'. 'But for + noun phrase' is a terser, equally formal alternative that works for both time frames, while the uninverted 'If it were not for' is acceptable in neutral registers.",
     "exemplarContext": "Were it not for the volunteers who staff the night shifts, the shelter could not remain open through the winter."
   },
@@ -450,7 +450,7 @@
     "targetTransformation": "The tribunal insists that the witness not discuss her testimony with the press.",
     "grammaticalCue": "In a negative mandative clause, place 'not' directly before the bare verb: no 'do' support and no third-person '-s'.",
     "vietnamese": "Thể giả định mệnh lệnh dạng phủ định: đặt 'not' ngay trước động từ nguyên mẫu (not discuss, not be), không dùng trợ động từ 'do/does'.",
-    "formula": "Subject + insist/request/require/recommend + that + Subject + not + Base Verb (or not be + Past Participle)...",
+    "formula": "Subject + insist/request/require/recommend + that + Subject + not + Base Verb (or not be + Past Participle)",
     "analysis": "Because the subjunctive verb carries no tense, it cannot take do-support, so negation is simply 'not' plus the base form ('that she not attend', 'that the files not be released'). With 'insist', the mood also disambiguates meaning: indicative 'insisted that he was innocent' asserts a fact, whereas subjunctive 'insisted that he be present' issues a demand. American formal usage strongly prefers this subjunctive; British English accepts it in formal writing but more often uses 'should not discuss', and the indicative is also heard in casual British speech.",
     "exemplarContext": "The family requested that the minister's private letters not be published until after their mother's death."
   },
@@ -463,7 +463,7 @@
     "targetTransformation": "Would that the founders had foreseen how fragile their governance model would prove.",
     "grammaticalCue": "Replace 'I wish' with the literary optative 'Would that'; keep the backshifted tense (past perfect for past regret).",
     "vietnamese": "Cấu trúc ước nguyện cổ 'Would that...' (Giá mà...): thay cho 'I wish'; dùng quá khứ đơn hoặc 'were' cho ước muốn ở hiện tại và quá khứ hoàn thành cho sự tiếc nuối về quá khứ.",
-    "formula": "Would that + Subject + were/Past Simple (present wish) | Past Perfect (past regret)...",
+    "formula": "Would that + Subject + were/Past Simple (present wish) | Past Perfect (past regret)",
     "analysis": "'Would that' descends from an elliptical 'I would (wish) that' and now functions as a fixed optative formula with no overt subject. It follows the same tense backshift as 'wish': 'Would that it were true' for the present, 'Would that they had listened' for the past. The structure is markedly literary or elegiac; in contemporary prose it signals deliberate rhetorical heightening and would sound affected in a routine report.",
     "exemplarContext": "Would that every reform were as easy to implement as it is to announce."
   },
@@ -476,7 +476,7 @@
     "targetTransformation": "Reviewing the transaction logs, the lead investigator discovered three unauthorized wire transfers.",
     "grammaticalCue": "Condense coordinated clause into fronted present participial adjunct ('Reviewing...').",
     "vietnamese": "Rút gọn mệnh đề đồng thời dùng hiện tại phân từ (V-ing): Chủ ngữ hai vế phải đồng nhất.",
-    "formula": "Present Participle (-ing) Phrase, Subject + Main Verb...",
+    "formula": "Present Participle (-ing) Phrase, Subject + Main Verb",
     "analysis": "When two actions with the identical subject occur concurrently or in immediate sequence, the first coordinated clause can be streamlined into an introductory participial adjunct, elevating syntactic economy.",
     "exemplarContext": "Scanning the horizon through infrared binoculars, the coast guard spotted the adrift life raft."
   },
@@ -489,7 +489,7 @@
     "targetTransformation": "Trained on biased historical data, the algorithm systematically penalized minority applicants.",
     "grammaticalCue": "Strip conjunction and passive copula, opening sentence directly with past participle phrase.",
     "vietnamese": "Rút gọn mệnh đề bị động dùng quá khứ phân từ (V-ed/V3): Lược bỏ 'When' và to-be.",
-    "formula": "Past Participle Phrase, Subject + Main Verb...",
+    "formula": "Past Participle Phrase, Subject + Main Verb",
     "analysis": "Passive adverbial clauses condense cleanly into bare past participle phrases. The implied subject of the participle must strictly match the grammatical subject of the governing main clause.",
     "exemplarContext": "Deprived of access to foreign capital markets, the sanctioned regime turned to domestic bond monetization."
   },
@@ -502,7 +502,7 @@
     "targetTransformation": "All candidates seeking admission to the doctoral fellowship must submit three peer recommendations.",
     "grammaticalCue": "Eliminate relative pronoun 'who' and auxiliary 'are', leaving active participle 'seeking'.",
     "vietnamese": "Rút gọn mệnh đề quan hệ chủ động: Bỏ đại từ quan hệ và to-be, giữ lại V-ing làm định ngữ.",
-    "formula": "Noun + Present Participle Phrase + Main Predicate...",
+    "formula": "Noun + Present Participle Phrase + Main Predicate",
     "analysis": "Active restrictive relative clauses with progressive or continuous aspects condense by deleting the relative pronoun and the copula, transforming the clause into an agile post-nominal participial modifier.",
     "exemplarContext": "Passengers arriving on transatlantic flights must present biometric declaration barcodes."
   },
@@ -515,7 +515,7 @@
     "targetTransformation": "The infrastructure bill passed by the Senate will revitalize crumbling bridge corridors.",
     "grammaticalCue": "Omit relative pronoun 'which' and auxiliary 'was' to create a tight participial post-modifier.",
     "vietnamese": "Rút gọn mệnh đề quan hệ bị động: Bỏ 'which was', chỉ giữ lại quá khứ phân từ (passed by...).",
-    "formula": "Noun + Past Participle Phrase + Main Predicate...",
+    "formula": "Noun + Past Participle Phrase + Main Predicate",
     "analysis": "Passive relative clauses trim redundant function words ('which was'), sharpening prose density without sacrificing informational fidelity.",
     "exemplarContext": "The settlement agreed upon by both litigants averts a costly five-week federal jury trial."
   },
@@ -528,7 +528,7 @@
     "targetTransformation": "Upon arriving at the summit venue, the foreign dignitary was escorted to the bilateral chambers.",
     "grammaticalCue": "Condense temporal clause with preposition 'Upon / On' followed by gerund-participle.",
     "vietnamese": "Rút gọn mệnh đề thời gian với 'Upon + V-ing' (Ngay khi vừa đến nơi...).",
-    "formula": "Upon / On + -ing Verb Phrase, Subject + Main Verb...",
+    "formula": "Upon / On + -ing Verb Phrase, Subject + Main Verb",
     "analysis": "Prepositional participial phrases ('Upon [verb]-ing') cleanly compress temporal clauses ('As soon as [subject] [verb]-ed') while explicitly reinforcing temporal immediacy.",
     "exemplarContext": "Upon reviewing the quarterly earnings reconciliation, the board voted unanimously to authorize a share buyback."
   },
@@ -541,7 +541,7 @@
     "targetTransformation": "Having exhausted all administrative appeals, the claimant filed a federal constitutional lawsuit.",
     "grammaticalCue": "Convert prior causal clause into perfect participle 'Having + past participle'.",
     "vietnamese": "Rút gọn mệnh đề nguyên nhân xảy ra trước bằng phân từ hoàn thành 'Having + V3'.",
-    "formula": "Having + Past Participle Phrase, Subject + Main Verb...",
+    "formula": "Having + Past Participle Phrase, Subject + Main Verb",
     "analysis": "A perfect participle ('Having exhausted') explicitly marks anteriority—proving that the participial event was completed prior to the onset of the main clause action.",
     "exemplarContext": "Having secured unanimous shareholder endorsement, the management board executed the cross-border merger."
   },
@@ -554,7 +554,7 @@
     "targetTransformation": "Having been stress-tested under extreme simulated market liquidity freezes, the risk model was cleared.",
     "grammaticalCue": "Combine perfect and passive aspect into 'Having been + past participle'.",
     "vietnamese": "Rút gọn phân từ hoàn thành thể bị động 'Having been + V3' (Sau khi đã được kiểm nghiệm...).",
-    "formula": "Having been + Past Participle Phrase, Subject + Main Verb...",
+    "formula": "Having been + Past Participle Phrase, Subject + Main Verb",
     "analysis": "Passive perfect participle clauses compress lengthy background passive histories into a potent introductory participial modifier, maintaining chronological sequence.",
     "exemplarContext": "Having been scrutinized by federal ethics monitors for six months, the proposed acquisition received regulatory blessing."
   },
@@ -567,7 +567,7 @@
     "targetTransformation": "Although repeatedly warned about impending credit tightening, the directors continued borrowing.",
     "grammaticalCue": "Retain concessive subordinator 'Although' but drop subject pronoun and auxiliary verb.",
     "vietnamese": "Rút gọn mệnh đề nhượng bộ giữ lại liên từ: 'Although + V3' (Dù đã được cảnh báo nhiều lần...).",
-    "formula": "Although / Even though + Past Participle Phrase, Subject + Main Verb...",
+    "formula": "Although / Even though + Past Participle Phrase, Subject + Main Verb",
     "analysis": "Unlike general participle clauses that omit subordinating conjunctions, retaining 'Although' or 'While' clarifies the precise semantic relation (concession) while still achieving clausal condensation.",
     "exemplarContext": "Although severely battered by post-pandemic supply chain disruptions, the automaker preserved operating profitability."
   },
@@ -580,7 +580,7 @@
     "targetTransformation": "The market close rapidly approaching, day traders liquidated their speculative derivative calls.",
     "grammaticalCue": "Create an absolute clause: noun phrase subject + participle phrase, grammatically independent of main clause.",
     "vietnamese": "Cấu trúc tuyệt đối (Absolute Construction): Danh từ riêng đi với phân từ, không cần liên từ nối.",
-    "formula": "Noun Phrase + Participle (-ing / -ed) Phrase, Subject + Main Verb...",
+    "formula": "Noun Phrase + Participle (-ing / -ed) Phrase, Subject + Main Verb",
     "analysis": "An absolute construction possesses its own overt subject ('The market close'), distinct from the main clause subject ('day traders'). It attaches to the sentence without any subordinating conjunction.",
     "exemplarContext": "All quorum hurdles successfully cleared, the parliamentary assembly proceeded to ratify the constitution."
   },
@@ -593,7 +593,7 @@
     "targetTransformation": "Aware of the severe geopolitical risks, the ambassador spoke with calculated discretion.",
     "grammaticalCue": "Drop causal conjunction and copula, starting directly with adjective complement 'Aware of...'.",
     "vietnamese": "Mệnh đề tính từ lược bỏ động từ (Verbless Adjective Clause): Đặt tính từ ở đầu câu làm trạng ngữ.",
-    "formula": "Adjective Phrase, Subject + Main Verb...",
+    "formula": "Adjective Phrase, Subject + Main Verb",
     "analysis": "Verbless clauses operate as condensed appositives or circumstantial adjuncts. Opening with an adjective phrase ('Aware of...') creates swift, elegant narrative pacing.",
     "exemplarContext": "Anxious to avoid diplomatic confrontation, the envoy offered a compromise communique."
   },
@@ -606,7 +606,7 @@
     "targetTransformation": "With inflation rates escalating and bond yields cratering, the pension fund reassessed allocations.",
     "grammaticalCue": "Use preposition 'With' to govern compound absolute participial complements.",
     "vietnamese": "Cấu trúc tuyệt đối mở đầu bằng 'With': 'With + Noun + V-ing/V3' để liệt kê bối cảnh phức tạp.",
-    "formula": "With + Noun Phrase 1 + Participle 1 and Noun Phrase 2 + Participle 2, Subject + Main Verb...",
+    "formula": "With + Noun Phrase 1 + Participle 1 and Noun Phrase 2 + Participle 2, Subject + Main Verb",
     "analysis": "The preposition 'with' licenses an absolute structure where multiple circumstantial forces are packed into parallel nominal-participial pairs before the main clause action.",
     "exemplarContext": "With venture valuations contracting and interest rates ascending, early-stage startups pivoted toward immediate cash generation."
   },
@@ -619,7 +619,7 @@
     "targetTransformation": "Not having anticipated the sudden export ban, the analysts scrambled to revise earnings projections.",
     "grammaticalCue": "Position negative particle 'Not' immediately before the perfect participle 'having anticipated'.",
     "vietnamese": "Rút gọn phân từ hoàn thành thể phủ định: Đặt 'Not' đứng trước 'Having + V3'.",
-    "formula": "Not + having + Past Participle Phrase, Subject + Main Verb...",
+    "formula": "Not + having + Past Participle Phrase, Subject + Main Verb",
     "analysis": "In negative participial constructions, standard syntactic rules require placing 'not' as the very first word preceding the auxiliary participle 'having', never internally.",
     "exemplarContext": "Not having received written confirmation from the ministry, the general refused to mobilize reserve brigades."
   },
@@ -632,7 +632,7 @@
     "targetTransformation": "Pursued by regulatory hounds and abandoned by institutional backers, the CEO stepped down.",
     "grammaticalCue": "Coordinate two passive participle phrases in parallel before the primary subject.",
     "vietnamese": "Kỹ thuật phân từ kép song hành (Double Participle Sandwich): Kết hợp hai cụm V3 tăng cường nhịp điệu dồn dập.",
-    "formula": "Past Participle Phrase 1 and Past Participle Phrase 2, Subject + Main Verb...",
+    "formula": "Past Participle Phrase 1 and Past Participle Phrase 2, Subject + Main Verb",
     "analysis": "Stacking coordinated participial phrases in parallel rhythmically heightens causal tension before dropping the hammer on the final independent clause.",
     "exemplarContext": "Stunned by the unexpected verdict and facing immediate extradition, the fugitive collapsed in open court."
   },
@@ -645,7 +645,7 @@
     "targetTransformation": "The conglomerate executed the debt refinancing package, its net debt-to-equity ratio falling to 1.2.",
     "grammaticalCue": "Attach post-clausal absolute construction with present participle showing mathematical consequence.",
     "vietnamese": "Cấu trúc tuyệt đối đứng sau câu chính để chỉ hệ quả định lượng hoặc kết quả số liệu.",
-    "formula": "Main Clause, + Noun Phrase Subject + Present Participle Phrase...",
+    "formula": "Main Clause, + Noun Phrase Subject + Present Participle Phrase",
     "analysis": "A trailing absolute construction provides a sophisticated journalistic mechanism to report secondary metric consequences without creating clumsy coordinate compound sentences.",
     "exemplarContext": "The central bank unexpectedly cut benchmark rates by fifty basis points, equity indices surging three percent within seconds."
   },
@@ -658,7 +658,7 @@
     "targetTransformation": "Though seemingly an intractable logistical deadlock, the dispute was resolved within forty-eight hours.",
     "grammaticalCue": "Retain concessive 'Though' while ellipting expletive subject 'it' and copula 'was'.",
     "vietnamese": "Rút gọn mệnh đề nhượng bộ bằng tỉnh lược (Ellipsis): Giữ 'Though', lược bỏ chủ ngữ giả và to-be.",
-    "formula": "Though / Although + Adverb + Noun Phrase Complement, Subject + Main Verb...",
+    "formula": "Though / Although + Adverb + Noun Phrase Complement, Subject + Main Verb",
     "analysis": "Syntactic ellipsis eliminates empty expletives ('it was') in introductory concessive clauses, throwing maximum semantic weight directly onto the descriptive noun phrase complement.",
     "exemplarContext": "Though initially a modest regional initiative, the economic corridor evolved into a trillion-dollar trade artery."
   },
@@ -671,7 +671,7 @@
     "targetTransformation": "She was the first engineer to identify the race condition in the payment service.",
     "grammaticalCue": "After an ordinal, a superlative or 'only', reduce the subject relative clause 'who + finite verb' to a to-infinitive.",
     "vietnamese": "Rút gọn mệnh đề quan hệ bằng 'to + V' sau số thứ tự (the first, the last), so sánh nhất hoặc 'the only'.",
-    "formula": "the first/last/next/only/Superlative + Noun + to-Infinitive...",
+    "formula": "the first/last/next/only/Superlative + Noun + to-Infinitive",
     "analysis": "When the head noun is restricted by an ordinal, a superlative or 'only', a subject relative clause can be condensed into a to-infinitive whose understood subject is the head noun itself. The infinitive is tenseless, so time reference is inferred from the main clause, and a passive relative condenses to 'to be + past participle' ('the last item to be approved').",
     "exemplarContext": "The ministry was the last government agency to move its records off paper ledgers."
   },
@@ -684,7 +684,7 @@
     "targetTransformation": "Being unfamiliar with the jurisdiction, the senior partner deferred to local counsel.",
     "grammaticalCue": "Replace 'Because + subject + be + adjective' with a fronted 'Being + adjective' phrase that shares the main-clause subject.",
     "vietnamese": "Rút gọn mệnh đề chỉ nguyên nhân bằng 'Being + tính từ': hai vế phải cùng chủ ngữ; 'Being' làm rõ quan hệ nhân quả.",
-    "formula": "Being + Adjective Phrase, Subject + Main Verb...",
+    "formula": "Being + Adjective Phrase, Subject + Main Verb",
     "analysis": "A 'being' clause attached to a stative adjective is read almost always as causal, because a state cannot easily be construed as an action happening alongside the main event. 'Being' can sometimes be dropped to yield a verbless clause ('Unfamiliar with the jurisdiction, ...'), but retaining it makes the reason relation explicit. As with all participle clauses, the implied subject must be the subject of the main clause, or the modifier dangles.",
     "exemplarContext": "Being acutely aware of the reputational stakes, the editor delayed publication until every source had been verified."
   },
@@ -697,7 +697,7 @@
     "targetTransformation": "Once ratified by both chambers, the amendment cannot be revoked without a referendum.",
     "grammaticalCue": "Keep the subordinator 'once' but delete the subject and the auxiliary 'has been', leaving the bare past participle.",
     "vietnamese": "Rút gọn mệnh đề trạng ngữ nhưng giữ liên từ (once, when, if, unless, while): lược bỏ chủ ngữ và 'be', chỉ còn phân từ, tính từ hoặc cụm giới từ.",
-    "formula": "Once/When/If/Unless/While/Until + Past Participle / Adjective / Prepositional Phrase, Subject + Main Verb...",
+    "formula": "Once/When/If/Unless/While/Until + Past Participle / Adjective / Prepositional Phrase, Subject + Main Verb",
     "analysis": "Subordinators such as 'once', 'when', 'if', 'unless' and 'until' can survive the ellipsis of subject plus 'be', yielding a compact clause that keeps a precise logical relation which a bare participle would leave vague. Fixed verbless forms like 'When in doubt', 'If in doubt' and 'If necessary' follow the same pattern. The ellipted subject must be recoverable as the main-clause subject: 'Once ratified, voters cannot revoke the amendment' wrongly implies that the voters were ratified.",
     "exemplarContext": "When in doubt, the duty officer escalates the alert rather than closing it."
   },
@@ -775,7 +775,7 @@
     "targetTransformation": "Approaching the international border crossing, the travelers had their passports inspected by biometric cameras.",
     "grammaticalCue": "Ensure grammatical subject immediately following introductory participle is the agent performing the action.",
     "vietnamese": "Sửa lỗi phân từ lơ lửng (Dangling Modifier): Hộ chiếu không thể tự 'tiến đến biên giới', chủ ngữ phải là du khách.",
-    "formula": "Participial Phrase (Agent action), Agent Subject + Verb...",
+    "formula": "Participial Phrase (Agent action), Agent Subject + Verb",
     "analysis": "A dangling participle occurs when the implied subject of an introductory verbal phrase differs from the grammatical subject of the following independent clause. Passports cannot physically approach a border; the human travelers must serve as matrix subject.",
     "exemplarContext": "Synthesizing fifteen longitudinal demographic studies, the researchers demonstrated a sharp correlation between urbanization and declining birth rates."
   },
@@ -879,7 +879,7 @@
     "targetTransformation": "The charter requires that every delegate be registered and that each vote according to their constituency.",
     "grammaticalCue": "Harmonize coordinated mandative subjunctive clauses into invariant bare forms 'be' and 'vote'.",
     "vietnamese": "Sửa lỗi xung đột thức giả định và chỉ định: Cả hai mệnh đề phụ thuộc 'requires that' đều phải ở thức giả định.",
-    "formula": "requires that + Subject 1 + Base Verb... and that + Subject 2 + Base Verb...",
+    "formula": "requires that + Subject 1 + Base Verb... and that + Subject 2 + Base Verb",
     "analysis": "When coordinating multiple dependent content clauses under a single governing mandative verb ('requires that'), writers frequently lapse into the indicative mood in the second clause. Both clauses must maintain strict subjunctive morphology.",
     "exemplarContext": "The treaty mandates that verification inspectors be granted unimpeded access and that host governments abstain from interference."
   },

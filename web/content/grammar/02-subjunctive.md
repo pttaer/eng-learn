@@ -8,7 +8,7 @@
 - **Transformation**: The regulatory commission demands that the exchange operator halt trading immediately.
 - **Grammatical Cue**: Verbs of demand require base bare form of the verb in the dependent 'that' clause.
 - **Vietnamese**: Thể giả định mệnh lệnh với 'demand': Động từ trong mệnh đề 'that' luôn ở dạng nguyên mẫu không 'to'.
-- **Formula**: `Subject + demand + that + Subject + Base Form of Verb (no -s, no modal)...`
+- **Formula**: `Subject + demand + that + Subject + Base Form of Verb (no -s, no modal)`
 - **Analysis**: In formal American and international English, the mandative subjunctive strips third-person singular inflection ('halt', not 'halts') and modal auxiliaries in content clauses governed by verbs of urgency, order, or demand.
 - **Exemplar**: The treaty demands that each signatory state submit annual emissions inventories to verification inspectors.
 
@@ -20,7 +20,7 @@
 - **Transformation**: Independent auditors recommend that management revise their revenue recognition schedules.
 - **Grammatical Cue**: Verb 'recommend' triggers subjunctive bare infinitive 'revise' regardless of subject number.
 - **Vietnamese**: Thể giả định với 'recommend': Dùng động từ nguyên mẫu 'revise' thay vì thêm '-s/es'.
-- **Formula**: `Subject + recommend + that + Subject + Base Verb...`
+- **Formula**: `Subject + recommend + that + Subject + Base Verb`
 - **Analysis**: Verbs expressing recommendation ('recommend', 'suggest', 'advise') take subjunctive complements where the predicate expresses a proposed ideal rather than an established factual truth.
 - **Exemplar**: Physicians recommend that every adult patient undergo preventive coronary artery screening after age forty.
 
@@ -32,7 +32,7 @@
 - **Transformation**: The lead architect wishes the system did not rely on a monolithic architecture.
 - **Grammatical Cue**: Express counterfactual present desire using 'wish + past tense' to signal distance from reality.
 - **Vietnamese**: Ước muốn trái ngược với thực tại ở hiện tại: Dùng 'wish + Past Simple' (did not rely).
-- **Formula**: `Subject + wish(es) + (that) + Subject + Simple Past Verb (signaling counterfactuality)...`
+- **Formula**: `Subject + wish(es) + (that) + Subject + Simple Past Verb (signaling counterfactuality)`
 - **Analysis**: The unreal past tense functions as a modal preterite, encoding subjective distance from current reality rather than chronological past time.
 - **Exemplar**: Economists wish central bank governors possessed more granular tools than blunt interest rate levers.
 
@@ -44,7 +44,7 @@
 - **Transformation**: The founders wish they had not sold fifty-one percent of equity during the seed round.
 - **Grammatical Cue**: Past regret requires past-on-past counterfactual tense 'had + past participle'.
 - **Vietnamese**: Ước muốn trái ngược với sự việc trong quá khứ: Dùng 'wish + Past Perfect' (had not sold).
-- **Formula**: `Subject + wish(es) + (that) + Subject + had (not) + Past Participle...`
+- **Formula**: `Subject + wish(es) + (that) + Subject + had (not) + Past Participle`
 - **Analysis**: When expressing counterfactual regret about an unchangeable historical past event, English shifts from simple past to the modal pluperfect ('had not sold').
 - **Exemplar**: Diplomats wished both belligerents had ratified the ceasefire before artillery strikes resumed.
 
@@ -68,7 +68,7 @@
 - **Transformation**: It is imperative that every flight controller remain vigilant during severe weather diversions.
 - **Grammatical Cue**: Adjectives of necessity ('imperative', 'vital') govern bare base verbs in 'that' complements.
 - **Vietnamese**: Thể giả định với tính từ bắt buộc 'It is imperative that + S + V(bare)'.
-- **Formula**: `It is imperative that + Subject + Base Verb...`
+- **Formula**: `It is imperative that + Subject + Base Verb`
 - **Analysis**: Evaluative adjectives expressing necessity ('imperative', 'essential', 'mandatory') demand the uninflected subjunctive base verb in the subordinate clause.
 - **Exemplar**: It is imperative that the server cluster maintain nine-nines uptime throughout the holiday shopping spike.
 
@@ -80,7 +80,7 @@
 - **Transformation**: It is essential that the forensic analyst document the chain of custody for all hard drives.
 - **Grammatical Cue**: Adjective 'essential' strips third-person '-s' in formal subjunctive clause.
 - **Vietnamese**: Thể giả định với tính từ 'essential': Động từ 'document' không chia theo chủ ngữ số ít.
-- **Formula**: `It is essential that + Subject + Base Verb...`
+- **Formula**: `It is essential that + Subject + Base Verb`
 - **Analysis**: Subjunctive 'document' emphasizes the institutional obligation as a normative rule rather than a description of an ongoing factual observation.
 - **Exemplar**: It is essential that sovereign wealth funds disclose political risk exposures to international credit rating agencies.
 
@@ -92,7 +92,7 @@
 - **Transformation**: The CEO acted as if the antitrust lawsuit were an irrelevant nuisance.
 - **Grammatical Cue**: Formal counterfactual comparison replaces informal 'like' with 'as if' and subjunctive 'were'.
 - **Vietnamese**: So sánh không có thực với 'as if / as though': Dùng 'were' thay cho 'was' để nhấn mạnh tính giả định.
-- **Formula**: `Subject + Verb + as if / as though + Subject + were (Subjunctive Past)...`
+- **Formula**: `Subject + Verb + as if / as though + Subject + were (Subjunctive Past)`
 - **Analysis**: In academic and elevated stylistic prose, counterfactual manners or states are linked using 'as if' paired with the traditional subjunctive 'were' (regardless of singular subject) to signal deliberate departure from reality.
 - **Exemplar**: The authoritarian regime conducted elections as though popular consent were genuinely being solicited.
 
@@ -104,7 +104,7 @@
 - **Transformation**: It is high time the legislature modernized antiquated consumer privacy legislation.
 - **Grammatical Cue**: 'It is high time' takes past simple verb to express overdue action with gentle reproach.
 - **Vietnamese**: Cấu trúc đã đến lúc muộn màng: 'It is high time + S + Past Simple'.
-- **Formula**: `It is (high / about) time + Subject + Simple Past Verb...`
+- **Formula**: `It is (high / about) time + Subject + Simple Past Verb`
 - **Analysis**: This idiomatic construction employs the modal preterite ('modernized') to indicate that the appropriate moment for action has already passed, injecting urgency and mild criticism.
 - **Exemplar**: It is high time corporate governance frameworks acknowledged the existential risks of unaligned automation.
 
@@ -128,7 +128,7 @@
 - **Transformation**: The ethical charter decrees that the training dataset be purged of unconsented biometrics.
 - **Grammatical Cue**: Combine passive voice with mandative subjunctive: 'be + past participle'.
 - **Vietnamese**: Thể giả định bị động: Dùng 'be + V3' (be purged) thay vì 'is/are purged' trong mệnh đề mệnh lệnh.
-- **Formula**: `Subject + decree/order/mandate + that + Subject + be + Past Participle...`
+- **Formula**: `Subject + decree/order/mandate + that + Subject + be + Past Participle`
 - **Analysis**: When a passive construction falls inside a mandative subjunctive clause, the auxiliary copula remains invariant 'be' (never inflected as 'is', 'are', or 'was').
 - **Exemplar**: International law stipulates that prisoners of war be treated with humane dignity under all conditions.
 
@@ -152,7 +152,7 @@
 - **Transformation**: Were the lead negotiator fluent in Mandarin, she would not have misunderstood the subtle contractual nuance yesterday.
 - **Grammatical Cue**: Invert present subjunctive 'Were [Subject] [Adj]' linked to past modal perfect result 'would have [V3]'.
 - **Vietnamese**: Câu điều kiện trộn (Bản chất hiện tại tác động Quá khứ): Điều kiện dùng Type 2, kết quả dùng Type 3.
-- **Formula**: `Were + Subject + Adjective/Noun..., Subject + would (not) have + Past Participle...`
+- **Formula**: `Were + Subject + Adjective/Noun..., Subject + would (not) have + Past Participle`
 - **Analysis**: Here, the antecedent describes an enduring state or characteristic in the present ('Were she fluent'), while the consequent evaluates an unfulfilled counterfactual outcome in the historical past ('would not have misunderstood').
 - **Exemplar**: Were sovereign debt markets less liquid, yesterday's treasury auction would have triggered widespread bond market panic.
 
@@ -164,7 +164,7 @@
 - **Transformation**: Suffice it to say that the subsequent investigation revealed catastrophic governance failures.
 - **Grammatical Cue**: Use classical formulaic subjunctive 'Suffice it to say' for concise rhetorical summary.
 - **Vietnamese**: Thành ngữ giả định cổ 'Suffice it to say that...' (Chỉ cần nói rằng... là đủ hiểu).
-- **Formula**: `Suffice it to say that + Clause...`
+- **Formula**: `Suffice it to say that + Clause`
 - **Analysis**: A fossilized third-person singular present subjunctive verb ('suffice', meaning 'let it suffice') functioning as an elevated discourse marker to truncate lengthy narratives while conveying gravity.
 - **Exemplar**: Suffice it to say that the trial testimony permanently dismantled the defense counsel's alibi.
 
@@ -176,7 +176,7 @@
 - **Transformation**: The treasury diversified dollar reserves lest they be caught unprepared by sanctions.
 - **Grammatical Cue**: Replace 'so that... not' with negative subordinator 'lest' governing bare subjunctive 'be caught'.
 - **Vietnamese**: Thể giả định với liên từ 'Lest' (E rằng, vì sợ rằng): Mệnh đề sau 'lest' dùng động từ nguyên mẫu.
-- **Formula**: `Subject + Verb... + lest + Subject + (should) + Base Verb...`
+- **Formula**: `Subject + Verb... + lest + Subject + (should) + Base Verb`
 - **Analysis**: 'Lest' is an intrinsically negative conjunction of prevention meaning 'for fear that'. It traditionally governs the bare subjunctive ('lest they be caught') without auxiliary 'not'.
 - **Exemplar**: Engineers added physical thermal breakers lest the reactor core suffer uncontained coolant runaway.
 
@@ -188,7 +188,7 @@
 - **Transformation**: Were it not for the emergency credit line, the airline would already be insolvent.
 - **Grammatical Cue**: Replace 'If X did not exist' with the fixed inverted subjunctive 'Were it not for + noun phrase'.
 - **Vietnamese**: Cấu trúc 'Were it not for + danh từ' (Nếu không nhờ có / Nếu không vì...): diễn tả điều kiện trái với hiện tại; dạng quá khứ tương ứng là 'Had it not been for'.
-- **Formula**: `Were it not for + Noun Phrase, Subject + would/could + Base Verb...`
+- **Formula**: `Were it not for + Noun Phrase, Subject + would/could + Base Verb`
 - **Analysis**: The clause uses dummy 'it' with subjunctive 'were' inverted in place of 'if', so the noun phrase after 'for' names the single factor on which the whole situation depends. For past counterfactuals the form becomes 'Had it not been for + noun phrase, subject + would have + past participle'. 'But for + noun phrase' is a terser, equally formal alternative that works for both time frames, while the uninverted 'If it were not for' is acceptable in neutral registers.
 - **Exemplar**: Were it not for the volunteers who staff the night shifts, the shelter could not remain open through the winter.
 
@@ -200,7 +200,7 @@
 - **Transformation**: The tribunal insists that the witness not discuss her testimony with the press.
 - **Grammatical Cue**: In a negative mandative clause, place 'not' directly before the bare verb: no 'do' support and no third-person '-s'.
 - **Vietnamese**: Thể giả định mệnh lệnh dạng phủ định: đặt 'not' ngay trước động từ nguyên mẫu (not discuss, not be), không dùng trợ động từ 'do/does'.
-- **Formula**: `Subject + insist/request/require/recommend + that + Subject + not + Base Verb (or not be + Past Participle)...`
+- **Formula**: `Subject + insist/request/require/recommend + that + Subject + not + Base Verb (or not be + Past Participle)`
 - **Analysis**: Because the subjunctive verb carries no tense, it cannot take do-support, so negation is simply 'not' plus the base form ('that she not attend', 'that the files not be released'). With 'insist', the mood also disambiguates meaning: indicative 'insisted that he was innocent' asserts a fact, whereas subjunctive 'insisted that he be present' issues a demand. American formal usage strongly prefers this subjunctive; British English accepts it in formal writing but more often uses 'should not discuss', and the indicative is also heard in casual British speech.
 - **Exemplar**: The family requested that the minister's private letters not be published until after their mother's death.
 
@@ -212,7 +212,7 @@
 - **Transformation**: Would that the founders had foreseen how fragile their governance model would prove.
 - **Grammatical Cue**: Replace 'I wish' with the literary optative 'Would that'; keep the backshifted tense (past perfect for past regret).
 - **Vietnamese**: Cấu trúc ước nguyện cổ 'Would that...' (Giá mà...): thay cho 'I wish'; dùng quá khứ đơn hoặc 'were' cho ước muốn ở hiện tại và quá khứ hoàn thành cho sự tiếc nuối về quá khứ.
-- **Formula**: `Would that + Subject + were/Past Simple (present wish) | Past Perfect (past regret)...`
+- **Formula**: `Would that + Subject + were/Past Simple (present wish) | Past Perfect (past regret)`
 - **Analysis**: 'Would that' descends from an elliptical 'I would (wish) that' and now functions as a fixed optative formula with no overt subject. It follows the same tense backshift as 'wish': 'Would that it were true' for the present, 'Would that they had listened' for the past. The structure is markedly literary or elegiac; in contemporary prose it signals deliberate rhetorical heightening and would sound affected in a routine report.
 - **Exemplar**: Would that every reform were as easy to implement as it is to announce.
 

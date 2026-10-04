@@ -282,7 +282,7 @@ export class SkillTreeView {
           </div>
           <div style="display: flex; align-items: center; gap: 8px;">
             <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted); white-space: nowrap;">
-              Lv ${masteredInBranch + 1}/5 (${masteredInBranch}/5)
+              ${masteredInBranch}/5 mastered
             </span>
             <div style="flex: 1; height: 4px; background: var(--border-hairline); border-radius: 2px; overflow: hidden;">
               <div class="branch-bar" data-pct="${pct}" style="width: ${pct}%; height: 100%; background: var(--accent-gold); border-radius: 2px; box-shadow: 0 0 6px var(--accent-gold-soft);"></div>

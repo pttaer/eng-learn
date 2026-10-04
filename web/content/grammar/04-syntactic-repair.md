@@ -68,7 +68,7 @@
 - **Transformation**: Approaching the international border crossing, the travelers had their passports inspected by biometric cameras.
 - **Grammatical Cue**: Ensure grammatical subject immediately following introductory participle is the agent performing the action.
 - **Vietnamese**: Sửa lỗi phân từ lơ lửng (Dangling Modifier): Hộ chiếu không thể tự 'tiến đến biên giới', chủ ngữ phải là du khách.
-- **Formula**: `Participial Phrase (Agent action), Agent Subject + Verb...`
+- **Formula**: `Participial Phrase (Agent action), Agent Subject + Verb`
 - **Analysis**: A dangling participle occurs when the implied subject of an introductory verbal phrase differs from the grammatical subject of the following independent clause. Passports cannot physically approach a border; the human travelers must serve as matrix subject.
 - **Exemplar**: Synthesizing fifteen longitudinal demographic studies, the researchers demonstrated a sharp correlation between urbanization and declining birth rates.
 
@@ -164,7 +164,7 @@
 - **Transformation**: The charter requires that every delegate be registered and that each vote according to their constituency.
 - **Grammatical Cue**: Harmonize coordinated mandative subjunctive clauses into invariant bare forms 'be' and 'vote'.
 - **Vietnamese**: Sửa lỗi xung đột thức giả định và chỉ định: Cả hai mệnh đề phụ thuộc 'requires that' đều phải ở thức giả định.
-- **Formula**: `requires that + Subject 1 + Base Verb... and that + Subject 2 + Base Verb...`
+- **Formula**: `requires that + Subject 1 + Base Verb... and that + Subject 2 + Base Verb`
 - **Analysis**: When coordinating multiple dependent content clauses under a single governing mandative verb ('requires that'), writers frequently lapse into the indicative mood in the second clause. Both clauses must maintain strict subjunctive morphology.
 - **Exemplar**: The treaty mandates that verification inspectors be granted unimpeded access and that host governments abstain from interference.
 

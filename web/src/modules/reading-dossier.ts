@@ -346,7 +346,7 @@ export class ReadingDossier {
         <div class="dossier-tabs article-tabs">
           ${this.articles.map((art, idx) => `
             <button class="hud-btn article-tab ${idx === this.currentArticleIndex ? 'active' : ''}" data-idx="${idx}" title="${this.escapeHtml(art.title)}" aria-label="Article ${idx + 1}: ${this.escapeHtml(art.title)}">
-              Art 0${idx + 1}: ${art.title.length > 20 ? art.title.slice(0, 18) + '…' : art.title}
+              Art 0${idx + 1}: ${art.title}
             </button>
           `).join('')}
         </div>

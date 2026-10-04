@@ -124,7 +124,7 @@ export class ListeningDossier {
       id: item.id,
       pillar: 'LISTEN',
       category: 'PHONETICS',
-      indexStr: `0${this.currentIndex + 1} / 03`,
+      indexStr: `${String(this.currentIndex + 1).padStart(2, "0")} / ${String(this.passages.length).padStart(2, "0")}`,
       statusBadge,
       front: {
         customContent: frontEl,

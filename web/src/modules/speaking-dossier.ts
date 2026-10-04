@@ -69,7 +69,7 @@ export class SpeakingDossier {
           <span class="telemetry-label">[PILLAR 04 // ACOUSTIC VOICE STUDIO: NATION 4-3-2 MATRIX]</span>
         </div>
         <div class="dossier-status-pill">
-          <span class="telemetry-value">30 HIGH-INTENSITY PROMPTS</span>
+          <span class="telemetry-value">${this.items.length} HIGH-INTENSITY PROMPTS</span>
         </div>
       </div>
       <div class="dossier-card-slot"></div>
@@ -135,7 +135,7 @@ export class SpeakingDossier {
       id: item.id,
       pillar: 'SPEAK',
       category: '4-3-2 DRILL',
-      indexStr: `[ ${String(item.index).padStart(2, '0')} / 30 ]`,
+      indexStr: `[ ${String(item.index).padStart(2, '0')} / ${this.items.length} ]`,
       statusBadge,
       front: {
         customContent: frontEl,
