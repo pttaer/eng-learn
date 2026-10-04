@@ -1,3 +1,4 @@
 web/release/
 web/screenshots/
 .playwright-mcp/
+.claude/skills/
