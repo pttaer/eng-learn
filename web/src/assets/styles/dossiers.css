@@ -3358,3 +3358,11 @@ html[data-motion="reduce"] {
     transition: none !important;
   }
 }
+
+.colloc-example {
+  margin-top: 4px;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--ink-muted);
+  overflow-wrap: anywhere;
+}

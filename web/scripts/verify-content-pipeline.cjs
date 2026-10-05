@@ -20,6 +20,16 @@ const phrases = collocations.map(c => c.phrase.toLowerCase());
 const dupes = phrases.filter((p, i) => phrases.indexOf(p) !== i);
 assert.strictEqual(dupes.length, 0, `Duplicate collocations: ${dupes.join(", ")}`);
 
+// Every collocation has an example sentence that actually uses the phrase (by stem, so inflections pass)
+const missingExample = collocations.filter(c => {
+  const ex = (c.example || '').toLowerCase();
+  if (ex.split(/\s+/).length < 4 || ex.split(/\s+/).length > 30) return true;
+  const words = c.phrase.toLowerCase().replace(/\([^)]*\)/g, ' ').match(/[a-z']+/g) || [];
+  const content = words.filter(w => w.length >= 4);
+  return !(content.length ? content : words).some(w => ex.includes(w.slice(0, Math.max(3, w.length - 3))));
+});
+assert.strictEqual(missingExample.length, 0, `Collocations without a usable example: ${missingExample.slice(0, 5).map(c => c.id).join(', ')} (${missingExample.length} total)`);
+
 // 3. Validate grammar.json
 const grammar = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'grammar.json'), 'utf8'));
 assert(Array.isArray(grammar), 'grammar must be an array');

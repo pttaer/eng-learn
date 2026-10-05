@@ -12,6 +12,7 @@ export interface CollocationItem {
   phrase: string;
   vietnamese: string;
   category: 'EVERYDAY' | 'BUSINESS' | 'ACADEMIC' | 'IDIOMS';
+  example?: string;
 }
 
 export type CollocationViewMode = 'drill' | 'dictionary';
@@ -168,7 +169,7 @@ export class CollocationsDossier {
                     <td class="lexicon-col-index">${String(item.index).padStart(4, '0')}</td>
                     <td class="lexicon-col-phrase"><strong>${this.escapeHtml(item.phrase)}</strong></td>
                     <td class="lexicon-col-cat"><span class="colloc-cat-badge cat-${item.category.toLowerCase()}">${item.category}</span></td>
-                    <td class="lexicon-col-vn">${this.escapeHtml(item.vietnamese)}</td>
+                    <td class="lexicon-col-vn">${this.escapeHtml(item.vietnamese)}${item.example ? `<div class="colloc-example">${this.escapeHtml(item.example)}</div>` : ''}</td>
                     <td class="lexicon-col-audio">
                       <button class="hud-btn btn-speak-colloc" data-phrase="${this.escapeHtml(item.phrase)}" title="Listen to pronunciation [${this.escapeHtml(item.phrase)}]" aria-label="Listen to pronunciation">${icon('volume')}</button>
                     </td>
@@ -365,7 +366,7 @@ export class CollocationsDossier {
       back: {
         promptLabel: 'TARGET MEANING & USAGE',
         mainText: item.vietnamese,
-        subText: `Core Category: ${item.category}`
+        subText: item.example ? `“${this.escapeHtml(item.example)}”` : `Core Category: ${item.category}`
       },
       audioText: item.phrase,
       onRate: (rating: 'again' | 'good') => {

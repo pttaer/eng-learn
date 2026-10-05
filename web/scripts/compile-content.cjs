@@ -52,7 +52,8 @@ function compileCollocations() {
           index: index,
           phrase: parts[1],
           vietnamese: parts[2],
-          category: parts[3]
+          category: parts[3],
+          example: parts[4] || ''
         });
       }
     });
