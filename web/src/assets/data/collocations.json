@@ -8998,5 +8998,3029 @@
     "category": "IDIOMS",
     "example": "Without further ado, please welcome tonight's keynote speaker.",
     "cefrLevel": "C1"
+  },
+  {
+    "id": "colloc-1001",
+    "index": 1001,
+    "phrase": "wake up",
+    "vietnamese": "thức dậy",
+    "category": "EVERYDAY",
+    "example": "I wake up at six.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1002",
+    "index": 1002,
+    "phrase": "get up",
+    "vietnamese": "ngủ dậy, rời giường",
+    "category": "EVERYDAY",
+    "example": "We get up early on Monday.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1003",
+    "index": 1003,
+    "phrase": "go to bed",
+    "vietnamese": "đi ngủ",
+    "category": "EVERYDAY",
+    "example": "The children go to bed at nine.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1004",
+    "index": 1004,
+    "phrase": "go to sleep",
+    "vietnamese": "đi vào giấc ngủ",
+    "category": "EVERYDAY",
+    "example": "I go to sleep very fast.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1005",
+    "index": 1005,
+    "phrase": "brush my teeth",
+    "vietnamese": "đánh răng",
+    "category": "EVERYDAY",
+    "example": "I brush my teeth every morning.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1006",
+    "index": 1006,
+    "phrase": "wash my face",
+    "vietnamese": "rửa mặt",
+    "category": "EVERYDAY",
+    "example": "I wash my face with cold water.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1007",
+    "index": 1007,
+    "phrase": "wash my hands",
+    "vietnamese": "rửa tay",
+    "category": "EVERYDAY",
+    "example": "I wash my hands before lunch.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1008",
+    "index": 1008,
+    "phrase": "comb my hair",
+    "vietnamese": "chải tóc",
+    "category": "EVERYDAY",
+    "example": "I comb my hair every day.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1009",
+    "index": 1009,
+    "phrase": "put on a coat",
+    "vietnamese": "mặc áo khoác",
+    "category": "EVERYDAY",
+    "example": "Please put on a coat today.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1010",
+    "index": 1010,
+    "phrase": "take off my shoes",
+    "vietnamese": "cởi giày",
+    "category": "EVERYDAY",
+    "example": "I take off my shoes at home.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1011",
+    "index": 1011,
+    "phrase": "go to work",
+    "vietnamese": "đi làm",
+    "category": "EVERYDAY",
+    "example": "My father goes to work by bus.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1012",
+    "index": 1012,
+    "phrase": "go home",
+    "vietnamese": "về nhà",
+    "category": "EVERYDAY",
+    "example": "We go home at five.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1013",
+    "index": 1013,
+    "phrase": "come home",
+    "vietnamese": "về đến nhà",
+    "category": "EVERYDAY",
+    "example": "She comes home at six.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1014",
+    "index": 1014,
+    "phrase": "leave home",
+    "vietnamese": "rời khỏi nhà",
+    "category": "EVERYDAY",
+    "example": "I leave home at seven.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1015",
+    "index": 1015,
+    "phrase": "arrive at school",
+    "vietnamese": "đến trường",
+    "category": "EVERYDAY",
+    "example": "We arrive at school at eight.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1016",
+    "index": 1016,
+    "phrase": "start work",
+    "vietnamese": "bắt đầu làm việc",
+    "category": "EVERYDAY",
+    "example": "I start work at nine.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1017",
+    "index": 1017,
+    "phrase": "finish work",
+    "vietnamese": "tan làm",
+    "category": "EVERYDAY",
+    "example": "He finishes work at five.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1018",
+    "index": 1018,
+    "phrase": "have a rest",
+    "vietnamese": "nghỉ ngơi một chút",
+    "category": "EVERYDAY",
+    "example": "You can have a rest now.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1019",
+    "index": 1019,
+    "phrase": "clean my room",
+    "vietnamese": "dọn phòng",
+    "category": "EVERYDAY",
+    "example": "I clean my room on Sunday.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1020",
+    "index": 1020,
+    "phrase": "make my bed",
+    "vietnamese": "dọn giường",
+    "category": "EVERYDAY",
+    "example": "I make my bed every morning.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1021",
+    "index": 1021,
+    "phrase": "cook dinner",
+    "vietnamese": "nấu bữa tối",
+    "category": "EVERYDAY",
+    "example": "Mum cooks dinner at six.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1022",
+    "index": 1022,
+    "phrase": "make lunch",
+    "vietnamese": "làm bữa trưa",
+    "category": "EVERYDAY",
+    "example": "I make lunch for my son.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1023",
+    "index": 1023,
+    "phrase": "make tea",
+    "vietnamese": "pha trà",
+    "category": "EVERYDAY",
+    "example": "Can you make tea, please?",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1024",
+    "index": 1024,
+    "phrase": "make a sandwich",
+    "vietnamese": "làm bánh mì kẹp",
+    "category": "EVERYDAY",
+    "example": "I make a sandwich for lunch.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1025",
+    "index": 1025,
+    "phrase": "a cup of tea",
+    "vietnamese": "một tách trà",
+    "category": "EVERYDAY",
+    "example": "I want a cup of tea.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1026",
+    "index": 1026,
+    "phrase": "a glass of water",
+    "vietnamese": "một cốc nước",
+    "category": "EVERYDAY",
+    "example": "Can I have a glass of water?",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1027",
+    "index": 1027,
+    "phrase": "a bottle of milk",
+    "vietnamese": "một chai sữa",
+    "category": "EVERYDAY",
+    "example": "We need a bottle of milk.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1028",
+    "index": 1028,
+    "phrase": "a bowl of rice",
+    "vietnamese": "một bát cơm",
+    "category": "EVERYDAY",
+    "example": "He eats a bowl of rice.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1029",
+    "index": 1029,
+    "phrase": "a piece of cake",
+    "vietnamese": "một miếng bánh",
+    "category": "EVERYDAY",
+    "example": "She wants a piece of cake.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1030",
+    "index": 1030,
+    "phrase": "a slice of bread",
+    "vietnamese": "một lát bánh mì",
+    "category": "EVERYDAY",
+    "example": "I eat a slice of bread.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1031",
+    "index": 1031,
+    "phrase": "a bag of rice",
+    "vietnamese": "một túi gạo",
+    "category": "EVERYDAY",
+    "example": "Buy a bag of rice, please.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1032",
+    "index": 1032,
+    "phrase": "eat an apple",
+    "vietnamese": "ăn một quả táo",
+    "category": "EVERYDAY",
+    "example": "I eat an apple every day.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1033",
+    "index": 1033,
+    "phrase": "drink water",
+    "vietnamese": "uống nước",
+    "category": "EVERYDAY",
+    "example": "Please drink water every day.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1034",
+    "index": 1034,
+    "phrase": "drink milk",
+    "vietnamese": "uống sữa",
+    "category": "EVERYDAY",
+    "example": "The baby drinks milk.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1035",
+    "index": 1035,
+    "phrase": "eat out",
+    "vietnamese": "ăn ở ngoài",
+    "category": "EVERYDAY",
+    "example": "We eat out on Saturday.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1036",
+    "index": 1036,
+    "phrase": "order food",
+    "vietnamese": "gọi món ăn",
+    "category": "EVERYDAY",
+    "example": "Let's order food now.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1037",
+    "index": 1037,
+    "phrase": "fresh fruit",
+    "vietnamese": "trái cây tươi",
+    "category": "EVERYDAY",
+    "example": "I like fresh fruit.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1038",
+    "index": 1038,
+    "phrase": "hot soup",
+    "vietnamese": "súp nóng",
+    "category": "EVERYDAY",
+    "example": "The hot soup is good.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1039",
+    "index": 1039,
+    "phrase": "cold drink",
+    "vietnamese": "đồ uống lạnh",
+    "category": "EVERYDAY",
+    "example": "I want a cold drink.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1040",
+    "index": 1040,
+    "phrase": "be hungry",
+    "vietnamese": "đói bụng",
+    "category": "EVERYDAY",
+    "example": "I am hungry now.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1041",
+    "index": 1041,
+    "phrase": "be thirsty",
+    "vietnamese": "khát nước",
+    "category": "EVERYDAY",
+    "example": "The boy is thirsty.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1042",
+    "index": 1042,
+    "phrase": "salt and pepper",
+    "vietnamese": "muối và tiêu",
+    "category": "EVERYDAY",
+    "example": "Pass the salt and pepper, please.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1043",
+    "index": 1043,
+    "phrase": "black coffee",
+    "vietnamese": "cà phê đen",
+    "category": "EVERYDAY",
+    "example": "He drinks black coffee.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1044",
+    "index": 1044,
+    "phrase": "lay the table",
+    "vietnamese": "dọn bàn ăn",
+    "category": "EVERYDAY",
+    "example": "I lay the table for dinner.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1045",
+    "index": 1045,
+    "phrase": "stay at home",
+    "vietnamese": "ở nhà",
+    "category": "EVERYDAY",
+    "example": "I stay at home on Sunday.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1046",
+    "index": 1046,
+    "phrase": "clean the house",
+    "vietnamese": "dọn dẹp nhà cửa",
+    "category": "EVERYDAY",
+    "example": "We clean the house on Saturday.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1047",
+    "index": 1047,
+    "phrase": "open the door",
+    "vietnamese": "mở cửa",
+    "category": "EVERYDAY",
+    "example": "Please open the door.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1048",
+    "index": 1048,
+    "phrase": "close the window",
+    "vietnamese": "đóng cửa sổ",
+    "category": "EVERYDAY",
+    "example": "Please close the window.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1049",
+    "index": 1049,
+    "phrase": "turn on the light",
+    "vietnamese": "bật đèn",
+    "category": "EVERYDAY",
+    "example": "Turn on the light, please.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1050",
+    "index": 1050,
+    "phrase": "turn off the TV",
+    "vietnamese": "tắt ti vi",
+    "category": "EVERYDAY",
+    "example": "Turn off the TV now.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1051",
+    "index": 1051,
+    "phrase": "watch TV",
+    "vietnamese": "xem ti vi",
+    "category": "EVERYDAY",
+    "example": "We watch TV after dinner.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1052",
+    "index": 1052,
+    "phrase": "listen to music",
+    "vietnamese": "nghe nhạc",
+    "category": "EVERYDAY",
+    "example": "I listen to music at home.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1053",
+    "index": 1053,
+    "phrase": "read a book",
+    "vietnamese": "đọc sách",
+    "category": "EVERYDAY",
+    "example": "She reads a book in bed.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1054",
+    "index": 1054,
+    "phrase": "play games",
+    "vietnamese": "chơi trò chơi",
+    "category": "EVERYDAY",
+    "example": "The kids play games.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1055",
+    "index": 1055,
+    "phrase": "a big house",
+    "vietnamese": "một ngôi nhà lớn",
+    "category": "EVERYDAY",
+    "example": "They have a big house.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1056",
+    "index": 1056,
+    "phrase": "a small room",
+    "vietnamese": "một căn phòng nhỏ",
+    "category": "EVERYDAY",
+    "example": "I have a small room.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1057",
+    "index": 1057,
+    "phrase": "live in a flat",
+    "vietnamese": "sống trong căn hộ",
+    "category": "EVERYDAY",
+    "example": "We live in a flat.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1058",
+    "index": 1058,
+    "phrase": "wash the car",
+    "vietnamese": "rửa xe",
+    "category": "EVERYDAY",
+    "example": "Dad washes the car on Sunday.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1059",
+    "index": 1059,
+    "phrase": "water the plants",
+    "vietnamese": "tưới cây",
+    "category": "EVERYDAY",
+    "example": "I water the plants every day.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1060",
+    "index": 1060,
+    "phrase": "feed the cat",
+    "vietnamese": "cho mèo ăn",
+    "category": "EVERYDAY",
+    "example": "Please feed the cat.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1061",
+    "index": 1061,
+    "phrase": "walk the dog",
+    "vietnamese": "dắt chó đi dạo",
+    "category": "EVERYDAY",
+    "example": "I walk the dog after school.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1062",
+    "index": 1062,
+    "phrase": "my best friend",
+    "vietnamese": "bạn thân nhất của tôi",
+    "category": "EVERYDAY",
+    "example": "She is my best friend.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1063",
+    "index": 1063,
+    "phrase": "meet my friends",
+    "vietnamese": "gặp bạn bè của tôi",
+    "category": "EVERYDAY",
+    "example": "I meet my friends on Sunday.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1064",
+    "index": 1064,
+    "phrase": "call my mother",
+    "vietnamese": "gọi điện cho mẹ",
+    "category": "EVERYDAY",
+    "example": "I call my mother every day.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1065",
+    "index": 1065,
+    "phrase": "visit my grandmother",
+    "vietnamese": "thăm bà",
+    "category": "EVERYDAY",
+    "example": "We visit my grandmother on Sunday.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1066",
+    "index": 1066,
+    "phrase": "have a sister",
+    "vietnamese": "có một chị/em gái",
+    "category": "EVERYDAY",
+    "example": "I have a sister.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1067",
+    "index": 1067,
+    "phrase": "have two brothers",
+    "vietnamese": "có hai anh/em trai",
+    "category": "EVERYDAY",
+    "example": "He has two brothers.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1068",
+    "index": 1068,
+    "phrase": "a big family",
+    "vietnamese": "một gia đình đông người",
+    "category": "EVERYDAY",
+    "example": "She has a big family.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1069",
+    "index": 1069,
+    "phrase": "be married",
+    "vietnamese": "đã kết hôn",
+    "category": "EVERYDAY",
+    "example": "My brother is married.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1070",
+    "index": 1070,
+    "phrase": "look after the baby",
+    "vietnamese": "trông em bé",
+    "category": "EVERYDAY",
+    "example": "I look after the baby.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1071",
+    "index": 1071,
+    "phrase": "play with the children",
+    "vietnamese": "chơi với bọn trẻ",
+    "category": "EVERYDAY",
+    "example": "He plays with the children.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1072",
+    "index": 1072,
+    "phrase": "say hello",
+    "vietnamese": "chào hỏi",
+    "category": "EVERYDAY",
+    "example": "Say hello to my mother.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1073",
+    "index": 1073,
+    "phrase": "say goodbye",
+    "vietnamese": "chào tạm biệt",
+    "category": "EVERYDAY",
+    "example": "We say goodbye at the door.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1074",
+    "index": 1074,
+    "phrase": "say thank you",
+    "vietnamese": "nói cảm ơn",
+    "category": "EVERYDAY",
+    "example": "Say thank you to him.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1075",
+    "index": 1075,
+    "phrase": "go to school",
+    "vietnamese": "đi học",
+    "category": "EVERYDAY",
+    "example": "My son goes to school by bike.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1076",
+    "index": 1076,
+    "phrase": "go to class",
+    "vietnamese": "đi đến lớp",
+    "category": "EVERYDAY",
+    "example": "I go to class at eight.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1077",
+    "index": 1077,
+    "phrase": "finish homework",
+    "vietnamese": "làm xong bài tập",
+    "category": "EVERYDAY",
+    "example": "I finish homework at five.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1078",
+    "index": 1078,
+    "phrase": "open your book",
+    "vietnamese": "mở sách ra",
+    "category": "EVERYDAY",
+    "example": "Open your book, please.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1079",
+    "index": 1079,
+    "phrase": "write your name",
+    "vietnamese": "viết tên của bạn",
+    "category": "EVERYDAY",
+    "example": "Write your name here.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1080",
+    "index": 1080,
+    "phrase": "ask the teacher",
+    "vietnamese": "hỏi giáo viên",
+    "category": "EVERYDAY",
+    "example": "Ask the teacher, please.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1081",
+    "index": 1081,
+    "phrase": "learn English",
+    "vietnamese": "học tiếng Anh",
+    "category": "EVERYDAY",
+    "example": "I learn English at school.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1082",
+    "index": 1082,
+    "phrase": "speak English",
+    "vietnamese": "nói tiếng Anh",
+    "category": "EVERYDAY",
+    "example": "Can you speak English?",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1083",
+    "index": 1083,
+    "phrase": "listen to the teacher",
+    "vietnamese": "nghe giáo viên giảng",
+    "category": "EVERYDAY",
+    "example": "Listen to the teacher, please.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1084",
+    "index": 1084,
+    "phrase": "read the text",
+    "vietnamese": "đọc đoạn văn",
+    "category": "EVERYDAY",
+    "example": "Please read the text.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1085",
+    "index": 1085,
+    "phrase": "a school bag",
+    "vietnamese": "cặp sách",
+    "category": "EVERYDAY",
+    "example": "My school bag is red.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1086",
+    "index": 1086,
+    "phrase": "a new teacher",
+    "vietnamese": "một giáo viên mới",
+    "category": "EVERYDAY",
+    "example": "We have a new teacher.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1087",
+    "index": 1087,
+    "phrase": "answer the question",
+    "vietnamese": "trả lời câu hỏi",
+    "category": "EVERYDAY",
+    "example": "Answer the question, please.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1088",
+    "index": 1088,
+    "phrase": "learn a new word",
+    "vietnamese": "học một từ mới",
+    "category": "EVERYDAY",
+    "example": "I learn a new word daily.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1089",
+    "index": 1089,
+    "phrase": "spell your name",
+    "vietnamese": "đánh vần tên của bạn",
+    "category": "EVERYDAY",
+    "example": "Please spell your name.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1090",
+    "index": 1090,
+    "phrase": "go shopping",
+    "vietnamese": "đi mua sắm",
+    "category": "EVERYDAY",
+    "example": "We go shopping on Saturday.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1091",
+    "index": 1091,
+    "phrase": "buy some bread",
+    "vietnamese": "mua một ít bánh mì",
+    "category": "EVERYDAY",
+    "example": "I buy some bread.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1092",
+    "index": 1092,
+    "phrase": "buy a ticket",
+    "vietnamese": "mua vé",
+    "category": "EVERYDAY",
+    "example": "I buy a ticket here.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1093",
+    "index": 1093,
+    "phrase": "a lot of money",
+    "vietnamese": "rất nhiều tiền",
+    "category": "EVERYDAY",
+    "example": "He has a lot of money.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1094",
+    "index": 1094,
+    "phrase": "cost a lot",
+    "vietnamese": "đắt, tốn nhiều tiền",
+    "category": "EVERYDAY",
+    "example": "This bag costs a lot.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1095",
+    "index": 1095,
+    "phrase": "a cheap shirt",
+    "vietnamese": "một chiếc áo sơ mi rẻ",
+    "category": "EVERYDAY",
+    "example": "I want a cheap shirt.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1096",
+    "index": 1096,
+    "phrase": "wear a hat",
+    "vietnamese": "đội mũ",
+    "category": "EVERYDAY",
+    "example": "He wears a hat.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1097",
+    "index": 1097,
+    "phrase": "wear a dress",
+    "vietnamese": "mặc váy",
+    "category": "EVERYDAY",
+    "example": "She wears a red dress.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1098",
+    "index": 1098,
+    "phrase": "a pair of shoes",
+    "vietnamese": "một đôi giày",
+    "category": "EVERYDAY",
+    "example": "I need a pair of shoes.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1099",
+    "index": 1099,
+    "phrase": "a pair of jeans",
+    "vietnamese": "một chiếc quần jean",
+    "category": "EVERYDAY",
+    "example": "He wears a pair of jeans.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1100",
+    "index": 1100,
+    "phrase": "open at nine",
+    "vietnamese": "mở cửa lúc chín giờ",
+    "category": "EVERYDAY",
+    "example": "The shop opens at nine.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1101",
+    "index": 1101,
+    "phrase": "close at six",
+    "vietnamese": "đóng cửa lúc sáu giờ",
+    "category": "EVERYDAY",
+    "example": "The shop closes at six.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1102",
+    "index": 1102,
+    "phrase": "go by bus",
+    "vietnamese": "đi bằng xe buýt",
+    "category": "EVERYDAY",
+    "example": "I go by bus.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1103",
+    "index": 1103,
+    "phrase": "go by car",
+    "vietnamese": "đi bằng ô tô",
+    "category": "EVERYDAY",
+    "example": "We go by car.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1104",
+    "index": 1104,
+    "phrase": "go by train",
+    "vietnamese": "đi bằng tàu hỏa",
+    "category": "EVERYDAY",
+    "example": "He goes by train.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1105",
+    "index": 1105,
+    "phrase": "walk to school",
+    "vietnamese": "đi bộ đến trường",
+    "category": "EVERYDAY",
+    "example": "I walk to school.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1106",
+    "index": 1106,
+    "phrase": "take a taxi",
+    "vietnamese": "đi taxi",
+    "category": "EVERYDAY",
+    "example": "Let's take a taxi.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1107",
+    "index": 1107,
+    "phrase": "take a bus",
+    "vietnamese": "đi xe buýt",
+    "category": "EVERYDAY",
+    "example": "I take a bus to work.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1108",
+    "index": 1108,
+    "phrase": "ride a bike",
+    "vietnamese": "đi xe đạp",
+    "category": "EVERYDAY",
+    "example": "I ride a bike to school.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1109",
+    "index": 1109,
+    "phrase": "drive a car",
+    "vietnamese": "lái xe ô tô",
+    "category": "EVERYDAY",
+    "example": "My father drives a car.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1110",
+    "index": 1110,
+    "phrase": "turn left",
+    "vietnamese": "rẽ trái",
+    "category": "EVERYDAY",
+    "example": "Turn left at the shop.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1111",
+    "index": 1111,
+    "phrase": "turn right",
+    "vietnamese": "rẽ phải",
+    "category": "EVERYDAY",
+    "example": "Turn right at the bank.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1112",
+    "index": 1112,
+    "phrase": "go straight on",
+    "vietnamese": "đi thẳng",
+    "category": "EVERYDAY",
+    "example": "Go straight on, please.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1113",
+    "index": 1113,
+    "phrase": "a bus stop",
+    "vietnamese": "trạm xe buýt",
+    "category": "EVERYDAY",
+    "example": "The bus stop is near.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1114",
+    "index": 1114,
+    "phrase": "a train station",
+    "vietnamese": "ga tàu",
+    "category": "EVERYDAY",
+    "example": "The train station is big.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1115",
+    "index": 1115,
+    "phrase": "a nice hotel",
+    "vietnamese": "một khách sạn đẹp",
+    "category": "EVERYDAY",
+    "example": "We stay at a nice hotel.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1116",
+    "index": 1116,
+    "phrase": "book a room",
+    "vietnamese": "đặt phòng",
+    "category": "EVERYDAY",
+    "example": "I want to book a room.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1117",
+    "index": 1117,
+    "phrase": "go to the airport",
+    "vietnamese": "đi ra sân bay",
+    "category": "EVERYDAY",
+    "example": "We go to the airport.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1118",
+    "index": 1118,
+    "phrase": "go to the beach",
+    "vietnamese": "đi biển",
+    "category": "EVERYDAY",
+    "example": "We go to the beach in July.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1119",
+    "index": 1119,
+    "phrase": "go to the park",
+    "vietnamese": "đi công viên",
+    "category": "EVERYDAY",
+    "example": "I go to the park on Sunday.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1120",
+    "index": 1120,
+    "phrase": "go to the market",
+    "vietnamese": "đi chợ",
+    "category": "EVERYDAY",
+    "example": "Mum goes to the market.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1121",
+    "index": 1121,
+    "phrase": "feel tired",
+    "vietnamese": "cảm thấy mệt",
+    "category": "EVERYDAY",
+    "example": "I feel tired today.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1122",
+    "index": 1122,
+    "phrase": "feel happy",
+    "vietnamese": "cảm thấy vui",
+    "category": "EVERYDAY",
+    "example": "I feel happy today.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1123",
+    "index": 1123,
+    "phrase": "feel sad",
+    "vietnamese": "cảm thấy buồn",
+    "category": "EVERYDAY",
+    "example": "He feels sad today.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1124",
+    "index": 1124,
+    "phrase": "have a headache",
+    "vietnamese": "bị đau đầu",
+    "category": "EVERYDAY",
+    "example": "I have a headache.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1125",
+    "index": 1125,
+    "phrase": "have a cold",
+    "vietnamese": "bị cảm lạnh",
+    "category": "EVERYDAY",
+    "example": "She has a cold.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1126",
+    "index": 1126,
+    "phrase": "have a stomachache",
+    "vietnamese": "bị đau bụng",
+    "category": "EVERYDAY",
+    "example": "He has a stomachache.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1127",
+    "index": 1127,
+    "phrase": "be ill",
+    "vietnamese": "bị ốm",
+    "category": "EVERYDAY",
+    "example": "My sister is ill.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1128",
+    "index": 1128,
+    "phrase": "go to the doctor",
+    "vietnamese": "đi khám bác sĩ",
+    "category": "EVERYDAY",
+    "example": "I go to the doctor today.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1129",
+    "index": 1129,
+    "phrase": "open your mouth",
+    "vietnamese": "há miệng ra",
+    "category": "EVERYDAY",
+    "example": "Open your mouth, please.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1130",
+    "index": 1130,
+    "phrase": "a hot day",
+    "vietnamese": "một ngày nóng",
+    "category": "EVERYDAY",
+    "example": "It is a hot day.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1131",
+    "index": 1131,
+    "phrase": "sunny weather",
+    "vietnamese": "thời tiết nắng",
+    "category": "EVERYDAY",
+    "example": "We like sunny weather.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1132",
+    "index": 1132,
+    "phrase": "a cold winter",
+    "vietnamese": "một mùa đông lạnh",
+    "category": "EVERYDAY",
+    "example": "We have a cold winter.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1133",
+    "index": 1133,
+    "phrase": "at the weekend",
+    "vietnamese": "vào cuối tuần",
+    "category": "EVERYDAY",
+    "example": "I rest at the weekend.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1134",
+    "index": 1134,
+    "phrase": "in the morning",
+    "vietnamese": "vào buổi sáng",
+    "category": "EVERYDAY",
+    "example": "I run in the morning.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1135",
+    "index": 1135,
+    "phrase": "play football",
+    "vietnamese": "chơi bóng đá",
+    "category": "EVERYDAY",
+    "example": "I play football on Sunday.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1136",
+    "index": 1136,
+    "phrase": "play tennis",
+    "vietnamese": "chơi quần vợt",
+    "category": "EVERYDAY",
+    "example": "We play tennis on Saturday.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1137",
+    "index": 1137,
+    "phrase": "go for a walk",
+    "vietnamese": "đi dạo",
+    "category": "EVERYDAY",
+    "example": "Let us go for a walk.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1138",
+    "index": 1138,
+    "phrase": "sing a song",
+    "vietnamese": "hát một bài hát",
+    "category": "EVERYDAY",
+    "example": "She can sing a song.",
+    "cefrLevel": "A1"
+  },
+  {
+    "id": "colloc-1139",
+    "index": 1139,
+    "phrase": "book a table",
+    "vietnamese": "đặt bàn",
+    "category": "EVERYDAY",
+    "example": "We booked a table for six at the restaurant.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1140",
+    "index": 1140,
+    "phrase": "miss the bus",
+    "vietnamese": "lỡ xe buýt",
+    "category": "EVERYDAY",
+    "example": "I missed the bus, so I walked to work.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1141",
+    "index": 1141,
+    "phrase": "take a photo",
+    "vietnamese": "chụp một bức ảnh",
+    "category": "EVERYDAY",
+    "example": "Can you take a photo of us, please?",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1143",
+    "index": 1143,
+    "phrase": "ask for directions",
+    "vietnamese": "hỏi đường",
+    "category": "EVERYDAY",
+    "example": "He stopped to ask for directions to the station.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1144",
+    "index": 1144,
+    "phrase": "a heavy bag",
+    "vietnamese": "một cái túi nặng",
+    "category": "EVERYDAY",
+    "example": "She carried a heavy bag up the stairs.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1145",
+    "index": 1145,
+    "phrase": "pay in cash",
+    "vietnamese": "trả bằng tiền mặt",
+    "category": "EVERYDAY",
+    "example": "Can I pay in cash here?",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1146",
+    "index": 1146,
+    "phrase": "try on clothes",
+    "vietnamese": "thử quần áo",
+    "category": "EVERYDAY",
+    "example": "You can try on clothes in that small room.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1148",
+    "index": 1148,
+    "phrase": "book a hotel",
+    "vietnamese": "đặt khách sạn",
+    "category": "EVERYDAY",
+    "example": "We booked a hotel near the beach.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1149",
+    "index": 1149,
+    "phrase": "book a flight",
+    "vietnamese": "đặt chuyến bay",
+    "category": "EVERYDAY",
+    "example": "She booked a flight to Hanoi for Monday.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1151",
+    "index": 1151,
+    "phrase": "pack a suitcase",
+    "vietnamese": "xếp vali",
+    "category": "EVERYDAY",
+    "example": "I will pack a suitcase tonight.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1152",
+    "index": 1152,
+    "phrase": "miss the train",
+    "vietnamese": "lỡ tàu",
+    "category": "EVERYDAY",
+    "example": "He missed the train because he was late.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1153",
+    "index": 1153,
+    "phrase": "miss a class",
+    "vietnamese": "nghỉ một buổi học",
+    "category": "EVERYDAY",
+    "example": "I was ill, so I missed a class.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1154",
+    "index": 1154,
+    "phrase": "miss someone",
+    "vietnamese": "nhớ ai đó",
+    "category": "EVERYDAY",
+    "example": "I miss my family when I travel.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1157",
+    "index": 1157,
+    "phrase": "take the train",
+    "vietnamese": "đi tàu",
+    "category": "EVERYDAY",
+    "example": "We took the train to the city.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1162",
+    "index": 1162,
+    "phrase": "go straight ahead",
+    "vietnamese": "đi thẳng về phía trước",
+    "category": "EVERYDAY",
+    "example": "Go straight ahead and you will see the shop.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1163",
+    "index": 1163,
+    "phrase": "cross the road",
+    "vietnamese": "băng qua đường",
+    "category": "EVERYDAY",
+    "example": "Be careful when you cross the road.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1164",
+    "index": 1164,
+    "phrase": "check in at the hotel",
+    "vietnamese": "nhận phòng khách sạn",
+    "category": "EVERYDAY",
+    "example": "We checked in at the hotel at noon.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1165",
+    "index": 1165,
+    "phrase": "check out of the hotel",
+    "vietnamese": "trả phòng khách sạn",
+    "category": "EVERYDAY",
+    "example": "You must check out of the hotel by ten.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1166",
+    "index": 1166,
+    "phrase": "arrive late",
+    "vietnamese": "đến muộn",
+    "category": "EVERYDAY",
+    "example": "The guests arrived late because of the rain.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1167",
+    "index": 1167,
+    "phrase": "arrive on time",
+    "vietnamese": "đến đúng giờ",
+    "category": "EVERYDAY",
+    "example": "Please arrive on time for the lesson.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1168",
+    "index": 1168,
+    "phrase": "be late for work",
+    "vietnamese": "đi làm muộn",
+    "category": "BUSINESS",
+    "example": "He was late for work again today.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1170",
+    "index": 1170,
+    "phrase": "have a sore throat",
+    "vietnamese": "bị đau họng",
+    "category": "EVERYDAY",
+    "example": "She has a sore throat and a cough.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1171",
+    "index": 1171,
+    "phrase": "have a fever",
+    "vietnamese": "bị sốt",
+    "category": "EVERYDAY",
+    "example": "The boy has a fever and feels hot.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1172",
+    "index": 1172,
+    "phrase": "have a cough",
+    "vietnamese": "bị ho",
+    "category": "EVERYDAY",
+    "example": "I have a cough, so I drink warm tea.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1173",
+    "index": 1173,
+    "phrase": "feel sick",
+    "vietnamese": "cảm thấy buồn nôn, ốm",
+    "category": "EVERYDAY",
+    "example": "I feel sick after eating that fish.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1175",
+    "index": 1175,
+    "phrase": "feel better",
+    "vietnamese": "cảm thấy khỏe hơn",
+    "category": "EVERYDAY",
+    "example": "I feel better today, thank you.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1176",
+    "index": 1176,
+    "phrase": "see a doctor",
+    "vietnamese": "đi khám bác sĩ",
+    "category": "EVERYDAY",
+    "example": "You should see a doctor about that pain.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1177",
+    "index": 1177,
+    "phrase": "go to the dentist",
+    "vietnamese": "đi nha sĩ",
+    "category": "EVERYDAY",
+    "example": "I go to the dentist twice a year.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1178",
+    "index": 1178,
+    "phrase": "stay in bed",
+    "vietnamese": "nằm trên giường nghỉ",
+    "category": "EVERYDAY",
+    "example": "The doctor told him to stay in bed.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1180",
+    "index": 1180,
+    "phrase": "get some rest",
+    "vietnamese": "nghỉ ngơi một chút",
+    "category": "EVERYDAY",
+    "example": "Go home and get some rest.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1181",
+    "index": 1181,
+    "phrase": "lose your voice",
+    "vietnamese": "mất giọng",
+    "category": "EVERYDAY",
+    "example": "He shouted so much that he lost his voice.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1182",
+    "index": 1182,
+    "phrase": "hurt your back",
+    "vietnamese": "bị đau lưng",
+    "category": "EVERYDAY",
+    "example": "Be careful, or you will hurt your back.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1183",
+    "index": 1183,
+    "phrase": "break your leg",
+    "vietnamese": "gãy chân",
+    "category": "EVERYDAY",
+    "example": "Do not run, or you may break your leg.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1184",
+    "index": 1184,
+    "phrase": "wash your hands",
+    "vietnamese": "rửa tay",
+    "category": "EVERYDAY",
+    "example": "Wash your hands before you eat.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1185",
+    "index": 1185,
+    "phrase": "brush your teeth",
+    "vietnamese": "đánh răng",
+    "category": "EVERYDAY",
+    "example": "Brush your teeth twice a day.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1186",
+    "index": 1186,
+    "phrase": "stay healthy",
+    "vietnamese": "giữ gìn sức khỏe",
+    "category": "EVERYDAY",
+    "example": "Exercise helps you stay healthy.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1187",
+    "index": 1187,
+    "phrase": "eat healthy food",
+    "vietnamese": "ăn đồ ăn lành mạnh",
+    "category": "EVERYDAY",
+    "example": "We try to eat healthy food at home.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1189",
+    "index": 1189,
+    "phrase": "play the guitar",
+    "vietnamese": "chơi đàn ghi-ta",
+    "category": "EVERYDAY",
+    "example": "My brother can play the guitar very well.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1190",
+    "index": 1190,
+    "phrase": "play computer games",
+    "vietnamese": "chơi trò chơi điện tử",
+    "category": "EVERYDAY",
+    "example": "He likes to play computer games at night.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1193",
+    "index": 1193,
+    "phrase": "go swimming",
+    "vietnamese": "đi bơi",
+    "category": "EVERYDAY",
+    "example": "We went swimming in the sea.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1194",
+    "index": 1194,
+    "phrase": "go fishing",
+    "vietnamese": "đi câu cá",
+    "category": "EVERYDAY",
+    "example": "My grandfather often goes fishing on Sundays.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1195",
+    "index": 1195,
+    "phrase": "go camping",
+    "vietnamese": "đi cắm trại",
+    "category": "EVERYDAY",
+    "example": "They go camping in the mountains every summer.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1196",
+    "index": 1196,
+    "phrase": "go for a run",
+    "vietnamese": "đi chạy bộ",
+    "category": "EVERYDAY",
+    "example": "I go for a run before breakfast.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1197",
+    "index": 1197,
+    "phrase": "go for a drive",
+    "vietnamese": "đi lái xe dạo",
+    "category": "EVERYDAY",
+    "example": "Let's go for a drive in the country.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1198",
+    "index": 1198,
+    "phrase": "go to the cinema",
+    "vietnamese": "đi xem phim ở rạp",
+    "category": "EVERYDAY",
+    "example": "We go to the cinema on Friday nights.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1199",
+    "index": 1199,
+    "phrase": "go to a concert",
+    "vietnamese": "đi xem hòa nhạc",
+    "category": "EVERYDAY",
+    "example": "She went to a concert with her friends.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1200",
+    "index": 1200,
+    "phrase": "go on a trip",
+    "vietnamese": "đi một chuyến đi",
+    "category": "EVERYDAY",
+    "example": "Our class is going on a trip next week.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1201",
+    "index": 1201,
+    "phrase": "go out with friends",
+    "vietnamese": "đi chơi với bạn bè",
+    "category": "EVERYDAY",
+    "example": "I often go out with friends at the weekend.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1203",
+    "index": 1203,
+    "phrase": "meet friends",
+    "vietnamese": "gặp gỡ bạn bè",
+    "category": "EVERYDAY",
+    "example": "I meet friends in the cafe on Sundays.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1204",
+    "index": 1204,
+    "phrase": "invite a friend",
+    "vietnamese": "mời một người bạn",
+    "category": "EVERYDAY",
+    "example": "I want to invite a friend to dinner.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1205",
+    "index": 1205,
+    "phrase": "send a message",
+    "vietnamese": "gửi tin nhắn",
+    "category": "EVERYDAY",
+    "example": "Please send a message when you arrive.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1206",
+    "index": 1206,
+    "phrase": "send an email",
+    "vietnamese": "gửi email",
+    "category": "BUSINESS",
+    "example": "I will send an email to the manager.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1207",
+    "index": 1207,
+    "phrase": "write a letter",
+    "vietnamese": "viết thư",
+    "category": "EVERYDAY",
+    "example": "He wrote a letter to his old teacher.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1208",
+    "index": 1208,
+    "phrase": "call a friend",
+    "vietnamese": "gọi cho một người bạn",
+    "category": "EVERYDAY",
+    "example": "I called a friend to ask for help.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1209",
+    "index": 1209,
+    "phrase": "leave a message",
+    "vietnamese": "để lại lời nhắn",
+    "category": "EVERYDAY",
+    "example": "Can I leave a message for Mr Brown?",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1210",
+    "index": 1210,
+    "phrase": "learn a language",
+    "vietnamese": "học một ngôn ngữ",
+    "category": "EVERYDAY",
+    "example": "It takes time to learn a language.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1212",
+    "index": 1212,
+    "phrase": "take a class",
+    "vietnamese": "học một lớp, tham gia lớp học",
+    "category": "EVERYDAY",
+    "example": "She takes a class in cooking on Tuesdays.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1213",
+    "index": 1213,
+    "phrase": "draw a picture",
+    "vietnamese": "vẽ một bức tranh",
+    "category": "EVERYDAY",
+    "example": "The children draw a picture of their house.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1214",
+    "index": 1214,
+    "phrase": "paint a picture",
+    "vietnamese": "vẽ tranh màu",
+    "category": "EVERYDAY",
+    "example": "He likes to paint a picture of the sea.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1216",
+    "index": 1216,
+    "phrase": "bake a cake",
+    "vietnamese": "nướng bánh",
+    "category": "EVERYDAY",
+    "example": "We baked a cake for her birthday.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1219",
+    "index": 1219,
+    "phrase": "order a meal",
+    "vietnamese": "gọi món ăn",
+    "category": "EVERYDAY",
+    "example": "We ordered a meal and waited.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1221",
+    "index": 1221,
+    "phrase": "pay the bill",
+    "vietnamese": "thanh toán hóa đơn",
+    "category": "EVERYDAY",
+    "example": "Who will pay the bill tonight?",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1222",
+    "index": 1222,
+    "phrase": "leave a tip",
+    "vietnamese": "để lại tiền boa",
+    "category": "EVERYDAY",
+    "example": "Please leave a tip for the waiter.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1223",
+    "index": 1223,
+    "phrase": "ask for the bill",
+    "vietnamese": "xin hóa đơn",
+    "category": "EVERYDAY",
+    "example": "Let's ask for the bill and go home.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1227",
+    "index": 1227,
+    "phrase": "a bottle of water",
+    "vietnamese": "một chai nước",
+    "category": "EVERYDAY",
+    "example": "He bought a bottle of water at the shop.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1230",
+    "index": 1230,
+    "phrase": "work late",
+    "vietnamese": "làm việc muộn",
+    "category": "BUSINESS",
+    "example": "She had to work late on Monday.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1231",
+    "index": 1231,
+    "phrase": "work hard",
+    "vietnamese": "làm việc chăm chỉ",
+    "category": "BUSINESS",
+    "example": "He works hard to help his family.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1232",
+    "index": 1232,
+    "phrase": "work from home",
+    "vietnamese": "làm việc tại nhà",
+    "category": "BUSINESS",
+    "example": "Many people work from home now.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1233",
+    "index": 1233,
+    "phrase": "take a day off",
+    "vietnamese": "xin nghỉ một ngày",
+    "category": "BUSINESS",
+    "example": "I will take a day off next Friday.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1234",
+    "index": 1234,
+    "phrase": "earn money",
+    "vietnamese": "kiếm tiền",
+    "category": "EVERYDAY",
+    "example": "Students often earn money in the summer.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1235",
+    "index": 1235,
+    "phrase": "save money",
+    "vietnamese": "tiết kiệm tiền",
+    "category": "EVERYDAY",
+    "example": "I want to save money for a new phone.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1236",
+    "index": 1236,
+    "phrase": "spend money",
+    "vietnamese": "tiêu tiền",
+    "category": "EVERYDAY",
+    "example": "She likes to spend money on clothes.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1237",
+    "index": 1237,
+    "phrase": "lend money",
+    "vietnamese": "cho vay tiền",
+    "category": "EVERYDAY",
+    "example": "Can you lend money to me until Friday?",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1238",
+    "index": 1238,
+    "phrase": "borrow money",
+    "vietnamese": "vay tiền",
+    "category": "EVERYDAY",
+    "example": "He had to borrow money from his brother.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1239",
+    "index": 1239,
+    "phrase": "a full-time job",
+    "vietnamese": "một công việc toàn thời gian",
+    "category": "BUSINESS",
+    "example": "She wants a full-time job in a bank.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1240",
+    "index": 1240,
+    "phrase": "a part-time job",
+    "vietnamese": "một công việc bán thời gian",
+    "category": "BUSINESS",
+    "example": "He has a part-time job at a cafe.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1241",
+    "index": 1241,
+    "phrase": "look for a job",
+    "vietnamese": "tìm việc",
+    "category": "BUSINESS",
+    "example": "My sister is looking for a job in the city.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1242",
+    "index": 1242,
+    "phrase": "apply for a job",
+    "vietnamese": "xin việc, nộp đơn xin việc",
+    "category": "BUSINESS",
+    "example": "I want to apply for a job at the hotel.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1243",
+    "index": 1243,
+    "phrase": "write a report",
+    "vietnamese": "viết báo cáo",
+    "category": "BUSINESS",
+    "example": "I must write a report by tomorrow.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1244",
+    "index": 1244,
+    "phrase": "attend a meeting",
+    "vietnamese": "tham dự cuộc họp",
+    "category": "BUSINESS",
+    "example": "She attended a meeting at nine o'clock.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1245",
+    "index": 1245,
+    "phrase": "answer an email",
+    "vietnamese": "trả lời email",
+    "category": "BUSINESS",
+    "example": "Please answer an email from the customer today.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1246",
+    "index": 1246,
+    "phrase": "a sunny day",
+    "vietnamese": "một ngày nắng",
+    "category": "EVERYDAY",
+    "example": "It was a sunny day, so we went out.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1247",
+    "index": 1247,
+    "phrase": "heavy rain",
+    "vietnamese": "mưa lớn",
+    "category": "EVERYDAY",
+    "example": "There was heavy rain all night.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1248",
+    "index": 1248,
+    "phrase": "strong wind",
+    "vietnamese": "gió mạnh",
+    "category": "EVERYDAY",
+    "example": "A strong wind blew the hat away.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1249",
+    "index": 1249,
+    "phrase": "a cold day",
+    "vietnamese": "một ngày lạnh",
+    "category": "EVERYDAY",
+    "example": "It was a cold day in January.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1250",
+    "index": 1250,
+    "phrase": "check the weather",
+    "vietnamese": "xem thời tiết",
+    "category": "EVERYDAY",
+    "example": "Check the weather before you leave.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1251",
+    "index": 1251,
+    "phrase": "take an umbrella",
+    "vietnamese": "mang theo ô",
+    "category": "EVERYDAY",
+    "example": "Take an umbrella because it may rain.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1253",
+    "index": 1253,
+    "phrase": "feel afraid",
+    "vietnamese": "cảm thấy sợ",
+    "category": "EVERYDAY",
+    "example": "The little girl felt afraid in the dark.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1254",
+    "index": 1254,
+    "phrase": "feel lonely",
+    "vietnamese": "cảm thấy cô đơn",
+    "category": "EVERYDAY",
+    "example": "He felt lonely in the new city.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1255",
+    "index": 1255,
+    "phrase": "be afraid of",
+    "vietnamese": "sợ",
+    "category": "EVERYDAY",
+    "example": "Many people are afraid of dogs.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1256",
+    "index": 1256,
+    "phrase": "be good at",
+    "vietnamese": "giỏi về",
+    "category": "EVERYDAY",
+    "example": "She is good at maths and music.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1257",
+    "index": 1257,
+    "phrase": "be interested in",
+    "vietnamese": "quan tâm đến, hứng thú với",
+    "category": "EVERYDAY",
+    "example": "I am interested in old cars.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1258",
+    "index": 1258,
+    "phrase": "be worried about",
+    "vietnamese": "lo lắng về",
+    "category": "EVERYDAY",
+    "example": "He is worried about his exam.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1259",
+    "index": 1259,
+    "phrase": "say sorry",
+    "vietnamese": "xin lỗi",
+    "category": "EVERYDAY",
+    "example": "You should say sorry to her.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1261",
+    "index": 1261,
+    "phrase": "get a taxi",
+    "vietnamese": "bắt taxi",
+    "category": "EVERYDAY",
+    "example": "It was late, so we got a taxi.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1262",
+    "index": 1262,
+    "phrase": "miss the plane",
+    "vietnamese": "lỡ chuyến bay",
+    "category": "EVERYDAY",
+    "example": "We ran to the gate but missed the plane.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1265",
+    "index": 1265,
+    "phrase": "get on the bus",
+    "vietnamese": "lên xe buýt",
+    "category": "EVERYDAY",
+    "example": "She got on the bus at the market.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1266",
+    "index": 1266,
+    "phrase": "get off the bus",
+    "vietnamese": "xuống xe buýt",
+    "category": "EVERYDAY",
+    "example": "Get off the bus at the next stop.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1267",
+    "index": 1267,
+    "phrase": "wait for the bus",
+    "vietnamese": "đợi xe buýt",
+    "category": "EVERYDAY",
+    "example": "We waited for the bus in the rain.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1268",
+    "index": 1268,
+    "phrase": "buy some food",
+    "vietnamese": "mua đồ ăn",
+    "category": "EVERYDAY",
+    "example": "I need to buy some food for dinner.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1269",
+    "index": 1269,
+    "phrase": "carry a bag",
+    "vietnamese": "xách túi",
+    "category": "EVERYDAY",
+    "example": "Can you carry a bag for me?",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1270",
+    "index": 1270,
+    "phrase": "open a window",
+    "vietnamese": "mở cửa sổ",
+    "category": "EVERYDAY",
+    "example": "It is hot, so please open a window.",
+    "cefrLevel": "A2"
+  },
+  {
+    "id": "colloc-1271",
+    "index": 1271,
+    "phrase": "reach an agreement",
+    "vietnamese": "đạt được thỏa thuận",
+    "category": "BUSINESS",
+    "example": "After a long talk, the two sides finally reached an agreement.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1272",
+    "index": 1272,
+    "phrase": "lose track of time",
+    "vietnamese": "quên mất thời gian",
+    "category": "EVERYDAY",
+    "example": "I always lose track of time when I play my guitar.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1273",
+    "index": 1273,
+    "phrase": "a close friend",
+    "vietnamese": "bạn thân",
+    "category": "EVERYDAY",
+    "example": "She is a close friend, so I tell her everything.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1274",
+    "index": 1274,
+    "phrase": "heavy traffic",
+    "vietnamese": "giao thông đông đúc",
+    "category": "EVERYDAY",
+    "example": "We were late because of the heavy traffic this morning.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1275",
+    "index": 1275,
+    "phrase": "on the other hand",
+    "vietnamese": "mặt khác",
+    "category": "IDIOMS",
+    "example": "The flat is small, but on the other hand it is cheap.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1276",
+    "index": 1276,
+    "phrase": "in my opinion",
+    "vietnamese": "theo ý kiến của tôi",
+    "category": "EVERYDAY",
+    "example": "In my opinion, the film was better than the book.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1277",
+    "index": 1277,
+    "phrase": "express an opinion",
+    "vietnamese": "bày tỏ ý kiến",
+    "category": "ACADEMIC",
+    "example": "Students should feel free to express an opinion in class.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1278",
+    "index": 1278,
+    "phrase": "share an opinion",
+    "vietnamese": "chia sẻ quan điểm",
+    "category": "EVERYDAY",
+    "example": "I do not share your opinion about that restaurant.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1279",
+    "index": 1279,
+    "phrase": "a good reason",
+    "vietnamese": "một lý do chính đáng",
+    "category": "EVERYDAY",
+    "example": "You must have a good reason for being late again.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1280",
+    "index": 1280,
+    "phrase": "for example",
+    "vietnamese": "ví dụ",
+    "category": "ACADEMIC",
+    "example": "Many sports are fun, for example football and tennis.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1281",
+    "index": 1281,
+    "phrase": "as a result",
+    "vietnamese": "do đó, kết quả là",
+    "category": "ACADEMIC",
+    "example": "It rained all week, and as a result the match was cancelled.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1282",
+    "index": 1282,
+    "phrase": "a great deal of",
+    "vietnamese": "rất nhiều",
+    "category": "EVERYDAY",
+    "example": "He spent a great deal of money on his new phone.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1283",
+    "index": 1283,
+    "phrase": "a wide range of",
+    "vietnamese": "nhiều loại",
+    "category": "BUSINESS",
+    "example": "The shop sells a wide range of cheap furniture.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1284",
+    "index": 1284,
+    "phrase": "make a complaint",
+    "vietnamese": "khiếu nại, phàn nàn",
+    "category": "BUSINESS",
+    "example": "I want to make a complaint about the slow service.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1285",
+    "index": 1285,
+    "phrase": "receive a reply",
+    "vietnamese": "nhận được phản hồi",
+    "category": "BUSINESS",
+    "example": "I am still waiting to receive a reply from the company.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1288",
+    "index": 1288,
+    "phrase": "work overtime",
+    "vietnamese": "làm thêm giờ",
+    "category": "BUSINESS",
+    "example": "He had to work overtime to finish the report.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1289",
+    "index": 1289,
+    "phrase": "full-time job",
+    "vietnamese": "công việc toàn thời gian",
+    "category": "BUSINESS",
+    "example": "She found a full-time job in a small bank.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1290",
+    "index": 1290,
+    "phrase": "part-time job",
+    "vietnamese": "công việc bán thời gian",
+    "category": "BUSINESS",
+    "example": "Many students have a part-time job in the evening.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1292",
+    "index": 1292,
+    "phrase": "job interview",
+    "vietnamese": "buổi phỏng vấn xin việc",
+    "category": "BUSINESS",
+    "example": "I felt nervous before my first job interview.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1293",
+    "index": 1293,
+    "phrase": "gain experience",
+    "vietnamese": "tích lũy kinh nghiệm",
+    "category": "BUSINESS",
+    "example": "Working abroad helped her gain experience in sales.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1294",
+    "index": 1294,
+    "phrase": "earn a salary",
+    "vietnamese": "kiếm lương",
+    "category": "BUSINESS",
+    "example": "He earns a good salary as a computer engineer.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1295",
+    "index": 1295,
+    "phrase": "be in charge of",
+    "vietnamese": "phụ trách, chịu trách nhiệm về",
+    "category": "BUSINESS",
+    "example": "Maria is in charge of the new project.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1296",
+    "index": 1296,
+    "phrase": "work as a team",
+    "vietnamese": "làm việc nhóm",
+    "category": "BUSINESS",
+    "example": "We work as a team to finish the task on time.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1297",
+    "index": 1297,
+    "phrase": "manage your time",
+    "vietnamese": "quản lý thời gian",
+    "category": "BUSINESS",
+    "example": "You need to manage your time better during exams.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1298",
+    "index": 1298,
+    "phrase": "under pressure",
+    "vietnamese": "chịu áp lực",
+    "category": "BUSINESS",
+    "example": "Some people work better under pressure than others.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1299",
+    "index": 1299,
+    "phrase": "keep a record",
+    "vietnamese": "ghi chép lại, lưu hồ sơ",
+    "category": "BUSINESS",
+    "example": "You should keep a record of all your expenses.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1300",
+    "index": 1300,
+    "phrase": "hand in a report",
+    "vietnamese": "nộp báo cáo",
+    "category": "BUSINESS",
+    "example": "I have to hand in a report by tomorrow.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1301",
+    "index": 1301,
+    "phrase": "change jobs",
+    "vietnamese": "đổi việc",
+    "category": "BUSINESS",
+    "example": "He is thinking about changing jobs next year.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1302",
+    "index": 1302,
+    "phrase": "retire early",
+    "vietnamese": "nghỉ hưu sớm",
+    "category": "BUSINESS",
+    "example": "My uncle hopes to retire early and travel the world.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1303",
+    "index": 1303,
+    "phrase": "pass an exam",
+    "vietnamese": "thi đỗ",
+    "category": "ACADEMIC",
+    "example": "She studied hard and passed the exam easily.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1304",
+    "index": 1304,
+    "phrase": "fail a test",
+    "vietnamese": "trượt bài kiểm tra",
+    "category": "ACADEMIC",
+    "example": "I was upset when I failed the test last week.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1305",
+    "index": 1305,
+    "phrase": "revise for an exam",
+    "vietnamese": "ôn thi",
+    "category": "ACADEMIC",
+    "example": "We revise for the exam in the library every evening.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1306",
+    "index": 1306,
+    "phrase": "do well at school",
+    "vietnamese": "học tốt ở trường",
+    "category": "ACADEMIC",
+    "example": "He did well at school and got a place at university.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1307",
+    "index": 1307,
+    "phrase": "get good marks",
+    "vietnamese": "đạt điểm cao",
+    "category": "ACADEMIC",
+    "example": "If you listen carefully, you will get good marks.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1308",
+    "index": 1308,
+    "phrase": "write an essay",
+    "vietnamese": "viết một bài luận",
+    "category": "ACADEMIC",
+    "example": "The teacher asked us to write an essay about our town.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1309",
+    "index": 1309,
+    "phrase": "hand in homework",
+    "vietnamese": "nộp bài tập về nhà",
+    "category": "ACADEMIC",
+    "example": "Please hand in your homework before the lesson starts.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1310",
+    "index": 1310,
+    "phrase": "give a talk",
+    "vietnamese": "có bài nói chuyện",
+    "category": "ACADEMIC",
+    "example": "Our teacher asked me to give a talk about my hobby.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1311",
+    "index": 1311,
+    "phrase": "take a course",
+    "vietnamese": "tham gia một khóa học",
+    "category": "ACADEMIC",
+    "example": "I want to take a course in photography this summer.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1312",
+    "index": 1312,
+    "phrase": "learn by heart",
+    "vietnamese": "học thuộc lòng",
+    "category": "ACADEMIC",
+    "example": "We had to learn the poem by heart.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1313",
+    "index": 1313,
+    "phrase": "make a note of",
+    "vietnamese": "ghi chú lại",
+    "category": "ACADEMIC",
+    "example": "Make a note of the dates in your diary.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1314",
+    "index": 1314,
+    "phrase": "read carefully",
+    "vietnamese": "đọc kỹ",
+    "category": "ACADEMIC",
+    "example": "Read the instructions carefully before you start the test.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1315",
+    "index": 1315,
+    "phrase": "a useful skill",
+    "vietnamese": "một kỹ năng hữu ích",
+    "category": "ACADEMIC",
+    "example": "Learning to type fast is a useful skill.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1316",
+    "index": 1316,
+    "phrase": "improve your English",
+    "vietnamese": "cải thiện tiếng Anh",
+    "category": "ACADEMIC",
+    "example": "Watching films is a fun way to improve your English.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1317",
+    "index": 1317,
+    "phrase": "foreign language",
+    "vietnamese": "ngoại ngữ",
+    "category": "ACADEMIC",
+    "example": "Learning a foreign language opens many doors in life.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1318",
+    "index": 1318,
+    "phrase": "university degree",
+    "vietnamese": "bằng đại học",
+    "category": "ACADEMIC",
+    "example": "You need a university degree to become a doctor.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1319",
+    "index": 1319,
+    "phrase": "study abroad",
+    "vietnamese": "du học",
+    "category": "ACADEMIC",
+    "example": "My cousin plans to study abroad after high school.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1320",
+    "index": 1320,
+    "phrase": "protect the environment",
+    "vietnamese": "bảo vệ môi trường",
+    "category": "EVERYDAY",
+    "example": "We should all do more to protect the environment.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1321",
+    "index": 1321,
+    "phrase": "save energy",
+    "vietnamese": "tiết kiệm năng lượng",
+    "category": "EVERYDAY",
+    "example": "Turning off the lights is an easy way to save energy.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1322",
+    "index": 1322,
+    "phrase": "reduce waste",
+    "vietnamese": "giảm rác thải",
+    "category": "EVERYDAY",
+    "example": "Our school wants to reduce waste by recycling paper.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1323",
+    "index": 1323,
+    "phrase": "public transport",
+    "vietnamese": "phương tiện giao thông công cộng",
+    "category": "EVERYDAY",
+    "example": "I take public transport because parking is expensive.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1324",
+    "index": 1324,
+    "phrase": "traffic jam",
+    "vietnamese": "tắc đường",
+    "category": "EVERYDAY",
+    "example": "We were stuck in a traffic jam for an hour.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1325",
+    "index": 1325,
+    "phrase": "polluted air",
+    "vietnamese": "không khí ô nhiễm",
+    "category": "EVERYDAY",
+    "example": "Children who live near the factory breathe polluted air.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1326",
+    "index": 1326,
+    "phrase": "natural resources",
+    "vietnamese": "tài nguyên thiên nhiên",
+    "category": "EVERYDAY",
+    "example": "The country has many natural resources, such as oil and coal.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1327",
+    "index": 1327,
+    "phrase": "plant a tree",
+    "vietnamese": "trồng cây",
+    "category": "EVERYDAY",
+    "example": "Each student planted a tree in the school garden.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1328",
+    "index": 1328,
+    "phrase": "pick up litter",
+    "vietnamese": "nhặt rác",
+    "category": "EVERYDAY",
+    "example": "Volunteers met on Sunday to pick up litter on the beach.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1329",
+    "index": 1329,
+    "phrase": "a serious problem",
+    "vietnamese": "vấn đề nghiêm trọng",
+    "category": "EVERYDAY",
+    "example": "Plastic in the sea is a serious problem for fish.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1330",
+    "index": 1330,
+    "phrase": "spill the beans",
+    "vietnamese": "lỡ tiết lộ bí mật",
+    "category": "IDIOMS",
+    "example": "Who spilled the beans about the surprise party?",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1331",
+    "index": 1331,
+    "phrase": "the latest news",
+    "vietnamese": "tin tức mới nhất",
+    "category": "EVERYDAY",
+    "example": "Have you heard the latest news about the school trip?",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1332",
+    "index": 1332,
+    "phrase": "make the headlines",
+    "vietnamese": "lên các tiêu đề báo",
+    "category": "EVERYDAY",
+    "example": "The storm made the headlines in every newspaper.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1333",
+    "index": 1333,
+    "phrase": "spread the word",
+    "vietnamese": "lan truyền tin tức",
+    "category": "EVERYDAY",
+    "example": "Please spread the word about the concert on Saturday.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1334",
+    "index": 1334,
+    "phrase": "reliable source",
+    "vietnamese": "nguồn tin đáng tin cậy",
+    "category": "ACADEMIC",
+    "example": "You should always check that a website is a reliable source.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1335",
+    "index": 1335,
+    "phrase": "local newspaper",
+    "vietnamese": "báo địa phương",
+    "category": "EVERYDAY",
+    "example": "My dad reads the local newspaper every morning.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1336",
+    "index": 1336,
+    "phrase": "watch the news",
+    "vietnamese": "xem tin tức",
+    "category": "EVERYDAY",
+    "example": "We usually watch the news together after dinner.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1337",
+    "index": 1337,
+    "phrase": "breaking news",
+    "vietnamese": "tin nóng",
+    "category": "EVERYDAY",
+    "example": "There is breaking news about a fire in the city centre.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1338",
+    "index": 1338,
+    "phrase": "make friends with",
+    "vietnamese": "kết bạn với",
+    "category": "EVERYDAY",
+    "example": "It was easy to make friends with the other students.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1339",
+    "index": 1339,
+    "phrase": "get on well with",
+    "vietnamese": "hòa thuận với",
+    "category": "EVERYDAY",
+    "example": "I get on well with my neighbours.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1340",
+    "index": 1340,
+    "phrase": "fall in love",
+    "vietnamese": "phải lòng, yêu",
+    "category": "EVERYDAY",
+    "example": "They fell in love when they were both studying in Paris.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1341",
+    "index": 1341,
+    "phrase": "get into an argument",
+    "vietnamese": "cãi vã",
+    "category": "EVERYDAY",
+    "example": "My brother and I got into an argument about the remote control.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1342",
+    "index": 1342,
+    "phrase": "make up",
+    "vietnamese": "làm lành",
+    "category": "EVERYDAY",
+    "example": "They had a fight, but I am sure they will make up soon.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1343",
+    "index": 1343,
+    "phrase": "trust someone",
+    "vietnamese": "tin tưởng ai đó",
+    "category": "EVERYDAY",
+    "example": "It takes time to trust someone you have just met.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1344",
+    "index": 1344,
+    "phrase": "rely on",
+    "vietnamese": "dựa vào, tin cậy vào",
+    "category": "EVERYDAY",
+    "example": "You can rely on me to help you move house.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1345",
+    "index": 1345,
+    "phrase": "miss someone badly",
+    "vietnamese": "nhớ ai đó rất nhiều",
+    "category": "EVERYDAY",
+    "example": "I miss my grandparents badly when I am at university.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1346",
+    "index": 1346,
+    "phrase": "lose touch",
+    "vietnamese": "mất liên lạc",
+    "category": "EVERYDAY",
+    "example": "We lost touch after she moved to another city.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1347",
+    "index": 1347,
+    "phrase": "stay in contact",
+    "vietnamese": "giữ liên lạc",
+    "category": "EVERYDAY",
+    "example": "We stay in contact by sending messages every week.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1348",
+    "index": 1348,
+    "phrase": "a long-term relationship",
+    "vietnamese": "mối quan hệ lâu dài",
+    "category": "EVERYDAY",
+    "example": "They have been in a long-term relationship for six years.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1349",
+    "index": 1349,
+    "phrase": "introduce yourself",
+    "vietnamese": "tự giới thiệu",
+    "category": "EVERYDAY",
+    "example": "At the start of the course, we introduced ourselves to the group.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1350",
+    "index": 1350,
+    "phrase": "a piece of advice",
+    "vietnamese": "một lời khuyên",
+    "category": "EVERYDAY",
+    "example": "My teacher gave me a piece of advice about exams.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1351",
+    "index": 1351,
+    "phrase": "follow advice",
+    "vietnamese": "làm theo lời khuyên",
+    "category": "EVERYDAY",
+    "example": "If you had followed my advice, you would not be so tired.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1352",
+    "index": 1352,
+    "phrase": "miss the chance",
+    "vietnamese": "bỏ lỡ cơ hội",
+    "category": "EVERYDAY",
+    "example": "Do not miss the chance to see this beautiful place.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1353",
+    "index": 1353,
+    "phrase": "a once-in-a-lifetime experience",
+    "vietnamese": "trải nghiệm chỉ có một lần trong đời",
+    "category": "EVERYDAY",
+    "example": "Seeing the northern lights was a once-in-a-lifetime experience.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1354",
+    "index": 1354,
+    "phrase": "have a great time",
+    "vietnamese": "có khoảng thời gian tuyệt vời",
+    "category": "EVERYDAY",
+    "example": "We had a great time at the beach last summer.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1355",
+    "index": 1355,
+    "phrase": "go sightseeing",
+    "vietnamese": "đi tham quan",
+    "category": "EVERYDAY",
+    "example": "On the first day, we went sightseeing in the old town.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1356",
+    "index": 1356,
+    "phrase": "travel light",
+    "vietnamese": "đi du lịch gọn nhẹ",
+    "category": "EVERYDAY",
+    "example": "I always try to travel light with just one small bag.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1359",
+    "index": 1359,
+    "phrase": "in a hurry",
+    "vietnamese": "vội vã",
+    "category": "EVERYDAY",
+    "example": "She left the house in a hurry and forgot her keys.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1360",
+    "index": 1360,
+    "phrase": "a bit of a surprise",
+    "vietnamese": "hơi bất ngờ",
+    "category": "EVERYDAY",
+    "example": "The news about his new job was a bit of a surprise.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1361",
+    "index": 1361,
+    "phrase": "to my surprise",
+    "vietnamese": "tôi ngạc nhiên là",
+    "category": "IDIOMS",
+    "example": "To my surprise, the exam was much easier than I expected.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1362",
+    "index": 1362,
+    "phrase": "sooner or later",
+    "vietnamese": "sớm muộn gì",
+    "category": "IDIOMS",
+    "example": "Sooner or later, you will have to talk to him.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1363",
+    "index": 1363,
+    "phrase": "by accident",
+    "vietnamese": "tình cờ, vô tình",
+    "category": "IDIOMS",
+    "example": "I broke the window by accident while playing football.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1364",
+    "index": 1364,
+    "phrase": "on purpose",
+    "vietnamese": "cố ý",
+    "category": "IDIOMS",
+    "example": "I am sure he did not break the cup on purpose.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1365",
+    "index": 1365,
+    "phrase": "in a good mood",
+    "vietnamese": "tâm trạng tốt",
+    "category": "IDIOMS",
+    "example": "My boss was in a good mood after the meeting.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1367",
+    "index": 1367,
+    "phrase": "once upon a time",
+    "vietnamese": "ngày xửa ngày xưa",
+    "category": "IDIOMS",
+    "example": "Once upon a time, there was a king who loved music.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1368",
+    "index": 1368,
+    "phrase": "look forward to",
+    "vietnamese": "mong chờ",
+    "category": "IDIOMS",
+    "example": "I am looking forward to meeting your family next week.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1369",
+    "index": 1369,
+    "phrase": "keep an open mind",
+    "vietnamese": "giữ tư tưởng cởi mở",
+    "category": "IDIOMS",
+    "example": "Try to keep an open mind when you hear a new idea.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1370",
+    "index": 1370,
+    "phrase": "make up your mind",
+    "vietnamese": "quyết định",
+    "category": "IDIOMS",
+    "example": "I cannot make up my mind about which phone to buy.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1371",
+    "index": 1371,
+    "phrase": "give it a try",
+    "vietnamese": "thử xem",
+    "category": "IDIOMS",
+    "example": "I have never played chess, but I will give it a try.",
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "colloc-1372",
+    "index": 1372,
+    "phrase": "keep your promise",
+    "vietnamese": "giữ lời hứa",
+    "category": "EVERYDAY",
+    "example": "A good friend always keeps their promise to you.",
+    "cefrLevel": "B1"
   }
 ]
