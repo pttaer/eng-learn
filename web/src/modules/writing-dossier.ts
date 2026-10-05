@@ -453,8 +453,10 @@ export class WritingDossier {
         StorageManager.setCardState(item.id, nextState);
 
         // Update Constellation Tree Mastery for Writing Branch
-        const currentMastery = SkillTreeEngine.getNodeMasteryPct('wri-1');
-        SkillTreeEngine.setNodeMasteryPct('wri-1', Math.min(100, currentMastery + 5));
+        const node = SkillTreeEngine.nodeForLevel('writing', this.activeLevel);
+        if (node) {
+          SkillTreeEngine.setNodeMasteryPct(node.id, Math.min(100, SkillTreeEngine.getNodeMasteryPct(node.id) + 5));
+        }
 
         if (this.currentIndex < this.items.length - 1) {
           this.currentIndex++;

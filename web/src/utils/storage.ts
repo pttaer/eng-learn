@@ -1,4 +1,5 @@
 import { Cefr, isCefr } from '../core/cefr';
+import { SKILL_BRANCHES } from '../core/skill-tree-data';
 import { SRSCardState } from '../core/srs-engine';
 
 export interface AppStorageState {
@@ -63,6 +64,7 @@ export class StorageManager {
       }
 
       const parsed = JSON.parse(raw) as Partial<AppStorageState>;
+      if (!isCefr(parsed.learnerLevel)) this.seedLegacyTreeProgress(parsed);
       this.cachedState = {
         ...DEFAULT_STATE,
         ...parsed,
@@ -77,6 +79,18 @@ export class StorageManager {
       console.error('[STORAGE] Failed to parse localStorage state, resetting to default.', err);
       this.cachedState = { ...DEFAULT_STATE };
       return this.cachedState;
+    }
+  }
+
+  // v1 users saw the five B2-C2 tiers with default progress (tier 1 = 85, tier 2 = 60); freeze that so the new
+  // lower tiers do not lock them out of what they had unlocked
+  private static seedLegacyTreeProgress(parsed: any): void {
+    const progress = parsed.treeProgress || (parsed.treeProgress = {});
+    for (const branch of Object.values(SKILL_BRANCHES)) {
+      for (const node of branch.nodes) {
+        const legacyTier = node.level - 3;
+        if (legacyTier >= 1 && progress[node.id] === undefined) progress[node.id] = legacyTier === 1 ? 85 : legacyTier === 2 ? 60 : 0;
+      }
     }
   }
 
@@ -192,6 +206,7 @@ export class StorageManager {
     try {
       const parsed = JSON.parse(jsonString) as AppStorageState;
       if (parsed && typeof parsed === 'object' && parsed.cardStates) {
+        if (!isCefr(parsed.learnerLevel)) this.seedLegacyTreeProgress(parsed);
         this.saveState({
           ...DEFAULT_STATE,
           ...parsed,

@@ -195,7 +195,7 @@ export class SkillTreeView {
     // Connect top Level 5 nodes of all branches to the C2 SUMMIT Apex (500, 35)
     const summitPxX = 500;
     const summitPxY = 35;
-    for (const node of nodes.filter(n => n.level === 5)) {
+    for (const node of nodes.filter(n => n.level === 8)) {
       linesSvg += `
         <line
           x1="${node.x * 10}" y1="${node.y * 7}"

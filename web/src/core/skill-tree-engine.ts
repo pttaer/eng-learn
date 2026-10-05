@@ -1,5 +1,6 @@
-import { SKILL_BRANCHES, SkillNode } from './skill-tree-data';
+import { SKILL_BRANCHES, SkillNode, BranchId } from './skill-tree-data';
 import { StorageManager } from '../utils/storage';
+import { Cefr, cefrIndex } from './cefr';
 
 export type NodeStatus = 'locked' | 'unlocked' | 'mastered';
 
@@ -20,6 +21,11 @@ export class SkillTreeEngine {
     return null;
   }
 
+  /** The branch's first node at a CEFR level: the one practice at that level should advance. */
+  public static nodeForLevel(branchId: BranchId, level: Cefr): SkillNode | null {
+    return SKILL_BRANCHES[branchId].nodes.find(n => n.cefrLevel === level) ?? null;
+  }
+
   public static getAllNodes(): SkillNode[] {
     const list: SkillNode[] = [];
     for (const branch of Object.values(SKILL_BRANCHES)) {
@@ -35,16 +41,20 @@ export class SkillTreeEngine {
       return treeProgress[nodeId];
     }
 
-    // Default simulation: root Level 1 nodes start with high progress (75-85%) for C1 learners
+    // No recorded progress: derive it from the learner's CEFR level.
+    // Tiers below the learner count as mastered; the learner's own tier is unlocked and in training once its
+    // prerequisites are met; anything above stays locked.
     const node = this.findNode(nodeId);
     if (!node) return 0;
 
-    if (node.level === 1) {
-      return 85; // B2/C1 baseline learner has already mastered level 1 fundamentals
-    } else if (node.level === 2) {
-      return 60; // Currently training level 2
-    }
-    return 0;
+    const learner = StorageManager.getLearnerLevel();
+    if (cefrIndex(node.cefrLevel) < cefrIndex(learner)) return 100;
+    const prereqsMet = node.prerequisites.every(id => {
+      const pre = this.findNode(id);
+      return !!pre && this.getNodeMasteryPct(id) >= pre.masteryThreshold;
+    });
+    if (!prereqsMet) return 0;
+    return node.cefrLevel === learner ? 40 : 0;
   }
 
   public static setNodeMasteryPct(nodeId: string, pct: number): void {
