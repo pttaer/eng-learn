@@ -1,3 +1,5 @@
+import { Cefr } from '../core/cefr';
+import { levelsWithContent, defaultLevel, levelChipsHtml } from '../core/level-filter';
 import { icon } from '../utils/icons';
 import { AtomicCard } from '../core/atomic-card';
 import { SRSEngine } from '../core/srs-engine';
@@ -13,6 +15,7 @@ export interface CollocationItem {
   vietnamese: string;
   category: 'EVERYDAY' | 'BUSINESS' | 'ACADEMIC' | 'IDIOMS';
   example?: string;
+  cefrLevel: Cefr;
 }
 
 export type CollocationViewMode = 'drill' | 'dictionary';
@@ -22,6 +25,7 @@ export class CollocationsDossier {
   private currentList: CollocationItem[] = [];
   private currentIndex: number = 0;
   private activeCategory: string = 'DUE';
+  private activeLevel: Cefr | 'ALL';
   private searchQuery: string = '';
   private currentCardHandle: any = null;
   private viewMode: CollocationViewMode = 'drill';
@@ -32,7 +36,13 @@ export class CollocationsDossier {
   constructor() {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-collocations interactive';
+    this.activeLevel = defaultLevel(collocationsData as CollocationItem[]);
     this.filterCards();
+    window.addEventListener('learner-level-change', () => {
+      this.activeLevel = defaultLevel(collocationsData as CollocationItem[]);
+      this.filterCards();
+      if (this.container.isConnected) this.render();
+    });
   }
 
   public playAudio(text: string): void {
@@ -53,12 +63,14 @@ export class CollocationsDossier {
     let list: CollocationItem[] = [];
 
     if (this.viewMode === 'drill' && this.activeCategory === 'DUE') {
+      // Due reviews span every level: raising or lowering the level never hides a scheduled card
       const states = StorageManager.loadState().cardStates;
       list = SRSEngine.getDueCards(rawDeck, states, 20);
-    } else if (this.activeCategory !== 'ALL' && this.activeCategory !== 'DUE') {
-      list = rawDeck.filter(item => item.category === this.activeCategory);
     } else {
-      list = [...rawDeck];
+      list = rawDeck.filter(item =>
+        (this.activeLevel === 'ALL' || item.cefrLevel === this.activeLevel) &&
+        (this.activeCategory === 'ALL' || this.activeCategory === 'DUE' || item.category === this.activeCategory)
+      );
     }
 
     if (this.searchQuery.trim().length > 0) {
@@ -75,28 +87,37 @@ export class CollocationsDossier {
   }
 
   public render(): HTMLElement {
+    const total = (collocationsData as CollocationItem[]).length;
+    const levelChips = `<button class="hud-btn level-tab ${this.activeLevel === 'ALL' ? 'active' : ''}" data-cefr="ALL" aria-pressed="${this.activeLevel === 'ALL'}">All</button>`
+      + levelChipsHtml(levelsWithContent(collocationsData as CollocationItem[]), this.activeLevel === 'ALL' ? ('' as Cefr) : this.activeLevel);
     this.container.innerHTML = `
       <div class="collocations-mode-header">
         <div class="view-mode-toggle">
           <button class="hud-btn view-toggle-btn ${this.viewMode === 'drill' ? 'active' : ''}" data-view="drill">${icon('zap')} Active SRS Drill</button>
-          <button class="hud-btn view-toggle-btn ${this.viewMode === 'dictionary' ? 'active' : ''}" data-view="dictionary">${icon('book')} Full 1,000 Lexicon</button>
+          <button class="hud-btn view-toggle-btn ${this.viewMode === 'dictionary' ? 'active' : ''}" data-view="dictionary">${icon('book')} Full Lexicon (${total.toLocaleString()})</button>
         </div>
         <div class="lexicon-badge-summary">
-          <span class="telemetry-value">TOTAL: 1,000 COLLOCATIONS</span>
+          <span class="telemetry-value">TOTAL: ${total.toLocaleString()} COLLOCATIONS</span>
         </div>
       </div>
 
       <div class="dossier-control-bar">
         <div class="dossier-tabs">
-          ${this.viewMode === 'drill' ? `<button class="hud-btn filter-tab ${this.activeCategory === 'DUE' ? 'active' : ''}" data-cat="DUE">${icon('zap')} SRS Due (20)</button>` : ''}
-          <button class="hud-btn filter-tab ${this.activeCategory === 'ALL' ? 'active' : ''}" data-cat="ALL">All 1,000</button>
+          ${this.viewMode === 'drill' ? `<button class="hud-btn filter-tab ${this.activeCategory === 'DUE' ? 'active' : ''}" data-cat="DUE">${icon('zap')} SRS Due</button>` : ''}
+          <button class="hud-btn filter-tab ${this.activeCategory === 'ALL' ? 'active' : ''}" data-cat="ALL">All Categories</button>
           <button class="hud-btn filter-tab ${this.activeCategory === 'EVERYDAY' ? 'active' : ''}" data-cat="EVERYDAY">Everyday</button>
           <button class="hud-btn filter-tab ${this.activeCategory === 'BUSINESS' ? 'active' : ''}" data-cat="BUSINESS">Business</button>
           <button class="hud-btn filter-tab ${this.activeCategory === 'ACADEMIC' ? 'active' : ''}" data-cat="ACADEMIC">Academic</button>
           <button class="hud-btn filter-tab ${this.activeCategory === 'IDIOMS' ? 'active' : ''}" data-cat="IDIOMS">Idioms</button>
         </div>
+        <div class="control-row">
+        ${this.activeCategory === 'DUE' && this.viewMode === 'drill' ? '' : `<div class="vocab-level-selector">
+          <span class="telemetry-label" style="margin-right: 8px;">LEVEL:</span>
+          ${levelChips}
+        </div>`}
         <div class="dossier-search-wrapper">
-          <input type="search" aria-label="Search collocations" class="dossier-search-input" placeholder="SEARCH 1,000 COLLOCATIONS... (CTRL+K)" value="${this.escapeHtml(this.searchQuery)}" />
+          <input type="search" aria-label="Search collocations" class="dossier-search-input" placeholder="SEARCH COLLOCATIONS... (CTRL+K)" value="${this.escapeHtml(this.searchQuery)}" />
+        </div>
         </div>
       </div>
 
@@ -208,6 +229,15 @@ export class CollocationsDossier {
           this.filterCards();
           this.render();
         }
+      });
+    });
+
+    // Level chips
+    this.container.querySelectorAll('.level-tab').forEach(chip => {
+      chip.addEventListener('click', () => {
+        this.activeLevel = ((chip as HTMLElement).dataset.cefr as Cefr | 'ALL') || 'ALL';
+        this.filterCards();
+        this.render();
       });
     });
 

@@ -1,3 +1,5 @@
+import { Cefr } from '../core/cefr';
+import { defaultLevel, levelRowHtml, bindLevelChips } from '../core/level-filter';
 import { icon } from '../utils/icons';
 import { AtomicCard } from '../core/atomic-card';
 import { SRSEngine } from '../core/srs-engine';
@@ -9,7 +11,7 @@ export interface ReadingArticle {
   id: string;
   title: string;
   stage: string;
-  cefrLevel: string;
+  cefrLevel: Cefr;
   genre: string;
   source: string;
   wordCount: number;
@@ -320,7 +322,9 @@ const CURATED_LEXICAL_DICTIONARY: Record<string, VocabItemInfo> = {
 
 export class ReadingDossier {
   private container: HTMLElement;
+  private allArticles: ReadingArticle[];
   private articles: ReadingArticle[];
+  private activeLevel: Cefr;
   private currentArticleIndex: number = 0;
   private currentPass: ReadingPass = 1;
   private miningCardIndex: number = 0;
@@ -335,7 +339,19 @@ export class ReadingDossier {
   constructor() {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-reading interactive';
-    this.articles = (readingData as any).articles as ReadingArticle[];
+    this.allArticles = (readingData as any).articles as ReadingArticle[];
+    this.activeLevel = defaultLevel(this.allArticles);
+    this.articles = this.allArticles.filter(a => a.cefrLevel === this.activeLevel);
+    window.addEventListener('learner-level-change', () => this.setLevel(defaultLevel(this.allArticles)));
+  }
+
+  private setLevel(level: Cefr): void {
+    this.activeLevel = level;
+    this.articles = this.allArticles.filter(a => a.cefrLevel === level);
+    this.currentArticleIndex = 0;
+    this.currentPass = 1;
+    this.miningCardIndex = 0;
+    if (this.container.isConnected) this.render();
   }
 
   public render(): HTMLElement {
@@ -350,6 +366,7 @@ export class ReadingDossier {
             </button>
           `).join('')}
         </div>
+        ${levelRowHtml(this.allArticles, this.activeLevel)}
         <div class="article-meta-telemetry reading-meta-telemetry">
           <span class="telemetry-value">CEFR: ${article.cefrLevel}</span>
           <span class="telemetry-value">WORDS: ${article.wordCount}</span>
@@ -380,6 +397,8 @@ export class ReadingDossier {
   }
 
   private bindEvents(): void {
+    bindLevelChips(this.container, level => this.setLevel(level));
+
     // Article tabs
     const artTabs = this.container.querySelectorAll('.article-tab');
     artTabs.forEach(tab => {

@@ -110,7 +110,7 @@ export const SKILL_BRANCHES: Record<BranchId, SkillBranch> = {
   collocations: {
     id: 'collocations',
     name: 'Lexical Precision',
-    tagline: '1,000 High-Frequency Collocations & Hubs',
+    tagline: 'High-Frequency Collocations & Hubs',
     color: '#5b5bd6',
     routeTarget: 'colloc',
     nodes: [
@@ -176,7 +176,7 @@ export const SKILL_BRANCHES: Record<BranchId, SkillBranch> = {
         level: 5,
         title: 'High Idiomatic & Stylistic Nuance',
         subtitle: 'Sophisticated Conversational Metaphor',
-        description: 'Command 1,000 collocations with native lexical selection, nuance, and effortless retrieval speed.',
+        description: 'Command the full collocation vault with native lexical selection, nuance, and effortless retrieval speed.',
         cefrLevel: 'C2',
         routeTarget: 'colloc',
         prerequisites: ['col-4'],

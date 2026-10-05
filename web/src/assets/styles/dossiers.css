@@ -3398,7 +3398,7 @@ html[data-motion="reduce"] {
 }
 
 .dossier-workspace > .dossier-nav-bar {
-  width: var(--card-width-fluid);
+  width: min(var(--card-width-fluid), 100%);
   max-width: 760px;
   box-sizing: border-box;
 }
@@ -3407,7 +3407,8 @@ html[data-motion="reduce"] {
 
 /* Grammar and vocab: mode tabs and level chips each get their own row instead of wrapping side by side */
 .dossier-control-bar:has(> .grammar-level-selector),
-.dossier-control-bar:has(> .vocab-level-selector) {
+.dossier-control-bar:has(> .vocab-level-selector),
+.dossier-control-bar:has(> .control-row) {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -3424,3 +3425,16 @@ html[data-motion="reduce"] {
 
 /* Every view starts at the same top edge instead of floating to the vertical centre */
 .dossier-workspace { justify-content: flex-start; }
+
+/* Level chips on the left, search on the right, one row (wraps on narrow screens) */
+.control-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-8) var(--space-16);
+  width: 100%;
+}
+
+.control-row .dossier-search-wrapper { margin-left: auto; }
+.control-row .dossier-search-wrapper:only-child { margin-left: 0; }

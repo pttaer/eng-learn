@@ -1,3 +1,5 @@
+import { Cefr } from '../core/cefr';
+import { defaultLevel, levelRowHtml, bindLevelChips } from '../core/level-filter';
 import { icon } from '../utils/icons';
 import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
@@ -12,6 +14,7 @@ export interface WritingItem {
   title: string;
   question: string;
   mode: string;
+  cefrLevel: Cefr;
   register: string;
   masterSentence: string;
   meal: {
@@ -108,7 +111,9 @@ export type CopyworkStep = 'analyze' | 'type' | 'diff';
 
 export class WritingDossier {
   private container: HTMLElement;
+  private allItems: WritingItem[] = [];
   private items: WritingItem[] = [];
+  private activeLevel: Cefr;
   private currentIndex: number = 0;
   private currentStep: CopyworkStep = 'analyze';
   private typedContent: string = '';
@@ -120,7 +125,20 @@ export class WritingDossier {
   constructor() {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-writing interactive';
-    this.items = (drillsData as any).writing || [];
+    this.allItems = (drillsData as any).writing || [];
+    this.activeLevel = defaultLevel(this.allItems);
+    this.items = this.allItems.filter(i => i.cefrLevel === this.activeLevel);
+    window.addEventListener('learner-level-change', () => this.setLevel(defaultLevel(this.allItems)));
+  }
+
+  private setLevel(level: Cefr): void {
+    this.clearTimer();
+    this.activeLevel = level;
+    this.items = this.allItems.filter(i => i.cefrLevel === level);
+    this.currentIndex = 0;
+    this.currentStep = 'analyze';
+    this.typedContent = '';
+    if (this.container.isConnected) this.render();
   }
 
   public render(): HTMLElement {
@@ -138,6 +156,7 @@ export class WritingDossier {
           <div style="display: flex; align-items: center; gap: 12px;">
             <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">[PILLAR 03 // FRANKLIN COPYWORK]</span>
             <span class="hud-status-badge">REGISTER: ${item.register}</span>
+            ${levelRowHtml(this.allItems, this.activeLevel)}
           </div>
           <div class="step-indicator" style="display: flex; gap: 8px; font-family: var(--font-mono); font-size: 11px;">
             <span class="${this.currentStep === 'analyze' ? 'active-step' : ''}">1. ANALYZE</span>
@@ -154,7 +173,7 @@ export class WritingDossier {
         </div>
 
         <!-- Bottom Navigation & Counter -->
-        <div class="dossier-nav-bar" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-hairline); padding-top: 16px; margin-top: 12px;">
+        <div class="dossier-nav-bar" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-hairline); padding-top: var(--space-16); width: 100%; max-width: none; box-sizing: border-box;">
           <button class="hud-btn nav-btn-prev" ${this.currentIndex === 0 ? 'disabled' : ''}>${icon('arrowLeft')} Prev Prompt</button>
           <span class="telemetry-value card-counter" style="font-family: var(--font-mono); font-size: 13px;">
             PROMPT ${this.currentIndex + 1} / ${this.items.length}
@@ -336,6 +355,8 @@ export class WritingDossier {
   }
 
   private bindEvents(item: WritingItem): void {
+    bindLevelChips(this.container, level => this.setLevel(level));
+
     // Navigation prev / next
     this.container.querySelector('.nav-btn-prev')?.addEventListener('click', () => {
       if (this.currentIndex > 0) {

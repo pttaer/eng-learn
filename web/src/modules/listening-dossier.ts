@@ -1,3 +1,5 @@
+import { Cefr } from '../core/cefr';
+import { defaultLevel, levelRowHtml, bindLevelChips } from '../core/level-filter';
 import { AtomicCard } from '../core/atomic-card';
 import { icon } from '../utils/icons';
 import { SRSEngine } from '../core/srs-engine';
@@ -7,7 +9,9 @@ import listeningData from '../assets/data/listening.json';
 
 export class ListeningDossier {
   private container: HTMLElement;
+  private allPassages: any[] = [];
   private passages: any[] = [];
+  private activeLevel: Cefr;
   private currentIndex: number = 0;
   private currentCardHandle: any = null;
   public onBatchComplete?: () => void;
@@ -15,7 +19,19 @@ export class ListeningDossier {
   constructor() {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-listening interactive';
-    this.passages = (listeningData as any).samplePassages || [];
+    this.allPassages = (listeningData as any).samplePassages || [];
+    this.activeLevel = defaultLevel(this.allPassages);
+    this.applyLevel();
+    window.addEventListener('learner-level-change', () => {
+      this.activeLevel = defaultLevel(this.allPassages);
+      this.applyLevel();
+      if (this.container.isConnected) this.render();
+    });
+  }
+
+  private applyLevel(): void {
+    this.passages = this.allPassages.filter(p => p.cefrLevel === this.activeLevel);
+    this.currentIndex = 0;
   }
 
   public render(): HTMLElement {
@@ -24,6 +40,7 @@ export class ListeningDossier {
         <div class="dossier-tabs">
           <span class="telemetry-label">Pillar 03 · Active Transcription & Phonetics</span>
         </div>
+        ${levelRowHtml(this.allPassages, this.activeLevel)}
         <div class="dossier-status-pill">
           <span class="telemetry-value">3-PASS ACTIVE PROTOCOL</span>
         </div>
@@ -42,6 +59,12 @@ export class ListeningDossier {
   }
 
   private bindEvents(): void {
+    bindLevelChips(this.container, level => {
+      this.activeLevel = level;
+      this.applyLevel();
+      this.render();
+    });
+
     this.container.querySelector('.nav-btn-prev')?.addEventListener('click', () => {
       if (this.currentIndex > 0) {
         this.currentIndex -= 1;

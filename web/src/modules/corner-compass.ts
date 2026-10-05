@@ -38,7 +38,7 @@ export class CornerCompass {
           <span class="compass-item-code">05</span>
           <span class="compass-item-label">VOCAB</span>
         </button>
-        <button class="compass-menu-item" data-route="colloc" title="1,000 Collocations Vault">
+        <button class="compass-menu-item" data-route="colloc" title="Collocations Vault">
           <span class="compass-item-code">06</span>
           <span class="compass-item-label">COLLOC</span>
         </button>

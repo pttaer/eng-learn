@@ -1,3 +1,5 @@
+import { Cefr } from '../core/cefr';
+import { defaultLevel, levelRowHtml, bindLevelChips } from '../core/level-filter';
 import { AtomicCard } from '../core/atomic-card';
 import { icon } from '../utils/icons';
 import { SRSEngine } from '../core/srs-engine';
@@ -30,7 +32,9 @@ export interface RoundPerformance {
 
 export class SpeakingDossier {
   private container: HTMLElement;
+  private allItems: SpeakingItem[] = [];
   private items: SpeakingItem[] = [];
+  private activeLevel: Cefr;
   private currentIndex: number = 0;
   private currentCardHandle: any = null;
 
@@ -56,10 +60,24 @@ export class SpeakingDossier {
   constructor() {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-speaking interactive';
-    this.items = (drillsData as any).speaking || [];
+    this.allItems = (drillsData as any).speaking || [];
+    this.activeLevel = defaultLevel(this.allItems as any[]);
+    this.items = this.allItems.filter((i: any) => i.cefrLevel === this.activeLevel);
+    window.addEventListener('learner-level-change', () => {
+      this.activeLevel = defaultLevel(this.allItems as any[]);
+      this.setLevel(this.activeLevel);
+    });
 
     this.acousticEngine = new AcousticEngine();
     this.collocationSpotter = new CollocationSpotter();
+  }
+
+  private setLevel(level: Cefr): void {
+    this.activeLevel = level;
+    this.resetPromptState();
+    this.items = this.allItems.filter((i: any) => i.cefrLevel === level);
+    this.currentIndex = 0;
+    if (this.container.isConnected) this.render();
   }
 
   public render(): HTMLElement {
@@ -68,8 +86,9 @@ export class SpeakingDossier {
         <div class="dossier-tabs">
           <span class="telemetry-label">[PILLAR 04 // ACOUSTIC VOICE STUDIO: NATION 4-3-2 MATRIX]</span>
         </div>
+        ${levelRowHtml(this.allItems as any[], this.activeLevel)}
         <div class="dossier-status-pill">
-          <span class="telemetry-value">${this.items.length} HIGH-INTENSITY PROMPTS</span>
+          <span class="telemetry-value">${this.items.length} PROMPTS</span>
         </div>
       </div>
       <div class="dossier-card-slot"></div>
@@ -86,6 +105,8 @@ export class SpeakingDossier {
   }
 
   private bindEvents(): void {
+    bindLevelChips(this.container, level => this.setLevel(level));
+
     this.container.querySelector('.nav-btn-prev')?.addEventListener('click', () => {
       if (this.currentIndex > 0) {
         this.resetPromptState();

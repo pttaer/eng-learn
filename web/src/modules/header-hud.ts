@@ -1,3 +1,4 @@
+import collocationsData from '../assets/data/collocations.json';
 import { Cefr, CEFR_ORDER, CEFR_LABELS } from '../core/cefr';
 import { icon } from '../utils/icons';
 import { StorageManager } from '../utils/storage';
@@ -56,7 +57,7 @@ export class HeaderHUD {
 
   public render(): void {
     const state = StorageManager.loadState();
-    const stats = SRSEngine.calculateStats(1000, state.cardStates);
+    const stats = SRSEngine.calculateStats(collocationsData.length, state.cardStates);
     const isMuted = AudioSynthesizer.isMute();
     const isTree = this.currentRoute === 'tree' || this.currentRoute === 'singularity';
     const progression = ProgressionEngine.getState();

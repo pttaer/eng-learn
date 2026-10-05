@@ -19,3 +19,14 @@ export function levelChipsHtml(levels: Cefr[], active: Cefr): string {
     .map(l => `<button class="hud-btn level-tab ${l === active ? 'active' : ''}" data-cefr="${l}" aria-pressed="${l === active}">${l}</button>`)
     .join('');
 }
+
+export function bindLevelChips(root: HTMLElement, onPick: (level: Cefr) => void): void {
+  root.querySelectorAll('.level-tab').forEach(chip => {
+    chip.addEventListener('click', () => onPick((chip as HTMLElement).dataset.cefr as Cefr));
+  });
+}
+
+/** Chip row markup shared by the pillar control bars. */
+export function levelRowHtml(items: Leveled[], active: Cefr): string {
+  return `<div class="vocab-level-selector"><span class="telemetry-label" style="margin-right: 8px;">LEVEL:</span>${levelChipsHtml(levelsWithContent(items), active)}</div>`;
+}
