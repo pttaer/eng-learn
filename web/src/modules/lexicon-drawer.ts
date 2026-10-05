@@ -226,6 +226,7 @@ export class LexiconDrawer {
     this.container.setAttribute('aria-modal', 'true');
     this.container.setAttribute('aria-label', 'Lexicon Word Details');
     this.container.setAttribute('aria-hidden', 'true');
+    this.container.inert = true;
 
     this.container.innerHTML = `
       <div class="lexicon-drawer-header">
@@ -484,6 +485,7 @@ export class LexiconDrawer {
     this.backdrop.setAttribute('aria-hidden', 'false');
     this.container.classList.add('open');
     this.container.setAttribute('aria-hidden', 'false');
+    this.container.inert = false;
 
     // Accessibility: shift focus into close button
     setTimeout(() => {
@@ -504,6 +506,7 @@ export class LexiconDrawer {
     this.backdrop.setAttribute('aria-hidden', 'true');
     this.container.classList.remove('open');
     this.container.setAttribute('aria-hidden', 'true');
+    this.container.inert = true;
 
     if (this.previousActiveElement && typeof this.previousActiveElement.focus === 'function') {
       try {

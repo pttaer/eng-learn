@@ -267,6 +267,7 @@ export class AtomicCard {
 
     const onPointerMove = (e: PointerEvent) => {
       if (e.pointerType === 'touch') return; // Do not apply parallax gyro tilt on touch screens
+      if (document.documentElement.getAttribute('data-motion') === 'reduce') return;
       if (tiltRaf) cancelAnimationFrame(tiltRaf);
 
       tiltRaf = requestAnimationFrame(() => {

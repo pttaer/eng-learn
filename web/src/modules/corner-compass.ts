@@ -82,6 +82,7 @@ export class CornerCompass {
       trigger.setAttribute('role', 'button');
       trigger.setAttribute('aria-label', 'Toggle 7-Pillar Radial Quick Navigation');
       trigger.setAttribute('aria-expanded', 'false');
+      trigger.setAttribute('aria-haspopup', 'true');
       trigger.setAttribute('tabindex', '0');
 
       // 44x44px+ touch hitbox acquisition with tactile touch feedback

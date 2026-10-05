@@ -100,7 +100,7 @@ export class HeaderHUD {
         <button class="hud-btn btn-zen-toggle ${ZenMode.isZen() ? 'active' : ''}" title="Toggle Zen Immersion Mode (Hotkey: Z)" aria-label="Toggle Zen Immersion Mode" aria-pressed="${ZenMode.isZen()}">${HeaderHUD.zenLabel(ZenMode.isZen())}</button>
         <button class="hud-btn btn-theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">${this.themeLabel()}</button>
         <button class="hud-btn btn-launch-tour" title="Launch Interactive Game Tour" aria-label="Launch Game Tour">${icon('compass')}<span class="btn-label"> Tour</span></button>
-        <button class="hud-btn btn-sound-toggle" title="Toggle audio mute" aria-label="Toggle audio mute">${HeaderHUD.soundLabel(isMuted)}</button>
+        <button class="hud-btn btn-sound-toggle" title="Toggle audio mute" aria-label="Toggle audio mute" aria-pressed="${isMuted}">${HeaderHUD.soundLabel(isMuted)}</button>
         <button class="hud-btn btn-settings" title="Settings & Data Management" aria-label="Settings">${icon('settings')}<span class="btn-label"> Settings</span></button>
       </div>
     `;
@@ -180,6 +180,7 @@ export class HeaderHUD {
       AudioSynthesizer.play('click');
       if (soundBtn) {
         soundBtn.innerHTML = HeaderHUD.soundLabel(muted);
+        soundBtn.setAttribute('aria-pressed', String(muted));
       }
     });
 

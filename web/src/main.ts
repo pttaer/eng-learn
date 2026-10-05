@@ -289,6 +289,9 @@ class App {
         return;
       }
 
+      // Space/Enter on a focused button or link activates it; never hijack it for card flips
+      if ((e.key === ' ' || e.key === 'Enter') && target?.closest?.('button, a, summary, [role="button"]')) return;
+
       // Ctrl+K opens / focuses Collocations Vault instant search
       if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();

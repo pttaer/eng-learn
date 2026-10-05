@@ -343,9 +343,9 @@ export class ReadingDossier {
 
     this.container.innerHTML = `
       <div class="dossier-control-bar">
-        <div class="dossier-tabs article-tabs">
+        <div class="dossier-tabs article-tabs" role="tablist" aria-label="Articles">
           ${this.articles.map((art, idx) => `
-            <button class="hud-btn article-tab ${idx === this.currentArticleIndex ? 'active' : ''}" data-idx="${idx}" title="${this.escapeHtml(art.title)}" aria-label="Article ${idx + 1}: ${this.escapeHtml(art.title)}">
+            <button role="tab" aria-selected="${idx === this.currentArticleIndex}" class="hud-btn article-tab ${idx === this.currentArticleIndex ? 'active' : ''}" data-idx="${idx}" title="${this.escapeHtml(art.title)}" aria-label="Article ${idx + 1}: ${this.escapeHtml(art.title)}">
               Art 0${idx + 1}: ${art.title}
             </button>
           `).join('')}
@@ -358,13 +358,13 @@ export class ReadingDossier {
       </div>
 
       <!-- Stepped 4-Pass Cognitive Scaffolding Header -->
-      <div class="reading-pass-stepper">
+      <div class="reading-pass-stepper" role="tablist" aria-label="Reading passes">
         ${READING_PASS_CONFIGS.map(cfg => {
           const isActive = cfg.pass === this.currentPass;
           const isCompleted = cfg.pass < this.currentPass;
           const statusPrefix = isCompleted ? '✓ ' : '';
           return `
-            <button class="stepper-step ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''}" data-pass="${cfg.pass}">
+            <button role="tab" aria-selected="${isActive}" class="stepper-step ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''}" data-pass="${cfg.pass}">
               <span class="step-badge">${statusPrefix}${cfg.badge}</span>
             </button>
           `;

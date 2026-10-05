@@ -641,6 +641,8 @@ export class BlitzDossier {
       if (activeEl && (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA')) {
         return;
       }
+      // Space/Enter on a focused button (e.g. header HUD) activates that button, not the drill
+      if ((e.key === ' ' || e.key === 'Enter') && activeEl?.closest('button, a')) return;
 
       if (this.state === 'READY') {
         if (e.key === ' ' || e.key === 'Enter') {

@@ -96,7 +96,7 @@ export class CollocationsDossier {
           <button class="hud-btn filter-tab ${this.activeCategory === 'IDIOMS' ? 'active' : ''}" data-cat="IDIOMS">Idioms</button>
         </div>
         <div class="dossier-search-wrapper">
-          <input type="text" class="dossier-search-input" placeholder="SEARCH 1,000 COLLOCATIONS... (CTRL+K)" value="${this.escapeHtml(this.searchQuery)}" />
+          <input type="search" aria-label="Search collocations" class="dossier-search-input" placeholder="SEARCH 1,000 COLLOCATIONS... (CTRL+K)" value="${this.escapeHtml(this.searchQuery)}" />
         </div>
       </div>
 

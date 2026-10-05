@@ -67,6 +67,7 @@ export class ProgressionModal {
 
     this.keydownHandler = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
+        e.preventDefault(); // claim Escape so the global handler does not also leave the route
         AudioSynthesizer.play('click');
         this.close();
       }
