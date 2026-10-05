@@ -1,7 +1,7 @@
 # 30-Day English Mastery Daily Practice Plan & Habit Tracker
 ### Lịch Trình Rèn Luyện & Nhật Ký Thói Quen 30 Ngày Tự Động Hóa Phản Xạ Tiếng Anh
 
-Tài liệu này là giao thức thực thi hàng ngày (daily workout protocol) tích hợp toàn diện 4 trụ cột kỹ năng từ [`reading.md`](file:///E:/Eng/reading.md), [`writing.md`](file:///E:/Eng/writing.md), [`listening.md`](file:///E:/Eng/listening.md), [`speaking.md`](file:///E:/Eng/speaking.md), và hệ thống 1.000 cụm từ từ [`collocations.md`](file:///E:/Eng/collocations.md).
+Tài liệu này là giao thức thực thi hàng ngày (daily workout protocol) tích hợp toàn diện 4 trụ cột kỹ năng từ `reading.md`, `writing.md`, `listening.md`, `speaking.md`, và hệ thống 1.000 cụm từ từ `collocations.md`.
 
 ---
 
@@ -30,36 +30,37 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
 ### TUẦN 1: THIẾT LẬP NỀN TẢNG & HIỆU CHỈNH PHẢN XẠ (DAYS 1–7)
 
 - [ ] **Day 1: Đọc Chuyên Sâu & Khởi Tạo Kho Thẻ Từ Vựng**
-  - [ ] **15m:** Thực hiện *Intensive Reading Protocol* ([`reading.md` §2](file:///E:/Eng/reading.md#2-intensive-vs-extensive-reading-methodology)) trên 1 bài xã luận 400 từ (*BBC/The Guardian*). Đánh dấu cấu trúc ngữ pháp và từ lạ.
+  - [ ] **15m:** Thực hiện *Intensive Reading Protocol* (`reading.md` §2) trên 1 bài xã luận 400 từ (*BBC/The Guardian*). Đánh dấu cấu trúc ngữ pháp và từ lạ.
   - [ ] **25m:** Đọc Extensive 8–10 trang sách phi hư cấu yêu thích. Tuân thủ *Quy tắc 98%* (không dừng lại tra từ).
-  - [ ] **10m:** Nhặt 5 mẫu câu $i+1$ tạo thẻ Anki theo chuẩn ([`reading.md` §3](file:///E:/Eng/reading.md#3-contextual-vocabulary-acquisition)).
+  - [ ] **10m:** Nhặt 5 mẫu câu $i+1$ tạo thẻ Anki theo chuẩn (`reading.md` §3).
 
 - [ ] **Day 2: Giải Mã Âm Thanh & Nuốt Âm Liên Kết**
-  - [ ] **25m:** Thực hiện *3-Pass Transcription Protocol* ([`listening.md` §3](file:///E:/Eng/listening.md#3-active-transcription-the-3-pass-audio-protocol)) trên đoạn audio Tier 2 dài 45 giây (*NPR Planet Money*).
-  - [ ] **15m:** Phân tích độ chênh lệch: xác định các hiện tượng *Catenation* (nối âm) và *Elision* (nuốt âm) xuất hiện trong bài ([`listening.md` §1](file:///E:/Eng/listening.md#1-phonetics--connected-speech-mechanics)).
+  - [ ] **25m:** Thực hiện *3-Pass Transcription Protocol* (`listening.md` §3) trên đoạn audio Tier 2 dài 45 giây (*NPR Planet Money*).
+  - [ ] **15m:** Phân tích độ chênh lệch: xác định các hiện tượng *Catenation* (nối âm) và *Elision* (nuốt âm) xuất hiện trong bài (`listening.md` §1).
   - [ ] **10m:** Ôn tập 20 thẻ Anki từ vựng và Collocations.
 
 - [ ] **Day 3: Khẩu Hình IPA & Shadowing Khởi Động**
-  - [ ] **15m:** Luyện phát âm các cặp âm ma sát răng (`/θ/` và `/ð/`) cùng dark L (`[ɫ]`) ([`speaking.md` §1](file:///E:/Eng/speaking.md#1-key-segmental-ipa-traps-for-learners)).
-  - [ ] **25m:** Áp dụng *5-Step Shadowing Pipeline* ([`speaking.md` §2](file:///E:/Eng/speaking.md#2-the-comprehensive-shadowing-protocol)) trên 1 phút phát biểu của Steve Jobs hoặc Barack Obama (tập trung bước 1 đến bước 3).
-  - [ ] **10m:** Đi bộ 10 phút áp dụng *Silent Concrete Labeling* - gọi tên sự vật hoàn toàn bằng tiếng Anh ([`speaking.md` §4](file:///E:/Eng/speaking.md#4-eliminating-translation-lag-thinking-in-english)).
+  - [ ] **15m:** Luyện phát âm các cặp âm ma sát răng (`/θ/` và `/ð/`) cùng dark L (`[ɫ]`) (`speaking.md` §1).
+  - [ ] **25m:** Áp dụng *5-Step Shadowing Pipeline* (`speaking.md` §2) trên 1 phút phát biểu của Steve Jobs hoặc Barack Obama (tập trung bước 1 đến bước 3).
+  - [ ] **10m:** Đi bộ 10 phút áp dụng *Silent Concrete Labeling* - gọi tên sự vật hoàn toàn bằng tiếng Anh (`speaking.md` §4).
 
 - [ ] **Day 4: Tái Cấu Trúc Đoạn Văn & Nắm Bắt Trục Động Từ MAKE vs. DO**
-  - [ ] **20m:** Nghiên cứu kỹ bảng so sánh *Make vs. Do* ([`collocations.md`](file:///E:/Eng/collocations.md#1-core-action--everyday-verbs-items-1250)). Học thuộc mục 1–30 trong danh sách.
-  - [ ] **25m:** Viết 1 đoạn văn chuẩn mô hình MEAL ([`writing.md` §2](file:///E:/Eng/writing.md#the-peel--meal-paragraph-frameworks)) chủ đề: *"Why remote work requires disciplined routines"*. Sử dụng ít nhất 3 cụm từ *Make/Do*.
-  - [ ] **15m:** Chạy *Pass 3 & Pass 4 Self-Editing* ([`writing.md` §5](file:///E:/Eng/writing.md#5-multi-pass-self-editing-workflow)) cắt bỏ trạng từ thừa và danh từ hóa rườm rà.
+  - [ ] **20m:** Nghiên cứu kỹ bảng so sánh *Make vs. Do* (`collocations.md`). Học thuộc mục 1–30 trong danh sách.
+  - [ ] **25m:** Viết 1 đoạn văn chuẩn mô hình MEAL (`writing.md` §2) chủ đề: *"Why remote work requires disciplined routines"*. Sử dụng ít nhất 3 cụm từ *Make/Do*.
+  - [ ] **15m:** Chạy *Pass 3 & Pass 4 Self-Editing* (`writing.md` §5) cắt bỏ trạng từ thừa và danh từ hóa rườm rà.
 
 - [ ] **Day 5: Bài Tập Tăng Tốc Fluency 4-3-2 & Spontaneous Jamming**
-  - [ ] **20m:** Thực hiện *Paul Nation 4-3-2 Speaking Drill* ([`speaking.md` §3](file:///E:/Eng/speaking.md#the-famous-4-3-2-speaking-drill)) về chủ đề: *"The most impactful book or article I have ever read"*.
+  - [ ] **20m:** Thực hiện *Paul Nation 4-3-2 Speaking Drill* (`speaking.md` §3) về chủ đề: *"The most impactful book or article I have ever read"*.
   - [ ] **15m:** Chạy *2-Minute Impromptu Jamming* với 1 chủ đề ngẫu nhiên. Áp dụng kỹ thuật nói vòng (circumlocution).
   - [ ] **10m:** Ôn tập thẻ Anki Collocations.
 
 - [ ] **Day 6: Nghe Nhìn Đắm Chìm & Bẫy Dịch Thuật Tiếng Việt**
-  - [ ] **30m:** Nghe 1 tập podcast dài 30 phút ở Tier 3 (*Radiolab* hoặc *In Our Time*) với tốc độ 1.0x không phụ đề ([`listening.md` §4](file:///E:/Eng/listening.md#tier-3-narrative-non-fiction--audiobooks)).
-  - [ ] **20m:** Rà soát mục *Common Learner Traps & Vietnamese Interference* ([`collocations.md` §5](file:///E:/Eng/collocations.md#5-common-learner-traps--vietnamese-interference-bẫy-dịch-thuật--giao-thoa-việt---anh)), ghi nhớ 10 lỗi dịch từng chữ kinh điển.
+  - [ ] **30m:** Nghe 1 tập podcast dài 30 phút ở Tier 3 (*Radiolab* hoặc *In Our Time*) với tốc độ 1.0x không phụ đề (`listening.md` §4).
+  - [ ] **20m:** Rà soát mục *Common Learner Traps & Vietnamese Interference* (`collocations.md` §5), ghi nhớ 10 lỗi dịch từng chữ kinh điển.
+  - [ ] **10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay.
 
 - [ ] **Day 7: Điểm Kiểm Tra Tuần 1 (Weekly Benchmark 1)**
-  - [ ] **25m:** Tự ghi âm bài nói 3 phút phân tích một xu hướng công nghệ hoặc kinh tế. Chấm điểm theo thang 20 điểm ([`speaking.md` §5](file:///E:/Eng/speaking.md#5-self-recording-evaluation-benchmarks--rubric)).
+  - [ ] **25m:** Tự ghi âm bài nói 3 phút phân tích một xu hướng công nghệ hoặc kinh tế. Chấm điểm theo thang 20 điểm (`speaking.md` §5).
   - [ ] **20m:** Quét toàn bộ kho thẻ Anki đã tạo trong tuần (đảm bảo không tồn đọng thẻ chưa học).
   - [ ] **10m:** Điền số liệu vào bảng theo dõi tiến độ Tuần 1.
 
@@ -68,31 +69,32 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
 ### TUẦN 2: NÂNG CAO CÚ PHÁP & ĐỒNG BỘ ÂM THANH (DAYS 8–14)
 
 - [ ] **Day 8: Đọc Đảo Ngữ, Tách Nhánh Cú Pháp & Đào Cụm Từ TAKE/HAVE/GET**
-  - [ ] **20m:** Bài tập *Syntactic Reverse-Engineering* ([`reading.md` §4](file:///E:/Eng/reading.md#high-impact-cognitive-exercises)): Tách 3 câu phức dài 40 từ thành các mệnh đề độc lập rồi viết lại bằng liên từ khác.
-  - [ ] **20m:** Học thuộc bảng *Take vs. Have vs. Get* ([`collocations.md` §2.2](file:///E:/Eng/collocations.md#22-phân-biệt-take-vs-have-vs-get)) và mục 51–110 trong [`collocations_part1.md`](file:///E:/Eng/collocations_part1.md).
+  - [ ] **20m:** Bài tập *Syntactic Reverse-Engineering* (`reading.md` §4): Tách 3 câu phức dài 40 từ thành các mệnh đề độc lập rồi viết lại bằng liên từ khác.
+  - [ ] **20m:** Học thuộc bảng *Take vs. Have vs. Get* (`collocations.md` §2.2) và mục 51–110 trong `collocations_part1.md`.
   - [ ] **15m:** Đọc Extensive 10 trang sách chuyên môn.
 
 - [ ] **Day 9: Luyện Nghe Trọng Âm Câu (Nuclear Tonic) & Bộ Nhớ Tiếng Vang**
-  - [ ] **20m:** Thực hiện *Echoic Memory Drill* ([`listening.md` §3](file:///E:/Eng/listening.md#the-echoic-memory-drill)): Nghe 10 câu phức tạp, giữ độ trễ âm thanh trong đầu 3 giây trước khi ghi chép.
-  - [ ] **20m:** Luyện nhận diện trọng âm câu và từ hạt nhân (tonic stress) qua audio ngắn ([`speaking.md` §1](file:///E:/Eng/speaking.md#2-suprasegmental-intonation--nuclear-stress)).
+  - [ ] **20m:** Thực hiện *Echoic Memory Drill* (`listening.md` §3): Nghe 10 câu phức tạp, giữ độ trễ âm thanh trong đầu 3 giây trước khi ghi chép.
+  - [ ] **20m:** Luyện nhận diện trọng âm câu và từ hạt nhân (tonic stress) qua audio ngắn (`speaking.md` §1).
   - [ ] **10m:** Ôn tập Anki hàng ngày.
 
 - [ ] **Day 10: Shadowing Không Nhìn Kịch Bản (Blind Shadowing)**
-  - [ ] **30m:** Nâng cấp lên Bước 4 của Pipeline: *Blind Shadowing* ([`speaking.md` §2](file:///E:/Eng/speaking.md#2-the-comprehensive-shadowing-protocol)). Nhại giọng ngay khi nghe âm phát ra không cần nhìn text.
+  - [ ] **30m:** Nâng cấp lên Bước 4 của Pipeline: *Blind Shadowing* (`speaking.md` §2). Nhại giọng ngay khi nghe âm phát ra không cần nhìn text.
   - [ ] **15m:** Tập độc thoại nội tâm: *The Silent Narration Walk* trong 15 phút miêu tả cảm xúc và hành động bằng tiếng Anh.
+  - [ ] **10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay.
 
 - [ ] **Day 11: Phương Pháp Chép Phạt Benjamin Franklin (Copywork Protocol)**
-  - [ ] **30m:** Áp dụng *Benjamin Franklin Copywork Method* ([`writing.md` §4](file:///E:/Eng/writing.md#the-benjamin-franklin-copywork-method)): Chọn 1 đoạn văn 250 từ của tác giả bậc thầy (George Orwell/Joan Didion), ghi chú ý chính, cất bản gốc và tự viết lại.
+  - [ ] **30m:** Áp dụng *Benjamin Franklin Copywork Method* (`writing.md` §4): Chọn 1 đoạn văn 250 từ của tác giả bậc thầy (George Orwell/Joan Didion), ghi chú ý chính, cất bản gốc và tự viết lại.
   - [ ] **15m:** Đối chiếu từng câu với bản gốc để phát hiện sự khác biệt về động từ mạnh và nhịp điệu câu.
   - [ ] **10m:** Nhập các cụm từ đắt giá vừa phát hiện vào Anki.
 
 - [ ] **Day 12: Đột Phá Ma Trận Tính Từ + Danh Từ (Adjective + Noun)**
-  - [ ] **20m:** Học chuyên sâu bảng *Adjective + Noun Collocations* ([`collocations.md` §3.2](file:///E:/Eng/collocations.md#32-adjective--noun-collocations-tính-từ--danh-từ)) (*glaring discrepancy, viable alternative, steep learning curve...*).
+  - [ ] **20m:** Học chuyên sâu bảng *Adjective + Noun Collocations* (`collocations.md` §3.2) (*glaring discrepancy, viable alternative, steep learning curve...*).
   - [ ] **20m:** Viết 5 câu ngắn mô tả các bài toán kỹ thuật/công việc sử dụng đúng các cặp Adj+Noun vừa học.
   - [ ] **15m:** Chạy drill phản xạ 4-3-2 với chủ đề: *"A mistake that taught me a valuable lesson"*.
 
 - [ ] **Day 13: Thử Thách Nghe Đa Giọng Điệu (Accents Lab)**
-  - [ ] **30m:** Nghe 15 phút giọng Anh-Anh chuẩn RP/Estuary (*Desert Island Discs*) và 15 phút giọng Úc (*ABC Radio National*) ([`listening.md` §2](file:///E:/Eng/listening.md#2-accent-comprehension--acoustic-dialects)).
+  - [ ] **30m:** Nghe 15 phút giọng Anh-Anh chuẩn RP/Estuary (*Desert Island Discs*) và 15 phút giọng Úc (*ABC Radio National*) (`listening.md` §2).
   - [ ] **15m:** Ghi chú 5 điểm khác biệt về nguyên âm và cách phát âm âm `/r/` của từng giọng.
   - [ ] **10m:** Ôn tập thẻ Anki.
 
@@ -106,8 +108,8 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
 ### TUẦN 3: LƯU LOÁT DƯỚI ÁP LỰC & LÀM CHỦ CÁC MIỀN CHUYÊN BIỆT (DAYS 15–21)
 
 - [ ] **Day 15: Tốc Độ Đọc 300 WPM & Nhịp Điệu Chấm Đọc**
-  - [ ] **20m:** Bài tập *Speed-Pacing Drill* ([`reading.md` §4](file:///E:/Eng/reading.md#high-impact-cognitive-exercises)): Dùng ngón tay/con trỏ quét chữ với tốc độ 300 WPM trên 3 trang văn bản học thuật để triệt tiêu tiếng nói thầm trong đầu (subvocalization).
-  - [ ] **20m:** Học bảng *Verb + Noun Collocations* ([`collocations.md` §3.1](file:///E:/Eng/collocations.md#31-verb--noun-collocations-động-từ--danh-từ)) (*breach a contract, shed light on, pave the way for...*).
+  - [ ] **20m:** Bài tập *Speed-Pacing Drill* (`reading.md` §4): Dùng ngón tay/con trỏ quét chữ với tốc độ 300 WPM trên 3 trang văn bản học thuật để triệt tiêu tiếng nói thầm trong đầu (subvocalization).
+  - [ ] **20m:** Học bảng *Verb + Noun Collocations* (`collocations.md` §3.1) (*breach a contract, shed light on, pave the way for...*).
   - [ ] **15m:** Đọc Extensive 12 trang sách.
 
 - [ ] **Day 16: Chép Chính Tả Tốc Ký Tier 3 & Đối Soát Nhược Điểm**
@@ -116,26 +118,28 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
   - [ ] **10m:** Ôn thẻ Anki.
 
 - [ ] **Day 17: Đồng Bộ Thời Gian Thực (Synchronous Duet Shadowing)**
-  - [ ] **30m:** Thực hiện Bước 5: *Synchronous Duet* ([`speaking.md` §2](file:///E:/Eng/speaking.md#2-the-comprehensive-shadowing-protocol)). Nói đồng thanh cùng lúc 100% với diễn giả bản xứ, đạt độ trùng khớp ngữ điệu trên 90%.
-  - [ ] **15m:** Luyện kỹ thuật phản biện tức thì (*Opposite Perspective Rebuttal*): nêu quan điểm và tự phản bác bằng 2 câu tiếng Anh sắc bén ([`speaking.md` §4](file:///E:/Eng/speaking.md#practical-exercises-to-rewire-the-internal-monologue)).
+  - [ ] **30m:** Thực hiện Bước 5: *Synchronous Duet* (`speaking.md` §2). Nói đồng thanh cùng lúc 100% với diễn giả bản xứ, đạt độ trùng khớp ngữ điệu trên 90%.
+  - [ ] **15m:** Luyện kỹ thuật phản biện tức thì (*Opposite Perspective Rebuttal*): nêu quan điểm và tự phản bác bằng 2 câu tiếng Anh sắc bén (`speaking.md` §4).
+  - [ ] **10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay.
 
 - [ ] **Day 18: Luyện Viết Mệnh Đề Chu Kỳ (Periodic Sentences) & Giọng Văn Điều Hành**
-  - [ ] **25m:** Viết 3 câu phức dạng *Periodic Sentence* ([`writing.md` §1](file:///E:/Eng/writing.md#core-syntactic-structures)) đẩy trọng tâm thông tin về cuối câu.
-  - [ ] **20m:** Soạn 1 bản ghi nhớ phong cách BLUF (Bottom Line Up Front) giải quyết một sự cố kỹ thuật giả định ([`writing.md` §3](file:///E:/Eng/writing.md#3-stylistic-tone--register-calibration)).
-  - [ ] **15m:** Rà soát bảng Collocations chủ đề *Business, Strategy & Negotiation* ([`collocations.md` §4.1](file:///E:/Eng/collocations.md#41-business-strategy--negotiation-kinh-doanh--đàm-phán)).
+  - [ ] **25m:** Viết 3 câu phức dạng *Periodic Sentence* (`writing.md` §1) đẩy trọng tâm thông tin về cuối câu.
+  - [ ] **20m:** Soạn 1 bản ghi nhớ phong cách BLUF (Bottom Line Up Front) giải quyết một sự cố kỹ thuật giả định (`writing.md` §3).
+  - [ ] **15m:** Rà soát bảng Collocations chủ đề *Business, Strategy & Negotiation* (`collocations.md` §4.1).
 
 - [ ] **Day 19: Chế Ngự Khung Giao Tiếp & Collocations Phó Từ + Tính Từ**
-  - [ ] **20m:** Học bảng *Adverb + Adjective Collocations* ([`collocations.md` §3.3](file:///E:/Eng/collocations.md#33-adverb--adjective-collocations-phó-từ--tính-từ)) (*blatantly obvious, bitterly disappointed, fiercely competitive...*).
+  - [ ] **20m:** Học bảng *Adverb + Adjective Collocations* (`collocations.md` §3.3) (*blatantly obvious, bitterly disappointed, fiercely competitive...*).
   - [ ] **20m:** Chạy drill *2-Minute Impromptu Jamming* sử dụng ít nhất 3 cặp Adv+Adj đã học.
   - [ ] **15m:** Ôn tập Anki.
 
 - [ ] **Day 20: Thử Thách Nghe Đối Thoại Tự Nhiên Chưa Chuẩn Bị (Tier 4)**
-  - [ ] **35m:** Nghe 35 phút podcast phỏng vấn chuyên sâu chưa có kịch bản (*The Joe Rogan Experience* hoặc *Huberman Lab*) ([`listening.md` §4](file:///E:/Eng/listening.md#tier-4-spontaneous-intellectual-dialogue)).
+  - [ ] **35m:** Nghe 35 phút podcast phỏng vấn chuyên sâu chưa có kịch bản (*The Joe Rogan Experience* hoặc *Huberman Lab*) (`listening.md` §4).
   - [ ] **15m:** Tóm tắt 3 luận điểm cốt lõi của người được phỏng vấn bằng 3 câu tiếng Anh chuẩn chỉnh.
+  - [ ] **10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay.
 
 - [ ] **Day 21: Điểm Kiểm Tra Tuần 3 (Weekly Benchmark 3)**
   - [ ] **25m:** Ghi âm bài thuyết trình 4 phút không dùng giấy ghi chú. Chấm điểm theo rubric 20 điểm. So sánh sự tiến bộ với file ghi âm của Day 7.
-  - [ ] **20m:** Tổng kết toàn bộ cụm từ cố định thuộc nhóm học thuật và phản biện ([`collocations.md` §4.2](file:///E:/Eng/collocations.md#42-academic-writing--critical-thinking-học-thuật--tư-duy-phản-biện)).
+  - [ ] **20m:** Tổng kết toàn bộ cụm từ cố định thuộc nhóm học thuật và phản biện (`collocations.md` §4.2).
   - [ ] **10m:** Cập nhật bảng đo lường Tuần 3.
 
 ---
@@ -143,34 +147,39 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
 ### TUẦN 4: TINH CHỈNH ĐẲNG CẤP, TỰ NHIÊN HÓA & LÀM CHỦ PHẢN XẠ (DAYS 22–28)
 
 - [ ] **Day 22: Phê Bình Luận Điểm Bên Lề & Ma Trận Giới Từ Phức Hợp**
-  - [ ] **20m:** Đọc 1 bài tiểu luận triết học hoặc xã hội (*The Atlantic / Aeon*). Thực hiện kỹ thuật *Margin Argumentation* ghi chú dấu `+`, `-`, `?` bên lề ([`reading.md` §4](file:///E:/Eng/reading.md#high-impact-cognitive-exercises)).
-  - [ ] **25m:** Học và ứng dụng các cụm cố định giới từ: *at the expense of, in light of, by virtue of, with a view to (+V-ing)* ([`collocations.md` §3.6](file:///E:/Eng/collocations.md#36-prepositional--phrasal-collocations-cụm-cố-định-giới-từ--trạng-từ)).
+  - [ ] **20m:** Đọc 1 bài tiểu luận triết học hoặc xã hội (*The Atlantic / Aeon*). Thực hiện kỹ thuật *Margin Argumentation* ghi chú dấu `+`, `-`, `?` bên lề (`reading.md` §4).
+  - [ ] **25m:** Học và ứng dụng các cụm cố định giới từ: *at the expense of, in light of, by virtue of, with a view to (+V-ing)* (`collocations.md` §3.6).
   - [ ] **10m:** Ôn tập Anki.
 
 - [ ] **Day 23: Thử Thách Nghe Hỗn Loạn (Tier 5 Multi-Speaker Audio)**
-  - [ ] **30m:** Xem/nghe 30 phút phim truyền hình tốc độ cao hoặc talkshow tranh luận có người nói chen ngang (*Succession* hoặc *Have I Got News For You*) ([`listening.md` §4](file:///E:/Eng/listening.md#tier-5-high-speed-multi-speaker-cross-talk--colloquial-cinema)).
+  - [ ] **30m:** Xem/nghe 30 phút phim truyền hình tốc độ cao hoặc talkshow tranh luận có người nói chen ngang (*Succession* hoặc *Have I Got News For You*) (`listening.md` §4).
   - [ ] **20m:** Tua lại và chép chính tả 3 phân đoạn tranh luận nảy lửa (mỗi đoạn 15 giây).
+  - [ ] **10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay.
 
 - [ ] **Day 24: Diễn Thuyết Tự Nhiên & Biến Hóa Ngữ Điệu Cảm Xúc**
-  - [ ] **25m:** Shadowing 1 trích đoạn hùng biện có biến thiên ngữ điệu Fall-Rise ($\searrow\nearrow$) để thể hiện sự dè dặt và lịch thiệp ([`speaking.md` §1](file:///E:/Eng/speaking.md#2-suprasegmental-intonation--nuclear-stress)).
+  - [ ] **25m:** Shadowing 1 trích đoạn hùng biện có biến thiên ngữ điệu Fall-Rise ($\searrow\nearrow$) để thể hiện sự dè dặt và lịch thiệp (`speaking.md` §1).
   - [ ] **25m:** Chạy drill 4-3-2 về chủ đề kinh tế vĩ mô: *"How artificial intelligence alters the labor paradigm"*.
+  - [ ] **10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay.
 
 - [ ] **Day 25: Viết Tiểu Luận Nhanh 250 Từ & Quy Trình 4-Pass Editing Khắt Khe**
   - [ ] **25m:** Viết bài luận 250 từ trong 15 phút.
-  - [ ] **25m:** Chạy đủ 4 vòng biên tập khắt khe ([`writing.md` §5](file:///E:/Eng/writing.md#5-multi-pass-self-editing-workflow)): Cắt bỏ câu mở đầu "There is/It is", xóa 80% trạng từ đuôi *-ly*, và kiểm tra độ trôi chảy bằng cách đọc to thành tiếng.
+  - [ ] **25m:** Chạy đủ 4 vòng biên tập khắt khe (`writing.md` §5): Cắt bỏ câu mở đầu "There is/It is", xóa 80% trạng từ đuôi *-ly*, và kiểm tra độ trôi chảy bằng cách đọc to thành tiếng.
+  - [ ] **10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay.
 
 - [ ] **Day 26: Khám Phá Miền Công Nghệ & Dữ Liệu (Technology & Innovation)**
-  - [ ] **25m:** Thuần thục toàn bộ cụm từ trong bảng *Technology, Data & Innovation* ([`collocations.md` §4.5](file:///E:/Eng/collocations.md#45-technology-data--innovation-công-nghệ--đổi-mới)) (*disrupt the industry, state-of-the-art, patch vulnerabilities...*).
+  - [ ] **25m:** Thuần thục toàn bộ cụm từ trong bảng *Technology, Data & Innovation* (`collocations.md` §4.5) (*disrupt the industry, state-of-the-art, patch vulnerabilities...*).
   - [ ] **20m:** Viết một đoạn Architectural Decision Record (ADR) hoặc tóm tắt kỹ thuật ngắn sử dụng các cụm từ này.
   - [ ] **15m:** Ôn tập flashcards.
 
 - [ ] **Day 27: Nhập Vai Đàm Phán & Giao Tiếp Đỉnh Cao**
   - [ ] **30m:** Tự mô phỏng một buổi đàm phán hợp đồng 5 phút (độc thoại). Sử dụng các cụm: *drive a hard bargain, make concessions, reach a consensus, bottom line*.
   - [ ] **20m:** Đọc Extensive 15 trang tài liệu nâng cao.
+  - [ ] **10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay.
 
 - [ ] **Day 28: Điểm Kiểm Tra Tuần 4 (Weekly Benchmark 4)**
   - [ ] **30m:** Ghi âm bài nói phân tích chuyên sâu 5 phút. Tự chấm điểm theo rubric chuẩn.
-  - [ ] **20m:** Rà soát lại toàn bộ 250 cụm từ trong [`collocations_part1.md`](file:///E:/Eng/collocations_part1.md).
+  - [ ] **20m:** Rà soát lại toàn bộ 250 cụm từ trong `collocations_part1.md`.
+  - [ ] **10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay.
 
 ---
 
@@ -179,9 +188,12 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
 - [ ] **Day 29: Đại Thử Thách Tổng Hợp (The Capstone Integration Drill)**
   - [ ] **30m:** Nghe 1 bài giảng học thuật 20 phút không dừng. Vừa nghe vừa ghi chép dàn ý (Cornell note-taking).
   - [ ] **30m:** Dựa trên dàn ý vừa ghi, viết ngay 1 bản tóm tắt sắc sảo 200 từ trong vòng 20 phút; 10 phút sau dùng kỹ thuật *Read-Aloud Test* để tự sửa lỗi.
+  - [ ] **10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay.
 
 - [ ] **Day 30: Đánh Giá Toàn Diện Sau 30 Ngày & Hoạch Định Chu Kỳ Tiếp Theo**
   - [ ] **30m:** Nghe lại bản ghi âm của **Day 1 / Day 7** và so sánh trực tiếp với bản ghi âm của **Day 28**. Ghi nhận rõ sự chuyển biến về:
+  - [ ] **20m:** Hoàn tất bảng tổng kết số liệu 30 ngày và thiết lập mục tiêu cho chu kỳ 30 ngày tiếp theo.
+  - [ ] **10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay.
     - *Tốc độ phản xạ (WPM)*
     - *Độ phong phú của cụm từ đúc sẵn (Collocation density)*
     - *Khả năng tư duy trực tiếp bằng tiếng Anh không qua dịch ngầm*
@@ -239,9 +251,9 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Foundation & Reflex Calibration",
       "title": "Đọc Chuyên Sâu & Khởi Tạo Kho Thẻ Từ Vựng",
       "tasks": [
-        "**15m:** Thực hiện *Intensive Reading Protocol* ([`reading.md` §2](file:///E:/Eng/reading.md#2-intensive-vs-extensive-reading-methodology)) trên 1 bài xã luận 400 từ (*BBC/The Guardian*). Đánh dấu cấu trúc ngữ pháp và từ lạ.",
+        "**15m:** Thực hiện *Intensive Reading Protocol* (`reading.md` §2) trên 1 bài xã luận 400 từ (*BBC/The Guardian*). Đánh dấu cấu trúc ngữ pháp và từ lạ.",
         "**25m:** Đọc Extensive 8–10 trang sách phi hư cấu yêu thích. Tuân thủ *Quy tắc 98%* (không dừng lại tra từ).",
-        "**10m:** Nhặt 5 mẫu câu $i+1$ tạo thẻ Anki theo chuẩn ([`reading.md` §3](file:///E:/Eng/reading.md#3-contextual-vocabulary-acquisition))."
+        "**10m:** Nhặt 5 mẫu câu $i+1$ tạo thẻ Anki theo chuẩn (`reading.md` §3)."
       ]
     },
     {
@@ -250,8 +262,8 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Foundation & Reflex Calibration",
       "title": "Giải Mã Âm Thanh & Nuốt Âm Liên Kết",
       "tasks": [
-        "**25m:** Thực hiện *3-Pass Transcription Protocol* ([`listening.md` §3](file:///E:/Eng/listening.md#3-active-transcription-the-3-pass-audio-protocol)) trên đoạn audio Tier 2 dài 45 giây (*NPR Planet Money*).",
-        "**15m:** Phân tích độ chênh lệch: xác định các hiện tượng *Catenation* (nối âm) và *Elision* (nuốt âm) xuất hiện trong bài ([`listening.md` §1](file:///E:/Eng/listening.md#1-phonetics--connected-speech-mechanics)).",
+        "**25m:** Thực hiện *3-Pass Transcription Protocol* (`listening.md` §3) trên đoạn audio Tier 2 dài 45 giây (*NPR Planet Money*).",
+        "**15m:** Phân tích độ chênh lệch: xác định các hiện tượng *Catenation* (nối âm) và *Elision* (nuốt âm) xuất hiện trong bài (`listening.md` §1).",
         "**10m:** Ôn tập 20 thẻ Anki từ vựng và Collocations."
       ]
     },
@@ -261,9 +273,9 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Foundation & Reflex Calibration",
       "title": "Khẩu Hình IPA & Shadowing Khởi Động",
       "tasks": [
-        "**15m:** Luyện phát âm các cặp âm ma sát răng (`/θ/` và `/ð/`) cùng dark L (`[ɫ]`) ([`speaking.md` §1](file:///E:/Eng/speaking.md#1-key-segmental-ipa-traps-for-learners)).",
-        "**25m:** Áp dụng *5-Step Shadowing Pipeline* ([`speaking.md` §2](file:///E:/Eng/speaking.md#2-the-comprehensive-shadowing-protocol)) trên 1 phút phát biểu của Steve Jobs hoặc Barack Obama (tập trung bước 1 đến bước 3).",
-        "**10m:** Đi bộ 10 phút áp dụng *Silent Concrete Labeling* - gọi tên sự vật hoàn toàn bằng tiếng Anh ([`speaking.md` §4](file:///E:/Eng/speaking.md#4-eliminating-translation-lag-thinking-in-english))."
+        "**15m:** Luyện phát âm các cặp âm ma sát răng (`/θ/` và `/ð/`) cùng dark L (`[ɫ]`) (`speaking.md` §1).",
+        "**25m:** Áp dụng *5-Step Shadowing Pipeline* (`speaking.md` §2) trên 1 phút phát biểu của Steve Jobs hoặc Barack Obama (tập trung bước 1 đến bước 3).",
+        "**10m:** Đi bộ 10 phút áp dụng *Silent Concrete Labeling* - gọi tên sự vật hoàn toàn bằng tiếng Anh (`speaking.md` §4)."
       ]
     },
     {
@@ -272,9 +284,9 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Foundation & Reflex Calibration",
       "title": "Tái Cấu Trúc Đoạn Văn & Nắm Bắt Trục Động Từ MAKE vs. DO",
       "tasks": [
-        "**20m:** Nghiên cứu kỹ bảng so sánh *Make vs. Do* ([`collocations.md`](file:///E:/Eng/collocations.md#1-core-action--everyday-verbs-items-1250)). Học thuộc mục 1–30 trong danh sách.",
-        "**25m:** Viết 1 đoạn văn chuẩn mô hình MEAL ([`writing.md` §2](file:///E:/Eng/writing.md#the-peel--meal-paragraph-frameworks)) chủ đề: *\"Why remote work requires disciplined routines\"*. Sử dụng ít nhất 3 cụm từ *Make/Do*.",
-        "**15m:** Chạy *Pass 3 & Pass 4 Self-Editing* ([`writing.md` §5](file:///E:/Eng/writing.md#5-multi-pass-self-editing-workflow)) cắt bỏ trạng từ thừa và danh từ hóa rườm rà."
+        "**20m:** Nghiên cứu kỹ bảng so sánh *Make vs. Do* (`collocations.md`). Học thuộc mục 1–30 trong danh sách.",
+        "**25m:** Viết 1 đoạn văn chuẩn mô hình MEAL (`writing.md` §2) chủ đề: *\"Why remote work requires disciplined routines\"*. Sử dụng ít nhất 3 cụm từ *Make/Do*.",
+        "**15m:** Chạy *Pass 3 & Pass 4 Self-Editing* (`writing.md` §5) cắt bỏ trạng từ thừa và danh từ hóa rườm rà."
       ]
     },
     {
@@ -283,7 +295,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Foundation & Reflex Calibration",
       "title": "Bài Tập Tăng Tốc Fluency 4-3-2 & Spontaneous Jamming",
       "tasks": [
-        "**20m:** Thực hiện *Paul Nation 4-3-2 Speaking Drill* ([`speaking.md` §3](file:///E:/Eng/speaking.md#the-famous-4-3-2-speaking-drill)) về chủ đề: *\"The most impactful book or article I have ever read\"*.",
+        "**20m:** Thực hiện *Paul Nation 4-3-2 Speaking Drill* (`speaking.md` §3) về chủ đề: *\"The most impactful book or article I have ever read\"*.",
         "**15m:** Chạy *2-Minute Impromptu Jamming* với 1 chủ đề ngẫu nhiên. Áp dụng kỹ thuật nói vòng (circumlocution).",
         "**10m:** Ôn tập thẻ Anki Collocations."
       ]
@@ -294,8 +306,8 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Foundation & Reflex Calibration",
       "title": "Nghe Nhìn Đắm Chìm & Bẫy Dịch Thuật Tiếng Việt",
       "tasks": [
-        "**30m:** Nghe 1 tập podcast dài 30 phút ở Tier 3 (*Radiolab* hoặc *In Our Time*) với tốc độ 1.0x không phụ đề ([`listening.md` §4](file:///E:/Eng/listening.md#tier-3-narrative-non-fiction--audiobooks)).",
-        "**20m:** Rà soát mục *Common Learner Traps & Vietnamese Interference* ([`collocations.md` §5](file:///E:/Eng/collocations.md#5-common-learner-traps--vietnamese-interference-bẫy-dịch-thuật--giao-thoa-việt---anh)), ghi nhớ 10 lỗi dịch từng chữ kinh điển.",
+        "**30m:** Nghe 1 tập podcast dài 30 phút ở Tier 3 (*Radiolab* hoặc *In Our Time*) với tốc độ 1.0x không phụ đề (`listening.md` §4).",
+        "**20m:** Rà soát mục *Common Learner Traps & Vietnamese Interference* (`collocations.md` §5), ghi nhớ 10 lỗi dịch từng chữ kinh điển.",
         "**10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay."
       ]
     },
@@ -305,7 +317,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Foundation & Reflex Calibration",
       "title": "Điểm Kiểm Tra Tuần 1 (Weekly Benchmark 1)",
       "tasks": [
-        "**25m:** Tự ghi âm bài nói 3 phút phân tích một xu hướng công nghệ hoặc kinh tế. Chấm điểm theo thang 20 điểm ([`speaking.md` §5](file:///E:/Eng/speaking.md#5-self-recording-evaluation-benchmarks--rubric)).",
+        "**25m:** Tự ghi âm bài nói 3 phút phân tích một xu hướng công nghệ hoặc kinh tế. Chấm điểm theo thang 20 điểm (`speaking.md` §5).",
         "**20m:** Quét toàn bộ kho thẻ Anki đã tạo trong tuần (đảm bảo không tồn đọng thẻ chưa học).",
         "**10m:** Điền số liệu vào bảng theo dõi tiến độ Tuần 1."
       ]
@@ -316,8 +328,8 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Structural Complexity & Syntactic Precision",
       "title": "Đọc Đảo Ngữ, Tách Nhánh Cú Pháp & Đào Cụm Từ TAKE/HAVE/GET",
       "tasks": [
-        "**20m:** Bài tập *Syntactic Reverse-Engineering* ([`reading.md` §4](file:///E:/Eng/reading.md#high-impact-cognitive-exercises)): Tách 3 câu phức dài 40 từ thành các mệnh đề độc lập rồi viết lại bằng liên từ khác.",
-        "**20m:** Học thuộc bảng *Take vs. Have vs. Get* ([`collocations.md` §2.2](file:///E:/Eng/collocations.md#22-phân-biệt-take-vs-have-vs-get)) và mục 51–110 trong [`collocations_part1.md`](file:///E:/Eng/collocations_part1.md).",
+        "**20m:** Bài tập *Syntactic Reverse-Engineering* (`reading.md` §4): Tách 3 câu phức dài 40 từ thành các mệnh đề độc lập rồi viết lại bằng liên từ khác.",
+        "**20m:** Học thuộc bảng *Take vs. Have vs. Get* (`collocations.md` §2.2) và mục 51–110 trong `collocations_part1.md`.",
         "**15m:** Đọc Extensive 10 trang sách chuyên môn."
       ]
     },
@@ -327,8 +339,8 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Structural Complexity & Syntactic Precision",
       "title": "Luyện Nghe Trọng Âm Câu (Nuclear Tonic) & Bộ Nhớ Tiếng Vang",
       "tasks": [
-        "**20m:** Thực hiện *Echoic Memory Drill* ([`listening.md` §3](file:///E:/Eng/listening.md#the-echoic-memory-drill)): Nghe 10 câu phức tạp, giữ độ trễ âm thanh trong đầu 3 giây trước khi ghi chép.",
-        "**20m:** Luyện nhận diện trọng âm câu và từ hạt nhân (tonic stress) qua audio ngắn ([`speaking.md` §1](file:///E:/Eng/speaking.md#2-suprasegmental-intonation--nuclear-stress)).",
+        "**20m:** Thực hiện *Echoic Memory Drill* (`listening.md` §3): Nghe 10 câu phức tạp, giữ độ trễ âm thanh trong đầu 3 giây trước khi ghi chép.",
+        "**20m:** Luyện nhận diện trọng âm câu và từ hạt nhân (tonic stress) qua audio ngắn (`speaking.md` §1).",
         "**10m:** Ôn tập Anki hàng ngày."
       ]
     },
@@ -338,7 +350,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Structural Complexity & Syntactic Precision",
       "title": "Shadowing Không Nhìn Kịch Bản (Blind Shadowing)",
       "tasks": [
-        "**30m:** Nâng cấp lên Bước 4 của Pipeline: *Blind Shadowing* ([`speaking.md` §2](file:///E:/Eng/speaking.md#2-the-comprehensive-shadowing-protocol)). Nhại giọng ngay khi nghe âm phát ra không cần nhìn text.",
+        "**30m:** Nâng cấp lên Bước 4 của Pipeline: *Blind Shadowing* (`speaking.md` §2). Nhại giọng ngay khi nghe âm phát ra không cần nhìn text.",
         "**15m:** Tập độc thoại nội tâm: *The Silent Narration Walk* trong 15 phút miêu tả cảm xúc và hành động bằng tiếng Anh.",
         "**10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay."
       ]
@@ -349,7 +361,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Structural Complexity & Syntactic Precision",
       "title": "Phương Pháp Chép Phạt Benjamin Franklin (Copywork Protocol)",
       "tasks": [
-        "**30m:** Áp dụng *Benjamin Franklin Copywork Method* ([`writing.md` §4](file:///E:/Eng/writing.md#the-benjamin-franklin-copywork-method)): Chọn 1 đoạn văn 250 từ của tác giả bậc thầy (George Orwell/Joan Didion), ghi chú ý chính, cất bản gốc và tự viết lại.",
+        "**30m:** Áp dụng *Benjamin Franklin Copywork Method* (`writing.md` §4): Chọn 1 đoạn văn 250 từ của tác giả bậc thầy (George Orwell/Joan Didion), ghi chú ý chính, cất bản gốc và tự viết lại.",
         "**15m:** Đối chiếu từng câu với bản gốc để phát hiện sự khác biệt về động từ mạnh và nhịp điệu câu.",
         "**10m:** Nhập các cụm từ đắt giá vừa phát hiện vào Anki."
       ]
@@ -360,7 +372,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Structural Complexity & Syntactic Precision",
       "title": "Đột Phá Ma Trận Tính Từ + Danh Từ (Adjective + Noun)",
       "tasks": [
-        "**20m:** Học chuyên sâu bảng *Adjective + Noun Collocations* ([`collocations.md` §3.2](file:///E:/Eng/collocations.md#32-adjective--noun-collocations-tính-từ--danh-từ)) (*glaring discrepancy, viable alternative, steep learning curve...*).",
+        "**20m:** Học chuyên sâu bảng *Adjective + Noun Collocations* (`collocations.md` §3.2) (*glaring discrepancy, viable alternative, steep learning curve...*).",
         "**20m:** Viết 5 câu ngắn mô tả các bài toán kỹ thuật/công việc sử dụng đúng các cặp Adj+Noun vừa học.",
         "**15m:** Chạy drill phản xạ 4-3-2 với chủ đề: *\"A mistake that taught me a valuable lesson\"*."
       ]
@@ -371,7 +383,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Structural Complexity & Syntactic Precision",
       "title": "Thử Thách Nghe Đa Giọng Điệu (Accents Lab)",
       "tasks": [
-        "**30m:** Nghe 15 phút giọng Anh-Anh chuẩn RP/Estuary (*Desert Island Discs*) và 15 phút giọng Úc (*ABC Radio National*) ([`listening.md` §2](file:///E:/Eng/listening.md#2-accent-comprehension--acoustic-dialects)).",
+        "**30m:** Nghe 15 phút giọng Anh-Anh chuẩn RP/Estuary (*Desert Island Discs*) và 15 phút giọng Úc (*ABC Radio National*) (`listening.md` §2).",
         "**15m:** Ghi chú 5 điểm khác biệt về nguyên âm và cách phát âm âm `/r/` của từng giọng.",
         "**10m:** Ôn tập thẻ Anki."
       ]
@@ -393,8 +405,8 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Acoustic Mastery & Impromptu Jamming",
       "title": "Tốc Độ Đọc 300 WPM & Nhịp Điệu Chấm Đọc",
       "tasks": [
-        "**20m:** Bài tập *Speed-Pacing Drill* ([`reading.md` §4](file:///E:/Eng/reading.md#high-impact-cognitive-exercises)): Dùng ngón tay/con trỏ quét chữ với tốc độ 300 WPM trên 3 trang văn bản học thuật để triệt tiêu tiếng nói thầm trong đầu (subvocalization).",
-        "**20m:** Học bảng *Verb + Noun Collocations* ([`collocations.md` §3.1](file:///E:/Eng/collocations.md#31-verb--noun-collocations-động-từ--danh-từ)) (*breach a contract, shed light on, pave the way for...*).",
+        "**20m:** Bài tập *Speed-Pacing Drill* (`reading.md` §4): Dùng ngón tay/con trỏ quét chữ với tốc độ 300 WPM trên 3 trang văn bản học thuật để triệt tiêu tiếng nói thầm trong đầu (subvocalization).",
+        "**20m:** Học bảng *Verb + Noun Collocations* (`collocations.md` §3.1) (*breach a contract, shed light on, pave the way for...*).",
         "**15m:** Đọc Extensive 12 trang sách."
       ]
     },
@@ -415,8 +427,8 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Acoustic Mastery & Impromptu Jamming",
       "title": "Đồng Bộ Thời Gian Thực (Synchronous Duet Shadowing)",
       "tasks": [
-        "**30m:** Thực hiện Bước 5: *Synchronous Duet* ([`speaking.md` §2](file:///E:/Eng/speaking.md#2-the-comprehensive-shadowing-protocol)). Nói đồng thanh cùng lúc 100% với diễn giả bản xứ, đạt độ trùng khớp ngữ điệu trên 90%.",
-        "**15m:** Luyện kỹ thuật phản biện tức thì (*Opposite Perspective Rebuttal*): nêu quan điểm và tự phản bác bằng 2 câu tiếng Anh sắc bén ([`speaking.md` §4](file:///E:/Eng/speaking.md#practical-exercises-to-rewire-the-internal-monologue)).",
+        "**30m:** Thực hiện Bước 5: *Synchronous Duet* (`speaking.md` §2). Nói đồng thanh cùng lúc 100% với diễn giả bản xứ, đạt độ trùng khớp ngữ điệu trên 90%.",
+        "**15m:** Luyện kỹ thuật phản biện tức thì (*Opposite Perspective Rebuttal*): nêu quan điểm và tự phản bác bằng 2 câu tiếng Anh sắc bén (`speaking.md` §4).",
         "**10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay."
       ]
     },
@@ -426,9 +438,9 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Acoustic Mastery & Impromptu Jamming",
       "title": "Luyện Viết Mệnh Đề Chu Kỳ (Periodic Sentences) & Giọng Văn Điều Hành",
       "tasks": [
-        "**25m:** Viết 3 câu phức dạng *Periodic Sentence* ([`writing.md` §1](file:///E:/Eng/writing.md#core-syntactic-structures)) đẩy trọng tâm thông tin về cuối câu.",
-        "**20m:** Soạn 1 bản ghi nhớ phong cách BLUF (Bottom Line Up Front) giải quyết một sự cố kỹ thuật giả định ([`writing.md` §3](file:///E:/Eng/writing.md#3-stylistic-tone--register-calibration)).",
-        "**15m:** Rà soát bảng Collocations chủ đề *Business, Strategy & Negotiation* ([`collocations.md` §4.1](file:///E:/Eng/collocations.md#41-business-strategy--negotiation-kinh-doanh--đàm-phán))."
+        "**25m:** Viết 3 câu phức dạng *Periodic Sentence* (`writing.md` §1) đẩy trọng tâm thông tin về cuối câu.",
+        "**20m:** Soạn 1 bản ghi nhớ phong cách BLUF (Bottom Line Up Front) giải quyết một sự cố kỹ thuật giả định (`writing.md` §3).",
+        "**15m:** Rà soát bảng Collocations chủ đề *Business, Strategy & Negotiation* (`collocations.md` §4.1)."
       ]
     },
     {
@@ -437,7 +449,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Acoustic Mastery & Impromptu Jamming",
       "title": "Chế Ngự Khung Giao Tiếp & Collocations Phó Từ + Tính Từ",
       "tasks": [
-        "**20m:** Học bảng *Adverb + Adjective Collocations* ([`collocations.md` §3.3](file:///E:/Eng/collocations.md#33-adverb--adjective-collocations-phó-từ--tính-từ)) (*blatantly obvious, bitterly disappointed, fiercely competitive...*).",
+        "**20m:** Học bảng *Adverb + Adjective Collocations* (`collocations.md` §3.3) (*blatantly obvious, bitterly disappointed, fiercely competitive...*).",
         "**20m:** Chạy drill *2-Minute Impromptu Jamming* sử dụng ít nhất 3 cặp Adv+Adj đã học.",
         "**15m:** Ôn tập Anki."
       ]
@@ -448,7 +460,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Acoustic Mastery & Impromptu Jamming",
       "title": "Thử Thách Nghe Đối Thoại Tự Nhiên Chưa Chuẩn Bị (Tier 4)",
       "tasks": [
-        "**35m:** Nghe 35 phút podcast phỏng vấn chuyên sâu chưa có kịch bản (*The Joe Rogan Experience* hoặc *Huberman Lab*) ([`listening.md` §4](file:///E:/Eng/listening.md#tier-4-spontaneous-intellectual-dialogue)).",
+        "**35m:** Nghe 35 phút podcast phỏng vấn chuyên sâu chưa có kịch bản (*The Joe Rogan Experience* hoặc *Huberman Lab*) (`listening.md` §4).",
         "**15m:** Tóm tắt 3 luận điểm cốt lõi của người được phỏng vấn bằng 3 câu tiếng Anh chuẩn chỉnh.",
         "**10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay."
       ]
@@ -460,7 +472,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "title": "Điểm Kiểm Tra Tuần 3 (Weekly Benchmark 3)",
       "tasks": [
         "**25m:** Ghi âm bài thuyết trình 4 phút không dùng giấy ghi chú. Chấm điểm theo rubric 20 điểm. So sánh sự tiến bộ với file ghi âm của Day 7.",
-        "**20m:** Tổng kết toàn bộ cụm từ cố định thuộc nhóm học thuật và phản biện ([`collocations.md` §4.2](file:///E:/Eng/collocations.md#42-academic-writing--critical-thinking-học-thuật--tư-duy-phản-biện)).",
+        "**20m:** Tổng kết toàn bộ cụm từ cố định thuộc nhóm học thuật và phản biện (`collocations.md` §4.2).",
         "**10m:** Cập nhật bảng đo lường Tuần 3."
       ]
     },
@@ -470,8 +482,8 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Native Velocity & Cognitive Synthesis",
       "title": "Phê Bình Luận Điểm Bên Lề & Ma Trận Giới Từ Phức Hợp",
       "tasks": [
-        "**20m:** Đọc 1 bài tiểu luận triết học hoặc xã hội (*The Atlantic / Aeon*). Thực hiện kỹ thuật *Margin Argumentation* ghi chú dấu `+`, `-`, `?` bên lề ([`reading.md` §4](file:///E:/Eng/reading.md#high-impact-cognitive-exercises)).",
-        "**25m:** Học và ứng dụng các cụm cố định giới từ: *at the expense of, in light of, by virtue of, with a view to (+V-ing)* ([`collocations.md` §3.6](file:///E:/Eng/collocations.md#36-prepositional--phrasal-collocations-cụm-cố-định-giới-từ--trạng-từ)).",
+        "**20m:** Đọc 1 bài tiểu luận triết học hoặc xã hội (*The Atlantic / Aeon*). Thực hiện kỹ thuật *Margin Argumentation* ghi chú dấu `+`, `-`, `?` bên lề (`reading.md` §4).",
+        "**25m:** Học và ứng dụng các cụm cố định giới từ: *at the expense of, in light of, by virtue of, with a view to (+V-ing)* (`collocations.md` §3.6).",
         "**10m:** Ôn tập Anki."
       ]
     },
@@ -481,7 +493,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Native Velocity & Cognitive Synthesis",
       "title": "Thử Thách Nghe Hỗn Loạn (Tier 5 Multi-Speaker Audio)",
       "tasks": [
-        "**30m:** Xem/nghe 30 phút phim truyền hình tốc độ cao hoặc talkshow tranh luận có người nói chen ngang (*Succession* hoặc *Have I Got News For You*) ([`listening.md` §4](file:///E:/Eng/listening.md#tier-5-high-speed-multi-speaker-cross-talk--colloquial-cinema)).",
+        "**30m:** Xem/nghe 30 phút phim truyền hình tốc độ cao hoặc talkshow tranh luận có người nói chen ngang (*Succession* hoặc *Have I Got News For You*) (`listening.md` §4).",
         "**20m:** Tua lại và chép chính tả 3 phân đoạn tranh luận nảy lửa (mỗi đoạn 15 giây).",
         "**10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay."
       ]
@@ -492,7 +504,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Native Velocity & Cognitive Synthesis",
       "title": "Diễn Thuyết Tự Nhiên & Biến Hóa Ngữ Điệu Cảm Xúc",
       "tasks": [
-        "**25m:** Shadowing 1 trích đoạn hùng biện có biến thiên ngữ điệu Fall-Rise ($\\searrow\\nearrow$) để thể hiện sự dè dặt và lịch thiệp ([`speaking.md` §1](file:///E:/Eng/speaking.md#2-suprasegmental-intonation--nuclear-stress)).",
+        "**25m:** Shadowing 1 trích đoạn hùng biện có biến thiên ngữ điệu Fall-Rise ($\\searrow\\nearrow$) để thể hiện sự dè dặt và lịch thiệp (`speaking.md` §1).",
         "**25m:** Chạy drill 4-3-2 về chủ đề kinh tế vĩ mô: *\"How artificial intelligence alters the labor paradigm\"*.",
         "**10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay."
       ]
@@ -504,7 +516,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "title": "Viết Tiểu Luận Nhanh 250 Từ & Quy Trình 4-Pass Editing Khắt Khe",
       "tasks": [
         "**25m:** Viết bài luận 250 từ trong 15 phút.",
-        "**25m:** Chạy đủ 4 vòng biên tập khắt khe ([`writing.md` §5](file:///E:/Eng/writing.md#5-multi-pass-self-editing-workflow)): Cắt bỏ câu mở đầu \"There is/It is\", xóa 80% trạng từ đuôi *-ly*, và kiểm tra độ trôi chảy bằng cách đọc to thành tiếng.",
+        "**25m:** Chạy đủ 4 vòng biên tập khắt khe (`writing.md` §5): Cắt bỏ câu mở đầu \"There is/It is\", xóa 80% trạng từ đuôi *-ly*, và kiểm tra độ trôi chảy bằng cách đọc to thành tiếng.",
         "**10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay."
       ]
     },
@@ -514,7 +526,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "phase": "Native Velocity & Cognitive Synthesis",
       "title": "Khám Phá Miền Công Nghệ & Dữ Liệu (Technology & Innovation)",
       "tasks": [
-        "**25m:** Thuần thục toàn bộ cụm từ trong bảng *Technology, Data & Innovation* ([`collocations.md` §4.5](file:///E:/Eng/collocations.md#45-technology-data--innovation-công-nghệ--đổi-mới)) (*disrupt the industry, state-of-the-art, patch vulnerabilities...*).",
+        "**25m:** Thuần thục toàn bộ cụm từ trong bảng *Technology, Data & Innovation* (`collocations.md` §4.5) (*disrupt the industry, state-of-the-art, patch vulnerabilities...*).",
         "**20m:** Viết một đoạn Architectural Decision Record (ADR) hoặc tóm tắt kỹ thuật ngắn sử dụng các cụm từ này.",
         "**15m:** Ôn tập flashcards."
       ]
@@ -537,7 +549,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
       "title": "Điểm Kiểm Tra Tuần 4 (Weekly Benchmark 4)",
       "tasks": [
         "**30m:** Ghi âm bài nói phân tích chuyên sâu 5 phút. Tự chấm điểm theo rubric chuẩn.",
-        "**20m:** Rà soát lại toàn bộ 250 cụm từ trong [`collocations_part1.md`](file:///E:/Eng/collocations_part1.md).",
+        "**20m:** Rà soát lại toàn bộ 250 cụm từ trong `collocations_part1.md`.",
         "**10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay."
       ]
     },
