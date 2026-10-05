@@ -347,8 +347,11 @@ function compileDrills() {
   if (!fs.existsSync(dir)) return;
   const drills = { speaking: [], writing: [], rubricSummary: {} };
 
-  const speakFile = path.join(dir, 'speaking-prompts.md');
-  if (fs.existsSync(speakFile)) {
+  // speaking*.md / writing*.md: one file per level (e.g. speaking-prompts-a1.md)
+  const drillFiles = prefix => fs.readdirSync(dir).filter(f => f.startsWith(prefix) && f.endsWith('.md')).sort();
+
+  for (const speakName of drillFiles('speaking')) {
+    const speakFile = path.join(dir, speakName);
     const content = fs.readFileSync(speakFile, 'utf8').replace(/\r\n/g, '\n');
     content.split(/^##\s+/m).slice(1).forEach(sec => {
       const lines = sec.split(/\r?\n/);
@@ -373,8 +376,8 @@ function compileDrills() {
     });
   }
 
-  const writeFile = path.join(dir, 'writing-prompts.md');
-  if (fs.existsSync(writeFile)) {
+  for (const writeName of drillFiles('writing')) {
+    const writeFile = path.join(dir, writeName);
     const content = fs.readFileSync(writeFile, 'utf8').replace(/\r\n/g, '\n');
     content.split(/^##\s+/m).slice(1).forEach(sec => {
       const lines = sec.split(/\r?\n/);
@@ -573,6 +576,12 @@ function compileListening() {
   const jsonMatch = raw.match(/```json\r?\n([\s\S]*?)\r?\n```/);
   if (jsonMatch) {
     const data = JSON.parse(jsonMatch[1]);
+    // Extra levels live in passages-*.md, each with a ```json block holding a samplePassages array
+    const dir = path.join(CONTENT_DIR, 'listening');
+    for (const f of fs.readdirSync(dir).filter(f => /^passages-.*\.md$/.test(f)).sort()) {
+      const extra = fs.readFileSync(path.join(dir, f), 'utf8').replace(/\r\n/g, '\n').match(/```json\n([\s\S]*?)\n```/);
+      if (extra) data.samplePassages.push(...JSON.parse(extra[1]).samplePassages);
+    }
     fs.writeFileSync(path.join(DATA_DIR, 'listening.json'), JSON.stringify(data, null, 2), 'utf8');
     console.log(`[COMPILE] listening.json compiled.`);
   }
