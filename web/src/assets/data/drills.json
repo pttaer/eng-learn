@@ -1,6 +1,402 @@
 {
   "speaking": [
     {
+      "title": "Introduce Yourself",
+      "id": "speaking-a1-1",
+      "index": 1,
+      "mode": "A1 Short Talk (30s)",
+      "cefrLevel": "A1",
+      "prompt": "Say hello and introduce yourself. Say your name, your age and where you are from.",
+      "anchor": "My name and age → Where I am from → What I like",
+      "collocations": "my name is, I am from, nice to meet you, I like",
+      "phonetic": "Say the \"th\" in \"this\" and \"thanks\" with your tongue between your teeth."
+    },
+    {
+      "title": "My Family",
+      "id": "speaking-a1-2",
+      "index": 2,
+      "mode": "A1 Short Talk (30s)",
+      "cefrLevel": "A1",
+      "prompt": "Talk about your family. Who is in your family? What are they like?",
+      "anchor": "Who is in my family → Their names and ages → What I do with them",
+      "collocations": "there are four people, my mother, my brother, we live together",
+      "phonetic": "Say the final \"s\" in \"parents\" and \"brothers\" clearly."
+    },
+    {
+      "title": "My Daily Routine",
+      "id": "speaking-a1-3",
+      "index": 3,
+      "mode": "A1 Short Talk (30s)",
+      "cefrLevel": "A1",
+      "prompt": "Describe your day. What do you do in the morning, afternoon and evening?",
+      "anchor": "Morning (get up, eat breakfast) → Afternoon (work or school) → Evening (dinner, sleep)",
+      "collocations": "get up, have breakfast, go to work, go to bed",
+      "phonetic": "Say the \"s\" at the end of \"gets up\" and \"goes\" when you talk about he or she."
+    },
+    {
+      "title": "My Home",
+      "id": "speaking-a1-4",
+      "index": 4,
+      "mode": "A1 Short Talk (30s)",
+      "cefrLevel": "A1",
+      "prompt": "Describe your home. Say what rooms it has and what you like in it.",
+      "anchor": "Where my home is → The rooms in my home → My favourite room",
+      "collocations": "I live in, there is a, living room, my favourite room",
+      "phonetic": "Say \"there is\" and \"there are\" slowly and clearly, with a soft \"th\" sound."
+    },
+    {
+      "title": "My Favourite Food",
+      "id": "speaking-a1-5",
+      "index": 5,
+      "mode": "A1 Short Talk (30s)",
+      "cefrLevel": "A1",
+      "prompt": "Talk about your favourite food. Say what it is and when you eat it.",
+      "anchor": "My favourite food → When and where I eat it → Why I like it",
+      "collocations": "my favourite food is, I like to eat, it is delicious, for lunch",
+      "phonetic": "Say the final \"s\" in \"noodles\" and \"vegetables\" as a \"z\" sound."
+    },
+    {
+      "title": "What I Can Do",
+      "id": "speaking-a1-6",
+      "index": 6,
+      "mode": "A1 Short Talk (30s)",
+      "cefrLevel": "A1",
+      "prompt": "Say what you can do and what you cannot do. Talk about three things.",
+      "anchor": "Two things I can do → One thing I cannot do → What I want to learn",
+      "collocations": "I can, I cannot, I can swim, I want to learn",
+      "phonetic": "Say \"can\" short and soft, but say \"can't\" long and clear."
+    },
+    {
+      "title": "My Best Friend",
+      "id": "speaking-a1-7",
+      "index": 7,
+      "mode": "A1 Short Talk (30s)",
+      "cefrLevel": "A1",
+      "prompt": "Talk about your best friend. Say who he or she is and what you do together.",
+      "anchor": "Who my friend is → What my friend looks like → What we do together",
+      "collocations": "my best friend, he is tall, she has long hair, we play together",
+      "phonetic": "Say the \"h\" in \"he\", \"his\" and \"home\" with a little air from your mouth."
+    },
+    {
+      "title": "My School or My Work",
+      "id": "speaking-a1-8",
+      "index": 8,
+      "mode": "A1 Short Talk (30s)",
+      "cefrLevel": "A1",
+      "prompt": "Talk about your school or your work. Say where it is and what you do there.",
+      "anchor": "Where it is → What I do there → Who I meet there",
+      "collocations": "I go to school, I work in, every day, at nine o'clock",
+      "phonetic": "Say the \"s\" at the start of \"school\" and \"student\" with a short, clear sound."
+    },
+    {
+      "title": "My Weekend",
+      "id": "speaking-a1-9",
+      "index": 9,
+      "mode": "A1 Short Talk (30s)",
+      "cefrLevel": "A1",
+      "prompt": "Talk about your weekend. What do you do on Saturday and Sunday?",
+      "anchor": "What I do on Saturday → What I do on Sunday → Who I am with",
+      "collocations": "on Saturday, go shopping, watch TV, visit my family",
+      "phonetic": "Say the final \"s\" in \"weekends\" and \"Sundays\" clearly."
+    },
+    {
+      "title": "My Town",
+      "id": "speaking-a1-10",
+      "index": 10,
+      "mode": "A1 Short Talk (30s)",
+      "cefrLevel": "A1",
+      "prompt": "Describe your town or city. Say what places are in it and what you like.",
+      "anchor": "Where my town is → Places in my town → What I like about it",
+      "collocations": "there is a park, near my house, a big city, I like it",
+      "phonetic": "Say the \"r\" in \"park\" and \"market\" with your tongue back, not touching the roof of your mouth."
+    },
+    {
+      "title": "My Clothes and Colours",
+      "id": "speaking-a1-11",
+      "index": 11,
+      "mode": "A1 Short Talk (30s)",
+      "cefrLevel": "A1",
+      "prompt": "Say what clothes you wear today. Say the colours.",
+      "anchor": "What I wear today → The colours → My favourite clothes",
+      "collocations": "I am wearing, a blue shirt, black shoes, my favourite colour",
+      "phonetic": "Say the final \"s\" in \"clothes\" and \"shoes\" as a \"z\" sound."
+    },
+    {
+      "title": "My Pet or My Favourite Animal",
+      "id": "speaking-a1-12",
+      "index": 12,
+      "mode": "A1 Short Talk (30s)",
+      "cefrLevel": "A1",
+      "prompt": "Talk about a pet or your favourite animal. Say what it looks like and what it does.",
+      "anchor": "What animal it is → What it looks like → What it likes to do",
+      "collocations": "I have a dog, it is small, it likes to eat, it is very cute",
+      "phonetic": "Say the \"d\" at the end of \"good\" and \"friend\" with a quick touch of your tongue."
+    },
+    {
+      "title": "A Trip You Took",
+      "id": "speaking-a2-1",
+      "index": 1,
+      "mode": "A2 Short Talk (60s)",
+      "cefrLevel": "A2",
+      "prompt": "Talk about a trip you took. Where did you go, and what did you do?",
+      "anchor": "Where and when you went → What you did there → Why you liked it",
+      "collocations": "go on a trip, stay in a hotel, take photos, have a great time",
+      "phonetic": "Past -ed endings: say 'visited' as 'VIZ-i-tid', but 'walked' as 'walkt' (one sound)."
+    },
+    {
+      "title": "My Best Friend",
+      "id": "speaking-a2-2",
+      "index": 2,
+      "mode": "A2 Short Talk (60s)",
+      "cefrLevel": "A2",
+      "prompt": "Talk about your best friend. What is he or she like?",
+      "anchor": "Who the person is → What he or she looks like and is like → What you do together",
+      "collocations": "have known someone for years, be good at, spend time with, get on well with",
+      "phonetic": "Word stress: put the stress on the first part of 'FRIENDly' and 'FUNny'."
+    },
+    {
+      "title": "Last Weekend",
+      "id": "speaking-a2-3",
+      "index": 3,
+      "mode": "A2 Short Talk (60s)",
+      "cefrLevel": "A2",
+      "prompt": "Tell me about what you did last weekend.",
+      "anchor": "What you did on Saturday → What you did on Sunday → How you felt about it",
+      "collocations": "stay at home, meet friends, go shopping, watch a film",
+      "phonetic": "Past -ed endings: 'played' ends with a 'd' sound, 'cooked' ends with a 't' sound."
+    },
+    {
+      "title": "A Shop You Like",
+      "id": "speaking-a2-4",
+      "index": 4,
+      "mode": "A2 Short Talk (60s)",
+      "cefrLevel": "A2",
+      "prompt": "Talk about a shop you like. What do you buy there?",
+      "anchor": "Where the shop is → What you buy there → Why you like it",
+      "collocations": "be open until, a good price, try on clothes, pay by card",
+      "phonetic": "Weak forms: say 'a cup of tea' as 'a CUP uv TEA'; 'of' is short and quiet."
+    },
+    {
+      "title": "Plans for Next Week",
+      "id": "speaking-a2-5",
+      "index": 5,
+      "mode": "A2 Short Talk (60s)",
+      "cefrLevel": "A2",
+      "prompt": "What are you going to do next week? Talk about your plans.",
+      "anchor": "Your plan for work or study → Your plan for the evenings → Your plan for the weekend",
+      "collocations": "be going to, next week, have a meeting, visit my family",
+      "phonetic": "Weak forms: 'going to' sounds like 'gonna' in fast speech, and 'to' is short."
+    },
+    {
+      "title": "Advice for a Visitor",
+      "id": "speaking-a2-6",
+      "index": 6,
+      "mode": "A2 Short Talk (60s)",
+      "cefrLevel": "A2",
+      "prompt": "A friend wants to visit your town. Give some advice.",
+      "anchor": "The best time to come → Places to see and food to try → Things to be careful about",
+      "collocations": "you should, the best time to visit, try the local food, take an umbrella",
+      "phonetic": "Word stress: say 'ADvice' with stress on the first part, and 'viSIT' on the second."
+    },
+    {
+      "title": "My Daily Routine",
+      "id": "speaking-a2-7",
+      "index": 7,
+      "mode": "A2 Short Talk (60s)",
+      "cefrLevel": "A2",
+      "prompt": "Describe a normal day in your life.",
+      "anchor": "Morning routine → Work or study during the day → Evening and bedtime",
+      "collocations": "get up early, have breakfast, go to work, go to bed",
+      "phonetic": "Sentence stress: say the important words louder, like 'I GET UP at SIX'."
+    },
+    {
+      "title": "My Home",
+      "id": "speaking-a2-8",
+      "index": 8,
+      "mode": "A2 Short Talk (60s)",
+      "cefrLevel": "A2",
+      "prompt": "Describe your home. Which room do you like best?",
+      "anchor": "Where you live and who lives with you → The rooms in your home → Your favourite room and why",
+      "collocations": "live in a flat, share a room, next to, a big window",
+      "phonetic": "Word stress: say 'BEDroom' and 'LIVing room' with stress on the first part."
+    },
+    {
+      "title": "My Favourite Food",
+      "id": "speaking-a2-9",
+      "index": 9,
+      "mode": "A2 Short Talk (60s)",
+      "cefrLevel": "A2",
+      "prompt": "Talk about your favourite food. How do you make it, or where do you eat it?",
+      "anchor": "What the food is → What is in it or where you eat it → Why you love it",
+      "collocations": "taste good, cook a meal, a lot of, too spicy",
+      "phonetic": "Weak forms: say 'a lot of rice' as 'a LOT uv RICE'; the word 'of' is quiet."
+    },
+    {
+      "title": "My Hobby",
+      "id": "speaking-a2-10",
+      "index": 10,
+      "mode": "A2 Short Talk (60s)",
+      "cefrLevel": "A2",
+      "prompt": "Talk about a hobby you enjoy. When and where do you do it?",
+      "anchor": "What the hobby is → When and where you do it → Why you enjoy it",
+      "collocations": "in my free time, be interested in, once a week, learn how to",
+      "phonetic": "Word stress: say 'HOBby' and 'FAvourite' with stress on the first part."
+    },
+    {
+      "title": "A Time You Were Ill",
+      "id": "speaking-a2-11",
+      "index": 11,
+      "mode": "A2 Short Talk (60s)",
+      "cefrLevel": "A2",
+      "prompt": "Talk about a time you were ill. What happened?",
+      "anchor": "What was wrong → What you did to feel better → How long it took",
+      "collocations": "have a headache, see a doctor, take some medicine, feel better",
+      "phonetic": "Past -ed endings: say 'needed' as 'NEE-did', but 'stayed' as 'stayd' (one sound)."
+    },
+    {
+      "title": "Weather and Seasons",
+      "id": "speaking-a2-12",
+      "index": 12,
+      "mode": "A2 Short Talk (60s)",
+      "cefrLevel": "A2",
+      "prompt": "Talk about the weather in your country. What is your favourite season?",
+      "anchor": "The weather in each season → Your favourite season → What you do in that season",
+      "collocations": "be hot and sunny, rain a lot, in the summer, wear a coat",
+      "phonetic": "Word stress: say 'WEAther' and 'SEAson' with stress on the first part."
+    },
+    {
+      "title": "A Memorable Experience",
+      "id": "speaking-b1-1",
+      "index": 1,
+      "mode": "B1 Opinion Talk (90s)",
+      "cefrLevel": "B1",
+      "prompt": "Talk about a memorable experience you have had. Say what happened, who was with you and why you still remember it.",
+      "anchor": "Set the scene (when and where) → Tell what happened → Say why it is special to you",
+      "collocations": "unforgettable experience, take place, to be honest, looking back",
+      "phonetic": "Stress the key words in each sentence, for example 'It was the BEST day of my LIFE', and say small words like 'the' and 'of' quickly."
+    },
+    {
+      "title": "A Problem and How You Solved It",
+      "id": "speaking-b1-2",
+      "index": 2,
+      "mode": "B1 Opinion Talk (90s)",
+      "cefrLevel": "B1",
+      "prompt": "Describe a problem you had and explain how you solved it. What did you learn from it?",
+      "anchor": "Explain the problem → Describe what you did to fix it → Say what you learned",
+      "collocations": "deal with a problem, come up with a solution, ask for help, in the end",
+      "phonetic": "Link words that join consonant to vowel, for example 'ask_for_help' sounds like 'as-kfor-help'."
+    },
+    {
+      "title": "Advantages and Disadvantages of Social Media",
+      "id": "speaking-b1-3",
+      "index": 3,
+      "mode": "B1 Opinion Talk (90s)",
+      "cefrLevel": "B1",
+      "prompt": "What are the advantages and disadvantages of social media? Give your own opinion.",
+      "anchor": "Main advantages (stay in touch, share news) → Main disadvantages (waste of time, privacy) → Your opinion and reason",
+      "collocations": "keep in touch with, waste of time, on the other hand, in my opinion",
+      "phonetic": "Use rising intonation on each item in a list and falling intonation on the last one: 'friends, news, photos and videos'."
+    },
+    {
+      "title": "Your Plans for the Future",
+      "id": "speaking-b1-4",
+      "index": 4,
+      "mode": "B1 Opinion Talk (90s)",
+      "cefrLevel": "B1",
+      "prompt": "Talk about your plans for the next five years. What do you hope to do, and what might stop you?",
+      "anchor": "Your main plan (study, work or travel) → Steps you will take → Possible problems and how you will deal with them",
+      "collocations": "be planning to, make progress, achieve a goal, if everything goes well",
+      "phonetic": "Stress the important verb in plans, for example 'I'm going to STUDY abroad', and say 'going to' quickly as 'gonna' in relaxed speech."
+    },
+    {
+      "title": "A Book or Film You Recommend",
+      "id": "speaking-b1-5",
+      "index": 5,
+      "mode": "B1 Opinion Talk (90s)",
+      "cefrLevel": "B1",
+      "prompt": "Recommend a book or a film to a friend. Say what it is about and why you think they will enjoy it.",
+      "anchor": "Name it and say what it is about → What you liked most → Who you recommend it to and why",
+      "collocations": "be based on, the main character, well worth watching, I would recommend",
+      "phonetic": "Make your voice go up and louder on the words that show feeling, for example 'It was REALLY exciting'."
+    },
+    {
+      "title": "Life in a Big City or a Small Town",
+      "id": "speaking-b1-6",
+      "index": 6,
+      "mode": "B1 Opinion Talk (90s)",
+      "cefrLevel": "B1",
+      "prompt": "Would you prefer to live in a big city or a small town? Give reasons for your answer.",
+      "anchor": "Say which you prefer → Give two reasons with examples → Mention one good point about the other place",
+      "collocations": "public transport, cost of living, peace and quiet, there are plenty of",
+      "phonetic": "Stress the contrast words in a comparison, for example 'The city is NOISY but the town is QUIET'."
+    },
+    {
+      "title": "A Person Who Has Helped You",
+      "id": "speaking-b1-7",
+      "index": 7,
+      "mode": "B1 Opinion Talk (90s)",
+      "cefrLevel": "B1",
+      "prompt": "Talk about a person who has helped you in your life. Say who the person is, how they helped you and how you feel about them.",
+      "anchor": "Who the person is → How they helped you → What you would like to say to them now",
+      "collocations": "look up to, be grateful for, support someone, get on well with",
+      "phonetic": "Say the 'ed' endings clearly, for example 'helped' ends with a /t/ sound and 'supported' ends with /id/."
+    },
+    {
+      "title": "Should Students Wear a School Uniform?",
+      "id": "speaking-b1-8",
+      "index": 8,
+      "mode": "B1 Opinion Talk (90s)",
+      "cefrLevel": "B1",
+      "prompt": "Do you think students should wear a school uniform? Explain your opinion with reasons.",
+      "anchor": "Your opinion → Two reasons with examples → What people who disagree might say and your answer",
+      "collocations": "feel equal, express yourself, I strongly believe that, on the whole",
+      "phonetic": "Pause briefly after your opinion, then give your reasons: 'I think so, because...'."
+    },
+    {
+      "title": "A Trip You Have Taken",
+      "id": "speaking-b1-9",
+      "index": 9,
+      "mode": "B1 Opinion Talk (90s)",
+      "cefrLevel": "B1",
+      "prompt": "Describe a trip you have taken. Where did you go, what did you do and would you go there again?",
+      "anchor": "Where you went and who with → The best and worst parts → Whether you would go again",
+      "collocations": "go sightseeing, book a hotel, local food, have a great time",
+      "phonetic": "Use past tense endings clearly in a story, for example 'visited', 'stayed', 'enjoyed'."
+    },
+    {
+      "title": "Working from Home or in an Office",
+      "id": "speaking-b1-10",
+      "index": 10,
+      "mode": "B1 Opinion Talk (90s)",
+      "cefrLevel": "B1",
+      "prompt": "Is it better to work from home or in an office? Say what you think and why.",
+      "anchor": "Benefits of working from home → Benefits of working in an office → Your choice and reason",
+      "collocations": "save time, work as a team, stay focused, it depends on",
+      "phonetic": "Stress 'but' and the word after it to show a change of idea: 'It is flexible, but it can be LONELY'."
+    },
+    {
+      "title": "Healthy Habits in Daily Life",
+      "id": "speaking-b1-11",
+      "index": 11,
+      "mode": "B1 Opinion Talk (90s)",
+      "cefrLevel": "B1",
+      "prompt": "What do you do to stay healthy? Talk about your habits and say what you could do better.",
+      "anchor": "Your good habits (food, sport, sleep) → One habit you want to change → Advice for a friend",
+      "collocations": "get enough sleep, take exercise, eat a balanced diet, give up",
+      "phonetic": "Link 'a' and 'of' to the next word, for example 'a lot of' sounds like 'a-lo-tuv'."
+    },
+    {
+      "title": "Learning English: Your Experience",
+      "id": "speaking-b1-12",
+      "index": 12,
+      "mode": "B1 Opinion Talk (90s)",
+      "cefrLevel": "B1",
+      "prompt": "Talk about how you have been learning English. What helps you most and what is difficult for you?",
+      "anchor": "Why and how you started → What helps you most → Your goal for the future",
+      "collocations": "make mistakes, improve my speaking, practise every day, keep going",
+      "phonetic": "Say long words with the stress in the right place, for example 'imPROVE' and 'PRACtise'."
+    },
+    {
       "title": "The Automation Paradox in Knowledge Work",
       "id": "speaking-1",
       "index": 1,
@@ -442,6 +838,618 @@
     }
   ],
   "writing": [
+    {
+      "title": "About Me",
+      "meal": {
+        "m": "My name is Lan and I am ten years old.",
+        "e": "I am from Vietnam and I live in Hanoi.",
+        "a": "I have a small dog and a big bag.",
+        "l": "I like my school and I like my friends."
+      },
+      "id": "writing-a1-1",
+      "index": 1,
+      "mode": "A1 Four-Sentence Paragraph",
+      "cefrLevel": "A1",
+      "question": "Write 4 sentences about yourself.",
+      "register": "Informal / Personal",
+      "masterSentence": "My name is Lan and I am ten years old.",
+      "stylistic": "Start every sentence with a capital letter and end it with a full stop."
+    },
+    {
+      "title": "My Family",
+      "meal": {
+        "m": "There are four people in my family.",
+        "e": "I have a mother, a father and a brother.",
+        "a": "My brother is twelve and he likes football.",
+        "l": "I love my family very much."
+      },
+      "id": "writing-a1-2",
+      "index": 2,
+      "mode": "A1 Four-Sentence Paragraph",
+      "cefrLevel": "A1",
+      "question": "Write 4 sentences about your family.",
+      "register": "Informal / Personal",
+      "masterSentence": "There are four people in my family.",
+      "stylistic": "Use \"has\" for he or she: \"My father has a car.\""
+    },
+    {
+      "title": "My Day",
+      "meal": {
+        "m": "I get up at six o'clock every day.",
+        "e": "I have breakfast and then I go to work.",
+        "a": "I eat lunch with my friends at twelve.",
+        "l": "In the evening, I cook dinner and go to bed."
+      },
+      "id": "writing-a1-3",
+      "index": 3,
+      "mode": "A1 Four-Sentence Paragraph",
+      "cefrLevel": "A1",
+      "question": "Write 4 sentences about your day.",
+      "register": "Informal / Personal",
+      "masterSentence": "I get up at six o'clock every day.",
+      "stylistic": "Use \"then\" and \"in the evening\" to show the order of your day."
+    },
+    {
+      "title": "My Home",
+      "meal": {
+        "m": "I live in a small house near the park.",
+        "e": "There are three rooms and a kitchen.",
+        "a": "My bedroom has a bed, a desk and a window.",
+        "l": "I like my home because it is quiet."
+      },
+      "id": "writing-a1-4",
+      "index": 4,
+      "mode": "A1 Four-Sentence Paragraph",
+      "cefrLevel": "A1",
+      "question": "Write 4 sentences about your home.",
+      "register": "Informal / Personal",
+      "masterSentence": "I live in a small house near the park.",
+      "stylistic": "Use \"there is\" for one thing and \"there are\" for many things."
+    },
+    {
+      "title": "My Favourite Food",
+      "meal": {
+        "m": "My favourite food is chicken and rice.",
+        "e": "My mother cooks it on Sundays.",
+        "a": "It is hot and it has a lot of flavour.",
+        "l": "I eat it with my family and I love it."
+      },
+      "id": "writing-a1-5",
+      "index": 5,
+      "mode": "A1 Four-Sentence Paragraph",
+      "cefrLevel": "A1",
+      "question": "Write 4 sentences about your favourite food.",
+      "register": "Informal / Personal",
+      "masterSentence": "My favourite food is chicken and rice.",
+      "stylistic": "Use \"and\" to join two short ideas in one sentence."
+    },
+    {
+      "title": "What I Can Do",
+      "meal": {
+        "m": "I can do many things.",
+        "e": "I can swim and I can ride a bike.",
+        "a": "I can also cook rice, but I cannot cook fish.",
+        "l": "I want to learn to play the guitar."
+      },
+      "id": "writing-a1-6",
+      "index": 6,
+      "mode": "A1 Four-Sentence Paragraph",
+      "cefrLevel": "A1",
+      "question": "Write 4 sentences about what you can do.",
+      "register": "Informal / Personal",
+      "masterSentence": "I can do many things.",
+      "stylistic": "After \"can\", use the base verb: \"I can swim\", not \"I can swims\"."
+    },
+    {
+      "title": "My Best Friend",
+      "meal": {
+        "m": "My best friend is Nam.",
+        "e": "He is tall and he has short black hair.",
+        "a": "We play football together after school.",
+        "l": "He is kind and I like him a lot."
+      },
+      "id": "writing-a1-7",
+      "index": 7,
+      "mode": "A1 Four-Sentence Paragraph",
+      "cefrLevel": "A1",
+      "question": "Write 4 sentences about your best friend.",
+      "register": "Informal / Personal",
+      "masterSentence": "My best friend is Nam.",
+      "stylistic": "Use \"he\" for a boy and \"she\" for a girl."
+    },
+    {
+      "title": "My School",
+      "meal": {
+        "m": "I go to a big school in my town.",
+        "e": "My class starts at eight o'clock.",
+        "a": "I study English, maths and music.",
+        "l": "My teacher is nice and I like my class."
+      },
+      "id": "writing-a1-8",
+      "index": 8,
+      "mode": "A1 Four-Sentence Paragraph",
+      "cefrLevel": "A1",
+      "question": "Write 4 sentences about your school.",
+      "register": "Informal / Personal",
+      "masterSentence": "I go to a big school in my town.",
+      "stylistic": "Write times with \"at\": \"at eight o'clock\"."
+    },
+    {
+      "title": "My Weekend",
+      "meal": {
+        "m": "I relax at the weekend.",
+        "e": "On Saturday, I go shopping with my mother.",
+        "a": "On Sunday, I watch TV and play games.",
+        "l": "I like the weekend because I do not work."
+      },
+      "id": "writing-a1-9",
+      "index": 9,
+      "mode": "A1 Four-Sentence Paragraph",
+      "cefrLevel": "A1",
+      "question": "Write 4 sentences about your weekend.",
+      "register": "Informal / Personal",
+      "masterSentence": "I relax at the weekend.",
+      "stylistic": "Use \"on\" with days: \"on Saturday\", \"on Sunday\"."
+    },
+    {
+      "title": "My Town",
+      "meal": {
+        "m": "My town is small and quiet.",
+        "e": "There is a market and a big park.",
+        "a": "The people are friendly and the food is good.",
+        "l": "I like my town and I want to stay here."
+      },
+      "id": "writing-a1-10",
+      "index": 10,
+      "mode": "A1 Four-Sentence Paragraph",
+      "cefrLevel": "A1",
+      "question": "Write 4 sentences about your town.",
+      "register": "Informal / Personal",
+      "masterSentence": "My town is small and quiet.",
+      "stylistic": "Use \"is\" with one thing and \"are\" with many things."
+    },
+    {
+      "title": "My Clothes",
+      "meal": {
+        "m": "Today I am wearing a white shirt.",
+        "e": "I am also wearing blue trousers and black shoes.",
+        "a": "My shirt is new and my shoes are old.",
+        "l": "Blue is my favourite colour."
+      },
+      "id": "writing-a1-11",
+      "index": 11,
+      "mode": "A1 Four-Sentence Paragraph",
+      "cefrLevel": "A1",
+      "question": "Write 4 sentences about your clothes today.",
+      "register": "Informal / Personal",
+      "masterSentence": "Today I am wearing a white shirt.",
+      "stylistic": "Put the colour before the noun: \"a white shirt\"."
+    },
+    {
+      "title": "My Pet",
+      "meal": {
+        "m": "I have a small brown dog.",
+        "e": "His name is Bobo and he is two years old.",
+        "a": "He likes to run in the park and eat meat.",
+        "l": "Bobo is my friend and I love him."
+      },
+      "id": "writing-a1-12",
+      "index": 12,
+      "mode": "A1 Four-Sentence Paragraph",
+      "cefrLevel": "A1",
+      "question": "Write 4 sentences about your pet or your favourite animal.",
+      "register": "Informal / Personal",
+      "masterSentence": "I have a small brown dog.",
+      "stylistic": "Use \"a\" before a new noun: \"a dog\", then \"the dog\"."
+    },
+    {
+      "title": "My Last Holiday",
+      "meal": {
+        "m": "Last summer I went to the beach with my family.",
+        "e": "We stayed in a small hotel near the sea. Every day we swam and played games.",
+        "a": "The weather was hot, so we ate a lot of ice cream.",
+        "l": "I had a great time, and I want to go again."
+      },
+      "id": "writing-a2-1",
+      "index": 1,
+      "mode": "A2 Six-Sentence Paragraph",
+      "cefrLevel": "A2",
+      "question": "Write about your last holiday. Where did you go and what did you do?",
+      "register": "Informal / Personal",
+      "masterSentence": "Last summer I went to the beach with my family.",
+      "stylistic": "Use past simple verbs (went, stayed, ate) and the word 'so' to show a result."
+    },
+    {
+      "title": "My Best Friend",
+      "meal": {
+        "m": "My best friend is called Minh, and he is very kind.",
+        "e": "We met at school ten years ago. Now we work in the same city.",
+        "a": "He is funny, but he is sometimes late.",
+        "l": "I like him because he always listens to me."
+      },
+      "id": "writing-a2-2",
+      "index": 2,
+      "mode": "A2 Six-Sentence Paragraph",
+      "cefrLevel": "A2",
+      "question": "Write about your best friend. What is he or she like?",
+      "register": "Informal / Personal",
+      "masterSentence": "My best friend is called Minh, and he is very kind.",
+      "stylistic": "Use 'because' to give a reason and 'but' to show a small problem."
+    },
+    {
+      "title": "An Email to a Friend",
+      "meal": {
+        "m": "I am writing to invite you to my birthday party.",
+        "e": "It is on Saturday at six o'clock at my house.",
+        "a": "We are going to eat pizza and play music.",
+        "l": "Please tell me if you can come. I hope to see you there."
+      },
+      "id": "writing-a2-3",
+      "index": 3,
+      "mode": "A2 Six-Sentence Paragraph",
+      "cefrLevel": "A2",
+      "question": "Write an email to invite a friend to your birthday party.",
+      "register": "Simple Formal / Email",
+      "masterSentence": "I am writing to invite you to my birthday party.",
+      "stylistic": "Start with 'I am writing to...' and end with 'I hope to see you'."
+    },
+    {
+      "title": "A Normal Day",
+      "meal": {
+        "m": "On weekdays I get up at six and go to work.",
+        "e": "I have breakfast at home and take the bus. I start work at eight.",
+        "a": "After work I usually cook dinner and watch TV.",
+        "l": "I go to bed at ten because I am tired."
+      },
+      "id": "writing-a2-4",
+      "index": 4,
+      "mode": "A2 Six-Sentence Paragraph",
+      "cefrLevel": "A2",
+      "question": "Write about a normal day in your life.",
+      "register": "Informal / Personal",
+      "masterSentence": "On weekdays I get up at six and go to work.",
+      "stylistic": "Use time words (at six, after work) and 'usually' before the main verb."
+    },
+    {
+      "title": "My Town",
+      "meal": {
+        "m": "I live in a big city, and it is busy and noisy.",
+        "e": "There are many shops, parks and restaurants. The market is very popular.",
+        "a": "The food is cheap, but the traffic is bad.",
+        "l": "I like my city because there is always something to do."
+      },
+      "id": "writing-a2-5",
+      "index": 5,
+      "mode": "A2 Six-Sentence Paragraph",
+      "cefrLevel": "A2",
+      "question": "Describe the town or city where you live.",
+      "register": "Informal / Personal",
+      "masterSentence": "I live in a big city, and it is busy and noisy.",
+      "stylistic": "Use 'there is' and 'there are' to say what a place has."
+    },
+    {
+      "title": "A Shopping Trip",
+      "meal": {
+        "m": "Last Saturday I went shopping to buy a new jacket.",
+        "e": "I visited three shops, but the first two were too expensive.",
+        "a": "In the last shop I found a nice blue jacket for a good price.",
+        "l": "I paid by card and went home happy."
+      },
+      "id": "writing-a2-6",
+      "index": 6,
+      "mode": "A2 Six-Sentence Paragraph",
+      "cefrLevel": "A2",
+      "question": "Write about a time you went shopping. What did you buy?",
+      "register": "Informal / Personal",
+      "masterSentence": "Last Saturday I went shopping to buy a new jacket.",
+      "stylistic": "Use 'to + verb' to give a reason, like 'to buy a new jacket'."
+    },
+    {
+      "title": "My Plans for Next Weekend",
+      "meal": {
+        "m": "Next weekend I am going to visit my grandparents.",
+        "e": "They live in a small village near the mountains.",
+        "a": "We are going to cook lunch together, and then we will go for a walk.",
+        "l": "I think it will be a quiet and happy weekend."
+      },
+      "id": "writing-a2-7",
+      "index": 7,
+      "mode": "A2 Six-Sentence Paragraph",
+      "cefrLevel": "A2",
+      "question": "Write about your plans for next weekend.",
+      "register": "Informal / Personal",
+      "masterSentence": "Next weekend I am going to visit my grandparents.",
+      "stylistic": "Use 'going to' for plans and 'will' for what you think."
+    },
+    {
+      "title": "A Message to a Hotel",
+      "meal": {
+        "m": "I would like to book a room for two nights.",
+        "e": "I want to arrive on Friday 10th and leave on Sunday 12th.",
+        "a": "Could you tell me the price? Is breakfast included?",
+        "l": "Please write back soon. Thank you for your help."
+      },
+      "id": "writing-a2-8",
+      "index": 8,
+      "mode": "A2 Six-Sentence Paragraph",
+      "cefrLevel": "A2",
+      "question": "Write an email to a hotel to ask for a room.",
+      "register": "Simple Formal / Email",
+      "masterSentence": "I would like to book a room for two nights.",
+      "stylistic": "Use 'I would like to' and 'Could you' to sound polite."
+    },
+    {
+      "title": "My Favourite Food",
+      "meal": {
+        "m": "My favourite food is noodle soup with chicken.",
+        "e": "My mother makes it with fresh vegetables and a little chilli.",
+        "a": "It is hot and tasty, so I eat it on cold days.",
+        "l": "I think it is the best food in the world."
+      },
+      "id": "writing-a2-9",
+      "index": 9,
+      "mode": "A2 Six-Sentence Paragraph",
+      "cefrLevel": "A2",
+      "question": "Write about your favourite food.",
+      "register": "Informal / Personal",
+      "masterSentence": "My favourite food is noodle soup with chicken.",
+      "stylistic": "Use adjectives like 'hot', 'tasty' and 'fresh' to describe food."
+    },
+    {
+      "title": "A Time I Felt Ill",
+      "meal": {
+        "m": "Last winter I was ill for three days.",
+        "e": "I had a headache and a bad cough. I stayed in bed and drank hot tea.",
+        "a": "On the second day I went to the doctor, and she gave me some medicine.",
+        "l": "After that I felt better and went back to work."
+      },
+      "id": "writing-a2-10",
+      "index": 10,
+      "mode": "A2 Six-Sentence Paragraph",
+      "cefrLevel": "A2",
+      "question": "Write about a time you were ill.",
+      "register": "Informal / Personal",
+      "masterSentence": "Last winter I was ill for three days.",
+      "stylistic": "Use 'was' and 'had' for the past, and 'after that' to show order."
+    },
+    {
+      "title": "Two Weekend Activities",
+      "meal": {
+        "m": "I think going out is better than staying at home.",
+        "e": "When I go out, I meet friends and see new places.",
+        "a": "At home I only watch TV, so I get bored.",
+        "l": "That is why I go out every weekend."
+      },
+      "id": "writing-a2-11",
+      "index": 11,
+      "mode": "A2 Six-Sentence Paragraph",
+      "cefrLevel": "A2",
+      "question": "Which is better for a weekend: staying at home or going out? Give your opinion.",
+      "register": "Informal / Personal",
+      "masterSentence": "I think going out is better than staying at home.",
+      "stylistic": "Use 'better than' to compare, and 'I think' to give your opinion."
+    },
+    {
+      "title": "A Short Note to a Neighbour",
+      "meal": {
+        "m": "I am sorry about the loud music last night.",
+        "e": "I had a small party, and we forgot the time.",
+        "a": "Next time I will turn the music down at nine o'clock.",
+        "l": "Please tell me if there is a problem. Thank you for understanding."
+      },
+      "id": "writing-a2-12",
+      "index": 12,
+      "mode": "A2 Six-Sentence Paragraph",
+      "cefrLevel": "A2",
+      "question": "Write a short note to your neighbour. Your music was too loud, and you want to say sorry.",
+      "register": "Simple Formal / Email",
+      "masterSentence": "I am sorry about the loud music last night.",
+      "stylistic": "Use 'I am sorry about...' and 'Please tell me' to be polite."
+    },
+    {
+      "title": "Social Media: Good or Bad?",
+      "meal": {
+        "m": "In my opinion, social media is useful for young people, but they should not use it too much. I believe it has both good and bad sides.",
+        "e": "For example, it helps students keep in touch with friends and share ideas about their homework. However, some of them spend hours online every night.",
+        "a": "Because of this, they often feel tired and cannot concentrate at school. They also see too many perfect photos, which can make them feel unhappy.",
+        "l": "Therefore, I think young people should use social media for about one hour a day. If they do this, they will enjoy the good side without the problems."
+      },
+      "id": "writing-b1-1",
+      "index": 1,
+      "mode": "B1 Eight-Sentence Paragraph",
+      "cefrLevel": "B1",
+      "question": "Do you think social media is good or bad for young people? Give your opinion with reasons.",
+      "register": "Semi-formal / Opinion",
+      "masterSentence": "In my opinion, social media is useful for young people, but they should not use it too much.",
+      "stylistic": "Use 'however' at the start of a sentence to show a contrast, and follow it with a comma."
+    },
+    {
+      "title": "An Email of Complaint",
+      "meal": {
+        "m": "I am writing to complain about a pair of shoes that I bought from your website last week. They arrived yesterday, but one of them was broken.",
+        "e": "For example, the heel is loose and the left shoe has a long mark on it. I have attached two photos so you can see the problem.",
+        "a": "Because I need the shoes for a wedding next month, I would like a quick answer. I would be happy to receive either a new pair or my money back.",
+        "l": "Please let me know what you can do as soon as possible. I look forward to hearing from you."
+      },
+      "id": "writing-b1-2",
+      "index": 2,
+      "mode": "B1 Eight-Sentence Paragraph",
+      "cefrLevel": "B1",
+      "question": "You bought a pair of shoes online, but they arrived broken. Write an email to the shop to complain.",
+      "register": "Semi-formal / Email",
+      "masterSentence": "I am writing to complain about a pair of shoes that I bought from your website last week.",
+      "stylistic": "Start with 'I am writing to...' to say your reason, and end with 'I look forward to hearing from you'."
+    },
+    {
+      "title": "Describing a Memorable Day",
+      "meal": {
+        "m": "One of the best days of my life was my first trip to the beach with my family. I was ten years old, and I still remember it clearly.",
+        "e": "For example, we got up very early and drove for three hours. When we arrived, I ran straight into the sea.",
+        "a": "Although the water was cold, I was so happy that I did not care. After that, we ate fresh fish and played games on the sand.",
+        "l": "At the end of the day, I was tired but very happy. That is why I will never forget it."
+      },
+      "id": "writing-b1-3",
+      "index": 3,
+      "mode": "B1 Eight-Sentence Paragraph",
+      "cefrLevel": "B1",
+      "question": "Describe a day that you remember well. Say what happened and why it was special.",
+      "register": "Informal / Personal",
+      "masterSentence": "One of the best days of my life was my first trip to the beach with my family.",
+      "stylistic": "Use time words like 'when', 'after that' and 'at the end of the day' to keep a story in order."
+    },
+    {
+      "title": "The Advantages of Learning a Second Language",
+      "meal": {
+        "m": "I think learning a foreign language is one of the most useful things a person can do. It gives people many chances in life.",
+        "e": "For example, people who speak English can find better jobs and travel more easily. They can also make friends from different countries.",
+        "a": "Because language and culture are connected, learning a language helps you understand other people better. However, it takes time and you must practise often.",
+        "l": "In conclusion, the effort is worth it. Anyone who keeps learning will see great results."
+      },
+      "id": "writing-b1-4",
+      "index": 4,
+      "mode": "B1 Eight-Sentence Paragraph",
+      "cefrLevel": "B1",
+      "question": "What are the advantages of learning a foreign language? Write a paragraph giving your opinion.",
+      "register": "Semi-formal / Opinion",
+      "masterSentence": "I think learning a foreign language is one of the most useful things a person can do.",
+      "stylistic": "Finish with 'In conclusion' and repeat your main idea in new words."
+    },
+    {
+      "title": "An Invitation to a Friend",
+      "meal": {
+        "m": "I am having a birthday party next Saturday, and I would love you to come. It will be at my house, starting at six o'clock.",
+        "e": "For example, my mum is going to cook a lot of food, and we will play music and games. I have also invited some people from our old class.",
+        "a": "Because the house is hard to find, I will send you a map. If you want, you can stay the night, as we will probably finish late.",
+        "l": "Please tell me by Wednesday if you can come. I hope to see you there."
+      },
+      "id": "writing-b1-5",
+      "index": 5,
+      "mode": "B1 Eight-Sentence Paragraph",
+      "cefrLevel": "B1",
+      "question": "Write a message to a friend inviting them to your birthday party. Give the details and ask for a reply.",
+      "register": "Informal / Personal",
+      "masterSentence": "I am having a birthday party next Saturday, and I would love you to come.",
+      "stylistic": "Use 'would love' and 'I hope' to sound warm and friendly in a personal message."
+    },
+    {
+      "title": "Should Children Have Mobile Phones?",
+      "meal": {
+        "m": "I believe that children should not have a mobile phone until they are about twelve years old. Before that age, they do not really need one.",
+        "e": "For example, younger children are always with their parents or teachers, so they can ask them for help. However, older children often travel alone and a phone can keep them safe.",
+        "a": "Because phones can also be dangerous if children use them without rules, parents must check how they are used. Games and videos can take too much of their free time.",
+        "l": "For these reasons, I think twelve is a good age to start. Parents should still set clear rules."
+      },
+      "id": "writing-b1-6",
+      "index": 6,
+      "mode": "B1 Eight-Sentence Paragraph",
+      "cefrLevel": "B1",
+      "question": "At what age should children get a mobile phone? Give your opinion and reasons.",
+      "register": "Semi-formal / Opinion",
+      "masterSentence": "I believe that children should not have a mobile phone until they are about twelve years old.",
+      "stylistic": "Use 'should' and 'must' to give advice and show how strong your opinion is."
+    },
+    {
+      "title": "A Letter to a New Neighbour",
+      "meal": {
+        "m": "Welcome to the street, and I hope you are enjoying your new home. I live in the blue house next to yours.",
+        "e": "For example, if you need to know where the shops, the bus stop or the best cafe are, just ask me. I have lived here for ten years, so I know the area well.",
+        "a": "Because moving is always hard work, I would be glad to lend you tools or look after your pets. However, please do not feel you have to ask.",
+        "l": "I would also like to invite you for tea this weekend. Please knock on my door when you are free."
+      },
+      "id": "writing-b1-7",
+      "index": 7,
+      "mode": "B1 Eight-Sentence Paragraph",
+      "cefrLevel": "B1",
+      "question": "A new family has moved in next door. Write a short note to welcome them and offer help.",
+      "register": "Informal / Personal",
+      "masterSentence": "Welcome to the street, and I hope you are enjoying your new home.",
+      "stylistic": "Use 'I would be glad to' and 'please' to make offers polite and kind."
+    },
+    {
+      "title": "Eating Out or Cooking at Home",
+      "meal": {
+        "m": "In my view, cooking at home is better than eating out most of the time. It is cheaper and usually healthier.",
+        "e": "For example, a meal for a family of four in a restaurant can cost more than a week of vegetables from the market. When you cook, you also know exactly what is in your food.",
+        "a": "However, restaurants are good for special days, because you can relax and enjoy the atmosphere. Cooking at home can also be tiring after a long day at work.",
+        "l": "So I think the best choice is to cook at home during the week. We can eat out once in a while as a treat."
+      },
+      "id": "writing-b1-8",
+      "index": 8,
+      "mode": "B1 Eight-Sentence Paragraph",
+      "cefrLevel": "B1",
+      "question": "Is it better to eat in restaurants or to cook at home? Write a paragraph with your opinion.",
+      "register": "Semi-formal / Opinion",
+      "masterSentence": "In my view, cooking at home is better than eating out most of the time.",
+      "stylistic": "Use 'most of the time' and 'once in a while' to describe how often something happens."
+    },
+    {
+      "title": "A Problem at Work or School",
+      "meal": {
+        "m": "Last term I had a big problem with a group project, but I managed to solve it. One member of our group never did his part of the work.",
+        "e": "For example, he missed three meetings and did not answer our messages. Because of this, we were worried that we would not finish on time.",
+        "a": "In the end, I talked to him alone and asked him what was wrong. He told me he was busy with a part-time job, so we gave him an easier task.",
+        "l": "As a result, we finished the project on time and got a good mark. I learned that talking calmly is better than getting angry."
+      },
+      "id": "writing-b1-9",
+      "index": 9,
+      "mode": "B1 Eight-Sentence Paragraph",
+      "cefrLevel": "B1",
+      "question": "Write about a problem you had at work or school and say how you solved it.",
+      "register": "Informal / Personal",
+      "masterSentence": "Last term I had a big problem with a group project, but I managed to solve it.",
+      "stylistic": "Use 'in the end' and 'as a result' to show how a story or problem finished."
+    },
+    {
+      "title": "Public Transport in My City",
+      "meal": {
+        "m": "I think public transport in my city is not good enough, and it needs to improve. Many people still prefer to drive or ride motorbikes.",
+        "e": "For example, buses are often late, and they are very crowded at rush hour. Some areas of the city do not have any bus service at all.",
+        "a": "Because of this, the roads are full of traffic and the air is dirty. However, if the buses were cheaper and more regular, more people would use them.",
+        "l": "Therefore, I would suggest adding more buses and building a metro line. This would make travel faster and the city cleaner."
+      },
+      "id": "writing-b1-10",
+      "index": 10,
+      "mode": "B1 Eight-Sentence Paragraph",
+      "cefrLevel": "B1",
+      "question": "Do you think public transport in your city is good enough? Give reasons and suggest one improvement.",
+      "register": "Semi-formal / Opinion",
+      "masterSentence": "I think public transport in my city is not good enough, and it needs to improve.",
+      "stylistic": "Use the second conditional ('if the buses were... more people would...') to talk about a possible change."
+    },
+    {
+      "title": "Writing About a Hobby",
+      "meal": {
+        "m": "My favourite hobby is taking photos, and I have done it for about three years. I started when my uncle gave me an old camera.",
+        "e": "For example, I now go out every weekend to take pictures of streets and markets. I have also learned how to use light to make a photo look better.",
+        "a": "Because photography makes me look carefully at the world, I notice small things that I never saw before. However, good cameras are expensive, so I still use my old one.",
+        "l": "One day I hope to have my own small exhibition. Until then, I will keep practising."
+      },
+      "id": "writing-b1-11",
+      "index": 11,
+      "mode": "B1 Eight-Sentence Paragraph",
+      "cefrLevel": "B1",
+      "question": "Write about a hobby you enjoy. Say when you started and why you like it.",
+      "register": "Informal / Personal",
+      "masterSentence": "My favourite hobby is taking photos, and I have done it for about three years.",
+      "stylistic": "Use the present perfect with 'for' and 'since' ('for three years') to link the past with now."
+    },
+    {
+      "title": "A Healthy Lifestyle",
+      "meal": {
+        "m": "If you want to stay healthy, you should eat well, exercise and get enough sleep. These three things are easy to start but need to become habits.",
+        "e": "For example, you could walk to work instead of taking the bus, and eat more fruit and vegetables. I started doing this last year and I feel much better now.",
+        "a": "Because many people sit at a desk all day, they need to move more. However, you do not have to join a gym, as a short walk after dinner is enough.",
+        "l": "If you try these small changes, you will soon notice the difference. I am sure you can do it."
+      },
+      "id": "writing-b1-12",
+      "index": 12,
+      "mode": "B1 Eight-Sentence Paragraph",
+      "cefrLevel": "B1",
+      "question": "What is the best way to stay healthy? Write a paragraph giving advice to a friend.",
+      "register": "Informal / Personal",
+      "masterSentence": "If you want to stay healthy, you should eat well, exercise and get enough sleep.",
+      "stylistic": "Use the first conditional ('If you try..., you will...') to give advice with a result."
+    },
     {
       "title": "The Epistemic Hazards of Synthetic Information",
       "meal": {
