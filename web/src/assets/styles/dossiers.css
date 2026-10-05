@@ -88,7 +88,7 @@
 
 .mission-log-main {
   width: 100%;
-  max-width: 720px;
+  max-width: 760px;
   display: flex;
   flex-direction: column;
   gap: var(--space-16);
@@ -1074,7 +1074,6 @@
   width: 100%;
   border-bottom: 1px solid var(--border-hairline);
   padding: 8px 0;
-  margin-bottom: 16px;
   gap: 8px;
   overflow-x: auto;
 }
@@ -3385,3 +3384,42 @@ html[data-motion="reduce"] {
     transition: none !important;
   }
 }
+
+/* ==========================================================================
+   LAYOUT RHYTHM (shared by every dossier)
+   Spacing scale: 8 within a group, 16 between groups. Toolbars (control bar,
+   telemetry banner) span the 1040 workspace; the card and its nav bar share
+   one centered column (card width), so left/right edges line up.
+   ========================================================================== */
+.dossier-workspace > .dossier-card-slot {
+  flex-shrink: 0;            /* never squeeze below the card, or the card overlaps its neighbours */
+  contain: layout style;     /* drop size containment: slot grows with its content */
+  min-height: var(--card-height-fluid);
+}
+
+.dossier-workspace > .dossier-nav-bar {
+  width: var(--card-width-fluid);
+  max-width: 760px;
+  box-sizing: border-box;
+}
+
+.dossier-control-bar { flex-wrap: wrap; row-gap: var(--space-8); }
+
+/* Grammar: mode tabs and tier selector each get their own row instead of wrapping side by side */
+.dossier-control-bar:has(> .grammar-level-selector) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--space-8);
+}
+
+.vocab-level-selector,
+.grammar-level-selector {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+/* Every view starts at the same top edge instead of floating to the vertical centre */
+.dossier-workspace { justify-content: flex-start; }

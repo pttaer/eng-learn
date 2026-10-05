@@ -132,7 +132,7 @@ export class WritingDossier {
     const item = this.items[this.currentIndex];
 
     this.container.innerHTML = `
-      <div class="copywork-studio" style="width: 100%; max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+      <div class="copywork-studio" style="width: 100%; max-width: 1040px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-16);">
         <!-- Top Studio Bar -->
         <div class="dossier-control-bar" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px;">
           <div style="display: flex; align-items: center; gap: 12px;">
