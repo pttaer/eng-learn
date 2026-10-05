@@ -4,6 +4,7 @@
 - **ID**: gram-inv-1
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 1
+- **CEFR**: C1
 - **Prompt**: The executive team seldom realized how vulnerable their supply chain had become.
 - **Transformation**: Seldom did the executive team realize how vulnerable their supply chain had become.
 - **Grammatical Cue**: Fronting the negative frequency adverb 'seldom' triggers subject-auxiliary inversion.
@@ -16,6 +17,7 @@
 - **ID**: gram-inv-2
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 1
+- **CEFR**: C1
 - **Prompt**: Central banks rarely adjust benchmark lending rates without prior forward guidance.
 - **Transformation**: Rarely do central banks adjust benchmark lending rates without prior forward guidance.
 - **Grammatical Cue**: Fronting 'rarely' requires present auxiliary 'do' before plural subject 'central banks'.
@@ -28,6 +30,7 @@
 - **ID**: gram-inv-3
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 1
+- **CEFR**: C2
 - **Prompt**: The lead engineer had hardly deployed the hotfix when the secondary database crashed.
 - **Transformation**: Hardly had the lead engineer deployed the hotfix when the secondary database crashed.
 - **Grammatical Cue**: Negative time adverb 'hardly' at the front inverts the past perfect auxiliary 'had'.
@@ -40,6 +43,7 @@
 - **ID**: gram-inv-4
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 1
+- **CEFR**: C1
 - **Prompt**: If you encounter any anomalous discrepancies in the audit log, notify security immediately.
 - **Transformation**: Should you encounter any anomalous discrepancies in the audit log, notify security immediately.
 - **Grammatical Cue**: Omit 'if' and invert modal auxiliary 'should' to the front in conditional clauses.
@@ -52,6 +56,7 @@
 - **ID**: gram-inv-5
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 1
+- **CEFR**: B2
 - **Prompt**: Systemic misalignment of economic incentives caused the subprime mortgage meltdown.
 - **Transformation**: It was systemic misalignment of economic incentives that caused the subprime mortgage meltdown.
 - **Grammatical Cue**: Wrap focal subject inside 'It was [Subject] that [Predicate]' cleft syntax.
@@ -64,6 +69,7 @@
 - **ID**: gram-inv-6
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 2
+- **CEFR**: C1
 - **Prompt**: The new framework not only halved query latencies, but it also reduced server energy consumption.
 - **Transformation**: Not only did the new framework halve query latencies, but it also reduced server energy consumption.
 - **Grammatical Cue**: Fronting 'Not only' forces auxiliary inversion in the first coordinate clause.
@@ -76,6 +82,7 @@
 - **ID**: gram-inv-7
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 2
+- **CEFR**: C1
 - **Prompt**: If the consortium were to withdraw funding, the infrastructure project would stall indefinitely.
 - **Transformation**: Were the consortium to withdraw funding, the infrastructure project would stall indefinitely.
 - **Grammatical Cue**: Omit 'if' and invert subjunctive copula 'were' with infinitive complement.
@@ -88,6 +95,7 @@
 - **ID**: gram-inv-8
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 2
+- **CEFR**: B2
 - **Prompt**: We fundamentally need an impartial oversight committee with statutory subpoena power.
 - **Transformation**: What we fundamentally need is an impartial oversight committee with statutory subpoena power.
 - **Grammatical Cue**: Convert sentence to pseudo-cleft with relative free clause 'What we need is...'.
@@ -100,6 +108,7 @@
 - **ID**: gram-inv-9
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 2
+- **CEFR**: C2
 - **Prompt**: A massive archive of encrypted state correspondence lay beneath the limestone citadel.
 - **Transformation**: Beneath the limestone citadel lay a massive archive of encrypted state correspondence.
 - **Grammatical Cue**: Front spatial prepositional phrase; invert full lexical intransitive verb before subject.
@@ -112,6 +121,7 @@
 - **ID**: gram-inv-10
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 2
+- **CEFR**: C1
 - **Prompt**: Employees must not disclose unreleased fiscal projections to third-party analysts under any circumstances.
 - **Transformation**: Under no circumstances must employees disclose unreleased fiscal projections to third-party analysts.
 - **Grammatical Cue**: Negative prepositional phrase 'Under no circumstances' fronted with modal inversion.
@@ -124,6 +134,7 @@
 - **ID**: gram-inv-11
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 3
+- **CEFR**: C1
 - **Prompt**: If the intelligence analysts had synthesized the intercepted telemetry earlier, the attack might have been averted.
 - **Transformation**: Had the intelligence analysts synthesized the intercepted telemetry earlier, the attack might have been averted.
 - **Grammatical Cue**: Omit 'if' and invert past perfect auxiliary 'had' before complex subject noun phrase.
@@ -136,6 +147,7 @@
 - **ID**: gram-inv-12
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 3
+- **CEFR**: C1
 - **Prompt**: The public did not understand the systemic ecological ramifications of microplastics until peer-reviewed longitudinal studies emerged.
 - **Transformation**: Not until peer-reviewed longitudinal studies emerged did the public understand the systemic ecological ramifications of microplastics.
 - **Grammatical Cue**: Front 'Not until [time clause]'; invert auxiliary 'did' in the subsequent main clause.
@@ -148,6 +160,7 @@
 - **ID**: gram-inv-13
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 3
+- **CEFR**: C1
 - **Prompt**: The macroeconomic shock was so severe that sovereign bond yields plunged to historic lows.
 - **Transformation**: So severe was the macroeconomic shock that sovereign bond yields plunged to historic lows.
 - **Grammatical Cue**: Front intensive adjective phrase 'So severe'; invert copular verb 'was' before subject.
@@ -160,6 +173,7 @@
 - **ID**: gram-inv-14
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 3
+- **CEFR**: C2
 - **Prompt**: The founder simply requested a fair arbitration hearing before an independent magistrate.
 - **Transformation**: All the founder requested was a fair arbitration hearing before an independent magistrate.
 - **Grammatical Cue**: Structure sentence with restrictive universal cleft 'All [Subject] [Verb] was [Noun Phrase]'.
@@ -172,6 +186,7 @@
 - **ID**: gram-inv-15
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 3
+- **CEFR**: C2
 - **Prompt**: The fundamental question of algorithmic sovereignty lies embedded within these dense legislative amendments.
 - **Transformation**: Embedded within these dense legislative amendments lies the fundamental question of algorithmic sovereignty.
 - **Grammatical Cue**: Front participle phrase 'Embedded within...'; invert unaccusative verb 'lies' before subject.
@@ -184,6 +199,7 @@
 - **ID**: gram-inv-16
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 1
+- **CEFR**: C2
 - **Prompt**: The shareholders did not suspect that the merger talks had already collapsed behind closed doors.
 - **Transformation**: Little did the shareholders suspect that the merger talks had already collapsed behind closed doors.
 - **Grammatical Cue**: Fronting the negative adverb 'little' (meaning 'not at all') triggers do-support inversion: 'did + subject + base verb'.
@@ -196,6 +212,7 @@
 - **ID**: gram-inv-17
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 2
+- **CEFR**: C1
 - **Prompt**: The board approved the acquisition only after the due-diligence report had been independently verified.
 - **Transformation**: Only after the due-diligence report had been independently verified did the board approve the acquisition.
 - **Grammatical Cue**: Front the restrictive adjunct 'Only after [clause]'; invert the auxiliary in the main clause, never inside the 'after' clause.
@@ -208,6 +225,7 @@
 - **ID**: gram-inv-18
 - **Mode**: INVERSION_EMPHASIS
 - **Level**: 3
+- **CEFR**: C2
 - **Prompt**: The public backlash was so intense that the ministry withdrew the bill within a week.
 - **Transformation**: Such was the intensity of the public backlash that the ministry withdrew the bill within a week.
 - **Grammatical Cue**: Front predicative 'Such'; invert the copula before an abstract-noun subject ('the intensity of...'); the verb agrees with that following subject.

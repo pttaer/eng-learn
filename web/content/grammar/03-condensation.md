@@ -4,6 +4,7 @@
 - **ID**: gram-cond-1
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 1
+- **CEFR**: B2
 - **Prompt**: The lead investigator reviewed the transaction logs and he discovered three unauthorized wire transfers.
 - **Transformation**: Reviewing the transaction logs, the lead investigator discovered three unauthorized wire transfers.
 - **Grammatical Cue**: Condense coordinated clause into fronted present participial adjunct ('Reviewing...').
@@ -16,6 +17,7 @@
 - **ID**: gram-cond-2
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 1
+- **CEFR**: B2
 - **Prompt**: When the algorithm was trained on biased historical data, it systematically penalized minority applicants.
 - **Transformation**: Trained on biased historical data, the algorithm systematically penalized minority applicants.
 - **Grammatical Cue**: Strip conjunction and passive copula, opening sentence directly with past participle phrase.
@@ -28,6 +30,7 @@
 - **ID**: gram-cond-3
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 1
+- **CEFR**: B2
 - **Prompt**: All candidates who are seeking admission to the doctoral fellowship must submit three peer recommendations.
 - **Transformation**: All candidates seeking admission to the doctoral fellowship must submit three peer recommendations.
 - **Grammatical Cue**: Eliminate relative pronoun 'who' and auxiliary 'are', leaving active participle 'seeking'.
@@ -40,6 +43,7 @@
 - **ID**: gram-cond-4
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 1
+- **CEFR**: B2
 - **Prompt**: The infrastructure bill which was passed by the Senate will revitalize crumbling bridge corridors.
 - **Transformation**: The infrastructure bill passed by the Senate will revitalize crumbling bridge corridors.
 - **Grammatical Cue**: Omit relative pronoun 'which' and auxiliary 'was' to create a tight participial post-modifier.
@@ -52,6 +56,7 @@
 - **ID**: gram-cond-5
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 1
+- **CEFR**: C1
 - **Prompt**: As soon as the foreign dignitary arrived at the summit venue, she was escorted to the bilateral chambers.
 - **Transformation**: Upon arriving at the summit venue, the foreign dignitary was escorted to the bilateral chambers.
 - **Grammatical Cue**: Condense temporal clause with preposition 'Upon / On' followed by gerund-participle.
@@ -64,6 +69,7 @@
 - **ID**: gram-cond-6
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 2
+- **CEFR**: B2
 - **Prompt**: Because she had exhausted all administrative appeals, the claimant filed a federal constitutional lawsuit.
 - **Transformation**: Having exhausted all administrative appeals, the claimant filed a federal constitutional lawsuit.
 - **Grammatical Cue**: Convert prior causal clause into perfect participle 'Having + past participle'.
@@ -76,6 +82,7 @@
 - **ID**: gram-cond-7
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 2
+- **CEFR**: C1
 - **Prompt**: After it had been stress-tested under extreme simulated market liquidity freezes, the risk model was cleared.
 - **Transformation**: Having been stress-tested under extreme simulated market liquidity freezes, the risk model was cleared.
 - **Grammatical Cue**: Combine perfect and passive aspect into 'Having been + past participle'.
@@ -88,6 +95,7 @@
 - **ID**: gram-cond-8
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 2
+- **CEFR**: C1
 - **Prompt**: Although they were repeatedly warned about impending credit tightening, the directors continued borrowing.
 - **Transformation**: Although repeatedly warned about impending credit tightening, the directors continued borrowing.
 - **Grammatical Cue**: Retain concessive subordinator 'Although' but drop subject pronoun and auxiliary verb.
@@ -100,6 +108,7 @@
 - **ID**: gram-cond-9
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 2
+- **CEFR**: C2
 - **Prompt**: Because the market close was rapidly approaching, day traders liquidated their speculative derivative calls.
 - **Transformation**: The market close rapidly approaching, day traders liquidated their speculative derivative calls.
 - **Grammatical Cue**: Create an absolute clause: noun phrase subject + participle phrase, grammatically independent of main clause.
@@ -112,6 +121,7 @@
 - **ID**: gram-cond-10
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 2
+- **CEFR**: C1
 - **Prompt**: Because he was aware of the severe geopolitical risks, the ambassador spoke with calculated discretion.
 - **Transformation**: Aware of the severe geopolitical risks, the ambassador spoke with calculated discretion.
 - **Grammatical Cue**: Drop causal conjunction and copula, starting directly with adjective complement 'Aware of...'.
@@ -124,6 +134,7 @@
 - **ID**: gram-cond-11
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 3
+- **CEFR**: C1
 - **Prompt**: Because inflation rates were escalating and bond yields were cratering, the pension fund reassessed allocations.
 - **Transformation**: With inflation rates escalating and bond yields cratering, the pension fund reassessed allocations.
 - **Grammatical Cue**: Use preposition 'With' to govern compound absolute participial complements.
@@ -136,6 +147,7 @@
 - **ID**: gram-cond-12
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 3
+- **CEFR**: C1
 - **Prompt**: Because the analysts had not anticipated the sudden export ban, they scrambled to revise earnings projections.
 - **Transformation**: Not having anticipated the sudden export ban, the analysts scrambled to revise earnings projections.
 - **Grammatical Cue**: Position negative particle 'Not' immediately before the perfect participle 'having anticipated'.
@@ -148,6 +160,7 @@
 - **ID**: gram-cond-13
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 3
+- **CEFR**: C1
 - **Prompt**: As she was pursued by regulatory hounds and abandoned by institutional backers, the CEO stepped down.
 - **Transformation**: Pursued by regulatory hounds and abandoned by institutional backers, the CEO stepped down.
 - **Grammatical Cue**: Coordinate two passive participle phrases in parallel before the primary subject.
@@ -160,6 +173,7 @@
 - **ID**: gram-cond-14
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 3
+- **CEFR**: C2
 - **Prompt**: The conglomerate executed the debt refinancing package, and its net debt-to-equity ratio fell to 1.2.
 - **Transformation**: The conglomerate executed the debt refinancing package, its net debt-to-equity ratio falling to 1.2.
 - **Grammatical Cue**: Attach post-clausal absolute construction with present participle showing mathematical consequence.
@@ -172,6 +186,7 @@
 - **ID**: gram-cond-15
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 3
+- **CEFR**: C2
 - **Prompt**: Although it was seemingly an intractable logistical deadlock, the dispute was resolved within forty-eight hours.
 - **Transformation**: Though seemingly an intractable logistical deadlock, the dispute was resolved within forty-eight hours.
 - **Grammatical Cue**: Retain concessive 'Though' while ellipting expletive subject 'it' and copula 'was'.
@@ -184,6 +199,7 @@
 - **ID**: gram-cond-16
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 1
+- **CEFR**: B2
 - **Prompt**: She was the first engineer who identified the race condition in the payment service.
 - **Transformation**: She was the first engineer to identify the race condition in the payment service.
 - **Grammatical Cue**: After an ordinal, a superlative or 'only', reduce the subject relative clause 'who + finite verb' to a to-infinitive.
@@ -196,6 +212,7 @@
 - **ID**: gram-cond-17
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 2
+- **CEFR**: C1
 - **Prompt**: Because the senior partner was unfamiliar with the jurisdiction, she deferred to local counsel.
 - **Transformation**: Being unfamiliar with the jurisdiction, the senior partner deferred to local counsel.
 - **Grammatical Cue**: Replace 'Because + subject + be + adjective' with a fronted 'Being + adjective' phrase that shares the main-clause subject.
@@ -208,6 +225,7 @@
 - **ID**: gram-cond-18
 - **Mode**: CLAUSAL_CONDENSATION
 - **Level**: 3
+- **CEFR**: C1
 - **Prompt**: Once the amendment has been ratified by both chambers, it cannot be revoked without a referendum.
 - **Transformation**: Once ratified by both chambers, the amendment cannot be revoked without a referendum.
 - **Grammatical Cue**: Keep the subordinator 'once' but delete the subject and the auxiliary 'has been', leaving the bare past participle.

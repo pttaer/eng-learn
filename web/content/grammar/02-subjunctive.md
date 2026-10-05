@@ -4,6 +4,7 @@
 - **ID**: gram-subj-1
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 1
+- **CEFR**: C1
 - **Prompt**: The regulatory commission demands that the exchange operator halts trading immediately.
 - **Transformation**: The regulatory commission demands that the exchange operator halt trading immediately.
 - **Grammatical Cue**: Verbs of demand require base bare form of the verb in the dependent 'that' clause.
@@ -16,6 +17,7 @@
 - **ID**: gram-subj-2
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 1
+- **CEFR**: C1
 - **Prompt**: Independent auditors recommend that management revises their revenue recognition schedules.
 - **Transformation**: Independent auditors recommend that management revise their revenue recognition schedules.
 - **Grammatical Cue**: Verb 'recommend' triggers subjunctive bare infinitive 'revise' regardless of subject number.
@@ -28,6 +30,7 @@
 - **ID**: gram-subj-3
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 1
+- **CEFR**: B1
 - **Prompt**: The lead architect regrets that the system relies on a monolithic architecture.
 - **Transformation**: The lead architect wishes the system did not rely on a monolithic architecture.
 - **Grammatical Cue**: Express counterfactual present desire using 'wish + past tense' to signal distance from reality.
@@ -40,6 +43,7 @@
 - **ID**: gram-subj-4
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 1
+- **CEFR**: B2
 - **Prompt**: The founders regret that they sold fifty-one percent of equity during the seed round.
 - **Transformation**: The founders wish they had not sold fifty-one percent of equity during the seed round.
 - **Grammatical Cue**: Past regret requires past-on-past counterfactual tense 'had + past participle'.
@@ -52,6 +56,7 @@
 - **ID**: gram-subj-5
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 1
+- **CEFR**: C2
 - **Prompt**: Even if that is true, we must nevertheless enforce the statutory compliance sanctions.
 - **Transformation**: Be that as it may, we must nevertheless enforce the statutory compliance sanctions.
 - **Grammatical Cue**: Use archaic formulaic subjunctive clause 'Be that as it may' as a concessive discourse transition.
@@ -64,6 +69,7 @@
 - **ID**: gram-subj-6
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 2
+- **CEFR**: C1
 - **Prompt**: It is imperative that every flight controller remains vigilant during severe weather diversions.
 - **Transformation**: It is imperative that every flight controller remain vigilant during severe weather diversions.
 - **Grammatical Cue**: Adjectives of necessity ('imperative', 'vital') govern bare base verbs in 'that' complements.
@@ -76,6 +82,7 @@
 - **ID**: gram-subj-7
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 2
+- **CEFR**: C1
 - **Prompt**: It is essential that the forensic analyst documents the chain of custody for all hard drives.
 - **Transformation**: It is essential that the forensic analyst document the chain of custody for all hard drives.
 - **Grammatical Cue**: Adjective 'essential' strips third-person '-s' in formal subjunctive clause.
@@ -88,6 +95,7 @@
 - **ID**: gram-subj-8
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 2
+- **CEFR**: B2
 - **Prompt**: The CEO acted like the antitrust lawsuit was an irrelevant nuisance.
 - **Transformation**: The CEO acted as if the antitrust lawsuit were an irrelevant nuisance.
 - **Grammatical Cue**: Formal counterfactual comparison replaces informal 'like' with 'as if' and subjunctive 'were'.
@@ -100,6 +108,7 @@
 - **ID**: gram-subj-9
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 2
+- **CEFR**: B2
 - **Prompt**: The legislature should finally modernize antiquated consumer privacy legislation.
 - **Transformation**: It is high time the legislature modernized antiquated consumer privacy legislation.
 - **Grammatical Cue**: 'It is high time' takes past simple verb to express overdue action with gentle reproach.
@@ -112,6 +121,7 @@
 - **ID**: gram-subj-10
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 2
+- **CEFR**: C2
 - **Prompt**: Whatever happens, the scientific expedition will press on toward the subglacial lake.
 - **Transformation**: Come what may, the scientific expedition will press on toward the subglacial lake.
 - **Grammatical Cue**: Replace concessive conditional clause with classic formulaic subjunctive 'Come what may'.
@@ -124,6 +134,7 @@
 - **ID**: gram-subj-11
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 3
+- **CEFR**: C2
 - **Prompt**: The ethical charter decrees that the training dataset is purged of unconsented biometrics.
 - **Transformation**: The ethical charter decrees that the training dataset be purged of unconsented biometrics.
 - **Grammatical Cue**: Combine passive voice with mandative subjunctive: 'be + past participle'.
@@ -136,6 +147,7 @@
 - **ID**: gram-subj-12
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 3
+- **CEFR**: B2
 - **Prompt**: Because the developers did not architect modular microservices in 2021, the application is unmaintainable today.
 - **Transformation**: Had the developers architected modular microservices in 2021, the application would be maintainable today.
 - **Grammatical Cue**: Blend inverted past perfect condition ('Had... architected') with present modal result ('would be').
@@ -148,6 +160,7 @@
 - **ID**: gram-subj-13
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 3
+- **CEFR**: C1
 - **Prompt**: Because the lead negotiator is not fluent in Mandarin, she misunderstood the subtle contractual nuance yesterday.
 - **Transformation**: Were the lead negotiator fluent in Mandarin, she would not have misunderstood the subtle contractual nuance yesterday.
 - **Grammatical Cue**: Invert present subjunctive 'Were [Subject] [Adj]' linked to past modal perfect result 'would have [V3]'.
@@ -160,6 +173,7 @@
 - **ID**: gram-subj-14
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 3
+- **CEFR**: C2
 - **Prompt**: It is enough to say that the subsequent investigation revealed catastrophic governance failures.
 - **Transformation**: Suffice it to say that the subsequent investigation revealed catastrophic governance failures.
 - **Grammatical Cue**: Use classical formulaic subjunctive 'Suffice it to say' for concise rhetorical summary.
@@ -172,6 +186,7 @@
 - **ID**: gram-subj-15
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 3
+- **CEFR**: C2
 - **Prompt**: The treasury diversified dollar reserves so that they would not be caught unprepared by sanctions.
 - **Transformation**: The treasury diversified dollar reserves lest they be caught unprepared by sanctions.
 - **Grammatical Cue**: Replace 'so that... not' with negative subordinator 'lest' governing bare subjunctive 'be caught'.
@@ -184,6 +199,7 @@
 - **ID**: gram-subj-16
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 1
+- **CEFR**: C1
 - **Prompt**: If the emergency credit line did not exist, the airline would already be insolvent.
 - **Transformation**: Were it not for the emergency credit line, the airline would already be insolvent.
 - **Grammatical Cue**: Replace 'If X did not exist' with the fixed inverted subjunctive 'Were it not for + noun phrase'.
@@ -196,6 +212,7 @@
 - **ID**: gram-subj-17
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 2
+- **CEFR**: C1
 - **Prompt**: The tribunal insists that the witness does not discuss her testimony with the press.
 - **Transformation**: The tribunal insists that the witness not discuss her testimony with the press.
 - **Grammatical Cue**: In a negative mandative clause, place 'not' directly before the bare verb: no 'do' support and no third-person '-s'.
@@ -208,6 +225,7 @@
 - **ID**: gram-subj-18
 - **Mode**: SUBJUNCTIVE_UNREAL
 - **Level**: 3
+- **CEFR**: C2
 - **Prompt**: I wish the founders had foreseen how fragile their governance model would prove.
 - **Transformation**: Would that the founders had foreseen how fragile their governance model would prove.
 - **Grammatical Cue**: Replace 'I wish' with the literary optative 'Would that'; keep the backshifted tense (past perfect for past regret).

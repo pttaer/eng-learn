@@ -4,6 +4,7 @@
 - **ID**: gram-prec-1
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 1
+- **CEFR**: B2
 - **Prompt**: The audit revealed that the branch was inflating invoices, concealed debts, and to bribe local officials.
 - **Transformation**: The audit revealed that the branch was inflating invoices, concealing debts, and bribing local officials.
 - **Grammatical Cue**: Harmonize all coordinate verbal complements into parallel gerund-participle (-ing) forms.
@@ -16,6 +17,7 @@
 - **ID**: gram-prec-2
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 1
+- **CEFR**: C1
 - **Prompt**: The policy change not only alienated key enterprise customers, but also it generated meager recurring revenues.
 - **Transformation**: The policy change not only alienated key enterprise customers, but also generated meager recurring revenues.
 - **Grammatical Cue**: Ensure constituents following 'not only' and 'but also' share identical grammatical categories (Verb Phrase).
@@ -28,6 +30,7 @@
 - **ID**: gram-prec-3
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 1
+- **CEFR**: B1
 - **Prompt**: The lead engineer detected anomalous telemetry spikes, and immediately he isolates the compromised gateway.
 - **Transformation**: The lead engineer detected anomalous telemetry spikes and immediately isolated the compromised gateway.
 - **Grammatical Cue**: Eliminate arbitrary shift from past tense 'detected' to present tense 'isolates'.
@@ -40,6 +43,7 @@
 - **ID**: gram-prec-4
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 1
+- **CEFR**: B2
 - **Prompt**: An analysis of the quarterly logistics telemetry was conducted by the operations optimization squad.
 - **Transformation**: The operations optimization squad analyzed the quarterly logistics telemetry.
 - **Grammatical Cue**: Convert clunky passive nominalization ('An analysis was conducted by...') into vigorous active transitive verb.
@@ -52,6 +56,7 @@
 - **ID**: gram-prec-5
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 1
+- **CEFR**: B2
 - **Prompt**: The spokesperson addressed the accusations calmly, thoroughly, and in a professional manner.
 - **Transformation**: The spokesperson addressed the accusations calmly, thoroughly, and professionally.
 - **Grammatical Cue**: Harmonize prepositional phrase 'in a professional manner' into clean parallel '-ly' adverb.
@@ -64,6 +69,7 @@
 - **ID**: gram-prec-6
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 2
+- **CEFR**: C1
 - **Prompt**: Approaching the international border crossing, the travelers' passports were inspected by biometric cameras.
 - **Transformation**: Approaching the international border crossing, the travelers had their passports inspected by biometric cameras.
 - **Grammatical Cue**: Ensure grammatical subject immediately following introductory participle is the agent performing the action.
@@ -76,6 +82,7 @@
 - **ID**: gram-prec-7
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 2
+- **CEFR**: B2
 - **Prompt**: The compliance officer only flagged three fraudulent wire transfers during the audit.
 - **Transformation**: The compliance officer flagged only three fraudulent wire transfers during the audit.
 - **Grammatical Cue**: Place focus adverb 'only' directly adjacent to the numerical noun phrase it restricts.
@@ -88,6 +95,7 @@
 - **ID**: gram-prec-8
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 2
+- **CEFR**: C1
 - **Prompt**: The computational throughput of our distributed cluster is substantially higher than our primary competitor.
 - **Transformation**: The computational throughput of our distributed cluster is substantially higher than that of our primary competitor.
 - **Grammatical Cue**: Use pro-form 'that of' to prevent comparing an abstract metric ('throughput') directly against a company.
@@ -100,6 +108,7 @@
 - **ID**: gram-prec-9
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 2
+- **CEFR**: B2
 - **Prompt**: The statutory directive instructs administrators to strictly and without exception enforce the embargo.
 - **Transformation**: The statutory directive instructs administrators to enforce the embargo strictly and without exception.
 - **Grammatical Cue**: Relocate lengthy adverbial phrase outside the 'to + verb' infinitive nexus in formal legal prose.
@@ -112,6 +121,7 @@
 - **ID**: gram-prec-10
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 2
+- **CEFR**: C1
 - **Prompt**: All proprietary trade secrets, which were acquired during the joint venture, must be returned.
 - **Transformation**: All proprietary trade secrets that were acquired during the joint venture must be returned.
 - **Grammatical Cue**: Use restrictive pronoun 'that' without commas to define an essential subset of trade secrets.
@@ -124,6 +134,7 @@
 - **ID**: gram-prec-11
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 3
+- **CEFR**: C1
 - **Prompt**: After dissecting the malware payload, the zero-day vulnerability was successfully patched by our security team.
 - **Transformation**: After dissecting the malware payload, our security team successfully patched the zero-day vulnerability.
 - **Grammatical Cue**: Make the human actor ('our security team') the matrix subject following prepositional gerund phrase.
@@ -136,6 +147,7 @@
 - **ID**: gram-prec-12
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 3
+- **CEFR**: C2
 - **Prompt**: Board members who review compensation packages frequently express severe dissatisfaction.
 - **Transformation**: Board members who frequently review compensation packages express severe dissatisfaction.
 - **Grammatical Cue**: Disambiguate adverb 'frequently' so it clearly modifies either the relative clause or the main verb.
@@ -148,6 +160,7 @@
 - **ID**: gram-prec-13
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 3
+- **CEFR**: C2
 - **Prompt**: The senior partner authored eight landmark antitrust briefs, while the junior associate authored only two landmark antitrust briefs.
 - **Transformation**: The senior partner authored eight landmark antitrust briefs; the junior associate, only two.
 - **Grammatical Cue**: Ellipt identical verb and noun phrase using comma of gapping and semicolon coordination.
@@ -160,6 +173,7 @@
 - **ID**: gram-prec-14
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 3
+- **CEFR**: C2
 - **Prompt**: The charter requires that every delegate is registered and that each votes according to their constituency.
 - **Transformation**: The charter requires that every delegate be registered and that each vote according to their constituency.
 - **Grammatical Cue**: Harmonize coordinated mandative subjunctive clauses into invariant bare forms 'be' and 'vote'.
@@ -172,6 +186,7 @@
 - **ID**: gram-prec-15
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 3
+- **CEFR**: C2
 - **Prompt**: The transformation plan entails the restructuring of internal debt and to divest non-core semiconductor assets.
 - **Transformation**: The transformation plan entails restructuring internal debt and divesting non-core semiconductor assets.
 - **Grammatical Cue**: Eliminate clash between prepositional noun phrase 'the restructuring of' and infinitive 'to divest'.
@@ -184,6 +199,7 @@
 - **ID**: gram-prec-16
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 1
+- **CEFR**: B2
 - **Prompt**: The number of complaints lodged against the contractor have tripled, and a number of residents is now considering legal action.
 - **Transformation**: The number of complaints lodged against the contractor has tripled, and a number of residents are now considering legal action.
 - **Grammatical Cue**: 'The number' is a singular head noun; in 'a number of', the plural noun after 'of' is the head and governs the verb.
@@ -196,6 +212,7 @@
 - **ID**: gram-prec-17
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 2
+- **CEFR**: B2
 - **Prompt**: When the chief executive met the auditor, she insisted that her figures were accurate.
 - **Transformation**: The chief executive insisted to the auditor that her own figures were accurate.
 - **Grammatical Cue**: Two singular female antecedents precede 'she' and 'her'; restructure so that the intended referent is the only salient candidate.
@@ -208,6 +225,7 @@
 - **ID**: gram-prec-18
 - **Mode**: SYNTACTIC_REPAIR
 - **Level**: 3
+- **CEFR**: B2
 - **Prompt**: The reason the pilot project stalled is because the regional offices were never consulted.
 - **Transformation**: The reason the pilot project stalled is that the regional offices were never consulted.
 - **Grammatical Cue**: After 'The reason... is', use a 'that' clause; 'because' duplicates the causal meaning already carried by 'reason'.
