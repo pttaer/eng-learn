@@ -133,6 +133,150 @@
       "audioText": "Good listeners wait for the speaker to finish before they decide what they think about what was said.",
       "ipa": "/ɡʊd ˈlɪsnəz weɪt fə ðə ˈspiːkə tə ˈfɪnɪʃ bɪˈfɔː ðeɪ dɪˈsaɪd wɒt ðeɪ θɪŋk əˈbaʊt wɒt wəz sɛd/",
       "traps": "Weak /fə/ and /tə/; glottal /t/ in \"wait for\" and \"what they\" [weɪʔ fə], [wɒʔ ðeɪ]: the /t/ becomes a glottal stop rather than disappearing."
+    },
+    {
+      "id": "listen-a1-1",
+      "cefrLevel": "A1",
+      "title": "A Greeting",
+      "audioText": "Nice to meet you. How are you?",
+      "ipa": "/naɪs tə miːt juː haʊ ə juː/",
+      "traps": "Weak forms: 'to' and 'are' become /tə/ and /ə/. / Từ chức năng đọc yếu, nhẹ."
+    },
+    {
+      "id": "listen-a1-2",
+      "cefrLevel": "A1",
+      "title": "Going Home",
+      "audioText": "I go home at six.",
+      "ipa": "/aɪ ɡəʊ həʊm ət sɪks/",
+      "traps": "Weak form: 'at' is /ət/, not /æt/. / 'at' đọc nhẹ, không nhấn."
+    },
+    {
+      "id": "listen-a1-3",
+      "cefrLevel": "A1",
+      "title": "Her Name",
+      "audioText": "Her name is Anna.",
+      "ipa": "/hɜː neɪm ɪz ˈænə/",
+      "traps": "Linking: 'is' joins with 'Anna' as /ɪ-zæ/ in fast speech. / Nối âm cuối /z/ với nguyên âm sau."
+    },
+    {
+      "id": "listen-a1-4",
+      "cefrLevel": "A1",
+      "title": "Three Cats",
+      "audioText": "I have three cats.",
+      "ipa": "/aɪ hæv θriː kæts/",
+      "traps": "Say /θ/ in 'three' with the tongue between the teeth, not /s/ or /t/. / Đặt lưỡi giữa răng, đừng đọc thành /s/ hay /t/."
+    },
+    {
+      "id": "listen-a1-5",
+      "cefrLevel": "A1",
+      "title": "Likes and Plurals",
+      "audioText": "She likes apples and eggs.",
+      "ipa": "/ʃiː laɪks ˈæplz ənd eɡz/",
+      "traps": "Final -s: 'likes' ends in /s/ but 'eggs' ends in /z/. / Âm -s cuối: /s/ hay /z/ tùy âm đứng trước."
+    },
+    {
+      "id": "listen-a1-6",
+      "cefrLevel": "A1",
+      "title": "Can and Can't",
+      "audioText": "I can swim, but I can't run.",
+      "ipa": "/aɪ kən swɪm bət aɪ kɑːnt rʌn/",
+      "traps": "'can' is weak /kən/; 'can't' is strong /kɑːnt/, so listen for the vowel. / 'can' đọc nhẹ, 'can't' đọc dài và rõ."
+    },
+    {
+      "id": "listen-a2-1",
+      "cefrLevel": "A2",
+      "title": "Platform Announcement",
+      "audioText": "The train to London leaves at ten past five. Please go to platform four and wait there.",
+      "ipa": "/ðə ˈtreɪn tə ˈlʌndən ˈliːvz ət ˈten ˈpɑːst ˈfaɪv pliːz ɡəʊ tə ˈplætfɔːm ˈfɔːr ən ˈweɪt ðeə/",
+      "traps": "Weak forms: \"to\", \"at\" and \"and\" sound like /tə/, /ət/ and /ən/. Little words are quiet and short (từ chức năng đọc rất nhẹ)."
+    },
+    {
+      "id": "listen-a2-2",
+      "cefrLevel": "A2",
+      "title": "Too Loud in Class",
+      "audioText": "Could you turn it off, please? I can't hear the teacher because it is very loud in here.",
+      "ipa": "/kʊd ju ˈtɜːn ɪt ˈɒf pliːz aɪ ˈkɑːnt ˈhɪə ðə ˈtiːtʃə bɪˈkɒz ɪt ɪz ˈveri ˈlaʊd ɪn ˈhɪə/",
+      "traps": "Linking: \"turn it off\" sounds like \"tur-ni-toff\" because the consonant joins the next vowel (nối âm phụ âm với nguyên âm)."
+    },
+    {
+      "id": "listen-a2-3",
+      "cefrLevel": "A2",
+      "title": "Fish for Dinner",
+      "audioText": "Yesterday I walked to the market and looked for fresh fish. The shop closed early, so I cooked pasta.",
+      "ipa": "/ˈjestədeɪ aɪ ˈwɔːkt tə ðə ˈmɑːkɪt ən ˈlʊkt fə ˈfreʃ ˈfɪʃ ðə ˈʃɒp ˈkləʊzd ˈɜːli səʊ aɪ ˈkʊkt ˈpɑːstə/",
+      "traps": "Past -ed: \"walked\", \"looked\" and \"cooked\" end in a quick /t/, and \"closed\" ends in /d/. It is easy to miss (đuôi -ed rất ngắn, dễ bỏ sót)."
+    },
+    {
+      "id": "listen-a2-4",
+      "cefrLevel": "A2",
+      "title": "Sorry, I Can't Come",
+      "audioText": "I'm sorry, but I can't come to dinner tonight. We haven't finished work and the boss isn't happy.",
+      "ipa": "/aɪm ˈsɒri bət aɪ ˈkɑːnt ˈkʌm tə ˈdɪnə təˈnaɪt wi ˈhævnt ˈfɪnɪʃt ˈwɜːk ən ðə ˈbɒs ˈɪznt ˈhæpi/",
+      "traps": "Contractions: \"I'm\", \"can't\", \"haven't\" and \"isn't\" are short and the final /t/ is weak, so listen for the stress on the verb (đuôi n't rất nhẹ, dễ nhầm với câu khẳng định)."
+    },
+    {
+      "id": "listen-a2-5",
+      "cefrLevel": "A2",
+      "title": "Weekend Plans",
+      "audioText": "What are you going to do this weekend? I'm going to visit my sister and watch a film.",
+      "ipa": "/ˈwɒt ə ju ˈɡəʊɪŋ tə ˈduː ðɪs ˌwiːkˈend aɪm ˈɡəʊɪŋ tə ˈvɪzɪt maɪ ˈsɪstə ən ˈwɒtʃ ə ˈfɪlm/",
+      "traps": "\"Going to\" often sounds like \"gonna\" /ˈɡʌnə/ in fast speech (going to đọc nhanh thành gonna)."
+    },
+    {
+      "id": "listen-a2-6",
+      "cefrLevel": "A2",
+      "title": "Is This Seat Free?",
+      "audioText": "Excuse me, is this seat free? Oh, yes, of course, please sit down. Would you like tea or coffee?",
+      "ipa": "/ɪkˈskjuːs miː ɪz ðɪs ˈsiːt ˈfriː əʊ ˈjes əv ˈkɔːs pliːz ˈsɪt ˈdaʊn wʊd ju ˈlaɪk ˈtiː ɔː ˈkɒfi/",
+      "traps": "Intonation: a yes/no question goes up at the end (free?), and a choice question goes up then down (tea or coffee). Listen to the pitch (nghe giọng lên xuống)."
+    },
+    {
+      "id": "listen-b1-1",
+      "cefrLevel": "B1",
+      "title": "A Voicemail from Anna",
+      "audioText": "Hi Sam, it's Anna. I'm running a bit late this morning, so please start the meeting without me. I'll call you again as soon as I get off the train.",
+      "ipa": "/haɪ sæm ɪts ˈænə aɪm ˈrʌnɪŋ ə bɪt leɪt ðɪs ˈmɔːnɪŋ səʊ pliːz stɑːt ðə ˈmiːtɪŋ wɪˈðaʊt miː aɪl kɔːl juː əˈɡeɪn əz suːn əz aɪ ɡet ɒf ðə treɪn/",
+      "traps": "Linking: the final consonant joins the next vowel, as in \"get off\" [ɡe-tɒf] and \"as soon as\" [ə-zsuː-nəz]. (Nối âm: phụ âm cuối nối với nguyên âm sau.)"
+    },
+    {
+      "id": "listen-b1-2",
+      "cefrLevel": "B1",
+      "title": "Bridge Closed for Repairs",
+      "audioText": "The city council has decided to close the old bridge for two months. Workers will repair the road next week, and drivers should expect long delays near the town centre.",
+      "ipa": "/ðə ˈsɪti ˈkaʊnsl̩ həz dɪˈsaɪdɪd tə kləʊs ði əʊld brɪdʒ fə tuː mʌnθs ˈwɜːkəz wɪl rɪˈpeə ðə rəʊd nɛks wiːk ənd ˈdraɪvəz ʃəd ɪkˈspɛkt lɒŋ dɪˈleɪz nɪə ðə taʊn ˈsɛntə/",
+      "traps": "Elision: the /t/ often disappears between consonants, so \"next week\" sounds like [nɛks wiːk]. (Nuốt âm: /t/ bị lược bỏ giữa hai phụ âm.)"
+    },
+    {
+      "id": "listen-b1-3",
+      "cefrLevel": "B1",
+      "title": "A Lost Wallet",
+      "audioText": "Last week I lost my wallet on the bus. A kind man found it and brought it to the station. There was ten pounds missing, but I was just happy to get it back.",
+      "ipa": "/lɑːst wiːk aɪ lɒst maɪ ˈwɒlɪt ɒn ðə bʌs ə kaɪnd mæn faʊnd ɪt ənd brɔːt ɪt tə ðə ˈsteɪʃn̩ ðeə wəz tɛn paʊndz ˈmɪsɪŋ bʌt aɪ wəz dʒʌst ˈhæpi tə ɡɛt ɪt bæk/",
+      "traps": "Assimilation: a sound changes to match the next one, so \"ten pounds\" sounds like [tɛm paʊndz] and \"kind man\" like [kaɪm mæn]. (Đồng hóa âm: /n/ đổi thành /m/ trước /p/, /m/.)"
+    },
+    {
+      "id": "listen-b1-4",
+      "cefrLevel": "B1",
+      "title": "Sleeping Better",
+      "audioText": "If you want to sleep better, try to go to bed at the same time every night. You should also put your phone away an hour before you turn the light off.",
+      "ipa": "/ɪf juː wɒnt tə sliːp ˈbɛtə traɪ tə ɡəʊ tə bɛd ət ðə seɪm taɪm ˈɛvri naɪt juː ʃəd ˈɔːlsəʊ pʊt jɔː fəʊn əˈweɪ ən ˈaʊə bɪˈfɔː juː tɜːn ðə laɪt ɒf/",
+      "traps": "Weak forms: small words like \"to\", \"at\", \"the\" are said quickly as /tə/, /ət/, /ðə/. (Dạng yếu: các từ nhỏ đọc nhanh và nhẹ, thành âm /ə/.)"
+    },
+    {
+      "id": "listen-b1-5",
+      "cefrLevel": "B1",
+      "title": "Two Years of English",
+      "audioText": "I've been learning English for about two years now. I couldn't understand fast speakers at first, but they don't sound so quick anymore. I'm sure that daily practice has helped.",
+      "ipa": "/aɪv biːn ˈlɜːnɪŋ ˈɪŋɡlɪʃ fər əˈbaʊt tuː jɪəz naʊ aɪ ˈkʊdnt ˌʌndəˈstænd fɑːst ˈspiːkəz ət fɜːst bʌt ðeɪ dəʊnt saʊnd səʊ kwɪk ˌɛniˈmɔː aɪm ʃɔː ðət ˈdeɪli ˈpræktɪs həz hɛlpt/",
+      "traps": "Contractions: \"I've\", \"couldn't\", \"don't\", \"I'm\" are short and quick, so listen for the small sound. (Dạng rút gọn: nghe kỹ âm ngắn như I've, couldn't, don't.)"
+    },
+    {
+      "id": "listen-b1-6",
+      "cefrLevel": "B1",
+      "title": "A Rainy Weekend",
+      "audioText": "The weather forecast says it will rain all weekend. We wanted to go to the beach with our friends, but now we are planning a film night at home instead.",
+      "ipa": "/ðə ˈwɛðə ˈfɔːkɑːst sɛz ɪt wɪl reɪn ɔːl ˌwiːkˈɛnd wiː ˈwɒntɪd tə ɡəʊ tə ðə biːtʃ wɪð ˈaʊə frɛndz bʌt naʊ wiː ɑː ˈplænɪŋ ə fɪlm naɪt ət həʊm ɪnˈstɛd/",
+      "traps": "Sentence stress: the important words (weather, rain, beach, film) are louder and longer; the little words are weak. (Trọng âm câu: từ nội dung đọc mạnh, từ chức năng đọc nhẹ.)"
     }
   ]
 }
