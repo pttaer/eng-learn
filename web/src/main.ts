@@ -1,3 +1,4 @@
+import { PlacementQuiz } from './modules/placement-quiz';
 import { icon } from './utils/icons';
 import { AudioSynthesizer } from './core/audio-synthesizer';
 import { CursorTracker } from './core/cursor-tracker';
@@ -159,14 +160,18 @@ class App {
     this.bindNavigation();
     this.bindKeyboardShortcuts();
 
-    // 5. Automatic First-Run Spotlight Onboarding Tour Prompt
-    if (!localStorage.getItem('eng_onboarding_completed') && !SpotlightTour.isCompleted()) {
-      setTimeout(() => {
-        if (!localStorage.getItem('eng_onboarding_completed') && !SpotlightTour.isCompleted() && !document.getElementById('tour-welcome-toast')) {
-          this.showWelcomeToast();
-        }
-      }, 700);
-    }
+    // 5. First run: placement quiz, then the Spotlight Onboarding Tour prompt
+    const promptTour = () => {
+      if (!localStorage.getItem('eng_onboarding_completed') && !SpotlightTour.isCompleted()) {
+        setTimeout(() => {
+          if (!localStorage.getItem('eng_onboarding_completed') && !SpotlightTour.isCompleted() && !document.getElementById('tour-welcome-toast')) {
+            this.showWelcomeToast();
+          }
+        }, 700);
+      }
+    };
+    if (StorageManager.isPlacementDone()) promptTour();
+    else setTimeout(() => PlacementQuiz.open(promptTour), 300);
   }
 
   private bindNavigation(): void {

@@ -5,6 +5,7 @@ import { SRSCardState } from '../core/srs-engine';
 export interface AppStorageState {
   version: number;
   learnerLevel: Cefr;
+  placementDone: boolean;
   soundMuted: boolean;
   cardStates: Record<string, SRSCardState>;
   streak: {
@@ -35,6 +36,7 @@ function getTodayString(): string {
 const DEFAULT_STATE: AppStorageState = {
   version: CURRENT_VERSION,
   learnerLevel: 'A1',
+  placementDone: false,
   soundMuted: false,
   cardStates: {},
   streak: {
@@ -70,6 +72,7 @@ export class StorageManager {
         ...parsed,
         version: CURRENT_VERSION,
         learnerLevel: this.migratedLevel(parsed),
+        placementDone: parsed.placementDone ?? !isCefr(parsed.learnerLevel),
         streak: { ...DEFAULT_STATE.streak, ...(parsed.streak || {}) },
         habitProgress: parsed.habitProgress || {},
         cardStates: parsed.cardStates || {}
@@ -101,6 +104,17 @@ export class StorageManager {
 
   public static getLearnerLevel(): Cefr {
     return this.loadState().learnerLevel;
+  }
+
+  /** v1 users (no learnerLevel yet) never see the quiz; brand-new users do. */
+  public static isPlacementDone(): boolean {
+    return this.loadState().placementDone;
+  }
+
+  public static setPlacementDone(): void {
+    const state = this.loadState();
+    state.placementDone = true;
+    this.saveState(state);
   }
 
   public static setLearnerLevel(level: Cefr): void {
@@ -211,7 +225,8 @@ export class StorageManager {
           ...DEFAULT_STATE,
           ...parsed,
           version: CURRENT_VERSION,
-          learnerLevel: this.migratedLevel(parsed)
+          learnerLevel: this.migratedLevel(parsed),
+          placementDone: parsed.placementDone ?? !isCefr(parsed.learnerLevel)
         });
         return true;
       }

@@ -12,18 +12,23 @@ Retag result (per item): collocations A1 12 / A2 68 / B1 98 / B2 312 / C1 378 / 
 - [x] 1.4 Find what renders "C1 Scholar" (header badge, tree "RANK:"); header level badge + picker; a11y (button, aria-haspopup, Escape claims). Commit `feat(cefr): header level picker`.
 
 ## Phase 2: Level-aware UI (still B2-C2 data)
-- [ ] 2.1 Vocab + Grammar: CEFR chips replace Lvl 1/2/3; modes derived from data; UI count strings computed. Commit `feat(cefr): level chips in vocab and grammar`.
-- [ ] 2.2 Reading, Listening, Collocations, Drills filter *new* cards by effective level + "below my level" toggle; the SRS due queue stays level-independent. Computed count strings. Commit `feat(cefr): level filter across pillars`.
-- [ ] 2.3 Skill tree: new nodes `<branch>-a1/-a2/-b1` (concrete ids + coordinates written here after measuring crowding); sub-B2 prerequisites count as satisfied for learners at or above that level; a node renders only when content for it exists. Commit `feat(cefr): 8-tier skill tree`.
+- [x] 2.1 Vocab + Grammar: CEFR chips replace Lvl 1/2/3; modes derived from data; UI count strings computed. Commit `feat(cefr): level chips in vocab and grammar`.
+- [x] 2.2 Reading, Listening, Collocations, Drills filter *new* cards by effective level + "below my level" toggle; the SRS due queue stays level-independent. Computed count strings. Commit `feat(cefr): level filter across pillars`.
+- [x] 2.3 Skill tree: new nodes `<branch>-a1/-a2/-b1` (concrete ids + coordinates written here after measuring crowding); sub-B2 prerequisites count as satisfied for learners at or above that level; a node renders only when content for it exists. Commit `feat(cefr): 8-tier skill tree`.
 
 ## Phase 3: B1 content (all pillars)
-- [ ] 3.1 B1 gap-fill after re-tagging (target = gap; indicative 100-150 collocations, 20-30 vocab, 24 grammar, 3 reading, 6 listening, 12+12 drills); collocations append at 1001+. Subagent per file, verify script, spot-check sample. B1 tree nodes added. Commits per pillar.
+- [x] 3.1 B1 gap-fill after re-tagging (target = gap; indicative 100-150 collocations, 20-30 vocab, 24 grammar, 3 reading, 6 listening, 12+12 drills); collocations append at 1001+. Subagent per file, verify script, spot-check sample. B1 tree nodes added. Commits per pillar.
 
 ## Phase 4: A2 content (same targets)
 ## Phase 5: A1 content (same targets; Vietnamese-first glosses)
 
 ## Phase 6: Placement quiz
-- [ ] 6.1 18-item MCQ (3 per level) from vocab+grammar, result sets learner level (highest level with >=2/3, stop at first failure); skippable; first-run only. Commit `feat(cefr): placement quiz`.
+- [x] 6.1 18-item MCQ (3 per level) from vocab+grammar, result sets learner level (highest level with >=2/3, stop at first failure); skippable; first-run only. Commit `feat(cefr): placement quiz`.
 
 ## Phase 7: Close-out
-- [ ] 7.1 Update `STATUS.md`, screenshots of all views at desktop and 390, gaps measurement.
+- [x] 7.1 Update `STATUS.md`, screenshots of all views at desktop and 390, gaps measurement.
+
+## Outcome 2026-10-05
+- Phases 1-3 and 6 done; **A1 and A2 were done at the same time as B1** (one content batch per level instead of sequential phases): collocations A1 150 / A2 170 / B1 194 (after removing 36 cross-agent duplicates), vocabulary 30/30/30, grammar 24/24/26, reading 3/3/3, listening 6/6/10, drills 12+12 / 12+12 / 14+13.
+- Placement quiz is vocabulary and collocation based (18 questions, 3 per level), not grammar: grammar items have no auto-generatable distractors.
+- Known limits: only the writing pillar advances tree mastery from practice (as before); tree on phones is scaled down; C2 reading/listening have few items; the 30-day habit plan and the daily-workout panel stay advanced.

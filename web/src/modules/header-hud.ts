@@ -32,6 +32,7 @@ export class HeaderHUD {
     document.documentElement.setAttribute('data-theme', this.currentTheme);
 
     this.render();
+    window.addEventListener('learner-level-change', () => this.render());
 
     // Live update trigger pill when XP or Level changes
     ProgressionEngine.onProgressUpdate((progState) => {
@@ -239,9 +240,8 @@ export class HeaderHUD {
       btn.addEventListener('click', () => {
         AudioSynthesizer.play('click');
         StorageManager.setLearnerLevel((btn as HTMLElement).dataset.level as Cefr);
-        window.dispatchEvent(new CustomEvent('learner-level-change'));
         close();
-        this.render();
+        window.dispatchEvent(new CustomEvent('learner-level-change'));
       });
     });
     modal.querySelector('.btn-modal-close')?.addEventListener('click', close);
