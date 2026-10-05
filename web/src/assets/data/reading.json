@@ -3,6 +3,1107 @@
   "pedagogy": "4-Pass Intensive Deconstruction & i+1 Spaced Repetition Mining",
   "articles": [
     {
+      "id": "reading-a1-1",
+      "title": "My Day",
+      "stage": "Stage 1: Foundations (CEFR A1)",
+      "cefrLevel": "A1",
+      "genre": "Daily Life",
+      "source": "Original text written for this app",
+      "wordCount": 102,
+      "readingTime": "1.2 min @ 120 WPM (Intensive)",
+      "content": "My name is Lan. I get up at six o'clock. I wash my face and eat breakfast. I have bread and an egg. I drink a cup of milk. Then I brush my teeth.\n\nI go to school at seven. I walk with my friend. We study English and maths. I like my teacher. She is kind. At twelve, we eat lunch. After lunch, we play in the yard.\n\nIn the afternoon, I go home. I do my homework at the table. My mother cooks dinner at six. We eat together. At ten o'clock, I go to bed. I am very tired.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Lan has a simple day. She gets up, goes to school, eats with her family and goes to bed.",
+          "markedLexicalTargets": [
+            "breakfast",
+            "school",
+            "lunch",
+            "homework",
+            "dinner",
+            "bed"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "What time does Lan get up?",
+              "answer": "She gets up at six o'clock."
+            },
+            {
+              "question": "What does Lan have for breakfast?",
+              "answer": "She has bread, an egg and a cup of milk."
+            },
+            {
+              "question": "Who cooks dinner?",
+              "answer": "Lan's mother cooks dinner."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "I get up at six o'clock.",
+            "coreSVO": {
+              "subject": "I",
+              "verb": "get up",
+              "objectOrComplement": "none"
+            },
+            "subordinateClauses": [],
+            "syntacticAnalysis": "Simple present tense. \"At six o'clock\" tells us the time. (Thì hiện tại đơn: \"I\" + động từ nguyên mẫu; \"at\" + giờ.)"
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "I have bread and an egg.",
+            "coreSVO": {
+              "subject": "I",
+              "verb": "have",
+              "objectOrComplement": "bread and an egg"
+            },
+            "subordinateClauses": [],
+            "syntacticAnalysis": "Simple present tense with \"have\". \"Bread\" has no \"a\" because we cannot count it; \"egg\" has \"an\" because it starts with a vowel sound. (Bread là danh từ không đếm được nên không có \"a\".)"
+          },
+          {
+            "sentenceIndex": 3,
+            "sentence": "My mother cooks dinner at six.",
+            "coreSVO": {
+              "subject": "My mother",
+              "verb": "cooks",
+              "objectOrComplement": "dinner"
+            },
+            "subordinateClauses": [],
+            "syntacticAnalysis": "With \"my mother\" (she), the verb takes -s: cook becomes cooks. (Chủ ngữ ngôi thứ ba số ít thì động từ thêm -s.)"
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-a1-1-1",
+            "targetWord": "breakfast",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈbrek.fəst/",
+            "definition": "The first meal of the day.",
+            "vietnamese": "bữa sáng",
+            "contextSentence": "I wash my face and eat breakfast.",
+            "collocations": [
+              "eat breakfast",
+              "have breakfast",
+              "breakfast time"
+            ],
+            "etymology": "From break + fast: to stop not eating during the night."
+          },
+          {
+            "id": "mine-reading-a1-1-2",
+            "targetWord": "homework",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈhəʊm.wɜːk/",
+            "definition": "School work that a student does at home.",
+            "vietnamese": "bài tập về nhà",
+            "contextSentence": "I do my homework at the table.",
+            "collocations": [
+              "do homework",
+              "finish homework",
+              "English homework"
+            ],
+            "etymology": "From home + work."
+          },
+          {
+            "id": "mine-reading-a1-1-3",
+            "targetWord": "dinner",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈdɪn.ər/",
+            "definition": "The main meal of the day, eaten in the evening.",
+            "vietnamese": "bữa tối",
+            "contextSentence": "My mother cooks dinner at six.",
+            "collocations": [
+              "cook dinner",
+              "have dinner",
+              "dinner time"
+            ],
+            "etymology": "From Old French disner (to eat the first meal)."
+          },
+          {
+            "id": "mine-reading-a1-1-4",
+            "targetWord": "teacher",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈtiː.tʃər/",
+            "definition": "A person who helps students learn at school.",
+            "vietnamese": "giáo viên, cô giáo, thầy giáo",
+            "contextSentence": "I like my teacher.",
+            "collocations": [
+              "English teacher",
+              "a kind teacher",
+              "ask the teacher"
+            ],
+            "etymology": "From teach + -er (a person who does something)."
+          },
+          {
+            "id": "mine-reading-a1-1-5",
+            "targetWord": "tired",
+            "partOfSpeech": "adjective",
+            "ipa": "/ˈtaɪəd/",
+            "definition": "Needing to rest or sleep.",
+            "vietnamese": "mệt, mệt mỏi",
+            "contextSentence": "I am very tired.",
+            "collocations": [
+              "very tired",
+              "feel tired",
+              "tired and hungry"
+            ],
+            "etymology": "From Old English teorian (to become weak)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "Lan gets up at six and eats breakfast. She goes to school and studies with her friend. In the evening she eats dinner with her mother and goes to bed at ten.",
+          "incorporatedVocabulary": [
+            "breakfast",
+            "homework",
+            "dinner",
+            "teacher",
+            "tired"
+          ],
+          "syntacticReconstruction": "I get up at six, and then I eat breakfast."
+        }
+      }
+    },
+    {
+      "id": "reading-a1-2",
+      "title": "My Family",
+      "stage": "Stage 1: Foundations (CEFR A1)",
+      "cefrLevel": "A1",
+      "genre": "Family and Home",
+      "source": "Original text written for this app",
+      "wordCount": 102,
+      "readingTime": "1.2 min @ 120 WPM (Intensive)",
+      "content": "I have a small family. There are five people. My father is a driver. My mother is a nurse. I have one brother and one sister. We live in a small house.\n\nMy brother is ten. He likes football. My sister is five. She likes cats. My grandmother lives with us. She is old and happy. Her name is Hoa. She makes tea every morning.\n\nWe have dinner together every evening. My mother makes soup. My father tells funny stories. We all laugh. After dinner, we watch TV. I love my family. I am happy at home. We are a happy family.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "This is a small family of five people. They live together and they are happy.",
+          "markedLexicalTargets": [
+            "family",
+            "father",
+            "mother",
+            "brother",
+            "sister",
+            "grandmother"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "How many people are in the family?",
+              "answer": "There are five people."
+            },
+            {
+              "question": "What is the father's job?",
+              "answer": "He is a driver."
+            },
+            {
+              "question": "What does the grandmother do every morning?",
+              "answer": "She makes tea."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "There are five people.",
+            "coreSVO": {
+              "subject": "five people",
+              "verb": "are",
+              "objectOrComplement": "none"
+            },
+            "subordinateClauses": [],
+            "syntacticAnalysis": "\"There are\" tells us what exists. We use \"are\" with many people. (Cấu trúc \"There are\" + danh từ số nhiều: có ... người/vật.)"
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "My father is a driver.",
+            "coreSVO": {
+              "subject": "My father",
+              "verb": "is",
+              "objectOrComplement": "a driver"
+            },
+            "subordinateClauses": [],
+            "syntacticAnalysis": "The verb \"to be\" tells us about a person. We use \"a\" before a job. (Dùng \"a\" trước tên nghề nghiệp.)"
+          },
+          {
+            "sentenceIndex": 3,
+            "sentence": "She likes cats.",
+            "coreSVO": {
+              "subject": "She",
+              "verb": "likes",
+              "objectOrComplement": "cats"
+            },
+            "subordinateClauses": [],
+            "syntacticAnalysis": "Simple present tense. \"She\" takes -s: like becomes likes. (Với \"she\" động từ thêm -s.)"
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-a1-2-1",
+            "targetWord": "family",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈfæm.əl.i/",
+            "definition": "A group of people who are related, like a mother, a father and children.",
+            "vietnamese": "gia đình",
+            "contextSentence": "I have a small family.",
+            "collocations": [
+              "a small family",
+              "a big family",
+              "family dinner"
+            ],
+            "etymology": "From Latin familia (the people of a house)."
+          },
+          {
+            "id": "mine-reading-a1-2-2",
+            "targetWord": "grandmother",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈɡræn.mʌð.ər/",
+            "definition": "The mother of your mother or your father.",
+            "vietnamese": "bà (bà nội, bà ngoại)",
+            "contextSentence": "My grandmother lives with us.",
+            "collocations": [
+              "my grandmother",
+              "visit your grandmother",
+              "grandmother and grandfather"
+            ],
+            "etymology": "From grand + mother."
+          },
+          {
+            "id": "mine-reading-a1-2-3",
+            "targetWord": "nurse",
+            "partOfSpeech": "noun",
+            "ipa": "/nɜːs/",
+            "definition": "A person who helps sick people in a hospital.",
+            "vietnamese": "y tá",
+            "contextSentence": "My mother is a nurse.",
+            "collocations": [
+              "a nurse",
+              "hospital nurse",
+              "nurse and doctor"
+            ],
+            "etymology": "From Old French norrice (a woman who feeds a baby)."
+          },
+          {
+            "id": "mine-reading-a1-2-4",
+            "targetWord": "soup",
+            "partOfSpeech": "noun",
+            "ipa": "/suːp/",
+            "definition": "A hot food made with water, meat or vegetables.",
+            "vietnamese": "súp, canh",
+            "contextSentence": "My mother makes soup.",
+            "collocations": [
+              "make soup",
+              "hot soup",
+              "chicken soup"
+            ],
+            "etymology": "From Old French soupe (bread in broth)."
+          },
+          {
+            "id": "mine-reading-a1-2-5",
+            "targetWord": "happy",
+            "partOfSpeech": "adjective",
+            "ipa": "/ˈhæp.i/",
+            "definition": "Feeling good and pleased.",
+            "vietnamese": "vui, hạnh phúc",
+            "contextSentence": "I am happy at home. We are a happy family.",
+            "collocations": [
+              "very happy",
+              "happy family",
+              "happy birthday"
+            ],
+            "etymology": "From Old Norse happ (luck)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "A girl has a small family of five people. Her parents work, her brother and sister like to play, and her grandmother makes tea. They eat dinner together and they are happy.",
+          "incorporatedVocabulary": [
+            "family",
+            "grandmother",
+            "nurse",
+            "soup",
+            "happy"
+          ],
+          "syntacticReconstruction": "My mother is a nurse, and she makes soup."
+        }
+      }
+    },
+    {
+      "id": "reading-a1-3",
+      "title": "At the Market",
+      "stage": "Stage 1: Foundations (CEFR A1)",
+      "cefrLevel": "A1",
+      "genre": "Shopping and Food",
+      "source": "Original text written for this app",
+      "wordCount": 104,
+      "readingTime": "1.2 min @ 120 WPM (Intensive)",
+      "content": "Today is Saturday. I go to the market with my mother. It is big and busy. There are many people. The market opens at six. We go there early.\n\nI see fruit and vegetables. The apples are red. The bananas are yellow. Apples are two dollars. Bananas are one dollar. My mother buys rice, fish and eggs. I carry the bag. It is a good day. I like the market.\n\nA woman sells flowers. They are pink and white. I want one flower. I ask, \"How much is it?\" She says, \"It is one dollar.\" I say thank you. We go home at ten.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "A girl and her mother go to the market. They buy food, and the girl buys a flower.",
+          "markedLexicalTargets": [
+            "market",
+            "fruit",
+            "apples",
+            "rice",
+            "flower",
+            "dollar"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "Who goes to the market?",
+              "answer": "The girl and her mother go to the market."
+            },
+            {
+              "question": "What colour are the bananas?",
+              "answer": "The bananas are yellow."
+            },
+            {
+              "question": "How much is the flower?",
+              "answer": "It is one dollar."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "The apples are red.",
+            "coreSVO": {
+              "subject": "The apples",
+              "verb": "are",
+              "objectOrComplement": "none"
+            },
+            "subordinateClauses": [],
+            "syntacticAnalysis": "The verb \"to be\" with a colour word. \"Apples\" is plural, so we use \"are\". (Danh từ số nhiều đi với \"are\".)"
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "I go to the market with my mother.",
+            "coreSVO": {
+              "subject": "I",
+              "verb": "go",
+              "objectOrComplement": "none"
+            },
+            "subordinateClauses": [],
+            "syntacticAnalysis": "\"To the market\" shows the place. \"With my mother\" shows who goes too. (Giới từ \"to\" chỉ nơi đến, \"with\" nghĩa là cùng với.)"
+          },
+          {
+            "sentenceIndex": 3,
+            "sentence": "How much is it?",
+            "coreSVO": {
+              "subject": "it",
+              "verb": "is",
+              "objectOrComplement": "none"
+            },
+            "subordinateClauses": [],
+            "syntacticAnalysis": "A question about price. \"How much\" comes first, then \"is\", then \"it\". (Câu hỏi giá tiền: \"How much\" + is + danh từ/it.)"
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-a1-3-1",
+            "targetWord": "market",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈmɑː.kɪt/",
+            "definition": "A place where people buy and sell food and other things.",
+            "vietnamese": "chợ",
+            "contextSentence": "I go to the market with my mother.",
+            "collocations": [
+              "go to the market",
+              "a busy market",
+              "market day"
+            ],
+            "etymology": "From Latin mercatus (trade)."
+          },
+          {
+            "id": "mine-reading-a1-3-2",
+            "targetWord": "vegetables",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈvedʒ.tə.bəlz/",
+            "definition": "Plants that we eat, like carrots and beans.",
+            "vietnamese": "rau củ, rau",
+            "contextSentence": "I see fruit and vegetables.",
+            "collocations": [
+              "fresh vegetables",
+              "eat vegetables",
+              "fruit and vegetables"
+            ],
+            "etymology": "From Latin vegetabilis (alive, growing)."
+          },
+          {
+            "id": "mine-reading-a1-3-3",
+            "targetWord": "buy",
+            "partOfSpeech": "verb",
+            "ipa": "/baɪ/",
+            "definition": "To get something and give money for it.",
+            "vietnamese": "mua",
+            "contextSentence": "My mother buys rice, fish and eggs.",
+            "collocations": [
+              "buy food",
+              "buy a bag",
+              "buy and sell"
+            ],
+            "etymology": "From Old English bycgan (to buy)."
+          },
+          {
+            "id": "mine-reading-a1-3-4",
+            "targetWord": "flower",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈflaʊ.ər/",
+            "definition": "The coloured part of a plant, often beautiful.",
+            "vietnamese": "hoa, bông hoa",
+            "contextSentence": "I want one flower.",
+            "collocations": [
+              "a red flower",
+              "buy flowers",
+              "flower shop"
+            ],
+            "etymology": "From Latin flos (flower)."
+          },
+          {
+            "id": "mine-reading-a1-3-5",
+            "targetWord": "dollar",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈdɒl.ər/",
+            "definition": "Money used in the USA and other countries.",
+            "vietnamese": "đô la",
+            "contextSentence": "Bananas are one dollar.",
+            "collocations": [
+              "one dollar",
+              "five dollars",
+              "dollar bill"
+            ],
+            "etymology": "From German Taler, a silver coin."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "A girl goes to a busy market with her mother on Saturday. They buy fruit, rice, fish and eggs. The girl buys a flower for one dollar and they go home.",
+          "incorporatedVocabulary": [
+            "market",
+            "vegetables",
+            "buy",
+            "flower",
+            "dollar"
+          ],
+          "syntacticReconstruction": "I go to the market, and I buy a flower."
+        }
+      }
+    },
+    {
+      "id": "reading-a2-1",
+      "title": "A Weekend at the Seaside",
+      "stage": "Stage 1: Elementary (CEFR A2)",
+      "cefrLevel": "A2",
+      "genre": "Personal Story & Travel",
+      "source": "Original text written for this app",
+      "wordCount": 163,
+      "readingTime": "1.4 min @ 120 WPM (Intensive)",
+      "content": "Last weekend, my friend Anna and I went to the seaside. We left home early on Saturday morning because we wanted to avoid the traffic. The train was cheap, so we bought two tickets online. When we arrived, the weather was sunny and warm. We walked along the beach and took many photos. The sea looked blue and beautiful.\n\nAt lunch, we ate fish and chips in a small cafe near the harbour. Later, we swam in the sea, but the water was very cold. In the afternoon, it started to rain, so we visited a museum. It was interesting, and the tickets were free. We learned about old boats and the people who worked on them.\n\nIn the evening, we were tired but happy. We sat on a bench and watched the sun go down. The train home was late, but we did not mind. Next month, we are going to visit the mountains. I think it will be another great trip.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Two friends have a cheap, enjoyable weekend at the seaside, and the good experience makes them plan another trip.",
+          "markedLexicalTargets": [
+            "avoid the traffic",
+            "bought tickets",
+            "along the beach",
+            "in the afternoon",
+            "did not mind",
+            "are going to visit"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "Why did they leave home early on Saturday?",
+              "answer": "They wanted to avoid the traffic."
+            },
+            {
+              "question": "What did they do when it started to rain?",
+              "answer": "They visited a museum, and the tickets were free."
+            },
+            {
+              "question": "What are they going to do next month?",
+              "answer": "They are going to visit the mountains."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "We left home early on Saturday morning because we wanted to avoid the traffic.",
+            "coreSVO": {
+              "subject": "We",
+              "verb": "left",
+              "objectOrComplement": "home"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Reason Clause",
+                "clause": "because we wanted to avoid the traffic",
+                "function": "Explains why they left early."
+              }
+            ],
+            "syntacticAnalysis": "Simple past tense plus a \"because\" clause that gives the reason. Ghi chú: \"because\" + mệnh đề = vì, bởi vì."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "The train was cheap, so we bought two tickets online.",
+            "coreSVO": {
+              "subject": "The train",
+              "verb": "was",
+              "objectOrComplement": "(none; \"cheap\" is a complement)"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Result Clause with \"so\"",
+                "clause": "so we bought two tickets online",
+                "function": "Shows the result of the cheap price."
+              }
+            ],
+            "syntacticAnalysis": "Two short clauses joined by \"so\" (cause, then result). Ghi chú: \"so\" = nên, vì vậy; \"bought\" là quá khứ bất quy tắc của \"buy\"."
+          },
+          {
+            "sentenceIndex": 3,
+            "sentence": "We swam in the sea, but the water was very cold.",
+            "coreSVO": {
+              "subject": "We",
+              "verb": "swam",
+              "objectOrComplement": "(none)"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Contrast Clause with \"but\"",
+                "clause": "but the water was very cold",
+                "function": "Gives a negative detail."
+              }
+            ],
+            "syntacticAnalysis": "Two clauses joined by \"but\" to show contrast. Ghi chú: \"swam\" là quá khứ bất quy tắc của \"swim\"."
+          },
+          {
+            "sentenceIndex": 4,
+            "sentence": "Next month, we are going to visit the mountains.",
+            "coreSVO": {
+              "subject": "we",
+              "verb": "are going to visit",
+              "objectOrComplement": "the mountains"
+            },
+            "subordinateClauses": [],
+            "syntacticAnalysis": "\"be going to\" + động từ nguyên mẫu diễn tả kế hoạch trong tương lai. The time phrase \"Next month\" comes first."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-a2-1-1",
+            "targetWord": "harbour",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈhɑː.bər/",
+            "definition": "A place by the sea where boats stay safely.",
+            "vietnamese": "bến cảng, bến tàu",
+            "contextSentence": "We ate fish and chips in a small cafe near the harbour.",
+            "collocations": [
+              "a small harbour",
+              "near the harbour",
+              "fishing harbour"
+            ],
+            "etymology": "Old English here-beorg (shelter for an army)."
+          },
+          {
+            "id": "mine-reading-a2-1-2",
+            "targetWord": "traffic",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈtræf.ɪk/",
+            "definition": "The cars, buses and other vehicles on a road.",
+            "vietnamese": "giao thông, xe cộ, tắc đường",
+            "contextSentence": "We left early to avoid the traffic.",
+            "collocations": [
+              "heavy traffic",
+              "avoid the traffic",
+              "traffic jam"
+            ],
+            "etymology": "From Italian traffico (trade, business)."
+          },
+          {
+            "id": "mine-reading-a2-1-3",
+            "targetWord": "museum",
+            "partOfSpeech": "noun",
+            "ipa": "/mjuˈziː.əm/",
+            "definition": "A building where people can see old or important objects.",
+            "vietnamese": "bảo tàng",
+            "contextSentence": "In the afternoon, it started to rain, so we visited a museum.",
+            "collocations": [
+              "visit a museum",
+              "art museum",
+              "museum ticket"
+            ],
+            "etymology": "Greek mouseion (place of the Muses)."
+          },
+          {
+            "id": "mine-reading-a2-1-4",
+            "targetWord": "swim",
+            "partOfSpeech": "verb",
+            "ipa": "/swɪm/",
+            "definition": "To move through water by using your arms and legs.",
+            "vietnamese": "bơi",
+            "contextSentence": "Later, we swam in the sea, but the water was very cold.",
+            "collocations": [
+              "swim in the sea",
+              "swim in a pool",
+              "go for a swim"
+            ],
+            "etymology": "Old English swimman."
+          },
+          {
+            "id": "mine-reading-a2-1-5",
+            "targetWord": "bench",
+            "partOfSpeech": "noun",
+            "ipa": "/bentʃ/",
+            "definition": "A long seat for two or more people, often outside.",
+            "vietnamese": "ghế băng, ghế dài",
+            "contextSentence": "We sat on a bench and watched the sun go down.",
+            "collocations": [
+              "sit on a bench",
+              "park bench",
+              "wooden bench"
+            ],
+            "etymology": "Old English benc."
+          },
+          {
+            "id": "mine-reading-a2-1-6",
+            "targetWord": "mind",
+            "partOfSpeech": "verb",
+            "ipa": "/maɪnd/",
+            "definition": "To feel annoyed or worried about something.",
+            "vietnamese": "phiền, bận tâm, để ý",
+            "contextSentence": "The train home was late, but we did not mind.",
+            "collocations": [
+              "do not mind",
+              "mind the wait",
+              "never mind"
+            ],
+            "etymology": "Old English gemynd (memory, thought)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "Two friends spend a cheap weekend at the seaside. They walk on the beach, swim, and visit a museum when it rains. They are tired but happy, and they plan a trip to the mountains next month.",
+          "incorporatedVocabulary": [
+            "harbour",
+            "traffic",
+            "museum",
+            "swim",
+            "bench",
+            "mind"
+          ],
+          "syntacticReconstruction": "We left early because we wanted to avoid the traffic, so we arrived in time for a sunny morning."
+        }
+      }
+    },
+    {
+      "id": "reading-a2-2",
+      "title": "Small Habits for a Healthy Life",
+      "stage": "Stage 1: Elementary (CEFR A2)",
+      "cefrLevel": "A2",
+      "genre": "Advice & Health",
+      "source": "Original text written for this app",
+      "wordCount": 173,
+      "readingTime": "1.4 min @ 120 WPM (Intensive)",
+      "content": "Good habits make life better. You should drink a lot of water every day. It is also important to eat fruit and vegetables. Many people eat too much sugar, and it is bad for your health. Try to cook at home because it is cheaper and healthier. Fast food is quick, but it is not always good for you.\n\nExercise is important too, but you do not need an expensive gym. You can walk to work or ride a bike. Last year, I started to run twice a week. At first it was difficult, and I often felt tired. Now I feel stronger and much happier. My friends say that I look better too.\n\nSleep is also very important. Most adults need about eight hours every night. You should not use your phone just before bed. If you are sick, you must rest and see a doctor. Do not worry about big changes. Small changes can help you live a long and healthy life. Start today, and you will feel the difference soon.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Simple daily habits such as drinking water, eating well, exercising and sleeping enough can make you healthier and happier.",
+          "markedLexicalTargets": [
+            "a lot of water",
+            "too much sugar",
+            "twice a week",
+            "at first",
+            "see a doctor",
+            "healthy life"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "What should you drink every day?",
+              "answer": "You should drink a lot of water."
+            },
+            {
+              "question": "How often did the writer start to run?",
+              "answer": "Twice a week."
+            },
+            {
+              "question": "What must you do if you are sick?",
+              "answer": "You must rest and see a doctor."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "You should drink a lot of water every day.",
+            "coreSVO": {
+              "subject": "You",
+              "verb": "should drink",
+              "objectOrComplement": "a lot of water"
+            },
+            "subordinateClauses": [],
+            "syntacticAnalysis": "\"should\" + động từ nguyên mẫu dùng để đưa ra lời khuyên. \"Every day\" is a time phrase at the end."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "Many people eat too much sugar, and it is bad for your health.",
+            "coreSVO": {
+              "subject": "Many people",
+              "verb": "eat",
+              "objectOrComplement": "too much sugar"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Coordinated Clause with \"and\"",
+                "clause": "and it is bad for your health",
+                "function": "Adds an opinion about eating sugar."
+              }
+            ],
+            "syntacticAnalysis": "Present simple for general facts. Ghi chú: \"too much\" + danh từ không đếm được = quá nhiều."
+          },
+          {
+            "sentenceIndex": 3,
+            "sentence": "Try to cook at home because it is cheaper and healthier. Fast food is quick, but it is not always good for you.",
+            "coreSVO": {
+              "subject": "(you, understood)",
+              "verb": "Try to cook",
+              "objectOrComplement": "(none)"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Reason Clause",
+                "clause": "because it is cheaper and healthier",
+                "function": "Gives two reasons using comparatives."
+              }
+            ],
+            "syntacticAnalysis": "An imperative sentence (advice) with a \"because\" clause. Ghi chú: \"cheaper\", \"healthier\" là so sánh hơn."
+          },
+          {
+            "sentenceIndex": 4,
+            "sentence": "If you are sick, you must rest and see a doctor.",
+            "coreSVO": {
+              "subject": "you",
+              "verb": "must rest and see",
+              "objectOrComplement": "a doctor"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Condition Clause",
+                "clause": "If you are sick",
+                "function": "Sets the condition for the advice."
+              }
+            ],
+            "syntacticAnalysis": "\"If\" + present simple, then \"must\" + verb. Ghi chú: \"must\" diễn tả điều bắt buộc hoặc rất cần thiết."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-a2-2-1",
+            "targetWord": "habit",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈhæb.ɪt/",
+            "definition": "Something you do often or regularly.",
+            "vietnamese": "thói quen",
+            "contextSentence": "Good habits make life better.",
+            "collocations": [
+              "good habit",
+              "bad habit",
+              "healthy habit"
+            ],
+            "etymology": "Latin habitus (condition, way of being)."
+          },
+          {
+            "id": "mine-reading-a2-2-2",
+            "targetWord": "vegetable",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈvedʒ.tə.bəl/",
+            "definition": "A plant that you eat, such as a carrot or an onion.",
+            "vietnamese": "rau, rau củ",
+            "contextSentence": "It is also important to eat fruit and vegetables.",
+            "collocations": [
+              "fresh vegetables",
+              "eat vegetables",
+              "vegetable soup"
+            ],
+            "etymology": "Latin vegetabilis (able to grow)."
+          },
+          {
+            "id": "mine-reading-a2-2-3",
+            "targetWord": "sugar",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈʃʊɡ.ər/",
+            "definition": "A sweet white or brown food used in drinks and cakes.",
+            "vietnamese": "đường",
+            "contextSentence": "Many people eat too much sugar.",
+            "collocations": [
+              "too much sugar",
+              "a spoon of sugar",
+              "sugar in tea"
+            ],
+            "etymology": "From Arabic sukkar, through Italian and French."
+          },
+          {
+            "id": "mine-reading-a2-2-4",
+            "targetWord": "exercise",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈek.sə.saɪz/",
+            "definition": "Physical activity that keeps your body strong and healthy.",
+            "vietnamese": "sự tập thể dục, bài tập thể dục",
+            "contextSentence": "Exercise is important too, but you do not need an expensive gym.",
+            "collocations": [
+              "do exercise",
+              "regular exercise",
+              "take exercise"
+            ],
+            "etymology": "Latin exercere (to train, keep busy)."
+          },
+          {
+            "id": "mine-reading-a2-2-5",
+            "targetWord": "sleep",
+            "partOfSpeech": "noun",
+            "ipa": "/sliːp/",
+            "definition": "The natural rest of your body and mind, usually at night.",
+            "vietnamese": "giấc ngủ",
+            "contextSentence": "Sleep is also very important.",
+            "collocations": [
+              "get enough sleep",
+              "a good night of sleep",
+              "go to sleep"
+            ],
+            "etymology": "Old English slaep."
+          },
+          {
+            "id": "mine-reading-a2-2-6",
+            "targetWord": "rest",
+            "partOfSpeech": "verb",
+            "ipa": "/rest/",
+            "definition": "To stop working or being active so your body can feel better.",
+            "vietnamese": "nghỉ ngơi",
+            "contextSentence": "If you are sick, you must rest and see a doctor.",
+            "collocations": [
+              "rest at home",
+              "rest for a day",
+              "need to rest"
+            ],
+            "etymology": "Old English rest (repose)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "The writer gives simple advice for a healthy life. You should drink water, eat fruit and vegetables, and avoid too much sugar. You should also exercise, sleep about eight hours, and see a doctor when you are sick.",
+          "incorporatedVocabulary": [
+            "habit",
+            "vegetable",
+            "sugar",
+            "exercise",
+            "sleep",
+            "rest"
+          ],
+          "syntacticReconstruction": "You should eat more vegetables and less sugar because good habits keep you healthy."
+        }
+      }
+    },
+    {
+      "id": "reading-a2-3",
+      "title": "Lost in the City",
+      "stage": "Stage 1: Elementary (CEFR A2)",
+      "cefrLevel": "A2",
+      "genre": "Short Story & Directions",
+      "source": "Original text written for this app",
+      "wordCount": 167,
+      "readingTime": "1.4 min @ 120 WPM (Intensive)",
+      "content": "Tom arrived in a new city last Monday. He wanted to find the museum, but he had no map. His phone was dead, so he could not use it. He asked a woman near the station for help. She was kind and friendly.\n\n\"Go straight, then turn left at the bank,\" she said. \"The museum is next to the park.\" Tom thanked her and walked for ten minutes. But he turned right by mistake. He walked for a long time. Soon he was in a busy street with many shops and noisy cars. He did not know where he was.\n\nHe felt lost and a little worried. He sat down for a moment. Then he saw a policeman and asked again. The policeman smiled and showed him the way on a map. \"It is behind you,\" he said. At last, Tom found the museum. The door was locked and a sign said closed. It was closed, so he had a coffee and went back to the hotel.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "A visitor with no map and a dead phone gets lost after a wrong turn, but a helpful policeman shows him the way.",
+          "markedLexicalTargets": [
+            "go straight",
+            "turn left",
+            "next to",
+            "by mistake",
+            "a little worried",
+            "at last"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "Why could Tom not use his phone?",
+              "answer": "It was dead."
+            },
+            {
+              "question": "What mistake did Tom make?",
+              "answer": "He turned right instead of left."
+            },
+            {
+              "question": "Was the museum open when Tom found it?",
+              "answer": "No, it was closed."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "He wanted to find the museum, but he had no map.",
+            "coreSVO": {
+              "subject": "He",
+              "verb": "wanted to find",
+              "objectOrComplement": "the museum"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Contrast Clause with \"but\"",
+                "clause": "but he had no map",
+                "function": "Shows the problem."
+              }
+            ],
+            "syntacticAnalysis": "Two past simple clauses joined by \"but\". Ghi chú: \"want to\" + động từ nguyên mẫu = muốn làm gì."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "His phone was dead, so he could not use it.",
+            "coreSVO": {
+              "subject": "His phone",
+              "verb": "was",
+              "objectOrComplement": "(none; \"dead\" is a complement)"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Result Clause with \"so\"",
+                "clause": "so he could not use it",
+                "function": "Shows the result of the dead phone."
+              }
+            ],
+            "syntacticAnalysis": "Cause then result with \"so\". Ghi chú: \"could not\" là phủ định quá khứ của \"can\"; \"dead\" ở đây nghĩa là hết pin."
+          },
+          {
+            "sentenceIndex": 3,
+            "sentence": "\"Go straight, then turn left at the bank,\" she said.",
+            "coreSVO": {
+              "subject": "she",
+              "verb": "said",
+              "objectOrComplement": "\"Go straight, then turn left at the bank\""
+            },
+            "subordinateClauses": [],
+            "syntacticAnalysis": "The woman speaks in imperatives to give directions. Ghi chú: \"Go straight\" = đi thẳng, \"turn left\" = rẽ trái."
+          },
+          {
+            "sentenceIndex": 4,
+            "sentence": "The door was locked and a sign said closed. It was closed, so he had a coffee and went back to the hotel.",
+            "coreSVO": {
+              "subject": "he",
+              "verb": "had, went",
+              "objectOrComplement": "a coffee"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Result Clause with \"so\"",
+                "clause": "so he had a coffee and went back to the hotel",
+                "function": "Tom's choice after finding the museum closed."
+              }
+            ],
+            "syntacticAnalysis": "One cause (\"It was closed\") and two actions in a row. Ghi chú: \"had\" và \"went\" là quá khứ bất quy tắc của \"have\" và \"go\"."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-a2-3-1",
+            "targetWord": "map",
+            "partOfSpeech": "noun",
+            "ipa": "/mæp/",
+            "definition": "A drawing that shows roads, cities and places.",
+            "vietnamese": "bản đồ",
+            "contextSentence": "He wanted to find the museum, but he had no map.",
+            "collocations": [
+              "city map",
+              "read a map",
+              "on a map"
+            ],
+            "etymology": "Latin mappa (cloth, napkin)."
+          },
+          {
+            "id": "mine-reading-a2-3-2",
+            "targetWord": "station",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈsteɪ.ʃən/",
+            "definition": "A place where trains or buses stop.",
+            "vietnamese": "nhà ga, trạm",
+            "contextSentence": "He asked a woman near the station for help. She was kind and friendly.",
+            "collocations": [
+              "train station",
+              "bus station",
+              "near the station"
+            ],
+            "etymology": "Latin statio (a standing still)."
+          },
+          {
+            "id": "mine-reading-a2-3-3",
+            "targetWord": "straight",
+            "partOfSpeech": "adverb",
+            "ipa": "/streɪt/",
+            "definition": "In one direction without turning.",
+            "vietnamese": "thẳng",
+            "contextSentence": "\"Go straight, then turn left at the bank,\" she said.",
+            "collocations": [
+              "go straight",
+              "straight on",
+              "straight ahead"
+            ],
+            "etymology": "Old English streht (stretched)."
+          },
+          {
+            "id": "mine-reading-a2-3-4",
+            "targetWord": "mistake",
+            "partOfSpeech": "noun",
+            "ipa": "/mɪˈsteɪk/",
+            "definition": "Something that is wrong; an error.",
+            "vietnamese": "lỗi, sai lầm",
+            "contextSentence": "But he turned right by mistake.",
+            "collocations": [
+              "by mistake",
+              "make a mistake",
+              "big mistake"
+            ],
+            "etymology": "Old Norse mistaka (to take wrongly)."
+          },
+          {
+            "id": "mine-reading-a2-3-5",
+            "targetWord": "worried",
+            "partOfSpeech": "adjective",
+            "ipa": "/ˈwʌr.id/",
+            "definition": "Unhappy because you think something bad may happen.",
+            "vietnamese": "lo lắng",
+            "contextSentence": "He felt lost and a little worried.",
+            "collocations": [
+              "a little worried",
+              "worried about",
+              "look worried"
+            ],
+            "etymology": "From the verb worry, Old English wyrgan (to strangle)."
+          },
+          {
+            "id": "mine-reading-a2-3-6",
+            "targetWord": "policeman",
+            "partOfSpeech": "noun",
+            "ipa": "/pəˈliːs.mən/",
+            "definition": "A man who works for the police and helps keep people safe.",
+            "vietnamese": "cảnh sát (nam), chú công an",
+            "contextSentence": "He sat down for a moment. Then he saw a policeman and asked again.",
+            "collocations": [
+              "ask a policeman",
+              "a friendly policeman",
+              "call the police"
+            ],
+            "etymology": "police (from Greek polis, city) + man."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "Tom is new in a city and has no map. A woman gives him directions, but he turns right by mistake and gets lost. A policeman helps him, but the museum is closed, so Tom goes back to his hotel.",
+          "incorporatedVocabulary": [
+            "map",
+            "station",
+            "straight",
+            "mistake",
+            "worried",
+            "policeman"
+          ],
+          "syntacticReconstruction": "Tom had no map, so he asked a woman for help near the station."
+        }
+      }
+    },
+    {
       "id": "reading-art-1",
       "title": "The Epistemic Commons and the Economics of Synthetic Abundance",
       "stage": "Stage 3: Advanced Competency (CEFR C1)",
@@ -1540,6 +2641,643 @@
             "consistent with"
           ],
           "syntacticReconstruction": "Although environmental DNA may appear to resolve the problem of cryptic species, its detections are perhaps best interpreted as consistent with presence rather than as proof of it."
+        }
+      }
+    },
+    {
+      "id": "reading-b1-1",
+      "title": "Working from Home: Freedom or Loneliness?",
+      "stage": "Stage 2: Intermediate (CEFR B1)",
+      "cefrLevel": "B1",
+      "genre": "Opinion & Everyday Life",
+      "source": "Original text written for this app",
+      "wordCount": 233,
+      "readingTime": "1.9 min @ 120 WPM (Intensive)",
+      "content": "Working from home has become much more common in recent years. Many people say that it has changed their lives for the better, and I can understand why. If you work from home, you save time and money because you do not have to travel to an office every day. You can also organise your day in the way that suits you best.\n\nHowever, I think working from home has some problems too. When your home is also your office, it is difficult to stop working in the evening. Some people have told me that they feel lonely because they rarely see their colleagues. If I worked at home every day, I would probably miss the chats at lunchtime and the small jokes during the day.\n\nIn my opinion, the best solution is a mix of both. If companies allowed their staff to work from home two or three days a week, people could enjoy the freedom of home and still meet their team. This is better than choosing only one way, because every person is different and every job has different needs.\n\nI have tried both ways, and I have learned one important thing. Whatever you choose, you should make a clear plan for your day. If you decide when to start and when to finish, you will feel less stressed and get more done. It sounds simple, but it really helps.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Working from home saves time and gives freedom, but it can cause loneliness and long hours, so a mix of home and office work is the best choice.",
+          "markedLexicalTargets": [
+            "recent years",
+            "save time and money",
+            "organise your day",
+            "rarely see",
+            "in my opinion",
+            "a mix of both",
+            "make a plan"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "Why do many people like working from home?",
+              "answer": "They save time and money because they do not travel to an office, and they can organise their day as they like."
+            },
+            {
+              "question": "What problems does the writer mention?",
+              "answer": "It is hard to stop working in the evening, and some people feel lonely because they rarely see their colleagues."
+            },
+            {
+              "question": "What does the writer suggest as the best solution?",
+              "answer": "Working from home two or three days a week and spending the other days at the office with the team."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "Working from home has become much more common in recent years.",
+            "coreSVO": {
+              "subject": "Working from home",
+              "verb": "has become",
+              "objectOrComplement": "(none; \"much more common\" is the complement)"
+            },
+            "subordinateClauses": [],
+            "syntacticAnalysis": "The present perfect (\"has become\") links a change in the past with the situation now. The gerund phrase \"Working from home\" is the subject, and \"in recent years\" shows the time period."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "If you work from home, you save time and money because you do not have to travel to an office every day.",
+            "coreSVO": {
+              "subject": "you",
+              "verb": "save",
+              "objectOrComplement": "time and money"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Conditional Clause",
+                "clause": "If you work from home",
+                "function": "Gives the condition for the result in the main clause."
+              },
+              {
+                "type": "Reason Clause",
+                "clause": "because you do not have to travel to an office every day",
+                "function": "Explains why you save time and money."
+              }
+            ],
+            "syntacticAnalysis": "A conditional structure in the present simple, followed by a \"because\" clause that gives the reason. \"Do not have to\" means it is not necessary."
+          },
+          {
+            "sentenceIndex": 3,
+            "sentence": "If I worked at home every day, I would probably miss the chats at lunchtime.",
+            "coreSVO": {
+              "subject": "I",
+              "verb": "would miss",
+              "objectOrComplement": "the chats at lunchtime"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Second Conditional Clause",
+                "clause": "If I worked at home every day",
+                "function": "Describes an unreal or unlikely situation, so the past simple is used."
+              }
+            ],
+            "syntacticAnalysis": "The second conditional (\"If + past simple, would + verb\") talks about an imaginary situation. The adverb \"probably\" sits between \"would\" and the main verb."
+          },
+          {
+            "sentenceIndex": 4,
+            "sentence": "If you decide when to start and when to finish, you will feel less stressed and get more done.",
+            "coreSVO": {
+              "subject": "you",
+              "verb": "will feel, (will) get",
+              "objectOrComplement": "(none; \"less stressed\" is the complement, \"more\" is the object of \"get\")"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Conditional Clause",
+                "clause": "If you decide when to start and when to finish",
+                "function": "The condition; it contains two \"when\" phrases joined by \"and\"."
+              }
+            ],
+            "syntacticAnalysis": "A first conditional with two results joined by \"and\". The repeated \"when to ...\" pattern keeps the advice clear and balanced."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-b1-1-1",
+            "targetWord": "organise",
+            "partOfSpeech": "verb",
+            "ipa": "/ˈɔː.ɡə.naɪz/",
+            "definition": "To plan or arrange something so that it works well.",
+            "vietnamese": "sắp xếp, tổ chức",
+            "contextSentence": "You can also organise your day in the way that suits you best.",
+            "collocations": [
+              "organise your time",
+              "organise a meeting",
+              "organise your work"
+            ],
+            "etymology": "From French organiser, from Latin organum (tool, instrument)."
+          },
+          {
+            "id": "mine-reading-b1-1-2",
+            "targetWord": "colleague",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈkɒl.iːɡ/",
+            "definition": "A person who works with you in the same company or team.",
+            "vietnamese": "đồng nghiệp",
+            "contextSentence": "Some people feel lonely because they rarely see their colleagues.",
+            "collocations": [
+              "a work colleague",
+              "a former colleague",
+              "colleagues and friends"
+            ],
+            "etymology": "From Latin collega (a partner in office)."
+          },
+          {
+            "id": "mine-reading-b1-1-3",
+            "targetWord": "rarely",
+            "partOfSpeech": "adverb",
+            "ipa": "/ˈreə.li/",
+            "definition": "Not often; almost never.",
+            "vietnamese": "hiếm khi",
+            "contextSentence": "They rarely see their colleagues.",
+            "collocations": [
+              "rarely see",
+              "rarely happen",
+              "very rarely"
+            ],
+            "etymology": "From Latin rarus (uncommon) + the ending -ly."
+          },
+          {
+            "id": "mine-reading-b1-1-4",
+            "targetWord": "stressed",
+            "partOfSpeech": "adjective",
+            "ipa": "/strest/",
+            "definition": "Feeling worried and unable to relax because of problems or too much work.",
+            "vietnamese": "căng thẳng, bị áp lực",
+            "contextSentence": "You will feel less stressed and get more done.",
+            "collocations": [
+              "feel stressed",
+              "stressed out",
+              "stressed at work"
+            ],
+            "etymology": "Shortened from \"distressed\", from Old French destresse."
+          },
+          {
+            "id": "mine-reading-b1-1-5",
+            "targetWord": "solution",
+            "partOfSpeech": "noun",
+            "ipa": "/səˈluː.ʃən/",
+            "definition": "A way of solving a problem or dealing with a difficult situation.",
+            "vietnamese": "giải pháp, cách giải quyết",
+            "contextSentence": "In my opinion, the best solution is a mix of both.",
+            "collocations": [
+              "find a solution",
+              "the best solution",
+              "a simple solution"
+            ],
+            "etymology": "From Latin solutio, from solvere (to loosen, to solve)."
+          },
+          {
+            "id": "mine-reading-b1-1-6",
+            "targetWord": "freedom",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈfriː.dəm/",
+            "definition": "The power to choose what you do without being controlled.",
+            "vietnamese": "sự tự do",
+            "contextSentence": "People could enjoy the freedom of home and still meet their team.",
+            "collocations": [
+              "freedom of choice",
+              "enjoy freedom",
+              "a lot of freedom"
+            ],
+            "etymology": "From Old English freodom, from freo (free) + -dom."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "The writer thinks that working from home saves time and money and gives people freedom, but it can also make them lonely and tired. A mix of home and office days, with a clear daily plan, is the best choice.",
+          "incorporatedVocabulary": [
+            "organise",
+            "colleague",
+            "rarely",
+            "stressed",
+            "solution",
+            "freedom"
+          ],
+          "syntacticReconstruction": "If companies allowed staff to work from home some days, people would enjoy more freedom and still meet their colleagues."
+        }
+      }
+    },
+    {
+      "id": "reading-b1-2",
+      "title": "Plastic and the Ocean",
+      "stage": "Stage 2: Intermediate (CEFR B1)",
+      "cefrLevel": "B1",
+      "genre": "Environment & Society",
+      "source": "Original text written for this app",
+      "wordCount": 236,
+      "readingTime": "2.0 min @ 120 WPM (Intensive)",
+      "content": "Plastic is cheap, light and useful, so we use it every day. We buy food in plastic boxes, we drink from plastic bottles, and we carry our shopping in plastic bags. The problem is that plastic does not disappear quickly. Much of it is thrown away after only one use, and some of it ends up in rivers and finally in the sea.\n\nPlastic in the ocean can be dangerous for sea animals. Birds and fish sometimes mistake small pieces for food, and others get caught in old fishing nets. Over time, large pieces break into smaller ones, and these are very difficult to clean up. Scientists have been studying this problem for many years, and they agree that we need to act.\n\nI believe that everyone can help, even in small ways. If we carried our own bags and bottles, we would use much less plastic. Many shops have already started to charge for plastic bags, and this has made people think before they buy. In some places, old bottles can be returned and recycled, which is a good idea.\n\nOf course, individual action is not enough on its own. Governments and companies also have to take responsibility, because they make most of the decisions about packaging. However, if each of us makes better choices, the sea will have a better chance of staying clean. It is a problem we can all help to solve.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Plastic is useful but it harms sea animals and lasts a long time, so both individuals and companies need to use less of it and recycle more.",
+          "markedLexicalTargets": [
+            "thrown away",
+            "ends up",
+            "mistake for",
+            "get caught",
+            "clean up",
+            "take responsibility",
+            "make a choice"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "Why is plastic a problem?",
+              "answer": "It does not disappear quickly, and much of it is thrown away after one use and ends up in the sea."
+            },
+            {
+              "question": "How can plastic hurt sea animals?",
+              "answer": "Animals sometimes mistake small pieces for food, or they get caught in old fishing nets."
+            },
+            {
+              "question": "What does the writer say about individual action?",
+              "answer": "Everyone can help, but it is not enough alone because governments and companies also have to take responsibility."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "Much of it is thrown away after only one use, and some of it ends up in rivers and finally in the sea.",
+            "coreSVO": {
+              "subject": "Much of it; some of it",
+              "verb": "is thrown away; ends up",
+              "objectOrComplement": "(none; both verbs are followed by adverbial phrases)"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Coordinated Clause",
+                "clause": "and some of it ends up in rivers and finally in the sea",
+                "function": "Adds the next step in the journey of plastic waste."
+              }
+            ],
+            "syntacticAnalysis": "The first clause uses the passive (\"is thrown away\") because the person who throws it away is not important. The second clause uses the phrasal verb \"ends up\" to show the final result."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "Birds and fish sometimes mistake small pieces for food, and others get caught in old fishing nets.",
+            "coreSVO": {
+              "subject": "Birds and fish; others",
+              "verb": "mistake; get caught",
+              "objectOrComplement": "small pieces (for food)"
+            },
+            "subordinateClauses": [],
+            "syntacticAnalysis": "Two coordinated clauses with the same time meaning (present simple for general facts). \"Mistake ... for\" means to think something is something else, and \"get caught\" is a passive-like structure with \"get\"."
+          },
+          {
+            "sentenceIndex": 3,
+            "sentence": "Scientists have been studying this problem for many years, and they agree that we need to act.",
+            "coreSVO": {
+              "subject": "Scientists; they",
+              "verb": "have been studying; agree",
+              "objectOrComplement": "this problem"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Noun Clause",
+                "clause": "that we need to act",
+                "function": "Gives the content of what the scientists agree on."
+              }
+            ],
+            "syntacticAnalysis": "The present perfect continuous (\"have been studying\") with \"for many years\" shows an activity that started in the past and continues now. The \"that\" clause follows the verb \"agree\"."
+          },
+          {
+            "sentenceIndex": 4,
+            "sentence": "If we carried our own bags and bottles, we would use much less plastic.",
+            "coreSVO": {
+              "subject": "we",
+              "verb": "would use",
+              "objectOrComplement": "much less plastic"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Second Conditional Clause",
+                "clause": "If we carried our own bags and bottles",
+                "function": "An imaginary situation, so the past simple is used."
+              }
+            ],
+            "syntacticAnalysis": "A second conditional sentence suggests a possible change in behaviour. \"Much less\" is used with an uncountable noun."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-b1-2-1",
+            "targetWord": "disappear",
+            "partOfSpeech": "verb",
+            "ipa": "/ˌdɪs.əˈpɪər/",
+            "definition": "To stop being seen or to stop existing.",
+            "vietnamese": "biến mất",
+            "contextSentence": "The problem is that plastic does not disappear quickly.",
+            "collocations": [
+              "disappear quickly",
+              "disappear completely",
+              "disappear from view"
+            ],
+            "etymology": "From dis- (opposite) + appear, from Latin apparere."
+          },
+          {
+            "id": "mine-reading-b1-2-2",
+            "targetWord": "recycle",
+            "partOfSpeech": "verb",
+            "ipa": "/ˌriːˈsaɪ.kəl/",
+            "definition": "To treat used materials so that they can be used again.",
+            "vietnamese": "tái chế",
+            "contextSentence": "In some places, old bottles can be returned and recycled.",
+            "collocations": [
+              "recycle paper",
+              "recycle plastic",
+              "recycle waste"
+            ],
+            "etymology": "From re- (again) + cycle, from Greek kyklos (circle)."
+          },
+          {
+            "id": "mine-reading-b1-2-3",
+            "targetWord": "dangerous",
+            "partOfSpeech": "adjective",
+            "ipa": "/ˈdeɪn.dʒər.əs/",
+            "definition": "Able or likely to cause harm.",
+            "vietnamese": "nguy hiểm",
+            "contextSentence": "Plastic in the ocean can be dangerous for sea animals.",
+            "collocations": [
+              "dangerous for",
+              "a dangerous place",
+              "extremely dangerous"
+            ],
+            "etymology": "From Old French dangier (power, harm) + the ending -ous."
+          },
+          {
+            "id": "mine-reading-b1-2-4",
+            "targetWord": "responsibility",
+            "partOfSpeech": "noun",
+            "ipa": "/rɪˌspɒn.sɪˈbɪl.ə.ti/",
+            "definition": "A duty to deal with something or to take care of it.",
+            "vietnamese": "trách nhiệm",
+            "contextSentence": "Governments and companies also have to take responsibility.",
+            "collocations": [
+              "take responsibility",
+              "a big responsibility",
+              "share responsibility"
+            ],
+            "etymology": "From responsible, from Latin respondere (to answer)."
+          },
+          {
+            "id": "mine-reading-b1-2-5",
+            "targetWord": "charge",
+            "partOfSpeech": "verb",
+            "ipa": "/tʃɑːdʒ/",
+            "definition": "To ask someone to pay an amount of money for something.",
+            "vietnamese": "tính phí, thu phí",
+            "contextSentence": "Many shops have already started to charge for plastic bags.",
+            "collocations": [
+              "charge for",
+              "charge a fee",
+              "charge extra"
+            ],
+            "etymology": "From Old French chargier, from Latin carricare (to load)."
+          },
+          {
+            "id": "mine-reading-b1-2-6",
+            "targetWord": "packaging",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈpæk.ɪ.dʒɪŋ/",
+            "definition": "The materials, such as boxes and bags, that are used to wrap products.",
+            "vietnamese": "bao bì, đóng gói",
+            "contextSentence": "They make most of the decisions about packaging.",
+            "collocations": [
+              "plastic packaging",
+              "food packaging",
+              "reduce packaging"
+            ],
+            "etymology": "From pack, from Middle Dutch pac (bundle)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "Plastic is useful, but because it lasts a long time and often ends up in the sea, it can harm animals. Individuals can use fewer plastic things and recycle, but governments and companies must also take responsibility.",
+          "incorporatedVocabulary": [
+            "disappear",
+            "recycle",
+            "dangerous",
+            "responsibility",
+            "charge",
+            "packaging"
+          ],
+          "syntacticReconstruction": "If shops charged for every plastic bag, people would use fewer of them."
+        }
+      }
+    },
+    {
+      "id": "reading-b1-3",
+      "title": "Learning a Language as an Adult",
+      "stage": "Stage 2: Intermediate (CEFR B1)",
+      "cefrLevel": "B1",
+      "genre": "Education & Personal Experience",
+      "source": "Original text written for this app",
+      "wordCount": 235,
+      "readingTime": "2.0 min @ 120 WPM (Intensive)",
+      "content": "Many adults think that they are too old to learn a new language, but I disagree. I started learning English at the age of twenty-five, and I have made good progress since then. It was not always easy, and sometimes I wanted to give up. However, I have learned that small habits are more important than big efforts.\n\nThe first thing I did was to study a little every day. Ten or fifteen minutes is enough if you keep doing it for months. I also listened to short podcasts on my way to work, and I wrote down new words in a notebook. After a few weeks, I noticed that I could understand more than before.\n\nMaking mistakes was the hardest part. At first, I was afraid that people would laugh at me, so I stayed quiet in class. Later, a teacher told me that mistakes are a normal part of learning. If you never make a mistake, you are probably not trying anything new. After that, I began to speak more, and my confidence slowly grew.\n\nIf you want to learn a language, my advice is simple. Choose a goal that is realistic, find something you enjoy, and do not compare yourself with other people. You will not become perfect in a month, but you will certainly improve if you keep going. Learning a language is a long journey, but it is worth it.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Adults can learn a new language if they build small daily habits, accept mistakes as normal, and keep a realistic goal.",
+          "markedLexicalTargets": [
+            "give up",
+            "make progress",
+            "small habits",
+            "write down",
+            "make a mistake",
+            "confidence",
+            "keep going"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "How old was the writer when he or she started learning English?",
+              "answer": "Twenty-five years old."
+            },
+            {
+              "question": "What was the hardest part of learning for the writer?",
+              "answer": "Making mistakes, because the writer was afraid that people would laugh."
+            },
+            {
+              "question": "What advice does the writer give at the end?",
+              "answer": "Choose a realistic goal, find something you enjoy, do not compare yourself with others, and keep going."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "I started learning English at the age of twenty-five, and I have made good progress since then.",
+            "coreSVO": {
+              "subject": "I",
+              "verb": "started; have made",
+              "objectOrComplement": "learning English; good progress"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Coordinated Clause",
+                "clause": "and I have made good progress since then",
+                "function": "Shows the result up to now."
+              }
+            ],
+            "syntacticAnalysis": "The past simple (\"started\") gives a finished starting point, and the present perfect (\"have made\") links that time to the present. \"Since then\" supports the present perfect."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "Ten or fifteen minutes is enough if you keep doing it for months.",
+            "coreSVO": {
+              "subject": "Ten or fifteen minutes",
+              "verb": "is",
+              "objectOrComplement": "(none; \"enough\" is the complement)"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Conditional Clause",
+                "clause": "if you keep doing it for months",
+                "function": "Gives the condition under which a short time is enough."
+              }
+            ],
+            "syntacticAnalysis": "A period of time is treated as one unit, so the verb is singular (\"is\"). \"Keep + -ing\" means to continue."
+          },
+          {
+            "sentenceIndex": 3,
+            "sentence": "At first, I was afraid that people would laugh at me, so I stayed quiet in class.",
+            "coreSVO": {
+              "subject": "I",
+              "verb": "was; stayed",
+              "objectOrComplement": "(none; \"afraid\" and \"quiet\" are complements)"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Noun Clause",
+                "clause": "that people would laugh at me",
+                "function": "Explains what the writer was afraid of; \"would\" shows a past fear about the future."
+              },
+              {
+                "type": "Result Clause",
+                "clause": "so I stayed quiet in class",
+                "function": "Shows the result of the fear."
+              }
+            ],
+            "syntacticAnalysis": "\"Would\" in a reported fear is the past form of \"will\". The linking word \"so\" joins the cause and the result."
+          },
+          {
+            "sentenceIndex": 4,
+            "sentence": "If you never make a mistake, you are probably not trying anything new.",
+            "coreSVO": {
+              "subject": "you",
+              "verb": "are (not) trying",
+              "objectOrComplement": "anything new"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Conditional Clause",
+                "clause": "If you never make a mistake",
+                "function": "Describes a general situation, so the present simple is used."
+              }
+            ],
+            "syntacticAnalysis": "A zero-type conditional states a general truth. The present continuous \"are trying\" talks about what you do in general now, and \"probably\" shows that the speaker is not completely sure."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-b1-3-1",
+            "targetWord": "progress",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈprəʊ.ɡres/",
+            "definition": "Improvement or development over time.",
+            "vietnamese": "sự tiến bộ",
+            "contextSentence": "I have made good progress since then.",
+            "collocations": [
+              "make progress",
+              "good progress",
+              "slow progress"
+            ],
+            "etymology": "From Latin progressus, from progredi (to go forward)."
+          },
+          {
+            "id": "mine-reading-b1-3-2",
+            "targetWord": "habit",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈhæb.ɪt/",
+            "definition": "Something that you do regularly, often without thinking.",
+            "vietnamese": "thói quen",
+            "contextSentence": "Small habits are more important than big efforts.",
+            "collocations": [
+              "a good habit",
+              "a bad habit",
+              "get into the habit"
+            ],
+            "etymology": "From Latin habitus (condition, way of being)."
+          },
+          {
+            "id": "mine-reading-b1-3-3",
+            "targetWord": "confidence",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈkɒn.fɪ.dəns/",
+            "definition": "The feeling that you can do something well.",
+            "vietnamese": "sự tự tin",
+            "contextSentence": "I began to speak more, and my confidence slowly grew.",
+            "collocations": [
+              "gain confidence",
+              "lose confidence",
+              "full of confidence"
+            ],
+            "etymology": "From Latin confidentia, from confidere (to trust fully)."
+          },
+          {
+            "id": "mine-reading-b1-3-4",
+            "targetWord": "realistic",
+            "partOfSpeech": "adjective",
+            "ipa": "/ˌrɪə.lɪˈstɪk/",
+            "definition": "Sensible and possible to achieve.",
+            "vietnamese": "thực tế, khả thi",
+            "contextSentence": "Choose a goal that is realistic.",
+            "collocations": [
+              "a realistic goal",
+              "realistic expectations",
+              "be realistic"
+            ],
+            "etymology": "From real, from Latin realis (actual)."
+          },
+          {
+            "id": "mine-reading-b1-3-5",
+            "targetWord": "improve",
+            "partOfSpeech": "verb",
+            "ipa": "/ɪmˈpruːv/",
+            "definition": "To become better, or to make something better.",
+            "vietnamese": "cải thiện, tiến bộ",
+            "contextSentence": "You will certainly improve if you keep going.",
+            "collocations": [
+              "improve your English",
+              "improve quickly",
+              "improve a lot"
+            ],
+            "etymology": "From Anglo-French emprouwer (to turn to profit)."
+          },
+          {
+            "id": "mine-reading-b1-3-6",
+            "targetWord": "compare",
+            "partOfSpeech": "verb",
+            "ipa": "/kəmˈpeər/",
+            "definition": "To look at two or more things to see how they are similar or different.",
+            "vietnamese": "so sánh",
+            "contextSentence": "Do not compare yourself with other people.",
+            "collocations": [
+              "compare with",
+              "compare to",
+              "compare prices"
+            ],
+            "etymology": "From Latin comparare, from com- (together) + par (equal)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "The writer started learning English as an adult and made progress by studying a little every day and accepting mistakes. The advice is to choose a realistic goal, enjoy the process, and keep going.",
+          "incorporatedVocabulary": [
+            "progress",
+            "habit",
+            "confidence",
+            "realistic",
+            "improve",
+            "compare"
+          ],
+          "syntacticReconstruction": "If you study a little every day, you will make progress, and your confidence will grow."
         }
       }
     }
