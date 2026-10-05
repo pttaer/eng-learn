@@ -1,5 +1,7 @@
 # Acoustic & Voice Intelligence Studio (Pillar 04) Implementation Plan
 
+> **Status (2026-10-05):** implemented; the unchecked boxes below were not maintained. See `docs/audits/STATUS.md` for what is still open.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Upgrade Pillar 04 (Speaking Dossier) into a Comprehensive Hybrid Audio Studio with dual-track Web Audio DSP (pitch tracking via autocorrelation, RMS energy, hesitation detection), Web Speech API collocation phrase spotting, and Nation 4-3-2 cognitive compression metrics.

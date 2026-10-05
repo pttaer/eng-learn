@@ -1,5 +1,7 @@
 # Constellation Skill Tree & Human Ergonomics Implementation Plan
 
+> **Status (2026-10-05):** implemented; the unchecked boxes below were not maintained. See `docs/audits/STATUS.md` for what is still open.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Transform the English Singularity web platform from a restrictive sci-fi HUD into a Skyrim-style Constellation Skill Tree with prerequisite milestone progression, paired with dedicated, distraction-free practice studios (Franklin Copywork typing editor, searchable 1,000-collocation lexicon, calm document reader, and native OS cursor ergonomics) tailored for upper-intermediate learners targeting C2 native-level nuance.

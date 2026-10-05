@@ -1,5 +1,7 @@
 # Plan: 7-Pillar Expansion (Grammar), UI Scale Upgrade & Pillar Hover Envelope Fix
 
+> **Status (2026-10-05):** implemented; the unchecked boxes below were not maintained. See `docs/audits/STATUS.md` for what is still open.
+
 ## 1. Objectives & Context
 In response to user directives:
 1. **Pillar 07: GRAMMAR** — Add a dedicated Grammar pillar focusing on C1/C2 advanced syntactic structures (inversion, clefts, subjunctive, participle clauses, ellipsis, syntactic error identification) with Universal Atomic Cards and native SM-2 scheduling.

@@ -1,5 +1,7 @@
 # Game-Style Spotlight Onboarding Tour & Sensory Interactions Implementation Plan
 
+> **Status (2026-10-05):** implemented; the unchecked boxes below were not maintained. See `docs/audits/STATUS.md` for what is still open.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Implement a GPU-accelerated spotlight cutout onboarding tour, animated pointer arrow, floating glassmorphic HUD holo-card, procedural audio cues, and fullscreen gold particle celebration canvas modeled after `TokenTrackerAntigravity`.

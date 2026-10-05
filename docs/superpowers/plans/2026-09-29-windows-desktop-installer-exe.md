@@ -1,5 +1,7 @@
 # Windows Desktop Installer (.exe) Implementation Plan
 
+> **Status (2026-10-05):** implemented; the unchecked boxes below were not maintained. See `docs/audits/STATUS.md` for what is still open.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Package the complete English Singularity C2 web learning platform into a standalone Windows Desktop Installer (`.exe`) featuring a guided NSIS Setup Wizard, Desktop shortcut, Start Menu integration, bundled Chromium runtime, native Web Audio DSP / speech support, and multi-resolution Windows icon.

@@ -1,5 +1,7 @@
 # Anime.js Interactive Motion & UI/UX Sensory Plan
 
+> **Status (2026-10-05):** implemented; the unchecked boxes below were not maintained. See `docs/audits/STATUS.md` for what is still open.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Elevate the entire English Mastery web platform from static layouts into an alive, tactile, and sensory experience using Anime.js v3.2.2 — featuring procedural constellation SVG line drawing, elastic staggered star node entrances, rolling telemetry counters (Accuracy %, Net WPM, Streaks), fluid modal springs, and seamless spatial view transitions that eliminate layout jarring while respecting `prefers-reduced-motion`.

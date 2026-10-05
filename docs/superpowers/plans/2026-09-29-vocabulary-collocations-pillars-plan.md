@@ -1,5 +1,7 @@
 # Expansion Plan: 6-Pillar Architecture with Roguelike Vocabulary & Dedicated Collocations Vault
 
+> **Status (2026-10-05):** implemented; the unchecked boxes below were not maintained. See `docs/audits/STATUS.md` for what is still open.
+
 ## Architectural Specification & Task Decomposition
 
 **Goal:** Expand the Monochrome "Sea Urchin" Interactive English Web System from 4 gateways to **6 radial gateways** around the Singularity Core, introducing:
