@@ -4,6 +4,7 @@
 - **ID**: vocab-cefr-1
 - **Mode**: CEFR_ASCENT
 - **Level**: 1
+- **CEFR**: C1
 - **Word**: mitigate
 - **IPA**: /ˈmɪt.ɪ.ɡeɪt/
 - **Definition**: Make less severe, serious, or painful.
@@ -19,6 +20,7 @@
 - **ID**: vocab-cefr-2
 - **Mode**: CEFR_ASCENT
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: anticipate
 - **IPA**: /ænˈtɪs.ɪ.peɪt/
 - **Definition**: Regard as probable; expect or predict, and take action in preparation.
@@ -34,6 +36,7 @@
 - **ID**: vocab-cefr-3
 - **Mode**: CEFR_ASCENT
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: coherent
 - **IPA**: /kəʊˈhɪə.rənt/
 - **Definition**: Logical and consistent; forming a unified and readily understandable whole.
@@ -49,6 +52,7 @@
 - **ID**: vocab-cefr-4
 - **Mode**: CEFR_ASCENT
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: implement
 - **IPA**: /ˈɪm.plɪ.ment/
 - **Definition**: Put a decision, plan, or agreement into effect.
@@ -64,6 +68,7 @@
 - **ID**: vocab-cefr-5
 - **Mode**: CEFR_ASCENT
 - **Level**: 1
+- **CEFR**: C1
 - **Word**: constrain
 - **IPA**: /kənˈstreɪn/
 - **Definition**: Severely restrict the scope, extent, or activity of something.
@@ -79,6 +84,7 @@
 - **ID**: vocab-cefr-6
 - **Mode**: CEFR_ASCENT
 - **Level**: 1
+- **CEFR**: C1
 - **Word**: empirical
 - **IPA**: /ɪmˈpɪr.ɪ.kəl/
 - **Definition**: Based on, concerned with, or verifiable by observation or experience rather than theory or pure logic.
@@ -94,6 +100,7 @@
 - **ID**: vocab-cefr-7
 - **Mode**: CEFR_ASCENT
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: feasible
 - **IPA**: /ˈfiː.zə.bəl/
 - **Definition**: Possible to do easily or conveniently; workable and practically viable.
@@ -109,6 +116,7 @@
 - **ID**: vocab-cefr-8
 - **Mode**: CEFR_ASCENT
 - **Level**: 1
+- **CEFR**: C1
 - **Word**: intrinsic
 - **IPA**: /ɪnˈtrɪn.zɪk/
 - **Definition**: Belonging naturally; essential, inherent to the core nature of a thing.
@@ -124,6 +132,7 @@
 - **ID**: vocab-cefr-9
 - **Mode**: CEFR_ASCENT
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: versatile
 - **IPA**: /ˈvɜː.sə.taɪl/
 - **Definition**: Able to adapt or be adapted to many different functions or activities.
@@ -139,6 +148,7 @@
 - **ID**: vocab-cefr-10
 - **Mode**: CEFR_ASCENT
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: sustain
 - **IPA**: /səˈsteɪn/
 - **Definition**: Strengthen or support physically or mentally; maintain over an extended period.
@@ -154,6 +164,7 @@
 - **ID**: vocab-cefr-11
 - **Mode**: CEFR_ASCENT
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: preliminary
 - **IPA**: /prɪˈlɪm.ɪ.nər.i/
 - **Definition**: Denoting an action or event preceding or done in preparation for something fuller or more important.
@@ -169,6 +180,7 @@
 - **ID**: vocab-cefr-12
 - **Mode**: CEFR_ASCENT
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: evaluate
 - **IPA**: /ɪˈvæl.ju.eɪt/
 - **Definition**: Form an idea of the amount, number, or value of; assess critically.
@@ -184,6 +196,7 @@
 - **ID**: vocab-cefr-13
 - **Mode**: CEFR_ASCENT
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: allocate
 - **IPA**: /ˈæl.ə.keɪt/
 - **Definition**: Distribute resources or duties for a particular purpose.
@@ -199,6 +212,7 @@
 - **ID**: vocab-cefr-14
 - **Mode**: CEFR_ASCENT
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: subsequent
 - **IPA**: /ˈsʌb.sɪ.kwənt/
 - **Definition**: Coming after something in time; following.
@@ -214,6 +228,7 @@
 - **ID**: vocab-cefr-15
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: substantiate
 - **IPA**: /səbˈstæn.ʃi.eɪt/
 - **Definition**: Provide evidence to support or prove the truth of a claim or thesis.
@@ -229,6 +244,7 @@
 - **ID**: vocab-cefr-16
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: ubiquitous
 - **IPA**: /juːˈbɪk.wɪ.təs/
 - **Definition**: Present, appearing, or found everywhere simultaneously.
@@ -244,6 +260,7 @@
 - **ID**: vocab-cefr-17
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: contentious
 - **IPA**: /kənˈten.ʃəs/
 - **Definition**: Causing or likely to cause an argument; controversial; involving heated legal or political dispute.
@@ -259,6 +276,7 @@
 - **ID**: vocab-cefr-18
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: scrutinize
 - **IPA**: /ˈskruː.tɪ.naɪz/
 - **Definition**: Examine or inspect closely and thoroughly with critical attention.
@@ -274,6 +292,7 @@
 - **ID**: vocab-cefr-19
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: delineate
 - **IPA**: /dɪˈlɪn.i.eɪt/
 - **Definition**: Describe, portray, or outline with precision; set forth boundaries clearly.
@@ -289,6 +308,7 @@
 - **ID**: vocab-cefr-20
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: propensity
 - **IPA**: /prəˈpen.sə.ti/
 - **Definition**: An inclination or natural tendency to behave in a particular way.
@@ -304,6 +324,7 @@
 - **ID**: vocab-cefr-21
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: paradigm
 - **IPA**: /ˈpær.ə.daɪm/
 - **Definition**: A typical example or pattern of something; an overarching theoretical framework.
@@ -319,6 +340,7 @@
 - **ID**: vocab-cefr-22
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: discrepancy
 - **IPA**: /dɪˈskrep.ən.si/
 - **Definition**: A lack of compatibility or similarity between two or more facts or datasets.
@@ -334,6 +356,7 @@
 - **ID**: vocab-cefr-23
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: poignant
 - **IPA**: /ˈpɔɪ.njənt/
 - **Definition**: Evoking a keen sense of sadness or regret; deeply touching and sharp in impact.
@@ -349,6 +372,7 @@
 - **ID**: vocab-cefr-24
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: volatile
 - **IPA**: /ˈvɒl.ə.taɪl/
 - **Definition**: Liable to change rapidly and unpredictably, especially for the worse.
@@ -364,6 +388,7 @@
 - **ID**: vocab-cefr-25
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: unprecedented
 - **IPA**: /ʌnˈpres.ɪ.den.tɪd/
 - **Definition**: Never done or known before; completely without prior parallel.
@@ -379,6 +404,7 @@
 - **ID**: vocab-cefr-26
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: disenfranchise
 - **IPA**: /ˌdɪs.ɪnˈfræn.tʃaɪz/
 - **Definition**: Deprive someone of the right to vote, or of a right or privilege in society.
@@ -394,6 +420,7 @@
 - **ID**: vocab-cefr-27
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: corroborate
 - **IPA**: /kəˈrɒb.ə.reɪt/
 - **Definition**: Confirm or give support to a statement, theory, or finding with supplemental evidence.
@@ -409,6 +436,7 @@
 - **ID**: vocab-cefr-28
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: obviate
 - **IPA**: /ˈɒb.vi.eɪt/
 - **Definition**: Remove a need or difficulty; prevent or make unnecessary through proactive design or foresight.
@@ -424,6 +452,7 @@
 - **ID**: vocab-cefr-29
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: trenchant
 - **IPA**: /ˈtren.tʃənt/
 - **Definition**: Vigorous or incisive in expression or style; keenly perceptive, sharp, and cutting.
@@ -439,6 +468,7 @@
 - **ID**: vocab-cefr-30
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: surreptitious
 - **IPA**: /ˌsʌr.əpˈtɪʃ.əs/
 - **Definition**: Kept secret, especially because it would not be approved of; stealthy and covert.
@@ -454,6 +484,7 @@
 - **ID**: vocab-cefr-31
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: pernicious
 - **IPA**: /pəˈnɪʃ.əs/
 - **Definition**: Having a harmful effect, especially in a gradual, subtle, or treacherous way.
@@ -469,6 +500,7 @@
 - **ID**: vocab-cefr-32
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: ephemeral
 - **IPA**: /ɪˈfem.ər.əl/
 - **Definition**: Lasting for a very short time; transient, fleeting.
@@ -484,6 +516,7 @@
 - **ID**: vocab-cefr-33
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: disparate
 - **IPA**: /ˈdɪs.pər.ət/
 - **Definition**: Essentially different in kind; not allowing comparison; completely distinct.
@@ -499,6 +532,7 @@
 - **ID**: vocab-cefr-34
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: juxtapose
 - **IPA**: /ˌdʒʌk.stəˈpəʊz/
 - **Definition**: Place or deal with close together for contrasting effect.
@@ -514,6 +548,7 @@
 - **ID**: vocab-cefr-35
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: fastidious
 - **IPA**: /fæsˈtɪd.i.əs/
 - **Definition**: Very attentive to and concerned about accuracy and detail; very hard to please.
@@ -529,6 +564,7 @@
 - **ID**: vocab-cefr-36
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: esoteric
 - **IPA**: /ˌes.əˈter.ɪk/
 - **Definition**: Intended for or likely to be understood by only a small number of people with specialized knowledge or interest.
@@ -544,6 +580,7 @@
 - **ID**: vocab-cefr-37
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: acquiesce
 - **IPA**: /ˌæk.wiˈes/
 - **Definition**: Accept something reluctantly but without protest; submit passively.
@@ -559,6 +596,7 @@
 - **ID**: vocab-cefr-38
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: salient
 - **IPA**: /ˈseɪ.li.ənt/
 - **Definition**: Most notable or important; prominently standing out from the background.
@@ -574,6 +612,7 @@
 - **ID**: vocab-cefr-39
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: equanimity
 - **IPA**: /ˌek.wəˈnɪm.ə.ti/
 - **Definition**: Mental calmness, composure, and evenness of temper, especially in a difficult situation.
@@ -589,6 +628,7 @@
 - **ID**: vocab-cefr-40
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: inexorable
 - **IPA**: /ɪnˈek.sər.ə.bəl/
 - **Definition**: Impossible to stop or prevent; unrelenting and impervious to plea or persuasion.
@@ -604,6 +644,7 @@
 - **ID**: vocab-cefr-41
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: tenuous
 - **IPA**: /ˈten.ju.əs/
 - **Definition**: Very weak or slight; lacking a sound basis (of a link, argument, or hold on something).
@@ -619,6 +660,7 @@
 - **ID**: vocab-cefr-42
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: cogent
 - **IPA**: /ˈkəʊ.dʒənt/
 - **Definition**: (Of an argument or case) clear, logical, and convincing.
@@ -634,6 +676,7 @@
 - **ID**: vocab-cefr-43
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: tacit
 - **IPA**: /ˈtæs.ɪt/
 - **Definition**: Understood or implied without being directly stated.
@@ -649,6 +692,7 @@
 - **ID**: vocab-cefr-44
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: ambivalent
 - **IPA**: /æmˈbɪv.ə.lənt/
 - **Definition**: Having mixed or contradictory feelings about something or someone.
@@ -664,6 +708,7 @@
 - **ID**: vocab-cefr-45
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: exacerbate
 - **IPA**: /ɪɡˈzæs.ə.beɪt/
 - **Definition**: Make a problem, bad situation, or negative feeling worse.
@@ -679,6 +724,7 @@
 - **ID**: vocab-cefr-46
 - **Mode**: CEFR_ASCENT
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: untenable
 - **IPA**: /ʌnˈten.ə.bəl/
 - **Definition**: (Of a position, theory, or situation) not able to be maintained or defended against attack or objection.
@@ -694,6 +740,7 @@
 - **ID**: vocab-cefr-47
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: specious
 - **IPA**: /ˈspiː.ʃəs/
 - **Definition**: Superficially plausible but actually wrong or misleading.
@@ -709,6 +756,7 @@
 - **ID**: vocab-cefr-48
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: perfunctory
 - **IPA**: /pəˈfʌŋk.tər.i/
 - **Definition**: Carried out with minimal effort or reflection, merely as a routine duty.
@@ -724,6 +772,7 @@
 - **ID**: vocab-cefr-49
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: ostensible
 - **IPA**: /ɒˈsten.sə.bəl/
 - **Definition**: Stated or appearing to be true, but not necessarily so.
@@ -739,6 +788,7 @@
 - **ID**: vocab-cefr-50
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: belie
 - **IPA**: /bɪˈlaɪ/
 - **Definition**: Fail to give a true impression of something; or show something to be false.
@@ -754,6 +804,7 @@
 - **ID**: vocab-cefr-51
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: eschew
 - **IPA**: /ɪsˈtʃuː/
 - **Definition**: Deliberately avoid using or doing something, often on principle.
@@ -769,6 +820,7 @@
 - **ID**: vocab-cefr-52
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: preclude
 - **IPA**: /prɪˈkluːd/
 - **Definition**: Prevent something from happening or make it impossible; rule out in advance.
@@ -784,6 +836,7 @@
 - **ID**: vocab-cefr-53
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: gainsay
 - **IPA**: /ˌɡeɪnˈseɪ/
 - **Definition**: Deny or contradict a fact or statement; speak against (usually used with a negative).
@@ -799,6 +852,7 @@
 - **ID**: vocab-cefr-54
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: recalcitrant
 - **IPA**: /rɪˈkæl.sɪ.trənt/
 - **Definition**: Stubbornly uncooperative toward authority, control, or discipline.
@@ -814,6 +868,7 @@
 - **ID**: vocab-cefr-55
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: sanguine
 - **IPA**: /ˈsæŋ.ɡwɪn/
 - **Definition**: Optimistic or positive, especially in an apparently bad or difficult situation.
@@ -829,6 +884,7 @@
 - **ID**: vocab-cefr-56
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: quixotic
 - **IPA**: /kwɪkˈsɒt.ɪk/
 - **Definition**: Exceedingly idealistic; unrealistic and impractical in the pursuit of noble aims.
@@ -844,6 +900,7 @@
 - **ID**: vocab-cefr-57
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: desultory
 - **IPA**: /ˈdes.əl.tər.i/
 - **Definition**: Lacking a plan, purpose, or enthusiasm; passing aimlessly from one thing to another.
@@ -859,6 +916,7 @@
 - **ID**: vocab-cefr-58
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: laconic
 - **IPA**: /ləˈkɒn.ɪk/
 - **Definition**: Using very few words; concise to the point of seeming blunt or mysterious.
@@ -874,6 +932,7 @@
 - **ID**: vocab-cefr-59
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: obdurate
 - **IPA**: /ˈɒb.djə.rət/
 - **Definition**: Stubbornly refusing to change one's opinion or course of action.
@@ -889,6 +948,7 @@
 - **ID**: vocab-cefr-60
 - **Mode**: CEFR_ASCENT
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: mercurial
 - **IPA**: /mɜːˈkjʊə.ri.əl/
 - **Definition**: Subject to sudden or unpredictable changes of mood or mind.

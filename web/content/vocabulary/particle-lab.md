@@ -4,6 +4,7 @@
 - **ID**: vocab-pl-1
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: scale up
 - **IPA**: /skeɪl ʌp/
 - **Definition**: Increase the size, amount, or production capacity of something according to a fixed ratio or expanding demand.
@@ -19,6 +20,7 @@
 - **ID**: vocab-pl-2
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: B2
 - **Word**: wind up
 - **IPA**: /waɪnd ʌp/
 - **Definition**: Bring an activity to an end, settle affairs; or find oneself in an unexpected situation or place.
@@ -34,6 +36,7 @@
 - **ID**: vocab-pl-3
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: bottle up
 - **IPA**: /ˈbɒt.əl ʌp/
 - **Definition**: Repress or conceal one’s feelings, emotions, or grievances over a prolonged period.
@@ -49,6 +52,7 @@
 - **ID**: vocab-pl-4
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: summon up
 - **IPA**: /ˈsʌm.ən ʌp/
 - **Definition**: Manage to call forth, gather, or produce energy, courage, or a mental image from within oneself.
@@ -64,6 +68,7 @@
 - **ID**: vocab-pl-5
 - **Mode**: PARTICLE_LAB
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: chalk up
 - **IPA**: /tʃɔːk ʌp/
 - **Definition**: Ascribe or attribute a success or failure to a particular cause or factor; register an achievement.
@@ -79,6 +84,7 @@
 - **ID**: vocab-pl-6
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: A2
 - **Word**: cheer up
 - **IPA**: /tʃɪər ʌp/
 - **Definition**: Become or cause someone to become less unhappy and more confident or animated.
@@ -94,6 +100,7 @@
 - **ID**: vocab-pl-7
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: whip up
 - **IPA**: /wɪp ʌp/
 - **Definition**: Deliberately excite or stimulate intense emotions or support, often recklessly; or prepare something quickly.
@@ -109,6 +116,7 @@
 - **ID**: vocab-pl-8
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: burn up
 - **IPA**: /bɜːn ʌp/
 - **Definition**: Be destroyed completely by heat or fire; or consume energy rapidly.
@@ -124,6 +132,7 @@
 - **ID**: vocab-pl-9
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B1
 - **Word**: figure out
 - **IPA**: /ˈfɪɡ.ər aʊt/
 - **Definition**: Discover, solve, or understand something through thought, calculation, or investigation.
@@ -139,6 +148,7 @@
 - **ID**: vocab-pl-10
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: phase out
 - **IPA**: /feɪz aʊt/
 - **Definition**: Gradually stop using, providing, or producing something over a scheduled timetable.
@@ -154,6 +164,7 @@
 - **ID**: vocab-pl-11
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: burn out
 - **IPA**: /bɜːn aʊt/
 - **Definition**: Ruin one’s health or energy through severe, prolonged overwork; fail through overheating.
@@ -169,6 +180,7 @@
 - **ID**: vocab-pl-12
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: single out
 - **IPA**: /ˈsɪŋ.ɡəl aʊt/
 - **Definition**: Choose one person or thing from a group for special treatment, praise, or criticism.
@@ -184,6 +196,7 @@
 - **ID**: vocab-pl-13
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: hammer out
 - **IPA**: /ˈhæm.ər aʊt/
 - **Definition**: Negotiate or reach an agreement, resolution, or compromise through hard discussion and persistent effort.
@@ -199,6 +212,7 @@
 - **ID**: vocab-pl-14
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: flesh out
 - **IPA**: /fleʃ aʊt/
 - **Definition**: Add more details, substance, or evidence to an idea, skeleton plan, or argument.
@@ -214,6 +228,7 @@
 - **ID**: vocab-pl-15
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: rule out
 - **IPA**: /ruːl aʊt/
 - **Definition**: Exclude something from consideration or eliminate as a possibility.
@@ -229,6 +244,7 @@
 - **ID**: vocab-pl-16
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: iron out
 - **IPA**: /ˈaɪən aʊt/
 - **Definition**: Resolve or settle minor problems, discrepancies, or difficulties.
@@ -244,6 +260,7 @@
 - **ID**: vocab-pl-17
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: B2
 - **Word**: crack down
 - **IPA**: /kræk daʊn/
 - **Definition**: Take severe measures against individuals or behaviors that violate laws or rules.
@@ -259,6 +276,7 @@
 - **ID**: vocab-pl-18
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: pare down
 - **IPA**: /peər daʊn/
 - **Definition**: Reduce something in size, amount, or scope by gradually cutting away superfluous elements.
@@ -274,6 +292,7 @@
 - **ID**: vocab-pl-19
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: boil down
 - **IPA**: /bɔɪl daʊn/
 - **Definition**: Reduce a complex situation, argument, or text to its most fundamental elements.
@@ -289,6 +308,7 @@
 - **ID**: vocab-pl-20
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: nail down
 - **IPA**: /neɪl daʊn/
 - **Definition**: Finalize, confirm, or define terms precisely and conclusively.
@@ -304,6 +324,7 @@
 - **ID**: vocab-pl-21
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B1
 - **Word**: cool down
 - **IPA**: /kuːl daʊn/
 - **Definition**: Become less hot; or become calmer after high excitement, tension, or rage.
@@ -319,6 +340,7 @@
 - **ID**: vocab-pl-22
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: B2
 - **Word**: narrow down
 - **IPA**: /ˈnær.əʊ daʊn/
 - **Definition**: Reduce the number of possibilities or choices by filtering out unsuitable ones.
@@ -334,6 +356,7 @@
 - **ID**: vocab-pl-23
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: play down
 - **IPA**: /pleɪ daʊn/
 - **Definition**: Make something seem less important, serious, or consequential than it really is.
@@ -349,6 +372,7 @@
 - **ID**: vocab-pl-24
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: tone down
 - **IPA**: /təʊn daʊn/
 - **Definition**: Make a speech, piece of writing, or opinion less harsh, extreme, or offensive.
@@ -364,6 +388,7 @@
 - **ID**: vocab-pl-25
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B1
 - **Word**: call off
 - **IPA**: /kɔːl ɒf/
 - **Definition**: Cancel an event, arrangement, or planned course of action.
@@ -379,6 +404,7 @@
 - **ID**: vocab-pl-26
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: ward off
 - **IPA**: /wɔːd ɒf/
 - **Definition**: Prevent someone or something from harming you or causing difficulty; avert.
@@ -394,6 +420,7 @@
 - **ID**: vocab-pl-27
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: shrug off
 - **IPA**: /ʃrʌɡ ɒf/
 - **Definition**: Dismiss something as unimportant or treat an insult, injury, or setback with indifferent unconcern.
@@ -409,6 +436,7 @@
 - **ID**: vocab-pl-28
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: pay off
 - **IPA**: /peɪ ɒf/
 - **Definition**: Yield good results, succeed; or settle a debt or balance completely.
@@ -424,6 +452,7 @@
 - **ID**: vocab-pl-29
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B1
 - **Word**: set off
 - **IPA**: /set ɒf/
 - **Definition**: Begin a journey; or cause a series of events, an alarm, or an explosion to trigger.
@@ -439,6 +468,7 @@
 - **ID**: vocab-pl-30
 - **Mode**: PARTICLE_LAB
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: stave off
 - **IPA**: /steɪv ɒf/
 - **Definition**: Avert or delay something dangerous, difficult, or unwelcome temporarily.
@@ -454,6 +484,7 @@
 - **ID**: vocab-pl-31
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: write off
 - **IPA**: /raɪt ɒf/
 - **Definition**: Dismiss someone or something as a failure or loss; cancel a bad debt from accounting books.
@@ -469,6 +500,7 @@
 - **ID**: vocab-pl-32
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: B2
 - **Word**: peel off
 - **IPA**: /piːl ɒf/
 - **Definition**: Separate from a main group or trajectory; or remove a layer smoothly.
@@ -484,6 +516,7 @@
 - **ID**: vocab-pl-33
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: bank on
 - **IPA**: /bæŋk ɒn/
 - **Definition**: Rely with confidence on someone or something happening; stake plans on an assumption.
@@ -499,6 +532,7 @@
 - **ID**: vocab-pl-34
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: latch on
 - **IPA**: /lætʃ ɒn/
 - **Definition**: Attach oneself firmly to something; comprehend an idea quickly; adopt an interest avidly.
@@ -514,6 +548,7 @@
 - **ID**: vocab-pl-35
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: spur on
 - **IPA**: /spɜːr ɒn/
 - **Definition**: Encourage someone to continue or to make greater efforts; stimulate progress.
@@ -529,6 +564,7 @@
 - **ID**: vocab-pl-36
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: bring on
 - **IPA**: /brɪŋ ɒn/
 - **Definition**: Cause something, typically unpleasant or challenging, to happen or develop; or introduce.
@@ -544,6 +580,7 @@
 - **ID**: vocab-pl-37
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: dwell on
 - **IPA**: /dwel ɒn/
 - **Definition**: Think, speak, or write about something, especially an unhappy or stressful subject, at excessive length.
@@ -559,6 +596,7 @@
 - **ID**: vocab-pl-38
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: frown on
 - **IPA**: /fraʊn ɒn/
 - **Definition**: Disapprove of something morally, culturally, or professionally.
@@ -574,6 +612,7 @@
 - **ID**: vocab-pl-39
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: embark on
 - **IPA**: /ɪmˈbɑːk ɒn/
 - **Definition**: Start, begin, or initiate a course of action, project, or journey.
@@ -589,6 +628,7 @@
 - **ID**: vocab-pl-40
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: press on
 - **IPA**: /pres ɒn/
 - **Definition**: Continue moving forward or making progress, especially in a determined manner despite difficulties.
@@ -604,6 +644,7 @@
 - **ID**: vocab-pl-41
 - **Mode**: PARTICLE_LAB
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: gloss over
 - **IPA**: /ɡlɒs ˈəʊ.vər/
 - **Definition**: Treat a problem, fault, or embarrassing fact briefly or superficially so as to avoid drawing attention to it.
@@ -619,6 +660,7 @@
 - **ID**: vocab-pl-42
 - **Mode**: PARTICLE_LAB
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: paper over
 - **IPA**: /ˈpeɪ.pər ˈəʊ.vər/
 - **Definition**: Hide a problem or disagreement temporarily without actually resolving it.
@@ -634,6 +676,7 @@
 - **ID**: vocab-pl-43
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: mull over
 - **IPA**: /mʌl ˈəʊ.vər/
 - **Definition**: Think about something carefully and at length before reaching a decision.
@@ -649,6 +692,7 @@
 - **ID**: vocab-pl-44
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: win over
 - **IPA**: /wɪn ˈəʊ.vər/
 - **Definition**: Persuade someone to support or agree with you, especially after initial opposition or doubt.
@@ -664,6 +708,7 @@
 - **ID**: vocab-pl-45
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: follow through
 - **IPA**: /ˈfɒl.əʊ θruː/
 - **Definition**: Continue an action or plan until it is completed; carry out a promise or threat.
@@ -679,6 +724,7 @@
 - **ID**: vocab-pl-46
 - **Mode**: PARTICLE_LAB
 - **Level**: 3
+- **CEFR**: C1
 - **Word**: muddle through
 - **IPA**: /ˈmʌd.əl θruː/
 - **Definition**: Manage to cope or succeed despite lacking proper planning, skill, or resources.
@@ -694,6 +740,7 @@
 - **ID**: vocab-pl-47
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: scrape through
 - **IPA**: /skreɪp θruː/
 - **Definition**: Succeed in passing an exam or getting through a difficult situation by a very narrow margin.
@@ -709,6 +756,7 @@
 - **ID**: vocab-pl-48
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: see through
 - **IPA**: /siː θruː/
 - **Definition**: Recognize the true nature of someone or something and not be deceived by it.
@@ -724,6 +772,7 @@
 - **ID**: vocab-pl-49
 - **Mode**: PARTICLE_LAB
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: claw back
 - **IPA**: /klɔː bæk/
 - **Definition**: Regain something lost, such as money, ground, or support, gradually and with great effort; or recover money already paid out.
@@ -739,6 +788,7 @@
 - **ID**: vocab-pl-50
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: B2
 - **Word**: fall back on
 - **IPA**: /fɔːl bæk ɒn/
 - **Definition**: Turn to something or someone for support when other options have failed.
@@ -754,6 +804,7 @@
 - **ID**: vocab-pl-51
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: cut back
 - **IPA**: /kʌt bæk/
 - **Definition**: Reduce the amount of something, especially spending or consumption.
@@ -769,6 +820,7 @@
 - **ID**: vocab-pl-52
 - **Mode**: PARTICLE_LAB
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: fritter away
 - **IPA**: /ˈfrɪt.ər əˈweɪ/
 - **Definition**: Waste time, money, or energy gradually on trivial things.
@@ -784,6 +836,7 @@
 - **ID**: vocab-pl-53
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: chip away at
 - **IPA**: /tʃɪp əˈweɪ æt/
 - **Definition**: Gradually reduce or weaken something through persistent small efforts.
@@ -799,6 +852,7 @@
 - **ID**: vocab-pl-54
 - **Mode**: PARTICLE_LAB
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: whittle away
 - **IPA**: /ˈwɪt.əl əˈweɪ/
 - **Definition**: Gradually reduce the size, amount, or strength of something through repeated small reductions.
@@ -814,6 +868,7 @@
 - **ID**: vocab-pl-55
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: cave in
 - **IPA**: /keɪv ɪn/
 - **Definition**: Collapse inward; figuratively, give in to pressure or demands after a period of resistance.
@@ -829,6 +884,7 @@
 - **ID**: vocab-pl-56
 - **Mode**: PARTICLE_LAB
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: factor in
 - **IPA**: /ˈfæk.tər ɪn/
 - **Definition**: Include something as a relevant element when making a calculation, plan, or decision.
@@ -844,6 +900,7 @@
 - **ID**: vocab-pl-57
 - **Mode**: PARTICLE_LAB
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: rein in
 - **IPA**: /reɪn ɪn/
 - **Definition**: Restrict or bring under control something that is excessive or unruly.
@@ -859,6 +916,7 @@
 - **ID**: vocab-pl-58
 - **Mode**: PARTICLE_LAB
 - **Level**: 3
+- **CEFR**: C1
 - **Word**: skirt around
 - **IPA**: /skɜːt əˈraʊnd/
 - **Definition**: Avoid dealing with or talking directly about a difficult or awkward subject.
@@ -874,6 +932,7 @@
 - **ID**: vocab-pl-59
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: come across as
 - **IPA**: /kʌm əˈkrɒs æz/
 - **Definition**: Give a particular impression to other people.
@@ -889,6 +948,7 @@
 - **ID**: vocab-pl-60
 - **Mode**: PARTICLE_LAB
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: get across
 - **IPA**: /ɡet əˈkrɒs/
 - **Definition**: Communicate an idea successfully so that it is understood.

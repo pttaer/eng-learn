@@ -4,6 +4,7 @@
 - **ID**: vocab-rf-1
 - **Mode**: ROOT_FORGE
 - **Level**: 1
+- **CEFR**: C1
 - **Word**: chronic
 - **IPA**: /ˈkrɒn.ɪk/
 - **Definition**: Persisting for a long time or constantly recurring (typically of an illness or problem).
@@ -20,6 +21,7 @@
 - **ID**: vocab-rf-2
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: synchronize
 - **IPA**: /ˈsɪŋ.krə.naɪz/
 - **Definition**: To cause to occur or operate at the same time or rate.
@@ -36,6 +38,7 @@
 - **ID**: vocab-rf-3
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: anachronism
 - **IPA**: /əˈnæk.rə.nɪ.zəm/
 - **Definition**: A thing belonging or appropriate to a period other than that in which it exists, especially a thing that is conspicuously old-fashioned.
@@ -52,6 +55,7 @@
 - **ID**: vocab-rf-4
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: chronicle
 - **IPA**: /ˈkrɒn.ɪ.kəl/
 - **Definition**: A factual written account of important or historical events in the order of their occurrence.
@@ -68,6 +72,7 @@
 - **ID**: vocab-rf-5
 - **Mode**: ROOT_FORGE
 - **Level**: 1
+- **CEFR**: B1
 - **Word**: predict
 - **IPA**: /prɪˈdɪkt/
 - **Definition**: Say or estimate that a specified thing will happen in the future or will be a consequence of something.
@@ -84,6 +89,7 @@
 - **ID**: vocab-rf-6
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: B2
 - **Word**: contradict
 - **IPA**: /ˌkɒn.trəˈdɪkt/
 - **Definition**: Deny the truth of a statement by asserting the opposite, or be in conflict with.
@@ -100,6 +106,7 @@
 - **ID**: vocab-rf-7
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: indict
 - **IPA**: /ɪnˈdaɪt/
 - **Definition**: Formally accuse or charge with a serious crime.
@@ -116,6 +123,7 @@
 - **ID**: vocab-rf-8
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: jurisdiction
 - **IPA**: /ˌdʒʊə.rɪsˈdɪk.ʃən/
 - **Definition**: The official power to make legal decisions and judgments over an area or domain.
@@ -132,6 +140,7 @@
 - **ID**: vocab-rf-9
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: amorphous
 - **IPA**: /əˈmɔː.fəs/
 - **Definition**: Without a clearly defined shape or form; lacking organization or clear structure.
@@ -148,6 +157,7 @@
 - **ID**: vocab-rf-10
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: metamorphosis
 - **IPA**: /ˌmet.əˈmɔː.fə.sɪs/
 - **Definition**: A change of the form or nature of a thing or person into a completely different one.
@@ -164,6 +174,7 @@
 - **ID**: vocab-rf-11
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: anthropomorphic
 - **IPA**: /ˌæn.θrə.pəˈmɔː.fɪk/
 - **Definition**: Attributing human characteristics, emotions, or behaviors to non-human entities.
@@ -180,6 +191,7 @@
 - **ID**: vocab-rf-12
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: morphology
 - **IPA**: /mɔːˈfɒl.ə.dʒi/
 - **Definition**: The branch of biology or linguistics that deals with the form of living organisms or words.
@@ -196,6 +208,7 @@
 - **ID**: vocab-rf-13
 - **Mode**: ROOT_FORGE
 - **Level**: 1
+- **CEFR**: C1
 - **Word**: empathy
 - **IPA**: /ˈem.pə.θi/
 - **Definition**: The ability to understand and share the feelings of another.
@@ -212,6 +225,7 @@
 - **ID**: vocab-rf-14
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: apathy
 - **IPA**: /ˈæp.ə.θi/
 - **Definition**: Lack of interest, enthusiasm, or concern.
@@ -228,6 +242,7 @@
 - **ID**: vocab-rf-15
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: antipathy
 - **IPA**: /ænˈtɪp.ə.θi/
 - **Definition**: A deep-seated feeling of aversion or hostility.
@@ -244,6 +259,7 @@
 - **ID**: vocab-rf-16
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: pathology
 - **IPA**: /pəˈθɒl.ə.dʒi/
 - **Definition**: The scientific study of disease, or any deviation from a normal, healthy, or efficient condition.
@@ -260,6 +276,7 @@
 - **ID**: vocab-rf-17
 - **Mode**: ROOT_FORGE
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: deduce
 - **IPA**: /dɪˈdjuːs/
 - **Definition**: Arrive at a fact or a conclusion by reasoning; draw as a logical consequence from premises.
@@ -276,6 +293,7 @@
 - **ID**: vocab-rf-18
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: conducive
 - **IPA**: /kənˈdjuː.sɪv/
 - **Definition**: Making a certain situation or outcome likely or possible.
@@ -292,6 +310,7 @@
 - **ID**: vocab-rf-19
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C1
 - **Word**: induce
 - **IPA**: /ɪnˈdjuːs/
 - **Definition**: Succeed in persuading or leading someone to do something; bring about or give rise to.
@@ -308,6 +327,7 @@
 - **ID**: vocab-rf-20
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: ductile
 - **IPA**: /ˈdʌk.taɪl/
 - **Definition**: Able to be drawn out into a thin wire; easily influenced or pliable.
@@ -324,6 +344,7 @@
 - **ID**: vocab-rf-21
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: benevolent
 - **IPA**: /bəˈnev.əl.ənt/
 - **Definition**: Well-meaning and kindly; serving a charitable rather than a profit-making purpose.
@@ -340,6 +361,7 @@
 - **ID**: vocab-rf-22
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: malevolent
 - **IPA**: /məˈlev.əl.ənt/
 - **Definition**: Having or showing a wish to do evil to others.
@@ -356,6 +378,7 @@
 - **ID**: vocab-rf-23
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: benign
 - **IPA**: /bɪˈnaɪn/
 - **Definition**: Gentle, kindly, or not harmful in effect (in medicine: not malignant).
@@ -372,6 +395,7 @@
 - **ID**: vocab-rf-24
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: malfeasance
 - **IPA**: /mælˈfiː.zəns/
 - **Definition**: Wrongdoing or misconduct, especially by a public official or corporate trustee.
@@ -388,6 +412,7 @@
 - **ID**: vocab-rf-25
 - **Mode**: ROOT_FORGE
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: advocate
 - **IPA**: /ˈæd.və.keɪt/
 - **Definition**: Publicly recommend or support a particular cause or policy.
@@ -404,6 +429,7 @@
 - **ID**: vocab-rf-26
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: B2
 - **Word**: provoke
 - **IPA**: /prəˈvəʊk/
 - **Definition**: Stimulate or give rise to a reaction or emotion, typically a strong or unwelcome one.
@@ -420,6 +446,7 @@
 - **ID**: vocab-rf-27
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: equivocate
 - **IPA**: /ɪˈkwɪv.ə.keɪt/
 - **Definition**: Use ambiguous language so as to conceal the truth or avoid committing oneself.
@@ -436,6 +463,7 @@
 - **ID**: vocab-rf-28
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: evocative
 - **IPA**: /ɪˈvɒk.ə.tɪv/
 - **Definition**: Bringing strong images, memories, or feelings to mind.
@@ -452,6 +480,7 @@
 - **ID**: vocab-rf-29
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: introspective
 - **IPA**: /ˌɪn.trəˈspek.tɪv/
 - **Definition**: Characterized by examination of one’s own conscious thoughts and feelings.
@@ -468,6 +497,7 @@
 - **ID**: vocab-rf-30
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: conspicuous
 - **IPA**: /kənˈspɪk.ju.əs/
 - **Definition**: Standing out so as to be clearly visible; attracting notice or attention.
@@ -484,6 +514,7 @@
 - **ID**: vocab-rf-31
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: circumspect
 - **IPA**: /ˈsɜː.kəm.spekt/
 - **Definition**: Wary and unwilling to take risks; prudent, careful to consider all circumstances and consequences.
@@ -500,6 +531,7 @@
 - **ID**: vocab-rf-32
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: prospectus
 - **IPA**: /prəˈspek.təs/
 - **Definition**: A printed document that advertises or provides details of a commercial enterprise, school, or financial product to prospective buyers.
@@ -516,6 +548,7 @@
 - **ID**: vocab-rf-33
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: homogeneous
 - **IPA**: /ˌhɒm.əˈdʒiː.ni.əs/
 - **Definition**: Of the same kind; alike, consisting of parts all of the same kind.
@@ -532,6 +565,7 @@
 - **ID**: vocab-rf-34
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: engender
 - **IPA**: /ɪnˈdʒen.dər/
 - **Definition**: Cause or give rise to a feeling, situation, or condition.
@@ -548,6 +582,7 @@
 - **ID**: vocab-rf-35
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C1
 - **Word**: indigenous
 - **IPA**: /ɪnˈdɪdʒ.ɪ.nəs/
 - **Definition**: Originating or occurring naturally in a particular place; native.
@@ -564,6 +599,7 @@
 - **ID**: vocab-rf-36
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: progeny
 - **IPA**: /ˈprɒdʒ.ə.ni/
 - **Definition**: A descendant or the descendants of a person, animal, or plant; offspring.
@@ -580,6 +616,7 @@
 - **ID**: vocab-rf-37
 - **Mode**: ROOT_FORGE
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: extract
 - **IPA**: /ɪkˈstrækt/
 - **Definition**: Remove or take out, especially by effort or force; obtain a substance or insight from a whole.
@@ -596,6 +633,7 @@
 - **ID**: vocab-rf-38
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: protracted
 - **IPA**: /prəˈtræk.tɪd/
 - **Definition**: Lasting for a long time or longer than expected or usual.
@@ -612,6 +650,7 @@
 - **ID**: vocab-rf-39
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: intractable
 - **IPA**: /ɪnˈtræk.tə.bəl/
 - **Definition**: Hard to control, manage, or deal with; stubborn or unyielding.
@@ -628,6 +667,7 @@
 - **ID**: vocab-rf-40
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: detract
 - **IPA**: /dɪˈtrækt/
 - **Definition**: Diminish the worth, value, or quality of an achievement, person, or object.
@@ -644,6 +684,7 @@
 - **ID**: vocab-rf-41
 - **Mode**: ROOT_FORGE
 - **Level**: 1
+- **CEFR**: C2
 - **Word**: fidelity
 - **IPA**: /fɪˈdel.ə.ti/
 - **Definition**: Faithfulness to a person, cause, or belief; or the degree of exactness with which something is copied or reproduced.
@@ -660,6 +701,7 @@
 - **ID**: vocab-rf-42
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: incredulous
 - **IPA**: /ɪnˈkred.jə.ləs/
 - **Definition**: Unwilling or unable to believe something; showing disbelief.
@@ -676,6 +718,7 @@
 - **ID**: vocab-rf-43
 - **Mode**: ROOT_FORGE
 - **Level**: 1
+- **CEFR**: C1
 - **Word**: eloquent
 - **IPA**: /ˈel.ə.kwənt/
 - **Definition**: Fluent, expressive, and persuasive in speaking or writing; clearly expressing a feeling.
@@ -692,6 +735,7 @@
 - **ID**: vocab-rf-44
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: loquacious
 - **IPA**: /ləˈkweɪ.ʃəs/
 - **Definition**: Tending to talk a great deal; very talkative.
@@ -708,6 +752,7 @@
 - **ID**: vocab-rf-45
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: subvert
 - **IPA**: /səbˈvɜːt/
 - **Definition**: Undermine the power, authority, or principles of an established system or institution; overturn conventions from within.
@@ -724,6 +769,7 @@
 - **ID**: vocab-rf-46
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: inadvertent
 - **IPA**: /ˌɪn.ədˈvɜː.tənt/
 - **Definition**: Not resulting from deliberate intention or planning; unintentional, often through lack of attention.
@@ -740,6 +786,7 @@
 - **ID**: vocab-rf-47
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: impending
 - **IPA**: /ɪmˈpen.dɪŋ/
 - **Definition**: (Of an event, typically an unpleasant one) about to happen; imminent.
@@ -756,6 +803,7 @@
 - **ID**: vocab-rf-48
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: compendium
 - **IPA**: /kəmˈpen.di.əm/
 - **Definition**: A collection of concise but detailed information about a particular subject, especially in a single book.
@@ -772,6 +820,7 @@
 - **ID**: vocab-rf-49
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: proscribe
 - **IPA**: /prəʊˈskraɪb/
 - **Definition**: Forbid something, especially by law; denounce or condemn officially.
@@ -788,6 +837,7 @@
 - **ID**: vocab-rf-50
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: circumscribe
 - **IPA**: /ˈsɜː.kəm.skraɪb/
 - **Definition**: Restrict something within limits; in geometry, draw a figure around another so that it touches it at points without cutting it.
@@ -804,6 +854,7 @@
 - **ID**: vocab-rf-51
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: gregarious
 - **IPA**: /ɡrɪˈɡeə.ri.əs/
 - **Definition**: Fond of company; sociable. (Of animals) living in flocks or herds.
@@ -820,6 +871,7 @@
 - **ID**: vocab-rf-52
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: egregious
 - **IPA**: /ɪˈɡriː.dʒəs/
 - **Definition**: Outstandingly bad; shocking and flagrant.
@@ -836,6 +888,7 @@
 - **ID**: vocab-rf-53
 - **Mode**: ROOT_FORGE
 - **Level**: 1
+- **CEFR**: C1
 - **Word**: susceptible
 - **IPA**: /səˈsep.tə.bəl/
 - **Definition**: Likely to be influenced, harmed, or affected by a particular thing.
@@ -852,6 +905,7 @@
 - **ID**: vocab-rf-54
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: incipient
 - **IPA**: /ɪnˈsɪp.i.ənt/
 - **Definition**: In an initial stage; beginning to happen or develop.
@@ -868,6 +922,7 @@
 - **ID**: vocab-rf-55
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C1
 - **Word**: intermittent
 - **IPA**: /ˌɪn.təˈmɪt.ənt/
 - **Definition**: Occurring at irregular intervals; not continuous or steady.
@@ -884,6 +939,7 @@
 - **ID**: vocab-rf-56
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: emissary
 - **IPA**: /ˈem.ɪ.sər.i/
 - **Definition**: A person sent on a special mission, usually as a diplomatic representative.
@@ -900,6 +956,7 @@
 - **ID**: vocab-rf-57
 - **Mode**: ROOT_FORGE
 - **Level**: 1
+- **CEFR**: C1
 - **Word**: tenacious
 - **IPA**: /təˈneɪ.ʃəs/
 - **Definition**: Holding firmly to something; persistent and determined, not easily giving up.
@@ -916,6 +973,7 @@
 - **ID**: vocab-rf-58
 - **Mode**: ROOT_FORGE
 - **Level**: 2
+- **CEFR**: C2
 - **Word**: inconsequential
 - **IPA**: /ɪnˌkɒn.sɪˈkwen.ʃəl/
 - **Definition**: Not important or significant; trivial.
@@ -932,6 +990,7 @@
 - **ID**: vocab-rf-59
 - **Mode**: ROOT_FORGE
 - **Level**: 3
+- **CEFR**: C2
 - **Word**: obsequious
 - **IPA**: /əbˈsiː.kwi.əs/
 - **Definition**: Excessively eager to please or obey; servile.
@@ -948,6 +1007,7 @@
 - **ID**: vocab-rf-60
 - **Mode**: ROOT_FORGE
 - **Level**: 1
+- **CEFR**: B2
 - **Word**: pseudonym
 - **IPA**: /ˈsjuː.də.nɪm/
 - **Definition**: A fictitious name, especially one used by an author instead of their real name.
