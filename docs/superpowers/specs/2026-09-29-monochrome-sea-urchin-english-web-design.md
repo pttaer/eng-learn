@@ -215,7 +215,7 @@ When the final card of a review batch or daily habit set is marked:
   - **Urchin Proximity:** Gentle low-frequency sub-bass hum (50Hz–80Hz).
   - **Pointer Hover:** Delicate high-frequency micro-click (1800Hz, 8ms decay).
   - **Decoy Implosion:** Snappy vacuum pop (300Hz $\rightarrow$ 60Hz drop, 60ms).
-  - **Black Light Lens Open:** Resonant reverse-whoosh (120Hz $\rightarrow$ 480Hz crescendo).
+  - **Black Light Lens Open:** Resonant reverse-whoosh (120Hz $\rightarrow$ 4/c80Hz crescendo).
   - **Master Mute:** Instant toggle in the top telemetry bar.
 
 ### 8.3 Data Storage & Backup Schema

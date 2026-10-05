@@ -44,14 +44,14 @@ it('Verifies required source files exist', () => {
   ];
 
   for (const rel of files) {
-    const full = path.resolve(rel);
+    const full = path.join(__dirname, '..', '..', rel);
     assert(fs.existsSync(full), `File must exist: ${rel}`);
   }
 });
 
 // 2. CSS Invariants
 it('Verifies CSS rules and selectors in dossiers.css', () => {
-  const cssPath = path.resolve('web/src/assets/styles/dossiers.css');
+  const cssPath = path.join(__dirname, '..', 'src/assets/styles/dossiers.css');
   const css = fs.readFileSync(cssPath, 'utf8');
 
   const requiredSelectors = [
@@ -101,7 +101,7 @@ it('Verifies CSS rules and selectors in dossiers.css', () => {
 
 // 3. SRSEngine.addCard Invariant
 it('Verifies SRSEngine.addCard method behavior', () => {
-  const tsPath = path.resolve('web/src/core/srs-engine.ts');
+  const tsPath = path.join(__dirname, '..', 'src/core/srs-engine.ts');
   const tsCode = fs.readFileSync(tsPath, 'utf8');
 
   assert(tsCode.includes('public static addCard'), 'SRSEngine must export addCard method');
@@ -138,7 +138,7 @@ it('Verifies SRSEngine.addCard method behavior', () => {
 
 // 4. Lexicon Dictionary & In-Memory O(1) Lookup
 it('Verifies lexicon dictionary structure and O(1) lookup map', () => {
-  const dictPath = path.resolve('web/src/assets/data/lexicon-dictionary.json');
+  const dictPath = path.join(__dirname, '..', 'src/assets/data/lexicon-dictionary.json');
   const dict = JSON.parse(fs.readFileSync(dictPath, 'utf8'));
 
   assert(typeof dict === 'object' && dict !== null, 'Dictionary must be an object');
@@ -162,7 +162,7 @@ it('Verifies lexicon dictionary structure and O(1) lookup map', () => {
 
 // 5. LexiconDrawer TypeScript Implementation Structure
 it('Verifies LexiconDrawer TypeScript source architecture', () => {
-  const drawerPath = path.resolve('web/src/modules/lexicon-drawer.ts');
+  const drawerPath = path.join(__dirname, '..', 'src/modules/lexicon-drawer.ts');
   const code = fs.readFileSync(drawerPath, 'utf8');
 
   // Class & singletons

@@ -47,14 +47,14 @@ it('Verifies required source files exist', () => {
   ];
 
   for (const rel of files) {
-    const full = path.resolve(rel);
+    const full = path.join(__dirname, '..', '..', rel);
     assert(fs.existsSync(full), `File must exist: ${rel}`);
   }
 });
 
 // 2. Router Integration
 it('Verifies blitz route registration in router.ts', () => {
-  const routerPath = path.resolve('web/src/core/router.ts');
+  const routerPath = path.join(__dirname, '..', 'src/core/router.ts');
   const code = fs.readFileSync(routerPath, 'utf8');
 
   assert(code.includes("'blitz'"), "RouteId must include 'blitz'");
@@ -63,7 +63,7 @@ it('Verifies blitz route registration in router.ts', () => {
 
 // 3. Header HUD Trigger Button
 it('Verifies [ ⚡ BLITZ ] trigger button in header-hud.ts', () => {
-  const hudPath = path.resolve('web/src/modules/header-hud.ts');
+  const hudPath = path.join(__dirname, '..', 'src/modules/header-hud.ts');
   const code = fs.readFileSync(hudPath, 'utf8');
 
   assert(code.includes('btn-blitz'), "header-hud.ts must contain button with class 'btn-blitz'");
@@ -73,7 +73,7 @@ it('Verifies [ ⚡ BLITZ ] trigger button in header-hud.ts', () => {
 
 // 4. Main App Route Wiring
 it('Verifies main.ts routes #blitz to BlitzDossier with clean teardown', () => {
-  const mainPath = path.resolve('web/src/main.ts');
+  const mainPath = path.join(__dirname, '..', 'src/main.ts');
   const code = fs.readFileSync(mainPath, 'utf8');
 
   assert(code.includes("import { BlitzDossier } from './modules/blitz-dossier'"), "main.ts must import BlitzDossier");
@@ -84,7 +84,7 @@ it('Verifies main.ts routes #blitz to BlitzDossier with clean teardown', () => {
 
 // 5. BlitzDossier Architecture & Combo Logic
 it('Verifies BlitzDossier combo multiplier formula and prompt generation', () => {
-  const dossierPath = path.resolve('web/src/modules/blitz-dossier.ts');
+  const dossierPath = path.join(__dirname, '..', 'src/modules/blitz-dossier.ts');
   const code = fs.readFileSync(dossierPath, 'utf8');
 
   assert(code.includes('export class BlitzDossier'), 'Must export BlitzDossier class');
@@ -108,7 +108,7 @@ it('Verifies BlitzDossier combo multiplier formula and prompt generation', () =>
 
 // 6. CSS Selectors, Animations & Accessibility
 it('Verifies Blitz Mode styles in dossiers.css', () => {
-  const cssPath = path.resolve('web/src/assets/styles/dossiers.css');
+  const cssPath = path.join(__dirname, '..', 'src/assets/styles/dossiers.css');
   const css = fs.readFileSync(cssPath, 'utf8');
 
   const requiredSelectors = [

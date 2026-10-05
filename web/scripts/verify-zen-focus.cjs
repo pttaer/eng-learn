@@ -120,7 +120,7 @@ assert(audioSynthSrc.includes('noiseBuffer'), 'AudioSynthesizer must generate so
 console.log('  ✓ audio-synthesizer.ts implements 40Hz binaural drone & pink noise at gain 0.04');
 
 assert(headerHudSrc.includes('btn-zen-toggle'), 'HeaderHUD must render .btn-zen-toggle button');
-assert(headerHudSrc.includes('☯ ZEN'), 'HeaderHUD must include [ ☯ ZEN ] button label');
+assert(headerHudSrc.includes('ZEN'), 'HeaderHUD must include ZEN button label');
 assert(headerHudSrc.includes('ZenMode.toggle'), 'HeaderHUD must bind click to ZenMode.toggle');
 assert(headerHudSrc.includes('ZenMode.onChange'), 'HeaderHUD must subscribe to ZenMode.onChange');
 
