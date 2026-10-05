@@ -36,7 +36,7 @@ export class HeaderHUD {
     ProgressionEngine.onProgressUpdate((progState) => {
       const pill = this.element.querySelector('.btn-progression-pill');
       if (pill) {
-        pill.innerHTML = `${icon('zap', 12)} LVL ${progState.level} • ${progState.xp} XP`;
+        pill.innerHTML = `${icon('zap', 12)} LVL ${progState.level}<span class="btn-label"> • ${progState.xp} XP</span>`;
       }
       const streakEl = this.element.querySelector('.telemetry-streak');
       if (streakEl) {
@@ -73,19 +73,14 @@ export class HeaderHUD {
             <span style="color: var(--accent-gold); font-size: 13px;">✦</span> ENGLISH MASTERY
           </span>
         `}
-          <button class="hud-status-badge hud-rank-badge btn-level" style="background: var(--accent-gold); color: var(--bg-canvas); border-radius: 4px; padding: 2px 8px; font-weight: 700; border-color: var(--accent-gold); cursor: pointer;" aria-haspopup="dialog" title="Your CEFR level (click to change)" aria-label="Your level: ${CEFR_LABELS[StorageManager.getLearnerLevel()]}. Change level">${StorageManager.getLearnerLevel()}</button>
+          <button class="hud-status-badge btn-level" style="background: var(--accent-gold); color: var(--bg-canvas); border-radius: 4px; padding: 2px 8px; font-weight: 700; border-color: var(--accent-gold); cursor: pointer;" aria-haspopup="dialog" title="Your CEFR level (click to change)" aria-label="Your level: ${CEFR_LABELS[StorageManager.getLearnerLevel()]}. Change level">${StorageManager.getLearnerLevel()}</button>
       </div>
 
       <div class="hud-telemetry-cluster" style="display: flex; gap: 20px; align-items: center;">
         <div class="telemetry-item" title="Consecutive days you finished the daily workout" style="display: flex; align-items: center; gap: 6px;">
           <span class="telemetry-label" style="font-size: 11px;">STREAK:</span>
           <span class="telemetry-value telemetry-streak" style="color: var(--accent-gold); font-weight: 700;">${icon('flame')} ${progression.streak || state.streak.currentStreak} DAYS</span>
-        </div>
-        <div class="telemetry-item" title="Your goal: C2 mastery, the top of the skill tree" style="display: flex; align-items: center; gap: 6px;">
-          <span class="telemetry-label" style="font-size: 11px;">SUMMIT:</span>
-          <span class="telemetry-value" style="font-weight: 700;">C2 MASTERY</span>
-        </div>
-        <div class="telemetry-item" title="Share of flashcard reviews you recalled correctly" style="display: flex; align-items: center; gap: 6px;">
+        </div>        <div class="telemetry-item" title="Share of flashcard reviews you recalled correctly" style="display: flex; align-items: center; gap: 6px;">
           <span class="telemetry-label" style="font-size: 11px;">RETENTION:</span>
           <span class="telemetry-value telemetry-retention" style="color: var(--good); font-weight: 700;">${stats.retentionRate}%</span>
         </div>
@@ -93,10 +88,10 @@ export class HeaderHUD {
 
       <div class="hud-actions header-actions" style="display: flex; gap: 8px; align-items: center;">
         <button class="hud-btn btn-blitz" title="Launch 60-Second Roguelike Speed Blitz Mode" aria-label="Speed Blitz Mode" style="border-color: var(--accent-gold); color: var(--accent-gold); font-weight: 700;">
-          ${icon('zap', 12)} BLITZ
+          ${icon('zap', 12)}<span class="btn-label"> BLITZ</span>
         </button>
         <button class="hud-btn btn-progression-pill" title="RPG Progression & Daily Quests" aria-label="RPG Progression">
-          ${icon('zap')} LVL ${progression.level} • ${progression.xp} XP
+          ${icon('zap', 12)} LVL ${progression.level}<span class="btn-label"> • ${progression.xp} XP</span>
         </button>
         <button class="hud-btn btn-zen-toggle ${ZenMode.isZen() ? 'active' : ''}" title="Toggle Zen Immersion Mode (Hotkey: Z)" aria-label="Toggle Zen Immersion Mode" aria-pressed="${ZenMode.isZen()}">${HeaderHUD.zenLabel(ZenMode.isZen())}</button>
         <button class="hud-btn btn-theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">${this.themeLabel()}</button>
@@ -118,7 +113,7 @@ export class HeaderHUD {
   }
 
   private static zenLabel(active: boolean): string {
-    return active ? 'ZEN <span class="zen-dot" style="color: var(--accent-gold); margin-left: 2px;">●</span>' : 'ZEN';
+    return `${icon('eye', 12)}<span class="btn-label"> ZEN</span>${active ? '<span class="zen-dot" style="color: var(--accent-gold); margin-left: 2px;">●</span>' : ''}`;
   }
 
   private updateZenButtonState(active: boolean): void {

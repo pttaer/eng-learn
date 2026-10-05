@@ -4,13 +4,24 @@ import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import vocabularyData from '../assets/data/vocabulary.json';
+import { Cefr, srsTier } from '../core/cefr';
+import { levelsWithContent, defaultLevel, levelChipsHtml } from '../core/level-filter';
 
-export type VocabMode = 'ROOT_FORGE' | 'CEFR_ASCENT' | 'PARTICLE_LAB';
+export type VocabMode = string;
+
+const MODE_TABS: Record<string, string> = {
+  ROOT_FORGE: 'Mode A: Root Forge',
+  CEFR_ASCENT: 'Mode B: CEFR Ascent',
+  PARTICLE_LAB: 'Mode C: Particle Lab'
+};
+
+const prettyMode = (m: string) => m.split('_').map(w => w.charAt(0) + w.slice(1).toLowerCase()).join(' ');
 
 export interface VocabItem {
   id: string;
   mode: VocabMode;
-  level: number; // 1, 2, 3
+  level: number; // legacy tier 1-3, superseded by cefrLevel
+  cefrLevel: Cefr;
   wordOrChunk: string;
   definition: string;
   ipa: string;
@@ -24,7 +35,7 @@ export class VocabularyDossier {
   private container: HTMLElement;
   private allDeck: VocabItem[];
   private activeMode: VocabMode = 'ROOT_FORGE';
-  private activeLevel: number = 1; // 1, 2, 3
+  private activeLevel: Cefr;
   private currentList: VocabItem[] = [];
   private currentIndex: number = 0;
   private reviewCountInRun: number = 0;
@@ -36,37 +47,40 @@ export class VocabularyDossier {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-vocabulary interactive';
     this.allDeck = vocabularyData as VocabItem[];
+    this.activeLevel = defaultLevel(this.allDeck);
     this.filterDeck();
+    window.addEventListener('learner-level-change', () => {
+      this.activeLevel = defaultLevel(this.allDeck);
+      this.filterDeck();
+      if (this.container.isConnected) this.render();
+    });
+  }
+
+  private modesAtLevel(): VocabMode[] {
+    return [...new Set(this.allDeck.filter(i => i.cefrLevel === this.activeLevel).map(i => i.mode))];
   }
 
   private filterDeck(): void {
+    const modes = this.modesAtLevel();
+    if (modes.length > 0 && !modes.includes(this.activeMode)) this.activeMode = modes[0];
     this.currentList = this.allDeck.filter(
-      item => item.mode === this.activeMode && item.level === this.activeLevel
+      item => item.mode === this.activeMode && item.cefrLevel === this.activeLevel
     );
     this.currentIndex = 0;
     this.activeRemindCard = null;
   }
 
   public render(): HTMLElement {
+    const modes = this.modesAtLevel();
     this.container.innerHTML = `
       <div class="dossier-control-bar">
         <div class="dossier-tabs vocab-mode-tabs">
-          <button class="hud-btn mode-tab ${this.activeMode === 'ROOT_FORGE' ? 'active' : ''}" data-mode="ROOT_FORGE">
-            Mode A: Root Forge
-          </button>
-          <button class="hud-btn mode-tab ${this.activeMode === 'CEFR_ASCENT' ? 'active' : ''}" data-mode="CEFR_ASCENT">
-            Mode B: CEFR Ascent
-          </button>
-          <button class="hud-btn mode-tab ${this.activeMode === 'PARTICLE_LAB' ? 'active' : ''}" data-mode="PARTICLE_LAB">
-            Mode C: Particle Lab
-          </button>
+          ${modes.map(m => `<button class="hud-btn mode-tab ${this.activeMode === m ? 'active' : ''}" data-mode="${m}">${MODE_TABS[m] || prettyMode(m)}</button>`).join('')}
         </div>
 
         <div class="vocab-level-selector">
-          <span class="telemetry-label" style="margin-right: 8px;">DIFFICULTY:</span>
-          <button class="hud-btn level-tab ${this.activeLevel === 1 ? 'active' : ''}" data-lvl="1">Lvl 1: Baseline</button>
-          <button class="hud-btn level-tab ${this.activeLevel === 2 ? 'active' : ''}" data-lvl="2">Lvl 2: Advanced</button>
-          <button class="hud-btn level-tab ${this.activeLevel === 3 ? 'active' : ''}" data-lvl="3">Lvl 3: Mastery (C2)</button>
+          <span class="telemetry-label" style="margin-right: 8px;">LEVEL:</span>
+          ${levelChipsHtml(levelsWithContent(this.allDeck), this.activeLevel)}
         </div>
       </div>
 
@@ -77,7 +91,7 @@ export class VocabularyDossier {
         </div>
         <div class="telemetry-item">
           <span class="telemetry-label">TIER LOAD MODIFIER</span>
-          <span class="telemetry-value">${this.activeLevel >= 3 ? 'EF 2.30 (HIGH COGNITIVE)' : 'EF 2.50 (CANONICAL)'}</span>
+          <span class="telemetry-value">${this.activeLevel === 'C1' || this.activeLevel === 'C2' ? 'EF 2.30 (HIGH COGNITIVE)' : 'EF 2.50 (CANONICAL)'}</span>
         </div>
         <div class="telemetry-item">
           <span class="telemetry-label">REMIND DROP STATUS</span>
@@ -115,8 +129,9 @@ export class VocabularyDossier {
     const levelTabs = this.container.querySelectorAll('.level-tab');
     levelTabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        const newLevel = parseInt((tab as HTMLElement).dataset.lvl || '1', 10);
-        if (newLevel > this.activeLevel) {
+        const newLevel = (tab as HTMLElement).dataset.cefr as Cefr;
+        const order = levelsWithContent(this.allDeck);
+        if (order.indexOf(newLevel) > order.indexOf(this.activeLevel)) {
           AudioSynthesizer.play('level-up');
         } else {
           AudioSynthesizer.play('click');
@@ -170,7 +185,7 @@ export class VocabularyDossier {
       statusBadge = srsState.repetitions >= 3 ? 'MASTERED' : 'REVIEW';
     }
 
-    let categoryLabel = `${item.mode.replace('_', ' ')} [LVL ${item.level}]`;
+    let categoryLabel = `${item.mode.replace('_', ' ')} [${item.cefrLevel}]`;
     if (isRemind) {
       categoryLabel = `SURPRISE FLASH REMIND`;
     }
@@ -206,7 +221,7 @@ export class VocabularyDossier {
       },
       audioText: item.wordOrChunk,
       onRate: (rating: 'again' | 'good') => {
-        this.handleRate(item.id, rating, item.level);
+        this.handleRate(item.id, rating, srsTier(item.cefrLevel));
       }
     });
 
@@ -232,7 +247,7 @@ export class VocabularyDossier {
       const remindCandidate = SRSEngine.getRemindCard<VocabItem>(
         this.allDeck,
         state.cardStates,
-        this.activeLevel
+        srsTier(this.activeLevel)
       );
 
       if (remindCandidate) {

@@ -5,13 +5,32 @@ import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { computeDiffTokens, ProofreadDiffToken } from './writing-dossier';
 import grammarData from '../assets/data/grammar.json';
+import { Cefr, srsTier } from '../core/cefr';
+import { levelsWithContent, defaultLevel, levelChipsHtml } from '../core/level-filter';
 
-export type GrammarMode = 'INVERSION_EMPHASIS' | 'SUBJUNCTIVE_UNREAL' | 'CLAUSAL_CONDENSATION' | 'SYNTACTIC_PRECISION';
+export type GrammarMode = string;
+
+const MODE_TABS: Record<string, string> = {
+  INVERSION_EMPHASIS: 'Mode A: Inversion',
+  SUBJUNCTIVE_UNREAL: 'Mode B: Subjunctive',
+  CLAUSAL_CONDENSATION: 'Mode C: Condensation',
+  SYNTACTIC_PRECISION: 'Mode D: Precision'
+};
+
+const MODE_TITLES: Record<string, string> = {
+  INVERSION_EMPHASIS: 'MODE A: INVERSION & EMPHASIS',
+  SUBJUNCTIVE_UNREAL: 'MODE B: SUBJUNCTIVE & UNREAL',
+  CLAUSAL_CONDENSATION: 'MODE C: CLAUSAL CONDENSATION',
+  SYNTACTIC_PRECISION: 'MODE D: SYNTACTIC PRECISION'
+};
+
+const prettyMode = (m: string) => m.split('_').map(w => w.charAt(0) + w.slice(1).toLowerCase()).join(' ');
 
 export interface GrammarItem {
   id: string;
   mode: GrammarMode;
-  level: number; // 1, 2, 3
+  level: number; // legacy tier 1-3, superseded by cefrLevel
+  cefrLevel: Cefr;
   title: string;
   promptSentence: string;
   targetTransformation: string;
@@ -26,7 +45,7 @@ export class GrammarDossier {
   private container: HTMLElement;
   private allDeck: GrammarItem[];
   private activeMode: GrammarMode = 'INVERSION_EMPHASIS';
-  private activeLevel: number = 1; // 1, 2, 3
+  private activeLevel: Cefr;
   private currentList: GrammarItem[] = [];
   private currentIndex: number = 0;
   private reviewCountInRun: number = 0;
@@ -37,46 +56,41 @@ export class GrammarDossier {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-grammar interactive';
     this.allDeck = grammarData as GrammarItem[];
+    this.activeLevel = defaultLevel(this.allDeck);
     this.filterDeck();
+    window.addEventListener('learner-level-change', () => {
+      this.activeLevel = defaultLevel(this.allDeck);
+      this.filterDeck();
+      if (this.container.isConnected) this.render();
+    });
+  }
+
+  private modesAtLevel(): GrammarMode[] {
+    return [...new Set(this.allDeck.filter(i => i.cefrLevel === this.activeLevel).map(i => i.mode))];
   }
 
   private filterDeck(): void {
+    const modes = this.modesAtLevel();
+    if (modes.length > 0 && !modes.includes(this.activeMode)) this.activeMode = modes[0];
     this.currentList = this.allDeck.filter(
-      item => item.mode === this.activeMode && item.level === this.activeLevel
+      item => item.mode === this.activeMode && item.cefrLevel === this.activeLevel
     );
     this.currentIndex = 0;
   }
 
   public render(): HTMLElement {
-    const modeTitles: Record<GrammarMode, string> = {
-      INVERSION_EMPHASIS: 'MODE A: INVERSION & EMPHASIS',
-      SUBJUNCTIVE_UNREAL: 'MODE B: SUBJUNCTIVE & UNREAL',
-      CLAUSAL_CONDENSATION: 'MODE C: CLAUSAL CONDENSATION',
-      SYNTACTIC_PRECISION: 'MODE D: SYNTACTIC PRECISION'
-    };
+    const modeTitles = MODE_TITLES;
+    const modes = this.modesAtLevel();
 
     this.container.innerHTML = `
       <div class="dossier-control-bar">
         <div class="dossier-tabs grammar-mode-tabs">
-          <button class="hud-btn mode-tab ${this.activeMode === 'INVERSION_EMPHASIS' ? 'active' : ''}" data-mode="INVERSION_EMPHASIS">
-            Mode A: Inversion
-          </button>
-          <button class="hud-btn mode-tab ${this.activeMode === 'SUBJUNCTIVE_UNREAL' ? 'active' : ''}" data-mode="SUBJUNCTIVE_UNREAL">
-            Mode B: Subjunctive
-          </button>
-          <button class="hud-btn mode-tab ${this.activeMode === 'CLAUSAL_CONDENSATION' ? 'active' : ''}" data-mode="CLAUSAL_CONDENSATION">
-            Mode C: Condensation
-          </button>
-          <button class="hud-btn mode-tab ${this.activeMode === 'SYNTACTIC_PRECISION' ? 'active' : ''}" data-mode="SYNTACTIC_PRECISION">
-            Mode D: Precision
-          </button>
+          ${modes.map(m => `<button class="hud-btn mode-tab ${this.activeMode === m ? 'active' : ''}" data-mode="${m}">${MODE_TABS[m] || prettyMode(m)}</button>`).join('')}
         </div>
 
         <div class="grammar-level-selector">
-          <span class="telemetry-label" style="margin-right: 8px;">TIER:</span>
-          <button class="hud-btn level-tab ${this.activeLevel === 1 ? 'active' : ''}" data-lvl="1">Lvl 1: Baseline</button>
-          <button class="hud-btn level-tab ${this.activeLevel === 2 ? 'active' : ''}" data-lvl="2">Lvl 2: Advanced</button>
-          <button class="hud-btn level-tab ${this.activeLevel === 3 ? 'active' : ''}" data-lvl="3">Lvl 3: Mastery (C2)</button>
+          <span class="telemetry-label" style="margin-right: 8px;">LEVEL:</span>
+          ${levelChipsHtml(levelsWithContent(this.allDeck), this.activeLevel)}
         </div>
       </div>
 
@@ -87,11 +101,11 @@ export class GrammarDossier {
         </div>
         <div class="telemetry-item">
           <span class="telemetry-label">COGNITIVE LOAD FACTOR</span>
-          <span class="telemetry-value">${this.activeLevel >= 3 ? 'EF 2.30 (HIGH COGNITIVE)' : 'EF 2.50 (CANONICAL)'}</span>
+          <span class="telemetry-value">${this.activeLevel === 'C1' || this.activeLevel === 'C2' ? 'EF 2.30 (HIGH COGNITIVE)' : 'EF 2.50 (CANONICAL)'}</span>
         </div>
         <div class="telemetry-item">
           <span class="telemetry-label">SYNTAX CLASSIFIER</span>
-          <span class="telemetry-value">${modeTitles[this.activeMode]}</span>
+          <span class="telemetry-value">${modeTitles[this.activeMode] || prettyMode(this.activeMode).toUpperCase()}</span>
         </div>
       </div>
 
@@ -125,8 +139,9 @@ export class GrammarDossier {
     const levelTabs = this.container.querySelectorAll('.level-tab');
     levelTabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        const newLevel = parseInt((tab as HTMLElement).dataset.lvl || '1', 10);
-        if (newLevel > this.activeLevel) {
+        const newLevel = (tab as HTMLElement).dataset.cefr as Cefr;
+        const order = levelsWithContent(this.allDeck);
+        if (order.indexOf(newLevel) > order.indexOf(this.activeLevel)) {
           AudioSynthesizer.play('level-up');
         } else {
           AudioSynthesizer.play('click');
@@ -178,7 +193,7 @@ export class GrammarDossier {
       statusBadge = srsState.repetitions >= 3 ? 'MASTERED' : 'REVIEW';
     }
 
-    const categoryLabel = `${item.mode.replace('_', ' ')} [LVL ${item.level}]`;
+    const categoryLabel = `${item.mode.replace('_', ' ')} [${item.cefrLevel}]`;
 
     // FRONT: Prompt sentence, Cue, and Formula Bar
     const frontEl = document.createElement('div');
@@ -259,7 +274,7 @@ export class GrammarDossier {
       },
       audioText: item.targetTransformation,
       onRate: (rating: 'again' | 'good') => {
-        this.handleRate(item.id, rating, item.level);
+        this.handleRate(item.id, rating, srsTier(item.cefrLevel));
       }
     });
 

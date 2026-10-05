@@ -689,3 +689,38 @@ body.zen-active,
   }
 }
 
+
+/* Header never clips: rows wrap when buttons plus telemetry exceed the width (Init 17/18 added Blitz, level pill, Zen) */
+.hud-header {
+  height: auto;
+  min-height: 48px;
+  flex-wrap: wrap;
+  row-gap: var(--space-8);
+}
+
+.hud-header .hud-actions {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-8);
+}
+
+.hud-header .telemetry-label,
+.hud-header .telemetry-value {
+  white-space: nowrap;
+}
+
+.hud-header .hud-actions { max-width: 100%; min-width: 0; }
+
+/* Mid-width: drop the telemetry strip and button labels so the header stays one row */
+@media (max-width: 1280px) {
+  .hud-header .hud-telemetry-cluster,
+  .hud-header .btn-label { display: none !important; }
+}
+
+@media (max-width: 760px) {
+  /* inline gap on the element needs !important; one full-width row of equal buttons */
+  .hud-header .hud-actions { flex: 1 1 100%; gap: var(--space-4, 4px) !important; justify-content: stretch; }
+  .hud-header .hud-actions .hud-btn { flex: 1 1 0; min-width: 0; padding: 6px 4px; justify-content: center; }
+}
+
+.hud-header .btn-progression-pill { white-space: nowrap; }

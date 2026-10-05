@@ -32,3 +32,8 @@ export function effectiveLevel(level: Cefr, available: ReadonlySet<Cefr>): Cefr 
   }
   return best;
 }
+
+/** Numeric difficulty tier the SRS engine understands (>= 3 starts with the harder ease factor). */
+export function srsTier(level: Cefr): number {
+  return level === 'C2' ? 3 : level === 'C1' ? 2 : 1;
+}

@@ -3405,8 +3405,9 @@ html[data-motion="reduce"] {
 
 .dossier-control-bar { flex-wrap: wrap; row-gap: var(--space-8); }
 
-/* Grammar: mode tabs and tier selector each get their own row instead of wrapping side by side */
-.dossier-control-bar:has(> .grammar-level-selector) {
+/* Grammar and vocab: mode tabs and level chips each get their own row instead of wrapping side by side */
+.dossier-control-bar:has(> .grammar-level-selector),
+.dossier-control-bar:has(> .vocab-level-selector) {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
