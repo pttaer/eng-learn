@@ -4,6 +4,7 @@
 - **ID**: writing-1
 - **Index**: 1
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C2
 - **Question**: Examine how the proliferation of hyper-realistic generative synthetic media threatens the epistemic foundations of judicial proceedings and public accountability.
 - **Register**: Academic Jurisprudence / Legal Philosophy
 - **Master Sentence**: The ubiquitous proliferation of generative synthetic media fundamentally corrodes the epistemic integrity of modern jurisprudence by rendering authentic audio-visual evidence indistinguishable from fabricated artifacts.
@@ -17,6 +18,7 @@
 - **ID**: writing-2
 - **Index**: 2
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C2
 - **Question**: Analyze the economic ramifications of personalized first-degree dynamic price discrimination deployed by monopolistic e-commerce platforms.
 - **Register**: Econometric & Antitrust Analysis
 - **Master Sentence**: Automated first-degree price discrimination enables dominant digital marketplaces to systematically expropriate consumer surplus and convert it into pure producer surplus through granular behavioral surveillance.
@@ -30,6 +32,7 @@
 - **ID**: writing-3
 - **Index**: 3
 - **Mode**: Franklin Copywork & Stylistic Deconstruction
+- **CEFR**: C2
 - **Question**: Critique the assertion that meritocratic credentialism functions as a neutral vehicle for upward social mobility.
 - **Register**: Critical Sociology / Public Policy
 - **Master Sentence**: Far from functioning as an egalitarian engine of upward mobility, contemporary meritocratic credentialism has largely ossified into a dynastic sorting mechanism that legitimizes inherited socioeconomic privilege.
@@ -43,6 +46,7 @@
 - **ID**: writing-4
 - **Index**: 4
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C1
 - **Question**: Evaluate the psychological and cognitive impacts of open-plan office layouts on high-concentration engineering output.
 - **Register**: Cognitive Ergonomics & Organizational Design
 - **Master Sentence**: The architectural dogma of the open-plan office degrades cognitive throughput by subjecting knowledge workers to unceasing sensory fragmentation and chronic attention residue.
@@ -56,6 +60,7 @@
 - **ID**: writing-5
 - **Index**: 5
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C1
 - **Question**: Discuss the vulnerability of Western industrial decarbonization strategies to geographical choke-points in lithium and rare-earth mineral processing.
 - **Register**: Geopolitical Strategy & Global Economics
 - **Master Sentence**: Western clean-energy roadmaps remain profoundly fragile due to an acute geographic centralization of critical mineral refining that grants rival sovereign actors unilateral leverage over global energy transitions.
@@ -69,6 +74,7 @@
 - **ID**: writing-6
 - **Index**: 6
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C2
 - **Question**: Investigate how prophylactic antimicrobial administration in factory farming accelerates global microbial resistance.
 - **Register**: Epidemiological Science & Environmental Health
 - **Master Sentence**: The routine prophylactic administration of sub-therapeutic antibiotics in industrial livestock operations creates an ideal evolutionary breeding ground for multi-drug-resistant pathogen strains.
@@ -82,6 +88,7 @@
 - **ID**: writing-7
 - **Index**: 7
 - **Mode**: Franklin Copywork & Stylistic Deconstruction
+- **CEFR**: C2
 - **Question**: Analyze the consequences of treating residential real estate as a speculative global asset class rather than fundamental social infrastructure.
 - **Register**: Urban Political Economy
 - **Master Sentence**: The financialization of municipal residential real estate transforms shelter from an essential civic good into a speculative capital haven, structurally decoupling housing prices from domestic earning power.
@@ -95,6 +102,7 @@
 - **ID**: writing-8
 - **Index**: 8
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C2
 - **Question**: How does the commercial monetization of micro-interactions erode cognitive endurance and intellectual rigor?
 - **Register**: Neuropsychology & Media Theory
 - **Master Sentence**: The digital attention economy deliberately re-engineers human cognitive ecology by exchanging sustained analytical focus for ephemeral bursts of dopamine-driven behavioral feedback.
@@ -108,6 +116,7 @@
 - **ID**: writing-9
 - **Index**: 9
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C2
 - **Question**: Defend the mandatory integration of the Social Cost of Carbon (SCC) into public infrastructure capital allocation frameworks.
 - **Register**: Environmental Economics & Public Finance
 - **Master Sentence**: Mandating an aggressive Social Cost of Carbon metric within federal procurement decisions is indispensable to correct the pervasive market failure that treats planetary atmospheric capacity as a cost-free waste repository.
@@ -121,6 +130,7 @@
 - **ID**: writing-10
 - **Index**: 10
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C2
 - **Question**: Examine how predictive policing algorithms entrench historical socioeconomic and racial disparities under the guise of mathematical objectivity.
 - **Register**: Data Ethics & Critical Criminology
 - **Master Sentence**: Predictive policing algorithms do not illuminate objective crime hazards; rather, they construct self-fulfilling feedback loops that mathematicalize and amplify historic patterns of selective law enforcement.
@@ -134,6 +144,7 @@
 - **ID**: writing-11
 - **Index**: 11
 - **Mode**: Franklin Copywork & Stylistic Deconstruction
+- **CEFR**: C1
 - **Question**: Analyze whether multinational corporations can maintain apolitical neutrality during periods of intense geopolitical conflict or domestic civil rights unrest.
 - **Register**: Corporate Governance & Business Ethics
 - **Master Sentence**: In an era of hyper-connected supply chains and stakeholder capitalism, corporate silence during severe humanitarian or civil crises no longer signals impartiality, but rather represents a tacit endorsement of the prevailing status quo.
@@ -147,6 +158,7 @@
 - **ID**: writing-12
 - **Index**: 12
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C2
 - **Question**: Challenge the biological critical period hypothesis by highlighting adult cognitive advantages in secondary linguistic acquisition.
 - **Register**: Applied Linguistics & Cognitive Psychology
 - **Master Sentence**: While early childhood confers superior phonological flexibility, mature adult learners possess sophisticated metacognitive and syntactic processing capabilities that compensate for diminished instinctual neuroplasticity.
@@ -160,6 +172,7 @@
 - **ID**: writing-13
 - **Index**: 13
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C2
 - **Question**: Critique the strategic viability of advanced economies pursuing total technological independence in semiconductor fabrication.
 - **Register**: Industrial Policy & Geopolitics
 - **Master Sentence**: The pursuit of total semiconductor self-sufficiency represents an economically unviable illusion that ignores the hyper-specialized, multi-national division of labor inherent to modern microelectronics fabrication.
@@ -173,6 +186,7 @@
 - **ID**: writing-14
 - **Index**: 14
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C1
 - **Question**: Examine whether commercial ecotourism genuinely preserves fragile ecosystems or commodifies and degrades pristine natural habitats.
 - **Register**: Environmental Sociology & Conservation Biology
 - **Master Sentence**: Ecotourism frequently degenerates into an ecological paradox, wherein the commercial monetizing of pristine biodiversity inflicts irreversible environmental degradation upon the very habitats it purports to protect.
@@ -186,6 +200,7 @@
 - **ID**: writing-15
 - **Index**: 15
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C1
 - **Question**: How must academic institutions redesign assessment frameworks in response to large language model capabilities?
 - **Register**: Pedagogical Philosophy & Educational Policy
 - **Master Sentence**: The emergence of large language models obliterates the diagnostic validity of the traditional take-home essay, necessitating a paradigm shift toward oral defense, real-time synthesis, and process-based evaluation.
@@ -199,6 +214,7 @@
 - **ID**: writing-16
 - **Index**: 16
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C1
 - **Question**: Evaluate the viability of Carbon Capture and Storage (CCS) applied to thermal coal generation versus direct renewable deployment.
 - **Register**: Energy Economics & Public Policy
 - **Master Sentence**: Retrofitting thermal coal power plants with Carbon Capture and Storage (CCS) represents an expensive technological distraction that artificially prolongs the lifespan of obsolete, high-emission assets.
@@ -212,6 +228,7 @@
 - **ID**: writing-17
 - **Index**: 17
 - **Mode**: Franklin Copywork & Stylistic Deconstruction
+- **CEFR**: C1
 - **Question**: Defend restorative justice frameworks against punitive carceral regimes in reducing long-term recidivism.
 - **Register**: Criminology & Social Ethics
 - **Master Sentence**: Restorative justice models dramatically outperform retributive carceral systems in curtailing recidivism because they address the interpersonal rupture and psychosocial roots of crime rather than imposing passive dehumanization.
@@ -225,6 +242,7 @@
 - **ID**: writing-18
 - **Index**: 18
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C2
 - **Question**: Critique the claim that massive datasets and pattern-matching algorithms render traditional theoretical hypothesis testing obsolete.
 - **Register**: Philosophy of Science & Computational Analytics
 - **Master Sentence**: The provocative assertion that big data pattern discovery renders the scientific method obsolete conflates mere statistical correlation with true causal comprehension.
@@ -238,6 +256,7 @@
 - **ID**: writing-19
 - **Index**: 19
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C1
 - **Question**: Examine how historical municipal zoning practices and redlining exacerbate modern climate vulnerabilities across marginalized neighborhoods.
 - **Register**: Urban Geography & Environmental Justice
 - **Master Sentence**: Modern urban heat island vulnerabilities are not neutral geographic accidents; they reflect the enduring legacy of racist historical redlining policies that starved marginalized districts of vegetative canopy and permeable infrastructure.
@@ -251,6 +270,7 @@
 - **ID**: writing-20
 - **Index**: 20
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C1
 - **Question**: Discuss the hazards of allowing commercial spaceflight entities to dictate operational norms in low Earth orbit and lunar resource rights.
 - **Register**: International Space Law & Astropolitics
 - **Master Sentence**: Permitting private commercial aerospace conglomerates to establish de facto governance in orbital and lunar domains threatens to transform the celestial commons into a lawless frontier of corporate enclosure.
@@ -264,6 +284,7 @@
 - **ID**: writing-21
 - **Index**: 21
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C1
 - **Question**: Analyze the human and cognitive consequences of real-time algorithmic tracking on warehouse and fulfillment workers.
 - **Register**: Labor Economics & Occupational Health
 - **Master Sentence**: The deployment of algorithmic surveillance systems in fulfillment centers reduces manual laborers to physiological components of an automated machine, inflicting acute musculoskeletal degradation and psychological alienation.
@@ -277,6 +298,7 @@
 - **ID**: writing-22
 - **Index**: 22
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C1
 - **Question**: Evaluate the existential civil liberty threats posed by programmable fiat currencies managed by centralized banking authorities.
 - **Register**: Political Philosophy & Monetary Economics
 - **Master Sentence**: While central bank digital currencies promise unprecedented monetary policy precision, their programmable architecture creates an insidious instrument for totalitarian surveillance and behavioral control.
@@ -290,6 +312,7 @@
 - **ID**: writing-23
 - **Index**: 23
 - **Mode**: Franklin Copywork & Stylistic Deconstruction
+- **CEFR**: C2
 - **Question**: How does the ubiquity of hyper-condensed digital media alter the reading and writing of contemporary long-form fiction and essays?
 - **Register**: Literary Criticism & Cultural Hermeneutics
 - **Master Sentence**: The digital epoch's relentless acceleration of communicative velocity has hollowed out the cultural ecosystem required for sustained contemplation, endangering the survival of complex, multi-layered prose.
@@ -303,6 +326,7 @@
 - **ID**: writing-24
 - **Index**: 24
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C1
 - **Question**: Critique the paradigm of voluntary corporate social responsibility as a substitute for mandatory government environmental and labor regulation.
 - **Register**: Corporate Jurisprudence & Political Economy
 - **Master Sentence**: Voluntary Corporate Social Responsibility (CSR) campaigns function primarily as cosmetic public relations shields designed to preempt rigorous statutory regulation while leaving extractive core business models entirely untouched.
@@ -316,6 +340,7 @@
 - **ID**: writing-25
 - **Index**: 25
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C1
 - **Question**: Analyze the societal risks of allowing private health and life insurers to utilize polygenic risk scores in underwriting actuarial policies.
 - **Register**: Bioethics & Actuarial Science
 - **Master Sentence**: Permitting private insurance underwriters to integrate polygenic risk scores into policy pricing will establish a permanent genetic underclass systematically excluded from affordable medical coverage.
@@ -329,6 +354,7 @@
 - **ID**: writing-26
 - **Index**: 26
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C2
 - **Question**: Assess whether automated algorithmic high-frequency trading (HFT) enhances market liquidity or introduces predatory instability.
 - **Register**: Quantitative Finance & Market Microstructure
 - **Master Sentence**: Far from providing durable market liquidity, algorithmic high-frequency trading operates as a predatory tax on capital formation, injecting systemic fragility and latency arbitrage into financial markets.
@@ -342,6 +368,7 @@
 - **ID**: writing-27
 - **Index**: 27
 - **Mode**: Franklin Copywork & Stylistic Deconstruction
+- **CEFR**: C2
 - **Question**: Examine the academic and epistemological necessity of decentering Eurocentric canons within university humanities and social sciences.
 - **Register**: Epistemology & Postcolonial Theory
 - **Master Sentence**: Decentering Eurocentric curricula in university education is not an exercise in ideological censorship, but an urgent intellectual necessity to dismantle the parochial illusion that Western thought represents the universal human experience.
@@ -355,6 +382,7 @@
 - **ID**: writing-28
 - **Index**: 28
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C1
 - **Question**: Defend the essential psychological necessity of voluntary solitude against the incessant noise of ubiquitous connectivity.
 - **Register**: Existential Psychology & Philosophy
 - **Master Sentence**: The systematic eradication of solitude in modern hyper-connected culture deprives the human consciousness of the psychological sanctuary indispensable for original self-discovery and emotional regulation.
@@ -368,6 +396,7 @@
 - **ID**: writing-29
 - **Index**: 29
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: C2
 - **Question**: Demonstrate why physical thermodynamic limits invalidate neoclassical models of indefinite material and economic throughput.
 - **Register**: Ecological Economics & Thermodynamics
 - **Master Sentence**: Neoclassical economic dogma's premise of compounding material growth represents a thermodynamic impossibility that treats ecological biospheres as mere externalities to an abstracted mathematical model.
@@ -381,6 +410,7 @@
 - **ID**: writing-30
 - **Index**: 30
 - **Mode**: Franklin Copywork & Stylistic Deconstruction
+- **CEFR**: C2
 - **Question**: Assess whether autonomous AI research platforms will accelerate the pace of human discovery or reduce human scientists to passive observers.
 - **Register**: Philosophy of Technology & Scientific Methodology
 - **Master Sentence**: The transition from AI as an analytical assistant to an autonomous researcher running end-to-end scientific pipelines promises to compress centuries of scientific discovery into decades, while fundamentally challenging human intellectual primacy.
@@ -394,6 +424,7 @@
 - **ID**: writing-31
 - **Index**: 31
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: B2
 - **Question**: Write the central paragraph of a formal letter to a building management company complaining that repeated heating failures have not been resolved despite earlier assurances.
 - **Register**: Formal Correspondence / Complaint
 - **Master Sentence**: Despite three written assurances since November, the heating system in our building remains unreliable, and I must now ask you to treat this matter as a formal complaint.
@@ -407,6 +438,7 @@
 - **ID**: writing-32
 - **Index**: 32
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: B2
 - **Question**: Write the recommendation paragraph of an internal report advising senior management on whether to introduce flexible start times for office staff.
 - **Register**: Business Report / Recommendation
 - **Master Sentence**: On balance, it is recommended that flexible start times be introduced on a six-month trial basis, subject to agreed core hours and a formal review at the end of the period.
@@ -420,6 +452,7 @@
 - **ID**: writing-33
 - **Index**: 33
 - **Mode**: Franklin Copywork & Stylistic Deconstruction
+- **CEFR**: C1
 - **Question**: Write the evaluative paragraph of a review of a debut novel that is stylistically ambitious but structurally uneven.
 - **Register**: Literary Review / Arts Journalism
 - **Master Sentence**: For all its dazzling sentences, the novel never quite decides what story it wants to tell, and its brilliance arrives in flashes rather than as a sustained illumination.
@@ -433,6 +466,7 @@
 - **ID**: writing-34
 - **Index**: 34
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: B2
 - **Question**: Write a paragraph for a local newspaper paying tribute to a recently deceased family doctor who served the same community for four decades.
 - **Register**: Obituary / Tribute
 - **Master Sentence**: For forty years, Ellen Marsh served this town as its family doctor in the conviction that listening was the most powerful instrument she carried.
@@ -446,6 +480,7 @@
 - **ID**: writing-35
 - **Index**: 35
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: B2
 - **Question**: Write the central paragraph of a cover letter for a project manager position, demonstrating relevant achievement without sounding boastful.
 - **Register**: Professional Correspondence / Job Application
 - **Master Sentence**: Over the past five years, I have learned that successful projects depend less on rigid plans than on the ability to keep diverse teams aligned when circumstances change.
@@ -459,6 +494,7 @@
 - **ID**: writing-36
 - **Index**: 36
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: B2
 - **Question**: Write the opening paragraph of an executive summary for a board reviewing why a subscription service is losing long-term customers.
 - **Register**: Executive Summary / Corporate Reporting
 - **Master Sentence**: This review finds that customer losses stem primarily from a poor onboarding experience rather than from pricing, and it proposes three targeted measures to reverse the trend within two quarters.
@@ -472,6 +508,7 @@
 - **ID**: writing-37
 - **Index**: 37
 - **Mode**: Franklin Copywork & Stylistic Deconstruction
+- **CEFR**: C1
 - **Question**: Write the opening paragraph of a newspaper opinion piece arguing that public libraries deserve renewed funding.
 - **Register**: Opinion Journalism / Op-Ed
 - **Master Sentence**: Walk into any public library on a weekday morning and you will find the clearest rebuttal to the claim that libraries have outlived their purpose.
@@ -485,6 +522,7 @@
 - **ID**: writing-38
 - **Index**: 38
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: B2
 - **Question**: Write a paragraph for a reflective personal essay about a failure that ultimately proved more instructive than any success.
 - **Register**: Reflective Personal Essay
 - **Master Sentence**: It took the collapse of my first business to teach me that confidence and competence are not the same thing, however often they are mistaken for each other.
@@ -498,6 +536,7 @@
 - **ID**: writing-39
 - **Index**: 39
 - **Mode**: MEAL Single-Paragraph Deep-Dive
+- **CEFR**: B2
 - **Question**: Write the core paragraph of a proposal to a local council requesting the use of a vacant plot for a community garden.
 - **Register**: Proposal / Community Funding Request
 - **Master Sentence**: We propose to transform the disused lot on Mill Street into a community garden that would provide fresh produce, outdoor learning space and a shared meeting point for residents of all ages.
@@ -511,6 +550,7 @@
 - **ID**: writing-40
 - **Index**: 40
 - **Mode**: Franklin Copywork & Stylistic Deconstruction
+- **CEFR**: B1
 - **Question**: Write the key paragraph of a public statement in which a company issues an apology to customers after a data breach exposed their contact details.
 - **Register**: Crisis Communication / Public Apology
 - **Master Sentence**: We let our customers down, and we are sorry: protecting your personal information is our responsibility, and on this occasion we failed to meet it.
