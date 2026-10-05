@@ -30,7 +30,7 @@ export const TOUR_STEPS: TourStep[] = [
   {
     target: '.constellation-container',
     fallbackTarget: '#constellation-svg',
-    title: '🌌 Prerequisite Constellation Matrix',
+    title: 'Prerequisite Constellation Matrix',
     desc: 'Navigate 25 engram nodes spanning 5 levels of linguistic sophistication. Master foundational tier 1 perks to illuminate pathways toward the C2 Summit.',
     badge: 'STEP 3 OF 6 // SKILL TREE',
     route: 'tree'
@@ -46,7 +46,7 @@ export const TOUR_STEPS: TourStep[] = [
   {
     target: '.branches-summary-grid',
     fallbackTarget: '.constellation-footer-grid',
-    title: '🏛 The 5 Mastery Disciplines',
+    title: 'The 5 Mastery Disciplines',
     desc: 'Syntactic Architecture, Lexical Precision, Rhetoric & Copywork, Prosody Fluency, and Epistemic Deconstruction. Click any pillar to jump directly into its dedicated studio.',
     badge: 'STEP 5 OF 6 // DISCIPLINES',
     route: 'tree'

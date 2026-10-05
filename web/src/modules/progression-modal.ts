@@ -5,6 +5,7 @@
  * Subscribes dynamically to ProgressionEngine for live reactive updates.
  */
 
+import { icon } from '../utils/icons';
 import { ProgressionEngine, ProgressionState, LevelInfo } from '../core/progression-engine';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 
@@ -109,10 +110,10 @@ export class ProgressionModal {
             <div class="progression-rank-title">${info.rankTitle}</div>
             <div class="progression-hero-sub">
               <span class="progression-streak-pill">
-                🔥 ${state.streak} DAY STREAK
+                ${icon('flame', 12)} ${state.streak} DAY STREAK
               </span>
               <span class="progression-total-xp">
-                ⚡ ${state.xp.toLocaleString()} TOTAL XP
+                ${icon('zap', 12)} ${state.xp.toLocaleString()} TOTAL XP
               </span>
             </div>
           </div>

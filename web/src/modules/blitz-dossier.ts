@@ -11,6 +11,7 @@
  * - Left/Right Arrow and 1/2 keyboard controls with WCAG 2.2 AAA accessibility
  */
 
+import { icon } from '../utils/icons';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { ParticleCanvas } from '../core/particle-canvas';
 import { ProgressionEngine } from '../core/progression-engine';
@@ -116,7 +117,7 @@ export class BlitzDossier {
     this.container.innerHTML = `
       <div class="blitz-ready-card" role="dialog" aria-labelledby="blitz-ready-title">
         <div class="blitz-badge-cluster">
-          <span class="blitz-glow-badge">⚡ ROGUELIKE SPEED RUN</span>
+          <span class="blitz-glow-badge">${icon('zap', 12)} ROGUELIKE SPEED RUN</span>
           <span class="blitz-high-score-badge">HIGH SCORE: <strong>${this.highScore.toLocaleString()} PTS</strong></span>
         </div>
 
@@ -128,17 +129,17 @@ export class BlitzDossier {
 
         <div class="blitz-mechanics-grid">
           <div class="blitz-mechanic-card">
-            <div class="mechanic-icon">⏱️</div>
+            <div class="mechanic-icon">${icon('clock', 22)}</div>
             <div class="mechanic-title">60s Clock</div>
             <div class="mechanic-detail">Non-stop rapid-fire decision timer. Clock ticks down continuously.</div>
           </div>
           <div class="blitz-mechanic-card">
-            <div class="mechanic-icon">🔥</div>
+            <div class="mechanic-icon">${icon('flame', 22)}</div>
             <div class="mechanic-title">Combo Multipliers</div>
             <div class="mechanic-detail">5 Streak = 2x • 10 Streak = 3x • 15+ Streak = 4x Max Surge.</div>
           </div>
           <div class="blitz-mechanic-card">
-            <div class="mechanic-icon">⌨️</div>
+            <div class="mechanic-icon">${icon('keyboard', 22)}</div>
             <div class="mechanic-title">Instant Hotkeys</div>
             <div class="mechanic-detail">Press <kbd>[1]</kbd> or <kbd>[←]</kbd> for Left • <kbd>[2]</kbd> or <kbd>[→]</kbd> for Right.</div>
           </div>
@@ -146,7 +147,7 @@ export class BlitzDossier {
 
         <div class="blitz-ready-actions">
           <button type="button" class="hud-btn blitz-start-btn" id="blitz-start-btn" aria-label="Start 60-Second Blitz Drill">
-            ⚡ START BLITZ DRILL
+            ${icon('zap')} START BLITZ DRILL
           </button>
           <span class="blitz-hotkey-hint">Press <kbd>Space</kbd> or <kbd>Enter</kbd> to Launch</span>
         </div>
@@ -206,7 +207,7 @@ export class BlitzDossier {
         <div class="blitz-combo-gauge-container">
           <div class="blitz-combo-pill multiplier-${multiplier}" id="blitz-combo-pill">
             <span class="multiplier-text">${multiplier}X MULTIPLIER</span>
-            <span class="streak-text">🔥 ${this.streak} STREAK</span>
+            <span class="streak-text">${icon('flame', 12)} ${this.streak} STREAK</span>
           </div>
         </div>
 
@@ -278,7 +279,7 @@ export class BlitzDossier {
       <div class="blitz-summary-card" role="dialog" aria-labelledby="blitz-summary-title">
         <div class="summary-badge-strip">
           <span class="blitz-glow-badge">BLITZ RUN CONCLUDED</span>
-          ${stats.isNewHighScore ? '<span class="blitz-new-record-badge">🏆 NEW ALL-TIME HIGH SCORE!</span>' : ''}
+          ${stats.isNewHighScore ? `<span class="blitz-new-record-badge">${icon('trophy', 12)} NEW ALL-TIME HIGH SCORE!</span>` : ''}
         </div>
 
         <h1 class="blitz-summary-title" id="blitz-summary-title">SPRINT COMPLETE</h1>
@@ -296,7 +297,7 @@ export class BlitzDossier {
 
           <div class="summary-stat-box">
             <span class="stat-label">MAX COMBO</span>
-            <span class="stat-val highlight-gold">${stats.maxStreak} 🔥</span>
+            <span class="stat-val highlight-gold">${stats.maxStreak} ${icon('flame', 12)}</span>
             <span class="stat-sub">Peak Multiplier</span>
           </div>
 
@@ -309,10 +310,10 @@ export class BlitzDossier {
 
         <div class="summary-action-cluster">
           <button type="button" class="hud-btn blitz-action-btn btn-restart-blitz" id="btn-restart-blitz" aria-label="Play Another Blitz Run">
-            ⚡ PLAY AGAIN
+            ${icon('zap')} PLAY AGAIN
           </button>
           <button type="button" class="hud-btn blitz-action-btn btn-return-tree" id="btn-return-tree" aria-label="Return to Constellation Skill Tree">
-            🌌 BACK TO TREE
+            ${icon('compass')} BACK TO TREE
           </button>
         </div>
       </div>
@@ -517,7 +518,7 @@ export class BlitzDossier {
       comboPillEl.className = `blitz-combo-pill multiplier-${mult}`;
       comboPillEl.innerHTML = `
         <span class="multiplier-text">${mult}X MULTIPLIER</span>
-        <span class="streak-text">🔥 ${this.streak} STREAK</span>
+        <span class="streak-text">${icon('flame', 12)} ${this.streak} STREAK</span>
       `;
     }
   }

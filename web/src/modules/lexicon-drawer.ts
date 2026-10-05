@@ -4,6 +4,7 @@
  * and 1-click SuperMemo-2 (SM-2) spaced repetition card bookmarking.
  */
 
+import { icon } from '../utils/icons';
 import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
@@ -235,7 +236,7 @@ export class LexiconDrawer {
             <span class="lexicon-drawer-ipa" id="lexicon-drawer-ipa">/ipa/</span>
             <span class="lexicon-drawer-pos" id="lexicon-drawer-pos">POS</span>
             <button type="button" class="hud-btn lexicon-audio-btn" id="lexicon-audio-btn" aria-label="Listen to pronunciation" title="Pronounce">
-              <span aria-hidden="true">🔊</span>
+              <span aria-hidden="true">${icon('volume')}</span>
             </button>
           </div>
         </div>
@@ -305,7 +306,7 @@ export class LexiconDrawer {
     this.floatingPill.setAttribute('role', 'button');
     this.floatingPill.setAttribute('tabindex', '0');
     this.floatingPill.setAttribute('aria-label', 'Open Lexicon Drawer for selected text');
-    this.floatingPill.innerHTML = `📖 <span class="pill-word">Lookup</span>`;
+    this.floatingPill.innerHTML = `${icon('book')} <span class="pill-word">Lookup</span>`;
 
     // Clean DOM mount inside #hud-overlay (fallback to body)
     const hudOverlay = document.getElementById('hud-overlay') || document.body;
