@@ -128,13 +128,14 @@ export class SkillTreeEngine {
     const totalNodes = allNodes.length; // 25
     const progressPct = Math.round((masteredCount / totalNodes) * 100);
 
-    let currentRank = 'B2 Advanced';
+    // Progress titles only; the learner's CEFR level is shown separately in the header
+    let currentRank = 'Explorer';
     if (progressPct >= 80) {
-      currentRank = 'C2 Summit Master';
+      currentRank = 'Summit Master';
     } else if (progressPct >= 50) {
-      currentRank = 'C2 Candidate';
+      currentRank = 'Candidate';
     } else if (progressPct >= 20) {
-      currentRank = 'C1 Scholar';
+      currentRank = 'Scholar';
     }
 
     return {

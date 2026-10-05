@@ -1,3 +1,4 @@
+import { Cefr, CEFR_ORDER, CEFR_LABELS } from '../core/cefr';
 import { icon } from '../utils/icons';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
@@ -71,8 +72,8 @@ export class HeaderHUD {
           <span class="hud-brand-title" style="font-size: 15px; font-weight: 700; letter-spacing: 0.1em; display: inline-flex; align-items: center; gap: 8px;">
             <span style="color: var(--accent-gold); font-size: 13px;">✦</span> ENGLISH MASTERY
           </span>
-          <span class="hud-status-badge hud-rank-badge" style="background: var(--accent-gold); color: var(--bg-canvas); border-radius: 4px; padding: 2px 8px; font-weight: 700; border-color: var(--accent-gold);">C1 SCHOLAR</span>
         `}
+          <button class="hud-status-badge hud-rank-badge btn-level" style="background: var(--accent-gold); color: var(--bg-canvas); border-radius: 4px; padding: 2px 8px; font-weight: 700; border-color: var(--accent-gold); cursor: pointer;" aria-haspopup="dialog" title="Your CEFR level (click to change)" aria-label="Your level: ${CEFR_LABELS[StorageManager.getLearnerLevel()]}. Change level">${StorageManager.getLearnerLevel()}</button>
       </div>
 
       <div class="hud-telemetry-cluster" style="display: flex; gap: 20px; align-items: center;">
@@ -151,6 +152,11 @@ export class HeaderHUD {
       }
     });
 
+    this.element.querySelector('.btn-level')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      this.openLevelPicker();
+    });
+
     const progBtn = this.element.querySelector('.btn-progression-pill');
     progBtn?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
@@ -197,6 +203,53 @@ export class HeaderHUD {
       AudioSynthesizer.play('click');
       this.openSettingsModal();
     });
+  }
+
+  private openLevelPicker(): void {
+    document.getElementById('level-modal')?.remove();
+    const current = StorageManager.getLearnerLevel();
+    const opener = document.activeElement as HTMLElement | null;
+
+    const modal = document.createElement('div');
+    modal.id = 'level-modal';
+    modal.className = 'completion-modal-overlay interactive';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-label', 'Choose your level');
+    modal.innerHTML = `
+      <div class="completion-receipt-card" style="max-width: 420px; width: 90%;">
+        <div class="telemetry-label" style="margin-bottom: 8px;">YOUR LEVEL</div>
+        <div style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8); margin-bottom: var(--space-16);">
+          ${CEFR_ORDER.map(l => `
+            <button class="hud-btn level-option ${l === current ? 'active' : ''}" data-level="${l}" aria-pressed="${l === current}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 10px 14px; font-weight: 600;">${CEFR_LABELS[l]}</button>
+          `).join('')}
+        </div>
+        <button class="hud-btn btn-modal-close" style="width: 100%; justify-content: center; padding: 10px 0;">Cancel</button>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    const close = () => {
+      modal.remove();
+      document.removeEventListener('keydown', onKey, true);
+      opener?.focus();
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); close(); }
+    };
+    document.addEventListener('keydown', onKey, true);
+
+    modal.querySelectorAll('.level-option').forEach(btn => {
+      btn.addEventListener('click', () => {
+        AudioSynthesizer.play('click');
+        StorageManager.setLearnerLevel((btn as HTMLElement).dataset.level as Cefr);
+        window.dispatchEvent(new CustomEvent('learner-level-change'));
+        close();
+        this.render();
+      });
+    });
+    modal.querySelector('.btn-modal-close')?.addEventListener('click', close);
+    (modal.querySelector('.level-option.active') as HTMLElement | null)?.focus();
   }
 
   private openSettingsModal(): void {
