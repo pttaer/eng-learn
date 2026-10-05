@@ -1,7 +1,9 @@
+import { Cefr, isCefr } from '../core/cefr';
 import { SRSCardState } from '../core/srs-engine';
 
 export interface AppStorageState {
   version: number;
+  learnerLevel: Cefr;
   soundMuted: boolean;
   cardStates: Record<string, SRSCardState>;
   streak: {
@@ -19,7 +21,7 @@ export interface AppStorageState {
 }
 
 const STORAGE_KEY = 'STARK_ENG_STATE';
-const CURRENT_VERSION = 1;
+const CURRENT_VERSION = 2;
 
 function getTodayString(): string {
   const d = new Date();
@@ -31,6 +33,7 @@ function getTodayString(): string {
 
 const DEFAULT_STATE: AppStorageState = {
   version: CURRENT_VERSION,
+  learnerLevel: 'A1',
   soundMuted: false,
   cardStates: {},
   streak: {
@@ -63,6 +66,8 @@ export class StorageManager {
       this.cachedState = {
         ...DEFAULT_STATE,
         ...parsed,
+        version: CURRENT_VERSION,
+        learnerLevel: this.migratedLevel(parsed),
         streak: { ...DEFAULT_STATE.streak, ...(parsed.streak || {}) },
         habitProgress: parsed.habitProgress || {},
         cardStates: parsed.cardStates || {}
@@ -73,6 +78,21 @@ export class StorageManager {
       this.cachedState = { ...DEFAULT_STATE };
       return this.cachedState;
     }
+  }
+
+  // v1 states have no learnerLevel; those users were already working at B2+, so start them at B2
+  private static migratedLevel(parsed: Partial<AppStorageState>): Cefr {
+    return isCefr(parsed.learnerLevel) ? parsed.learnerLevel : 'B2';
+  }
+
+  public static getLearnerLevel(): Cefr {
+    return this.loadState().learnerLevel;
+  }
+
+  public static setLearnerLevel(level: Cefr): void {
+    const state = this.loadState();
+    state.learnerLevel = level;
+    this.saveState(state);
   }
 
   public static saveState(state: AppStorageState): void {
@@ -175,7 +195,8 @@ export class StorageManager {
         this.saveState({
           ...DEFAULT_STATE,
           ...parsed,
-          version: CURRENT_VERSION
+          version: CURRENT_VERSION,
+          learnerLevel: this.migratedLevel(parsed)
         });
         return true;
       }

@@ -1,4 +1,5 @@
 import { RouteId } from './router';
+import { Cefr } from './cefr';
 
 export type BranchId = 'grammar' | 'collocations' | 'writing' | 'speaking' | 'reading';
 
@@ -9,7 +10,7 @@ export interface SkillNode {
   title: string;
   subtitle: string;
   description: string;
-  cefrLevel: 'B2' | 'C1' | 'C2';
+  cefrLevel: Cefr;
   routeTarget: RouteId;
   prerequisites: string[]; // Node IDs required before unlocking
   masteryThreshold: number; // e.g. 80 (%)
