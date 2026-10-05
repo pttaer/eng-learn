@@ -9440,6 +9440,1060 @@
     "level": 1,
     "contextSentence": "Several of the country's best-loved poets published under pseudonyms to slip past the censors."
   },
+  "mother": {
+    "id": "vocab-a1-1",
+    "word": "mother",
+    "ipa": "/ˈmʌð.ər/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "A woman who has a child.",
+    "vietnamese": "mẹ",
+    "collocations": [
+      "my mother",
+      "mother and father",
+      "a kind mother"
+    ],
+    "level": 1,
+    "contextSentence": "My mother works in a hospital."
+  },
+  "brother": {
+    "id": "vocab-a1-2",
+    "word": "brother",
+    "ipa": "/ˈbrʌð.ər/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "A boy or man with the same parents.",
+    "vietnamese": "anh trai, em trai",
+    "collocations": [
+      "older brother",
+      "younger brother",
+      "my brother"
+    ],
+    "level": 1,
+    "contextSentence": "I have one brother and one sister."
+  },
+  "friend": {
+    "id": "vocab-a1-3",
+    "word": "friend",
+    "ipa": "/frend/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "A person you know well and like.",
+    "vietnamese": "bạn, người bạn",
+    "collocations": [
+      "best friend",
+      "good friend",
+      "a friend of mine"
+    ],
+    "level": 1,
+    "contextSentence": "She is my best friend."
+  },
+  "water": {
+    "id": "vocab-a1-4",
+    "word": "water",
+    "ipa": "/ˈwɔː.tər/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "The clear liquid that we drink.",
+    "vietnamese": "nước",
+    "collocations": [
+      "drink water",
+      "a glass of water",
+      "cold water"
+    ],
+    "level": 1,
+    "contextSentence": "I drink water every day."
+  },
+  "bread": {
+    "id": "vocab-a1-5",
+    "word": "bread",
+    "ipa": "/bred/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "A food made from flour and baked.",
+    "vietnamese": "bánh mì",
+    "collocations": [
+      "eat bread",
+      "a piece of bread",
+      "bread and butter"
+    ],
+    "level": 1,
+    "contextSentence": "We eat bread for breakfast."
+  },
+  "apple": {
+    "id": "vocab-a1-6",
+    "word": "apple",
+    "ipa": "/ˈæp.əl/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "A round fruit that is red or green.",
+    "vietnamese": "quả táo",
+    "collocations": [
+      "eat an apple",
+      "a red apple",
+      "apple juice"
+    ],
+    "level": 1,
+    "contextSentence": "He eats an apple after lunch."
+  },
+  "rice": {
+    "id": "vocab-a1-7",
+    "word": "rice",
+    "ipa": "/raɪs/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Small white seeds that we cook and eat.",
+    "vietnamese": "cơm, gạo",
+    "collocations": [
+      "cook rice",
+      "boiled rice",
+      "rice and chicken"
+    ],
+    "level": 1,
+    "contextSentence": "We have rice for dinner."
+  },
+  "house": {
+    "id": "vocab-a1-8",
+    "word": "house",
+    "ipa": "/haʊs/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "A building where people live.",
+    "vietnamese": "ngôi nhà, căn nhà",
+    "collocations": [
+      "a big house",
+      "at my house",
+      "house and garden"
+    ],
+    "level": 1,
+    "contextSentence": "Our house is near the school."
+  },
+  "kitchen": {
+    "id": "vocab-a1-9",
+    "word": "kitchen",
+    "ipa": "/ˈkɪtʃ.ən/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "The room where you cook food.",
+    "vietnamese": "nhà bếp",
+    "collocations": [
+      "in the kitchen",
+      "kitchen table",
+      "a small kitchen"
+    ],
+    "level": 1,
+    "contextSentence": "My father is in the kitchen."
+  },
+  "bed": {
+    "id": "vocab-a1-10",
+    "word": "bed",
+    "ipa": "/bed/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Furniture you sleep on.",
+    "vietnamese": "cái giường",
+    "collocations": [
+      "go to bed",
+      "in bed",
+      "a big bed"
+    ],
+    "level": 1,
+    "contextSentence": "I go to bed at ten."
+  },
+  "door": {
+    "id": "vocab-a1-11",
+    "word": "door",
+    "ipa": "/dɔːr/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "You open it to go into a room.",
+    "vietnamese": "cửa ra vào",
+    "collocations": [
+      "open the door",
+      "close the door",
+      "front door"
+    ],
+    "level": 1,
+    "contextSentence": "Please open the door."
+  },
+  "head": {
+    "id": "vocab-a1-12",
+    "word": "head",
+    "ipa": "/hed/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "The top part of your body.",
+    "vietnamese": "cái đầu",
+    "collocations": [
+      "my head",
+      "hurt my head",
+      "head and neck"
+    ],
+    "level": 1,
+    "contextSentence": "My head hurts today."
+  },
+  "hand": {
+    "id": "vocab-a1-13",
+    "word": "hand",
+    "ipa": "/hænd/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "The part at the end of your arm.",
+    "vietnamese": "bàn tay",
+    "collocations": [
+      "wash your hands",
+      "left hand",
+      "hand in hand"
+    ],
+    "level": 1,
+    "contextSentence": "Wash your hands before lunch."
+  },
+  "eye": {
+    "id": "vocab-a1-14",
+    "word": "eye",
+    "ipa": "/aɪ/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "The part of the face you see with.",
+    "vietnamese": "con mắt",
+    "collocations": [
+      "blue eyes",
+      "close your eyes",
+      "open your eyes"
+    ],
+    "level": 1,
+    "contextSentence": "She has big brown eyes."
+  },
+  "morning": {
+    "id": "vocab-a1-15",
+    "word": "morning",
+    "ipa": "/ˈmɔː.nɪŋ/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "The first part of the day.",
+    "vietnamese": "buổi sáng",
+    "collocations": [
+      "in the morning",
+      "good morning",
+      "every morning"
+    ],
+    "level": 1,
+    "contextSentence": "I get up at six in the morning."
+  },
+  "night": {
+    "id": "vocab-a1-16",
+    "word": "night",
+    "ipa": "/naɪt/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "The time when it is dark.",
+    "vietnamese": "ban đêm, buổi tối",
+    "collocations": [
+      "at night",
+      "good night",
+      "last night"
+    ],
+    "level": 1,
+    "contextSentence": "I sleep eight hours every night."
+  },
+  "week": {
+    "id": "vocab-a1-17",
+    "word": "week",
+    "ipa": "/wiːk/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "A period of seven days.",
+    "vietnamese": "tuần",
+    "collocations": [
+      "this week",
+      "next week",
+      "last week"
+    ],
+    "level": 1,
+    "contextSentence": "I study English twice a week."
+  },
+  "school": {
+    "id": "vocab-a1-18",
+    "word": "school",
+    "ipa": "/skuːl/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "A place where children learn.",
+    "vietnamese": "trường học",
+    "collocations": [
+      "go to school",
+      "at school",
+      "school bag"
+    ],
+    "level": 1,
+    "contextSentence": "The children go to school by bus."
+  },
+  "shop": {
+    "id": "vocab-a1-19",
+    "word": "shop",
+    "ipa": "/ʃɒp/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "A place where you buy things.",
+    "vietnamese": "cửa hàng",
+    "collocations": [
+      "a small shop",
+      "go to the shop",
+      "shop door"
+    ],
+    "level": 1,
+    "contextSentence": "The shop opens at nine."
+  },
+  "city": {
+    "id": "vocab-a1-20",
+    "word": "city",
+    "ipa": "/ˈsɪt.i/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "A very big town.",
+    "vietnamese": "thành phố",
+    "collocations": [
+      "a big city",
+      "city centre",
+      "in the city"
+    ],
+    "level": 1,
+    "contextSentence": "I live in a big city."
+  },
+  "wake": {
+    "id": "vocab-a1-21",
+    "word": "wake",
+    "ipa": "/weɪk/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "To stop sleeping.",
+    "vietnamese": "thức dậy",
+    "collocations": [
+      "wake up",
+      "wake up early",
+      "wake up late"
+    ],
+    "level": 1,
+    "contextSentence": "I wake up at seven."
+  },
+  "cook": {
+    "id": "vocab-a1-22",
+    "word": "cook",
+    "ipa": "/kʊk/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "To make food hot and ready to eat.",
+    "vietnamese": "nấu ăn",
+    "collocations": [
+      "cook dinner",
+      "cook rice",
+      "cook at home"
+    ],
+    "level": 1,
+    "contextSentence": "My mother cooks dinner every day."
+  },
+  "walk": {
+    "id": "vocab-a1-23",
+    "word": "walk",
+    "ipa": "/wɔːk/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "To move on your feet.",
+    "vietnamese": "đi bộ",
+    "collocations": [
+      "walk to school",
+      "walk home",
+      "go for a walk"
+    ],
+    "level": 1,
+    "contextSentence": "I walk to school every day."
+  },
+  "open": {
+    "id": "vocab-a1-24",
+    "word": "open",
+    "ipa": "/ˈəʊ.pən/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "To move something so people can go in.",
+    "vietnamese": "mở",
+    "collocations": [
+      "open the door",
+      "open a book",
+      "open the window"
+    ],
+    "level": 1,
+    "contextSentence": "Please open the window."
+  },
+  "big": {
+    "id": "vocab-a1-25",
+    "word": "big",
+    "ipa": "/bɪɡ/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Large in size.",
+    "vietnamese": "to, lớn",
+    "collocations": [
+      "a big house",
+      "a big city",
+      "big and tall"
+    ],
+    "level": 1,
+    "contextSentence": "They have a big dog."
+  },
+  "small": {
+    "id": "vocab-a1-26",
+    "word": "small",
+    "ipa": "/smɔːl/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Not big in size.",
+    "vietnamese": "nhỏ, bé",
+    "collocations": [
+      "a small room",
+      "small and cheap",
+      "small shop"
+    ],
+    "level": 1,
+    "contextSentence": "My room is small but nice."
+  },
+  "happy": {
+    "id": "vocab-a1-27",
+    "word": "happy",
+    "ipa": "/ˈhæp.i/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Feeling good and pleased.",
+    "vietnamese": "vui, hạnh phúc",
+    "collocations": [
+      "happy birthday",
+      "feel happy",
+      "happy family"
+    ],
+    "level": 1,
+    "contextSentence": "I am happy to see you."
+  },
+  "hot": {
+    "id": "vocab-a1-28",
+    "word": "hot",
+    "ipa": "/hɒt/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Having a high temperature.",
+    "vietnamese": "nóng",
+    "collocations": [
+      "hot water",
+      "hot day",
+      "hot tea"
+    ],
+    "level": 1,
+    "contextSentence": "The tea is very hot."
+  },
+  "new": {
+    "id": "vocab-a1-29",
+    "word": "new",
+    "ipa": "/njuː/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Made or bought a short time ago.",
+    "vietnamese": "mới",
+    "collocations": [
+      "a new phone",
+      "new friend",
+      "new year"
+    ],
+    "level": 1,
+    "contextSentence": "I have a new phone."
+  },
+  "good": {
+    "id": "vocab-a1-30",
+    "word": "good",
+    "ipa": "/ɡʊd/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Of a high or nice quality.",
+    "vietnamese": "tốt, giỏi",
+    "collocations": [
+      "good morning",
+      "good friend",
+      "very good"
+    ],
+    "level": 1,
+    "contextSentence": "This is a good book."
+  },
+  "journey": {
+    "id": "vocab-a2-1",
+    "word": "journey",
+    "ipa": "/ˈdʒɜː.ni/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Travel from one place to another, usually a long way.",
+    "vietnamese": "chuyến đi, hành trình",
+    "collocations": [
+      "a long journey",
+      "begin a journey",
+      "journey home"
+    ],
+    "level": 1,
+    "contextSentence": "The journey to the beach takes about three hours by bus."
+  },
+  "luggage": {
+    "id": "vocab-a2-2",
+    "word": "luggage",
+    "ipa": "/ˈlʌɡ.ɪdʒ/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Bags and cases that you take with you when you travel.",
+    "vietnamese": "hành lý",
+    "collocations": [
+      "heavy luggage",
+      "carry luggage",
+      "luggage allowance"
+    ],
+    "level": 1,
+    "contextSentence": "I left my luggage at the hotel and went to the market."
+  },
+  "passport": {
+    "id": "vocab-a2-3",
+    "word": "passport",
+    "ipa": "/ˈpɑːs.pɔːt/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Official document you show when you travel to another country.",
+    "vietnamese": "hộ chiếu",
+    "collocations": [
+      "show your passport",
+      "passport control",
+      "valid passport"
+    ],
+    "level": 1,
+    "contextSentence": "Please show your passport at the airport desk."
+  },
+  "receipt": {
+    "id": "vocab-a2-4",
+    "word": "receipt",
+    "ipa": "/rɪˈsiːt/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Piece of paper that shows you have paid for something.",
+    "vietnamese": "biên lai, hóa đơn",
+    "collocations": [
+      "keep the receipt",
+      "ask for a receipt",
+      "receipt for payment"
+    ],
+    "level": 1,
+    "contextSentence": "Keep the receipt in case you want to return the shoes."
+  },
+  "cheap": {
+    "id": "vocab-a2-5",
+    "word": "cheap",
+    "ipa": "/tʃiːp/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Not costing much money.",
+    "vietnamese": "rẻ",
+    "collocations": [
+      "cheap price",
+      "cheap ticket",
+      "quite cheap"
+    ],
+    "level": 1,
+    "contextSentence": "This café is cheap, so many students go there."
+  },
+  "discount": {
+    "id": "vocab-a2-6",
+    "word": "discount",
+    "ipa": "/ˈdɪs.kaʊnt/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Amount of money taken off the normal price.",
+    "vietnamese": "giảm giá, khoản chiết khấu",
+    "collocations": [
+      "get a discount",
+      "student discount",
+      "give a discount"
+    ],
+    "level": 1,
+    "contextSentence": "Students get a ten percent discount on all books."
+  },
+  "medicine": {
+    "id": "vocab-a2-7",
+    "word": "medicine",
+    "ipa": "/ˈmed.ɪ.sən/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Something you take to get better when you are ill.",
+    "vietnamese": "thuốc",
+    "collocations": [
+      "take medicine",
+      "cough medicine",
+      "medicine for a cold"
+    ],
+    "level": 1,
+    "contextSentence": "The doctor told me to take this medicine twice a day."
+  },
+  "headache": {
+    "id": "vocab-a2-8",
+    "word": "headache",
+    "ipa": "/ˈhed.eɪk/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Pain in your head.",
+    "vietnamese": "đau đầu",
+    "collocations": [
+      "have a headache",
+      "bad headache",
+      "headache tablet"
+    ],
+    "level": 1,
+    "contextSentence": "I have a headache, so I want to go home early."
+  },
+  "healthy": {
+    "id": "vocab-a2-9",
+    "word": "healthy",
+    "ipa": "/ˈhel.θi/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Strong and well; good for your body.",
+    "vietnamese": "khỏe mạnh, lành mạnh",
+    "collocations": [
+      "healthy food",
+      "healthy life",
+      "stay healthy"
+    ],
+    "level": 1,
+    "contextSentence": "Eating fruit and vegetables is good for a healthy life."
+  },
+  "exercise": {
+    "id": "vocab-a2-10",
+    "word": "exercise",
+    "ipa": "/ˈek.sə.saɪz/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Physical activity that keeps your body strong.",
+    "vietnamese": "tập thể dục, bài tập thể dục",
+    "collocations": [
+      "do exercise",
+      "regular exercise",
+      "take exercise"
+    ],
+    "level": 1,
+    "contextSentence": "I do some exercise every morning before I go to work."
+  },
+  "manager": {
+    "id": "vocab-a2-11",
+    "word": "manager",
+    "ipa": "/ˈmæn.ɪ.dʒər/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Person who is in charge of a shop or a team.",
+    "vietnamese": "quản lý, người quản lý",
+    "collocations": [
+      "shop manager",
+      "ask the manager",
+      "meet the manager"
+    ],
+    "level": 1,
+    "contextSentence": "My manager says we can finish work early on Friday."
+  },
+  "meeting": {
+    "id": "vocab-a2-12",
+    "word": "meeting",
+    "ipa": "/ˈmiː.tɪŋ/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Time when people come together to talk about something.",
+    "vietnamese": "cuộc họp",
+    "collocations": [
+      "have a meeting",
+      "team meeting",
+      "meeting room"
+    ],
+    "level": 1,
+    "contextSentence": "We have a meeting at ten o'clock in the small room."
+  },
+  "salary": {
+    "id": "vocab-a2-13",
+    "word": "salary",
+    "ipa": "/ˈsæl.ər.i/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Money you get every month from your job.",
+    "vietnamese": "lương",
+    "collocations": [
+      "monthly salary",
+      "high salary",
+      "earn a salary"
+    ],
+    "level": 1,
+    "contextSentence": "Her salary is not high, but she likes her job."
+  },
+  "nervous": {
+    "id": "vocab-a2-14",
+    "word": "nervous",
+    "ipa": "/ˈnɜː.vəs/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Worried and a little afraid about something.",
+    "vietnamese": "lo lắng, hồi hộp",
+    "collocations": [
+      "feel nervous",
+      "nervous about",
+      "a nervous smile"
+    ],
+    "level": 1,
+    "contextSentence": "I felt nervous before my first day at school."
+  },
+  "excited": {
+    "id": "vocab-a2-15",
+    "word": "excited",
+    "ipa": "/ɪkˈsaɪ.tɪd/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Very happy about something good that will happen.",
+    "vietnamese": "hào hứng, phấn khích",
+    "collocations": [
+      "feel excited",
+      "excited about",
+      "get excited"
+    ],
+    "level": 1,
+    "contextSentence": "The children are excited about the trip to the zoo."
+  },
+  "lonely": {
+    "id": "vocab-a2-16",
+    "word": "lonely",
+    "ipa": "/ˈləʊn.li/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Sad because you have no friends near you.",
+    "vietnamese": "cô đơn",
+    "collocations": [
+      "feel lonely",
+      "lonely life",
+      "a lonely place"
+    ],
+    "level": 1,
+    "contextSentence": "He felt lonely when he moved to a new city."
+  },
+  "agree": {
+    "id": "vocab-a2-17",
+    "word": "agree",
+    "ipa": "/əˈɡriː/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Have the same opinion as another person.",
+    "vietnamese": "đồng ý",
+    "collocations": [
+      "agree with",
+      "completely agree",
+      "agree to go"
+    ],
+    "level": 1,
+    "contextSentence": "I agree with you, because the film was too long."
+  },
+  "opinion": {
+    "id": "vocab-a2-18",
+    "word": "opinion",
+    "ipa": "/əˈpɪn.jən/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "What you think about something or someone.",
+    "vietnamese": "ý kiến, quan điểm",
+    "collocations": [
+      "in my opinion",
+      "ask for an opinion",
+      "strong opinion"
+    ],
+    "level": 1,
+    "contextSentence": "In my opinion, the second hotel is better."
+  },
+  "prefer": {
+    "id": "vocab-a2-19",
+    "word": "prefer",
+    "ipa": "/prɪˈfɜːr/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Like one thing more than another.",
+    "vietnamese": "thích hơn, ưa hơn",
+    "collocations": [
+      "prefer to",
+      "prefer tea",
+      "would prefer"
+    ],
+    "level": 1,
+    "contextSentence": "I prefer tea to coffee, especially in the evening."
+  },
+  "boring": {
+    "id": "vocab-a2-20",
+    "word": "boring",
+    "ipa": "/ˈbɔː.rɪŋ/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Not interesting; making you feel tired.",
+    "vietnamese": "chán, nhàm chán",
+    "collocations": [
+      "boring film",
+      "boring job",
+      "really boring"
+    ],
+    "level": 1,
+    "contextSentence": "The book was boring, so I stopped reading it."
+  },
+  "the weather": {
+    "id": "vocab-a2-21",
+    "word": "the weather",
+    "ipa": "/ðə ˈweð.ər/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Sun, rain, wind and temperature outside at a time.",
+    "vietnamese": "thời tiết",
+    "collocations": [
+      "good weather",
+      "check the weather",
+      "weather forecast"
+    ],
+    "level": 1,
+    "contextSentence": "The weather was bad, so we stayed at home."
+  },
+  "improve": {
+    "id": "vocab-b1-2",
+    "word": "improve",
+    "ipa": "/ɪmˈpruːv/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Become better, or make something better.",
+    "vietnamese": "cải thiện, làm cho tốt hơn",
+    "collocations": [
+      "improve skills",
+      "greatly improve",
+      "improve quickly"
+    ],
+    "level": 1,
+    "contextSentence": "I want to improve my English before I travel abroad."
+  },
+  "experience": {
+    "id": "vocab-b1-4",
+    "word": "experience",
+    "ipa": "/ɪkˈspɪə.ri.əns/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Knowledge or skill from doing something, or something that happens to you.",
+    "vietnamese": "kinh nghiệm, trải nghiệm",
+    "collocations": [
+      "work experience",
+      "gain experience",
+      "a great experience"
+    ],
+    "level": 1,
+    "contextSentence": "She has two years of experience working in a hotel."
+  },
+  "advantage": {
+    "id": "vocab-b1-6",
+    "word": "advantage",
+    "ipa": "/ədˈvɑːn.tɪdʒ/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Something good that helps you do better than others.",
+    "vietnamese": "lợi thế, ưu điểm",
+    "collocations": [
+      "big advantage",
+      "take advantage of",
+      "clear advantage"
+    ],
+    "level": 1,
+    "contextSentence": "Speaking two languages is a big advantage when you look for a job."
+  },
+  "decision": {
+    "id": "vocab-b1-7",
+    "word": "decision",
+    "ipa": "/dɪˈsɪʒ.ən/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "A choice you make after thinking about it.",
+    "vietnamese": "quyết định",
+    "collocations": [
+      "make a decision",
+      "final decision",
+      "difficult decision"
+    ],
+    "level": 1,
+    "contextSentence": "It was a difficult decision, but we decided to move to the city."
+  },
+  "damage": {
+    "id": "vocab-b1-8",
+    "word": "damage",
+    "ipa": "/ˈdæm.ɪdʒ/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Harm done to something so that it is broken or less useful.",
+    "vietnamese": "thiệt hại, hư hại",
+    "collocations": [
+      "cause damage",
+      "serious damage",
+      "damage to property"
+    ],
+    "level": 1,
+    "contextSentence": "The storm caused a lot of damage to the old bridge."
+  },
+  "support": {
+    "id": "vocab-b1-9",
+    "word": "support",
+    "ipa": "/səˈpɔːt/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Help or encourage someone, or agree with an idea.",
+    "vietnamese": "hỗ trợ, ủng hộ",
+    "collocations": [
+      "support a friend",
+      "strong support",
+      "financial support"
+    ],
+    "level": 1,
+    "contextSentence": "My family always supports me when I have problems."
+  },
+  "effort": {
+    "id": "vocab-b1-10",
+    "word": "effort",
+    "ipa": "/ˈef.ət/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "The physical or mental energy you use to do something.",
+    "vietnamese": "nỗ lực, sự cố gắng",
+    "collocations": [
+      "make an effort",
+      "great effort",
+      "effort to improve"
+    ],
+    "level": 1,
+    "contextSentence": "She made a big effort to learn the names of all her students."
+  },
+  "recommend": {
+    "id": "vocab-b1-11",
+    "word": "recommend",
+    "ipa": "/ˌrek.əˈmend/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Tell someone that something is good or that they should do it.",
+    "vietnamese": "giới thiệu, khuyên",
+    "collocations": [
+      "highly recommend",
+      "recommend a book",
+      "strongly recommend"
+    ],
+    "level": 1,
+    "contextSentence": "Can you recommend a good restaurant near the station?"
+  },
+  "reduce": {
+    "id": "vocab-b1-12",
+    "word": "reduce",
+    "ipa": "/rɪˈdjuːs/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Make something smaller or less in size, amount or price.",
+    "vietnamese": "giảm, làm giảm bớt",
+    "collocations": [
+      "reduce costs",
+      "reduce stress",
+      "reduce the risk"
+    ],
+    "level": 1,
+    "contextSentence": "We need to reduce the amount of rubbish we throw away."
+  },
+  "society": {
+    "id": "vocab-b1-16",
+    "word": "society",
+    "ipa": "/səˈsaɪ.ə.ti/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "All the people living in a country or area, with their laws and customs.",
+    "vietnamese": "xã hội",
+    "collocations": [
+      "modern society",
+      "members of society",
+      "benefit society"
+    ],
+    "level": 1,
+    "contextSentence": "Young people play an important part in modern society."
+  },
+  "protect": {
+    "id": "vocab-b1-17",
+    "word": "protect",
+    "ipa": "/prəˈtekt/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "Keep someone or something safe from harm or damage.",
+    "vietnamese": "bảo vệ, che chở",
+    "collocations": [
+      "protect the environment",
+      "protect against",
+      "protect yourself"
+    ],
+    "level": 1,
+    "contextSentence": "Parents try to protect their children from danger."
+  },
   "mitigate": {
     "id": "vocab-cefr-1",
     "word": "mitigate",
@@ -10309,6 +11363,214 @@
     ],
     "level": 3,
     "contextSentence": "The orchestra admired the mercurial conductor's brilliance but dreaded his sudden outbursts at rehearsal."
+  },
+  "get up": {
+    "id": "vocab-a2-pl-1",
+    "word": "get up",
+    "ipa": "/ɡet ʌp/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Leave your bed after you wake up.",
+    "vietnamese": "thức dậy, rời khỏi giường",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "I get up at six o'clock every morning."
+  },
+  "take off": {
+    "id": "vocab-a2-pl-2",
+    "word": "take off",
+    "ipa": "/teɪk ɒf/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Remove clothes; or leave the ground, like a plane.",
+    "vietnamese": "cởi (quần áo), cất cánh",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Please take off your shoes before you come in."
+  },
+  "look for": {
+    "id": "vocab-a2-pl-3",
+    "word": "look for",
+    "ipa": "/lʊk fɔːr/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Try to find something or someone.",
+    "vietnamese": "tìm kiếm",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "I am looking for my keys, but I cannot find them."
+  },
+  "turn on": {
+    "id": "vocab-a2-pl-4",
+    "word": "turn on",
+    "ipa": "/tɜːn ɒn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Make a light or machine start to work.",
+    "vietnamese": "bật (đèn, thiết bị)",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "It is dark, so please turn on the light."
+  },
+  "come back": {
+    "id": "vocab-a2-pl-5",
+    "word": "come back",
+    "ipa": "/kʌm bæk/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Return to a place where you were before.",
+    "vietnamese": "quay lại, trở về",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "My sister comes back from work at six."
+  },
+  "give up": {
+    "id": "vocab-a2-pl-6",
+    "word": "give up",
+    "ipa": "/ɡɪv ʌp/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Stop trying to do something; stop a habit.",
+    "vietnamese": "bỏ cuộc, từ bỏ",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "The test was hard, but I did not give up."
+  },
+  "put on": {
+    "id": "vocab-a2-pl-7",
+    "word": "put on",
+    "ipa": "/pʊt ɒn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Wear clothes; place something on your body.",
+    "vietnamese": "mặc vào, đeo vào",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "It is cold outside, so put on your coat."
+  },
+  "find out": {
+    "id": "vocab-a2-pl-8",
+    "word": "find out",
+    "ipa": "/faɪnd aʊt/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Learn a fact that you did not know before.",
+    "vietnamese": "tìm ra, phát hiện, biết được",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "I want to find out what time the shop opens."
+  },
+  "carry out": {
+    "id": "vocab-b1-pl-1",
+    "word": "carry out",
+    "ipa": "/ˈkær.i aʊt/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Do or complete a piece of work, a plan or a test.",
+    "vietnamese": "thực hiện, tiến hành",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "The team will carry out a survey of local shops next week."
+  },
+  "work out": {
+    "id": "vocab-b1-pl-2",
+    "word": "work out",
+    "ipa": "/wɜːk aʊt/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Find the answer to a problem, or finish well in the end.",
+    "vietnamese": "tìm ra, giải quyết được",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "I cannot work out how to use this washing machine."
+  },
+  "set up": {
+    "id": "vocab-b1-pl-3",
+    "word": "set up",
+    "ipa": "/set ʌp/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Start a business or organise something so that it is ready.",
+    "vietnamese": "thành lập, thiết lập",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "They set up a small shop in the town centre last year."
+  },
+  "put off": {
+    "id": "vocab-b1-pl-4",
+    "word": "put off",
+    "ipa": "/pʊt ɒf/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Decide to do something later than planned.",
+    "vietnamese": "hoãn lại, trì hoãn",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "We had to put off the picnic because of the rain."
+  },
+  "turn down": {
+    "id": "vocab-b1-pl-5",
+    "word": "turn down",
+    "ipa": "/tɜːn daʊn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Say no to an offer or an invitation, or make a sound quieter.",
+    "vietnamese": "từ chối, vặn nhỏ lại",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "She turned down the job because the salary was too low."
+  },
+  "break down": {
+    "id": "vocab-b1-pl-6",
+    "word": "break down",
+    "ipa": "/breɪk daʊn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Stop working because of a fault, or fail to continue.",
+    "vietnamese": "hỏng, bị hư",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Our car broke down on the way to the airport."
+  },
+  "look after": {
+    "id": "vocab-b1-pl-7",
+    "word": "look after",
+    "ipa": "/lʊk ˈɑːf.tər/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Take care of a person, an animal or a thing.",
+    "vietnamese": "chăm sóc, trông nom",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Could you look after my cat while I am on holiday?"
+  },
+  "bring up": {
+    "id": "vocab-b1-pl-8",
+    "word": "bring up",
+    "ipa": "/brɪŋ ʌp/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Raise a child, or start talking about a subject.",
+    "vietnamese": "nuôi dạy, đề cập đến",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "My grandparents brought up five children on a small farm."
   },
   "scale up": {
     "id": "vocab-pl-1",

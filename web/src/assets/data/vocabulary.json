@@ -1404,6 +1404,1427 @@
     "isRemindCandidate": false
   },
   {
+    "wordOrChunk": "mother",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "my mother, mother and father, a kind mother",
+      "synonyms": [
+        "mum",
+        "mom"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-1",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/ˈmʌð.ər/",
+    "definition": "A woman who has a child.",
+    "vietnamese": "mẹ",
+    "contextSentence": "My mother works in a hospital.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "brother",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "older brother, younger brother, my brother",
+      "synonyms": [
+        "sibling",
+        "boy"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-2",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/ˈbrʌð.ər/",
+    "definition": "A boy or man with the same parents.",
+    "vietnamese": "anh trai, em trai",
+    "contextSentence": "I have one brother and one sister.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "friend",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "best friend, good friend, a friend of mine",
+      "synonyms": [
+        "mate",
+        "pal"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-3",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/frend/",
+    "definition": "A person you know well and like.",
+    "vietnamese": "bạn, người bạn",
+    "contextSentence": "She is my best friend.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "water",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "drink water, a glass of water, cold water",
+      "synonyms": [
+        "drink",
+        "liquid"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-4",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/ˈwɔː.tər/",
+    "definition": "The clear liquid that we drink.",
+    "vietnamese": "nước",
+    "contextSentence": "I drink water every day.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "bread",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "eat bread, a piece of bread, bread and butter",
+      "synonyms": [
+        "toast",
+        "loaf"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-5",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/bred/",
+    "definition": "A food made from flour and baked.",
+    "vietnamese": "bánh mì",
+    "contextSentence": "We eat bread for breakfast.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "apple",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "eat an apple, a red apple, apple juice",
+      "synonyms": [
+        "fruit"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-6",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/ˈæp.əl/",
+    "definition": "A round fruit that is red or green.",
+    "vietnamese": "quả táo",
+    "contextSentence": "He eats an apple after lunch.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "rice",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "cook rice, boiled rice, rice and chicken",
+      "synonyms": [
+        "food",
+        "grain"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-7",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/raɪs/",
+    "definition": "Small white seeds that we cook and eat.",
+    "vietnamese": "cơm, gạo",
+    "contextSentence": "We have rice for dinner.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "house",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "a big house, at my house, house and garden",
+      "synonyms": [
+        "home"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-8",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/haʊs/",
+    "definition": "A building where people live.",
+    "vietnamese": "ngôi nhà, căn nhà",
+    "contextSentence": "Our house is near the school.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "kitchen",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "in the kitchen, kitchen table, a small kitchen",
+      "synonyms": [
+        "cooking room"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-9",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/ˈkɪtʃ.ən/",
+    "definition": "The room where you cook food.",
+    "vietnamese": "nhà bếp",
+    "contextSentence": "My father is in the kitchen.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "bed",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "go to bed, in bed, a big bed",
+      "synonyms": [
+        "bunk"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-10",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/bed/",
+    "definition": "Furniture you sleep on.",
+    "vietnamese": "cái giường",
+    "contextSentence": "I go to bed at ten.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "door",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "open the door, close the door, front door",
+      "synonyms": [
+        "entrance",
+        "gate"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-11",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/dɔːr/",
+    "definition": "You open it to go into a room.",
+    "vietnamese": "cửa ra vào",
+    "contextSentence": "Please open the door.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "head",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "my head, hurt my head, head and neck",
+      "synonyms": [
+        "face"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-12",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/hed/",
+    "definition": "The top part of your body.",
+    "vietnamese": "cái đầu",
+    "contextSentence": "My head hurts today.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "hand",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "wash your hands, left hand, hand in hand",
+      "synonyms": [
+        "arm",
+        "finger"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-13",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/hænd/",
+    "definition": "The part at the end of your arm.",
+    "vietnamese": "bàn tay",
+    "contextSentence": "Wash your hands before lunch.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "eye",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "blue eyes, close your eyes, open your eyes",
+      "synonyms": [
+        "face"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-14",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/aɪ/",
+    "definition": "The part of the face you see with.",
+    "vietnamese": "con mắt",
+    "contextSentence": "She has big brown eyes.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "morning",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "in the morning, good morning, every morning",
+      "synonyms": [
+        "day",
+        "dawn"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-15",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/ˈmɔː.nɪŋ/",
+    "definition": "The first part of the day.",
+    "vietnamese": "buổi sáng",
+    "contextSentence": "I get up at six in the morning.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "night",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "at night, good night, last night",
+      "synonyms": [
+        "evening"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-16",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/naɪt/",
+    "definition": "The time when it is dark.",
+    "vietnamese": "ban đêm, buổi tối",
+    "contextSentence": "I sleep eight hours every night.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "week",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "this week, next week, last week",
+      "synonyms": [
+        "seven days"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-17",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/wiːk/",
+    "definition": "A period of seven days.",
+    "vietnamese": "tuần",
+    "contextSentence": "I study English twice a week.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "school",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "go to school, at school, school bag",
+      "synonyms": [
+        "class"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-18",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/skuːl/",
+    "definition": "A place where children learn.",
+    "vietnamese": "trường học",
+    "contextSentence": "The children go to school by bus.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "shop",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "a small shop, go to the shop, shop door",
+      "synonyms": [
+        "store"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-19",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/ʃɒp/",
+    "definition": "A place where you buy things.",
+    "vietnamese": "cửa hàng",
+    "contextSentence": "The shop opens at nine.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "city",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "a big city, city centre, in the city",
+      "synonyms": [
+        "town"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-20",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/ˈsɪt.i/",
+    "definition": "A very big town.",
+    "vietnamese": "thành phố",
+    "contextSentence": "I live in a big city.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "wake",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "wake up, wake up early, wake up late",
+      "synonyms": [
+        "get up"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-21",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/weɪk/",
+    "definition": "To stop sleeping.",
+    "vietnamese": "thức dậy",
+    "contextSentence": "I wake up at seven.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "cook",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "cook dinner, cook rice, cook at home",
+      "synonyms": [
+        "make",
+        "prepare"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-22",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/kʊk/",
+    "definition": "To make food hot and ready to eat.",
+    "vietnamese": "nấu ăn",
+    "contextSentence": "My mother cooks dinner every day.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "walk",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "walk to school, walk home, go for a walk",
+      "synonyms": [
+        "go",
+        "step"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-23",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/wɔːk/",
+    "definition": "To move on your feet.",
+    "vietnamese": "đi bộ",
+    "contextSentence": "I walk to school every day.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "open",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "open the door, open a book, open the window",
+      "synonyms": [
+        "unlock"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-24",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/ˈəʊ.pən/",
+    "definition": "To move something so people can go in.",
+    "vietnamese": "mở",
+    "contextSentence": "Please open the window.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "big",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "a big house, a big city, big and tall",
+      "synonyms": [
+        "large"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-25",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/bɪɡ/",
+    "definition": "Large in size.",
+    "vietnamese": "to, lớn",
+    "contextSentence": "They have a big dog.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "small",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "a small room, small and cheap, small shop",
+      "synonyms": [
+        "little",
+        "tiny"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-26",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/smɔːl/",
+    "definition": "Not big in size.",
+    "vietnamese": "nhỏ, bé",
+    "contextSentence": "My room is small but nice.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "happy",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "happy birthday, feel happy, happy family",
+      "synonyms": [
+        "glad",
+        "pleased"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-27",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/ˈhæp.i/",
+    "definition": "Feeling good and pleased.",
+    "vietnamese": "vui, hạnh phúc",
+    "contextSentence": "I am happy to see you.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "hot",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "hot water, hot day, hot tea",
+      "synonyms": [
+        "warm"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-28",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/hɒt/",
+    "definition": "Having a high temperature.",
+    "vietnamese": "nóng",
+    "contextSentence": "The tea is very hot.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "new",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "a new phone, new friend, new year",
+      "synonyms": [
+        "modern"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-29",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/njuː/",
+    "definition": "Made or bought a short time ago.",
+    "vietnamese": "mới",
+    "contextSentence": "I have a new phone.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "good",
+    "breakdown": {
+      "cefrRank": "A1",
+      "collocates": "good morning, good friend, very good",
+      "synonyms": [
+        "nice",
+        "great"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a1-30",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A1",
+    "ipa": "/ɡʊd/",
+    "definition": "Of a high or nice quality.",
+    "vietnamese": "tốt, giỏi",
+    "contextSentence": "This is a good book.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "journey",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "a long journey, begin a journey, journey home",
+      "synonyms": [
+        "trip",
+        "voyage"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-1",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ˈdʒɜː.ni/",
+    "definition": "Travel from one place to another, usually a long way.",
+    "vietnamese": "chuyến đi, hành trình",
+    "contextSentence": "The journey to the beach takes about three hours by bus.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "luggage",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "heavy luggage, carry luggage, luggage allowance",
+      "synonyms": [
+        "baggage"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-2",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ˈlʌɡ.ɪdʒ/",
+    "definition": "Bags and cases that you take with you when you travel.",
+    "vietnamese": "hành lý",
+    "contextSentence": "I left my luggage at the hotel and went to the market.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "passport",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "show your passport, passport control, valid passport",
+      "synonyms": [
+        "travel document"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-3",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ˈpɑːs.pɔːt/",
+    "definition": "Official document you show when you travel to another country.",
+    "vietnamese": "hộ chiếu",
+    "contextSentence": "Please show your passport at the airport desk.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "receipt",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "keep the receipt, ask for a receipt, receipt for payment",
+      "synonyms": [
+        "proof of payment"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-4",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/rɪˈsiːt/",
+    "definition": "Piece of paper that shows you have paid for something.",
+    "vietnamese": "biên lai, hóa đơn",
+    "contextSentence": "Keep the receipt in case you want to return the shoes.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "cheap",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "cheap price, cheap ticket, quite cheap",
+      "synonyms": [
+        "inexpensive",
+        "low-priced"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-5",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/tʃiːp/",
+    "definition": "Not costing much money.",
+    "vietnamese": "rẻ",
+    "contextSentence": "This café is cheap, so many students go there.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "discount",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "get a discount, student discount, give a discount",
+      "synonyms": [
+        "reduction"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-6",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ˈdɪs.kaʊnt/",
+    "definition": "Amount of money taken off the normal price.",
+    "vietnamese": "giảm giá, khoản chiết khấu",
+    "contextSentence": "Students get a ten percent discount on all books.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "medicine",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "take medicine, cough medicine, medicine for a cold",
+      "synonyms": [
+        "tablets",
+        "drug"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-7",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ˈmed.ɪ.sən/",
+    "definition": "Something you take to get better when you are ill.",
+    "vietnamese": "thuốc",
+    "contextSentence": "The doctor told me to take this medicine twice a day.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "headache",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "have a headache, bad headache, headache tablet",
+      "synonyms": [
+        "sore head"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-8",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ˈhed.eɪk/",
+    "definition": "Pain in your head.",
+    "vietnamese": "đau đầu",
+    "contextSentence": "I have a headache, so I want to go home early.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "healthy",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "healthy food, healthy life, stay healthy",
+      "synonyms": [
+        "well",
+        "fit"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-9",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ˈhel.θi/",
+    "definition": "Strong and well; good for your body.",
+    "vietnamese": "khỏe mạnh, lành mạnh",
+    "contextSentence": "Eating fruit and vegetables is good for a healthy life.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "exercise",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "do exercise, regular exercise, take exercise",
+      "synonyms": [
+        "workout",
+        "training"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-10",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ˈek.sə.saɪz/",
+    "definition": "Physical activity that keeps your body strong.",
+    "vietnamese": "tập thể dục, bài tập thể dục",
+    "contextSentence": "I do some exercise every morning before I go to work.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "manager",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "shop manager, ask the manager, meet the manager",
+      "synonyms": [
+        "boss",
+        "supervisor"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-11",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ˈmæn.ɪ.dʒər/",
+    "definition": "Person who is in charge of a shop or a team.",
+    "vietnamese": "quản lý, người quản lý",
+    "contextSentence": "My manager says we can finish work early on Friday.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "meeting",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "have a meeting, team meeting, meeting room",
+      "synonyms": [
+        "gathering"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-12",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ˈmiː.tɪŋ/",
+    "definition": "Time when people come together to talk about something.",
+    "vietnamese": "cuộc họp",
+    "contextSentence": "We have a meeting at ten o'clock in the small room.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "salary",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "monthly salary, high salary, earn a salary",
+      "synonyms": [
+        "pay",
+        "wages"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-13",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ˈsæl.ər.i/",
+    "definition": "Money you get every month from your job.",
+    "vietnamese": "lương",
+    "contextSentence": "Her salary is not high, but she likes her job.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "nervous",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "feel nervous, nervous about, a nervous smile",
+      "synonyms": [
+        "worried",
+        "anxious"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-14",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ˈnɜː.vəs/",
+    "definition": "Worried and a little afraid about something.",
+    "vietnamese": "lo lắng, hồi hộp",
+    "contextSentence": "I felt nervous before my first day at school.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "excited",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "feel excited, excited about, get excited",
+      "synonyms": [
+        "thrilled",
+        "happy"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-15",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ɪkˈsaɪ.tɪd/",
+    "definition": "Very happy about something good that will happen.",
+    "vietnamese": "hào hứng, phấn khích",
+    "contextSentence": "The children are excited about the trip to the zoo.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "lonely",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "feel lonely, lonely life, a lonely place",
+      "synonyms": [
+        "alone",
+        "isolated"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-16",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ˈləʊn.li/",
+    "definition": "Sad because you have no friends near you.",
+    "vietnamese": "cô đơn",
+    "contextSentence": "He felt lonely when he moved to a new city.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "agree",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "agree with, completely agree, agree to go",
+      "synonyms": [
+        "accept",
+        "say yes"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-17",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/əˈɡriː/",
+    "definition": "Have the same opinion as another person.",
+    "vietnamese": "đồng ý",
+    "contextSentence": "I agree with you, because the film was too long.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "opinion",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "in my opinion, ask for an opinion, strong opinion",
+      "synonyms": [
+        "view",
+        "idea"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-18",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/əˈpɪn.jən/",
+    "definition": "What you think about something or someone.",
+    "vietnamese": "ý kiến, quan điểm",
+    "contextSentence": "In my opinion, the second hotel is better.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "prefer",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "prefer to, prefer tea, would prefer",
+      "synonyms": [
+        "like better"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-19",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/prɪˈfɜːr/",
+    "definition": "Like one thing more than another.",
+    "vietnamese": "thích hơn, ưa hơn",
+    "contextSentence": "I prefer tea to coffee, especially in the evening.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "boring",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "boring film, boring job, really boring",
+      "synonyms": [
+        "dull",
+        "uninteresting"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-20",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ˈbɔː.rɪŋ/",
+    "definition": "Not interesting; making you feel tired.",
+    "vietnamese": "chán, nhàm chán",
+    "contextSentence": "The book was boring, so I stopped reading it.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "the weather",
+    "breakdown": {
+      "cefrRank": "A2",
+      "collocates": "good weather, check the weather, weather forecast",
+      "synonyms": [
+        "climate"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-a2-21",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ðə ˈweð.ər/",
+    "definition": "Sun, rain, wind and temperature outside at a time.",
+    "vietnamese": "thời tiết",
+    "contextSentence": "The weather was bad, so we stayed at home.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "opinion",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "opinion poll, personal opinion, share an opinion",
+      "synonyms": [
+        "view",
+        "belief",
+        "thought"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-b1-1",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/əˈpɪn.jən/",
+    "definition": "What a person thinks or believes about something.",
+    "vietnamese": "ý kiến, quan điểm",
+    "contextSentence": "In my opinion, this film is better than the book.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "improve",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "improve skills, greatly improve, improve quickly",
+      "synonyms": [
+        "get better",
+        "develop",
+        "boost"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-b1-2",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/ɪmˈpruːv/",
+    "definition": "Become better, or make something better.",
+    "vietnamese": "cải thiện, làm cho tốt hơn",
+    "contextSentence": "I want to improve my English before I travel abroad.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "environment",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "protect the environment, work environment, environment friendly",
+      "synonyms": [
+        "nature",
+        "surroundings",
+        "habitat"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-b1-3",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/ɪnˈvaɪ.rən.mənt/",
+    "definition": "The natural world, including air, water, land, plants and animals.",
+    "vietnamese": "môi trường",
+    "contextSentence": "Plastic bags are very bad for the environment.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "experience",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "work experience, gain experience, a great experience",
+      "synonyms": [
+        "skill",
+        "practice",
+        "event"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-b1-4",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/ɪkˈspɪə.ri.əns/",
+    "definition": "Knowledge or skill from doing something, or something that happens to you.",
+    "vietnamese": "kinh nghiệm, trải nghiệm",
+    "contextSentence": "She has two years of experience working in a hotel.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "achieve",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "achieve a goal, achieve success, achieve results",
+      "synonyms": [
+        "accomplish",
+        "reach",
+        "succeed in"
+      ],
+      "register": "Neutral / Semi-formal"
+    },
+    "id": "vocab-b1-5",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/əˈtʃiːv/",
+    "definition": "Succeed in doing or getting something, usually after hard work.",
+    "vietnamese": "đạt được, hoàn thành được",
+    "contextSentence": "He worked hard and achieved his dream of becoming a doctor.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "advantage",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "big advantage, take advantage of, clear advantage",
+      "synonyms": [
+        "benefit",
+        "plus",
+        "edge"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-b1-6",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/ədˈvɑːn.tɪdʒ/",
+    "definition": "Something good that helps you do better than others.",
+    "vietnamese": "lợi thế, ưu điểm",
+    "contextSentence": "Speaking two languages is a big advantage when you look for a job.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "decision",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "make a decision, final decision, difficult decision",
+      "synonyms": [
+        "choice",
+        "conclusion",
+        "judgement"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-b1-7",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/dɪˈsɪʒ.ən/",
+    "definition": "A choice you make after thinking about it.",
+    "vietnamese": "quyết định",
+    "contextSentence": "It was a difficult decision, but we decided to move to the city.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "damage",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "cause damage, serious damage, damage to property",
+      "synonyms": [
+        "harm",
+        "destruction",
+        "injury"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-b1-8",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/ˈdæm.ɪdʒ/",
+    "definition": "Harm done to something so that it is broken or less useful.",
+    "vietnamese": "thiệt hại, hư hại",
+    "contextSentence": "The storm caused a lot of damage to the old bridge.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "support",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "support a friend, strong support, financial support",
+      "synonyms": [
+        "help",
+        "back",
+        "encourage"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-b1-9",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/səˈpɔːt/",
+    "definition": "Help or encourage someone, or agree with an idea.",
+    "vietnamese": "hỗ trợ, ủng hộ",
+    "contextSentence": "My family always supports me when I have problems.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "effort",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "make an effort, great effort, effort to improve",
+      "synonyms": [
+        "attempt",
+        "energy",
+        "hard work"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-b1-10",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/ˈef.ət/",
+    "definition": "The physical or mental energy you use to do something.",
+    "vietnamese": "nỗ lực, sự cố gắng",
+    "contextSentence": "She made a big effort to learn the names of all her students.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "recommend",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "highly recommend, recommend a book, strongly recommend",
+      "synonyms": [
+        "suggest",
+        "advise",
+        "propose"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-b1-11",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/ˌrek.əˈmend/",
+    "definition": "Tell someone that something is good or that they should do it.",
+    "vietnamese": "giới thiệu, khuyên",
+    "contextSentence": "Can you recommend a good restaurant near the station?",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "reduce",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "reduce costs, reduce stress, reduce the risk",
+      "synonyms": [
+        "cut",
+        "lower",
+        "decrease"
+      ],
+      "register": "Neutral / Semi-formal"
+    },
+    "id": "vocab-b1-12",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/rɪˈdjuːs/",
+    "definition": "Make something smaller or less in size, amount or price.",
+    "vietnamese": "giảm, làm giảm bớt",
+    "contextSentence": "We need to reduce the amount of rubbish we throw away.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "challenge",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "face a challenge, big challenge, accept a challenge",
+      "synonyms": [
+        "test",
+        "difficulty",
+        "problem"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-b1-13",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/ˈtʃæl.ɪndʒ/",
+    "definition": "Something new and difficult that tests your ability.",
+    "vietnamese": "thử thách, thách thức",
+    "contextSentence": "Learning to drive at the age of fifty was a real challenge.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "communicate",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "communicate clearly, communicate with people, communicate by phone",
+      "synonyms": [
+        "talk",
+        "contact",
+        "exchange ideas"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-b1-14",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/kəˈmjuː.nɪ.keɪt/",
+    "definition": "Share information or ideas with other people.",
+    "vietnamese": "giao tiếp, trao đổi thông tin",
+    "contextSentence": "It is easy to communicate with friends abroad by email.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "journey",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "long journey, safe journey, journey home",
+      "synonyms": [
+        "trip",
+        "voyage",
+        "travel"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-b1-15",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/ˈdʒɜː.ni/",
+    "definition": "The act of travelling from one place to another.",
+    "vietnamese": "chuyến đi, hành trình",
+    "contextSentence": "The journey from Hanoi to Hue took us about thirteen hours.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "society",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "modern society, members of society, benefit society",
+      "synonyms": [
+        "community",
+        "population",
+        "culture"
+      ],
+      "register": "Neutral / Semi-formal"
+    },
+    "id": "vocab-b1-16",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/səˈsaɪ.ə.ti/",
+    "definition": "All the people living in a country or area, with their laws and customs.",
+    "vietnamese": "xã hội",
+    "contextSentence": "Young people play an important part in modern society.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "protect",
+    "breakdown": {
+      "cefrRank": "B1",
+      "collocates": "protect the environment, protect against, protect yourself",
+      "synonyms": [
+        "guard",
+        "defend",
+        "keep safe"
+      ],
+      "register": "Neutral / Everyday"
+    },
+    "id": "vocab-b1-17",
+    "mode": "CEFR_ASCENT",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/prəˈtekt/",
+    "definition": "Keep someone or something safe from harm or damage.",
+    "vietnamese": "bảo vệ, che chở",
+    "contextSentence": "Parents try to protect their children from danger.",
+    "isRemindCandidate": false
+  },
+  {
     "wordOrChunk": "mitigate",
     "breakdown": {
       "cefrRank": "B2 / AWL Sublist 2",
@@ -2721,6 +4142,294 @@
     "definition": "Subject to sudden or unpredictable changes of mood or mind.",
     "vietnamese": "thất thường, sớm nắng chiều mưa, tính khí khó đoán",
     "contextSentence": "The orchestra admired the mercurial conductor's brilliance but dreaded his sudden outbursts at rehearsal.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "get up",
+    "breakdown": {
+      "verb": "get (become, move to a new state)",
+      "particle": "UP",
+      "semanticArchetype": "Upward movement & rising",
+      "particleLogic": "UP shows a move from a low position, like lying down, to a higher one."
+    },
+    "id": "vocab-a2-pl-1",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ɡet ʌp/",
+    "definition": "Leave your bed after you wake up.",
+    "vietnamese": "thức dậy, rời khỏi giường",
+    "contextSentence": "I get up at six o'clock every morning.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "take off",
+    "breakdown": {
+      "verb": "take (move something from one place)",
+      "particle": "OFF",
+      "semanticArchetype": "Separation & removal",
+      "particleLogic": "OFF means something stops touching a surface, so it is no longer joined to it."
+    },
+    "id": "vocab-a2-pl-2",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/teɪk ɒf/",
+    "definition": "Remove clothes; or leave the ground, like a plane.",
+    "vietnamese": "cởi (quần áo), cất cánh",
+    "contextSentence": "Please take off your shoes before you come in.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "look for",
+    "breakdown": {
+      "verb": "look (turn your eyes to see)",
+      "particle": "FOR",
+      "semanticArchetype": "Search & purpose",
+      "particleLogic": "FOR points to the thing you want, so your eyes search with that goal."
+    },
+    "id": "vocab-a2-pl-3",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/lʊk fɔːr/",
+    "definition": "Try to find something or someone.",
+    "vietnamese": "tìm kiếm",
+    "contextSentence": "I am looking for my keys, but I cannot find them.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "turn on",
+    "breakdown": {
+      "verb": "turn (rotate, change position)",
+      "particle": "ON",
+      "semanticArchetype": "Activation & connection",
+      "particleLogic": "ON means connected and working, like a switch that touches the power."
+    },
+    "id": "vocab-a2-pl-4",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/tɜːn ɒn/",
+    "definition": "Make a light or machine start to work.",
+    "vietnamese": "bật (đèn, thiết bị)",
+    "contextSentence": "It is dark, so please turn on the light.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "come back",
+    "breakdown": {
+      "verb": "come (move toward the speaker)",
+      "particle": "BACK",
+      "semanticArchetype": "Return to a starting point",
+      "particleLogic": "BACK shows movement toward the place where something or someone started."
+    },
+    "id": "vocab-a2-pl-5",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/kʌm bæk/",
+    "definition": "Return to a place where you were before.",
+    "vietnamese": "quay lại, trở về",
+    "contextSentence": "My sister comes back from work at six.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "give up",
+    "breakdown": {
+      "verb": "give (hand something to another person)",
+      "particle": "UP",
+      "semanticArchetype": "Completion & surrender",
+      "particleLogic": "UP shows that you finish with the effort completely, so nothing is left."
+    },
+    "id": "vocab-a2-pl-6",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ɡɪv ʌp/",
+    "definition": "Stop trying to do something; stop a habit.",
+    "vietnamese": "bỏ cuộc, từ bỏ",
+    "contextSentence": "The test was hard, but I did not give up.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "put on",
+    "breakdown": {
+      "verb": "put (place something somewhere)",
+      "particle": "ON",
+      "semanticArchetype": "Contact & covering",
+      "particleLogic": "ON means touching the top of a surface, so the clothes cover your body."
+    },
+    "id": "vocab-a2-pl-7",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/pʊt ɒn/",
+    "definition": "Wear clothes; place something on your body.",
+    "vietnamese": "mặc vào, đeo vào",
+    "contextSentence": "It is cold outside, so put on your coat.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "find out",
+    "breakdown": {
+      "verb": "find (discover something by chance or search)",
+      "particle": "OUT",
+      "semanticArchetype": "Discovery & revealing",
+      "particleLogic": "OUT means from hidden to open, so the fact becomes clear to you."
+    },
+    "id": "vocab-a2-pl-8",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/faɪnd aʊt/",
+    "definition": "Learn a fact that you did not know before.",
+    "vietnamese": "tìm ra, phát hiện, biết được",
+    "contextSentence": "I want to find out what time the shop opens.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "carry out",
+    "breakdown": {
+      "verb": "carry (take from place to place)",
+      "particle": "OUT",
+      "semanticArchetype": "Completion & delivery",
+      "particleLogic": "OUT shows the action moves from plan to a finished, real result."
+    },
+    "id": "vocab-b1-pl-1",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/ˈkær.i aʊt/",
+    "definition": "Do or complete a piece of work, a plan or a test.",
+    "vietnamese": "thực hiện, tiến hành",
+    "contextSentence": "The team will carry out a survey of local shops next week.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "work out",
+    "breakdown": {
+      "verb": "work (use effort and thinking)",
+      "particle": "OUT",
+      "semanticArchetype": "Discovery & resolution",
+      "particleLogic": "OUT suggests the answer comes out from the problem after thinking."
+    },
+    "id": "vocab-b1-pl-2",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/wɜːk aʊt/",
+    "definition": "Find the answer to a problem, or finish well in the end.",
+    "vietnamese": "tìm ra, giải quyết được",
+    "contextSentence": "I cannot work out how to use this washing machine.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "set up",
+    "breakdown": {
+      "verb": "set (put in position)",
+      "particle": "UP",
+      "semanticArchetype": "Establishment & readiness",
+      "particleLogic": "UP shows something rising into place and ready to use."
+    },
+    "id": "vocab-b1-pl-3",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/set ʌp/",
+    "definition": "Start a business or organise something so that it is ready.",
+    "vietnamese": "thành lập, thiết lập",
+    "contextSentence": "They set up a small shop in the town centre last year.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "put off",
+    "breakdown": {
+      "verb": "put (place something)",
+      "particle": "OFF",
+      "semanticArchetype": "Delay & separation",
+      "particleLogic": "OFF moves the event away from its planned time."
+    },
+    "id": "vocab-b1-pl-4",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/pʊt ɒf/",
+    "definition": "Decide to do something later than planned.",
+    "vietnamese": "hoãn lại, trì hoãn",
+    "contextSentence": "We had to put off the picnic because of the rain.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "turn down",
+    "breakdown": {
+      "verb": "turn (change direction)",
+      "particle": "DOWN",
+      "semanticArchetype": "Rejection & reduction",
+      "particleLogic": "DOWN means lowering, so the offer or the volume goes lower."
+    },
+    "id": "vocab-b1-pl-5",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/tɜːn daʊn/",
+    "definition": "Say no to an offer or an invitation, or make a sound quieter.",
+    "vietnamese": "từ chối, vặn nhỏ lại",
+    "contextSentence": "She turned down the job because the salary was too low.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "break down",
+    "breakdown": {
+      "verb": "break (split into pieces)",
+      "particle": "DOWN",
+      "semanticArchetype": "Failure & collapse",
+      "particleLogic": "DOWN shows a machine falling from working order to a stop."
+    },
+    "id": "vocab-b1-pl-6",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/breɪk daʊn/",
+    "definition": "Stop working because of a fault, or fail to continue.",
+    "vietnamese": "hỏng, bị hư",
+    "contextSentence": "Our car broke down on the way to the airport.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "look after",
+    "breakdown": {
+      "verb": "look (direct your eyes)",
+      "particle": "AFTER",
+      "semanticArchetype": "Care & following",
+      "particleLogic": "AFTER means following with attention, so you keep watching over someone."
+    },
+    "id": "vocab-b1-pl-7",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/lʊk ˈɑːf.tər/",
+    "definition": "Take care of a person, an animal or a thing.",
+    "vietnamese": "chăm sóc, trông nom",
+    "contextSentence": "Could you look after my cat while I am on holiday?",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "bring up",
+    "breakdown": {
+      "verb": "bring (carry towards a place)",
+      "particle": "UP",
+      "semanticArchetype": "Raising & upward movement",
+      "particleLogic": "UP shows lifting a child to adulthood or lifting a topic into the conversation."
+    },
+    "id": "vocab-b1-pl-8",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/brɪŋ ʌp/",
+    "definition": "Raise a child, or start talking about a subject.",
+    "vietnamese": "nuôi dạy, đề cập đến",
+    "contextSentence": "My grandparents brought up five children on a small farm.",
     "isRemindCandidate": false
   },
   {
