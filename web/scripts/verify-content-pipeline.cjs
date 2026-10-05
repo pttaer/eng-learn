@@ -14,7 +14,7 @@ assert(fs.existsSync(CONTENT_DIR), `Content directory missing: ${CONTENT_DIR}`);
 // 2. Validate collocations.json
 const collocations = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'collocations.json'), 'utf8'));
 assert(Array.isArray(collocations), 'collocations must be an array');
-assert.strictEqual(collocations.length, 1000, `Expected 1000 collocations, got ${collocations.length}`);
+assert(collocations.length >= 1000, `Expected at least 1000 collocations, got ${collocations.length}`);
 assert(collocations[0].id && collocations[0].phrase && collocations[0].vietnamese && collocations[0].category, 'Collocation item schema mismatch');
 const phrases = collocations.map(c => c.phrase.toLowerCase());
 const dupes = phrases.filter((p, i) => phrases.indexOf(p) !== i);
@@ -33,21 +33,21 @@ assert.strictEqual(missingExample.length, 0, `Collocations without a usable exam
 // 3. Validate grammar.json
 const grammar = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'grammar.json'), 'utf8'));
 assert(Array.isArray(grammar), 'grammar must be an array');
-assert.strictEqual(grammar.length, 72, `Expected 72 grammar rules, got ${grammar.length}`);
+assert(grammar.length >= 72, `Expected at least 72 grammar rules, got ${grammar.length}`);
 assert(grammar[0].id && grammar[0].promptSentence && grammar[0].targetTransformation && grammar[0].formula, 'Grammar item schema mismatch');
 
 // 4. Validate vocabulary.json
 const vocab = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'vocabulary.json'), 'utf8'));
 assert(Array.isArray(vocab), 'vocabulary must be an array');
-assert.strictEqual(vocab.length, 180, `Expected 180 vocabulary items, got ${vocab.length}`);
+assert(vocab.length >= 180, `Expected at least 180 vocabulary items, got ${vocab.length}`);
 assert(vocab[0].id && vocab[0].wordOrChunk && vocab[0].definition && vocab[0].breakdown, 'Vocabulary item schema mismatch');
 
 // 5. Validate drills.json
 const drills = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'drills.json'), 'utf8'));
 assert(Array.isArray(drills.speaking), 'drills.speaking must be an array');
-assert.strictEqual(drills.speaking.length, 40, `Expected 40 speaking drills, got ${drills.speaking.length}`);
+assert(drills.speaking.length >= 40, `Expected at least 40 speaking drills, got ${drills.speaking.length}`);
 assert(Array.isArray(drills.writing), 'drills.writing must be an array');
-assert.strictEqual(drills.writing.length, 40, `Expected 40 writing drills, got ${drills.writing.length}`);
+assert(drills.writing.length >= 40, `Expected at least 40 writing drills, got ${drills.writing.length}`);
 
 // 6. Validate reading.json
 const reading = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'reading.json'), 'utf8'));

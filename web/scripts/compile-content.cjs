@@ -44,8 +44,9 @@ function compileCollocations() {
     lines.forEach(line => {
       const trimmed = line.trim();
       if (!trimmed.startsWith('|') || trimmed.includes('Index') || trimmed.includes(':---')) return;
-      const parts = trimmed.split('|').map(p => p.trim()).filter(Boolean);
-      if (parts.length >= 4) {
+      // Positional cells: an empty Example must not shift CEFR into its slot
+      const parts = trimmed.replace(/^\|/, '').replace(/\|$/, '').split('|').map(p => p.trim());
+      if (parts.length >= 4 && parts[1]) {
         const index = parseInt(parts[0], 10);
         allItems.push({
           id: `colloc-${index}`,
@@ -53,7 +54,8 @@ function compileCollocations() {
           phrase: parts[1],
           vietnamese: parts[2],
           category: parts[3],
-          example: parts[4] || ''
+          example: parts[4] || '',
+          cefrLevel: parts[5] || ''
         });
       }
     });
@@ -92,6 +94,7 @@ function compileGrammar() {
           if (key === 'ID') item.id = val;
           else if (key === 'Mode') item.mode = (val === 'SYNTACTIC_REPAIR') ? 'SYNTACTIC_PRECISION' : val;
           else if (key === 'Level') item.level = parseInt(val, 10);
+          else if (key === 'CEFR') item.cefrLevel = val;
           else if (key === 'Prompt') item.promptSentence = val;
           else if (key === 'Transformation') item.targetTransformation = val;
           else if (key === 'Grammatical Cue') item.grammaticalCue = val;
@@ -136,6 +139,7 @@ function compileVocabulary() {
           if (key === 'ID') item.id = val;
           else if (key === 'Mode') item.mode = val;
           else if (key === 'Level') item.level = parseInt(val, 10);
+          else if (key === 'CEFR') item.cefrLevel = val;
           else if (key === 'IPA') item.ipa = val;
           else if (key === 'Definition') item.definition = val;
           else if (key === 'Vietnamese') item.vietnamese = val;
@@ -358,6 +362,7 @@ function compileDrills() {
           if (key === 'ID') item.id = val;
           else if (key === 'Index') item.index = parseInt(val, 10);
           else if (key === 'Mode') item.mode = val;
+          else if (key === 'CEFR') item.cefrLevel = val;
           else if (key === 'Prompt') item.prompt = val;
           else if (key === 'Anchor') item.anchor = val;
           else if (key === 'Collocations') item.collocations = val;
@@ -383,6 +388,7 @@ function compileDrills() {
           if (key === 'ID') item.id = val;
           else if (key === 'Index') item.index = parseInt(val, 10);
           else if (key === 'Mode') item.mode = val;
+          else if (key === 'CEFR') item.cefrLevel = val;
           else if (key === 'Question') item.question = val;
           else if (key === 'Register') item.register = val;
           else if (key === 'Master Sentence') item.masterSentence = val;

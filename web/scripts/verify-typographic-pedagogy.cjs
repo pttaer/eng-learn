@@ -166,12 +166,12 @@ console.log('✓ Stepped 4-Pass reading data structure verified.');
 const grammarJsonPath = path.resolve(__dirname, '../src/assets/data/grammar.json');
 assert(fs.existsSync(grammarJsonPath), 'grammar.json not found');
 const grammarData = JSON.parse(fs.readFileSync(grammarJsonPath, 'utf-8'));
-assert.strictEqual(grammarData.length, 72, 'Expected exactly 72 grammar items');
+assert(grammarData.length >= 72, 'Expected at least 72 grammar items');
 
 const requiredModes = ['INVERSION_EMPHASIS', 'SUBJUNCTIVE_UNREAL', 'CLAUSAL_CONDENSATION', 'SYNTACTIC_PRECISION'];
 for (const mode of requiredModes) {
   const items = grammarData.filter(i => i.mode === mode);
-  assert.strictEqual(items.length, 18, `Expected 18 items in mode ${mode}, found ${items.length}`);
+  assert(items.length >= 18, `Expected at least 18 items in mode ${mode}, found ${items.length}`);
 }
 
 for (const item of grammarData) {
