@@ -674,169 +674,6 @@
       }
     },
     {
-      "id": "reading-art-4",
-      "title": "Politics and the English Language: Rhetorical Decadence and Syntactic Clarity",
-      "stage": "Stage 4: Mastery & Polymathy (CEFR C2)",
-      "cefrLevel": "C2",
-      "genre": "Political Philosophy, Rhetoric & Stylistics",
-      "source": "Adapted from George Orwell (1946)",
-      "wordCount": 440,
-      "readingTime": "3.7 min @ 120 WPM (Intensive)",
-      "content": "Most people who bother with the matter at all would admit that the English language is in a bad way, but it is generally assumed that we cannot by conscious action do anything about it. Our civilization is decadent and our language—so the argument runs—must inevitably share in the general collapse. It follows that any struggle against the abuse of language is a sentimental archaism, like preferring candles to electric light or hansom cabs to aeroplanes. Underneath this lies the half-conscious belief that language is a natural growth and not an instrument which we shape for our own purposes.\n\nNow, it is clear that the decline of a language must ultimately have political and economic causes: it is not due simply to the bad influence of this or that individual writer. But an effect can become a cause, reinforcing the original cause and producing the same effect in an intensified form, and so on indefinitely. A man may take to drink because he feels himself to be a failure, and then fail all the more completely because he drinks. It is rather the same thing that is happening to the English language. It becomes ugly and inaccurate because our thoughts are foolish, but the slovenliness of our language makes it easier for us to have foolish thoughts.\n\nThe point is that the process is reversible. Modern English, especially written English, is full of bad habits which spread by imitation and which can be avoided if one is willing to take the necessary trouble. If one gets rid of these habits one can think more clearly, and to think clearly is a necessary first step toward political regeneration: so that the fight against bad English is not frivolous and is not the exclusive concern of professional writers. By pruning staleness of imagery, pretentious diction, and dying metaphors, we restore language as an authentic instrument of precision.",
-      "fourPassProtocol": {
-        "pass1ColdRead": {
-          "thesisGist": "Political and intellectual decadence corrupts language through stale metaphors and imprecise jargon, yet because linguistic slovenliness and foolish thoughts reinforce each other reciprocally, deliberate stylistic clarity is an indispensable catalyst for political and cognitive regeneration.",
-          "markedLexicalTargets": [
-            "sentimental archaism",
-            "reciprocal causality",
-            "slovenliness of language",
-            "political regeneration",
-            "pretentious diction",
-            "dying metaphors",
-            "stale imagery",
-            "conscious instrument"
-          ],
-          "comprehensionChecks": [
-            {
-              "question": "What common fatalistic assumption about language decay does Orwell dispute?",
-              "answer": "The belief that linguistic decline is an inevitable byproduct of civilizational collapse that cannot be resisted or reversed by conscious human agency."
-            },
-            {
-              "question": "How does Orwell describe the recursive feedback loop between thought and language?",
-              "answer": "Slovenly language makes it easier to entertain foolish thoughts, while foolish thoughts in turn further debase language, producing an intensifying downward spiral."
-            },
-            {
-              "question": "Why is the campaign for clear English not merely a trivial aesthetic concern?",
-              "answer": "Because thinking clearly is the foundational prerequisite for political renewal and defending against authoritarian obfuscation."
-            }
-          ]
-        },
-        "pass2SyntaxDissection": [
-          {
-            "sentenceIndex": 1,
-            "sentence": "Now, it is clear that the decline of a language must ultimately have political and economic causes: it is not due simply to the bad influence of this or that individual writer.",
-            "coreSVO": {
-              "subject": "it (anticipatory / dummy subject)",
-              "verb": "is",
-              "objectOrComplement": "clear (predicate adjective)"
-            },
-            "subordinateClauses": [
-              {
-                "type": "Noun Clause as Delayed Subject",
-                "clause": "that the decline of a language must ultimately have political and economic causes",
-                "function": "Functions as the extraposed logical subject of the primary assertion."
-              },
-              {
-                "type": "Coordinated Antithetical Independent Clause (Colon)",
-                "clause": "it is not due simply to the bad influence of this or that individual writer",
-                "function": "Refutes the simplistic reductionist alternative after the colon."
-              }
-            ],
-            "syntacticAnalysis": "Extraposed copular construction using anticipatory \"it\" creates an objective, authoritative rhetorical stance; the colon introduces an immediate negative antithesis clarifying the systemic nature of the phenomenon."
-          },
-          {
-            "sentenceIndex": 2,
-            "sentence": "If one gets rid of these habits one can think more clearly, and to think clearly is a necessary first step toward political regeneration: so that the fight against bad English is not frivolous and is not the exclusive concern of professional writers.",
-            "coreSVO": {
-              "subject": "to think clearly (infinitive clause as subject)",
-              "verb": "is",
-              "objectOrComplement": "a necessary first step toward political regeneration"
-            },
-            "subordinateClauses": [
-              {
-                "type": "Adverbial Clause of Condition",
-                "clause": "If one gets rid of these habits",
-                "function": "Sets the behavioural precondition for cognitive emancipation."
-              },
-              {
-                "type": "Coordinated Independent Clause",
-                "clause": "one can think more clearly",
-                "function": "First cognitive consequence."
-              },
-              {
-                "type": "Adverbial Clause of Result (Subordinating Conjunction \"so that\")",
-                "clause": "so that the fight against bad English is not frivolous and is not the exclusive concern of professional writers",
-                "function": "Extends the stylistic act into a broader civic and democratic duty."
-              }
-            ],
-            "syntacticAnalysis": "Compound-complex periodic architecture linking individual cognitive discipline (\"gets rid of habits\") directly to collective political renewal through an infinitive subject and dual negated predicates (\"not frivolous\", \"not exclusive concern\")."
-          }
-        ],
-        "pass3SentenceMining": [
-          {
-            "id": "mine-reading-art-4-1",
-            "targetWord": "archaism",
-            "partOfSpeech": "noun",
-            "ipa": "/ˈɑː.keɪ.ɪ.zəm/",
-            "definition": "A thing that is very old or old-fashioned, especially an archaic word, style, or idiom retained out of sentimentality.",
-            "vietnamese": "từ cổ, phong cách cổ xưa, sự hoài cổ lỗi thời",
-            "contextSentence": "It follows that any struggle against the abuse of language is a sentimental archaism, like preferring candles to electric light.",
-            "collocations": [
-              "sentimental archaism",
-              "deliberate archaism",
-              "quaint archaism"
-            ],
-            "etymology": "Greek arkhaismos, from arkhaios (ancient), from arkhe (beginning)."
-          },
-          {
-            "id": "mine-reading-art-4-2",
-            "targetWord": "slovenliness",
-            "partOfSpeech": "noun",
-            "ipa": "/ˈslʌv.ən.li.nəs/",
-            "definition": "The quality of being untidy, careless, slipshod, or negligent, particularly in thought, expression, or appearance.",
-            "vietnamese": "sự cẩu thả, sự luộm thuộm, thói bất cẩn trong hành văn và tư duy",
-            "contextSentence": "The slovenliness of our language makes it easier for us to have foolish thoughts.",
-            "collocations": [
-              "verbal slovenliness",
-              "mental slovenliness",
-              "intellectual slovenliness"
-            ],
-            "etymology": "Middle Dutch sloovin (careless person) + Germanic -ness."
-          },
-          {
-            "id": "mine-reading-art-4-3",
-            "targetWord": "regeneration",
-            "partOfSpeech": "noun",
-            "ipa": "/rɪˌdʒen.əˈreɪ.ʃən/",
-            "definition": "The action or process of regenerating; renewal, revival, or rebirth, especially moral, political, or spiritual restoration.",
-            "vietnamese": "sự tái sinh, sự phục hưng, công cuộc đổi mới chấn hưng",
-            "contextSentence": "To think clearly is a necessary first step toward political regeneration.",
-            "collocations": [
-              "political regeneration",
-              "moral regeneration",
-              "economic regeneration"
-            ],
-            "etymology": "Latin regeneratio, from re- (again) + generare (beget, produce)."
-          },
-          {
-            "id": "mine-reading-art-4-4",
-            "targetWord": "pretentious",
-            "partOfSpeech": "adjective",
-            "ipa": "/prɪˈten.ʃəs/",
-            "definition": "Attempting to impress by affecting greater importance, talent, culture, or sophistication than is actually possessed.",
-            "vietnamese": "tự phụ, khoe mẽ, phô trương học thức một cách giả tạo",
-            "contextSentence": "By pruning staleness of imagery, pretentious diction, and dying metaphors, we restore language as an authentic instrument.",
-            "collocations": [
-              "pretentious diction",
-              "pretentious rhetoric",
-              "hopelessly pretentious"
-            ],
-            "etymology": "French prétentieux, from Latin praetendere (stretch out before, allege)."
-          }
-        ],
-        "pass4Synthesis": {
-          "modelPrécis": "Rather than accepting linguistic debasement as an inevitable symptom of civilizational decline, Orwell demonstrates that language and thought exist in a reciprocal feedback loop. Dismantling stale metaphors, pretentious diction, and passive evasion restores language as a precision instrument, establishing linguistic clarity as a vital prerequisite for cognitive autonomy and democratic resistance.",
-          "incorporatedVocabulary": [
-            "archaism",
-            "slovenliness",
-            "regeneration",
-            "pretentious"
-          ],
-          "syntacticReconstruction": "Inasmuch as political deception relies upon euphemistic abstraction to anesthetize critical judgment, the deliberate pruning of verbal slovenliness constitutes an urgent democratic imperative rather than an aesthetic indulgence."
-        }
-      }
-    },
-    {
       "id": "reading-art-5",
       "title": "Rules, Discretion, and the Quiet Authority of Precedent",
       "stage": "Stage 4: Mastery & Polymathy (CEFR C2)",
@@ -1032,158 +869,6 @@
       }
     },
     {
-      "id": "reading-art-5",
-      "title": "In Praise of Idleness: The Ethics of Leisure and Economic Rationality",
-      "stage": "Stage 4: Mastery & Polymathy (CEFR C2)",
-      "cefrLevel": "C2",
-      "genre": "Moral Philosophy, Political Economy & Social Ethics",
-      "source": "Adapted from Bertrand Russell (1932)",
-      "wordCount": 450,
-      "readingTime": "3.8 min @ 120 WPM (Intensive)",
-      "content": "Like most of my generation, I was brought up on the saying: \"Satan finds some mischief for idle hands to do.\" Being a highly virtuous child, I believed all that I was told, and acquired a conscience which has kept me working hard down to the present moment. But although my conscience has controlled my actions, my opinions have undergone a revolution. I think that there is far too much work done in the world, that immense harm is caused by the belief that work is virtuous, and that what needs to be preached in modern industrial countries is quite different from what always has been preached.\n\nFirst of all: what is work? Work is of two kinds: first, altering the position of matter at or near the earth's surface relatively to other such matter; second, telling other people to do so. The first kind is unpleasant and ill-paid; the second is pleasant and highly paid. The second kind is capable of indefinite extension: there are not only those who give orders, but those who give advice as to what orders should be given. In modern industrial society, the morality of work is the morality of slaves, designed by ruling oligarchies to convince the working majority that their toil is a noble moral duty rather than an extractive necessity.\n\nModern methods of production have given us the possibility of ease and security for all; we have chosen, instead, to have overwork for some and starvation for others. Hitherto we have continued to be as energetic as we were before there were machines; in this we have been foolish, but there is no reason to go on being foolish for ever. The wise use of leisure, it must be conceded, is a product of civilization and education. A person who has worked long hours all his life will become bored if he becomes suddenly idle. But without a considerable amount of leisure a human being is cut off from many of the best things, and civilization itself degenerates into sterile utilitarianism.",
-      "fourPassProtocol": {
-        "pass1ColdRead": {
-          "thesisGist": "The moral veneration of relentless work is an ideological tool historically fabricated by privileged classes to enforce compliance, whereas modern industrial productivity makes a universal four-hour workday and cultivated leisure the true prerequisites for a flourishing civilization.",
-          "markedLexicalTargets": [
-            "sterile utilitarianism",
-            "moral veneration",
-            "extractive necessity",
-            "ruling oligarchies",
-            "indefinite extension",
-            "wise use of leisure",
-            "ideological tool"
-          ],
-          "comprehensionChecks": [
-            {
-              "question": "How does Russell anatomize the two fundamental categories of work?",
-              "answer": "First, physical labor that alters the position of matter on the earth's surface; second, managerial labor that commands or advises others on how to do so."
-            },
-            {
-              "question": "According to Russell, what is the historical origin of the belief that work is virtuous?",
-              "answer": "It was an ideological doctrine promoted by the wealthy and powerful to induce the laboring classes to work willingly beyond subsistence needs."
-            },
-            {
-              "question": "Why does Russell argue that modern machine production justifies shortening work hours?",
-              "answer": "Because mechanized efficiency allows society to fulfill its material needs with minimal labor, liberating time for cultural, intellectual, and creative development."
-            }
-          ]
-        },
-        "pass2SyntaxDissection": [
-          {
-            "sentenceIndex": 1,
-            "sentence": "Modern methods of production have given us the possibility of ease and security for all; we have chosen, instead, to have overwork for some and starvation for others.",
-            "coreSVO": {
-              "subject": "Modern methods of production",
-              "verb": "have given",
-              "objectOrComplement": "us the possibility of ease and security for all"
-            },
-            "subordinateClauses": [
-              {
-                "type": "Coordinated Antithetical Independent Clause (Semicolon)",
-                "clause": "we have chosen, instead, to have overwork for some and starvation for others",
-                "function": "Introduces the societal paradox through antithetical parallelism (\"ease and security for all\" vs \"overwork for some and starvation for others\")."
-              }
-            ],
-            "syntacticAnalysis": "Balanced compound sentence linked by semicolon with parenthetical disjunctive adverb (\"instead\"). Contrasts technological potential with political failure through chiasmus and parallel prepositional phrases (\"for all\" versus \"for some ... for others\")."
-          },
-          {
-            "sentenceIndex": 2,
-            "sentence": "But without a considerable amount of leisure a human being is cut off from many of the best things, and civilization itself degenerates into sterile utilitarianism.",
-            "coreSVO": {
-              "subject": "a human being",
-              "verb": "is cut off",
-              "objectOrComplement": "from many of the best things"
-            },
-            "subordinateClauses": [
-              {
-                "type": "Fronted Prepositional Conditional Modifier",
-                "clause": "without a considerable amount of leisure",
-                "function": "Sets the essential negative condition."
-              },
-              {
-                "type": "Coordinated Resultative Clause",
-                "clause": "and civilization itself degenerates into sterile utilitarianism",
-                "function": "Scales the consequence from individual deprivation to macro-civilizational decay."
-              }
-            ],
-            "syntacticAnalysis": "Compounded predicate where the intensive reflexive pronoun (\"itself\") emphasizes the collective tragedy, culminating in the evocative conceptual nominalization \"sterile utilitarianism\"."
-          }
-        ],
-        "pass3SentenceMining": [
-          {
-            "id": "mine-reading-art-5-1",
-            "targetWord": "utilitarianism",
-            "partOfSpeech": "noun",
-            "ipa": "/juːˌtɪl.ɪˈteə.ri.ə.nɪ.zəm/",
-            "definition": "The doctrine that actions are right if they are useful or for the benefit of a majority; practical usefulness divorced from beauty, joy, or spiritual depth.",
-            "vietnamese": "chủ nghĩa công lợi, quan điểm thực dụng vị lợi ích trước mắt",
-            "contextSentence": "Civilization itself degenerates into sterile utilitarianism without leisure.",
-            "collocations": [
-              "sterile utilitarianism",
-              "crude utilitarianism",
-              "rigid utilitarianism"
-            ],
-            "etymology": "Latin utilis (useful) + -arian + -ism."
-          },
-          {
-            "id": "mine-reading-art-5-2",
-            "targetWord": "veneration",
-            "partOfSpeech": "noun",
-            "ipa": "/ˌven.əˈreɪ.ʃən/",
-            "definition": "Great respect, reverence, or profound awe accorded to someone or something considered holy or intrinsically noble.",
-            "vietnamese": "sự sùng kính, lòng tôn kính thiêng liêng, sự tôn sùng mù quáng",
-            "contextSentence": "Immense harm is caused by the moral veneration of ceaseless toil.",
-            "collocations": [
-              "moral veneration",
-              "deep veneration",
-              "object of veneration"
-            ],
-            "etymology": "Latin veneratio, from venerari (to worship, revere)."
-          },
-          {
-            "id": "mine-reading-art-5-3",
-            "targetWord": "extractive",
-            "partOfSpeech": "adjective",
-            "ipa": "/ɪkˈstræk.tɪv/",
-            "definition": "Tending toward or characterized by the extraction of resources, value, or labor without reciprocal contribution or replenishment.",
-            "vietnamese": "mang tính bòn rút, bóc lột, chỉ khai thác mà không bồi hoàn",
-            "contextSentence": "Convince the working majority that their toil is a noble duty rather than an extractive necessity.",
-            "collocations": [
-              "extractive necessity",
-              "extractive economy",
-              "extractive institutions"
-            ],
-            "etymology": "Latin extractivus, from extrahere (draw out)."
-          },
-          {
-            "id": "mine-reading-art-5-4",
-            "targetWord": "oligarchy",
-            "partOfSpeech": "noun",
-            "ipa": "/ˈɒl.ɪ.ɡɑː.ki/",
-            "definition": "A small group of people having control of a country, organization, or institution, typically governing in their own interest.",
-            "vietnamese": "tập đoàn đầu sỏ, chế độ quả đầu, nhóm thiểu số thống trị",
-            "contextSentence": "Morality designed by ruling oligarchies to protect their accumulated privileges.",
-            "collocations": [
-              "ruling oligarchies",
-              "financial oligarchy",
-              "entrench an oligarchy"
-            ],
-            "etymology": "Greek oligarkhia, from oligos (few) + arkhein (to rule)."
-          }
-        ],
-        "pass4Synthesis": {
-          "modelPrécis": "Bertrand Russell deconstructs the traditional work ethic as an antiquated dogma used by privileged elites to perpetuate economic exploitation. In the machine age, where technological productivity can readily ensure universal security, liberating human beings from ceaseless toil to pursue cultivated leisure is the essential foundation of genuine culture, creativity, and humane civilization.",
-          "incorporatedVocabulary": [
-            "utilitarianism",
-            "veneration",
-            "extractive",
-            "oligarchy"
-          ],
-          "syntacticReconstruction": "While the gospel of relentless toil was systematically promulgated to legitimize extractive economic arrangements, modern industrial surplus renders such self-abnegation an obstacle to civilizational flourishing."
-        }
-      }
-    },
-    {
       "id": "reading-art-6",
       "title": "Deep Attention, Cognitive Architecture, and the Epistemology of Flow",
       "stage": "Stage 4: Mastery & Polymathy (CEFR C2)",
@@ -1337,10 +1022,325 @@
       }
     },
     {
-      "id": "reading-art-6",
+      "id": "reading-art-7",
+      "title": "In Praise of Idleness: The Ethics of Leisure and Economic Rationality",
+      "stage": "Stage 3: Advanced Competency (CEFR C1)",
+      "cefrLevel": "C1",
+      "genre": "Moral Philosophy, Political Economy & Social Ethics",
+      "source": "Adapted from Bertrand Russell (1932)",
+      "wordCount": 450,
+      "readingTime": "3.8 min @ 120 WPM (Intensive)",
+      "content": "Like most of my generation, I was brought up on the saying: \"Satan finds some mischief for idle hands to do.\" Being a highly virtuous child, I believed all that I was told, and acquired a conscience which has kept me working hard down to the present moment. But although my conscience has controlled my actions, my opinions have undergone a revolution. I think that there is far too much work done in the world, that immense harm is caused by the belief that work is virtuous, and that what needs to be preached in modern industrial countries is quite different from what always has been preached.\n\nFirst of all: what is work? Work is of two kinds: first, altering the position of matter at or near the earth's surface relatively to other such matter; second, telling other people to do so. The first kind is unpleasant and ill-paid; the second is pleasant and highly paid. The second kind is capable of indefinite extension: there are not only those who give orders, but those who give advice as to what orders should be given. In modern industrial society, the morality of work is the morality of slaves, designed by ruling oligarchies to convince the working majority that their toil is a noble moral duty rather than an extractive necessity.\n\nModern methods of production have given us the possibility of ease and security for all; we have chosen, instead, to have overwork for some and starvation for others. Hitherto we have continued to be as energetic as we were before there were machines; in this we have been foolish, but there is no reason to go on being foolish for ever. The wise use of leisure, it must be conceded, is a product of civilization and education. A person who has worked long hours all his life will become bored if he becomes suddenly idle. But without a considerable amount of leisure a human being is cut off from many of the best things, and civilization itself degenerates into sterile utilitarianism.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "The moral veneration of relentless work is an ideological tool historically fabricated by privileged classes to enforce compliance, whereas modern industrial productivity makes a universal four-hour workday and cultivated leisure the true prerequisites for a flourishing civilization.",
+          "markedLexicalTargets": [
+            "sterile utilitarianism",
+            "moral veneration",
+            "extractive necessity",
+            "ruling oligarchies",
+            "indefinite extension",
+            "wise use of leisure",
+            "ideological tool"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "How does Russell anatomize the two fundamental categories of work?",
+              "answer": "First, physical labor that alters the position of matter on the earth's surface; second, managerial labor that commands or advises others on how to do so."
+            },
+            {
+              "question": "According to Russell, what is the historical origin of the belief that work is virtuous?",
+              "answer": "It was an ideological doctrine promoted by the wealthy and powerful to induce the laboring classes to work willingly beyond subsistence needs."
+            },
+            {
+              "question": "Why does Russell argue that modern machine production justifies shortening work hours?",
+              "answer": "Because mechanized efficiency allows society to fulfill its material needs with minimal labor, liberating time for cultural, intellectual, and creative development."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "Modern methods of production have given us the possibility of ease and security for all; we have chosen, instead, to have overwork for some and starvation for others.",
+            "coreSVO": {
+              "subject": "Modern methods of production",
+              "verb": "have given",
+              "objectOrComplement": "us the possibility of ease and security for all"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Coordinated Antithetical Independent Clause (Semicolon)",
+                "clause": "we have chosen, instead, to have overwork for some and starvation for others",
+                "function": "Introduces the societal paradox through antithetical parallelism (\"ease and security for all\" vs \"overwork for some and starvation for others\")."
+              }
+            ],
+            "syntacticAnalysis": "Balanced compound sentence linked by semicolon with parenthetical disjunctive adverb (\"instead\"). Contrasts technological potential with political failure through chiasmus and parallel prepositional phrases (\"for all\" versus \"for some ... for others\")."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "But without a considerable amount of leisure a human being is cut off from many of the best things, and civilization itself degenerates into sterile utilitarianism.",
+            "coreSVO": {
+              "subject": "a human being",
+              "verb": "is cut off",
+              "objectOrComplement": "from many of the best things"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Fronted Prepositional Conditional Modifier",
+                "clause": "without a considerable amount of leisure",
+                "function": "Sets the essential negative condition."
+              },
+              {
+                "type": "Coordinated Resultative Clause",
+                "clause": "and civilization itself degenerates into sterile utilitarianism",
+                "function": "Scales the consequence from individual deprivation to macro-civilizational decay."
+              }
+            ],
+            "syntacticAnalysis": "Compounded predicate where the intensive reflexive pronoun (\"itself\") emphasizes the collective tragedy, culminating in the evocative conceptual nominalization \"sterile utilitarianism\"."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-art-7-1",
+            "targetWord": "utilitarianism",
+            "partOfSpeech": "noun",
+            "ipa": "/juːˌtɪl.ɪˈteə.ri.ə.nɪ.zəm/",
+            "definition": "The doctrine that actions are right if they are useful or for the benefit of a majority; practical usefulness divorced from beauty, joy, or spiritual depth.",
+            "vietnamese": "chủ nghĩa công lợi, quan điểm thực dụng vị lợi ích trước mắt",
+            "contextSentence": "Civilization itself degenerates into sterile utilitarianism without leisure.",
+            "collocations": [
+              "sterile utilitarianism",
+              "crude utilitarianism",
+              "rigid utilitarianism"
+            ],
+            "etymology": "Latin utilis (useful) + -arian + -ism."
+          },
+          {
+            "id": "mine-reading-art-7-2",
+            "targetWord": "veneration",
+            "partOfSpeech": "noun",
+            "ipa": "/ˌven.əˈreɪ.ʃən/",
+            "definition": "Great respect, reverence, or profound awe accorded to someone or something considered holy or intrinsically noble.",
+            "vietnamese": "sự sùng kính, lòng tôn kính thiêng liêng, sự tôn sùng mù quáng",
+            "contextSentence": "Immense harm is caused by the moral veneration of ceaseless toil.",
+            "collocations": [
+              "moral veneration",
+              "deep veneration",
+              "object of veneration"
+            ],
+            "etymology": "Latin veneratio, from venerari (to worship, revere)."
+          },
+          {
+            "id": "mine-reading-art-7-3",
+            "targetWord": "extractive",
+            "partOfSpeech": "adjective",
+            "ipa": "/ɪkˈstræk.tɪv/",
+            "definition": "Tending toward or characterized by the extraction of resources, value, or labor without reciprocal contribution or replenishment.",
+            "vietnamese": "mang tính bòn rút, bóc lột, chỉ khai thác mà không bồi hoàn",
+            "contextSentence": "Convince the working majority that their toil is a noble duty rather than an extractive necessity.",
+            "collocations": [
+              "extractive necessity",
+              "extractive economy",
+              "extractive institutions"
+            ],
+            "etymology": "Latin extractivus, from extrahere (draw out)."
+          },
+          {
+            "id": "mine-reading-art-7-4",
+            "targetWord": "oligarchy",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈɒl.ɪ.ɡɑː.ki/",
+            "definition": "A small group of people having control of a country, organization, or institution, typically governing in their own interest.",
+            "vietnamese": "tập đoàn đầu sỏ, chế độ quả đầu, nhóm thiểu số thống trị",
+            "contextSentence": "Morality designed by ruling oligarchies to protect their accumulated privileges.",
+            "collocations": [
+              "ruling oligarchies",
+              "financial oligarchy",
+              "entrench an oligarchy"
+            ],
+            "etymology": "Greek oligarkhia, from oligos (few) + arkhein (to rule)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "Bertrand Russell deconstructs the traditional work ethic as an antiquated dogma used by privileged elites to perpetuate economic exploitation. In the machine age, where technological productivity can readily ensure universal security, liberating human beings from ceaseless toil to pursue cultivated leisure is the essential foundation of genuine culture, creativity, and humane civilization.",
+          "incorporatedVocabulary": [
+            "utilitarianism",
+            "veneration",
+            "extractive",
+            "oligarchy"
+          ],
+          "syntacticReconstruction": "While the gospel of relentless toil was systematically promulgated to legitimize extractive economic arrangements, modern industrial surplus renders such self-abnegation an obstacle to civilizational flourishing."
+        }
+      }
+    },
+    {
+      "id": "reading-art-8",
+      "title": "Politics and the English Language: Rhetorical Decadence and Syntactic Clarity",
+      "stage": "Stage 3: Advanced Competency (CEFR C1)",
+      "cefrLevel": "C1",
+      "genre": "Political Philosophy, Rhetoric & Stylistics",
+      "source": "Adapted from George Orwell (1946)",
+      "wordCount": 440,
+      "readingTime": "3.7 min @ 120 WPM (Intensive)",
+      "content": "Most people who bother with the matter at all would admit that the English language is in a bad way, but it is generally assumed that we cannot by conscious action do anything about it. Our civilization is decadent and our language—so the argument runs—must inevitably share in the general collapse. It follows that any struggle against the abuse of language is a sentimental archaism, like preferring candles to electric light or hansom cabs to aeroplanes. Underneath this lies the half-conscious belief that language is a natural growth and not an instrument which we shape for our own purposes.\n\nNow, it is clear that the decline of a language must ultimately have political and economic causes: it is not due simply to the bad influence of this or that individual writer. But an effect can become a cause, reinforcing the original cause and producing the same effect in an intensified form, and so on indefinitely. A man may take to drink because he feels himself to be a failure, and then fail all the more completely because he drinks. It is rather the same thing that is happening to the English language. It becomes ugly and inaccurate because our thoughts are foolish, but the slovenliness of our language makes it easier for us to have foolish thoughts.\n\nThe point is that the process is reversible. Modern English, especially written English, is full of bad habits which spread by imitation and which can be avoided if one is willing to take the necessary trouble. If one gets rid of these habits one can think more clearly, and to think clearly is a necessary first step toward political regeneration: so that the fight against bad English is not frivolous and is not the exclusive concern of professional writers. By pruning staleness of imagery, pretentious diction, and dying metaphors, we restore language as an authentic instrument of precision.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Political and intellectual decadence corrupts language through stale metaphors and imprecise jargon, yet because linguistic slovenliness and foolish thoughts reinforce each other reciprocally, deliberate stylistic clarity is an indispensable catalyst for political and cognitive regeneration.",
+          "markedLexicalTargets": [
+            "sentimental archaism",
+            "reciprocal causality",
+            "slovenliness of language",
+            "political regeneration",
+            "pretentious diction",
+            "dying metaphors",
+            "stale imagery",
+            "conscious instrument"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "What common fatalistic assumption about language decay does Orwell dispute?",
+              "answer": "The belief that linguistic decline is an inevitable byproduct of civilizational collapse that cannot be resisted or reversed by conscious human agency."
+            },
+            {
+              "question": "How does Orwell describe the recursive feedback loop between thought and language?",
+              "answer": "Slovenly language makes it easier to entertain foolish thoughts, while foolish thoughts in turn further debase language, producing an intensifying downward spiral."
+            },
+            {
+              "question": "Why is the campaign for clear English not merely a trivial aesthetic concern?",
+              "answer": "Because thinking clearly is the foundational prerequisite for political renewal and defending against authoritarian obfuscation."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "Now, it is clear that the decline of a language must ultimately have political and economic causes: it is not due simply to the bad influence of this or that individual writer.",
+            "coreSVO": {
+              "subject": "it (anticipatory / dummy subject)",
+              "verb": "is",
+              "objectOrComplement": "clear (predicate adjective)"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Noun Clause as Delayed Subject",
+                "clause": "that the decline of a language must ultimately have political and economic causes",
+                "function": "Functions as the extraposed logical subject of the primary assertion."
+              },
+              {
+                "type": "Coordinated Antithetical Independent Clause (Colon)",
+                "clause": "it is not due simply to the bad influence of this or that individual writer",
+                "function": "Refutes the simplistic reductionist alternative after the colon."
+              }
+            ],
+            "syntacticAnalysis": "Extraposed copular construction using anticipatory \"it\" creates an objective, authoritative rhetorical stance; the colon introduces an immediate negative antithesis clarifying the systemic nature of the phenomenon."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "If one gets rid of these habits one can think more clearly, and to think clearly is a necessary first step toward political regeneration: so that the fight against bad English is not frivolous and is not the exclusive concern of professional writers.",
+            "coreSVO": {
+              "subject": "to think clearly (infinitive clause as subject)",
+              "verb": "is",
+              "objectOrComplement": "a necessary first step toward political regeneration"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Adverbial Clause of Condition",
+                "clause": "If one gets rid of these habits",
+                "function": "Sets the behavioural precondition for cognitive emancipation."
+              },
+              {
+                "type": "Coordinated Independent Clause",
+                "clause": "one can think more clearly",
+                "function": "First cognitive consequence."
+              },
+              {
+                "type": "Adverbial Clause of Result (Subordinating Conjunction \"so that\")",
+                "clause": "so that the fight against bad English is not frivolous and is not the exclusive concern of professional writers",
+                "function": "Extends the stylistic act into a broader civic and democratic duty."
+              }
+            ],
+            "syntacticAnalysis": "Compound-complex periodic architecture linking individual cognitive discipline (\"gets rid of habits\") directly to collective political renewal through an infinitive subject and dual negated predicates (\"not frivolous\", \"not exclusive concern\")."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-art-8-1",
+            "targetWord": "archaism",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈɑː.keɪ.ɪ.zəm/",
+            "definition": "A thing that is very old or old-fashioned, especially an archaic word, style, or idiom retained out of sentimentality.",
+            "vietnamese": "từ cổ, phong cách cổ xưa, sự hoài cổ lỗi thời",
+            "contextSentence": "It follows that any struggle against the abuse of language is a sentimental archaism, like preferring candles to electric light.",
+            "collocations": [
+              "sentimental archaism",
+              "deliberate archaism",
+              "quaint archaism"
+            ],
+            "etymology": "Greek arkhaismos, from arkhaios (ancient), from arkhe (beginning)."
+          },
+          {
+            "id": "mine-reading-art-8-2",
+            "targetWord": "slovenliness",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈslʌv.ən.li.nəs/",
+            "definition": "The quality of being untidy, careless, slipshod, or negligent, particularly in thought, expression, or appearance.",
+            "vietnamese": "sự cẩu thả, sự luộm thuộm, thói bất cẩn trong hành văn và tư duy",
+            "contextSentence": "The slovenliness of our language makes it easier for us to have foolish thoughts.",
+            "collocations": [
+              "verbal slovenliness",
+              "mental slovenliness",
+              "intellectual slovenliness"
+            ],
+            "etymology": "Middle Dutch sloovin (careless person) + Germanic -ness."
+          },
+          {
+            "id": "mine-reading-art-8-3",
+            "targetWord": "regeneration",
+            "partOfSpeech": "noun",
+            "ipa": "/rɪˌdʒen.əˈreɪ.ʃən/",
+            "definition": "The action or process of regenerating; renewal, revival, or rebirth, especially moral, political, or spiritual restoration.",
+            "vietnamese": "sự tái sinh, sự phục hưng, công cuộc đổi mới chấn hưng",
+            "contextSentence": "To think clearly is a necessary first step toward political regeneration.",
+            "collocations": [
+              "political regeneration",
+              "moral regeneration",
+              "economic regeneration"
+            ],
+            "etymology": "Latin regeneratio, from re- (again) + generare (beget, produce)."
+          },
+          {
+            "id": "mine-reading-art-8-4",
+            "targetWord": "pretentious",
+            "partOfSpeech": "adjective",
+            "ipa": "/prɪˈten.ʃəs/",
+            "definition": "Attempting to impress by affecting greater importance, talent, culture, or sophistication than is actually possessed.",
+            "vietnamese": "tự phụ, khoe mẽ, phô trương học thức một cách giả tạo",
+            "contextSentence": "By pruning staleness of imagery, pretentious diction, and dying metaphors, we restore language as an authentic instrument.",
+            "collocations": [
+              "pretentious diction",
+              "pretentious rhetoric",
+              "hopelessly pretentious"
+            ],
+            "etymology": "French prétentieux, from Latin praetendere (stretch out before, allege)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "Rather than accepting linguistic debasement as an inevitable symptom of civilizational decline, Orwell demonstrates that language and thought exist in a reciprocal feedback loop. Dismantling stale metaphors, pretentious diction, and passive evasion restores language as a precision instrument, establishing linguistic clarity as a vital prerequisite for cognitive autonomy and democratic resistance.",
+          "incorporatedVocabulary": [
+            "archaism",
+            "slovenliness",
+            "regeneration",
+            "pretentious"
+          ],
+          "syntacticReconstruction": "Inasmuch as political deception relies upon euphemistic abstraction to anesthetize critical judgment, the deliberate pruning of verbal slovenliness constitutes an urgent democratic imperative rather than an aesthetic indulgence."
+        }
+      }
+    },
+    {
+      "id": "reading-art-9",
       "title": "Counting the Uncountable: The Tentative Science of Measuring Biodiversity",
-      "stage": "Stage 4: Mastery & Polymathy (CEFR C2)",
-      "cefrLevel": "C2",
+      "stage": "Stage 3: Advanced Competency (CEFR C1)",
+      "cefrLevel": "C1",
       "genre": "Ecology & Empirical Science Writing (Academic Hedging)",
       "source": "Original passage written for English Singularity",
       "wordCount": 431,
@@ -1467,7 +1467,7 @@
         ],
         "pass3SentenceMining": [
           {
-            "id": "mine-reading-art-6-1",
+            "id": "mine-reading-art-9-1",
             "targetWord": "fraught",
             "partOfSpeech": "adjective",
             "ipa": "/frɔːt/",
@@ -1483,7 +1483,7 @@
             "etymology": "Middle English, past participle of fraughten (to load a ship), from Middle Dutch vracht (cargo, freight)."
           },
           {
-            "id": "mine-reading-art-6-2",
+            "id": "mine-reading-art-9-2",
             "targetWord": "cryptic",
             "partOfSpeech": "adjective",
             "ipa": "/ˈkrɪp.tɪk/",
@@ -1499,7 +1499,7 @@
             "etymology": "Late Latin crypticus, from Greek kryptikos (hidden), from kryptein (to hide)."
           },
           {
-            "id": "mine-reading-art-6-3",
+            "id": "mine-reading-art-9-3",
             "targetWord": "extrapolate",
             "partOfSpeech": "verb",
             "ipa": "/ɪkˈstræp.ə.leɪt/",
@@ -1515,7 +1515,7 @@
             "etymology": "Coined from extra- (outside) + interpolate, from Latin interpolare (to refurbish, alter)."
           },
           {
-            "id": "mine-reading-art-6-4",
+            "id": "mine-reading-art-9-4",
             "targetWord": "privilege",
             "partOfSpeech": "verb",
             "ipa": "/ˈprɪv.əl.ɪdʒ/",

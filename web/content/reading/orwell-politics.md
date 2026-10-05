@@ -1,8 +1,8 @@
 ---
-id: reading-art-4
+id: reading-art-8
 title: "Politics and the English Language: Rhetorical Decadence and Syntactic Clarity"
-stage: "Stage 4: Mastery & Polymathy (CEFR C2)"
-cefrLevel: C2
+stage: "Stage 3: Advanced Competency (CEFR C1)"
+cefrLevel: C1
 genre: "Political Philosophy, Rhetoric & Stylistics"
 source: "Adapted from George Orwell (1946)"
 wordCount: 440

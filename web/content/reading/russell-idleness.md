@@ -1,8 +1,8 @@
 ---
-id: reading-art-5
+id: reading-art-7
 title: "In Praise of Idleness: The Ethics of Leisure and Economic Rationality"
-stage: "Stage 4: Mastery & Polymathy (CEFR C2)"
-cefrLevel: C2
+stage: "Stage 3: Advanced Competency (CEFR C1)"
+cefrLevel: C1
 genre: "Moral Philosophy, Political Economy & Social Ethics"
 source: "Adapted from Bertrand Russell (1932)"
 wordCount: 450

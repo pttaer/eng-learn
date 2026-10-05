@@ -1,8 +1,8 @@
 ---
-id: reading-art-6
+id: reading-art-9
 title: "Counting the Uncountable: The Tentative Science of Measuring Biodiversity"
-stage: "Stage 4: Mastery & Polymathy (CEFR C2)"
-cefrLevel: C2
+stage: "Stage 3: Advanced Competency (CEFR C1)"
+cefrLevel: C1
 genre: "Ecology & Empirical Science Writing (Academic Hedging)"
 source: "Original passage written for English Singularity"
 wordCount: 431
