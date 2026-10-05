@@ -4,23 +4,25 @@ Spec: `docs/superpowers/specs/2026-10-05-cefr-ladder-design.md`. After each task
 
 ## Phase 1: Foundation (existing B2-C2 only)
 - [ ] 1.1 `core/cefr.ts` (type, order, labels) + `verify-cefr.cjs` skeleton asserting tags exist (fails first). Commit `feat(cefr): level type and verifier`.
-- [ ] 1.2 Compiler: parse `CEFR` for grammar/vocab/listening/drills (block field), reading frontmatter `cefr`, collocations 6th column; emit `cefr` in JSON. Tag all existing md sources per the mapping. Verify passes. Commit `feat(cefr): tag all existing content`.
-- [ ] 1.3 Widen `SkillNode.cefrLevel` to `Cefr`; `AppStorageState.learnerLevel` + v1->v2 migration (default B2) + getters/setters. Commit `feat(cefr): learner level state`.
-- [ ] 1.4 Header level badge + picker (replaces hard-coded C1 Scholar rank text); a11y (button, aria-haspopup, Escape claims). Commit `feat(cefr): header level picker`.
+- [ ] 1.2 Relax hard-coded counts in `verify-*.cjs` to minimums; positional collocation parser. Commit `fix(content): positional collocation parser, count minimums`.
+- [ ] 1.2b Compiler emits `cefrLevel` for grammar/vocab/listening/drills (block field `CEFR`), reading frontmatter `cefrLevel`, collocations 6th column.
+- [ ] 1.2c Tag existing content **per item with a one-line rationale**, one commit per pillar (grammar, vocab, collocations, reading, listening, drills). Tier/category mapping is only a hint. Verify passes. Commits `feat(cefr): tag <pillar>`.
+- [ ] 1.3 Widen `SkillNode.cefrLevel` to `Cefr`; `AppStorageState.learnerLevel` + v1->v2 migration incl. `importBackup` (default B2) + effective-level helper + getters/setters. Commit `feat(cefr): learner level state`.
+- [ ] 1.4 Find what renders "C1 Scholar" (header badge, tree "RANK:"); header level badge + picker; a11y (button, aria-haspopup, Escape claims). Commit `feat(cefr): header level picker`.
 
 ## Phase 2: Level-aware UI (still B2-C2 data)
-- [ ] 2.1 Vocab + Grammar: CEFR chips replace Lvl 1/2/3; modes derived from data. Commit `feat(cefr): level chips in vocab and grammar`.
-- [ ] 2.2 Reading, Listening, Collocations, Drills filter by learner level + "below my level" toggle. Commit `feat(cefr): level filter across pillars`.
-- [ ] 2.3 Skill tree: 8 nodes per branch layout, locking by learner level, new `*-0a/0b/0c` placeholder nodes appear only when their content phase lands (feature-flag by data presence). Commit `feat(cefr): 8-tier skill tree`.
+- [ ] 2.1 Vocab + Grammar: CEFR chips replace Lvl 1/2/3; modes derived from data; UI count strings computed. Commit `feat(cefr): level chips in vocab and grammar`.
+- [ ] 2.2 Reading, Listening, Collocations, Drills filter *new* cards by effective level + "below my level" toggle; the SRS due queue stays level-independent. Computed count strings. Commit `feat(cefr): level filter across pillars`.
+- [ ] 2.3 Skill tree: new nodes `<branch>-a1/-a2/-b1` (concrete ids + coordinates written here after measuring crowding); sub-B2 prerequisites count as satisfied for learners at or above that level; a node renders only when content for it exists. Commit `feat(cefr): 8-tier skill tree`.
 
 ## Phase 3: B1 content (all pillars)
-- [ ] 3.1 B1 collocations 150, vocab 30, grammar 24, reading 3, listening 6, drills 12+12 (subagent per file, verify script, spot-check sample). Tree nodes B1 added. Commits per pillar.
+- [ ] 3.1 B1 gap-fill after re-tagging (target = gap; indicative 100-150 collocations, 20-30 vocab, 24 grammar, 3 reading, 6 listening, 12+12 drills); collocations append at 1001+. Subagent per file, verify script, spot-check sample. B1 tree nodes added. Commits per pillar.
 
 ## Phase 4: A2 content (same targets)
 ## Phase 5: A1 content (same targets; Vietnamese-first glosses)
 
 ## Phase 6: Placement quiz
-- [ ] 6.1 12-item MCQ from vocab+grammar, result sets learner level; skippable; first-run only. Commit `feat(cefr): placement quiz`.
+- [ ] 6.1 18-item MCQ (3 per level) from vocab+grammar, result sets learner level (highest level with >=2/3, stop at first failure); skippable; first-run only. Commit `feat(cefr): placement quiz`.
 
 ## Phase 7: Close-out
 - [ ] 7.1 Update `STATUS.md`, screenshots of all views at desktop and 390, gaps measurement.
