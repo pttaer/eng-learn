@@ -171,9 +171,14 @@ html, body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 48px;
+  min-height: 48px;
+  height: auto;
+  flex-wrap: wrap;
+  gap: var(--space-8, 8px);
+  row-gap: var(--space-8, 8px);
   border-bottom: var(--border-width) solid var(--border-hairline);
   padding-bottom: var(--space-12);
+  box-sizing: border-box;
 }
 
 .hud-brand {
@@ -205,7 +210,58 @@ html, body {
 .hud-actions {
   display: flex;
   align-items: center;
-  gap: var(--space-16);
+  flex-wrap: wrap;
+  gap: var(--space-8, 8px);
+}
+
+/* Dynamic Streak Counter Pill (ENG-73) */
+.btn-streak-pill {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: var(--text-xs, 12px);
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  background: var(--bg-surface, #111622);
+  transition: background-color var(--duration-fast, 0.15s), border-color var(--duration-fast, 0.15s), transform var(--duration-fast, 0.15s);
+}
+
+.btn-streak-pill:hover {
+  background: var(--accent-gold-soft, rgba(165, 180, 252, 0.16));
+  transform: translateY(-1px);
+}
+
+.btn-streak-pill:active {
+  transform: translateY(0);
+}
+
+/* Notification Permission Toggle Switch in Settings Modal (ENG-73) */
+.btn-notifications-toggle {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all var(--duration-fast, 0.15s) ease;
+}
+
+.btn-notifications-toggle.active,
+.btn-notifications-toggle[aria-pressed="true"] {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  background: var(--accent-gold-soft, rgba(165, 180, 252, 0.12));
 }
 
 /* Master Volume HUD Cluster */
@@ -556,15 +612,38 @@ html[data-motion="reduce"] {
   }
 }
 
-/* Narrow viewports: icon-only actions, drop telemetry, keep header on one row */
+/* Narrow viewports: icon-only actions, drop telemetry, wrap header cleanly without horizontal scroll */
 @media (max-width: 760px) {
-  .hud-header { gap: var(--space-8, 8px); }
+  .hud-header {
+    gap: var(--space-8, 8px);
+    height: auto;
+    min-height: 44px;
+    padding-bottom: 8px;
+  }
+  .hud-actions {
+    gap: 4px;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
   .hud-header .btn-label,
   .hud-header .hud-telemetry-cluster,
   .hud-header .hud-rank-badge,
   .hud-header .active-route-badge { display: none !important; }
-  .hud-header .hud-btn { padding: 6px 10px; }
+  .hud-header .hud-btn { padding: 6px 8px; font-size: 11px; }
   .hud-brand-title { font-size: 12px !important; white-space: nowrap; }
+}
+
+@media (max-width: 480px) {
+  .hud-header {
+    justify-content: flex-start;
+  }
+  .hud-brand {
+    gap: 6px;
+  }
+  .btn-streak-pill {
+    padding: 3px 6px;
+    font-size: 11px;
+  }
 }
 
 @media (max-width: 760px) {

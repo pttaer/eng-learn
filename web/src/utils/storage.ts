@@ -32,6 +32,7 @@ export interface AppStorageState {
   }>;
   totalCardsReviewed: number;
   lastSyncTimestamp: number;
+  notificationsEnabled?: boolean;
 }
 
 const STORAGE_KEY = 'STARK_ENG_STATE';
@@ -71,7 +72,8 @@ const DEFAULT_STATE: AppStorageState = {
   },
   habitProgress: {},
   totalCardsReviewed: 0,
-  lastSyncTimestamp: Date.now()
+  lastSyncTimestamp: Date.now(),
+  notificationsEnabled: false
 };
 
 export class StorageManager {
@@ -250,6 +252,16 @@ export class StorageManager {
     return this.loadState().soundMuted;
   }
 
+  public static isNotificationsEnabled(): boolean {
+    return Boolean(this.loadState().notificationsEnabled);
+  }
+
+  public static setNotificationsEnabled(enabled: boolean): void {
+    const state = this.loadState();
+    state.notificationsEnabled = enabled;
+    this.saveState(state);
+  }
+
   public static setHabitTask(dayNum: number, taskIndex: number, checked: boolean, totalTasksForDay: number): void {
     const state = this.loadState();
     if (!state.habitProgress[dayNum]) {
@@ -302,6 +314,20 @@ export class StorageManager {
     if (state.streak.currentStreak > state.streak.longestStreak) {
       state.streak.longestStreak = state.streak.currentStreak;
     }
+  }
+
+  public static getStreak(): number {
+    return this.loadState().streak.currentStreak || 0;
+  }
+
+  public static isNotificationEnabled(): boolean {
+    return this.loadState().notificationsEnabled ?? false;
+  }
+
+  public static setNotificationEnabled(enabled: boolean): void {
+    const state = this.loadState();
+    state.notificationsEnabled = enabled;
+    this.saveState(state);
   }
 
   public static exportBackup(): string {

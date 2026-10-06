@@ -45,6 +45,12 @@ export class HeaderHUD {
       if (streakEl) {
         streakEl.innerHTML = `${icon('flame')} ${progState.streak} DAYS`;
       }
+      const streakPill = this.element.querySelector('.btn-streak-pill');
+      if (streakPill) {
+        streakPill.innerHTML = `🔥 ${progState.streak}d`;
+        streakPill.setAttribute('title', `Daily Streak: ${progState.streak} days. Click to view Daily Workout on Constellation Tree`);
+        streakPill.setAttribute('aria-label', `Daily Streak: ${progState.streak} days`);
+      }
     });
 
     // Live update Zen button state when toggled via hotkey Z or elsewhere
@@ -63,6 +69,7 @@ export class HeaderHUD {
     const isMuted = AudioSynthesizer.isMute();
     const isTree = this.currentRoute === 'tree' || this.currentRoute === 'singularity';
     const progression = ProgressionEngine.getState();
+    const currentStreak = progression.streak || state.streak.currentStreak || 0;
 
     this.element.innerHTML = `
       <div class="hud-brand" style="display: flex; align-items: center; gap: 12px;">
@@ -80,9 +87,9 @@ export class HeaderHUD {
       </div>
 
       <div class="hud-telemetry-cluster" style="display: flex; gap: 20px; align-items: center;">
-        <div class="telemetry-item" title="Consecutive days you finished the daily workout" style="display: flex; align-items: center; gap: 6px;">
+        <div class="telemetry-item telemetry-streak-item" title="Consecutive days you finished the daily workout. Click to view Daily Workout on Constellation Tree" style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
           <span class="telemetry-label" style="font-size: 11px;">STREAK:</span>
-          <span class="telemetry-value telemetry-streak" style="color: var(--accent-gold); font-weight: 700;">${icon('flame')} ${progression.streak || state.streak.currentStreak} DAYS</span>
+          <span class="telemetry-value telemetry-streak" style="color: var(--accent-gold); font-weight: 700;">${icon('flame')} ${currentStreak} DAYS</span>
         </div>        <div class="telemetry-item" title="Share of flashcard reviews you recalled correctly" style="display: flex; align-items: center; gap: 6px;">
           <span class="telemetry-label" style="font-size: 11px;">RETENTION:</span>
           <span class="telemetry-value telemetry-retention" style="color: var(--good); font-weight: 700;">${stats.retentionRate}%</span>
@@ -90,6 +97,9 @@ export class HeaderHUD {
       </div>
 
       <div class="hud-actions header-actions" style="display: flex; gap: 8px; align-items: center;">
+        <button class="hud-btn btn-streak-pill" title="Daily Streak: ${currentStreak} days. Click to view Daily Workout on Constellation Tree" aria-label="Daily Streak: ${currentStreak} days">
+          🔥 ${currentStreak}d
+        </button>
         <button class="hud-btn btn-skill-radar" title="Launch CEFR Multi-Skill Diagnostic & Celestial Radar" aria-label="Skill Radar" style="border-color: var(--cyan, #38bdf8); color: var(--cyan, #38bdf8); font-weight: 700;">
           ${icon('target', 12)}<span class="btn-label"> RADAR</span>
         </button>
@@ -205,6 +215,30 @@ export class HeaderHUD {
       }
     });
 
+    const navigateToTreeOrWorkout = () => {
+      AudioSynthesizer.play('click');
+      if (this.currentRoute !== 'tree') {
+        if (this.onNavigateToTree) {
+          this.onNavigateToTree();
+        } else {
+          window.location.hash = '#tree';
+        }
+      }
+      setTimeout(() => {
+        const workoutBanner = document.querySelector('.workout-banner, .workout-panel, .daily-workout-card');
+        if (workoutBanner) {
+          workoutBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          (workoutBanner as HTMLElement).focus?.();
+        }
+      }, 50);
+    };
+
+    const streakPill = this.element.querySelector('.btn-streak-pill');
+    streakPill?.addEventListener('click', navigateToTreeOrWorkout);
+
+    const streakTelemetry = this.element.querySelector('.telemetry-streak-item');
+    streakTelemetry?.addEventListener('click', navigateToTreeOrWorkout);
+
     const settingsBtn = this.element.querySelector('.btn-settings');
     settingsBtn?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
@@ -288,6 +322,9 @@ export class HeaderHUD {
           <button class="hud-btn btn-restart-tour" style="padding: 12px; justify-content: center; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
             ${icon('compass')} Re-run Onboarding Tour
           </button>
+          <button class="hud-btn btn-notifications-toggle ${StorageManager.isNotificationsEnabled() ? 'active' : ''}" style="padding: 12px; justify-content: center; font-weight: 600;" aria-pressed="${StorageManager.isNotificationsEnabled()}">
+            🔔 Daily Review Alerts: ${StorageManager.isNotificationsEnabled() ? 'ON' : 'OFF'}
+          </button>
           <button class="hud-btn btn-backup-export" style="padding: 12px; justify-content: center; font-weight: 600;">
             ${icon('download')} Export Progress Backup (JSON)
           </button>
@@ -313,6 +350,55 @@ export class HeaderHUD {
       modal.remove();
       SpotlightTour.start(true);
     });
+
+    const notifBtn = modal.querySelector('.btn-notifications-toggle') as HTMLElement | null;
+    notifBtn?.addEventListener('click', async () => {
+      AudioSynthesizer.play('click');
+      const currentlyEnabled = StorageManager.isNotificationsEnabled();
+
+      if (!currentlyEnabled) {
+        if (typeof window !== 'undefined' && 'Notification' in window) {
+          if (Notification.permission === 'granted') {
+            StorageManager.setNotificationsEnabled(true);
+            updateNotifButton(true);
+            AudioSynthesizer.play('absorb');
+          } else if (Notification.permission === 'denied') {
+            alert('Notification permission was blocked in your browser settings.\nPlease grant notification permissions in your browser address bar to enable daily review alerts.');
+            StorageManager.setNotificationsEnabled(false);
+            updateNotifButton(false);
+          } else {
+            try {
+              const res = await Notification.requestPermission();
+              if (res === 'granted') {
+                StorageManager.setNotificationsEnabled(true);
+                updateNotifButton(true);
+                AudioSynthesizer.play('absorb');
+              } else {
+                StorageManager.setNotificationsEnabled(false);
+                updateNotifButton(false);
+              }
+            } catch {
+              StorageManager.setNotificationsEnabled(true);
+              updateNotifButton(true);
+            }
+          }
+        } else {
+          StorageManager.setNotificationsEnabled(true);
+          updateNotifButton(true);
+          AudioSynthesizer.play('absorb');
+        }
+      } else {
+        StorageManager.setNotificationsEnabled(false);
+        updateNotifButton(false);
+      }
+    });
+
+    const updateNotifButton = (enabled: boolean) => {
+      if (!notifBtn) return;
+      notifBtn.classList.toggle('active', enabled);
+      notifBtn.setAttribute('aria-pressed', String(enabled));
+      notifBtn.innerHTML = `${icon('bell')} <span class="notifications-label">Daily Review Alerts: ${enabled ? 'ON' : 'OFF'}</span>`;
+    };
 
     modal.querySelector('.btn-motion-toggle')?.addEventListener('click', (e) => {
       const root = document.documentElement;
