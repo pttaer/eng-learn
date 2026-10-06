@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "savedAt": "2026-10-06T10:24:21.126Z",
+  "savedAt": "2026-10-06T09:27:46.242Z",
   "agents": [
     {
       "id": "god",
@@ -11,16 +11,15 @@
       "project": "hive",
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
-      "status": "working",
-      "action": "ni",
+      "status": "idle",
+      "action": "running the floor",
       "progress": 0,
       "currentStation": "desk",
       "ptyId": "pty-god",
       "command": "agy --model \"Gemini 3.8 Flash (High)\" --dangerously-skip-permissions",
       "provider": "antigravity",
       "model": "Gemini 3.8 Flash (High)",
-      "isGod": true,
-      "lastPrompt": "/engi want you to audit all the material in the app, fix anything thats not well done. I'm putting this app out for even children, the future is in your hands"
+      "isGod": true
     },
     {
       "id": "jim-mul1meuh",
@@ -32,7 +31,7 @@
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
       "status": "idle",
-      "action": "idle",
+      "action": "starting up",
       "progress": 0,
       "currentStation": "desk",
       "ptyId": "pty-jim-mul1meuh",
@@ -50,8 +49,8 @@
       "project": "E:\\Eng",
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
-      "status": "working",
-      "action": "reading a new message",
+      "status": "idle",
+      "action": "starting up",
       "progress": 0,
       "currentStation": "desk",
       "ptyId": "pty-dwight-mul1u508",
@@ -69,8 +68,8 @@
       "project": "E:\\Eng",
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
-      "status": "working",
-      "action": "reading a new message",
+      "status": "idle",
+      "action": "starting up",
       "progress": 0,
       "currentStation": "desk",
       "ptyId": "pty-andy-mul1ug04",
@@ -89,7 +88,7 @@
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
       "status": "idle",
-      "action": "idle",
+      "action": "starting up",
       "progress": 0,
       "currentStation": "desk",
       "ptyId": "pty-phyllis-mul1ur07",
@@ -108,7 +107,7 @@
       "tmuxTarget": "",
       "cwd": "E:\\Eng",
       "status": "idle",
-      "action": "awaiting",
+      "action": "starting up",
       "progress": 0,
       "currentStation": "desk",
       "ptyId": "pty-jim-mum0qdlb",
@@ -159,12 +158,12 @@
   "queues": {
     "god": [
       {
-        "id": "q-1791282260618-15",
-        "text": "You have new hive inbox message(s) — at least: 2026-10-06T10-24-18-550Z-326e92. Read your inbox, act on what is pending there, and move handled ones to inbox/.done/. Your inbox directory is authoritative: work everything still pending in it, and if a named id is already in inbox/.done/ you handled it on an earlier turn and can ignore that one. Act autonomously; only message god if you genuinely need a decision.",
-        "ts": 1791282260618,
+        "id": "q-1791278660619-1",
+        "text": "You have new hive inbox message(s) — at least: 2026-10-06T09-24-18-239Z-51d1ae. Read your inbox, act on what is pending there, and move handled ones to inbox/.done/. Your inbox directory is authoritative: work everything still pending in it, and if a named id is already in inbox/.done/ you handled it on an earlier turn and can ignore that one. Act autonomously; only message god if you genuinely need a decision.",
+        "ts": 1791278660619,
         "precondition": "inbox-nonempty"
       }
     ]
   },
-  "selectedId": "god"
+  "selectedId": "jim-mum0qdlb"
 }

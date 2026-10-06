@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "savedAt": "2026-10-06T10:24:21.126Z",
+  "savedAt": "2026-10-06T09:42:29.142Z",
   "agents": [
     {
       "id": "god",
@@ -157,11 +157,11 @@
   ],
   "restorable": [],
   "queues": {
-    "god": [
+    "jim-mum0qdlb": [
       {
-        "id": "q-1791282260618-15",
-        "text": "You have new hive inbox message(s) — at least: 2026-10-06T10-24-18-550Z-326e92. Read your inbox, act on what is pending there, and move handled ones to inbox/.done/. Your inbox directory is authoritative: work everything still pending in it, and if a named id is already in inbox/.done/ you handled it on an earlier turn and can ignore that one. Act autonomously; only message god if you genuinely need a decision.",
-        "ts": 1791282260618,
+        "id": "q-1791279748628-13",
+        "text": "You have new hive inbox message(s) — at least: 2026-10-06T09-42-27-145Z-4c098a. Read your inbox, act on what is pending there, and move handled ones to inbox/.done/. Your inbox directory is authoritative: work everything still pending in it, and if a named id is already in inbox/.done/ you handled it on an earlier turn and can ignore that one. Act autonomously; only message god if you genuinely need a decision.",
+        "ts": 1791279748628,
         "precondition": "inbox-nonempty"
       }
     ]
