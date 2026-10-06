@@ -64,6 +64,7 @@ export class PerspectiveCanvas {
   public onAbsorptionStreak?: () => void;
   private running: boolean = true;
   private animFrameId: number | null = null;
+  private motionObserver: MutationObserver | null = null;
 
   constructor(canvas: HTMLCanvasElement, collocations: any[]) {
     this.canvas = canvas;
@@ -80,6 +81,7 @@ export class PerspectiveCanvas {
     this.resize();
     this.initEntities();
     this.bindEvents();
+    this.setupMotionObserver();
     this.startLoop();
   }
 
@@ -277,12 +279,74 @@ export class PerspectiveCanvas {
     }, 180);
   }
 
+  private isReducedMotion(): boolean {
+    if (typeof document === 'undefined') return false;
+    return (
+      document.documentElement.getAttribute('data-motion') === 'reduce' ||
+      document.documentElement.dataset.motion === 'reduce' ||
+      (typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches === true)
+    );
+  }
+
+  private setupMotionObserver(): void {
+    if (typeof MutationObserver === 'undefined' || typeof document === 'undefined') return;
+    if (this.motionObserver) return;
+    this.motionObserver = new MutationObserver(() => {
+      this.handleMotionChange();
+    });
+    this.motionObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-motion']
+    });
+
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener?.('change', () => {
+        this.handleMotionChange();
+      });
+    }
+  }
+
+  private handleMotionChange(): void {
+    if (this.isReducedMotion()) {
+      if (this.animFrameId !== null) {
+        cancelAnimationFrame(this.animFrameId);
+        this.animFrameId = null;
+      }
+      if (this.running) {
+        this.update(0);
+        this.draw();
+      }
+    } else {
+      if (this.running && this.animFrameId === null) {
+        this.lastFrameTime = performance.now();
+        this.startLoop();
+      }
+    }
+  }
+
   private lastFrameTime: number = performance.now();
 
   private startLoop(): void {
     if (!this.running) return;
+    if (this.animFrameId !== null) {
+      cancelAnimationFrame(this.animFrameId);
+      this.animFrameId = null;
+    }
+    if (this.isReducedMotion()) {
+      // Zero-cycle suspension: draw single static frame and do not schedule requestAnimationFrame
+      this.update(0);
+      this.draw();
+      return;
+    }
+
     const render = (now: number) => {
       if (!this.running) return;
+      if (this.isReducedMotion()) {
+        this.animFrameId = null;
+        this.update(0);
+        this.draw();
+        return;
+      }
       const rawDt = (now - this.lastFrameTime) / 1000;
       this.lastFrameTime = now;
       const dt = Math.min(rawDt > 0 ? rawDt : 0.016, 0.033);
@@ -321,6 +385,16 @@ export class PerspectiveCanvas {
         this.animFrameId = null;
       }
     }
+  }
+
+  public destroy(): void {
+    this.running = false;
+    if (this.animFrameId !== null) {
+      cancelAnimationFrame(this.animFrameId);
+      this.animFrameId = null;
+    }
+    this.motionObserver?.disconnect();
+    this.motionObserver = null;
   }
 
   public isVisible(): boolean {
@@ -634,6 +708,20 @@ export class CardTiltController {
       }
     });
 
+    if (typeof MutationObserver !== 'undefined' && typeof document !== 'undefined') {
+      const observer = new MutationObserver(() => {
+        this.checkReducedMotion();
+        if (this.isReducedMotion && this.activeCard) {
+          this.resetTilt(this.activeCard);
+          this.activeCard = null;
+        }
+      });
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-motion']
+      });
+    }
+
     document.addEventListener('pointermove', (e: PointerEvent) => {
       if (this.isReducedMotion) return;
 
@@ -661,8 +749,13 @@ export class CardTiltController {
   }
 
   private static checkReducedMotion(): void {
-    if (typeof window !== 'undefined' && window.matchMedia) {
-      this.isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (typeof document !== 'undefined') {
+      const isAttr = document.documentElement.getAttribute('data-motion') === 'reduce' ||
+                     document.documentElement.dataset.motion === 'reduce';
+      const isMedia = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches === true;
+      this.isReducedMotion = isAttr || isMedia;
+    } else {
+      this.isReducedMotion = false;
     }
   }
 
@@ -762,6 +855,7 @@ export class NebulaCanvas {
   private dpr: number = 1;
   private lastTime: number = performance.now();
   private resizeObserver: ResizeObserver | null = null;
+  private motionObserver: MutationObserver | null = null;
   private isReducedMotion: boolean = false;
 
   constructor(canvas: HTMLCanvasElement) {
@@ -777,13 +871,52 @@ export class NebulaCanvas {
       this.resizeObserver.observe(canvas.parentElement);
     }
     window.addEventListener('resize', () => this.resize());
+    this.setupMotionObserver();
 
     this.start();
   }
 
   private checkReducedMotion(): void {
+    if (typeof document !== 'undefined') {
+      const isAttr = document.documentElement.getAttribute('data-motion') === 'reduce' ||
+                     document.documentElement.dataset.motion === 'reduce';
+      const isMedia = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches === true;
+      this.isReducedMotion = isAttr || isMedia;
+    } else {
+      this.isReducedMotion = false;
+    }
+  }
+
+  private setupMotionObserver(): void {
+    if (typeof MutationObserver === 'undefined' || typeof document === 'undefined') return;
+    if (this.motionObserver) return;
+    this.motionObserver = new MutationObserver(() => {
+      this.handleMotionChange();
+    });
+    this.motionObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-motion']
+    });
+
     if (typeof window !== 'undefined' && window.matchMedia) {
-      this.isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener?.('change', () => {
+        this.handleMotionChange();
+      });
+    }
+  }
+
+  private handleMotionChange(): void {
+    this.checkReducedMotion();
+    if (this.isReducedMotion) {
+      if (this.animId !== null) {
+        cancelAnimationFrame(this.animId);
+        this.animId = null;
+      }
+      this.draw(performance.now(), 0);
+    } else {
+      if (this.running && this.animId === null) {
+        this.start();
+      }
     }
   }
 
@@ -832,17 +965,28 @@ export class NebulaCanvas {
   }
 
   public start(): void {
-    if (this.running) return;
+    if (this.running && this.animId !== null) return;
     this.running = true;
     this.lastTime = performance.now();
+    this.checkReducedMotion();
 
     if (this.isReducedMotion) {
+      if (this.animId !== null) {
+        cancelAnimationFrame(this.animId);
+        this.animId = null;
+      }
       this.draw(this.lastTime, 0);
       return;
     }
 
     const loop = (now: number) => {
       if (!this.running) return;
+      this.checkReducedMotion();
+      if (this.isReducedMotion) {
+        this.animId = null;
+        this.draw(now, 0);
+        return;
+      }
       const dt = Math.min((now - this.lastTime) / 1000, 0.05);
       this.lastTime = now;
 
@@ -865,6 +1009,8 @@ export class NebulaCanvas {
     this.stop();
     this.resizeObserver?.disconnect();
     this.resizeObserver = null;
+    this.motionObserver?.disconnect();
+    this.motionObserver = null;
   }
 
   private draw(now: number, dt: number): void {

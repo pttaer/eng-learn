@@ -55,6 +55,8 @@ export class SpeakingDossier {
   private latestAnalysis: AcousticAnalysis | null = null;
   private hasCompletedTake: boolean = false;
   private waveformRaf: number | null = null;
+  private motionObserver: MutationObserver | null = null;
+  private activeCanvas: HTMLCanvasElement | null = null;
 
   public onBatchComplete?: () => void;
 
@@ -71,6 +73,7 @@ export class SpeakingDossier {
 
     this.acousticEngine = new AcousticEngine();
     this.collocationSpotter = new CollocationSpotter();
+    this.setupMotionObserver();
   }
 
   private setLevel(level: Cefr): void {
@@ -229,13 +232,13 @@ export class SpeakingDossier {
       <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed var(--border-hairline); padding-top: 8px; gap: 14px;">
         <div style="display: flex; flex-direction: column; align-items: center;">
           <div style="position: relative; width: 64px; height: 64px;">
-            <svg viewBox="0 0 36 36" style="width: 100%; height: 100%; transform: rotate(-90deg);">
+            <svg viewBox="0 0 36 36" style="width: 100%; height: 100%; transform: rotate(-90deg);" aria-hidden="true">
               <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                 fill="none" stroke="var(--border-subtle)" stroke-width="2.5" />
               <path class="timer-progress-ring" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                 fill="none" stroke="var(--accent-gold)" stroke-width="2.5" stroke-dasharray="100, 100" />
             </svg>
-            <div class="timer-display-text" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 13px; font-weight: 700;">
+            <div class="timer-display-text" role="timer" aria-live="polite" aria-atomic="true" aria-label="Speaking take countdown timer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 13px; font-weight: 700;">
               ${this.formatTime(this.secondsRemaining)}
             </div>
           </div>
@@ -546,111 +549,171 @@ export class SpeakingDossier {
     return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
   }
 
-  private initDualTraceCanvas(canvas: HTMLCanvasElement): void {
+  private setupMotionObserver(): void {
+    if (typeof MutationObserver === 'undefined' || typeof document === 'undefined') return;
+    if (this.motionObserver) return;
+    this.motionObserver = new MutationObserver(() => {
+      this.handleMotionChange();
+    });
+    this.motionObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-motion']
+    });
+
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener?.('change', () => {
+        this.handleMotionChange();
+      });
+    }
+  }
+
+  private handleMotionChange(): void {
+    if (this.isReducedMotion()) {
+      if (this.waveformRaf !== null) {
+        cancelAnimationFrame(this.waveformRaf);
+        this.waveformRaf = null;
+      }
+      if (this.activeCanvas && this.activeCanvas.isConnected) {
+        this.drawWaveformFrame(this.activeCanvas);
+      }
+    } else {
+      if (this.waveformRaf === null && this.activeCanvas && this.activeCanvas.isConnected) {
+        this.initDualTraceCanvas(this.activeCanvas);
+      }
+    }
+  }
+
+  private drawWaveformFrame(canvas: HTMLCanvasElement): void {
     const ctx = canvas.getContext('2d')!;
+    const w = canvas.width;
+    const h = canvas.height;
+    const halfH = h / 2;
+
+    ctx.clearRect(0, 0, w, h);
+
+    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    const gridColor = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.08)';
+    const track1Color = isDark ? '#a5b4fc' : '#5b5bd6';
+    const track2Color = isDark ? '#34d399' : '#059669';
+
+    // Center divider & measurement grid
+    ctx.strokeStyle = gridColor;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(0, halfH);
+    ctx.lineTo(w, halfH);
+    for (let x = 0; x < w; x += 48) {
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, h);
+    }
+    ctx.stroke();
+
+    // TRACK 1: Native Benchmark Intonation (Top Half: 0 to halfH)
+    ctx.save();
+    ctx.strokeStyle = track1Color;
+    ctx.lineWidth = 1.5;
+    ctx.setLineDash([3, 3]);
+    ctx.beginPath();
+    const track1Mid = halfH * 0.55;
+    for (let x = 0; x < w; x += 3) {
+      const t = x / w;
+      const peak = Math.exp(-Math.pow((t - 0.38) / 0.18, 2)) * 14;
+      const declination = (1 - t * 0.4) * 4;
+      const microMod = Math.sin(t * Math.PI * 8) * 2;
+      const y = track1Mid - (peak + declination + microMod);
+      if (x === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    ctx.restore();
+
+    // TRACK 2: Student Take (Bottom Half: halfH to h)
+    ctx.save();
+    ctx.strokeStyle = track2Color;
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    const track2Mid = halfH + halfH * 0.5;
+
+    if (this.isTimerRunning && this.acousticEngine.isRecording) {
+      // Realtime live microphone oscilloscope
+      const buffer = new Float32Array(256);
+      this.acousticEngine.getRealtimeAudioData(buffer);
+      const sliceWidth = w / buffer.length;
+      let x = 0;
+      for (let i = 0; i < buffer.length; i++) {
+        const v = buffer[i];
+        const y = track2Mid + v * (halfH * 0.45);
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+        x += sliceWidth;
+      }
+      ctx.stroke();
+    } else if (this.latestAnalysis && this.latestAnalysis.pitchSamples.length > 0) {
+      // Post-take recorded pitch contour
+      const pitches = this.latestAnalysis.pitchSamples;
+      const step = w / Math.max(1, pitches.length - 1);
+      let started = false;
+
+      for (let i = 0; i < pitches.length; i++) {
+        const p = pitches[i];
+        const x = i * step;
+        if (p > 0) {
+          const norm = Math.max(0, Math.min(1, (p - 80) / 320));
+          const y = (h - 6) - norm * (halfH * 0.82);
+          if (!started) {
+            ctx.moveTo(x, y);
+            started = true;
+          } else {
+            ctx.lineTo(x, y);
+          }
+        } else {
+          started = false;
+        }
+      }
+      ctx.stroke();
+    } else {
+      // Idle baseline
+      ctx.moveTo(0, track2Mid);
+      ctx.lineTo(w, track2Mid);
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  private initDualTraceCanvas(canvas: HTMLCanvasElement): void {
+    this.activeCanvas = canvas;
     if (this.waveformRaf) {
       cancelAnimationFrame(this.waveformRaf);
+      this.waveformRaf = null;
+    }
+
+    if (this.isReducedMotion() && !this.isTimerRunning) {
+      // Zero-cycle suspension: draw single static frame and do not schedule requestAnimationFrame
+      this.drawWaveformFrame(canvas);
+      return;
     }
 
     const draw = () => {
-      const w = canvas.width;
-      const h = canvas.height;
-      const halfH = h / 2;
+      this.drawWaveformFrame(canvas);
 
-      ctx.clearRect(0, 0, w, h);
-
-      const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-      const gridColor = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.08)';
-      const track1Color = isDark ? '#a5b4fc' : '#5b5bd6';
-      const track2Color = isDark ? '#34d399' : '#059669';
-
-      // Center divider & measurement grid
-      ctx.strokeStyle = gridColor;
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.moveTo(0, halfH);
-      ctx.lineTo(w, halfH);
-      for (let x = 0; x < w; x += 48) {
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, h);
+      if (this.isReducedMotion() && !this.isTimerRunning) {
+        this.waveformRaf = null;
+        return;
       }
-      ctx.stroke();
-
-      // TRACK 1: Native Benchmark Intonation (Top Half: 0 to halfH)
-      ctx.save();
-      ctx.strokeStyle = track1Color;
-      ctx.lineWidth = 1.5;
-      ctx.setLineDash([3, 3]);
-      ctx.beginPath();
-      const track1Mid = halfH * 0.55;
-      for (let x = 0; x < w; x += 3) {
-        const t = x / w;
-        const peak = Math.exp(-Math.pow((t - 0.38) / 0.18, 2)) * 14;
-        const declination = (1 - t * 0.4) * 4;
-        const microMod = Math.sin(t * Math.PI * 8) * 2;
-        const y = track1Mid - (peak + declination + microMod);
-        if (x === 0) ctx.moveTo(x, y);
-        else ctx.lineTo(x, y);
-      }
-      ctx.stroke();
-      ctx.restore();
-
-      // TRACK 2: Student Take (Bottom Half: halfH to h)
-      ctx.save();
-      ctx.strokeStyle = track2Color;
-      ctx.lineWidth = 1.5;
-      ctx.beginPath();
-      const track2Mid = halfH + halfH * 0.5;
-
-      if (this.isTimerRunning && this.acousticEngine.isRecording) {
-        // Realtime live microphone oscilloscope
-        const buffer = new Float32Array(256);
-        this.acousticEngine.getRealtimeAudioData(buffer);
-        const sliceWidth = w / buffer.length;
-        let x = 0;
-        for (let i = 0; i < buffer.length; i++) {
-          const v = buffer[i];
-          const y = track2Mid + v * (halfH * 0.45);
-          if (i === 0) ctx.moveTo(x, y);
-          else ctx.lineTo(x, y);
-          x += sliceWidth;
-        }
-        ctx.stroke();
-      } else if (this.latestAnalysis && this.latestAnalysis.pitchSamples.length > 0) {
-        // Post-take recorded pitch contour
-        const pitches = this.latestAnalysis.pitchSamples;
-        const step = w / Math.max(1, pitches.length - 1);
-        let started = false;
-
-        for (let i = 0; i < pitches.length; i++) {
-          const p = pitches[i];
-          const x = i * step;
-          if (p > 0) {
-            const norm = Math.max(0, Math.min(1, (p - 80) / 320));
-            const y = (h - 6) - norm * (halfH * 0.82);
-            if (!started) {
-              ctx.moveTo(x, y);
-              started = true;
-            } else {
-              ctx.lineTo(x, y);
-            }
-          } else {
-            started = false;
-          }
-        }
-        ctx.stroke();
-      } else {
-        // Idle baseline
-        ctx.moveTo(0, track2Mid);
-        ctx.lineTo(w, track2Mid);
-        ctx.stroke();
-      }
-      ctx.restore();
 
       this.waveformRaf = requestAnimationFrame(draw);
     };
 
     draw();
+  }
+
+  public isReducedMotion(): boolean {
+    if (typeof document === 'undefined') return false;
+    return (
+      document.documentElement.getAttribute('data-motion') === 'reduce' ||
+      document.documentElement.dataset.motion === 'reduce' ||
+      (typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches === true)
+    );
   }
 
   private stopPlayback(): void {
@@ -683,6 +746,9 @@ export class SpeakingDossier {
       cancelAnimationFrame(this.waveformRaf);
       this.waveformRaf = null;
     }
+    this.motionObserver?.disconnect();
+    this.motionObserver = null;
+    this.activeCanvas = null;
     this.collocationSpotter.stopListening();
     this.acousticEngine.dispose();
   }

@@ -20,12 +20,45 @@ export class ParticleCanvas {
   private static ctx: CanvasRenderingContext2D | null = null;
   private static particles: Particle[] = [];
   private static animFrameId: number | null = null;
+  private static motionObserver: MutationObserver | null = null;
 
   public static readonly COLORS = ['#5b5bd6', '#a5b4fc', '#ddd6fe', '#111111', '#ffffff'];
   public static readonly SHAPES: ('star' | 'rect' | 'circle')[] = ['star', 'rect', 'circle'];
 
+  public static isReducedMotion(): boolean {
+    if (typeof document === 'undefined') return false;
+    return (
+      document.documentElement.getAttribute('data-motion') === 'reduce' ||
+      document.documentElement.dataset.motion === 'reduce' ||
+      (typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches === true)
+    );
+  }
+
+  private static setupMotionObserver(): void {
+    if (typeof MutationObserver === 'undefined' || typeof document === 'undefined') return;
+    if (this.motionObserver) return;
+    this.motionObserver = new MutationObserver(() => {
+      if (this.isReducedMotion()) {
+        this.clear();
+      }
+    });
+    this.motionObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-motion']
+    });
+
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener?.('change', () => {
+        if (this.isReducedMotion()) {
+          this.clear();
+        }
+      });
+    }
+  }
+
   public static init(canvas?: HTMLCanvasElement | null): void {
     if (typeof window === 'undefined') return;
+    this.setupMotionObserver();
 
     if (canvas) {
       this.canvas = canvas;
@@ -66,10 +99,12 @@ export class ParticleCanvas {
 
   public static burst(originX?: number, originY?: number, count = 75): void {
     if (typeof window === 'undefined') return;
+    this.setupMotionObserver();
+    if (this.isReducedMotion()) return; // Zero-cycle rendering suspension: no rAF or particles when reduced motion active
     if (!this.canvas || !this.ctx) {
       this.init();
     }
-    if (!this.canvas || !this.ctx) return;
+    if (this.isReducedMotion() || !this.canvas || !this.ctx) return;
 
     const cx = originX ?? window.innerWidth / 2;
     const cy = originY ?? window.innerHeight / 2;
@@ -161,6 +196,10 @@ export class ParticleCanvas {
   }
 
   private static loop = (): void => {
+    if (this.isReducedMotion()) {
+      this.clear();
+      return;
+    }
     const hasMore = this.step();
     this.render();
 

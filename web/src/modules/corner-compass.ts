@@ -165,13 +165,73 @@ export class CornerCompass {
     });
   }
 
+  private animId: number | null = null;
+  private motionObserver: MutationObserver | null = null;
+
+  public isReducedMotion(): boolean {
+    if (typeof document === 'undefined') return false;
+    return (
+      document.documentElement.getAttribute('data-motion') === 'reduce' ||
+      document.documentElement.dataset.motion === 'reduce' ||
+      (typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches === true)
+    );
+  }
+
+  private setupMotionObserver(): void {
+    if (typeof MutationObserver === 'undefined' || typeof document === 'undefined') return;
+    if (this.motionObserver) return;
+    this.motionObserver = new MutationObserver(() => {
+      this.handleMotionChange();
+    });
+    this.motionObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-motion']
+    });
+
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener?.('change', () => {
+        this.handleMotionChange();
+      });
+    }
+  }
+
+  private handleMotionChange(): void {
+    if (this.isReducedMotion()) {
+      if (this.animId !== null) {
+        cancelAnimationFrame(this.animId);
+        this.animId = null;
+      }
+      this.drawMiniUrchin();
+    } else {
+      if (this.animId === null) {
+        this.startMiniUrchinLoop();
+      }
+    }
+  }
+
   private startMiniUrchinLoop(): void {
+    this.setupMotionObserver();
+    if (this.animId !== null) {
+      cancelAnimationFrame(this.animId);
+      this.animId = null;
+    }
+    if (this.isReducedMotion()) {
+      // Zero-cycle suspension: draw single static frame and do not schedule requestAnimationFrame
+      this.drawMiniUrchin();
+      return;
+    }
+
     const loop = () => {
+      if (this.isReducedMotion()) {
+        this.animId = null;
+        this.drawMiniUrchin();
+        return;
+      }
       this.angleOffset += 0.02;
       this.drawMiniUrchin();
-      requestAnimationFrame(loop);
+      this.animId = requestAnimationFrame(loop);
     };
-    requestAnimationFrame(loop);
+    this.animId = requestAnimationFrame(loop);
   }
 
   private drawMiniUrchin(): void {
@@ -229,5 +289,26 @@ export class CornerCompass {
 
   public setVisible(visible: boolean): void {
     this.element.style.display = visible ? 'block' : 'none';
+    if (!visible) {
+      if (this.animId !== null) {
+        cancelAnimationFrame(this.animId);
+        this.animId = null;
+      }
+    } else {
+      if (!this.isReducedMotion() && this.animId === null) {
+        this.startMiniUrchinLoop();
+      } else if (this.isReducedMotion()) {
+        this.drawMiniUrchin();
+      }
+    }
+  }
+
+  public destroy(): void {
+    if (this.animId !== null) {
+      cancelAnimationFrame(this.animId);
+      this.animId = null;
+    }
+    this.motionObserver?.disconnect();
+    this.motionObserver = null;
   }
 }

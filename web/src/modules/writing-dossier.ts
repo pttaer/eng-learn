@@ -318,7 +318,7 @@ export class WritingDossier {
             <!-- Side-by-Side Highlighted Diff -->
             <div style="margin-bottom: 24px;">
               <div class="telemetry-label" style="margin-bottom: 6px;">YOUR RECONSTRUCTION & CORRECTIONS</div>
-              <div class="copywork-diff-container" style="font-size: 16px; line-height: 1.8; padding: 14px; border: 1px solid var(--border-subtle); border-radius: 6px; background: var(--bg-canvas);">
+              <div class="copywork-diff-container" role="region" aria-label="Myers split-diff evaluation" aria-live="polite" aria-atomic="true" style="font-size: 16px; line-height: 1.8; padding: 14px; border: 1px solid var(--border-subtle); border-radius: 6px; background: var(--bg-canvas);">
                 ${this.renderDiffHTML(tokens)}
               </div>
             </div>

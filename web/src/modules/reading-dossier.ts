@@ -362,7 +362,7 @@ export class ReadingDossier {
       <div class="dossier-control-bar">
         <div class="dossier-tabs article-tabs" role="tablist" aria-label="Articles">
           ${this.articles.map((art, idx) => `
-            <button role="tab" aria-selected="${idx === this.currentArticleIndex}" class="hud-btn article-tab ${idx === this.currentArticleIndex ? 'active' : ''}" data-idx="${idx}" title="${this.escapeHtml(art.title)}" aria-label="Article ${idx + 1}: ${this.escapeHtml(art.title)}">
+            <button role="tab" aria-selected="${idx === this.currentArticleIndex}" tabindex="${idx === this.currentArticleIndex ? '0' : '-1'}" class="hud-btn article-tab ${idx === this.currentArticleIndex ? 'active' : ''}" data-idx="${idx}" title="${this.escapeHtml(art.title)}" aria-label="Article ${idx + 1}: ${this.escapeHtml(art.title)}">
               Art 0${idx + 1}: ${art.title}
             </button>
           `).join('')}
@@ -382,19 +382,31 @@ export class ReadingDossier {
           const isCompleted = cfg.pass < this.currentPass;
           const statusPrefix = isCompleted ? '✓ ' : '';
           return `
-            <button role="tab" aria-selected="${isActive}" class="stepper-step ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''}" data-pass="${cfg.pass}">
+            <button role="tab" id="reading-pass-tab-${cfg.pass}" aria-controls="reading-pass-panel" aria-selected="${isActive}" tabindex="${isActive ? '0' : '-1'}" class="stepper-step ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''}" data-pass="${cfg.pass}" aria-label="Pass ${cfg.pass}: ${cfg.badge}">
               <span class="step-badge">${statusPrefix}${cfg.badge}</span>
             </button>
           `;
-        }).join('<span class="stepper-arrow">→</span>')}
+        }).join('<span class="stepper-arrow" aria-hidden="true">→</span>')}
       </div>
 
-      <div class="reading-content-slot"></div>
+      <div class="reading-content-slot" id="reading-pass-panel" role="tabpanel" aria-labelledby="reading-pass-tab-${this.currentPass}"></div>
     `;
 
     this.bindEvents();
     this.renderCurrentPass();
     return this.container;
+  }
+
+  public switchPass(pass: ReadingPass, focusTab: boolean = false): void {
+    this.clearSkimTimer();
+    this.currentPass = pass;
+    this.activeVocabDrawerWord = null;
+    AudioSynthesizer.play('click');
+    this.render();
+    if (focusTab) {
+      const targetTab = this.container.querySelector(`.stepper-step[data-pass="${pass}"]`) as HTMLElement | null;
+      targetTab?.focus();
+    }
   }
 
   private bindEvents(): void {
@@ -414,17 +426,80 @@ export class ReadingDossier {
       });
     });
 
+    const artTablist = this.container.querySelector('.article-tabs');
+    if (artTablist) {
+      artTablist.addEventListener('keydown', (e: Event) => {
+        const ke = e as KeyboardEvent;
+        const total = this.articles.length;
+        if (total <= 1) return;
+        let targetIdx: number | null = null;
+        if (ke.key === 'ArrowRight' || ke.key === 'ArrowDown') {
+          ke.preventDefault();
+          ke.stopPropagation();
+          targetIdx = (this.currentArticleIndex + 1) % total;
+        } else if (ke.key === 'ArrowLeft' || ke.key === 'ArrowUp') {
+          ke.preventDefault();
+          ke.stopPropagation();
+          targetIdx = (this.currentArticleIndex - 1 + total) % total;
+        } else if (ke.key === 'Home') {
+          ke.preventDefault();
+          ke.stopPropagation();
+          targetIdx = 0;
+        } else if (ke.key === 'End') {
+          ke.preventDefault();
+          ke.stopPropagation();
+          targetIdx = total - 1;
+        }
+        if (targetIdx !== null) {
+          this.clearSkimTimer();
+          this.currentArticleIndex = targetIdx;
+          this.miningCardIndex = 0;
+          this.currentPass = 1;
+          this.activeVocabDrawerWord = null;
+          AudioSynthesizer.play('click');
+          this.render();
+          const targetTab = this.container.querySelector(`.article-tab[data-idx="${targetIdx}"]`) as HTMLElement | null;
+          targetTab?.focus();
+        }
+      });
+    }
+
     // Stepper pass tabs
     const stepTabs = this.container.querySelectorAll('.stepper-step');
     stepTabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        this.clearSkimTimer();
-        this.currentPass = parseInt((tab as HTMLElement).dataset.pass || '1', 10) as ReadingPass;
-        this.activeVocabDrawerWord = null;
-        AudioSynthesizer.play('click');
-        this.render();
+        const pass = parseInt((tab as HTMLElement).dataset.pass || '1', 10) as ReadingPass;
+        this.switchPass(pass, false);
       });
     });
+
+    const stepper = this.container.querySelector('.reading-pass-stepper');
+    if (stepper) {
+      stepper.addEventListener('keydown', (e: Event) => {
+        const ke = e as KeyboardEvent;
+        let targetPass: ReadingPass | null = null;
+        if (ke.key === 'ArrowRight' || ke.key === 'ArrowDown') {
+          ke.preventDefault();
+          ke.stopPropagation();
+          targetPass = (this.currentPass % 4 + 1) as ReadingPass;
+        } else if (ke.key === 'ArrowLeft' || ke.key === 'ArrowUp') {
+          ke.preventDefault();
+          ke.stopPropagation();
+          targetPass = (this.currentPass === 1 ? 4 : this.currentPass - 1) as ReadingPass;
+        } else if (ke.key === 'Home') {
+          ke.preventDefault();
+          ke.stopPropagation();
+          targetPass = 1;
+        } else if (ke.key === 'End') {
+          ke.preventDefault();
+          ke.stopPropagation();
+          targetPass = 4;
+        }
+        if (targetPass !== null) {
+          this.switchPass(targetPass, true);
+        }
+      });
+    }
   }
 
   private clearSkimTimer(): void {
@@ -647,7 +722,7 @@ export class ReadingDossier {
       <div class="skim-timer-bar">
         <div>
           <span>SKIM COUNTDOWN: </span>
-          <strong class="timer-display-text val-time" style="font-size: 13px;">00:${String(this.skimSecondsRemaining).padStart(2, '0')}</strong>
+          <strong class="timer-display-text val-time" role="timer" aria-live="polite" aria-atomic="true" style="font-size: 13px;">00:${String(this.skimSecondsRemaining).padStart(2, '0')}</strong>
         </div>
         <div style="display: flex; gap: 8px;">
           <button class="hud-btn btn-toggle-timer" style="padding: 4px 12px; font-size: 11px;">
@@ -1004,6 +1079,13 @@ export class ReadingDossier {
       this.closeVocabDrawer();
       return true;
     }
+
+    // Guard if focus is inside tabs or stepper buttons
+    const active = document.activeElement;
+    if (active?.closest('.reading-pass-stepper') || active?.closest('.article-tabs')) {
+      return true;
+    }
+
     if (this.currentPass === 3 && this.currentCardHandle) {
       if (key === 'ArrowRight' || key === 'l') {
         const article = this.articles[this.currentArticleIndex];
@@ -1031,6 +1113,18 @@ export class ReadingDossier {
       }
       if (key === '2') {
         this.currentCardHandle.rate('good');
+        return true;
+      }
+    } else {
+      // In passes 1, 2, 4 (or pass 3 without card handle), Arrow keys cycle passes 1-4
+      if (key === 'ArrowRight') {
+        const nextPass = (this.currentPass % 4 + 1) as ReadingPass;
+        this.switchPass(nextPass);
+        return true;
+      }
+      if (key === 'ArrowLeft') {
+        const prevPass = (this.currentPass === 1 ? 4 : this.currentPass - 1) as ReadingPass;
+        this.switchPass(prevPass);
         return true;
       }
     }
