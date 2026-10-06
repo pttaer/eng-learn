@@ -127,7 +127,7 @@
 | 122 | get sick | bị ốm | EVERYDAY | Many travelers get sick after eating unfamiliar street food. | A2 |
 | 123 | get well | bình phục, khỏi bệnh | EVERYDAY | We all hope you get well soon and return to the team. | A2 |
 | 124 | get pregnant | mang thai | EVERYDAY | Some women find it hard to get pregnant without medical help. | B1 |
-| 125 | get drunk | say rượu | EVERYDAY | He promised his family he would never get drunk at the wedding. | B1 |
+| 125 | get confused | bối rối, lúng túng | EVERYDAY | Students often get confused when two English words sound very similar. | B1 |
 | 126 | get angry | tức giận | EVERYDAY | She rarely gets angry, which made her raised voice all the more shocking. | A2 |
 | 127 | get upset | buồn phiền, bực bội | EVERYDAY | Don't get upset over one bad grade; you can improve. | B1 |
 | 128 | get dark | trời tối dần | EVERYDAY | In winter it gets dark before five in the afternoon. | A2 |

@@ -206,7 +206,7 @@
 - **Mode**: 4-3-2 Fluency Drill
 - **CEFR**: C1
 - **Prompt**: Argue for or against an international non-proliferation treaty strictly banning autonomous weapons systems capable of selecting and engaging targets without human authorization.
-- **Anchor**: Lethal autonomy deployment → Moral vacuum of algorithmic kill decisions → Geopolitical verification hurdles and deterrence imperatives
+- **Anchor**: Lethal autonomy deployment → Moral vacuum of automated targeting decisions → Geopolitical verification hurdles and deterrence imperatives
 - **Collocations**: autonomous system, human-in-the-loop, international treaty, lethal autonomous weapons
 - **Phonetic**: Solemn, measured tempo; strict avoidance of glib tone; crisp enunciation of /s/ clusters in 'systems'.
 
