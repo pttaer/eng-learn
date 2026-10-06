@@ -1,0 +1,272 @@
+[
+  {
+    "id": "s2-16",
+    "cue": "Describe a teacher you admired.",
+    "bullets": [
+      "who this teacher was",
+      "what subject they taught",
+      "what they were like as a person",
+      "and explain why you admired them"
+    ],
+    "part3": [
+      "What qualities do you think make a good teacher in modern education?",
+      "How do you think teaching methods have changed over the past decade?",
+      "Do you believe teachers should be friends with their students, or maintain a professional distance?",
+      "In your opinion, should teachers focus more on academic knowledge or developing social skills?",
+      "How might artificial intelligence affect the role of teachers in the future?"
+    ],
+    "modelAnswer": "Well, I'd like to tell you about my secondary school physics teacher, Mr. Chen, who I really respected. He taught us for two years, and honestly, he was quite possibly the most memorable teacher I had throughout my education. He was quite a tall guy in his mid-forties with a really calm demeanor and, you know, he always had this particular way of explaining complex theories that somehow made them seem much simpler than they actually were. What I really admired about him was that he didn't just teach us the formulas and expect us to memorize them. Instead, he would often bring in real-world examples and conduct practical experiments in class to illustrate how physics worked in everyday life. Beyond his teaching, he was an incredibly patient person who seemed genuinely interested in his students' understanding rather than just getting through the curriculum. He'd spend extra time after class helping struggling students, and he never made anyone feel bad about asking questions, no matter how many times they had to ask. I suppose what I admired most was his dedication and enthusiasm for the subject, combined with his genuine care for his students' development. He made me realize that learning could be both engaging and enjoyable, and honestly, he was a big influence on my decision to pursue science at university."
+  },
+  {
+    "id": "s2-17",
+    "cue": "Describe a journey that was difficult.",
+    "bullets": [
+      "where you were going",
+      "what made the journey difficult",
+      "how you dealt with the difficulties",
+      "and explain what you learned from this experience"
+    ],
+    "part3": [
+      "Do you think difficult travel experiences are valuable for personal growth?",
+      "How do you think transportation will change in the next twenty years?",
+      "What role does traveling play in building cultural understanding between different nations?",
+      "Should governments invest more in improving public transportation systems?",
+      "How has the pandemic affected people's attitudes towards traveling?"
+    ],
+    "modelAnswer": "Right, so I'm going to talk about a trip I took to visit my grandmother in rural Vietnam about three years ago. I was flying from Ho Chi Minh City, and I had to take several connecting buses to reach her village, which was quite far inland. The main challenge was that the roads were absolutely terrible, basically just dirt tracks, and the journey that was supposed to take five hours ended up taking over twelve hours. To make matters worse, the vehicle broke down midway, and we were stranded in the middle of nowhere for several hours. To be honest, it was incredibly frustrating because I was exhausted, and I had no idea how long the breakdown would take. However, I managed to stay relatively calm by chatting with other passengers, drinking water, and just accepting that there was nothing I could do about the situation. I suppose what really helped was shifting my perspective and seeing it as an adventure rather than an ordeal. By the time I reached my grandmother's house, I was absolutely shattered, but the experience taught me a lot about patience and adaptability. It really put things into perspective, and I became much more grateful for the conveniences we often take for granted in the city. I also gained a deeper appreciation for my grandmother's resilience, living in such a remote area."
+  },
+  {
+    "id": "s2-18",
+    "cue": "Describe a public place you like.",
+    "bullets": [
+      "where this place is",
+      "what it is like",
+      "what people usually do there",
+      "and explain why you like it"
+    ],
+    "part3": [
+      "Do you think public spaces are becoming less important in modern society?",
+      "How has social media affected the way people use public places?",
+      "Should governments invest more in creating green spaces in cities?",
+      "What makes a public place successful and welcoming for different age groups?",
+      "How can cities balance the need for public spaces with commercial development?"
+    ],
+    "modelAnswer": "I'd like to describe the central park in my city, which is, well, absolutely my favorite public space. It's a fairly large park located right in the heart of the downtown area, and it's quite easily accessible by public transport. The park features lots of open grassy areas, several walking trails, a beautiful lake in the center, and various recreational facilities like tennis courts and basketball courts. There are always people there doing different activities—some jogging, others having picnics with their families, and quite a few just sitting on the benches reading or simply relaxing. On weekends, you'll often see street performers and local events happening there. What I really like about this place is that it offers a sense of tranquility amidst all the hustle and bustle of the city. Whenever I'm feeling stressed or just need a break from my routine, I head there and spend some time surrounded by nature. The fact that it brings together people from all walks of life and creates a sense of community is something I particularly appreciate. It's one of those spaces where you feel genuinely relaxed, and, you know, it's free to access, which is quite important for inclusivity."
+  },
+  {
+    "id": "s2-19",
+    "cue": "Describe a piece of technology you use every day.",
+    "bullets": [
+      "what this technology is",
+      "how you use it",
+      "what you like about it",
+      "and explain how your life would be different without it"
+    ],
+    "part3": [
+      "Do you think people have become too dependent on technology?",
+      "How has technology changed the way we communicate with each other?",
+      "Should there be limits on the amount of time children spend with technology?",
+      "What technologies do you think will become obsolete in the next decade?",
+      "How can we balance the convenience of technology with concerns about privacy and security?"
+    ],
+    "modelAnswer": "Well, I'd have to say my smartphone is probably the piece of technology I use most throughout the day, without a doubt. Honestly, I use it for practically everything—communication, work emails, navigation, entertainment, you name it. I wake up in the morning and check my messages, use it to plan my day through calendar reminders, and it accompanies me basically wherever I go. What I particularly like about it is the convenience it offers, being able to access information instantly and stay connected with friends and family regardless of where I am. The camera quality is impressive as well, so I can capture memories quite easily. More importantly though, without my smartphone, my life would be significantly disrupted. I rely on it for work-related tasks, coordinating with friends, managing my finances through banking apps, and even fitness tracking. Frankly, I can't imagine trying to navigate a city without GPS, or staying in touch with my family abroad without instant messaging and video calls. That said, I do recognize there's a downside to being so reliant on a single device, and I've tried to be more mindful about balancing screen time with other activities. But ultimately, it's become such an integral part of modern life that functioning without it seems almost impossible."
+  },
+  {
+    "id": "s2-20",
+    "cue": "Describe a decision you made that you're proud of.",
+    "bullets": [
+      "what decision this was",
+      "why you had to make this decision",
+      "how you made the decision",
+      "and explain why you're proud of this decision"
+    ],
+    "part3": [
+      "Do you think some decisions are more important than others?",
+      "How do you think people's decision-making has changed with the availability of information online?",
+      "Should major life decisions be made emotionally or logically?",
+      "What role does risk-taking play in making important decisions?",
+      "How do you think cultural background influences the way people make decisions?"
+    ],
+    "modelAnswer": "I'd like to talk about my decision to quit my previous job and go back to university to pursue a degree in data science. At the time, I had been working for about five years in a relatively stable marketing position, and my colleagues thought I was quite mad for leaving a decent salary. However, I felt increasingly unfulfilled, as though I was just going through the motions without any real sense of purpose or growth. The decision wasn't straightforward, to be honest. I spent several months researching programs, talking to people working in the field, and really evaluating whether I had the commitment to undertake such a significant change. Eventually, I realized that staying in my current job would mean sacrificing my long-term aspirations for short-term security, which wasn't what I wanted for myself. So I took the plunge, saved up some money beforehand, and enrolled in the program. I'm proud of this decision because it required courage and a certain amount of risk-taking, but more importantly, it's already started paying dividends. I'm now in a position to transition into a field I'm genuinely passionate about, and I've rediscovered my enthusiasm for learning. This experience taught me that sometimes the most rewarding path isn't necessarily the easiest one."
+  },
+  {
+    "id": "s2-21",
+    "cue": "Describe a festival you enjoy attending.",
+    "bullets": [
+      "what festival this is",
+      "when and where it takes place",
+      "what happens at the festival",
+      "and explain why you enjoy attending it"
+    ],
+    "part3": [
+      "Do you think traditional festivals are becoming less popular in modern society?",
+      "How has commercialization affected the authenticity of cultural festivals?",
+      "Should governments provide financial support to maintain cultural festivals?",
+      "What role do festivals play in strengthening community bonds?",
+      "How do you think festivals will evolve with globalization and cultural exchange?"
+    ],
+    "modelAnswer": "I'm going to tell you about the Mid-Autumn Festival, which is a major celebration in my country that typically takes place in September or October. It's deeply rooted in our culture and, well, it's generally celebrated by families gathering together. The festival involves all sorts of traditional elements—lantern displays light up the entire city, there's lots of special food like mooncakes and rice cakes, and children carry colorful lanterns around the neighborhood. There are also various cultural performances, dragon dances, and generally a very festive atmosphere throughout the city. What I particularly enjoy about this festival is the strong sense of togetherness and tradition it brings. It's one of those occasions where families make a genuine effort to come together, which is quite rare in our fast-paced modern life. I also appreciate the cultural significance and the way it connects younger generations with our heritage. Additionally, the whole city transforms into something magical, with decorations and lights everywhere, and there's this infectious excitement that's really palpable. The food is another highlight, as my grandmother makes traditional mooncakes from scratch, and sharing them with family and friends creates quite special memories. Ultimately, it's not just about the festivities themselves, but about the values and connections that the festival represents—family, gratitude, and cultural continuity."
+  },
+  {
+    "id": "s2-22",
+    "cue": "Describe a skill you learned recently.",
+    "bullets": [
+      "what skill this is",
+      "how you learned it",
+      "how long it took you to master",
+      "and explain why you decided to learn it"
+    ],
+    "part3": [
+      "Do you think it's more important to learn practical skills or academic knowledge?",
+      "How has technology changed the way people learn new skills?",
+      "Should learning new skills be a lifelong pursuit?",
+      "What role does persistence play in skill development?",
+      "How do you think the job market will value different skills in the future?"
+    ],
+    "modelAnswer": "Right, so I'm going to talk about learning to play the guitar, which I started just about two years ago. I'd always been interested in music but never really had the opportunity or perhaps the courage to actually pick it up. I decided to start learning through a combination of online tutorials and private lessons with a local instructor. Honestly, the first few months were quite challenging—my fingers were constantly sore, and I found it difficult to coordinate both hands. I'd say it took me about six months before I could comfortably play some basic songs and, you know, actually sound respectable rather than just making noise. To reach a more intermediate level where I can play more complex pieces took roughly a year of consistent practice. I decided to learn guitar primarily because I wanted to find a creative outlet and something that would allow me to express myself differently than I was used to. Additionally, I've always found music to be incredibly therapeutic, and I wanted to be an active participant rather than just a listener. The learning process has been incredibly rewarding, not just in terms of developing a new skill, but also in terms of the discipline and patience it's taught me. There's something quite satisfying about being able to play a song that initially seemed impossibly difficult, and I've met quite a few interesting people through local jam sessions."
+  },
+  {
+    "id": "s2-23",
+    "cue": "Describe a time you were late.",
+    "bullets": [
+      "what you were supposed to do",
+      "why you were late",
+      "how you reacted",
+      "and explain how this experience affected you"
+    ],
+    "part3": [
+      "Do you think punctuality is becoming less important in society?",
+      "How does being late affect professional relationships?",
+      "Are there cultural differences in attitudes towards time management?",
+      "What strategies help people manage their time more effectively?",
+      "Should there be consequences for being late to important events?"
+    ],
+    "modelAnswer": "I'd like to describe a time I was quite significantly late to an important job interview. I had scheduled the interview for mid-morning at an office across town, and I'd planned my route meticulously to arrive about fifteen minutes early. However, due to unexpected traffic congestion caused by roadworks I wasn't aware of, I ended up arriving about twenty-five minutes late. I remember feeling absolutely panicked as I sat in the taxi, constantly checking the time and realizing there was nothing I could do about it. When I finally arrived at the office, I was flustered and quite anxious about how this lateness might affect the interviewer's first impression of me. I apologized profusely upon arrival and explained the situation honestly. To my relief, the interviewer was quite understanding, though I could sense it had already created a slightly awkward start. The interview itself went relatively well, but I didn't end up getting the position. This experience genuinely affected how I approach time management now. I became much more diligent about planning ahead and, crucially, building in extra buffer time for unexpected delays. It taught me that punctuality isn't just about courtesy—it actually affects how others perceive your reliability and professionalism. Now, I'm typically quite early to appointments, and I make sure to have contingency plans. It's become a bit of a habit, really, and I think it's improved both my professional and personal relationships."
+  },
+  {
+    "id": "s2-24",
+    "cue": "Describe a historical building you've visited.",
+    "bullets": [
+      "where this building is located",
+      "what you know about its history",
+      "what it looks like",
+      "and explain why you found it interesting"
+    ],
+    "part3": [
+      "How important is it to preserve historical buildings in modern cities?",
+      "Should historical sites be converted for modern use or kept as museums?",
+      "What can historical buildings teach us about past civilizations?",
+      "Do you think virtual reality will replace the need to visit historical sites in person?",
+      "How can communities balance heritage preservation with urban development?"
+    ],
+    "modelAnswer": "I'd like to tell you about a visit to the ancient Temple of Angkor Wat, located in Cambodia. This temple is absolutely massive and is, well, the largest religious monument in the world, originally constructed in the early twelfth century as a Hindu temple before later becoming a Buddhist site. What I found quite fascinating was learning that it was built at the height of the Khmer Empire's power and represents an incredible architectural achievement for its time. The structure itself is extraordinarily intricate, with multiple tiers and countless carvings depicting various scenes from Hindu mythology. The main tower is particularly impressive, rising high above the surrounding complexes, and the entire site is surrounded by what was originally a massive moat. What really captured my imagination was seeing the intricate stone carvings that have survived centuries, many of which are still remarkably detailed despite weathering. I found the sheer scale of the construction quite overwhelming—it's difficult to comprehend how such a complex structure was built without modern machinery or technology. Beyond the architectural marvel itself, I found it interesting because it represents such an important historical and cultural monument, and visiting it gave me a much deeper appreciation for the sophistication of ancient civilizations. The experience of walking through these ancient corridors and imagining the millions of people who've walked through them over the centuries was genuinely humbling and has become one of my most memorable travel experiences."
+  },
+  {
+    "id": "s2-25",
+    "cue": "Describe a neighbor you know.",
+    "bullets": [
+      "who this person is",
+      "how you know them",
+      "what you have in common",
+      "and explain what you think of them"
+    ],
+    "part3": [
+      "Do you think strong neighborhood communities are important?",
+      "How has modern life affected relationships between neighbors?",
+      "Should neighbors have more responsibility towards each other?",
+      "What makes a good neighbor in today's society?",
+      "How do different cultures view the concept of community differently?"
+    ],
+    "modelAnswer": "Well, I'd like to describe my neighbor, Mrs. Wong, who I've known for about four years now since I moved into my current apartment. She's quite elderly, probably in her seventies, and has lived in the building for over twenty years. We initially met when she introduced herself during a building maintenance issue, and we've gradually developed a friendly relationship. Though we come from different generations and have quite different lifestyles, we share a genuine interest in gardening and cooking, which became the basis for our connection. She often grows vegetables in her small balcony garden, and she's taught me quite a bit about cultivating herbs and plants. I think of her as a genuinely kind and thoughtful person, quite patient, and always willing to help neighbors. She's the sort of person who notices when someone's having a rough time and offers practical help without being intrusive. When I was moving in, she helped me with recommendations for local services and has continued to be a source of useful information about the neighborhood. Though we're quite different in terms of age and background, I've come to respect her wisdom and appreciate her presence in the building. There's something reassuring about having a neighbor like her who actually cares about community. I think the world could use more people like Mrs. Wong who actively contribute to building stronger neighborhood connections rather than simply coexisting in isolated units."
+  },
+  {
+    "id": "s2-26",
+    "cue": "Describe a piece of clothing you like wearing.",
+    "bullets": [
+      "what this piece of clothing is",
+      "when and where you bought it",
+      "when you wear it",
+      "and explain why you like wearing it"
+    ],
+    "part3": [
+      "Do you think fashion is an important form of self-expression?",
+      "How has social media influenced people's fashion choices?",
+      "Should fast fashion be restricted due to environmental concerns?",
+      "What role does clothing play in professional settings?",
+      "Do you think clothing preferences are more influenced by culture or personal taste?"
+    ],
+    "modelAnswer": "I'm going to tell you about a denim jacket that I absolutely adore and wear quite frequently. I actually purchased it during a trip to Japan about three years ago at a vintage shop in Tokyo. It's a classic-cut jacket in a slightly faded blue, and it's got this particular worn-in quality that gives it a lot of character, rather than looking brand new. I tend to wear it during autumn and spring when the weather's a bit cool but not freezing, and it works with practically everything from casual jeans to dresses. What I particularly like about this jacket is that it's incredibly versatile, but beyond the practicality, there's something about it that feels quite personal. The faded color and subtle distressing give it a certain charm that you simply can't replicate with new clothing. Every time I wear it, it reminds me of my time in Japan and the experience of finding such a treasure in that little vintage shop. What I really appreciate is how it's become a sort of reliable companion—I reach for it constantly, and it seems to suit most occasions, which is quite rare for a single piece of clothing. There's also something quite appealing about wearing vintage clothing from a sustainability perspective, knowing that I'm not contributing to excessive consumption. Beyond all that though, it's the memories and the comfort associated with this particular jacket that make it special. It's interesting how a simple piece of clothing can carry such significance."
+  },
+  {
+    "id": "s2-27",
+    "cue": "Describe a problem you solved.",
+    "bullets": [
+      "what the problem was",
+      "how you became aware of it",
+      "what steps you took to solve it",
+      "and explain how you felt when the problem was resolved"
+    ],
+    "part3": [
+      "Do you think problem-solving skills are more important than technical knowledge?",
+      "How does collaboration affect people's ability to solve problems?",
+      "Should problems be solved quickly or should more time be invested for better solutions?",
+      "What makes some people better problem-solvers than others?",
+      "How has technology changed the way we approach problem-solving?"
+    ],
+    "modelAnswer": "Right, I'd like to describe a problem I encountered at work about six months ago. The company's email system was experiencing frequent crashes, and it was significantly affecting productivity, particularly for our sales team who relied heavily on email communication. I first became aware of the issue when multiple colleagues complained about losing important messages and experiencing delays. Rather than simply reporting it to the IT department and hoping they'd resolve it quickly, I decided to take a more proactive approach. I started by documenting the frequency and timing of these crashes, which helped me identify a pattern that suggested it might be related to the server's capacity during peak hours. I then collaborated with the IT department, providing them with my observations and working with them to analyze the system's usage patterns. Together, we implemented several solutions, including optimizing the email server's configuration and implementing a staggered email backup system. We also suggested to management that they upgrade their server capacity during peak business hours. When the problem was finally resolved, I genuinely felt quite proud, both because the issue was fixed and because I'd contributed meaningfully to the solution. The experience taught me the value of taking initiative and combining observation with technical collaboration rather than simply waiting for others to fix problems. It also improved my relationship with the IT department and demonstrated to management that I was capable of thinking beyond my immediate job responsibilities. Solving this problem reinforced my confidence in my ability to tackle complex workplace challenges."
+  },
+  {
+    "id": "s2-28",
+    "cue": "Describe an advertisement you remember.",
+    "bullets": [
+      "what product or service was being advertised",
+      "what was shown in the advertisement",
+      "where you saw it",
+      "and explain why you remember it"
+    ],
+    "part3": [
+      "Do you think advertising plays an important role in consumer behavior?",
+      "How has digital advertising changed compared to traditional advertising?",
+      "Should there be stricter regulations on advertising to children?",
+      "What makes some advertisements more effective than others?",
+      "Do you think online targeting and personalized ads are ethical?"
+    ],
+    "modelAnswer": "I'd like to describe a rather memorable advertisement I saw several years ago for a car manufacturer, and honestly, it's stuck with me quite clearly. The advertisement depicted a family traveling through various picturesque landscapes—mountains, coastal roads, and forests—showcasing the car's versatility across different terrains. What made it particularly memorable was that the advertisement didn't focus primarily on the technical specifications of the car, which would be the standard approach. Instead, it emphasized the emotional experience and the memories that could be created through travel and exploration. I saw this advertisement while watching a film at the cinema, and the cinematography was really quite stunning, which certainly contributed to its impact. The music was also quite emotive, and the overall narrative suggested that this car would enable a lifestyle filled with adventure and meaningful moments with loved ones. What I found particularly clever about this advertisement was how it appealed to broader human desires and aspirations rather than just selling the product itself. It positioned the car as an enabler of experiences and memories, which is quite powerful psychologically. I think I remember it so clearly because it resonated with my own aspirations at the time—I had been considering purchasing a car and was drawn to this vision of freedom and adventure. It's a good example of how advertising works at an emotional level rather than purely at a rational level, and it made me realize the significant influence advertising can have on our perceptions and desires."
+  },
+  {
+    "id": "s2-29",
+    "cue": "Describe a sport or exercise activity you enjoy.",
+    "bullets": [
+      "what sport or activity this is",
+      "when you started doing it",
+      "how often you do it",
+      "and explain why you enjoy it"
+    ],
+    "part3": [
+      "Do you think regular exercise should be mandatory for good health?",
+      "How has technology influenced the way people exercise?",
+      "Should schools focus more on promoting physical activity?",
+      "What role does sports play in building national pride and unity?",
+      "How do you think environmental factors affect people's participation in outdoor activities?"
+    ],
+    "modelAnswer": "I'd like to tell you about trail running, which is probably my favorite form of exercise and something I've been doing quite regularly for about three years now. I initially got into it somewhat by accident, actually—I was looking for a way to make running more interesting because I'd found treadmill running rather monotonous and uninspiring. I started exploring the various trails near my city, and I immediately fell in love with the experience. Now I typically go trail running once or twice per week, depending on my work schedule and weather conditions. What I particularly enjoy about trail running is the combination of physical challenge and the connection with nature. Unlike road running, which can feel quite repetitive, trail running keeps your mind constantly engaged because you're navigating uneven terrain, roots, and rocks. There's an element of problem-solving involved as you navigate different routes and adapt to changing conditions. Beyond the physical benefits, I find it quite therapeutic—being in nature, breathing fresh air, and moving away from urban distractions provides excellent stress relief. The trail running community is also quite supportive and welcoming, and I've made numerous friends through local running groups. There's something quite special about pushing yourself physically while surrounded by beautiful natural scenery, and every time I run a new trail, I discover something interesting about my local area. The sport has genuinely improved my fitness, mental health, and overall quality of life, and I can't imagine giving it up."
+  },
+  {
+    "id": "s2-30",
+    "cue": "Describe a time you were very busy.",
+    "bullets": [
+      "when this was",
+      "what you had to do",
+      "why you were so busy",
+      "and explain how you managed during this busy period"
+    ],
+    "part3": [
+      "Do you think modern life has become increasingly busy for most people?",
+      "How does stress from being busy affect people's health and relationships?",
+      "Should employers have a responsibility to manage workload to prevent employee burnout?",
+      "What strategies do you think are most effective for managing a busy lifestyle?",
+      "Do you think there's a cultural difference in how different societies view busy-ness?"
+    ],
+    "modelAnswer": "I'm going to talk about a particularly hectic period during university when I was juggling several significant commitments simultaneously. This was during my final year, and I had to balance completing my thesis project, working part-time to support myself financially, and preparing for my final examinations. The main reason I was so busy was that I'd underestimated the time required for my thesis, which involved quite complex data analysis and research, and it coincided with the busiest period at my part-time job. During this three-month stretch, I was probably working or studying almost every day, rarely having weekends completely free. It was quite demanding, to be honest, and there were certainly moments when I felt overwhelmed and questioned whether I could manage everything. To cope with this intensity, I had to develop quite strict organizational strategies. I created a detailed schedule allocating specific time blocks to different tasks, and I became quite disciplined about prioritizing what absolutely needed to be done versus what could wait. I also learned to delegate some work responsibilities and communicate my constraints to my employer, who were actually quite understanding. Additionally, I made sure to protect at least some personal time for exercise and sleep, as I realized that completely neglecting self-care would only make me less productive. The experience was challenging, certainly, but ultimately quite rewarding because I successfully managed to complete everything to a reasonable standard while maintaining my health. It taught me valuable lessons about prioritization, time management, and the importance of asking for help when necessary."
+  }
+]

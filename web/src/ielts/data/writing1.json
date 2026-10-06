@@ -1,0 +1,682 @@
+[
+ {
+  "id": "w1-01",
+  "prompt": "The line graph below shows energy consumption in four countries from 1990 to 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "line",
+   "title": "Energy Consumption in Four Countries (1990–2020)",
+   "unit": "million tonnes",
+   "labels": [
+    "1990",
+    "1995",
+    "2000",
+    "2005",
+    "2010",
+    "2015",
+    "2020"
+   ],
+   "series": [
+    {
+     "name": "China",
+     "values": [
+      900,
+      1100,
+      1400,
+      1900,
+      2500,
+      3200,
+      3600
+     ]
+    },
+    {
+     "name": "USA",
+     "values": [
+      2100,
+      2150,
+      2300,
+      2400,
+      2350,
+      2400,
+      2450
+     ]
+    },
+    {
+     "name": "India",
+     "values": [
+      400,
+      450,
+      550,
+      700,
+      850,
+      1050,
+      1250
+     ]
+    },
+    {
+     "name": "Russia",
+     "values": [
+      850,
+      800,
+      800,
+      850,
+      900,
+      900,
+      850
+     ]
+    }
+   ]
+  },
+  "model": "Overall, energy consumption increased significantly across three countries between 1990 and 2020, with China experiencing the most dramatic growth. The United States maintained consistently high levels throughout the period, while Russia's consumption remained relatively stable.\n\nIn 1990, the USA was the largest consumer at 2,100 million tonnes, followed by Russia at 850 million tonnes, with China and India at 900 and 400 million tonnes respectively. Over the following thirty years, China's consumption increased dramatically, rising from 900 to 3,600 million tonnes, making it the world's leading energy consumer by 2020. This represents a fourfold increase, primarily driven by industrialisation and rapid economic growth.\n\nThe USA's consumption showed more modest growth, fluctuating between 2,100 and 2,450 million tonnes, reaching 2,450 by 2020. India's energy consumption grew steadily and more than threefold, from 400 to 1,250 million tonnes, reflecting its developing economy and expanding population. In contrast, Russia's consumption remained the most stable, hovering around 800–900 million tonnes throughout the period and declining slightly to 850 million tonnes by 2020.\n\nThe most notable trend is the emergence of China as the world's dominant energy consumer, overtaking the USA by 2010 and reaching significantly higher levels by 2020.",
+  "notes": "Band 7: Clear overview of contrasting trends; accurate grouping (China's dramatic rise vs. USA's stability); specific figures verify against data; uses comparatives and approximations ('fourfold', 'more modest'); varied grammar with passive constructions. Band 6 mistake: misreporting China's growth rate or failing to note the 2005 crossover point."
+ },
+ {
+  "id": "w1-02",
+  "prompt": "The line graph below illustrates the percentage of internet users in three regions from 2000 to 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "line",
+   "title": "Internet Penetration by Region (2000–2020)",
+   "unit": "%",
+   "labels": [
+    "2000",
+    "2003",
+    "2006",
+    "2009",
+    "2012",
+    "2015",
+    "2018",
+    "2020"
+   ],
+   "series": [
+    {
+     "name": "North America",
+     "values": [
+      43,
+      58,
+      70,
+      78,
+      84,
+      88,
+      90,
+      92
+     ]
+    },
+    {
+     "name": "Asia",
+     "values": [
+      2,
+      5,
+      10,
+      22,
+      35,
+      50,
+      62,
+      70
+     ]
+    },
+    {
+     "name": "Africa",
+     "values": [
+      0.5,
+      1,
+      2,
+      5,
+      8,
+      15,
+      25,
+      35
+     ]
+    }
+   ]
+  },
+  "model": "In summary, internet penetration increased substantially across all three regions between 2000 and 2020, with notable differences in adoption rates and growth trajectories. North America achieved the highest levels throughout, while Asia and Africa experienced accelerated growth, particularly in the latter decade.\n\nIn 2000, North America dominated with 43% internet penetration, far ahead of Asia at only 2% and Africa at 0.5%. By 2020, North America reached 92%, representing a fifty percentage-point increase. Asia demonstrated remarkable expansion, rising from 2% to 70%, an increase of sixty-eight percentage points that accelerated sharply after 2009. Africa, starting from near zero, reached 35% by 2020, the slowest-growing region but showing consistent upward momentum.\n\nThe most significant divergence occurred between 2000 and 2009, when North America nearly plateaued while Asia and Africa remained far behind. However, from 2009 onwards, Asia and Africa experienced steeper growth curves. By 2020, Asia had nearly closed the gap with North America, whereas Africa, despite rapid proportional growth, remained substantially below at 35%.\n\nOverall, the data reflects a global digital revolution with convergence among developed and developing regions, though significant disparities persist, particularly for Africa.",
+  "notes": "Band 7: Comprehensive overview with clear temporal and regional contrasts; accurate percentage figures; identifies acceleration phases; uses varied structures ('whereas', approximations like 'near zero', 'nearly plateaued'); compares growth rates and trajectories. Band 6 mistake: confusing absolute growth (percentage points) with percentage rates, or missing the acceleration pattern after 2009."
+ },
+ {
+  "id": "w1-03",
+  "prompt": "The line graph below shows the average annual temperatures in two cities from 1980 to 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "line",
+   "title": "Average Annual Temperature in Two Cities (1980–2020)",
+   "unit": "°C",
+   "labels": [
+    "1980",
+    "1990",
+    "2000",
+    "2005",
+    "2010",
+    "2015",
+    "2020"
+   ],
+   "series": [
+    {
+     "name": "Sydney",
+     "values": [
+      20.5,
+      20.8,
+      21.2,
+      21.5,
+      21.7,
+      21.9,
+      22.3
+     ]
+    },
+    {
+     "name": "London",
+     "values": [
+      8.2,
+      8.5,
+      9,
+      9.3,
+      9.4,
+      9.7,
+      10.1
+     ]
+    }
+   ]
+  },
+  "model": "Overall, average annual temperatures in both Sydney and London increased consistently over the forty-year period from 1980 to 2020, reflecting broader global warming trends. Both cities showed similar warming patterns, with accelerated increases in recent decades.\n\nIn 1980, Sydney's average annual temperature was 20.5°C, while London was considerably cooler at 8.2°C, a difference of approximately 12°C typical of their respective hemispheric locations. By 2020, Sydney had warmed to 22.3°C and London to 10.1°C, representing increases of 1.8°C and 1.9°C respectively over the forty years.\n\nThe warming was not uniform throughout the period. Between 1980 and 2000, both cities experienced gradual increases of approximately 0.35°C per decade. However, from 2000 onwards, warming accelerated, with increases becoming more pronounced, particularly between 2015 and 2020. This acceleration suggests a shift in climate patterns during the twenty-first century.\n\nWhile Sydney remained consistently warmer than London throughout the period, the temperature gaps narrowed slightly as both cities experienced similar warming rates. The data clearly illustrates that global warming has affected both cities significantly, with recent decades showing faster temperature increases than earlier decades, indicating an intensifying trend.",
+  "notes": "Band 7: Clear overview of warming trend in both locations; accurate temperature figures and differences; identifies acceleration pattern (slower early, faster after 2000); compares warming rates; uses varied grammar (passive, temporal markers). Band 6 mistake: reporting temperature differences incorrectly or missing the acceleration after 2000; treating the linear trend as constant."
+ },
+ {
+  "id": "w1-04",
+  "prompt": "The line graph below illustrates the number of mobile phone subscribers in four countries from 1995 to 2015. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "line",
+   "title": "Mobile Phone Subscribers in Four Countries (1995–2015)",
+   "unit": "millions",
+   "labels": [
+    "1995",
+    "2000",
+    "2005",
+    "2010",
+    "2015"
+   ],
+   "series": [
+    {
+     "name": "Japan",
+     "values": [
+      1.5,
+      50,
+      87,
+      110,
+      125
+     ]
+    },
+    {
+     "name": "Germany",
+     "values": [
+      0.3,
+      35,
+      65,
+      83,
+      110
+     ]
+    },
+    {
+     "name": "Brazil",
+     "values": [
+      0.1,
+      8,
+      35,
+      86,
+      145
+     ]
+    },
+    {
+     "name": "Nigeria",
+     "values": [
+      0,
+      0.5,
+      3,
+      54,
+      140
+     ]
+    }
+   ]
+  },
+  "model": "Overall, mobile phone subscriptions expanded exponentially across all four countries from 1995 to 2015. Whilst Japan and Germany led adoption initially with 1.5 and 0.3 million subscribers respectively, developing markets eventually dominated.\n\nBy 2015, Nigeria and Brazil led globally at 140 and 145 million subscribers, reversing the 1995 hierarchy where they had negligible numbers. Japan and Germany reached approximately 125 and 110 million, showing sustained but moderating growth that plateaued after 2010.\n\nDeveloping markets displayed dramatically different trajectories. Brazil accelerated from 8 million in 2000 to 145 million, with particularly rapid expansion after 2005. Nigeria showed the most explosive growth, surging from virtually zero to 140 million, predominantly after 2005.\n\nIn contrast, Japan and Germany demonstrated early but gradual adoption, reaching saturation around 100+ million subscribers by 2010. This reflects infrastructure maturity and market saturation in developed nations.\n\nOverall, the data illustrates fundamental market transformation: developing nations, initially lagging far behind, eventually matched or exceeded developed nations. This reflects infrastructure development and economic growth in emerging markets, contrasting with declining subscription growth in saturated developed markets.",
+  "notes": "Band 7: Comprehensive overview identifying transformation in market leadership; precise figures; recognises growth curves (moderated vs. accelerated); compares trajectories; explains phenomena (saturation, emerging market growth); varied grammar and cohesion devices. Band 6 mistake: stating Nigeria/Brazil 'overtook' others without noting baseline differences; failing to explain the plateau in developed markets."
+ },
+ {
+  "id": "w1-05",
+  "prompt": "The bar chart below shows the number of international tourist arrivals in five Asian countries in 2015 and 2019. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "bar",
+   "title": "International Tourist Arrivals in Asian Countries (2015 & 2019)",
+   "unit": "millions",
+   "labels": [
+    "Thailand",
+    "China",
+    "Vietnam",
+    "Indonesia",
+    "Philippines"
+   ],
+   "series": [
+    {
+     "name": "2015",
+     "values": [
+      29.9,
+      56.9,
+      8,
+      10.2,
+      5.4
+     ]
+    },
+    {
+     "name": "2019",
+     "values": [
+      39.8,
+      65.7,
+      18,
+      16.1,
+      8.3
+     ]
+    }
+   ]
+  },
+  "model": "Overall, international tourist arrivals increased across all five Asian countries between 2015 and 2019, with China maintaining its position as the leading destination while Vietnam demonstrated the most significant proportional growth.\n\nIn 2015, China received the highest number of tourists at 56.9 million, followed by Thailand at 29.9 million, with Indonesia, Vietnam, and the Philippines attracting substantially fewer visitors at 10.2, 8.0, and 5.4 million respectively. By 2019, China's arrivals rose to 65.7 million, whilst Thailand increased to 39.8 million, maintaining second place. Vietnam experienced remarkable growth, more than doubling from 8.0 to 18.0 million, and Indonesia increased to 16.1 million. The Philippines, whilst remaining the least popular destination, grew to 8.3 million.\n\nThe growth rates varied considerably among the five countries. China and Thailand grew by 8.8 and 9.9 million respectively, representing increases of 15% and 33%. Vietnam's expansion was more dramatic, adding 10.0 million visitors and more than doubling its market. Indonesia's arrivals grew by 5.9 million, whilst the Philippines expanded by 2.9 million.\n\nIn summary, whilst China remained the dominant destination, Vietnam emerged as the fastest-growing market, suggesting shifting tourism preferences and improved tourism infrastructure in Southeast Asia.",
+  "notes": "Band 7: Clear ranking and growth comparison; accurate figures for both years; calculates proportional vs. absolute growth (Vietnam's tripling); ranks countries by various measures; cohesive comparison structure. Band 6 mistake: simply listing figures without comparison; confusing growth rate with absolute increase; failing to identify Vietnam's exceptional proportional growth."
+ },
+ {
+  "id": "w1-06",
+  "prompt": "The bar chart below presents household expenditure across six categories in the United Kingdom in 2010 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "bar",
+   "title": "Household Expenditure by Category, UK (2010 & 2020)",
+   "unit": "£ per week",
+   "labels": [
+    "Housing",
+    "Transport",
+    "Food",
+    "Utilities",
+    "Healthcare",
+    "Entertainment"
+   ],
+   "series": [
+    {
+     "name": "2010",
+     "values": [
+      180,
+      65,
+      58,
+      32,
+      15,
+      25
+     ]
+    },
+    {
+     "name": "2020",
+     "values": [
+      220,
+      58,
+      70,
+      48,
+      18,
+      35
+     ]
+    }
+   ]
+  },
+  "model": "Overall, UK household expenditure shifted noticeably between 2010 and 2020, with significant increases in essential costs but complex changes in discretionary spending.\n\nHousing was the largest expense, rising substantially from £180 to £220 per week (22% increase). Utilities also increased significantly from £32 to £48 per week, reflecting energy cost inflation. Food spending grew from £58 to £70, whilst entertainment rose from £25 to £35.\n\nNotably, transport expenditure decreased from £65 to £58 per week, contrasting with overall cost inflation. This likely reflects increased remote working adoption during the decade. Healthcare costs rose modestly from £15 to £18.\n\nThe most significant change concerns essential versus discretionary spending. Non-discretionary expenses (housing, utilities) increased substantially more than discretionary items (entertainment). The transport decrease is anomalous, suggesting structural shifts in commuting patterns.\n\nIn summary, the data reflects general cost-of-living increases, particularly for non-discretionary expenses like housing and utilities. The transport decline is notable, indicating behavioural changes during the decade. Despite rising essential costs, household entertainment spending increased, suggesting some capacity for discretionary expenditure maintenance.",
+  "notes": "Band 7: Clear identification of major expenditure categories and directional changes; accurate figures with some calculated increases; explains underlying causes (remote work, inflation, essential vs. discretionary); varied structures. Band 6 mistake: listing all figures without prioritisation; failing to explain transport decrease or distinguish essential from discretionary spending."
+ },
+ {
+  "id": "w1-07",
+  "prompt": "The bar chart below shows carbon dioxide emissions from five sectors in a developed nation in 2015 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "bar",
+   "title": "CO₂ Emissions by Sector (2015 & 2020)",
+   "unit": "megatonnes",
+   "labels": [
+    "Energy",
+    "Transport",
+    "Industry",
+    "Agriculture",
+    "Waste"
+   ],
+   "series": [
+    {
+     "name": "2015",
+     "values": [
+      280,
+      150,
+      120,
+      85,
+      45
+     ]
+    },
+    {
+     "name": "2020",
+     "values": [
+      250,
+      130,
+      110,
+      88,
+      40
+     ]
+    }
+   ]
+  },
+  "model": "Overall, carbon dioxide emissions decreased across all five sectors between 2015 and 2020, demonstrating a modest shift towards environmental sustainability. Energy and transport remained the largest emission sources, though all sectors showed reductions of varying magnitudes.\n\nIn 2015, the energy sector dominated emissions at 280 megatonnes, followed by transport at 150 megatonnes, industry at 120 megatonnes, agriculture at 85 megatonnes, and waste at 45 megatonnes. By 2020, energy emissions had decreased to 250 megatonnes (a 30-megatonne reduction of approximately 11%), whilst transport fell to 130 megatonnes, representing a 20-megatonne decrease of 13%. Industry reduced emissions to 110 megatonnes, a 10-megatonne decline of 8%.\n\nAgriculture and waste sectors showed the smallest absolute reductions. Agriculture increased slightly from 85 to 88 megatonnes, a minimal change of 3 megatonnes, whilst waste decreased marginally from 45 to 40 megatonnes, a reduction of 11%. Energy and transport achieved the most significant percentage reductions, suggesting increased investment in renewable energy and cleaner transportation technologies.\n\nIn summary, whilst overall emissions declined across all sectors, the energy and transport sectors accounted for the vast majority of carbon dioxide. Achieving further significant reductions will require sustained technological innovation and policy intervention in these dominant sectors.",
+  "notes": "Band 7: Identifies ranking and calculates percentage reductions; notes both absolute and proportional changes; explains divergent reduction rates; acknowledges limitations. Band 6 mistake: reporting only absolute numbers without percentages; confusing small absolute reduction (agriculture) with lack of progress; failing to acknowledge energy/transport dominance."
+ },
+ {
+  "id": "w1-08",
+  "prompt": "The bar chart below illustrates the number of university degrees awarded to men and women in four countries during 2015 to 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "bar",
+   "title": "University Degrees Awarded by Gender (2015–2020)",
+   "unit": "thousands",
+   "labels": [
+    "United States",
+    "United Kingdom",
+    "Australia",
+    "Canada"
+   ],
+   "series": [
+    {
+     "name": "Men",
+     "values": [
+      850,
+      280,
+      145,
+      125
+     ]
+    },
+    {
+     "name": "Women",
+     "values": [
+      920,
+      320,
+      160,
+      140
+     ]
+    }
+   ]
+  },
+  "model": "Overall, women received more university degrees than men across all four developed nations, demonstrating a significant shift in educational achievement patterns. The US and UK showed the largest absolute gaps, though proportional differences were consistent globally.\n\nIn the United States, women earned 920,000 degrees versus 850,000 for men, a 70,000-degree gap (8% higher). The UK showed a similar pattern: 320,000 women versus 280,000 men, a 40,000-degree difference (14% higher). Australia and Canada demonstrated comparable proportional gaps around 10%, with women receiving 160,000 versus 145,000 in Australia and 140,000 versus 125,000 in Canada respectively.\n\nThe gender gap increased with nation size, reflecting larger overall student populations. The proportional female advantage was most pronounced in the UK (14%), whilst the US showed 8% and Australia/Canada both around 10%.\n\nThis data represents a fundamental reversal of historical gender patterns in higher education. Women now consistently outnumber men in degree attainment, reflecting increased female participation and completion rates across developed nations. The global consistency of this trend across all four countries underscores systemic changes in educational access and achievement.",
+  "notes": "Band 7: Compares absolute numbers and percentage gaps; ranks countries by population size and gender disparity; notes the gender reversal; uses proportions and comparatives consistently. Band 6 mistake: stating women outnumber men without quantifying the gap; confusing absolute differences with percentage increases; missing the pattern across countries."
+ },
+ {
+  "id": "w1-09",
+  "prompt": "The table below provides data on internet usage and smartphone ownership among different age groups in 2019 and 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "table",
+   "title": "Internet and Smartphone Usage by Age Group (2019 & 2024)",
+   "labels": [
+    "Age 16–24",
+    "Age 25–44",
+    "Age 45–64",
+    "Age 65+"
+   ],
+   "series": [
+    {
+     "name": "Internet Users 2019 (%)",
+     "values": [
+      95,
+      88,
+      72,
+      45
+     ]
+    },
+    {
+     "name": "Internet Users 2024 (%)",
+     "values": [
+      98,
+      94,
+      83,
+      62
+     ]
+    },
+    {
+     "name": "Smartphone Owners 2019 (%)",
+     "values": [
+      92,
+      80,
+      52,
+      18
+     ]
+    },
+    {
+     "name": "Smartphone Owners 2024 (%)",
+     "values": [
+      96,
+      87,
+      68,
+      35
+     ]
+    }
+   ]
+  },
+  "model": "Overall, internet usage and smartphone ownership increased across all age groups between 2019 and 2024, with dramatic shifts particularly among older populations. Youth maintained near-universal adoption, whilst older groups showed substantial growth from lower baselines.\n\nInternet usage was nearly universal for 16–24 year-olds at 95%, declining progressively with age to just 45% for those 65+. By 2024, 16–24 reached 98%, whilst the 65+ age group more than doubled to 62%, a 17-percentage-point increase significantly outpacing overall growth.\n\nSmartphone ownership showed greater polarisation. In 2019, 92% of youth owned smartphones versus just 18% of those 65+, a 74-point gap. By 2024, this narrowed to 61 points (96% versus 35%), demonstrating rapid older-adult adoption. Ages 25–44 and 45–64 reached 87% and 68% respectively.\n\nThe most striking change concerns older populations. The 65+ group increased smartphone ownership by 17 percentage points and internet usage by 17 points, indicating rapid digital inclusion. However, significant gaps persist: younger groups remain substantially ahead in both metrics.\n\nIn summary, whilst young people already dominated digital adoption in 2019, older populations achieved the steepest growth trajectories between 2019 and 2024, narrowing but not eliminating the generational digital divide.",
+  "notes": "Band 7: Clear age-group ranking; identifies narrowing gaps (65+ uptake); calculates percentage-point changes accurately; compares internet vs. smartphone adoption rates; notes digital inclusion improvement. Band 6 mistake: confusing percentage-point increases with percentage increases; failing to identify the proportional gap narrowing for older groups; not comparing within-group changes."
+ },
+ {
+  "id": "w1-10",
+  "prompt": "The table below shows global water usage by sector in 2010 and 2020, measured in cubic kilometres per year. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "table",
+   "title": "Global Water Usage by Sector (2010 & 2020)",
+   "labels": [
+    "Agriculture",
+    "Industry",
+    "Municipal",
+    "Hydropower"
+   ],
+   "series": [
+    {
+     "name": "2010 (km³)",
+     "values": [
+      2660,
+      850,
+      380,
+      720
+     ]
+    },
+    {
+     "name": "2020 (km³)",
+     "values": [
+      2840,
+      920,
+      410,
+      780
+     ]
+    }
+   ]
+  },
+  "model": "Overall, global water usage increased modestly across all sectors between 2010 and 2020, with agriculture dominatingly consuming approximately three-fifths of total water. All sectors exhibited similar growth rates around 7–8%.\n\nIn 2010, agriculture led at 2,660 km³ (58% of total), followed by industry at 850 km³ (18%), hydropower at 720 km³ (16%), and municipal at 380 km³ (8%). Total usage was approximately 4,610 km³.\n\nBy 2020, total usage reached 4,950 km³, a 340 km³ increase (7% growth). Agriculture increased to 2,840 km³ (+180 km³, 7% growth), maintaining dominance. Industry rose to 920 km³ (+70 km³, 8% growth), hydropower to 780 km³ (+60 km³, 8% growth), and municipal to 410 km³ (+30 km³, 8% growth).\n\nNotably, municipal usage showed the smallest absolute increase despite similar percentage growth, reflecting its smaller baseline. All sectors grew at comparable rates (7–8%), suggesting consistent water-demand expansion across sectors.\n\nIn summary, agriculture remains the dominant water consumer, reflecting global food production priorities. Modest growth rates across all sectors indicate either improved water efficiency or stable economic activity, though agriculture's continued dominance remains environmentally significant.",
+  "notes": "Band 7: Calculates percentages and ranks sectors; identifies dominant sector (agriculture); notes consistent growth rates; accurate figures throughout; compares absolute and proportional changes. Band 6 mistake: listing figures without identifying agriculture's dominance; confusing total growth with sector-by-sector changes; failing to calculate percentages."
+ },
+ {
+  "id": "w1-11",
+  "prompt": "The table below presents data on educational attainment levels among the working-age population in three countries for 2010 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "table",
+   "title": "Educational Attainment Levels, Working-Age Population (2010 & 2020)",
+   "labels": [
+    "Primary Only",
+    "Secondary",
+    "Tertiary/University"
+   ],
+   "series": [
+    {
+     "name": "Germany 2010 (%)",
+     "values": [
+      3,
+      52,
+      45
+     ]
+    },
+    {
+     "name": "Germany 2020 (%)",
+     "values": [
+      2,
+      48,
+      50
+     ]
+    },
+    {
+     "name": "Brazil 2010 (%)",
+     "values": [
+      44,
+      42,
+      14
+     ]
+    },
+    {
+     "name": "Brazil 2020 (%)",
+     "values": [
+      28,
+      50,
+      22
+     ]
+    },
+    {
+     "name": "India 2010 (%)",
+     "values": [
+      68,
+      22,
+      10
+     ]
+    },
+    {
+     "name": "India 2020 (%)",
+     "values": [
+      52,
+      35,
+      13
+     ]
+    }
+   ]
+  },
+  "model": "Overall, educational attainment increased substantially across all three countries between 2010 and 2020, with developing nations showing rapid expansion whilst Germany maintained already-high tertiary levels.\n\nGermany demonstrated advanced education infrastructure: in 2010, only 3% had primary-only education, 52% had secondary, and 45% held tertiary qualifications. By 2020, tertiary attainment rose to 50%, with primary-only falling to 2%, indicating near-universal secondary completion. Germany's gains were modest, reflecting already-high baselines.\n\nBrazil underwent dramatic transformation. Primary-only education halved from 44% to 28%, secondary education reached 50%, and tertiary qualifications increased from 14% to 22%, an eight-percentage-point gain reflecting rapid university expansion.\n\nIndia's progress was equally significant. Primary-only education declined from 68% to 52% (-16 percentage points), secondary education expanded from 22% to 35% (+13 points), whilst tertiary attainment rose from 10% to 13% (+3 points). India retained the lowest tertiary rates despite substantial improvements.\n\nIn summary, developing nations achieved rapid educational progress, whilst Germany consolidated advanced attainment. Brazil and India's secondary-education expansion was particularly notable, reducing primary-only populations substantially and indicating increased educational access and completion.",
+  "notes": "Band 7: Compares trajectories across countries (Germany's consolidation vs. others' expansion); calculates percentage-point changes; identifies tertiary education trends; acknowledges context (developing vs. developed). Band 6 mistake: not comparing percentage-point changes across countries; failing to note Germany's different baseline; confusing proportional shifts with absolute attainment levels."
+ },
+ {
+  "id": "w1-12",
+  "prompt": "The pie chart below illustrates the distribution of global smartphone operating system market share in 2024. Summarise the information by selecting and reporting the main features.",
+  "chart": {
+   "kind": "pie",
+   "title": "Global Smartphone OS Market Share (2024)",
+   "labels": [
+    "Android",
+    "iOS",
+    "Other"
+   ],
+   "series": [
+    {
+     "name": "Market Share",
+     "values": [
+      72,
+      27,
+      1
+     ]
+    }
+   ]
+  },
+  "model": "Overall, the global smartphone market in 2024 exhibits pronounced duopoly characteristics, with Android and iOS collectively accounting for 99% of devices worldwide. Other operating systems are negligible, reflecting market consolidation around two dominant platforms.\n\nAndroid dominates at 72% global market share, reflecting its open-source nature, affordability, and multi-manufacturer availability across budget to premium segments. This widespread availability, particularly in emerging markets, drives its commanding majority. Competitive pricing strategies and accessibility have solidified Android's market leadership.\n\nApple's iOS holds 27%, substantially lower than Android but notably significant given iOS operates exclusively on Apple devices. The iOS ecosystem commands premium positioning supported by strong brand loyalty and superior profit margins, making it highly valuable despite lower market penetration.\n\nOther operating systems represent merely 1% of the market. This negligible share reflects the elimination of legacy platforms like Windows Phone and BlackBerry OS, and the failure of emerging alternatives to compete. Network effects and ecosystem lock-in create substantial barriers to entry.\n\nThe market consolidation around Android and iOS demonstrates how platform economics create winner-take-most dynamics. Whilst Android dominates by volume, iOS maintains significant value through premium positioning. This duopoly structure leaves minimal space for competitors, despite Android's openness.",
+  "notes": "Band 7: Identifies duopoly dominance; explains Android's advantage (open-source, affordability) and iOS strength (brand, ecosystem); acknowledges the dominance gap (72% vs 27%); contextualises market concentration. Band 6 mistake: simply stating the percentages without explanation; failing to explain why the gap exists despite iOS profitability; not addressing market concentration or barriers to entry."
+ },
+ {
+  "id": "w1-13",
+  "prompt": "The pie chart below shows the composition of global carbon dioxide emissions by source in 2023. Summarise the information by selecting and reporting the main features.",
+  "chart": {
+   "kind": "pie",
+   "title": "Global CO₂ Emissions by Source (2023)",
+   "labels": [
+    "Energy Production",
+    "Transportation",
+    "Manufacturing",
+    "Agriculture",
+    "Waste Management"
+   ],
+   "series": [
+    {
+     "name": "Percentage",
+     "values": [
+      41,
+      24,
+      21,
+      11,
+      3
+     ]
+    }
+   ]
+  },
+  "model": "Overall, global CO₂ emissions in 2023 are heavily concentrated in three sectors: energy production at 41%, transportation at 24%, and manufacturing at 21%, which collectively account for 86% of worldwide emissions. Agriculture and waste management contribute smaller but still significant shares.\n\nEnergy production dominates at 41%, encompassing electricity generation, heating, and industrial consumption. This reflects global fossil fuel reliance, particularly coal, oil, and natural gas. Reducing emissions requires substantial transition to renewable energy and improved efficiency.\n\nTransportation accounts for 24% of emissions, primarily from fossil fuel-powered vehicles in road, air, and maritime sectors. This significant contribution underscores the challenge of transitioning to electric and sustainable systems. Manufacturing contributes 21% from industrial processes and raw material extraction.\n\nAgriculture represents 11%, predominantly from livestock farming and fertiliser use. Waste management accounts for 3%, the smallest category, though still significant globally.\n\nThe concentration of emissions in three dominant sectors (86% combined) suggests that climate mitigation strategies should prioritise energy production and transportation. These sectors offer the greatest potential for impact reduction. Whilst all sectors require attention, focusing resources on the top three would address the majority of global emissions and provide effective climate impact mitigation.",
+  "notes": "Band 7: Identifies top sources and cumulative percentage (86% for top three); explains mechanisms (fossil fuels, transportation types); prioritises action targets; uses clear transitions; varied sentence structure. Band 6 mistake: listing percentages without prioritisation; failing to explain why sources are significant; not identifying energy's dominance or suggesting climate solutions."
+ },
+ {
+  "id": "w1-14",
+  "prompt": "The process diagram below illustrates the stages involved in producing paper from raw timber. Summarise the information and describe the main steps of the process.",
+  "chart": {
+   "kind": "process",
+   "title": "Paper Production Process from Raw Timber",
+   "steps": [
+    "Raw timber logs are delivered to the paper mill and are de-barked to remove outer bark",
+    "The de-barked wood is chipped into small pieces using industrial chipping machines",
+    "The wood chips are treated with chemicals in digesters to break down the lignin and separate fibres",
+    "The resulting pulp mixture is bleached and cleaned to remove impurities and achieve desired whiteness",
+    "The cleaned pulp is pressed and dried using heated rollers to reduce moisture content to approximately 5–8%",
+    "The dried paper sheets are calendered to achieve smoothness and consistent thickness before being rolled or cut into final products"
+   ]
+  },
+  "model": "The paper production process involves six sequential stages transforming raw timber into finished paper products. The process begins with timber preparation and culminates in commercial-ready sheets.\n\nInitially, raw timber logs are de-barked at the mill to remove outer layers. Subsequently, the wood is mechanically chipped into small uniform pieces. These chips enter the pulping stage, where chemical digesters treat the material with specialized chemicals, breaking down lignin and separating wood fibres into individual strands, transforming solid wood into pulpy cellulose mixture.\n\nFollowing pulping, the mixture undergoes bleaching and cleaning, removing impurities and lignin residue whilst brightening the pulp to achieve desired whiteness. The purified pulp then passes through pressing and drying stages, where heated rollers compress moisture content to approximately 5–8%, forming solid paper sheets.\n\nFinally, dried paper undergoes calendering, a finishing process where sheets pass through smooth rollers, enhancing surface smoothness and ensuring uniform thickness. Calendered paper is subsequently rolled into reels or cut into standard-dimension sheets for distribution.\n\nIn summary, the process systematically transforms timber through preparation, chemical treatment, pressing, drying, and mechanical finishing into commercially viable paper products, with each stage serving distinct functional purposes in achieving the final product quality.",
+  "notes": "Band 7: Clear sequencing with 'initially', 'subsequently', 'following', 'finally'; explains purpose of each stage (bark removal, chipping, pulping, bleaching, drying, calendering); identifies key inputs/outputs; mentions specific detail (5–8% moisture). Band 6 mistake: listing steps without sequence markers; failing to explain why each step matters; missing technical detail (moisture content, heated rollers)."
+ },
+ {
+  "id": "w1-15",
+  "prompt": "The process diagram below shows the stages in the recycling of plastic waste into new products. Summarise the information and describe the main steps of the process.",
+  "chart": {
+   "kind": "process",
+   "title": "Plastic Waste Recycling Process",
+   "steps": [
+    "Plastic waste is collected from households and commercial sources through recycling bin programmes",
+    "Collected plastic is transported to recycling centres where it is sorted by plastic type (PET, HDPE, PVC, LDPE, PP, PS, Other)",
+    "Sorted plastic is shredded into small flakes to increase surface area and improve processing efficiency",
+    "Plastic flakes are washed thoroughly to remove contaminants, labels, and adhesives",
+    "Cleaned plastic flakes are melted in industrial furnaces at high temperatures to form molten plastic",
+    "The molten plastic is extruded through dies to form plastic pellets or granules of uniform size",
+    "Plastic pellets are sold to manufacturers who mould them into new products such as containers, textiles, or building materials"
+   ]
+  },
+  "model": "The plastic recycling process comprises seven sequential stages, converting waste plastic into reusable raw materials. The cycle begins with collection and concludes with manufacturing into new products.\n\nCollection occurs where plastic waste is gathered from households and businesses through organised recycling programmes. Material is transported to facilities where critical sorting by plastic type occurs: different plastics (PET, HDPE, PVC, LDPE, PP, PS) have different melting points, requiring separation for product quality.\n\nFollowing sorting, plastic undergoes shredding into small flakes, increasing surface area for processing. The flaked plastic then enters the washing stage, where contaminants, labels, and adhesives are removed, ensuring quality standards. Clean flakes are subsequently melted in industrial furnaces at elevated temperatures, transforming solid waste into molten plastic.\n\nThe molten plastic is then extruded through dies, forming uniformly sized pellets or granules. These recycled pellets are sold to manufacturers, which mould and process them into new products: plastic containers, textiles, fibres, and building materials.\n\nIn summary, the process systematically transforms plastic waste through collection, sorting, shredding, washing, melting, and pellet formation into secondary raw materials. This circular economy approach reduces landfill waste and conserves virgin plastic resources, creating economically and environmentally valuable products from waste streams.",
+  "notes": "Band 7: Seven clear steps with explicit sequence markers ('commences', 'following', 'subsequently', 'then', 'completing'); explains sorting purpose (different melting points); describes technology (extrusion, dies); mentions applications; emphasises circular economy. Band 6 mistake: omitting sequence clarity; failing to explain why sorting matters; missing technical detail (dies, pellets); not linking to environmental benefit or new products."
+ },
+ {
+  "id": "w1-16",
+  "prompt": "The map below shows the development of a coastal city between 1990 and 2020. Summarise the information and describe the main changes that have occurred.",
+  "chart": {
+   "kind": "map",
+   "title": "Coastal City Development (1990–2020)",
+   "maps": [
+    {
+     "year": "1990",
+     "features": [
+      "Small harbour in the south with fishing docks",
+      "Historic town centre with low-rise buildings (2–3 storeys) clustered in the middle",
+      "Residential areas scattered to the north and east",
+      "Dense mangrove forest to the north",
+      "Agricultural fields occupying western and southern peripheries",
+      "Single main road connecting harbour to town centre",
+      "Small airport to the east"
+     ]
+    },
+    {
+     "year": "2020",
+     "features": [
+      "Expanded modern port facility with container terminals, now covering triple the original area",
+      "High-rise commercial and residential development in town centre (10+ storey buildings)",
+      "Extensive suburban sprawl northward and eastward with residential estates",
+      "Mangrove forest significantly reduced to scattered patches, largely cleared for development",
+      "Agricultural fields largely replaced by housing and industrial zones",
+      "Network of multi-lane highways and ring roads replacing original single road",
+      "Significantly expanded airport with new terminals and extended runways"
+     ]
+    }
+   ]
+  },
+  "model": "Between 1990 and 2020, the coastal city underwent dramatic transformation, evolving from a small port town into a modern urban centre. Changes involved vertical expansion, infrastructure modernisation, and significant environmental alteration.\n\nThe harbour experienced the most dramatic physical expansion, increasing approximately threefold to accommodate container terminals and modern port infrastructure, reflecting international maritime trade growth and economic significance. The town centre underwent vertical densification, with low-rise buildings (2–3 storeys) replaced by high-rise developments exceeding 10 storeys, reflecting increased land values and commercial/residential demand.\n\nResidential areas expanded dramatically northward and eastward, creating extensive suburban housing estates accommodating population growth. Transportation infrastructure underwent substantial modernisation: the single main road was replaced by multi-lane highways and ring roads. The airport similarly expanded with new terminals and extended runways.\n\nEnvironmental changes were profound: the dense mangrove forest to the north was largely cleared, reduced to scattered remnants. Agricultural fields were converted to housing and industrial zones, eliminating productive land use.\n\nOverall, the city exemplifies rapid urbanisation characteristic of developing coastal economies, combining infrastructure modernisation and economic growth with significant environmental costs and habitat destruction, reflecting a development-oriented approach prioritising commercial expansion over conservation.",
+  "notes": "Band 7: Identifies major transformations (port tripling, high-rise development, sprawl); contrasts before/after clearly; explains drivers (land values, trade, population); notes environmental losses (mangrove, agriculture); uses varied sentence structure. Band 6 mistake: describing changes without comparing magnitudes; failing to explain causes; not quantifying expansion ('triple the area'); omitting environmental impact."
+ }
+]

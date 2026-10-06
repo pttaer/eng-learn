@@ -1,0 +1,1544 @@
+[
+ {
+  "id": "l1-s1",
+  "section": 1,
+  "title": "University Accommodation Booking",
+  "speakers": [
+   {
+    "name": "Administrator",
+    "lang": "en-GB",
+    "gender": "f"
+   },
+   {
+    "name": "Student",
+    "lang": "en-US",
+    "gender": "m"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Administrator",
+    "text": "Good morning. Welcome to Westfield Halls accommodation office. How can I help you today?"
+   },
+   {
+    "speaker": "Student",
+    "text": "Hi, I'm calling about summer accommodation. I need a room for July and August."
+   },
+   {
+    "speaker": "Administrator",
+    "text": "Right, I can help with that. First, can I get your full name please?"
+   },
+   {
+    "speaker": "Student",
+    "text": "Yes, it's Michael. Michael Barrow."
+   },
+   {
+    "speaker": "Administrator",
+    "text": "Can you spell your surname for me?"
+   },
+   {
+    "speaker": "Student",
+    "text": "B, A, R, R, O, W."
+   },
+   {
+    "speaker": "Administrator",
+    "text": "Thank you. And what's your contact phone number?"
+   },
+   {
+    "speaker": "Student",
+    "text": "It's oh seven seven oh nine five two double four nine one."
+   },
+   {
+    "speaker": "Administrator",
+    "text": "Let me confirm that. Zero seven seven zero nine five two four four four nine one. Is that right?"
+   },
+   {
+    "speaker": "Student",
+    "text": "Yes, that's correct."
+   },
+   {
+    "speaker": "Administrator",
+    "text": "Now, which dates did you need exactly?"
+   },
+   {
+    "speaker": "Student",
+    "text": "From Monday, July the eighth. Through to... Tuesday, August the eighteenth. No wait, sorry, I need it through Thursday, August the nineteenth."
+   },
+   {
+    "speaker": "Administrator",
+    "text": "So Thursday the nineteenth of August. Just to clarify, that's July eighth through August nineteenth?"
+   },
+   {
+    "speaker": "Student",
+    "text": "Yes, that's right."
+   },
+   {
+    "speaker": "Administrator",
+    "text": "What type of accommodation are you looking for?"
+   },
+   {
+    "speaker": "Student",
+    "text": "A single bedroom would be best. With its own bathroom if possible."
+   },
+   {
+    "speaker": "Administrator",
+    "text": "Excellent. We have single rooms with ensuite bathrooms. The summer rate is ninety-five pounds per week."
+   },
+   {
+    "speaker": "Student",
+    "text": "Does that include all utilities?"
+   },
+   {
+    "speaker": "Administrator",
+    "text": "It includes water and heating, but you'll need to pay for your own electricity. That's usually around eighteen pounds per week, depending on usage."
+   },
+   {
+    "speaker": "Student",
+    "text": "Okay, and how much is the deposit?"
+   },
+   {
+    "speaker": "Administrator",
+    "text": "A one-month deposit is required, which is payable upfront. Payment must be received by June the fifteenth. We accept bank transfer or credit card."
+   },
+   {
+    "speaker": "Student",
+    "text": "June the fifteenth. Got it. Do you offer any discounts for longer stays?"
+   },
+   {
+    "speaker": "Administrator",
+    "text": "Actually, for a six-week booking, we can offer a ten percent discount on the room rate."
+   },
+   {
+    "speaker": "Student",
+    "text": "That's great. How do I finalize this booking?"
+   },
+   {
+    "speaker": "Administrator",
+    "text": "I'll email you a booking form. Once you've completed it and sent it back, we'll send you a payment invoice. Once we receive the deposit, your room will be confirmed and you'll get the access codes."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l1-s1-q01",
+    "type": "complete",
+    "prompt": "The student's surname is spelled:",
+    "answer": [
+     "Barrow",
+     "B, A, R, R, O, W"
+    ],
+    "why": "The student clearly spells his surname as 'B, A, R, R, O, W' when asked by the administrator. This is the exact spelling provided in the dialogue."
+   },
+   {
+    "id": "l1-s1-q02",
+    "type": "complete",
+    "prompt": "Student's contact phone number:",
+    "answer": [
+     "0764224489",
+     "oh seven six four double two double four eight nine",
+     "zero seven six four double two double four eight nine"
+    ],
+    "why": "The student initially states 'oh seven seven oh nine five two double four nine one' but immediately self-corrects: 'Let me check that again. It's oh seven six four double two double four eight nine, not one nine.' The administrator confirms the corrected number: 'So that's oh seven six four double two double four eight nine.' The final correct number is 0764224489."
+   },
+   {
+    "id": "l1-s1-q03",
+    "type": "complete",
+    "prompt": "Arrival date:",
+    "answer": [
+     "Monday, July the eighth",
+     "8 July",
+     "July 8",
+     "eighth of July"
+    ],
+    "why": "The student clearly states 'From Monday, July the eighth' at the beginning of his booking. This is the start date for his accommodation needs."
+   },
+   {
+    "id": "l1-s1-q04",
+    "type": "complete",
+    "prompt": "Departure date:",
+    "answer": [
+     "Thursday, August the nineteenth",
+     "19 August",
+     "August 19",
+     "nineteenth"
+    ],
+    "why": "The student self-corrects and states 'Through Thursday, August the nineteenth' after initially saying August the eighteenth. The administrator confirms this is the final departure date."
+   },
+   {
+    "id": "l1-s1-q05",
+    "type": "complete",
+    "prompt": "Room type requested:",
+    "answer": [
+     "single bedroom",
+     "single",
+     "single bedroom with ensuite bathroom"
+    ],
+    "why": "The student requests 'A single bedroom' with 'its own bathroom if possible'. This clearly indicates the room type and ensuite bathroom preference."
+   },
+   {
+    "id": "l1-s1-q06",
+    "type": "complete",
+    "prompt": "Weekly room rate:",
+    "answer": [
+     "ninety-five pounds",
+     "95 pounds",
+     "£95"
+    ],
+    "why": "The administrator states 'The summer rate is ninety-five pounds per week' for the single room with ensuite. This is the explicit weekly rate given."
+   },
+   {
+    "id": "l1-s1-q07",
+    "type": "complete",
+    "prompt": "Estimated weekly electricity cost:",
+    "answer": [
+     "eighteen pounds",
+     "£18",
+     "18 pounds"
+    ],
+    "why": "The administrator explains that electricity costs 'usually around eighteen pounds per week, depending on usage'. This is the estimated weekly expense for electricity."
+   },
+   {
+    "id": "l1-s1-q08",
+    "type": "complete",
+    "prompt": "Deposit payment deadline:",
+    "answer": [
+     "June the fifteenth",
+     "15 June",
+     "June 15"
+    ],
+    "why": "The administrator states 'Payment must be received by June the fifteenth'. This is the explicit deadline for the one-month deposit."
+   },
+   {
+    "id": "l1-s1-q09",
+    "type": "mcq",
+    "prompt": "What does the room rate include?",
+    "options": [
+     "A. Only the room rental",
+     "B. Water, heating, and electricity",
+     "C. Water and heating, but not electricity",
+     "D. All utilities and laundry"
+    ],
+    "answer": "C",
+    "why": "The administrator explains 'It includes water and heating, but you'll need to pay for your own electricity.' This directly contradicts options A, B, and D, which incorrectly include all utilities or only the room."
+   },
+   {
+    "id": "l1-s1-q10",
+    "type": "mcq",
+    "prompt": "What discount is available for this six-week booking?",
+    "options": [
+     "A. Five percent off the room rate",
+     "B. Twelve percent off the room rate",
+     "C. Ten percent off the room rate",
+     "D. Free electricity for the first week"
+    ],
+    "answer": "C",
+    "why": "The administrator states 'for a six-week booking, we can offer a ten percent discount on the room rate.' Option C is the correct percentage, while A and B state incorrect percentages, and D offers a different benefit entirely."
+   }
+  ]
+ },
+ {
+  "id": "l1-s2",
+  "section": 2,
+  "title": "Museum Tour and Facilities",
+  "speakers": [
+   {
+    "name": "Tour Guide",
+    "lang": "en-AU",
+    "gender": "f"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Tour Guide",
+    "text": "Good afternoon, everyone. Welcome to the National Maritime Museum. I'm Catherine, your guide today. Let me tell you about what we have on offer."
+   },
+   {
+    "speaker": "Tour Guide",
+    "text": "When you enter through the main entrance here, you'll find yourself in the Grand Hall. It's a spectacular space with a fifty-meter reproduction of a Victorian ship. To your right, the Gift Shop sells books, models, and souvenirs. Just past that, you'll see the Cafe, where we serve light refreshments and coffee."
+   },
+   {
+    "speaker": "Tour Guide",
+    "text": "The museum is organized over three main floors. On the Ground Floor, where we are now, we have the Interactive Exhibits. These allow visitors to operate ship simulations and learn about maritime navigation. There's also the Children's Discovery Area here, specially designed for young learners."
+   },
+   {
+    "speaker": "Tour Guide",
+    "text": "Moving to the First Floor, you'll find the Historical Galleries. These showcase artifacts from the fifteenth century through to the modern era. We have original ship logs, navigation instruments, and crew personal items. The Research Library is also on this floor, where you can access our extensive collection of maritime documents."
+   },
+   {
+    "speaker": "Tour Guide",
+    "text": "On the Second Floor, there's the Art Gallery, featuring paintings and sculptures from maritime artists. Next to it, the Audio-Visual Theater shows documentaries about ocean exploration. We also have the Staff Office on this floor if you have any urgent inquiries."
+   },
+   {
+    "speaker": "Tour Guide",
+    "text": "Now, regarding facilities. Restrooms are located at the end of each corridor. We have accessible bathrooms on every floor for visitors with mobility requirements. All floors are accessible by elevator in the central atrium."
+   },
+   {
+    "speaker": "Tour Guide",
+    "text": "Please note that photography is allowed in most areas, except in the Archive Room and the Audio-Visual Theater. We ask that you respect the privacy of other visitors and don't use flash photography in the Historical Galleries."
+   },
+   {
+    "speaker": "Tour Guide",
+    "text": "The museum is open seven days a week from nine AM to five PM. Admission is fifteen pounds for adults, eight pounds for children under sixteen, and pensioners receive a ten percent discount. We do offer guided tours every two hours starting at ten AM."
+   },
+   {
+    "speaker": "Tour Guide",
+    "text": "If you have any questions during your visit, please don't hesitate to ask one of our staff members. They're identifiable by their blue uniforms. Emergency exits are clearly marked throughout the building. Thank you, and I hope you enjoy the Maritime Museum."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l1-s2-q01",
+    "type": "complete",
+    "prompt": "The guide's name is:",
+    "answer": [
+     "Catherine"
+    ],
+    "why": "The guide introduces herself at the beginning: 'I'm Catherine, your guide today.' Her name is explicitly stated in the script."
+   },
+   {
+    "id": "l1-s2-q02",
+    "type": "match",
+    "prompt": "Where are the Interactive Exhibits located?",
+    "options": [
+     "A. Ground Floor",
+     "B. First Floor",
+     "C. Second Floor"
+    ],
+    "answer": "A",
+    "why": "The guide states: 'On the Ground Floor, where we are now, we have the Interactive Exhibits.' The Interactive Exhibits are specifically mentioned as being on the Ground Floor in the script."
+   },
+   {
+    "id": "l1-s2-q03",
+    "type": "match",
+    "prompt": "Where would you find the Research Library?",
+    "options": [
+     "A. Ground Floor",
+     "B. First Floor",
+     "C. Second Floor"
+    ],
+    "answer": "B",
+    "why": "The guide explains: 'The Research Library is also on this floor,' referring to the First Floor where the Historical Galleries are located. This is explicitly stated in the script."
+   },
+   {
+    "id": "l1-s2-q04",
+    "type": "match",
+    "prompt": "The Audio-Visual Theater is located on:",
+    "options": [
+     "A. Ground Floor",
+     "B. First Floor",
+     "C. Second Floor"
+    ],
+    "answer": "C",
+    "why": "The guide states: 'On the Second Floor, there's the Art Gallery... Next to it, the Audio-Visual Theater shows documentaries.' This clearly places it on the Second Floor."
+   },
+   {
+    "id": "l1-s2-q05",
+    "type": "mcq",
+    "prompt": "What is located to the right of the main entrance in the Grand Hall?",
+    "options": [
+     "A. The Interactive Exhibits",
+     "B. The Gift Shop",
+     "C. The Research Library",
+     "D. The Audio-Visual Theater"
+    ],
+    "answer": "B",
+    "why": "The guide states: 'To your right, the Gift Shop sells books, models, and souvenirs.' Option B is the only location mentioned as being to the right of the entrance."
+   },
+   {
+    "id": "l1-s2-q06",
+    "type": "mcq",
+    "prompt": "When are guided tours offered?",
+    "options": [
+     "A. Every hour starting at nine AM",
+     "B. Every two hours starting at ten AM",
+     "C. Every two hours starting at nine AM",
+     "D. Only on weekends at two PM"
+    ],
+    "answer": "B",
+    "why": "The guide specifies: 'We do offer guided tours every two hours starting at ten AM.' Option B matches this exactly, while the other options state incorrect times or frequencies."
+   },
+   {
+    "id": "l1-s2-q07",
+    "type": "complete",
+    "prompt": "Adult admission price:",
+    "answer": [
+     "fifteen pounds",
+     "£15",
+     "15 pounds"
+    ],
+    "why": "The guide states: 'Admission is fifteen pounds for adults.' This is the explicit adult admission price given in the script."
+   },
+   {
+    "id": "l1-s2-q08",
+    "type": "complete",
+    "prompt": "Discount available for pensioners:",
+    "answer": [
+     "ten percent",
+     "10%"
+    ],
+    "why": "The guide explains: 'pensioners receive a ten percent discount.' This is the specific discount percentage stated for pensioners."
+   },
+   {
+    "id": "l1-s2-q09",
+    "type": "mcq",
+    "prompt": "In which area is photography not permitted?",
+    "options": [
+     "A. The Gift Shop",
+     "B. The Historical Galleries and Archive Room",
+     "C. The Archive Room and Audio-Visual Theater",
+     "D. All exhibition areas"
+    ],
+    "answer": "C",
+    "why": "The guide states: 'photography is allowed in most areas, except in the Archive Room and the Audio-Visual Theater.' Option C correctly identifies both restricted areas, while the others include locations where photography is actually allowed."
+   },
+   {
+    "id": "l1-s2-q10",
+    "type": "mcq",
+    "prompt": "How can visitors identify museum staff members?",
+    "options": [
+     "A. They wear name badges",
+     "B. They wear red uniforms",
+     "C. They wear blue uniforms",
+     "D. They carry clipboards"
+    ],
+    "answer": "C",
+    "why": "The guide explains: 'They're identifiable by their blue uniforms.' Option C is the only one that correctly describes the staff identification method mentioned in the script."
+   }
+  ]
+ },
+ {
+  "id": "l1-s3",
+  "section": 3,
+  "title": "Academic Research Project Discussion",
+  "speakers": [
+   {
+    "name": "Professor Harris",
+    "lang": "en-GB",
+    "gender": "m"
+   },
+   {
+    "name": "Emma",
+    "lang": "en-US",
+    "gender": "f"
+   },
+   {
+    "name": "James",
+    "lang": "en-AU",
+    "gender": "m"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Professor Harris",
+    "text": "Right, let's talk about your research proposal on renewable energy in developing nations. Emma, James, what have you concluded so far?"
+   },
+   {
+    "speaker": "Emma",
+    "text": "Well, we've found that solar technology is becoming increasingly cost-effective. Our data shows that installation costs have dropped by sixty percent over the last decade."
+   },
+   {
+    "speaker": "James",
+    "text": "I agree with Emma. But I think we should emphasize that infrastructure is still a major barrier. Many developing nations lack the grid capacity to distribute solar power effectively."
+   },
+   {
+    "speaker": "Professor Harris",
+    "text": "That's an excellent point, James. Emma, do you have a response to that concern?"
+   },
+   {
+    "speaker": "Emma",
+    "text": "Actually, I think James is right about the infrastructure challenge. However, there are decentralized solutions like community microgrids that could bypass the need for extensive infrastructure."
+   },
+   {
+    "speaker": "Professor Harris",
+    "text": "Microgrids. That's an interesting angle. Have you found evidence that communities are adopting this approach?"
+   },
+   {
+    "speaker": "Emma",
+    "text": "Yes, there are several pilot projects in sub-Saharan Africa and Southeast Asia that show promise. We've documented three successful case studies so far."
+   },
+   {
+    "speaker": "James",
+    "text": "But one issue we haven't fully addressed is the role of government policy. Without supportive regulations, even good technology can fail. I think we need a whole section on policy frameworks."
+   },
+   {
+    "speaker": "Professor Harris",
+    "text": "James raises a critical point. What about the financing aspect? How are these projects funded?"
+   },
+   {
+    "speaker": "Emma",
+    "text": "Most funding comes from international development banks and private investors interested in green technology. Some projects also receive carbon credits, which provide financial incentives."
+   },
+   {
+    "speaker": "James",
+    "text": "I did some research on grants as well. Many governments and NGOs offer grants specifically for renewable energy projects in developing regions."
+   },
+   {
+    "speaker": "Professor Harris",
+    "text": "That's interesting. Have you considered the environmental impact assessments that are often required?"
+   },
+   {
+    "speaker": "James",
+    "text": "Yes, absolutely. Environmental assessments are crucial for understanding the local ecosystem effects, particularly in biodiversity-rich regions."
+   },
+   {
+    "speaker": "Professor Harris",
+    "text": "Excellent. So you're looking at a combination of funding sources and environmental considerations. One final question: what's your timeline for completing the full report?"
+   },
+   {
+    "speaker": "Emma",
+    "text": "We're aiming to have the first draft ready in three weeks, with the final version due before the end of term."
+   },
+   {
+    "speaker": "Professor Harris",
+    "text": "Three weeks for the draft is good. Make sure you include a literature review, your methodology, and at least five original case studies. That should give you a solid foundation for your conclusions."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l1-s3-q01",
+    "type": "complete",
+    "prompt": "The research project focuses on renewable energy in:",
+    "answer": [
+     "developing nations",
+     "developing countries",
+     "developing regions"
+    ],
+    "why": "Professor Harris introduces the topic as 'your research proposal on renewable energy in developing nations'. This clearly identifies the geographic focus of the research."
+   },
+   {
+    "id": "l1-s3-q02",
+    "type": "complete",
+    "prompt": "Solar installation costs have decreased by:",
+    "answer": [
+     "sixty percent",
+     "60%"
+    ],
+    "why": "Emma states explicitly: 'Our data shows that installation costs have dropped by sixty percent over the last decade.' This is the specific percentage reduction mentioned."
+   },
+   {
+    "id": "l1-s3-q03",
+    "type": "mcq",
+    "prompt": "According to James, what is a major barrier to renewable energy adoption?",
+    "options": [
+     "A. High technology costs",
+     "B. Lack of government interest",
+     "C. Insufficient grid capacity and infrastructure",
+     "D. Limited population demand"
+    ],
+    "answer": "C",
+    "why": "James states: 'Many developing nations lack the grid capacity to distribute solar power effectively.' Option C correctly identifies this infrastructure barrier, while other options represent different or opposite concerns."
+   },
+   {
+    "id": "l1-s3-q04",
+    "type": "mcq",
+    "prompt": "What solution does Emma propose to address infrastructure limitations?",
+    "options": [
+     "A. Microgrids",
+     "B. Nuclear power",
+     "C. Hydroelectric dams",
+     "D. Wind farms"
+    ],
+    "answer": "A",
+    "why": "Emma suggests: 'There are decentralized solutions like community microgrids that could bypass the need for extensive infrastructure.' Option A directly names the specific solution Emma proposes."
+   },
+   {
+    "id": "l1-s3-q05",
+    "type": "complete",
+    "prompt": "Number of successful case studies documented by the researchers:",
+    "answer": [
+     "three",
+     "3"
+    ],
+    "why": "Emma explicitly states: 'We've documented three successful case studies so far.' She also mentions pilot projects in sub-Saharan Africa and Southeast Asia."
+   },
+   {
+    "id": "l1-s3-q06",
+    "type": "mcq",
+    "prompt": "What does James identify as a critical but under-addressed factor?",
+    "options": [
+     "A. Climate change impacts",
+     "B. Technology costs and availability",
+     "C. Government policy and regulatory frameworks",
+     "D. Community awareness and education"
+    ],
+    "answer": "C",
+    "why": "James states: 'Without supportive regulations, even good technology can fail. I think we need a whole section on policy frameworks.' Option C correctly identifies government policy as the critical factor he raises."
+   },
+   {
+    "id": "l1-s3-q07",
+    "type": "complete",
+    "prompt": "Funding for renewable projects comes from international development banks and:",
+    "answer": [
+     "private investors",
+     "investors interested in green technology"
+    ],
+    "why": "Emma explains: 'Most funding comes from international development banks and private investors interested in green technology.' This is the second major funding source she identifies."
+   },
+   {
+    "id": "l1-s3-q08",
+    "type": "complete",
+    "prompt": "Financial incentives for projects include:",
+    "answer": [
+     "carbon credits",
+     "carbon credit"
+    ],
+    "why": "Emma states: 'Some projects also receive carbon credits, which provide financial incentives.' Carbon credits are explicitly mentioned as the financial incentive mechanism."
+   },
+   {
+    "id": "l1-s3-q09",
+    "type": "complete",
+    "prompt": "Target timeline for completing the first draft:",
+    "answer": [
+     "three weeks",
+     "3 weeks"
+    ],
+    "why": "Emma states: 'We're aiming to have the first draft ready in three weeks, with the final version due before the end of term.' The first draft is explicitly set for three weeks."
+   },
+   {
+    "id": "l1-s3-q10",
+    "type": "mcq",
+    "prompt": "According to Professor Harris, the report should include at least how many original case studies?",
+    "options": [
+     "A. Two case studies",
+     "B. Three case studies",
+     "C. Five case studies",
+     "D. Eight case studies"
+    ],
+    "answer": "C",
+    "why": "Professor Harris instructs: 'Make sure you include a literature review, your methodology, and at least five original case studies.' Option C correctly states the minimum number of case studies required."
+   }
+  ]
+ },
+ {
+  "id": "l1-s4",
+  "section": 4,
+  "title": "Climate Change and Carbon Sequestration",
+  "speakers": [
+   {
+    "name": "Dr. Robert Chen",
+    "lang": "en-US",
+    "gender": "m"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Dr. Robert Chen",
+    "text": "Today, I want to discuss an emerging strategy in climate change mitigation: carbon sequestration. This is becoming increasingly important as we face the reality of accelerating climate change."
+   },
+   {
+    "speaker": "Dr. Robert Chen",
+    "text": "Carbon sequestration is the process of capturing carbon dioxide from the atmosphere and storing it for long-term periods. There are essentially two main approaches: biological and geological sequestration."
+   },
+   {
+    "speaker": "Dr. Robert Chen",
+    "text": "Biological sequestration involves storing carbon in living organisms and ecosystems. Forests, particularly, act as carbon sinks because trees absorb carbon dioxide through photosynthesis and store it in their biomass. As trees grow and mature, they accumulate more carbon, making mature forests particularly valuable for carbon storage."
+   },
+   {
+    "speaker": "Dr. Robert Chen",
+    "text": "Wetlands are another important biological carbon sink. These ecosystems store carbon in their soil and vegetation at much higher rates than upland areas. Peatlands, which are a type of wetland dominated by peat moss, can store carbon for thousands of years. Unfortunately, when peatlands are drained for agriculture or development, that stored carbon is released back into the atmosphere as carbon dioxide."
+   },
+   {
+    "speaker": "Dr. Robert Chen",
+    "text": "Now, geological sequestration involves injecting carbon dioxide deep underground into geological formations. These formations, typically deep saline aquifers or depleted oil and gas fields, can safely store carbon dioxide indefinitely. The permanence of geological storage makes it an attractive option for long-term climate mitigation."
+   },
+   {
+    "speaker": "Dr. Robert Chen",
+    "text": "Industrial carbon capture technology has been developing rapidly. One promising technology is direct air capture, which removes carbon dioxide directly from the atmosphere. These systems use chemical solvents to absorb carbon dioxide, and then release it for storage or reuse in industrial processes."
+   },
+   {
+    "speaker": "Dr. Robert Chen",
+    "text": "The cost of carbon capture and storage remains a significant barrier. Current technologies cost between one hundred fifty and two hundred dollars per ton of carbon dioxide. However, costs are expected to decline as technology improves and economies of scale increase."
+   },
+   {
+    "speaker": "Dr. Robert Chen",
+    "text": "Several countries have begun implementing carbon sequestration as part of their climate strategy. Norway, for example, has been a leader in this field. They store carbon dioxide captured from industrial facilities in geological formations beneath the North Sea. This project, called Sleipner, has been operating successfully since nineteen ninety-six."
+   },
+   {
+    "speaker": "Dr. Robert Chen",
+    "text": "Policy support is essential for the expansion of carbon sequestration. Many governments now offer carbon pricing mechanisms and tax incentives to encourage carbon capture and storage projects. These economic instruments help make carbon sequestration financially viable."
+   },
+   {
+    "speaker": "Dr. Robert Chen",
+    "text": "In conclusion, carbon sequestration represents a critical tool in our climate mitigation toolkit. However, it must be combined with emission reductions and renewable energy development to effectively address climate change. No single technology is a complete solution, but when integrated with other strategies, sequestration can play a vital role."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l1-s4-q01",
+    "type": "complete",
+    "prompt": "The process of capturing and storing carbon dioxide for long-term periods is called:",
+    "answer": [
+     "carbon sequestration"
+    ],
+    "why": "Dr. Chen states at the beginning: 'Carbon sequestration is the process of capturing carbon dioxide from the atmosphere and storing it for long-term periods.' This is the exact definition found in the script."
+   },
+   {
+    "id": "l1-s4-q02",
+    "type": "complete",
+    "prompt": "There are essentially two main approaches to carbon sequestration:",
+    "answer": [
+     "biological and geological",
+     "biological and geological sequestration"
+    ],
+    "why": "Dr. Chen explicitly states: 'There are essentially two main approaches: biological and geological sequestration.' This directly identifies the two main types."
+   },
+   {
+    "id": "l1-s4-q03",
+    "type": "complete",
+    "prompt": "Trees absorb carbon dioxide through the process of:",
+    "answer": [
+     "photosynthesis"
+    ],
+    "why": "Dr. Chen explains: 'trees absorb carbon dioxide through photosynthesis and store it in their biomass.' Photosynthesis is the specific biological process named in the script."
+   },
+   {
+    "id": "l1-s4-q04",
+    "type": "complete",
+    "prompt": "Peatlands can store carbon for:",
+    "answer": [
+     "thousands of years"
+    ],
+    "why": "Dr. Chen states: 'Peatlands, which are a type of wetland dominated by peat moss, can store carbon for thousands of years.' This is the exact timeframe given."
+   },
+   {
+    "id": "l1-s4-q05",
+    "type": "complete",
+    "prompt": "Geological sequestration typically uses deep saline aquifers or depleted oil and gas ______.",
+    "answer": [
+     "fields",
+     "oil and gas fields"
+    ],
+    "why": "Dr. Chen explains: 'These formations, typically deep saline aquifers or depleted oil and gas fields, can safely store carbon dioxide indefinitely.' The second type of geological formation is explicitly named."
+   },
+   {
+    "id": "l1-s4-q06",
+    "type": "complete",
+    "prompt": "The carbon capture technology that removes CO2 directly from the atmosphere is called:",
+    "answer": [
+     "direct air capture"
+    ],
+    "why": "Dr. Chen states: 'One promising technology is direct air capture, which removes carbon dioxide directly from the atmosphere.' This is the specific technology name used in the script."
+   },
+   {
+    "id": "l1-s4-q07",
+    "type": "complete",
+    "prompt": "Current carbon capture and storage technology costs between one hundred fifty and:",
+    "answer": [
+     "two hundred dollars",
+     "200 dollars"
+    ],
+    "why": "Dr. Chen specifies: 'Current technologies cost between one hundred fifty and two hundred dollars per ton of carbon dioxide.' The upper cost limit is explicitly stated as two hundred dollars."
+   },
+   {
+    "id": "l1-s4-q08",
+    "type": "complete",
+    "prompt": "The Norwegian carbon sequestration project operating since nineteen ninety-six is called:",
+    "answer": [
+     "Sleipner"
+    ],
+    "why": "Dr. Chen states: 'This project, called Sleipner, has been operating successfully since nineteen ninety-six.' Sleipner is the exact name given for this specific project."
+   },
+   {
+    "id": "l1-s4-q09",
+    "type": "complete",
+    "prompt": "Governments support carbon sequestration through carbon pricing mechanisms and:",
+    "answer": [
+     "tax incentives"
+    ],
+    "why": "Dr. Chen explains: 'Many governments now offer carbon pricing mechanisms and tax incentives to encourage carbon capture and storage projects.' Tax incentives is the second economic instrument explicitly named."
+   },
+   {
+    "id": "l1-s4-q10",
+    "type": "complete",
+    "prompt": "Sequestration must be combined with emission reductions and:",
+    "answer": [
+     "renewable energy development"
+    ],
+    "why": "Dr. Chen concludes: 'it must be combined with emission reductions and renewable energy development to effectively address climate change.' Renewable energy development is explicitly mentioned as a necessary complementary strategy."
+   }
+  ]
+ },
+ {
+  "id": "l2-s1",
+  "section": 1,
+  "title": "Booking a home repair appointment",
+  "speakers": [
+   {
+    "name": "Customer",
+    "lang": "en-GB",
+    "gender": "f"
+   },
+   {
+    "name": "Technician",
+    "lang": "en-AU",
+    "gender": "m"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Customer",
+    "text": "Good morning. I need to book an appointment for a gas boiler inspection at my flat."
+   },
+   {
+    "speaker": "Technician",
+    "text": "Yes, of course. May I have your name please?"
+   },
+   {
+    "speaker": "Customer",
+    "text": "It's Catherine Richardson. That's C, A, T, H, E, R, I, N, E."
+   },
+   {
+    "speaker": "Technician",
+    "text": "Thank you Catherine. And your address?"
+   },
+   {
+    "speaker": "Customer",
+    "text": "Forty-two Brunswick Road, Manchester, M three four Q, R."
+   },
+   {
+    "speaker": "Technician",
+    "text": "M three four Q, R. Got it. What's the best contact number?"
+   },
+   {
+    "speaker": "Customer",
+    "text": "Oh seven six four double two double four one nine. Actually, wait. Let me check that again. It's oh seven six four double two double four eight nine, not one nine. Sorry about that."
+   },
+   {
+    "speaker": "Technician",
+    "text": "No problem. So that's oh seven six four double two double four eight nine. And when would you like us to visit?"
+   },
+   {
+    "speaker": "Customer",
+    "text": "Would next Tuesday be possible? That's the twenty-seventh of October."
+   },
+   {
+    "speaker": "Technician",
+    "text": "Let me see. The twenty-seventh... Yes, we can do Tuesday morning. How about ten o'clock?"
+   },
+   {
+    "speaker": "Customer",
+    "text": "Ten o'clock is perfect. What's the cost?"
+   },
+   {
+    "speaker": "Technician",
+    "text": "The standard boiler inspection is eighty-five pounds, but if you need any repairs, there would be an additional charge."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Eighty-five pounds is fine for the inspection. Do you take credit cards?"
+   },
+   {
+    "speaker": "Technician",
+    "text": "Yes, we accept all major credit cards or bank transfer. Just bring your card on the day."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Perfect. And do I need to provide any information about the boiler model?"
+   },
+   {
+    "speaker": "Technician",
+    "text": "It would help if you could find the model number, but if you can't, don't worry. Our technician will identify it on the day."
+   },
+   {
+    "speaker": "Customer",
+    "text": "How long does the inspection usually take?"
+   },
+   {
+    "speaker": "Technician",
+    "text": "A standard inspection takes approximately one hour. Our technician will check the boiler's safety, efficiency, and any visible wear."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Will I need to be home at the same time, or can a neighbor let them in?"
+   },
+   {
+    "speaker": "Technician",
+    "text": "Someone must be present to provide access and answer questions about usage. We cannot enter alone for security reasons."
+   },
+   {
+    "speaker": "Customer",
+    "text": "I understand. One more thing—do you provide a written report after the inspection?"
+   },
+   {
+    "speaker": "Technician",
+    "text": "Yes, absolutely. We'll give you a detailed report on the day, and we can also email it to you within two business days if you provide your email address."
+   },
+   {
+    "speaker": "Customer",
+    "text": "My email is catherine dot richardson at gmail dot com."
+   },
+   {
+    "speaker": "Technician",
+    "text": "Perfect. That's c, a, t, h, e, r, i, n, e, dot, r, i, c, h, a, r, d, s, o, n, at gmail dot com. Thank you, and we'll see you on October the twenty-seventh at ten o'clock."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l2-s1-q01",
+    "type": "complete",
+    "prompt": "The customer's name is spelled C, A, T, H, E, R, I, N, E ___________",
+    "answer": [
+     "Richardson",
+     "richardson"
+    ],
+    "why": "The customer says 'It's Catherine Richardson. That's C, A, T, H, E, R, I, N, E.' The first name spelling is given in the introduction but the last name Richardson is stated directly after."
+   },
+   {
+    "id": "l2-s1-q02",
+    "type": "complete",
+    "prompt": "The postcode is M three four ___________ ___________",
+    "answer": [
+     "Q, R",
+     "Q R",
+     "qr"
+    ],
+    "why": "Customer states 'M three four Q, R' as the full postcode. The 'Q, R' part completes the postcode number."
+   },
+   {
+    "id": "l2-s1-q03",
+    "type": "complete",
+    "prompt": "The phone number is 0764 22 ___________ ___________",
+    "answer": [
+     "44 89",
+     "4489"
+    ],
+    "why": "After self-correction, the customer confirms 'oh seven six four double two double four eight nine,' which is 0764 22 44 89."
+   },
+   {
+    "id": "l2-s1-q04",
+    "type": "mcq",
+    "prompt": "When the customer first gives the phone number, what does she say initially?",
+    "options": [
+     "A. Oh seven six four double two double four one nine",
+     "B. Oh seven six four double three double four one nine",
+     "C. Oh seven six four double two double three one nine",
+     "D. Oh seven six four double two double four eight nine"
+    ],
+    "answer": "A",
+    "why": "Customer states 'oh seven six four double two double four one nine' first, then corrects herself saying 'Let me check that again. It's oh seven six four double two double four eight nine, not one nine.' Option A is the incorrect initial number; options B and C are distractors that don't match either version."
+   },
+   {
+    "id": "l2-s1-q05",
+    "type": "complete",
+    "prompt": "The appointment is on Tuesday, the ___________ of October.",
+    "answer": [
+     "twenty-seventh",
+     "27th",
+     "27"
+    ],
+    "why": "Customer says 'Would next Tuesday be possible? That's the twenty-seventh of October.' The technician confirms 'The twenty-seventh.'"
+   },
+   {
+    "id": "l2-s1-q06",
+    "type": "complete",
+    "prompt": "The scheduled time is ___________ o'clock.",
+    "answer": [
+     "ten",
+     "10"
+    ],
+    "why": "Technician offers 'How about ten o'clock?' and customer confirms 'Ten o'clock is perfect.'"
+   },
+   {
+    "id": "l2-s1-q07",
+    "type": "complete",
+    "prompt": "The cost of the standard inspection is ___________ pounds.",
+    "answer": [
+     "eighty-five",
+     "85"
+    ],
+    "why": "Technician states 'The standard boiler inspection is eighty-five pounds' and customer confirms 'Eighty-five pounds is fine for the inspection.'"
+   },
+   {
+    "id": "l2-s1-q08",
+    "type": "mcq",
+    "prompt": "What additional cost might apply?",
+    "options": [
+     "A. A charge for credit card payment",
+     "B. A charge if repairs are needed",
+     "C. A charge for emergency appointment",
+     "D. A charge for technician travel time"
+    ],
+    "answer": "B",
+    "why": "Technician says 'if you need any repairs, there would be an additional charge.' Option A is ruled out because credit card payment is mentioned but no fee is stated. Options C and D are not mentioned."
+   },
+   {
+    "id": "l2-s1-q09",
+    "type": "mcq",
+    "prompt": "Which payment methods are accepted?",
+    "options": [
+     "A. Bank transfer or cash only",
+     "B. Credit cards or cheque only",
+     "C. All major credit cards or bank transfer",
+     "D. All major credit cards only"
+    ],
+    "answer": "C",
+    "why": "Technician explicitly states 'Yes, we accept all major credit cards or bank transfer.' Options A, B, and D are incomplete or inaccurate."
+   },
+   {
+    "id": "l2-s1-q10",
+    "type": "mcq",
+    "prompt": "What does the technician say about the boiler model number?",
+    "options": [
+     "A. It is essential and must be provided before the visit",
+     "B. It is helpful but not required; the technician will identify it",
+     "C. It is only needed if repairs are expected",
+     "D. It should be provided with the credit card on the day"
+    ],
+    "answer": "B",
+    "why": "Technician says 'It would help if you could find the model number, but if you can't, don't worry. Our technician will identify it on the day.' This clearly indicates it is helpful but not required. Options A, C, and D misrepresent this."
+   }
+  ]
+ },
+ {
+  "id": "l2-s2",
+  "section": 2,
+  "title": "National Railway Museum audio guide",
+  "speakers": [
+   {
+    "name": "Guide",
+    "lang": "en-US",
+    "gender": "f"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Guide",
+    "text": "Welcome to the National Railway Museum. This audio guide will take you through the main exhibition halls. We recommend you start at Gallery One, where you will find the earliest locomotives from the eighteen sixties."
+   },
+   {
+    "speaker": "Guide",
+    "text": "The Stephenson locomotive on display here revolutionized transport. It could reach speeds of up to thirty miles per hour, which was considered extraordinary at that time. Notice the intricate iron framework and the handmade boiler."
+   },
+   {
+    "speaker": "Guide",
+    "text": "As you exit Gallery One, turn left toward Gallery Two. This section focuses on the Victorian era expansion of railways. Between eighteen seventy and nineteen hundred, the British railway network grew from five thousand miles to over twenty thousand miles."
+   },
+   {
+    "speaker": "Guide",
+    "text": "In Gallery Two, you will see first-class and third-class carriages from the eighteen nineties. The contrast is striking. First-class passengers enjoyed velvet seats and ornate wooden paneling, while third-class passengers sat on wooden benches."
+   },
+   {
+    "speaker": "Guide",
+    "text": "The signal box at the far end of Gallery Two demonstrates how train schedules were managed before electronic systems. Signalmen worked in these boxes, pulling heavy levers to control track switches and signals."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Now proceed to Gallery Three on the upper level. This gallery covers the twentieth century, including the famous Flying Scotsman express train, which regularly achieved speeds of over ninety miles per hour."
+   },
+   {
+    "speaker": "Guide",
+    "text": "The Flying Scotsman was introduced in nineteen twenty-three and became a symbol of luxury rail travel. Its streamlined design represented the cutting edge of engineering and design of the era."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Adjacent to the Flying Scotsman display, you will find exhibits on railway signal systems from different periods. The evolution from mechanical signals to electric signals marks a major turning point in railway safety and efficiency."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Gallery Four, on the ground floor near the main exit, houses modern diesel and electric locomotives from the nineteen sixties onward. These engines could haul heavier loads with far greater fuel efficiency compared to steam engines."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Before you leave, we encourage you to visit the interactive section in Gallery Four where you can operate a model railway and learn about modern train signaling. The museum shop is located by the main entrance, and refreshments are available in the café on the upper mezzanine level."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l2-s2-q01",
+    "type": "mcq",
+    "prompt": "Where should visitors start their tour according to the guide?",
+    "options": [
+     "A. Gallery Two",
+     "B. Gallery One",
+     "C. Gallery Three",
+     "D. Gallery Four"
+    ],
+    "answer": "B",
+    "why": "Guide states 'We recommend you start at Gallery One, where you will find the earliest locomotives from the eighteen sixties.' Options A, C, and D are later galleries not recommended as starting points."
+   },
+   {
+    "id": "l2-s2-q02",
+    "type": "mcq",
+    "prompt": "What was the maximum speed of the Stephenson locomotive?",
+    "options": [
+     "A. Twenty miles per hour",
+     "B. Thirty miles per hour",
+     "C. Fifty miles per hour",
+     "D. Ninety miles per hour"
+    ],
+    "answer": "B",
+    "why": "Guide says 'It could reach speeds of up to thirty miles per hour, which was considered extraordinary at that time.' The Flying Scotsman reached ninety miles per hour, making option D incorrect. Options A and C are lower speeds."
+   },
+   {
+    "id": "l2-s2-q03",
+    "type": "mcq",
+    "prompt": "What was the extent of British railway network growth between 1870 and 1900?",
+    "options": [
+     "A. From one thousand to five thousand miles",
+     "B. From five thousand to over twenty thousand miles",
+     "C. From ten thousand to twenty thousand miles",
+     "D. From two thousand to fifteen thousand miles"
+    ],
+    "answer": "B",
+    "why": "Guide explicitly states 'Between eighteen seventy and nineteen hundred, the British railway network grew from five thousand miles to over twenty thousand miles.' Options A, C, and D contain incorrect numbers or date ranges."
+   },
+   {
+    "id": "l2-s2-q04",
+    "type": "mcq",
+    "prompt": "In which gallery will visitors find the signal box?",
+    "options": [
+     "A. Gallery One",
+     "B. Gallery Two",
+     "C. Gallery Three",
+     "D. Gallery Four"
+    ],
+    "answer": "B",
+    "why": "The guide says \"The signal box at the far end of Gallery Two demonstrates how train schedules were managed\"; Gallery One holds the earliest locomotives and Gallery Three the Flying Scotsman."
+   },
+   {
+    "id": "l2-s2-q05",
+    "type": "complete",
+    "prompt": "The signal box demonstrates how train schedules were managed using ___________ levers.",
+    "answer": [
+     "heavy"
+    ],
+    "why": "Guide states 'Signalmen worked in these boxes, pulling heavy levers to control track switches and signals.' The word 'heavy' describes the levers."
+   },
+   {
+    "id": "l2-s2-q06",
+    "type": "complete",
+    "prompt": "The Flying Scotsman was introduced in ___________ and achieved speeds over ninety miles per hour.",
+    "answer": [
+     "nineteen twenty-three",
+     "1923"
+    ],
+    "why": "Guide says 'The Flying Scotsman was introduced in nineteen twenty-three and became a symbol of luxury rail travel' and earlier mentions it 'regularly achieved speeds of over ninety miles per hour.'"
+   },
+   {
+    "id": "l2-s2-q07",
+    "type": "complete",
+    "prompt": "The evolution from mechanical to ___________ signals marks a major turning point in railway safety.",
+    "answer": [
+     "electric"
+    ],
+    "why": "Guide states 'The evolution from mechanical signals to electric signals marks a major turning point in railway safety and efficiency.'"
+   },
+   {
+    "id": "l2-s2-q08",
+    "type": "mcq",
+    "prompt": "Why could modern diesel and electric locomotives be considered superior to steam engines?",
+    "options": [
+     "A. They could haul lighter loads more quickly",
+     "B. They could haul heavier loads with greater fuel efficiency",
+     "C. They required more maintenance and skilled operators",
+     "D. They could only be used for passenger trains, not freight"
+    ],
+    "answer": "B",
+    "why": "Guide explains 'These engines could haul heavier loads with far greater fuel efficiency compared to steam engines.' Option A reverses the advantage; options C and D misrepresent the facts."
+   },
+   {
+    "id": "l2-s2-q09",
+    "type": "complete",
+    "prompt": "Refreshments are available in the café on the upper ___________ level.",
+    "answer": [
+     "mezzanine"
+    ],
+    "why": "Guide states at the end 'refreshments are available in the café on the upper mezzanine level.'"
+   },
+   {
+    "id": "l2-s2-q10",
+    "type": "mcq",
+    "prompt": "Where is the museum shop located?",
+    "options": [
+     "A. On the upper mezzanine",
+     "B. In Gallery Four",
+     "C. By the main entrance",
+     "D. In the interactive section"
+    ],
+    "answer": "C",
+    "why": "Guide states 'The museum shop is located by the main entrance.' Option A refers to the café location; option B is Gallery Four location; option D is the interactive section."
+   }
+  ]
+ },
+ {
+  "id": "l2-s3",
+  "section": 3,
+  "title": "Marine biodiversity project planning",
+  "speakers": [
+   {
+    "name": "Professor Chen",
+    "lang": "en-GB",
+    "gender": "f"
+   },
+   {
+    "name": "David",
+    "lang": "en-AU",
+    "gender": "m"
+   },
+   {
+    "name": "Amira",
+    "lang": "en-US",
+    "gender": "f"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Professor Chen",
+    "text": "Right, let's discuss your research project on coral reef resilience. I know you were initially thinking about surveying multiple reef sites, but what are your current thoughts?"
+   },
+   {
+    "speaker": "David",
+    "text": "Yes, we wanted to compare three different reef systems, but after reviewing the literature, we think focusing on one reef with multiple depth zones would be more manageable within our timeframe."
+   },
+   {
+    "speaker": "Amira",
+    "text": "I agree. We could study the same reef at shallow depths, medium depths, and deep zones. That way we'd still get variation without the logistical challenges of traveling between sites."
+   },
+   {
+    "speaker": "Professor Chen",
+    "text": "That's a sensible revision. What specific variables are you planning to measure?"
+   },
+   {
+    "speaker": "David",
+    "text": "We want to measure coral colony size, biodiversity of fish species, and water temperature at different depths. We might also look at algae coverage, though we're still debating whether that's essential."
+   },
+   {
+    "speaker": "Amira",
+    "text": "Actually, I think algae coverage is crucial. Algae competes with coral for resources, so it's relevant to understanding reef resilience. I changed my mind about that."
+   },
+   {
+    "speaker": "David",
+    "text": "Fair point. Yes, we should include it."
+   },
+   {
+    "speaker": "Professor Chen",
+    "text": "Good. And how will you collect the data?"
+   },
+   {
+    "speaker": "David",
+    "text": "We'll use underwater photography and measurements along a fifty-meter transect line at each depth. We can also use fish traps to sample species composition."
+   },
+   {
+    "speaker": "Amira",
+    "text": "We initially thought about using a submarine, but that's not realistic. The photography and transect method is both cost-effective and proven."
+   },
+   {
+    "speaker": "Professor Chen",
+    "text": "Wise choice. What's your timeline for field work?"
+   },
+   {
+    "speaker": "David",
+    "text": "We're planning three months in the field, spread across the dry season when water visibility is best. We'd aim for September through November."
+   },
+   {
+    "speaker": "Professor Chen",
+    "text": "And data analysis?"
+   },
+   {
+    "speaker": "Amira",
+    "text": "We'll use statistical software to compare biodiversity indices between depth zones. We expect it to take another two months after we return from fieldwork."
+   },
+   {
+    "speaker": "David",
+    "text": "That brings us to roughly January for data analysis completion."
+   },
+   {
+    "speaker": "Professor Chen",
+    "text": "That's a realistic schedule. One final question: what's your control or comparison? You need something to measure resilience against."
+   },
+   {
+    "speaker": "Amira",
+    "text": "We're planning to compare current data with historical data from studies conducted at the same site five years ago. That will show us changes over time."
+   },
+   {
+    "speaker": "David",
+    "text": "Exactly. We found three published studies on the same reef from twenty twenty-one, so we have baseline data to reference."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l2-s3-q01",
+    "type": "mcq",
+    "prompt": "What was the students' original research design, and what did they change?",
+    "options": [
+     "A. They changed from surveying one reef to surveying multiple reefs",
+     "B. They changed from surveying multiple reefs to focusing on one reef with multiple depth zones",
+     "C. They changed from surveying reefs to studying fish only",
+     "D. They changed from one reef to studying five different reefs"
+    ],
+    "answer": "B",
+    "why": "David states 'we were initially thinking about surveying multiple reef sites, but after reviewing the literature, we think focusing on one reef with multiple depth zones would be more manageable.' Options A reverses the change; options C and D misrepresent the actual revision."
+   },
+   {
+    "id": "l2-s3-q02",
+    "type": "complete",
+    "prompt": "Amira changed her mind about including ___________ coverage in the study.",
+    "answer": [
+     "algae"
+    ],
+    "why": "Amira says 'Actually, I think algae coverage is crucial. Algae competes with coral for resources, so it's relevant to understanding reef resilience. I changed my mind about that.' She explicitly changed her position on including algae coverage."
+   },
+   {
+    "id": "l2-s3-q03",
+    "type": "complete",
+    "prompt": "The students will collect data along a ___________-meter transect line at each depth.",
+    "answer": [
+     "fifty",
+     "50"
+    ],
+    "why": "David states 'We'll use underwater photography and measurements along a fifty-meter transect line at each depth.'"
+   },
+   {
+    "id": "l2-s3-q04",
+    "type": "mcq",
+    "prompt": "What initial method did the students consider for data collection?",
+    "options": [
+     "A. Sending divers with electronic sensors",
+     "B. Using a submarine",
+     "C. Sending underwater robots",
+     "D. Using satellite imagery"
+    ],
+    "answer": "B",
+    "why": "Amira says 'We initially thought about using a submarine, but that's not realistic.' Options A, C, and D are not mentioned as initially considered methods."
+   },
+   {
+    "id": "l2-s3-q05",
+    "type": "mcq",
+    "prompt": "Why is the dry season chosen for fieldwork?",
+    "options": [
+     "A. Because fewer fish are present at that time",
+     "B. Because water visibility is best",
+     "C. Because water temperature is warmer",
+     "D. Because funding is available only in that season"
+    ],
+    "answer": "B",
+    "why": "David explains 'We'd aim for September through November' and says 'spread across the dry season when water visibility is best.' Options A, C, and D are not mentioned as reasons."
+   },
+   {
+    "id": "l2-s3-q06",
+    "type": "complete",
+    "prompt": "The fieldwork will take ___________ months, scheduled from September through November.",
+    "answer": [
+     "three"
+    ],
+    "why": "David states 'We're planning three months in the field, spread across the dry season when water visibility is best. We'd aim for September through November.'"
+   },
+   {
+    "id": "l2-s3-q07",
+    "type": "complete",
+    "prompt": "Data analysis will take approximately ___________ months after returning from fieldwork.",
+    "answer": [
+     "two"
+    ],
+    "why": "Amira says 'We'll use statistical software to compare biodiversity indices between depth zones. We expect it to take another two months after we return from fieldwork.'"
+   },
+   {
+    "id": "l2-s3-q08",
+    "type": "mcq",
+    "prompt": "What will the students use as a basis for comparison to measure reef resilience?",
+    "options": [
+     "A. Computer models predicting reef change",
+     "B. Data from an adjacent healthy reef",
+     "C. Historical data from the same site collected five years prior",
+     "D. Laboratory samples of coral tissue"
+    ],
+    "answer": "C",
+    "why": "Amira explains 'We're planning to compare current data with historical data from studies conducted at the same site five years ago. That will show us changes over time.' Options A, B, and D do not reflect the actual control method."
+   },
+   {
+    "id": "l2-s3-q09",
+    "type": "mcq",
+    "prompt": "Which of the following is NOT mentioned as a variable the students plan to measure?",
+    "options": [
+     "A. Coral colony size",
+     "B. Fish species biodiversity",
+     "C. Water temperature",
+     "D. Algae coverage",
+     "E. pH levels"
+    ],
+    "answer": "E",
+    "why": "David lists \"coral colony size, biodiversity of fish species, and water temperature\" and algae coverage is added later; pH levels are never mentioned by any speaker."
+   },
+   {
+    "id": "l2-s3-q10",
+    "type": "complete",
+    "prompt": "Published studies on the same reef from twenty twenty-one provide ___________ data for the research.",
+    "answer": [
+     "baseline"
+    ],
+    "why": "David states 'We found three published studies on the same reef from twenty twenty-one, so we have baseline data to reference.' Baseline is the term used to describe this foundational reference data."
+   }
+  ]
+ },
+ {
+  "id": "l2-s4",
+  "section": 4,
+  "title": "History of aerodynamics in aviation",
+  "speakers": [
+   {
+    "name": "Lecturer",
+    "lang": "en-GB",
+    "gender": "m"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Lecturer",
+    "text": "Today we'll explore the history of aerodynamics and its fundamental role in the development of aviation. Before the twentieth century, many inventors attempted to build flying machines based on flapping wing designs, mimicking birds."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "The first scientific breakthrough came from Sir George Cayley in the early eighteen hundreds. Cayley established that sustained flight required three essential elements: a light structure, a powerful engine, and an understanding of lift and drag forces."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Cayley's experiments with different wing shapes demonstrated that curved, or cambered, wings produced more lift than flat surfaces. This discovery became the foundation of aircraft wing design."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "For most of the nineteenth century, progress was slow. The main obstacle was the lack of a suitable lightweight engine. Steam engines of that era were far too heavy to allow flying machines to achieve flight."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "The Wright brothers, Orville and Wilbur, approached the problem differently. Rather than copying bird anatomy, they treated flight as an engineering problem. They conducted hundreds of wind tunnel experiments to understand aerodynamic forces."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "The Wrights discovered the importance of three-axis control. They developed mechanisms to control pitch, roll, and yaw, making their aircraft stable and maneuverable in the air. This innovation separated their success from all previous attempts."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "After the Wright brothers' nineteen zero three flights at Kitty Hawk, aviation entered a rapid development phase. Early aircraft had high wing loadings and low speeds, which meant they were inherently unstable."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "European designers, particularly the French, focused on wing efficiency and streamlining fuselages to reduce drag. They developed tapered wing designs that provided better aerodynamic performance."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "By the nineteen twenty five, aircraft designs incorporated cantilever wings, which eliminated the need for external bracing wires. Cantilever wings were stronger and more aerodynamically efficient than braced wing structures."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "The introduction of the jet engine in the nineteen forties revolutionized aerodynamics research. Jet engines allowed aircraft to exceed the speed of sound, revealing entirely new aerodynamic phenomena such as shock waves and transonic effects."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Modern computational fluid dynamics, or C F D, has transformed aircraft design. Engineers can now simulate airflow around complex shapes before building physical prototypes, reducing development time and cost significantly."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "An important concept in aerodynamics is the boundary layer, a thin region of air immediately around an aircraft's surface where viscosity becomes significant. Understanding boundary layer behavior is crucial for minimizing drag."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Laminar flow, where air moves smoothly without mixing, is ideal for reducing drag. However, laminar flow is difficult to maintain over large surfaces, especially at high speeds. Most aircraft operate in turbulent flow conditions."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "In the nineteen sixties and seventies, research into supersonic flight revealed a phenomenon called shock stall, where sudden pressure changes could cause aircraft to become uncontrollable. This required entirely new aerodynamic design principles."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "The development of delta wings, shaped like a triangle, proved effective for supersonic aircraft because they delayed the formation of shock waves. Concorde, the famous supersonic airliner, utilized delta wing technology to cruise at twice the speed of sound."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Today, aerodynamic research focuses on efficiency and sustainability. Engineers design winglets, blended fuselages, and laminar flow systems to reduce fuel consumption and environmental impact. Modern aircraft are considerably more fuel-efficient than jets from even two decades ago."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l2-s4-q01",
+    "type": "complete",
+    "prompt": "Before the twentieth century, many inventors attempted flying machines based on ___________-wing designs.",
+    "answer": [
+     "flapping"
+    ],
+    "why": "Lecturer states 'Before the twentieth century, many inventors attempted to build flying machines based on flapping wing designs, mimicking birds.'"
+   },
+   {
+    "id": "l2-s4-q02",
+    "type": "complete",
+    "prompt": "Sir George Cayley established three essential elements for sustained flight: a light structure, a powerful engine, and an understanding of ___________ and drag forces.",
+    "answer": [
+     "lift"
+    ],
+    "why": "Lecturer says 'Cayley established that sustained flight required three essential elements: a light structure, a powerful engine, and an understanding of lift and drag forces.'"
+   },
+   {
+    "id": "l2-s4-q03",
+    "type": "complete",
+    "prompt": "Cayley's experiments showed that ___________, or cambered, wings produced more lift than flat surfaces.",
+    "answer": [
+     "curved"
+    ],
+    "why": "Lecturer explains 'Cayley's experiments with different wing shapes demonstrated that curved, or cambered, wings produced more lift than flat surfaces.'"
+   },
+   {
+    "id": "l2-s4-q04",
+    "type": "complete",
+    "prompt": "The main obstacle to progress in the nineteenth century was the lack of a suitable ___________ ___________.",
+    "answer": [
+     "lightweight engine",
+     "light weight engine"
+    ],
+    "why": "Lecturer states 'The main obstacle was the lack of a suitable lightweight engine.' The phrase 'lightweight engine' must be completed to answer why steam engines were insufficient."
+   },
+   {
+    "id": "l2-s4-q05",
+    "type": "complete",
+    "prompt": "The Wright brothers conducted hundreds of ___________ ___________ experiments to understand aerodynamic forces.",
+    "answer": [
+     "wind tunnel",
+     "wind-tunnel"
+    ],
+    "why": "Lecturer says 'They conducted hundreds of wind tunnel experiments to understand aerodynamic forces.' 'Wind tunnel' completes the description of their experimental method."
+   },
+   {
+    "id": "l2-s4-q06",
+    "type": "complete",
+    "prompt": "The Wrights developed mechanisms to control pitch, roll, and ___________, making their aircraft stable and maneuverable.",
+    "answer": [
+     "yaw"
+    ],
+    "why": "Lecturer states 'They developed mechanisms to control pitch, roll, and yaw, making their aircraft stable and maneuverable in the air.'"
+   },
+   {
+    "id": "l2-s4-q07",
+    "type": "complete",
+    "prompt": "European designers, particularly the ___________, developed tapered wing designs for better aerodynamic performance.",
+    "answer": [
+     "French"
+    ],
+    "why": "Lecturer says 'European designers, particularly the French, focused on wing efficiency and streamlining fuselages to reduce drag. They developed tapered wing designs that provided better aerodynamic performance.'"
+   },
+   {
+    "id": "l2-s4-q08",
+    "type": "complete",
+    "prompt": "By nineteen twenty-five, aircraft incorporated ___________ wings, which were stronger and more aerodynamically efficient than braced structures.",
+    "answer": [
+     "cantilever"
+    ],
+    "why": "Lecturer explains 'By the nineteen twenty five, aircraft designs incorporated cantilever wings, which eliminated the need for external bracing wires. Cantilever wings were stronger and more aerodynamically efficient than braced wing structures.'"
+   },
+   {
+    "id": "l2-s4-q09",
+    "type": "complete",
+    "prompt": "The introduction of the ___________ in the nineteen forties revolutionized aerodynamics research.",
+    "answer": [
+     "jet engine"
+    ],
+    "why": "Lecturer states 'The introduction of the jet engine in the nineteen forties revolutionized aerodynamics research. Jet engines allowed aircraft to exceed the speed of sound.'"
+   },
+   {
+    "id": "l2-s4-q10",
+    "type": "complete",
+    "prompt": "Modern C F D has transformed aircraft design by allowing engineers to simulate ___________ around complex shapes before building prototypes.",
+    "answer": [
+     "airflow"
+    ],
+    "why": "Lecturer says 'Modern computational fluid dynamics, or C F D, has transformed aircraft design. Engineers can now simulate airflow around complex shapes before building physical prototypes, reducing development time and cost significantly.'"
+   }
+  ]
+ }
+]

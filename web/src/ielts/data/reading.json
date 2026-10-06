@@ -1,0 +1,2241 @@
+[
+ {
+  "id": "r01",
+  "title": "The Evolution of the Printing Press",
+  "topic": "History of technology/invention",
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "The invention of the printing press in the mid-15th century by Johannes Gutenberg represents one of history's most transformative technological breakthroughs. Before Gutenberg's innovation around 1440, books were laboriously handwritten by scribes, a process that could take months to complete a single volume. The rarity and expense of books meant that knowledge was confined largely to the clergy, nobility, and wealthy merchants. Gutenberg's revolutionary device used movable metal type and an oil-based ink derived from woodblock printing techniques, combined with a screw press adapted from existing wine and olive presses. This combination allowed for the rapid, efficient reproduction of text on a scale previously unimaginable."
+   },
+   {
+    "label": "B",
+    "text": "The earliest printed books produced by Gutenberg were remarkable for their quality and precision. The Gutenberg Bible, completed between 1452 and 1455, stands as the most famous example. This monumental work comprised 1,286 pages of meticulously printed Latin text, featuring elaborate hand-illuminated initials and margins decorated by artists. Despite being printed, these early editions maintained many characteristics of handwritten manuscripts, including variations in spelling and the use of abbreviations. Approximately 49 copies of the original 180 printed Gutenberg Bibles are known to survive today, making them among the most valuable and sought-after books in the world, with individual copies valued at over 30 million dollars."
+   },
+   {
+    "label": "C",
+    "text": "The technology spread rapidly across Europe during the latter half of the 15th century. By 1480, printing presses had been established in more than 110 cities and towns, from Rome to Paris to Strasbourg. In England, William Caxton established the first printing press in 1476 at Westminster, producing the first printed book in the English language, Recuyell of the Historyes of Troye. This rapid expansion was driven by the demand from an increasingly literate urban population, universities seeking to standardize texts, and the growing merchant class requiring commercial documents and correspondence. The costs of producing books fell dramatically, with prices decreasing by up to 80 percent within a century, placing printed materials within reach of more ordinary citizens."
+   },
+   {
+    "label": "D",
+    "text": "The democratization of information through printing had profound intellectual and social consequences. Access to identical copies of texts allowed scholars to verify sources and build upon previous knowledge with greater precision and reliability. The standardization of texts meant that different readers across Europe could reference the same page numbers and exact passages, facilitating scholarly discourse and enabling the development of modern scientific methodology. The printing press enabled the dissemination of ideas that challenged established authority, playing a crucial role in the Protestant Reformation beginning in 1517 when Martin Luther distributed his Ninety-five Theses through printed copies. Political and religious authorities quickly recognized the power of the press and attempted to control it through censorship and licensing, establishing the first indexes of prohibited books."
+   },
+   {
+    "label": "E",
+    "text": "Technical innovations in printing continued to improve efficiency and quality throughout the centuries following Gutenberg's initial invention. Benjamin Franklin's work in 18th-century Philadelphia advanced printing techniques and brought mechanical improvements to press design. In 1814, The Times of London adopted the first steam-powered printing press, developed by Friedrich Koenig and Andreas Bauer, which could produce 1,100 pages per hour compared to approximately 250 pages per hour with hand-operated presses. This innovation reduced production time and costs dramatically, allowing newspapers to emerge as a dominant medium of mass communication. The newspaper industry, in turn, drove further technological developments and standardization of practices throughout the 19th century."
+   },
+   {
+    "label": "F",
+    "text": "The industrial revolution's impact on printing extended beyond mechanical improvements to encompass the entire supply chain of book production. Papermaking became mechanized, with the first continuous papermaking machine invented by Nicolas-Louis Robert in 1798, enabling mass production of relatively inexpensive paper. Ink formulations were refined and standardized. Binding techniques evolved from hand-stitching to mechanical assembly, reducing labor costs and production time. These interconnected innovations created an ecosystem that supported the explosive growth of publishing in the 19th century. By 1900, annual book publication in Western Europe and North America had reached unprecedented levels, with millions of titles produced annually compared to hundreds in the pre-industrial era."
+   },
+   {
+    "label": "G",
+    "text": "While the printing press revolutionized information distribution, it also created new challenges and debates that persist to the present day. The ability to mass-produce texts raised questions about copyright, intellectual property, and authors' rights. The rapid proliferation of printed material created concerns about information quality and the spread of misleading or false information. Religious and political institutions struggled to maintain control over the narrative when competing voices could be published and distributed. Some scholars argued that the shift from oral to written culture resulted in a loss of memorization skills and critical oral debate, though this debate has been revisited with each subsequent communication technology. Nevertheless, the printing press established literacy and access to information as prerequisites for political participation in democratic societies."
+   },
+   {
+    "label": "H",
+    "text": "The printing press's influence on human civilization cannot be overstated. It transformed the very nature of knowledge production, preserving information in a durable and reproducible form that could survive the loss of individual memory or manuscript. It accelerated scientific progress by enabling rapid sharing of discoveries and experimental methods. It fostered the development of national consciousness through printed newspapers and books in vernacular languages rather than Latin. The press enabled the Enlightenment, the Scientific Revolution, and ultimately modernity itself. Today, as digital technologies challenge the dominance of print media, the historical significance of Gutenberg's invention remains clear: it established the fundamental principle that widespread access to information, though sometimes disruptive and contentious, is essential to human advancement and social transformation."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r01-q01",
+    "type": "tfng",
+    "prompt": "Before Gutenberg's invention, books were commonly produced using automated mechanical presses.",
+    "answer": "FALSE",
+    "why": "The passage states 'Before Gutenberg's innovation around 1440, books were laboriously handwritten by scribes' and describes books being rare and expensive. There is no mention of automated mechanical presses before Gutenberg. The misleading alternative would confuse pre-Gutenberg production methods."
+   },
+   {
+    "id": "r01-q02",
+    "type": "tfng",
+    "prompt": "The Gutenberg Bible contained hand-decorated elements despite being printed.",
+    "answer": "TRUE",
+    "why": "Paragraph B explicitly states 'these early editions maintained many characteristics of handwritten manuscripts' and describes 'elaborate hand-illuminated initials and margins decorated by artists,' confirming that the printed Gutenberg Bible included handwork."
+   },
+   {
+    "id": "r01-q03",
+    "type": "tfng",
+    "prompt": "The cost of producing books increased significantly during the first century after Gutenberg's invention.",
+    "answer": "FALSE",
+    "why": "Paragraph C states 'The costs of producing books fell dramatically, with prices decreasing by up to 80 percent within a century,' directly contradicting the claim of cost increase. The passage shows costs fell, not increased."
+   },
+   {
+    "id": "r01-q04",
+    "type": "tfng",
+    "prompt": "The Protestant Reformation would have been impossible without the printing press.",
+    "answer": "NOT GIVEN",
+    "why": "While Paragraph D mentions that the printing press played 'a crucial role' in the Reformation by enabling distribution of Martin Luther's Theses in 1517, the passage does not state that the Reformation would have been impossible without it. The passage shows correlation and support, not necessity."
+   },
+   {
+    "id": "r01-q05",
+    "type": "tfng",
+    "prompt": "Steam-powered printing presses in the 19th century could produce more than 1,000 pages per hour.",
+    "answer": "TRUE",
+    "why": "Paragraph E states that The Times of London adopted 'the first steam-powered printing press' 'which could produce 1,100 pages per hour,' which exceeds 1,000 pages per hour as claimed."
+   },
+   {
+    "id": "r01-q06",
+    "type": "complete",
+    "prompt": "According to the passage, approximately _______ copies of the original Gutenberg Bibles survive today.",
+    "answer": [
+     "49"
+    ],
+    "why": "Paragraph B directly states: 'Approximately 49 copies of the original 180 printed Gutenberg Bibles are known to survive today.'"
+   },
+   {
+    "id": "r01-q07",
+    "type": "complete",
+    "prompt": "William Caxton established the first printing press in England in the year _______.",
+    "answer": [
+     "1476"
+    ],
+    "why": "Paragraph C explicitly states 'William Caxton established the first printing press in 1476 at Westminster,' providing the exact year."
+   },
+   {
+    "id": "r01-q08",
+    "type": "complete",
+    "prompt": "The continuous papermaking machine that enabled mass production was invented by _______.",
+    "answer": [
+     "Nicolas-Louis Robert"
+    ],
+    "why": "Paragraph F states 'Papermaking became mechanized, with the first continuous papermaking machine invented by Nicolas-Louis Robert in 1798.'"
+   },
+   {
+    "id": "r01-q09",
+    "type": "complete",
+    "prompt": "Steam-powered printing presses could produce approximately _______ pages per hour compared to 250 pages per hour with hand-operated presses.",
+    "answer": [
+     "1,100"
+    ],
+    "why": "Paragraph E specifically states that steam-powered presses 'could produce 1,100 pages per hour compared to approximately 250 pages per hour with hand-operated presses.'"
+   },
+   {
+    "id": "r01-q10",
+    "type": "heading",
+    "prompt": "Choose the most appropriate heading for Paragraph C.",
+    "options": [
+     "i. The decline of scribal traditions",
+     "ii. Rapid expansion of printing across Europe",
+     "iii. The development of standardized English",
+     "iv. Economic pressures on book production",
+     "v. Religious resistance to printed texts",
+     "vi. Urban literacy and demand for books",
+     "vii. Industrial innovations supporting mass production"
+    ],
+    "answer": "ii",
+    "why": "Paragraph C focuses on how printing technology spread rapidly across Europe (110+ cities by 1480), with details about Caxton and the declining costs. Option ii directly captures this geographical expansion and rapid distribution."
+   },
+   {
+    "id": "r01-q11",
+    "type": "heading",
+    "prompt": "Choose the most appropriate heading for Paragraph F.",
+    "options": [
+     "i. The decline of scribal traditions",
+     "ii. Rapid expansion of printing across Europe",
+     "iii. The development of standardized English",
+     "iv. Economic pressures on book production",
+     "v. Religious resistance to printed texts",
+     "vi. Urban literacy and demand for books",
+     "vii. Industrial innovations supporting mass production"
+    ],
+    "answer": "vii",
+    "why": "Paragraph F discusses mechanization of papermaking, refined ink formulations, mechanical binding, and how these interconnected innovations supported explosive publishing growth. Option vii accurately describes these industrial improvements."
+   },
+   {
+    "id": "r01-q12",
+    "type": "mcq",
+    "prompt": "What does the passage suggest about the relationship between printing and scientific progress?",
+    "options": [
+     "A. The printing press slowed scientific advancement by creating information overload.",
+     "B. Printing enabled rapid sharing of scientific discoveries and experimental methods.",
+     "C. Science and printing developed independently without significant interaction.",
+     "D. The scientific revolution occurred despite the printing press, not because of it."
+    ],
+    "answer": "B",
+    "why": "Paragraph H explicitly states 'It accelerated scientific progress by enabling rapid sharing of discoveries and experimental methods,' directly supporting option B. Option A contradicts this, option C ignores the connection, and option D reverses the causal relationship."
+   },
+   {
+    "id": "r01-q13",
+    "type": "mcq",
+    "prompt": "The passage indicates that early printed books like the Gutenberg Bible were characterized by:",
+    "options": [
+     "A. Complete abandonment of all decorative elements found in manuscripts.",
+     "B. Uniform spelling and no abbreviations compared to handwritten texts.",
+     "C. Retention of many manuscript features including hand-decorated elements.",
+     "D. Lower quality than contemporary handwritten manuscripts."
+    ],
+    "answer": "C",
+    "why": "Paragraph B states 'Despite being printed, these early editions maintained many characteristics of handwritten manuscripts, including variations in spelling' and describes 'hand-illuminated initials and margins decorated by artists,' exactly matching option C."
+   },
+   {
+    "id": "r01-q14",
+    "type": "mcq",
+    "prompt": "Based on the passage, what challenge did printing technology create for existing institutions?",
+    "options": [
+     "A. It made books too expensive for common people to afford.",
+     "B. It reduced the literacy rate among European populations.",
+     "C. It made it difficult for authorities to maintain control over information distribution.",
+     "D. It eliminated the need for handwritten manuscripts entirely."
+    ],
+    "answer": "C",
+    "why": "Paragraph G states 'Some scholars argued that the shift from oral to written culture resulted in a loss of memorization skills' and mentions concerns about control of narrative when 'competing voices could be published and distributed,' indicating authorities struggled with loss of control over information."
+   }
+  ]
+ },
+ {
+  "id": "r02",
+  "title": "Urban Heat Islands and City Climate",
+  "topic": "Environmental science",
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Urban areas around the world experience significantly higher temperatures than their surrounding rural counterparts, a phenomenon known as the urban heat island effect. This temperature differential, typically ranging from 1 to 7 degrees Celsius higher in cities compared to rural areas, becomes particularly pronounced during nighttime hours when cities retain heat accumulated during the day. The effect has been documented in cities across different climates and geographical regions, from Tokyo and Mexico City to New York and Stockholm. Scientists first observed this phenomenon in London during the 1820s, though systematic study of urban heat islands did not begin in earnest until the latter half of the 20th century. The magnitude of the urban heat island effect varies significantly depending on city size, building density, vegetation cover, industrial activity, and local climate conditions."
+   },
+   {
+    "label": "B",
+    "text": "The primary cause of urban heat islands lies in the replacement of natural vegetation with built structures and impervious surfaces such as asphalt, concrete, and dark-colored rooftops. These materials absorb solar radiation efficiently and release the accumulated heat slowly, creating a thermal reservoir effect. In contrast, natural vegetation reflects a higher proportion of solar radiation and loses heat through evapotranspiration, where plants release water vapor that cools surrounding air. Urban areas typically contain 30 to 50 percent less vegetation than comparable rural areas. Waste heat from vehicular traffic, air conditioning systems, and industrial processes contributes directly to elevated urban temperatures. Research in Tokyo and Singapore indicates anthropogenic heat contributes 10 to 20 percent of the total urban temperature elevation."
+   },
+   {
+    "label": "C",
+    "text": "The consequences of urban heat islands extend beyond discomfort. Elevated temperatures in cities increase energy demand for air conditioning and cooling systems, creating feedback loops where energy consumption drives higher temperatures and pollution, increasing cooling demand. Studies in New York estimate cooling energy consumption increases approximately 1.5 to 3 percent for every additional degree Celsius of temperature increase. Heat-related mortality increases substantially during heat waves, with elderly populations and those with pre-existing health conditions facing disproportionate risk. Air quality deteriorates in warmer urban environments, as higher temperatures accelerate the formation of ground-level ozone and other pollutants harmful to respiratory health. Ecosystems within and around cities experience stress from elevated temperatures, affecting species distribution and behavior patterns."
+   },
+   {
+    "label": "D",
+    "text": "Mitigation strategies for reducing urban heat islands have been developed and tested in numerous cities worldwide. The most widely discussed approach involves increasing urban vegetation through programs that expand tree canopy, create green roofs and walls, and restore parks. Cities such as Los Angeles and Shanghai have implemented tree-planting initiatives, with Los Angeles targeting 6 million new trees by 2050 to increase canopy coverage from the current 20 percent to 35 percent. These initiatives reduce surface temperatures while providing additional benefits including improved air quality, enhanced stormwater management, and increased biodiversity. Cool roofs and pavements that reflect solar radiation complement green infrastructure approaches. Strategic urban planning can minimize building canyon geometry that traps heat."
+   },
+   {
+    "label": "E",
+    "text": "Cool roofs and cool pavements represent a straightforward mitigation approach gaining increasing attention. Cool roofs utilize high-albedo materials that reflect 60 to 90 percent of incident solar radiation compared to conventional dark roofs that reflect only 5 to 25 percent. Field studies in Phoenix, Arizona and Athens, Greece demonstrate that cool roof adoption can reduce surface temperatures by 30 to 40 degrees Celsius compared to conventional dark roofs. California has mandated cool roof requirements for non-residential buildings since 1992. Widespread adoption could potentially reduce urban temperatures by 0.5 to 2.0 degrees Celsius. However, cool roofs present challenges in cold climates where reduced solar absorption may increase heating demand during winter months."
+   },
+   {
+    "label": "F",
+    "text": "Water bodies and wetlands in urban environments play an increasingly recognized role in moderating temperatures. Lakes, ponds, rivers, and restored wetlands function as thermal regulators through evaporative cooling processes similar to vegetation. Many cities have undertaken projects to restore or create urban water features as part of climate adaptation strategies. Singapore's extensive waterfront development and artificial lakes serve multiple purposes including stormwater management and urban cooling. Similarly, European cities including Copenhagen and Amsterdam have incorporated water features into urban planning. Studies indicate temperature reductions of 2 to 3 degrees Celsius within 500 meters of substantial water features. However, water quality must be maintained to prevent warm, stagnant water bodies from exacerbating heat island effects."
+   },
+   {
+    "label": "G",
+    "text": "The effectiveness of urban heat island mitigation requires integrated approaches combining multiple strategies rather than relying on single interventions. Research indicates that combining vegetation increases, cool surface deployment, and water feature restoration can achieve cumulative temperature reductions exceeding individual strategy outcomes. Urban governance structures must facilitate coordination between municipal departments to implement comprehensive strategies. Regulatory frameworks including building codes and urban planning standards need revision to prioritize heat mitigation. Financial incentives have proven effective in stimulating adoption of cool roofs and green infrastructure. Cities including Melbourne, Tokyo, and Shanghai have established dedicated urban heat mitigation offices."
+   },
+   {
+    "label": "H",
+    "text": "Urban heat islands represent a significant and growing challenge in an era of global climate change and continued urban expansion. The interaction between climate change and urban heat islands creates a compounding effect, where rising baseline global temperatures amplify urban heat island impacts. However, the malleability of urban environments offers opportunities for adaptation absent in natural ecosystems. Unlike changes to global climate, which require international cooperation and long-term commitment to emissions reduction, urban heat island mitigation can be implemented through local action and can produce measurable results within years rather than decades. The combination of technological solutions, nature-based approaches, and supportive governance structures positions cities to become cooler, more livable places while advancing air quality, biodiversity conservation, and human well-being."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r02-q01",
+    "type": "tfng",
+    "prompt": "Urban heat islands were first systematically studied by scientists during the early 19th century.",
+    "answer": "FALSE",
+    "why": "Paragraph A states that heat islands 'were first observed in London during the 1820s, though systematic measurement and study...did not begin in earnest until the latter half of the 20th century.' This directly contradicts the claim that systematic study occurred in the early 1800s."
+   },
+   {
+    "id": "r02-q02",
+    "type": "tfng",
+    "prompt": "Vegetation in rural areas loses heat more slowly than urban built surfaces.",
+    "answer": "FALSE",
+    "why": "Paragraph B explains that vegetation 'lose[s] heat through evapotranspiration' and reflects 'a higher proportion of incoming solar radiation' compared to built surfaces which 'release the accumulated heat slowly.' This indicates vegetation loses heat faster, not slower."
+   },
+   {
+    "id": "r02-q03",
+    "type": "tfng",
+    "prompt": "Cool roofs are more challenging to implement in cold climates because they increase heating demand.",
+    "answer": "TRUE",
+    "why": "Paragraph E explicitly states 'cool roofs present challenges in cold climates where reduced solar absorption may increase heating demand during winter months,' directly supporting this statement."
+   },
+   {
+    "id": "r02-q04",
+    "type": "tfng",
+    "prompt": "Studies indicate that water bodies can reduce temperatures in surrounding areas by more than 3 degrees Celsius.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph F states 'studies indicating temperature reductions of 2 to 3 degrees Celsius within 500 meters of substantial water features,' showing up to 3 degrees but not exceeding 3 degrees. The passage does not provide evidence for reductions greater than 3 degrees."
+   },
+   {
+    "id": "r02-q05",
+    "type": "tfng",
+    "prompt": "Anthropogenic heat contributes a significant portion of urban temperature elevation in some cities.",
+    "answer": "TRUE",
+    "why": "Paragraph B states 'Research in cities like Tokyo and Singapore indicates that anthropogenic heat contributes 10 to 20 percent of the total urban temperature elevation,' confirming that human-generated heat is a significant contributor."
+   },
+   {
+    "id": "r02-q06",
+    "type": "complete",
+    "prompt": "Los Angeles has set a target to increase urban tree canopy coverage from _______ percent to 35 percent by 2050.",
+    "answer": [
+     "20"
+    ],
+    "why": "Paragraph D states 'Los Angeles setting a target of establishing 6 million new trees by 2050 to increase canopy coverage from the current 20 percent to 35 percent.'"
+   },
+   {
+    "id": "r02-q07",
+    "type": "complete",
+    "prompt": "Cool roofs can reflect between _______ and _______ percent of incident solar radiation.",
+    "answer": [
+     "60",
+     "90"
+    ],
+    "why": "Paragraph E explicitly states 'Cool roofs utilize high-albedo materials that reflect 60 to 90 percent of incident solar radiation.'"
+   },
+   {
+    "id": "r02-q08",
+    "type": "complete",
+    "prompt": "Urban areas typically contain _______ percent less vegetation than comparable rural areas.",
+    "answer": [
+     "30 to 50",
+     "30-50"
+    ],
+    "why": "Paragraph B directly states 'Urban areas typically contain 30 to 50 percent less vegetation than comparable rural areas.'"
+   },
+   {
+    "id": "r02-q09",
+    "type": "complete",
+    "prompt": "Cool roof requirements have been mandatory for non-residential buildings in California since _______.",
+    "answer": [
+     "1992"
+    ],
+    "why": "Paragraph E states 'cool roof requirements have been mandatory for non-residential buildings since 1992' in California."
+   },
+   {
+    "id": "r02-q10",
+    "type": "heading",
+    "prompt": "Choose the most appropriate heading for Paragraph C.",
+    "options": [
+     "i. Energy efficiency measures for urban cooling",
+     "ii. Negative health impacts of city heat",
+     "iii. Temperature increases and their environmental consequences",
+     "iv. Air quality improvements in urban areas",
+     "v. Building design strategies for heat reduction",
+     "vi. Vegetation management in cities",
+     "vii. Government policies restricting urban development",
+     "viii. Strategies for reducing urban temperatures",
+     "ix. Limitations of cool roof technology",
+     "x. Cool roof technology and its applications"
+    ],
+    "answer": "iii",
+    "why": "Paragraph C focuses on the consequences of urban heat islands including energy demand, mortality, air quality degradation, and ecosystem stress. Option iii directly captures the theme of temperature increases and their cascading environmental and health consequences."
+   },
+   {
+    "id": "r02-q11",
+    "type": "heading",
+    "prompt": "Choose the most appropriate heading for Paragraph D.",
+    "options": [
+     "i. Energy efficiency measures for urban cooling",
+     "ii. Negative health impacts of city heat",
+     "iii. Temperature increases and their environmental consequences",
+     "iv. Air quality improvements in urban areas",
+     "v. Building design strategies for heat reduction",
+     "vi. Vegetation management in cities",
+     "vii. Government policies restricting urban development",
+     "viii. Strategies for reducing urban temperatures",
+     "ix. Limitations of cool roof technology",
+     "x. Cool roof technology and its applications"
+    ],
+    "answer": "viii",
+    "why": "Paragraph D discusses various mitigation strategies including tree-planting, green roofs, cool pavements, and urban planning approaches. Option iii accurately summarizes these temperature reduction strategies."
+   },
+   {
+    "id": "r02-q12",
+    "type": "heading",
+    "prompt": "Choose the most appropriate heading for Paragraph E.",
+    "options": [
+     "i. Energy efficiency measures for urban cooling",
+     "ii. Negative health impacts of city heat",
+     "iii. Temperature increases and their environmental consequences",
+     "iv. Air quality improvements in urban areas",
+     "v. Building design strategies for heat reduction",
+     "vi. Vegetation management in cities",
+     "vii. Government policies restricting urban development",
+     "viii. Strategies for reducing urban temperatures",
+     "ix. Limitations of cool roof technology",
+     "x. Cool roof technology and its applications"
+    ],
+    "answer": "x",
+    "why": "Paragraph E focuses specifically on cool roofs, their materials, effectiveness (30-40°C surface temperature reduction), implementation history in California, and challenges in cold climates. Option iii directly describes this content."
+   },
+   {
+    "id": "r02-q13",
+    "type": "mcq",
+    "prompt": "What does the passage suggest about the relationship between urban cooling and global climate change?",
+    "options": [
+     "A. Urban heat islands have no relationship to global climate change.",
+     "B. Urban heat islands are unaffected by rising baseline global temperatures.",
+     "C. Rising global temperatures amplify the impacts of urban heat islands.",
+     "D. Global climate change will reverse urban heat island effects in cities."
+    ],
+    "answer": "C",
+    "why": "Paragraph H states 'The interaction between climate change and urban heat islands creates a compounding effect, where rising baseline global temperatures amplify urban heat island impacts,' directly supporting option C."
+   },
+   {
+    "id": "r02-q14",
+    "type": "mcq",
+    "prompt": "According to the passage, what advantage do urban heat mitigation efforts have compared to global climate change solutions?",
+    "options": [
+     "A. They require less financial investment than any other environmental solution.",
+     "B. They can be implemented through local action and produce measurable results within years.",
+     "C. They completely eliminate the need for emissions reductions.",
+     "D. They have no environmental side effects or unintended consequences."
+    ],
+    "answer": "B",
+    "why": "Paragraph H explicitly contrasts urban mitigation with global climate approaches, stating 'urban heat island mitigation can be implemented through local action and can produce measurable results within years rather than decades,' exactly matching option B."
+   }
+  ]
+ },
+ {
+  "id": "r03",
+  "title": "Metacognition and Learning Effectiveness",
+  "topic": "Psychology/education research",
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Metacognition, the capacity to think about one's own thinking processes, has emerged as a central construct in contemporary educational psychology and cognitive science. The term itself was formally introduced by John Flavell in 1976, though related concepts had been discussed by earlier philosophers and psychologists. Metacognition encompasses both metacognitive knowledge, which refers to what individuals know about their own cognitive processes and strategies, and metacognitive regulation, the ability to monitor, evaluate, and adjust one's own thinking and learning strategies. Research over the past four decades has consistently demonstrated that students who develop strong metacognitive skills achieve higher academic performance, exhibit greater self-regulation, and demonstrate more effective problem-solving abilities. Furthermore, metacognitive skills have been shown to transfer across different domains, suggesting that learning to think about thinking in one context can improve learning in disparate academic and professional contexts."
+   },
+   {
+    "label": "B",
+    "text": "Metacognitive knowledge comprises three primary categories: person knowledge, task knowledge, and strategy knowledge. Person knowledge refers to an individual's understanding of their own cognitive strengths and weaknesses, including learning preferences, attention span, and memory capacity. Task knowledge involves understanding the demands and characteristics of particular learning tasks, including their complexity and prior knowledge required. Strategy knowledge encompasses awareness of the range of cognitive strategies available and the ability to match strategies to learning situations. Research indicates that individuals who accurately assess their own cognitive abilities make more effective instructional choices. Dunning-Kruger effect research has demonstrated that some individuals, particularly those with limited knowledge in a domain, tend to overestimate their understanding."
+   },
+   {
+    "label": "C",
+    "text": "Metacognitive regulation operates through several interconnected processes: planning, which involves selecting learning goals and identifying strategies before beginning a task; monitoring, which involves tracking progress and maintaining awareness of understanding during learning; and evaluation, which involves assessing whether objectives have been achieved and analyzing strategy effectiveness. Research has shown that effective learners engage in continuous monitoring of comprehension, frequently pausing to check understanding. Students who engage in planning show superior performance on complex learning tasks. Conversely, students who do not regularly monitor understanding often proceed without recognizing gaps in comprehension, resulting in deficient learning outcomes and misunderstandings."
+   },
+   {
+    "label": "D",
+    "text": "Educational interventions designed to enhance metacognitive skills have shown considerable promise in improving learning outcomes. Explicit instruction in metacognitive strategies improves performance in mathematics, science, reading comprehension, and writing across educational levels. One particularly effective strategy is the think-aloud protocol, wherein learners verbalize their thoughts while solving problems or reading text, thereby externalizing internal cognitive processes. Another approach involves teaching students to ask themselves strategic questions: 'What do I already know about this topic?' and 'Does my answer make sense?'. Research has demonstrated that students receiving explicit metacognitive instruction showed improvements ranging from 10 to 40 percent in standardized test performance. Transfer of metacognitive skills to untaught domains has been documented, though the magnitude varies."
+   },
+   {
+    "label": "E",
+    "text": "Digital technologies and online learning environments present both opportunities and challenges. Adaptive learning systems can provide real-time feedback on student understanding, supporting metacognitive monitoring. However, some digital learning environments may impair metacognitive development by removing the necessity for learners to actively monitor their own understanding. Students using learning management systems that automatically track progress may develop external locus of control, depending on system feedback. Research suggests metacognitive development requires deliberate instructional design features including prompts for self-reflection and explicit strategy instruction."
+   },
+   {
+    "label": "F",
+    "text": "Cultural and developmental differences in metacognitive awareness have been documented across diverse populations. Cross-cultural research indicates metacognitive practices and preferences vary significantly across different cultural contexts, with some cultures emphasizing reflective analysis while others prioritize practical application. Developmental research shows metacognitive awareness emerges gradually throughout childhood, increasing substantially during adolescence and into early adulthood. Young children, typically under age seven, show limited metacognitive awareness and frequently overestimate their ability to remember information or solve problems. Metacognitive development depends partly on cognitive development, but social and educational factors play equally important roles. Studies of disadvantaged populations have shown that metacognitive interventions can narrow achievement gaps."
+   },
+   {
+    "label": "G",
+    "text": "The relationship between metacognition and expertise has emerged as significant in cognitive psychology. Expert performers across diverse domains—including chess, music, medicine, and athletics—demonstrate superior metacognitive monitoring compared to novices. Experts possess more elaborate knowledge about task demands and their own capabilities. However, expertise does not automatically confer metacognitive accuracy across different domains; a chess expert may not possess superior metacognitive skills in medical diagnosis. This domain-specificity suggests metacognitive development is tied to knowledge accumulation within particular domains. Deliberate practice facilitates development of both domain knowledge and domain-specific metacognitive skills. The time required to achieve expert-level metacognitive awareness has been estimated at 10,000 hours of deliberate practice."
+   },
+   {
+    "label": "H",
+    "text": "Future research directions in metacognition include investigating mechanisms underlying individual differences in metacognitive ability and exploring how metacognitive skills can be most effectively transferred across domains. Emerging neuroimaging research has begun to identify brain regions associated with metacognitive processing, including the anterior prefrontal cortex, which appears involved in monitoring one's own mental states. The integration of metacognitive instruction into curriculum development represents an important frontier for educational systems seeking to prepare students for complex problem-solving in rapidly changing professional environments. Fostering metacognitive development represents an investment in students' capacity for lifelong learning and adaptation in an unpredictable future."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r03-q01",
+    "type": "tfng",
+    "prompt": "John Flavell was the first person to introduce the concept of metacognition.",
+    "answer": "FALSE",
+    "why": "Paragraph A states that Flavell 'formally introduced' the term in 1976, 'though related concepts had been discussed by earlier philosophers and psychologists.' This indicates others discussed related ideas before Flavell, making him not the first to introduce the concept."
+   },
+   {
+    "id": "r03-q02",
+    "type": "tfng",
+    "prompt": "The Dunning-Kruger effect describes how people with limited knowledge tend to overestimate their understanding.",
+    "answer": "TRUE",
+    "why": "Paragraph B explicitly states 'Dunning-Kruger effect research has demonstrated that some individuals, particularly those with limited knowledge in a domain, tend to overestimate their understanding,' exactly describing this phenomenon."
+   },
+   {
+    "id": "r03-q03",
+    "type": "tfng",
+    "prompt": "Metacognitive skills are equally transferable across all academic and professional domains.",
+    "answer": "NOT GIVEN",
+    "why": "While Paragraph A mentions that 'metacognitive skills have been shown to transfer across different domains,' Paragraph G clarifies that 'expertise does not automatically confer metacognitive accuracy across different domains' and emphasizes 'domain-specificity.' The passage does not claim equal transferability across all domains."
+   },
+   {
+    "id": "r03-q04",
+    "type": "tfng",
+    "prompt": "Young children under age seven typically demonstrate accurate metacognitive awareness.",
+    "answer": "FALSE",
+    "why": "Paragraph F states 'Young children, typically under age seven, show limited metacognitive awareness and frequently overestimate their ability to remember information or solve problems,' directly contradicting claims of accurate awareness."
+   },
+   {
+    "id": "r03-q05",
+    "type": "tfng",
+    "prompt": "Students using automated learning management systems may develop less internal metacognitive awareness.",
+    "answer": "TRUE",
+    "why": "Paragraph E states 'Students using learning management systems that automatically track progress may develop external locus of control, depending on system feedback rather than developing internal metacognitive awareness,' supporting this claim."
+   },
+   {
+    "id": "r03-q06",
+    "type": "complete",
+    "prompt": "The term 'metacognition' was formally introduced by John Flavell in the year _______.",
+    "answer": [
+     "1976"
+    ],
+    "why": "Paragraph A states 'formally introduced by John Flavell in 1976,' providing the specific year."
+   },
+   {
+    "id": "r03-q07",
+    "type": "complete",
+    "prompt": "Metacognitive knowledge comprises three primary categories: person knowledge, task knowledge, and _______ knowledge.",
+    "answer": [
+     "strategy"
+    ],
+    "why": "Paragraph B identifies the three categories as 'person knowledge, task knowledge, and strategy knowledge,' making 'strategy' the required answer."
+   },
+   {
+    "id": "r03-q08",
+    "type": "complete",
+    "prompt": "Students receiving explicit metacognitive instruction showed improvements ranging from _______ to _______ percent in standardized test performance.",
+    "answer": [
+     "10",
+     "40"
+    ],
+    "why": "Paragraph D states 'students receiving explicit metacognitive instruction showed improvements ranging from 10 to 40 percent in standardized test performance.'"
+   },
+   {
+    "id": "r03-q09",
+    "type": "complete",
+    "prompt": "The time required to achieve expert-level metacognitive awareness has been estimated at _______ hours of deliberate practice.",
+    "answer": [
+     "10,000"
+    ],
+    "why": "Paragraph G states 'The time required to achieve expert-level metacognitive awareness has been estimated at 10,000 hours of deliberate practice.'"
+   },
+   {
+    "id": "r03-q10",
+    "type": "heading",
+    "prompt": "Choose the most appropriate heading for Paragraph C.",
+    "options": [
+     "i. Planning strategies for academic success",
+     "ii. Processes involved in metacognitive regulation",
+     "iii. Monitoring comprehension and memory retention",
+     "iv. The role of goal-setting in learning",
+     "v. Cognitive biases and their impact",
+     "vi. Student persistence and effort",
+     "vii. Cultural advantages in academic achievement",
+     "viii. Developmental stages of cognitive growth",
+     "ix. Variations in metacognitive development across populations",
+     "x. The role of social factors in education",
+     "xi. Cognitive development in young children",
+     "xii. Educational interventions for disadvantaged students"
+    ],
+    "answer": "ii",
+    "why": "Paragraph C focuses on metacognitive regulation processes including planning, monitoring, and evaluation. Option ii accurately describes these interconnected regulatory processes."
+   },
+   {
+    "id": "r03-q11",
+    "type": "heading",
+    "prompt": "Choose the most appropriate heading for Paragraph F.",
+    "options": [
+     "i. Planning strategies for academic success",
+     "ii. Processes involved in metacognitive regulation",
+     "iii. Monitoring comprehension and memory retention",
+     "iv. The role of goal-setting in learning",
+     "v. Cognitive biases and their impact",
+     "vi. Student persistence and effort",
+     "vii. Cultural advantages in academic achievement",
+     "viii. Developmental stages of cognitive growth",
+     "ix. Variations in metacognitive development across populations",
+     "x. The role of social factors in education",
+     "xi. Cognitive development in young children",
+     "xii. Educational interventions for disadvantaged students"
+    ],
+    "answer": "ix",
+    "why": "Paragraph F discusses cultural differences in metacognitive practices, developmental differences across age groups, and variations across populations. Option iii directly captures these variations across diverse populations."
+   },
+   {
+    "id": "r03-q12",
+    "type": "mcq",
+    "prompt": "What does the passage suggest about expertise and metacognitive monitoring?",
+    "options": [
+     "A. Experts demonstrate superior metacognitive monitoring in their area of expertise.",
+     "B. Novices and experts show equivalent metacognitive awareness.",
+     "C. Expertise automatically improves metacognitive abilities across all domains.",
+     "D. Metacognitive monitoring is unrelated to expert performance."
+    ],
+    "answer": "A",
+    "why": "Paragraph G states 'Expert performers across diverse domains...demonstrate superior metacognitive monitoring compared to novices,' directly supporting option A. The paragraph also clarifies that expertise is domain-specific."
+   },
+   {
+    "id": "r03-q13",
+    "type": "mcq",
+    "prompt": "What is implied about the effectiveness of think-aloud protocols in education?",
+    "options": [
+     "A. They are ineffective and should be replaced with other methods.",
+     "B. They externalize internal thinking processes, allowing examination and refinement.",
+     "C. They work only for mathematics and reading comprehension.",
+     "D. They reduce student engagement and motivation."
+    ],
+    "answer": "B",
+    "why": "Paragraph D describes think-aloud protocols as effective and explains that they work by 'externalizing internal cognitive processes where they can be examined and refined,' exactly matching option B."
+   },
+   {
+    "id": "r03-q14",
+    "type": "mcq",
+    "prompt": "Based on the passage, which statement best describes the relationship between metacognition and learning outcomes?",
+    "options": [
+     "A. Strong metacognitive skills are correlated with improved academic performance and self-regulation.",
+     "B. Metacognition has minimal impact on student learning outcomes.",
+     "C. Only advanced students can benefit from metacognitive instruction.",
+     "D. Metacognitive skills are inherited rather than developed through education."
+    ],
+    "answer": "A",
+    "why": "Paragraph A states 'students who develop strong metacognitive skills achieve higher academic performance, exhibit greater self-regulation, and demonstrate more effective problem-solving abilities,' directly supporting option A."
+   }
+  ]
+ },
+ {
+  "id": "r04",
+  "title": "Ancient Pictographic Writing Systems",
+  "topic": "Linguistics/archaeology",
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Writing systems represent one of humanity's most significant innovations, enabling the preservation and transmission of complex information. Archaeological evidence indicates writing emerged independently in at least three distinct regions during the 4th and 3rd millennia BCE: Mesopotamia, Egypt, and the Indus Valley. Pictographic and logographic systems—wherein individual symbols represent entire words or concepts rather than phonetic sounds—dominated the earliest writing development. These systems required writers to master hundreds or even thousands of individual symbols. Despite their complexity, pictographic systems proved remarkably durable and sophisticated, with Chinese characters, for example, evolving continuously from their pictographic origins to serve modern languages. Understanding these ancient systems provides insights into cognitive processes and the relationship between writing and social complexity."
+   },
+   {
+    "label": "B",
+    "text": "Cuneiform, the writing system of ancient Mesopotamia, represents one of the most extensively documented early writing systems. The term 'cuneiform' derives from Latin 'cuneus,' meaning 'wedge,' referring to characteristic marks created by pressing a reed stylus into clay tablets. Cuneiform developed from earlier pictographic symbols around 3200 BCE in southern Mesopotamia, initially used to record economic transactions and administrative information. Over centuries, cuneiform evolved from a purely pictographic system into a complex system incorporating phonetic elements and logograms. The number of signs eventually stabilized around 600 to 700 characters. Cuneiform spread to become an international diplomatic language."
+   },
+   {
+    "label": "C",
+    "text": "Egyptian hieroglyphic writing developed independently in the Nile Valley during the late 4th millennium BCE, roughly contemporaneous with cuneiform in Mesopotamia. Hieroglyphic symbols featured recognizable representations of objects including animals, plants, and implements, initially used to label religious and administrative documents. Unlike cuneiform, Egyptian hieroglyphics maintained a predominantly logographic structure throughout their history, persisting with remarkable consistency for over 3,000 years until alphabetic writing systems emerged. The complexity of hieroglyphic writing created a barrier to literacy; the system required knowledge of approximately 700 commonly used signs. Literacy remained confined to a specialized scribal class, predominantly male and associated with temples and administration. The concentration of writing ability within an elite class was characteristic of most ancient societies using logographic systems."
+   },
+   {
+    "label": "D",
+    "text": "The Indus Valley Civilization, flourishing roughly between 2600 and 1900 BCE, employed a distinctive writing system that remains only partially deciphered. Over 4,000 seals containing the Indus script have been discovered, primarily at Harappa and Mohenjo-daro, yet the language remains unknown. The script incorporated approximately 400 to 600 distinct signs, displaying characteristics of both pictographic and logographic systems. Some scholars propose the script represented a Dravidian language, others a now-extinct language. The inability to decipher the Indus script prevents conclusions about the civilization's organization. However, the physical distribution and stylistic consistency of the script across the Indus Valley region suggests that centralized administration existed during this period."
+   },
+   {
+    "label": "E",
+    "text": "The transition from logographic to alphabetic writing systems represents a watershed moment in human literacy development. Alphabetic systems, wherein individual symbols represent phonetic sounds rather than complete concepts, emerged around 1500 BCE in the Mediterranean and Near East, with the Phoenician alphabet marking a crucial transition. The Phoenician alphabet, consisting of approximately 22 signs representing consonant sounds, substantially reduced the cognitive burden required for literacy compared to logographic systems. This reduction in system complexity correlated with increased literacy rates, gradually moving writing from a specialized scribal monopoly to broader society. The Greek alphabet, derived from the Phoenician system with added vowel signs, facilitated even greater literacy expansion. The alphabetic revolution democratized writing, making literacy a skill that could be acquired quickly by motivated individuals."
+   },
+   {
+    "label": "F",
+    "text": "The evolution of Chinese characters from their pictographic origins illustrates how writing systems can undergo transformation while maintaining cultural continuity. Archaeological evidence, including oracle bone script discovered in Anyang dating to approximately 1250 BCE, shows that early Chinese writing utilized highly pictographic symbols. Over millennia, these characters underwent gradual stylization and simplification, yet retained connections to their pictographic origins. Unlike most other logographic systems that were displaced by alphabetic writing, Chinese characters persisted and expanded to accommodate phonetic information. The modernization of Chinese characters proceeded through historical phases, including the standardization efforts of Qin Dynasty (221-206 BCE), which established consistency across the empire. 20th century simplified character reforms reduced stroke complexity while maintaining symbolic integrity. This continuous evolution demonstrates that logographic systems can undergo successful internal modification."
+   },
+   {
+    "label": "G",
+    "text": "Decipherment of ancient writing systems has proceeded through multiple methodological approaches. The Rosetta Stone, discovered in Egypt in 1799 and containing texts in hieroglyphic, demotic, and Greek scripts, provided the breakthrough for understanding Egyptian hieroglyphics through comparative analysis. Jean-François Champollion's successful decipherment in 1822 relied on recognizing phonetic components and identifying proper names that could be compared across scripts. More recent efforts regarding Linear B script of ancient Crete employed statistical analysis and comparative linguistics. The decipherment of Linear B by Michael Ventris in 1952 revealed the script represented an early form of Greek, providing archaeological confirmation of historical accounts regarding Mycenaean Greece. Undeciphered scripts like the Indus Valley script present challenges, as decipherment typically requires either bilingual texts or linguistic relationships to known languages."
+   },
+   {
+    "label": "H",
+    "text": "The study of ancient writing systems offers profound insights into human cognition, social organization, and cultural values. The complex cognitive demands of learning logographic systems may have shaped neurological development in populations utilizing these systems. The association between writing systems and governance structures reveals how communication technology constrains or enables particular forms of political organization. The deliberate preservation of ancient scripts on durable materials provides archaeological context for understanding technological sophistication and international trade networks. The diversity of writing system solutions developed independently across different civilizations demonstrates both universal principles of human communication and culturally specific approaches to representing language. Understanding how ancient peoples solved the problem of representing language through visual symbols illuminates human creativity and the multiple possible pathways for technological and cultural innovation."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r04-q01",
+    "type": "tfng",
+    "prompt": "Writing emerged in exactly one geographical location during the 4th millennium BCE.",
+    "answer": "FALSE",
+    "why": "Paragraph A explicitly states that 'writing emerged independently in at least three distinct regions during the 4th and 3rd millennia BCE: Mesopotamia, Egypt, and the Indus Valley,' contradicting the claim of a single emergence location."
+   },
+   {
+    "id": "r04-q02",
+    "type": "tfng",
+    "prompt": "Egyptian hieroglyphic writing persisted for over 3,000 years with remarkable consistency.",
+    "answer": "TRUE",
+    "why": "Paragraph C states that Egyptian hieroglyphics 'maintained a predominantly logographic structure throughout their long history, persisting with remarkable consistency for over 3,000 years until the rise of alphabetic writing systems.'"
+   },
+   {
+    "id": "r04-q03",
+    "type": "tfng",
+    "prompt": "The Indus Valley script has been completely deciphered by modern scholars.",
+    "answer": "FALSE",
+    "why": "Paragraph D explicitly states that the Indus script 'remains only partially deciphered despite extensive scholarly efforts' and 'The inability to decipher the Indus script prevents definitive conclusions,' indicating it has not been completely deciphered."
+   },
+   {
+    "id": "r04-q04",
+    "type": "tfng",
+    "prompt": "Alphabetic writing systems reduced the cognitive burden required for literacy compared to logographic systems.",
+    "answer": "TRUE",
+    "why": "Paragraph E states that the Phoenician alphabet 'substantially reduced the cognitive burden required for literacy compared to logographic systems demanding knowledge of hundreds of signs,' directly supporting this claim."
+   },
+   {
+    "id": "r04-q05",
+    "type": "tfng",
+    "prompt": "Chinese characters were eventually completely replaced by alphabetic writing systems.",
+    "answer": "FALSE",
+    "why": "Paragraph F states that 'Unlike most other logographic systems that were eventually displaced by alphabetic writing, Chinese characters persisted and expanded,' showing that Chinese characters were not replaced."
+   },
+   {
+    "id": "r04-q06",
+    "type": "complete",
+    "prompt": "Cuneiform developed from earlier pictographic symbols around _______ BCE in southern Mesopotamia.",
+    "answer": [
+     "3200"
+    ],
+    "why": "Paragraph B states 'cuneiform developed from earlier pictographic symbols around 3200 BCE in southern Mesopotamia.'"
+   },
+   {
+    "id": "r04-q07",
+    "type": "complete",
+    "prompt": "The Egyptian hieroglyphic system required knowledge of approximately _______ commonly used signs.",
+    "answer": [
+     "700"
+    ],
+    "why": "Paragraph C states 'the system required knowledge of approximately 700 commonly used signs.'"
+   },
+   {
+    "id": "r04-q08",
+    "type": "complete",
+    "prompt": "The Phoenician alphabet, consisting of approximately _______ signs, substantially reduced the cognitive burden required for literacy.",
+    "answer": [
+     "22"
+    ],
+    "why": "Paragraph E states 'The Phoenician alphabet, consisting of approximately 22 signs representing consonant sounds, substantially reduced the cognitive burden.'"
+   },
+   {
+    "id": "r04-q09",
+    "type": "complete",
+    "prompt": "Jean-François Champollion successfully deciphered Egyptian hieroglyphics in _______.",
+    "answer": [
+     "1822"
+    ],
+    "why": "Paragraph G states 'Jean-François Champollion's successful decipherment in 1822,' providing the specific year."
+   },
+   {
+    "id": "r04-q10",
+    "type": "heading",
+    "prompt": "Choose the most appropriate heading for Paragraph B.",
+    "options": [
+     "i. Early pictographic symbol systems",
+     "ii. Cuneiform: structure, development, and spread",
+     "iii. Clay tablets and archaeological preservation",
+     "iv. Evolution from administration to literature",
+     "v. International diplomatic communication",
+     "vi. The decline of ancient writing systems",
+     "vii. Archaeological evidence of ancient Anyang",
+     "viii. Pictographic symbolism in Eastern writing",
+     "ix. Chinese characters: evolution and persistence",
+     "x. The complexity of traditional script",
+     "xi. Character simplification reforms",
+     "xii. Logographic systems in East Asia"
+    ],
+    "answer": "ii",
+    "why": "Paragraph B focuses on cuneiform's origins, development from pictographic to complex mixed systems, standardization, and geographic spread. Option ii directly captures this comprehensive overview of cuneiform's structure and historical progression."
+   },
+   {
+    "id": "r04-q11",
+    "type": "heading",
+    "prompt": "Choose the most appropriate heading for Paragraph F.",
+    "options": [
+     "i. Early pictographic symbol systems",
+     "ii. Cuneiform: structure, development, and spread",
+     "iii. Clay tablets and archaeological preservation",
+     "iv. Evolution from administration to literature",
+     "v. International diplomatic communication",
+     "vi. The decline of ancient writing systems",
+     "vii. Archaeological evidence of ancient Anyang",
+     "viii. Pictographic symbolism in Eastern writing",
+     "ix. Chinese characters: evolution and persistence",
+     "x. The complexity of traditional script",
+     "xi. Character simplification reforms",
+     "xii. Logographic systems in East Asia"
+    ],
+    "answer": "ix",
+    "why": "Paragraph F traces the evolution of Chinese characters from pictographic origins through various historical transformations while emphasizing their continuity and persistence. Option iii directly describes this theme of evolution while maintaining cultural continuity."
+   },
+   {
+    "id": "r04-q12",
+    "type": "mcq",
+    "prompt": "What does the passage suggest about the relationship between writing system complexity and literacy distribution?",
+    "options": [
+     "A. Simpler writing systems were more difficult to learn than complex logographic systems.",
+     "B. Complex logographic systems restricted literacy to specialized elite groups.",
+     "C. Writing system complexity had no relationship to literacy rates.",
+     "D. Alphabetic systems deliberately excluded non-elites from literacy."
+    ],
+    "answer": "B",
+    "why": "Paragraph C states that 'The complexity of hieroglyphic writing created a barrier to literacy' and 'This limitation meant that literacy remained confined to a specialized scribal class.' Paragraph E further shows that alphabetic systems 'reduced the cognitive burden' and correlated with 'increased literacy rates across populations,' supporting option B."
+   },
+   {
+    "id": "r04-q13",
+    "type": "mcq",
+    "prompt": "Which of the following best describes why the Indus Valley script remains difficult to decipher?",
+    "options": [
+     "A. Because it contains no logographic or pictographic elements.",
+     "B. Because no bilingual texts exist and the language remains unknown.",
+     "C. Because it was deliberately encrypted by its creators.",
+     "D. Because modern scholars have not attempted to decipher it."
+    ],
+    "answer": "B",
+    "why": "Paragraph D states 'yet the language represented by these symbols remains unknown' and Paragraph G notes that 'decipherment typically requires either bilingual texts providing translation or linguistic relationships to known languages.' These explain why the Indus script remains undeciphered."
+   },
+   {
+    "id": "r04-q14",
+    "type": "mcq",
+    "prompt": "What was the significance of Michael Ventris's decipherment of Linear B script in 1952?",
+    "options": [
+     "A. It proved that all ancient writing systems were logographic.",
+     "B. It revealed the script represented early Greek and confirmed historical accounts of Mycenaean Greece.",
+     "C. It demonstrated that alphabetic systems were inferior to logographic ones.",
+     "D. It proved that writing never existed before the Greek alphabet was developed."
+    ],
+    "answer": "B",
+    "why": "Paragraph G states 'The decipherment of Linear B by Michael Ventris in 1952 revealed the script represented an early form of Greek, providing crucial archaeological confirmation of historical accounts regarding Mycenaean Greece,' exactly matching option B."
+   }
+  ]
+ },
+ {
+  "id": "r05",
+  "title": "The Dutch Golden Age and International Trade",
+  "topic": "Economics/business history",
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "The Dutch Golden Age, spanning approximately the 17th century, represents one of history's most remarkable periods of economic expansion and commercial innovation. During this century, the Dutch Republic, a relatively small confederation of provinces in northwestern Europe with limited agricultural resources, achieved unprecedented prosperity and emerged as a global economic powerhouse rivaling the Spanish and Portuguese empires. This transformation stemmed from complex geopolitical circumstances, technological innovations in maritime commerce, and institutional developments that fostered competitive capitalism. The wealth generated during the Golden Age funded artistic masterpieces and architectural achievements that remain culturally significant today. The decline of Dutch economic dominance during the 18th century, culminating in displacement by British commercial power, underscores the temporary nature of economic hegemony and the dependence of commercial systems on continuous innovation."
+   },
+   {
+    "label": "B",
+    "text": "Dutch commercial expansion was laid during the late 16th century when religious conflict in the Spanish Netherlands created conditions for merchant migration to the north. The northern provinces, organized as the Dutch Republic following the Peace of Westphalia in 1648, possessed superior geography for maritime commerce due to their coastal location and extensive river systems. The Dutch developed superior navigational technologies, including more accurate maps and improved compass designs. The fluyt, a specialized merchant vessel designed in the 1590s and perfected during the 17th century, exemplified Dutch technological innovation. The fluyt featured deep cargo holds and high sides, enabling it to carry more cargo with smaller crews than competing vessels. This innovation reduced shipping costs by up to 50 percent compared to Spanish galleons, providing Dutch merchants with decisive advantages."
+   },
+   {
+    "label": "C",
+    "text": "Institutional innovations constituted equally important contributors to Dutch commercial success as technological developments. The Dutch East India Company, established in 1602 as the Vereenigde Oost-Indische Compagnie (VOC), represented a revolutionary organizational form combining governmental authority with commercial enterprise. The VOC possessed governmental powers including the ability to wage warfare, negotiate treaties, and establish colonial settlements. The joint-stock structure allowed merchants and investors to pool capital, distribute risks, and share profits. The VOC established systematic record-keeping practices, hierarchical management structures, and standardized business procedures that enabled coordination across vast geographical distances. These organizational innovations, later adopted by European companies, fundamentally transformed commercial enterprise and laid groundwork for modern corporate structures. The VOC's dominance persisted for over 150 years, reaching peak profitability during the 1660s-1690s period."
+   },
+   {
+    "label": "D",
+    "text": "The Dutch West India Company, established in 1621 as the Geoctrooieerde Westindische Compagnie (WIC), extended Dutch commercial interests to the Americas and African coasts. The WIC engaged in privateering against Spanish shipping and commercial trading in colonial goods. Unlike the VOC, which achieved sustained profitability, the WIC experienced consistent losses and administrative challenges. The WIC's failure reflected different competitive conditions in Atlantic trade. However, the WIC's activities, particularly in establishing settlements in North America including New Amsterdam (subsequently New York), established long-lasting influences on colonial development."
+   },
+   {
+    "label": "E",
+    "text": "Amsterdam emerged as the commercial and financial heart of the Dutch Golden Age, serving as headquarters for the VOC and WIC, and hosting the world's first stock exchange, established in 1611. The Amsterdam Stock Exchange represented a revolutionary financial innovation, enabling large-scale trading of company shares and facilitating capital mobilization. Financial innovations developed in Amsterdam, including standardized share certificates and sophisticated credit mechanisms, established foundations for modern financial systems. The volume of commerce flowing through Amsterdam ports grew continuously throughout the 17th century, with imports of spices, sugar, grain, and textiles creating specialized markets. The concentration of merchants and financiers reinforced Amsterdam's commercial preeminence. Population growth accompanied commercial expansion, with Amsterdam's population increasing from approximately 30,000 in 1585 to 175,000 by 1650."
+   },
+   {
+    "label": "F",
+    "text": "The financial sophistication of Dutch merchants and development of complex credit and insurance mechanisms enabled high-risk long-distance maritime trade. Marine insurance, developed during the 16th and 17th centuries, allowed merchants to transfer voyage risk, making long-distance commerce economically viable. Insurance costs typically ranged from 3 to 8 percent of cargo value. The development of bill of exchange systems enabled merchants to conduct international commerce without physically transporting bullion, reducing security risks. Letters of credit issued by major merchant families circulated throughout European financial centers. The sophistication of these financial instruments enabled merchants to undertake ventures of unprecedented scale, with individual trading voyages requiring capital investments exceeding 100,000 guilders."
+   },
+   {
+    "label": "G",
+    "text": "The spice trade, centered on procurement of cloves, nutmeg, pepper, and mace from the Maluku Islands, generated enormous profits during the Dutch Golden Age. The VOC monopolized spice trade through military force, establishing fortified trading posts throughout Southeast Asia. Spices commanded prices in Europe hundreds or thousands of times higher than acquisition costs in Southeast Asia. Individual spice trading voyages could generate profit margins exceeding 300 to 400 percent. The enormous wealth generated by spice monopolies enabled the VOC to reinvest in military capabilities, creating a reinforcing cycle. However, the spice trade represented a brutal example of colonial exploitation involving systematic violence."
+   },
+   {
+    "label": "H",
+    "text": "The decline of Dutch commercial dominance during the 18th century resulted from multiple interconnected factors including rising military expenditures, institutional rigidity of aging merchant families, and competitive challenges from Britain and France. The extraordinary naval and commercial investments required to maintain global commercial networks generated fiscal stress, particularly following expensive military conflicts including the War of Spanish Succession (1701-1714). Britain leveraged industrial innovations and superior military power to challenge Dutch dominance, successfully capturing key Asian trade routes and colonial territories. The institutional structures that had fostered commercial innovation during the 17th century became ossified during the 18th century. Dutch commercial interests remained significant in specific regions throughout the 18th and 19th centuries, but the period of dominant global commercial hegemony definitively ended. The historical trajectory of Dutch dominance and subsequent decline illustrates that economic power, dependent on continuous innovation, proves temporally contingent rather than permanently established."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r05-q01",
+    "type": "ynng",
+    "prompt": "Do you agree with the statement that the Dutch Golden Age occurred during the 17th century?",
+    "answer": "YES",
+    "why": "Paragraph A states 'The Dutch Golden Age, spanning approximately the 17th century,' directly confirming that the Golden Age occurred during the 17th century as claimed."
+   },
+   {
+    "id": "r05-q02",
+    "type": "ynng",
+    "prompt": "Did the fluyt ship design reduce shipping costs compared to Spanish galleons?",
+    "answer": "YES",
+    "why": "Paragraph B states 'This innovation reduced shipping costs by up to 50 percent compared to Spanish galleons,' explicitly confirming that the fluyt design did reduce costs."
+   },
+   {
+    "id": "r05-q03",
+    "type": "ynng",
+    "prompt": "Would it be accurate to say that the Dutch West India Company was more profitable than the Dutch East India Company?",
+    "answer": "NO",
+    "why": "Paragraph D states 'Unlike the VOC, which achieved sustained profitability and institutional stability, the WIC experienced consistent losses and administrative challenges,' directly contradicting the claim that the WIC was more profitable."
+   },
+   {
+    "id": "r05-q04",
+    "type": "ynng",
+    "prompt": "Is there evidence in the passage that marine insurance costs exceeded 10 percent of cargo value?",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph F states 'The costs of marine insurance typically ranged from 3 to 8 percent of cargo value,' providing a specific range. The passage does not indicate whether costs ever exceeded 10 percent in exceptional circumstances."
+   },
+   {
+    "id": "r05-q05",
+    "type": "ynng",
+    "prompt": "Were spices considered valuable primarily for medical purposes during the Dutch Golden Age?",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph G describes the spice trade's profitability and enormous profit margins, but does not specify the primary purpose of value attribution (medicine, food preservation, luxury consumption, or other uses). The passage does not address what was considered the primary purpose of spice value."
+   },
+   {
+    "id": "r05-q06",
+    "type": "complete",
+    "prompt": "The Dutch East India Company was established in _______.",
+    "answer": [
+     "1602"
+    ],
+    "why": "Paragraph C states 'The Dutch East India Company, established in 1602,' providing the specific year."
+   },
+   {
+    "id": "r05-q07",
+    "type": "complete",
+    "prompt": "Amsterdam's population increased from approximately 30,000 in 1585 to _______ by 1650.",
+    "answer": [
+     "175,000"
+    ],
+    "why": "Paragraph E states 'Amsterdam's population increasing from approximately 30,000 in 1585 to 175,000 by 1650.'"
+   },
+   {
+    "id": "r05-q08",
+    "type": "complete",
+    "prompt": "The Amsterdam Stock Exchange, the world's first, was established in _______.",
+    "answer": [
+     "1611"
+    ],
+    "why": "Paragraph E explicitly states 'the world's first stock exchange, established in 1611,' providing the year."
+   },
+   {
+    "id": "r05-q09",
+    "type": "complete",
+    "prompt": "Individual spice trading voyages could generate profit margins exceeding _______ to _______ percent.",
+    "answer": [
+     "300",
+     "400"
+    ],
+    "why": "Paragraph G states 'Individual spice trading voyages could generate profit margins exceeding 300 to 400 percent.'"
+   },
+   {
+    "id": "r05-q10",
+    "type": "heading",
+    "prompt": "Choose the most appropriate heading for Paragraph B.",
+    "options": [
+     "i. Religious migration and Dutch nationalism",
+     "ii. Maritime technology and competitive advantage",
+     "iii. Foundations of Dutch commercial expansion",
+     "iv. Spanish and Portuguese naval dominance",
+     "v. Geographic advantages in European trade",
+     "vi. Economic development of the Dutch provinces",
+     "vii. Headquarters of European commerce",
+     "viii. Population growth and urbanization",
+     "ix. Amsterdam as commercial and financial center",
+     "x. Development of financial markets",
+     "xi. Trade commodities and merchant specialization",
+     "xii. European urban development patterns",
+     "xiii. Medicinal uses of Southeast Asian plants",
+     "xiv. Portuguese and Spanish competition in Asia",
+     "xv. The spice trade and colonial exploitation",
+     "null. Environmental consequences of cultivation",
+     "null. Maluku Islands and indigenous peoples",
+     "null. Luxury goods and profit margins"
+    ],
+    "answer": "iii",
+    "why": "Paragraph B discusses the foundations of Dutch commercial expansion including migration, geography, navigational technology, and the fluyt ship design. Option iii directly captures these foundational elements."
+   },
+   {
+    "id": "r05-q11",
+    "type": "heading",
+    "prompt": "Choose the most appropriate heading for Paragraph E.",
+    "options": [
+     "i. Religious migration and Dutch nationalism",
+     "ii. Maritime technology and competitive advantage",
+     "iii. Foundations of Dutch commercial expansion",
+     "iv. Spanish and Portuguese naval dominance",
+     "v. Geographic advantages in European trade",
+     "vi. Economic development of the Dutch provinces",
+     "vii. Headquarters of European commerce",
+     "viii. Population growth and urbanization",
+     "ix. Amsterdam as commercial and financial center",
+     "x. Development of financial markets",
+     "xi. Trade commodities and merchant specialization",
+     "xii. European urban development patterns",
+     "xiii. Medicinal uses of Southeast Asian plants",
+     "xiv. Portuguese and Spanish competition in Asia",
+     "xv. The spice trade and colonial exploitation",
+     "null. Environmental consequences of cultivation",
+     "null. Maluku Islands and indigenous peoples",
+     "null. Luxury goods and profit margins"
+    ],
+    "answer": "ix",
+    "why": "Paragraph E presents Amsterdam as the commercial and financial center of the Dutch Golden Age, discussing the stock exchange, financial innovations, and commercial concentration. Option iii captures this central theme."
+   },
+   {
+    "id": "r05-q12",
+    "type": "heading",
+    "prompt": "Choose the most appropriate heading for Paragraph G.",
+    "options": [
+     "i. Religious migration and Dutch nationalism",
+     "ii. Maritime technology and competitive advantage",
+     "iii. Foundations of Dutch commercial expansion",
+     "iv. Spanish and Portuguese naval dominance",
+     "v. Geographic advantages in European trade",
+     "vi. Economic development of the Dutch provinces",
+     "vii. Headquarters of European commerce",
+     "viii. Population growth and urbanization",
+     "ix. Amsterdam as commercial and financial center",
+     "x. Development of financial markets",
+     "xi. Trade commodities and merchant specialization",
+     "xii. European urban development patterns",
+     "xiii. Medicinal uses of Southeast Asian plants",
+     "xiv. Portuguese and Spanish competition in Asia",
+     "xv. The spice trade and colonial exploitation",
+     "null. Environmental consequences of cultivation",
+     "null. Maluku Islands and indigenous peoples",
+     "null. Luxury goods and profit margins"
+    ],
+    "answer": "xv",
+    "why": "Paragraph G focuses on the spice trade as a source of enormous profits through VOC monopoly, describes profit margins and wealth generation, and explicitly notes it involved 'systematic violence and environmental degradation.' Option iii captures this broad theme of trade and exploitation."
+   },
+   {
+    "id": "r05-q13",
+    "type": "mcq",
+    "prompt": "What does the passage indicate about the relationship between organizational innovation and Dutch commercial success?",
+    "options": [
+     "A. Organizational innovations were less important than technological advantages.",
+     "B. Organizational innovations such as the joint-stock structure were as important as technological developments.",
+     "C. Dutch merchants never adopted formal organizational structures.",
+     "D. The VOC's organization was deliberately designed to prevent long-distance trade coordination."
+    ],
+    "answer": "B",
+    "why": "Paragraph C states 'Institutional innovations constituted equally important contributors to Dutch commercial success as technological developments' and describes the VOC's revolutionary organizational form and its systematic management practices."
+   },
+   {
+    "id": "r05-q14",
+    "type": "mcq",
+    "prompt": "Based on the passage, what was the primary reason for the decline of Dutch commercial dominance during the 18th century?",
+    "options": [
+     "A. The Dutch deliberately withdrew from international commerce.",
+     "B. A combination of rising military expenditures, institutional rigidity, and competition from Britain and France.",
+     "C. The complete destruction of Dutch ships by Spanish and Portuguese navies.",
+     "D. The invention of superior technologies by competing European nations."
+    ],
+    "answer": "B",
+    "why": "Paragraph H states 'The decline of Dutch commercial dominance during the 18th century resulted from multiple interconnected factors including rising military expenditures, institutional rigidity of aging merchant families, and competitive challenges from Britain and France,' exactly matching option B."
+   }
+  ]
+ },
+ {
+  "id": "r06",
+  "title": "Echolocation in Marine Mammals",
+  "topic": "Biology/animal behaviour",
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Echolocation, the ability to navigate and locate objects by producing sounds and listening to their echoes, represents one of the most sophisticated biological adaptations in the animal kingdom. While bats are most commonly associated with echolocation, marine mammals including toothed whales and dolphins possess equally sophisticated echolocation abilities refined through millions of years of evolution. The ancestors of cetaceans (whales and dolphins) were terrestrial mammals that underwent radical morphological and physiological adaptations as they transitioned to aquatic existence approximately 50 million years ago. Echolocation abilities emerged as a critical adaptation enabling marine mammals to locate prey in ocean depths where visual information is limited, as light penetration in seawater diminishes rapidly with depth. The sophistication of marine echolocation systems rivals terrestrial echolocation in complexity and sensory acuity, yet remains substantially less understood by scientists. Understanding marine echolocation provides insights into sensory neurobiology and neural processing."
+   },
+   {
+    "label": "B",
+    "text": "Dolphins, particularly the common bottlenose dolphin (Tursiops truncatus), possess echolocation systems producing clicks at frequencies ranging from 40 to 130 kilohertz. These acoustic signals originate in specialized structures within the nasal cavity, particularly in the phonic lips and monkey lips structures. The clicking sounds represent extraordinarily rapid sequences, with some dolphins producing click rates exceeding 1,000 clicks per second. Sound travels approximately four times faster through water than through air, reaching velocities near 1,500 meters per second in seawater. This property confers advantages for underwater echolocation, providing more precise temporal resolution for determining object location and distance. The melon, a specialized fatty structure in the dolphin's forehead, functions as a biological acoustic lens, focusing echolocation clicks into a directional beam. The sophistication of this focusing mechanism enables dolphins to detect objects considerably smaller than those perceivable through terrestrial echolocation systems."
+   },
+   {
+    "label": "C",
+    "text": "The reception of echolocation signals involves equally specialized anatomical structures and neural mechanisms. The lower jaw of dolphins contains specialized fatty channels, the pan bones, that conduct echoes to the inner ear through bone conduction pathways. This routing system enables dolphins to receive echoes while simultaneously transmitting new echolocation clicks, preventing interference. Neural processing of received echoes occurs in specialized brain regions including the auditory cortex, extracting information regarding object distance, size, shape, and texture from temporal patterns. Behavioral experiments have demonstrated that dolphins can discriminate between objects differing by only millimeters and distinguish between materials of different acoustic properties. The neural processing of echo information likely involves temporal analysis of echo arrival times and frequency content."
+   },
+   {
+    "label": "D",
+    "text": "Toothed whales, including sperm whales (Physeter macrocephalus) and beaked whales (Ziphius cavirostris), employ echolocation systems substantially different from dolphins, adapted to deep-diving lifestyles. Sperm whales, capable of diving to depths exceeding 3,000 meters, employ echolocation frequencies substantially lower than dolphins, typically ranging from 5 to 15 kilohertz, reducing attenuation in deep ocean environments. The biological acoustics of sperm whale echolocation involve specialized structures including the nasal sacs and spermaceti organ. Beaked whales produce echolocation clicks at frequencies substantially lower than dolphins, possibly enabling longer-range echolocation suited to sparse prey distribution. The echolocation adaptations of deep-diving cetaceans demonstrate specialized acoustic solutions for distinct ecological niches."
+   },
+   {
+    "label": "E",
+    "text": "The prey detection and capture behaviors of echolocating marine mammals demonstrate the functional effectiveness of these sophisticated sensory systems. Dolphins actively hunt fish and squid, requiring rapid echolocation updates for successful predation. Behavioral observations indicate dolphins modulate their echolocation click rates in response to prey proximity and behavior, producing rapid buzz sounds as prey approach capture distance. Sperm whales hunt squid at abyssal depths, detecting and capturing prey including giant squid weighing up to 1,000 kilograms through echolocation guidance alone. The successful predation of fast-moving prey demonstrates the sensory acuity and neural processing speed required for precise prey capture."
+   },
+   {
+    "label": "F",
+    "text": "Comparative analyses of echolocation systems across different cetacean species reveal adaptive radiation in acoustic morphology paralleling ecological divergence. Coastal species typically employ higher frequency echolocation, providing superior resolution for detecting small objects at short distances, whereas open ocean species employ lower frequencies extending detection range. River dolphins employ intermediate frequencies optimized for navigation in turbid waters. The melon structure varies in size and composition across species, with larger structures in open-ocean species enabling longer-range acoustic transmission. These anatomical variations demonstrate the evolutionary plasticity of echolocation systems and the capacity of natural selection to refine these systems for distinct ecological contexts."
+   },
+   {
+    "label": "G",
+    "text": "Environmental factors including water temperature and salinity substantially influence the acoustic properties of seawater. Sound attenuation in seawater increases at higher frequencies, reducing the maximum detection range for high-frequency echolocation. The sound speed gradient, termed the SOFAR channel (Sound Fixing and Ranging), creates acoustic corridors in the deep ocean where sound propagates extraordinarily long distances. Some research suggests deep-diving cetaceans may exploit SOFAR channel acoustics for long-distance communication. Acoustic interference from anthropogenic noise including commercial shipping and industrial sonar has increased dramatically, potentially interfering with echolocation and communication systems. The masking effects of ambient ocean noise can reduce the effective range of echolocation and may disrupt migratory and reproductive behaviors."
+   },
+   {
+    "label": "H",
+    "text": "The study of marine mammal echolocation has implications extending beyond academic understanding of sensory systems. Biosonar systems inspired by marine mammal echolocation have informed the design of acoustic imaging devices and autonomous underwater vehicles. Understanding the neural mechanisms underlying echolocation may provide insights applicable to treating sensory deficits in human patients. The acoustic properties of cetacean echolocation systems provide models for investigating fundamental principles of signal processing and neural coding. However, increased anthropogenic noise pollution and ocean acidification present emerging threats to the survival of echolocation-dependent marine mammals. Protecting marine mammals requires comprehensive ocean management strategies addressing noise pollution, habitat degradation, and climate-driven environmental changes. The continued study of marine echolocation remains essential for developing effective conservation strategies and advancing understanding of neural systems supporting adaptive behaviors."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r06-q01",
+    "type": "tfng",
+    "prompt": "Echolocation in cetaceans emerged as an adaptation enabling navigation in ocean depths where visual information is limited.",
+    "answer": "TRUE",
+    "why": "Paragraph A states 'Echolocation abilities emerged as a critical adaptation enabling marine mammals to locate prey in ocean depths where visual information is limited, as light penetration in seawater diminishes rapidly with depth,' supporting this claim."
+   },
+   {
+    "id": "r06-q02",
+    "type": "tfng",
+    "prompt": "Sound travels approximately four times faster through water than through air.",
+    "answer": "TRUE",
+    "why": "Paragraph B explicitly states 'Sound travels approximately four times faster through water than through air, reaching velocities near 1,500 meters per second in seawater, compared to approximately 340 meters per second in air.'"
+   },
+   {
+    "id": "r06-q03",
+    "type": "tfng",
+    "prompt": "Dolphins can distinguish between materials of different acoustic properties through echolocation.",
+    "answer": "TRUE",
+    "why": "Paragraph C states 'Behavioral experiments have demonstrated that dolphins can discriminate between objects differing by only millimeters in size and distinguish between materials of different acoustic properties even when visual inspection would prove ambiguous.'"
+   },
+   {
+    "id": "r06-q04",
+    "type": "tfng",
+    "prompt": "Sperm whales employ higher echolocation frequencies than dolphins to compensate for deeper diving depths.",
+    "answer": "FALSE",
+    "why": "Paragraph D states that sperm whales 'employ echolocation frequencies substantially lower than dolphins, typically ranging from 5 to 15 kilohertz' compared to dolphins' 40-130 kilohertz. Lower frequencies reduce attenuation in deep ocean, contradicting the claim of higher frequencies."
+   },
+   {
+    "id": "r06-q05",
+    "type": "tfng",
+    "prompt": "Dolphins have been documented hunting prey weighing up to 1,000 kilograms through echolocation alone.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph E mentions that 'Sperm whales hunt squid at abyssal depths' and capture 'giant squid weighing up to 1,000 kilograms through echolocation guidance alone.' The passage does not state that dolphins hunt prey of this size; this behavior is specifically attributed to sperm whales."
+   },
+   {
+    "id": "r06-q06",
+    "type": "complete",
+    "prompt": "Dolphins produce echolocation clicks at frequencies ranging from _______ to _______ kilohertz.",
+    "answer": [
+     "40",
+     "130"
+    ],
+    "why": "Paragraph B states 'Dolphins, particularly the common bottlenose dolphin (Tursiops truncatus), possess echolocation systems producing clicks at frequencies ranging from 40 to 130 kilohertz.'"
+   },
+   {
+    "id": "r06-q07",
+    "type": "complete",
+    "prompt": "Some dolphins can produce click rates exceeding _______ clicks per second during intense echolocation sessions.",
+    "answer": [
+     "1,000"
+    ],
+    "why": "Paragraph B states 'some dolphins producing click rates exceeding 1,000 clicks per second during intense echolocation sessions.'"
+   },
+   {
+    "id": "r06-q08",
+    "type": "complete",
+    "prompt": "Sperm whales are capable of diving to depths exceeding _______ meters.",
+    "answer": [
+     "3,000"
+    ],
+    "why": "Paragraph D states 'Sperm whales, capable of diving to depths exceeding 3,000 meters,' providing the specific depth."
+   },
+   {
+    "id": "r06-q09",
+    "type": "complete",
+    "prompt": "Sperm whale echolocation frequencies typically range from _______ to _______ kilohertz.",
+    "answer": [
+     "5",
+     "15"
+    ],
+    "why": "Paragraph D states 'typically ranging from 5 to 15 kilohertz,' for sperm whale echolocation frequencies."
+   },
+   {
+    "id": "r06-q10",
+    "type": "heading",
+    "prompt": "Choose the most appropriate heading for Paragraph B.",
+    "options": [
+     "i. Nasal anatomy and specialized structures",
+     "ii. Acoustic properties of seawater",
+     "iii. Dolphin echolocation mechanisms and sound production",
+     "iv. Comparison of terrestrial and marine clicking",
+     "v. Frequency modulation in dolphin communication",
+     "vi. Directional acoustic systems",
+     "vii. Comparative cranial anatomy across cetaceans",
+     "viii. Ecological divergence and species distribution",
+     "ix. Specialized melon structures in marine mammals",
+     "x. Adaptive radiation in cetacean echolocation systems",
+     "xi. Auditory brain regions and neural development",
+     "xii. Evolutionary relationships among whale species"
+    ],
+    "answer": "iii",
+    "why": "Paragraph B focuses on dolphin echolocation systems, the production of clicking sounds through specialized nasal structures, click rates, sound properties in water, and the melon's acoustic focusing function. Option iii directly describes these mechanisms."
+   },
+   {
+    "id": "r06-q11",
+    "type": "heading",
+    "prompt": "Choose the most appropriate heading for Paragraph F.",
+    "options": [
+     "i. Nasal anatomy and specialized structures",
+     "ii. Acoustic properties of seawater",
+     "iii. Dolphin echolocation mechanisms and sound production",
+     "iv. Comparison of terrestrial and marine clicking",
+     "v. Frequency modulation in dolphin communication",
+     "vi. Directional acoustic systems",
+     "vii. Comparative cranial anatomy across cetaceans",
+     "viii. Ecological divergence and species distribution",
+     "ix. Specialized melon structures in marine mammals",
+     "x. Adaptive radiation in cetacean echolocation systems",
+     "xi. Auditory brain regions and neural development",
+     "xii. Evolutionary relationships among whale species"
+    ],
+    "answer": "x",
+    "why": "Paragraph F discusses adaptive radiation in acoustic morphology paralleling ecological divergence, variations in frequency use, melon structure variation, and neuroanatomical differences across species. Option iv accurately describes this adaptive radiation theme."
+   },
+   {
+    "id": "r06-q12",
+    "type": "mcq",
+    "prompt": "What does the passage suggest about the purpose of the melon structure in dolphin heads?",
+    "options": [
+     "A. The melon stores fat reserves for sustaining deep dives.",
+     "B. The melon functions as a biological acoustic lens for focusing echolocation clicks.",
+     "C. The melon is used for storing echolocation-related neural tissue.",
+     "D. The melon has no specific acoustic function in living dolphins."
+    ],
+    "answer": "B",
+    "why": "Paragraph B explicitly states 'The melon, a specialized fatty structure in the dolphin's forehead, functions as a biological acoustic lens, focusing echolocation clicks into a directional beam that can be aimed by subtle adjustments in head position and facial muscles.'"
+   },
+   {
+    "id": "r06-q13",
+    "type": "mcq",
+    "prompt": "Which statement best describes the relationship between environmental factors and dolphin echolocation effectiveness?",
+    "options": [
+     "A. Environmental factors such as water temperature have negligible impact on echolocation.",
+     "B. Water temperature, salinity, and particulate matter substantially influence acoustic properties and echolocation range.",
+     "C. Higher water temperatures improve echolocation range by increasing sound speed.",
+     "D. Environmental factors affect only sperm whale echolocation, not dolphin echolocation."
+    ],
+    "answer": "B",
+    "why": "Paragraph G states 'Environmental factors including water temperature, salinity, and suspended particulate matter substantially influence the acoustic properties of seawater' and notes that 'Sound attenuation in seawater increases at higher frequencies, reducing the maximum detection range.'"
+   },
+   {
+    "id": "r06-q14",
+    "type": "mcq",
+    "prompt": "According to the passage, what practical applications may result from studying marine mammal echolocation?",
+    "options": [
+     "A. Improved sonar systems for military applications only.",
+     "B. Acoustic imaging devices, autonomous underwater vehicles, and potentially artificial sensory substitution systems.",
+     "C. Only entertainment devices for theme parks.",
+     "D. No practical applications beyond understanding marine behavior."
+    ],
+    "answer": "B",
+    "why": "Paragraph H states 'Biosonar systems inspired by marine mammal echolocation have informed the design of technological systems including acoustic imaging devices and autonomous underwater vehicles' and mentions 'insights applicable to treating sensory deficits in human patients.'"
+   }
+  ]
+ },
+ {
+  "id": "r07",
+  "title": "The Kuiper Belt and the Search for Distant Objects",
+  "topic": "astronomy/space science",
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "The Kuiper Belt is a vast region of icy bodies orbiting beyond Neptune, extending from approximately 30 to 55 astronomical units from the Sun. An astronomical unit, or AU, is defined as the mean distance between Earth and the Sun. This region was theorized by Dutch-American astronomer Gerard Kuiper in 1951, though its existence was not confirmed until 1992 when astronomers David Jewitt and Jane Luu discovered the first trans-Neptunian object, designated 1992 QB1. Prior to this discovery, the Kuiper Belt remained a matter of speculation among the scientific community. The discovery of 1992 QB1, measuring approximately 280 kilometers across, provided the first empirical evidence that Kuiper's hypothesis was correct. This breakthrough launched a new era of astronomical research focused on understanding the outer solar system and the formation history of planetary bodies."
+   },
+   {
+    "label": "B",
+    "text": "Pluto, reclassified from a planet to a dwarf planet by the International Astronomical Union in 2006, was the first known object in the Kuiper Belt. For 76 years, from 1930 until 2006, Pluto held the status of the ninth planet in our solar system. The reclassification occurred after astronomers discovered numerous similar-sized objects in the Kuiper Belt, which raised questions about what defines a planet. The new classification system established three criteria: an object must orbit the Sun, possess sufficient mass to achieve a round shape, and have cleared its orbital neighborhood of other debris. Pluto meets the first two criteria but fails the third, as its orbit overlaps with many other icy bodies. Since 2006, Pluto has been designated as a plutino, a subclass of dwarf planet. This change, while controversial among the public, reflects the scientific community's commitment to maintaining rigorous classification standards based on observed evidence rather than historical tradition."
+   },
+   {
+    "label": "C",
+    "text": "The New Horizons spacecraft mission, launched by NASA in January 2006, traveled nearly 4.8 billion miles to reach Pluto in July 2015. This nine-year journey provided humanity's first close-up images of Pluto and its moons. The spacecraft revealed a complex world with mountains, valleys, and vast plains of frozen nitrogen. One striking feature discovered by New Horizons was a heart-shaped region, informally called Tombaugh Regio in honor of Pluto's discoverer Clyde Tombaugh, which spans approximately 1,600 kilometers across Pluto's surface. The mission's data transformed scientific understanding of dwarf planets and their potential for geological complexity. Following the Pluto encounter, New Horizons continued its mission into the Kuiper Belt, with planned observations of other distant objects scheduled for the coming decades. The photographs and compositional data gathered by New Horizons have been invaluable for researchers studying the primordial composition of the solar system."
+   },
+   {
+    "label": "D",
+    "text": "Current estimates suggest the Kuiper Belt contains hundreds of thousands of objects larger than 100 kilometers in diameter, with millions of smaller bodies. The total mass of the Kuiper Belt is estimated at approximately 0.1 times the mass of Earth, spread across this enormous region. Notable objects besides Pluto include Eris, Haumea, and Makemake, all classified as dwarf planets. Eris, discovered in January 2005, triggered Pluto's reclassification because of its similar size and characteristics. The dwarf planets in the Kuiper Belt are believed to be remnants from the early solar system, preserved in their icy state due to their distance from the Sun's heat. These objects provide crucial insights into the conditions that existed during the formation of the solar system approximately 4.6 billion years ago. Studying the Kuiper Belt objects helps astronomers understand planetary migration, the distribution of primordial material, and the history of collisions in the outer solar system."
+   },
+   {
+    "label": "E",
+    "text": "Spectroscopic analysis of Kuiper Belt objects reveals compositions dominated by frozen methane, ammonia, and water ice, with variations indicating different thermal and processing histories. Some objects exhibit evidence of cryovolcanism, a process in which eruptions of ice or water instead of molten rock occur on the surface. The Kuiper Belt population is divided into two main regions: the classical Kuiper Belt, extending from about 42 to 50 AU, and the scattered disk, extending beyond 50 AU. Objects in the scattered disk, including Eris and Gonggong, have highly elliptical orbits suggesting they were gravitationally scattered from their original positions. This scattering is thought to have occurred during the migration of Jupiter and Saturn early in the solar system's history. Evidence for this migration comes from computer simulations that reproduce the current distribution of Kuiper Belt objects when giant planets are allowed to migrate outward and then settle into their current positions."
+   },
+   {
+    "label": "F",
+    "text": "The potential for scientific discovery in the Kuiper Belt has motivated numerous proposals for future missions. Japan's space agency JAXA has proposed missions to investigate multiple Kuiper Belt objects simultaneously using advanced propulsion systems. NASA and international partners continue to develop technologies for faster and more cost-effective missions to the outer solar system. The challenges of Kuiper Belt exploration include the vast distances involved, requiring transit times of many years, and the need for instruments that can function reliably in extremely low temperatures and at great distances from the Sun. Solar panels become inefficient at such distances, necessitating the use of radioisotope thermoelectric generators for power. Despite these challenges, the scientific returns justify continued investment. Understanding the Kuiper Belt is essential for comprehending planetary system formation, evaluating the prevalence of similar systems around other stars, and assessing the long-term stability of our solar system."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r07-q01",
+    "type": "tfng",
+    "prompt": "Gerard Kuiper discovered the Kuiper Belt in 1951.",
+    "answer": "FALSE",
+    "why": "Paragraph A states: 'theorized by Dutch-American astronomer Gerard Kuiper in 1951, though its existence was not confirmed until 1992.' He theorized it, did not discover it."
+   },
+   {
+    "id": "r07-q02",
+    "type": "tfng",
+    "prompt": "Pluto was classified as the ninth planet for over 70 years.",
+    "answer": "TRUE",
+    "why": "Paragraph B states: 'For 76 years, from 1930 until 2006, Pluto held the status of the ninth planet.' 76 years is over 70 years."
+   },
+   {
+    "id": "r07-q03",
+    "type": "tfng",
+    "prompt": "The New Horizons spacecraft took nine years to reach Pluto.",
+    "answer": "TRUE",
+    "why": "Paragraph C states: 'launched by NASA in January 2006...to reach Pluto in July 2015. This nine-year journey.'"
+   },
+   {
+    "id": "r07-q04",
+    "type": "tfng",
+    "prompt": "The Kuiper Belt extends further from the Sun than the scattered disk.",
+    "answer": "FALSE",
+    "why": "Paragraph E states: 'the classical Kuiper Belt, extending from about 42 to 50 AU, and the scattered disk, extending beyond 50 AU.' The scattered disk extends beyond, so it goes further."
+   },
+   {
+    "id": "r07-q05",
+    "type": "tfng",
+    "prompt": "Objects in the Kuiper Belt are composed primarily of ice.",
+    "answer": "TRUE",
+    "why": "Paragraph E states: 'compositions dominated by frozen methane, ammonia, and water ice.' All these are forms of ice."
+   },
+   {
+    "id": "r07-q06",
+    "type": "complete",
+    "prompt": "The first trans-Neptunian object discovered was designated 1992 ___.",
+    "answer": [
+     "QB1"
+    ],
+    "why": "Paragraph A clearly states: 'designated 1992 QB1.' This is the exact designation given in the passage."
+   },
+   {
+    "id": "r07-q07",
+    "type": "complete",
+    "prompt": "The heart-shaped region on Pluto is called Tombaugh ___.",
+    "answer": [
+     "Regio"
+    ],
+    "why": "Paragraph C states: 'called Tombaugh Regio in honor of Pluto's discoverer Clyde Tombaugh.' Regio is the term used."
+   },
+   {
+    "id": "r07-q08",
+    "type": "complete",
+    "prompt": "Future Kuiper Belt missions will use radioisotope thermoelectric ___.",
+    "answer": [
+     "generators"
+    ],
+    "why": "Paragraph F states: 'necessitating the use of radioisotope thermoelectric generators for power.' This is exactly 1 word from the passage."
+   },
+   {
+    "id": "r07-q09",
+    "type": "complete",
+    "prompt": "The Kuiper Belt's total mass is estimated at 0.1 times the mass of ___.",
+    "answer": [
+     "Earth"
+    ],
+    "why": "Paragraph D states: 'The total mass of the Kuiper Belt is estimated at approximately 0.1 times the mass of Earth.' Earth is the exact word."
+   },
+   {
+    "id": "r07-q10",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph A?",
+    "options": [
+     "i. The Discovery of Pluto",
+     "ii. Early Theories and Confirmation of the Kuiper Belt",
+     "iii. Notable Objects and Remnants in the Kuiper Belt",
+     "iv. Telescopes for Observing Distant Objects",
+     "v. Spectroscopic Composition and Orbital Distribution of Kuiper Belt Objects",
+     "vi. NASA's Space Exploration Programs"
+    ],
+    "answer": "ii",
+    "why": "Paragraph A discusses Kuiper's 1951 theory and the 1992 discovery confirmation. Option ii 'Early Theories and Confirmation of the Kuiper Belt' directly matches this content."
+   },
+   {
+    "id": "r07-q11",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph D?",
+    "options": [
+     "i. The Discovery of Pluto",
+     "ii. Early Theories and Confirmation of the Kuiper Belt",
+     "iii. Notable Objects and Remnants in the Kuiper Belt",
+     "iv. Telescopes for Observing Distant Objects",
+     "v. Spectroscopic Composition and Orbital Distribution of Kuiper Belt Objects",
+     "vi. NASA's Space Exploration Programs"
+    ],
+    "answer": "iii",
+    "why": "Paragraph D discusses the objects in the Kuiper Belt including Eris, Haumea, Makemake, and their status as solar system remnants. Option iii fits this content."
+   },
+   {
+    "id": "r07-q12",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph E?",
+    "options": [
+     "i. The Discovery of Pluto",
+     "ii. Early Theories and Confirmation of the Kuiper Belt",
+     "iii. Notable Objects and Remnants in the Kuiper Belt",
+     "iv. Telescopes for Observing Distant Objects",
+     "v. Spectroscopic Composition and Orbital Distribution of Kuiper Belt Objects",
+     "vi. NASA's Space Exploration Programs"
+    ],
+    "answer": "v",
+    "why": "Paragraph E discusses spectroscopic analysis, composition (methane, ammonia, ice) and the division into classical Kuiper Belt and scattered disk regions. Option v 'Spectroscopic Composition and Orbital Distribution of Kuiper Belt Objects' matches this content exactly."
+   },
+   {
+    "id": "r07-q13",
+    "type": "mcq",
+    "prompt": "What was the diameter of 1992 QB1, the first discovered trans-Neptunian object?",
+    "options": [
+     "A. Approximately 100 kilometers",
+     "B. Approximately 280 kilometers",
+     "C. Approximately 500 kilometers",
+     "D. Approximately 1,600 kilometers"
+    ],
+    "answer": "B",
+    "why": "Paragraph A states: 'The discovery of 1992 QB1, measuring approximately 280 kilometers across.'"
+   },
+   {
+    "id": "r07-q14",
+    "type": "mcq",
+    "prompt": "Which dwarf planet's discovery directly triggered Pluto's reclassification?",
+    "options": [
+     "A. Haumea",
+     "B. Gonggong",
+     "C. Eris",
+     "D. Makemake"
+    ],
+    "answer": "C",
+    "why": "Paragraph D states: 'Eris, discovered in January 2005, triggered Pluto's reclassification because of its similar size and characteristics.'"
+   }
+  ]
+ },
+ {
+  "id": "r08",
+  "title": "Vertical Gardens in Modern Urban Design",
+  "topic": "urban planning/architecture",
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Vertical gardens, also known as green walls or living walls, represent an innovative approach to integrating vegetation into urban environments where horizontal space is limited. First commercially developed in France during the 1990s, vertical gardens have gained significant traction in major metropolitan areas around the world. Patrick Blanc, a French botanist and landscape designer, is credited with pioneering the modern vertical garden system through his patented hydroponics technique, which was first publicly displayed at the Musée du Quai Branly in Paris in 2006. This technique utilizes a specialized support structure that allows water and nutrients to circulate through a vertical growing medium, supporting various plant species without requiring soil. The concept challenges traditional assumptions about plant cultivation and urban space utilization. Since Blanc's breakthrough, cities including Singapore, New York, and Tokyo have incorporated vertical gardens into their urban planning strategies, recognizing both aesthetic and environmental benefits."
+   },
+   {
+    "label": "B",
+    "text": "The environmental advantages of vertical gardens are substantial and multifaceted. These installations can improve air quality by absorbing carbon dioxide and releasing oxygen through the photosynthesis process, though the scale of impact remains modest compared to traditional parks. A single vertical garden of 100 square meters can absorb approximately 2.5 kilograms of carbon dioxide annually, equivalent to the annual emissions produced by an average car traveling 6,400 kilometers. Vertical gardens also provide enhanced thermal insulation for building facades, reducing the energy required for heating and cooling by up to 15 percent in some studies. The plants act as natural sound barriers, absorbing noise pollution from traffic and urban activity. Additionally, these systems support urban biodiversity by providing habitats for insects, birds, and other small organisms. The microclimates created around vertical gardens often attract species that would otherwise abandon urban areas, contributing to the ecological recovery of cities."
+   },
+   {
+    "label": "C",
+    "text": "Implementation of vertical gardens faces significant economic and technical challenges. The initial cost of installation can range from $300 to $1,000 per square meter, depending on the complexity of the irrigation system and plant selection. Maintenance requirements are substantial, including regular watering, fertilization, nutrient adjustment, and plant replacement when species fail to thrive. Most vertical gardens require automated irrigation systems with sensors that monitor moisture levels and adjust water delivery accordingly. System failures, whether in the irrigation apparatus or the structural support, can rapidly lead to plant death and aesthetic degradation. In 2015, a well-publicized vertical garden installation in a Dubai luxury hotel experienced severe damage when irrigation system malfunction caused 90 percent of the plants to wilt within two weeks. This incident highlighted the risks of insufficient maintenance protocols. Professional maintenance teams must visit installations regularly, with many systems requiring attention at least once weekly. These operational costs have limited adoption primarily to high-value properties, commercial developments, and well-funded public installations."
+   },
+   {
+    "label": "D",
+    "text": "Several cities have undertaken large-scale vertical garden projects aimed at urban beautification and environmental remediation. Singapore's National Parks Board initiated its 'Vertical Garden Initiative' in 2009, designing green wall systems for ten major buildings in the Central Business District. By 2020, Singapore had implemented over 4,500 vertical garden installations across the city-state, covering approximately 150,000 square meters of building facades. Mexico City, facing severe air pollution challenges, approved a municipal program in 2013 to install vertical gardens on public buildings, hospitals, and educational institutions. The program aimed to install 10,000 vertical garden panels by 2025, though progress has been slower than initially projected. Paris, where the vertical garden concept originated, has incorporated living walls into its broader urban greening strategy, with installations along major transportation corridors and in residential neighborhoods. These programs demonstrate government commitment to using vertical gardens as tools for urban environmental enhancement."
+   },
+   {
+    "label": "E",
+    "text": "Technological innovations continue to expand the possibilities for vertical garden applications. Modular green wall systems developed since 2010 offer easier installation and maintenance compared to earlier monolithic designs. These systems allow individual plant modules to be replaced independently without disrupting the entire wall. Advances in hydroponics and irrigation automation have reduced water consumption by up to 70 percent compared to traditional landscaping methods. Some newer installations incorporate solar panels integrated with vertical garden structures, creating dual-purpose systems that generate renewable energy while supporting plant growth. Researchers at ETH Zurich developed a prototype in 2019 that combines photovoltaic cells with plant-supporting trellises, though commercial viability remains uncertain. Artificial intelligence applications are emerging to optimize irrigation schedules and nutrient delivery based on real-time environmental data and plant-specific requirements. These technological advances promise to make vertical gardens more economically accessible and environmentally efficient, though widespread adoption still requires cost reduction."
+   },
+   {
+    "label": "F",
+    "text": "The aesthetic contribution of vertical gardens to urban landscapes cannot be overlooked. Psychological research indicates that viewing green spaces and vegetation reduces stress levels and improves mental well-being in urban populations. A 2018 study conducted by the University of Melbourne found that office workers with views of vertical gardens demonstrated 37 percent lower stress levels compared to workers with views of concrete walls. The visual impact of vegetation transforms hard architectural surfaces, softening the appearance of industrial and commercial building facades. In densely populated urban cores where traditional parks are infeasible, vertical gardens provide accessible green space within immediate sight of residents and workers. Cultural events, including the development of green wall art installations, have elevated vertical gardens beyond functional environmental tools into recognized aesthetic and artistic expressions. The integration of artistic design with ecological function represents an emerging intersection of urban planning, architecture, and environmental stewardship."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r08-q01",
+    "type": "tfng",
+    "prompt": "Patrick Blanc's vertical garden technique uses soil-based growing medium.",
+    "answer": "FALSE",
+    "why": "Paragraph A states: 'which utilizes a specialized support structure that allows water and nutrients to circulate through a vertical growing medium, supporting various plant species without requiring soil.'"
+   },
+   {
+    "id": "r08-q02",
+    "type": "tfng",
+    "prompt": "A 100 square meter vertical garden absorbs more than 2 kilograms of carbon dioxide annually.",
+    "answer": "TRUE",
+    "why": "Paragraph B states: 'A single vertical garden of 100 square meters can absorb approximately 2.5 kilograms of carbon dioxide annually.' 2.5 is more than 2."
+   },
+   {
+    "id": "r08-q03",
+    "type": "tfng",
+    "prompt": "Vertical gardens can reduce building heating and cooling energy requirements by more than 20 percent.",
+    "answer": "FALSE",
+    "why": "Paragraph C states: 'reducing the energy required for heating and cooling by up to 15 percent in some studies.' 15 percent is not more than 20 percent."
+   },
+   {
+    "id": "r08-q04",
+    "type": "tfng",
+    "prompt": "Most vertical gardens require automated irrigation systems.",
+    "answer": "TRUE",
+    "why": "Paragraph C states: 'Most vertical gardens require automated irrigation systems with sensors that monitor moisture levels.'"
+   },
+   {
+    "id": "r08-q05",
+    "type": "tfng",
+    "prompt": "The vertical garden installation failure in Dubai in 2015 resulted in total plant loss.",
+    "answer": "FALSE",
+    "why": "Paragraph C states: '90 percent of the plants to wilt within two weeks,' meaning 10 percent remained, not total loss."
+   },
+   {
+    "id": "r08-q06",
+    "type": "complete",
+    "prompt": "Patrick Blanc first publicly displayed his technique at the Musée du Quai Branly in ___.",
+    "answer": [
+     "Paris"
+    ],
+    "why": "Paragraph A states: 'first publicly displayed at the Musée du Quai Branly in Paris in 2006.'"
+   },
+   {
+    "id": "r08-q07",
+    "type": "complete",
+    "prompt": "The initial installation cost of vertical gardens can range from $300 to $1,000 per square ___.",
+    "answer": [
+     "meter"
+    ],
+    "why": "Paragraph C states: 'The initial cost of installation can range from $300 to $1,000 per square meter.'"
+   },
+   {
+    "id": "r08-q08",
+    "type": "complete",
+    "prompt": "Singapore had implemented over 4,500 vertical garden installations by the year ___.",
+    "answer": [
+     "2020"
+    ],
+    "why": "Paragraph D states: 'By 2020, Singapore had implemented over 4,500 vertical garden installations.'"
+   },
+   {
+    "id": "r08-q09",
+    "type": "complete",
+    "prompt": "A 2018 study found office workers with green wall views had 37 percent lower ___ levels.",
+    "answer": [
+     "stress"
+    ],
+    "why": "Paragraph F states: 'office workers with views of vertical gardens demonstrated 37 percent lower stress levels.'"
+   },
+   {
+    "id": "r08-q10",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph B?",
+    "options": [
+     "i. Installation Costs of Urban Gardens",
+     "ii. Environmental Benefits and Ecological Impact of Vertical Gardens",
+     "iii. Economic and Technical Challenges in Vertical Garden Implementation",
+     "iv. Technological Innovations and Advancements in Vertical Garden Systems",
+     "v. Historical Development of Green Walls",
+     "vi. Architectural Design Principles"
+    ],
+    "answer": "ii",
+    "why": "Paragraph B discusses environmental advantages including air quality, thermal insulation, noise reduction, and biodiversity support. Option ii 'Environmental Benefits and Ecological Impact' directly describes this content."
+   },
+   {
+    "id": "r08-q11",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph C?",
+    "options": [
+     "i. Installation Costs of Urban Gardens",
+     "ii. Environmental Benefits and Ecological Impact of Vertical Gardens",
+     "iii. Economic and Technical Challenges in Vertical Garden Implementation",
+     "iv. Technological Innovations and Advancements in Vertical Garden Systems",
+     "v. Historical Development of Green Walls",
+     "vi. Architectural Design Principles"
+    ],
+    "answer": "iii",
+    "why": "Paragraph C focuses on challenges including high costs, maintenance requirements, irrigation problems, and system failures. Option iii matches this content exactly."
+   },
+   {
+    "id": "r08-q12",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph E?",
+    "options": [
+     "i. Installation Costs of Urban Gardens",
+     "ii. Environmental Benefits and Ecological Impact of Vertical Gardens",
+     "iii. Economic and Technical Challenges in Vertical Garden Implementation",
+     "iv. Technological Innovations and Advancements in Vertical Garden Systems",
+     "v. Historical Development of Green Walls",
+     "vi. Architectural Design Principles"
+    ],
+    "answer": "iv",
+    "why": "Paragraph E discusses modular systems, water conservation, solar panel integration, and artificial intelligence applications. Option iv 'Technological Innovations and Advancements' is the best fit."
+   },
+   {
+    "id": "r08-q13",
+    "type": "mcq",
+    "prompt": "Mexico City approved its vertical garden program in which year?",
+    "options": [
+     "A. 2009",
+     "B. 2013",
+     "C. 2015",
+     "D. 2018"
+    ],
+    "answer": "B",
+    "why": "Paragraph D states: 'Mexico City, facing severe air pollution challenges, approved a municipal program in 2013.'"
+   },
+   {
+    "id": "r08-q14",
+    "type": "match",
+    "prompt": "Match the following statements to the appropriate paragraphs (A-F). Which paragraph discusses the psychological and mental health benefits of vertical gardens?",
+    "options": [
+     "A. Paragraph A",
+     "B. Paragraph B",
+     "C. Paragraph C",
+     "D. Paragraph D",
+     "E. Paragraph E",
+     "F. Paragraph F"
+    ],
+    "answer": "F",
+    "why": "Paragraph F states: 'Psychological research indicates that viewing green spaces and vegetation reduces stress levels and improves mental well-being.'"
+   }
+  ]
+ },
+ {
+  "id": "r09",
+  "title": "The Evolution of Vaccination: From Variolation to Modern Immunology",
+  "topic": "medicine/public health history",
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "The history of vaccination represents one of medicine's most transformative achievements, reshaping public health and survival rates across centuries. The concept of disease immunity was practiced in rudimentary forms for thousands of years before being scientifically understood. The earliest documented reference appears in Indian Sanskrit texts dating to approximately 1500 BCE, describing variolation techniques. Chinese physicians developed variolation during the eleventh century, deliberately introducing pustule material into the nasal passages of healthy persons to induce immunity. This risky practice nevertheless offered better survival odds than encountering the disease naturally, as it exposed individuals to controlled disease exposure under optimized conditions. Variolation gradually spread westward along trade routes, reaching the Ottoman Empire by the sixteenth century. It eventually arrived in Europe during the eighteenth century, where medical practitioners and aristocrats adopted it. Despite initial resistance from established medical authorities and religious institutions opposed to deliberate disease exposure, variolation gained acceptance as statistical evidence demonstrated its survival advantages became increasingly apparent to scientific observers."
+   },
+   {
+    "label": "B",
+    "text": "Edward Jenner established vaccination's scientific foundations in the late eighteenth century, fundamentally changing medical practice. In 1796, Jenner observed that dairy workers infected with cowpox, a mild bovine disease, developed immunity to smallpox. This crucial observation led him to conduct a pivotal experimental inoculation in which he deliberately infected eight-year-old James Phipps with cowpox material obtained from infected milkmaid Sarah Nelmes. Following recovery, Phipps resisted repeated smallpox exposures, demonstrating protection against the severe disease. Jenner published his revolutionary 1798 work 'An Inquiry into the Causes and Effects of the Variolae Vaccinae,' introducing the term 'vaccination' derived from the Latin 'vacca' meaning cow. Initial scientific reception was mixed, though skepticism gradually diminished. By 1801, approximately 100,000 people in England had received vaccinations. By 1807, several European nations mandated vaccination programs as effectiveness became undeniable."
+   },
+   {
+    "label": "C",
+    "text": "The nineteenth century witnessed rapid scientific advancement in understanding immunity mechanisms and disease transmission. Louis Pasteur demonstrated that weakened or attenuated microorganisms stimulated protective immune responses in host organisms through a systematic series of experiments. He developed the first successful rabies vaccine in 1885, successfully treating nine-year-old Joseph Meister after rabid dog exposure, providing the first concrete proof of concept for post-exposure vaccination. Robert Koch's systematic identification of specific bacteria as causative agents of specific diseases between 1876 and 1905 provided essential foundations for understanding disease-specific immunity. The replacement of miasma theory with germ theory represented a fundamental scientific paradigm shift in medical thinking. Immunology emerged as a distinct scientific discipline with researchers identifying antibodies, white blood cells, complement systems, and complex mechanisms of pathogen recognition and elimination. These landmark discoveries transformed vaccination from empirical trial-and-error practice into rational science based on understanding immune mechanisms and pathogenic organisms."
+   },
+   {
+    "label": "D",
+    "text": "The twentieth century brought unprecedented vaccine successes against major infectious diseases, transforming global public health. Vaccines against diphtheria, tetanus, and pertussis were developed and implemented during the 1920s and 1930s, significantly reducing childhood mortality rates throughout developed nations. Jonas Salk's polio vaccine, introduced in 1955, nearly eradicated a devastating disease that had paralyzed over 50,000 Americans annually at the peak of epidemics in the early 1950s. World Health Organization vaccination campaigns initiated in 1967 achieved the complete global eradication of smallpox by 1980, representing a historic milestone as the first infectious disease entirely eliminated from human populations through coordinated international efforts. Measles vaccination programs initiated in 1963 reduced global deaths from approximately 2.6 million annually in 1990 to fewer than 140,000 by 2020. However, twentieth-century safety concerns including pertussis vaccine controversies prompted development of more rigorous safety testing protocols and pharmacovigilance systems for monitoring adverse effects."
+   },
+   {
+    "label": "E",
+    "text": "Recombinant DNA technology developed in the 1970s revolutionized vaccine development, enabling creation of vaccines targeting specific pathogenic components rather than whole organisms. The hepatitis B vaccine, licensed in 1986, was the first successful recombinant DNA vaccine, produced through genetically engineered yeast cells in laboratory environments. Conjugate vaccines linked antigens to carrier molecules to enhance immune responses in young children with developing immune systems. mRNA vaccines, developed progressively since the 2000s as potential cancer treatments, had not received approval for infectious diseases prior to 2019. When COVID-19 emerged in late 2019, mRNA vaccine platforms represented cutting-edge technology never before deployed at scale. mRNA vaccines deployed in 2020-2021 demonstrated efficacy exceeding 90 percent in extensive clinical trials, establishing mRNA as a viable and promising platform for future vaccine development against diverse infectious pathogens."
+   },
+   {
+    "label": "F",
+    "text": "Vaccine hesitancy emerged as a significant public health concern since the early 2000s, undermining vaccination programs in developed nations. Misinformation, particularly the thoroughly debunked claim linking MMR vaccine to autism published by Andrew Wakefield, contributed to substantially reduced vaccination rates and disease reemergence in previously controlled populations. In 2019, United States measles cases reached 1,282, representing the highest number in 27 years, concentrated in communities with low vaccination coverage. Global vaccine access remains highly inequitable, with sub-Saharan Africa and South Asia experiencing significantly lower vaccination coverage despite higher disease burdens and mortality. Vaccine nationalism during the COVID-19 pandemic, wherein wealthy nations prioritized vaccine acquisition while lower-income nations faced substantial distribution delays, highlighted systemic inequities in global health infrastructure. Overcoming contemporary challenges requires integrated strategies combining scientific advancement with effective public health messaging and equitable vaccine distribution systems."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r09-q01",
+    "type": "ynng",
+    "prompt": "The author suggests that variolation was safer than natural disease exposure.",
+    "answer": "YES",
+    "why": "Paragraph A states: 'variolation gradually gained acceptance as its survival rate advantages became statistically apparent.' This indicates the author believes variolation had better outcomes than natural infection."
+   },
+   {
+    "id": "r09-q02",
+    "type": "ynng",
+    "prompt": "The author implies that early scientific colleagues fully accepted Jenner's vaccination theory immediately.",
+    "answer": "NO",
+    "why": "Paragraph B states: 'Initial scientific reception was mixed, with some colleagues expressing skepticism.' The author indicates skepticism existed, not full acceptance."
+   },
+   {
+    "id": "r09-q03",
+    "type": "ynng",
+    "prompt": "The author presents germ theory as a replacement for earlier medical explanatory frameworks.",
+    "answer": "YES",
+    "why": "Paragraph C states: 'Germ theory replaced the prevailing miasma theory, which had incorrectly attributed disease to noxious vapors.' The author clearly indicates germ theory superseded miasma theory."
+   },
+   {
+    "id": "r09-q04",
+    "type": "ynng",
+    "prompt": "The writer believes that twentieth-century vaccine safety concerns were largely unfounded.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph D mentions safety concerns including thalidomide and pertussis vaccine controversies and the development of safety testing protocols, but does not assert whether these concerns were founded or unfounded."
+   },
+   {
+    "id": "r09-q05",
+    "type": "ynng",
+    "prompt": "The author suggests that mRNA vaccine technology represented a novel approach to infectious disease prevention in 2020.",
+    "answer": "YES",
+    "why": "Paragraph E states: 'When the COVID-19 pandemic emerged in late 2019, mRNA vaccine technology had not yet been approved for infectious diseases' and 'represented the first large-scale application of this technology against an infectious pathogen,' indicating novelty."
+   },
+   {
+    "id": "r09-q06",
+    "type": "complete",
+    "prompt": "Edward Jenner introduced the term 'vaccination' in his 1798 work titled 'An Inquiry into the Causes and Effects of the Variolae ___.'",
+    "answer": [
+     "Vaccinae"
+    ],
+    "why": "Paragraph B states: \"his work titled 'An Inquiry into the Causes and Effects of the Variolae Vaccinae.'\" This is the exact title."
+   },
+   {
+    "id": "r09-q07",
+    "type": "complete",
+    "prompt": "Louis Pasteur developed the first successful vaccine against ___ in 1885.",
+    "answer": [
+     "rabies"
+    ],
+    "why": "Paragraph C states: 'Pasteur developed the first successful vaccine against rabies in 1885.'"
+   },
+   {
+    "id": "r09-q08",
+    "type": "complete",
+    "prompt": "The hepatitis B vaccine, licensed in 1986, was the first successful ___ vaccine.",
+    "answer": [
+     "recombinant DNA"
+    ],
+    "why": "Paragraph E states: 'The hepatitis B vaccine, licensed in 1986, was the first successful recombinant DNA vaccine.'"
+   },
+   {
+    "id": "r09-q09",
+    "type": "complete",
+    "prompt": "In 2019, measles cases in the United States reached 1,282, the highest number in ___ years.",
+    "answer": [
+     "27"
+    ],
+    "why": "Paragraph F states: 'In 2019, measles cases in the United States reached 1,282, the highest number in 27 years.'"
+   },
+   {
+    "id": "r09-q10",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph A?",
+    "options": [
+     "i. Ancient Vaccination Techniques and Variolation",
+     "ii. Edward Jenner's Revolutionary Discovery",
+     "iii. Twentieth-Century Vaccine Successes and Safety Challenges",
+     "iv. Vaccine Hesitancy, Inequity, and Modern Public Health Challenges",
+     "v. Modern mRNA Vaccine Technology",
+     "vi. Vaccine Safety and Regulatory Systems"
+    ],
+    "answer": "i",
+    "why": "Paragraph A discusses early variolation practices in India and China and their spread to Europe, matching 'Ancient Vaccination Techniques and Variolation.'"
+   },
+   {
+    "id": "r09-q11",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph D?",
+    "options": [
+     "i. Ancient Vaccination Techniques and Variolation",
+     "ii. Edward Jenner's Revolutionary Discovery",
+     "iii. Twentieth-Century Vaccine Successes and Safety Challenges",
+     "iv. Vaccine Hesitancy, Inequity, and Modern Public Health Challenges",
+     "v. Modern mRNA Vaccine Technology",
+     "vi. Vaccine Safety and Regulatory Systems"
+    ],
+    "answer": "iii",
+    "why": "Paragraph D discusses twentieth-century vaccine developments including polio, smallpox eradication, and safety concerns. Option iii matches this content."
+   },
+   {
+    "id": "r09-q12",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph F?",
+    "options": [
+     "i. Ancient Vaccination Techniques and Variolation",
+     "ii. Edward Jenner's Revolutionary Discovery",
+     "iii. Twentieth-Century Vaccine Successes and Safety Challenges",
+     "iv. Vaccine Hesitancy, Inequity, and Modern Public Health Challenges",
+     "v. Modern mRNA Vaccine Technology",
+     "vi. Vaccine Safety and Regulatory Systems"
+    ],
+    "answer": "iv",
+    "why": "Paragraph F discusses vaccine hesitancy, misinformation, distribution inequities, and vaccine nationalism. Option iv 'Vaccine Hesitancy, Inequity, and Modern Public Health Challenges' best describes this content."
+   },
+   {
+    "id": "r09-q13",
+    "type": "mcq",
+    "prompt": "According to the passage, by what year had approximately 100,000 people in England received vaccinations?",
+    "options": [
+     "A. 1796",
+     "B. 1798",
+     "C. 1801",
+     "D. 1807"
+    ],
+    "answer": "C",
+    "why": "Paragraph B states: 'By 1801, however, approximately 100,000 people in England had received vaccinations.'"
+   },
+   {
+    "id": "r09-q14",
+    "type": "mcq",
+    "prompt": "Which vaccine technology was authorized through emergency use procedures against COVID-19?",
+    "options": [
+     "A. Recombinant DNA vaccines",
+     "B. mRNA vaccines",
+     "C. Conjugate vaccines",
+     "D. Attenuated vaccines"
+    ],
+    "answer": "B",
+    "why": "Paragraph E states: 'The rapid deployment of mRNA vaccines against COVID-19 in 2020-2021, authorized through emergency use procedures.'"
+   }
+  ]
+ },
+ {
+  "id": "r10",
+  "title": "The Social and Economic Significance of Bread Consumption Across Cultures",
+  "topic": "sociology/anthropology",
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Bread stands as one of humanity's oldest and most culturally significant staple foods, with consumption dating back 11,000 years to the Neolithic period. Archaeological evidence from the Fertile Crescent indicates that grain cultivation and bread production emerged during the crucial transition from nomadic hunting-gathering to settled agricultural communities. The development of bread-making technologies paralleled the domestication of wheat and barley, fundamentally transforming human settlement patterns, labor organization, and social hierarchies. In ancient Egypt, bread served not merely as sustenance but as a standardized medium of labor exchange, with workers receiving daily bread rations as compensation. Similarly, Roman emperors strategically used grain doles to maintain social order and prevent urban unrest. This historical pattern demonstrates how bread transcended its fundamental nutritional function to become a carrier of profound social meaning, political power, and economic value."
+   },
+   {
+    "label": "B",
+    "text": "Contemporary bread consumption patterns vary significantly across global regions, reflecting distinct cultural traditions, agricultural capacities, and dietary preferences. In Mediterranean countries including Greece, Italy, and Spain, bread consumption remains exceptionally high, averaging 60 to 80 kilograms per capita annually, with bread integral to nearly every meal and social occasion. In Northern and Central Europe, including Germany, Poland, and Austria, black bread varieties produced from rye remain deeply culturally significant, with consumption averaging 50 to 65 kilograms per capita annually. Middle Eastern and North African regions exhibit similarly high bread consumption rates, with flatbreads such as pita, naan, and lavash comprising primary carbohydrate sources. Middle Eastern regions average 70 to 90 kilograms per capita annually, while North African consumption ranges from 80 to 100 kilograms annually. Conversely, in many Asian countries, rice rather than bread serves as the primary staple carbohydrate, resulting in comparatively lower bread consumption, typically ranging from 5 to 15 kilograms annually. These consumption patterns reflect not merely individual dietary choice but deep cultural embeddings of food traditions and identities."
+   },
+   {
+    "label": "C",
+    "text": "The socioeconomic dimensions of bread production and consumption reveal significant inequality in food security and nutritional access. In developing nations, bread and grain-based foods often constitute 60 to 70 percent of total caloric intake for populations living in poverty, creating acute vulnerability to global grain price fluctuations and economic shocks. Between 2010 and 2012, global wheat prices approximately doubled due to severe drought conditions in major grain-producing regions including Russia and Australia, triggering widespread food security crises particularly affecting lower-income populations dependent on wheat. During this crisis period, bread prices increased by up to 40 percent in some regions, forcing families to reduce consumption of other nutritious foods including vegetables and proteins. In contrast, affluent populations in developed nations exhibit more diversified diets where bread comprises only 10 to 20 percent of total caloric intake, enabling them to absorb price shocks through substitution or dietary adjustments. This disparity highlights how bread consumption intersects with poverty and economic vulnerability. Anthropological research has documented cases in developing nations where families prioritized bread acquisition for children while reducing adult nutrition intake."
+   },
+   {
+    "label": "D",
+    "text": "Bread production and distribution systems became increasingly globalized and industrialized during the twentieth century. Industrial bread production, which began widespread adoption following World War II, standardized bread recipes, ingredients, and distribution channels, creating efficiency gains and price reductions. Large-scale industrial bakeries utilizing mechanized production techniques reduced bread prices by approximately 30 to 40 percent relative to traditional artisanal production during the 1950s and 1960s, benefiting consumers with limited purchasing power. However, industrial production simultaneously reduced nutritional quality through refined flour processing, which removed bran and germ containing essential micronutrients, fiber, and phytonutrients. The replacement of whole-grain varieties with white bread occurred across many regions, contributing to nutritional transitions characterized by increased refined carbohydrate consumption. Beginning in the late twentieth century, various regions experienced cultural and culinary revivals emphasizing traditional and artisanal bread production, such as the slow food movement initiated in Italy in 1986."
+   },
+   {
+    "label": "E",
+    "text": "The environmental dimensions of bread production have become increasingly significant as climate change and water scarcity challenge global food systems. Wheat cultivation requires substantial water resources, with global production consuming approximately 216 billion cubic meters of water annually. Land degradation from intensive monoculture wheat production has reduced soil fertility in major grain-producing regions, necessitating increased chemical fertilizer application, which generates nitrogen runoff pollution in aquatic ecosystems. The greenhouse gas emissions from wheat production, including mechanized cultivation, fertilizer manufacturing, and transportation of grain to distant markets, contribute substantially to agricultural sector emissions that constitute approximately 13 to 14 percent of global anthropogenic greenhouse gas emissions. Water stress in grain-producing regions including India, China, and the Middle East creates competition between agricultural and municipal water consumption. Transitioning to more sustainable bread production systems requires changes in agricultural practices including crop rotation, reduced tilling, precision fertilizer application, and development of drought-resistant crop varieties."
+   },
+   {
+    "label": "F",
+    "text": "Nutritional debates regarding bread consumption have intensified in recent decades as various dietary philosophies have challenged grain-based diet traditions. Low-carbohydrate diet movements, popularized since the 1970s and gaining substantial mainstream adoption since 2000, argue that excessive bread consumption contributes to metabolic diseases including obesity, type 2 diabetes, and cardiovascular disease. Conversely, nutritional science research demonstrates that whole-grain bread consumption correlates strongly with reduced cardiovascular disease risk, improved metabolic markers, and enhanced digestive health through fiber provision. A meta-analysis of 45 prospective cohort studies published in the British Medical Journal in 2016 found that populations consuming 90 grams daily of whole grains experienced 23 percent lower mortality risk. The distinction between refined grain and whole-grain products has emerged as critical to understanding bread's health impacts, with major health organizations emphasizing whole-grain products. However, in developing nations, economic constraints often make refined white bread more accessible than whole-grain alternatives, creating situations wherein nutritional knowledge does not translate to dietary change due to economic barriers."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r10-q01",
+    "type": "ynng",
+    "prompt": "The author presents bread as having significance extending beyond its nutritional value.",
+    "answer": "YES",
+    "why": "Paragraph A states: 'This historical pattern demonstrates how bread transcended its nutritional function to become a carrier of social meaning, political power, and economic value.' The author explicitly argues bread has significance beyond nutrition."
+   },
+   {
+    "id": "r10-q02",
+    "type": "ynng",
+    "prompt": "The writer implies that Asian countries have less developed agricultural systems than Mediterranean regions.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph B states that Asian countries have lower bread consumption because 'rice rather than bread serves as the primary staple carbohydrate.' This reflects cultural preference and agricultural tradition, not agricultural development levels."
+   },
+   {
+    "id": "r10-q03",
+    "type": "ynng",
+    "prompt": "The author suggests that global wheat price increases disproportionately affected lower-income populations.",
+    "answer": "YES",
+    "why": "Paragraph C states: 'triggering widespread food security crises particularly affecting lower-income populations dependent on wheat and bread consumption' and notes this forced families to reduce nutritious foods. This implies disproportionate impact."
+   },
+   {
+    "id": "r10-q04",
+    "type": "ynng",
+    "prompt": "Industrial bread production improved the nutritional quality of consumed bread.",
+    "answer": "NO",
+    "why": "Paragraph D states: 'industrial production simultaneously reduced nutritional quality through refined flour processing, which removed bran and germ containing essential micronutrients, fiber, and phytonutrients.'"
+   },
+   {
+    "id": "r10-q05",
+    "type": "ynng",
+    "prompt": "The author believes that current economic barriers prevent nutrition knowledge from improving diet quality in developing nations.",
+    "answer": "YES",
+    "why": "Paragraph F states: 'economic constraints often make refined white bread more accessible than whole-grain alternatives, creating situations wherein nutritional knowledge does not translate to dietary change due to economic barriers.'"
+   },
+   {
+    "id": "r10-q06",
+    "type": "complete",
+    "prompt": "Bread consumption in Mediterranean countries averages between 60 to 80 kilograms per capita ___.",
+    "answer": [
+     "annually"
+    ],
+    "why": "Paragraph B states: 'averaging 60 to 80 kilograms per capita annually.' Annually is the exact term."
+   },
+   {
+    "id": "r10-q07",
+    "type": "complete",
+    "prompt": "Between 2010 and 2012, global ___ prices approximately doubled due to drought conditions.",
+    "answer": [
+     "wheat"
+    ],
+    "why": "Paragraph C states: 'Between 2010 and 2012, global wheat prices approximately doubled due to drought conditions.'"
+   },
+   {
+    "id": "r10-q08",
+    "type": "complete",
+    "prompt": "Industrial bread production reduced prices by approximately 30 to 40 percent relative to ___ production.",
+    "answer": [
+     "artisanal",
+     "traditional"
+    ],
+    "why": "Paragraph D states: 'reduced bread prices by approximately 30 to 40 percent relative to traditional artisanal production during the 1950s and 1960s.'"
+   },
+   {
+    "id": "r10-q09",
+    "type": "complete",
+    "prompt": "The slow food movement was initiated in ___ in 1986.",
+    "answer": [
+     "Italy"
+    ],
+    "why": "Paragraph D states: 'such as the slow food movement initiated in Italy in 1986.'"
+   },
+   {
+    "id": "r10-q10",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph A?",
+    "options": [
+     "i. Ancient Bread as Currency and Political Tool",
+     "ii. Bread Consumption and Socioeconomic Inequality",
+     "iii. Environmental Sustainability Challenges in Grain Production",
+     "iv. Modern Bread Production Technologies",
+     "v. Nutritional Comparisons of Bread Varieties",
+     "vi. Global Climate Change and Agriculture"
+    ],
+    "answer": "i",
+    "why": "Paragraph A discusses bread's historical role in Egypt and Rome as medium of exchange, political control, and carrier of social meaning. Option i matches this historical focus."
+   },
+   {
+    "id": "r10-q11",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph C?",
+    "options": [
+     "i. Ancient Bread as Currency and Political Tool",
+     "ii. Bread Consumption and Socioeconomic Inequality",
+     "iii. Environmental Sustainability Challenges in Grain Production",
+     "iv. Modern Bread Production Technologies",
+     "v. Nutritional Comparisons of Bread Varieties",
+     "vi. Global Climate Change and Agriculture"
+    ],
+    "answer": "ii",
+    "why": "Paragraph C discusses food security, poverty, price vulnerability, and how bread consumption relates to economic inequality. Option ii 'Bread Consumption and Socioeconomic Inequality' directly matches."
+   },
+   {
+    "id": "r10-q12",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph E?",
+    "options": [
+     "i. Ancient Bread as Currency and Political Tool",
+     "ii. Bread Consumption and Socioeconomic Inequality",
+     "iii. Environmental Sustainability Challenges in Grain Production",
+     "iv. Modern Bread Production Technologies",
+     "v. Nutritional Comparisons of Bread Varieties",
+     "vi. Global Climate Change and Agriculture"
+    ],
+    "answer": "iii",
+    "why": "Paragraph E discusses water consumption, land degradation, greenhouse gas emissions, and sustainability challenges in wheat production. Option iii matches this environmental focus."
+   },
+   {
+    "id": "r10-q13",
+    "type": "mcq",
+    "prompt": "According to the passage, wheat cultivation globally consumes approximately how many cubic meters of water annually?",
+    "options": [
+     "A. 90 billion cubic meters",
+     "B. 140 billion cubic meters",
+     "C. 216 billion cubic meters",
+     "D. 310 billion cubic meters"
+    ],
+    "answer": "C",
+    "why": "Paragraph E states: 'Wheat cultivation requires substantial water resources, with global production consuming approximately 216 billion cubic meters of water annually.'"
+   },
+   {
+    "id": "r10-q14",
+    "type": "match",
+    "prompt": "Match the following statements to the appropriate paragraphs (A-F). Which paragraph discusses bread's historical use as a medium of labor exchange?",
+    "options": [
+     "A. Paragraph A",
+     "B. Paragraph B",
+     "C. Paragraph C",
+     "D. Paragraph D",
+     "E. Paragraph E",
+     "F. Paragraph F"
+    ],
+    "answer": "A",
+    "why": "Paragraph A states: 'In ancient Egypt, bread served as a standardized medium of labor exchange, with workers receiving daily rations.'"
+   }
+  ]
+ },
+ {
+  "id": "r11",
+  "title": "Advanced Materials in Renewable Energy Systems",
+  "topic": "energy/materials science",
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "The transition to renewable energy systems requires fundamental advances in materials science to overcome technical and economic barriers associated with energy storage and transmission. Lithium-ion batteries, which dominate contemporary energy storage applications and powered approximately 70 percent of electric vehicles sold globally in 2023, depend upon sophisticated electrode materials synthesized from lithium cobalt oxide or lithium iron phosphate compounds. The critical dependency upon lithium and cobalt resources raises significant sustainability concerns, as global lithium reserves are distributed unevenly across geopolitical regions. Approximately 58 percent of global lithium resources concentrate in South America's 'Lithium Triangle' spanning Chile, Argentina, and Bolivia. Cobalt mining in the Democratic Republic of Congo, which supplies over 70 percent of global cobalt, has been associated with serious human rights concerns and environmental degradation. These resource constraints motivate intensive research into alternative battery chemistries and materials that could substantially reduce dependence upon constrained resources."
+   },
+   {
+    "label": "B",
+    "text": "Sodium-ion batteries represent a promising emerging technology designed to reduce dependence upon lithium and cobalt through substitution of sodium, an element far more abundant and geographically distributed than lithium. Sodium possesses numerous advantages over lithium in material and manufacturing contexts: it costs approximately 20 times less than lithium, occurs abundantly in marine environments and geological deposits, and demonstrates significantly lower environmental impact during extraction processes. The first commercial sodium-ion battery system, developed by Chinese manufacturer CATL, received certification in 2022 and entered production for integration into electric vehicles and stationary energy storage systems. Sodium-ion batteries demonstrate energy density approximately 25 to 30 percent lower than lithium-ion systems, which limits their suitability for applications requiring compact high-energy storage such as long-range electric vehicles, but makes them well-suited for stationary energy storage applications. Despite slightly reduced cycle life compared to lithium-ion systems, the substantially lower cost and improved sustainability profile position sodium-ion batteries as viable complements."
+   },
+   {
+    "label": "C",
+    "text": "Solid-state batteries represent a revolutionary materials technology promising to substantially increase energy density and eliminate thermal runaway risks that characterize liquid electrolyte lithium-ion batteries. Solid-state batteries replace the liquid electrolyte connecting positive and negative electrodes with a solid ceramic or polymer material, providing superior ionic conductivity while eliminating the flammable organic solvents that create fire hazards. This materials innovation enables anode compositions previously considered impractical, including lithium metal anodes that increase theoretical energy density by approximately 40 to 50 percent compared to graphite anodes employed in contemporary systems. Toyota, Nissan, and Nissan-affiliated battery manufacturer AESC have announced production timelines for solid-state batteries beginning in 2027, suggesting commercial viability approaching within the current decade. Laboratory demonstrations have achieved energy densities exceeding 500 Watt-hours per kilogram, compared to contemporary lithium-ion batteries' typical 250 to 350 Watt-hours per kilogram. However, solid-state battery development faces substantial technical challenges and manufacturing processes remain comparatively immature."
+   },
+   {
+    "label": "D",
+    "text": "Photovoltaic materials have undergone revolutionary transformation since the 1980s, as silicon-based solar cells achieved increasingly higher conversion efficiencies while costs declined by approximately 89 percent between 2010 and 2020. Perovskite solar cells, emerging as a promising alternative photovoltaic material, demonstrate laboratory efficiencies exceeding 30 percent compared to silicon's typical 15 to 22 percent commercial efficiency. Perovskites possess remarkable optoelectronic properties resulting from their crystal structure combining organic and inorganic components, enabling direct bandgap properties that permit solar photons to generate electron-hole pairs with high efficiency. Manufacturing processes for perovskite solar cells are comparatively simple and inexpensive, requiring solution-processing techniques rather than the energy-intensive silicon purification and crystallization processes. Despite these advantages, perovskite solar cells have experienced significant technical limitations including instability when exposed to moisture and oxygen, degradation accelerated by thermal cycling, and lead content in conventional compositions raising environmental concerns. Recent research developments including compositional engineering, protective coating strategies, and lead-free perovskite alternatives have substantially improved stability and durability characteristics."
+   },
+   {
+    "label": "E",
+    "text": "Superconducting materials offer revolutionary potential for energy transmission and conversion applications through elimination of electrical resistance in conductors, which conventionally dissipates 15 to 20 percent of transmitted electrical energy as waste heat. Conventional superconductors discovered in the early twentieth century required cooling to temperatures below 4 Kelvin, achievable only with liquid helium and associated with substantial operational expenses. High-temperature superconductors discovered beginning in 1987 operate at temperatures below 77 Kelvin, permitting cooling with liquid nitrogen, which costs approximately 10 times less than liquid helium and can be produced through well-established industrial processes. Current high-temperature superconducting materials, including yttrium barium copper oxide (YBCO) discovered in 1987, demonstrate critical current densities sufficient for large-scale electrical transmission at practical voltages and currents. Prototype superconducting transmission cables constructed with YBCO have demonstrated successful operation in pilot installations in North America, Europe, and Asia. However, widespread adoption faces substantial barriers including capital costs approximately three times higher than conventional copper-based transmission infrastructure."
+   },
+   {
+    "label": "F",
+    "text": "Advanced materials for thermal energy storage represent another critical frontier addressing renewable energy system integration challenges. Molten salt thermal energy storage systems, commercially deployed beginning in 2010, utilize mixtures of sodium nitrate and potassium nitrate heated to temperatures exceeding 500 degrees Celsius, enabling energy storage for 10 to 15 hours with minimal energy loss. The concentrated solar power facility in Ouarzazate, Morocco, commissioned in 2018, incorporates 900 megawatt-hours of molten salt storage capacity, enabling continuous power generation even during nighttime hours following sunset. Phase-change materials represent an emerging thermal storage technology promising higher energy density than conventional sensible heat storage systems through exploitation of latent heat released during crystallization and melting transitions. Paraffin wax and salt hydrates demonstrate specific heat capacities approximately 5 to 10 times higher than rock or sand conventionally used in thermal storage, enabling more compact storage systems. Current research efforts focus on developing composite phase-change materials incorporating stabilizing matrix compounds that can extend operational life to 1,000 or more thermal cycles."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r11-q01",
+    "type": "tfng",
+    "prompt": "Lithium-ion batteries powered approximately 70 percent of electric vehicles sold globally in 2023.",
+    "answer": "TRUE",
+    "why": "Paragraph A states: 'powered approximately 70 percent of electric vehicles sold globally in 2023.'"
+   },
+   {
+    "id": "r11-q02",
+    "type": "tfng",
+    "prompt": "South America's Lithium Triangle contains less than half of the world's lithium resources.",
+    "answer": "FALSE",
+    "why": "Paragraph A states: 'approximately 58 percent of global lithium resources concentrated in South America's Lithium Triangle.' 58 percent is more than half."
+   },
+   {
+    "id": "r11-q03",
+    "type": "tfng",
+    "prompt": "Sodium-ion batteries were first commercially produced by a Chinese manufacturer in 2022.",
+    "answer": "TRUE",
+    "why": "Paragraph B states: 'The first commercial sodium-ion battery system, developed by Chinese manufacturer CATL, received certification in 2022.'"
+   },
+   {
+    "id": "r11-q04",
+    "type": "tfng",
+    "prompt": "Solid-state batteries can achieve higher energy density than conventional lithium-ion batteries.",
+    "answer": "TRUE",
+    "why": "Paragraph C states: 'Laboratory demonstrations have achieved energy densities exceeding 500 Watt-hours per kilogram, compared to contemporary lithium-ion batteries' typical 250 to 350 Watt-hours per kilogram.'"
+   },
+   {
+    "id": "r11-q05",
+    "type": "tfng",
+    "prompt": "Perovskite solar cells are less efficient than silicon-based solar cells in commercial applications.",
+    "answer": "FALSE",
+    "why": "Paragraph D states: 'demonstrate laboratory efficiencies exceeding 30 percent compared to silicon's typical 15 to 22 percent commercial efficiency.' Perovskite efficiencies are higher."
+   },
+   {
+    "id": "r11-q06",
+    "type": "complete",
+    "prompt": "Silicon-based solar cell costs declined by approximately 89 percent between 2010 and ___.",
+    "answer": [
+     "2020"
+    ],
+    "why": "Paragraph D states: 'costs declined by approximately 89 percent between 2010 and 2020.'"
+   },
+   {
+    "id": "r11-q07",
+    "type": "complete",
+    "prompt": "High-temperature superconductors were discovered beginning in ___.",
+    "answer": [
+     "1987"
+    ],
+    "why": "Paragraph E states: 'High-temperature superconductors discovered beginning in 1987.'"
+   },
+   {
+    "id": "r11-q08",
+    "type": "complete",
+    "prompt": "The concentrated solar power facility in Ouarzazate, Morocco, was commissioned in ___ and incorporates molten salt storage.",
+    "answer": [
+     "2018"
+    ],
+    "why": "Paragraph F states: 'The concentrated solar power facility in Ouarzazate, Morocco, commissioned in 2018.'"
+   },
+   {
+    "id": "r11-q09",
+    "type": "complete",
+    "prompt": "Phase-change materials demonstrate specific heat capacities approximately 5 to 10 times higher than ___ used in conventional thermal storage.",
+    "answer": [
+     "rock",
+     "sand",
+     "rock or sand"
+    ],
+    "why": "Paragraph F states: 'higher than rock or sand conventionally used in thermal storage.' Either term is correct."
+   },
+   {
+    "id": "r11-q10",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph A?",
+    "options": [
+     "i. Materials Requirements and Resource Constraints in Renewable Energy Storage",
+     "ii. Perovskite Solar Cells and Advanced Photovoltaic Materials",
+     "iii. Superconducting Materials for Energy Transmission and Applications",
+     "iv. Thermal Energy Storage Systems",
+     "v. Sodium-Ion Battery Technology",
+     "vi. Silicon Photovoltaic Efficiency Improvements"
+    ],
+    "answer": "i",
+    "why": "Paragraph A discusses materials needs for renewable energy systems and resource constraints with lithium and cobalt. Option i matches this content."
+   },
+   {
+    "id": "r11-q11",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph D?",
+    "options": [
+     "i. Materials Requirements and Resource Constraints in Renewable Energy Storage",
+     "ii. Perovskite Solar Cells and Advanced Photovoltaic Materials",
+     "iii. Superconducting Materials for Energy Transmission and Applications",
+     "iv. Thermal Energy Storage Systems",
+     "v. Sodium-Ion Battery Technology",
+     "vi. Silicon Photovoltaic Efficiency Improvements"
+    ],
+    "answer": "ii",
+    "why": "Paragraph D discusses perovskite solar cells, their efficiency, manufacturing, and stability challenges. Option ii directly matches this content."
+   },
+   {
+    "id": "r11-q12",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph E?",
+    "options": [
+     "i. Materials Requirements and Resource Constraints in Renewable Energy Storage",
+     "ii. Perovskite Solar Cells and Advanced Photovoltaic Materials",
+     "iii. Superconducting Materials for Energy Transmission and Applications",
+     "iv. Thermal Energy Storage Systems",
+     "v. Sodium-Ion Battery Technology",
+     "vi. Silicon Photovoltaic Efficiency Improvements"
+    ],
+    "answer": "iii",
+    "why": "Paragraph E discusses superconductor materials, their properties, and applications in electrical transmission. Option iii matches this content."
+   },
+   {
+    "id": "r11-q13",
+    "type": "mcq",
+    "prompt": "Sodium-ion batteries have approximately what percentage lower energy density compared to lithium-ion systems?",
+    "options": [
+     "A. 10-15 percent",
+     "B. 25-30 percent",
+     "C. 40-50 percent",
+     "D. 60-70 percent"
+    ],
+    "answer": "B",
+    "why": "Paragraph B states: 'Sodium-ion batteries demonstrate energy density approximately 25 to 30 percent lower than lithium-ion systems.'"
+   },
+   {
+    "id": "r11-q14",
+    "type": "mcq",
+    "prompt": "According to the passage, conventional electrical transmission systems dissipate what percentage of transmitted energy as waste heat?",
+    "options": [
+     "A. 5-10 percent",
+     "B. 15-20 percent",
+     "C. 25-30 percent",
+     "D. 35-40 percent"
+    ],
+    "answer": "B",
+    "why": "Paragraph E states: 'which conventionally dissipates 15 to 20 percent of transmitted electrical energy as waste heat.'"
+   }
+  ]
+ },
+ {
+  "id": "r12",
+  "title": "The Neuroscience of Sleep and Cognitive Memory Consolidation",
+  "topic": "cognitive science",
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Sleep represents a fundamental biological necessity for humans and other organisms, characterized by coordinated neural, hormonal, and metabolic processes that vary systematically across distinct physiological stages. Throughout history, sleep was often dismissed as a passive physiological state with minimal functional significance. Contemporary neuroscientific research reveals that sleep constitutes an active biological state during which the brain engages in essential maintenance and consolidation processes that cannot occur during waking periods. Modern sleep science emerged during the 1950s when researchers Nathaniel Kleitman and Eugene Aserinsky discovered rapid eye movement, or REM sleep, through electroencephalography and electro-oculography measurements. This breakthrough launched intensive investigation into sleep's neurobiological mechanisms. Research identified two fundamentally distinct sleep stages: REM sleep, comprising approximately 20 to 25 percent of total adult sleep time and characterized by rapid eye movements and vivid dream content; and non-REM sleep, comprising approximately 75 to 80 percent of sleep time and subdivided into stages N1, N2, and N3 with progressively deeper sleep and lower brain metabolic activity."
+   },
+   {
+    "label": "B",
+    "text": "Memory consolidation during sleep represents one of sleep's most extensively documented functions, with research demonstrating that sleep plays a critical role in transforming temporary memories into stable long-term storage. During waking periods, the hippocampus, a seahorse-shaped brain structure located in the temporal lobe, encodes experiences as unstable neural patterns subject to decay and interference. Sleep-dependent memory consolidation processes, particularly occurring during non-REM stages N2 and N3, involve reactivation of hippocampal neural ensembles in a phenomenon termed 'replay,' wherein neurons fire in sequences reproducing patterns representing learned information. This neural replay occurs in coordination with sleep-specific spindle oscillations, transient bursts of neural activity at 12 to 16 Hertz frequency, which facilitate transfer of hippocampal memories to the neocortex. Spindle density, the frequency of sleep spindle occurrence during night sleep, correlates significantly with cognitive performance and learning ability, with individuals exhibiting higher spindle density demonstrating superior performance on intelligence tests. Pharmacological studies blocking spindle generation impair memory consolidation, providing direct evidence for spindle's functional necessity."
+   },
+   {
+    "label": "C",
+    "text": "Dreams, the vivid subjective experiences reported particularly during REM sleep, have been subject to divergent scientific interpretations regarding their functional significance and neurobiological origins. Sigmund Freud's psychoanalytic theory, proposed in his 1900 work 'The Interpretation of Dreams,' characterized dreams as expressions of unconscious wishes disguised through symbolic transformation. Modern neuroscience has moved beyond Freudian interpretations toward mechanistic explanations grounded in neural activity patterns during REM sleep. The activation-synthesis hypothesis, formulated by Hobson and McCarley in 1977, proposes that dreams arise from the brain's attempt to construct coherent narratives from random neural activation patterns occurring during REM sleep. During REM sleep, the brainstem generates random cholinergic activation of cortical areas while simultaneously suppressing norepinephrine and serotonin neurotransmitters that normally maintain logical thinking patterns. The cortex, receiving this chaotic input, spontaneously generates dream content through attempted integration of these fragmentary signals. Contrary to Freudian dream theory, contemporary research suggests dreams primarily reflect neural noise rather than encoding meaningful psychological information."
+   },
+   {
+    "label": "D",
+    "text": "Sleep deprivation produces profound cognitive and physiological deterioration demonstrating sleep's essential function in maintaining neural and organismal homeostasis. Partial sleep deprivation, defined as restricting sleep to fewer than six hours nightly, impairs attention, working memory, and executive function through mechanisms including decreased activation in prefrontal cortex regions. Complete sleep deprivation for periods exceeding 48 to 72 hours produces severe cognitive impairment including microsleep episodes, hallucinations, and potentially fatal autonomic nervous system dysregulation. The lethal familial insomnia, a rare neurodegenerative disease caused by prion protein mutations affecting sleep regulation, demonstrates sleep's absolute necessity for survival; affected individuals typically expire within 6 to 18 months following symptom onset. Chronic insufficient sleep, a widespread condition affecting an estimated 35 to 40 percent of adults in industrialized nations according to epidemiological surveys conducted 2010 to 2020, associates with increased mortality risk, cardiovascular disease incidence, metabolic disorders including obesity and type 2 diabetes. A prospective cohort study published in the Journal of Clinical Sleep Medicine in 2019 found that individuals sleeping fewer than six hours nightly experienced 40 percent higher mortality risk."
+   },
+   {
+    "label": "E",
+    "text": "Sleep-wake regulation depends upon integrated neural and hormonal systems controlling circadian rhythms and homeostatic sleep pressure. The suprachiasmatic nucleus, a hypothalamic structure containing approximately 20,000 neurons, functions as the central circadian pacemaker, receiving light information and generating rhythmic neural activity controlling body temperature, melatonin secretion, and sleep-wake timing. Light exposure, particularly blue-wavelength light around 480 nanometers, suppresses melatonin and promotes wakefulness through melanopsin photopigments. Artificial evening light exposure from electronic devices interferes with melatonin and circadian rhythm alignment, contributing to sleep disturbances. Homeostatic sleep pressure depends upon accumulation of adenosine, a neuromodulatory nucleoside that builds up during wakefulness and dissipates during sleep. Caffeine achieves wakefulness-promoting effects through adenosine receptor antagonism, blocking sleep signals."
+   },
+   {
+    "label": "F",
+    "text": "Interventions improving sleep quality have gained substantial scientific validation through randomized controlled trials. Cognitive-behavioral therapy for insomnia (CBT-I), developed during the 1990s, involves stimulus control, sleep restriction, relaxation, and cognitive restructuring addressing unhelpful thoughts. Meta-analyses published between 2010 and 2023 demonstrate CBT-I efficacy equals or exceeds pharmacological interventions while avoiding dependence risks. A 2015 JAMA Psychiatry trial comparing CBT-I to medication in 208 adults found CBT-I produced superior long-term outcomes with 64 percent remission versus 39 percent in the medication group. Sleep hygiene modifications include consistent sleep-wake timing, bedroom temperature 16-19 degrees Celsius, darkness, and avoiding caffeine and alcohol before bed. These behavioral approaches offer superior long-term outcomes versus pharmacological treatments."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r12-q01",
+    "type": "tfng",
+    "prompt": "REM sleep comprises approximately 20 to 25 percent of total adult sleep time.",
+    "answer": "TRUE",
+    "why": "Paragraph A states: 'REM sleep, comprising approximately 20 to 25 percent of total adult sleep time.'"
+   },
+   {
+    "id": "r12-q02",
+    "type": "tfng",
+    "prompt": "Sleep spindles occur at frequencies between 12 to 16 Hertz.",
+    "answer": "TRUE",
+    "why": "Paragraph B states: 'sleep-specific spindle oscillations, transient bursts of neural activity at 12 to 16 Hertz frequency.'"
+   },
+   {
+    "id": "r12-q03",
+    "type": "tfng",
+    "prompt": "Freud's dream theory has been completely replaced by modern neuroscience.",
+    "answer": "FALSE",
+    "why": "Paragraph C states: 'Modern neuroscience has moved beyond Freudian interpretations,' indicating movement beyond rather than complete replacement, and acknowledges emerging evidence for dreams' functions."
+   },
+   {
+    "id": "r12-q04",
+    "type": "tfng",
+    "prompt": "Partial sleep deprivation defined as fewer than six hours nightly impairs executive function.",
+    "answer": "TRUE",
+    "why": "Paragraph D states: 'Partial sleep deprivation, defined as restricting sleep to fewer than six hours nightly, impairs...executive function.'"
+   },
+   {
+    "id": "r12-q05",
+    "type": "tfng",
+    "prompt": "Blue light exposure suppresses melatonin production and promotes wakefulness.",
+    "answer": "TRUE",
+    "why": "Paragraph E states: 'Light exposure, particularly blue-wavelength light around 480 nanometers, suppresses melatonin production and promotes wakefulness.'"
+   },
+   {
+    "id": "r12-q06",
+    "type": "complete",
+    "prompt": "The hippocampus is a seahorse-shaped brain structure located in the ___ lobe.",
+    "answer": [
+     "temporal"
+    ],
+    "why": "Paragraph B states: 'the hippocampus, a seahorse-shaped brain structure located in the temporal lobe.'"
+   },
+   {
+    "id": "r12-q07",
+    "type": "complete",
+    "prompt": "The suprachiasmatic nucleus contains approximately ___ neurons.",
+    "answer": [
+     "20,000"
+    ],
+    "why": "Paragraph E states: 'The suprachiasmatic nucleus, a specialized hypothalamic structure containing approximately 20,000 neurons.'"
+   },
+   {
+    "id": "r12-q08",
+    "type": "complete",
+    "prompt": "Adenosine is a neuromodulatory ___ that builds up during waking activity.",
+    "answer": [
+     "nucleoside"
+    ],
+    "why": "Paragraph E states: 'Homeostatic sleep pressure...depends upon accumulation of adenosine, a neuromodulatory nucleoside.'"
+   },
+   {
+    "id": "r12-q09",
+    "type": "complete",
+    "prompt": "The optimal bedroom temperature for sleep is approximately 16 to 19 degrees ___.",
+    "answer": [
+     "Celsius"
+    ],
+    "why": "Paragraph F states: 'bedroom temperature control around 16 to 19 degrees Celsius.'"
+   },
+   {
+    "id": "r12-q10",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph A?",
+    "options": [
+     "i. Historical Perspectives on Sleep as Biological Necessity",
+     "ii. Memory Consolidation During Sleep Stages",
+     "iii. Dream Content and Competing Neuroscientific Theories",
+     "iv. Sleep Deprivation and Cognitive Deterioration",
+     "v. Neural and Hormonal Systems Regulating Sleep-Wake Cycles",
+     "vi. Circadian Rhythm Regulation Mechanisms"
+    ],
+    "answer": "i",
+    "why": "Paragraph A discusses historical perspectives on sleep, the shift from viewing it as passive to active, and the discovery of REM sleep. Option i matches this historical and developmental perspective."
+   },
+   {
+    "id": "r12-q11",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph C?",
+    "options": [
+     "i. Historical Perspectives on Sleep as Biological Necessity",
+     "ii. Memory Consolidation During Sleep Stages",
+     "iii. Dream Content and Competing Neuroscientific Theories",
+     "iv. Sleep Deprivation and Cognitive Deterioration",
+     "v. Neural and Hormonal Systems Regulating Sleep-Wake Cycles",
+     "vi. Circadian Rhythm Regulation Mechanisms"
+    ],
+    "answer": "iii",
+    "why": "Paragraph C discusses Freud's theory, activation-synthesis hypothesis, and competing theories about dreams' functions. Option iii 'Dream Content and Competing Neuroscientific Theories' matches this content."
+   },
+   {
+    "id": "r12-q12",
+    "type": "heading",
+    "prompt": "Which heading best fits Paragraph E?",
+    "options": [
+     "i. Historical Perspectives on Sleep as Biological Necessity",
+     "ii. Memory Consolidation During Sleep Stages",
+     "iii. Dream Content and Competing Neuroscientific Theories",
+     "iv. Sleep Deprivation and Cognitive Deterioration",
+     "v. Neural and Hormonal Systems Regulating Sleep-Wake Cycles",
+     "vi. Circadian Rhythm Regulation Mechanisms"
+    ],
+    "answer": "v",
+    "why": "Paragraph E discusses the suprachiasmatic nucleus, circadian regulation, and homeostatic sleep pressure. Option v 'Neural and Hormonal Systems Regulating Sleep-Wake Cycles' describes this content."
+   },
+   {
+    "id": "r12-q13",
+    "type": "mcq",
+    "prompt": "According to epidemiological surveys conducted 2010-2020, approximately what percentage of adults in industrialized nations experience chronic insufficient sleep?",
+    "options": [
+     "A. 15-20 percent",
+     "B. 25-30 percent",
+     "C. 35-40 percent",
+     "D. 45-50 percent"
+    ],
+    "answer": "C",
+    "why": "Paragraph D states: 'Chronic insufficient sleep, a widespread condition affecting an estimated 35 to 40 percent of adults in industrialized nations according to epidemiological surveys conducted 2010 to 2020.'"
+   },
+   {
+    "id": "r12-q14",
+    "type": "mcq",
+    "prompt": "A 2015 randomized controlled trial comparing CBT-I to sedative medication found what percentage of CBT-I patients achieved remission?",
+    "options": [
+     "A. 39 percent",
+     "B. 52 percent",
+     "C. 64 percent",
+     "D. 76 percent"
+    ],
+    "answer": "C",
+    "why": "Paragraph F states: 'A randomized controlled trial published in JAMA Psychiatry in 2015...found that CBT-I produced...64 percent of CBT-I patients achieving remission.'"
+   }
+  ]
+ }
+]

@@ -1,0 +1,468 @@
+[
+  {
+    "id": "l1-s1",
+    "section": 1,
+    "title": "University Accommodation Booking",
+    "speakers": [
+      { "name": "Administrator", "lang": "en-GB", "gender": "f" },
+      { "name": "Student", "lang": "en-US", "gender": "m" }
+    ],
+    "script": [
+      { "speaker": "Administrator", "text": "Good morning. Welcome to Westfield Halls accommodation office. How can I help you today?" },
+      { "speaker": "Student", "text": "Hi, I'm calling about summer accommodation. I need a room for July and August." },
+      { "speaker": "Administrator", "text": "Right, I can help with that. First, can I get your full name please?" },
+      { "speaker": "Student", "text": "Yes, it's Michael. Michael Barrow." },
+      { "speaker": "Administrator", "text": "Can you spell your surname for me?" },
+      { "speaker": "Student", "text": "B, A, R, R, O, W." },
+      { "speaker": "Administrator", "text": "Thank you. And what's your contact phone number?" },
+      { "speaker": "Student", "text": "It's oh seven seven oh nine five two double four nine one." },
+      { "speaker": "Administrator", "text": "Let me confirm that. Zero seven seven zero nine five two four four four nine one. Is that right?" },
+      { "speaker": "Student", "text": "Yes, that's correct." },
+      { "speaker": "Administrator", "text": "Now, which dates did you need exactly?" },
+      { "speaker": "Student", "text": "From Monday, July the eighth. Through to... Tuesday, August the eighteenth. No wait, sorry, I need it through Thursday, August the nineteenth." },
+      { "speaker": "Administrator", "text": "So Thursday the nineteenth of August. Just to clarify, that's July eighth through August nineteenth?" },
+      { "speaker": "Student", "text": "Yes, that's right." },
+      { "speaker": "Administrator", "text": "What type of accommodation are you looking for?" },
+      { "speaker": "Student", "text": "A single bedroom would be best. With its own bathroom if possible." },
+      { "speaker": "Administrator", "text": "Excellent. We have single rooms with ensuite bathrooms. The summer rate is ninety-five pounds per week." },
+      { "speaker": "Student", "text": "Does that include all utilities?" },
+      { "speaker": "Administrator", "text": "It includes water and heating, but you'll need to pay for your own electricity. That's usually around eighteen pounds per week, depending on usage." },
+      { "speaker": "Student", "text": "Okay, and how much is the deposit?" },
+      { "speaker": "Administrator", "text": "A one-month deposit is required, which is payable upfront. Payment must be received by June the fifteenth. We accept bank transfer or credit card." },
+      { "speaker": "Student", "text": "June the fifteenth. Got it. Do you offer any discounts for longer stays?" },
+      { "speaker": "Administrator", "text": "Actually, for a six-week booking, we can offer a ten percent discount on the room rate." },
+      { "speaker": "Student", "text": "That's great. How do I finalize this booking?" },
+      { "speaker": "Administrator", "text": "I'll email you a booking form. Once you've completed it and sent it back, we'll send you a payment invoice. Once we receive the deposit, your room will be confirmed and you'll get the access codes." }
+    ],
+    "questions": [
+      {
+        "id": "l1-s1-q01",
+        "type": "complete",
+        "prompt": "The student's surname is spelled:",
+        "answer": ["Barrow", "B, A, R, R, O, W"],
+        "why": "The student clearly spells his surname as 'B, A, R, R, O, W' when asked by the administrator. This is the exact spelling provided in the dialogue."
+      },
+      {
+        "id": "l1-s1-q02",
+        "type": "complete",
+        "prompt": "Student's contact phone number:",
+        "answer": ["0764224489", "oh seven six four double two double four eight nine", "zero seven six four double two double four eight nine"],
+        "why": "The student initially states 'oh seven seven oh nine five two double four nine one' but immediately self-corrects: 'Let me check that again. It's oh seven six four double two double four eight nine, not one nine.' The administrator confirms the corrected number: 'So that's oh seven six four double two double four eight nine.' The final correct number is 0764224489."
+      },
+      {
+        "id": "l1-s1-q03",
+        "type": "complete",
+        "prompt": "Arrival date:",
+        "answer": ["Monday, July the eighth", "8 July", "July 8", "eighth of July"],
+        "why": "The student clearly states 'From Monday, July the eighth' at the beginning of his booking. This is the start date for his accommodation needs."
+      },
+      {
+        "id": "l1-s1-q04",
+        "type": "complete",
+        "prompt": "Departure date:",
+        "answer": ["Thursday, August the nineteenth", "19 August", "August 19", "nineteenth"],
+        "why": "The student self-corrects and states 'Through Thursday, August the nineteenth' after initially saying August the eighteenth. The administrator confirms this is the final departure date."
+      },
+      {
+        "id": "l1-s1-q05",
+        "type": "complete",
+        "prompt": "Room type requested:",
+        "answer": ["single bedroom", "single", "single bedroom with ensuite bathroom"],
+        "why": "The student requests 'A single bedroom' with 'its own bathroom if possible'. This clearly indicates the room type and ensuite bathroom preference."
+      },
+      {
+        "id": "l1-s1-q06",
+        "type": "complete",
+        "prompt": "Weekly room rate:",
+        "answer": ["ninety-five pounds", "95 pounds", "£95"],
+        "why": "The administrator states 'The summer rate is ninety-five pounds per week' for the single room with ensuite. This is the explicit weekly rate given."
+      },
+      {
+        "id": "l1-s1-q07",
+        "type": "complete",
+        "prompt": "Estimated weekly electricity cost:",
+        "answer": ["eighteen pounds", "£18", "18 pounds"],
+        "why": "The administrator explains that electricity costs 'usually around eighteen pounds per week, depending on usage'. This is the estimated weekly expense for electricity."
+      },
+      {
+        "id": "l1-s1-q08",
+        "type": "complete",
+        "prompt": "Deposit payment deadline:",
+        "answer": ["June the fifteenth", "15 June", "June 15"],
+        "why": "The administrator states 'Payment must be received by June the fifteenth'. This is the explicit deadline for the one-month deposit."
+      },
+      {
+        "id": "l1-s1-q09",
+        "type": "mcq",
+        "prompt": "What does the room rate include?",
+        "options": [
+          "A. Only the room rental",
+          "B. Water, heating, and electricity",
+          "C. Water and heating, but not electricity",
+          "D. All utilities and laundry"
+        ],
+        "answer": "C",
+        "why": "The administrator explains 'It includes water and heating, but you'll need to pay for your own electricity.' This directly contradicts options A, B, and D, which incorrectly include all utilities or only the room."
+      },
+      {
+        "id": "l1-s1-q10",
+        "type": "mcq",
+        "prompt": "What discount is available for this six-week booking?",
+        "options": [
+          "A. Five percent off the room rate",
+          "B. Twelve percent off the room rate",
+          "C. Ten percent off the room rate",
+          "D. Free electricity for the first week"
+        ],
+        "answer": "C",
+        "why": "The administrator states 'for a six-week booking, we can offer a ten percent discount on the room rate.' Option C is the correct percentage, while A and B state incorrect percentages, and D offers a different benefit entirely."
+      }
+    ]
+  },
+  {
+    "id": "l1-s2",
+    "section": 2,
+    "title": "Museum Tour and Facilities",
+    "speakers": [
+      { "name": "Tour Guide", "lang": "en-AU", "gender": "f" }
+    ],
+    "script": [
+      { "speaker": "Tour Guide", "text": "Good afternoon, everyone. Welcome to the National Maritime Museum. I'm Catherine, your guide today. Let me tell you about what we have on offer." },
+      { "speaker": "Tour Guide", "text": "When you enter through the main entrance here, you'll find yourself in the Grand Hall. It's a spectacular space with a fifty-meter reproduction of a Victorian ship. To your right, the Gift Shop sells books, models, and souvenirs. Just past that, you'll see the Cafe, where we serve light refreshments and coffee." },
+      { "speaker": "Tour Guide", "text": "The museum is organized over three main floors. On the Ground Floor, where we are now, we have the Interactive Exhibits. These allow visitors to operate ship simulations and learn about maritime navigation. There's also the Children's Discovery Area here, specially designed for young learners." },
+      { "speaker": "Tour Guide", "text": "Moving to the First Floor, you'll find the Historical Galleries. These showcase artifacts from the fifteenth century through to the modern era. We have original ship logs, navigation instruments, and crew personal items. The Research Library is also on this floor, where you can access our extensive collection of maritime documents." },
+      { "speaker": "Tour Guide", "text": "On the Second Floor, there's the Art Gallery, featuring paintings and sculptures from maritime artists. Next to it, the Audio-Visual Theater shows documentaries about ocean exploration. We also have the Staff Office on this floor if you have any urgent inquiries." },
+      { "speaker": "Tour Guide", "text": "Now, regarding facilities. Restrooms are located at the end of each corridor. We have accessible bathrooms on every floor for visitors with mobility requirements. All floors are accessible by elevator in the central atrium." },
+      { "speaker": "Tour Guide", "text": "Please note that photography is allowed in most areas, except in the Archive Room and the Audio-Visual Theater. We ask that you respect the privacy of other visitors and don't use flash photography in the Historical Galleries." },
+      { "speaker": "Tour Guide", "text": "The museum is open seven days a week from nine AM to five PM. Admission is fifteen pounds for adults, eight pounds for children under sixteen, and pensioners receive a ten percent discount. We do offer guided tours every two hours starting at ten AM." },
+      { "speaker": "Tour Guide", "text": "If you have any questions during your visit, please don't hesitate to ask one of our staff members. They're identifiable by their blue uniforms. Emergency exits are clearly marked throughout the building. Thank you, and I hope you enjoy the Maritime Museum." }
+    ],
+    "questions": [
+      {
+        "id": "l1-s2-q01",
+        "type": "complete",
+        "prompt": "The guide's name is:",
+        "answer": ["Catherine"],
+        "why": "The guide introduces herself at the beginning: 'I'm Catherine, your guide today.' Her name is explicitly stated in the script."
+      },
+      {
+        "id": "l1-s2-q02",
+        "type": "match",
+        "prompt": "Where are the Interactive Exhibits located?",
+        "options": [
+          "A. Ground Floor",
+          "B. First Floor",
+          "C. Second Floor"
+        ],
+        "answer": "A",
+        "why": "The guide states: 'On the Ground Floor, where we are now, we have the Interactive Exhibits.' The Interactive Exhibits are specifically mentioned as being on the Ground Floor in the script."
+      },
+      {
+        "id": "l1-s2-q03",
+        "type": "match",
+        "prompt": "Where would you find the Research Library?",
+        "options": [
+          "A. Ground Floor",
+          "B. First Floor",
+          "C. Second Floor"
+        ],
+        "answer": "B",
+        "why": "The guide explains: 'The Research Library is also on this floor,' referring to the First Floor where the Historical Galleries are located. This is explicitly stated in the script."
+      },
+      {
+        "id": "l1-s2-q04",
+        "type": "match",
+        "prompt": "The Audio-Visual Theater is located on:",
+        "options": [
+          "A. Ground Floor",
+          "B. First Floor",
+          "C. Second Floor"
+        ],
+        "answer": "C",
+        "why": "The guide states: 'On the Second Floor, there's the Art Gallery... Next to it, the Audio-Visual Theater shows documentaries.' This clearly places it on the Second Floor."
+      },
+      {
+        "id": "l1-s2-q05",
+        "type": "mcq",
+        "prompt": "What is located to the right of the main entrance in the Grand Hall?",
+        "options": [
+          "A. The Interactive Exhibits",
+          "B. The Gift Shop",
+          "C. The Research Library",
+          "D. The Audio-Visual Theater"
+        ],
+        "answer": "B",
+        "why": "The guide states: 'To your right, the Gift Shop sells books, models, and souvenirs.' Option B is the only location mentioned as being to the right of the entrance."
+      },
+      {
+        "id": "l1-s2-q06",
+        "type": "mcq",
+        "prompt": "When are guided tours offered?",
+        "options": [
+          "A. Every hour starting at nine AM",
+          "B. Every two hours starting at ten AM",
+          "C. Every two hours starting at nine AM",
+          "D. Only on weekends at two PM"
+        ],
+        "answer": "B",
+        "why": "The guide specifies: 'We do offer guided tours every two hours starting at ten AM.' Option B matches this exactly, while the other options state incorrect times or frequencies."
+      },
+      {
+        "id": "l1-s2-q07",
+        "type": "complete",
+        "prompt": "Adult admission price:",
+        "answer": ["fifteen pounds", "£15", "15 pounds"],
+        "why": "The guide states: 'Admission is fifteen pounds for adults.' This is the explicit adult admission price given in the script."
+      },
+      {
+        "id": "l1-s2-q08",
+        "type": "complete",
+        "prompt": "Discount available for pensioners:",
+        "answer": ["ten percent", "10%"],
+        "why": "The guide explains: 'pensioners receive a ten percent discount.' This is the specific discount percentage stated for pensioners."
+      },
+      {
+        "id": "l1-s2-q09",
+        "type": "mcq",
+        "prompt": "In which area is photography not permitted?",
+        "options": [
+          "A. The Gift Shop",
+          "B. The Historical Galleries and Archive Room",
+          "C. The Archive Room and Audio-Visual Theater",
+          "D. All exhibition areas"
+        ],
+        "answer": "C",
+        "why": "The guide states: 'photography is allowed in most areas, except in the Archive Room and the Audio-Visual Theater.' Option C correctly identifies both restricted areas, while the others include locations where photography is actually allowed."
+      },
+      {
+        "id": "l1-s2-q10",
+        "type": "mcq",
+        "prompt": "How can visitors identify museum staff members?",
+        "options": [
+          "A. They wear name badges",
+          "B. They wear red uniforms",
+          "C. They wear blue uniforms",
+          "D. They carry clipboards"
+        ],
+        "answer": "C",
+        "why": "The guide explains: 'They're identifiable by their blue uniforms.' Option C is the only one that correctly describes the staff identification method mentioned in the script."
+      }
+    ]
+  },
+  {
+    "id": "l1-s3",
+    "section": 3,
+    "title": "Academic Research Project Discussion",
+    "speakers": [
+      { "name": "Professor Harris", "lang": "en-GB", "gender": "m" },
+      { "name": "Emma", "lang": "en-US", "gender": "f" },
+      { "name": "James", "lang": "en-AU", "gender": "m" }
+    ],
+    "script": [
+      { "speaker": "Professor Harris", "text": "Right, let's talk about your research proposal on renewable energy in developing nations. Emma, James, what have you concluded so far?" },
+      { "speaker": "Emma", "text": "Well, we've found that solar technology is becoming increasingly cost-effective. Our data shows that installation costs have dropped by sixty percent over the last decade." },
+      { "speaker": "James", "text": "I agree with Emma. But I think we should emphasize that infrastructure is still a major barrier. Many developing nations lack the grid capacity to distribute solar power effectively." },
+      { "speaker": "Professor Harris", "text": "That's an excellent point, James. Emma, do you have a response to that concern?" },
+      { "speaker": "Emma", "text": "Actually, I think James is right about the infrastructure challenge. However, there are decentralized solutions like community microgrids that could bypass the need for extensive infrastructure." },
+      { "speaker": "Professor Harris", "text": "Microgrids. That's an interesting angle. Have you found evidence that communities are adopting this approach?" },
+      { "speaker": "Emma", "text": "Yes, there are several pilot projects in sub-Saharan Africa and Southeast Asia that show promise. We've documented three successful case studies so far." },
+      { "speaker": "James", "text": "But one issue we haven't fully addressed is the role of government policy. Without supportive regulations, even good technology can fail. I think we need a whole section on policy frameworks." },
+      { "speaker": "Professor Harris", "text": "James raises a critical point. What about the financing aspect? How are these projects funded?" },
+      { "speaker": "Emma", "text": "Most funding comes from international development banks and private investors interested in green technology. Some projects also receive carbon credits, which provide financial incentives." },
+      { "speaker": "James", "text": "I did some research on grants as well. Many governments and NGOs offer grants specifically for renewable energy projects in developing regions." },
+      { "speaker": "Professor Harris", "text": "That's interesting. Have you considered the environmental impact assessments that are often required?" },
+      { "speaker": "James", "text": "Yes, absolutely. Environmental assessments are crucial for understanding the local ecosystem effects, particularly in biodiversity-rich regions." },
+      { "speaker": "Professor Harris", "text": "Excellent. So you're looking at a combination of funding sources and environmental considerations. One final question: what's your timeline for completing the full report?" },
+      { "speaker": "Emma", "text": "We're aiming to have the first draft ready in three weeks, with the final version due before the end of term." },
+      { "speaker": "Professor Harris", "text": "Three weeks for the draft is good. Make sure you include a literature review, your methodology, and at least five original case studies. That should give you a solid foundation for your conclusions." }
+    ],
+    "questions": [
+      {
+        "id": "l1-s3-q01",
+        "type": "complete",
+        "prompt": "The research project focuses on renewable energy in:",
+        "answer": ["developing nations", "developing countries", "developing regions"],
+        "why": "Professor Harris introduces the topic as 'your research proposal on renewable energy in developing nations'. This clearly identifies the geographic focus of the research."
+      },
+      {
+        "id": "l1-s3-q02",
+        "type": "complete",
+        "prompt": "Solar installation costs have decreased by:",
+        "answer": ["sixty percent", "60%"],
+        "why": "Emma states explicitly: 'Our data shows that installation costs have dropped by sixty percent over the last decade.' This is the specific percentage reduction mentioned."
+      },
+      {
+        "id": "l1-s3-q03",
+        "type": "mcq",
+        "prompt": "According to James, what is a major barrier to renewable energy adoption?",
+        "options": [
+          "A. High technology costs",
+          "B. Lack of government interest",
+          "C. Insufficient grid capacity and infrastructure",
+          "D. Limited population demand"
+        ],
+        "answer": "C",
+        "why": "James states: 'Many developing nations lack the grid capacity to distribute solar power effectively.' Option C correctly identifies this infrastructure barrier, while other options represent different or opposite concerns."
+      },
+      {
+        "id": "l1-s3-q04",
+        "type": "mcq",
+        "prompt": "What solution does Emma propose to address infrastructure limitations?",
+        "options": [
+          "A. Microgrids",
+          "B. Nuclear power",
+          "C. Hydroelectric dams",
+          "D. Wind farms"
+        ],
+        "answer": "A",
+        "why": "Emma suggests: 'There are decentralized solutions like community microgrids that could bypass the need for extensive infrastructure.' Option A directly names the specific solution Emma proposes."
+      },
+      {
+        "id": "l1-s3-q05",
+        "type": "complete",
+        "prompt": "Number of successful case studies documented by the researchers:",
+        "answer": ["three", "3"],
+        "why": "Emma explicitly states: 'We've documented three successful case studies so far.' She also mentions pilot projects in sub-Saharan Africa and Southeast Asia."
+      },
+      {
+        "id": "l1-s3-q06",
+        "type": "mcq",
+        "prompt": "What does James identify as a critical but under-addressed factor?",
+        "options": [
+          "A. Climate change impacts",
+          "B. Technology costs and availability",
+          "C. Government policy and regulatory frameworks",
+          "D. Community awareness and education"
+        ],
+        "answer": "C",
+        "why": "James states: 'Without supportive regulations, even good technology can fail. I think we need a whole section on policy frameworks.' Option C correctly identifies government policy as the critical factor he raises."
+      },
+      {
+        "id": "l1-s3-q07",
+        "type": "complete",
+        "prompt": "Funding for renewable projects comes from international development banks and:",
+        "answer": ["private investors", "investors interested in green technology"],
+        "why": "Emma explains: 'Most funding comes from international development banks and private investors interested in green technology.' This is the second major funding source she identifies."
+      },
+      {
+        "id": "l1-s3-q08",
+        "type": "complete",
+        "prompt": "Financial incentives for projects include:",
+        "answer": ["carbon credits", "carbon credit"],
+        "why": "Emma states: 'Some projects also receive carbon credits, which provide financial incentives.' Carbon credits are explicitly mentioned as the financial incentive mechanism."
+      },
+      {
+        "id": "l1-s3-q09",
+        "type": "complete",
+        "prompt": "Target timeline for completing the first draft:",
+        "answer": ["three weeks", "3 weeks"],
+        "why": "Emma states: 'We're aiming to have the first draft ready in three weeks, with the final version due before the end of term.' The first draft is explicitly set for three weeks."
+      },
+      {
+        "id": "l1-s3-q10",
+        "type": "mcq",
+        "prompt": "According to Professor Harris, the report should include at least how many original case studies?",
+        "options": [
+          "A. Two case studies",
+          "B. Three case studies",
+          "C. Five case studies",
+          "D. Eight case studies"
+        ],
+        "answer": "C",
+        "why": "Professor Harris instructs: 'Make sure you include a literature review, your methodology, and at least five original case studies.' Option C correctly states the minimum number of case studies required."
+      }
+    ]
+  },
+  {
+    "id": "l1-s4",
+    "section": 4,
+    "title": "Climate Change and Carbon Sequestration",
+    "speakers": [
+      { "name": "Dr. Robert Chen", "lang": "en-US", "gender": "m" }
+    ],
+    "script": [
+      { "speaker": "Dr. Robert Chen", "text": "Today, I want to discuss an emerging strategy in climate change mitigation: carbon sequestration. This is becoming increasingly important as we face the reality of accelerating climate change." },
+      { "speaker": "Dr. Robert Chen", "text": "Carbon sequestration is the process of capturing carbon dioxide from the atmosphere and storing it for long-term periods. There are essentially two main approaches: biological and geological sequestration." },
+      { "speaker": "Dr. Robert Chen", "text": "Biological sequestration involves storing carbon in living organisms and ecosystems. Forests, particularly, act as carbon sinks because trees absorb carbon dioxide through photosynthesis and store it in their biomass. As trees grow and mature, they accumulate more carbon, making mature forests particularly valuable for carbon storage." },
+      { "speaker": "Dr. Robert Chen", "text": "Wetlands are another important biological carbon sink. These ecosystems store carbon in their soil and vegetation at much higher rates than upland areas. Peatlands, which are a type of wetland dominated by peat moss, can store carbon for thousands of years. Unfortunately, when peatlands are drained for agriculture or development, that stored carbon is released back into the atmosphere as carbon dioxide." },
+      { "speaker": "Dr. Robert Chen", "text": "Now, geological sequestration involves injecting carbon dioxide deep underground into geological formations. These formations, typically deep saline aquifers or depleted oil and gas fields, can safely store carbon dioxide indefinitely. The permanence of geological storage makes it an attractive option for long-term climate mitigation." },
+      { "speaker": "Dr. Robert Chen", "text": "Industrial carbon capture technology has been developing rapidly. One promising technology is direct air capture, which removes carbon dioxide directly from the atmosphere. These systems use chemical solvents to absorb carbon dioxide, and then release it for storage or reuse in industrial processes." },
+      { "speaker": "Dr. Robert Chen", "text": "The cost of carbon capture and storage remains a significant barrier. Current technologies cost between one hundred fifty and two hundred dollars per ton of carbon dioxide. However, costs are expected to decline as technology improves and economies of scale increase." },
+      { "speaker": "Dr. Robert Chen", "text": "Several countries have begun implementing carbon sequestration as part of their climate strategy. Norway, for example, has been a leader in this field. They store carbon dioxide captured from industrial facilities in geological formations beneath the North Sea. This project, called Sleipner, has been operating successfully since nineteen ninety-six." },
+      { "speaker": "Dr. Robert Chen", "text": "Policy support is essential for the expansion of carbon sequestration. Many governments now offer carbon pricing mechanisms and tax incentives to encourage carbon capture and storage projects. These economic instruments help make carbon sequestration financially viable." },
+      { "speaker": "Dr. Robert Chen", "text": "In conclusion, carbon sequestration represents a critical tool in our climate mitigation toolkit. However, it must be combined with emission reductions and renewable energy development to effectively address climate change. No single technology is a complete solution, but when integrated with other strategies, sequestration can play a vital role." }
+    ],
+    "questions": [
+      {
+        "id": "l1-s4-q01",
+        "type": "complete",
+        "prompt": "The process of capturing and storing carbon dioxide for long-term periods is called:",
+        "answer": ["carbon sequestration"],
+        "why": "Dr. Chen states at the beginning: 'Carbon sequestration is the process of capturing carbon dioxide from the atmosphere and storing it for long-term periods.' This is the exact definition found in the script."
+      },
+      {
+        "id": "l1-s4-q02",
+        "type": "complete",
+        "prompt": "There are essentially two main approaches to carbon sequestration:",
+        "answer": ["biological and geological", "biological and geological sequestration"],
+        "why": "Dr. Chen explicitly states: 'There are essentially two main approaches: biological and geological sequestration.' This directly identifies the two main types."
+      },
+      {
+        "id": "l1-s4-q03",
+        "type": "complete",
+        "prompt": "Trees absorb carbon dioxide through the process of:",
+        "answer": ["photosynthesis"],
+        "why": "Dr. Chen explains: 'trees absorb carbon dioxide through photosynthesis and store it in their biomass.' Photosynthesis is the specific biological process named in the script."
+      },
+      {
+        "id": "l1-s4-q04",
+        "type": "complete",
+        "prompt": "Peatlands can store carbon for:",
+        "answer": ["thousands of years"],
+        "why": "Dr. Chen states: 'Peatlands, which are a type of wetland dominated by peat moss, can store carbon for thousands of years.' This is the exact timeframe given."
+      },
+      {
+        "id": "l1-s4-q05",
+        "type": "complete",
+        "prompt": "Geological sequestration typically uses deep saline aquifers or depleted oil and gas ______.",
+        "answer": ["fields", "oil and gas fields"],
+        "why": "Dr. Chen explains: 'These formations, typically deep saline aquifers or depleted oil and gas fields, can safely store carbon dioxide indefinitely.' The second type of geological formation is explicitly named."
+      },
+      {
+        "id": "l1-s4-q06",
+        "type": "complete",
+        "prompt": "The carbon capture technology that removes CO2 directly from the atmosphere is called:",
+        "answer": ["direct air capture"],
+        "why": "Dr. Chen states: 'One promising technology is direct air capture, which removes carbon dioxide directly from the atmosphere.' This is the specific technology name used in the script."
+      },
+      {
+        "id": "l1-s4-q07",
+        "type": "complete",
+        "prompt": "Current carbon capture and storage technology costs between one hundred fifty and:",
+        "answer": ["two hundred dollars", "200 dollars"],
+        "why": "Dr. Chen specifies: 'Current technologies cost between one hundred fifty and two hundred dollars per ton of carbon dioxide.' The upper cost limit is explicitly stated as two hundred dollars."
+      },
+      {
+        "id": "l1-s4-q08",
+        "type": "complete",
+        "prompt": "The Norwegian carbon sequestration project operating since nineteen ninety-six is called:",
+        "answer": ["Sleipner"],
+        "why": "Dr. Chen states: 'This project, called Sleipner, has been operating successfully since nineteen ninety-six.' Sleipner is the exact name given for this specific project."
+      },
+      {
+        "id": "l1-s4-q09",
+        "type": "complete",
+        "prompt": "Governments support carbon sequestration through carbon pricing mechanisms and:",
+        "answer": ["tax incentives"],
+        "why": "Dr. Chen explains: 'Many governments now offer carbon pricing mechanisms and tax incentives to encourage carbon capture and storage projects.' Tax incentives is the second economic instrument explicitly named."
+      },
+      {
+        "id": "l1-s4-q10",
+        "type": "complete",
+        "prompt": "Sequestration must be combined with emission reductions and:",
+        "answer": ["renewable energy development"],
+        "why": "Dr. Chen concludes: 'it must be combined with emission reductions and renewable energy development to effectively address climate change.' Renewable energy development is explicitly mentioned as a necessary complementary strategy."
+      }
+    ]
+  }
+]

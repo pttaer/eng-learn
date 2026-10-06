@@ -1,0 +1,134 @@
+[
+  {
+    "topic": "Hometown",
+    "questions": [
+      "Where is your hometown?",
+      "What is the most interesting part of your hometown?",
+      "Has your hometown changed much in recent years?",
+      "Do you prefer living in your hometown or somewhere else?",
+      "What kind of people live in your hometown?",
+      "Would you recommend your hometown to visitors?"
+    ]
+  },
+  {
+    "topic": "Work or Study",
+    "questions": [
+      "What do you do? Are you working or studying?",
+      "Why did you choose this job or field of study?",
+      "What are the main responsibilities in your job?",
+      "Do you enjoy what you do? Why or why not?",
+      "What skills are important for your job or studies?",
+      "Do you plan to continue in this career?"
+    ]
+  },
+  {
+    "topic": "Accommodation",
+    "questions": [
+      "Can you describe your home?",
+      "How long have you lived there?",
+      "What do you like about your accommodation?",
+      "Is there anything you would change about your home?",
+      "How important is it to have a comfortable home?",
+      "Do you prefer living alone or with others?"
+    ]
+  },
+  {
+    "topic": "Daily Routine",
+    "questions": [
+      "What does your typical day look like?",
+      "What time do you usually wake up?",
+      "What is the first thing you do in the morning?",
+      "How do you usually spend your time?",
+      "Has your daily routine changed over the years?",
+      "Do you have time for hobbies in your daily routine?"
+    ]
+  },
+  {
+    "topic": "Free Time",
+    "questions": [
+      "How do you like to spend your free time?",
+      "What leisure activities do you enjoy?",
+      "How much free time do you have each week?",
+      "Do you prefer indoor or outdoor activities?",
+      "What did you do in your free time when you were younger?",
+      "Do you do any team activities or prefer solo hobbies?"
+    ]
+  },
+  {
+    "topic": "Food and Cooking",
+    "questions": [
+      "Do you enjoy cooking?",
+      "What is your favourite cuisine?",
+      "Can you cook your national dishes?",
+      "How often do you eat out?",
+      "What was your favourite food as a child?",
+      "Do you think it's important to eat healthy?"
+    ]
+  },
+  {
+    "topic": "Technology",
+    "questions": [
+      "How often do you use technology in your daily life?",
+      "What technological devices do you use most?",
+      "How has technology changed your life?",
+      "Do you think technology has more advantages or disadvantages?",
+      "What new technology would you like to have?",
+      "Do you think people spend too much time on technology?"
+    ]
+  },
+  {
+    "topic": "Transport",
+    "questions": [
+      "How do you usually travel to work or school?",
+      "Do you prefer driving or using public transport?",
+      "What is the transport system like in your city?",
+      "What was your first experience of long-distance travel?",
+      "Do you like travelling? Why or why not?",
+      "What is your preferred way to travel long distances?"
+    ]
+  },
+  {
+    "topic": "Weather",
+    "questions": [
+      "What is the weather like in your country?",
+      "What is your favourite season?",
+      "How does weather affect your daily activities?",
+      "Do you prefer hot or cold weather?",
+      "What weather is most common in your region?",
+      "Has the weather changed recently where you live?"
+    ]
+  },
+  {
+    "topic": "Friends",
+    "questions": [
+      "How long have you known your best friend?",
+      "How often do you see your friends?",
+      "What kind of qualities do you value in a friend?",
+      "How do you usually spend time with your friends?",
+      "Have your friendships changed since you were a child?",
+      "Do you prefer a large group of friends or a few close friends?"
+    ]
+  },
+  {
+    "topic": "Reading",
+    "questions": [
+      "Do you like reading? Why or why not?",
+      "What types of books do you prefer?",
+      "How often do you read?",
+      "What was your favourite book as a child?",
+      "Do you prefer reading physical books or digital books?",
+      "Has reading habits changed with technology?"
+    ]
+  },
+  {
+    "topic": "Shopping",
+    "questions": [
+      "How often do you go shopping?",
+      "What do you enjoy shopping for?",
+      "Do you prefer online shopping or going to stores?",
+      "Are you a careful shopper or do you buy things impulsively?",
+      "What is the most expensive thing you've bought recently?",
+      "Do you like shopping with others or alone?"
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  { "skill": "Reading", "title": "True / False / Not Given", "tips": [
+    "Find the part of the passage that discusses the statement's topic, then compare meaning, not wording.",
+    "TRUE: the passage says the same thing in different words. FALSE: it says the opposite. NOT GIVEN: the passage never says it, even if it sounds likely.",
+    "Watch absolute words (all, only, always, never) and comparatives. One changed word usually makes a statement FALSE or NOT GIVEN.",
+    "Never use your own knowledge. If you cannot point to a sentence, it is NOT GIVEN."
+  ] },
+  { "skill": "Reading", "title": "Matching headings", "tips": [
+    "Read the first and last sentence of each paragraph first. The main idea is usually there.",
+    "A heading covers the whole paragraph. A detail that appears in one sentence is a trap.",
+    "Do the paragraphs with obvious headings first, then eliminate."
+  ] },
+  { "skill": "Reading", "title": "Completion and short answer", "tips": [
+    "Use the exact words from the passage and obey the word limit. A wrong word form loses the mark.",
+    "Predict the type of word first (noun, number, adjective), then scan for it.",
+    "Answers follow passage order inside the same question group."
+  ] },
+  { "skill": "Reading", "title": "Time: 60 minutes, 3 passages", "tips": [
+    "About 20 minutes per passage, including transferring answers. Spend less on passage 1 to bank time for passage 3.",
+    "Skim the passage for 2 minutes only. Read the questions closely and scan the text for each one.",
+    "Never leave a blank. There is no penalty for wrong answers."
+  ] },
+  { "skill": "Listening", "title": "Distractors and corrections", "tips": [
+    "Speakers often state a value, then correct it. The final value is the answer.",
+    "Read the questions in the preparation time and underline the key word. Expect it to be paraphrased.",
+    "If you miss one answer, let it go. Losing the next three is worse."
+  ] },
+  { "skill": "Listening", "title": "Spelling, numbers and format", "tips": [
+    "Spelling counts. Practise letter names and double letters (double-L). Check plurals and singular nouns after the gap.",
+    "Write numbers as digits and keep units out of the answer if the form already prints them.",
+    "Section 4 has no pause between questions. Follow the signpost words (firstly, however, another factor)."
+  ] },
+  { "skill": "Writing", "title": "Task 1: the overview", "tips": [
+    "Intro: paraphrase the question in one sentence. Overview: two sentences on the biggest trend or contrast, no numbers.",
+    "Body paragraphs group similar data. Compare, do not list every number.",
+    "Select 4-6 key figures. Use approximations (about, nearly) correctly and keep tenses consistent with the dates.",
+    "Maps and processes: describe change and sequence, use passives, and still write an overview."
+  ] },
+  { "skill": "Writing", "title": "Task 2: position and development", "tips": [
+    "Answer every part of the question. State your position in the introduction and repeat it in the conclusion.",
+    "Two body paragraphs, each with one main idea, an explanation and a specific example. Depth beats number of ideas.",
+    "Plan for 5 minutes, write for 30, check for 5. Aim for 270-300 words.",
+    "Avoid memorised openings. Use accurate, flexible vocabulary rather than rare words you are unsure of."
+  ] },
+  { "skill": "Speaking", "title": "Part 1 and Part 2", "tips": [
+    "Part 1: answer directly, then add a reason or example. Two or three sentences, not one word and not a speech.",
+    "Part 2: use the minute to write 4-5 keywords for the bullet points, then cover all four bullets and keep going for the full two minutes.",
+    "Use a past, present and conditional mix in your story to show grammatical range."
+  ] },
+  { "skill": "Speaking", "title": "Part 3 and fluency", "tips": [
+    "Give a position, a reason, and an example or contrast. Use phrases such as 'It depends on', 'In some cases', 'One reason is'.",
+    "If you do not know a word, paraphrase and carry on. Hesitating to search for words costs fluency.",
+    "Self-correct naturally, but do not restart every sentence."
+  ] }
+]

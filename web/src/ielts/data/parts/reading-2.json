@@ -1,0 +1,1059 @@
+[
+  {
+    "id": "r07",
+    "title": "The Kuiper Belt and the Search for Distant Objects",
+    "topic": "astronomy/space science",
+    "paragraphs": [
+      {
+        "label": "A",
+        "text": "The Kuiper Belt is a vast region of icy bodies orbiting beyond Neptune, extending from approximately 30 to 55 astronomical units from the Sun. An astronomical unit, or AU, is defined as the mean distance between Earth and the Sun. This region was theorized by Dutch-American astronomer Gerard Kuiper in 1951, though its existence was not confirmed until 1992 when astronomers David Jewitt and Jane Luu discovered the first trans-Neptunian object, designated 1992 QB1. Prior to this discovery, the Kuiper Belt remained a matter of speculation among the scientific community. The discovery of 1992 QB1, measuring approximately 280 kilometers across, provided the first empirical evidence that Kuiper's hypothesis was correct. This breakthrough launched a new era of astronomical research focused on understanding the outer solar system and the formation history of planetary bodies."
+      },
+      {
+        "label": "B",
+        "text": "Pluto, reclassified from a planet to a dwarf planet by the International Astronomical Union in 2006, was the first known object in the Kuiper Belt. For 76 years, from 1930 until 2006, Pluto held the status of the ninth planet in our solar system. The reclassification occurred after astronomers discovered numerous similar-sized objects in the Kuiper Belt, which raised questions about what defines a planet. The new classification system established three criteria: an object must orbit the Sun, possess sufficient mass to achieve a round shape, and have cleared its orbital neighborhood of other debris. Pluto meets the first two criteria but fails the third, as its orbit overlaps with many other icy bodies. Since 2006, Pluto has been designated as a plutino, a subclass of dwarf planet. This change, while controversial among the public, reflects the scientific community's commitment to maintaining rigorous classification standards based on observed evidence rather than historical tradition."
+      },
+      {
+        "label": "C",
+        "text": "The New Horizons spacecraft mission, launched by NASA in January 2006, traveled nearly 4.8 billion miles to reach Pluto in July 2015. This nine-year journey provided humanity's first close-up images of Pluto and its moons. The spacecraft revealed a complex world with mountains, valleys, and vast plains of frozen nitrogen. One striking feature discovered by New Horizons was a heart-shaped region, informally called Tombaugh Regio in honor of Pluto's discoverer Clyde Tombaugh, which spans approximately 1,600 kilometers across Pluto's surface. The mission's data transformed scientific understanding of dwarf planets and their potential for geological complexity. Following the Pluto encounter, New Horizons continued its mission into the Kuiper Belt, with planned observations of other distant objects scheduled for the coming decades. The photographs and compositional data gathered by New Horizons have been invaluable for researchers studying the primordial composition of the solar system."
+      },
+      {
+        "label": "D",
+        "text": "Current estimates suggest the Kuiper Belt contains hundreds of thousands of objects larger than 100 kilometers in diameter, with millions of smaller bodies. The total mass of the Kuiper Belt is estimated at approximately 0.1 times the mass of Earth, spread across this enormous region. Notable objects besides Pluto include Eris, Haumea, and Makemake, all classified as dwarf planets. Eris, discovered in January 2005, triggered Pluto's reclassification because of its similar size and characteristics. The dwarf planets in the Kuiper Belt are believed to be remnants from the early solar system, preserved in their icy state due to their distance from the Sun's heat. These objects provide crucial insights into the conditions that existed during the formation of the solar system approximately 4.6 billion years ago. Studying the Kuiper Belt objects helps astronomers understand planetary migration, the distribution of primordial material, and the history of collisions in the outer solar system."
+      },
+      {
+        "label": "E",
+        "text": "Spectroscopic analysis of Kuiper Belt objects reveals compositions dominated by frozen methane, ammonia, and water ice, with variations indicating different thermal and processing histories. Some objects exhibit evidence of cryovolcanism, a process in which eruptions of ice or water instead of molten rock occur on the surface. The Kuiper Belt population is divided into two main regions: the classical Kuiper Belt, extending from about 42 to 50 AU, and the scattered disk, extending beyond 50 AU. Objects in the scattered disk, including Eris and Gonggong, have highly elliptical orbits suggesting they were gravitationally scattered from their original positions. This scattering is thought to have occurred during the migration of Jupiter and Saturn early in the solar system's history. Evidence for this migration comes from computer simulations that reproduce the current distribution of Kuiper Belt objects when giant planets are allowed to migrate outward and then settle into their current positions."
+      },
+      {
+        "label": "F",
+        "text": "The potential for scientific discovery in the Kuiper Belt has motivated numerous proposals for future missions. Japan's space agency JAXA has proposed missions to investigate multiple Kuiper Belt objects simultaneously using advanced propulsion systems. NASA and international partners continue to develop technologies for faster and more cost-effective missions to the outer solar system. The challenges of Kuiper Belt exploration include the vast distances involved, requiring transit times of many years, and the need for instruments that can function reliably in extremely low temperatures and at great distances from the Sun. Solar panels become inefficient at such distances, necessitating the use of radioisotope thermoelectric generators for power. Despite these challenges, the scientific returns justify continued investment. Understanding the Kuiper Belt is essential for comprehending planetary system formation, evaluating the prevalence of similar systems around other stars, and assessing the long-term stability of our solar system."
+      }
+    ],
+    "questions": [
+      {
+        "id": "r07-q01",
+        "type": "tfng",
+        "prompt": "Gerard Kuiper discovered the Kuiper Belt in 1951.",
+        "answer": "FALSE",
+        "why": "Paragraph A states: 'theorized by Dutch-American astronomer Gerard Kuiper in 1951, though its existence was not confirmed until 1992.' He theorized it, did not discover it."
+      },
+      {
+        "id": "r07-q02",
+        "type": "tfng",
+        "prompt": "Pluto was classified as the ninth planet for over 70 years.",
+        "answer": "TRUE",
+        "why": "Paragraph B states: 'For 76 years, from 1930 until 2006, Pluto held the status of the ninth planet.' 76 years is over 70 years."
+      },
+      {
+        "id": "r07-q03",
+        "type": "tfng",
+        "prompt": "The New Horizons spacecraft took nine years to reach Pluto.",
+        "answer": "TRUE",
+        "why": "Paragraph C states: 'launched by NASA in January 2006...to reach Pluto in July 2015. This nine-year journey.'"
+      },
+      {
+        "id": "r07-q04",
+        "type": "tfng",
+        "prompt": "The Kuiper Belt extends further from the Sun than the scattered disk.",
+        "answer": "FALSE",
+        "why": "Paragraph E states: 'the classical Kuiper Belt, extending from about 42 to 50 AU, and the scattered disk, extending beyond 50 AU.' The scattered disk extends beyond, so it goes further."
+      },
+      {
+        "id": "r07-q05",
+        "type": "tfng",
+        "prompt": "Objects in the Kuiper Belt are composed primarily of ice.",
+        "answer": "TRUE",
+        "why": "Paragraph E states: 'compositions dominated by frozen methane, ammonia, and water ice.' All these are forms of ice."
+      },
+      {
+        "id": "r07-q06",
+        "type": "complete",
+        "prompt": "The first trans-Neptunian object discovered was designated 1992 ___.",
+        "answer": [
+          "QB1"
+        ],
+        "why": "Paragraph A clearly states: 'designated 1992 QB1.' This is the exact designation given in the passage."
+      },
+      {
+        "id": "r07-q07",
+        "type": "complete",
+        "prompt": "The heart-shaped region on Pluto is called Tombaugh ___.",
+        "answer": [
+          "Regio"
+        ],
+        "why": "Paragraph C states: 'called Tombaugh Regio in honor of Pluto's discoverer Clyde Tombaugh.' Regio is the term used."
+      },
+      {
+        "id": "r07-q08",
+        "type": "complete",
+        "prompt": "Future Kuiper Belt missions will use radioisotope thermoelectric ___.",
+        "answer": [
+          "generators"
+        ],
+        "why": "Paragraph F states: 'necessitating the use of radioisotope thermoelectric generators for power.' This is exactly 1 word from the passage."
+      },
+      {
+        "id": "r07-q09",
+        "type": "complete",
+        "prompt": "The Kuiper Belt's total mass is estimated at 0.1 times the mass of ___.",
+        "answer": [
+          "Earth"
+        ],
+        "why": "Paragraph D states: 'The total mass of the Kuiper Belt is estimated at approximately 0.1 times the mass of Earth.' Earth is the exact word."
+      },
+      {
+        "id": "r07-q10",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph A?",
+        "options": [
+          "i. The Discovery of Pluto",
+          "ii. Early Theories and Confirmation of the Kuiper Belt",
+          "iii. Notable Objects and Remnants in the Kuiper Belt",
+          "iv. Telescopes for Observing Distant Objects",
+          "v. Spectroscopic Composition and Orbital Distribution of Kuiper Belt Objects",
+          "vi. NASA's Space Exploration Programs"
+        ],
+        "answer": "ii",
+        "why": "Paragraph A discusses Kuiper's 1951 theory and the 1992 discovery confirmation. Option ii 'Early Theories and Confirmation of the Kuiper Belt' directly matches this content."
+      },
+      {
+        "id": "r07-q11",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph D?",
+        "options": [
+          "i. The Discovery of Pluto",
+          "ii. Early Theories and Confirmation of the Kuiper Belt",
+          "iii. Notable Objects and Remnants in the Kuiper Belt",
+          "iv. Telescopes for Observing Distant Objects",
+          "v. Spectroscopic Composition and Orbital Distribution of Kuiper Belt Objects",
+          "vi. NASA's Space Exploration Programs"
+        ],
+        "answer": "iii",
+        "why": "Paragraph D discusses the objects in the Kuiper Belt including Eris, Haumea, Makemake, and their status as solar system remnants. Option iii fits this content."
+      },
+      {
+        "id": "r07-q12",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph E?",
+        "options": [
+          "i. The Discovery of Pluto",
+          "ii. Early Theories and Confirmation of the Kuiper Belt",
+          "iii. Notable Objects and Remnants in the Kuiper Belt",
+          "iv. Telescopes for Observing Distant Objects",
+          "v. Spectroscopic Composition and Orbital Distribution of Kuiper Belt Objects",
+          "vi. NASA's Space Exploration Programs"
+        ],
+        "answer": "v",
+        "why": "Paragraph E discusses spectroscopic analysis, composition (methane, ammonia, ice) and the division into classical Kuiper Belt and scattered disk regions. Option v 'Spectroscopic Composition and Orbital Distribution of Kuiper Belt Objects' matches this content exactly."
+      },
+      {
+        "id": "r07-q13",
+        "type": "mcq",
+        "prompt": "What was the diameter of 1992 QB1, the first discovered trans-Neptunian object?",
+        "options": [
+          "A. Approximately 100 kilometers",
+          "B. Approximately 280 kilometers",
+          "C. Approximately 500 kilometers",
+          "D. Approximately 1,600 kilometers"
+        ],
+        "answer": "B",
+        "why": "Paragraph A states: 'The discovery of 1992 QB1, measuring approximately 280 kilometers across.'"
+      },
+      {
+        "id": "r07-q14",
+        "type": "mcq",
+        "prompt": "Which dwarf planet's discovery directly triggered Pluto's reclassification?",
+        "options": [
+          "A. Haumea",
+          "B. Gonggong",
+          "C. Eris",
+          "D. Makemake"
+        ],
+        "answer": "C",
+        "why": "Paragraph D states: 'Eris, discovered in January 2005, triggered Pluto's reclassification because of its similar size and characteristics.'"
+      }
+    ]
+  },
+  {
+    "id": "r08",
+    "title": "Vertical Gardens in Modern Urban Design",
+    "topic": "urban planning/architecture",
+    "paragraphs": [
+      {
+        "label": "A",
+        "text": "Vertical gardens, also known as green walls or living walls, represent an innovative approach to integrating vegetation into urban environments where horizontal space is limited. First commercially developed in France during the 1990s, vertical gardens have gained significant traction in major metropolitan areas around the world. Patrick Blanc, a French botanist and landscape designer, is credited with pioneering the modern vertical garden system through his patented hydroponics technique, which was first publicly displayed at the Musée du Quai Branly in Paris in 2006. This technique utilizes a specialized support structure that allows water and nutrients to circulate through a vertical growing medium, supporting various plant species without requiring soil. The concept challenges traditional assumptions about plant cultivation and urban space utilization. Since Blanc's breakthrough, cities including Singapore, New York, and Tokyo have incorporated vertical gardens into their urban planning strategies, recognizing both aesthetic and environmental benefits."
+      },
+      {
+        "label": "B",
+        "text": "The environmental advantages of vertical gardens are substantial and multifaceted. These installations can improve air quality by absorbing carbon dioxide and releasing oxygen through the photosynthesis process, though the scale of impact remains modest compared to traditional parks. A single vertical garden of 100 square meters can absorb approximately 2.5 kilograms of carbon dioxide annually, equivalent to the annual emissions produced by an average car traveling 6,400 kilometers. Vertical gardens also provide enhanced thermal insulation for building facades, reducing the energy required for heating and cooling by up to 15 percent in some studies. The plants act as natural sound barriers, absorbing noise pollution from traffic and urban activity. Additionally, these systems support urban biodiversity by providing habitats for insects, birds, and other small organisms. The microclimates created around vertical gardens often attract species that would otherwise abandon urban areas, contributing to the ecological recovery of cities."
+      },
+      {
+        "label": "C",
+        "text": "Implementation of vertical gardens faces significant economic and technical challenges. The initial cost of installation can range from $300 to $1,000 per square meter, depending on the complexity of the irrigation system and plant selection. Maintenance requirements are substantial, including regular watering, fertilization, nutrient adjustment, and plant replacement when species fail to thrive. Most vertical gardens require automated irrigation systems with sensors that monitor moisture levels and adjust water delivery accordingly. System failures, whether in the irrigation apparatus or the structural support, can rapidly lead to plant death and aesthetic degradation. In 2015, a well-publicized vertical garden installation in a Dubai luxury hotel experienced severe damage when irrigation system malfunction caused 90 percent of the plants to wilt within two weeks. This incident highlighted the risks of insufficient maintenance protocols. Professional maintenance teams must visit installations regularly, with many systems requiring attention at least once weekly. These operational costs have limited adoption primarily to high-value properties, commercial developments, and well-funded public installations."
+      },
+      {
+        "label": "D",
+        "text": "Several cities have undertaken large-scale vertical garden projects aimed at urban beautification and environmental remediation. Singapore's National Parks Board initiated its 'Vertical Garden Initiative' in 2009, designing green wall systems for ten major buildings in the Central Business District. By 2020, Singapore had implemented over 4,500 vertical garden installations across the city-state, covering approximately 150,000 square meters of building facades. Mexico City, facing severe air pollution challenges, approved a municipal program in 2013 to install vertical gardens on public buildings, hospitals, and educational institutions. The program aimed to install 10,000 vertical garden panels by 2025, though progress has been slower than initially projected. Paris, where the vertical garden concept originated, has incorporated living walls into its broader urban greening strategy, with installations along major transportation corridors and in residential neighborhoods. These programs demonstrate government commitment to using vertical gardens as tools for urban environmental enhancement."
+      },
+      {
+        "label": "E",
+        "text": "Technological innovations continue to expand the possibilities for vertical garden applications. Modular green wall systems developed since 2010 offer easier installation and maintenance compared to earlier monolithic designs. These systems allow individual plant modules to be replaced independently without disrupting the entire wall. Advances in hydroponics and irrigation automation have reduced water consumption by up to 70 percent compared to traditional landscaping methods. Some newer installations incorporate solar panels integrated with vertical garden structures, creating dual-purpose systems that generate renewable energy while supporting plant growth. Researchers at ETH Zurich developed a prototype in 2019 that combines photovoltaic cells with plant-supporting trellises, though commercial viability remains uncertain. Artificial intelligence applications are emerging to optimize irrigation schedules and nutrient delivery based on real-time environmental data and plant-specific requirements. These technological advances promise to make vertical gardens more economically accessible and environmentally efficient, though widespread adoption still requires cost reduction."
+      },
+      {
+        "label": "F",
+        "text": "The aesthetic contribution of vertical gardens to urban landscapes cannot be overlooked. Psychological research indicates that viewing green spaces and vegetation reduces stress levels and improves mental well-being in urban populations. A 2018 study conducted by the University of Melbourne found that office workers with views of vertical gardens demonstrated 37 percent lower stress levels compared to workers with views of concrete walls. The visual impact of vegetation transforms hard architectural surfaces, softening the appearance of industrial and commercial building facades. In densely populated urban cores where traditional parks are infeasible, vertical gardens provide accessible green space within immediate sight of residents and workers. Cultural events, including the development of green wall art installations, have elevated vertical gardens beyond functional environmental tools into recognized aesthetic and artistic expressions. The integration of artistic design with ecological function represents an emerging intersection of urban planning, architecture, and environmental stewardship."
+      }
+    ],
+    "questions": [
+      {
+        "id": "r08-q01",
+        "type": "tfng",
+        "prompt": "Patrick Blanc's vertical garden technique uses soil-based growing medium.",
+        "answer": "FALSE",
+        "why": "Paragraph A states: 'which utilizes a specialized support structure that allows water and nutrients to circulate through a vertical growing medium, supporting various plant species without requiring soil.'"
+      },
+      {
+        "id": "r08-q02",
+        "type": "tfng",
+        "prompt": "A 100 square meter vertical garden absorbs more than 2 kilograms of carbon dioxide annually.",
+        "answer": "TRUE",
+        "why": "Paragraph B states: 'A single vertical garden of 100 square meters can absorb approximately 2.5 kilograms of carbon dioxide annually.' 2.5 is more than 2."
+      },
+      {
+        "id": "r08-q03",
+        "type": "tfng",
+        "prompt": "Vertical gardens can reduce building heating and cooling energy requirements by more than 20 percent.",
+        "answer": "FALSE",
+        "why": "Paragraph C states: 'reducing the energy required for heating and cooling by up to 15 percent in some studies.' 15 percent is not more than 20 percent."
+      },
+      {
+        "id": "r08-q04",
+        "type": "tfng",
+        "prompt": "Most vertical gardens require automated irrigation systems.",
+        "answer": "TRUE",
+        "why": "Paragraph C states: 'Most vertical gardens require automated irrigation systems with sensors that monitor moisture levels.'"
+      },
+      {
+        "id": "r08-q05",
+        "type": "tfng",
+        "prompt": "The vertical garden installation failure in Dubai in 2015 resulted in total plant loss.",
+        "answer": "FALSE",
+        "why": "Paragraph C states: '90 percent of the plants to wilt within two weeks,' meaning 10 percent remained, not total loss."
+      },
+      {
+        "id": "r08-q06",
+        "type": "complete",
+        "prompt": "Patrick Blanc first publicly displayed his technique at the Musée du Quai Branly in ___.",
+        "answer": [
+          "Paris"
+        ],
+        "why": "Paragraph A states: 'first publicly displayed at the Musée du Quai Branly in Paris in 2006.'"
+      },
+      {
+        "id": "r08-q07",
+        "type": "complete",
+        "prompt": "The initial installation cost of vertical gardens can range from $300 to $1,000 per square ___.",
+        "answer": [
+          "meter"
+        ],
+        "why": "Paragraph C states: 'The initial cost of installation can range from $300 to $1,000 per square meter.'"
+      },
+      {
+        "id": "r08-q08",
+        "type": "complete",
+        "prompt": "Singapore had implemented over 4,500 vertical garden installations by the year ___.",
+        "answer": [
+          "2020"
+        ],
+        "why": "Paragraph D states: 'By 2020, Singapore had implemented over 4,500 vertical garden installations.'"
+      },
+      {
+        "id": "r08-q09",
+        "type": "complete",
+        "prompt": "A 2018 study found office workers with green wall views had 37 percent lower ___ levels.",
+        "answer": [
+          "stress"
+        ],
+        "why": "Paragraph F states: 'office workers with views of vertical gardens demonstrated 37 percent lower stress levels.'"
+      },
+      {
+        "id": "r08-q10",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph B?",
+        "options": [
+          "i. Installation Costs of Urban Gardens",
+          "ii. Environmental Benefits and Ecological Impact of Vertical Gardens",
+          "iii. Economic and Technical Challenges in Vertical Garden Implementation",
+          "iv. Technological Innovations and Advancements in Vertical Garden Systems",
+          "v. Historical Development of Green Walls",
+          "vi. Architectural Design Principles"
+        ],
+        "answer": "ii",
+        "why": "Paragraph B discusses environmental advantages including air quality, thermal insulation, noise reduction, and biodiversity support. Option ii 'Environmental Benefits and Ecological Impact' directly describes this content."
+      },
+      {
+        "id": "r08-q11",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph C?",
+        "options": [
+          "i. Installation Costs of Urban Gardens",
+          "ii. Environmental Benefits and Ecological Impact of Vertical Gardens",
+          "iii. Economic and Technical Challenges in Vertical Garden Implementation",
+          "iv. Technological Innovations and Advancements in Vertical Garden Systems",
+          "v. Historical Development of Green Walls",
+          "vi. Architectural Design Principles"
+        ],
+        "answer": "iii",
+        "why": "Paragraph C focuses on challenges including high costs, maintenance requirements, irrigation problems, and system failures. Option iii matches this content exactly."
+      },
+      {
+        "id": "r08-q12",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph E?",
+        "options": [
+          "i. Installation Costs of Urban Gardens",
+          "ii. Environmental Benefits and Ecological Impact of Vertical Gardens",
+          "iii. Economic and Technical Challenges in Vertical Garden Implementation",
+          "iv. Technological Innovations and Advancements in Vertical Garden Systems",
+          "v. Historical Development of Green Walls",
+          "vi. Architectural Design Principles"
+        ],
+        "answer": "iv",
+        "why": "Paragraph E discusses modular systems, water conservation, solar panel integration, and artificial intelligence applications. Option iv 'Technological Innovations and Advancements' is the best fit."
+      },
+      {
+        "id": "r08-q13",
+        "type": "mcq",
+        "prompt": "Mexico City approved its vertical garden program in which year?",
+        "options": [
+          "A. 2009",
+          "B. 2013",
+          "C. 2015",
+          "D. 2018"
+        ],
+        "answer": "B",
+        "why": "Paragraph D states: 'Mexico City, facing severe air pollution challenges, approved a municipal program in 2013.'"
+      },
+      {
+        "id": "r08-q14",
+        "type": "match",
+        "prompt": "Match the following statements to the appropriate paragraphs (A-F). Which paragraph discusses the psychological and mental health benefits of vertical gardens?",
+        "options": [
+          "A. Paragraph A",
+          "B. Paragraph B",
+          "C. Paragraph C",
+          "D. Paragraph D",
+          "E. Paragraph E",
+          "F. Paragraph F"
+        ],
+        "answer": "F",
+        "why": "Paragraph F states: 'Psychological research indicates that viewing green spaces and vegetation reduces stress levels and improves mental well-being.'"
+      }
+    ]
+  },
+  {
+    "id": "r09",
+    "title": "The Evolution of Vaccination: From Variolation to Modern Immunology",
+    "topic": "medicine/public health history",
+    "paragraphs": [
+      {
+        "label": "A",
+        "text": "The history of vaccination represents one of medicine's most transformative achievements, reshaping public health and survival rates across centuries. The concept of disease immunity was practiced in rudimentary forms for thousands of years before being scientifically understood. The earliest documented reference appears in Indian Sanskrit texts dating to approximately 1500 BCE, describing variolation techniques. Chinese physicians developed variolation during the eleventh century, deliberately introducing pustule material into the nasal passages of healthy persons to induce immunity. This risky practice nevertheless offered better survival odds than encountering the disease naturally, as it exposed individuals to controlled disease exposure under optimized conditions. Variolation gradually spread westward along trade routes, reaching the Ottoman Empire by the sixteenth century. It eventually arrived in Europe during the eighteenth century, where medical practitioners and aristocrats adopted it. Despite initial resistance from established medical authorities and religious institutions opposed to deliberate disease exposure, variolation gained acceptance as statistical evidence demonstrated its survival advantages became increasingly apparent to scientific observers."
+      },
+      {
+        "label": "B",
+        "text": "Edward Jenner established vaccination's scientific foundations in the late eighteenth century, fundamentally changing medical practice. In 1796, Jenner observed that dairy workers infected with cowpox, a mild bovine disease, developed immunity to smallpox. This crucial observation led him to conduct a pivotal experimental inoculation in which he deliberately infected eight-year-old James Phipps with cowpox material obtained from infected milkmaid Sarah Nelmes. Following recovery, Phipps resisted repeated smallpox exposures, demonstrating protection against the severe disease. Jenner published his revolutionary 1798 work 'An Inquiry into the Causes and Effects of the Variolae Vaccinae,' introducing the term 'vaccination' derived from the Latin 'vacca' meaning cow. Initial scientific reception was mixed, though skepticism gradually diminished. By 1801, approximately 100,000 people in England had received vaccinations. By 1807, several European nations mandated vaccination programs as effectiveness became undeniable."
+      },
+      {
+        "label": "C",
+        "text": "The nineteenth century witnessed rapid scientific advancement in understanding immunity mechanisms and disease transmission. Louis Pasteur demonstrated that weakened or attenuated microorganisms stimulated protective immune responses in host organisms through a systematic series of experiments. He developed the first successful rabies vaccine in 1885, successfully treating nine-year-old Joseph Meister after rabid dog exposure, providing the first concrete proof of concept for post-exposure vaccination. Robert Koch's systematic identification of specific bacteria as causative agents of specific diseases between 1876 and 1905 provided essential foundations for understanding disease-specific immunity. The replacement of miasma theory with germ theory represented a fundamental scientific paradigm shift in medical thinking. Immunology emerged as a distinct scientific discipline with researchers identifying antibodies, white blood cells, complement systems, and complex mechanisms of pathogen recognition and elimination. These landmark discoveries transformed vaccination from empirical trial-and-error practice into rational science based on understanding immune mechanisms and pathogenic organisms."
+      },
+      {
+        "label": "D",
+        "text": "The twentieth century brought unprecedented vaccine successes against major infectious diseases, transforming global public health. Vaccines against diphtheria, tetanus, and pertussis were developed and implemented during the 1920s and 1930s, significantly reducing childhood mortality rates throughout developed nations. Jonas Salk's polio vaccine, introduced in 1955, nearly eradicated a devastating disease that had paralyzed over 50,000 Americans annually at the peak of epidemics in the early 1950s. World Health Organization vaccination campaigns initiated in 1967 achieved the complete global eradication of smallpox by 1980, representing a historic milestone as the first infectious disease entirely eliminated from human populations through coordinated international efforts. Measles vaccination programs initiated in 1963 reduced global deaths from approximately 2.6 million annually in 1990 to fewer than 140,000 by 2020. However, twentieth-century safety concerns including pertussis vaccine controversies prompted development of more rigorous safety testing protocols and pharmacovigilance systems for monitoring adverse effects."
+      },
+      {
+        "label": "E",
+        "text": "Recombinant DNA technology developed in the 1970s revolutionized vaccine development, enabling creation of vaccines targeting specific pathogenic components rather than whole organisms. The hepatitis B vaccine, licensed in 1986, was the first successful recombinant DNA vaccine, produced through genetically engineered yeast cells in laboratory environments. Conjugate vaccines linked antigens to carrier molecules to enhance immune responses in young children with developing immune systems. mRNA vaccines, developed progressively since the 2000s as potential cancer treatments, had not received approval for infectious diseases prior to 2019. When COVID-19 emerged in late 2019, mRNA vaccine platforms represented cutting-edge technology never before deployed at scale. mRNA vaccines deployed in 2020-2021 demonstrated efficacy exceeding 90 percent in extensive clinical trials, establishing mRNA as a viable and promising platform for future vaccine development against diverse infectious pathogens."
+      },
+      {
+        "label": "F",
+        "text": "Vaccine hesitancy emerged as a significant public health concern since the early 2000s, undermining vaccination programs in developed nations. Misinformation, particularly the thoroughly debunked claim linking MMR vaccine to autism published by Andrew Wakefield, contributed to substantially reduced vaccination rates and disease reemergence in previously controlled populations. In 2019, United States measles cases reached 1,282, representing the highest number in 27 years, concentrated in communities with low vaccination coverage. Global vaccine access remains highly inequitable, with sub-Saharan Africa and South Asia experiencing significantly lower vaccination coverage despite higher disease burdens and mortality. Vaccine nationalism during the COVID-19 pandemic, wherein wealthy nations prioritized vaccine acquisition while lower-income nations faced substantial distribution delays, highlighted systemic inequities in global health infrastructure. Overcoming contemporary challenges requires integrated strategies combining scientific advancement with effective public health messaging and equitable vaccine distribution systems."
+      }
+    ],
+    "questions": [
+      {
+        "id": "r09-q01",
+        "type": "ynng",
+        "prompt": "The author suggests that variolation was safer than natural disease exposure.",
+        "answer": "YES",
+        "why": "Paragraph A states: 'variolation gradually gained acceptance as its survival rate advantages became statistically apparent.' This indicates the author believes variolation had better outcomes than natural infection."
+      },
+      {
+        "id": "r09-q02",
+        "type": "ynng",
+        "prompt": "The author implies that early scientific colleagues fully accepted Jenner's vaccination theory immediately.",
+        "answer": "NO",
+        "why": "Paragraph B states: 'Initial scientific reception was mixed, with some colleagues expressing skepticism.' The author indicates skepticism existed, not full acceptance."
+      },
+      {
+        "id": "r09-q03",
+        "type": "ynng",
+        "prompt": "The author presents germ theory as a replacement for earlier medical explanatory frameworks.",
+        "answer": "YES",
+        "why": "Paragraph C states: 'Germ theory replaced the prevailing miasma theory, which had incorrectly attributed disease to noxious vapors.' The author clearly indicates germ theory superseded miasma theory."
+      },
+      {
+        "id": "r09-q04",
+        "type": "ynng",
+        "prompt": "The writer believes that twentieth-century vaccine safety concerns were largely unfounded.",
+        "answer": "NOT GIVEN",
+        "why": "Paragraph D mentions safety concerns including thalidomide and pertussis vaccine controversies and the development of safety testing protocols, but does not assert whether these concerns were founded or unfounded."
+      },
+      {
+        "id": "r09-q05",
+        "type": "ynng",
+        "prompt": "The author suggests that mRNA vaccine technology represented a novel approach to infectious disease prevention in 2020.",
+        "answer": "YES",
+        "why": "Paragraph E states: 'When the COVID-19 pandemic emerged in late 2019, mRNA vaccine technology had not yet been approved for infectious diseases' and 'represented the first large-scale application of this technology against an infectious pathogen,' indicating novelty."
+      },
+      {
+        "id": "r09-q06",
+        "type": "complete",
+        "prompt": "Edward Jenner introduced the term 'vaccination' in his 1798 work titled 'An Inquiry into the Causes and Effects of the Variolae ___.'",
+        "answer": [
+          "Vaccinae"
+        ],
+        "why": "Paragraph B states: \"his work titled 'An Inquiry into the Causes and Effects of the Variolae Vaccinae.'\" This is the exact title."
+      },
+      {
+        "id": "r09-q07",
+        "type": "complete",
+        "prompt": "Louis Pasteur developed the first successful vaccine against ___ in 1885.",
+        "answer": [
+          "rabies"
+        ],
+        "why": "Paragraph C states: 'Pasteur developed the first successful vaccine against rabies in 1885.'"
+      },
+      {
+        "id": "r09-q08",
+        "type": "complete",
+        "prompt": "The hepatitis B vaccine, licensed in 1986, was the first successful ___ vaccine.",
+        "answer": [
+          "recombinant DNA"
+        ],
+        "why": "Paragraph E states: 'The hepatitis B vaccine, licensed in 1986, was the first successful recombinant DNA vaccine.'"
+      },
+      {
+        "id": "r09-q09",
+        "type": "complete",
+        "prompt": "In 2019, measles cases in the United States reached 1,282, the highest number in ___ years.",
+        "answer": [
+          "27"
+        ],
+        "why": "Paragraph F states: 'In 2019, measles cases in the United States reached 1,282, the highest number in 27 years.'"
+      },
+      {
+        "id": "r09-q10",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph A?",
+        "options": [
+          "i. Ancient Vaccination Techniques and Variolation",
+          "ii. Edward Jenner's Revolutionary Discovery",
+          "iii. Twentieth-Century Vaccine Successes and Safety Challenges",
+          "iv. Vaccine Hesitancy, Inequity, and Modern Public Health Challenges",
+          "v. Modern mRNA Vaccine Technology",
+          "vi. Vaccine Safety and Regulatory Systems"
+        ],
+        "answer": "i",
+        "why": "Paragraph A discusses early variolation practices in India and China and their spread to Europe, matching 'Ancient Vaccination Techniques and Variolation.'"
+      },
+      {
+        "id": "r09-q11",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph D?",
+        "options": [
+          "i. Ancient Vaccination Techniques and Variolation",
+          "ii. Edward Jenner's Revolutionary Discovery",
+          "iii. Twentieth-Century Vaccine Successes and Safety Challenges",
+          "iv. Vaccine Hesitancy, Inequity, and Modern Public Health Challenges",
+          "v. Modern mRNA Vaccine Technology",
+          "vi. Vaccine Safety and Regulatory Systems"
+        ],
+        "answer": "iii",
+        "why": "Paragraph D discusses twentieth-century vaccine developments including polio, smallpox eradication, and safety concerns. Option iii matches this content."
+      },
+      {
+        "id": "r09-q12",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph F?",
+        "options": [
+          "i. Ancient Vaccination Techniques and Variolation",
+          "ii. Edward Jenner's Revolutionary Discovery",
+          "iii. Twentieth-Century Vaccine Successes and Safety Challenges",
+          "iv. Vaccine Hesitancy, Inequity, and Modern Public Health Challenges",
+          "v. Modern mRNA Vaccine Technology",
+          "vi. Vaccine Safety and Regulatory Systems"
+        ],
+        "answer": "iv",
+        "why": "Paragraph F discusses vaccine hesitancy, misinformation, distribution inequities, and vaccine nationalism. Option iv 'Vaccine Hesitancy, Inequity, and Modern Public Health Challenges' best describes this content."
+      },
+      {
+        "id": "r09-q13",
+        "type": "mcq",
+        "prompt": "According to the passage, by what year had approximately 100,000 people in England received vaccinations?",
+        "options": [
+          "A. 1796",
+          "B. 1798",
+          "C. 1801",
+          "D. 1807"
+        ],
+        "answer": "C",
+        "why": "Paragraph B states: 'By 1801, however, approximately 100,000 people in England had received vaccinations.'"
+      },
+      {
+        "id": "r09-q14",
+        "type": "mcq",
+        "prompt": "Which vaccine technology was authorized through emergency use procedures against COVID-19?",
+        "options": [
+          "A. Recombinant DNA vaccines",
+          "B. mRNA vaccines",
+          "C. Conjugate vaccines",
+          "D. Attenuated vaccines"
+        ],
+        "answer": "B",
+        "why": "Paragraph E states: 'The rapid deployment of mRNA vaccines against COVID-19 in 2020-2021, authorized through emergency use procedures.'"
+      }
+    ]
+  },
+  {
+    "id": "r10",
+    "title": "The Social and Economic Significance of Bread Consumption Across Cultures",
+    "topic": "sociology/anthropology",
+    "paragraphs": [
+      {
+        "label": "A",
+        "text": "Bread stands as one of humanity's oldest and most culturally significant staple foods, with consumption dating back 11,000 years to the Neolithic period. Archaeological evidence from the Fertile Crescent indicates that grain cultivation and bread production emerged during the crucial transition from nomadic hunting-gathering to settled agricultural communities. The development of bread-making technologies paralleled the domestication of wheat and barley, fundamentally transforming human settlement patterns, labor organization, and social hierarchies. In ancient Egypt, bread served not merely as sustenance but as a standardized medium of labor exchange, with workers receiving daily bread rations as compensation. Similarly, Roman emperors strategically used grain doles to maintain social order and prevent urban unrest. This historical pattern demonstrates how bread transcended its fundamental nutritional function to become a carrier of profound social meaning, political power, and economic value."
+      },
+      {
+        "label": "B",
+        "text": "Contemporary bread consumption patterns vary significantly across global regions, reflecting distinct cultural traditions, agricultural capacities, and dietary preferences. In Mediterranean countries including Greece, Italy, and Spain, bread consumption remains exceptionally high, averaging 60 to 80 kilograms per capita annually, with bread integral to nearly every meal and social occasion. In Northern and Central Europe, including Germany, Poland, and Austria, black bread varieties produced from rye remain deeply culturally significant, with consumption averaging 50 to 65 kilograms per capita annually. Middle Eastern and North African regions exhibit similarly high bread consumption rates, with flatbreads such as pita, naan, and lavash comprising primary carbohydrate sources. Middle Eastern regions average 70 to 90 kilograms per capita annually, while North African consumption ranges from 80 to 100 kilograms annually. Conversely, in many Asian countries, rice rather than bread serves as the primary staple carbohydrate, resulting in comparatively lower bread consumption, typically ranging from 5 to 15 kilograms annually. These consumption patterns reflect not merely individual dietary choice but deep cultural embeddings of food traditions and identities."
+      },
+      {
+        "label": "C",
+        "text": "The socioeconomic dimensions of bread production and consumption reveal significant inequality in food security and nutritional access. In developing nations, bread and grain-based foods often constitute 60 to 70 percent of total caloric intake for populations living in poverty, creating acute vulnerability to global grain price fluctuations and economic shocks. Between 2010 and 2012, global wheat prices approximately doubled due to severe drought conditions in major grain-producing regions including Russia and Australia, triggering widespread food security crises particularly affecting lower-income populations dependent on wheat. During this crisis period, bread prices increased by up to 40 percent in some regions, forcing families to reduce consumption of other nutritious foods including vegetables and proteins. In contrast, affluent populations in developed nations exhibit more diversified diets where bread comprises only 10 to 20 percent of total caloric intake, enabling them to absorb price shocks through substitution or dietary adjustments. This disparity highlights how bread consumption intersects with poverty and economic vulnerability. Anthropological research has documented cases in developing nations where families prioritized bread acquisition for children while reducing adult nutrition intake."
+      },
+      {
+        "label": "D",
+        "text": "Bread production and distribution systems became increasingly globalized and industrialized during the twentieth century. Industrial bread production, which began widespread adoption following World War II, standardized bread recipes, ingredients, and distribution channels, creating efficiency gains and price reductions. Large-scale industrial bakeries utilizing mechanized production techniques reduced bread prices by approximately 30 to 40 percent relative to traditional artisanal production during the 1950s and 1960s, benefiting consumers with limited purchasing power. However, industrial production simultaneously reduced nutritional quality through refined flour processing, which removed bran and germ containing essential micronutrients, fiber, and phytonutrients. The replacement of whole-grain varieties with white bread occurred across many regions, contributing to nutritional transitions characterized by increased refined carbohydrate consumption. Beginning in the late twentieth century, various regions experienced cultural and culinary revivals emphasizing traditional and artisanal bread production, such as the slow food movement initiated in Italy in 1986."
+      },
+      {
+        "label": "E",
+        "text": "The environmental dimensions of bread production have become increasingly significant as climate change and water scarcity challenge global food systems. Wheat cultivation requires substantial water resources, with global production consuming approximately 216 billion cubic meters of water annually. Land degradation from intensive monoculture wheat production has reduced soil fertility in major grain-producing regions, necessitating increased chemical fertilizer application, which generates nitrogen runoff pollution in aquatic ecosystems. The greenhouse gas emissions from wheat production, including mechanized cultivation, fertilizer manufacturing, and transportation of grain to distant markets, contribute substantially to agricultural sector emissions that constitute approximately 13 to 14 percent of global anthropogenic greenhouse gas emissions. Water stress in grain-producing regions including India, China, and the Middle East creates competition between agricultural and municipal water consumption. Transitioning to more sustainable bread production systems requires changes in agricultural practices including crop rotation, reduced tilling, precision fertilizer application, and development of drought-resistant crop varieties."
+      },
+      {
+        "label": "F",
+        "text": "Nutritional debates regarding bread consumption have intensified in recent decades as various dietary philosophies have challenged grain-based diet traditions. Low-carbohydrate diet movements, popularized since the 1970s and gaining substantial mainstream adoption since 2000, argue that excessive bread consumption contributes to metabolic diseases including obesity, type 2 diabetes, and cardiovascular disease. Conversely, nutritional science research demonstrates that whole-grain bread consumption correlates strongly with reduced cardiovascular disease risk, improved metabolic markers, and enhanced digestive health through fiber provision. A meta-analysis of 45 prospective cohort studies published in the British Medical Journal in 2016 found that populations consuming 90 grams daily of whole grains experienced 23 percent lower mortality risk. The distinction between refined grain and whole-grain products has emerged as critical to understanding bread's health impacts, with major health organizations emphasizing whole-grain products. However, in developing nations, economic constraints often make refined white bread more accessible than whole-grain alternatives, creating situations wherein nutritional knowledge does not translate to dietary change due to economic barriers."
+      }
+    ],
+    "questions": [
+      {
+        "id": "r10-q01",
+        "type": "ynng",
+        "prompt": "The author presents bread as having significance extending beyond its nutritional value.",
+        "answer": "YES",
+        "why": "Paragraph A states: 'This historical pattern demonstrates how bread transcended its nutritional function to become a carrier of social meaning, political power, and economic value.' The author explicitly argues bread has significance beyond nutrition."
+      },
+      {
+        "id": "r10-q02",
+        "type": "ynng",
+        "prompt": "The writer implies that Asian countries have less developed agricultural systems than Mediterranean regions.",
+        "answer": "NOT GIVEN",
+        "why": "Paragraph B states that Asian countries have lower bread consumption because 'rice rather than bread serves as the primary staple carbohydrate.' This reflects cultural preference and agricultural tradition, not agricultural development levels."
+      },
+      {
+        "id": "r10-q03",
+        "type": "ynng",
+        "prompt": "The author suggests that global wheat price increases disproportionately affected lower-income populations.",
+        "answer": "YES",
+        "why": "Paragraph C states: 'triggering widespread food security crises particularly affecting lower-income populations dependent on wheat and bread consumption' and notes this forced families to reduce nutritious foods. This implies disproportionate impact."
+      },
+      {
+        "id": "r10-q04",
+        "type": "ynng",
+        "prompt": "Industrial bread production improved the nutritional quality of consumed bread.",
+        "answer": "NO",
+        "why": "Paragraph D states: 'industrial production simultaneously reduced nutritional quality through refined flour processing, which removed bran and germ containing essential micronutrients, fiber, and phytonutrients.'"
+      },
+      {
+        "id": "r10-q05",
+        "type": "ynng",
+        "prompt": "The author believes that current economic barriers prevent nutrition knowledge from improving diet quality in developing nations.",
+        "answer": "YES",
+        "why": "Paragraph F states: 'economic constraints often make refined white bread more accessible than whole-grain alternatives, creating situations wherein nutritional knowledge does not translate to dietary change due to economic barriers.'"
+      },
+      {
+        "id": "r10-q06",
+        "type": "complete",
+        "prompt": "Bread consumption in Mediterranean countries averages between 60 to 80 kilograms per capita ___.",
+        "answer": [
+          "annually"
+        ],
+        "why": "Paragraph B states: 'averaging 60 to 80 kilograms per capita annually.' Annually is the exact term."
+      },
+      {
+        "id": "r10-q07",
+        "type": "complete",
+        "prompt": "Between 2010 and 2012, global ___ prices approximately doubled due to drought conditions.",
+        "answer": [
+          "wheat"
+        ],
+        "why": "Paragraph C states: 'Between 2010 and 2012, global wheat prices approximately doubled due to drought conditions.'"
+      },
+      {
+        "id": "r10-q08",
+        "type": "complete",
+        "prompt": "Industrial bread production reduced prices by approximately 30 to 40 percent relative to ___ production.",
+        "answer": [
+          "artisanal",
+          "traditional"
+        ],
+        "why": "Paragraph D states: 'reduced bread prices by approximately 30 to 40 percent relative to traditional artisanal production during the 1950s and 1960s.'"
+      },
+      {
+        "id": "r10-q09",
+        "type": "complete",
+        "prompt": "The slow food movement was initiated in ___ in 1986.",
+        "answer": [
+          "Italy"
+        ],
+        "why": "Paragraph D states: 'such as the slow food movement initiated in Italy in 1986.'"
+      },
+      {
+        "id": "r10-q10",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph A?",
+        "options": [
+          "i. Ancient Bread as Currency and Political Tool",
+          "ii. Bread Consumption and Socioeconomic Inequality",
+          "iii. Environmental Sustainability Challenges in Grain Production",
+          "iv. Modern Bread Production Technologies",
+          "v. Nutritional Comparisons of Bread Varieties",
+          "vi. Global Climate Change and Agriculture"
+        ],
+        "answer": "i",
+        "why": "Paragraph A discusses bread's historical role in Egypt and Rome as medium of exchange, political control, and carrier of social meaning. Option i matches this historical focus."
+      },
+      {
+        "id": "r10-q11",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph C?",
+        "options": [
+          "i. Ancient Bread as Currency and Political Tool",
+          "ii. Bread Consumption and Socioeconomic Inequality",
+          "iii. Environmental Sustainability Challenges in Grain Production",
+          "iv. Modern Bread Production Technologies",
+          "v. Nutritional Comparisons of Bread Varieties",
+          "vi. Global Climate Change and Agriculture"
+        ],
+        "answer": "ii",
+        "why": "Paragraph C discusses food security, poverty, price vulnerability, and how bread consumption relates to economic inequality. Option ii 'Bread Consumption and Socioeconomic Inequality' directly matches."
+      },
+      {
+        "id": "r10-q12",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph E?",
+        "options": [
+          "i. Ancient Bread as Currency and Political Tool",
+          "ii. Bread Consumption and Socioeconomic Inequality",
+          "iii. Environmental Sustainability Challenges in Grain Production",
+          "iv. Modern Bread Production Technologies",
+          "v. Nutritional Comparisons of Bread Varieties",
+          "vi. Global Climate Change and Agriculture"
+        ],
+        "answer": "iii",
+        "why": "Paragraph E discusses water consumption, land degradation, greenhouse gas emissions, and sustainability challenges in wheat production. Option iii matches this environmental focus."
+      },
+      {
+        "id": "r10-q13",
+        "type": "mcq",
+        "prompt": "According to the passage, wheat cultivation globally consumes approximately how many cubic meters of water annually?",
+        "options": [
+          "A. 90 billion cubic meters",
+          "B. 140 billion cubic meters",
+          "C. 216 billion cubic meters",
+          "D. 310 billion cubic meters"
+        ],
+        "answer": "C",
+        "why": "Paragraph E states: 'Wheat cultivation requires substantial water resources, with global production consuming approximately 216 billion cubic meters of water annually.'"
+      },
+      {
+        "id": "r10-q14",
+        "type": "match",
+        "prompt": "Match the following statements to the appropriate paragraphs (A-F). Which paragraph discusses bread's historical use as a medium of labor exchange?",
+        "options": [
+          "A. Paragraph A",
+          "B. Paragraph B",
+          "C. Paragraph C",
+          "D. Paragraph D",
+          "E. Paragraph E",
+          "F. Paragraph F"
+        ],
+        "answer": "A",
+        "why": "Paragraph A states: 'In ancient Egypt, bread served as a standardized medium of labor exchange, with workers receiving daily rations.'"
+      }
+    ]
+  },
+  {
+    "id": "r11",
+    "title": "Advanced Materials in Renewable Energy Systems",
+    "topic": "energy/materials science",
+    "paragraphs": [
+      {
+        "label": "A",
+        "text": "The transition to renewable energy systems requires fundamental advances in materials science to overcome technical and economic barriers associated with energy storage and transmission. Lithium-ion batteries, which dominate contemporary energy storage applications and powered approximately 70 percent of electric vehicles sold globally in 2023, depend upon sophisticated electrode materials synthesized from lithium cobalt oxide or lithium iron phosphate compounds. The critical dependency upon lithium and cobalt resources raises significant sustainability concerns, as global lithium reserves are distributed unevenly across geopolitical regions. Approximately 58 percent of global lithium resources concentrate in South America's 'Lithium Triangle' spanning Chile, Argentina, and Bolivia. Cobalt mining in the Democratic Republic of Congo, which supplies over 70 percent of global cobalt, has been associated with serious human rights concerns and environmental degradation. These resource constraints motivate intensive research into alternative battery chemistries and materials that could substantially reduce dependence upon constrained resources."
+      },
+      {
+        "label": "B",
+        "text": "Sodium-ion batteries represent a promising emerging technology designed to reduce dependence upon lithium and cobalt through substitution of sodium, an element far more abundant and geographically distributed than lithium. Sodium possesses numerous advantages over lithium in material and manufacturing contexts: it costs approximately 20 times less than lithium, occurs abundantly in marine environments and geological deposits, and demonstrates significantly lower environmental impact during extraction processes. The first commercial sodium-ion battery system, developed by Chinese manufacturer CATL, received certification in 2022 and entered production for integration into electric vehicles and stationary energy storage systems. Sodium-ion batteries demonstrate energy density approximately 25 to 30 percent lower than lithium-ion systems, which limits their suitability for applications requiring compact high-energy storage such as long-range electric vehicles, but makes them well-suited for stationary energy storage applications. Despite slightly reduced cycle life compared to lithium-ion systems, the substantially lower cost and improved sustainability profile position sodium-ion batteries as viable complements."
+      },
+      {
+        "label": "C",
+        "text": "Solid-state batteries represent a revolutionary materials technology promising to substantially increase energy density and eliminate thermal runaway risks that characterize liquid electrolyte lithium-ion batteries. Solid-state batteries replace the liquid electrolyte connecting positive and negative electrodes with a solid ceramic or polymer material, providing superior ionic conductivity while eliminating the flammable organic solvents that create fire hazards. This materials innovation enables anode compositions previously considered impractical, including lithium metal anodes that increase theoretical energy density by approximately 40 to 50 percent compared to graphite anodes employed in contemporary systems. Toyota, Nissan, and Nissan-affiliated battery manufacturer AESC have announced production timelines for solid-state batteries beginning in 2027, suggesting commercial viability approaching within the current decade. Laboratory demonstrations have achieved energy densities exceeding 500 Watt-hours per kilogram, compared to contemporary lithium-ion batteries' typical 250 to 350 Watt-hours per kilogram. However, solid-state battery development faces substantial technical challenges and manufacturing processes remain comparatively immature."
+      },
+      {
+        "label": "D",
+        "text": "Photovoltaic materials have undergone revolutionary transformation since the 1980s, as silicon-based solar cells achieved increasingly higher conversion efficiencies while costs declined by approximately 89 percent between 2010 and 2020. Perovskite solar cells, emerging as a promising alternative photovoltaic material, demonstrate laboratory efficiencies exceeding 30 percent compared to silicon's typical 15 to 22 percent commercial efficiency. Perovskites possess remarkable optoelectronic properties resulting from their crystal structure combining organic and inorganic components, enabling direct bandgap properties that permit solar photons to generate electron-hole pairs with high efficiency. Manufacturing processes for perovskite solar cells are comparatively simple and inexpensive, requiring solution-processing techniques rather than the energy-intensive silicon purification and crystallization processes. Despite these advantages, perovskite solar cells have experienced significant technical limitations including instability when exposed to moisture and oxygen, degradation accelerated by thermal cycling, and lead content in conventional compositions raising environmental concerns. Recent research developments including compositional engineering, protective coating strategies, and lead-free perovskite alternatives have substantially improved stability and durability characteristics."
+      },
+      {
+        "label": "E",
+        "text": "Superconducting materials offer revolutionary potential for energy transmission and conversion applications through elimination of electrical resistance in conductors, which conventionally dissipates 15 to 20 percent of transmitted electrical energy as waste heat. Conventional superconductors discovered in the early twentieth century required cooling to temperatures below 4 Kelvin, achievable only with liquid helium and associated with substantial operational expenses. High-temperature superconductors discovered beginning in 1987 operate at temperatures below 77 Kelvin, permitting cooling with liquid nitrogen, which costs approximately 10 times less than liquid helium and can be produced through well-established industrial processes. Current high-temperature superconducting materials, including yttrium barium copper oxide (YBCO) discovered in 1987, demonstrate critical current densities sufficient for large-scale electrical transmission at practical voltages and currents. Prototype superconducting transmission cables constructed with YBCO have demonstrated successful operation in pilot installations in North America, Europe, and Asia. However, widespread adoption faces substantial barriers including capital costs approximately three times higher than conventional copper-based transmission infrastructure."
+      },
+      {
+        "label": "F",
+        "text": "Advanced materials for thermal energy storage represent another critical frontier addressing renewable energy system integration challenges. Molten salt thermal energy storage systems, commercially deployed beginning in 2010, utilize mixtures of sodium nitrate and potassium nitrate heated to temperatures exceeding 500 degrees Celsius, enabling energy storage for 10 to 15 hours with minimal energy loss. The concentrated solar power facility in Ouarzazate, Morocco, commissioned in 2018, incorporates 900 megawatt-hours of molten salt storage capacity, enabling continuous power generation even during nighttime hours following sunset. Phase-change materials represent an emerging thermal storage technology promising higher energy density than conventional sensible heat storage systems through exploitation of latent heat released during crystallization and melting transitions. Paraffin wax and salt hydrates demonstrate specific heat capacities approximately 5 to 10 times higher than rock or sand conventionally used in thermal storage, enabling more compact storage systems. Current research efforts focus on developing composite phase-change materials incorporating stabilizing matrix compounds that can extend operational life to 1,000 or more thermal cycles."
+      }
+    ],
+    "questions": [
+      {
+        "id": "r11-q01",
+        "type": "tfng",
+        "prompt": "Lithium-ion batteries powered approximately 70 percent of electric vehicles sold globally in 2023.",
+        "answer": "TRUE",
+        "why": "Paragraph A states: 'powered approximately 70 percent of electric vehicles sold globally in 2023.'"
+      },
+      {
+        "id": "r11-q02",
+        "type": "tfng",
+        "prompt": "South America's Lithium Triangle contains less than half of the world's lithium resources.",
+        "answer": "FALSE",
+        "why": "Paragraph A states: 'approximately 58 percent of global lithium resources concentrated in South America's Lithium Triangle.' 58 percent is more than half."
+      },
+      {
+        "id": "r11-q03",
+        "type": "tfng",
+        "prompt": "Sodium-ion batteries were first commercially produced by a Chinese manufacturer in 2022.",
+        "answer": "TRUE",
+        "why": "Paragraph B states: 'The first commercial sodium-ion battery system, developed by Chinese manufacturer CATL, received certification in 2022.'"
+      },
+      {
+        "id": "r11-q04",
+        "type": "tfng",
+        "prompt": "Solid-state batteries can achieve higher energy density than conventional lithium-ion batteries.",
+        "answer": "TRUE",
+        "why": "Paragraph C states: 'Laboratory demonstrations have achieved energy densities exceeding 500 Watt-hours per kilogram, compared to contemporary lithium-ion batteries' typical 250 to 350 Watt-hours per kilogram.'"
+      },
+      {
+        "id": "r11-q05",
+        "type": "tfng",
+        "prompt": "Perovskite solar cells are less efficient than silicon-based solar cells in commercial applications.",
+        "answer": "FALSE",
+        "why": "Paragraph D states: 'demonstrate laboratory efficiencies exceeding 30 percent compared to silicon's typical 15 to 22 percent commercial efficiency.' Perovskite efficiencies are higher."
+      },
+      {
+        "id": "r11-q06",
+        "type": "complete",
+        "prompt": "Silicon-based solar cell costs declined by approximately 89 percent between 2010 and ___.",
+        "answer": [
+          "2020"
+        ],
+        "why": "Paragraph D states: 'costs declined by approximately 89 percent between 2010 and 2020.'"
+      },
+      {
+        "id": "r11-q07",
+        "type": "complete",
+        "prompt": "High-temperature superconductors were discovered beginning in ___.",
+        "answer": [
+          "1987"
+        ],
+        "why": "Paragraph E states: 'High-temperature superconductors discovered beginning in 1987.'"
+      },
+      {
+        "id": "r11-q08",
+        "type": "complete",
+        "prompt": "The concentrated solar power facility in Ouarzazate, Morocco, was commissioned in ___ and incorporates molten salt storage.",
+        "answer": [
+          "2018"
+        ],
+        "why": "Paragraph F states: 'The concentrated solar power facility in Ouarzazate, Morocco, commissioned in 2018.'"
+      },
+      {
+        "id": "r11-q09",
+        "type": "complete",
+        "prompt": "Phase-change materials demonstrate specific heat capacities approximately 5 to 10 times higher than ___ used in conventional thermal storage.",
+        "answer": [
+          "rock",
+          "sand",
+          "rock or sand"
+        ],
+        "why": "Paragraph F states: 'higher than rock or sand conventionally used in thermal storage.' Either term is correct."
+      },
+      {
+        "id": "r11-q10",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph A?",
+        "options": [
+          "i. Materials Requirements and Resource Constraints in Renewable Energy Storage",
+          "ii. Perovskite Solar Cells and Advanced Photovoltaic Materials",
+          "iii. Superconducting Materials for Energy Transmission and Applications",
+          "iv. Thermal Energy Storage Systems",
+          "v. Sodium-Ion Battery Technology",
+          "vi. Silicon Photovoltaic Efficiency Improvements"
+        ],
+        "answer": "i",
+        "why": "Paragraph A discusses materials needs for renewable energy systems and resource constraints with lithium and cobalt. Option i matches this content."
+      },
+      {
+        "id": "r11-q11",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph D?",
+        "options": [
+          "i. Materials Requirements and Resource Constraints in Renewable Energy Storage",
+          "ii. Perovskite Solar Cells and Advanced Photovoltaic Materials",
+          "iii. Superconducting Materials for Energy Transmission and Applications",
+          "iv. Thermal Energy Storage Systems",
+          "v. Sodium-Ion Battery Technology",
+          "vi. Silicon Photovoltaic Efficiency Improvements"
+        ],
+        "answer": "ii",
+        "why": "Paragraph D discusses perovskite solar cells, their efficiency, manufacturing, and stability challenges. Option ii directly matches this content."
+      },
+      {
+        "id": "r11-q12",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph E?",
+        "options": [
+          "i. Materials Requirements and Resource Constraints in Renewable Energy Storage",
+          "ii. Perovskite Solar Cells and Advanced Photovoltaic Materials",
+          "iii. Superconducting Materials for Energy Transmission and Applications",
+          "iv. Thermal Energy Storage Systems",
+          "v. Sodium-Ion Battery Technology",
+          "vi. Silicon Photovoltaic Efficiency Improvements"
+        ],
+        "answer": "iii",
+        "why": "Paragraph E discusses superconductor materials, their properties, and applications in electrical transmission. Option iii matches this content."
+      },
+      {
+        "id": "r11-q13",
+        "type": "mcq",
+        "prompt": "Sodium-ion batteries have approximately what percentage lower energy density compared to lithium-ion systems?",
+        "options": [
+          "A. 10-15 percent",
+          "B. 25-30 percent",
+          "C. 40-50 percent",
+          "D. 60-70 percent"
+        ],
+        "answer": "B",
+        "why": "Paragraph B states: 'Sodium-ion batteries demonstrate energy density approximately 25 to 30 percent lower than lithium-ion systems.'"
+      },
+      {
+        "id": "r11-q14",
+        "type": "mcq",
+        "prompt": "According to the passage, conventional electrical transmission systems dissipate what percentage of transmitted energy as waste heat?",
+        "options": [
+          "A. 5-10 percent",
+          "B. 15-20 percent",
+          "C. 25-30 percent",
+          "D. 35-40 percent"
+        ],
+        "answer": "B",
+        "why": "Paragraph E states: 'which conventionally dissipates 15 to 20 percent of transmitted electrical energy as waste heat.'"
+      }
+    ]
+  },
+  {
+    "id": "r12",
+    "title": "The Neuroscience of Sleep and Cognitive Memory Consolidation",
+    "topic": "cognitive science",
+    "paragraphs": [
+      {
+        "label": "A",
+        "text": "Sleep represents a fundamental biological necessity for humans and other organisms, characterized by coordinated neural, hormonal, and metabolic processes that vary systematically across distinct physiological stages. Throughout history, sleep was often dismissed as a passive physiological state with minimal functional significance. Contemporary neuroscientific research reveals that sleep constitutes an active biological state during which the brain engages in essential maintenance and consolidation processes that cannot occur during waking periods. Modern sleep science emerged during the 1950s when researchers Nathaniel Kleitman and Eugene Aserinsky discovered rapid eye movement, or REM sleep, through electroencephalography and electro-oculography measurements. This breakthrough launched intensive investigation into sleep's neurobiological mechanisms. Research identified two fundamentally distinct sleep stages: REM sleep, comprising approximately 20 to 25 percent of total adult sleep time and characterized by rapid eye movements and vivid dream content; and non-REM sleep, comprising approximately 75 to 80 percent of sleep time and subdivided into stages N1, N2, and N3 with progressively deeper sleep and lower brain metabolic activity."
+      },
+      {
+        "label": "B",
+        "text": "Memory consolidation during sleep represents one of sleep's most extensively documented functions, with research demonstrating that sleep plays a critical role in transforming temporary memories into stable long-term storage. During waking periods, the hippocampus, a seahorse-shaped brain structure located in the temporal lobe, encodes experiences as unstable neural patterns subject to decay and interference. Sleep-dependent memory consolidation processes, particularly occurring during non-REM stages N2 and N3, involve reactivation of hippocampal neural ensembles in a phenomenon termed 'replay,' wherein neurons fire in sequences reproducing patterns representing learned information. This neural replay occurs in coordination with sleep-specific spindle oscillations, transient bursts of neural activity at 12 to 16 Hertz frequency, which facilitate transfer of hippocampal memories to the neocortex. Spindle density, the frequency of sleep spindle occurrence during night sleep, correlates significantly with cognitive performance and learning ability, with individuals exhibiting higher spindle density demonstrating superior performance on intelligence tests. Pharmacological studies blocking spindle generation impair memory consolidation, providing direct evidence for spindle's functional necessity."
+      },
+      {
+        "label": "C",
+        "text": "Dreams, the vivid subjective experiences reported particularly during REM sleep, have been subject to divergent scientific interpretations regarding their functional significance and neurobiological origins. Sigmund Freud's psychoanalytic theory, proposed in his 1900 work 'The Interpretation of Dreams,' characterized dreams as expressions of unconscious wishes disguised through symbolic transformation. Modern neuroscience has moved beyond Freudian interpretations toward mechanistic explanations grounded in neural activity patterns during REM sleep. The activation-synthesis hypothesis, formulated by Hobson and McCarley in 1977, proposes that dreams arise from the brain's attempt to construct coherent narratives from random neural activation patterns occurring during REM sleep. During REM sleep, the brainstem generates random cholinergic activation of cortical areas while simultaneously suppressing norepinephrine and serotonin neurotransmitters that normally maintain logical thinking patterns. The cortex, receiving this chaotic input, spontaneously generates dream content through attempted integration of these fragmentary signals. Contrary to Freudian dream theory, contemporary research suggests dreams primarily reflect neural noise rather than encoding meaningful psychological information."
+      },
+      {
+        "label": "D",
+        "text": "Sleep deprivation produces profound cognitive and physiological deterioration demonstrating sleep's essential function in maintaining neural and organismal homeostasis. Partial sleep deprivation, defined as restricting sleep to fewer than six hours nightly, impairs attention, working memory, and executive function through mechanisms including decreased activation in prefrontal cortex regions. Complete sleep deprivation for periods exceeding 48 to 72 hours produces severe cognitive impairment including microsleep episodes, hallucinations, and potentially fatal autonomic nervous system dysregulation. The lethal familial insomnia, a rare neurodegenerative disease caused by prion protein mutations affecting sleep regulation, demonstrates sleep's absolute necessity for survival; affected individuals typically expire within 6 to 18 months following symptom onset. Chronic insufficient sleep, a widespread condition affecting an estimated 35 to 40 percent of adults in industrialized nations according to epidemiological surveys conducted 2010 to 2020, associates with increased mortality risk, cardiovascular disease incidence, metabolic disorders including obesity and type 2 diabetes. A prospective cohort study published in the Journal of Clinical Sleep Medicine in 2019 found that individuals sleeping fewer than six hours nightly experienced 40 percent higher mortality risk."
+      },
+      {
+        "label": "E",
+        "text": "Sleep-wake regulation depends upon integrated neural and hormonal systems controlling circadian rhythms and homeostatic sleep pressure. The suprachiasmatic nucleus, a hypothalamic structure containing approximately 20,000 neurons, functions as the central circadian pacemaker, receiving light information and generating rhythmic neural activity controlling body temperature, melatonin secretion, and sleep-wake timing. Light exposure, particularly blue-wavelength light around 480 nanometers, suppresses melatonin and promotes wakefulness through melanopsin photopigments. Artificial evening light exposure from electronic devices interferes with melatonin and circadian rhythm alignment, contributing to sleep disturbances. Homeostatic sleep pressure depends upon accumulation of adenosine, a neuromodulatory nucleoside that builds up during wakefulness and dissipates during sleep. Caffeine achieves wakefulness-promoting effects through adenosine receptor antagonism, blocking sleep signals."
+      },
+      {
+        "label": "F",
+        "text": "Interventions improving sleep quality have gained substantial scientific validation through randomized controlled trials. Cognitive-behavioral therapy for insomnia (CBT-I), developed during the 1990s, involves stimulus control, sleep restriction, relaxation, and cognitive restructuring addressing unhelpful thoughts. Meta-analyses published between 2010 and 2023 demonstrate CBT-I efficacy equals or exceeds pharmacological interventions while avoiding dependence risks. A 2015 JAMA Psychiatry trial comparing CBT-I to medication in 208 adults found CBT-I produced superior long-term outcomes with 64 percent remission versus 39 percent in the medication group. Sleep hygiene modifications include consistent sleep-wake timing, bedroom temperature 16-19 degrees Celsius, darkness, and avoiding caffeine and alcohol before bed. These behavioral approaches offer superior long-term outcomes versus pharmacological treatments."
+      }
+    ],
+    "questions": [
+      {
+        "id": "r12-q01",
+        "type": "tfng",
+        "prompt": "REM sleep comprises approximately 20 to 25 percent of total adult sleep time.",
+        "answer": "TRUE",
+        "why": "Paragraph A states: 'REM sleep, comprising approximately 20 to 25 percent of total adult sleep time.'"
+      },
+      {
+        "id": "r12-q02",
+        "type": "tfng",
+        "prompt": "Sleep spindles occur at frequencies between 12 to 16 Hertz.",
+        "answer": "TRUE",
+        "why": "Paragraph B states: 'sleep-specific spindle oscillations, transient bursts of neural activity at 12 to 16 Hertz frequency.'"
+      },
+      {
+        "id": "r12-q03",
+        "type": "tfng",
+        "prompt": "Freud's dream theory has been completely replaced by modern neuroscience.",
+        "answer": "FALSE",
+        "why": "Paragraph C states: 'Modern neuroscience has moved beyond Freudian interpretations,' indicating movement beyond rather than complete replacement, and acknowledges emerging evidence for dreams' functions."
+      },
+      {
+        "id": "r12-q04",
+        "type": "tfng",
+        "prompt": "Partial sleep deprivation defined as fewer than six hours nightly impairs executive function.",
+        "answer": "TRUE",
+        "why": "Paragraph D states: 'Partial sleep deprivation, defined as restricting sleep to fewer than six hours nightly, impairs...executive function.'"
+      },
+      {
+        "id": "r12-q05",
+        "type": "tfng",
+        "prompt": "Blue light exposure suppresses melatonin production and promotes wakefulness.",
+        "answer": "TRUE",
+        "why": "Paragraph E states: 'Light exposure, particularly blue-wavelength light around 480 nanometers, suppresses melatonin production and promotes wakefulness.'"
+      },
+      {
+        "id": "r12-q06",
+        "type": "complete",
+        "prompt": "The hippocampus is a seahorse-shaped brain structure located in the ___ lobe.",
+        "answer": [
+          "temporal"
+        ],
+        "why": "Paragraph B states: 'the hippocampus, a seahorse-shaped brain structure located in the temporal lobe.'"
+      },
+      {
+        "id": "r12-q07",
+        "type": "complete",
+        "prompt": "The suprachiasmatic nucleus contains approximately ___ neurons.",
+        "answer": [
+          "20,000"
+        ],
+        "why": "Paragraph E states: 'The suprachiasmatic nucleus, a specialized hypothalamic structure containing approximately 20,000 neurons.'"
+      },
+      {
+        "id": "r12-q08",
+        "type": "complete",
+        "prompt": "Adenosine is a neuromodulatory ___ that builds up during waking activity.",
+        "answer": [
+          "nucleoside"
+        ],
+        "why": "Paragraph E states: 'Homeostatic sleep pressure...depends upon accumulation of adenosine, a neuromodulatory nucleoside.'"
+      },
+      {
+        "id": "r12-q09",
+        "type": "complete",
+        "prompt": "The optimal bedroom temperature for sleep is approximately 16 to 19 degrees ___.",
+        "answer": [
+          "Celsius"
+        ],
+        "why": "Paragraph F states: 'bedroom temperature control around 16 to 19 degrees Celsius.'"
+      },
+      {
+        "id": "r12-q10",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph A?",
+        "options": [
+          "i. Historical Perspectives on Sleep as Biological Necessity",
+          "ii. Memory Consolidation During Sleep Stages",
+          "iii. Dream Content and Competing Neuroscientific Theories",
+          "iv. Sleep Deprivation and Cognitive Deterioration",
+          "v. Neural and Hormonal Systems Regulating Sleep-Wake Cycles",
+          "vi. Circadian Rhythm Regulation Mechanisms"
+        ],
+        "answer": "i",
+        "why": "Paragraph A discusses historical perspectives on sleep, the shift from viewing it as passive to active, and the discovery of REM sleep. Option i matches this historical and developmental perspective."
+      },
+      {
+        "id": "r12-q11",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph C?",
+        "options": [
+          "i. Historical Perspectives on Sleep as Biological Necessity",
+          "ii. Memory Consolidation During Sleep Stages",
+          "iii. Dream Content and Competing Neuroscientific Theories",
+          "iv. Sleep Deprivation and Cognitive Deterioration",
+          "v. Neural and Hormonal Systems Regulating Sleep-Wake Cycles",
+          "vi. Circadian Rhythm Regulation Mechanisms"
+        ],
+        "answer": "iii",
+        "why": "Paragraph C discusses Freud's theory, activation-synthesis hypothesis, and competing theories about dreams' functions. Option iii 'Dream Content and Competing Neuroscientific Theories' matches this content."
+      },
+      {
+        "id": "r12-q12",
+        "type": "heading",
+        "prompt": "Which heading best fits Paragraph E?",
+        "options": [
+          "i. Historical Perspectives on Sleep as Biological Necessity",
+          "ii. Memory Consolidation During Sleep Stages",
+          "iii. Dream Content and Competing Neuroscientific Theories",
+          "iv. Sleep Deprivation and Cognitive Deterioration",
+          "v. Neural and Hormonal Systems Regulating Sleep-Wake Cycles",
+          "vi. Circadian Rhythm Regulation Mechanisms"
+        ],
+        "answer": "v",
+        "why": "Paragraph E discusses the suprachiasmatic nucleus, circadian regulation, and homeostatic sleep pressure. Option v 'Neural and Hormonal Systems Regulating Sleep-Wake Cycles' describes this content."
+      },
+      {
+        "id": "r12-q13",
+        "type": "mcq",
+        "prompt": "According to epidemiological surveys conducted 2010-2020, approximately what percentage of adults in industrialized nations experience chronic insufficient sleep?",
+        "options": [
+          "A. 15-20 percent",
+          "B. 25-30 percent",
+          "C. 35-40 percent",
+          "D. 45-50 percent"
+        ],
+        "answer": "C",
+        "why": "Paragraph D states: 'Chronic insufficient sleep, a widespread condition affecting an estimated 35 to 40 percent of adults in industrialized nations according to epidemiological surveys conducted 2010 to 2020.'"
+      },
+      {
+        "id": "r12-q14",
+        "type": "mcq",
+        "prompt": "A 2015 randomized controlled trial comparing CBT-I to sedative medication found what percentage of CBT-I patients achieved remission?",
+        "options": [
+          "A. 39 percent",
+          "B. 52 percent",
+          "C. 64 percent",
+          "D. 76 percent"
+        ],
+        "answer": "C",
+        "why": "Paragraph F states: 'A randomized controlled trial published in JAMA Psychiatry in 2015...found that CBT-I produced...64 percent of CBT-I patients achieving remission.'"
+      }
+    ]
+  }
+]
