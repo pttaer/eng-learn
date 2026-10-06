@@ -47,10 +47,10 @@ export class VocabularyDossier {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-vocabulary interactive';
     this.allDeck = vocabularyData as VocabItem[];
-    this.activeLevel = defaultLevel(this.allDeck);
+    this.activeLevel = defaultLevel(this.allDeck, StorageManager.getSkillLevel('vocab'));
     this.filterDeck();
     window.addEventListener('learner-level-change', () => {
-      this.activeLevel = defaultLevel(this.allDeck);
+      this.activeLevel = defaultLevel(this.allDeck, StorageManager.getSkillLevel('vocab'));
       this.filterDeck();
       if (this.container.isConnected) this.render();
     });

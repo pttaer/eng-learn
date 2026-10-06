@@ -5,6 +5,7 @@ import { AtomicCard } from '../core/atomic-card';
 import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
+import { SkillTreeEngine } from '../core/skill-tree-engine';
 import readingData from '../assets/data/reading.json';
 
 export interface ReadingArticle {
@@ -340,9 +341,9 @@ export class ReadingDossier {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-reading interactive';
     this.allArticles = (readingData as any).articles as ReadingArticle[];
-    this.activeLevel = defaultLevel(this.allArticles);
+    this.activeLevel = defaultLevel(this.allArticles, StorageManager.getSkillLevel('reading'));
     this.articles = this.allArticles.filter(a => a.cefrLevel === this.activeLevel);
-    window.addEventListener('learner-level-change', () => this.setLevel(defaultLevel(this.allArticles)));
+    window.addEventListener('learner-level-change', () => this.setLevel(defaultLevel(this.allArticles, StorageManager.getSkillLevel('reading'))));
   }
 
   private setLevel(level: Cefr): void {
@@ -991,6 +992,7 @@ export class ReadingDossier {
 
     slot.querySelector('.btn-finish-reading')?.addEventListener('click', () => {
       AudioSynthesizer.play('absorb');
+      SkillTreeEngine.advanceBranchMastery('reading', this.activeLevel, 10);
       if (this.onBatchComplete) {
         this.onBatchComplete();
       }

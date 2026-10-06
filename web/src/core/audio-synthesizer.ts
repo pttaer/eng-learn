@@ -18,7 +18,10 @@ export type SoundEffectType =
   | 'streak-fire'
   | 'tour-step'
   | 'tour-fanfare'
+  | 'stage-fanfare'
+  | 'radar-reveal'
   | 'mechanical-click'
+  | 'keystroke'
   | 'streak-chime'
   | 'xp-pickup';
 
@@ -317,7 +320,16 @@ export class AudioSynthesizer {
         this.playTourFanfare(t);
         HapticEngine.trigger('success');
         break;
+      case 'stage-fanfare':
+        this.playStageFanfare(t);
+        HapticEngine.trigger('success');
+        break;
+      case 'radar-reveal':
+        this.playRadarReveal(t);
+        HapticEngine.trigger('success');
+        break;
       case 'mechanical-click':
+      case 'keystroke':
         this.dispatchMechanicalClick(1.0);
         break;
       case 'streak-chime':
@@ -1097,6 +1109,51 @@ export class AudioSynthesizer {
     });
   }
 
+  /**
+   * Stage Fanfare: Triumphant ascending arpeggio for multi-skill stage completion.
+   */
+  private static playStageFanfare(t: number): void {
+    this.playTourFanfare(t);
+  }
+
+  /**
+   * Radar Reveal: 5-note celestial pentatonic arpeggio (D4 -> F#4 -> A4 -> C#5 -> E5, 600ms)
+   * representing the 5 axes of the Celestial Radar Profile Pentagram.
+   * Synthesized with pure sines, 4ms micro-attacks from non-zero EPSILON, and smooth exponential decays.
+   */
+  private static playRadarReveal(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+
+    const notes = [
+      { freq: 293.66, delay: 0.00, dur: 0.35, peak: 0.20 }, // D4 (Vocab)
+      { freq: 369.99, delay: 0.09, dur: 0.35, peak: 0.22 }, // F#4 (Grammar)
+      { freq: 440.00, delay: 0.18, dur: 0.38, peak: 0.24 }, // A4 (Reading)
+      { freq: 554.37, delay: 0.27, dur: 0.40, peak: 0.26 }, // C#5 (Listening)
+      { freq: 659.25, delay: 0.36, dur: 0.45, peak: 0.28 }  // E5 (Writing)
+    ];
+
+    notes.forEach(({ freq, delay, dur, peak }) => {
+      const osc = this.ctx!.createOscillator();
+      const gain = this.ctx!.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, t + delay);
+
+      const nStart = t + delay;
+      const nEnd = nStart + dur;
+
+      gain.gain.setValueAtTime(this.EPSILON, nStart);
+      gain.gain.exponentialRampToValueAtTime(peak, nStart + 0.004);
+      gain.gain.exponentialRampToValueAtTime(this.EPSILON, nEnd - 0.004);
+
+      osc.connect(gain);
+      gain.connect(this.masterGain!);
+
+      osc.start(nStart);
+      osc.stop(nEnd);
+    });
+  }
+
   // =========================================================================
   // WEB SPEECH API TELEMETRY & VOICE DIALECT FALLBACK SUBSYSTEM
   // =========================================================================
@@ -1201,5 +1258,14 @@ export class AudioSynthesizer {
 
   public static getActiveUtterance(): SpeechSynthesisUtterance | null {
     return this.activeUtterance;
+  }
+
+  public static stopSpeech(): void {
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      try {
+        window.speechSynthesis.cancel();
+      } catch {}
+    }
+    this.activeUtterance = null;
   }
 }

@@ -9,9 +9,9 @@ export function levelsWithContent(items: Leveled[]): Cefr[] {
   return CEFR_ORDER.filter(l => present.has(l));
 }
 
-/** Learner's level, or the nearest level that has content. */
-export function defaultLevel(items: Leveled[]): Cefr {
-  return effectiveLevel(StorageManager.getLearnerLevel(), new Set(levelsWithContent(items)));
+/** Learner's level (or specified preferred level), or the nearest level that has content. */
+export function defaultLevel(items: Leveled[], preferredLevel?: Cefr): Cefr {
+  return effectiveLevel(preferredLevel ?? StorageManager.getLearnerLevel(), new Set(levelsWithContent(items)));
 }
 
 export function levelChipsHtml(levels: Cefr[], active: Cefr): string {

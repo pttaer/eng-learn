@@ -2,9 +2,21 @@ import { Cefr, isCefr } from '../core/cefr';
 import { SKILL_BRANCHES } from '../core/skill-tree-data';
 import { SRSCardState } from '../core/srs-engine';
 
+export type SkillId = 'vocab' | 'grammar' | 'reading' | 'listening' | 'writing' | 'speaking';
+
+export const ALL_SKILLS: readonly SkillId[] = ['vocab', 'grammar', 'reading', 'listening', 'writing', 'speaking'];
+
+export interface SkillProfile {
+  overall: Cefr;
+  skills: Record<SkillId, Cefr>;
+  assessedAt: string;
+}
+
 export interface AppStorageState {
   version: number;
   learnerLevel: Cefr;
+  skillLevels: Record<SkillId, Cefr>;
+  skillProfileHistory?: SkillProfile[];
   placementDone: boolean;
   soundMuted: boolean;
   cardStates: Record<string, SRSCardState>;
@@ -23,7 +35,7 @@ export interface AppStorageState {
 }
 
 const STORAGE_KEY = 'STARK_ENG_STATE';
-const CURRENT_VERSION = 2;
+export const CURRENT_VERSION = 3;
 
 function getTodayString(): string {
   const d = new Date();
@@ -33,9 +45,22 @@ function getTodayString(): string {
   return `${year}-${month}-${day}`;
 }
 
+function defaultSkillLevels(level: Cefr = 'A1'): Record<SkillId, Cefr> {
+  return {
+    vocab: level,
+    grammar: level,
+    reading: level,
+    listening: level,
+    writing: level,
+    speaking: level
+  };
+}
+
 const DEFAULT_STATE: AppStorageState = {
   version: CURRENT_VERSION,
   learnerLevel: 'A1',
+  skillLevels: defaultSkillLevels('A1'),
+  skillProfileHistory: [],
   placementDone: false,
   soundMuted: false,
   cardStates: {},
@@ -50,7 +75,12 @@ const DEFAULT_STATE: AppStorageState = {
 };
 
 export class StorageManager {
+  public static readonly CURRENT_VERSION = CURRENT_VERSION;
   private static cachedState: AppStorageState | null = null;
+
+  public static clearCache(): void {
+    this.cachedState = null;
+  }
 
   public static loadState(): AppStorageState {
     if (this.cachedState) {
@@ -67,16 +97,22 @@ export class StorageManager {
 
       const parsed = JSON.parse(raw) as Partial<AppStorageState>;
       if (!isCefr(parsed.learnerLevel)) this.seedLegacyTreeProgress(parsed);
+      const migratedLevel = this.migratedLevel(parsed);
       this.cachedState = {
         ...DEFAULT_STATE,
         ...parsed,
         version: CURRENT_VERSION,
-        learnerLevel: this.migratedLevel(parsed),
+        learnerLevel: migratedLevel,
+        skillLevels: this.migratedSkillLevels(parsed, migratedLevel),
+        skillProfileHistory: Array.isArray(parsed.skillProfileHistory) ? parsed.skillProfileHistory : [],
         placementDone: parsed.placementDone ?? !isCefr(parsed.learnerLevel),
         streak: { ...DEFAULT_STATE.streak, ...(parsed.streak || {}) },
         habitProgress: parsed.habitProgress || {},
         cardStates: parsed.cardStates || {}
       };
+      if (parsed.version !== CURRENT_VERSION || !parsed.skillLevels) {
+        this.saveState(this.cachedState);
+      }
       return this.cachedState;
     } catch (err) {
       console.error('[STORAGE] Failed to parse localStorage state, resetting to default.', err);
@@ -100,6 +136,63 @@ export class StorageManager {
   // v1 states have no learnerLevel; those users were already working at B2+, so start them at B2
   private static migratedLevel(parsed: Partial<AppStorageState>): Cefr {
     return isCefr(parsed.learnerLevel) ? parsed.learnerLevel : 'B2';
+  }
+
+  private static defaultSkillLevels(level: Cefr): Record<SkillId, Cefr> {
+    return {
+      vocab: level,
+      grammar: level,
+      reading: level,
+      listening: level,
+      writing: level,
+      speaking: level
+    };
+  }
+
+  private static migratedSkillLevels(parsed: Partial<AppStorageState>, defaultLevel: Cefr): Record<SkillId, Cefr> {
+    const raw = (parsed.skillLevels || {}) as Partial<Record<SkillId, Cefr>>;
+    const result: Record<SkillId, Cefr> = this.defaultSkillLevels(defaultLevel);
+    for (const skill of ALL_SKILLS) {
+      if (isCefr(raw[skill])) {
+        result[skill] = raw[skill] as Cefr;
+      }
+    }
+    return result;
+  }
+
+  public static getSkillLevel(skill: SkillId): Cefr {
+    const state = this.loadState();
+    return state.skillLevels?.[skill] || state.learnerLevel || 'A1';
+  }
+
+  public static setSkillLevel(skill: SkillId, level: Cefr): void {
+    const state = this.loadState();
+    if (!state.skillLevels) {
+      state.skillLevels = this.migratedSkillLevels(state, state.learnerLevel);
+    }
+    state.skillLevels[skill] = level;
+    this.saveState(state);
+  }
+
+  public static getSkillProfile(): SkillProfile {
+    const state = this.loadState();
+    return {
+      overall: state.learnerLevel,
+      skills: { ...(state.skillLevels || this.defaultSkillLevels(state.learnerLevel)) },
+      assessedAt: new Date().toISOString()
+    };
+  }
+
+  public static saveSkillProfile(profile: SkillProfile): void {
+    const state = this.loadState();
+    state.learnerLevel = profile.overall;
+    state.skillLevels = { ...profile.skills };
+    state.placementDone = true;
+    if (!Array.isArray(state.skillProfileHistory)) {
+      state.skillProfileHistory = [];
+    }
+    state.skillProfileHistory.push(profile);
+    this.saveState(state);
   }
 
   public static getLearnerLevel(): Cefr {
@@ -221,11 +314,14 @@ export class StorageManager {
       const parsed = JSON.parse(jsonString) as AppStorageState;
       if (parsed && typeof parsed === 'object' && parsed.cardStates) {
         if (!isCefr(parsed.learnerLevel)) this.seedLegacyTreeProgress(parsed);
+        const migratedLevel = this.migratedLevel(parsed);
         this.saveState({
           ...DEFAULT_STATE,
           ...parsed,
           version: CURRENT_VERSION,
-          learnerLevel: this.migratedLevel(parsed),
+          learnerLevel: migratedLevel,
+          skillLevels: this.migratedSkillLevels(parsed, migratedLevel),
+          skillProfileHistory: Array.isArray(parsed.skillProfileHistory) ? parsed.skillProfileHistory : [],
           placementDone: parsed.placementDone ?? !isCefr(parsed.learnerLevel)
         });
         return true;

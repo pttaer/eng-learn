@@ -3280,6 +3280,603 @@
           "syntacticReconstruction": "If you study a little every day, you will make progress, and your confidence will grow."
         }
       }
+    },
+    {
+      "id": "reading-b2-1",
+      "title": "The Shifting Landscape of Remote Work Culture",
+      "stage": "Stage 2: Competency & Fluidity (CEFR B2)",
+      "cefrLevel": "B2",
+      "genre": "Workplace Sociology & Organisational Dynamics",
+      "source": "Original text written for English Singularity",
+      "wordCount": 295,
+      "readingTime": "2.1 min @ 140 WPM (Intensive)",
+      "content": "Over the past decade, remote and hybrid employment arrangements have evolved from emergency contingency plans into established pillars of contemporary corporate culture. While early advocates championed the unprecedented flexibility and autonomy afforded to professionals, contemporary analysts increasingly highlight the nuanced challenges that accompany a dispersed workforce. When physical office boundaries dissolve, maintaining spontaneous collaboration and mutual trust requires deliberate organizational architecture.\n\nOne prominent dilemma involves the erosion of informal mentoring. Junior employees in distributed environments frequently struggle to absorb tacit knowledge—the unwritten conventions, diplomatic phrasing, and negotiation subtleties traditionally acquired through passive observation of senior colleagues. Although scheduled video conferences facilitate structured status updates, they rarely reproduce the casual, serendipitous hallway interactions where creative breakthroughs and interpersonal rapport naturally develop.\n\nConsequently, forward-thinking organizations are redefining workplace communication. Rather than relying on constant synchronous availability, which inevitably fuels cognitive exhaustion and digital burnout, progressive leaders prioritize asynchronous transparency. By establishing exhaustive documentation repositories and clear communication protocols, enterprises enable team members to contribute meaningfully across disparate time zones without compromising their psychological well-being. Ultimately, the long-term viability of distributed employment depends not merely on advanced digital infrastructure, but on cultivating sustainable boundaries that balance collective accountability with personal autonomy.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Remote work offers unprecedented flexibility, but preserving mentorship and collaboration requires replacing constant synchronous presence with deliberate asynchronous documentation and sustainable workplace boundaries.",
+          "markedLexicalTargets": [
+            "contingency plans",
+            "unprecedented flexibility",
+            "dispersed workforce",
+            "tacit knowledge",
+            "passive observation",
+            "cognitive exhaustion",
+            "asynchronous transparency",
+            "psychological well-being"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "What hidden difficulty do junior employees encounter in distributed environments?",
+              "answer": "They struggle to absorb tacit knowledge and nuanced workplace skills traditionally learned through passive observation of senior peers.\n  - Q: Why is constant synchronous availability considered detrimental?\n    A: It inevitably fuels cognitive exhaustion and digital burnout among employees.\n  - Q: How do progressive organizations support teams across multiple time zones?\n    A: By prioritizing asynchronous transparency through comprehensive documentation repositories and structured protocols."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "Over the past decade, remote and hybrid employment arrangements have evolved from emergency contingency plans into established pillars of contemporary corporate culture.",
+            "coreSVO": {
+              "subject": "remote and hybrid employment arrangements",
+              "verb": "have evolved",
+              "objectOrComplement": "(prepositional complements: from contingency plans into established pillars)"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Prepositional Time Modifier",
+                "clause": "Over the past decade",
+                "function": "Situates the evolutionary transition across a historical continuum."
+              }
+            ],
+            "syntacticAnalysis": "Present perfect tense (\"have evolved\") denotes a process originating in past decades whose outcome governs present institutional reality. Compound noun phrases enrich conceptual precision."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "While early advocates championed the unprecedented flexibility afforded to professionals, contemporary analysts increasingly highlight the nuanced challenges that accompany a dispersed workforce.",
+            "coreSVO": {
+              "subject": "contemporary analysts",
+              "verb": "highlight",
+              "objectOrComplement": "the nuanced challenges"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Adverbial Concessive Clause",
+                "clause": "While early advocates championed the unprecedented flexibility afforded to professionals",
+                "function": "Contrasts initial optimism with mature analytical scrutiny."
+              },
+              {
+                "type": "Participial Modifier",
+                "clause": "afforded to professionals",
+                "function": "Reduced relative clause (\"which was afforded\")."
+              },
+              {
+                "type": "Relative Clause",
+                "clause": "that accompany a dispersed workforce",
+                "function": "Restricts and defines the nature of the challenges."
+              }
+            ],
+            "syntacticAnalysis": "Balanced periodic sentence utilizing concessive contrast (\"While...\") followed by main clause assertion with analytical depth."
+          },
+          {
+            "sentenceIndex": 3,
+            "sentence": "Rather than relying on constant synchronous availability, which inevitably fuels cognitive exhaustion, progressive leaders prioritize asynchronous transparency.",
+            "coreSVO": {
+              "subject": "progressive leaders",
+              "verb": "prioritize",
+              "objectOrComplement": "asynchronous transparency"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Non-finite Prepositional Clause",
+                "clause": "Rather than relying on constant synchronous availability",
+                "function": "Establishes counter-advocacy to traditional presence bias."
+              },
+              {
+                "type": "Non-restrictive Relative Clause",
+                "clause": "which inevitably fuels cognitive exhaustion",
+                "function": "Supplies causal evaluation of synchronous expectations."
+              }
+            ],
+            "syntacticAnalysis": "Sentence-initial participial contrast directs focus immediately to strategic organizational differentiation."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-b2-1-1",
+            "targetWord": "contingency",
+            "partOfSpeech": "noun",
+            "ipa": "/kənˈtɪn.dʒən.si/",
+            "definition": "A future event or circumstance which is possible but cannot be predicted with certainty; a provision for an unforeseen event.",
+            "vietnamese": "sự việc bất ngờ, tình huống dự phòng",
+            "contextSentence": "Remote work evolved from emergency contingency plans into established pillars of corporate culture.",
+            "collocations": [
+              "contingency plan",
+              "prepare for contingencies",
+              "contingency fund"
+            ],
+            "etymology": "From Latin contingere (to touch, happen, befall)."
+          },
+          {
+            "id": "mine-reading-b2-1-2",
+            "targetWord": "unprecedented",
+            "partOfSpeech": "adjective",
+            "ipa": "/ʌnˈpres.ɪ.den.tɪd/",
+            "definition": "Never done or known before; without previous example.",
+            "vietnamese": "chưa từng có, chưa từng có tiền lệ",
+            "contextSentence": "Early advocates championed the unprecedented flexibility afforded to professionals.",
+            "collocations": [
+              "unprecedented scale",
+              "unprecedented flexibility",
+              "unprecedented growth"
+            ],
+            "etymology": "From un- (not) + precedent (from Latin praecedere, to go before)."
+          },
+          {
+            "id": "mine-reading-b2-1-3",
+            "targetWord": "tacit",
+            "partOfSpeech": "adjective",
+            "ipa": "/ˈtæs.ɪt/",
+            "definition": "Understood or implied without being stated openly or directly.",
+            "vietnamese": "ngầm hiểu, ngầm định, không diễn đạt bằng lời",
+            "contextSentence": "Junior employees frequently struggle to absorb tacit knowledge.",
+            "collocations": [
+              "tacit knowledge",
+              "tacit approval",
+              "tacit agreement"
+            ],
+            "etymology": "From Latin tacitus (silent, secret), from tacere (to be silent)."
+          },
+          {
+            "id": "mine-reading-b2-1-4",
+            "targetWord": "serendipitous",
+            "partOfSpeech": "adjective",
+            "ipa": "/ˌser.ənˈdɪp.ɪ.təs/",
+            "definition": "Occurring or discovered by chance in a happy, beneficial, or unexpected way.",
+            "vietnamese": "tình cờ may mắn, tình cờ phát hiện hữu ích",
+            "contextSentence": "Scheduled video calls rarely reproduce casual, serendipitous hallway interactions.",
+            "collocations": [
+              "serendipitous discovery",
+              "serendipitous encounter",
+              "serendipitous breakthrough"
+            ],
+            "etymology": "Coined by Horace Walpole from the Persian fairy tale The Three Princes of Serendip."
+          },
+          {
+            "id": "mine-reading-b2-1-5",
+            "targetWord": "asynchronous",
+            "partOfSpeech": "adjective",
+            "ipa": "/eɪˈsɪŋ.krə.nəs/",
+            "definition": "Not occurring at the same time; communication where participants respond at their convenience.",
+            "vietnamese": "không đồng bộ, không cùng thời điểm",
+            "contextSentence": "Progressive leaders prioritize asynchronous transparency to safeguard well-being.",
+            "collocations": [
+              "asynchronous communication",
+              "asynchronous workflow",
+              "asynchronous learning"
+            ],
+            "etymology": "From Greek a- (not) + syn- (together) + khronos (time)."
+          },
+          {
+            "id": "mine-reading-b2-1-6",
+            "targetWord": "viability",
+            "partOfSpeech": "noun",
+            "ipa": "/ˌvaɪ.əˈbɪl.ə.ti/",
+            "definition": "Ability to work successfully, survive, or maintain long-term sustainability.",
+            "vietnamese": "tính khả thi, khả năng tồn tại và phát triển bền vững",
+            "contextSentence": "The long-term viability of distributed employment depends on cultivating sustainable boundaries.",
+            "collocations": [
+              "commercial viability",
+              "long-term viability",
+              "economic viability"
+            ],
+            "etymology": "From French viable, from vie (life), from Latin vita."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "Although remote work offers immense flexibility, the dispersion of teams risks eroding informal mentorship and tacit learning. Sustainable distributed productivity cannot rely on exhausting synchronous availability; instead, progressive organizations foster asynchronous documentation and explicit communication boundaries to ensure long-term collaborative viability.",
+          "incorporatedVocabulary": [
+            "contingency",
+            "unprecedented",
+            "tacit",
+            "serendipitous",
+            "asynchronous",
+            "viability"
+          ],
+          "syntacticReconstruction": "Inasmuch as constant synchronous demands accelerate cognitive exhaustion, establishing asynchronous protocols constitutes a mandatory condition for distributed operational viability."
+        }
+      }
+    },
+    {
+      "id": "reading-b2-2",
+      "title": "The Architecture of Sustainable Urban Ecosystems",
+      "stage": "Stage 2: Competency & Fluidity (CEFR B2)",
+      "cefrLevel": "B2",
+      "genre": "Environmental Science & Civil Engineering",
+      "source": "Original text written for English Singularity",
+      "wordCount": 288,
+      "readingTime": "2.0 min @ 140 WPM (Intensive)",
+      "content": "As metropolitan populations swell toward unprecedented densities, urban planners are compelled to rethink the foundational principles governing city infrastructure. Traditional urban centers, characterized by sprawling vehicular highways and rigid zoning laws, have proven environmentally unsustainable and economically vulnerable. In response, municipalities worldwide are embracing the concept of the ecological city—a cohesive urban habitat designed to harmonize human activity with biological cycles.\n\nA central tenet of this paradigm is the transition from centralized energy grids toward decentralized, regenerative networks. Rather than importing fossil fuel energy from distant generating facilities, modern resilient neighborhoods incorporate integrated solar façades, micro-wind turbines, and localized geothermal pumps. Furthermore, civil engineers are revolutionizing wastewater management through constructed wetland bio-filtration systems. These installations purify stormwater runoff naturally while simultaneously expanding urban green corridors and combating the urban heat island effect.\n\nEqually decisive is the spatial reorganization of residential life. The widespread adoption of the fifteen-minute city framework ensures that daily necessities, commercial hubs, and recreational green spaces remain accessible within a brief walking or cycling radius. By curtailing dependency on private automobile transport, municipalities substantially reduce greenhouse emissions and mitigate pervasive respiratory illnesses. Ultimately, transforming dense urban landscapes into sustainable sanctuaries demands more than technological innovation; it requires collective civic dedication to ecological balance and equitable urban design.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Sustainable urban design addresses rapid metropolitan density by adopting decentralized renewable energy, natural wastewater filtration, and fifteen-minute pedestrian access to reduce environmental degradation and enhance communal well-being.",
+          "markedLexicalTargets": [
+            "metropolitan populations",
+            "foundational principles",
+            "rigid zoning",
+            "decentralized networks",
+            "bio-filtration systems",
+            "green corridors",
+            "spatial reorganization",
+            "greenhouse emissions"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "What fundamental limitation of traditional urban centers is highlighted?",
+              "answer": "Sprawling vehicular highways and rigid zoning laws have proven ecologically unsustainable and economically fragile.\n  - Q: How do decentralized energy networks differ from traditional systems?\n    A: They generate renewable energy locally through solar façades, micro-turbines, and geothermal pumps rather than importing distant fossil fuels.\n  - Q: What primary benefits stem from the fifteen-minute city model?\n    A: It curtails automobile reliance, reduces carbon emissions, and ensures essential services are within pedestrian proximity."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "As metropolitan populations swell toward unprecedented densities, urban planners are compelled to rethink the foundational principles governing city infrastructure.",
+            "coreSVO": {
+              "subject": "urban planners",
+              "verb": "are compelled (passive voice)",
+              "objectOrComplement": "(infinitive complement: to rethink the foundational principles)"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Adverbial Time/Circumstance Clause",
+                "clause": "As metropolitan populations swell toward unprecedented densities",
+                "function": "Connects demographic pressure directly to institutional obligation."
+              },
+              {
+                "type": "Participial Relative Phrase",
+                "clause": "governing city infrastructure",
+                "function": "Post-modifies \"foundational principles\"."
+              }
+            ],
+            "syntacticAnalysis": "Passive construction emphasizes external imperative; temporal clause articulates systemic demographic urgency."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "Rather than importing fossil fuel energy from distant facilities, modern resilient neighborhoods incorporate integrated solar façades.",
+            "coreSVO": {
+              "subject": "modern resilient neighborhoods",
+              "verb": "incorporate",
+              "objectOrComplement": "integrated solar façades"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Prepositional Contrast Clause",
+                "clause": "Rather than importing fossil fuel energy from distant facilities",
+                "function": "Rejects outdated centralized dependency in favor of local production."
+              }
+            ],
+            "syntacticAnalysis": "Concise participial inversion accentuates technical innovation in modern municipal engineering."
+          },
+          {
+            "sentenceIndex": 3,
+            "sentence": "The widespread adoption of the fifteen-minute city framework ensures that daily necessities remain accessible within a brief walking radius.",
+            "coreSVO": {
+              "subject": "The widespread adoption of the fifteen-minute city framework",
+              "verb": "ensures",
+              "objectOrComplement": "that daily necessities remain accessible within a brief walking radius (noun clause)"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Noun Clause",
+                "clause": "that daily necessities remain accessible within a brief walking radius",
+                "function": "Functions as direct object specifying systemic operational outcome."
+              }
+            ],
+            "syntacticAnalysis": "Subordinate content clause governed by the indicative verb \"ensures\", establishing structural causality."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-b2-2-1",
+            "targetWord": "foundational",
+            "partOfSpeech": "adjective",
+            "ipa": "/faʊnˈdeɪ.ʃən.əl/",
+            "definition": "Denoting an underlying basis or essential principle on which something is built.",
+            "vietnamese": "mang tính nền tảng, cơ bản cốt lõi",
+            "contextSentence": "Planners are compelled to rethink the foundational principles of infrastructure.",
+            "collocations": [
+              "foundational principle",
+              "foundational concepts",
+              "foundational knowledge"
+            ],
+            "etymology": "From Latin fundatio (a founding), from fundare (to lay a base)."
+          },
+          {
+            "id": "mine-reading-b2-2-2",
+            "targetWord": "paradigm",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈpær.ə.daɪm/",
+            "definition": "A typical example or pattern of something; a model or distinct conceptual framework.",
+            "vietnamese": "mô hình, hệ hình tư duy, khuôn mẫu lý thuyết",
+            "contextSentence": "A central tenet of this paradigm is the transition from centralized grids.",
+            "collocations": [
+              "paradigm shift",
+              "dominant paradigm",
+              "theoretical paradigm"
+            ],
+            "etymology": "From Greek paradeigma (pattern, example), from paradeiknunai (to exhibit)."
+          },
+          {
+            "id": "mine-reading-b2-2-3",
+            "targetWord": "regenerative",
+            "partOfSpeech": "adjective",
+            "ipa": "/rɪˈdʒen.ər.ə.tɪv/",
+            "definition": "Relating to or characterized by the renewal, revival, or biological restoration of energy or ecosystems.",
+            "vietnamese": "có tính tái sinh, phục hồi tự nhiên",
+            "contextSentence": "Transitioning from centralized grids toward decentralized, regenerative networks.",
+            "collocations": [
+              "regenerative agriculture",
+              "regenerative medicine",
+              "regenerative energy"
+            ],
+            "etymology": "From Latin re- (again) + generare (to produce, bring forth)."
+          },
+          {
+            "id": "mine-reading-b2-2-4",
+            "targetWord": "curtail",
+            "partOfSpeech": "verb",
+            "ipa": "/kɜːˈteɪl/",
+            "definition": "To reduce in extent, quantity, or duration; to impose restrictions upon.",
+            "vietnamese": "cắt giảm, hạn chế bớt, thu hẹp",
+            "contextSentence": "By curtailing dependency on private automobile transport, cities reduce emissions.",
+            "collocations": [
+              "curtail emissions",
+              "curtail spending",
+              "curtail freedom"
+            ],
+            "etymology": "From obsolete curtal (shortened horse's tail), influenced by French court (short)."
+          },
+          {
+            "id": "mine-reading-b2-2-5",
+            "targetWord": "mitigate",
+            "partOfSpeech": "verb",
+            "ipa": "/ˈmɪt.ɪ.ɡeɪt/",
+            "definition": "To make less severe, serious, or painful; to alleviate adverse conditions.",
+            "vietnamese": "giảm nhẹ, làm dịu bớt, xoa dịu tổn thất",
+            "contextSentence": "Pedestrian cities mitigate pervasive respiratory illnesses.",
+            "collocations": [
+              "mitigate risk",
+              "mitigate climate change",
+              "mitigate the impact"
+            ],
+            "etymology": "From Latin mitigare (to soften, pacify), from mitis (mild, soft)."
+          },
+          {
+            "id": "mine-reading-b2-2-6",
+            "targetWord": "equitable",
+            "partOfSpeech": "adjective",
+            "ipa": "/ˈek.wɪ.tə.bəl/",
+            "definition": "Fair and impartial; dealing fairly and equally with all concerned.",
+            "vietnamese": "công bằng, bình đẳng, hợp lý hợp tình",
+            "contextSentence": "Sustainable cities require dedication to ecological balance and equitable urban design.",
+            "collocations": [
+              "equitable distribution",
+              "equitable access",
+              "equitable treatment"
+            ],
+            "etymology": "From Old French equitable, from Latin aequitas (equality, fairness)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "Rapid urban expansion necessitates a comprehensive transition toward ecological urban paradigms. By replacing centralized energy extraction with decentralized renewables, filtering stormwater through biological corridors, and restructuring municipal layouts into fifteen-minute pedestrian zones, modern cities significantly curtail vehicular emissions while establishing sustainable and equitable habitats.",
+          "incorporatedVocabulary": [
+            "foundational",
+            "paradigm",
+            "regenerative",
+            "curtail",
+            "mitigate",
+            "equitable"
+          ],
+          "syntacticReconstruction": "Insofar as rigid urban zoning exacerbates environmental pollution, implementing decentralized, regenerative infrastructures mitigates carbon emissions and fosters equitable living environments."
+        }
+      }
+    },
+    {
+      "id": "reading-b2-3",
+      "title": "Artificial Intelligence and the Reskilling Imperative",
+      "stage": "Stage 2: Competency & Fluidity (CEFR B2)",
+      "cefrLevel": "B2",
+      "genre": "Technology, Labor Economics & Lifelong Learning",
+      "source": "Original text written for English Singularity",
+      "wordCount": 292,
+      "readingTime": "2.1 min @ 140 WPM (Intensive)",
+      "content": "The rapid proliferation of generative artificial intelligence and autonomous algorithmic systems has ignited intense debate across global labor markets. Whereas preceding waves of industrial automation predominantly supplanted manual and repetitive physical labor, advanced computational models now demonstrate remarkable proficiency in analytical synthesis, software compilation, and complex linguistic generation. Consequently, professionals who previously considered their expertise immune to technological disruption now face an urgent imperative to adapt.\n\nEconomists caution that the primary threat confronting workers is rarely outright obsolescence, but rather displacement by peers who harness machine intelligence effectively. Routine cognitive chores—such as compiling introductory market assessments, debugging standard code repositories, and drafting formulaic correspondence—are increasingly automated with minimal latency. Consequently, human value in modern enterprises is rapidly migrating upward toward higher-order capabilities: discerning problem formulation, cross-disciplinary contextualization, and ethical oversight.\n\nTo thrive in this evolving environment, forward-looking professionals must cultivate intellectual agility through lifelong reskilling. Educational curricula that emphasize rote memorization and mechanical task execution are fundamentally misaligned with contemporary labor requirements. Instead, developing metacognitive competence—the ability to critically evaluate algorithmic outputs, synthesize contradictory insights, and execute empathetic negotiation—constitutes the definitive competitive advantage. Embracing continuous pedagogical adaptation allows knowledge workers to transform artificial intelligence from a disruptive adversary into an indispensable cognitive partner.",
+      "fourPassProtocol": {
+        "pass1ColdRead": {
+          "thesisGist": "Generative AI transforms cognitive labor by automating routine analytical tasks, necessitating a transition toward higher-order critical thinking, ethical governance, and continuous metacognitive reskilling.",
+          "markedLexicalTargets": [
+            "rapid proliferation",
+            "generative intelligence",
+            "manual labor",
+            "analytical synthesis",
+            "technological disruption",
+            "outright obsolescence",
+            "intellectual agility",
+            "metacognitive competence"
+          ],
+          "comprehensionChecks": [
+            {
+              "question": "How does current algorithmic automation differ from historical automation waves?",
+              "answer": "Historical automation primarily replaced physical labor, whereas modern AI automates complex cognitive, analytical, and linguistic tasks.\n  - Q: According to economists, what constitutes the actual competitive threat for workers?\n    A: Not complete obsolescence, but being outperformed and replaced by peers who adeptly utilize AI tools.\n  - Q: Which skills provide human professionals with a lasting advantage?\n    A: Higher-order capabilities including problem formulation, ethical oversight, cross-disciplinary synthesis, and empathetic negotiation."
+            }
+          ]
+        },
+        "pass2SyntaxDissection": [
+          {
+            "sentenceIndex": 1,
+            "sentence": "Whereas preceding waves of automation supplanted manual labor, advanced computational models now demonstrate remarkable proficiency in analytical synthesis.",
+            "coreSVO": {
+              "subject": "advanced computational models",
+              "verb": "demonstrate",
+              "objectOrComplement": "remarkable proficiency in analytical synthesis"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Adverbial Contrast Clause",
+                "clause": "Whereas preceding waves of automation supplanted manual labor",
+                "function": "Contextualizes historical precedent against current technological disruption."
+              }
+            ],
+            "syntacticAnalysis": "Subordinating conjunction \"Whereas\" establishes comparative contrast; main clause advances the contemporary cognitive challenge."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "Economists caution that the primary threat confronting workers is rarely outright obsolescence, but rather displacement by peers who harness machine intelligence.",
+            "coreSVO": {
+              "subject": "Economists",
+              "verb": "caution",
+              "objectOrComplement": "noun clause governed by \"that\""
+            },
+            "subordinateClauses": [
+              {
+                "type": "Noun Complement Clause",
+                "clause": "that the primary threat confronting workers is rarely outright obsolescence, but rather displacement by peers",
+                "function": "Direct object detailing professional risk."
+              },
+              {
+                "type": "Participial Modifier",
+                "clause": "confronting workers",
+                "function": "Reduced relative clause (\"which confronts workers\")."
+              },
+              {
+                "type": "Relative Clause",
+                "clause": "who harness machine intelligence",
+                "function": "Defines the subset of competitive peers."
+              }
+            ],
+            "syntacticAnalysis": "Parallel antithetical construction (\"rarely X, but rather Y\") reframes the technological narrative from absolute replacement to relative adaptation."
+          },
+          {
+            "sentenceIndex": 3,
+            "sentence": "Educational curricula that emphasize rote memorization are fundamentally misaligned with contemporary labor requirements.",
+            "coreSVO": {
+              "subject": "Educational curricula",
+              "verb": "are (copular verb)",
+              "objectOrComplement": "(predicate adjective: fundamentally misaligned with contemporary labor requirements)"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Restrictive Relative Clause",
+                "clause": "that emphasize rote memorization",
+                "function": "Specifies the obsolete pedagogical approach."
+              }
+            ],
+            "syntacticAnalysis": "Concise declarative asserting structural misalignment between legacy training and future workforce demands."
+          }
+        ],
+        "pass3SentenceMining": [
+          {
+            "id": "mine-reading-b2-3-1",
+            "targetWord": "proliferation",
+            "partOfSpeech": "noun",
+            "ipa": "/prəˌlɪf.əˈreɪ.ʃən/",
+            "definition": "Rapid increase in numbers, quantity, or spread; fast multiplication.",
+            "vietnamese": "sự bùng nổ, sự gia tăng nhanh chóng, sự lan rộng",
+            "contextSentence": "The rapid proliferation of generative artificial intelligence has ignited debate.",
+            "collocations": [
+              "nuclear proliferation",
+              "rapid proliferation",
+              "proliferation of devices"
+            ],
+            "etymology": "From French prolifération, from Latin proles (offspring) + ferre (to bear)."
+          },
+          {
+            "id": "mine-reading-b2-3-2",
+            "targetWord": "obsolescence",
+            "partOfSpeech": "noun",
+            "ipa": "/ˌɒb.səˈles.əns/",
+            "definition": "The state or process of becoming obsolete, outdated, or no longer used.",
+            "vietnamese": "sự lỗi thời, tình trạng trở nên lạc hậu, sự mai một",
+            "contextSentence": "The primary threat confronting workers is rarely outright obsolescence.",
+            "collocations": [
+              "planned obsolescence",
+              "rapid obsolescence",
+              "technological obsolescence"
+            ],
+            "etymology": "From Latin obsolescere (to grow old, decay, wear out)."
+          },
+          {
+            "id": "mine-reading-b2-3-3",
+            "targetWord": "displacement",
+            "partOfSpeech": "noun",
+            "ipa": "/dɪsˈpleɪs.mənt/",
+            "definition": "The moving of something from its place, position, or employment by something else.",
+            "vietnamese": "sự dịch chuyển, sự thay thế vị trí làm việc, sự dời chỗ",
+            "contextSentence": "Workers face displacement by peers who harness machine intelligence effectively.",
+            "collocations": [
+              "job displacement",
+              "economic displacement",
+              "population displacement"
+            ],
+            "etymology": "From displace + -ment, from Old French desplacer (to move from a place)."
+          },
+          {
+            "id": "mine-reading-b2-3-4",
+            "targetWord": "proficiency",
+            "partOfSpeech": "noun",
+            "ipa": "/prəˈfɪʃ.ən.si/",
+            "definition": "A high degree of competence, skill, or expertise in an art, science, or subject.",
+            "vietnamese": "sự thành thạo, trình độ chuyên môn cao",
+            "contextSentence": "AI models demonstrate remarkable proficiency in analytical synthesis.",
+            "collocations": [
+              "language proficiency",
+              "technical proficiency",
+              "achieve proficiency"
+            ],
+            "etymology": "From Latin proficere (to make progress, advance), from pro- (forward) + facere (to make)."
+          },
+          {
+            "id": "mine-reading-b2-3-5",
+            "targetWord": "imperative",
+            "partOfSpeech": "noun",
+            "ipa": "/ɪmˈper.ə.tɪv/",
+            "definition": "An essential, urgent, or unavoidable thing; a vital duty or requirement.",
+            "vietnamese": "mệnh lệnh tất yếu, yêu cầu cấp thiết, đòi hỏi bức thiết",
+            "contextSentence": "Professionals face an urgent imperative to adapt through lifelong learning.",
+            "collocations": [
+              "moral imperative",
+              "strategic imperative",
+              "economic imperative"
+            ],
+            "etymology": "From Late Latin imperativus (commanding), from imperare (to command)."
+          },
+          {
+            "id": "mine-reading-b2-3-6",
+            "targetWord": "metacognitive",
+            "partOfSpeech": "adjective",
+            "ipa": "/ˌmet.əˈkɒɡ.nɪ.tɪv/",
+            "definition": "Relating to awareness, monitoring, and understanding of one's own thought and learning processes.",
+            "vietnamese": "thuộc siêu nhận thức, nhận thức về quá trình tư duy của chính mình",
+            "contextSentence": "Developing metacognitive competence constitutes the definitive competitive advantage.",
+            "collocations": [
+              "metacognitive skills",
+              "metacognitive awareness",
+              "metacognitive strategy"
+            ],
+            "etymology": "From Greek meta- (beyond, transcending) + cognitive (from Latin cognoscere, to know)."
+          }
+        ],
+        "pass4Synthesis": {
+          "modelPrécis": "Unlike previous technological revolutions focused on physical automation, generative artificial intelligence directly automates routine cognitive synthesis. Consequently, the greatest career hazard is displacement by individuals who leverage algorithmic assistance. Maintaining workforce resilience requires developing metacognitive competence, critical problem framing, and ethical discernment through continuous lifelong reskilling.",
+          "incorporatedVocabulary": [
+            "proliferation",
+            "obsolescence",
+            "displacement",
+            "proficiency",
+            "imperative",
+            "metacognitive"
+          ],
+          "syntacticReconstruction": "Insofar as generative algorithms demonstrate high analytical proficiency, cultivating metacognitive agility constitutes an unavoidable professional imperative to prevent economic displacement."
+        }
+      }
     }
   ]
 }

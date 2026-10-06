@@ -63,6 +63,18 @@ assert(Array.isArray(listening.rules), 'listening.rules must be an array');
 assert(Array.isArray(listening.samplePassages), 'listening.samplePassages must be an array');
 assert(listening.samplePassages.length >= 9, `Expected at least 9 listening passages, got ${listening.samplePassages.length}`);
 
+// 8. Validate habits.json
 const habits = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'habits.json'), 'utf8'));
 habits.days.forEach(d => assert(d.tasks.length >= 3, `Day ${d.day} has ${d.tasks.length} tasks`));
-console.log('[TEST] PASSED: All 7 content datasets satisfy production schema and count invariants.');
+
+// 9. Validate diagnostic-questions.json
+const diagnostic = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'diagnostic-questions.json'), 'utf8'));
+assert(Array.isArray(diagnostic), 'diagnostic must be an array');
+assert.strictEqual(diagnostic.length, 30, `Expected exactly 30 diagnostic questions, got ${diagnostic.length}`);
+diagnostic.forEach((q, i) => {
+  assert(q.id && q.level && q.skill && q.prompt && q.context && q.options && q.explanation && q.vietnamese, `Item ${i} schema mismatch`);
+  assert.strictEqual(q.options.length, 4, `Item ${i} options length must be 4`);
+  assert(Number.isInteger(q.answer) && q.answer >= 0 && q.answer < 4, `Item ${i} invalid answer index`);
+});
+
+console.log('[TEST] PASSED: All 8 content datasets satisfy production schema and count invariants.');

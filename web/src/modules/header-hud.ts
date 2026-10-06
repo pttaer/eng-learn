@@ -8,6 +8,7 @@ import { SpotlightTour } from '../core/spotlight-tour';
 import { ProgressionEngine } from '../core/progression-engine';
 import { ProgressionModal } from './progression-modal';
 import { ZenMode } from '../core/zen-mode';
+import { MultiSkillQuizModal } from './multi-skill-quiz-modal';
 
 const ROUTE_NAMES: Record<string, string> = { read: 'READING', write: 'WRITING', listen: 'LISTENING', speak: 'SPEAKING', vocab: 'VOCABULARY', colloc: 'COLLOCATIONS', grammar: 'GRAMMAR', habits: 'DAILY HABITS', singularity: 'SINGULARITY' };
 
@@ -89,6 +90,9 @@ export class HeaderHUD {
       </div>
 
       <div class="hud-actions header-actions" style="display: flex; gap: 8px; align-items: center;">
+        <button class="hud-btn btn-skill-radar" title="Launch CEFR Multi-Skill Diagnostic & Celestial Radar" aria-label="Skill Radar" style="border-color: var(--cyan, #38bdf8); color: var(--cyan, #38bdf8); font-weight: 700;">
+          ${icon('target', 12)}<span class="btn-label"> RADAR</span>
+        </button>
         <button class="hud-btn btn-blitz" title="Launch 60-Second Roguelike Speed Blitz Mode" aria-label="Speed Blitz Mode" style="border-color: var(--accent-gold); color: var(--accent-gold); font-weight: 700;">
           ${icon('zap', 12)}<span class="btn-label"> BLITZ</span>
         </button>
@@ -147,6 +151,12 @@ export class HeaderHUD {
       } else {
         window.location.hash = '#blitz';
       }
+    });
+
+    const radarBtn = this.element.querySelector('.btn-skill-radar');
+    radarBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      MultiSkillQuizModal.open('radar');
     });
 
     this.element.querySelector('.btn-level')?.addEventListener('click', () => {
@@ -216,6 +226,9 @@ export class HeaderHUD {
     modal.innerHTML = `
       <div class="completion-receipt-card" style="max-width: 420px; width: 90%;">
         <div class="telemetry-label" style="margin-bottom: 8px;">YOUR LEVEL</div>
+        <button class="hud-btn btn-open-skill-radar" style="width: 100%; box-sizing: border-box; justify-content: center; padding: 10px 14px; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold); margin-bottom: var(--space-12);">
+          ${icon('target', 14)} <span style="margin-left: 6px;">[ 🎯 SKILL RADAR &amp; DIAGNOSTIC ]</span>
+        </button>
         <div style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8); margin-bottom: var(--space-16);">
           ${CEFR_ORDER.map(l => `
             <button class="hud-btn level-option ${l === current ? 'active' : ''}" data-level="${l}" aria-pressed="${l === current}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 10px 14px; font-weight: 600;">${CEFR_LABELS[l]}</button>
@@ -235,6 +248,12 @@ export class HeaderHUD {
       if (e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); close(); }
     };
     document.addEventListener('keydown', onKey, true);
+
+    modal.querySelector('.btn-open-skill-radar')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      close();
+      MultiSkillQuizModal.open('radar');
+    });
 
     modal.querySelectorAll('.level-option').forEach(btn => {
       btn.addEventListener('click', () => {

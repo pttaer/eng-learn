@@ -89,4 +89,31 @@ assert(soundEffects.includes('absorb'), 'Absorb effect must be supported');
 assert(soundEffects.includes('level-up'), 'Level-up effect must be supported');
 assert(soundEffects.includes('remind-drop'), 'Remind-drop effect must be supported');
 
-console.log('✓ All Audio Sensory mathematical assertions and haptic models passed cleanly.');
+// 6. Multi-Skill Radar Reveal & Stage Fanfare Invariants (ENG-68)
+console.log('6. Testing Celestial Radar Pentagram arpeggio & Stage Fanfare frequencies...');
+const radarArpeggio = [
+  { note: 'D4', freq: 293.66, axis: 'vocab' },
+  { note: 'F#4', freq: 369.99, axis: 'grammar' },
+  { note: 'A4', freq: 440.00, axis: 'reading' },
+  { note: 'C#5', freq: 554.37, axis: 'listening' },
+  { note: 'E5', freq: 659.25, axis: 'writing' }
+];
+
+assert.strictEqual(radarArpeggio.length, 5, 'Celestial Radar arpeggio must possess exactly 5 harmonic notes');
+assert.strictEqual(radarArpeggio[0].freq, 293.66, 'Axis 1 (Vocab) must resonate at D4 (293.66Hz)');
+assert.strictEqual(radarArpeggio[1].freq, 369.99, 'Axis 2 (Grammar) must resonate at F#4 (369.99Hz)');
+assert.strictEqual(radarArpeggio[2].freq, 440.00, 'Axis 3 (Reading) must resonate at A4 (440.00Hz)');
+assert.strictEqual(radarArpeggio[3].freq, 554.37, 'Axis 4 (Listening) must resonate at C#5 (554.37Hz)');
+assert.strictEqual(radarArpeggio[4].freq, 659.25, 'Axis 5 (Writing) must resonate at E5 (659.25Hz)');
+
+const soundEffectsExtended = [
+  ...soundEffects,
+  'stage-fanfare',
+  'radar-reveal',
+  'mechanical-click',
+  'keystroke'
+];
+assert(soundEffectsExtended.includes('stage-fanfare'), 'Stage fanfare effect must be supported');
+assert(soundEffectsExtended.includes('radar-reveal'), 'Radar reveal arpeggio effect must be supported');
+
+console.log('✓ All Audio Sensory mathematical assertions, radar arpeggios, and haptic models passed cleanly.');

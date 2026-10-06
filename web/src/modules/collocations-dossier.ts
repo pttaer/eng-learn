@@ -6,6 +6,7 @@ import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { MotionEngine } from '../core/motion-engine';
+import { SkillTreeEngine } from '../core/skill-tree-engine';
 import collocationsData from '../assets/data/collocations.json';
 
 export interface CollocationItem {
@@ -36,10 +37,10 @@ export class CollocationsDossier {
   constructor() {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-collocations interactive';
-    this.activeLevel = defaultLevel(collocationsData as CollocationItem[]);
+    this.activeLevel = defaultLevel(collocationsData as CollocationItem[], StorageManager.getSkillLevel('vocab'));
     this.filterCards();
     window.addEventListener('learner-level-change', () => {
-      this.activeLevel = defaultLevel(collocationsData as CollocationItem[]);
+      this.activeLevel = defaultLevel(collocationsData as CollocationItem[], StorageManager.getSkillLevel('vocab'));
       this.filterCards();
       if (this.container.isConnected) this.render();
     });
@@ -412,10 +413,18 @@ export class CollocationsDossier {
     const nextCardState = SRSEngine.rateCard(srsState, cardId, rating);
     StorageManager.setCardState(cardId, nextCardState);
 
+    const item = this.currentList.find(i => i.id === cardId);
+    const levelToAdvance = (item?.cefrLevel as Cefr) || (this.activeLevel !== 'ALL' ? this.activeLevel : StorageManager.getSkillLevel('vocab'));
+
+    if (rating === 'good') {
+      SkillTreeEngine.advanceBranchMastery('collocations', levelToAdvance, 5);
+    }
+
     // If reviewing in DUE queue and completed all
     if (this.activeCategory === 'DUE') {
       this.filterCards();
       if (this.currentList.length === 0 && this.onBatchComplete) {
+        SkillTreeEngine.advanceBranchMastery('collocations', levelToAdvance, 5);
         this.onBatchComplete();
         return;
       }

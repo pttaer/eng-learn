@@ -1,4 +1,5 @@
 import { PlacementQuiz } from './modules/placement-quiz';
+import { MultiSkillQuizModal } from './modules/multi-skill-quiz-modal';
 import { icon } from './utils/icons';
 import { AudioSynthesizer } from './core/audio-synthesizer';
 import { CursorTracker } from './core/cursor-tracker';
@@ -37,6 +38,7 @@ import collocationsData from './assets/data/collocations.json';
 (window as any).ZenMode = ZenMode;
 (window as any).LexiconDrawer = LexiconDrawer;
 (window as any).BlitzDossier = BlitzDossier;
+(window as any).MultiSkillQuizModal = MultiSkillQuizModal;
 (window as any).StorageManager = StorageManager;
 (window as any).CardTiltController = CardTiltController;
 (window as any).NebulaCanvas = NebulaCanvas;

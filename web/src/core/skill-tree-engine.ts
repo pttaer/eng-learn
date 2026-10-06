@@ -1,5 +1,5 @@
 import { SKILL_BRANCHES, SkillNode, BranchId } from './skill-tree-data';
-import { StorageManager } from '../utils/storage';
+import { StorageManager, SkillId } from '../utils/storage';
 import { Cefr, cefrIndex } from './cefr';
 
 export type NodeStatus = 'locked' | 'unlocked' | 'mastered';
@@ -12,7 +12,19 @@ export interface SummitProgress {
   currentRank: string;
 }
 
+export const BRANCH_TO_SKILL: Record<BranchId, SkillId> = {
+  grammar: 'grammar',
+  collocations: 'vocab',
+  reading: 'reading',
+  speaking: 'speaking',
+  writing: 'writing'
+};
+
 export class SkillTreeEngine {
+  public static getSkillForBranch(branchId: BranchId): SkillId {
+    return BRANCH_TO_SKILL[branchId];
+  }
+
   private static findNode(nodeId: string): SkillNode | null {
     for (const branch of Object.values(SKILL_BRANCHES)) {
       const match = branch.nodes.find(n => n.id === nodeId);
@@ -41,13 +53,14 @@ export class SkillTreeEngine {
       return treeProgress[nodeId];
     }
 
-    // No recorded progress: derive it from the learner's CEFR level.
+    // No recorded progress: derive it from the learner's calibrated CEFR level for this branch's skill.
     // Tiers below the learner count as mastered; the learner's own tier is unlocked and in training once its
     // prerequisites are met; anything above stays locked.
     const node = this.findNode(nodeId);
     if (!node) return 0;
 
-    const learner = StorageManager.getLearnerLevel();
+    const skillId = BRANCH_TO_SKILL[node.branchId] || 'vocab';
+    const learner = StorageManager.getSkillLevel(skillId);
     if (cefrIndex(node.cefrLevel) < cefrIndex(learner)) return 100;
     const prereqsMet = node.prerequisites.every(id => {
       const pre = this.findNode(id);
@@ -64,6 +77,23 @@ export class SkillTreeEngine {
     }
     (state as any).treeProgress[nodeId] = Math.max(0, Math.min(100, Math.round(pct)));
     StorageManager.saveState(state);
+  }
+
+  public static advanceBranchMastery(branchId: BranchId, level: Cefr, delta = 5): void {
+    const node = this.nodeForLevel(branchId, level);
+    if (!node) return;
+    const current = this.getNodeMasteryPct(node.id);
+    const next = Math.max(current, Math.min(100, Math.round(current + delta)));
+    this.setNodeMasteryPct(node.id, next);
+    if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function') {
+      try {
+        window.dispatchEvent(new CustomEvent('tree-mastery-updated', {
+          detail: { branchId, level, nodeId: node.id, previousMastery: current, newMastery: next, delta }
+        }));
+      } catch (e) {
+        // Non-browser environment
+      }
+    }
   }
 
   public static getNodeStatus(nodeId: string): NodeStatus {

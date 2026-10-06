@@ -4,6 +4,8 @@ import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import vocabularyData from '../assets/data/vocabulary.json';
 import collocationsData from '../assets/data/collocations.json';
+import grammarData from '../assets/data/grammar.json';
+import readingData from '../assets/data/reading.json';
 
 /**
  * First-run placement: questions are asked level by level (A1 upward); the quiz stops at the first level with
@@ -26,7 +28,13 @@ export class PlacementQuiz {
   private constructor(onDone: () => void) {
     this.onDone = onDone;
     this.opener = document.activeElement as HTMLElement | null;
-    this.questions = buildQuestions(vocabularyData as any[], collocationsData as any[]);
+    const articles = Array.isArray(readingData) ? readingData : (readingData as any).articles || [];
+    this.questions = buildQuestions(
+      vocabularyData as any[],
+      collocationsData as any[],
+      grammarData as any[],
+      articles as any[]
+    );
     this.overlay = document.createElement('div');
     this.overlay.className = 'completion-modal-overlay interactive';
     this.overlay.setAttribute('role', 'dialog');
@@ -72,11 +80,21 @@ export class PlacementQuiz {
   private renderQuestion(): void {
     const q = this.questions[this.index];
     if (!q) return this.renderResult();
+    const badgeMap: Record<string, string> = {
+      vocab: '[ VOCAB ]',
+      collocation: '[ COLLOCATION ]',
+      grammar: '[ GRAMMAR ]',
+      reading: '[ READING ]'
+    };
+    const badgeText = badgeMap[q.kind] || `[ ${q.kind.toUpperCase()} ]`;
     this.card(`
-      <div class="telemetry-label" style="margin-bottom: var(--space-8);">QUESTION ${this.index + 1} / ${this.questions.length} &middot; ${q.level}</div>
+      <div class="telemetry-label" style="margin-bottom: var(--space-8); display: flex; align-items: center; justify-content: space-between;">
+        <span>QUESTION ${this.index + 1} / ${this.questions.length} &middot; ${q.level}</span>
+        <span class="hud-badge placement-skill-badge" style="letter-spacing: 0.05em; font-weight: 700; color: var(--gold-primary, #ca8a04);">${badgeText}</span>
+      </div>
       <div style="font-size: 20px; font-weight: 700; margin-bottom: var(--space-4);">${this.escape(q.prompt)}</div>
       ${q.context ? `<div style="font-size: 13px; color: var(--ink-secondary); margin-bottom: var(--space-16);">${this.escape(q.context)}</div>` : '<div style="margin-bottom: var(--space-16);"></div>'}
-      <div role="group" aria-label="Choose the meaning" style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8);">
+      <div role="group" aria-label="Choose the answer" style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8);">
         ${q.options.map((o, i) => `<button class="hud-btn placement-option" data-i="${i}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 10px 14px; text-align: left; white-space: normal; height: auto; text-transform: none;">${i + 1}. ${this.escape(o)}</button>`).join('')}
       </div>
       <button class="hud-btn placement-skip" style="width: 100%; justify-content: center; padding: 8px 0; margin-top: var(--space-16);">Skip the quiz</button>
@@ -109,7 +127,7 @@ export class PlacementQuiz {
       <div class="telemetry-label" style="margin-bottom: var(--space-8);">YOUR LEVEL</div>
       <div style="font-size: 24px; font-weight: 700; margin-bottom: var(--space-8);">${CEFR_LABELS[level]}</div>
       <p style="font-size: 14px; color: var(--ink-secondary); margin-bottom: var(--space-16);">
-        This is a quick vocabulary-based estimate. Pick another level if it feels too easy or too hard.
+        This is a balanced 24-question multi-skill diagnostic estimate (Vocabulary, Collocations, Grammar, and Reading). Pick another level if it feels too easy or too hard.
       </p>
       <div style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8);">
         <button class="hud-btn placement-accept" style="width: 100%; justify-content: center; padding: 12px 0; font-weight: 700;">Start at ${level}</button>

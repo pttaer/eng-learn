@@ -126,9 +126,9 @@ export class WritingDossier {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-writing interactive';
     this.allItems = (drillsData as any).writing || [];
-    this.activeLevel = defaultLevel(this.allItems);
+    this.activeLevel = defaultLevel(this.allItems, StorageManager.getSkillLevel('writing'));
     this.items = this.allItems.filter(i => i.cefrLevel === this.activeLevel);
-    window.addEventListener('learner-level-change', () => this.setLevel(defaultLevel(this.allItems)));
+    window.addEventListener('learner-level-change', () => this.setLevel(defaultLevel(this.allItems, StorageManager.getSkillLevel('writing'))));
   }
 
   private setLevel(level: Cefr): void {
@@ -453,10 +453,7 @@ export class WritingDossier {
         StorageManager.setCardState(item.id, nextState);
 
         // Update Constellation Tree Mastery for Writing Branch
-        const node = SkillTreeEngine.nodeForLevel('writing', this.activeLevel);
-        if (node) {
-          SkillTreeEngine.setNodeMasteryPct(node.id, Math.min(100, SkillTreeEngine.getNodeMasteryPct(node.id) + 5));
-        }
+        SkillTreeEngine.advanceBranchMastery('writing', this.activeLevel, 5);
 
         if (this.currentIndex < this.items.length - 1) {
           this.currentIndex++;

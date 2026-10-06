@@ -7,6 +7,7 @@ import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { MotionEngine } from '../core/motion-engine';
 import { StorageManager } from '../utils/storage';
 import { NebulaCanvas } from '../core/perspective-canvas';
+import type { Cefr } from '../core/cefr';
 
 export class SkillTreeView {
   private container: HTMLElement;
@@ -16,6 +17,9 @@ export class SkillTreeView {
   constructor() {
     this.container = document.createElement('div');
     this.container.className = 'skill-tree-view interactive';
+    window.addEventListener('learner-level-change', () => {
+      if (this.container.isConnected) this.render();
+    });
   }
 
   public render(): HTMLElement {
@@ -81,22 +85,71 @@ export class SkillTreeView {
     return this.container;
   }
 
-  // Today's drills are counted from real review timestamps, not placeholders.
-  private getWorkout() {
+  // Today's drills are counted from real review timestamps, dynamically scaled to learner's CEFR level.
+  public getWorkout() {
     const start = new Date().setHours(0, 0, 0, 0);
-    const done = { colloc: 0, writing: 0, speaking: 0 };
+    const done = { colloc: 0, writing: 0, speaking: 0, vocab: 0, grammar: 0, reading: 0, listen: 0 };
     for (const [id, st] of Object.entries(StorageManager.loadState().cardStates)) {
       if (!st || st.lastReviewed < start) continue;
       if (id.startsWith('colloc-')) done.colloc++;
-      else if (id.startsWith('writing-')) done.writing++;
-      else if (id.startsWith('speaking-')) done.speaking++;
+      else if (id.startsWith('writing-') || id.startsWith('write-')) done.writing++;
+      else if (id.startsWith('speaking-') || id.startsWith('speak-')) done.speaking++;
+      else if (id.startsWith('vocab-') || id.startsWith('awl-')) done.vocab++;
+      else if (id.startsWith('gram-')) done.grammar++;
+      else if (id.startsWith('read-') || id.startsWith('reading-') || id.startsWith('mine-')) done.reading++;
+      else if (id.startsWith('listen-') || id.startsWith('passage-')) done.listen++;
     }
-    const tasks = [
-      { route: 'colloc' as RouteId, ok: done.colloc >= 10, label: `${Math.min(done.colloc, 10)}/10 Collocations Reviewed` },
-      { route: 'write' as RouteId, ok: done.writing >= 1, label: '1 Franklin Copywork (Inversion)' },
-      { route: 'speak' as RouteId, ok: done.speaking >= 1, label: '1 Speaking Take (4-3-2 Fluency)' }
-    ];
-    return { tasks, left: tasks.filter(t => !t.ok).length, next: tasks.find(t => !t.ok)?.route ?? ('tree' as RouteId) };
+
+    const level: Cefr = StorageManager.getLearnerLevel() || 'B2';
+    let tasks: Array<{ route: RouteId; ok: boolean; label: string }>;
+
+    switch (level) {
+      case 'A1':
+        tasks = [
+          { route: 'vocab' as RouteId, ok: done.vocab >= 5, label: `${Math.min(done.vocab, 5)}/5 Vocabulary Cards` },
+          { route: 'colloc' as RouteId, ok: done.colloc >= 1, label: '1 A1 Collocation Drill' },
+          { route: 'listen' as RouteId, ok: done.listen >= 1, label: '1 Phonetic Listen' }
+        ];
+        break;
+      case 'A2':
+        tasks = [
+          { route: 'vocab' as RouteId, ok: done.vocab >= 5, label: `${Math.min(done.vocab, 5)}/5 Vocabulary Cards` },
+          { route: 'grammar' as RouteId, ok: done.grammar >= 1, label: '1 A2 Grammar Rule' },
+          { route: 'read' as RouteId, ok: done.reading >= 1, label: '1 Short Reading Pass' }
+        ];
+        break;
+      case 'B1':
+        tasks = [
+          { route: 'colloc' as RouteId, ok: done.colloc >= 8, label: `${Math.min(done.colloc, 8)}/8 Collocations Reviewed` },
+          { route: 'grammar' as RouteId, ok: done.grammar >= 1, label: '1 B1 Grammar Rule' },
+          { route: 'write' as RouteId, ok: done.writing >= 1, label: '1 Paragraph Copywork' }
+        ];
+        break;
+      case 'B2':
+        tasks = [
+          { route: 'colloc' as RouteId, ok: done.colloc >= 10, label: `${Math.min(done.colloc, 10)}/10 Collocations Reviewed` },
+          { route: 'grammar' as RouteId, ok: done.grammar >= 1, label: '1 B2 Inversion Rule' },
+          { route: 'speak' as RouteId, ok: done.speaking >= 1, label: '1 Speech Take (4-3-2 Fluency)' }
+        ];
+        break;
+      case 'C1':
+        tasks = [
+          { route: 'colloc' as RouteId, ok: done.colloc >= 15, label: `${Math.min(done.colloc, 15)}/15 Collocations Reviewed` },
+          { route: 'write' as RouteId, ok: done.writing >= 1, label: '1 Rhetorical Copywork' },
+          { route: 'speak' as RouteId, ok: done.speaking >= 1, label: '1 Nation 4-3-2 Take' }
+        ];
+        break;
+      case 'C2':
+      default:
+        tasks = [
+          { route: 'colloc' as RouteId, ok: done.colloc >= 20, label: `${Math.min(done.colloc, 20)}/20 Collocations Reviewed` },
+          { route: 'write' as RouteId, ok: done.writing >= 1, label: '1 Master Copywork' },
+          { route: 'read' as RouteId, ok: done.reading >= 1, label: '1 C2 Intensive Reading Analysis' }
+        ];
+        break;
+    }
+
+    return { level, tasks, left: tasks.filter(t => !t.ok).length, next: tasks.find(t => !t.ok)?.route ?? ('tree' as RouteId) };
   }
 
   public teardown(): void {
@@ -131,12 +184,12 @@ export class SkillTreeView {
         <div class="workout-panel" style="flex: 0 0 auto; display: flex; align-items: center; gap: 12px; background: var(--bg-surface-sunk); border: 1px solid var(--border-hairline); border-radius: 6px; padding: 6px 14px;">
           <div style="display: flex; flex-direction: column; gap: 2px;">
             <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
-              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-size: 10px;">★ TODAY'S 15-MINUTE WORKOUT</span>
+              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-size: 10px;">★ TODAY'S 15-MINUTE WORKOUT [${workout.level}]</span>
               <span class="telemetry-label" style="font-size: 10px;">${workout.left === 0 ? 'ALL 3 DRILLS DONE' : workout.left + ' OF 3 DRILLS REMAINING'}</span>
             </div>
             <div class="workout-tasks" style="display: flex; gap: 10px; font-size: 11px; color: var(--ink-secondary);">
               ${workout.tasks.map(t => `
-              <div style="display: flex; align-items: center; gap: 3px;${t.ok ? '' : ' opacity: 0.75;'}">
+              <div class="workout-task-chip" data-route="${t.route}" title="Jump to ${t.route} drill" style="display: flex; align-items: center; gap: 3px; cursor: pointer;${t.ok ? '' : ' opacity: 0.75;'}">
                 <span${t.ok ? ' style="color: var(--accent-gold); font-weight: 700;"' : ''}>${t.ok ? '✓' : '○'}</span> <span>${t.label}</span>
               </div>`).join('')}
             </div>
@@ -344,6 +397,18 @@ export class SkillTreeView {
       if (this.onNavigate) {
         this.onNavigate(this.getWorkout().next); // first unfinished drill
       }
+    });
+
+    // Workout task chips click
+    this.container.querySelectorAll('.workout-task-chip').forEach(chip => {
+      chip.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const route = (chip as HTMLElement).dataset.route as RouteId;
+        if (route && this.onNavigate) {
+          AudioSynthesizer.play('click');
+          this.onNavigate(route);
+        }
+      });
     });
 
     // Branch cards click

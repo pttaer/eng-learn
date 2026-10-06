@@ -7,6 +7,7 @@ import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { AcousticEngine, AcousticAnalysis } from '../core/acoustic-engine';
 import { CollocationSpotter } from '../core/collocation-spotter';
+import { SkillTreeEngine } from '../core/skill-tree-engine';
 import drillsData from '../assets/data/drills.json';
 
 export interface SpeakingItem {
@@ -61,10 +62,10 @@ export class SpeakingDossier {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-speaking interactive';
     this.allItems = (drillsData as any).speaking || [];
-    this.activeLevel = defaultLevel(this.allItems as any[]);
+    this.activeLevel = defaultLevel(this.allItems as any[], StorageManager.getSkillLevel('speaking'));
     this.items = this.allItems.filter((i: any) => i.cefrLevel === this.activeLevel);
     window.addEventListener('learner-level-change', () => {
-      this.activeLevel = defaultLevel(this.allItems as any[]);
+      this.activeLevel = defaultLevel(this.allItems as any[], StorageManager.getSkillLevel('speaking'));
       this.setLevel(this.activeLevel);
     });
 
@@ -484,6 +485,9 @@ export class SpeakingDossier {
     };
 
     this.roundsPerformance[this.currentRoundIdx] = performance;
+
+    // Advance Constellation Skill Tree node for speaking
+    SkillTreeEngine.advanceBranchMastery('speaking', this.activeLevel, 5);
 
     // Refresh front and back views with new take data
     this.updateFrontContent(frontEl, item);

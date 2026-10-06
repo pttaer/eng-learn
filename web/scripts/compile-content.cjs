@@ -599,6 +599,18 @@ function compileHabits() {
   }
 }
 
+function compileDiagnostic() {
+  const filePath = path.join(CONTENT_DIR, 'diagnostic', 'diagnostic-questions.md');
+  if (!fs.existsSync(filePath)) return;
+  const raw = fs.readFileSync(filePath, 'utf8').replace(/\r\n/g, '\n');
+  const jsonMatch = raw.match(/```json\r?\n([\s\S]*?)\r?\n```/);
+  if (jsonMatch) {
+    const data = JSON.parse(jsonMatch[1]);
+    fs.writeFileSync(path.join(DATA_DIR, 'diagnostic-questions.json'), JSON.stringify(data, null, 2), 'utf8');
+    console.log(`[COMPILE] diagnostic-questions.json: ${data.length} items`);
+  }
+}
+
 function compileAll() {
   const start = Date.now();
   console.log('[COMPILE] Compiling Markdown content into JSON...');
@@ -611,10 +623,13 @@ function compileAll() {
   compileReading();
   compileListening();
   compileHabits();
+  compileDiagnostic();
   console.log(`[COMPILE] Finished in ${Date.now() - start}ms.`);
 }
 
-compileAll();
+if (require.main === module) {
+  compileAll();
+}
 
 if (process.argv.includes('--watch')) {
   console.log('[WATCH] Watching web/content for changes...');
@@ -625,3 +640,17 @@ if (process.argv.includes('--watch')) {
     }
   });
 }
+
+module.exports = {
+  compileAll,
+  compileDiagnostic,
+  compileCollocations,
+  compileGrammar,
+  compileVocabulary,
+  compileRhetoric,
+  compileLexicon,
+  compileDrills,
+  compileReading,
+  compileListening,
+  compileHabits
+};

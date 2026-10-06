@@ -7,6 +7,7 @@ import { computeDiffTokens, ProofreadDiffToken } from './writing-dossier';
 import grammarData from '../assets/data/grammar.json';
 import { Cefr, srsTier } from '../core/cefr';
 import { levelsWithContent, defaultLevel, levelChipsHtml } from '../core/level-filter';
+import { SkillTreeEngine } from '../core/skill-tree-engine';
 
 export type GrammarMode = string;
 
@@ -56,10 +57,10 @@ export class GrammarDossier {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-grammar interactive';
     this.allDeck = grammarData as GrammarItem[];
-    this.activeLevel = defaultLevel(this.allDeck);
+    this.activeLevel = defaultLevel(this.allDeck, StorageManager.getSkillLevel('grammar'));
     this.filterDeck();
     window.addEventListener('learner-level-change', () => {
-      this.activeLevel = defaultLevel(this.allDeck);
+      this.activeLevel = defaultLevel(this.allDeck, StorageManager.getSkillLevel('grammar'));
       this.filterDeck();
       if (this.container.isConnected) this.render();
     });
@@ -195,19 +196,41 @@ export class GrammarDossier {
 
     const categoryLabel = `${item.mode.replace('_', ' ')} [${item.cefrLevel}]`;
 
-    // FRONT: Prompt sentence, Cue, and Formula Bar
+    // FRONT: Prompt sentence, Cue, Formula Bar, and Interactive Transformation Console (ENG-60)
     const frontEl = document.createElement('div');
     frontEl.className = 'grammar-front-content';
     frontEl.innerHTML = `
       <div class="card-prompt-label">SYNTACTIC TRANSFORMATION // ${item.title.toUpperCase()}</div>
-      <div class="card-main-text" style="font-size: 16px; line-height: 1.62; font-weight: 500; max-width: 68ch; margin: 12px 0;">
+      <div class="card-main-text" style="font-size: 16px; line-height: 1.62; font-weight: 500; max-width: 68ch; margin: 10px 0;">
         "${item.promptSentence}"
       </div>
       <div class="card-sub-text" style="font-family: var(--font-mono); font-size: 12px; margin-bottom: 8px;">
         CUE: ${item.grammaticalCue}
       </div>
-      <div class="grammar-formula-bar">
+      <div class="grammar-formula-bar" style="margin-bottom: 12px;">
         [ STEP-BY-STEP SYNTACTIC FORMULA ]: ${item.formula}
+      </div>
+
+      <!-- Interactive Syntactic Transformation Console (ENG-60) -->
+      <div class="grammar-transform-console">
+        <label for="grammar-transform-input" class="telemetry-label" style="display: block; margin-bottom: 6px;">
+          [ ACTIVE SYNTACTIC TRANSFORMATION INPUT ]:
+        </label>
+        <div class="grammar-input-row">
+          <input
+            type="text"
+            class="grammar-transform-input"
+            id="grammar-transform-input"
+            placeholder="Type transformed syntactic resolution (or press Space to flip)..."
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Type transformed syntactic resolution"
+          />
+          <button type="button" class="hud-btn grammar-verify-btn" aria-label="Verify Transformation">
+            ${icon('zap', 14)} [ Verify Transformation ]
+          </button>
+        </div>
+        <div class="grammar-diff-feedback grammar-diff-preview" aria-live="polite"></div>
       </div>
     `;
 
@@ -279,6 +302,96 @@ export class GrammarDossier {
     });
 
     slot.appendChild(this.currentCardHandle.element);
+
+    // Interactive Syntactic Console Event Wiring (ENG-60)
+    const transformInput = frontEl.querySelector('.grammar-transform-input') as HTMLInputElement | null;
+    const verifyBtn = frontEl.querySelector('.grammar-verify-btn') as HTMLButtonElement | null;
+    const diffFeedback = frontEl.querySelector('.grammar-diff-feedback') as HTMLElement | null;
+
+    let lastKeystrokeTime = 0;
+    transformInput?.addEventListener('input', () => {
+      const now = performance.now();
+      if (now - lastKeystrokeTime >= 35) {
+        lastKeystrokeTime = now;
+        AudioSynthesizer.play('keystroke');
+      }
+    });
+
+    const runVerify = () => {
+      if (!transformInput || !diffFeedback) return;
+      const userText = transformInput.value.trim();
+      const targetText = item.targetTransformation.trim();
+
+      if (userText.length === 0) {
+        diffFeedback.className = 'grammar-diff-feedback grammar-diff-preview match-mismatch';
+        diffFeedback.innerHTML = `<span class="diff-token-delete" style="padding: 4px 8px;">Please enter a transformation before verifying.</span>`;
+        AudioSynthesizer.play('alarm');
+        transformInput.focus();
+        return;
+      }
+
+      const diffTokens = computeDiffTokens(userText, targetText);
+      let matchCount = 0;
+      for (const token of diffTokens) {
+        if (token.type === 'match') {
+          matchCount += token.value.length;
+        }
+      }
+      const maxLen = Math.max(targetText.length, userText.length);
+      const accuracyPct = maxLen === 0 ? 100 : Math.round((matchCount / maxLen) * 100);
+      const isCaseInsensitiveExact = userText.toLowerCase() === targetText.toLowerCase() ||
+        userText.toLowerCase().replace(/[.,!?;:]$/, '') === targetText.toLowerCase().replace(/[.,!?;:]$/, '');
+      const isSuccess = isCaseInsensitiveExact || accuracyPct >= 90;
+
+      const diffHtml = this.formatInlineDiffHtml(diffTokens);
+
+      if (isSuccess) {
+        diffFeedback.className = 'grammar-diff-feedback grammar-diff-preview match-success';
+        diffFeedback.innerHTML = `
+          <div class="diff-result-header" style="color: var(--good); font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+            ${icon('zap', 14)} SYNTACTIC RESOLUTION VERIFIED (${isCaseInsensitiveExact ? 100 : accuracyPct}% MATCH)
+          </div>
+          <div class="diff-tokens-stream">${diffHtml}</div>
+        `;
+        AudioSynthesizer.play('absorb');
+        setTimeout(() => {
+          if (this.currentCardHandle && !this.currentCardHandle.isFlipped()) {
+            this.currentCardHandle.flip();
+          }
+        }, 750);
+      } else {
+        diffFeedback.className = 'grammar-diff-feedback grammar-diff-preview match-mismatch';
+        diffFeedback.innerHTML = `
+          <div class="diff-result-header" style="color: var(--warning); font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+            SYNTACTIC MISMATCH (${accuracyPct}% MATCH) — REVIEW REPAIR TOKENS:
+          </div>
+          <div class="diff-tokens-stream">${diffHtml}</div>
+        `;
+        AudioSynthesizer.play('alarm');
+      }
+    };
+
+    verifyBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      AudioSynthesizer.play('click');
+      runVerify();
+    });
+
+    transformInput?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        e.stopPropagation();
+        runVerify();
+      } else if (e.key === ' ' && transformInput.value.trim().length === 0) {
+        e.preventDefault();
+        e.stopPropagation();
+        this.currentCardHandle?.flip();
+      }
+    });
+  }
+
+  public formatInlineDiffHtml(tokens: ProofreadDiffToken[]): string {
+    return this.formatRepairDiffHtml(tokens);
   }
 
   private formatRepairDiffHtml(tokens: ProofreadDiffToken[]): string {
@@ -326,6 +439,10 @@ export class GrammarDossier {
     const nextCardState = SRSEngine.rateCard(srsState, cardId, rating, cardLevel);
     StorageManager.setCardState(cardId, nextCardState);
 
+    if (rating === 'good') {
+      SkillTreeEngine.advanceBranchMastery('grammar', this.activeLevel, 5);
+    }
+
     this.reviewCountInRun += 1;
     const streakEl = this.container.querySelector('.streak-counter');
     if (streakEl) {
@@ -372,6 +489,13 @@ export class GrammarDossier {
       if (key === '2') {
         this.currentCardHandle.rate('good');
         return true;
+      }
+      if (key === 'Enter') {
+        const verifyBtn = this.container.querySelector('.grammar-verify-btn') as HTMLButtonElement | null;
+        if (verifyBtn && (!this.currentCardHandle || !this.currentCardHandle.isFlipped())) {
+          verifyBtn.click();
+          return true;
+        }
       }
     }
     return false;
