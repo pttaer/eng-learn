@@ -121,3 +121,51 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
 });
+
+// 5. Notification Click Listener: Focus window and route to #collocations or due review
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  const targetRoute = (event.notification.data && event.notification.data.route) ? event.notification.data.route : '#collocations';
+  const targetUrl = new URL(`/${targetRoute}`, self.location.origin).href;
+
+  event.waitUntil(
+    self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windowClients) => {
+      // Focus existing client window and navigate
+      for (const client of windowClients) {
+        if (client.url.startsWith(self.location.origin) && 'focus' in client) {
+          client.focus();
+          if ('navigate' in client) {
+            return client.navigate(targetUrl);
+          }
+          return;
+        }
+      }
+      // If no window is open, open a new window
+      if (self.clients.openWindow) {
+        return self.clients.openWindow(targetUrl);
+      }
+    })
+  );
+});
+
+// 6. Push Notification Listener: Support background push alerts
+self.addEventListener('push', (event) => {
+  let data = { title: 'English Singularity', body: 'Flashcards are due for review!', route: '#collocations' };
+  if (event.data) {
+    try {
+      data = event.data.json();
+    } catch {
+      data.body = event.data.text();
+    }
+  }
+
+  event.waitUntil(
+    self.registration.showNotification(data.title || 'English Singularity', {
+      body: data.body,
+      icon: '/icon-192.png',
+      badge: '/icon-192.png',
+      tag: 'srs-review-due',
+      data: { route: data.route || '#collocations' }
+    })
+  );
+});

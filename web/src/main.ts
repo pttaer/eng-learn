@@ -27,6 +27,7 @@ import { ZenMode } from './core/zen-mode';
 import { LexiconDrawer } from './modules/lexicon-drawer';
 import { BlitzDossier } from './modules/blitz-dossier';
 import { CardTiltController, NebulaCanvas } from './core/perspective-canvas';
+import { NotificationEngine } from './core/notification-engine';
 import collocationsData from './assets/data/collocations.json';
 
 // Expose engines to window for automated headless testing & telemetry inspection
@@ -42,6 +43,7 @@ import collocationsData from './assets/data/collocations.json';
 (window as any).StorageManager = StorageManager;
 (window as any).CardTiltController = CardTiltController;
 (window as any).NebulaCanvas = NebulaCanvas;
+(window as any).NotificationEngine = NotificationEngine;
 
 class App {
   private router: Router;
@@ -414,4 +416,5 @@ document.addEventListener('DOMContentLoaded', () => {
   (window as any).MotionEngine = MotionEngine;
   new App();
   registerServiceWorker();
+  NotificationEngine.schedulePeriodicCheck();
 });

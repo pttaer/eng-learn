@@ -13,6 +13,7 @@ export interface SRSCardState {
   easeFactor: number;     // EF: difficulty factor (minimum 1.3, default 2.5)
   lastReviewed: number;   // Unix timestamp (ms)
   dueDate: number;        // Unix timestamp (ms)
+  nextReview?: number;    // Alias for dueDate (ms)
   totalReviews: number;
   totalLapses: number;
 }
@@ -271,5 +272,34 @@ export class SRSEngine {
       retentionRate,
       dueCount
     };
+  }
+
+  /**
+   * Returns the count of cards currently due for review.
+   */
+  public static getDueCount(cardStates?: Record<string, SRSCardState>, now: number = Date.now()): number {
+    if (!cardStates) {
+      if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+        try {
+          const raw = localStorage.getItem('STARK_ENG_STATE');
+          if (raw) {
+            const parsed = JSON.parse(raw);
+            cardStates = parsed.cardStates || {};
+          }
+        } catch {
+          cardStates = {};
+        }
+      }
+    }
+    const states = cardStates || {};
+    let count = 0;
+    for (const id in states) {
+      const card = states[id];
+      const dueTime = card?.nextReview ?? card?.dueDate;
+      if (card && typeof dueTime === 'number' && (dueTime <= now || (card.nextReview && card.nextReview <= now))) {
+        count++;
+      }
+    }
+    return count;
   }
 }
