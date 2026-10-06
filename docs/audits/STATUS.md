@@ -35,8 +35,8 @@ Context: the monochrome "#FFF/#000" design system has been replaced by a dark-na
 | 2 | ACT-6P-02 Space on a focused button flips the card (vocab) | open | guard skips BUTTON; `vocabulary-dossier.ts:265-280` has no check; `main.ts:244` calls preventDefault |
 | 3 | ACT-6P-03 aria-live alert for surprise remind card | open | `vocabulary-dossier.ts:173` sets a label only; no live region |
 | 4 | ACT-6P-04 compass trigger a11y + hide closed menu | open (partial) | role/tabindex/aria-expanded/Enter+Space added (`corner-compass.ts:82-85`); closed menu has no `visibility:hidden` (`dossiers.css:230-241`); no `aria-haspopup` |
-| 5 | ACT-6P-05 arrow keys switch passes in reading | open | `reading-dossier.ts:985` handles keys only when `currentPass === 3` |
-| 6 | ACT-6P-06 tablist/tab roles on article + pass tabs | open | 0 matches for `role="tab"` / `aria-selected` in `src/modules` |
+| 5 | ACT-6P-05 arrow keys switch passes in reading | resolved | WAI-ARIA roving tabindex, ArrowLeft/ArrowRight stepper navigation & global cycling (`reading-dossier.ts`, ENG-69) |
+| 6 | ACT-6P-06 tablist/tab roles on article + pass tabs | resolved | `role="tablist"`, `role="tab"`, `aria-selected`, roving tabindex (`reading-dossier.ts`, ENG-69) |
 | 7 | ACT-6P-07 search `type="search"` + aria-label | open | `collocations-dossier.ts:96` uses `type="text"`, no aria-label |
 | 8 | ACT-6P-08 `--bg-card` undefined | resolved | `variables.css:12` |
 | 9 | Keyboard fallback for home nodes | open | home = tree; nodes are SVG `<g>` with no tabindex/role/keydown (`skill-tree-view.ts:217`) |
@@ -58,7 +58,7 @@ Context: the monochrome "#FFF/#000" design system has been replaced by a dark-na
 | 10 | ACT-07 gyro tilt ignores reduced motion | open | `atomic-card.ts:264` skips touch only |
 | 11 | 4.1 / ACT-08 home nav landmark | open | same as 6-pillar #9 |
 | 12 | 4.2 / ACT-09 aria-labels / aria-pressed | open (partial) | dock + audio labelled (`atomic-card.ts:148-150`); sound toggle has no `aria-pressed` (`header-hud.ts:71`); audio label is generic |
-| 13 | 4.3 / ACT-10 live regions (diff, timer) | open | only `atomic-card.ts:56`; none on writing diff or `timer-display-text` (`speaking-dossier.ts:215`) |
+| 13 | 4.3 / ACT-10 live regions (diff, timer) | resolved | `aria-live="polite"` added to Myers diff (`writing-dossier.ts`), speaking countdown timer (`speaking-dossier.ts`), and reading skim timer (`reading-dossier.ts`, ENG-69) |
 
 ## curriculum-data-audit.md
 
@@ -98,8 +98,16 @@ Still open: collocations have no example sentences; light-mode muted ink on the 
 
 ## Update 2026-10-05 (open-items sweep)
 Resolved: collocation example sentences (all 1000, verified by `verify-content-pipeline.cjs`); daily-plan checklist synced with its JSON (30 days x 3 tasks), dead `file:///` links removed; color emoji replaced by SVG icons in Init 17/18 modules and tour; Space/Enter on focused buttons no longer flips cards or starts Blitz; tab roles on reading article/pass tabs; search `type="search"` + label; sound toggle `aria-pressed`; compass `aria-haspopup`, compass code opacity removed; light-mode muted ink now >= 7.3:1 on every surface; card parallax tilt honors the in-app Motion setting; Init 17/18: progression modal claims Escape, lexicon drawer is `inert` when closed, nebula/drawer/blitz honor `html[data-motion="reduce"]`.
-Still open: arrow keys switching reading passes (tab pattern); live regions for writing diff and speaking timer; remaining JS loops (`particle-canvas`, `perspective-canvas`, `corner-compass`, `speaking-dossier`) vs the in-app Motion setting; anime.js v3->v4; big-file split; installer needs a Defender exclusion for `web/release` before `npm run dist:win`.
+Still open: remaining JS loops (`particle-canvas`, `perspective-canvas`, `corner-compass`, `speaking-dossier`) vs the in-app Motion setting; anime.js v3->v4; big-file split; installer needs a Defender exclusion for `web/release` before `npm run dist:win`.
 
 ## Update 2026-10-05 (CEFR ladder)
 Resolved: every content item carries a per-item `cefrLevel` (rationale logs in `docs/audits/cefr-tagging/`); A1, A2 and B1 content added across all pillars; learner level (v2 state, v1 migrated to B2 with their tree progress preserved), header level badge and picker, level chips in every pillar, due-review queue independent of level, 8-tier skill tree, placement quiz, computed counts instead of hard-coded "1,000".
 Still open: placement is vocabulary-based only; practice advances tree mastery only in writing; the new lower-level content was written by a model and needs a human spot-check (collocation examples, Vietnamese glosses, IPA); no A1/A2 daily plan; UI copy is still advanced in tone; tree labels are small on phones.
+
+## Update 2026-10-06 (ENG-69 Reading Pass Tabs & Live Regions)
+Resolved: WAI-ARIA roving tabindex (0 for selected, -1 for inactive), ArrowLeft/ArrowRight stepper keyboard cycling, Home/End support, and global pass cycling in `reading-dossier.ts` (ACT-6P-05, ACT-6P-06); added `role="region"` and `aria-live="polite"` to Myers split-diff evaluation in `writing-dossier.ts`; added `role="timer"` and `aria-live="polite"` to countdown timers in `speaking-dossier.ts` and `reading-dossier.ts` (ACT-10). Verified by `verify-eng69-a11y.cjs` and clean Vite production build.
+
+## Update 2026-10-06 (IELTS Academic side)
+Audit: the CEFR app alone cannot reach IELTS 7.0 (no exam format, timing or band scoring; Listening 4-34 word passages, Reading <= 460 words). Plan: `docs/superpowers/plans/2026-10-06-ielts-7-readiness.md`.
+Added: separate app side `web/ielts.html` + `web/src/ielts/` (Reading, Listening, Writing Task 1/2, Speaking Parts 1-3, strategy cards, timed mocks, band report, 7.0 readiness gate). Content in `src/ielts/data/` (12 reading passages, 8 listening sections = 2 tests, 16 Task 1, 20 Task 2, 12 Part 1 topics, 30 cue cards). Scoring is local: official raw-score band tables, offline writing heuristics, self-rated rubric for Writing/Speaking. No external API.
+Still open: answer keys are model-written and model-audited, not human-checked; Listening uses browser TTS voices (not real exam audio); Writing/Speaking bands are self-estimates; IELTS topic vocabulary deck (plan Task 8) not built; pre-existing `tsc` errors in `core/srs-engine.ts` (duplicate functions, not from this work).

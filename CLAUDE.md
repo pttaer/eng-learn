@@ -6,3 +6,9 @@
 - All dossier views share one skeleton: toolbars span the 1040 workspace; card and nav bar share one centered column (card width, 760) so edges line up; every view starts at the same top edge.
 - Never let a slot be smaller than its content (no `contain: size` on content slots); siblings must not overlap.
 - After any layout/CSS change, measure sibling gaps and widths on all routes at desktop (1440) and phone (390) widths, then screenshot and look at them before calling it done.
+
+## IELTS app rules
+- IELTS is a separate app side (`web/ielts.html`, `web/src/ielts/`), Academic only.
+- Listening uses browser text-to-speech only.
+- All scoring is computed locally by our own code. No external API, no LLM calls, no new dependency.
+- Claude verifies every answer key; each question carries a `why` with the evidence line.
