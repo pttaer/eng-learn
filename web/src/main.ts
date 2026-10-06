@@ -28,6 +28,7 @@ import { LexiconDrawer } from './modules/lexicon-drawer';
 import { BlitzDossier } from './modules/blitz-dossier';
 import { CardTiltController, NebulaCanvas } from './core/perspective-canvas';
 import { NotificationEngine } from './core/notification-engine';
+import { AmbientMusicEngine, ambientMusicEngine } from './core/ambient-music-engine';
 import collocationsData from './assets/data/collocations.json';
 
 // Expose engines to window for automated headless testing & telemetry inspection
@@ -44,6 +45,8 @@ import collocationsData from './assets/data/collocations.json';
 (window as any).CardTiltController = CardTiltController;
 (window as any).NebulaCanvas = NebulaCanvas;
 (window as any).NotificationEngine = NotificationEngine;
+(window as any).AmbientMusicEngine = AmbientMusicEngine;
+(window as any).ambientMusicEngine = ambientMusicEngine;
 
 class App {
   private router: Router;
@@ -75,6 +78,7 @@ class App {
 
     // 1. Initialize Subsystems
     AudioSynthesizer.init();
+    AmbientMusicEngine.init();
     CursorTracker.init();
     ZenMode.init();
     LexiconDrawer.init();

@@ -264,6 +264,44 @@ html, body {
   background: var(--accent-gold-soft, rgba(165, 180, 252, 0.12));
 }
 
+/* Ambient Music HUD Button & Active State (ENG-76) */
+.btn-ambient-music {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--duration-fast, 0.15s) ease;
+}
+
+.btn-ambient-music.active {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  background: var(--accent-gold-soft, rgba(165, 180, 252, 0.12));
+  box-shadow: 0 0 10px rgba(165, 180, 252, 0.25);
+}
+
+/* Settings Modal Audio Section & Sliders (ENG-76) */
+.settings-audio-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+  background: var(--bg-surface, #111622);
+  border: 1px solid var(--border-subtle, #1e293b);
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+.settings-audio-section label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs, 12px);
+  color: var(--ink-secondary);
+}
+
+.settings-audio-section input[type="range"] {
+  accent-color: var(--accent-gold);
+}
+
 /* Master Volume HUD Cluster */
 .hud-volume-cluster {
   display: inline-flex;
@@ -803,3 +841,9 @@ body.zen-active,
 }
 
 .hud-header .btn-progression-pill { white-space: nowrap; }
+
+.btn-ambient-music.active {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  box-shadow: 0 0 8px rgba(202, 138, 4, 0.25);
+}

@@ -9,6 +9,7 @@ import { ProgressionEngine } from '../core/progression-engine';
 import { ProgressionModal } from './progression-modal';
 import { ZenMode } from '../core/zen-mode';
 import { MultiSkillQuizModal } from './multi-skill-quiz-modal';
+import { ambientMusicEngine, AmbientMusicMode } from '../core/ambient-music-engine';
 
 const ROUTE_NAMES: Record<string, string> = { read: 'READING', write: 'WRITING', listen: 'LISTENING', speak: 'SPEAKING', vocab: 'VOCABULARY', colloc: 'COLLOCATIONS', grammar: 'GRAMMAR', habits: 'DAILY HABITS', singularity: 'SINGULARITY' };
 
@@ -112,6 +113,7 @@ export class HeaderHUD {
         <button class="hud-btn btn-zen-toggle ${ZenMode.isZen() ? 'active' : ''}" title="Toggle Zen Immersion Mode (Hotkey: Z)" aria-label="Toggle Zen Immersion Mode" aria-pressed="${ZenMode.isZen()}">${HeaderHUD.zenLabel(ZenMode.isZen())}</button>
         <button class="hud-btn btn-theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">${this.themeLabel()}</button>
         <button class="hud-btn btn-launch-tour" title="Launch Interactive Game Tour" aria-label="Launch Game Tour">${icon('compass')}<span class="btn-label"> Tour</span></button>
+        <button class="hud-btn btn-ambient-music ${ambientMusicEngine.isPlaying() ? 'active' : ''}" title="Ambient Music: ${ambientMusicEngine.getMode()}" aria-label="Ambient Music: ${ambientMusicEngine.getMode()}">${icon('music', 12)}<span class="btn-label"> ${HeaderHUD.ambientLabel(ambientMusicEngine.getMode())}</span></button>
         <button class="hud-btn btn-sound-toggle" title="Toggle audio mute" aria-label="Toggle audio mute" aria-pressed="${isMuted}">${HeaderHUD.soundLabel(isMuted)}</button>
         <button class="hud-btn btn-settings" title="Settings & Data Management" aria-label="Settings">${icon('settings')}<span class="btn-label"> Settings</span></button>
       </div>
@@ -130,6 +132,26 @@ export class HeaderHUD {
 
   private static zenLabel(active: boolean): string {
     return `${icon('eye', 12)}<span class="btn-label"> ZEN</span>${active ? '<span class="zen-dot" style="color: var(--accent-gold); margin-left: 2px;">●</span>' : ''}`;
+  }
+
+  private static ambientLabel(mode: AmbientMusicMode): string {
+    switch (mode) {
+      case 'calm-chords': return 'Chords';
+      case 'celestial-void': return 'Void';
+      case 'zen-drone': return 'Zen';
+      default: return 'Music';
+    }
+  }
+
+  private updateAmbientButtonState(mode: AmbientMusicMode): void {
+    const musicBtn = this.element.querySelector('.btn-ambient-music') as HTMLButtonElement | null;
+    if (musicBtn) {
+      const playing = ambientMusicEngine.isPlaying();
+      musicBtn.classList.toggle('active', playing);
+      musicBtn.title = `Ambient Music: ${mode}`;
+      musicBtn.setAttribute('aria-label', `Ambient Music: ${mode}`);
+      musicBtn.innerHTML = `${icon('music', 12)}<span class="btn-label"> ${HeaderHUD.ambientLabel(mode)}</span>`;
+    }
   }
 
   private updateZenButtonState(active: boolean): void {
@@ -195,6 +217,17 @@ export class HeaderHUD {
     tourBtn?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
       SpotlightTour.start(true);
+    });
+
+    const ambientBtn = this.element.querySelector('.btn-ambient-music') as HTMLButtonElement | null;
+    ambientBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      const nextMode = ambientMusicEngine.cycleMode();
+      this.updateAmbientButtonState(nextMode);
+    });
+
+    window.addEventListener('ambient-music-mode-change', (e: any) => {
+      this.updateAmbientButtonState(e.detail?.mode || ambientMusicEngine.getMode());
     });
 
     const soundBtn = this.element.querySelector('.btn-sound-toggle') as HTMLButtonElement | null;
@@ -331,6 +364,37 @@ export class HeaderHUD {
           <button class="hud-btn btn-backup-import" style="padding: 12px; justify-content: center; font-weight: 600;">
             ${icon('upload')} Restore from Backup (JSON)
           </button>
+          <!-- Dual Audio Bus Controls -->
+          <div class="settings-audio-section" style="display: flex; flex-direction: column; gap: 10px; padding: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-line); border-radius: 6px;">
+            <div style="font-size: 11px; font-weight: 700; color: var(--accent-gold); letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px;">
+              ${icon('volume', 12)} DUAL AUDIO BUS CONTROLS
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px;">
+              <label for="sfx-volume-slider" style="display: flex; align-items: center; gap: 6px;">
+                SFX Volume: <span id="sfx-vol-label" style="font-family: var(--font-mono); font-weight: 600;">${Math.round(AudioSynthesizer.getVolume() * 100)}%</span>
+              </label>
+              <input type="range" id="sfx-volume-slider" min="0" max="100" value="${Math.round(AudioSynthesizer.getVolume() * 100)}" style="width: 140px; cursor: pointer;" />
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px;">
+              <label for="music-volume-slider" style="display: flex; align-items: center; gap: 6px;">
+                Music Volume: <span id="music-vol-label" style="font-family: var(--font-mono); font-weight: 600;">${Math.round(ambientMusicEngine.getMusicVolume() * 100)}%</span>
+              </label>
+              <input type="range" id="music-volume-slider" min="0" max="100" value="${Math.round(ambientMusicEngine.getMusicVolume() * 100)}" style="width: 140px; cursor: pointer;" />
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px;">
+              <label for="music-mode-select">Ambient Soundscape:</label>
+              <select id="music-mode-select" class="hud-select" style="background: var(--bg-card); color: var(--ink-primary); border: 1px solid var(--border-line); padding: 4px 8px; border-radius: 4px; font-size: 12px; cursor: pointer;">
+                <option value="off" ${ambientMusicEngine.getMode() === 'off' ? 'selected' : ''}>Off</option>
+                <option value="calm-chords" ${ambientMusicEngine.getMode() === 'calm-chords' ? 'selected' : ''}>Calm Chords</option>
+                <option value="celestial-void" ${ambientMusicEngine.getMode() === 'celestial-void' ? 'selected' : ''}>Celestial Void</option>
+                <option value="zen-drone" ${ambientMusicEngine.getMode() === 'zen-drone' ? 'selected' : ''}>Zen Drone</option>
+              </select>
+            </div>
+          </div>
+
           <button class="hud-btn btn-motion-toggle" style="padding: 12px; justify-content: center; font-weight: 600;" aria-pressed="${document.documentElement.dataset.motion === 'reduce'}">
             ${icon('zap')} <span class="motion-label">${document.documentElement.dataset.motion === 'reduce' ? 'Motion: Reduced' : 'Motion: Full'}</span>
           </button>
@@ -399,6 +463,29 @@ export class HeaderHUD {
       notifBtn.setAttribute('aria-pressed', String(enabled));
       notifBtn.innerHTML = `${icon('bell')} <span class="notifications-label">Daily Review Alerts: ${enabled ? 'ON' : 'OFF'}</span>`;
     };
+
+    const sfxSlider = modal.querySelector('#sfx-volume-slider') as HTMLInputElement | null;
+    sfxSlider?.addEventListener('input', (e) => {
+      const val = parseInt((e.target as HTMLInputElement).value, 10) / 100;
+      AudioSynthesizer.setMasterVolume(val);
+      const label = modal.querySelector('#sfx-vol-label');
+      if (label) label.textContent = `${Math.round(val * 100)}%`;
+    });
+
+    const musicSlider = modal.querySelector('#music-volume-slider') as HTMLInputElement | null;
+    musicSlider?.addEventListener('input', (e) => {
+      const val = parseInt((e.target as HTMLInputElement).value, 10) / 100;
+      ambientMusicEngine.setMusicVolume(val);
+      const label = modal.querySelector('#music-vol-label');
+      if (label) label.textContent = `${Math.round(val * 100)}%`;
+    });
+
+    const musicSelect = modal.querySelector('#music-mode-select') as HTMLSelectElement | null;
+    musicSelect?.addEventListener('change', (e) => {
+      const mode = (e.target as HTMLSelectElement).value as AmbientMusicMode;
+      ambientMusicEngine.setMode(mode);
+      AudioSynthesizer.play('click');
+    });
 
     modal.querySelector('.btn-motion-toggle')?.addEventListener('click', (e) => {
       const root = document.documentElement;

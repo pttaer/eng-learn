@@ -175,6 +175,14 @@ export class AudioSynthesizer {
     return this.ctx;
   }
 
+  public static getContext(): AudioContext | null {
+    return this.ctx;
+  }
+
+  public static getMasterGain(): GainNode | null {
+    return this.masterGain;
+  }
+
   /**
    * Toggles master audio mute state with smooth exponential ramping.
    */

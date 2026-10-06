@@ -33,6 +33,8 @@ export interface AppStorageState {
   totalCardsReviewed: number;
   lastSyncTimestamp: number;
   notificationsEnabled?: boolean;
+  musicVolume?: number;
+  musicMode?: string;
 }
 
 const STORAGE_KEY = 'STARK_ENG_STATE';
@@ -73,7 +75,9 @@ const DEFAULT_STATE: AppStorageState = {
   habitProgress: {},
   totalCardsReviewed: 0,
   lastSyncTimestamp: Date.now(),
-  notificationsEnabled: false
+  notificationsEnabled: false,
+  musicVolume: 0.35,
+  musicMode: 'off'
 };
 
 export class StorageManager {
@@ -260,6 +264,44 @@ export class StorageManager {
     const state = this.loadState();
     state.notificationsEnabled = enabled;
     this.saveState(state);
+  }
+
+  public static getMusicVolume(): number {
+    try {
+      const v = localStorage.getItem('eng_music_volume');
+      if (v !== null) {
+        const parsed = parseFloat(v);
+        if (!isNaN(parsed)) return Math.max(0, Math.min(1, parsed));
+      }
+    } catch {}
+    return this.loadState().musicVolume ?? 0.35;
+  }
+
+  public static setMusicVolume(vol: number): void {
+    const clamped = Math.max(0, Math.min(1, vol));
+    const state = this.loadState();
+    state.musicVolume = clamped;
+    this.saveState(state);
+    try {
+      localStorage.setItem('eng_music_volume', String(clamped));
+    } catch {}
+  }
+
+  public static getMusicMode(): string {
+    try {
+      const mode = localStorage.getItem('eng_music_mode');
+      if (mode) return mode;
+    } catch {}
+    return this.loadState().musicMode || 'off';
+  }
+
+  public static setMusicMode(mode: string): void {
+    const state = this.loadState();
+    state.musicMode = mode;
+    this.saveState(state);
+    try {
+      localStorage.setItem('eng_music_mode', mode);
+    } catch {}
   }
 
   public static setHabitTask(dayNum: number, taskIndex: number, checked: boolean, totalTasksForDay: number): void {
