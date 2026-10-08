@@ -56,5 +56,7 @@ export interface Task2Prompt {
 }
 
 export interface SpeakingPart1 { topic: string; questions: string[] }
-export interface SpeakingPart2 { id: string; cue: string; bullets: string[]; part3: string[]; modelAnswer: string }
+export interface SpeakingNotes { fc: string; lr: string; gra: string; pron: string }
+/** modelAnswer is the band-7 sample; band6 + notes (optional) show what separates 6 from 7. */
+export interface SpeakingPart2 { id: string; cue: string; bullets: string[]; part3: string[]; modelAnswer: string; band6?: string; notes?: SpeakingNotes }
 export interface SpeakingData { part1: SpeakingPart1[]; part2: SpeakingPart2[] }
