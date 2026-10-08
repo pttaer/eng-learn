@@ -13,6 +13,8 @@ const KEY = 'IELTS_VOCAB_SRS';
 const DECK = vocabData as VocabItem[];
 const TOPICS = [...new Set(DECK.map(v => v.topic))];
 const SESSION = 20;
+// 'All topics' interleaves topics (item 1 of each, then item 2...) so new words are not one topic at a time.
+const MIXED = [...DECK].sort((a, b) => +a.id.slice(4) - +b.id.slice(4));
 
 function load(): Record<string, SRSCardState> {
   try { return JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch { return {}; }
@@ -39,7 +41,7 @@ export function vocabView(root: HTMLElement): () => void {
   const stage = h('div', 'ie-vstage');
   root.append(bar, stage);
 
-  const pool = (): VocabItem[] => (topic === 'all' ? DECK : DECK.filter(v => v.topic === topic));
+  const pool = (): VocabItem[] => (topic === 'all' ? MIXED : DECK.filter(v => v.topic === topic));
   const showStats = (): void => {
     const p = pool(), now = Date.now();
     const seen = p.filter(v => states[v.id]);
