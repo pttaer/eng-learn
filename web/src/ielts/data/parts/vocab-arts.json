@@ -1,0 +1,1738 @@
+[
+  {
+    "id": "art-001",
+    "topic": "arts",
+    "word": "masterpiece",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a work of outstanding artistic skill, often the best by a particular creator",
+    "collocations": [
+      "an artistic masterpiece",
+      "a literary masterpiece",
+      "a Renaissance masterpiece"
+    ],
+    "paraphrases": [
+      "a work of genius",
+      "a supreme achievement"
+    ],
+    "example": "The painting is widely regarded as a masterpiece of early Renaissance portraiture."
+  },
+  {
+    "id": "art-002",
+    "topic": "arts",
+    "word": "exhibition",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a public display of works of art or other items",
+    "collocations": [
+      "an art exhibition",
+      "stage an exhibition",
+      "a touring exhibition"
+    ],
+    "paraphrases": [
+      "a public show",
+      "a display of works"
+    ],
+    "example": "The museum is staging an exhibition of photographs taken during the war."
+  },
+  {
+    "id": "art-003",
+    "topic": "arts",
+    "word": "gallery",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a building or room where works of art are shown",
+    "collocations": [
+      "an art gallery",
+      "a gallery owner",
+      "a private gallery"
+    ],
+    "paraphrases": [
+      "an art museum",
+      "an exhibition space"
+    ],
+    "example": "The new gallery attracts thousands of visitors each weekend."
+  },
+  {
+    "id": "art-004",
+    "topic": "arts",
+    "word": "curator",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a person who manages and looks after the collection of a museum or gallery",
+    "collocations": [
+      "a museum curator",
+      "a guest curator",
+      "the chief curator"
+    ],
+    "paraphrases": [
+      "a collection manager",
+      "a gallery keeper"
+    ],
+    "example": "The curator selected eighty paintings to represent the artist's early career."
+  },
+  {
+    "id": "art-005",
+    "topic": "arts",
+    "word": "sculpture",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a three-dimensional work of art made by carving or shaping materials",
+    "collocations": [
+      "a bronze sculpture",
+      "a marble sculpture",
+      "an outdoor sculpture"
+    ],
+    "paraphrases": [
+      "a carved figure",
+      "a three-dimensional artwork"
+    ],
+    "example": "The marble sculpture in the town square dates from the seventeenth century."
+  },
+  {
+    "id": "art-006",
+    "topic": "arts",
+    "word": "portrait",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a painting, drawing or photograph of a person",
+    "collocations": [
+      "a portrait of",
+      "paint a portrait",
+      "a formal portrait"
+    ],
+    "paraphrases": [
+      "a likeness",
+      "a painted image of a person"
+    ],
+    "example": "The artist painted a portrait of the queen that captured her quiet determination."
+  },
+  {
+    "id": "art-007",
+    "topic": "arts",
+    "word": "landscape",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a painting or picture showing an area of countryside",
+    "collocations": [
+      "a landscape painting",
+      "an oil landscape",
+      "a rural landscape"
+    ],
+    "paraphrases": [
+      "a scenic painting",
+      "a view of the countryside"
+    ],
+    "example": "Constable's landscape of the Suffolk countryside remains one of the best-loved images in British art."
+  },
+  {
+    "id": "art-008",
+    "topic": "arts",
+    "word": "canvas",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading"
+    ],
+    "definition": "a piece of strong cloth on which an artist paints",
+    "collocations": [
+      "an oil on canvas",
+      "a blank canvas",
+      "a large canvas"
+    ],
+    "paraphrases": [
+      "painting surface",
+      "artist's cloth"
+    ],
+    "example": "The artist covered an enormous canvas with bold strokes of red and blue."
+  },
+  {
+    "id": "art-009",
+    "topic": "arts",
+    "word": "abstract",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "not representing real objects but using shapes, colours and lines",
+    "collocations": [
+      "abstract art",
+      "an abstract painting",
+      "abstract expressionism"
+    ],
+    "paraphrases": [
+      "non-representational",
+      "not depicting recognisable things"
+    ],
+    "example": "Many visitors found the abstract paintings hard to interpret."
+  },
+  {
+    "id": "art-010",
+    "topic": "arts",
+    "word": "avant-garde",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "new and experimental, ahead of the accepted ideas of the time",
+    "collocations": [
+      "an avant-garde artist",
+      "avant-garde theatre",
+      "avant-garde fashion"
+    ],
+    "paraphrases": [
+      "innovative",
+      "experimental and pioneering"
+    ],
+    "example": "The avant-garde composer shocked audiences by using everyday noises in his music."
+  },
+  {
+    "id": "art-011",
+    "topic": "arts",
+    "word": "genre",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a particular type or category of art, music or literature",
+    "collocations": [
+      "a literary genre",
+      "a popular genre",
+      "cross genres"
+    ],
+    "paraphrases": [
+      "a category of art",
+      "a style or type"
+    ],
+    "example": "Crime fiction is one of the most popular genres in contemporary publishing."
+  },
+  {
+    "id": "art-012",
+    "topic": "arts",
+    "word": "orchestra",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a large group of musicians who play classical music together",
+    "collocations": [
+      "a symphony orchestra",
+      "conduct an orchestra",
+      "join an orchestra"
+    ],
+    "paraphrases": [
+      "a group of classical musicians",
+      "a musical ensemble"
+    ],
+    "example": "The youth orchestra rehearses every Saturday morning in the school hall."
+  },
+  {
+    "id": "art-013",
+    "topic": "arts",
+    "word": "symphony",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "a long piece of music written for a full orchestra",
+    "collocations": [
+      "compose a symphony",
+      "a symphony by Beethoven",
+      "a symphony orchestra"
+    ],
+    "paraphrases": [
+      "an orchestral work",
+      "a large-scale classical composition"
+    ],
+    "example": "Beethoven's Ninth Symphony remains one of the most performed works in the world."
+  },
+  {
+    "id": "art-014",
+    "topic": "arts",
+    "word": "composer",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a person who writes music",
+    "collocations": [
+      "a classical composer",
+      "a film composer",
+      "a celebrated composer"
+    ],
+    "paraphrases": [
+      "a writer of music",
+      "a music creator"
+    ],
+    "example": "The young composer was commissioned to write a piece for the opening ceremony."
+  },
+  {
+    "id": "art-015",
+    "topic": "arts",
+    "word": "conductor",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a person who directs an orchestra or choir",
+    "collocations": [
+      "an orchestra conductor",
+      "the guest conductor",
+      "a renowned conductor"
+    ],
+    "paraphrases": [
+      "a musical director",
+      "the leader of an orchestra"
+    ],
+    "example": "The conductor raised her baton and the whole hall fell silent."
+  },
+  {
+    "id": "art-016",
+    "topic": "arts",
+    "word": "ensemble",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a small group of musicians, actors or dancers who perform together",
+    "collocations": [
+      "a chamber ensemble",
+      "a dance ensemble",
+      "an ensemble cast"
+    ],
+    "paraphrases": [
+      "a performing group",
+      "a small company of players"
+    ],
+    "example": "The string ensemble performed to a packed audience at the town hall."
+  },
+  {
+    "id": "art-017",
+    "topic": "arts",
+    "word": "choreography",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "writing"
+    ],
+    "definition": "the art of arranging dance movements",
+    "collocations": [
+      "elaborate choreography",
+      "the choreography of",
+      "a piece of choreography"
+    ],
+    "paraphrases": [
+      "dance design",
+      "the arrangement of dance steps"
+    ],
+    "example": "The choreography combined classical ballet with modern street dance."
+  },
+  {
+    "id": "art-018",
+    "topic": "arts",
+    "word": "ballet",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a style of dance with precise graceful movements, often telling a story",
+    "collocations": [
+      "a ballet dancer",
+      "classical ballet",
+      "a ballet company"
+    ],
+    "paraphrases": [
+      "classical dance",
+      "a stage dance form"
+    ],
+    "example": "Swan Lake is a ballet that has delighted audiences for over a century."
+  },
+  {
+    "id": "art-019",
+    "topic": "arts",
+    "word": "opera",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a dramatic work in which the story is sung with orchestral music",
+    "collocations": [
+      "an opera singer",
+      "a comic opera",
+      "opera house"
+    ],
+    "paraphrases": [
+      "a sung drama",
+      "a musical drama"
+    ],
+    "example": "The opera tells the tragic story of two lovers from rival families."
+  },
+  {
+    "id": "art-020",
+    "topic": "arts",
+    "word": "performance",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "an occasion when someone presents a play, concert or other entertainment",
+    "collocations": [
+      "a live performance",
+      "give a performance",
+      "an outstanding performance"
+    ],
+    "paraphrases": [
+      "a show",
+      "a staging of a work"
+    ],
+    "example": "The singer gave a moving performance that earned a standing ovation."
+  },
+  {
+    "id": "art-021",
+    "topic": "arts",
+    "word": "rehearsal",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a practice session before a public performance",
+    "collocations": [
+      "attend a rehearsal",
+      "a dress rehearsal",
+      "rehearsal time"
+    ],
+    "paraphrases": [
+      "a practice run",
+      "a preparatory session"
+    ],
+    "example": "The cast spent six weeks in rehearsal before the play opened."
+  },
+  {
+    "id": "art-022",
+    "topic": "arts",
+    "word": "applause",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "clapping by an audience to show approval",
+    "collocations": [
+      "a round of applause",
+      "thunderous applause",
+      "burst into applause"
+    ],
+    "paraphrases": [
+      "clapping",
+      "audience approval"
+    ],
+    "example": "The dancers left the stage to loud applause from the audience."
+  },
+  {
+    "id": "art-023",
+    "topic": "arts",
+    "word": "critic",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a person who gives professional opinions about books, films or art",
+    "collocations": [
+      "an art critic",
+      "a music critic",
+      "critics praised"
+    ],
+    "paraphrases": [
+      "a reviewer",
+      "a professional commentator"
+    ],
+    "example": "The critic described the exhibition as the most daring of the decade."
+  },
+  {
+    "id": "art-024",
+    "topic": "arts",
+    "word": "acclaimed",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "praised publicly and enthusiastically",
+    "collocations": [
+      "a critically acclaimed film",
+      "an internationally acclaimed artist",
+      "widely acclaimed"
+    ],
+    "paraphrases": [
+      "highly praised",
+      "celebrated"
+    ],
+    "example": "The acclaimed director has won several awards for her documentary work."
+  },
+  {
+    "id": "art-025",
+    "topic": "arts",
+    "word": "renowned",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "famous and respected for a particular skill",
+    "collocations": [
+      "a renowned artist",
+      "world-renowned",
+      "renowned for its architecture"
+    ],
+    "paraphrases": [
+      "famous",
+      "celebrated"
+    ],
+    "example": "The museum is renowned for its collection of impressionist paintings."
+  },
+  {
+    "id": "art-026",
+    "topic": "arts",
+    "word": "prolific",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "producing a large amount of work",
+    "collocations": [
+      "a prolific writer",
+      "a prolific artist",
+      "prolific output"
+    ],
+    "paraphrases": [
+      "highly productive",
+      "creating in great quantity"
+    ],
+    "example": "The prolific novelist published more than fifty books in her lifetime."
+  },
+  {
+    "id": "art-027",
+    "topic": "arts",
+    "word": "patron",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a person who gives money or support to artists or arts organisations",
+    "collocations": [
+      "a generous patron",
+      "an art patron",
+      "a wealthy patron"
+    ],
+    "paraphrases": [
+      "a sponsor",
+      "a financial supporter"
+    ],
+    "example": "The wealthy patron funded the young sculptor's studio for ten years."
+  },
+  {
+    "id": "art-028",
+    "topic": "arts",
+    "word": "subsidy",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "money given by the government to support an activity",
+    "collocations": [
+      "a government subsidy",
+      "arts subsidies",
+      "withdraw a subsidy"
+    ],
+    "paraphrases": [
+      "public funding",
+      "state financial support"
+    ],
+    "example": "Public subsidies allow theatres to offer cheaper tickets to students and pensioners."
+  },
+  {
+    "id": "art-029",
+    "topic": "arts",
+    "word": "heritage",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "the traditions, buildings and objects passed down from earlier generations",
+    "collocations": [
+      "cultural heritage",
+      "a rich heritage",
+      "preserve heritage"
+    ],
+    "paraphrases": [
+      "inherited traditions",
+      "the legacy of the past"
+    ],
+    "example": "The old town is a World Heritage Site because of its well-preserved medieval buildings."
+  },
+  {
+    "id": "art-030",
+    "topic": "arts",
+    "word": "folklore",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "the traditional stories, beliefs and customs of a community",
+    "collocations": [
+      "local folklore",
+      "rich in folklore",
+      "folklore and legend"
+    ],
+    "paraphrases": [
+      "traditional tales and customs",
+      "popular legends"
+    ],
+    "example": "The festival draws on the folklore of the region, including tales of giants and spirits."
+  },
+  {
+    "id": "art-031",
+    "topic": "arts",
+    "word": "craftsmanship",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "skill in making things by hand",
+    "collocations": [
+      "fine craftsmanship",
+      "exquisite craftsmanship",
+      "traditional craftsmanship"
+    ],
+    "paraphrases": [
+      "skilled handwork",
+      "artisan skill"
+    ],
+    "example": "The craftsmanship of the carved wooden doors amazed everyone who saw them."
+  },
+  {
+    "id": "art-032",
+    "topic": "arts",
+    "word": "artisan",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a skilled worker who makes things by hand",
+    "collocations": [
+      "local artisans",
+      "a skilled artisan",
+      "artisan bread"
+    ],
+    "paraphrases": [
+      "a craftsperson",
+      "a skilled handworker"
+    ],
+    "example": "Local artisans sell handmade pottery and jewellery at the weekly market."
+  },
+  {
+    "id": "art-033",
+    "topic": "arts",
+    "word": "handmade",
+    "pos": "adjective",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "made by a person using their hands rather than a machine",
+    "collocations": [
+      "handmade pottery",
+      "handmade cards",
+      "beautifully handmade"
+    ],
+    "paraphrases": [
+      "made by hand",
+      "crafted manually"
+    ],
+    "example": "She sells handmade jewellery at craft fairs around the region."
+  },
+  {
+    "id": "art-034",
+    "topic": "arts",
+    "word": "pottery",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "objects made from baked clay, or the craft of making them",
+    "collocations": [
+      "ancient pottery",
+      "a pottery class",
+      "hand-painted pottery"
+    ],
+    "paraphrases": [
+      "clay ware",
+      "ceramic objects"
+    ],
+    "example": "Fragments of ancient pottery were found at the excavation site."
+  },
+  {
+    "id": "art-035",
+    "topic": "arts",
+    "word": "mural",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a large painting made directly on a wall",
+    "collocations": [
+      "paint a mural",
+      "a colourful mural",
+      "a street mural"
+    ],
+    "paraphrases": [
+      "a wall painting",
+      "a large wall artwork"
+    ],
+    "example": "Local children helped to paint a mural on the side of the community centre."
+  },
+  {
+    "id": "art-036",
+    "topic": "arts",
+    "word": "graffiti",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "writing or drawings made on walls in public places, often without permission",
+    "collocations": [
+      "spray graffiti",
+      "remove graffiti",
+      "covered in graffiti"
+    ],
+    "paraphrases": [
+      "spray-painted street art",
+      "unauthorised wall drawings"
+    ],
+    "example": "The council has spent thousands of pounds removing graffiti from public buildings."
+  },
+  {
+    "id": "art-037",
+    "topic": "arts",
+    "word": "installation",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "a modern artwork that fills a space and is often made of mixed objects",
+    "collocations": [
+      "an art installation",
+      "a video installation",
+      "a large-scale installation"
+    ],
+    "paraphrases": [
+      "a mixed-media artwork",
+      "an environment-sized piece"
+    ],
+    "example": "The installation consisted of hundreds of hanging lights that changed colour as visitors passed."
+  },
+  {
+    "id": "art-038",
+    "topic": "arts",
+    "word": "contemporary",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "belonging to the present time",
+    "collocations": [
+      "contemporary art",
+      "contemporary music",
+      "contemporary society"
+    ],
+    "paraphrases": [
+      "modern",
+      "current"
+    ],
+    "example": "The gallery specialises in contemporary art by emerging artists."
+  },
+  {
+    "id": "art-039",
+    "topic": "arts",
+    "word": "classical",
+    "pos": "adjective",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "relating to traditional European art or music of a formal, established style",
+    "collocations": [
+      "classical music",
+      "classical ballet",
+      "classical architecture"
+    ],
+    "paraphrases": [
+      "traditional and formal",
+      "in the established style"
+    ],
+    "example": "He grew up listening to classical music because his mother was a pianist."
+  },
+  {
+    "id": "art-040",
+    "topic": "arts",
+    "word": "ornate",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "decorated with complicated detail",
+    "collocations": [
+      "an ornate ceiling",
+      "ornate carvings",
+      "ornate decoration"
+    ],
+    "paraphrases": [
+      "elaborately decorated",
+      "richly embellished"
+    ],
+    "example": "The cathedral's ornate ceiling was painted by a team of craftsmen over many years."
+  },
+  {
+    "id": "art-041",
+    "topic": "arts",
+    "word": "intricate",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "having many small, complicated details",
+    "collocations": [
+      "intricate patterns",
+      "an intricate design",
+      "intricate carvings"
+    ],
+    "paraphrases": [
+      "elaborate",
+      "highly detailed"
+    ],
+    "example": "The carpet is woven in an intricate pattern of flowers and birds."
+  },
+  {
+    "id": "art-042",
+    "topic": "arts",
+    "word": "evocative",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "bringing strong feelings or memories to mind",
+    "collocations": [
+      "an evocative image",
+      "evocative music",
+      "highly evocative"
+    ],
+    "paraphrases": [
+      "suggestive",
+      "stirring emotions or memories"
+    ],
+    "example": "The photographs are evocative of a way of life that has almost disappeared."
+  },
+  {
+    "id": "art-043",
+    "topic": "arts",
+    "word": "thought-provoking",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "making people think seriously about a subject",
+    "collocations": [
+      "a thought-provoking film",
+      "thought-provoking questions",
+      "a thought-provoking exhibition"
+    ],
+    "paraphrases": [
+      "stimulating",
+      "intellectually challenging"
+    ],
+    "example": "The documentary is thought-provoking and raises difficult questions about memory."
+  },
+  {
+    "id": "art-044",
+    "topic": "arts",
+    "word": "poignant",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "causing a feeling of sadness or sympathy",
+    "collocations": [
+      "a poignant moment",
+      "a poignant reminder",
+      "a poignant story"
+    ],
+    "paraphrases": [
+      "moving",
+      "touching"
+    ],
+    "example": "The poet's final collection contains some of her most poignant work."
+  },
+  {
+    "id": "art-045",
+    "topic": "arts",
+    "word": "captivating",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "attracting and holding attention in a powerful way",
+    "collocations": [
+      "a captivating performance",
+      "captivating music",
+      "a captivating story"
+    ],
+    "paraphrases": [
+      "enchanting",
+      "spellbinding"
+    ],
+    "example": "Her captivating performance held the audience's attention from start to finish."
+  },
+  {
+    "id": "art-046",
+    "topic": "arts",
+    "word": "aesthetic",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "concerned with beauty and the appreciation of art",
+    "collocations": [
+      "aesthetic appeal",
+      "aesthetic value",
+      "aesthetic judgement"
+    ],
+    "paraphrases": [
+      "relating to beauty",
+      "artistic in nature"
+    ],
+    "example": "The building has more aesthetic appeal than practical value."
+  },
+  {
+    "id": "art-047",
+    "topic": "arts",
+    "word": "imagination",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "the ability to form new ideas or pictures in the mind",
+    "collocations": [
+      "a vivid imagination",
+      "stimulate the imagination",
+      "capture the imagination"
+    ],
+    "paraphrases": [
+      "creative thinking",
+      "inventiveness"
+    ],
+    "example": "Regular storytelling develops a child's imagination as well as their vocabulary."
+  },
+  {
+    "id": "art-048",
+    "topic": "arts",
+    "word": "interpret",
+    "pos": "verb",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to explain the meaning of something in a particular way",
+    "collocations": [
+      "interpret a poem",
+      "interpret the data",
+      "open to interpret"
+    ],
+    "paraphrases": [
+      "explain the meaning of",
+      "make sense of"
+    ],
+    "example": "Different viewers may interpret the same painting in completely different ways."
+  },
+  {
+    "id": "art-049",
+    "topic": "arts",
+    "word": "interpretation",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a particular way of explaining the meaning of a work",
+    "collocations": [
+      "a literal interpretation",
+      "open to interpretation",
+      "a personal interpretation"
+    ],
+    "paraphrases": [
+      "a reading of a work",
+      "an explanation of meaning"
+    ],
+    "example": "The play is open to several interpretations, which makes it ideal for class discussion."
+  },
+  {
+    "id": "art-050",
+    "topic": "arts",
+    "word": "convey",
+    "pos": "verb",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to communicate ideas or feelings",
+    "collocations": [
+      "convey a message",
+      "convey emotion",
+      "convey meaning"
+    ],
+    "paraphrases": [
+      "communicate",
+      "express"
+    ],
+    "example": "The painter uses dark colours to convey a sense of loneliness."
+  },
+  {
+    "id": "art-052",
+    "topic": "arts",
+    "word": "portray",
+    "pos": "verb",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to describe or show someone or something in a particular way",
+    "collocations": [
+      "portray a character",
+      "portray life",
+      "be portrayed as"
+    ],
+    "paraphrases": [
+      "depict",
+      "represent on screen or in writing"
+    ],
+    "example": "The film portrays the farmer as a hard-working but lonely man."
+  },
+  {
+    "id": "art-053",
+    "topic": "arts",
+    "word": "symbolise",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to represent an idea or quality",
+    "collocations": [
+      "symbolise freedom",
+      "symbolise hope",
+      "be used to symbolise"
+    ],
+    "paraphrases": [
+      "stand for",
+      "represent"
+    ],
+    "example": "In the novel, the river symbolises the passage of time."
+  },
+  {
+    "id": "art-054",
+    "topic": "arts",
+    "word": "symbolism",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the use of images or objects to represent ideas",
+    "collocations": [
+      "religious symbolism",
+      "rich symbolism",
+      "the symbolism of"
+    ],
+    "paraphrases": [
+      "representation through images",
+      "figurative imagery"
+    ],
+    "example": "The symbolism in the painting would have been clear to viewers of the time."
+  },
+  {
+    "id": "art-055",
+    "topic": "arts",
+    "word": "motif",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a repeated pattern or idea in a work of art or literature",
+    "collocations": [
+      "a recurring motif",
+      "a floral motif",
+      "a central motif"
+    ],
+    "paraphrases": [
+      "a recurring theme",
+      "a repeated design"
+    ],
+    "example": "Water is a recurring motif in the poet's work."
+  },
+  {
+    "id": "art-056",
+    "topic": "arts",
+    "word": "narrative",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a story or account of events",
+    "collocations": [
+      "a gripping narrative",
+      "the narrative structure",
+      "a personal narrative"
+    ],
+    "paraphrases": [
+      "an account",
+      "a story"
+    ],
+    "example": "The film's narrative moves back and forth between two centuries."
+  },
+  {
+    "id": "art-057",
+    "topic": "arts",
+    "word": "protagonist",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "the main character in a story, play or film",
+    "collocations": [
+      "the protagonist of",
+      "a female protagonist",
+      "the main protagonist"
+    ],
+    "paraphrases": [
+      "the central character",
+      "the lead figure"
+    ],
+    "example": "The protagonist of the novel is a young teacher who moves to a remote island."
+  },
+  {
+    "id": "art-058",
+    "topic": "arts",
+    "word": "novelist",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a person who writes novels",
+    "collocations": [
+      "a best-selling novelist",
+      "a crime novelist",
+      "a prize-winning novelist"
+    ],
+    "paraphrases": [
+      "a fiction writer",
+      "an author of novels"
+    ],
+    "example": "The novelist spent ten years researching the period before writing a word."
+  },
+  {
+    "id": "art-059",
+    "topic": "arts",
+    "word": "poet",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a person who writes poems",
+    "collocations": [
+      "a celebrated poet",
+      "a war poet",
+      "a young poet"
+    ],
+    "paraphrases": [
+      "a writer of verse",
+      "a versifier"
+    ],
+    "example": "The poet read her new collection at the city library."
+  },
+  {
+    "id": "art-060",
+    "topic": "arts",
+    "word": "literary",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "connected with books, poetry and other literature",
+    "collocations": [
+      "literary criticism",
+      "literary prize",
+      "a literary classic"
+    ],
+    "paraphrases": [
+      "relating to books and writing",
+      "of written art"
+    ],
+    "example": "The town holds a literary festival each spring that attracts writers from many countries."
+  },
+  {
+    "id": "art-061",
+    "topic": "arts",
+    "word": "anthology",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a collection of poems, stories or songs by different writers",
+    "collocations": [
+      "a poetry anthology",
+      "an anthology of short stories",
+      "edit an anthology"
+    ],
+    "paraphrases": [
+      "a collected volume",
+      "a compilation of writings"
+    ],
+    "example": "The anthology brings together short stories by writers from twelve countries."
+  },
+  {
+    "id": "art-062",
+    "topic": "arts",
+    "word": "memoir",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a written account of someone's personal experiences",
+    "collocations": [
+      "write a memoir",
+      "a political memoir",
+      "a memoir of childhood"
+    ],
+    "paraphrases": [
+      "an autobiographical account",
+      "a personal record"
+    ],
+    "example": "In her memoir she describes growing up in a mining village."
+  },
+  {
+    "id": "art-063",
+    "topic": "arts",
+    "word": "manuscript",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "a handwritten or typed text, especially one that has not yet been published",
+    "collocations": [
+      "a medieval manuscript",
+      "an unpublished manuscript",
+      "submit a manuscript"
+    ],
+    "paraphrases": [
+      "a handwritten text",
+      "an unpublished text"
+    ],
+    "example": "The library holds a rare manuscript that dates from the twelfth century."
+  },
+  {
+    "id": "art-064",
+    "topic": "arts",
+    "word": "playwright",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "a person who writes plays",
+    "collocations": [
+      "a celebrated playwright",
+      "a Greek playwright",
+      "a young playwright"
+    ],
+    "paraphrases": [
+      "a dramatist",
+      "a writer of stage plays"
+    ],
+    "example": "Shakespeare is the playwright whose works are performed more than any other."
+  },
+  {
+    "id": "art-065",
+    "topic": "arts",
+    "word": "screenplay",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "the written text of a film, including dialogue and directions",
+    "collocations": [
+      "write a screenplay",
+      "an award-winning screenplay",
+      "adapt a screenplay"
+    ],
+    "paraphrases": [
+      "a film script",
+      "the script of a movie"
+    ],
+    "example": "She won an award for the screenplay of a film about two refugees."
+  },
+  {
+    "id": "art-066",
+    "topic": "arts",
+    "word": "cinematography",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "the art of photography in making films",
+    "collocations": [
+      "stunning cinematography",
+      "the cinematography of",
+      "award for cinematography"
+    ],
+    "paraphrases": [
+      "film photography",
+      "camera work in movies"
+    ],
+    "example": "The cinematography captures the harsh beauty of the desert in every frame."
+  },
+  {
+    "id": "art-067",
+    "topic": "arts",
+    "word": "blockbuster",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a film or book that is a very great commercial success",
+    "collocations": [
+      "a summer blockbuster",
+      "a Hollywood blockbuster",
+      "a blockbuster movie"
+    ],
+    "paraphrases": [
+      "a hit film",
+      "a major commercial success"
+    ],
+    "example": "The summer blockbuster earned a record sum on its opening weekend."
+  },
+  {
+    "id": "art-068",
+    "topic": "arts",
+    "word": "box office",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "the place where tickets are sold, also used for a film's ticket sales",
+    "collocations": [
+      "a box office hit",
+      "box office success",
+      "a box office flop"
+    ],
+    "paraphrases": [
+      "ticket sales",
+      "a film's commercial takings"
+    ],
+    "example": "The film was a box office success in more than forty countries."
+  },
+  {
+    "id": "art-069",
+    "topic": "arts",
+    "word": "museum",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a building where objects of historical, scientific or artistic interest are kept and shown",
+    "collocations": [
+      "visit a museum",
+      "a museum of",
+      "a natural history museum"
+    ],
+    "paraphrases": [
+      "a place of exhibits",
+      "a public collection"
+    ],
+    "example": "The museum offers free entry to schoolchildren on weekdays."
+  },
+  {
+    "id": "art-070",
+    "topic": "arts",
+    "word": "artefact",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "writing",
+      "listening"
+    ],
+    "definition": "an object made by people, especially one of historical interest",
+    "collocations": [
+      "an ancient artefact",
+      "a priceless artefact",
+      "cultural artefacts"
+    ],
+    "paraphrases": [
+      "a man-made object",
+      "a historical relic"
+    ],
+    "example": "Archaeologists found a bronze artefact that was nearly three thousand years old."
+  },
+  {
+    "id": "art-071",
+    "topic": "arts",
+    "word": "restoration",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the work of repairing something to its original condition",
+    "collocations": [
+      "careful restoration",
+      "a restoration project",
+      "the restoration of paintings"
+    ],
+    "paraphrases": [
+      "renovation",
+      "repair to original state"
+    ],
+    "example": "The restoration of the fresco took five years and cost millions."
+  },
+  {
+    "id": "art-072",
+    "topic": "arts",
+    "word": "conservation",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the careful protection of valuable objects and buildings",
+    "collocations": [
+      "art conservation",
+      "a conservation project",
+      "conservation work"
+    ],
+    "paraphrases": [
+      "preservation",
+      "protection of heritage"
+    ],
+    "example": "Specialists in conservation use gentle techniques to clean centuries-old paintings."
+  },
+  {
+    "id": "art-073",
+    "topic": "arts",
+    "word": "monument",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a statue or building that honours a person or event",
+    "collocations": [
+      "a national monument",
+      "erect a monument",
+      "a historic monument"
+    ],
+    "paraphrases": [
+      "a memorial",
+      "a commemorative structure"
+    ],
+    "example": "The monument was built to honour soldiers who died in the war."
+  },
+  {
+    "id": "art-074",
+    "topic": "arts",
+    "word": "performing arts",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "art forms such as music, dance and drama that are performed before an audience",
+    "collocations": [
+      "study the performing arts",
+      "a performing arts centre",
+      "the performing arts"
+    ],
+    "paraphrases": [
+      "live stage arts",
+      "music, dance and drama"
+    ],
+    "example": "Funding for the performing arts has fallen in many regions."
+  },
+  {
+    "id": "art-075",
+    "topic": "arts",
+    "word": "impressionism",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a style of painting that aims to capture light and atmosphere rather than exact detail",
+    "collocations": [
+      "French impressionism",
+      "an impressionism exhibition",
+      "the impressionism movement"
+    ],
+    "paraphrases": [
+      "a style that captures light",
+      "a nineteenth-century painting movement"
+    ],
+    "example": "Monet's work is a famous example of impressionism."
+  },
+  {
+    "id": "art-076",
+    "topic": "arts",
+    "word": "sketch",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a quick, rough drawing",
+    "collocations": [
+      "a pencil sketch",
+      "make a sketch",
+      "a preliminary sketch"
+    ],
+    "paraphrases": [
+      "a rough drawing",
+      "a quick outline"
+    ],
+    "example": "The architect made a quick sketch of the building before beginning the detailed plans."
+  },
+  {
+    "id": "art-077",
+    "topic": "arts",
+    "word": "commission",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to formally order and pay for a work of art",
+    "collocations": [
+      "commission a portrait",
+      "commission a sculpture",
+      "be commissioned by"
+    ],
+    "paraphrases": [
+      "order and pay for",
+      "employ to produce"
+    ],
+    "example": "The city decided to commission a sculpture to mark its anniversary."
+  },
+  {
+    "id": "art-078",
+    "topic": "arts",
+    "word": "showcase",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to present something in a way that shows its best qualities",
+    "collocations": [
+      "showcase talent",
+      "showcase local artists",
+      "a showcase for"
+    ],
+    "paraphrases": [
+      "display",
+      "exhibit proudly"
+    ],
+    "example": "The festival aims to showcase new work by emerging filmmakers."
+  },
+  {
+    "id": "art-079",
+    "topic": "arts",
+    "word": "premiere",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "the first public performance of a play, film or piece of music",
+    "collocations": [
+      "a world premiere",
+      "attend the premiere",
+      "the film's premiere"
+    ],
+    "paraphrases": [
+      "the opening performance",
+      "first public showing"
+    ],
+    "example": "The film had its world premiere at the festival in Cannes."
+  },
+  {
+    "id": "art-080",
+    "topic": "arts",
+    "word": "patronage",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "financial support given to artists or arts organisations by a person or institution",
+    "collocations": [
+      "royal patronage",
+      "state patronage of the arts"
+    ],
+    "paraphrases": [
+      "sponsorship",
+      "financial backing"
+    ],
+    "example": "Without state patronage, many regional theatres would struggle to stay open."
+  }
+]
