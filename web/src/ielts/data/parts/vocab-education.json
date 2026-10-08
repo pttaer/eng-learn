@@ -1,0 +1,1748 @@
+[
+ {
+  "id": "edu-001",
+  "topic": "education",
+  "word": "curriculum",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the subjects and content that a school or course teaches",
+  "collocations": [
+   "national curriculum",
+   "broad curriculum",
+   "school curriculum"
+  ],
+  "paraphrases": [
+   "programme of study",
+   "course content"
+  ],
+  "example": "A broad curriculum gives pupils the chance to discover talents that exams do not measure."
+ },
+ {
+  "id": "edu-002",
+  "topic": "education",
+  "word": "syllabus",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "an outline of the topics to be covered in a particular course",
+  "collocations": [
+   "course syllabus",
+   "cover the syllabus",
+   "exam syllabus"
+  ],
+  "paraphrases": [
+   "course outline",
+   "list of topics"
+  ],
+  "example": "The lecturer handed out a syllabus on the first day and explained how each unit would be assessed."
+ },
+ {
+  "id": "edu-003",
+  "topic": "education",
+  "word": "pedagogy",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the methods and principles of teaching",
+  "collocations": [
+   "modern pedagogy",
+   "effective pedagogy",
+   "pedagogy and practice"
+  ],
+  "paraphrases": [
+   "teaching methods",
+   "the art of teaching"
+  ],
+  "example": "Effective pedagogy depends less on technology than on how well a teacher understands each learner."
+ },
+ {
+  "id": "edu-004",
+  "topic": "education",
+  "word": "tuition fees",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "money paid for being taught at a school or university",
+  "collocations": [
+   "raise tuition fees",
+   "abolish tuition fees",
+   "pay tuition fees"
+  ],
+  "paraphrases": [
+   "course charges",
+   "university charges"
+  ],
+  "example": "Rising tuition fees have discouraged many able students from low-income families from applying."
+ },
+ {
+  "id": "edu-005",
+  "topic": "education",
+  "word": "scholarship",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "money awarded to a student to pay for their studies because of high achievement",
+  "collocations": [
+   "win a scholarship",
+   "full scholarship",
+   "sports scholarship"
+  ],
+  "paraphrases": [
+   "academic award",
+   "study grant"
+  ],
+  "example": "She won a full scholarship to study engineering at a leading university abroad."
+ },
+ {
+  "id": "edu-006",
+  "topic": "education",
+  "word": "bursary",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a sum of money given to a student who needs financial help",
+  "collocations": [
+   "apply for a bursary",
+   "a means-tested bursary",
+   "a university bursary"
+  ],
+  "paraphrases": [
+   "financial award",
+   "student grant"
+  ],
+  "example": "A small bursary covered her textbooks and travel costs during the first year."
+ },
+ {
+  "id": "edu-007",
+  "topic": "education",
+  "word": "literacy",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the ability to read and write",
+  "collocations": [
+   "adult literacy",
+   "literacy rates",
+   "basic literacy"
+  ],
+  "paraphrases": [
+   "reading and writing ability",
+   "capacity to read"
+  ],
+  "example": "Improving literacy in rural areas has transformed job prospects for young women."
+ },
+ {
+  "id": "edu-008",
+  "topic": "education",
+  "word": "numeracy",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the ability to understand and work with numbers",
+  "collocations": [
+   "basic numeracy",
+   "improve numeracy",
+   "literacy and numeracy"
+  ],
+  "paraphrases": [
+   "mathematical ability",
+   "facility with numbers"
+  ],
+  "example": "Employers frequently complain that school leavers lack basic numeracy."
+ },
+ {
+  "id": "edu-009",
+  "topic": "education",
+  "word": "vocational",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "relating to the skills and training needed for a particular job",
+  "collocations": [
+   "vocational training",
+   "vocational courses",
+   "vocational education"
+  ],
+  "paraphrases": [
+   "job-related",
+   "career-oriented"
+  ],
+  "example": "Vocational courses give teenagers practical skills that are in demand in the local economy."
+ },
+ {
+  "id": "edu-010",
+  "topic": "education",
+  "word": "apprenticeship",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "a period of paid work combined with training in a skilled trade",
+  "collocations": [
+   "complete an apprenticeship",
+   "apprenticeship scheme",
+   "a four-year apprenticeship"
+  ],
+  "paraphrases": [
+   "trade training",
+   "paid training placement"
+  ],
+  "example": "An apprenticeship lets young people earn a wage while they learn a skilled trade."
+ },
+ {
+  "id": "edu-011",
+  "topic": "education",
+  "word": "compulsory",
+  "pos": "adjective",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "required by law or by a rule",
+  "collocations": [
+   "compulsory education",
+   "compulsory subjects",
+   "make attendance compulsory"
+  ],
+  "paraphrases": [
+   "obligatory",
+   "mandatory"
+  ],
+  "example": "Education is compulsory until the age of sixteen in most countries."
+ },
+ {
+  "id": "edu-012",
+  "topic": "education",
+  "word": "tertiary",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "reading"
+  ],
+  "definition": "relating to education at university or college level, after school",
+  "collocations": [
+   "tertiary education",
+   "tertiary level",
+   "tertiary sector"
+  ],
+  "paraphrases": [
+   "higher-level",
+   "post-school"
+  ],
+  "example": "Participation in tertiary education has doubled across the region in a generation."
+ },
+ {
+  "id": "edu-013",
+  "topic": "education",
+  "word": "undergraduate",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a student who is studying for a first degree at university",
+  "collocations": [
+   "undergraduate course",
+   "undergraduate degree",
+   "first-year undergraduate"
+  ],
+  "paraphrases": [
+   "first-degree student",
+   "university student"
+  ],
+  "example": "Most undergraduates in the faculty live on campus during their first year."
+ },
+ {
+  "id": "edu-014",
+  "topic": "education",
+  "word": "postgraduate",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "relating to study done after a first university degree",
+  "collocations": [
+   "postgraduate study",
+   "postgraduate degree",
+   "postgraduate research"
+  ],
+  "paraphrases": [
+   "after a first degree",
+   "advanced university"
+  ],
+  "example": "Postgraduate study can improve career prospects but often means taking on further debt."
+ },
+ {
+  "id": "edu-015",
+  "topic": "education",
+  "word": "dissertation",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a long piece of written work on a specific topic, done for a university degree",
+  "collocations": [
+   "write a dissertation",
+   "dissertation topic",
+   "dissertation supervisor"
+  ],
+  "paraphrases": [
+   "long research essay",
+   "academic thesis"
+  ],
+  "example": "Her dissertation examined how small rural schools cope with limited funding."
+ },
+ {
+  "id": "edu-016",
+  "topic": "education",
+  "word": "plagiarism",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "copying another person's work or ideas and presenting them as your own",
+  "collocations": [
+   "accused of plagiarism",
+   "detect plagiarism",
+   "avoid plagiarism"
+  ],
+  "paraphrases": [
+   "copying someone else's work",
+   "passing off others' ideas"
+  ],
+  "example": "Universities use special software to detect plagiarism in student essays."
+ },
+ {
+  "id": "edu-017",
+  "topic": "education",
+  "word": "assessment",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "the process of judging how well someone has learned or performed",
+  "collocations": [
+   "continuous assessment",
+   "formal assessment",
+   "assessment criteria"
+  ],
+  "paraphrases": [
+   "evaluation",
+   "appraisal"
+  ],
+  "example": "Continuous assessment reduces the pressure that a single final exam places on students."
+ },
+ {
+  "id": "edu-018",
+  "topic": "education",
+  "word": "coursework",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "work done by students during a course that counts towards their final grade",
+  "collocations": [
+   "submit coursework",
+   "coursework deadline",
+   "coursework assignments"
+  ],
+  "paraphrases": [
+   "assignments",
+   "assessed projects"
+  ],
+  "example": "Most of my grade comes from coursework rather than from the final exam."
+ },
+ {
+  "id": "edu-019",
+  "topic": "education",
+  "word": "rote learning",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "learning by repeating information until it is memorised, without necessarily understanding it",
+  "collocations": [
+   "rely on rote learning",
+   "discourage rote learning",
+   "rote learning of facts"
+  ],
+  "paraphrases": [
+   "learning by heart",
+   "mechanical memorisation"
+  ],
+  "example": "Rote learning may help pupils pass tests but rarely develops deeper understanding."
+ },
+ {
+  "id": "edu-020",
+  "topic": "education",
+  "word": "critical thinking",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the ability to analyse information objectively and judge it carefully",
+  "collocations": [
+   "develop critical thinking",
+   "critical thinking skills",
+   "encourage critical thinking"
+  ],
+  "paraphrases": [
+   "analytical reasoning",
+   "objective evaluation"
+  ],
+  "example": "Schools should teach critical thinking so that young people can question what they read online."
+ },
+ {
+  "id": "edu-021",
+  "topic": "education",
+  "word": "attainment",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the level of success a student reaches in their studies",
+  "collocations": [
+   "educational attainment",
+   "raise attainment",
+   "low attainment"
+  ],
+  "paraphrases": [
+   "achievement",
+   "level of accomplishment"
+  ],
+  "example": "Educational attainment is strongly linked to the income of a child's parents."
+ },
+ {
+  "id": "edu-022",
+  "topic": "education",
+  "word": "truancy",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "reading"
+  ],
+  "definition": "the act of staying away from school without permission",
+  "collocations": [
+   "persistent truancy",
+   "tackle truancy",
+   "truancy rates"
+  ],
+  "paraphrases": [
+   "skipping school",
+   "unauthorised absence"
+  ],
+  "example": "Truancy often signals deeper problems at home or bullying at school."
+ },
+ {
+  "id": "edu-023",
+  "topic": "education",
+  "word": "drop out",
+  "pos": "phrase",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "to leave a course or school before finishing it",
+  "collocations": [
+   "drop out of university",
+   "drop out of school",
+   "likely to drop out"
+  ],
+  "paraphrases": [
+   "quit",
+   "leave early"
+  ],
+  "example": "A significant number of students drop out in the first year because they cannot afford to continue."
+ },
+ {
+  "id": "edu-024",
+  "topic": "education",
+  "word": "tutor",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a teacher who gives individual or small-group lessons",
+  "collocations": [
+   "private tutor",
+   "personal tutor",
+   "maths tutor"
+  ],
+  "paraphrases": [
+   "private teacher",
+   "instructor"
+  ],
+  "example": "My personal tutor reviewed my draft and suggested several ways to improve the argument."
+ },
+ {
+  "id": "edu-025",
+  "topic": "education",
+  "word": "mentor",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "an experienced person who gives advice and support to a less experienced one",
+  "collocations": [
+   "find a mentor",
+   "act as a mentor",
+   "mentor scheme"
+  ],
+  "paraphrases": [
+   "adviser",
+   "guide"
+  ],
+  "example": "A good mentor can help new graduates understand how a profession really works."
+ },
+ {
+  "id": "edu-026",
+  "topic": "education",
+  "word": "lecturer",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a person who teaches at a university or college",
+  "collocations": [
+   "university lecturer",
+   "guest lecturer",
+   "senior lecturer"
+  ],
+  "paraphrases": [
+   "university teacher",
+   "academic"
+  ],
+  "example": "The lecturer encouraged students to challenge her interpretation during the discussion."
+ },
+ {
+  "id": "edu-027",
+  "topic": "education",
+  "word": "faculty",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a department or group of related subjects within a university",
+  "collocations": [
+   "faculty of law",
+   "faculty member",
+   "science faculty"
+  ],
+  "paraphrases": [
+   "university department",
+   "academic division"
+  ],
+  "example": "She applied to the faculty of medicine, which has the highest entry requirements in the country."
+ },
+ {
+  "id": "edu-028",
+  "topic": "education",
+  "word": "enrol",
+  "pos": "verb",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "to officially register as a student on a course",
+  "collocations": [
+   "enrol on a course",
+   "enrol at university",
+   "enrol in a class"
+  ],
+  "paraphrases": [
+   "register",
+   "sign up"
+  ],
+  "example": "More than two hundred adults enrolled in the evening literacy classes this term."
+ },
+ {
+  "id": "edu-029",
+  "topic": "education",
+  "word": "lifelong learning",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the continuing education of people throughout their adult lives",
+  "collocations": [
+   "promote lifelong learning",
+   "a culture of lifelong learning",
+   "lifelong learning opportunities"
+  ],
+  "paraphrases": [
+   "continuing education",
+   "learning throughout life"
+  ],
+  "example": "Rapid changes in the job market make lifelong learning a necessity rather than a luxury."
+ },
+ {
+  "id": "edu-030",
+  "topic": "education",
+  "word": "distance learning",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "education in which students study at home rather than attending classes in person",
+  "collocations": [
+   "distance learning course",
+   "study by distance learning",
+   "distance learning programme"
+  ],
+  "paraphrases": [
+   "remote study",
+   "study from home"
+  ],
+  "example": "Distance learning allows people who live far from a campus to gain a degree."
+ },
+ {
+  "id": "edu-031",
+  "topic": "education",
+  "word": "extracurricular",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "relating to activities done outside of normal lessons",
+  "collocations": [
+   "extracurricular activities",
+   "extracurricular clubs",
+   "extracurricular programme"
+  ],
+  "paraphrases": [
+   "after-school",
+   "outside the timetable"
+  ],
+  "example": "Extracurricular activities such as debating and music help pupils build confidence."
+ },
+ {
+  "id": "edu-032",
+  "topic": "education",
+  "word": "peer pressure",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "the influence of people of the same age to behave in a certain way",
+  "collocations": [
+   "succumb to peer pressure",
+   "resist peer pressure",
+   "peer pressure to conform"
+  ],
+  "paraphrases": [
+   "influence of classmates",
+   "pressure from friends"
+  ],
+  "example": "Teenagers are particularly susceptible to peer pressure when choosing what to study."
+ },
+ {
+  "id": "edu-033",
+  "topic": "education",
+  "word": "discipline",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "the practice of making people obey rules, or the self-control this produces",
+  "collocations": [
+   "strict discipline",
+   "school discipline",
+   "maintain discipline"
+  ],
+  "paraphrases": [
+   "order",
+   "self-control"
+  ],
+  "example": "Strict discipline can create a calm classroom, but it should not replace encouragement."
+ },
+ {
+  "id": "edu-034",
+  "topic": "education",
+  "word": "bullying",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the repeated use of power to hurt or frighten weaker people",
+  "collocations": [
+   "cyber bullying",
+   "tackle bullying",
+   "school bullying"
+  ],
+  "paraphrases": [
+   "intimidation",
+   "harassment"
+  ],
+  "example": "Schools need clear policies to tackle bullying, including the online forms that happen outside lessons."
+ },
+ {
+  "id": "edu-035",
+  "topic": "education",
+  "word": "gifted",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "having exceptional natural ability or talent",
+  "collocations": [
+   "gifted children",
+   "gifted and talented",
+   "academically gifted"
+  ],
+  "paraphrases": [
+   "highly talented",
+   "exceptionally able"
+  ],
+  "example": "Gifted pupils may become bored if lessons are not challenging enough."
+ },
+ {
+  "id": "edu-036",
+  "topic": "education",
+  "word": "inclusive",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "aiming to include all people and treat them fairly",
+  "collocations": [
+   "inclusive education",
+   "inclusive classroom",
+   "inclusive approach"
+  ],
+  "paraphrases": [
+   "welcoming to all",
+   "non-discriminatory"
+  ],
+  "example": "An inclusive classroom allows children with disabilities to learn alongside their peers."
+ },
+ {
+  "id": "edu-037",
+  "topic": "education",
+  "word": "mixed-ability",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "reading"
+  ],
+  "definition": "containing pupils of different levels of academic skill",
+  "collocations": [
+   "mixed-ability class",
+   "mixed-ability teaching",
+   "mixed-ability groups"
+  ],
+  "paraphrases": [
+   "of varied attainment",
+   "with a range of abilities"
+  ],
+  "example": "Teaching a mixed-ability class requires careful planning so that no pupil is left behind."
+ },
+ {
+  "id": "edu-038",
+  "topic": "education",
+  "word": "selective",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "admitting only students who pass a test or meet high standards",
+  "collocations": [
+   "selective school",
+   "selective education",
+   "highly selective"
+  ],
+  "paraphrases": [
+   "exclusive",
+   "admission by examination"
+  ],
+  "example": "Critics argue that selective schools widen the gap between rich and poor."
+ },
+ {
+  "id": "edu-039",
+  "topic": "education",
+  "word": "state school",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a school funded by the government and free to attend",
+  "collocations": [
+   "attend a state school",
+   "state school pupils",
+   "local state school"
+  ],
+  "paraphrases": [
+   "public school",
+   "government-funded school"
+  ],
+  "example": "Pupils from state schools now make up the majority of the university intake."
+ },
+ {
+  "id": "edu-040",
+  "topic": "education",
+  "word": "boarding school",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a school where pupils live during the term",
+  "collocations": [
+   "go to boarding school",
+   "attend a boarding school",
+   "boarding school education"
+  ],
+  "paraphrases": [
+   "residential school",
+   "school where students live"
+  ],
+  "example": "Many parents regard a boarding school as a way to give children independence early."
+ },
+ {
+  "id": "edu-041",
+  "topic": "education",
+  "word": "qualification",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "an exam passed or a course completed that proves you are able to do something",
+  "collocations": [
+   "academic qualification",
+   "professional qualification",
+   "gain a qualification"
+  ],
+  "paraphrases": [
+   "certificate",
+   "credential"
+  ],
+  "example": "A professional qualification is often essential to be taken seriously in this field."
+ },
+ {
+  "id": "edu-042",
+  "topic": "education",
+  "word": "accreditation",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "reading"
+  ],
+  "definition": "official recognition that a course or institution meets required standards",
+  "collocations": [
+   "gain accreditation",
+   "official accreditation",
+   "accreditation body"
+  ],
+  "paraphrases": [
+   "official approval",
+   "formal recognition"
+  ],
+  "example": "The college lost its accreditation after inspectors found serious weaknesses in teaching."
+ },
+ {
+  "id": "edu-043",
+  "topic": "education",
+  "word": "graduate",
+  "pos": "verb",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "to complete a university degree",
+  "collocations": [
+   "graduate with honours",
+   "graduate from university",
+   "graduate in law"
+  ],
+  "paraphrases": [
+   "complete a degree",
+   "finish university"
+  ],
+  "example": "She hopes to graduate with a first-class degree in economics next summer."
+ },
+ {
+  "id": "edu-044",
+  "topic": "education",
+  "word": "employability",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the set of skills that make a person attractive to employers",
+  "collocations": [
+   "improve employability",
+   "graduate employability",
+   "employability skills"
+  ],
+  "paraphrases": [
+   "suitability for work",
+   "job-readiness"
+  ],
+  "example": "Universities increasingly stress employability by arranging work placements for undergraduates."
+ },
+ {
+  "id": "edu-045",
+  "topic": "education",
+  "word": "transferable skills",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "abilities such as communication that are useful in many different jobs",
+  "collocations": [
+   "develop transferable skills",
+   "valuable transferable skills",
+   "a range of transferable skills"
+  ],
+  "paraphrases": [
+   "general work skills",
+   "skills useful across jobs"
+  ],
+  "example": "Team projects help students acquire transferable skills such as negotiation and time management."
+ },
+ {
+  "id": "edu-046",
+  "topic": "education",
+  "word": "memorise",
+  "pos": "verb",
+  "band": 6.5,
+  "use": [
+   "speaking"
+  ],
+  "definition": "to learn something so well that you can remember it exactly",
+  "collocations": [
+   "memorise facts",
+   "memorise vocabulary",
+   "memorise a list"
+  ],
+  "paraphrases": [
+   "learn by heart",
+   "commit to memory"
+  ],
+  "example": "I used to memorise whole chapters before exams, but I forgot almost everything within a week."
+ },
+ {
+  "id": "edu-047",
+  "topic": "education",
+  "word": "comprehension",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "the ability to understand something",
+  "collocations": [
+   "reading comprehension",
+   "listening comprehension",
+   "comprehension skills"
+  ],
+  "paraphrases": [
+   "understanding",
+   "grasp"
+  ],
+  "example": "Reading comprehension improves when pupils discuss texts rather than simply read them silently."
+ },
+ {
+  "id": "edu-048",
+  "topic": "education",
+  "word": "cognitive",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "relating to mental processes such as thinking, learning and remembering",
+  "collocations": [
+   "cognitive development",
+   "cognitive skills",
+   "cognitive ability"
+  ],
+  "paraphrases": [
+   "mental",
+   "intellectual"
+  ],
+  "example": "Early play-based learning supports cognitive development in young children."
+ },
+ {
+  "id": "edu-049",
+  "topic": "education",
+  "word": "creativity",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the ability to produce original ideas",
+  "collocations": [
+   "foster creativity",
+   "stifle creativity",
+   "encourage creativity"
+  ],
+  "paraphrases": [
+   "originality",
+   "inventiveness"
+  ],
+  "example": "Overloaded timetables can stifle creativity by leaving no time for open-ended projects."
+ },
+ {
+  "id": "edu-050",
+  "topic": "education",
+  "word": "motivation",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "the desire or reason that makes someone want to do something",
+  "collocations": [
+   "lose motivation",
+   "intrinsic motivation",
+   "boost motivation"
+  ],
+  "paraphrases": [
+   "drive",
+   "incentive"
+  ],
+  "example": "Praise from teachers is a powerful source of motivation for young learners."
+ },
+ {
+  "id": "edu-051",
+  "topic": "education",
+  "word": "curiosity",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a strong wish to know or learn something",
+  "collocations": [
+   "natural curiosity",
+   "intellectual curiosity",
+   "spark curiosity"
+  ],
+  "paraphrases": [
+   "inquisitiveness",
+   "eagerness to learn"
+  ],
+  "example": "Good teachers spark curiosity by linking lessons to the questions children already ask."
+ },
+ {
+  "id": "edu-052",
+  "topic": "education",
+  "word": "autonomy",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the ability to make your own decisions and act independently",
+  "collocations": [
+   "learner autonomy",
+   "encourage autonomy",
+   "greater autonomy"
+  ],
+  "paraphrases": [
+   "independence",
+   "self-direction"
+  ],
+  "example": "Giving students more autonomy over their projects can raise engagement considerably."
+ },
+ {
+  "id": "edu-053",
+  "topic": "education",
+  "word": "spoon-feed",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to give someone so much help that they do not learn to think for themselves",
+  "collocations": [
+   "spoon-feed students",
+   "spoon-feed information",
+   "be spoon-fed"
+  ],
+  "paraphrases": [
+   "over-assist",
+   "do everything for"
+  ],
+  "example": "Teachers who spoon-feed their classes may produce students who struggle at university."
+ },
+ {
+  "id": "edu-054",
+  "topic": "education",
+  "word": "hands-on",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "involving direct practical experience rather than theory",
+  "collocations": [
+   "hands-on experience",
+   "hands-on learning",
+   "hands-on approach"
+  ],
+  "paraphrases": [
+   "practical",
+   "experiential"
+  ],
+  "example": "Hands-on experience in a laboratory helps pupils remember scientific ideas more easily."
+ },
+ {
+  "id": "edu-055",
+  "topic": "education",
+  "word": "theoretical",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "based on ideas and principles rather than practical application",
+  "collocations": [
+   "theoretical knowledge",
+   "theoretical framework",
+   "purely theoretical"
+  ],
+  "paraphrases": [
+   "conceptual",
+   "abstract"
+  ],
+  "example": "Some graduates complain that their courses were too theoretical to prepare them for work."
+ },
+ {
+  "id": "edu-056",
+  "topic": "education",
+  "word": "tutorial",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a small-group teaching session between students and a tutor",
+  "collocations": [
+   "attend a tutorial",
+   "weekly tutorial",
+   "tutorial group"
+  ],
+  "paraphrases": [
+   "small-group class",
+   "supervised discussion"
+  ],
+  "example": "In tutorials, students can debate ideas in a way that is impossible in a large lecture hall."
+ },
+ {
+  "id": "edu-057",
+  "topic": "education",
+  "word": "seminar",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a class in which a small group discusses a topic with a teacher",
+  "collocations": [
+   "attend a seminar",
+   "seminar room",
+   "seminar discussion"
+  ],
+  "paraphrases": [
+   "discussion class",
+   "group workshop"
+  ],
+  "example": "Each seminar begins with a short presentation followed by an open discussion."
+ },
+ {
+  "id": "edu-058",
+  "topic": "education",
+  "word": "standardised",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "designed so that all students take the same test under the same conditions",
+  "collocations": [
+   "standardised tests",
+   "standardised assessment",
+   "standardised exams"
+  ],
+  "paraphrases": [
+   "uniform",
+   "set to a common format"
+  ],
+  "example": "Standardised tests allow fair comparison between schools but may narrow the curriculum."
+ },
+ {
+  "id": "edu-059",
+  "topic": "education",
+  "word": "high-stakes",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "having very important consequences for the person who takes it",
+  "collocations": [
+   "high-stakes exams",
+   "high-stakes testing",
+   "high-stakes environment"
+  ],
+  "paraphrases": [
+   "crucial",
+   "decisive"
+  ],
+  "example": "High-stakes exams can cause serious anxiety among teenagers."
+ },
+ {
+  "id": "edu-060",
+  "topic": "education",
+  "word": "grade inflation",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a steady rise in the marks awarded without a matching rise in student achievement",
+  "collocations": [
+   "accused of grade inflation",
+   "concern about grade inflation",
+   "widespread grade inflation"
+  ],
+  "paraphrases": [
+   "marks drifting upwards",
+   "overgenerous marking"
+  ],
+  "example": "Employers worry that grade inflation has made degree classifications less meaningful."
+ },
+ {
+  "id": "edu-061",
+  "topic": "education",
+  "word": "league table",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a published ranking of schools or universities by performance",
+  "collocations": [
+   "top of the league table",
+   "school league tables",
+   "publish league tables"
+  ],
+  "paraphrases": [
+   "performance ranking",
+   "comparative ranking"
+  ],
+  "example": "League tables encourage schools to focus narrowly on exam results."
+ },
+ {
+  "id": "edu-062",
+  "topic": "education",
+  "word": "class size",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "the number of pupils in a single teaching group",
+  "collocations": [
+   "reduce class sizes",
+   "smaller class sizes",
+   "large class sizes"
+  ],
+  "paraphrases": [
+   "number of pupils per teacher",
+   "pupil group size"
+  ],
+  "example": "Smaller class sizes allow teachers to give each child more individual attention."
+ },
+ {
+  "id": "edu-063",
+  "topic": "education",
+  "word": "workload",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "the amount of work that a person has to do",
+  "collocations": [
+   "heavy workload",
+   "reduce workload",
+   "manage a workload"
+  ],
+  "paraphrases": [
+   "burden of tasks",
+   "amount of work"
+  ],
+  "example": "A heavy workload leaves teachers with little time to plan imaginative lessons."
+ },
+ {
+  "id": "edu-064",
+  "topic": "education",
+  "word": "deadline",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "the time or date by which something must be finished",
+  "collocations": [
+   "meet a deadline",
+   "miss a deadline",
+   "strict deadline"
+  ],
+  "paraphrases": [
+   "cut-off date",
+   "time limit"
+  ],
+  "example": "Missing a deadline can lower your final grade by an entire level."
+ },
+ {
+  "id": "edu-065",
+  "topic": "education",
+  "word": "revision",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "the process of studying again material that has already been learned, before an exam",
+  "collocations": [
+   "revision timetable",
+   "revision session",
+   "exam revision"
+  ],
+  "paraphrases": [
+   "reviewing",
+   "going over material"
+  ],
+  "example": "Good revision relies on testing yourself rather than simply rereading notes."
+ },
+ {
+  "id": "edu-066",
+  "topic": "education",
+  "word": "resit",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "to take an exam again after failing it",
+  "collocations": [
+   "resit an exam",
+   "resit the course",
+   "resit in August"
+  ],
+  "paraphrases": [
+   "retake",
+   "sit again"
+  ],
+  "example": "Students who fail the module must resit the exam during the summer."
+ },
+ {
+  "id": "edu-067",
+  "topic": "education",
+  "word": "sabbatical",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "reading"
+  ],
+  "definition": "a period of paid leave for study or travel, usually taken by teachers",
+  "collocations": [
+   "take a sabbatical",
+   "sabbatical leave",
+   "year-long sabbatical"
+  ],
+  "paraphrases": [
+   "study leave",
+   "extended break from teaching"
+  ],
+  "example": "The professor took a sabbatical to complete her research in another country."
+ },
+ {
+  "id": "edu-068",
+  "topic": "education",
+  "word": "alumni",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "former students of a school or university",
+  "collocations": [
+   "alumni network",
+   "alumni association",
+   "distinguished alumni"
+  ],
+  "paraphrases": [
+   "former students",
+   "graduates"
+  ],
+  "example": "Wealthy alumni often donate large sums to fund new buildings and scholarships."
+ },
+ {
+  "id": "edu-069",
+  "topic": "education",
+  "word": "campus",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "the land and buildings of a university or college",
+  "collocations": [
+   "on campus",
+   "campus facilities",
+   "campus life"
+  ],
+  "paraphrases": [
+   "university grounds",
+   "college site"
+  ],
+  "example": "Living on campus makes it easier to take part in clubs and societies."
+ },
+ {
+  "id": "edu-070",
+  "topic": "education",
+  "word": "admission",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "the act of accepting someone into a school or university",
+  "collocations": [
+   "admission requirements",
+   "admission procedure",
+   "gain admission"
+  ],
+  "paraphrases": [
+   "acceptance",
+   "entry"
+  ],
+  "example": "Admission to the most competitive courses is based on both grades and interviews."
+ },
+ {
+  "id": "edu-071",
+  "topic": "education",
+  "word": "gap year",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a year between school and university spent travelling or working",
+  "collocations": [
+   "take a gap year",
+   "gap year students",
+   "a gap year abroad"
+  ],
+  "paraphrases": [
+   "year out",
+   "break before university"
+  ],
+  "example": "Taking a gap year can help young people mature before they start their degree."
+ },
+ {
+  "id": "edu-072",
+  "topic": "education",
+  "word": "higher education",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "study at university or college level after finishing school",
+  "collocations": [
+   "access to higher education",
+   "higher education institutions",
+   "expand higher education"
+  ],
+  "paraphrases": [
+   "university-level study",
+   "tertiary study"
+  ],
+  "example": "Expanding higher education has widened opportunities but has also raised questions about quality."
+ },
+ {
+  "id": "edu-073",
+  "topic": "education",
+  "word": "illiteracy",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the inability to read and write",
+  "collocations": [
+   "adult illiteracy",
+   "eradicate illiteracy",
+   "illiteracy rate"
+  ],
+  "paraphrases": [
+   "inability to read",
+   "lack of reading skills"
+  ],
+  "example": "Illiteracy remains a barrier to employment and political participation in many regions."
+ },
+ {
+  "id": "edu-074",
+  "topic": "education",
+  "word": "holistic",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "considering the whole person rather than only one part",
+  "collocations": [
+   "holistic education",
+   "holistic approach",
+   "holistic development"
+  ],
+  "paraphrases": [
+   "comprehensive",
+   "all-round"
+  ],
+  "example": "A holistic approach to schooling values social and emotional growth as well as exam results."
+ },
+ {
+  "id": "edu-075",
+  "topic": "education",
+  "word": "well-rounded",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "having a balanced range of skills and interests",
+  "collocations": [
+   "well-rounded education",
+   "well-rounded individual",
+   "well-rounded graduate"
+  ],
+  "paraphrases": [
+   "all-round",
+   "balanced"
+  ],
+  "example": "Schools should aim to produce well-rounded citizens rather than only high exam scorers."
+ },
+ {
+  "id": "edu-076",
+  "topic": "education",
+  "word": "instil",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to gradually put an idea or habit into someone's mind",
+  "collocations": [
+   "instil discipline",
+   "instil confidence",
+   "instil a love of learning"
+  ],
+  "paraphrases": [
+   "inculcate",
+   "implant"
+  ],
+  "example": "Primary teachers play a vital role in instilling a love of reading."
+ },
+ {
+  "id": "edu-077",
+  "topic": "education",
+  "word": "nurture",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to care for and encourage the growth or development of someone",
+  "collocations": [
+   "nurture talent",
+   "nurture creativity",
+   "nurture potential"
+  ],
+  "paraphrases": [
+   "foster",
+   "cultivate"
+  ],
+  "example": "Good schools nurture talent regardless of a child's background."
+ },
+ {
+  "id": "edu-078",
+  "topic": "education",
+  "word": "stimulate",
+  "pos": "verb",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to encourage something to become more active or develop",
+  "collocations": [
+   "stimulate interest",
+   "stimulate discussion",
+   "stimulate curiosity"
+  ],
+  "paraphrases": [
+   "spark",
+   "arouse"
+  ],
+  "example": "Interactive lessons can stimulate interest even in subjects that pupils find difficult."
+ },
+ {
+  "id": "edu-079",
+  "topic": "education",
+  "word": "cultivate",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to develop a quality or skill through effort",
+  "collocations": [
+   "cultivate a habit",
+   "cultivate skills",
+   "cultivate independence"
+  ],
+  "paraphrases": [
+   "develop",
+   "foster"
+  ],
+  "example": "Universities should cultivate independent thinking rather than simply deliver information."
+ }
+]
