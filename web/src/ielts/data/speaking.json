@@ -131,6 +131,204 @@
     "What is the most expensive thing you've bought recently?",
     "Do you like shopping with others or alone?"
    ]
+  },
+  {
+   "topic": "Music",
+   "questions": [
+    "What kind of music do you usually listen to?",
+    "When do you most often listen to music?",
+    "Did you learn to play a musical instrument as a child?",
+    "Has your taste in music changed since you were a teenager?",
+    "Do you prefer listening to music alone or with other people?",
+    "Would you like to go to more live concerts?"
+   ]
+  },
+  {
+   "topic": "Sport and Exercise",
+   "questions": [
+    "Do you do any sport or exercise regularly?",
+    "What sports are popular in your country?",
+    "Did you enjoy physical education lessons at school?",
+    "Do you prefer watching sport or taking part in it?",
+    "Is it easy to find places to exercise where you live?",
+    "Would you like to try a new sport in the future?"
+   ]
+  },
+  {
+   "topic": "Weekends",
+   "questions": [
+    "How do you usually spend your weekends?",
+    "Do you prefer busy weekends or quiet ones?",
+    "What did you do last weekend?",
+    "Do you ever work or study at the weekend?",
+    "Are weekends different now compared with when you were a child?",
+    "What would your ideal weekend look like?"
+   ]
+  },
+  {
+   "topic": "Holidays",
+   "questions": [
+    "Where did you go on your last holiday?",
+    "Do you prefer holidays in the countryside or in a city?",
+    "Who do you usually go on holiday with?",
+    "Do you like to plan holidays carefully or decide things on the spot?",
+    "What do you usually bring back from a holiday?",
+    "Is there a place you would like to visit on holiday soon?"
+   ]
+  },
+  {
+   "topic": "Photography",
+   "questions": [
+    "Do you like taking photos?",
+    "What do you usually take photos of?",
+    "Do you prefer taking photos with a phone or a camera?",
+    "Do you ever print your photos?",
+    "Do you like being in photos yourself?",
+    "Has the way people take photos changed in recent years?"
+   ]
+  },
+  {
+   "topic": "Art",
+   "questions": [
+    "Did you learn to draw or paint at school?",
+    "Do you have any pictures or paintings on the walls at home?",
+    "Do you ever visit art galleries?",
+    "What kind of art do you like?",
+    "Do you think art is important for children?",
+    "Would you like to learn a new artistic skill?"
+   ]
+  },
+  {
+   "topic": "Parks and Gardens",
+   "questions": [
+    "Is there a park near where you live?",
+    "How often do you go to parks?",
+    "What do people usually do in parks in your city?",
+    "Did you play in parks when you were a child?",
+    "Do you have a garden, or would you like one?",
+    "Should cities create more green spaces?"
+   ]
+  },
+  {
+   "topic": "Animals",
+   "questions": [
+    "Do you have a pet, or did you have one as a child?",
+    "What animals are common in your country?",
+    "Do you like visiting zoos or wildlife parks?",
+    "Is there an animal you are afraid of?",
+    "Why do you think so many people keep pets?",
+    "Would you like to work with animals?"
+   ]
+  },
+  {
+   "topic": "Clothes",
+   "questions": [
+    "What kind of clothes do you usually wear?",
+    "Do you wear different clothes at work or school and at home?",
+    "How often do you buy new clothes?",
+    "Do you prefer shopping for clothes online or in shops?",
+    "Do you pay attention to fashion?",
+    "Are there any traditional clothes in your country?"
+   ]
+  },
+  {
+   "topic": "Sleep",
+   "questions": [
+    "How many hours do you usually sleep?",
+    "Do you ever take a nap during the day?",
+    "Do you find it easy to fall asleep?",
+    "What do you do to relax before going to bed?",
+    "Did you sleep more when you were younger?",
+    "Do you think people today get enough sleep?"
+   ]
+  },
+  {
+   "topic": "Birthdays",
+   "questions": [
+    "How do you usually celebrate your birthday?",
+    "Which birthday do you remember most clearly?",
+    "Do you think birthdays are more important for children or adults?",
+    "Do you prefer giving or receiving birthday presents?",
+    "How do people in your country celebrate birthdays?",
+    "Do you always remember your friends' birthdays?"
+   ]
+  },
+  {
+   "topic": "Neighbours",
+   "questions": [
+    "Do you know your neighbours well?",
+    "How often do you talk to your neighbours?",
+    "Have your neighbours ever helped you?",
+    "What makes someone a good neighbour?",
+    "Are neighbours as close now as they were in the past?",
+    "Would you like to live closer to your neighbours or further away?"
+   ]
+  },
+  {
+   "topic": "Social Media",
+   "questions": [
+    "Which social media apps do you use most?",
+    "How much time do you spend on social media each day?",
+    "What do you usually post online?",
+    "Do you think social media is a good way to keep in touch with friends?",
+    "Have you ever taken a break from social media?",
+    "Do older people in your family use social media?"
+   ]
+  },
+  {
+   "topic": "Learning Languages",
+   "questions": [
+    "Which languages can you speak?",
+    "How did you start learning English?",
+    "What is the most difficult part of learning a new language?",
+    "Would you like to learn another language in the future?",
+    "Do you think children learn languages more easily than adults?",
+    "How do you practise English outside class?"
+   ]
+  },
+  {
+   "topic": "Museums",
+   "questions": [
+    "Do you enjoy visiting museums?",
+    "When did you last go to a museum?",
+    "What kinds of museums are there in your city?",
+    "Did your school take you to museums when you were young?",
+    "Do you prefer museums with interactive exhibits or traditional displays?",
+    "Should museums be free to enter?"
+   ]
+  },
+  {
+   "topic": "Gifts",
+   "questions": [
+    "Do you like giving gifts to people?",
+    "What was the last gift you gave someone?",
+    "Do you find it difficult to choose gifts?",
+    "What is the best gift you have ever received?",
+    "Do you prefer homemade gifts or bought ones?",
+    "On what occasions do people give gifts in your country?"
+   ]
+  },
+  {
+   "topic": "Noise",
+   "questions": [
+    "Is the place where you live noisy or quiet?",
+    "What kinds of noise annoy you?",
+    "Can you concentrate when there is noise around you?",
+    "Do you prefer to study or work in silence or with background sound?",
+    "Was your neighbourhood noisier when you were a child?",
+    "Do you think cities should do more to reduce noise?"
+   ]
+  },
+  {
+   "topic": "Time Management",
+   "questions": [
+    "Are you good at managing your time?",
+    "Do you use a calendar or a to-do list?",
+    "What do you do when you have too many things to do?",
+    "Are you usually early, on time or late?",
+    "Is it harder to manage your time now than in the past?",
+    "What wastes most of your time?"
+   ]
   }
  ],
  "part2": [
@@ -659,6 +857,616 @@
     "Do you think there's a cultural difference in how different societies view busy-ness?"
    ],
    "modelAnswer": "I'm going to talk about a particularly hectic period during university when I was juggling several significant commitments simultaneously. This was during my final year, and I had to balance completing my thesis project, working part-time to support myself financially, and preparing for my final examinations. The main reason I was so busy was that I'd underestimated the time required for my thesis, which involved quite complex data analysis and research, and it coincided with the busiest period at my part-time job. During this three-month stretch, I was probably working or studying almost every day, rarely having weekends completely free. It was quite demanding, to be honest, and there were certainly moments when I felt overwhelmed and questioned whether I could manage everything. To cope with this intensity, I had to develop quite strict organizational strategies. I created a detailed schedule allocating specific time blocks to different tasks, and I became quite disciplined about prioritizing what absolutely needed to be done versus what could wait. I also learned to delegate some work responsibilities and communicate my constraints to my employer, who were actually quite understanding. Additionally, I made sure to protect at least some personal time for exercise and sleep, as I realized that completely neglecting self-care would only make me less productive. The experience was challenging, certainly, but ultimately quite rewarding because I successfully managed to complete everything to a reasonable standard while maintaining my health. It taught me valuable lessons about prioritization, time management, and the importance of asking for help when necessary."
+  },
+  {
+   "id": "s2-31",
+   "cue": "Describe a time when you received good news.",
+   "bullets": [
+    "what the news was",
+    "when and how you received it",
+    "who you shared it with",
+    "and explain why it was good news for you"
+   ],
+   "part3": [
+    "Why do some people prefer to hear news face to face rather than by message?",
+    "How has the way people share personal news changed over the last twenty years?",
+    "Do you think the media focuses too much on bad news?",
+    "Is it the responsibility of journalists to report positive stories as well?",
+    "How can bad news affect people's mental health?"
+   ],
+   "modelAnswer": "I'd like to talk about the afternoon I found out I'd been offered a place on a summer research programme. It was about two years ago, in late spring, and I was actually sitting on a crowded bus on my way home from a part-time job. My phone buzzed, and I assumed it was just another advert, but when I opened the email the first word I saw was 'Congratulations'. I had to read it three times before it really sank in. The first person I told was my mother. I called her before I'd even got off the bus, and I remember trying to keep my voice down because people were staring at me. That evening the whole family went out for dinner to celebrate. The reason it meant so much was that I'd been rejected the year before, so this felt like proof that all the extra preparation had paid off. More than that, it was the first time I'd achieved something completely on my own, without anyone pulling strings for me, and that gave me a lot of confidence.",
+   "band6": "OK, I want to talk about a good news I received two years ago. I applied for a summer programme for research and I was waiting the result for a long time. One day I was on the bus and I got an email, and the email said I am accepted. I was very very happy. So I called my mother immediately and she was also very happy. And then in the evening we go to a restaurant with all my family to celebrate. It was good news because last year I applied and I was not accepted, so this time I prepared more and I was successful. Also it was good for my future because the programme is very good for my CV and I can learn many things. So I think it was one of the happiest day in my life, and I still remember it very clearly.",
+   "notes": {
+    "fc": "Band 6 links ideas mainly with 'and', 'so' and 'then', and the story is told in a flat sequence. Band 7 uses a wider range of linking ('the reason it meant so much was', 'more than that') and adds a clear turning point, so it keeps going without losing coherence.",
+    "lr": "Band 6 repeats 'very happy' and 'good' and makes a countable error ('a good news'). Band 7 uses less common items and idiom accurately: 'it really sank in', 'paid off', 'pulling strings'.",
+    "gra": "Band 6 has tense slips in the narrative ('the email said I am accepted', 'we go to a restaurant', 'one of the happiest day'). Band 7 mixes past simple, past perfect ('I'd been offered', 'I'd been rejected') and a 'before' clause accurately.",
+    "pron": "When you read both aloud: band 6 tends to give every word equal stress. For band 7, stress the key words ('first word I saw was Congratulations'), pause at clause boundaries and let your voice fall at the end of each point."
+   }
+  },
+  {
+   "id": "s2-32",
+   "cue": "Describe a website or app that you find useful.",
+   "bullets": [
+    "what it is",
+    "how you found out about it",
+    "what you use it for",
+    "and explain why you find it useful"
+   ],
+   "part3": [
+    "What kinds of apps are most popular with young people in your country?",
+    "Do you think people rely too much on apps in daily life?",
+    "Should children be taught how to judge whether information online is reliable?",
+    "How might the apps people use change in the next ten years?",
+    "Who should be responsible for protecting users' personal data?"
+   ],
+   "modelAnswer": "The app I'd like to describe is an offline map application that I use almost every day. I first heard about it from a friend who'd used it while hiking in an area with no phone signal, and she said it had saved her from getting completely lost. I downloaded it out of curiosity, and to be honest I didn't think I'd need it much. These days, though, I use it for all sorts of things. Obviously it helps me find my way around unfamiliar parts of the city, but I also use it to plan cycling routes, because it shows which roads are steep and which have bike lanes. What makes it particularly useful is that the maps are stored on the phone itself, so it doesn't eat into my data allowance and it works in the underground. It also lets me save places I want to visit and add short notes. I suppose the main reason I value it is that it gives me a sense of independence, because I'm far less anxious about exploring somewhere new on my own.",
+   "band6": "I want to talk about a map app which I use nearly every day. My friend told me about it, she used it when she was hiking and there was no signal, so the app helped her. At first I don't think I need it but now I use it a lot. I use it for find places in my city and also for cycling, because it shows me the roads and the bike lanes. The good thing is it work without internet, so I don't use my data and I can use it in the metro. I can also save the places that I like to go. I think it is very useful app because I am not worried when I go to new places, I feel more independent. So yes, I think it is very useful and I recommend it to everyone.",
+   "notes": {
+    "fc": "Band 6 answers every bullet but ends by repeating 'it is very useful'. Band 7 builds each point with an example and ends with a reason that adds something new.",
+    "lr": "Band 6 relies on 'use' and 'useful' many times. Band 7 paraphrases: 'find my way around', 'eat into my data allowance', 'a sense of independence'.",
+    "gra": "Band 6 errors: 'for find places', 'it work', 'At first I don't think I need it', 'very useful app' (missing 'a'). Band 7 uses relative clauses, a cleft sentence ('What makes it particularly useful is that...') and 'so that' accurately.",
+    "pron": "Practise linking in phrases like 'out of curiosity' and 'eat into', and contrastive stress on 'offline'. Band 6 speakers often break these phrases word by word."
+   }
+  },
+  {
+   "id": "s2-33",
+   "cue": "Describe a meal you remember eating with other people.",
+   "bullets": [
+    "where you ate it",
+    "who you were with",
+    "what you ate",
+    "and explain why you remember this meal"
+   ],
+   "part3": [
+    "Why do families eat together less often than they used to?",
+    "Is it important for a culture to keep its traditional dishes?",
+    "How has fast food changed eating habits in your country?",
+    "Should schools teach children how to cook?",
+    "Do you think people will eat more plant-based food in future?"
+   ],
+   "modelAnswer": "The meal that comes to mind is a farewell dinner my classmates organised at the end of our final year at secondary school. We hired a small room above a family-run restaurant near the school, and there must have been about twenty of us squeezed around two long tables. Our form teacher came along as well, which was a nice surprise, because she wasn't usually very sociable outside lessons. The food itself was fairly simple: a big pot of soup to share, grilled fish, rice and lots of vegetable dishes, followed by a cake one of the parents had baked. I remember it mainly because of the atmosphere rather than the food. Everyone knew we were about to go our separate ways, so there was a mixture of excitement and sadness in the room. At one point the teacher stood up and gave a short speech about each of us, and quite a few people ended up in tears. Looking back, it was probably the last time the whole class was together, so it has stayed with me.",
+   "band6": "I will talk about a dinner with my classmates at the end of high school. We went to a small restaurant near our school, it was a family restaurant and we were maybe twenty people. Our teacher also come with us, and it was surprise because normally she is not very friendly outside class. We ate soup, fish, rice and many vegetables, and one mother made a cake for us. The food was delicious but I remember this meal because of the feeling. Everybody was happy and also sad because after that we go to different universities. Our teacher made a speech and she talked about every student, and many people cried. I think it was the last time all my class was together. So that is why I remember this dinner very well, it was a very special day for me.",
+   "notes": {
+    "fc": "Both answers cover the bullets in order. Band 6 states 'happy and also sad' plainly; band 7 develops the feeling ('a mixture of excitement and sadness', 'go our separate ways') and keeps a clear thread to the final reason.",
+    "lr": "Band 7 shows collocation and idiom control: 'squeezed around', 'family-run', 'ended up in tears', 'stayed with me'. Band 6 uses mostly high-frequency words ('nice', 'special', 'very').",
+    "gra": "Band 6: 'Our teacher also come', 'it was surprise', 'after that we go'. Band 7 uses modal deduction ('there must have been'), passive-like structures and non-defining relative clauses without error.",
+    "pron": "Contrast the stress in 'the atmosphere rather than the food'. Use a fall-rise on 'Looking back,' to signal that the final point is coming."
+   }
+  },
+  {
+   "id": "s2-34",
+   "cue": "Describe a goal you hope to achieve in the next few years.",
+   "bullets": [
+    "what the goal is",
+    "why you chose this goal",
+    "what you are doing to achieve it",
+    "and explain how you will feel if you achieve it"
+   ],
+   "part3": [
+    "Why do some people set goals while others prefer to live day by day?",
+    "Is it better to have one big goal or several small ones?",
+    "Do parents put too much pressure on children to succeed?",
+    "How do the goals of young people differ from those of older people?",
+    "Does society measure success too much in terms of money?"
+   ],
+   "modelAnswer": "One goal I'm working towards at the moment is completing a half-marathon within the next two years. I've never thought of myself as a sporty person, but during a long period of working from home I realised I was spending almost the whole day sitting down, and my energy levels had dropped noticeably. A colleague who runs regularly suggested I try a beginner's plan, and I was surprised how quickly I began to enjoy it. At the moment I'm running three times a week, gradually increasing the distance, and I've joined a local running group that meets on Sunday mornings, which keeps me motivated when the weather is miserable. I've also started paying more attention to what I eat and how much I sleep, because I've learned that recovery matters as much as the training itself. If I manage to cross the finish line, I think I'll feel enormously proud, partly because it's something I would have considered impossible a few years ago. It would also prove to me that steady, small steps can lead to quite big changes.",
+   "band6": "My goal is to run a half-marathon in the next two years. Before I was not a sporty person, but when I work from home I sit all day and I feel very tired. My colleague is a runner and she said I should try running, and I start to like it quickly. Now I run three times every week and every time I run a bit more far. Also I joined a running club and we run on Sunday morning, this is good for motivation especially when the weather is bad. I also try to eat healthy and sleep more. If I finish the half-marathon I will be very proud of myself, because few years ago I think it is impossible for me. So it is a big goal for me and I hope I can do it.",
+   "notes": {
+    "fc": "Band 6 is fluent but relies on 'also' and 'so' for linking. Band 7 links cause and effect more precisely ('because I've learned that', 'partly because', 'which keeps me motivated').",
+    "lr": "Band 7 uses topic-specific and less common vocabulary: 'energy levels had dropped noticeably', 'recovery', 'cross the finish line', 'steady, small steps'. Band 6 has a word-form error: 'a bit more far'.",
+    "gra": "Band 6: tense errors ('when I work from home I sit', 'I start to like', 'few years ago I think it is impossible'). Band 7 handles present perfect, past perfect and the third-conditional-style 'would have considered' accurately.",
+    "pron": "Band 7 delivery chunks long sentences into sense groups. Practise pausing after 'At the moment I'm running three times a week' before adding the next detail."
+   }
+  },
+  {
+   "id": "s2-35",
+   "cue": "Describe a place in your town or city where people go to relax.",
+   "bullets": [
+    "where it is",
+    "what it looks like",
+    "what people do there",
+    "and explain why it is a good place to relax"
+   ],
+   "part3": [
+    "Why do people in cities find it harder to relax than people in the countryside?",
+    "Should governments spend money on public spaces such as parks and squares?",
+    "Do you think people today have less free time than in the past?",
+    "How do different age groups prefer to relax?",
+    "Can technology help people relax, or does it make relaxing harder?"
+   ],
+   "modelAnswer": "The place I'd like to describe is a riverside path that runs along the edge of the old part of my city. It stretches for about three kilometres, and on one side there's the river while on the other there are rows of trees and a few small cafés with outdoor seating. A few years ago the area was quite run-down, but the local council cleaned it up, added benches and lighting, and now it's one of the most popular spots in town. In the early morning you'll mostly see joggers and people walking their dogs, whereas in the evening it's full of families, couples strolling along and older people chatting on the benches. At weekends there are sometimes street musicians as well. I think it works so well as a place to relax because it gives you a feeling of open space in the middle of a crowded city. The sound of the water seems to block out the traffic noise, and since it's free and open to everyone, nobody feels they have to spend money to enjoy it.",
+   "band6": "I want to describe the river path in my city. It is in the old town and it is about three kilometres long. On one side is the river and on the other side there are trees and some cafés. Before it was dirty and not nice, but the government cleaned it and now there are many benches and lights, so it is very popular. In the morning many people do jogging and walk with their dogs, and in the evening there are many families and old people who sit and talk. Sometimes on weekend there are musicians playing music. I think it is good for relaxing because the city is very crowded and here you can feel more space. Also you can hear the river and not the traffic. And it is free, everybody can go there, so I like it very much.",
+   "notes": {
+    "fc": "Band 6 describes in short, separate statements. Band 7 contrasts times of day with 'whereas' and gives a two-part explanation, so the answer flows as one argument.",
+    "lr": "Band 7: 'run-down', 'strolling along', 'block out the traffic noise', 'outdoor seating'. Band 6: 'dirty and not nice', 'do jogging' (unnatural collocation), 'playing music' repeated.",
+    "gra": "Band 6 is mostly accurate but simple; 'on weekend' lacks an article. Band 7 combines a passive-free narrative of change with 'since'-clauses and contrastive structures accurately.",
+    "pron": "Use falling intonation on each item in a list ('joggers, people walking their dogs') and a rise on the last but one. Stress the contrast 'free and open to everyone'."
+   }
+  },
+  {
+   "id": "s2-36",
+   "cue": "Describe a time when you had to wait for something.",
+   "bullets": [
+    "what you were waiting for",
+    "where you were",
+    "how long you had to wait",
+    "and explain how you felt while you were waiting"
+   ],
+   "part3": [
+    "Why are people today less patient than in the past?",
+    "In what situations is it important to be patient?",
+    "Do you think businesses should make customers wait less, even if it costs more?",
+    "How can parents teach children to be patient?",
+    "Is the ability to wait an important skill at work?"
+   ],
+   "modelAnswer": "A time that springs to mind is when I was waiting for the results of a medical test a couple of years ago. I'd had some tests done after a routine check-up, and the doctor told me they'd need to look more closely at one of the results, which would take about ten days. Most of that waiting happened at home and at work, carrying on with ordinary life while knowing a phone call could come at any moment. To be honest, the first few days were the hardest. I kept searching for information online, which only made me more anxious, so in the end a friend persuaded me to stop reading and to keep busy instead. I went swimming every evening and threw myself into a project at work, which helped a lot. When the call finally came, it turned out to be nothing serious, and I felt an enormous wave of relief. What I took away from it was that worrying doesn't change the outcome, and that it's better to focus on the things you can actually control."
+  },
+  {
+   "id": "s2-37",
+   "cue": "Describe a piece of advice you received that was helpful.",
+   "bullets": [
+    "who gave you the advice",
+    "what the advice was",
+    "when you received it",
+    "and explain why it was helpful"
+   ],
+   "part3": [
+    "Why do young people often ignore advice from older people?",
+    "Is it better to get advice from friends or from experts?",
+    "Should people pay for professional advice, such as from a financial adviser?",
+    "How has the internet changed the way people look for advice?",
+    "What qualities make someone good at giving advice?"
+   ],
+   "modelAnswer": "The advice I'd like to talk about came from my first manager, when I'd just started a part-time job in a bookshop during my studies. I was very keen to impress, so I said yes to every request and ended up working far more hours than I'd agreed to, while my coursework started to suffer. After a few weeks she took me aside and told me something I've never forgotten: 'If you agree to everything, your yes stops meaning anything.' She explained that people respect you more when you're honest about what you can realistically do. At first I felt a bit embarrassed, because I thought I'd been doing a good job, but I soon realised she was right. I started being clearer about my availability, and surprisingly nobody minded. The reason it's been so helpful is that it applies to almost every part of life, from group projects at university to arrangements with friends. Learning to say no politely has made me less stressed, and I think it's actually made me more reliable, because now I only promise what I can deliver."
+  },
+  {
+   "id": "s2-38",
+   "cue": "Describe an interesting conversation you had with a stranger.",
+   "bullets": [
+    "where you met this person",
+    "what you talked about",
+    "how long the conversation lasted",
+    "and explain why you found it interesting"
+   ],
+   "part3": [
+    "Why are some people more comfortable talking to strangers than others?",
+    "Is it common in your country to start conversations with strangers?",
+    "Should children be taught never to talk to strangers?",
+    "How has technology changed the way people meet new people?",
+    "Do you think people in big cities are less friendly than those in small towns?"
+   ],
+   "modelAnswer": "I'd like to describe a conversation I had on an overnight train a few years ago. I was travelling to visit relatives, and the woman sitting opposite me turned out to be a retired engineer who had helped design several of the bridges we were passing. It started quite casually, when she noticed I was reading a book about architecture and asked whether I was a student. From there we ended up talking for nearly two hours, until the lights in the carriage were dimmed. She described what it was like to work on huge projects at a time when most of the calculations were still done by hand, and she had some fascinating stories about things going wrong and how her team had fixed them. What made it so interesting was that she talked about her work with real passion, even decades later, and she was genuinely curious about my plans as well, rather than just lecturing me. It made me realise how much you can learn from people you would normally never meet, if you're willing to start a conversation."
+  },
+  {
+   "id": "s2-39",
+   "cue": "Describe a change you would like to make to your local area.",
+   "bullets": [
+    "what the change is",
+    "how it could be done",
+    "who would benefit from it",
+    "and explain why you think this change is necessary"
+   ],
+   "part3": [
+    "Who should make decisions about changes to a neighbourhood, residents or the government?",
+    "Why do some people resist changes in their local area?",
+    "How have neighbourhoods in your country changed over the past few decades?",
+    "Should cities prioritise public transport over roads for cars?",
+    "What makes a neighbourhood a good place to bring up children?"
+   ],
+   "modelAnswer": "If I could change one thing about my neighbourhood, I'd turn the main street into a mostly pedestrian area with proper cycle lanes. At the moment it's a narrow road lined with shops, but it's always jammed with cars and delivery vans, and the pavements are so narrow that you sometimes have to step into the road to get past people. I think it could be done gradually. The council could start by banning private cars during the busiest hours, while still allowing deliveries early in the morning, and then widen the pavements and plant a few trees. A lot of different people would benefit. Shop owners would probably see more customers, because people tend to linger when they're not dodging traffic, and parents with pushchairs and elderly residents would feel much safer. I also think the air quality would improve noticeably. The main reason I think it's necessary is that the street is the heart of the area, yet at the moment it feels like somewhere you hurry through rather than somewhere you'd want to spend time."
+  },
+  {
+   "id": "s2-40",
+   "cue": "Describe a time when you learned something from a mistake.",
+   "bullets": [
+    "what the mistake was",
+    "when it happened",
+    "what the result was",
+    "and explain what you learned from it"
+   ],
+   "part3": [
+    "Why are some people afraid of making mistakes?",
+    "Should schools punish students for making mistakes?",
+    "Do you think people learn more from success or from failure?",
+    "How should a manager respond when an employee makes a mistake?",
+    "Are mistakes more serious in some professions than in others?"
+   ],
+   "modelAnswer": "The mistake I'd like to talk about happened during my second year at university, when I was responsible for booking a venue for a student society event. I was quite disorganised at the time, and I confirmed the booking by phone without asking for anything in writing. On the day itself, about sixty people turned up, only to find that the hall had been given to another group. It was incredibly embarrassing, and we ended up holding the event in a cramped classroom, which wasn't really suitable. Afterwards I felt terrible, because a lot of people had put work into the evening and I'd let them down. However, the experience taught me a valuable lesson about checking details and keeping records. Since then I've always asked for written confirmation of anything important, and I keep a simple checklist for every event or trip I organise. I'd say I also learned how to take responsibility. Rather than making excuses, I apologised to the committee and offered to sort out a refund for the snacks, and I think people respected that."
+  },
+  {
+   "id": "s2-41",
+   "cue": "Describe a song or piece of music that is important to you.",
+   "bullets": [
+    "what it is",
+    "when you first heard it",
+    "how often you listen to it",
+    "and explain why it is important to you"
+   ],
+   "part3": [
+    "Why do people of different generations often like different kinds of music?",
+    "Should music be a compulsory subject at school?",
+    "How has streaming changed the music industry?",
+    "Do you think traditional music will survive in the future?",
+    "Why is music often used in films and advertisements?"
+   ],
+   "modelAnswer": "The piece I'd like to talk about is a slow instrumental song that my grandfather used to play on an old guitar when I was little. I'm not even sure it has a proper title, because he learned it by ear from a neighbour when he was young. I first heard it when I was about five, during summer holidays at my grandparents' house, where he would play in the evenings while we sat outside. After he passed away, I couldn't find it anywhere, but a few years ago my uncle found an old cassette recording, and I had it converted into a digital file. Now I listen to it maybe once or twice a month, usually late at night or when I'm feeling homesick. It's important to me because it brings back very vivid memories of those evenings, the smell of the garden and the sound of insects in the background. More than that, it reminds me of my grandfather's patience and gentleness, and I like the idea that a small, unrecorded piece of family history has been preserved."
+  },
+  {
+   "id": "s2-42",
+   "cue": "Describe an occasion when you had to use your imagination.",
+   "bullets": [
+    "what the occasion was",
+    "why you needed to use your imagination",
+    "what you did",
+    "and explain how you felt about the result"
+   ],
+   "part3": [
+    "Is imagination more important for children or for adults?",
+    "Do you think modern education gives children enough chance to be creative?",
+    "Which jobs require the most imagination?",
+    "Can technology such as computer games develop imagination?",
+    "Is creativity something people are born with, or can it be learned?"
+   ],
+   "modelAnswer": "One occasion that comes to mind is when I had to entertain my young nephew for a whole rainy weekend while his parents were away. There was no internet connection at the house we were staying in, and he'd already got bored of the few toys he'd brought, so I really had to think on my feet. In the end, I decided to turn the house into a kind of adventure story. I hid clues in different rooms, drew a treasure map on the back of an old calendar and invented a character, a pirate who'd supposedly lost his golden spoon. Each clue led to a small challenge, like building a bridge out of books or remembering a sequence of sounds. By the Sunday he was adding his own ideas to the story, which was the best part. I felt surprisingly proud of the result, partly because it was such a simple idea and cost nothing, but mainly because I saw how much he enjoyed being part of the story rather than just watching a screen. It made me realise that I'm more creative than I usually give myself credit for."
+  },
+  {
+   "id": "s2-43",
+   "cue": "Describe a person who has an interesting job.",
+   "bullets": [
+    "who this person is",
+    "what their job is",
+    "how you know about their work",
+    "and explain why you think the job is interesting"
+   ],
+   "part3": [
+    "What makes a job satisfying, apart from the salary?",
+    "Should people choose a job they enjoy even if it pays less?",
+    "Which jobs do you think will disappear in the future because of automation?",
+    "Is it better to stay in one job for a long time or change jobs often?",
+    "Why do some jobs receive more respect than others?"
+   ],
+   "modelAnswer": "The person I'd like to talk about is a family friend who works as a sound designer for theatre productions. I've known her since I was a child, because she lived in the flat below ours, and over the years she's told me a lot about her work, and she's even taken me backstage a couple of times. Basically, her job is to create every sound the audience hears apart from the actors' voices, so that includes music, background noises like rain or traffic, and special effects such as a door slamming offstage. What surprised me is how much of it she records herself. She once spent a whole afternoon recording different kinds of footsteps in gravel for a single scene. I think the job is fascinating because it combines technical skill with creativity, and because when it's done well, audiences don't even notice it. It just makes the story feel real. I also admire the fact that she has to work under a lot of pressure, as everything has to be perfectly timed during live performances, with no second chances."
+  },
+  {
+   "id": "s2-44",
+   "cue": "Describe something you bought that you were not happy with.",
+   "bullets": [
+    "what you bought",
+    "where you bought it",
+    "why you were not happy with it",
+    "and explain what you did about it"
+   ],
+   "part3": [
+    "Why do people sometimes buy things they do not need?",
+    "Should companies be allowed to advertise to children?",
+    "Is it easier for consumers to complain now than in the past?",
+    "Do you think online shopping will replace physical shops?",
+    "How can people be encouraged to buy fewer things?"
+   ],
+   "modelAnswer": "Something I regret buying is a pair of wireless headphones I ordered online last year. I'd seen them advertised all over social media, with lots of glowing reviews, and they were on special offer, so I bought them without really doing my homework. When they arrived, I was disappointed almost straight away. They looked much cheaper than in the photos, the battery barely lasted three hours instead of the twenty that were promised, and the left earpiece kept disconnecting. At first I tried resetting them and updating the software, but nothing worked. I contacted the seller and, to their credit, they offered a refund, but only if I paid to send them back abroad, which would have cost almost half the original price. In the end I decided to do it anyway, partly on principle. I also left an honest review explaining the problems, because I felt other buyers deserved to know. The experience taught me to be much more sceptical of online adverts and to check where a seller is actually based before I order anything."
+  },
+  {
+   "id": "s2-45",
+   "cue": "Describe a time when you saw a beautiful view.",
+   "bullets": [
+    "where you were",
+    "what you could see",
+    "who you were with",
+    "and explain why you found the view beautiful"
+   ],
+   "part3": [
+    "Why do people like to take photographs of beautiful places?",
+    "Should famous natural places limit the number of visitors?",
+    "Do you think people appreciate nature less if they live in cities?",
+    "How can tourism damage areas of natural beauty?",
+    "Is it the government's job to protect the countryside?"
+   ],
+   "modelAnswer": "The view I'd like to describe is one I saw from the top of a hill near the coast, during a walking trip with two friends last autumn. We'd set off before dawn because we wanted to reach the summit in time for sunrise, and for most of the climb it was so dark that we were walking by torchlight. When we finally got to the top, the sky was just starting to change colour. Below us there was a long, curved bay, with a small fishing village at one end, and the sea was completely still, almost like a mirror. As the sun came up, the light gradually spread across the water and the fog in the valleys behind us turned a sort of pale gold. None of us said anything for a few minutes. I think what made it so beautiful wasn't just the scenery itself but the contrast with the effort it took to get there. After hours of climbing in the cold and dark, the sudden calm and space felt almost unreal, and it's a moment I still think about when life gets hectic."
+  },
+  {
+   "id": "s2-46",
+   "cue": "Describe a time when you worked in a team.",
+   "bullets": [
+    "what the task was",
+    "who was in the team",
+    "what your role was",
+    "and explain how you felt about working in this team"
+   ],
+   "part3": [
+    "What makes some teams more successful than others?",
+    "Is it better for children to learn in groups or individually?",
+    "Should leaders be chosen by the team or appointed by someone senior?",
+    "How has remote working affected teamwork?",
+    "Do you think competition or cooperation is more useful at work?"
+   ],
+   "modelAnswer": "I'd like to talk about a group project I did in my final year at university, where four of us had to design a small survey and present our findings to a panel of lecturers. The team was a bit of a mixed bag: one person was extremely organised, another was brilliant with data but quite shy, and the fourth member was rather laid-back and tended to leave things until the last minute. I ended up taking on the role of coordinator, partly because nobody else wanted to, and partly because I'm quite good at keeping track of deadlines. I set up a shared calendar, split the work according to people's strengths and arranged short weekly check-ins. There were a few tense moments, especially when one section was handed in late, but we talked it through rather than letting it turn into an argument. Overall, I felt it was a really rewarding experience. We got a good mark, but more importantly I learned that a team works best when people's differences are treated as an advantage rather than a problem.",
+   "band6": "I want to talk about a group project in my university. We were four students and we must make a survey and then present the result to the teachers. The people in my team were very different. One girl was very organised, one boy was good at statistics but he is shy, and another boy was lazy and always late. I was the leader because nobody want to do it and I am good with deadlines. I made a calendar online and I gave everyone a part of the work. Sometimes we had problems, for example one person sent his part late, but we talked and we solved it. In general I felt good in this team. We got a good mark and I learned that different people can work together well if everyone do their part.",
+   "notes": {
+    "fc": "Band 6 is easy to follow but moves through points mechanically. Band 7 signals the structure ('partly because... and partly because', 'Overall', 'but more importantly') and develops the conflict instead of just naming it.",
+    "lr": "Band 7: 'a bit of a mixed bag', 'laid-back', 'keeping track of', 'talked it through'. Band 6 uses 'lazy' and 'good' where more precise or tactful words would fit.",
+    "gra": "Band 6: 'we must make' (for past obligation), 'he is shy' in a past narrative, 'nobody want', 'everyone do'. Band 7 uses passive ('was handed in'), gerund phrases and contrast with 'rather than' accurately.",
+    "pron": "Band 7 delivery uses sentence stress to show contrast: 'treated as an ADVANTAGE rather than a PROBLEM'. Practise holding the stress on content words and reducing 'as an' and 'than a'."
+   }
+  },
+  {
+   "id": "s2-47",
+   "cue": "Describe a habit you would like to change.",
+   "bullets": [
+    "what the habit is",
+    "how long you have had it",
+    "why you want to change it",
+    "and explain how you plan to change it"
+   ],
+   "part3": [
+    "Why is it so difficult for people to break bad habits?",
+    "Are habits formed in childhood harder to change than those formed later?",
+    "Should governments try to change people's habits, for example by taxing sugar?",
+    "How do advertisements influence people's habits?",
+    "Which good habits should schools teach children?"
+   ],
+   "modelAnswer": "The habit I'd really like to change is checking my phone the moment I wake up. I think it started around four years ago, when I began using my phone as an alarm clock, and gradually it became automatic. Before I've even got out of bed, I've usually scrolled through messages, news headlines and social media, which can easily take twenty minutes. The main reason I want to stop is that it puts me in a reactive frame of mind for the whole day. If I see a stressful email or a piece of bad news first thing, it tends to colour my mood, and I've noticed I'm less focused on the things I'd actually planned to do. It also makes me late more often than I'd like to admit. My plan is fairly simple. I've bought an ordinary alarm clock, and I'm going to charge my phone in the kitchen overnight so it isn't within reach. I also want to replace the habit with something better, such as stretching for five minutes or reading a few pages of a book before I look at a screen.",
+   "band6": "A habit I want to change is that I look at my phone immediately when I wake up. I think I have this habit for about four years, since I use the phone for my alarm. Now every morning I check my messages, news and social media in the bed, and sometimes it is twenty minutes. I want to change because it makes me stressed. If I read a bad email or bad news in the morning, I feel bad all day, and I cannot focus on my work. Also I am late sometimes because of this. So my plan is to buy a normal alarm clock and to put my phone in the kitchen in the night. Then I will do some exercise or read a book in the morning, not look at the phone. I hope this plan will work.",
+   "notes": {
+    "fc": "Band 6 covers all bullets with simple sequencing. Band 7 explains the effect in more depth ('puts me in a reactive frame of mind', 'tends to colour my mood') so each point is extended, not just stated.",
+    "lr": "Band 6 repeats 'bad' three times. Band 7 uses idiomatic and precise language: 'first thing', 'within reach', 'more often than I'd like to admit'.",
+    "gra": "Band 6: 'I have this habit for about four years' (needs present perfect), 'since I use', 'in the bed'. Band 7 uses present perfect with 'Before I've even got out of bed', conditionals and purpose clauses accurately.",
+    "pron": "Practise the weak forms in 'I've usually', 'I'd like to admit' and linking 'first thing'. Band 6 speakers often drop contractions entirely, which makes the speech sound stilted."
+   }
+  },
+  {
+   "id": "s2-48",
+   "cue": "Describe a building in your city that you think is attractive.",
+   "bullets": [
+    "where it is",
+    "what it looks like",
+    "what it is used for",
+    "and explain why you think it is attractive"
+   ],
+   "part3": [
+    "Should old buildings be preserved, or replaced with modern ones?",
+    "Who should pay for the upkeep of historic buildings?",
+    "How does the design of a building affect the people who use it?",
+    "Do you think modern cities all look too similar?",
+    "Should architects consider the environment more than appearance?"
+   ],
+   "modelAnswer": "The building I find most attractive in my city is the central library, which stands on a corner of the main square, opposite the town hall. It was built about ten years ago, and at first a lot of people criticised it because it looked so different from the older buildings around it. From the outside it's a tall, glass-fronted building with a roof that slopes down towards the square, and the lower floors are partly covered in wooden panels, which soften the overall effect. Inside there's a huge open atrium with stairs that wind up through the middle, and every floor has wide windows looking out over the city. Apart from books, it's used for exhibitions, language classes and community events, and there's a café on the ground floor that's always busy. I think it's attractive because it manages to be modern without feeling cold. The use of wood and natural light makes it very welcoming, and it's designed so that you can see people reading and studying from the street, which I think sends a positive message about learning.",
+   "band6": "The building I like is the central library in my city. It is on the main square, near the town hall. It is quite new, maybe ten years old, and in the beginning many people did not like it because it is very different from the old buildings. Outside there is a lot of glass and also some wood, and the roof goes down to the square. Inside there is a big open space and stairs in the middle, and you can see the city from the windows. People go there for borrowing books, but also for exhibitions and classes, and there is a café which is always full. I think it is beautiful because it is modern but it is not cold, the wood and the light make it warm. And from the street you can see people studying, I like that.",
+   "notes": {
+    "fc": "Band 6 lists features but the final reason is added as an afterthought ('I like that'). Band 7 links the design features to the reason, using 'which I think sends a positive message' to finish the argument.",
+    "lr": "Band 7 uses precise architectural vocabulary: 'glass-fronted', 'atrium', 'wind up through the middle', 'soften the overall effect'. Band 6 says 'a big open space', 'goes down'.",
+    "gra": "Band 6: 'because it is very different' (past context), 'go there for borrowing books'. Band 7 uses passive ('was built', 'is used', 'is designed so that') and non-defining relative clauses accurately.",
+    "pron": "Stress the contrast 'modern without feeling cold'. Practise the word stress in 'architecture', 'exhibition' and 'atrium', which are often misplaced."
+   }
+  },
+  {
+   "id": "s2-49",
+   "cue": "Describe a time when you taught someone something.",
+   "bullets": [
+    "who you taught",
+    "what you taught them",
+    "how you taught it",
+    "and explain how you felt about the experience"
+   ],
+   "part3": [
+    "What qualities make a good teacher?",
+    "Is it better to learn practical skills from a teacher or from online videos?",
+    "Should older people be encouraged to learn new technology?",
+    "Do you think teachers should be paid more?",
+    "How will teaching change in the future?"
+   ],
+   "modelAnswer": "I'd like to talk about the time I taught my grandmother how to make video calls on a tablet. It was during a period when the family couldn't visit her for several months, and she was feeling quite isolated, so my parents bought her a tablet and asked me to help her use it. At first it was harder than I expected. She'd never used a touchscreen before, and things that seem obvious to me, like swiping or knowing which icon to press, were completely new to her. So I slowed right down. I wrote simple step-by-step instructions on a card in large handwriting, with little drawings of each icon, and we practised the same call over and over again, first with me sitting next to her and then with me calling from the next room. After about a week she could do it on her own, and soon she was calling relatives I hardly ever speak to myself. I felt really proud, but also a bit humbled, because it showed me how much patience good teaching requires, and how easy it is to forget what it's like to be a complete beginner.",
+   "band6": "I will talk about when I taught my grandmother to do video calls. At that time we could not visit her for some months and she was lonely, so my parents bought her a tablet and I helped her. It was more difficult than I think. She never used a touchscreen before, so she did not know how to swipe or which button she has to press. So I went very slowly. I wrote the steps on a card with big letters and small pictures, and we practised many times. First I was next to her and then I called her from another room. After one week she can do it alone, and then she started to call all the family. I felt very proud of her. Also I understood that teaching needs a lot of patience, it is not easy.",
+   "notes": {
+    "fc": "Band 6 is coherent but the ending is short and general ('it is not easy'). Band 7 reflects on the experience with a two-part conclusion, showing the speaker can keep going and develop ideas.",
+    "lr": "Band 7: 'isolated', 'slowed right down', 'over and over again', 'humbled', 'a complete beginner'. Band 6 uses 'lonely' and 'button' acceptably but with less range.",
+    "gra": "Band 6: 'more difficult than I think', 'She never used' (needs past perfect), 'she has to press', 'she can do it alone'. Band 7 uses past perfect, comparison and 'how much patience good teaching requires' accurately.",
+    "pron": "The band 7 answer has long sentences; practise breathing at commas and keeping a steady rhythm. Stress 'slowed RIGHT DOWN' and 'over and OVER again' for natural emphasis."
+   }
+  },
+  {
+   "id": "s2-50",
+   "cue": "Describe a time when you were surprised by something.",
+   "bullets": [
+    "what the surprise was",
+    "when and where it happened",
+    "who you were with",
+    "and explain why it surprised you"
+   ],
+   "part3": [
+    "Do people generally like surprises, or do they prefer to know what will happen?",
+    "Is it a good idea to organise surprise parties?",
+    "Why do some news stories surprise people more than others?",
+    "How can unexpected events help people grow?",
+    "Do you think life is less surprising now that information is so easy to find?"
+   ],
+   "modelAnswer": "One thing that genuinely surprised me happened last winter, when I went to a small jazz concert with a colleague. It was in a basement venue in the city centre, and to be honest I only went because she had a spare ticket. Halfway through the evening, the bandleader announced that a guest would be joining them, and to my astonishment it was my old maths teacher from secondary school, who walked on stage carrying a saxophone. I'd had no idea that he played any instrument at all. At school he'd always come across as rather strict and serious, and I'd never imagined him having a life outside the classroom, let alone performing in front of an audience. And he was brilliant. He played several solos and was clearly enjoying himself enormously. During the break I went up to say hello, and he laughed and admitted that very few of his students knew. I think it surprised me so much because it completely changed my picture of him, and it reminded me that we often judge people by the single role we see them in.",
+   "band6": "I want to talk about a surprise last winter. My colleague had one more ticket for a jazz concert so I went with her. The concert was in a small place under the ground in the city centre. In the middle of the concert the leader of the band said there is a special guest, and it was my maths teacher from high school! He came with a saxophone. I never knew that he can play music. In school he was very strict and serious, so I could not imagine that he has a hobby like this. He played really well and he looked very happy. In the break I said hello to him and he laughed and said not many students know about it. It surprised me because I had a different idea about him, and now I know that people can be very different outside their job.",
+   "notes": {
+    "fc": "Both answers tell the story in order. Band 7 builds suspense ('Halfway through the evening', 'to my astonishment') and closes with a general insight; band 6 reaches the same point but in plainer steps.",
+    "lr": "Band 7: 'basement venue', 'come across as', 'let alone', 'judge people by the single role'. Band 6 says 'a small place under the ground', which shows a vocabulary gap being worked around.",
+    "gra": "Band 6 errors in reported speech and sequence: 'said there is', 'I never knew that he can play', 'not many students know'. Band 7 backshifts correctly and uses past perfect ('I'd had no idea', 'he'd always come across').",
+    "pron": "Use a higher pitch and pause before the surprise ('and to my astonishment... it was my old maths teacher'). Band 6 speakers often deliver the key moment at the same pitch as everything else."
+   }
+  },
+  {
+   "id": "s2-51",
+   "cue": "Describe a TV programme or online series you enjoy watching.",
+   "bullets": [
+    "what it is called or what it is about",
+    "how you found it",
+    "when you usually watch it",
+    "and explain why you enjoy watching it"
+   ],
+   "part3": [
+    "How have people's viewing habits changed with streaming services?",
+    "Do you think television has a positive or negative influence on children?",
+    "Should there be stricter controls on what is shown on television?",
+    "Why are reality programmes so popular?",
+    "Can documentaries be as educational as books?"
+   ],
+   "modelAnswer": "A series I really enjoy is a nature documentary series that follows a team of wildlife researchers working in remote parts of the world. Each episode focuses on a single animal or habitat, for instance snow leopards in the mountains or the coral reefs of a particular island. I came across it more or less by accident, when the streaming service I use recommended it after I'd watched a programme about volcanoes. I usually watch an episode on Sunday evenings, when I've finished everything for the week and want something calm but still interesting. What I like most about it is that it doesn't just show beautiful scenery. It also shows the scientists' day-to-day work, including the frustrating parts, like waiting for weeks in a hide without seeing anything. That makes it feel honest rather than staged. I've also learned a surprising amount from it, for example about how climate change is affecting migration patterns. And the photography is stunning, so it's a good reminder of how much of the natural world I've never seen and probably never will."
+  },
+  {
+   "id": "s2-52",
+   "cue": "Describe a time when you had to make a quick decision.",
+   "bullets": [
+    "what the situation was",
+    "what decision you made",
+    "how quickly you had to decide",
+    "and explain how you felt about the decision afterwards"
+   ],
+   "part3": [
+    "Is it better to make decisions quickly or to take time to think?",
+    "Which jobs require people to make fast decisions?",
+    "Do you think young people today find it harder to make decisions?",
+    "Should children be allowed to make important decisions about their education?",
+    "How can too much choice make decisions more difficult?"
+   ],
+   "modelAnswer": "I'd like to describe a decision I had to make at an airport about three years ago. I was on my way to a friend's wedding, and my first flight was delayed so badly that I was certain to miss my connection. When I got to the airline desk, the agent told me I had two options: wait nine hours for the next direct flight, which would get me there after the ceremony, or take a flight leaving in twenty minutes to a different city and then catch an overnight bus. There was a queue of angry passengers behind me, so I had about thirty seconds to choose. I went for the second option, ran to the gate and only just made it. The bus journey was long and uncomfortable, and I arrived exhausted and slightly crumpled, but I was there in time to see my friend get married. Afterwards, I felt very relieved and quite proud of myself, because I'm normally someone who likes to weigh everything up carefully. It showed me that sometimes a decision that's good enough, made quickly, is better than a perfect one made too late."
+  },
+  {
+   "id": "s2-53",
+   "cue": "Describe a historical period or event you would like to learn more about.",
+   "bullets": [
+    "what the period or event is",
+    "what you already know about it",
+    "how you would like to learn more",
+    "and explain why you are interested in it"
+   ],
+   "part3": [
+    "Why should young people study history?",
+    "Is it better to learn history from books, museums or films?",
+    "Do you think history is often presented in a biased way?",
+    "How important is it to preserve historical sites?",
+    "What can modern societies learn from past events?"
+   ],
+   "modelAnswer": "A period I'd like to know much more about is the early days of long-distance sea trade in Asia, roughly between the ninth and fifteenth centuries. What I know at the moment is fairly basic. I'm aware that merchants travelled huge distances by ship, carrying goods such as ceramics, spices and textiles, and that ports along the coast grew into wealthy, multicultural cities as a result. I also know that archaeologists have found shipwrecks with thousands of pieces of pottery still intact. I'd like to learn more in a few different ways. I'd love to visit a maritime museum where some of these wrecks are displayed, and I'd probably start by reading a well-written general history to get the bigger picture before going into detail. I'm interested in it mainly because it shows how connected the world was long before modern technology. People from very different cultures were trading, exchanging ideas and even intermarrying, and I find that a useful reminder that globalisation isn't really a new phenomenon, even though we often talk about it as if it were."
+  },
+  {
+   "id": "s2-54",
+   "cue": "Describe a person you know who is good at their job.",
+   "bullets": [
+    "who this person is",
+    "what job they do",
+    "how you know them",
+    "and explain why you think they are good at their job"
+   ],
+   "part3": [
+    "What makes someone a good employee?",
+    "Is talent or hard work more important for success at work?",
+    "Should people be paid according to how well they do their job?",
+    "Why do some people stay in jobs they do not enjoy?",
+    "How can employers help their staff develop new skills?"
+   ],
+   "modelAnswer": "The person I'd like to talk about is the pharmacist who runs a small pharmacy near my parents' home. Her name is Linh, and I've known her for more than ten years, because my family has always gone to her shop, and I even did a short work-experience placement there when I was at school. Obviously her job involves preparing prescriptions and selling medicines, but in practice she does much more than that. A lot of older people in the area go to her for advice before they'd ever consider booking an appointment with a doctor. I think she's exceptionally good at her job for a few reasons. Firstly, she's extremely careful. I've seen her phone a doctor to double-check a dose when something didn't look right. Secondly, she explains things clearly, without using jargon, and she always makes sure people understand when and how to take their medication. But what really stands out is how she remembers her customers. She'll ask an elderly man how his knee is or whether a child's cough has cleared up, so people feel that she genuinely cares about them."
+  },
+  {
+   "id": "s2-55",
+   "cue": "Describe an outdoor activity you did for the first time.",
+   "bullets": [
+    "what the activity was",
+    "where you did it",
+    "who you did it with",
+    "and explain how you felt about doing it"
+   ],
+   "part3": [
+    "Why do some people prefer outdoor activities to indoor ones?",
+    "Do children today spend enough time outdoors?",
+    "Should schools organise more outdoor trips?",
+    "Are extreme sports worth the risk?",
+    "How can cities encourage people to be more active outside?"
+   ],
+   "modelAnswer": "The activity I'd like to talk about is kayaking, which I tried for the first time last summer. A friend of mine had been doing it for years, and she kept telling me that I'd love it, so eventually I agreed to join her on a beginner's trip along a quiet river about an hour outside the city. There were six of us in the group, plus an instructor who spent the first half hour teaching us how to hold the paddle properly and, more importantly, what to do if the kayak tipped over. I have to admit that I was quite nervous at the start, because I'm not a particularly strong swimmer. For the first twenty minutes I kept going round in circles, which was a bit embarrassing, but once I got the hang of it I started to really enjoy it. The river was surrounded by forest, and it was so quiet that we could hear birds and the sound of the paddles in the water. I felt a real sense of achievement by the end of the day, and I've since been back three more times."
+  },
+  {
+   "id": "s2-56",
+   "cue": "Describe a rule at school or work that you think is important.",
+   "bullets": [
+    "what the rule is",
+    "where the rule applies",
+    "what happens if people break it",
+    "and explain why you think it is important"
+   ],
+   "part3": [
+    "Why do some people break rules?",
+    "Should schools have strict rules about how students dress?",
+    "Are rules at work more important than rules at school?",
+    "Who should decide the rules in a family?",
+    "Can too many rules make people less responsible?"
+   ],
+   "modelAnswer": "A rule I think is really important is one we had at my last workplace, which was a small design company. The rule was that nobody was allowed to send a document to a client without a second person checking it first. It applied to everything, from short emails with attached quotes to final designs. If someone broke the rule, there wasn't a formal punishment as such, but the manager would sit down with them and go through what could have gone wrong, and if it happened again it would be mentioned in their annual review. At first some people found it annoying, because it slowed things down, especially when deadlines were tight. However, I think it's important for several reasons. Most obviously, it caught a lot of mistakes, such as wrong prices or spelling errors in a client's name, which could have been really embarrassing. But it also meant that responsibility was shared, so nobody felt they had to be perfect on their own. And I think it encouraged people to learn from each other, because you often picked up useful ideas by checking someone else's work."
+  },
+  {
+   "id": "s2-57",
+   "cue": "Describe a time when you visited a friend or relative's home.",
+   "bullets": [
+    "whose home it was",
+    "where it was",
+    "what you did there",
+    "and explain how you felt about the visit"
+   ],
+   "part3": [
+    "How important is it for family members to visit each other regularly?",
+    "Do people entertain guests at home less than they used to?",
+    "What are the differences between visiting someone in a city and in the countryside?",
+    "Is it rude to arrive at someone's home without being invited?",
+    "How do customs for visiting someone's home differ between cultures?"
+   ],
+   "modelAnswer": "I'd like to describe a visit to my aunt's home in a small mountain village, which I went to for a long weekend last spring. It's about five hours from my city by bus, followed by a short drive up a winding road, so I don't get the chance to go very often. Her house is an old wooden building with a big vegetable garden at the back and a view across the valley. We didn't do anything particularly exciting, but that was part of the charm. In the mornings I helped her in the garden, picking herbs and planting beans, and in the afternoons we went for long walks or visited her neighbours, who all seemed to know who I was before I'd even introduced myself. In the evenings we cooked together and talked for hours about family stories I'd never heard before. I felt incredibly relaxed by the end of it. Living in a busy city, I'd almost forgotten what it was like to have no schedule at all, and the visit made me realise I should make more of an effort to see her."
+  },
+  {
+   "id": "s2-58",
+   "cue": "Describe a time when you saved money for something special.",
+   "bullets": [
+    "what you saved for",
+    "how long it took",
+    "how you saved the money",
+    "and explain how you felt when you finally bought it"
+   ],
+   "part3": [
+    "Why do some people find it hard to save money?",
+    "Should schools teach children how to manage money?",
+    "Is it better to save money or to enjoy it now?",
+    "How has the way people pay for things changed in recent years?",
+    "Do you think buying on credit is a good idea?"
+   ],
+   "modelAnswer": "Something I saved up for that felt really special was a good-quality digital camera, which I bought when I was about nineteen. I'd become interested in photography at school, but I'd only ever used my phone, and I wanted a camera that would let me control the settings properly. The one I wanted was quite expensive, so it took me about eight months to save enough. I did it in a fairly disciplined way. I worked extra shifts at the café where I had a part-time job, and every time I got paid, I moved a fixed amount into a separate savings account before I could spend it. I also cut back on things like eating out and buying new clothes, which was harder than I expected, because my friends were going out a lot that year. When I finally went to the shop and bought it, I felt a huge sense of satisfaction, partly because it was the most expensive thing I'd ever bought with my own money. I think I've looked after it much more carefully as a result, and I still use it now."
+  },
+  {
+   "id": "s2-59",
+   "cue": "Describe a talk or lecture you found interesting.",
+   "bullets": [
+    "who gave the talk",
+    "what it was about",
+    "where you heard it",
+    "and explain why you found it interesting"
+   ],
+   "part3": [
+    "Do you think lectures are still an effective way of teaching?",
+    "What makes a speaker interesting to listen to?",
+    "Should people learn public speaking at school?",
+    "Are online talks as useful as attending in person?",
+    "Why do some people feel nervous speaking in public?"
+   ],
+   "modelAnswer": "I'd like to talk about a guest lecture I attended during my first year at university, given by a researcher who studies how cities can adapt to rising temperatures. It was held in the main lecture theatre, which was packed because it was open to the public as well as to students. The talk was about what she called 'urban heat islands', which are areas of a city that become much hotter than the surrounding countryside because of concrete, asphalt and a lack of trees. She showed thermal images of the same street before and after trees had been planted, and the difference in surface temperature was quite dramatic. I found it interesting for a couple of reasons. Firstly, she explained a fairly technical subject in a way that anyone could follow, using everyday examples like why a car parked in the sun becomes so hot. Secondly, it was very practical. She talked about cheap solutions, such as painting roofs white and creating small green spaces, which made the problem feel solvable rather than hopeless. I've noticed shade and trees in my city much more since then."
+  },
+  {
+   "id": "s2-60",
+   "cue": "Describe a new skill you would like to learn in the future.",
+   "bullets": [
+    "what the skill is",
+    "how you would learn it",
+    "how long you think it would take",
+    "and explain why you want to learn this skill"
+   ],
+   "part3": [
+    "Is it easier to learn new skills as a child or as an adult?",
+    "Should employers pay for their staff to learn new skills?",
+    "Which skills will be most important in the future job market?",
+    "Do you think online courses are as effective as face-to-face classes?",
+    "Why do some people stop learning once they finish school?"
+   ],
+   "modelAnswer": "A skill I'd really like to learn in the next few years is basic woodworking, so that I can make and repair simple furniture. I'd probably start with an evening course at a community workshop near my home, because I don't have any tools of my own and I think it's important to learn how to use them safely from someone experienced. Later on, I'd supplement that with online videos and practise at home once I'd bought a few essential tools. As for how long it would take, I imagine I could make something simple, like a small shelf, within a couple of months, but to become genuinely skilled would probably take several years of regular practice. There are a few reasons why I want to learn it. Most of my work involves sitting at a computer, so I'm drawn to the idea of doing something physical where you can see the result of your effort. I also dislike how often furniture is thrown away when it could easily be repaired. And, on a personal level, I think it would be very satisfying to have things in my home that I'd made myself."
   }
  ]
 }
