@@ -1,0 +1,1763 @@
+[
+ {
+  "id": "pop-001",
+  "topic": "population",
+  "word": "demographic",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "relating to the make-up of a population, such as age and income",
+  "collocations": [
+   "demographic change",
+   "demographic trends",
+   "demographic data"
+  ],
+  "paraphrases": [
+   "population-related",
+   "concerning population structure"
+  ],
+  "example": "Demographic change is forcing many governments to rethink their pension systems."
+ },
+ {
+  "id": "pop-002",
+  "topic": "population",
+  "word": "demography",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "the study of populations, including births, deaths and migration",
+  "collocations": [
+   "historical demography",
+   "study demography",
+   "demography of the region"
+  ],
+  "paraphrases": [
+   "population studies",
+   "study of population"
+  ],
+  "example": "Demography helps planners predict how many schools and hospitals a region will need."
+ },
+ {
+  "id": "pop-003",
+  "topic": "population",
+  "word": "ageing",
+  "pos": "adjective",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "becoming older, especially as a group or population",
+  "collocations": [
+   "ageing population",
+   "ageing society",
+   "ageing workforce"
+  ],
+  "paraphrases": [
+   "growing older",
+   "maturing"
+  ],
+  "example": "An ageing population places heavy demands on health services."
+ },
+ {
+  "id": "pop-004",
+  "topic": "population",
+  "word": "life expectancy",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "the average number of years a person is expected to live",
+  "collocations": [
+   "rising life expectancy",
+   "average life expectancy",
+   "increase life expectancy"
+  ],
+  "paraphrases": [
+   "average lifespan",
+   "expected years of life"
+  ],
+  "example": "Life expectancy in Japan is among the highest in the world."
+ },
+ {
+  "id": "pop-005",
+  "topic": "population",
+  "word": "birth rate",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "the number of babies born per thousand people each year",
+  "collocations": [
+   "falling birth rate",
+   "low birth rate",
+   "high birth rate"
+  ],
+  "paraphrases": [
+   "number of births",
+   "rate of childbirth"
+  ],
+  "example": "A falling birth rate means there will be fewer young people to support the elderly."
+ },
+ {
+  "id": "pop-006",
+  "topic": "population",
+  "word": "fertility rate",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the average number of children born to each woman",
+  "collocations": [
+   "low fertility rate",
+   "falling fertility rate",
+   "total fertility rate"
+  ],
+  "paraphrases": [
+   "average births per woman",
+   "childbearing rate"
+  ],
+  "example": "Several European countries have a fertility rate well below the level needed to maintain their population."
+ },
+ {
+  "id": "pop-007",
+  "topic": "population",
+  "word": "mortality",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the number of deaths in a population over a period",
+  "collocations": [
+   "infant mortality",
+   "mortality rate",
+   "reduce mortality"
+  ],
+  "paraphrases": [
+   "death rate",
+   "level of deaths"
+  ],
+  "example": "Improved sanitation has sharply reduced mortality among young children."
+ },
+ {
+  "id": "pop-008",
+  "topic": "population",
+  "word": "infant mortality",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the number of babies who die before their first birthday",
+  "collocations": [
+   "reduce infant mortality",
+   "infant mortality rate",
+   "high infant mortality"
+  ],
+  "paraphrases": [
+   "baby death rate",
+   "deaths of babies"
+  ],
+  "example": "Infant mortality has fallen dramatically thanks to vaccination programmes."
+ },
+ {
+  "id": "pop-009",
+  "topic": "population",
+  "word": "death rate",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "the number of deaths per thousand people in a year",
+  "collocations": [
+   "falling death rate",
+   "high death rate",
+   "overall death rate"
+  ],
+  "paraphrases": [
+   "mortality rate",
+   "number of deaths"
+  ],
+  "example": "The death rate in the region has dropped since clean water became available."
+ },
+ {
+  "id": "pop-010",
+  "topic": "population",
+  "word": "census",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "an official count of a country's population",
+  "collocations": [
+   "national census",
+   "conduct a census",
+   "census data"
+  ],
+  "paraphrases": [
+   "official population count",
+   "population survey"
+  ],
+  "example": "The census revealed that the city's population had doubled in twenty years."
+ },
+ {
+  "id": "pop-011",
+  "topic": "population",
+  "word": "dependency ratio",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the number of dependants compared with the working population",
+  "collocations": [
+   "rising dependency ratio",
+   "old-age dependency ratio",
+   "high dependency ratio"
+  ],
+  "paraphrases": [
+   "ratio of dependants to earners",
+   "burden on workers"
+  ],
+  "example": "A rising dependency ratio means that fewer workers support each retired person."
+ },
+ {
+  "id": "pop-012",
+  "topic": "population",
+  "word": "pension",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "regular money paid to a person who has retired",
+  "collocations": [
+   "state pension",
+   "private pension",
+   "draw a pension"
+  ],
+  "paraphrases": [
+   "retirement income",
+   "retirement payment"
+  ],
+  "example": "The state pension alone is rarely enough to live on comfortably."
+ },
+ {
+  "id": "pop-013",
+  "topic": "population",
+  "word": "pensioner",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a person who receives a pension after retiring",
+  "collocations": [
+   "retired pensioner",
+   "elderly pensioner",
+   "pensioner's income"
+  ],
+  "paraphrases": [
+   "retired person",
+   "retiree"
+  ],
+  "example": "Many pensioners struggle to pay their heating bills in winter."
+ },
+ {
+  "id": "pop-014",
+  "topic": "population",
+  "word": "retirement age",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "the age at which people normally stop working",
+  "collocations": [
+   "raise the retirement age",
+   "statutory retirement age",
+   "compulsory retirement age"
+  ],
+  "paraphrases": [
+   "age of stopping work",
+   "pensionable age"
+  ],
+  "example": "Several governments have raised the retirement age to ease pressure on pension funds."
+ },
+ {
+  "id": "pop-015",
+  "topic": "population",
+  "word": "elderly",
+  "pos": "adjective",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "old, especially in a way that is physically weaker",
+  "collocations": [
+   "elderly people",
+   "elderly relatives",
+   "care for the elderly"
+  ],
+  "paraphrases": [
+   "aged",
+   "senior"
+  ],
+  "example": "Elderly people living alone are at greater risk of isolation."
+ },
+ {
+  "id": "pop-016",
+  "topic": "population",
+  "word": "senior citizen",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "an older person, usually over retirement age",
+  "collocations": [
+   "senior citizen discount",
+   "care for senior citizens",
+   "active senior citizens"
+  ],
+  "paraphrases": [
+   "older adult",
+   "elderly person"
+  ],
+  "example": "Senior citizens are often offered reduced fares on public buses."
+ },
+ {
+  "id": "pop-017",
+  "topic": "population",
+  "word": "centenarian",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a person who is one hundred years old or more",
+  "collocations": [
+   "number of centenarians",
+   "become a centenarian",
+   "oldest centenarian"
+  ],
+  "paraphrases": [
+   "person aged 100 or over",
+   "hundred-year-old"
+  ],
+  "example": "Okinawa has a remarkably high proportion of centenarians."
+ },
+ {
+  "id": "pop-018",
+  "topic": "population",
+  "word": "baby boom",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "a period when many more babies than usual are born",
+  "collocations": [
+   "post-war baby boom",
+   "baby boom generation",
+   "the baby boom"
+  ],
+  "paraphrases": [
+   "surge in births",
+   "sharp rise in birth numbers"
+  ],
+  "example": "The post-war baby boom increased demand for schools and housing."
+ },
+ {
+  "id": "pop-019",
+  "topic": "population",
+  "word": "baby boomer",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a person born during the surge in births after the Second World War",
+  "collocations": [
+   "baby boomers retire",
+   "generation of baby boomers",
+   "ageing baby boomers"
+  ],
+  "paraphrases": [
+   "member of the post-war generation"
+  ],
+  "example": "As baby boomers retire, pension funds will come under growing strain."
+ },
+ {
+  "id": "pop-020",
+  "topic": "population",
+  "word": "generation",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "all the people born and living at about the same time",
+  "collocations": [
+   "older generation",
+   "younger generation",
+   "future generations"
+  ],
+  "paraphrases": [
+   "age group",
+   "cohort of people"
+  ],
+  "example": "The younger generation will have to pay for the pensions of the older one."
+ },
+ {
+  "id": "pop-021",
+  "topic": "population",
+  "word": "population density",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the number of people living in a given area",
+  "collocations": [
+   "high population density",
+   "low population density",
+   "population density per square kilometre"
+  ],
+  "paraphrases": [
+   "crowding level",
+   "number of inhabitants per area"
+  ],
+  "example": "Bangladesh has one of the highest population densities in the world."
+ },
+ {
+  "id": "pop-022",
+  "topic": "population",
+  "word": "overpopulation",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a situation where there are too many people for the available resources",
+  "collocations": [
+   "problem of overpopulation",
+   "risk of overpopulation",
+   "combat overpopulation"
+  ],
+  "paraphrases": [
+   "excess population",
+   "overcrowding of people"
+  ],
+  "example": "Some economists dispute that overpopulation is the main cause of hunger."
+ },
+ {
+  "id": "pop-023",
+  "topic": "population",
+  "word": "depopulation",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a large fall in the number of people living in an area",
+  "collocations": [
+   "rural depopulation",
+   "village depopulation",
+   "suffer depopulation"
+  ],
+  "paraphrases": [
+   "loss of inhabitants",
+   "population loss"
+  ],
+  "example": "Rural depopulation has left many villages without a school or shop."
+ },
+ {
+  "id": "pop-024",
+  "topic": "population",
+  "word": "overcrowding",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a condition in which too many people live or gather in one place",
+  "collocations": [
+   "severe overcrowding",
+   "overcrowding in prisons",
+   "relieve overcrowding"
+  ],
+  "paraphrases": [
+   "congestion",
+   "excessive occupancy"
+  ],
+  "example": "Overcrowding in the capital has driven up rents and spread informal settlements."
+ },
+ {
+  "id": "pop-025",
+  "topic": "population",
+  "word": "sparsely populated",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "having few people spread over a large area",
+  "collocations": [
+   "sparsely populated area",
+   "sparsely populated region",
+   "sparsely populated country"
+  ],
+  "paraphrases": [
+   "thinly inhabited",
+   "with few residents"
+  ],
+  "example": "Mongolia is one of the most sparsely populated countries on earth."
+ },
+ {
+  "id": "pop-026",
+  "topic": "population",
+  "word": "densely populated",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "having a large number of people living in a small area",
+  "collocations": [
+   "densely populated area",
+   "densely populated city",
+   "densely populated region"
+  ],
+  "paraphrases": [
+   "crowded",
+   "heavily inhabited"
+  ],
+  "example": "Densely populated regions face particular pressure on housing and water supplies."
+ },
+ {
+  "id": "pop-027",
+  "topic": "population",
+  "word": "migration",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "the movement of people from one place to another to live",
+  "collocations": [
+   "mass migration",
+   "rural-urban migration",
+   "internal migration"
+  ],
+  "paraphrases": [
+   "movement of people",
+   "relocation"
+  ],
+  "example": "Rural-urban migration has swelled the population of the capital."
+ },
+ {
+  "id": "pop-028",
+  "topic": "population",
+  "word": "immigrant",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a person who comes to live permanently in a foreign country",
+  "collocations": [
+   "illegal immigrant",
+   "recent immigrants",
+   "first-generation immigrant"
+  ],
+  "paraphrases": [
+   "newcomer",
+   "incoming settler"
+  ],
+  "example": "Many immigrants take jobs that local workers are unwilling to do."
+ },
+ {
+  "id": "pop-029",
+  "topic": "population",
+  "word": "immigration",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "the act of coming to live permanently in a foreign country",
+  "collocations": [
+   "illegal immigration",
+   "control immigration",
+   "immigration policy"
+  ],
+  "paraphrases": [
+   "arrival of settlers",
+   "inward migration"
+  ],
+  "example": "Tighter immigration controls have reduced the number of new arrivals."
+ },
+ {
+  "id": "pop-030",
+  "topic": "population",
+  "word": "emigrate",
+  "pos": "verb",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "to leave one's own country to live in another",
+  "collocations": [
+   "emigrate to Canada",
+   "choose to emigrate",
+   "forced to emigrate"
+  ],
+  "paraphrases": [
+   "move abroad",
+   "leave one's homeland"
+  ],
+  "example": "Thousands of skilled graduates emigrate every year in search of better pay."
+ },
+ {
+  "id": "pop-031",
+  "topic": "population",
+  "word": "emigration",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the act of leaving one's own country to settle elsewhere",
+  "collocations": [
+   "mass emigration",
+   "emigration rate",
+   "high levels of emigration"
+  ],
+  "paraphrases": [
+   "leaving one's homeland",
+   "outward migration"
+  ],
+  "example": "Mass emigration during the famine halved the population of some counties."
+ },
+ {
+  "id": "pop-032",
+  "topic": "population",
+  "word": "influx",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the arrival of large numbers of people or things",
+  "collocations": [
+   "sudden influx",
+   "influx of migrants",
+   "influx of tourists"
+  ],
+  "paraphrases": [
+   "inflow",
+   "mass arrival"
+  ],
+  "example": "The sudden influx of refugees put great pressure on local schools and clinics."
+ },
+ {
+  "id": "pop-033",
+  "topic": "population",
+  "word": "exodus",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a mass departure of people from a place",
+  "collocations": [
+   "rural exodus",
+   "mass exodus",
+   "exodus of young people"
+  ],
+  "paraphrases": [
+   "mass departure",
+   "large-scale exit"
+  ],
+  "example": "The rural exodus has left many farming communities with only elderly residents."
+ },
+ {
+  "id": "pop-034",
+  "topic": "population",
+  "word": "brain drain",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "the loss of educated and skilled people who move abroad",
+  "collocations": [
+   "suffer a brain drain",
+   "reverse the brain drain",
+   "brain drain from developing countries"
+  ],
+  "paraphrases": [
+   "flight of skilled workers",
+   "loss of talent"
+  ],
+  "example": "Poor salaries have caused a brain drain of doctors from the country."
+ },
+ {
+  "id": "pop-035",
+  "topic": "population",
+  "word": "net migration",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the difference between the number of people arriving and leaving",
+  "collocations": [
+   "net migration figures",
+   "positive net migration",
+   "reduce net migration"
+  ],
+  "paraphrases": [
+   "overall inflow of people",
+   "balance of arrivals and departures"
+  ],
+  "example": "Net migration to the country reached a record high last year."
+ },
+ {
+  "id": "pop-036",
+  "topic": "population",
+  "word": "resettle",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to move people to live in a new place",
+  "collocations": [
+   "resettle refugees",
+   "resettle families",
+   "forced to resettle"
+  ],
+  "paraphrases": [
+   "relocate",
+   "rehouse"
+  ],
+  "example": "The government plans to resettle villagers who live in the flood zone."
+ },
+ {
+  "id": "pop-037",
+  "topic": "population",
+  "word": "refugee",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "a person forced to leave their country because of war or persecution",
+  "collocations": [
+   "refugee camp",
+   "refugee crisis",
+   "political refugee"
+  ],
+  "paraphrases": [
+   "displaced person",
+   "asylum seeker"
+  ],
+  "example": "The refugee camp now shelters more than a hundred thousand people."
+ },
+ {
+  "id": "pop-038",
+  "topic": "population",
+  "word": "displacement",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the forced movement of people from their homes",
+  "collocations": [
+   "forced displacement",
+   "mass displacement",
+   "displacement of communities"
+  ],
+  "paraphrases": [
+   "forced relocation",
+   "uprooting"
+  ],
+  "example": "The construction of the dam caused the displacement of entire communities."
+ },
+ {
+  "id": "pop-039",
+  "topic": "population",
+  "word": "inhabitant",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a person who lives in a particular place",
+  "collocations": [
+   "local inhabitants",
+   "inhabitants of the island",
+   "original inhabitants"
+  ],
+  "paraphrases": [
+   "resident",
+   "dweller"
+  ],
+  "example": "The island has fewer than five hundred inhabitants."
+ },
+ {
+  "id": "pop-040",
+  "topic": "population",
+  "word": "resident",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a person who lives permanently in a place",
+  "collocations": [
+   "local residents",
+   "long-term resident",
+   "permanent resident"
+  ],
+  "paraphrases": [
+   "inhabitant",
+   "occupant"
+  ],
+  "example": "Local residents complained about the noise from the new motorway."
+ },
+ {
+  "id": "pop-041",
+  "topic": "population",
+  "word": "birth control",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "methods used to prevent pregnancy",
+  "collocations": [
+   "access to birth control",
+   "birth control programme",
+   "promote birth control"
+  ],
+  "paraphrases": [
+   "contraception",
+   "family limitation"
+  ],
+  "example": "Access to birth control has enabled women to plan their careers."
+ },
+ {
+  "id": "pop-042",
+  "topic": "population",
+  "word": "contraception",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "methods or devices that prevent pregnancy",
+  "collocations": [
+   "use contraception",
+   "access to contraception",
+   "modern contraception"
+  ],
+  "paraphrases": [
+   "birth prevention",
+   "birth control"
+  ],
+  "example": "Wider access to contraception has contributed to falling birth rates in many countries."
+ },
+ {
+  "id": "pop-043",
+  "topic": "population",
+  "word": "one-child policy",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a rule limiting couples to one baby, used in China from 1979 to 2015",
+  "collocations": [
+   "abolish the one-child policy",
+   "introduce a one-child policy",
+   "the one-child policy"
+  ],
+  "paraphrases": [
+   "single-child restriction",
+   "limit of one baby per couple"
+  ],
+  "example": "The one-child policy slowed population growth but created an imbalance between young and old."
+ },
+ {
+  "id": "pop-044",
+  "topic": "population",
+  "word": "childless",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "not having any children of one's own",
+  "collocations": [
+   "remain childless",
+   "childless couples",
+   "childless adults"
+  ],
+  "paraphrases": [
+   "without offspring",
+   "with no children"
+  ],
+  "example": "A growing number of couples choose to remain childless."
+ },
+ {
+  "id": "pop-045",
+  "topic": "population",
+  "word": "childbearing",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "the process of having babies",
+  "collocations": [
+   "childbearing age",
+   "delay childbearing",
+   "women of childbearing age"
+  ],
+  "paraphrases": [
+   "giving birth",
+   "having children"
+  ],
+  "example": "Many women now delay childbearing until they are established in their careers."
+ },
+ {
+  "id": "pop-046",
+  "topic": "population",
+  "word": "fertility",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the ability to produce children or young",
+  "collocations": [
+   "reduced fertility",
+   "fertility treatment",
+   "declining fertility"
+  ],
+  "paraphrases": [
+   "ability to conceive",
+   "capacity to reproduce"
+  ],
+  "example": "Fertility tends to fall as women gain access to education and employment."
+ },
+ {
+  "id": "pop-047",
+  "topic": "population",
+  "word": "population growth",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "an increase in the number of people living in an area",
+  "collocations": [
+   "rapid population growth",
+   "slow population growth",
+   "curb population growth"
+  ],
+  "paraphrases": [
+   "rise in inhabitants",
+   "increasing numbers"
+  ],
+  "example": "Rapid population growth has outpaced the supply of clean water in many cities."
+ },
+ {
+  "id": "pop-048",
+  "topic": "population",
+  "word": "population decline",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a fall in the number of people living in an area",
+  "collocations": [
+   "face population decline",
+   "reverse population decline",
+   "projected population decline"
+  ],
+  "paraphrases": [
+   "shrinking population",
+   "drop in numbers"
+  ],
+  "example": "Several eastern European countries face severe population decline over the next decades."
+ },
+ {
+  "id": "pop-049",
+  "topic": "population",
+  "word": "replacement level",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the birth rate needed to keep a population the same size",
+  "collocations": [
+   "below replacement level",
+   "replacement level fertility",
+   "fall below replacement level"
+  ],
+  "paraphrases": [
+   "rate needed to maintain numbers"
+  ],
+  "example": "Fertility has dropped below replacement level in almost every wealthy country."
+ },
+ {
+  "id": "pop-050",
+  "topic": "population",
+  "word": "demographic shift",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a significant change in the make-up of a population",
+  "collocations": [
+   "major demographic shift",
+   "experience a demographic shift",
+   "demographic shift towards older age"
+  ],
+  "paraphrases": [
+   "population transformation",
+   "change in age structure"
+  ],
+  "example": "The demographic shift towards older age groups will transform the housing market."
+ },
+ {
+  "id": "pop-051",
+  "topic": "population",
+  "word": "plummet",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "to fall very quickly and by a large amount",
+  "collocations": [
+   "numbers plummet",
+   "plummet by half",
+   "birth rate plummets"
+  ],
+  "paraphrases": [
+   "plunge",
+   "fall sharply"
+  ],
+  "example": "Birth rates have plummeted in South Korea over the past thirty years."
+ },
+ {
+  "id": "pop-052",
+  "topic": "population",
+  "word": "stabilise",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to stop changing and become steady",
+  "collocations": [
+   "stabilise at",
+   "population stabilises",
+   "stabilise the population"
+  ],
+  "paraphrases": [
+   "level off",
+   "become steady"
+  ],
+  "example": "Experts predict that world population will stabilise around the end of the century."
+ },
+ {
+  "id": "pop-053",
+  "topic": "population",
+  "word": "peak",
+  "pos": "verb",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "to reach the highest point before beginning to fall",
+  "collocations": [
+   "peak at",
+   "population peaks",
+   "expected to peak"
+  ],
+  "paraphrases": [
+   "reach a maximum",
+   "hit its highest level"
+  ],
+  "example": "China's population is expected to peak before the end of this decade."
+ },
+ {
+  "id": "pop-054",
+  "topic": "population",
+  "word": "projected",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "estimated or forecast on the basis of current trends",
+  "collocations": [
+   "projected growth",
+   "projected figures",
+   "projected population"
+  ],
+  "paraphrases": [
+   "forecast",
+   "predicted"
+  ],
+  "example": "The projected rise in the elderly population will strain public finances."
+ },
+ {
+  "id": "pop-055",
+  "topic": "population",
+  "word": "forecast",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "a statement predicting future trends from present evidence",
+  "collocations": [
+   "population forecast",
+   "economic forecast",
+   "forecast of growth"
+  ],
+  "paraphrases": [
+   "prediction",
+   "projection"
+  ],
+  "example": "The forecast suggests that the city's population will double by 2050."
+ },
+ {
+  "id": "pop-056",
+  "topic": "population",
+  "word": "cohort",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a group of people sharing a characteristic, such as year of birth",
+  "collocations": [
+   "birth cohort",
+   "age cohort",
+   "younger cohort"
+  ],
+  "paraphrases": [
+   "age group",
+   "set of individuals"
+  ],
+  "example": "The smaller cohort of young workers will have to support a larger group of retirees."
+ },
+ {
+  "id": "pop-057",
+  "topic": "population",
+  "word": "age bracket",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a range of ages used to group people",
+  "collocations": [
+   "in the 25-34 age bracket",
+   "younger age bracket",
+   "fall into the age bracket"
+  ],
+  "paraphrases": [
+   "age range",
+   "age band"
+  ],
+  "example": "Most gym members fall into the 25 to 34 age bracket."
+ },
+ {
+  "id": "pop-058",
+  "topic": "population",
+  "word": "working-age",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "old enough to work but under retirement age",
+  "collocations": [
+   "working-age population",
+   "working-age adults",
+   "working-age people"
+  ],
+  "paraphrases": [
+   "of employable age",
+   "economically active years"
+  ],
+  "example": "The working-age population is shrinking in many industrialised countries."
+ },
+ {
+  "id": "pop-059",
+  "topic": "population",
+  "word": "youth",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "young people considered as a group",
+  "collocations": [
+   "unemployed youth",
+   "urban youth",
+   "youth population"
+  ],
+  "paraphrases": [
+   "young people",
+   "younger generation"
+  ],
+  "example": "High unemployment among the youth has fuelled unrest in several cities."
+ },
+ {
+  "id": "pop-060",
+  "topic": "population",
+  "word": "youthful",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "having the qualities of young people",
+  "collocations": [
+   "youthful population",
+   "youthful energy",
+   "youthful appearance"
+  ],
+  "paraphrases": [
+   "young",
+   "juvenile"
+  ],
+  "example": "Nigeria has a youthful population, with more than half of its citizens under twenty-five."
+ },
+ {
+  "id": "pop-061",
+  "topic": "population",
+  "word": "median age",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the age that divides a population into two equal groups",
+  "collocations": [
+   "rising median age",
+   "low median age",
+   "median age of the population"
+  ],
+  "paraphrases": [
+   "middle age of a population",
+   "halfway age"
+  ],
+  "example": "Japan's median age is now above forty-eight years."
+ },
+ {
+  "id": "pop-062",
+  "topic": "population",
+  "word": "longevity",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a long period of life",
+  "collocations": [
+   "increased longevity",
+   "human longevity",
+   "secret of longevity"
+  ],
+  "paraphrases": [
+   "long life",
+   "long lifespan"
+  ],
+  "example": "Studies link longevity to diet, social ties and a sense of purpose."
+ },
+ {
+  "id": "pop-063",
+  "topic": "population",
+  "word": "lifespan",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "the length of time that a person or thing lives",
+  "collocations": [
+   "average lifespan",
+   "increase lifespan",
+   "human lifespan"
+  ],
+  "paraphrases": [
+   "length of life",
+   "years of life"
+  ],
+  "example": "Advances in medicine have extended the average human lifespan considerably."
+ },
+ {
+  "id": "pop-064",
+  "topic": "population",
+  "word": "nursing home",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a residential place where elderly people are cared for",
+  "collocations": [
+   "move into a nursing home",
+   "nursing home residents",
+   "nursing home fees"
+  ],
+  "paraphrases": [
+   "care home",
+   "residential home"
+  ],
+  "example": "Nursing home fees can quickly use up a family's savings."
+ },
+ {
+  "id": "pop-065",
+  "topic": "population",
+  "word": "care home",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a residential place providing care for elderly or disabled people",
+  "collocations": [
+   "residential care home",
+   "care home staff",
+   "care home residents"
+  ],
+  "paraphrases": [
+   "nursing home",
+   "residential facility"
+  ],
+  "example": "Many care homes struggle to recruit enough trained staff."
+ },
+ {
+  "id": "pop-066",
+  "topic": "population",
+  "word": "geriatric",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "relating to the medical care of old people",
+  "collocations": [
+   "geriatric care",
+   "geriatric ward",
+   "geriatric medicine"
+  ],
+  "paraphrases": [
+   "elderly-care",
+   "relating to old age"
+  ],
+  "example": "The hospital has opened a new geriatric ward to cope with rising demand."
+ },
+ {
+  "id": "pop-067",
+  "topic": "population",
+  "word": "dependant",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a person who relies on another for financial support",
+  "collocations": [
+   "financial dependants",
+   "support dependants",
+   "elderly dependants"
+  ],
+  "paraphrases": [
+   "person relying on others",
+   "financial burden"
+  ],
+  "example": "Workers with elderly dependants often struggle to balance caring and earning."
+ },
+ {
+  "id": "pop-068",
+  "topic": "population",
+  "word": "social security",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "state support for people who are old, ill or unemployed",
+  "collocations": [
+   "social security system",
+   "social security benefits",
+   "social security contributions"
+  ],
+  "paraphrases": [
+   "state benefits",
+   "welfare payments"
+  ],
+  "example": "The social security system is under strain as the number of retirees grows."
+ },
+ {
+  "id": "pop-069",
+  "topic": "population",
+  "word": "ageism",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "unfair treatment of people because of their age",
+  "collocations": [
+   "combat ageism",
+   "workplace ageism",
+   "experience ageism"
+  ],
+  "paraphrases": [
+   "age discrimination",
+   "prejudice against the old"
+  ],
+  "example": "Ageism in recruitment makes it hard for people over fifty to find new jobs."
+ },
+ {
+  "id": "pop-070",
+  "topic": "population",
+  "word": "intergenerational",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "involving people of different generations",
+  "collocations": [
+   "intergenerational conflict",
+   "intergenerational fairness",
+   "intergenerational contact"
+  ],
+  "paraphrases": [
+   "between age groups",
+   "across generations"
+  ],
+  "example": "Intergenerational contact helps young people understand the lives of their grandparents."
+ },
+ {
+  "id": "pop-071",
+  "topic": "population",
+  "word": "sustain",
+  "pos": "verb",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to keep something going over time",
+  "collocations": [
+   "sustain growth",
+   "sustain a population",
+   "unable to sustain"
+  ],
+  "paraphrases": [
+   "support",
+   "maintain"
+  ],
+  "example": "The land can no longer sustain such a large and growing population."
+ },
+ {
+  "id": "pop-072",
+  "topic": "population",
+  "word": "carrying capacity",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the largest population that an environment can support",
+  "collocations": [
+   "exceed carrying capacity",
+   "carrying capacity of the land",
+   "ecological carrying capacity"
+  ],
+  "paraphrases": [
+   "maximum sustainable number",
+   "limit of support"
+  ],
+  "example": "Some scientists believe that the planet is approaching its carrying capacity."
+ },
+ {
+  "id": "pop-073",
+  "topic": "population",
+  "word": "settlement",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a place where people have come to live",
+  "collocations": [
+   "permanent settlement",
+   "informal settlement",
+   "human settlement"
+  ],
+  "paraphrases": [
+   "community",
+   "colony"
+  ],
+  "example": "Archaeologists uncovered evidence of a Bronze Age settlement beneath the village."
+ },
+ {
+  "id": "pop-074",
+  "topic": "population",
+  "word": "life expectancy gap",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the difference in average lifespan between groups",
+  "collocations": [
+   "widen the life expectancy gap",
+   "close the life expectancy gap",
+   "life expectancy gap between rich and poor"
+  ],
+  "paraphrases": [
+   "difference in lifespan",
+   "disparity in years lived"
+  ],
+  "example": "The life expectancy gap between rich and poor districts is more than ten years."
+ },
+ {
+  "id": "pop-075",
+  "topic": "population",
+  "word": "age structure",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the proportion of a population in each age group",
+  "collocations": [
+   "population age structure",
+   "changing age structure",
+   "balanced age structure"
+  ],
+  "paraphrases": [
+   "age profile",
+   "breakdown by age"
+  ],
+  "example": "The age structure of the country resembles a pyramid with a wide base of young people."
+ },
+ {
+  "id": "pop-076",
+  "topic": "population",
+  "word": "demographer",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a specialist who studies population statistics and trends",
+  "collocations": [
+   "leading demographer",
+   "demographers predict",
+   "demographers warn"
+  ],
+  "paraphrases": [
+   "population statistician",
+   "population researcher"
+  ],
+  "example": "Demographers warn that the country will lose a fifth of its population by 2070."
+ },
+ {
+  "id": "pop-077",
+  "topic": "population",
+  "word": "retiree",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "a person who has stopped working because of age",
+  "collocations": [
+   "recent retiree",
+   "retirees living on a pension",
+   "wealthy retirees"
+  ],
+  "paraphrases": [
+   "retired person",
+   "pensioner"
+  ],
+  "example": "Many retirees move to coastal towns where living costs are lower."
+ },
+ {
+  "id": "pop-078",
+  "topic": "population",
+  "word": "stagnate",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to stop growing or developing and remain at the same level",
+  "collocations": [
+   "population stagnates",
+   "economy stagnates",
+   "stagnate for decades"
+  ],
+  "paraphrases": [
+   "remain static",
+   "fail to grow"
+  ],
+  "example": "Without immigration, the country's population would stagnate or even shrink."
+ },
+ {
+  "id": "pop-079",
+  "topic": "population",
+  "word": "upsurge",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a sudden and rapid increase",
+  "collocations": [
+   "sudden upsurge",
+   "upsurge in births",
+   "an upsurge in demand"
+  ],
+  "paraphrases": [
+   "sharp rise",
+   "spike"
+  ],
+  "example": "An upsurge in births after the war created a generation of crowded classrooms."
+ }
+]
