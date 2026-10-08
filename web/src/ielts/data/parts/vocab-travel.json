@@ -1,0 +1,1804 @@
+[
+ {
+  "id": "tra-001",
+  "topic": "travel",
+  "word": "itinerary",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a detailed plan of a journey, including places to visit and times",
+  "collocations": [
+   "plan an itinerary",
+   "detailed itinerary",
+   "travel itinerary"
+  ],
+  "paraphrases": [
+   "schedule of a trip",
+   "travel plan"
+  ],
+  "example": "Our itinerary included three days in Kyoto and two in the mountains."
+ },
+ {
+  "id": "tra-002",
+  "topic": "travel",
+  "word": "excursion",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a short trip made for pleasure, usually with a group",
+  "collocations": [
+   "day excursion",
+   "organised excursion",
+   "boat excursion"
+  ],
+  "paraphrases": [
+   "short outing",
+   "day trip"
+  ],
+  "example": "The hotel offers an excursion to the old fishing village every Wednesday."
+ },
+ {
+  "id": "tra-003",
+  "topic": "travel",
+  "word": "sightseeing",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "the activity of visiting famous or interesting places as a tourist",
+  "collocations": [
+   "go sightseeing",
+   "sightseeing tour",
+   "sightseeing trip"
+  ],
+  "paraphrases": [
+   "touring attractions",
+   "visiting landmarks"
+  ],
+  "example": "We spent the first morning sightseeing in the old town before the heat became too intense."
+ },
+ {
+  "id": "tra-004",
+  "topic": "travel",
+  "word": "destination",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the place to which someone is travelling",
+  "collocations": [
+   "tourist destination",
+   "popular destination",
+   "holiday destination"
+  ],
+  "paraphrases": [
+   "place of arrival",
+   "end point of a trip"
+  ],
+  "example": "Spain remains one of the most popular holiday destinations in Europe."
+ },
+ {
+  "id": "tra-005",
+  "topic": "travel",
+  "word": "resort",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a place where people go for holidays, often with hotels and leisure facilities",
+  "collocations": [
+   "seaside resort",
+   "ski resort",
+   "holiday resort"
+  ],
+  "paraphrases": [
+   "holiday complex",
+   "leisure destination"
+  ],
+  "example": "Many coastal resorts depend heavily on income from summer visitors."
+ },
+ {
+  "id": "tra-006",
+  "topic": "travel",
+  "word": "hospitality",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "friendly and generous treatment of guests, or the industry that serves them",
+  "collocations": [
+   "warm hospitality",
+   "hospitality industry",
+   "show hospitality"
+  ],
+  "paraphrases": [
+   "welcoming treatment",
+   "generosity towards guests"
+  ],
+  "example": "The warm hospitality of the villagers made our stay unforgettable."
+ },
+ {
+  "id": "tra-007",
+  "topic": "travel",
+  "word": "accommodation",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a place to stay, such as a room in a hotel",
+  "collocations": [
+   "book accommodation",
+   "budget accommodation",
+   "accommodation costs"
+  ],
+  "paraphrases": [
+   "lodging",
+   "place to stay"
+  ],
+  "example": "Finding affordable accommodation during the festival proved extremely difficult."
+ },
+ {
+  "id": "tra-008",
+  "topic": "travel",
+  "word": "hostel",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a cheap place to stay where travellers often share rooms",
+  "collocations": [
+   "youth hostel",
+   "stay in a hostel",
+   "hostel dormitory"
+  ],
+  "paraphrases": [
+   "budget lodging",
+   "backpacker accommodation"
+  ],
+  "example": "Most backpackers prefer a hostel because it is cheap and easy to meet other travellers."
+ },
+ {
+  "id": "tra-009",
+  "topic": "travel",
+  "word": "backpacker",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a traveller who carries a rucksack and travels cheaply for a long period",
+  "collocations": [
+   "budget backpacker",
+   "backpacker hostel",
+   "young backpackers"
+  ],
+  "paraphrases": [
+   "budget traveller",
+   "independent traveller"
+  ],
+  "example": "Backpackers on a tight budget often volunteer on farms in exchange for meals and a bed."
+ },
+ {
+  "id": "tra-010",
+  "topic": "travel",
+  "word": "package holiday",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a holiday sold at a fixed price that includes travel and accommodation",
+  "collocations": [
+   "book a package holiday",
+   "all-inclusive package holiday",
+   "package holiday deal"
+  ],
+  "paraphrases": [
+   "all-in-one holiday",
+   "pre-arranged tour"
+  ],
+  "example": "A package holiday saves time because flights and hotel are arranged in one booking."
+ },
+ {
+  "id": "tra-011",
+  "topic": "travel",
+  "word": "ecotourism",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "travel to natural areas that aims to protect the environment and benefit local people",
+  "collocations": [
+   "promote ecotourism",
+   "ecotourism project",
+   "sustainable ecotourism"
+  ],
+  "paraphrases": [
+   "nature-based travel",
+   "environmentally friendly tourism"
+  ],
+  "example": "Ecotourism can generate income for villagers without damaging the rainforest."
+ },
+ {
+  "id": "tra-012",
+  "topic": "travel",
+  "word": "mass tourism",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "large-scale tourism in which very large numbers of people visit the same places",
+  "collocations": [
+   "impact of mass tourism",
+   "damage caused by mass tourism",
+   "rise of mass tourism"
+  ],
+  "paraphrases": [
+   "large-scale tourism",
+   "travel by the crowd"
+  ],
+  "example": "Mass tourism has transformed quiet fishing villages into crowded resorts."
+ },
+ {
+  "id": "tra-013",
+  "topic": "travel",
+  "word": "tourist attraction",
+  "pos": "phrase",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a place that many visitors come to see",
+  "collocations": [
+   "major tourist attraction",
+   "popular tourist attraction",
+   "visit tourist attractions"
+  ],
+  "paraphrases": [
+   "visitor draw",
+   "place of interest"
+  ],
+  "example": "The ancient temple is the area's biggest tourist attraction."
+ },
+ {
+  "id": "tra-014",
+  "topic": "travel",
+  "word": "tourist trap",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "a place that is crowded and overpriced because it is designed to attract visitors",
+  "collocations": [
+   "avoid tourist traps",
+   "fall into a tourist trap",
+   "overpriced tourist trap"
+  ],
+  "paraphrases": [
+   "overpriced visitor spot",
+   "place that exploits visitors"
+  ],
+  "example": "Restaurants near the main square are tourist traps, so locals tend to eat elsewhere."
+ },
+ {
+  "id": "tra-015",
+  "topic": "travel",
+  "word": "off the beaten track",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "in a place that is not often visited by tourists",
+  "collocations": [
+   "go off the beaten track",
+   "stay off the beaten track",
+   "somewhere off the beaten track"
+  ],
+  "paraphrases": [
+   "away from the crowds",
+   "in a remote spot"
+  ],
+  "example": "We wanted to explore somewhere off the beaten track rather than follow the usual route."
+ },
+ {
+  "id": "tra-016",
+  "topic": "travel",
+  "word": "peak season",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "the time of year when the most visitors are present and prices are highest",
+  "collocations": [
+   "during peak season",
+   "outside peak season",
+   "peak season prices"
+  ],
+  "paraphrases": [
+   "high season",
+   "busiest time of year"
+  ],
+  "example": "Hotel rates almost double during peak season in the coastal towns."
+ },
+ {
+  "id": "tra-017",
+  "topic": "travel",
+  "word": "off-season",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the time of year when fewer people travel and prices are lower",
+  "collocations": [
+   "travel in the off-season",
+   "off-season rates",
+   "visit during the off-season"
+  ],
+  "paraphrases": [
+   "low season",
+   "quiet time of year"
+  ],
+  "example": "Visiting in the off-season is cheaper, though some restaurants and attractions close."
+ },
+ {
+  "id": "tra-018",
+  "topic": "travel",
+  "word": "landmark",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a building or place that is easily recognised and often famous",
+  "collocations": [
+   "famous landmark",
+   "historic landmark",
+   "local landmark"
+  ],
+  "paraphrases": [
+   "recognisable monument",
+   "prominent structure"
+  ],
+  "example": "The tower is a historic landmark that appears on almost every postcard of the city."
+ },
+ {
+  "id": "tra-019",
+  "topic": "travel",
+  "word": "heritage site",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a place of special cultural or historical importance that is officially protected",
+  "collocations": [
+   "World Heritage Site",
+   "visit a heritage site",
+   "protect a heritage site"
+  ],
+  "paraphrases": [
+   "protected historic location",
+   "site of cultural significance"
+  ],
+  "example": "The old city was declared a heritage site to prevent unsuitable development."
+ },
+ {
+  "id": "tra-020",
+  "topic": "travel",
+  "word": "souvenir",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "an object bought to remember a place or an occasion",
+  "collocations": [
+   "buy a souvenir",
+   "souvenir shop",
+   "cheap souvenir"
+  ],
+  "paraphrases": [
+   "keepsake",
+   "memento"
+  ],
+  "example": "Visitors usually buy a small souvenir to remind them of their trip."
+ },
+ {
+  "id": "tra-021",
+  "topic": "travel",
+  "word": "guided tour",
+  "pos": "phrase",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a visit to a place led by a person who gives information about it",
+  "collocations": [
+   "take a guided tour",
+   "guided tour of the museum",
+   "organised guided tour"
+  ],
+  "paraphrases": [
+   "escorted visit",
+   "tour with a guide"
+  ],
+  "example": "A guided tour of the castle takes about ninety minutes."
+ },
+ {
+  "id": "tra-022",
+  "topic": "travel",
+  "word": "getaway",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "a short holiday, especially to relax away from home",
+  "collocations": [
+   "weekend getaway",
+   "romantic getaway",
+   "quick getaway"
+  ],
+  "paraphrases": [
+   "short break",
+   "brief holiday"
+  ],
+  "example": "A weekend getaway in the countryside is the perfect cure for city stress."
+ },
+ {
+  "id": "tra-023",
+  "topic": "travel",
+  "word": "jet lag",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "tiredness and confusion caused by travelling quickly across time zones",
+  "collocations": [
+   "suffer from jet lag",
+   "overcome jet lag",
+   "severe jet lag"
+  ],
+  "paraphrases": [
+   "disorientation after long-distance travel",
+   "fatigue from time differences"
+  ],
+  "example": "It usually takes me several days to recover from jet lag after a long-haul flight."
+ },
+ {
+  "id": "tra-024",
+  "topic": "travel",
+  "word": "stopover",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a short stay between two parts of a long journey",
+  "collocations": [
+   "brief stopover",
+   "stopover in Dubai",
+   "overnight stopover"
+  ],
+  "paraphrases": [
+   "break in a journey",
+   "intermediate halt"
+  ],
+  "example": "We had a ten-hour stopover in Singapore, so we took a taxi into the city."
+ },
+ {
+  "id": "tra-025",
+  "topic": "travel",
+  "word": "visa",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "an official document that allows a person to enter or stay in a country",
+  "collocations": [
+   "apply for a visa",
+   "tourist visa",
+   "visa requirements"
+  ],
+  "paraphrases": [
+   "entry permit",
+   "travel authorisation"
+  ],
+  "example": "Citizens of many countries can enter without a visa for stays of up to ninety days."
+ },
+ {
+  "id": "tra-026",
+  "topic": "travel",
+  "word": "wanderlust",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "a strong desire to travel and explore the world",
+  "collocations": [
+   "feel wanderlust",
+   "sense of wanderlust",
+   "fuel wanderlust"
+  ],
+  "paraphrases": [
+   "urge to travel",
+   "passion for exploring"
+  ],
+  "example": "Social media photographs have increased wanderlust among young adults."
+ },
+ {
+  "id": "tra-027",
+  "topic": "travel",
+  "word": "globetrotter",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "a person who travels widely around the world",
+  "collocations": [
+   "seasoned globetrotter",
+   "avid globetrotter",
+   "global globetrotter"
+  ],
+  "paraphrases": [
+   "frequent traveller",
+   "world traveller"
+  ],
+  "example": "As an experienced globetrotter, he has visited more than sixty countries."
+ },
+ {
+  "id": "tra-028",
+  "topic": "travel",
+  "word": "expedition",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "an organised journey made for a particular purpose, such as exploration",
+  "collocations": [
+   "polar expedition",
+   "scientific expedition",
+   "lead an expedition"
+  ],
+  "paraphrases": [
+   "exploratory journey",
+   "organised venture"
+  ],
+  "example": "The expedition set off at dawn to cross the desert before the midday heat."
+ },
+ {
+  "id": "tra-029",
+  "topic": "travel",
+  "word": "voyage",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a long journey, especially by sea or in space",
+  "collocations": [
+   "maiden voyage",
+   "long voyage",
+   "ocean voyage"
+  ],
+  "paraphrases": [
+   "sea journey",
+   "lengthy passage"
+  ],
+  "example": "The voyage across the Atlantic took more than six weeks in the eighteenth century."
+ },
+ {
+  "id": "tra-030",
+  "topic": "travel",
+  "word": "cruise",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a holiday spent on a large ship that visits several places",
+  "collocations": [
+   "go on a cruise",
+   "Caribbean cruise",
+   "cruise ship"
+  ],
+  "paraphrases": [
+   "sea holiday",
+   "holiday on a liner"
+  ],
+  "example": "A cruise lets passengers visit several ports without repacking their luggage."
+ },
+ {
+  "id": "tra-031",
+  "topic": "travel",
+  "word": "pilgrimage",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a journey to a holy place made for religious reasons",
+  "collocations": [
+   "make a pilgrimage",
+   "annual pilgrimage",
+   "pilgrimage route"
+  ],
+  "paraphrases": [
+   "holy journey",
+   "journey to a sacred site"
+  ],
+  "example": "Millions of travellers make the annual pilgrimage to the holy city every year."
+ },
+ {
+  "id": "tra-032",
+  "topic": "travel",
+  "word": "trek",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a long, difficult journey made on foot, especially across wild country",
+  "collocations": [
+   "mountain trek",
+   "weeklong trek",
+   "go on a trek"
+  ],
+  "paraphrases": [
+   "arduous walk",
+   "long hike"
+  ],
+  "example": "The trek through the Himalayas took us nearly two weeks."
+ },
+ {
+  "id": "tra-033",
+  "topic": "travel",
+  "word": "scenic",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "having beautiful natural views",
+  "collocations": [
+   "scenic route",
+   "scenic views",
+   "scenic beauty"
+  ],
+  "paraphrases": [
+   "picturesque",
+   "visually attractive"
+  ],
+  "example": "We took the scenic route along the coast instead of using the motorway."
+ },
+ {
+  "id": "tra-034",
+  "topic": "travel",
+  "word": "picturesque",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "attractive in an old-fashioned way, especially in a way that would make a nice picture",
+  "collocations": [
+   "picturesque village",
+   "picturesque setting",
+   "picturesque harbour"
+  ],
+  "paraphrases": [
+   "charming",
+   "pretty as a picture"
+  ],
+  "example": "The picturesque village attracts thousands of photographers every summer."
+ },
+ {
+  "id": "tra-035",
+  "topic": "travel",
+  "word": "secluded",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "private and quiet, away from other people",
+  "collocations": [
+   "secluded beach",
+   "secluded spot",
+   "secluded cottage"
+  ],
+  "paraphrases": [
+   "isolated",
+   "tucked away"
+  ],
+  "example": "We found a secluded beach where we could swim without any crowds."
+ },
+ {
+  "id": "tra-036",
+  "topic": "travel",
+  "word": "unspoilt",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "remaining in its natural or original condition and not damaged by development",
+  "collocations": [
+   "unspoilt beach",
+   "unspoilt countryside",
+   "unspoilt landscape"
+  ],
+  "paraphrases": [
+   "pristine",
+   "untouched"
+  ],
+  "example": "The island's unspoilt coastline is protected by strict building regulations."
+ },
+ {
+  "id": "tra-037",
+  "topic": "travel",
+  "word": "touristy",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "full of tourists and designed to attract them, often in a disliked way",
+  "collocations": [
+   "touristy area",
+   "touristy restaurant",
+   "rather touristy"
+  ],
+  "paraphrases": [
+   "geared towards visitors",
+   "overrun by sightseers"
+  ],
+  "example": "The old harbour is a bit touristy, so we ate at a family-run place in the hills."
+ },
+ {
+  "id": "tra-038",
+  "topic": "travel",
+  "word": "bustling",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "full of busy and noisy activity",
+  "collocations": [
+   "bustling market",
+   "bustling city",
+   "bustling streets"
+  ],
+  "paraphrases": [
+   "lively",
+   "crowded and active"
+  ],
+  "example": "The bustling market sells everything from spices to hand-woven fabrics."
+ },
+ {
+  "id": "tra-039",
+  "topic": "travel",
+  "word": "breathtaking",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "extremely beautiful or impressive",
+  "collocations": [
+   "breathtaking view",
+   "breathtaking scenery",
+   "breathtaking landscape"
+  ],
+  "paraphrases": [
+   "stunning",
+   "awe-inspiring"
+  ],
+  "example": "From the summit, the breathtaking view of the glacier made the climb worthwhile."
+ },
+ {
+  "id": "tra-040",
+  "topic": "travel",
+  "word": "idyllic",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "extremely pleasant, peaceful and beautiful",
+  "collocations": [
+   "idyllic setting",
+   "idyllic island",
+   "idyllic scene"
+  ],
+  "paraphrases": [
+   "perfect",
+   "peaceful and picturesque"
+  ],
+  "example": "They spent a week on an idyllic island with no cars and almost no other visitors."
+ },
+ {
+  "id": "tra-041",
+  "topic": "travel",
+  "word": "exotic",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "attractive because it is unusual and comes from a distant country",
+  "collocations": [
+   "exotic location",
+   "exotic fruit",
+   "exotic animals"
+  ],
+  "paraphrases": [
+   "foreign and unusual",
+   "from a far-off land"
+  ],
+  "example": "Many holidaymakers are drawn to exotic locations that offer a break from routine."
+ },
+ {
+  "id": "tra-042",
+  "topic": "travel",
+  "word": "authentic",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "genuine and true to the original culture or tradition",
+  "collocations": [
+   "authentic cuisine",
+   "authentic experience",
+   "authentic local culture"
+  ],
+  "paraphrases": [
+   "genuine",
+   "true to tradition"
+  ],
+  "example": "Travellers increasingly seek authentic experiences rather than staged shows for tourists."
+ },
+ {
+  "id": "tra-043",
+  "topic": "travel",
+  "word": "cultural immersion",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the experience of living fully within another culture",
+  "collocations": [
+   "promote cultural immersion",
+   "cultural immersion programme",
+   "deep cultural immersion"
+  ],
+  "paraphrases": [
+   "full engagement with a foreign culture",
+   "living among local people"
+  ],
+  "example": "Staying with a local family offers genuine cultural immersion that no hotel can match."
+ },
+ {
+  "id": "tra-044",
+  "topic": "travel",
+  "word": "homestay",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a stay in the home of a local family, usually while learning about their culture",
+  "collocations": [
+   "arrange a homestay",
+   "homestay family",
+   "homestay accommodation"
+  ],
+  "paraphrases": [
+   "lodging with a local family",
+   "stay with a host family"
+  ],
+  "example": "A homestay is a good way to practise the language while learning local customs."
+ },
+ {
+  "id": "tra-045",
+  "topic": "travel",
+  "word": "hospitable",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "friendly and welcoming towards guests",
+  "collocations": [
+   "hospitable people",
+   "hospitable hosts",
+   "extremely hospitable"
+  ],
+  "paraphrases": [
+   "welcoming",
+   "generous to visitors"
+  ],
+  "example": "The islanders were extremely hospitable and invited us to join their evening meal."
+ },
+ {
+  "id": "tra-046",
+  "topic": "travel",
+  "word": "overtourism",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a situation in which too many tourists visit a place and damage it",
+  "collocations": [
+   "combat overtourism",
+   "problem of overtourism",
+   "effects of overtourism"
+  ],
+  "paraphrases": [
+   "excessive tourist numbers",
+   "crowding by visitors"
+  ],
+  "example": "Overtourism has pushed up rents and driven many residents out of the historic centre."
+ },
+ {
+  "id": "tra-047",
+  "topic": "travel",
+  "word": "influx",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the arrival of large numbers of people or things at the same time",
+  "collocations": [
+   "influx of tourists",
+   "sudden influx",
+   "seasonal influx"
+  ],
+  "paraphrases": [
+   "surge of arrivals",
+   "flood of newcomers"
+  ],
+  "example": "The summer influx of tourists puts severe pressure on the town's water supply."
+ },
+ {
+  "id": "tra-048",
+  "topic": "travel",
+  "word": "brochure",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a small booklet containing pictures and information about a product or place",
+  "collocations": [
+   "travel brochure",
+   "glossy brochure",
+   "holiday brochure"
+  ],
+  "paraphrases": [
+   "leaflet",
+   "promotional booklet"
+  ],
+  "example": "The brochure promised white sand and clear water, but the beach was rocky."
+ },
+ {
+  "id": "tra-049",
+  "topic": "travel",
+  "word": "travel agent",
+  "pos": "phrase",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a person or business that arranges trips and bookings for customers",
+  "collocations": [
+   "book through a travel agent",
+   "local travel agent",
+   "travel agent's office"
+  ],
+  "paraphrases": [
+   "trip arranger",
+   "holiday booking specialist"
+  ],
+  "example": "Many people now bypass the travel agent and book their trips online."
+ },
+ {
+  "id": "tra-050",
+  "topic": "travel",
+  "word": "reservation",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "an arrangement to keep a room, table or seat for someone",
+  "collocations": [
+   "make a reservation",
+   "hotel reservation",
+   "confirm a reservation"
+  ],
+  "paraphrases": [
+   "booking",
+   "advance arrangement"
+  ],
+  "example": "I would like to make a reservation for two nights starting on Friday."
+ },
+ {
+  "id": "tra-051",
+  "topic": "travel",
+  "word": "cancellation",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "the act of deciding that a planned event or booking will not happen",
+  "collocations": [
+   "flight cancellation",
+   "cancellation fee",
+   "free cancellation"
+  ],
+  "paraphrases": [
+   "calling off",
+   "annulment of a booking"
+  ],
+  "example": "Free cancellation up to forty-eight hours before arrival is now common among hotels."
+ },
+ {
+  "id": "tra-052",
+  "topic": "travel",
+  "word": "refund",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a sum of money paid back to someone who is not satisfied with a purchase",
+  "collocations": [
+   "full refund",
+   "claim a refund",
+   "refund policy"
+  ],
+  "paraphrases": [
+   "repayment",
+   "money back"
+  ],
+  "example": "Passengers whose trips were disrupted were offered a full refund."
+ },
+ {
+  "id": "tra-053",
+  "topic": "travel",
+  "word": "travel insurance",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "an arrangement that covers the cost of problems such as illness or cancelled trips",
+  "collocations": [
+   "take out travel insurance",
+   "travel insurance policy",
+   "comprehensive travel insurance"
+  ],
+  "paraphrases": [
+   "cover for trip problems",
+   "holiday protection policy"
+  ],
+  "example": "Most experts advise taking out travel insurance before leaving for a long trip abroad."
+ },
+ {
+  "id": "tra-054",
+  "topic": "travel",
+  "word": "exchange rate",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the value of one currency compared with another",
+  "collocations": [
+   "favourable exchange rate",
+   "fluctuating exchange rate",
+   "check the exchange rate"
+  ],
+  "paraphrases": [
+   "currency value",
+   "rate of conversion"
+  ],
+  "example": "A weaker pound means the exchange rate is less favourable for British tourists abroad."
+ },
+ {
+  "id": "tra-055",
+  "topic": "travel",
+  "word": "gratuity",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a small amount of money given to a worker in return for service",
+  "collocations": [
+   "leave a gratuity",
+   "service gratuity",
+   "gratuity included"
+  ],
+  "paraphrases": [
+   "tip",
+   "small payment for service"
+  ],
+  "example": "A ten per cent gratuity is usually added to the bill in restaurants."
+ },
+ {
+  "id": "tra-056",
+  "topic": "travel",
+  "word": "guidebook",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a book that gives visitors information about a place",
+  "collocations": [
+   "travel guidebook",
+   "consult a guidebook",
+   "guidebook recommendation"
+  ],
+  "paraphrases": [
+   "travel handbook",
+   "visitors' manual"
+  ],
+  "example": "The guidebook recommended an inexpensive restaurant near the cathedral."
+ },
+ {
+  "id": "tra-057",
+  "topic": "travel",
+  "word": "phrasebook",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "a small book of useful words and sentences for travellers in a foreign country",
+  "collocations": [
+   "pocket phrasebook",
+   "consult a phrasebook",
+   "carry a phrasebook"
+  ],
+  "paraphrases": [
+   "travellers' language guide",
+   "foreign-language handbook"
+  ],
+  "example": "A phrasebook is useful, but many travellers now rely on translation apps instead."
+ },
+ {
+  "id": "tra-058",
+  "topic": "travel",
+  "word": "culture shock",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a feeling of confusion experienced when meeting a very different way of life",
+  "collocations": [
+   "experience culture shock",
+   "suffer from culture shock",
+   "overcome culture shock"
+  ],
+  "paraphrases": [
+   "disorientation in a foreign society",
+   "difficulty adjusting to another culture"
+  ],
+  "example": "Many students experience culture shock during their first month abroad."
+ },
+ {
+  "id": "tra-059",
+  "topic": "travel",
+  "word": "homesick",
+  "pos": "adjective",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "feeling sad because one is away from home and misses it",
+  "collocations": [
+   "feel homesick",
+   "get homesick",
+   "homesick student"
+  ],
+  "paraphrases": [
+   "missing home",
+   "longing for one's own country"
+  ],
+  "example": "After three weeks abroad, she began to feel homesick and called her family every day."
+ },
+ {
+  "id": "tra-060",
+  "topic": "travel",
+  "word": "acclimatise",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "to get used to a new climate or environment",
+  "collocations": [
+   "acclimatise to the altitude",
+   "time to acclimatise",
+   "gradually acclimatise"
+  ],
+  "paraphrases": [
+   "adapt",
+   "adjust to new surroundings"
+  ],
+  "example": "Climbers need several days to acclimatise before attempting the summit."
+ },
+ {
+  "id": "tra-061",
+  "topic": "travel",
+  "word": "time zone",
+  "pos": "phrase",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a region of the world where the same standard time is used",
+  "collocations": [
+   "cross time zones",
+   "different time zone",
+   "adjust to a new time zone"
+  ],
+  "paraphrases": [
+   "region with the same clock time",
+   "area of standard time"
+  ],
+  "example": "Crossing several time zones in one day can leave travellers exhausted."
+ },
+ {
+  "id": "tra-062",
+  "topic": "travel",
+  "word": "all-inclusive",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "including everything in one price, such as meals, drinks and activities",
+  "collocations": [
+   "all-inclusive holiday",
+   "all-inclusive package",
+   "all-inclusive resort"
+  ],
+  "paraphrases": [
+   "everything included",
+   "covering all costs"
+  ],
+  "example": "An all-inclusive holiday lets families budget in advance without worrying about extra costs."
+ },
+ {
+  "id": "tra-063",
+  "topic": "travel",
+  "word": "self-catering",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "describing accommodation where guests prepare their own meals",
+  "collocations": [
+   "self-catering apartment",
+   "self-catering holiday",
+   "self-catering cottage"
+  ],
+  "paraphrases": [
+   "with cooking facilities",
+   "where guests cook for themselves"
+  ],
+  "example": "We chose a self-catering apartment because eating out every day would have been too expensive."
+ },
+ {
+  "id": "tra-064",
+  "topic": "travel",
+  "word": "amenities",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "useful or enjoyable features of a place, such as a pool or a gym",
+  "collocations": [
+   "local amenities",
+   "hotel amenities",
+   "basic amenities"
+  ],
+  "paraphrases": [
+   "facilities",
+   "services"
+  ],
+  "example": "The hotel's amenities include a swimming pool, a gym and free parking."
+ },
+ {
+  "id": "tra-065",
+  "topic": "travel",
+  "word": "road trip",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "a long journey made by car, usually for pleasure",
+  "collocations": [
+   "go on a road trip",
+   "cross-country road trip",
+   "plan a road trip"
+  ],
+  "paraphrases": [
+   "long drive",
+   "holiday by car"
+  ],
+  "example": "We planned a road trip along the west coast with stops at small towns."
+ },
+ {
+  "id": "tra-066",
+  "topic": "travel",
+  "word": "gap year",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a year taken out between school and university, often spent travelling",
+  "collocations": [
+   "take a gap year",
+   "spend a gap year",
+   "gap year experience"
+  ],
+  "paraphrases": [
+   "year out",
+   "break between school and university"
+  ],
+  "example": "Many students spend a gap year volunteering abroad before starting university."
+ },
+ {
+  "id": "tra-067",
+  "topic": "travel",
+  "word": "campsite",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "an area where people can stay in tents or caravans",
+  "collocations": [
+   "crowded campsite",
+   "book a campsite",
+   "campsite facilities"
+  ],
+  "paraphrases": [
+   "camping ground",
+   "place to pitch a tent"
+  ],
+  "example": "The campsite has hot showers and a shop selling basic groceries."
+ },
+ {
+  "id": "tra-068",
+  "topic": "travel",
+  "word": "safari",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a trip to observe wild animals in their natural habitat, especially in Africa",
+  "collocations": [
+   "go on safari",
+   "safari lodge",
+   "wildlife safari"
+  ],
+  "paraphrases": [
+   "wildlife expedition",
+   "trip to see animals in the wild"
+  ],
+  "example": "A safari in Kenya gives visitors the chance to see lions and elephants in the wild."
+ },
+ {
+  "id": "tra-069",
+  "topic": "travel",
+  "word": "coastline",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "the land along the edge of the sea",
+  "collocations": [
+   "rugged coastline",
+   "stunning coastline",
+   "stretch of coastline"
+  ],
+  "paraphrases": [
+   "shoreline",
+   "seaboard"
+  ],
+  "example": "The island's rugged coastline is dotted with small hidden coves."
+ },
+ {
+  "id": "tra-070",
+  "topic": "travel",
+  "word": "panorama",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a wide view of a large area of land or city",
+  "collocations": [
+   "sweeping panorama",
+   "panorama of the city",
+   "stunning panorama"
+  ],
+  "paraphrases": [
+   "sweeping view",
+   "wide vista"
+  ],
+  "example": "A cable car carries visitors to a platform that offers a sweeping panorama of the valley."
+ },
+ {
+  "id": "tra-071",
+  "topic": "travel",
+  "word": "spectacular",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "extremely impressive and dramatic to look at",
+  "collocations": [
+   "spectacular views",
+   "spectacular scenery",
+   "truly spectacular"
+  ],
+  "paraphrases": [
+   "stunning",
+   "remarkable"
+  ],
+  "example": "The waterfall is particularly spectacular after heavy rain."
+ },
+ {
+  "id": "tra-072",
+  "topic": "travel",
+  "word": "vibrant",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "full of energy, life and colour",
+  "collocations": [
+   "vibrant city",
+   "vibrant atmosphere",
+   "vibrant nightlife"
+  ],
+  "paraphrases": [
+   "lively",
+   "energetic"
+  ],
+  "example": "The city's vibrant nightlife attracts young visitors from all over Europe."
+ },
+ {
+  "id": "tra-073",
+  "topic": "travel",
+  "word": "roam",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "to move about freely without a fixed purpose or destination",
+  "collocations": [
+   "roam freely",
+   "roam the streets",
+   "free to roam"
+  ],
+  "paraphrases": [
+   "wander",
+   "travel without a set plan"
+  ],
+  "example": "We spent the afternoon roaming through the narrow streets of the old quarter."
+ },
+ {
+  "id": "tra-074",
+  "topic": "travel",
+  "word": "embark",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to begin a journey, especially by boarding a ship, or to start something new",
+  "collocations": [
+   "embark on a journey",
+   "embark on a voyage",
+   "embark on a tour"
+  ],
+  "paraphrases": [
+   "set off",
+   "begin a trip"
+  ],
+  "example": "Passengers will embark at noon and the ship will sail at four o'clock."
+ },
+ {
+  "id": "tra-075",
+  "topic": "travel",
+  "word": "meander",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to follow a winding path or to wander without hurry",
+  "collocations": [
+   "meander through",
+   "meander along the river",
+   "meander lazily"
+  ],
+  "paraphrases": [
+   "wind",
+   "wander at leisure"
+  ],
+  "example": "The path meanders through olive groves before reaching the sea."
+ },
+ {
+  "id": "tra-076",
+  "topic": "travel",
+  "word": "linger",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "to stay in a place longer than necessary, often because one enjoys it",
+  "collocations": [
+   "linger over a meal",
+   "linger in a cafe",
+   "linger a while"
+  ],
+  "paraphrases": [
+   "stay on",
+   "remain a little longer"
+  ],
+  "example": "We lingered at the harbour until the sun set behind the hills."
+ },
+ {
+  "id": "tra-077",
+  "topic": "travel",
+  "word": "unwind",
+  "pos": "verb",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "to relax and stop feeling stressed after a period of work or tension",
+  "collocations": [
+   "unwind on holiday",
+   "time to unwind",
+   "unwind after work"
+  ],
+  "paraphrases": [
+   "relax",
+   "de-stress"
+  ],
+  "example": "After a hectic month, I just want to unwind on a quiet beach."
+ },
+ {
+  "id": "tra-078",
+  "topic": "travel",
+  "word": "soak up",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "to enjoy and absorb the atmosphere or feel of a place",
+  "collocations": [
+   "soak up the sun",
+   "soak up the atmosphere",
+   "soak up the culture"
+  ],
+  "paraphrases": [
+   "absorb",
+   "take in and enjoy"
+  ],
+  "example": "Visitors can soak up the atmosphere of the old town from a pavement cafe."
+ },
+ {
+  "id": "tra-079",
+  "topic": "travel",
+  "word": "holidaymaker",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a person who is away from home on holiday",
+  "collocations": [
+   "summer holidaymaker",
+   "British holidaymakers",
+   "holidaymaker numbers"
+  ],
+  "paraphrases": [
+   "tourist",
+   "person on vacation"
+  ],
+  "example": "The airport is crowded with holidaymakers during the first week of August."
+ }
+]
