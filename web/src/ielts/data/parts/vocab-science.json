@@ -1,1755 +1,1667 @@
 [
- {
-  "id": "sci-001",
-  "topic": "science",
-  "word": "hypothesis",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a proposed explanation that has yet to be tested",
-  "collocations": [
-   "test a hypothesis",
-   "form a hypothesis",
-   "support the hypothesis"
-  ],
-  "paraphrases": [
-   "a tentative explanation",
-   "a proposed theory"
-  ],
-  "example": "The researchers set out to test the hypothesis that sleep improves memory."
- },
- {
-  "id": "sci-002",
-  "topic": "science",
-  "word": "experiment",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "a scientific test carried out to discover or prove something",
-  "collocations": [
-   "conduct an experiment",
-   "a controlled experiment",
-   "repeat the experiment"
-  ],
-  "paraphrases": [
-   "a trial",
-   "a scientific test"
-  ],
-  "example": "The experiment was repeated three times to make sure the results were consistent."
- },
- {
-  "id": "sci-003",
-  "topic": "science",
-  "word": "empirical",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "based on observation or experience rather than theory alone",
-  "collocations": [
-   "empirical evidence",
-   "empirical research",
-   "an empirical study"
-  ],
-  "paraphrases": [
-   "based on observation",
-   "evidence-based"
-  ],
-  "example": "There is little empirical evidence to support the claim that the treatment is effective."
- },
- {
-  "id": "sci-004",
-  "topic": "science",
-  "word": "methodology",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the system of methods used in a particular study or field",
-  "collocations": [
-   "research methodology",
-   "a sound methodology",
-   "flawed methodology"
-  ],
-  "paraphrases": [
-   "the research approach",
-   "the set of methods used"
-  ],
-  "example": "The study's methodology was criticised because the sample was too small."
- },
- {
-  "id": "sci-005",
-  "topic": "science",
-  "word": "variable",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a factor in an experiment that can change or be changed",
-  "collocations": [
-   "control a variable",
-   "an independent variable",
-   "a key variable"
-  ],
-  "paraphrases": [
-   "a changing factor",
-   "an element that can differ"
-  ],
-  "example": "The scientists changed only one variable at a time to see its effect."
- },
- {
-  "id": "sci-006",
-  "topic": "science",
-  "word": "control group",
-  "pos": "phrase",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "a set of participants in an experiment who do not receive the treatment being tested",
-  "collocations": [
-   "a control group",
-   "compare with a control group",
-   "the control group received"
-  ],
-  "paraphrases": [
-   "the comparison group",
-   "untreated participants"
-  ],
-  "example": "The control group received a harmless placebo, so their results could be compared with those of the test group."
- },
- {
-  "id": "sci-007",
-  "topic": "science",
-  "word": "sample size",
-  "pos": "phrase",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "the number of people or items studied in a piece of research",
-  "collocations": [
-   "a large sample size",
-   "increase the sample size",
-   "a small sample size"
-  ],
-  "paraphrases": [
-   "the number of participants",
-   "the scale of the study"
-  ],
-  "example": "Because the sample size was small, the findings may not apply to the wider population."
- },
- {
-  "id": "sci-008",
-  "topic": "science",
-  "word": "peer review",
-  "pos": "phrase",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the checking of research by other experts before it is published",
-  "collocations": [
-   "undergo peer review",
-   "a peer-reviewed journal",
-   "peer review process"
-  ],
-  "paraphrases": [
-   "evaluation by fellow specialists",
-   "expert scrutiny before publication"
-  ],
-  "example": "Peer review helps to ensure that published studies meet accepted standards."
- },
- {
-  "id": "sci-009",
-  "topic": "science",
-  "word": "breakthrough",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "an important discovery or development that solves a problem",
-  "collocations": [
-   "a major breakthrough",
-   "a scientific breakthrough",
-   "achieve a breakthrough"
-  ],
-  "paraphrases": [
-   "a major advance",
-   "a key discovery"
-  ],
-  "example": "Scientists announced a breakthrough in the search for a cure for the disease."
- },
- {
-  "id": "sci-010",
-  "topic": "science",
-  "word": "discovery",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "reading"
-  ],
-  "definition": "the act of finding something new or the thing found",
-  "collocations": [
-   "a major discovery",
-   "make a discovery",
-   "a chance discovery"
-  ],
-  "paraphrases": [
-   "a finding",
-   "a revelation"
-  ],
-  "example": "The discovery of penicillin transformed the treatment of infections."
- },
- {
-  "id": "sci-011",
-  "topic": "science",
-  "word": "findings",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "the results of a piece of research",
-  "collocations": [
-   "the main findings",
-   "publish findings",
-   "research findings"
-  ],
-  "paraphrases": [
-   "results",
-   "conclusions"
-  ],
-  "example": "The findings suggest that regular exercise slows the ageing of the brain."
- },
- {
-  "id": "sci-012",
-  "topic": "science",
-  "word": "theory",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "a set of ideas intended to explain facts or events",
-  "collocations": [
-   "a scientific theory",
-   "the theory of evolution",
-   "develop a theory"
-  ],
-  "paraphrases": [
-   "a proposed explanation",
-   "a model of explanation"
-  ],
-  "example": "Einstein's theory of relativity changed the way scientists understand time and space."
- },
- {
-  "id": "sci-013",
-  "topic": "science",
-  "word": "validate",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to prove that something is correct or true",
-  "collocations": [
-   "validate results",
-   "validate a theory",
-   "independently validated"
-  ],
-  "paraphrases": [
-   "confirm",
-   "prove correct"
-  ],
-  "example": "Further experiments are needed to validate these early results."
- },
- {
-  "id": "sci-014",
-  "topic": "science",
-  "word": "replicate",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to repeat a study or experiment and obtain the same results",
-  "collocations": [
-   "replicate a study",
-   "replicate results",
-   "fail to replicate"
-  ],
-  "paraphrases": [
-   "reproduce",
-   "repeat exactly"
-  ],
-  "example": "Other teams have failed to replicate the results, which casts doubt on the claim."
- },
- {
-  "id": "sci-015",
-  "topic": "science",
-  "word": "reproducible",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "able to be repeated with the same results",
-  "collocations": [
-   "reproducible results",
-   "a reproducible experiment",
-   "easily reproducible"
-  ],
-  "paraphrases": [
-   "repeatable",
-   "able to be duplicated"
-  ],
-  "example": "For research to be trusted, its results must be reproducible by independent teams."
- },
- {
-  "id": "sci-016",
-  "topic": "science",
-  "word": "anomaly",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading",
-   "writing"
-  ],
-  "definition": "something that differs from what is normal or expected",
-  "collocations": [
-   "a statistical anomaly",
-   "an unexplained anomaly",
-   "detect an anomaly"
-  ],
-  "paraphrases": [
-   "an irregularity",
-   "a deviation from the norm"
-  ],
-  "example": "The anomaly in the data led the team to re-examine their equipment."
- },
- {
-  "id": "sci-017",
-  "topic": "science",
-  "word": "observation",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "the careful watching of something in order to learn about it",
-  "collocations": [
-   "careful observation",
-   "direct observation",
-   "make an observation"
-  ],
-  "paraphrases": [
-   "close study",
-   "systematic watching"
-  ],
-  "example": "Darwin's observation of finches on the islands helped to shape his theory."
- },
- {
-  "id": "sci-018",
-  "topic": "science",
-  "word": "correlation",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a connection between two things that vary together",
-  "collocations": [
-   "a strong correlation",
-   "a positive correlation",
-   "show a correlation"
-  ],
-  "paraphrases": [
-   "a link",
-   "a statistical relationship"
-  ],
-  "example": "Researchers found a strong correlation between hours of sleep and exam performance."
- },
- {
-  "id": "sci-019",
-  "topic": "science",
-  "word": "causation",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the relationship in which one event brings about another",
-  "collocations": [
-   "prove causation",
-   "establish causation",
-   "correlation and causation"
-  ],
-  "paraphrases": [
-   "a cause-and-effect link",
-   "the production of an effect"
-  ],
-  "example": "Correlation does not necessarily imply causation, so further tests are required."
- },
- {
-  "id": "sci-020",
-  "topic": "science",
-  "word": "hypothesise",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to suggest an explanation that has not yet been proved",
-  "collocations": [
-   "hypothesise that",
-   "scientists hypothesise",
-   "hypothesise a link"
-  ],
-  "paraphrases": [
-   "put forward a theory",
-   "propose tentatively"
-  ],
-  "example": "Researchers hypothesise that the species migrated across the land bridge."
- },
- {
-  "id": "sci-021",
-  "topic": "science",
-  "word": "deduce",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to reach a conclusion by reasoning from evidence",
-  "collocations": [
-   "deduce from",
-   "deduce a conclusion",
-   "be able to deduce"
-  ],
-  "paraphrases": [
-   "infer",
-   "work out logically"
-  ],
-  "example": "Scientists deduce the age of a rock by measuring the decay of its minerals."
- },
- {
-  "id": "sci-022",
-  "topic": "science",
-  "word": "infer",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to form an opinion from evidence rather than direct statements",
-  "collocations": [
-   "infer from",
-   "infer a conclusion",
-   "it can be inferred that"
-  ],
-  "paraphrases": [
-   "conclude",
-   "draw a conclusion"
-  ],
-  "example": "We can infer from the data that temperatures were higher in the region a million years ago."
- },
- {
-  "id": "sci-023",
-  "topic": "science",
-  "word": "quantify",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to measure or express something as a number",
-  "collocations": [
-   "quantify the effect",
-   "difficult to quantify",
-   "quantify risk"
-  ],
-  "paraphrases": [
-   "measure",
-   "express numerically"
-  ],
-  "example": "It is difficult to quantify the benefits of basic research."
- },
- {
-  "id": "sci-024",
-  "topic": "science",
-  "word": "calibrate",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "to adjust an instrument so that its readings are accurate",
-  "collocations": [
-   "calibrate an instrument",
-   "calibrate equipment",
-   "carefully calibrated"
-  ],
-  "paraphrases": [
-   "adjust for accuracy",
-   "set a measuring device"
-  ],
-  "example": "Technicians must calibrate the instruments carefully before each new measurement is taken."
- },
- {
-  "id": "sci-025",
-  "topic": "science",
-  "word": "laboratory",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "a room or building equipped for scientific experiments",
-  "collocations": [
-   "a research laboratory",
-   "in the laboratory",
-   "laboratory conditions"
-  ],
-  "paraphrases": [
-   "a lab",
-   "a science research facility"
-  ],
-  "example": "The vaccine was developed in a laboratory before being tested on volunteers."
- },
- {
-  "id": "sci-026",
-  "topic": "science",
-  "word": "specimen",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a sample of an animal, plant or substance used for study",
-  "collocations": [
-   "a rare specimen",
-   "collect specimens",
-   "a laboratory specimen"
-  ],
-  "paraphrases": [
-   "a sample",
-   "an example for study"
-  ],
-  "example": "The museum keeps thousands of preserved specimens collected over two centuries."
- },
- {
-  "id": "sci-027",
-  "topic": "science",
-  "word": "microscope",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "an instrument that makes very small things look larger",
-  "collocations": [
-   "under a microscope",
-   "an electron microscope",
-   "a powerful microscope"
-  ],
-  "paraphrases": [
-   "a magnifying instrument",
-   "a device for viewing tiny objects"
-  ],
-  "example": "Bacteria are too small to be seen without a microscope."
- },
- {
-  "id": "sci-028",
-  "topic": "science",
-  "word": "telescope",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "reading"
-  ],
-  "definition": "an instrument that makes distant objects look nearer and larger",
-  "collocations": [
-   "a space telescope",
-   "point a telescope",
-   "a powerful telescope"
-  ],
-  "paraphrases": [
-   "a viewing instrument for distant objects",
-   "an astronomical lens"
-  ],
-  "example": "The new telescope can detect light from stars that formed billions of years ago."
- },
- {
-  "id": "sci-029",
-  "topic": "science",
-  "word": "particle",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading"
-  ],
-  "definition": "an extremely small piece of matter",
-  "collocations": [
-   "a subatomic particle",
-   "a dust particle",
-   "particle physics"
-  ],
-  "paraphrases": [
-   "a tiny fragment",
-   "a minute piece of matter"
-  ],
-  "example": "Physicists use huge machines to make particles collide at high speed."
- },
- {
-  "id": "sci-030",
-  "topic": "science",
-  "word": "molecule",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "the smallest unit of a chemical compound, made of atoms",
-  "collocations": [
-   "a water molecule",
-   "a complex molecule",
-   "break down molecules"
-  ],
-  "paraphrases": [
-   "a chemical unit",
-   "a group of bonded atoms"
-  ],
-  "example": "A water molecule consists of two hydrogen atoms and one oxygen atom."
- },
- {
-  "id": "sci-031",
-  "topic": "science",
-  "word": "genome",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "the complete set of genetic material in an organism",
-  "collocations": [
-   "the human genome",
-   "sequence a genome",
-   "map the genome"
-  ],
-  "paraphrases": [
-   "the full set of genes",
-   "an organism's genetic code"
-  ],
-  "example": "Scientists completed the sequencing of the human genome in 2003."
- },
- {
-  "id": "sci-032",
-  "topic": "science",
-  "word": "gene",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "reading"
-  ],
-  "definition": "a unit of heredity that carries instructions for a characteristic",
-  "collocations": [
-   "a faulty gene",
-   "gene therapy",
-   "a dominant gene"
-  ],
-  "paraphrases": [
-   "a unit of inheritance",
-   "a hereditary factor"
-  ],
-  "example": "A single faulty gene can cause a serious inherited disease."
- },
- {
-  "id": "sci-033",
-  "topic": "science",
-  "word": "mutation",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "a change in the genetic material of a living thing",
-  "collocations": [
-   "a genetic mutation",
-   "a harmful mutation",
-   "undergo mutation"
-  ],
-  "paraphrases": [
-   "a genetic alteration",
-   "a change in DNA"
-  ],
-  "example": "A tiny mutation in the virus made it much easier to spread."
- },
- {
-  "id": "sci-034",
-  "topic": "science",
-  "word": "evolution",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "the gradual change of living things over many generations",
-  "collocations": [
-   "the theory of evolution",
-   "human evolution",
-   "evolution by natural selection"
-  ],
-  "paraphrases": [
-   "gradual biological development",
-   "adaptation over time"
-  ],
-  "example": "The evolution of birds from dinosaurs is supported by many fossil discoveries."
- },
- {
-  "id": "sci-035",
-  "topic": "science",
-  "word": "organism",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a living thing, especially a very small one",
-  "collocations": [
-   "a living organism",
-   "a single-celled organism",
-   "microscopic organisms"
-  ],
-  "paraphrases": [
-   "a living creature",
-   "a life form"
-  ],
-  "example": "Every organism, however small, depends on other living things for survival."
- },
- {
-  "id": "sci-036",
-  "topic": "science",
-  "word": "fossil",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "reading"
-  ],
-  "definition": "the remains of a plant or animal preserved in rock",
-  "collocations": [
-   "fossil evidence",
-   "a fossil record",
-   "a dinosaur fossil"
-  ],
-  "paraphrases": [
-   "ancient remains",
-   "a preserved prehistoric remnant"
-  ],
-  "example": "The fossil provides clear evidence that the creature lived over a hundred million years ago."
- },
- {
-  "id": "sci-037",
-  "topic": "science",
-  "word": "cell",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "the smallest basic unit of living things",
-  "collocations": [
-   "a blood cell",
-   "cell division",
-   "a single cell"
-  ],
-  "paraphrases": [
-   "the basic unit of life",
-   "a biological building block"
-  ],
-  "example": "The body is made of trillions of cells, each carrying out a particular task."
- },
- {
-  "id": "sci-038",
-  "topic": "science",
-  "word": "clinical trial",
-  "pos": "phrase",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "a research study in which a new treatment is tested on human volunteers",
-  "collocations": [
-   "conduct a clinical trial",
-   "a clinical trial of",
-   "enrol in a clinical trial"
-  ],
-  "paraphrases": [
-   "a test of a treatment on patients",
-   "a medical experiment on volunteers"
-  ],
-  "example": "The drug is being tested in a clinical trial involving two thousand patients."
- },
- {
-  "id": "sci-039",
-  "topic": "science",
-  "word": "pioneering",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "introducing new ideas or methods for the first time",
-  "collocations": [
-   "pioneering work",
-   "pioneering research",
-   "a pioneering scientist"
-  ],
-  "paraphrases": [
-   "trailblazing",
-   "innovative and first of its kind"
-  ],
-  "example": "The pioneering work of the 1950s laid the foundations for modern genetics."
- },
- {
-  "id": "sci-040",
-  "topic": "science",
-  "word": "cutting-edge",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "using the newest and most advanced ideas or methods",
-  "collocations": [
-   "cutting-edge research",
-   "cutting-edge technology",
-   "cutting-edge science"
-  ],
-  "paraphrases": [
-   "state-of-the-art",
-   "most advanced"
-  ],
-  "example": "The laboratory uses cutting-edge equipment to study individual atoms."
- },
- {
-  "id": "sci-041",
-  "topic": "science",
-  "word": "groundbreaking",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "new and very important, changing the way something is done",
-  "collocations": [
-   "a groundbreaking study",
-   "groundbreaking research",
-   "a groundbreaking discovery"
-  ],
-  "paraphrases": [
-   "revolutionary",
-   "pioneering"
-  ],
-  "example": "The groundbreaking study overturned decades of accepted belief about the cause of the disease."
- },
- {
-  "id": "sci-042",
-  "topic": "science",
-  "word": "funding",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "money provided for a particular purpose such as research",
-  "collocations": [
-   "research funding",
-   "secure funding",
-   "cut funding"
-  ],
-  "paraphrases": [
-   "financial support",
-   "money allocated"
-  ],
-  "example": "Cuts in public funding have forced several research projects to close."
- },
- {
-  "id": "sci-043",
-  "topic": "science",
-  "word": "grant",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a sum of money given for a particular purpose such as research",
-  "collocations": [
-   "a research grant",
-   "apply for a grant",
-   "receive a grant"
-  ],
-  "paraphrases": [
-   "a financial award",
-   "an award of funds"
-  ],
-  "example": "The team received a grant of two million pounds to study ocean currents."
- },
- {
-  "id": "sci-044",
-  "topic": "science",
-  "word": "researcher",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a person who carries out detailed study to discover new information",
-  "collocations": [
-   "a leading researcher",
-   "medical researchers",
-   "a team of researchers"
-  ],
-  "paraphrases": [
-   "an investigator",
-   "a scientist"
-  ],
-  "example": "A team of researchers spent five years studying the habits of the animals."
- },
- {
-  "id": "sci-045",
-  "topic": "science",
-  "word": "scholar",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a person who has studied a subject in great depth",
-  "collocations": [
-   "a leading scholar",
-   "a scholar of",
-   "a distinguished scholar"
-  ],
-  "paraphrases": [
-   "an academic",
-   "an expert"
-  ],
-  "example": "The scholar published more than fifty articles on the history of mathematics."
- },
- {
-  "id": "sci-046",
-  "topic": "science",
-  "word": "scrutiny",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "careful and critical examination",
-  "collocations": [
-   "come under scrutiny",
-   "close scrutiny",
-   "subject to scrutiny"
-  ],
-  "paraphrases": [
-   "close examination",
-   "detailed inspection"
-  ],
-  "example": "Claims of this kind must withstand rigorous scientific scrutiny."
- },
- {
-  "id": "sci-047",
-  "topic": "science",
-  "word": "rigorous",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "done carefully and thoroughly, with great attention to detail",
-  "collocations": [
-   "rigorous testing",
-   "a rigorous analysis",
-   "rigorous standards"
-  ],
-  "paraphrases": [
-   "thorough",
-   "meticulous"
-  ],
-  "example": "All new medicines undergo rigorous testing before they reach the market."
- },
- {
-  "id": "sci-048",
-  "topic": "science",
-  "word": "robust",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "strong and unlikely to fail or be proved wrong",
-  "collocations": [
-   "robust evidence",
-   "a robust methodology",
-   "a robust finding"
-  ],
-  "paraphrases": [
-   "sound",
-   "solid"
-  ],
-  "example": "The conclusions are supported by robust evidence from several independent studies."
- },
- {
-  "id": "sci-049",
-  "topic": "science",
-  "word": "credible",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "able to be believed or trusted",
-  "collocations": [
-   "a credible source",
-   "credible evidence",
-   "a credible explanation"
-  ],
-  "paraphrases": [
-   "believable",
-   "trustworthy"
-  ],
-  "example": "The scientist's claim is credible because it is backed by repeated experiments."
- },
- {
-  "id": "sci-050",
-  "topic": "science",
-  "word": "reliable",
-  "pos": "adjective",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "able to be trusted to give consistent results",
-  "collocations": [
-   "reliable data",
-   "a reliable method",
-   "a reliable source"
-  ],
-  "paraphrases": [
-   "dependable",
-   "consistent"
-  ],
-  "example": "Online surveys are quick, but their results are not always reliable."
- },
- {
-  "id": "sci-051",
-  "topic": "science",
-  "word": "bias",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "an unfair preference that affects how something is judged",
-  "collocations": [
-   "avoid bias",
-   "researcher bias",
-   "inherent bias"
-  ],
-  "paraphrases": [
-   "prejudice",
-   "partiality"
-  ],
-  "example": "Researchers must guard against bias when they interpret their own results."
- },
- {
-  "id": "sci-052",
-  "topic": "science",
-  "word": "ethical",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "relating to principles of right and wrong behaviour",
-  "collocations": [
-   "ethical concerns",
-   "an ethical dilemma",
-   "ethical standards"
-  ],
-  "paraphrases": [
-   "moral",
-   "principled"
-  ],
-  "example": "Testing on animals raises serious ethical questions for many people."
- },
- {
-  "id": "sci-053",
-  "topic": "science",
-  "word": "controversial",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "causing public disagreement or argument",
-  "collocations": [
-   "a controversial issue",
-   "a controversial theory",
-   "highly controversial"
-  ],
-  "paraphrases": [
-   "disputed",
-   "debatable"
-  ],
-  "example": "The use of human embryos in research remains highly controversial."
- },
- {
-  "id": "sci-054",
-  "topic": "science",
-  "word": "cloning",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "the process of producing an identical copy of a living thing",
-  "collocations": [
-   "human cloning",
-   "cloning technology",
-   "the cloning of animals"
-  ],
-  "paraphrases": [
-   "producing genetic copies",
-   "making identical organisms"
-  ],
-  "example": "The cloning of a sheep in 1996 sparked a worldwide debate about ethics."
- },
- {
-  "id": "sci-055",
-  "topic": "science",
-  "word": "genetic engineering",
-  "pos": "phrase",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the deliberate alteration of the genes of a living thing",
-  "collocations": [
-   "genetic engineering techniques",
-   "advances in genetic engineering",
-   "oppose genetic engineering"
-  ],
-  "paraphrases": [
-   "gene modification",
-   "the manipulation of DNA"
-  ],
-  "example": "Genetic engineering has produced crops that can resist disease."
- },
- {
-  "id": "sci-056",
-  "topic": "science",
-  "word": "stem cell",
-  "pos": "phrase",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a basic cell that can develop into many different types of cell",
-  "collocations": [
-   "stem cell research",
-   "stem cell therapy",
-   "embryonic stem cells"
-  ],
-  "paraphrases": [
-   "a cell able to become other cell types",
-   "a precursor cell"
-  ],
-  "example": "Stem cell research offers hope for treating injuries that were once considered permanent."
- },
- {
-  "id": "sci-057",
-  "topic": "science",
-  "word": "gravity",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "reading"
-  ],
-  "definition": "the force that pulls objects towards each other, especially towards the Earth",
-  "collocations": [
-   "the force of gravity",
-   "defy gravity",
-   "zero gravity"
-  ],
-  "paraphrases": [
-   "gravitational force",
-   "the pull of the Earth"
-  ],
-  "example": "Astronauts must exercise daily because the body weakens in conditions of low gravity."
- },
- {
-  "id": "sci-058",
-  "topic": "science",
-  "word": "orbit",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "reading"
-  ],
-  "definition": "the curved path of an object moving around a planet or star",
-  "collocations": [
-   "in orbit",
-   "enter orbit",
-   "the Earth's orbit"
-  ],
-  "paraphrases": [
-   "a circular path around a body",
-   "a trajectory around a planet"
-  ],
-  "example": "The satellite remains in orbit about four hundred kilometres above the Earth."
- },
- {
-  "id": "sci-059",
-  "topic": "science",
-  "word": "galaxy",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "reading"
-  ],
-  "definition": "a very large group of stars, gas and dust held together by gravity",
-  "collocations": [
-   "a distant galaxy",
-   "the Milky Way galaxy",
-   "a spiral galaxy"
-  ],
-  "paraphrases": [
-   "a vast star system",
-   "a cluster of stars"
-  ],
-  "example": "Our galaxy contains hundreds of billions of stars."
- },
- {
-  "id": "sci-060",
-  "topic": "science",
-  "word": "universe",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "reading"
-  ],
-  "definition": "all of space and everything that exists in it",
-  "collocations": [
-   "the known universe",
-   "the origin of the universe",
-   "the expanding universe"
-  ],
-  "paraphrases": [
-   "the cosmos",
-   "all of space and matter"
-  ],
-  "example": "Astronomers believe the universe began with a massive explosion about fourteen billion years ago."
- },
- {
-  "id": "sci-061",
-  "topic": "science",
-  "word": "astronomer",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading"
-  ],
-  "definition": "a scientist who studies stars, planets and other objects in space",
-  "collocations": [
-   "an amateur astronomer",
-   "a professional astronomer",
-   "astronomers discovered"
-  ],
-  "paraphrases": [
-   "a stargazer",
-   "a space scientist"
-  ],
-  "example": "The astronomer spent years observing a faint star that changed brightness at regular intervals."
- },
- {
-  "id": "sci-062",
-  "topic": "science",
-  "word": "physicist",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading"
-  ],
-  "definition": "a scientist who studies matter, energy and the forces between them",
-  "collocations": [
-   "a theoretical physicist",
-   "a nuclear physicist",
-   "a leading physicist"
-  ],
-  "paraphrases": [
-   "a scientist of matter and energy",
-   "a specialist in physics"
-  ],
-  "example": "The physicist won a prize for explaining how light behaves at very small scales."
- },
- {
-  "id": "sci-063",
-  "topic": "science",
-  "word": "biologist",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading"
-  ],
-  "definition": "a scientist who studies living things",
-  "collocations": [
-   "a marine biologist",
-   "a molecular biologist",
-   "a biologist at"
-  ],
-  "paraphrases": [
-   "a life scientist",
-   "a specialist in living organisms"
-  ],
-  "example": "The biologist spent a year in the rainforest recording the behaviour of insects."
- },
- {
-  "id": "sci-064",
-  "topic": "science",
-  "word": "reaction",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "a chemical process in which substances change into other substances",
-  "collocations": [
-   "a chemical reaction",
-   "trigger a reaction",
-   "a reaction between"
-  ],
-  "paraphrases": [
-   "a chemical change",
-   "a process of transformation"
-  ],
-  "example": "When the two liquids are mixed, a violent reaction takes place."
- },
- {
-  "id": "sci-065",
-  "topic": "science",
-  "word": "catalyst",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a substance that speeds up a chemical reaction, or something that causes change",
-  "collocations": [
-   "act as a catalyst",
-   "a catalyst for change",
-   "a chemical catalyst"
-  ],
-  "paraphrases": [
-   "something that triggers change",
-   "a reaction accelerator"
-  ],
-  "example": "The discovery acted as a catalyst for a whole new field of research."
- },
- {
-  "id": "sci-066",
-  "topic": "science",
-  "word": "compound",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a substance made of two or more elements chemically joined",
-  "collocations": [
-   "a chemical compound",
-   "an organic compound",
-   "synthetic compounds"
-  ],
-  "paraphrases": [
-   "a combined substance",
-   "a chemical combination"
-  ],
-  "example": "Water is a compound formed from hydrogen and oxygen."
- },
- {
-  "id": "sci-067",
-  "topic": "science",
-  "word": "radiation",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "energy sent out as waves or particles, such as light or X-rays",
-  "collocations": [
-   "exposure to radiation",
-   "harmful radiation",
-   "radiation levels"
-  ],
-  "paraphrases": [
-   "emitted energy",
-   "waves of energy"
-  ],
-  "example": "Prolonged exposure to radiation can damage living tissue."
- },
- {
-  "id": "sci-068",
-  "topic": "science",
-  "word": "phenomenon",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "a fact or event that can be observed, especially something unusual",
-  "collocations": [
-   "a natural phenomenon",
-   "a global phenomenon",
-   "a strange phenomenon"
-  ],
-  "paraphrases": [
-   "an observable event",
-   "a remarkable occurrence"
-  ],
-  "example": "The northern lights are a natural phenomenon caused by particles from the sun."
- },
- {
-  "id": "sci-069",
-  "topic": "science",
-  "word": "paradigm shift",
-  "pos": "phrase",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a fundamental change in the basic ideas of a subject",
-  "collocations": [
-   "a paradigm shift",
-   "undergo a paradigm shift",
-   "cause a paradigm shift"
-  ],
-  "paraphrases": [
-   "a radical change in thinking",
-   "a transformation of accepted ideas"
-  ],
-  "example": "The discovery of DNA brought about a paradigm shift in the study of life."
- },
- {
-  "id": "sci-070",
-  "topic": "science",
-  "word": "trial and error",
-  "pos": "phrase",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "a method of learning by trying different ways until one works",
-  "collocations": [
-   "by trial and error",
-   "a process of trial and error",
-   "learn through trial and error"
-  ],
-  "paraphrases": [
-   "learning from mistakes",
-   "repeated experimentation"
-  ],
-  "example": "Many early inventions were developed through trial and error rather than theory."
- },
- {
-  "id": "sci-071",
-  "topic": "science",
-  "word": "margin of error",
-  "pos": "phrase",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the range within which a measurement might be wrong",
-  "collocations": [
-   "a small margin of error",
-   "a margin of error of",
-   "allow for a margin of error"
-  ],
-  "paraphrases": [
-   "the possible degree of inaccuracy",
-   "the tolerance range"
-  ],
-  "example": "Opinion polls always carry a margin of error of a few percentage points."
- },
- {
-  "id": "sci-072",
-  "topic": "science",
-  "word": "statistically significant",
-  "pos": "phrase",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "unlikely to have happened by chance alone, according to a mathematical test",
-  "collocations": [
-   "statistically significant results",
-   "a statistically significant difference",
-   "not statistically significant"
-  ],
-  "paraphrases": [
-   "too large to be accidental",
-   "meaningful in numerical terms"
-  ],
-  "example": "The difference between the two groups was statistically significant."
- },
- {
-  "id": "sci-073",
-  "topic": "science",
-  "word": "conclusive",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "proving something beyond doubt",
-  "collocations": [
-   "conclusive evidence",
-   "conclusive proof",
-   "a conclusive result"
-  ],
-  "paraphrases": [
-   "decisive",
-   "definitive"
-  ],
-  "example": "There is no conclusive proof that the drug is responsible for the side effects."
- },
- {
-  "id": "sci-074",
-  "topic": "science",
-  "word": "tentative",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "not certain or final, and open to change",
-  "collocations": [
-   "a tentative conclusion",
-   "tentative results",
-   "tentative evidence"
-  ],
-  "paraphrases": [
-   "provisional",
-   "unconfirmed"
-  ],
-  "example": "The scientists reached a tentative conclusion but warned that more work was needed."
- },
- {
-  "id": "sci-075",
-  "topic": "science",
-  "word": "inconclusive",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "not leading to a firm result",
-  "collocations": [
-   "inconclusive evidence",
-   "inconclusive results",
-   "remain inconclusive"
-  ],
-  "paraphrases": [
-   "unconvincing",
-   "not decisive"
-  ],
-  "example": "The results of the trial were inconclusive, so a larger study was planned."
- },
- {
-  "id": "sci-076",
-  "topic": "science",
-  "word": "unravel",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to solve or understand something complicated",
-  "collocations": [
-   "unravel a mystery",
-   "unravel the secrets",
-   "begin to unravel"
-  ],
-  "paraphrases": [
-   "solve",
-   "work out"
-  ],
-  "example": "Scientists are slowly beginning to unravel the mystery of how the brain stores memories."
- },
- {
-  "id": "sci-077",
-  "topic": "science",
-  "word": "shed light on",
-  "pos": "phrase",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to help explain something not previously understood",
-  "collocations": [
-   "shed light on the cause",
-   "shed new light on",
-   "shed some light on"
-  ],
-  "paraphrases": [
-   "clarify",
-   "help to explain"
-  ],
-  "example": "The discovery of the ancient tools sheds light on how early humans lived."
- },
- {
-  "id": "sci-078",
-  "topic": "science",
-  "word": "milestone",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "an important stage or event in a process",
-  "collocations": [
-   "a major milestone",
-   "reach a milestone",
-   "a milestone in"
-  ],
-  "paraphrases": [
-   "a turning point",
-   "a significant achievement"
-  ],
-  "example": "The first landing on the moon was a milestone in human exploration."
- },
- {
-  "id": "sci-079",
-  "topic": "science",
-  "word": "hypothetical",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "based on a possible situation rather than a proven fact",
-  "collocations": [
-   "a hypothetical scenario",
-   "a hypothetical example",
-   "purely hypothetical"
-  ],
-  "paraphrases": [
-   "theoretical",
-   "assumed rather than proven"
-  ],
-  "example": "The model describes a hypothetical planet with conditions similar to those on Earth."
- }
+  {
+    "id": "sci-001",
+    "topic": "science",
+    "word": "hypothesis",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a proposed explanation that has yet to be tested",
+    "collocations": [
+      "test a hypothesis",
+      "form a hypothesis",
+      "support the hypothesis"
+    ],
+    "paraphrases": [
+      "a tentative explanation",
+      "a proposed theory"
+    ],
+    "example": "The researchers set out to test the hypothesis that sleep improves memory."
+  },
+  {
+    "id": "sci-002",
+    "topic": "science",
+    "word": "experiment",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a scientific test carried out to discover or prove something",
+    "collocations": [
+      "conduct an experiment",
+      "a controlled experiment",
+      "repeat the experiment"
+    ],
+    "paraphrases": [
+      "a trial",
+      "a scientific test"
+    ],
+    "example": "The experiment was repeated three times to make sure the results were consistent."
+  },
+  {
+    "id": "sci-003",
+    "topic": "science",
+    "word": "empirical",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "based on observation or experience rather than theory alone",
+    "collocations": [
+      "empirical evidence",
+      "empirical research",
+      "an empirical study"
+    ],
+    "paraphrases": [
+      "based on observation",
+      "evidence-based"
+    ],
+    "example": "There is little empirical evidence to support the claim that the treatment is effective."
+  },
+  {
+    "id": "sci-004",
+    "topic": "science",
+    "word": "methodology",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the system of methods used in a particular study or field",
+    "collocations": [
+      "research methodology",
+      "a sound methodology",
+      "flawed methodology"
+    ],
+    "paraphrases": [
+      "the research approach",
+      "the set of methods used"
+    ],
+    "example": "The study's methodology was criticised because the sample was too small."
+  },
+  {
+    "id": "sci-005",
+    "topic": "science",
+    "word": "variable",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a factor in an experiment that can change or be changed",
+    "collocations": [
+      "control a variable",
+      "an independent variable",
+      "a key variable"
+    ],
+    "paraphrases": [
+      "a changing factor",
+      "an element that can differ"
+    ],
+    "example": "The scientists changed only one variable at a time to see its effect."
+  },
+  {
+    "id": "sci-006",
+    "topic": "science",
+    "word": "control group",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a set of participants in an experiment who do not receive the treatment being tested",
+    "collocations": [
+      "a control group",
+      "compare with a control group",
+      "the control group received"
+    ],
+    "paraphrases": [
+      "the comparison group",
+      "untreated participants"
+    ],
+    "example": "The control group received a harmless placebo, so their results could be compared with those of the test group."
+  },
+  {
+    "id": "sci-007",
+    "topic": "science",
+    "word": "sample size",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the number of people or items studied in a piece of research",
+    "collocations": [
+      "a large sample size",
+      "increase the sample size",
+      "a small sample size"
+    ],
+    "paraphrases": [
+      "the number of participants",
+      "the scale of the study"
+    ],
+    "example": "Because the sample size was small, the findings may not apply to the wider population."
+  },
+  {
+    "id": "sci-008",
+    "topic": "science",
+    "word": "peer review",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the checking of research by other experts before it is published",
+    "collocations": [
+      "undergo peer review",
+      "a peer-reviewed journal",
+      "peer review process"
+    ],
+    "paraphrases": [
+      "evaluation by fellow specialists",
+      "expert scrutiny before publication"
+    ],
+    "example": "Peer review helps to ensure that published studies meet accepted standards."
+  },
+  {
+    "id": "sci-009",
+    "topic": "science",
+    "word": "breakthrough",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "an important discovery or development that solves a problem",
+    "collocations": [
+      "a major breakthrough",
+      "a scientific breakthrough",
+      "achieve a breakthrough"
+    ],
+    "paraphrases": [
+      "a major advance",
+      "a key discovery"
+    ],
+    "example": "Scientists announced a breakthrough in the search for a cure for the disease."
+  },
+  {
+    "id": "sci-010",
+    "topic": "science",
+    "word": "discovery",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "the act of finding something new or the thing found",
+    "collocations": [
+      "a major discovery",
+      "make a discovery",
+      "a chance discovery"
+    ],
+    "paraphrases": [
+      "a finding",
+      "a revelation"
+    ],
+    "example": "The discovery of penicillin transformed the treatment of infections."
+  },
+  {
+    "id": "sci-011",
+    "topic": "science",
+    "word": "findings",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the results of a piece of research",
+    "collocations": [
+      "the main findings",
+      "publish findings",
+      "research findings"
+    ],
+    "paraphrases": [
+      "results",
+      "conclusions"
+    ],
+    "example": "The findings suggest that regular exercise slows the ageing of the brain."
+  },
+  {
+    "id": "sci-012",
+    "topic": "science",
+    "word": "theory",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a set of ideas intended to explain facts or events",
+    "collocations": [
+      "a scientific theory",
+      "the theory of evolution",
+      "develop a theory"
+    ],
+    "paraphrases": [
+      "a proposed explanation",
+      "a model of explanation"
+    ],
+    "example": "Einstein's theory of relativity changed the way scientists understand time and space."
+  },
+  {
+    "id": "sci-013",
+    "topic": "science",
+    "word": "validate",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to prove that something is correct or true",
+    "collocations": [
+      "validate results",
+      "validate a theory",
+      "independently validated"
+    ],
+    "paraphrases": [
+      "confirm",
+      "prove correct"
+    ],
+    "example": "Further experiments are needed to validate these early results."
+  },
+  {
+    "id": "sci-014",
+    "topic": "science",
+    "word": "replicate",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to repeat a study or experiment and obtain the same results",
+    "collocations": [
+      "replicate a study",
+      "replicate results",
+      "fail to replicate"
+    ],
+    "paraphrases": [
+      "reproduce",
+      "repeat exactly"
+    ],
+    "example": "Other teams have failed to replicate the results, which casts doubt on the claim."
+  },
+  {
+    "id": "sci-015",
+    "topic": "science",
+    "word": "reproducible",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "able to be repeated with the same results",
+    "collocations": [
+      "reproducible results",
+      "a reproducible experiment",
+      "easily reproducible"
+    ],
+    "paraphrases": [
+      "repeatable",
+      "able to be duplicated"
+    ],
+    "example": "For research to be trusted, its results must be reproducible by independent teams."
+  },
+  {
+    "id": "sci-016",
+    "topic": "science",
+    "word": "anomaly",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "writing"
+    ],
+    "definition": "something that differs from what is normal or expected",
+    "collocations": [
+      "a statistical anomaly",
+      "an unexplained anomaly",
+      "detect an anomaly"
+    ],
+    "paraphrases": [
+      "an irregularity",
+      "a deviation from the norm"
+    ],
+    "example": "The anomaly in the data led the team to re-examine their equipment."
+  },
+  {
+    "id": "sci-017",
+    "topic": "science",
+    "word": "observation",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the careful watching of something in order to learn about it",
+    "collocations": [
+      "careful observation",
+      "direct observation",
+      "make an observation"
+    ],
+    "paraphrases": [
+      "close study",
+      "systematic watching"
+    ],
+    "example": "Darwin's observation of finches on the islands helped to shape his theory."
+  },
+  {
+    "id": "sci-018",
+    "topic": "science",
+    "word": "correlation",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a connection between two things that vary together",
+    "collocations": [
+      "a strong correlation",
+      "a positive correlation",
+      "show a correlation"
+    ],
+    "paraphrases": [
+      "a link",
+      "a statistical relationship"
+    ],
+    "example": "Researchers found a strong correlation between hours of sleep and exam performance."
+  },
+  {
+    "id": "sci-019",
+    "topic": "science",
+    "word": "causation",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the relationship in which one event brings about another",
+    "collocations": [
+      "prove causation",
+      "establish causation",
+      "correlation and causation"
+    ],
+    "paraphrases": [
+      "a cause-and-effect link",
+      "the production of an effect"
+    ],
+    "example": "Correlation does not necessarily imply causation, so further tests are required."
+  },
+  {
+    "id": "sci-020",
+    "topic": "science",
+    "word": "hypothesise",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to suggest an explanation that has not yet been proved",
+    "collocations": [
+      "hypothesise that",
+      "scientists hypothesise",
+      "hypothesise a link"
+    ],
+    "paraphrases": [
+      "put forward a theory",
+      "propose tentatively"
+    ],
+    "example": "Researchers hypothesise that the species migrated across the land bridge."
+  },
+  {
+    "id": "sci-021",
+    "topic": "science",
+    "word": "deduce",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to reach a conclusion by reasoning from evidence",
+    "collocations": [
+      "deduce from",
+      "deduce a conclusion",
+      "be able to deduce"
+    ],
+    "paraphrases": [
+      "infer",
+      "work out logically"
+    ],
+    "example": "Scientists deduce the age of a rock by measuring the decay of its minerals."
+  },
+  {
+    "id": "sci-022",
+    "topic": "science",
+    "word": "infer",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to form an opinion from evidence rather than direct statements",
+    "collocations": [
+      "infer from",
+      "infer a conclusion",
+      "it can be inferred that"
+    ],
+    "paraphrases": [
+      "conclude",
+      "draw a conclusion"
+    ],
+    "example": "We can infer from the data that temperatures were higher in the region a million years ago."
+  },
+  {
+    "id": "sci-023",
+    "topic": "science",
+    "word": "quantify",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to measure or express something as a number",
+    "collocations": [
+      "quantify the effect",
+      "difficult to quantify",
+      "quantify risk"
+    ],
+    "paraphrases": [
+      "measure",
+      "express numerically"
+    ],
+    "example": "It is difficult to quantify the benefits of basic research."
+  },
+  {
+    "id": "sci-024",
+    "topic": "science",
+    "word": "calibrate",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "to adjust an instrument so that its readings are accurate",
+    "collocations": [
+      "calibrate an instrument",
+      "calibrate equipment",
+      "carefully calibrated"
+    ],
+    "paraphrases": [
+      "adjust for accuracy",
+      "set a measuring device"
+    ],
+    "example": "Technicians must calibrate the instruments carefully before each new measurement is taken."
+  },
+  {
+    "id": "sci-025",
+    "topic": "science",
+    "word": "laboratory",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a room or building equipped for scientific experiments",
+    "collocations": [
+      "a research laboratory",
+      "in the laboratory",
+      "laboratory conditions"
+    ],
+    "paraphrases": [
+      "a lab",
+      "a science research facility"
+    ],
+    "example": "The vaccine was developed in a laboratory before being tested on volunteers."
+  },
+  {
+    "id": "sci-026",
+    "topic": "science",
+    "word": "specimen",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a sample of an animal, plant or substance used for study",
+    "collocations": [
+      "a rare specimen",
+      "collect specimens",
+      "a laboratory specimen"
+    ],
+    "paraphrases": [
+      "a sample",
+      "an example for study"
+    ],
+    "example": "The museum keeps thousands of preserved specimens collected over two centuries."
+  },
+  {
+    "id": "sci-027",
+    "topic": "science",
+    "word": "microscope",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "an instrument that makes very small things look larger",
+    "collocations": [
+      "under a microscope",
+      "an electron microscope",
+      "a powerful microscope"
+    ],
+    "paraphrases": [
+      "a magnifying instrument",
+      "a device for viewing tiny objects"
+    ],
+    "example": "Bacteria are too small to be seen without a microscope."
+  },
+  {
+    "id": "sci-028",
+    "topic": "science",
+    "word": "telescope",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "an instrument that makes distant objects look nearer and larger",
+    "collocations": [
+      "a space telescope",
+      "point a telescope",
+      "a powerful telescope"
+    ],
+    "paraphrases": [
+      "a viewing instrument for distant objects",
+      "an astronomical lens"
+    ],
+    "example": "The new telescope can detect light from stars that formed billions of years ago."
+  },
+  {
+    "id": "sci-029",
+    "topic": "science",
+    "word": "particle",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "an extremely small piece of matter",
+    "collocations": [
+      "a subatomic particle",
+      "a dust particle",
+      "particle physics"
+    ],
+    "paraphrases": [
+      "a tiny fragment",
+      "a minute piece of matter"
+    ],
+    "example": "Physicists use huge machines to make particles collide at high speed."
+  },
+  {
+    "id": "sci-030",
+    "topic": "science",
+    "word": "molecule",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "the smallest unit of a chemical compound, made of atoms",
+    "collocations": [
+      "a water molecule",
+      "a complex molecule",
+      "break down molecules"
+    ],
+    "paraphrases": [
+      "a chemical unit",
+      "a group of bonded atoms"
+    ],
+    "example": "A water molecule consists of two hydrogen atoms and one oxygen atom."
+  },
+  {
+    "id": "sci-031",
+    "topic": "science",
+    "word": "genome",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "the complete set of genetic material in an organism",
+    "collocations": [
+      "the human genome",
+      "sequence a genome",
+      "map the genome"
+    ],
+    "paraphrases": [
+      "the full set of genes",
+      "an organism's genetic code"
+    ],
+    "example": "Scientists completed the sequencing of the human genome in 2003."
+  },
+  {
+    "id": "sci-032",
+    "topic": "science",
+    "word": "gene",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a unit of heredity that carries instructions for a characteristic",
+    "collocations": [
+      "a faulty gene",
+      "gene therapy",
+      "a dominant gene"
+    ],
+    "paraphrases": [
+      "a unit of inheritance",
+      "a hereditary factor"
+    ],
+    "example": "A single faulty gene can cause a serious inherited disease."
+  },
+  {
+    "id": "sci-033",
+    "topic": "science",
+    "word": "mutation",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a change in the genetic material of a living thing",
+    "collocations": [
+      "a genetic mutation",
+      "a harmful mutation",
+      "undergo mutation"
+    ],
+    "paraphrases": [
+      "a genetic alteration",
+      "a change in DNA"
+    ],
+    "example": "A tiny mutation in the virus made it much easier to spread."
+  },
+  {
+    "id": "sci-034",
+    "topic": "science",
+    "word": "evolution",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "the gradual change of living things over many generations",
+    "collocations": [
+      "the theory of evolution",
+      "human evolution",
+      "evolution by natural selection"
+    ],
+    "paraphrases": [
+      "gradual biological development",
+      "adaptation over time"
+    ],
+    "example": "The evolution of birds from dinosaurs is supported by many fossil discoveries."
+  },
+  {
+    "id": "sci-035",
+    "topic": "science",
+    "word": "organism",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a living thing, especially a very small one",
+    "collocations": [
+      "a living organism",
+      "a single-celled organism",
+      "microscopic organisms"
+    ],
+    "paraphrases": [
+      "a living creature",
+      "a life form"
+    ],
+    "example": "Every organism, however small, depends on other living things for survival."
+  },
+  {
+    "id": "sci-036",
+    "topic": "science",
+    "word": "fossil",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "the remains of a plant or animal preserved in rock",
+    "collocations": [
+      "fossil evidence",
+      "a fossil record",
+      "a dinosaur fossil"
+    ],
+    "paraphrases": [
+      "ancient remains",
+      "a preserved prehistoric remnant"
+    ],
+    "example": "The fossil provides clear evidence that the creature lived over a hundred million years ago."
+  },
+  {
+    "id": "sci-037",
+    "topic": "science",
+    "word": "cell",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "the smallest basic unit of living things",
+    "collocations": [
+      "a blood cell",
+      "cell division",
+      "a single cell"
+    ],
+    "paraphrases": [
+      "the basic unit of life",
+      "a biological building block"
+    ],
+    "example": "The body is made of trillions of cells, each carrying out a particular task."
+  },
+  {
+    "id": "sci-038",
+    "topic": "science",
+    "word": "clinical trial",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a research study in which a new treatment is tested on human volunteers",
+    "collocations": [
+      "conduct a clinical trial",
+      "a clinical trial of",
+      "enrol in a clinical trial"
+    ],
+    "paraphrases": [
+      "a test of a treatment on patients",
+      "a medical experiment on volunteers"
+    ],
+    "example": "The drug is being tested in a clinical trial involving two thousand patients."
+  },
+  {
+    "id": "sci-039",
+    "topic": "science",
+    "word": "pioneering",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "introducing new ideas or methods for the first time",
+    "collocations": [
+      "pioneering work",
+      "pioneering research",
+      "a pioneering scientist"
+    ],
+    "paraphrases": [
+      "trailblazing",
+      "innovative and first of its kind"
+    ],
+    "example": "The pioneering work of the 1950s laid the foundations for modern genetics."
+  },
+  {
+    "id": "sci-040",
+    "topic": "science",
+    "word": "cutting-edge",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "using the newest and most advanced ideas or methods",
+    "collocations": [
+      "cutting-edge research",
+      "cutting-edge technology",
+      "cutting-edge science"
+    ],
+    "paraphrases": [
+      "state-of-the-art",
+      "most advanced"
+    ],
+    "example": "The laboratory uses cutting-edge equipment to study individual atoms."
+  },
+  {
+    "id": "sci-041",
+    "topic": "science",
+    "word": "groundbreaking",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "new and very important, changing the way something is done",
+    "collocations": [
+      "a groundbreaking study",
+      "groundbreaking research",
+      "a groundbreaking discovery"
+    ],
+    "paraphrases": [
+      "revolutionary",
+      "pioneering"
+    ],
+    "example": "The groundbreaking study overturned decades of accepted belief about the cause of the disease."
+  },
+  {
+    "id": "sci-042",
+    "topic": "science",
+    "word": "funding",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "money provided for a particular purpose such as research",
+    "collocations": [
+      "research funding",
+      "secure funding",
+      "cut funding"
+    ],
+    "paraphrases": [
+      "financial support",
+      "money allocated"
+    ],
+    "example": "Cuts in public funding have forced several research projects to close."
+  },
+  {
+    "id": "sci-043",
+    "topic": "science",
+    "word": "grant",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a sum of money given for a particular purpose such as research",
+    "collocations": [
+      "a research grant",
+      "apply for a grant",
+      "receive a grant"
+    ],
+    "paraphrases": [
+      "a financial award",
+      "an award of funds"
+    ],
+    "example": "The team received a grant of two million pounds to study ocean currents."
+  },
+  {
+    "id": "sci-044",
+    "topic": "science",
+    "word": "researcher",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a person who carries out detailed study to discover new information",
+    "collocations": [
+      "a leading researcher",
+      "medical researchers",
+      "a team of researchers"
+    ],
+    "paraphrases": [
+      "an investigator",
+      "a scientist"
+    ],
+    "example": "A team of researchers spent five years studying the habits of the animals."
+  },
+  {
+    "id": "sci-045",
+    "topic": "science",
+    "word": "scholar",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a person who has studied a subject in great depth",
+    "collocations": [
+      "a leading scholar",
+      "a scholar of",
+      "a distinguished scholar"
+    ],
+    "paraphrases": [
+      "an academic",
+      "an expert"
+    ],
+    "example": "The scholar published more than fifty articles on the history of mathematics."
+  },
+  {
+    "id": "sci-048",
+    "topic": "science",
+    "word": "robust",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "strong and unlikely to fail or be proved wrong",
+    "collocations": [
+      "robust evidence",
+      "a robust methodology",
+      "a robust finding"
+    ],
+    "paraphrases": [
+      "sound",
+      "solid"
+    ],
+    "example": "The conclusions are supported by robust evidence from several independent studies."
+  },
+  {
+    "id": "sci-049",
+    "topic": "science",
+    "word": "credible",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "able to be believed or trusted",
+    "collocations": [
+      "a credible source",
+      "credible evidence",
+      "a credible explanation"
+    ],
+    "paraphrases": [
+      "believable",
+      "trustworthy"
+    ],
+    "example": "The scientist's claim is credible because it is backed by repeated experiments."
+  },
+  {
+    "id": "sci-052",
+    "topic": "science",
+    "word": "ethical",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "relating to principles of right and wrong behaviour",
+    "collocations": [
+      "ethical concerns",
+      "an ethical dilemma",
+      "ethical standards"
+    ],
+    "paraphrases": [
+      "moral",
+      "principled"
+    ],
+    "example": "Testing on animals raises serious ethical questions for many people."
+  },
+  {
+    "id": "sci-053",
+    "topic": "science",
+    "word": "controversial",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "causing public disagreement or argument",
+    "collocations": [
+      "a controversial issue",
+      "a controversial theory",
+      "highly controversial"
+    ],
+    "paraphrases": [
+      "disputed",
+      "debatable"
+    ],
+    "example": "The use of human embryos in research remains highly controversial."
+  },
+  {
+    "id": "sci-054",
+    "topic": "science",
+    "word": "cloning",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "the process of producing an identical copy of a living thing",
+    "collocations": [
+      "human cloning",
+      "cloning technology",
+      "the cloning of animals"
+    ],
+    "paraphrases": [
+      "producing genetic copies",
+      "making identical organisms"
+    ],
+    "example": "The cloning of a sheep in 1996 sparked a worldwide debate about ethics."
+  },
+  {
+    "id": "sci-055",
+    "topic": "science",
+    "word": "genetic engineering",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the deliberate alteration of the genes of a living thing",
+    "collocations": [
+      "genetic engineering techniques",
+      "advances in genetic engineering",
+      "oppose genetic engineering"
+    ],
+    "paraphrases": [
+      "gene modification",
+      "the manipulation of DNA"
+    ],
+    "example": "Genetic engineering has produced crops that can resist disease."
+  },
+  {
+    "id": "sci-056",
+    "topic": "science",
+    "word": "stem cell",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a basic cell that can develop into many different types of cell",
+    "collocations": [
+      "stem cell research",
+      "stem cell therapy",
+      "embryonic stem cells"
+    ],
+    "paraphrases": [
+      "a cell able to become other cell types",
+      "a precursor cell"
+    ],
+    "example": "Stem cell research offers hope for treating injuries that were once considered permanent."
+  },
+  {
+    "id": "sci-057",
+    "topic": "science",
+    "word": "gravity",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "the force that pulls objects towards each other, especially towards the Earth",
+    "collocations": [
+      "the force of gravity",
+      "defy gravity",
+      "zero gravity"
+    ],
+    "paraphrases": [
+      "gravitational force",
+      "the pull of the Earth"
+    ],
+    "example": "Astronauts must exercise daily because the body weakens in conditions of low gravity."
+  },
+  {
+    "id": "sci-058",
+    "topic": "science",
+    "word": "orbit",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "the curved path of an object moving around a planet or star",
+    "collocations": [
+      "in orbit",
+      "enter orbit",
+      "the Earth's orbit"
+    ],
+    "paraphrases": [
+      "a circular path around a body",
+      "a trajectory around a planet"
+    ],
+    "example": "The satellite remains in orbit about four hundred kilometres above the Earth."
+  },
+  {
+    "id": "sci-059",
+    "topic": "science",
+    "word": "galaxy",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a very large group of stars, gas and dust held together by gravity",
+    "collocations": [
+      "a distant galaxy",
+      "the Milky Way galaxy",
+      "a spiral galaxy"
+    ],
+    "paraphrases": [
+      "a vast star system",
+      "a cluster of stars"
+    ],
+    "example": "Our galaxy contains hundreds of billions of stars."
+  },
+  {
+    "id": "sci-060",
+    "topic": "science",
+    "word": "universe",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "all of space and everything that exists in it",
+    "collocations": [
+      "the known universe",
+      "the origin of the universe",
+      "the expanding universe"
+    ],
+    "paraphrases": [
+      "the cosmos",
+      "all of space and matter"
+    ],
+    "example": "Astronomers believe the universe began with a massive explosion about fourteen billion years ago."
+  },
+  {
+    "id": "sci-061",
+    "topic": "science",
+    "word": "astronomer",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading"
+    ],
+    "definition": "a scientist who studies stars, planets and other objects in space",
+    "collocations": [
+      "an amateur astronomer",
+      "a professional astronomer",
+      "astronomers discovered"
+    ],
+    "paraphrases": [
+      "a stargazer",
+      "a space scientist"
+    ],
+    "example": "The astronomer spent years observing a faint star that changed brightness at regular intervals."
+  },
+  {
+    "id": "sci-062",
+    "topic": "science",
+    "word": "physicist",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "a scientist who studies matter, energy and the forces between them",
+    "collocations": [
+      "a theoretical physicist",
+      "a nuclear physicist",
+      "a leading physicist"
+    ],
+    "paraphrases": [
+      "a scientist of matter and energy",
+      "a specialist in physics"
+    ],
+    "example": "The physicist won a prize for explaining how light behaves at very small scales."
+  },
+  {
+    "id": "sci-063",
+    "topic": "science",
+    "word": "biologist",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading"
+    ],
+    "definition": "a scientist who studies living things",
+    "collocations": [
+      "a marine biologist",
+      "a molecular biologist",
+      "a biologist at"
+    ],
+    "paraphrases": [
+      "a life scientist",
+      "a specialist in living organisms"
+    ],
+    "example": "The biologist spent a year in the rainforest recording the behaviour of insects."
+  },
+  {
+    "id": "sci-064",
+    "topic": "science",
+    "word": "reaction",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a chemical process in which substances change into other substances",
+    "collocations": [
+      "a chemical reaction",
+      "trigger a reaction",
+      "a reaction between"
+    ],
+    "paraphrases": [
+      "a chemical change",
+      "a process of transformation"
+    ],
+    "example": "When the two liquids are mixed, a violent reaction takes place."
+  },
+  {
+    "id": "sci-065",
+    "topic": "science",
+    "word": "catalyst",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a substance that speeds up a chemical reaction, or something that causes change",
+    "collocations": [
+      "act as a catalyst",
+      "a catalyst for change",
+      "a chemical catalyst"
+    ],
+    "paraphrases": [
+      "something that triggers change",
+      "a reaction accelerator"
+    ],
+    "example": "The discovery acted as a catalyst for a whole new field of research."
+  },
+  {
+    "id": "sci-066",
+    "topic": "science",
+    "word": "compound",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a substance made of two or more elements chemically joined",
+    "collocations": [
+      "a chemical compound",
+      "an organic compound",
+      "synthetic compounds"
+    ],
+    "paraphrases": [
+      "a combined substance",
+      "a chemical combination"
+    ],
+    "example": "Water is a compound formed from hydrogen and oxygen."
+  },
+  {
+    "id": "sci-067",
+    "topic": "science",
+    "word": "radiation",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "energy sent out as waves or particles, such as light or X-rays",
+    "collocations": [
+      "exposure to radiation",
+      "harmful radiation",
+      "radiation levels"
+    ],
+    "paraphrases": [
+      "emitted energy",
+      "waves of energy"
+    ],
+    "example": "Prolonged exposure to radiation can damage living tissue."
+  },
+  {
+    "id": "sci-068",
+    "topic": "science",
+    "word": "phenomenon",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a fact or event that can be observed, especially something unusual",
+    "collocations": [
+      "a natural phenomenon",
+      "a global phenomenon",
+      "a strange phenomenon"
+    ],
+    "paraphrases": [
+      "an observable event",
+      "a remarkable occurrence"
+    ],
+    "example": "The northern lights are a natural phenomenon caused by particles from the sun."
+  },
+  {
+    "id": "sci-069",
+    "topic": "science",
+    "word": "paradigm shift",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a fundamental change in the basic ideas of a subject",
+    "collocations": [
+      "a paradigm shift",
+      "undergo a paradigm shift",
+      "cause a paradigm shift"
+    ],
+    "paraphrases": [
+      "a radical change in thinking",
+      "a transformation of accepted ideas"
+    ],
+    "example": "The discovery of DNA brought about a paradigm shift in the study of life."
+  },
+  {
+    "id": "sci-070",
+    "topic": "science",
+    "word": "trial and error",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a method of learning by trying different ways until one works",
+    "collocations": [
+      "by trial and error",
+      "a process of trial and error",
+      "learn through trial and error"
+    ],
+    "paraphrases": [
+      "learning from mistakes",
+      "repeated experimentation"
+    ],
+    "example": "Many early inventions were developed through trial and error rather than theory."
+  },
+  {
+    "id": "sci-071",
+    "topic": "science",
+    "word": "margin of error",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the range within which a measurement might be wrong",
+    "collocations": [
+      "a small margin of error",
+      "a margin of error of",
+      "allow for a margin of error"
+    ],
+    "paraphrases": [
+      "the possible degree of inaccuracy",
+      "the tolerance range"
+    ],
+    "example": "Opinion polls always carry a margin of error of a few percentage points."
+  },
+  {
+    "id": "sci-072",
+    "topic": "science",
+    "word": "statistically significant",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "unlikely to have happened by chance alone, according to a mathematical test",
+    "collocations": [
+      "statistically significant results",
+      "a statistically significant difference",
+      "not statistically significant"
+    ],
+    "paraphrases": [
+      "too large to be accidental",
+      "meaningful in numerical terms"
+    ],
+    "example": "The difference between the two groups was statistically significant."
+  },
+  {
+    "id": "sci-073",
+    "topic": "science",
+    "word": "conclusive",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "proving something beyond doubt",
+    "collocations": [
+      "conclusive evidence",
+      "conclusive proof",
+      "a conclusive result"
+    ],
+    "paraphrases": [
+      "decisive",
+      "definitive"
+    ],
+    "example": "There is no conclusive proof that the drug is responsible for the side effects."
+  },
+  {
+    "id": "sci-074",
+    "topic": "science",
+    "word": "tentative",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "not certain or final, and open to change",
+    "collocations": [
+      "a tentative conclusion",
+      "tentative results",
+      "tentative evidence"
+    ],
+    "paraphrases": [
+      "provisional",
+      "unconfirmed"
+    ],
+    "example": "The scientists reached a tentative conclusion but warned that more work was needed."
+  },
+  {
+    "id": "sci-075",
+    "topic": "science",
+    "word": "inconclusive",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "not leading to a firm result",
+    "collocations": [
+      "inconclusive evidence",
+      "inconclusive results",
+      "remain inconclusive"
+    ],
+    "paraphrases": [
+      "unconvincing",
+      "not decisive"
+    ],
+    "example": "The results of the trial were inconclusive, so a larger study was planned."
+  },
+  {
+    "id": "sci-076",
+    "topic": "science",
+    "word": "unravel",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to solve or understand something complicated",
+    "collocations": [
+      "unravel a mystery",
+      "unravel the secrets",
+      "begin to unravel"
+    ],
+    "paraphrases": [
+      "solve",
+      "work out"
+    ],
+    "example": "Scientists are slowly beginning to unravel the mystery of how the brain stores memories."
+  },
+  {
+    "id": "sci-077",
+    "topic": "science",
+    "word": "shed light on",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to help explain something not previously understood",
+    "collocations": [
+      "shed light on the cause",
+      "shed new light on",
+      "shed some light on"
+    ],
+    "paraphrases": [
+      "clarify",
+      "help to explain"
+    ],
+    "example": "The discovery of the ancient tools sheds light on how early humans lived."
+  },
+  {
+    "id": "sci-078",
+    "topic": "science",
+    "word": "milestone",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "an important stage or event in a process",
+    "collocations": [
+      "a major milestone",
+      "reach a milestone",
+      "a milestone in"
+    ],
+    "paraphrases": [
+      "a turning point",
+      "a significant achievement"
+    ],
+    "example": "The first landing on the moon was a milestone in human exploration."
+  },
+  {
+    "id": "sci-079",
+    "topic": "science",
+    "word": "hypothetical",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "based on a possible situation rather than a proven fact",
+    "collocations": [
+      "a hypothetical scenario",
+      "a hypothetical example",
+      "purely hypothetical"
+    ],
+    "paraphrases": [
+      "theoretical",
+      "assumed rather than proven"
+    ],
+    "example": "The model describes a hypothetical planet with conditions similar to those on Earth."
+  }
 ]

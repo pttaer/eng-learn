@@ -1,1782 +1,1825 @@
 [
- {
-  "id": "cri-001",
-  "topic": "crime",
-  "word": "offender",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "a person who has committed a crime",
-  "collocations": [
-   "young offender",
-   "repeat offender",
-   "first-time offender"
-  ],
-  "paraphrases": [
-   "lawbreaker",
-   "criminal"
-  ],
-  "example": "First-time offenders are often given community sentences instead of prison terms."
- },
- {
-  "id": "cri-002",
-  "topic": "crime",
-  "word": "perpetrator",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a person who carries out a harmful or illegal act",
-  "collocations": [
-   "perpetrator of a crime",
-   "identify the perpetrator",
-   "brutal perpetrator"
-  ],
-  "paraphrases": [
-   "culprit",
-   "person responsible"
-  ],
-  "example": "Police have not yet identified the perpetrator of the attack on the bank."
- },
- {
-  "id": "cri-003",
-  "topic": "crime",
-  "word": "burglary",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "the crime of entering a building illegally in order to steal",
-  "collocations": [
-   "commit burglary",
-   "burglary rate",
-   "domestic burglary"
-  ],
-  "paraphrases": [
-   "housebreaking",
-   "breaking and entering"
-  ],
-  "example": "Burglary fell by a fifth after residents installed better locks and security lighting."
- },
- {
-  "id": "cri-004",
-  "topic": "crime",
-  "word": "robbery",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "the crime of stealing from a person or place using force or threats",
-  "collocations": [
-   "armed robbery",
-   "bank robbery",
-   "commit a robbery"
-  ],
-  "paraphrases": [
-   "hold-up",
-   "theft with violence"
-  ],
-  "example": "The armed robbery lasted less than two minutes, but the cashier was left deeply shaken."
- },
- {
-  "id": "cri-005",
-  "topic": "crime",
-  "word": "shoplifting",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "the crime of taking goods from a shop without paying",
-  "collocations": [
-   "prevent shoplifting",
-   "petty shoplifting",
-   "shoplifting incident"
-  ],
-  "paraphrases": [
-   "stealing from shops",
-   "retail theft"
-  ],
-  "example": "Shoplifting costs retailers millions of pounds a year and raises prices for honest customers."
- },
- {
-  "id": "cri-006",
-  "topic": "crime",
-  "word": "vandalism",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "the deliberate damage of public or private property",
-  "collocations": [
-   "act of vandalism",
-   "acts of vandalism",
-   "combat vandalism"
-  ],
-  "paraphrases": [
-   "property destruction",
-   "wilful damage"
-  ],
-  "example": "Bright lighting and cameras in the car park have reduced vandalism considerably."
- },
- {
-  "id": "cri-007",
-  "topic": "crime",
-  "word": "fraud",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the crime of deceiving someone in order to gain money or an advantage illegally",
-  "collocations": [
-   "commit fraud",
-   "credit card fraud",
-   "tax fraud"
-  ],
-  "paraphrases": [
-   "deception",
-   "swindling"
-  ],
-  "example": "The accountant was jailed for fraud after altering the company's records for several years."
- },
- {
-  "id": "cri-008",
-  "topic": "crime",
-  "word": "embezzlement",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the crime of secretly taking money that has been placed in your care",
-  "collocations": [
-   "charged with embezzlement",
-   "embezzlement of funds",
-   "corporate embezzlement"
-  ],
-  "paraphrases": [
-   "misappropriation of funds",
-   "theft of entrusted money"
-  ],
-  "example": "The treasurer was accused of embezzlement after thousands of pounds disappeared from the charity."
- },
- {
-  "id": "cri-009",
-  "topic": "crime",
-  "word": "bribery",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the offering of money or gifts to persuade someone to act dishonestly",
-  "collocations": [
-   "accused of bribery",
-   "bribery scandal",
-   "bribery and corruption"
-  ],
-  "paraphrases": [
-   "payment of illegal inducements",
-   "buying influence"
-  ],
-  "example": "Bribery in the construction industry can result in poorly built and unsafe buildings."
- },
- {
-  "id": "cri-010",
-  "topic": "crime",
-  "word": "arson",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the crime of deliberately setting fire to a building",
-  "collocations": [
-   "commit arson",
-   "suspected arson",
-   "arson attack"
-  ],
-  "paraphrases": [
-   "deliberate fire-setting",
-   "criminal fire-raising"
-  ],
-  "example": "Fire investigators believe the warehouse blaze was a case of arson rather than an accident."
- },
- {
-  "id": "cri-011",
-  "topic": "crime",
-  "word": "assault",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "a violent physical attack on a person",
-  "collocations": [
-   "physical assault",
-   "sexual assault",
-   "charged with assault"
-  ],
-  "paraphrases": [
-   "violent attack",
-   "physical attack"
-  ],
-  "example": "He was charged with assault after a fight outside a nightclub left another man in hospital."
- },
- {
-  "id": "cri-012",
-  "topic": "crime",
-  "word": "homicide",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the killing of one person by another",
-  "collocations": [
-   "homicide rate",
-   "investigate a homicide",
-   "homicide victim"
-  ],
-  "paraphrases": [
-   "killing",
-   "unlawful killing"
-  ],
-  "example": "The homicide rate in the region has fallen steadily over the past decade."
- },
- {
-  "id": "cri-013",
-  "topic": "crime",
-  "word": "trafficking",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the illegal trade in people, drugs or weapons",
-  "collocations": [
-   "drug trafficking",
-   "human trafficking",
-   "combat trafficking"
-  ],
-  "paraphrases": [
-   "illegal trade",
-   "illicit dealing"
-  ],
-  "example": "International cooperation is essential to combat human trafficking across borders."
- },
- {
-  "id": "cri-014",
-  "topic": "crime",
-  "word": "smuggling",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "the illegal movement of goods or people into or out of a country",
-  "collocations": [
-   "drug smuggling",
-   "smuggling ring",
-   "smuggling route"
-  ],
-  "paraphrases": [
-   "illegal importation",
-   "contraband trade"
-  ],
-  "example": "Customs officers uncovered a smuggling operation hidden inside a shipment of furniture."
- },
- {
-  "id": "cri-015",
-  "topic": "crime",
-  "word": "counterfeit",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "made as a copy of something valuable in order to deceive people",
-  "collocations": [
-   "counterfeit goods",
-   "counterfeit banknotes",
-   "counterfeit medicine"
-  ],
-  "paraphrases": [
-   "fake",
-   "forged"
-  ],
-  "example": "Counterfeit medicines are dangerous because they may contain the wrong ingredients."
- },
- {
-  "id": "cri-016",
-  "topic": "crime",
-  "word": "forgery",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the crime of making a false copy of a document, signature or work of art",
-  "collocations": [
-   "commit forgery",
-   "forgery of documents",
-   "skilful forgery"
-  ],
-  "paraphrases": [
-   "falsification",
-   "fake copy"
-  ],
-  "example": "Experts concluded that the signature on the will was a forgery."
- },
- {
-  "id": "cri-017",
-  "topic": "crime",
-  "word": "delinquency",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "minor crime or antisocial behaviour, especially by young people",
-  "collocations": [
-   "juvenile delinquency",
-   "combat delinquency",
-   "delinquency rate"
-  ],
-  "paraphrases": [
-   "youth offending",
-   "juvenile misbehaviour"
-  ],
-  "example": "Poverty and a lack of supervision are often cited as causes of delinquency among teenagers."
- },
- {
-  "id": "cri-018",
-  "topic": "crime",
-  "word": "juvenile offender",
-  "pos": "phrase",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a young person who has broken the law",
-  "collocations": [
-   "treat juvenile offenders",
-   "juvenile offender programme",
-   "sentencing juvenile offenders"
-  ],
-  "paraphrases": [
-   "young lawbreaker",
-   "youth criminal"
-  ],
-  "example": "Many experts believe a juvenile offender should receive education rather than a prison sentence."
- },
- {
-  "id": "cri-019",
-  "topic": "crime",
-  "word": "reoffend",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to commit another crime after having been punished for an earlier one",
-  "collocations": [
-   "likely to reoffend",
-   "risk of reoffending",
-   "reoffend within a year"
-  ],
-  "paraphrases": [
-   "commit crime again",
-   "relapse into crime"
-  ],
-  "example": "Prisoners who learn a trade during their sentence are less likely to reoffend after release."
- },
- {
-  "id": "cri-020",
-  "topic": "crime",
-  "word": "recidivism",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the tendency of a convicted criminal to commit further crimes",
-  "collocations": [
-   "reduce recidivism",
-   "high rates of recidivism",
-   "recidivism rate"
-  ],
-  "paraphrases": [
-   "repeat offending",
-   "return to crime"
-  ],
-  "example": "Rehabilitation programmes aim to lower recidivism by helping prisoners find jobs."
- },
- {
-  "id": "cri-021",
-  "topic": "crime",
-  "word": "rehabilitation",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the process of helping an offender return to normal life in society",
-  "collocations": [
-   "rehabilitation programme",
-   "prisoner rehabilitation",
-   "focus on rehabilitation"
-  ],
-  "paraphrases": [
-   "reintegration",
-   "reform"
-  ],
-  "example": "Supporters of rehabilitation argue that prison should prepare inmates for life outside."
- },
- {
-  "id": "cri-022",
-  "topic": "crime",
-  "word": "deterrent",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "something that discourages people from doing an action by making them afraid of the result",
-  "collocations": [
-   "act as a deterrent",
-   "effective deterrent",
-   "powerful deterrent"
-  ],
-  "paraphrases": [
-   "disincentive",
-   "discouragement"
-  ],
-  "example": "Visible police patrols are a powerful deterrent to street crime."
- },
- {
-  "id": "cri-023",
-  "topic": "crime",
-  "word": "sentence",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "the punishment given to a person found guilty in a court",
-  "collocations": [
-   "serve a sentence",
-   "harsh sentence",
-   "suspended sentence"
-  ],
-  "paraphrases": [
-   "punishment",
-   "penalty"
-  ],
-  "example": "The judge handed down a two-year sentence, which was later reduced on appeal."
- },
- {
-  "id": "cri-024",
-  "topic": "crime",
-  "word": "imprisonment",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the state of being kept in prison as a punishment",
-  "collocations": [
-   "life imprisonment",
-   "sentenced to imprisonment",
-   "risk of imprisonment"
-  ],
-  "paraphrases": [
-   "incarceration",
-   "confinement in jail"
-  ],
-  "example": "Imprisonment removes dangerous people from society, but it does little to change their behaviour."
- },
- {
-  "id": "cri-025",
-  "topic": "crime",
-  "word": "community service",
-  "pos": "phrase",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "unpaid work done for the benefit of the public instead of a prison term",
-  "collocations": [
-   "do community service",
-   "sentenced to community service",
-   "hours of community service"
-  ],
-  "paraphrases": [
-   "unpaid public work",
-   "work for the community"
-  ],
-  "example": "Teenagers who damaged the bus shelter were ordered to complete eighty hours of community service."
- },
- {
-  "id": "cri-026",
-  "topic": "crime",
-  "word": "probation",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "a period during which an offender is supervised in the community instead of being in prison",
-  "collocations": [
-   "on probation",
-   "probation officer",
-   "serve probation"
-  ],
-  "paraphrases": [
-   "supervised release",
-   "community supervision"
-  ],
-  "example": "He was placed on probation for two years and had to report to an officer every week."
- },
- {
-  "id": "cri-027",
-  "topic": "crime",
-  "word": "parole",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the early release of a prisoner on condition of good behaviour",
-  "collocations": [
-   "released on parole",
-   "parole board",
-   "apply for parole"
-  ],
-  "paraphrases": [
-   "conditional early release",
-   "supervised release"
-  ],
-  "example": "She was released on parole after serving half of her sentence."
- },
- {
-  "id": "cri-028",
-  "topic": "crime",
-  "word": "convict",
-  "pos": "verb",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to prove or declare in a court that someone is guilty of a crime",
-  "collocations": [
-   "be convicted of",
-   "convict a suspect",
-   "wrongly convicted"
-  ],
-  "paraphrases": [
-   "find guilty",
-   "declare guilty"
-  ],
-  "example": "A suspect can only be convicted if the jury believes the evidence beyond reasonable doubt."
- },
- {
-  "id": "cri-029",
-  "topic": "crime",
-  "word": "acquit",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to decide in a court that a person is not guilty of a crime",
-  "collocations": [
-   "be acquitted of",
-   "acquit the defendant",
-   "unanimously acquitted"
-  ],
-  "paraphrases": [
-   "find not guilty",
-   "clear of a charge"
-  ],
-  "example": "The jury acquitted the defendant after a witness admitted she had lied."
- },
- {
-  "id": "cri-030",
-  "topic": "crime",
-  "word": "prosecute",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to take legal action against someone accused of a crime",
-  "collocations": [
-   "prosecute an offender",
-   "be prosecuted for",
-   "prosecute a case"
-  ],
-  "paraphrases": [
-   "bring charges against",
-   "take to court"
-  ],
-  "example": "Shops rarely prosecute children for stealing small items and usually contact their parents instead."
- },
- {
-  "id": "cri-031",
-  "topic": "crime",
-  "word": "testify",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to give evidence as a witness in a court of law",
-  "collocations": [
-   "testify in court",
-   "testify against",
-   "testify under oath"
-  ],
-  "paraphrases": [
-   "give evidence",
-   "give testimony"
-  ],
-  "example": "Two neighbours agreed to testify against the man accused of the break-in."
- },
- {
-  "id": "cri-032",
-  "topic": "crime",
-  "word": "witness",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "a person who sees a crime or an accident and can describe what happened",
-  "collocations": [
-   "key witness",
-   "eyewitness",
-   "call a witness"
-  ],
-  "paraphrases": [
-   "observer",
-   "onlooker"
-  ],
-  "example": "A key witness came forward after the police published a photograph of the car."
- },
- {
-  "id": "cri-033",
-  "topic": "crime",
-  "word": "evidence",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "facts or signs that help prove whether something is true or a person is guilty",
-  "collocations": [
-   "physical evidence",
-   "insufficient evidence",
-   "gather evidence"
-  ],
-  "paraphrases": [
-   "proof",
-   "grounds"
-  ],
-  "example": "There was not enough evidence to charge the man, so he was released the following morning."
- },
- {
-  "id": "cri-034",
-  "topic": "crime",
-  "word": "suspect",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "a person who is thought to have committed a crime",
-  "collocations": [
-   "prime suspect",
-   "police suspect",
-   "arrest a suspect"
-  ],
-  "paraphrases": [
-   "person of interest",
-   "accused person"
-  ],
-  "example": "The prime suspect was seen on camera leaving the shop shortly before the alarm sounded."
- },
- {
-  "id": "cri-035",
-  "topic": "crime",
-  "word": "arrest",
-  "pos": "verb",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "to take a person into custody because they are thought to have committed a crime",
-  "collocations": [
-   "arrest a suspect",
-   "be arrested for",
-   "arrest warrant"
-  ],
-  "paraphrases": [
-   "take into custody",
-   "apprehend"
-  ],
-  "example": "Officers arrested two men outside the jeweller's shop late on Friday night."
- },
- {
-  "id": "cri-036",
-  "topic": "crime",
-  "word": "detain",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to keep someone in official custody or prevent them from leaving",
-  "collocations": [
-   "detain a suspect",
-   "be detained",
-   "detained for questioning"
-  ],
-  "paraphrases": [
-   "hold in custody",
-   "keep in custody"
-  ],
-  "example": "Under the new law, police may detain a suspect for up to twenty-four hours without charge."
- },
- {
-  "id": "cri-037",
-  "topic": "crime",
-  "word": "interrogate",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to question a person closely, often for a long time",
-  "collocations": [
-   "interrogate a suspect",
-   "be interrogated",
-   "interrogate for hours"
-  ],
-  "paraphrases": [
-   "question closely",
-   "cross-examine"
-  ],
-  "example": "Detectives interrogate suspects in a room where all conversations are recorded."
- },
- {
-  "id": "cri-038",
-  "topic": "crime",
-  "word": "apprehend",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to catch and arrest a person suspected of a crime",
-  "collocations": [
-   "apprehend a suspect",
-   "apprehend the offender",
-   "fail to apprehend"
-  ],
-  "paraphrases": [
-   "capture",
-   "catch"
-  ],
-  "example": "Police managed to apprehend the thief within minutes of the alarm being raised."
- },
- {
-  "id": "cri-039",
-  "topic": "crime",
-  "word": "trial",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "a formal examination of a legal case in a court",
-  "collocations": [
-   "stand trial",
-   "fair trial",
-   "go on trial"
-  ],
-  "paraphrases": [
-   "court case",
-   "legal hearing"
-  ],
-  "example": "The trial lasted three weeks, and the court heard from more than twenty witnesses."
- },
- {
-  "id": "cri-040",
-  "topic": "crime",
-  "word": "verdict",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "the official decision of a jury or judge about whether a person is guilty",
-  "collocations": [
-   "reach a verdict",
-   "guilty verdict",
-   "deliver a verdict"
-  ],
-  "paraphrases": [
-   "court decision",
-   "ruling"
-  ],
-  "example": "The jury took only two hours to reach a unanimous verdict."
- },
- {
-  "id": "cri-041",
-  "topic": "crime",
-  "word": "jury",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "a group of ordinary citizens who decide whether a person is guilty in a court",
-  "collocations": [
-   "jury service",
-   "trial by jury",
-   "member of the jury"
-  ],
-  "paraphrases": [
-   "panel of citizens",
-   "group of jurors"
-  ],
-  "example": "Serving on a jury is a civic duty that many people find both interesting and stressful."
- },
- {
-  "id": "cri-042",
-  "topic": "crime",
-  "word": "defendant",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a person who is accused of a crime in a court of law",
-  "collocations": [
-   "the defendant pleaded",
-   "defendant's lawyer",
-   "acquit the defendant"
-  ],
-  "paraphrases": [
-   "accused",
-   "person on trial"
-  ],
-  "example": "The defendant pleaded not guilty and insisted that he had been at home all evening."
- },
- {
-  "id": "cri-043",
-  "topic": "crime",
-  "word": "law-abiding",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "always obeying the law and its rules",
-  "collocations": [
-   "law-abiding citizen",
-   "law-abiding residents",
-   "law-abiding majority"
-  ],
-  "paraphrases": [
-   "obedient to the law",
-   "honest"
-  ],
-  "example": "Most law-abiding citizens would never dream of stealing, even if they could avoid being caught."
- },
- {
-  "id": "cri-044",
-  "topic": "crime",
-  "word": "petty crime",
-  "pos": "phrase",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "minor illegal acts such as small thefts",
-  "collocations": [
-   "commit petty crime",
-   "petty crime rate",
-   "petty crime and vandalism"
-  ],
-  "paraphrases": [
-   "minor offences",
-   "low-level crime"
-  ],
-  "example": "Petty crime such as pickpocketing is common in crowded tourist areas."
- },
- {
-  "id": "cri-045",
-  "topic": "crime",
-  "word": "organised crime",
-  "pos": "phrase",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "illegal activity carried out by well-structured criminal groups",
-  "collocations": [
-   "tackle organised crime",
-   "organised crime group",
-   "fight organised crime"
-  ],
-  "paraphrases": [
-   "gang crime",
-   "syndicate activity"
-  ],
-  "example": "Organised crime depends on corruption, and it often operates across several countries at once."
- },
- {
-  "id": "cri-046",
-  "topic": "crime",
-  "word": "violent crime",
-  "pos": "phrase",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "a crime in which people are harmed or threatened with harm",
-  "collocations": [
-   "violent crime rate",
-   "rise in violent crime",
-   "tackle violent crime"
-  ],
-  "paraphrases": [
-   "crimes against the person",
-   "offences involving force"
-  ],
-  "example": "Violent crime is more frequent in areas where unemployment and poverty are high."
- },
- {
-  "id": "cri-047",
-  "topic": "crime",
-  "word": "cybercrime",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "illegal activity carried out using computers or the internet",
-  "collocations": [
-   "combat cybercrime",
-   "victim of cybercrime",
-   "cybercrime unit"
-  ],
-  "paraphrases": [
-   "online crime",
-   "internet crime"
-  ],
-  "example": "Cybercrime is growing quickly because criminals can target victims anywhere in the world."
- },
- {
-  "id": "cri-048",
-  "topic": "crime",
-  "word": "identity theft",
-  "pos": "phrase",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "the crime of using another person's personal details to obtain money or goods",
-  "collocations": [
-   "victim of identity theft",
-   "prevent identity theft",
-   "identity theft protection"
-  ],
-  "paraphrases": [
-   "stealing personal details",
-   "impersonation fraud"
-  ],
-  "example": "Never share your passwords, because identity theft can take years to resolve."
- },
- {
-  "id": "cri-049",
-  "topic": "crime",
-  "word": "surveillance",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the close observation of people or places in order to prevent or detect crime",
-  "collocations": [
-   "under surveillance",
-   "CCTV surveillance",
-   "mass surveillance"
-  ],
-  "paraphrases": [
-   "monitoring",
-   "close observation"
-  ],
-  "example": "Increased surveillance in public places has raised concerns about personal privacy."
- },
- {
-  "id": "cri-050",
-  "topic": "crime",
-  "word": "patrol",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "a regular journey around an area by police to prevent crime",
-  "collocations": [
-   "police patrol",
-   "foot patrol",
-   "on patrol"
-  ],
-  "paraphrases": [
-   "regular police rounds",
-   "security round"
-  ],
-  "example": "More foot patrols in the town centre have made shoppers feel safer at night."
- },
- {
-  "id": "cri-051",
-  "topic": "crime",
-  "word": "crackdown",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "severe action taken by authorities to stop an illegal activity",
-  "collocations": [
-   "police crackdown",
-   "launch a crackdown",
-   "crackdown on crime"
-  ],
-  "paraphrases": [
-   "clampdown",
-   "tough measures"
-  ],
-  "example": "The government announced a crackdown on illegal gambling after several complaints."
- },
- {
-  "id": "cri-052",
-  "topic": "crime",
-  "word": "capital punishment",
-  "pos": "phrase",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the legal killing of a person as a punishment for a serious crime",
-  "collocations": [
-   "abolish capital punishment",
-   "support capital punishment",
-   "capital punishment debate"
-  ],
-  "paraphrases": [
-   "death penalty",
-   "execution"
-  ],
-  "example": "Opponents of capital punishment argue that it can never be undone if a mistake is made."
- },
- {
-  "id": "cri-053",
-  "topic": "crime",
-  "word": "life sentence",
-  "pos": "phrase",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "a punishment under which a criminal stays in prison for the rest of their life or a very long time",
-  "collocations": [
-   "serve a life sentence",
-   "receive a life sentence",
-   "mandatory life sentence"
-  ],
-  "paraphrases": [
-   "imprisonment for life",
-   "lifelong imprisonment"
-  ],
-  "example": "A life sentence for murder is the norm in many legal systems."
- },
- {
-  "id": "cri-054",
-  "topic": "crime",
-  "word": "lenient",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "not as strict as expected when punishing someone",
-  "collocations": [
-   "lenient sentence",
-   "too lenient",
-   "lenient treatment"
-  ],
-  "paraphrases": [
-   "merciful",
-   "soft"
-  ],
-  "example": "Many people feel that courts are too lenient with repeat offenders."
- },
- {
-  "id": "cri-055",
-  "topic": "crime",
-  "word": "punitive",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "intended as punishment, especially a severe one",
-  "collocations": [
-   "punitive measures",
-   "punitive approach",
-   "punitive sentence"
-  ],
-  "paraphrases": [
-   "penal",
-   "disciplinary"
-  ],
-  "example": "A purely punitive approach to crime seldom reduces the likelihood of reoffending."
- },
- {
-  "id": "cri-056",
-  "topic": "crime",
-  "word": "retribution",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "severe punishment given as a payment for a wrong that has been done",
-  "collocations": [
-   "seek retribution",
-   "fear of retribution",
-   "retribution rather than reform"
-  ],
-  "paraphrases": [
-   "revenge",
-   "payback"
-  ],
-  "example": "Some victims' families regard a long prison term as retribution rather than justice."
- },
- {
-  "id": "cri-057",
-  "topic": "crime",
-  "word": "remorse",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "a deep feeling of guilt about something wrong that you have done",
-  "collocations": [
-   "show remorse",
-   "feel remorse",
-   "express remorse"
-  ],
-  "paraphrases": [
-   "regret",
-   "guilt"
-  ],
-  "example": "The judge reduced the sentence because the young man showed genuine remorse."
- },
- {
-  "id": "cri-058",
-  "topic": "crime",
-  "word": "culprit",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "the person who is responsible for a crime or something bad",
-  "collocations": [
-   "identify the culprit",
-   "find the culprit",
-   "the real culprit"
-  ],
-  "paraphrases": [
-   "guilty party",
-   "wrongdoer"
-  ],
-  "example": "Security footage helped detectives to identify the culprit within a day."
- },
- {
-  "id": "cri-059",
-  "topic": "crime",
-  "word": "accomplice",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a person who helps someone else to commit a crime",
-  "collocations": [
-   "act as an accomplice",
-   "accomplice to murder",
-   "arrest an accomplice"
-  ],
-  "paraphrases": [
-   "partner in crime",
-   "accessory"
-  ],
-  "example": "The robber and his accomplice were both arrested at the airport."
- },
- {
-  "id": "cri-060",
-  "topic": "crime",
-  "word": "pickpocket",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a thief who steals from people's pockets or bags in crowded places",
-  "collocations": [
-   "beware of pickpockets",
-   "crowded with pickpockets",
-   "pickpocket gang"
-  ],
-  "paraphrases": [
-   "bag thief",
-   "street thief"
-  ],
-  "example": "Tourists are warned to watch for a pickpocket on busy trains and in markets."
- },
- {
-  "id": "cri-061",
-  "topic": "crime",
-  "word": "loot",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to steal goods from shops or homes during a riot or disaster",
-  "collocations": [
-   "loot shops",
-   "looted stores",
-   "looting spread"
-  ],
-  "paraphrases": [
-   "plunder",
-   "ransack"
-  ],
-  "example": "Crowds began to loot shops after the power cut that followed the storm."
- },
- {
-  "id": "cri-062",
-  "topic": "crime",
-  "word": "ransom",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "money demanded in exchange for the release of a kidnapped person",
-  "collocations": [
-   "pay a ransom",
-   "demand a ransom",
-   "ransom note"
-  ],
-  "paraphrases": [
-   "payment for release",
-   "kidnap money"
-  ],
-  "example": "The family paid a large ransom but their daughter was not released for another week."
- },
- {
-  "id": "cri-063",
-  "topic": "crime",
-  "word": "kidnap",
-  "pos": "verb",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "to take someone away illegally and hold them, often to demand money",
-  "collocations": [
-   "kidnap a child",
-   "be kidnapped",
-   "kidnap for ransom"
-  ],
-  "paraphrases": [
-   "abduct",
-   "seize"
-  ],
-  "example": "Armed men attempted to kidnap the businessman as he left his office."
- },
- {
-  "id": "cri-064",
-  "topic": "crime",
-  "word": "blackmail",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the crime of threatening to reveal secrets unless money is paid",
-  "collocations": [
-   "emotional blackmail",
-   "victim of blackmail",
-   "resort to blackmail"
-  ],
-  "paraphrases": [
-   "extortion by threat",
-   "coercion"
-  ],
-  "example": "The official resigned after admitting that he had been a victim of blackmail."
- },
- {
-  "id": "cri-065",
-  "topic": "crime",
-  "word": "extortion",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the crime of obtaining money by using force or threats",
-  "collocations": [
-   "accused of extortion",
-   "extortion racket",
-   "extortion and bribery"
-  ],
-  "paraphrases": [
-   "illegal demands for money",
-   "coercion for payment"
-  ],
-  "example": "Shopkeepers in the district have been paying extortion money to local gangs for years."
- },
- {
-  "id": "cri-066",
-  "topic": "crime",
-  "word": "money laundering",
-  "pos": "phrase",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the process of making illegally obtained money appear to come from a legal source",
-  "collocations": [
-   "combat money laundering",
-   "money laundering scheme",
-   "suspected money laundering"
-  ],
-  "paraphrases": [
-   "disguising illegal profits",
-   "cleaning dirty money"
-  ],
-  "example": "Banks must report suspicious transfers to help prevent money laundering."
- },
- {
-  "id": "cri-067",
-  "topic": "crime",
-  "word": "gang",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "a group of criminals or young people who spend time together and cause trouble",
-  "collocations": [
-   "street gang",
-   "gang member",
-   "gang violence"
-  ],
-  "paraphrases": [
-   "criminal group",
-   "band of offenders"
-  ],
-  "example": "Teenagers sometimes join a gang because they want protection or a sense of belonging."
- },
- {
-  "id": "cri-068",
-  "topic": "crime",
-  "word": "notorious",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "famous for something bad",
-  "collocations": [
-   "notorious criminal",
-   "notorious for",
-   "notorious gang"
-  ],
-  "paraphrases": [
-   "infamous",
-   "ill-famed"
-  ],
-  "example": "The district was notorious for pickpockets, and few tourists dared to visit at night."
- },
- {
-  "id": "cri-069",
-  "topic": "crime",
-  "word": "misdemeanour",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a minor offence that is not considered very serious",
-  "collocations": [
-   "commit a misdemeanour",
-   "minor misdemeanour",
-   "petty misdemeanour"
-  ],
-  "paraphrases": [
-   "minor offence",
-   "small wrongdoing"
-  ],
-  "example": "Dropping litter is a misdemeanour that is punishable by a small fine."
- },
- {
-  "id": "cri-070",
-  "topic": "crime",
-  "word": "crime rate",
-  "pos": "phrase",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "the number of crimes committed in an area compared with its population",
-  "collocations": [
-   "high crime rate",
-   "reduce the crime rate",
-   "fall in the crime rate"
-  ],
-  "paraphrases": [
-   "level of crime",
-   "frequency of offences"
-  ],
-  "example": "The crime rate dropped sharply after the council introduced late-night buses and brighter streets."
- },
- {
-  "id": "cri-071",
-  "topic": "crime",
-  "word": "law enforcement",
-  "pos": "phrase",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the activity of making sure that people obey the law",
-  "collocations": [
-   "law enforcement agencies",
-   "law enforcement officers",
-   "strict law enforcement"
-  ],
-  "paraphrases": [
-   "policing",
-   "upholding the law"
-  ],
-  "example": "Effective law enforcement requires trust between the police and the community."
- },
- {
-  "id": "cri-072",
-  "topic": "crime",
-  "word": "forensic",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "using scientific methods to investigate crime",
-  "collocations": [
-   "forensic evidence",
-   "forensic scientist",
-   "forensic analysis"
-  ],
-  "paraphrases": [
-   "scientific crime investigation",
-   "crime-scene scientific"
-  ],
-  "example": "Forensic evidence, such as fingerprints and DNA, linked the suspect to the scene."
- },
- {
-  "id": "cri-073",
-  "topic": "crime",
-  "word": "alibi",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "proof that a person was somewhere else when a crime took place",
-  "collocations": [
-   "have an alibi",
-   "provide an alibi",
-   "solid alibi"
-  ],
-  "paraphrases": [
-   "proof of absence",
-   "evidence of whereabouts"
-  ],
-  "example": "He had a solid alibi, because he was in a meeting with six colleagues at the time."
- },
- {
-  "id": "cri-074",
-  "topic": "crime",
-  "word": "conviction",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a formal decision in a court that someone is guilty of a crime",
-  "collocations": [
-   "previous convictions",
-   "secure a conviction",
-   "criminal conviction"
-  ],
-  "paraphrases": [
-   "guilty verdict",
-   "finding of guilt"
-  ],
-  "example": "A criminal conviction can make it very hard for a person to find work."
- },
- {
-  "id": "cri-075",
-  "topic": "crime",
-  "word": "antisocial behaviour",
-  "pos": "phrase",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "actions that harm or annoy other people in a community",
-  "collocations": [
-   "tackle antisocial behaviour",
-   "antisocial behaviour order",
-   "youth antisocial behaviour"
-  ],
-  "paraphrases": [
-   "disruptive conduct",
-   "nuisance behaviour"
-  ],
-  "example": "Loud music and graffiti are common examples of antisocial behaviour in residential areas."
- },
- {
-  "id": "cri-076",
-  "topic": "crime",
-  "word": "crime prevention",
-  "pos": "phrase",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "measures taken to stop crime before it happens",
-  "collocations": [
-   "crime prevention strategy",
-   "crime prevention measures",
-   "focus on crime prevention"
-  ],
-  "paraphrases": [
-   "stopping offences",
-   "deterring crime"
-  ],
-  "example": "Community crime prevention schemes often work better than harsher punishments."
- },
- {
-  "id": "cri-077",
-  "topic": "crime",
-  "word": "neighbourhood watch",
-  "pos": "phrase",
-  "band": 7.5,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a scheme in which residents look out for crime in their own area",
-  "collocations": [
-   "join a neighbourhood watch",
-   "neighbourhood watch scheme",
-   "neighbourhood watch group"
-  ],
-  "paraphrases": [
-   "community crime-watching scheme",
-   "resident patrol group"
-  ],
-  "example": "Our neighbourhood watch group shares information about suspicious activity by text message."
- },
- {
-  "id": "cri-078",
-  "topic": "crime",
-  "word": "penal",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "relating to the punishment of criminals",
-  "collocations": [
-   "penal system",
-   "penal reform",
-   "penal policy"
-  ],
-  "paraphrases": [
-   "punitive",
-   "relating to punishment"
-  ],
-  "example": "Penal reform advocates argue that prison should be a last resort rather than the default punishment."
- },
- {
-  "id": "cri-079",
-  "topic": "crime",
-  "word": "prison overcrowding",
-  "pos": "phrase",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a situation in which prisons hold more inmates than they were designed for",
-  "collocations": [
-   "tackle prison overcrowding",
-   "severe prison overcrowding",
-   "cause of prison overcrowding"
-  ],
-  "paraphrases": [
-   "too many inmates",
-   "excess prison population"
-  ],
-  "example": "Prison overcrowding makes it difficult to offer education programmes that help inmates to change."
- }
+  {
+    "id": "cri-001",
+    "topic": "crime",
+    "word": "offender",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a person who has committed a crime",
+    "collocations": [
+      "young offender",
+      "repeat offender",
+      "first-time offender"
+    ],
+    "paraphrases": [
+      "lawbreaker",
+      "criminal"
+    ],
+    "example": "First-time offenders are often given community sentences instead of prison terms."
+  },
+  {
+    "id": "cri-002",
+    "topic": "crime",
+    "word": "perpetrator",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a person who carries out a harmful or illegal act",
+    "collocations": [
+      "perpetrator of a crime",
+      "identify the perpetrator",
+      "brutal perpetrator"
+    ],
+    "paraphrases": [
+      "culprit",
+      "person responsible"
+    ],
+    "example": "Police have not yet identified the perpetrator of the attack on the bank."
+  },
+  {
+    "id": "cri-003",
+    "topic": "crime",
+    "word": "burglary",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "the crime of entering a building illegally in order to steal",
+    "collocations": [
+      "commit burglary",
+      "burglary rate",
+      "domestic burglary"
+    ],
+    "paraphrases": [
+      "housebreaking",
+      "breaking and entering"
+    ],
+    "example": "Burglary fell by a fifth after residents installed better locks and security lighting."
+  },
+  {
+    "id": "cri-004",
+    "topic": "crime",
+    "word": "robbery",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "the crime of stealing from a person or place using force or threats",
+    "collocations": [
+      "armed robbery",
+      "bank robbery",
+      "commit a robbery"
+    ],
+    "paraphrases": [
+      "hold-up",
+      "theft with violence"
+    ],
+    "example": "The armed robbery lasted less than two minutes, but the cashier was left deeply shaken."
+  },
+  {
+    "id": "cri-005",
+    "topic": "crime",
+    "word": "shoplifting",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "the crime of taking goods from a shop without paying",
+    "collocations": [
+      "prevent shoplifting",
+      "petty shoplifting",
+      "shoplifting incident"
+    ],
+    "paraphrases": [
+      "stealing from shops",
+      "retail theft"
+    ],
+    "example": "Shoplifting costs retailers millions of pounds a year and raises prices for honest customers."
+  },
+  {
+    "id": "cri-006",
+    "topic": "crime",
+    "word": "vandalism",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "the deliberate damage of public or private property",
+    "collocations": [
+      "act of vandalism",
+      "acts of vandalism",
+      "combat vandalism"
+    ],
+    "paraphrases": [
+      "property destruction",
+      "wilful damage"
+    ],
+    "example": "Bright lighting and cameras in the car park have reduced vandalism considerably."
+  },
+  {
+    "id": "cri-007",
+    "topic": "crime",
+    "word": "fraud",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the crime of deceiving someone in order to gain money or an advantage illegally",
+    "collocations": [
+      "commit fraud",
+      "credit card fraud",
+      "tax fraud"
+    ],
+    "paraphrases": [
+      "deception",
+      "swindling"
+    ],
+    "example": "The accountant was jailed for fraud after altering the company's records for several years."
+  },
+  {
+    "id": "cri-008",
+    "topic": "crime",
+    "word": "embezzlement",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the crime of secretly taking money that has been placed in your care",
+    "collocations": [
+      "charged with embezzlement",
+      "embezzlement of funds",
+      "corporate embezzlement"
+    ],
+    "paraphrases": [
+      "misappropriation of funds",
+      "theft of entrusted money"
+    ],
+    "example": "The treasurer was accused of embezzlement after thousands of pounds disappeared from the charity."
+  },
+  {
+    "id": "cri-009",
+    "topic": "crime",
+    "word": "bribery",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the offering of money or gifts to persuade someone to act dishonestly",
+    "collocations": [
+      "accused of bribery",
+      "bribery scandal",
+      "bribery and corruption"
+    ],
+    "paraphrases": [
+      "payment of illegal inducements",
+      "buying influence"
+    ],
+    "example": "Bribery in the construction industry can result in poorly built and unsafe buildings."
+  },
+  {
+    "id": "cri-010",
+    "topic": "crime",
+    "word": "arson",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the crime of deliberately setting fire to a building",
+    "collocations": [
+      "commit arson",
+      "suspected arson",
+      "arson attack"
+    ],
+    "paraphrases": [
+      "deliberate fire-setting",
+      "criminal fire-raising"
+    ],
+    "example": "Fire investigators believe the warehouse blaze was a case of arson rather than an accident."
+  },
+  {
+    "id": "cri-011",
+    "topic": "crime",
+    "word": "assault",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a violent physical attack on a person",
+    "collocations": [
+      "physical assault",
+      "sexual assault",
+      "charged with assault"
+    ],
+    "paraphrases": [
+      "violent attack",
+      "physical attack"
+    ],
+    "example": "He was charged with assault after a fight outside a nightclub left another man in hospital."
+  },
+  {
+    "id": "cri-012",
+    "topic": "crime",
+    "word": "homicide",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the killing of one person by another",
+    "collocations": [
+      "homicide rate",
+      "investigate a homicide",
+      "homicide victim"
+    ],
+    "paraphrases": [
+      "killing",
+      "unlawful killing"
+    ],
+    "example": "The homicide rate in the region has fallen steadily over the past decade."
+  },
+  {
+    "id": "cri-013",
+    "topic": "crime",
+    "word": "trafficking",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the illegal trade in people, drugs or weapons",
+    "collocations": [
+      "drug trafficking",
+      "human trafficking",
+      "combat trafficking"
+    ],
+    "paraphrases": [
+      "illegal trade",
+      "illicit dealing"
+    ],
+    "example": "International cooperation is essential to combat human trafficking across borders."
+  },
+  {
+    "id": "cri-014",
+    "topic": "crime",
+    "word": "smuggling",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the illegal movement of goods or people into or out of a country",
+    "collocations": [
+      "drug smuggling",
+      "smuggling ring",
+      "smuggling route"
+    ],
+    "paraphrases": [
+      "illegal importation",
+      "contraband trade"
+    ],
+    "example": "Customs officers uncovered a smuggling operation hidden inside a shipment of furniture."
+  },
+  {
+    "id": "cri-015",
+    "topic": "crime",
+    "word": "counterfeit",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "made as a copy of something valuable in order to deceive people",
+    "collocations": [
+      "counterfeit goods",
+      "counterfeit banknotes",
+      "counterfeit medicine"
+    ],
+    "paraphrases": [
+      "fake",
+      "forged"
+    ],
+    "example": "Counterfeit medicines are dangerous because they may contain the wrong ingredients."
+  },
+  {
+    "id": "cri-016",
+    "topic": "crime",
+    "word": "forgery",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the crime of making a false copy of a document, signature or work of art",
+    "collocations": [
+      "commit forgery",
+      "forgery of documents",
+      "skilful forgery"
+    ],
+    "paraphrases": [
+      "falsification",
+      "fake copy"
+    ],
+    "example": "Experts concluded that the signature on the will was a forgery."
+  },
+  {
+    "id": "cri-017",
+    "topic": "crime",
+    "word": "delinquency",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "minor crime or antisocial behaviour, especially by young people",
+    "collocations": [
+      "juvenile delinquency",
+      "combat delinquency",
+      "delinquency rate"
+    ],
+    "paraphrases": [
+      "youth offending",
+      "juvenile misbehaviour"
+    ],
+    "example": "Poverty and a lack of supervision are often cited as causes of delinquency among teenagers."
+  },
+  {
+    "id": "cri-018",
+    "topic": "crime",
+    "word": "juvenile offender",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a young person who has broken the law",
+    "collocations": [
+      "treat juvenile offenders",
+      "juvenile offender programme",
+      "sentencing juvenile offenders"
+    ],
+    "paraphrases": [
+      "young lawbreaker",
+      "youth criminal"
+    ],
+    "example": "Many experts believe a juvenile offender should receive education rather than a prison sentence."
+  },
+  {
+    "id": "cri-019",
+    "topic": "crime",
+    "word": "reoffend",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to commit another crime after having been punished for an earlier one",
+    "collocations": [
+      "likely to reoffend",
+      "risk of reoffending",
+      "reoffend within a year"
+    ],
+    "paraphrases": [
+      "commit crime again",
+      "relapse into crime"
+    ],
+    "example": "Prisoners who learn a trade during their sentence are less likely to reoffend after release."
+  },
+  {
+    "id": "cri-020",
+    "topic": "crime",
+    "word": "recidivism",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the tendency of a convicted criminal to commit further crimes",
+    "collocations": [
+      "reduce recidivism",
+      "high rates of recidivism",
+      "recidivism rate"
+    ],
+    "paraphrases": [
+      "repeat offending",
+      "return to crime"
+    ],
+    "example": "Rehabilitation programmes aim to lower recidivism by helping prisoners find jobs."
+  },
+  {
+    "id": "cri-021",
+    "topic": "crime",
+    "word": "rehabilitation",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the process of helping an offender return to normal life in society",
+    "collocations": [
+      "rehabilitation programme",
+      "prisoner rehabilitation",
+      "focus on rehabilitation"
+    ],
+    "paraphrases": [
+      "reintegration",
+      "reform"
+    ],
+    "example": "Supporters of rehabilitation argue that prison should prepare inmates for life outside."
+  },
+  {
+    "id": "cri-022",
+    "topic": "crime",
+    "word": "deterrent",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "something that discourages people from doing an action by making them afraid of the result",
+    "collocations": [
+      "act as a deterrent",
+      "effective deterrent",
+      "powerful deterrent"
+    ],
+    "paraphrases": [
+      "disincentive",
+      "discouragement"
+    ],
+    "example": "Visible police patrols are a powerful deterrent to street crime."
+  },
+  {
+    "id": "cri-023",
+    "topic": "crime",
+    "word": "sentence",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "the punishment given to a person found guilty in a court",
+    "collocations": [
+      "serve a sentence",
+      "harsh sentence",
+      "suspended sentence"
+    ],
+    "paraphrases": [
+      "punishment",
+      "penalty"
+    ],
+    "example": "The judge handed down a two-year sentence, which was later reduced on appeal."
+  },
+  {
+    "id": "cri-024",
+    "topic": "crime",
+    "word": "imprisonment",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the state of being kept in prison as a punishment",
+    "collocations": [
+      "life imprisonment",
+      "sentenced to imprisonment",
+      "risk of imprisonment"
+    ],
+    "paraphrases": [
+      "incarceration",
+      "confinement in jail"
+    ],
+    "example": "Imprisonment removes dangerous people from society, but it does little to change their behaviour."
+  },
+  {
+    "id": "cri-025",
+    "topic": "crime",
+    "word": "community service",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "unpaid work done for the benefit of the public instead of a prison term",
+    "collocations": [
+      "do community service",
+      "sentenced to community service",
+      "hours of community service"
+    ],
+    "paraphrases": [
+      "unpaid public work",
+      "work for the community"
+    ],
+    "example": "Teenagers who damaged the bus shelter were ordered to complete eighty hours of community service."
+  },
+  {
+    "id": "cri-026",
+    "topic": "crime",
+    "word": "probation",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a period during which an offender is supervised in the community instead of being in prison",
+    "collocations": [
+      "on probation",
+      "probation officer",
+      "serve probation"
+    ],
+    "paraphrases": [
+      "supervised release",
+      "community supervision"
+    ],
+    "example": "He was placed on probation for two years and had to report to an officer every week."
+  },
+  {
+    "id": "cri-027",
+    "topic": "crime",
+    "word": "parole",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the early release of a prisoner on condition of good behaviour",
+    "collocations": [
+      "released on parole",
+      "parole board",
+      "apply for parole"
+    ],
+    "paraphrases": [
+      "conditional early release",
+      "supervised release"
+    ],
+    "example": "She was released on parole after serving half of her sentence."
+  },
+  {
+    "id": "cri-028",
+    "topic": "crime",
+    "word": "convict",
+    "pos": "verb",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to prove or declare in a court that someone is guilty of a crime",
+    "collocations": [
+      "be convicted of",
+      "convict a suspect",
+      "wrongly convicted"
+    ],
+    "paraphrases": [
+      "find guilty",
+      "declare guilty"
+    ],
+    "example": "A suspect can only be convicted if the jury believes the evidence beyond reasonable doubt."
+  },
+  {
+    "id": "cri-029",
+    "topic": "crime",
+    "word": "acquit",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to decide in a court that a person is not guilty of a crime",
+    "collocations": [
+      "be acquitted of",
+      "acquit the defendant",
+      "unanimously acquitted"
+    ],
+    "paraphrases": [
+      "find not guilty",
+      "clear of a charge"
+    ],
+    "example": "The jury acquitted the defendant after a witness admitted she had lied."
+  },
+  {
+    "id": "cri-030",
+    "topic": "crime",
+    "word": "prosecute",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to take legal action against someone accused of a crime",
+    "collocations": [
+      "prosecute an offender",
+      "be prosecuted for",
+      "prosecute a case"
+    ],
+    "paraphrases": [
+      "bring charges against",
+      "take to court"
+    ],
+    "example": "Shops rarely prosecute children for stealing small items and usually contact their parents instead."
+  },
+  {
+    "id": "cri-031",
+    "topic": "crime",
+    "word": "testify",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to give evidence as a witness in a court of law",
+    "collocations": [
+      "testify in court",
+      "testify against",
+      "testify under oath"
+    ],
+    "paraphrases": [
+      "give evidence",
+      "give testimony"
+    ],
+    "example": "Two neighbours agreed to testify against the man accused of the break-in."
+  },
+  {
+    "id": "cri-032",
+    "topic": "crime",
+    "word": "witness",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a person who sees a crime or an accident and can describe what happened",
+    "collocations": [
+      "key witness",
+      "eyewitness",
+      "call a witness"
+    ],
+    "paraphrases": [
+      "observer",
+      "onlooker"
+    ],
+    "example": "A key witness came forward after the police published a photograph of the car."
+  },
+  {
+    "id": "cri-033",
+    "topic": "crime",
+    "word": "evidence",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "facts or signs that help prove whether something is true or a person is guilty",
+    "collocations": [
+      "physical evidence",
+      "insufficient evidence",
+      "gather evidence"
+    ],
+    "paraphrases": [
+      "proof",
+      "grounds"
+    ],
+    "example": "There was not enough evidence to charge the man, so he was released the following morning."
+  },
+  {
+    "id": "cri-034",
+    "topic": "crime",
+    "word": "suspect",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a person who is thought to have committed a crime",
+    "collocations": [
+      "prime suspect",
+      "police suspect",
+      "arrest a suspect"
+    ],
+    "paraphrases": [
+      "person of interest",
+      "accused person"
+    ],
+    "example": "The prime suspect was seen on camera leaving the shop shortly before the alarm sounded."
+  },
+  {
+    "id": "cri-035",
+    "topic": "crime",
+    "word": "arrest",
+    "pos": "verb",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "to take a person into custody because they are thought to have committed a crime",
+    "collocations": [
+      "arrest a suspect",
+      "be arrested for",
+      "arrest warrant"
+    ],
+    "paraphrases": [
+      "take into custody",
+      "apprehend"
+    ],
+    "example": "Officers arrested two men outside the jeweller's shop late on Friday night."
+  },
+  {
+    "id": "cri-036",
+    "topic": "crime",
+    "word": "detain",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to keep someone in official custody or prevent them from leaving",
+    "collocations": [
+      "detain a suspect",
+      "be detained",
+      "detained for questioning"
+    ],
+    "paraphrases": [
+      "hold in custody",
+      "keep in custody"
+    ],
+    "example": "Under the new law, police may detain a suspect for up to twenty-four hours without charge."
+  },
+  {
+    "id": "cri-037",
+    "topic": "crime",
+    "word": "interrogate",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to question a person closely, often for a long time",
+    "collocations": [
+      "interrogate a suspect",
+      "be interrogated",
+      "interrogate for hours"
+    ],
+    "paraphrases": [
+      "question closely",
+      "cross-examine"
+    ],
+    "example": "Detectives interrogate suspects in a room where all conversations are recorded."
+  },
+  {
+    "id": "cri-038",
+    "topic": "crime",
+    "word": "apprehend",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to catch and arrest a person suspected of a crime",
+    "collocations": [
+      "apprehend a suspect",
+      "apprehend the offender",
+      "fail to apprehend"
+    ],
+    "paraphrases": [
+      "capture",
+      "catch"
+    ],
+    "example": "Police managed to apprehend the thief within minutes of the alarm being raised."
+  },
+  {
+    "id": "cri-039",
+    "topic": "crime",
+    "word": "trial",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a formal examination of a legal case in a court",
+    "collocations": [
+      "stand trial",
+      "fair trial",
+      "go on trial"
+    ],
+    "paraphrases": [
+      "court case",
+      "legal hearing"
+    ],
+    "example": "The trial lasted three weeks, and the court heard from more than twenty witnesses."
+  },
+  {
+    "id": "cri-040",
+    "topic": "crime",
+    "word": "verdict",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the official decision of a jury or judge about whether a person is guilty",
+    "collocations": [
+      "reach a verdict",
+      "guilty verdict",
+      "deliver a verdict"
+    ],
+    "paraphrases": [
+      "court decision",
+      "ruling"
+    ],
+    "example": "The jury took only two hours to reach a unanimous verdict."
+  },
+  {
+    "id": "cri-041",
+    "topic": "crime",
+    "word": "jury",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a group of ordinary citizens who decide whether a person is guilty in a court",
+    "collocations": [
+      "jury service",
+      "trial by jury",
+      "member of the jury"
+    ],
+    "paraphrases": [
+      "panel of citizens",
+      "group of jurors"
+    ],
+    "example": "Serving on a jury is a civic duty that many people find both interesting and stressful."
+  },
+  {
+    "id": "cri-042",
+    "topic": "crime",
+    "word": "defendant",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a person who is accused of a crime in a court of law",
+    "collocations": [
+      "the defendant pleaded",
+      "defendant's lawyer",
+      "acquit the defendant"
+    ],
+    "paraphrases": [
+      "accused",
+      "person on trial"
+    ],
+    "example": "The defendant pleaded not guilty and insisted that he had been at home all evening."
+  },
+  {
+    "id": "cri-043",
+    "topic": "crime",
+    "word": "law-abiding",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "always obeying the law and its rules",
+    "collocations": [
+      "law-abiding citizen",
+      "law-abiding residents",
+      "law-abiding majority"
+    ],
+    "paraphrases": [
+      "obedient to the law",
+      "honest"
+    ],
+    "example": "Most law-abiding citizens would never dream of stealing, even if they could avoid being caught."
+  },
+  {
+    "id": "cri-044",
+    "topic": "crime",
+    "word": "petty crime",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "minor illegal acts such as small thefts",
+    "collocations": [
+      "commit petty crime",
+      "petty crime rate",
+      "petty crime and vandalism"
+    ],
+    "paraphrases": [
+      "minor offences",
+      "low-level crime"
+    ],
+    "example": "Petty crime such as pickpocketing is common in crowded tourist areas."
+  },
+  {
+    "id": "cri-045",
+    "topic": "crime",
+    "word": "organised crime",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "illegal activity carried out by well-structured criminal groups",
+    "collocations": [
+      "tackle organised crime",
+      "organised crime group",
+      "fight organised crime"
+    ],
+    "paraphrases": [
+      "gang crime",
+      "syndicate activity"
+    ],
+    "example": "Organised crime depends on corruption, and it often operates across several countries at once."
+  },
+  {
+    "id": "cri-046",
+    "topic": "crime",
+    "word": "violent crime",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a crime in which people are harmed or threatened with harm",
+    "collocations": [
+      "violent crime rate",
+      "rise in violent crime",
+      "tackle violent crime"
+    ],
+    "paraphrases": [
+      "crimes against the person",
+      "offences involving force"
+    ],
+    "example": "Violent crime is more frequent in areas where unemployment and poverty are high."
+  },
+  {
+    "id": "cri-047",
+    "topic": "crime",
+    "word": "cybercrime",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "illegal activity carried out using computers or the internet",
+    "collocations": [
+      "combat cybercrime",
+      "victim of cybercrime",
+      "cybercrime unit"
+    ],
+    "paraphrases": [
+      "online crime",
+      "internet crime"
+    ],
+    "example": "Cybercrime is growing quickly because criminals can target victims anywhere in the world."
+  },
+  {
+    "id": "cri-048",
+    "topic": "crime",
+    "word": "identity theft",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "the crime of using another person's personal details to obtain money or goods",
+    "collocations": [
+      "victim of identity theft",
+      "prevent identity theft",
+      "identity theft protection"
+    ],
+    "paraphrases": [
+      "stealing personal details",
+      "impersonation fraud"
+    ],
+    "example": "Never share your passwords, because identity theft can take years to resolve."
+  },
+  {
+    "id": "cri-049",
+    "topic": "crime",
+    "word": "surveillance",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the close observation of people or places in order to prevent or detect crime",
+    "collocations": [
+      "under surveillance",
+      "CCTV surveillance",
+      "mass surveillance"
+    ],
+    "paraphrases": [
+      "monitoring",
+      "close observation"
+    ],
+    "example": "Increased surveillance in public places has raised concerns about personal privacy."
+  },
+  {
+    "id": "cri-050",
+    "topic": "crime",
+    "word": "patrol",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a regular journey around an area by police to prevent crime",
+    "collocations": [
+      "police patrol",
+      "foot patrol",
+      "on patrol"
+    ],
+    "paraphrases": [
+      "regular police rounds",
+      "security round"
+    ],
+    "example": "More foot patrols in the town centre have made shoppers feel safer at night."
+  },
+  {
+    "id": "cri-051",
+    "topic": "crime",
+    "word": "crackdown",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "severe action taken by authorities to stop an illegal activity",
+    "collocations": [
+      "police crackdown",
+      "launch a crackdown",
+      "crackdown on crime"
+    ],
+    "paraphrases": [
+      "clampdown",
+      "tough measures"
+    ],
+    "example": "The government announced a crackdown on illegal gambling after several complaints."
+  },
+  {
+    "id": "cri-052",
+    "topic": "crime",
+    "word": "capital punishment",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the legal killing of a person as a punishment for a serious crime",
+    "collocations": [
+      "abolish capital punishment",
+      "support capital punishment",
+      "capital punishment debate"
+    ],
+    "paraphrases": [
+      "death penalty",
+      "execution"
+    ],
+    "example": "Opponents of capital punishment argue that it can never be undone if a mistake is made."
+  },
+  {
+    "id": "cri-053",
+    "topic": "crime",
+    "word": "life sentence",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a punishment under which a criminal stays in prison for the rest of their life or a very long time",
+    "collocations": [
+      "serve a life sentence",
+      "receive a life sentence",
+      "mandatory life sentence"
+    ],
+    "paraphrases": [
+      "imprisonment for life",
+      "lifelong imprisonment"
+    ],
+    "example": "A life sentence for murder is the norm in many legal systems."
+  },
+  {
+    "id": "cri-054",
+    "topic": "crime",
+    "word": "lenient",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "not as strict as expected when punishing someone",
+    "collocations": [
+      "lenient sentence",
+      "too lenient",
+      "lenient treatment"
+    ],
+    "paraphrases": [
+      "merciful",
+      "soft"
+    ],
+    "example": "Many people feel that courts are too lenient with repeat offenders."
+  },
+  {
+    "id": "cri-055",
+    "topic": "crime",
+    "word": "punitive",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "intended as punishment, especially a severe one",
+    "collocations": [
+      "punitive measures",
+      "punitive approach",
+      "punitive sentence"
+    ],
+    "paraphrases": [
+      "penal",
+      "disciplinary"
+    ],
+    "example": "A purely punitive approach to crime seldom reduces the likelihood of reoffending."
+  },
+  {
+    "id": "cri-056",
+    "topic": "crime",
+    "word": "retribution",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "severe punishment given as a payment for a wrong that has been done",
+    "collocations": [
+      "seek retribution",
+      "fear of retribution",
+      "retribution rather than reform"
+    ],
+    "paraphrases": [
+      "revenge",
+      "payback"
+    ],
+    "example": "Some victims' families regard a long prison term as retribution rather than justice."
+  },
+  {
+    "id": "cri-057",
+    "topic": "crime",
+    "word": "remorse",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a deep feeling of guilt about something wrong that you have done",
+    "collocations": [
+      "show remorse",
+      "feel remorse",
+      "express remorse"
+    ],
+    "paraphrases": [
+      "regret",
+      "guilt"
+    ],
+    "example": "The judge reduced the sentence because the young man showed genuine remorse."
+  },
+  {
+    "id": "cri-058",
+    "topic": "crime",
+    "word": "culprit",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "the person who is responsible for a crime or something bad",
+    "collocations": [
+      "identify the culprit",
+      "find the culprit",
+      "the real culprit"
+    ],
+    "paraphrases": [
+      "guilty party",
+      "wrongdoer"
+    ],
+    "example": "Security footage helped detectives to identify the culprit within a day."
+  },
+  {
+    "id": "cri-059",
+    "topic": "crime",
+    "word": "accomplice",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a person who helps someone else to commit a crime",
+    "collocations": [
+      "act as an accomplice",
+      "accomplice to murder",
+      "arrest an accomplice"
+    ],
+    "paraphrases": [
+      "partner in crime",
+      "accessory"
+    ],
+    "example": "The robber and his accomplice were both arrested at the airport."
+  },
+  {
+    "id": "cri-060",
+    "topic": "crime",
+    "word": "pickpocket",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a thief who steals from people's pockets or bags in crowded places",
+    "collocations": [
+      "beware of pickpockets",
+      "crowded with pickpockets",
+      "pickpocket gang"
+    ],
+    "paraphrases": [
+      "bag thief",
+      "street thief"
+    ],
+    "example": "Tourists are warned to watch for a pickpocket on busy trains and in markets."
+  },
+  {
+    "id": "cri-061",
+    "topic": "crime",
+    "word": "loot",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to steal goods from shops or homes during a riot or disaster",
+    "collocations": [
+      "loot shops",
+      "looted stores",
+      "looting spread"
+    ],
+    "paraphrases": [
+      "plunder",
+      "ransack"
+    ],
+    "example": "Crowds began to loot shops after the power cut that followed the storm."
+  },
+  {
+    "id": "cri-062",
+    "topic": "crime",
+    "word": "ransom",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "money demanded in exchange for the release of a kidnapped person",
+    "collocations": [
+      "pay a ransom",
+      "demand a ransom",
+      "ransom note"
+    ],
+    "paraphrases": [
+      "payment for release",
+      "kidnap money"
+    ],
+    "example": "The family paid a large ransom but their daughter was not released for another week."
+  },
+  {
+    "id": "cri-063",
+    "topic": "crime",
+    "word": "kidnap",
+    "pos": "verb",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "to take someone away illegally and hold them, often to demand money",
+    "collocations": [
+      "kidnap a child",
+      "be kidnapped",
+      "kidnap for ransom"
+    ],
+    "paraphrases": [
+      "abduct",
+      "seize"
+    ],
+    "example": "Armed men attempted to kidnap the businessman as he left his office."
+  },
+  {
+    "id": "cri-064",
+    "topic": "crime",
+    "word": "blackmail",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the crime of threatening to reveal secrets unless money is paid",
+    "collocations": [
+      "emotional blackmail",
+      "victim of blackmail",
+      "resort to blackmail"
+    ],
+    "paraphrases": [
+      "extortion by threat",
+      "coercion"
+    ],
+    "example": "The official resigned after admitting that he had been a victim of blackmail."
+  },
+  {
+    "id": "cri-065",
+    "topic": "crime",
+    "word": "extortion",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the crime of obtaining money by using force or threats",
+    "collocations": [
+      "accused of extortion",
+      "extortion racket",
+      "extortion and bribery"
+    ],
+    "paraphrases": [
+      "illegal demands for money",
+      "coercion for payment"
+    ],
+    "example": "Shopkeepers in the district have been paying extortion money to local gangs for years."
+  },
+  {
+    "id": "cri-066",
+    "topic": "crime",
+    "word": "money laundering",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the process of making illegally obtained money appear to come from a legal source",
+    "collocations": [
+      "combat money laundering",
+      "money laundering scheme",
+      "suspected money laundering"
+    ],
+    "paraphrases": [
+      "disguising illegal profits",
+      "cleaning dirty money"
+    ],
+    "example": "Banks must report suspicious transfers to help prevent money laundering."
+  },
+  {
+    "id": "cri-067",
+    "topic": "crime",
+    "word": "gang",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a group of criminals or young people who spend time together and cause trouble",
+    "collocations": [
+      "street gang",
+      "gang member",
+      "gang violence"
+    ],
+    "paraphrases": [
+      "criminal group",
+      "band of offenders"
+    ],
+    "example": "Teenagers sometimes join a gang because they want protection or a sense of belonging."
+  },
+  {
+    "id": "cri-068",
+    "topic": "crime",
+    "word": "notorious",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "famous for something bad",
+    "collocations": [
+      "notorious criminal",
+      "notorious for",
+      "notorious gang"
+    ],
+    "paraphrases": [
+      "infamous",
+      "ill-famed"
+    ],
+    "example": "The district was notorious for pickpockets, and few tourists dared to visit at night."
+  },
+  {
+    "id": "cri-069",
+    "topic": "crime",
+    "word": "misdemeanour",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a minor offence that is not considered very serious",
+    "collocations": [
+      "commit a misdemeanour",
+      "minor misdemeanour",
+      "petty misdemeanour"
+    ],
+    "paraphrases": [
+      "minor offence",
+      "small wrongdoing"
+    ],
+    "example": "Dropping litter is a misdemeanour that is punishable by a small fine."
+  },
+  {
+    "id": "cri-070",
+    "topic": "crime",
+    "word": "crime rate",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "the number of crimes committed in an area compared with its population",
+    "collocations": [
+      "high crime rate",
+      "reduce the crime rate",
+      "fall in the crime rate"
+    ],
+    "paraphrases": [
+      "level of crime",
+      "frequency of offences"
+    ],
+    "example": "The crime rate dropped sharply after the council introduced late-night buses and brighter streets."
+  },
+  {
+    "id": "cri-071",
+    "topic": "crime",
+    "word": "law enforcement",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the activity of making sure that people obey the law",
+    "collocations": [
+      "law enforcement agencies",
+      "law enforcement officers",
+      "strict law enforcement"
+    ],
+    "paraphrases": [
+      "policing",
+      "upholding the law"
+    ],
+    "example": "Effective law enforcement requires trust between the police and the community."
+  },
+  {
+    "id": "cri-072",
+    "topic": "crime",
+    "word": "forensic",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "using scientific methods to investigate crime",
+    "collocations": [
+      "forensic evidence",
+      "forensic scientist",
+      "forensic analysis"
+    ],
+    "paraphrases": [
+      "scientific crime investigation",
+      "crime-scene scientific"
+    ],
+    "example": "Forensic evidence, such as fingerprints and DNA, linked the suspect to the scene."
+  },
+  {
+    "id": "cri-073",
+    "topic": "crime",
+    "word": "alibi",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "proof that a person was somewhere else when a crime took place",
+    "collocations": [
+      "have an alibi",
+      "provide an alibi",
+      "solid alibi"
+    ],
+    "paraphrases": [
+      "proof of absence",
+      "evidence of whereabouts"
+    ],
+    "example": "He had a solid alibi, because he was in a meeting with six colleagues at the time."
+  },
+  {
+    "id": "cri-074",
+    "topic": "crime",
+    "word": "conviction",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a formal decision in a court that someone is guilty of a crime",
+    "collocations": [
+      "previous convictions",
+      "secure a conviction",
+      "criminal conviction"
+    ],
+    "paraphrases": [
+      "guilty verdict",
+      "finding of guilt"
+    ],
+    "example": "A criminal conviction can make it very hard for a person to find work."
+  },
+  {
+    "id": "cri-075",
+    "topic": "crime",
+    "word": "antisocial behaviour",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "actions that harm or annoy other people in a community",
+    "collocations": [
+      "tackle antisocial behaviour",
+      "antisocial behaviour order",
+      "youth antisocial behaviour"
+    ],
+    "paraphrases": [
+      "disruptive conduct",
+      "nuisance behaviour"
+    ],
+    "example": "Loud music and graffiti are common examples of antisocial behaviour in residential areas."
+  },
+  {
+    "id": "cri-076",
+    "topic": "crime",
+    "word": "crime prevention",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "measures taken to stop crime before it happens",
+    "collocations": [
+      "crime prevention strategy",
+      "crime prevention measures",
+      "focus on crime prevention"
+    ],
+    "paraphrases": [
+      "stopping offences",
+      "deterring crime"
+    ],
+    "example": "Community crime prevention schemes often work better than harsher punishments."
+  },
+  {
+    "id": "cri-077",
+    "topic": "crime",
+    "word": "neighbourhood watch",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a scheme in which residents look out for crime in their own area",
+    "collocations": [
+      "join a neighbourhood watch",
+      "neighbourhood watch scheme",
+      "neighbourhood watch group"
+    ],
+    "paraphrases": [
+      "community crime-watching scheme",
+      "resident patrol group"
+    ],
+    "example": "Our neighbourhood watch group shares information about suspicious activity by text message."
+  },
+  {
+    "id": "cri-078",
+    "topic": "crime",
+    "word": "penal",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "relating to the punishment of criminals",
+    "collocations": [
+      "penal system",
+      "penal reform",
+      "penal policy"
+    ],
+    "paraphrases": [
+      "punitive",
+      "relating to punishment"
+    ],
+    "example": "Penal reform advocates argue that prison should be a last resort rather than the default punishment."
+  },
+  {
+    "id": "cri-079",
+    "topic": "crime",
+    "word": "prison overcrowding",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a situation in which prisons hold more inmates than they were designed for",
+    "collocations": [
+      "tackle prison overcrowding",
+      "severe prison overcrowding",
+      "cause of prison overcrowding"
+    ],
+    "paraphrases": [
+      "too many inmates",
+      "excess prison population"
+    ],
+    "example": "Prison overcrowding makes it difficult to offer education programmes that help inmates to change."
+  },
+  {
+    "id": "cri-080",
+    "topic": "crime",
+    "word": "piracy",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the illegal copying and selling of films, music, software or other protected work",
+    "collocations": [
+      "online piracy",
+      "software piracy",
+      "combat piracy"
+    ],
+    "paraphrases": [
+      "illegal copying",
+      "copyright theft"
+    ],
+    "example": "Streaming services have reduced online piracy by making legal content cheaper and easier to access."
+  },
+  {
+    "id": "cri-081",
+    "topic": "crime",
+    "word": "juvenile delinquency",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "crime or antisocial behaviour committed by young people",
+    "collocations": [
+      "tackle juvenile delinquency",
+      "rising juvenile delinquency"
+    ],
+    "paraphrases": [
+      "youth crime",
+      "offending by young people"
+    ],
+    "example": "Researchers have linked juvenile delinquency to truancy and a lack of supervision after school."
+  }
 ]

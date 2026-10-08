@@ -1,1719 +1,1652 @@
 [
- {
-  "id": "tec-001",
-  "topic": "technology",
-  "word": "artificial intelligence",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "computer systems able to perform tasks that normally need human thinking",
-  "collocations": [
-   "develop artificial intelligence",
-   "artificial intelligence systems",
-   "advances in artificial intelligence"
-  ],
-  "paraphrases": [
-   "machine intelligence",
-   "computer reasoning"
-  ],
-  "example": "Advances in artificial intelligence are changing how doctors read medical scans."
- },
- {
-  "id": "tec-002",
-  "topic": "technology",
-  "word": "algorithm",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a set of step-by-step rules that a computer follows to solve a problem",
-  "collocations": [
-   "a complex algorithm",
-   "search algorithm",
-   "develop an algorithm"
-  ],
-  "paraphrases": [
-   "set of computational rules",
-   "automated procedure"
-  ],
-  "example": "The algorithm ranks search results according to hundreds of different signals."
- },
- {
-  "id": "tec-003",
-  "topic": "technology",
-  "word": "automation",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the use of machines to do work that people used to do",
-  "collocations": [
-   "factory automation",
-   "automation of tasks",
-   "rapid automation"
-  ],
-  "paraphrases": [
-   "mechanisation",
-   "machine-based production"
-  ],
-  "example": "Automation has eliminated many routine office jobs while creating a demand for technical skills."
- },
- {
-  "id": "tec-004",
-  "topic": "technology",
-  "word": "cybersecurity",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the protection of computer systems and data from attack",
-  "collocations": [
-   "improve cybersecurity",
-   "cybersecurity threats",
-   "invest in cybersecurity"
-  ],
-  "paraphrases": [
-   "online protection",
-   "digital defence"
-  ],
-  "example": "Hospitals must invest in cybersecurity because a single attack can shut down life-saving equipment."
- },
- {
-  "id": "tec-005",
-  "topic": "technology",
-  "word": "data breach",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "an incident in which private information is accessed or stolen without permission",
-  "collocations": [
-   "suffer a data breach",
-   "major data breach",
-   "report a data breach"
-  ],
-  "paraphrases": [
-   "leak of private information",
-   "unauthorised disclosure of data"
-  ],
-  "example": "A data breach at the retailer exposed the credit card details of millions of customers."
- },
- {
-  "id": "tec-006",
-  "topic": "technology",
-  "word": "encryption",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "the process of turning information into a code so unauthorised people cannot read it",
-  "collocations": [
-   "end-to-end encryption",
-   "strong encryption",
-   "data encryption"
-  ],
-  "paraphrases": [
-   "coding of data",
-   "scrambling information"
-  ],
-  "example": "Strong encryption protects messages from being read by anyone except the intended recipient."
- },
- {
-  "id": "tec-007",
-  "topic": "technology",
-  "word": "malware",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "software designed to damage a computer or steal information",
-  "collocations": [
-   "install malware",
-   "malware attack",
-   "detect malware"
-  ],
-  "paraphrases": [
-   "malicious software",
-   "harmful code"
-  ],
-  "example": "Clicking on a suspicious link can silently install malware on your laptop."
- },
- {
-  "id": "tec-008",
-  "topic": "technology",
-  "word": "phishing",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "a fraudulent attempt to trick people into giving personal information by email or message",
-  "collocations": [
-   "phishing email",
-   "phishing attack",
-   "fall victim to phishing"
-  ],
-  "paraphrases": [
-   "online scam",
-   "fraudulent messaging"
-  ],
-  "example": "Phishing emails often imitate banks and urge recipients to confirm their passwords."
- },
- {
-  "id": "tec-009",
-  "topic": "technology",
-  "word": "firewall",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "a security system that blocks unauthorised access to a computer network",
-  "collocations": [
-   "install a firewall",
-   "corporate firewall",
-   "firewall protection"
-  ],
-  "paraphrases": [
-   "network security barrier",
-   "digital shield"
-  ],
-  "example": "The company's firewall blocked thousands of suspicious connection attempts every day."
- },
- {
-  "id": "tec-010",
-  "topic": "technology",
-  "word": "bandwidth",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "the amount of data that can be sent over a connection in a given time",
-  "collocations": [
-   "limited bandwidth",
-   "high bandwidth",
-   "bandwidth capacity"
-  ],
-  "paraphrases": [
-   "data capacity",
-   "transmission capacity"
-  ],
-  "example": "Rural schools with limited bandwidth struggle to run video lessons."
- },
- {
-  "id": "tec-011",
-  "topic": "technology",
-  "word": "broadband",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a fast internet connection that carries a large amount of data",
-  "collocations": [
-   "high-speed broadband",
-   "broadband access",
-   "broadband connection"
-  ],
-  "paraphrases": [
-   "fast internet connection",
-   "high-speed web access"
-  ],
-  "example": "Many villages still lack reliable broadband, which limits opportunities for small businesses."
- },
- {
-  "id": "tec-012",
-  "topic": "technology",
-  "word": "wireless",
-  "pos": "adjective",
-  "band": 6.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "using radio or similar signals instead of cables",
-  "collocations": [
-   "wireless network",
-   "wireless connection",
-   "wireless technology"
-  ],
-  "paraphrases": [
-   "cable-free",
-   "without cables"
-  ],
-  "example": "Wireless networks have made it possible to work from cafes and parks."
- },
- {
-  "id": "tec-013",
-  "topic": "technology",
-  "word": "connectivity",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the ability of devices or places to connect to a network or to each other",
-  "collocations": [
-   "internet connectivity",
-   "mobile connectivity",
-   "poor connectivity"
-  ],
-  "paraphrases": [
-   "ability to connect",
-   "network access"
-  ],
-  "example": "Poor connectivity in remote regions prevents farmers from checking market prices online."
- },
- {
-  "id": "tec-014",
-  "topic": "technology",
-  "word": "digital divide",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the gap between people who have access to modern technology and those who do not",
-  "collocations": [
-   "bridge the digital divide",
-   "widen the digital divide",
-   "the digital divide between rich and poor"
-  ],
-  "paraphrases": [
-   "technology gap",
-   "inequality of access to technology"
-  ],
-  "example": "Free public computers in libraries can help narrow the digital divide."
- },
- {
-  "id": "tec-015",
-  "topic": "technology",
-  "word": "digital literacy",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the ability to find, evaluate and use information through digital devices",
-  "collocations": [
-   "improve digital literacy",
-   "teach digital literacy",
-   "digital literacy skills"
-  ],
-  "paraphrases": [
-   "competence with technology",
-   "online skills"
-  ],
-  "example": "Digital literacy is as important for older adults as for children, given how many services have moved online."
- },
- {
-  "id": "tec-016",
-  "topic": "technology",
-  "word": "smartphone",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "a mobile phone that can run applications and connect to the internet",
-  "collocations": [
-   "a smartphone app",
-   "smartphone users",
-   "own a smartphone"
-  ],
-  "paraphrases": [
-   "internet-enabled phone",
-   "mobile device"
-  ],
-  "example": "Most teenagers now spend several hours a day on a smartphone."
- },
- {
-  "id": "tec-017",
-  "topic": "technology",
-  "word": "gadget",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "a small device with a particular practical purpose",
-  "collocations": [
-   "latest gadget",
-   "electronic gadgets",
-   "handy gadget"
-  ],
-  "paraphrases": [
-   "small device",
-   "appliance"
-  ],
-  "example": "He buys every new gadget as soon as it comes onto the market."
- },
- {
-  "id": "tec-018",
-  "topic": "technology",
-  "word": "wearable",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "an electronic device worn on the body, such as a fitness band",
-  "collocations": [
-   "fitness wearable",
-   "wearable technology",
-   "wearable devices"
-  ],
-  "paraphrases": [
-   "body-worn device",
-   "worn gadget"
-  ],
-  "example": "A wearable that tracks heart rate can alert users to irregular rhythms."
- },
- {
-  "id": "tec-019",
-  "topic": "technology",
-  "word": "virtual reality",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "a computer-created environment that users can explore as if it were real",
-  "collocations": [
-   "virtual reality headset",
-   "virtual reality training",
-   "experience virtual reality"
-  ],
-  "paraphrases": [
-   "simulated environment",
-   "computer-generated world"
-  ],
-  "example": "Surgeons can rehearse complex operations in virtual reality before working on real patients."
- },
- {
-  "id": "tec-020",
-  "topic": "technology",
-  "word": "augmented reality",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "technology that adds digital images or information to a view of the real world",
-  "collocations": [
-   "augmented reality app",
-   "augmented reality glasses",
-   "use augmented reality"
-  ],
-  "paraphrases": [
-   "digital overlay on the real world",
-   "mixed reality"
-  ],
-  "example": "Augmented reality lets museum visitors see a dinosaur appear in the room around them."
- },
- {
-  "id": "tec-021",
-  "topic": "technology",
-  "word": "robotics",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the design, building and use of robots",
-  "collocations": [
-   "advances in robotics",
-   "robotics industry",
-   "robotics engineer"
-  ],
-  "paraphrases": [
-   "robot engineering",
-   "study of robots"
-  ],
-  "example": "Progress in robotics has made it possible for machines to assist elderly people at home."
- },
- {
-  "id": "tec-022",
-  "topic": "technology",
-  "word": "drone",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "reading"
-  ],
-  "definition": "an aircraft without a pilot that is controlled remotely",
-  "collocations": [
-   "surveillance drone",
-   "deliver by drone",
-   "drone footage"
-  ],
-  "paraphrases": [
-   "unmanned aircraft",
-   "remote-controlled flyer"
-  ],
-  "example": "Farmers now use a drone to inspect crops across large fields in a matter of minutes."
- },
- {
-  "id": "tec-023",
-  "topic": "technology",
-  "word": "machine learning",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a form of artificial intelligence in which computers improve by analysing data",
-  "collocations": [
-   "machine learning algorithm",
-   "machine learning model",
-   "apply machine learning"
-  ],
-  "paraphrases": [
-   "computer self-training",
-   "data-driven learning by machines"
-  ],
-  "example": "Machine learning allows banks to spot unusual spending patterns that might signal fraud."
- },
- {
-  "id": "tec-024",
-  "topic": "technology",
-  "word": "big data",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "extremely large collections of information that can be analysed to reveal patterns",
-  "collocations": [
-   "analyse big data",
-   "big data analytics",
-   "harness big data"
-  ],
-  "paraphrases": [
-   "massive datasets",
-   "vast information sets"
-  ],
-  "example": "Retailers use big data to predict what customers will buy before they search for it."
- },
- {
-  "id": "tec-025",
-  "topic": "technology",
-  "word": "cloud computing",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "the use of remote servers on the internet to store and process data",
-  "collocations": [
-   "cloud computing services",
-   "rely on cloud computing",
-   "cloud computing platform"
-  ],
-  "paraphrases": [
-   "online storage and processing",
-   "remote server services"
-  ],
-  "example": "Cloud computing lets small firms use powerful software without buying expensive equipment."
- },
- {
-  "id": "tec-026",
-  "topic": "technology",
-  "word": "software",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the programs that run on a computer",
-  "collocations": [
-   "install software",
-   "software update",
-   "educational software"
-  ],
-  "paraphrases": [
-   "computer programs",
-   "applications"
-  ],
-  "example": "The latest software update fixed several security weaknesses in the system."
- },
- {
-  "id": "tec-027",
-  "topic": "technology",
-  "word": "hardware",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading"
-  ],
-  "definition": "the physical parts of a computer system",
-  "collocations": [
-   "computer hardware",
-   "hardware failure",
-   "upgrade hardware"
-  ],
-  "paraphrases": [
-   "physical components",
-   "machinery"
-  ],
-  "example": "Outdated hardware slows down research because experiments take far longer to process."
- },
- {
-  "id": "tec-028",
-  "topic": "technology",
-  "word": "platform",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a computer system or website on which services or applications run",
-  "collocations": [
-   "online platform",
-   "digital platform",
-   "learning platform"
-  ],
-  "paraphrases": [
-   "digital system",
-   "online service"
-  ],
-  "example": "The company built a platform that links freelancers with clients around the world."
- },
- {
-  "id": "tec-029",
-  "topic": "technology",
-  "word": "interface",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading"
-  ],
-  "definition": "the way in which a user interacts with a computer or application",
-  "collocations": [
-   "user interface",
-   "simple interface",
-   "intuitive interface"
-  ],
-  "paraphrases": [
-   "point of interaction",
-   "control screen"
-  ],
-  "example": "An intuitive interface makes the application easy for older users to navigate."
- },
- {
-  "id": "tec-030",
-  "topic": "technology",
-  "word": "user-friendly",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "easy to understand and use",
-  "collocations": [
-   "user-friendly design",
-   "user-friendly app",
-   "extremely user-friendly"
-  ],
-  "paraphrases": [
-   "easy to use",
-   "straightforward"
-  ],
-  "example": "The banking app is so user-friendly that even my grandmother can transfer money with it."
- },
- {
-  "id": "tec-031",
-  "topic": "technology",
-  "word": "upgrade",
-  "pos": "verb",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "to replace something with a newer or better version",
-  "collocations": [
-   "upgrade software",
-   "upgrade your phone",
-   "upgrade the system"
-  ],
-  "paraphrases": [
-   "update",
-   "improve"
-  ],
-  "example": "The university decided to upgrade its computer laboratories to meet student demand."
- },
- {
-  "id": "tec-032",
-  "topic": "technology",
-  "word": "obsolete",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "no longer used because something newer and better has replaced it",
-  "collocations": [
-   "become obsolete",
-   "technologically obsolete",
-   "render obsolete"
-  ],
-  "paraphrases": [
-   "outdated",
-   "superseded"
-  ],
-  "example": "Many typing skills have become obsolete since voice recognition improved."
- },
- {
-  "id": "tec-033",
-  "topic": "technology",
-  "word": "cutting-edge",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "at the most advanced stage of development",
-  "collocations": [
-   "cutting-edge technology",
-   "cutting-edge research",
-   "cutting-edge design"
-  ],
-  "paraphrases": [
-   "advanced",
-   "pioneering"
-  ],
-  "example": "The hospital uses cutting-edge equipment to diagnose rare conditions."
- },
- {
-  "id": "tec-034",
-  "topic": "technology",
-  "word": "state-of-the-art",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "using the most modern methods and equipment available",
-  "collocations": [
-   "state-of-the-art technology",
-   "state-of-the-art facilities",
-   "state-of-the-art equipment"
-  ],
-  "paraphrases": [
-   "most advanced",
-   "up-to-the-minute"
-  ],
-  "example": "The state-of-the-art laboratory attracted researchers from across the continent."
- },
- {
-  "id": "tec-035",
-  "topic": "technology",
-  "word": "innovative",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "introducing new ideas or methods",
-  "collocations": [
-   "innovative design",
-   "innovative approach",
-   "highly innovative"
-  ],
-  "paraphrases": [
-   "inventive",
-   "original"
-  ],
-  "example": "Innovative start-ups are developing cheaper ways to purify water."
- },
- {
-  "id": "tec-036",
-  "topic": "technology",
-  "word": "breakthrough",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "an important discovery or advance that solves a major problem",
-  "collocations": [
-   "major breakthrough",
-   "technological breakthrough",
-   "achieve a breakthrough"
-  ],
-  "paraphrases": [
-   "significant advance",
-   "major step forward"
-  ],
-  "example": "A breakthrough in battery design could make electric devices last far longer."
- },
- {
-  "id": "tec-037",
-  "topic": "technology",
-  "word": "revolutionise",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to completely change the way something is done",
-  "collocations": [
-   "revolutionise communication",
-   "revolutionise the industry",
-   "set to revolutionise"
-  ],
-  "paraphrases": [
-   "transform",
-   "overhaul"
-  ],
-  "example": "Mobile payment systems have revolutionised the way people shop in developing countries."
- },
- {
-  "id": "tec-038",
-  "topic": "technology",
-  "word": "prototype",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading"
-  ],
-  "definition": "the first model of a new product, used for testing before it is produced in quantity",
-  "collocations": [
-   "build a prototype",
-   "working prototype",
-   "test a prototype"
-  ],
-  "paraphrases": [
-   "first model",
-   "trial version"
-  ],
-  "example": "Engineers tested the prototype for months before releasing the product to the public."
- },
- {
-  "id": "tec-039",
-  "topic": "technology",
-  "word": "patent",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading"
-  ],
-  "definition": "an official right to be the only person to make or sell an invention",
-  "collocations": [
-   "file a patent",
-   "hold a patent",
-   "patent protection"
-  ],
-  "paraphrases": [
-   "exclusive legal right",
-   "official licence to an invention"
-  ],
-  "example": "The firm filed a patent to stop competitors copying its new design."
- },
- {
-  "id": "tec-040",
-  "topic": "technology",
-  "word": "invention",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "a new device or method created for the first time",
-  "collocations": [
-   "a remarkable invention",
-   "the invention of the printing press",
-   "patent an invention"
-  ],
-  "paraphrases": [
-   "creation",
-   "innovation"
-  ],
-  "example": "The invention of the printing press made books available to ordinary people."
- },
- {
-  "id": "tec-041",
-  "topic": "technology",
-  "word": "automate",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to make a process work by itself using machines or computers",
-  "collocations": [
-   "automate tasks",
-   "automate production",
-   "fully automated"
-  ],
-  "paraphrases": [
-   "mechanise",
-   "computerise"
-  ],
-  "example": "Companies that automate routine tasks can free employees to focus on creative work."
- },
- {
-  "id": "tec-042",
-  "topic": "technology",
-  "word": "streamline",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to make a process more efficient by removing unnecessary steps",
-  "collocations": [
-   "streamline operations",
-   "streamline the process",
-   "streamline production"
-  ],
-  "paraphrases": [
-   "simplify",
-   "make more efficient"
-  ],
-  "example": "Online forms help councils streamline the process of applying for permits."
- },
- {
-  "id": "tec-043",
-  "topic": "technology",
-  "word": "digitise",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "to convert information into a digital format",
-  "collocations": [
-   "digitise records",
-   "digitise archives",
-   "fully digitised"
-  ],
-  "paraphrases": [
-   "convert to digital form",
-   "put online"
-  ],
-  "example": "The library plans to digitise its oldest manuscripts so that scholars can consult them anywhere."
- },
- {
-  "id": "tec-044",
-  "topic": "technology",
-  "word": "e-commerce",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the buying and selling of goods over the internet",
-  "collocations": [
-   "e-commerce sites",
-   "rise of e-commerce",
-   "global e-commerce"
-  ],
-  "paraphrases": [
-   "online trading",
-   "internet retail"
-  ],
-  "example": "The growth of e-commerce has forced many high-street shops to close."
- },
- {
-  "id": "tec-045",
-  "topic": "technology",
-  "word": "cashless",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "using electronic payment instead of notes and coins",
-  "collocations": [
-   "cashless society",
-   "cashless payment",
-   "go cashless"
-  ],
-  "paraphrases": [
-   "card-only",
-   "paid electronically"
-  ],
-  "example": "Critics of a cashless society worry that elderly people will be unable to pay for basic goods."
- },
- {
-  "id": "tec-046",
-  "topic": "technology",
-  "word": "surveillance",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the close watching of a person or place, often by cameras or software",
-  "collocations": [
-   "mass surveillance",
-   "surveillance cameras",
-   "under surveillance"
-  ],
-  "paraphrases": [
-   "monitoring",
-   "close observation"
-  ],
-  "example": "Widespread surveillance may deter crime but it also erodes personal freedom."
- },
- {
-  "id": "tec-047",
-  "topic": "technology",
-  "word": "privacy",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the right to keep personal information and activities secret",
-  "collocations": [
-   "invasion of privacy",
-   "protect privacy",
-   "online privacy"
-  ],
-  "paraphrases": [
-   "confidentiality",
-   "personal space"
-  ],
-  "example": "Many users accept long terms and conditions without realising how little privacy they are left with."
- },
- {
-  "id": "tec-048",
-  "topic": "technology",
-  "word": "data protection",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "laws and measures that keep personal information safe",
-  "collocations": [
-   "data protection laws",
-   "data protection regulation",
-   "strengthen data protection"
-  ],
-  "paraphrases": [
-   "safeguarding of personal information",
-   "information security"
-  ],
-  "example": "Stronger data protection rules oblige firms to explain how they use customers' details."
- },
- {
-  "id": "tec-049",
-  "topic": "technology",
-  "word": "screen time",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "the amount of time spent looking at a phone, computer or television",
-  "collocations": [
-   "limit screen time",
-   "excessive screen time",
-   "daily screen time"
-  ],
-  "paraphrases": [
-   "time spent on devices",
-   "hours in front of a screen"
-  ],
-  "example": "Experts recommend limiting screen time for young children before bed."
- },
- {
-  "id": "tec-050",
-  "topic": "technology",
-  "word": "over-reliance",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "depending too much on something",
-  "collocations": [
-   "over-reliance on technology",
-   "growing over-reliance",
-   "over-reliance on calculators"
-  ],
-  "paraphrases": [
-   "excessive dependence",
-   "too much dependence"
-  ],
-  "example": "An over-reliance on calculators may weaken pupils' ability to do mental arithmetic."
- },
- {
-  "id": "tec-051",
-  "topic": "technology",
-  "word": "tech-savvy",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "skilled and confident in using modern technology",
-  "collocations": [
-   "tech-savvy generation",
-   "tech-savvy users",
-   "tech-savvy teenagers"
-  ],
-  "paraphrases": [
-   "good with technology",
-   "digitally skilled"
-  ],
-  "example": "My tech-savvy younger brother fixed the router in a few minutes."
- },
- {
-  "id": "tec-052",
-  "topic": "technology",
-  "word": "microchip",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "a very small piece of silicon that carries electronic circuits",
-  "collocations": [
-   "implant a microchip",
-   "microchip technology",
-   "tiny microchip"
-  ],
-  "paraphrases": [
-   "integrated circuit",
-   "silicon chip"
-  ],
-  "example": "Every modern car contains hundreds of microchips that control everything from brakes to windows."
- },
- {
-  "id": "tec-053",
-  "topic": "technology",
-  "word": "processor",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading"
-  ],
-  "definition": "the part of a computer that carries out instructions",
-  "collocations": [
-   "fast processor",
-   "multi-core processor",
-   "processor speed"
-  ],
-  "paraphrases": [
-   "central chip",
-   "computing unit"
-  ],
-  "example": "A faster processor lets the software analyse images in a fraction of a second."
- },
- {
-  "id": "tec-054",
-  "topic": "technology",
-  "word": "download",
-  "pos": "verb",
-  "band": 6.5,
-  "use": [
-   "speaking"
-  ],
-  "definition": "to copy a file from the internet onto your own device",
-  "collocations": [
-   "download a file",
-   "download an app",
-   "free to download"
-  ],
-  "paraphrases": [
-   "copy from the web",
-   "save from the internet"
-  ],
-  "example": "I usually download podcasts before a long journey so I can listen offline."
- },
- {
-  "id": "tec-055",
-  "topic": "technology",
-  "word": "search engine",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "a website that finds information on the internet according to the words you type",
-  "collocations": [
-   "use a search engine",
-   "search engine results",
-   "leading search engine"
-  ],
-  "paraphrases": [
-   "online directory",
-   "web-searching tool"
-  ],
-  "example": "A search engine can return millions of results in less than a second."
- },
- {
-  "id": "tec-056",
-  "topic": "technology",
-  "word": "database",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a large organised collection of data stored on a computer",
-  "collocations": [
-   "maintain a database",
-   "customer database",
-   "searchable database"
-  ],
-  "paraphrases": [
-   "data repository",
-   "information store"
-  ],
-  "example": "The police are creating a national database of fingerprints to speed up investigations."
- },
- {
-  "id": "tec-057",
-  "topic": "technology",
-  "word": "biometric",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "using physical features such as fingerprints to identify a person",
-  "collocations": [
-   "biometric data",
-   "biometric identification",
-   "biometric passport"
-  ],
-  "paraphrases": [
-   "based on body features",
-   "physiological"
-  ],
-  "example": "Many phones now use biometric scanners instead of passwords."
- },
- {
-  "id": "tec-058",
-  "topic": "technology",
-  "word": "facial recognition",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "technology that identifies people by analysing the features of their faces",
-  "collocations": [
-   "facial recognition software",
-   "facial recognition technology",
-   "ban facial recognition"
-  ],
-  "paraphrases": [
-   "face-scanning identification",
-   "automated face matching"
-  ],
-  "example": "Some cities have banned facial recognition in public spaces because of privacy concerns."
- },
- {
-  "id": "tec-059",
-  "topic": "technology",
-  "word": "blockchain",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "a digital record of transactions shared across many computers that is very hard to alter",
-  "collocations": [
-   "blockchain technology",
-   "blockchain network",
-   "secure blockchain"
-  ],
-  "paraphrases": [
-   "distributed digital ledger",
-   "tamper-proof record"
-  ],
-  "example": "A blockchain stores each transaction in a linked sequence that cannot easily be changed."
- },
- {
-  "id": "tec-060",
-  "topic": "technology",
-  "word": "cryptocurrency",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a digital form of money that uses encryption and is not controlled by a bank",
-  "collocations": [
-   "buy cryptocurrency",
-   "cryptocurrency market",
-   "volatile cryptocurrency"
-  ],
-  "paraphrases": [
-   "digital coin",
-   "virtual money"
-  ],
-  "example": "The value of a cryptocurrency can change dramatically within a few hours."
- },
- {
-  "id": "tec-061",
-  "topic": "technology",
-  "word": "3D printing",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading"
-  ],
-  "definition": "the process of making solid objects by building them up layer by layer from a digital design",
-  "collocations": [
-   "3D printing technology",
-   "3D printing of prosthetics",
-   "industrial 3D printing"
-  ],
-  "paraphrases": [
-   "additive manufacturing",
-   "layer-by-layer fabrication"
-  ],
-  "example": "3D printing allows hospitals to produce custom replacement parts for patients on site."
- },
- {
-  "id": "tec-062",
-  "topic": "technology",
-  "word": "nanotechnology",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "the science and use of extremely small structures at the scale of atoms and molecules",
-  "collocations": [
-   "advances in nanotechnology",
-   "nanotechnology research",
-   "medical nanotechnology"
-  ],
-  "paraphrases": [
-   "engineering at molecular scale",
-   "ultra-small-scale engineering"
-  ],
-  "example": "Nanotechnology may eventually allow drugs to be delivered directly to cancer cells."
- },
- {
-  "id": "tec-063",
-  "topic": "technology",
-  "word": "telecommunications",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "the sending of information over distances by phone, radio or the internet",
-  "collocations": [
-   "telecommunications industry",
-   "telecommunications network",
-   "telecommunications company"
-  ],
-  "paraphrases": [
-   "long-distance communication",
-   "communications networks"
-  ],
-  "example": "The telecommunications industry has invested billions in building faster mobile networks."
- },
- {
-  "id": "tec-064",
-  "topic": "technology",
-  "word": "satellite",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "an object sent into space to collect information or relay signals",
-  "collocations": [
-   "communications satellite",
-   "satellite image",
-   "launch a satellite"
-  ],
-  "paraphrases": [
-   "orbiting craft",
-   "space-based relay"
-  ],
-  "example": "Satellite images enable scientists to monitor changes in forests from far above."
- },
- {
-  "id": "tec-065",
-  "topic": "technology",
-  "word": "smart home",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "a house with devices that can be controlled automatically or by phone",
-  "collocations": [
-   "smart home devices",
-   "smart home technology",
-   "build a smart home"
-  ],
-  "paraphrases": [
-   "automated house",
-   "connected household"
-  ],
-  "example": "In a smart home, lights and heating can be adjusted by voice command."
- },
- {
-  "id": "tec-066",
-  "topic": "technology",
-  "word": "glitch",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a small fault that stops something working properly",
-  "collocations": [
-   "a technical glitch",
-   "software glitch",
-   "minor glitch"
-  ],
-  "paraphrases": [
-   "minor fault",
-   "temporary malfunction"
-  ],
-  "example": "A glitch in the booking system meant that several customers were charged twice."
- },
- {
-  "id": "tec-067",
-  "topic": "technology",
-  "word": "malfunction",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading"
-  ],
-  "definition": "a failure to work in the correct way",
-  "collocations": [
-   "equipment malfunction",
-   "technical malfunction",
-   "cause a malfunction"
-  ],
-  "paraphrases": [
-   "breakdown",
-   "failure"
-  ],
-  "example": "A single malfunction in the control system forced the whole plant to shut down."
- },
- {
-  "id": "tec-068",
-  "topic": "technology",
-  "word": "backup",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a spare copy of data kept in case the original is lost",
-  "collocations": [
-   "make a backup",
-   "backup copy",
-   "regular backup"
-  ],
-  "paraphrases": [
-   "spare copy",
-   "duplicate file"
-  ],
-  "example": "Always make a backup of your essay before you switch off the computer."
- },
- {
-  "id": "tec-069",
-  "topic": "technology",
-  "word": "password",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a secret word or code that allows someone to enter a system",
-  "collocations": [
-   "choose a password",
-   "strong password",
-   "reset a password"
-  ],
-  "paraphrases": [
-   "secret code",
-   "access code"
-  ],
-  "example": "Using the same password for every account makes it easy for criminals to break in."
- },
- {
-  "id": "tec-070",
-  "topic": "technology",
-  "word": "anonymity",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the state of not being identified by name",
-  "collocations": [
-   "preserve anonymity",
-   "online anonymity",
-   "guarantee anonymity"
-  ],
-  "paraphrases": [
-   "namelessness",
-   "being unidentifiable"
-  ],
-  "example": "Online anonymity can encourage honest discussion but also abusive behaviour."
- },
- {
-  "id": "tec-071",
-  "topic": "technology",
-  "word": "digital footprint",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the trail of data that a person leaves when using the internet",
-  "collocations": [
-   "reduce your digital footprint",
-   "leave a digital footprint",
-   "a growing digital footprint"
-  ],
-  "paraphrases": [
-   "online trail",
-   "data trace"
-  ],
-  "example": "Employers may examine a candidate's digital footprint before making a job offer."
- },
- {
-  "id": "tec-072",
-  "topic": "technology",
-  "word": "deepfake",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "a video or recording created by software to make someone appear to say or do something they did not",
-  "collocations": [
-   "create a deepfake",
-   "convincing deepfake",
-   "deepfake video"
-  ],
-  "paraphrases": [
-   "fabricated video",
-   "synthetic recording"
-  ],
-  "example": "A convincing deepfake of the president circulated for hours before it was exposed as fake."
- },
- {
-  "id": "tec-073",
-  "topic": "technology",
-  "word": "chatbot",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "speaking",
-   "reading"
-  ],
-  "definition": "a computer program that talks with people in everyday language",
-  "collocations": [
-   "customer service chatbot",
-   "use a chatbot",
-   "chatbot responses"
-  ],
-  "paraphrases": [
-   "automated assistant",
-   "virtual helper"
-  ],
-  "example": "Many banks now answer simple queries through a chatbot rather than a human adviser."
- },
- {
-  "id": "tec-074",
-  "topic": "technology",
-  "word": "disruptive",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "changing an industry or way of doing things in a major, unexpected way",
-  "collocations": [
-   "disruptive technology",
-   "disruptive innovation",
-   "highly disruptive"
-  ],
-  "paraphrases": [
-   "game-changing",
-   "transformative"
-  ],
-  "example": "Ride-hailing apps proved to be a disruptive force for the traditional taxi industry."
- },
- {
-  "id": "tec-075",
-  "topic": "technology",
-  "word": "obsolescence",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the process of becoming out of date and no longer used",
-  "collocations": [
-   "planned obsolescence",
-   "technological obsolescence",
-   "built-in obsolescence"
-  ],
-  "paraphrases": [
-   "becoming outdated",
-   "falling out of use"
-  ],
-  "example": "Critics accuse manufacturers of planned obsolescence, designing phones that fail after a few years."
- },
- {
-  "id": "tec-076",
-  "topic": "technology",
-  "word": "internet of things",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "the network of everyday objects that are connected to the internet and exchange data",
-  "collocations": [
-   "the internet of things",
-   "devices in the internet of things",
-   "secure the internet of things"
-  ],
-  "paraphrases": [
-   "network of connected devices",
-   "web-enabled objects"
-  ],
-  "example": "The internet of things allows a fridge to order food when supplies run low."
- },
- {
-  "id": "tec-077",
-  "topic": "technology",
-  "word": "hacker",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "reading"
-  ],
-  "definition": "a person who gains unauthorised access to computer systems",
-  "collocations": [
-   "ethical hacker",
-   "hacker attack",
-   "skilled hacker"
-  ],
-  "paraphrases": [
-   "computer intruder",
-   "cyber attacker"
-  ],
-  "example": "A hacker broke into the council's network and demanded payment to restore its files."
- },
- {
-  "id": "tec-078",
-  "topic": "technology",
-  "word": "virtual",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "existing or taking place on a computer rather than in the real world",
-  "collocations": [
-   "virtual meeting",
-   "virtual classroom",
-   "virtual world"
-  ],
-  "paraphrases": [
-   "online",
-   "computer-based"
-  ],
-  "example": "Virtual meetings save companies the cost of flying employees across the globe."
- },
- {
-  "id": "tec-079",
-  "topic": "technology",
-  "word": "pioneer",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to be among the first to develop or use a new method or idea",
-  "collocations": [
-   "pioneer a technique",
-   "pioneer research",
-   "pioneered by"
-  ],
-  "paraphrases": [
-   "originate",
-   "spearhead"
-  ],
-  "example": "The company pioneered a technique that allows complex parts to be produced in a single step."
- }
+  {
+    "id": "tec-001",
+    "topic": "technology",
+    "word": "artificial intelligence",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "computer systems able to perform tasks that normally need human thinking",
+    "collocations": [
+      "develop artificial intelligence",
+      "artificial intelligence systems",
+      "advances in artificial intelligence"
+    ],
+    "paraphrases": [
+      "machine intelligence",
+      "computer reasoning"
+    ],
+    "example": "Advances in artificial intelligence are changing how doctors read medical scans."
+  },
+  {
+    "id": "tec-002",
+    "topic": "technology",
+    "word": "algorithm",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a set of step-by-step rules that a computer follows to solve a problem",
+    "collocations": [
+      "a complex algorithm",
+      "search algorithm",
+      "develop an algorithm"
+    ],
+    "paraphrases": [
+      "set of computational rules",
+      "automated procedure"
+    ],
+    "example": "The algorithm ranks search results according to hundreds of different signals."
+  },
+  {
+    "id": "tec-003",
+    "topic": "technology",
+    "word": "automation",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the use of machines to do work that people used to do",
+    "collocations": [
+      "factory automation",
+      "automation of tasks",
+      "rapid automation"
+    ],
+    "paraphrases": [
+      "mechanisation",
+      "machine-based production"
+    ],
+    "example": "Automation has eliminated many routine office jobs while creating a demand for technical skills."
+  },
+  {
+    "id": "tec-004",
+    "topic": "technology",
+    "word": "cybersecurity",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the protection of computer systems and data from attack",
+    "collocations": [
+      "improve cybersecurity",
+      "cybersecurity threats",
+      "invest in cybersecurity"
+    ],
+    "paraphrases": [
+      "online protection",
+      "digital defence"
+    ],
+    "example": "Hospitals must invest in cybersecurity because a single attack can shut down life-saving equipment."
+  },
+  {
+    "id": "tec-005",
+    "topic": "technology",
+    "word": "data breach",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "an incident in which private information is accessed or stolen without permission",
+    "collocations": [
+      "suffer a data breach",
+      "major data breach",
+      "report a data breach"
+    ],
+    "paraphrases": [
+      "leak of private information",
+      "unauthorised disclosure of data"
+    ],
+    "example": "A data breach at the retailer exposed the credit card details of millions of customers."
+  },
+  {
+    "id": "tec-006",
+    "topic": "technology",
+    "word": "encryption",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "the process of turning information into a code so unauthorised people cannot read it",
+    "collocations": [
+      "end-to-end encryption",
+      "strong encryption",
+      "data encryption"
+    ],
+    "paraphrases": [
+      "coding of data",
+      "scrambling information"
+    ],
+    "example": "Strong encryption protects messages from being read by anyone except the intended recipient."
+  },
+  {
+    "id": "tec-007",
+    "topic": "technology",
+    "word": "malware",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "software designed to damage a computer or steal information",
+    "collocations": [
+      "install malware",
+      "malware attack",
+      "detect malware"
+    ],
+    "paraphrases": [
+      "malicious software",
+      "harmful code"
+    ],
+    "example": "Clicking on a suspicious link can silently install malware on your laptop."
+  },
+  {
+    "id": "tec-008",
+    "topic": "technology",
+    "word": "phishing",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a fraudulent attempt to trick people into giving personal information by email or message",
+    "collocations": [
+      "phishing email",
+      "phishing attack",
+      "fall victim to phishing"
+    ],
+    "paraphrases": [
+      "online scam",
+      "fraudulent messaging"
+    ],
+    "example": "Phishing emails often imitate banks and urge recipients to confirm their passwords."
+  },
+  {
+    "id": "tec-009",
+    "topic": "technology",
+    "word": "firewall",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a security system that blocks unauthorised access to a computer network",
+    "collocations": [
+      "install a firewall",
+      "corporate firewall",
+      "firewall protection"
+    ],
+    "paraphrases": [
+      "network security barrier",
+      "digital shield"
+    ],
+    "example": "The company's firewall blocked thousands of suspicious connection attempts every day."
+  },
+  {
+    "id": "tec-010",
+    "topic": "technology",
+    "word": "bandwidth",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "the amount of data that can be sent over a connection in a given time",
+    "collocations": [
+      "limited bandwidth",
+      "high bandwidth",
+      "bandwidth capacity"
+    ],
+    "paraphrases": [
+      "data capacity",
+      "transmission capacity"
+    ],
+    "example": "Rural schools with limited bandwidth struggle to run video lessons."
+  },
+  {
+    "id": "tec-011",
+    "topic": "technology",
+    "word": "broadband",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a fast internet connection that carries a large amount of data",
+    "collocations": [
+      "high-speed broadband",
+      "broadband access",
+      "broadband connection"
+    ],
+    "paraphrases": [
+      "fast internet connection",
+      "high-speed web access"
+    ],
+    "example": "Many villages still lack reliable broadband, which limits opportunities for small businesses."
+  },
+  {
+    "id": "tec-012",
+    "topic": "technology",
+    "word": "wireless",
+    "pos": "adjective",
+    "band": 6.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "using radio or similar signals instead of cables",
+    "collocations": [
+      "wireless network",
+      "wireless connection",
+      "wireless technology"
+    ],
+    "paraphrases": [
+      "cable-free",
+      "without cables"
+    ],
+    "example": "Wireless networks have made it possible to work from cafes and parks."
+  },
+  {
+    "id": "tec-013",
+    "topic": "technology",
+    "word": "connectivity",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the ability of devices or places to connect to a network or to each other",
+    "collocations": [
+      "internet connectivity",
+      "mobile connectivity",
+      "poor connectivity"
+    ],
+    "paraphrases": [
+      "ability to connect",
+      "network access"
+    ],
+    "example": "Poor connectivity in remote regions prevents farmers from checking market prices online."
+  },
+  {
+    "id": "tec-014",
+    "topic": "technology",
+    "word": "digital divide",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the gap between people who have access to modern technology and those who do not",
+    "collocations": [
+      "bridge the digital divide",
+      "widen the digital divide",
+      "the digital divide between rich and poor"
+    ],
+    "paraphrases": [
+      "technology gap",
+      "inequality of access to technology"
+    ],
+    "example": "Free public computers in libraries can help narrow the digital divide."
+  },
+  {
+    "id": "tec-015",
+    "topic": "technology",
+    "word": "digital literacy",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the ability to find, evaluate and use information through digital devices",
+    "collocations": [
+      "improve digital literacy",
+      "teach digital literacy",
+      "digital literacy skills"
+    ],
+    "paraphrases": [
+      "competence with technology",
+      "online skills"
+    ],
+    "example": "Digital literacy is as important for older adults as for children, given how many services have moved online."
+  },
+  {
+    "id": "tec-016",
+    "topic": "technology",
+    "word": "smartphone",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "a mobile phone that can run applications and connect to the internet",
+    "collocations": [
+      "a smartphone app",
+      "smartphone users",
+      "own a smartphone"
+    ],
+    "paraphrases": [
+      "internet-enabled phone",
+      "mobile device"
+    ],
+    "example": "Most teenagers now spend several hours a day on a smartphone."
+  },
+  {
+    "id": "tec-017",
+    "topic": "technology",
+    "word": "gadget",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "a small device with a particular practical purpose",
+    "collocations": [
+      "latest gadget",
+      "electronic gadgets",
+      "handy gadget"
+    ],
+    "paraphrases": [
+      "small device",
+      "appliance"
+    ],
+    "example": "He buys every new gadget as soon as it comes onto the market."
+  },
+  {
+    "id": "tec-018",
+    "topic": "technology",
+    "word": "wearable",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "an electronic device worn on the body, such as a fitness band",
+    "collocations": [
+      "fitness wearable",
+      "wearable technology",
+      "wearable devices"
+    ],
+    "paraphrases": [
+      "body-worn device",
+      "worn gadget"
+    ],
+    "example": "A wearable that tracks heart rate can alert users to irregular rhythms."
+  },
+  {
+    "id": "tec-019",
+    "topic": "technology",
+    "word": "virtual reality",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a computer-created environment that users can explore as if it were real",
+    "collocations": [
+      "virtual reality headset",
+      "virtual reality training",
+      "experience virtual reality"
+    ],
+    "paraphrases": [
+      "simulated environment",
+      "computer-generated world"
+    ],
+    "example": "Surgeons can rehearse complex operations in virtual reality before working on real patients."
+  },
+  {
+    "id": "tec-020",
+    "topic": "technology",
+    "word": "augmented reality",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "technology that adds digital images or information to a view of the real world",
+    "collocations": [
+      "augmented reality app",
+      "augmented reality glasses",
+      "use augmented reality"
+    ],
+    "paraphrases": [
+      "digital overlay on the real world",
+      "mixed reality"
+    ],
+    "example": "Augmented reality lets museum visitors see a dinosaur appear in the room around them."
+  },
+  {
+    "id": "tec-021",
+    "topic": "technology",
+    "word": "robotics",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the design, building and use of robots",
+    "collocations": [
+      "advances in robotics",
+      "robotics industry",
+      "robotics engineer"
+    ],
+    "paraphrases": [
+      "robot engineering",
+      "study of robots"
+    ],
+    "example": "Progress in robotics has made it possible for machines to assist elderly people at home."
+  },
+  {
+    "id": "tec-022",
+    "topic": "technology",
+    "word": "drone",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "an aircraft without a pilot that is controlled remotely",
+    "collocations": [
+      "surveillance drone",
+      "deliver by drone",
+      "drone footage"
+    ],
+    "paraphrases": [
+      "unmanned aircraft",
+      "remote-controlled flyer"
+    ],
+    "example": "Farmers now use a drone to inspect crops across large fields in a matter of minutes."
+  },
+  {
+    "id": "tec-023",
+    "topic": "technology",
+    "word": "machine learning",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a form of artificial intelligence in which computers improve by analysing data",
+    "collocations": [
+      "machine learning algorithm",
+      "machine learning model",
+      "apply machine learning"
+    ],
+    "paraphrases": [
+      "computer self-training",
+      "data-driven learning by machines"
+    ],
+    "example": "Machine learning allows banks to spot unusual spending patterns that might signal fraud."
+  },
+  {
+    "id": "tec-024",
+    "topic": "technology",
+    "word": "big data",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "extremely large collections of information that can be analysed to reveal patterns",
+    "collocations": [
+      "analyse big data",
+      "big data analytics",
+      "harness big data"
+    ],
+    "paraphrases": [
+      "massive datasets",
+      "vast information sets"
+    ],
+    "example": "Retailers use big data to predict what customers will buy before they search for it."
+  },
+  {
+    "id": "tec-025",
+    "topic": "technology",
+    "word": "cloud computing",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "the use of remote servers on the internet to store and process data",
+    "collocations": [
+      "cloud computing services",
+      "rely on cloud computing",
+      "cloud computing platform"
+    ],
+    "paraphrases": [
+      "online storage and processing",
+      "remote server services"
+    ],
+    "example": "Cloud computing lets small firms use powerful software without buying expensive equipment."
+  },
+  {
+    "id": "tec-026",
+    "topic": "technology",
+    "word": "software",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the programs that run on a computer",
+    "collocations": [
+      "install software",
+      "software update",
+      "educational software"
+    ],
+    "paraphrases": [
+      "computer programs",
+      "applications"
+    ],
+    "example": "The latest software update fixed several security weaknesses in the system."
+  },
+  {
+    "id": "tec-027",
+    "topic": "technology",
+    "word": "hardware",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading"
+    ],
+    "definition": "the physical parts of a computer system",
+    "collocations": [
+      "computer hardware",
+      "hardware failure",
+      "upgrade hardware"
+    ],
+    "paraphrases": [
+      "physical components",
+      "machinery"
+    ],
+    "example": "Outdated hardware slows down research because experiments take far longer to process."
+  },
+  {
+    "id": "tec-028",
+    "topic": "technology",
+    "word": "platform",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a computer system or website on which services or applications run",
+    "collocations": [
+      "online platform",
+      "digital platform",
+      "learning platform"
+    ],
+    "paraphrases": [
+      "digital system",
+      "online service"
+    ],
+    "example": "The company built a platform that links freelancers with clients around the world."
+  },
+  {
+    "id": "tec-029",
+    "topic": "technology",
+    "word": "interface",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "the way in which a user interacts with a computer or application",
+    "collocations": [
+      "user interface",
+      "simple interface",
+      "intuitive interface"
+    ],
+    "paraphrases": [
+      "point of interaction",
+      "control screen"
+    ],
+    "example": "An intuitive interface makes the application easy for older users to navigate."
+  },
+  {
+    "id": "tec-030",
+    "topic": "technology",
+    "word": "user-friendly",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "easy to understand and use",
+    "collocations": [
+      "user-friendly design",
+      "user-friendly app",
+      "extremely user-friendly"
+    ],
+    "paraphrases": [
+      "easy to use",
+      "straightforward"
+    ],
+    "example": "The banking app is so user-friendly that even my grandmother can transfer money with it."
+  },
+  {
+    "id": "tec-031",
+    "topic": "technology",
+    "word": "upgrade",
+    "pos": "verb",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "to replace something with a newer or better version",
+    "collocations": [
+      "upgrade software",
+      "upgrade your phone",
+      "upgrade the system"
+    ],
+    "paraphrases": [
+      "update",
+      "improve"
+    ],
+    "example": "The university decided to upgrade its computer laboratories to meet student demand."
+  },
+  {
+    "id": "tec-032",
+    "topic": "technology",
+    "word": "obsolete",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "no longer used because something newer and better has replaced it",
+    "collocations": [
+      "become obsolete",
+      "technologically obsolete",
+      "render obsolete"
+    ],
+    "paraphrases": [
+      "outdated",
+      "superseded"
+    ],
+    "example": "Many typing skills have become obsolete since voice recognition improved."
+  },
+  {
+    "id": "tec-034",
+    "topic": "technology",
+    "word": "state-of-the-art",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "using the most modern methods and equipment available",
+    "collocations": [
+      "state-of-the-art technology",
+      "state-of-the-art facilities",
+      "state-of-the-art equipment"
+    ],
+    "paraphrases": [
+      "most advanced",
+      "up-to-the-minute"
+    ],
+    "example": "The state-of-the-art laboratory attracted researchers from across the continent."
+  },
+  {
+    "id": "tec-035",
+    "topic": "technology",
+    "word": "innovative",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "introducing new ideas or methods",
+    "collocations": [
+      "innovative design",
+      "innovative approach",
+      "highly innovative"
+    ],
+    "paraphrases": [
+      "inventive",
+      "original"
+    ],
+    "example": "Innovative start-ups are developing cheaper ways to purify water."
+  },
+  {
+    "id": "tec-037",
+    "topic": "technology",
+    "word": "revolutionise",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to completely change the way something is done",
+    "collocations": [
+      "revolutionise communication",
+      "revolutionise the industry",
+      "set to revolutionise"
+    ],
+    "paraphrases": [
+      "transform",
+      "overhaul"
+    ],
+    "example": "Mobile payment systems have revolutionised the way people shop in developing countries."
+  },
+  {
+    "id": "tec-038",
+    "topic": "technology",
+    "word": "prototype",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "the first model of a new product, used for testing before it is produced in quantity",
+    "collocations": [
+      "build a prototype",
+      "working prototype",
+      "test a prototype"
+    ],
+    "paraphrases": [
+      "first model",
+      "trial version"
+    ],
+    "example": "Engineers tested the prototype for months before releasing the product to the public."
+  },
+  {
+    "id": "tec-039",
+    "topic": "technology",
+    "word": "patent",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "an official right to be the only person to make or sell an invention",
+    "collocations": [
+      "file a patent",
+      "hold a patent",
+      "patent protection"
+    ],
+    "paraphrases": [
+      "exclusive legal right",
+      "official licence to an invention"
+    ],
+    "example": "The firm filed a patent to stop competitors copying its new design."
+  },
+  {
+    "id": "tec-040",
+    "topic": "technology",
+    "word": "invention",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a new device or method created for the first time",
+    "collocations": [
+      "a remarkable invention",
+      "the invention of the printing press",
+      "patent an invention"
+    ],
+    "paraphrases": [
+      "creation",
+      "innovation"
+    ],
+    "example": "The invention of the printing press made books available to ordinary people."
+  },
+  {
+    "id": "tec-041",
+    "topic": "technology",
+    "word": "automate",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to make a process work by itself using machines or computers",
+    "collocations": [
+      "automate tasks",
+      "automate production",
+      "fully automated"
+    ],
+    "paraphrases": [
+      "mechanise",
+      "computerise"
+    ],
+    "example": "Companies that automate routine tasks can free employees to focus on creative work."
+  },
+  {
+    "id": "tec-043",
+    "topic": "technology",
+    "word": "digitise",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "to convert information into a digital format",
+    "collocations": [
+      "digitise records",
+      "digitise archives",
+      "fully digitised"
+    ],
+    "paraphrases": [
+      "convert to digital form",
+      "put online"
+    ],
+    "example": "The library plans to digitise its oldest manuscripts so that scholars can consult them anywhere."
+  },
+  {
+    "id": "tec-044",
+    "topic": "technology",
+    "word": "e-commerce",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the buying and selling of goods over the internet",
+    "collocations": [
+      "e-commerce sites",
+      "rise of e-commerce",
+      "global e-commerce"
+    ],
+    "paraphrases": [
+      "online trading",
+      "internet retail"
+    ],
+    "example": "The growth of e-commerce has forced many high-street shops to close."
+  },
+  {
+    "id": "tec-045",
+    "topic": "technology",
+    "word": "cashless",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "using electronic payment instead of notes and coins",
+    "collocations": [
+      "cashless society",
+      "cashless payment",
+      "go cashless"
+    ],
+    "paraphrases": [
+      "card-only",
+      "paid electronically"
+    ],
+    "example": "Critics of a cashless society worry that elderly people will be unable to pay for basic goods."
+  },
+  {
+    "id": "tec-047",
+    "topic": "technology",
+    "word": "privacy",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the right to keep personal information and activities secret",
+    "collocations": [
+      "invasion of privacy",
+      "protect privacy",
+      "online privacy"
+    ],
+    "paraphrases": [
+      "confidentiality",
+      "personal space"
+    ],
+    "example": "Many users accept long terms and conditions without realising how little privacy they are left with."
+  },
+  {
+    "id": "tec-048",
+    "topic": "technology",
+    "word": "data protection",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "laws and measures that keep personal information safe",
+    "collocations": [
+      "data protection laws",
+      "data protection regulation",
+      "strengthen data protection"
+    ],
+    "paraphrases": [
+      "safeguarding of personal information",
+      "information security"
+    ],
+    "example": "Stronger data protection rules oblige firms to explain how they use customers' details."
+  },
+  {
+    "id": "tec-049",
+    "topic": "technology",
+    "word": "screen time",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "the amount of time spent looking at a phone, computer or television",
+    "collocations": [
+      "limit screen time",
+      "excessive screen time",
+      "daily screen time"
+    ],
+    "paraphrases": [
+      "time spent on devices",
+      "hours in front of a screen"
+    ],
+    "example": "Experts recommend limiting screen time for young children before bed."
+  },
+  {
+    "id": "tec-050",
+    "topic": "technology",
+    "word": "over-reliance",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "depending too much on something",
+    "collocations": [
+      "over-reliance on technology",
+      "growing over-reliance",
+      "over-reliance on calculators"
+    ],
+    "paraphrases": [
+      "excessive dependence",
+      "too much dependence"
+    ],
+    "example": "An over-reliance on calculators may weaken pupils' ability to do mental arithmetic."
+  },
+  {
+    "id": "tec-051",
+    "topic": "technology",
+    "word": "tech-savvy",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "skilled and confident in using modern technology",
+    "collocations": [
+      "tech-savvy generation",
+      "tech-savvy users",
+      "tech-savvy teenagers"
+    ],
+    "paraphrases": [
+      "good with technology",
+      "digitally skilled"
+    ],
+    "example": "My tech-savvy younger brother fixed the router in a few minutes."
+  },
+  {
+    "id": "tec-052",
+    "topic": "technology",
+    "word": "microchip",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a very small piece of silicon that carries electronic circuits",
+    "collocations": [
+      "implant a microchip",
+      "microchip technology",
+      "tiny microchip"
+    ],
+    "paraphrases": [
+      "integrated circuit",
+      "silicon chip"
+    ],
+    "example": "Every modern car contains hundreds of microchips that control everything from brakes to windows."
+  },
+  {
+    "id": "tec-053",
+    "topic": "technology",
+    "word": "processor",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "the part of a computer that carries out instructions",
+    "collocations": [
+      "fast processor",
+      "multi-core processor",
+      "processor speed"
+    ],
+    "paraphrases": [
+      "central chip",
+      "computing unit"
+    ],
+    "example": "A faster processor lets the software analyse images in a fraction of a second."
+  },
+  {
+    "id": "tec-054",
+    "topic": "technology",
+    "word": "download",
+    "pos": "verb",
+    "band": 6.5,
+    "use": [
+      "speaking"
+    ],
+    "definition": "to copy a file from the internet onto your own device",
+    "collocations": [
+      "download a file",
+      "download an app",
+      "free to download"
+    ],
+    "paraphrases": [
+      "copy from the web",
+      "save from the internet"
+    ],
+    "example": "I usually download podcasts before a long journey so I can listen offline."
+  },
+  {
+    "id": "tec-055",
+    "topic": "technology",
+    "word": "search engine",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "a website that finds information on the internet according to the words you type",
+    "collocations": [
+      "use a search engine",
+      "search engine results",
+      "leading search engine"
+    ],
+    "paraphrases": [
+      "online directory",
+      "web-searching tool"
+    ],
+    "example": "A search engine can return millions of results in less than a second."
+  },
+  {
+    "id": "tec-056",
+    "topic": "technology",
+    "word": "database",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a large organised collection of data stored on a computer",
+    "collocations": [
+      "maintain a database",
+      "customer database",
+      "searchable database"
+    ],
+    "paraphrases": [
+      "data repository",
+      "information store"
+    ],
+    "example": "The police are creating a national database of fingerprints to speed up investigations."
+  },
+  {
+    "id": "tec-057",
+    "topic": "technology",
+    "word": "biometric",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "using physical features such as fingerprints to identify a person",
+    "collocations": [
+      "biometric data",
+      "biometric identification",
+      "biometric passport"
+    ],
+    "paraphrases": [
+      "based on body features",
+      "physiological"
+    ],
+    "example": "Many phones now use biometric scanners instead of passwords."
+  },
+  {
+    "id": "tec-058",
+    "topic": "technology",
+    "word": "facial recognition",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "technology that identifies people by analysing the features of their faces",
+    "collocations": [
+      "facial recognition software",
+      "facial recognition technology",
+      "ban facial recognition"
+    ],
+    "paraphrases": [
+      "face-scanning identification",
+      "automated face matching"
+    ],
+    "example": "Some cities have banned facial recognition in public spaces because of privacy concerns."
+  },
+  {
+    "id": "tec-059",
+    "topic": "technology",
+    "word": "blockchain",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a digital record of transactions shared across many computers that is very hard to alter",
+    "collocations": [
+      "blockchain technology",
+      "blockchain network",
+      "secure blockchain"
+    ],
+    "paraphrases": [
+      "distributed digital ledger",
+      "tamper-proof record"
+    ],
+    "example": "A blockchain stores each transaction in a linked sequence that cannot easily be changed."
+  },
+  {
+    "id": "tec-060",
+    "topic": "technology",
+    "word": "cryptocurrency",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a digital form of money that uses encryption and is not controlled by a bank",
+    "collocations": [
+      "buy cryptocurrency",
+      "cryptocurrency market",
+      "volatile cryptocurrency"
+    ],
+    "paraphrases": [
+      "digital coin",
+      "virtual money"
+    ],
+    "example": "The value of a cryptocurrency can change dramatically within a few hours."
+  },
+  {
+    "id": "tec-061",
+    "topic": "technology",
+    "word": "3D printing",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "the process of making solid objects by building them up layer by layer from a digital design",
+    "collocations": [
+      "3D printing technology",
+      "3D printing of prosthetics",
+      "industrial 3D printing"
+    ],
+    "paraphrases": [
+      "additive manufacturing",
+      "layer-by-layer fabrication"
+    ],
+    "example": "3D printing allows hospitals to produce custom replacement parts for patients on site."
+  },
+  {
+    "id": "tec-062",
+    "topic": "technology",
+    "word": "nanotechnology",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "the science and use of extremely small structures at the scale of atoms and molecules",
+    "collocations": [
+      "advances in nanotechnology",
+      "nanotechnology research",
+      "medical nanotechnology"
+    ],
+    "paraphrases": [
+      "engineering at molecular scale",
+      "ultra-small-scale engineering"
+    ],
+    "example": "Nanotechnology may eventually allow drugs to be delivered directly to cancer cells."
+  },
+  {
+    "id": "tec-063",
+    "topic": "technology",
+    "word": "telecommunications",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "the sending of information over distances by phone, radio or the internet",
+    "collocations": [
+      "telecommunications industry",
+      "telecommunications network",
+      "telecommunications company"
+    ],
+    "paraphrases": [
+      "long-distance communication",
+      "communications networks"
+    ],
+    "example": "The telecommunications industry has invested billions in building faster mobile networks."
+  },
+  {
+    "id": "tec-064",
+    "topic": "technology",
+    "word": "satellite",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "an object sent into space to collect information or relay signals",
+    "collocations": [
+      "communications satellite",
+      "satellite image",
+      "launch a satellite"
+    ],
+    "paraphrases": [
+      "orbiting craft",
+      "space-based relay"
+    ],
+    "example": "Satellite images enable scientists to monitor changes in forests from far above."
+  },
+  {
+    "id": "tec-065",
+    "topic": "technology",
+    "word": "smart home",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "a house with devices that can be controlled automatically or by phone",
+    "collocations": [
+      "smart home devices",
+      "smart home technology",
+      "build a smart home"
+    ],
+    "paraphrases": [
+      "automated house",
+      "connected household"
+    ],
+    "example": "In a smart home, lights and heating can be adjusted by voice command."
+  },
+  {
+    "id": "tec-066",
+    "topic": "technology",
+    "word": "glitch",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a small fault that stops something working properly",
+    "collocations": [
+      "a technical glitch",
+      "software glitch",
+      "minor glitch"
+    ],
+    "paraphrases": [
+      "minor fault",
+      "temporary malfunction"
+    ],
+    "example": "A glitch in the booking system meant that several customers were charged twice."
+  },
+  {
+    "id": "tec-067",
+    "topic": "technology",
+    "word": "malfunction",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "a failure to work in the correct way",
+    "collocations": [
+      "equipment malfunction",
+      "technical malfunction",
+      "cause a malfunction"
+    ],
+    "paraphrases": [
+      "breakdown",
+      "failure"
+    ],
+    "example": "A single malfunction in the control system forced the whole plant to shut down."
+  },
+  {
+    "id": "tec-068",
+    "topic": "technology",
+    "word": "backup",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a spare copy of data kept in case the original is lost",
+    "collocations": [
+      "make a backup",
+      "backup copy",
+      "regular backup"
+    ],
+    "paraphrases": [
+      "spare copy",
+      "duplicate file"
+    ],
+    "example": "Always make a backup of your essay before you switch off the computer."
+  },
+  {
+    "id": "tec-069",
+    "topic": "technology",
+    "word": "password",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a secret word or code that allows someone to enter a system",
+    "collocations": [
+      "choose a password",
+      "strong password",
+      "reset a password"
+    ],
+    "paraphrases": [
+      "secret code",
+      "access code"
+    ],
+    "example": "Using the same password for every account makes it easy for criminals to break in."
+  },
+  {
+    "id": "tec-070",
+    "topic": "technology",
+    "word": "anonymity",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the state of not being identified by name",
+    "collocations": [
+      "preserve anonymity",
+      "online anonymity",
+      "guarantee anonymity"
+    ],
+    "paraphrases": [
+      "namelessness",
+      "being unidentifiable"
+    ],
+    "example": "Online anonymity can encourage honest discussion but also abusive behaviour."
+  },
+  {
+    "id": "tec-071",
+    "topic": "technology",
+    "word": "digital footprint",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the trail of data that a person leaves when using the internet",
+    "collocations": [
+      "reduce your digital footprint",
+      "leave a digital footprint",
+      "a growing digital footprint"
+    ],
+    "paraphrases": [
+      "online trail",
+      "data trace"
+    ],
+    "example": "Employers may examine a candidate's digital footprint before making a job offer."
+  },
+  {
+    "id": "tec-072",
+    "topic": "technology",
+    "word": "deepfake",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a video or recording created by software to make someone appear to say or do something they did not",
+    "collocations": [
+      "create a deepfake",
+      "convincing deepfake",
+      "deepfake video"
+    ],
+    "paraphrases": [
+      "fabricated video",
+      "synthetic recording"
+    ],
+    "example": "A convincing deepfake of the president circulated for hours before it was exposed as fake."
+  },
+  {
+    "id": "tec-073",
+    "topic": "technology",
+    "word": "chatbot",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a computer program that talks with people in everyday language",
+    "collocations": [
+      "customer service chatbot",
+      "use a chatbot",
+      "chatbot responses"
+    ],
+    "paraphrases": [
+      "automated assistant",
+      "virtual helper"
+    ],
+    "example": "Many banks now answer simple queries through a chatbot rather than a human adviser."
+  },
+  {
+    "id": "tec-074",
+    "topic": "technology",
+    "word": "disruptive",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "changing an industry or way of doing things in a major, unexpected way",
+    "collocations": [
+      "disruptive technology",
+      "disruptive innovation",
+      "highly disruptive"
+    ],
+    "paraphrases": [
+      "game-changing",
+      "transformative"
+    ],
+    "example": "Ride-hailing apps proved to be a disruptive force for the traditional taxi industry."
+  },
+  {
+    "id": "tec-075",
+    "topic": "technology",
+    "word": "obsolescence",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the process of becoming out of date and no longer used",
+    "collocations": [
+      "planned obsolescence",
+      "technological obsolescence",
+      "built-in obsolescence"
+    ],
+    "paraphrases": [
+      "becoming outdated",
+      "falling out of use"
+    ],
+    "example": "Critics accuse manufacturers of planned obsolescence, designing phones that fail after a few years."
+  },
+  {
+    "id": "tec-076",
+    "topic": "technology",
+    "word": "internet of things",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "the network of everyday objects that are connected to the internet and exchange data",
+    "collocations": [
+      "the internet of things",
+      "devices in the internet of things",
+      "secure the internet of things"
+    ],
+    "paraphrases": [
+      "network of connected devices",
+      "web-enabled objects"
+    ],
+    "example": "The internet of things allows a fridge to order food when supplies run low."
+  },
+  {
+    "id": "tec-077",
+    "topic": "technology",
+    "word": "hacker",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a person who gains unauthorised access to computer systems",
+    "collocations": [
+      "ethical hacker",
+      "hacker attack",
+      "skilled hacker"
+    ],
+    "paraphrases": [
+      "computer intruder",
+      "cyber attacker"
+    ],
+    "example": "A hacker broke into the council's network and demanded payment to restore its files."
+  },
+  {
+    "id": "tec-078",
+    "topic": "technology",
+    "word": "virtual",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "existing or taking place on a computer rather than in the real world",
+    "collocations": [
+      "virtual meeting",
+      "virtual classroom",
+      "virtual world"
+    ],
+    "paraphrases": [
+      "online",
+      "computer-based"
+    ],
+    "example": "Virtual meetings save companies the cost of flying employees across the globe."
+  },
+  {
+    "id": "tec-079",
+    "topic": "technology",
+    "word": "pioneer",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to be among the first to develop or use a new method or idea",
+    "collocations": [
+      "pioneer a technique",
+      "pioneer research",
+      "pioneered by"
+    ],
+    "paraphrases": [
+      "originate",
+      "spearhead"
+    ],
+    "example": "The company pioneered a technique that allows complex parts to be produced in a single step."
+  },
+  {
+    "id": "tec-080",
+    "topic": "technology",
+    "word": "smartphone addiction",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "writing"
+    ],
+    "definition": "a compulsive need to use a mobile phone that harms daily life",
+    "collocations": [
+      "tackle smartphone addiction",
+      "signs of smartphone addiction"
+    ],
+    "paraphrases": [
+      "phone dependency",
+      "compulsive phone use"
+    ],
+    "example": "Teachers report that smartphone addiction makes it harder for pupils to concentrate in class."
+  }
 ]

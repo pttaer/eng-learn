@@ -1,1751 +1,1708 @@
 [
- {
-  "id": "ene-001",
-  "topic": "energy",
-  "word": "renewable",
-  "pos": "adjective",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "able to be replenished naturally and therefore not used up",
-  "collocations": [
-   "renewable energy",
-   "renewable sources",
-   "renewable resources"
-  ],
-  "paraphrases": [
-   "replenishable",
-   "self-replenishing"
-  ],
-  "example": "Renewable energy now supplies a growing share of the electricity consumed in northern Europe."
- },
- {
-  "id": "ene-002",
-  "topic": "energy",
-  "word": "fossil fuel",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "a fuel such as coal, oil or gas formed from ancient organic remains",
-  "collocations": [
-   "burn fossil fuels",
-   "reliance on fossil fuels",
-   "fossil fuel reserves"
-  ],
-  "paraphrases": [
-   "coal, oil and gas",
-   "carbon-based fuels"
-  ],
-  "example": "Burning fossil fuels remains the largest single source of the world's electricity."
- },
- {
-  "id": "ene-003",
-  "topic": "energy",
-  "word": "solar panel",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "a flat device that converts sunlight into electricity or heat",
-  "collocations": [
-   "install solar panels",
-   "rooftop solar panels",
-   "solar panel array"
-  ],
-  "paraphrases": [
-   "photovoltaic module",
-   "sun-powered unit"
-  ],
-  "example": "Many homeowners now install solar panels to reduce their dependence on the national grid."
- },
- {
-  "id": "ene-004",
-  "topic": "energy",
-  "word": "wind turbine",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a tall machine with blades that turns wind into electrical power",
-  "collocations": [
-   "offshore wind turbines",
-   "wind turbine blades",
-   "a row of wind turbines"
-  ],
-  "paraphrases": [
-   "wind-driven generator",
-   "windmill-style generator"
-  ],
-  "example": "Offshore wind turbines can produce more power than those on land because winds are stronger and steadier."
- },
- {
-  "id": "ene-005",
-  "topic": "energy",
-  "word": "nuclear power",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "electricity produced by splitting atoms in a reactor",
-  "collocations": [
-   "nuclear power station",
-   "expand nuclear power",
-   "nuclear power plant"
-  ],
-  "paraphrases": [
-   "atomic energy",
-   "atomic power"
-  ],
-  "example": "Supporters argue that nuclear power offers a low-carbon alternative to coal."
- },
- {
-  "id": "ene-006",
-  "topic": "energy",
-  "word": "hydroelectric",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "producing electricity from the movement of falling or flowing water",
-  "collocations": [
-   "hydroelectric dam",
-   "hydroelectric power",
-   "hydroelectric scheme"
-  ],
-  "paraphrases": [
-   "water-generated",
-   "water-powered"
-  ],
-  "example": "The new hydroelectric dam will supply electricity to nearly two million households."
- },
- {
-  "id": "ene-007",
-  "topic": "energy",
-  "word": "geothermal",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "using heat from beneath the earth's surface as a power source",
-  "collocations": [
-   "geothermal energy",
-   "geothermal plant",
-   "geothermal heating"
-  ],
-  "paraphrases": [
-   "earth-heat",
-   "heat from underground"
-  ],
-  "example": "Iceland heats most of its buildings with geothermal energy drawn from volcanic activity."
- },
- {
-  "id": "ene-008",
-  "topic": "energy",
-  "word": "biofuel",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a fuel made from plant material or animal waste",
-  "collocations": [
-   "produce biofuel",
-   "biofuel crops",
-   "first-generation biofuel"
-  ],
-  "paraphrases": [
-   "plant-based fuel",
-   "fuel derived from crops"
-  ],
-  "example": "Critics claim that growing crops for biofuel pushes up food prices."
- },
- {
-  "id": "ene-009",
-  "topic": "energy",
-  "word": "biomass",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "organic material from plants or animals used as fuel",
-  "collocations": [
-   "burn biomass",
-   "biomass energy",
-   "biomass power station"
-  ],
-  "paraphrases": [
-   "organic fuel",
-   "plant and animal matter"
-  ],
-  "example": "Wood pellets and other biomass are increasingly burned to generate heat and power."
- },
- {
-  "id": "ene-010",
-  "topic": "energy",
-  "word": "power grid",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "listening"
-  ],
-  "definition": "the network that carries electricity from producers to consumers",
-  "collocations": [
-   "national power grid",
-   "connect to the power grid",
-   "overload the power grid"
-  ],
-  "paraphrases": [
-   "electricity network",
-   "national electricity system"
-  ],
-  "example": "Extreme weather can overload the power grid and leave entire regions without electricity."
- },
- {
-  "id": "ene-011",
-  "topic": "energy",
-  "word": "blackout",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a sudden total loss of electrical power in an area",
-  "collocations": [
-   "suffer a blackout",
-   "widespread blackout",
-   "prevent blackouts"
-  ],
-  "paraphrases": [
-   "power failure",
-   "power outage"
-  ],
-  "example": "A widespread blackout paralysed the city's transport system for several hours."
- },
- {
-  "id": "ene-012",
-  "topic": "energy",
-  "word": "power cut",
-  "pos": "phrase",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a temporary interruption of the electricity supply",
-  "collocations": [
-   "suffer a power cut",
-   "a power cut occurs",
-   "during a power cut"
-  ],
-  "paraphrases": [
-   "electricity outage",
-   "loss of supply"
-  ],
-  "example": "We had a power cut last night, so I read by candlelight."
- },
- {
-  "id": "ene-013",
-  "topic": "energy",
-  "word": "consumption",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the amount of energy, goods or resources that people use",
-  "collocations": [
-   "energy consumption",
-   "reduce consumption",
-   "per capita consumption"
-  ],
-  "paraphrases": [
-   "usage",
-   "use"
-  ],
-  "example": "Household energy consumption has fallen despite the rising number of electrical appliances."
- },
- {
-  "id": "ene-014",
-  "topic": "energy",
-  "word": "conserve",
-  "pos": "verb",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to use something carefully so that it is not wasted or used up",
-  "collocations": [
-   "conserve energy",
-   "conserve resources",
-   "conserve fuel"
-  ],
-  "paraphrases": [
-   "save",
-   "economise on"
-  ],
-  "example": "Schools are urging pupils to conserve energy by switching off lights and computers."
- },
- {
-  "id": "ene-015",
-  "topic": "energy",
-  "word": "conservation",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the careful use of resources to avoid waste or loss",
-  "collocations": [
-   "energy conservation",
-   "conservation measures",
-   "conservation policy"
-  ],
-  "paraphrases": [
-   "saving",
-   "careful management"
-  ],
-  "example": "Energy conservation can be achieved more cheaply than building new power stations."
- },
- {
-  "id": "ene-016",
-  "topic": "energy",
-  "word": "energy efficiency",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "the use of less energy to do the same task",
-  "collocations": [
-   "improve energy efficiency",
-   "energy efficiency standards",
-   "boost energy efficiency"
-  ],
-  "paraphrases": [
-   "economical use of power",
-   "low energy waste"
-  ],
-  "example": "Better insulation is one of the simplest ways to improve energy efficiency in older housing."
- },
- {
-  "id": "ene-017",
-  "topic": "energy",
-  "word": "energy-efficient",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "designed to perform a task using little energy",
-  "collocations": [
-   "energy-efficient appliances",
-   "energy-efficient lighting",
-   "energy-efficient homes"
-  ],
-  "paraphrases": [
-   "low-consumption",
-   "economical to run"
-  ],
-  "example": "Replacing old bulbs with energy-efficient lighting cuts electricity bills noticeably."
- },
- {
-  "id": "ene-018",
-  "topic": "energy",
-  "word": "insulation",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "material that stops heat from escaping from a building",
-  "collocations": [
-   "loft insulation",
-   "thermal insulation",
-   "improve insulation"
-  ],
-  "paraphrases": [
-   "heat-retaining layer",
-   "thermal barrier"
-  ],
-  "example": "Poor insulation accounts for much of the heat lost from older houses."
- },
- {
-  "id": "ene-019",
-  "topic": "energy",
-  "word": "retrofit",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to add new equipment to an existing building or machine",
-  "collocations": [
-   "retrofit buildings",
-   "retrofit insulation",
-   "retrofit homes"
-  ],
-  "paraphrases": [
-   "upgrade",
-   "modernise"
-  ],
-  "example": "Retrofitting existing homes with heat pumps is costly but essential for cutting emissions."
- },
- {
-  "id": "ene-020",
-  "topic": "energy",
-  "word": "appliance",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "an electrical device used in the home, such as a fridge",
-  "collocations": [
-   "household appliance",
-   "electrical appliances",
-   "switch off appliances"
-  ],
-  "paraphrases": [
-   "domestic machine",
-   "home device"
-  ],
-  "example": "Modern kitchen appliances are far less wasteful than those made twenty years ago."
- },
- {
-  "id": "ene-021",
-  "topic": "energy",
-  "word": "sustainable",
-  "pos": "adjective",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "able to continue over time without harming resources or the environment",
-  "collocations": [
-   "sustainable energy",
-   "sustainable development",
-   "environmentally sustainable"
-  ],
-  "paraphrases": [
-   "viable in the long term",
-   "long-lasting"
-  ],
-  "example": "Few experts believe that current rates of oil extraction are sustainable beyond this century."
- },
- {
-  "id": "ene-022",
-  "topic": "energy",
-  "word": "finite",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "limited in quantity and therefore able to run out",
-  "collocations": [
-   "finite resources",
-   "finite supply",
-   "a finite amount of"
-  ],
-  "paraphrases": [
-   "limited",
-   "not unlimited"
-  ],
-  "example": "Oil is a finite resource, so alternatives must eventually be found."
- },
- {
-  "id": "ene-023",
-  "topic": "energy",
-  "word": "depletion",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the reduction of a supply of something until little is left",
-  "collocations": [
-   "resource depletion",
-   "depletion of reserves",
-   "rapid depletion"
-  ],
-  "paraphrases": [
-   "exhaustion",
-   "running down"
-  ],
-  "example": "The depletion of oil reserves has encouraged governments to fund research into alternatives."
- },
- {
-  "id": "ene-024",
-  "topic": "energy",
-  "word": "deplete",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to use up a large part of a supply so that little remains",
-  "collocations": [
-   "deplete resources",
-   "deplete reserves",
-   "rapidly depleted"
-  ],
-  "paraphrases": [
-   "exhaust",
-   "use up"
-  ],
-  "example": "Heavy extraction has depleted the region's natural gas reserves."
- },
- {
-  "id": "ene-025",
-  "topic": "energy",
-  "word": "reserves",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "supplies of a resource that are stored or not yet extracted",
-  "collocations": [
-   "oil reserves",
-   "proven reserves",
-   "coal reserves"
-  ],
-  "paraphrases": [
-   "stocks",
-   "stockpiles of resource"
-  ],
-  "example": "Saudi Arabia holds some of the largest proven oil reserves in the world."
- },
- {
-  "id": "ene-026",
-  "topic": "energy",
-  "word": "extraction",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the process of taking a resource out of the ground",
-  "collocations": [
-   "oil extraction",
-   "extraction of coal",
-   "gas extraction"
-  ],
-  "paraphrases": [
-   "removal from the earth",
-   "mining"
-  ],
-  "example": "The extraction of shale gas has transformed the economy of several American states."
- },
- {
-  "id": "ene-027",
-  "topic": "energy",
-  "word": "drilling",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "the making of deep holes in the ground to reach oil or gas",
-  "collocations": [
-   "offshore drilling",
-   "drilling rig",
-   "oil drilling"
-  ],
-  "paraphrases": [
-   "boring",
-   "sinking wells"
-  ],
-  "example": "Offshore drilling carries a risk of oil spills that can devastate coastal communities."
- },
- {
-  "id": "ene-028",
-  "topic": "energy",
-  "word": "refinery",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a factory where crude oil is processed into usable products",
-  "collocations": [
-   "oil refinery",
-   "refinery capacity",
-   "build a refinery"
-  ],
-  "paraphrases": [
-   "oil processing plant",
-   "petroleum plant"
-  ],
-  "example": "The refinery converts crude oil into petrol, diesel and aviation fuel."
- },
- {
-  "id": "ene-029",
-  "topic": "energy",
-  "word": "pipeline",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a long pipe carrying oil or gas over a distance",
-  "collocations": [
-   "gas pipeline",
-   "build a pipeline",
-   "oil pipeline"
-  ],
-  "paraphrases": [
-   "conduit for oil and gas",
-   "supply line"
-  ],
-  "example": "A new pipeline will carry natural gas from the Caspian Sea to Europe."
- },
- {
-  "id": "ene-030",
-  "topic": "energy",
-  "word": "crude oil",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "oil in its natural state before it is refined",
-  "collocations": [
-   "price of crude oil",
-   "crude oil exports",
-   "barrel of crude oil"
-  ],
-  "paraphrases": [
-   "unrefined petroleum",
-   "raw oil"
-  ],
-  "example": "The price of crude oil fell sharply when demand collapsed."
- },
- {
-  "id": "ene-031",
-  "topic": "energy",
-  "word": "petrol",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a liquid fuel used in most cars",
-  "collocations": [
-   "unleaded petrol",
-   "petrol prices",
-   "petrol station"
-  ],
-  "paraphrases": [
-   "gasoline",
-   "motor fuel"
-  ],
-  "example": "The cost of petrol has risen by almost a fifth over the past year."
- },
- {
-  "id": "ene-032",
-  "topic": "energy",
-  "word": "coal",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "a hard black rock burned as fuel and to generate electricity",
-  "collocations": [
-   "coal mine",
-   "coal-fired power station",
-   "burn coal"
-  ],
-  "paraphrases": [
-   "solid fossil fuel",
-   "black rock fuel"
-  ],
-  "example": "Many countries have pledged to phase out coal by the end of the next decade."
- },
- {
-  "id": "ene-033",
-  "topic": "energy",
-  "word": "natural gas",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a fuel gas found underground and used for heating and power",
-  "collocations": [
-   "natural gas supplies",
-   "natural gas prices",
-   "natural gas pipeline"
-  ],
-  "paraphrases": [
-   "methane fuel",
-   "gas from underground"
-  ],
-  "example": "Natural gas produces less carbon dioxide than coal when it is burned."
- },
- {
-  "id": "ene-034",
-  "topic": "energy",
-  "word": "shale gas",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "natural gas trapped in fine rock layers and released by fracturing",
-  "collocations": [
-   "shale gas extraction",
-   "shale gas reserves",
-   "shale gas boom"
-  ],
-  "paraphrases": [
-   "unconventional gas",
-   "gas locked in rock"
-  ],
-  "example": "The shale gas boom has made the United States a major energy exporter."
- },
- {
-  "id": "ene-035",
-  "topic": "energy",
-  "word": "fracking",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a method of releasing gas from rock by pumping in liquid at high pressure",
-  "collocations": [
-   "ban fracking",
-   "fracking operations",
-   "oppose fracking"
-  ],
-  "paraphrases": [
-   "hydraulic fracturing",
-   "fracturing rock for gas"
-  ],
-  "example": "Local residents fear that fracking could contaminate their drinking water."
- },
- {
-  "id": "ene-036",
-  "topic": "energy",
-  "word": "uranium",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a heavy radioactive metal used as fuel in nuclear reactors",
-  "collocations": [
-   "enriched uranium",
-   "uranium mine",
-   "uranium supplies"
-  ],
-  "paraphrases": [
-   "nuclear fuel metal",
-   "reactor fuel"
-  ],
-  "example": "Kazakhstan is the world's largest producer of uranium."
- },
- {
-  "id": "ene-037",
-  "topic": "energy",
-  "word": "reactor",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a large device in which nuclear reactions produce heat",
-  "collocations": [
-   "nuclear reactor",
-   "reactor core",
-   "build a reactor"
-  ],
-  "paraphrases": [
-   "atomic pile",
-   "nuclear unit"
-  ],
-  "example": "Engineers shut down the reactor after a fault was detected in the cooling system."
- },
- {
-  "id": "ene-038",
-  "topic": "energy",
-  "word": "meltdown",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a dangerous overheating of a nuclear reactor core",
-  "collocations": [
-   "nuclear meltdown",
-   "prevent a meltdown",
-   "risk of a meltdown"
-  ],
-  "paraphrases": [
-   "reactor core failure",
-   "core overheating"
-  ],
-  "example": "The meltdown at Chernobyl forced the evacuation of tens of thousands of people."
- },
- {
-  "id": "ene-039",
-  "topic": "energy",
-  "word": "radioactive",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "giving off harmful energy released by unstable atoms",
-  "collocations": [
-   "radioactive waste",
-   "radioactive material",
-   "radioactive leak"
-  ],
-  "paraphrases": [
-   "emitting radiation",
-   "giving off radiation"
-  ],
-  "example": "Storing radioactive waste safely for thousands of years remains an unresolved challenge."
- },
- {
-  "id": "ene-040",
-  "topic": "energy",
-  "word": "nuclear fusion",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a reaction that joins atoms together to release large amounts of energy",
-  "collocations": [
-   "achieve nuclear fusion",
-   "fusion reactor",
-   "nuclear fusion research"
-  ],
-  "paraphrases": [
-   "atom-joining reaction",
-   "fusion of atomic nuclei"
-  ],
-  "example": "Scientists hope nuclear fusion will one day provide almost limitless clean energy."
- },
- {
-  "id": "ene-041",
-  "topic": "energy",
-  "word": "tidal",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "relating to the regular rise and fall of the sea",
-  "collocations": [
-   "tidal power",
-   "tidal energy",
-   "tidal barrage"
-  ],
-  "paraphrases": [
-   "relating to ocean tides",
-   "sea-movement"
-  ],
-  "example": "A tidal barrage across the estuary could generate power for tens of thousands of homes."
- },
- {
-  "id": "ene-042",
-  "topic": "energy",
-  "word": "hydrogen",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a light gas that can be burned as a clean fuel",
-  "collocations": [
-   "green hydrogen",
-   "hydrogen fuel cell",
-   "hydrogen-powered vehicles"
-  ],
-  "paraphrases": [
-   "clean-burning gas",
-   "H2 fuel"
-  ],
-  "example": "Green hydrogen produced with wind power could replace natural gas in heavy industry."
- },
- {
-  "id": "ene-043",
-  "topic": "energy",
-  "word": "battery",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "reading"
-  ],
-  "definition": "a device that stores electrical energy for later use",
-  "collocations": [
-   "rechargeable battery",
-   "battery storage",
-   "battery life"
-  ],
-  "paraphrases": [
-   "electrical cell",
-   "power pack"
-  ],
-  "example": "Better battery storage is the key to making solar power reliable at night."
- },
- {
-  "id": "ene-044",
-  "topic": "energy",
-  "word": "generate",
-  "pos": "verb",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to produce energy, especially electricity",
-  "collocations": [
-   "generate electricity",
-   "generate power",
-   "generate heat"
-  ],
-  "paraphrases": [
-   "produce",
-   "create"
-  ],
-  "example": "Hydroelectric dams generate electricity without burning any fuel."
- },
- {
-  "id": "ene-045",
-  "topic": "energy",
-  "word": "power station",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a plant where electricity is produced on a large scale",
-  "collocations": [
-   "coal-fired power station",
-   "build a power station",
-   "close a power station"
-  ],
-  "paraphrases": [
-   "generating plant",
-   "electricity plant"
-  ],
-  "example": "The old power station was converted into a museum of industrial history."
- },
- {
-  "id": "ene-046",
-  "topic": "energy",
-  "word": "energy supply",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "the amount of power available to a country or area",
-  "collocations": [
-   "secure energy supply",
-   "energy supply chain",
-   "disrupt the energy supply"
-  ],
-  "paraphrases": [
-   "power provision",
-   "availability of power"
-  ],
-  "example": "Wars in oil-producing regions regularly threaten the global energy supply."
- },
- {
-  "id": "ene-047",
-  "topic": "energy",
-  "word": "energy security",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a nation's ability to obtain reliable and affordable energy",
-  "collocations": [
-   "ensure energy security",
-   "threaten energy security",
-   "improve energy security"
-  ],
-  "paraphrases": [
-   "reliable access to power",
-   "stable power provision"
-  ],
-  "example": "Diversifying suppliers is vital for energy security in countries that import most of their gas."
- },
- {
-  "id": "ene-048",
-  "topic": "energy",
-  "word": "shortage",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "a situation where there is not enough of something",
-  "collocations": [
-   "energy shortage",
-   "severe shortage",
-   "shortage of fuel"
-  ],
-  "paraphrases": [
-   "scarcity",
-   "lack"
-  ],
-  "example": "A severe shortage of fuel left petrol stations empty for several days."
- },
- {
-  "id": "ene-049",
-  "topic": "energy",
-  "word": "scarcity",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a condition in which something is in short supply",
-  "collocations": [
-   "resource scarcity",
-   "scarcity of oil",
-   "growing scarcity"
-  ],
-  "paraphrases": [
-   "rarity",
-   "insufficient supply"
-  ],
-  "example": "Growing scarcity of oil is likely to push prices higher in the coming decades."
- },
- {
-  "id": "ene-050",
-  "topic": "energy",
-  "word": "scarce",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "not available in sufficient amounts",
-  "collocations": [
-   "scarce resources",
-   "become scarce",
-   "increasingly scarce"
-  ],
-  "paraphrases": [
-   "in short supply",
-   "hard to come by"
-  ],
-  "example": "Clean water and cheap fuel are becoming increasingly scarce in the drought-hit region."
- },
- {
-  "id": "ene-051",
-  "topic": "energy",
-  "word": "abundant",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "existing in very large amounts",
-  "collocations": [
-   "abundant supply",
-   "abundant sunshine",
-   "abundant resources"
-  ],
-  "paraphrases": [
-   "plentiful",
-   "ample"
-  ],
-  "example": "Countries with abundant sunshine are well placed to develop solar power."
- },
- {
-  "id": "ene-052",
-  "topic": "energy",
-  "word": "surge",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "listening"
-  ],
-  "definition": "a sudden large rise in demand or price",
-  "collocations": [
-   "power surge",
-   "a surge in demand",
-   "price surge"
-  ],
-  "paraphrases": [
-   "sharp rise",
-   "sudden jump"
-  ],
-  "example": "A surge in demand during the heatwave pushed electricity prices to a record high."
- },
- {
-  "id": "ene-053",
-  "topic": "energy",
-  "word": "peak demand",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "the time when electricity use reaches its highest level",
-  "collocations": [
-   "meet peak demand",
-   "during peak demand",
-   "peak demand periods"
-  ],
-  "paraphrases": [
-   "maximum load",
-   "highest usage"
-  ],
-  "example": "Utilities must keep spare capacity to cope with peak demand on cold winter evenings."
- },
- {
-  "id": "ene-054",
-  "topic": "energy",
-  "word": "tariff",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a set price charged for gas or electricity",
-  "collocations": [
-   "energy tariff",
-   "fixed tariff",
-   "cheaper tariff"
-  ],
-  "paraphrases": [
-   "pricing rate",
-   "fee schedule"
-  ],
-  "example": "Switching to a cheaper tariff can save a household hundreds of pounds a year."
- },
- {
-  "id": "ene-055",
-  "topic": "energy",
-  "word": "subsidy",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "money given by a government to lower the cost of something",
-  "collocations": [
-   "government subsidy",
-   "energy subsidies",
-   "remove subsidies"
-  ],
-  "paraphrases": [
-   "state support",
-   "public funding"
-  ],
-  "example": "Generous subsidies helped the solar industry grow rapidly in its early years."
- },
- {
-  "id": "ene-056",
-  "topic": "energy",
-  "word": "subsidise",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to help pay for something with public money",
-  "collocations": [
-   "subsidise renewable energy",
-   "heavily subsidised",
-   "subsidise fuel"
-  ],
-  "paraphrases": [
-   "fund with public money",
-   "finance partly"
-  ],
-  "example": "Governments continue to subsidise fossil fuels despite pledges to cut emissions."
- },
- {
-  "id": "ene-057",
-  "topic": "energy",
-  "word": "utility",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a company supplying power, gas or water to the public",
-  "collocations": [
-   "utility company",
-   "utility bills",
-   "public utility"
-  ],
-  "paraphrases": [
-   "energy provider",
-   "service supplier"
-  ],
-  "example": "Utility companies have been criticised for raising prices while posting record profits."
- },
- {
-  "id": "ene-058",
-  "topic": "energy",
-  "word": "off-grid",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "not connected to the main electricity network",
-  "collocations": [
-   "off-grid living",
-   "off-grid solar",
-   "go off-grid"
-  ],
-  "paraphrases": [
-   "independent of the mains",
-   "self-powered"
-  ],
-  "example": "Remote villages are turning to off-grid solar systems because extending the network is too costly."
- },
- {
-  "id": "ene-059",
-  "topic": "energy",
-  "word": "self-sufficient",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "able to supply one's own needs without outside help",
-  "collocations": [
-   "self-sufficient in energy",
-   "become self-sufficient",
-   "self-sufficient community"
-  ],
-  "paraphrases": [
-   "independent",
-   "able to provide for itself"
-  ],
-  "example": "Denmark aims to become self-sufficient in energy through wind power."
- },
- {
-  "id": "ene-060",
-  "topic": "energy",
-  "word": "decarbonise",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to reduce or remove the carbon dioxide produced by an activity",
-  "collocations": [
-   "decarbonise the economy",
-   "decarbonise transport",
-   "decarbonise electricity"
-  ],
-  "paraphrases": [
-   "cut carbon output",
-   "eliminate carbon emissions"
-  ],
-  "example": "Decarbonising heavy industry will require new technology and large investment."
- },
- {
-  "id": "ene-061",
-  "topic": "energy",
-  "word": "phase out",
-  "pos": "phrase",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "to stop using something gradually over a period",
-  "collocations": [
-   "phase out coal",
-   "phase out subsidies",
-   "gradually phase out"
-  ],
-  "paraphrases": [
-   "gradually withdraw",
-   "discontinue by stages"
-  ],
-  "example": "The government plans to phase out petrol cars over the next two decades."
- },
- {
-  "id": "ene-062",
-  "topic": "energy",
-  "word": "intermittent",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "stopping and starting at irregular intervals",
-  "collocations": [
-   "intermittent supply",
-   "intermittent power",
-   "intermittent nature of"
-  ],
-  "paraphrases": [
-   "irregular",
-   "unsteady"
-  ],
-  "example": "Wind and solar power are intermittent, so storage or backup is needed."
- },
- {
-  "id": "ene-063",
-  "topic": "energy",
-  "word": "reliable",
-  "pos": "adjective",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "able to be trusted to work consistently",
-  "collocations": [
-   "reliable supply",
-   "reliable source of power",
-   "highly reliable"
-  ],
-  "paraphrases": [
-   "dependable",
-   "consistent"
-  ],
-  "example": "Coal was long seen as a reliable source of power because it can be burned on demand."
- },
- {
-  "id": "ene-064",
-  "topic": "energy",
-  "word": "output",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the amount of energy or goods produced",
-  "collocations": [
-   "power output",
-   "energy output",
-   "maximum output"
-  ],
-  "paraphrases": [
-   "production",
-   "yield"
-  ],
-  "example": "The turbine's output falls sharply when wind speeds drop."
- },
- {
-  "id": "ene-065",
-  "topic": "energy",
-  "word": "dependence",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the state of relying on something to survive or function",
-  "collocations": [
-   "dependence on oil",
-   "reduce dependence",
-   "heavy dependence"
-  ],
-  "paraphrases": [
-   "reliance",
-   "overreliance"
-  ],
-  "example": "Reducing dependence on imported oil is a central aim of national policy."
- },
- {
-  "id": "ene-066",
-  "topic": "energy",
-  "word": "energy-intensive",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "requiring a large amount of energy to operate",
-  "collocations": [
-   "energy-intensive industry",
-   "energy-intensive process",
-   "energy-intensive production"
-  ],
-  "paraphrases": [
-   "power-hungry",
-   "using much power"
-  ],
-  "example": "Steel and cement manufacturing are among the most energy-intensive industries."
- },
- {
-  "id": "ene-067",
-  "topic": "energy",
-  "word": "gas-guzzling",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "speaking",
-   "reading"
-  ],
-  "definition": "using large amounts of fuel",
-  "collocations": [
-   "gas-guzzling cars",
-   "gas-guzzling vehicles",
-   "gas-guzzling engines"
-  ],
-  "paraphrases": [
-   "fuel-hungry",
-   "thirsty"
-  ],
-  "example": "Higher taxes may persuade people to abandon their gas-guzzling cars."
- },
- {
-  "id": "ene-068",
-  "topic": "energy",
-  "word": "standby",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a mode in which a device uses a little power while switched off",
-  "collocations": [
-   "on standby",
-   "standby mode",
-   "leave appliances on standby"
-  ],
-  "paraphrases": [
-   "idle mode",
-   "low-power state"
-  ],
-  "example": "Leaving televisions on standby wastes a surprising amount of electricity."
- },
- {
-  "id": "ene-069",
-  "topic": "energy",
-  "word": "smart meter",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a device that shows and reports how much energy a home uses",
-  "collocations": [
-   "install a smart meter",
-   "smart meter readings",
-   "fit smart meters"
-  ],
-  "paraphrases": [
-   "digital energy monitor",
-   "electronic usage meter"
-  ],
-  "example": "A smart meter lets households see exactly when they use the most electricity."
- },
- {
-  "id": "ene-070",
-  "topic": "energy",
-  "word": "harness",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to control and use a natural source of power",
-  "collocations": [
-   "harness the wind",
-   "harness solar energy",
-   "harness the power of"
-  ],
-  "paraphrases": [
-   "exploit",
-   "tap"
-  ],
-  "example": "Engineers have found ways to harness the energy of ocean waves."
- },
- {
-  "id": "ene-071",
-  "topic": "energy",
-  "word": "untapped",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "not yet used or exploited",
-  "collocations": [
-   "untapped potential",
-   "untapped resources",
-   "untapped reserves"
-  ],
-  "paraphrases": [
-   "unexploited",
-   "undeveloped"
-  ],
-  "example": "The desert regions have vast untapped potential for solar power generation."
- },
- {
-  "id": "ene-072",
-  "topic": "energy",
-  "word": "volatile",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "likely to change suddenly and unpredictably",
-  "collocations": [
-   "volatile prices",
-   "volatile market",
-   "highly volatile"
-  ],
-  "paraphrases": [
-   "unstable",
-   "fluctuating"
-  ],
-  "example": "Volatile oil prices make it difficult for governments to plan their budgets."
- },
- {
-  "id": "ene-073",
-  "topic": "energy",
-  "word": "stockpile",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "to build up a large store of a resource for future use",
-  "collocations": [
-   "stockpile fuel",
-   "stockpile oil",
-   "stockpile supplies"
-  ],
-  "paraphrases": [
-   "accumulate",
-   "store up"
-  ],
-  "example": "Several countries stockpile oil in underground caverns to guard against supply disruptions."
- },
- {
-  "id": "ene-074",
-  "topic": "energy",
-  "word": "embargo",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "an official ban on trade with a country",
-  "collocations": [
-   "oil embargo",
-   "impose an embargo",
-   "lift the embargo"
-  ],
-  "paraphrases": [
-   "trade ban",
-   "trade prohibition"
-  ],
-  "example": "The oil embargo of the 1970s caused queues at petrol stations across the West."
- },
- {
-  "id": "ene-075",
-  "topic": "energy",
-  "word": "rationing",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a system limiting how much of something each person can have",
-  "collocations": [
-   "fuel rationing",
-   "introduce rationing",
-   "energy rationing"
-  ],
-  "paraphrases": [
-   "controlled allocation",
-   "restricted supply"
-  ],
-  "example": "Fuel rationing was introduced when supplies could not meet demand."
- },
- {
-  "id": "ene-076",
-  "topic": "energy",
-  "word": "dam",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a barrier built across a river to hold back water",
-  "collocations": [
-   "build a dam",
-   "hydroelectric dam",
-   "the dam wall"
-  ],
-  "paraphrases": [
-   "river barrier",
-   "water barrier"
-  ],
-  "example": "The dam holds back enough water to power the valley's turbines throughout the year."
- },
- {
-  "id": "ene-077",
-  "topic": "energy",
-  "word": "transition",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the process of changing from one state or system to another",
-  "collocations": [
-   "energy transition",
-   "smooth transition",
-   "transition to renewables"
-  ],
-  "paraphrases": [
-   "shift",
-   "changeover"
-  ],
-  "example": "A rapid transition to clean power would require a huge expansion of the grid."
- },
- {
-  "id": "ene-078",
-  "topic": "energy",
-  "word": "combustion",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "the process of burning a substance to release heat",
-  "collocations": [
-   "internal combustion engine",
-   "combustion of fuel",
-   "complete combustion"
-  ],
-  "paraphrases": [
-   "burning",
-   "ignition of fuel"
-  ],
-  "example": "The combustion of coal releases large quantities of carbon dioxide and sulphur."
- },
- {
-  "id": "ene-079",
-  "topic": "energy",
-  "word": "photovoltaic",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "converting light directly into electricity",
-  "collocations": [
-   "photovoltaic cells",
-   "photovoltaic panels",
-   "photovoltaic technology"
-  ],
-  "paraphrases": [
-   "solar-electric",
-   "light-to-power"
-  ],
-  "example": "Falling prices have made photovoltaic technology competitive with conventional power in sunny regions."
- }
+  {
+    "id": "ene-001",
+    "topic": "energy",
+    "word": "renewable",
+    "pos": "adjective",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "able to be replenished naturally and therefore not used up",
+    "collocations": [
+      "renewable energy",
+      "renewable sources",
+      "renewable resources"
+    ],
+    "paraphrases": [
+      "replenishable",
+      "self-replenishing"
+    ],
+    "example": "Renewable energy now supplies a growing share of the electricity consumed in northern Europe."
+  },
+  {
+    "id": "ene-002",
+    "topic": "energy",
+    "word": "fossil fuel",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a fuel such as coal, oil or gas formed from ancient organic remains",
+    "collocations": [
+      "burn fossil fuels",
+      "reliance on fossil fuels",
+      "fossil fuel reserves"
+    ],
+    "paraphrases": [
+      "coal, oil and gas",
+      "carbon-based fuels"
+    ],
+    "example": "Burning fossil fuels remains the largest single source of the world's electricity."
+  },
+  {
+    "id": "ene-003",
+    "topic": "energy",
+    "word": "solar panel",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "a flat device that converts sunlight into electricity or heat",
+    "collocations": [
+      "install solar panels",
+      "rooftop solar panels",
+      "solar panel array"
+    ],
+    "paraphrases": [
+      "photovoltaic module",
+      "sun-powered unit"
+    ],
+    "example": "Many homeowners now install solar panels to reduce their dependence on the national grid."
+  },
+  {
+    "id": "ene-004",
+    "topic": "energy",
+    "word": "wind turbine",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a tall machine with blades that turns wind into electrical power",
+    "collocations": [
+      "offshore wind turbines",
+      "wind turbine blades",
+      "a row of wind turbines"
+    ],
+    "paraphrases": [
+      "wind-driven generator",
+      "windmill-style generator"
+    ],
+    "example": "Offshore wind turbines can produce more power than those on land because winds are stronger and steadier."
+  },
+  {
+    "id": "ene-005",
+    "topic": "energy",
+    "word": "nuclear power",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "electricity produced by splitting atoms in a reactor",
+    "collocations": [
+      "nuclear power station",
+      "expand nuclear power",
+      "nuclear power plant"
+    ],
+    "paraphrases": [
+      "atomic energy",
+      "atomic power"
+    ],
+    "example": "Supporters argue that nuclear power offers a low-carbon alternative to coal."
+  },
+  {
+    "id": "ene-006",
+    "topic": "energy",
+    "word": "hydroelectric",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "producing electricity from the movement of falling or flowing water",
+    "collocations": [
+      "hydroelectric dam",
+      "hydroelectric power",
+      "hydroelectric scheme"
+    ],
+    "paraphrases": [
+      "water-generated",
+      "water-powered"
+    ],
+    "example": "The new hydroelectric dam will supply electricity to nearly two million households."
+  },
+  {
+    "id": "ene-007",
+    "topic": "energy",
+    "word": "geothermal",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "using heat from beneath the earth's surface as a power source",
+    "collocations": [
+      "geothermal energy",
+      "geothermal plant",
+      "geothermal heating"
+    ],
+    "paraphrases": [
+      "earth-heat",
+      "heat from underground"
+    ],
+    "example": "Iceland heats most of its buildings with geothermal energy drawn from volcanic activity."
+  },
+  {
+    "id": "ene-008",
+    "topic": "energy",
+    "word": "biofuel",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a fuel made from plant material or animal waste",
+    "collocations": [
+      "produce biofuel",
+      "biofuel crops",
+      "first-generation biofuel"
+    ],
+    "paraphrases": [
+      "plant-based fuel",
+      "fuel derived from crops"
+    ],
+    "example": "Critics claim that growing crops for biofuel pushes up food prices."
+  },
+  {
+    "id": "ene-009",
+    "topic": "energy",
+    "word": "biomass",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "organic material from plants or animals used as fuel",
+    "collocations": [
+      "burn biomass",
+      "biomass energy",
+      "biomass power station"
+    ],
+    "paraphrases": [
+      "organic fuel",
+      "plant and animal matter"
+    ],
+    "example": "Wood pellets and other biomass are increasingly burned to generate heat and power."
+  },
+  {
+    "id": "ene-010",
+    "topic": "energy",
+    "word": "power grid",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "listening"
+    ],
+    "definition": "the network that carries electricity from producers to consumers",
+    "collocations": [
+      "national power grid",
+      "connect to the power grid",
+      "overload the power grid"
+    ],
+    "paraphrases": [
+      "electricity network",
+      "national electricity system"
+    ],
+    "example": "Extreme weather can overload the power grid and leave entire regions without electricity."
+  },
+  {
+    "id": "ene-011",
+    "topic": "energy",
+    "word": "blackout",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a sudden total loss of electrical power in an area",
+    "collocations": [
+      "suffer a blackout",
+      "widespread blackout",
+      "prevent blackouts"
+    ],
+    "paraphrases": [
+      "power failure",
+      "power outage"
+    ],
+    "example": "A widespread blackout paralysed the city's transport system for several hours."
+  },
+  {
+    "id": "ene-012",
+    "topic": "energy",
+    "word": "power cut",
+    "pos": "phrase",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a temporary interruption of the electricity supply",
+    "collocations": [
+      "suffer a power cut",
+      "a power cut occurs",
+      "during a power cut"
+    ],
+    "paraphrases": [
+      "electricity outage",
+      "loss of supply"
+    ],
+    "example": "We had a power cut last night, so I read by candlelight."
+  },
+  {
+    "id": "ene-013",
+    "topic": "energy",
+    "word": "consumption",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the amount of energy, goods or resources that people use",
+    "collocations": [
+      "energy consumption",
+      "reduce consumption",
+      "per capita consumption"
+    ],
+    "paraphrases": [
+      "usage",
+      "use"
+    ],
+    "example": "Household energy consumption has fallen despite the rising number of electrical appliances."
+  },
+  {
+    "id": "ene-014",
+    "topic": "energy",
+    "word": "conserve",
+    "pos": "verb",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to use something carefully so that it is not wasted or used up",
+    "collocations": [
+      "conserve energy",
+      "conserve resources",
+      "conserve fuel"
+    ],
+    "paraphrases": [
+      "save",
+      "economise on"
+    ],
+    "example": "Schools are urging pupils to conserve energy by switching off lights and computers."
+  },
+  {
+    "id": "ene-016",
+    "topic": "energy",
+    "word": "energy efficiency",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the use of less energy to do the same task",
+    "collocations": [
+      "improve energy efficiency",
+      "energy efficiency standards",
+      "boost energy efficiency"
+    ],
+    "paraphrases": [
+      "economical use of power",
+      "low energy waste"
+    ],
+    "example": "Better insulation is one of the simplest ways to improve energy efficiency in older housing."
+  },
+  {
+    "id": "ene-017",
+    "topic": "energy",
+    "word": "energy-efficient",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "designed to perform a task using little energy",
+    "collocations": [
+      "energy-efficient appliances",
+      "energy-efficient lighting",
+      "energy-efficient homes"
+    ],
+    "paraphrases": [
+      "low-consumption",
+      "economical to run"
+    ],
+    "example": "Replacing old bulbs with energy-efficient lighting cuts electricity bills noticeably."
+  },
+  {
+    "id": "ene-018",
+    "topic": "energy",
+    "word": "insulation",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "material that stops heat from escaping from a building",
+    "collocations": [
+      "loft insulation",
+      "thermal insulation",
+      "improve insulation"
+    ],
+    "paraphrases": [
+      "heat-retaining layer",
+      "thermal barrier"
+    ],
+    "example": "Poor insulation accounts for much of the heat lost from older houses."
+  },
+  {
+    "id": "ene-019",
+    "topic": "energy",
+    "word": "retrofit",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to add new equipment to an existing building or machine",
+    "collocations": [
+      "retrofit buildings",
+      "retrofit insulation",
+      "retrofit homes"
+    ],
+    "paraphrases": [
+      "upgrade",
+      "modernise"
+    ],
+    "example": "Retrofitting existing homes with heat pumps is costly but essential for cutting emissions."
+  },
+  {
+    "id": "ene-020",
+    "topic": "energy",
+    "word": "appliance",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "an electrical device used in the home, such as a fridge",
+    "collocations": [
+      "household appliance",
+      "electrical appliances",
+      "switch off appliances"
+    ],
+    "paraphrases": [
+      "domestic machine",
+      "home device"
+    ],
+    "example": "Modern kitchen appliances are far less wasteful than those made twenty years ago."
+  },
+  {
+    "id": "ene-021",
+    "topic": "energy",
+    "word": "sustainable",
+    "pos": "adjective",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "able to continue over time without harming resources or the environment",
+    "collocations": [
+      "sustainable energy",
+      "sustainable development",
+      "environmentally sustainable"
+    ],
+    "paraphrases": [
+      "viable in the long term",
+      "long-lasting"
+    ],
+    "example": "Few experts believe that current rates of oil extraction are sustainable beyond this century."
+  },
+  {
+    "id": "ene-022",
+    "topic": "energy",
+    "word": "finite",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "limited in quantity and therefore able to run out",
+    "collocations": [
+      "finite resources",
+      "finite supply",
+      "a finite amount of"
+    ],
+    "paraphrases": [
+      "limited",
+      "not unlimited"
+    ],
+    "example": "Oil is a finite resource, so alternatives must eventually be found."
+  },
+  {
+    "id": "ene-024",
+    "topic": "energy",
+    "word": "deplete",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to use up a large part of a supply so that little remains",
+    "collocations": [
+      "deplete resources",
+      "deplete reserves",
+      "rapidly depleted"
+    ],
+    "paraphrases": [
+      "exhaust",
+      "use up"
+    ],
+    "example": "Heavy extraction has depleted the region's natural gas reserves."
+  },
+  {
+    "id": "ene-025",
+    "topic": "energy",
+    "word": "reserves",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "supplies of a resource that are stored or not yet extracted",
+    "collocations": [
+      "oil reserves",
+      "proven reserves",
+      "coal reserves"
+    ],
+    "paraphrases": [
+      "stocks",
+      "stockpiles of resource"
+    ],
+    "example": "Saudi Arabia holds some of the largest proven oil reserves in the world."
+  },
+  {
+    "id": "ene-026",
+    "topic": "energy",
+    "word": "extraction",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the process of taking a resource out of the ground",
+    "collocations": [
+      "oil extraction",
+      "extraction of coal",
+      "gas extraction"
+    ],
+    "paraphrases": [
+      "removal from the earth",
+      "mining"
+    ],
+    "example": "The extraction of shale gas has transformed the economy of several American states."
+  },
+  {
+    "id": "ene-027",
+    "topic": "energy",
+    "word": "drilling",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "the making of deep holes in the ground to reach oil or gas",
+    "collocations": [
+      "offshore drilling",
+      "drilling rig",
+      "oil drilling"
+    ],
+    "paraphrases": [
+      "boring",
+      "sinking wells"
+    ],
+    "example": "Offshore drilling carries a risk of oil spills that can devastate coastal communities."
+  },
+  {
+    "id": "ene-028",
+    "topic": "energy",
+    "word": "refinery",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a factory where crude oil is processed into usable products",
+    "collocations": [
+      "oil refinery",
+      "refinery capacity",
+      "build a refinery"
+    ],
+    "paraphrases": [
+      "oil processing plant",
+      "petroleum plant"
+    ],
+    "example": "The refinery converts crude oil into petrol, diesel and aviation fuel."
+  },
+  {
+    "id": "ene-029",
+    "topic": "energy",
+    "word": "pipeline",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a long pipe carrying oil or gas over a distance",
+    "collocations": [
+      "gas pipeline",
+      "build a pipeline",
+      "oil pipeline"
+    ],
+    "paraphrases": [
+      "conduit for oil and gas",
+      "supply line"
+    ],
+    "example": "A new pipeline will carry natural gas from the Caspian Sea to Europe."
+  },
+  {
+    "id": "ene-030",
+    "topic": "energy",
+    "word": "crude oil",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "oil in its natural state before it is refined",
+    "collocations": [
+      "price of crude oil",
+      "crude oil exports",
+      "barrel of crude oil"
+    ],
+    "paraphrases": [
+      "unrefined petroleum",
+      "raw oil"
+    ],
+    "example": "The price of crude oil fell sharply when demand collapsed."
+  },
+  {
+    "id": "ene-031",
+    "topic": "energy",
+    "word": "petrol",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a liquid fuel used in most cars",
+    "collocations": [
+      "unleaded petrol",
+      "petrol prices",
+      "petrol station"
+    ],
+    "paraphrases": [
+      "gasoline",
+      "motor fuel"
+    ],
+    "example": "The cost of petrol has risen by almost a fifth over the past year."
+  },
+  {
+    "id": "ene-032",
+    "topic": "energy",
+    "word": "coal",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a hard black rock burned as fuel and to generate electricity",
+    "collocations": [
+      "coal mine",
+      "coal-fired power station",
+      "burn coal"
+    ],
+    "paraphrases": [
+      "solid fossil fuel",
+      "black rock fuel"
+    ],
+    "example": "Many countries have pledged to phase out coal by the end of the next decade."
+  },
+  {
+    "id": "ene-033",
+    "topic": "energy",
+    "word": "natural gas",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a fuel gas found underground and used for heating and power",
+    "collocations": [
+      "natural gas supplies",
+      "natural gas prices",
+      "natural gas pipeline"
+    ],
+    "paraphrases": [
+      "methane fuel",
+      "gas from underground"
+    ],
+    "example": "Natural gas produces less carbon dioxide than coal when it is burned."
+  },
+  {
+    "id": "ene-034",
+    "topic": "energy",
+    "word": "shale gas",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "natural gas trapped in fine rock layers and released by fracturing",
+    "collocations": [
+      "shale gas extraction",
+      "shale gas reserves",
+      "shale gas boom"
+    ],
+    "paraphrases": [
+      "unconventional gas",
+      "gas locked in rock"
+    ],
+    "example": "The shale gas boom has made the United States a major energy exporter."
+  },
+  {
+    "id": "ene-035",
+    "topic": "energy",
+    "word": "fracking",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a method of releasing gas from rock by pumping in liquid at high pressure",
+    "collocations": [
+      "ban fracking",
+      "fracking operations",
+      "oppose fracking"
+    ],
+    "paraphrases": [
+      "hydraulic fracturing",
+      "fracturing rock for gas"
+    ],
+    "example": "Local residents fear that fracking could contaminate their drinking water."
+  },
+  {
+    "id": "ene-036",
+    "topic": "energy",
+    "word": "uranium",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a heavy radioactive metal used as fuel in nuclear reactors",
+    "collocations": [
+      "enriched uranium",
+      "uranium mine",
+      "uranium supplies"
+    ],
+    "paraphrases": [
+      "nuclear fuel metal",
+      "reactor fuel"
+    ],
+    "example": "Kazakhstan is the world's largest producer of uranium."
+  },
+  {
+    "id": "ene-037",
+    "topic": "energy",
+    "word": "reactor",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a large device in which nuclear reactions produce heat",
+    "collocations": [
+      "nuclear reactor",
+      "reactor core",
+      "build a reactor"
+    ],
+    "paraphrases": [
+      "atomic pile",
+      "nuclear unit"
+    ],
+    "example": "Engineers shut down the reactor after a fault was detected in the cooling system."
+  },
+  {
+    "id": "ene-038",
+    "topic": "energy",
+    "word": "meltdown",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a dangerous overheating of a nuclear reactor core",
+    "collocations": [
+      "nuclear meltdown",
+      "prevent a meltdown",
+      "risk of a meltdown"
+    ],
+    "paraphrases": [
+      "reactor core failure",
+      "core overheating"
+    ],
+    "example": "The meltdown at Chernobyl forced the evacuation of tens of thousands of people."
+  },
+  {
+    "id": "ene-039",
+    "topic": "energy",
+    "word": "radioactive",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "giving off harmful energy released by unstable atoms",
+    "collocations": [
+      "radioactive waste",
+      "radioactive material",
+      "radioactive leak"
+    ],
+    "paraphrases": [
+      "emitting radiation",
+      "giving off radiation"
+    ],
+    "example": "Storing radioactive waste safely for thousands of years remains an unresolved challenge."
+  },
+  {
+    "id": "ene-040",
+    "topic": "energy",
+    "word": "nuclear fusion",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a reaction that joins atoms together to release large amounts of energy",
+    "collocations": [
+      "achieve nuclear fusion",
+      "fusion reactor",
+      "nuclear fusion research"
+    ],
+    "paraphrases": [
+      "atom-joining reaction",
+      "fusion of atomic nuclei"
+    ],
+    "example": "Scientists hope nuclear fusion will one day provide almost limitless clean energy."
+  },
+  {
+    "id": "ene-041",
+    "topic": "energy",
+    "word": "tidal",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "relating to the regular rise and fall of the sea",
+    "collocations": [
+      "tidal power",
+      "tidal energy",
+      "tidal barrage"
+    ],
+    "paraphrases": [
+      "relating to ocean tides",
+      "sea-movement"
+    ],
+    "example": "A tidal barrage across the estuary could generate power for tens of thousands of homes."
+  },
+  {
+    "id": "ene-042",
+    "topic": "energy",
+    "word": "hydrogen",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a light gas that can be burned as a clean fuel",
+    "collocations": [
+      "green hydrogen",
+      "hydrogen fuel cell",
+      "hydrogen-powered vehicles"
+    ],
+    "paraphrases": [
+      "clean-burning gas",
+      "H2 fuel"
+    ],
+    "example": "Green hydrogen produced with wind power could replace natural gas in heavy industry."
+  },
+  {
+    "id": "ene-043",
+    "topic": "energy",
+    "word": "battery",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a device that stores electrical energy for later use",
+    "collocations": [
+      "rechargeable battery",
+      "battery storage",
+      "battery life"
+    ],
+    "paraphrases": [
+      "electrical cell",
+      "power pack"
+    ],
+    "example": "Better battery storage is the key to making solar power reliable at night."
+  },
+  {
+    "id": "ene-044",
+    "topic": "energy",
+    "word": "generate",
+    "pos": "verb",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to produce energy, especially electricity",
+    "collocations": [
+      "generate electricity",
+      "generate power",
+      "generate heat"
+    ],
+    "paraphrases": [
+      "produce",
+      "create"
+    ],
+    "example": "Hydroelectric dams generate electricity without burning any fuel."
+  },
+  {
+    "id": "ene-045",
+    "topic": "energy",
+    "word": "power station",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a plant where electricity is produced on a large scale",
+    "collocations": [
+      "coal-fired power station",
+      "build a power station",
+      "close a power station"
+    ],
+    "paraphrases": [
+      "generating plant",
+      "electricity plant"
+    ],
+    "example": "The old power station was converted into a museum of industrial history."
+  },
+  {
+    "id": "ene-046",
+    "topic": "energy",
+    "word": "energy supply",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the amount of power available to a country or area",
+    "collocations": [
+      "secure energy supply",
+      "energy supply chain",
+      "disrupt the energy supply"
+    ],
+    "paraphrases": [
+      "power provision",
+      "availability of power"
+    ],
+    "example": "Wars in oil-producing regions regularly threaten the global energy supply."
+  },
+  {
+    "id": "ene-047",
+    "topic": "energy",
+    "word": "energy security",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a nation's ability to obtain reliable and affordable energy",
+    "collocations": [
+      "ensure energy security",
+      "threaten energy security",
+      "improve energy security"
+    ],
+    "paraphrases": [
+      "reliable access to power",
+      "stable power provision"
+    ],
+    "example": "Diversifying suppliers is vital for energy security in countries that import most of their gas."
+  },
+  {
+    "id": "ene-048",
+    "topic": "energy",
+    "word": "shortage",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a situation where there is not enough of something",
+    "collocations": [
+      "energy shortage",
+      "severe shortage",
+      "shortage of fuel"
+    ],
+    "paraphrases": [
+      "scarcity",
+      "lack"
+    ],
+    "example": "A severe shortage of fuel left petrol stations empty for several days."
+  },
+  {
+    "id": "ene-049",
+    "topic": "energy",
+    "word": "scarcity",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a condition in which something is in short supply",
+    "collocations": [
+      "resource scarcity",
+      "scarcity of oil",
+      "growing scarcity"
+    ],
+    "paraphrases": [
+      "rarity",
+      "insufficient supply"
+    ],
+    "example": "Growing scarcity of oil is likely to push prices higher in the coming decades."
+  },
+  {
+    "id": "ene-050",
+    "topic": "energy",
+    "word": "scarce",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "not available in sufficient amounts",
+    "collocations": [
+      "scarce resources",
+      "become scarce",
+      "increasingly scarce"
+    ],
+    "paraphrases": [
+      "in short supply",
+      "hard to come by"
+    ],
+    "example": "Clean water and cheap fuel are becoming increasingly scarce in the drought-hit region."
+  },
+  {
+    "id": "ene-051",
+    "topic": "energy",
+    "word": "abundant",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "existing in very large amounts",
+    "collocations": [
+      "abundant supply",
+      "abundant sunshine",
+      "abundant resources"
+    ],
+    "paraphrases": [
+      "plentiful",
+      "ample"
+    ],
+    "example": "Countries with abundant sunshine are well placed to develop solar power."
+  },
+  {
+    "id": "ene-052",
+    "topic": "energy",
+    "word": "surge",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "listening"
+    ],
+    "definition": "a sudden large rise in demand or price",
+    "collocations": [
+      "power surge",
+      "a surge in demand",
+      "price surge"
+    ],
+    "paraphrases": [
+      "sharp rise",
+      "sudden jump"
+    ],
+    "example": "A surge in demand during the heatwave pushed electricity prices to a record high."
+  },
+  {
+    "id": "ene-053",
+    "topic": "energy",
+    "word": "peak demand",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "the time when electricity use reaches its highest level",
+    "collocations": [
+      "meet peak demand",
+      "during peak demand",
+      "peak demand periods"
+    ],
+    "paraphrases": [
+      "maximum load",
+      "highest usage"
+    ],
+    "example": "Utilities must keep spare capacity to cope with peak demand on cold winter evenings."
+  },
+  {
+    "id": "ene-054",
+    "topic": "energy",
+    "word": "tariff",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a set price charged for gas or electricity",
+    "collocations": [
+      "energy tariff",
+      "fixed tariff",
+      "cheaper tariff"
+    ],
+    "paraphrases": [
+      "pricing rate",
+      "fee schedule"
+    ],
+    "example": "Switching to a cheaper tariff can save a household hundreds of pounds a year."
+  },
+  {
+    "id": "ene-056",
+    "topic": "energy",
+    "word": "subsidise",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to help pay for something with public money",
+    "collocations": [
+      "subsidise renewable energy",
+      "heavily subsidised",
+      "subsidise fuel"
+    ],
+    "paraphrases": [
+      "fund with public money",
+      "finance partly"
+    ],
+    "example": "Governments continue to subsidise fossil fuels despite pledges to cut emissions."
+  },
+  {
+    "id": "ene-057",
+    "topic": "energy",
+    "word": "utility",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a company supplying power, gas or water to the public",
+    "collocations": [
+      "utility company",
+      "utility bills",
+      "public utility"
+    ],
+    "paraphrases": [
+      "energy provider",
+      "service supplier"
+    ],
+    "example": "Utility companies have been criticised for raising prices while posting record profits."
+  },
+  {
+    "id": "ene-058",
+    "topic": "energy",
+    "word": "off-grid",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "not connected to the main electricity network",
+    "collocations": [
+      "off-grid living",
+      "off-grid solar",
+      "go off-grid"
+    ],
+    "paraphrases": [
+      "independent of the mains",
+      "self-powered"
+    ],
+    "example": "Remote villages are turning to off-grid solar systems because extending the network is too costly."
+  },
+  {
+    "id": "ene-059",
+    "topic": "energy",
+    "word": "self-sufficient",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "able to supply one's own needs without outside help",
+    "collocations": [
+      "self-sufficient in energy",
+      "become self-sufficient",
+      "self-sufficient community"
+    ],
+    "paraphrases": [
+      "independent",
+      "able to provide for itself"
+    ],
+    "example": "Denmark aims to become self-sufficient in energy through wind power."
+  },
+  {
+    "id": "ene-060",
+    "topic": "energy",
+    "word": "decarbonise",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to reduce or remove the carbon dioxide produced by an activity",
+    "collocations": [
+      "decarbonise the economy",
+      "decarbonise transport",
+      "decarbonise electricity"
+    ],
+    "paraphrases": [
+      "cut carbon output",
+      "eliminate carbon emissions"
+    ],
+    "example": "Decarbonising heavy industry will require new technology and large investment."
+  },
+  {
+    "id": "ene-061",
+    "topic": "energy",
+    "word": "phase out",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "to stop using something gradually over a period",
+    "collocations": [
+      "phase out coal",
+      "phase out subsidies",
+      "gradually phase out"
+    ],
+    "paraphrases": [
+      "gradually withdraw",
+      "discontinue by stages"
+    ],
+    "example": "The government plans to phase out petrol cars over the next two decades."
+  },
+  {
+    "id": "ene-062",
+    "topic": "energy",
+    "word": "intermittent",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "stopping and starting at irregular intervals",
+    "collocations": [
+      "intermittent supply",
+      "intermittent power",
+      "intermittent nature of"
+    ],
+    "paraphrases": [
+      "irregular",
+      "unsteady"
+    ],
+    "example": "Wind and solar power are intermittent, so storage or backup is needed."
+  },
+  {
+    "id": "ene-063",
+    "topic": "energy",
+    "word": "reliable",
+    "pos": "adjective",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "able to be trusted to work consistently",
+    "collocations": [
+      "reliable supply",
+      "reliable source of power",
+      "highly reliable"
+    ],
+    "paraphrases": [
+      "dependable",
+      "consistent"
+    ],
+    "example": "Coal was long seen as a reliable source of power because it can be burned on demand."
+  },
+  {
+    "id": "ene-064",
+    "topic": "energy",
+    "word": "output",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the amount of energy or goods produced",
+    "collocations": [
+      "power output",
+      "energy output",
+      "maximum output"
+    ],
+    "paraphrases": [
+      "production",
+      "yield"
+    ],
+    "example": "The turbine's output falls sharply when wind speeds drop."
+  },
+  {
+    "id": "ene-065",
+    "topic": "energy",
+    "word": "dependence",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the state of relying on something to survive or function",
+    "collocations": [
+      "dependence on oil",
+      "reduce dependence",
+      "heavy dependence"
+    ],
+    "paraphrases": [
+      "reliance",
+      "overreliance"
+    ],
+    "example": "Reducing dependence on imported oil is a central aim of national policy."
+  },
+  {
+    "id": "ene-066",
+    "topic": "energy",
+    "word": "energy-intensive",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "requiring a large amount of energy to operate",
+    "collocations": [
+      "energy-intensive industry",
+      "energy-intensive process",
+      "energy-intensive production"
+    ],
+    "paraphrases": [
+      "power-hungry",
+      "using much power"
+    ],
+    "example": "Steel and cement manufacturing are among the most energy-intensive industries."
+  },
+  {
+    "id": "ene-067",
+    "topic": "energy",
+    "word": "gas-guzzling",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "using large amounts of fuel",
+    "collocations": [
+      "gas-guzzling cars",
+      "gas-guzzling vehicles",
+      "gas-guzzling engines"
+    ],
+    "paraphrases": [
+      "fuel-hungry",
+      "thirsty"
+    ],
+    "example": "Higher taxes may persuade people to abandon their gas-guzzling cars."
+  },
+  {
+    "id": "ene-068",
+    "topic": "energy",
+    "word": "standby",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a mode in which a device uses a little power while switched off",
+    "collocations": [
+      "on standby",
+      "standby mode",
+      "leave appliances on standby"
+    ],
+    "paraphrases": [
+      "idle mode",
+      "low-power state"
+    ],
+    "example": "Leaving televisions on standby wastes a surprising amount of electricity."
+  },
+  {
+    "id": "ene-069",
+    "topic": "energy",
+    "word": "smart meter",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a device that shows and reports how much energy a home uses",
+    "collocations": [
+      "install a smart meter",
+      "smart meter readings",
+      "fit smart meters"
+    ],
+    "paraphrases": [
+      "digital energy monitor",
+      "electronic usage meter"
+    ],
+    "example": "A smart meter lets households see exactly when they use the most electricity."
+  },
+  {
+    "id": "ene-070",
+    "topic": "energy",
+    "word": "harness",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to control and use a natural source of power",
+    "collocations": [
+      "harness the wind",
+      "harness solar energy",
+      "harness the power of"
+    ],
+    "paraphrases": [
+      "exploit",
+      "tap"
+    ],
+    "example": "Engineers have found ways to harness the energy of ocean waves."
+  },
+  {
+    "id": "ene-071",
+    "topic": "energy",
+    "word": "untapped",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "not yet used or exploited",
+    "collocations": [
+      "untapped potential",
+      "untapped resources",
+      "untapped reserves"
+    ],
+    "paraphrases": [
+      "unexploited",
+      "undeveloped"
+    ],
+    "example": "The desert regions have vast untapped potential for solar power generation."
+  },
+  {
+    "id": "ene-072",
+    "topic": "energy",
+    "word": "volatile",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "likely to change suddenly and unpredictably",
+    "collocations": [
+      "volatile prices",
+      "volatile market",
+      "highly volatile"
+    ],
+    "paraphrases": [
+      "unstable",
+      "fluctuating"
+    ],
+    "example": "Volatile oil prices make it difficult for governments to plan their budgets."
+  },
+  {
+    "id": "ene-073",
+    "topic": "energy",
+    "word": "stockpile",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "to build up a large store of a resource for future use",
+    "collocations": [
+      "stockpile fuel",
+      "stockpile oil",
+      "stockpile supplies"
+    ],
+    "paraphrases": [
+      "accumulate",
+      "store up"
+    ],
+    "example": "Several countries stockpile oil in underground caverns to guard against supply disruptions."
+  },
+  {
+    "id": "ene-074",
+    "topic": "energy",
+    "word": "embargo",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "an official ban on trade with a country",
+    "collocations": [
+      "oil embargo",
+      "impose an embargo",
+      "lift the embargo"
+    ],
+    "paraphrases": [
+      "trade ban",
+      "trade prohibition"
+    ],
+    "example": "The oil embargo of the 1970s caused queues at petrol stations across the West."
+  },
+  {
+    "id": "ene-075",
+    "topic": "energy",
+    "word": "rationing",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a system limiting how much of something each person can have",
+    "collocations": [
+      "fuel rationing",
+      "introduce rationing",
+      "energy rationing"
+    ],
+    "paraphrases": [
+      "controlled allocation",
+      "restricted supply"
+    ],
+    "example": "Fuel rationing was introduced when supplies could not meet demand."
+  },
+  {
+    "id": "ene-076",
+    "topic": "energy",
+    "word": "dam",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a barrier built across a river to hold back water",
+    "collocations": [
+      "build a dam",
+      "hydroelectric dam",
+      "the dam wall"
+    ],
+    "paraphrases": [
+      "river barrier",
+      "water barrier"
+    ],
+    "example": "The dam holds back enough water to power the valley's turbines throughout the year."
+  },
+  {
+    "id": "ene-077",
+    "topic": "energy",
+    "word": "transition",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the process of changing from one state or system to another",
+    "collocations": [
+      "energy transition",
+      "smooth transition",
+      "transition to renewables"
+    ],
+    "paraphrases": [
+      "shift",
+      "changeover"
+    ],
+    "example": "A rapid transition to clean power would require a huge expansion of the grid."
+  },
+  {
+    "id": "ene-078",
+    "topic": "energy",
+    "word": "combustion",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "the process of burning a substance to release heat",
+    "collocations": [
+      "internal combustion engine",
+      "combustion of fuel",
+      "complete combustion"
+    ],
+    "paraphrases": [
+      "burning",
+      "ignition of fuel"
+    ],
+    "example": "The combustion of coal releases large quantities of carbon dioxide and sulphur."
+  },
+  {
+    "id": "ene-079",
+    "topic": "energy",
+    "word": "photovoltaic",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "converting light directly into electricity",
+    "collocations": [
+      "photovoltaic cells",
+      "photovoltaic panels",
+      "photovoltaic technology"
+    ],
+    "paraphrases": [
+      "solar-electric",
+      "light-to-power"
+    ],
+    "example": "Falling prices have made photovoltaic technology competitive with conventional power in sunny regions."
+  },
+  {
+    "id": "ene-080",
+    "topic": "energy",
+    "word": "grid",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the network of cables that carries electricity from power stations to users",
+    "collocations": [
+      "the national grid",
+      "connect to the grid",
+      "off-grid"
+    ],
+    "paraphrases": [
+      "electricity network",
+      "power network"
+    ],
+    "example": "Wind farms must be connected to the national grid before their power can reach homes."
+  }
 ]

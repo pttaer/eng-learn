@@ -1,1746 +1,1635 @@
 [
- {
-  "id": "env-001",
-  "topic": "environment",
-  "word": "deforestation",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the clearing of large areas of forest, usually for farming or building",
-  "collocations": [
-   "large-scale deforestation",
-   "halt deforestation",
-   "tropical deforestation"
-  ],
-  "paraphrases": [
-   "forest clearance",
-   "the loss of tree cover"
-  ],
-  "example": "Large-scale deforestation in the Amazon has reduced the region's capacity to absorb carbon dioxide."
- },
- {
-  "id": "env-002",
-  "topic": "environment",
-  "word": "reforestation",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the planting of trees to restore an area that has lost its forest",
-  "collocations": [
-   "large-scale reforestation",
-   "a reforestation programme",
-   "natural reforestation"
-  ],
-  "paraphrases": [
-   "replanting of forests",
-   "restoring tree cover"
-  ],
-  "example": "Reforestation projects can restore damaged watersheds, although young plantations take decades to match old forest."
- },
- {
-  "id": "env-003",
-  "topic": "environment",
-  "word": "biodiversity",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the variety of living species found in a particular place or on Earth",
-  "collocations": [
-   "loss of biodiversity",
-   "protect biodiversity",
-   "marine biodiversity"
-  ],
-  "paraphrases": [
-   "variety of species",
-   "the range of plant and animal life"
-  ],
-  "example": "Intensive farming has caused a sharp decline in biodiversity across rural Europe."
- },
- {
-  "id": "env-004",
-  "topic": "environment",
-  "word": "habitat",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "the natural home of a plant or animal",
-  "collocations": [
-   "natural habitat",
-   "habitat loss",
-   "destroy a habitat"
-  ],
-  "paraphrases": [
-   "natural home",
-   "native surroundings"
-  ],
-  "example": "Road construction fragments the habitat of large mammals and isolates breeding populations."
- },
- {
-  "id": "env-005",
-  "topic": "environment",
-  "word": "ecosystem",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a community of living things and their physical surroundings, interacting as a system",
-  "collocations": [
-   "fragile ecosystem",
-   "marine ecosystem",
-   "disrupt an ecosystem"
-  ],
-  "paraphrases": [
-   "ecological community",
-   "natural system"
-  ],
-  "example": "Removing a single predator can destabilise an entire ecosystem."
- },
- {
-  "id": "env-006",
-  "topic": "environment",
-  "word": "endangered",
-  "pos": "adjective",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "at risk of dying out completely",
-  "collocations": [
-   "endangered species",
-   "critically endangered",
-   "endangered animals"
-  ],
-  "paraphrases": [
-   "at risk of extinction",
-   "threatened"
-  ],
-  "example": "Several endangered primates now survive only in small forest fragments."
- },
- {
-  "id": "env-007",
-  "topic": "environment",
-  "word": "extinction",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the complete disappearance of a species",
-  "collocations": [
-   "mass extinction",
-   "face extinction",
-   "on the brink of extinction"
-  ],
-  "paraphrases": [
-   "dying out",
-   "disappearance of a species"
-  ],
-  "example": "Hunting drove the species to the brink of extinction within a single century."
- },
- {
-  "id": "env-008",
-  "topic": "environment",
-  "word": "conservation",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "the protection and careful management of nature and natural resources",
-  "collocations": [
-   "wildlife conservation",
-   "conservation efforts",
-   "conservation area"
-  ],
-  "paraphrases": [
-   "preservation",
-   "protection of nature"
-  ],
-  "example": "Conservation groups argue that local communities must share the benefits of protected areas."
- },
- {
-  "id": "env-009",
-  "topic": "environment",
-  "word": "sustainable",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "able to continue without using up resources or causing lasting damage",
-  "collocations": [
-   "sustainable development",
-   "sustainable farming",
-   "environmentally sustainable"
-  ],
-  "paraphrases": [
-   "viable in the long term",
-   "eco-friendly"
-  ],
-  "example": "Sustainable farming methods can maintain yields without exhausting the soil."
- },
- {
-  "id": "env-010",
-  "topic": "environment",
-  "word": "emissions",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "gases or particles released into the air, especially by vehicles and factories",
-  "collocations": [
-   "reduce emissions",
-   "carbon emissions",
-   "vehicle emissions"
-  ],
-  "paraphrases": [
-   "discharges",
-   "released gases"
-  ],
-  "example": "Many governments have promised to cut emissions by half before the end of the decade."
- },
- {
-  "id": "env-011",
-  "topic": "environment",
-  "word": "greenhouse gas",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a gas such as carbon dioxide or methane that traps heat in the atmosphere",
-  "collocations": [
-   "greenhouse gas emissions",
-   "release greenhouse gases",
-   "a potent greenhouse gas"
-  ],
-  "paraphrases": [
-   "heat-trapping gas",
-   "warming gas"
-  ],
-  "example": "Methane from livestock is a powerful greenhouse gas that is often overlooked in climate debates."
- },
- {
-  "id": "env-012",
-  "topic": "environment",
-  "word": "carbon footprint",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "the total amount of carbon dioxide released because of a person's or group's activities",
-  "collocations": [
-   "reduce your carbon footprint",
-   "a large carbon footprint",
-   "calculate a carbon footprint"
-  ],
-  "paraphrases": [
-   "personal emissions total",
-   "CO2 output"
-  ],
-  "example": "Flying less is the quickest way for an individual to shrink their carbon footprint."
- },
- {
-  "id": "env-013",
-  "topic": "environment",
-  "word": "pollutant",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a substance that makes air, water or soil dirty and harmful",
-  "collocations": [
-   "airborne pollutants",
-   "toxic pollutant",
-   "release a pollutant"
-  ],
-  "paraphrases": [
-   "contaminant",
-   "harmful substance"
-  ],
-  "example": "Factories that release pollutants into rivers should face much heavier fines."
- },
- {
-  "id": "env-014",
-  "topic": "environment",
-  "word": "contamination",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the presence of a harmful substance that makes something unsafe",
-  "collocations": [
-   "water contamination",
-   "soil contamination",
-   "risk of contamination"
-  ],
-  "paraphrases": [
-   "pollution",
-   "tainting"
-  ],
-  "example": "Contamination of drinking water by industrial chemicals forced the town to close its wells."
- },
- {
-  "id": "env-015",
-  "topic": "environment",
-  "word": "landfill",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a site where rubbish is buried in the ground",
-  "collocations": [
-   "landfill site",
-   "send waste to landfill",
-   "overflowing landfills"
-  ],
-  "paraphrases": [
-   "rubbish dump",
-   "waste tip"
-  ],
-  "example": "Most household packaging still ends up in landfill rather than being reprocessed."
- },
- {
-  "id": "env-016",
-  "topic": "environment",
-  "word": "recycling",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "the process of treating used materials so they can be used again",
-  "collocations": [
-   "household recycling",
-   "recycling rates",
-   "plastic recycling"
-  ],
-  "paraphrases": [
-   "reprocessing of waste",
-   "reusing materials"
-  ],
-  "example": "Compulsory recycling has raised the proportion of waste that is recovered in many cities."
- },
- {
-  "id": "env-017",
-  "topic": "environment",
-  "word": "biodegradable",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "able to be broken down naturally by bacteria into harmless substances",
-  "collocations": [
-   "biodegradable packaging",
-   "fully biodegradable",
-   "biodegradable plastic"
-  ],
-  "paraphrases": [
-   "able to decompose naturally",
-   "decomposable"
-  ],
-  "example": "Supermarkets are switching to biodegradable bags that break down within months."
- },
- {
-  "id": "env-018",
-  "topic": "environment",
-  "word": "drought",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a long period with very little rainfall",
-  "collocations": [
-   "severe drought",
-   "prolonged drought",
-   "drought-stricken"
-  ],
-  "paraphrases": [
-   "prolonged dry spell",
-   "period of low rainfall"
-  ],
-  "example": "A three-year drought left reservoirs almost empty and forced farmers to sell their cattle."
- },
- {
-  "id": "env-019",
-  "topic": "environment",
-  "word": "flooding",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "the covering of normally dry land with water",
-  "collocations": [
-   "severe flooding",
-   "flash flooding",
-   "coastal flooding"
-  ],
-  "paraphrases": [
-   "inundation",
-   "rising water"
-  ],
-  "example": "Heavy rain caused widespread flooding in low-lying villages along the river."
- },
- {
-  "id": "env-020",
-  "topic": "environment",
-  "word": "erosion",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the gradual wearing away of soil or rock by wind, water or ice",
-  "collocations": [
-   "soil erosion",
-   "coastal erosion",
-   "prevent erosion"
-  ],
-  "paraphrases": [
-   "wearing away",
-   "gradual loss of soil"
-  ],
-  "example": "Planting trees on steep slopes helps to prevent erosion during heavy rain."
- },
- {
-  "id": "env-021",
-  "topic": "environment",
-  "word": "desertification",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the process by which fertile land becomes desert",
-  "collocations": [
-   "combat desertification",
-   "risk of desertification",
-   "desertification of farmland"
-  ],
-  "paraphrases": [
-   "land turning to desert",
-   "spread of deserts"
-  ],
-  "example": "Overgrazing and poor irrigation have accelerated desertification across the Sahel."
- },
- {
-  "id": "env-022",
-  "topic": "environment",
-  "word": "wildlife",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "wild animals and plants considered as a group",
-  "collocations": [
-   "protect wildlife",
-   "wildlife reserve",
-   "native wildlife"
-  ],
-  "paraphrases": [
-   "wild fauna and flora",
-   "native animals and plants"
-  ],
-  "example": "Tourism can fund the protection of wildlife if it is carefully regulated."
- },
- {
-  "id": "env-023",
-  "topic": "environment",
-  "word": "poaching",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the illegal hunting or capture of wild animals",
-  "collocations": [
-   "ivory poaching",
-   "combat poaching",
-   "poaching of rhinos"
-  ],
-  "paraphrases": [
-   "illegal hunting",
-   "unlawful killing of wildlife"
-  ],
-  "example": "Harsher penalties may deter poaching, but poverty in nearby villages must also be addressed."
- },
- {
-  "id": "env-024",
-  "topic": "environment",
-  "word": "overfishing",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "catching so many fish that stocks cannot recover",
-  "collocations": [
-   "combat overfishing",
-   "unchecked overfishing",
-   "overfishing of cod"
-  ],
-  "paraphrases": [
-   "excessive fishing",
-   "depletion of fish stocks"
-  ],
-  "example": "Unchecked overfishing has pushed several commercial species towards collapse."
- },
- {
-  "id": "env-025",
-  "topic": "environment",
-  "word": "global warming",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "the gradual rise in the Earth's average temperature",
-  "collocations": [
-   "combat global warming",
-   "cause global warming",
-   "the effects of global warming"
-  ],
-  "paraphrases": [
-   "rising global temperatures",
-   "warming of the planet"
-  ],
-  "example": "Scientists agree that burning coal and oil is the main driver of global warming."
- },
- {
-  "id": "env-026",
-  "topic": "environment",
-  "word": "sea level",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "the average height of the ocean's surface",
-  "collocations": [
-   "rising sea levels",
-   "sea level rise",
-   "above sea level"
-  ],
-  "paraphrases": [
-   "height of the ocean surface",
-   "ocean level"
-  ],
-  "example": "Several island nations may disappear if the sea level continues to rise at the current rate."
- },
- {
-  "id": "env-027",
-  "topic": "environment",
-  "word": "ice cap",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a thick permanent layer of ice covering a large area of land",
-  "collocations": [
-   "polar ice caps",
-   "melting ice caps",
-   "shrinking ice cap"
-  ],
-  "paraphrases": [
-   "polar ice sheet",
-   "permanent ice cover"
-  ],
-  "example": "Satellite images show that the ice cap has lost a significant amount of mass since 2000."
- },
- {
-  "id": "env-028",
-  "topic": "environment",
-  "word": "ozone layer",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a layer of gas high in the atmosphere that absorbs harmful ultraviolet radiation",
-  "collocations": [
-   "deplete the ozone layer",
-   "hole in the ozone layer",
-   "protect the ozone layer"
-  ],
-  "paraphrases": [
-   "protective gas layer",
-   "ozone shield"
-  ],
-  "example": "An international ban on certain chemicals allowed the ozone layer to begin recovering."
- },
- {
-  "id": "env-029",
-  "topic": "environment",
-  "word": "acid rain",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "rain made acidic by pollution that damages trees, lakes and buildings",
-  "collocations": [
-   "cause acid rain",
-   "acid rain damage",
-   "forests hit by acid rain"
-  ],
-  "paraphrases": [
-   "polluted rainfall",
-   "acidic precipitation"
-  ],
-  "example": "Acid rain has stripped nutrients from the soil and killed fish in many northern lakes."
- },
- {
-  "id": "env-030",
-  "topic": "environment",
-  "word": "smog",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "reading"
-  ],
-  "definition": "thick, dirty fog formed by pollution",
-  "collocations": [
-   "heavy smog",
-   "choking smog",
-   "smog alert"
-  ],
-  "paraphrases": [
-   "polluted fog",
-   "pollution haze"
-  ],
-  "example": "Thick smog settled over the valley for a week, and schools were told to keep children indoors."
- },
- {
-  "id": "env-031",
-  "topic": "environment",
-  "word": "toxic",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "poisonous and harmful to living things",
-  "collocations": [
-   "toxic waste",
-   "toxic chemicals",
-   "highly toxic"
-  ],
-  "paraphrases": [
-   "poisonous",
-   "harmful"
-  ],
-  "example": "Dumping toxic waste in rivers can poison fish and the people who eat them."
- },
- {
-  "id": "env-032",
-  "topic": "environment",
-  "word": "hazardous",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "dangerous, especially to health or safety",
-  "collocations": [
-   "hazardous waste",
-   "hazardous chemicals",
-   "hazardous to wildlife"
-  ],
-  "paraphrases": [
-   "dangerous",
-   "risky"
-  ],
-  "example": "Hazardous materials must be stored in sealed containers away from water supplies."
- },
- {
-  "id": "env-033",
-  "topic": "environment",
-  "word": "incineration",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the burning of waste until it is reduced to ash",
-  "collocations": [
-   "waste incineration",
-   "incineration plant",
-   "incineration of rubbish"
-  ],
-  "paraphrases": [
-   "burning of waste",
-   "destruction by fire"
-  ],
-  "example": "Incineration reduces the volume of rubbish but releases fumes that must be carefully filtered."
- },
- {
-  "id": "env-034",
-  "topic": "environment",
-  "word": "litter",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "rubbish left lying in public places",
-  "collocations": [
-   "drop litter",
-   "litter bins",
-   "roadside litter"
-  ],
-  "paraphrases": [
-   "discarded rubbish",
-   "scattered waste"
-  ],
-  "example": "Fines for dropping litter have made the town centre noticeably cleaner."
- },
- {
-  "id": "env-035",
-  "topic": "environment",
-  "word": "fly-tipping",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "illegally dumping waste in an unauthorised place",
-  "collocations": [
-   "prevent fly-tipping",
-   "a rise in fly-tipping",
-   "illegal fly-tipping"
-  ],
-  "paraphrases": [
-   "illegal dumping",
-   "unlawful waste disposal"
-  ],
-  "example": "Higher charges at official sites have been blamed for a rise in fly-tipping."
- },
- {
-  "id": "env-036",
-  "topic": "environment",
-  "word": "wetland",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "an area of land covered with shallow water, such as a marsh",
-  "collocations": [
-   "coastal wetland",
-   "drain wetlands",
-   "wetland habitat"
-  ],
-  "paraphrases": [
-   "marshland",
-   "swamp"
-  ],
-  "example": "Draining a wetland removes a natural barrier against floods and destroys the home of many birds."
- },
- {
-  "id": "env-037",
-  "topic": "environment",
-  "word": "rainforest",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "a dense tropical forest with very high rainfall",
-  "collocations": [
-   "tropical rainforest",
-   "destroy the rainforest",
-   "Amazon rainforest"
-  ],
-  "paraphrases": [
-   "tropical forest",
-   "jungle"
-  ],
-  "example": "The rainforest is home to more than half of the world's plant and animal species."
- },
- {
-  "id": "env-038",
-  "topic": "environment",
-  "word": "coral reef",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a ridge of rock-like structures built by tiny sea animals in warm shallow water",
-  "collocations": [
-   "bleached coral reefs",
-   "protect coral reefs",
-   "damage a coral reef"
-  ],
-  "paraphrases": [
-   "reef",
-   "undersea coral formation"
-  ],
-  "example": "Rising ocean temperatures are bleaching the coral reef and threatening the fish that depend on it."
- },
- {
-  "id": "env-039",
-  "topic": "environment",
-  "word": "invasive",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "spreading into new areas and harming native plants or animals",
-  "collocations": [
-   "invasive species",
-   "invasive plants",
-   "highly invasive"
-  ],
-  "paraphrases": [
-   "spreading aggressively",
-   "non-native and damaging"
-  ],
-  "example": "Invasive rats have wiped out ground-nesting birds on many small islands."
- },
- {
-  "id": "env-040",
-  "topic": "environment",
-  "word": "predator",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "an animal that hunts and kills other animals for food",
-  "collocations": [
-   "natural predator",
-   "top predator",
-   "predator and prey"
-  ],
-  "paraphrases": [
-   "hunter",
-   "carnivore"
-  ],
-  "example": "Without a natural predator, the deer population grew until it stripped the woodland bare."
- },
- {
-  "id": "env-041",
-  "topic": "environment",
-  "word": "food chain",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "the series of living things in which each is eaten by the next",
-  "collocations": [
-   "top of the food chain",
-   "disrupt the food chain",
-   "the marine food chain"
-  ],
-  "paraphrases": [
-   "chain of feeding relationships",
-   "sequence of predators and prey"
-  ],
-  "example": "Pollutants accumulate as they travel up the food chain and reach dangerous levels in large fish."
- },
- {
-  "id": "env-042",
-  "topic": "environment",
-  "word": "fertiliser",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a substance added to soil to help plants grow",
-  "collocations": [
-   "chemical fertiliser",
-   "artificial fertiliser",
-   "apply fertiliser"
-  ],
-  "paraphrases": [
-   "plant nutrient",
-   "soil additive"
-  ],
-  "example": "Excessive use of fertiliser can wash into rivers and cause algae to bloom."
- },
- {
-  "id": "env-043",
-  "topic": "environment",
-  "word": "pesticide",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a chemical used to kill insects and other pests that damage crops",
-  "collocations": [
-   "spray pesticides",
-   "pesticide residues",
-   "harmful pesticides"
-  ],
-  "paraphrases": [
-   "insecticide",
-   "chemical pest control"
-  ],
-  "example": "Heavy use of pesticide has been linked to a sharp fall in bee numbers."
- },
- {
-  "id": "env-044",
-  "topic": "environment",
-  "word": "runoff",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "water, often carrying chemicals, that flows over land into rivers and lakes",
-  "collocations": [
-   "agricultural runoff",
-   "polluted runoff",
-   "runoff from farms"
-  ],
-  "paraphrases": [
-   "surface drainage",
-   "water draining off land"
-  ],
-  "example": "Runoff from fields has raised nitrate levels in the lake well above safe limits."
- },
- {
-  "id": "env-045",
-  "topic": "environment",
-  "word": "groundwater",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "water held underground in soil and rock",
-  "collocations": [
-   "contaminated groundwater",
-   "groundwater levels",
-   "pump groundwater"
-  ],
-  "paraphrases": [
-   "underground water",
-   "subsurface water"
-  ],
-  "example": "Farmers are pumping groundwater faster than rainfall can replace it."
- },
- {
-  "id": "env-046",
-  "topic": "environment",
-  "word": "aquifer",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "an underground layer of rock that holds water",
-  "collocations": [
-   "deplete an aquifer",
-   "underground aquifer",
-   "aquifer recharge"
-  ],
-  "paraphrases": [
-   "underground water reservoir",
-   "water-bearing rock layer"
-  ],
-  "example": "The aquifer that supplies the city has fallen by several metres in a decade."
- },
- {
-  "id": "env-047",
-  "topic": "environment",
-  "word": "depletion",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a serious reduction in the amount of something available",
-  "collocations": [
-   "resource depletion",
-   "ozone depletion",
-   "depletion of fish stocks"
-  ],
-  "paraphrases": [
-   "exhaustion",
-   "draining"
-  ],
-  "example": "Rapid depletion of freshwater supplies is already causing conflict between neighbouring regions."
- },
- {
-  "id": "env-048",
-  "topic": "environment",
-  "word": "exploit",
-  "pos": "verb",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to use a resource fully, often unfairly or without care for the future",
-  "collocations": [
-   "exploit natural resources",
-   "exploit the land",
-   "ruthlessly exploit"
-  ],
-  "paraphrases": [
-   "make use of",
-   "take advantage of"
-  ],
-  "example": "Mining companies that exploit remote regions often leave little benefit for local people."
- },
- {
-  "id": "env-049",
-  "topic": "environment",
-  "word": "degrade",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to damage the quality or condition of something",
-  "collocations": [
-   "degrade the soil",
-   "degraded land",
-   "degrade habitats"
-  ],
-  "paraphrases": [
-   "damage",
-   "impair"
-  ],
-  "example": "Years of intensive cultivation have degraded the soil and lowered harvests."
- },
- {
-  "id": "env-050",
-  "topic": "environment",
-  "word": "devastate",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to destroy or damage something very badly",
-  "collocations": [
-   "devastate crops",
-   "devastated by floods",
-   "devastate the coastline"
-  ],
-  "paraphrases": [
-   "ravage",
-   "lay waste to"
-  ],
-  "example": "A single oil spill can devastate a coastline and the fishing communities that rely on it."
- },
- {
-  "id": "env-051",
-  "topic": "environment",
-  "word": "irreversible",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "impossible to change back to a previous condition",
-  "collocations": [
-   "irreversible damage",
-   "irreversible change",
-   "largely irreversible"
-  ],
-  "paraphrases": [
-   "permanent",
-   "beyond repair"
-  ],
-  "example": "Some of the harm done to glaciers may already be irreversible."
- },
- {
-  "id": "env-052",
-  "topic": "environment",
-  "word": "vulnerable",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "easily harmed or damaged",
-  "collocations": [
-   "vulnerable to flooding",
-   "highly vulnerable",
-   "vulnerable species"
-  ],
-  "paraphrases": [
-   "exposed",
-   "susceptible"
-  ],
-  "example": "Low-lying coastal communities are especially vulnerable to storm surges."
- },
- {
-  "id": "env-053",
-  "topic": "environment",
-  "word": "resilient",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "able to recover quickly after damage or difficulty",
-  "collocations": [
-   "resilient ecosystem",
-   "climate-resilient",
-   "remarkably resilient"
-  ],
-  "paraphrases": [
-   "able to bounce back",
-   "robust"
-  ],
-  "example": "Mangrove forests are remarkably resilient and can recover quickly if the water remains clean."
- },
- {
-  "id": "env-054",
-  "topic": "environment",
-  "word": "pristine",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "in its original, completely clean and unspoilt condition",
-  "collocations": [
-   "pristine beaches",
-   "pristine wilderness",
-   "remain pristine"
-  ],
-  "paraphrases": [
-   "unspoilt",
-   "untouched"
-  ],
-  "example": "Few pristine landscapes remain in a region that has been farmed for centuries."
- },
- {
-  "id": "env-055",
-  "topic": "environment",
-  "word": "mitigate",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to make something harmful less severe",
-  "collocations": [
-   "mitigate the effects",
-   "mitigate climate change",
-   "mitigate the risk"
-  ],
-  "paraphrases": [
-   "lessen",
-   "alleviate"
-  ],
-  "example": "Planting trees along riverbanks can mitigate the effects of flooding downstream."
- },
- {
-  "id": "env-056",
-  "topic": "environment",
-  "word": "curb",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to control or limit something harmful",
-  "collocations": [
-   "curb emissions",
-   "curb pollution",
-   "curb deforestation"
-  ],
-  "paraphrases": [
-   "restrain",
-   "hold in check"
-  ],
-  "example": "A congestion charge was introduced to curb pollution in the city centre."
- },
- {
-  "id": "env-057",
-  "topic": "environment",
-  "word": "offset",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to balance the harm of something by doing something with an opposite effect",
-  "collocations": [
-   "offset emissions",
-   "offset the damage",
-   "fully offset"
-  ],
-  "paraphrases": [
-   "compensate for",
-   "counterbalance"
-  ],
-  "example": "Some airlines let passengers offset their emissions by funding tree-planting schemes."
- },
- {
-  "id": "env-058",
-  "topic": "environment",
-  "word": "eco-friendly",
-  "pos": "adjective",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "not harmful to the environment",
-  "collocations": [
-   "eco-friendly products",
-   "eco-friendly packaging",
-   "an eco-friendly lifestyle"
-  ],
-  "paraphrases": [
-   "environmentally friendly",
-   "green"
-  ],
-  "example": "More shoppers are choosing eco-friendly products even when they cost slightly more."
- },
- {
-  "id": "env-059",
-  "topic": "environment",
-  "word": "natural resources",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "materials such as water, timber and minerals found in nature and useful to people",
-  "collocations": [
-   "exploit natural resources",
-   "deplete natural resources",
-   "rich in natural resources"
-  ],
-  "paraphrases": [
-   "raw materials from nature",
-   "the planet's resources"
-  ],
-  "example": "Countries rich in natural resources do not always turn that wealth into lasting prosperity."
- },
- {
-  "id": "env-060",
-  "topic": "environment",
-  "word": "finite",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "having a limit; not unlimited",
-  "collocations": [
-   "finite resources",
-   "finite supply",
-   "finite capacity"
-  ],
-  "paraphrases": [
-   "limited",
-   "not endless"
-  ],
-  "example": "Because freshwater is finite, it must be allocated with great care."
- },
- {
-  "id": "env-061",
-  "topic": "environment",
-  "word": "preserve",
-  "pos": "verb",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to keep something in its original state and protect it from harm",
-  "collocations": [
-   "preserve habitats",
-   "preserve biodiversity",
-   "carefully preserved"
-  ],
-  "paraphrases": [
-   "safeguard",
-   "maintain"
-  ],
-  "example": "National parks were created to preserve areas of outstanding natural beauty."
- },
- {
-  "id": "env-062",
-  "topic": "environment",
-  "word": "protected area",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading"
-  ],
-  "definition": "land officially set aside and legally defended to safeguard nature",
-  "collocations": [
-   "designated protected area",
-   "protected area network",
-   "expand protected areas"
-  ],
-  "paraphrases": [
-   "nature reserve",
-   "conservation zone"
-  ],
-  "example": "Illegal logging continues inside several protected areas because patrols are under-funded."
- },
- {
-  "id": "env-063",
-  "topic": "environment",
-  "word": "nature reserve",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "an area of land managed to protect wild animals and plants",
-  "collocations": [
-   "visit a nature reserve",
-   "a national nature reserve",
-   "a coastal nature reserve"
-  ],
-  "paraphrases": [
-   "wildlife sanctuary",
-   "protected wild area"
-  ],
-  "example": "The new nature reserve provides a safe breeding ground for migrating birds."
- },
- {
-  "id": "env-064",
-  "topic": "environment",
-  "word": "carbon neutral",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "producing no net release of carbon dioxide after balancing emissions with removals",
-  "collocations": [
-   "become carbon neutral",
-   "carbon neutral target",
-   "carbon neutral by 2050"
-  ],
-  "paraphrases": [
-   "net-zero in carbon",
-   "with no net carbon emissions"
-  ],
-  "example": "The city aims to become carbon neutral by 2040 through a mix of cuts and tree planting."
- },
- {
-  "id": "env-065",
-  "topic": "environment",
-  "word": "ecological",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "relating to the connections between living things and their surroundings",
-  "collocations": [
-   "ecological balance",
-   "ecological damage",
-   "ecological impact"
-  ],
-  "paraphrases": [
-   "environmental",
-   "relating to ecosystems"
-  ],
-  "example": "The ecological impact of a large dam extends far beyond the reservoir itself."
- },
- {
-  "id": "env-066",
-  "topic": "environment",
-  "word": "take a toll on",
-  "pos": "phrase",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to cause gradual harm or loss to something",
-  "collocations": [
-   "take a toll on wildlife",
-   "has taken a toll on",
-   "took a heavy toll on"
-  ],
-  "paraphrases": [
-   "damage gradually",
-   "wear down"
-  ],
-  "example": "Decades of heavy fishing have taken a toll on the fragile marine environment."
- },
- {
-  "id": "env-067",
-  "topic": "environment",
-  "word": "tipping point",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the moment when small changes together cause a large and often irreversible shift",
-  "collocations": [
-   "reach a tipping point",
-   "climatic tipping point",
-   "critical tipping point"
-  ],
-  "paraphrases": [
-   "critical threshold",
-   "point of no return"
-  ],
-  "example": "Scientists warn that the Amazon may be approaching a tipping point beyond which it cannot recover."
- },
- {
-  "id": "env-068",
-  "topic": "environment",
-  "word": "unsustainable",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "impossible to continue at the present rate without causing serious harm",
-  "collocations": [
-   "unsustainable levels",
-   "unsustainable use",
-   "environmentally unsustainable"
-  ],
-  "paraphrases": [
-   "not viable in the long term",
-   "unable to continue"
-  ],
-  "example": "Current rates of water extraction are unsustainable and will lead to shortages within a generation."
- },
- {
-  "id": "env-069",
-  "topic": "environment",
-  "word": "pollute",
-  "pos": "verb",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "to make air, water or land dirty and harmful",
-  "collocations": [
-   "pollute rivers",
-   "heavily polluted",
-   "pollute the atmosphere"
-  ],
-  "paraphrases": [
-   "contaminate",
-   "foul"
-  ],
-  "example": "Factories that pollute the atmosphere should pay for the damage they cause."
- },
- {
-  "id": "env-070",
-  "topic": "environment",
-  "word": "climate change",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "long-term shifts in temperatures and weather patterns, now mainly caused by human activity",
-  "collocations": [
-   "tackle climate change",
-   "combat climate change",
-   "effects of climate change"
-  ],
-  "paraphrases": [
-   "shifts in global weather patterns",
-   "a changing climate"
-  ],
-  "example": "Tackling climate change requires cooperation between governments, businesses and individuals."
- },
- {
-  "id": "env-071",
-  "topic": "environment",
-  "word": "carbon sink",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a natural area such as a forest or ocean that absorbs more carbon dioxide than it releases",
-  "collocations": [
-   "act as a carbon sink",
-   "vital carbon sink",
-   "forests as carbon sinks"
-  ],
-  "paraphrases": [
-   "carbon absorber",
-   "natural carbon store"
-  ],
-  "example": "Peat bogs act as a carbon sink, locking away gas that would otherwise warm the atmosphere."
- },
- {
-  "id": "env-072",
-  "topic": "environment",
-  "word": "overgrazing",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "the feeding of too many animals on land so that plants cannot regrow",
-  "collocations": [
-   "cause overgrazing",
-   "prevent overgrazing",
-   "overgrazing of pasture"
-  ],
-  "paraphrases": [
-   "excessive grazing",
-   "grazing beyond capacity"
-  ],
-  "example": "Overgrazing has left the hillsides bare and vulnerable to landslides."
- },
- {
-  "id": "env-073",
-  "topic": "environment",
-  "word": "slash-and-burn",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "describing a farming method of cutting and burning vegetation to clear land for crops",
-  "collocations": [
-   "slash-and-burn agriculture",
-   "slash-and-burn farming",
-   "slash-and-burn clearance"
-  ],
-  "paraphrases": [
-   "forest-burning cultivation",
-   "clearance by fire"
-  ],
-  "example": "Slash-and-burn agriculture releases large amounts of smoke and leaves the soil poor within a few seasons."
- },
- {
-  "id": "env-074",
-  "topic": "environment",
-  "word": "topsoil",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "the fertile upper layer of soil",
-  "collocations": [
-   "loss of topsoil",
-   "fertile topsoil",
-   "erode topsoil"
-  ],
-  "paraphrases": [
-   "upper soil layer",
-   "surface soil"
-  ],
-  "example": "Heavy storms can strip away the topsoil from unprotected fields in a single season."
- },
- {
-  "id": "env-075",
-  "topic": "environment",
-  "word": "disposal",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the act of getting rid of something unwanted",
-  "collocations": [
-   "waste disposal",
-   "safe disposal",
-   "disposal of toxic waste"
-  ],
-  "paraphrases": [
-   "removal",
-   "getting rid of"
-  ],
-  "example": "Safe disposal of electronic goods remains a challenge for local councils."
- },
- {
-  "id": "env-076",
-  "topic": "environment",
-  "word": "single-use",
-  "pos": "adjective",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "designed to be thrown away after one use",
-  "collocations": [
-   "single-use plastics",
-   "single-use bags",
-   "ban single-use items"
-  ],
-  "paraphrases": [
-   "disposable",
-   "throwaway"
-  ],
-  "example": "Several countries have banned single-use plastic bags to reduce marine litter."
- },
- {
-  "id": "env-077",
-  "topic": "environment",
-  "word": "microplastic",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "a tiny fragment of plastic less than five millimetres long",
-  "collocations": [
-   "microplastic pollution",
-   "ingest microplastics",
-   "microplastics in the ocean"
-  ],
-  "paraphrases": [
-   "tiny plastic particles",
-   "minute plastic fragments"
-  ],
-  "example": "Researchers have found microplastics in sea ice, deep-ocean sediments and even drinking water."
- },
- {
-  "id": "env-078",
-  "topic": "environment",
-  "word": "overconsumption",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the use of resources faster than they can be replaced",
-  "collocations": [
-   "reduce overconsumption",
-   "unchecked overconsumption",
-   "overconsumption of resources"
-  ],
-  "paraphrases": [
-   "excessive use",
-   "wasteful consumption"
-  ],
-  "example": "Critics blame overconsumption in wealthy nations for much of the strain on the planet."
- },
- {
-  "id": "env-079",
-  "topic": "environment",
-  "word": "greenwashing",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "misleading publicity that makes a company appear more environmentally responsible than it is",
-  "collocations": [
-   "accused of greenwashing",
-   "corporate greenwashing",
-   "greenwashing claims"
-  ],
-  "paraphrases": [
-   "deceptive green marketing",
-   "false eco-image"
-  ],
-  "example": "The advertisement was banned for greenwashing because the product was far less sustainable than claimed."
- }
+  {
+    "id": "env-001",
+    "topic": "environment",
+    "word": "deforestation",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the clearing of large areas of forest, usually for farming or building",
+    "collocations": [
+      "large-scale deforestation",
+      "halt deforestation",
+      "tropical deforestation"
+    ],
+    "paraphrases": [
+      "forest clearance",
+      "the loss of tree cover"
+    ],
+    "example": "Large-scale deforestation in the Amazon has reduced the region's capacity to absorb carbon dioxide."
+  },
+  {
+    "id": "env-002",
+    "topic": "environment",
+    "word": "reforestation",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the planting of trees to restore an area that has lost its forest",
+    "collocations": [
+      "large-scale reforestation",
+      "a reforestation programme",
+      "natural reforestation"
+    ],
+    "paraphrases": [
+      "replanting of forests",
+      "restoring tree cover"
+    ],
+    "example": "Reforestation projects can restore damaged watersheds, although young plantations take decades to match old forest."
+  },
+  {
+    "id": "env-003",
+    "topic": "environment",
+    "word": "biodiversity",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the variety of living species found in a particular place or on Earth",
+    "collocations": [
+      "loss of biodiversity",
+      "protect biodiversity",
+      "marine biodiversity"
+    ],
+    "paraphrases": [
+      "variety of species",
+      "the range of plant and animal life"
+    ],
+    "example": "Intensive farming has caused a sharp decline in biodiversity across rural Europe."
+  },
+  {
+    "id": "env-004",
+    "topic": "environment",
+    "word": "habitat",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "the natural home of a plant or animal",
+    "collocations": [
+      "natural habitat",
+      "habitat loss",
+      "destroy a habitat"
+    ],
+    "paraphrases": [
+      "natural home",
+      "native surroundings"
+    ],
+    "example": "Road construction fragments the habitat of large mammals and isolates breeding populations."
+  },
+  {
+    "id": "env-005",
+    "topic": "environment",
+    "word": "ecosystem",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a community of living things and their physical surroundings, interacting as a system",
+    "collocations": [
+      "fragile ecosystem",
+      "marine ecosystem",
+      "disrupt an ecosystem"
+    ],
+    "paraphrases": [
+      "ecological community",
+      "natural system"
+    ],
+    "example": "Removing a single predator can destabilise an entire ecosystem."
+  },
+  {
+    "id": "env-006",
+    "topic": "environment",
+    "word": "endangered",
+    "pos": "adjective",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "at risk of dying out completely",
+    "collocations": [
+      "endangered species",
+      "critically endangered",
+      "endangered animals"
+    ],
+    "paraphrases": [
+      "at risk of extinction",
+      "threatened"
+    ],
+    "example": "Several endangered primates now survive only in small forest fragments."
+  },
+  {
+    "id": "env-007",
+    "topic": "environment",
+    "word": "extinction",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the complete disappearance of a species",
+    "collocations": [
+      "mass extinction",
+      "face extinction",
+      "on the brink of extinction"
+    ],
+    "paraphrases": [
+      "dying out",
+      "disappearance of a species"
+    ],
+    "example": "Hunting drove the species to the brink of extinction within a single century."
+  },
+  {
+    "id": "env-010",
+    "topic": "environment",
+    "word": "emissions",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "gases or particles released into the air, especially by vehicles and factories",
+    "collocations": [
+      "reduce emissions",
+      "carbon emissions",
+      "vehicle emissions"
+    ],
+    "paraphrases": [
+      "discharges",
+      "released gases"
+    ],
+    "example": "Many governments have promised to cut emissions by half before the end of the decade."
+  },
+  {
+    "id": "env-011",
+    "topic": "environment",
+    "word": "greenhouse gas",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a gas such as carbon dioxide or methane that traps heat in the atmosphere",
+    "collocations": [
+      "greenhouse gas emissions",
+      "release greenhouse gases",
+      "a potent greenhouse gas"
+    ],
+    "paraphrases": [
+      "heat-trapping gas",
+      "warming gas"
+    ],
+    "example": "Methane from livestock is a powerful greenhouse gas that is often overlooked in climate debates."
+  },
+  {
+    "id": "env-012",
+    "topic": "environment",
+    "word": "carbon footprint",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "the total amount of carbon dioxide released because of a person's or group's activities",
+    "collocations": [
+      "reduce your carbon footprint",
+      "a large carbon footprint",
+      "calculate a carbon footprint"
+    ],
+    "paraphrases": [
+      "personal emissions total",
+      "CO2 output"
+    ],
+    "example": "Flying less is the quickest way for an individual to shrink their carbon footprint."
+  },
+  {
+    "id": "env-013",
+    "topic": "environment",
+    "word": "pollutant",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a substance that makes air, water or soil dirty and harmful",
+    "collocations": [
+      "airborne pollutants",
+      "toxic pollutant",
+      "release a pollutant"
+    ],
+    "paraphrases": [
+      "contaminant",
+      "harmful substance"
+    ],
+    "example": "Factories that release pollutants into rivers should face much heavier fines."
+  },
+  {
+    "id": "env-014",
+    "topic": "environment",
+    "word": "contamination",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the presence of a harmful substance that makes something unsafe",
+    "collocations": [
+      "water contamination",
+      "soil contamination",
+      "risk of contamination"
+    ],
+    "paraphrases": [
+      "pollution",
+      "tainting"
+    ],
+    "example": "Contamination of drinking water by industrial chemicals forced the town to close its wells."
+  },
+  {
+    "id": "env-015",
+    "topic": "environment",
+    "word": "landfill",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a site where rubbish is buried in the ground",
+    "collocations": [
+      "landfill site",
+      "send waste to landfill",
+      "overflowing landfills"
+    ],
+    "paraphrases": [
+      "rubbish dump",
+      "waste tip"
+    ],
+    "example": "Most household packaging still ends up in landfill rather than being reprocessed."
+  },
+  {
+    "id": "env-016",
+    "topic": "environment",
+    "word": "recycling",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "the process of treating used materials so they can be used again",
+    "collocations": [
+      "household recycling",
+      "recycling rates",
+      "plastic recycling"
+    ],
+    "paraphrases": [
+      "reprocessing of waste",
+      "reusing materials"
+    ],
+    "example": "Compulsory recycling has raised the proportion of waste that is recovered in many cities."
+  },
+  {
+    "id": "env-017",
+    "topic": "environment",
+    "word": "biodegradable",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "able to be broken down naturally by bacteria into harmless substances",
+    "collocations": [
+      "biodegradable packaging",
+      "fully biodegradable",
+      "biodegradable plastic"
+    ],
+    "paraphrases": [
+      "able to decompose naturally",
+      "decomposable"
+    ],
+    "example": "Supermarkets are switching to biodegradable bags that break down within months."
+  },
+  {
+    "id": "env-018",
+    "topic": "environment",
+    "word": "drought",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a long period with very little rainfall",
+    "collocations": [
+      "severe drought",
+      "prolonged drought",
+      "drought-stricken"
+    ],
+    "paraphrases": [
+      "prolonged dry spell",
+      "period of low rainfall"
+    ],
+    "example": "A three-year drought left reservoirs almost empty and forced farmers to sell their cattle."
+  },
+  {
+    "id": "env-019",
+    "topic": "environment",
+    "word": "flooding",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "the covering of normally dry land with water",
+    "collocations": [
+      "severe flooding",
+      "flash flooding",
+      "coastal flooding"
+    ],
+    "paraphrases": [
+      "inundation",
+      "rising water"
+    ],
+    "example": "Heavy rain caused widespread flooding in low-lying villages along the river."
+  },
+  {
+    "id": "env-020",
+    "topic": "environment",
+    "word": "erosion",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the gradual wearing away of soil or rock by wind, water or ice",
+    "collocations": [
+      "soil erosion",
+      "coastal erosion",
+      "prevent erosion"
+    ],
+    "paraphrases": [
+      "wearing away",
+      "gradual loss of soil"
+    ],
+    "example": "Planting trees on steep slopes helps to prevent erosion during heavy rain."
+  },
+  {
+    "id": "env-021",
+    "topic": "environment",
+    "word": "desertification",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the process by which fertile land becomes desert",
+    "collocations": [
+      "combat desertification",
+      "risk of desertification",
+      "desertification of farmland"
+    ],
+    "paraphrases": [
+      "land turning to desert",
+      "spread of deserts"
+    ],
+    "example": "Overgrazing and poor irrigation have accelerated desertification across the Sahel."
+  },
+  {
+    "id": "env-022",
+    "topic": "environment",
+    "word": "wildlife",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "wild animals and plants considered as a group",
+    "collocations": [
+      "protect wildlife",
+      "wildlife reserve",
+      "native wildlife"
+    ],
+    "paraphrases": [
+      "wild fauna and flora",
+      "native animals and plants"
+    ],
+    "example": "Tourism can fund the protection of wildlife if it is carefully regulated."
+  },
+  {
+    "id": "env-023",
+    "topic": "environment",
+    "word": "poaching",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the illegal hunting or capture of wild animals",
+    "collocations": [
+      "ivory poaching",
+      "combat poaching",
+      "poaching of rhinos"
+    ],
+    "paraphrases": [
+      "illegal hunting",
+      "unlawful killing of wildlife"
+    ],
+    "example": "Harsher penalties may deter poaching, but poverty in nearby villages must also be addressed."
+  },
+  {
+    "id": "env-025",
+    "topic": "environment",
+    "word": "global warming",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "the gradual rise in the Earth's average temperature",
+    "collocations": [
+      "combat global warming",
+      "cause global warming",
+      "the effects of global warming"
+    ],
+    "paraphrases": [
+      "rising global temperatures",
+      "warming of the planet"
+    ],
+    "example": "Scientists agree that burning coal and oil is the main driver of global warming."
+  },
+  {
+    "id": "env-026",
+    "topic": "environment",
+    "word": "sea level",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "the average height of the ocean's surface",
+    "collocations": [
+      "rising sea levels",
+      "sea level rise",
+      "above sea level"
+    ],
+    "paraphrases": [
+      "height of the ocean surface",
+      "ocean level"
+    ],
+    "example": "Several island nations may disappear if the sea level continues to rise at the current rate."
+  },
+  {
+    "id": "env-027",
+    "topic": "environment",
+    "word": "ice cap",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a thick permanent layer of ice covering a large area of land",
+    "collocations": [
+      "polar ice caps",
+      "melting ice caps",
+      "shrinking ice cap"
+    ],
+    "paraphrases": [
+      "polar ice sheet",
+      "permanent ice cover"
+    ],
+    "example": "Satellite images show that the ice cap has lost a significant amount of mass since 2000."
+  },
+  {
+    "id": "env-028",
+    "topic": "environment",
+    "word": "ozone layer",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a layer of gas high in the atmosphere that absorbs harmful ultraviolet radiation",
+    "collocations": [
+      "deplete the ozone layer",
+      "hole in the ozone layer",
+      "protect the ozone layer"
+    ],
+    "paraphrases": [
+      "protective gas layer",
+      "ozone shield"
+    ],
+    "example": "An international ban on certain chemicals allowed the ozone layer to begin recovering."
+  },
+  {
+    "id": "env-029",
+    "topic": "environment",
+    "word": "acid rain",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "rain made acidic by pollution that damages trees, lakes and buildings",
+    "collocations": [
+      "cause acid rain",
+      "acid rain damage",
+      "forests hit by acid rain"
+    ],
+    "paraphrases": [
+      "polluted rainfall",
+      "acidic precipitation"
+    ],
+    "example": "Acid rain has stripped nutrients from the soil and killed fish in many northern lakes."
+  },
+  {
+    "id": "env-030",
+    "topic": "environment",
+    "word": "smog",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "thick, dirty fog formed by pollution",
+    "collocations": [
+      "heavy smog",
+      "choking smog",
+      "smog alert"
+    ],
+    "paraphrases": [
+      "polluted fog",
+      "pollution haze"
+    ],
+    "example": "Thick smog settled over the valley for a week, and schools were told to keep children indoors."
+  },
+  {
+    "id": "env-031",
+    "topic": "environment",
+    "word": "toxic",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "poisonous and harmful to living things",
+    "collocations": [
+      "toxic waste",
+      "toxic chemicals",
+      "highly toxic"
+    ],
+    "paraphrases": [
+      "poisonous",
+      "harmful"
+    ],
+    "example": "Dumping toxic waste in rivers can poison fish and the people who eat them."
+  },
+  {
+    "id": "env-032",
+    "topic": "environment",
+    "word": "hazardous",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "dangerous, especially to health or safety",
+    "collocations": [
+      "hazardous waste",
+      "hazardous chemicals",
+      "hazardous to wildlife"
+    ],
+    "paraphrases": [
+      "dangerous",
+      "risky"
+    ],
+    "example": "Hazardous materials must be stored in sealed containers away from water supplies."
+  },
+  {
+    "id": "env-033",
+    "topic": "environment",
+    "word": "incineration",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the burning of waste until it is reduced to ash",
+    "collocations": [
+      "waste incineration",
+      "incineration plant",
+      "incineration of rubbish"
+    ],
+    "paraphrases": [
+      "burning of waste",
+      "destruction by fire"
+    ],
+    "example": "Incineration reduces the volume of rubbish but releases fumes that must be carefully filtered."
+  },
+  {
+    "id": "env-034",
+    "topic": "environment",
+    "word": "litter",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "rubbish left lying in public places",
+    "collocations": [
+      "drop litter",
+      "litter bins",
+      "roadside litter"
+    ],
+    "paraphrases": [
+      "discarded rubbish",
+      "scattered waste"
+    ],
+    "example": "Fines for dropping litter have made the town centre noticeably cleaner."
+  },
+  {
+    "id": "env-035",
+    "topic": "environment",
+    "word": "fly-tipping",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "illegally dumping waste in an unauthorised place",
+    "collocations": [
+      "prevent fly-tipping",
+      "a rise in fly-tipping",
+      "illegal fly-tipping"
+    ],
+    "paraphrases": [
+      "illegal dumping",
+      "unlawful waste disposal"
+    ],
+    "example": "Higher charges at official sites have been blamed for a rise in fly-tipping."
+  },
+  {
+    "id": "env-036",
+    "topic": "environment",
+    "word": "wetland",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "an area of land covered with shallow water, such as a marsh",
+    "collocations": [
+      "coastal wetland",
+      "drain wetlands",
+      "wetland habitat"
+    ],
+    "paraphrases": [
+      "marshland",
+      "swamp"
+    ],
+    "example": "Draining a wetland removes a natural barrier against floods and destroys the home of many birds."
+  },
+  {
+    "id": "env-037",
+    "topic": "environment",
+    "word": "rainforest",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a dense tropical forest with very high rainfall",
+    "collocations": [
+      "tropical rainforest",
+      "destroy the rainforest",
+      "Amazon rainforest"
+    ],
+    "paraphrases": [
+      "tropical forest",
+      "jungle"
+    ],
+    "example": "The rainforest is home to more than half of the world's plant and animal species."
+  },
+  {
+    "id": "env-038",
+    "topic": "environment",
+    "word": "coral reef",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a ridge of rock-like structures built by tiny sea animals in warm shallow water",
+    "collocations": [
+      "bleached coral reefs",
+      "protect coral reefs",
+      "damage a coral reef"
+    ],
+    "paraphrases": [
+      "reef",
+      "undersea coral formation"
+    ],
+    "example": "Rising ocean temperatures are bleaching the coral reef and threatening the fish that depend on it."
+  },
+  {
+    "id": "env-039",
+    "topic": "environment",
+    "word": "invasive",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "spreading into new areas and harming native plants or animals",
+    "collocations": [
+      "invasive species",
+      "invasive plants",
+      "highly invasive"
+    ],
+    "paraphrases": [
+      "spreading aggressively",
+      "non-native and damaging"
+    ],
+    "example": "Invasive rats have wiped out ground-nesting birds on many small islands."
+  },
+  {
+    "id": "env-040",
+    "topic": "environment",
+    "word": "predator",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "an animal that hunts and kills other animals for food",
+    "collocations": [
+      "natural predator",
+      "top predator",
+      "predator and prey"
+    ],
+    "paraphrases": [
+      "hunter",
+      "carnivore"
+    ],
+    "example": "Without a natural predator, the deer population grew until it stripped the woodland bare."
+  },
+  {
+    "id": "env-041",
+    "topic": "environment",
+    "word": "food chain",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "the series of living things in which each is eaten by the next",
+    "collocations": [
+      "top of the food chain",
+      "disrupt the food chain",
+      "the marine food chain"
+    ],
+    "paraphrases": [
+      "chain of feeding relationships",
+      "sequence of predators and prey"
+    ],
+    "example": "Pollutants accumulate as they travel up the food chain and reach dangerous levels in large fish."
+  },
+  {
+    "id": "env-042",
+    "topic": "environment",
+    "word": "fertiliser",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a substance added to soil to help plants grow",
+    "collocations": [
+      "chemical fertiliser",
+      "artificial fertiliser",
+      "apply fertiliser"
+    ],
+    "paraphrases": [
+      "plant nutrient",
+      "soil additive"
+    ],
+    "example": "Excessive use of fertiliser can wash into rivers and cause algae to bloom."
+  },
+  {
+    "id": "env-044",
+    "topic": "environment",
+    "word": "runoff",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "water, often carrying chemicals, that flows over land into rivers and lakes",
+    "collocations": [
+      "agricultural runoff",
+      "polluted runoff",
+      "runoff from farms"
+    ],
+    "paraphrases": [
+      "surface drainage",
+      "water draining off land"
+    ],
+    "example": "Runoff from fields has raised nitrate levels in the lake well above safe limits."
+  },
+  {
+    "id": "env-045",
+    "topic": "environment",
+    "word": "groundwater",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "water held underground in soil and rock",
+    "collocations": [
+      "contaminated groundwater",
+      "groundwater levels",
+      "pump groundwater"
+    ],
+    "paraphrases": [
+      "underground water",
+      "subsurface water"
+    ],
+    "example": "Farmers are pumping groundwater faster than rainfall can replace it."
+  },
+  {
+    "id": "env-046",
+    "topic": "environment",
+    "word": "aquifer",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "an underground layer of rock that holds water",
+    "collocations": [
+      "deplete an aquifer",
+      "underground aquifer",
+      "aquifer recharge"
+    ],
+    "paraphrases": [
+      "underground water reservoir",
+      "water-bearing rock layer"
+    ],
+    "example": "The aquifer that supplies the city has fallen by several metres in a decade."
+  },
+  {
+    "id": "env-047",
+    "topic": "environment",
+    "word": "depletion",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a serious reduction in the amount of something available",
+    "collocations": [
+      "resource depletion",
+      "ozone depletion",
+      "depletion of fish stocks"
+    ],
+    "paraphrases": [
+      "exhaustion",
+      "draining"
+    ],
+    "example": "Rapid depletion of freshwater supplies is already causing conflict between neighbouring regions."
+  },
+  {
+    "id": "env-048",
+    "topic": "environment",
+    "word": "exploit",
+    "pos": "verb",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to use a resource fully, often unfairly or without care for the future",
+    "collocations": [
+      "exploit natural resources",
+      "exploit the land",
+      "ruthlessly exploit"
+    ],
+    "paraphrases": [
+      "make use of",
+      "take advantage of"
+    ],
+    "example": "Mining companies that exploit remote regions often leave little benefit for local people."
+  },
+  {
+    "id": "env-049",
+    "topic": "environment",
+    "word": "degrade",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to damage the quality or condition of something",
+    "collocations": [
+      "degrade the soil",
+      "degraded land",
+      "degrade habitats"
+    ],
+    "paraphrases": [
+      "damage",
+      "impair"
+    ],
+    "example": "Years of intensive cultivation have degraded the soil and lowered harvests."
+  },
+  {
+    "id": "env-050",
+    "topic": "environment",
+    "word": "devastate",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to destroy or damage something very badly",
+    "collocations": [
+      "devastate crops",
+      "devastated by floods",
+      "devastate the coastline"
+    ],
+    "paraphrases": [
+      "ravage",
+      "lay waste to"
+    ],
+    "example": "A single oil spill can devastate a coastline and the fishing communities that rely on it."
+  },
+  {
+    "id": "env-051",
+    "topic": "environment",
+    "word": "irreversible",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "impossible to change back to a previous condition",
+    "collocations": [
+      "irreversible damage",
+      "irreversible change",
+      "largely irreversible"
+    ],
+    "paraphrases": [
+      "permanent",
+      "beyond repair"
+    ],
+    "example": "Some of the harm done to glaciers may already be irreversible."
+  },
+  {
+    "id": "env-052",
+    "topic": "environment",
+    "word": "vulnerable",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "easily harmed or damaged",
+    "collocations": [
+      "vulnerable to flooding",
+      "highly vulnerable",
+      "vulnerable species"
+    ],
+    "paraphrases": [
+      "exposed",
+      "susceptible"
+    ],
+    "example": "Low-lying coastal communities are especially vulnerable to storm surges."
+  },
+  {
+    "id": "env-053",
+    "topic": "environment",
+    "word": "resilient",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "able to recover quickly after damage or difficulty",
+    "collocations": [
+      "resilient ecosystem",
+      "climate-resilient",
+      "remarkably resilient"
+    ],
+    "paraphrases": [
+      "able to bounce back",
+      "robust"
+    ],
+    "example": "Mangrove forests are remarkably resilient and can recover quickly if the water remains clean."
+  },
+  {
+    "id": "env-054",
+    "topic": "environment",
+    "word": "pristine",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "in its original, completely clean and unspoilt condition",
+    "collocations": [
+      "pristine beaches",
+      "pristine wilderness",
+      "remain pristine"
+    ],
+    "paraphrases": [
+      "unspoilt",
+      "untouched"
+    ],
+    "example": "Few pristine landscapes remain in a region that has been farmed for centuries."
+  },
+  {
+    "id": "env-055",
+    "topic": "environment",
+    "word": "mitigate",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to make something harmful less severe",
+    "collocations": [
+      "mitigate the effects",
+      "mitigate climate change",
+      "mitigate the risk"
+    ],
+    "paraphrases": [
+      "lessen",
+      "alleviate"
+    ],
+    "example": "Planting trees along riverbanks can mitigate the effects of flooding downstream."
+  },
+  {
+    "id": "env-056",
+    "topic": "environment",
+    "word": "curb",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to control or limit something harmful",
+    "collocations": [
+      "curb emissions",
+      "curb pollution",
+      "curb deforestation"
+    ],
+    "paraphrases": [
+      "restrain",
+      "hold in check"
+    ],
+    "example": "A congestion charge was introduced to curb pollution in the city centre."
+  },
+  {
+    "id": "env-057",
+    "topic": "environment",
+    "word": "offset",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to balance the harm of something by doing something with an opposite effect",
+    "collocations": [
+      "offset emissions",
+      "offset the damage",
+      "fully offset"
+    ],
+    "paraphrases": [
+      "compensate for",
+      "counterbalance"
+    ],
+    "example": "Some airlines let passengers offset their emissions by funding tree-planting schemes."
+  },
+  {
+    "id": "env-058",
+    "topic": "environment",
+    "word": "eco-friendly",
+    "pos": "adjective",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "not harmful to the environment",
+    "collocations": [
+      "eco-friendly products",
+      "eco-friendly packaging",
+      "an eco-friendly lifestyle"
+    ],
+    "paraphrases": [
+      "environmentally friendly",
+      "green"
+    ],
+    "example": "More shoppers are choosing eco-friendly products even when they cost slightly more."
+  },
+  {
+    "id": "env-059",
+    "topic": "environment",
+    "word": "natural resources",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "materials such as water, timber and minerals found in nature and useful to people",
+    "collocations": [
+      "exploit natural resources",
+      "deplete natural resources",
+      "rich in natural resources"
+    ],
+    "paraphrases": [
+      "raw materials from nature",
+      "the planet's resources"
+    ],
+    "example": "Countries rich in natural resources do not always turn that wealth into lasting prosperity."
+  },
+  {
+    "id": "env-061",
+    "topic": "environment",
+    "word": "preserve",
+    "pos": "verb",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to keep something in its original state and protect it from harm",
+    "collocations": [
+      "preserve habitats",
+      "preserve biodiversity",
+      "carefully preserved"
+    ],
+    "paraphrases": [
+      "safeguard",
+      "maintain"
+    ],
+    "example": "National parks were created to preserve areas of outstanding natural beauty."
+  },
+  {
+    "id": "env-062",
+    "topic": "environment",
+    "word": "protected area",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "land officially set aside and legally defended to safeguard nature",
+    "collocations": [
+      "designated protected area",
+      "protected area network",
+      "expand protected areas"
+    ],
+    "paraphrases": [
+      "nature reserve",
+      "conservation zone"
+    ],
+    "example": "Illegal logging continues inside several protected areas because patrols are under-funded."
+  },
+  {
+    "id": "env-063",
+    "topic": "environment",
+    "word": "nature reserve",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "an area of land managed to protect wild animals and plants",
+    "collocations": [
+      "visit a nature reserve",
+      "a national nature reserve",
+      "a coastal nature reserve"
+    ],
+    "paraphrases": [
+      "wildlife sanctuary",
+      "protected wild area"
+    ],
+    "example": "The new nature reserve provides a safe breeding ground for migrating birds."
+  },
+  {
+    "id": "env-064",
+    "topic": "environment",
+    "word": "carbon neutral",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "producing no net release of carbon dioxide after balancing emissions with removals",
+    "collocations": [
+      "become carbon neutral",
+      "carbon neutral target",
+      "carbon neutral by 2050"
+    ],
+    "paraphrases": [
+      "net-zero in carbon",
+      "with no net carbon emissions"
+    ],
+    "example": "The city aims to become carbon neutral by 2040 through a mix of cuts and tree planting."
+  },
+  {
+    "id": "env-065",
+    "topic": "environment",
+    "word": "ecological",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "relating to the connections between living things and their surroundings",
+    "collocations": [
+      "ecological balance",
+      "ecological damage",
+      "ecological impact"
+    ],
+    "paraphrases": [
+      "environmental",
+      "relating to ecosystems"
+    ],
+    "example": "The ecological impact of a large dam extends far beyond the reservoir itself."
+  },
+  {
+    "id": "env-066",
+    "topic": "environment",
+    "word": "take a toll on",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to cause gradual harm or loss to something",
+    "collocations": [
+      "take a toll on wildlife",
+      "has taken a toll on",
+      "took a heavy toll on"
+    ],
+    "paraphrases": [
+      "damage gradually",
+      "wear down"
+    ],
+    "example": "Decades of heavy fishing have taken a toll on the fragile marine environment."
+  },
+  {
+    "id": "env-067",
+    "topic": "environment",
+    "word": "tipping point",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the moment when small changes together cause a large and often irreversible shift",
+    "collocations": [
+      "reach a tipping point",
+      "climatic tipping point",
+      "critical tipping point"
+    ],
+    "paraphrases": [
+      "critical threshold",
+      "point of no return"
+    ],
+    "example": "Scientists warn that the Amazon may be approaching a tipping point beyond which it cannot recover."
+  },
+  {
+    "id": "env-068",
+    "topic": "environment",
+    "word": "unsustainable",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "impossible to continue at the present rate without causing serious harm",
+    "collocations": [
+      "unsustainable levels",
+      "unsustainable use",
+      "environmentally unsustainable"
+    ],
+    "paraphrases": [
+      "not viable in the long term",
+      "unable to continue"
+    ],
+    "example": "Current rates of water extraction are unsustainable and will lead to shortages within a generation."
+  },
+  {
+    "id": "env-069",
+    "topic": "environment",
+    "word": "pollute",
+    "pos": "verb",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "to make air, water or land dirty and harmful",
+    "collocations": [
+      "pollute rivers",
+      "heavily polluted",
+      "pollute the atmosphere"
+    ],
+    "paraphrases": [
+      "contaminate",
+      "foul"
+    ],
+    "example": "Factories that pollute the atmosphere should pay for the damage they cause."
+  },
+  {
+    "id": "env-070",
+    "topic": "environment",
+    "word": "climate change",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "long-term shifts in temperatures and weather patterns, now mainly caused by human activity",
+    "collocations": [
+      "tackle climate change",
+      "combat climate change",
+      "effects of climate change"
+    ],
+    "paraphrases": [
+      "shifts in global weather patterns",
+      "a changing climate"
+    ],
+    "example": "Tackling climate change requires cooperation between governments, businesses and individuals."
+  },
+  {
+    "id": "env-071",
+    "topic": "environment",
+    "word": "carbon sink",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a natural area such as a forest or ocean that absorbs more carbon dioxide than it releases",
+    "collocations": [
+      "act as a carbon sink",
+      "vital carbon sink",
+      "forests as carbon sinks"
+    ],
+    "paraphrases": [
+      "carbon absorber",
+      "natural carbon store"
+    ],
+    "example": "Peat bogs act as a carbon sink, locking away gas that would otherwise warm the atmosphere."
+  },
+  {
+    "id": "env-072",
+    "topic": "environment",
+    "word": "overgrazing",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "the feeding of too many animals on land so that plants cannot regrow",
+    "collocations": [
+      "cause overgrazing",
+      "prevent overgrazing",
+      "overgrazing of pasture"
+    ],
+    "paraphrases": [
+      "excessive grazing",
+      "grazing beyond capacity"
+    ],
+    "example": "Overgrazing has left the hillsides bare and vulnerable to landslides."
+  },
+  {
+    "id": "env-073",
+    "topic": "environment",
+    "word": "slash-and-burn",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "describing a farming method of cutting and burning vegetation to clear land for crops",
+    "collocations": [
+      "slash-and-burn agriculture",
+      "slash-and-burn farming",
+      "slash-and-burn clearance"
+    ],
+    "paraphrases": [
+      "forest-burning cultivation",
+      "clearance by fire"
+    ],
+    "example": "Slash-and-burn agriculture releases large amounts of smoke and leaves the soil poor within a few seasons."
+  },
+  {
+    "id": "env-074",
+    "topic": "environment",
+    "word": "topsoil",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "the fertile upper layer of soil",
+    "collocations": [
+      "loss of topsoil",
+      "fertile topsoil",
+      "erode topsoil"
+    ],
+    "paraphrases": [
+      "upper soil layer",
+      "surface soil"
+    ],
+    "example": "Heavy storms can strip away the topsoil from unprotected fields in a single season."
+  },
+  {
+    "id": "env-075",
+    "topic": "environment",
+    "word": "disposal",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the act of getting rid of something unwanted",
+    "collocations": [
+      "waste disposal",
+      "safe disposal",
+      "disposal of toxic waste"
+    ],
+    "paraphrases": [
+      "removal",
+      "getting rid of"
+    ],
+    "example": "Safe disposal of electronic goods remains a challenge for local councils."
+  },
+  {
+    "id": "env-076",
+    "topic": "environment",
+    "word": "single-use",
+    "pos": "adjective",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "designed to be thrown away after one use",
+    "collocations": [
+      "single-use plastics",
+      "single-use bags",
+      "ban single-use items"
+    ],
+    "paraphrases": [
+      "disposable",
+      "throwaway"
+    ],
+    "example": "Several countries have banned single-use plastic bags to reduce marine litter."
+  },
+  {
+    "id": "env-077",
+    "topic": "environment",
+    "word": "microplastic",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a tiny fragment of plastic less than five millimetres long",
+    "collocations": [
+      "microplastic pollution",
+      "ingest microplastics",
+      "microplastics in the ocean"
+    ],
+    "paraphrases": [
+      "tiny plastic particles",
+      "minute plastic fragments"
+    ],
+    "example": "Researchers have found microplastics in sea ice, deep-ocean sediments and even drinking water."
+  },
+  {
+    "id": "env-078",
+    "topic": "environment",
+    "word": "overconsumption",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the use of resources faster than they can be replaced",
+    "collocations": [
+      "reduce overconsumption",
+      "unchecked overconsumption",
+      "overconsumption of resources"
+    ],
+    "paraphrases": [
+      "excessive use",
+      "wasteful consumption"
+    ],
+    "example": "Critics blame overconsumption in wealthy nations for much of the strain on the planet."
+  },
+  {
+    "id": "env-079",
+    "topic": "environment",
+    "word": "greenwashing",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "misleading publicity that makes a company appear more environmentally responsible than it is",
+    "collocations": [
+      "accused of greenwashing",
+      "corporate greenwashing",
+      "greenwashing claims"
+    ],
+    "paraphrases": [
+      "deceptive green marketing",
+      "false eco-image"
+    ],
+    "example": "The advertisement was banned for greenwashing because the product was far less sustainable than claimed."
+  }
 ]

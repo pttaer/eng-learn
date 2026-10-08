@@ -1,1734 +1,1645 @@
 [
- {
-  "id": "hea-001",
-  "topic": "health",
-  "word": "chronic",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "lasting for a long time or constantly returning",
-  "collocations": [
-   "chronic illness",
-   "chronic pain",
-   "chronic condition"
-  ],
-  "paraphrases": [
-   "long-term",
-   "persistent"
-  ],
-  "example": "Chronic illness places a heavy burden on both patients and health budgets."
- },
- {
-  "id": "hea-002",
-  "topic": "health",
-  "word": "acute",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "very severe and needing urgent attention, or starting suddenly",
-  "collocations": [
-   "acute pain",
-   "acute shortage",
-   "acute illness"
-  ],
-  "paraphrases": [
-   "severe",
-   "intense"
-  ],
-  "example": "Rural hospitals face an acute shortage of experienced nurses."
- },
- {
-  "id": "hea-003",
-  "topic": "health",
-  "word": "epidemic",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a widespread outbreak of a disease affecting many people at once",
-  "collocations": [
-   "flu epidemic",
-   "epidemic of obesity",
-   "control an epidemic"
-  ],
-  "paraphrases": [
-   "widespread outbreak",
-   "rapid spread of illness"
-  ],
-  "example": "An epidemic of obesity among children is placing new pressure on paediatric services."
- },
- {
-  "id": "hea-004",
-  "topic": "health",
-  "word": "pandemic",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a disease outbreak that spreads across many countries or the whole world",
-  "collocations": [
-   "global pandemic",
-   "pandemic response",
-   "during the pandemic"
-  ],
-  "paraphrases": [
-   "worldwide outbreak",
-   "global epidemic"
-  ],
-  "example": "The pandemic exposed serious weaknesses in many countries' emergency planning."
- },
- {
-  "id": "hea-005",
-  "topic": "health",
-  "word": "outbreak",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a sudden start of a disease or violence in a particular place",
-  "collocations": [
-   "disease outbreak",
-   "outbreak of cholera",
-   "contain an outbreak"
-  ],
-  "paraphrases": [
-   "sudden appearance",
-   "eruption"
-  ],
-  "example": "Health officials moved quickly to contain the outbreak by isolating infected patients."
- },
- {
-  "id": "hea-006",
-  "topic": "health",
-  "word": "contagious",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "reading"
-  ],
-  "definition": "able to be passed from one person to another through contact",
-  "collocations": [
-   "highly contagious",
-   "contagious disease",
-   "contagious illness"
-  ],
-  "paraphrases": [
-   "infectious",
-   "easily spread"
-  ],
-  "example": "Measles is highly contagious and can spread rapidly through unvaccinated groups."
- },
- {
-  "id": "hea-007",
-  "topic": "health",
-  "word": "infection",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "an illness caused by germs entering the body",
-  "collocations": [
-   "bacterial infection",
-   "chest infection",
-   "prevent infection"
-  ],
-  "paraphrases": [
-   "illness caused by germs",
-   "contamination by bacteria"
-  ],
-  "example": "Washing hands regularly reduces the risk of infection."
- },
- {
-  "id": "hea-008",
-  "topic": "health",
-  "word": "immunity",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the body's ability to resist a particular disease",
-  "collocations": [
-   "build immunity",
-   "natural immunity",
-   "herd immunity"
-  ],
-  "paraphrases": [
-   "resistance to disease",
-   "protection against illness"
-  ],
-  "example": "Herd immunity is achieved when enough people are protected that a disease can no longer spread easily."
- },
- {
-  "id": "hea-009",
-  "topic": "health",
-  "word": "vaccination",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the giving of a substance that protects the body against a disease",
-  "collocations": [
-   "childhood vaccination",
-   "vaccination programme",
-   "compulsory vaccination"
-  ],
-  "paraphrases": [
-   "immunisation",
-   "inoculation"
-  ],
-  "example": "Mass vaccination has virtually wiped out polio in most parts of the world."
- },
- {
-  "id": "hea-010",
-  "topic": "health",
-  "word": "antibiotic",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a medicine that kills bacteria and treats infections",
-  "collocations": [
-   "prescribe antibiotics",
-   "course of antibiotics",
-   "antibiotic resistance"
-  ],
-  "paraphrases": [
-   "bacteria-killing medicine",
-   "germ-fighting drug"
-  ],
-  "example": "Overuse of antibiotics has led to bacteria that no longer respond to treatment."
- },
- {
-  "id": "hea-011",
-  "topic": "health",
-  "word": "diagnosis",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "the identification of an illness after examining the patient",
-  "collocations": [
-   "early diagnosis",
-   "accurate diagnosis",
-   "make a diagnosis"
-  ],
-  "paraphrases": [
-   "identification of an illness",
-   "medical assessment"
-  ],
-  "example": "Early diagnosis greatly improves the chances of survival for many cancers."
- },
- {
-  "id": "hea-012",
-  "topic": "health",
-  "word": "symptom",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading",
-   "listening"
-  ],
-  "definition": "a sign of illness that a patient feels or shows",
-  "collocations": [
-   "common symptom",
-   "flu symptoms",
-   "show symptoms"
-  ],
-  "paraphrases": [
-   "sign of illness",
-   "indication"
-  ],
-  "example": "The first symptom of the disease is often a persistent cough."
- },
- {
-  "id": "hea-013",
-  "topic": "health",
-  "word": "prognosis",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "a doctor's opinion about how an illness is likely to develop",
-  "collocations": [
-   "a good prognosis",
-   "poor prognosis",
-   "improve the prognosis"
-  ],
-  "paraphrases": [
-   "medical forecast",
-   "likely outcome"
-  ],
-  "example": "The prognosis for patients diagnosed at an early stage is excellent."
- },
- {
-  "id": "hea-014",
-  "topic": "health",
-  "word": "treatment",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "medical care given to a patient to cure or relieve an illness",
-  "collocations": [
-   "receive treatment",
-   "medical treatment",
-   "course of treatment"
-  ],
-  "paraphrases": [
-   "medical care",
-   "therapy"
-  ],
-  "example": "Patients in remote areas often travel for hours to receive treatment."
- },
- {
-  "id": "hea-015",
-  "topic": "health",
-  "word": "therapy",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the treatment of a physical or mental problem, usually without surgery",
-  "collocations": [
-   "speech therapy",
-   "cognitive behavioural therapy",
-   "undergo therapy"
-  ],
-  "paraphrases": [
-   "treatment",
-   "remedial care"
-  ],
-  "example": "Regular therapy can help people overcome anxiety without relying on medication."
- },
- {
-  "id": "hea-016",
-  "topic": "health",
-  "word": "rehabilitation",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "treatment and training that help someone return to normal life after illness or injury",
-  "collocations": [
-   "physical rehabilitation",
-   "rehabilitation centre",
-   "rehabilitation programme"
-  ],
-  "paraphrases": [
-   "recovery programme",
-   "restoration to health"
-  ],
-  "example": "Rehabilitation after a stroke can take many months of daily exercises."
- },
- {
-  "id": "hea-017",
-  "topic": "health",
-  "word": "prescription",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a written order from a doctor for a medicine",
-  "collocations": [
-   "on prescription",
-   "prescription drugs",
-   "fill a prescription"
-  ],
-  "paraphrases": [
-   "doctor's order for medicine",
-   "written medical instruction"
-  ],
-  "example": "The pharmacist could not give me the tablets without a prescription."
- },
- {
-  "id": "hea-018",
-  "topic": "health",
-  "word": "side effect",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "listening"
-  ],
-  "definition": "an unwanted effect of a medicine in addition to its intended one",
-  "collocations": [
-   "common side effect",
-   "serious side effects",
-   "suffer side effects"
-  ],
-  "paraphrases": [
-   "unintended reaction",
-   "adverse reaction"
-  ],
-  "example": "Drowsiness is a common side effect of many allergy tablets."
- },
- {
-  "id": "hea-019",
-  "topic": "health",
-  "word": "remedy",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a medicine or treatment that relieves or cures an illness",
-  "collocations": [
-   "herbal remedy",
-   "home remedy",
-   "effective remedy"
-  ],
-  "paraphrases": [
-   "cure",
-   "medicine"
-  ],
-  "example": "A herbal remedy may soothe mild symptoms, but it should not replace professional care."
- },
- {
-  "id": "hea-020",
-  "topic": "health",
-  "word": "cure",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "a treatment that makes an illness disappear completely",
-  "collocations": [
-   "find a cure",
-   "no known cure",
-   "miracle cure"
-  ],
-  "paraphrases": [
-   "remedy",
-   "means of healing"
-  ],
-  "example": "Scientists have yet to find a cure for the common cold."
- },
- {
-  "id": "hea-021",
-  "topic": "health",
-  "word": "preventive",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "intended to stop illness before it starts",
-  "collocations": [
-   "preventive medicine",
-   "preventive measures",
-   "preventive care"
-  ],
-  "paraphrases": [
-   "precautionary",
-   "prophylactic"
-  ],
-  "example": "Preventive care is cheaper in the long run than treating advanced disease."
- },
- {
-  "id": "hea-022",
-  "topic": "health",
-  "word": "life expectancy",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the average number of years a person is likely to live",
-  "collocations": [
-   "rising life expectancy",
-   "increase life expectancy",
-   "low life expectancy"
-  ],
-  "paraphrases": [
-   "average lifespan",
-   "expected years of life"
-  ],
-  "example": "Life expectancy has risen steadily as sanitation and medicine have improved."
- },
- {
-  "id": "hea-023",
-  "topic": "health",
-  "word": "mortality",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the number of deaths in a particular group or period",
-  "collocations": [
-   "infant mortality",
-   "mortality rate",
-   "reduce mortality"
-  ],
-  "paraphrases": [
-   "death rate",
-   "fatality level"
-  ],
-  "example": "Infant mortality has fallen sharply since clean water reached rural villages."
- },
- {
-  "id": "hea-024",
-  "topic": "health",
-  "word": "obesity",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the condition of being so overweight that it harms health",
-  "collocations": [
-   "childhood obesity",
-   "combat obesity",
-   "obesity rates"
-  ],
-  "paraphrases": [
-   "severe overweight",
-   "excessive body weight"
-  ],
-  "example": "Rising obesity is closely linked to cheaper processed foods and inactive lifestyles."
- },
- {
-  "id": "hea-025",
-  "topic": "health",
-  "word": "sedentary",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "involving a lot of sitting and little physical movement",
-  "collocations": [
-   "sedentary lifestyle",
-   "sedentary job",
-   "sedentary habits"
-  ],
-  "paraphrases": [
-   "inactive",
-   "desk-bound"
-  ],
-  "example": "A sedentary lifestyle increases the risk of heart disease and diabetes."
- },
- {
-  "id": "hea-026",
-  "topic": "health",
-  "word": "balanced diet",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "a way of eating that includes the right quantities of different kinds of food",
-  "collocations": [
-   "eat a balanced diet",
-   "maintain a balanced diet",
-   "part of a balanced diet"
-  ],
-  "paraphrases": [
-   "healthy eating pattern",
-   "nutritious meals"
-  ],
-  "example": "A balanced diet and regular exercise are the foundation of good health."
- },
- {
-  "id": "hea-027",
-  "topic": "health",
-  "word": "malnutrition",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "poor health caused by not eating enough or not eating the right foods",
-  "collocations": [
-   "severe malnutrition",
-   "child malnutrition",
-   "suffer from malnutrition"
-  ],
-  "paraphrases": [
-   "undernourishment",
-   "inadequate nutrition"
-  ],
-  "example": "Malnutrition stunts growth and weakens children's resistance to disease."
- },
- {
-  "id": "hea-028",
-  "topic": "health",
-  "word": "cholesterol",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "a fatty substance in the blood that can block arteries if levels are too high",
-  "collocations": [
-   "high cholesterol",
-   "lower cholesterol",
-   "cholesterol levels"
-  ],
-  "paraphrases": [
-   "blood fat",
-   "fatty substance in the blood"
-  ],
-  "example": "High cholesterol can often be reduced through changes in diet."
- },
- {
-  "id": "hea-029",
-  "topic": "health",
-  "word": "hypertension",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "abnormally high blood pressure",
-  "collocations": [
-   "suffer from hypertension",
-   "treat hypertension",
-   "hypertension patients"
-  ],
-  "paraphrases": [
-   "high blood pressure",
-   "raised blood pressure"
-  ],
-  "example": "Hypertension frequently goes undetected because it rarely produces obvious symptoms."
- },
- {
-  "id": "hea-030",
-  "topic": "health",
-  "word": "diabetes",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a disease in which the body cannot control the level of sugar in the blood",
-  "collocations": [
-   "type 2 diabetes",
-   "develop diabetes",
-   "manage diabetes"
-  ],
-  "paraphrases": [
-   "blood sugar disorder",
-   "sugar disease"
-  ],
-  "example": "Type 2 diabetes is increasingly diagnosed in young adults."
- },
- {
-  "id": "hea-031",
-  "topic": "health",
-  "word": "cardiovascular",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "relating to the heart and blood vessels",
-  "collocations": [
-   "cardiovascular disease",
-   "cardiovascular health",
-   "cardiovascular system"
-  ],
-  "paraphrases": [
-   "heart-related",
-   "relating to the circulatory system"
-  ],
-  "example": "Regular aerobic exercise strengthens the cardiovascular system and lowers the risk of heart failure."
- },
- {
-  "id": "hea-032",
-  "topic": "health",
-  "word": "dementia",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "a serious loss of memory and thinking ability, mainly in old age",
-  "collocations": [
-   "develop dementia",
-   "dementia patients",
-   "early-onset dementia"
-  ],
-  "paraphrases": [
-   "loss of memory and reasoning",
-   "mental decline"
-  ],
-  "example": "Caring for a relative with dementia can be exhausting for families."
- },
- {
-  "id": "hea-033",
-  "topic": "health",
-  "word": "mental health",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "a person's emotional and psychological condition",
-  "collocations": [
-   "mental health problems",
-   "mental health services",
-   "protect mental health"
-  ],
-  "paraphrases": [
-   "psychological well-being",
-   "emotional state"
-  ],
-  "example": "Workplaces should treat mental health as seriously as physical health."
- },
- {
-  "id": "hea-034",
-  "topic": "health",
-  "word": "anxiety",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "a feeling of worry or fear about what might happen",
-  "collocations": [
-   "suffer from anxiety",
-   "cause anxiety",
-   "anxiety disorder"
-  ],
-  "paraphrases": [
-   "worry",
-   "unease"
-  ],
-  "example": "Constant exposure to bad news can increase anxiety, particularly among teenagers."
- },
- {
-  "id": "hea-035",
-  "topic": "health",
-  "word": "depression",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a medical condition causing persistent sadness and loss of interest in life",
-  "collocations": [
-   "clinical depression",
-   "suffer from depression",
-   "treat depression"
-  ],
-  "paraphrases": [
-   "persistent low mood",
-   "clinical sadness"
-  ],
-  "example": "Depression often goes untreated because people are reluctant to seek help."
- },
- {
-  "id": "hea-036",
-  "topic": "health",
-  "word": "burnout",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "extreme tiredness and loss of motivation caused by too much stress over a long time",
-  "collocations": [
-   "suffer burnout",
-   "prevent burnout",
-   "risk of burnout"
-  ],
-  "paraphrases": [
-   "exhaustion",
-   "stress-related collapse"
-  ],
-  "example": "Doctors working long shifts are at high risk of burnout."
- },
- {
-  "id": "hea-037",
-  "topic": "health",
-  "word": "well-being",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the state of being comfortable, healthy and content",
-  "collocations": [
-   "emotional well-being",
-   "physical well-being",
-   "promote well-being"
-  ],
-  "paraphrases": [
-   "welfare",
-   "good health and happiness"
-  ],
-  "example": "Time spent outdoors has been shown to improve psychological well-being."
- },
- {
-  "id": "hea-038",
-  "topic": "health",
-  "word": "addiction",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the inability to stop using a substance or doing something harmful",
-  "collocations": [
-   "drug addiction",
-   "overcome addiction",
-   "gambling addiction"
-  ],
-  "paraphrases": [
-   "dependency",
-   "compulsion"
-  ],
-  "example": "Treating addiction requires support as well as willpower."
- },
- {
-  "id": "hea-039",
-  "topic": "health",
-  "word": "substance abuse",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the harmful use of drugs or alcohol",
-  "collocations": [
-   "tackle substance abuse",
-   "substance abuse treatment",
-   "prevent substance abuse"
-  ],
-  "paraphrases": [
-   "drug and alcohol misuse",
-   "harmful drug use"
-  ],
-  "example": "Substance abuse among teenagers is often a response to stress or peer pressure."
- },
- {
-  "id": "hea-040",
-  "topic": "health",
-  "word": "passive smoking",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading"
-  ],
-  "definition": "breathing in smoke from other people's cigarettes",
-  "collocations": [
-   "risks of passive smoking",
-   "exposure to passive smoking",
-   "harm from passive smoking"
-  ],
-  "paraphrases": [
-   "second-hand smoke exposure",
-   "inhaling others' smoke"
-  ],
-  "example": "Passive smoking can cause serious respiratory problems in children."
- },
- {
-  "id": "hea-041",
-  "topic": "health",
-  "word": "tobacco",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the dried leaves smoked or chewed for their nicotine",
-  "collocations": [
-   "tobacco companies",
-   "tobacco advertising",
-   "tobacco tax"
-  ],
-  "paraphrases": [
-   "cigarette leaf",
-   "smoking material"
-  ],
-  "example": "Raising the tax on tobacco has been shown to reduce smoking, particularly among young people."
- },
- {
-  "id": "hea-042",
-  "topic": "health",
-  "word": "hygiene",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "the practice of keeping clean to prevent disease",
-  "collocations": [
-   "personal hygiene",
-   "poor hygiene",
-   "food hygiene"
-  ],
-  "paraphrases": [
-   "cleanliness",
-   "sanitary practice"
-  ],
-  "example": "Strict hygiene in kitchens is essential to avoid food poisoning."
- },
- {
-  "id": "hea-043",
-  "topic": "health",
-  "word": "sanitation",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the systems that provide clean water and safely remove human waste",
-  "collocations": [
-   "poor sanitation",
-   "improve sanitation",
-   "basic sanitation"
-  ],
-  "paraphrases": [
-   "sewage and clean water provision",
-   "public cleanliness"
-  ],
-  "example": "Poor sanitation remains a leading cause of infectious disease in developing regions."
- },
- {
-  "id": "hea-044",
-  "topic": "health",
-  "word": "public health",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the health of the community as a whole, and the efforts to protect it",
-  "collocations": [
-   "public health campaign",
-   "public health measures",
-   "public health crisis"
-  ],
-  "paraphrases": [
-   "community health",
-   "population health"
-  ],
-  "example": "Public health campaigns have successfully reduced smoking in many countries."
- },
- {
-  "id": "hea-045",
-  "topic": "health",
-  "word": "healthcare",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the services provided to maintain or improve people's health",
-  "collocations": [
-   "free healthcare",
-   "access to healthcare",
-   "healthcare system"
-  ],
-  "paraphrases": [
-   "medical services",
-   "medical provision"
-  ],
-  "example": "Access to affordable healthcare should be a basic right for every citizen."
- },
- {
-  "id": "hea-046",
-  "topic": "health",
-  "word": "primary care",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "the first level of medical help that a person receives, usually from a local doctor",
-  "collocations": [
-   "primary care services",
-   "primary care physician",
-   "primary care clinic"
-  ],
-  "paraphrases": [
-   "local medical services",
-   "frontline medical care"
-  ],
-  "example": "Strong primary care keeps patients out of hospital and reduces overall costs."
- },
- {
-  "id": "hea-047",
-  "topic": "health",
-  "word": "waiting list",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "listening"
-  ],
-  "definition": "a list of people who are waiting to receive treatment or a service",
-  "collocations": [
-   "long waiting list",
-   "on a waiting list",
-   "cut waiting lists"
-  ],
-  "paraphrases": [
-   "queue for treatment",
-   "backlog of patients"
-  ],
-  "example": "The waiting list for hip operations has grown to more than a year in some areas."
- },
- {
-  "id": "hea-048",
-  "topic": "health",
-  "word": "outpatient",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "a patient who visits a hospital for treatment but does not stay overnight",
-  "collocations": [
-   "outpatient clinic",
-   "outpatient department",
-   "outpatient appointment"
-  ],
-  "paraphrases": [
-   "non-resident patient",
-   "day patient"
-  ],
-  "example": "As an outpatient, she visited the clinic every week for physiotherapy."
- },
- {
-  "id": "hea-049",
-  "topic": "health",
-  "word": "surgery",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "writing",
-   "reading",
-   "listening"
-  ],
-  "definition": "medical treatment that involves cutting the body to repair or remove a part",
-  "collocations": [
-   "undergo surgery",
-   "heart surgery",
-   "cosmetic surgery"
-  ],
-  "paraphrases": [
-   "operation",
-   "surgical procedure"
-  ],
-  "example": "Many patients recover faster after keyhole surgery than after traditional operations."
- },
- {
-  "id": "hea-050",
-  "topic": "health",
-  "word": "transplant",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading"
-  ],
-  "definition": "an operation in which an organ is replaced with one from another person",
-  "collocations": [
-   "organ transplant",
-   "kidney transplant",
-   "transplant waiting list"
-  ],
-  "paraphrases": [
-   "organ replacement",
-   "grafting operation"
-  ],
-  "example": "A kidney transplant can give patients years of life that dialysis cannot."
- },
- {
-  "id": "hea-051",
-  "topic": "health",
-  "word": "screening",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a test given to people who have no symptoms to find disease early",
-  "collocations": [
-   "cancer screening",
-   "screening programme",
-   "routine screening"
-  ],
-  "paraphrases": [
-   "routine testing",
-   "preventive examination"
-  ],
-  "example": "Routine screening for breast cancer has saved thousands of lives."
- },
- {
-  "id": "hea-052",
-  "topic": "health",
-  "word": "check-up",
-  "pos": "noun",
-  "band": 6.5,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a general medical examination to check that you are healthy",
-  "collocations": [
-   "annual check-up",
-   "go for a check-up",
-   "routine check-up"
-  ],
-  "paraphrases": [
-   "medical examination",
-   "health assessment"
-  ],
-  "example": "I have a check-up at the dentist every six months."
- },
- {
-  "id": "hea-053",
-  "topic": "health",
-  "word": "early detection",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the finding of a disease at its first stage, before it spreads",
-  "collocations": [
-   "early detection of cancer",
-   "improve early detection",
-   "early detection saves lives"
-  ],
-  "paraphrases": [
-   "spotting illness quickly",
-   "prompt identification"
-  ],
-  "example": "Early detection allows doctors to treat tumours before they spread."
- },
- {
-  "id": "hea-054",
-  "topic": "health",
-  "word": "genetic",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "relating to genes or inherited characteristics",
-  "collocations": [
-   "genetic disorder",
-   "genetic factors",
-   "genetic testing"
-  ],
-  "paraphrases": [
-   "inherited",
-   "relating to genes"
-  ],
-  "example": "Genetic factors play a role in many cancers, although lifestyle also matters."
- },
- {
-  "id": "hea-055",
-  "topic": "health",
-  "word": "hereditary",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "passed from parents to children through genes",
-  "collocations": [
-   "hereditary disease",
-   "hereditary condition",
-   "hereditary factors"
-  ],
-  "paraphrases": [
-   "inherited",
-   "passed down"
-  ],
-  "example": "Some forms of heart disease are hereditary and appear in several generations of one family."
- },
- {
-  "id": "hea-056",
-  "topic": "health",
-  "word": "allergy",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a medical condition in which the body reacts badly to a normally harmless substance",
-  "collocations": [
-   "food allergy",
-   "severe allergy",
-   "have an allergy"
-  ],
-  "paraphrases": [
-   "bad reaction to a substance",
-   "hypersensitivity"
-  ],
-  "example": "I have an allergy to pollen, so spring is difficult for me."
- },
- {
-  "id": "hea-057",
-  "topic": "health",
-  "word": "immune system",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "the body's natural defence against infection and disease",
-  "collocations": [
-   "boost the immune system",
-   "weakened immune system",
-   "strengthen the immune system"
-  ],
-  "paraphrases": [
-   "body's defences",
-   "natural protection against illness"
-  ],
-  "example": "Sleep and a nutritious diet help to strengthen the immune system."
- },
- {
-  "id": "hea-058",
-  "topic": "health",
-  "word": "insomnia",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "speaking",
-   "reading"
-  ],
-  "definition": "a continuing difficulty in falling or staying asleep",
-  "collocations": [
-   "suffer from insomnia",
-   "chronic insomnia",
-   "cure insomnia"
-  ],
-  "paraphrases": [
-   "sleeplessness",
-   "difficulty sleeping"
-  ],
-  "example": "Stress and late-night screen use can both contribute to insomnia."
- },
- {
-  "id": "hea-059",
-  "topic": "health",
-  "word": "fatigue",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading"
-  ],
-  "definition": "extreme tiredness caused by effort or illness",
-  "collocations": [
-   "chronic fatigue",
-   "muscle fatigue",
-   "suffer from fatigue"
-  ],
-  "paraphrases": [
-   "exhaustion",
-   "extreme tiredness"
-  ],
-  "example": "Driver fatigue is a major cause of road accidents on long journeys."
- },
- {
-  "id": "hea-060",
-  "topic": "health",
-  "word": "palliative care",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "treatment that eases pain and discomfort for people with incurable illness",
-  "collocations": [
-   "palliative care unit",
-   "receive palliative care",
-   "palliative care services"
-  ],
-  "paraphrases": [
-   "comfort care",
-   "end-of-life care"
-  ],
-  "example": "Palliative care focuses on dignity and comfort rather than cure."
- },
- {
-  "id": "hea-061",
-  "topic": "health",
-  "word": "terminal",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "describing an illness that cannot be cured and will lead to death",
-  "collocations": [
-   "terminal illness",
-   "terminal cancer",
-   "terminally ill"
-  ],
-  "paraphrases": [
-   "incurable",
-   "fatal"
-  ],
-  "example": "Terminal patients are often offered the choice to spend their final weeks at home."
- },
- {
-  "id": "hea-062",
-  "topic": "health",
-  "word": "euthanasia",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "the deliberate ending of a person's life to relieve suffering",
-  "collocations": [
-   "legalise euthanasia",
-   "voluntary euthanasia",
-   "debate on euthanasia"
-  ],
-  "paraphrases": [
-   "assisted dying",
-   "mercy killing"
-  ],
-  "example": "The legalisation of euthanasia remains a deeply divisive ethical issue."
- },
- {
-  "id": "hea-063",
-  "topic": "health",
-  "word": "alternative medicine",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking",
-   "reading"
-  ],
-  "definition": "treatments that are not part of conventional science-based medicine, such as acupuncture",
-  "collocations": [
-   "practise alternative medicine",
-   "turn to alternative medicine",
-   "alternative medicine therapies"
-  ],
-  "paraphrases": [
-   "complementary therapies",
-   "non-conventional treatment"
-  ],
-  "example": "Many people turn to alternative medicine when standard treatments have failed."
- },
- {
-  "id": "hea-064",
-  "topic": "health",
-  "word": "placebo",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "a harmless substance given as medicine to test or produce a psychological effect",
-  "collocations": [
-   "placebo effect",
-   "placebo group",
-   "take a placebo"
-  ],
-  "paraphrases": [
-   "dummy pill",
-   "inactive treatment"
-  ],
-  "example": "Half the participants received a placebo so that researchers could compare outcomes."
- },
- {
-  "id": "hea-065",
-  "topic": "health",
-  "word": "paramedic",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a person trained to give emergency medical treatment, usually in an ambulance",
-  "collocations": [
-   "call a paramedic",
-   "trained paramedic",
-   "paramedic crew"
-  ],
-  "paraphrases": [
-   "ambulance medic",
-   "emergency medical worker"
-  ],
-  "example": "The paramedic stabilised the patient at the roadside before transferring her to hospital."
- },
- {
-  "id": "hea-066",
-  "topic": "health",
-  "word": "ward",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "speaking",
-   "listening"
-  ],
-  "definition": "a room in a hospital with beds for patients",
-  "collocations": [
-   "hospital ward",
-   "maternity ward",
-   "children's ward"
-  ],
-  "paraphrases": [
-   "hospital room",
-   "patients' unit"
-  ],
-  "example": "She spent a week on the surgical ward after the operation."
- },
- {
-  "id": "hea-067",
-  "topic": "health",
-  "word": "ailment",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading"
-  ],
-  "definition": "an illness that is usually not serious",
-  "collocations": [
-   "minor ailment",
-   "common ailment",
-   "treat an ailment"
-  ],
-  "paraphrases": [
-   "minor illness",
-   "complaint"
-  ],
-  "example": "Pharmacists can advise on minor ailments such as coughs and sore throats."
- },
- {
-  "id": "hea-068",
-  "topic": "health",
-  "word": "disorder",
-  "pos": "noun",
-  "band": 7,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "a medical condition in which the normal functions of body or mind are disturbed",
-  "collocations": [
-   "eating disorder",
-   "genetic disorder",
-   "sleep disorder"
-  ],
-  "paraphrases": [
-   "medical condition",
-   "disturbance"
-  ],
-  "example": "An eating disorder can affect people of any age and background."
- },
- {
-  "id": "hea-069",
-  "topic": "health",
-  "word": "deteriorate",
-  "pos": "verb",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "to become worse over time",
-  "collocations": [
-   "deteriorate rapidly",
-   "health deteriorates",
-   "deteriorating condition"
-  ],
-  "paraphrases": [
-   "worsen",
-   "decline"
-  ],
-  "example": "His condition began to deteriorate after he stopped taking the medication."
- },
- {
-  "id": "hea-070",
-  "topic": "health",
-  "word": "recuperate",
-  "pos": "verb",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "to recover from illness or injury gradually",
-  "collocations": [
-   "recuperate at home",
-   "time to recuperate",
-   "recuperate after surgery"
-  ],
-  "paraphrases": [
-   "recover",
-   "regain strength"
-  ],
-  "example": "Patients need several weeks to recuperate after major surgery."
- },
- {
-  "id": "hea-071",
-  "topic": "health",
-  "word": "relapse",
-  "pos": "noun",
-  "band": 8,
-  "use": [
-   "reading"
-  ],
-  "definition": "a return of an illness after a period of improvement",
-  "collocations": [
-   "suffer a relapse",
-   "risk of relapse",
-   "prevent relapse"
-  ],
-  "paraphrases": [
-   "setback",
-   "recurrence"
-  ],
-  "example": "Regular check-ups are essential to reduce the risk of relapse."
- },
- {
-  "id": "hea-072",
-  "topic": "health",
-  "word": "debilitating",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "making someone very weak and unable to do normal activities",
-  "collocations": [
-   "debilitating illness",
-   "debilitating pain",
-   "debilitating effects"
-  ],
-  "paraphrases": [
-   "crippling",
-   "weakening"
-  ],
-  "example": "Chronic migraines can be so debilitating that sufferers cannot work."
- },
- {
-  "id": "hea-073",
-  "topic": "health",
-  "word": "life-threatening",
-  "pos": "adjective",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "likely to cause death",
-  "collocations": [
-   "life-threatening condition",
-   "life-threatening illness",
-   "life-threatening injuries"
-  ],
-  "paraphrases": [
-   "potentially deadly",
-   "extremely serious"
-  ],
-  "example": "Food allergies can sometimes lead to a life-threatening reaction."
- },
- {
-  "id": "hea-074",
-  "topic": "health",
-  "word": "fatal",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "reading",
-   "listening"
-  ],
-  "definition": "causing the death of a person or animal",
-  "collocations": [
-   "fatal disease",
-   "fatal accident",
-   "potentially fatal"
-  ],
-  "paraphrases": [
-   "deadly",
-   "lethal"
-  ],
-  "example": "Without prompt treatment, the infection can prove fatal."
- },
- {
-  "id": "hea-075",
-  "topic": "health",
-  "word": "susceptible",
-  "pos": "adjective",
-  "band": 8,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "likely to be affected by a disease or influence",
-  "collocations": [
-   "susceptible to infection",
-   "highly susceptible",
-   "susceptible to illness"
-  ],
-  "paraphrases": [
-   "prone",
-   "at risk"
-  ],
-  "example": "Elderly people are particularly susceptible to pneumonia during the winter months."
- },
- {
-  "id": "hea-076",
-  "topic": "health",
-  "word": "prone to",
-  "pos": "phrase",
-  "band": 7.5,
-  "use": [
-   "writing",
-   "reading"
-  ],
-  "definition": "likely to suffer from something or to do it",
-  "collocations": [
-   "prone to illness",
-   "accident-prone",
-   "prone to injury"
-  ],
-  "paraphrases": [
-   "liable to",
-   "inclined to"
-  ],
-  "example": "Children who sleep badly are more prone to infections."
- },
- {
-  "id": "hea-077",
-  "topic": "health",
-  "word": "under the weather",
-  "pos": "phrase",
-  "band": 7,
-  "use": [
-   "speaking"
-  ],
-  "definition": "feeling slightly ill or not quite well",
-  "collocations": [
-   "feel under the weather",
-   "a bit under the weather",
-   "seem under the weather"
-  ],
-  "paraphrases": [
-   "slightly unwell",
-   "not feeling great"
-  ],
-  "example": "I'm feeling a bit under the weather, so I'm going to stay at home tonight."
- },
- {
-  "id": "hea-078",
-  "topic": "health",
-  "word": "health-conscious",
-  "pos": "adjective",
-  "band": 7,
-  "use": [
-   "writing",
-   "speaking"
-  ],
-  "definition": "concerned about staying healthy, especially through diet and exercise",
-  "collocations": [
-   "health-conscious consumers",
-   "health-conscious people",
-   "health-conscious lifestyle"
-  ],
-  "paraphrases": [
-   "concerned about wellbeing",
-   "careful about fitness"
-  ],
-  "example": "Health-conscious shoppers now read nutritional labels before buying anything."
- },
- {
-  "id": "hea-079",
-  "topic": "health",
-  "word": "dehydration",
-  "pos": "noun",
-  "band": 7.5,
-  "use": [
-   "reading"
-  ],
-  "definition": "a harmful loss of water from the body",
-  "collocations": [
-   "suffer from dehydration",
-   "prevent dehydration",
-   "severe dehydration"
-  ],
-  "paraphrases": [
-   "lack of fluids",
-   "excessive water loss"
-  ],
-  "example": "Dehydration can cause headaches and dizziness during hot weather."
- }
+  {
+    "id": "hea-001",
+    "topic": "health",
+    "word": "chronic",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "lasting for a long time or constantly returning",
+    "collocations": [
+      "chronic illness",
+      "chronic pain",
+      "chronic condition"
+    ],
+    "paraphrases": [
+      "long-term",
+      "persistent"
+    ],
+    "example": "Chronic illness places a heavy burden on both patients and health budgets."
+  },
+  {
+    "id": "hea-002",
+    "topic": "health",
+    "word": "acute",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "very severe and needing urgent attention, or starting suddenly",
+    "collocations": [
+      "acute pain",
+      "acute shortage",
+      "acute illness"
+    ],
+    "paraphrases": [
+      "severe",
+      "intense"
+    ],
+    "example": "Rural hospitals face an acute shortage of experienced nurses."
+  },
+  {
+    "id": "hea-003",
+    "topic": "health",
+    "word": "epidemic",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a widespread outbreak of a disease affecting many people at once",
+    "collocations": [
+      "flu epidemic",
+      "epidemic of obesity",
+      "control an epidemic"
+    ],
+    "paraphrases": [
+      "widespread outbreak",
+      "rapid spread of illness"
+    ],
+    "example": "An epidemic of obesity among children is placing new pressure on paediatric services."
+  },
+  {
+    "id": "hea-004",
+    "topic": "health",
+    "word": "pandemic",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a disease outbreak that spreads across many countries or the whole world",
+    "collocations": [
+      "global pandemic",
+      "pandemic response",
+      "during the pandemic"
+    ],
+    "paraphrases": [
+      "worldwide outbreak",
+      "global epidemic"
+    ],
+    "example": "The pandemic exposed serious weaknesses in many countries' emergency planning."
+  },
+  {
+    "id": "hea-005",
+    "topic": "health",
+    "word": "outbreak",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a sudden start of a disease or violence in a particular place",
+    "collocations": [
+      "disease outbreak",
+      "outbreak of cholera",
+      "contain an outbreak"
+    ],
+    "paraphrases": [
+      "sudden appearance",
+      "eruption"
+    ],
+    "example": "Health officials moved quickly to contain the outbreak by isolating infected patients."
+  },
+  {
+    "id": "hea-006",
+    "topic": "health",
+    "word": "contagious",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "able to be passed from one person to another through contact",
+    "collocations": [
+      "highly contagious",
+      "contagious disease",
+      "contagious illness"
+    ],
+    "paraphrases": [
+      "infectious",
+      "easily spread"
+    ],
+    "example": "Measles is highly contagious and can spread rapidly through unvaccinated groups."
+  },
+  {
+    "id": "hea-007",
+    "topic": "health",
+    "word": "infection",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "an illness caused by germs entering the body",
+    "collocations": [
+      "bacterial infection",
+      "chest infection",
+      "prevent infection"
+    ],
+    "paraphrases": [
+      "illness caused by germs",
+      "contamination by bacteria"
+    ],
+    "example": "Washing hands regularly reduces the risk of infection."
+  },
+  {
+    "id": "hea-008",
+    "topic": "health",
+    "word": "immunity",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the body's ability to resist a particular disease",
+    "collocations": [
+      "build immunity",
+      "natural immunity",
+      "herd immunity"
+    ],
+    "paraphrases": [
+      "resistance to disease",
+      "protection against illness"
+    ],
+    "example": "Herd immunity is achieved when enough people are protected that a disease can no longer spread easily."
+  },
+  {
+    "id": "hea-009",
+    "topic": "health",
+    "word": "vaccination",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the giving of a substance that protects the body against a disease",
+    "collocations": [
+      "childhood vaccination",
+      "vaccination programme",
+      "compulsory vaccination"
+    ],
+    "paraphrases": [
+      "immunisation",
+      "inoculation"
+    ],
+    "example": "Mass vaccination has virtually wiped out polio in most parts of the world."
+  },
+  {
+    "id": "hea-010",
+    "topic": "health",
+    "word": "antibiotic",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a medicine that kills bacteria and treats infections",
+    "collocations": [
+      "prescribe antibiotics",
+      "course of antibiotics",
+      "antibiotic resistance"
+    ],
+    "paraphrases": [
+      "bacteria-killing medicine",
+      "germ-fighting drug"
+    ],
+    "example": "Overuse of antibiotics has led to bacteria that no longer respond to treatment."
+  },
+  {
+    "id": "hea-011",
+    "topic": "health",
+    "word": "diagnosis",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the identification of an illness after examining the patient",
+    "collocations": [
+      "early diagnosis",
+      "accurate diagnosis",
+      "make a diagnosis"
+    ],
+    "paraphrases": [
+      "identification of an illness",
+      "medical assessment"
+    ],
+    "example": "Early diagnosis greatly improves the chances of survival for many cancers."
+  },
+  {
+    "id": "hea-012",
+    "topic": "health",
+    "word": "symptom",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a sign of illness that a patient feels or shows",
+    "collocations": [
+      "common symptom",
+      "flu symptoms",
+      "show symptoms"
+    ],
+    "paraphrases": [
+      "sign of illness",
+      "indication"
+    ],
+    "example": "The first symptom of the disease is often a persistent cough."
+  },
+  {
+    "id": "hea-013",
+    "topic": "health",
+    "word": "prognosis",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a doctor's opinion about how an illness is likely to develop",
+    "collocations": [
+      "a good prognosis",
+      "poor prognosis",
+      "improve the prognosis"
+    ],
+    "paraphrases": [
+      "medical forecast",
+      "likely outcome"
+    ],
+    "example": "The prognosis for patients diagnosed at an early stage is excellent."
+  },
+  {
+    "id": "hea-014",
+    "topic": "health",
+    "word": "treatment",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "medical care given to a patient to cure or relieve an illness",
+    "collocations": [
+      "receive treatment",
+      "medical treatment",
+      "course of treatment"
+    ],
+    "paraphrases": [
+      "medical care",
+      "therapy"
+    ],
+    "example": "Patients in remote areas often travel for hours to receive treatment."
+  },
+  {
+    "id": "hea-015",
+    "topic": "health",
+    "word": "therapy",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the treatment of a physical or mental problem, usually without surgery",
+    "collocations": [
+      "speech therapy",
+      "cognitive behavioural therapy",
+      "undergo therapy"
+    ],
+    "paraphrases": [
+      "treatment",
+      "remedial care"
+    ],
+    "example": "Regular therapy can help people overcome anxiety without relying on medication."
+  },
+  {
+    "id": "hea-017",
+    "topic": "health",
+    "word": "prescription",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a written order from a doctor for a medicine",
+    "collocations": [
+      "on prescription",
+      "prescription drugs",
+      "fill a prescription"
+    ],
+    "paraphrases": [
+      "doctor's order for medicine",
+      "written medical instruction"
+    ],
+    "example": "The pharmacist could not give me the tablets without a prescription."
+  },
+  {
+    "id": "hea-018",
+    "topic": "health",
+    "word": "side effect",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "an unwanted effect of a medicine in addition to its intended one",
+    "collocations": [
+      "common side effect",
+      "serious side effects",
+      "suffer side effects"
+    ],
+    "paraphrases": [
+      "unintended reaction",
+      "adverse reaction"
+    ],
+    "example": "Drowsiness is a common side effect of many allergy tablets."
+  },
+  {
+    "id": "hea-019",
+    "topic": "health",
+    "word": "remedy",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a medicine or treatment that relieves or cures an illness",
+    "collocations": [
+      "herbal remedy",
+      "home remedy",
+      "effective remedy"
+    ],
+    "paraphrases": [
+      "cure",
+      "medicine"
+    ],
+    "example": "A herbal remedy may soothe mild symptoms, but it should not replace professional care."
+  },
+  {
+    "id": "hea-020",
+    "topic": "health",
+    "word": "cure",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a treatment that makes an illness disappear completely",
+    "collocations": [
+      "find a cure",
+      "no known cure",
+      "miracle cure"
+    ],
+    "paraphrases": [
+      "remedy",
+      "means of healing"
+    ],
+    "example": "Scientists have yet to find a cure for the common cold."
+  },
+  {
+    "id": "hea-021",
+    "topic": "health",
+    "word": "preventive",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "intended to stop illness before it starts",
+    "collocations": [
+      "preventive medicine",
+      "preventive measures",
+      "preventive care"
+    ],
+    "paraphrases": [
+      "precautionary",
+      "prophylactic"
+    ],
+    "example": "Preventive care is cheaper in the long run than treating advanced disease."
+  },
+  {
+    "id": "hea-022",
+    "topic": "health",
+    "word": "life expectancy",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the average number of years a person is likely to live",
+    "collocations": [
+      "rising life expectancy",
+      "increase life expectancy",
+      "low life expectancy"
+    ],
+    "paraphrases": [
+      "average lifespan",
+      "expected years of life"
+    ],
+    "example": "Life expectancy has risen steadily as sanitation and medicine have improved."
+  },
+  {
+    "id": "hea-023",
+    "topic": "health",
+    "word": "mortality",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the number of deaths in a particular group or period",
+    "collocations": [
+      "infant mortality",
+      "mortality rate",
+      "reduce mortality"
+    ],
+    "paraphrases": [
+      "death rate",
+      "fatality level"
+    ],
+    "example": "Infant mortality has fallen sharply since clean water reached rural villages."
+  },
+  {
+    "id": "hea-024",
+    "topic": "health",
+    "word": "obesity",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the condition of being so overweight that it harms health",
+    "collocations": [
+      "childhood obesity",
+      "combat obesity",
+      "obesity rates"
+    ],
+    "paraphrases": [
+      "severe overweight",
+      "excessive body weight"
+    ],
+    "example": "Rising obesity is closely linked to cheaper processed foods and inactive lifestyles."
+  },
+  {
+    "id": "hea-028",
+    "topic": "health",
+    "word": "cholesterol",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a fatty substance in the blood that can block arteries if levels are too high",
+    "collocations": [
+      "high cholesterol",
+      "lower cholesterol",
+      "cholesterol levels"
+    ],
+    "paraphrases": [
+      "blood fat",
+      "fatty substance in the blood"
+    ],
+    "example": "High cholesterol can often be reduced through changes in diet."
+  },
+  {
+    "id": "hea-029",
+    "topic": "health",
+    "word": "hypertension",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "abnormally high blood pressure",
+    "collocations": [
+      "suffer from hypertension",
+      "treat hypertension",
+      "hypertension patients"
+    ],
+    "paraphrases": [
+      "high blood pressure",
+      "raised blood pressure"
+    ],
+    "example": "Hypertension frequently goes undetected because it rarely produces obvious symptoms."
+  },
+  {
+    "id": "hea-030",
+    "topic": "health",
+    "word": "diabetes",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a disease in which the body cannot control the level of sugar in the blood",
+    "collocations": [
+      "type 2 diabetes",
+      "develop diabetes",
+      "manage diabetes"
+    ],
+    "paraphrases": [
+      "blood sugar disorder",
+      "sugar disease"
+    ],
+    "example": "Type 2 diabetes is increasingly diagnosed in young adults."
+  },
+  {
+    "id": "hea-031",
+    "topic": "health",
+    "word": "cardiovascular",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "relating to the heart and blood vessels",
+    "collocations": [
+      "cardiovascular disease",
+      "cardiovascular health",
+      "cardiovascular system"
+    ],
+    "paraphrases": [
+      "heart-related",
+      "relating to the circulatory system"
+    ],
+    "example": "Regular aerobic exercise strengthens the cardiovascular system and lowers the risk of heart failure."
+  },
+  {
+    "id": "hea-032",
+    "topic": "health",
+    "word": "dementia",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a serious loss of memory and thinking ability, mainly in old age",
+    "collocations": [
+      "develop dementia",
+      "dementia patients",
+      "early-onset dementia"
+    ],
+    "paraphrases": [
+      "loss of memory and reasoning",
+      "mental decline"
+    ],
+    "example": "Caring for a relative with dementia can be exhausting for families."
+  },
+  {
+    "id": "hea-033",
+    "topic": "health",
+    "word": "mental health",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a person's emotional and psychological condition",
+    "collocations": [
+      "mental health problems",
+      "mental health services",
+      "protect mental health"
+    ],
+    "paraphrases": [
+      "psychological well-being",
+      "emotional state"
+    ],
+    "example": "Workplaces should treat mental health as seriously as physical health."
+  },
+  {
+    "id": "hea-034",
+    "topic": "health",
+    "word": "anxiety",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a feeling of worry or fear about what might happen",
+    "collocations": [
+      "suffer from anxiety",
+      "cause anxiety",
+      "anxiety disorder"
+    ],
+    "paraphrases": [
+      "worry",
+      "unease"
+    ],
+    "example": "Constant exposure to bad news can increase anxiety, particularly among teenagers."
+  },
+  {
+    "id": "hea-035",
+    "topic": "health",
+    "word": "depression",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a medical condition causing persistent sadness and loss of interest in life",
+    "collocations": [
+      "clinical depression",
+      "suffer from depression",
+      "treat depression"
+    ],
+    "paraphrases": [
+      "persistent low mood",
+      "clinical sadness"
+    ],
+    "example": "Depression often goes untreated because people are reluctant to seek help."
+  },
+  {
+    "id": "hea-037",
+    "topic": "health",
+    "word": "well-being",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the state of being comfortable, healthy and content",
+    "collocations": [
+      "emotional well-being",
+      "physical well-being",
+      "promote well-being"
+    ],
+    "paraphrases": [
+      "welfare",
+      "good health and happiness"
+    ],
+    "example": "Time spent outdoors has been shown to improve psychological well-being."
+  },
+  {
+    "id": "hea-038",
+    "topic": "health",
+    "word": "addiction",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the inability to stop using a substance or doing something harmful",
+    "collocations": [
+      "drug addiction",
+      "overcome addiction",
+      "gambling addiction"
+    ],
+    "paraphrases": [
+      "dependency",
+      "compulsion"
+    ],
+    "example": "Treating addiction requires support as well as willpower."
+  },
+  {
+    "id": "hea-039",
+    "topic": "health",
+    "word": "substance abuse",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the harmful use of drugs or alcohol",
+    "collocations": [
+      "tackle substance abuse",
+      "substance abuse treatment",
+      "prevent substance abuse"
+    ],
+    "paraphrases": [
+      "drug and alcohol misuse",
+      "harmful drug use"
+    ],
+    "example": "Substance abuse among teenagers is often a response to stress or peer pressure."
+  },
+  {
+    "id": "hea-040",
+    "topic": "health",
+    "word": "passive smoking",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "breathing in smoke from other people's cigarettes",
+    "collocations": [
+      "risks of passive smoking",
+      "exposure to passive smoking",
+      "harm from passive smoking"
+    ],
+    "paraphrases": [
+      "second-hand smoke exposure",
+      "inhaling others' smoke"
+    ],
+    "example": "Passive smoking can cause serious respiratory problems in children."
+  },
+  {
+    "id": "hea-041",
+    "topic": "health",
+    "word": "tobacco",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the dried leaves smoked or chewed for their nicotine",
+    "collocations": [
+      "tobacco companies",
+      "tobacco advertising",
+      "tobacco tax"
+    ],
+    "paraphrases": [
+      "cigarette leaf",
+      "smoking material"
+    ],
+    "example": "Raising the tax on tobacco has been shown to reduce smoking, particularly among young people."
+  },
+  {
+    "id": "hea-042",
+    "topic": "health",
+    "word": "hygiene",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "the practice of keeping clean to prevent disease",
+    "collocations": [
+      "personal hygiene",
+      "poor hygiene",
+      "food hygiene"
+    ],
+    "paraphrases": [
+      "cleanliness",
+      "sanitary practice"
+    ],
+    "example": "Strict hygiene in kitchens is essential to avoid food poisoning."
+  },
+  {
+    "id": "hea-043",
+    "topic": "health",
+    "word": "sanitation",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the systems that provide clean water and safely remove human waste",
+    "collocations": [
+      "poor sanitation",
+      "improve sanitation",
+      "basic sanitation"
+    ],
+    "paraphrases": [
+      "sewage and clean water provision",
+      "public cleanliness"
+    ],
+    "example": "Poor sanitation remains a leading cause of infectious disease in developing regions."
+  },
+  {
+    "id": "hea-044",
+    "topic": "health",
+    "word": "public health",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the health of the community as a whole, and the efforts to protect it",
+    "collocations": [
+      "public health campaign",
+      "public health measures",
+      "public health crisis"
+    ],
+    "paraphrases": [
+      "community health",
+      "population health"
+    ],
+    "example": "Public health campaigns have successfully reduced smoking in many countries."
+  },
+  {
+    "id": "hea-045",
+    "topic": "health",
+    "word": "healthcare",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the services provided to maintain or improve people's health",
+    "collocations": [
+      "free healthcare",
+      "access to healthcare",
+      "healthcare system"
+    ],
+    "paraphrases": [
+      "medical services",
+      "medical provision"
+    ],
+    "example": "Access to affordable healthcare should be a basic right for every citizen."
+  },
+  {
+    "id": "hea-046",
+    "topic": "health",
+    "word": "primary care",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "the first level of medical help that a person receives, usually from a local doctor",
+    "collocations": [
+      "primary care services",
+      "primary care physician",
+      "primary care clinic"
+    ],
+    "paraphrases": [
+      "local medical services",
+      "frontline medical care"
+    ],
+    "example": "Strong primary care keeps patients out of hospital and reduces overall costs."
+  },
+  {
+    "id": "hea-047",
+    "topic": "health",
+    "word": "waiting list",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "a list of people who are waiting to receive treatment or a service",
+    "collocations": [
+      "long waiting list",
+      "on a waiting list",
+      "cut waiting lists"
+    ],
+    "paraphrases": [
+      "queue for treatment",
+      "backlog of patients"
+    ],
+    "example": "The waiting list for hip operations has grown to more than a year in some areas."
+  },
+  {
+    "id": "hea-048",
+    "topic": "health",
+    "word": "outpatient",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a patient who visits a hospital for treatment but does not stay overnight",
+    "collocations": [
+      "outpatient clinic",
+      "outpatient department",
+      "outpatient appointment"
+    ],
+    "paraphrases": [
+      "non-resident patient",
+      "day patient"
+    ],
+    "example": "As an outpatient, she visited the clinic every week for physiotherapy."
+  },
+  {
+    "id": "hea-049",
+    "topic": "health",
+    "word": "surgery",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "medical treatment that involves cutting the body to repair or remove a part",
+    "collocations": [
+      "undergo surgery",
+      "heart surgery",
+      "cosmetic surgery"
+    ],
+    "paraphrases": [
+      "operation",
+      "surgical procedure"
+    ],
+    "example": "Many patients recover faster after keyhole surgery than after traditional operations."
+  },
+  {
+    "id": "hea-050",
+    "topic": "health",
+    "word": "transplant",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "an operation in which an organ is replaced with one from another person",
+    "collocations": [
+      "organ transplant",
+      "kidney transplant",
+      "transplant waiting list"
+    ],
+    "paraphrases": [
+      "organ replacement",
+      "grafting operation"
+    ],
+    "example": "A kidney transplant can give patients years of life that dialysis cannot."
+  },
+  {
+    "id": "hea-051",
+    "topic": "health",
+    "word": "screening",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a test given to people who have no symptoms to find disease early",
+    "collocations": [
+      "cancer screening",
+      "screening programme",
+      "routine screening"
+    ],
+    "paraphrases": [
+      "routine testing",
+      "preventive examination"
+    ],
+    "example": "Routine screening for breast cancer has saved thousands of lives."
+  },
+  {
+    "id": "hea-052",
+    "topic": "health",
+    "word": "check-up",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a general medical examination to check that you are healthy",
+    "collocations": [
+      "annual check-up",
+      "go for a check-up",
+      "routine check-up"
+    ],
+    "paraphrases": [
+      "medical examination",
+      "health assessment"
+    ],
+    "example": "I have a check-up at the dentist every six months."
+  },
+  {
+    "id": "hea-053",
+    "topic": "health",
+    "word": "early detection",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the finding of a disease at its first stage, before it spreads",
+    "collocations": [
+      "early detection of cancer",
+      "improve early detection",
+      "early detection saves lives"
+    ],
+    "paraphrases": [
+      "spotting illness quickly",
+      "prompt identification"
+    ],
+    "example": "Early detection allows doctors to treat tumours before they spread."
+  },
+  {
+    "id": "hea-054",
+    "topic": "health",
+    "word": "genetic",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "relating to genes or inherited characteristics",
+    "collocations": [
+      "genetic disorder",
+      "genetic factors",
+      "genetic testing"
+    ],
+    "paraphrases": [
+      "inherited",
+      "relating to genes"
+    ],
+    "example": "Genetic factors play a role in many cancers, although lifestyle also matters."
+  },
+  {
+    "id": "hea-055",
+    "topic": "health",
+    "word": "hereditary",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "passed from parents to children through genes",
+    "collocations": [
+      "hereditary disease",
+      "hereditary condition",
+      "hereditary factors"
+    ],
+    "paraphrases": [
+      "inherited",
+      "passed down"
+    ],
+    "example": "Some forms of heart disease are hereditary and appear in several generations of one family."
+  },
+  {
+    "id": "hea-056",
+    "topic": "health",
+    "word": "allergy",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a medical condition in which the body reacts badly to a normally harmless substance",
+    "collocations": [
+      "food allergy",
+      "severe allergy",
+      "have an allergy"
+    ],
+    "paraphrases": [
+      "bad reaction to a substance",
+      "hypersensitivity"
+    ],
+    "example": "I have an allergy to pollen, so spring is difficult for me."
+  },
+  {
+    "id": "hea-057",
+    "topic": "health",
+    "word": "immune system",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "the body's natural defence against infection and disease",
+    "collocations": [
+      "boost the immune system",
+      "weakened immune system",
+      "strengthen the immune system"
+    ],
+    "paraphrases": [
+      "body's defences",
+      "natural protection against illness"
+    ],
+    "example": "Sleep and a nutritious diet help to strengthen the immune system."
+  },
+  {
+    "id": "hea-058",
+    "topic": "health",
+    "word": "insomnia",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a continuing difficulty in falling or staying asleep",
+    "collocations": [
+      "suffer from insomnia",
+      "chronic insomnia",
+      "cure insomnia"
+    ],
+    "paraphrases": [
+      "sleeplessness",
+      "difficulty sleeping"
+    ],
+    "example": "Stress and late-night screen use can both contribute to insomnia."
+  },
+  {
+    "id": "hea-059",
+    "topic": "health",
+    "word": "fatigue",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "extreme tiredness caused by effort or illness",
+    "collocations": [
+      "chronic fatigue",
+      "muscle fatigue",
+      "suffer from fatigue"
+    ],
+    "paraphrases": [
+      "exhaustion",
+      "extreme tiredness"
+    ],
+    "example": "Driver fatigue is a major cause of road accidents on long journeys."
+  },
+  {
+    "id": "hea-060",
+    "topic": "health",
+    "word": "palliative care",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "treatment that eases pain and discomfort for people with incurable illness",
+    "collocations": [
+      "palliative care unit",
+      "receive palliative care",
+      "palliative care services"
+    ],
+    "paraphrases": [
+      "comfort care",
+      "end-of-life care"
+    ],
+    "example": "Palliative care focuses on dignity and comfort rather than cure."
+  },
+  {
+    "id": "hea-061",
+    "topic": "health",
+    "word": "terminal",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "describing an illness that cannot be cured and will lead to death",
+    "collocations": [
+      "terminal illness",
+      "terminal cancer",
+      "terminally ill"
+    ],
+    "paraphrases": [
+      "incurable",
+      "fatal"
+    ],
+    "example": "Terminal patients are often offered the choice to spend their final weeks at home."
+  },
+  {
+    "id": "hea-062",
+    "topic": "health",
+    "word": "euthanasia",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the deliberate ending of a person's life to relieve suffering",
+    "collocations": [
+      "legalise euthanasia",
+      "voluntary euthanasia",
+      "debate on euthanasia"
+    ],
+    "paraphrases": [
+      "assisted dying",
+      "mercy killing"
+    ],
+    "example": "The legalisation of euthanasia remains a deeply divisive ethical issue."
+  },
+  {
+    "id": "hea-063",
+    "topic": "health",
+    "word": "alternative medicine",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "treatments that are not part of conventional science-based medicine, such as acupuncture",
+    "collocations": [
+      "practise alternative medicine",
+      "turn to alternative medicine",
+      "alternative medicine therapies"
+    ],
+    "paraphrases": [
+      "complementary therapies",
+      "non-conventional treatment"
+    ],
+    "example": "Many people turn to alternative medicine when standard treatments have failed."
+  },
+  {
+    "id": "hea-064",
+    "topic": "health",
+    "word": "placebo",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a harmless substance given as medicine to test or produce a psychological effect",
+    "collocations": [
+      "placebo effect",
+      "placebo group",
+      "take a placebo"
+    ],
+    "paraphrases": [
+      "dummy pill",
+      "inactive treatment"
+    ],
+    "example": "Half the participants received a placebo so that researchers could compare outcomes."
+  },
+  {
+    "id": "hea-065",
+    "topic": "health",
+    "word": "paramedic",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a person trained to give emergency medical treatment, usually in an ambulance",
+    "collocations": [
+      "call a paramedic",
+      "trained paramedic",
+      "paramedic crew"
+    ],
+    "paraphrases": [
+      "ambulance medic",
+      "emergency medical worker"
+    ],
+    "example": "The paramedic stabilised the patient at the roadside before transferring her to hospital."
+  },
+  {
+    "id": "hea-066",
+    "topic": "health",
+    "word": "ward",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a room in a hospital with beds for patients",
+    "collocations": [
+      "hospital ward",
+      "maternity ward",
+      "children's ward"
+    ],
+    "paraphrases": [
+      "hospital room",
+      "patients' unit"
+    ],
+    "example": "She spent a week on the surgical ward after the operation."
+  },
+  {
+    "id": "hea-067",
+    "topic": "health",
+    "word": "ailment",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "an illness that is usually not serious",
+    "collocations": [
+      "minor ailment",
+      "common ailment",
+      "treat an ailment"
+    ],
+    "paraphrases": [
+      "minor illness",
+      "complaint"
+    ],
+    "example": "Pharmacists can advise on minor ailments such as coughs and sore throats."
+  },
+  {
+    "id": "hea-068",
+    "topic": "health",
+    "word": "disorder",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a medical condition in which the normal functions of body or mind are disturbed",
+    "collocations": [
+      "eating disorder",
+      "genetic disorder",
+      "sleep disorder"
+    ],
+    "paraphrases": [
+      "medical condition",
+      "disturbance"
+    ],
+    "example": "An eating disorder can affect people of any age and background."
+  },
+  {
+    "id": "hea-069",
+    "topic": "health",
+    "word": "deteriorate",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to become worse over time",
+    "collocations": [
+      "deteriorate rapidly",
+      "health deteriorates",
+      "deteriorating condition"
+    ],
+    "paraphrases": [
+      "worsen",
+      "decline"
+    ],
+    "example": "His condition began to deteriorate after he stopped taking the medication."
+  },
+  {
+    "id": "hea-070",
+    "topic": "health",
+    "word": "recuperate",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "to recover from illness or injury gradually",
+    "collocations": [
+      "recuperate at home",
+      "time to recuperate",
+      "recuperate after surgery"
+    ],
+    "paraphrases": [
+      "recover",
+      "regain strength"
+    ],
+    "example": "Patients need several weeks to recuperate after major surgery."
+  },
+  {
+    "id": "hea-071",
+    "topic": "health",
+    "word": "relapse",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a return of an illness after a period of improvement",
+    "collocations": [
+      "suffer a relapse",
+      "risk of relapse",
+      "prevent relapse"
+    ],
+    "paraphrases": [
+      "setback",
+      "recurrence"
+    ],
+    "example": "Regular check-ups are essential to reduce the risk of relapse."
+  },
+  {
+    "id": "hea-072",
+    "topic": "health",
+    "word": "debilitating",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "making someone very weak and unable to do normal activities",
+    "collocations": [
+      "debilitating illness",
+      "debilitating pain",
+      "debilitating effects"
+    ],
+    "paraphrases": [
+      "crippling",
+      "weakening"
+    ],
+    "example": "Chronic migraines can be so debilitating that sufferers cannot work."
+  },
+  {
+    "id": "hea-073",
+    "topic": "health",
+    "word": "life-threatening",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "likely to cause death",
+    "collocations": [
+      "life-threatening condition",
+      "life-threatening illness",
+      "life-threatening injuries"
+    ],
+    "paraphrases": [
+      "potentially deadly",
+      "extremely serious"
+    ],
+    "example": "Food allergies can sometimes lead to a life-threatening reaction."
+  },
+  {
+    "id": "hea-074",
+    "topic": "health",
+    "word": "fatal",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "causing the death of a person or animal",
+    "collocations": [
+      "fatal disease",
+      "fatal accident",
+      "potentially fatal"
+    ],
+    "paraphrases": [
+      "deadly",
+      "lethal"
+    ],
+    "example": "Without prompt treatment, the infection can prove fatal."
+  },
+  {
+    "id": "hea-075",
+    "topic": "health",
+    "word": "susceptible",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "likely to be affected by a disease or influence",
+    "collocations": [
+      "susceptible to infection",
+      "highly susceptible",
+      "susceptible to illness"
+    ],
+    "paraphrases": [
+      "prone",
+      "at risk"
+    ],
+    "example": "Elderly people are particularly susceptible to pneumonia during the winter months."
+  },
+  {
+    "id": "hea-076",
+    "topic": "health",
+    "word": "prone to",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "likely to suffer from something or to do it",
+    "collocations": [
+      "prone to illness",
+      "accident-prone",
+      "prone to injury"
+    ],
+    "paraphrases": [
+      "liable to",
+      "inclined to"
+    ],
+    "example": "Children who sleep badly are more prone to infections."
+  },
+  {
+    "id": "hea-077",
+    "topic": "health",
+    "word": "under the weather",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "speaking"
+    ],
+    "definition": "feeling slightly ill or not quite well",
+    "collocations": [
+      "feel under the weather",
+      "a bit under the weather",
+      "seem under the weather"
+    ],
+    "paraphrases": [
+      "slightly unwell",
+      "not feeling great"
+    ],
+    "example": "I'm feeling a bit under the weather, so I'm going to stay at home tonight."
+  },
+  {
+    "id": "hea-078",
+    "topic": "health",
+    "word": "health-conscious",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "concerned about staying healthy, especially through diet and exercise",
+    "collocations": [
+      "health-conscious consumers",
+      "health-conscious people",
+      "health-conscious lifestyle"
+    ],
+    "paraphrases": [
+      "concerned about wellbeing",
+      "careful about fitness"
+    ],
+    "example": "Health-conscious shoppers now read nutritional labels before buying anything."
+  },
+  {
+    "id": "hea-079",
+    "topic": "health",
+    "word": "dehydration",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading"
+    ],
+    "definition": "a harmful loss of water from the body",
+    "collocations": [
+      "suffer from dehydration",
+      "prevent dehydration",
+      "severe dehydration"
+    ],
+    "paraphrases": [
+      "lack of fluids",
+      "excessive water loss"
+    ],
+    "example": "Dehydration can cause headaches and dizziness during hot weather."
+  },
+  {
+    "id": "hea-080",
+    "topic": "health",
+    "word": "preventive medicine",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "medical care aimed at stopping diseases before they start",
+    "collocations": [
+      "invest in preventive medicine",
+      "advances in preventive medicine"
+    ],
+    "paraphrases": [
+      "preventative healthcare",
+      "disease prevention"
+    ],
+    "example": "Spending on preventive medicine can reduce the long-term burden on hospitals."
+  }
 ]
