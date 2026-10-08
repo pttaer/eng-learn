@@ -1,0 +1,1761 @@
+[
+ {
+  "id": "fam-001",
+  "topic": "family",
+  "word": "upbringing",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "the way in which a child is cared for and taught by its parents",
+  "collocations": [
+   "strict upbringing",
+   "a sheltered upbringing",
+   "privileged upbringing"
+  ],
+  "paraphrases": [
+   "childhood training",
+   "the way someone is raised"
+  ],
+  "example": "A strict upbringing does not necessarily produce more disciplined adults than a relaxed one."
+ },
+ {
+  "id": "fam-002",
+  "topic": "family",
+  "word": "offspring",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a person's child or children, or the young of an animal",
+  "collocations": [
+   "human offspring",
+   "raise offspring",
+   "their adult offspring"
+  ],
+  "paraphrases": [
+   "children",
+   "descendants"
+  ],
+  "example": "Many parents sacrifice their own leisure time to improve the prospects of their offspring."
+ },
+ {
+  "id": "fam-003",
+  "topic": "family",
+  "word": "sibling",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a brother or sister",
+  "collocations": [
+   "older sibling",
+   "sibling rivalry",
+   "sibling relationship"
+  ],
+  "paraphrases": [
+   "brother or sister",
+   "fellow child"
+  ],
+  "example": "Children with an older sibling often acquire language skills more quickly than only children."
+ },
+ {
+  "id": "fam-004",
+  "topic": "family",
+  "word": "household",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "all the people who live together in one home",
+  "collocations": [
+   "single-person household",
+   "household income",
+   "low-income household"
+  ],
+  "paraphrases": [
+   "family unit",
+   "people living under one roof"
+  ],
+  "example": "The average household now spends a larger share of its income on housing than it did a generation ago."
+ },
+ {
+  "id": "fam-005",
+  "topic": "family",
+  "word": "kinship",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a relationship based on family connection or shared ancestry",
+  "collocations": [
+   "kinship ties",
+   "kinship network",
+   "strong sense of kinship"
+  ],
+  "paraphrases": [
+   "family ties",
+   "blood relationship"
+  ],
+  "example": "In many rural societies, kinship networks provide the main source of support in times of hardship."
+ },
+ {
+  "id": "fam-006",
+  "topic": "family",
+  "word": "dependant",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a person who relies on another, usually a relative, for financial support",
+  "collocations": [
+   "financial dependant",
+   "support dependants",
+   "adult dependant"
+  ],
+  "paraphrases": [
+   "person who relies on others",
+   "financially supported relative"
+  ],
+  "example": "Workers with several dependants often struggle to save money for their own retirement."
+ },
+ {
+  "id": "fam-007",
+  "topic": "family",
+  "word": "guardian",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "a person legally responsible for the care of a child who is not their own",
+  "collocations": [
+   "legal guardian",
+   "appoint a guardian",
+   "parent or guardian"
+  ],
+  "paraphrases": [
+   "carer",
+   "person with legal charge of a child"
+  ],
+  "example": "Applicants under sixteen must obtain written consent from a parent or legal guardian."
+ },
+ {
+  "id": "fam-008",
+  "topic": "family",
+  "word": "lineage",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a person's line of descent from an ancestor",
+  "collocations": [
+   "noble lineage",
+   "trace one's lineage",
+   "family lineage"
+  ],
+  "paraphrases": [
+   "ancestry",
+   "line of descent"
+  ],
+  "example": "Some cultures place great value on tracing a family's lineage back many centuries."
+ },
+ {
+  "id": "fam-009",
+  "topic": "family",
+  "word": "ancestry",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the family and origins from which a person is descended",
+  "collocations": [
+   "trace ancestry",
+   "mixed ancestry",
+   "ancestry research"
+  ],
+  "paraphrases": [
+   "forebears",
+   "family origins"
+  ],
+  "example": "Online databases have made it far easier for ordinary people to research their ancestry."
+ },
+ {
+  "id": "fam-010",
+  "topic": "family",
+  "word": "inheritance",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "money or property received from someone after their death",
+  "collocations": [
+   "receive an inheritance",
+   "inheritance tax",
+   "squander an inheritance"
+  ],
+  "paraphrases": [
+   "bequest",
+   "legacy"
+  ],
+  "example": "Rising property prices mean that inheritance now matters more to young adults than their own salaries."
+ },
+ {
+  "id": "fam-011",
+  "topic": "family",
+  "word": "heir",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a person who has the legal right to receive property or a title after someone dies",
+  "collocations": [
+   "rightful heir",
+   "heir to the throne",
+   "sole heir"
+  ],
+  "paraphrases": [
+   "successor",
+   "legal beneficiary"
+  ],
+  "example": "As the only heir, she took over the management of the family estate at the age of twenty."
+ },
+ {
+  "id": "fam-012",
+  "topic": "family",
+  "word": "bereavement",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the state of having lost a close relative or friend through death",
+  "collocations": [
+   "suffer a bereavement",
+   "bereavement leave",
+   "bereavement counselling"
+  ],
+  "paraphrases": [
+   "loss of a loved one",
+   "death in the family"
+  ],
+  "example": "Employers who grant paid time off after a bereavement tend to retain more loyal staff."
+ },
+ {
+  "id": "fam-013",
+  "topic": "family",
+  "word": "widowed",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "having lost a husband or wife through death and not remarried",
+  "collocations": [
+   "recently widowed",
+   "widowed mother",
+   "become widowed"
+  ],
+  "paraphrases": [
+   "having lost a spouse",
+   "bereaved of a partner"
+  ],
+  "example": "Widowed pensioners are often at greater risk of social isolation than married couples."
+ },
+ {
+  "id": "fam-014",
+  "topic": "family",
+  "word": "cohabit",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to live together as partners without being married",
+  "collocations": [
+   "cohabit before marriage",
+   "choose to cohabit",
+   "couples who cohabit"
+  ],
+  "paraphrases": [
+   "live together",
+   "share a home as a couple"
+  ],
+  "example": "A growing number of couples cohabit for several years before deciding to marry."
+ },
+ {
+  "id": "fam-015",
+  "topic": "family",
+  "word": "cohabitation",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing"
+  ],
+  "definition": "the practice of living together as a couple without being married",
+  "collocations": [
+   "unmarried cohabitation",
+   "rates of cohabitation",
+   "cohabitation before marriage"
+  ],
+  "paraphrases": [
+   "living together",
+   "unmarried partnership"
+  ],
+  "example": "Cohabitation has become widely accepted in many countries over the past fifty years."
+ },
+ {
+  "id": "fam-016",
+  "topic": "family",
+  "word": "divorce",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "the legal ending of a marriage",
+  "collocations": [
+   "divorce rate",
+   "file for divorce",
+   "messy divorce"
+  ],
+  "paraphrases": [
+   "marital break-up",
+   "dissolution of marriage"
+  ],
+  "example": "The divorce rate has fallen in several countries as couples tend to marry later."
+ },
+ {
+  "id": "fam-017",
+  "topic": "family",
+  "word": "separation",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a period or arrangement in which a couple live apart",
+  "collocations": [
+   "trial separation",
+   "legal separation",
+   "separation of parents"
+  ],
+  "paraphrases": [
+   "break-up",
+   "living apart"
+  ],
+  "example": "The separation of parents can affect a child's confidence, though the effects are often short-lived."
+ },
+ {
+  "id": "fam-018",
+  "topic": "family",
+  "word": "custody",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the legal right to look after a child, especially after parents separate",
+  "collocations": [
+   "joint custody",
+   "gain custody",
+   "custody battle"
+  ],
+  "paraphrases": [
+   "legal care of a child",
+   "guardianship"
+  ],
+  "example": "Courts usually grant joint custody unless there is evidence that one parent is unfit."
+ },
+ {
+  "id": "fam-019",
+  "topic": "family",
+  "word": "marital",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "relating to marriage or to the relationship between husband and wife",
+  "collocations": [
+   "marital status",
+   "marital breakdown",
+   "marital satisfaction"
+  ],
+  "paraphrases": [
+   "relating to wedlock",
+   "matrimonial"
+  ],
+  "example": "Research suggests that financial stress is a leading cause of marital breakdown."
+ },
+ {
+  "id": "fam-020",
+  "topic": "family",
+  "word": "matrimony",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the state of being married, used in formal contexts",
+  "collocations": [
+   "holy matrimony",
+   "enter into matrimony",
+   "bonds of matrimony"
+  ],
+  "paraphrases": [
+   "marriage",
+   "wedlock"
+  ],
+  "example": "Traditional ceremonies often emphasise the permanence of the vows taken in matrimony."
+ },
+ {
+  "id": "fam-021",
+  "topic": "family",
+  "word": "spouse",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "a husband or wife",
+  "collocations": [
+   "surviving spouse",
+   "spouse visa",
+   "choose a spouse"
+  ],
+  "paraphrases": [
+   "husband or wife",
+   "marriage partner"
+  ],
+  "example": "Many countries now allow the spouse of a skilled migrant to work without restriction."
+ },
+ {
+  "id": "fam-022",
+  "topic": "family",
+  "word": "nurture",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to care for and encourage the growth or development of someone",
+  "collocations": [
+   "nurture talent",
+   "nurture a child",
+   "nurture creativity"
+  ],
+  "paraphrases": [
+   "foster",
+   "bring on"
+  ],
+  "example": "Parents who nurture curiosity early in life often raise children who enjoy learning independently."
+ },
+ {
+  "id": "fam-023",
+  "topic": "family",
+  "word": "foster",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to encourage the development of something, or to care for a child who is not one's own",
+  "collocations": [
+   "foster independence",
+   "foster a sense of belonging",
+   "foster a child"
+  ],
+  "paraphrases": [
+   "promote",
+   "cultivate"
+  ],
+  "example": "Shared mealtimes foster a sense of belonging among children and teenagers."
+ },
+ {
+  "id": "fam-024",
+  "topic": "family",
+  "word": "adopt",
+  "pos": "verb",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "to legally take another person's child into one's own family",
+  "collocations": [
+   "adopt a child",
+   "adopt a baby",
+   "adopt from abroad"
+  ],
+  "paraphrases": [
+   "take in as one's own",
+   "legally raise as one's child"
+  ],
+  "example": "Couples who cannot conceive often choose to adopt a child from another country."
+ },
+ {
+  "id": "fam-025",
+  "topic": "family",
+  "word": "adoption",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the legal process of taking another person's child into one's family",
+  "collocations": [
+   "open adoption",
+   "put up for adoption",
+   "adoption agency"
+  ],
+  "paraphrases": [
+   "legal fostering of a child",
+   "taking in a child"
+  ],
+  "example": "Adoption can give vulnerable children a stable home, although the process is often slow."
+ },
+ {
+  "id": "fam-026",
+  "topic": "family",
+  "word": "bond",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a close emotional connection between people",
+  "collocations": [
+   "strong bond",
+   "parent-child bond",
+   "forge a bond"
+  ],
+  "paraphrases": [
+   "emotional tie",
+   "close attachment"
+  ],
+  "example": "A strong bond between a mother and her newborn is thought to support healthy development."
+ },
+ {
+  "id": "fam-027",
+  "topic": "family",
+  "word": "parenting",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "the activity of raising and caring for children",
+  "collocations": [
+   "parenting style",
+   "positive parenting",
+   "parenting skills"
+  ],
+  "paraphrases": [
+   "child-rearing",
+   "raising children"
+  ],
+  "example": "Different parenting styles can lead to quite different outcomes in teenage behaviour."
+ },
+ {
+  "id": "fam-028",
+  "topic": "family",
+  "word": "authoritative",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "describing a parenting style that combines clear rules with warmth and support",
+  "collocations": [
+   "authoritative parenting",
+   "authoritative style",
+   "authoritative approach"
+  ],
+  "paraphrases": [
+   "firm but supportive",
+   "demanding yet warm"
+  ],
+  "example": "Studies often link authoritative parenting with higher confidence and better social skills."
+ },
+ {
+  "id": "fam-029",
+  "topic": "family",
+  "word": "permissive",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading",
+   "speaking"
+  ],
+  "definition": "allowing a great deal of freedom, with few rules or restrictions",
+  "collocations": [
+   "permissive parents",
+   "permissive attitude",
+   "permissive society"
+  ],
+  "paraphrases": [
+   "lenient",
+   "liberal"
+  ],
+  "example": "Critics argue that permissive parents may struggle to teach children self-control."
+ },
+ {
+  "id": "fam-030",
+  "topic": "family",
+  "word": "overprotective",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading",
+   "speaking"
+  ],
+  "definition": "trying too hard to protect someone from any risk or difficulty",
+  "collocations": [
+   "overprotective parents",
+   "overprotective mother",
+   "overprotective attitude"
+  ],
+  "paraphrases": [
+   "over-cautious",
+   "smothering"
+  ],
+  "example": "Overprotective parents may unintentionally stop their children from developing resilience."
+ },
+ {
+  "id": "fam-031",
+  "topic": "family",
+  "word": "disciplinarian",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a person who believes in strict obedience and enforces rules firmly",
+  "collocations": [
+   "strict disciplinarian",
+   "stern disciplinarian",
+   "a firm disciplinarian"
+  ],
+  "paraphrases": [
+   "strict enforcer",
+   "authoritarian figure"
+  ],
+  "example": "His father was a stern disciplinarian who expected silence at the dinner table."
+ },
+ {
+  "id": "fam-032",
+  "topic": "family",
+  "word": "role model",
+  "pos": "phrase",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "a person whose behaviour is copied by others, especially young people",
+  "collocations": [
+   "positive role model",
+   "act as a role model",
+   "role model for children"
+  ],
+  "paraphrases": [
+   "example to follow",
+   "person to look up to"
+  ],
+  "example": "Parents are often the first role model a child encounters in daily life."
+ },
+ {
+  "id": "fam-033",
+  "topic": "family",
+  "word": "generation gap",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "the difference in attitudes and values between older and younger people",
+  "collocations": [
+   "bridge the generation gap",
+   "widen the generation gap",
+   "a generation gap"
+  ],
+  "paraphrases": [
+   "difference between age groups",
+   "divide between old and young"
+  ],
+  "example": "Technology has widened the generation gap, as grandparents struggle with the devices teenagers use daily."
+ },
+ {
+  "id": "fam-034",
+  "topic": "family",
+  "word": "intergenerational",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "involving or affecting different age groups within a family or society",
+  "collocations": [
+   "intergenerational conflict",
+   "intergenerational contact",
+   "intergenerational support"
+  ],
+  "paraphrases": [
+   "across age groups",
+   "between generations"
+  ],
+  "example": "Intergenerational projects that pair teenagers with pensioners can reduce stereotypes on both sides."
+ },
+ {
+  "id": "fam-035",
+  "topic": "family",
+  "word": "extended family",
+  "pos": "phrase",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a family group that includes grandparents, aunts, uncles and cousins as well as parents and children",
+  "collocations": [
+   "live with the extended family",
+   "extended family network",
+   "support from the extended family"
+  ],
+  "paraphrases": [
+   "wider family",
+   "relatives beyond the parents and children"
+  ],
+  "example": "In an extended family, grandparents often share the responsibility of looking after young children."
+ },
+ {
+  "id": "fam-036",
+  "topic": "family",
+  "word": "nuclear family",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a family unit consisting only of two parents and their children",
+  "collocations": [
+   "traditional nuclear family",
+   "the nuclear family model",
+   "decline of the nuclear family"
+  ],
+  "paraphrases": [
+   "parents and children living together",
+   "two-generation household"
+  ],
+  "example": "Urbanisation has encouraged the spread of the nuclear family in places where extended households once dominated."
+ },
+ {
+  "id": "fam-037",
+  "topic": "family",
+  "word": "single-parent",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "describing a family headed by only one mother or father",
+  "collocations": [
+   "single-parent family",
+   "single-parent household",
+   "single-parent mother"
+  ],
+  "paraphrases": [
+   "lone-parent",
+   "headed by one parent"
+  ],
+  "example": "Single-parent households are more likely to rely on affordable childcare to stay in employment."
+ },
+ {
+  "id": "fam-038",
+  "topic": "family",
+  "word": "childcare",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the care of children, especially while their parents are at work",
+  "collocations": [
+   "affordable childcare",
+   "childcare costs",
+   "childcare provision"
+  ],
+  "paraphrases": [
+   "looking after children",
+   "minding of young children"
+  ],
+  "example": "The high cost of childcare discourages some mothers from returning to full-time employment."
+ },
+ {
+  "id": "fam-039",
+  "topic": "family",
+  "word": "breadwinner",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the member of a family who earns the money to support the others",
+  "collocations": [
+   "main breadwinner",
+   "sole breadwinner",
+   "family breadwinner"
+  ],
+  "paraphrases": [
+   "chief earner",
+   "principal provider"
+  ],
+  "example": "In many households, women have become the main breadwinner as male employment has declined."
+ },
+ {
+  "id": "fam-040",
+  "topic": "family",
+  "word": "homemaker",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a person who manages a home and family rather than working outside it",
+  "collocations": [
+   "full-time homemaker",
+   "role of the homemaker",
+   "become a homemaker"
+  ],
+  "paraphrases": [
+   "housewife or househusband",
+   "person who runs the household"
+  ],
+  "example": "The unpaid labour of the homemaker is rarely reflected in national economic statistics."
+ },
+ {
+  "id": "fam-041",
+  "topic": "family",
+  "word": "stay-at-home",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "describing a parent who looks after the children and house instead of taking paid work",
+  "collocations": [
+   "stay-at-home dad",
+   "stay-at-home mother",
+   "stay-at-home parent"
+  ],
+  "paraphrases": [
+   "full-time carer at home",
+   "non-working parent"
+  ],
+  "example": "The number of stay-at-home fathers has risen as couples share responsibilities more evenly."
+ },
+ {
+  "id": "fam-042",
+  "topic": "family",
+  "word": "dual-income",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "describing a household in which both partners earn a salary",
+  "collocations": [
+   "dual-income couples",
+   "dual-income household",
+   "dual-income family"
+  ],
+  "paraphrases": [
+   "two-earner",
+   "with two salaries"
+  ],
+  "example": "Dual-income couples can afford larger mortgages, which may push up property prices."
+ },
+ {
+  "id": "fam-043",
+  "topic": "family",
+  "word": "household chores",
+  "pos": "phrase",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "the routine tasks needed to keep a home clean and tidy",
+  "collocations": [
+   "share household chores",
+   "do household chores",
+   "unequal division of household chores"
+  ],
+  "paraphrases": [
+   "housework",
+   "domestic tasks"
+  ],
+  "example": "Women still perform a larger share of household chores in most developed countries."
+ },
+ {
+  "id": "fam-044",
+  "topic": "family",
+  "word": "caregiver",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a person who looks after someone who is young, old or ill",
+  "collocations": [
+   "primary caregiver",
+   "family caregiver",
+   "unpaid caregiver"
+  ],
+  "paraphrases": [
+   "carer",
+   "person providing care"
+  ],
+  "example": "Unpaid family caregivers save governments billions each year in social-care costs."
+ },
+ {
+  "id": "fam-045",
+  "topic": "family",
+  "word": "filial",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "relating to the duties or feelings of a son or daughter towards their parents",
+  "collocations": [
+   "filial duty",
+   "filial piety",
+   "filial responsibility"
+  ],
+  "paraphrases": [
+   "of a child towards parents",
+   "owed by children to parents"
+  ],
+  "example": "In some societies, a strong sense of filial duty means adult children expect to support ageing parents."
+ },
+ {
+  "id": "fam-046",
+  "topic": "family",
+  "word": "familial",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "relating to or typical of a family",
+  "collocations": [
+   "familial ties",
+   "familial support",
+   "familial obligations"
+  ],
+  "paraphrases": [
+   "of the family",
+   "family-related"
+  ],
+  "example": "Familial obligations can limit the career choices of young adults in close-knit communities."
+ },
+ {
+  "id": "fam-047",
+  "topic": "family",
+  "word": "sibling rivalry",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "competition or jealousy between brothers and sisters",
+  "collocations": [
+   "intense sibling rivalry",
+   "sibling rivalry between brothers",
+   "cause sibling rivalry"
+  ],
+  "paraphrases": [
+   "jealousy between brothers and sisters",
+   "competition among siblings"
+  ],
+  "example": "Giving each child individual attention can reduce sibling rivalry in the home."
+ },
+ {
+  "id": "fam-048",
+  "topic": "family",
+  "word": "toddler",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a young child who is just learning to walk",
+  "collocations": [
+   "energetic toddler",
+   "toddler group",
+   "parents of a toddler"
+  ],
+  "paraphrases": [
+   "infant",
+   "very young child"
+  ],
+  "example": "A toddler begins to understand rules only when adults apply them consistently."
+ },
+ {
+  "id": "fam-049",
+  "topic": "family",
+  "word": "adolescence",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the period of life between childhood and adulthood",
+  "collocations": [
+   "early adolescence",
+   "during adolescence",
+   "turbulent adolescence"
+  ],
+  "paraphrases": [
+   "teenage years",
+   "youth"
+  ],
+  "example": "Peer influence tends to peak during adolescence, when teenagers seek approval from friends."
+ },
+ {
+  "id": "fam-050",
+  "topic": "family",
+  "word": "adolescent",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a young person who is developing from a child into an adult",
+  "collocations": [
+   "troubled adolescent",
+   "adolescent behaviour",
+   "adolescent boys"
+  ],
+  "paraphrases": [
+   "teenager",
+   "young person"
+  ],
+  "example": "Every adolescent needs space to experiment with independence while still receiving guidance."
+ },
+ {
+  "id": "fam-051",
+  "topic": "family",
+  "word": "formative",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "having an important and lasting influence on a person's development",
+  "collocations": [
+   "formative years",
+   "formative experience",
+   "formative influence"
+  ],
+  "paraphrases": [
+   "influential in development",
+   "shaping character"
+  ],
+  "example": "The formative years of childhood shape attitudes towards money, work and relationships."
+ },
+ {
+  "id": "fam-052",
+  "topic": "family",
+  "word": "dependency",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a state of relying on someone or something else for support",
+  "collocations": [
+   "financial dependency",
+   "dependency ratio",
+   "economic dependency"
+  ],
+  "paraphrases": [
+   "reliance",
+   "need for support"
+  ],
+  "example": "High levels of financial dependency among young adults reflect the cost of housing and study."
+ },
+ {
+  "id": "fam-053",
+  "topic": "family",
+  "word": "solidarity",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "unity and mutual support among a group of people",
+  "collocations": [
+   "show solidarity",
+   "community solidarity",
+   "sense of solidarity"
+  ],
+  "paraphrases": [
+   "unity",
+   "mutual support"
+  ],
+  "example": "Natural disasters often strengthen solidarity between neighbours who had previously barely spoken."
+ },
+ {
+  "id": "fam-054",
+  "topic": "family",
+  "word": "cohesion",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the state of a group being united and working together",
+  "collocations": [
+   "social cohesion",
+   "community cohesion",
+   "promote cohesion"
+  ],
+  "paraphrases": [
+   "unity",
+   "togetherness"
+  ],
+  "example": "Shared public spaces can promote social cohesion in diverse communities."
+ },
+ {
+  "id": "fam-055",
+  "topic": "family",
+  "word": "social fabric",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the network of relationships and shared values that holds a society together",
+  "collocations": [
+   "erode the social fabric",
+   "strengthen the social fabric",
+   "the social fabric of a community"
+  ],
+  "paraphrases": [
+   "fabric of society",
+   "structure of social bonds"
+  ],
+  "example": "Constant relocation for work may weaken the social fabric of small towns."
+ },
+ {
+  "id": "fam-056",
+  "topic": "family",
+  "word": "norm",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a standard of behaviour considered typical or acceptable in a society",
+  "collocations": [
+   "social norms",
+   "cultural norm",
+   "challenge the norm"
+  ],
+  "paraphrases": [
+   "accepted standard",
+   "usual pattern"
+  ],
+  "example": "Attitudes to arranged marriage vary, but in some regions it remains the norm."
+ },
+ {
+  "id": "fam-057",
+  "topic": "family",
+  "word": "taboo",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a social custom that forbids discussion or practice of a subject",
+  "collocations": [
+   "break a taboo",
+   "social taboo",
+   "cultural taboo"
+  ],
+  "paraphrases": [
+   "forbidden subject",
+   "prohibition"
+  ],
+  "example": "Discussing mental illness was once a taboo, but openness has grown considerably."
+ },
+ {
+  "id": "fam-058",
+  "topic": "family",
+  "word": "stigma",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a strong feeling of disapproval that most people in a society have about something",
+  "collocations": [
+   "social stigma",
+   "remove the stigma",
+   "stigma attached to"
+  ],
+  "paraphrases": [
+   "social disgrace",
+   "negative label"
+  ],
+  "example": "There remains a stigma attached to single motherhood in some conservative communities."
+ },
+ {
+  "id": "fam-059",
+  "topic": "family",
+  "word": "stereotype",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "a fixed, oversimplified idea about a type of person or thing",
+  "collocations": [
+   "gender stereotype",
+   "challenge stereotypes",
+   "reinforce a stereotype"
+  ],
+  "paraphrases": [
+   "oversimplified image",
+   "fixed assumption"
+  ],
+  "example": "Children's books that show only women cooking reinforce a damaging stereotype."
+ },
+ {
+  "id": "fam-060",
+  "topic": "family",
+  "word": "conform",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to behave in the way that most people in a group or society expect",
+  "collocations": [
+   "conform to expectations",
+   "pressure to conform",
+   "conform to social norms"
+  ],
+  "paraphrases": [
+   "follow accepted standards",
+   "fall into line"
+  ],
+  "example": "Teenagers often feel pressure to conform to the habits of their friends."
+ },
+ {
+  "id": "fam-061",
+  "topic": "family",
+  "word": "individualism",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the belief that personal freedom and independence matter more than group needs",
+  "collocations": [
+   "western individualism",
+   "rise of individualism",
+   "rampant individualism"
+  ],
+  "paraphrases": [
+   "self-reliance",
+   "emphasis on personal autonomy"
+  ],
+  "example": "The growth of individualism has led many people to put personal goals ahead of family duty."
+ },
+ {
+  "id": "fam-062",
+  "topic": "family",
+  "word": "collectivism",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the belief that the needs of the group come before those of the individual",
+  "collocations": [
+   "culture of collectivism",
+   "East Asian collectivism",
+   "collectivism and individualism"
+  ],
+  "paraphrases": [
+   "group-first outlook",
+   "emphasis on shared interests"
+  ],
+  "example": "In societies shaped by collectivism, major decisions are rarely made by one person alone."
+ },
+ {
+  "id": "fam-063",
+  "topic": "family",
+  "word": "marginalised",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "treated as unimportant or pushed to the edge of society",
+  "collocations": [
+   "marginalised groups",
+   "feel marginalised",
+   "marginalised communities"
+  ],
+  "paraphrases": [
+   "excluded",
+   "sidelined"
+  ],
+  "example": "Marginalised groups often lack access to the networks that bring job opportunities."
+ },
+ {
+  "id": "fam-064",
+  "topic": "family",
+  "word": "vulnerable",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "easily harmed or in need of special protection",
+  "collocations": [
+   "vulnerable groups",
+   "particularly vulnerable",
+   "vulnerable to exploitation"
+  ],
+  "paraphrases": [
+   "at risk",
+   "defenceless"
+  ],
+  "example": "Children and the elderly are especially vulnerable when family support breaks down."
+ },
+ {
+  "id": "fam-065",
+  "topic": "family",
+  "word": "disadvantaged",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "lacking the social or economic conditions needed for a fair chance in life",
+  "collocations": [
+   "disadvantaged background",
+   "disadvantaged families",
+   "socially disadvantaged"
+  ],
+  "paraphrases": [
+   "underprivileged",
+   "deprived"
+  ],
+  "example": "Children from disadvantaged backgrounds often enter school already behind their classmates."
+ },
+ {
+  "id": "fam-066",
+  "topic": "family",
+  "word": "deprivation",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a lack of the basic things that are needed for a decent life",
+  "collocations": [
+   "social deprivation",
+   "child deprivation",
+   "economic deprivation"
+  ],
+  "paraphrases": [
+   "hardship",
+   "lack of necessities"
+  ],
+  "example": "Persistent deprivation in early life can have lasting effects on achievement."
+ },
+ {
+  "id": "fam-067",
+  "topic": "family",
+  "word": "disparity",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a noticeable and often unfair difference between groups",
+  "collocations": [
+   "wide disparity",
+   "income disparity",
+   "disparity between rich and poor"
+  ],
+  "paraphrases": [
+   "inequality",
+   "gap"
+  ],
+  "example": "The disparity between rural and urban household incomes has widened over the past decade."
+ },
+ {
+  "id": "fam-068",
+  "topic": "family",
+  "word": "volunteer",
+  "pos": "verb",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "to offer to do something without being paid for it",
+  "collocations": [
+   "volunteer for a charity",
+   "volunteer to help",
+   "volunteer at weekends"
+  ],
+  "paraphrases": [
+   "offer one's services",
+   "give time freely"
+  ],
+  "example": "Retired residents volunteer at the community centre to teach young people practical skills."
+ },
+ {
+  "id": "fam-069",
+  "topic": "family",
+  "word": "philanthropy",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the giving of money or time to help others, especially on a large scale",
+  "collocations": [
+   "corporate philanthropy",
+   "private philanthropy",
+   "philanthropy and charity"
+  ],
+  "paraphrases": [
+   "charitable giving",
+   "generous donation"
+  ],
+  "example": "Private philanthropy funds many projects that governments lack the resources to support."
+ },
+ {
+  "id": "fam-070",
+  "topic": "family",
+  "word": "charitable",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "relating to the giving of help to people in need",
+  "collocations": [
+   "charitable donations",
+   "charitable organisation",
+   "charitable work"
+  ],
+  "paraphrases": [
+   "benevolent",
+   "relating to charity"
+  ],
+  "example": "Charitable donations tend to rise sharply after widely reported emergencies."
+ },
+ {
+  "id": "fam-071",
+  "topic": "family",
+  "word": "acquaintance",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "a person one knows slightly but not well",
+  "collocations": [
+   "casual acquaintance",
+   "mutual acquaintance",
+   "circle of acquaintances"
+  ],
+  "paraphrases": [
+   "someone one knows slightly",
+   "passing contact"
+  ],
+  "example": "Online platforms make it easy to keep in touch with every casual acquaintance one has ever met."
+ },
+ {
+  "id": "fam-072",
+  "topic": "family",
+  "word": "companionship",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "the pleasant feeling of having someone with you who is a friend",
+  "collocations": [
+   "offer companionship",
+   "human companionship",
+   "provide companionship"
+  ],
+  "paraphrases": [
+   "company",
+   "fellowship"
+  ],
+  "example": "Pets can provide companionship for people who live alone."
+ },
+ {
+  "id": "fam-073",
+  "topic": "family",
+  "word": "isolation",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the state of being alone or separated from other people",
+  "collocations": [
+   "social isolation",
+   "feelings of isolation",
+   "loneliness and isolation"
+  ],
+  "paraphrases": [
+   "seclusion",
+   "separation from others"
+  ],
+  "example": "Social isolation among elderly residents has become a serious concern for local councils."
+ },
+ {
+  "id": "fam-074",
+  "topic": "family",
+  "word": "peer pressure",
+  "pos": "phrase",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "the influence that people of the same age have on one another's behaviour",
+  "collocations": [
+   "succumb to peer pressure",
+   "resist peer pressure",
+   "under peer pressure"
+  ],
+  "paraphrases": [
+   "influence of friends",
+   "pressure from contemporaries"
+  ],
+  "example": "Many teenagers start unhealthy habits because they cannot resist peer pressure."
+ },
+ {
+  "id": "fam-075",
+  "topic": "family",
+  "word": "rite of passage",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a ceremony or event marking an important stage in a person's life",
+  "collocations": [
+   "traditional rite of passage",
+   "a rite of passage",
+   "a modern rite of passage"
+  ],
+  "paraphrases": [
+   "milestone ritual",
+   "ceremonial transition"
+  ],
+  "example": "In many cultures, a large celebration at eighteen is regarded as a rite of passage."
+ },
+ {
+  "id": "fam-076",
+  "topic": "family",
+  "word": "come of age",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking"
+  ],
+  "definition": "to reach the age at which one is legally an adult",
+  "collocations": [
+   "come of age in",
+   "the year they came of age",
+   "children who come of age"
+  ],
+  "paraphrases": [
+   "reach adulthood",
+   "become a legal adult"
+  ],
+  "example": "Those who come of age during an economic crisis often delay marriage and parenthood."
+ },
+ {
+  "id": "fam-077",
+  "topic": "family",
+  "word": "empty nest",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the situation of parents whose children have grown up and left home",
+  "collocations": [
+   "empty nest syndrome",
+   "empty nest years",
+   "become empty nesters"
+  ],
+  "paraphrases": [
+   "household after children leave",
+   "parents whose children have moved out"
+  ],
+  "example": "Parents facing an empty nest often rediscover hobbies and friendships they once neglected."
+ },
+ {
+  "id": "fam-078",
+  "topic": "family",
+  "word": "gender roles",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the behaviour and duties that a society expects of men and women",
+  "collocations": [
+   "traditional gender roles",
+   "challenge gender roles",
+   "shifting gender roles"
+  ],
+  "paraphrases": [
+   "expected male and female duties",
+   "sex-based social expectations"
+  ],
+  "example": "Shifting gender roles have encouraged more fathers to take parental leave."
+ },
+ {
+  "id": "fam-079",
+  "topic": "family",
+  "word": "social mobility",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the ability of people to move between social or economic classes",
+  "collocations": [
+   "upward social mobility",
+   "limit social mobility",
+   "low social mobility"
+  ],
+  "paraphrases": [
+   "movement between classes",
+   "chance to climb the social ladder"
+  ],
+  "example": "Access to good schooling remains the most powerful driver of social mobility."
+ }
+]

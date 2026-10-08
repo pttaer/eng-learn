@@ -1,0 +1,1746 @@
+[
+ {
+  "id": "urb-001",
+  "topic": "urban",
+  "word": "gentrification",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the process by which a poorer area becomes wealthier as better-off residents move in",
+  "collocations": [
+   "rapid gentrification",
+   "fuel gentrification",
+   "resist gentrification"
+  ],
+  "paraphrases": [
+   "urban renewal that pushes out locals",
+   "the upgrading of run-down districts"
+  ],
+  "example": "Gentrification often raises local property values while forcing long-standing residents to leave."
+ },
+ {
+  "id": "urb-002",
+  "topic": "urban",
+  "word": "suburb",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "a residential area on the edge of a city",
+  "collocations": [
+   "a quiet suburb",
+   "an affluent suburb",
+   "a leafy suburb"
+  ],
+  "paraphrases": [
+   "an outlying district",
+   "a residential area outside the centre"
+  ],
+  "example": "Many families move to a suburb in search of larger homes and safer streets."
+ },
+ {
+  "id": "urb-003",
+  "topic": "urban",
+  "word": "urbanisation",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the growth of towns and cities as more people live and work in them",
+  "collocations": [
+   "rapid urbanisation",
+   "the pace of urbanisation",
+   "accelerating urbanisation"
+  ],
+  "paraphrases": [
+   "the spread of city living",
+   "the shift to cities"
+  ],
+  "example": "Rapid urbanisation has stretched the water and sewage systems of many developing cities."
+ },
+ {
+  "id": "urb-004",
+  "topic": "urban",
+  "word": "affordable housing",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "homes priced so that people on ordinary incomes can buy or rent them",
+  "collocations": [
+   "build affordable housing",
+   "a shortage of affordable housing",
+   "provide affordable housing"
+  ],
+  "paraphrases": [
+   "low-cost homes",
+   "reasonably priced accommodation"
+  ],
+  "example": "Governments should invest in affordable housing so that essential workers can live near their jobs."
+ },
+ {
+  "id": "urb-005",
+  "topic": "urban",
+  "word": "slum",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "reading",
+   "writing"
+  ],
+  "definition": "a heavily built-up area of poor, overcrowded housing with few basic services",
+  "collocations": [
+   "a sprawling slum",
+   "slum dwellers",
+   "clear a slum"
+  ],
+  "paraphrases": [
+   "a shanty town",
+   "an informal settlement"
+  ],
+  "example": "Millions of children grow up in a slum without access to clean water or proper schools."
+ },
+ {
+  "id": "urb-006",
+  "topic": "urban",
+  "word": "skyscraper",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "a very tall building with many floors",
+  "collocations": [
+   "a gleaming skyscraper",
+   "build a skyscraper",
+   "towering skyscrapers"
+  ],
+  "paraphrases": [
+   "a high-rise tower",
+   "a tall office block"
+  ],
+  "example": "The skyline of the financial district is dominated by a cluster of glass skyscrapers."
+ },
+ {
+  "id": "urb-007",
+  "topic": "urban",
+  "word": "infrastructure",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the basic systems and structures a city needs, such as roads, pipes and power lines",
+  "collocations": [
+   "crumbling infrastructure",
+   "invest in infrastructure",
+   "public infrastructure"
+  ],
+  "paraphrases": [
+   "basic facilities and services",
+   "the underlying physical networks"
+  ],
+  "example": "Ageing infrastructure makes it difficult for older cities to cope with sudden growth."
+ },
+ {
+  "id": "urb-008",
+  "topic": "urban",
+  "word": "amenity",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a useful or pleasant facility provided in a place, such as a park or library",
+  "collocations": [
+   "local amenities",
+   "a public amenity",
+   "amenities such as parks"
+  ],
+  "paraphrases": [
+   "a facility",
+   "a convenience for residents"
+  ],
+  "example": "Residents of the new district enjoy easy access to local amenities including a library and a swimming pool."
+ },
+ {
+  "id": "urb-009",
+  "topic": "urban",
+  "word": "commuter",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a person who travels regularly between home and work",
+  "collocations": [
+   "a daily commuter",
+   "commuter town",
+   "rush-hour commuters"
+  ],
+  "paraphrases": [
+   "a daily traveller to work",
+   "a person who travels to the office"
+  ],
+  "example": "Each morning thousands of commuters arrive from the surrounding villages."
+ },
+ {
+  "id": "urb-010",
+  "topic": "urban",
+  "word": "residential",
+  "pos": "adjective",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "used mainly for people to live in rather than for business",
+  "collocations": [
+   "a residential area",
+   "residential property",
+   "residential street"
+  ],
+  "paraphrases": [
+   "used for housing",
+   "home-based rather than commercial"
+  ],
+  "example": "Planners kept the industrial units away from the residential streets to reduce noise."
+ },
+ {
+  "id": "urb-011",
+  "topic": "urban",
+  "word": "tenant",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a person who pays rent to use a house or flat owned by someone else",
+  "collocations": [
+   "a long-term tenant",
+   "protect tenants",
+   "evict a tenant"
+  ],
+  "paraphrases": [
+   "a renter",
+   "an occupant who pays rent"
+  ],
+  "example": "A tenant usually has few rights if the building is sold to a new owner."
+ },
+ {
+  "id": "urb-012",
+  "topic": "urban",
+  "word": "landlord",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a person who owns property and rents it to others",
+  "collocations": [
+   "a private landlord",
+   "a landlord raises the rent",
+   "a buy-to-let landlord"
+  ],
+  "paraphrases": [
+   "a property owner who lets homes",
+   "a lessor"
+  ],
+  "example": "The landlord agreed to repair the heating system before the new tenants moved in."
+ },
+ {
+  "id": "urb-013",
+  "topic": "urban",
+  "word": "mortgage",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a loan taken out to buy a home, repaid over many years",
+  "collocations": [
+   "take out a mortgage",
+   "pay off a mortgage",
+   "mortgage repayments"
+  ],
+  "paraphrases": [
+   "a home loan",
+   "a housing loan"
+  ],
+  "example": "Rising interest rates have made it harder for young couples to keep up with their mortgage."
+ },
+ {
+  "id": "urb-014",
+  "topic": "urban",
+  "word": "rental",
+  "pos": "adjective",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "relating to the renting of property or goods",
+  "collocations": [
+   "rental market",
+   "rental income",
+   "rental costs"
+  ],
+  "paraphrases": [
+   "relating to leasing",
+   "concerning hired accommodation"
+  ],
+  "example": "The rental market in the capital is so competitive that flats are often taken within a day."
+ },
+ {
+  "id": "urb-015",
+  "topic": "urban",
+  "word": "regeneration",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the improvement of a run-down area through new building and investment",
+  "collocations": [
+   "urban regeneration",
+   "a regeneration project",
+   "economic regeneration"
+  ],
+  "paraphrases": [
+   "renewal of a neglected area",
+   "revitalisation"
+  ],
+  "example": "The regeneration of the old docks turned a derelict site into a thriving cultural quarter."
+ },
+ {
+  "id": "urb-016",
+  "topic": "urban",
+  "word": "redevelopment",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the process of rebuilding or reorganising an area for new uses",
+  "collocations": [
+   "a redevelopment scheme",
+   "site redevelopment",
+   "large-scale redevelopment"
+  ],
+  "paraphrases": [
+   "rebuilding",
+   "reconstruction of a site"
+  ],
+  "example": "Critics argue that the redevelopment of the waterfront benefits investors rather than local people."
+ },
+ {
+  "id": "urb-017",
+  "topic": "urban",
+  "word": "inner city",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "the central part of a large city, often associated with social and economic problems",
+  "collocations": [
+   "inner-city schools",
+   "an inner-city area",
+   "inner-city decline"
+  ],
+  "paraphrases": [
+   "the older central districts",
+   "the core of a city"
+  ],
+  "example": "Investment in inner-city housing has helped to revive neighbourhoods that were once in decline."
+ },
+ {
+  "id": "urb-018",
+  "topic": "urban",
+  "word": "sprawl",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the uncontrolled spread of a city into surrounding countryside",
+  "collocations": [
+   "urban sprawl",
+   "suburban sprawl",
+   "curb sprawl"
+  ],
+  "paraphrases": [
+   "uncontrolled outward expansion",
+   "the unplanned spread of a city"
+  ],
+  "example": "Urban sprawl swallows farmland and forces residents to depend on cars for every journey."
+ },
+ {
+  "id": "urb-019",
+  "topic": "urban",
+  "word": "conurbation",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "reading"
+  ],
+  "definition": "a large urban area formed when several towns and cities have grown together",
+  "collocations": [
+   "a vast conurbation",
+   "an industrial conurbation",
+   "the surrounding conurbation"
+  ],
+  "paraphrases": [
+   "a merged urban region",
+   "a continuous built-up area"
+  ],
+  "example": "The Ruhr is a polycentric conurbation made up of many cities that have merged over time."
+ },
+ {
+  "id": "urb-020",
+  "topic": "urban",
+  "word": "metropolis",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "reading",
+   "writing"
+  ],
+  "definition": "a very large, busy city, usually a capital or major commercial centre",
+  "collocations": [
+   "a sprawling metropolis",
+   "a thriving metropolis",
+   "a global metropolis"
+  ],
+  "paraphrases": [
+   "a major city",
+   "a large urban centre"
+  ],
+  "example": "Tokyo is a vast metropolis where several million people travel through the same stations each day."
+ },
+ {
+  "id": "urb-021",
+  "topic": "urban",
+  "word": "cosmopolitan",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "containing people from many different countries and cultures",
+  "collocations": [
+   "a cosmopolitan city",
+   "cosmopolitan atmosphere",
+   "cosmopolitan outlook"
+  ],
+  "paraphrases": [
+   "multicultural",
+   "international in character"
+  ],
+  "example": "London's cosmopolitan character is reflected in its restaurants, markets and festivals."
+ },
+ {
+  "id": "urb-022",
+  "topic": "urban",
+  "word": "vibrant",
+  "pos": "adjective",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "full of energy, life and activity",
+  "collocations": [
+   "a vibrant city",
+   "vibrant culture",
+   "vibrant community"
+  ],
+  "paraphrases": [
+   "lively and energetic",
+   "dynamic"
+  ],
+  "example": "The district has become a vibrant place with galleries, cafes and live music venues."
+ },
+ {
+  "id": "urb-023",
+  "topic": "urban",
+  "word": "bustling",
+  "pos": "adjective",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "full of busy noisy activity",
+  "collocations": [
+   "a bustling market",
+   "bustling streets",
+   "a bustling city centre"
+  ],
+  "paraphrases": [
+   "busy and crowded",
+   "full of activity"
+  ],
+  "example": "We walked through a bustling market where traders were calling out to passers-by."
+ },
+ {
+  "id": "urb-024",
+  "topic": "urban",
+  "word": "dilapidated",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "reading",
+   "writing"
+  ],
+  "definition": "in very poor condition because of age or lack of repair",
+  "collocations": [
+   "a dilapidated building",
+   "dilapidated housing",
+   "dilapidated estates"
+  ],
+  "paraphrases": [
+   "run-down",
+   "in a state of disrepair"
+  ],
+  "example": "Many of the dilapidated tenements were pulled down to make way for modern flats."
+ },
+ {
+  "id": "urb-025",
+  "topic": "urban",
+  "word": "derelict",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "reading"
+  ],
+  "definition": "abandoned and in a state of disrepair",
+  "collocations": [
+   "a derelict factory",
+   "derelict land",
+   "derelict buildings"
+  ],
+  "paraphrases": [
+   "abandoned and neglected",
+   "deserted and decaying"
+  ],
+  "example": "Artists have transformed a derelict warehouse into a studio and exhibition space."
+ },
+ {
+  "id": "urb-026",
+  "topic": "urban",
+  "word": "homelessness",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "the condition of having no permanent place to live",
+  "collocations": [
+   "tackle homelessness",
+   "rising homelessness",
+   "youth homelessness"
+  ],
+  "paraphrases": [
+   "lack of a permanent home",
+   "rough sleeping"
+  ],
+  "example": "Rising rents and low wages have contributed to a sharp increase in homelessness."
+ },
+ {
+  "id": "urb-027",
+  "topic": "urban",
+  "word": "eviction",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the legal removal of a tenant from a property",
+  "collocations": [
+   "face eviction",
+   "eviction notice",
+   "threatened with eviction"
+  ],
+  "paraphrases": [
+   "forced removal from a home",
+   "expulsion of a tenant"
+  ],
+  "example": "Tenants who fall behind with the rent risk eviction within a matter of weeks."
+ },
+ {
+  "id": "urb-028",
+  "topic": "urban",
+  "word": "zoning",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the division of land into areas where only certain types of building are permitted",
+  "collocations": [
+   "zoning laws",
+   "zoning regulations",
+   "strict zoning"
+  ],
+  "paraphrases": [
+   "land-use regulation",
+   "planning restrictions"
+  ],
+  "example": "Strict zoning prevents factories from being built beside family homes."
+ },
+ {
+  "id": "urb-029",
+  "topic": "urban",
+  "word": "pedestrianise",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to make a street or area for walkers only by banning vehicles",
+  "collocations": [
+   "pedestrianise the centre",
+   "pedestrianise a street",
+   "plans to pedestrianise"
+  ],
+  "paraphrases": [
+   "close to traffic",
+   "turn into a car-free zone"
+  ],
+  "example": "The council decided to pedestrianise the main shopping street to attract more visitors."
+ },
+ {
+  "id": "urb-030",
+  "topic": "urban",
+  "word": "high-rise",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "having many floors, usually used of large buildings",
+  "collocations": [
+   "high-rise flats",
+   "high-rise buildings",
+   "a high-rise development"
+  ],
+  "paraphrases": [
+   "multi-storey",
+   "tall"
+  ],
+  "example": "High-rise flats make efficient use of scarce land but can leave residents feeling isolated."
+ },
+ {
+  "id": "urb-031",
+  "topic": "urban",
+  "word": "neighbourhood",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a part of a town where people live, with its own character",
+  "collocations": [
+   "a safe neighbourhood",
+   "a deprived neighbourhood",
+   "neighbourhood watch"
+  ],
+  "paraphrases": [
+   "a district",
+   "a local community area"
+  ],
+  "example": "She grew up in a friendly neighbourhood where everyone knew each other by name."
+ },
+ {
+  "id": "urb-032",
+  "topic": "urban",
+  "word": "close-knit",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "having strong, friendly relationships between members",
+  "collocations": [
+   "a close-knit community",
+   "close-knit neighbourhood",
+   "a close-knit village"
+  ],
+  "paraphrases": [
+   "tightly bonded",
+   "united and supportive"
+  ],
+  "example": "In a close-knit community, neighbours often look after each other's children."
+ },
+ {
+  "id": "urb-033",
+  "topic": "urban",
+  "word": "anonymity",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the state of not being known or identified by others",
+  "collocations": [
+   "urban anonymity",
+   "enjoy anonymity",
+   "preserve anonymity"
+  ],
+  "paraphrases": [
+   "being unidentified",
+   "facelessness"
+  ],
+  "example": "Some people value the anonymity of city life, while others find it lonely."
+ },
+ {
+  "id": "urb-034",
+  "topic": "urban",
+  "word": "social housing",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "homes provided at low rent by councils or charities for people on low incomes",
+  "collocations": [
+   "build social housing",
+   "a waiting list for social housing",
+   "social housing tenants"
+  ],
+  "paraphrases": [
+   "council housing",
+   "subsidised homes"
+  ],
+  "example": "Waiting lists for social housing have grown because few new homes are being built."
+ },
+ {
+  "id": "urb-035",
+  "topic": "urban",
+  "word": "housing shortage",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "a situation in which there are not enough homes for people who need them",
+  "collocations": [
+   "a severe housing shortage",
+   "ease the housing shortage",
+   "tackle the housing shortage"
+  ],
+  "paraphrases": [
+   "a lack of available homes",
+   "insufficient accommodation"
+  ],
+  "example": "A chronic housing shortage has pushed prices beyond the reach of first-time buyers."
+ },
+ {
+  "id": "urb-036",
+  "topic": "urban",
+  "word": "property developer",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a person or company that buys land and builds or improves buildings to sell or rent",
+  "collocations": [
+   "a property developer",
+   "wealthy property developers",
+   "a large property developer"
+  ],
+  "paraphrases": [
+   "a builder of homes for profit",
+   "a real-estate developer"
+  ],
+  "example": "The property developer promised to include a number of low-cost flats in the scheme."
+ },
+ {
+  "id": "urb-037",
+  "topic": "urban",
+  "word": "landmark",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "a building or feature that is easy to recognise and is typical of a place",
+  "collocations": [
+   "a historic landmark",
+   "a local landmark",
+   "a famous landmark"
+  ],
+  "paraphrases": [
+   "a notable feature",
+   "a recognisable monument"
+  ],
+  "example": "The old clock tower is a landmark that tourists use to find their way around the town."
+ },
+ {
+  "id": "urb-038",
+  "topic": "urban",
+  "word": "municipal",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "relating to the government of a town or city",
+  "collocations": [
+   "municipal authorities",
+   "municipal services",
+   "a municipal park"
+  ],
+  "paraphrases": [
+   "relating to city administration",
+   "of a local authority"
+  ],
+  "example": "Municipal authorities are responsible for rubbish collection, street lighting and public parks."
+ },
+ {
+  "id": "urb-039",
+  "topic": "urban",
+  "word": "council",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "the elected local body that runs a city or district",
+  "collocations": [
+   "the city council",
+   "council tax",
+   "a council meeting"
+  ],
+  "paraphrases": [
+   "the local authority",
+   "the town hall"
+  ],
+  "example": "The council has promised to build a new leisure centre beside the river."
+ },
+ {
+  "id": "urb-040",
+  "topic": "urban",
+  "word": "revitalise",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to give new life and energy to something that has declined",
+  "collocations": [
+   "revitalise the city centre",
+   "revitalise a neighbourhood",
+   "revitalise the economy"
+  ],
+  "paraphrases": [
+   "breathe new life into",
+   "regenerate"
+  ],
+  "example": "New markets and cafes helped to revitalise a square that had been neglected for decades."
+ },
+ {
+  "id": "urb-041",
+  "topic": "urban",
+  "word": "overhaul",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to examine something thoroughly and make major improvements to it",
+  "collocations": [
+   "overhaul the system",
+   "completely overhaul",
+   "overhaul planning rules"
+  ],
+  "paraphrases": [
+   "thoroughly reform",
+   "radically revise"
+  ],
+  "example": "The city plans to overhaul its drainage system before the next rainy season."
+ },
+ {
+  "id": "urb-042",
+  "topic": "urban",
+  "word": "cramped",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "uncomfortably small and crowded",
+  "collocations": [
+   "cramped conditions",
+   "a cramped flat",
+   "cramped living space"
+  ],
+  "paraphrases": [
+   "confined",
+   "too small"
+  ],
+  "example": "Several students shared a cramped flat with only one bathroom."
+ },
+ {
+  "id": "urb-043",
+  "topic": "urban",
+  "word": "spacious",
+  "pos": "adjective",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "having plenty of room inside",
+  "collocations": [
+   "a spacious apartment",
+   "spacious rooms",
+   "a spacious interior"
+  ],
+  "paraphrases": [
+   "roomy",
+   "large and open"
+  ],
+  "example": "The spacious apartment had large windows that let in a great deal of light."
+ },
+ {
+  "id": "urb-044",
+  "topic": "urban",
+  "word": "relocate",
+  "pos": "verb",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "to move to a different place to live or operate",
+  "collocations": [
+   "relocate to the suburbs",
+   "relocate residents",
+   "relocate a business"
+  ],
+  "paraphrases": [
+   "move house",
+   "resettle"
+  ],
+  "example": "Hundreds of families had to relocate when the old district was cleared for a new motorway."
+ },
+ {
+  "id": "urb-045",
+  "topic": "urban",
+  "word": "displace",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to force people to leave the place where they live",
+  "collocations": [
+   "displace residents",
+   "displace local people",
+   "be displaced from homes"
+  ],
+  "paraphrases": [
+   "force out",
+   "drive away from their homes"
+  ],
+  "example": "Rising rents threaten to displace the artists who first made the area fashionable."
+ },
+ {
+  "id": "urb-046",
+  "topic": "urban",
+  "word": "squalid",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "reading"
+  ],
+  "definition": "extremely dirty and unpleasant, usually because of poverty",
+  "collocations": [
+   "squalid conditions",
+   "a squalid slum",
+   "squalid housing"
+  ],
+  "paraphrases": [
+   "filthy and wretched",
+   "sordid"
+  ],
+  "example": "Reformers in the nineteenth century were shocked by the squalid conditions in industrial towns."
+ },
+ {
+  "id": "urb-047",
+  "topic": "urban",
+  "word": "tenement",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "reading"
+  ],
+  "definition": "a large old building divided into flats, especially in a poor part of a city",
+  "collocations": [
+   "a crowded tenement",
+   "a tenement block",
+   "tenement housing"
+  ],
+  "paraphrases": [
+   "an old apartment block",
+   "a run-down block of flats"
+  ],
+  "example": "Whole families lived in a single room of a crowded tenement."
+ },
+ {
+  "id": "urb-048",
+  "topic": "urban",
+  "word": "green space",
+  "pos": "phrase",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "an area of grass, trees or plants in a built-up place",
+  "collocations": [
+   "urban green space",
+   "access to green space",
+   "protect green spaces"
+  ],
+  "paraphrases": [
+   "parkland",
+   "open areas with vegetation"
+  ],
+  "example": "Access to green space has been shown to improve the mental wellbeing of city dwellers."
+ },
+ {
+  "id": "urb-049",
+  "topic": "urban",
+  "word": "civic",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "relating to a city or the duties of its citizens",
+  "collocations": [
+   "civic pride",
+   "civic leaders",
+   "a civic centre"
+  ],
+  "paraphrases": [
+   "of the city",
+   "relating to community life"
+  ],
+  "example": "Strong civic pride encourages residents to take care of their shared public spaces."
+ },
+ {
+  "id": "urb-050",
+  "topic": "urban",
+  "word": "street life",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "the activity of people in the streets of a city",
+  "collocations": [
+   "lively street life",
+   "street life flourishes",
+   "a rich street life"
+  ],
+  "paraphrases": [
+   "public activity outdoors",
+   "the bustle of the streets"
+  ],
+  "example": "Narrow pedestrian lanes help to create a street life that large avenues often lack."
+ },
+ {
+  "id": "urb-051",
+  "topic": "urban",
+  "word": "nightlife",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "entertainment available in the evening, such as clubs, bars and shows",
+  "collocations": [
+   "lively nightlife",
+   "the city's nightlife",
+   "vibrant nightlife"
+  ],
+  "paraphrases": [
+   "evening entertainment",
+   "after-dark activities"
+  ],
+  "example": "Students often choose a university in a city with plenty of nightlife."
+ },
+ {
+  "id": "urb-052",
+  "topic": "urban",
+  "word": "downtown",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "the central business area of a city",
+  "collocations": [
+   "downtown area",
+   "in downtown",
+   "head downtown"
+  ],
+  "paraphrases": [
+   "the city centre",
+   "the central business district"
+  ],
+  "example": "Office rents downtown are among the highest in the country."
+ },
+ {
+  "id": "urb-053",
+  "topic": "urban",
+  "word": "hub",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a central place where a lot of activity or business takes place",
+  "collocations": [
+   "a financial hub",
+   "a cultural hub",
+   "a major hub"
+  ],
+  "paraphrases": [
+   "a centre of activity",
+   "a focal point"
+  ],
+  "example": "Singapore has become a financial hub linking markets in Asia, Europe and the Americas."
+ },
+ {
+  "id": "urb-054",
+  "topic": "urban",
+  "word": "thoroughfare",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "reading"
+  ],
+  "definition": "a main road or public path used by many people",
+  "collocations": [
+   "a busy thoroughfare",
+   "a major thoroughfare",
+   "main thoroughfare"
+  ],
+  "paraphrases": [
+   "a main road",
+   "a public highway"
+  ],
+  "example": "The old thoroughfare was lined with shops, theatres and coffee houses."
+ },
+ {
+  "id": "urb-055",
+  "topic": "urban",
+  "word": "urban planner",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "a professional who designs how land and buildings in cities are used",
+  "collocations": [
+   "an urban planner",
+   "trained urban planners",
+   "consult urban planners"
+  ],
+  "paraphrases": [
+   "a town planning specialist",
+   "a city designer"
+  ],
+  "example": "An urban planner must balance the need for new homes with the protection of open space."
+ },
+ {
+  "id": "urb-056",
+  "topic": "urban",
+  "word": "habitable",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "reading"
+  ],
+  "definition": "suitable to live in",
+  "collocations": [
+   "habitable rooms",
+   "barely habitable",
+   "habitable land"
+  ],
+  "paraphrases": [
+   "fit to live in",
+   "liveable"
+  ],
+  "example": "Inspectors declared the flats no longer habitable after the roof began to collapse."
+ },
+ {
+  "id": "urb-057",
+  "topic": "urban",
+  "word": "refurbish",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to repair and redecorate a building so that it is in good condition again",
+  "collocations": [
+   "refurbish a building",
+   "refurbish old flats",
+   "newly refurbished"
+  ],
+  "paraphrases": [
+   "renovate",
+   "restore and improve"
+  ],
+  "example": "The theatre was refurbished at a cost of several million pounds."
+ },
+ {
+  "id": "urb-058",
+  "topic": "urban",
+  "word": "demolish",
+  "pos": "verb",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to pull down a building completely",
+  "collocations": [
+   "demolish a building",
+   "demolish old housing",
+   "be demolished"
+  ],
+  "paraphrases": [
+   "pull down",
+   "tear down"
+  ],
+  "example": "Plans to demolish the historic market hall provoked angry protests."
+ },
+ {
+  "id": "urb-059",
+  "topic": "urban",
+  "word": "demolition",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the act of pulling down a building",
+  "collocations": [
+   "demolition work",
+   "scheduled for demolition",
+   "the demolition of slums"
+  ],
+  "paraphrases": [
+   "the tearing down of structures",
+   "razing"
+  ],
+  "example": "The demolition of the old tower blocks made way for a public garden."
+ },
+ {
+  "id": "urb-060",
+  "topic": "urban",
+  "word": "property market",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "the buying and selling of houses, flats and land",
+  "collocations": [
+   "the property market",
+   "a booming property market",
+   "a slump in the property market"
+  ],
+  "paraphrases": [
+   "the housing market",
+   "real-estate trading"
+  ],
+  "example": "A booming property market makes it difficult for young people to buy their first home."
+ },
+ {
+  "id": "urb-061",
+  "topic": "urban",
+  "word": "cost of living",
+  "pos": "phrase",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "the amount of money needed to pay for basic things such as housing and food",
+  "collocations": [
+   "a high cost of living",
+   "the rising cost of living",
+   "cost-of-living crisis"
+  ],
+  "paraphrases": [
+   "everyday living expenses",
+   "the price of necessities"
+  ],
+  "example": "The cost of living in major capitals has risen faster than wages in recent years."
+ },
+ {
+  "id": "urb-062",
+  "topic": "urban",
+  "word": "deprived",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "lacking the basic things needed for a decent life",
+  "collocations": [
+   "a deprived area",
+   "deprived neighbourhoods",
+   "deprived communities"
+  ],
+  "paraphrases": [
+   "disadvantaged",
+   "impoverished"
+  ],
+  "example": "Children in deprived areas often attend schools with fewer resources."
+ },
+ {
+  "id": "urb-063",
+  "topic": "urban",
+  "word": "deprivation",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the lack of basic things such as food, housing and income",
+  "collocations": [
+   "social deprivation",
+   "urban deprivation",
+   "economic deprivation"
+  ],
+  "paraphrases": [
+   "hardship",
+   "a lack of essentials"
+  ],
+  "example": "Urban deprivation is often concentrated in estates built decades ago on the edge of cities."
+ },
+ {
+  "id": "urb-064",
+  "topic": "urban",
+  "word": "ghetto",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "reading"
+  ],
+  "definition": "a part of a city where one group of people lives, often in poor conditions",
+  "collocations": [
+   "an urban ghetto",
+   "a ghetto community",
+   "escape the ghetto"
+  ],
+  "paraphrases": [
+   "an isolated, poor district",
+   "a segregated area"
+  ],
+  "example": "Racial segregation produced ghettos in which residents had limited access to jobs."
+ },
+ {
+  "id": "urb-065",
+  "topic": "urban",
+  "word": "enclave",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "reading"
+  ],
+  "definition": "an area whose people differ in culture or character from those around it",
+  "collocations": [
+   "an ethnic enclave",
+   "a wealthy enclave",
+   "a gated enclave"
+  ],
+  "paraphrases": [
+   "a distinct pocket",
+   "an isolated community"
+  ],
+  "example": "The old quarter is an enclave of traditional crafts surrounded by modern offices."
+ },
+ {
+  "id": "urb-066",
+  "topic": "urban",
+  "word": "commuter belt",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "the area around a city where many people live and travel into the city to work",
+  "collocations": [
+   "the commuter belt",
+   "live in the commuter belt",
+   "the London commuter belt"
+  ],
+  "paraphrases": [
+   "outlying residential towns",
+   "the dormitory area"
+  ],
+  "example": "House prices in the commuter belt have climbed as more people work from home part of the week."
+ },
+ {
+  "id": "urb-067",
+  "topic": "urban",
+  "word": "lively",
+  "pos": "adjective",
+  "band": 6.5,
+  "use": [
+   "speaking"
+  ],
+  "definition": "full of life and energy",
+  "collocations": [
+   "a lively street",
+   "a lively atmosphere",
+   "lively debate"
+  ],
+  "paraphrases": [
+   "energetic",
+   "animated"
+  ],
+  "example": "The old town is lively in the evenings, when the cafes spill out onto the pavements."
+ },
+ {
+  "id": "urb-068",
+  "topic": "urban",
+  "word": "sanitation",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "systems that keep places clean, especially safe drains and waste removal",
+  "collocations": [
+   "poor sanitation",
+   "basic sanitation",
+   "improve sanitation"
+  ],
+  "paraphrases": [
+   "hygiene facilities",
+   "waste and drainage services"
+  ],
+  "example": "Poor sanitation in crowded districts allowed diseases to spread quickly."
+ },
+ {
+  "id": "urb-069",
+  "topic": "urban",
+  "word": "sewage",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "reading"
+  ],
+  "definition": "waste water and human waste carried away in drains",
+  "collocations": [
+   "raw sewage",
+   "sewage system",
+   "treat sewage"
+  ],
+  "paraphrases": [
+   "waste water",
+   "effluent"
+  ],
+  "example": "Untreated sewage was being discharged into the river that supplied the city's drinking water."
+ },
+ {
+  "id": "urb-070",
+  "topic": "urban",
+  "word": "utilities",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "listening"
+  ],
+  "definition": "basic services such as water, gas and electricity",
+  "collocations": [
+   "pay for utilities",
+   "utilities bills",
+   "public utilities"
+  ],
+  "paraphrases": [
+   "essential services",
+   "basic household services"
+  ],
+  "example": "The monthly rent includes all utilities, so tenants do not receive separate bills."
+ },
+ {
+  "id": "urb-071",
+  "topic": "urban",
+  "word": "compact",
+  "pos": "adjective",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "small and closely arranged so that little space is wasted",
+  "collocations": [
+   "a compact city",
+   "compact housing",
+   "a compact layout"
+  ],
+  "paraphrases": [
+   "closely packed",
+   "neatly condensed"
+  ],
+  "example": "A compact city keeps shops, schools and workplaces within walking distance of homes."
+ },
+ {
+  "id": "urb-072",
+  "topic": "urban",
+  "word": "mixed-use",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "combining homes, shops and offices in the same area or building",
+  "collocations": [
+   "mixed-use development",
+   "a mixed-use area",
+   "mixed-use buildings"
+  ],
+  "paraphrases": [
+   "combining residential and commercial functions",
+   "multi-purpose"
+  ],
+  "example": "Mixed-use developments keep streets busy throughout the day and reduce the need to travel."
+ },
+ {
+  "id": "urb-073",
+  "topic": "urban",
+  "word": "pavement",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a hard path at the side of a road for people on foot",
+  "collocations": [
+   "a narrow pavement",
+   "wide pavements",
+   "walk along the pavement"
+  ],
+  "paraphrases": [
+   "a footpath",
+   "a sidewalk"
+  ],
+  "example": "Cafes have been allowed to put tables on the pavement during the summer months."
+ },
+ {
+  "id": "urb-074",
+  "topic": "urban",
+  "word": "pedestrian",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a person who is walking rather than travelling in a vehicle",
+  "collocations": [
+   "a busy pedestrian",
+   "pedestrian crossing",
+   "pedestrian zone"
+  ],
+  "paraphrases": [
+   "a person on foot",
+   "a walker"
+  ],
+  "example": "Every pedestrian in the old centre has to share narrow lanes with delivery vans."
+ },
+ {
+  "id": "urb-075",
+  "topic": "urban",
+  "word": "rooftop",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "the outer surface of the top of a building",
+  "collocations": [
+   "a rooftop garden",
+   "rooftop terrace",
+   "a rooftop bar"
+  ],
+  "paraphrases": [
+   "the top of a building",
+   "the roof area"
+  ],
+  "example": "A rooftop garden can provide fresh vegetables in a city with very little ground space."
+ },
+ {
+  "id": "urb-076",
+  "topic": "urban",
+  "word": "tower block",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a very tall building divided into many flats or offices",
+  "collocations": [
+   "a tower block",
+   "live in a tower block",
+   "a council tower block"
+  ],
+  "paraphrases": [
+   "a high-rise apartment building",
+   "a multi-storey block of flats"
+  ],
+  "example": "Many families were rehoused in a tower block built in the 1960s."
+ },
+ {
+  "id": "urb-077",
+  "topic": "urban",
+  "word": "vacant",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "not occupied or in use",
+  "collocations": [
+   "a vacant property",
+   "vacant land",
+   "a vacant lot"
+  ],
+  "paraphrases": [
+   "unoccupied",
+   "empty"
+  ],
+  "example": "Thousands of vacant properties could be converted into homes for those who need them."
+ },
+ {
+  "id": "urb-078",
+  "topic": "urban",
+  "word": "housing estate",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "a group of houses or flats planned and built together",
+  "collocations": [
+   "a large housing estate",
+   "a council housing estate",
+   "build a housing estate"
+  ],
+  "paraphrases": [
+   "a planned residential development",
+   "a cluster of similar homes"
+  ],
+  "example": "The housing estate was built in the 1950s to house workers from the nearby factories."
+ },
+ {
+  "id": "urb-079",
+  "topic": "urban",
+  "word": "gated community",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a residential area enclosed by walls or fences with controlled entry",
+  "collocations": [
+   "live in a gated community",
+   "a luxury gated community",
+   "gated communities"
+  ],
+  "paraphrases": [
+   "a secured housing development",
+   "a walled residential complex"
+  ],
+  "example": "A gated community offers its residents security but can weaken ties with the wider town."
+ }
+]

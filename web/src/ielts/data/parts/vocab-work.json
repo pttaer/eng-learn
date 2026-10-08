@@ -1,0 +1,1789 @@
+[
+ {
+  "id": "wor-001",
+  "topic": "work",
+  "word": "workforce",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "all the people who are employed in a company, industry or country",
+  "collocations": [
+   "skilled workforce",
+   "reduce the workforce",
+   "a diverse workforce"
+  ],
+  "paraphrases": [
+   "staff",
+   "employees"
+  ],
+  "example": "A well-trained workforce is the most valuable asset a growing manufacturing firm can have."
+ },
+ {
+  "id": "wor-002",
+  "topic": "work",
+  "word": "redundancy",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "loss of a job because an employer no longer needs the worker",
+  "collocations": [
+   "face redundancy",
+   "redundancy pay",
+   "voluntary redundancy"
+  ],
+  "paraphrases": [
+   "job loss",
+   "lay-off"
+  ],
+  "example": "Many older employees faced redundancy when the factory closed its second production line."
+ },
+ {
+  "id": "wor-003",
+  "topic": "work",
+  "word": "recruit",
+  "pos": "verb",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "to find and employ new people for an organisation",
+  "collocations": [
+   "recruit new staff",
+   "recruit graduates",
+   "actively recruit"
+  ],
+  "paraphrases": [
+   "hire",
+   "take on"
+  ],
+  "example": "The hospital plans to recruit fifty additional nurses before the start of winter."
+ },
+ {
+  "id": "wor-004",
+  "topic": "work",
+  "word": "applicant",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a person who formally asks for a job or a place on a course",
+  "collocations": [
+   "job applicant",
+   "successful applicant",
+   "shortlist applicants"
+  ],
+  "paraphrases": [
+   "candidate",
+   "job seeker"
+  ],
+  "example": "Each applicant must submit a short cover letter along with their application form."
+ },
+ {
+  "id": "wor-005",
+  "topic": "work",
+  "word": "internship",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a short period of work experience, often unpaid, done to gain skills",
+  "collocations": [
+   "unpaid internship",
+   "summer internship",
+   "complete an internship"
+  ],
+  "paraphrases": [
+   "work placement",
+   "work experience"
+  ],
+  "example": "An internship at a law firm gave her a realistic picture of daily office routines."
+ },
+ {
+  "id": "wor-006",
+  "topic": "work",
+  "word": "apprenticeship",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a period of paid training in which a young person learns a skilled trade",
+  "collocations": [
+   "complete an apprenticeship",
+   "serve an apprenticeship",
+   "apprenticeship scheme"
+  ],
+  "paraphrases": [
+   "trade training",
+   "vocational training"
+  ],
+  "example": "An apprenticeship allows school leavers to earn a wage while acquiring practical qualifications."
+ },
+ {
+  "id": "wor-007",
+  "topic": "work",
+  "word": "colleague",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a person you work with in the same organisation",
+  "collocations": [
+   "friendly colleagues",
+   "former colleague",
+   "support colleagues"
+  ],
+  "paraphrases": [
+   "co-worker",
+   "workmate"
+  ],
+  "example": "My colleagues often organise lunch together, which makes the office feel less formal."
+ },
+ {
+  "id": "wor-008",
+  "topic": "work",
+  "word": "supervisor",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a person who watches over workers and checks their performance",
+  "collocations": [
+   "line supervisor",
+   "report to a supervisor",
+   "shift supervisor"
+  ],
+  "paraphrases": [
+   "overseer",
+   "line manager"
+  ],
+  "example": "Her supervisor reviews every report before it is sent to the client."
+ },
+ {
+  "id": "wor-009",
+  "topic": "work",
+  "word": "managerial",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "relating to the work of running a business or a team",
+  "collocations": [
+   "managerial role",
+   "managerial skills",
+   "managerial position"
+  ],
+  "paraphrases": [
+   "supervisory",
+   "executive"
+  ],
+  "example": "Promotion to a managerial post often requires skills that technical training does not provide."
+ },
+ {
+  "id": "wor-010",
+  "topic": "work",
+  "word": "entrepreneur",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a person who starts a business and takes financial risks to do so",
+  "collocations": [
+   "young entrepreneur",
+   "aspiring entrepreneur",
+   "successful entrepreneur"
+  ],
+  "paraphrases": [
+   "business founder",
+   "business owner"
+  ],
+  "example": "Many young entrepreneurs struggle to obtain a loan because they lack collateral."
+ },
+ {
+  "id": "wor-011",
+  "topic": "work",
+  "word": "self-employed",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "working for yourself instead of for an employer",
+  "collocations": [
+   "become self-employed",
+   "self-employed worker",
+   "self-employed builder"
+  ],
+  "paraphrases": [
+   "working for oneself",
+   "independent"
+  ],
+  "example": "Being self-employed offers freedom, but income can fluctuate sharply from one month to the next."
+ },
+ {
+  "id": "wor-012",
+  "topic": "work",
+  "word": "freelance",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "working for different companies on separate jobs rather than for one employer",
+  "collocations": [
+   "freelance journalist",
+   "freelance work",
+   "freelance designer"
+  ],
+  "paraphrases": [
+   "self-employed",
+   "independent contractor"
+  ],
+  "example": "A freelance translator can choose her clients but has no paid holiday or sick leave."
+ },
+ {
+  "id": "wor-013",
+  "topic": "work",
+  "word": "flexitime",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a system in which workers choose their own start and finish times within agreed limits",
+  "collocations": [
+   "work flexitime",
+   "flexitime system",
+   "flexitime arrangement"
+  ],
+  "paraphrases": [
+   "flexible hours",
+   "adjustable working hours"
+  ],
+  "example": "Flexitime enables parents to drop their children at school before travelling to the office."
+ },
+ {
+  "id": "wor-014",
+  "topic": "work",
+  "word": "job security",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "the likelihood that a person will keep their job without the risk of dismissal",
+  "collocations": [
+   "lack of job security",
+   "guarantee job security",
+   "enjoy job security"
+  ],
+  "paraphrases": [
+   "stable employment",
+   "employment stability"
+  ],
+  "example": "Public sector posts are popular among graduates because they offer greater job security."
+ },
+ {
+  "id": "wor-015",
+  "topic": "work",
+  "word": "work-life balance",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a healthy division of time and energy between paid work and personal life",
+  "collocations": [
+   "achieve a work-life balance",
+   "poor work-life balance",
+   "improve work-life balance"
+  ],
+  "paraphrases": [
+   "balance between job and private life",
+   "time for family and leisure"
+  ],
+  "example": "Employees who enjoy a sound work-life balance tend to take fewer sick days."
+ },
+ {
+  "id": "wor-016",
+  "topic": "work",
+  "word": "burnout",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a state of physical and mental exhaustion caused by long-term stress at work",
+  "collocations": [
+   "suffer from burnout",
+   "risk of burnout",
+   "prevent burnout"
+  ],
+  "paraphrases": [
+   "work-related exhaustion",
+   "chronic fatigue"
+  ],
+  "example": "Nurses working double shifts for months are particularly vulnerable to burnout."
+ },
+ {
+  "id": "wor-017",
+  "topic": "work",
+  "word": "overtime",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "extra hours worked beyond normal working hours",
+  "collocations": [
+   "work overtime",
+   "paid overtime",
+   "unpaid overtime"
+  ],
+  "paraphrases": [
+   "extra hours",
+   "additional hours"
+  ],
+  "example": "Staff were asked to work overtime during the busy period before the holidays."
+ },
+ {
+  "id": "wor-018",
+  "topic": "work",
+  "word": "workload",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "the amount of work that a person has to do",
+  "collocations": [
+   "heavy workload",
+   "manage a workload",
+   "reduce the workload"
+  ],
+  "paraphrases": [
+   "volume of work",
+   "amount of work"
+  ],
+  "example": "A heavy workload and tight deadlines left many teachers feeling overwhelmed."
+ },
+ {
+  "id": "wor-019",
+  "topic": "work",
+  "word": "deadline",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a fixed time by which a task must be finished",
+  "collocations": [
+   "meet a deadline",
+   "tight deadline",
+   "miss a deadline"
+  ],
+  "paraphrases": [
+   "cut-off date",
+   "time limit"
+  ],
+  "example": "The design team worked through the weekend to meet the client's deadline."
+ },
+ {
+  "id": "wor-020",
+  "topic": "work",
+  "word": "productivity",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the rate at which workers produce goods or complete tasks compared with the effort used",
+  "collocations": [
+   "boost productivity",
+   "labour productivity",
+   "decline in productivity"
+  ],
+  "paraphrases": [
+   "output per worker",
+   "work rate"
+  ],
+  "example": "Shorter meetings and clearer goals have raised productivity across the department."
+ },
+ {
+  "id": "wor-021",
+  "topic": "work",
+  "word": "streamline",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to make a process or organisation simpler and more efficient",
+  "collocations": [
+   "streamline operations",
+   "streamline the process",
+   "streamline procedures"
+  ],
+  "paraphrases": [
+   "simplify",
+   "make more efficient"
+  ],
+  "example": "The company hopes to streamline its hiring procedures by removing two stages of interviews."
+ },
+ {
+  "id": "wor-022",
+  "topic": "work",
+  "word": "delegate",
+  "pos": "verb",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "to give part of your work or authority to someone else",
+  "collocations": [
+   "delegate tasks",
+   "delegate responsibility",
+   "learn to delegate"
+  ],
+  "paraphrases": [
+   "assign",
+   "hand over"
+  ],
+  "example": "Good managers know when to delegate rather than trying to control every detail themselves."
+ },
+ {
+  "id": "wor-023",
+  "topic": "work",
+  "word": "outsource",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to pay another company to do work that was previously done inside your own organisation",
+  "collocations": [
+   "outsource production",
+   "outsource services",
+   "outsource jobs overseas"
+  ],
+  "paraphrases": [
+   "contract out",
+   "subcontract"
+  ],
+  "example": "Many firms outsource customer service to call centres in countries with lower labour costs."
+ },
+ {
+  "id": "wor-024",
+  "topic": "work",
+  "word": "downsize",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to reduce the number of people employed by a company in order to cut costs",
+  "collocations": [
+   "downsize the workforce",
+   "forced to downsize",
+   "plans to downsize"
+  ],
+  "paraphrases": [
+   "cut staff",
+   "reduce headcount"
+  ],
+  "example": "Facing falling sales, the retailer was forced to downsize and close several branches."
+ },
+ {
+  "id": "wor-025",
+  "topic": "work",
+  "word": "dismiss",
+  "pos": "verb",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "to officially remove someone from their job",
+  "collocations": [
+   "dismiss an employee",
+   "unfairly dismissed",
+   "dismiss a manager"
+  ],
+  "paraphrases": [
+   "sack",
+   "fire"
+  ],
+  "example": "An employee cannot be dismissed without a written warning and a chance to improve."
+ },
+ {
+  "id": "wor-026",
+  "topic": "work",
+  "word": "resign",
+  "pos": "verb",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "to formally announce that you are leaving your job",
+  "collocations": [
+   "resign from a post",
+   "threaten to resign",
+   "resign voluntarily"
+  ],
+  "paraphrases": [
+   "step down",
+   "quit"
+  ],
+  "example": "He decided to resign after the board rejected his proposal for the third time."
+ },
+ {
+  "id": "wor-027",
+  "topic": "work",
+  "word": "pension",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "regular money paid to a person after they stop working because of age",
+  "collocations": [
+   "state pension",
+   "company pension",
+   "draw a pension"
+  ],
+  "paraphrases": [
+   "retirement income",
+   "retirement payment"
+  ],
+  "example": "Many self-employed people do not contribute to a pension and rely on savings instead."
+ },
+ {
+  "id": "wor-028",
+  "topic": "work",
+  "word": "trade union",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "an organisation of workers formed to protect their rights and interests",
+  "collocations": [
+   "join a trade union",
+   "trade union leader",
+   "trade union membership"
+  ],
+  "paraphrases": [
+   "workers' association",
+   "labour union"
+  ],
+  "example": "The trade union negotiated a pay rise on behalf of its members."
+ },
+ {
+  "id": "wor-029",
+  "topic": "work",
+  "word": "collective bargaining",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "negotiation between employers and a group of workers about pay and conditions",
+  "collocations": [
+   "collective bargaining agreement",
+   "engage in collective bargaining",
+   "collective bargaining rights"
+  ],
+  "paraphrases": [
+   "group wage negotiation",
+   "union negotiations"
+  ],
+  "example": "Collective bargaining gives low-paid staff greater influence over their working conditions."
+ },
+ {
+  "id": "wor-030",
+  "topic": "work",
+  "word": "minimum wage",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the lowest hourly pay that employers are legally allowed to give",
+  "collocations": [
+   "raise the minimum wage",
+   "earn the minimum wage",
+   "statutory minimum wage"
+  ],
+  "paraphrases": [
+   "lowest legal pay",
+   "legal pay floor"
+  ],
+  "example": "Critics argue that raising the minimum wage could discourage small firms from hiring."
+ },
+ {
+  "id": "wor-031",
+  "topic": "work",
+  "word": "pay gap",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the difference in average earnings between two groups of workers",
+  "collocations": [
+   "gender pay gap",
+   "narrow the pay gap",
+   "widening pay gap"
+  ],
+  "paraphrases": [
+   "wage difference",
+   "earnings gap"
+  ],
+  "example": "The gender pay gap persists partly because women are more likely to work part-time."
+ },
+ {
+  "id": "wor-032",
+  "topic": "work",
+  "word": "glass ceiling",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "an unseen barrier that prevents some groups, especially women, from reaching top positions",
+  "collocations": [
+   "break the glass ceiling",
+   "hit the glass ceiling",
+   "glass ceiling effect"
+  ],
+  "paraphrases": [
+   "invisible barrier to promotion",
+   "hidden career barrier"
+  ],
+  "example": "Despite equal qualifications, many women still hit the glass ceiling before reaching the boardroom."
+ },
+ {
+  "id": "wor-033",
+  "topic": "work",
+  "word": "discrimination",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "unfair treatment of a person because of their age, sex, race or other characteristic",
+  "collocations": [
+   "age discrimination",
+   "face discrimination",
+   "sex discrimination"
+  ],
+  "paraphrases": [
+   "unfair treatment",
+   "prejudice"
+  ],
+  "example": "Laws against discrimination require employers to judge applicants on skills rather than on background."
+ },
+ {
+  "id": "wor-034",
+  "topic": "work",
+  "word": "workplace",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the place such as an office or factory where people do their jobs",
+  "collocations": [
+   "workplace safety",
+   "hostile workplace",
+   "in the workplace"
+  ],
+  "paraphrases": [
+   "work environment",
+   "place of employment"
+  ],
+  "example": "Clear safety rules in the workplace have reduced accidents in the construction industry."
+ },
+ {
+  "id": "wor-035",
+  "topic": "work",
+  "word": "occupation",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "a person's job or profession",
+  "collocations": [
+   "choose an occupation",
+   "skilled occupation",
+   "main occupation"
+  ],
+  "paraphrases": [
+   "profession",
+   "line of work"
+  ],
+  "example": "Applicants must state their current occupation and the name of their employer."
+ },
+ {
+  "id": "wor-036",
+  "topic": "work",
+  "word": "vocational",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "relating to the skills and training needed for a particular job",
+  "collocations": [
+   "vocational training",
+   "vocational course",
+   "vocational qualification"
+  ],
+  "paraphrases": [
+   "job-related",
+   "work-oriented"
+  ],
+  "example": "Vocational courses in plumbing and electrical work lead directly to well-paid jobs."
+ },
+ {
+  "id": "wor-037",
+  "topic": "work",
+  "word": "qualification",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "an exam, course or certificate that shows you are able to do a job",
+  "collocations": [
+   "professional qualification",
+   "gain a qualification",
+   "academic qualification"
+  ],
+  "paraphrases": [
+   "certificate",
+   "credential"
+  ],
+  "example": "A professional qualification in accounting greatly improves a candidate's chances of promotion."
+ },
+ {
+  "id": "wor-038",
+  "topic": "work",
+  "word": "expertise",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "special skill or knowledge in a particular field",
+  "collocations": [
+   "technical expertise",
+   "professional expertise",
+   "years of expertise"
+  ],
+  "paraphrases": [
+   "specialist knowledge",
+   "know-how"
+  ],
+  "example": "The agency hired a consultant whose expertise in tax law saved it thousands of pounds."
+ },
+ {
+  "id": "wor-039",
+  "topic": "work",
+  "word": "competent",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "having the skills and knowledge needed to do a job well",
+  "collocations": [
+   "highly competent",
+   "competent worker",
+   "competent manager"
+  ],
+  "paraphrases": [
+   "capable",
+   "skilled"
+  ],
+  "example": "A competent engineer should be able to identify the fault within a few minutes."
+ },
+ {
+  "id": "wor-040",
+  "topic": "work",
+  "word": "proficient",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "able to do something skilfully because of training or practice",
+  "collocations": [
+   "proficient in English",
+   "highly proficient",
+   "proficient user"
+  ],
+  "paraphrases": [
+   "skilled",
+   "adept"
+  ],
+  "example": "Candidates should be proficient in spreadsheet software and basic data analysis."
+ },
+ {
+  "id": "wor-041",
+  "topic": "work",
+  "word": "diligent",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "showing careful and steady effort in your work",
+  "collocations": [
+   "diligent worker",
+   "diligent student",
+   "diligent attention"
+  ],
+  "paraphrases": [
+   "hard-working",
+   "industrious"
+  ],
+  "example": "A diligent employee usually checks each figure twice before submitting a financial report."
+ },
+ {
+  "id": "wor-042",
+  "topic": "work",
+  "word": "conscientious",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "careful to do work thoroughly and correctly",
+  "collocations": [
+   "conscientious employee",
+   "conscientious about details",
+   "conscientious worker"
+  ],
+  "paraphrases": [
+   "meticulous",
+   "thorough"
+  ],
+  "example": "Conscientious staff rarely need close supervision because they take pride in accurate work."
+ },
+ {
+  "id": "wor-043",
+  "topic": "work",
+  "word": "motivation",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the desire and energy that makes a person want to work hard",
+  "collocations": [
+   "lack of motivation",
+   "boost motivation",
+   "staff motivation"
+  ],
+  "paraphrases": [
+   "drive",
+   "enthusiasm"
+  ],
+  "example": "Praise from a manager can improve motivation more effectively than a small pay rise."
+ },
+ {
+  "id": "wor-044",
+  "topic": "work",
+  "word": "incentive",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "something that encourages a person to work harder or do a particular thing",
+  "collocations": [
+   "financial incentive",
+   "offer an incentive",
+   "strong incentive"
+  ],
+  "paraphrases": [
+   "inducement",
+   "reward"
+  ],
+  "example": "Cash bonuses act as an incentive for sales staff to exceed their monthly targets."
+ },
+ {
+  "id": "wor-045",
+  "topic": "work",
+  "word": "perk",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "an extra benefit given to an employee in addition to a salary",
+  "collocations": [
+   "job perk",
+   "enjoy perks",
+   "generous perks"
+  ],
+  "paraphrases": [
+   "fringe benefit",
+   "additional benefit"
+  ],
+  "example": "Free gym membership and subsidised meals are popular perks at the technology firm."
+ },
+ {
+  "id": "wor-046",
+  "topic": "work",
+  "word": "bonus",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "an extra payment given to an employee for good work or good company results",
+  "collocations": [
+   "annual bonus",
+   "performance bonus",
+   "receive a bonus"
+  ],
+  "paraphrases": [
+   "extra payment",
+   "financial reward"
+  ],
+  "example": "Each member of the team received a bonus after the company exceeded its annual targets."
+ },
+ {
+  "id": "wor-047",
+  "topic": "work",
+  "word": "commission",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "money paid to a salesperson based on how much they sell",
+  "collocations": [
+   "earn commission",
+   "work on commission",
+   "sales commission"
+  ],
+  "paraphrases": [
+   "sales percentage",
+   "payment per sale"
+  ],
+  "example": "Estate agents often earn a low basic salary but receive generous commission on each sale."
+ },
+ {
+  "id": "wor-048",
+  "topic": "work",
+  "word": "remuneration",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "payment given to a person for their work",
+  "collocations": [
+   "generous remuneration",
+   "remuneration package",
+   "fair remuneration"
+  ],
+  "paraphrases": [
+   "pay",
+   "salary and benefits"
+  ],
+  "example": "Executives' remuneration has risen much faster than the average worker's earnings."
+ },
+ {
+  "id": "wor-049",
+  "topic": "work",
+  "word": "demanding",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "requiring a lot of effort, skill or time",
+  "collocations": [
+   "demanding job",
+   "physically demanding",
+   "demanding schedule"
+  ],
+  "paraphrases": [
+   "challenging",
+   "taxing"
+  ],
+  "example": "Emergency medicine is a demanding career that leaves little time for family life."
+ },
+ {
+  "id": "wor-050",
+  "topic": "work",
+  "word": "repetitive",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "involving the same action done again and again",
+  "collocations": [
+   "repetitive task",
+   "repetitive work",
+   "repetitive strain"
+  ],
+  "paraphrases": [
+   "tedious",
+   "routine"
+  ],
+  "example": "Factory staff often complain that repetitive tasks make the working day feel endless."
+ },
+ {
+  "id": "wor-051",
+  "topic": "work",
+  "word": "monotonous",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "dull and unchanging, so that you become bored",
+  "collocations": [
+   "monotonous work",
+   "monotonous routine",
+   "monotonous job"
+  ],
+  "paraphrases": [
+   "tedious",
+   "humdrum"
+  ],
+  "example": "Data entry can be monotonous, so many firms rotate staff between different tasks."
+ },
+ {
+  "id": "wor-052",
+  "topic": "work",
+  "word": "rewarding",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "listening"
+  ],
+  "definition": "giving personal satisfaction because you feel the work is worthwhile",
+  "collocations": [
+   "rewarding career",
+   "emotionally rewarding",
+   "rewarding experience"
+  ],
+  "paraphrases": [
+   "satisfying",
+   "worthwhile"
+  ],
+  "example": "Teaching is not well paid, but many people find it deeply rewarding."
+ },
+ {
+  "id": "wor-053",
+  "topic": "work",
+  "word": "fulfilling",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "making you feel happy because you are using your abilities",
+  "collocations": [
+   "fulfilling career",
+   "fulfilling job",
+   "personally fulfilling"
+  ],
+  "paraphrases": [
+   "satisfying",
+   "gratifying"
+  ],
+  "example": "A fulfilling job matters more to many graduates than a high starting salary."
+ },
+ {
+  "id": "wor-054",
+  "topic": "work",
+  "word": "lucrative",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "producing a large amount of money or profit",
+  "collocations": [
+   "lucrative career",
+   "lucrative contract",
+   "highly lucrative"
+  ],
+  "paraphrases": [
+   "well-paid",
+   "profitable"
+  ],
+  "example": "Banking remains a lucrative career, although competition for graduate places is fierce."
+ },
+ {
+  "id": "wor-055",
+  "topic": "work",
+  "word": "prestigious",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "respected and admired because of high status",
+  "collocations": [
+   "prestigious job",
+   "prestigious company",
+   "prestigious position"
+  ],
+  "paraphrases": [
+   "high-status",
+   "esteemed"
+  ],
+  "example": "A prestigious post at an international firm can open many doors later in a career."
+ },
+ {
+  "id": "wor-056",
+  "topic": "work",
+  "word": "precarious",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "not secure or safe, and likely to end suddenly",
+  "collocations": [
+   "precarious employment",
+   "precarious position",
+   "precarious existence"
+  ],
+  "paraphrases": [
+   "insecure",
+   "unstable"
+  ],
+  "example": "Seasonal staff often live in a precarious situation, never sure of work beyond the summer."
+ },
+ {
+  "id": "wor-057",
+  "topic": "work",
+  "word": "labour-intensive",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "needing a large amount of human work rather than machinery",
+  "collocations": [
+   "labour-intensive industry",
+   "labour-intensive process",
+   "labour-intensive farming"
+  ],
+  "paraphrases": [
+   "requiring many workers",
+   "dependent on manual work"
+  ],
+  "example": "Textile manufacturing is a labour-intensive industry that employs millions in developing economies."
+ },
+ {
+  "id": "wor-058",
+  "topic": "work",
+  "word": "manual labour",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "physical work done with the hands, such as building or farming",
+  "collocations": [
+   "perform manual labour",
+   "heavy manual labour",
+   "manual labour jobs"
+  ],
+  "paraphrases": [
+   "physical work",
+   "hands-on work"
+  ],
+  "example": "Years of manual labour on construction sites had damaged his back."
+ },
+ {
+  "id": "wor-059",
+  "topic": "work",
+  "word": "white-collar",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "relating to workers who do office or professional work",
+  "collocations": [
+   "white-collar worker",
+   "white-collar job",
+   "white-collar profession"
+  ],
+  "paraphrases": [
+   "office-based",
+   "professional"
+  ],
+  "example": "White-collar employees now make up the majority of the workforce in most wealthy countries."
+ },
+ {
+  "id": "wor-060",
+  "topic": "work",
+  "word": "blue-collar",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "relating to workers who do physical work in factories or similar places",
+  "collocations": [
+   "blue-collar worker",
+   "blue-collar job",
+   "blue-collar industry"
+  ],
+  "paraphrases": [
+   "manual",
+   "factory-based"
+  ],
+  "example": "Blue-collar jobs in mining have declined sharply as machines took over dangerous tasks."
+ },
+ {
+  "id": "wor-061",
+  "topic": "work",
+  "word": "shift work",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "work that takes place at set periods, often including nights and weekends",
+  "collocations": [
+   "do shift work",
+   "shift work pattern",
+   "exhausting shift work"
+  ],
+  "paraphrases": [
+   "rotating working hours",
+   "night and day rotas"
+  ],
+  "example": "Long periods of shift work can disrupt sleep and make family meals hard to arrange."
+ },
+ {
+  "id": "wor-062",
+  "topic": "work",
+  "word": "job satisfaction",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the feeling of being pleased with your work and working conditions",
+  "collocations": [
+   "high job satisfaction",
+   "improve job satisfaction",
+   "lack of job satisfaction"
+  ],
+  "paraphrases": [
+   "contentment at work",
+   "workplace happiness"
+  ],
+  "example": "Surveys show that job satisfaction depends more on relationships with colleagues than on salary."
+ },
+ {
+  "id": "wor-063",
+  "topic": "work",
+  "word": "career prospects",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the chances of future progress and success in your working life",
+  "collocations": [
+   "improve career prospects",
+   "excellent career prospects",
+   "limited career prospects"
+  ],
+  "paraphrases": [
+   "chances of advancement",
+   "future job opportunities"
+  ],
+  "example": "A master's degree can significantly improve career prospects in the engineering sector."
+ },
+ {
+  "id": "wor-064",
+  "topic": "work",
+  "word": "career ladder",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "the series of ranks through which a worker can rise during their working life",
+  "collocations": [
+   "climb the career ladder",
+   "move up the career ladder",
+   "bottom of the career ladder"
+  ],
+  "paraphrases": [
+   "progress in a career",
+   "path to promotion"
+  ],
+  "example": "She started at the bottom of the career ladder as a receptionist and became a director within ten years."
+ },
+ {
+  "id": "wor-065",
+  "topic": "work",
+  "word": "headhunt",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to approach a skilled person who already has a job and offer them a new one",
+  "collocations": [
+   "headhunt executives",
+   "be headhunted",
+   "headhunt talent"
+  ],
+  "paraphrases": [
+   "poach",
+   "recruit directly"
+  ],
+  "example": "The software company tried to headhunt several engineers from its main competitor."
+ },
+ {
+  "id": "wor-066",
+  "topic": "work",
+  "word": "shortlist",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "to put someone on a list of the best candidates from whom a final choice will be made",
+  "collocations": [
+   "be shortlisted",
+   "shortlist candidates",
+   "shortlist five applicants"
+  ],
+  "paraphrases": [
+   "select for final consideration",
+   "narrow down the candidates"
+  ],
+  "example": "Only six of the two hundred applicants were shortlisted for interview."
+ },
+ {
+  "id": "wor-067",
+  "topic": "work",
+  "word": "interviewee",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a person who is being asked questions in an interview",
+  "collocations": [
+   "nervous interviewee",
+   "prepared interviewee",
+   "interviewee answers"
+  ],
+  "paraphrases": [
+   "job candidate",
+   "person being questioned"
+  ],
+  "example": "A confident interviewee maintains eye contact and answers questions clearly."
+ },
+ {
+  "id": "wor-068",
+  "topic": "work",
+  "word": "referee",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a person who writes a statement about your character or ability for an employer",
+  "collocations": [
+   "name a referee",
+   "provide two referees",
+   "academic referee"
+  ],
+  "paraphrases": [
+   "person giving a reference",
+   "character witness"
+  ],
+  "example": "Please provide the name of a referee who can comment on your work experience."
+ },
+ {
+  "id": "wor-069",
+  "topic": "work",
+  "word": "mentor",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "an experienced person who gives advice and support to someone newer in a job",
+  "collocations": [
+   "act as a mentor",
+   "personal mentor",
+   "assign a mentor"
+  ],
+  "paraphrases": [
+   "adviser",
+   "guide"
+  ],
+  "example": "A mentor can help graduates understand unwritten rules that are rarely explained in training."
+ },
+ {
+  "id": "wor-070",
+  "topic": "work",
+  "word": "teamwork",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the combined effort of a group of people working together",
+  "collocations": [
+   "promote teamwork",
+   "effective teamwork",
+   "encourage teamwork"
+  ],
+  "paraphrases": [
+   "cooperation",
+   "collaborative effort"
+  ],
+  "example": "Successful teamwork depends on trust, and trust grows when people share clear goals."
+ },
+ {
+  "id": "wor-071",
+  "topic": "work",
+  "word": "collaborate",
+  "pos": "verb",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "to work jointly with other people on a shared project",
+  "collocations": [
+   "collaborate with colleagues",
+   "collaborate on a project",
+   "closely collaborate"
+  ],
+  "paraphrases": [
+   "cooperate",
+   "work together"
+  ],
+  "example": "Engineers and designers must collaborate closely if a product is to meet customer needs."
+ },
+ {
+  "id": "wor-072",
+  "topic": "work",
+  "word": "negotiate",
+  "pos": "verb",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "to discuss something formally in order to reach an agreement",
+  "collocations": [
+   "negotiate a contract",
+   "negotiate a salary",
+   "negotiate with management"
+  ],
+  "paraphrases": [
+   "bargain",
+   "reach terms"
+  ],
+  "example": "New graduates are often reluctant to negotiate a higher starting salary."
+ },
+ {
+  "id": "wor-073",
+  "topic": "work",
+  "word": "performance appraisal",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a formal review of how well an employee has done their job",
+  "collocations": [
+   "annual performance appraisal",
+   "conduct a performance appraisal",
+   "undergo a performance appraisal"
+  ],
+  "paraphrases": [
+   "staff evaluation",
+   "work assessment"
+  ],
+  "example": "A fair performance appraisal should include both praise and specific advice on how to improve."
+ },
+ {
+  "id": "wor-074",
+  "topic": "work",
+  "word": "staff turnover",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the rate at which employees leave an organisation and are replaced",
+  "collocations": [
+   "high staff turnover",
+   "reduce staff turnover",
+   "staff turnover rate"
+  ],
+  "paraphrases": [
+   "rate of employees leaving",
+   "workforce attrition"
+  ],
+  "example": "High staff turnover is costly because every new recruit must be trained from the beginning."
+ },
+ {
+  "id": "wor-075",
+  "topic": "work",
+  "word": "absenteeism",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the habit of regularly staying away from work without good reason",
+  "collocations": [
+   "reduce absenteeism",
+   "high absenteeism",
+   "employee absenteeism"
+  ],
+  "paraphrases": [
+   "frequent absence",
+   "regular non-attendance"
+  ],
+  "example": "Absenteeism fell sharply after the firm introduced flexible working hours."
+ },
+ {
+  "id": "wor-076",
+  "topic": "work",
+  "word": "sabbatical",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a long period of paid leave from work, often used for study or travel",
+  "collocations": [
+   "take a sabbatical",
+   "sabbatical year",
+   "sabbatical leave"
+  ],
+  "paraphrases": [
+   "extended paid leave",
+   "career break"
+  ],
+  "example": "After seven years of teaching, she took a sabbatical to write a book."
+ },
+ {
+  "id": "wor-077",
+  "topic": "work",
+  "word": "jobless",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "having no paid employment",
+  "collocations": [
+   "jobless graduates",
+   "the jobless",
+   "jobless rate"
+  ],
+  "paraphrases": [
+   "unemployed",
+   "out of work"
+  ],
+  "example": "Jobless young people often lose confidence the longer they remain without a position."
+ },
+ {
+  "id": "wor-078",
+  "topic": "work",
+  "word": "lay off",
+  "pos": "verb",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "to end the employment of workers, usually because there is not enough work",
+  "collocations": [
+   "lay off workers",
+   "be laid off",
+   "lay off staff"
+  ],
+  "paraphrases": [
+   "make redundant",
+   "let go"
+  ],
+  "example": "The company had to lay off two hundred workers when demand for its products fell."
+ },
+ {
+  "id": "wor-079",
+  "topic": "work",
+  "word": "gig economy",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a labour market in which people take short-term or freelance jobs rather than permanent posts",
+  "collocations": [
+   "work in the gig economy",
+   "gig economy workers",
+   "rise of the gig economy"
+  ],
+  "paraphrases": [
+   "short-term contract work",
+   "on-demand employment"
+  ],
+  "example": "The gig economy offers flexibility but gives workers little protection against sudden loss of income."
+ }
+]
