@@ -22,10 +22,10 @@ function checkQuestions(qs, where) {
     assert(q.why && words(q.why) >= 6, `${where}/${q.id}: why must quote evidence (>= 6 words)`);
     if (q.type === 'tfng') assert(['TRUE', 'FALSE', 'NOT GIVEN'].includes(q.answer), `${where}/${q.id}: bad tfng answer`);
     else if (q.type === 'ynng') assert(['YES', 'NO', 'NOT GIVEN'].includes(q.answer), `${where}/${q.id}: bad ynng answer`);
-    else if (['mcq', 'heading', 'match'].includes(q.type)) {
+    else if (['mcq', 'heading', 'match', 'features'].includes(q.type)) {
       assert(Array.isArray(q.options) && q.options.length >= 3, `${where}/${q.id}: needs options`);
       assert(typeof q.answer === 'string' && q.options.some(o => o.split(/[.)]/)[0].trim() === q.answer), `${where}/${q.id}: answer "${q.answer}" is not an option key`);
-    } else if (['complete', 'short'].includes(q.type)) {
+    } else if (['complete', 'sentence', 'summary', 'table', 'short'].includes(q.type)) {
       const a = Array.isArray(q.answer) ? q.answer : [q.answer];
       assert(a.length && a.every(x => typeof x === 'string' && x.trim()), `${where}/${q.id}: empty answer`);
       assert(a.some(x => words(x) <= 3), `${where}/${q.id}: needs an accepted answer of <= 3 words`);
@@ -46,7 +46,7 @@ reading.forEach(p => {
   assert(lists.size <= 1, `reading ${p.id}: heading questions must share one identical options list (found ${lists.size})`);
   p.questions.forEach(q => rTypes[q.type] = (rTypes[q.type] || 0) + 1);
 });
-for (const t of ['tfng', 'heading', 'complete', 'mcq', 'match']) assert((rTypes[t] || 0) >= (t === 'match' ? 2 : 12), `reading: only ${rTypes[t] || 0} "${t}" questions across set (want >= 12)`);
+// Reading type spread, band ramp and evidence quotes: verify-ielts-reading.cjs.
 for (const lbl of reading) assert(lbl.paragraphs.every((p, i) => p.label === String.fromCharCode(65 + i)), `reading ${lbl.id}: paragraph labels must be A, B, C...`);
 
 const listening = load('listening.json');

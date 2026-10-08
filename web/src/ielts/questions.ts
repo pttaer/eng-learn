@@ -4,7 +4,8 @@ import { esc, h } from './ui';
 
 const TYPE_LABEL: Record<string, string> = {
   tfng: 'True / False / Not Given', ynng: 'Yes / No / Not Given', heading: 'Matching headings', match: 'Matching',
-  complete: 'Completion', mcq: 'Multiple choice', short: 'Short answer'
+  features: 'Matching features', complete: 'Completion', sentence: 'Sentence completion', summary: 'Summary completion',
+  table: 'Table completion', mcq: 'Multiple choice', short: 'Short answer'
 };
 export const typeLabel = (t: string): string => TYPE_LABEL[t] || t;
 
@@ -29,7 +30,7 @@ function control(q: IeltsQuestion, n: number, onChange: () => void): HTMLElement
       l.querySelector('input')!.addEventListener('change', onChange);
       body.append(l);
     });
-  } else if (q.type === 'heading' || q.type === 'match') {
+  } else if (q.type === 'heading' || q.type === 'match' || q.type === 'features') {
     const sel = h('select', 'ie-select');
     sel.name = q.id;
     sel.setAttribute('aria-label', `Answer for question ${n}`);
@@ -69,7 +70,7 @@ export function renderQuestions(questions: IeltsQuestion[], startAt = 1, onChang
       lastType = q.type;
       lastOptions.list = undefined;
     }
-    if ((q.type === 'heading' || q.type === 'match') && q.options && q.options.join('|') !== (lastOptions.list || []).join('|')) {
+    if ((q.type === 'heading' || q.type === 'match' || q.type === 'features') && q.options && q.options.join('|') !== (lastOptions.list || []).join('|')) {
       el.append(h('ul', 'ie-q-list', q.options.map(o => `<li>${esc(o)}</li>`).join('')));
       lastOptions.list = q.options;
     }

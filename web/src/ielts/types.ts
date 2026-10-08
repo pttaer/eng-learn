@@ -1,4 +1,4 @@
-export type QuestionType = 'tfng' | 'ynng' | 'heading' | 'match' | 'complete' | 'mcq' | 'short';
+export type QuestionType = 'tfng' | 'ynng' | 'heading' | 'match' | 'features' | 'complete' | 'sentence' | 'summary' | 'table' | 'mcq' | 'short';
 
 export interface IeltsQuestion {
   id: string;
@@ -16,6 +16,8 @@ export interface ReadingPassage {
   id: string;
   title: string;
   topic: string;
+  /** Target band; rises across the 10 tests (passages taken 3 at a time) and within each test. */
+  band: number;
   paragraphs: { label: string; text: string }[];
   questions: IeltsQuestion[];
 }
