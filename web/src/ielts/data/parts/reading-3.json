@@ -1,0 +1,557 @@
+[
+ {
+  "id": "r13",
+  "title": "Reading the Rings: The Science of Tree-Ring Dating",
+  "topic": "Archaeology and earth science",
+  "band": 7,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Few natural archives are as quietly informative as the trunk of a tree. In regions with a distinct growing season, a tree lays down one layer of new wood each year, and when the trunk is cut across, these layers appear as concentric rings. In a favourable year, with ample rain and moderate temperatures, the ring tends to be wide; in a year of drought or unusual cold, it may be barely visible. The scientific use of this simple fact began not with a botanist but with an astronomer. In the early twentieth century, Andrew Ellicott Douglass, working at an observatory in Arizona, was searching for evidence that cycles of sunspot activity influenced the Earth's climate. He reasoned that if they did, the effect might be recorded in the growth of trees, and while examining timber from the region he noticed something more useful than any solar cycle: trees from the same area shared the same sequence of wide and narrow rings."
+   },
+   {
+    "label": "B",
+    "text": "This observation became the foundation of cross-dating, the central technique of dendrochronology. Because trees growing under the same regional climate respond to the same good and bad years, their ring sequences form a recognisable pattern, rather like a barcode. A sample whose outermost ring is known, such as a living tree, can be matched against an older piece of wood whose pattern partly overlaps with it, and the older wood can then be matched against something older still. By chaining overlapping samples in this way, researchers build a continuous chronology that stretches back far beyond the lifetime of any single tree. Douglass himself spent years trying to connect a floating sequence from ancient Pueblo ruins to his modern chronology. The gap was finally closed in 1929, when a charred beam recovered at Show Low, Arizona, supplied the missing rings and allowed dozens of settlements to be dated to the exact year."
+   },
+   {
+    "label": "C",
+    "text": "Since then, chronologies have been extended to remarkable lengths. In central Europe, oak and pine timbers preserved in river gravels and bogs have been linked into a sequence covering more than 12,000 years. In the White Mountains of California, the bristlecone pine provides an equally striking resource: some living specimens are more than 4,000 years old, and dead wood lying on the dry slopes, which decays extremely slowly, has allowed the regional record to be pushed back several thousand years further. Such chronologies are not built quickly. Each one represents the measurement of many thousands of samples, and a single misplaced ring can shift every earlier date, so cross-checking between independent sequences is standard practice."
+   },
+   {
+    "label": "D",
+    "text": "For archaeologists, the attraction of the method is its precision. Radiocarbon dating typically yields a range of several decades or more, whereas a successful tree-ring match can identify the year in which the last ring grew. Yet that year is not always the year a building was constructed. A felling date can be stated with confidence only if the outermost ring beneath the bark survives; if the outer layers have been trimmed away by the carpenter, the specialist must estimate how many rings are missing. Timber was also frequently reused, stored for years before use, or replaced during later repairs. A precise date for a beam is therefore a precise date for the tree, and turning it into a date for the structure requires careful interpretation of the building itself."
+   },
+   {
+    "label": "E",
+    "text": "Tree rings have also transformed radiocarbon dating itself. The method assumes a known level of carbon-14 in the atmosphere, but that level has fluctuated over time. Because each ring locks away carbon from the year it formed, measuring rings of known age has allowed scientists to construct calibration curves that convert raw radiocarbon measurements into calendar dates. More recently, a discovery made in Japan has added a new tool. In 2012, the physicist Fusa Miyake reported a sudden spike in carbon-14 in the rings of a Japanese cedar, dating to the years 774 and 775 CE, almost certainly caused by an intense burst of radiation from space. Because such spikes appear in trees worldwide in the same ring, they act as fixed markers. In 2021, a team used a later spike, from 993 CE, to show that wood at a Norse site in Newfoundland had been cut in 1021, the earliest precise date for a European presence in the Americas."
+   },
+   {
+    "label": "F",
+    "text": "A further field, known as dendroclimatology, uses rings as a record of past climate. Ring width, along with the density of the wood, can be statistically related to temperature or rainfall over the period covered by instrumental records, and that relationship is then used to estimate conditions in earlier centuries. Reconstructions of this kind have revealed droughts in western North America far longer than any experienced in modern times. The approach is not without difficulties, however. In some northern forests, tree growth since the middle of the twentieth century has stopped tracking rising temperatures as closely as it once did. Researchers still debate the causes of this so-called divergence problem, and it is a reminder that the link between climate and growth may not remain constant."
+   },
+   {
+    "label": "G",
+    "text": "The applications continue to widen. Scars left by past fires allow ecologists to reconstruct how often forests burned before modern fire suppression. Art historians have used ring patterns in the wooden panels of paintings and in the spruce tops of stringed instruments to test claims about their age and origin. In each case the principle is the one Douglass recognised more than a century ago: a tree cannot help recording the conditions it lived through, and the record, once read correctly, is accurate to the year."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r13-q01",
+    "type": "heading",
+    "prompt": "Paragraph B",
+    "options": [
+     "i. Linking trees together to look further back",
+     "ii. Why an exact tree date may not date a building",
+     "iii. Sharpening another dating method",
+     "iv. Reading past weather from wood, and a complication",
+     "v. An astronomer's unexpected finding",
+     "vi. The commercial value of ancient timber",
+     "vii. How fire damages a growing tree"
+    ],
+    "answer": "i",
+    "why": "Paragraph B: \"By chaining overlapping samples in this way, researchers build a continuous chronology that stretches back far beyond the lifetime of any single tree\". Heading i."
+   },
+   {
+    "id": "r13-q02",
+    "type": "heading",
+    "prompt": "Paragraph D",
+    "options": [
+     "i. Linking trees together to look further back",
+     "ii. Why an exact tree date may not date a building",
+     "iii. Sharpening another dating method",
+     "iv. Reading past weather from wood, and a complication",
+     "v. An astronomer's unexpected finding",
+     "vi. The commercial value of ancient timber",
+     "vii. How fire damages a growing tree"
+    ],
+    "answer": "ii",
+    "why": "Paragraph D: \"Yet that year is not always the year a building was constructed\", followed by trimmed, reused and stored timber. Heading ii."
+   },
+   {
+    "id": "r13-q03",
+    "type": "heading",
+    "prompt": "Paragraph E",
+    "options": [
+     "i. Linking trees together to look further back",
+     "ii. Why an exact tree date may not date a building",
+     "iii. Sharpening another dating method",
+     "iv. Reading past weather from wood, and a complication",
+     "v. An astronomer's unexpected finding",
+     "vi. The commercial value of ancient timber",
+     "vii. How fire damages a growing tree"
+    ],
+    "answer": "iii",
+    "why": "Paragraph E: \"Tree rings have also transformed radiocarbon dating itself\", through calibration curves and fixed markers. Heading iii."
+   },
+   {
+    "id": "r13-q04",
+    "type": "heading",
+    "prompt": "Paragraph F",
+    "options": [
+     "i. Linking trees together to look further back",
+     "ii. Why an exact tree date may not date a building",
+     "iii. Sharpening another dating method",
+     "iv. Reading past weather from wood, and a complication",
+     "v. An astronomer's unexpected finding",
+     "vi. The commercial value of ancient timber",
+     "vii. How fire damages a growing tree"
+    ],
+    "answer": "iv",
+    "why": "Paragraph F: \"dendroclimatology, uses rings as a record of past climate\", then \"The approach is not without difficulties\", describing the divergence problem. Heading iv."
+   },
+   {
+    "id": "r13-q05",
+    "type": "tfng",
+    "prompt": "Douglass first studied tree rings to test whether the Sun affects the climate.",
+    "answer": "TRUE",
+    "why": "Paragraph A: Douglass \"was searching for evidence that cycles of sunspot activity influenced the Earth's climate\"."
+   },
+   {
+    "id": "r13-q06",
+    "type": "tfng",
+    "prompt": "The beam that closed the gap in 1929 was discovered by Douglass himself.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph B says only that \"a charred beam recovered at Show Low, Arizona, supplied the missing rings\". Who recovered it is not stated."
+   },
+   {
+    "id": "r13-q07",
+    "type": "tfng",
+    "prompt": "Dead bristlecone pine wood rots quickly on the slopes of the White Mountains.",
+    "answer": "FALSE",
+    "why": "Paragraph C: dead wood \"lying on the dry slopes, which decays extremely slowly\"."
+   },
+   {
+    "id": "r13-q08",
+    "type": "tfng",
+    "prompt": "Radiocarbon dating usually gives a more exact date than tree-ring dating.",
+    "answer": "FALSE",
+    "why": "Paragraph D: \"Radiocarbon dating typically yields a range of several decades or more, whereas a successful tree-ring match can identify the year in which the last ring grew\"."
+   },
+   {
+    "id": "r13-q09",
+    "type": "summary",
+    "prompt": "Summary: Rings of known age are measured to produce ______ that turn raw radiocarbon results into calendar dates.",
+    "answer": [
+     "calibration curves"
+    ],
+    "why": "Paragraph E: \"measuring rings of known age has allowed scientists to construct calibration curves that convert raw radiocarbon measurements into calendar dates\"."
+   },
+   {
+    "id": "r13-q10",
+    "type": "summary",
+    "prompt": "Summary: In 2012, a sudden rise in carbon-14 was found in the rings of a Japanese ______.",
+    "answer": [
+     "cedar"
+    ],
+    "why": "Paragraph E: \"a sudden spike in carbon-14 in the rings of a Japanese cedar, dating to the years 774 and 775 CE\"."
+   },
+   {
+    "id": "r13-q11",
+    "type": "summary",
+    "prompt": "Summary: Because these spikes occur in the same ring all over the world, they serve as fixed ______.",
+    "answer": [
+     "markers"
+    ],
+    "why": "Paragraph E: \"Because such spikes appear in trees worldwide in the same ring, they act as fixed markers\"."
+   },
+   {
+    "id": "r13-q12",
+    "type": "mcq",
+    "prompt": "What is the writer's main point about the divergence problem?",
+    "options": [
+     "A. It shows that tree rings cannot be used to study climate.",
+     "B. The link between tree growth and climate may change over time.",
+     "C. It affects only forests in the south.",
+     "D. Its causes have now been fully explained."
+    ],
+    "answer": "B",
+    "why": "Paragraph F: \"it is a reminder that the link between climate and growth may not remain constant\". A is too strong; C is contradicted (\"In some northern forests\"); D is contradicted (\"Researchers still debate the causes\")."
+   },
+   {
+    "id": "r13-q13",
+    "type": "mcq",
+    "prompt": "The 2021 study of the Norse site in Newfoundland",
+    "options": [
+     "A. used the radiation spike of 993 CE to date wood cut in 1021.",
+     "B. used the spike of 774 CE to date the site.",
+     "C. matched the wood against European oak chronologies.",
+     "D. showed that Europeans reached the Americas in 993."
+    ],
+    "answer": "A",
+    "why": "Paragraph E: \"a team used a later spike, from 993 CE, to show that wood at a Norse site in Newfoundland had been cut in 1021\". B names the wrong spike; C is not mentioned; D confuses the spike year with the felling year."
+   }
+  ]
+ },
+ {
+  "id": "r14",
+  "title": "Bringing Languages Back",
+  "topic": "Linguistics and language policy",
+  "band": 7,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Of the roughly 7,000 languages spoken today, a large proportion are used by small communities, and many are no longer being learned by children. In 1992 the linguist Michael Krauss startled his colleagues by estimating that as many as nine in ten of the world's languages could be extinct or close to extinction by the end of the twenty-first century. His figure has been debated ever since, but few specialists dispute the general trend. Languages rarely disappear because their speakers simply die out; far more often, parents decide, or are pressured to decide, that their children will be better served by a dominant language of education, commerce and government. Within two or three generations, a language that was once used in every household can survive only among a handful of elderly speakers."
+   },
+   {
+    "label": "B",
+    "text": "Efforts to reverse this process are known as language revitalisation, and they have grown considerably since the 1980s. The most frequently cited success is Hebrew, which for centuries was used mainly in religious and scholarly writing rather than in daily conversation. From the late nineteenth century, a movement associated with Eliezer Ben-Yehuda promoted its use as an everyday spoken language, and today it has millions of native speakers. Yet the case is in many ways exceptional. The revival was supported by a strong sense of shared purpose, by a large body of existing texts, and eventually by the institutions of a state. Few endangered languages have access to all of these advantages at once."
+   },
+   {
+    "label": "C",
+    "text": "The sociolinguist Joshua Fishman argued that the single most important factor is whether a language is passed on in the home. In his view, schools, broadcasting and official recognition are valuable only to the extent that they lead families to use the language with their children; without transmission from one generation to the next, he warned, a language may become a school subject rather than a living mother tongue. Fishman's framework, which ranked the degree of disruption a language had suffered on a graded scale, encouraged communities to concentrate their limited resources on the stage at which their language was most vulnerable."
+   },
+   {
+    "label": "D",
+    "text": "Some of the most influential programmes have targeted the youngest learners. In New Zealand, Māori communities opened the first kōhanga reo, or language nests, in 1982. These are pre-school centres in which children are cared for entirely in Māori, often by grandparents who learned the language as their first. The model was soon adapted in Hawaii, where the Hawaiian language had been almost excluded from public education for nearly a century. The nests showed that very young children could acquire an endangered language quickly when surrounded by it, but they also revealed a difficulty: children who leave an immersion pre-school often enter an education system that operates entirely in the majority language, and their skills may then fade."
+   },
+   {
+    "label": "E",
+    "text": "Where only a few elderly speakers remain, a different approach is needed. In California, where dozens of indigenous languages have very few speakers left, the linguist Leanne Hinton helped to develop what became known as the Master-Apprentice programme. A fluent elder and a younger adult learner spend many hours a week together, doing ordinary activities such as cooking or gardening while speaking only the target language. The method requires no classroom and no textbook, which is an advantage where none exist, but it depends on the stamina and availability of speakers who may be in their eighties or older."
+   },
+   {
+    "label": "F",
+    "text": "Technology has opened further possibilities. Recordings made decades ago by anthropologists, often stored in university archives, have allowed some communities to recover vocabulary and pronunciation that no living person remembers. Mobile applications and online dictionaries let learners practise far from their home region. However, such tools are best understood as supports rather than substitutes. A language learned only through a screen tends to lack the everyday expressions, humour and conversational rhythm that are acquired through constant interaction with other speakers."
+   },
+   {
+    "label": "G",
+    "text": "There is also debate about what a revived language should be. The linguist Ghil'ad Zuckermann has argued that a revived language is never a straightforward continuation of its earlier form; it inevitably absorbs features of the languages its new speakers already know. Some community members regard such changes as a loss of authenticity, while others see them as the natural consequence of any language being used by real people. This disagreement matters in practice, because it affects which words are taught, how grammar is standardised and whose speech is treated as correct."
+   },
+   {
+    "label": "H",
+    "text": "Measured purely by the number of fluent speakers, many revitalisation projects might appear modest. But that measure misses much of what these programmes achieve. Learning an ancestral language, even partially, is often described by participants as a way of reconnecting with family history and strengthening a sense of identity, and some health researchers have reported links between language knowledge and well-being in indigenous communities. The survival of a language depends, in the end, on whether people choose to use it; what revitalisation can do is make that choice possible again."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r14-q01",
+    "type": "ynng",
+    "prompt": "Languages usually disappear because the people who speak them die.",
+    "answer": "NO",
+    "why": "Paragraph A: \"Languages rarely disappear because their speakers simply die out\"; far more often parents switch to a dominant language."
+   },
+   {
+    "id": "r14-q02",
+    "type": "ynng",
+    "prompt": "The revival of Hebrew is a model that most endangered languages could easily follow.",
+    "answer": "NO",
+    "why": "Paragraph B: \"Yet the case is in many ways exceptional\" and \"Few endangered languages have access to all of these advantages at once\"."
+   },
+   {
+    "id": "r14-q03",
+    "type": "ynng",
+    "prompt": "Language-learning apps cannot fully replace contact with other speakers.",
+    "answer": "YES",
+    "why": "Paragraph F: \"such tools are best understood as supports rather than substitutes\"."
+   },
+   {
+    "id": "r14-q04",
+    "type": "ynng",
+    "prompt": "The Hawaiian language nests have been more successful than the Maori ones.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph D says only that \"The model was soon adapted in Hawaii\". The writer never compares the success of the two programmes."
+   },
+   {
+    "id": "r14-q05",
+    "type": "ynng",
+    "prompt": "The number of fluent speakers is an incomplete measure of a project's success.",
+    "answer": "YES",
+    "why": "Paragraph H: \"But that measure misses much of what these programmes achieve\"."
+   },
+   {
+    "id": "r14-q06",
+    "type": "features",
+    "prompt": "warned that most of the world's languages might be lost within about a century",
+    "options": [
+     "A. Michael Krauss",
+     "B. Joshua Fishman",
+     "C. Leanne Hinton",
+     "D. Ghil'ad Zuckermann",
+     "E. Eliezer Ben-Yehuda"
+    ],
+    "answer": "A",
+    "why": "Paragraph A: Krauss estimated \"that as many as nine in ten of the world's languages could be extinct or close to extinction by the end of the twenty-first century\"."
+   },
+   {
+    "id": "r14-q07",
+    "type": "features",
+    "prompt": "believed that use of a language in families matters more than its use in schools",
+    "options": [
+     "A. Michael Krauss",
+     "B. Joshua Fishman",
+     "C. Leanne Hinton",
+     "D. Ghil'ad Zuckermann",
+     "E. Eliezer Ben-Yehuda"
+    ],
+    "answer": "B",
+    "why": "Paragraph C: Fishman \"argued that the single most important factor is whether a language is passed on in the home\"."
+   },
+   {
+    "id": "r14-q08",
+    "type": "features",
+    "prompt": "helped create a way of learning through everyday activities with an older speaker",
+    "options": [
+     "A. Michael Krauss",
+     "B. Joshua Fishman",
+     "C. Leanne Hinton",
+     "D. Ghil'ad Zuckermann",
+     "E. Eliezer Ben-Yehuda"
+    ],
+    "answer": "C",
+    "why": "Paragraph E: Hinton \"helped to develop what became known as the Master-Apprentice programme\", in which elder and learner do \"ordinary activities\"."
+   },
+   {
+    "id": "r14-q09",
+    "type": "features",
+    "prompt": "claimed that a revived language is always shaped by its speakers' other languages",
+    "options": [
+     "A. Michael Krauss",
+     "B. Joshua Fishman",
+     "C. Leanne Hinton",
+     "D. Ghil'ad Zuckermann",
+     "E. Eliezer Ben-Yehuda"
+    ],
+    "answer": "D",
+    "why": "Paragraph G: Zuckermann argued \"it inevitably absorbs features of the languages its new speakers already know\"."
+   },
+   {
+    "id": "r14-q10",
+    "type": "sentence",
+    "prompt": "In the Maori language nests, children are often looked after by ______.",
+    "answer": [
+     "grandparents"
+    ],
+    "why": "Paragraph D: children are cared for in Maori, \"often by grandparents who learned the language as their first\"."
+   },
+   {
+    "id": "r14-q11",
+    "type": "sentence",
+    "prompt": "Old recordings kept in ______ have helped some communities recover lost words.",
+    "answer": [
+     "university archives"
+    ],
+    "why": "Paragraph F: \"Recordings made decades ago by anthropologists, often stored in university archives\"."
+   },
+   {
+    "id": "r14-q12",
+    "type": "short",
+    "prompt": "In which year were the first Maori language nests opened?",
+    "answer": [
+     "1982"
+    ],
+    "why": "Paragraph D: \"opened the first kōhanga reo, or language nests, in 1982\"."
+   },
+   {
+    "id": "r14-q13",
+    "type": "short",
+    "prompt": "Which two activities are given as examples of what a master and apprentice do together?",
+    "answer": [
+     "cooking or gardening",
+     "cooking and gardening",
+     "cooking, gardening",
+     "gardening and cooking"
+    ],
+    "why": "Paragraph E: \"doing ordinary activities such as cooking or gardening while speaking only the target language\"."
+   }
+  ]
+ },
+ {
+  "id": "r15",
+  "title": "The Power of the Default",
+  "topic": "Behavioural economics",
+  "band": 7.5,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "In the standard model of economic behaviour, people make choices by comparing the available options and selecting the one that best serves their preferences. Within this model, the way a choice is presented is largely irrelevant: if a person prefers option A to option B, it should not matter which of the two is ticked in advance on a form. A pre-selected option should make almost no difference, because anyone who disliked it could simply choose something else at little cost. Over the past three decades, however, a substantial body of research has shown that this assumption is mistaken. The option that takes effect when a person does nothing, known as the default, turns out to be one of the most powerful influences on what people end up with."
+   },
+   {
+    "label": "B",
+    "text": "The most widely quoted evidence comes from organ donation. In a study published in 2003, the psychologists Eric Johnson and Daniel Goldstein compared consent rates across European countries. In countries where citizens were automatically registered as donors unless they opted out, recorded consent was typically above 90 percent; in Austria it was almost universal. In neighbouring countries where people had to opt in, the figures were dramatically lower, with Germany at around 12 percent. Such contrasts are striking, but they need careful interpretation. Registered consent is not the same as actual donation, which also depends on hospital resources, medical circumstances and, in many countries, the agreement of the family. When researchers compare the number of transplants actually performed, the gap between opt-in and opt-out systems is considerably narrower."
+   },
+   {
+    "label": "C",
+    "text": "A second body of evidence concerns saving for retirement. In 2001, the economists Brigitte Madrian and Dennis Shea studied a large American company that had changed its pension plan so that new employees were enrolled automatically unless they chose to leave. Participation among new staff rose from about 37 percent to 86 percent. Yet the study also revealed a less comfortable result. Most of those enrolled automatically remained at the default contribution rate of 3 percent and in the default investment, a low-risk fund with modest returns. Some employees who, under the old system, would have actively chosen to contribute more ended up saving less than they otherwise would have done. The default had raised participation, but it had also anchored behaviour at a level that its designers had never intended as a recommendation."
+   },
+   {
+    "label": "D",
+    "text": "Why should defaults have such force? Researchers have proposed three explanations, which are not mutually exclusive. The first is effort: changing an option requires time and attention, and people tend to postpone decisions that seem complicated or unpleasant. The second is implied endorsement. Many people assume that the default has been chosen by experts and therefore represents sensible advice, even when no such judgement was made. The third concerns reference points. Once an option is in place, it becomes the position against which alternatives are judged, and because losses tend to feel larger than equivalent gains, giving up the default can feel like a loss."
+   },
+   {
+    "label": "E",
+    "text": "These findings became central to a policy approach popularised in 2008 by the economist Richard Thaler and the legal scholar Cass Sunstein in their book Nudge. They argued that those who design forms, websites and benefit schemes are unavoidably acting as choice architects, and that defaults should be set to help people achieve outcomes they themselves would value, while leaving them free to choose otherwise. The idea attracted governments looking for inexpensive policy tools. In 2010 the British government created a Behavioural Insights Team, widely known as the nudge unit, and similar teams have since been established in many other countries."
+   },
+   {
+    "label": "F",
+    "text": "The approach has also attracted criticism. Some philosophers argue that steering people through defaults is a form of manipulation, particularly when those affected are unaware of it. Others point out that the same techniques are used by companies whose interests may differ from those of their customers, as when subscriptions renew automatically or consent to marketing is pre-selected. Regulators have begun to respond: in 2019, the Court of Justice of the European Union ruled that consent to the use of tracking cookies cannot be given through a box that is ticked in advance. Meanwhile, some recent analyses have suggested that once unpublished studies with weak results are taken into account, the average effect of many nudges may be far smaller than early research implied, although defaults remain among the more robust interventions."
+   },
+   {
+    "label": "G",
+    "text": "What, then, should be concluded? The most important lesson may be that there is no such thing as a neutral design. Every form must either pre-select an option or leave all boxes empty, and even the empty form shapes behaviour, since it allows inaction to count as a decision not to take part. The real question is therefore not whether defaults should exist, but who sets them and whose interests they serve. One proposed alternative, known as active choice, requires people to make an explicit decision before proceeding. It avoids presuming what people want, but it imposes the very effort that defaults were designed to remove."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r15-q01",
+    "type": "ynng",
+    "prompt": "Traditional economic theory predicts that pre-selected options should have little influence on choices.",
+    "answer": "YES",
+    "why": "Paragraph A: in the standard model, \"A pre-selected option should make almost no difference, because anyone who disliked it could simply choose something else\"."
+   },
+   {
+    "id": "r15-q02",
+    "type": "ynng",
+    "prompt": "High consent rates in opt-out countries lead to equally high rates of actual donation.",
+    "answer": "NO",
+    "why": "Paragraph B: \"Registered consent is not the same as actual donation\", and the gap in transplants actually performed \"is considerably narrower\"."
+   },
+   {
+    "id": "r15-q03",
+    "type": "ynng",
+    "prompt": "Automatic enrolment improved the pension savings of every employee at the company.",
+    "answer": "NO",
+    "why": "Paragraph C: \"Some employees who, under the old system, would have actively chosen to contribute more ended up saving less than they otherwise would have done\"."
+   },
+   {
+    "id": "r15-q04",
+    "type": "ynng",
+    "prompt": "Nudge had more influence on policy in Britain than in the United States.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph E says only that \"In 2010 the British government created a Behavioural Insights Team\" and that similar teams exist elsewhere. No comparison of influence between the two countries is made."
+   },
+   {
+    "id": "r15-q05",
+    "type": "match",
+    "prompt": "a legal decision restricting one kind of pre-selected option",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "F",
+    "why": "Paragraph F: \"the Court of Justice of the European Union ruled that consent to the use of tracking cookies cannot be given through a box that is ticked in advance\"."
+   },
+   {
+    "id": "r15-q06",
+    "type": "match",
+    "prompt": "several possible reasons why defaults are so effective",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "D",
+    "why": "Paragraph D: \"Researchers have proposed three explanations, which are not mutually exclusive\": effort, implied endorsement and reference points."
+   },
+   {
+    "id": "r15-q07",
+    "type": "match",
+    "prompt": "the claim that no choice can be presented in a neutral way",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "G",
+    "why": "Paragraph G: \"there is no such thing as a neutral design\"."
+   },
+   {
+    "id": "r15-q08",
+    "type": "match",
+    "prompt": "the creation of a government unit applying behavioural research",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "E",
+    "why": "Paragraph E: \"In 2010 the British government created a Behavioural Insights Team, widely known as the nudge unit\"."
+   },
+   {
+    "id": "r15-q09",
+    "type": "table",
+    "prompt": "Table, Organ donation study (opt-in country): recorded consent in Germany was about ______ percent.",
+    "answer": [
+     "12",
+     "12 percent"
+    ],
+    "why": "Paragraph B: \"with Germany at around 12 percent\"."
+   },
+   {
+    "id": "r15-q10",
+    "type": "table",
+    "prompt": "Table, Pension study (result): participation among new staff rose to ______ percent.",
+    "answer": [
+     "86",
+     "86 percent"
+    ],
+    "why": "Paragraph C: \"Participation among new staff rose from about 37 percent to 86 percent\"."
+   },
+   {
+    "id": "r15-q11",
+    "type": "table",
+    "prompt": "Table, Pension study (problem): most stayed at the default contribution rate of ______.",
+    "answer": [
+     "3 percent",
+     "3",
+     "3%"
+    ],
+    "why": "Paragraph C: \"Most of those enrolled automatically remained at the default contribution rate of 3 percent\"."
+   },
+   {
+    "id": "r15-q12",
+    "type": "mcq",
+    "prompt": "According to the implied endorsement explanation, people keep the default because they",
+    "options": [
+     "A. believe it has been recommended by experts.",
+     "B. cannot find the alternative options.",
+     "C. have been legally required to accept it.",
+     "D. have compared all the options carefully."
+    ],
+    "answer": "A",
+    "why": "Paragraph D: \"Many people assume that the default has been chosen by experts and therefore represents sensible advice\". B and C are not mentioned; D describes the standard model the passage rejects."
+   },
+   {
+    "id": "r15-q13",
+    "type": "mcq",
+    "prompt": "Why does the writer mention recent analyses in paragraph F?",
+    "options": [
+     "A. to suggest that many nudges may be weaker than early studies claimed",
+     "B. to prove that defaults have no real effect",
+     "C. to show that nudges are now illegal in Europe",
+     "D. to argue that unpublished studies are more reliable"
+    ],
+    "answer": "A",
+    "why": "Paragraph F: \"the average effect of many nudges may be far smaller than early research implied\". B is contradicted (\"defaults remain among the more robust interventions\"); C overstates a ruling about one kind of consent box; D is not claimed."
+   },
+   {
+    "id": "r15-q14",
+    "type": "mcq",
+    "prompt": "What does the writer say about active choice?",
+    "options": [
+     "A. It avoids assuming what people want but makes them do the work defaults remove.",
+     "B. It is the only neutral form of design.",
+     "C. It has replaced defaults in most pension schemes.",
+     "D. It is a form of manipulation."
+    ],
+    "answer": "A",
+    "why": "Paragraph G: active choice \"avoids presuming what people want, but it imposes the very effort that defaults were designed to remove\". B is contradicted (\"no such thing as a neutral design\"); C and D are not stated."
+   }
+  ]
+ }
+]
