@@ -1,0 +1,1772 @@
+[
+ {
+  "id": "med-001",
+  "topic": "media",
+  "word": "broadcast",
+  "pos": "verb",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "to send out a programme on television or radio",
+  "collocations": [
+   "broadcast live",
+   "broadcast a programme",
+   "broadcast worldwide"
+  ],
+  "paraphrases": [
+   "air",
+   "transmit"
+  ],
+  "example": "The final match will be broadcast live to more than a hundred countries."
+ },
+ {
+  "id": "med-002",
+  "topic": "media",
+  "word": "headline",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the title of a newspaper story, printed in large letters",
+  "collocations": [
+   "catch the headlines",
+   "front-page headline",
+   "make headlines"
+  ],
+  "paraphrases": [
+   "title of an article",
+   "main heading"
+  ],
+  "example": "A dramatic headline can persuade readers to buy a paper even when the story itself is weak."
+ },
+ {
+  "id": "med-003",
+  "topic": "media",
+  "word": "tabloid",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a newspaper with small pages that focuses on sensational stories and celebrities",
+  "collocations": [
+   "tabloid newspaper",
+   "tabloid press",
+   "tabloid headline"
+  ],
+  "paraphrases": [
+   "popular newspaper",
+   "gossip paper"
+  ],
+  "example": "The tabloid ran a front-page story about the singer's divorce for a week."
+ },
+ {
+  "id": "med-004",
+  "topic": "media",
+  "word": "broadsheet",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a large-format newspaper that gives serious and detailed coverage of news",
+  "collocations": [
+   "quality broadsheet",
+   "broadsheet newspaper",
+   "broadsheet editor"
+  ],
+  "paraphrases": [
+   "serious newspaper",
+   "quality paper"
+  ],
+  "example": "Readers of the broadsheet expect long analysis rather than short stories about celebrities."
+ },
+ {
+  "id": "med-005",
+  "topic": "media",
+  "word": "journalism",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "the work of collecting and writing news for the media",
+  "collocations": [
+   "investigative journalism",
+   "quality journalism",
+   "print journalism"
+  ],
+  "paraphrases": [
+   "news reporting",
+   "the press"
+  ],
+  "example": "Investigative journalism has exposed corruption that official inquiries had failed to find."
+ },
+ {
+  "id": "med-006",
+  "topic": "media",
+  "word": "correspondent",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "a journalist who reports on a particular subject or from a foreign place",
+  "collocations": [
+   "foreign correspondent",
+   "war correspondent",
+   "political correspondent"
+  ],
+  "paraphrases": [
+   "reporter",
+   "overseas reporter"
+  ],
+  "example": "The foreign correspondent sent daily reports from the capital throughout the crisis."
+ },
+ {
+  "id": "med-007",
+  "topic": "media",
+  "word": "editorial",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a newspaper article in which the editors give their opinion on a topic",
+  "collocations": [
+   "write an editorial",
+   "editorial comment",
+   "editorial column"
+  ],
+  "paraphrases": [
+   "leading article",
+   "opinion piece"
+  ],
+  "example": "The newspaper's editorial criticised the plan as expensive and poorly thought through."
+ },
+ {
+  "id": "med-008",
+  "topic": "media",
+  "word": "columnist",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a journalist who writes a regular article on a particular subject",
+  "collocations": [
+   "newspaper columnist",
+   "political columnist",
+   "regular columnist"
+  ],
+  "paraphrases": [
+   "opinion writer",
+   "regular contributor"
+  ],
+  "example": "The columnist argued that television news has become too focused on entertainment."
+ },
+ {
+  "id": "med-009",
+  "topic": "media",
+  "word": "circulation",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the number of copies of a newspaper or magazine sold",
+  "collocations": [
+   "falling circulation",
+   "newspaper circulation",
+   "boost circulation"
+  ],
+  "paraphrases": [
+   "number of copies sold",
+   "sales figures"
+  ],
+  "example": "Printed newspapers have seen their circulation fall as readers turn to online news."
+ },
+ {
+  "id": "med-010",
+  "topic": "media",
+  "word": "readership",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the total number of people who read a particular publication",
+  "collocations": [
+   "loyal readership",
+   "growing readership",
+   "wide readership"
+  ],
+  "paraphrases": [
+   "audience of readers",
+   "the people who read it"
+  ],
+  "example": "The magazine has a young readership, with most readers aged between eighteen and thirty."
+ },
+ {
+  "id": "med-011",
+  "topic": "media",
+  "word": "subscription",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "an arrangement to pay in advance to receive a publication or service regularly",
+  "collocations": [
+   "annual subscription",
+   "cancel a subscription",
+   "digital subscription"
+  ],
+  "paraphrases": [
+   "regular payment plan",
+   "membership fee"
+  ],
+  "example": "An annual subscription to the magazine costs less than buying each issue separately."
+ },
+ {
+  "id": "med-012",
+  "topic": "media",
+  "word": "press freedom",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the right of newspapers and journalists to report without government control",
+  "collocations": [
+   "defend press freedom",
+   "restrict press freedom",
+   "threat to press freedom"
+  ],
+  "paraphrases": [
+   "freedom of the press",
+   "media independence"
+  ],
+  "example": "Press freedom is essential for a democracy because it allows citizens to question their leaders."
+ },
+ {
+  "id": "med-013",
+  "topic": "media",
+  "word": "censorship",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the control of what the public may see or read, often by a government",
+  "collocations": [
+   "government censorship",
+   "strict censorship",
+   "impose censorship"
+  ],
+  "paraphrases": [
+   "suppression of information",
+   "state control of content"
+  ],
+  "example": "Censorship of the news makes it hard for ordinary people to know what is really happening."
+ },
+ {
+  "id": "med-014",
+  "topic": "media",
+  "word": "sensationalist",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "designed to shock or excite the public, often by exaggerating",
+  "collocations": [
+   "sensationalist coverage",
+   "sensationalist headline",
+   "sensationalist reporting"
+  ],
+  "paraphrases": [
+   "lurid",
+   "over-dramatic"
+  ],
+  "example": "Sensationalist reporting can create public panic about risks that are in fact very small."
+ },
+ {
+  "id": "med-015",
+  "topic": "media",
+  "word": "bias",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "an unfair preference for one side that affects how information is presented",
+  "collocations": [
+   "media bias",
+   "political bias",
+   "show bias"
+  ],
+  "paraphrases": [
+   "partiality",
+   "prejudice"
+  ],
+  "example": "Viewers should be aware of bias when a channel is owned by a political party."
+ },
+ {
+  "id": "med-016",
+  "topic": "media",
+  "word": "impartial",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "treating all sides fairly and not favouring any of them",
+  "collocations": [
+   "impartial coverage",
+   "remain impartial",
+   "impartial reporting"
+  ],
+  "paraphrases": [
+   "neutral",
+   "unbiased"
+  ],
+  "example": "Public broadcasters are expected to give impartial coverage of every election."
+ },
+ {
+  "id": "med-017",
+  "topic": "media",
+  "word": "objectivity",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the quality of being based on facts rather than personal feelings",
+  "collocations": [
+   "journalistic objectivity",
+   "maintain objectivity",
+   "lack objectivity"
+  ],
+  "paraphrases": [
+   "impartiality",
+   "neutrality"
+  ],
+  "example": "Complete objectivity is difficult because journalists choose which facts to include."
+ },
+ {
+  "id": "med-018",
+  "topic": "media",
+  "word": "credibility",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the quality of being trusted and believed",
+  "collocations": [
+   "lose credibility",
+   "damage credibility",
+   "gain credibility"
+  ],
+  "paraphrases": [
+   "trustworthiness",
+   "reliability"
+  ],
+  "example": "A newspaper loses credibility if it publishes a story before checking the facts."
+ },
+ {
+  "id": "med-019",
+  "topic": "media",
+  "word": "misinformation",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "false or inaccurate information that is spread, whether deliberately or not",
+  "collocations": [
+   "spread misinformation",
+   "combat misinformation",
+   "health misinformation"
+  ],
+  "paraphrases": [
+   "inaccurate reports",
+   "false information"
+  ],
+  "example": "Misinformation about vaccines spread rapidly through online groups during the outbreak."
+ },
+ {
+  "id": "med-020",
+  "topic": "media",
+  "word": "disinformation",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "false information that is spread deliberately to deceive people",
+  "collocations": [
+   "disinformation campaign",
+   "spread disinformation",
+   "political disinformation"
+  ],
+  "paraphrases": [
+   "deliberate falsehoods",
+   "intentionally misleading content"
+  ],
+  "example": "A foreign disinformation campaign tried to influence the outcome of the vote."
+ },
+ {
+  "id": "med-021",
+  "topic": "media",
+  "word": "fake news",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "false stories that appear to be real news, often spread online",
+  "collocations": [
+   "spread fake news",
+   "combat fake news",
+   "fake news story"
+  ],
+  "paraphrases": [
+   "false reports",
+   "fabricated stories"
+  ],
+  "example": "Many teenagers say they cannot tell the difference between fake news and genuine reports."
+ },
+ {
+  "id": "med-022",
+  "topic": "media",
+  "word": "propaganda",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "information used to promote a political cause or point of view, often misleading",
+  "collocations": [
+   "political propaganda",
+   "government propaganda",
+   "propaganda campaign"
+  ],
+  "paraphrases": [
+   "one-sided publicity",
+   "persuasive messaging"
+  ],
+  "example": "During the war, posters and radio broadcasts were used as propaganda to raise morale."
+ },
+ {
+  "id": "med-023",
+  "topic": "media",
+  "word": "hype",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "exaggerated publicity intended to attract public attention",
+  "collocations": [
+   "media hype",
+   "live up to the hype",
+   "overblown hype"
+  ],
+  "paraphrases": [
+   "excessive publicity",
+   "exaggerated promotion"
+  ],
+  "example": "The film failed to live up to the hype that surrounded its release."
+ },
+ {
+  "id": "med-024",
+  "topic": "media",
+  "word": "clickbait",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "online content designed to attract attention and encourage people to click a link",
+  "collocations": [
+   "resort to clickbait",
+   "clickbait headline",
+   "clickbait article"
+  ],
+  "paraphrases": [
+   "attention-grabbing online content",
+   "sensational link title"
+  ],
+  "example": "Clickbait headlines promise a surprise but usually deliver very little real information."
+ },
+ {
+  "id": "med-025",
+  "topic": "media",
+  "word": "endorsement",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "public support for a product by a famous person",
+  "collocations": [
+   "celebrity endorsement",
+   "endorsement deal",
+   "product endorsement"
+  ],
+  "paraphrases": [
+   "public backing",
+   "approval by a star"
+  ],
+  "example": "A celebrity endorsement can double sales of a sports drink within months."
+ },
+ {
+  "id": "med-026",
+  "topic": "media",
+  "word": "sponsorship",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "financial support given to an event or programme in exchange for advertising",
+  "collocations": [
+   "corporate sponsorship",
+   "sponsorship deal",
+   "secure sponsorship"
+  ],
+  "paraphrases": [
+   "financial backing",
+   "commercial funding"
+  ],
+  "example": "Commercial sponsorship of television shows can influence the topics that producers choose."
+ },
+ {
+  "id": "med-027",
+  "topic": "media",
+  "word": "target audience",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "the particular group of people at whom a product or programme is aimed",
+  "collocations": [
+   "reach a target audience",
+   "appeal to the target audience",
+   "young target audience"
+  ],
+  "paraphrases": [
+   "intended viewers",
+   "intended market"
+  ],
+  "example": "Advertisers research their target audience carefully before choosing which channel to use."
+ },
+ {
+  "id": "med-028",
+  "topic": "media",
+  "word": "prime time",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the hours in the evening when the largest number of people watch television",
+  "collocations": [
+   "prime time viewing",
+   "prime time slot",
+   "in prime time"
+  ],
+  "paraphrases": [
+   "peak viewing hours",
+   "evening peak"
+  ],
+  "example": "Advertising during prime time is far more expensive than during the afternoon."
+ },
+ {
+  "id": "med-029",
+  "topic": "media",
+  "word": "documentary",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a film or programme that presents real events and facts",
+  "collocations": [
+   "nature documentary",
+   "watch a documentary",
+   "award-winning documentary"
+  ],
+  "paraphrases": [
+   "factual film",
+   "non-fiction programme"
+  ],
+  "example": "The documentary followed three refugee families for five years."
+ },
+ {
+  "id": "med-030",
+  "topic": "media",
+  "word": "soap opera",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a television drama series about the daily lives of a group of characters",
+  "collocations": [
+   "popular soap opera",
+   "soap opera star",
+   "long-running soap opera"
+  ],
+  "paraphrases": [
+   "continuing TV drama",
+   "serial drama"
+  ],
+  "example": "My grandmother has watched the same soap opera every evening for thirty years."
+ },
+ {
+  "id": "med-031",
+  "topic": "media",
+  "word": "reality show",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "a television programme that follows real people in unscripted situations",
+  "collocations": [
+   "reality show contestant",
+   "reality show host",
+   "popular reality show"
+  ],
+  "paraphrases": [
+   "unscripted programme",
+   "real-life TV series"
+  ],
+  "example": "Critics say that every reality show rewards conflict because it increases ratings."
+ },
+ {
+  "id": "med-032",
+  "topic": "media",
+  "word": "current affairs",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "political and social events that are happening now",
+  "collocations": [
+   "current affairs programme",
+   "keep up with current affairs",
+   "current affairs show"
+  ],
+  "paraphrases": [
+   "contemporary events",
+   "recent news"
+  ],
+  "example": "Young people who follow current affairs tend to be more active in local politics."
+ },
+ {
+  "id": "med-033",
+  "topic": "media",
+  "word": "news bulletin",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "reading",
+   "listening"
+  ],
+  "definition": "a short broadcast report of the latest news",
+  "collocations": [
+   "hourly news bulletin",
+   "evening news bulletin",
+   "radio news bulletin"
+  ],
+  "paraphrases": [
+   "brief news report",
+   "news summary"
+  ],
+  "example": "The radio station broadcasts a news bulletin at the start of every hour."
+ },
+ {
+  "id": "med-034",
+  "topic": "media",
+  "word": "live coverage",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "reports on an event that are broadcast as it happens",
+  "collocations": [
+   "provide live coverage",
+   "live coverage of the match",
+   "round-the-clock live coverage"
+  ],
+  "paraphrases": [
+   "real-time reporting",
+   "direct broadcast"
+  ],
+  "example": "Live coverage of the election results kept viewers awake until dawn."
+ },
+ {
+  "id": "med-035",
+  "topic": "media",
+  "word": "media coverage",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the amount and kind of attention that an issue receives from news organisations",
+  "collocations": [
+   "extensive media coverage",
+   "intense media coverage",
+   "attract media coverage"
+  ],
+  "paraphrases": [
+   "press attention",
+   "news reporting"
+  ],
+  "example": "Heavy media coverage of the trial turned the defendant into a household name."
+ },
+ {
+  "id": "med-036",
+  "topic": "media",
+  "word": "scoop",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "an important news story that one newspaper gets before its rivals",
+  "collocations": [
+   "land a scoop",
+   "exclusive scoop",
+   "journalistic scoop"
+  ],
+  "paraphrases": [
+   "exclusive story",
+   "first report"
+  ],
+  "example": "The reporter got a scoop when she obtained the minister's private letter."
+ },
+ {
+  "id": "med-037",
+  "topic": "media",
+  "word": "exposé",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a news report that reveals something shocking or hidden",
+  "collocations": [
+   "newspaper exposé",
+   "publish an exposé",
+   "exposé of corruption"
+  ],
+  "paraphrases": [
+   "revelation",
+   "investigative report"
+  ],
+  "example": "A newspaper exposé revealed that the company had been dumping waste in the river."
+ },
+ {
+  "id": "med-038",
+  "topic": "media",
+  "word": "paparazzi",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "photographers who follow famous people to take pictures of them",
+  "collocations": [
+   "chased by paparazzi",
+   "paparazzi photographs",
+   "hounded by paparazzi"
+  ],
+  "paraphrases": [
+   "celebrity photographers",
+   "press photographers"
+  ],
+  "example": "The actress said that the paparazzi followed her everywhere, even to her children's school."
+ },
+ {
+  "id": "med-039",
+  "topic": "media",
+  "word": "celebrity",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a famous person, especially in entertainment or sport",
+  "collocations": [
+   "celebrity chef",
+   "celebrity culture",
+   "minor celebrity"
+  ],
+  "paraphrases": [
+   "famous person",
+   "star"
+  ],
+  "example": "Celebrity culture encourages young people to value fame more than hard work."
+ },
+ {
+  "id": "med-040",
+  "topic": "media",
+  "word": "gossip",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "casual talk about other people's private lives, often not true",
+  "collocations": [
+   "celebrity gossip",
+   "gossip column",
+   "spread gossip"
+  ],
+  "paraphrases": [
+   "rumours",
+   "idle chat"
+  ],
+  "example": "Magazines full of gossip about film stars sell well at supermarket checkouts."
+ },
+ {
+  "id": "med-041",
+  "topic": "media",
+  "word": "intrusive",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "disturbing a person's private life in an unwelcome way",
+  "collocations": [
+   "intrusive questions",
+   "intrusive press",
+   "intrusive coverage"
+  ],
+  "paraphrases": [
+   "invasive",
+   "prying"
+  ],
+  "example": "Intrusive reporting about the family's grief caused widespread public anger."
+ },
+ {
+  "id": "med-042",
+  "topic": "media",
+  "word": "invasion of privacy",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the act of disturbing a person's private life without their permission",
+  "collocations": [
+   "constitute an invasion of privacy",
+   "serious invasion of privacy",
+   "feel like an invasion of privacy"
+  ],
+  "paraphrases": [
+   "intrusion into private life",
+   "violation of personal privacy"
+  ],
+  "example": "Publishing the couple's private photographs was ruled an invasion of privacy by the court."
+ },
+ {
+  "id": "med-043",
+  "topic": "media",
+  "word": "libel",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the publication of false statements that damage a person's reputation",
+  "collocations": [
+   "sue for libel",
+   "libel case",
+   "libel laws"
+  ],
+  "paraphrases": [
+   "written defamation",
+   "false printed accusation"
+  ],
+  "example": "The newspaper paid damages after the businessman successfully sued for libel."
+ },
+ {
+  "id": "med-044",
+  "topic": "media",
+  "word": "defamation",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the act of harming someone's reputation by making false statements",
+  "collocations": [
+   "defamation case",
+   "sue for defamation",
+   "accused of defamation"
+  ],
+  "paraphrases": [
+   "slander",
+   "damaging false claims"
+  ],
+  "example": "The politician launched a defamation case against the magazine that accused him of bribery."
+ },
+ {
+  "id": "med-045",
+  "topic": "media",
+  "word": "public opinion",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the views held by most ordinary people about a subject",
+  "collocations": [
+   "shape public opinion",
+   "sway public opinion",
+   "public opinion poll"
+  ],
+  "paraphrases": [
+   "popular feeling",
+   "general view"
+  ],
+  "example": "Newspapers can shape public opinion by choosing which stories appear on the front page."
+ },
+ {
+  "id": "med-046",
+  "topic": "media",
+  "word": "opinion poll",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "a survey that asks a sample of people what they think about a topic",
+  "collocations": [
+   "conduct an opinion poll",
+   "latest opinion poll",
+   "opinion poll results"
+  ],
+  "paraphrases": [
+   "public survey",
+   "questionnaire survey"
+  ],
+  "example": "The latest opinion poll shows that most voters distrust the national press."
+ },
+ {
+  "id": "med-047",
+  "topic": "media",
+  "word": "viral",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "spreading very quickly and widely through the internet",
+  "collocations": [
+   "go viral",
+   "viral video",
+   "viral campaign"
+  ],
+  "paraphrases": [
+   "widely shared",
+   "spreading rapidly"
+  ],
+  "example": "The clip went viral within hours and was watched by millions of people."
+ },
+ {
+  "id": "med-048",
+  "topic": "media",
+  "word": "trending",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "currently popular and being discussed a great deal online",
+  "collocations": [
+   "trending topic",
+   "trending hashtag",
+   "trending on social media"
+  ],
+  "paraphrases": [
+   "currently popular",
+   "widely discussed"
+  ],
+  "example": "A trending hashtag can turn a local protest into a national story overnight."
+ },
+ {
+  "id": "med-049",
+  "topic": "media",
+  "word": "influencer",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a person who affects what others buy or do through their online following",
+  "collocations": [
+   "social media influencer",
+   "influencer marketing",
+   "beauty influencer"
+  ],
+  "paraphrases": [
+   "online personality",
+   "content creator"
+  ],
+  "example": "Brands pay an influencer to recommend products to a large number of followers."
+ },
+ {
+  "id": "med-050",
+  "topic": "media",
+  "word": "follower",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a person who subscribes to someone's online account to see their posts",
+  "collocations": [
+   "gain followers",
+   "thousands of followers",
+   "loyal followers"
+  ],
+  "paraphrases": [
+   "subscriber",
+   "fan"
+  ],
+  "example": "She gained a million followers after sharing a video about her cooking."
+ },
+ {
+  "id": "med-051",
+  "topic": "media",
+  "word": "binge-watch",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "to watch many episodes of a television series one after another",
+  "collocations": [
+   "binge-watch a series",
+   "binge-watch episodes",
+   "tend to binge-watch"
+  ],
+  "paraphrases": [
+   "watch back-to-back",
+   "marathon view"
+  ],
+  "example": "On rainy weekends my friends and I like to binge-watch a whole season of a drama."
+ },
+ {
+  "id": "med-052",
+  "topic": "media",
+  "word": "couch potato",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a person who spends a lot of time sitting watching television",
+  "collocations": [
+   "become a couch potato",
+   "a real couch potato",
+   "couch potato lifestyle"
+  ],
+  "paraphrases": [
+   "lazy viewer",
+   "sedentary television watcher"
+  ],
+  "example": "If children spend six hours a day on screens, they risk turning into couch potatoes."
+ },
+ {
+  "id": "med-053",
+  "topic": "media",
+  "word": "passive",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "accepting what happens without taking action",
+  "collocations": [
+   "passive viewer",
+   "passive consumption",
+   "passive audience"
+  ],
+  "paraphrases": [
+   "inactive",
+   "receptive"
+  ],
+  "example": "Television makes viewers passive, because they simply receive what is shown."
+ },
+ {
+  "id": "med-054",
+  "topic": "media",
+  "word": "desensitise",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to make someone less able to feel strong emotions about something",
+  "collocations": [
+   "desensitise viewers",
+   "become desensitised",
+   "desensitise children to violence"
+  ],
+  "paraphrases": [
+   "make less responsive",
+   "harden"
+  ],
+  "example": "Constant exposure to violent images may desensitise young viewers to real suffering."
+ },
+ {
+  "id": "med-055",
+  "topic": "media",
+  "word": "portray",
+  "pos": "verb",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to show or describe someone or something in a particular way",
+  "collocations": [
+   "portray as",
+   "portray accurately",
+   "portray negatively"
+  ],
+  "paraphrases": [
+   "represent",
+   "depict"
+  ],
+  "example": "Films often portray scientists as lonely geniuses, which does not reflect reality."
+ },
+ {
+  "id": "med-056",
+  "topic": "media",
+  "word": "depict",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to show something in a picture, film or piece of writing",
+  "collocations": [
+   "depict a scene",
+   "depict accurately",
+   "vividly depict"
+  ],
+  "paraphrases": [
+   "portray",
+   "illustrate"
+  ],
+  "example": "The documentary depicts daily life in a remote fishing village with great sensitivity."
+ },
+ {
+  "id": "med-057",
+  "topic": "media",
+  "word": "glamorise",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to make something seem more attractive or exciting than it really is",
+  "collocations": [
+   "glamorise violence",
+   "glamorise smoking",
+   "tend to glamorise"
+  ],
+  "paraphrases": [
+   "romanticise",
+   "make appealing"
+  ],
+  "example": "Some music videos glamorise an expensive lifestyle that most viewers can never afford."
+ },
+ {
+  "id": "med-058",
+  "topic": "media",
+  "word": "stereotype",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a fixed and oversimplified idea about a type of person or thing",
+  "collocations": [
+   "gender stereotype",
+   "challenge a stereotype",
+   "reinforce stereotypes"
+  ],
+  "paraphrases": [
+   "clichéd image",
+   "generalisation"
+  ],
+  "example": "Advertisements that show women only as housewives reinforce an outdated stereotype."
+ },
+ {
+  "id": "med-059",
+  "topic": "media",
+  "word": "manipulate",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to control or influence people or information in a clever, unfair way",
+  "collocations": [
+   "manipulate public opinion",
+   "manipulate the facts",
+   "manipulate the audience"
+  ],
+  "paraphrases": [
+   "exploit",
+   "distort"
+  ],
+  "example": "Governments can manipulate the news to hide their failures from the public."
+ },
+ {
+  "id": "med-060",
+  "topic": "media",
+  "word": "sway",
+  "pos": "verb",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "to influence someone's opinion or decision",
+  "collocations": [
+   "sway voters",
+   "sway opinion",
+   "easily swayed"
+  ],
+  "paraphrases": [
+   "influence",
+   "persuade"
+  ],
+  "example": "Emotional stories can sway readers more than statistics and expert arguments."
+ },
+ {
+  "id": "med-061",
+  "topic": "media",
+  "word": "informative",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "giving a lot of useful facts or ideas",
+  "collocations": [
+   "highly informative",
+   "informative programme",
+   "informative article"
+  ],
+  "paraphrases": [
+   "instructive",
+   "enlightening"
+  ],
+  "example": "The museum's website is informative and easy to navigate."
+ },
+ {
+  "id": "med-062",
+  "topic": "media",
+  "word": "thought-provoking",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "making people think seriously about a subject",
+  "collocations": [
+   "thought-provoking film",
+   "thought-provoking article",
+   "thought-provoking question"
+  ],
+  "paraphrases": [
+   "stimulating",
+   "intellectually challenging"
+  ],
+  "example": "The thought-provoking documentary encouraged viewers to question their own shopping habits."
+ },
+ {
+  "id": "med-063",
+  "topic": "media",
+  "word": "gripping",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "so exciting or interesting that it holds your attention",
+  "collocations": [
+   "gripping story",
+   "gripping thriller",
+   "gripping documentary"
+  ],
+  "paraphrases": [
+   "absorbing",
+   "enthralling"
+  ],
+  "example": "I found the new thriller so gripping that I read it in one night."
+ },
+ {
+  "id": "med-064",
+  "topic": "media",
+  "word": "riveting",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "extremely interesting and holding your complete attention",
+  "collocations": [
+   "riveting performance",
+   "riveting drama",
+   "absolutely riveting"
+  ],
+  "paraphrases": [
+   "fascinating",
+   "spellbinding"
+  ],
+  "example": "Her speech was riveting, and nobody in the hall looked at a phone."
+ },
+ {
+  "id": "med-065",
+  "topic": "media",
+  "word": "compelling",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "so interesting or convincing that people cannot ignore it",
+  "collocations": [
+   "compelling evidence",
+   "compelling story",
+   "compelling argument"
+  ],
+  "paraphrases": [
+   "persuasive",
+   "captivating"
+  ],
+  "example": "The article offers a compelling argument for reducing the amount of advertising aimed at children."
+ },
+ {
+  "id": "med-066",
+  "topic": "media",
+  "word": "mainstream",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "accepted by most people and typical of the majority",
+  "collocations": [
+   "mainstream media",
+   "mainstream culture",
+   "mainstream audience"
+  ],
+  "paraphrases": [
+   "conventional",
+   "widely accepted"
+  ],
+  "example": "Ideas that were once on the margins have been taken up by mainstream newspapers."
+ },
+ {
+  "id": "med-067",
+  "topic": "media",
+  "word": "niche",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "appealing to a small specialised group of people",
+  "collocations": [
+   "niche market",
+   "niche audience",
+   "niche magazine"
+  ],
+  "paraphrases": [
+   "specialist",
+   "narrowly targeted"
+  ],
+  "example": "Podcasts on specialist hobbies attract a small but loyal niche audience."
+ },
+ {
+  "id": "med-068",
+  "topic": "media",
+  "word": "outlet",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a newspaper, channel or website through which information is communicated",
+  "collocations": [
+   "media outlet",
+   "news outlet",
+   "broadcast outlet"
+  ],
+  "paraphrases": [
+   "publication",
+   "channel"
+  ],
+  "example": "A single owner now controls several leading media outlets in the country."
+ },
+ {
+  "id": "med-069",
+  "topic": "media",
+  "word": "media mogul",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a very powerful and wealthy owner of newspapers and television companies",
+  "collocations": [
+   "powerful media mogul",
+   "media mogul's empire",
+   "influential media mogul"
+  ],
+  "paraphrases": [
+   "press baron",
+   "broadcasting tycoon"
+  ],
+  "example": "The media mogul used his newspapers to support the party that promised him lower taxes."
+ },
+ {
+  "id": "med-070",
+  "topic": "media",
+  "word": "press release",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "an official statement given to journalists by an organisation",
+  "collocations": [
+   "issue a press release",
+   "publish a press release",
+   "company press release"
+  ],
+  "paraphrases": [
+   "official statement to the media",
+   "announcement for reporters"
+  ],
+  "example": "The company issued a press release to deny the rumours of an imminent takeover."
+ },
+ {
+  "id": "med-071",
+  "topic": "media",
+  "word": "feature article",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a long piece in a newspaper or magazine that covers a subject in depth",
+  "collocations": [
+   "write a feature article",
+   "weekend feature article",
+   "in-depth feature article"
+  ],
+  "paraphrases": [
+   "in-depth report",
+   "long-form piece"
+  ],
+  "example": "The magazine's feature article about the housing crisis was shared more than any other story that year."
+ },
+ {
+  "id": "med-072",
+  "topic": "media",
+  "word": "subtitle",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "translated words shown at the bottom of the screen during a film",
+  "collocations": [
+   "with subtitles",
+   "read subtitles",
+   "English subtitles"
+  ],
+  "paraphrases": [
+   "on-screen translation",
+   "caption"
+  ],
+  "example": "Subtitles let people watch foreign films without losing the original actors' voices."
+ },
+ {
+  "id": "med-073",
+  "topic": "media",
+  "word": "ratings",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "figures that show how many people watch or listen to a programme",
+  "collocations": [
+   "high ratings",
+   "boost ratings",
+   "television ratings"
+  ],
+  "paraphrases": [
+   "viewing figures",
+   "audience figures"
+  ],
+  "example": "Falling ratings led the broadcaster to cancel the show after only one series."
+ },
+ {
+  "id": "med-074",
+  "topic": "media",
+  "word": "cliffhanger",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "an exciting ending that leaves the audience wanting to know what happens next",
+  "collocations": [
+   "end on a cliffhanger",
+   "dramatic cliffhanger",
+   "season cliffhanger"
+  ],
+  "paraphrases": [
+   "suspenseful ending",
+   "unresolved ending"
+  ],
+  "example": "Each episode ended with a cliffhanger, which made it almost impossible to stop watching."
+ },
+ {
+  "id": "med-075",
+  "topic": "media",
+  "word": "voiceover",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "spoken comments in a film or advert by someone who is not seen on screen",
+  "collocations": [
+   "provide the voiceover",
+   "documentary voiceover",
+   "narrator's voiceover"
+  ],
+  "paraphrases": [
+   "off-screen narration",
+   "narration"
+  ],
+  "example": "The famous naturalist provided the voiceover for the wildlife series."
+ },
+ {
+  "id": "med-076",
+  "topic": "media",
+  "word": "commercial",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "an advertisement on television or radio",
+  "collocations": [
+   "television commercial",
+   "commercial break",
+   "radio commercial"
+  ],
+  "paraphrases": [
+   "advertisement",
+   "advert"
+  ],
+  "example": "The commercial for the new phone was shown during every break in the football match."
+ },
+ {
+  "id": "med-077",
+  "topic": "media",
+  "word": "advertiser",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a person or company that pays to promote products in the media",
+  "collocations": [
+   "major advertiser",
+   "attract advertisers",
+   "advertiser pressure"
+  ],
+  "paraphrases": [
+   "promoter",
+   "commercial sponsor"
+  ],
+  "example": "Newspapers depend on advertisers, which can make editors cautious about criticising them."
+ },
+ {
+  "id": "med-078",
+  "topic": "media",
+  "word": "newsreader",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a person who reads the news on television or radio",
+  "collocations": [
+   "television newsreader",
+   "trusted newsreader",
+   "lead newsreader"
+  ],
+  "paraphrases": [
+   "news presenter",
+   "news anchor"
+  ],
+  "example": "The newsreader apologised on air for reading an incorrect headline."
+ },
+ {
+  "id": "med-079",
+  "topic": "media",
+  "word": "paywall",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "a system that stops people reading a website's content unless they pay",
+  "collocations": [
+   "behind a paywall",
+   "introduce a paywall",
+   "paywall subscribers"
+  ],
+  "paraphrases": [
+   "payment barrier",
+   "subscription barrier"
+  ],
+  "example": "Many online newspapers have introduced a paywall because advertising income alone is no longer enough."
+ }
+]

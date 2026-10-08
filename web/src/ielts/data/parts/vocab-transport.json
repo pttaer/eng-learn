@@ -1,0 +1,1779 @@
+[
+ {
+  "id": "tra-001",
+  "topic": "transport",
+  "word": "commuter",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a person who travels regularly between their home and their place of work",
+  "collocations": [
+   "daily commuter",
+   "commuter train",
+   "commuter belt"
+  ],
+  "paraphrases": [
+   "regular traveller to work",
+   "daily traveller"
+  ],
+  "example": "Thousands of commuters were stranded when signalling problems closed the main line."
+ },
+ {
+  "id": "tra-002",
+  "topic": "transport",
+  "word": "commute",
+  "pos": "verb",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "to travel regularly between home and work",
+  "collocations": [
+   "commute to work",
+   "commute daily",
+   "commute by train"
+  ],
+  "paraphrases": [
+   "travel to work",
+   "make the daily journey"
+  ],
+  "example": "I commute forty minutes each way, so I usually use the time to read."
+ },
+ {
+  "id": "tra-003",
+  "topic": "transport",
+  "word": "congestion",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a condition of having too much traffic so that vehicles move very slowly",
+  "collocations": [
+   "traffic congestion",
+   "ease congestion",
+   "severe congestion"
+  ],
+  "paraphrases": [
+   "heavy traffic",
+   "jammed roads"
+  ],
+  "example": "Traffic congestion costs the economy billions each year in lost working time."
+ },
+ {
+  "id": "tra-004",
+  "topic": "transport",
+  "word": "gridlock",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a situation in which traffic cannot move at all because roads are blocked",
+  "collocations": [
+   "city gridlock",
+   "total gridlock",
+   "cause gridlock"
+  ],
+  "paraphrases": [
+   "standstill",
+   "complete traffic blockage"
+  ],
+  "example": "A burst water main caused gridlock across the city centre on Monday morning."
+ },
+ {
+  "id": "tra-005",
+  "topic": "transport",
+  "word": "rush hour",
+  "pos": "phrase",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "the time of day when roads and trains are busiest because people travel to or from work",
+  "collocations": [
+   "during rush hour",
+   "rush hour traffic",
+   "avoid the rush hour"
+  ],
+  "paraphrases": [
+   "peak travel time",
+   "busiest time of day"
+  ],
+  "example": "I try to leave early so that I can avoid the rush hour on the underground."
+ },
+ {
+  "id": "tra-006",
+  "topic": "transport",
+  "word": "public transport",
+  "pos": "phrase",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "buses, trains and other vehicles that are available to everyone and run on fixed routes",
+  "collocations": [
+   "use public transport",
+   "public transport network",
+   "reliable public transport"
+  ],
+  "paraphrases": [
+   "mass transit",
+   "shared passenger services"
+  ],
+  "example": "Cheap and frequent public transport persuades many people to leave their cars at home."
+ },
+ {
+  "id": "tra-007",
+  "topic": "transport",
+  "word": "infrastructure",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the basic systems and structures, such as roads and railways, that a country needs",
+  "collocations": [
+   "transport infrastructure",
+   "invest in infrastructure",
+   "ageing infrastructure"
+  ],
+  "paraphrases": [
+   "basic facilities",
+   "physical networks"
+  ],
+  "example": "Investment in transport infrastructure is needed if rural areas are to attract new businesses."
+ },
+ {
+  "id": "tra-008",
+  "topic": "transport",
+  "word": "motorway",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a wide road designed for fast traffic over long distances",
+  "collocations": [
+   "motorway junction",
+   "motorway services",
+   "drive on a motorway"
+  ],
+  "paraphrases": [
+   "expressway",
+   "highway"
+  ],
+  "example": "The new motorway cut the journey between the two cities from four hours to two."
+ },
+ {
+  "id": "tra-009",
+  "topic": "transport",
+  "word": "ring road",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "a road that goes around a town or city to keep traffic away from the centre",
+  "collocations": [
+   "build a ring road",
+   "ring road traffic",
+   "outer ring road"
+  ],
+  "paraphrases": [
+   "orbital road",
+   "beltway"
+  ],
+  "example": "A ring road was built so that lorries no longer have to pass through the old market town."
+ },
+ {
+  "id": "tra-010",
+  "topic": "transport",
+  "word": "bypass",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a road that goes around a town rather than through it",
+  "collocations": [
+   "build a bypass",
+   "town bypass",
+   "bypass route"
+  ],
+  "paraphrases": [
+   "relief road",
+   "diversion road"
+  ],
+  "example": "Since the bypass opened, the high street has become much quieter and safer."
+ },
+ {
+  "id": "tra-011",
+  "topic": "transport",
+  "word": "flyover",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a bridge that carries one road over another",
+  "collocations": [
+   "build a flyover",
+   "motorway flyover",
+   "under the flyover"
+  ],
+  "paraphrases": [
+   "overpass",
+   "elevated road"
+  ],
+  "example": "A new flyover will reduce delays at one of the city's busiest junctions."
+ },
+ {
+  "id": "tra-012",
+  "topic": "transport",
+  "word": "pedestrian",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a person who is walking rather than travelling in a vehicle",
+  "collocations": [
+   "pedestrian crossing",
+   "pedestrian zone",
+   "injured pedestrian"
+  ],
+  "paraphrases": [
+   "person on foot",
+   "walker"
+  ],
+  "example": "Pedestrians are most at risk where roads are wide and drivers travel quickly."
+ },
+ {
+  "id": "tra-013",
+  "topic": "transport",
+  "word": "cyclist",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a person who rides a bicycle",
+  "collocations": [
+   "keen cyclist",
+   "cyclist safety",
+   "urban cyclist"
+  ],
+  "paraphrases": [
+   "person on a bike",
+   "bike rider"
+  ],
+  "example": "The council has painted lanes on the road to protect cyclists from fast traffic."
+ },
+ {
+  "id": "tra-014",
+  "topic": "transport",
+  "word": "toll",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a payment made to use a road, bridge or tunnel",
+  "collocations": [
+   "pay a toll",
+   "toll road",
+   "toll booth"
+  ],
+  "paraphrases": [
+   "road charge",
+   "crossing fee"
+  ],
+  "example": "Drivers must pay a toll to use the bridge, which helps cover its maintenance costs."
+ },
+ {
+  "id": "tra-015",
+  "topic": "transport",
+  "word": "congestion charge",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a fee that drivers must pay to enter a busy part of a city",
+  "collocations": [
+   "introduce a congestion charge",
+   "pay the congestion charge",
+   "congestion charge zone"
+  ],
+  "paraphrases": [
+   "city-centre driving fee",
+   "traffic charge"
+  ],
+  "example": "The congestion charge has reduced traffic in the centre but angered some small businesses."
+ },
+ {
+  "id": "tra-016",
+  "topic": "transport",
+  "word": "hybrid car",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a car that uses both an engine that burns fuel and an electric motor",
+  "collocations": [
+   "drive a hybrid car",
+   "buy a hybrid car",
+   "hybrid car sales"
+  ],
+  "paraphrases": [
+   "petrol-electric vehicle",
+   "dual-power car"
+  ],
+  "example": "A hybrid car can run on electricity at low speeds, which saves fuel in towns."
+ },
+ {
+  "id": "tra-017",
+  "topic": "transport",
+  "word": "electric vehicle",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a vehicle powered entirely by electricity stored in a battery",
+  "collocations": [
+   "buy an electric vehicle",
+   "electric vehicle charging",
+   "electric vehicle sales"
+  ],
+  "paraphrases": [
+   "battery-powered car",
+   "zero-emission car"
+  ],
+  "example": "The government offers a grant to anyone who replaces an old car with an electric vehicle."
+ },
+ {
+  "id": "tra-018",
+  "topic": "transport",
+  "word": "carpool",
+  "pos": "verb",
+  "band": 7.5,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "to share a car journey with other people so that fewer cars are used",
+  "collocations": [
+   "carpool to work",
+   "carpool with colleagues",
+   "encourage people to carpool"
+  ],
+  "paraphrases": [
+   "share a ride",
+   "travel together in one car"
+  ],
+  "example": "My neighbour and I carpool on weekdays, which halves what we spend on fuel."
+ },
+ {
+  "id": "tra-019",
+  "topic": "transport",
+  "word": "ride-sharing",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a service in which passengers use an app to arrange a trip in a private driver's car",
+  "collocations": [
+   "ride-sharing app",
+   "ride-sharing service",
+   "ride-sharing company"
+  ],
+  "paraphrases": [
+   "app-based taxi service",
+   "shared car service"
+  ],
+  "example": "Ride-sharing has made short night-time journeys cheaper and safer for many people."
+ },
+ {
+  "id": "tra-020",
+  "topic": "transport",
+  "word": "park-and-ride",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a system in which drivers leave their cars at the edge of a town and take a bus into the centre",
+  "collocations": [
+   "park-and-ride scheme",
+   "park-and-ride site",
+   "park-and-ride bus"
+  ],
+  "paraphrases": [
+   "edge-of-town parking with bus link",
+   "car park and shuttle service"
+  ],
+  "example": "A park-and-ride scheme has cut the number of cars entering the historic centre."
+ },
+ {
+  "id": "tra-021",
+  "topic": "transport",
+  "word": "traffic jam",
+  "pos": "phrase",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a long line of vehicles that can hardly move",
+  "collocations": [
+   "stuck in a traffic jam",
+   "cause a traffic jam",
+   "heavy traffic jam"
+  ],
+  "paraphrases": [
+   "tailback",
+   "queue of cars"
+  ],
+  "example": "We were stuck in a traffic jam for two hours and missed the start of the concert."
+ },
+ {
+  "id": "tra-022",
+  "topic": "transport",
+  "word": "traffic calming",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "measures such as speed bumps that force drivers to slow down in residential streets",
+  "collocations": [
+   "traffic calming measures",
+   "traffic calming scheme",
+   "introduce traffic calming"
+  ],
+  "paraphrases": [
+   "speed-reduction measures",
+   "road narrowing"
+  ],
+  "example": "Traffic calming measures outside the school have made the road safer for children."
+ },
+ {
+  "id": "tra-023",
+  "topic": "transport",
+  "word": "speed limit",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the highest speed at which vehicles may legally travel on a road",
+  "collocations": [
+   "exceed the speed limit",
+   "lower the speed limit",
+   "enforce the speed limit"
+  ],
+  "paraphrases": [
+   "legal maximum speed",
+   "road speed restriction"
+  ],
+  "example": "A lower speed limit in residential areas could prevent many accidents."
+ },
+ {
+  "id": "tra-024",
+  "topic": "transport",
+  "word": "speed camera",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a device at the roadside that photographs vehicles travelling faster than the legal limit",
+  "collocations": [
+   "install a speed camera",
+   "caught by a speed camera",
+   "speed camera fine"
+  ],
+  "paraphrases": [
+   "roadside radar",
+   "traffic enforcement camera"
+  ],
+  "example": "Drivers usually slow down when they see a speed camera ahead."
+ },
+ {
+  "id": "tra-025",
+  "topic": "transport",
+  "word": "road safety",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "measures and habits that help to prevent accidents on roads",
+  "collocations": [
+   "road safety campaign",
+   "improve road safety",
+   "road safety record"
+  ],
+  "paraphrases": [
+   "accident prevention on roads",
+   "safe driving practices"
+  ],
+  "example": "A national road safety campaign has taught children how to cross the street correctly."
+ },
+ {
+  "id": "tra-026",
+  "topic": "transport",
+  "word": "road rage",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "violent or angry behaviour by a driver towards other road users",
+  "collocations": [
+   "incident of road rage",
+   "victim of road rage",
+   "road rage attack"
+  ],
+  "paraphrases": [
+   "aggressive driving",
+   "motorist anger"
+  ],
+  "example": "Heavy traffic and constant delays can make some drivers prone to road rage."
+ },
+ {
+  "id": "tra-027",
+  "topic": "transport",
+  "word": "drink-driving",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the offence of driving a vehicle after drinking too much alcohol",
+  "collocations": [
+   "convicted of drink-driving",
+   "drink-driving laws",
+   "drink-driving campaign"
+  ],
+  "paraphrases": [
+   "driving under the influence",
+   "driving while intoxicated"
+  ],
+  "example": "Drink-driving is a major cause of fatal accidents among young men."
+ },
+ {
+  "id": "tra-028",
+  "topic": "transport",
+  "word": "seat belt",
+  "pos": "phrase",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a strap that holds a person safely in their seat in a vehicle",
+  "collocations": [
+   "wear a seat belt",
+   "fasten a seat belt",
+   "seat belt law"
+  ],
+  "paraphrases": [
+   "safety strap",
+   "restraint"
+  ],
+  "example": "Wearing a seat belt reduces the risk of serious injury in a crash by about half."
+ },
+ {
+  "id": "tra-029",
+  "topic": "transport",
+  "word": "collision",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "an accident in which one vehicle hits another",
+  "collocations": [
+   "head-on collision",
+   "collision with a lorry",
+   "avoid a collision"
+  ],
+  "paraphrases": [
+   "crash",
+   "impact"
+  ],
+  "example": "A head-on collision on the narrow bridge closed the road for most of the day."
+ },
+ {
+  "id": "tra-030",
+  "topic": "transport",
+  "word": "pile-up",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a crash involving many vehicles that run into each other",
+  "collocations": [
+   "motorway pile-up",
+   "multi-car pile-up",
+   "a pile-up in the fog"
+  ],
+  "paraphrases": [
+   "multiple-vehicle crash",
+   "chain collision"
+  ],
+  "example": "Dense fog caused a pile-up involving more than thirty vehicles on the motorway."
+ },
+ {
+  "id": "tra-031",
+  "topic": "transport",
+  "word": "breakdown",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a situation in which a vehicle stops working",
+  "collocations": [
+   "car breakdown",
+   "breakdown service",
+   "breakdown cover"
+  ],
+  "paraphrases": [
+   "mechanical failure",
+   "loss of power"
+  ],
+  "example": "After a breakdown on the way to the airport, we had to wait for a rescue lorry."
+ },
+ {
+  "id": "tra-032",
+  "topic": "transport",
+  "word": "roadworks",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "repairs or building work being done on a road",
+  "collocations": [
+   "roadworks ahead",
+   "delays due to roadworks",
+   "temporary roadworks"
+  ],
+  "paraphrases": [
+   "road repairs",
+   "highway maintenance"
+  ],
+  "example": "Long roadworks on the motorway added an hour to my journey."
+ },
+ {
+  "id": "tra-033",
+  "topic": "transport",
+  "word": "detour",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a longer route that you take to avoid something or to visit somewhere",
+  "collocations": [
+   "make a detour",
+   "take a detour",
+   "long detour"
+  ],
+  "paraphrases": [
+   "alternative route",
+   "roundabout way"
+  ],
+  "example": "The bridge was closed, so we had to make a detour of nearly twenty kilometres."
+ },
+ {
+  "id": "tra-034",
+  "topic": "transport",
+  "word": "junction",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a place where two or more roads meet",
+  "collocations": [
+   "busy junction",
+   "motorway junction",
+   "turn left at the junction"
+  ],
+  "paraphrases": [
+   "crossroads",
+   "intersection"
+  ],
+  "example": "Many accidents occur at the junction because drivers cannot see around the corner."
+ },
+ {
+  "id": "tra-035",
+  "topic": "transport",
+  "word": "roundabout",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a circular road where traffic moves in one direction around a central island",
+  "collocations": [
+   "go round a roundabout",
+   "turn at the roundabout",
+   "busy roundabout"
+  ],
+  "paraphrases": [
+   "traffic circle",
+   "circular junction"
+  ],
+  "example": "Take the second exit at the roundabout and then follow the signs for the station."
+ },
+ {
+  "id": "tra-036",
+  "topic": "transport",
+  "word": "tram",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "an electric vehicle that runs on rails along streets in a city",
+  "collocations": [
+   "take a tram",
+   "tram line",
+   "tram network"
+  ],
+  "paraphrases": [
+   "streetcar",
+   "electric street train"
+  ],
+  "example": "The new tram runs along the river every ten minutes, linking the university with the airport."
+ },
+ {
+  "id": "tra-037",
+  "topic": "transport",
+  "word": "underground",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "an underground railway system in a city",
+  "collocations": [
+   "take the underground",
+   "underground station",
+   "underground network"
+  ],
+  "paraphrases": [
+   "metro",
+   "subway"
+  ],
+  "example": "Most commuters use the underground because it is faster than any bus."
+ },
+ {
+  "id": "tra-038",
+  "topic": "transport",
+  "word": "light rail",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a railway system that is smaller than a standard train and runs within a city",
+  "collocations": [
+   "light rail network",
+   "light rail line",
+   "build a light rail system"
+  ],
+  "paraphrases": [
+   "urban rail",
+   "metro-style railway"
+  ],
+  "example": "A light rail line connects the suburbs to the business district in under twenty minutes."
+ },
+ {
+  "id": "tra-039",
+  "topic": "transport",
+  "word": "high-speed rail",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a railway system on which trains travel at very high speeds",
+  "collocations": [
+   "high-speed rail link",
+   "high-speed rail network",
+   "invest in high-speed rail"
+  ],
+  "paraphrases": [
+   "fast rail service",
+   "express rail"
+  ],
+  "example": "High-speed rail between the two cities competes directly with short-haul flights."
+ },
+ {
+  "id": "tra-040",
+  "topic": "transport",
+  "word": "rail network",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the whole system of railway lines in a country or region",
+  "collocations": [
+   "national rail network",
+   "expand the rail network",
+   "rail network capacity"
+  ],
+  "paraphrases": [
+   "railway system",
+   "train lines"
+  ],
+  "example": "The rail network was largely built in the nineteenth century and now needs major repair."
+ },
+ {
+  "id": "tra-041",
+  "topic": "transport",
+  "word": "timetable",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a list showing the times at which buses or trains arrive and leave",
+  "collocations": [
+   "check the timetable",
+   "train timetable",
+   "bus timetable"
+  ],
+  "paraphrases": [
+   "schedule",
+   "list of departures"
+  ],
+  "example": "Most services run to the timetable, although trains are sometimes late in winter."
+ },
+ {
+  "id": "tra-042",
+  "topic": "transport",
+  "word": "fare",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the money that you pay for a journey by bus, train or taxi",
+  "collocations": [
+   "bus fare",
+   "rail fares",
+   "reduced fare"
+  ],
+  "paraphrases": [
+   "ticket price",
+   "travel cost"
+  ],
+  "example": "Rail fares have risen faster than wages, making commuting expensive for many workers."
+ },
+ {
+  "id": "tra-043",
+  "topic": "transport",
+  "word": "season ticket",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a ticket that can be used repeatedly over a long period for a lower price",
+  "collocations": [
+   "buy a season ticket",
+   "annual season ticket",
+   "season ticket holder"
+  ],
+  "paraphrases": [
+   "long-term pass",
+   "travel pass"
+  ],
+  "example": "A season ticket pays for itself if you travel to the city every working day."
+ },
+ {
+  "id": "tra-044",
+  "topic": "transport",
+  "word": "platform",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "the raised area beside the track where passengers wait for a train",
+  "collocations": [
+   "station platform",
+   "platform number",
+   "wait on the platform"
+  ],
+  "paraphrases": [
+   "railway stop",
+   "boarding area"
+  ],
+  "example": "The train to Manchester leaves from platform four in ten minutes."
+ },
+ {
+  "id": "tra-045",
+  "topic": "transport",
+  "word": "cancellation",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "the act of deciding that a planned journey will not take place",
+  "collocations": [
+   "flight cancellation",
+   "train cancellation",
+   "cancellation fee"
+  ],
+  "paraphrases": [
+   "calling off",
+   "withdrawal of service"
+  ],
+  "example": "Heavy snow led to the cancellation of all trains after midday."
+ },
+ {
+  "id": "tra-046",
+  "topic": "transport",
+  "word": "punctual",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "arriving or happening at the arranged time",
+  "collocations": [
+   "punctual service",
+   "punctual train",
+   "remain punctual"
+  ],
+  "paraphrases": [
+   "on time",
+   "prompt"
+  ],
+  "example": "A punctual bus service encourages commuters to give up their cars."
+ },
+ {
+  "id": "tra-047",
+  "topic": "transport",
+  "word": "overcrowded",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "containing too many people for the space available",
+  "collocations": [
+   "overcrowded trains",
+   "overcrowded carriage",
+   "severely overcrowded"
+  ],
+  "paraphrases": [
+   "packed",
+   "full to capacity"
+  ],
+  "example": "Overcrowded trains make commuting uncomfortable and sometimes dangerous."
+ },
+ {
+  "id": "tra-048",
+  "topic": "transport",
+  "word": "cargo",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "goods carried by ship, plane or lorry",
+  "collocations": [
+   "cargo ship",
+   "cargo plane",
+   "carry cargo"
+  ],
+  "paraphrases": [
+   "load",
+   "shipment"
+  ],
+  "example": "The cargo included machinery, medicines and several hundred tonnes of grain."
+ },
+ {
+  "id": "tra-049",
+  "topic": "transport",
+  "word": "freight",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "goods that are carried in large amounts by lorry, train, ship or aircraft",
+  "collocations": [
+   "rail freight",
+   "freight train",
+   "air freight"
+  ],
+  "paraphrases": [
+   "goods transported",
+   "commercial cargo"
+  ],
+  "example": "Moving freight by rail rather than road would take thousands of lorries off the motorways."
+ },
+ {
+  "id": "tra-050",
+  "topic": "transport",
+  "word": "haulage",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the business of transporting goods by road or rail",
+  "collocations": [
+   "road haulage",
+   "haulage company",
+   "haulage industry"
+  ],
+  "paraphrases": [
+   "goods transport",
+   "freight carrying"
+  ],
+  "example": "The haulage industry is struggling to find enough lorry drivers."
+ },
+ {
+  "id": "tra-051",
+  "topic": "transport",
+  "word": "logistics",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the planning and organisation of moving and storing goods",
+  "collocations": [
+   "logistics company",
+   "logistics network",
+   "supply chain logistics"
+  ],
+  "paraphrases": [
+   "distribution",
+   "supply management"
+  ],
+  "example": "Online shopping has made the logistics of delivery much more complicated."
+ },
+ {
+  "id": "tra-052",
+  "topic": "transport",
+  "word": "container ship",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a very large vessel that carries goods in standard metal boxes",
+  "collocations": [
+   "giant container ship",
+   "container ship traffic",
+   "load a container ship"
+  ],
+  "paraphrases": [
+   "cargo vessel",
+   "freight vessel"
+  ],
+  "example": "A single container ship can carry cargo equal to the load of thousands of lorries."
+ },
+ {
+  "id": "tra-053",
+  "topic": "transport",
+  "word": "harbour",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading"
+  ],
+  "definition": "an area of water beside the coast where boats are kept safely",
+  "collocations": [
+   "fishing harbour",
+   "harbour wall",
+   "enter the harbour"
+  ],
+  "paraphrases": [
+   "port",
+   "sheltered mooring"
+  ],
+  "example": "Fishing boats gather in the harbour at dawn before heading out to sea."
+ },
+ {
+  "id": "tra-054",
+  "topic": "transport",
+  "word": "airline",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a company that provides regular flights for passengers",
+  "collocations": [
+   "major airline",
+   "national airline",
+   "airline ticket"
+  ],
+  "paraphrases": [
+   "air carrier",
+   "flight operator"
+  ],
+  "example": "The airline offered passengers free hotel rooms after the flight was delayed overnight."
+ },
+ {
+  "id": "tra-055",
+  "topic": "transport",
+  "word": "budget airline",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "an airline that sells cheap tickets and charges extra for services",
+  "collocations": [
+   "fly with a budget airline",
+   "budget airline fares",
+   "rise of budget airlines"
+  ],
+  "paraphrases": [
+   "low-cost carrier",
+   "no-frills airline"
+  ],
+  "example": "The growth of the budget airline has made weekend breaks abroad affordable for ordinary families."
+ },
+ {
+  "id": "tra-056",
+  "topic": "transport",
+  "word": "runway",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a strip of ground where aircraft take off and land",
+  "collocations": [
+   "build a runway",
+   "on the runway",
+   "runway extension"
+  ],
+  "paraphrases": [
+   "airstrip",
+   "landing strip"
+  ],
+  "example": "Plans to build a third runway at the airport have met fierce local opposition."
+ },
+ {
+  "id": "tra-057",
+  "topic": "transport",
+  "word": "air traffic",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "the movement of aircraft in the sky and at airports",
+  "collocations": [
+   "air traffic control",
+   "heavy air traffic",
+   "air traffic controller"
+  ],
+  "paraphrases": [
+   "aircraft movements",
+   "flight activity"
+  ],
+  "example": "Air traffic increased so rapidly that the airport had to restrict the number of night flights."
+ },
+ {
+  "id": "tra-058",
+  "topic": "transport",
+  "word": "hub",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "a main airport or station from which many routes spread out",
+  "collocations": [
+   "transport hub",
+   "major hub",
+   "hub airport"
+  ],
+  "paraphrases": [
+   "central interchange",
+   "main junction point"
+  ],
+  "example": "The city's airport serves as a hub for connecting flights to Asia."
+ },
+ {
+  "id": "tra-059",
+  "topic": "transport",
+  "word": "check-in",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "the place or procedure at an airport where passengers register before a flight",
+  "collocations": [
+   "online check-in",
+   "check-in desk",
+   "check-in time"
+  ],
+  "paraphrases": [
+   "registration",
+   "passenger processing"
+  ],
+  "example": "Online check-in saves time because you can print your boarding pass at home."
+ },
+ {
+  "id": "tra-060",
+  "topic": "transport",
+  "word": "layover",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a short stop between two parts of a long journey",
+  "collocations": [
+   "long layover",
+   "overnight layover",
+   "layover in Dubai"
+  ],
+  "paraphrases": [
+   "stopover",
+   "transit stop"
+  ],
+  "example": "We had a six-hour layover in Singapore, so we explored the old town."
+ },
+ {
+  "id": "tra-061",
+  "topic": "transport",
+  "word": "turbulence",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "sudden movements of air that make an aircraft shake",
+  "collocations": [
+   "severe turbulence",
+   "hit turbulence",
+   "clear air turbulence"
+  ],
+  "paraphrases": [
+   "rough air",
+   "bumpy flight conditions"
+  ],
+  "example": "The plane hit turbulence over the mountains and the pilot asked everyone to stay seated."
+ },
+ {
+  "id": "tra-062",
+  "topic": "transport",
+  "word": "sustainable transport",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "forms of travel that cause little harm to the environment",
+  "collocations": [
+   "promote sustainable transport",
+   "sustainable transport policy",
+   "invest in sustainable transport"
+  ],
+  "paraphrases": [
+   "eco-friendly travel",
+   "low-impact mobility"
+  ],
+  "example": "Investment in sustainable transport, such as cycling and trams, is vital for cleaner cities."
+ },
+ {
+  "id": "tra-063",
+  "topic": "transport",
+  "word": "modal shift",
+  "pos": "phrase",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a change from one form of transport to another, such as from cars to trains",
+  "collocations": [
+   "encourage a modal shift",
+   "modal shift to rail",
+   "achieve a modal shift"
+  ],
+  "paraphrases": [
+   "switch of transport mode",
+   "move from road to rail"
+  ],
+  "example": "Policies that raise parking costs are designed to achieve a modal shift towards public transport."
+ },
+ {
+  "id": "tra-064",
+  "topic": "transport",
+  "word": "mobility",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the ability to move or travel easily from one place to another",
+  "collocations": [
+   "personal mobility",
+   "reduced mobility",
+   "urban mobility"
+  ],
+  "paraphrases": [
+   "freedom of movement",
+   "ease of travel"
+  ],
+  "example": "Good transport links improve mobility for elderly and disabled residents."
+ },
+ {
+  "id": "tra-065",
+  "topic": "transport",
+  "word": "accessible",
+  "pos": "adjective",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "easy to reach, enter or use",
+  "collocations": [
+   "easily accessible",
+   "wheelchair accessible",
+   "accessible by bus"
+  ],
+  "paraphrases": [
+   "reachable",
+   "easy to get to"
+  ],
+  "example": "The new station is fully accessible, with lifts and ramps on every platform."
+ },
+ {
+  "id": "tra-066",
+  "topic": "transport",
+  "word": "motorist",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a person who drives a car",
+  "collocations": [
+   "private motorist",
+   "angry motorists",
+   "fine motorists"
+  ],
+  "paraphrases": [
+   "driver",
+   "car user"
+  ],
+  "example": "Motorists will pay higher fuel taxes under the government's new budget."
+ },
+ {
+  "id": "tra-067",
+  "topic": "transport",
+  "word": "lorry",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a large road vehicle for carrying goods",
+  "collocations": [
+   "lorry driver",
+   "heavy lorry",
+   "lorry park"
+  ],
+  "paraphrases": [
+   "truck",
+   "heavy goods vehicle"
+  ],
+  "example": "A lorry broke down in the tunnel and blocked the road for several hours."
+ },
+ {
+  "id": "tra-068",
+  "topic": "transport",
+  "word": "tailback",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a long queue of vehicles stretching back from an obstruction",
+  "collocations": [
+   "miles of tailback",
+   "cause a tailback",
+   "motorway tailback"
+  ],
+  "paraphrases": [
+   "traffic queue",
+   "line of stationary cars"
+  ],
+  "example": "An accident caused a ten-mile tailback on the motorway."
+ },
+ {
+  "id": "tra-069",
+  "topic": "transport",
+  "word": "bottleneck",
+  "pos": "noun",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "a narrow or blocked place that slows down the flow of traffic or work",
+  "collocations": [
+   "cause a bottleneck",
+   "major bottleneck",
+   "create a bottleneck"
+  ],
+  "paraphrases": [
+   "chokepoint",
+   "obstruction"
+  ],
+  "example": "The old bridge is a bottleneck that causes delays every morning."
+ },
+ {
+  "id": "tra-070",
+  "topic": "transport",
+  "word": "cycle lane",
+  "pos": "phrase",
+  "band": 7,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a part of the road kept for people riding bicycles",
+  "collocations": [
+   "build a cycle lane",
+   "protected cycle lane",
+   "cycle lane network"
+  ],
+  "paraphrases": [
+   "bike path",
+   "cycleway"
+  ],
+  "example": "A protected cycle lane separated from traffic makes cycling safer for children."
+ },
+ {
+  "id": "tra-071",
+  "topic": "transport",
+  "word": "bike-sharing",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "a scheme that lets people borrow public bicycles for short trips",
+  "collocations": [
+   "bike-sharing scheme",
+   "bike-sharing station",
+   "bike-sharing system"
+  ],
+  "paraphrases": [
+   "cycle hire scheme",
+   "public bicycle rental"
+  ],
+  "example": "A bike-sharing scheme gives tourists a cheap way to explore the city."
+ },
+ {
+  "id": "tra-072",
+  "topic": "transport",
+  "word": "car ownership",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the fact of having a car of your own",
+  "collocations": [
+   "car ownership rates",
+   "rising car ownership",
+   "reduce car ownership"
+  ],
+  "paraphrases": [
+   "owning a private vehicle",
+   "possession of cars"
+  ],
+  "example": "Rising car ownership has made traffic worse in rapidly growing cities."
+ },
+ {
+  "id": "tra-073",
+  "topic": "transport",
+  "word": "car-dependent",
+  "pos": "adjective",
+  "band": 8,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "relying on private cars for most journeys",
+  "collocations": [
+   "car-dependent lifestyle",
+   "car-dependent suburb",
+   "car-dependent society"
+  ],
+  "paraphrases": [
+   "reliant on private vehicles",
+   "needing a car"
+  ],
+  "example": "Rural communities are often car-dependent because buses run only twice a day."
+ },
+ {
+  "id": "tra-074",
+  "topic": "transport",
+  "word": "fuel-efficient",
+  "pos": "adjective",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "speaking",
+   "reading"
+  ],
+  "definition": "using relatively little fuel to travel a certain distance",
+  "collocations": [
+   "fuel-efficient car",
+   "fuel-efficient engine",
+   "highly fuel-efficient"
+  ],
+  "paraphrases": [
+   "economical",
+   "low-consumption"
+  ],
+  "example": "Buyers are choosing smaller, fuel-efficient cars because petrol prices keep rising."
+ },
+ {
+  "id": "tra-075",
+  "topic": "transport",
+  "word": "vehicle",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "writing",
+   "reading",
+   "listening"
+  ],
+  "definition": "a machine, such as a car or lorry, used to carry people or goods on land",
+  "collocations": [
+   "motor vehicle",
+   "electric vehicle fleet",
+   "commercial vehicle"
+  ],
+  "paraphrases": [
+   "means of transport",
+   "motor car or truck"
+  ],
+  "example": "Heavy goods vehicles are banned from the old town after eight in the evening."
+ },
+ {
+  "id": "tra-076",
+  "topic": "transport",
+  "word": "pothole",
+  "pos": "noun",
+  "band": 8,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a hole in the surface of a road",
+  "collocations": [
+   "fill a pothole",
+   "pothole damage",
+   "deep pothole"
+  ],
+  "paraphrases": [
+   "road defect",
+   "hole in the road"
+  ],
+  "example": "A deep pothole damaged my car's wheel and the repair cost more than two hundred pounds."
+ },
+ {
+  "id": "tra-077",
+  "topic": "transport",
+  "word": "ferry",
+  "pos": "noun",
+  "band": 6.5,
+  "use": [
+   "speaking",
+   "reading",
+   "listening"
+  ],
+  "definition": "a boat that regularly carries passengers and vehicles across water",
+  "collocations": [
+   "catch a ferry",
+   "ferry crossing",
+   "car ferry"
+  ],
+  "paraphrases": [
+   "passenger boat",
+   "water shuttle"
+  ],
+  "example": "The ferry across the bay takes twenty minutes and runs every half hour."
+ },
+ {
+  "id": "tra-078",
+  "topic": "transport",
+  "word": "pavement",
+  "pos": "noun",
+  "band": 7,
+  "use": [
+   "speaking",
+   "listening"
+  ],
+  "definition": "a path at the side of a road for people to walk on",
+  "collocations": [
+   "wide pavement",
+   "park on the pavement",
+   "narrow pavement"
+  ],
+  "paraphrases": [
+   "sidewalk",
+   "footpath"
+  ],
+  "example": "Cars parked on the pavement force parents with pushchairs to walk in the road."
+ },
+ {
+  "id": "tra-079",
+  "topic": "transport",
+  "word": "traffic flow",
+  "pos": "phrase",
+  "band": 7.5,
+  "use": [
+   "writing",
+   "reading"
+  ],
+  "definition": "the movement of vehicles along a road and how smoothly it happens",
+  "collocations": [
+   "improve traffic flow",
+   "smooth traffic flow",
+   "traffic flow control"
+  ],
+  "paraphrases": [
+   "movement of vehicles",
+   "pattern of traffic"
+  ],
+  "example": "Computer-controlled lights adjust to traffic flow and reduce waiting times at junctions."
+ }
+]
