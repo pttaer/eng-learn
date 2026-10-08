@@ -5,6 +5,7 @@ import { writingView } from './views/writing';
 import { speakingView } from './views/speaking';
 import { mockView, report } from './views/mock';
 import { strategyView } from './views/strategy';
+import { vocabView } from './views/vocab';
 
 type View = (root: HTMLElement) => () => void;
 
@@ -14,6 +15,7 @@ const NAV: { id: string; label: string; view: View }[] = [
   { id: 'listening', label: 'Listening', view: listeningView },
   { id: 'writing', label: 'Writing', view: writingView },
   { id: 'speaking', label: 'Speaking', view: speakingView },
+  { id: 'vocab', label: 'Vocabulary', view: vocabView },
   { id: 'strategy', label: 'Strategy', view: strategyView },
   { id: 'mock', label: 'Mock tests', view: mockView }
 ];

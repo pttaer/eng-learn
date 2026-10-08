@@ -1,0 +1,1698 @@
+[
+  {
+    "id": "lan-001",
+    "topic": "language",
+    "word": "dialect",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a form of a language used in a particular region or social group",
+    "collocations": [
+      "regional dialect",
+      "local dialect",
+      "speak a dialect"
+    ],
+    "paraphrases": [
+      "regional variety of speech",
+      "local form of a language"
+    ],
+    "example": "Many young people in the north no longer speak the local dialect their grandparents used."
+  },
+  {
+    "id": "lan-002",
+    "topic": "language",
+    "word": "vernacular",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the everyday language spoken by ordinary people in a region",
+    "collocations": [
+      "in the vernacular",
+      "local vernacular",
+      "vernacular language"
+    ],
+    "paraphrases": [
+      "everyday speech",
+      "native tongue"
+    ],
+    "example": "Early scientific works were written in Latin, but later authors turned to the vernacular."
+  },
+  {
+    "id": "lan-003",
+    "topic": "language",
+    "word": "mother tongue",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "the first language a person learns as a child",
+    "collocations": [
+      "speak one's mother tongue",
+      "lose their mother tongue",
+      "teach the mother tongue"
+    ],
+    "paraphrases": [
+      "native language",
+      "first language"
+    ],
+    "example": "Children who are taught in their mother tongue often grasp new concepts more quickly."
+  },
+  {
+    "id": "lan-004",
+    "topic": "language",
+    "word": "bilingual",
+    "pos": "adjective",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "able to speak two languages with equal or near-equal skill",
+    "collocations": [
+      "bilingual education",
+      "bilingual children",
+      "fully bilingual"
+    ],
+    "paraphrases": [
+      "speaking two languages",
+      "dual-language"
+    ],
+    "example": "Growing up in a bilingual household gave her an early advantage in learning new languages."
+  },
+  {
+    "id": "lan-005",
+    "topic": "language",
+    "word": "multilingual",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "using or able to use several languages",
+    "collocations": [
+      "multilingual society",
+      "multilingual country",
+      "multilingual speakers"
+    ],
+    "paraphrases": [
+      "polyglot",
+      "speaking many languages"
+    ],
+    "example": "Singapore is a multilingual society where four official languages coexist."
+  },
+  {
+    "id": "lan-006",
+    "topic": "language",
+    "word": "fluency",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "the ability to speak or write a language smoothly and easily",
+    "collocations": [
+      "achieve fluency",
+      "oral fluency",
+      "fluency in English"
+    ],
+    "paraphrases": [
+      "smoothness of speech",
+      "command of a language"
+    ],
+    "example": "Regular conversation practice is the surest route to fluency."
+  },
+  {
+    "id": "lan-007",
+    "topic": "language",
+    "word": "fluent",
+    "pos": "adjective",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "able to speak a language easily and accurately",
+    "collocations": [
+      "fluent speaker",
+      "fluent in French",
+      "become fluent"
+    ],
+    "paraphrases": [
+      "proficient",
+      "articulate in a language"
+    ],
+    "example": "After two years abroad she had become fluent in Mandarin."
+  },
+  {
+    "id": "lan-008",
+    "topic": "language",
+    "word": "proficiency",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a high degree of skill in using a language",
+    "collocations": [
+      "language proficiency",
+      "high proficiency",
+      "proficiency test"
+    ],
+    "paraphrases": [
+      "competence",
+      "skill level"
+    ],
+    "example": "Applicants must demonstrate proficiency in English before they can enrol."
+  },
+  {
+    "id": "lan-009",
+    "topic": "language",
+    "word": "literacy",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the ability to read and write",
+    "collocations": [
+      "adult literacy",
+      "literacy rate",
+      "improve literacy"
+    ],
+    "paraphrases": [
+      "reading and writing skills",
+      "ability to read"
+    ],
+    "example": "Literacy rates have risen steadily as more girls attend school."
+  },
+  {
+    "id": "lan-011",
+    "topic": "language",
+    "word": "vocabulary",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "the set of words that a person knows or a language contains",
+    "collocations": [
+      "expand your vocabulary",
+      "limited vocabulary",
+      "technical vocabulary"
+    ],
+    "paraphrases": [
+      "word stock",
+      "range of words"
+    ],
+    "example": "Reading widely is an effective way to extend one's vocabulary."
+  },
+  {
+    "id": "lan-012",
+    "topic": "language",
+    "word": "grammar",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "the rules governing how words are combined in a language",
+    "collocations": [
+      "basic grammar",
+      "grammar rules",
+      "correct grammar"
+    ],
+    "paraphrases": [
+      "language rules",
+      "structure of a language"
+    ],
+    "example": "Learners often find English grammar easier than its irregular spelling."
+  },
+  {
+    "id": "lan-013",
+    "topic": "language",
+    "word": "syntax",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the arrangement of words to form sentences",
+    "collocations": [
+      "complex syntax",
+      "syntax rules",
+      "simple syntax"
+    ],
+    "paraphrases": [
+      "sentence structure",
+      "word order"
+    ],
+    "example": "Journalists tend to favour simple syntax so that readers grasp the point quickly."
+  },
+  {
+    "id": "lan-014",
+    "topic": "language",
+    "word": "accent",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a particular way of pronouncing words linked to a region or group",
+    "collocations": [
+      "regional accent",
+      "strong accent",
+      "foreign accent"
+    ],
+    "paraphrases": [
+      "manner of pronunciation",
+      "speech pattern"
+    ],
+    "example": "Her accent revealed that she had grown up in the north of England."
+  },
+  {
+    "id": "lan-015",
+    "topic": "language",
+    "word": "pronunciation",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "the way in which a word is spoken",
+    "collocations": [
+      "correct pronunciation",
+      "pronunciation errors",
+      "improve pronunciation"
+    ],
+    "paraphrases": [
+      "way of saying words",
+      "enunciation"
+    ],
+    "example": "Clear pronunciation matters more than a perfect accent in most conversations."
+  },
+  {
+    "id": "lan-016",
+    "topic": "language",
+    "word": "idiom",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a fixed expression whose meaning differs from its separate words",
+    "collocations": [
+      "common idiom",
+      "an English idiom",
+      "use idioms"
+    ],
+    "paraphrases": [
+      "set phrase",
+      "figurative expression"
+    ],
+    "example": "The idiom 'break the ice' has nothing to do with frozen water."
+  },
+  {
+    "id": "lan-017",
+    "topic": "language",
+    "word": "idiomatic",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "using expressions that sound natural to native speakers",
+    "collocations": [
+      "idiomatic English",
+      "idiomatic expression",
+      "idiomatic usage"
+    ],
+    "paraphrases": [
+      "natural-sounding",
+      "native-like"
+    ],
+    "example": "Her essay was grammatically sound but lacked idiomatic phrasing."
+  },
+  {
+    "id": "lan-018",
+    "topic": "language",
+    "word": "slang",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "very informal words used mainly in speech by a particular group",
+    "collocations": [
+      "teenage slang",
+      "street slang",
+      "use slang"
+    ],
+    "paraphrases": [
+      "informal vocabulary",
+      "colloquial terms"
+    ],
+    "example": "Teenagers constantly invent new slang that adults struggle to understand."
+  },
+  {
+    "id": "lan-019",
+    "topic": "language",
+    "word": "jargon",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "special words used by a profession that others find hard to understand",
+    "collocations": [
+      "medical jargon",
+      "legal jargon",
+      "avoid jargon"
+    ],
+    "paraphrases": [
+      "technical language",
+      "specialist terminology"
+    ],
+    "example": "Patients often find medical jargon confusing and intimidating."
+  },
+  {
+    "id": "lan-020",
+    "topic": "language",
+    "word": "colloquial",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "suited to informal everyday conversation rather than formal writing",
+    "collocations": [
+      "colloquial language",
+      "colloquial speech",
+      "colloquial expression"
+    ],
+    "paraphrases": [
+      "conversational",
+      "informal"
+    ],
+    "example": "Colloquial expressions are acceptable in speech but should be avoided in academic essays."
+  },
+  {
+    "id": "lan-021",
+    "topic": "language",
+    "word": "register",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the level of formality of language used in a situation",
+    "collocations": [
+      "formal register",
+      "appropriate register",
+      "shift register"
+    ],
+    "paraphrases": [
+      "level of formality",
+      "style of language"
+    ],
+    "example": "Candidates should adopt a formal register when writing a letter of complaint."
+  },
+  {
+    "id": "lan-022",
+    "topic": "language",
+    "word": "translation",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the act of changing text or speech from one language into another",
+    "collocations": [
+      "machine translation",
+      "literal translation",
+      "accurate translation"
+    ],
+    "paraphrases": [
+      "rendering in another language",
+      "conversion between languages"
+    ],
+    "example": "Machine translation has improved, but it still struggles with humour and metaphor."
+  },
+  {
+    "id": "lan-023",
+    "topic": "language",
+    "word": "translate",
+    "pos": "verb",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "to change words from one language into another",
+    "collocations": [
+      "translate a text",
+      "translate into English",
+      "translate literally"
+    ],
+    "paraphrases": [
+      "render",
+      "convert into another language"
+    ],
+    "example": "It is hard to translate poetry without losing its rhythm and sound."
+  },
+  {
+    "id": "lan-024",
+    "topic": "language",
+    "word": "interpreter",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a person who translates spoken words aloud between languages",
+    "collocations": [
+      "hire an interpreter",
+      "conference interpreter",
+      "professional interpreter"
+    ],
+    "paraphrases": [
+      "oral translator",
+      "spoken-language translator"
+    ],
+    "example": "An interpreter was present to help the delegates understand one another."
+  },
+  {
+    "id": "lan-025",
+    "topic": "language",
+    "word": "linguist",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a person who studies the structure and development of languages",
+    "collocations": [
+      "historical linguist",
+      "a trained linguist",
+      "eminent linguist"
+    ],
+    "paraphrases": [
+      "language scholar",
+      "language specialist"
+    ],
+    "example": "The linguist spent a decade documenting the grammar of an Amazonian language."
+  },
+  {
+    "id": "lan-026",
+    "topic": "language",
+    "word": "linguistic",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "relating to language or the study of language",
+    "collocations": [
+      "linguistic diversity",
+      "linguistic skills",
+      "linguistic barrier"
+    ],
+    "paraphrases": [
+      "relating to language",
+      "language-related"
+    ],
+    "example": "Linguistic diversity is greatest in tropical regions such as Papua New Guinea."
+  },
+  {
+    "id": "lan-027",
+    "topic": "language",
+    "word": "endangered language",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a language at risk of dying out because few people speak it",
+    "collocations": [
+      "preserve endangered languages",
+      "document endangered languages",
+      "revive an endangered language"
+    ],
+    "paraphrases": [
+      "language facing extinction",
+      "vulnerable tongue"
+    ],
+    "example": "Many endangered languages are spoken only by a handful of elderly people."
+  },
+  {
+    "id": "lan-028",
+    "topic": "language",
+    "word": "extinct",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "no longer spoken or used by anyone",
+    "collocations": [
+      "extinct language",
+      "become extinct",
+      "declared extinct"
+    ],
+    "paraphrases": [
+      "dead",
+      "no longer in use"
+    ],
+    "example": "Cornish was considered extinct until enthusiasts began teaching it again."
+  },
+  {
+    "id": "lan-029",
+    "topic": "language",
+    "word": "revitalise",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to give new life and energy to something",
+    "collocations": [
+      "revitalise a language",
+      "revitalise a community",
+      "efforts to revitalise"
+    ],
+    "paraphrases": [
+      "revive",
+      "bring back to life"
+    ],
+    "example": "Immersion nurseries have helped to revitalise the Maori language in New Zealand."
+  },
+  {
+    "id": "lan-030",
+    "topic": "language",
+    "word": "immersion",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading",
+      "speaking"
+    ],
+    "definition": "learning a language by being surrounded entirely by it",
+    "collocations": [
+      "language immersion",
+      "immersion programme",
+      "total immersion"
+    ],
+    "paraphrases": [
+      "total exposure",
+      "full surroundings in the language"
+    ],
+    "example": "Total immersion in the language is the quickest way to reach fluency."
+  },
+  {
+    "id": "lan-031",
+    "topic": "language",
+    "word": "native speaker",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "a person who has spoken a language since early childhood",
+    "collocations": [
+      "a native speaker",
+      "native speaker teacher",
+      "sound like a native speaker"
+    ],
+    "paraphrases": [
+      "first-language speaker",
+      "mother-tongue speaker"
+    ],
+    "example": "Many learners aspire to sound like a native speaker."
+  },
+  {
+    "id": "lan-032",
+    "topic": "language",
+    "word": "lingua franca",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a common language used between people with different mother tongues",
+    "collocations": [
+      "global lingua franca",
+      "act as a lingua franca",
+      "lingua franca of business"
+    ],
+    "paraphrases": [
+      "shared language",
+      "common international language"
+    ],
+    "example": "English has become the lingua franca of international science and aviation."
+  },
+  {
+    "id": "lan-033",
+    "topic": "language",
+    "word": "articulate",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "able to express ideas clearly and effectively in words",
+    "collocations": [
+      "articulate speaker",
+      "highly articulate",
+      "remain articulate"
+    ],
+    "paraphrases": [
+      "well-spoken",
+      "clear in expression"
+    ],
+    "example": "She was an articulate young woman who spoke confidently in front of large audiences."
+  },
+  {
+    "id": "lan-034",
+    "topic": "language",
+    "word": "eloquent",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "able to express oneself fluently and persuasively",
+    "collocations": [
+      "eloquent speech",
+      "eloquent speaker",
+      "eloquent argument"
+    ],
+    "paraphrases": [
+      "persuasive",
+      "silver-tongued"
+    ],
+    "example": "The senator gave an eloquent speech defending the rights of minority languages."
+  },
+  {
+    "id": "lan-035",
+    "topic": "language",
+    "word": "verbal",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "expressed in words, usually spoken",
+    "collocations": [
+      "verbal communication",
+      "verbal skills",
+      "verbal abuse"
+    ],
+    "paraphrases": [
+      "spoken",
+      "oral"
+    ],
+    "example": "Verbal communication accounts for only part of what we convey to others."
+  },
+  {
+    "id": "lan-036",
+    "topic": "language",
+    "word": "non-verbal",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "conveying meaning without using spoken or written words",
+    "collocations": [
+      "non-verbal communication",
+      "non-verbal cues",
+      "non-verbal signals"
+    ],
+    "paraphrases": [
+      "wordless",
+      "unspoken"
+    ],
+    "example": "Non-verbal cues such as facial expression often reveal what a speaker really feels."
+  },
+  {
+    "id": "lan-037",
+    "topic": "language",
+    "word": "body language",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "the movements and postures that communicate feelings without words",
+    "collocations": [
+      "read body language",
+      "positive body language",
+      "understand body language"
+    ],
+    "paraphrases": [
+      "physical signals",
+      "non-verbal signals"
+    ],
+    "example": "Interviewers often judge candidates by their body language as much as by their answers."
+  },
+  {
+    "id": "lan-038",
+    "topic": "language",
+    "word": "gesture",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "a movement of the hands or head that expresses an idea",
+    "collocations": [
+      "hand gesture",
+      "make a gesture",
+      "polite gesture"
+    ],
+    "paraphrases": [
+      "signal",
+      "movement conveying meaning"
+    ],
+    "example": "A nod is a common gesture of agreement in most cultures."
+  },
+  {
+    "id": "lan-040",
+    "topic": "language",
+    "word": "utter",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "to say a word or sound out loud",
+    "collocations": [
+      "utter a word",
+      "scarcely utter",
+      "utter a sound"
+    ],
+    "paraphrases": [
+      "say",
+      "speak"
+    ],
+    "example": "The child was so shy that she barely uttered a word all afternoon."
+  },
+  {
+    "id": "lan-041",
+    "topic": "language",
+    "word": "misunderstanding",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "a failure to interpret what someone meant correctly",
+    "collocations": [
+      "cause misunderstanding",
+      "a simple misunderstanding",
+      "cultural misunderstanding"
+    ],
+    "paraphrases": [
+      "mix-up",
+      "failure to grasp the meaning"
+    ],
+    "example": "Cultural differences in humour often lead to misunderstanding between colleagues."
+  },
+  {
+    "id": "lan-042",
+    "topic": "language",
+    "word": "miscommunication",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a failure to exchange information accurately",
+    "collocations": [
+      "cause miscommunication",
+      "avoid miscommunication",
+      "risk of miscommunication"
+    ],
+    "paraphrases": [
+      "breakdown in communication",
+      "crossed wires"
+    ],
+    "example": "Poor handovers between shifts can lead to dangerous miscommunication in hospitals."
+  },
+  {
+    "id": "lan-043",
+    "topic": "language",
+    "word": "nuance",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a very slight difference in meaning, tone or feeling",
+    "collocations": [
+      "subtle nuance",
+      "nuances of meaning",
+      "cultural nuance"
+    ],
+    "paraphrases": [
+      "subtle distinction",
+      "fine shade of meaning"
+    ],
+    "example": "Translators must capture every nuance of the original text."
+  },
+  {
+    "id": "lan-044",
+    "topic": "language",
+    "word": "ambiguous",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "having more than one possible meaning",
+    "collocations": [
+      "ambiguous statement",
+      "deliberately ambiguous",
+      "ambiguous wording"
+    ],
+    "paraphrases": [
+      "unclear",
+      "open to interpretation"
+    ],
+    "example": "The ambiguous wording of the contract led to a dispute between the two companies."
+  },
+  {
+    "id": "lan-045",
+    "topic": "language",
+    "word": "ambiguity",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the quality of being open to more than one interpretation",
+    "collocations": [
+      "avoid ambiguity",
+      "linguistic ambiguity",
+      "remove ambiguity"
+    ],
+    "paraphrases": [
+      "lack of clarity",
+      "vagueness"
+    ],
+    "example": "Legal documents must be drafted carefully to avoid any ambiguity."
+  },
+  {
+    "id": "lan-047",
+    "topic": "language",
+    "word": "persuasive",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "able to convince others through argument or language",
+    "collocations": [
+      "persuasive argument",
+      "persuasive essay",
+      "highly persuasive"
+    ],
+    "paraphrases": [
+      "convincing",
+      "compelling"
+    ],
+    "example": "Advertisers use persuasive language to make products appear indispensable."
+  },
+  {
+    "id": "lan-048",
+    "topic": "language",
+    "word": "dialogue",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "speaking"
+    ],
+    "definition": "a conversation between two or more people",
+    "collocations": [
+      "open dialogue",
+      "constructive dialogue",
+      "engage in dialogue"
+    ],
+    "paraphrases": [
+      "conversation",
+      "discussion"
+    ],
+    "example": "Regular dialogue between parents and teenagers helps to prevent conflict at home."
+  },
+  {
+    "id": "lan-049",
+    "topic": "language",
+    "word": "discourse",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "written or spoken communication on a particular subject",
+    "collocations": [
+      "public discourse",
+      "academic discourse",
+      "political discourse"
+    ],
+    "paraphrases": [
+      "extended discussion",
+      "formal debate"
+    ],
+    "example": "Social media has coarsened public discourse on contentious issues."
+  },
+  {
+    "id": "lan-050",
+    "topic": "language",
+    "word": "correspondence",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the exchange of letters or emails",
+    "collocations": [
+      "business correspondence",
+      "personal correspondence",
+      "correspondence course"
+    ],
+    "paraphrases": [
+      "letters and messages",
+      "written exchange"
+    ],
+    "example": "Her correspondence with the poet continued for over thirty years."
+  },
+  {
+    "id": "lan-051",
+    "topic": "language",
+    "word": "rapport",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "a close and harmonious relationship in which people understand one another",
+    "collocations": [
+      "build rapport",
+      "establish rapport",
+      "a good rapport"
+    ],
+    "paraphrases": [
+      "mutual understanding",
+      "bond"
+    ],
+    "example": "Good teachers quickly establish rapport with their students."
+  },
+  {
+    "id": "lan-052",
+    "topic": "language",
+    "word": "eye contact",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "the act of looking directly into another person's eyes",
+    "collocations": [
+      "make eye contact",
+      "maintain eye contact",
+      "avoid eye contact"
+    ],
+    "paraphrases": [
+      "direct gaze",
+      "looking each other in the eye"
+    ],
+    "example": "In many Western cultures, avoiding eye contact is read as a sign of dishonesty."
+  },
+  {
+    "id": "lan-053",
+    "topic": "language",
+    "word": "tone",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "the quality of the voice or writing that shows a speaker's attitude",
+    "collocations": [
+      "polite tone",
+      "formal tone",
+      "tone of voice"
+    ],
+    "paraphrases": [
+      "manner of expression",
+      "mood of the voice"
+    ],
+    "example": "The formal tone of the letter suggested that the dispute was serious."
+  },
+  {
+    "id": "lan-054",
+    "topic": "language",
+    "word": "intonation",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "the rise and fall of the voice when speaking",
+    "collocations": [
+      "rising intonation",
+      "flat intonation",
+      "stress and intonation"
+    ],
+    "paraphrases": [
+      "pitch pattern",
+      "voice melody"
+    ],
+    "example": "Rising intonation at the end of a sentence usually signals a question."
+  },
+  {
+    "id": "lan-055",
+    "topic": "language",
+    "word": "etymology",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "the study of the origin and history of words",
+    "collocations": [
+      "word etymology",
+      "trace the etymology",
+      "etymology of a word"
+    ],
+    "paraphrases": [
+      "word origins",
+      "history of a word"
+    ],
+    "example": "The etymology of the word 'salary' goes back to the Latin for salt."
+  },
+  {
+    "id": "lan-056",
+    "topic": "language",
+    "word": "loanword",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a word taken into one language directly from another",
+    "collocations": [
+      "English loanword",
+      "borrow a loanword",
+      "common loanword"
+    ],
+    "paraphrases": [
+      "borrowed word",
+      "adopted word"
+    ],
+    "example": "The word 'kindergarten' is a German loanword that entered English in the nineteenth century."
+  },
+  {
+    "id": "lan-057",
+    "topic": "language",
+    "word": "alphabet",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "the set of letters used to write a language",
+    "collocations": [
+      "Latin alphabet",
+      "Cyrillic alphabet",
+      "learn the alphabet"
+    ],
+    "paraphrases": [
+      "set of letters",
+      "character set"
+    ],
+    "example": "The Greek alphabet is the ancestor of both the Latin and Cyrillic alphabets."
+  },
+  {
+    "id": "lan-058",
+    "topic": "language",
+    "word": "script",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "the system of characters used for writing a language",
+    "collocations": [
+      "Arabic script",
+      "Chinese script",
+      "written in a script"
+    ],
+    "paraphrases": [
+      "writing system",
+      "set of characters"
+    ],
+    "example": "Korean is written in a script that was designed deliberately by scholars."
+  },
+  {
+    "id": "lan-059",
+    "topic": "language",
+    "word": "spelling",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "the way in which a word is written with letters",
+    "collocations": [
+      "spelling mistake",
+      "correct spelling",
+      "English spelling"
+    ],
+    "paraphrases": [
+      "orthography",
+      "letter order in a word"
+    ],
+    "example": "English spelling is notoriously irregular, which frustrates many learners."
+  },
+  {
+    "id": "lan-060",
+    "topic": "language",
+    "word": "acquisition",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the process of gaining a skill or knowledge",
+    "collocations": [
+      "language acquisition",
+      "second language acquisition",
+      "acquisition of vocabulary"
+    ],
+    "paraphrases": [
+      "learning",
+      "gaining of a skill"
+    ],
+    "example": "Language acquisition is generally fastest during early childhood, before the age of seven."
+  },
+  {
+    "id": "lan-061",
+    "topic": "language",
+    "word": "acquire",
+    "pos": "verb",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "speaking"
+    ],
+    "definition": "to gain a skill or knowledge through effort or experience",
+    "collocations": [
+      "acquire a language",
+      "acquire skills",
+      "acquire knowledge"
+    ],
+    "paraphrases": [
+      "pick up",
+      "gain"
+    ],
+    "example": "Children acquire their first language without any formal instruction."
+  },
+  {
+    "id": "lan-062",
+    "topic": "language",
+    "word": "decipher",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "to work out the meaning of something that is difficult to read",
+    "collocations": [
+      "decipher handwriting",
+      "decipher a code",
+      "decipher an inscription"
+    ],
+    "paraphrases": [
+      "decode",
+      "make out"
+    ],
+    "example": "Archaeologists took years to decipher the ancient inscription."
+  },
+  {
+    "id": "lan-063",
+    "topic": "language",
+    "word": "concise",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "giving much information in few words",
+    "collocations": [
+      "concise summary",
+      "clear and concise",
+      "concise language"
+    ],
+    "paraphrases": [
+      "brief",
+      "succinct"
+    ],
+    "example": "A good abstract should be concise yet complete."
+  },
+  {
+    "id": "lan-064",
+    "topic": "language",
+    "word": "verbose",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "using more words than needed",
+    "collocations": [
+      "verbose style",
+      "overly verbose",
+      "verbose explanation"
+    ],
+    "paraphrases": [
+      "wordy",
+      "long-winded"
+    ],
+    "example": "Examiners penalise verbose answers that repeat the same point."
+  },
+  {
+    "id": "lan-065",
+    "topic": "language",
+    "word": "succinct",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "expressed clearly and briefly",
+    "collocations": [
+      "succinct summary",
+      "succinct answer",
+      "succinctly put"
+    ],
+    "paraphrases": [
+      "brief and to the point",
+      "compact"
+    ],
+    "example": "Her succinct reply answered the question in a single sentence."
+  },
+  {
+    "id": "lan-066",
+    "topic": "language",
+    "word": "euphemism",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a mild word used in place of one that seems harsh or rude",
+    "collocations": [
+      "common euphemism",
+      "use a euphemism",
+      "polite euphemism"
+    ],
+    "paraphrases": [
+      "softer expression",
+      "gentler term"
+    ],
+    "example": "'Passed away' is a common euphemism for 'died'."
+  },
+  {
+    "id": "lan-067",
+    "topic": "language",
+    "word": "explicit",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "stated clearly and directly with no room for doubt",
+    "collocations": [
+      "explicit instructions",
+      "explicit statement",
+      "make explicit"
+    ],
+    "paraphrases": [
+      "clearly stated",
+      "unambiguous"
+    ],
+    "example": "The rules were explicit: no mobile phones were to be used during the exam."
+  },
+  {
+    "id": "lan-068",
+    "topic": "language",
+    "word": "implicit",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "suggested without being stated directly",
+    "collocations": [
+      "implicit criticism",
+      "implicit meaning",
+      "implicit message"
+    ],
+    "paraphrases": [
+      "implied",
+      "unspoken"
+    ],
+    "example": "There was an implicit warning in her polite remark."
+  },
+  {
+    "id": "lan-069",
+    "topic": "language",
+    "word": "interpersonal",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "relating to relationships and communication between people",
+    "collocations": [
+      "interpersonal skills",
+      "interpersonal communication",
+      "interpersonal relationships"
+    ],
+    "paraphrases": [
+      "between individuals",
+      "person-to-person"
+    ],
+    "example": "Strong interpersonal skills are essential in customer-facing roles."
+  },
+  {
+    "id": "lan-070",
+    "topic": "language",
+    "word": "communicate",
+    "pos": "verb",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "to share information, ideas or feelings with others",
+    "collocations": [
+      "communicate effectively",
+      "communicate ideas",
+      "communicate with colleagues"
+    ],
+    "paraphrases": [
+      "convey information",
+      "get in touch"
+    ],
+    "example": "Good managers communicate their expectations clearly to their teams."
+  },
+  {
+    "id": "lan-071",
+    "topic": "language",
+    "word": "get the message across",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "speaking",
+      "writing"
+    ],
+    "definition": "to make people understand what one wants to say",
+    "collocations": [
+      "struggle to get the message across",
+      "get the message across clearly",
+      "get the message across effectively"
+    ],
+    "paraphrases": [
+      "make oneself understood",
+      "put the point across"
+    ],
+    "example": "Even with limited vocabulary, she managed to get the message across."
+  },
+  {
+    "id": "lan-072",
+    "topic": "language",
+    "word": "speak volumes",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "to reveal a great deal without using many words",
+    "collocations": [
+      "speak volumes about",
+      "a silence that speaks volumes",
+      "speak volumes for"
+    ],
+    "paraphrases": [
+      "say a lot",
+      "reveal much"
+    ],
+    "example": "His refusal to apologise speaks volumes about his character."
+  },
+  {
+    "id": "lan-073",
+    "topic": "language",
+    "word": "break the ice",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "to ease tension at a first meeting by saying something friendly",
+    "collocations": [
+      "break the ice with a joke",
+      "help to break the ice",
+      "try to break the ice"
+    ],
+    "paraphrases": [
+      "ease the tension",
+      "get conversation started"
+    ],
+    "example": "A short game helped to break the ice at the start of the workshop."
+  },
+  {
+    "id": "lan-074",
+    "topic": "language",
+    "word": "mispronounce",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "reading",
+      "speaking"
+    ],
+    "definition": "to say a word in the wrong way",
+    "collocations": [
+      "mispronounce a word",
+      "often mispronounced",
+      "mispronounce names"
+    ],
+    "paraphrases": [
+      "say incorrectly",
+      "pronounce wrongly"
+    ],
+    "example": "Many learners mispronounce the word 'comfortable' by saying every syllable."
+  },
+  {
+    "id": "lan-075",
+    "topic": "language",
+    "word": "bilingualism",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the ability to use two languages regularly",
+    "collocations": [
+      "early bilingualism",
+      "benefits of bilingualism",
+      "promote bilingualism"
+    ],
+    "paraphrases": [
+      "use of two languages",
+      "dual-language ability"
+    ],
+    "example": "Research suggests that bilingualism may delay the onset of dementia."
+  },
+  {
+    "id": "lan-076",
+    "topic": "language",
+    "word": "monolingual",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "speaking or using only one language",
+    "collocations": [
+      "monolingual speakers",
+      "monolingual country",
+      "monolingual dictionary"
+    ],
+    "paraphrases": [
+      "single-language",
+      "speaking one tongue"
+    ],
+    "example": "Monolingual societies sometimes underestimate the value of learning other languages."
+  },
+  {
+    "id": "lan-077",
+    "topic": "language",
+    "word": "paraphrase",
+    "pos": "verb",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to express the meaning of something using different words",
+    "collocations": [
+      "paraphrase a sentence",
+      "paraphrase the question",
+      "paraphrase a passage"
+    ],
+    "paraphrases": [
+      "reword",
+      "restate"
+    ],
+    "example": "Candidates should paraphrase the question rather than copy it word for word."
+  },
+  {
+    "id": "lan-078",
+    "topic": "language",
+    "word": "inflection",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a change in the form of a word to show tense or number",
+    "collocations": [
+      "verb inflection",
+      "rich inflection",
+      "inflection of the voice"
+    ],
+    "paraphrases": [
+      "word ending change",
+      "grammatical variation"
+    ],
+    "example": "Latin relies heavily on inflection, whereas modern English depends more on word order."
+  },
+  {
+    "id": "lan-079",
+    "topic": "language",
+    "word": "coin",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to invent a new word or expression",
+    "collocations": [
+      "coin a phrase",
+      "coin a term",
+      "coin a word"
+    ],
+    "paraphrases": [
+      "invent",
+      "create a new term"
+    ],
+    "example": "The economist coined the term 'globalisation' to describe the integration of markets."
+  }
+]

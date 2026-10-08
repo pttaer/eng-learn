@@ -1,0 +1,1670 @@
+[
+  {
+    "id": "gov-001",
+    "topic": "government",
+    "word": "legislation",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "laws considered together, or the process of making them",
+    "collocations": [
+      "introduce legislation",
+      "strict legislation",
+      "pass legislation"
+    ],
+    "paraphrases": [
+      "laws",
+      "statutes"
+    ],
+    "example": "New legislation requires companies to publish the salaries of all senior staff."
+  },
+  {
+    "id": "gov-002",
+    "topic": "government",
+    "word": "legislature",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the group of people who have the power to make and change laws",
+    "collocations": [
+      "national legislature",
+      "state legislature",
+      "elected legislature"
+    ],
+    "paraphrases": [
+      "law-making body",
+      "parliament"
+    ],
+    "example": "The legislature voted overwhelmingly to extend the voting age to sixteen."
+  },
+  {
+    "id": "gov-003",
+    "topic": "government",
+    "word": "constituency",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "an area of a country that elects its own representative",
+    "collocations": [
+      "local constituency",
+      "marginal constituency",
+      "constituency boundaries"
+    ],
+    "paraphrases": [
+      "electoral district",
+      "voting area"
+    ],
+    "example": "The minister was re-elected in a constituency that had supported her party for decades."
+  },
+  {
+    "id": "gov-004",
+    "topic": "government",
+    "word": "electorate",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "all the people who have the right to vote in an election",
+    "collocations": [
+      "the electorate",
+      "engage the electorate",
+      "sections of the electorate"
+    ],
+    "paraphrases": [
+      "body of voters",
+      "eligible voters"
+    ],
+    "example": "Politicians must persuade a sceptical electorate that their plans are affordable."
+  },
+  {
+    "id": "gov-005",
+    "topic": "government",
+    "word": "ballot",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a secret vote, or the paper used to cast it",
+    "collocations": [
+      "secret ballot",
+      "cast a ballot",
+      "ballot box"
+    ],
+    "paraphrases": [
+      "vote",
+      "voting paper"
+    ],
+    "example": "The result was declared invalid because many ballots had been damaged."
+  },
+  {
+    "id": "gov-006",
+    "topic": "government",
+    "word": "manifesto",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a published statement of the policies a political party intends to follow",
+    "collocations": [
+      "party manifesto",
+      "election manifesto",
+      "manifesto pledge"
+    ],
+    "paraphrases": [
+      "statement of policy aims",
+      "platform"
+    ],
+    "example": "The party's manifesto promised to cut income tax for lower earners."
+  },
+  {
+    "id": "gov-007",
+    "topic": "government",
+    "word": "coalition",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a temporary alliance of political parties that govern together",
+    "collocations": [
+      "coalition government",
+      "form a coalition",
+      "broad coalition"
+    ],
+    "paraphrases": [
+      "alliance",
+      "joint administration"
+    ],
+    "example": "After the election, no party won a majority, so a coalition was formed."
+  },
+  {
+    "id": "gov-008",
+    "topic": "government",
+    "word": "opposition",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the political parties that oppose the government",
+    "collocations": [
+      "opposition parties",
+      "leader of the opposition",
+      "opposition leader"
+    ],
+    "paraphrases": [
+      "rival parties",
+      "parties not in power"
+    ],
+    "example": "The opposition criticised the proposed tax rise as unfair to pensioners."
+  },
+  {
+    "id": "gov-009",
+    "topic": "government",
+    "word": "incumbent",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a person who currently holds an official position",
+    "collocations": [
+      "the incumbent",
+      "defeat the incumbent",
+      "incumbent president"
+    ],
+    "paraphrases": [
+      "current office-holder",
+      "sitting representative"
+    ],
+    "example": "The incumbent enjoys advantages such as media coverage and name recognition."
+  },
+  {
+    "id": "gov-010",
+    "topic": "government",
+    "word": "referendum",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a direct public vote on a single political question",
+    "collocations": [
+      "hold a referendum",
+      "national referendum",
+      "referendum result"
+    ],
+    "paraphrases": [
+      "public vote on an issue",
+      "plebiscite"
+    ],
+    "example": "The government promised a referendum on whether the country should adopt the new constitution."
+  },
+  {
+    "id": "gov-011",
+    "topic": "government",
+    "word": "mandate",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the authority given by voters to a government to carry out its policies",
+    "collocations": [
+      "electoral mandate",
+      "clear mandate",
+      "seek a mandate"
+    ],
+    "paraphrases": [
+      "authority from voters",
+      "official backing"
+    ],
+    "example": "The new president claimed a clear mandate to reform the pension system."
+  },
+  {
+    "id": "gov-012",
+    "topic": "government",
+    "word": "bureaucracy",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a system of government with many officials and strict procedures",
+    "collocations": [
+      "government bureaucracy",
+      "cut bureaucracy",
+      "layers of bureaucracy"
+    ],
+    "paraphrases": [
+      "officialdom",
+      "administrative procedures"
+    ],
+    "example": "Excessive bureaucracy can delay the opening of small businesses by several months."
+  },
+  {
+    "id": "gov-013",
+    "topic": "government",
+    "word": "policymaker",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a person who helps to decide the plans and rules of a government",
+    "collocations": [
+      "senior policymakers",
+      "policymakers and planners",
+      "persuade policymakers"
+    ],
+    "paraphrases": [
+      "decision-maker",
+      "person who shapes government plans"
+    ],
+    "example": "Policymakers must weigh short-term costs against long-term benefits when planning reforms."
+  },
+  {
+    "id": "gov-014",
+    "topic": "government",
+    "word": "public spending",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "money that governments spend on services and projects",
+    "collocations": [
+      "cut public spending",
+      "increase public spending",
+      "public spending on health"
+    ],
+    "paraphrases": [
+      "government expenditure",
+      "state outlay"
+    ],
+    "example": "Public spending on transport has risen steadily since the new administration took office."
+  },
+  {
+    "id": "gov-015",
+    "topic": "government",
+    "word": "taxation",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the system of collecting money from citizens and companies for the state",
+    "collocations": [
+      "higher taxation",
+      "progressive taxation",
+      "taxation system"
+    ],
+    "paraphrases": [
+      "levying of taxes",
+      "tax system"
+    ],
+    "example": "Higher taxation of fuel is intended to discourage unnecessary car use."
+  },
+  {
+    "id": "gov-017",
+    "topic": "government",
+    "word": "welfare state",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a system in which the government provides benefits and services for people in need",
+    "collocations": [
+      "expand the welfare state",
+      "support the welfare state",
+      "welfare state provision"
+    ],
+    "paraphrases": [
+      "state-provided social support",
+      "public safety net"
+    ],
+    "example": "A strong welfare state can protect the unemployed during a recession."
+  },
+  {
+    "id": "gov-018",
+    "topic": "government",
+    "word": "austerity",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a government policy of cutting spending and raising taxes to reduce debt",
+    "collocations": [
+      "austerity measures",
+      "period of austerity",
+      "austerity programme"
+    ],
+    "paraphrases": [
+      "spending cuts",
+      "belt-tightening"
+    ],
+    "example": "Years of austerity left local councils unable to maintain basic services."
+  },
+  {
+    "id": "gov-019",
+    "topic": "government",
+    "word": "deficit",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the amount by which spending exceeds income, especially in a national budget",
+    "collocations": [
+      "budget deficit",
+      "reduce the deficit",
+      "run a deficit"
+    ],
+    "paraphrases": [
+      "shortfall",
+      "gap between spending and revenue"
+    ],
+    "example": "The government hopes to reduce the deficit by increasing taxes on high earners."
+  },
+  {
+    "id": "gov-020",
+    "topic": "government",
+    "word": "fiscal",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "relating to government money, especially taxes and public spending",
+    "collocations": [
+      "fiscal policy",
+      "fiscal year",
+      "fiscal responsibility"
+    ],
+    "paraphrases": [
+      "financial",
+      "relating to public finance"
+    ],
+    "example": "Fiscal policy must balance the need for growth with the need to control debt."
+  },
+  {
+    "id": "gov-022",
+    "topic": "government",
+    "word": "levy",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "an extra charge or tax that must be paid, often for a specific purpose",
+    "collocations": [
+      "impose a levy",
+      "sugar levy",
+      "environmental levy"
+    ],
+    "paraphrases": [
+      "special tax",
+      "compulsory charge"
+    ],
+    "example": "The government introduced a levy on plastic bags to discourage their use."
+  },
+  {
+    "id": "gov-024",
+    "topic": "government",
+    "word": "diplomacy",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the work of managing relations between countries peacefully",
+    "collocations": [
+      "quiet diplomacy",
+      "international diplomacy",
+      "economic diplomacy"
+    ],
+    "paraphrases": [
+      "international negotiation",
+      "statecraft"
+    ],
+    "example": "Patient diplomacy eventually avoided a conflict that many had thought inevitable."
+  },
+  {
+    "id": "gov-025",
+    "topic": "government",
+    "word": "treaty",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a formal written agreement between countries",
+    "collocations": [
+      "sign a treaty",
+      "peace treaty",
+      "ratify a treaty"
+    ],
+    "paraphrases": [
+      "international agreement",
+      "pact"
+    ],
+    "example": "The two nations signed a treaty to limit the size of their armed forces."
+  },
+  {
+    "id": "gov-026",
+    "topic": "government",
+    "word": "sovereignty",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the power of a country to govern itself without outside control",
+    "collocations": [
+      "national sovereignty",
+      "state sovereignty",
+      "surrender sovereignty"
+    ],
+    "paraphrases": [
+      "self-rule",
+      "independent authority"
+    ],
+    "example": "Many citizens feared that joining the union would erode national sovereignty."
+  },
+  {
+    "id": "gov-028",
+    "topic": "government",
+    "word": "federal",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "relating to a system in which regions share power with a central government",
+    "collocations": [
+      "federal government",
+      "federal system",
+      "federal law"
+    ],
+    "paraphrases": [
+      "national rather than regional",
+      "relating to a union of states"
+    ],
+    "example": "Federal law overrides local regulations when the two conflict."
+  },
+  {
+    "id": "gov-029",
+    "topic": "government",
+    "word": "democracy",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a system of government in which citizens elect their leaders",
+    "collocations": [
+      "representative democracy",
+      "liberal democracy",
+      "direct democracy"
+    ],
+    "paraphrases": [
+      "rule by the people",
+      "elected government"
+    ],
+    "example": "A healthy democracy depends on a free press and fair elections."
+  },
+  {
+    "id": "gov-030",
+    "topic": "government",
+    "word": "authoritarian",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "demanding strict obedience to authority and allowing little personal freedom",
+    "collocations": [
+      "authoritarian regime",
+      "authoritarian leader",
+      "authoritarian rule"
+    ],
+    "paraphrases": [
+      "dictatorial",
+      "strict and controlling"
+    ],
+    "example": "Authoritarian governments often restrict freedom of speech to stay in power."
+  },
+  {
+    "id": "gov-031",
+    "topic": "government",
+    "word": "dictatorship",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a form of government in which one person has complete power",
+    "collocations": [
+      "military dictatorship",
+      "overthrow a dictatorship",
+      "live under a dictatorship"
+    ],
+    "paraphrases": [
+      "autocracy",
+      "one-man rule"
+    ],
+    "example": "The country lived under a dictatorship for almost thirty years."
+  },
+  {
+    "id": "gov-032",
+    "topic": "government",
+    "word": "regime",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a government, especially one that is not democratic or that came to power by force",
+    "collocations": [
+      "repressive regime",
+      "military regime",
+      "overthrow a regime"
+    ],
+    "paraphrases": [
+      "ruling system",
+      "administration in power"
+    ],
+    "example": "The regime closed newspapers that criticised the president."
+  },
+  {
+    "id": "gov-033",
+    "topic": "government",
+    "word": "corruption",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "dishonest or illegal behaviour by people in power, especially taking bribes",
+    "collocations": [
+      "tackle corruption",
+      "widespread corruption",
+      "corruption scandal"
+    ],
+    "paraphrases": [
+      "bribery",
+      "abuse of public office"
+    ],
+    "example": "Widespread corruption discourages foreign companies from investing in the country."
+  },
+  {
+    "id": "gov-034",
+    "topic": "government",
+    "word": "transparency",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "openness in the way that officials and organisations make decisions",
+    "collocations": [
+      "greater transparency",
+      "lack of transparency",
+      "transparency in government"
+    ],
+    "paraphrases": [
+      "openness",
+      "clarity of decision-making"
+    ],
+    "example": "Greater transparency in public contracts would make bribery harder to hide."
+  },
+  {
+    "id": "gov-035",
+    "topic": "government",
+    "word": "accountability",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the obligation of officials to explain and take responsibility for their actions",
+    "collocations": [
+      "public accountability",
+      "democratic accountability",
+      "lack of accountability"
+    ],
+    "paraphrases": [
+      "answerability",
+      "responsibility for one's actions"
+    ],
+    "example": "Accountability requires ministers to resign when serious mistakes are made on their watch."
+  },
+  {
+    "id": "gov-036",
+    "topic": "government",
+    "word": "scrutiny",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "careful and critical examination of something",
+    "collocations": [
+      "public scrutiny",
+      "parliamentary scrutiny",
+      "come under scrutiny"
+    ],
+    "paraphrases": [
+      "close examination",
+      "critical inspection"
+    ],
+    "example": "The proposed budget will face intense scrutiny from the opposition."
+  },
+  {
+    "id": "gov-037",
+    "topic": "government",
+    "word": "lobby",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to try to persuade politicians to support a particular cause or policy",
+    "collocations": [
+      "lobby the government",
+      "lobby for change",
+      "lobby against"
+    ],
+    "paraphrases": [
+      "press for",
+      "campaign to influence officials"
+    ],
+    "example": "Industry groups lobby ministers to relax rules that increase their costs."
+  },
+  {
+    "id": "gov-038",
+    "topic": "government",
+    "word": "grassroots",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "ordinary people in a community, as opposed to its leaders",
+    "collocations": [
+      "grassroots movement",
+      "grassroots campaign",
+      "grassroots support"
+    ],
+    "paraphrases": [
+      "ordinary citizens",
+      "local base of supporters"
+    ],
+    "example": "The reform began as a grassroots movement led by parents and teachers."
+  },
+  {
+    "id": "gov-039",
+    "topic": "government",
+    "word": "civic",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "relating to a town or city and the duties of its citizens",
+    "collocations": [
+      "civic duty",
+      "civic pride",
+      "civic engagement"
+    ],
+    "paraphrases": [
+      "relating to citizens",
+      "municipal"
+    ],
+    "example": "Voting is widely regarded as a civic duty in democratic societies."
+  },
+  {
+    "id": "gov-040",
+    "topic": "government",
+    "word": "civil liberties",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the basic rights of individuals, such as freedom of speech, protected by law",
+    "collocations": [
+      "protect civil liberties",
+      "erode civil liberties",
+      "restrict civil liberties"
+    ],
+    "paraphrases": [
+      "individual freedoms",
+      "legal personal rights"
+    ],
+    "example": "Critics claim that the new surveillance law threatens civil liberties."
+  },
+  {
+    "id": "gov-041",
+    "topic": "government",
+    "word": "citizenship",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the legal status of belonging to a country, with its rights and duties",
+    "collocations": [
+      "apply for citizenship",
+      "dual citizenship",
+      "grant citizenship"
+    ],
+    "paraphrases": [
+      "nationality",
+      "legal membership of a state"
+    ],
+    "example": "Applicants for citizenship must usually pass a language and history test."
+  },
+  {
+    "id": "gov-042",
+    "topic": "government",
+    "word": "suffrage",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the right to vote in political elections",
+    "collocations": [
+      "universal suffrage",
+      "women's suffrage",
+      "extend suffrage"
+    ],
+    "paraphrases": [
+      "right to vote",
+      "franchise"
+    ],
+    "example": "Universal suffrage was not achieved in many countries until the twentieth century."
+  },
+  {
+    "id": "gov-043",
+    "topic": "government",
+    "word": "turnout",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the number of people who vote in an election",
+    "collocations": [
+      "low turnout",
+      "voter turnout",
+      "boost turnout"
+    ],
+    "paraphrases": [
+      "participation rate",
+      "number of voters"
+    ],
+    "example": "Voter turnout among young people has fallen in the last three elections."
+  },
+  {
+    "id": "gov-044",
+    "topic": "government",
+    "word": "abstain",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to choose not to vote or take part in something",
+    "collocations": [
+      "abstain from voting",
+      "abstain from the vote",
+      "choose to abstain"
+    ],
+    "paraphrases": [
+      "refrain from voting",
+      "decline to vote"
+    ],
+    "example": "Several members chose to abstain rather than back a policy they disliked."
+  },
+  {
+    "id": "gov-045",
+    "topic": "government",
+    "word": "campaign",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a planned series of activities intended to achieve a political or social aim",
+    "collocations": [
+      "election campaign",
+      "launch a campaign",
+      "campaign against"
+    ],
+    "paraphrases": [
+      "organised effort",
+      "drive"
+    ],
+    "example": "The election campaign focused largely on housing and the cost of living."
+  },
+  {
+    "id": "gov-046",
+    "topic": "government",
+    "word": "candidate",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "a person who is trying to be elected or selected for a position",
+    "collocations": [
+      "presidential candidate",
+      "stand as a candidate",
+      "leading candidate"
+    ],
+    "paraphrases": [
+      "contender",
+      "person standing for office"
+    ],
+    "example": "Each candidate was given five minutes to present their plans to voters."
+  },
+  {
+    "id": "gov-047",
+    "topic": "government",
+    "word": "rhetoric",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "speech or writing intended to impress or persuade, often without much substance",
+    "collocations": [
+      "political rhetoric",
+      "empty rhetoric",
+      "heated rhetoric"
+    ],
+    "paraphrases": [
+      "persuasive language",
+      "grand talk"
+    ],
+    "example": "Politicians' rhetoric on immigration often ignores the evidence."
+  },
+  {
+    "id": "gov-048",
+    "topic": "government",
+    "word": "populism",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a political approach that claims to represent ordinary people against elites",
+    "collocations": [
+      "rise of populism",
+      "right-wing populism",
+      "appeal of populism"
+    ],
+    "paraphrases": [
+      "appeal to ordinary people",
+      "anti-elite politics"
+    ],
+    "example": "The appeal of populism often grows when people feel ignored by established parties."
+  },
+  {
+    "id": "gov-049",
+    "topic": "government",
+    "word": "ideology",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a set of political beliefs and ideas that guides a party or group",
+    "collocations": [
+      "political ideology",
+      "dominant ideology",
+      "driven by ideology"
+    ],
+    "paraphrases": [
+      "belief system",
+      "political doctrine"
+    ],
+    "example": "Policy decisions should rest on evidence rather than rigid ideology."
+  },
+  {
+    "id": "gov-050",
+    "topic": "government",
+    "word": "partisan",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "strongly supporting one political party or cause without being fair to others",
+    "collocations": [
+      "partisan politics",
+      "partisan coverage",
+      "partisan divide"
+    ],
+    "paraphrases": [
+      "biased",
+      "one-sided"
+    ],
+    "example": "Partisan divisions made it nearly impossible to agree on a national budget."
+  },
+  {
+    "id": "gov-051",
+    "topic": "government",
+    "word": "bipartisan",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "supported by two political parties that usually oppose each other",
+    "collocations": [
+      "bipartisan support",
+      "bipartisan agreement",
+      "bipartisan approach"
+    ],
+    "paraphrases": [
+      "cross-party",
+      "backed by both main parties"
+    ],
+    "example": "The bill passed only because it attracted bipartisan support."
+  },
+  {
+    "id": "gov-052",
+    "topic": "government",
+    "word": "devolution",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the transfer of power from central government to regional authorities",
+    "collocations": [
+      "political devolution",
+      "devolution of power",
+      "further devolution"
+    ],
+    "paraphrases": [
+      "transfer of powers to regions",
+      "decentralisation of power"
+    ],
+    "example": "Devolution has given local councils more control over housing and transport."
+  },
+  {
+    "id": "gov-053",
+    "topic": "government",
+    "word": "decentralise",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to give some power from central government to local authorities",
+    "collocations": [
+      "decentralise power",
+      "decentralise control",
+      "decentralise decision-making"
+    ],
+    "paraphrases": [
+      "devolve",
+      "hand power to regions"
+    ],
+    "example": "The government plans to decentralise decision-making so that towns can set their own priorities."
+  },
+  {
+    "id": "gov-054",
+    "topic": "government",
+    "word": "nationalise",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to bring a private company or industry under government ownership",
+    "collocations": [
+      "nationalise the railways",
+      "nationalise industries",
+      "plan to nationalise"
+    ],
+    "paraphrases": [
+      "take into state ownership",
+      "transfer to public control"
+    ],
+    "example": "The new administration threatened to nationalise the banks if they failed."
+  },
+  {
+    "id": "gov-055",
+    "topic": "government",
+    "word": "privatise",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to sell a state-owned company or service to private owners",
+    "collocations": [
+      "privatise services",
+      "privatise the railways",
+      "plans to privatise"
+    ],
+    "paraphrases": [
+      "sell to private investors",
+      "transfer from public to private ownership"
+    ],
+    "example": "Critics warned that plans to privatise the water supply would raise prices for ordinary households."
+  },
+  {
+    "id": "gov-056",
+    "topic": "government",
+    "word": "intervene",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to become involved in a situation in order to change what is happening",
+    "collocations": [
+      "intervene directly",
+      "intervene in the market",
+      "reluctant to intervene"
+    ],
+    "paraphrases": [
+      "step in",
+      "get involved"
+    ],
+    "example": "Governments sometimes intervene in the housing market to keep rents affordable."
+  },
+  {
+    "id": "gov-057",
+    "topic": "government",
+    "word": "implement",
+    "pos": "verb",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "to put a plan or decision into practice",
+    "collocations": [
+      "implement a policy",
+      "implement reforms",
+      "fully implement"
+    ],
+    "paraphrases": [
+      "carry out",
+      "put into effect"
+    ],
+    "example": "The authorities have promised to implement the new regulations by the end of the year."
+  },
+  {
+    "id": "gov-058",
+    "topic": "government",
+    "word": "enact",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to pass a proposal and make it law",
+    "collocations": [
+      "enact legislation",
+      "enact a law",
+      "enact reforms"
+    ],
+    "paraphrases": [
+      "pass into law",
+      "make legally binding"
+    ],
+    "example": "Parliament enacted the law after years of public debate."
+  },
+  {
+    "id": "gov-059",
+    "topic": "government",
+    "word": "repeal",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to officially cancel a law",
+    "collocations": [
+      "repeal a law",
+      "repeal legislation",
+      "vote to repeal"
+    ],
+    "paraphrases": [
+      "abolish",
+      "revoke"
+    ],
+    "example": "The incoming government pledged to repeal the unpopular tax."
+  },
+  {
+    "id": "gov-060",
+    "topic": "government",
+    "word": "amend",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to officially change the wording of a law or document",
+    "collocations": [
+      "amend the constitution",
+      "amend a law",
+      "amend legislation"
+    ],
+    "paraphrases": [
+      "alter formally",
+      "revise"
+    ],
+    "example": "The senate voted to amend the constitution to extend presidential terms."
+  },
+  {
+    "id": "gov-061",
+    "topic": "government",
+    "word": "ratify",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to give formal approval to a treaty or agreement so that it becomes valid",
+    "collocations": [
+      "ratify a treaty",
+      "ratify an agreement",
+      "fail to ratify"
+    ],
+    "paraphrases": [
+      "formally approve",
+      "confirm officially"
+    ],
+    "example": "Most member states have still not ratified the treaty."
+  },
+  {
+    "id": "gov-062",
+    "topic": "government",
+    "word": "veto",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to officially refuse to approve a proposal or law",
+    "collocations": [
+      "veto a bill",
+      "veto a proposal",
+      "threaten to veto"
+    ],
+    "paraphrases": [
+      "block",
+      "reject officially"
+    ],
+    "example": "The president threatened to veto any bill that raised taxes."
+  },
+  {
+    "id": "gov-063",
+    "topic": "government",
+    "word": "jurisdiction",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the official power to make legal decisions within a certain area",
+    "collocations": [
+      "legal jurisdiction",
+      "fall under jurisdiction",
+      "outside the jurisdiction"
+    ],
+    "paraphrases": [
+      "legal authority",
+      "area of official control"
+    ],
+    "example": "Matters of local planning fall under the jurisdiction of the municipal authority."
+  },
+  {
+    "id": "gov-064",
+    "topic": "government",
+    "word": "statute",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a law passed by a parliament and written down formally",
+    "collocations": [
+      "statute law",
+      "statute book",
+      "by statute"
+    ],
+    "paraphrases": [
+      "written law",
+      "act of parliament"
+    ],
+    "example": "The right to strike is protected by statute in most European countries."
+  },
+  {
+    "id": "gov-065",
+    "topic": "government",
+    "word": "constitutional",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "relating to the basic laws by which a country is governed",
+    "collocations": [
+      "constitutional change",
+      "constitutional reform",
+      "constitutional right"
+    ],
+    "paraphrases": [
+      "relating to a country's founding laws",
+      "legal under the constitution"
+    ],
+    "example": "Constitutional reform requires approval by two thirds of the legislature."
+  },
+  {
+    "id": "gov-066",
+    "topic": "government",
+    "word": "secular",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "not connected with religion",
+    "collocations": [
+      "secular state",
+      "secular society",
+      "secular government"
+    ],
+    "paraphrases": [
+      "non-religious",
+      "separate from the church"
+    ],
+    "example": "The constitution establishes a secular state in which religion plays no official role."
+  },
+  {
+    "id": "gov-067",
+    "topic": "government",
+    "word": "public sector",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the part of the economy controlled by the government",
+    "collocations": [
+      "public sector workers",
+      "public sector pay",
+      "cut the public sector"
+    ],
+    "paraphrases": [
+      "state-run part of the economy",
+      "government-owned services"
+    ],
+    "example": "Public sector pay has fallen behind private sector wages for the last five years."
+  },
+  {
+    "id": "gov-068",
+    "topic": "government",
+    "word": "red tape",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "official rules that are complicated and cause delay",
+    "collocations": [
+      "cut red tape",
+      "reduce red tape",
+      "bureaucratic red tape"
+    ],
+    "paraphrases": [
+      "excessive paperwork",
+      "official formalities"
+    ],
+    "example": "Small firms complain that red tape makes starting a business slow and costly."
+  },
+  {
+    "id": "gov-069",
+    "topic": "government",
+    "word": "whistleblower",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a person who reveals wrongdoing inside an organisation to the public or authorities",
+    "collocations": [
+      "protect whistleblowers",
+      "government whistleblower",
+      "whistleblower protection"
+    ],
+    "paraphrases": [
+      "informant",
+      "person who exposes wrongdoing"
+    ],
+    "example": "A whistleblower exposed the misuse of public funds in the ministry."
+  },
+  {
+    "id": "gov-070",
+    "topic": "government",
+    "word": "cabinet",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "the group of senior ministers who advise the head of a government",
+    "collocations": [
+      "cabinet minister",
+      "cabinet meeting",
+      "reshuffle the cabinet"
+    ],
+    "paraphrases": [
+      "team of senior ministers",
+      "ministerial group"
+    ],
+    "example": "The prime minister reshuffled the cabinet after the budget row."
+  },
+  {
+    "id": "gov-071",
+    "topic": "government",
+    "word": "administration",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the government of a country during a particular period, or the management of an organisation",
+    "collocations": [
+      "new administration",
+      "previous administration",
+      "local administration"
+    ],
+    "paraphrases": [
+      "government in office",
+      "management"
+    ],
+    "example": "The previous administration had cut funding to rural hospitals."
+  },
+  {
+    "id": "gov-072",
+    "topic": "government",
+    "word": "public opinion",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the general view held by most ordinary people about an issue",
+    "collocations": [
+      "shape public opinion",
+      "public opinion polls",
+      "sway public opinion"
+    ],
+    "paraphrases": [
+      "popular view",
+      "what ordinary people think"
+    ],
+    "example": "Public opinion turned against the policy once its cost became clear."
+  },
+  {
+    "id": "gov-073",
+    "topic": "government",
+    "word": "political will",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the determination of political leaders to take action on a difficult issue",
+    "collocations": [
+      "lack political will",
+      "demonstrate political will",
+      "require political will"
+    ],
+    "paraphrases": [
+      "determination of leaders",
+      "resolve to act"
+    ],
+    "example": "Tackling the problem requires genuine political will as well as money."
+  },
+  {
+    "id": "gov-074",
+    "topic": "government",
+    "word": "vested interests",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a strong personal reason for wanting something to happen, usually for private gain",
+    "collocations": [
+      "powerful vested interests",
+      "challenge vested interests",
+      "corporate vested interests"
+    ],
+    "paraphrases": [
+      "selfish stake",
+      "self-serving motives"
+    ],
+    "example": "Reform has been blocked by powerful vested interests that profit from the current system."
+  },
+  {
+    "id": "gov-075",
+    "topic": "government",
+    "word": "means-tested",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "describing a benefit given only to people whose income is below a certain level",
+    "collocations": [
+      "means-tested benefits",
+      "means-tested support",
+      "means-tested scheme"
+    ],
+    "paraphrases": [
+      "based on income",
+      "given only to those in need"
+    ],
+    "example": "Means-tested benefits aim to help the poorest but may discourage people from earning more."
+  },
+  {
+    "id": "gov-076",
+    "topic": "government",
+    "word": "progressive tax",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a tax system where people with higher incomes pay a larger percentage",
+    "collocations": [
+      "introduce a progressive tax",
+      "progressive tax system",
+      "progressive tax rates"
+    ],
+    "paraphrases": [
+      "tax that rises with income",
+      "graduated tax"
+    ],
+    "example": "A progressive tax asks wealthier citizens to contribute proportionally more to public services."
+  },
+  {
+    "id": "gov-077",
+    "topic": "government",
+    "word": "tax burden",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the total amount of tax that individuals or companies must pay",
+    "collocations": [
+      "ease the tax burden",
+      "heavy tax burden",
+      "shift the tax burden"
+    ],
+    "paraphrases": [
+      "weight of taxes",
+      "total taxes owed"
+    ],
+    "example": "Many economists argue that the tax burden falls heaviest on middle-income families."
+  },
+  {
+    "id": "gov-078",
+    "topic": "government",
+    "word": "election",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "the process of choosing a person or party for office by voting",
+    "collocations": [
+      "general election",
+      "win an election",
+      "election result"
+    ],
+    "paraphrases": [
+      "vote",
+      "poll"
+    ],
+    "example": "The general election will take place in the spring."
+  },
+  {
+    "id": "gov-079",
+    "topic": "government",
+    "word": "legitimate",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "having a lawful right to govern or to be accepted as valid",
+    "collocations": [
+      "legitimate government",
+      "legitimate concern",
+      "legitimate authority"
+    ],
+    "paraphrases": [
+      "lawful",
+      "rightful"
+    ],
+    "example": "A government that wins power through fraud will struggle to be seen as legitimate."
+  }
+]

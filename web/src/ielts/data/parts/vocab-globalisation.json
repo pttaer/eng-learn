@@ -1,0 +1,1618 @@
+[
+  {
+    "id": "glo-001",
+    "topic": "globalisation",
+    "word": "outsourcing",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the practice of hiring another company, often abroad, to do work for a business",
+    "collocations": [
+      "cut costs through outsourcing",
+      "the outsourcing of jobs",
+      "call-centre outsourcing"
+    ],
+    "paraphrases": [
+      "contracting work to outside firms",
+      "farming out tasks overseas"
+    ],
+    "example": "The outsourcing of customer service to other countries has saved firms money but cost local jobs."
+  },
+  {
+    "id": "glo-002",
+    "topic": "globalisation",
+    "word": "multinational",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a large company that operates in many countries",
+    "collocations": [
+      "a global multinational",
+      "multinational corporations",
+      "a multinational retailer"
+    ],
+    "paraphrases": [
+      "a transnational corporation",
+      "an international company"
+    ],
+    "example": "A multinational can shift production to wherever wages and taxes are lowest."
+  },
+  {
+    "id": "glo-005",
+    "topic": "globalisation",
+    "word": "protectionism",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the policy of shielding domestic industries from foreign competition",
+    "collocations": [
+      "economic protectionism",
+      "rise of protectionism",
+      "resort to protectionism"
+    ],
+    "paraphrases": [
+      "shielding home industry from imports",
+      "trade restriction"
+    ],
+    "example": "Growing protectionism could slow the world economy by making goods more expensive."
+  },
+  {
+    "id": "glo-006",
+    "topic": "globalisation",
+    "word": "free trade",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "commerce between countries without taxes or restrictions on imports and exports",
+    "collocations": [
+      "promote free trade",
+      "a free trade agreement",
+      "free trade zone"
+    ],
+    "paraphrases": [
+      "trade without barriers",
+      "unrestricted commerce"
+    ],
+    "example": "Supporters of free trade claim that competition lowers prices for consumers."
+  },
+  {
+    "id": "glo-007",
+    "topic": "globalisation",
+    "word": "trade barrier",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a rule or tax that makes it harder to sell goods in another country",
+    "collocations": [
+      "remove trade barriers",
+      "lower trade barriers",
+      "tariff and non-tariff trade barriers"
+    ],
+    "paraphrases": [
+      "an obstacle to commerce",
+      "a restriction on imports"
+    ],
+    "example": "Removing trade barriers has allowed small farmers to reach customers overseas."
+  },
+  {
+    "id": "glo-008",
+    "topic": "globalisation",
+    "word": "supply chain",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the network of people and companies involved in producing and delivering a product",
+    "collocations": [
+      "a global supply chain",
+      "disrupt supply chains",
+      "the supply chain"
+    ],
+    "paraphrases": [
+      "the production and distribution network",
+      "the chain of manufacture and delivery"
+    ],
+    "example": "A single factory closure can disrupt the entire supply chain for electronic goods."
+  },
+  {
+    "id": "glo-009",
+    "topic": "globalisation",
+    "word": "offshore",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "located or done in another country, usually to reduce costs or taxes",
+    "collocations": [
+      "offshore production",
+      "an offshore account",
+      "offshore factories"
+    ],
+    "paraphrases": [
+      "overseas",
+      "based abroad"
+    ],
+    "example": "Many clothing firms have moved to offshore factories where labour is cheaper."
+  },
+  {
+    "id": "glo-010",
+    "topic": "globalisation",
+    "word": "sweatshop",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a factory where people work long hours in poor conditions for low pay",
+    "collocations": [
+      "sweatshop labour",
+      "a sweatshop owner",
+      "work in a sweatshop"
+    ],
+    "paraphrases": [
+      "an exploitative factory",
+      "a low-wage workshop"
+    ],
+    "example": "Campaigners exposed a sweatshop that produced clothes for several well-known brands."
+  },
+  {
+    "id": "glo-011",
+    "topic": "globalisation",
+    "word": "interdependence",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a situation in which countries rely on one another",
+    "collocations": [
+      "economic interdependence",
+      "growing interdependence",
+      "global interdependence"
+    ],
+    "paraphrases": [
+      "mutual reliance",
+      "reciprocal dependence"
+    ],
+    "example": "Economic interdependence means that a banking crisis in one country soon affects others."
+  },
+  {
+    "id": "glo-012",
+    "topic": "globalisation",
+    "word": "homogenisation",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the process of making things all the same, losing local differences",
+    "collocations": [
+      "cultural homogenisation",
+      "fear homogenisation",
+      "global homogenisation"
+    ],
+    "paraphrases": [
+      "standardisation",
+      "the loss of diversity"
+    ],
+    "example": "Critics fear that cultural homogenisation will leave every high street looking identical."
+  },
+  {
+    "id": "glo-013",
+    "topic": "globalisation",
+    "word": "cultural identity",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "the sense of belonging to a group defined by shared customs and traditions",
+    "collocations": [
+      "preserve cultural identity",
+      "a strong cultural identity",
+      "lose cultural identity"
+    ],
+    "paraphrases": [
+      "a sense of cultural belonging",
+      "the character of a people"
+    ],
+    "example": "Minority languages are an essential part of a community's cultural identity."
+  },
+  {
+    "id": "glo-014",
+    "topic": "globalisation",
+    "word": "assimilation",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the process of fully adopting the customs of a new society",
+    "collocations": [
+      "cultural assimilation",
+      "pressure to assimilate",
+      "rapid assimilation"
+    ],
+    "paraphrases": [
+      "absorption into a new culture",
+      "adopting local customs"
+    ],
+    "example": "Assimilation can be difficult for newcomers who still want to keep their own traditions."
+  },
+  {
+    "id": "glo-015",
+    "topic": "globalisation",
+    "word": "diaspora",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "people who have spread from their homeland to live in other parts of the world",
+    "collocations": [
+      "a large diaspora",
+      "the Indian diaspora",
+      "diaspora communities"
+    ],
+    "paraphrases": [
+      "a scattered community abroad",
+      "emigrants living overseas"
+    ],
+    "example": "The diaspora sends billions of dollars home each year to support relatives."
+  },
+  {
+    "id": "glo-016",
+    "topic": "globalisation",
+    "word": "expatriate",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a person who lives outside their own country",
+    "collocations": [
+      "a British expatriate",
+      "expatriate workers",
+      "an expatriate community"
+    ],
+    "paraphrases": [
+      "someone living abroad",
+      "an overseas resident"
+    ],
+    "example": "Many expatriates in the Gulf are professionals on short-term contracts."
+  },
+  {
+    "id": "glo-017",
+    "topic": "globalisation",
+    "word": "conglomerate",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a very large company made up of many different businesses",
+    "collocations": [
+      "a media conglomerate",
+      "an industrial conglomerate",
+      "a global conglomerate"
+    ],
+    "paraphrases": [
+      "a corporate group",
+      "a business empire"
+    ],
+    "example": "The conglomerate owns hotels, airlines and several television stations."
+  },
+  {
+    "id": "glo-018",
+    "topic": "globalisation",
+    "word": "monopoly",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "complete control of a market by a single company",
+    "collocations": [
+      "hold a monopoly",
+      "break up a monopoly",
+      "a state monopoly"
+    ],
+    "paraphrases": [
+      "exclusive control of a market",
+      "sole supplier status"
+    ],
+    "example": "A monopoly can charge high prices because customers have no alternative."
+  },
+  {
+    "id": "glo-019",
+    "topic": "globalisation",
+    "word": "merger",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the joining together of two companies to form one",
+    "collocations": [
+      "a proposed merger",
+      "a merger between",
+      "block a merger"
+    ],
+    "paraphrases": [
+      "a combination of firms",
+      "the amalgamation of two businesses"
+    ],
+    "example": "The merger created the largest car manufacturer in the world."
+  },
+  {
+    "id": "glo-020",
+    "topic": "globalisation",
+    "word": "takeover",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the act of gaining control of a company by buying most of its shares",
+    "collocations": [
+      "a hostile takeover",
+      "a takeover bid",
+      "a foreign takeover"
+    ],
+    "paraphrases": [
+      "the acquisition of a company",
+      "a buyout"
+    ],
+    "example": "The local brewery survived a takeover by a foreign competitor."
+  },
+  {
+    "id": "glo-021",
+    "topic": "globalisation",
+    "word": "subsidiary",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "a company that is owned or controlled by a larger company",
+    "collocations": [
+      "a wholly owned subsidiary",
+      "a foreign subsidiary",
+      "a subsidiary of"
+    ],
+    "paraphrases": [
+      "a company controlled by a parent firm",
+      "a branch company"
+    ],
+    "example": "The firm opened a subsidiary in Vietnam to manage its regional sales."
+  },
+  {
+    "id": "glo-022",
+    "topic": "globalisation",
+    "word": "franchise",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a licence to sell a company's products or use its name in a particular area",
+    "collocations": [
+      "a fast-food franchise",
+      "a franchise owner",
+      "open a franchise"
+    ],
+    "paraphrases": [
+      "a licensed outlet",
+      "a branded business licence"
+    ],
+    "example": "The restaurant is a franchise of an international chain with branches in fifty countries."
+  },
+  {
+    "id": "glo-023",
+    "topic": "globalisation",
+    "word": "consumerism",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the belief that buying more goods and services is important for happiness",
+    "collocations": [
+      "rampant consumerism",
+      "a culture of consumerism",
+      "fuel consumerism"
+    ],
+    "paraphrases": [
+      "a preoccupation with buying",
+      "materialism"
+    ],
+    "example": "Advertising encourages consumerism by suggesting that new products bring happiness."
+  },
+  {
+    "id": "glo-024",
+    "topic": "globalisation",
+    "word": "commodity",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a raw material or basic product that can be bought and sold",
+    "collocations": [
+      "a valuable commodity",
+      "trade in commodities",
+      "commodity prices"
+    ],
+    "paraphrases": [
+      "a raw product",
+      "a traded good"
+    ],
+    "example": "Coffee is one of the most widely traded commodities in the world."
+  },
+  {
+    "id": "glo-025",
+    "topic": "globalisation",
+    "word": "currency",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the system of money used in a country",
+    "collocations": [
+      "a strong currency",
+      "foreign currency",
+      "the national currency"
+    ],
+    "paraphrases": [
+      "a monetary unit",
+      "a country's money"
+    ],
+    "example": "A weak currency makes imports more expensive but helps exporters."
+  },
+  {
+    "id": "glo-026",
+    "topic": "globalisation",
+    "word": "exchange rate",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the value of one country's money when changed into another",
+    "collocations": [
+      "a fixed exchange rate",
+      "fluctuating exchange rates",
+      "the exchange rate"
+    ],
+    "paraphrases": [
+      "the rate of currency conversion",
+      "the price of one currency in another"
+    ],
+    "example": "A falling exchange rate can make foreign holidays unaffordable."
+  },
+  {
+    "id": "glo-027",
+    "topic": "globalisation",
+    "word": "deregulation",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the removal of government rules from a business or industry",
+    "collocations": [
+      "financial deregulation",
+      "the deregulation of airlines",
+      "market deregulation"
+    ],
+    "paraphrases": [
+      "the lifting of controls",
+      "removal of official restrictions"
+    ],
+    "example": "The deregulation of the airline industry led to a wave of cheap flights."
+  },
+  {
+    "id": "glo-028",
+    "topic": "globalisation",
+    "word": "liberalisation",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the removal or loosening of restrictions on trade or economic activity",
+    "collocations": [
+      "trade liberalisation",
+      "economic liberalisation",
+      "financial liberalisation"
+    ],
+    "paraphrases": [
+      "loosening of controls",
+      "opening up of markets"
+    ],
+    "example": "Trade liberalisation allowed foreign firms to enter markets that had been closed for decades."
+  },
+  {
+    "id": "glo-029",
+    "topic": "globalisation",
+    "word": "capitalism",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "an economic system in which businesses are privately owned and run for profit",
+    "collocations": [
+      "global capitalism",
+      "free-market capitalism",
+      "the spread of capitalism"
+    ],
+    "paraphrases": [
+      "a free-market economy",
+      "private enterprise"
+    ],
+    "example": "Global capitalism has lifted millions out of poverty, though inequality has widened."
+  },
+  {
+    "id": "glo-030",
+    "topic": "globalisation",
+    "word": "market share",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the proportion of total sales in a market that belongs to one company",
+    "collocations": [
+      "gain market share",
+      "lose market share",
+      "a large market share"
+    ],
+    "paraphrases": [
+      "a company's portion of sales",
+      "the slice of the market"
+    ],
+    "example": "The company lost market share to cheaper competitors from Asia."
+  },
+  {
+    "id": "glo-031",
+    "topic": "globalisation",
+    "word": "competitive edge",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "an advantage over rivals that helps a business succeed",
+    "collocations": [
+      "gain a competitive edge",
+      "maintain a competitive edge",
+      "lose its competitive edge"
+    ],
+    "paraphrases": [
+      "an advantage over rivals",
+      "a lead on competitors"
+    ],
+    "example": "Investing in training gave the firm a competitive edge over foreign rivals."
+  },
+  {
+    "id": "glo-032",
+    "topic": "globalisation",
+    "word": "economies of scale",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "cost savings that come from producing goods in large quantities",
+    "collocations": [
+      "achieve economies of scale",
+      "benefit from economies of scale",
+      "exploit economies of scale"
+    ],
+    "paraphrases": [
+      "savings from mass production",
+      "cheaper unit costs at higher volume"
+    ],
+    "example": "Large factories benefit from economies of scale, which small producers cannot match."
+  },
+  {
+    "id": "glo-033",
+    "topic": "globalisation",
+    "word": "foreign investment",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "money put into businesses or property in another country",
+    "collocations": [
+      "attract foreign investment",
+      "inward foreign investment",
+      "foreign investment in"
+    ],
+    "paraphrases": [
+      "overseas capital",
+      "funding from abroad"
+    ],
+    "example": "Tax incentives were introduced to attract foreign investment into the region."
+  },
+  {
+    "id": "glo-034",
+    "topic": "globalisation",
+    "word": "trade deficit",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a situation in which a country imports more than it exports",
+    "collocations": [
+      "run a trade deficit",
+      "a growing trade deficit",
+      "reduce the trade deficit"
+    ],
+    "paraphrases": [
+      "an excess of imports over exports",
+      "a negative trade balance"
+    ],
+    "example": "The country has run a trade deficit for a decade because it buys more goods than it sells."
+  },
+  {
+    "id": "glo-035",
+    "topic": "globalisation",
+    "word": "sanction",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a penalty applied by one or more countries to force another to obey international rules",
+    "collocations": [
+      "impose sanctions",
+      "lift sanctions",
+      "economic sanctions"
+    ],
+    "paraphrases": [
+      "a punitive measure",
+      "a trade penalty"
+    ],
+    "example": "Economic sanctions were imposed to pressure the government to change its policy."
+  },
+  {
+    "id": "glo-036",
+    "topic": "globalisation",
+    "word": "boycott",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "to refuse to buy or take part in something as a protest",
+    "collocations": [
+      "boycott a product",
+      "boycott a company",
+      "call for people to boycott"
+    ],
+    "paraphrases": [
+      "refuse to buy",
+      "shun as a protest"
+    ],
+    "example": "Consumers threatened to boycott the brand after reports of poor working conditions."
+  },
+  {
+    "id": "glo-037",
+    "topic": "globalisation",
+    "word": "bilateral",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "involving two countries or parties",
+    "collocations": [
+      "a bilateral agreement",
+      "bilateral trade",
+      "bilateral talks"
+    ],
+    "paraphrases": [
+      "between two nations",
+      "two-sided"
+    ],
+    "example": "The two nations signed a bilateral agreement to cut tariffs on farm products."
+  },
+  {
+    "id": "glo-038",
+    "topic": "globalisation",
+    "word": "multilateral",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "involving three or more countries or parties",
+    "collocations": [
+      "a multilateral agreement",
+      "multilateral talks",
+      "multilateral institutions"
+    ],
+    "paraphrases": [
+      "involving several nations",
+      "many-sided"
+    ],
+    "example": "Multilateral negotiations are slow because every member must agree to the terms."
+  },
+  {
+    "id": "glo-039",
+    "topic": "globalisation",
+    "word": "cross-border",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "taking place across the boundary between two countries",
+    "collocations": [
+      "cross-border trade",
+      "cross-border investment",
+      "cross-border cooperation"
+    ],
+    "paraphrases": [
+      "international",
+      "across national frontiers"
+    ],
+    "example": "Cross-border trade between neighbouring countries has grown since customs checks were reduced."
+  },
+  {
+    "id": "glo-040",
+    "topic": "globalisation",
+    "word": "transnational",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "operating in or involving several countries",
+    "collocations": [
+      "transnational corporations",
+      "transnational crime",
+      "a transnational network"
+    ],
+    "paraphrases": [
+      "operating across borders",
+      "multi-country"
+    ],
+    "example": "Transnational companies often have more economic power than small countries."
+  },
+  {
+    "id": "glo-041",
+    "topic": "globalisation",
+    "word": "interconnected",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "joined together so that each part affects the others",
+    "collocations": [
+      "an interconnected world",
+      "increasingly interconnected",
+      "interconnected economies"
+    ],
+    "paraphrases": [
+      "linked together",
+      "mutually connected"
+    ],
+    "example": "Financial markets are so interconnected that a crash in one region spreads quickly."
+  },
+  {
+    "id": "glo-042",
+    "topic": "globalisation",
+    "word": "integrate",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to combine parts so that they work together as a whole",
+    "collocations": [
+      "integrate into the global economy",
+      "fully integrate",
+      "integrate markets"
+    ],
+    "paraphrases": [
+      "merge",
+      "bring together"
+    ],
+    "example": "The country hopes to integrate its farmers into the global food market."
+  },
+  {
+    "id": "glo-043",
+    "topic": "globalisation",
+    "word": "emerging economy",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a country with a fast-growing but still developing economy",
+    "collocations": [
+      "an emerging economy",
+      "emerging economies such as",
+      "invest in emerging economies"
+    ],
+    "paraphrases": [
+      "a rapidly industrialising nation",
+      "a growing market economy"
+    ],
+    "example": "India is an emerging economy with a large and growing middle class."
+  },
+  {
+    "id": "glo-044",
+    "topic": "globalisation",
+    "word": "wealth gap",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the difference in wealth between rich and poor people or countries",
+    "collocations": [
+      "widen the wealth gap",
+      "narrow the wealth gap",
+      "a growing wealth gap"
+    ],
+    "paraphrases": [
+      "the divide between rich and poor",
+      "economic inequality"
+    ],
+    "example": "Critics argue that globalisation has widened the wealth gap between skilled and unskilled workers."
+  },
+  {
+    "id": "glo-045",
+    "topic": "globalisation",
+    "word": "exploitation",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the unfair use of people or resources for profit",
+    "collocations": [
+      "labour exploitation",
+      "the exploitation of workers",
+      "ruthless exploitation"
+    ],
+    "paraphrases": [
+      "unfair treatment for gain",
+      "abuse of workers"
+    ],
+    "example": "The exploitation of cheap labour allows brands to sell clothes at very low prices."
+  },
+  {
+    "id": "glo-047",
+    "topic": "globalisation",
+    "word": "cheap labour",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "workers who are paid very low wages",
+    "collocations": [
+      "rely on cheap labour",
+      "a source of cheap labour",
+      "exploit cheap labour"
+    ],
+    "paraphrases": [
+      "low-wage workers",
+      "inexpensive manpower"
+    ],
+    "example": "Factories in the region depend on cheap labour to keep export prices low."
+  },
+  {
+    "id": "glo-048",
+    "topic": "globalisation",
+    "word": "mass-produced",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "made in large quantities by machines",
+    "collocations": [
+      "mass-produced goods",
+      "cheap mass-produced clothing",
+      "mass-produced items"
+    ],
+    "paraphrases": [
+      "made on a large scale",
+      "manufactured in bulk"
+    ],
+    "example": "Mass-produced furniture is cheap but often lacks the character of handmade pieces."
+  },
+  {
+    "id": "glo-049",
+    "topic": "globalisation",
+    "word": "consumer goods",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "products bought by ordinary people for their own use",
+    "collocations": [
+      "durable consumer goods",
+      "cheap consumer goods",
+      "demand for consumer goods"
+    ],
+    "paraphrases": [
+      "household products",
+      "items for personal use"
+    ],
+    "example": "Falling prices for consumer goods have brought televisions and phones within reach of most families."
+  },
+  {
+    "id": "glo-050",
+    "topic": "globalisation",
+    "word": "brand loyalty",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a customer's habit of buying the same make of product repeatedly",
+    "collocations": [
+      "build brand loyalty",
+      "foster brand loyalty",
+      "strong brand loyalty"
+    ],
+    "paraphrases": [
+      "customer attachment to a make",
+      "repeat buying of one brand"
+    ],
+    "example": "Companies spend heavily on advertising to build brand loyalty among young consumers."
+  },
+  {
+    "id": "glo-051",
+    "topic": "globalisation",
+    "word": "household name",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a person or product so well known that almost everyone recognises it",
+    "collocations": [
+      "become a household name",
+      "a household name in"
+    ],
+    "paraphrases": [
+      "a widely known brand",
+      "a famous name"
+    ],
+    "example": "The small start-up soon became a household name across Asia."
+  },
+  {
+    "id": "glo-052",
+    "topic": "globalisation",
+    "word": "global village",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the idea that the world is now closely connected by communication and trade",
+    "collocations": [
+      "live in a global village",
+      "the global village",
+      "a shrinking global village"
+    ],
+    "paraphrases": [
+      "an interlinked world",
+      "a closely connected planet"
+    ],
+    "example": "In today's global village, a trend that begins in Seoul can reach Paris within hours."
+  },
+  {
+    "id": "glo-053",
+    "topic": "globalisation",
+    "word": "cultural exchange",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "the sharing of ideas, art and customs between different societies",
+    "collocations": [
+      "promote cultural exchange",
+      "student cultural exchange",
+      "a cultural exchange programme"
+    ],
+    "paraphrases": [
+      "sharing of customs between nations",
+      "intercultural interaction"
+    ],
+    "example": "Travel and trade have always encouraged cultural exchange between distant societies."
+  },
+  {
+    "id": "glo-054",
+    "topic": "globalisation",
+    "word": "cultural imperialism",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the spread of one powerful country's culture at the expense of others",
+    "collocations": [
+      "accuse of cultural imperialism",
+      "a form of cultural imperialism",
+      "fear cultural imperialism"
+    ],
+    "paraphrases": [
+      "domination by a foreign culture",
+      "imposed foreign values"
+    ],
+    "example": "Some critics describe the dominance of Hollywood as cultural imperialism."
+  },
+  {
+    "id": "glo-055",
+    "topic": "globalisation",
+    "word": "westernisation",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the adoption of the customs, dress and values of western countries",
+    "collocations": [
+      "rapid westernisation",
+      "resist westernisation",
+      "westernisation of society"
+    ],
+    "paraphrases": [
+      "adoption of western ways",
+      "the spread of western culture"
+    ],
+    "example": "Elders in the village worry that westernisation is eroding traditional family values."
+  },
+  {
+    "id": "glo-056",
+    "topic": "globalisation",
+    "word": "erode",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to wear something away gradually, especially values or influence",
+    "collocations": [
+      "erode traditions",
+      "erode confidence",
+      "gradually erode"
+    ],
+    "paraphrases": [
+      "gradually destroy",
+      "wear away"
+    ],
+    "example": "Mass tourism may erode the very traditions that visitors come to see."
+  },
+  {
+    "id": "glo-057",
+    "topic": "globalisation",
+    "word": "dilute",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to make something weaker by adding other elements",
+    "collocations": [
+      "dilute a culture",
+      "dilute the impact",
+      "be diluted by"
+    ],
+    "paraphrases": [
+      "weaken",
+      "water down"
+    ],
+    "example": "There is a risk that regional dialects will be diluted by exposure to global media."
+  },
+  {
+    "id": "glo-058",
+    "topic": "globalisation",
+    "word": "indigenous",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "originally belonging to a particular place or people",
+    "collocations": [
+      "indigenous people",
+      "indigenous culture",
+      "indigenous languages"
+    ],
+    "paraphrases": [
+      "native",
+      "aboriginal"
+    ],
+    "example": "Indigenous communities have often been overlooked when global companies develop their land."
+  },
+  {
+    "id": "glo-059",
+    "topic": "globalisation",
+    "word": "dumping",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading"
+    ],
+    "definition": "the sale of goods abroad at unfairly low prices",
+    "collocations": [
+      "accuse of dumping",
+      "steel dumping",
+      "the dumping of cheap goods"
+    ],
+    "paraphrases": [
+      "selling below cost abroad",
+      "unfairly cheap exports"
+    ],
+    "example": "Local farmers complained that the dumping of subsidised grain had driven them out of business."
+  },
+  {
+    "id": "glo-060",
+    "topic": "globalisation",
+    "word": "quota",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "an official limit on the quantity of goods that can be imported or produced",
+    "collocations": [
+      "impose a quota",
+      "an import quota",
+      "fishing quotas"
+    ],
+    "paraphrases": [
+      "an official limit",
+      "a permitted amount"
+    ],
+    "example": "The government introduced a quota to restrict imports of foreign textiles."
+  },
+  {
+    "id": "glo-061",
+    "topic": "globalisation",
+    "word": "shareholder",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a person who owns shares in a company",
+    "collocations": [
+      "a major shareholder",
+      "shareholder value",
+      "shareholders' meeting"
+    ],
+    "paraphrases": [
+      "a stockholder",
+      "an investor in a company"
+    ],
+    "example": "The directors answered to shareholders who wanted higher profits every quarter."
+  },
+  {
+    "id": "glo-062",
+    "topic": "globalisation",
+    "word": "headquarters",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "the main office from which an organisation is controlled",
+    "collocations": [
+      "company headquarters",
+      "move its headquarters",
+      "the global headquarters"
+    ],
+    "paraphrases": [
+      "the head office",
+      "the central office"
+    ],
+    "example": "The company moved its headquarters to a country with lower taxes."
+  },
+  {
+    "id": "glo-063",
+    "topic": "globalisation",
+    "word": "trading bloc",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a group of countries that agree to reduce trade barriers among themselves",
+    "collocations": [
+      "form a trading bloc",
+      "a regional trading bloc",
+      "join a trading bloc"
+    ],
+    "paraphrases": [
+      "an economic alliance",
+      "a free-trade grouping"
+    ],
+    "example": "Joining a trading bloc gave the small country access to a market of five hundred million people."
+  },
+  {
+    "id": "glo-064",
+    "topic": "globalisation",
+    "word": "fair trade",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a system that ensures producers in poorer countries receive reasonable prices",
+    "collocations": [
+      "fair trade coffee",
+      "support fair trade",
+      "a fair trade label"
+    ],
+    "paraphrases": [
+      "ethical trading",
+      "equitable commerce"
+    ],
+    "example": "Buying fair trade goods helps ensure that farmers earn a decent income."
+  },
+  {
+    "id": "glo-065",
+    "topic": "globalisation",
+    "word": "bankruptcy",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the legal state of being unable to pay one's debts",
+    "collocations": [
+      "declare bankruptcy",
+      "file for bankruptcy",
+      "face bankruptcy"
+    ],
+    "paraphrases": [
+      "insolvency",
+      "financial collapse"
+    ],
+    "example": "Cheaper imports pushed several local manufacturers into bankruptcy."
+  },
+  {
+    "id": "glo-066",
+    "topic": "globalisation",
+    "word": "recession",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a period when a country's economy shrinks and unemployment rises",
+    "collocations": [
+      "a deep recession",
+      "enter a recession",
+      "emerge from recession"
+    ],
+    "paraphrases": [
+      "an economic downturn",
+      "a slump"
+    ],
+    "example": "The global recession forced many factories to cut production and lay off staff."
+  },
+  {
+    "id": "glo-067",
+    "topic": "globalisation",
+    "word": "downturn",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a fall in economic or business activity",
+    "collocations": [
+      "an economic downturn",
+      "a sharp downturn",
+      "weather a downturn"
+    ],
+    "paraphrases": [
+      "a decline",
+      "a slowdown"
+    ],
+    "example": "A sudden downturn in demand left exporters with unsold stock."
+  },
+  {
+    "id": "glo-069",
+    "topic": "globalisation",
+    "word": "speculation",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "buying and selling assets in the hope of making a quick profit",
+    "collocations": [
+      "financial speculation",
+      "currency speculation",
+      "speculation in property"
+    ],
+    "paraphrases": [
+      "risky trading for gain",
+      "gambling on market changes"
+    ],
+    "example": "Wild speculation in the property market contributed to the collapse of several banks."
+  },
+  {
+    "id": "glo-070",
+    "topic": "globalisation",
+    "word": "inflation",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a general rise in prices over time",
+    "collocations": [
+      "high inflation",
+      "rising inflation",
+      "curb inflation"
+    ],
+    "paraphrases": [
+      "a general rise in the cost of living",
+      "increasing prices"
+    ],
+    "example": "Rapid inflation reduces the purchasing power of savings."
+  },
+  {
+    "id": "glo-071",
+    "topic": "globalisation",
+    "word": "boom",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "speaking"
+    ],
+    "definition": "a period of rapid economic growth and rising prosperity",
+    "collocations": [
+      "an economic boom",
+      "a property boom",
+      "boom and bust"
+    ],
+    "paraphrases": [
+      "a time of fast growth",
+      "a period of prosperity"
+    ],
+    "example": "The export boom brought new roads, schools and jobs to the coastal provinces."
+  },
+  {
+    "id": "glo-072",
+    "topic": "globalisation",
+    "word": "revenue",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the total income a business or government receives",
+    "collocations": [
+      "tax revenue",
+      "annual revenue",
+      "generate revenue"
+    ],
+    "paraphrases": [
+      "income",
+      "money earned"
+    ],
+    "example": "The airline reported record revenue despite higher fuel costs."
+  },
+  {
+    "id": "glo-073",
+    "topic": "globalisation",
+    "word": "profit margin",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the difference between a product's selling price and its cost, shown as a percentage",
+    "collocations": [
+      "a narrow profit margin",
+      "boost profit margins",
+      "squeeze profit margins"
+    ],
+    "paraphrases": [
+      "the proportion of income left after costs",
+      "earnings per sale"
+    ],
+    "example": "Supermarkets operate on a narrow profit margin and rely on high sales volumes."
+  },
+  {
+    "id": "glo-074",
+    "topic": "globalisation",
+    "word": "lucrative",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "producing a great deal of money",
+    "collocations": [
+      "a lucrative contract",
+      "lucrative market",
+      "highly lucrative"
+    ],
+    "paraphrases": [
+      "highly profitable",
+      "financially rewarding"
+    ],
+    "example": "The company won a lucrative contract to supply uniforms to hospitals abroad."
+  },
+  {
+    "id": "glo-075",
+    "topic": "globalisation",
+    "word": "thriving",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "growing strongly and successfully",
+    "collocations": [
+      "a thriving economy",
+      "thriving business",
+      "thriving industry"
+    ],
+    "paraphrases": [
+      "flourishing",
+      "booming"
+    ],
+    "example": "The coastal town now has a thriving export industry based on seafood."
+  },
+  {
+    "id": "glo-076",
+    "topic": "globalisation",
+    "word": "undercut",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to sell at a lower price than a competitor",
+    "collocations": [
+      "undercut competitors",
+      "undercut local producers",
+      "undercut prices"
+    ],
+    "paraphrases": [
+      "sell more cheaply than",
+      "offer lower prices than"
+    ],
+    "example": "Imported goods can undercut local producers because wages abroad are far lower."
+  },
+  {
+    "id": "glo-077",
+    "topic": "globalisation",
+    "word": "domestic industry",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "businesses that produce goods within a country for its own market",
+    "collocations": [
+      "protect domestic industry",
+      "support domestic industry",
+      "a struggling domestic industry"
+    ],
+    "paraphrases": [
+      "home-based manufacturers",
+      "national producers"
+    ],
+    "example": "Subsidies were introduced to help the domestic industry compete with imports."
+  }
+]

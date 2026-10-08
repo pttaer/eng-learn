@@ -1,0 +1,1634 @@
+[
+  {
+    "id": "spo-001",
+    "topic": "sport",
+    "word": "athlete",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a person who is trained to compete in sports",
+    "collocations": [
+      "professional athlete",
+      "elite athlete",
+      "Olympic athlete"
+    ],
+    "paraphrases": [
+      "sportsperson",
+      "competitor"
+    ],
+    "example": "Elite athletes often begin specialised training before they reach their teens."
+  },
+  {
+    "id": "spo-002",
+    "topic": "sport",
+    "word": "athletic",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "physically strong, fit and good at sports",
+    "collocations": [
+      "athletic ability",
+      "athletic build",
+      "athletic performance"
+    ],
+    "paraphrases": [
+      "sporty",
+      "physically fit"
+    ],
+    "example": "Her athletic ability was evident from an early age."
+  },
+  {
+    "id": "spo-003",
+    "topic": "sport",
+    "word": "spectator",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a person who watches a sporting event",
+    "collocations": [
+      "spectator sport",
+      "eager spectators",
+      "thousands of spectators"
+    ],
+    "paraphrases": [
+      "onlooker",
+      "member of the crowd"
+    ],
+    "example": "Several thousand spectators packed the stadium to watch the final."
+  },
+  {
+    "id": "spo-004",
+    "topic": "sport",
+    "word": "tournament",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "a competition in which players or teams play a series of matches",
+    "collocations": [
+      "annual tournament",
+      "knockout tournament",
+      "win a tournament"
+    ],
+    "paraphrases": [
+      "championship",
+      "contest"
+    ],
+    "example": "The tennis tournament attracts players from more than fifty countries."
+  },
+  {
+    "id": "spo-005",
+    "topic": "sport",
+    "word": "championship",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a contest to decide the overall winner in a sport",
+    "collocations": [
+      "world championship",
+      "win the championship",
+      "championship title"
+    ],
+    "paraphrases": [
+      "title contest",
+      "title competition"
+    ],
+    "example": "She won the world championship at the age of nineteen."
+  },
+  {
+    "id": "spo-006",
+    "topic": "sport",
+    "word": "competitive",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "involving or enjoying contests in which people try to win",
+    "collocations": [
+      "competitive spirit",
+      "highly competitive",
+      "competitive sport"
+    ],
+    "paraphrases": [
+      "keen to win",
+      "ambitious"
+    ],
+    "example": "Highly competitive sport can put young players under intense pressure."
+  },
+  {
+    "id": "spo-007",
+    "topic": "sport",
+    "word": "rivalry",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a strong competition between teams or people",
+    "collocations": [
+      "fierce rivalry",
+      "local rivalry",
+      "friendly rivalry"
+    ],
+    "paraphrases": [
+      "competition",
+      "contest between opponents"
+    ],
+    "example": "The rivalry between the two clubs goes back more than a century."
+  },
+  {
+    "id": "spo-008",
+    "topic": "sport",
+    "word": "sportsmanship",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "fair and generous behaviour in a competition",
+    "collocations": [
+      "show sportsmanship",
+      "good sportsmanship",
+      "spirit of sportsmanship"
+    ],
+    "paraphrases": [
+      "fair play",
+      "gracious conduct"
+    ],
+    "example": "Young players learn sportsmanship by accepting defeat without complaint."
+  },
+  {
+    "id": "spo-009",
+    "topic": "sport",
+    "word": "fair play",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "behaviour that follows the rules and treats opponents with respect",
+    "collocations": [
+      "spirit of fair play",
+      "promote fair play",
+      "sense of fair play"
+    ],
+    "paraphrases": [
+      "honest conduct",
+      "playing by the rules"
+    ],
+    "example": "Football authorities have launched a campaign to encourage fair play."
+  },
+  {
+    "id": "spo-010",
+    "topic": "sport",
+    "word": "doping",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the use of banned drugs to improve athletic performance",
+    "collocations": [
+      "doping scandal",
+      "doping test",
+      "doping ban"
+    ],
+    "paraphrases": [
+      "use of banned substances",
+      "drug cheating"
+    ],
+    "example": "The doping scandal led to the disqualification of several medal winners."
+  },
+  {
+    "id": "spo-011",
+    "topic": "sport",
+    "word": "performance-enhancing",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "improving the results of an athlete, often through banned drugs",
+    "collocations": [
+      "performance-enhancing drugs",
+      "performance-enhancing substances",
+      "performance-enhancing supplements"
+    ],
+    "paraphrases": [
+      "boosting athletic results",
+      "athletic boosting"
+    ],
+    "example": "Testing for performance-enhancing drugs has become more sophisticated every year."
+  },
+  {
+    "id": "spo-012",
+    "topic": "sport",
+    "word": "endurance",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "the ability to keep going despite long effort or difficulty",
+    "collocations": [
+      "physical endurance",
+      "endurance training",
+      "endurance race"
+    ],
+    "paraphrases": [
+      "stamina",
+      "staying power"
+    ],
+    "example": "Marathon runners need exceptional endurance to complete the course."
+  },
+  {
+    "id": "spo-013",
+    "topic": "sport",
+    "word": "stamina",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "the physical or mental strength to continue for a long time",
+    "collocations": [
+      "build stamina",
+      "physical stamina",
+      "lack stamina"
+    ],
+    "paraphrases": [
+      "staying power",
+      "endurance"
+    ],
+    "example": "Regular swimming is an excellent way to build stamina."
+  },
+  {
+    "id": "spo-014",
+    "topic": "sport",
+    "word": "agility",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the ability to move quickly and easily",
+    "collocations": [
+      "physical agility",
+      "agility and speed",
+      "mental agility"
+    ],
+    "paraphrases": [
+      "nimbleness",
+      "quickness of movement"
+    ],
+    "example": "Gymnasts must combine great strength with remarkable agility and balance."
+  },
+  {
+    "id": "spo-015",
+    "topic": "sport",
+    "word": "fitness",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "the condition of being physically healthy and strong",
+    "collocations": [
+      "physical fitness",
+      "fitness level",
+      "improve fitness"
+    ],
+    "paraphrases": [
+      "physical condition",
+      "good shape"
+    ],
+    "example": "Regular exercise is the best way to maintain fitness in later life."
+  },
+  {
+    "id": "spo-016",
+    "topic": "sport",
+    "word": "training regime",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a planned programme of exercise followed regularly",
+    "collocations": [
+      "strict training regime",
+      "demanding training regime",
+      "follow a training regime"
+    ],
+    "paraphrases": [
+      "exercise schedule",
+      "fitness routine"
+    ],
+    "example": "The swimmer follows a gruelling training regime that begins at five each morning."
+  },
+  {
+    "id": "spo-017",
+    "topic": "sport",
+    "word": "coach",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "a person who trains and advises athletes or a team",
+    "collocations": [
+      "football coach",
+      "head coach",
+      "personal coach"
+    ],
+    "paraphrases": [
+      "trainer",
+      "instructor"
+    ],
+    "example": "The coach praised the team for their discipline and commitment."
+  },
+  {
+    "id": "spo-018",
+    "topic": "sport",
+    "word": "referee",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "an official who makes sure players follow the rules",
+    "collocations": [
+      "the referee's decision",
+      "football referee",
+      "appoint a referee"
+    ],
+    "paraphrases": [
+      "match official",
+      "official in charge"
+    ],
+    "example": "The referee sent the player off for a dangerous tackle."
+  },
+  {
+    "id": "spo-019",
+    "topic": "sport",
+    "word": "umpire",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "an official who watches play and applies rules in sports such as cricket",
+    "collocations": [
+      "cricket umpire",
+      "tennis umpire",
+      "umpire's decision"
+    ],
+    "paraphrases": [
+      "match judge",
+      "sports official"
+    ],
+    "example": "The umpire overturned the decision after consulting the video replay."
+  },
+  {
+    "id": "spo-020",
+    "topic": "sport",
+    "word": "sponsorship",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "financial support given by a company in return for publicity",
+    "collocations": [
+      "corporate sponsorship",
+      "sponsorship deal",
+      "lucrative sponsorship"
+    ],
+    "paraphrases": [
+      "commercial backing",
+      "corporate funding"
+    ],
+    "example": "Sponsorship from large companies has become essential for many sporting events."
+  },
+  {
+    "id": "spo-021",
+    "topic": "sport",
+    "word": "sponsor",
+    "pos": "verb",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to support an event or team financially in return for advertising",
+    "collocations": [
+      "sponsor a team",
+      "sponsor an event",
+      "sponsored by"
+    ],
+    "paraphrases": [
+      "fund",
+      "financially back"
+    ],
+    "example": "A major bank has agreed to sponsor the national football league."
+  },
+  {
+    "id": "spo-023",
+    "topic": "sport",
+    "word": "stadium",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a large venue with seating where sports events are held",
+    "collocations": [
+      "football stadium",
+      "packed stadium",
+      "build a stadium"
+    ],
+    "paraphrases": [
+      "sports arena",
+      "sports ground"
+    ],
+    "example": "The new stadium holds sixty thousand spectators and cost over a billion pounds."
+  },
+  {
+    "id": "spo-024",
+    "topic": "sport",
+    "word": "amateur",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a person who takes part in a sport for enjoyment rather than payment",
+    "collocations": [
+      "amateur athlete",
+      "amateur level",
+      "keen amateur"
+    ],
+    "paraphrases": [
+      "non-professional",
+      "unpaid competitor"
+    ],
+    "example": "Amateur players now compete against professionals in some international tournaments."
+  },
+  {
+    "id": "spo-025",
+    "topic": "sport",
+    "word": "professional",
+    "pos": "adjective",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "doing an activity as a paid job rather than as a hobby",
+    "collocations": [
+      "professional footballer",
+      "professional sport",
+      "turn professional"
+    ],
+    "paraphrases": [
+      "paid",
+      "career-level"
+    ],
+    "example": "Many professional athletes are forced to retire in their early thirties."
+  },
+  {
+    "id": "spo-026",
+    "topic": "sport",
+    "word": "elite",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "representing the best and most talented in a field",
+    "collocations": [
+      "elite athletes",
+      "elite level",
+      "elite sport"
+    ],
+    "paraphrases": [
+      "top-class",
+      "leading"
+    ],
+    "example": "Elite sport demands years of sacrifice and relentless training."
+  },
+  {
+    "id": "spo-027",
+    "topic": "sport",
+    "word": "medal",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a small metal disc given as a prize for winning a competition",
+    "collocations": [
+      "gold medal",
+      "win a medal",
+      "medal table"
+    ],
+    "paraphrases": [
+      "prize",
+      "award"
+    ],
+    "example": "Norway topped the medal table at the winter games."
+  },
+  {
+    "id": "spo-028",
+    "topic": "sport",
+    "word": "podium",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a raised platform on which winners stand to receive their prizes",
+    "collocations": [
+      "stand on the podium",
+      "podium finish",
+      "reach the podium"
+    ],
+    "paraphrases": [
+      "winners' platform",
+      "prize stand"
+    ],
+    "example": "She stood on the podium with tears in her eyes as the anthem played."
+  },
+  {
+    "id": "spo-029",
+    "topic": "sport",
+    "word": "host",
+    "pos": "verb",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "to organise and stage a major event in one's own country or city",
+    "collocations": [
+      "host the Olympics",
+      "host a tournament",
+      "host nation"
+    ],
+    "paraphrases": [
+      "stage",
+      "organise"
+    ],
+    "example": "Brazil hosted the World Cup in 2014 and the Olympic Games two years later."
+  },
+  {
+    "id": "spo-030",
+    "topic": "sport",
+    "word": "bid",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a formal offer or application to stage a major event",
+    "collocations": [
+      "Olympic bid",
+      "submit a bid",
+      "successful bid"
+    ],
+    "paraphrases": [
+      "formal application",
+      "tender"
+    ],
+    "example": "The city's bid to stage the Games was backed by a large majority of residents."
+  },
+  {
+    "id": "spo-031",
+    "topic": "sport",
+    "word": "legacy",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "something lasting that remains after an event is over",
+    "collocations": [
+      "Olympic legacy",
+      "leave a legacy",
+      "lasting legacy"
+    ],
+    "paraphrases": [
+      "long-term benefit",
+      "enduring impact"
+    ],
+    "example": "Critics doubt that the Games will leave a lasting legacy for local residents."
+  },
+  {
+    "id": "spo-033",
+    "topic": "sport",
+    "word": "participation",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the act of taking part in an activity",
+    "collocations": [
+      "sports participation",
+      "participation rate",
+      "active participation"
+    ],
+    "paraphrases": [
+      "involvement",
+      "taking part"
+    ],
+    "example": "Participation in team sports tends to decline sharply among teenage girls."
+  },
+  {
+    "id": "spo-034",
+    "topic": "sport",
+    "word": "recreational",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "done for enjoyment during free time",
+    "collocations": [
+      "recreational activity",
+      "recreational sport",
+      "recreational facilities"
+    ],
+    "paraphrases": [
+      "leisure",
+      "pastime"
+    ],
+    "example": "The park offers recreational facilities for all ages."
+  },
+  {
+    "id": "spo-035",
+    "topic": "sport",
+    "word": "leisure",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "time free from work or duties",
+    "collocations": [
+      "leisure time",
+      "leisure activity",
+      "leisure industry"
+    ],
+    "paraphrases": [
+      "free time",
+      "spare time"
+    ],
+    "example": "Many workers have too little leisure to take up a sport."
+  },
+  {
+    "id": "spo-036",
+    "topic": "sport",
+    "word": "pastime",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "an activity done regularly for enjoyment",
+    "collocations": [
+      "favourite pastime",
+      "popular pastime",
+      "national pastime"
+    ],
+    "paraphrases": [
+      "hobby",
+      "recreation"
+    ],
+    "example": "Fishing remains a popular pastime among retired people."
+  },
+  {
+    "id": "spo-037",
+    "topic": "sport",
+    "word": "hobby",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "an activity that one does for pleasure in spare time",
+    "collocations": [
+      "take up a hobby",
+      "pursue a hobby",
+      "favourite hobby"
+    ],
+    "paraphrases": [
+      "pastime",
+      "leisure interest"
+    ],
+    "example": "My hobby is rock climbing, which I started at university."
+  },
+  {
+    "id": "spo-038",
+    "topic": "sport",
+    "word": "unwind",
+    "pos": "verb",
+    "band": 7,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "to relax after a period of work or stress",
+    "collocations": [
+      "unwind after work",
+      "unwind at weekends",
+      "time to unwind"
+    ],
+    "paraphrases": [
+      "relax",
+      "wind down"
+    ],
+    "example": "Many people unwind by going for a run after a stressful day."
+  },
+  {
+    "id": "spo-039",
+    "topic": "sport",
+    "word": "pursuit",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "an activity that someone spends time on regularly",
+    "collocations": [
+      "leisure pursuit",
+      "outdoor pursuit",
+      "hobby or pursuit"
+    ],
+    "paraphrases": [
+      "activity",
+      "interest"
+    ],
+    "example": "Golf is a leisure pursuit that appeals mainly to older people."
+  },
+  {
+    "id": "spo-040",
+    "topic": "sport",
+    "word": "outdoor",
+    "pos": "adjective",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "taking place outside rather than inside a building",
+    "collocations": [
+      "outdoor activities",
+      "outdoor pursuits",
+      "outdoor sports"
+    ],
+    "paraphrases": [
+      "open-air",
+      "outside"
+    ],
+    "example": "Outdoor activities such as hiking allow people to enjoy nature."
+  },
+  {
+    "id": "spo-041",
+    "topic": "sport",
+    "word": "extreme sports",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "dangerous activities such as skydiving that give a strong sense of thrill",
+    "collocations": [
+      "participate in extreme sports",
+      "extreme sports enthusiast",
+      "popularity of extreme sports"
+    ],
+    "paraphrases": [
+      "high-risk activities",
+      "adrenaline sports"
+    ],
+    "example": "Extreme sports have grown in popularity among young adults seeking thrills."
+  },
+  {
+    "id": "spo-042",
+    "topic": "sport",
+    "word": "team spirit",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "a feeling of shared purpose and loyalty among team members",
+    "collocations": [
+      "build team spirit",
+      "foster team spirit",
+      "strong team spirit"
+    ],
+    "paraphrases": [
+      "group solidarity",
+      "shared commitment"
+    ],
+    "example": "Team sports build team spirit and teach players to cooperate."
+  },
+  {
+    "id": "spo-043",
+    "topic": "sport",
+    "word": "camaraderie",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "friendly trust and comradeship among people who spend time together",
+    "collocations": [
+      "sense of camaraderie",
+      "camaraderie among players",
+      "team camaraderie"
+    ],
+    "paraphrases": [
+      "fellowship",
+      "companionship"
+    ],
+    "example": "Many people join local clubs for the camaraderie as much as the exercise."
+  },
+  {
+    "id": "spo-045",
+    "topic": "sport",
+    "word": "resilience",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the ability to recover quickly from difficulties",
+    "collocations": [
+      "build resilience",
+      "mental resilience",
+      "show resilience"
+    ],
+    "paraphrases": [
+      "toughness",
+      "ability to bounce back"
+    ],
+    "example": "Athletes who suffer defeats often develop remarkable resilience."
+  },
+  {
+    "id": "spo-046",
+    "topic": "sport",
+    "word": "injury",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "physical harm to the body",
+    "collocations": [
+      "sports injury",
+      "suffer an injury",
+      "serious injury"
+    ],
+    "paraphrases": [
+      "physical damage",
+      "harm"
+    ],
+    "example": "A knee injury forced the striker to miss the entire season."
+  },
+  {
+    "id": "spo-047",
+    "topic": "sport",
+    "word": "sedentary",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "involving little physical movement and a lot of sitting",
+    "collocations": [
+      "sedentary lifestyle",
+      "sedentary job",
+      "sedentary behaviour"
+    ],
+    "paraphrases": [
+      "inactive",
+      "desk-bound"
+    ],
+    "example": "A sedentary lifestyle increases the risk of heart disease."
+  },
+  {
+    "id": "spo-048",
+    "topic": "sport",
+    "word": "physical activity",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "any movement of the body that uses energy",
+    "collocations": [
+      "regular physical activity",
+      "levels of physical activity",
+      "engage in physical activity"
+    ],
+    "paraphrases": [
+      "bodily exercise",
+      "exertion"
+    ],
+    "example": "Doctors recommend at least thirty minutes of moderate physical activity every day."
+  },
+  {
+    "id": "spo-049",
+    "topic": "sport",
+    "word": "facilities",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "buildings or equipment provided for a particular purpose",
+    "collocations": [
+      "sports facilities",
+      "leisure facilities",
+      "modern facilities"
+    ],
+    "paraphrases": [
+      "amenities",
+      "equipment and venues"
+    ],
+    "example": "Poor sports facilities discourage many pupils from taking part."
+  },
+  {
+    "id": "spo-050",
+    "topic": "sport",
+    "word": "membership",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "the state of belonging to a club or group",
+    "collocations": [
+      "gym membership",
+      "club membership",
+      "annual membership"
+    ],
+    "paraphrases": [
+      "enrolment",
+      "subscription"
+    ],
+    "example": "Annual gym membership can be expensive for people on low incomes."
+  },
+  {
+    "id": "spo-051",
+    "topic": "sport",
+    "word": "supporter",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a person who follows and encourages a particular team",
+    "collocations": [
+      "loyal supporter",
+      "football supporters",
+      "supporter's club"
+    ],
+    "paraphrases": [
+      "fan",
+      "follower"
+    ],
+    "example": "Loyal supporters travelled hundreds of miles to watch the match."
+  },
+  {
+    "id": "spo-052",
+    "topic": "sport",
+    "word": "hooliganism",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "violent and destructive behaviour by fans at sporting events",
+    "collocations": [
+      "football hooliganism",
+      "crackdown on hooliganism",
+      "combat hooliganism"
+    ],
+    "paraphrases": [
+      "crowd violence",
+      "fan violence"
+    ],
+    "example": "Strict policing helped to reduce football hooliganism in the 1990s."
+  },
+  {
+    "id": "spo-053",
+    "topic": "sport",
+    "word": "transfer fee",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "money paid by one club to another to sign a player",
+    "collocations": [
+      "record transfer fee",
+      "pay a transfer fee",
+      "huge transfer fee"
+    ],
+    "paraphrases": [
+      "signing fee",
+      "player purchase price"
+    ],
+    "example": "The club paid a record transfer fee for the young striker."
+  },
+  {
+    "id": "spo-054",
+    "topic": "sport",
+    "word": "triumph",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a great success or victory",
+    "collocations": [
+      "a sporting triumph",
+      "moment of triumph",
+      "a famous triumph"
+    ],
+    "paraphrases": [
+      "victory",
+      "great success"
+    ],
+    "example": "The team's triumph in the final delighted supporters across the country."
+  },
+  {
+    "id": "spo-055",
+    "topic": "sport",
+    "word": "defeat",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "the experience of losing a contest",
+    "collocations": [
+      "suffer defeat",
+      "narrow defeat",
+      "crushing defeat"
+    ],
+    "paraphrases": [
+      "loss",
+      "failure to win"
+    ],
+    "example": "The team suffered a crushing defeat in the semi-final."
+  },
+  {
+    "id": "spo-056",
+    "topic": "sport",
+    "word": "trophy",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a cup or prize awarded to a winner",
+    "collocations": [
+      "lift the trophy",
+      "win a trophy",
+      "hold the trophy"
+    ],
+    "paraphrases": [
+      "cup",
+      "prize"
+    ],
+    "example": "The captain lifted the trophy above his head as fireworks lit the sky."
+  },
+  {
+    "id": "spo-057",
+    "topic": "sport",
+    "word": "qualify",
+    "pos": "verb",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "to reach the standard needed to enter a competition",
+    "collocations": [
+      "qualify for the final",
+      "fail to qualify",
+      "qualify for the Olympics"
+    ],
+    "paraphrases": [
+      "earn a place",
+      "reach the required standard"
+    ],
+    "example": "The relay team failed to qualify for the final by a fraction of a second."
+  },
+  {
+    "id": "spo-058",
+    "topic": "sport",
+    "word": "fixture",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "a sports event arranged to take place on a particular date",
+    "collocations": [
+      "fixture list",
+      "home fixture",
+      "rearrange a fixture"
+    ],
+    "paraphrases": [
+      "scheduled match",
+      "arranged game"
+    ],
+    "example": "Several fixtures were postponed because of heavy snow."
+  },
+  {
+    "id": "spo-059",
+    "topic": "sport",
+    "word": "league",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a group of teams that play one another over a season",
+    "collocations": [
+      "premier league",
+      "league table",
+      "top of the league"
+    ],
+    "paraphrases": [
+      "competition",
+      "championship division"
+    ],
+    "example": "The club finished top of the league for the third year in a row."
+  },
+  {
+    "id": "spo-060",
+    "topic": "sport",
+    "word": "relegation",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "the move of a team to a lower division after poor results",
+    "collocations": [
+      "face relegation",
+      "avoid relegation",
+      "relegation battle"
+    ],
+    "paraphrases": [
+      "demotion",
+      "drop to a lower division"
+    ],
+    "example": "The club avoided relegation on the final day of the season."
+  },
+  {
+    "id": "spo-061",
+    "topic": "sport",
+    "word": "thrill",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "a sudden feeling of excitement and pleasure",
+    "collocations": [
+      "the thrill of competition",
+      "seek thrills",
+      "real thrill"
+    ],
+    "paraphrases": [
+      "excitement",
+      "buzz"
+    ],
+    "example": "Climbers often say the thrill of reaching a summit is worth any risk."
+  },
+  {
+    "id": "spo-062",
+    "topic": "sport",
+    "word": "adrenaline",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a hormone that makes the heart beat faster and creates excitement",
+    "collocations": [
+      "adrenaline rush",
+      "adrenaline junkie",
+      "pump adrenaline"
+    ],
+    "paraphrases": [
+      "rush of excitement",
+      "surge of energy"
+    ],
+    "example": "Skydiving gives participants an adrenaline rush unmatched by other activities."
+  },
+  {
+    "id": "spo-063",
+    "topic": "sport",
+    "word": "adventurous",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "willing to try new, exciting or risky things",
+    "collocations": [
+      "adventurous spirit",
+      "adventurous activities",
+      "adventurous holiday"
+    ],
+    "paraphrases": [
+      "daring",
+      "enterprising"
+    ],
+    "example": "Adventurous travellers often take up activities such as white-water rafting."
+  },
+  {
+    "id": "spo-064",
+    "topic": "sport",
+    "word": "mountaineering",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "the sport of climbing mountains",
+    "collocations": [
+      "mountaineering expedition",
+      "mountaineering equipment",
+      "go mountaineering"
+    ],
+    "paraphrases": [
+      "mountain climbing",
+      "alpinism"
+    ],
+    "example": "Mountaineering demands careful planning because weather conditions change rapidly."
+  },
+  {
+    "id": "spo-065",
+    "topic": "sport",
+    "word": "marathon",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a long-distance running race of about 42 kilometres",
+    "collocations": [
+      "run a marathon",
+      "London marathon",
+      "marathon runner"
+    ],
+    "paraphrases": [
+      "long-distance race",
+      "endurance run"
+    ],
+    "example": "She trained for six months before running her first marathon."
+  },
+  {
+    "id": "spo-066",
+    "topic": "sport",
+    "word": "sprint",
+    "pos": "verb",
+    "band": 7,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "to run at full speed over a short distance",
+    "collocations": [
+      "sprint to the finish",
+      "sprint down the track",
+      "sprint start"
+    ],
+    "paraphrases": [
+      "dash",
+      "race at top speed"
+    ],
+    "example": "The athlete sprinted past her rivals in the final fifty metres."
+  },
+  {
+    "id": "spo-067",
+    "topic": "sport",
+    "word": "workout",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a session of physical exercise",
+    "collocations": [
+      "daily workout",
+      "intense workout",
+      "gym workout"
+    ],
+    "paraphrases": [
+      "exercise session",
+      "fitness session"
+    ],
+    "example": "I do a short workout every morning before breakfast."
+  },
+  {
+    "id": "spo-068",
+    "topic": "sport",
+    "word": "exertion",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "physical or mental effort",
+    "collocations": [
+      "physical exertion",
+      "strenuous exertion",
+      "avoid exertion"
+    ],
+    "paraphrases": [
+      "effort",
+      "strain"
+    ],
+    "example": "Patients should avoid heavy exertion for several weeks after the operation."
+  },
+  {
+    "id": "spo-069",
+    "topic": "sport",
+    "word": "strenuous",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "needing a lot of effort or energy",
+    "collocations": [
+      "strenuous exercise",
+      "strenuous activity",
+      "strenuous training"
+    ],
+    "paraphrases": [
+      "demanding",
+      "gruelling"
+    ],
+    "example": "Strenuous exercise is not advisable for people with heart conditions."
+  },
+  {
+    "id": "spo-070",
+    "topic": "sport",
+    "word": "rigorous",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "extremely thorough, demanding and strict",
+    "collocations": [
+      "rigorous training",
+      "rigorous testing",
+      "rigorous standards"
+    ],
+    "paraphrases": [
+      "demanding",
+      "strict"
+    ],
+    "example": "Olympic hopefuls follow a rigorous schedule of training and rest."
+  },
+  {
+    "id": "spo-072",
+    "topic": "sport",
+    "word": "spare time",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "time when one is free from work or other duties",
+    "collocations": [
+      "in my spare time",
+      "spare time activities",
+      "use spare time"
+    ],
+    "paraphrases": [
+      "free time",
+      "leisure"
+    ],
+    "example": "In my spare time I play badminton with colleagues."
+  },
+  {
+    "id": "spo-074",
+    "topic": "sport",
+    "word": "keep fit",
+    "pos": "phrase",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "to stay physically healthy through regular exercise",
+    "collocations": [
+      "keep fit classes",
+      "keep fit and healthy",
+      "try to keep fit"
+    ],
+    "paraphrases": [
+      "stay in shape",
+      "maintain fitness"
+    ],
+    "example": "Many retired people join walking groups to keep fit."
+  },
+  {
+    "id": "spo-075",
+    "topic": "sport",
+    "word": "take up",
+    "pos": "phrase",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "to begin a new hobby or activity",
+    "collocations": [
+      "take up a sport",
+      "take up a hobby",
+      "take up running"
+    ],
+    "paraphrases": [
+      "start",
+      "begin doing"
+    ],
+    "example": "I decided to take up swimming after moving to a house near the coast."
+  },
+  {
+    "id": "spo-076",
+    "topic": "sport",
+    "word": "sporting",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "relating to sport or showing fair behaviour",
+    "collocations": [
+      "sporting event",
+      "sporting achievement",
+      "sporting spirit"
+    ],
+    "paraphrases": [
+      "relating to athletics",
+      "connected with competitions"
+    ],
+    "example": "Major sporting events bring huge crowds and revenue to host cities."
+  },
+  {
+    "id": "spo-078",
+    "topic": "sport",
+    "word": "physique",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "reading",
+      "listening"
+    ],
+    "definition": "the shape and size of a person's body",
+    "collocations": [
+      "athletic physique",
+      "muscular physique",
+      "build a physique"
+    ],
+    "paraphrases": [
+      "body build",
+      "bodily form"
+    ],
+    "example": "Rowers typically have a tall, powerful physique built through years of training."
+  },
+  {
+    "id": "spo-079",
+    "topic": "sport",
+    "word": "rival",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "speaking",
+      "reading"
+    ],
+    "definition": "a person or team competing against another",
+    "collocations": [
+      "fierce rival",
+      "local rival",
+      "arch rival"
+    ],
+    "paraphrases": [
+      "opponent",
+      "competitor"
+    ],
+    "example": "The two clubs are bitter rivals and their matches always attract large crowds."
+  }
+]

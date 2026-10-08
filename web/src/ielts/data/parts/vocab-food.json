@@ -1,0 +1,1685 @@
+[
+  {
+    "id": "foo-001",
+    "topic": "food",
+    "word": "staple",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a basic food that forms a large part of a population's regular diet",
+    "collocations": [
+      "staple food",
+      "staple crop",
+      "dietary staple"
+    ],
+    "paraphrases": [
+      "basic foodstuff",
+      "main item of diet"
+    ],
+    "example": "Rice remains the staple for more than half of the world's population."
+  },
+  {
+    "id": "foo-002",
+    "topic": "food",
+    "word": "cuisine",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a style of cooking that is typical of a country or region",
+    "collocations": [
+      "local cuisine",
+      "traditional cuisine",
+      "fusion cuisine"
+    ],
+    "paraphrases": [
+      "style of cooking",
+      "culinary tradition"
+    ],
+    "example": "Thai cuisine combines sweet, sour, salty and spicy flavours in a single dish."
+  },
+  {
+    "id": "foo-003",
+    "topic": "food",
+    "word": "delicacy",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a rare or expensive food that is considered especially pleasant to eat",
+    "collocations": [
+      "local delicacy",
+      "regarded as a delicacy",
+      "seafood delicacy"
+    ],
+    "paraphrases": [
+      "gourmet speciality",
+      "luxury food"
+    ],
+    "example": "Sea urchin is regarded as a delicacy in coastal regions of Japan."
+  },
+  {
+    "id": "foo-004",
+    "topic": "food",
+    "word": "ingredient",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "one of the foods that are combined to make a particular dish",
+    "collocations": [
+      "key ingredient",
+      "fresh ingredients",
+      "list of ingredients"
+    ],
+    "paraphrases": [
+      "component of a recipe",
+      "item in a dish"
+    ],
+    "example": "Fresh ingredients are the secret of many successful neighbourhood restaurants."
+  },
+  {
+    "id": "foo-005",
+    "topic": "food",
+    "word": "produce",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "food that is grown or raised on a farm, especially fruit and vegetables",
+    "collocations": [
+      "fresh produce",
+      "local produce",
+      "farm produce"
+    ],
+    "paraphrases": [
+      "farm products",
+      "fruit and vegetables"
+    ],
+    "example": "Supermarkets now import fresh produce from every continent all year round."
+  },
+  {
+    "id": "foo-006",
+    "topic": "food",
+    "word": "harvest",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the gathering of crops, or the amount of crops gathered",
+    "collocations": [
+      "poor harvest",
+      "bumper harvest",
+      "harvest season"
+    ],
+    "paraphrases": [
+      "crop gathering",
+      "yield of a season"
+    ],
+    "example": "A poor harvest following months of rain pushed up the price of wheat."
+  },
+  {
+    "id": "foo-007",
+    "topic": "food",
+    "word": "yield",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the amount of a crop produced on a given area of land",
+    "collocations": [
+      "crop yield",
+      "high yield",
+      "increase yields"
+    ],
+    "paraphrases": [
+      "crop output",
+      "amount produced per hectare"
+    ],
+    "example": "New varieties of wheat have raised average yield per hectare by almost a third."
+  },
+  {
+    "id": "foo-008",
+    "topic": "food",
+    "word": "livestock",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "farm animals such as cattle, sheep and pigs kept for food or work",
+    "collocations": [
+      "raise livestock",
+      "livestock farming",
+      "herd of livestock"
+    ],
+    "paraphrases": [
+      "farm animals",
+      "cattle and sheep"
+    ],
+    "example": "Producing feed for livestock takes up a huge proportion of agricultural land."
+  },
+  {
+    "id": "foo-009",
+    "topic": "food",
+    "word": "poultry",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "birds such as chickens and ducks kept for their meat or eggs",
+    "collocations": [
+      "poultry farm",
+      "poultry meat",
+      "rear poultry"
+    ],
+    "paraphrases": [
+      "farmed birds",
+      "chickens and ducks"
+    ],
+    "example": "Demand for poultry has grown faster than demand for beef because it is cheaper."
+  },
+  {
+    "id": "foo-010",
+    "topic": "food",
+    "word": "dairy",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "relating to milk and products made from it",
+    "collocations": [
+      "dairy products",
+      "dairy farm",
+      "dairy industry"
+    ],
+    "paraphrases": [
+      "milk-based",
+      "relating to milk products"
+    ],
+    "example": "Dairy farms in the region have struggled since milk prices fell."
+  },
+  {
+    "id": "foo-011",
+    "topic": "food",
+    "word": "grain",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "the small hard seeds of crops such as wheat, rice and maize",
+    "collocations": [
+      "grain harvest",
+      "grain exports",
+      "store grain"
+    ],
+    "paraphrases": [
+      "cereal crop",
+      "edible seeds"
+    ],
+    "example": "Global grain reserves fell sharply after two consecutive years of drought."
+  },
+  {
+    "id": "foo-012",
+    "topic": "food",
+    "word": "cereal",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a plant grown for its edible seeds, such as wheat, rice or oats",
+    "collocations": [
+      "cereal crop",
+      "cereal production",
+      "cereal farmers"
+    ],
+    "paraphrases": [
+      "grain crop",
+      "seed crop"
+    ],
+    "example": "Cereal production must keep pace with a growing world population."
+  },
+  {
+    "id": "foo-013",
+    "topic": "food",
+    "word": "arable",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "describing land that is used or suitable for growing crops",
+    "collocations": [
+      "arable land",
+      "arable farming",
+      "arable crops"
+    ],
+    "paraphrases": [
+      "suitable for crops",
+      "cultivated"
+    ],
+    "example": "Urban expansion is steadily reducing the amount of arable land near major cities."
+  },
+  {
+    "id": "foo-014",
+    "topic": "food",
+    "word": "agrarian",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "relating to farming and the cultivation of land",
+    "collocations": [
+      "agrarian economy",
+      "agrarian society",
+      "agrarian reform"
+    ],
+    "paraphrases": [
+      "farming-based",
+      "agricultural"
+    ],
+    "example": "The country has shifted from an agrarian economy to one dominated by services."
+  },
+  {
+    "id": "foo-015",
+    "topic": "food",
+    "word": "smallholder",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a farmer who works a very small piece of land",
+    "collocations": [
+      "smallholder farmers",
+      "smallholder agriculture",
+      "support smallholders"
+    ],
+    "paraphrases": [
+      "small-scale farmer",
+      "peasant farmer"
+    ],
+    "example": "Smallholder farmers produce much of the food eaten in developing countries."
+  },
+  {
+    "id": "foo-016",
+    "topic": "food",
+    "word": "agribusiness",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "large commercial companies involved in farming and food production",
+    "collocations": [
+      "global agribusiness",
+      "agribusiness giants",
+      "agribusiness corporations"
+    ],
+    "paraphrases": [
+      "large-scale commercial farming",
+      "industrial agriculture"
+    ],
+    "example": "Powerful agribusiness corporations now control much of the global seed market."
+  },
+  {
+    "id": "foo-017",
+    "topic": "food",
+    "word": "subsistence",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a level of production that provides just enough to live on",
+    "collocations": [
+      "subsistence farming",
+      "subsistence agriculture",
+      "subsistence level"
+    ],
+    "paraphrases": [
+      "bare survival",
+      "minimal living"
+    ],
+    "example": "Millions of rural families depend on subsistence farming and have little left to sell."
+  },
+  {
+    "id": "foo-018",
+    "topic": "food",
+    "word": "monoculture",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the growing of a single crop over a large area",
+    "collocations": [
+      "vast monoculture",
+      "monoculture plantations",
+      "monoculture farming"
+    ],
+    "paraphrases": [
+      "single-crop cultivation",
+      "one-crop farming"
+    ],
+    "example": "Monoculture leaves a harvest dangerously exposed to a single disease."
+  },
+  {
+    "id": "foo-019",
+    "topic": "food",
+    "word": "pesticide",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a chemical used to kill insects and other pests that damage crops",
+    "collocations": [
+      "spray pesticides",
+      "chemical pesticide",
+      "pesticide residue"
+    ],
+    "paraphrases": [
+      "crop-protection chemical",
+      "insect killer"
+    ],
+    "example": "Heavy pesticide use can leave residues on fruit and vegetables."
+  },
+  {
+    "id": "foo-021",
+    "topic": "food",
+    "word": "irrigation",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the artificial supply of water to land so that crops can grow",
+    "collocations": [
+      "irrigation system",
+      "irrigation channels",
+      "drip irrigation"
+    ],
+    "paraphrases": [
+      "artificial watering",
+      "supply of water to fields"
+    ],
+    "example": "Efficient irrigation allows farmers to grow crops in regions with little rainfall."
+  },
+  {
+    "id": "foo-023",
+    "topic": "food",
+    "word": "famine",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a severe shortage of food in a region, causing widespread hunger",
+    "collocations": [
+      "widespread famine",
+      "prevent famine",
+      "famine relief"
+    ],
+    "paraphrases": [
+      "mass hunger",
+      "extreme food shortage"
+    ],
+    "example": "War and poor governance can turn a poor harvest into a full-scale famine."
+  },
+  {
+    "id": "foo-024",
+    "topic": "food",
+    "word": "starvation",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "suffering or death caused by a lack of food",
+    "collocations": [
+      "die of starvation",
+      "face starvation",
+      "risk of starvation"
+    ],
+    "paraphrases": [
+      "extreme hunger",
+      "death from lack of food"
+    ],
+    "example": "Thousands of people faced starvation when supply routes were cut off."
+  },
+  {
+    "id": "foo-025",
+    "topic": "food",
+    "word": "malnutrition",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a condition caused by not eating enough of the right foods",
+    "collocations": [
+      "severe malnutrition",
+      "child malnutrition",
+      "suffer from malnutrition"
+    ],
+    "paraphrases": [
+      "poor nourishment",
+      "inadequate diet"
+    ],
+    "example": "Child malnutrition continues to stunt growth in the poorest regions of the world."
+  },
+  {
+    "id": "foo-026",
+    "topic": "food",
+    "word": "undernourished",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "not getting enough food or the right kind of food to stay healthy",
+    "collocations": [
+      "chronically undernourished",
+      "undernourished children",
+      "remain undernourished"
+    ],
+    "paraphrases": [
+      "underfed",
+      "lacking adequate food"
+    ],
+    "example": "Around eight hundred million people worldwide are still undernourished."
+  },
+  {
+    "id": "foo-027",
+    "topic": "food",
+    "word": "food insecurity",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the lack of reliable access to enough affordable and nutritious food",
+    "collocations": [
+      "face food insecurity",
+      "rising food insecurity",
+      "food insecurity among households"
+    ],
+    "paraphrases": [
+      "lack of reliable food supply",
+      "uncertain access to food"
+    ],
+    "example": "Food insecurity affects not only developing countries but also low-income families in rich nations."
+  },
+  {
+    "id": "foo-028",
+    "topic": "food",
+    "word": "food security",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "reliable access to enough affordable and nutritious food for all people",
+    "collocations": [
+      "ensure food security",
+      "global food security",
+      "threaten food security"
+    ],
+    "paraphrases": [
+      "dependable food supply",
+      "guaranteed access to food"
+    ],
+    "example": "Climate change poses a growing threat to global food security."
+  },
+  {
+    "id": "foo-029",
+    "topic": "food",
+    "word": "surplus",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "an amount that is more than is needed",
+    "collocations": [
+      "food surplus",
+      "grain surplus",
+      "sell the surplus"
+    ],
+    "paraphrases": [
+      "excess",
+      "amount left over"
+    ],
+    "example": "Farmers in the region often sell their surplus at the weekly market."
+  },
+  {
+    "id": "foo-033",
+    "topic": "food",
+    "word": "intensive farming",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "a system of agriculture that produces large amounts of food from a small area",
+    "collocations": [
+      "practise intensive farming",
+      "intensive farming methods",
+      "intensive farming of livestock"
+    ],
+    "paraphrases": [
+      "high-output agriculture",
+      "industrialised farming"
+    ],
+    "example": "Intensive farming can feed more people but often harms soil quality over time."
+  },
+  {
+    "id": "foo-034",
+    "topic": "food",
+    "word": "factory farming",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a method of rearing animals indoors in large numbers to produce food cheaply",
+    "collocations": [
+      "oppose factory farming",
+      "factory farming methods",
+      "ban factory farming"
+    ],
+    "paraphrases": [
+      "industrial animal rearing",
+      "mass livestock production"
+    ],
+    "example": "Critics of factory farming argue that crowded conditions cause animals needless suffering."
+  },
+  {
+    "id": "foo-035",
+    "topic": "food",
+    "word": "free-range",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "describing animals that are allowed to move about freely outdoors",
+    "collocations": [
+      "free-range eggs",
+      "free-range chicken",
+      "free-range farming"
+    ],
+    "paraphrases": [
+      "raised outdoors",
+      "not kept in cages"
+    ],
+    "example": "Free-range eggs usually cost more than those from caged hens."
+  },
+  {
+    "id": "foo-036",
+    "topic": "food",
+    "word": "organic",
+    "pos": "adjective",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "produced without artificial chemicals or fertilisers",
+    "collocations": [
+      "organic farming",
+      "organic vegetables",
+      "organic produce"
+    ],
+    "paraphrases": [
+      "chemical-free",
+      "naturally grown"
+    ],
+    "example": "Many shoppers will pay a premium for organic vegetables because they believe them to be safer."
+  },
+  {
+    "id": "foo-037",
+    "topic": "food",
+    "word": "genetically modified",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "having had its genes changed artificially to give it useful qualities",
+    "collocations": [
+      "genetically modified crops",
+      "genetically modified food",
+      "genetically modified organisms"
+    ],
+    "paraphrases": [
+      "bioengineered",
+      "with altered genes"
+    ],
+    "example": "Genetically modified crops can resist disease but remain controversial in many countries."
+  },
+  {
+    "id": "foo-038",
+    "topic": "food",
+    "word": "crop rotation",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the practice of growing different crops on the same land in a planned order",
+    "collocations": [
+      "practise crop rotation",
+      "crop rotation system",
+      "traditional crop rotation"
+    ],
+    "paraphrases": [
+      "alternating crops",
+      "planned succession of crops"
+    ],
+    "example": "Crop rotation restores nutrients to the soil without the need for chemical fertilisers."
+  },
+  {
+    "id": "foo-039",
+    "topic": "food",
+    "word": "cash crop",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a crop grown mainly to be sold rather than eaten by the farmer",
+    "collocations": [
+      "grow a cash crop",
+      "cash crop production",
+      "profitable cash crop"
+    ],
+    "paraphrases": [
+      "crop grown for sale",
+      "commercial crop"
+    ],
+    "example": "Coffee is the principal cash crop for many smallholders in highland regions."
+  },
+  {
+    "id": "foo-040",
+    "topic": "food",
+    "word": "bumper crop",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "an unusually large harvest",
+    "collocations": [
+      "enjoy a bumper crop",
+      "produce a bumper crop",
+      "bumper crop of wheat"
+    ],
+    "paraphrases": [
+      "exceptionally large harvest",
+      "record yield"
+    ],
+    "example": "A bumper crop of apples caused prices to drop below the cost of production."
+  },
+  {
+    "id": "foo-041",
+    "topic": "food",
+    "word": "fallow",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "describing farmland left unplanted for a time so that it can recover",
+    "collocations": [
+      "lie fallow",
+      "fallow land",
+      "leave a field fallow"
+    ],
+    "paraphrases": [
+      "left unplanted",
+      "uncultivated for a season"
+    ],
+    "example": "Traditionally, farmers left a field fallow every third year to restore fertility."
+  },
+  {
+    "id": "foo-042",
+    "topic": "food",
+    "word": "fertile",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "able to support healthy plant growth because the soil is rich",
+    "collocations": [
+      "fertile soil",
+      "fertile land",
+      "fertile valley"
+    ],
+    "paraphrases": [
+      "rich",
+      "productive"
+    ],
+    "example": "River floods deposit nutrients that keep the valley's soil fertile."
+  },
+  {
+    "id": "foo-043",
+    "topic": "food",
+    "word": "barren",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "too poor to support the growth of crops or plants",
+    "collocations": [
+      "barren land",
+      "barren soil",
+      "barren landscape"
+    ],
+    "paraphrases": [
+      "infertile",
+      "unproductive"
+    ],
+    "example": "Overgrazing can turn productive pasture into barren ground within a few years."
+  },
+  {
+    "id": "foo-044",
+    "topic": "food",
+    "word": "grazing",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the feeding of animals on grass in open fields",
+    "collocations": [
+      "rotational grazing",
+      "grazing land",
+      "overgrazing"
+    ],
+    "paraphrases": [
+      "pasturing",
+      "feeding on grass"
+    ],
+    "example": "Excessive grazing has stripped vegetation from large parts of the plateau."
+  },
+  {
+    "id": "foo-045",
+    "topic": "food",
+    "word": "aquaculture",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the farming of fish and other water creatures for food",
+    "collocations": [
+      "marine aquaculture",
+      "aquaculture industry",
+      "aquaculture farms"
+    ],
+    "paraphrases": [
+      "fish farming",
+      "cultivation of seafood"
+    ],
+    "example": "Aquaculture now supplies about half of the fish eaten worldwide."
+  },
+  {
+    "id": "foo-046",
+    "topic": "food",
+    "word": "overfishing",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "catching so many fish that stocks cannot recover",
+    "collocations": [
+      "combat overfishing",
+      "overfishing of cod",
+      "result of overfishing"
+    ],
+    "paraphrases": [
+      "excessive fishing",
+      "depleting fish stocks"
+    ],
+    "example": "Overfishing has pushed several species of tuna close to collapse."
+  },
+  {
+    "id": "foo-047",
+    "topic": "food",
+    "word": "mechanisation",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the use of machines to do work that was once done by hand",
+    "collocations": [
+      "agricultural mechanisation",
+      "rapid mechanisation",
+      "mechanisation of farming"
+    ],
+    "paraphrases": [
+      "use of machinery",
+      "replacement of manual labour"
+    ],
+    "example": "Mechanisation has dramatically cut the number of people needed to run a farm."
+  },
+  {
+    "id": "foo-048",
+    "topic": "food",
+    "word": "processed",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "having been changed by a series of industrial steps before being sold as food",
+    "collocations": [
+      "processed food",
+      "highly processed",
+      "processed meat"
+    ],
+    "paraphrases": [
+      "factory-prepared",
+      "industrially treated"
+    ],
+    "example": "Highly processed food is often cheaper than fresh alternatives but contains more salt and sugar."
+  },
+  {
+    "id": "foo-049",
+    "topic": "food",
+    "word": "preservative",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a substance added to food to stop it going bad",
+    "collocations": [
+      "artificial preservative",
+      "natural preservative",
+      "contain preservatives"
+    ],
+    "paraphrases": [
+      "additive that prevents decay",
+      "anti-spoilage substance"
+    ],
+    "example": "Some manufacturers have replaced artificial preservatives with natural alternatives such as vinegar."
+  },
+  {
+    "id": "foo-050",
+    "topic": "food",
+    "word": "additive",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a substance added in small amounts to improve the taste, colour or life of food",
+    "collocations": [
+      "food additive",
+      "artificial additive",
+      "chemical additive"
+    ],
+    "paraphrases": [
+      "ingredient added to food",
+      "supplementary substance"
+    ],
+    "example": "Parents are increasingly wary of additives in snacks marketed to children."
+  },
+  {
+    "id": "foo-051",
+    "topic": "food",
+    "word": "perishable",
+    "pos": "adjective",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "likely to go bad quickly if not kept cold or eaten soon",
+    "collocations": [
+      "perishable goods",
+      "perishable foods",
+      "highly perishable"
+    ],
+    "paraphrases": [
+      "quick to spoil",
+      "liable to rot"
+    ],
+    "example": "Perishable goods such as fish must be transported in refrigerated lorries."
+  },
+  {
+    "id": "foo-052",
+    "topic": "food",
+    "word": "shelf life",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the length of time a product can be stored before it is no longer fit to sell or eat",
+    "collocations": [
+      "extend shelf life",
+      "limited shelf life",
+      "long shelf life"
+    ],
+    "paraphrases": [
+      "period before spoiling",
+      "storage lifespan"
+    ],
+    "example": "Vacuum packaging extends the shelf life of meat by several days."
+  },
+  {
+    "id": "foo-053",
+    "topic": "food",
+    "word": "packaging",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "the materials used to wrap and protect goods that are sold in shops",
+    "collocations": [
+      "plastic packaging",
+      "excess packaging",
+      "food packaging"
+    ],
+    "paraphrases": [
+      "wrapping",
+      "containers"
+    ],
+    "example": "Excess packaging adds to household waste and is difficult to recycle."
+  },
+  {
+    "id": "foo-054",
+    "topic": "food",
+    "word": "food waste",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "food that is thrown away instead of being eaten",
+    "collocations": [
+      "reduce food waste",
+      "household food waste",
+      "food waste in supermarkets"
+    ],
+    "paraphrases": [
+      "discarded food",
+      "uneaten food thrown out"
+    ],
+    "example": "Supermarkets are being urged to donate unsold products to cut down on food waste."
+  },
+  {
+    "id": "foo-055",
+    "topic": "food",
+    "word": "food miles",
+    "pos": "phrase",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "the distance that food travels from where it is produced to where it is eaten",
+    "collocations": [
+      "cut food miles",
+      "reduce food miles",
+      "low food miles"
+    ],
+    "paraphrases": [
+      "distance food is transported",
+      "length of the supply chain"
+    ],
+    "example": "Buying from nearby farms helps reduce food miles and support the local economy."
+  },
+  {
+    "id": "foo-056",
+    "topic": "food",
+    "word": "locally sourced",
+    "pos": "phrase",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "obtained from producers in the nearby area",
+    "collocations": [
+      "locally sourced ingredients",
+      "locally sourced meat",
+      "locally sourced produce"
+    ],
+    "paraphrases": [
+      "bought from nearby producers",
+      "obtained nearby"
+    ],
+    "example": "The restaurant is proud that all of its vegetables are locally sourced."
+  },
+  {
+    "id": "foo-057",
+    "topic": "food",
+    "word": "seasonal",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "available or happening only at particular times of the year",
+    "collocations": [
+      "seasonal produce",
+      "seasonal fruit",
+      "seasonal workers"
+    ],
+    "paraphrases": [
+      "available at certain times",
+      "occurring in a particular season"
+    ],
+    "example": "Eating seasonal fruit is cheaper and generally tastes better than imported varieties."
+  },
+  {
+    "id": "foo-059",
+    "topic": "food",
+    "word": "fast food",
+    "pos": "phrase",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "food that is prepared and served quickly in restaurants such as burger chains",
+    "collocations": [
+      "fast food chain",
+      "fast food restaurant",
+      "eat fast food"
+    ],
+    "paraphrases": [
+      "quick-service meals",
+      "takeaway meals"
+    ],
+    "example": "The spread of fast food has changed eating habits in cities across the world."
+  },
+  {
+    "id": "foo-060",
+    "topic": "food",
+    "word": "ready meal",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "a prepared dish that only needs to be heated before eating",
+    "collocations": [
+      "microwave a ready meal",
+      "frozen ready meal",
+      "ready meal sales"
+    ],
+    "paraphrases": [
+      "pre-cooked dish",
+      "convenience meal"
+    ],
+    "example": "Busy commuters often rely on a ready meal rather than cooking from scratch."
+  },
+  {
+    "id": "foo-061",
+    "topic": "food",
+    "word": "takeaway",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "speaking",
+      "listening"
+    ],
+    "definition": "a meal bought at a restaurant to be eaten somewhere else",
+    "collocations": [
+      "order a takeaway",
+      "Chinese takeaway",
+      "takeaway restaurant"
+    ],
+    "paraphrases": [
+      "meal to take home",
+      "carry-out meal"
+    ],
+    "example": "Ordering a takeaway has become a regular habit for many students."
+  },
+  {
+    "id": "foo-062",
+    "topic": "food",
+    "word": "dine out",
+    "pos": "phrase",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "to eat a meal in a restaurant instead of at home",
+    "collocations": [
+      "dine out regularly",
+      "love to dine out",
+      "dine out with friends"
+    ],
+    "paraphrases": [
+      "eat in a restaurant",
+      "go out for a meal"
+    ],
+    "example": "Families on tight budgets tend to dine out only on special occasions."
+  },
+  {
+    "id": "foo-063",
+    "topic": "food",
+    "word": "home-cooked",
+    "pos": "adjective",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "prepared at home rather than bought ready-made or from a restaurant",
+    "collocations": [
+      "home-cooked meal",
+      "home-cooked food",
+      "simple home-cooked dinner"
+    ],
+    "paraphrases": [
+      "prepared in the kitchen",
+      "made from scratch"
+    ],
+    "example": "A home-cooked meal is usually healthier and cheaper than a takeaway."
+  },
+  {
+    "id": "foo-064",
+    "topic": "food",
+    "word": "balanced diet",
+    "pos": "phrase",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "a way of eating that includes the right amounts of all the necessary food types",
+    "collocations": [
+      "maintain a balanced diet",
+      "eat a balanced diet",
+      "part of a balanced diet"
+    ],
+    "paraphrases": [
+      "well-rounded diet",
+      "varied and proportionate eating"
+    ],
+    "example": "A balanced diet should include plenty of vegetables, whole grains and lean protein."
+  },
+  {
+    "id": "foo-065",
+    "topic": "food",
+    "word": "dietary",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "relating to the food that a person or group usually eats",
+    "collocations": [
+      "dietary habits",
+      "dietary requirements",
+      "dietary fibre"
+    ],
+    "paraphrases": [
+      "relating to diet",
+      "concerning food intake"
+    ],
+    "example": "Dietary habits in Asia have shifted towards more meat and dairy as incomes have risen."
+  },
+  {
+    "id": "foo-066",
+    "topic": "food",
+    "word": "nutritious",
+    "pos": "adjective",
+    "band": 7,
+    "use": [
+      "writing",
+      "reading",
+      "listening"
+    ],
+    "definition": "containing the substances needed for health and growth",
+    "collocations": [
+      "nutritious meal",
+      "highly nutritious",
+      "nutritious food"
+    ],
+    "paraphrases": [
+      "nourishing",
+      "full of goodness"
+    ],
+    "example": "School canteens are expected to provide nutritious meals at an affordable price."
+  },
+  {
+    "id": "foo-067",
+    "topic": "food",
+    "word": "nutrient",
+    "pos": "noun",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "a substance that plants or animals need in order to live and grow",
+    "collocations": [
+      "essential nutrients",
+      "soil nutrients",
+      "absorb nutrients"
+    ],
+    "paraphrases": [
+      "nourishing substance",
+      "vital element in food"
+    ],
+    "example": "Overcooking vegetables can destroy many of the nutrients they contain."
+  },
+  {
+    "id": "foo-068",
+    "topic": "food",
+    "word": "calorie",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading",
+      "listening"
+    ],
+    "definition": "a unit of energy supplied by food",
+    "collocations": [
+      "calorie intake",
+      "count calories",
+      "high in calories"
+    ],
+    "paraphrases": [
+      "unit of food energy",
+      "measure of energy in food"
+    ],
+    "example": "The typical adult needs roughly two thousand calories a day to maintain their weight."
+  },
+  {
+    "id": "foo-069",
+    "topic": "food",
+    "word": "portion",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "the amount of food served to one person at a meal",
+    "collocations": [
+      "large portion",
+      "portion size",
+      "generous portion"
+    ],
+    "paraphrases": [
+      "serving",
+      "helping"
+    ],
+    "example": "Restaurant portions in some countries are nearly twice the size of those served decades ago."
+  },
+  {
+    "id": "foo-070",
+    "topic": "food",
+    "word": "appetite",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "the desire to eat food, or a strong wish for something",
+    "collocations": [
+      "lose one's appetite",
+      "healthy appetite",
+      "whet the appetite"
+    ],
+    "paraphrases": [
+      "desire for food",
+      "hunger"
+    ],
+    "example": "A short walk before dinner can stimulate the appetite."
+  },
+  {
+    "id": "foo-071",
+    "topic": "food",
+    "word": "palate",
+    "pos": "noun",
+    "band": 8,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "a person's ability to judge and enjoy the taste of food and drink",
+    "collocations": [
+      "refined palate",
+      "suit one's palate",
+      "cleanse the palate"
+    ],
+    "paraphrases": [
+      "sense of taste",
+      "taste preferences"
+    ],
+    "example": "The dish was adapted to suit the palate of foreign tourists."
+  },
+  {
+    "id": "foo-072",
+    "topic": "food",
+    "word": "savoury",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "tasting of salt or spices rather than being sweet",
+    "collocations": [
+      "savoury snacks",
+      "savoury dish",
+      "savoury flavour"
+    ],
+    "paraphrases": [
+      "salty rather than sweet",
+      "spicy rather than sugary"
+    ],
+    "example": "Some people prefer a savoury breakfast to the sweet cereals served in most households."
+  },
+  {
+    "id": "foo-073",
+    "topic": "food",
+    "word": "bland",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "having little or no taste or flavour",
+    "collocations": [
+      "bland food",
+      "rather bland",
+      "bland diet"
+    ],
+    "paraphrases": [
+      "tasteless",
+      "lacking flavour"
+    ],
+    "example": "Hospital meals are often criticised for being bland and unappetising."
+  },
+  {
+    "id": "foo-074",
+    "topic": "food",
+    "word": "flavour",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking",
+      "listening"
+    ],
+    "definition": "the particular taste of a food or drink",
+    "collocations": [
+      "rich flavour",
+      "strong flavour",
+      "add flavour"
+    ],
+    "paraphrases": [
+      "taste",
+      "savour"
+    ],
+    "example": "Roasting the vegetables brings out a deeper flavour than boiling them."
+  },
+  {
+    "id": "foo-075",
+    "topic": "food",
+    "word": "wholesome",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking",
+      "reading"
+    ],
+    "definition": "good for health and containing natural ingredients",
+    "collocations": [
+      "wholesome food",
+      "wholesome meal",
+      "wholesome ingredients"
+    ],
+    "paraphrases": [
+      "healthy",
+      "nourishing"
+    ],
+    "example": "The campaign encourages families to cook simple, wholesome meals together."
+  },
+  {
+    "id": "foo-076",
+    "topic": "food",
+    "word": "edible",
+    "pos": "adjective",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "safe and suitable to be eaten",
+    "collocations": [
+      "edible plants",
+      "edible oil",
+      "perfectly edible"
+    ],
+    "paraphrases": [
+      "safe to eat",
+      "fit for consumption"
+    ],
+    "example": "Millions of tonnes of perfectly edible fruit are discarded because of minor blemishes."
+  },
+  {
+    "id": "foo-077",
+    "topic": "food",
+    "word": "crave",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "to have a strong desire for something, especially a particular food",
+    "collocations": [
+      "crave sugar",
+      "crave sweet foods",
+      "crave attention"
+    ],
+    "paraphrases": [
+      "long for",
+      "have a strong urge for"
+    ],
+    "example": "Many people crave sugary snacks when they are tired or stressed."
+  },
+  {
+    "id": "foo-078",
+    "topic": "food",
+    "word": "indulge",
+    "pos": "verb",
+    "band": 7.5,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "to allow oneself to enjoy something, especially food that is not healthy",
+    "collocations": [
+      "indulge in sweets",
+      "indulge in a treat",
+      "occasionally indulge"
+    ],
+    "paraphrases": [
+      "treat oneself",
+      "give in to a craving"
+    ],
+    "example": "Most nutritionists accept that it is fine to indulge occasionally."
+  },
+  {
+    "id": "foo-079",
+    "topic": "food",
+    "word": "ferment",
+    "pos": "verb",
+    "band": 8,
+    "use": [
+      "writing",
+      "reading"
+    ],
+    "definition": "to undergo a chemical change in which sugars turn into alcohol or acid",
+    "collocations": [
+      "ferment slowly",
+      "allow to ferment",
+      "ferment into wine"
+    ],
+    "paraphrases": [
+      "undergo fermentation",
+      "turn sour or alcoholic"
+    ],
+    "example": "Cabbage is left to ferment for several weeks to make kimchi."
+  },
+  {
+    "id": "foo-080",
+    "topic": "food",
+    "word": "processed food",
+    "pos": "noun",
+    "band": 6.5,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "food that has been changed industrially, often with added salt, sugar or preservatives",
+    "collocations": [
+      "heavily processed food",
+      "cut down on processed food"
+    ],
+    "paraphrases": [
+      "convenience food",
+      "factory-made food"
+    ],
+    "example": "Diets high in processed food are associated with rising rates of obesity."
+  },
+  {
+    "id": "foo-081",
+    "topic": "food",
+    "word": "vegetarianism",
+    "pos": "noun",
+    "band": 7,
+    "use": [
+      "writing",
+      "speaking"
+    ],
+    "definition": "the practice of not eating meat or fish",
+    "collocations": [
+      "the rise of vegetarianism",
+      "convert to vegetarianism"
+    ],
+    "paraphrases": [
+      "a meat-free diet",
+      "plant-based eating"
+    ],
+    "example": "The rise of vegetarianism among young people has changed what restaurants offer."
+  }
+]
