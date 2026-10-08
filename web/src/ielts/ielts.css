@@ -128,3 +128,19 @@ h2, h3, h4, p, ul, ol, figure { margin: 0; }
   .ie-back { margin-left: auto; }
   .ie-textarea { min-height: 300px; }
 }
+
+/* Topic vocabulary review: toolbar spans the workspace, card sits in the 760 column. */
+.ie-vselect { max-width: 240px; }
+.ie-vstage { width: 100%; max-width: 760px; margin: 0 auto; }
+.ie-vcard { display: flex; flex-direction: column; gap: var(--space-16); padding: var(--space-16); border: 1px solid var(--border-hairline); border-radius: 12px; background: var(--bg-card); }
+.ie-vtags { color: var(--ink-muted); font-size: var(--text-xs); }
+.ie-vword { margin: 0; font-size: var(--text-2xl); }
+.ie-vactions { display: flex; flex-wrap: wrap; gap: var(--space-8); }
+.ie-vactions .ie-btn { align-self: auto; }
+.ie-vback { display: flex; flex-direction: column; gap: var(--space-8); color: var(--ink-secondary); }
+.ie-vback p { margin: 0; }
+.ie-vex { font-style: italic; color: var(--ink-primary); }
+.ie-vback dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: var(--space-8) var(--space-16); }
+.ie-vback dt { color: var(--ink-muted); font-size: var(--text-xs); }
+.ie-vback dd { margin: 0; }
+@media (max-width: 760px) { .ie-vback dl { grid-template-columns: 1fr; gap: var(--space-8); } }
