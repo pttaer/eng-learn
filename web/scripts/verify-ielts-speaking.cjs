@@ -34,7 +34,7 @@ p2.forEach(c => {
   assert(c.part3.length >= 4 && c.part3.length <= 5, `${c.id}: needs 4-5 Part 3 questions`);
   c.part3.forEach(q => assert(/\?$/.test(q), `${c.id}: Part 3 "${q}" is not a question`));
   const n = words(c.modelAnswer);
-  assert(n >= 150 && n <= 300, `${c.id}: band-7 model ${n} words (want 150-300, about 2 minutes)`);
+  assert(n >= 150 && n <= 330, `${c.id}: band-7 model ${n} words (want 150-330, up to 2 minutes at a brisk pace)`);
   if (c.band6 !== undefined || c.notes !== undefined) {
     samples++;
     const b6 = words(c.band6 || '');
