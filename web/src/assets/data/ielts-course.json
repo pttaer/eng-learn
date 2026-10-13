@@ -1,0 +1,935 @@
+{
+  "title": "IELTS Band 7+ Complete Prep Course Master Data",
+  "standards": "IELTS 9-Band Descriptors & Cambridge Calibrated Assessment",
+  "compiledAt": "2026-10-13T10:13:55.663Z",
+  "stats": {
+    "strategyCards": 46,
+    "diagnosticQuestions": 20,
+    "questionTypes": 14,
+    "synonymPairs": 10,
+    "speakingModels": 3
+  },
+  "diagnostics": [
+    {
+      "id": "diag-01",
+      "category": "grammar",
+      "subType": "subject_verb",
+      "prompt": "The rapid expansion of urban renewable energy grids _____ significant capital investments from local authorities.",
+      "options": [
+        "require",
+        "requires",
+        "are requiring",
+        "have required"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject of the sentence is the singular head noun 'expansion', not the plural prepositional adjunct 'energy grids'. Singular subjects demand the third-person singular verb 'requires'.",
+      "impactOnBand": "Prevents Band 7.0 GRA due to systematic subject-verb agreement slips with post-modified noun phrases."
+    },
+    {
+      "id": "diag-02",
+      "category": "grammar",
+      "subType": "tenses",
+      "prompt": "Over the past three decades, international student mobility _____ exponentially across OECD nations.",
+      "options": [
+        "increased",
+        "has increased",
+        "had increased",
+        "is increasing"
+      ],
+      "correctIndex": 1,
+      "explanation": "The time marker 'Over the past three decades' establishes an action that began in the past and continues into the present, requiring the present perfect tense 'has increased'.",
+      "impactOnBand": "Caps GRA at Band 6.0 if past simple is incorrectly substituted for continuous historical trends."
+    },
+    {
+      "id": "diag-03",
+      "category": "grammar",
+      "subType": "articles",
+      "prompt": "Access to _____ tertiary education remains a decisive factor in socioeconomic mobility.",
+      "options": [
+        "the",
+        "an",
+        "Ø (no article)",
+        "a"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Tertiary education' is an uncountable noun used in a general sense, which requires the zero article (Ø). Using 'the' here is an erroneous over-generalization.",
+      "impactOnBand": "Systematic article overuse or omission caps Lexical Resource and Grammatical Accuracy at Band 6.0."
+    },
+    {
+      "id": "diag-04",
+      "category": "grammar",
+      "subType": "clauses",
+      "prompt": "Although governments subsidize electric vehicles, _____ consumer adoption rates continue to lag behind initial forecasts.",
+      "options": [
+        "but",
+        "however",
+        "yet",
+        "Ø (no conjunction)"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Although' is a subordinating conjunction introducing a dependent concession clause. English syntax prohibits a paired coordinating conjunction ('but', 'yet') or conjunctive adverb ('however') in the main clause.",
+      "impactOnBand": "Double-conjunction structures ('Although... but...') represent a severe fossilized syntax error capping GRA at Band 5.5."
+    },
+    {
+      "id": "diag-05",
+      "category": "grammar",
+      "subType": "prepositions",
+      "prompt": "There was a sharp decline _____ the proportion of households relying exclusively on fossil fuel heating.",
+      "options": [
+        "of",
+        "in",
+        "to",
+        "on"
+      ],
+      "correctIndex": 1,
+      "explanation": "Trend nouns indicating rise, fall, increase, or decline take the preposition 'in' when followed by the metric or variable undergoing the change (e.g., 'a decline in proportion').",
+      "impactOnBand": "Misselecting prepositions in Task 1 trend descriptions destroys precision and penalizes Lexical Resource and GRA."
+    },
+    {
+      "id": "diag-06",
+      "category": "vocabulary",
+      "subType": "collocations",
+      "prompt": "The implementation of stringent environmental policies can _____ a profound impact on carbon emissions.",
+      "options": [
+        "exert",
+        "do",
+        "bring",
+        "cause"
+      ],
+      "correctIndex": 0,
+      "explanation": "The verb 'exert' forms a natural academic collocation with 'a profound impact/influence'. 'Do an impact' is unnatural and colloquial.",
+      "impactOnBand": "Band 7.0+ Lexical Resource requires using sophisticated collocations with awareness of style and collocation."
+    },
+    {
+      "id": "diag-07",
+      "category": "grammar",
+      "subType": "subject_verb",
+      "prompt": "Neither the municipal council nor the transport ministry _____ prepared to fund the suburban railway expansion.",
+      "options": [
+        "were",
+        "was",
+        "are",
+        "have been"
+      ],
+      "correctIndex": 1,
+      "explanation": "In correlative constructions with 'neither... nor...', the verb agrees with the closer subject ('the transport ministry', singular), hence 'was'.",
+      "impactOnBand": "Proves mastery of advanced proximity agreement rules required for Band 8.0 GRA."
+    },
+    {
+      "id": "diag-08",
+      "category": "grammar",
+      "subType": "tenses",
+      "prompt": "By the time modern carbon-capture facilities become operational in 2035, global average temperatures _____ by 1.2 degrees Celsius.",
+      "options": [
+        "would rise",
+        "will have risen",
+        "had risen"
+      ],
+      "correctIndex": 2,
+      "explanation": "The future time anchor 'By the time [present verb] ... in 2035' mandates the future perfect tense 'will have risen' to indicate completion prior to that future point.",
+      "impactOnBand": "Demonstrates command of complex temporal frameworks necessary for Band 8.0+ grammatical range."
+    },
+    {
+      "id": "diag-09",
+      "category": "grammar",
+      "subType": "clauses",
+      "prompt": "The researcher examined forty clinical trials, the majority of _____ exhibited methodological inconsistencies.",
+      "options": [
+        "them",
+        "which",
+        "that",
+        "whom"
+      ],
+      "correctIndex": 1,
+      "explanation": "A non-restrictive relative clause following a quantifier phrase ('the majority of') referring to inanimate things ('trials') requires the relative pronoun 'which'. Using 'them' creates a comma splice.",
+      "impactOnBand": "Comma splices and run-on sentences restrict Coherence & Cohesion and GRA to Band 6.0."
+    },
+    {
+      "id": "diag-10",
+      "category": "grammar",
+      "subType": "articles",
+      "prompt": "The survey revealed that _____ unemployed face distinct psychological barriers when seeking reintegration.",
+      "options": [
+        "an",
+        "the",
+        "Ø",
+        "those"
+      ],
+      "correctIndex": 1,
+      "explanation": "The definite article 'the' combined with an adjective ('unemployed') functions as a nominalized plural collective noun referring to the whole class of individuals.",
+      "impactOnBand": "Accurate usage of nominalized adjectives reflects high-level syntactic dexterity (Band 7.5+ GRA)."
+    },
+    {
+      "id": "diag-11",
+      "category": "vocabulary",
+      "subType": "collocations",
+      "prompt": "Technological automation poses a _____ threat to traditional clerical vocations.",
+      "options": [
+        "serious",
+        "deep",
+        "grave",
+        "heavy"
+      ],
+      "correctIndex": 2,
+      "explanation": "While 'serious' is acceptable, 'grave threat' is a high-level academic collocation denoting severe and imminent peril, demonstrating Band 8.0 lexical sophistication.",
+      "impactOnBand": "Distinguishes basic conversational vocabulary from high-register academic lexis."
+    },
+    {
+      "id": "diag-12",
+      "category": "grammar",
+      "subType": "clauses",
+      "prompt": "Rarely _____ such extensive economic restructuring without significant transitory unemployment.",
+      "options": [
+        "nations undertake",
+        "do nations undertake",
+        "nations do undertake",
+        "have nations undertaken"
+      ],
+      "correctIndex": 1,
+      "explanation": "Negative or restrictive adverbs ('rarely', 'seldom', 'hardly') at the beginning of a clause trigger subject-auxiliary inversion ('do nations undertake').",
+      "impactOnBand": "Controlled negative inversion demonstrates Band 8.5+ grammatical range."
+    },
+    {
+      "id": "diag-13",
+      "category": "grammar",
+      "subType": "prepositions",
+      "prompt": "The government's new fiscal policy is aimed _____ mitigating regional economic disparities.",
+      "options": [
+        "to",
+        "for",
+        "at",
+        "on"
+      ],
+      "correctIndex": 2,
+      "explanation": "The adjective/passive participle 'aimed' collocated with an objective takes the preposition 'at' + gerund ('aimed at mitigating').",
+      "impactOnBand": "Dependent preposition inaccuracies undermine accuracy and cohesion in Task 2 essays."
+    },
+    {
+      "id": "diag-14",
+      "category": "vocabulary",
+      "subType": "collocations",
+      "prompt": "To address adolescent obesity, schools must _____ proactive measures to encourage physical activity.",
+      "options": [
+        "make",
+        "take",
+        "do",
+        "execute"
+      ],
+      "correctIndex": 1,
+      "explanation": "The canonical academic collocation is 'take measures' or 'adopt measures'. Using 'make measures' is a direct L1 translation error.",
+      "impactOnBand": "Basic delexical verb substitution errors ('make' vs 'take') prevent attaining Band 7.0 in Lexical Resource."
+    },
+    {
+      "id": "diag-15",
+      "category": "grammar",
+      "subType": "subject_verb",
+      "prompt": "A substantial proportion of the arable land in arid zones _____ affected by desertification.",
+      "options": [
+        "are",
+        "is",
+        "have been",
+        "were"
+      ],
+      "correctIndex": 1,
+      "explanation": "With fraction and proportion expressions, agreement is determined by the noun in the prepositional phrase ('arable land', uncountable singular), requiring the singular verb 'is'.",
+      "impactOnBand": "Demonstrates nuanced understanding of proportional concord essential for Task 1 report writing."
+    },
+    {
+      "id": "diag-16",
+      "category": "grammar",
+      "subType": "tenses",
+      "prompt": "Had the regulatory framework been introduced earlier, the financial crisis _____ mitigated.",
+      "options": [
+        "would be",
+        "will have been",
+        "would have been",
+        "had been"
+      ],
+      "correctIndex": 2,
+      "explanation": "Third conditional inverted structure ('Had [subject] been...') requires the past conditional modal perfect in the main clause ('would have been mitigated').",
+      "impactOnBand": "Accurate hypothetical reasoning is a hallmark of Band 8.0+ Task 2 essay arguments."
+    },
+    {
+      "id": "diag-17",
+      "category": "vocabulary",
+      "subType": "collocations",
+      "prompt": "The empirical data failed to _____ the hypothesis proposed by the research team.",
+      "options": [
+        "hold",
+        "corroborate",
+        "approve",
+        "settle"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Corroborate the hypothesis' is the precise academic collocation meaning to confirm or support with evidence.",
+      "impactOnBand": "Elevates Lexical Resource to Band 8.0 by utilizing precise academic register rather than vague words like 'prove'."
+    },
+    {
+      "id": "diag-18",
+      "category": "grammar",
+      "subType": "clauses",
+      "prompt": "The curriculum was redesigned, _____ students with practical vocational competencies.",
+      "options": [
+        "thereby provided",
+        "thereby providing",
+        "and thereby provide",
+        "which thereby provide"
+      ],
+      "correctIndex": 1,
+      "explanation": "The adverb 'thereby' followed by a present participle ('providing') creates an adverbial clause of result, smoothly linking the action to its consequence.",
+      "impactOnBand": "Participle clauses increase syntactic density and clausal complexity for Band 8.0 GRA."
+    },
+    {
+      "id": "diag-19",
+      "category": "grammar",
+      "subType": "prepositions",
+      "prompt": "Expenditure on healthcare accounted _____ approximately 18% of the national budget.",
+      "options": [
+        "of",
+        "with",
+        "for",
+        "to"
+      ],
+      "correctIndex": 2,
+      "explanation": "The phrasal verb 'account for' is the obligatory academic expression for representing a proportion or percentage in Task 1 reports.",
+      "impactOnBand": "Mandatory accuracy for Task 1 visual reports; incorrect prepositions lead to immediate score reductions in Task Achievement and GRA."
+    },
+    {
+      "id": "diag-20",
+      "category": "vocabulary",
+      "subType": "collocations",
+      "prompt": "Rapid industrialization has led to _____ environmental degradation across developing corridors.",
+      "options": [
+        "unprecedented",
+        "unpredicted",
+        "unprevented",
+        "unexpected"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Unprecedented degradation' is a high-level collocation indicating a level or degree never before experienced.",
+      "impactOnBand": "Demonstrates Band 8.0+ precision and avoidance of generic modifiers like 'very big' or 'a lot of'."
+    }
+  ],
+  "questionTypes": [
+    {
+      "id": "reading-type-1",
+      "name": "True / False / Not Given (Factual)",
+      "number": 1,
+      "skill": "Reading",
+      "sectionRef": "Sec 15: The 14 Question Types",
+      "objective": "Verify factual claims against empirical statements in the text.",
+      "algorithm": [
+        "Identify the subject, verb, and modifying qualifiers in the question statement.",
+        "Scan the passage to locate the matching sentence (questions follow text order).",
+        "**TRUE**: The passage asserts the identical factual meaning using synonym language.",
+        "**FALSE**: The passage explicitly states the direct contradiction or opposite factual reality.",
+        "**NOT GIVEN**: The passage mentions the topic, but neither confirms nor refutes the specific claim made in the statement."
+      ],
+      "traps": [
+        "*Extrapolation Trap*: Assuming a statement is true based on real-world knowledge when the passage does not confirm it.",
+        "*Qualifier Shift*: Passage says *\"often\"*, but prompt claims *\"always\"* $\\to$ **FALSE**."
+      ]
+    },
+    {
+      "id": "reading-type-2",
+      "name": "Yes / No / Not Given (Author's Opinion / Claims)",
+      "number": 2,
+      "skill": "Reading",
+      "sectionRef": "Sec 15: The 14 Question Types",
+      "objective": "Match statements against the author's opinion, attitude, or speculative argument.",
+      "algorithm": [
+        "Distinguish between factual reporting and authorial attitude markers (*\"In my view\"*, *\"Regrettably\"*, *\"It is arguable that\"*).",
+        "**YES**: The statement reflects the author's stance directly.",
+        "**NO**: The statement directly contradicts the author's stated viewpoint.",
+        "**NOT GIVEN**: The author does not express an opinion on this specific nuance."
+      ],
+      "traps": [
+        "Confusing a cited third-party researcher's opinion with the author's own thesis."
+      ]
+    },
+    {
+      "id": "reading-type-3",
+      "name": "Short Answer Questions",
+      "number": 3,
+      "skill": "Reading",
+      "sectionRef": "Sec 15: The 14 Question Types",
+      "objective": "Answer factual inquiries using exact words extracted directly from the text within strict word limits.",
+      "algorithm": [
+        "Note the word limit: `NO MORE THAN THREE WORDS AND/OR A NUMBER`.",
+        "Identify the question word (*Who*, *Where*, *Which institution*, *What proportion*).",
+        "Locate the target sentence in chronological order.",
+        "Lift the exact words without altering word form or adding unneeded articles."
+      ],
+      "traps": [
+        "Exceeding the word limit by including unneeded prepositions or determiners."
+      ]
+    },
+    {
+      "id": "reading-type-4",
+      "name": "Sentence Completion",
+      "number": 4,
+      "skill": "Reading",
+      "sectionRef": "Sec 15: The 14 Question Types",
+      "objective": "Complete grammatical sentence stems using words taken directly from the passage.",
+      "algorithm": [
+        "Analyze the blank for required part of speech (noun, verb, adjective, adverb).",
+        "Check for preceding grammatical determiners (`a`, `an`, `the`, possessive pronouns).",
+        "Locate the paraphrased sentence in the passage.",
+        "Insert the extracted words; verify the completed sentence is 100% grammatically correct."
+      ],
+      "traps": [
+        "Inserting a word that produces a grammatical mismatch with the pre-printed prompt text."
+      ]
+    },
+    {
+      "id": "reading-type-5",
+      "name": "Summary Completion (Passage-Based & Word Bank)",
+      "number": 5,
+      "skill": "Reading",
+      "sectionRef": "Sec 15: The 14 Question Types",
+      "objective": "Fill blanks within a condensed summary of a section or the entirety of the passage.",
+      "algorithm": [
+        "- *Type A (Words from Passage)*: Identify whether the summary covers 1–2 paragraphs or the entire text. Scan the localized paragraph for exact terms.",
+        "- *Type B (Word Bank Box)*: The options in the box are synonyms of the passage words. Find the target word in the passage, then select its synonym from the options box."
+      ],
+      "traps": [
+        "Grammatical impossibility: Choosing an option from the box whose part of speech does not match the blank."
+      ]
+    },
+    {
+      "id": "reading-type-6",
+      "name": "Table Completion",
+      "number": 6,
+      "skill": "Reading",
+      "sectionRef": "Sec 15: The 14 Question Types",
+      "objective": "Fill gaps in a structured data table containing categorized information.",
+      "algorithm": [
+        "Read column headers and row labels to establish the organizational matrix (e.g., *Date*, *Location*, *Discovery*, *Significance*).",
+        "Identify whether the table reads horizontally across rows or vertically down columns.",
+        "Scan for row category anchors and extract the required datum."
+      ],
+      "traps": [
+        "Confusing adjacent row entries or entering values in the incorrect units."
+      ]
+    },
+    {
+      "id": "reading-type-7",
+      "name": "Flow Chart Completion",
+      "number": 7,
+      "skill": "Reading",
+      "sectionRef": "Sec 15: The 14 Question Types",
+      "objective": "Follow a sequential, multi-stage process from initiation to conclusion.",
+      "algorithm": [
+        "Follow the direction of arrows linking sequential phases.",
+        "Identify chronological discourse markers in the passage (*initially*, *subsequently*, *at this stage*, *once completed*, *ultimately*).",
+        "Extract target nouns representing inputs, mechanisms, or outputs."
+      ],
+      "traps": [
+        "Missing an intermediate step when the text describes simultaneous or feedback processes."
+      ]
+    },
+    {
+      "id": "reading-type-8",
+      "name": "Diagram Labelling",
+      "number": 8,
+      "skill": "Reading",
+      "sectionRef": "Sec 15: The 14 Question Types",
+      "objective": "Label mechanical parts, anatomical diagrams, or architectural plans.",
+      "algorithm": [
+        "Scan for spatial indicators in the passage (*at the base*, *mounted above*, *concentric chambers*, *the outer casing*).",
+        "Match numbered pointers to structural components described in the technical text.",
+        "Respect exact word limits."
+      ],
+      "traps": [
+        "Misinterpreting functional descriptions for structural components."
+      ]
+    },
+    {
+      "id": "reading-type-9",
+      "name": "Multiple Choice Standard (Single Answer)",
+      "number": 9,
+      "skill": "Reading",
+      "sectionRef": "Sec 15: The 14 Question Types",
+      "objective": "Select 1 correct answer from 4 options (A, B, C, D).",
+      "algorithm": [
+        "Read the question stem only; do not read options A–D initially to avoid priming bias.",
+        "Locate the target sentence in the passage and form a predictive answer in your own words.",
+        "Match your predictive answer against options A–D; eliminate options that contain half-truths, inverted causality, or extreme qualifiers."
+      ],
+      "traps": [
+        "*Verbatim Word Match Trap*: Distractor options often lift exact words from the passage used in a different or contradictory context. The correct answer is almost always paraphrased."
+      ]
+    },
+    {
+      "id": "reading-type-10",
+      "name": "Choose 2 to 5 From a List (Pick Multiple)",
+      "number": 10,
+      "skill": "Reading",
+      "sectionRef": "Sec 15: The 14 Question Types",
+      "objective": "Select 2 correct options out of 5, or 3 out of 7.",
+      "algorithm": [
+        "Scan the question for criteria parameters (*\"Which TWO of the following reasons are mentioned...?\"*).",
+        "Verify that both chosen options are explicitly supported by the passage text, not inferred.",
+        "Note: In the answer sheet, each correct letter occupies a separate numbered question slot."
+      ],
+      "traps": [
+        "Selecting an option because it was mentioned, even though it does not fulfill the condition specified in the prompt stem."
+      ]
+    },
+    {
+      "id": "reading-type-11",
+      "name": "Matching Headings",
+      "number": 11,
+      "skill": "Reading",
+      "sectionRef": "Sec 15: The 14 Question Types",
+      "objective": "Assign the most accurate summary heading from a Roman numeral list (i–x) to designated paragraphs.",
+      "algorithm": [
+        "Cross off any example headings already assigned.",
+        "Read the headings list first, underlining distinguishing keywords.",
+        "Read the first 1–2 sentences and the concluding sentence of the target paragraph (where topic sentences typically reside).",
+        "If ambiguous, skim the entire paragraph to ascertain the central controlling message.",
+        "Distinguish between the **main idea** of the paragraph and a **supporting detail** mentioned in passing."
+      ],
+      "traps": [
+        "*Detail Lure*: A heading mentions a prominent word from sentence 3, but that word is only an example, not the overarching paragraph theme."
+      ]
+    },
+    {
+      "id": "reading-type-12",
+      "name": "Matching Information (Which Paragraph Contains...)",
+      "number": 12,
+      "skill": "Reading",
+      "sectionRef": "Sec 15: The 14 Question Types",
+      "objective": "Match specific pieces of information (e.g., *a reference to*, *an explanation of*, *a comparison between*) to letters representing paragraphs (A–G).",
+      "algorithm": [
+        "Note that questions do **not** go in order. Paragraphs may be used more than once if the instruction states: `NB You may use any letter more than once`.",
+        "Deconstruct the prompt by noun category: Are you looking for *a definition*, *a historical timeline*, *a statistical figure*, or *a criticism*?",
+        "Scan paragraphs for corresponding discourse markers (e.g., words like *argue*, *contend*, *flawed* for criticisms)."
+      ],
+      "traps": [
+        "Attempting this question type first. Always execute detailed sequential questions (TFNG, completion) first so you build familiarity with paragraph contents."
+      ]
+    },
+    {
+      "id": "reading-type-13",
+      "name": "Matching Features / Names / Opinions",
+      "number": 13,
+      "skill": "Reading",
+      "sectionRef": "Sec 15: The 14 Question Types",
+      "objective": "Match people, researchers, countries, or theories to statements, findings, or achievements.",
+      "algorithm": [
+        "Scan the entire passage first and underline every instance of the names listed in the box (names are hard anchors that stand out in capital letters).",
+        "Read around each occurrence of Name A. Summarize what they discovered, argued, or proved.",
+        "Match that summary against the question statements."
+      ],
+      "traps": [
+        "Same name appearing in multiple paragraphs with evolving opinions."
+      ]
+    },
+    {
+      "id": "reading-type-14",
+      "name": "Matching Sentence Endings",
+      "number": 14,
+      "skill": "Reading",
+      "sectionRef": "Sec 15: The 14 Question Types",
+      "objective": "Complete the first half of a sentence by selecting the correct ending from a list (A–G).",
+      "algorithm": [
+        "Questions follow passage order; sentence endings in the box do not.",
+        "Underline keywords in the sentence stem.",
+        "Locate the sentence stem concept in the passage.",
+        "Read the continuation of the idea in the passage and find the paraphrased equivalent in the ending choices.",
+        "Verify that the combined sentence is grammatically seamless."
+      ],
+      "traps": [
+        "Choosing an ending that makes logical sense in everyday life but is not supported by the passage text."
+      ]
+    }
+  ],
+  "synonymPairs": [
+    {
+      "promptWord": "stubbornly difficult",
+      "passageWord": "proves exceptionally intractable",
+      "context": "True / False / Not Given"
+    },
+    {
+      "promptWord": "prohibitively expensive",
+      "passageWord": "cost-prohibitive / beyond economic viability",
+      "context": "Sentence Completion"
+    },
+    {
+      "promptWord": "in real terms",
+      "passageWord": "adjusted for inflationary pressures",
+      "context": "Summary Completion"
+    },
+    {
+      "promptWord": "industry observers",
+      "passageWord": "sector analysts / trade specialists",
+      "context": "Multiple Choice"
+    },
+    {
+      "promptWord": "sufficient quantities",
+      "passageWord": "adequate volumes / requisite surplus",
+      "context": "Short Answer"
+    },
+    {
+      "promptWord": "could travel faster",
+      "passageWord": "reduced journey time by approximately two months",
+      "context": "Matching Information"
+    },
+    {
+      "promptWord": "annual recurrence",
+      "passageWord": "yearly cycle / occurs on an annual basis",
+      "context": "Table Completion"
+    },
+    {
+      "promptWord": "detrimental impact",
+      "passageWord": "deleterious consequences / adverse repercussions",
+      "context": "Yes / No / Not Given"
+    },
+    {
+      "promptWord": "rapid growth",
+      "passageWord": "exponential surge / mushroomed precipitously",
+      "context": "Flow Chart"
+    },
+    {
+      "promptWord": "reluctance to adopt",
+      "passageWord": "hesitancy in embracing / systemic resistance",
+      "context": "Matching Features"
+    }
+  ],
+  "listeningTraps": {
+    "qualifiers": {
+      "description": "Audio employs probabilistic nuances while distractors assert absolute qualifiers.",
+      "words": [
+        "always",
+        "never",
+        "only",
+        "all",
+        "solely",
+        "entirely",
+        "impossible"
+      ],
+      "rule": "Eliminate options containing absolute claims unless the audio explicitly states an uncompromising absolute."
+    },
+    "negativeReversals": {
+      "description": "Speaker utters information matching an option, then negates it via adversative conjunction.",
+      "connectors": [
+        "however",
+        "but",
+        "on the contrary",
+        "instead",
+        "in fact",
+        "although",
+        "despite"
+      ],
+      "rule": "Withhold judgment on early matched keywords until the clause boundary passes."
+    },
+    "selfCorrections": {
+      "description": "Speaker utters a plausible answer, hesitates, and corrects themselves in natural speech.",
+      "phrases": [
+        "no, wait, actually",
+        "sorry, I meant",
+        "rather, what we decided was",
+        "let me check",
+        "actually"
+      ],
+      "rule": "The information stated after the self-correction marker is always the intended answer."
+    }
+  },
+  "writingFormulas": {
+    "task1OverviewRule": {
+      "rule": "The Keino Campbell 2-Sentence Overview Formula",
+      "components": [
+        "Sentence 1: Describe the overall dominant trend, trajectory, or overarching pattern without numerical values.",
+        "Sentence 2: Identify the most prominent contrast, outlier, or extreme divergence without numerical values."
+      ],
+      "examples": [
+        "Overall, while renewable energy sources witnessed substantial growth over the projected timeline, reliance on fossil fuels exhibited a corresponding contraction. Notably, solar power emerged as the primary contributor by the terminus of the period, whereas coal experienced the most precipitous downturn."
+      ]
+    },
+    "task1Types": [
+      {
+        "type": "Line Graph",
+        "groupingRule": "Group lines by trajectory: Body 1 for growth/surges, Body 2 for declines/stagnation.",
+        "lexicalToolkit": {
+          "surges": [
+            "surged dramatically",
+            "rocketed",
+            "escalated precipitously"
+          ],
+          "declines": [
+            "plunged",
+            "plummeted",
+            "contracted significantly",
+            "touched a trough"
+          ],
+          "plateaus": [
+            "levelled off at",
+            "stabilized at",
+            "maintained a steady plateau"
+          ]
+        }
+      },
+      {
+        "type": "Bar Chart",
+        "groupingRule": "If dynamic: group by trajectory over time. If static: group by magnitude (highest tier vs lowest tier).",
+        "lexicalToolkit": {
+          "comparatives": [
+            "stood at nearly double that of",
+            "dwarfed the figures for",
+            "outstripped"
+          ]
+        }
+      },
+      {
+        "type": "Pie Chart",
+        "groupingRule": "Group dominant slices across charts in Body 1, and minor or declining segments in Body 2.",
+        "lexicalToolkit": {
+          "proportions": [
+            "accounted for",
+            "constituted",
+            "comprised",
+            "represented a dominant share of",
+            "made up a negligible fraction"
+          ]
+        }
+      },
+      {
+        "type": "Table",
+        "groupingRule": "Select 4-6 prominent peaks, troughs, and significant percentage changes: Body 1 for peaks/gains, Body 2 for lowest/outliers.",
+        "lexicalToolkit": {
+          "rankings": [
+            "occupied the foremost position",
+            "at the opposite end of the spectrum",
+            "registered marginal variation"
+          ]
+        }
+      },
+      {
+        "type": "Process Diagram",
+        "groupingRule": "Follow chronological stages: Body 1 covers initial extraction to transformation, Body 2 covers refinement to distribution.",
+        "lexicalToolkit": {
+          "connectors": [
+            "initially",
+            "subsequently",
+            "the ensuing phase involves",
+            "culminates in"
+          ]
+        }
+      },
+      {
+        "type": "Map / Layout",
+        "groupingRule": "Group by spatial zones or before/after transformation: Body 1 for north/east developments, Body 2 for south/west alterations.",
+        "lexicalToolkit": {
+          "transformations": [
+            "was demolished to make way for",
+            "underwent extensive redevelopment",
+            "was repurposed into"
+          ]
+        }
+      }
+    ],
+    "task2ParagraphFormula": {
+      "sentences": [
+        {
+          "number": 1,
+          "name": "Topic Sentence",
+          "purpose": "State the single controlling idea clearly and assertively.",
+          "linkers": [
+            "first and foremost",
+            "the primary justification for",
+            "one compelling factor is"
+          ]
+        },
+        {
+          "number": 2,
+          "name": "Explanation Sentence",
+          "purpose": "Explain why and how the topic sentence is true using causal logic.",
+          "linkers": [
+            "this is because",
+            "owing to the reality that",
+            "the mechanism underlying this is"
+          ]
+        },
+        {
+          "number": 3,
+          "name": "Evidence Sentence",
+          "purpose": "Provide a concrete empirical case, study, or exemplar.",
+          "linkers": [
+            "for instance",
+            "to illustrate",
+            "a prominent case in point is",
+            "specifically"
+          ]
+        },
+        {
+          "number": 4,
+          "name": "Impact / Concluding Sentence",
+          "purpose": "Synthesize the causal chain and demonstrate the broader consequence linked to the thesis.",
+          "linkers": [
+            "consequently",
+            "thus",
+            "as a direct corollary",
+            "it therefore follows that"
+          ]
+        }
+      ],
+      "example": {
+        "topic": "The implementation of congestion pricing in metropolitan centers provides a direct economic incentive for commuters to transition to public mass transit.",
+        "explanation": "This is attributable to the fact that when private vehicle operation incurs escalating marginal costs, rational commuters proactively substitute automobile travel with rapid bus or subterranean rail alternatives.",
+        "evidence": "A salient illustration of this phenomenon is London's central congestion zone, which yielded an immediate 15% reduction in private traffic flow alongside a corresponding 30% surge in transit ridership within its inaugural year of enactment.",
+        "impact": "Consequently, targeted fiscal disincentives not only alleviate urban gridlock but also generate indispensable municipal revenue for municipal infrastructure modernizations."
+      }
+    },
+    "task2Architectures": [
+      {
+        "name": "Opinion (Agree or Disagree)",
+        "structure": [
+          "Introduction (Paraphrase + Clear Stance)",
+          "Body 1 (Primary Supporting Argument)",
+          "Body 2 (Secondary Supporting Argument or Rebuttal)",
+          "Conclusion (Restated Stance + Synthesis)"
+        ],
+        "whenToUse": "Prompt asks 'To what extent do you agree or disagree?' or 'What is your opinion?'"
+      },
+      {
+        "name": "Discussion (Discuss Both Views and Give Opinion)",
+        "structure": [
+          "Introduction (Paraphrase + Stance)",
+          "Body 1 (View A Examination & Limitations)",
+          "Body 2 (View B Examination & Endorsement)",
+          "Conclusion (Balanced Synthesis + Final Stance)"
+        ],
+        "whenToUse": "Prompt asks 'Discuss both views and give your opinion.'"
+      },
+      {
+        "name": "Advantages vs. Disadvantages (Weighing Stance)",
+        "structure": [
+          "Introduction (Paraphrase + Weighing Thesis)",
+          "Body 1 (Lesser Impact Side)",
+          "Body 2 (Dominant Impact Side - The Decisive Weight)",
+          "Conclusion (Definitive Statement on Which Side Outweighs)"
+        ],
+        "whenToUse": "Prompt asks 'Do the advantages outweigh the disadvantages?'"
+      },
+      {
+        "name": "Problem-Solution / Cause-Solution",
+        "structure": [
+          "Introduction (Paraphrase + Dual Focus)",
+          "Body 1 (Underlying Root Causes/Problems)",
+          "Body 2 (Targeted Pragmatic Solutions)",
+          "Conclusion (Summary of Root Causes & Remedial Outlook)"
+        ],
+        "whenToUse": "Prompt asks 'What are the causes and what solutions can be offered?'"
+      },
+      {
+        "name": "Two-Part / Double Direct Question",
+        "structure": [
+          "Introduction (Paraphrase + Address Both Prompts)",
+          "Body 1 (Comprehensive Analysis of Question 1)",
+          "Body 2 (Comprehensive Analysis of Question 2)",
+          "Conclusion (Unified Synthesis Addressing Both Questions)"
+        ],
+        "whenToUse": "Prompt contains two distinct related questions."
+      }
+    ]
+  },
+  "speakingModels": [
+    {
+      "part": 1,
+      "topic": "Hometown & Local Infrastructure",
+      "prompt": "What is your hometown like?",
+      "band65": {
+        "transcript": "My hometown is quite big. It has many shops, supermarkets, and tall apartments. The traffic is usually very crowded during rush hours, so I don't like driving there.",
+        "commentary": {
+          "FC": "Speech is continuous but relies heavily on simple coordinate linkers (and, so).",
+          "LR": "Adequate vocabulary (shops, supermarkets, tall apartments) but lacks nuanced collocations.",
+          "GRA": "Accurate simple sentences; basic subordinate clause with 'so' and 'because'.",
+          "PR": "Generally clear pronunciation, but limited intonation variance."
+        }
+      },
+      "band75": {
+        "transcript": "My hometown is a vibrant, coastal metropolis undergoing rapid urban modernization. While it boasts exceptional public transit infrastructure, escalating population density has exacerbated rush-hour congestion.",
+        "commentary": {
+          "FC": "Speaks fluently with flexible discourse markers and minimal hesitation.",
+          "LR": "Uses less common and idiomatic vocabulary (vibrant, coastal metropolis, exacerbated).",
+          "GRA": "Employs complex structures including concessive clauses (while it boasts...).",
+          "PR": "Displays a wide range of pronunciation features with natural rhythm and stress."
+        }
+      },
+      "band85": {
+        "transcript": "I hail from a bustling maritime commercial hub that has undergone substantial architectural rejuvenation over the past decade. Although the proliferation of green corridors has mitigated urban heat islands, the city's thoroughfares remain chronically congested during peak commuting hours.",
+        "commentary": {
+          "FC": "Speaks effortlessly with natural colloquial flow, rhythm, and native-level cohesion.",
+          "LR": "Extensive, highly sophisticated academic lexical control (architectural rejuvenation, mitigated urban heat islands, chronically congested).",
+          "GRA": "Effortless syntactic versatility with varied complex structures and zero systematic errors.",
+          "PR": "Full flexibility and precision in stress, intonation, and phonological chunking."
+        }
+      }
+    },
+    {
+      "part": 2,
+      "topic": "A Pivotal Life Decision",
+      "prompt": "Describe an important decision you made that changed your life.",
+      "band65": {
+        "transcript": "Well, I want to talk about when I decided to change my university major two years ago. At first I studied accounting, but I really disliked it. It was boring. So I decided to switch to computer science. It was very difficult because my parents did not agree with me. They said accounting is more stable. I felt very nervous and worried about my future. But I worked very hard and studied programming every night. Now, I have graduated and I got a good job in an IT company with high salary. So I think it was a good decision because I am happy now.",
+        "commentary": {
+          "FC": "Smooth delivery, but relies on simple linkers (so, but, because).",
+          "LR": "Repetitive, basic vocabulary (disliked, boring, good job, high salary, happy).",
+          "GRA": "High accuracy in simple sentences, but limited clausal subordinations and lack of conditionals.",
+          "PR": "Clear, but flat sentence intonation and lack of emotional emphasis."
+        }
+      },
+      "band75": {
+        "transcript": "I'd like to share an experience regarding a pivotal crossroads I faced during my undergraduate studies, specifically the decision to switch majors from finance to software engineering. Initially, I followed familial expectations, but I soon realized finance lacked creative problem-solving. Confronting parental reservations proved daunting, yet by methodically presenting employment analytics, I convinced them to support my pivot. Looking back, that transition not only ignited my professional passion but also instilled a profound sense of self-efficacy.",
+        "commentary": {
+          "FC": "Maintains coherent narrative flow across 2 full minutes with natural discourse markers.",
+          "LR": "Resourceful lexical repertoire (pivotal crossroads, familial expectations, daunting, pivot, self-efficacy).",
+          "GRA": "Consistent use of complex sentences, participial phrases, and concessive constructions.",
+          "PR": "Natural rhythmic chunking, emphatic stress on key turning points, clear intonation."
+        }
+      },
+      "band85": {
+        "transcript": "I would like to reflect on a watershed moment during my sophomore year: the deliberate decision to abandon a conventional trajectory in actuarial science in order to pursue computational linguistics. Having recognized that rote financial modelling failed to engage my intellectual curiosities, I felt compelled to pivot, despite palpable skepticism from mentors who cautioned against such an abrupt departure. What cemented my resolve was the realization that cognitive growth demands intellectual risk. Ultimately, this realignment not only catalyzed my academic fulfillment but also positioned me at the vanguard of natural language processing.",
+        "commentary": {
+          "FC": "Effortless monologue with sophisticated clausal integration and native-like expressive cadence.",
+          "LR": "Exceptional lexical precision (watershed moment, actuarial science, palpable skepticism, cemented my resolve, vanguard).",
+          "GRA": "Masterful command of parenthetical clauses, fronted participial modifiers, and passive modals.",
+          "PR": "Subtle phonological nuance, perfect thought group segmentation, and expressive tonic stress."
+        }
+      }
+    },
+    {
+      "part": 3,
+      "topic": "Societal Decision-Making & Technology",
+      "prompt": "How does technology influence the choices individuals make in modern society?",
+      "band65": {
+        "transcript": "I think technology has a big impact on people's decisions today. For example, people use smart phones to choose restaurants or book hotels based on online reviews. Also, algorithms show people news that they like. However, sometimes people make bad decisions because of fake information on social media.",
+        "commentary": {
+          "FC": "Addresses the topic directly, but arguments are briefly developed.",
+          "LR": "Everyday vocabulary (big impact, smart phones, online reviews, fake information).",
+          "GRA": "Accurate basic grammar, but lacks advanced clausal embedding and speculative modals.",
+          "PR": "Clear pronunciation with minor phonological hesitation."
+        }
+      },
+      "band75": {
+        "transcript": "Technology indisputably exerts a pervasive influence on individual autonomy and consumer behavior. Algorithmic recommendation systems frequently curate information streams, effectively nudging consumers toward predetermined choices. Furthermore, while crowd-sourced rating platforms democratize decision-making, they also engender cognitive echo chambers where confirmation bias overrides critical discernment.",
+        "commentary": {
+          "FC": "Develops abstract arguments smoothly with sophisticated logical transitions.",
+          "LR": "Broad academic repertoire (pervasive influence, individual autonomy, curate, democratize, echo chambers, confirmation bias).",
+          "GRA": "Flexible clausal structures including concessive contrast and adverbial subordination.",
+          "PR": "Controlled intonation contours that effectively emphasize contrasting arguments."
+        }
+      },
+      "band85": {
+        "transcript": "From an anthropological and sociological vantage point, technological ubiquity has fundamentally transformed human volition. Predictive algorithms no longer merely assist decision-making; they proactively sculpt preferences by filtering the choice architectures presented to end users. Consequently, while individuals perceive their selections as manifestations of free will, they are frequently navigating subtle algorithmic nudges that serve commercial optimization at the expense of serendipitous exploration.",
+        "commentary": {
+          "FC": "Effortlessly articulates complex philosophical concepts with nuanced cohesion and zero cognitive strain.",
+          "LR": "Rare, domain-appropriate academic phrasing (anthropological vantage point, human volition, choice architectures, serendipitous exploration).",
+          "GRA": "Flawless syntactical variety with parenthetical clauses, fronted prepositional phrases, and balanced antitheses.",
+          "PR": "Impeccable prosody with pitch variation and phrasing that enhances rhetorical persuasiveness."
+        }
+      }
+    }
+  ]
+}

@@ -38,8 +38,8 @@ export class SkillTreeView {
           </div>
         </div>
 
-        <!-- 3. 5 Branches Reference Grid -->
-        <div class="branches-summary-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; flex: 0 0 auto;">
+        <!-- 3. 6 Branches Reference Grid -->
+        <div class="branches-summary-grid" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; flex: 0 0 auto;">
           ${this.renderBranchesSummary()}
         </div>
       </div>
@@ -58,6 +58,7 @@ export class SkillTreeView {
 
     // Procedural entrance animations via MotionEngine
     setTimeout(() => {
+      if (!this.container.isConnected) return;
       // 1. Procedurally illuminate SVG connecting lines
       const lines = this.container.querySelectorAll('.constellation-line');
       if (lines.length > 0) {
@@ -90,7 +91,7 @@ export class SkillTreeView {
     const start = new Date().setHours(0, 0, 0, 0);
     const done = { colloc: 0, writing: 0, speaking: 0, vocab: 0, grammar: 0, reading: 0, listen: 0 };
     for (const [id, st] of Object.entries(StorageManager.loadState().cardStates)) {
-      if (!st || st.lastReviewed < start) continue;
+      if (!st || (st.lastReviewed ?? 0) < start) continue;
       if (id.startsWith('colloc-')) done.colloc++;
       else if (id.startsWith('writing-') || id.startsWith('write-')) done.writing++;
       else if (id.startsWith('speaking-') || id.startsWith('speak-')) done.speaking++;
@@ -355,7 +356,7 @@ export class SkillTreeView {
     return Object.values(SKILL_BRANCHES).map(branch => {
       const branchNodes = branch.nodes;
       const masteredInBranch = branchNodes.filter(n => SkillTreeEngine.getNodeStatus(n.id) === 'mastered').length;
-      const pct = Math.round((masteredInBranch / 5) * 100);
+      const pct = Math.round((masteredInBranch / branchNodes.length) * 100);
       return `
         <div class="branch-summary-card" data-route="${branch.routeTarget}" tabindex="0" role="button" aria-label="Open ${branch.name}" title="${branch.name} — ${branch.tagline}" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: 6px; cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s; display: flex; flex-direction: column; justify-content: space-between; min-height: 50px; box-shadow: var(--shadow-btn);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
@@ -371,7 +372,7 @@ export class SkillTreeView {
           </div>
           <div style="display: flex; align-items: center; gap: 8px;">
             <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted); white-space: nowrap;">
-              ${masteredInBranch}/5 mastered
+              ${masteredInBranch}/${branchNodes.length} mastered
             </span>
             <div style="flex: 1; height: 4px; background: var(--border-hairline); border-radius: 2px; overflow: hidden;">
               <div class="branch-bar" data-pct="${pct}" style="width: ${pct}%; height: 100%; background: var(--accent-gold); border-radius: 2px; box-shadow: 0 0 6px var(--accent-gold-soft);"></div>

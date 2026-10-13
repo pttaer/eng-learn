@@ -26,12 +26,17 @@ import { ProgressionModal } from './modules/progression-modal';
 import { ZenMode } from './core/zen-mode';
 import { LexiconDrawer } from './modules/lexicon-drawer';
 import { BlitzDossier } from './modules/blitz-dossier';
+import { MediationDossier } from './modules/mediation-dossier';
+import { AnalyticsDossier } from './modules/analytics-dossier';
+import { ExamCockpitDossier } from './modules/exam-cockpit-dossier';
+import { SerlGauntletEngine } from './core/serl-gauntlet-engine';
 import { CardTiltController, NebulaCanvas } from './core/perspective-canvas';
 import { NotificationEngine } from './core/notification-engine';
 import { AmbientMusicEngine, ambientMusicEngine } from './core/ambient-music-engine';
 import collocationsData from './assets/data/collocations.json';
 
 // Expose engines to window for automated headless testing & telemetry inspection
+(window as any).AudioSynthesizer = AudioSynthesizer;
 (window as any).MotionEngine = MotionEngine;
 (window as any).ParticleCanvas = ParticleCanvas;
 (window as any).SpotlightTour = SpotlightTour;
@@ -40,6 +45,10 @@ import collocationsData from './assets/data/collocations.json';
 (window as any).ZenMode = ZenMode;
 (window as any).LexiconDrawer = LexiconDrawer;
 (window as any).BlitzDossier = BlitzDossier;
+(window as any).MediationDossier = MediationDossier;
+(window as any).AnalyticsDossier = AnalyticsDossier;
+(window as any).ExamCockpitDossier = ExamCockpitDossier;
+(window as any).SerlGauntletEngine = SerlGauntletEngine;
 (window as any).MultiSkillQuizModal = MultiSkillQuizModal;
 (window as any).StorageManager = StorageManager;
 (window as any).CardTiltController = CardTiltController;
@@ -64,6 +73,9 @@ class App {
   private grammarDossier: GrammarDossier;
   private missionLog: MissionLog;
   private blitzDossier: BlitzDossier;
+  private mediationDossier: MediationDossier;
+  private analyticsDossier: AnalyticsDossier;
+  private examCockpit: ExamCockpitDossier;
 
   private workspaceMount: HTMLElement;
   private activeDossierHandle: any = null;
@@ -107,7 +119,7 @@ class App {
     this.cornerCompass = new CornerCompass();
     document.getElementById('compass-mount')?.appendChild(this.cornerCompass.getElement());
 
-    // 3. Initialize Study Dossiers (Skill Tree + 6 Pillars + Habits)
+    // 3. Initialize Study Dossiers (Skill Tree + 6 Pillars + Habits + Mediation + Analytics)
     this.skillTreeView = new SkillTreeView();
     this.readingDossier = new ReadingDossier();
     this.writingDossier = new WritingDossier();
@@ -118,8 +130,21 @@ class App {
     this.grammarDossier = new GrammarDossier();
     this.missionLog = new MissionLog();
     this.blitzDossier = new BlitzDossier();
+    this.mediationDossier = new MediationDossier();
+    this.analyticsDossier = new AnalyticsDossier();
+    this.examCockpit = new ExamCockpitDossier();
 
     // Bind Completion Rituals
+    this.examCockpit.onTestSubmitted = () => {
+      ProgressionEngine.recordActivity('studio', 2);
+      ProgressionEngine.addXP(150);
+      this.showCompletionReceipt('IELTS // CD-EXAM SIMULATION SUBMITTED');
+    };
+    this.mediationDossier.onBatchComplete = () => {
+      ProgressionEngine.recordActivity('studio', 1);
+      ProgressionEngine.addXP(65);
+      this.showCompletionReceipt('MEDIATE // CEFR SPLIT-SCREEN WORKBENCH COMPLETE');
+    };
     this.blitzDossier.onBatchComplete = () => {
       this.showCompletionReceipt('BLITZ // 60-SECOND SPRINT COMPLETE');
     };
@@ -212,6 +237,21 @@ class App {
       this.router.navigate('blitz');
     };
 
+    // Header Mediation navigation
+    this.headerHud.onNavigateToMediation = () => {
+      this.router.navigate('mediate');
+    };
+
+    // Header Analytics navigation
+    this.headerHud.onNavigateToAnalytics = () => {
+      this.router.navigate('analytics');
+    };
+
+    // Header Cockpit navigation
+    this.headerHud.onNavigateToCockpit = () => {
+      this.router.navigate('cockpit');
+    };
+
     // Route listener
     this.router.onRoute((route) => {
       this.handleRouteChange(route);
@@ -226,6 +266,7 @@ class App {
     this.headerHud.updateTelemetry(route);
     this.workspaceMount.innerHTML = '';
     this.workspaceMount.classList.remove('tree-mode');
+    this.workspaceMount.classList.remove('cockpit-mode');
     this.activeDossierHandle = null;
 
     if (route === 'singularity') {
@@ -282,6 +323,20 @@ class App {
         this.workspaceMount.appendChild(this.blitzDossier.render());
         this.activeDossierHandle = this.blitzDossier;
         break;
+      case 'mediate':
+      case 'mediation':
+        this.workspaceMount.appendChild(this.mediationDossier.render());
+        this.activeDossierHandle = this.mediationDossier;
+        break;
+      case 'analytics':
+        this.workspaceMount.appendChild(this.analyticsDossier.render());
+        this.activeDossierHandle = this.analyticsDossier;
+        break;
+      case 'cockpit':
+        this.workspaceMount.classList.add('cockpit-mode');
+        this.workspaceMount.appendChild(this.examCockpit.render());
+        this.activeDossierHandle = this.examCockpit;
+        break;
       default:
         break;
     }
@@ -294,11 +349,17 @@ class App {
       // Tour and other overlays claim keys via preventDefault
       if (e.defaultPrevented) return;
 
-      // Ignore shortcuts if user is typing inside an input, textarea, or contenteditable; Escape just leaves the field
+      // Ignore standard shortcuts if typing inside an input/textarea, but permit exam hotkeys (Alt+N, Alt+P, Alt+F, Ctrl+Enter)
       const target = e.target as HTMLElement;
       const isInput = target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable);
       if (isInput) {
         if (e.key === 'Escape') target.blur();
+        if (e.altKey || ((e.ctrlKey || e.metaKey) && e.key === 'Enter')) {
+          if (this.activeDossierHandle && this.activeDossierHandle.handleGlobalKey) {
+            const handled = this.activeDossierHandle.handleGlobalKey(e.key, e);
+            if (handled) return;
+          }
+        }
         return;
       }
 
@@ -317,9 +378,27 @@ class App {
         return;
       }
 
+      // Hotkey M navigates to Mediation Workbench (unless modifier key is pressed)
+      if ((e.key === 'm' || e.key === 'M') && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        if (this.router.getCurrentRoute() !== 'mediate') {
+          AudioSynthesizer.play('click');
+          this.router.navigate('mediate');
+          return;
+        }
+      }
+
+      // Hotkey C navigates to CD-IELTS Exam Cockpit (unless modifier key is pressed)
+      if ((e.key === 'c' || e.key === 'C') && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        if (this.router.getCurrentRoute() !== 'cockpit') {
+          AudioSynthesizer.play('click');
+          this.router.navigate('cockpit');
+          return;
+        }
+      }
+
       // Forward shortcuts to active dossier
       if (this.activeDossierHandle && this.activeDossierHandle.handleGlobalKey) {
-        const handled = this.activeDossierHandle.handleGlobalKey(e.key);
+        const handled = this.activeDossierHandle.handleGlobalKey(e.key, e);
         if (handled && e.key === ' ') {
           e.preventDefault(); // Prevent page scroll on Space
         }

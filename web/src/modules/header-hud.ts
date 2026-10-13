@@ -11,7 +11,7 @@ import { ZenMode } from '../core/zen-mode';
 import { MultiSkillQuizModal } from './multi-skill-quiz-modal';
 import { ambientMusicEngine, AmbientMusicMode } from '../core/ambient-music-engine';
 
-const ROUTE_NAMES: Record<string, string> = { read: 'READING', write: 'WRITING', listen: 'LISTENING', speak: 'SPEAKING', vocab: 'VOCABULARY', colloc: 'COLLOCATIONS', grammar: 'GRAMMAR', habits: 'DAILY HABITS', singularity: 'SINGULARITY' };
+const ROUTE_NAMES: Record<string, string> = { read: 'READING', write: 'WRITING', listen: 'LISTENING', speak: 'SPEAKING', vocab: 'VOCABULARY', colloc: 'COLLOCATIONS', grammar: 'GRAMMAR', habits: 'DAILY HABITS', singularity: 'SINGULARITY', mediate: 'MEDIATION', cockpit: 'IELTS COCKPIT' };
 
 export class HeaderHUD {
   private element: HTMLElement;
@@ -19,6 +19,9 @@ export class HeaderHUD {
   private currentTheme: 'dark' | 'light' = 'dark';
   public onNavigateToTree?: () => void;
   public onNavigateToBlitz?: () => void;
+  public onNavigateToMediation?: () => void;
+  public onNavigateToAnalytics?: () => void;
+  public onNavigateToCockpit?: () => void;
 
   constructor() {
     this.element = document.createElement('header');
@@ -107,6 +110,15 @@ export class HeaderHUD {
         <button class="hud-btn btn-blitz" title="Launch 60-Second Roguelike Speed Blitz Mode" aria-label="Speed Blitz Mode" style="border-color: var(--accent-gold); color: var(--accent-gold); font-weight: 700;">
           ${icon('zap', 12)}<span class="btn-label"> BLITZ</span>
         </button>
+        <button class="hud-btn btn-mediation" title="Launch CEFR Mediation Workbench (Hotkey: M)" aria-label="CEFR Mediation Workbench" style="border-color: var(--accent-cyan, #38bdf8); color: var(--accent-cyan, #38bdf8); font-weight: 700;">
+          ⚖️<span class="btn-label"> MEDIATION</span>
+        </button>
+        <button class="hud-btn btn-analytics" title="Launch CEFR Analytics & SERL 2.0 Gauntlet Dashboard" aria-label="Analytics & SERL Dashboard" style="border-color: var(--accent-purple, #a855f7); color: var(--accent-purple, #a855f7); font-weight: 700;">
+          📊<span class="btn-label"> ANALYTICS</span>
+        </button>
+        <button class="hud-btn btn-ielts-cockpit" title="Launch CD-IELTS Exam Cockpit (Hotkey: C)" aria-label="CD-IELTS Exam Cockpit" style="border-color: var(--accent-gold, #f59e0b); color: var(--accent-gold, #f59e0b); font-weight: 700;">
+          🎓<span class="btn-label"> COCKPIT</span>
+        </button>
         <button class="hud-btn btn-progression-pill" title="RPG Progression & Daily Quests" aria-label="RPG Progression">
           ${icon('zap', 12)} LVL ${progression.level}<span class="btn-label"> • ${progression.xp} XP</span>
         </button>
@@ -182,6 +194,36 @@ export class HeaderHUD {
         this.onNavigateToBlitz();
       } else {
         window.location.hash = '#blitz';
+      }
+    });
+
+    const mediationBtn = this.element.querySelector('.btn-mediation') as HTMLButtonElement | null;
+    mediationBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      if (this.onNavigateToMediation) {
+        this.onNavigateToMediation();
+      } else {
+        window.location.hash = '#mediate';
+      }
+    });
+
+    const analyticsBtn = this.element.querySelector('.btn-analytics') as HTMLButtonElement | null;
+    analyticsBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      if (this.onNavigateToAnalytics) {
+        this.onNavigateToAnalytics();
+      } else {
+        window.location.hash = '#analytics';
+      }
+    });
+
+    const cockpitBtn = this.element.querySelector('.btn-ielts-cockpit') as HTMLButtonElement | null;
+    cockpitBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      if (this.onNavigateToCockpit) {
+        this.onNavigateToCockpit();
+      } else {
+        window.location.hash = '#cockpit';
       }
     });
 

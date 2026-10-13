@@ -1,0 +1,367 @@
+{
+  "title": "Computer-Delivered IELTS Academic & General Training Mock Suite",
+  "standards": "IELTS 9-Band Descriptors (TR/TA, CC, LR, GRA) & CEFR 2020 Companion Volume",
+  "reading": {
+    "meta": {
+      "title": "IELTS Academic Reading Mock Passage",
+      "passageNumber": 1,
+      "topic": "The Neurobiology of Bilingual Executive Function",
+      "wordCount": 920,
+      "readingTimeMinutes": 20,
+      "totalQuestions": 13
+    },
+    "passageTitle": "The Neurobiology of Bilingual Executive Function",
+    "paragraphs": {
+      "A": "For much of the twentieth century, clinical psychologists and educational theorists regarded childhood bilingualism with profound skepticism. Traditional pedagogical dogma posited that acquiring two linguistic systems simultaneously imposed a crippling cognitive burden on developing minds, leading to developmental delays, reduced vocabulary capacity, and chronic linguistic interference. However, over the past three decades, revolutionary advances in structural and functional neuroimaging—particularly functional Magnetic Resonance Imaging (fMRI) and event-related potential (ERP) electrophysiology—have systematically dismantled this deficit paradigm. Contemporary cognitive neuroscience reveals that the bilingual brain is not merely an expanded storage depot for two separate lexicons, but a fundamentally rewired neural architecture characterized by enhanced cognitive flexibility and heightened executive control.",
+      "B": "Central to understanding this cognitive divergence is the phenomenon of non-selective lexical access. Contrary to intuitive assumptions, when a bilingual individual communicates in one language, their non-target language does not remain dormant. Eye-tracking paradigms and semantic priming experiments have consistently demonstrated that both linguistic matrices remain perpetually active in parallel. For example, when an English-Vietnamese bilingual hears the English word \"desk,\" phonetic and semantic candidates from Vietnamese simultaneously ignite within the left inferior frontal gyrus. Consequently, the brain is engaged in an incessant neurocognitive juggling act, requiring continuous computational resources to suppress intrusive lexical competitors from the unselected language.",
+      "C": "This perpetual linguistic competition exercises the brain's executive control network—a distributed frontoparietal circuit encompassing the dorsolateral prefrontal cortex (DLPFC), the anterior cingulate cortex (ACC), and subcortical basal ganglia structures. In monolingual individuals, these neural circuits are mobilized primarily during novel, high-conflict reasoning tasks. In multilinguals, however, the executive control network is continuously recruited for routine speech production and comprehension. Decades of microsecond-level conflict resolution between competing phonetic and syntactic representations induce structural neuroplastic adaptation, strengthening white matter tracts such as the superior longitudinal fasciculus and increasing cortical gray matter volume in frontal and parietal hubs.",
+      "D": "The behavioral dividends of this structural remodeling are most pronounced in tasks measuring non-verbal attentional inhibition and task switching. In standard neuropsychological assessments such as the Simon Task and the Stroop Color-Word Test, participants must ignore misleading visual cues and respond solely to target stimuli. Multilingual subjects across all age cohorts consistently outperform their monolingual counterparts, registering significantly faster reaction times and fewer commission errors. Crucially, this bilingual advantage is not restricted to linguistic manipulation; rather, the lifelong management of dual linguistic streams cross-pollinates general non-verbal domain-general attentional mechanisms.",
+      "E": "Beyond behavioral speed advantages in young adults, the most momentous clinical implication of bilingual neuroplasticity manifests in cognitive aging. Epidemiological studies conducted across diverse demographic populations by Dr. Ellen Bialystok and colleagues indicate that lifelong bilingualism builds substantial cognitive reserve. Although bilingual individuals exhibit the exact same neuropathological biomarkers of Alzheimer's disease—such as amyloid-beta plaque accumulation and cerebral cortical atrophy—as monolinguals, they manifest clinical symptoms of cognitive dementia approximately four to five years later. The enhanced synaptic connectivity within the frontoparietal network allows the bilingual brain to compensate for localized structural decay by dynamically rerouting neural signaling through alternate pathways.",
+      "F": "Nevertheless, the scientific consensus regarding the universal scope of the bilingual advantage has been contested by a vocal contingent of cognitive psychologists. Critics point out that numerous empirical replication studies fail to detect statistically significant executive differences between bilingual and monolingual cohorts, particularly in homogeneous laboratory samples. Meta-analyses have suggested that publication bias—wherein studies demonstrating positive effects are substantially more likely to be accepted by academic journals—may have inflated the perceived magnitude of the advantage. Furthermore, socio-economic status, immigrant background, and educational attainment frequently act as confounding variables that are difficult to isolate completely.",
+      "G": "In response to these methodological challenges, contemporary researchers advocate for a more nuanced dimensional model rather than a simplistic binary categorization. Rather than treating bilingualism as a static, monolithic trait, modern investigators evaluate continuous spectrum variables, including interactional diversity, age of acquisition, dialectal distance, and switching frequency across communicative domains. When examined through this granular lens, the neurobiological adaptations appear not as an inevitable blanket guarantee of superior intellect, but as an experience-dependent adaptation of the human brain to the specific communicative demands of its linguistic ecosystem."
+    },
+    "questions": [
+      {
+        "number": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph B",
+        "key": "v"
+      },
+      {
+        "number": 2,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph C",
+        "key": "vii"
+      },
+      {
+        "number": 3,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph D",
+        "key": "iii"
+      },
+      {
+        "number": 4,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph E",
+        "key": "vi"
+      },
+      {
+        "number": 5,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph F",
+        "key": "i"
+      },
+      {
+        "number": 6,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph G",
+        "key": "iv"
+      },
+      {
+        "number": 7,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Functional neuroimaging verified that the inactive language shuts down completely during single-language communication.",
+        "key": "FALSE"
+      },
+      {
+        "number": 8,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Lifelong bilinguals prevent the physical accumulation of amyloid-beta plaques in brain tissue.",
+        "key": "FALSE"
+      },
+      {
+        "number": 9,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Multilingual advantages in executive tasks are more pronounced in tone-language speakers than non-tonal speakers.",
+        "key": "NOT GIVEN"
+      },
+      {
+        "number": 10,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Some researchers argue that academic journals favored publishing positive studies on bilingual cognitive performance.",
+        "key": "TRUE"
+      },
+      {
+        "number": 11,
+        "type": "SUMMARY_COMPLETION",
+        "key": "cognitive reserve"
+      },
+      {
+        "number": 12,
+        "type": "SUMMARY_COMPLETION",
+        "key": "frontoparietal network"
+      },
+      {
+        "number": 13,
+        "type": "SUMMARY_COMPLETION",
+        "key": "dimensional model"
+      }
+    ]
+  },
+  "listening": {
+    "meta": {
+      "title": "IELTS Listening Mock Sections 1 & 2",
+      "totalSections": 2,
+      "totalQuestions": 20,
+      "timeMinutes": 16
+    },
+    "section1": {
+      "title": "Community Solar Co-operative Membership Intake",
+      "questions": [
+        {
+          "number": 1,
+          "prompt": "Applicant Name",
+          "prefix": "David **",
+          "key": "Mitchell"
+        },
+        {
+          "number": 2,
+          "prompt": "Residential Address",
+          "prefix": "47 **",
+          "key": "Elmwood Avenue"
+        },
+        {
+          "number": 3,
+          "prompt": "Contact Telephone",
+          "prefix": "**",
+          "key": "07892 441 509"
+        },
+        {
+          "number": 4,
+          "prompt": "Property Type",
+          "prefix": "Two-story **",
+          "key": "semi-detached"
+        },
+        {
+          "number": 5,
+          "prompt": "Roof Orientation",
+          "prefix": "**",
+          "key": "south-facing"
+        },
+        {
+          "number": 6,
+          "prompt": "Average Quarterly Electricity Cost",
+          "prefix": "£**",
+          "key": "280"
+        },
+        {
+          "number": 7,
+          "prompt": "Monthly Subscription Fee",
+          "prefix": "£**",
+          "key": "35"
+        },
+        {
+          "number": 8,
+          "prompt": "Technical Inspection Date",
+          "prefix": "Tuesday, **",
+          "key": "October 24th"
+        },
+        {
+          "number": 9,
+          "prompt": "Required Verification Document",
+          "prefix": "Council tax statement or recent **",
+          "key": "water bill"
+        },
+        {
+          "number": 10,
+          "prompt": "Inspection Access Point",
+          "prefix": "Must ensure clear access to the main **",
+          "key": "circuit breaker"
+        }
+      ]
+    },
+    "section2": {
+      "title": "Riverside Eco-Park & Community Food Forest Tour",
+      "questions": [
+        {
+          "number": 11,
+          "type": "MULTIPLE_CHOICE",
+          "question": "What was the original historical use of the Riverside Eco-Park site?",
+          "key": "B"
+        },
+        {
+          "number": 12,
+          "type": "MULTIPLE_CHOICE",
+          "question": "What method was primarily used to remediate the industrial soil?",
+          "key": "C"
+        },
+        {
+          "number": 13,
+          "type": "MULTIPLE_CHOICE",
+          "question": "When are visitors permitted to pick fruit from the heritage orchard?",
+          "key": "A"
+        },
+        {
+          "number": 14,
+          "type": "MULTIPLE_CHOICE",
+          "question": "What is the strict rule regarding pet dogs in the reserve?",
+          "key": "B"
+        },
+        {
+          "number": 15,
+          "type": "MULTIPLE_CHOICE",
+          "question": "Where can visitors refill reusable drinking containers?",
+          "key": "B"
+        },
+        {
+          "number": 16,
+          "type": "MAP_MATCHING",
+          "locationPrompt": "Central northern edge across wildflower meadow",
+          "key": "A",
+          "facility": "Permaculture Seed Bank and Laboratory"
+        },
+        {
+          "number": 17,
+          "type": "MAP_MATCHING",
+          "locationPrompt": "Immediate eastern path along the willow brook",
+          "key": "B",
+          "facility": "Children's Sensory Herb Garden"
+        },
+        {
+          "number": 18,
+          "type": "MAP_MATCHING",
+          "locationPrompt": "Far northeastern corner past the herb garden",
+          "key": "C",
+          "facility": "Solar Hydroponics Greenhouse"
+        },
+        {
+          "number": 19,
+          "type": "MAP_MATCHING",
+          "locationPrompt": "Western riverbend across the wooden footbridge",
+          "key": "D",
+          "facility": "Wetland Bird Observatory Hide"
+        },
+        {
+          "number": 20,
+          "type": "MAP_MATCHING",
+          "locationPrompt": "Entrance staging area where tour begins",
+          "key": "E",
+          "facility": "South Gate Visitors' Welcome Pavilion"
+        }
+      ]
+    }
+  },
+  "writing": {
+    "meta": {
+      "title": "IELTS Academic Writing Tasks 1 & 2",
+      "taskCount": 2,
+      "timeMinutes": 60
+    },
+    "task1": {
+      "title": "Renewable Electricity Generation (2010-2025)",
+      "chartSvg": "<svg viewBox=\"0 0 600 360\" class=\"ielts-chart-svg\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect width=\"600\" height=\"360\" fill=\"#0d1117\" rx=\"8\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"560\" y2=\"300\" stroke=\"#30363d\" stroke-width=\"1\"/>\n  <line x1=\"60\" y1=\"240\" x2=\"560\" y2=\"240\" stroke=\"#21262d\" stroke-width=\"1\"/>\n  <line x1=\"60\" y1=\"180\" x2=\"560\" y2=\"180\" stroke=\"#21262d\" stroke-width=\"1\"/>\n  <line x1=\"60\" y1=\"120\" x2=\"560\" y2=\"120\" stroke=\"#21262d\" stroke-width=\"1\"/>\n  <line x1=\"60\" y1=\"60\" x2=\"560\" y2=\"60\" stroke=\"#21262d\" stroke-width=\"1\"/>\n  <text x=\"50\" y=\"305\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"end\">0</text>\n  <text x=\"50\" y=\"245\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"end\">30</text>\n  <text x=\"50\" y=\"185\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"end\">60</text>\n  <text x=\"50\" y=\"125\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"end\">90</text>\n  <text x=\"50\" y=\"65\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"end\">120 TWh</text>\n  <text x=\"60\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2010</text>\n  <text x=\"160\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2013</text>\n  <text x=\"260\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2016</text>\n  <text x=\"360\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2019</text>\n  <text x=\"460\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2022</text>\n  <text x=\"560\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2025</text>\n  <!-- Hydro (Cyan) -->\n  <polyline fill=\"none\" stroke=\"#58a6ff\" stroke-width=\"3\" points=\"60,180 160,176 260,170 360,164 460,160 560,156\"/>\n  <!-- Wind (Green) -->\n  <polyline fill=\"none\" stroke=\"#3fb950\" stroke-width=\"3\" points=\"60,250 160,230 260,196 360,150 460,110 560,70\"/>\n  <!-- Solar (Orange) -->\n  <polyline fill=\"none\" stroke=\"#f0883e\" stroke-width=\"3\" points=\"60,290 160,284 260,264 360,232 460,180 560,120\"/>\n  <!-- Legend -->\n  <circle cx=\"160\" cy=\"30\" r=\"5\" fill=\"#58a6ff\"/><text x=\"172\" y=\"34\" fill=\"#c9d1d9\" font-size=\"11\">Hydro</text>\n  <circle cx=\"280\" cy=\"30\" r=\"5\" fill=\"#3fb950\"/><text x=\"292\" y=\"34\" fill=\"#c9d1d9\" font-size=\"11\">Wind</text>\n  <circle cx=\"400\" cy=\"30\" r=\"5\" fill=\"#f0883e\"/><text x=\"412\" y=\"34\" fill=\"#c9d1d9\" font-size=\"11\">Solar</text>\n</svg>",
+      "modelAnswer": "The line graph delineates the output of electricity derived from three renewable modalities—hydroelectric, wind, and solar photovoltaic systems—in a European nation between 2010 and 2025, calibrated in Terawatt-hours (TWh).\n\nOverall, total renewable electricity generation witnessed substantial expansion across the fifteen-year period. While hydroelectric generation maintained steady, plateaued dominance during the initial years, wind power experienced exponential acceleration to emerge as the pre-eminent source, closely mirrored by a dramatic late surge in solar output.\n\nIn 2010, hydroelectricity represented the predominant contributor at 60 TWh, whereas wind and solar generated modest yields of 25 TWh and 5 TWh respectively. Over the subsequent decade, hydroelectric capacity rose marginally, culminating at 72 TWh by 2025.\n\nConversely, wind generation exhibited remarkable momentum, overtaking hydroelectricity around 2018 at approximately 68 TWh before ascending steeply to attain a peak of 115 TWh in 2025. Solar power displayed an even steeper trajectory post-2016: after lingering below 20 TWh, it accelerated markedly over the final six years, eclipsing hydroelectricity by 2024 to conclude at 90 TWh.",
+      "wordCount": 184
+    },
+    "task2": {
+      "title": "Higher Education Funding Models (Tuition vs Free Access)",
+      "prompt": "Some people argue that tertiary education should be fully funded by the state for all citizens, while others contend that university students should pay tuition fees because higher education primarily benefits the individual. Discuss both views and give your own opinion.",
+      "band6Model": "Nowadays, many people debate whether university should be free or if students must pay tuition. This is a very controversial issue in modern society. In this essay, I will discuss both sides of the argument and give my own opinion.\n\nOn the one hand, some people believe that governments should pay for all university fees. The main reason is that education is a human right. If universities are completely free, poor students from poor families can study and get good jobs. For example, in some European countries like Germany, universities are free, so young people do not have student debt. Furthermore, having more educated doctors and engineers is good for the economy. Therefore, the state should invest money in education.\n\nOn the other hand, other people think students must pay for their own education. They argue that going to university gives high salaries in the future. Because university graduates earn much more money than high school graduates, it is not fair for normal taxpayers who do not go to university to pay for rich students. In addition, when universities charge tuition fees, they have more money to buy modern equipment and computers, which improves teaching quality.\n\nIn my opinion, I think a mixed system is the best choice. Completely free education can cause big taxes for citizens, but very high fees stop poor students from studying. Governments should give free scholarships to talented poor students, while rich students should pay reasonable fees. In conclusion, both views have good points, but a balanced policy is best.",
+      "band8Model": "The financial architecture of tertiary education remains a subject of intense socio-economic debate. While proponents of universal public subsidization assert that higher education is a non-excludable public good that accelerates meritocratic social mobility, detractors maintain that because degree holders capture substantial private wage premiums, tuition costs should be borne primarily by individual beneficiaries. This essay examines both perspectives before arguing that an income-contingent graduate contribution model offers the most equitable fiscal equilibrium.\n\nAdvocates of state-funded higher education anchor their rationale in positive macroeconomic externalities. A highly credentialed workforce fuels domestic innovation, attracts high-value foreign direct investment, and elevates national productivity. When tertiary matriculation is unencumbered by upfront tuition barriers, systemic socioeconomic stratification is alleviated, enabling academically gifted students from marginalized cohorts to enter high-status professions such as medicine, law, and engineering. Jurisdictions such as Norway and Germany demonstrate that public investment in human capital generates compounding returns via robust long-term fiscal revenue and diminished social welfare dependency.\n\nConversely, proponents of fee-based tertiary systems contend that universal state subsidization constitutes a regressive wealth transfer. Empirical labor-market data consistently confirms that university graduates command significantly higher lifetime earnings than non-graduate peers. Consequently, utilizing general tax revenues—contributed disproportionately by working-class laborers who may never attend university—to underwrite elite individual credentialing is fiscally inequitable. Furthermore, institutions reliant exclusively upon constrained state allocations frequently suffer from infrastructure underinvestment, whereas market-calibrated tuition revenues empower universities to expand research laboratories and recruit world-class faculty.\n\nIn my view, the dilemma is falsely framed as an absolute binary between unregulated marketization and blanket state paternalism. The optimal framework is an income-contingent deferred repayment mechanism, exemplified by the Australian HECS system. Under this paradigm, higher education remains free at the point of delivery, eliminating socioeconomic entry barriers, but graduates contribute a progressive percentage of their income once their post-graduation earnings exceed a dignified national threshold. This model reconciles equal societal opportunity with progressive fiscal fairness.",
+      "critique": "Band 6 exhibits mechanical linkers and superficial arguments; Band 8 exhibits income-contingent graduate contribution synthesis, nuanced hedging, and complex subordination."
+    }
+  },
+  "speaking": {
+    "meta": {
+      "title": "IELTS Speaking Parts 1–3 Mock Test",
+      "totalParts": 3,
+      "durationMinutes": 14
+    },
+    "part1Topics": [
+      "Academic Work & Daily Habits",
+      "Urban Transportation & Public Spaces"
+    ],
+    "part2": {
+      "topic": "Describe a public initiative or community project that significantly improved your local area.",
+      "prepTimeSeconds": 60,
+      "modelMonologue": "I would like to speak about a transformative urban regeneration initiative in my hometown that repurposed a decommissioned industrial railway canal into an interconnected linear greenway and biodiversity corridor. \n\nHistorically, this four-kilometer stretch had deteriorated into an eyesore—choked with industrial debris, illegal dumping, and fractured asphalt that effectively bisected our residential neighborhood. Approximately four years ago, a coalition of local landscape architects and neighborhood associations petitioned the municipal government. They successfully secured a joint public-private grant that combined civic crowdfunding with municipal green infrastructure bonds.\n\nOver eighteen months of community mobilization, volunteer planting drives replaced concrete drainage ditches with bioswales engineered with native wetland reeds to filter urban stormwater runoff. In addition, developers installed a continuous, solar-illuminated bicycle artery flanked by communal fruit trees, outdoor calisthenics zones, and permeable pedestrian boardwalks.\n\nWhat made this initiative exceptionally impactful was its holistic dual yield: it resolved both an ecological deficit and a social fracture. Ecologically, local temperature sensors registered a 1.8-degree drop in the surrounding urban heat island index. Socially, it decentralized recreational life away from enclosed commercial shopping malls into an open, democratic public commons where families, cyclists, and senior citizens mingle daily. It remains a shining model of collaborative civic governance."
+    },
+    "part3Theme": "Urban Regeneration, Civic Responsibility & Future Cities"
+  },
+  "pragmaticRoleplays": [
+    {
+      "title": "Roleplay 1: Diplomatic Hedging & Bilateral Water Rights Accord",
+      "sieves": {
+        "thesisAvoidance": "Eliminates circular historical preamble (*dẫn dắt lịch sử quan hệ dài dòng*); establishes core diplomatic stance in the opening 15 seconds.",
+        "mechanicalConnectors": "Bans repetitive *Furthermore / In addition*; uses demonstrative referential cohesion (*This upstream storage pattern, Such seasonal volatility*).",
+        "thesaurusClichés": "Eliminates empty idioms (*\"water is the blood of life\"*, *\"two sides of a coin\"*); enforces legal hydrological lexis (*transboundary riparian doctrine, minimum ecological flow, baseline discharge threshold*).",
+        "phoneticCoda": "Enforces voiced codas /z/ in *raises, reserves, advises* and /kt/ in *impact, retract, conduct*."
+      },
+      "id": "roleplay-c1-01",
+      "cefrLevel": "C1",
+      "domain": "PUBLIC_DIPLOMACY",
+      "pragmaticFocus": "Concessive hedging, epistemic modality, non-provocative counter-proposals.",
+      "interlocutor": "Lead Diplomatic Negotiator of an upstream neighboring state.",
+      "context": "Bilateral summit negotiating seasonal dry-season reservoir discharge quotas along a transboundary river system.",
+      "friction": "Upstream state asserts absolute sovereign dam operation rights; downstream agricultural deltas face critical salinity intrusion.",
+      "vietnamese": "Đàm phán ngoại giao cấp cao C1 về hạn ngạch xả lũ và dòng chảy tối thiểu của sông xuyên biên giới, sử dụng kỹ thuật nhượng bộ có điều kiện và ngôn từ ngoại giao chuẩn mực.",
+      "exemplarExchange": {
+        "challenge": "Our sovereign government cannot accept binding seasonal release quotas that compromise our domestic hydroelectric independence.",
+        "modelResponse": "While we fully respect your administration's mandate to guarantee domestic energy security, an uncalibrated retention schedule during the dry-season apex precipitates irreversible estuarine salinization across our shared delta. What we tentatively propose instead is an adaptive discharge framework: rather than an inflexible static volume, release schedules would index dynamically to upstream rainfall telemetry, coupled with reciprocal regional power-grid off-peak purchases."
+      }
+    },
+    {
+      "title": "Roleplay 2: Academic Viva Voce & Dissertation Defense Under Hostile Examination",
+      "sieves": {
+        "thesisAvoidance": "Overcomes cultural reluctance to respectfully contradict senior professors; directly challenges the premise with empirical humility.",
+        "mechanicalConnectors": "Replaces *On the one hand / On the other hand* with syntactic subordination (*Notwithstanding Professor Vance's foundational skepticism, the neuroimaging telemetry indicates...*).",
+        "thesaurusClichés": "Eliminates vague buzzwords (*\"cutting-edge AI\"*, *\"revolutionary technology\"*); deploys precise neurocognitive terminology (*representational similarity analysis, biological plausibility constraints, localized BOLD hemodynamic response*).",
+        "phoneticCoda": "Retains complex codas /spts/ in *aspects*, /ksts/ in *contexts*, and /sts/ in *statists, linguists*."
+      },
+      "id": "roleplay-c2-02",
+      "cefrLevel": "C2",
+      "domain": "ACADEMIC_RESEARCH",
+      "pragmaticFocus": "Academic boundary defense, methodological poise, countering hostile invalidation without intellectual arrogance.",
+      "interlocutor": "Emeritus Senior Professor and External Inquisitor known for philosophical skepticism toward neurocomputational modeling.",
+      "context": "Final doctoral defense examining synthetic language models as predictive architectures for human semantic processing.",
+      "friction": "Examiner aggressively claims that statistical transformer networks merely simulate lexical surface patterns and possess zero biological validity.",
+      "vietnamese": "Bảo vệ luận án tiến sĩ C2 trước câu hỏi phản biện mang tính bác bỏ học thuyết của giáo sư đầu ngành, giữ vững phong thái khoa học và luận cứ thực nghiệm.",
+      "exemplarExchange": {
+        "challenge": "Your entire dissertation rests upon an unproven category error: equating vector distance in synthetic token transformers with biological human cognition. Isn't this merely sophisticated curve-fitting masquerading as neuroscience?",
+        "modelResponse": "Professor Vance articulates a legitimate epistemological challenge that has preoccupied computational neuroscience since connectionism. However, our architecture does not claim that silicon backpropagation mirrors human neurogenesis. Rather, as demonstrated in Chapter 4, the representational similarity analysis indicates that internal layer activations predict fMRI BOLD patterns across the temporal lobe with an $R^2$ of 0.74—a correspondence that vanishes when utilizing frequency-based n-gram models. Consequently, the network serves not as an anatomical replica, but as a functionally predictive computational heuristic."
+      }
+    },
+    {
+      "title": "Roleplay 3: High-Stakes Executive Job Interrogation (STAR Behavioral Defense)",
+      "sieves": {
+        "thesisAvoidance": "Eliminates defensive excuse-making (*đổ lỗi cho hoàn cảnh/cấp dưới*); assumes direct executive accountability in the initial sentence.",
+        "mechanicalConnectors": "Eliminates choppy coordinators (*So, And, But*); constructs cohesive periodic sentences (*Having identified the warehouse telemetry bottleneck, I immediately halted shipments...*).",
+        "thesaurusClichés": "Bans generic corporate clichés (*\"think outside the box\"*, *\"every cloud has a silver lining\"*); deploys executive governance vocabulary (*single point of failure, redundant inventory buffer, post-mortem root-cause analysis*).",
+        "phoneticCoda": "Pronounces all past inflectional codas /d/ in *managed*, /t/ in *restructured*, /ɪd/ in *instituted*."
+      },
+      "id": "roleplay-c1-03",
+      "cefrLevel": "C1",
+      "domain": "CORPORATE_LEADERSHIP",
+      "pragmaticFocus": "Ownership of executive failure, ethical accountability, strategic restructuring, commanding vocal composure.",
+      "interlocutor": "Managing Director and Board Search Committee Chair.",
+      "context": "Final round interview for Chief Operating Officer (COO) at a multi-national logistics enterprise.",
+      "friction": "Interviewer confronts candidate with a documented multi-million dollar supply chain failure that occurred under candidate's watch three years prior.",
+      "vietnamese": "Xử lý câu hỏi phỏng vấn C1 chất vấn về thất bại triệu đô trong quá khứ, chịu trách nhiệm trực diện và chứng minh năng lực phục hồi hệ thống.",
+      "exemplarExchange": {
+        "challenge": "Looking at your tenure at Pacific Freight, you presided over the catastrophic Q3 automation rollout that cost the company 4.2 million dollars in demurrage penalties. Why should our board trust your operational judgment with our enterprise transformation?",
+        "modelResponse": "The Q3 logistics breakdown was the most instructive failure of my executive career, and the accountability rests squarely on my shoulders. We allowed optimistic vendor deployment timelines to eclipse rigorous stress-testing under peak holiday throughput. The crucial test of operational leadership, however, is the velocity of institutional remediation. Within 48 hours of detecting the bottleneck, I suspended automated intake, instituted manual contingency routing, and personally led a forensic audit that overhauled our entire third-party integration protocol. Over the subsequent two quarters, system uptime reached 99.8%, and the redundant safeguard architecture I installed remains the enterprise standard today."
+      }
+    },
+    {
+      "title": "Roleplay 4: Corporate Crisis Management & Live Press Conference",
+      "sieves": {
+        "thesisAvoidance": "Prevents avoidance of hard facts (*không vòng vo che giấu*); confronts the severity of the security event with immediate clarity.",
+        "mechanicalConnectors": "Replaces *Besides / Moreover* with cohesive discursive framing (*Addressing the specific timeline of disclosure...*).",
+        "thesaurusClichés": "Avoids insincere corporate condolences (*\"our thoughts and prayers\"*, *\"accidents happen\"*); utilizes forensic crisis terms (*cryptographic salt, zero-trust network perimeter, independent forensic certifier, regulatory notification window*).",
+        "phoneticCoda": "Preserves complex clusters /kts/ in *impacts*, /ksts/ in *texts*, /skt/ in *asked*."
+      },
+      "id": "roleplay-c2-04",
+      "cefrLevel": "C2",
+      "domain": "CRISIS_COMMUNICATIONS",
+      "pragmaticFocus": "Managing hostile investigative interrogation, transparent de-escalation, legal precision without corporate evasiveness.",
+      "interlocutor": "Chief Investigative Reporter for a major international financial daily.",
+      "context": "Live press briefing following an unauthorized third-party exfiltration of encrypted consumer financial data.",
+      "friction": "Reporter aggressively alleges executive cover-up and demands immediate resignation of the executive suite.",
+      "vietnamese": "Chủ trì họp báo khủng hoảng C2 trước sự chất vấn gay gắt của truyền thông quốc tế về sự cố bảo mật dữ liệu, giải trình thuyết phục về khung thời gian ứng phó kỹ thuật.",
+      "exemplarExchange": {
+        "challenge": "Your security team detected anomalous server exfiltration on Tuesday, yet you waited 72 hours before alerting affected consumers. Isn't this a deliberate, criminal cover-up designed to protect share prices ahead of quarterly earnings?",
+        "modelResponse": "I understand your skepticism, but characterizing the 72-hour investigative interval as an intentional cover-up disregards the operational imperative of active threat containment. When anomalous egress was detected at 02:00 on Tuesday, the primary protocol was to sever the adversary's lateral access pathways without alerting the threat actor that the breach was identified. Had we issued an unverified public bulletin prematurely, we would have compromised the integrity of ongoing live memory forensics and left secondary databases exposed. The moment our third-party digital forensic partners verified the perimeter was secured, we triggered full regulatory disclosures in strict compliance with statutory frameworks."
+      }
+    }
+  ]
+}

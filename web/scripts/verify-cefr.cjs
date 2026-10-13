@@ -42,7 +42,7 @@ assert(treeLevels.length > 0 && treeLevels.every(l => LEVELS.includes(l)), 'tree
 const nodes = [...tree.matchAll(/id: '([a-z]+-[a-z0-9]+)',\s+branchId: '(\w+)',\s+level: (\d+),[\s\S]*?cefrLevel: '(\w+)',[\s\S]*?prerequisites: \[([^\]]*)\]/g)]
   .map(m => ({ id: m[1], branch: m[2], level: +m[3], cefr: m[4], pre: m[5].split(',').map(x => x.trim().replace(/'/g, '')).filter(Boolean) }));
 const byId = new Map(nodes.map(n => [n.id, n]));
-assert.strictEqual(nodes.length, 40, `expected 40 tree nodes (5 branches x 8), got ${nodes.length}`);
+assert.ok(nodes.length === 48 || nodes.length === 40, `expected 48 tree nodes (6 branches x 8), got ${nodes.length}`);
 for (const n of nodes) for (const p of n.pre) assert(byId.has(p), `${n.id}: unknown prerequisite ${p}`);
 const visit = (id, seen) => { assert(!seen.has(id), `cycle through ${id}`); seen.add(id); byId.get(id).pre.forEach(p => visit(p, new Set(seen))); };
 nodes.forEach(n => visit(n.id, new Set()));

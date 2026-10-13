@@ -99,8 +99,24 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
 export function listeningView(root: HTMLElement): () => void {
   let stop = () => {};
   const list = h('div', 'ie-cards');
-  root.append(h('h1', 'ie-title', 'Academic Listening'), h('p', 'ie-lead', 'Ten questions per section, voiced by browser text-to-speech with a different voice per speaker. Practice mode lets you replay; the mock plays each section once.'), list);
+
+  const labBanner = h('div', 'ie-lab-banner', `
+    <div class="ie-lab-banner-content">
+      <span class="ie-trap-category-pill">🎯 Interactive Audio Lab</span>
+      <h3>Listening Trap & Oral Self-Correction Audio Lab</h3>
+      <p class="ie-lead">Practice spotting oral self-corrections, restrictive qualifiers, reversal traps, and map navigation decoys across 12 authentic Cambridge-style audio scenarios with real-time waveform feedback.</p>
+    </div>
+    <a href="#listening-traps" class="ie-btn ie-btn-primary ie-lab-launch-btn">Launch Traps Lab (12 Drills) →</a>
+  `);
+
+  root.append(
+    h('h1', 'ie-title', 'Academic Listening'),
+    h('p', 'ie-lead', 'Ten questions per section, voiced by browser text-to-speech with a different voice per speaker. Practice mode lets you replay; the mock plays each section once.'),
+    labBanner,
+    list
+  );
   SECTIONS.forEach(s => {
+
     const c = h('button', 'ie-card', `<b>Section ${s.section}: ${esc(s.title)}</b><span>${s.speakers.length} speaker${s.speakers.length > 1 ? 's' : ''}</span><small>${s.questions.length} questions</small>`);
     c.addEventListener('click', () => {
       root.innerHTML = '';

@@ -48,3 +48,45 @@ export function playSection(sec: ListeningSection, opts: { rate?: number; onLine
   next(0);
   return { stop() { stopped = true; synth.cancel(); } };
 }
+
+/** Synthesizes arbitrary text (e.g. speaking model answers), chunked into sentences to avoid Chromium playback stalls. */
+export function playText(text: string, opts?: { rate?: number; pitch?: number; lang?: string; onEnd?: () => void }): Playback {
+  if (!('speechSynthesis' in window)) return { stop() {} };
+  const synth = window.speechSynthesis;
+  synth.cancel();
+  let stopped = false;
+  const chunks = text.match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map(s => s.trim()).filter(Boolean) || [text];
+  const lang = opts?.lang || 'en-GB';
+  const en = voices.filter(v => v.lang.replace('_', '-').startsWith('en'));
+  const v = en.find(x => x.lang.replace('_', '-') === lang) || en[0] || null;
+
+  let current = 0;
+  const speakNext = (): void => {
+    if (stopped) return;
+    if (current >= chunks.length) {
+      opts?.onEnd?.();
+      return;
+    }
+    const chunk = chunks[current++];
+    const u = new SpeechSynthesisUtterance(chunk);
+    if (v) { u.voice = v; u.lang = v.lang; }
+    u.rate = opts?.rate ?? 0.95;
+    u.pitch = opts?.pitch ?? 1.0;
+    u.onend = () => {
+      if (!stopped) setTimeout(speakNext, 120);
+    };
+    u.onerror = () => {
+      if (!stopped) setTimeout(speakNext, 120);
+    };
+    synth.speak(u);
+  };
+
+  speakNext();
+  return {
+    stop(): void {
+      stopped = true;
+      synth.cancel();
+    }
+  };
+}
+
