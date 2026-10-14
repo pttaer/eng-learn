@@ -30,6 +30,9 @@ export interface QuestionItem {
   options?: string[];
   userAnswer?: string;
   isFlagged: boolean;
+  correctAnswer?: string;
+  passageIndex?: 0 | 1 | 2;
+  explanation?: string;
 }
 
 export interface CockpitData {
@@ -47,6 +50,11 @@ export class ExamCockpitDossier {
   private currentTheme: CambridgeTheme = 'standard-light';
   private currentModule: CockpitModule = 'READING';
   private activeQuestionIndex: number = 0; // 0-based (0..39)
+  private activeFilter: string = 'all'; // 'all' | 'p1' | 'p2' | 'p3' | 's1' | 's2' | 's3' | 's4'
+  private isReviewMode: boolean = false;
+
+  public getActiveFilter(): string { return this.activeFilter; }
+  public getIsReviewMode(): boolean { return this.isReviewMode; }
 
   // Split-screen drag resizer state
   private leftWidthPct: number = 50;
@@ -86,37 +94,54 @@ export class ExamCockpitDossier {
     // Generate authentic 40-question palette
     this.questions = [];
     const sampleAnchors = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+    const tfngKeys = ['TRUE', 'FALSE', 'NOT GIVEN', 'TRUE', 'FALSE', 'TRUE', 'NOT GIVEN', 'FALSE', 'TRUE', 'NOT GIVEN', 'TRUE', 'FALSE', 'TRUE'];
+    const gapKeys = ['syntax', 'larynx', 'cohesion', 'gestures', 'cognition', 'evolution', 'symbolism', 'articulation', 'dialect', 'vocal tract', 'mutation', 'grammar', 'phonology', 'recursion'];
 
     for (let i = 1; i <= 40; i++) {
       if (i <= 13) {
+        const anchor = sampleAnchors[(i - 1) % sampleAnchors.length];
         this.questions.push({
           id: i,
           type: 'tfng',
-          prompt: `Question ${i}: The archaeological excavations in ${sampleAnchors[(i - 1) % sampleAnchors.length]} confirmed initial architectural hypotheses.`,
-          paragraphAnchor: sampleAnchors[(i - 1) % sampleAnchors.length],
+          prompt: `Question ${i}: The archaeological excavations in Paragraph ${anchor} confirmed initial architectural hypotheses.`,
+          paragraphAnchor: anchor,
           options: ['TRUE', 'FALSE', 'NOT GIVEN'],
+          correctAnswer: tfngKeys[(i - 1) % tfngKeys.length],
+          passageIndex: 0,
+          explanation: `Paragraph ${anchor} provides textual evidence verifying statement ${i}.`,
           isFlagged: false
         });
       } else if (i <= 26) {
+        const anchor = sampleAnchors[(i - 1) % sampleAnchors.length];
+        const opts = [
+          'A. Rapid urban industrialization',
+          'B. Agricultural surplus distribution',
+          'C. Maritime trading monopoly',
+          'D. Technological standard harmonization'
+        ];
+        const correctOpt = opts[(i % 4)];
         this.questions.push({
           id: i,
           type: 'mcq',
-          prompt: `Question ${i}: According to section ${sampleAnchors[(i - 1) % sampleAnchors.length]}, what was the primary economic catalyst?`,
-          paragraphAnchor: sampleAnchors[(i - 1) % sampleAnchors.length],
-          options: [
-            'A. Rapid urban industrialization',
-            'B. Agricultural surplus distribution',
-            'C. Maritime trading monopoly',
-            'D. Technological standard harmonization'
-          ],
+          prompt: `Question ${i}: According to section ${anchor}, what was the primary economic catalyst?`,
+          paragraphAnchor: anchor,
+          options: opts,
+          correctAnswer: correctOpt,
+          passageIndex: 1,
+          explanation: `In Passage 2 Section ${anchor}, the author identifies ${correctOpt.substring(3)} as the pivotal factor.`,
           isFlagged: false
         });
       } else {
+        const anchor = sampleAnchors[(i - 1) % sampleAnchors.length];
+        const targetWord = gapKeys[(i - 27) % gapKeys.length];
         this.questions.push({
           id: i,
           type: 'gap',
           prompt: `Question ${i}: The contemporary synthesis was primarily accelerated by [ GAP ].`,
-          paragraphAnchor: sampleAnchors[(i - 1) % sampleAnchors.length],
+          paragraphAnchor: anchor,
+          correctAnswer: targetWord,
+          passageIndex: 2,
+          explanation: `Passage 3 Paragraph ${anchor} specifies '${targetWord}' as the operative mechanism.`,
           isFlagged: false
         });
       }
@@ -137,11 +162,27 @@ export class ExamCockpitDossier {
     }
   }
 
+  public getCurrentPassageIndex(): 0 | 1 | 2 {
+    const q = this.questions[this.activeQuestionIndex];
+    if (q && q.passageIndex !== undefined) return q.passageIndex;
+    if (this.activeQuestionIndex < 13) return 0;
+    if (this.activeQuestionIndex < 26) return 1;
+    return 2;
+  }
+
+  public getPassageQuestionRange(): string {
+    const pIdx = this.getCurrentPassageIndex();
+    if (pIdx === 0) return '1–13';
+    if (pIdx === 1) return '14–26';
+    return '27–40';
+  }
+
   public render(): HTMLElement {
     this.container.innerHTML = '';
     this.container.setAttribute('data-cockpit-theme', this.currentTheme);
 
     const activeQ = this.questions[this.activeQuestionIndex] || this.questions[0];
+    const pIdx = this.getCurrentPassageIndex();
 
     this.container.innerHTML = `
       <!-- Top Command Bar (48px) -->
@@ -150,7 +191,7 @@ export class ExamCockpitDossier {
           <span class="cd-brand-title">
             <span class="cd-symbol">✦</span> IELTS COMPUTER-DELIVERED TEST
           </span>
-          <span class="cd-module-badge">${this.currentModule} // PASSAGE 1 OF 3</span>
+          <span class="cd-module-badge">${this.currentModule} // PASSAGE ${pIdx + 1} OF 3</span>
         </div>
 
         <div class="cd-top-center">
@@ -184,13 +225,19 @@ export class ExamCockpitDossier {
         </div>
       </header>
 
+      <!-- 10-min and 5-min Warning Banner Alerts -->
+      <div class="cd-timer-alert-banner" id="cd-timer-alert-banner" role="alert" aria-live="assertive" hidden>
+        <span class="cd-alert-text"></span>
+        <button class="cd-alert-dismiss" aria-label="Dismiss Alert">✕</button>
+      </div>
+
       <!-- Main Split-Screen Resizable Arena -->
       <main class="cd-split-arena" id="cd-split-arena">
         
         <!-- Left Pane: Source Passage / Prompt (Resizable %) -->
         <section class="cd-pane cd-left-pane" id="cd-left-pane" style="width: ${this.leftWidthPct}%;" aria-label="Passage and Stimulus Material">
           <div class="cd-pane-header">
-            <span class="cd-pane-title">ACADEMIC READING PASSAGE 1</span>
+            <span class="cd-pane-title">ACADEMIC READING PASSAGE ${pIdx + 1}</span>
             <span class="cd-highlight-hint">[ Select text to Highlight or Add Note ]</span>
           </div>
           
@@ -237,9 +284,15 @@ export class ExamCockpitDossier {
           </button>
         </div>
 
-        <!-- 1-40 Question Matrix Palette -->
-        <div class="cd-matrix-track" id="cd-matrix-track" role="tablist" aria-label="Questions 1 to 40">
-          ${this.renderQuestionMatrixButtons()}
+        <!-- Navigator Center: Filter Tabs & 1-40 Question Pills -->
+        <div class="cd-nav-center-cluster">
+          <div class="cd-filter-tabs" role="tablist" aria-label="Passage & Section Filter Tabs">
+            ${this.renderFilterTabs()}
+          </div>
+          <!-- 1-40 Question Matrix Palette -->
+          <div class="cd-matrix-track" id="cd-matrix-track" role="tablist" aria-label="Questions 1 to 40">
+            ${this.renderQuestionMatrixButtons()}
+          </div>
         </div>
 
         <div class="cd-nav-controls-right">
@@ -261,7 +314,112 @@ export class ExamCockpitDossier {
     return this.container;
   }
 
+  private renderFilterTabs(): string {
+    if (this.currentModule === 'LISTENING') {
+      const tabs = [
+        { id: 'all', label: 'All (1–40)' },
+        { id: 's1', label: 'Section 1 (1–10)' },
+        { id: 's2', label: 'Section 2 (11–20)' },
+        { id: 's3', label: 'Section 3 (21–30)' },
+        { id: 's4', label: 'Section 4 (31–40)' }
+      ];
+      return tabs.map(t => `
+        <button class="cd-filter-tab ${this.activeFilter === t.id ? 'is-active' : ''}" data-filter="${t.id}" role="tab" aria-selected="${this.activeFilter === t.id}">
+          ${t.label}
+        </button>
+      `).join('');
+    }
+
+    const tabs = [
+      { id: 'all', label: 'All (1–40)' },
+      { id: 'p1', label: 'Passage 1 (1–13)' },
+      { id: 'p2', label: 'Passage 2 (14–26)' },
+      { id: 'p3', label: 'Passage 3 (27–40)' }
+    ];
+    return tabs.map(t => `
+      <button class="cd-filter-tab ${this.activeFilter === t.id ? 'is-active' : ''}" data-filter="${t.id}" role="tab" aria-selected="${this.activeFilter === t.id}">
+        ${t.label}
+      </button>
+    `).join('');
+  }
+
   private renderPassageContent(): string {
+    const pIdx = this.getCurrentPassageIndex();
+
+    if (pIdx === 1) {
+      return `
+        <article class="cd-passage-body">
+          <h2 class="cd-passage-h2">Collecting Antiques and Ephemera: The Psychology of Ownership</h2>
+          <p class="cd-passage-lead">Exploring the evolutionary, psychological, and social motivations behind human collecting behaviour.</p>
+          
+          <p class="cd-paragraph" data-paragraph="A">
+            <span class="cd-p-marker">Paragraph A</span>
+            Collecting must be differentiated from indiscriminate hoarding. While hoarding is marked by disorganized accumulation and profound emotional distress upon parting with items, collecting is a purposeful, structured activity. True collectors curate, categorize, authenticate, and display their possessions according to systematic criteria, deriving intellectual stimulation and aesthetic satisfaction from completing a taxonomy.
+          </p>
+
+          <p class="cd-paragraph" data-paragraph="B">
+            <span class="cd-p-marker">Paragraph B</span>
+            Evolutionary psychologists argue that collecting traces back to hunter-gatherer survival adaptations. The drive to accumulate physical resources—seeds, tools, durable materials—conferred a distinct survival advantage during seasonal scarcities. In modern industrial societies where fundamental material needs are met, this primordial foraging instinct is sublimated into symbolic domains: rare stamps, vintage timepieces, first-edition books, or geological specimens.
+          </p>
+
+          <p class="cd-paragraph" data-paragraph="C">
+            <span class="cd-p-marker">Paragraph C</span>
+            Social status and cultural distinction represent another powerful catalyst. Sociologist Thorstein Veblen noted that conspicuous consumption and the acquisition of rare cultural artifacts signal wealth, discerning connoisseurship, and specialized leisure. Collecting items with verified provenance elevates the owner within scholarly or elite communities, establishing peer recognition and social prestige.
+          </p>
+
+          <p class="cd-paragraph" data-paragraph="D">
+            <span class="cd-p-marker">Paragraph D</span>
+            Nostalgia and psychological preservation also play a central role. Everyday ephemera—postcards, concert tickets, mid-century packaging—serve as tangible anchors to past eras and personal memories. By gathering and conserving fragile paper artifacts, collectors construct a psychological bulwark against the relentless transience of time, maintaining a living bridge to cultural heritage.
+          </p>
+
+          <p class="cd-paragraph" data-paragraph="E">
+            <span class="cd-p-marker">Paragraph E</span>
+            Finally, the thrill of the hunt provides potent neurological rewards. Locating an elusive item after years of searching triggers dopamine releases akin to reward pathways in problem-solving. Far from a passive hobby, scholarly collecting remains an active intellectual pursuit that has fostered significant museum collections and preserved invaluable historical records.
+          </p>
+        </article>
+      `;
+    }
+
+    if (pIdx === 2) {
+      return `
+        <article class="cd-passage-body">
+          <h2 class="cd-passage-h2">The Evolutionary Origins and Complexity of Human Language</h2>
+          <p class="cd-passage-lead">How anatomical adaptations and cognitive evolution coalesced into recursive syntactic language.</p>
+          
+          <p class="cd-paragraph" data-paragraph="A">
+            <span class="cd-p-marker">Paragraph A</span>
+            Language is undeniably the defining cognitive attribute of the human species. While numerous non-human animals possess sophisticated communicative repertoires—such as the alarm calls of vervet monkeys or the intricate dance of honeybees—human language is distinguished by hierarchical syntax, displacement, and infinite recursion, permitting the generation of limitless novel expressions from finite phonetic elements.
+          </p>
+
+          <p class="cd-paragraph" data-paragraph="B">
+            <span class="cd-p-marker">Paragraph B</span>
+            Anatomical adaptations were indispensable prerequisites for vocal language. The descent of the human larynx, coupled with a rounded tongue and modified vocal tract geometry, enabled the acoustic modulation necessary for diverse vowel and consonant production. Although this anatomical descent dramatically increased the risk of choking, evolutionary natural selection favored vocal flexibility for communicative precision.
+          </p>
+
+          <p class="cd-paragraph" data-paragraph="C">
+            <span class="cd-p-marker">Paragraph C</span>
+            Anthropologists emphasize that vocal grooming replaced physical grooming as early human social group sizes expanded beyond manageable limits. Robin Dunbar’s social brain hypothesis posits that vocal communication allowed individuals to forge social bonds, maintain alliances, and exchange vital survival intelligence with multiple conspecifics simultaneously, conserving time and metabolic energy.
+          </p>
+
+          <p class="cd-paragraph" data-paragraph="D">
+            <span class="cd-p-marker">Paragraph D</span>
+            The neurological foundation of language involves a distributed cortical network far beyond classical Broca’s and Wernicke’s areas. Structural brain imaging reveals extensive white-matter tract development—notably the arcuate fasciculus—that integrates auditory perception, motor sequencing, and conceptual semantics across both cerebral hemispheres.
+          </p>
+
+          <p class="cd-paragraph" data-paragraph="E">
+            <span class="cd-p-marker">Paragraph E</span>
+            Genomic research has provided further insight through the discovery of the FOXP2 gene. Mutations in FOXP2 cause severe verbal dyspraxia and expressive grammar impairments. Comparative genomics indicates that modern human variants of FOXP2 underwent accelerated positive selection, refining fine-grained orofacial motor coordination for rapid articulatory speech.
+          </p>
+
+          <p class="cd-paragraph" data-paragraph="F">
+            <span class="cd-p-marker">Paragraph F</span>
+            Ultimately, language evolved not merely as an acoustic signal system, but as an engine of cognitive representation. Through recursive syntax, humans conceptualize past and future, formulate counterfactual hypotheses, transmit cumulative cultural innovations across generations, and establish intricate institutional cooperation on a global planetary scale.
+          </p>
+        </article>
+      `;
+    }
+
+    // Default: Passage 0 (The Falkirk Wheel)
     return `
       <article class="cd-passage-body">
         <h2 class="cd-passage-h2">The Falkirk Wheel: Engineering a Scottish Landmark</h2>
@@ -296,8 +454,10 @@ export class ExamCockpitDossier {
   }
 
   private renderQuestionForm(q: QuestionItem): string {
+    const isCorrect = this.isReviewMode ? this.checkQuestionCorrect(q) : false;
+
     return `
-      <div class="cd-question-card" data-qid="${q.id}">
+      <div class="cd-question-card ${this.isReviewMode ? (isCorrect ? 'review-correct' : 'review-incorrect') : ''}" data-qid="${q.id}">
         <div class="cd-q-header">
           <span class="cd-q-num">Question ${q.id} of 40</span>
           ${q.paragraphAnchor ? `
@@ -306,6 +466,11 @@ export class ExamCockpitDossier {
             </button>
           ` : ''}
           ${q.isFlagged ? '<span class="cd-flagged-tag">🚩 Flagged for review</span>' : ''}
+          ${this.isReviewMode ? `
+            <span class="cd-review-badge ${isCorrect ? 'is-correct' : 'is-incorrect'}" style="font-weight: 700; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: ${isCorrect ? 'rgba(16,185,129,0.2)' : 'rgba(239,68,68,0.2)'}; color: ${isCorrect ? '#10b981' : '#ef4444'};">
+              ${isCorrect ? '✓ Correct' : '✗ Incorrect'}
+            </span>
+          ` : ''}
         </div>
 
         <p class="cd-q-prompt">${this.escapeHtml(q.prompt)}</p>
@@ -320,6 +485,7 @@ export class ExamCockpitDossier {
                   value="${this.escapeHtml(opt)}" 
                   class="cd-radio-input" 
                   ${q.userAnswer === opt ? 'checked' : ''}
+                  ${this.isReviewMode ? 'disabled' : ''}
                 />
                 <span class="cd-opt-indicator"></span>
                 <span class="cd-opt-text">${this.escapeHtml(opt)}</span>
@@ -335,9 +501,21 @@ export class ExamCockpitDossier {
               class="cd-text-input" 
               placeholder="Type your answer here..." 
               value="${this.escapeHtml(q.userAnswer || '')}"
+              ${this.isReviewMode ? 'readonly' : ''}
             />
           </div>
         `}
+
+        ${this.isReviewMode ? `
+          <div class="cd-review-explanation-box">
+            <div style="font-weight: 700; margin-bottom: 4px; color: ${isCorrect ? '#10b981' : '#ef4444'};">
+              ${isCorrect ? '✓ Verified Against Text' : `✗ Correct Answer: "${this.escapeHtml(q.correctAnswer || '')}"`}
+            </div>
+            <div style="font-size: 12px; color: var(--ink-secondary); line-height: 1.5;">
+              ${this.escapeHtml(q.explanation || 'Refer to the referenced paragraph in the passage for the contextual rationale.')}
+            </div>
+          </div>
+        ` : ''}
 
         <div class="cd-q-nav-actions">
           <button class="cd-btn cd-btn-save-next" id="btn-save-advance">
@@ -377,15 +555,31 @@ export class ExamCockpitDossier {
 
   private renderQuestionMatrixButtons(): string {
     return this.questions.map((q, idx) => {
+      // Filter check
+      if (this.activeFilter === 'p1' && (q.id < 1 || q.id > 13)) return '';
+      if (this.activeFilter === 'p2' && (q.id < 14 || q.id > 26)) return '';
+      if (this.activeFilter === 'p3' && (q.id < 27 || q.id > 40)) return '';
+      if (this.activeFilter === 's1' && (q.id < 1 || q.id > 10)) return '';
+      if (this.activeFilter === 's2' && (q.id < 11 || q.id > 20)) return '';
+      if (this.activeFilter === 's3' && (q.id < 21 || q.id > 30)) return '';
+      if (this.activeFilter === 's4' && (q.id < 31 || q.id > 40)) return '';
+
       const isCurrent = idx === this.activeQuestionIndex;
       const isAnswered = Boolean(q.userAnswer);
       const isFlagged = q.isFlagged;
+
+      let reviewClass = '';
+      if (this.isReviewMode) {
+        const isOk = this.checkQuestionCorrect(q);
+        reviewClass = isOk ? 'is-correct' : 'is-incorrect';
+      }
 
       const classes = [
         'cd-q-matrix-btn',
         isCurrent ? 'is-current' : '',
         isAnswered ? 'is-answered' : 'is-unanswered',
-        isFlagged ? 'is-flagged' : ''
+        isFlagged ? 'is-flagged' : '',
+        reviewClass
       ].filter(Boolean).join(' ');
 
       return `
@@ -403,6 +597,21 @@ export class ExamCockpitDossier {
   }
 
   private bindEvents(): void {
+    // Filter tabs click handling
+    this.container.querySelectorAll('.cd-filter-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        AudioSynthesizer.play('click');
+        const filterId = tab.getAttribute('data-filter') || 'all';
+        this.setFilter(filterId);
+      });
+    });
+
+    // Dismiss alert banner
+    this.container.querySelector('.cd-alert-dismiss')?.addEventListener('click', () => {
+      const banner = this.container.querySelector('#cd-timer-alert-banner') as HTMLElement | null;
+      if (banner) banner.hidden = true;
+    });
+
     // Theme switcher
     const themeSelect = this.container.querySelector('#cd-theme-select') as HTMLSelectElement | null;
     themeSelect?.addEventListener('change', () => {
@@ -561,6 +770,26 @@ export class ExamCockpitDossier {
     });
   }
 
+  public setFilter(filterId: string): void {
+    this.activeFilter = filterId;
+    if (filterId === 'p1' && (this.activeQuestionIndex < 0 || this.activeQuestionIndex > 12)) {
+      this.activeQuestionIndex = 0;
+    } else if (filterId === 'p2' && (this.activeQuestionIndex < 13 || this.activeQuestionIndex > 25)) {
+      this.activeQuestionIndex = 13;
+    } else if (filterId === 'p3' && (this.activeQuestionIndex < 26 || this.activeQuestionIndex > 39)) {
+      this.activeQuestionIndex = 26;
+    } else if (filterId === 's1' && (this.activeQuestionIndex < 0 || this.activeQuestionIndex > 9)) {
+      this.activeQuestionIndex = 0;
+    } else if (filterId === 's2' && (this.activeQuestionIndex < 10 || this.activeQuestionIndex > 19)) {
+      this.activeQuestionIndex = 10;
+    } else if (filterId === 's3' && (this.activeQuestionIndex < 20 || this.activeQuestionIndex > 29)) {
+      this.activeQuestionIndex = 20;
+    } else if (filterId === 's4' && (this.activeQuestionIndex < 30 || this.activeQuestionIndex > 39)) {
+      this.activeQuestionIndex = 30;
+    }
+    this.render();
+  }
+
   private updateMatrixState(): void {
     const currentBtn = this.container.querySelector(`.cd-q-matrix-btn[data-qidx="${this.activeQuestionIndex}"]`);
     if (currentBtn) {
@@ -680,11 +909,33 @@ export class ExamCockpitDossier {
             display.classList.add('is-warning');
           }
         }
+
+        // 10-minute warning banner alert
+        if (this.timerSeconds === 600) {
+          this.showTimerAlert('⚠️ 10-MINUTE ALERT: 10 minutes remaining. Verify that answers for Passages 1 and 2 are recorded.', 'is-10min-warning');
+          AudioSynthesizer.play('alarm');
+        }
+
+        // 5-minute urgent banner alert
+        if (this.timerSeconds === 300) {
+          this.showTimerAlert('🚨 5-MINUTE URGENT ALERT: 5 minutes remaining! Finalize all flagged questions now.', 'is-5min-urgent');
+          AudioSynthesizer.play('alarm');
+        }
       } else {
         clearInterval(this.timerInterval);
-        this.promptSubmitExam();
+        this.submitAndGradeExam(true);
       }
     }, 1000);
+  }
+
+  private showTimerAlert(message: string, alertClass: string): void {
+    const banner = this.container.querySelector('#cd-timer-alert-banner') as HTMLElement | null;
+    if (banner) {
+      banner.hidden = false;
+      banner.className = `cd-timer-alert-banner ${alertClass}`;
+      const textEl = banner.querySelector('.cd-alert-text');
+      if (textEl) textEl.textContent = message;
+    }
   }
 
   private formatTime(totalSeconds: number): string {
@@ -759,7 +1010,6 @@ export class ExamCockpitDossier {
       return true;
     }
 
-
     // Arrow navigation when outside input/textarea
     if (!isInput) {
       if (key === 'ArrowRight' && this.activeQuestionIndex < this.questions.length - 1) {
@@ -775,6 +1025,50 @@ export class ExamCockpitDossier {
     }
 
     return false;
+  }
+
+  public checkQuestionCorrect(q: QuestionItem): boolean {
+    if (!q.userAnswer) return false;
+    const user = q.userAnswer.trim().toLowerCase();
+    const correct = (q.correctAnswer || '').trim().toLowerCase();
+
+    if (q.type === 'tfng') {
+      return user === correct;
+    }
+    if (q.type === 'mcq') {
+      if (user === correct) return true;
+      if (user.charAt(0) === correct.charAt(0)) return true;
+      return false;
+    }
+    if (q.type === 'gap') {
+      return user === correct;
+    }
+    return false;
+  }
+
+  public rawToBand(skill: 'listening' | 'reading', raw: number, of: number = 40): number {
+    const scaled = of === 40 ? raw : Math.round((raw / of) * 40);
+    const readingTable: [number, number][] = [
+      [39, 9], [37, 8.5], [35, 8], [33, 7.5], [30, 7], [27, 6.5],
+      [23, 6], [19, 5.5], [15, 5], [13, 4.5], [10, 4], [8, 3.5], [6, 3], [4, 2.5]
+    ];
+    const listeningTable: [number, number][] = [
+      [39, 9], [37, 8.5], [35, 8], [32, 7.5], [30, 7], [26, 6.5],
+      [23, 6], [18, 5.5], [16, 5], [13, 4.5], [10, 4], [7, 3.5], [5, 3], [3, 2.5]
+    ];
+    const table = skill === 'reading' ? readingTable : listeningTable;
+    const hit = table.find(([min]) => scaled >= min);
+    return hit ? hit[1] : 2.0;
+  }
+
+  public getBandDescriptor(band: number): { cefr: string; descriptor: string } {
+    if (band >= 8.5) return { cefr: 'C2', descriptor: 'Expert User' };
+    if (band >= 7.5) return { cefr: 'C1', descriptor: 'Very Good User' };
+    if (band >= 7.0) return { cefr: 'C1', descriptor: 'Good User' };
+    if (band >= 6.0) return { cefr: 'B2', descriptor: 'Competent User' };
+    if (band >= 5.0) return { cefr: 'B1', descriptor: 'Modest User' };
+    if (band >= 4.0) return { cefr: 'B1', descriptor: 'Limited User' };
+    return { cefr: 'A2', descriptor: 'Extremely Limited User' };
   }
 
   private promptSubmitExam(): void {
@@ -802,7 +1096,7 @@ export class ExamCockpitDossier {
         </div>
 
         <p style="font-size: 13px; color: var(--ink-muted); margin-bottom: 20px;">
-          Are you sure you want to end this test? Once submitted, your answers will be sealed and graded.
+          Are you sure you want to end this test? Once submitted, your answers will be sealed and graded against the official Cambridge 9.0 Band Scale.
         </p>
 
         <div style="display: flex; gap: 12px;">
@@ -824,13 +1118,221 @@ export class ExamCockpitDossier {
     modal.querySelector('.btn-confirm-submit')?.addEventListener('click', () => {
       AudioSynthesizer.play('absorb');
       modal.remove();
-      if (this.timerInterval) clearInterval(this.timerInterval);
-      if (this.onTestSubmitted) this.onTestSubmitted();
-      alert(`Test Submitted. Answered: ${answeredCount}/40. Score logged.`);
+      this.submitAndGradeExam(false);
     });
 
     document.body.appendChild(modal);
     (modal.querySelector('.btn-confirm-submit') as HTMLElement)?.focus();
+  }
+
+  public submitAndGradeExam(timeExpired = false): void {
+    if (this.timerInterval) clearInterval(this.timerInterval);
+
+    let rawScore = 0;
+    let p1Correct = 0;
+    let p2Correct = 0;
+    let p3Correct = 0;
+    let tfngCorrect = 0;
+    let mcqCorrect = 0;
+    let gapCorrect = 0;
+
+    this.questions.forEach(q => {
+      const isOk = this.checkQuestionCorrect(q);
+      if (isOk) {
+        rawScore++;
+        if (q.passageIndex === 0) p1Correct++;
+        else if (q.passageIndex === 1) p2Correct++;
+        else p3Correct++;
+
+        if (q.type === 'tfng') tfngCorrect++;
+        else if (q.type === 'mcq') mcqCorrect++;
+        else if (q.type === 'gap') gapCorrect++;
+      }
+    });
+
+    const bandScore = this.rawToBand(this.currentModule === 'LISTENING' ? 'listening' : 'reading', rawScore, 40);
+    const { cefr, descriptor } = this.getBandDescriptor(bandScore);
+    const pct = Math.round((rawScore / 40) * 100);
+
+    // Save attempt to IELTS_STATE in localStorage
+    if (typeof localStorage !== 'undefined') {
+      try {
+        const stored = JSON.parse(localStorage.getItem('IELTS_STATE') || '{"attempts":[]}');
+        stored.attempts = stored.attempts || [];
+        stored.attempts.push({
+          skill: this.currentModule.toLowerCase(),
+          date: new Date().toISOString(),
+          itemId: `cd-ielts-mock-${Date.now()}`,
+          band: bandScore,
+          raw: rawScore,
+          of: 40,
+          mock: true
+        });
+        localStorage.setItem('IELTS_STATE', JSON.stringify(stored));
+      } catch {
+        // quota guard
+      }
+    }
+
+    if (bandScore >= 7.0) {
+      AudioSynthesizer.play('level-up');
+    } else {
+      AudioSynthesizer.play('absorb');
+    }
+
+    if (this.onTestSubmitted) {
+      this.onTestSubmitted();
+    }
+
+    this.openBandConversionModal({
+      rawScore,
+      bandScore,
+      cefr,
+      descriptor,
+      pct,
+      p1Correct,
+      p2Correct,
+      p3Correct,
+      tfngCorrect,
+      mcqCorrect,
+      gapCorrect,
+      timeExpired
+    });
+  }
+
+  public openBandConversionModal(data: {
+    rawScore: number;
+    bandScore: number;
+    cefr: string;
+    descriptor: string;
+    pct: number;
+    p1Correct: number;
+    p2Correct: number;
+    p3Correct: number;
+    tfngCorrect: number;
+    mcqCorrect: number;
+    gapCorrect: number;
+    timeExpired?: boolean;
+  }): void {
+    const existing = document.getElementById('cd-band-conversion-modal');
+    if (existing) existing.remove();
+
+    const modal = document.createElement('div');
+    modal.id = 'cd-band-conversion-modal';
+    modal.className = 'completion-modal-overlay interactive cd-band-modal-overlay';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-label', 'Official Cambridge Band Score Report');
+
+    const needlePos = Math.min(100, Math.max(0, (data.bandScore / 9.0) * 100));
+
+    modal.innerHTML = `
+      <div class="cd-band-modal-card">
+        <div class="telemetry-label" style="display: flex; justify-content: space-between; align-items: center;">
+          <span>[ OFFICIAL CAMBRIDGE 9.0 BAND SCALE REPORT ]</span>
+          <span>${this.currentModule} // 40 QUESTIONS</span>
+        </div>
+
+        <div class="cd-band-header-badge">
+          <div>
+            <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-secondary);">OFFICIAL RESULT</div>
+            <div class="cd-band-number">BAND ${data.bandScore.toFixed(1)}</div>
+            <div style="font-size: 13px; font-weight: 700; color: var(--accent-gold); margin-top: 2px;">${data.descriptor}</div>
+          </div>
+          <div style="text-align: right;">
+            <span class="hud-pill" style="font-size: 14px; font-weight: 800; padding: 4px 10px; background: var(--accent-cyan); color: #080a0f; border-radius: 4px;">
+              CEFR ${data.cefr}
+            </span>
+            <div style="font-size: 12px; margin-top: 6px; font-family: var(--font-mono); color: var(--ink-primary); font-weight: 700;">
+              ${data.rawScore} / 40 Raw (${data.pct}%)
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Cambridge Band Gauge -->
+        <div style="margin: 16px 0 24px;">
+          <div style="display: flex; justify-content: space-between; font-size: 11px; font-family: var(--font-mono); color: var(--ink-muted); margin-bottom: 4px;">
+            <span>Band 0.0</span>
+            <span>Band 5.0</span>
+            <span>Band 6.5</span>
+            <span>Band 7.5</span>
+            <span>Band 9.0</span>
+          </div>
+          <div class="cd-scale-gauge-track">
+            <div class="cd-scale-gauge-needle" style="left: ${needlePos}%;" title="Score Band ${data.bandScore}"></div>
+          </div>
+        </div>
+
+        <!-- 3-Passage Breakdown -->
+        <div class="cd-breakdown-grid">
+          <div class="cd-breakdown-card">
+            <div style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">PASSAGE 1</div>
+            <div style="font-size: 16px; font-weight: 800; font-family: var(--font-mono); margin: 4px 0;">${data.p1Correct} / 13</div>
+            <div style="font-size: 11px; color: var(--accent-cyan); font-weight: 600;">${Math.round((data.p1Correct / 13) * 100)}%</div>
+          </div>
+          <div class="cd-breakdown-card">
+            <div style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">PASSAGE 2</div>
+            <div style="font-size: 16px; font-weight: 800; font-family: var(--font-mono); margin: 4px 0;">${data.p2Correct} / 13</div>
+            <div style="font-size: 11px; color: var(--accent-cyan); font-weight: 600;">${Math.round((data.p2Correct / 13) * 100)}%</div>
+          </div>
+          <div class="cd-breakdown-card">
+            <div style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">PASSAGE 3</div>
+            <div style="font-size: 16px; font-weight: 800; font-family: var(--font-mono); margin: 4px 0;">${data.p3Correct} / 14</div>
+            <div style="font-size: 11px; color: var(--accent-cyan); font-weight: 600;">${Math.round((data.p3Correct / 14) * 100)}%</div>
+          </div>
+        </div>
+
+        <!-- Question Types Breakdown -->
+        <div style="display: flex; justify-content: space-around; font-size: 12px; font-family: var(--font-mono); padding: 8px 12px; background: var(--bg-surface-sunk); border-radius: 4px; margin-bottom: 20px;">
+          <div>TFNG: <strong>${data.tfngCorrect}/13</strong></div>
+          <div>MCQ: <strong>${data.mcqCorrect}/13</strong></div>
+          <div>Gap: <strong>${data.gapCorrect}/14</strong></div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div style="display: flex; gap: 10px;">
+          <button class="hud-btn btn-review-exam" style="flex: 1; justify-content: center; min-height: 44px; font-weight: 700; background: var(--accent-cyan); color: #080a0f;">
+            [ 🔍 REVIEW TEST WITH ANSWERS ]
+          </button>
+          <button class="hud-btn btn-retake-exam" style="flex: 1; justify-content: center; min-height: 44px; font-weight: 700;">
+            [ 🔄 RETAKE TEST ]
+          </button>
+          <button class="hud-btn btn-close-report" style="padding: 0 16px; justify-content: center; min-height: 44px;">
+            Close
+          </button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    modal.querySelector('.btn-close-report')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      modal.remove();
+    });
+
+    modal.querySelector('.btn-retake-exam')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      modal.remove();
+      this.isReviewMode = false;
+      this.timerSeconds = 3600;
+      this.activeQuestionIndex = 0;
+      this.questions.forEach(q => {
+        q.userAnswer = undefined;
+        q.isFlagged = false;
+      });
+      this.render();
+    });
+
+    modal.querySelector('.btn-review-exam')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      modal.remove();
+      this.isReviewMode = true;
+      this.activeQuestionIndex = 0;
+      this.render();
+    });
+
+    (modal.querySelector('.btn-review-exam') as HTMLElement)?.focus();
   }
 
   private escapeHtml(str: string): string {
@@ -848,3 +1350,4 @@ export class ExamCockpitDossier {
     this.removeHighlightPopover();
   }
 }
+

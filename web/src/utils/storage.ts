@@ -1,6 +1,14 @@
 import { Cefr, isCefr } from '../core/cefr';
 import { SKILL_BRANCHES } from '../core/skill-tree-data';
 import { SRSCardState } from '../core/srs-engine';
+import type { ImportMode, ImportResult, UnifiedProfile } from '../core/profile-sync-engine';
+
+export type { ImportMode, ImportResult, UnifiedProfile };
+
+export interface ProfileSyncEngineAdapter {
+  exportProfile(triggerDownload?: boolean): string;
+  importProfile(jsonStr: string, mode?: ImportMode): ImportResult;
+}
 
 export type SkillId = 'vocab' | 'grammar' | 'reading' | 'listening' | 'writing' | 'speaking';
 
@@ -689,29 +697,71 @@ export class StorageManager {
     this.saveState(state);
   }
 
+  private static syncEngine: ProfileSyncEngineAdapter | null = null;
+
+  public static registerSyncEngine(engine: ProfileSyncEngineAdapter): void {
+    this.syncEngine = engine;
+  }
+
   public static exportBackup(): string {
     const state = this.loadState();
     return JSON.stringify(state, null, 2);
   }
 
+  public static exportUnifiedProfile(triggerDownload: boolean = true): string {
+    if (this.syncEngine) {
+      return this.syncEngine.exportProfile(triggerDownload);
+    }
+    if (typeof (globalThis as any).ProfileSyncEngine !== 'undefined') {
+      return (globalThis as any).ProfileSyncEngine.exportProfile(triggerDownload);
+    }
+    return this.exportBackup();
+  }
+
+  public static importUnifiedProfile(jsonStr: string, mode: ImportMode = 'overwrite'): ImportResult {
+    if (this.syncEngine) {
+      return this.syncEngine.importProfile(jsonStr, mode);
+    }
+    if (typeof (globalThis as any).ProfileSyncEngine !== 'undefined') {
+      return (globalThis as any).ProfileSyncEngine.importProfile(jsonStr, mode);
+    }
+    const success = this.importBackup(jsonStr);
+    return {
+      success,
+      mode,
+      detectedVersion: 4,
+      migratedFromLegacy: true,
+      itemsRestored: { singularityCards: 0, ieltsKeys: 0, errorRecords: 0 }
+    };
+  }
+
   public static importBackup(jsonString: string): boolean {
     try {
-      const parsed = JSON.parse(jsonString) as AppStorageState;
-      if (parsed && typeof parsed === 'object' && parsed.cardStates) {
-        if (!isCefr(parsed.learnerLevel)) this.seedLegacyTreeProgress(parsed);
-        const migratedLevel = this.migratedLevel(parsed);
-        this.saveState({
-          ...DEFAULT_STATE,
-          ...parsed,
-          version: CURRENT_VERSION,
-          learnerLevel: migratedLevel,
-          skillLevels: this.migratedSkillLevels(parsed, migratedLevel),
-          skillProfileHistory: Array.isArray(parsed.skillProfileHistory) ? parsed.skillProfileHistory : [],
-          placementDone: parsed.placementDone ?? !isCefr(parsed.learnerLevel),
-          errorLedger: this.migratedErrorLedger(parsed),
-          catProfiles: parsed.catProfiles || {}
-        });
-        return true;
+      const parsed = JSON.parse(jsonString) as any;
+      if (parsed && typeof parsed === 'object') {
+        // Transparently handle v5 UnifiedProfile envelope
+        if (parsed.version === 5 || parsed.singularity) {
+          const res = this.importUnifiedProfile(jsonString, 'overwrite');
+          return res.success;
+        }
+
+        // Handle v1-v4 backup formats
+        if (parsed.cardStates || parsed.learnerLevel) {
+          if (!isCefr(parsed.learnerLevel)) this.seedLegacyTreeProgress(parsed);
+          const migratedLevel = this.migratedLevel(parsed);
+          this.saveState({
+            ...DEFAULT_STATE,
+            ...parsed,
+            version: CURRENT_VERSION,
+            learnerLevel: migratedLevel,
+            skillLevels: this.migratedSkillLevels(parsed, migratedLevel),
+            skillProfileHistory: Array.isArray(parsed.skillProfileHistory) ? parsed.skillProfileHistory : [],
+            placementDone: parsed.placementDone ?? !isCefr(parsed.learnerLevel),
+            errorLedger: this.migratedErrorLedger(parsed),
+            catProfiles: parsed.catProfiles || {}
+          });
+          return true;
+        }
       }
       return false;
     } catch (err) {

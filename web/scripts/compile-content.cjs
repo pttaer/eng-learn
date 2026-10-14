@@ -666,104 +666,251 @@ function compileIelts() {
     pragmaticRoleplays: []
   };
 
-  // 1. Reading (Academic 13 Questions)
+  // 1. Reading (Full 40 Questions across 3 Passages)
   const readingFile = path.join(dir, 'academic-reading.md');
   if (fs.existsSync(readingFile)) {
     const raw = fs.readFileSync(readingFile, 'utf8').replace(/\r\n/g, '\n');
     const { meta, body } = parseFrontmatter(raw);
-    const paragraphs = {};
-    const paraMatches = body.matchAll(/### Paragraph ([A-G])\r?\n([\s\S]*?)(?=(### Paragraph|\r?\n---|$))/g);
-    for (const m of paraMatches) {
-      paragraphs[m[1]] = m[2].trim();
-    }
 
-    const questions = [];
-    const headingMatches = body.matchAll(/- \*\*Question (\d+)\*\*:\s*Paragraph ([A-G]) -> `([a-z]+)`/g);
-    for (const m of headingMatches) {
-      questions.push({
-        number: parseInt(m[1], 10),
-        type: 'HEADING_MATCHING',
-        target: `Paragraph ${m[2]}`,
-        key: m[3]
-      });
-    }
+    const passageBlocks = body.split(/^# Reading Passage\s+/m).slice(1);
+    const passages = [];
+    const allReadingQuestions = [];
 
-    const tfngMatches = body.matchAll(/- \*\*Question (\d+)\*\*:\s*([^\n\r]+)\r?\n\s*\*Key\*:\s*`([A-Z\s]+)`/g);
-    for (const m of tfngMatches) {
-      questions.push({
-        number: parseInt(m[1], 10),
-        type: 'TRUE_FALSE_NOT_GIVEN',
-        statement: m[2].trim(),
-        key: m[3].trim()
-      });
-    }
+    passageBlocks.forEach((block, idx) => {
+      const pNum = idx + 1;
+      const firstLine = block.split('\n')[0].trim();
+      const pTitle = firstLine.replace(/^\d+:\s*/, '').trim();
 
-    const summaryMatches = body.matchAll(/- \*\*Question (\d+)\*\*:\s*`([^`]+)`/g);
-    for (const m of summaryMatches) {
-      questions.push({
-        number: parseInt(m[1], 10),
-        type: 'SUMMARY_COMPLETION',
-        key: m[2].trim()
+      const paragraphs = {};
+      const paraMatches = block.matchAll(/### Paragraph ([A-H])\r?\n([\s\S]*?)(?=(### Paragraph|\r?\n---|\r?\n## Questions|$))/g);
+      for (const m of paraMatches) {
+        paragraphs[m[1]] = m[2].trim();
+      }
+
+      const questions = [];
+
+      // Heading Matching (e.g. Q1-6)
+      const headingMatches = block.matchAll(/- \*\*Question (\d+)\*\*:\s*Paragraph ([A-G]) -> `([a-z]+)`/g);
+      for (const m of headingMatches) {
+        questions.push({
+          number: parseInt(m[1], 10),
+          passage: pNum,
+          type: 'HEADING_MATCHING',
+          target: `Paragraph ${m[2]}`,
+          key: m[3]
+        });
+      }
+
+      // Matching Information (e.g. Q14-19)
+      const matchInfoMatches = block.matchAll(/- \*\*Question (\d+)\*\*:\s*Paragraph ([A-G]) -> `([A-G])`\s*\(([^)]+)\)/g);
+      for (const m of matchInfoMatches) {
+        questions.push({
+          number: parseInt(m[1], 10),
+          passage: pNum,
+          type: 'MATCHING_INFORMATION',
+          key: m[3].trim(),
+          info: m[4].trim()
+        });
+      }
+
+      // True / False / Not Given & Yes / No / Not Given (e.g. Q7-10, Q27-31)
+      const tfngMatches = block.matchAll(/- \*\*Question (\d+)\*\*:\s*([^\n\r]+)\r?\n\s*\*Key\*:\s*`([A-Z\s]+)`/g);
+      for (const m of tfngMatches) {
+        const statement = m[2].trim();
+        const key = m[3].trim();
+        const isYnng = /^(YES|NO|NOT GIVEN)$/.test(key) && (key === 'YES' || key === 'NO');
+        questions.push({
+          number: parseInt(m[1], 10),
+          passage: pNum,
+          type: isYnng ? 'YES_NO_NOT_GIVEN' : 'TRUE_FALSE_NOT_GIVEN',
+          statement,
+          key
+        });
+      }
+
+      // Multiple Choice (e.g. Q20-22, Q37-40)
+      const mcMatches = block.matchAll(/- \*\*Question (\d+)\*\*:\s*([^\n\r]+)(?:\r?\n\s+-[^\n\r]+)+\r?\n\s*\*Key\*:\s*`([A-D])`/g);
+      for (const m of mcMatches) {
+        questions.push({
+          number: parseInt(m[1], 10),
+          passage: pNum,
+          type: 'MULTIPLE_CHOICE',
+          question: m[2].trim(),
+          key: m[3].trim()
+        });
+      }
+
+      // Summary Completion (e.g. Q11-13)
+      const summaryMatches = block.matchAll(/- \*\*Question (\d+)\*\*:\s*`([^`]+)`/g);
+      for (const m of summaryMatches) {
+        questions.push({
+          number: parseInt(m[1], 10),
+          passage: pNum,
+          type: 'SUMMARY_COMPLETION',
+          key: m[2].trim()
+        });
+      }
+
+      // Sentence Completion (e.g. Q23-26, Q32-36)
+      const sentenceMatches = block.matchAll(/- \*\*Question (\d+)\*\*:[^\n\r]*\r?\n\s*\*Key\*:\s*`([^`]+)`/g);
+      for (const m of sentenceMatches) {
+        questions.push({
+          number: parseInt(m[1], 10),
+          passage: pNum,
+          type: 'SENTENCE_COMPLETION',
+          key: m[2].trim()
+        });
+      }
+
+      // Sort and deduplicate questions for this passage
+      const uniqueQMap = new Map();
+      questions.forEach(q => {
+        if (!uniqueQMap.has(q.number)) {
+          uniqueQMap.set(q.number, q);
+        }
       });
-    }
+      const sortedQ = Array.from(uniqueQMap.values()).sort((a, b) => a.number - b.number);
+
+      passages.push({
+        passageNumber: pNum,
+        title: pTitle,
+        paragraphs,
+        questions: sortedQ
+      });
+
+      sortedQ.forEach(q => allReadingQuestions.push(q));
+    });
+
+    allReadingQuestions.sort((a, b) => a.number - b.number);
+
+    const p1 = passages[0] || { title: "Passage 1", paragraphs: {}, questions: [] };
 
     ieltsData.reading = {
       meta,
-      passageTitle: "The Neurobiology of Bilingual Executive Function",
-      paragraphs,
-      questions: questions.sort((a, b) => a.number - b.number)
+      passageTitle: p1.title,
+      paragraphs: p1.paragraphs,
+      questions: p1.questions, // Exactly 13 questions for Passage 1 (preserving verify-cd-ielts)
+      passages,
+      allQuestions: allReadingQuestions,
+      fullMockQuestions: allReadingQuestions,
+      totalQuestions: allReadingQuestions.length
     };
   }
 
-  // 2. Listening (Sections 1 & 2)
+  // 2. Listening (Full 40 Questions across 4 Sections)
   const listeningFile = path.join(dir, 'listening-sections.md');
   if (fs.existsSync(listeningFile)) {
     const raw = fs.readFileSync(listeningFile, 'utf8').replace(/\r\n/g, '\n');
     const { meta, body } = parseFrontmatter(raw);
 
-    const s1Questions = [];
-    const q1Matches = body.matchAll(/- \*\*([^*]+)\*\*:\s*([^\n\r]*?)\[Q(\d+):\s*([^\]]+)\]/g);
-    for (const m of q1Matches) {
-      s1Questions.push({
-        number: parseInt(m[3], 10),
-        prompt: m[1].trim(),
-        prefix: m[2].trim(),
-        key: m[4].trim()
-      });
-    }
+    const sectionBlocks = body.split(/^# Section\s+/m).slice(1);
+    const sections = [];
+    const allListeningQuestions = [];
 
-    const s2Questions = [];
-    const mcMatches = body.matchAll(/- \*\*Question (\d+)\*\*:\s*([^\n\r]+)[\s\S]*?\*Key\*:\s*`([A-Z])`/g);
-    for (const m of mcMatches) {
-      s2Questions.push({
-        number: parseInt(m[1], 10),
-        type: 'MULTIPLE_CHOICE',
-        question: m[2].trim(),
-        key: m[3].trim()
-      });
-    }
+    sectionBlocks.forEach((block, idx) => {
+      const sNum = idx + 1;
+      const firstLine = block.split('\n')[0].trim();
+      const sTitle = firstLine.replace(/^\d+:\s*/, '').trim();
 
-    const mapMatches = body.matchAll(/- \*\*Question (\d+)\*\*:\s*([^:]+):\s*`([A-E])`\s*\(([^)]+)\)/g);
-    for (const m of mapMatches) {
-      s2Questions.push({
-        number: parseInt(m[1], 10),
-        type: 'MAP_MATCHING',
-        locationPrompt: m[2].trim(),
-        key: m[3].trim(),
-        facility: m[4].trim()
+      const transcriptMatch = block.match(/### Audio Transcript\r?\n([\s\S]*?)(?=(---|\r?\n## Questions|$))/);
+      const transcript = transcriptMatch ? transcriptMatch[1].trim() : '';
+
+      const questions = [];
+
+      // Q1-10 Form completion: - **Subscriber Name**: ... [Q1: 42 Bramblewood]
+      const formMatches = block.matchAll(/- \*\*([^*]+)\*\*:\s*([^\n\r]*?)\[Q(\d+):\s*([^\]]+)\]/g);
+      for (const m of formMatches) {
+        questions.push({
+          number: parseInt(m[3], 10),
+          section: sNum,
+          type: 'FORM_COMPLETION',
+          prompt: m[1].trim(),
+          prefix: m[2].trim(),
+          key: m[4].trim()
+        });
+      }
+
+      // Q11-15 & Q21-25 Multiple Choice
+      const mcMatches = block.matchAll(/- \*\*Question (\d+)\*\*:\s*([^\n\r]+)[\s\S]*?\*Key\*:\s*`([A-C])`/g);
+      for (const m of mcMatches) {
+        questions.push({
+          number: parseInt(m[1], 10),
+          section: sNum,
+          type: 'MULTIPLE_CHOICE',
+          question: m[2].trim(),
+          key: m[3].trim()
+        });
+      }
+
+      // Q16-20 Map / Facility Matching
+      const mapMatches = block.matchAll(/- \*\*Question (\d+)\*\*:\s*([^:]+):\s*`([A-E])`\s*\(([^)]+)\)/g);
+      for (const m of mapMatches) {
+        questions.push({
+          number: parseInt(m[1], 10),
+          section: sNum,
+          type: 'MAP_MATCHING',
+          locationPrompt: m[2].trim(),
+          key: m[3].trim(),
+          facility: m[4].trim()
+        });
+      }
+
+      // Q26-30 Matching Protocols
+      const protocolMatches = block.matchAll(/- \*\*Question (\d+)\*\*:\s*([^:]+)->\s*`([A-G])`/g);
+      for (const m of protocolMatches) {
+        questions.push({
+          number: parseInt(m[1], 10),
+          section: sNum,
+          type: 'MATCHING',
+          prompt: m[2].trim(),
+          key: m[3].trim()
+        });
+      }
+
+      // Q31-40 Note completion: - Traditional theory ... [Q31: thermosiphon]
+      const noteMatches = block.matchAll(/- ([^\n\r]*?)\[Q(\d+):\s*([^\]]+)\]/g);
+      for (const m of noteMatches) {
+        if (!m[1].startsWith('**')) {
+          questions.push({
+            number: parseInt(m[2], 10),
+            section: sNum,
+            type: 'NOTE_COMPLETION',
+            context: m[1].trim(),
+            key: m[3].trim()
+          });
+        }
+      }
+
+      const uniqueQMap = new Map();
+      questions.forEach(q => {
+        if (!uniqueQMap.has(q.number)) {
+          uniqueQMap.set(q.number, q);
+        }
       });
-    }
+      const sortedQ = Array.from(uniqueQMap.values()).sort((a, b) => a.number - b.number);
+
+      sections.push({
+        sectionNumber: sNum,
+        title: sTitle,
+        transcript,
+        questions: sortedQ
+      });
+
+      sortedQ.forEach(q => allListeningQuestions.push(q));
+    });
+
+    allListeningQuestions.sort((a, b) => a.number - b.number);
 
     ieltsData.listening = {
       meta,
-      section1: {
-        title: "Community Solar Co-operative Membership Intake",
-        questions: s1Questions.sort((a, b) => a.number - b.number)
-      },
-      section2: {
-        title: "Riverside Eco-Park & Community Food Forest Tour",
-        questions: s2Questions.sort((a, b) => a.number - b.number)
-      }
+      sections,
+      section1: sections[0] || { title: "Section 1", transcript: "", questions: [] },
+      section2: sections[1] || { title: "Section 2", transcript: "", questions: [] },
+      section3: sections[2] || { title: "Section 3", transcript: "", questions: [] },
+      section4: sections[3] || { title: "Section 4", transcript: "", questions: [] },
+      allQuestions: allListeningQuestions,
+      fullMockQuestions: allListeningQuestions,
+      totalQuestions: allListeningQuestions.length
     };
   }
 
@@ -778,7 +925,7 @@ function compileIelts() {
     const task2Body = taskParts[1] || '';
 
     const svgMatch = task1Body.match(/```xml\r?\n([\s\S]*?)\r?\n```/);
-    const task1ModelMatch = task1Body.match(/### Band 8\.5 Model Response[^\n]*\r?\n([\s\S]*?)(?=\r?\n---|$)/);
+    const task1ModelMatch = task1Body.match(/### Band 8\.5 Model Response[^\n]*\r?\n([\s\S]*?)(?=\r?\n---|\$)/);
     const band6Match = task2Body.match(/### Band 6\.0 Model Response[^\n]*\r?\n([\s\S]*?)(?=\r?\n#### Analytical)/);
     const band8Match = task2Body.match(/### Band 8\.5 Model Response[^\n]*\r?\n([\s\S]*?)$/);
 
@@ -805,7 +952,7 @@ function compileIelts() {
   if (fs.existsSync(speakingFile)) {
     const raw = fs.readFileSync(speakingFile, 'utf8').replace(/\r\n/g, '\n');
     const { meta, body } = parseFrontmatter(raw);
-    const part2ModelMatch = body.match(/### Band 8\.5 Model Monologue[^\n]*\r?\n([\s\S]*?)(?=\r?\n---|$)/);
+    const part2ModelMatch = body.match(/### Band 8\.5 Model Monologue[^\n]*\r?\n([\s\S]*?)(?=\r?\n---|\$)/);
 
     ieltsData.speaking = {
       meta,
@@ -855,7 +1002,7 @@ function compileIelts() {
 
       const thesisSieve = sec.match(/\*Thesis Avoidance Sieve\*:\s*([^\n\r]+)/);
       const connectorSieve = sec.match(/\*Mechanical Connector Sieve\*:\s*([^\n\r]+)/);
-      const clichéSieve = sec.match(/\*Thesaurus Cliché Sieve\*:\s*([^\n\r]+)/);
+      const clichéSieve = sec.match(/\*Thesaurus Clich[eé] Sieve\*:\s*([^\n\r]+)/);
       const codaSieve = sec.match(/\*Phonetic Coda Release\*:\s*([^\n\r]+)/);
 
       if (thesisSieve) item.sieves.thesisAvoidance = thesisSieve[1].trim();
@@ -867,8 +1014,31 @@ function compileIelts() {
     });
   }
 
+  const IELTS_DATA_DIR = path.join(__dirname, '..', 'src', 'ielts', 'data');
+  if (!fs.existsSync(IELTS_DATA_DIR)) {
+    fs.mkdirSync(IELTS_DATA_DIR, { recursive: true });
+  }
+
+  const mockData = {
+    title: "Computer-Delivered IELTS Academic 40-Question Mock Test Suite",
+    standards: ieltsData.standards,
+    reading: {
+      passages: ieltsData.reading ? ieltsData.reading.passages : [],
+      questions: ieltsData.reading ? ieltsData.reading.allQuestions : [],
+      totalQuestions: ieltsData.reading ? ieltsData.reading.allQuestions.length : 0
+    },
+    listening: {
+      sections: ieltsData.listening ? ieltsData.listening.sections : [],
+      questions: ieltsData.listening ? ieltsData.listening.allQuestions : [],
+      totalQuestions: ieltsData.listening ? ieltsData.listening.allQuestions.length : 0
+    }
+  };
+
   fs.writeFileSync(path.join(DATA_DIR, 'ielts.json'), JSON.stringify(ieltsData, null, 2), 'utf8');
-  console.log(`[COMPILE] ielts.json: Reading (13 Qs), Listening (20 Qs), Writing Tasks, Speaking Parts, and ${ieltsData.pragmaticRoleplays.length} Pragmatic Roleplays.`);
+  fs.writeFileSync(path.join(IELTS_DATA_DIR, 'ielts-mock.json'), JSON.stringify(mockData, null, 2), 'utf8');
+  fs.writeFileSync(path.join(DATA_DIR, 'ielts-mock.json'), JSON.stringify(mockData, null, 2), 'utf8');
+
+  console.log(`[COMPILE] ielts.json & ielts-mock.json: Reading (${ieltsData.reading?.allQuestions?.length || 0} Qs in ${ieltsData.reading?.passages?.length || 0} Passages), Listening (${ieltsData.listening?.allQuestions?.length || 0} Qs in ${ieltsData.listening?.sections?.length || 0} Sections), Writing Tasks, Speaking Parts, and ${ieltsData.pragmaticRoleplays.length} Pragmatic Roleplays.`);
 }
 
 function compileIeltsCourse() {

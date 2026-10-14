@@ -33,6 +33,8 @@ import { SerlGauntletEngine } from './core/serl-gauntlet-engine';
 import { CardTiltController, NebulaCanvas } from './core/perspective-canvas';
 import { NotificationEngine } from './core/notification-engine';
 import { AmbientMusicEngine, ambientMusicEngine } from './core/ambient-music-engine';
+import { ProfileSyncEngine } from './core/profile-sync-engine';
+import { SpeechEvaluator } from './core/speech-evaluator';
 import collocationsData from './assets/data/collocations.json';
 
 // Expose engines to window for automated headless testing & telemetry inspection
@@ -51,6 +53,8 @@ import collocationsData from './assets/data/collocations.json';
 (window as any).SerlGauntletEngine = SerlGauntletEngine;
 (window as any).MultiSkillQuizModal = MultiSkillQuizModal;
 (window as any).StorageManager = StorageManager;
+(window as any).ProfileSyncEngine = ProfileSyncEngine;
+(window as any).SpeechEvaluator = SpeechEvaluator;
 (window as any).CardTiltController = CardTiltController;
 (window as any).NebulaCanvas = NebulaCanvas;
 (window as any).NotificationEngine = NotificationEngine;

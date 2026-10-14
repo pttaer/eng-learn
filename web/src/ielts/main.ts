@@ -10,6 +10,13 @@ import { strategyView } from './views/strategy';
 import { diagnosticView } from './views/diagnostic';
 import { writingStudioView } from './views/writing-studio';
 import { listeningTrapsView } from './views/listening-traps';
+import { AudioSynthesizer } from '../core/audio-synthesizer';
+import { SpeechEvaluator } from '../core/speech-evaluator';
+import * as ieltsTts from './tts';
+
+(window as any).AudioSynthesizer = AudioSynthesizer;
+(window as any).SpeechEvaluator = SpeechEvaluator;
+(window as any).ieltsTts = ieltsTts;
 
 type View = (root: HTMLElement) => () => void;
 

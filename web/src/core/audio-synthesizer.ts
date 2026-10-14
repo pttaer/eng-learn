@@ -113,6 +113,67 @@ export interface MinimalPairItem {
   focusHint: string;
 }
 
+export type AccentCadenceType = 'uk-rp' | 'general-american' | 'australian' | 'scottish';
+
+export interface AccentCadenceModel {
+  id: AccentCadenceType;
+  label: string;
+  langPrefixes: string[];
+  preferredVoiceNames: RegExp[];
+  rate: number;
+  pitch: number;
+  commaPauseMs: number;
+  periodPauseMs: number;
+  description: string;
+}
+
+export const ACCENT_CADENCE_MODELS: Record<AccentCadenceType, AccentCadenceModel> = {
+  'uk-rp': {
+    id: 'uk-rp',
+    label: 'UK RP (Received Pronunciation)',
+    langPrefixes: ['en-GB', 'en_GB'],
+    preferredVoiceNames: [/george/i, /oliver/i, /hazel/i, /susan/i, /libby/i, /serena/i, /united kingdom/i, /great britain/i, /british/i],
+    rate: 0.94,
+    pitch: 1.0,
+    commaPauseMs: 250,
+    periodPauseMs: 420,
+    description: 'Cambridge RP academic standard with measured tempo, crisp articulation, and deliberate pause structure.'
+  },
+  'general-american': {
+    id: 'general-american',
+    label: 'General American',
+    langPrefixes: ['en-US', 'en_US'],
+    preferredVoiceNames: [/david/i, /mark/i, /zira/i, /samantha/i, /alex/i, /united states/i, /american/i],
+    rate: 0.98,
+    pitch: 0.98,
+    commaPauseMs: 200,
+    periodPauseMs: 380,
+    description: 'North American broadcast cadence with rhythmic continuity, rhotic vowels, and steady pacing.'
+  },
+  'australian': {
+    id: 'australian',
+    label: 'Australian',
+    langPrefixes: ['en-AU', 'en_AU'],
+    preferredVoiceNames: [/karen/i, /lee/i, /russell/i, /catherine/i, /natasha/i, /australia/i, /australian/i],
+    rate: 0.95,
+    pitch: 1.03,
+    commaPauseMs: 220,
+    periodPauseMs: 400,
+    description: 'Australian cadence with natural high-rising terminal tendencies and relaxed vowel elongation.'
+  },
+  'scottish': {
+    id: 'scottish',
+    label: 'Scottish',
+    langPrefixes: ['en-GB-scotland', 'en_GB', 'en-GB'],
+    preferredVoiceNames: [/fiona/i, /scottish/i, /scotland/i, /gordon/i],
+    rate: 0.91,
+    pitch: 1.05,
+    commaPauseMs: 260,
+    periodPauseMs: 450,
+    description: 'Scottish cadence featuring distinct prosodic lilts, rolling rhythmic cadences, and extended clause boundaries.'
+  }
+};
+
 export const VOWEL_BENCHMARKS: VowelBenchmark[] = [
   {
     phoneme: '/iː/',
@@ -348,6 +409,19 @@ export class AudioSynthesizer {
   private static focusHumFilter: BiquadFilterNode | null = null;
   private static isFocusHumRunning: boolean = false;
   private static focusStopTimer: any = null;
+
+  // Cambridge Exam Room Ambience Nodes (subtle pink noise + 40Hz acoustic room resonance)
+  private static examAmbienceGain: GainNode | null = null;
+  private static examAmbienceSubOsc: OscillatorNode | null = null;
+  private static examAmbienceSubGain: GainNode | null = null;
+  private static examAmbienceNoiseSource: AudioBufferSourceNode | null = null;
+  private static examAmbienceNoiseFilter: BiquadFilterNode | null = null;
+  private static examAmbienceNoiseGain: GainNode | null = null;
+  private static isExamAmbienceRunning: boolean = false;
+  private static examAmbienceStopTimer: any = null;
+
+  // Multi-accent speech cadence model
+  private static activeCadence: AccentCadenceType = 'uk-rp';
 
   // Mechanical Keystroke Shared Buffer
   private static clickNoiseBuffer: AudioBuffer | null = null;
@@ -638,6 +712,14 @@ export class AudioSynthesizer {
         const currentVoice = Math.max(this.MUTE_FLOOR, this.voiceGain.gain.value);
         this.voiceGain.gain.setValueAtTime(currentVoice, now);
         this.voiceGain.gain.exponentialRampToValueAtTime(Math.max(this.EPSILON, this.voiceVolume), now + 0.03);
+      }
+
+      if (this.examAmbienceGain) {
+        this.examAmbienceGain.gain.cancelScheduledValues(now);
+        const currentAmb = Math.max(this.MUTE_FLOOR, this.examAmbienceGain.gain.value);
+        this.examAmbienceGain.gain.setValueAtTime(currentAmb, now);
+        const targetAmb = (this.isMuted || this.masterVolume === 0) ? this.MUTE_FLOOR : 0.025;
+        this.examAmbienceGain.gain.exponentialRampToValueAtTime(targetAmb, now + 0.03);
       }
     } catch {
       // Degrade gracefully
@@ -1455,6 +1537,187 @@ export class AudioSynthesizer {
     this.focusHumGain = null;
   }
 
+  // =========================================================================
+  // CAMBRIDGE EXAM ROOM AMBIENCE SUBSYSTEM (40Hz RESONANCE + PINK NOISE)
+  // =========================================================================
+
+  /**
+   * Activates or disables subtle procedural Cambridge exam hall acoustics.
+   * Synthesizes 40Hz acoustic structural room resonance and soft Kellet-filtered
+   * pink noise to emulate authentic exam presence with strict zero DC-pop envelopes.
+   */
+  public static playExamRoomAmbience(enabled: boolean): void {
+    if (enabled) {
+      this.isExamAmbienceRunning = true;
+      if (this.examAmbienceStopTimer) {
+        clearTimeout(this.examAmbienceStopTimer);
+        this.examAmbienceStopTimer = null;
+      }
+
+      if (!this.ctx || this.ctx.state === 'suspended') {
+        this.ensureActiveContext()
+          .then(() => {
+            if (!this.isExamAmbienceRunning || !this.ctx || !this.masterGain) return;
+            this.initExamRoomAmbienceNodes();
+          })
+          .catch(() => {});
+        return;
+      }
+
+      this.initExamRoomAmbienceNodes();
+    } else {
+      this.isExamAmbienceRunning = false;
+      if (this.examAmbienceStopTimer) {
+        clearTimeout(this.examAmbienceStopTimer);
+        this.examAmbienceStopTimer = null;
+      }
+
+      if (!this.ctx || !this.examAmbienceGain) {
+        this.cleanupExamRoomAmbienceNodes();
+        return;
+      }
+
+      try {
+        const t = this.ctx.currentTime;
+        this.examAmbienceGain.gain.cancelScheduledValues(t);
+        const curVal = Math.max(this.MUTE_FLOOR, this.examAmbienceGain.gain.value);
+        this.examAmbienceGain.gain.setValueAtTime(curVal, t);
+        this.examAmbienceGain.gain.exponentialRampToValueAtTime(this.MUTE_FLOOR, t + 0.3);
+
+        this.examAmbienceStopTimer = setTimeout(() => {
+          if (!this.isExamAmbienceRunning) {
+            this.cleanupExamRoomAmbienceNodes();
+          }
+        }, 350);
+      } catch {
+        this.cleanupExamRoomAmbienceNodes();
+      }
+    }
+  }
+
+  public static isExamRoomAmbienceActive(): boolean {
+    return this.isExamAmbienceRunning;
+  }
+
+  private static initExamRoomAmbienceNodes(): void {
+    if (!this.ctx || !this.masterGain || this.examAmbienceGain) return;
+
+    try {
+      const ctx = this.ctx;
+      const t = ctx.currentTime;
+
+      // Master room ambience gain clamped to 0.025 (subtle, non-intrusive)
+      const masterAmbGain = ctx.createGain();
+      const targetGain = (this.isMuted || this.masterVolume === 0) ? this.MUTE_FLOOR : 0.025;
+      masterAmbGain.gain.setValueAtTime(this.EPSILON, t);
+      masterAmbGain.gain.exponentialRampToValueAtTime(targetGain, t + 0.4);
+
+      // Connect to musicGain bus if present, else masterGain
+      const destination = this.musicGain || this.masterGain;
+      masterAmbGain.connect(destination);
+      this.examAmbienceGain = masterAmbGain;
+
+      // 1. 40Hz acoustic structural room resonance
+      const subOsc = ctx.createOscillator();
+      subOsc.type = 'sine';
+      subOsc.frequency.setValueAtTime(40, t);
+
+      const subGain = ctx.createGain();
+      subGain.gain.setValueAtTime(0.35, t);
+      subOsc.connect(subGain);
+      subGain.connect(masterAmbGain);
+
+      // 2. Subtle procedural pink noise floor simulating hall air circulation
+      const sampleRate = ctx.sampleRate || 44100;
+      const bufferSize = Math.floor(sampleRate * 2); // 2-second looped buffer
+      const noiseBuffer = ctx.createBuffer(1, bufferSize, sampleRate);
+      const data = noiseBuffer.getChannelData(0);
+      let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        b0 = 0.99886 * b0 + white * 0.0555179;
+        b1 = 0.99332 * b1 + white * 0.0750759;
+        b2 = 0.96900 * b2 + white * 0.1538520;
+        b3 = 0.86650 * b3 + white * 0.3104856;
+        b4 = 0.55000 * b4 + white * 0.5329522;
+        b5 = -0.7616 * b5 - white * 0.0168980;
+        data[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.035;
+        b6 = white * 0.115926;
+      }
+
+      const noiseSource = ctx.createBufferSource();
+      noiseSource.buffer = noiseBuffer;
+      noiseSource.loop = true;
+
+      // Lowpass room filter shaping air handling resonance
+      const noiseFilter = ctx.createBiquadFilter();
+      noiseFilter.type = 'lowpass';
+      noiseFilter.frequency.setValueAtTime(450, t);
+      noiseFilter.Q.setValueAtTime(1.1, t);
+
+      const noiseGain = ctx.createGain();
+      noiseGain.gain.setValueAtTime(0.5, t);
+
+      noiseSource.connect(noiseFilter);
+      noiseFilter.connect(noiseGain);
+      noiseGain.connect(masterAmbGain);
+
+      subOsc.start(t);
+      noiseSource.start(t);
+
+      this.examAmbienceSubOsc = subOsc;
+      this.examAmbienceSubGain = subGain;
+      this.examAmbienceNoiseSource = noiseSource;
+      this.examAmbienceNoiseFilter = noiseFilter;
+      this.examAmbienceNoiseGain = noiseGain;
+    } catch (err) {
+      console.warn('[AUDIO] Error initializing exam room ambience:', err);
+      this.cleanupExamRoomAmbienceNodes();
+    }
+  }
+
+  private static cleanupExamRoomAmbienceNodes(): void {
+    try {
+      if (this.examAmbienceSubOsc) {
+        this.examAmbienceSubOsc.stop();
+        this.examAmbienceSubOsc.disconnect();
+      }
+    } catch {}
+    try {
+      if (this.examAmbienceSubGain) {
+        this.examAmbienceSubGain.disconnect();
+      }
+    } catch {}
+    try {
+      if (this.examAmbienceNoiseSource) {
+        this.examAmbienceNoiseSource.stop();
+        this.examAmbienceNoiseSource.disconnect();
+      }
+    } catch {}
+    try {
+      if (this.examAmbienceNoiseFilter) {
+        this.examAmbienceNoiseFilter.disconnect();
+      }
+    } catch {}
+    try {
+      if (this.examAmbienceNoiseGain) {
+        this.examAmbienceNoiseGain.disconnect();
+      }
+    } catch {}
+    try {
+      if (this.examAmbienceGain) {
+        this.examAmbienceGain.disconnect();
+      }
+    } catch {}
+
+    this.examAmbienceSubOsc = null;
+    this.examAmbienceSubGain = null;
+    this.examAmbienceNoiseSource = null;
+    this.examAmbienceNoiseFilter = null;
+    this.examAmbienceNoiseGain = null;
+    this.examAmbienceGain = null;
+  }
+
   /**
    * Tour Step: Ascending micro-tone blip (587.33Hz -> 880Hz, 65ms).
    */
@@ -1624,7 +1887,61 @@ export class AudioSynthesizer {
     return available[0] || null;
   }
 
-  public static speak(text: string, rate: number = 0.95): void {
+  // -------------------------------------------------------------------------
+  // MULTI-ACCENT CADENCE & SPEECH RECOGNITION CONFIGURATION
+  // -------------------------------------------------------------------------
+
+  public static setCadence(cadence: AccentCadenceType): void {
+    if (ACCENT_CADENCE_MODELS[cadence]) {
+      this.activeCadence = cadence;
+      try {
+        localStorage.setItem('eng_accent_cadence', cadence);
+      } catch {}
+    }
+  }
+
+  public static getCadence(): AccentCadenceType {
+    return this.activeCadence;
+  }
+
+  public static getCadenceModel(cadence?: AccentCadenceType): AccentCadenceModel {
+    return ACCENT_CADENCE_MODELS[cadence || this.activeCadence] || ACCENT_CADENCE_MODELS['uk-rp'];
+  }
+
+  public static getAvailableCadences(): AccentCadenceModel[] {
+    return Object.values(ACCENT_CADENCE_MODELS);
+  }
+
+  public static getVoiceForAccent(accent: AccentCadenceType): SpeechSynthesisVoice | null {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
+
+    const available = this.voices.length > 0 ? this.voices : window.speechSynthesis.getVoices();
+    if (!available || available.length === 0) return null;
+
+    const model = ACCENT_CADENCE_MODELS[accent] || ACCENT_CADENCE_MODELS['uk-rp'];
+
+    // 1. Try matching preferred voice names for this accent
+    for (const pattern of model.preferredVoiceNames) {
+      const matched = available.find(v => pattern.test(v.name) && v.lang.toLowerCase().startsWith('en'));
+      if (matched) return matched;
+    }
+
+    // 2. Try matching language prefix
+    for (const prefix of model.langPrefixes) {
+      const cleanPrefix = prefix.toLowerCase().replace('_', '-');
+      const matched = available.find(v => v.lang.toLowerCase().replace('_', '-').startsWith(cleanPrefix));
+      if (matched) return matched;
+    }
+
+    // 3. Fall back to preferred English voice
+    return this.getPreferredEnglishVoice();
+  }
+
+  public static speak(
+    text: string,
+    rateOrOptions: number | { rate?: number; pitch?: number; accent?: AccentCadenceType; onEnd?: () => void } = 0.95,
+    maybeAccent?: AccentCadenceType
+  ): void {
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
       console.warn('[SPEECH] Web Speech API not supported in this environment.');
       return;
@@ -1633,31 +1950,147 @@ export class AudioSynthesizer {
     try {
       window.speechSynthesis.cancel();
 
-      const utterance = new SpeechSynthesisUtterance(text);
-      const voice = this.getPreferredEnglishVoice();
+      let rate = 0.95;
+      let pitch = 1.0;
+      let accent: AccentCadenceType = this.activeCadence;
+      let onEndCb: (() => void) | undefined;
+
+      if (typeof rateOrOptions === 'number') {
+        rate = rateOrOptions;
+        if (maybeAccent) accent = maybeAccent;
+      } else if (typeof rateOrOptions === 'object' && rateOrOptions !== null) {
+        if (rateOrOptions.accent) accent = rateOrOptions.accent;
+        const model = this.getCadenceModel(accent);
+        rate = rateOrOptions.rate ?? model.rate;
+        pitch = rateOrOptions.pitch ?? model.pitch;
+        onEndCb = rateOrOptions.onEnd;
+      }
+
+      const UtteranceClass = (window as any).SpeechSynthesisUtterance || SpeechSynthesisUtterance;
+      const utterance = new UtteranceClass(text);
+      const voice = this.getVoiceForAccent(accent) || this.getPreferredEnglishVoice();
 
       if (voice) {
         utterance.voice = voice;
         utterance.lang = voice.lang;
       } else {
-        utterance.lang = 'en-US';
+        const model = this.getCadenceModel(accent);
+        utterance.lang = model.langPrefixes[0] || 'en-GB';
       }
 
       utterance.rate = rate;
+      utterance.pitch = pitch;
 
       this.activeUtterance = utterance;
       utterance.onend = () => {
         this.activeUtterance = null;
+        if (onEndCb) onEndCb();
       };
-      utterance.onerror = (e) => {
+      utterance.onerror = (e: any) => {
         console.warn('[SPEECH] Playback error or cancelled:', e);
         this.activeUtterance = null;
+        if (onEndCb) onEndCb();
       };
 
       window.speechSynthesis.speak(utterance);
     } catch (err) {
       console.warn('[SPEECH] Speech playback failed:', err);
     }
+  }
+
+  /**
+   * Synthesizes text applying multi-accent cadence prosody and punctuation micro-pauses (200-450ms).
+   * Splits into clauses at punctuation (, ; : —) with commaPauseMs (200-260ms),
+   * and at sentence boundaries (. ! ?) with periodPauseMs (380-450ms).
+   */
+  public static speakWithCadence(
+    text: string,
+    opts?: {
+      accent?: AccentCadenceType;
+      rate?: number;
+      pitch?: number;
+      onEnd?: () => void;
+    }
+  ): { stop(): void } {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+      opts?.onEnd?.();
+      return { stop() {} };
+    }
+
+    const synth = window.speechSynthesis;
+    synth.cancel();
+
+    const accent = opts?.accent || this.activeCadence;
+    const model = this.getCadenceModel(accent);
+    const voice = this.getVoiceForAccent(accent);
+    const rate = opts?.rate ?? model.rate;
+    const pitch = opts?.pitch ?? model.pitch;
+
+    // Tokenize text into chunks preserving trailing punctuation
+    const rawChunks = text.match(/[^.!?,;:]+[.!?,;:]*|[^.!?,;:]+$/g)?.map(s => s.trim()).filter(Boolean) || [text];
+
+    let stopped = false;
+    let currentIdx = 0;
+    let timerId: any = null;
+
+    const speakNext = () => {
+      if (stopped) return;
+      if (currentIdx >= rawChunks.length) {
+        opts?.onEnd?.();
+        return;
+      }
+
+      const chunk = rawChunks[currentIdx++];
+      const UtteranceClass = (window as any).SpeechSynthesisUtterance || SpeechSynthesisUtterance;
+      const utterance = new UtteranceClass(chunk);
+      if (voice) {
+        utterance.voice = voice;
+        utterance.lang = voice.lang;
+      } else {
+        utterance.lang = model.langPrefixes[0] || 'en-GB';
+      }
+      utterance.rate = rate;
+      utterance.pitch = pitch;
+
+      this.activeUtterance = utterance;
+
+      const lastChar = chunk.slice(-1);
+      const isSentenceEnd = ['.', '!', '?'].includes(lastChar);
+      const isClauseEnd = [',', ';', ':', '—', '-'].includes(lastChar);
+      const pauseDuration = isSentenceEnd
+        ? model.periodPauseMs
+        : (isClauseEnd ? model.commaPauseMs : 150);
+
+      utterance.onend = () => {
+        this.activeUtterance = null;
+        if (!stopped) {
+          timerId = setTimeout(speakNext, pauseDuration);
+        }
+      };
+
+      utterance.onerror = () => {
+        this.activeUtterance = null;
+        if (!stopped) {
+          timerId = setTimeout(speakNext, pauseDuration);
+        }
+      };
+
+      synth.speak(utterance);
+    };
+
+    speakNext();
+
+    return {
+      stop: () => {
+        stopped = true;
+        if (timerId) {
+          clearTimeout(timerId);
+          timerId = null;
+        }
+        synth.cancel();
+        this.activeUtterance = null;
+      }
+    };
   }
 
   public static getActiveUtterance(): SpeechSynthesisUtterance | null {

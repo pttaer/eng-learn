@@ -119,6 +119,13 @@ export class HeaderHUD {
         <button class="hud-btn btn-ielts-cockpit" title="Launch CD-IELTS Exam Cockpit (Hotkey: C)" aria-label="CD-IELTS Exam Cockpit" style="border-color: var(--accent-gold, #f59e0b); color: var(--accent-gold, #f59e0b); font-weight: 700;">
           🎓<span class="btn-label"> COCKPIT</span>
         </button>
+        <button class="hud-btn btn-export-profile" title="Export Unified Student Profile (JSON)" aria-label="Export Profile" style="border-color: var(--accent-gold, #f59e0b); color: var(--accent-gold, #f59e0b); font-weight: 600;">
+          💾<span class="btn-label"> EXPORT</span>
+        </button>
+        <button class="hud-btn btn-import-profile" title="Import Unified Student Profile (JSON)" aria-label="Import Profile" style="border-color: var(--accent-cyan, #38bdf8); color: var(--accent-cyan, #38bdf8); font-weight: 600;">
+          📥<span class="btn-label"> IMPORT</span>
+        </button>
+        <input type="file" class="hud-profile-file-input" accept=".json,application/json" style="display: none;" />
         <button class="hud-btn btn-progression-pill" title="RPG Progression & Daily Quests" aria-label="RPG Progression">
           ${icon('zap', 12)} LVL ${progression.level}<span class="btn-label"> • ${progression.xp} XP</span>
         </button>
@@ -224,6 +231,26 @@ export class HeaderHUD {
         this.onNavigateToCockpit();
       } else {
         window.location.hash = '#cockpit';
+      }
+    });
+
+    const exportProfileBtn = this.element.querySelector('.btn-export-profile') as HTMLButtonElement | null;
+    exportProfileBtn?.addEventListener('click', () => {
+      HeaderHUD.exportUnifiedProfile();
+    });
+
+    const importProfileBtn = this.element.querySelector('.btn-import-profile') as HTMLButtonElement | null;
+    const profileFileInput = this.element.querySelector('.hud-profile-file-input') as HTMLInputElement | null;
+    importProfileBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      profileFileInput?.click();
+    });
+
+    profileFileInput?.addEventListener('change', async () => {
+      const file = profileFileInput.files?.[0];
+      if (file) {
+        await HeaderHUD.importUnifiedProfile(file);
+        profileFileInput.value = '';
       }
     });
 
@@ -400,11 +427,11 @@ export class HeaderHUD {
           <button class="hud-btn btn-notifications-toggle ${StorageManager.isNotificationsEnabled() ? 'active' : ''}" style="padding: 12px; justify-content: center; font-weight: 600;" aria-pressed="${StorageManager.isNotificationsEnabled()}">
             🔔 Daily Review Alerts: ${StorageManager.isNotificationsEnabled() ? 'ON' : 'OFF'}
           </button>
-          <button class="hud-btn btn-backup-export" style="padding: 12px; justify-content: center; font-weight: 600;">
-            ${icon('download')} Export Progress Backup (JSON)
+          <button class="hud-btn btn-backup-export btn-profile-export" style="padding: 12px; justify-content: center; font-weight: 600;">
+            ${icon('download')} [ 💾 EXPORT PROFILE ]
           </button>
-          <button class="hud-btn btn-backup-import" style="padding: 12px; justify-content: center; font-weight: 600;">
-            ${icon('upload')} Restore from Backup (JSON)
+          <button class="hud-btn btn-backup-import btn-profile-import" style="padding: 12px; justify-content: center; font-weight: 600;">
+            ${icon('upload')} [ 📥 IMPORT PROFILE ]
           </button>
           <!-- Dual Audio Bus Controls -->
           <div class="settings-audio-section" style="display: flex; flex-direction: column; gap: 10px; padding: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-line); border-radius: 6px;">
@@ -545,61 +572,162 @@ export class HeaderHUD {
       modal.remove();
     });
 
-    modal.querySelector('.btn-backup-export')?.addEventListener('click', () => {
+    const exportBtn = modal.querySelector('.btn-profile-export') || modal.querySelector('.btn-backup-export');
+    exportBtn?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
-      const backupJson = StorageManager.exportBackup();
-      const blob = new Blob([backupJson], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `english-mastery-backup-${Date.now()}.json`;
-      a.click();
-      URL.revokeObjectURL(url);
+      HeaderHUD.exportUnifiedProfile();
     });
 
     const fileInput = modal.querySelector('.backup-file-input') as HTMLInputElement | null;
-    modal.querySelector('.btn-backup-import')?.addEventListener('click', () => {
+    const importBtn = modal.querySelector('.btn-profile-import') || modal.querySelector('.btn-backup-import');
+    importBtn?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
       fileInput?.click();
     });
 
-    fileInput?.addEventListener('change', () => {
+    fileInput?.addEventListener('change', async () => {
       const file = fileInput.files?.[0];
       if (!file) return;
-
-      const currentState = StorageManager.loadState();
-      const hasActiveData = (
-        (currentState.cardStates && Object.keys(currentState.cardStates).length > 0) ||
-        currentState.totalCardsReviewed > 0 ||
-        (currentState.streak && currentState.streak.currentStreak > 0)
-      );
-
-      if (hasActiveData) {
-        const confirmed = window.confirm(
-          'Active student progress detected in local storage.\n\nImporting this backup will overwrite your current progress.\n\nProceed?'
-        );
-        if (!confirmed) return;
+      const success = await HeaderHUD.importUnifiedProfile(file);
+      if (success) {
+        modal.remove();
       }
+      fileInput.value = '';
+    });
+  }
 
+  public static exportUnifiedProfile(): string {
+    AudioSynthesizer.play('click');
+    const jsonStr = StorageManager.exportUnifiedProfile(true);
+    HeaderHUD.showStatusDialog({
+      title: 'PROFILE EXPORTED',
+      message: 'Unified Student Profile (v5) successfully exported to your downloads folder.',
+      type: 'success'
+    });
+    return jsonStr;
+  }
+
+  public static async importUnifiedProfile(file: File): Promise<boolean> {
+    const currentState = StorageManager.loadState();
+    const hasActiveData = (
+      (currentState.cardStates && Object.keys(currentState.cardStates).length > 0) ||
+      currentState.totalCardsReviewed > 0 ||
+      (currentState.streak && currentState.streak.currentStreak > 0)
+    );
+
+    if (hasActiveData) {
+      const confirmed = window.confirm(
+        'Active student progress detected in local storage.\n\nImporting this profile will merge or overwrite your current progress.\n\nProceed?'
+      );
+      if (!confirmed) return false;
+    }
+
+    return new Promise<boolean>((resolve) => {
       const reader = new FileReader();
       reader.onload = (e) => {
         try {
           const raw = e.target?.result as string;
-          const success = StorageManager.importBackup(raw);
-          if (success) {
+          const result = StorageManager.importUnifiedProfile(raw, 'overwrite');
+          if (result && result.success) {
             AudioSynthesizer.play('level-up');
-            alert('Progress successfully restored.');
-            modal.remove();
-            window.location.reload();
+            const restored = result.itemsRestored;
+            const details = restored
+              ? `Restored: ${restored.singularityCards} SRS cards, ${restored.ieltsKeys} IELTS entries, ${restored.errorRecords} error patterns.`
+              : 'All profile and progress records restored.';
+            HeaderHUD.showStatusDialog({
+              title: 'PROFILE IMPORT SUCCESS',
+              message: `Unified Student Profile successfully restored (Schema v${result.detectedVersion || 5}).\n${details}`,
+              type: 'success',
+              onConfirm: () => {
+                window.location.reload();
+              }
+            });
+            resolve(true);
           } else {
-            alert('Invalid backup file.');
+            AudioSynthesizer.play('alarm');
+            HeaderHUD.showStatusDialog({
+              title: 'IMPORT FAILED',
+              message: 'Invalid profile data or unsupported schema version.',
+              type: 'error'
+            });
+            resolve(false);
           }
-        } catch {
-          alert('Failed to parse backup JSON.');
+        } catch (err) {
+          console.error('[HEADER_HUD] Profile import parse failed:', err);
+          AudioSynthesizer.play('alarm');
+          HeaderHUD.showStatusDialog({
+            title: 'IMPORT PARSE ERROR',
+            message: 'Failed to read or parse the selected JSON profile file.',
+            type: 'error'
+          });
+          resolve(false);
         }
+      };
+      reader.onerror = () => {
+        AudioSynthesizer.play('alarm');
+        HeaderHUD.showStatusDialog({
+          title: 'FILE READ ERROR',
+          message: 'An error occurred while reading the file from disk.',
+          type: 'error'
+        });
+        resolve(false);
       };
       reader.readAsText(file);
     });
+  }
+
+  public static showStatusDialog(options: {
+    title: string;
+    message: string;
+    type?: 'success' | 'error' | 'info';
+    onConfirm?: () => void;
+  }): HTMLElement {
+    document.getElementById('hud-status-dialog')?.remove();
+    const type = options.type || 'info';
+    const typeColor = type === 'success' ? 'var(--good, #22c55e)' : type === 'error' ? 'var(--urgent, #ef4444)' : 'var(--accent-gold, #f59e0b)';
+    const typeIcon = type === 'success' ? '✓' : type === 'error' ? '✕' : 'ℹ';
+
+    const dialog = document.createElement('div');
+    dialog.id = 'hud-status-dialog';
+    dialog.className = 'completion-modal-overlay interactive hud-status-dialog';
+    dialog.setAttribute('role', 'dialog');
+    dialog.setAttribute('aria-modal', 'true');
+    dialog.setAttribute('aria-label', options.title);
+
+    dialog.innerHTML = `
+      <div class="completion-receipt-card" style="max-width: 440px; width: 90%; border-top: 3px solid ${typeColor};">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+          <span style="font-size: 18px; color: ${typeColor}; font-weight: 700;">${typeIcon}</span>
+          <div class="telemetry-label" style="color: ${typeColor}; font-weight: 700; letter-spacing: 0.08em;">${options.title}</div>
+        </div>
+        <div style="font-size: 14px; line-height: 1.6; color: var(--ink-primary); margin-bottom: 20px; white-space: pre-line;">${options.message}</div>
+        <button class="hud-btn btn-status-confirm" style="width: 100%; justify-content: center; padding: 10px 0; font-weight: 700; color: ${typeColor}; border-color: ${typeColor};">
+          OK
+        </button>
+      </div>
+    `;
+
+    document.body.appendChild(dialog);
+
+    const close = () => {
+      dialog.remove();
+      document.removeEventListener('keydown', onKey, true);
+      if (options.onConfirm) options.onConfirm();
+    };
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' || e.key === 'Enter') {
+        e.preventDefault();
+        e.stopPropagation();
+        close();
+      }
+    };
+    document.addEventListener('keydown', onKey, true);
+
+    dialog.querySelector('.btn-status-confirm')?.addEventListener('click', close);
+    (dialog.querySelector('.btn-status-confirm') as HTMLElement | null)?.focus();
+
+    return dialog;
   }
 
   public updateTelemetry(routeName: string): void {
