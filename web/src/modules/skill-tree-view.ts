@@ -7,81 +7,122 @@ import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { MotionEngine } from '../core/motion-engine';
 import { StorageManager } from '../utils/storage';
 import { NebulaCanvas } from '../core/perspective-canvas';
+import { ConstellationEngine } from './constellation-engine';
 import type { Cefr } from '../core/cefr';
 
 export class SkillTreeView {
   private container: HTMLElement;
   private nebulaCanvas: NebulaCanvas | null = null;
+  private viewMode: 'map' | 'deck' = 'map';
+  private panZoomTeardown: (() => void) | null = null;
   public onNavigate?: (route: RouteId) => void;
 
   constructor() {
     this.container = document.createElement('div');
     this.container.className = 'skill-tree-view interactive';
+    if (typeof window !== 'undefined' && ConstellationEngine.isMobileViewport()) {
+      this.viewMode = 'deck';
+    }
     window.addEventListener('learner-level-change', () => {
       if (this.container.isConnected) this.render();
     });
+  }
+
+  public getViewMode(): 'map' | 'deck' {
+    return this.viewMode;
+  }
+
+  public setViewMode(mode: 'map' | 'deck'): void {
+    if (this.viewMode === mode) return;
+    this.viewMode = mode;
+    this.render();
   }
 
   public render(): HTMLElement {
     const progress = SkillTreeEngine.calculateSummitProgress();
 
     this.container.innerHTML = `
-      <div class="skill-tree-shell" style="width: 100%; max-width: 1200px; height: 100%; margin: 0 auto; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+      <div class="skill-tree-shell ${this.viewMode === 'deck' ? 'view-mode-deck' : 'view-mode-map'}" style="width: 100%; max-width: 1200px; height: 100%; margin: 0 auto; display: flex; flex-direction: column; justify-content: ${this.viewMode === 'deck' ? 'flex-start' : 'space-between'}; box-sizing: border-box;">
         <!-- 1. Unified Command Header & Today's 15-Minute Workout -->
         ${this.renderWorkoutBanner()}
 
-        <!-- 2. Constellation Visualizer Canvas/SVG with Starfield Nebula Backdrop -->
-        <div class="constellation-container" style="position: relative; width: 100%; flex: 1 1 0; min-height: 0; margin-top: 6px; margin-bottom: 6px; background: radial-gradient(circle at 50% 25%, color-mix(in srgb, var(--accent-gold) 6%, transparent), transparent 75%), var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-card);">
-          <canvas class="constellation-nebula-canvas" id="constellation-nebula-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></canvas>
-          <div class="constellation-svg-wrapper" style="position: relative; width: 100%; height: 100%; z-index: 2; display: flex; align-items: center; justify-content: center;">
-            ${this.renderConstellationSVG()}
-          </div>
-        </div>
+        <!-- View Switcher Toggle: [ 🌌 Star Map ] | [ 📱 Skill Deck ] -->
+        ${this.renderViewSwitcher()}
 
-        <!-- 3. 6 Branches Reference Grid -->
-        <div class="branches-summary-grid" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; flex: 0 0 auto;">
-          ${this.renderBranchesSummary()}
-        </div>
+        ${this.viewMode === 'deck' ? `
+          <!-- Mobile Skill Deck Carousel / List -->
+          ${this.renderMobileSkillDeck()}
+        ` : `
+          <!-- 2. Constellation Visualizer Canvas/SVG with Starfield Nebula Backdrop -->
+          <div class="constellation-container" style="position: relative; width: 100%; flex: 1 1 0; min-height: 0; margin-top: 6px; margin-bottom: 6px; background: radial-gradient(circle at 50% 25%, color-mix(in srgb, var(--accent-gold) 6%, transparent), transparent 75%), var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-card);">
+            <canvas class="constellation-nebula-canvas" id="constellation-nebula-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></canvas>
+            <div class="constellation-svg-wrapper" style="position: relative; width: 100%; height: 100%; z-index: 2; display: flex; align-items: center; justify-content: center;">
+              ${this.renderConstellationSVG()}
+            </div>
+          </div>
+
+          <!-- 3. 6 Branches Reference Grid -->
+          <div class="branches-summary-grid" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; flex: 0 0 auto;">
+            ${this.renderBranchesSummary()}
+          </div>
+        `}
       </div>
     `;
 
     this.bindEvents();
 
-    // Initialize Deep-Space Starfield Nebula
-    const nebulaEl = this.container.querySelector('.constellation-nebula-canvas') as HTMLCanvasElement | null;
-    if (nebulaEl) {
+    if (this.viewMode === 'map') {
+      // Initialize Deep-Space Starfield Nebula
+      const nebulaEl = this.container.querySelector('.constellation-nebula-canvas') as HTMLCanvasElement | null;
+      if (nebulaEl) {
+        if (this.nebulaCanvas) {
+          this.nebulaCanvas.destroy();
+        }
+        this.nebulaCanvas = new NebulaCanvas(nebulaEl);
+      }
+
+      // Touch pan/zoom for mobile star map
+      const containerEl = this.container.querySelector('.constellation-container') as HTMLElement | null;
+      const svgEl = this.container.querySelector('.constellation-svg') as SVGElement | null;
+      if (containerEl && svgEl && ConstellationEngine.isMobileViewport()) {
+        if (this.panZoomTeardown) this.panZoomTeardown();
+        this.panZoomTeardown = ConstellationEngine.setupPanZoom(containerEl, svgEl);
+      }
+
+      // Procedural entrance animations via MotionEngine
+      setTimeout(() => {
+        if (!this.container.isConnected) return;
+        const lines = this.container.querySelectorAll('.constellation-line');
+        if (lines.length > 0) MotionEngine.drawSvgLines(lines as any);
+
+        const nodes = this.container.querySelectorAll('.constellation-node');
+        if (nodes.length > 0) MotionEngine.staggerEntrance(nodes as any, { from: 'bottom', delayStep: 25 });
+
+        MotionEngine.riseIn(this.container.querySelectorAll('.branch-summary-card'), 60);
+        MotionEngine.fillBars(this.container.querySelectorAll('.branch-bar'));
+        MotionEngine.breathe(this.container.querySelectorAll('.star-halo, .summit-halo'));
+
+        const progressEl = this.container.querySelector('.val-progress-pct') as HTMLElement | null;
+        if (progressEl) MotionEngine.tweenNumber(progressEl, 0, progress.progressPct, '%');
+      }, 40);
+    } else {
+      // In Deck mode
       if (this.nebulaCanvas) {
         this.nebulaCanvas.destroy();
+        this.nebulaCanvas = null;
       }
-      this.nebulaCanvas = new NebulaCanvas(nebulaEl);
+      if (this.panZoomTeardown) {
+        this.panZoomTeardown();
+        this.panZoomTeardown = null;
+      }
+
+      setTimeout(() => {
+        if (!this.container.isConnected) return;
+        MotionEngine.riseIn(this.container.querySelectorAll('.deck-branch-card'), 50);
+        const progressEl = this.container.querySelector('.val-progress-pct') as HTMLElement | null;
+        if (progressEl) MotionEngine.tweenNumber(progressEl, 0, progress.progressPct, '%');
+      }, 40);
     }
-
-    // Procedural entrance animations via MotionEngine
-    setTimeout(() => {
-      if (!this.container.isConnected) return;
-      // 1. Procedurally illuminate SVG connecting lines
-      const lines = this.container.querySelectorAll('.constellation-line');
-      if (lines.length > 0) {
-        MotionEngine.drawSvgLines(lines as any);
-      }
-
-      // 2. Stagger star node entrance with elastic bounce
-      const nodes = this.container.querySelectorAll('.constellation-node');
-      if (nodes.length > 0) {
-        MotionEngine.staggerEntrance(nodes as any, { from: 'bottom', delayStep: 25 });
-      }
-
-      // Branch cards rise in, their bars fill, mastered halos breathe
-      MotionEngine.riseIn(this.container.querySelectorAll('.branch-summary-card'), 60);
-      MotionEngine.fillBars(this.container.querySelectorAll('.branch-bar'));
-      MotionEngine.breathe(this.container.querySelectorAll('.star-halo, .summit-halo'));
-
-      // 3. Roll up summit progress counter
-      const progressEl = this.container.querySelector('.val-progress-pct') as HTMLElement | null;
-      if (progressEl) {
-        MotionEngine.tweenNumber(progressEl, 0, progress.progressPct, '%');
-      }
-    }, 40);
 
     return this.container;
   }
@@ -157,6 +198,10 @@ export class SkillTreeView {
     if (this.nebulaCanvas) {
       this.nebulaCanvas.destroy();
       this.nebulaCanvas = null;
+    }
+    if (this.panZoomTeardown) {
+      this.panZoomTeardown();
+      this.panZoomTeardown = null;
     }
   }
 
@@ -383,13 +428,134 @@ export class SkillTreeView {
     }).join('');
   }
 
+  private renderViewSwitcher(): string {
+    return `
+      <div class="constellation-view-switcher" role="tablist" aria-label="Constellation Display Modes">
+        <button class="view-switch-btn btn-view-star-map ${this.viewMode === 'map' ? 'active' : ''}" data-view="map" role="tab" aria-selected="${this.viewMode === 'map'}" aria-label="Switch to Star Map View">
+          <span class="btn-icon">🌌</span> <span class="btn-text">Star Map</span>
+        </button>
+        <button class="view-switch-btn btn-view-skill-deck ${this.viewMode === 'deck' ? 'active' : ''}" data-view="deck" role="tab" aria-selected="${this.viewMode === 'deck'}" aria-label="Switch to Skill Deck View">
+          <span class="btn-icon">📱</span> <span class="btn-text">Skill Deck</span>
+        </button>
+      </div>
+    `;
+  }
+
+  private renderMobileSkillDeck(): string {
+    const branches = ConstellationEngine.getMobileDeckBranches();
+
+    return `
+      <div class="mobile-skill-deck" role="region" aria-label="Mobile Skill Deck Carousel">
+        <div class="deck-carousel-track">
+          ${branches.map(b => `
+            <div class="deck-branch-card" data-branch="${b.id}" data-route="${b.routeTarget}">
+              <div class="deck-card-header">
+                <div class="deck-card-title-group">
+                  <div class="deck-branch-icon-badge">${icon(b.iconName, 20)}</div>
+                  <div>
+                    <h2 class="deck-branch-name">${b.name}</h2>
+                    <p class="deck-branch-tagline">${b.tagline}</p>
+                  </div>
+                </div>
+                <span class="hud-status-badge deck-cefr-badge">CEFR ${b.cefrLevel}</span>
+              </div>
+
+              <div class="deck-mastery-block">
+                <div class="deck-mastery-labels">
+                  <span class="deck-mastery-pct-text">MASTERY <strong>${b.masteryPct}%</strong></span>
+                  <span class="deck-perks-count-text">${b.unlockedPerks}/${b.totalPerks} Active Perks</span>
+                </div>
+                <div class="deck-progress-bar-track">
+                  <div class="deck-progress-bar-fill" style="width: ${b.masteryPct}%;"></div>
+                </div>
+              </div>
+
+              <button class="hud-btn btn-enter-dossier" data-route="${b.routeTarget}" aria-label="Enter ${b.name} Dossier">
+                <span>Enter ${b.name} Dossier</span> ${icon('arrowRight', 16)}
+              </button>
+
+              <div class="deck-card-perks-section">
+                <div class="deck-section-title">✦ UNLOCKED PERKS & WORKOUT DRILLS</div>
+                <div class="deck-perk-badges">
+                  ${b.perks.slice(0, 5).map(p => `
+                    <div class="deck-badge deck-perk-badge ${p.status === 'mastered' ? 'is-mastered' : (p.status === 'unlocked' ? 'is-unlocked' : 'is-locked')}" data-node-id="${p.id}" data-route="${p.routeTarget}" role="button" tabindex="0" aria-label="${p.title} (${p.status})">
+                      <span class="badge-status-dot"></span>
+                      <span class="badge-text">${p.title} [${p.cefrLevel}]</span>
+                    </div>
+                  `).join('')}
+                  ${b.workoutTasks.map(t => `
+                    <div class="deck-badge deck-workout-badge ${t.ok ? 'is-complete' : 'is-pending'}" data-route="${t.route}" role="button" tabindex="0" aria-label="Workout: ${t.label}">
+                      <span class="badge-check">${t.ok ? '✓' : '○'}</span>
+                      <span class="badge-text">${t.label}</span>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
   private bindEvents(): void {
     this.container.addEventListener('keydown', (e: KeyboardEvent) => {
-      const el = (e.target as Element).closest('.constellation-node, .branch-summary-card');
+      const el = (e.target as Element).closest('.constellation-node, .branch-summary-card, .deck-badge');
       if (el && (e.key === 'Enter' || e.key === ' ')) {
         e.preventDefault();
         el.dispatchEvent(new MouseEvent('click', { bubbles: true }));
       }
+    });
+
+    // View Switcher clicks
+    this.container.querySelectorAll('.view-switch-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const targetView = (btn as HTMLElement).dataset.view as 'map' | 'deck';
+        if (targetView && targetView !== this.viewMode) {
+          AudioSynthesizer.play('click');
+          this.setViewMode(targetView);
+        }
+      });
+    });
+
+    // Enter Dossier 48px CTA buttons in mobile skill deck
+    this.container.querySelectorAll('.btn-enter-dossier').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const route = (btn as HTMLElement).dataset.route as RouteId;
+        AudioSynthesizer.play('click');
+        if (this.onNavigate && route) {
+          this.onNavigate(route);
+        }
+      });
+    });
+
+    // Touch-friendly Deck Perk Badges
+    this.container.querySelectorAll('.deck-perk-badge').forEach(badge => {
+      badge.addEventListener('click', (e) => {
+        e.stopPropagation();
+        AudioSynthesizer.play('click');
+        const nodeId = (badge as HTMLElement).dataset.nodeId;
+        const route = (badge as HTMLElement).dataset.route as RouteId;
+        if (nodeId && SkillTreeEngine.getAllNodes().some(n => n.id === nodeId)) {
+          this.openNodeModal(nodeId);
+        } else if (route && this.onNavigate) {
+          this.onNavigate(route);
+        }
+      });
+    });
+
+    // Touch-friendly Deck Workout Badges
+    this.container.querySelectorAll('.deck-workout-badge').forEach(badge => {
+      badge.addEventListener('click', (e) => {
+        e.stopPropagation();
+        AudioSynthesizer.play('click');
+        const route = (badge as HTMLElement).dataset.route as RouteId;
+        if (route && this.onNavigate) {
+          this.onNavigate(route);
+        }
+      });
     });
 
     // Continue workout button

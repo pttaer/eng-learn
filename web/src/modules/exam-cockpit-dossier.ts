@@ -56,6 +56,45 @@ export class ExamCockpitDossier {
   public getActiveFilter(): string { return this.activeFilter; }
   public getIsReviewMode(): boolean { return this.isReviewMode; }
 
+  // Mobile Tabbed Split-Screen State (<= 768px)
+  private mobileActiveTab: 'passage' | 'questions' = 'passage';
+
+  public getMobileActiveTab(): 'passage' | 'questions' {
+    return this.mobileActiveTab;
+  }
+
+  public setMobileActiveTab(tab: 'passage' | 'questions'): void {
+    this.mobileActiveTab = tab;
+    this.applyMobileTabState();
+  }
+
+  public toggleMobileActiveTab(): void {
+    this.setMobileActiveTab(this.mobileActiveTab === 'passage' ? 'questions' : 'passage');
+  }
+
+  public applyMobileTabState(): void {
+    const arena = this.container.querySelector('#cd-split-arena') as HTMLElement | null;
+    if (arena) {
+      arena.setAttribute('data-mobile-active', this.mobileActiveTab);
+    }
+
+    const mobileTabBtns = this.container.querySelectorAll('.cd-mobile-tab-btn');
+    mobileTabBtns.forEach(btn => {
+      const isCur = (btn as HTMLElement).dataset.tab === this.mobileActiveTab;
+      btn.classList.toggle('is-active', isCur);
+      btn.setAttribute('aria-selected', String(isCur));
+    });
+
+    const fab = this.container.querySelector('#cd-mobile-quick-switch') as HTMLElement | null;
+    if (fab) {
+      const label = fab.querySelector('.fab-label');
+      if (label) {
+        label.textContent = this.mobileActiveTab === 'passage' ? 'Switch to Questions' : 'Switch to Passage';
+      }
+      fab.setAttribute('aria-label', this.mobileActiveTab === 'passage' ? 'Switch to Questions' : 'Switch to Passage');
+    }
+  }
+
   // Split-screen drag resizer state
   private leftWidthPct: number = 50;
   private isDraggingResizer: boolean = false;
@@ -231,8 +270,32 @@ export class ExamCockpitDossier {
         <button class="cd-alert-dismiss" aria-label="Dismiss Alert">✕</button>
       </div>
 
+      <!-- Mobile Segmented Split-Screen Tab Switcher (<= 768px) -->
+      <nav class="cd-mobile-tab-bar" role="tablist" aria-label="Mobile View Switcher">
+        <button 
+          type="button" 
+          class="cd-mobile-tab-btn ${this.mobileActiveTab === 'passage' ? 'is-active' : ''}" 
+          data-tab="passage" 
+          role="tab" 
+          aria-selected="${this.mobileActiveTab === 'passage'}"
+          aria-controls="cd-left-pane"
+        >
+          📖 Reading Passage
+        </button>
+        <button 
+          type="button" 
+          class="cd-mobile-tab-btn ${this.mobileActiveTab === 'questions' ? 'is-active' : ''}" 
+          data-tab="questions" 
+          role="tab" 
+          aria-selected="${this.mobileActiveTab === 'questions'}"
+          aria-controls="cd-right-pane"
+        >
+          📝 Questions (1-40)
+        </button>
+      </nav>
+
       <!-- Main Split-Screen Resizable Arena -->
-      <main class="cd-split-arena" id="cd-split-arena">
+      <main class="cd-split-arena" id="cd-split-arena" data-mobile-active="${this.mobileActiveTab}">
         
         <!-- Left Pane: Source Passage / Prompt (Resizable %) -->
         <section class="cd-pane cd-left-pane" id="cd-left-pane" style="width: ${this.leftWidthPct}%;" aria-label="Passage and Stimulus Material">
@@ -275,6 +338,18 @@ export class ExamCockpitDossier {
         </section>
 
       </main>
+
+      <!-- Floating Quick-Switch Pill (Mobile <= 768px, >=48x48px Touch Target) -->
+      <button 
+        type="button" 
+        class="cd-mobile-quick-switch-fab" 
+        id="cd-mobile-quick-switch"
+        title="Flip between passage and questions"
+        aria-label="${this.mobileActiveTab === 'passage' ? 'Switch to Questions' : 'Switch to Passage'}"
+      >
+        <span class="fab-icon">⚡</span>
+        <span class="fab-label">${this.mobileActiveTab === 'passage' ? 'Switch to Questions' : 'Switch to Passage'}</span>
+      </button>
 
       <!-- Bottom Question Matrix Palette & Navigation Bar (48px) -->
       <footer class="cd-bottom-bar" role="navigation" aria-label="Question Navigation Palette">
@@ -668,6 +743,25 @@ export class ExamCockpitDossier {
 
       window.addEventListener('pointermove', onPointerMove);
       window.addEventListener('pointerup', onPointerUp);
+    });
+
+    // Mobile Segmented Tab Switcher Buttons
+    const mobileTabBtns = this.container.querySelectorAll('.cd-mobile-tab-btn');
+    mobileTabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = (btn as HTMLElement).dataset.tab as 'passage' | 'questions';
+        if (tab) {
+          AudioSynthesizer.play('click');
+          this.setMobileActiveTab(tab);
+        }
+      });
+    });
+
+    // Mobile Floating Quick-Switch Pill
+    const quickSwitchBtn = this.container.querySelector('#cd-mobile-quick-switch');
+    quickSwitchBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      this.toggleMobileActiveTab();
     });
 
     // Text selection highlighter tool

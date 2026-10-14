@@ -6185,24 +6185,239 @@ html[data-motion="reduce"] .mediation-dossier-shell * {
   line-height: 1.5;
 }
 
-/* Mobile & Small Screen Adaptation */
+/* Desktop default (>= 769px): Hide mobile segmented tab bars & floating pills */
+.cd-mobile-tab-bar,
+.cd-mobile-quick-switch-fab,
+.reading-mobile-tab-bar,
+.reading-mobile-quick-switch-fab {
+  display: none !important;
+}
+
+/* Mobile & Small Screen Adaptation (ENG-126) */
 @media (max-width: 768px) {
+  /* ==========================================================================
+     MOBILE TABBED SPLIT-SCREEN & STICKY ACTION SWITCHER (ENG-126)
+     ========================================================================== */
+
+  /* Exam Cockpit Mobile Tab Bar */
+  .cd-mobile-tab-bar {
+    display: flex !important;
+    position: sticky;
+    top: 48px;
+    z-index: 10;
+    background: var(--cd-bg, #0f172a);
+    border-bottom: 1px solid var(--cd-border, rgba(255, 255, 255, 0.1));
+    padding: 6px 12px;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .cd-mobile-tab-btn {
+    flex: 1;
+    min-height: 44px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--cd-border, rgba(255, 255, 255, 0.15));
+    background: var(--cd-surface, rgba(255, 255, 255, 0.05));
+    color: var(--cd-ink-secondary, #94a3b8);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.15s ease;
+  }
+
+  .cd-mobile-tab-btn:hover {
+    color: var(--cd-ink, #ffffff);
+    border-color: var(--accent-cyan, #06b6d4);
+  }
+
+  .cd-mobile-tab-btn.is-active {
+    background: var(--accent-cyan-soft, rgba(6, 182, 212, 0.15));
+    border-color: var(--accent-cyan, #06b6d4);
+    color: var(--accent-cyan, #06b6d4);
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);
+  }
+
+  /* Exam Cockpit Mobile Pane Switcher: Active takes 100%, Inactive is hidden */
   .cd-split-arena {
-    flex-direction: column;
+    flex-direction: column !important;
   }
-  .cd-pane {
-    width: 100% !important;
-    height: 50% !important;
-  }
+
   .cd-drag-resizer {
-    width: 100%;
-    height: 8px;
-    cursor: row-resize;
+    display: none !important;
   }
-  .cd-resizer-handle {
-    width: 32px;
-    height: 2px;
+
+  .cd-split-arena[data-mobile-active="passage"] .cd-left-pane {
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+    flex: 1 1 100% !important;
   }
+
+  .cd-split-arena[data-mobile-active="passage"] .cd-right-pane {
+    display: none !important;
+  }
+
+  .cd-split-arena[data-mobile-active="questions"] .cd-left-pane {
+    display: none !important;
+  }
+
+  .cd-split-arena[data-mobile-active="questions"] .cd-right-pane {
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  /* Cockpit Floating Quick-Switch Pill (Mobile <= 768px, >=48x48px Touch Target) */
+  .cd-mobile-quick-switch-fab {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    position: fixed;
+    bottom: 72px;
+    right: 16px;
+    z-index: 99;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 10px 18px;
+    border-radius: 28px;
+    background: var(--accent-cyan, #06b6d4);
+    color: #080a0f;
+    font-weight: 800;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(6, 182, 212, 0.45);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .cd-mobile-quick-switch-fab:active {
+    transform: scale(0.96);
+  }
+
+  /* Touch-Friendly Question Matrix (44x44px target buttons) */
+  .cd-matrix-track {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 6px !important;
+    padding: 4px 6px !important;
+  }
+
+  .cd-q-matrix-btn {
+    min-width: 44px !important;
+    min-height: 44px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0;
+  }
+
+  /* Reading Dossier Mobile Tab Bar */
+  .reading-mobile-tab-bar {
+    display: flex !important;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg-surface, #1e293b);
+    border: 1px solid var(--border-hairline, rgba(255, 255, 255, 0.1));
+    border-radius: 10px;
+    padding: 4px;
+    gap: 6px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .reading-mobile-tab-btn {
+    flex: 1;
+    min-height: 44px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--ink-secondary, #94a3b8);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.15s ease;
+  }
+
+  .reading-mobile-tab-btn:hover {
+    color: var(--ink-primary, #ffffff);
+  }
+
+  .reading-mobile-tab-btn.is-active {
+    background: var(--bg-card, rgba(255, 255, 255, 0.1));
+    border-color: var(--accent-gold, #f59e0b);
+    color: var(--accent-gold, #f59e0b);
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+  }
+
+  /* Reading Dossier Mobile Pane Switcher: Active takes 100%, Inactive is hidden */
+  .reading-pass1-layout {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .reading-pass1-layout[data-mobile-active="text"] .reading-text-pane {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .reading-pass1-layout[data-mobile-active="text"] .reading-sidebar-pane {
+    display: none !important;
+  }
+
+  .reading-pass1-layout[data-mobile-active="analysis"] .reading-text-pane {
+    display: none !important;
+  }
+
+  .reading-pass1-layout[data-mobile-active="analysis"] .reading-sidebar-pane {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Reading Dossier Floating Quick-Switch Pill (Mobile <= 768px, >=48x48px Touch Target) */
+  .reading-mobile-quick-switch-fab {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    position: fixed;
+    bottom: 72px;
+    right: 16px;
+    z-index: 99;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 10px 18px;
+    border-radius: 28px;
+    background: var(--accent-gold, #f59e0b);
+    color: #080a0f;
+    font-weight: 800;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .reading-mobile-quick-switch-fab:active {
+    transform: scale(0.96);
+  }
+
   .cd-top-bar, .cd-bottom-bar {
     padding: 0 8px;
   }
