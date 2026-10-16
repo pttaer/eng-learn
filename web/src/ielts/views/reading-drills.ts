@@ -42,7 +42,7 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     options: [
       { value: 'TRUE', label: 'TRUE — The statement matches the passage information' },
       { value: 'FALSE', label: 'FALSE — The statement directly contradicts the passage information' },
-      { value: 'NOT GIVEN', label: 'NOT GIVEN — The passage does not say whether it was easy or difficult' }
+      { value: 'NOT GIVEN', label: 'NOT GIVEN — The passage contains no information about this claim' }
     ],
     correctAnswer: 'FALSE',
     trapExplanation:
@@ -98,7 +98,7 @@ export const READING_DRILLS: ReadingDrillItem[] = [
       { promptWord: 'harsh winter weather', passageWord: 'severe maritime winter storms' }
     ],
     inputType: 'text',
-    correctAnswer: ['two months', 'approximately two months', 'approx 2 months'],
+    correctAnswer: ['two months', 'approximately two months'],
     trapExplanation:
       'Word Count Penalty: Writing "of approximately two months" (4 words) is automatically marked incorrect on official IELTS. Drop extraneous prepositions.',
     rationale:
@@ -119,8 +119,7 @@ export const READING_DRILLS: ReadingDrillItem[] = [
       'Traditional watering methods were ________ for small-scale farmers in arid territories. (NO MORE THAN TWO WORDS)',
     synonymPairs: [
       { promptWord: 'traditional watering methods', passageWord: 'conventional irrigation systems' },
-      { promptWord: 'small-scale farmers', passageWord: 'subsistence farmers' },
-      { promptWord: 'cost-prohibitive', passageWord: 'prohibitively expensive' }
+      { promptWord: 'small-scale farmers', passageWord: 'subsistence farmers' }
     ],
     inputType: 'text',
     correctAnswer: ['cost-prohibitive', 'cost prohibitive'],
@@ -148,14 +147,14 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     ],
     inputType: 'choice',
     options: [
-      { value: 'A', label: 'Blank 1: A (decline), Blank 2: E (indifference)' },
-      { value: 'B', label: 'Blank 1: B (expansion), Blank 2: C (opposition)' },
-      { value: 'C', label: 'Blank 1: D (investment), Blank 2: A (decline)' },
-      { value: 'D', label: 'Blank 1: B (expansion), Blank 2: E (indifference)' }
+      { value: 'A', label: 'Blank 1: D (investment), Blank 2: A (decline)' },
+      { value: 'B', label: 'Blank 1: A (decline), Blank 2: C (opposition)' },
+      { value: 'C', label: 'Blank 1: B (expansion), Blank 2: C (opposition)' },
+      { value: 'D', label: 'Blank 1: B (expansion), Blank 2: D (investment)' }
     ],
-    correctAnswer: 'B',
+    correctAnswer: 'C',
     trapExplanation:
-      'Antonym Trap: "Decline" contradicts the text. "Exponential surge" maps to B (expansion), and "systemic resistance" maps to C (opposition).',
+      'Antonym Trap: Option B contradicts the text with "decline". "Exponential surge" maps to C (expansion), and "systemic resistance" maps to C (opposition).',
     rationale:
       'Option B is correct: "exponential surge" = B (expansion), and "systemic resistance" = C (opposition). Both words maintain flawless grammatical and semantic cohesion in the summary.'
   },
@@ -197,7 +196,7 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     questionPrompt:
       'Flow Chart: [Raw Seawater] ──► [Coarse Screening] ──► [High-Pressure Pumps] ──► [ ______ Membranes] ──► [Remineralization]\n\nFill the missing membrane descriptor (ONE WORD ONLY):',
     synonymPairs: [
-      { promptWord: 'filter dissolved mineral salts', passageWord: 'semi-permeable membranes' },
+      { promptWord: 'filter removes minerals', passageWord: 'filter dissolved mineral salts' },
       { promptWord: 'multistage sequence', passageWord: 'purification sequence' }
     ],
     inputType: 'text',
@@ -225,7 +224,7 @@ export const READING_DRILLS: ReadingDrillItem[] = [
       { promptWord: 'absorb heat', passageWord: 'absorb thermodynamic heat dissipation' }
     ],
     inputType: 'text',
-    correctAnswer: ['helical cooling jacket', 'cooling jacket', 'a helical cooling jacket'],
+    correctAnswer: ['helical cooling jacket', 'cooling jacket'],
     trapExplanation:
       'Misidentifying Location: Do not confuse the reactant capsule (inside) with the helical cooling jacket (encircling the exterior).',
     rationale:
@@ -245,19 +244,18 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     questionPrompt:
       'What did empirical research reveal regarding consumer purchasing habits for biodegradable packaging?',
     synonymPairs: [
-      { promptWord: 'price matched traditional plastics', passageWord: 'exact price parity with conventional single-use plastics' },
-      { promptWord: 'trade specialists', passageWord: 'industry observers' }
+      { promptWord: 'price matched traditional plastics', passageWord: 'exact price parity with conventional single-use plastics' }
     ],
     inputType: 'choice',
     options: [
-      { value: 'A', label: 'A) Consumers gladly paid higher premiums whenever green branding was visible.' },
-      { value: 'B', label: 'B) Eco-friendly goods were only favored when their price matched traditional plastics.' },
-      { value: 'C', label: 'C) Trade specialists correctly forecast rapid sales acceleration for sustainable goods.' },
+      { value: 'A', label: 'A) Eco-friendly goods were only favored when their price matched traditional plastics.' },
+      { value: 'B', label: 'B) Trade specialists correctly forecast rapid sales acceleration for sustainable goods.' },
+      { value: 'C', label: 'C) Consumers gladly paid higher premiums whenever green branding was visible.' },
       { value: 'D', label: 'D) Retail sales plummeted due to general skepticism toward recycling claims.' }
     ],
-    correctAnswer: 'B',
+    correctAnswer: 'A',
     trapExplanation:
-      'Verbatim Word Match Trap: Option A quotes "green branding" and "premiums", but asserts the exact opposite of what the empirical trials proved.',
+      'Verbatim Word Match Trap: Option C quotes "green branding" and "premiums", but asserts the exact opposite of what the empirical trials proved.',
     rationale:
       'Option B correctly paraphrases the finding: sales accelerated only when biodegradable alternatives reached "exact price parity" (cost matched) with conventional plastics.'
   },
@@ -281,16 +279,16 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     inputType: 'multi-choice',
     options: [
       { value: 'A', label: 'A) Significant reduction in localized urban temperatures' },
-      { value: 'B', label: 'B) Permanent elimination of municipal traffic noise' },
+      { value: 'B', label: 'B) Modest improvements in residential noise levels' },
       { value: 'C', label: 'C) Decreased burden on city stormwater drainage systems' },
-      { value: 'D', label: 'D) Universal drop in residential property insurance premiums' },
+      { value: 'D', label: 'D) Enhanced property insurance rates in some districts' },
       { value: 'E', label: 'E) Complete replacement of civil wastewater infrastructure' }
     ],
     correctAnswer: ['A', 'C'],
     trapExplanation:
-      'Mentioned-but-Refuted Trap: Options B and D are mentioned in the passage, but explicitly flagged as "unsupported by acoustic field data".',
+      'Mentioned-but-Refuted Trap: Options B and D mention benefits the passage explicitly states are "unsupported by acoustic field data". Option E is not mentioned.',
     rationale:
-      'Only A ("attenuate localized heat island effects") and C ("decreasing civil drainage overload") are empirically verified benefits supported by the text.'
+      'Only A ("attenuate localized heat island effects by up to 3.5°C") and C ("curtail stormwater runoff velocities, decreasing drainage overload") are empirically verified benefits by the text.'
   },
 
   // 11. Matching Headings
@@ -312,15 +310,15 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     inputType: 'choice',
     options: [
       { value: 'i', label: 'i: The triumphant elimination of fossil fuel transit in shipping ports' },
-      { value: 'ii', label: 'ii: Economic hurdles impeding the freight logistics transition' },
-      { value: 'iii', label: 'iii: A comprehensive blueprint for port electrification subsidies' },
-      { value: 'iv', label: 'iv: Statistical modeling of heavy diesel particulate emissions' }
+      { value: 'ii', label: 'ii: A comprehensive blueprint for port electrification subsidies' },
+      { value: 'iii', label: 'iii: Statistical modeling of heavy diesel particulate emissions' },
+      { value: 'iv', label: 'iv: Economic hurdles impeding the freight logistics transition' }
     ],
-    correctAnswer: 'ii',
+    correctAnswer: 'iv',
     trapExplanation:
-      'Detail Lure vs. Central Idea: Heading i contradicts the text. Heading iii mentions subsidies, but subsidies are only mentioned as a condition in the final line, not the paragraph theme.',
+      'Detail Lure vs. Central Idea: Heading i contradicts the text. Heading ii mentions subsidies, but subsidies are only mentioned as a condition in the final line, not the paragraph theme.',
     rationale:
-      'Heading ii captures the primary controlling theme: "budgetary limitations" and "prohibitive capital expenditure" (economic hurdles) prevent freight operators from adopting green technology.'
+      'Heading iv captures the primary controlling theme: "budgetary limitations" and "prohibitive capital expenditure" (economic hurdles) prevent freight operators from adopting green technology.'
   },
 
   // 12. Matching Information
@@ -332,12 +330,12 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     ruleSnippet:
       'Questions do NOT follow passage order. Parse the prompt for functional categories: a reference to, an explanation of, a contrast between. Execute last!',
     passageText:
-      '[Paragraph A]: Glaciological core sampling in Western Greenland reveals atmospheric carbon ratios spanning the last 800,000 years.\n\n[Paragraph B]: Deep seismic imaging demonstrates that subsurface magma conduits expand precipitously prior to volcanic eruptions, generating localized tremors.\n\n[Paragraph C]: In contrast to traditional manual cartography, contemporary LiDAR drone surveys produce millimeter-accurate topographic elevation models within hours, slashing surveying timelines by over 80%.',
+      '[Paragraph A]: Glaciological core sampling in Western Greenland reveals atmospheric carbon ratios spanning the last 800,000 years.\n\n[Paragraph B]: Deep seismic imaging demonstrates that subsurface magma conduits expand precipitously prior to volcanic eruptions, generating localized tremors.\n\n[Paragraph C]: While conventional hand-drawn cartography historically dominated surveying workflows, contemporary LiDAR drone surveys produce millimeter-accurate topographic elevation models within hours, advancing the discipline substantially.',
     questionPrompt:
-      'Which paragraph contains a comparison between traditional surveying methods and modern digital technology?',
+      'Which paragraph contains a comparison between conventional hand-drawn mapping and modern digital surveying technology?',
     synonymPairs: [
-      { promptWord: 'comparison between traditional and modern', passageWord: 'In contrast to traditional manual cartography, contemporary LiDAR drone surveys...' },
-      { promptWord: 'slashing timelines', passageWord: 'reduced journey time' }
+      { promptWord: 'conventional hand-drawn mapping', passageWord: 'conventional hand-drawn cartography' },
+      { promptWord: 'modern digital surveying', passageWord: 'LiDAR drone surveys' }
     ],
     inputType: 'choice',
     options: [
@@ -347,9 +345,9 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     ],
     correctAnswer: 'C',
     trapExplanation:
-      'Looking for Literal Keywords: Scanning for the literal word "comparison" will fail. Look for contrast discourse markers like "In contrast to" and comparative adverbs.',
+      'Looking for Literal Keywords: Scanning for the literal word "comparison" will fail. Look for contrast discourse markers like "While" and comparative adverbs.',
     rationale:
-      'Paragraph C explicitly contrasts "traditional manual cartography" with "contemporary LiDAR drone surveys", noting an 80% time reduction.'
+      'Paragraph C explicitly contrasts "conventional hand-drawn cartography" with "contemporary LiDAR drone surveys", marking a methodological evolution in the discipline.'
   },
 
   // 13. Matching Features / Names
@@ -361,12 +359,12 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     ruleSnippet:
       'Names are hard capital-letter anchors. Underline every mention of each researcher, read their specific claims, and match against statements.',
     passageText:
-      '[K] Contemporary anthropological archaeology has contested early migration hypotheses. Dr. Elena Vance proved through mitochondrial DNA analysis that prehistoric maritime navigation occurred at least 12,000 years earlier than previously assumed. Conversely, Professor Arthur Sterling argued that environmental megadroughts, rather than human overhunting, precipitated the sudden collapse of megafauna populations across the continent.',
+      '[K] Contemporary anthropological archaeology has contested early extinction hypotheses. Dr. Elena Vance presented evidence through paleolithic tool analysis that human overhunting intensified across grassland territories during the terminal Pleistocene, directly precipitating megafauna population collapse. Conversely, Professor Arthur Sterling contended that environmental megadroughts, rather than human hunting pressure, accounted for the sudden extinction of giant animal species across the continent.',
     questionPrompt:
-      'Statement: Asserted that climatic droughts were the primary trigger for the extinction of giant animal species.\n\nMatch with the responsible researcher:',
+      'Statement: Contended that human hunting activity was the decisive factor in megafauna extinction.\n\nMatch with the responsible researcher:',
     synonymPairs: [
-      { promptWord: 'climatic droughts were the primary trigger', passageWord: 'environmental megadroughts precipitated' },
-      { promptWord: 'extinction of giant animal species', passageWord: 'collapse of megafauna populations' }
+      { promptWord: 'human hunting activity', passageWord: 'human overhunting' },
+      { promptWord: 'megafauna extinction', passageWord: 'megafauna population collapse' }
     ],
     inputType: 'choice',
     options: [
@@ -374,11 +372,11 @@ export const READING_DRILLS: ReadingDrillItem[] = [
       { value: 'B', label: 'B: Professor Arthur Sterling' },
       { value: 'C', label: 'C: Neither researcher' }
     ],
-    correctAnswer: 'B',
+    correctAnswer: 'A',
     trapExplanation:
-      'Name Proximity Confusion: Dr. Vance appears first, but her research dealt with mitochondrial DNA and maritime voyages, not megafauna extinction.',
+      'Attribution Error: Professor Sterling appears second and discusses megafauna, but he argues droughts caused extinction, NOT hunting. Dr. Vance is the researcher who claims overhunting precipitated the collapse.',
     rationale:
-      'Professor Arthur Sterling explicitly claimed that "environmental megadroughts... precipitated the sudden collapse of megafauna populations", matching the statement.'
+      'Dr. Elena Vance explicitly presented evidence that "human overhunting intensified... directly precipitating megafauna population collapse", matching the statement.'
   },
 
   // 14. Matching Sentence Endings
@@ -399,16 +397,16 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     ],
     inputType: 'choice',
     options: [
-      { value: 'A', label: 'A) was vigorously resisted by regional conservation agencies.' },
-      { value: 'B', label: 'B) enabled riparian vegetation to recover and supported local beavers.' },
+      { value: 'A', label: 'A) enabled riparian vegetation to recover and supported local beavers.' },
+      { value: 'B', label: 'B) was vigorously resisted by regional conservation agencies.' },
       { value: 'C', label: 'C) drastically depleted the survival rates of native aquatic mammals.' },
       { value: 'D', label: 'D) failed to alter the feeding routines of ungulate populations.' }
     ],
-    correctAnswer: 'B',
+    correctAnswer: 'A',
     trapExplanation:
       'Distractor Plausibility: Option C sounds plausible in general knowledge (predators harming animals), but contradicts the passage evidence showing beavers flourished.',
     rationale:
-      'Ending B seamlessly completes the sentence: wolf predation changed grazing routines, allowing riverbank flora (willow/aspen) to regenerate and supplying beavers with materials.'
+      'Ending A seamlessly completes the sentence: wolf predation changed grazing routines, allowing riverbank flora (willow/aspen) to regenerate and supplying beavers with materials.'
   }
 ];
 

@@ -88,22 +88,21 @@ async function runMobileTouchQA() {
 
   await page.evaluateOnNewDocument(() => {
     localStorage.setItem('eng_onboarding_completed', 'true');
-    const existing = localStorage.getItem('STARK_ENG_STATE');
-    if (!existing) {
-      const state = {
-        version: 4,
-        learnerLevel: 'B2',
-        skillLevels: { vocab: 'B2', grammar: 'B2', reading: 'B2', listening: 'B2', writing: 'B2', speaking: 'B2' },
-        placementDone: true,
-        soundMuted: false,
-        cardStates: {},
-        streak: { currentStreak: 5, longestStreak: 12, lastActiveDate: '2026-10-14' },
-        habitProgress: {},
-        totalCardsReviewed: 42,
-        lastSyncTimestamp: Date.now()
-      };
-      localStorage.setItem('STARK_ENG_STATE', JSON.stringify(state));
-    }
+    localStorage.setItem('singularity_notifications_enabled', 'false');
+    const todayStr = new Date().toISOString().slice(0, 10);
+    const state = {
+      version: 4,
+      learnerLevel: 'B2',
+      skillLevels: { vocab: 'B2', grammar: 'B2', reading: 'B2', listening: 'B2', writing: 'B2', speaking: 'B2' },
+      placementDone: true,
+      soundMuted: false,
+      cardStates: {},
+      streak: { currentStreak: 5, longestStreak: 12, lastActiveDate: todayStr },
+      habitProgress: {},
+      totalCardsReviewed: 42,
+      lastSyncTimestamp: Date.now()
+    };
+    localStorage.setItem('STARK_ENG_STATE', JSON.stringify(state));
   });
 
   page.on('console', msg => {

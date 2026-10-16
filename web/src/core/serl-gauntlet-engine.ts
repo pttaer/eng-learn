@@ -245,18 +245,11 @@ export class SerlGauntletEngine {
     const flawed = record.learnerInput.trim();
     const correct = record.expectedOutput.trim();
 
-    // Create 3 plausible options including the flawed token
-    const options = [flawed, correct];
-    if (record.category === 'LEXICAL_COLLOCATION') {
-      options.push('independent from', 'reliant with');
-    } else if (record.category === 'SYNTACTIC') {
-      options.push('hardly he had', 'did he rarely');
-    } else {
-      options.push('not only but also', 'although however');
-    }
-
-    // Shuffle options deterministically
-    const uniqueOptions = Array.from(new Set(options)).slice(0, 4);
+    // The learner's own version against the corrected one: same form, exactly one flawed option.
+    // Generic decoys would be fragments next to full sentences (a giveaway) or flawed themselves (two right answers).
+    const uniqueOptions = Array.from(new Set([flawed, correct]));
+    // Vary the position by record id so the flawed version isn't always first
+    const rotatedOptions = (record.id.charCodeAt(record.id.length - 1) % 2) ? uniqueOptions.reverse() : uniqueOptions;
 
     return {
       errorId: record.id,
@@ -265,7 +258,7 @@ export class SerlGauntletEngine {
       cefrLevel: record.cefrLevel,
       instructions: 'STAGE 1: SPOT THE FLAW — Identify the erroneous or non-standard token in this context.',
       prompt: `Context: "${record.prompt}"\nWhich token represents the error that occurred?`,
-      options: uniqueOptions,
+      options: rotatedOptions,
       targetToken: flawed,
       expectedAnswer: flawed, // Learner must spot the flawed token
       l1Tip: record.l1VietnameseTip,

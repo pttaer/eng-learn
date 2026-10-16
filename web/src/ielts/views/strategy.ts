@@ -29,7 +29,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
       'Extrapolation trap: using personal knowledge to assume information not explicitly stated in the text'
     ],
     synonymPairs: [
-      { promptWord: 'entirely eliminated', passageWord: 'drastically curtailed' },
+      { promptWord: 'completely removed', passageWord: 'utterly eliminated' },
       { promptWord: 'inevitable consequence', passageWord: 'unavoidable outcome' },
       { promptWord: 'substantial increase', passageWord: 'marked surge' },
       { promptWord: 'prior to', passageWord: 'preceding' }

@@ -66,10 +66,10 @@ The rule of law, then, is better understood not as the triumph of rules over jud
 - **Analysis**: The equative "to X is not to Y but to Z" redefines the opponent's move and exposes its unintended effect. The final pair "unacknowledged and therefore unaccountable" builds a causal chain through the parallel un- prefixes and the connective "therefore".
 
 ## Sentence Mining
-### promulgate
-- **Part of Speech**: verb
-- **IPA**: /ˈprɒm.əl.ɡeɪt/
-- **Definition**: Make a law, decree, or idea officially known and in force by formal public announcement.
+### promulgated
+- **Part of Speech**: verb (past participle)
+- **IPA**: /ˈprɒm.əl.ɡeɪtɪd/
+- **Definition**: Made a law, decree, or idea officially known and in force by formal public announcement.
 - **Vietnamese**: ban hành, công bố chính thức (luật, sắc lệnh)
 - **Context**: In its popular rendering, the ideal demands that officials apply fixed, publicly promulgated rules mechanically, leaving no room for personal judgment.
 - **Collocations**: promulgate a law, promulgate regulations, publicly promulgated, promulgate a doctrine

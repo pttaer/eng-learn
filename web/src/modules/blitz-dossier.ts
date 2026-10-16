@@ -17,6 +17,85 @@ import { ParticleCanvas } from '../core/particle-canvas';
 import { ProgressionEngine } from '../core/progression-engine';
 import collocationsData from '../assets/data/collocations.json';
 import vocabularyData from '../assets/data/vocabulary.json';
+import { pickDecoys, meaningsOverlap } from '../core/decoys';
+
+/** Verbs whose collocations are worth blanking; phrases starting with a noun or adjective are skipped. */
+const BLANKABLE_VERBS = new Set(['make', 'take', 'have', 'do', 'get', 'give', 'keep', 'pay', 'break', 'catch', 'set', 'run', 'hold', 'reach', 'draw', 'gain', 'raise', 'bear', 'bring', 'meet', 'lose', 'miss', 'tell', 'say', 'play', 'strike', 'cut', 'save', 'spend', 'waste', 'follow', 'pose', 'conduct', 'carry', 'attract', 'commit', 'launch', 'exert', 'render']);
+const DECOY_VERBS = ['make', 'take', 'have', 'do', 'get', 'give', 'keep', 'pay', 'catch', 'hold', 'set', 'reach', 'gain', 'raise', 'bring', 'meet', 'lose', 'draw', 'bear', 'run', 'tell', 'say'];
+
+/** Verbs that are also natural with a given phrase ending, so they can never be the decoy. */
+const ALSO_CORRECT: Record<string, string[]> = {
+  'a decision': ['make', 'take', 'reach'],
+  'a look': ['have', 'take'],
+  'a shower': ['have', 'take'],
+  'a bath': ['have', 'take'],
+  'a break': ['have', 'take'],
+  'a rest': ['have', 'take', 'get'],
+  'a walk': ['have', 'take'],
+  'a seat': ['have', 'take'],
+  'a nap': ['have', 'take'],
+  'a holiday': ['have', 'take'],
+  'a swim': ['have', 'take'],
+  'a chance': ['have', 'take', 'get'],
+  'a deal': ['make', 'do', 'strike', 'cut', 'get'],
+  'a cold': ['have', 'catch', 'get'],
+  'the flu': ['have', 'catch', 'get'],
+  'the bus': ['get', 'catch', 'take'],
+  'a bus': ['get', 'catch', 'take'],
+  'the train': ['get', 'catch', 'take'],
+  'a train': ['get', 'catch', 'take'],
+  'a taxi': ['get', 'take', 'catch'],
+  'a flight': ['get', 'catch', 'take'],
+  'a job': ['get', 'have'],
+  'a meal': ['have', 'make'],
+  'breakfast': ['have', 'make'],
+  'lunch': ['have', 'make'],
+  'dinner': ['have', 'make'],
+  'a party': ['have', 'hold', 'give'],
+  'a meeting': ['have', 'hold'],
+  'a conversation': ['have', 'hold'],
+  'attention': ['pay', 'draw', 'attract'],
+  'a question': ['ask', 'raise', 'pose'],
+  'a risk': ['take', 'run'],
+  'a profit': ['make', 'turn'],
+  'time': ['spend', 'take', 'save', 'have', 'waste', 'keep'],
+  'money': ['make', 'save', 'spend', 'lose', 'get', 'have', 'raise'],
+  'an example': ['give', 'set', 'take'],
+  'a speech': ['give', 'make', 'deliver'],
+  'a call': ['make', 'give', 'take', 'get'],
+  'a phone call': ['make', 'give', 'take', 'get'],
+  'advice': ['give', 'get', 'take'],
+  'a photo': ['take', 'get', 'have'],
+  'a picture': ['take', 'draw', 'paint', 'get'],
+  'homework': ['do', 'have', 'get']
+};
+
+const ADJECTIVE_DEF_STARTS = new Set(['able', 'unable', 'having', 'showing', 'relating', 'related', 'characterized', 'characterised', 'full', 'lacking', 'not', 'very', 'extremely', 'unwilling', 'willing', 'existing', 'being', 'of', 'causing', 'tending', 'likely', 'marked', 'capable', 'easily', 'highly', 'deeply', 'happy', 'feeling', 'pleasant', 'difficult', 'easy', 'never', 'done', 'made', 'used', 'based', 'free', 'completely', 'too', 'more', 'less', 'so', 'in', 'belonging']);
+
+const NOUN_DEF_MODIFIERS = new Set(['small', 'large', 'big', 'little', 'young', 'old', 'long', 'short', 'white', 'black', 'red', 'green', 'yellow', 'brown', 'sweet', 'round', 'soft', 'thin', 'thick', 'tall', 'special', 'common', 'female', 'male', 'wild', 'official', 'written', 'printed', 'formal', 'informal', 'any', 'money', 'food', 'water', 'part']);
+
+/** Rough word class from dictionary-style definitions: "A/An/The ..." noun, "To ..." or imperative verb, "Able/Having/..." adjective. */
+function definitionKind(definition: string, word: string): 'noun' | 'adj' | 'verb' {
+  const first = definition.trim().toLowerCase().split(/[^a-z]+/).filter(Boolean)[0] || '';
+  if (first === 'a' || first === 'an' || first === 'the' || first === 'someone' || first === 'something' || first === 'person' || first === 'people') return 'noun';
+  if (first === 'to') return 'verb';
+  // The headword's own suffix is the next best signal (equanimity, fastidious, mitigate).
+  const w = word.toLowerCase();
+  if (!w.includes(' ')) {
+    if (/(ity|ness|tion|sion|ment|ance|ence|ism|ship|dom|hood)$/.test(w)) return 'noun';
+    if (/(ous|ive|ful|ic|al|able|ible|ent|ant|less|ary)$/.test(w)) return 'adj';
+    if (/(ize|ise|ify|ate)$/.test(w)) return 'verb';
+  }
+  // "Small white seeds that we cook..." — an adjective opening a noun definition
+  if (NOUN_DEF_MODIFIERS.has(first)) return 'noun';
+  if (ADJECTIVE_DEF_STARTS.has(first)) return 'adj';
+  return 'verb';
+}
+
+function definitionLeaksWord(definition: string, word: string): boolean {
+  const def = definition.toLowerCase();
+  return word.toLowerCase().split(/\s+/).some(t => t.length >= 4 && def.includes(t.slice(0, Math.max(4, t.length - 3))));
+}
 
 export interface BlitzPrompt {
   id: string;
@@ -532,88 +611,15 @@ export class BlitzDossier {
 
   /**
    * Generates a randomized prompt from collocations or vocabulary data.
+   * Retries when a roll can't produce a fair item (no verb to blank, definition leaks the word, no related decoy).
    */
   private generatePrompt(): BlitzPrompt {
-    const roll = Math.random();
-
-    // 1. Collocation Completion (40% chance)
-    if (roll < 0.40 && Array.isArray(collocationsData) && collocationsData.length > 0) {
-      const item = collocationsData[Math.floor(Math.random() * collocationsData.length)];
-      const words = item.phrase.trim().split(/\s+/);
-
-      if (words.length >= 2) {
-        const firstWord = words[0];
-        const rest = words.slice(1).join(' ');
-        const stem = `_____ ${rest}`;
-
-        // Select decoy from other first words or verbs
-        const decoys = ['make', 'take', 'do', 'have', 'give', 'keep', 'hold', 'bring', 'draw', 'bear', 'render', 'exert'];
-        const filteredDecoys = decoys.filter(d => d.toLowerCase() !== firstWord.toLowerCase());
-        const decoy = filteredDecoys[Math.floor(Math.random() * filteredDecoys.length)] || 'make';
-
-        const isLeftCorrect = Math.random() < 0.5;
-
-        return {
-          id: `blitz-${Date.now()}-${Math.random()}`,
-          category: 'collocation-stem',
-          promptTitle: 'COLLOCATION // PARTNER COMPLETION',
-          stem: `Complete the natural C1/C2 phrase: <br/><strong class="stem-highlight">${stem}</strong>`,
-          optionA: isLeftCorrect ? firstWord : decoy,
-          optionB: isLeftCorrect ? decoy : firstWord,
-          correctIndex: isLeftCorrect ? 0 : 1,
-          explanation: `Accurate collocation: "${item.phrase}" (${item.vietnamese}).`
-        };
-      }
-    }
-
-    // 2. Collocation Meaning Translation (30% chance)
-    if (roll < 0.70 && Array.isArray(collocationsData) && collocationsData.length > 1) {
-      const targetIdx = Math.floor(Math.random() * collocationsData.length);
-      const target = collocationsData[targetIdx];
-
-      let decoyIdx = Math.floor(Math.random() * collocationsData.length);
-      while (decoyIdx === targetIdx) {
-        decoyIdx = Math.floor(Math.random() * collocationsData.length);
-      }
-      const decoy = collocationsData[decoyIdx];
-
-      const isLeftCorrect = Math.random() < 0.5;
-
-      return {
-        id: `blitz-${Date.now()}-${Math.random()}`,
-        category: 'collocation-vn',
-        promptTitle: 'COLLOCATION // MEANING IDENTIFICATION',
-        stem: `Select the idiomatic Vietnamese meaning for: <br/><strong class="stem-highlight">${target.phrase}</strong>`,
-        optionA: isLeftCorrect ? target.vietnamese : decoy.vietnamese,
-        optionB: isLeftCorrect ? decoy.vietnamese : target.vietnamese,
-        correctIndex: isLeftCorrect ? 0 : 1,
-        explanation: `"${target.phrase}" translates naturally to "${target.vietnamese}".`
-      };
-    }
-
-    // 3. Academic Vocabulary Definition (30% chance)
-    if (Array.isArray(vocabularyData) && vocabularyData.length > 1) {
-      const targetIdx = Math.floor(Math.random() * vocabularyData.length);
-      const target = vocabularyData[targetIdx];
-
-      let decoyIdx = Math.floor(Math.random() * vocabularyData.length);
-      while (decoyIdx === targetIdx) {
-        decoyIdx = Math.floor(Math.random() * vocabularyData.length);
-      }
-      const decoy = vocabularyData[decoyIdx];
-
-      const isLeftCorrect = Math.random() < 0.5;
-
-      return {
-        id: `blitz-${Date.now()}-${Math.random()}`,
-        category: 'vocab-definition',
-        promptTitle: 'C2 LEXICON // DEFINITION MATCH',
-        stem: `Which academic term fits: <br/><em class="stem-definition">"${target.definition}"</em>?`,
-        optionA: isLeftCorrect ? target.wordOrChunk : decoy.wordOrChunk,
-        optionB: isLeftCorrect ? decoy.wordOrChunk : target.wordOrChunk,
-        correctIndex: isLeftCorrect ? 0 : 1,
-        explanation: `"${target.wordOrChunk}" — ${target.definition} (${target.vietnamese}).`
-      };
+    for (let attempt = 0; attempt < 20; attempt++) {
+      const roll = Math.random();
+      const prompt = roll < 0.40 ? this.collocationStemPrompt()
+        : roll < 0.70 ? this.collocationMeaningPrompt()
+        : this.vocabDefinitionPrompt();
+      if (prompt) return prompt;
     }
 
     // Fallback safe prompt
@@ -621,12 +627,100 @@ export class BlitzDossier {
       id: 'blitz-fallback',
       category: 'collocation-stem',
       promptTitle: 'RAPID FLASH COLLOCATION',
-      stem: 'Complete: <strong class="stem-highlight">_____ resemblance</strong>',
-      optionA: 'bear',
-      optionB: 'make',
+      stem: 'Complete the phrase meaning <em>"phạm sai lầm"</em>: <br/><strong class="stem-highlight">_____ a mistake</strong>',
+      optionA: 'make',
+      optionB: 'do',
       correctIndex: 0,
-      explanation: 'Accurate native collocation is "bear resemblance".'
+      explanation: 'Natural collocation is "make a mistake", never "do a mistake".'
     };
+  }
+
+  private twoChoice(category: BlitzPrompt['category'], promptTitle: string, stem: string, correct: string, decoy: string, explanation: string): BlitzPrompt {
+    const isLeftCorrect = Math.random() < 0.5;
+    return {
+      id: `blitz-${Date.now()}-${Math.random()}`,
+      category,
+      promptTitle,
+      stem,
+      optionA: isLeftCorrect ? correct : decoy,
+      optionB: isLeftCorrect ? decoy : correct,
+      correctIndex: isLeftCorrect ? 0 : 1,
+      explanation
+    };
+  }
+
+  /** 1. Collocation completion: blank the verb; the decoy is another common collocation verb that is wrong here. */
+  private collocationStemPrompt(): BlitzPrompt | null {
+    const item = collocationsData[Math.floor(Math.random() * collocationsData.length)];
+    const words = item.phrase.trim().split(/\s+/);
+    const verb = words[0].toLowerCase();
+    if (words.length < 2 || !BLANKABLE_VERBS.has(verb)) return null;
+    const rest = words.slice(1).join(' ');
+    const restKey = rest.toLowerCase();
+
+    const decoys = DECOY_VERBS.filter(v => {
+      if (v === verb || ALSO_CORRECT[restKey]?.includes(v)) return false;
+      // A bank phrase with this verb is only a fair decoy if it means something else (keep vs break a promise).
+      const twin = collocationsData.find(c => c.phrase.toLowerCase() === `${v} ${restKey}`);
+      return !twin || !meaningsOverlap(twin.vietnamese, item.vietnamese);
+    });
+    if (decoys.length === 0) return null;
+    const decoy = decoys[Math.floor(Math.random() * decoys.length)];
+
+    return this.twoChoice(
+      'collocation-stem',
+      'COLLOCATION // PARTNER COMPLETION',
+      `Complete the phrase meaning <em>"${this.escapeHtml(item.vietnamese)}"</em>: <br/><strong class="stem-highlight">_____ ${this.escapeHtml(rest)}</strong>`,
+      words[0],
+      decoy,
+      `Accurate collocation: "${item.phrase}" (${item.vietnamese}).`
+    );
+  }
+
+  /** 2. Meaning identification: the decoy is a related collocation (shared word, same category/level) with a different meaning. */
+  private collocationMeaningPrompt(): BlitzPrompt | null {
+    const target = collocationsData[Math.floor(Math.random() * collocationsData.length)];
+    const [decoy] = pickDecoys(target, collocationsData, 1, {
+      answer: c => c.vietnamese,
+      text: c => c.phrase,
+      bonus: c => (c.category === target.category ? 2 : 0) + (c.cefrLevel === target.cefrLevel ? 1 : 0)
+    });
+    if (!decoy) return null;
+
+    return this.twoChoice(
+      'collocation-vn',
+      'COLLOCATION // MEANING IDENTIFICATION',
+      `Select the idiomatic Vietnamese meaning for: <br/><strong class="stem-highlight">${this.escapeHtml(target.phrase)}</strong>`,
+      target.vietnamese,
+      decoy.vietnamese,
+      `"${target.phrase}" translates naturally to "${target.vietnamese}". "${decoy.phrase}" means "${decoy.vietnamese}".`
+    );
+  }
+
+  /** 3. Definition match: skip definitions that contain the word; the decoy has the same type and length, ideally the same root. */
+  private vocabDefinitionPrompt(): BlitzPrompt | null {
+    const target = vocabularyData[Math.floor(Math.random() * vocabularyData.length)];
+    if (!target.definition || definitionLeaksWord(target.definition, target.wordOrChunk)) return null;
+    const wordCount = (v: { wordOrChunk: string }) => v.wordOrChunk.trim().split(/\s+/).length;
+    const root = (v: { breakdown?: { root?: string } }) => v.breakdown?.root;
+
+    const [decoy] = pickDecoys(target, vocabularyData, 1, {
+      answer: v => v.wordOrChunk,
+      text: v => v.wordOrChunk,
+      meaning: v => v.vietnamese,
+      accept: v => v.mode === target.mode && wordCount(v) === wordCount(target) && definitionKind(v.definition, v.wordOrChunk) === definitionKind(target.definition, target.wordOrChunk),
+      bonus: v => (root(target) && root(v) === root(target) ? 3 : 0) + (v.cefrLevel === target.cefrLevel ? 1 : 0)
+    });
+    if (!decoy) return null;
+
+    return this.twoChoice(
+      'vocab-definition',
+      'C2 LEXICON // DEFINITION MATCH',
+      `Which academic term fits: <br/><em class="stem-definition">"${this.escapeHtml(target.definition)}"</em>?`,
+      target.wordOrChunk,
+      decoy.wordOrChunk,
+      `"${target.wordOrChunk}" — ${target.definition} (${target.vietnamese}).`
+    );
   }
 
   /**

@@ -433,7 +433,7 @@
             "ipa": "/baɪ/",
             "definition": "To get something and give money for it.",
             "vietnamese": "mua",
-            "contextSentence": "My mother buys rice, fish and eggs.",
+            "contextSentence": "My mother goes out to buy rice, fish and eggs.",
             "collocations": [
               "buy food",
               "buy a bag",
@@ -638,7 +638,7 @@
             "ipa": "/swɪm/",
             "definition": "To move through water by using your arms and legs.",
             "vietnamese": "bơi",
-            "contextSentence": "Later, we swam in the sea, but the water was very cold.",
+            "contextSentence": "Later, we went to swim in the sea, but the water was very cold.",
             "collocations": [
               "swim in the sea",
               "swim in a pool",
@@ -794,10 +794,10 @@
         "pass3SentenceMining": [
           {
             "id": "mine-reading-a2-2-1",
-            "targetWord": "habit",
-            "partOfSpeech": "noun",
+            "targetWord": "habits",
+            "partOfSpeech": "noun (plural)",
             "ipa": "/ˈhæb.ɪt/",
-            "definition": "Something you do often or regularly.",
+            "definition": "Things you do often or regularly.",
             "vietnamese": "thói quen",
             "contextSentence": "Good habits make life better.",
             "collocations": [
@@ -814,7 +814,7 @@
             "ipa": "/ˈvedʒ.tə.bəl/",
             "definition": "A plant that you eat, such as a carrot or an onion.",
             "vietnamese": "rau, rau củ",
-            "contextSentence": "It is also important to eat fruit and vegetables.",
+            "contextSentence": "It is also important to eat a vegetable with every meal.",
             "collocations": [
               "fresh vegetables",
               "eat vegetables",
@@ -1351,7 +1351,7 @@
             "ipa": "/ˌsʌb.vəʊ.kəl.aɪˈzeɪ.ʃən/",
             "definition": "The internal, silent articulation of words while reading.",
             "vietnamese": "sự phát âm thầm trong đầu khi đọc chữ",
-            "contextSentence": "At foundational stages, readers are bottlenecked by subvocalization—the covert auditory articulation of printed words in the mind's inner ear.",
+            "contextSentence": "At foundational stages, readers lean heavily on subvocalization—the covert auditory articulation of printed words in the mind's inner ear.",
             "collocations": [
               "habitual subvocalization",
               "inner-speech subvocalization",
@@ -1381,7 +1381,7 @@
             "ipa": "/ˈen.ɡræm/",
             "definition": "A hypothesized physical trace left by an experience in the brain’s neural tissue; a memory trace.",
             "vietnamese": "dấu vết ký ức thần kinh, vết hằn ký ức sinh học trong não",
-            "contextSentence": "The polymath converts fleeting encounters with unfamiliar lexical items into durable, retrievable engrams.",
+            "contextSentence": "The polymath converts fleeting encounters with unfamiliar lexical items into a durable, retrievable engram.",
             "collocations": [
               "memory engram",
               "neural engram",
@@ -1500,10 +1500,10 @@
         "pass3SentenceMining": [
           {
             "id": "mine-reading-art-3-1",
-            "targetWord": "conflate",
-            "partOfSpeech": "verb",
-            "ipa": "/kənˈfleɪt/",
-            "definition": "Combine two or more separate ideas, entities, or arguments into one, often erroneously.",
+            "targetWord": "conflated",
+            "partOfSpeech": "verb (past participle)",
+            "ipa": "/kənˈfleɪtɪd/",
+            "definition": "Combined two or more separate ideas, entities, or arguments into one, often erroneously.",
             "vietnamese": "đánh đồng, trộn lẫn hai khái niệm riêng biệt làm một",
             "contextSentence": "In the contemporary knowledge economy, hyper-connectivity is frequently conflated with organizational velocity.",
             "collocations": [
@@ -1751,7 +1751,7 @@
             "ipa": "/rɪˈsɪnd/",
             "definition": "Formally revoke, cancel, or repeal an agreement, law, or decision.",
             "vietnamese": "hủy bỏ, thu hồi, bãi bỏ (một thỏa thuận, quyết định)",
-            "contextSentence": "The pact could lapse, but it could not be entirely rescinded.",
+            "contextSentence": "The pact could lapse, but no one could rescind it entirely.",
             "collocations": [
               "rescind a decision",
               "rescind an order",
@@ -1893,10 +1893,10 @@
         "pass3SentenceMining": [
           {
             "id": "mine-reading-art-5-1",
-            "targetWord": "promulgate",
-            "partOfSpeech": "verb",
-            "ipa": "/ˈprɒm.əl.ɡeɪt/",
-            "definition": "Make a law, decree, or idea officially known and in force by formal public announcement.",
+            "targetWord": "promulgated",
+            "partOfSpeech": "verb (past participle)",
+            "ipa": "/ˈprɒm.əl.ɡeɪtɪd/",
+            "definition": "Made a law, decree, or idea officially known and in force by formal public announcement.",
             "vietnamese": "ban hành, công bố chính thức (luật, sắc lệnh)",
             "contextSentence": "In its popular rendering, the ideal demands that officials apply fixed, publicly promulgated rules mechanically, leaving no room for personal judgment.",
             "collocations": [
@@ -2056,7 +2056,7 @@
             "ipa": "/ekˈsɒdʒ.ɪ.nəs/",
             "definition": "Originating from outside; derived or developed from external causes or conditions.",
             "vietnamese": "ngoại sinh, bắt nguồn từ bên ngoài, do tác nhân ngoại lai gây ra",
-            "contextSentence": "Every exogenous intrusion triggers an involuntary orienting reflex that shatters attentional synchrony.",
+            "contextSentence": "Every exogenous intrusion—whether a notification chime, a fleeting chat ping, or an open browser tab—triggers an involuntary orienting reflex that shatters attentional synchrony.",
             "collocations": [
               "exogenous intrusion",
               "exogenous shock",
@@ -2208,7 +2208,7 @@
             "ipa": "/juːˌtɪl.ɪˈteə.ri.ə.nɪ.zəm/",
             "definition": "The doctrine that actions are right if they are useful or for the benefit of a majority; practical usefulness divorced from beauty, joy, or spiritual depth.",
             "vietnamese": "chủ nghĩa công lợi, quan điểm thực dụng vị lợi ích trước mắt",
-            "contextSentence": "Civilization itself degenerates into sterile utilitarianism without leisure.",
+            "contextSentence": "Civilization itself degenerates into sterile utilitarianism.",
             "collocations": [
               "sterile utilitarianism",
               "crude utilitarianism",
@@ -2253,7 +2253,7 @@
             "ipa": "/ˈɒl.ɪ.ɡɑː.ki/",
             "definition": "A small group of people having control of a country, organization, or institution, typically governing in their own interest.",
             "vietnamese": "tập đoàn đầu sỏ, chế độ quả đầu, nhóm thiểu số thống trị",
-            "contextSentence": "Morality designed by ruling oligarchies to protect their accumulated privileges.",
+            "contextSentence": "Morality designed by a ruling oligarchy to protect its accumulated privileges.",
             "collocations": [
               "ruling oligarchies",
               "financial oligarchy",
@@ -2371,7 +2371,7 @@
             "ipa": "/ˈɑː.keɪ.ɪ.zəm/",
             "definition": "A thing that is very old or old-fashioned, especially an archaic word, style, or idiom retained out of sentimentality.",
             "vietnamese": "từ cổ, phong cách cổ xưa, sự hoài cổ lỗi thời",
-            "contextSentence": "It follows that any struggle against the abuse of language is a sentimental archaism, like preferring candles to electric light.",
+            "contextSentence": "It follows that any struggle against the abuse of language is a sentimental archaism, like preferring candles to electric light or hansom cabs to aeroplanes.",
             "collocations": [
               "sentimental archaism",
               "deliberate archaism",
@@ -2622,7 +2622,7 @@
             "ipa": "/ˈprɪv.əl.ɪdʒ/",
             "definition": "Treat one thing as more important or authoritative than others, often without sufficient justification.",
             "vietnamese": "đặt ưu tiên, coi trọng hơn hẳn, ưu ái một yếu tố so với các yếu tố khác",
-            "contextSentence": "Some ecologists have therefore advocated reporting a family of related measures, often expressed as effective numbers of species, rather than privileging any single index. Each choice reflects a judgment about which aspects of diversity matter most.",
+            "contextSentence": "Some ecologists have therefore advocated reporting a family of related measures, often expressed as effective numbers of species, rather than privilege any single index. Each choice reflects a judgment about which aspects of diversity matter most.",
             "collocations": [
               "privilege one interpretation over another",
               "privilege theory over practice",
@@ -2773,7 +2773,7 @@
             "ipa": "/ˈkɒl.iːɡ/",
             "definition": "A person who works with you in the same company or team.",
             "vietnamese": "đồng nghiệp",
-            "contextSentence": "Some people feel lonely because they rarely see their colleagues.",
+            "contextSentence": "Some people feel lonely when they have no colleague to talk to at work.",
             "collocations": [
               "a work colleague",
               "a former colleague",
@@ -2980,7 +2980,7 @@
             "ipa": "/ˌriːˈsaɪ.kəl/",
             "definition": "To treat used materials so that they can be used again.",
             "vietnamese": "tái chế",
-            "contextSentence": "In some places, old bottles can be returned and recycled.",
+            "contextSentence": "In some places, people can return old bottles to recycle them.",
             "collocations": [
               "recycle paper",
               "recycle plastic",
@@ -3198,7 +3198,7 @@
             "ipa": "/ˈhæb.ɪt/",
             "definition": "Something that you do regularly, often without thinking.",
             "vietnamese": "thói quen",
-            "contextSentence": "Small habits are more important than big efforts.",
+            "contextSentence": "A small habit is more important than a big effort.",
             "collocations": [
               "a good habit",
               "a bad habit",
@@ -3387,7 +3387,7 @@
             "ipa": "/kənˈtɪn.dʒən.si/",
             "definition": "A future event or circumstance which is possible but cannot be predicted with certainty; a provision for an unforeseen event.",
             "vietnamese": "sự việc bất ngờ, tình huống dự phòng",
-            "contextSentence": "Remote work evolved from emergency contingency plans into established pillars of corporate culture.",
+            "contextSentence": "Remote and hybrid employment arrangements have evolved from emergency contingency plans into established pillars of contemporary corporate culture.",
             "collocations": [
               "contingency plan",
               "prepare for contingencies",
@@ -3581,7 +3581,7 @@
             "ipa": "/faʊnˈdeɪ.ʃən.əl/",
             "definition": "Denoting an underlying basis or essential principle on which something is built.",
             "vietnamese": "mang tính nền tảng, cơ bản cốt lõi",
-            "contextSentence": "Planners are compelled to rethink the foundational principles of infrastructure.",
+            "contextSentence": "Urban planners are compelled to rethink the foundational principles governing city infrastructure.",
             "collocations": [
               "foundational principle",
               "foundational concepts",
@@ -3626,7 +3626,7 @@
             "ipa": "/kɜːˈteɪl/",
             "definition": "To reduce in extent, quantity, or duration; to impose restrictions upon.",
             "vietnamese": "cắt giảm, hạn chế bớt, thu hẹp",
-            "contextSentence": "By curtailing dependency on private automobile transport, cities reduce emissions.",
+            "contextSentence": "Cities reduce emissions when they curtail dependency on private automobile transport.",
             "collocations": [
               "curtail emissions",
               "curtail spending",
@@ -3780,7 +3780,7 @@
             "ipa": "/prəˌlɪf.əˈreɪ.ʃən/",
             "definition": "Rapid increase in numbers, quantity, or spread; fast multiplication.",
             "vietnamese": "sự bùng nổ, sự gia tăng nhanh chóng, sự lan rộng",
-            "contextSentence": "The rapid proliferation of generative artificial intelligence has ignited debate.",
+            "contextSentence": "The rapid proliferation of generative artificial intelligence and autonomous algorithmic systems has ignited intense debate across global labor markets.",
             "collocations": [
               "nuclear proliferation",
               "rapid proliferation",

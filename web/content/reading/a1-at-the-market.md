@@ -74,7 +74,7 @@ A woman sells flowers. They are pink and white. I want one flower. I ask, "How m
 - **IPA**: /baɪ/
 - **Definition**: To get something and give money for it.
 - **Vietnamese**: mua
-- **Context**: My mother buys rice, fish and eggs.
+- **Context**: My mother goes out to buy rice, fish and eggs.
 - **Collocations**: buy food, buy a bag, buy and sell
 - **Etymology**: From Old English bycgan (to buy).
 

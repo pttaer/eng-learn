@@ -81,7 +81,7 @@ I have tried both ways, and I have learned one important thing. Whatever you cho
 - **IPA**: /ˈkɒl.iːɡ/
 - **Definition**: A person who works with you in the same company or team.
 - **Vietnamese**: đồng nghiệp
-- **Context**: Some people feel lonely because they rarely see their colleagues.
+- **Context**: Some people feel lonely when they have no colleague to talk to at work.
 - **Collocations**: a work colleague, a former colleague, colleagues and friends
 - **Etymology**: From Latin collega (a partner in office).
 

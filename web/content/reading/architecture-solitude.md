@@ -49,10 +49,10 @@ Reclaiming cognitive autonomy requires institutionalizing deliberate boundaries.
 - **Analysis**: Fronted compound participial phrases establish the dual disciplines of time-blocking and philosophical re-evaluation. The sentence concludes with organic metaphorical imagery ("quietly germinate").
 
 ## Sentence Mining
-### conflate
-- **Part of Speech**: verb
-- **IPA**: /kənˈfleɪt/
-- **Definition**: Combine two or more separate ideas, entities, or arguments into one, often erroneously.
+### conflated
+- **Part of Speech**: verb (past participle)
+- **IPA**: /kənˈfleɪtɪd/
+- **Definition**: Combined two or more separate ideas, entities, or arguments into one, often erroneously.
 - **Vietnamese**: đánh đồng, trộn lẫn hai khái niệm riêng biệt làm một
 - **Context**: In the contemporary knowledge economy, hyper-connectivity is frequently conflated with organizational velocity.
 - **Collocations**: conflate two concepts, erroneously conflated, conflate correlation with causation

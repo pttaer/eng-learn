@@ -80,7 +80,7 @@ Of course, individual action is not enough on its own. Governments and companies
 - **IPA**: /ˌriːˈsaɪ.kəl/
 - **Definition**: To treat used materials so that they can be used again.
 - **Vietnamese**: tái chế
-- **Context**: In some places, old bottles can be returned and recycled.
+- **Context**: In some places, people can return old bottles to recycle them.
 - **Collocations**: recycle paper, recycle plastic, recycle waste
 - **Etymology**: From re- (again) + cycle, from Greek kyklos (circle).
 

@@ -130,59 +130,61 @@ export class ExamCockpitDossier {
   }
 
   private initQuestions(): void {
-    // Generate authentic 40-question palette
-    this.questions = [];
-    const sampleAnchors = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
-    const tfngKeys = ['TRUE', 'FALSE', 'NOT GIVEN', 'TRUE', 'FALSE', 'TRUE', 'NOT GIVEN', 'FALSE', 'TRUE', 'NOT GIVEN', 'TRUE', 'FALSE', 'TRUE'];
-    const gapKeys = ['syntax', 'larynx', 'cohesion', 'gestures', 'cognition', 'evolution', 'symbolism', 'articulation', 'dialect', 'vocal tract', 'mutation', 'grammar', 'phonology', 'recursion'];
+    // Authentic 40-question palette for CD-IELTS Reading Mock
+    const TFNG = ['TRUE', 'FALSE', 'NOT GIVEN'];
+    const questionsData: Omit<QuestionItem, 'isFlagged'>[] = [
+      // Q1-13: TRUE / FALSE / NOT GIVEN on Passage 1 (The Falkirk Wheel) — 5 TRUE, 4 FALSE, 4 NOT GIVEN
+      { id: 1, type: 'tfng', prompt: 'The two canals were once joined by a series of locks.', paragraphAnchor: 'A', options: TFNG, correctAnswer: 'TRUE', passageIndex: 0, explanation: 'Paragraph A: "Historically, the two canals had been connected by a flight of eleven locks." A "flight of locks" is a series of locks.' },
+      { id: 2, type: 'tfng', prompt: 'The original locks were removed because they had become too expensive to maintain.', paragraphAnchor: 'A', options: TFNG, correctAnswer: 'NOT GIVEN', passageIndex: 0, explanation: 'Paragraph A says the locks "had been dismantled and backfilled in 1933" but gives no reason. The removal is mentioned; the cause is not, so NOT GIVEN rather than TRUE.' },
+      { id: 3, type: 'tfng', prompt: 'The organisers of the Millennium Link wanted to rebuild the historic locks.', paragraphAnchor: 'B', options: TFNG, correctAnswer: 'FALSE', passageIndex: 0, explanation: 'Paragraph B: the project "demanded an iconic, forward-looking structure rather than a reconstruction of the historic locks". This directly contradicts the statement.' },
+      { id: 4, type: 'tfng', prompt: 'Turning the wheel uses about as much electricity as boiling a single kettle.', paragraphAnchor: 'B', options: TFNG, correctAnswer: 'FALSE', passageIndex: 0, explanation: 'Paragraph B: it uses "roughly the same electrical energy as boiling eight domestic kettles". One kettle contradicts eight.' },
+      { id: 5, type: 'tfng', prompt: 'The design of the wheel was based on the shape of an ancient weapon.', paragraphAnchor: 'B', options: TFNG, correctAnswer: 'TRUE', passageIndex: 0, explanation: 'Paragraph B: the design "was inspired by a Celtic double-headed axe". An axe of this kind is a historic weapon; "inspired by" paraphrases "based on".' },
+      { id: 6, type: 'tfng', prompt: 'Moving boats from one canal level to the other takes the wheel less than ten minutes.', paragraphAnchor: 'E', options: TFNG, correctAnswer: 'TRUE', passageIndex: 0, explanation: 'Paragraph E: "The entire rotation takes approximately five and a half minutes", which is under ten.' },
+      { id: 7, type: 'tfng', prompt: 'The caissons stay balanced only when both of them are carrying boats of similar weight.', paragraphAnchor: 'C', options: TFNG, correctAnswer: 'FALSE', passageIndex: 0, explanation: 'Paragraph C: the caissons "remain in absolute balance even when one holds a heavy canal barge and the other holds only water". Balance does not depend on matching boats.' },
+      { id: 8, type: 'tfng', prompt: 'The steel parts of the wheel were fitted together for the first time in England.', paragraphAnchor: 'D', options: TFNG, correctAnswer: 'TRUE', passageIndex: 0, explanation: 'Paragraph D: the components were "manufactured and pre-assembled with millimetric precision in Derbyshire, England, before being dismantled and transported to Falkirk".' },
+      { id: 9, type: 'tfng', prompt: 'Some of the components were damaged on their way to Falkirk.', paragraphAnchor: 'D', options: TFNG, correctAnswer: 'NOT GIVEN', passageIndex: 0, explanation: 'Paragraph D mentions the "45 oversized lorry loads" but says nothing about damage in transit. The journey is mentioned; damage is not.' },
+      { id: 10, type: 'tfng', prompt: 'A machine tightened each of the bolts automatically.', paragraphAnchor: 'D', options: TFNG, correctAnswer: 'FALSE', passageIndex: 0, explanation: 'Paragraph D: each bolt was "tightened by hand with an electronic torque wrench". The tool was electronic, but the work was done by hand, not automatically.' },
+      { id: 11, type: 'tfng', prompt: 'The wheel was opened as part of a royal celebration.', paragraphAnchor: 'E', options: TFNG, correctAnswer: 'TRUE', passageIndex: 0, explanation: 'Paragraph E: it was "Opened by Queen Elizabeth II on 24 May 2002 as part of her Golden Jubilee celebrations".' },
+      { id: 12, type: 'tfng', prompt: 'Visitor numbers at the wheel have risen every year since it opened.', paragraphAnchor: 'E', options: TFNG, correctAnswer: 'NOT GIVEN', passageIndex: 0, explanation: 'Paragraph E gives only a total ("over 5.5 million visitors"), not a year-by-year trend.' },
+      { id: 13, type: 'tfng', prompt: 'The wheel itself accounted for most of the cost of the Millennium Link project.', paragraphAnchor: 'B', options: TFNG, correctAnswer: 'NOT GIVEN', passageIndex: 0, explanation: 'Paragraph B gives the cost of the whole project (£84.5 million) but never says how much of it the wheel took.' },
 
+      // Q14-26: Multiple choice on Passage 2 (Collecting) — keys A4 / B3 / C3 / D3
+      { id: 14, type: 'mcq', prompt: 'In Paragraph A, the writer distinguishes collectors from hoarders mainly by', paragraphAnchor: 'A', options: ['A. the money their possessions are worth.', 'B. the number of objects they accumulate.', 'C. the way they select and organise what they own.', 'D. how attached they feel to each object.'], correctAnswer: 'C. the way they select and organise what they own.', passageIndex: 1, explanation: 'Paragraph A: collectors "curate, categorize, authenticate, and display their possessions according to systematic criteria", while hoarding is "disorganized accumulation". D is tempting because hoarders feel distress when parting with items, but attachment is not the dividing line the writer draws.' },
+      { id: 15, type: 'mcq', prompt: 'According to evolutionary psychologists, the urge to collect first developed because', paragraphAnchor: 'B', options: ['A. storing useful materials helped people survive times of shortage.', 'B. owning rare objects made people more attractive to partners.', 'C. early humans needed a way to record their history.', 'D. sharing tools strengthened loyalty within a group.'], correctAnswer: 'A. storing useful materials helped people survive times of shortage.', passageIndex: 1, explanation: 'Paragraph B: accumulating "seeds, tools, durable materials—conferred a distinct survival advantage during seasonal scarcities". B, C and D are not mentioned.' },
+      { id: 16, type: 'mcq', prompt: 'What happens to the collecting instinct in societies where basic material needs are met?', paragraphAnchor: 'B', options: ['A. It gradually fades away.', 'B. It shifts towards practical, everyday goods.', 'C. It becomes a source of anxiety.', 'D. It is redirected towards objects valued for their meaning rather than their use.'], correctAnswer: 'D. It is redirected towards objects valued for their meaning rather than their use.', passageIndex: 1, explanation: 'Paragraph B: the instinct "is sublimated into symbolic domains: rare stamps, vintage timepieces, first-edition books". B reverses this: the objects are symbolic, not practical.' },
+      { id: 17, type: 'mcq', prompt: 'Thorstein Veblen is mentioned to support the idea that collecting', paragraphAnchor: 'C', options: ['A. began as a survival strategy.', 'B. can display a person\'s wealth and refined taste.', 'C. protects people against the passing of time.', 'D. produces chemical rewards in the brain.'], correctAnswer: 'B. can display a person\'s wealth and refined taste.', passageIndex: 1, explanation: 'Paragraph C: Veblen noted that acquiring rare artifacts signals "wealth, discerning connoisseurship, and specialized leisure". A, C and D are ideas from Paragraphs B, D and E, not Veblen\'s.' },
+      { id: 18, type: 'mcq', prompt: 'Why does verified provenance matter to a collector, according to Paragraph C?', paragraphAnchor: 'C', options: ['A. It proves an object is old enough to be valuable.', 'B. It makes an object easier to sell later.', 'C. It allows a museum to accept the object.', 'D. It earns the owner respect among knowledgeable peers.'], correctAnswer: 'D. It earns the owner respect among knowledgeable peers.', passageIndex: 1, explanation: 'Paragraph C: provenance "elevates the owner within scholarly or elite communities, establishing peer recognition and social prestige". The text says nothing about age, resale or museums.' },
+      { id: 19, type: 'mcq', prompt: 'The items described as ephemera in Paragraph D are', paragraphAnchor: 'D', options: ['A. ordinary objects that were never meant to last.', 'B. valuable antiques with documented histories.', 'C. natural specimens such as rocks and minerals.', 'D. early printings of important books.'], correctAnswer: 'A. ordinary objects that were never meant to last.', passageIndex: 1, explanation: 'Paragraph D: "Everyday ephemera—postcards, concert tickets, mid-century packaging" are "fragile paper artifacts". C and D echo the symbolic collectables listed in Paragraph B, not ephemera.' },
+      { id: 20, type: 'mcq', prompt: 'According to Paragraph D, people who collect ephemera are partly motivated by a wish to', paragraphAnchor: 'D', options: ['A. impress members of elite communities.', 'B. hold on to a past that time would otherwise erase.', 'C. complete a full classification of a category.', 'D. profit from rising prices.'], correctAnswer: 'B. hold on to a past that time would otherwise erase.', passageIndex: 1, explanation: 'Paragraph D: collectors "construct a psychological bulwark against the relentless transience of time". A belongs to Paragraph C and C to Paragraph A.' },
+      { id: 21, type: 'mcq', prompt: 'The writer compares the experience of finally finding a long-sought item to', paragraphAnchor: 'E', options: ['A. the excitement of winning a competition.', 'B. the relief of giving up a hoarding habit.', 'C. the satisfaction of solving a problem.', 'D. the pleasure of receiving a gift.'], correctAnswer: 'C. the satisfaction of solving a problem.', passageIndex: 1, explanation: 'Paragraph E: it "triggers dopamine releases akin to reward pathways in problem-solving". "Akin to" signals the comparison.' },
+      { id: 22, type: 'mcq', prompt: 'Which of these is NOT presented in the passage as a reason why people collect?', paragraphAnchor: 'C', options: ['A. making a financial investment', 'B. gaining social status', 'C. feeling a link to earlier times', 'D. enjoying the search itself'], correctAnswer: 'A. making a financial investment', passageIndex: 1, explanation: 'Status (Paragraph C), nostalgia (Paragraph D) and "the thrill of the hunt" (Paragraph E) are all given. Money is never presented as a motive.' },
+      { id: 23, type: 'mcq', prompt: 'In Paragraph E, the writer\'s view of scholarly collecting is that it', paragraphAnchor: 'E', options: ['A. is mainly a passive form of entertainment.', 'B. has damaged many historical records.', 'C. has helped build the holdings of public institutions.', 'D. should be left to professional researchers.'], correctAnswer: 'C. has helped build the holdings of public institutions.', passageIndex: 1, explanation: 'Paragraph E: collecting "has fostered significant museum collections and preserved invaluable historical records". A is the view the writer rejects ("Far from a passive hobby").' },
+      { id: 24, type: 'mcq', prompt: 'The word "sublimated" in Paragraph B is closest in meaning to', paragraphAnchor: 'B', options: ['A. channelled into another form', 'B. completely destroyed', 'C. hidden from other people', 'D. made much stronger'], correctAnswer: 'A. channelled into another form', passageIndex: 1, explanation: 'Paragraph B: the foraging instinct "is sublimated into symbolic domains"—the same drive is expressed through stamps and books instead of seeds and tools, so it is redirected, not destroyed or hidden.' },
+      { id: 25, type: 'mcq', prompt: 'What is the main purpose of the passage as a whole?', paragraphAnchor: 'A', options: ['A. to warn readers about the dangers of hoarding', 'B. to explain several different reasons why people collect', 'C. to describe how museums obtain their collections', 'D. to argue that collecting is a modern invention'], correctAnswer: 'B. to explain several different reasons why people collect', passageIndex: 1, explanation: 'After defining collecting (A), each paragraph adds a motive: evolution (B), status (C), nostalgia (D) and neurological reward (E). Hoarding and museums are only side points; D contradicts Paragraph B.' },
+      { id: 26, type: 'mcq', prompt: 'According to Paragraph A, what do collectors gain from completing a set?', paragraphAnchor: 'A', options: ['A. financial security', 'B. recognition from museums', 'C. relief from emotional distress', 'D. mental stimulation and a sense of beauty'], correctAnswer: 'D. mental stimulation and a sense of beauty', passageIndex: 1, explanation: 'Paragraph A: collectors derive "intellectual stimulation and aesthetic satisfaction from completing a taxonomy". C describes hoarders, who feel distress, not collectors.' },
+
+      // Q27-40: Sentence completion on Passage 3 (Language) — answers copied exactly from the passage
+      { id: 27, type: 'gap', prompt: 'Complex animal communication includes the warning calls of vervet monkeys and the elaborate [ GAP ] performed by honeybees. (ONE WORD)', paragraphAnchor: 'A', correctAnswer: 'dance', passageIndex: 2, explanation: 'Paragraph A: "the alarm calls of vervet monkeys or the intricate dance of honeybees".' },
+      { id: 28, type: 'gap', prompt: 'Human language differs from animal signalling through its layered structure, unlimited recursion and [ GAP ]. (ONE WORD)', paragraphAnchor: 'A', correctAnswer: 'displacement', passageIndex: 2, explanation: 'Paragraph A: human language "is distinguished by hierarchical syntax, displacement, and infinite recursion". Syntax and recursion are already paraphrased in the sentence, leaving displacement.' },
+      { id: 29, type: 'gap', prompt: 'From a small set of sounds, speakers can create an endless number of new [ GAP ]. (ONE WORD)', paragraphAnchor: 'A', correctAnswer: 'expressions', passageIndex: 2, explanation: 'Paragraph A: "the generation of limitless novel expressions from finite phonetic elements".' },
+      { id: 30, type: 'gap', prompt: 'Changes to the vocal tract, especially the lowering of the [ GAP ], made a wide range of speech sounds possible. (ONE WORD)', paragraphAnchor: 'B', correctAnswer: 'larynx', passageIndex: 2, explanation: 'Paragraph B: "The descent of the human larynx ... enabled the acoustic modulation necessary for diverse vowel and consonant production." "Lowering" paraphrases "descent".' },
+      { id: 31, type: 'gap', prompt: 'This anatomical change came at a cost: humans became more likely to suffer from [ GAP ]. (ONE WORD)', paragraphAnchor: 'B', correctAnswer: 'choking', passageIndex: 2, explanation: 'Paragraph B: "this anatomical descent dramatically increased the risk of choking".' },
+      { id: 32, type: 'gap', prompt: 'When groups grew too large for members to groom each other by hand, [ GAP ] took over this bonding role. (NO MORE THAN TWO WORDS)', paragraphAnchor: 'C', correctAnswer: 'vocal grooming', passageIndex: 2, explanation: 'Paragraph C: "vocal grooming replaced physical grooming as early human social group sizes expanded". "Physical grooming" is the thing replaced, so it cannot be the answer.' },
+      { id: 33, type: 'gap', prompt: 'Speaking to several group members at once saved both time and [ GAP ]. (NO MORE THAN TWO WORDS)', paragraphAnchor: 'C', correctAnswer: 'metabolic energy', passageIndex: 2, explanation: 'Paragraph C: communicating "with multiple conspecifics simultaneously, conserving time and metabolic energy".' },
+      { id: 34, type: 'gap', prompt: 'One particular nerve pathway, the [ GAP ], connects hearing, movement planning and meaning across both halves of the brain. (NO MORE THAN TWO WORDS)', paragraphAnchor: 'D', correctAnswer: 'arcuate fasciculus', passageIndex: 2, explanation: 'Paragraph D: "white-matter tract development—notably the arcuate fasciculus—that integrates auditory perception, motor sequencing, and conceptual semantics across both cerebral hemispheres".' },
+      { id: 35, type: 'gap', prompt: 'People with a faulty version of the gene called [ GAP ] have serious difficulty producing speech and grammar. (ONE WORD AND/OR A NUMBER)', paragraphAnchor: 'E', correctAnswer: 'FOXP2', passageIndex: 2, explanation: 'Paragraph E: "Mutations in FOXP2 cause severe verbal dyspraxia and expressive grammar impairments."' },
+      { id: 36, type: 'gap', prompt: 'The modern form of this gene improved control of the mouth and face, allowing rapid [ GAP ] speech. (ONE WORD)', paragraphAnchor: 'E', correctAnswer: 'articulatory', passageIndex: 2, explanation: 'Paragraph E: the gene refined "fine-grained orofacial motor coordination for rapid articulatory speech".' },
+      { id: 37, type: 'gap', prompt: 'The writer concludes that language is more than a system of sounds; it is a tool for cognitive [ GAP ]. (ONE WORD)', paragraphAnchor: 'F', correctAnswer: 'representation', passageIndex: 2, explanation: 'Paragraph F: language evolved "not merely as an acoustic signal system, but as an engine of cognitive representation".' },
+      { id: 38, type: 'gap', prompt: 'Language allows people to think about events that never happened by forming [ GAP ] hypotheses. (ONE WORD)', paragraphAnchor: 'F', correctAnswer: 'counterfactual', passageIndex: 2, explanation: 'Paragraph F: humans "formulate counterfactual hypotheses". A counterfactual is a claim about something that did not happen.' },
+      { id: 39, type: 'gap', prompt: 'Through language, each generation can pass on and build upon cultural [ GAP ]. (ONE WORD)', paragraphAnchor: 'F', correctAnswer: 'innovations', passageIndex: 2, explanation: 'Paragraph F: humans "transmit cumulative cultural innovations across generations".' },
+      { id: 40, type: 'gap', prompt: 'Language also makes complex [ GAP ] between institutions possible on a worldwide scale. (ONE WORD)', paragraphAnchor: 'F', correctAnswer: 'cooperation', passageIndex: 2, explanation: 'Paragraph F: humans "establish intricate institutional cooperation on a global planetary scale".' }
+    ];
+
+    this.questions = [];
     for (let i = 1; i <= 40; i++) {
-      if (i <= 13) {
-        const anchor = sampleAnchors[(i - 1) % sampleAnchors.length];
-        this.questions.push({
-          id: i,
-          type: 'tfng',
-          prompt: `Question ${i}: The archaeological excavations in Paragraph ${anchor} confirmed initial architectural hypotheses.`,
-          paragraphAnchor: anchor,
-          options: ['TRUE', 'FALSE', 'NOT GIVEN'],
-          correctAnswer: tfngKeys[(i - 1) % tfngKeys.length],
-          passageIndex: 0,
-          explanation: `Paragraph ${anchor} provides textual evidence verifying statement ${i}.`,
-          isFlagged: false
-        });
-      } else if (i <= 26) {
-        const anchor = sampleAnchors[(i - 1) % sampleAnchors.length];
-        const opts = [
-          'A. Rapid urban industrialization',
-          'B. Agricultural surplus distribution',
-          'C. Maritime trading monopoly',
-          'D. Technological standard harmonization'
-        ];
-        const correctOpt = opts[(i % 4)];
-        this.questions.push({
-          id: i,
-          type: 'mcq',
-          prompt: `Question ${i}: According to section ${anchor}, what was the primary economic catalyst?`,
-          paragraphAnchor: anchor,
-          options: opts,
-          correctAnswer: correctOpt,
-          passageIndex: 1,
-          explanation: `In Passage 2 Section ${anchor}, the author identifies ${correctOpt.substring(3)} as the pivotal factor.`,
-          isFlagged: false
-        });
-      } else {
-        const anchor = sampleAnchors[(i - 1) % sampleAnchors.length];
-        const targetWord = gapKeys[(i - 27) % gapKeys.length];
-        this.questions.push({
-          id: i,
-          type: 'gap',
-          prompt: `Question ${i}: The contemporary synthesis was primarily accelerated by [ GAP ].`,
-          paragraphAnchor: anchor,
-          correctAnswer: targetWord,
-          passageIndex: 2,
-          explanation: `Passage 3 Paragraph ${anchor} specifies '${targetWord}' as the operative mechanism.`,
-          isFlagged: false
-        });
+      const q = questionsData[i - 1];
+      if (q) {
+        this.questions.push({ ...q, isFlagged: false });
       }
     }
   }

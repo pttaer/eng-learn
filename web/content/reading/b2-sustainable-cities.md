@@ -62,7 +62,7 @@ Equally decisive is the spatial reorganization of residential life. The widespre
 - **IPA**: /faʊnˈdeɪ.ʃən.əl/
 - **Definition**: Denoting an underlying basis or essential principle on which something is built.
 - **Vietnamese**: mang tính nền tảng, cơ bản cốt lõi
-- **Context**: Planners are compelled to rethink the foundational principles of infrastructure.
+- **Context**: Urban planners are compelled to rethink the foundational principles governing city infrastructure.
 - **Collocations**: foundational principle, foundational concepts, foundational knowledge
 - **Etymology**: From Latin fundatio (a founding), from fundare (to lay a base).
 
@@ -89,7 +89,7 @@ Equally decisive is the spatial reorganization of residential life. The widespre
 - **IPA**: /kɜːˈteɪl/
 - **Definition**: To reduce in extent, quantity, or duration; to impose restrictions upon.
 - **Vietnamese**: cắt giảm, hạn chế bớt, thu hẹp
-- **Context**: By curtailing dependency on private automobile transport, cities reduce emissions.
+- **Context**: Cities reduce emissions when they curtail dependency on private automobile transport.
 - **Collocations**: curtail emissions, curtail spending, curtail freedom
 - **Etymology**: From obsolete curtal (shortened horse's tail), influenced by French court (short).
 

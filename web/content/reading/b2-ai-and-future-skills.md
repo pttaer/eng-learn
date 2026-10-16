@@ -63,7 +63,7 @@ To thrive in this evolving environment, forward-looking professionals must culti
 - **IPA**: /prəˌlɪf.əˈreɪ.ʃən/
 - **Definition**: Rapid increase in numbers, quantity, or spread; fast multiplication.
 - **Vietnamese**: sự bùng nổ, sự gia tăng nhanh chóng, sự lan rộng
-- **Context**: The rapid proliferation of generative artificial intelligence has ignited debate.
+- **Context**: The rapid proliferation of generative artificial intelligence and autonomous algorithmic systems has ignited intense debate across global labor markets.
 - **Collocations**: nuclear proliferation, rapid proliferation, proliferation of devices
 - **Etymology**: From French prolifération, from Latin proles (offspring) + ferre (to bear).
 

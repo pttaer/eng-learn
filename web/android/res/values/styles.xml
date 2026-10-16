@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark window colour so the app does not flash white before the page paints (matches theme-color #080a0f) -->
+    <style name="AppTheme" parent="android:Theme.DeviceDefault.NoActionBar">
+        <item name="android:windowBackground">#FF080A0F</item>
+        <item name="android:statusBarColor">#FF080A0F</item>
+    </style>
+</resources>

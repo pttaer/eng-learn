@@ -14,7 +14,8 @@ function load(rel, deps = {}) {
 }
 
 const cefr = load('core/cefr.ts');
-const placement = load('core/placement.ts', { './cefr': cefr });
+const decoys = load('core/decoys.ts');
+const placement = load('core/placement.ts', { './cefr': cefr, './decoys': decoys });
 
 // placeLevel: highest level with >= 3 correct (PASS_MARK = 3 of 4), stopping at the first level that is not passed
 assert.strictEqual(placement.placeLevel({}), 'A1', 'no answers places at A1');
@@ -38,7 +39,7 @@ for (const l of cefr.CEFR_ORDER) {
   for (let i = 0; i < 6; i++) {
     words.push({ cefrLevel: l, wordOrChunk: `${l}-w${i}`, contextSentence: 'ctx', vietnamese: `${l}-vn-w${i}` });
     phrases.push({ cefrLevel: l, phrase: `${l}-p${i}`, example: 'ex', vietnamese: `${l}-vn-p${i}` });
-    grammar.push({ cefrLevel: l, promptSentence: `${l}-g-prompt-${i}`, targetTransformation: `${l}-g-target-${i}`, grammaticalCue: 'cue', vietnamese: `${l}-vn-g-${i}` });
+    grammar.push({ level: l, skill: 'grammar', prompt: `${l}-g-prompt-${i}`, context: 'ctx', options: [0, 1, 2, 3].map(k => `${l}-g${i}-opt${k}`), answer: i % 4 });
     reading.push({
       cefrLevel: l,
       title: `${l} Article ${i}`,
@@ -70,7 +71,7 @@ for (const q of qs) {
 
 // real data: every level yields 4 questions covering all 4 skills (A1..C2 = 24 questions)
 const data = n => JSON.parse(fs.readFileSync(path.join(SRC, 'assets', 'data', n), 'utf8'));
-const real = placement.buildQuestions(data('vocabulary.json'), data('collocations.json'), data('grammar.json'), data('reading.json'));
+const real = placement.buildQuestions(data('vocabulary.json'), data('collocations.json'), data('diagnostic-questions.json').filter(q => q.skill === 'grammar'), data('reading.json'));
 assert.strictEqual(real.length, 24, 'real content supports a full 24-question placement');
 for (const l of cefr.CEFR_ORDER) {
   const levelQs = real.filter(q => q.level === l);

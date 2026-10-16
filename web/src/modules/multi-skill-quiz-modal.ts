@@ -82,120 +82,120 @@ const CURATED_LISTENING_QUESTIONS: DiagnosticQuestionItem[] = [
     level: 'A1',
     skill: 'listening',
     stage: 4,
-    prompt: 'Listen to the greeting. Which words are pronounced as weak unstressed forms (/tə/ and /ə/)?',
-    context: 'Weak forms are reduced unstressed vowels in natural spoken rhythm.',
+    prompt: 'Listen to the greeting. Which words show weak form reduction in connected speech?',
+    context: 'Pay attention to how function words sound in natural, rapid speech.',
     audioText: 'Nice to meet you. How are you?',
-    phonetics: "Weak forms: 'to' /tə/ and 'are' /ə/ in natural stress timing.",
-    gapTarget: 'to',
+    phonetics: "Function words 'to' and 'are' reduce in unstressed position; content words stay full.",
+    gapTarget: 'to are',
     options: [
-      "'to' and 'are'",
-      "'nice' and 'you'",
-      "'meet' and 'how'",
-      "'nice' and 'meet'"
+      "Function words 'to' and 'are'",
+      "Content words 'nice' and 'you'",
+      "Stressed syllables 'meet' and 'how'",
+      "All words equally stressed"
     ],
     answer: 0,
-    explanation: "In connected speech, function words 'to' and 'are' reduce to weak forms /tə/ and /ə/.",
-    vietnamese: "Trong khẩu ngữ tự nhiên, 'to' và 'are' giảm âm thành /tə/ và /ə/."
+    explanation: "In natural speech, unstressed function words 'to' and 'are' reduce to weak forms. Content and stressed words retain their full pronunciation.",
+    vietnamese: "Trong khẩu ngữ tự nhiên, các từ hàm 'to' và 'are' giảm âm trong vị trí không nhấn."
   },
   {
     id: 'diag-a2-listen',
     level: 'A2',
     skill: 'listening',
     stage: 4,
-    prompt: 'Listen to the question. Where does catenation (consonant-to-vowel linking) occur?',
-    context: 'Consonants move across word boundaries when followed by a vowel.',
+    prompt: 'Listen to the question. Identify the phrase where sound changes occur between words:',
+    context: 'Listen for how consonants and vowels blend at word boundaries.',
     audioText: 'Could you tell me the way to the station?',
-    phonetics: 'Palatal assimilation: /kʊd/ + /juː/ -> [kʊdʒuː].',
-    gapTarget: 'Could you',
+    phonetics: 'Palatal assimilation: the /d/ in "Could" + /j/ of "you" merge into /dʒ/.',
+    gapTarget: 'could you',
     options: [
-      "'Could you' links and assimilates as [kʊdʒuː]",
-      "'tell me' drops the final consonant",
-      "'the way' forms an intrusive /r/",
-      "'station' loses its final syllable"
+      "'tell me' shows linking with no sound change",
+      "'Could you' undergoes palatal assimilation: /d/ + /j/ merge to /dʒ/",
+      "'the way' creates an intrusive vowel",
+      "'station' exhibits elision of the middle vowel"
     ],
-    answer: 0,
-    explanation: "'Could you' undergoes palatalization and links smoothly as [kʊdʒuː].",
-    vietnamese: "'Could you' nối âm và biến âm thành [kʊdʒuː]."
+    answer: 1,
+    explanation: "'Could you' demonstrates palatal assimilation where the final /d/ and initial /j/ combine into /dʒ/, a common feature in rapid English speech.",
+    vietnamese: "'Could you' thể hiện biến âm giai mềm nơi /d/ và /j/ kết hợp thành /dʒ/."
   },
   {
     id: 'diag-b1-listen',
     level: 'B1',
     skill: 'listening',
     stage: 4,
-    prompt: 'Listen to the sentence. Identify the unbroken consonant-to-vowel catenation:',
-    context: 'What looks like patience is usually just a system that keeps working while you are not looking at it.',
+    prompt: 'Listen to the sentence. Which phrase shows smooth linking across word boundaries?',
+    context: 'Focus on how the words connect naturally when spoken quickly.',
     audioText: 'What looks like patience is usually just a system that keeps working while you are not looking at it.',
-    phonetics: 'Catenation: /k/ and /t/ link across vowel boundaries -> [lʊ.kɪ.ŋæ.tɪt].',
+    phonetics: 'Word-internal linking: consonants carry into following vowels creating fluid rhythm.',
     gapTarget: 'looking at it',
     options: [
-      "'looking at it' links continuously as [lʊkɪŋ‿æt‿ɪt]",
-      "'what looks' elides the /t/ sound completely",
-      "'system that' drops the /m/ sound",
-      "'while you' changes into a plosive"
+      "'looking at it' links smoothly with no break between words",
+      "'what looks' shows stress shift to the second word",
+      "'system that' demonstrates complete elision of final /m/",
+      "'while you' preserves a full glottal stop"
     ],
     answer: 0,
-    explanation: "Consonant-to-vowel linking binds 'looking at it' into a single acoustic unit [lʊkɪŋ‿æt‿ɪt].",
-    vietnamese: "Hiện tượng nối âm liên tục nối 'looking at it' thành [lʊkɪŋ‿æt‿ɪt]."
+    explanation: "Natural speech welds 'looking at it' into a continuous stream [lʊkɪŋæt̚ɪt], with consonants in the middle linking across the word boundaries.",
+    vietnamese: "Khẩu ngữ tự nhiên nối 'looking at it' thành một chuỗi liên tục, với phụ âm liên kết qua các ranh giới từ."
   },
   {
     id: 'diag-b2-listen',
     level: 'B2',
     skill: 'listening',
     stage: 4,
-    prompt: 'Listen and identify which alveolar stop is elided (omitted) in natural speech:',
-    context: 'Without arbitrary limitations to direct their focus, most creators fall prey to the paralysis of infinite choice.',
+    prompt: 'Listen to the phrase and identify which sound change occurs at the word boundary:',
+    context: 'Focus on consonant behavior where words meet in natural speech tempo.',
     audioText: 'Without arbitrary limitations to direct their focus, most creators fall prey to the paralysis of infinite choice.',
-    phonetics: "Alveolar stop elision: /t/ in 'most' is deleted before /k/ -> [məʊs kriˈeɪtəz].",
+    phonetics: "Stop deletion: /t/ in 'most' deletes before /k/ in 'creators' (both alveolar/velar stops).",
     gapTarget: 'most creators',
     options: [
-      "The final /t/ in 'most' before the /k/ in 'creators' -> [məʊs kriˈeɪtəz]",
-      "The initial /w/ in 'without'",
-      "The plural /s/ in 'limitations'",
-      "The vowel sound in 'choice'"
+      "Linking: final consonant carries into the vowel of next word",
+      "Gemination: the /t/ doubles before the following stop",
+      "Stop elision: /t/ in 'most' disappears before /k/ in 'creators'",
+      "Assimilation: /t/ becomes /k/ before 'creators'"
     ],
-    answer: 0,
-    explanation: "The alveolar stop /t/ in 'most' is elided before the initial consonant /k/ in 'creators'.",
-    vietnamese: "Âm tắc chân răng /t/ trong 'most' bị nuốt trước phụ âm /k/ trong 'creators'."
+    answer: 2,
+    explanation: "In rapid speech, the final /t/ in 'most' is deleted when followed by another stop /k/ in 'creators', creating the abbreviated [moʊs kriˈeɪtəz].",
+    vietnamese: "Trong khẩu ngữ nhanh, /t/ cuối trong 'most' bị xóa khi theo sau là một âm tắt khác /k/."
   },
   {
     id: 'diag-c1-listen',
     level: 'C1',
     skill: 'listening',
     stage: 4,
-    prompt: 'Listen to the passage. Identify the phonetic linking liaison in the opening phrase:',
-    context: 'In an era dominated by algorithmic feed optimization, human cognitive bandwidth has become scarce.',
+    prompt: 'Listen to the opening of the passage. Which phrase demonstrates smooth linking in rapid speech?',
+    context: 'Pay attention to how unstressed syllables blend together naturally.',
     audioText: 'In an era dominated by algorithmic feed optimization, the human cognitive bandwidth has become the ultimate scarce commodity.',
-    phonetics: 'Double liaison: nasal catenation /ɪn‿ən‿ˈɪərə/ -> [ɪ-nə-nɪərə].',
-    gapTarget: 'In an era',
+    phonetics: 'Nasal+vowel linking: /ɪn/ + /ən/ + /ˈɪərə/ flow as one acoustic unit in rapid tempo.',
+    gapTarget: 'in an era',
     options: [
-      "'In an era' links smoothly as [ɪ-nə-nɪərə]",
-      "'feed optimization' completely drops the diphthong",
-      "'human cognitive' drops all plosives",
-      "'scarce commodity' assimilates to a glottal stop"
+      "Consonant drop: all initial consonants delete to accelerate speech",
+      "Vowel linking: unstressed vowels merge across word boundaries seamlessly",
+      "Syllable reduction: secondary syllables lose all vowel quality",
+      "Stress shift: main stress transfers to the final word of the phrase"
     ],
-    answer: 0,
-    explanation: "Catenation across two nasal-vowel boundaries creates the smooth liaison [ɪ-nə-nɪərə].",
-    vietnamese: "Nối âm phụ âm mũi - nguyên âm liên hoàn tạo thành [ɪ-nə-nɪərə]."
+    answer: 1,
+    explanation: "The phrase 'in an era' shows characteristic vowel linking where unstressed vowels flow together in rapid connected speech without clear word breaks.",
+    vietnamese: "Cụm từ 'in an era' thể hiện việc nối âm nguyên âm nơi các nguyên âm không nhấn chảy thành một đơn vị liên tục."
   },
   {
     id: 'diag-c2-listen',
     level: 'C2',
     skill: 'listening',
     stage: 4,
-    prompt: 'Listen to the sentence. Which advanced acoustic phenomenon characterizes the delivery?',
-    context: 'The ephemeral cadence of colloquial discourse often obfuscates deeply entrenched dialectal idiosyncrasies.',
+    prompt: 'Listen to the passage. Identify the phonological features of rapid native-like delivery:',
+    context: 'Focus on the naturalness and fluency of the connected speech.',
     audioText: 'The ephemeral cadence of colloquial discourse often obfuscates deeply entrenched dialectal idiosyncrasies.',
-    phonetics: 'Rhythmic foot compression and unreleased plosives in rapid colloquial discourse.',
+    phonetics: 'Native delivery: unreleased stops, vowel reduction in weak syllables, elastic rhythm to content.',
     gapTarget: 'colloquial discourse',
     options: [
-      'Unreleased plosives, rhythmic compression, and contextual assimilation',
-      'Even syllable-timed beats with zero vowel reduction',
-      'Spelling pronunciation without elision or weak forms',
-      'Artificial robotic monotone with zero pitch movement'
+      'Identical syllable length with careful enunciation of all vowels',
+      'Each word pronounced as listed in dictionary without connected speech changes',
+      'Monotone pitch on all syllables without rising or falling intonation',
+      'Unreleased stops, vowel reduction, and variable timing on content words'
     ],
-    answer: 0,
-    explanation: 'Fast native discourse exhibits unreleased plosives, rhythmic foot compression, and boundary assimilation.',
-    vietnamese: 'Khẩu ngữ bản ngữ tốc độ cao xuất hiện hiện tượng nén nhịp điệu và biến âm tiếp xúc.'
+    answer: 3,
+    explanation: 'Native-like rapid delivery exhibits unreleased final stops (especially before another consonant), reduction of unstressed vowels, and flexible rhythm emphasizing important words.',
+    vietnamese: 'Khẩu ngữ tương tự bản xứ tốc độ nhanh thể hiện các âm tắc không phát hành, giảm âm nguyên âm không nhấn, và nhịp điệu mềm dẻo.'
   }
 ];
 
@@ -283,10 +283,13 @@ export class ListeningPromptComponent {
     const cleanUser = userText.trim().toLowerCase().replace(/[^a-z0-9']/g, '');
     const target = this.question.gapTarget || this.question.options[this.question.answer];
     const cleanTarget = target.trim().toLowerCase().replace(/[^a-z0-9']/g, '');
-    const isCorrect = cleanUser === cleanTarget || (cleanUser.length > 0 && cleanTarget.includes(cleanUser));
+    const isCorrect = cleanUser.length > 0 && cleanUser === cleanTarget;
 
     const inputEl = this.element.querySelector('.listening-gap-input') as HTMLInputElement | null;
     const feedbackEl = this.element.querySelector('.listening-gap-feedback') as HTMLElement | null;
+
+    // One attempt, like a tap on an option
+    this.element.querySelectorAll<HTMLInputElement | HTMLButtonElement>('.listening-gap-input, .btn-verify-gap').forEach(el => { el.disabled = true; });
 
     if (inputEl) {
       inputEl.classList.remove('is-correct', 'is-incorrect');
@@ -301,15 +304,12 @@ export class ListeningPromptComponent {
         AudioSynthesizer.play('absorb');
       } else {
         feedbackEl.className = 'listening-gap-feedback match-mismatch';
-        feedbackEl.textContent = `✗ Not quite. Keep listening for connected-speech liaison...`;
+        feedbackEl.textContent = `✗ Not quite. The linked phrase was: "${target}"`;
         AudioSynthesizer.play('alarm');
       }
     }
 
-    if (isCorrect) {
-      this.onAnswer?.(this.question.answer, true);
-    }
-    this.onAnswer?.(this.question.answer, isCorrect);
+    this.onAnswer?.(isCorrect ? this.question.answer : -1, isCorrect);
     this.onGapSubmit?.(userText, isCorrect);
     return isCorrect;
   }
@@ -352,9 +352,6 @@ export class ListeningPromptComponent {
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
           <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted);">
             CONNECTED-SPEECH GAP-FILL // TYPE THE LINKED PHRASE:
-          </span>
-          <span style="font-family: var(--font-mono); font-size: 10px; color: var(--accent-gold);">
-            TARGET: ${this.escape(q.gapTarget || q.options[q.answer])}
           </span>
         </div>
         <div class="listening-gap-input-row" style="display: flex; gap: 8px; align-items: center;">
@@ -708,15 +705,10 @@ export class MultiSkillQuizModal {
           onRateChange: (rate) => {
             this.speechRate = rate;
           },
+          // Typed gap answers score once (-1 = wrong); short pause so the feedback line is readable
           onAnswer: (choiceIdx) => {
-            this.handleAnswer(choiceIdx);
-          },
-          onGapSubmit: (_userText, isCorrect) => {
-            if (isCorrect) {
-              setTimeout(() => {
-                this.handleAnswer(q.answer);
-              }, 700);
-            }
+            this.overlay.querySelectorAll<HTMLButtonElement>('.placement-option').forEach(b => { b.disabled = true; });
+            setTimeout(() => this.handleAnswer(choiceIdx), 700);
           }
         });
         mount.appendChild(this.activeListeningComponent.getElement());

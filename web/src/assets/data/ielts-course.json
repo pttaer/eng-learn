@@ -1,7 +1,7 @@
 {
   "title": "IELTS Band 7+ Complete Prep Course Master Data",
   "standards": "IELTS 9-Band Descriptors & Cambridge Calibrated Assessment",
-  "compiledAt": "2026-10-14T08:11:27.410Z",
+  "compiledAt": "2026-10-16T04:39:12.474Z",
   "stats": {
     "strategyCards": 46,
     "diagnosticQuestions": 20,
@@ -16,12 +16,12 @@
       "subType": "subject_verb",
       "prompt": "The rapid expansion of urban renewable energy grids _____ significant capital investments from local authorities.",
       "options": [
-        "require",
         "requires",
+        "require",
         "are requiring",
         "have required"
       ],
-      "correctIndex": 1,
+      "correctIndex": 0,
       "explanation": "The subject of the sentence is the singular head noun 'expansion', not the plural prepositional adjunct 'energy grids'. Singular subjects demand the third-person singular verb 'requires'.",
       "impactOnBand": "Prevents Band 7.0 GRA due to systematic subject-verb agreement slips with post-modified noun phrases."
     },
@@ -29,22 +29,22 @@
       "id": "diag-02",
       "category": "grammar",
       "subType": "tenses",
-      "prompt": "Over the past three decades, international student mobility _____ exponentially across OECD nations.",
+      "prompt": "Since the 1990s, international student mobility _____ exponentially across OECD nations.",
       "options": [
         "increased",
-        "has increased",
+        "is increasing",
         "had increased",
-        "is increasing"
+        "has increased"
       ],
-      "correctIndex": 1,
-      "explanation": "The time marker 'Over the past three decades' establishes an action that began in the past and continues into the present, requiring the present perfect tense 'has increased'.",
+      "correctIndex": 3,
+      "explanation": "The time marker 'Since the 1990s' anchors a continuous interval from a past point to the present, requiring the present perfect tense 'has increased'. Past simple incorrectly seals the action in the past.",
       "impactOnBand": "Caps GRA at Band 6.0 if past simple is incorrectly substituted for continuous historical trends."
     },
     {
       "id": "diag-03",
       "category": "grammar",
       "subType": "articles",
-      "prompt": "Access to _____ tertiary education remains a decisive factor in socioeconomic mobility.",
+      "prompt": "Access to _____ clean drinking water is essential for public health in rural communities.",
       "options": [
         "the",
         "an",
@@ -52,7 +52,7 @@
         "a"
       ],
       "correctIndex": 2,
-      "explanation": "'Tertiary education' is an uncountable noun used in a general sense, which requires the zero article (Ø). Using 'the' here is an erroneous over-generalization.",
+      "explanation": "'Clean drinking water' is an uncountable noun used in a general sense, requiring the zero article (Ø). Using 'the' here is an erroneous over-generalization that restricts the meaning to a specific water source.",
       "impactOnBand": "Systematic article overuse or omission caps Lexical Resource and Grammatical Accuracy at Band 6.0."
     },
     {
@@ -76,12 +76,12 @@
       "subType": "prepositions",
       "prompt": "There was a sharp decline _____ the proportion of households relying exclusively on fossil fuel heating.",
       "options": [
-        "of",
         "in",
+        "of",
         "to",
         "on"
       ],
-      "correctIndex": 1,
+      "correctIndex": 0,
       "explanation": "Trend nouns indicating rise, fall, increase, or decline take the preposition 'in' when followed by the metric or variable undergoing the change (e.g., 'a decline in proportion').",
       "impactOnBand": "Misselecting prepositions in Task 1 trend descriptions destroys precision and penalizes Lexical Resource and GRA."
     },
@@ -89,16 +89,16 @@
       "id": "diag-06",
       "category": "vocabulary",
       "subType": "collocations",
-      "prompt": "The implementation of stringent environmental policies can _____ a profound impact on carbon emissions.",
+      "prompt": "Rigorous laboratory analysis must _____ significant influence over the validity of research conclusions.",
       "options": [
-        "exert",
-        "do",
-        "bring",
-        "cause"
+        "wield",
+        "manifest",
+        "derive",
+        "exert"
       ],
-      "correctIndex": 0,
-      "explanation": "The verb 'exert' forms a natural academic collocation with 'a profound impact/influence'. 'Do an impact' is unnatural and colloquial.",
-      "impactOnBand": "Band 7.0+ Lexical Resource requires using sophisticated collocations with awareness of style and collocation."
+      "correctIndex": 3,
+      "explanation": "The verb 'exert' forms the precise academic collocation with 'influence' ('exert influence'). 'Wield' collocates with power; 'manifest' with symptoms; 'derive' with benefits, none matching 'influence' in formal discourse.",
+      "impactOnBand": "Band 7.0+ Lexical Resource requires using sophisticated collocations with precise verb-noun pairing in academic register."
     },
     {
       "id": "diag-07",
@@ -107,11 +107,11 @@
       "prompt": "Neither the municipal council nor the transport ministry _____ prepared to fund the suburban railway expansion.",
       "options": [
         "were",
-        "was",
+        "have been",
         "are",
-        "have been"
+        "was"
       ],
-      "correctIndex": 1,
+      "correctIndex": 3,
       "explanation": "In correlative constructions with 'neither... nor...', the verb agrees with the closer subject ('the transport ministry', singular), hence 'was'.",
       "impactOnBand": "Proves mastery of advanced proximity agreement rules required for Band 8.0 GRA."
     },
@@ -121,12 +121,13 @@
       "subType": "tenses",
       "prompt": "By the time modern carbon-capture facilities become operational in 2035, global average temperatures _____ by 1.2 degrees Celsius.",
       "options": [
+        "will rise",
         "would rise",
         "will have risen",
-        "had risen"
+        "has risen"
       ],
       "correctIndex": 2,
-      "explanation": "The future time anchor 'By the time [present verb] ... in 2035' mandates the future perfect tense 'will have risen' to indicate completion prior to that future point.",
+      "explanation": "The future time anchor 'By the time [present verb] ... in 2035' mandates the future perfect tense 'will have risen' to indicate completion prior to that future point. Simple future 'will rise' ignores the prospective aspect.",
       "impactOnBand": "Demonstrates command of complex temporal frameworks necessary for Band 8.0+ grammatical range."
     },
     {
@@ -135,12 +136,12 @@
       "subType": "clauses",
       "prompt": "The researcher examined forty clinical trials, the majority of _____ exhibited methodological inconsistencies.",
       "options": [
-        "them",
         "which",
+        "them",
         "that",
         "whom"
       ],
-      "correctIndex": 1,
+      "correctIndex": 0,
       "explanation": "A non-restrictive relative clause following a quantifier phrase ('the majority of') referring to inanimate things ('trials') requires the relative pronoun 'which'. Using 'them' creates a comma splice.",
       "impactOnBand": "Comma splices and run-on sentences restrict Coherence & Cohesion and GRA to Band 6.0."
     },
@@ -150,13 +151,13 @@
       "subType": "articles",
       "prompt": "The survey revealed that _____ unemployed face distinct psychological barriers when seeking reintegration.",
       "options": [
-        "an",
-        "the",
+        "all",
+        "these",
         "Ø",
-        "those"
+        "the"
       ],
-      "correctIndex": 1,
-      "explanation": "The definite article 'the' combined with an adjective ('unemployed') functions as a nominalized plural collective noun referring to the whole class of individuals.",
+      "correctIndex": 3,
+      "explanation": "The definite article 'the' combined with an adjective ('unemployed') functions as a nominalized plural collective noun referring to the whole class of individuals. Neither quantifiers nor demonstratives work here.",
       "impactOnBand": "Accurate usage of nominalized adjectives reflects high-level syntactic dexterity (Band 7.5+ GRA)."
     },
     {
@@ -165,14 +166,14 @@
       "subType": "collocations",
       "prompt": "Technological automation poses a _____ threat to traditional clerical vocations.",
       "options": [
-        "serious",
-        "deep",
+        "acute",
+        "critical",
         "grave",
-        "heavy"
+        "pronounced"
       ],
       "correctIndex": 2,
-      "explanation": "While 'serious' is acceptable, 'grave threat' is a high-level academic collocation denoting severe and imminent peril, demonstrating Band 8.0 lexical sophistication.",
-      "impactOnBand": "Distinguishes basic conversational vocabulary from high-register academic lexis."
+      "explanation": "'Grave threat' is the high-level academic collocation denoting severe and imminent peril. 'Acute' and 'critical' collocate with issues/situations but not threats; 'pronounced' suggests obvious but not threatening.",
+      "impactOnBand": "Distinguishes high-register academic collocations from conversational near-synonyms; separates Band 7.0 from Band 8.0 lexical precision."
     },
     {
       "id": "diag-12",
@@ -182,11 +183,11 @@
       "options": [
         "nations undertake",
         "do nations undertake",
-        "nations do undertake",
-        "have nations undertaken"
+        "are nations undertaking",
+        "nations have undertaken"
       ],
       "correctIndex": 1,
-      "explanation": "Negative or restrictive adverbs ('rarely', 'seldom', 'hardly') at the beginning of a clause trigger subject-auxiliary inversion ('do nations undertake').",
+      "explanation": "Negative or restrictive adverbs ('rarely', 'seldom', 'hardly') at the beginning of a clause trigger subject-auxiliary inversion with the appropriate auxiliary ('do nations undertake'). Non-inverted and continuous structures fail the inversion rule.",
       "impactOnBand": "Controlled negative inversion demonstrates Band 8.5+ grammatical range."
     },
     {
@@ -238,15 +239,15 @@
       "id": "diag-16",
       "category": "grammar",
       "subType": "tenses",
-      "prompt": "Had the regulatory framework been introduced earlier, the financial crisis _____ mitigated.",
+      "prompt": "Had the regulatory framework been introduced in 2006, the 2008 financial crisis _____ significantly mitigated.",
       "options": [
         "would be",
         "will have been",
         "would have been",
-        "had been"
+        "was"
       ],
       "correctIndex": 2,
-      "explanation": "Third conditional inverted structure ('Had [subject] been...') requires the past conditional modal perfect in the main clause ('would have been mitigated').",
+      "explanation": "Third conditional inverted structure ('Had [subject] been...') requires the past conditional modal perfect in the main clause ('would have been mitigated'). The past anchor clarifies that the consequence is counterfactual to actual history.",
       "impactOnBand": "Accurate hypothetical reasoning is a hallmark of Band 8.0+ Task 2 essay arguments."
     },
     {
@@ -255,14 +256,14 @@
       "subType": "collocations",
       "prompt": "The empirical data failed to _____ the hypothesis proposed by the research team.",
       "options": [
-        "hold",
+        "ratify",
         "corroborate",
-        "approve",
-        "settle"
+        "authorize",
+        "certify"
       ],
       "correctIndex": 1,
-      "explanation": "'Corroborate the hypothesis' is the precise academic collocation meaning to confirm or support with evidence.",
-      "impactOnBand": "Elevates Lexical Resource to Band 8.0 by utilizing precise academic register rather than vague words like 'prove'."
+      "explanation": "'Corroborate the hypothesis' is the precise academic collocation meaning to support with evidence. 'Ratify', 'authorize', and 'certify' collocate with official agreements or credentials, not hypotheses.",
+      "impactOnBand": "Elevates Lexical Resource to Band 8.0 by utilizing precise academic register in formal academic discourse."
     },
     {
       "id": "diag-18",
@@ -301,13 +302,13 @@
       "prompt": "Rapid industrialization has led to _____ environmental degradation across developing corridors.",
       "options": [
         "unprecedented",
-        "unpredicted",
-        "unprevented",
-        "unexpected"
+        "unintended",
+        "unwelcome",
+        "uncontrolled"
       ],
       "correctIndex": 0,
-      "explanation": "'Unprecedented degradation' is a high-level collocation indicating a level or degree never before experienced.",
-      "impactOnBand": "Demonstrates Band 8.0+ precision and avoidance of generic modifiers like 'very big' or 'a lot of'."
+      "explanation": "'Unprecedented degradation' is the high-level academic collocation indicating a level or severity never before experienced. 'Unintended', 'unwelcome', and 'uncontrolled' describe consequences but lack the formal gravity of 'unprecedented'.",
+      "impactOnBand": "Demonstrates Band 8.0+ precision in selecting collocates that convey magnitude and historical significance in formal registers."
     }
   ],
   "questionTypes": [

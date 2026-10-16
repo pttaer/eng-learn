@@ -54,7 +54,7 @@ Moreover, deliberate reading differs profoundly from the distracted skimming con
 - **IPA**: /ˌsʌb.vəʊ.kəl.aɪˈzeɪ.ʃən/
 - **Definition**: The internal, silent articulation of words while reading.
 - **Vietnamese**: sự phát âm thầm trong đầu khi đọc chữ
-- **Context**: At foundational stages, readers are bottlenecked by subvocalization—the covert auditory articulation of printed words in the mind's inner ear.
+- **Context**: At foundational stages, readers lean heavily on subvocalization—the covert auditory articulation of printed words in the mind's inner ear.
 - **Collocations**: habitual subvocalization, inner-speech subvocalization, reduce subvocalization
 - **Etymology**: Prefix sub- (under) + vocalize (to utter; from Latin vox/vocalis, voice).
 
@@ -72,7 +72,7 @@ Moreover, deliberate reading differs profoundly from the distracted skimming con
 - **IPA**: /ˈen.ɡræm/
 - **Definition**: A hypothesized physical trace left by an experience in the brain’s neural tissue; a memory trace.
 - **Vietnamese**: dấu vết ký ức thần kinh, vết hằn ký ức sinh học trong não
-- **Context**: The polymath converts fleeting encounters with unfamiliar lexical items into durable, retrievable engrams.
+- **Context**: The polymath converts fleeting encounters with unfamiliar lexical items into a durable, retrievable engram.
 - **Collocations**: memory engram, neural engram, retrievable engrams
 - **Etymology**: Greek en (in) + gramma (letter, that which is written).
 

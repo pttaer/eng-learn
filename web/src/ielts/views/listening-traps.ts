@@ -115,7 +115,7 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     categoryIcon: '⚠️',
     title: 'Atmospheric Thermal Retention Driver',
     script: "Previous atmospheric models assumed solar irradiance was the primary driver, but recent satellite telemetry proves that cloud cover is exclusively responsible for localized thermal retention.",
-    question: 'What is exclusively responsible for localized thermal retention?',
+    question: 'According to the lecturer, what factor does recent satellite telemetry identify as the primary mechanism for localized thermal retention?',
     targetAnswer: 'cloud cover',
     maxWords: 2,
     decoy: 'solar irradiance',
@@ -182,14 +182,14 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     categoryLabel: 'Map Navigation Decoy',
     categoryIcon: '🗺️',
     title: 'University Campus Orientation Pathway',
-    script: "Starting from the main library entrance, proceed north along University Avenue, turn left past the roundabout, and the student health clinic is situated immediately opposite the sports pavilion.",
+    script: "Starting from the main library entrance, proceed north along University Avenue. You\'ll pass the student counseling center on your left, then turn left past the roundabout, and the student health clinic is situated immediately opposite the sports pavilion.",
     question: 'What building is located opposite the sports pavilion?',
     targetAnswer: 'health clinic',
     maxWords: 2,
-    decoy: 'main library',
+    decoy: 'student counseling center',
     trapCue: 'turn left past the roundabout / opposite',
-    explanation: 'Tracing from the library along University Avenue, navigating left past the roundabout brings the listener directly to the health clinic, situated opposite the sports pavilion.',
-    keinoRule: 'Rule 10 (Spatial Path Tracking): Keep your cursor actively moving along the street path as directed. Intermediate reference landmarks (like the sports pavilion) are spatial anchors, not the destination.'
+    explanation: 'The student counseling center is an intermediate building along the route, but the correct destination requires continuing past the roundabout to reach the health clinic opposite the sports pavilion.',
+    keinoRule: 'Rule 10 (Spatial Path Tracking): Keep your cursor actively moving along the street path as directed. Intermediate reference landmarks (like the counseling center) are waypoints, not the final destination.'
   },
   {
     id: 'trap-11',
@@ -198,14 +198,14 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     categoryLabel: 'Map Navigation Decoy',
     categoryIcon: '🗺️',
     title: 'Heritage Village Riverside Navigation',
-    script: "If you cross the stone bridge and follow the riverside footpath southward, ignore the pathway toward the windmill; rather, bear right and you will find the traditional blacksmith workshop right beside the waterwheel.",
+    script: "If you cross the stone bridge and follow the riverside footpath southward, ignore the pathway toward the pottery workshop; rather, bear right and you will find the traditional blacksmith workshop right beside the waterwheel.",
     question: 'Which workshop is located beside the waterwheel?',
     targetAnswer: 'blacksmith workshop',
     maxWords: 2,
-    decoy: 'windmill',
+    decoy: 'pottery workshop',
     trapCue: 'ignore the pathway / bear right',
-    explanation: 'The audio presents a decoy route ("ignore the pathway toward the windmill") before issuing the positive navigational command "bear right" to reach the blacksmith workshop.',
-    keinoRule: 'Rule 11 (Negative Waypoint Warnings): Decoy turns are flagged with negative instructions ("ignore", "do not take", "avoid"). Eliminate false forks immediately.'
+    explanation: 'The audio presents a decoy workshop ("ignore the pathway toward the pottery workshop") before issuing the positive navigational command "bear right" to reach the blacksmith workshop beside the waterwheel.',
+    keinoRule: 'Rule 11 (Negative Waypoint Warnings): Decoy turns are flagged with negative instructions ("ignore", "do not take", "avoid"). Same-category distractors challenge careful listening.'
   },
   {
     id: 'trap-12',
@@ -214,14 +214,14 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     categoryLabel: 'Map Navigation Decoy',
     categoryIcon: '🗺️',
     title: 'Wetland Boardwalk Trail Orientation',
-    script: "Walk along the pine trail until you reach the wooden observation tower. Do not take the eastern ridge; instead, continue straight through the wetland boardwalk to reach the bird sanctuary.",
+    script: "Walk along the pine trail until you reach the wooden observation tower. Do not take the eastern ridge toward the deer meadow; instead, continue straight through the wetland boardwalk to reach the bird sanctuary.",
     question: 'Where does the wetland boardwalk lead?',
     targetAnswer: 'bird sanctuary',
     maxWords: 2,
-    decoy: 'observation tower',
+    decoy: 'deer meadow',
     trapCue: 'do not take / instead, continue straight',
-    explanation: 'The wooden observation tower is merely a waypoint along the pine trail. Rejecting the eastern ridge and following the boardwalk straight arrives at the bird sanctuary.',
-    keinoRule: 'Rule 12 (Terminal vs Intermediate Points): Phrasing such as "until you reach" indicates progress markers, while "continue straight to reach" signals the authentic objective.'
+    explanation: 'The eastern ridge leads to the deer meadow, a rejected destination. The observation tower is a waypoint along the route. Continuing straight on the boardwalk arrives at the bird sanctuary.',
+    keinoRule: 'Rule 12 (Terminal vs Intermediate Points): Phrasing such as "until you reach" indicates progress markers, while "instead" + "continue to reach" signals the authentic objective.'
   }
 ];
 
