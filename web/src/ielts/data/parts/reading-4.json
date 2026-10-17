@@ -1,0 +1,171 @@
+[
+ {
+  "id": "r16",
+  "title": "Mangroves and Blue Carbon",
+  "topic": "Environment and ecology",
+  "band": 7,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Mangroves are trees and shrubs that grow where few other woody plants can survive: in the zone between high and low tide along tropical and subtropical coastlines. Their roots are flooded by salt water twice a day and anchored in soft mud that contains almost no oxygen. To cope with these conditions, mangroves have evolved a remarkable range of adaptations. Many species send up aerial roots called pneumatophores, which rise above the mud like pencils and allow the plant to take in oxygen directly from the air. Salt is handled in different ways: some species block most salt at the roots, while others excrete it through glands on their leaves, where it can sometimes be seen as small white crystals."
+   },
+   {
+    "label": "B",
+    "text": "For coastal communities, these forests provide a wide range of benefits. The tangle of roots offers shelter to young fish and shellfish, and many commercially important species spend part of their lives there. Mangroves also reduce erosion and absorb some of the energy of waves before they reach the shore. After the 2004 Indian Ocean tsunami, some villages located behind intact mangroves reported less damage than villages where the forest had been cleared. Researchers have since cautioned against drawing simple conclusions from such reports, however, noting that the protective effect depends on the width of the forest and the size of the wave, and that no forest can stop the largest waves entirely."
+   },
+   {
+    "label": "C",
+    "text": "In recent years, attention has turned to another service that mangroves provide. The term blue carbon was popularised by a United Nations report in 2009 to describe carbon captured and stored by coastal ecosystems, chiefly mangroves, salt marshes and seagrass meadows. What makes mangroves unusual is where their carbon is kept. In most forests, a large share of the carbon is held in living wood and leaves. In mangroves, the bulk of the carbon is stored not in the trees but in the soil beneath them. Because the soil is waterlogged and short of oxygen, dead roots and leaves decompose extremely slowly, and organic material can build up over thousands of years to depths of several metres. Measured per hectare, some mangrove forests hold several times as much carbon as typical tropical rainforests on land."
+   },
+   {
+    "label": "D",
+    "text": "This hidden store also explains why the destruction of mangroves is so damaging. Estimates suggest that roughly 35 percent of the world's mangrove area was lost in the final decades of the twentieth century. The main causes have included the construction of ponds for shrimp farming, the conversion of land for rice and oil palm, and the expansion of ports and coastal towns. When a mangrove is cleared and its soil drained or dug up, the carbon that had been protected from oxygen begins to break down and is released into the atmosphere as carbon dioxide. A single act of clearance can therefore release carbon that took many centuries to accumulate."
+   },
+   {
+    "label": "E",
+    "text": "Restoring lost mangroves has proved more difficult than it might appear. Many early projects simply planted large numbers of seedlings, often of a single species, on open mudflats. Planting is easy to organise and to photograph, but survival rates were frequently very low, because the seedlings had been placed lower on the shore than mangroves naturally grow, where they were submerged for too long each day. Specialists now emphasise restoring the conditions that allow mangroves to return by themselves. Reopening blocked tidal channels or removing old pond walls can re-establish the natural flow of water, after which seeds carried by the tide may colonise the area without any planting at all."
+   },
+   {
+    "label": "F",
+    "text": "Finding money for this work remains a challenge, and some projects have turned to carbon markets. On the southern coast of Kenya, a community project at Gazi Bay began selling carbon credits in 2013. Companies and individuals pay for the carbon stored by the protected and replanted forest, and the income is spent by the local community on projects such as clean water supplies and books for schools. Supporters see such schemes as a way of rewarding local people for conservation, although they are small in scale and require careful long-term monitoring."
+   },
+   {
+    "label": "G",
+    "text": "Considerable uncertainties remain. Measuring carbon deep in coastal soils is slow and expensive, and estimates for many regions are based on only a few samples. Rising sea levels pose a further threat. Mangroves can keep pace with a gradual rise by trapping sediment and building up the ground beneath them, but only if rivers continue to deliver enough sediment to the coast. Where dams upstream hold back that material, the forests may gradually drown. Protecting mangroves, in other words, may depend on decisions made far inland, and blue carbon is best seen as one reason among many for conserving these ecosystems rather than as a simple solution to climate change."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r16-q01",
+    "type": "tfng",
+    "prompt": "All mangrove species deal with salt in the same way.",
+    "answer": "FALSE",
+    "why": "Paragraph A: \"some species block most salt at the roots, while others excrete it through glands on their leaves\"."
+   },
+   {
+    "id": "r16-q02",
+    "type": "tfng",
+    "prompt": "Intact mangrove forests can protect villages from even the largest waves.",
+    "answer": "FALSE",
+    "why": "Paragraph B: researchers note \"that no forest can stop the largest waves entirely\"."
+   },
+   {
+    "id": "r16-q03",
+    "type": "tfng",
+    "prompt": "Most of the carbon in a mangrove forest is held in the ground.",
+    "answer": "TRUE",
+    "why": "Paragraph C: \"In mangroves, the bulk of the carbon is stored not in the trees but in the soil beneath them\"."
+   },
+   {
+    "id": "r16-q04",
+    "type": "tfng",
+    "prompt": "Shrimp farming has been the main cause of mangrove loss in Africa.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph D lists causes including \"the construction of ponds for shrimp farming\", but gives no regional breakdown and does not mention Africa."
+   },
+   {
+    "id": "r16-q05",
+    "type": "tfng",
+    "prompt": "The Kenyan project spends its carbon income on local services.",
+    "answer": "TRUE",
+    "why": "Paragraph F: \"the income is spent by the local community on projects such as clean water supplies and books for schools\"."
+   },
+   {
+    "id": "r16-q06",
+    "type": "table",
+    "prompt": "Table, Adaptation: aerial roots called ______ take in oxygen from the air.",
+    "answer": [
+     "pneumatophores"
+    ],
+    "why": "Paragraph A: \"aerial roots called pneumatophores, which rise above the mud like pencils and allow the plant to take in oxygen\"."
+   },
+   {
+    "id": "r16-q07",
+    "type": "table",
+    "prompt": "Table, Loss: about ______ of global mangrove area lost in the late twentieth century.",
+    "answer": [
+     "35 percent",
+     "35%",
+     "35"
+    ],
+    "why": "Paragraph D: \"roughly 35 percent of the world's mangrove area was lost in the final decades of the twentieth century\"."
+   },
+   {
+    "id": "r16-q08",
+    "type": "table",
+    "prompt": "Table, Funding: Kenyan carbon credit sales began in ______.",
+    "answer": [
+     "2013"
+    ],
+    "why": "Paragraph F: \"a community project at Gazi Bay began selling carbon credits in 2013\"."
+   },
+   {
+    "id": "r16-q09",
+    "type": "match",
+    "prompt": "a reason why some replanting projects failed",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "E",
+    "why": "Paragraph E: \"the seedlings had been placed lower on the shore than mangroves naturally grow, where they were submerged for too long each day\"."
+   },
+   {
+    "id": "r16-q10",
+    "type": "match",
+    "prompt": "the origin of a term",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "C",
+    "why": "Paragraph C: \"The term blue carbon was popularised by a United Nations report in 2009\"."
+   },
+   {
+    "id": "r16-q11",
+    "type": "match",
+    "prompt": "a human activity far from the coast that may threaten mangroves",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "G",
+    "why": "Paragraph G: \"Where dams upstream hold back that material, the forests may gradually drown\"."
+   },
+   {
+    "id": "r16-q12",
+    "type": "short",
+    "prompt": "What do mangroves trap in order to keep up with rising sea levels?",
+    "answer": [
+     "sediment"
+    ],
+    "why": "Paragraph G: \"Mangroves can keep pace with a gradual rise by trapping sediment and building up the ground beneath them\"."
+   },
+   {
+    "id": "r16-q13",
+    "type": "short",
+    "prompt": "Where is the Kenyan carbon project located?",
+    "answer": [
+     "Gazi Bay",
+     "at Gazi Bay"
+    ],
+    "why": "Paragraph F: \"On the southern coast of Kenya, a community project at Gazi Bay began selling carbon credits\"."
+   }
+  ]
+ }
+]
