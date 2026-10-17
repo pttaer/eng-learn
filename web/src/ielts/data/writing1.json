@@ -790,5 +790,687 @@
    "lr": "Map vocabulary: low-rise, redeveloped, residential estates, given way to, scattered patches.",
    "gra": "Past perfect passive (had been replaced, had been enlarged) used accurately. The band-6 version mixes present and past tense."
   }
+ },
+ {
+  "id": "w1-17",
+  "prompt": "The line graph below shows the amount of electricity generated from renewable sources in three countries between 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "line",
+   "title": "Renewable Electricity Generation in Three Countries (2000–2020)",
+   "unit": "TWh",
+   "labels": [
+    "2000",
+    "2005",
+    "2010",
+    "2015",
+    "2020"
+   ],
+   "series": [
+    {
+     "name": "Germany",
+     "values": [
+      40,
+      60,
+      110,
+      180,
+      230
+     ]
+    },
+    {
+     "name": "Spain",
+     "values": [
+      30,
+      40,
+      60,
+      85,
+      90
+     ]
+    },
+    {
+     "name": "Denmark",
+     "values": [
+      8,
+      10,
+      12,
+      14,
+      15
+     ]
+    }
+   ]
+  },
+  "model": "The line graph shows how much electricity was generated from renewable sources in Germany, Spain and Denmark between 2000 and 2020, measured in TWh.\n\nOverall, renewable generation rose in all three countries, and Germany was the largest producer in every year shown.\n\nGermany began the period at 40 TWh and climbed steadily to 230 TWh by 2020, the highest figure on the graph. Its growth was especially rapid after 2005, when output passed 60 TWh. Spain followed a similar upward path, rising from 30 TWh to 90 TWh, although its progress slowed noticeably after 2015. Denmark, by contrast, generated the least renewable electricity throughout, and its output increased only modestly, from 8 TWh to 15 TWh. Denmark's share therefore remained far smaller than that of either of the other two countries throughout the period.\n\nIn summary, Germany's output grew far faster than that of the other two countries, while Denmark's growth remained small across the whole period.",
+  "notes": "Band 7: the overview names the shared trend and the leader; each country gets start and end figures from the graph, and the summary compares growth rates. Band 6 answers describe the lines one by one and never compare them.",
+  "band6": "Germany, Spain and Denmark all went up. Germany went from 40 to 230, which is the biggest rise, and Spain went from 30 to 90. Denmark was the lowest and did not change much. The lines go up over the years.",
+  "criteria": {
+   "tr": "Band 7 states the overall trend and the leader, then supports each country with start and end figures; band 6 lists values without a clear overview.",
+   "cc": "Band 7 groups the countries into the leader and the laggard before comparing; band 6 narrates in the order the countries appear in the key.",
+   "lr": "Band 7 uses 'climbed steadily', 'slowed noticeably' and 'modestly'; band 6 relies on 'went up' and 'did not change much'.",
+   "gra": "Band 7 mixes complex sentences with clauses such as 'when output passed 60 TWh' and keeps tenses accurate; band 6 uses short, simple sentences."
+  }
+ },
+ {
+  "id": "w1-18",
+  "prompt": "The line graph below shows the percentage of households with broadband internet in three areas from 2005 to 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "line",
+   "title": "Households with Broadband Internet by Area (2005–2025)",
+   "unit": "% of households",
+   "labels": [
+    "2005",
+    "2010",
+    "2015",
+    "2020",
+    "2025"
+   ],
+   "series": [
+    {
+     "name": "Urban",
+     "values": [
+      35,
+      58,
+      74,
+      85,
+      91
+     ]
+    },
+    {
+     "name": "Suburban",
+     "values": [
+      20,
+      40,
+      62,
+      77,
+      84
+     ]
+    },
+    {
+     "name": "Rural",
+     "values": [
+      8,
+      18,
+      31,
+      48,
+      60
+     ]
+    }
+   ]
+  },
+  "model": "Households with broadband in urban, suburban and rural areas are tracked here as a share of each area's homes, from 2005 to 2025.\n\nOverall, broadband access grew in every area over the period, and urban areas stayed ahead throughout.\n\nIn 2005, 35% of urban households had broadband, compared with 20% in suburban areas and only 8% in rural areas. Urban take-up reached 58% by 2010 and kept climbing, passing 91% by 2025. Suburban areas followed the same pattern, closing in on the urban figure, although they remained below it at every point. Rural areas started lowest but grew fastest, rising from 8% to 60%, which narrowed the gap considerably. Even so, rural households in 2025 were still less connected than suburban households had been in 2015.\n\nTo summarise, the gap between urban and rural areas was much wider at the start of the period than at its end, even though urban households were consistently the best connected.",
+  "notes": "Band 7: the overview gives the common trend and the constant leader; the rural line is described as the fastest grower, which is the comparison that matters. Band 6 quotes single figures without comparing growth rates.",
+  "band6": "Broadband went up in all areas. In 2005 urban had 35% and rural had 8%. In 2025 urban was 91% and rural was 60%. Urban is always the highest and rural is always the lowest on the graph.",
+  "criteria": {
+   "tr": "Band 7 gives the overall trend and the constant leader, and identifies the fastest-growing line; band 6 quotes start and end values without the overview.",
+   "cc": "Band 7 moves from the leader to the follower to the laggard and ends on the narrowing gap; band 6 lists the areas in the order of the key.",
+   "lr": "Band 7 uses 'closing in on', 'narrowed the gap considerably' and 'consistently'; band 6 uses 'went up' and 'always'.",
+   "gra": "Band 7 uses participle clauses ('rising from 8% to 60%') and a range of tenses; band 6 writes mostly simple sentences of one clause."
+  }
+ },
+ {
+  "id": "w1-19",
+  "prompt": "The bar chart below shows the number of university students in five subject areas in 2010 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "bar",
+   "title": "University Students by Subject Area, 2010 and 2020 (thousands)",
+   "unit": "thousand students",
+   "labels": [
+    "Engineering",
+    "Business",
+    "Health",
+    "Arts",
+    "Sciences"
+   ],
+   "series": [
+    {
+     "name": "2010",
+     "values": [
+      120,
+      150,
+      90,
+      60,
+      80
+     ]
+    },
+    {
+     "name": "2020",
+     "values": [
+      210,
+      140,
+      160,
+      55,
+      110
+     ]
+    }
+   ]
+  },
+  "model": "Enrolment figures for five university subjects are compared here for two years, 2010 and 2020, in thousands of students.\n\nOverall, enrolment rose in three subjects and fell in two, with engineering and health showing the largest increases.\n\nEngineering was the fastest-growing subject, with numbers climbing from 120 thousand to 210 thousand. Health also expanded considerably, from 90 thousand to 160 thousand, and sciences rose modestly from 80 thousand to 110 thousand. In contrast, business was the most popular subject in 2010 with 150 thousand students, but it declined to 140 thousand by 2020. Arts saw the smallest change, with a slight fall from 60 thousand to 55 thousand. Arts was also the smallest subject area in both years, so its enrolment changed the least in absolute terms.\n\nIn summary, engineering overtook business as the largest subject area by 2020. Health was the second-fastest growing subject over the decade. Both health and engineering therefore added more students than any other subject area.",
+  "notes": "Band 7: the overview gives the number of rising and falling subjects and names the biggest risers; the summary notes the change in rank. Band 6 answers list each bar in turn and miss the rank change.",
+  "band6": "Engineering went up from 120 to 210. Business went down from 150 to 140. Health went up from 90 to 160. Arts went down a little. Sciences went up too. The bars for 2020 are mostly higher than 2010.",
+  "criteria": {
+   "tr": "Band 7 counts the risers and fallers in the overview and highlights the change in rank; band 6 lists every bar without a summary of the main features.",
+   "cc": "Band 7 groups rising subjects, then falling subjects, then the rank change; band 6 follows the order of the bars on the chart.",
+   "lr": "Band 7 uses 'the fastest-growing subject', 'expanded considerably' and 'a slight fall'; band 6 uses 'went up' and 'went down' for each bar.",
+   "gra": "Band 7 combines figures in complex sentences such as 'In contrast, business was ... but it declined'; band 6 repeats one simple pattern."
+  }
+ },
+ {
+  "id": "w1-20",
+  "prompt": "The bar chart below shows the average daily screen time in four age groups in 2015 and 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "bar",
+   "title": "Average Daily Screen Time by Age Group, 2015 and 2025 (hours)",
+   "unit": "hours",
+   "labels": [
+    "Under 12",
+    "12–17",
+    "18–29",
+    "30–45"
+   ],
+   "series": [
+    {
+     "name": "2015",
+     "values": [
+      2.1,
+      3.4,
+      4.6,
+      3.2
+     ]
+    },
+    {
+     "name": "2025",
+     "values": [
+      3,
+      5.1,
+      6.2,
+      4
+     ]
+    }
+   ]
+  },
+  "model": "The bar chart shows the average number of hours per day that people in four age groups spent on screens in 2015 and 2025.\n\nOverall, screen time increased in every age group over the decade, and the 18–29 group recorded the highest figures in both years.\n\nIn 2015, children under 12 spent an average of 2.1 hours a day on screens, and this figure rose to 3.0 hours by 2025. The 12–17 group showed a larger increase, from 3.4 hours to 5.1 hours. Young adults aged 18–29 were the heaviest users, starting at 4.6 hours and reaching 6.2 hours by the end of the period. Adults aged 30–45 began at 3.2 hours and increased to 4.0 hours. Their figures were consistently higher than those of every other group in both years.\n\nIn summary, the 12–17 group saw the sharpest rise in screen use, while young adults remained the heaviest users throughout.",
+  "notes": "Band 7: the overview names the universal rise and the heaviest group; the summary identifies the sharpest rise, which is a comparison of change rather than of level. Band 6 repeats figures without comparing changes.",
+  "band6": "Screen time went up for all groups. Under 12 went from 2.1 to 3.0. The 12 to 17 group went from 3.4 to 5.1. The 18 to 29 group is the highest. The 30 to 45 group went from 3.2 to 4.0.",
+  "criteria": {
+   "tr": "Band 7 gives the trend for every group and identifies both the heaviest group and the sharpest rise; band 6 lists values without a clear overview.",
+   "cc": "Band 7 moves from the universal trend to the youngest group, then the oldest, then concludes; band 6 follows the chart's left-to-right order.",
+   "lr": "Band 7 uses 'the sharpest rise', 'heaviest users' and 'reaching'; band 6 uses 'went up' and 'the highest'.",
+   "gra": "Band 7 uses participle and relative structures ('starting at 4.6 hours and reaching 6.2 hours'); band 6 uses a single repeated sentence type."
+  }
+ },
+ {
+  "id": "w1-21",
+  "prompt": "The table below shows the average number of daily public transport trips in four cities in 2010 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "table",
+   "title": "Daily Public Transport Trips in Four Cities, 2010 and 2020 (millions)",
+   "unit": "million trips",
+   "labels": [
+    "City A",
+    "City B",
+    "City C",
+    "City D"
+   ],
+   "series": [
+    {
+     "name": "2010 (million trips)",
+     "values": [
+      2.1,
+      1.4,
+      3,
+      0.8
+     ]
+    },
+    {
+     "name": "2020 (million trips)",
+     "values": [
+      2.6,
+      1.2,
+      4.1,
+      0.9
+     ]
+    }
+   ]
+  },
+  "model": "Public transport use per day is reported for four cities at two points, 2010 and 2020, in millions of trips.\n\nOverall, public transport use grew in three of the four cities, and City C had the highest usage in both years.\n\nCity C recorded 3.0 million daily trips in 2010, rising to 4.1 million by 2020, the largest increase in absolute terms. City A also grew, from 2.1 million to 2.6 million. City B, on the other hand, fell from 1.4 million to 1.2 million trips. City D had the lowest usage at the start, with 0.8 million trips, and recorded only a small rise to 0.9 million by 2020. Taken together, the four cities recorded more trips in 2020 than in 2010, with City C contributing most of the increase.\n\nIn summary, the growth in City C stands out, while City B was the only city where public transport use declined over the decade.",
+  "notes": "Band 7: the overview counts the growing cities and names the constant leader; the summary singles out the one decline. Band 6 answers repeat every cell and never compare the cities.",
+  "band6": "City A went from 2.1 to 2.6. City B went from 1.4 to 1.2. City C went from 3.0 to 4.1. City D went from 0.8 to 0.9. In 2020 City C is the highest and City D is the lowest.",
+  "criteria": {
+   "tr": "Band 7 counts the growing cities, names the leader in both years and singles out the decline; band 6 repeats cell values without an overview.",
+   "cc": "Band 7 starts with the largest change, then the other cities, then the decline; band 6 goes through the rows in the order they appear.",
+   "lr": "Band 7 uses 'the largest increase in absolute terms', 'declined' and 'recorded only a small rise'; band 6 uses 'went from ... to ...' throughout.",
+   "gra": "Band 7 varies sentence openings and uses appositive and contrast clauses ('City B, on the other hand, fell'); band 6 repeats the same pattern."
+  }
+ },
+ {
+  "id": "w1-22",
+  "prompt": "The table below gives information about average property prices and monthly rents in four places in 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "table",
+   "title": "Average Property Prices and Monthly Rents in Four Places, 2024",
+   "unit": "thousand USD",
+   "labels": [
+    "Capital",
+    "Port City",
+    "Hill Town",
+    "Coastal Village"
+   ],
+   "series": [
+    {
+     "name": "Average price (thousand USD)",
+     "values": [
+      450,
+      320,
+      280,
+      190
+     ]
+    },
+    {
+     "name": "Average monthly rent (USD)",
+     "values": [
+      1800,
+      1400,
+      1100,
+      900
+     ]
+    }
+   ]
+  },
+  "model": "The table gives the average property price and monthly rent in four places in 2024. Prices are in thousands of US dollars and rents are in US dollars.\n\nOverall, the capital was the most expensive location on both measures, while the coastal village was the cheapest.\n\nThe capital had an average price of 450 thousand dollars and a monthly rent of 1800 dollars, the highest figures in the table. The port city was also expensive, with prices of 320 thousand dollars and rents of 1400 dollars. The hill town and the coastal village were considerably cheaper, at 280 thousand and 190 thousand dollars for property. Their monthly rents, 1100 and 900 dollars, were also the lowest in the table. In proportion, the capital's property price was more than twice that of the coastal village, while its rent was exactly twice as high.\n\nIn summary, there is a clear link between location and cost, as the larger urban areas charged more for both buying and renting.",
+  "notes": "Band 7: the overview ranks the places on both measures; the summary draws the link between location and cost. The table has two units, so the answer must state them. Band 6 answers copy the cells without ranking the places.",
+  "band6": "The capital is 450 thousand and the rent is 1800. The port city is 320 thousand and 1400. The hill town is 280 thousand and 1100. The coastal village is 190 thousand and 900. The capital is the most expensive.",
+  "criteria": {
+   "tr": "Band 7 ranks the four places on both measures and states the units; band 6 lists the cells without ranking them.",
+   "cc": "Band 7 moves from the most expensive place to the cheapest on both measures, then concludes; band 6 follows the order of the table.",
+   "lr": "Band 7 uses 'considerably cheaper', 'the highest figures' and 'a clear link between'; band 6 uses 'is' and 'the most expensive'.",
+   "gra": "Band 7 uses a range of structures including 'at ... and ...' prepositional phrases and a concluding clause; band 6 uses simple statements."
+  }
+ },
+ {
+  "id": "w1-23",
+  "prompt": "The pie chart below shows the share of global wheat exports held by six groups of exporters in 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "pie",
+   "title": "Global Wheat Exports by Country, 2022",
+   "unit": "% of global exports",
+   "labels": [
+    "Russia",
+    "European Union",
+    "United States",
+    "Canada",
+    "Australia",
+    "Other"
+   ],
+   "series": [
+    {
+     "name": "Share of exports",
+     "values": [
+      22,
+      18,
+      12,
+      9,
+      8,
+      31
+     ]
+    }
+   ]
+  },
+  "model": "Six exporting groups are compared here by their portion of world wheat sales in 2022.\n\nOverall, the market was led by two exporters, Russia and the European Union, which together accounted for just under half of all wheat exports.\n\nRussia was the largest single exporter, with 22% of the total. The European Union was close behind at 18%. The United States, with 12%, and Canada, with 9%, held smaller shares, while Australia had 8%. The remaining 31% was divided among other countries, which made it the largest group in the chart, although it consisted of many separate exporters. The three smaller named exporters, the United States, Canada and Australia, together held a smaller share than the two leaders.\n\nIn summary, wheat exports were concentrated among a few major producers, although a large number of smaller exporters together made up nearly a third of the market. This concentration means that a shortage or a poor harvest in one of the leading exporters would affect world prices.",
+  "notes": "Band 7: the overview gives the two leaders and their combined weight in words; the summary explains that the 'Other' slice is large because it is many small exporters. Band 6 answers list each slice and miss what the groupings mean.",
+  "band6": "Russia has 22%. The European Union has 18%. The United States has 12%. Canada has 9%. Australia has 8%. Other has 31%. The pie is split into six parts and the biggest part is Other.",
+  "criteria": {
+   "tr": "Band 7 identifies the two leaders and explains why the Other slice is large; band 6 lists the six slices without an overview.",
+   "cc": "Band 7 moves from the leaders to the middle exporters to the residual group; band 6 follows the order of the legend.",
+   "lr": "Band 7 uses 'just under half', 'close behind' and 'nearly a third'; band 6 uses 'has' and 'biggest'.",
+   "gra": "Band 7 uses concessive and relative clauses ('although it consisted of many separate exporters'); band 6 uses one simple sentence per slice."
+  }
+ },
+ {
+  "id": "w1-24",
+  "prompt": "The pie chart below shows the main energy sources used by households in Kenya in 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "pie",
+   "title": "Household Energy Sources in Kenya, 2020",
+   "unit": "% of household energy use",
+   "labels": [
+    "Wood fuel",
+    "Charcoal",
+    "Electricity",
+    "LPG",
+    "Kerosene",
+    "Other"
+   ],
+   "series": [
+    {
+     "name": "Share of household energy use",
+     "values": [
+      60,
+      15,
+      10,
+      8,
+      5,
+      2
+     ]
+    }
+   ]
+  },
+  "model": "This pie chart breaks down how Kenyan homes met their energy needs in 2020.\n\nOverall, wood fuel was by far the most important source, and traditional fuels made up most of the total.\n\nWood fuel accounted for 60% of household energy use, which was more than the other five sources combined. Charcoal was the second most common source at 15%, while electricity provided 10%. Liquefied petroleum gas (LPG) made up 8%, and kerosene accounted for 5%. The smallest category, labelled Other, represented only 2% of the total. Although electricity is often seen as the most modern option, it supplied only a tenth of the total. Taken together, kerosene, LPG and Other made up well under a fifth of the total.\n\nIn summary, most Kenyan households relied on traditional fuels in 2020, with modern sources such as electricity and gas playing a relatively minor role. Wood fuel alone was therefore four times the size of charcoal, which ranked second.",
+  "notes": "Band 7: the overview names the dominant source and the group it belongs to; the summary groups the sources into traditional and modern. Band 6 answers list the six slices without grouping them.",
+  "band6": "Wood fuel is 60%. Charcoal is 15%. Electricity is 10%. LPG is 8%. Kerosene is 5%. Other is 2%. Wood fuel is the biggest and Other is the smallest on the chart.",
+  "criteria": {
+   "tr": "Band 7 states the dominant source and groups the rest as traditional or modern; band 6 lists the six percentages without an overview.",
+   "cc": "Band 7 moves from the dominant source to the second source, then the minor sources, then the summary; band 6 repeats the legend order.",
+   "lr": "Band 7 uses 'by far the most important', 'a relatively minor role' and 'traditional fuels'; band 6 uses 'is' and 'the biggest'.",
+   "gra": "Band 7 uses a comparative clause ('more than the other five sources combined') and a concessive; band 6 uses short statements."
+  }
+ },
+ {
+  "id": "w1-25",
+  "prompt": "The diagram below shows the stages in producing olive oil, from harvest to bottling. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "process",
+   "title": "Olive Oil Production from Harvest to Bottling",
+   "steps": [
+    "Olives are harvested from the trees by hand or with mechanical shakers",
+    "The fruit is transported to the mill within a day to keep its quality",
+    "The olives are washed and crushed into a thick paste",
+    "The paste is stirred slowly, which allows small oil droplets to join together",
+    "The mixture is separated into oil, water and solid waste in a centrifuge",
+    "The oil is filtered, stored in steel tanks and then bottled for sale"
+   ]
+  },
+  "model": "The diagram shows the stages involved in producing olive oil, from the harvest of the fruit to the bottling of the finished product.\n\nOverall, the process consists of six main stages, beginning with the harvest and ending with the bottling of the oil, and most of the work takes place at the mill.\n\nFirst, olives are harvested from the trees, either by hand or with mechanical shakers. The fruit is then transported to the mill, where it must arrive within a day so that its quality is preserved. At the mill, the olives are washed and crushed into a thick paste.\n\nThe paste is next stirred slowly, which allows the small droplets of oil to join together. After this, a centrifuge separates the mixture into oil, water and solid waste. In the final stage, the oil is filtered, stored in steel tanks and bottled for sale.\n\nIn summary, the process moves from the orchard to the mill and then to the bottling stage in a fixed sequence.",
+  "notes": "Band 7: the overview gives the number of stages and the start and end points; each paragraph covers a group of stages in the passive with sequence markers. Band 6 answers copy the step labels in order and drop the overview.",
+  "band6": "First the olives are picked. Then they go to the mill. Then they are washed and crushed. Next the paste is stirred. After that it goes into a centrifuge. Finally the oil is bottled. The process has six steps.",
+  "criteria": {
+   "tr": "Band 7 gives the number of stages and their start and end points, then describes each group of stages; band 6 lists the steps without an overview.",
+   "cc": "Band 7 groups the six stages into three paragraphs with sequence markers ('First', 'next', 'In the final stage'); band 6 uses 'Then' for every step.",
+   "lr": "Band 7 uses process vocabulary such as 'centrifuge', 'filtered' and 'droplets join together'; band 6 uses 'then' and 'goes'.",
+   "gra": "Band 7 uses the passive throughout ('are harvested', 'is separated') and purpose clauses; band 6 uses the active voice in short sentences."
+  }
+ },
+ {
+  "id": "w1-26",
+  "prompt": "The diagram below shows the stages in brewing beer. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "process",
+   "title": "Beer Brewing from Malting to Packaging",
+   "steps": [
+    "Barley is malted by soaking it in water so that it begins to germinate",
+    "The germinated grain is dried in a kiln, which stops growth and sets its flavour",
+    "The malt is milled and mixed with hot water in a mash tun to extract sugars",
+    "The liquid is boiled with hops, which add bitterness and aroma",
+    "Yeast is added to the cooled liquid and fermentation converts the sugars into alcohol",
+    "The beer is conditioned, filtered and packaged into casks or bottles"
+   ]
+  },
+  "model": "The diagram illustrates the six stages involved in brewing beer, from the malting of barley to the packaging of the finished drink.\n\nOverall, the process is a sequence of steps in which the grain is first prepared, then turned into a sweet liquid, and finally fermented and packaged.\n\nThe first two stages prepare the grain. Barley is soaked in water so that it begins to germinate, and the germinated grain is then dried in a kiln, which stops its growth and sets its flavour. Heat is therefore applied at this point.\n\nIn the middle stages, the malt is milled and mixed with hot water in a mash tun to extract sugars. The liquid is then boiled with hops, which add bitterness and aroma, so heat is applied a second time.\n\nIn the final stages, yeast is added to the cooled liquid, and fermentation converts the sugars into alcohol. The beer is conditioned, filtered and packaged into casks or bottles.\n\nIn summary, the brewing process moves from grain to liquid to finished beer in six fixed stages.",
+  "notes": "Band 7: the overview separates the preparation, the liquid stage and the finishing stage; the answer notes where heat is used. Band 6 answers list the six steps and miss the grouping.",
+  "band6": "Barley is malted first. Then it is dried. Then the malt is mixed with water. Then the liquid is boiled with hops. Then yeast is added. Finally the beer is packaged. There are six stages in total.",
+  "criteria": {
+   "tr": "Band 7 groups the six stages into preparation, liquid and finishing, and notes where heat is applied; band 6 lists the steps in order.",
+   "cc": "Band 7 uses paragraphs for each group of stages with clear signposts ('In the middle stages'); band 6 uses 'Then' before each step.",
+   "lr": "Band 7 uses 'germinate', 'mash tun' and 'conditioned'; band 6 uses 'mixed' and 'added' for almost every step.",
+   "gra": "Band 7 uses passive and subordinate clauses ('which stops its growth'); band 6 writes every step as a short active sentence."
+  }
+ },
+ {
+  "id": "w1-27",
+  "prompt": "The maps below show changes in a riverside town between 1995 and 2015. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "map",
+   "title": "Riverside Town Development (1995–2015)",
+   "maps": [
+    {
+     "year": "1995",
+     "features": [
+      "Wooden footbridge crossing the river at the centre",
+      "Small market square near the river bank",
+      "Rows of low houses along the north bank",
+      "Open farmland to the south and east",
+      "Single gravel road linking the town to the highway"
+     ]
+    },
+    {
+     "year": "2015",
+     "features": [
+      "Modern concrete bridge replacing the wooden footbridge",
+      "Market square converted into a car park",
+      "Apartment blocks of 5–8 storeys along the north bank",
+      "Farmland south of the river replaced by a business park",
+      "Dual carriageway connecting the town to the highway",
+      "New train station to the west of the centre"
+     ]
+    }
+   ]
+  },
+  "model": "The maps show how a riverside town changed between 1995 and 2015.\n\nOverall, the town expanded considerably, with housing and commercial development replacing farmland and older open spaces, and its transport links were upgraded.\n\nIn 1995, the town centre was built around a wooden footbridge and a small market square near the river bank. Low houses lined the north bank, while farmland covered the south and east, and a single gravel road linked the town to the highway.\n\nBy 2015, the footbridge had been replaced by a modern concrete bridge, and the market square had become a car park. Apartment blocks of five to eight storeys now stood along the north bank. The farmland to the south of the river had given way to a business park, and a dual carriageway had replaced the gravel road.\n\nIn summary, the most significant changes were the new housing, the business park and the improved road and rail connections.",
+  "notes": "Band 7: the overview names the main type of change; the body compares the two maps feature by feature, using 'replaced', 'had given way' and 'had become'. Band 6 describes each map separately without comparing.",
+  "band6": "In 1995 there was a wooden bridge and a market. There were houses and farms. In 2015 there is a concrete bridge. There are apartment blocks and a business park. There is also a train station and a new road.",
+  "criteria": {
+   "tr": "Band 7 gives the main change type in the overview and tracks each feature from 1995 to 2015; band 6 describes each map as a list.",
+   "cc": "Band 7 describes 1995, then 2015, with changes linked by 'replaced' and 'had become'; band 6 mixes the two maps in one list.",
+   "lr": "Band 7 uses 'replacing', 'given way to' and 'improved road and rail connections'; band 6 uses 'there is' and 'there was'.",
+   "gra": "Band 7 uses past perfect for changes completed before 2015 and passive forms; band 6 relies on 'there is' and 'there was' constructions."
+  }
+ },
+ {
+  "id": "w1-28",
+  "prompt": "The line graph below shows research and development spending as a share of GDP in three countries between 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "line",
+   "title": "Research and Development Spending as Share of GDP (2000–2020)",
+   "unit": "% of GDP",
+   "labels": [
+    "2000",
+    "2005",
+    "2010",
+    "2015",
+    "2020"
+   ],
+   "series": [
+    {
+     "name": "Japan",
+     "values": [
+      3,
+      3.1,
+      3.2,
+      3.2,
+      3.3
+     ]
+    },
+    {
+     "name": "South Korea",
+     "values": [
+      2.2,
+      2.6,
+      3.5,
+      4.2,
+      4.6
+     ]
+    },
+    {
+     "name": "Brazil",
+     "values": [
+      1,
+      1,
+      1.1,
+      1.2,
+      1.2
+     ]
+    }
+   ]
+  },
+  "model": "The line graph compares R&D spending as a percentage of GDP in Japan, South Korea and Brazil between 2000 and 2020.\n\nOverall, spending increased in all three countries, and South Korea showed the most dramatic growth, overtaking Japan by 2010.\n\nJapan started at 3.0% of GDP in 2000 and rose gradually to 3.3% by 2020, so its growth was modest. South Korea began at 2.2%, a lower level than Japan, but its spending climbed steadily to 4.6% by the end of the period. Brazil spent the least throughout, moving from 1.0% to 1.2%, and its line remained almost flat for most of the period. Brazil's line was the lowest of the three in every year shown, and it never rose above 1.2% of GDP.\n\nIn summary, South Korea had the strongest growth in research spending, while Brazil's investment changed very little across the two decades. The chart therefore shows a widening gap between South Korea and the other two countries by the end of the period.",
+  "notes": "Band 7: the overview names the shared trend and the overtaking point; the summary identifies the strongest and the flattest line. Band 6 answers quote the start and end points without noticing the crossover.",
+  "band6": "Japan went from 3.0 to 3.3. South Korea went from 2.2 to 4.6. Brazil went from 1.0 to 1.2. South Korea is the highest at the end. Brazil is the lowest for all the years on the graph.",
+  "criteria": {
+   "tr": "Band 7 identifies the overtaking point and the flattest line; band 6 quotes start and end values without the crossover.",
+   "cc": "Band 7 presents Japan as the benchmark, South Korea as the comparison and Brazil as the contrast; band 6 lists the countries in key order.",
+   "lr": "Band 7 uses 'climbed steadily', 'overtaking' and 'remained almost flat'; band 6 uses 'went from' and 'is the highest'.",
+   "gra": "Band 7 uses concessive clauses ('a lower level than Japan, but') and a range of tenses; band 6 writes mostly simple sentences."
+  }
+ },
+ {
+  "id": "w1-29",
+  "prompt": "The bar chart below shows visits to four types of museum in 2019 and 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "bar",
+   "title": "Museum Visits by Type, 2019 and 2023 (millions)",
+   "unit": "million visits",
+   "labels": [
+    "Art",
+    "History",
+    "Science",
+    "Children's"
+   ],
+   "series": [
+    {
+     "name": "2019",
+     "values": [
+      6.2,
+      4.8,
+      5.5,
+      2.1
+     ]
+    },
+    {
+     "name": "2023",
+     "values": [
+      5.8,
+      5.1,
+      6.4,
+      2.9
+     ]
+    }
+   ]
+  },
+  "model": "Museum attendance is shown here for four categories, in millions of visits, for 2019 and 2023.\n\nOverall, visits to science and children's museums grew, while art museums lost visitors and history museums saw a small rise.\n\nArt museums were the most visited in 2019 with 6.2 million visits, but this fell to 5.8 million by 2023. History museums rose modestly from 4.8 to 5.1 million. Science museums saw the largest gain, from 5.5 million to 6.4 million, which took them above art museums in 2023. Children's museums were the smallest category in both years, although they grew from 2.1 million to 2.9 million. Science museums recorded the largest rise in the chart, at 0.9 million visits, and children's museum visits rose by more than a third.\n\nIn summary, science museums had become the most popular type by 2023, and the fall in art museum visits was the only decline in the chart.",
+  "notes": "Band 7: the overview separates the risers from the faller; the summary notes the change in rank at the top. Band 6 answers list the bars and miss the rank change.",
+  "band6": "Art went from 6.2 to 5.8. History went from 4.8 to 5.1. Science went from 5.5 to 6.4. Children's went from 2.1 to 2.9. Science is higher than art in 2023. Children's is the smallest.",
+  "criteria": {
+   "tr": "Band 7 separates the risers from the faller and identifies the rank change at the top; band 6 lists the bars without an overview.",
+   "cc": "Band 7 gives the overview, then the most visited type, then the largest gain, then the smallest; band 6 follows the chart's left-to-right order.",
+   "lr": "Band 7 uses 'the largest gain', 'rose modestly' and 'took them above'; band 6 uses 'went from' and 'is higher'.",
+   "gra": "Band 7 uses a relative clause ('which took them above art museums') and past perfect; band 6 writes each bar as a simple sentence."
+  }
+ },
+ {
+  "id": "w1-30",
+  "prompt": "The table below shows the average weekly hours spent on household chores by women and men in 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "table",
+   "title": "Average Weekly Hours of Household Chores by Gender, 2000 and 2020",
+   "unit": "hours per week",
+   "labels": [
+    "Women",
+    "Men"
+   ],
+   "series": [
+    {
+     "name": "2000 (hours per week)",
+     "values": [
+      28,
+      9
+     ]
+    },
+    {
+     "name": "2020 (hours per week)",
+     "values": [
+      21,
+      12
+     ]
+    }
+   ]
+  },
+  "model": "The table shows the average number of hours per week that women and men spent on household chores in 2000 and 2020.\n\nOverall, women continued to do more household work than men in both years, although the gap narrowed over the two decades.\n\nIn 2000, women spent 28 hours a week on chores, compared with 9 hours for men. By 2020, women's time had fallen to 21 hours, a decline of seven hours. Men's time rose to 12 hours over the same period, an increase of three hours. Women accounted for 28 of the 37 hours recorded in 2000 and for 21 of the 33 hours in 2020, so their share of the work was far greater than men's in both years.\n\nIn summary, the gap between women and men shrank from 19 hours a week to nine, mainly through a fall in women's chore time. The figures suggest that the household workload has become more evenly shared, though women still carried the larger share in 2020.",
+  "notes": "Band 7: the overview states the constant leader and the narrowing gap; the summary quantifies the gap at both dates. Band 6 answers quote the four numbers without comparing the gap.",
+  "band6": "Women did 28 hours in 2000 and 21 in 2020. Men did 9 hours in 2000 and 12 in 2020. Women always do more than men. In 2020 men do more than in 2000 and women do less.",
+  "criteria": {
+   "tr": "Band 7 states the constant leader and quantifies the narrowing gap at both dates; band 6 quotes four numbers without comparing the gap.",
+   "cc": "Band 7 presents women's change, then men's change, then the gap; band 6 lists the figures year by year.",
+   "lr": "Band 7 uses 'shrank', 'had fallen to' and 'an increase of'; band 6 uses 'do more' and 'do less'.",
+   "gra": "Band 7 uses the past perfect for the earlier change and a result clause; band 6 uses present tenses where past tenses are needed."
+  }
+ },
+ {
+  "id": "w1-31",
+  "prompt": "The maps below show changes in a seaside village between 1985 and 2005. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "map",
+   "title": "Seaside Village Development (1985–2005)",
+   "maps": [
+    {
+     "year": "1985",
+     "features": [
+      "Small pier with a few fishing boats",
+      "Row of guesthouses along the sea front",
+      "Sandy beach extending east of the pier",
+      "Cliff path linking the village to the headland",
+      "Car park behind the village green",
+      "Fishing huts in the western cove"
+     ]
+    },
+    {
+     "year": "2005",
+     "features": [
+      "Pier extended and now used by tour boats",
+      "Hotel complex of six storeys on the former guesthouse row",
+      "Sandy beach reduced by a new sea wall",
+      "Cliff path replaced by a paved promenade",
+      "Large car park built on the former village green",
+      "Marina with 120 berths in the western cove, replacing the fishing huts",
+      "Holiday apartments on the eastern headland"
+     ]
+    }
+   ]
+  },
+  "model": "The maps show how a small seaside village changed between 1985 and 2005.\n\nOverall, the village was transformed from a quiet fishing settlement into a tourist resort, with a hotel, a marina and a much larger car park replacing its older features.\n\nIn 1985, the village had a small pier used by a few fishing boats, and a row of guesthouses stood along the sea front. A sandy beach extended east of the pier, and a cliff path led from the village to the headland. Fishing huts occupied the western cove, and cars were parked behind the village green.\n\nBy 2005, the pier had been extended to accommodate tour boats, and the guesthouse row had been replaced by a hotel complex of six storeys. A new sea wall had reduced the beach, while the cliff path had given way to a paved promenade. The fishing huts had been replaced by a marina with 120 berths, and a large car park now covered the former village green.\n\nIn summary, the most significant changes were the growth of tourism facilities and the loss of open green space and beach area along the coast.",
+  "notes": "Band 7: the overview names the change type (fishing village to resort) and the main replacements; the body compares the two maps feature by feature using 'had been replaced' and 'had given way'. Band 6 describes the maps one after the other without linking the changes.",
+  "band6": "In 1985 there was a pier and some guesthouses. There was a beach and a cliff path. In 2005 the pier is bigger. There is a hotel and a marina. There is a car park. The beach is smaller now and there is a promenade.",
+  "criteria": {
+   "tr": "Band 7 gives the main change type in the overview and tracks each feature from 1985 to 2005; band 6 describes each map as a list.",
+   "cc": "Band 7 describes 1985 before 2005 and links the changes with replacement verbs; band 6 mixes the two maps in one list.",
+   "lr": "Band 7 uses 'transformed', 'given way to' and 'the loss of open green space'; band 6 uses 'there is' and 'bigger'.",
+   "gra": "Band 7 uses past perfect for changes completed before 2005 and passive structures ('had been replaced'); band 6 relies on 'there is' and simple present tense."
+  }
+ },
+ {
+  "id": "w1-32",
+  "prompt": "The maps below show changes to a secondary school campus between 1999 and 2019. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "map",
+   "title": "Secondary School Campus Development (1999–2019)",
+   "maps": [
+    {
+     "year": "1999",
+     "features": [
+      "Single-storey school building in the centre of the site",
+      "Playing field to the north of the building",
+      "Vegetable garden in the south-west corner",
+      "Small car park beside the main gate",
+      "Dirt track linking the school to the village road"
+     ]
+    },
+    {
+     "year": "2019",
+     "features": [
+      "Two-storey science and library block built on the playing field",
+      "Playing field moved to the north-east corner and enlarged",
+      "Vegetable garden replaced by a sports hall",
+      "Car park doubled in size with 80 spaces",
+      "Paved footpath linking the school to the village road",
+      "New bus stop at the main gate"
+     ]
+    }
+   ]
+  },
+  "model": "The maps show how a secondary school campus was developed between 1999 and 2019.\n\nOverall, the campus expanded considerably, with new teaching and sports buildings replacing the gardens and open land, and access by foot and bus was improved.\n\nIn 1999, the school consisted of a single-storey building in the centre of the site, with a playing field to the north. A vegetable garden occupied the south-west corner, and a small car park stood beside the main gate. Pupils reached the school by a dirt track from the village road.\n\nBy 2019, a two-storey science and library block had been built on part of the playing field, and the remaining field had been moved to the north-east corner and enlarged. The vegetable garden had been replaced by a sports hall, and the car park had doubled in size to provide 80 spaces. A paved footpath now connects the school to the village road, and a new bus stop has been added at the main gate.\n\nIn summary, the campus gained new teaching and sports facilities, and its access routes were improved, while the garden space disappeared.",
+  "notes": "Band 7: the overview names the expansion and the access improvement; the body links each 2019 change to the 1999 feature it replaced, using present perfect and passive forms. Band 6 lists the features on each map without showing the replacements.",
+  "band6": "In 1999 there was one building and a field. There was a garden and a car park. In 2019 there is a new science block and a sports hall. The car park is bigger. There is a footpath and a bus stop. The garden has gone.",
+  "criteria": {
+   "tr": "Band 7 summarises the expansion in the overview and links each 2019 change to the 1999 feature it replaced; band 6 lists features without the links.",
+   "cc": "Band 7 moves through the site in a logical order (buildings, grounds, access) across two paragraphs; band 6 lists features in the order they are found.",
+   "lr": "Band 7 uses 'expanded considerably', 'replacing' and 'access ... was improved'; band 6 uses 'there is' and 'has gone'.",
+   "gra": "Band 7 uses passive and present perfect ('has been built', 'had been replaced') accurately; band 6 uses 'there is' with simple statements."
+  }
  }
 ]
