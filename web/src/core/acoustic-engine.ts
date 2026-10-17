@@ -5,6 +5,13 @@
  * 100% Offline Client-Side Web Audio API.
  */
 
+import {
+  AudioSynthesizer,
+  IntonationResult,
+  TonicProminenceResult,
+  RhythmAnalysisResult
+} from './audio-synthesizer';
+
 export interface AcousticAnalysis {
   durationSeconds: number;
   pitchSamples: number[];      // F0 pitch contour in Hz (80Hz to 400Hz)
@@ -15,6 +22,9 @@ export interface AcousticAnalysis {
   silenceRatio: number;        // totalSilenceSeconds / durationSeconds
   audioBlob: Blob;             // Compressed student audio take
   audioUrl: string;            // Object URL for browser playback
+  intonation?: IntonationResult;
+  tonicProminence?: TonicProminenceResult;
+  rhythm?: RhythmAnalysisResult;
 }
 
 export class AcousticEngine {
@@ -167,6 +177,10 @@ export class AcousticEngine {
 
         const silenceRatio = duration > 0 ? Math.min(1.0, totalSilenceSec / duration) : 0;
 
+        const intonation = AudioSynthesizer.classifyIntonationContour(this.pitchSamples);
+        const tonicProminence = AudioSynthesizer.detectTonicProminence(this.pitchSamples, this.energySamples, frameDurationSec);
+        const rhythm = AudioSynthesizer.computeRhythmMetrics(this.energySamples, frameDurationSec);
+
         resolve({
           durationSeconds: duration,
           pitchSamples: [...this.pitchSamples],
@@ -176,7 +190,10 @@ export class AcousticEngine {
           totalSilenceSeconds: Math.round(totalSilenceSec * 10) / 10,
           silenceRatio: Math.round(silenceRatio * 100) / 100,
           audioBlob: blob,
-          audioUrl: this.activeTakeUrl
+          audioUrl: this.activeTakeUrl,
+          intonation,
+          tonicProminence,
+          rhythm
         });
       };
 

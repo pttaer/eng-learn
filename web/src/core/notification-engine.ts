@@ -208,7 +208,20 @@ export class NotificationEngine {
     if (!container) {
       container = document.createElement('div');
       container.id = 'notification-toast-container';
-      container.style.cssText = [
+      const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+      const posStyles = isMobile ? [
+        'position: fixed',
+        'bottom: max(80px, calc(env(safe-area-inset-bottom, 0px) + 72px))',
+        'left: 16px',
+        'right: 16px',
+        'z-index: 100008',
+        'display: flex',
+        'flex-direction: column',
+        'gap: 10px',
+        'pointer-events: none',
+        'max-width: 480px',
+        'margin: 0 auto'
+      ] : [
         'position: fixed',
         'bottom: max(24px, calc(env(safe-area-inset-bottom, 0px) + 20px))',
         'right: max(24px, calc(env(safe-area-inset-right, 0px) + 20px))',
@@ -218,7 +231,8 @@ export class NotificationEngine {
         'gap: 10px',
         'pointer-events: none',
         'max-width: 380px'
-      ].join(';');
+      ];
+      container.style.cssText = posStyles.join(';');
       document.body.appendChild(container);
     }
 

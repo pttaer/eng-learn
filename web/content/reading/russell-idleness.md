@@ -54,7 +54,7 @@ Modern methods of production have given us the possibility of ease and security 
 - **IPA**: /juːˌtɪl.ɪˈteə.ri.ə.nɪ.zəm/
 - **Definition**: The doctrine that actions are right if they are useful or for the benefit of a majority; practical usefulness divorced from beauty, joy, or spiritual depth.
 - **Vietnamese**: chủ nghĩa công lợi, quan điểm thực dụng vị lợi ích trước mắt
-- **Context**: Civilization itself degenerates into sterile utilitarianism without leisure.
+- **Context**: Civilization itself degenerates into sterile utilitarianism.
 - **Collocations**: sterile utilitarianism, crude utilitarianism, rigid utilitarianism
 - **Etymology**: Latin utilis (useful) + -arian + -ism.
 
@@ -81,7 +81,7 @@ Modern methods of production have given us the possibility of ease and security 
 - **IPA**: /ˈɒl.ɪ.ɡɑː.ki/
 - **Definition**: A small group of people having control of a country, organization, or institution, typically governing in their own interest.
 - **Vietnamese**: tập đoàn đầu sỏ, chế độ quả đầu, nhóm thiểu số thống trị
-- **Context**: Morality designed by ruling oligarchies to protect their accumulated privileges.
+- **Context**: Morality designed by a ruling oligarchy to protect its accumulated privileges.
 - **Collocations**: ruling oligarchies, financial oligarchy, entrench an oligarchy
 - **Etymology**: Greek oligarkhia, from oligos (few) + arkhein (to rule).
 

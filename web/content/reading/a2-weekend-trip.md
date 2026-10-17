@@ -96,7 +96,7 @@ In the evening, we were tired but happy. We sat on a bench and watched the sun g
 - **IPA**: /swɪm/
 - **Definition**: To move through water by using your arms and legs.
 - **Vietnamese**: bơi
-- **Context**: Later, we swam in the sea, but the water was very cold.
+- **Context**: Later, we went to swim in the sea, but the water was very cold.
 - **Collocations**: swim in the sea, swim in a pool, go for a swim
 - **Etymology**: Old English swimman.
 

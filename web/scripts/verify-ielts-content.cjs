@@ -6,7 +6,7 @@ const assert = require('assert');
 const DATA = path.join(__dirname, '..', 'src', 'ielts', 'data');
 const load = f => JSON.parse(fs.readFileSync(path.join(DATA, f), 'utf8'));
 const words = s => s.trim().split(/\s+/).length;
-const MIN = { reading: 12, listening: 8, writing1: 16, writing2: 20, part1: 12, part2: 30 };
+const MIN = { reading: 12, listening: 8, writing1: 30, writing2: 40, part1: 12, part2: 30 };
 
 function uniq(items, what) {
   const ids = items.map(i => i.id);

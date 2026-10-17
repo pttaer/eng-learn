@@ -743,7 +743,7 @@
 - **CEFR**: C1
 - **Word**: scrape through
 - **IPA**: /skreɪp θruː/
-- **Definition**: Succeed in passing an exam or getting through a difficult situation by a very narrow margin.
+- **Definition**: Succeed in passing an exam or surviving a difficult situation by a very narrow margin.
 - **Vietnamese**: đỗ sát nút, vượt qua một cách chật vật
 - **Context**: He barely revised for his chemistry finals and only scraped through with the minimum pass mark.
 - **Verb**: scrape (rub against a rough or hard surface)

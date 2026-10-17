@@ -64,10 +64,10 @@ Sleep is also very important. Most adults need about eight hours every night. Yo
 - **Analysis**: "If" + present simple, then "must" + verb. Ghi chú: "must" diễn tả điều bắt buộc hoặc rất cần thiết.
 
 ## Sentence Mining
-### habit
-- **Part of Speech**: noun
+### habits
+- **Part of Speech**: noun (plural)
 - **IPA**: /ˈhæb.ɪt/
-- **Definition**: Something you do often or regularly.
+- **Definition**: Things you do often or regularly.
 - **Vietnamese**: thói quen
 - **Context**: Good habits make life better.
 - **Collocations**: good habit, bad habit, healthy habit
@@ -78,7 +78,7 @@ Sleep is also very important. Most adults need about eight hours every night. Yo
 - **IPA**: /ˈvedʒ.tə.bəl/
 - **Definition**: A plant that you eat, such as a carrot or an onion.
 - **Vietnamese**: rau, rau củ
-- **Context**: It is also important to eat fruit and vegetables.
+- **Context**: It is also important to eat a vegetable with every meal.
 - **Collocations**: fresh vegetables, eat vegetables, vegetable soup
 - **Etymology**: Latin vegetabilis (able to grow).
 

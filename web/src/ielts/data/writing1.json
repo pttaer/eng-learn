@@ -66,8 +66,15 @@
     }
    ]
   },
-  "model": "Overall, energy consumption increased significantly across three countries between 1990 and 2020, with China experiencing the most dramatic growth. The United States maintained consistently high levels throughout the period, while Russia's consumption remained relatively stable.\n\nIn 1990, the USA was the largest consumer at 2,100 million tonnes, followed by Russia at 850 million tonnes, with China and India at 900 and 400 million tonnes respectively. Over the following thirty years, China's consumption increased dramatically, rising from 900 to 3,600 million tonnes, making it the world's leading energy consumer by 2020. This represents a fourfold increase, primarily driven by industrialisation and rapid economic growth.\n\nThe USA's consumption showed more modest growth, fluctuating between 2,100 and 2,450 million tonnes, reaching 2,450 by 2020. India's energy consumption grew steadily and more than threefold, from 400 to 1,250 million tonnes, reflecting its developing economy and expanding population. In contrast, Russia's consumption remained the most stable, hovering around 800–900 million tonnes throughout the period and declining slightly to 850 million tonnes by 2020.\n\nThe most notable trend is the emergence of China as the world's dominant energy consumer, overtaking the USA by 2010 and reaching significantly higher levels by 2020.",
-  "notes": "Band 7: Clear overview of contrasting trends; accurate grouping (China's dramatic rise vs. USA's stability); specific figures verify against data; uses comparatives and approximations ('fourfold', 'more modest'); varied grammar with passive constructions. Band 6 mistake: misreporting China's growth rate or failing to note the 2005 crossover point."
+  "model": "The line graph compares how much energy was consumed in China, the USA, India and Russia between 1990 and 2020, measured in million tonnes.\n\nOverall, consumption rose in three of the four countries, most dramatically in China, which replaced the USA as the largest consumer. Russia was the exception, as its figure barely changed over the thirty years.\n\nIn 1990, the USA used 2,100 million tonnes, more than twice as much as China (900) and Russia (850), while India consumed only 400. China's consumption then climbed steeply, reaching 1,900 million tonnes in 2005 and overtaking the American figure before 2010. By 2020 it had quadrupled to 3,600 million tonnes. India followed a similar but gentler path, more than tripling to 1,250 million tonnes and moving ahead of Russia after 2010.\n\nBy contrast, American consumption grew only slightly, reaching 2,450 million tonnes in 2020 after a small dip to 2,350 in 2010. Russia's figure fluctuated within a narrow band of 800 to 900 million tonnes and ended the period at 850, exactly where it had started.",
+  "notes": "Band 7: the overview names the two key features (China overtaking the USA; Russia flat) and every figure matches the graph. Band 6 answers usually describe each line separately and miss the crossover.",
+  "band6": "In 1990 the USA used 2,100 million tonnes, China used 900, Russia used 850 and India used 400. After that China increased very much and in 2020 China was 3,600, it is the biggest. India also increased to 1,250. The USA increased a little to 2,450 and Russia was 850.",
+  "criteria": {
+   "tr": "Overview selects the main trends and the China-USA crossover; figures are accurate; no reasons are invented. The band-6 version lists numbers without saying when China overtook the USA.",
+   "cc": "Paragraphs group countries by trend (fast risers vs. stable); \"then\", \"by contrast\", \"after a small dip\" carry the timeline. The band-6 version links every clause with \"and\".",
+   "lr": "Trend vocabulary is varied and precise: climbed steeply, quadrupled, more than tripling, fluctuated within a narrow band. The band-6 version repeats \"increased\".",
+   "gra": "Mixes past perfect (had quadrupled), participle clauses (reaching..., overtaking...) and relative clauses (which replaced...). The band-6 version has a comma splice (\"..., it is the biggest\") and a tense slip."
+  }
  },
  {
   "id": "w1-02",
@@ -128,8 +135,15 @@
     }
    ]
   },
-  "model": "In summary, internet penetration increased substantially across all three regions between 2000 and 2020, with notable differences in adoption rates and growth trajectories. North America achieved the highest levels throughout, while Asia and Africa experienced accelerated growth, particularly in the latter decade.\n\nIn 2000, North America dominated with 43% internet penetration, far ahead of Asia at only 2% and Africa at 0.5%. By 2020, North America reached 92%, representing a fifty percentage-point increase. Asia demonstrated remarkable expansion, rising from 2% to 70%, an increase of sixty-eight percentage points that accelerated sharply after 2009. Africa, starting from near zero, reached 35% by 2020, the slowest-growing region but showing consistent upward momentum.\n\nThe most significant divergence occurred between 2000 and 2009, when North America nearly plateaued while Asia and Africa remained far behind. However, from 2009 onwards, Asia and Africa experienced steeper growth curves. By 2020, Asia had nearly closed the gap with North America, whereas Africa, despite rapid proportional growth, remained substantially below at 35%.\n\nOverall, the data reflects a global digital revolution with convergence among developed and developing regions, though significant disparities persist, particularly for Africa.",
-  "notes": "Band 7: Comprehensive overview with clear temporal and regional contrasts; accurate percentage figures; identifies acceleration phases; uses varied structures ('whereas', approximations like 'near zero', 'nearly plateaued'); compares growth rates and trajectories. Band 6 mistake: confusing absolute growth (percentage points) with percentage rates, or missing the acceleration pattern after 2009."
+  "model": "The line graph shows the percentage of people who used the internet in North America, Asia and Africa between 2000 and 2020.\n\nOverall, internet use rose steadily in all three regions. North America had the highest rate throughout the period, but Asia grew the fastest, so the gap between these two regions narrowed considerably.\n\nIn 2000, 43% of North Americans were online, compared with just 2% of people in Asia and 0.5% in Africa. North American use increased quickly at first, reaching 78% in 2009, after which growth slowed; by 2020 the figure stood at 92%, almost the whole population.\n\nAsia started very slowly, with only 10% online in 2006, but the rate then accelerated sharply. It rose to 35% in 2012 and doubled again to 70% in 2020, a total increase of 68 percentage points, which was the largest of the three regions. As a result, the difference between Asia and North America fell from 41 points to 22. Africa remained well behind, with fewer than one in ten people online until 2012, when the figure was 8%. However, growth picked up after that, and by 2020 the African rate had reached 35%.",
+  "notes": "Band 7: a clear overview (North America highest, Asia fastest, gap narrowing) and the distinction between percentage points and percentages. Band 6 answers often misreport growth or say North America \"plateaued\" when it rose 35 points.",
+  "band6": "Asia was 2% in 2000 and it increased to 70% in 2020. It increased very fast. Africa was 0.5% and increased to 35%. North America was the highest, it was 43% and then 92%. So all regions increased.",
+  "criteria": {
+   "tr": "All three trends are covered, with the acceleration in Asia and Africa and the narrowing gap supported by figures. The band-6 version gives start and end points but no stages or comparison.",
+   "cc": "Each detail paragraph covers one stage or region; \"as a result\" links the Asian surge to the narrowing gap. The band-6 version repeats \"increased\" and ends with a weak summary.",
+   "lr": "Accurate use of \"percentage points\", \"accelerated sharply\", \"picked up\", \"fewer than one in ten\". The band-6 version uses one verb for every change.",
+   "gra": "Relative clause (which was the largest), past perfect (had reached), time clauses. The band-6 version has a comma splice and only simple sentences."
+  }
  },
  {
   "id": "w1-03",
@@ -174,8 +188,15 @@
     }
    ]
   },
-  "model": "Overall, average annual temperatures in both Sydney and London increased consistently over the forty-year period from 1980 to 2020, reflecting broader global warming trends. Both cities showed similar warming patterns, with accelerated increases in recent decades.\n\nIn 1980, Sydney's average annual temperature was 20.5°C, while London was considerably cooler at 8.2°C, a difference of approximately 12°C typical of their respective hemispheric locations. By 2020, Sydney had warmed to 22.3°C and London to 10.1°C, representing increases of 1.8°C and 1.9°C respectively over the forty years.\n\nThe warming was not uniform throughout the period. Between 1980 and 2000, both cities experienced gradual increases of approximately 0.35°C per decade. However, from 2000 onwards, warming accelerated, with increases becoming more pronounced, particularly between 2015 and 2020. This acceleration suggests a shift in climate patterns during the twenty-first century.\n\nWhile Sydney remained consistently warmer than London throughout the period, the temperature gaps narrowed slightly as both cities experienced similar warming rates. The data clearly illustrates that global warming has affected both cities significantly, with recent decades showing faster temperature increases than earlier decades, indicating an intensifying trend.",
-  "notes": "Band 7: Clear overview of warming trend in both locations; accurate temperature figures and differences; identifies acceleration pattern (slower early, faster after 2000); compares warming rates; uses varied grammar (passive, temporal markers). Band 6 mistake: reporting temperature differences incorrectly or missing the acceleration after 2000; treating the linear trend as constant."
+  "model": "The line graph shows changes in the average annual temperature of Sydney and London between 1980 and 2020.\n\nOverall, both cities became steadily warmer, and their temperatures rose by almost the same amount. Sydney remained far warmer than London throughout, with a gap of roughly twelve degrees.\n\nIn 1980, Sydney's average was 20.5°C, compared with only 8.2°C in London. Over the next two decades, temperatures in both cities increased gradually, reaching 21.2°C and 9.0°C respectively in 2000, which represents a rise of less than one degree in each case.\n\nThe increase was faster in the second half of the period, when the graph shows readings every five years. Between 2000 and 2020, both cities warmed by 1.1 degrees, so that Sydney reached 22.3°C and London 10.1°C. Although London started from a much lower base, its total rise of 1.9 degrees was marginally larger than Sydney's 1.8. As a result, the difference between the two cities narrowed very slightly, from 12.3 to 12.2 degrees.",
+  "notes": "Band 7: the overview gives the shared trend and the constant gap; details compare the two halves of the period with exact differences. Band 6 answers often add causes such as global warming, which the graph does not show.",
+  "band6": "Sydney was 20.5°C in 1980 and London was 8.2°C. Both cities temperature increased. In 2020 Sydney was 22.3°C and London was 10.1°C. This is because of global warming which is a big problem in the world.",
+  "criteria": {
+   "tr": "Accurate comparison of the two periods and of total change; no explanation is invented. The band-6 version adds a cause that is not in the data, which lowers Task Achievement.",
+   "cc": "Clear progression from overview to first half to second half; \"although\" and \"as a result\" make the comparison explicit.",
+   "lr": "Precise choices: marginally larger, from a much lower base, narrowed very slightly. The band-6 version has no comparative language.",
+   "gra": "Concession (although), result clause (so that), relative clause (which represents). The band-6 version has a possessive error (\"Both cities temperature\")."
+  }
  },
  {
   "id": "w1-04",
@@ -234,8 +255,15 @@
     }
    ]
   },
-  "model": "Overall, mobile phone subscriptions expanded exponentially across all four countries from 1995 to 2015. Whilst Japan and Germany led adoption initially with 1.5 and 0.3 million subscribers respectively, developing markets eventually dominated.\n\nBy 2015, Nigeria and Brazil led globally at 140 and 145 million subscribers, reversing the 1995 hierarchy where they had negligible numbers. Japan and Germany reached approximately 125 and 110 million, showing sustained but moderating growth that plateaued after 2010.\n\nDeveloping markets displayed dramatically different trajectories. Brazil accelerated from 8 million in 2000 to 145 million, with particularly rapid expansion after 2005. Nigeria showed the most explosive growth, surging from virtually zero to 140 million, predominantly after 2005.\n\nIn contrast, Japan and Germany demonstrated early but gradual adoption, reaching saturation around 100+ million subscribers by 2010. This reflects infrastructure maturity and market saturation in developed nations.\n\nOverall, the data illustrates fundamental market transformation: developing nations, initially lagging far behind, eventually matched or exceeded developed nations. This reflects infrastructure development and economic growth in emerging markets, contrasting with declining subscription growth in saturated developed markets.",
-  "notes": "Band 7: Comprehensive overview identifying transformation in market leadership; precise figures; recognises growth curves (moderated vs. accelerated); compares trajectories; explains phenomena (saturation, emerging market growth); varied grammar and cohesion devices. Band 6 mistake: stating Nigeria/Brazil 'overtook' others without noting baseline differences; failing to explain the plateau in developed markets."
+  "model": "The line graph tracks how many people subscribed to mobile phone services in Japan, Germany, Brazil and Nigeria over the twenty years from 1995.\n\nOverall, subscriptions grew enormously in all four countries. Japan and Germany adopted mobile phones earlier, but Brazil and Nigeria grew much faster later on and had overtaken both of them by 2015.\n\nIn 1995, numbers were tiny everywhere, ranging from 1.5 million in Japan to virtually none in Nigeria. Japan and Germany then expanded rapidly, reaching 87 and 65 million subscribers respectively in 2005, while Brazil had 35 million and Nigeria only 3 million. After this point, growth in the two early adopters slowed: Japan's total rose to 125 million in 2015 and Germany's to 110 million.\n\nBrazil and Nigeria, in contrast, accelerated sharply after 2005. Brazil had overtaken Germany by 2010, when it had 86 million subscribers, and it finished the period as the leader with 145 million. Nigeria's rise was even more dramatic, as its figure jumped from 3 million to 54 million in five years and then to 140 million in 2015, which put it ahead of Japan as well.",
+  "notes": "Band 7: groups the countries into early adopters and late, faster growers, and dates each overtaking correctly. Band 6 answers tend to describe four lines one after another and mix up the final ranking.",
+  "band6": "Japan had 1.5 million in 1995 and 125 million in 2015. Germany had 0.3 million and 110 million. Brazil had 0.1 million and it grew to 145 million. Nigeria had 0 and it grew to 140 million. So all countries grew a lot.",
+  "criteria": {
+   "tr": "The overview names the reversal in ranking; details give the stage at which each change happened. The band-6 version reports only first and last values.",
+   "cc": "Paragraph 3 covers the early adopters, paragraph 4 the late growers; \"after this point\", \"in contrast\" and \"as well\" tie them together.",
+   "lr": "Range of trend verbs (expanded rapidly, accelerated sharply, jumped) and phrases (virtually none, early adopters).",
+   "gra": "Past perfect (had overtaken), participle clause (ranging from...), non-defining relative clause. The band-6 version repeats one sentence pattern four times."
+  }
  },
  {
   "id": "w1-05",
@@ -274,8 +302,15 @@
     }
    ]
   },
-  "model": "Overall, international tourist arrivals increased across all five Asian countries between 2015 and 2019, with China maintaining its position as the leading destination while Vietnam demonstrated the most significant proportional growth.\n\nIn 2015, China received the highest number of tourists at 56.9 million, followed by Thailand at 29.9 million, with Indonesia, Vietnam, and the Philippines attracting substantially fewer visitors at 10.2, 8.0, and 5.4 million respectively. By 2019, China's arrivals rose to 65.7 million, whilst Thailand increased to 39.8 million, maintaining second place. Vietnam experienced remarkable growth, more than doubling from 8.0 to 18.0 million, and Indonesia increased to 16.1 million. The Philippines, whilst remaining the least popular destination, grew to 8.3 million.\n\nThe growth rates varied considerably among the five countries. China and Thailand grew by 8.8 and 9.9 million respectively, representing increases of 15% and 33%. Vietnam's expansion was more dramatic, adding 10.0 million visitors and more than doubling its market. Indonesia's arrivals grew by 5.9 million, whilst the Philippines expanded by 2.9 million.\n\nIn summary, whilst China remained the dominant destination, Vietnam emerged as the fastest-growing market, suggesting shifting tourism preferences and improved tourism infrastructure in Southeast Asia.",
-  "notes": "Band 7: Clear ranking and growth comparison; accurate figures for both years; calculates proportional vs. absolute growth (Vietnam's tripling); ranks countries by various measures; cohesive comparison structure. Band 6 mistake: simply listing figures without comparison; confusing growth rate with absolute increase; failing to identify Vietnam's exceptional proportional growth."
+  "model": "The bar chart compares the number of international tourists who arrived in five Asian countries in 2015 and 2019.\n\nOverall, every country received more visitors in 2019 than in 2015. China was the most popular destination in both years, while Vietnam recorded the largest increase and rose from fourth to third place.\n\nChina welcomed 56.9 million international tourists in 2015, almost twice as many as Thailand, which had 29.9 million. Both countries grew over the four years, to 65.7 million and 39.8 million respectively. In absolute terms, Thailand's rise of 9.9 million was larger than China's 8.8 million, and proportionally it was more than double (33% compared with 15%).\n\nThe three smaller destinations attracted far fewer visitors. Vietnam's figure more than doubled, climbing from 8.0 million to 18.0 million, which meant that it overtook Indonesia, whose total increased from 10.2 million to 16.1 million. The Philippines remained the least visited country, although its arrivals still grew from 5.4 million to 8.3 million.",
+  "notes": "Band 7: the overview states the leader and the biggest change; details compare absolute and proportional growth correctly. Band 6 answers often list ten numbers without comparing them.",
+  "band6": "In 2015 China had 56.9 million tourists and in 2019 it had 65.7 million. Thailand had 29.9 million and 39.8 million. Vietnam had 8.0 million and 18.0 million. Indonesia had 10.2 million and 16.1 million. The Philippines had 5.4 million and 8.3 million.",
+  "criteria": {
+   "tr": "Key features (leader, fastest growth, change in ranking) are selected and supported. The band-6 version is a list with no overview and no comparison.",
+   "cc": "Grouping into two large and three small destinations gives each paragraph a clear focus.",
+   "lr": "Accurate comparison language: almost twice as many, in absolute terms, proportionally, the least visited.",
+   "gra": "Relative clauses (which had..., whose total...) and a concession (although). The band-6 version uses only one structure."
+  }
  },
  {
   "id": "w1-06",
@@ -317,8 +352,15 @@
     }
    ]
   },
-  "model": "Overall, UK household expenditure shifted noticeably between 2010 and 2020, with significant increases in essential costs but complex changes in discretionary spending.\n\nHousing was the largest expense, rising substantially from £180 to £220 per week (22% increase). Utilities also increased significantly from £32 to £48 per week, reflecting energy cost inflation. Food spending grew from £58 to £70, whilst entertainment rose from £25 to £35.\n\nNotably, transport expenditure decreased from £65 to £58 per week, contrasting with overall cost inflation. This likely reflects increased remote working adoption during the decade. Healthcare costs rose modestly from £15 to £18.\n\nThe most significant change concerns essential versus discretionary spending. Non-discretionary expenses (housing, utilities) increased substantially more than discretionary items (entertainment). The transport decrease is anomalous, suggesting structural shifts in commuting patterns.\n\nIn summary, the data reflects general cost-of-living increases, particularly for non-discretionary expenses like housing and utilities. The transport decline is notable, indicating behavioural changes during the decade. Despite rising essential costs, household entertainment spending increased, suggesting some capacity for discretionary expenditure maintenance.",
-  "notes": "Band 7: Clear identification of major expenditure categories and directional changes; accurate figures with some calculated increases; explains underlying causes (remote work, inflation, essential vs. discretionary); varied structures. Band 6 mistake: listing all figures without prioritisation; failing to explain transport decrease or distinguish essential from discretionary spending."
+  "model": "The bar chart shows how much a UK household spent each week on six categories in 2010 and 2020.\n\nOverall, spending went up in five of the six categories, and housing was by far the largest expense in both years. Transport was the only category in which spending fell.\n\nHousing costs rose from £180 to £220 per week, an increase of 22%, and in both years this single category made up roughly half of the total weekly budget, which grew from £375 to £449. The sharpest proportional rise was in utilities, where spending went up by half, from £32 to £48. Food also became more expensive, increasing from £58 to £70, so that it overtook transport as the second-largest item.\n\nAmong the smaller categories, entertainment spending climbed from £25 to £35, while healthcare saw only a marginal rise, from £15 to £18. Transport, by contrast, decreased from £65 to £58 per week. It was therefore the only one of the six categories in which households spent less in 2020 than they had done ten years earlier.",
+  "notes": "Band 7: picks out the largest item, the fastest-growing item and the single fall, with accurate totals. Band 6 answers often explain the fall in transport with reasons the chart does not give.",
+  "band6": "Housing went up from £180 to £220. Transport went down from £65 to £58, maybe because people work from home. Food went up from £58 to £70 and utilities from £32 to £48. Entertainment and healthcare also went up.",
+  "criteria": {
+   "tr": "Every key feature is reported and supported; no causes are guessed. The band-6 version speculates (\"maybe because people work from home\").",
+   "cc": "Paragraph 3 covers the large items, paragraph 4 the small items and the exception.",
+   "lr": "Precise collocations: by far the largest expense, a marginal rise, the sharpest proportional rise.",
+   "gra": "Relative clauses (in which, which grew), result clause (so that), past perfect. The band-6 version uses short simple sentences only."
+  }
  },
  {
   "id": "w1-07",
@@ -357,8 +399,15 @@
     }
    ]
   },
-  "model": "Overall, carbon dioxide emissions decreased across all five sectors between 2015 and 2020, demonstrating a modest shift towards environmental sustainability. Energy and transport remained the largest emission sources, though all sectors showed reductions of varying magnitudes.\n\nIn 2015, the energy sector dominated emissions at 280 megatonnes, followed by transport at 150 megatonnes, industry at 120 megatonnes, agriculture at 85 megatonnes, and waste at 45 megatonnes. By 2020, energy emissions had decreased to 250 megatonnes (a 30-megatonne reduction of approximately 11%), whilst transport fell to 130 megatonnes, representing a 20-megatonne decrease of 13%. Industry reduced emissions to 110 megatonnes, a 10-megatonne decline of 8%.\n\nAgriculture and waste sectors showed the smallest absolute reductions. Agriculture increased slightly from 85 to 88 megatonnes, a minimal change of 3 megatonnes, whilst waste decreased marginally from 45 to 40 megatonnes, a reduction of 11%. Energy and transport achieved the most significant percentage reductions, suggesting increased investment in renewable energy and cleaner transportation technologies.\n\nIn summary, whilst overall emissions declined across all sectors, the energy and transport sectors accounted for the vast majority of carbon dioxide. Achieving further significant reductions will require sustained technological innovation and policy intervention in these dominant sectors.",
-  "notes": "Band 7: Identifies ranking and calculates percentage reductions; notes both absolute and proportional changes; explains divergent reduction rates; acknowledges limitations. Band 6 mistake: reporting only absolute numbers without percentages; confusing small absolute reduction (agriculture) with lack of progress; failing to acknowledge energy/transport dominance."
+  "model": "The bar chart compares carbon dioxide emissions from five sectors of a developed country's economy in 2015 and 2020.\n\nOverall, emissions fell in four of the five sectors, with agriculture the only exception. Energy was the largest source in both years, and the ranking of the sectors did not change.\n\nIn 2015, the energy sector produced 280 megatonnes of CO₂, almost twice as much as transport (150 megatonnes). Industry was third at 120 megatonnes, followed by agriculture at 85 and waste at 45. Total emissions from the five sectors therefore stood at 680 megatonnes.\n\nBy 2020, the largest absolute cut had been made in energy, whose emissions dropped by 30 megatonnes to 250. Transport fell by 20 megatonnes to 130, which was the biggest proportional reduction at 13%. Smaller decreases were recorded in industry, down to 110 megatonnes, and waste, down to 40. Agricultural emissions, by contrast, rose slightly from 85 to 88 megatonnes, so the combined total for 2020 was 618 megatonnes.",
+  "notes": "Band 7: notes that agriculture rose while all other sectors fell, and separates absolute from proportional change correctly. Band 6 answers often claim every sector decreased.",
+  "band6": "All the sectors decreased between 2015 and 2020. Energy decreased from 280 to 250 and transport decreased from 150 to 130. Industry decreased from 120 to 110 and agriculture was 85 and 88. Waste decreased from 45 to 40.",
+  "criteria": {
+   "tr": "The exception (agriculture) is in the overview; figures and percentages are correct. The band-6 version states that all sectors fell, which the data contradicts.",
+   "cc": "Paragraphs move from the 2015 ranking to the 2020 changes; \"by contrast\" marks the exception.",
+   "lr": "Varied verbs and nouns for decrease: cut, dropped, fell, reduction, smaller decreases.",
+   "gra": "Passives (had been made, were recorded), relative clauses (whose emissions, which was). The band-6 version repeats one verb in every clause."
+  }
  },
  {
   "id": "w1-08",
@@ -394,8 +443,15 @@
     }
    ]
   },
-  "model": "Overall, women received more university degrees than men across all four developed nations, demonstrating a significant shift in educational achievement patterns. The US and UK showed the largest absolute gaps, though proportional differences were consistent globally.\n\nIn the United States, women earned 920,000 degrees versus 850,000 for men, a 70,000-degree gap (8% higher). The UK showed a similar pattern: 320,000 women versus 280,000 men, a 40,000-degree difference (14% higher). Australia and Canada demonstrated comparable proportional gaps around 10%, with women receiving 160,000 versus 145,000 in Australia and 140,000 versus 125,000 in Canada respectively.\n\nThe gender gap increased with nation size, reflecting larger overall student populations. The proportional female advantage was most pronounced in the UK (14%), whilst the US showed 8% and Australia/Canada both around 10%.\n\nThis data represents a fundamental reversal of historical gender patterns in higher education. Women now consistently outnumber men in degree attainment, reflecting increased female participation and completion rates across developed nations. The global consistency of this trend across all four countries underscores systemic changes in educational access and achievement.",
-  "notes": "Band 7: Compares absolute numbers and percentage gaps; ranks countries by population size and gender disparity; notes the gender reversal; uses proportions and comparatives consistently. Band 6 mistake: stating women outnumber men without quantifying the gap; confusing absolute differences with percentage increases; missing the pattern across countries."
+  "model": "The bar chart shows how many men and women graduated from university in the United States, the United Kingdom, Australia and Canada.\n\nOverall, women earned more degrees than men in all four countries. The United States awarded far more degrees than the other three nations, while the gender gap was proportionally widest in the United Kingdom.\n\nIn the United States, 920,000 degrees were awarded to women, compared with 850,000 to men, a difference of 70,000. This was the largest gap in absolute terms, although it meant that women received only around 8% more degrees than men. In the United Kingdom, the figures were much lower, at 320,000 for women and 280,000 for men, yet the female lead of 40,000 represented a gap of about 14%.\n\nAustralia and Canada awarded similar numbers of degrees. Women in Australia received 160,000 degrees, while men received 145,000, and the corresponding figures for Canada were 140,000 and 125,000. In both countries, therefore, women were ahead by 15,000, which was a gap of 10% in Australia and 12% in Canada.",
+  "notes": "Band 7: compares absolute and proportional gaps and gets every percentage right. Band 6 answers often explain the gap (for example \"women study harder\"), which is opinion, not data.",
+  "band6": "In all countries women got more degrees than men. In the USA women got 920 and men got 850. In the UK women got 320 and men 280. In Australia and Canada women also got more. This shows women are more interested in education now.",
+  "criteria": {
+   "tr": "Key comparisons are quantified and correct; nothing is added that the chart does not show. The band-6 version drops the unit (thousands) and adds an opinion.",
+   "cc": "Paragraph 3 covers the two largest systems, paragraph 4 the two similar ones; \"yet\", \"therefore\" and \"the corresponding figures\" link the comparisons.",
+   "lr": "Comparison phrases: in absolute terms, proportionally widest, the female lead, the corresponding figures.",
+   "gra": "Passive (were awarded), concession (although, yet), relative clause (which was a gap). The band-6 version has only simple sentences."
+  }
  },
  {
   "id": "w1-09",
@@ -448,8 +504,15 @@
     }
    ]
   },
-  "model": "Overall, internet usage and smartphone ownership increased across all age groups between 2019 and 2024, with dramatic shifts particularly among older populations. Youth maintained near-universal adoption, whilst older groups showed substantial growth from lower baselines.\n\nInternet usage was nearly universal for 16–24 year-olds at 95%, declining progressively with age to just 45% for those 65+. By 2024, 16–24 reached 98%, whilst the 65+ age group more than doubled to 62%, a 17-percentage-point increase significantly outpacing overall growth.\n\nSmartphone ownership showed greater polarisation. In 2019, 92% of youth owned smartphones versus just 18% of those 65+, a 74-point gap. By 2024, this narrowed to 61 points (96% versus 35%), demonstrating rapid older-adult adoption. Ages 25–44 and 45–64 reached 87% and 68% respectively.\n\nThe most striking change concerns older populations. The 65+ group increased smartphone ownership by 17 percentage points and internet usage by 17 points, indicating rapid digital inclusion. However, significant gaps persist: younger groups remain substantially ahead in both metrics.\n\nIn summary, whilst young people already dominated digital adoption in 2019, older populations achieved the steepest growth trajectories between 2019 and 2024, narrowing but not eliminating the generational digital divide.",
-  "notes": "Band 7: Clear age-group ranking; identifies narrowing gaps (65+ uptake); calculates percentage-point changes accurately; compares internet vs. smartphone adoption rates; notes digital inclusion improvement. Band 6 mistake: confusing percentage-point increases with percentage increases; failing to identify the proportional gap narrowing for older groups; not comparing within-group changes."
+  "model": "The table gives the percentages of four age groups who used the internet and owned a smartphone in 2019 and 2024.\n\nOverall, both internet use and smartphone ownership rose in every age group, and in both years the figures fell as age increased. The fastest growth was among the oldest groups, so the generational gap narrowed.\n\nInternet use was already almost universal among 16-24-year-olds in 2019, at 95%, and it edged up to 98% in 2024. The 25-44 group showed a similar pattern, rising from 88% to 94%. By contrast, only 45% of people aged 65 and over were online in 2019, but this proportion grew by 17 percentage points to 62%, while the figure for those aged 45-64 increased from 72% to 83%.\n\nSmartphone ownership was consistently lower than internet use, and the difference was greatest for older people. In 2019, 92% of the youngest group owned a smartphone, compared with just 18% of those over 65. Five years later, the over-65 figure had nearly doubled to 35%, and ownership among 45-64-year-olds had risen from 52% to 68%. The two youngest groups recorded smaller gains, reaching 96% and 87%.",
+  "notes": "Band 7: two overview points (falls with age; fastest growth among older groups) and accurate percentage-point changes. Band 6 answers often confuse percentage points with per cent or say a figure \"doubled\" when it did not.",
+  "band6": "Young people use the internet most. In 2019, 95% of 16-24 used internet and in 2024 98%. Old people were 45% and 62%, it more than doubled. Smartphone is the same, young people have more smartphones than old people.",
+  "criteria": {
+   "tr": "Both measures and all four groups are covered with correct figures. The band-6 version makes a factual error (45% to 62% is not \"more than doubled\").",
+   "cc": "Paragraph 3 = internet, paragraph 4 = smartphones; inside each, young groups then old groups.",
+   "lr": "Precise phrases: almost universal, edged up, percentage points, nearly doubled.",
+   "gra": "Past perfect, participle clauses and comparison structures (consistently lower than). The band-6 version has a comma splice and missing articles."
+  }
  },
  {
   "id": "w1-10",
@@ -484,8 +547,15 @@
     }
    ]
   },
-  "model": "Overall, global water usage increased modestly across all sectors between 2010 and 2020, with agriculture dominatingly consuming approximately three-fifths of total water. All sectors exhibited similar growth rates around 7–8%.\n\nIn 2010, agriculture led at 2,660 km³ (58% of total), followed by industry at 850 km³ (18%), hydropower at 720 km³ (16%), and municipal at 380 km³ (8%). Total usage was approximately 4,610 km³.\n\nBy 2020, total usage reached 4,950 km³, a 340 km³ increase (7% growth). Agriculture increased to 2,840 km³ (+180 km³, 7% growth), maintaining dominance. Industry rose to 920 km³ (+70 km³, 8% growth), hydropower to 780 km³ (+60 km³, 8% growth), and municipal to 410 km³ (+30 km³, 8% growth).\n\nNotably, municipal usage showed the smallest absolute increase despite similar percentage growth, reflecting its smaller baseline. All sectors grew at comparable rates (7–8%), suggesting consistent water-demand expansion across sectors.\n\nIn summary, agriculture remains the dominant water consumer, reflecting global food production priorities. Modest growth rates across all sectors indicate either improved water efficiency or stable economic activity, though agriculture's continued dominance remains environmentally significant.",
-  "notes": "Band 7: Calculates percentages and ranks sectors; identifies dominant sector (agriculture); notes consistent growth rates; accurate figures throughout; compares absolute and proportional changes. Band 6 mistake: listing figures without identifying agriculture's dominance; confusing total growth with sector-by-sector changes; failing to calculate percentages."
+  "model": "The table shows how much water was used globally by four sectors in 2010 and 2020, measured in cubic kilometres.\n\nOverall, water use increased in all four sectors over the decade. Agriculture was by far the largest user in both years, consuming more than the other three sectors combined.\n\nIn 2010, agriculture accounted for 2,660 km³ of the 4,610 km³ used in total, which is roughly 58%. Its consumption rose by 180 km³ to 2,840 km³ in 2020, the largest absolute increase of any sector. Even so, its share of total use fell slightly, to about 57%, since the other sectors grew at a slightly faster rate.\n\nIndustry was the second-largest user, and its consumption went up from 850 km³ to 920 km³. Hydropower followed a similar trend, rising from 720 km³ to 780 km³, while municipal use, which was the smallest category, increased from 380 km³ to 410 km³. Taken together, global water use grew by 340 km³, or around 7%, to reach 4,950 km³ by 2020.",
+  "notes": "Band 7: calculates shares and totals correctly and links them to the main feature (agriculture larger than the rest combined). Band 6 answers often list each row with no total or share.",
+  "band6": "Agriculture used 2,660 in 2010 and 2,840 in 2020. Industry used 850 and 920. Municipal used 380 and 410. Hydropower used 720 and 780. All sectors increased, agriculture is the biggest.",
+  "criteria": {
+   "tr": "Overview and details are supported by correct calculations (58%, 57%, 7%). The band-6 version omits units and offers no overview sentence.",
+   "cc": "Paragraph 3 explains the dominant sector, paragraph 4 the others and the total; \"even so\" and \"taken together\" guide the reader.",
+   "lr": "Range: accounted for, the largest absolute increase, share of total use, followed a similar trend.",
+   "gra": "Passive (was used), relative clause, participle clause (consuming..., rising...)."
+  }
  },
  {
   "id": "w1-11",
@@ -549,8 +619,15 @@
     }
    ]
   },
-  "model": "Overall, educational attainment increased substantially across all three countries between 2010 and 2020, with developing nations showing rapid expansion whilst Germany maintained already-high tertiary levels.\n\nGermany demonstrated advanced education infrastructure: in 2010, only 3% had primary-only education, 52% had secondary, and 45% held tertiary qualifications. By 2020, tertiary attainment rose to 50%, with primary-only falling to 2%, indicating near-universal secondary completion. Germany's gains were modest, reflecting already-high baselines.\n\nBrazil underwent dramatic transformation. Primary-only education halved from 44% to 28%, secondary education reached 50%, and tertiary qualifications increased from 14% to 22%, an eight-percentage-point gain reflecting rapid university expansion.\n\nIndia's progress was equally significant. Primary-only education declined from 68% to 52% (-16 percentage points), secondary education expanded from 22% to 35% (+13 points), whilst tertiary attainment rose from 10% to 13% (+3 points). India retained the lowest tertiary rates despite substantial improvements.\n\nIn summary, developing nations achieved rapid educational progress, whilst Germany consolidated advanced attainment. Brazil and India's secondary-education expansion was particularly notable, reducing primary-only populations substantially and indicating increased educational access and completion.",
-  "notes": "Band 7: Compares trajectories across countries (Germany's consolidation vs. others' expansion); calculates percentage-point changes; identifies tertiary education trends; acknowledges context (developing vs. developed). Band 6 mistake: not comparing percentage-point changes across countries; failing to note Germany's different baseline; confusing proportional shifts with absolute attainment levels."
+  "model": "The table compares the highest level of education reached by working-age adults in Germany, Brazil and India in 2010 and 2020.\n\nOverall, the proportion of people with only primary education fell in all three countries, while the share with a university degree rose. Germany had by far the most highly educated population and India the least, although Brazil and India changed far more over the decade.\n\nIn Germany, almost everyone had gone beyond primary school, with just 3% in this category in 2010 and 2% in 2020. Tertiary graduates increased from 45% to 50% and overtook those whose highest level was secondary education, which declined from 52% to 48%.\n\nBrazil and India both saw major shifts. In Brazil, the primary-only group shrank by 16 percentage points to 28%, and secondary education became the most common level, rising from 42% to 50%. University graduates also grew, from 14% to 22%. In India, primary-only education remained the largest category, but it dropped by the same 16 points, from 68% to 52%. Over the same period, the share with secondary education rose from 22% to 35%, while tertiary graduates increased only slightly, from 10% to 13%.",
+  "notes": "Band 7: an overview that compares countries and directions of change, then country-by-country detail with correct point changes. Band 6 answers often call a fall from 44% to 28% \"halved\".",
+  "band6": "In Germany primary was 3% and 2%, secondary was 52% and 48% and tertiary was 45% and 50%. In Brazil primary halved from 44% to 28%. In India primary was 68% and 52%. All countries improved their education.",
+  "criteria": {
+   "tr": "Overview covers both the shared trend and the differences between countries. The band-6 version contains a factual error (\"halved\").",
+   "cc": "Germany in one paragraph, Brazil and India together because they changed the most; \"both\", \"over the same period\" and \"while\" connect them.",
+   "lr": "Accurate terms: tertiary graduates, primary-only, percentage points, shrank, overtook.",
+   "gra": "Relative clauses (whose highest level..., which declined...), past perfect, participle clause."
+  }
  },
  {
   "id": "w1-12",
@@ -574,8 +651,15 @@
     }
    ]
   },
-  "model": "Overall, the global smartphone market in 2024 exhibits pronounced duopoly characteristics, with Android and iOS collectively accounting for 99% of devices worldwide. Other operating systems are negligible, reflecting market consolidation around two dominant platforms.\n\nAndroid dominates at 72% global market share, reflecting its open-source nature, affordability, and multi-manufacturer availability across budget to premium segments. This widespread availability, particularly in emerging markets, drives its commanding majority. Competitive pricing strategies and accessibility have solidified Android's market leadership.\n\nApple's iOS holds 27%, substantially lower than Android but notably significant given iOS operates exclusively on Apple devices. The iOS ecosystem commands premium positioning supported by strong brand loyalty and superior profit margins, making it highly valuable despite lower market penetration.\n\nOther operating systems represent merely 1% of the market. This negligible share reflects the elimination of legacy platforms like Windows Phone and BlackBerry OS, and the failure of emerging alternatives to compete. Network effects and ecosystem lock-in create substantial barriers to entry.\n\nThe market consolidation around Android and iOS demonstrates how platform economics create winner-take-most dynamics. Whilst Android dominates by volume, iOS maintains significant value through premium positioning. This duopoly structure leaves minimal space for competitors, despite Android's openness.",
-  "notes": "Band 7: Identifies duopoly dominance; explains Android's advantage (open-source, affordability) and iOS strength (brand, ecosystem); acknowledges the dominance gap (72% vs 27%); contextualises market concentration. Band 6 mistake: simply stating the percentages without explanation; failing to explain why the gap exists despite iOS profitability; not addressing market concentration or barriers to entry."
+  "model": "The pie chart shows how the global smartphone market was divided between operating systems in 2024.\n\nOverall, the market was dominated by just two systems, Android and iOS, which together accounted for 99% of all smartphones. Android was clearly the leader, with a share more than twice as large as that of its rival.\n\nAndroid held 72% of the market, which means that almost three out of every four smartphones ran this system. iOS was in second place with 27%, a little over a quarter of the total. The gap between the two leaders was therefore 45 percentage points, and Android's share was more than two and a half times that of iOS.\n\nAll the remaining operating systems were grouped together in the chart as 'Other', and their combined share was only 1%. In other words, for every hundred smartphones, around ninety-nine used one of the two main systems, while just one used an alternative. The market was therefore highly concentrated, since no third system held a meaningful share of the total.",
+  "notes": "Band 7: with only three slices, the answer earns its marks by expressing proportions accurately (three out of four, a little over a quarter) and comparing them, not by explaining why Android leads. Band 6 answers often pad the answer with reasons and brand opinions.",
+  "band6": "Android is 72% and iOS is 27% and other is 1%. Android is the biggest because it is cheaper and many companies make Android phones. iOS is only for Apple phones so it is less. Other is very small.",
+  "criteria": {
+   "tr": "Every figure is reported and compared; no causes are invented. The band-6 version spends half its words on reasons that are not in the chart.",
+   "cc": "Leader and runner-up in one paragraph, the remainder in the next; \"therefore\" and \"in other words\" draw conclusions from the numbers.",
+   "lr": "Proportion language: almost three out of every four, a little over a quarter, combined share, highly concentrated.",
+   "gra": "Relative clauses and comparatives (more than twice as large as that of...)."
+  }
  },
  {
   "id": "w1-13",
@@ -603,8 +687,15 @@
     }
    ]
   },
-  "model": "Overall, global CO₂ emissions in 2023 are heavily concentrated in three sectors: energy production at 41%, transportation at 24%, and manufacturing at 21%, which collectively account for 86% of worldwide emissions. Agriculture and waste management contribute smaller but still significant shares.\n\nEnergy production dominates at 41%, encompassing electricity generation, heating, and industrial consumption. This reflects global fossil fuel reliance, particularly coal, oil, and natural gas. Reducing emissions requires substantial transition to renewable energy and improved efficiency.\n\nTransportation accounts for 24% of emissions, primarily from fossil fuel-powered vehicles in road, air, and maritime sectors. This significant contribution underscores the challenge of transitioning to electric and sustainable systems. Manufacturing contributes 21% from industrial processes and raw material extraction.\n\nAgriculture represents 11%, predominantly from livestock farming and fertiliser use. Waste management accounts for 3%, the smallest category, though still significant globally.\n\nThe concentration of emissions in three dominant sectors (86% combined) suggests that climate mitigation strategies should prioritise energy production and transportation. These sectors offer the greatest potential for impact reduction. Whilst all sectors require attention, focusing resources on the top three would address the majority of global emissions and provide effective climate impact mitigation.",
-  "notes": "Band 7: Identifies top sources and cumulative percentage (86% for top three); explains mechanisms (fossil fuels, transportation types); prioritises action targets; uses clear transitions; varied sentence structure. Band 6 mistake: listing percentages without prioritisation; failing to explain why sources are significant; not identifying energy's dominance or suggesting climate solutions."
+  "model": "The pie chart illustrates the proportion of global carbon dioxide emissions that came from five sources in 2023.\n\nOverall, energy production was the largest source by a wide margin, and three sectors, namely energy production, transportation and manufacturing, were responsible for the great majority of emissions. Waste management contributed the smallest share.\n\nEnergy production generated 41% of all emissions, which was considerably more than any other source and close to the combined share of the next two. Transportation ranked second at 24%, roughly a quarter of the total, and manufacturing was only slightly lower at 21%. Taken together, these three sources accounted for 86% of global emissions.\n\nThe two remaining sources were much less significant. Agriculture produced 11%, around half the figure for manufacturing, while waste management accounted for only 3%, the smallest proportion in the chart. In fact, the share of energy production alone was nearly four times that of agriculture and more than thirteen times that of waste management.",
+  "notes": "Band 7: a ranked, grouped description with accurate proportions and no policy advice. Band 6 answers often turn Task 1 into an essay about solutions to climate change.",
+  "band6": "Energy production is 41%, it is the most. Transportation is 24% and manufacturing is 21%. Agriculture is 11% and waste management is 3%. So governments must reduce energy production emissions to stop climate change.",
+  "criteria": {
+   "tr": "All five sources are reported, grouped and compared. The band-6 version ends with a recommendation, which is not part of Task 1.",
+   "cc": "Big three in one paragraph, small two in the next; \"taken together\" and \"in fact\" add comparison.",
+   "lr": "Range: by a wide margin, namely, responsible for the great majority, much less significant.",
+   "gra": "Relative clauses, comparatives (nearly four times that of...), varied sentence openings."
+  }
  },
  {
   "id": "w1-14",
@@ -621,8 +712,15 @@
     "The dried paper sheets are calendered to achieve smoothness and consistent thickness before being rolled or cut into final products"
    ]
   },
-  "model": "The paper production process involves six sequential stages transforming raw timber into finished paper products. The process begins with timber preparation and culminates in commercial-ready sheets.\n\nInitially, raw timber logs are de-barked at the mill to remove outer layers. Subsequently, the wood is mechanically chipped into small uniform pieces. These chips enter the pulping stage, where chemical digesters treat the material with specialized chemicals, breaking down lignin and separating wood fibres into individual strands, transforming solid wood into pulpy cellulose mixture.\n\nFollowing pulping, the mixture undergoes bleaching and cleaning, removing impurities and lignin residue whilst brightening the pulp to achieve desired whiteness. The purified pulp then passes through pressing and drying stages, where heated rollers compress moisture content to approximately 5–8%, forming solid paper sheets.\n\nFinally, dried paper undergoes calendering, a finishing process where sheets pass through smooth rollers, enhancing surface smoothness and ensuring uniform thickness. Calendered paper is subsequently rolled into reels or cut into standard-dimension sheets for distribution.\n\nIn summary, the process systematically transforms timber through preparation, chemical treatment, pressing, drying, and mechanical finishing into commercially viable paper products, with each stage serving distinct functional purposes in achieving the final product quality.",
-  "notes": "Band 7: Clear sequencing with 'initially', 'subsequently', 'following', 'finally'; explains purpose of each stage (bark removal, chipping, pulping, bleaching, drying, calendering); identifies key inputs/outputs; mentions specific detail (5–8% moisture). Band 6 mistake: listing steps without sequence markers; failing to explain why each step matters; missing technical detail (moisture content, heated rollers)."
+  "model": "The diagram shows the stages by which paper is produced from raw timber.\n\nOverall, there are six main stages in the process, beginning with the delivery of logs to a paper mill and ending with finished paper that is ready to be rolled or cut. The process combines mechanical steps, such as chipping and pressing, with a chemical treatment stage.\n\nFirst, raw timber logs are delivered to the mill, where their outer bark is removed. The de-barked wood is then cut into small chips by industrial chipping machines. In the third stage, these chips are treated with chemicals in large containers called digesters, which break down the lignin and separate the wood fibres. The resulting pulp is subsequently bleached and cleaned so that impurities are removed and the desired whiteness is achieved.\n\nOnce the pulp has been cleaned, it is pressed and dried by heated rollers until its moisture content falls to approximately 5-8%. Finally, the dried sheets are calendered, a process which makes them smooth and of consistent thickness, before they are either rolled or cut into final products.",
+  "notes": "Band 7: every stage in order, with the passive voice and sequence markers, and an overview that gives the number of stages and the start and end points. Band 6 answers often copy the step labels and drop the overview.",
+  "band6": "First, the logs come to the mill and remove the bark. Then the wood is chip into small pieces. Then chemicals break the wood. Then the pulp is bleach and clean. Then it is dry. Then it is calendered and cut.",
+  "criteria": {
+   "tr": "All six stages included with the key detail (moisture 5-8%); overview states start, end and number of stages. The band-6 version has no overview.",
+   "cc": "Sequence markers vary (first, then, in the third stage, subsequently, once, finally). The band-6 version uses \"then\" five times.",
+   "lr": "Process vocabulary: de-barked, digesters, pulp, moisture content, calendered.",
+   "gra": "Consistent, accurate passives and a time clause (Once the pulp has been cleaned). The band-6 version has passive form errors (\"is chip\", \"is bleach\") and a wrong active (\"the logs ... remove the bark\")."
+  }
  },
  {
   "id": "w1-15",
@@ -640,8 +738,15 @@
     "Plastic pellets are sold to manufacturers who mould them into new products such as containers, textiles, or building materials"
    ]
   },
-  "model": "The plastic recycling process comprises seven sequential stages, converting waste plastic into reusable raw materials. The cycle begins with collection and concludes with manufacturing into new products.\n\nCollection occurs where plastic waste is gathered from households and businesses through organised recycling programmes. Material is transported to facilities where critical sorting by plastic type occurs: different plastics (PET, HDPE, PVC, LDPE, PP, PS) have different melting points, requiring separation for product quality.\n\nFollowing sorting, plastic undergoes shredding into small flakes, increasing surface area for processing. The flaked plastic then enters the washing stage, where contaminants, labels, and adhesives are removed, ensuring quality standards. Clean flakes are subsequently melted in industrial furnaces at elevated temperatures, transforming solid waste into molten plastic.\n\nThe molten plastic is then extruded through dies, forming uniformly sized pellets or granules. These recycled pellets are sold to manufacturers, which mould and process them into new products: plastic containers, textiles, fibres, and building materials.\n\nIn summary, the process systematically transforms plastic waste through collection, sorting, shredding, washing, melting, and pellet formation into secondary raw materials. This circular economy approach reduces landfill waste and conserves virgin plastic resources, creating economically and environmentally valuable products from waste streams.",
-  "notes": "Band 7: Seven clear steps with explicit sequence markers ('commences', 'following', 'subsequently', 'then', 'completing'); explains sorting purpose (different melting points); describes technology (extrusion, dies); mentions applications; emphasises circular economy. Band 6 mistake: omitting sequence clarity; failing to explain why sorting matters; missing technical detail (dies, pellets); not linking to environmental benefit or new products."
+  "model": "The diagram illustrates how plastic waste is recycled and turned into new products.\n\nOverall, the process consists of seven stages. It begins with the collection of waste from homes and businesses and ends when recycled pellets are sold to manufacturers, who mould them into new goods.\n\nAt the start of the process, plastic waste is collected from households and commercial sources through recycling bin programmes. It is then transported to recycling centres, where it is sorted according to type, for example PET, HDPE or PVC. After sorting, the material is shredded into small flakes, which increases its surface area, and these flakes are washed thoroughly so that contaminants, labels and adhesives are removed.\n\nIn the next stage, the clean flakes are melted in industrial furnaces at high temperatures. The molten material is then forced through dies in a process called extrusion, which produces pellets or granules of a uniform size. Finally, these pellets are sold to manufacturers, who use them to make a range of new products such as containers, textiles and building materials.",
+  "notes": "Band 7: seven stages in order, passive throughout, overview with start and end points. Band 6 answers often add opinions about the environment at the end.",
+  "band6": "People put plastic in recycling bins and trucks take it to the centre. Workers sort the plastic. Then they cut it and wash it. Then they melt it and make pellets. This process is very good for the environment and everyone should recycle.",
+  "criteria": {
+   "tr": "All seven stages and the purpose of each (sorting by type, shredding to increase surface area) are given. The band-6 version invents actors and ends with an opinion.",
+   "cc": "Two detail paragraphs split the process in the middle; markers include at the start, after sorting, in the next stage, finally.",
+   "lr": "Accurate technical words: contaminants, adhesives, molten, extrusion, granules.",
+   "gra": "Passives, non-defining relative clauses (which increases..., who use...), purpose clause (so that)."
+  }
  },
  {
   "id": "w1-16",
@@ -676,7 +781,696 @@
     }
    ]
   },
-  "model": "Between 1990 and 2020, the coastal city underwent dramatic transformation, evolving from a small port town into a modern urban centre. Changes involved vertical expansion, infrastructure modernisation, and significant environmental alteration.\n\nThe harbour experienced the most dramatic physical expansion, increasing approximately threefold to accommodate container terminals and modern port infrastructure, reflecting international maritime trade growth and economic significance. The town centre underwent vertical densification, with low-rise buildings (2–3 storeys) replaced by high-rise developments exceeding 10 storeys, reflecting increased land values and commercial/residential demand.\n\nResidential areas expanded dramatically northward and eastward, creating extensive suburban housing estates accommodating population growth. Transportation infrastructure underwent substantial modernisation: the single main road was replaced by multi-lane highways and ring roads. The airport similarly expanded with new terminals and extended runways.\n\nEnvironmental changes were profound: the dense mangrove forest to the north was largely cleared, reduced to scattered remnants. Agricultural fields were converted to housing and industrial zones, eliminating productive land use.\n\nOverall, the city exemplifies rapid urbanisation characteristic of developing coastal economies, combining infrastructure modernisation and economic growth with significant environmental costs and habitat destruction, reflecting a development-oriented approach prioritising commercial expansion over conservation.",
-  "notes": "Band 7: Identifies major transformations (port tripling, high-rise development, sprawl); contrasts before/after clearly; explains drivers (land values, trade, population); notes environmental losses (mangrove, agriculture); uses varied sentence structure. Band 6 mistake: describing changes without comparing magnitudes; failing to explain causes; not quantifying expansion ('triple the area'); omitting environmental impact."
+  "model": "The map shows how a coastal city changed between 1990 and 2020.\n\nOverall, the city was transformed from a small, low-rise town surrounded by countryside into a large, densely built urban area. This growth took place largely at the expense of farmland and the mangrove forest, while transport facilities were greatly expanded.\n\nIn 1990, the town had a small harbour with fishing docks in the south, and a single main road linked it to the historic centre, where buildings were only two or three storeys high. Housing was scattered to the north and east, a dense mangrove forest covered the north, and farmland occupied the western and southern edges.\n\nBy 2020, the harbour had been replaced by a modern container port three times its original size, and the centre had been redeveloped with buildings of ten storeys or more. Residential estates had spread northwards and eastwards, while the mangrove forest had been cleared to scattered patches and most of the farmland had been replaced by housing and industrial zones. The single road had given way to a network of multi-lane highways and ring roads, and the small eastern airport had been enlarged with new terminals and longer runways.",
+  "notes": "Band 7: a then-and-now structure with the past perfect passive for changes and an overview of the big picture (urbanisation at the expense of nature). Band 6 answers often explain why the city grew, which the map does not show.",
+  "band6": "In 1990 there was a small harbour, a town centre and farms. There was a forest in the north and an airport. In 2020 the harbour is bigger and there are tall buildings. The forest is cut because the city needs more houses. The airport is bigger.",
+  "criteria": {
+   "tr": "All main features are compared across the two years; nothing is explained beyond the map. The band-6 version adds a reason and misses the roads and farmland.",
+   "cc": "One paragraph per year, each moving around the map in a similar order so changes are easy to match.",
+   "lr": "Map vocabulary: low-rise, redeveloped, residential estates, given way to, scattered patches.",
+   "gra": "Past perfect passive (had been replaced, had been enlarged) used accurately. The band-6 version mixes present and past tense."
+  }
+ },
+ {
+  "id": "w1-17",
+  "prompt": "The line graph below shows the amount of electricity generated from renewable sources in three countries between 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "line",
+   "title": "Renewable Electricity Generation in Three Countries (2000–2020)",
+   "unit": "TWh",
+   "labels": [
+    "2000",
+    "2005",
+    "2010",
+    "2015",
+    "2020"
+   ],
+   "series": [
+    {
+     "name": "Germany",
+     "values": [
+      40,
+      60,
+      110,
+      180,
+      230
+     ]
+    },
+    {
+     "name": "Spain",
+     "values": [
+      30,
+      40,
+      60,
+      85,
+      90
+     ]
+    },
+    {
+     "name": "Denmark",
+     "values": [
+      8,
+      10,
+      12,
+      14,
+      15
+     ]
+    }
+   ]
+  },
+  "model": "The line graph shows how much electricity was generated from renewable sources in Germany, Spain and Denmark between 2000 and 2020, measured in TWh.\n\nOverall, renewable generation rose in all three countries, and Germany was the largest producer in every year shown.\n\nGermany began the period at 40 TWh and climbed steadily to 230 TWh by 2020, the highest figure on the graph. Its growth was especially rapid after 2005, when output passed 60 TWh. Spain followed a similar upward path, rising from 30 TWh to 90 TWh, although its progress slowed noticeably after 2015. Denmark, by contrast, generated the least renewable electricity throughout, and its output increased only modestly, from 8 TWh to 15 TWh. Denmark's share therefore remained far smaller than that of either of the other two countries throughout the period.\n\nIn summary, Germany's output grew far faster than that of the other two countries, while Denmark's growth remained small across the whole period.",
+  "notes": "Band 7: the overview names the shared trend and the leader; each country gets start and end figures from the graph, and the summary compares growth rates. Band 6 answers describe the lines one by one and never compare them.",
+  "band6": "Germany, Spain and Denmark all went up. Germany went from 40 to 230, which is the biggest rise, and Spain went from 30 to 90. Denmark was the lowest and did not change much. The lines go up over the years.",
+  "criteria": {
+   "tr": "Band 7 states the overall trend and the leader, then supports each country with start and end figures; band 6 lists values without a clear overview.",
+   "cc": "Band 7 groups the countries into the leader and the laggard before comparing; band 6 narrates in the order the countries appear in the key.",
+   "lr": "Band 7 uses 'climbed steadily', 'slowed noticeably' and 'modestly'; band 6 relies on 'went up' and 'did not change much'.",
+   "gra": "Band 7 mixes complex sentences with clauses such as 'when output passed 60 TWh' and keeps tenses accurate; band 6 uses short, simple sentences."
+  }
+ },
+ {
+  "id": "w1-18",
+  "prompt": "The line graph below shows the percentage of households with broadband internet in three areas from 2005 to 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "line",
+   "title": "Households with Broadband Internet by Area (2005–2025)",
+   "unit": "% of households",
+   "labels": [
+    "2005",
+    "2010",
+    "2015",
+    "2020",
+    "2025"
+   ],
+   "series": [
+    {
+     "name": "Urban",
+     "values": [
+      35,
+      58,
+      74,
+      85,
+      91
+     ]
+    },
+    {
+     "name": "Suburban",
+     "values": [
+      20,
+      40,
+      62,
+      77,
+      84
+     ]
+    },
+    {
+     "name": "Rural",
+     "values": [
+      8,
+      18,
+      31,
+      48,
+      60
+     ]
+    }
+   ]
+  },
+  "model": "Households with broadband in urban, suburban and rural areas are tracked here as a share of each area's homes, from 2005 to 2025.\n\nOverall, broadband access grew in every area over the period, and urban areas stayed ahead throughout.\n\nIn 2005, 35% of urban households had broadband, compared with 20% in suburban areas and only 8% in rural areas. Urban take-up reached 58% by 2010 and kept climbing, passing 91% by 2025. Suburban areas followed the same pattern, closing in on the urban figure, although they remained below it at every point. Rural areas started lowest but grew fastest, rising from 8% to 60%, which narrowed the gap considerably. Even so, rural households in 2025 were still less connected than suburban households had been in 2015.\n\nTo summarise, the gap between urban and rural areas was much wider at the start of the period than at its end, even though urban households were consistently the best connected.",
+  "notes": "Band 7: the overview gives the common trend and the constant leader; the rural line is described as the fastest grower, which is the comparison that matters. Band 6 quotes single figures without comparing growth rates.",
+  "band6": "Broadband went up in all areas. In 2005 urban had 35% and rural had 8%. In 2025 urban was 91% and rural was 60%. Urban is always the highest and rural is always the lowest on the graph.",
+  "criteria": {
+   "tr": "Band 7 gives the overall trend and the constant leader, and identifies the fastest-growing line; band 6 quotes start and end values without the overview.",
+   "cc": "Band 7 moves from the leader to the follower to the laggard and ends on the narrowing gap; band 6 lists the areas in the order of the key.",
+   "lr": "Band 7 uses 'closing in on', 'narrowed the gap considerably' and 'consistently'; band 6 uses 'went up' and 'always'.",
+   "gra": "Band 7 uses participle clauses ('rising from 8% to 60%') and a range of tenses; band 6 writes mostly simple sentences of one clause."
+  }
+ },
+ {
+  "id": "w1-19",
+  "prompt": "The bar chart below shows the number of university students in five subject areas in 2010 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "bar",
+   "title": "University Students by Subject Area, 2010 and 2020 (thousands)",
+   "unit": "thousand students",
+   "labels": [
+    "Engineering",
+    "Business",
+    "Health",
+    "Arts",
+    "Sciences"
+   ],
+   "series": [
+    {
+     "name": "2010",
+     "values": [
+      120,
+      150,
+      90,
+      60,
+      80
+     ]
+    },
+    {
+     "name": "2020",
+     "values": [
+      210,
+      140,
+      160,
+      55,
+      110
+     ]
+    }
+   ]
+  },
+  "model": "Enrolment figures for five university subjects are compared here for two years, 2010 and 2020, in thousands of students.\n\nOverall, enrolment rose in three subjects and fell in two, with engineering and health showing the largest increases.\n\nEngineering was the fastest-growing subject, with numbers climbing from 120 thousand to 210 thousand. Health also expanded considerably, from 90 thousand to 160 thousand, and sciences rose modestly from 80 thousand to 110 thousand. In contrast, business was the most popular subject in 2010 with 150 thousand students, but it declined to 140 thousand by 2020. Arts saw the smallest change, with a slight fall from 60 thousand to 55 thousand. Arts was also the smallest subject area in both years, so its enrolment changed the least in absolute terms.\n\nIn summary, engineering overtook business as the largest subject area by 2020. Health was the second-fastest growing subject over the decade. Both health and engineering therefore added more students than any other subject area.",
+  "notes": "Band 7: the overview gives the number of rising and falling subjects and names the biggest risers; the summary notes the change in rank. Band 6 answers list each bar in turn and miss the rank change.",
+  "band6": "Engineering went up from 120 to 210. Business went down from 150 to 140. Health went up from 90 to 160. Arts went down a little. Sciences went up too. The bars for 2020 are mostly higher than 2010.",
+  "criteria": {
+   "tr": "Band 7 counts the risers and fallers in the overview and highlights the change in rank; band 6 lists every bar without a summary of the main features.",
+   "cc": "Band 7 groups rising subjects, then falling subjects, then the rank change; band 6 follows the order of the bars on the chart.",
+   "lr": "Band 7 uses 'the fastest-growing subject', 'expanded considerably' and 'a slight fall'; band 6 uses 'went up' and 'went down' for each bar.",
+   "gra": "Band 7 combines figures in complex sentences such as 'In contrast, business was ... but it declined'; band 6 repeats one simple pattern."
+  }
+ },
+ {
+  "id": "w1-20",
+  "prompt": "The bar chart below shows the average daily screen time in four age groups in 2015 and 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "bar",
+   "title": "Average Daily Screen Time by Age Group, 2015 and 2025 (hours)",
+   "unit": "hours",
+   "labels": [
+    "Under 12",
+    "12–17",
+    "18–29",
+    "30–45"
+   ],
+   "series": [
+    {
+     "name": "2015",
+     "values": [
+      2.1,
+      3.4,
+      4.6,
+      3.2
+     ]
+    },
+    {
+     "name": "2025",
+     "values": [
+      3,
+      5.1,
+      6.2,
+      4
+     ]
+    }
+   ]
+  },
+  "model": "The bar chart shows the average number of hours per day that people in four age groups spent on screens in 2015 and 2025.\n\nOverall, screen time increased in every age group over the decade, and the 18–29 group recorded the highest figures in both years.\n\nIn 2015, children under 12 spent an average of 2.1 hours a day on screens, and this figure rose to 3.0 hours by 2025. The 12–17 group showed a larger increase, from 3.4 hours to 5.1 hours. Young adults aged 18–29 were the heaviest users, starting at 4.6 hours and reaching 6.2 hours by the end of the period. Adults aged 30–45 began at 3.2 hours and increased to 4.0 hours. Their figures were consistently higher than those of every other group in both years.\n\nIn summary, the 12–17 group saw the sharpest rise in screen use, while young adults remained the heaviest users throughout.",
+  "notes": "Band 7: the overview names the universal rise and the heaviest group; the summary identifies the sharpest rise, which is a comparison of change rather than of level. Band 6 repeats figures without comparing changes.",
+  "band6": "Screen time went up for all groups. Under 12 went from 2.1 to 3.0. The 12 to 17 group went from 3.4 to 5.1. The 18 to 29 group is the highest. The 30 to 45 group went from 3.2 to 4.0.",
+  "criteria": {
+   "tr": "Band 7 gives the trend for every group and identifies both the heaviest group and the sharpest rise; band 6 lists values without a clear overview.",
+   "cc": "Band 7 moves from the universal trend to the youngest group, then the oldest, then concludes; band 6 follows the chart's left-to-right order.",
+   "lr": "Band 7 uses 'the sharpest rise', 'heaviest users' and 'reaching'; band 6 uses 'went up' and 'the highest'.",
+   "gra": "Band 7 uses participle and relative structures ('starting at 4.6 hours and reaching 6.2 hours'); band 6 uses a single repeated sentence type."
+  }
+ },
+ {
+  "id": "w1-21",
+  "prompt": "The table below shows the average number of daily public transport trips in four cities in 2010 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "table",
+   "title": "Daily Public Transport Trips in Four Cities, 2010 and 2020 (millions)",
+   "unit": "million trips",
+   "labels": [
+    "City A",
+    "City B",
+    "City C",
+    "City D"
+   ],
+   "series": [
+    {
+     "name": "2010 (million trips)",
+     "values": [
+      2.1,
+      1.4,
+      3,
+      0.8
+     ]
+    },
+    {
+     "name": "2020 (million trips)",
+     "values": [
+      2.6,
+      1.2,
+      4.1,
+      0.9
+     ]
+    }
+   ]
+  },
+  "model": "Public transport use per day is reported for four cities at two points, 2010 and 2020, in millions of trips.\n\nOverall, public transport use grew in three of the four cities, and City C had the highest usage in both years.\n\nCity C recorded 3.0 million daily trips in 2010, rising to 4.1 million by 2020, the largest increase in absolute terms. City A also grew, from 2.1 million to 2.6 million. City B, on the other hand, fell from 1.4 million to 1.2 million trips. City D had the lowest usage at the start, with 0.8 million trips, and recorded only a small rise to 0.9 million by 2020. Taken together, the four cities recorded more trips in 2020 than in 2010, with City C contributing most of the increase.\n\nIn summary, the growth in City C stands out, while City B was the only city where public transport use declined over the decade.",
+  "notes": "Band 7: the overview counts the growing cities and names the constant leader; the summary singles out the one decline. Band 6 answers repeat every cell and never compare the cities.",
+  "band6": "City A went from 2.1 to 2.6. City B went from 1.4 to 1.2. City C went from 3.0 to 4.1. City D went from 0.8 to 0.9. In 2020 City C is the highest and City D is the lowest.",
+  "criteria": {
+   "tr": "Band 7 counts the growing cities, names the leader in both years and singles out the decline; band 6 repeats cell values without an overview.",
+   "cc": "Band 7 starts with the largest change, then the other cities, then the decline; band 6 goes through the rows in the order they appear.",
+   "lr": "Band 7 uses 'the largest increase in absolute terms', 'declined' and 'recorded only a small rise'; band 6 uses 'went from ... to ...' throughout.",
+   "gra": "Band 7 varies sentence openings and uses appositive and contrast clauses ('City B, on the other hand, fell'); band 6 repeats the same pattern."
+  }
+ },
+ {
+  "id": "w1-22",
+  "prompt": "The table below gives information about average property prices and monthly rents in four places in 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "table",
+   "title": "Average Property Prices and Monthly Rents in Four Places, 2024",
+   "unit": "thousand USD",
+   "labels": [
+    "Capital",
+    "Port City",
+    "Hill Town",
+    "Coastal Village"
+   ],
+   "series": [
+    {
+     "name": "Average price (thousand USD)",
+     "values": [
+      450,
+      320,
+      280,
+      190
+     ]
+    },
+    {
+     "name": "Average monthly rent (USD)",
+     "values": [
+      1800,
+      1400,
+      1100,
+      900
+     ]
+    }
+   ]
+  },
+  "model": "The table gives the average property price and monthly rent in four places in 2024. Prices are in thousands of US dollars and rents are in US dollars.\n\nOverall, the capital was the most expensive location on both measures, while the coastal village was the cheapest.\n\nThe capital had an average price of 450 thousand dollars and a monthly rent of 1800 dollars, the highest figures in the table. The port city was also expensive, with prices of 320 thousand dollars and rents of 1400 dollars. The hill town and the coastal village were considerably cheaper, at 280 thousand and 190 thousand dollars for property. Their monthly rents, 1100 and 900 dollars, were also the lowest in the table. In proportion, the capital's property price was more than twice that of the coastal village, while its rent was exactly twice as high.\n\nIn summary, there is a clear link between location and cost, as the larger urban areas charged more for both buying and renting.",
+  "notes": "Band 7: the overview ranks the places on both measures; the summary draws the link between location and cost. The table has two units, so the answer must state them. Band 6 answers copy the cells without ranking the places.",
+  "band6": "The capital is 450 thousand and the rent is 1800. The port city is 320 thousand and 1400. The hill town is 280 thousand and 1100. The coastal village is 190 thousand and 900. The capital is the most expensive.",
+  "criteria": {
+   "tr": "Band 7 ranks the four places on both measures and states the units; band 6 lists the cells without ranking them.",
+   "cc": "Band 7 moves from the most expensive place to the cheapest on both measures, then concludes; band 6 follows the order of the table.",
+   "lr": "Band 7 uses 'considerably cheaper', 'the highest figures' and 'a clear link between'; band 6 uses 'is' and 'the most expensive'.",
+   "gra": "Band 7 uses a range of structures including 'at ... and ...' prepositional phrases and a concluding clause; band 6 uses simple statements."
+  }
+ },
+ {
+  "id": "w1-23",
+  "prompt": "The pie chart below shows the share of global wheat exports held by six groups of exporters in 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "pie",
+   "title": "Global Wheat Exports by Country, 2022",
+   "unit": "% of global exports",
+   "labels": [
+    "Russia",
+    "European Union",
+    "United States",
+    "Canada",
+    "Australia",
+    "Other"
+   ],
+   "series": [
+    {
+     "name": "Share of exports",
+     "values": [
+      22,
+      18,
+      12,
+      9,
+      8,
+      31
+     ]
+    }
+   ]
+  },
+  "model": "Six exporting groups are compared here by their portion of world wheat sales in 2022.\n\nOverall, the market was led by two exporters, Russia and the European Union, which together accounted for just under half of all wheat exports.\n\nRussia was the largest single exporter, with 22% of the total. The European Union was close behind at 18%. The United States, with 12%, and Canada, with 9%, held smaller shares, while Australia had 8%. The remaining 31% was divided among other countries, which made it the largest group in the chart, although it consisted of many separate exporters. The three smaller named exporters, the United States, Canada and Australia, together held a smaller share than the two leaders.\n\nIn summary, wheat exports were concentrated among a few major producers, although a large number of smaller exporters together made up nearly a third of the market. This concentration means that a shortage or a poor harvest in one of the leading exporters would affect world prices.",
+  "notes": "Band 7: the overview gives the two leaders and their combined weight in words; the summary explains that the 'Other' slice is large because it is many small exporters. Band 6 answers list each slice and miss what the groupings mean.",
+  "band6": "Russia has 22%. The European Union has 18%. The United States has 12%. Canada has 9%. Australia has 8%. Other has 31%. The pie is split into six parts and the biggest part is Other.",
+  "criteria": {
+   "tr": "Band 7 identifies the two leaders and explains why the Other slice is large; band 6 lists the six slices without an overview.",
+   "cc": "Band 7 moves from the leaders to the middle exporters to the residual group; band 6 follows the order of the legend.",
+   "lr": "Band 7 uses 'just under half', 'close behind' and 'nearly a third'; band 6 uses 'has' and 'biggest'.",
+   "gra": "Band 7 uses concessive and relative clauses ('although it consisted of many separate exporters'); band 6 uses one simple sentence per slice."
+  }
+ },
+ {
+  "id": "w1-24",
+  "prompt": "The pie chart below shows the main energy sources used by households in Kenya in 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "pie",
+   "title": "Household Energy Sources in Kenya, 2020",
+   "unit": "% of household energy use",
+   "labels": [
+    "Wood fuel",
+    "Charcoal",
+    "Electricity",
+    "LPG",
+    "Kerosene",
+    "Other"
+   ],
+   "series": [
+    {
+     "name": "Share of household energy use",
+     "values": [
+      60,
+      15,
+      10,
+      8,
+      5,
+      2
+     ]
+    }
+   ]
+  },
+  "model": "This pie chart breaks down how Kenyan homes met their energy needs in 2020.\n\nOverall, wood fuel was by far the most important source, and traditional fuels made up most of the total.\n\nWood fuel accounted for 60% of household energy use, which was more than the other five sources combined. Charcoal was the second most common source at 15%, while electricity provided 10%. Liquefied petroleum gas (LPG) made up 8%, and kerosene accounted for 5%. The smallest category, labelled Other, represented only 2% of the total. Although electricity is often seen as the most modern option, it supplied only a tenth of the total. Taken together, kerosene, LPG and Other made up well under a fifth of the total.\n\nIn summary, most Kenyan households relied on traditional fuels in 2020, with modern sources such as electricity and gas playing a relatively minor role. Wood fuel alone was therefore four times the size of charcoal, which ranked second.",
+  "notes": "Band 7: the overview names the dominant source and the group it belongs to; the summary groups the sources into traditional and modern. Band 6 answers list the six slices without grouping them.",
+  "band6": "Wood fuel is 60%. Charcoal is 15%. Electricity is 10%. LPG is 8%. Kerosene is 5%. Other is 2%. Wood fuel is the biggest and Other is the smallest on the chart.",
+  "criteria": {
+   "tr": "Band 7 states the dominant source and groups the rest as traditional or modern; band 6 lists the six percentages without an overview.",
+   "cc": "Band 7 moves from the dominant source to the second source, then the minor sources, then the summary; band 6 repeats the legend order.",
+   "lr": "Band 7 uses 'by far the most important', 'a relatively minor role' and 'traditional fuels'; band 6 uses 'is' and 'the biggest'.",
+   "gra": "Band 7 uses a comparative clause ('more than the other five sources combined') and a concessive; band 6 uses short statements."
+  }
+ },
+ {
+  "id": "w1-25",
+  "prompt": "The diagram below shows the stages in producing olive oil, from harvest to bottling. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "process",
+   "title": "Olive Oil Production from Harvest to Bottling",
+   "steps": [
+    "Olives are harvested from the trees by hand or with mechanical shakers",
+    "The fruit is transported to the mill within a day to keep its quality",
+    "The olives are washed and crushed into a thick paste",
+    "The paste is stirred slowly, which allows small oil droplets to join together",
+    "The mixture is separated into oil, water and solid waste in a centrifuge",
+    "The oil is filtered, stored in steel tanks and then bottled for sale"
+   ]
+  },
+  "model": "The diagram shows the stages involved in producing olive oil, from the harvest of the fruit to the bottling of the finished product.\n\nOverall, the process consists of six main stages, beginning with the harvest and ending with the bottling of the oil, and most of the work takes place at the mill.\n\nFirst, olives are harvested from the trees, either by hand or with mechanical shakers. The fruit is then transported to the mill, where it must arrive within a day so that its quality is preserved. At the mill, the olives are washed and crushed into a thick paste.\n\nThe paste is next stirred slowly, which allows the small droplets of oil to join together. After this, a centrifuge separates the mixture into oil, water and solid waste. In the final stage, the oil is filtered, stored in steel tanks and bottled for sale.\n\nIn summary, the process moves from the orchard to the mill and then to the bottling stage in a fixed sequence.",
+  "notes": "Band 7: the overview gives the number of stages and the start and end points; each paragraph covers a group of stages in the passive with sequence markers. Band 6 answers copy the step labels in order and drop the overview.",
+  "band6": "First the olives are picked. Then they go to the mill. Then they are washed and crushed. Next the paste is stirred. After that it goes into a centrifuge. Finally the oil is bottled. The process has six steps.",
+  "criteria": {
+   "tr": "Band 7 gives the number of stages and their start and end points, then describes each group of stages; band 6 lists the steps without an overview.",
+   "cc": "Band 7 groups the six stages into three paragraphs with sequence markers ('First', 'next', 'In the final stage'); band 6 uses 'Then' for every step.",
+   "lr": "Band 7 uses process vocabulary such as 'centrifuge', 'filtered' and 'droplets join together'; band 6 uses 'then' and 'goes'.",
+   "gra": "Band 7 uses the passive throughout ('are harvested', 'is separated') and purpose clauses; band 6 uses the active voice in short sentences."
+  }
+ },
+ {
+  "id": "w1-26",
+  "prompt": "The diagram below shows the stages in brewing beer. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "process",
+   "title": "Beer Brewing from Malting to Packaging",
+   "steps": [
+    "Barley is malted by soaking it in water so that it begins to germinate",
+    "The germinated grain is dried in a kiln, which stops growth and sets its flavour",
+    "The malt is milled and mixed with hot water in a mash tun to extract sugars",
+    "The liquid is boiled with hops, which add bitterness and aroma",
+    "Yeast is added to the cooled liquid and fermentation converts the sugars into alcohol",
+    "The beer is conditioned, filtered and packaged into casks or bottles"
+   ]
+  },
+  "model": "The diagram illustrates the six stages involved in brewing beer, from the malting of barley to the packaging of the finished drink.\n\nOverall, the process is a sequence of steps in which the grain is first prepared, then turned into a sweet liquid, and finally fermented and packaged.\n\nThe first two stages prepare the grain. Barley is soaked in water so that it begins to germinate, and the germinated grain is then dried in a kiln, which stops its growth and sets its flavour. Heat is therefore applied at this point.\n\nIn the middle stages, the malt is milled and mixed with hot water in a mash tun to extract sugars. The liquid is then boiled with hops, which add bitterness and aroma, so heat is applied a second time.\n\nIn the final stages, yeast is added to the cooled liquid, and fermentation converts the sugars into alcohol. The beer is conditioned, filtered and packaged into casks or bottles.\n\nIn summary, the brewing process moves from grain to liquid to finished beer in six fixed stages.",
+  "notes": "Band 7: the overview separates the preparation, the liquid stage and the finishing stage; the answer notes where heat is used. Band 6 answers list the six steps and miss the grouping.",
+  "band6": "Barley is malted first. Then it is dried. Then the malt is mixed with water. Then the liquid is boiled with hops. Then yeast is added. Finally the beer is packaged. There are six stages in total.",
+  "criteria": {
+   "tr": "Band 7 groups the six stages into preparation, liquid and finishing, and notes where heat is applied; band 6 lists the steps in order.",
+   "cc": "Band 7 uses paragraphs for each group of stages with clear signposts ('In the middle stages'); band 6 uses 'Then' before each step.",
+   "lr": "Band 7 uses 'germinate', 'mash tun' and 'conditioned'; band 6 uses 'mixed' and 'added' for almost every step.",
+   "gra": "Band 7 uses passive and subordinate clauses ('which stops its growth'); band 6 writes every step as a short active sentence."
+  }
+ },
+ {
+  "id": "w1-27",
+  "prompt": "The maps below show changes in a riverside town between 1995 and 2015. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "map",
+   "title": "Riverside Town Development (1995–2015)",
+   "maps": [
+    {
+     "year": "1995",
+     "features": [
+      "Wooden footbridge crossing the river at the centre",
+      "Small market square near the river bank",
+      "Rows of low houses along the north bank",
+      "Open farmland to the south and east",
+      "Single gravel road linking the town to the highway"
+     ]
+    },
+    {
+     "year": "2015",
+     "features": [
+      "Modern concrete bridge replacing the wooden footbridge",
+      "Market square converted into a car park",
+      "Apartment blocks of 5–8 storeys along the north bank",
+      "Farmland south of the river replaced by a business park",
+      "Dual carriageway connecting the town to the highway",
+      "New train station to the west of the centre"
+     ]
+    }
+   ]
+  },
+  "model": "The maps show how a riverside town changed between 1995 and 2015.\n\nOverall, the town expanded considerably, with housing and commercial development replacing farmland and older open spaces, and its transport links were upgraded.\n\nIn 1995, the town centre was built around a wooden footbridge and a small market square near the river bank. Low houses lined the north bank, while farmland covered the south and east, and a single gravel road linked the town to the highway.\n\nBy 2015, the footbridge had been replaced by a modern concrete bridge, and the market square had become a car park. Apartment blocks of five to eight storeys now stood along the north bank. The farmland to the south of the river had given way to a business park, and a dual carriageway had replaced the gravel road.\n\nIn summary, the most significant changes were the new housing, the business park and the improved road and rail connections.",
+  "notes": "Band 7: the overview names the main type of change; the body compares the two maps feature by feature, using 'replaced', 'had given way' and 'had become'. Band 6 describes each map separately without comparing.",
+  "band6": "In 1995 there was a wooden bridge and a market. There were houses and farms. In 2015 there is a concrete bridge. There are apartment blocks and a business park. There is also a train station and a new road.",
+  "criteria": {
+   "tr": "Band 7 gives the main change type in the overview and tracks each feature from 1995 to 2015; band 6 describes each map as a list.",
+   "cc": "Band 7 describes 1995, then 2015, with changes linked by 'replaced' and 'had become'; band 6 mixes the two maps in one list.",
+   "lr": "Band 7 uses 'replacing', 'given way to' and 'improved road and rail connections'; band 6 uses 'there is' and 'there was'.",
+   "gra": "Band 7 uses past perfect for changes completed before 2015 and passive forms; band 6 relies on 'there is' and 'there was' constructions."
+  }
+ },
+ {
+  "id": "w1-28",
+  "prompt": "The line graph below shows research and development spending as a share of GDP in three countries between 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "line",
+   "title": "Research and Development Spending as Share of GDP (2000–2020)",
+   "unit": "% of GDP",
+   "labels": [
+    "2000",
+    "2005",
+    "2010",
+    "2015",
+    "2020"
+   ],
+   "series": [
+    {
+     "name": "Japan",
+     "values": [
+      3,
+      3.1,
+      3.2,
+      3.2,
+      3.3
+     ]
+    },
+    {
+     "name": "South Korea",
+     "values": [
+      2.2,
+      2.6,
+      3.5,
+      4.2,
+      4.6
+     ]
+    },
+    {
+     "name": "Brazil",
+     "values": [
+      1,
+      1,
+      1.1,
+      1.2,
+      1.2
+     ]
+    }
+   ]
+  },
+  "model": "The line graph compares R&D spending as a percentage of GDP in Japan, South Korea and Brazil between 2000 and 2020.\n\nOverall, spending increased in all three countries, and South Korea showed the most dramatic growth, overtaking Japan by 2010.\n\nJapan started at 3.0% of GDP in 2000 and rose gradually to 3.3% by 2020, so its growth was modest. South Korea began at 2.2%, a lower level than Japan, but its spending climbed steadily to 4.6% by the end of the period. Brazil spent the least throughout, moving from 1.0% to 1.2%, and its line remained almost flat for most of the period. Brazil's line was the lowest of the three in every year shown, and it never rose above 1.2% of GDP.\n\nIn summary, South Korea had the strongest growth in research spending, while Brazil's investment changed very little across the two decades. The chart therefore shows a widening gap between South Korea and the other two countries by the end of the period.",
+  "notes": "Band 7: the overview names the shared trend and the overtaking point; the summary identifies the strongest and the flattest line. Band 6 answers quote the start and end points without noticing the crossover.",
+  "band6": "Japan went from 3.0 to 3.3. South Korea went from 2.2 to 4.6. Brazil went from 1.0 to 1.2. South Korea is the highest at the end. Brazil is the lowest for all the years on the graph.",
+  "criteria": {
+   "tr": "Band 7 identifies the overtaking point and the flattest line; band 6 quotes start and end values without the crossover.",
+   "cc": "Band 7 presents Japan as the benchmark, South Korea as the comparison and Brazil as the contrast; band 6 lists the countries in key order.",
+   "lr": "Band 7 uses 'climbed steadily', 'overtaking' and 'remained almost flat'; band 6 uses 'went from' and 'is the highest'.",
+   "gra": "Band 7 uses concessive clauses ('a lower level than Japan, but') and a range of tenses; band 6 writes mostly simple sentences."
+  }
+ },
+ {
+  "id": "w1-29",
+  "prompt": "The bar chart below shows visits to four types of museum in 2019 and 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "bar",
+   "title": "Museum Visits by Type, 2019 and 2023 (millions)",
+   "unit": "million visits",
+   "labels": [
+    "Art",
+    "History",
+    "Science",
+    "Children's"
+   ],
+   "series": [
+    {
+     "name": "2019",
+     "values": [
+      6.2,
+      4.8,
+      5.5,
+      2.1
+     ]
+    },
+    {
+     "name": "2023",
+     "values": [
+      5.8,
+      5.1,
+      6.4,
+      2.9
+     ]
+    }
+   ]
+  },
+  "model": "Museum attendance is shown here for four categories, in millions of visits, for 2019 and 2023.\n\nOverall, visits to science and children's museums grew, while art museums lost visitors and history museums saw a small rise.\n\nArt museums were the most visited in 2019 with 6.2 million visits, but this fell to 5.8 million by 2023. History museums rose modestly from 4.8 to 5.1 million. Science museums saw the largest gain, from 5.5 million to 6.4 million, which took them above art museums in 2023. Children's museums were the smallest category in both years, although they grew from 2.1 million to 2.9 million. Science museums recorded the largest rise in the chart, at 0.9 million visits, and children's museum visits rose by more than a third.\n\nIn summary, science museums had become the most popular type by 2023, and the fall in art museum visits was the only decline in the chart.",
+  "notes": "Band 7: the overview separates the risers from the faller; the summary notes the change in rank at the top. Band 6 answers list the bars and miss the rank change.",
+  "band6": "Art went from 6.2 to 5.8. History went from 4.8 to 5.1. Science went from 5.5 to 6.4. Children's went from 2.1 to 2.9. Science is higher than art in 2023. Children's is the smallest.",
+  "criteria": {
+   "tr": "Band 7 separates the risers from the faller and identifies the rank change at the top; band 6 lists the bars without an overview.",
+   "cc": "Band 7 gives the overview, then the most visited type, then the largest gain, then the smallest; band 6 follows the chart's left-to-right order.",
+   "lr": "Band 7 uses 'the largest gain', 'rose modestly' and 'took them above'; band 6 uses 'went from' and 'is higher'.",
+   "gra": "Band 7 uses a relative clause ('which took them above art museums') and past perfect; band 6 writes each bar as a simple sentence."
+  }
+ },
+ {
+  "id": "w1-30",
+  "prompt": "The table below shows the average weekly hours spent on household chores by women and men in 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "table",
+   "title": "Average Weekly Hours of Household Chores by Gender, 2000 and 2020",
+   "unit": "hours per week",
+   "labels": [
+    "Women",
+    "Men"
+   ],
+   "series": [
+    {
+     "name": "2000 (hours per week)",
+     "values": [
+      28,
+      9
+     ]
+    },
+    {
+     "name": "2020 (hours per week)",
+     "values": [
+      21,
+      12
+     ]
+    }
+   ]
+  },
+  "model": "The table shows the average number of hours per week that women and men spent on household chores in 2000 and 2020.\n\nOverall, women continued to do more household work than men in both years, although the gap narrowed over the two decades.\n\nIn 2000, women spent 28 hours a week on chores, compared with 9 hours for men. By 2020, women's time had fallen to 21 hours, a decline of seven hours. Men's time rose to 12 hours over the same period, an increase of three hours. Women accounted for 28 of the 37 hours recorded in 2000 and for 21 of the 33 hours in 2020, so their share of the work was far greater than men's in both years.\n\nIn summary, the gap between women and men shrank from 19 hours a week to nine, mainly through a fall in women's chore time. The figures suggest that the household workload has become more evenly shared, though women still carried the larger share in 2020.",
+  "notes": "Band 7: the overview states the constant leader and the narrowing gap; the summary quantifies the gap at both dates. Band 6 answers quote the four numbers without comparing the gap.",
+  "band6": "Women did 28 hours in 2000 and 21 in 2020. Men did 9 hours in 2000 and 12 in 2020. Women always do more than men. In 2020 men do more than in 2000 and women do less.",
+  "criteria": {
+   "tr": "Band 7 states the constant leader and quantifies the narrowing gap at both dates; band 6 quotes four numbers without comparing the gap.",
+   "cc": "Band 7 presents women's change, then men's change, then the gap; band 6 lists the figures year by year.",
+   "lr": "Band 7 uses 'shrank', 'had fallen to' and 'an increase of'; band 6 uses 'do more' and 'do less'.",
+   "gra": "Band 7 uses the past perfect for the earlier change and a result clause; band 6 uses present tenses where past tenses are needed."
+  }
+ },
+ {
+  "id": "w1-31",
+  "prompt": "The maps below show changes in a seaside village between 1985 and 2005. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "map",
+   "title": "Seaside Village Development (1985–2005)",
+   "maps": [
+    {
+     "year": "1985",
+     "features": [
+      "Small pier with a few fishing boats",
+      "Row of guesthouses along the sea front",
+      "Sandy beach extending east of the pier",
+      "Cliff path linking the village to the headland",
+      "Car park behind the village green",
+      "Fishing huts in the western cove"
+     ]
+    },
+    {
+     "year": "2005",
+     "features": [
+      "Pier extended and now used by tour boats",
+      "Hotel complex of six storeys on the former guesthouse row",
+      "Sandy beach reduced by a new sea wall",
+      "Cliff path replaced by a paved promenade",
+      "Large car park built on the former village green",
+      "Marina with 120 berths in the western cove, replacing the fishing huts",
+      "Holiday apartments on the eastern headland"
+     ]
+    }
+   ]
+  },
+  "model": "The maps show how a small seaside village changed between 1985 and 2005.\n\nOverall, the village was transformed from a quiet fishing settlement into a tourist resort, with a hotel, a marina and a much larger car park replacing its older features.\n\nIn 1985, the village had a small pier used by a few fishing boats, and a row of guesthouses stood along the sea front. A sandy beach extended east of the pier, and a cliff path led from the village to the headland. Fishing huts occupied the western cove, and cars were parked behind the village green.\n\nBy 2005, the pier had been extended to accommodate tour boats, and the guesthouse row had been replaced by a hotel complex of six storeys. A new sea wall had reduced the beach, while the cliff path had given way to a paved promenade. The fishing huts had been replaced by a marina with 120 berths, and a large car park now covered the former village green.\n\nIn summary, the most significant changes were the growth of tourism facilities and the loss of open green space and beach area along the coast.",
+  "notes": "Band 7: the overview names the change type (fishing village to resort) and the main replacements; the body compares the two maps feature by feature using 'had been replaced' and 'had given way'. Band 6 describes the maps one after the other without linking the changes.",
+  "band6": "In 1985 there was a pier and some guesthouses. There was a beach and a cliff path. In 2005 the pier is bigger. There is a hotel and a marina. There is a car park. The beach is smaller now and there is a promenade.",
+  "criteria": {
+   "tr": "Band 7 gives the main change type in the overview and tracks each feature from 1985 to 2005; band 6 describes each map as a list.",
+   "cc": "Band 7 describes 1985 before 2005 and links the changes with replacement verbs; band 6 mixes the two maps in one list.",
+   "lr": "Band 7 uses 'transformed', 'given way to' and 'the loss of open green space'; band 6 uses 'there is' and 'bigger'.",
+   "gra": "Band 7 uses past perfect for changes completed before 2005 and passive structures ('had been replaced'); band 6 relies on 'there is' and simple present tense."
+  }
+ },
+ {
+  "id": "w1-32",
+  "prompt": "The maps below show changes to a secondary school campus between 1999 and 2019. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "chart": {
+   "kind": "map",
+   "title": "Secondary School Campus Development (1999–2019)",
+   "maps": [
+    {
+     "year": "1999",
+     "features": [
+      "Single-storey school building in the centre of the site",
+      "Playing field to the north of the building",
+      "Vegetable garden in the south-west corner",
+      "Small car park beside the main gate",
+      "Dirt track linking the school to the village road"
+     ]
+    },
+    {
+     "year": "2019",
+     "features": [
+      "Two-storey science and library block built on the playing field",
+      "Playing field moved to the north-east corner and enlarged",
+      "Vegetable garden replaced by a sports hall",
+      "Car park doubled in size with 80 spaces",
+      "Paved footpath linking the school to the village road",
+      "New bus stop at the main gate"
+     ]
+    }
+   ]
+  },
+  "model": "The maps show how a secondary school campus was developed between 1999 and 2019.\n\nOverall, the campus expanded considerably, with new teaching and sports buildings replacing the gardens and open land, and access by foot and bus was improved.\n\nIn 1999, the school consisted of a single-storey building in the centre of the site, with a playing field to the north. A vegetable garden occupied the south-west corner, and a small car park stood beside the main gate. Pupils reached the school by a dirt track from the village road.\n\nBy 2019, a two-storey science and library block had been built on part of the playing field, and the remaining field had been moved to the north-east corner and enlarged. The vegetable garden had been replaced by a sports hall, and the car park had doubled in size to provide 80 spaces. A paved footpath now connects the school to the village road, and a new bus stop has been added at the main gate.\n\nIn summary, the campus gained new teaching and sports facilities, and its access routes were improved, while the garden space disappeared.",
+  "notes": "Band 7: the overview names the expansion and the access improvement; the body links each 2019 change to the 1999 feature it replaced, using present perfect and passive forms. Band 6 lists the features on each map without showing the replacements.",
+  "band6": "In 1999 there was one building and a field. There was a garden and a car park. In 2019 there is a new science block and a sports hall. The car park is bigger. There is a footpath and a bus stop. The garden has gone.",
+  "criteria": {
+   "tr": "Band 7 summarises the expansion in the overview and links each 2019 change to the 1999 feature it replaced; band 6 lists features without the links.",
+   "cc": "Band 7 moves through the site in a logical order (buildings, grounds, access) across two paragraphs; band 6 lists features in the order they are found.",
+   "lr": "Band 7 uses 'expanded considerably', 'replacing' and 'access ... was improved'; band 6 uses 'there is' and 'has gone'.",
+   "gra": "Band 7 uses passive and present perfect ('has been built', 'had been replaced') accurately; band 6 uses 'there is' with simple statements."
+  }
  }
 ]

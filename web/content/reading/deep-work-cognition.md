@@ -54,7 +54,7 @@ To thrive amidst this systemic distraction economy, modern knowledge practitione
 - **IPA**: /ekˈsɒdʒ.ɪ.nəs/
 - **Definition**: Originating from outside; derived or developed from external causes or conditions.
 - **Vietnamese**: ngoại sinh, bắt nguồn từ bên ngoài, do tác nhân ngoại lai gây ra
-- **Context**: Every exogenous intrusion triggers an involuntary orienting reflex that shatters attentional synchrony.
+- **Context**: Every exogenous intrusion—whether a notification chime, a fleeting chat ping, or an open browser tab—triggers an involuntary orienting reflex that shatters attentional synchrony.
 - **Collocations**: exogenous intrusion, exogenous shock, exogenous stimulus
 - **Etymology**: Greek exo (outside) + -genes (born of, producing).
 

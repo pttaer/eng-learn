@@ -104,7 +104,7 @@ const dataPath = path.join(__dirname, '..', 'src', 'core', 'skill-tree-data.ts')
 assert.ok(fs.existsSync(dataPath), 'skill-tree-data.ts must exist');
 const dataSrc = fs.readFileSync(dataPath, 'utf8');
 
-const branches = ['grammar', 'collocations', 'writing', 'speaking', 'reading'];
+const branches = ['grammar', 'collocations', 'writing', 'speaking', 'reading', 'mediation'];
 const levels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
 for (const b of branches) {
@@ -114,7 +114,7 @@ for (const b of branches) {
     assert.ok(regex.test(dataSrc), `Branch ${b} must contain a node for CEFR level ${lvl}`);
   }
 }
-console.log('✅ All 5 branches provide node definitions for all CEFR levels (A1-C2).\n');
+console.log('✅ All 6 branches provide node definitions for all CEFR levels (A1-C2).\n');
 
 // 3. Functional Simulation & Invariant Validation
 console.log('--- 3. ADVANCE MASTERY ENGINE SIMULATION ---');

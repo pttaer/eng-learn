@@ -1,0 +1,84 @@
+[
+  {
+    "id": "w1-31",
+    "prompt": "The maps below show changes in a seaside village between 1985 and 2005. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chart": {
+      "kind": "map",
+      "title": "Seaside Village Development (1985–2005)",
+      "maps": [
+        {
+          "year": "1985",
+          "features": [
+            "Small pier with a few fishing boats",
+            "Row of guesthouses along the sea front",
+            "Sandy beach extending east of the pier",
+            "Cliff path linking the village to the headland",
+            "Car park behind the village green",
+            "Fishing huts in the western cove"
+          ]
+        },
+        {
+          "year": "2005",
+          "features": [
+            "Pier extended and now used by tour boats",
+            "Hotel complex of six storeys on the former guesthouse row",
+            "Sandy beach reduced by a new sea wall",
+            "Cliff path replaced by a paved promenade",
+            "Large car park built on the former village green",
+            "Marina with 120 berths in the western cove, replacing the fishing huts",
+            "Holiday apartments on the eastern headland"
+          ]
+        }
+      ]
+    },
+    "model": "The maps show how a small seaside village changed between 1985 and 2005.\n\nOverall, the village was transformed from a quiet fishing settlement into a tourist resort, with a hotel, a marina and a much larger car park replacing its older features.\n\nIn 1985, the village had a small pier used by a few fishing boats, and a row of guesthouses stood along the sea front. A sandy beach extended east of the pier, and a cliff path led from the village to the headland. Fishing huts occupied the western cove, and cars were parked behind the village green.\n\nBy 2005, the pier had been extended to accommodate tour boats, and the guesthouse row had been replaced by a hotel complex of six storeys. A new sea wall had reduced the beach, while the cliff path had given way to a paved promenade. The fishing huts had been replaced by a marina with 120 berths, and a large car park now covered the former village green.\n\nIn summary, the most significant changes were the growth of tourism facilities and the loss of open green space and beach area along the coast.",
+    "notes": "Band 7: the overview names the change type (fishing village to resort) and the main replacements; the body compares the two maps feature by feature using 'had been replaced' and 'had given way'. Band 6 describes the maps one after the other without linking the changes.",
+    "band6": "In 1985 there was a pier and some guesthouses. There was a beach and a cliff path. In 2005 the pier is bigger. There is a hotel and a marina. There is a car park. The beach is smaller now and there is a promenade.",
+    "criteria": {
+      "tr": "Band 7 gives the main change type in the overview and tracks each feature from 1985 to 2005; band 6 describes each map as a list.",
+      "cc": "Band 7 describes 1985 before 2005 and links the changes with replacement verbs; band 6 mixes the two maps in one list.",
+      "lr": "Band 7 uses 'transformed', 'given way to' and 'the loss of open green space'; band 6 uses 'there is' and 'bigger'.",
+      "gra": "Band 7 uses past perfect for changes completed before 2005 and passive structures ('had been replaced'); band 6 relies on 'there is' and simple present tense."
+    }
+  },
+  {
+    "id": "w1-32",
+    "prompt": "The maps below show changes to a secondary school campus between 1999 and 2019. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chart": {
+      "kind": "map",
+      "title": "Secondary School Campus Development (1999–2019)",
+      "maps": [
+        {
+          "year": "1999",
+          "features": [
+            "Single-storey school building in the centre of the site",
+            "Playing field to the north of the building",
+            "Vegetable garden in the south-west corner",
+            "Small car park beside the main gate",
+            "Dirt track linking the school to the village road"
+          ]
+        },
+        {
+          "year": "2019",
+          "features": [
+            "Two-storey science and library block built on the playing field",
+            "Playing field moved to the north-east corner and enlarged",
+            "Vegetable garden replaced by a sports hall",
+            "Car park doubled in size with 80 spaces",
+            "Paved footpath linking the school to the village road",
+            "New bus stop at the main gate"
+          ]
+        }
+      ]
+    },
+    "model": "The maps show how a secondary school campus was developed between 1999 and 2019.\n\nOverall, the campus expanded considerably, with new teaching and sports buildings replacing the gardens and open land, and access by foot and bus was improved.\n\nIn 1999, the school consisted of a single-storey building in the centre of the site, with a playing field to the north. A vegetable garden occupied the south-west corner, and a small car park stood beside the main gate. Pupils reached the school by a dirt track from the village road.\n\nBy 2019, a two-storey science and library block had been built on part of the playing field, and the remaining field had been moved to the north-east corner and enlarged. The vegetable garden had been replaced by a sports hall, and the car park had doubled in size to provide 80 spaces. A paved footpath now connects the school to the village road, and a new bus stop has been added at the main gate.\n\nIn summary, the campus gained new teaching and sports facilities, and its access routes were improved, while the garden space disappeared.",
+    "notes": "Band 7: the overview names the expansion and the access improvement; the body links each 2019 change to the 1999 feature it replaced, using present perfect and passive forms. Band 6 lists the features on each map without showing the replacements.",
+    "band6": "In 1999 there was one building and a field. There was a garden and a car park. In 2019 there is a new science block and a sports hall. The car park is bigger. There is a footpath and a bus stop. The garden has gone.",
+    "criteria": {
+      "tr": "Band 7 summarises the expansion in the overview and links each 2019 change to the 1999 feature it replaced; band 6 lists features without the links.",
+      "cc": "Band 7 moves through the site in a logical order (buildings, grounds, access) across two paragraphs; band 6 lists features in the order they are found.",
+      "lr": "Band 7 uses 'expanded considerably', 'replacing' and 'access ... was improved'; band 6 uses 'there is' and 'has gone'.",
+      "gra": "Band 7 uses passive and present perfect ('has been built', 'had been replaced') accurately; band 6 uses 'there is' with simple statements."
+    }
+  }
+]

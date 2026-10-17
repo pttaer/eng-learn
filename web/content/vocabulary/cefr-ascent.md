@@ -839,7 +839,7 @@
 - **CEFR**: C2
 - **Word**: gainsay
 - **IPA**: /ˌɡeɪnˈseɪ/
-- **Definition**: Deny or contradict a fact or statement; speak against (usually used with a negative).
+- **Definition**: Deny or contradict a fact or statement (usually used with a negative).
 - **Vietnamese**: phủ nhận, bác bỏ, cãi lại (thường dùng ở dạng phủ định)
 - **Context**: There is no gainsaying the courage of the volunteers who stayed behind during the floods.
 - **CEFR Rank**: C2 / GRE Mastery

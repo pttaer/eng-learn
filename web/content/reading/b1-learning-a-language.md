@@ -83,7 +83,7 @@ If you want to learn a language, my advice is simple. Choose a goal that is real
 - **IPA**: /ˈhæb.ɪt/
 - **Definition**: Something that you do regularly, often without thinking.
 - **Vietnamese**: thói quen
-- **Context**: Small habits are more important than big efforts.
+- **Context**: A small habit is more important than a big effort.
 - **Collocations**: a good habit, a bad habit, get into the habit
 - **Etymology**: From Latin habitus (condition, way of being).
 

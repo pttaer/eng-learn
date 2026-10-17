@@ -17,7 +17,8 @@ export const BRANCH_TO_SKILL: Record<BranchId, SkillId> = {
   collocations: 'vocab',
   reading: 'reading',
   speaking: 'speaking',
-  writing: 'writing'
+  writing: 'writing',
+  mediation: 'writing'
 };
 
 export class SkillTreeEngine {

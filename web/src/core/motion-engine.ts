@@ -4,9 +4,12 @@ export class MotionEngine {
   private static activeAnimations: anime.AnimeInstance[] = [];
 
   public static isReducedMotion(): boolean {
-    // Motion is on by default; users opt out via Settings (html[data-motion="reduce"]), not the OS flag
     if (typeof document === 'undefined') return false;
-    return document.documentElement.dataset.motion === 'reduce';
+    if (document.documentElement.dataset.motion === 'reduce') return true;
+    if (typeof window !== 'undefined' && typeof window.matchMedia === 'function') {
+      return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+    return false;
   }
 
   /**
@@ -15,16 +18,26 @@ export class MotionEngine {
   public static drawSvgLines(targets: string | NodeList | SVGElement[]): anime.AnimeInstance | null {
     if (this.isReducedMotion()) return null;
 
-    const anim = anime({
-      targets,
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: 'easeInOutSine',
-      duration: 1200,
-      delay: (_el: any, i: number) => i * 45
-    });
+    try {
+      let elements: any = targets;
+      if (typeof targets !== 'string') {
+        elements = Array.from(targets as any).filter((el: any) => el && el.isConnected);
+        if (elements.length === 0) return null;
+      }
 
-    this.trackAnimation(anim);
-    return anim;
+      const anim = anime({
+        targets: elements,
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        duration: 1200,
+        delay: (_el: any, i: number) => i * 45
+      });
+
+      this.trackAnimation(anim);
+      return anim;
+    } catch (e) {
+      return null;
+    }
   }
 
   /**

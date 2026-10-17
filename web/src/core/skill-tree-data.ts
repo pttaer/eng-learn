@@ -1,7 +1,7 @@
 import { RouteId } from './router';
 import { Cefr } from './cefr';
 
-export type BranchId = 'grammar' | 'collocations' | 'writing' | 'speaking' | 'reading';
+export type BranchId = 'grammar' | 'collocations' | 'writing' | 'speaking' | 'reading' | 'mediation';
 
 export interface SkillNode {
   id: string;
@@ -628,7 +628,128 @@ export const SKILL_BRANCHES: Record<BranchId, SkillBranch> = {
         routeTarget: 'read',
         prerequisites: ['read-4'],
         masteryThreshold: 80,
+        x: 72,
+        y: 15
+      }
+    ]
+  },
+  mediation: {
+    id: 'mediation',
+    name: 'CEFR Mediation & Pragmatics',
+    tagline: 'Bridging Texts, Concepts & Conflict Resolution',
+    color: '#10b981',
+    routeTarget: 'mediate',
+    nodes: [
+      {
+        id: 'med-a1',
+        branchId: 'mediation',
+        level: 1,
+        title: 'Notice & Direction Relaying',
+        subtitle: 'A1 Essential Information Relay',
+        description: 'Pass on essential details (times, dates, prices) from simple notices and public signs.',
+        cefrLevel: 'A1',
+        routeTarget: 'mediate',
+        prerequisites: [],
+        masteryThreshold: 80,
+        x: 79,
+        y: 80
+      },
+      {
+        id: 'med-a2',
+        branchId: 'mediation',
+        level: 2,
+        title: 'Data & Timetable Explanation',
+        subtitle: 'A2 Simple Visual Interpretation',
+        description: 'Explain simple schedules, charts, and everyday routines to others with clear clarity.',
+        cefrLevel: 'A2',
+        routeTarget: 'mediate',
+        prerequisites: ['med-a1'],
+        masteryThreshold: 80,
+        x: 79,
+        y: 71
+      },
+      {
+        id: 'med-b1',
+        branchId: 'mediation',
+        level: 3,
+        title: 'Collaborative Meaning Construction',
+        subtitle: 'B1 Facilitating Group Consensus',
+        description: 'Invite contributions, propose compromises, and summarise shared agreements in peer tasks.',
+        cefrLevel: 'B1',
+        routeTarget: 'mediate',
+        prerequisites: ['med-a2'],
+        masteryThreshold: 80,
+        x: 79,
+        y: 61
+      },
+      {
+        id: 'med-1',
+        branchId: 'mediation',
+        level: 4,
+        title: 'Multi-Party Discussion Chair',
+        subtitle: 'B2 Rapporteur & Structured Briefing',
+        description: 'Lead goal-oriented team discussions, refocus drifting topics, and compile actionable summaries.',
+        cefrLevel: 'B2',
+        routeTarget: 'mediate',
+        prerequisites: ['med-b1'],
+        masteryThreshold: 80,
+        x: 79,
+        y: 52
+      },
+      {
+        id: 'med-2',
+        branchId: 'mediation',
+        level: 5,
+        title: 'Delicate Conflict De-escalation',
+        subtitle: 'C1 Tactful Dispute Neutralization',
+        description: 'Restate conflicting positions neutrally, separate people from problems, and steer to resolution.',
+        cefrLevel: 'C1',
+        routeTarget: 'mediate',
+        prerequisites: ['med-1'],
+        masteryThreshold: 80,
+        x: 77,
+        y: 43
+      },
+      {
+        id: 'med-3',
+        branchId: 'mediation',
+        level: 6,
+        title: 'Asymmetric Register Shifting',
+        subtitle: 'C1 Dynamic Politeness & Tone Adaptation',
+        description: 'Code-switch fluidly between executive stakeholders, informal team chats, and formal correspondence.',
+        cefrLevel: 'C1',
+        routeTarget: 'mediate',
+        prerequisites: ['med-2'],
+        masteryThreshold: 80,
+        x: 74,
+        y: 34
+      },
+      {
+        id: 'med-4',
+        branchId: 'mediation',
+        level: 7,
+        title: 'Subtext, Irony & Nuance Decoding',
+        subtitle: 'C2 High-Context Cultural Bridge',
+        description: 'Mediate complex cultural references, implicit subtext, irony, and diplomatic reservations without friction.',
+        cefrLevel: 'C2',
+        routeTarget: 'mediate',
+        prerequisites: ['med-3'],
+        masteryThreshold: 80,
         x: 70,
+        y: 24
+      },
+      {
+        id: 'med-5',
+        branchId: 'mediation',
+        level: 8,
+        title: 'Executive Plurilingual Governance',
+        subtitle: 'C2 Master Epistemic Translation',
+        description: 'Synthesize high-stakes multi-paradigm treatises and govern cross-cultural negotiation outcomes.',
+        cefrLevel: 'C2',
+        routeTarget: 'mediate',
+        prerequisites: ['med-4'],
+        masteryThreshold: 80,
+        x: 65,
         y: 15
       }
     ]
