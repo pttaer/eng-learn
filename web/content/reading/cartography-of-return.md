@@ -98,7 +98,7 @@ Perhaps, she thought, this was what home had always meant: not a location but a 
 - **IPA**: /rɪˈsɪnd/
 - **Definition**: Formally revoke, cancel, or repeal an agreement, law, or decision.
 - **Vietnamese**: hủy bỏ, thu hồi, bãi bỏ (một thỏa thuận, quyết định)
-- **Context**: The pact could lapse, but it could not be entirely rescinded.
+- **Context**: The pact could lapse, but no one could rescind it entirely.
 - **Collocations**: rescind a decision, rescind an order, rescind a contract, rescind an offer
 - **Etymology**: Latin rescindere (to cut off, annul), from re- (back) + scindere (to split).
 

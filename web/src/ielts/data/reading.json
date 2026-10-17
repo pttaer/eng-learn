@@ -48,16 +48,16 @@
    {
     "id": "r01-q02",
     "type": "tfng",
-    "prompt": "The Gutenberg Bible contained hand-decorated elements despite being printed.",
+    "prompt": "The Gutenberg Bible was decorated by hand after the text had been printed.",
     "answer": "TRUE",
     "why": "Paragraph B explicitly states 'these early editions maintained many characteristics of handwritten manuscripts' and describes 'elaborate hand-illuminated initials and margins decorated by artists,' confirming that the printed Gutenberg Bible included handwork."
    },
    {
     "id": "r01-q03",
     "type": "tfng",
-    "prompt": "The cost of producing books increased significantly during the first century after Gutenberg's invention.",
-    "answer": "FALSE",
-    "why": "Paragraph C states 'The costs of producing books fell dramatically, with prices decreasing by up to 80 percent within a century,' directly contradicting the claim of cost increase. The passage shows costs fell, not increased."
+    "prompt": "The passage indicates that book production costs were influenced primarily by labor expenses rather than material costs.",
+    "answer": "NOT GIVEN",
+    "why": "The passage states \"prices decreasing by up to 80 percent\" but does not specify what factors primarily caused the cost reduction (labor, materials, or other factors). The cost breakdown is not addressed."
    },
    {
     "id": "r01-q04",
@@ -76,7 +76,7 @@
    {
     "id": "r01-q06",
     "type": "complete",
-    "prompt": "According to the passage, approximately _______ copies of the original Gutenberg Bibles survive today.",
+    "prompt": "Roughly _______ original Gutenberg Bibles are still known to exist today.",
     "answer": [
      "49"
     ],
@@ -85,7 +85,7 @@
    {
     "id": "r01-q07",
     "type": "complete",
-    "prompt": "William Caxton established the first printing press in England in the year _______.",
+    "prompt": "The first printing press in England was set up by William Caxton in the year _______.",
     "answer": [
      "1476"
     ],
@@ -94,7 +94,7 @@
    {
     "id": "r01-q08",
     "type": "complete",
-    "prompt": "The continuous papermaking machine that enabled mass production was invented by _______.",
+    "prompt": "The first machine that could make paper continuously, enabling mass production, was built by _______.",
     "answer": [
      "Nicolas-Louis Robert"
     ],
@@ -103,11 +103,12 @@
    {
     "id": "r01-q09",
     "type": "complete",
-    "prompt": "Steam-powered printing presses could produce approximately _______ pages per hour compared to 250 pages per hour with hand-operated presses.",
+    "prompt": "The first steam-powered press at The Times of London could print _______ pages per hour, against about 250 with hand-operated presses.",
     "answer": [
-     "1,100"
+     "1,100",
+     "1100"
     ],
-    "why": "Paragraph E specifically states that steam-powered presses 'could produce 1,100 pages per hour compared to approximately 250 pages per hour with hand-operated presses.'"
+    "why": "The passage says the steam press 'could produce 1,100 pages per hour compared to approximately 250 pages per hour with hand-operated presses.'"
    },
    {
     "id": "r01-q10",
@@ -146,39 +147,39 @@
     "type": "mcq",
     "prompt": "What does the passage suggest about the relationship between printing and scientific progress?",
     "options": [
-     "A. The printing press slowed scientific advancement by creating information overload.",
-     "B. Printing enabled rapid sharing of scientific discoveries and experimental methods.",
-     "C. Science and printing developed independently without significant interaction.",
-     "D. The scientific revolution occurred despite the printing press, not because of it."
+     "A. Printing made it difficult for scholars to track different editions and versions of texts.",
+     "B. The rapid sharing of discoveries and experimental methods accelerated scientific progress.",
+     "C. Scientific advances occurred independently of printing technology.",
+     "D. The printing press reduced the number of copies available to researchers."
     ],
     "answer": "B",
-    "why": "Paragraph H explicitly states 'It accelerated scientific progress by enabling rapid sharing of discoveries and experimental methods,' directly supporting option B. Option A contradicts this, option C ignores the connection, and option D reverses the causal relationship."
+    "why": "Paragraph H states: \"It accelerated scientific progress by enabling rapid sharing of discoveries and experimental methods,\" directly supporting this relationship."
    },
    {
     "id": "r01-q13",
     "type": "mcq",
     "prompt": "The passage indicates that early printed books like the Gutenberg Bible were characterized by:",
     "options": [
-     "A. Complete abandonment of all decorative elements found in manuscripts.",
-     "B. Uniform spelling and no abbreviations compared to handwritten texts.",
-     "C. Retention of many manuscript features including hand-decorated elements.",
-     "D. Lower quality than contemporary handwritten manuscripts."
+     "A. Complete rejection of all decorative and artistic elements found in manuscripts.",
+     "B. Uniform spelling and standardized abbreviations across all copies.",
+     "C. Retention of many decorative features including hand-illuminated elements despite mechanical printing.",
+     "D. Dramatic decline in quality compared to handwritten predecessors."
     ],
     "answer": "C",
-    "why": "Paragraph B states 'Despite being printed, these early editions maintained many characteristics of handwritten manuscripts, including variations in spelling' and describes 'hand-illuminated initials and margins decorated by artists,' exactly matching option C."
+    "why": "Paragraph B explicitly states: \"Despite being printed, these early editions maintained many characteristics of handwritten manuscripts\" and mentions \"elaborate hand-illuminated initials and margins decorated by artists.\""
    },
    {
     "id": "r01-q14",
     "type": "mcq",
     "prompt": "Based on the passage, what challenge did printing technology create for existing institutions?",
     "options": [
-     "A. It made books too expensive for common people to afford.",
-     "B. It reduced the literacy rate among European populations.",
-     "C. It made it difficult for authorities to maintain control over information distribution.",
-     "D. It eliminated the need for handwritten manuscripts entirely."
+     "A. Books remained too expensive to distribute widely to ordinary citizens.",
+     "B. The technology required religious authorities to change their teachings.",
+     "C. It became difficult for authorities to control the distribution and content of information.",
+     "D. Printing eliminated all forms of manuscript production in Europe."
     ],
     "answer": "C",
-    "why": "Paragraph G states 'Some scholars argued that the shift from oral to written culture resulted in a loss of memorization skills' and mentions concerns about control of narrative when 'competing voices could be published and distributed,' indicating authorities struggled with loss of control over information."
+    "why": "Paragraph G states: \"Religious and political institutions struggled to maintain control over the narrative when competing voices could be published and distributed.\""
    }
   ]
  },
@@ -226,73 +227,71 @@
     "type": "tfng",
     "prompt": "Urban heat islands were first systematically studied by scientists during the early 19th century.",
     "answer": "FALSE",
-    "why": "Paragraph A states that heat islands 'were first observed in London during the 1820s, though systematic measurement and study...did not begin in earnest until the latter half of the 20th century.' This directly contradicts the claim that systematic study occurred in the early 1800s."
+    "why": "Paragraph A states: \"systematic study of urban heat islands did not begin in earnest until the latter half of the 20th century,\" directly contradicting the claim that it was studied in the early 1800s."
    },
    {
     "id": "r02-q02",
     "type": "tfng",
-    "prompt": "Vegetation in rural areas loses heat more slowly than urban built surfaces.",
-    "answer": "FALSE",
-    "why": "Paragraph B explains that vegetation 'lose[s] heat through evapotranspiration' and reflects 'a higher proportion of incoming solar radiation' compared to built surfaces which 'release the accumulated heat slowly.' This indicates vegetation loses heat faster, not slower."
+    "prompt": "Some rural vegetation species are more effective at evaporative cooling than others.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph B mentions that vegetation \"loses heat through evapotranspiration\" but does not compare effectiveness across different vegetation species. The relative efficiency of different plants is not addressed."
    },
    {
     "id": "r02-q03",
     "type": "tfng",
-    "prompt": "Cool roofs are more challenging to implement in cold climates because they increase heating demand.",
+    "prompt": "In cold climates, cool roofs may raise the demand for heating.",
     "answer": "TRUE",
-    "why": "Paragraph E explicitly states 'cool roofs present challenges in cold climates where reduced solar absorption may increase heating demand during winter months,' directly supporting this statement."
+    "why": "The passage says cool roofs 'present challenges in cold climates where reduced solar absorption may increase heating demand during winter months.'"
    },
    {
     "id": "r02-q04",
     "type": "tfng",
-    "prompt": "Studies indicate that water bodies can reduce temperatures in surrounding areas by more than 3 degrees Celsius.",
-    "answer": "NOT GIVEN",
-    "why": "Paragraph F states 'studies indicating temperature reductions of 2 to 3 degrees Celsius within 500 meters of substantial water features,' showing up to 3 degrees but not exceeding 3 degrees. The passage does not provide evidence for reductions greater than 3 degrees."
+    "prompt": "The passage provides evidence that water bodies within 500 meters can reduce surrounding temperatures by more than 3 degrees Celsius.",
+    "answer": "FALSE",
+    "why": "The passage says 'Studies indicate temperature reductions of 2 to 3 degrees Celsius within 500 meters of substantial water features,' so the claim of more than 3 degrees is contradicted."
    },
    {
     "id": "r02-q05",
     "type": "tfng",
     "prompt": "Anthropogenic heat contributes a significant portion of urban temperature elevation in some cities.",
     "answer": "TRUE",
-    "why": "Paragraph B states 'Research in cities like Tokyo and Singapore indicates that anthropogenic heat contributes 10 to 20 percent of the total urban temperature elevation,' confirming that human-generated heat is a significant contributor."
+    "why": "The passage says 'Research in Tokyo and Singapore indicates anthropogenic heat contributes 10 to 20 percent of the total urban temperature elevation.'"
    },
    {
     "id": "r02-q06",
     "type": "complete",
-    "prompt": "Los Angeles has set a target to increase urban tree canopy coverage from _______ percent to 35 percent by 2050.",
+    "prompt": "Los Angeles aims to lift its tree canopy from _______ percent to 35 percent by 2050.",
     "answer": [
      "20"
     ],
-    "why": "Paragraph D states 'Los Angeles setting a target of establishing 6 million new trees by 2050 to increase canopy coverage from the current 20 percent to 35 percent.'"
+    "why": "Paragraph D states: \"Los Angeles targeting 6 million new trees by 2050 to increase canopy coverage from the current 20 percent to 35 percent,\" providing the current baseline."
    },
    {
     "id": "r02-q07",
     "type": "complete",
-    "prompt": "Cool roofs can reflect between _______ and _______ percent of incident solar radiation.",
+    "prompt": "Cool roof surfaces bounce back between 60 and _______ percent of incoming sunlight.",
     "answer": [
-     "60",
      "90"
     ],
-    "why": "Paragraph E explicitly states 'Cool roofs utilize high-albedo materials that reflect 60 to 90 percent of incident solar radiation.'"
+    "why": "Paragraph E explicitly states: \"Cool roofs utilize high-albedo materials that reflect 60 to 90 percent of incident solar radiation.\""
    },
    {
     "id": "r02-q08",
     "type": "complete",
-    "prompt": "Urban areas typically contain _______ percent less vegetation than comparable rural areas.",
+    "prompt": "Cities usually have _______ percent less greenery than rural areas of comparable size.",
     "answer": [
-     "30 to 50",
-     "30-50"
+     "30 to 50"
     ],
     "why": "Paragraph B directly states 'Urban areas typically contain 30 to 50 percent less vegetation than comparable rural areas.'"
    },
    {
     "id": "r02-q09",
     "type": "complete",
-    "prompt": "Cool roof requirements have been mandatory for non-residential buildings in California since _______.",
+    "prompt": "California has required cool roofs on non-residential buildings from _______ onward.",
     "answer": [
      "1992"
     ],
-    "why": "Paragraph E states 'cool roof requirements have been mandatory for non-residential buildings since 1992' in California."
+    "why": "Paragraph E states: \"California has mandated cool roof requirements for non-residential buildings since 1992,\" providing the date."
    },
    {
     "id": "r02-q10",
@@ -330,7 +329,7 @@
      "x. Cool roof technology and its applications"
     ],
     "answer": "viii",
-    "why": "Paragraph D discusses various mitigation strategies including tree-planting, green roofs, cool pavements, and urban planning approaches. Option iii accurately summarizes these temperature reduction strategies."
+    "why": "Paragraph D discusses mitigation strategies including tree-planting initiatives, green roofs, cool pavements, and urban planning approaches to reduce heat. Option viii directly captures these temperature reduction strategies."
    },
    {
     "id": "r02-q12",
@@ -349,33 +348,33 @@
      "x. Cool roof technology and its applications"
     ],
     "answer": "x",
-    "why": "Paragraph E focuses specifically on cool roofs, their materials, effectiveness (30-40°C surface temperature reduction), implementation history in California, and challenges in cold climates. Option iii directly describes this content."
+    "why": "Paragraph E focuses specifically on cool roofs, their material composition (high-albedo), temperature reduction effectiveness, implementation history in California, and challenges in cold climates. Option x accurately describes this specific technology."
    },
    {
     "id": "r02-q13",
     "type": "mcq",
     "prompt": "What does the passage suggest about the relationship between urban cooling and global climate change?",
     "options": [
-     "A. Urban heat islands have no relationship to global climate change.",
-     "B. Urban heat islands are unaffected by rising baseline global temperatures.",
-     "C. Rising global temperatures amplify the impacts of urban heat islands.",
-     "D. Global climate change will reverse urban heat island effects in cities."
+     "A. Urban heat islands are primarily caused by global climate change rather than city characteristics.",
+     "B. The urban heat island effect will disappear if global temperatures stabilize.",
+     "C. Rising global temperatures amplify the negative impacts of urban heat islands in cities.",
+     "D. Urban development has no connection to global climate patterns."
     ],
     "answer": "C",
-    "why": "Paragraph H states 'The interaction between climate change and urban heat islands creates a compounding effect, where rising baseline global temperatures amplify urban heat island impacts,' directly supporting option C."
+    "why": "Paragraph H states: \"The interaction between climate change and urban heat islands creates a compounding effect, where rising baseline global temperatures amplify urban heat island impacts.\""
    },
    {
     "id": "r02-q14",
     "type": "mcq",
     "prompt": "According to the passage, what advantage do urban heat mitigation efforts have compared to global climate change solutions?",
     "options": [
-     "A. They require less financial investment than any other environmental solution.",
-     "B. They can be implemented through local action and produce measurable results within years.",
-     "C. They completely eliminate the need for emissions reductions.",
-     "D. They have no environmental side effects or unintended consequences."
+     "A. Local urban cooling strategies can produce measurable temperature improvements within years rather than decades.",
+     "B. Urban heat mitigation requires much greater financial investment than addressing global climate change.",
+     "C. Urban heat mitigation is ineffective without simultaneous global emissions reductions.",
+     "D. Only international agreements can successfully reduce urban temperatures."
     ],
-    "answer": "B",
-    "why": "Paragraph H explicitly contrasts urban mitigation with global climate approaches, stating 'urban heat island mitigation can be implemented through local action and can produce measurable results within years rather than decades,' exactly matching option B."
+    "answer": "A",
+    "why": "Paragraph H contrasts the two approaches: \"urban heat island mitigation can be implemented through local action and can produce measurable results within years rather than decades,\" highlighting this specific advantage."
    }
   ]
  },
@@ -421,42 +420,42 @@
    {
     "id": "r03-q01",
     "type": "tfng",
-    "prompt": "John Flavell was the first person to introduce the concept of metacognition.",
+    "prompt": "The concept of metacognition was first discussed by John Flavell.",
     "answer": "FALSE",
-    "why": "Paragraph A states that Flavell 'formally introduced' the term in 1976, 'though related concepts had been discussed by earlier philosophers and psychologists.' This indicates others discussed related ideas before Flavell, making him not the first to introduce the concept."
+    "why": "Paragraph A states Flavell \"formally introduced\" the term in 1976, \"though related concepts had been discussed by earlier philosophers and psychologists,\" so others discussed these ideas before Flavell."
    },
    {
     "id": "r03-q02",
     "type": "tfng",
-    "prompt": "The Dunning-Kruger effect describes how people with limited knowledge tend to overestimate their understanding.",
+    "prompt": "People with little expertise in a field often rate their own understanding higher than it really is.",
     "answer": "TRUE",
-    "why": "Paragraph B explicitly states 'Dunning-Kruger effect research has demonstrated that some individuals, particularly those with limited knowledge in a domain, tend to overestimate their understanding,' exactly describing this phenomenon."
+    "why": "Paragraph B states that 'some individuals, particularly those with limited knowledge in a domain, tend to overestimate their understanding.'"
    },
    {
     "id": "r03-q03",
     "type": "tfng",
     "prompt": "Metacognitive skills are equally transferable across all academic and professional domains.",
-    "answer": "NOT GIVEN",
-    "why": "While Paragraph A mentions that 'metacognitive skills have been shown to transfer across different domains,' Paragraph G clarifies that 'expertise does not automatically confer metacognitive accuracy across different domains' and emphasizes 'domain-specificity.' The passage does not claim equal transferability across all domains."
+    "answer": "FALSE",
+    "why": "Paragraph A states skills \"have been shown to transfer across different domains,\" but Paragraph G clarifies: \"expertise does not automatically confer metacognitive accuracy across different domains\" and emphasizes domain-specificity, directly contradicting the claim of equal transferability."
    },
    {
     "id": "r03-q04",
     "type": "tfng",
-    "prompt": "Young children under age seven typically demonstrate accurate metacognitive awareness.",
+    "prompt": "The development of metacognitive awareness in children is primarily influenced by innate cognitive ability rather than educational factors.",
     "answer": "FALSE",
-    "why": "Paragraph F states 'Young children, typically under age seven, show limited metacognitive awareness and frequently overestimate their ability to remember information or solve problems,' directly contradicting claims of accurate awareness."
+    "why": "Paragraph F: \"Metacognitive development depends partly on cognitive development, but social and educational factors play equally important roles.\" Equal importance contradicts the claim that innate ability is the primary influence, so FALSE, not NOT GIVEN."
    },
    {
     "id": "r03-q05",
     "type": "tfng",
-    "prompt": "Students using automated learning management systems may develop less internal metacognitive awareness.",
-    "answer": "TRUE",
-    "why": "Paragraph E states 'Students using learning management systems that automatically track progress may develop external locus of control, depending on system feedback rather than developing internal metacognitive awareness,' supporting this claim."
+    "prompt": "Students who use learning management systems score lower on final exams than students who do not.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph E says such systems 'may develop external locus of control' but never compares exam scores, so the claim is NOT GIVEN."
    },
    {
     "id": "r03-q06",
     "type": "complete",
-    "prompt": "The term 'metacognition' was formally introduced by John Flavell in the year _______.",
+    "prompt": "John Flavell is credited with coining the word 'metacognition' in _______.",
     "answer": [
      "1976"
     ],
@@ -465,7 +464,7 @@
    {
     "id": "r03-q07",
     "type": "complete",
-    "prompt": "Metacognitive knowledge comprises three primary categories: person knowledge, task knowledge, and _______ knowledge.",
+    "prompt": "Researchers divide metacognitive knowledge into three kinds: person, task and _______ knowledge.",
     "answer": [
      "strategy"
     ],
@@ -474,17 +473,16 @@
    {
     "id": "r03-q08",
     "type": "complete",
-    "prompt": "Students receiving explicit metacognitive instruction showed improvements ranging from _______ to _______ percent in standardized test performance.",
+    "prompt": "Learners who received direct metacognitive teaching gained between 10 and _______ percent on standardized tests.",
     "answer": [
-     "10",
      "40"
     ],
-    "why": "Paragraph D states 'students receiving explicit metacognitive instruction showed improvements ranging from 10 to 40 percent in standardized test performance.'"
+    "why": "Paragraph D states: \"students receiving explicit metacognitive instruction showed improvements ranging from 10 to 40 percent in standardized test performance.\""
    },
    {
     "id": "r03-q09",
     "type": "complete",
-    "prompt": "The time required to achieve expert-level metacognitive awareness has been estimated at _______ hours of deliberate practice.",
+    "prompt": "Estimates suggest that reaching expert-level metacognitive awareness takes _______ hours of deliberate practice.",
     "answer": [
      "10,000"
     ],
@@ -530,46 +528,46 @@
      "xii. Educational interventions for disadvantaged students"
     ],
     "answer": "ix",
-    "why": "Paragraph F discusses cultural differences in metacognitive practices, developmental differences across age groups, and variations across populations. Option iii directly captures these variations across diverse populations."
+    "why": "Paragraph F discusses cultural and developmental variations in metacognitive awareness, cross-cultural differences in practices and preferences, age-based developmental differences, and variation across socioeconomic populations. Option ix accurately describes these variations across diverse populations."
    },
    {
     "id": "r03-q12",
     "type": "mcq",
     "prompt": "What does the passage suggest about expertise and metacognitive monitoring?",
     "options": [
-     "A. Experts demonstrate superior metacognitive monitoring in their area of expertise.",
-     "B. Novices and experts show equivalent metacognitive awareness.",
-     "C. Expertise automatically improves metacognitive abilities across all domains.",
-     "D. Metacognitive monitoring is unrelated to expert performance."
+     "A. Experts automatically possess superior metacognitive monitoring across all domains regardless of specialization.",
+     "B. An expert in medicine demonstrates superior metacognitive awareness in chess.",
+     "C. Experts tend to monitor their own thinking more accurately, but mainly within their own field.",
+     "D. Expertise has no correlation with metacognitive abilities."
     ],
-    "answer": "A",
-    "why": "Paragraph G states 'Expert performers across diverse domains...demonstrate superior metacognitive monitoring compared to novices,' directly supporting option A. The paragraph also clarifies that expertise is domain-specific."
+    "answer": "C",
+    "why": "The passage says 'expertise does not automatically confer metacognitive accuracy across different domains.'"
    },
    {
     "id": "r03-q13",
     "type": "mcq",
     "prompt": "What is implied about the effectiveness of think-aloud protocols in education?",
     "options": [
-     "A. They are ineffective and should be replaced with other methods.",
-     "B. They externalize internal thinking processes, allowing examination and refinement.",
-     "C. They work only for mathematics and reading comprehension.",
-     "D. They reduce student engagement and motivation."
+     "A. They reduce student engagement and should be abandoned by educators.",
+     "B. They are effective only for advanced learners and high-achieving students.",
+     "C. They make internal reasoning visible, which helps learners improve.",
+     "D. They work only for mathematics and are ineffective for reading skills."
     ],
-    "answer": "B",
-    "why": "Paragraph D describes think-aloud protocols as effective and explains that they work by 'externalizing internal cognitive processes where they can be examined and refined,' exactly matching option B."
+    "answer": "C",
+    "why": "Paragraph D describes think-aloud protocols as an effective strategy where \"learners verbalize their thoughts while solving problems or reading text, thereby externalizing internal cognitive processes.\""
    },
    {
     "id": "r03-q14",
     "type": "mcq",
     "prompt": "Based on the passage, which statement best describes the relationship between metacognition and learning outcomes?",
     "options": [
-     "A. Strong metacognitive skills are correlated with improved academic performance and self-regulation.",
-     "B. Metacognition has minimal impact on student learning outcomes.",
-     "C. Only advanced students can benefit from metacognitive instruction.",
-     "D. Metacognitive skills are inherited rather than developed through education."
+     "A. Metacognitive abilities are innate and fixed rather than developed.",
+     "B. Only the most gifted students can develop metacognitive skills through education.",
+     "C. Students with stronger metacognitive abilities tend to do better academically and regulate their learning more effectively.",
+     "D. Metacognitive development has minimal or no impact on learning outcomes."
     ],
-    "answer": "A",
-    "why": "Paragraph A states 'students who develop strong metacognitive skills achieve higher academic performance, exhibit greater self-regulation, and demonstrate more effective problem-solving abilities,' directly supporting option A."
+    "answer": "C",
+    "why": "Paragraph A states: \"students who develop strong metacognitive skills achieve higher academic performance, exhibit greater self-regulation, and demonstrate more effective problem-solving abilities.\""
    }
   ]
  },
@@ -622,35 +620,35 @@
    {
     "id": "r04-q02",
     "type": "tfng",
-    "prompt": "Egyptian hieroglyphic writing persisted for over 3,000 years with remarkable consistency.",
+    "prompt": "The Egyptian hieroglyphic system retained its fundamental structure throughout more than three millennia of use.",
     "answer": "TRUE",
-    "why": "Paragraph C states that Egyptian hieroglyphics 'maintained a predominantly logographic structure throughout their long history, persisting with remarkable consistency for over 3,000 years until the rise of alphabetic writing systems.'"
+    "why": "The passage says Egyptian hieroglyphics 'maintained a predominantly logographic structure throughout their history, persisting with remarkable consistency for over 3,000 years until alphabetic writing systems emerged.'"
    },
    {
     "id": "r04-q03",
     "type": "tfng",
-    "prompt": "The Indus Valley script has been completely deciphered by modern scholars.",
-    "answer": "FALSE",
-    "why": "Paragraph D explicitly states that the Indus script 'remains only partially deciphered despite extensive scholarly efforts' and 'The inability to decipher the Indus script prevents definitive conclusions,' indicating it has not been completely deciphered."
+    "prompt": "The Indus Valley Civilization had established formal trade relationships with cultures in Mesopotamia.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph D discusses the Indus script and seals but does not provide information about trade relationships or connections to other civilizations. International trade relationships for the Indus Valley are not addressed in the passage."
    },
    {
     "id": "r04-q04",
     "type": "tfng",
-    "prompt": "Alphabetic writing systems reduced the cognitive burden required for literacy compared to logographic systems.",
+    "prompt": "The Phoenician alphabet reduced the complexity of literacy compared to earlier logographic systems.",
     "answer": "TRUE",
-    "why": "Paragraph E states that the Phoenician alphabet 'substantially reduced the cognitive burden required for literacy compared to logographic systems demanding knowledge of hundreds of signs,' directly supporting this claim."
+    "why": "Paragraph E states: \"The Phoenician alphabet, consisting of approximately 22 signs representing consonant sounds, substantially reduced the cognitive burden required for literacy compared to logographic systems\" requiring hundreds of characters."
    },
    {
     "id": "r04-q05",
     "type": "tfng",
     "prompt": "Chinese characters were eventually completely replaced by alphabetic writing systems.",
     "answer": "FALSE",
-    "why": "Paragraph F states that 'Unlike most other logographic systems that were eventually displaced by alphabetic writing, Chinese characters persisted and expanded,' showing that Chinese characters were not replaced."
+    "why": "The passage says: 'Unlike most other logographic systems that were displaced by alphabetic writing, Chinese characters persisted and expanded to accommodate phonetic information.'"
    },
    {
     "id": "r04-q06",
     "type": "complete",
-    "prompt": "Cuneiform developed from earlier pictographic symbols around _______ BCE in southern Mesopotamia.",
+    "prompt": "Wedge-shaped script took shape in southern Mesopotamia around _______ BCE, evolving from older picture signs.",
     "answer": [
      "3200"
     ],
@@ -659,7 +657,7 @@
    {
     "id": "r04-q07",
     "type": "complete",
-    "prompt": "The Egyptian hieroglyphic system required knowledge of approximately _______ commonly used signs.",
+    "prompt": "Mastering Egyptian hieroglyphs meant learning roughly _______ commonly used signs.",
     "answer": [
      "700"
     ],
@@ -668,7 +666,7 @@
    {
     "id": "r04-q08",
     "type": "complete",
-    "prompt": "The Phoenician alphabet, consisting of approximately _______ signs, substantially reduced the cognitive burden required for literacy.",
+    "prompt": "Around _______ consonant-based characters made up the Phoenician script, which cut the mental effort needed for reading and writing.",
     "answer": [
      "22"
     ],
@@ -723,46 +721,46 @@
      "xii. Logographic systems in East Asia"
     ],
     "answer": "ix",
-    "why": "Paragraph F traces the evolution of Chinese characters from pictographic origins through various historical transformations while emphasizing their continuity and persistence. Option iii directly describes this theme of evolution while maintaining cultural continuity."
+    "why": "Paragraph F traces the evolution of Chinese characters from highly pictographic origins through stylization while maintaining their symbolic integrity, and describes how Chinese characters persisted and expanded unlike other logographic systems. Option ix accurately describes this evolution and persistence."
    },
    {
     "id": "r04-q12",
     "type": "mcq",
     "prompt": "What does the passage suggest about the relationship between writing system complexity and literacy distribution?",
     "options": [
-     "A. Simpler writing systems were more difficult to learn than complex logographic systems.",
-     "B. Complex logographic systems restricted literacy to specialized elite groups.",
-     "C. Writing system complexity had no relationship to literacy rates.",
-     "D. Alphabetic systems deliberately excluded non-elites from literacy."
+     "A. Complex systems created literacy barriers that restricted access to specialized social classes.",
+     "B. Simple alphabetic systems were more difficult to learn than complex logographic ones.",
+     "C. Literacy barriers had no influence on who could access writing in ancient societies.",
+     "D. Alphabetic systems were deliberately designed to exclude common people."
     ],
-    "answer": "B",
-    "why": "Paragraph C states that 'The complexity of hieroglyphic writing created a barrier to literacy' and 'This limitation meant that literacy remained confined to a specialized scribal class.' Paragraph E further shows that alphabetic systems 'reduced the cognitive burden' and correlated with 'increased literacy rates across populations,' supporting option B."
+    "answer": "A",
+    "why": "Paragraph C states: \"The complexity of hieroglyphic writing created a barrier to literacy\" and \"Literacy remained confined to a specialized scribal class.\" Paragraph E shows alphabetic systems \"reduced the cognitive burden\" and correlated with \"increased literacy rates.\""
    },
    {
     "id": "r04-q13",
     "type": "mcq",
     "prompt": "Which of the following best describes why the Indus Valley script remains difficult to decipher?",
     "options": [
-     "A. Because it contains no logographic or pictographic elements.",
-     "B. Because no bilingual texts exist and the language remains unknown.",
-     "C. Because it was deliberately encrypted by its creators.",
-     "D. Because modern scholars have not attempted to decipher it."
+     "A. Modern scholars deliberately chose not to study the Indus script.",
+     "B. Bilingual texts and connections to known languages exist to aid decipherment.",
+     "C. The script was intentionally encrypted to prevent future understanding.",
+     "D. No bilingual texts or linguistic relationships exist to aid decipherment."
     ],
-    "answer": "B",
-    "why": "Paragraph D states 'yet the language represented by these symbols remains unknown' and Paragraph G notes that 'decipherment typically requires either bilingual texts providing translation or linguistic relationships to known languages.' These explain why the Indus script remains undeciphered."
+    "answer": "D",
+    "why": "Paragraph D states the language \"remains unknown,\" and Paragraph G explains: \"decipherment typically requires either bilingual texts or linguistic relationships to known languages,\" which the Indus script lacks."
    },
    {
     "id": "r04-q14",
     "type": "mcq",
     "prompt": "What was the significance of Michael Ventris's decipherment of Linear B script in 1952?",
     "options": [
-     "A. It proved that all ancient writing systems were logographic.",
-     "B. It revealed the script represented early Greek and confirmed historical accounts of Mycenaean Greece.",
-     "C. It demonstrated that alphabetic systems were inferior to logographic ones.",
-     "D. It proved that writing never existed before the Greek alphabet was developed."
+     "A. That all ancient scripts were fundamentally identical in structure.",
+     "B. That Linear B represented early Greek and confirmed historical accounts of Mycenaean civilization.",
+     "C. That alphabetic systems were ultimately inferior to logographic writing systems.",
+     "D. That writing was never used in ancient Greece before the Classical period."
     ],
     "answer": "B",
-    "why": "Paragraph G states 'The decipherment of Linear B by Michael Ventris in 1952 revealed the script represented an early form of Greek, providing crucial archaeological confirmation of historical accounts regarding Mycenaean Greece,' exactly matching option B."
+    "why": "The passage says: 'The decipherment of Linear B by Michael Ventris in 1952 revealed the script represented an early form of Greek, providing archaeological confirmation of historical accounts regarding Mycenaean Greece.'"
    }
   ]
  },
@@ -807,38 +805,38 @@
   "questions": [
    {
     "id": "r05-q01",
-    "type": "ynng",
-    "prompt": "Do you agree with the statement that the Dutch Golden Age occurred during the 17th century?",
-    "answer": "YES",
-    "why": "Paragraph A states 'The Dutch Golden Age, spanning approximately the 17th century,' directly confirming that the Golden Age occurred during the 17th century as claimed."
+    "type": "tfng",
+    "prompt": "The Dutch Golden Age occurred during the 17th century.",
+    "answer": "TRUE",
+    "why": "Paragraph A explicitly states: \"The Dutch Golden Age, spanning approximately the 17th century,\" confirming this time period."
    },
    {
     "id": "r05-q02",
-    "type": "ynng",
-    "prompt": "Did the fluyt ship design reduce shipping costs compared to Spanish galleons?",
-    "answer": "YES",
-    "why": "Paragraph B states 'This innovation reduced shipping costs by up to 50 percent compared to Spanish galleons,' explicitly confirming that the fluyt design did reduce costs."
+    "type": "tfng",
+    "prompt": "The fluyt ship design was a major innovation that reduced shipping costs relative to competing vessels.",
+    "answer": "TRUE",
+    "why": "Paragraph B states: \"This innovation reduced shipping costs by up to 50 percent compared to Spanish galleons,\" explicitly confirming the cost reduction."
    },
    {
     "id": "r05-q03",
-    "type": "ynng",
-    "prompt": "Would it be accurate to say that the Dutch West India Company was more profitable than the Dutch East India Company?",
-    "answer": "NO",
-    "why": "Paragraph D states 'Unlike the VOC, which achieved sustained profitability and institutional stability, the WIC experienced consistent losses and administrative challenges,' directly contradicting the claim that the WIC was more profitable."
+    "type": "tfng",
+    "prompt": "The Dutch West India Company achieved greater long-term profitability than the Dutch East India Company.",
+    "answer": "FALSE",
+    "why": "Paragraph D states: \"Unlike the VOC, which achieved sustained profitability, the WIC experienced consistent losses and administrative challenges,\" directly contradicting the claim."
    },
    {
     "id": "r05-q04",
-    "type": "ynng",
-    "prompt": "Is there evidence in the passage that marine insurance costs exceeded 10 percent of cargo value?",
-    "answer": "NOT GIVEN",
-    "why": "Paragraph F states 'The costs of marine insurance typically ranged from 3 to 8 percent of cargo value,' providing a specific range. The passage does not indicate whether costs ever exceeded 10 percent in exceptional circumstances."
+    "type": "tfng",
+    "prompt": "Marine insurance costs exceeded 10 percent of cargo value for most trading voyages.",
+    "answer": "FALSE",
+    "why": "The passage says insurance costs 'typically ranged from 3 to 8 percent of cargo value,' so most voyages were far below 10 percent."
    },
    {
     "id": "r05-q05",
-    "type": "ynng",
-    "prompt": "Were spices considered valuable primarily for medical purposes during the Dutch Golden Age?",
+    "type": "tfng",
+    "prompt": "Spices were valued primarily for their use in food preservation during the Dutch Golden Age.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph G describes the spice trade's profitability and enormous profit margins, but does not specify the primary purpose of value attribution (medicine, food preservation, luxury consumption, or other uses). The passage does not address what was considered the primary purpose of spice value."
+    "why": "Paragraph G describes the profitability and trade volume of spices but does not specify their primary use or value purposes. The passage focuses only on economic aspects of the spice trade."
    },
    {
     "id": "r05-q06",
@@ -852,7 +850,7 @@
    {
     "id": "r05-q07",
     "type": "complete",
-    "prompt": "Amsterdam's population increased from approximately 30,000 in 1585 to _______ by 1650.",
+    "prompt": "By 1650, Amsterdam had grown from roughly 30,000 residents in 1585 to a population of _______.",
     "answer": [
      "175,000"
     ],
@@ -861,7 +859,7 @@
    {
     "id": "r05-q08",
     "type": "complete",
-    "prompt": "The Amsterdam Stock Exchange, the world's first, was established in _______.",
+    "prompt": "Amsterdam hosted what is considered the world's first stock exchange, set up in _______.",
     "answer": [
      "1611"
     ],
@@ -870,119 +868,100 @@
    {
     "id": "r05-q09",
     "type": "complete",
-    "prompt": "Individual spice trading voyages could generate profit margins exceeding _______ to _______ percent.",
+    "prompt": "A single spice voyage could return a profit margin above 300 percent and up to _______ percent.",
     "answer": [
-     "300",
      "400"
     ],
-    "why": "Paragraph G states 'Individual spice trading voyages could generate profit margins exceeding 300 to 400 percent.'"
+    "why": "Paragraph G states: \"Individual spice trading voyages could generate profit margins exceeding 300 to 400 percent,\" providing the upper threshold."
    },
    {
     "id": "r05-q10",
     "type": "heading",
     "prompt": "Choose the most appropriate heading for Paragraph B.",
     "options": [
-     "i. Religious migration and Dutch nationalism",
-     "ii. Maritime technology and competitive advantage",
+     "i. Religious conflict and Dutch migration",
+     "ii. Maritime innovation and competitive advantage",
      "iii. Foundations of Dutch commercial expansion",
-     "iv. Spanish and Portuguese naval dominance",
-     "v. Geographic advantages in European trade",
-     "vi. Economic development of the Dutch provinces",
-     "vii. Headquarters of European commerce",
+     "iv. Foreign naval competition and empire-building",
+     "v. Geographic advantages in trade routes",
+     "vi. Economic development of northern provinces",
+     "vii. Amsterdam as commercial headquarters",
      "viii. Population growth and urbanization",
-     "ix. Amsterdam as commercial and financial center",
-     "x. Development of financial markets",
-     "xi. Trade commodities and merchant specialization",
-     "xii. European urban development patterns",
-     "xiii. Medicinal uses of Southeast Asian plants",
-     "xiv. Portuguese and Spanish competition in Asia",
-     "xv. The spice trade and colonial exploitation",
-     "null. Environmental consequences of cultivation",
-     "null. Maluku Islands and indigenous peoples",
-     "null. Luxury goods and profit margins"
+     "ix. Capital formation and stock markets",
+     "x. Development of joint-stock companies",
+     "xi. Trade goods and merchant specialization",
+     "xii. Colonial settlement and territorial expansion"
     ],
     "answer": "iii",
-    "why": "Paragraph B discusses the foundations of Dutch commercial expansion including migration, geography, navigational technology, and the fluyt ship design. Option iii directly captures these foundational elements."
+    "why": "Paragraph B discusses the foundations of Dutch commercial expansion including religious migration drivers, geographic advantages, navigational technology innovations, and the fluyt ship design. Option iii directly captures these foundational elements."
    },
    {
     "id": "r05-q11",
     "type": "heading",
     "prompt": "Choose the most appropriate heading for Paragraph E.",
     "options": [
-     "i. Religious migration and Dutch nationalism",
-     "ii. Maritime technology and competitive advantage",
+     "i. Religious conflict and Dutch migration",
+     "ii. Maritime innovation and competitive advantage",
      "iii. Foundations of Dutch commercial expansion",
-     "iv. Spanish and Portuguese naval dominance",
-     "v. Geographic advantages in European trade",
-     "vi. Economic development of the Dutch provinces",
-     "vii. Headquarters of European commerce",
+     "iv. Foreign naval competition and empire-building",
+     "v. Geographic advantages in trade routes",
+     "vi. Economic development of northern provinces",
+     "vii. Amsterdam as commercial headquarters",
      "viii. Population growth and urbanization",
-     "ix. Amsterdam as commercial and financial center",
-     "x. Development of financial markets",
-     "xi. Trade commodities and merchant specialization",
-     "xii. European urban development patterns",
-     "xiii. Medicinal uses of Southeast Asian plants",
-     "xiv. Portuguese and Spanish competition in Asia",
-     "xv. The spice trade and colonial exploitation",
-     "null. Environmental consequences of cultivation",
-     "null. Maluku Islands and indigenous peoples",
-     "null. Luxury goods and profit margins"
+     "ix. Capital formation and stock markets",
+     "x. Development of joint-stock companies",
+     "xi. Trade goods and merchant specialization",
+     "xii. Colonial settlement and territorial expansion"
     ],
-    "answer": "ix",
-    "why": "Paragraph E presents Amsterdam as the commercial and financial center of the Dutch Golden Age, discussing the stock exchange, financial innovations, and commercial concentration. Option iii captures this central theme."
+    "answer": "vii",
+    "why": "Paragraph E presents Amsterdam as the commercial and financial center of the Dutch Golden Age, discussing the first stock exchange, financial innovations, merchant concentration, and population growth. Option vii directly captures this central economic role."
    },
    {
     "id": "r05-q12",
     "type": "heading",
     "prompt": "Choose the most appropriate heading for Paragraph G.",
     "options": [
-     "i. Religious migration and Dutch nationalism",
-     "ii. Maritime technology and competitive advantage",
+     "i. Religious conflict and Dutch migration",
+     "ii. Maritime innovation and competitive advantage",
      "iii. Foundations of Dutch commercial expansion",
-     "iv. Spanish and Portuguese naval dominance",
-     "v. Geographic advantages in European trade",
-     "vi. Economic development of the Dutch provinces",
-     "vii. Headquarters of European commerce",
+     "iv. Foreign naval competition and empire-building",
+     "v. Geographic advantages in trade routes",
+     "vi. Economic development of northern provinces",
+     "vii. Amsterdam as commercial headquarters",
      "viii. Population growth and urbanization",
-     "ix. Amsterdam as commercial and financial center",
-     "x. Development of financial markets",
-     "xi. Trade commodities and merchant specialization",
-     "xii. European urban development patterns",
-     "xiii. Medicinal uses of Southeast Asian plants",
-     "xiv. Portuguese and Spanish competition in Asia",
-     "xv. The spice trade and colonial exploitation",
-     "null. Environmental consequences of cultivation",
-     "null. Maluku Islands and indigenous peoples",
-     "null. Luxury goods and profit margins"
+     "ix. Capital formation and stock markets",
+     "x. Development of joint-stock companies",
+     "xi. Trade goods and merchant specialization",
+     "xii. Colonial settlement and territorial expansion"
     ],
-    "answer": "xv",
-    "why": "Paragraph G focuses on the spice trade as a source of enormous profits through VOC monopoly, describes profit margins and wealth generation, and explicitly notes it involved 'systematic violence and environmental degradation.' Option iii captures this broad theme of trade and exploitation."
+    "answer": "xi",
+    "why": "Paragraph G focuses on the spice trade—procurement of cloves, nutmeg, pepper, and mace from the Maluku Islands—and describes the enormous profits and price differentials. Option xi accurately captures the focus on trade commodities and their specialization."
    },
    {
     "id": "r05-q13",
     "type": "mcq",
     "prompt": "What does the passage indicate about the relationship between organizational innovation and Dutch commercial success?",
     "options": [
-     "A. Organizational innovations were less important than technological advantages.",
-     "B. Organizational innovations such as the joint-stock structure were as important as technological developments.",
-     "C. Dutch merchants never adopted formal organizational structures.",
-     "D. The VOC's organization was deliberately designed to prevent long-distance trade coordination."
+     "A. Technological innovations were vastly more important than organizational developments.",
+     "B. The joint-stock structure and hierarchical management were as important as technological advantages.",
+     "C. Dutch merchants had no formal organizational structures.",
+     "D. The VOC's complex organization actually prevented effective trade coordination."
     ],
     "answer": "B",
-    "why": "Paragraph C states 'Institutional innovations constituted equally important contributors to Dutch commercial success as technological developments' and describes the VOC's revolutionary organizational form and its systematic management practices."
+    "why": "Paragraph C states: \"Institutional innovations constituted equally important contributors to Dutch commercial success as technological developments\" and describes the VOC's revolutionary organizational innovations."
    },
    {
     "id": "r05-q14",
     "type": "mcq",
-    "prompt": "Based on the passage, what was the primary reason for the decline of Dutch commercial dominance during the 18th century?",
+    "prompt": "According to the passage, why did the Dutch lose their leading trading position in the 1700s?",
     "options": [
-     "A. The Dutch deliberately withdrew from international commerce.",
-     "B. A combination of rising military expenditures, institutional rigidity, and competition from Britain and France.",
-     "C. The complete destruction of Dutch ships by Spanish and Portuguese navies.",
-     "D. The invention of superior technologies by competing European nations."
+     "A. The Dutch deliberately chose to exit international trade markets.",
+     "B. Competing nations completely destroyed the entire Dutch merchant fleet.",
+     "C. Technological superiority of rival nations made Dutch methods obsolete.",
+     "D. Heavier military spending, resistance to change within old merchant families, and rivalry with Britain and France."
     ],
-    "answer": "B",
-    "why": "Paragraph H states 'The decline of Dutch commercial dominance during the 18th century resulted from multiple interconnected factors including rising military expenditures, institutional rigidity of aging merchant families, and competitive challenges from Britain and France,' exactly matching option B."
+    "answer": "D",
+    "why": "Paragraph H states: \"The decline of Dutch commercial dominance during the 18th century resulted from multiple interconnected factors including rising military expenditures, institutional rigidity of aging merchant families, and competitive challenges from Britain and France.\""
    }
   ]
  },
@@ -1028,61 +1007,60 @@
    {
     "id": "r06-q01",
     "type": "tfng",
-    "prompt": "Echolocation in cetaceans emerged as an adaptation enabling navigation in ocean depths where visual information is limited.",
+    "prompt": "Echolocation in cetaceans developed primarily to enable location of prey in deep ocean environments with limited light.",
     "answer": "TRUE",
-    "why": "Paragraph A states 'Echolocation abilities emerged as a critical adaptation enabling marine mammals to locate prey in ocean depths where visual information is limited, as light penetration in seawater diminishes rapidly with depth,' supporting this claim."
+    "why": "Paragraph A states: \"Echolocation abilities emerged as a critical adaptation enabling marine mammals to locate prey in ocean depths where visual information is limited, as light penetration in seawater diminishes rapidly with depth.\""
    },
    {
     "id": "r06-q02",
     "type": "tfng",
-    "prompt": "Sound travels approximately four times faster through water than through air.",
+    "prompt": "In seawater, sound propagates more rapidly than it does in air.",
     "answer": "TRUE",
-    "why": "Paragraph B explicitly states 'Sound travels approximately four times faster through water than through air, reaching velocities near 1,500 meters per second in seawater, compared to approximately 340 meters per second in air.'"
+    "why": "Paragraph B states: \"Sound travels approximately four times faster through water than through air,\" confirming the faster speed in seawater."
    },
    {
     "id": "r06-q03",
     "type": "tfng",
-    "prompt": "Dolphins can distinguish between materials of different acoustic properties through echolocation.",
+    "prompt": "Dolphins can use echolocation to distinguish between different material types of objects.",
     "answer": "TRUE",
-    "why": "Paragraph C states 'Behavioral experiments have demonstrated that dolphins can discriminate between objects differing by only millimeters in size and distinguish between materials of different acoustic properties even when visual inspection would prove ambiguous.'"
+    "why": "Paragraph C states: \"Behavioral experiments have demonstrated that dolphins can discriminate between objects differing by only millimeters and distinguish between materials of different acoustic properties.\""
    },
    {
     "id": "r06-q04",
     "type": "tfng",
-    "prompt": "Sperm whales employ higher echolocation frequencies than dolphins to compensate for deeper diving depths.",
-    "answer": "FALSE",
-    "why": "Paragraph D states that sperm whales 'employ echolocation frequencies substantially lower than dolphins, typically ranging from 5 to 15 kilohertz' compared to dolphins' 40-130 kilohertz. Lower frequencies reduce attenuation in deep ocean, contradicting the claim of higher frequencies."
+    "prompt": "Sperm whales use lower echolocation frequencies than dolphins because prey species in deep ocean environments absorb high frequencies more readily.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph D states that sperm whales \"employ echolocation frequencies substantially lower than dolphins\" and explains it reduces \"attenuation in deep ocean environments,\" but does not address whether prey absorption of high frequencies is the reason. The specific mechanism for frequency adaptation is not fully explained."
    },
    {
     "id": "r06-q05",
     "type": "tfng",
-    "prompt": "Dolphins have been documented hunting prey weighing up to 1,000 kilograms through echolocation alone.",
+    "prompt": "Dolphins are known to catch prey as heavy as 1,000 kilograms using echolocation alone.",
     "answer": "NOT GIVEN",
     "why": "Paragraph E mentions that 'Sperm whales hunt squid at abyssal depths' and capture 'giant squid weighing up to 1,000 kilograms through echolocation guidance alone.' The passage does not state that dolphins hunt prey of this size; this behavior is specifically attributed to sperm whales."
    },
    {
     "id": "r06-q06",
     "type": "complete",
-    "prompt": "Dolphins produce echolocation clicks at frequencies ranging from _______ to _______ kilohertz.",
+    "prompt": "Bottlenose dolphin sonar clicks span a band running from 40 kilohertz up to _______ kilohertz.",
     "answer": [
-     "40",
      "130"
     ],
-    "why": "Paragraph B states 'Dolphins, particularly the common bottlenose dolphin (Tursiops truncatus), possess echolocation systems producing clicks at frequencies ranging from 40 to 130 kilohertz.'"
+    "why": "Paragraph B states: \"Dolphins, particularly the common bottlenose dolphin (Tursiops truncatus), possess echolocation systems producing clicks at frequencies ranging from 40 to 130 kilohertz.\""
    },
    {
     "id": "r06-q07",
     "type": "complete",
-    "prompt": "Some dolphins can produce click rates exceeding _______ clicks per second during intense echolocation sessions.",
+    "prompt": "Certain dolphins can fire off more than _______ clicks each second.",
     "answer": [
      "1,000"
     ],
-    "why": "Paragraph B states 'some dolphins producing click rates exceeding 1,000 clicks per second during intense echolocation sessions.'"
+    "why": "Paragraph B states: \"some dolphins producing click rates exceeding 1,000 clicks per second,\" providing this specific threshold."
    },
    {
     "id": "r06-q08",
     "type": "complete",
-    "prompt": "Sperm whales are capable of diving to depths exceeding _______ meters.",
+    "prompt": "Sperm whales can descend deeper than _______ meters.",
     "answer": [
      "3,000"
     ],
@@ -1091,12 +1069,11 @@
    {
     "id": "r06-q09",
     "type": "complete",
-    "prompt": "Sperm whale echolocation frequencies typically range from _______ to _______ kilohertz.",
+    "prompt": "Sperm whales usually emit echolocation at frequencies between 5 and _______ kilohertz.",
     "answer": [
-     "5",
      "15"
     ],
-    "why": "Paragraph D states 'typically ranging from 5 to 15 kilohertz,' for sperm whale echolocation frequencies."
+    "why": "Paragraph D states: \"typically ranging from 5 to 15 kilohertz,\" for sperm whale echolocation frequencies."
    },
    {
     "id": "r06-q10",
@@ -1138,20 +1115,20 @@
      "xii. Evolutionary relationships among whale species"
     ],
     "answer": "x",
-    "why": "Paragraph F discusses adaptive radiation in acoustic morphology paralleling ecological divergence, variations in frequency use, melon structure variation, and neuroanatomical differences across species. Option iv accurately describes this adaptive radiation theme."
+    "why": "Paragraph F discusses how echolocation systems show adaptive radiation with different species employing frequencies suited to their ecological niche—coastal species use higher frequencies for short-range precision, while open-ocean species use lower frequencies for longer range. Option x accurately describes this adaptive radiation theme."
    },
    {
     "id": "r06-q12",
     "type": "mcq",
     "prompt": "What does the passage suggest about the purpose of the melon structure in dolphin heads?",
     "options": [
-     "A. The melon stores fat reserves for sustaining deep dives.",
-     "B. The melon functions as a biological acoustic lens for focusing echolocation clicks.",
-     "C. The melon is used for storing echolocation-related neural tissue.",
-     "D. The melon has no specific acoustic function in living dolphins."
+     "A. It stores fat reserves essential for deep-dive survival.",
+     "B. It primarily processes neural signals received as echo returns.",
+     "C. It produces the echolocation clicks through specialized muscular contractions.",
+     "D. It works like a lens, concentrating the clicks into a narrow, directional beam."
     ],
-    "answer": "B",
-    "why": "Paragraph B explicitly states 'The melon, a specialized fatty structure in the dolphin's forehead, functions as a biological acoustic lens, focusing echolocation clicks into a directional beam that can be aimed by subtle adjustments in head position and facial muscles.'"
+    "answer": "D",
+    "why": "Paragraph B explicitly states: \"The melon, a specialized fatty structure in the dolphin's forehead, functions as a biological acoustic lens, focusing echolocation clicks into a directional beam.\""
    },
    {
     "id": "r06-q13",
@@ -1159,12 +1136,12 @@
     "prompt": "Which statement best describes the relationship between environmental factors and dolphin echolocation effectiveness?",
     "options": [
      "A. Environmental factors such as water temperature have negligible impact on echolocation.",
-     "B. Water temperature, salinity, and particulate matter substantially influence acoustic properties and echolocation range.",
+     "B. Water temperature and salinity substantially influence acoustic properties and echolocation effectiveness.",
      "C. Higher water temperatures improve echolocation range by increasing sound speed.",
      "D. Environmental factors affect only sperm whale echolocation, not dolphin echolocation."
     ],
     "answer": "B",
-    "why": "Paragraph G states 'Environmental factors including water temperature, salinity, and suspended particulate matter substantially influence the acoustic properties of seawater' and notes that 'Sound attenuation in seawater increases at higher frequencies, reducing the maximum detection range.'"
+    "why": "Paragraph G states: \"Environmental factors including water temperature and salinity substantially influence the acoustic properties of seawater\" and \"Sound attenuation in seawater increases at higher frequencies, reducing the maximum detection range.\""
    },
    {
     "id": "r06-q14",
@@ -1172,12 +1149,12 @@
     "prompt": "According to the passage, what practical applications may result from studying marine mammal echolocation?",
     "options": [
      "A. Improved sonar systems for military applications only.",
-     "B. Acoustic imaging devices, autonomous underwater vehicles, and potentially artificial sensory substitution systems.",
+     "B. Acoustic imaging devices and autonomous underwater vehicles inspired by marine mammal biosonar systems.",
      "C. Only entertainment devices for theme parks.",
      "D. No practical applications beyond understanding marine behavior."
     ],
     "answer": "B",
-    "why": "Paragraph H states 'Biosonar systems inspired by marine mammal echolocation have informed the design of technological systems including acoustic imaging devices and autonomous underwater vehicles' and mentions 'insights applicable to treating sensory deficits in human patients.'"
+    "why": "Paragraph H states: \"Biosonar systems inspired by marine mammal echolocation have informed the design of acoustic imaging devices and autonomous underwater vehicles,\" describing these specific technological applications."
    }
   ]
  },
@@ -1222,23 +1199,23 @@
    {
     "id": "r07-q02",
     "type": "tfng",
-    "prompt": "Pluto was classified as the ninth planet for over 70 years.",
-    "answer": "TRUE",
-    "why": "Paragraph B states: 'For 76 years, from 1930 until 2006, Pluto held the status of the ninth planet.' 76 years is over 70 years."
+    "prompt": "The passage suggests that Pluto will eventually be reclassified as a planet if new evidence emerges.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph B states Pluto meets the first two criteria but fails the third based on current orbital overlap. The passage does not discuss whether future reclassification is possible."
    },
    {
     "id": "r07-q03",
     "type": "tfng",
     "prompt": "The New Horizons spacecraft took nine years to reach Pluto.",
     "answer": "TRUE",
-    "why": "Paragraph C states: 'launched by NASA in January 2006...to reach Pluto in July 2015. This nine-year journey.'"
+    "why": "The passage says the spacecraft was 'launched by NASA in January 2006' and reached Pluto 'in July 2015', which is nine years."
    },
    {
     "id": "r07-q04",
     "type": "tfng",
-    "prompt": "The Kuiper Belt extends further from the Sun than the scattered disk.",
+    "prompt": "The classical Kuiper Belt extends further from the Sun than the scattered disk region.",
     "answer": "FALSE",
-    "why": "Paragraph E states: 'the classical Kuiper Belt, extending from about 42 to 50 AU, and the scattered disk, extending beyond 50 AU.' The scattered disk extends beyond, so it goes further."
+    "why": "Paragraph E states the classical Kuiper Belt extends from about 42 to 50 AU, and the scattered disk extends beyond 50 AU. The scattered disk reaches further."
    },
    {
     "id": "r07-q05",
@@ -1250,34 +1227,34 @@
    {
     "id": "r07-q06",
     "type": "complete",
-    "prompt": "The first trans-Neptunian object discovered was designated 1992 ___.",
+    "prompt": "The first trans-Neptunian object, discovered by Jewitt and Luu in 1992, had a specific ___ designation.",
     "answer": [
      "QB1"
     ],
-    "why": "Paragraph A clearly states: 'designated 1992 QB1.' This is the exact designation given in the passage."
+    "why": "The passage says the object was 'designated 1992 QB1.'"
    },
    {
     "id": "r07-q07",
     "type": "complete",
-    "prompt": "The heart-shaped region on Pluto is called Tombaugh ___.",
+    "prompt": "A heart-shaped region on Pluto, about 1,600 kilometers across, is informally called Tombaugh _______.",
     "answer": [
      "Regio"
     ],
-    "why": "Paragraph C states: 'called Tombaugh Regio in honor of Pluto's discoverer Clyde Tombaugh.' Regio is the term used."
+    "why": "The passage says the region is 'informally called Tombaugh Regio in honor of Pluto's discoverer Clyde Tombaugh.'"
    },
    {
     "id": "r07-q08",
     "type": "complete",
-    "prompt": "Future Kuiper Belt missions will use radioisotope thermoelectric ___.",
+    "prompt": "At extreme distances from the Sun, solar panels lose effectiveness, so future probes will rely on radioisotope thermoelectric ___.",
     "answer": [
      "generators"
     ],
-    "why": "Paragraph F states: 'necessitating the use of radioisotope thermoelectric generators for power.' This is exactly 1 word from the passage."
+    "why": "Paragraph F states: necessitating the use of radioisotope thermoelectric generators for power."
    },
    {
     "id": "r07-q09",
     "type": "complete",
-    "prompt": "The Kuiper Belt's total mass is estimated at 0.1 times the mass of ___.",
+    "prompt": "Estimates put the combined mass of the Kuiper Belt at roughly one-tenth that of the planet _______.",
     "answer": [
      "Earth"
     ],
@@ -1296,7 +1273,7 @@
      "vi. NASA's Space Exploration Programs"
     ],
     "answer": "ii",
-    "why": "Paragraph A discusses Kuiper's 1951 theory and the 1992 discovery confirmation. Option ii 'Early Theories and Confirmation of the Kuiper Belt' directly matches this content."
+    "why": "Paragraph A covers Kuiper's 1951 theory and the 1992 confirmation, so option ii fits."
    },
    {
     "id": "r07-q11",
@@ -1326,7 +1303,7 @@
      "vi. NASA's Space Exploration Programs"
     ],
     "answer": "v",
-    "why": "Paragraph E discusses spectroscopic analysis, composition (methane, ammonia, ice) and the division into classical Kuiper Belt and scattered disk regions. Option v 'Spectroscopic Composition and Orbital Distribution of Kuiper Belt Objects' matches this content exactly."
+    "why": "Paragraph E covers spectroscopic composition (methane, ammonia, ice) and the two Kuiper Belt regions, so option v fits."
    },
    {
     "id": "r07-q13",
@@ -1346,12 +1323,12 @@
     "type": "mcq",
     "prompt": "Which dwarf planet's discovery directly triggered Pluto's reclassification?",
     "options": [
-     "A. Haumea",
+     "A. Eris",
      "B. Gonggong",
-     "C. Eris",
+     "C. Haumea",
      "D. Makemake"
     ],
-    "answer": "C",
+    "answer": "A",
     "why": "Paragraph D states: 'Eris, discovered in January 2005, triggered Pluto's reclassification because of its similar size and characteristics.'"
    }
   ]
@@ -1392,7 +1369,7 @@
     "type": "tfng",
     "prompt": "Patrick Blanc's vertical garden technique uses soil-based growing medium.",
     "answer": "FALSE",
-    "why": "Paragraph A states: 'which utilizes a specialized support structure that allows water and nutrients to circulate through a vertical growing medium, supporting various plant species without requiring soil.'"
+    "why": "The passage says the technique 'utilizes a specialized support structure that allows water and nutrients to circulate through a vertical growing medium, supporting various plant species without requiring soil.'"
    },
    {
     "id": "r08-q02",
@@ -1411,9 +1388,9 @@
    {
     "id": "r08-q04",
     "type": "tfng",
-    "prompt": "Most vertical gardens require automated irrigation systems.",
-    "answer": "TRUE",
-    "why": "Paragraph C states: 'Most vertical gardens require automated irrigation systems with sensors that monitor moisture levels.'"
+    "prompt": "Vertical gardens in Mexico City have a longer lifespan than those in Singapore.",
+    "answer": "NOT GIVEN",
+    "why": "The passage describes Mexico City's program ('approved a municipal program in 2013') and Singapore's installations but never compares how long the gardens last, so the claim is NOT GIVEN."
    },
    {
     "id": "r08-q05",
@@ -1425,25 +1402,25 @@
    {
     "id": "r08-q06",
     "type": "complete",
-    "prompt": "Patrick Blanc first publicly displayed his technique at the Musée du Quai Branly in ___.",
+    "prompt": "Patrick Blanc first demonstrated his hydroponics technique publicly in 2006 at a museum in ___.",
     "answer": [
      "Paris"
     ],
-    "why": "Paragraph A states: 'first publicly displayed at the Musée du Quai Branly in Paris in 2006.'"
+    "why": "Paragraph A states: first publicly displayed at the Musee du Quai Branly in Paris in 2006."
    },
    {
     "id": "r08-q07",
     "type": "complete",
-    "prompt": "The initial installation cost of vertical gardens can range from $300 to $1,000 per square ___.",
+    "prompt": "Installing a vertical garden typically costs between $300 and $1,000 per _______.",
     "answer": [
-     "meter"
+     "square meter"
     ],
-    "why": "Paragraph C states: 'The initial cost of installation can range from $300 to $1,000 per square meter.'"
+    "why": "Paragraph C states: The initial cost of installation can range from $300 to $1,000 per square meter."
    },
    {
     "id": "r08-q08",
     "type": "complete",
-    "prompt": "Singapore had implemented over 4,500 vertical garden installations by the year ___.",
+    "prompt": "The number of vertical garden installations in Singapore had risen above 4,500 by the year ___.",
     "answer": [
      "2020"
     ],
@@ -1452,11 +1429,11 @@
    {
     "id": "r08-q09",
     "type": "complete",
-    "prompt": "A 2018 study found office workers with green wall views had 37 percent lower ___ levels.",
+    "prompt": "According to a 2018 University of Melbourne study, office staff with a view of vertical gardens reported 37 percent less _______ than colleagues facing concrete walls.",
     "answer": [
      "stress"
     ],
-    "why": "Paragraph F states: 'office workers with views of vertical gardens demonstrated 37 percent lower stress levels.'"
+    "why": "Paragraph F states: office workers with views of vertical gardens demonstrated 37 percent lower stress levels."
    },
    {
     "id": "r08-q10",
@@ -1471,7 +1448,7 @@
      "vi. Architectural Design Principles"
     ],
     "answer": "ii",
-    "why": "Paragraph B discusses environmental advantages including air quality, thermal insulation, noise reduction, and biodiversity support. Option ii 'Environmental Benefits and Ecological Impact' directly describes this content."
+    "why": "Paragraph B covers air quality, thermal insulation, noise reduction and biodiversity support, so option ii fits."
    },
    {
     "id": "r08-q11",
@@ -1501,7 +1478,7 @@
      "vi. Architectural Design Principles"
     ],
     "answer": "iv",
-    "why": "Paragraph E discusses modular systems, water conservation, solar panel integration, and artificial intelligence applications. Option iv 'Technological Innovations and Advancements' is the best fit."
+    "why": "Paragraph E covers modular systems, water conservation, solar panel integration and AI applications, so option iv fits."
    },
    {
     "id": "r08-q13",
@@ -1569,58 +1546,58 @@
     "type": "ynng",
     "prompt": "The author suggests that variolation was safer than natural disease exposure.",
     "answer": "YES",
-    "why": "Paragraph A states: 'variolation gradually gained acceptance as its survival rate advantages became statistically apparent.' This indicates the author believes variolation had better outcomes than natural infection."
+    "why": "The passage says this practice 'nevertheless offered better survival odds than encountering the disease naturally.'"
    },
    {
     "id": "r09-q02",
-    "type": "ynng",
-    "prompt": "The author implies that early scientific colleagues fully accepted Jenner's vaccination theory immediately.",
-    "answer": "NO",
-    "why": "Paragraph B states: 'Initial scientific reception was mixed, with some colleagues expressing skepticism.' The author indicates skepticism existed, not full acceptance."
+    "type": "tfng",
+    "prompt": "Jenner's 1798 publication on vaccination was immediately accepted by the entire scientific community.",
+    "answer": "FALSE",
+    "why": "The passage says: 'Initial scientific reception was mixed, though skepticism gradually diminished.'"
    },
    {
     "id": "r09-q03",
     "type": "ynng",
     "prompt": "The author presents germ theory as a replacement for earlier medical explanatory frameworks.",
     "answer": "YES",
-    "why": "Paragraph C states: 'Germ theory replaced the prevailing miasma theory, which had incorrectly attributed disease to noxious vapors.' The author clearly indicates germ theory superseded miasma theory."
+    "why": "The passage says: 'The replacement of miasma theory with germ theory represented a fundamental scientific paradigm shift in medical thinking.'"
    },
    {
     "id": "r09-q04",
-    "type": "ynng",
-    "prompt": "The writer believes that twentieth-century vaccine safety concerns were largely unfounded.",
+    "type": "tfng",
+    "prompt": "The passage states that pertussis vaccine controversy caused a decline in vaccination rates in the twentieth century.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph D mentions safety concerns including thalidomide and pertussis vaccine controversies and the development of safety testing protocols, but does not assert whether these concerns were founded or unfounded."
+    "why": "Paragraph D says pertussis controversies 'prompted development of more rigorous safety testing protocols and pharmacovigilance systems', but gives no vaccination rates."
    },
    {
     "id": "r09-q05",
-    "type": "ynng",
-    "prompt": "The author suggests that mRNA vaccine technology represented a novel approach to infectious disease prevention in 2020.",
-    "answer": "YES",
-    "why": "Paragraph E states: 'When the COVID-19 pandemic emerged in late 2019, mRNA vaccine technology had not yet been approved for infectious diseases' and 'represented the first large-scale application of this technology against an infectious pathogen,' indicating novelty."
+    "type": "tfng",
+    "prompt": "Before 2019, mRNA technology had been successfully used against infectious diseases.",
+    "answer": "FALSE",
+    "why": "The passage says mRNA vaccines 'had not received approval for infectious diseases prior to 2019.'"
    },
    {
     "id": "r09-q06",
     "type": "complete",
-    "prompt": "Edward Jenner introduced the term 'vaccination' in his 1798 work titled 'An Inquiry into the Causes and Effects of the Variolae ___.'",
+    "prompt": "Jenner's 1798 publication carried the Latin phrase 'Variolae ___' in its title.",
     "answer": [
      "Vaccinae"
     ],
-    "why": "Paragraph B states: \"his work titled 'An Inquiry into the Causes and Effects of the Variolae Vaccinae.'\" This is the exact title."
+    "why": "Paragraph B states that Jenner published 'An Inquiry into the Causes and Effects of the Variolae Vaccinae' in 1798."
    },
    {
     "id": "r09-q07",
     "type": "complete",
-    "prompt": "Louis Pasteur developed the first successful vaccine against ___ in 1885.",
+    "prompt": "Louis Pasteur's 1885 vaccine was the first successful one against _______.",
     "answer": [
      "rabies"
     ],
-    "why": "Paragraph C states: 'Pasteur developed the first successful vaccine against rabies in 1885.'"
+    "why": "The passage says: 'He developed the first successful rabies vaccine in 1885.'"
    },
    {
     "id": "r09-q08",
     "type": "complete",
-    "prompt": "The hepatitis B vaccine, licensed in 1986, was the first successful ___ vaccine.",
+    "prompt": "Approved in 1986, the hepatitis B vaccine was the first successful vaccine made with ___ technology.",
     "answer": [
      "recombinant DNA"
     ],
@@ -1629,11 +1606,11 @@
    {
     "id": "r09-q09",
     "type": "complete",
-    "prompt": "In 2019, measles cases in the United States reached 1,282, the highest number in ___ years.",
+    "prompt": "The 1,282 measles cases recorded in the United States in 2019 were the most in _______ years.",
     "answer": [
      "27"
     ],
-    "why": "Paragraph F states: 'In 2019, measles cases in the United States reached 1,282, the highest number in 27 years.'"
+    "why": "The passage says: 'In 2019, United States measles cases reached 1,282, representing the highest number in 27 years.'"
    },
    {
     "id": "r09-q10",
@@ -1648,7 +1625,7 @@
      "vi. Vaccine Safety and Regulatory Systems"
     ],
     "answer": "i",
-    "why": "Paragraph A discusses early variolation practices in India and China and their spread to Europe, matching 'Ancient Vaccination Techniques and Variolation.'"
+    "why": "Paragraph A covers early variolation in India and China and its spread to Europe, so option i fits."
    },
    {
     "id": "r09-q11",
@@ -1678,12 +1655,12 @@
      "vi. Vaccine Safety and Regulatory Systems"
     ],
     "answer": "iv",
-    "why": "Paragraph F discusses vaccine hesitancy, misinformation, distribution inequities, and vaccine nationalism. Option iv 'Vaccine Hesitancy, Inequity, and Modern Public Health Challenges' best describes this content."
+    "why": "Paragraph F covers vaccine hesitancy, misinformation, distribution inequities and vaccine nationalism, so option iv fits."
    },
    {
     "id": "r09-q13",
     "type": "mcq",
-    "prompt": "According to the passage, by what year had approximately 100,000 people in England received vaccinations?",
+    "prompt": "By which year had roughly 100,000 residents of England been vaccinated?",
     "options": [
      "A. 1796",
      "B. 1798",
@@ -1691,12 +1668,12 @@
      "D. 1807"
     ],
     "answer": "C",
-    "why": "Paragraph B states: 'By 1801, however, approximately 100,000 people in England had received vaccinations.'"
+    "why": "The passage says: 'By 1801, approximately 100,000 people in England had received vaccinations.'"
    },
    {
     "id": "r09-q14",
     "type": "mcq",
-    "prompt": "Which vaccine technology was authorized through emergency use procedures against COVID-19?",
+    "prompt": "Which vaccine technology had no prior approval for infectious disease use before 2020?",
     "options": [
      "A. Recombinant DNA vaccines",
      "B. mRNA vaccines",
@@ -1704,7 +1681,7 @@
      "D. Attenuated vaccines"
     ],
     "answer": "B",
-    "why": "Paragraph E states: 'The rapid deployment of mRNA vaccines against COVID-19 in 2020-2021, authorized through emergency use procedures.'"
+    "why": "Paragraph E states: mRNA vaccines had not received approval for infectious diseases prior to 2019. All other options were approved earlier."
    }
   ]
  },
@@ -1744,28 +1721,28 @@
     "type": "ynng",
     "prompt": "The author presents bread as having significance extending beyond its nutritional value.",
     "answer": "YES",
-    "why": "Paragraph A states: 'This historical pattern demonstrates how bread transcended its nutritional function to become a carrier of social meaning, political power, and economic value.' The author explicitly argues bread has significance beyond nutrition."
+    "why": "The passage says: 'This historical pattern demonstrates how bread transcended its fundamental nutritional function to become a carrier of profound social meaning, political power, and economic value.'"
    },
    {
     "id": "r10-q02",
     "type": "ynng",
-    "prompt": "The writer implies that Asian countries have less developed agricultural systems than Mediterranean regions.",
+    "prompt": "The author's analysis implies that Asian countries adopted rice over bread due to agricultural limitations.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph B states that Asian countries have lower bread consumption because 'rice rather than bread serves as the primary staple carbohydrate.' This reflects cultural preference and agricultural tradition, not agricultural development levels."
+    "why": "The passage says consumption patterns are 'reflecting distinct cultural traditions, agricultural capacities, and dietary preferences' but never says rice is chosen because of limited farming, so the claim is NOT GIVEN."
    },
    {
     "id": "r10-q03",
     "type": "ynng",
     "prompt": "The author suggests that global wheat price increases disproportionately affected lower-income populations.",
     "answer": "YES",
-    "why": "Paragraph C states: 'triggering widespread food security crises particularly affecting lower-income populations dependent on wheat and bread consumption' and notes this forced families to reduce nutritious foods. This implies disproportionate impact."
+    "why": "The passage says the 2010-2012 price doubling was 'triggering widespread food security crises particularly affecting lower-income populations dependent on wheat', which implies a disproportionate effect."
    },
    {
     "id": "r10-q04",
-    "type": "ynng",
+    "type": "tfng",
     "prompt": "Industrial bread production improved the nutritional quality of consumed bread.",
-    "answer": "NO",
-    "why": "Paragraph D states: 'industrial production simultaneously reduced nutritional quality through refined flour processing, which removed bran and germ containing essential micronutrients, fiber, and phytonutrients.'"
+    "answer": "FALSE",
+    "why": "The passage says industrial production 'reduced nutritional quality through refined flour processing, which removed bran and germ containing essential micronutrients.'"
    },
    {
     "id": "r10-q05",
@@ -1777,35 +1754,34 @@
    {
     "id": "r10-q06",
     "type": "complete",
-    "prompt": "Bread consumption in Mediterranean countries averages between 60 to 80 kilograms per capita ___.",
+    "prompt": "In Mediterranean countries, average bread consumption is 60 to 80 kilograms per person _______.",
     "answer": [
      "annually"
     ],
-    "why": "Paragraph B states: 'averaging 60 to 80 kilograms per capita annually.' Annually is the exact term."
+    "why": "Paragraph B states: averaging 60 to 80 kilograms per capita annually, with bread integral to nearly every meal."
    },
    {
     "id": "r10-q07",
     "type": "complete",
-    "prompt": "Between 2010 and 2012, global ___ prices approximately doubled due to drought conditions.",
+    "prompt": "Between 2010 and 2012, the world price of _______ roughly doubled after droughts hit major growing regions.",
     "answer": [
      "wheat"
     ],
-    "why": "Paragraph C states: 'Between 2010 and 2012, global wheat prices approximately doubled due to drought conditions.'"
+    "why": "The passage says: 'Between 2010 and 2012, global wheat prices approximately doubled due to severe drought conditions.'"
    },
    {
     "id": "r10-q08",
     "type": "complete",
-    "prompt": "Industrial bread production reduced prices by approximately 30 to 40 percent relative to ___ production.",
+    "prompt": "Industrial bakeries cut bread prices by 30 to 40 percent compared with _______ production.",
     "answer": [
-     "artisanal",
-     "traditional"
+     "traditional artisanal"
     ],
-    "why": "Paragraph D states: 'reduced bread prices by approximately 30 to 40 percent relative to traditional artisanal production during the 1950s and 1960s.'"
+    "why": "Paragraph D states: reduced bread prices by approximately 30 to 40 percent relative to traditional artisanal production."
    },
    {
     "id": "r10-q09",
     "type": "complete",
-    "prompt": "The slow food movement was initiated in ___ in 1986.",
+    "prompt": "The slow food movement, which began in 1986, traces its origins to _______.",
     "answer": [
      "Italy"
     ],
@@ -1839,7 +1815,7 @@
      "vi. Global Climate Change and Agriculture"
     ],
     "answer": "ii",
-    "why": "Paragraph C discusses food security, poverty, price vulnerability, and how bread consumption relates to economic inequality. Option ii 'Bread Consumption and Socioeconomic Inequality' directly matches."
+    "why": "Paragraph C covers food security, poverty, price vulnerability and bread's link to inequality, so option ii fits."
    },
    {
     "id": "r10-q12",
@@ -1872,7 +1848,7 @@
    {
     "id": "r10-q14",
     "type": "match",
-    "prompt": "Match the following statements to the appropriate paragraphs (A-F). Which paragraph discusses bread's historical use as a medium of labor exchange?",
+    "prompt": "Which paragraph discusses bread's historical role in compensating workers for labor?",
     "options": [
      "A. Paragraph A",
      "B. Paragraph B",
@@ -1882,7 +1858,7 @@
      "F. Paragraph F"
     ],
     "answer": "A",
-    "why": "Paragraph A states: 'In ancient Egypt, bread served as a standardized medium of labor exchange, with workers receiving daily rations.'"
+    "why": "Paragraph A states: In ancient Egypt, bread served as a standardized medium of labor exchange, with workers receiving daily rations as compensation."
    }
   ]
  },
@@ -1920,7 +1896,7 @@
    {
     "id": "r11-q01",
     "type": "tfng",
-    "prompt": "Lithium-ion batteries powered approximately 70 percent of electric vehicles sold globally in 2023.",
+    "prompt": "Roughly seven in ten electric vehicles sold worldwide in 2023 ran on lithium-ion batteries.",
     "answer": "TRUE",
     "why": "Paragraph A states: 'powered approximately 70 percent of electric vehicles sold globally in 2023.'"
    },
@@ -1948,23 +1924,23 @@
    {
     "id": "r11-q05",
     "type": "tfng",
-    "prompt": "Perovskite solar cells are less efficient than silicon-based solar cells in commercial applications.",
-    "answer": "FALSE",
-    "why": "Paragraph D states: 'demonstrate laboratory efficiencies exceeding 30 percent compared to silicon's typical 15 to 22 percent commercial efficiency.' Perovskite efficiencies are higher."
+    "prompt": "Perovskite solar cells demonstrate equal or superior commercial efficiency to silicon-based solar cells.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph D provides perovskite laboratory efficiencies (exceeding 30 percent) and silicon commercial efficiency (15-22 percent), but no perovskite commercial figure, so direct commercial comparison is not established."
    },
    {
     "id": "r11-q06",
     "type": "complete",
-    "prompt": "Silicon-based solar cell costs declined by approximately 89 percent between 2010 and ___.",
+    "prompt": "The cost of silicon-based photovoltaic systems fell by roughly 89 percent during the decade following ___.",
     "answer": [
-     "2020"
+     "2010"
     ],
-    "why": "Paragraph D states: 'costs declined by approximately 89 percent between 2010 and 2020.'"
+    "why": "Paragraph D states: silicon-based solar cells costs declined by approximately 89 percent between 2010 and 2020."
    },
    {
     "id": "r11-q07",
     "type": "complete",
-    "prompt": "High-temperature superconductors were discovered beginning in ___.",
+    "prompt": "The first high-temperature superconductors came to light in _______.",
     "answer": [
      "1987"
     ],
@@ -1973,7 +1949,7 @@
    {
     "id": "r11-q08",
     "type": "complete",
-    "prompt": "The concentrated solar power facility in Ouarzazate, Morocco, was commissioned in ___ and incorporates molten salt storage.",
+    "prompt": "Morocco's Ouarzazate solar plant, a concentrated solar power site with molten salt storage, came online in ___.",
     "answer": [
      "2018"
     ],
@@ -1982,13 +1958,11 @@
    {
     "id": "r11-q09",
     "type": "complete",
-    "prompt": "Phase-change materials demonstrate specific heat capacities approximately 5 to 10 times higher than ___ used in conventional thermal storage.",
+    "prompt": "Phase-change materials have specific heat capacities roughly 5 to 10 times greater than those of ___, the traditional storage media.",
     "answer": [
-     "rock",
-     "sand",
      "rock or sand"
     ],
-    "why": "Paragraph F states: 'higher than rock or sand conventionally used in thermal storage.' Either term is correct."
+    "why": "Paragraph F states: 'higher than rock or sand conventionally used in thermal storage.' The passage names the pair, so the gap takes the full phrase."
    },
    {
     "id": "r11-q10",
@@ -2097,42 +2071,42 @@
    {
     "id": "r12-q01",
     "type": "tfng",
-    "prompt": "REM sleep comprises approximately 20 to 25 percent of total adult sleep time.",
-    "answer": "TRUE",
-    "why": "Paragraph A states: 'REM sleep, comprising approximately 20 to 25 percent of total adult sleep time.'"
+    "prompt": "Adults spend most of their sleep time in REM sleep.",
+    "answer": "FALSE",
+    "why": "Paragraph A: REM sleep comprises 'approximately 20 to 25 percent of total adult sleep time', while non-REM takes '75 to 80 percent'. Most sleep is non-REM, so the statement is contradicted."
    },
    {
     "id": "r12-q02",
     "type": "tfng",
-    "prompt": "Sleep spindles occur at frequencies between 12 to 16 Hertz.",
+    "prompt": "Sleep spindles help move memories from the hippocampus to another region of the brain.",
     "answer": "TRUE",
-    "why": "Paragraph B states: 'sleep-specific spindle oscillations, transient bursts of neural activity at 12 to 16 Hertz frequency.'"
+    "why": "Paragraph B: spindle oscillations 'facilitate transfer of hippocampal memories to the neocortex'. The neocortex is the other region."
    },
    {
     "id": "r12-q03",
     "type": "tfng",
-    "prompt": "Freud's dream theory has been completely replaced by modern neuroscience.",
-    "answer": "FALSE",
-    "why": "Paragraph C states: 'Modern neuroscience has moved beyond Freudian interpretations,' indicating movement beyond rather than complete replacement, and acknowledges emerging evidence for dreams' functions."
+    "prompt": "Hobson and McCarley developed their hypothesis by studying patients with sleep disorders.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph C names Hobson and McCarley and the year (1977) and explains what the hypothesis proposes, but says nothing about how they developed it or whom they studied."
    },
    {
     "id": "r12-q04",
     "type": "tfng",
-    "prompt": "Partial sleep deprivation defined as fewer than six hours nightly impairs executive function.",
+    "prompt": "Regularly sleeping less than six hours can weaken the mental skills used for planning and self-control.",
     "answer": "TRUE",
-    "why": "Paragraph D states: 'Partial sleep deprivation, defined as restricting sleep to fewer than six hours nightly, impairs...executive function.'"
+    "why": "Paragraph D: partial sleep deprivation, 'fewer than six hours nightly, impairs attention, working memory, and executive function'. Executive function is the set of skills for planning and self-control."
    },
    {
     "id": "r12-q05",
     "type": "tfng",
-    "prompt": "Blue light exposure suppresses melatonin production and promotes wakefulness.",
-    "answer": "TRUE",
-    "why": "Paragraph E states: 'Light exposure, particularly blue-wavelength light around 480 nanometers, suppresses melatonin production and promotes wakefulness.'"
+    "prompt": "Evening light from electronic devices affects children more strongly than adults.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph E says artificial evening light from devices 'interferes with melatonin and circadian rhythm alignment', but never compares children with adults."
    },
    {
     "id": "r12-q06",
     "type": "complete",
-    "prompt": "The hippocampus is a seahorse-shaped brain structure located in the ___ lobe.",
+    "prompt": "The hippocampus, which has a seahorse-like shape, lies within the ___ lobe.",
     "answer": [
      "temporal"
     ],
@@ -2141,29 +2115,29 @@
    {
     "id": "r12-q07",
     "type": "complete",
-    "prompt": "The suprachiasmatic nucleus contains approximately ___ neurons.",
+    "prompt": "The suprachiasmatic nucleus, the brain's main circadian pacemaker, contains roughly ___ neurons.",
     "answer": [
      "20,000"
     ],
-    "why": "Paragraph E states: 'The suprachiasmatic nucleus, a specialized hypothalamic structure containing approximately 20,000 neurons.'"
+    "why": "Paragraph E states: The suprachiasmatic nucleus containing approximately 20,000 neurons, functions as the central circadian pacemaker."
    },
    {
     "id": "r12-q08",
     "type": "complete",
-    "prompt": "Adenosine is a neuromodulatory ___ that builds up during waking activity.",
+    "prompt": "Adenosine, which accumulates while a person is awake, is a type of _______.",
     "answer": [
      "nucleoside"
     ],
-    "why": "Paragraph E states: 'Homeostatic sleep pressure...depends upon accumulation of adenosine, a neuromodulatory nucleoside.'"
+    "why": "The passage says adenosine is 'a neuromodulatory nucleoside that builds up during wakefulness and dissipates during sleep.'"
    },
    {
     "id": "r12-q09",
     "type": "complete",
-    "prompt": "The optimal bedroom temperature for sleep is approximately 16 to 19 degrees ___.",
+    "prompt": "Sleep hygiene advice suggests keeping a bedroom between 16 and 19 degrees _______.",
     "answer": [
      "Celsius"
     ],
-    "why": "Paragraph F states: 'bedroom temperature control around 16 to 19 degrees Celsius.'"
+    "why": "Paragraph F states: Sleep hygiene modifications include bedroom temperature 16-19 degrees Celsius."
    },
    {
     "id": "r12-q10",
@@ -2193,7 +2167,7 @@
      "vi. Circadian Rhythm Regulation Mechanisms"
     ],
     "answer": "iii",
-    "why": "Paragraph C discusses Freud's theory, activation-synthesis hypothesis, and competing theories about dreams' functions. Option iii 'Dream Content and Competing Neuroscientific Theories' matches this content."
+    "why": "Paragraph C covers Freud's theory, the activation-synthesis hypothesis and competing dream theories, so option iii fits."
    },
    {
     "id": "r12-q12",
@@ -2208,12 +2182,12 @@
      "vi. Circadian Rhythm Regulation Mechanisms"
     ],
     "answer": "v",
-    "why": "Paragraph E discusses the suprachiasmatic nucleus, circadian regulation, and homeostatic sleep pressure. Option v 'Neural and Hormonal Systems Regulating Sleep-Wake Cycles' describes this content."
+    "why": "Paragraph E covers the suprachiasmatic nucleus, circadian regulation and homeostatic sleep pressure, so option v fits."
    },
    {
     "id": "r12-q13",
     "type": "mcq",
-    "prompt": "According to epidemiological surveys conducted 2010-2020, approximately what percentage of adults in industrialized nations experience chronic insufficient sleep?",
+    "prompt": "Roughly what share of adults in industrialized countries had chronic insufficient sleep between 2010 and 2020?",
     "options": [
      "A. 15-20 percent",
      "B. 25-30 percent",
@@ -2234,7 +2208,7 @@
      "D. 76 percent"
     ],
     "answer": "C",
-    "why": "Paragraph F states: 'A randomized controlled trial published in JAMA Psychiatry in 2015...found that CBT-I produced...64 percent of CBT-I patients achieving remission.'"
+    "why": "The passage says: 'A 2015 JAMA Psychiatry trial comparing CBT-I to medication in 208 adults found CBT-I produced superior long-term outcomes with 64 percent remission versus 39 percent in the medication group.'"
    }
   ]
  }

@@ -337,6 +337,45 @@ export class ReadingDossier {
   private activeVocabDrawerWord: string | null = null;
   public onBatchComplete?: () => void;
 
+  // Mobile Tabbed Split-Screen State (<= 768px)
+  private mobileActiveTab: 'text' | 'analysis' = 'text';
+
+  public getMobileActiveTab(): 'text' | 'analysis' {
+    return this.mobileActiveTab;
+  }
+
+  public setMobileActiveTab(tab: 'text' | 'analysis'): void {
+    this.mobileActiveTab = tab;
+    this.applyMobileTabState();
+  }
+
+  public toggleMobileActiveTab(): void {
+    this.setMobileActiveTab(this.mobileActiveTab === 'text' ? 'analysis' : 'text');
+  }
+
+  public applyMobileTabState(): void {
+    const layout = this.container.querySelector('.reading-pass1-layout') as HTMLElement | null;
+    if (layout) {
+      layout.setAttribute('data-mobile-active', this.mobileActiveTab);
+    }
+
+    const mobileTabBtns = this.container.querySelectorAll('.reading-mobile-tab-btn');
+    mobileTabBtns.forEach(btn => {
+      const isCur = (btn as HTMLElement).dataset.tab === this.mobileActiveTab;
+      btn.classList.toggle('is-active', isCur);
+      btn.setAttribute('aria-selected', String(isCur));
+    });
+
+    const fab = this.container.querySelector('#reading-mobile-quick-switch') as HTMLElement | null;
+    if (fab) {
+      const label = fab.querySelector('.fab-label');
+      if (label) {
+        label.textContent = this.mobileActiveTab === 'text' ? 'Switch to Analysis' : 'Switch to Text';
+      }
+      fab.setAttribute('aria-label', this.mobileActiveTab === 'text' ? 'Switch to Analysis' : 'Switch to Text');
+    }
+  }
+
   constructor() {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-reading interactive';
@@ -733,8 +772,30 @@ export class ReadingDossier {
           </button>
         </div>
       </div>
+ 
+      <!-- Mobile Segmented Split-Screen Tab Switcher (<= 768px) -->
+      <nav class="reading-mobile-tab-bar" role="tablist" aria-label="Reading Mobile View Switcher">
+        <button 
+          type="button" 
+          class="reading-mobile-tab-btn ${this.mobileActiveTab === 'text' ? 'is-active' : ''}" 
+          data-tab="text" 
+          role="tab" 
+          aria-selected="${this.mobileActiveTab === 'text'}"
+        >
+          📖 Reading Text
+        </button>
+        <button 
+          type="button" 
+          class="reading-mobile-tab-btn ${this.mobileActiveTab === 'analysis' ? 'is-active' : ''}" 
+          data-tab="analysis" 
+          role="tab" 
+          aria-selected="${this.mobileActiveTab === 'analysis'}"
+        >
+          🔍 Analysis & Exercises
+        </button>
+      </nav>
 
-      <div class="reading-pass1-layout" style="display: flex; gap: 24px; width: 100%; align-items: flex-start;">
+      <div class="reading-pass1-layout" data-mobile-active="${this.mobileActiveTab}" style="display: flex; gap: 24px; width: 100%; align-items: flex-start;">
         <!-- Calm Document Reader (Strict 68ch measure & relaxed 1.75 line-height) -->
         <article class="calm-reader reading-text-pane" style="max-width: 68ch;">
           <div class="reading-header">
@@ -787,6 +848,18 @@ export class ReadingDossier {
           </div>
         </aside>
       </div>
+
+      <!-- Floating Quick-Switch Pill (Mobile <= 768px, >=48x48px Touch Target) -->
+      <button 
+        type="button" 
+        class="reading-mobile-quick-switch-fab" 
+        id="reading-mobile-quick-switch"
+        title="Flip between reading text and analysis"
+        aria-label="${this.mobileActiveTab === 'text' ? 'Switch to Analysis' : 'Switch to Text'}"
+      >
+        <span class="fab-icon">⚡</span>
+        <span class="fab-label">${this.mobileActiveTab === 'text' ? 'Switch to Analysis' : 'Switch to Text'}</span>
+      </button>
     `;
 
     // Render initial drawer state
@@ -799,6 +872,25 @@ export class ReadingDossier {
         this.renderVocabDrawerInto(drawerSlot, null);
       }
     }
+
+    // Mobile Segmented Tab Switcher Buttons
+    const mobileBtns = slot.querySelectorAll('.reading-mobile-tab-btn');
+    mobileBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = (btn as HTMLElement).dataset.tab as 'text' | 'analysis';
+        if (tab) {
+          AudioSynthesizer.play('click');
+          this.setMobileActiveTab(tab);
+        }
+      });
+    });
+
+    // Mobile Floating Quick-Switch Pill
+    const fabBtn = slot.querySelector('#reading-mobile-quick-switch');
+    fabBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      this.toggleMobileActiveTab();
+    });
 
     // Bind clickable vocabulary targets in reading text
     const vocabTargets = slot.querySelectorAll('.vocab-target');

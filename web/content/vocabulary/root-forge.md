@@ -534,7 +534,7 @@
 - **CEFR**: C1
 - **Word**: prospectus
 - **IPA**: /prəˈspek.təs/
-- **Definition**: A printed document that advertises or provides details of a commercial enterprise, school, or financial product to prospective buyers.
+- **Definition**: A printed brochure that advertises or describes a company, school, or financial product to possible buyers.
 - **Vietnamese**: bản cáo bạch, tài liệu giới thiệu chi tiết dự án đầu tư
 - **Context**: Institutional investors scrutinized the IPO prospectus to identify governance vulnerabilities.
 - **Prefix**: pro- (Latin: forward, ahead)

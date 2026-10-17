@@ -56,7 +56,7 @@ The point is that the process is reversible. Modern English, especially written 
 - **IPA**: /ˈɑː.keɪ.ɪ.zəm/
 - **Definition**: A thing that is very old or old-fashioned, especially an archaic word, style, or idiom retained out of sentimentality.
 - **Vietnamese**: từ cổ, phong cách cổ xưa, sự hoài cổ lỗi thời
-- **Context**: It follows that any struggle against the abuse of language is a sentimental archaism, like preferring candles to electric light.
+- **Context**: It follows that any struggle against the abuse of language is a sentimental archaism, like preferring candles to electric light or hansom cabs to aeroplanes.
 - **Collocations**: sentimental archaism, deliberate archaism, quaint archaism
 - **Etymology**: Greek arkhaismos, from arkhaios (ancient), from arkhe (beginning).
 

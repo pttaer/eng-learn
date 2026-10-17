@@ -1,0 +1,2346 @@
+{
+  "title": "Computer-Delivered IELTS Academic & General Training Mock Suite",
+  "standards": "IELTS 9-Band Descriptors (TR/TA, CC, LR, GRA) & CEFR 2020 Companion Volume",
+  "reading": {
+    "meta": {
+      "title": "IELTS Academic Reading Complete Mock Exam",
+      "totalPassages": 3,
+      "totalQuestions": 40,
+      "readingTimeMinutes": 60,
+      "standards": "Cambridge Academic Reading Specifications"
+    },
+    "passageTitle": "The Neurobiology of Bilingual Executive Function",
+    "paragraphs": {
+      "A": "For much of the twentieth century, clinical psychologists and educational theorists regarded childhood bilingualism with profound skepticism. Traditional pedagogical dogma posited that acquiring two linguistic systems simultaneously imposed a crippling cognitive burden on developing minds, leading to developmental delays, reduced vocabulary capacity, and chronic linguistic interference. However, over the past three decades, revolutionary advances in structural and functional neuroimaging—particularly functional Magnetic Resonance Imaging (fMRI) and event-related potential (ERP) electrophysiology—have systematically dismantled this deficit paradigm. Contemporary cognitive neuroscience reveals that the bilingual brain is not merely an expanded storage depot for two separate lexicons, but a fundamentally rewired neural architecture characterized by enhanced cognitive flexibility and heightened executive control.",
+      "B": "Central to understanding this cognitive divergence is the phenomenon of non-selective lexical access. Contrary to intuitive assumptions, when a bilingual individual communicates in one language, their non-target language does not remain dormant. Eye-tracking paradigms and semantic priming experiments have consistently demonstrated that both linguistic matrices remain perpetually active in parallel. For example, when an English-Vietnamese bilingual hears the English word \"desk,\" phonetic and semantic candidates from Vietnamese simultaneously ignite within the left inferior frontal gyrus. Consequently, the brain is engaged in an incessant neurocognitive juggling act, requiring continuous computational resources to suppress intrusive lexical competitors from the unselected language.",
+      "C": "This perpetual linguistic competition exercises the brain's executive control network—a distributed frontoparietal circuit encompassing the dorsolateral prefrontal cortex (DLPFC), the anterior cingulate cortex (ACC), and subcortical basal ganglia structures. In monolingual individuals, these neural circuits are mobilized primarily during novel, high-conflict reasoning tasks. In multilinguals, however, the executive control network is continuously recruited for routine speech production and comprehension. Decades of microsecond-level conflict resolution between competing phonetic and syntactic representations induce structural neuroplastic adaptation, strengthening white matter tracts such as the superior longitudinal fasciculus and increasing cortical gray matter volume in frontal and parietal hubs.",
+      "D": "The behavioral dividends of this structural remodeling are most pronounced in tasks measuring non-verbal attentional inhibition and task switching. In standard neuropsychological assessments such as the Simon Task and the Stroop Color-Word Test, participants must ignore misleading visual cues and respond solely to target stimuli. Multilingual subjects across all age cohorts consistently outperform their monolingual counterparts, registering significantly faster reaction times and fewer commission errors. Crucially, this bilingual advantage is not restricted to linguistic manipulation; rather, the lifelong management of dual linguistic streams cross-pollinates general non-verbal domain-general attentional mechanisms.",
+      "E": "Beyond behavioral speed advantages in young adults, the most momentous clinical implication of bilingual neuroplasticity manifests in cognitive aging. Epidemiological studies conducted across diverse demographic populations by Dr. Ellen Bialystok and colleagues indicate that lifelong bilingualism builds substantial cognitive reserve. Although bilingual individuals exhibit the exact same neuropathological biomarkers of Alzheimer's disease—such as amyloid-beta plaque accumulation and cerebral cortical atrophy—as monolinguals, they manifest clinical symptoms of cognitive dementia approximately four to five years later. The enhanced synaptic connectivity within the frontoparietal network allows the bilingual brain to compensate for localized structural decay by dynamically rerouting neural signaling through alternate pathways.",
+      "F": "Nevertheless, the scientific consensus regarding the universal scope of the bilingual advantage has been contested by a vocal contingent of cognitive psychologists. Critics point out that numerous empirical replication studies fail to detect statistically significant executive differences between bilingual and monolingual cohorts, particularly in homogeneous laboratory samples. Meta-analyses have suggested that publication bias—wherein studies demonstrating positive effects are substantially more likely to be accepted by academic journals—may have inflated the perceived magnitude of the advantage. Furthermore, socio-economic status, immigrant background, and educational attainment frequently act as confounding variables that are difficult to isolate completely.",
+      "G": "In response to these methodological challenges, contemporary researchers advocate for a more nuanced dimensional model rather than a simplistic binary categorization. Rather than treating bilingualism as a static, monolithic trait, modern investigators evaluate continuous spectrum variables, including interactional diversity, age of acquisition, dialectal distance, and switching frequency across communicative domains. When examined through this granular lens, the neurobiological adaptations appear not as an inevitable blanket guarantee of superior intellect, but as an experience-dependent adaptation of the human brain to the specific communicative demands of its linguistic ecosystem."
+    },
+    "questions": [
+      {
+        "number": 1,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph B",
+        "key": "v"
+      },
+      {
+        "number": 2,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph C",
+        "key": "vii"
+      },
+      {
+        "number": 3,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph D",
+        "key": "iii"
+      },
+      {
+        "number": 4,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph E",
+        "key": "vi"
+      },
+      {
+        "number": 5,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph F",
+        "key": "i"
+      },
+      {
+        "number": 6,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph G",
+        "key": "iv"
+      },
+      {
+        "number": 7,
+        "passage": 1,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Functional neuroimaging verified that the inactive language shuts down completely during single-language communication.",
+        "key": "FALSE"
+      },
+      {
+        "number": 8,
+        "passage": 1,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Lifelong bilinguals prevent the physical accumulation of amyloid-beta plaques in brain tissue.",
+        "key": "FALSE"
+      },
+      {
+        "number": 9,
+        "passage": 1,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Multilingual advantages in executive tasks are more pronounced in tone-language speakers than non-tonal speakers.",
+        "key": "NOT GIVEN"
+      },
+      {
+        "number": 10,
+        "passage": 1,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Some researchers argue that academic journals favored publishing positive studies on bilingual cognitive performance.",
+        "key": "TRUE"
+      },
+      {
+        "number": 11,
+        "passage": 1,
+        "type": "SUMMARY_COMPLETION",
+        "key": "cognitive reserve"
+      },
+      {
+        "number": 12,
+        "passage": 1,
+        "type": "SUMMARY_COMPLETION",
+        "key": "frontoparietal network"
+      },
+      {
+        "number": 13,
+        "passage": 1,
+        "type": "SUMMARY_COMPLETION",
+        "key": "dimensional model"
+      }
+    ],
+    "passages": [
+      {
+        "passageNumber": 1,
+        "title": "The Neurobiology of Bilingual Executive Function",
+        "paragraphs": {
+          "A": "For much of the twentieth century, clinical psychologists and educational theorists regarded childhood bilingualism with profound skepticism. Traditional pedagogical dogma posited that acquiring two linguistic systems simultaneously imposed a crippling cognitive burden on developing minds, leading to developmental delays, reduced vocabulary capacity, and chronic linguistic interference. However, over the past three decades, revolutionary advances in structural and functional neuroimaging—particularly functional Magnetic Resonance Imaging (fMRI) and event-related potential (ERP) electrophysiology—have systematically dismantled this deficit paradigm. Contemporary cognitive neuroscience reveals that the bilingual brain is not merely an expanded storage depot for two separate lexicons, but a fundamentally rewired neural architecture characterized by enhanced cognitive flexibility and heightened executive control.",
+          "B": "Central to understanding this cognitive divergence is the phenomenon of non-selective lexical access. Contrary to intuitive assumptions, when a bilingual individual communicates in one language, their non-target language does not remain dormant. Eye-tracking paradigms and semantic priming experiments have consistently demonstrated that both linguistic matrices remain perpetually active in parallel. For example, when an English-Vietnamese bilingual hears the English word \"desk,\" phonetic and semantic candidates from Vietnamese simultaneously ignite within the left inferior frontal gyrus. Consequently, the brain is engaged in an incessant neurocognitive juggling act, requiring continuous computational resources to suppress intrusive lexical competitors from the unselected language.",
+          "C": "This perpetual linguistic competition exercises the brain's executive control network—a distributed frontoparietal circuit encompassing the dorsolateral prefrontal cortex (DLPFC), the anterior cingulate cortex (ACC), and subcortical basal ganglia structures. In monolingual individuals, these neural circuits are mobilized primarily during novel, high-conflict reasoning tasks. In multilinguals, however, the executive control network is continuously recruited for routine speech production and comprehension. Decades of microsecond-level conflict resolution between competing phonetic and syntactic representations induce structural neuroplastic adaptation, strengthening white matter tracts such as the superior longitudinal fasciculus and increasing cortical gray matter volume in frontal and parietal hubs.",
+          "D": "The behavioral dividends of this structural remodeling are most pronounced in tasks measuring non-verbal attentional inhibition and task switching. In standard neuropsychological assessments such as the Simon Task and the Stroop Color-Word Test, participants must ignore misleading visual cues and respond solely to target stimuli. Multilingual subjects across all age cohorts consistently outperform their monolingual counterparts, registering significantly faster reaction times and fewer commission errors. Crucially, this bilingual advantage is not restricted to linguistic manipulation; rather, the lifelong management of dual linguistic streams cross-pollinates general non-verbal domain-general attentional mechanisms.",
+          "E": "Beyond behavioral speed advantages in young adults, the most momentous clinical implication of bilingual neuroplasticity manifests in cognitive aging. Epidemiological studies conducted across diverse demographic populations by Dr. Ellen Bialystok and colleagues indicate that lifelong bilingualism builds substantial cognitive reserve. Although bilingual individuals exhibit the exact same neuropathological biomarkers of Alzheimer's disease—such as amyloid-beta plaque accumulation and cerebral cortical atrophy—as monolinguals, they manifest clinical symptoms of cognitive dementia approximately four to five years later. The enhanced synaptic connectivity within the frontoparietal network allows the bilingual brain to compensate for localized structural decay by dynamically rerouting neural signaling through alternate pathways.",
+          "F": "Nevertheless, the scientific consensus regarding the universal scope of the bilingual advantage has been contested by a vocal contingent of cognitive psychologists. Critics point out that numerous empirical replication studies fail to detect statistically significant executive differences between bilingual and monolingual cohorts, particularly in homogeneous laboratory samples. Meta-analyses have suggested that publication bias—wherein studies demonstrating positive effects are substantially more likely to be accepted by academic journals—may have inflated the perceived magnitude of the advantage. Furthermore, socio-economic status, immigrant background, and educational attainment frequently act as confounding variables that are difficult to isolate completely.",
+          "G": "In response to these methodological challenges, contemporary researchers advocate for a more nuanced dimensional model rather than a simplistic binary categorization. Rather than treating bilingualism as a static, monolithic trait, modern investigators evaluate continuous spectrum variables, including interactional diversity, age of acquisition, dialectal distance, and switching frequency across communicative domains. When examined through this granular lens, the neurobiological adaptations appear not as an inevitable blanket guarantee of superior intellect, but as an experience-dependent adaptation of the human brain to the specific communicative demands of its linguistic ecosystem."
+        },
+        "questions": [
+          {
+            "number": 1,
+            "passage": 1,
+            "type": "HEADING_MATCHING",
+            "target": "Paragraph B",
+            "key": "v"
+          },
+          {
+            "number": 2,
+            "passage": 1,
+            "type": "HEADING_MATCHING",
+            "target": "Paragraph C",
+            "key": "vii"
+          },
+          {
+            "number": 3,
+            "passage": 1,
+            "type": "HEADING_MATCHING",
+            "target": "Paragraph D",
+            "key": "iii"
+          },
+          {
+            "number": 4,
+            "passage": 1,
+            "type": "HEADING_MATCHING",
+            "target": "Paragraph E",
+            "key": "vi"
+          },
+          {
+            "number": 5,
+            "passage": 1,
+            "type": "HEADING_MATCHING",
+            "target": "Paragraph F",
+            "key": "i"
+          },
+          {
+            "number": 6,
+            "passage": 1,
+            "type": "HEADING_MATCHING",
+            "target": "Paragraph G",
+            "key": "iv"
+          },
+          {
+            "number": 7,
+            "passage": 1,
+            "type": "TRUE_FALSE_NOT_GIVEN",
+            "statement": "Functional neuroimaging verified that the inactive language shuts down completely during single-language communication.",
+            "key": "FALSE"
+          },
+          {
+            "number": 8,
+            "passage": 1,
+            "type": "TRUE_FALSE_NOT_GIVEN",
+            "statement": "Lifelong bilinguals prevent the physical accumulation of amyloid-beta plaques in brain tissue.",
+            "key": "FALSE"
+          },
+          {
+            "number": 9,
+            "passage": 1,
+            "type": "TRUE_FALSE_NOT_GIVEN",
+            "statement": "Multilingual advantages in executive tasks are more pronounced in tone-language speakers than non-tonal speakers.",
+            "key": "NOT GIVEN"
+          },
+          {
+            "number": 10,
+            "passage": 1,
+            "type": "TRUE_FALSE_NOT_GIVEN",
+            "statement": "Some researchers argue that academic journals favored publishing positive studies on bilingual cognitive performance.",
+            "key": "TRUE"
+          },
+          {
+            "number": 11,
+            "passage": 1,
+            "type": "SUMMARY_COMPLETION",
+            "key": "cognitive reserve"
+          },
+          {
+            "number": 12,
+            "passage": 1,
+            "type": "SUMMARY_COMPLETION",
+            "key": "frontoparietal network"
+          },
+          {
+            "number": 13,
+            "passage": 1,
+            "type": "SUMMARY_COMPLETION",
+            "key": "dimensional model"
+          }
+        ]
+      },
+      {
+        "passageNumber": 2,
+        "title": "Direct Air Carbon Capture and Biomineralization Systems",
+        "paragraphs": {
+          "A": "As atmospheric concentrations of carbon dioxide inexorably breach the critical threshold of 420 parts per million, the international scientific consensus has coalesced around a sobering reality: conventional emissions abatement alone cannot avert catastrophic planetary warming. In response, global climate engineering has increasingly turned its focus toward carbon dioxide removal (CDR) technologies. Foremost among these engineered negative-emissions interventions is Direct Air Capture (DAC). Unlike point-source carbon capture, which traps concentrated greenhouse gases emitted at industrial smokestacks or coal-fired power stations, DAC operates directly upon ambient atmosphere, extracting carbon dioxide that has already dispersed globally over centuries of industrialization.",
+          "B": "The fundamental physics of Direct Air Capture, however, present a formidable thermodynamic challenge. In point-source flue streams, carbon dioxide constitutes roughly 10 to 15 percent of the exhaust volume. In ambient tropospheric air, by stark contrast, carbon dioxide is extraordinarily dilute, representing approximately 0.04 percent of the atmospheric volume. Consequently, to isolate a single metric ton of gaseous carbon dioxide, an industrial DAC installation must ingest and process roughly two to three million cubic meters of ambient air. This immense dilution ratio imposes heavy energetic penalties, necessitating colossal air-contacting contactor arrays and powerful low-pressure fans capable of moving planetary volumes of air through chemical capture filters.",
+          "C": "Contemporary DAC architectures are divided into two primary technological lineages: liquid solvent contactors and solid sorbent filters. Liquid systems typically utilize high-pH aqueous hydroxide solutions, such as potassium hydroxide (KOH), which react rapidly with incoming carbon dioxide to form dissolved carbonate salts. This liquid sludge is then subjected to a series of chemical precipitate reactions and transferred to a calcination kiln operating at approximately 900 degrees Celsius to release pure carbon dioxide gas. Solid sorbent systems, conversely, route ambient air through structured monolithic honeycombs impregnated with basic chemical amines. Sorbent desorption requires considerably lower thermal activation (approximately 100 degrees Celsius), enabling the use of industrial waste heat or geothermal steam.",
+          "D": "Capturing atmospheric carbon dioxide represents merely the inaugural phase of the carbon removal equation; permanent environmental sequestration constitutes the decisive second stage. Traditional approaches have advocated storing compressed supercritical CO2 within depleted hydrocarbon reservoirs or deep saline aquifers. However, concerns regarding long-term subterranean leakage have fueled interest in permanent geochemical biomineralization. Pioneered by the Carbfix initiative in southwestern Iceland, this process dissolves captured CO2 under intense hydraulic pressure into water and injects the fizzy mixture into reactive volcanic basalt formations. Within twenty-four months, natural in-situ chemical weathering reactions transform the dissolved carbon into solid calcium carbonate (calcite), locking the greenhouse gas into immovable subterranean rock permanently.",
+          "E": "The commercial viability of large-scale DAC deployment hinges upon precipitous cost reductions. Current first-generation pilot facilities exhibit levelized capture costs ranging from $400 to $700 per metric ton of CO2 removed. For DAC to become an effective global climate stabilizer, analysts project that costs must fall below $100 to $150 per ton. Achieving this economic benchmark will require massive economies of scale, standardized modular engineering, and long-term carbon off-take commitments from multinational corporate buyers seeking durable, high-permanence carbon credits to fulfill net-zero pledges.",
+          "F": "Furthermore, rigorous life-cycle assessments (LCAs) emphasize that DAC facilities cannot be powered by conventional fossil-heavy electric grids. The auxiliary electrical and thermal demand required to operate fans, pumps, and thermal desorption units—known technically as parasitic energy loads—would result in substantial re-emissions of carbon dioxide if derived from coal or natural gas generation. Consequently, industrial DAC deployments must be strictly co-located with dedicated, low-carbon baseload energy assets, such as abundant geothermal reservoirs, nuclear power stations, or utility-scale solar and wind arrays with on-site energy storage.",
+          "G": "Beyond technological and thermodynamic hurdles, Direct Air Capture occupies a contested space within global climate governance. A prominent critique raised by environmental ethicists centers on the hazard of moral hazard: the apprehension that political and corporate decision-makers will view the prospect of future technological carbon removal as a license to prolong fossil fuel extraction in the present. To mitigate this risk, international regulatory frameworks insist upon clear boundary demarcation between emissions reduction mandates and engineered removal allowances, supported by incorruptible MRV (Monitoring, Reporting, and Verification) protocols and standardized carbon accounting standards."
+        },
+        "questions": [
+          {
+            "number": 14,
+            "passage": 2,
+            "type": "MATCHING_INFORMATION",
+            "key": "B",
+            "info": "The immense volume of ambient air required to capture a single ton of carbon dioxide"
+          },
+          {
+            "number": 15,
+            "passage": 2,
+            "type": "MATCHING_INFORMATION",
+            "key": "D",
+            "info": "The subterranean geochemical transformation of dissolved carbon into permanent solid stone"
+          },
+          {
+            "number": 16,
+            "passage": 2,
+            "type": "MATCHING_INFORMATION",
+            "key": "C",
+            "info": "A technical comparison between liquid hydroxide contactors and solid amine sorbent filters"
+          },
+          {
+            "number": 17,
+            "passage": 2,
+            "type": "MATCHING_INFORMATION",
+            "key": "G",
+            "info": "Ethical concerns that atmospheric removal could disincentivize immediate emissions cuts"
+          },
+          {
+            "number": 18,
+            "passage": 2,
+            "type": "MATCHING_INFORMATION",
+            "key": "F",
+            "info": "The operational necessity of powering capture hardware with dedicated zero-carbon energy sources"
+          },
+          {
+            "number": 19,
+            "passage": 2,
+            "type": "MATCHING_INFORMATION",
+            "key": "E",
+            "info": "Target economic price points and voluntary corporate carbon credit off-take agreements"
+          },
+          {
+            "number": 20,
+            "passage": 2,
+            "type": "MULTIPLE_CHOICE",
+            "question": "According to Paragraph B, the primary thermodynamic hurdle facing Direct Air Capture is:",
+            "key": "B"
+          },
+          {
+            "number": 21,
+            "passage": 2,
+            "type": "MULTIPLE_CHOICE",
+            "question": "What unique advantage does the basaltic biomineralization method described in Paragraph D offer?",
+            "key": "C"
+          },
+          {
+            "number": 22,
+            "passage": 2,
+            "type": "MULTIPLE_CHOICE",
+            "question": "Why do environmental critics express concern regarding DAC in Paragraph G?",
+            "key": "A"
+          },
+          {
+            "number": 23,
+            "passage": 2,
+            "type": "SENTENCE_COMPLETION",
+            "key": "monolithic honeycombs"
+          },
+          {
+            "number": 24,
+            "passage": 2,
+            "type": "SENTENCE_COMPLETION",
+            "key": "hydraulic pressure"
+          },
+          {
+            "number": 25,
+            "passage": 2,
+            "type": "SENTENCE_COMPLETION",
+            "key": "parasitic energy"
+          },
+          {
+            "number": 26,
+            "passage": 2,
+            "type": "SENTENCE_COMPLETION",
+            "key": "carbon accounting"
+          }
+        ]
+      },
+      {
+        "passageNumber": 3,
+        "title": "Linguistic Relativity, Cognitive Cartography and Cross-Cultural Epistemology",
+        "paragraphs": {
+          "A": "For centuries, philosophers and philologists have debated whether language merely reflects pre-existing human thought or actively constrains and shapes it. In the early twentieth century, American anthropologists Edward Sapir and Benjamin Lee Whorf formalized the principle of linguistic relativity. In its most extreme, deterministic interpretation—often dubbed the strong Whorfian hypothesis—language acts as an inescapable mental cage, dictating what concepts an individual is capable of conceptualizing. While subsequent cognitive scientists emphatically rejected this strong determinism as empirically untenable, contemporary psycholinguistic research has revitalized the weak Whorfian hypothesis: the proposition that language subtly biases human attention, memory, and cognitive categorization in measurable ways.",
+          "B": "The earliest battleground for testing linguistic relativity centered on color perception. In the 1970s, cognitive psychologist Eleanor Rosch conducted landmark studies with the Dani people of Papua New Guinea, whose language possesses only two basic color terms: *mili* (encompassing dark, cool hues) and *mola* (encompassing bright, warm hues). Despite this stark lexical dichotomy, Rosch discovered that Dani speakers distinguished chromatic focal boundaries and remembered colors with accuracy comparable to native English speakers. Subsequent computational analyses by Paul Kay and Terry Regier confirmed that universal neurophysiological properties of the human retina and visual cortex establish universal perceptual focal points, constraining cross-linguistic color naming worldwide.",
+          "C": "However, when researchers redirected their investigations toward spatial orientation, striking evidence of cognitive relativity emerged. European languages predominantly utilize an egocentric relative spatial reference frame, describing object locations relative to the observer's body axis: \"the book is to your left,\" or \"step backward.\" In contrast, the Guugu Yimithirr indigenous community of northern Queensland, Australia, employs an absolute geocentric coordinate system. In Guugu Yimithirr, spatial references are anchored exclusively to cardinal directions: \"there is an ant on your southwest leg,\" or \"move the cup slightly to the north-northwest.\" Cognitive anthropologist Stephen Levinson demonstrated that Guugu Yimithirr speakers possess an extraordinarily accurate internal compass, tracking absolute cardinal bearings with subconscious precision, even in unfamiliar enclosed environments or when spun blindfolded.",
+          "D": "This spatial divergence profoundly influences how linguistic communities conceptualize abstract dimensions, most notably the progression of time. English speakers intuitively conceptualize time along a horizontal axis, projecting the past behind them and the future ahead. Mandarin Chinese speakers, while utilizing horizontal time markers, frequently conceptualize chronological sequences along a vertical axis, employing spatial morphemes such as *shàng* (up/above) to denote earlier events and *xià* (down/below) to signify later occurrences. Most strikingly, the Aymara language of the Andean highlands exhibits a reverse temporal mapping: speakers describe the past as located in front of them (*nayra*, literally \"eye/front\") because past events have already occurred and can be seen by the mind's eye, whereas the unknown future (*qhipa*, \"back/behind\") lies behind the observer, unseen.",
+          "E": "Linguistic structures also influence cognitive categorization through grammatical gender systems. In languages such as German and Spanish, inanimate nouns are arbitrarily categorized as grammatically masculine or feminine. Experimental research directed by Lera Boroditsky demonstrated that grammatical gender primes anthropomorphic semantic associations. When asked to select adjectives describing a \"key\"—a grammatically masculine noun in German (*der Schlüssel*) but feminine in Spanish (*la llave*)—German speakers favored words like \"hard, heavy, jagged, metal,\" whereas Spanish speakers described keys as \"golden, intricate, little, lovely.\" Conversely, a \"bridge\" is feminine in German (*die Brücke*) and masculine in Spanish (*el puente*); German speakers characterized bridges as \"beautiful, elegant, slender,\" while Spanish speakers selected \"dangerous, strong, sturdy, towering.\"",
+          "F": "Furthermore, certain linguistic systems mandate the explicit morphological encoding of epistemology. In the indigenous Tucanoan languages of the northwest Amazon, verbs cannot be uttered without an obligatory evidential suffix indicating the speaker's source of knowledge. A speaker cannot merely state \"the jaguar killed the deer\"; they must append a grammatical suffix specifying whether they witnessed the event directly, heard it acoustic-sensory, inferred it from physical tracks, learned it through second-hand testimony, or assumed it based on situational context. Anthropological linguists suggest that lifelong adherence to compulsory evidentiality fosters heightened cognitive awareness regarding empirical veracity and information provenance.",
+          "G": "Recent neuroimaging investigations have illuminated the neurological mechanisms underpinning these cross-linguistic differences. Electroencephalographic (EEG) recordings during visual oddball tasks indicate that linguistic categorization effects occur astonishingly early in visual processing—within 100 to 200 milliseconds of stimulus onset. Crucially, these linguistic effects are lateralized primarily within the right visual field, which projects directly to the language-dominant left cerebral hemisphere. When visual stimuli are presented to the left visual field (projecting to the non-verbal right hemisphere), category boundary effects diminish significantly, confirming that language actively modulates visual perception at early cortical stages.",
+          "H": "Ultimately, the contemporary scientific synthesis views language neither as an insurmountable prison nor as an irrelevant epiphenomenon. Rather, human language functions as a habitual attentional spotlight. By requiring speakers to encode specific environmental features—whether cardinal bearings, temporal metaphors, or evidential provenance—linguistic systems train the human mind to attend automatically and effortlessly to salient facets of experience. Human cognition remains universally adaptable, yet the mother tongue leaves an indelible neural signature on the cognitive cartography of our mental universe."
+        },
+        "questions": [
+          {
+            "number": 27,
+            "passage": 3,
+            "type": "YES_NO_NOT_GIVEN",
+            "statement": "The strong version of the Sapir-Whorf hypothesis has been discredited by modern cognitive researchers.",
+            "key": "YES"
+          },
+          {
+            "number": 28,
+            "passage": 3,
+            "type": "YES_NO_NOT_GIVEN",
+            "statement": "Guugu Yimithirr speakers struggle to determine cardinal directions when blindfolded in unfamiliar surroundings.",
+            "key": "NO"
+          },
+          {
+            "number": 29,
+            "passage": 3,
+            "type": "TRUE_FALSE_NOT_GIVEN",
+            "statement": "Aymara is the only known language that conceptualizes the future as lying behind the speaker.",
+            "key": "NOT GIVEN"
+          },
+          {
+            "number": 30,
+            "passage": 3,
+            "type": "TRUE_FALSE_NOT_GIVEN",
+            "statement": "Speakers of languages with evidential suffixes exhibit greater political skepticism than speakers of European languages.",
+            "key": "NOT GIVEN"
+          },
+          {
+            "number": 31,
+            "passage": 3,
+            "type": "YES_NO_NOT_GIVEN",
+            "statement": "Modern psycholinguistics views language as an attentional spotlight rather than an absolute mental barrier.",
+            "key": "YES"
+          },
+          {
+            "number": 32,
+            "passage": 3,
+            "type": "SENTENCE_COMPLETION",
+            "key": "absolute geocentric"
+          },
+          {
+            "number": 33,
+            "passage": 3,
+            "type": "SENTENCE_COMPLETION",
+            "key": "vertical axis"
+          },
+          {
+            "number": 34,
+            "passage": 3,
+            "type": "SENTENCE_COMPLETION",
+            "key": "anthropomorphic semantic"
+          },
+          {
+            "number": 35,
+            "passage": 3,
+            "type": "SENTENCE_COMPLETION",
+            "key": "source of knowledge"
+          },
+          {
+            "number": 36,
+            "passage": 3,
+            "type": "SENTENCE_COMPLETION",
+            "key": "stimulus onset"
+          },
+          {
+            "number": 37,
+            "passage": 3,
+            "type": "MULTIPLE_CHOICE",
+            "question": "What did Eleanor Rosch's research on the Dani people demonstrate regarding color perception?",
+            "key": "B"
+          },
+          {
+            "number": 38,
+            "passage": 3,
+            "type": "MULTIPLE_CHOICE",
+            "question": "How does the Aymara language conceptualize temporal orientation?",
+            "key": "C"
+          },
+          {
+            "number": 39,
+            "passage": 3,
+            "type": "MULTIPLE_CHOICE",
+            "question": "Why are the lateralized visual experiments in Paragraph G significant?",
+            "key": "B"
+          },
+          {
+            "number": 40,
+            "passage": 3,
+            "type": "MULTIPLE_CHOICE",
+            "question": "What is the primary conclusion of the passage regarding the relationship between language and thought?",
+            "key": "C"
+          }
+        ]
+      }
+    ],
+    "allQuestions": [
+      {
+        "number": 1,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph B",
+        "key": "v"
+      },
+      {
+        "number": 2,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph C",
+        "key": "vii"
+      },
+      {
+        "number": 3,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph D",
+        "key": "iii"
+      },
+      {
+        "number": 4,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph E",
+        "key": "vi"
+      },
+      {
+        "number": 5,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph F",
+        "key": "i"
+      },
+      {
+        "number": 6,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph G",
+        "key": "iv"
+      },
+      {
+        "number": 7,
+        "passage": 1,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Functional neuroimaging verified that the inactive language shuts down completely during single-language communication.",
+        "key": "FALSE"
+      },
+      {
+        "number": 8,
+        "passage": 1,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Lifelong bilinguals prevent the physical accumulation of amyloid-beta plaques in brain tissue.",
+        "key": "FALSE"
+      },
+      {
+        "number": 9,
+        "passage": 1,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Multilingual advantages in executive tasks are more pronounced in tone-language speakers than non-tonal speakers.",
+        "key": "NOT GIVEN"
+      },
+      {
+        "number": 10,
+        "passage": 1,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Some researchers argue that academic journals favored publishing positive studies on bilingual cognitive performance.",
+        "key": "TRUE"
+      },
+      {
+        "number": 11,
+        "passage": 1,
+        "type": "SUMMARY_COMPLETION",
+        "key": "cognitive reserve"
+      },
+      {
+        "number": 12,
+        "passage": 1,
+        "type": "SUMMARY_COMPLETION",
+        "key": "frontoparietal network"
+      },
+      {
+        "number": 13,
+        "passage": 1,
+        "type": "SUMMARY_COMPLETION",
+        "key": "dimensional model"
+      },
+      {
+        "number": 14,
+        "passage": 2,
+        "type": "MATCHING_INFORMATION",
+        "key": "B",
+        "info": "The immense volume of ambient air required to capture a single ton of carbon dioxide"
+      },
+      {
+        "number": 15,
+        "passage": 2,
+        "type": "MATCHING_INFORMATION",
+        "key": "D",
+        "info": "The subterranean geochemical transformation of dissolved carbon into permanent solid stone"
+      },
+      {
+        "number": 16,
+        "passage": 2,
+        "type": "MATCHING_INFORMATION",
+        "key": "C",
+        "info": "A technical comparison between liquid hydroxide contactors and solid amine sorbent filters"
+      },
+      {
+        "number": 17,
+        "passage": 2,
+        "type": "MATCHING_INFORMATION",
+        "key": "G",
+        "info": "Ethical concerns that atmospheric removal could disincentivize immediate emissions cuts"
+      },
+      {
+        "number": 18,
+        "passage": 2,
+        "type": "MATCHING_INFORMATION",
+        "key": "F",
+        "info": "The operational necessity of powering capture hardware with dedicated zero-carbon energy sources"
+      },
+      {
+        "number": 19,
+        "passage": 2,
+        "type": "MATCHING_INFORMATION",
+        "key": "E",
+        "info": "Target economic price points and voluntary corporate carbon credit off-take agreements"
+      },
+      {
+        "number": 20,
+        "passage": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "According to Paragraph B, the primary thermodynamic hurdle facing Direct Air Capture is:",
+        "key": "B"
+      },
+      {
+        "number": 21,
+        "passage": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What unique advantage does the basaltic biomineralization method described in Paragraph D offer?",
+        "key": "C"
+      },
+      {
+        "number": 22,
+        "passage": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "Why do environmental critics express concern regarding DAC in Paragraph G?",
+        "key": "A"
+      },
+      {
+        "number": 23,
+        "passage": 2,
+        "type": "SENTENCE_COMPLETION",
+        "key": "monolithic honeycombs"
+      },
+      {
+        "number": 24,
+        "passage": 2,
+        "type": "SENTENCE_COMPLETION",
+        "key": "hydraulic pressure"
+      },
+      {
+        "number": 25,
+        "passage": 2,
+        "type": "SENTENCE_COMPLETION",
+        "key": "parasitic energy"
+      },
+      {
+        "number": 26,
+        "passage": 2,
+        "type": "SENTENCE_COMPLETION",
+        "key": "carbon accounting"
+      },
+      {
+        "number": 27,
+        "passage": 3,
+        "type": "YES_NO_NOT_GIVEN",
+        "statement": "The strong version of the Sapir-Whorf hypothesis has been discredited by modern cognitive researchers.",
+        "key": "YES"
+      },
+      {
+        "number": 28,
+        "passage": 3,
+        "type": "YES_NO_NOT_GIVEN",
+        "statement": "Guugu Yimithirr speakers struggle to determine cardinal directions when blindfolded in unfamiliar surroundings.",
+        "key": "NO"
+      },
+      {
+        "number": 29,
+        "passage": 3,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Aymara is the only known language that conceptualizes the future as lying behind the speaker.",
+        "key": "NOT GIVEN"
+      },
+      {
+        "number": 30,
+        "passage": 3,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Speakers of languages with evidential suffixes exhibit greater political skepticism than speakers of European languages.",
+        "key": "NOT GIVEN"
+      },
+      {
+        "number": 31,
+        "passage": 3,
+        "type": "YES_NO_NOT_GIVEN",
+        "statement": "Modern psycholinguistics views language as an attentional spotlight rather than an absolute mental barrier.",
+        "key": "YES"
+      },
+      {
+        "number": 32,
+        "passage": 3,
+        "type": "SENTENCE_COMPLETION",
+        "key": "absolute geocentric"
+      },
+      {
+        "number": 33,
+        "passage": 3,
+        "type": "SENTENCE_COMPLETION",
+        "key": "vertical axis"
+      },
+      {
+        "number": 34,
+        "passage": 3,
+        "type": "SENTENCE_COMPLETION",
+        "key": "anthropomorphic semantic"
+      },
+      {
+        "number": 35,
+        "passage": 3,
+        "type": "SENTENCE_COMPLETION",
+        "key": "source of knowledge"
+      },
+      {
+        "number": 36,
+        "passage": 3,
+        "type": "SENTENCE_COMPLETION",
+        "key": "stimulus onset"
+      },
+      {
+        "number": 37,
+        "passage": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What did Eleanor Rosch's research on the Dani people demonstrate regarding color perception?",
+        "key": "B"
+      },
+      {
+        "number": 38,
+        "passage": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "How does the Aymara language conceptualize temporal orientation?",
+        "key": "C"
+      },
+      {
+        "number": 39,
+        "passage": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "Why are the lateralized visual experiments in Paragraph G significant?",
+        "key": "B"
+      },
+      {
+        "number": 40,
+        "passage": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What is the primary conclusion of the passage regarding the relationship between language and thought?",
+        "key": "C"
+      }
+    ],
+    "fullMockQuestions": [
+      {
+        "number": 1,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph B",
+        "key": "v"
+      },
+      {
+        "number": 2,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph C",
+        "key": "vii"
+      },
+      {
+        "number": 3,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph D",
+        "key": "iii"
+      },
+      {
+        "number": 4,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph E",
+        "key": "vi"
+      },
+      {
+        "number": 5,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph F",
+        "key": "i"
+      },
+      {
+        "number": 6,
+        "passage": 1,
+        "type": "HEADING_MATCHING",
+        "target": "Paragraph G",
+        "key": "iv"
+      },
+      {
+        "number": 7,
+        "passage": 1,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Functional neuroimaging verified that the inactive language shuts down completely during single-language communication.",
+        "key": "FALSE"
+      },
+      {
+        "number": 8,
+        "passage": 1,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Lifelong bilinguals prevent the physical accumulation of amyloid-beta plaques in brain tissue.",
+        "key": "FALSE"
+      },
+      {
+        "number": 9,
+        "passage": 1,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Multilingual advantages in executive tasks are more pronounced in tone-language speakers than non-tonal speakers.",
+        "key": "NOT GIVEN"
+      },
+      {
+        "number": 10,
+        "passage": 1,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Some researchers argue that academic journals favored publishing positive studies on bilingual cognitive performance.",
+        "key": "TRUE"
+      },
+      {
+        "number": 11,
+        "passage": 1,
+        "type": "SUMMARY_COMPLETION",
+        "key": "cognitive reserve"
+      },
+      {
+        "number": 12,
+        "passage": 1,
+        "type": "SUMMARY_COMPLETION",
+        "key": "frontoparietal network"
+      },
+      {
+        "number": 13,
+        "passage": 1,
+        "type": "SUMMARY_COMPLETION",
+        "key": "dimensional model"
+      },
+      {
+        "number": 14,
+        "passage": 2,
+        "type": "MATCHING_INFORMATION",
+        "key": "B",
+        "info": "The immense volume of ambient air required to capture a single ton of carbon dioxide"
+      },
+      {
+        "number": 15,
+        "passage": 2,
+        "type": "MATCHING_INFORMATION",
+        "key": "D",
+        "info": "The subterranean geochemical transformation of dissolved carbon into permanent solid stone"
+      },
+      {
+        "number": 16,
+        "passage": 2,
+        "type": "MATCHING_INFORMATION",
+        "key": "C",
+        "info": "A technical comparison between liquid hydroxide contactors and solid amine sorbent filters"
+      },
+      {
+        "number": 17,
+        "passage": 2,
+        "type": "MATCHING_INFORMATION",
+        "key": "G",
+        "info": "Ethical concerns that atmospheric removal could disincentivize immediate emissions cuts"
+      },
+      {
+        "number": 18,
+        "passage": 2,
+        "type": "MATCHING_INFORMATION",
+        "key": "F",
+        "info": "The operational necessity of powering capture hardware with dedicated zero-carbon energy sources"
+      },
+      {
+        "number": 19,
+        "passage": 2,
+        "type": "MATCHING_INFORMATION",
+        "key": "E",
+        "info": "Target economic price points and voluntary corporate carbon credit off-take agreements"
+      },
+      {
+        "number": 20,
+        "passage": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "According to Paragraph B, the primary thermodynamic hurdle facing Direct Air Capture is:",
+        "key": "B"
+      },
+      {
+        "number": 21,
+        "passage": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What unique advantage does the basaltic biomineralization method described in Paragraph D offer?",
+        "key": "C"
+      },
+      {
+        "number": 22,
+        "passage": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "Why do environmental critics express concern regarding DAC in Paragraph G?",
+        "key": "A"
+      },
+      {
+        "number": 23,
+        "passage": 2,
+        "type": "SENTENCE_COMPLETION",
+        "key": "monolithic honeycombs"
+      },
+      {
+        "number": 24,
+        "passage": 2,
+        "type": "SENTENCE_COMPLETION",
+        "key": "hydraulic pressure"
+      },
+      {
+        "number": 25,
+        "passage": 2,
+        "type": "SENTENCE_COMPLETION",
+        "key": "parasitic energy"
+      },
+      {
+        "number": 26,
+        "passage": 2,
+        "type": "SENTENCE_COMPLETION",
+        "key": "carbon accounting"
+      },
+      {
+        "number": 27,
+        "passage": 3,
+        "type": "YES_NO_NOT_GIVEN",
+        "statement": "The strong version of the Sapir-Whorf hypothesis has been discredited by modern cognitive researchers.",
+        "key": "YES"
+      },
+      {
+        "number": 28,
+        "passage": 3,
+        "type": "YES_NO_NOT_GIVEN",
+        "statement": "Guugu Yimithirr speakers struggle to determine cardinal directions when blindfolded in unfamiliar surroundings.",
+        "key": "NO"
+      },
+      {
+        "number": 29,
+        "passage": 3,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Aymara is the only known language that conceptualizes the future as lying behind the speaker.",
+        "key": "NOT GIVEN"
+      },
+      {
+        "number": 30,
+        "passage": 3,
+        "type": "TRUE_FALSE_NOT_GIVEN",
+        "statement": "Speakers of languages with evidential suffixes exhibit greater political skepticism than speakers of European languages.",
+        "key": "NOT GIVEN"
+      },
+      {
+        "number": 31,
+        "passage": 3,
+        "type": "YES_NO_NOT_GIVEN",
+        "statement": "Modern psycholinguistics views language as an attentional spotlight rather than an absolute mental barrier.",
+        "key": "YES"
+      },
+      {
+        "number": 32,
+        "passage": 3,
+        "type": "SENTENCE_COMPLETION",
+        "key": "absolute geocentric"
+      },
+      {
+        "number": 33,
+        "passage": 3,
+        "type": "SENTENCE_COMPLETION",
+        "key": "vertical axis"
+      },
+      {
+        "number": 34,
+        "passage": 3,
+        "type": "SENTENCE_COMPLETION",
+        "key": "anthropomorphic semantic"
+      },
+      {
+        "number": 35,
+        "passage": 3,
+        "type": "SENTENCE_COMPLETION",
+        "key": "source of knowledge"
+      },
+      {
+        "number": 36,
+        "passage": 3,
+        "type": "SENTENCE_COMPLETION",
+        "key": "stimulus onset"
+      },
+      {
+        "number": 37,
+        "passage": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What did Eleanor Rosch's research on the Dani people demonstrate regarding color perception?",
+        "key": "B"
+      },
+      {
+        "number": 38,
+        "passage": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "How does the Aymara language conceptualize temporal orientation?",
+        "key": "C"
+      },
+      {
+        "number": 39,
+        "passage": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "Why are the lateralized visual experiments in Paragraph G significant?",
+        "key": "B"
+      },
+      {
+        "number": 40,
+        "passage": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What is the primary conclusion of the passage regarding the relationship between language and thought?",
+        "key": "C"
+      }
+    ],
+    "totalQuestions": 40
+  },
+  "listening": {
+    "meta": {
+      "title": "IELTS Listening Complete Mock Test",
+      "totalSections": 4,
+      "totalQuestions": 40,
+      "audioDurationMinutes": 30,
+      "transferTimeMinutes": 10,
+      "standards": "Cambridge Listening Specifications"
+    },
+    "sections": [
+      {
+        "sectionNumber": 1,
+        "title": "Community Solar Co-operative Membership Intake",
+        "transcript": "*CLERK: Good morning, Greenfields Community Solar Co-operative, David speaking. How can I help you today?*  \n*CALLER: Hello there. I saw your presentation at the district environmental forum last Thursday, and I'd like to register as an active household subscriber before the autumn allocation closes.*  \n*CLERK: Excellent. I can set up your subscriber intake right now. May I take your full name, please?*  \n*CALLER: Yes, it's Julian Sterling. That's S-T-E-R-L-I-N-G.*  \n*CLERK: Thank you, Mr. Sterling. And your current residential address?*  \n*CALLER: Number 42 Bramblewood Lane, Highfield.*  \n*CLERK: Is that B-R-A-M-B-L-E-W-O-O-D?*  \n*CALLER: Yes, precisely. And the postal code is HF8 4WZ.*  \n*CLERK: Got that. Now, what type of property is that—detached, semi-detached, or an apartment?*  \n*CALLER: It's a terraced cottage, built around 1920. Solid brick walls, unfortunately.*  \n*CLERK: Understood. That helps our engineers assess your rooftop structural compatibility. Now, regarding your current energy consumption, do you happen to have your annual electricity usage figure from your latest utility statement?*  \n*CALLER: Let me check my file... Ah yes, last year our annual consumption was approximately 3,400 kilowatt hours.*  \n*CLERK: That's right in the average bracket for a two-bedroom cottage. Now, which subscription tier were you looking at? We have the Tier 1 Community Shared Panel allocation, Tier 2 Direct Rooftop Array, and Tier 3 Battery Storage Integration.*  \n*CALLER: I'm primarily interested in the Community Shared Panel scheme, as our cottage roof faces northeast and gets significant morning shade.*  \n*CLERK: That's very common in Highfield. With the Community Shared scheme, your generation units come directly from our solar farm on the southern ridge. The quarterly membership contribution is ninety-five pounds.*  \n*CALLER: Ninety-five pounds per quarter, that sounds very reasonable.*  \n*CLERK: And regarding your preferred billing cycle and payment method, do you prefer monthly direct debit or quarterly invoice?*  \n*CALLER: Monthly direct debit is easiest for our household budgeting.*  \n*CLERK: Wonderful. Lastly, we need to schedule your site verification assessment. Our solar surveyor will visit to check your electrical consumer unit and smart meter installation. We have slots available on Tuesday the 14th of October or Thursday the 16th.*  \n*CALLER: Tuesday the 14th would suit me best, morning if possible.*  \n*CLERK: I have a slot at 10:30 AM on Tuesday the 14th of October with our engineer, Marcus Thorne. Does that suit?*  \n*CALLER: 10:30 AM is perfect.*  \n*CLERK: Brilliant. You will receive a confirmation pack by email with your reference code: SOL-8824. Welcome to the co-operative, Mr. Sterling!*",
+        "questions": [
+          {
+            "number": 1,
+            "section": 1,
+            "type": "FORM_COMPLETION",
+            "prompt": "Street Address",
+            "prefix": "",
+            "key": "42 Bramblewood"
+          },
+          {
+            "number": 2,
+            "section": 1,
+            "type": "FORM_COMPLETION",
+            "prompt": "Postal Code",
+            "prefix": "",
+            "key": "HF8 4WZ"
+          },
+          {
+            "number": 3,
+            "section": 1,
+            "type": "FORM_COMPLETION",
+            "prompt": "Property Type",
+            "prefix": "",
+            "key": "terraced cottage"
+          },
+          {
+            "number": 4,
+            "section": 1,
+            "type": "FORM_COMPLETION",
+            "prompt": "Annual Energy Usage",
+            "prefix": "",
+            "key": "3400"
+          },
+          {
+            "number": 5,
+            "section": 1,
+            "type": "FORM_COMPLETION",
+            "prompt": "Subscription Scheme",
+            "prefix": "",
+            "key": "Community Shared"
+          },
+          {
+            "number": 6,
+            "section": 1,
+            "type": "FORM_COMPLETION",
+            "prompt": "Quarterly Fee",
+            "prefix": "",
+            "key": "95 pounds"
+          },
+          {
+            "number": 7,
+            "section": 1,
+            "type": "FORM_COMPLETION",
+            "prompt": "Payment Method",
+            "prefix": "",
+            "key": "monthly direct debit"
+          },
+          {
+            "number": 8,
+            "section": 1,
+            "type": "FORM_COMPLETION",
+            "prompt": "Assessment Date",
+            "prefix": "",
+            "key": "14th October"
+          },
+          {
+            "number": 9,
+            "section": 1,
+            "type": "FORM_COMPLETION",
+            "prompt": "Surveyor Name",
+            "prefix": "Marcus",
+            "key": "Thorne"
+          },
+          {
+            "number": 10,
+            "section": 1,
+            "type": "FORM_COMPLETION",
+            "prompt": "Membership Reference",
+            "prefix": "",
+            "key": "SOL-8824"
+          }
+        ]
+      },
+      {
+        "sectionNumber": 2,
+        "title": "Riverside Eco-Park & Community Food Forest Tour",
+        "transcript": "*GUIDE: Good afternoon everyone, and a warm welcome to the Riverside Eco-Park and Community Food Forest. My name is Hannah, and I'll be your guide today. Before we set off along the central boardwalk, let me give you a quick orientation using the visitor map in your hands.*\n\n*We are currently standing right here at the Visitor Pavilion, directly adjacent to the main car park on the western perimeter. If you look straight ahead to the east, the main path runs through the centre of the park toward the river weir.*\n\n*First, let's talk about the key amenities. Immediately to your left, just north of the Visitor Pavilion, is our Organic Seed Bank and Heritage Nursery. This is where local horticulturalists cultivate heirloom fruit varieties, and you can purchase non-hybrid seeds here every weekend.*\n\n*Now, if you follow the northern curved pathway heading toward the wetlands, you will see a large circular timber structure nestled among the weeping willows. That is the Bird Watching Hide. It was constructed entirely from reclaimed cedar shingles, and it offers panoramic views of the tidal mudflats, particularly during the autumn migration when spoonbills and avocets feed in the reed beds.*\n\n*Returning to the central avenue and walking eastward, you'll cross the Willow Creek Footbridge. Immediately south of the footbridge lies the Children's Nature Play Area. We've avoided plastic playground equipment; instead, it features natural oak balancing logs, a sand-quarry pit, and living willow tunnels that children can weave through.*\n\n*Continuing past the play area toward the southeast corner of the park, nestled against the ancient hazel coppice, is our Eco-Composting Education Hub. Here, master composters demonstrate hot-aerobic composting and vermiculture techniques, converting municipal green waste into nutrient-rich soil improver.*\n\n*Finally, right at the eastern terminus where the main avenue meets the riverbank, stands our Solar-Powered Pumping Station. This architectural showpiece pumps clean filtered river water into our irrigation canals using photovoltaic solar arrays on its curved living-turf roof.*",
+        "questions": [
+          {
+            "number": 11,
+            "section": 2,
+            "type": "MULTIPLE_CHOICE",
+            "question": "What is the primary operational objective of the Riverside Eco-Park?",
+            "key": "B"
+          },
+          {
+            "number": 12,
+            "section": 2,
+            "type": "MULTIPLE_CHOICE",
+            "question": "What distinctive material was used to build the Bird Watching Hide?",
+            "key": "B"
+          },
+          {
+            "number": 13,
+            "section": 2,
+            "type": "MULTIPLE_CHOICE",
+            "question": "The Children's Nature Play Area emphasizes:",
+            "key": "B"
+          },
+          {
+            "number": 14,
+            "section": 2,
+            "type": "MULTIPLE_CHOICE",
+            "question": "What practical technique is demonstrated at the Eco-Composting Hub?",
+            "key": "B"
+          },
+          {
+            "number": 15,
+            "section": 2,
+            "type": "MULTIPLE_CHOICE",
+            "question": "How is the river irrigation pump powered at the eastern terminus?",
+            "key": "C"
+          },
+          {
+            "number": 16,
+            "section": 2,
+            "type": "MAP_MATCHING",
+            "locationPrompt": "Organic Seed Bank & Heritage Nursery",
+            "key": "A",
+            "facility": "North of the Visitor Pavilion"
+          },
+          {
+            "number": 17,
+            "section": 2,
+            "type": "MAP_MATCHING",
+            "locationPrompt": "Bird Watching Hide",
+            "key": "B",
+            "facility": "Circular timber pavilion nestled among willows near the northern wetland"
+          },
+          {
+            "number": 18,
+            "section": 2,
+            "type": "MAP_MATCHING",
+            "locationPrompt": "Willow Creek Footbridge",
+            "key": "C",
+            "facility": "Central crossing point connecting eastern and western sectors"
+          },
+          {
+            "number": 19,
+            "section": 2,
+            "type": "MAP_MATCHING",
+            "locationPrompt": "Children's Nature Play Area",
+            "key": "D",
+            "facility": "Directly south of the Willow Creek Footbridge"
+          },
+          {
+            "number": 20,
+            "section": 2,
+            "type": "MAP_MATCHING",
+            "locationPrompt": "Solar Pumping Station",
+            "key": "E",
+            "facility": "Eastern riverbank terminus adjacent to the river weir"
+          }
+        ]
+      },
+      {
+        "sectionNumber": 3,
+        "title": "Postgraduate Research Methodology: Oceanic Microplastic Degradation",
+        "transcript": "*DR. THORNE: Come in, Elena, take a seat. I've read through the preliminary research proposal for your Master's thesis on coastal microplastic degradation. You've made significant progress, but I have a few methodological questions before we sign off on your laboratory ethics protocol.*\n\n*ELENA: Thank you, Dr. Thorne. Yes, I was eager to get your feedback, particularly regarding our sample gathering along the Solent coastline.*\n\n*DR. THORNE: Let's start with the sampling phase. In your methodology notes, you mentioned running five separate surface water trawls using a 330-micrometer manta trawl. What was the most significant hurdle during that inaugural collection voyage?*\n\n*ELENA: Well, the boat's winches and mechanical flow-meters operated smoothly. However, the sheer volume of airborne synthetic fibers from the research vessel's own crew clothing and polyester mooring lines presented a massive atmospheric contamination risk. We had to implement strict nitrile-glove and cotton-boiler-suit protocols, and keep field blank petri dishes exposed during every single deployment to quantify the aerial fallout.*\n\n*DR. THORNE: That was an astute precaution. Without atmospheric blanks, your particle counts would have been skewed significantly. Now, looking at your analytical pipeline, you initially proposed identifying polymer types via visual inspection under a stereomicroscope. I'd urge caution there.*\n\n*ELENA: Because visual inspection has a high false-positive rate?*\n\n*DR. THORNE: Exactly. At micro-scales below one millimeter, transparent cotton cellulose, chitin fragments, and glass fibers mimic degraded polyethylene particles almost identically. You need robust chemical spectroscopic validation.*\n\n*ELENA: Right. We've booked time on the Fourier-Transform Infrared, or FTIR, spectrometer. The attenuated total reflectance attachment will allow us to measure the infrared absorption spectrum of each particle and cross-match it against the international polymer library.*\n\n*DR. THORNE: That's far more defensible. Now, looking at your preliminary estuarine data from the Hamble River estuary, what was the most unexpected observation?*\n\n*ELENA: We anticipated finding high concentrations of high-density polyethylene near the marina. But surprisingly, the density distribution didn't align with standard buoyancy models. Microbial biofilm colonization—the plastisphere—was so dense on low-density polypropylene fragments that it caused them to sink rapidly into benthic sediments, completely altering their hydraulic buoyancy.*\n\n*DR. THORNE: A fascinating biological variable! Biofouling often destabilizes traditional hydrological dispersion models. For your thesis milestone schedule, what is your immediate priority for the upcoming month?*\n\n*ELENA: I was considering preparing an abstract for the European Marine Science Symposium.*\n\n*DR. THORNE: While conferences are valuable, I'd strongly advise cross-referencing your estuarine particle trajectory simulations with regional satellite oceanographic telemetry first. Calibrating your empirical counts against satellite tidal models will give your findings much greater statistical authority.*\n\n*ELENA: That makes sense. Now, regarding our secondary laboratory assays, we have five distinct protocols to process the sediment samples. Could we review their specific analytical benefits?*\n\n*DR. THORNE: Certainly. Let's run through them:*  \n*First, Enzymatic Digestion. Why use enzymes instead of harsh hydrogen peroxide or nitric acid?*  \n*ELENA: Harsh acid dissolves organic debris, but it also degrades vulnerable synthetic polyamide polymers like nylon. Protease enzymes eliminate organic interfering biofilms without degrading the underlying plastic matrix.*\n\n*DR. THORNE: Second, Micro-Raman Spectroscopy.*  \n*ELENA: That's our non-destructive spectroscopic tool. Because Raman uses a focused laser beam, it guarantees non-destructive sample preservation down to one micrometer.*\n\n*DR. THORNE: Third, Thermal Gravimetric Analysis, or TGA.*  \n*ELENA: We use TGA for composite samples. By heating the sample under nitrogen and recording the exact decomposition temperature curves, TGA quantifies the exact chemical polymer ratios in multi-layer packaging.*\n\n*DR. THORNE: Fourth, Scanning Electron Microscopy (SEM).*  \n*ELENA: That provides high-resolution nanoscale electron imaging. It allows us to identify localized chemical weathering cracks, micro-pitting, and surface mechanical abrasion marks.*\n\n*DR. THORNE: And finally, Automated Nile Red Fluorescence Staining.*  \n*ELENA: Nile Red binds to hydrophobic synthetic surfaces and fluoresces under blue light excitation. An automated digital camera counts particles in seconds, accelerating high-throughput batch sorting across hundreds of sediment cores.*\n\n*DR. THORNE: Excellent. Update your methodology chapter with those rationales, and we'll convene next Tuesday.*",
+        "questions": [
+          {
+            "number": 21,
+            "section": 3,
+            "type": "MULTIPLE_CHOICE",
+            "question": "What was Elena's primary difficulty during the inaugural coastal water sampling?",
+            "key": "B"
+          },
+          {
+            "number": 22,
+            "section": 3,
+            "type": "MULTIPLE_CHOICE",
+            "question": "Why did Dr. Thorne advise against visual inspection under a stereomicroscope?",
+            "key": "A"
+          },
+          {
+            "number": 23,
+            "section": 3,
+            "type": "MULTIPLE_CHOICE",
+            "question": "Which analytical tool did Elena select for definitive chemical polymer validation?",
+            "key": "B"
+          },
+          {
+            "number": 24,
+            "section": 3,
+            "type": "MULTIPLE_CHOICE",
+            "question": "What unexpected phenomenon did the preliminary estuarine data demonstrate?",
+            "key": "C"
+          },
+          {
+            "number": 25,
+            "section": 3,
+            "type": "MULTIPLE_CHOICE",
+            "question": "What next step did Dr. Thorne recommend for Elena's research timeline?",
+            "key": "C"
+          },
+          {
+            "number": 26,
+            "section": 3,
+            "type": "MATCHING",
+            "prompt": "Enzymatic Digestion",
+            "key": "B"
+          },
+          {
+            "number": 27,
+            "section": 3,
+            "type": "MATCHING",
+            "prompt": "Micro-Raman Spectroscopy",
+            "key": "A"
+          },
+          {
+            "number": 28,
+            "section": 3,
+            "type": "MATCHING",
+            "prompt": "Thermal Gravimetric Analysis",
+            "key": "C"
+          },
+          {
+            "number": 29,
+            "section": 3,
+            "type": "MATCHING",
+            "prompt": "Scanning Electron Microscopy (SEM)",
+            "key": "E"
+          },
+          {
+            "number": 30,
+            "section": 3,
+            "type": "MATCHING",
+            "prompt": "Automated Nile Red Fluorescence",
+            "key": "F"
+          }
+        ]
+      },
+      {
+        "sectionNumber": 4,
+        "title": "Biomimetic Architectural Engineering & Termite Mound Thermodynamics",
+        "transcript": "*PROFESSOR VANCE: Good morning, ladies and gentlemen. In today's lecture on architectural biomimicry, we are examining one of nature's most sophisticated thermodynamic engineers: the African mound-building termite, specifically the species Macrotermes michaelseni.*\n\n*For decades, standard architectural and biological textbooks propagated a romantic, but largely inaccurate, theory known as the thermosiphon hypothesis. According to this traditional view, the massive central chimney of a termite mound acted as a solar chimney. Heat generated by the millions of termites and their subterranean fungal combs was thought to rise via natural thermal convection, exiting through the top spire, while cool subterranean air was drawn in through underground channels.*\n\n*However, groundbreaking micro-sensor telemetry conducted by biological engineers using ultrasonic anemometers has dismantled this model. Researchers discovered that interior air currents do not circulate in a steady, unidirectional thermosiphon loop. Instead, the mound breathes dynamically. Wind blowing across the exterior surface generates high- and low-pressure fluctuations across porous surface conduits, driving rhythmic pulses of gas exchange into the core of the mound, analogous to a human lung expanding and contracting.*\n\n*Now let us examine the core thermodynamic mechanism: temperature homeostasis. The subterranean fungal combs cultivated by termites require an extraordinarily stable microclimate. The queen and fungal colonies perish if temperatures fluctuate beyond narrow tolerances. Remarkably, despite exterior ambient desert temperatures swinging from forty-five degrees Celsius during the day to near freezing at night, the internal core temperature remains regulated within just one degree Celsius.*\n\n*How is this achieved? The primary mechanism is exceptional thermal mass. The mound walls, constructed from a dense composite of clay, sand, and termite saliva, are up to forty centimeters thick. During peak daylight, this immense thermal mass absorbs solar radiation slowly, preventing external thermal shocks from penetrating into the brood chambers. Then, during the cold nocturnal hours, this accumulated heat radiates outward, keeping the interior core warm.*\n\n*Simultaneously, the mound's complex network of micro-porous tunnels facilitates the continuous dissipation of metabolic carbon dioxide. Without this gas permeability, the subterranean fungal gardens would rapidly asphyxiate in their own metabolic emissions.*\n\n*In the mid-1990s, pioneering Zimbabwean architect Mick Pearce collaborated with engineering firm Arup to translate these biological principles into human civil architecture. The result was the Eastgate Centre, a three hundred and fifty thousand square foot office and shopping complex in central Harare.*\n\n*Pearce eliminated conventional, energy-intensive air conditioning chillers entirely. Instead, he designed the building utilizing concrete thermal mass and hollow floor slabs. At night, thirty-two electric fans located in the basement pull cool nighttime air into the building, flushing the warmth of the previous day out through vertical exhaust chimneys on the rooftop. During the heat of the following day, the pre-cooled concrete slabs absorb heat from office computers and occupants, maintaining indoor comfort without refrigeration.*\n\n*The architectural outcome was dramatic. The Eastgate Centre reduced HVAC electricity consumption by thirty-five percent compared to conventional air-conditioned buildings of equivalent scale in Harare, saving millions of dollars in mechanical infrastructure and carbon emissions.*\n\n*Today, biomimetic building research is advancing into next-generation computational materials. Material scientists are utilizing 3D-printing technologies to fabricate modular ceramic wall panels with engineered micro-porosity. These adaptive facades dynamically regulate passive air infiltration and humidity, opening new frontiers for zero-carbon, naturally ventilated urban architecture.*",
+        "questions": [
+          {
+            "number": 31,
+            "section": 4,
+            "type": "NOTE_COMPLETION",
+            "context": "Traditional theory incorrectly assumed air circulated via a subterranean",
+            "key": "thermosiphon"
+          },
+          {
+            "number": 32,
+            "section": 4,
+            "type": "NOTE_COMPLETION",
+            "context": "Ultrasonic anemometer sensors revealed wind currents create rhythmic",
+            "key": "pulses"
+          },
+          {
+            "number": 33,
+            "section": 4,
+            "type": "NOTE_COMPLETION",
+            "context": "The mound core temperature is regulated within",
+            "key": "one degree"
+          },
+          {
+            "number": 34,
+            "section": 4,
+            "type": "NOTE_COMPLETION",
+            "context": "The mound exterior envelope provides massive",
+            "key": "thermal mass"
+          },
+          {
+            "number": 35,
+            "section": 4,
+            "type": "NOTE_COMPLETION",
+            "context": "Stored energy is gradually released during cold",
+            "key": "nocturnal"
+          },
+          {
+            "number": 36,
+            "section": 4,
+            "type": "NOTE_COMPLETION",
+            "context": "Micro-porous tunnel networks allow continuous venting of toxic",
+            "key": "carbon dioxide"
+          },
+          {
+            "number": 37,
+            "section": 4,
+            "type": "NOTE_COMPLETION",
+            "context": "Architect Mick Pearce designed the Harare complex without conventional",
+            "key": "air conditioning"
+          },
+          {
+            "number": 38,
+            "section": 4,
+            "type": "NOTE_COMPLETION",
+            "context": "Basement fans draw ambient nighttime air upwards through specialized rooftop",
+            "key": "chimneys"
+          },
+          {
+            "number": 39,
+            "section": 4,
+            "type": "NOTE_COMPLETION",
+            "context": "The passive biomimetic cooling system reduced HVAC electricity usage by",
+            "key": "35 percent"
+          },
+          {
+            "number": 40,
+            "section": 4,
+            "type": "NOTE_COMPLETION",
+            "context": "Contemporary research utilizes 3D-printed ceramic facades with engineered",
+            "key": "micro-porosity"
+          }
+        ]
+      }
+    ],
+    "section1": {
+      "sectionNumber": 1,
+      "title": "Community Solar Co-operative Membership Intake",
+      "transcript": "*CLERK: Good morning, Greenfields Community Solar Co-operative, David speaking. How can I help you today?*  \n*CALLER: Hello there. I saw your presentation at the district environmental forum last Thursday, and I'd like to register as an active household subscriber before the autumn allocation closes.*  \n*CLERK: Excellent. I can set up your subscriber intake right now. May I take your full name, please?*  \n*CALLER: Yes, it's Julian Sterling. That's S-T-E-R-L-I-N-G.*  \n*CLERK: Thank you, Mr. Sterling. And your current residential address?*  \n*CALLER: Number 42 Bramblewood Lane, Highfield.*  \n*CLERK: Is that B-R-A-M-B-L-E-W-O-O-D?*  \n*CALLER: Yes, precisely. And the postal code is HF8 4WZ.*  \n*CLERK: Got that. Now, what type of property is that—detached, semi-detached, or an apartment?*  \n*CALLER: It's a terraced cottage, built around 1920. Solid brick walls, unfortunately.*  \n*CLERK: Understood. That helps our engineers assess your rooftop structural compatibility. Now, regarding your current energy consumption, do you happen to have your annual electricity usage figure from your latest utility statement?*  \n*CALLER: Let me check my file... Ah yes, last year our annual consumption was approximately 3,400 kilowatt hours.*  \n*CLERK: That's right in the average bracket for a two-bedroom cottage. Now, which subscription tier were you looking at? We have the Tier 1 Community Shared Panel allocation, Tier 2 Direct Rooftop Array, and Tier 3 Battery Storage Integration.*  \n*CALLER: I'm primarily interested in the Community Shared Panel scheme, as our cottage roof faces northeast and gets significant morning shade.*  \n*CLERK: That's very common in Highfield. With the Community Shared scheme, your generation units come directly from our solar farm on the southern ridge. The quarterly membership contribution is ninety-five pounds.*  \n*CALLER: Ninety-five pounds per quarter, that sounds very reasonable.*  \n*CLERK: And regarding your preferred billing cycle and payment method, do you prefer monthly direct debit or quarterly invoice?*  \n*CALLER: Monthly direct debit is easiest for our household budgeting.*  \n*CLERK: Wonderful. Lastly, we need to schedule your site verification assessment. Our solar surveyor will visit to check your electrical consumer unit and smart meter installation. We have slots available on Tuesday the 14th of October or Thursday the 16th.*  \n*CALLER: Tuesday the 14th would suit me best, morning if possible.*  \n*CLERK: I have a slot at 10:30 AM on Tuesday the 14th of October with our engineer, Marcus Thorne. Does that suit?*  \n*CALLER: 10:30 AM is perfect.*  \n*CLERK: Brilliant. You will receive a confirmation pack by email with your reference code: SOL-8824. Welcome to the co-operative, Mr. Sterling!*",
+      "questions": [
+        {
+          "number": 1,
+          "section": 1,
+          "type": "FORM_COMPLETION",
+          "prompt": "Street Address",
+          "prefix": "",
+          "key": "42 Bramblewood"
+        },
+        {
+          "number": 2,
+          "section": 1,
+          "type": "FORM_COMPLETION",
+          "prompt": "Postal Code",
+          "prefix": "",
+          "key": "HF8 4WZ"
+        },
+        {
+          "number": 3,
+          "section": 1,
+          "type": "FORM_COMPLETION",
+          "prompt": "Property Type",
+          "prefix": "",
+          "key": "terraced cottage"
+        },
+        {
+          "number": 4,
+          "section": 1,
+          "type": "FORM_COMPLETION",
+          "prompt": "Annual Energy Usage",
+          "prefix": "",
+          "key": "3400"
+        },
+        {
+          "number": 5,
+          "section": 1,
+          "type": "FORM_COMPLETION",
+          "prompt": "Subscription Scheme",
+          "prefix": "",
+          "key": "Community Shared"
+        },
+        {
+          "number": 6,
+          "section": 1,
+          "type": "FORM_COMPLETION",
+          "prompt": "Quarterly Fee",
+          "prefix": "",
+          "key": "95 pounds"
+        },
+        {
+          "number": 7,
+          "section": 1,
+          "type": "FORM_COMPLETION",
+          "prompt": "Payment Method",
+          "prefix": "",
+          "key": "monthly direct debit"
+        },
+        {
+          "number": 8,
+          "section": 1,
+          "type": "FORM_COMPLETION",
+          "prompt": "Assessment Date",
+          "prefix": "",
+          "key": "14th October"
+        },
+        {
+          "number": 9,
+          "section": 1,
+          "type": "FORM_COMPLETION",
+          "prompt": "Surveyor Name",
+          "prefix": "Marcus",
+          "key": "Thorne"
+        },
+        {
+          "number": 10,
+          "section": 1,
+          "type": "FORM_COMPLETION",
+          "prompt": "Membership Reference",
+          "prefix": "",
+          "key": "SOL-8824"
+        }
+      ]
+    },
+    "section2": {
+      "sectionNumber": 2,
+      "title": "Riverside Eco-Park & Community Food Forest Tour",
+      "transcript": "*GUIDE: Good afternoon everyone, and a warm welcome to the Riverside Eco-Park and Community Food Forest. My name is Hannah, and I'll be your guide today. Before we set off along the central boardwalk, let me give you a quick orientation using the visitor map in your hands.*\n\n*We are currently standing right here at the Visitor Pavilion, directly adjacent to the main car park on the western perimeter. If you look straight ahead to the east, the main path runs through the centre of the park toward the river weir.*\n\n*First, let's talk about the key amenities. Immediately to your left, just north of the Visitor Pavilion, is our Organic Seed Bank and Heritage Nursery. This is where local horticulturalists cultivate heirloom fruit varieties, and you can purchase non-hybrid seeds here every weekend.*\n\n*Now, if you follow the northern curved pathway heading toward the wetlands, you will see a large circular timber structure nestled among the weeping willows. That is the Bird Watching Hide. It was constructed entirely from reclaimed cedar shingles, and it offers panoramic views of the tidal mudflats, particularly during the autumn migration when spoonbills and avocets feed in the reed beds.*\n\n*Returning to the central avenue and walking eastward, you'll cross the Willow Creek Footbridge. Immediately south of the footbridge lies the Children's Nature Play Area. We've avoided plastic playground equipment; instead, it features natural oak balancing logs, a sand-quarry pit, and living willow tunnels that children can weave through.*\n\n*Continuing past the play area toward the southeast corner of the park, nestled against the ancient hazel coppice, is our Eco-Composting Education Hub. Here, master composters demonstrate hot-aerobic composting and vermiculture techniques, converting municipal green waste into nutrient-rich soil improver.*\n\n*Finally, right at the eastern terminus where the main avenue meets the riverbank, stands our Solar-Powered Pumping Station. This architectural showpiece pumps clean filtered river water into our irrigation canals using photovoltaic solar arrays on its curved living-turf roof.*",
+      "questions": [
+        {
+          "number": 11,
+          "section": 2,
+          "type": "MULTIPLE_CHOICE",
+          "question": "What is the primary operational objective of the Riverside Eco-Park?",
+          "key": "B"
+        },
+        {
+          "number": 12,
+          "section": 2,
+          "type": "MULTIPLE_CHOICE",
+          "question": "What distinctive material was used to build the Bird Watching Hide?",
+          "key": "B"
+        },
+        {
+          "number": 13,
+          "section": 2,
+          "type": "MULTIPLE_CHOICE",
+          "question": "The Children's Nature Play Area emphasizes:",
+          "key": "B"
+        },
+        {
+          "number": 14,
+          "section": 2,
+          "type": "MULTIPLE_CHOICE",
+          "question": "What practical technique is demonstrated at the Eco-Composting Hub?",
+          "key": "B"
+        },
+        {
+          "number": 15,
+          "section": 2,
+          "type": "MULTIPLE_CHOICE",
+          "question": "How is the river irrigation pump powered at the eastern terminus?",
+          "key": "C"
+        },
+        {
+          "number": 16,
+          "section": 2,
+          "type": "MAP_MATCHING",
+          "locationPrompt": "Organic Seed Bank & Heritage Nursery",
+          "key": "A",
+          "facility": "North of the Visitor Pavilion"
+        },
+        {
+          "number": 17,
+          "section": 2,
+          "type": "MAP_MATCHING",
+          "locationPrompt": "Bird Watching Hide",
+          "key": "B",
+          "facility": "Circular timber pavilion nestled among willows near the northern wetland"
+        },
+        {
+          "number": 18,
+          "section": 2,
+          "type": "MAP_MATCHING",
+          "locationPrompt": "Willow Creek Footbridge",
+          "key": "C",
+          "facility": "Central crossing point connecting eastern and western sectors"
+        },
+        {
+          "number": 19,
+          "section": 2,
+          "type": "MAP_MATCHING",
+          "locationPrompt": "Children's Nature Play Area",
+          "key": "D",
+          "facility": "Directly south of the Willow Creek Footbridge"
+        },
+        {
+          "number": 20,
+          "section": 2,
+          "type": "MAP_MATCHING",
+          "locationPrompt": "Solar Pumping Station",
+          "key": "E",
+          "facility": "Eastern riverbank terminus adjacent to the river weir"
+        }
+      ]
+    },
+    "section3": {
+      "sectionNumber": 3,
+      "title": "Postgraduate Research Methodology: Oceanic Microplastic Degradation",
+      "transcript": "*DR. THORNE: Come in, Elena, take a seat. I've read through the preliminary research proposal for your Master's thesis on coastal microplastic degradation. You've made significant progress, but I have a few methodological questions before we sign off on your laboratory ethics protocol.*\n\n*ELENA: Thank you, Dr. Thorne. Yes, I was eager to get your feedback, particularly regarding our sample gathering along the Solent coastline.*\n\n*DR. THORNE: Let's start with the sampling phase. In your methodology notes, you mentioned running five separate surface water trawls using a 330-micrometer manta trawl. What was the most significant hurdle during that inaugural collection voyage?*\n\n*ELENA: Well, the boat's winches and mechanical flow-meters operated smoothly. However, the sheer volume of airborne synthetic fibers from the research vessel's own crew clothing and polyester mooring lines presented a massive atmospheric contamination risk. We had to implement strict nitrile-glove and cotton-boiler-suit protocols, and keep field blank petri dishes exposed during every single deployment to quantify the aerial fallout.*\n\n*DR. THORNE: That was an astute precaution. Without atmospheric blanks, your particle counts would have been skewed significantly. Now, looking at your analytical pipeline, you initially proposed identifying polymer types via visual inspection under a stereomicroscope. I'd urge caution there.*\n\n*ELENA: Because visual inspection has a high false-positive rate?*\n\n*DR. THORNE: Exactly. At micro-scales below one millimeter, transparent cotton cellulose, chitin fragments, and glass fibers mimic degraded polyethylene particles almost identically. You need robust chemical spectroscopic validation.*\n\n*ELENA: Right. We've booked time on the Fourier-Transform Infrared, or FTIR, spectrometer. The attenuated total reflectance attachment will allow us to measure the infrared absorption spectrum of each particle and cross-match it against the international polymer library.*\n\n*DR. THORNE: That's far more defensible. Now, looking at your preliminary estuarine data from the Hamble River estuary, what was the most unexpected observation?*\n\n*ELENA: We anticipated finding high concentrations of high-density polyethylene near the marina. But surprisingly, the density distribution didn't align with standard buoyancy models. Microbial biofilm colonization—the plastisphere—was so dense on low-density polypropylene fragments that it caused them to sink rapidly into benthic sediments, completely altering their hydraulic buoyancy.*\n\n*DR. THORNE: A fascinating biological variable! Biofouling often destabilizes traditional hydrological dispersion models. For your thesis milestone schedule, what is your immediate priority for the upcoming month?*\n\n*ELENA: I was considering preparing an abstract for the European Marine Science Symposium.*\n\n*DR. THORNE: While conferences are valuable, I'd strongly advise cross-referencing your estuarine particle trajectory simulations with regional satellite oceanographic telemetry first. Calibrating your empirical counts against satellite tidal models will give your findings much greater statistical authority.*\n\n*ELENA: That makes sense. Now, regarding our secondary laboratory assays, we have five distinct protocols to process the sediment samples. Could we review their specific analytical benefits?*\n\n*DR. THORNE: Certainly. Let's run through them:*  \n*First, Enzymatic Digestion. Why use enzymes instead of harsh hydrogen peroxide or nitric acid?*  \n*ELENA: Harsh acid dissolves organic debris, but it also degrades vulnerable synthetic polyamide polymers like nylon. Protease enzymes eliminate organic interfering biofilms without degrading the underlying plastic matrix.*\n\n*DR. THORNE: Second, Micro-Raman Spectroscopy.*  \n*ELENA: That's our non-destructive spectroscopic tool. Because Raman uses a focused laser beam, it guarantees non-destructive sample preservation down to one micrometer.*\n\n*DR. THORNE: Third, Thermal Gravimetric Analysis, or TGA.*  \n*ELENA: We use TGA for composite samples. By heating the sample under nitrogen and recording the exact decomposition temperature curves, TGA quantifies the exact chemical polymer ratios in multi-layer packaging.*\n\n*DR. THORNE: Fourth, Scanning Electron Microscopy (SEM).*  \n*ELENA: That provides high-resolution nanoscale electron imaging. It allows us to identify localized chemical weathering cracks, micro-pitting, and surface mechanical abrasion marks.*\n\n*DR. THORNE: And finally, Automated Nile Red Fluorescence Staining.*  \n*ELENA: Nile Red binds to hydrophobic synthetic surfaces and fluoresces under blue light excitation. An automated digital camera counts particles in seconds, accelerating high-throughput batch sorting across hundreds of sediment cores.*\n\n*DR. THORNE: Excellent. Update your methodology chapter with those rationales, and we'll convene next Tuesday.*",
+      "questions": [
+        {
+          "number": 21,
+          "section": 3,
+          "type": "MULTIPLE_CHOICE",
+          "question": "What was Elena's primary difficulty during the inaugural coastal water sampling?",
+          "key": "B"
+        },
+        {
+          "number": 22,
+          "section": 3,
+          "type": "MULTIPLE_CHOICE",
+          "question": "Why did Dr. Thorne advise against visual inspection under a stereomicroscope?",
+          "key": "A"
+        },
+        {
+          "number": 23,
+          "section": 3,
+          "type": "MULTIPLE_CHOICE",
+          "question": "Which analytical tool did Elena select for definitive chemical polymer validation?",
+          "key": "B"
+        },
+        {
+          "number": 24,
+          "section": 3,
+          "type": "MULTIPLE_CHOICE",
+          "question": "What unexpected phenomenon did the preliminary estuarine data demonstrate?",
+          "key": "C"
+        },
+        {
+          "number": 25,
+          "section": 3,
+          "type": "MULTIPLE_CHOICE",
+          "question": "What next step did Dr. Thorne recommend for Elena's research timeline?",
+          "key": "C"
+        },
+        {
+          "number": 26,
+          "section": 3,
+          "type": "MATCHING",
+          "prompt": "Enzymatic Digestion",
+          "key": "B"
+        },
+        {
+          "number": 27,
+          "section": 3,
+          "type": "MATCHING",
+          "prompt": "Micro-Raman Spectroscopy",
+          "key": "A"
+        },
+        {
+          "number": 28,
+          "section": 3,
+          "type": "MATCHING",
+          "prompt": "Thermal Gravimetric Analysis",
+          "key": "C"
+        },
+        {
+          "number": 29,
+          "section": 3,
+          "type": "MATCHING",
+          "prompt": "Scanning Electron Microscopy (SEM)",
+          "key": "E"
+        },
+        {
+          "number": 30,
+          "section": 3,
+          "type": "MATCHING",
+          "prompt": "Automated Nile Red Fluorescence",
+          "key": "F"
+        }
+      ]
+    },
+    "section4": {
+      "sectionNumber": 4,
+      "title": "Biomimetic Architectural Engineering & Termite Mound Thermodynamics",
+      "transcript": "*PROFESSOR VANCE: Good morning, ladies and gentlemen. In today's lecture on architectural biomimicry, we are examining one of nature's most sophisticated thermodynamic engineers: the African mound-building termite, specifically the species Macrotermes michaelseni.*\n\n*For decades, standard architectural and biological textbooks propagated a romantic, but largely inaccurate, theory known as the thermosiphon hypothesis. According to this traditional view, the massive central chimney of a termite mound acted as a solar chimney. Heat generated by the millions of termites and their subterranean fungal combs was thought to rise via natural thermal convection, exiting through the top spire, while cool subterranean air was drawn in through underground channels.*\n\n*However, groundbreaking micro-sensor telemetry conducted by biological engineers using ultrasonic anemometers has dismantled this model. Researchers discovered that interior air currents do not circulate in a steady, unidirectional thermosiphon loop. Instead, the mound breathes dynamically. Wind blowing across the exterior surface generates high- and low-pressure fluctuations across porous surface conduits, driving rhythmic pulses of gas exchange into the core of the mound, analogous to a human lung expanding and contracting.*\n\n*Now let us examine the core thermodynamic mechanism: temperature homeostasis. The subterranean fungal combs cultivated by termites require an extraordinarily stable microclimate. The queen and fungal colonies perish if temperatures fluctuate beyond narrow tolerances. Remarkably, despite exterior ambient desert temperatures swinging from forty-five degrees Celsius during the day to near freezing at night, the internal core temperature remains regulated within just one degree Celsius.*\n\n*How is this achieved? The primary mechanism is exceptional thermal mass. The mound walls, constructed from a dense composite of clay, sand, and termite saliva, are up to forty centimeters thick. During peak daylight, this immense thermal mass absorbs solar radiation slowly, preventing external thermal shocks from penetrating into the brood chambers. Then, during the cold nocturnal hours, this accumulated heat radiates outward, keeping the interior core warm.*\n\n*Simultaneously, the mound's complex network of micro-porous tunnels facilitates the continuous dissipation of metabolic carbon dioxide. Without this gas permeability, the subterranean fungal gardens would rapidly asphyxiate in their own metabolic emissions.*\n\n*In the mid-1990s, pioneering Zimbabwean architect Mick Pearce collaborated with engineering firm Arup to translate these biological principles into human civil architecture. The result was the Eastgate Centre, a three hundred and fifty thousand square foot office and shopping complex in central Harare.*\n\n*Pearce eliminated conventional, energy-intensive air conditioning chillers entirely. Instead, he designed the building utilizing concrete thermal mass and hollow floor slabs. At night, thirty-two electric fans located in the basement pull cool nighttime air into the building, flushing the warmth of the previous day out through vertical exhaust chimneys on the rooftop. During the heat of the following day, the pre-cooled concrete slabs absorb heat from office computers and occupants, maintaining indoor comfort without refrigeration.*\n\n*The architectural outcome was dramatic. The Eastgate Centre reduced HVAC electricity consumption by thirty-five percent compared to conventional air-conditioned buildings of equivalent scale in Harare, saving millions of dollars in mechanical infrastructure and carbon emissions.*\n\n*Today, biomimetic building research is advancing into next-generation computational materials. Material scientists are utilizing 3D-printing technologies to fabricate modular ceramic wall panels with engineered micro-porosity. These adaptive facades dynamically regulate passive air infiltration and humidity, opening new frontiers for zero-carbon, naturally ventilated urban architecture.*",
+      "questions": [
+        {
+          "number": 31,
+          "section": 4,
+          "type": "NOTE_COMPLETION",
+          "context": "Traditional theory incorrectly assumed air circulated via a subterranean",
+          "key": "thermosiphon"
+        },
+        {
+          "number": 32,
+          "section": 4,
+          "type": "NOTE_COMPLETION",
+          "context": "Ultrasonic anemometer sensors revealed wind currents create rhythmic",
+          "key": "pulses"
+        },
+        {
+          "number": 33,
+          "section": 4,
+          "type": "NOTE_COMPLETION",
+          "context": "The mound core temperature is regulated within",
+          "key": "one degree"
+        },
+        {
+          "number": 34,
+          "section": 4,
+          "type": "NOTE_COMPLETION",
+          "context": "The mound exterior envelope provides massive",
+          "key": "thermal mass"
+        },
+        {
+          "number": 35,
+          "section": 4,
+          "type": "NOTE_COMPLETION",
+          "context": "Stored energy is gradually released during cold",
+          "key": "nocturnal"
+        },
+        {
+          "number": 36,
+          "section": 4,
+          "type": "NOTE_COMPLETION",
+          "context": "Micro-porous tunnel networks allow continuous venting of toxic",
+          "key": "carbon dioxide"
+        },
+        {
+          "number": 37,
+          "section": 4,
+          "type": "NOTE_COMPLETION",
+          "context": "Architect Mick Pearce designed the Harare complex without conventional",
+          "key": "air conditioning"
+        },
+        {
+          "number": 38,
+          "section": 4,
+          "type": "NOTE_COMPLETION",
+          "context": "Basement fans draw ambient nighttime air upwards through specialized rooftop",
+          "key": "chimneys"
+        },
+        {
+          "number": 39,
+          "section": 4,
+          "type": "NOTE_COMPLETION",
+          "context": "The passive biomimetic cooling system reduced HVAC electricity usage by",
+          "key": "35 percent"
+        },
+        {
+          "number": 40,
+          "section": 4,
+          "type": "NOTE_COMPLETION",
+          "context": "Contemporary research utilizes 3D-printed ceramic facades with engineered",
+          "key": "micro-porosity"
+        }
+      ]
+    },
+    "allQuestions": [
+      {
+        "number": 1,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Street Address",
+        "prefix": "",
+        "key": "42 Bramblewood"
+      },
+      {
+        "number": 2,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Postal Code",
+        "prefix": "",
+        "key": "HF8 4WZ"
+      },
+      {
+        "number": 3,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Property Type",
+        "prefix": "",
+        "key": "terraced cottage"
+      },
+      {
+        "number": 4,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Annual Energy Usage",
+        "prefix": "",
+        "key": "3400"
+      },
+      {
+        "number": 5,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Subscription Scheme",
+        "prefix": "",
+        "key": "Community Shared"
+      },
+      {
+        "number": 6,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Quarterly Fee",
+        "prefix": "",
+        "key": "95 pounds"
+      },
+      {
+        "number": 7,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Payment Method",
+        "prefix": "",
+        "key": "monthly direct debit"
+      },
+      {
+        "number": 8,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Assessment Date",
+        "prefix": "",
+        "key": "14th October"
+      },
+      {
+        "number": 9,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Surveyor Name",
+        "prefix": "Marcus",
+        "key": "Thorne"
+      },
+      {
+        "number": 10,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Membership Reference",
+        "prefix": "",
+        "key": "SOL-8824"
+      },
+      {
+        "number": 11,
+        "section": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What is the primary operational objective of the Riverside Eco-Park?",
+        "key": "B"
+      },
+      {
+        "number": 12,
+        "section": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What distinctive material was used to build the Bird Watching Hide?",
+        "key": "B"
+      },
+      {
+        "number": 13,
+        "section": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "The Children's Nature Play Area emphasizes:",
+        "key": "B"
+      },
+      {
+        "number": 14,
+        "section": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What practical technique is demonstrated at the Eco-Composting Hub?",
+        "key": "B"
+      },
+      {
+        "number": 15,
+        "section": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "How is the river irrigation pump powered at the eastern terminus?",
+        "key": "C"
+      },
+      {
+        "number": 16,
+        "section": 2,
+        "type": "MAP_MATCHING",
+        "locationPrompt": "Organic Seed Bank & Heritage Nursery",
+        "key": "A",
+        "facility": "North of the Visitor Pavilion"
+      },
+      {
+        "number": 17,
+        "section": 2,
+        "type": "MAP_MATCHING",
+        "locationPrompt": "Bird Watching Hide",
+        "key": "B",
+        "facility": "Circular timber pavilion nestled among willows near the northern wetland"
+      },
+      {
+        "number": 18,
+        "section": 2,
+        "type": "MAP_MATCHING",
+        "locationPrompt": "Willow Creek Footbridge",
+        "key": "C",
+        "facility": "Central crossing point connecting eastern and western sectors"
+      },
+      {
+        "number": 19,
+        "section": 2,
+        "type": "MAP_MATCHING",
+        "locationPrompt": "Children's Nature Play Area",
+        "key": "D",
+        "facility": "Directly south of the Willow Creek Footbridge"
+      },
+      {
+        "number": 20,
+        "section": 2,
+        "type": "MAP_MATCHING",
+        "locationPrompt": "Solar Pumping Station",
+        "key": "E",
+        "facility": "Eastern riverbank terminus adjacent to the river weir"
+      },
+      {
+        "number": 21,
+        "section": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What was Elena's primary difficulty during the inaugural coastal water sampling?",
+        "key": "B"
+      },
+      {
+        "number": 22,
+        "section": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "Why did Dr. Thorne advise against visual inspection under a stereomicroscope?",
+        "key": "A"
+      },
+      {
+        "number": 23,
+        "section": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "Which analytical tool did Elena select for definitive chemical polymer validation?",
+        "key": "B"
+      },
+      {
+        "number": 24,
+        "section": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What unexpected phenomenon did the preliminary estuarine data demonstrate?",
+        "key": "C"
+      },
+      {
+        "number": 25,
+        "section": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What next step did Dr. Thorne recommend for Elena's research timeline?",
+        "key": "C"
+      },
+      {
+        "number": 26,
+        "section": 3,
+        "type": "MATCHING",
+        "prompt": "Enzymatic Digestion",
+        "key": "B"
+      },
+      {
+        "number": 27,
+        "section": 3,
+        "type": "MATCHING",
+        "prompt": "Micro-Raman Spectroscopy",
+        "key": "A"
+      },
+      {
+        "number": 28,
+        "section": 3,
+        "type": "MATCHING",
+        "prompt": "Thermal Gravimetric Analysis",
+        "key": "C"
+      },
+      {
+        "number": 29,
+        "section": 3,
+        "type": "MATCHING",
+        "prompt": "Scanning Electron Microscopy (SEM)",
+        "key": "E"
+      },
+      {
+        "number": 30,
+        "section": 3,
+        "type": "MATCHING",
+        "prompt": "Automated Nile Red Fluorescence",
+        "key": "F"
+      },
+      {
+        "number": 31,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "Traditional theory incorrectly assumed air circulated via a subterranean",
+        "key": "thermosiphon"
+      },
+      {
+        "number": 32,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "Ultrasonic anemometer sensors revealed wind currents create rhythmic",
+        "key": "pulses"
+      },
+      {
+        "number": 33,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "The mound core temperature is regulated within",
+        "key": "one degree"
+      },
+      {
+        "number": 34,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "The mound exterior envelope provides massive",
+        "key": "thermal mass"
+      },
+      {
+        "number": 35,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "Stored energy is gradually released during cold",
+        "key": "nocturnal"
+      },
+      {
+        "number": 36,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "Micro-porous tunnel networks allow continuous venting of toxic",
+        "key": "carbon dioxide"
+      },
+      {
+        "number": 37,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "Architect Mick Pearce designed the Harare complex without conventional",
+        "key": "air conditioning"
+      },
+      {
+        "number": 38,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "Basement fans draw ambient nighttime air upwards through specialized rooftop",
+        "key": "chimneys"
+      },
+      {
+        "number": 39,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "The passive biomimetic cooling system reduced HVAC electricity usage by",
+        "key": "35 percent"
+      },
+      {
+        "number": 40,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "Contemporary research utilizes 3D-printed ceramic facades with engineered",
+        "key": "micro-porosity"
+      }
+    ],
+    "fullMockQuestions": [
+      {
+        "number": 1,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Street Address",
+        "prefix": "",
+        "key": "42 Bramblewood"
+      },
+      {
+        "number": 2,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Postal Code",
+        "prefix": "",
+        "key": "HF8 4WZ"
+      },
+      {
+        "number": 3,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Property Type",
+        "prefix": "",
+        "key": "terraced cottage"
+      },
+      {
+        "number": 4,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Annual Energy Usage",
+        "prefix": "",
+        "key": "3400"
+      },
+      {
+        "number": 5,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Subscription Scheme",
+        "prefix": "",
+        "key": "Community Shared"
+      },
+      {
+        "number": 6,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Quarterly Fee",
+        "prefix": "",
+        "key": "95 pounds"
+      },
+      {
+        "number": 7,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Payment Method",
+        "prefix": "",
+        "key": "monthly direct debit"
+      },
+      {
+        "number": 8,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Assessment Date",
+        "prefix": "",
+        "key": "14th October"
+      },
+      {
+        "number": 9,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Surveyor Name",
+        "prefix": "Marcus",
+        "key": "Thorne"
+      },
+      {
+        "number": 10,
+        "section": 1,
+        "type": "FORM_COMPLETION",
+        "prompt": "Membership Reference",
+        "prefix": "",
+        "key": "SOL-8824"
+      },
+      {
+        "number": 11,
+        "section": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What is the primary operational objective of the Riverside Eco-Park?",
+        "key": "B"
+      },
+      {
+        "number": 12,
+        "section": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What distinctive material was used to build the Bird Watching Hide?",
+        "key": "B"
+      },
+      {
+        "number": 13,
+        "section": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "The Children's Nature Play Area emphasizes:",
+        "key": "B"
+      },
+      {
+        "number": 14,
+        "section": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What practical technique is demonstrated at the Eco-Composting Hub?",
+        "key": "B"
+      },
+      {
+        "number": 15,
+        "section": 2,
+        "type": "MULTIPLE_CHOICE",
+        "question": "How is the river irrigation pump powered at the eastern terminus?",
+        "key": "C"
+      },
+      {
+        "number": 16,
+        "section": 2,
+        "type": "MAP_MATCHING",
+        "locationPrompt": "Organic Seed Bank & Heritage Nursery",
+        "key": "A",
+        "facility": "North of the Visitor Pavilion"
+      },
+      {
+        "number": 17,
+        "section": 2,
+        "type": "MAP_MATCHING",
+        "locationPrompt": "Bird Watching Hide",
+        "key": "B",
+        "facility": "Circular timber pavilion nestled among willows near the northern wetland"
+      },
+      {
+        "number": 18,
+        "section": 2,
+        "type": "MAP_MATCHING",
+        "locationPrompt": "Willow Creek Footbridge",
+        "key": "C",
+        "facility": "Central crossing point connecting eastern and western sectors"
+      },
+      {
+        "number": 19,
+        "section": 2,
+        "type": "MAP_MATCHING",
+        "locationPrompt": "Children's Nature Play Area",
+        "key": "D",
+        "facility": "Directly south of the Willow Creek Footbridge"
+      },
+      {
+        "number": 20,
+        "section": 2,
+        "type": "MAP_MATCHING",
+        "locationPrompt": "Solar Pumping Station",
+        "key": "E",
+        "facility": "Eastern riverbank terminus adjacent to the river weir"
+      },
+      {
+        "number": 21,
+        "section": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What was Elena's primary difficulty during the inaugural coastal water sampling?",
+        "key": "B"
+      },
+      {
+        "number": 22,
+        "section": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "Why did Dr. Thorne advise against visual inspection under a stereomicroscope?",
+        "key": "A"
+      },
+      {
+        "number": 23,
+        "section": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "Which analytical tool did Elena select for definitive chemical polymer validation?",
+        "key": "B"
+      },
+      {
+        "number": 24,
+        "section": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What unexpected phenomenon did the preliminary estuarine data demonstrate?",
+        "key": "C"
+      },
+      {
+        "number": 25,
+        "section": 3,
+        "type": "MULTIPLE_CHOICE",
+        "question": "What next step did Dr. Thorne recommend for Elena's research timeline?",
+        "key": "C"
+      },
+      {
+        "number": 26,
+        "section": 3,
+        "type": "MATCHING",
+        "prompt": "Enzymatic Digestion",
+        "key": "B"
+      },
+      {
+        "number": 27,
+        "section": 3,
+        "type": "MATCHING",
+        "prompt": "Micro-Raman Spectroscopy",
+        "key": "A"
+      },
+      {
+        "number": 28,
+        "section": 3,
+        "type": "MATCHING",
+        "prompt": "Thermal Gravimetric Analysis",
+        "key": "C"
+      },
+      {
+        "number": 29,
+        "section": 3,
+        "type": "MATCHING",
+        "prompt": "Scanning Electron Microscopy (SEM)",
+        "key": "E"
+      },
+      {
+        "number": 30,
+        "section": 3,
+        "type": "MATCHING",
+        "prompt": "Automated Nile Red Fluorescence",
+        "key": "F"
+      },
+      {
+        "number": 31,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "Traditional theory incorrectly assumed air circulated via a subterranean",
+        "key": "thermosiphon"
+      },
+      {
+        "number": 32,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "Ultrasonic anemometer sensors revealed wind currents create rhythmic",
+        "key": "pulses"
+      },
+      {
+        "number": 33,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "The mound core temperature is regulated within",
+        "key": "one degree"
+      },
+      {
+        "number": 34,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "The mound exterior envelope provides massive",
+        "key": "thermal mass"
+      },
+      {
+        "number": 35,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "Stored energy is gradually released during cold",
+        "key": "nocturnal"
+      },
+      {
+        "number": 36,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "Micro-porous tunnel networks allow continuous venting of toxic",
+        "key": "carbon dioxide"
+      },
+      {
+        "number": 37,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "Architect Mick Pearce designed the Harare complex without conventional",
+        "key": "air conditioning"
+      },
+      {
+        "number": 38,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "Basement fans draw ambient nighttime air upwards through specialized rooftop",
+        "key": "chimneys"
+      },
+      {
+        "number": 39,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "The passive biomimetic cooling system reduced HVAC electricity usage by",
+        "key": "35 percent"
+      },
+      {
+        "number": 40,
+        "section": 4,
+        "type": "NOTE_COMPLETION",
+        "context": "Contemporary research utilizes 3D-printed ceramic facades with engineered",
+        "key": "micro-porosity"
+      }
+    ],
+    "totalQuestions": 40
+  },
+  "writing": {
+    "meta": {
+      "title": "IELTS Academic Writing Tasks 1 & 2",
+      "taskCount": 2,
+      "timeMinutes": 60
+    },
+    "task1": {
+      "title": "Renewable Electricity Generation (2010-2025)",
+      "chartSvg": "<svg viewBox=\"0 0 600 360\" class=\"ielts-chart-svg\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect width=\"600\" height=\"360\" fill=\"#0d1117\" rx=\"8\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"560\" y2=\"300\" stroke=\"#30363d\" stroke-width=\"1\"/>\n  <line x1=\"60\" y1=\"240\" x2=\"560\" y2=\"240\" stroke=\"#21262d\" stroke-width=\"1\"/>\n  <line x1=\"60\" y1=\"180\" x2=\"560\" y2=\"180\" stroke=\"#21262d\" stroke-width=\"1\"/>\n  <line x1=\"60\" y1=\"120\" x2=\"560\" y2=\"120\" stroke=\"#21262d\" stroke-width=\"1\"/>\n  <line x1=\"60\" y1=\"60\" x2=\"560\" y2=\"60\" stroke=\"#21262d\" stroke-width=\"1\"/>\n  <text x=\"50\" y=\"305\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"end\">0</text>\n  <text x=\"50\" y=\"245\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"end\">30</text>\n  <text x=\"50\" y=\"185\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"end\">60</text>\n  <text x=\"50\" y=\"125\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"end\">90</text>\n  <text x=\"50\" y=\"65\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"end\">120 TWh</text>\n  <text x=\"60\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2010</text>\n  <text x=\"160\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2013</text>\n  <text x=\"260\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2016</text>\n  <text x=\"360\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2019</text>\n  <text x=\"460\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2022</text>\n  <text x=\"560\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2025</text>\n  <!-- Hydro (Cyan) -->\n  <polyline fill=\"none\" stroke=\"#58a6ff\" stroke-width=\"3\" points=\"60,180 160,176 260,170 360,164 460,160 560,156\"/>\n  <!-- Wind (Green) -->\n  <polyline fill=\"none\" stroke=\"#3fb950\" stroke-width=\"3\" points=\"60,250 160,230 260,196 360,150 460,110 560,70\"/>\n  <!-- Solar (Orange) -->\n  <polyline fill=\"none\" stroke=\"#f0883e\" stroke-width=\"3\" points=\"60,290 160,284 260,264 360,232 460,180 560,120\"/>\n  <!-- Legend -->\n  <circle cx=\"160\" cy=\"30\" r=\"5\" fill=\"#58a6ff\"/><text x=\"172\" y=\"34\" fill=\"#c9d1d9\" font-size=\"11\">Hydro</text>\n  <circle cx=\"280\" cy=\"30\" r=\"5\" fill=\"#3fb950\"/><text x=\"292\" y=\"34\" fill=\"#c9d1d9\" font-size=\"11\">Wind</text>\n  <circle cx=\"400\" cy=\"30\" r=\"5\" fill=\"#f0883e\"/><text x=\"412\" y=\"34\" fill=\"#c9d1d9\" font-size=\"11\">Solar</text>\n</svg>",
+      "modelAnswer": "The line graph delineates the output of electricity derived from three renewable modalities—hydroelectric, wind, and solar photovoltaic systems—in a European nation between 2010 and 2025, calibrated in Terawatt-hours (TWh).\n\nOverall, total renewable electricity generation witnessed substantial expansion across the fifteen-year period. While hydroelectric generation maintained steady, plateaued dominance during the initial years, wind power experienced exponential acceleration to emerge as the pre-eminent source, closely mirrored by a dramatic late surge in solar output.\n\nIn 2010, hydroelectricity represented the predominant contributor at 60 TWh, whereas wind and solar generated modest yields of 25 TWh and 5 TWh respectively. Over the subsequent decade, hydroelectric capacity rose marginally, culminating at 72 TWh by 2025.\n\nConversely, wind generation exhibited remarkable momentum, overtaking hydroelectricity around 2018 at approximately 68 TWh before ascending steeply to attain a peak of 115 TWh in 2025. Solar power displayed an even steeper trajectory post-2016: after lingering below 20 TWh, it accelerated markedly over the final six years, eclipsing hydroelectricity by 2024 to conclude at 90 TWh.",
+      "wordCount": 184
+    },
+    "task2": {
+      "title": "Higher Education Funding Models (Tuition vs Free Access)",
+      "prompt": "Some people argue that tertiary education should be fully funded by the state for all citizens, while others contend that university students should pay tuition fees because higher education primarily benefits the individual. Discuss both views and give your own opinion.",
+      "band6Model": "Nowadays, many people debate whether university should be free or if students must pay tuition. This is a very controversial issue in modern society. In this essay, I will discuss both sides of the argument and give my own opinion.\n\nOn the one hand, some people believe that governments should pay for all university fees. The main reason is that education is a human right. If universities are completely free, poor students from poor families can study and get good jobs. For example, in some European countries like Germany, universities are free, so young people do not have student debt. Furthermore, having more educated doctors and engineers is good for the economy. Therefore, the state should invest money in education.\n\nOn the other hand, other people think students must pay for their own education. They argue that going to university gives high salaries in the future. Because university graduates earn much more money than high school graduates, it is not fair for normal taxpayers who do not go to university to pay for rich students. In addition, when universities charge tuition fees, they have more money to buy modern equipment and computers, which improves teaching quality.\n\nIn my opinion, I think a mixed system is the best choice. Completely free education can cause big taxes for citizens, but very high fees stop poor students from studying. Governments should give free scholarships to talented poor students, while rich students should pay reasonable fees. In conclusion, both views have good points, but a balanced policy is best.",
+      "band8Model": "The financial architecture of tertiary education remains a subject of intense socio-economic debate. While proponents of universal public subsidization assert that higher education is a non-excludable public good that accelerates meritocratic social mobility, detractors maintain that because degree holders capture substantial private wage premiums, tuition costs should be borne primarily by individual beneficiaries. This essay examines both perspectives before arguing that an income-contingent graduate contribution model offers the most equitable fiscal equilibrium.\n\nAdvocates of state-funded higher education anchor their rationale in positive macroeconomic externalities. A highly credentialed workforce fuels domestic innovation, attracts high-value foreign direct investment, and elevates national productivity. When tertiary matriculation is unencumbered by upfront tuition barriers, systemic socioeconomic stratification is alleviated, enabling academically gifted students from marginalized cohorts to enter high-status professions such as medicine, law, and engineering. Jurisdictions such as Norway and Germany demonstrate that public investment in human capital generates compounding returns via robust long-term fiscal revenue and diminished social welfare dependency.\n\nConversely, proponents of fee-based tertiary systems contend that universal state subsidization constitutes a regressive wealth transfer. Empirical labor-market data consistently confirms that university graduates command significantly higher lifetime earnings than non-graduate peers. Consequently, utilizing general tax revenues—contributed disproportionately by working-class laborers who may never attend university—to underwrite elite individual credentialing is fiscally inequitable. Furthermore, institutions reliant exclusively upon constrained state allocations frequently suffer from infrastructure underinvestment, whereas market-calibrated tuition revenues empower universities to expand research laboratories and recruit world-class faculty.\n\nIn my view, the dilemma is falsely framed as an absolute binary between unregulated marketization and blanket state paternalism. The optimal framework is an income-contingent deferred repayment mechanism, exemplified by the Australian HECS system. Under this paradigm, higher education remains free at the point of delivery, eliminating socioeconomic entry barriers, but graduates contribute a progressive percentage of their income once their post-graduation earnings exceed a dignified national threshold. This model reconciles equal societal opportunity with progressive fiscal fairness.",
+      "critique": "Band 6 exhibits mechanical linkers and superficial arguments; Band 8 exhibits income-contingent graduate contribution synthesis, nuanced hedging, and complex subordination."
+    }
+  },
+  "speaking": {
+    "meta": {
+      "title": "IELTS Speaking Parts 1–3 Mock Test",
+      "totalParts": 3,
+      "durationMinutes": 14
+    },
+    "part1Topics": [
+      "Academic Work & Daily Habits",
+      "Urban Transportation & Public Spaces"
+    ],
+    "part2": {
+      "topic": "Describe a public initiative or community project that significantly improved your local area.",
+      "prepTimeSeconds": 60,
+      "modelMonologue": "I would like to speak about a transformative urban regeneration initiative in my hometown that repurposed a decommissioned industrial railway canal into an interconnected linear greenway and biodiversity corridor. \n\nHistorically, this four-kilometer stretch had deteriorated into an eyesore—choked with industrial debris, illegal dumping, and fractured asphalt that effectively bisected our residential neighborhood. Approximately four years ago, a coalition of local landscape architects and neighborhood associations petitioned the municipal government. They successfully secured a joint public-private grant that combined civic crowdfunding with municipal green infrastructure bonds.\n\nOver eighteen months of community mobilization, volunteer planting drives replaced concrete drainage ditches with bioswales engineered with native wetland reeds to filter urban stormwater runoff. In addition, developers installed a continuous, solar-illuminated bicycle artery flanked by communal fruit trees, outdoor calisthenics zones, and permeable pedestrian boardwalks.\n\nWhat made this initiative exceptionally impactful was its holistic dual yield: it resolved both an ecological deficit and a social fracture. Ecologically, local temperature sensors registered a 1.8-degree drop in the surrounding urban heat island index. Socially, it decentralized recreational life away from enclosed commercial shopping malls into an open, democratic public commons where families, cyclists, and senior citizens mingle daily. It remains a shining model of collaborative civic governance."
+    },
+    "part3Theme": "Urban Regeneration, Civic Responsibility & Future Cities"
+  },
+  "pragmaticRoleplays": [
+    {
+      "title": "Roleplay 1: Diplomatic Hedging & Bilateral Water Rights Accord",
+      "sieves": {
+        "thesisAvoidance": "Eliminates circular historical preamble (*dẫn dắt lịch sử quan hệ dài dòng*); establishes core diplomatic stance in the opening 15 seconds.",
+        "mechanicalConnectors": "Bans repetitive *Furthermore / In addition*; uses demonstrative referential cohesion (*This upstream storage pattern, Such seasonal volatility*).",
+        "thesaurusClichés": "Eliminates empty idioms (*\"water is the blood of life\"*, *\"two sides of a coin\"*); enforces legal hydrological lexis (*transboundary riparian doctrine, minimum ecological flow, baseline discharge threshold*).",
+        "phoneticCoda": "Enforces voiced codas /z/ in *raises, reserves, advises* and /kt/ in *impact, retract, conduct*."
+      },
+      "id": "roleplay-c1-01",
+      "cefrLevel": "C1",
+      "domain": "PUBLIC_DIPLOMACY",
+      "pragmaticFocus": "Concessive hedging, epistemic modality, non-provocative counter-proposals.",
+      "interlocutor": "Lead Diplomatic Negotiator of an upstream neighboring state.",
+      "context": "Bilateral summit negotiating seasonal dry-season reservoir discharge quotas along a transboundary river system.",
+      "friction": "Upstream state asserts absolute sovereign dam operation rights; downstream agricultural deltas face critical salinity intrusion.",
+      "vietnamese": "Đàm phán ngoại giao cấp cao C1 về hạn ngạch xả lũ và dòng chảy tối thiểu của sông xuyên biên giới, sử dụng kỹ thuật nhượng bộ có điều kiện và ngôn từ ngoại giao chuẩn mực.",
+      "exemplarExchange": {
+        "challenge": "Our sovereign government cannot accept binding seasonal release quotas that compromise our domestic hydroelectric independence.",
+        "modelResponse": "While we fully respect your administration's mandate to guarantee domestic energy security, an uncalibrated retention schedule during the dry-season apex precipitates irreversible estuarine salinization across our shared delta. What we tentatively propose instead is an adaptive discharge framework: rather than an inflexible static volume, release schedules would index dynamically to upstream rainfall telemetry, coupled with reciprocal regional power-grid off-peak purchases."
+      }
+    },
+    {
+      "title": "Roleplay 2: Academic Viva Voce & Dissertation Defense Under Hostile Examination",
+      "sieves": {
+        "thesisAvoidance": "Overcomes cultural reluctance to respectfully contradict senior professors; directly challenges the premise with empirical humility.",
+        "mechanicalConnectors": "Replaces *On the one hand / On the other hand* with syntactic subordination (*Notwithstanding Professor Vance's foundational skepticism, the neuroimaging telemetry indicates...*).",
+        "thesaurusClichés": "Eliminates vague buzzwords (*\"cutting-edge AI\"*, *\"revolutionary technology\"*); deploys precise neurocognitive terminology (*representational similarity analysis, biological plausibility constraints, localized BOLD hemodynamic response*).",
+        "phoneticCoda": "Retains complex codas /spts/ in *aspects*, /ksts/ in *contexts*, and /sts/ in *statists, linguists*."
+      },
+      "id": "roleplay-c2-02",
+      "cefrLevel": "C2",
+      "domain": "ACADEMIC_RESEARCH",
+      "pragmaticFocus": "Academic boundary defense, methodological poise, countering hostile invalidation without intellectual arrogance.",
+      "interlocutor": "Emeritus Senior Professor and External Inquisitor known for philosophical skepticism toward neurocomputational modeling.",
+      "context": "Final doctoral defense examining synthetic language models as predictive architectures for human semantic processing.",
+      "friction": "Examiner aggressively claims that statistical transformer networks merely simulate lexical surface patterns and possess zero biological validity.",
+      "vietnamese": "Bảo vệ luận án tiến sĩ C2 trước câu hỏi phản biện mang tính bác bỏ học thuyết của giáo sư đầu ngành, giữ vững phong thái khoa học và luận cứ thực nghiệm.",
+      "exemplarExchange": {
+        "challenge": "Your entire dissertation rests upon an unproven category error: equating vector distance in synthetic token transformers with biological human cognition. Isn't this merely sophisticated curve-fitting masquerading as neuroscience?",
+        "modelResponse": "Professor Vance articulates a legitimate epistemological challenge that has preoccupied computational neuroscience since connectionism. However, our architecture does not claim that silicon backpropagation mirrors human neurogenesis. Rather, as demonstrated in Chapter 4, the representational similarity analysis indicates that internal layer activations predict fMRI BOLD patterns across the temporal lobe with an $R^2$ of 0.74—a correspondence that vanishes when utilizing frequency-based n-gram models. Consequently, the network serves not as an anatomical replica, but as a functionally predictive computational heuristic."
+      }
+    },
+    {
+      "title": "Roleplay 3: High-Stakes Executive Job Interrogation (STAR Behavioral Defense)",
+      "sieves": {
+        "thesisAvoidance": "Eliminates defensive excuse-making (*đổ lỗi cho hoàn cảnh/cấp dưới*); assumes direct executive accountability in the initial sentence.",
+        "mechanicalConnectors": "Eliminates choppy coordinators (*So, And, But*); constructs cohesive periodic sentences (*Having identified the warehouse telemetry bottleneck, I immediately halted shipments...*).",
+        "thesaurusClichés": "Bans generic corporate clichés (*\"think outside the box\"*, *\"every cloud has a silver lining\"*); deploys executive governance vocabulary (*single point of failure, redundant inventory buffer, post-mortem root-cause analysis*).",
+        "phoneticCoda": "Pronounces all past inflectional codas /d/ in *managed*, /t/ in *restructured*, /ɪd/ in *instituted*."
+      },
+      "id": "roleplay-c1-03",
+      "cefrLevel": "C1",
+      "domain": "CORPORATE_LEADERSHIP",
+      "pragmaticFocus": "Ownership of executive failure, ethical accountability, strategic restructuring, commanding vocal composure.",
+      "interlocutor": "Managing Director and Board Search Committee Chair.",
+      "context": "Final round interview for Chief Operating Officer (COO) at a multi-national logistics enterprise.",
+      "friction": "Interviewer confronts candidate with a documented multi-million dollar supply chain failure that occurred under candidate's watch three years prior.",
+      "vietnamese": "Xử lý câu hỏi phỏng vấn C1 chất vấn về thất bại triệu đô trong quá khứ, chịu trách nhiệm trực diện và chứng minh năng lực phục hồi hệ thống.",
+      "exemplarExchange": {
+        "challenge": "Looking at your tenure at Pacific Freight, you presided over the catastrophic Q3 automation rollout that cost the company 4.2 million dollars in demurrage penalties. Why should our board trust your operational judgment with our enterprise transformation?",
+        "modelResponse": "The Q3 logistics breakdown was the most instructive failure of my executive career, and the accountability rests squarely on my shoulders. We allowed optimistic vendor deployment timelines to eclipse rigorous stress-testing under peak holiday throughput. The crucial test of operational leadership, however, is the velocity of institutional remediation. Within 48 hours of detecting the bottleneck, I suspended automated intake, instituted manual contingency routing, and personally led a forensic audit that overhauled our entire third-party integration protocol. Over the subsequent two quarters, system uptime reached 99.8%, and the redundant safeguard architecture I installed remains the enterprise standard today."
+      }
+    },
+    {
+      "title": "Roleplay 4: Corporate Crisis Management & Live Press Conference",
+      "sieves": {
+        "thesisAvoidance": "Prevents avoidance of hard facts (*không vòng vo che giấu*); confronts the severity of the security event with immediate clarity.",
+        "mechanicalConnectors": "Replaces *Besides / Moreover* with cohesive discursive framing (*Addressing the specific timeline of disclosure...*).",
+        "thesaurusClichés": "Avoids insincere corporate condolences (*\"our thoughts and prayers\"*, *\"accidents happen\"*); utilizes forensic crisis terms (*cryptographic salt, zero-trust network perimeter, independent forensic certifier, regulatory notification window*).",
+        "phoneticCoda": "Preserves complex clusters /kts/ in *impacts*, /ksts/ in *texts*, /skt/ in *asked*."
+      },
+      "id": "roleplay-c2-04",
+      "cefrLevel": "C2",
+      "domain": "CRISIS_COMMUNICATIONS",
+      "pragmaticFocus": "Managing hostile investigative interrogation, transparent de-escalation, legal precision without corporate evasiveness.",
+      "interlocutor": "Chief Investigative Reporter for a major international financial daily.",
+      "context": "Live press briefing following an unauthorized third-party exfiltration of encrypted consumer financial data.",
+      "friction": "Reporter aggressively alleges executive cover-up and demands immediate resignation of the executive suite.",
+      "vietnamese": "Chủ trì họp báo khủng hoảng C2 trước sự chất vấn gay gắt của truyền thông quốc tế về sự cố bảo mật dữ liệu, giải trình thuyết phục về khung thời gian ứng phó kỹ thuật.",
+      "exemplarExchange": {
+        "challenge": "Your security team detected anomalous server exfiltration on Tuesday, yet you waited 72 hours before alerting affected consumers. Isn't this a deliberate, criminal cover-up designed to protect share prices ahead of quarterly earnings?",
+        "modelResponse": "I understand your skepticism, but characterizing the 72-hour investigative interval as an intentional cover-up disregards the operational imperative of active threat containment. When anomalous egress was detected at 02:00 on Tuesday, the primary protocol was to sever the adversary's lateral access pathways without alerting the threat actor that the breach was identified. Had we issued an unverified public bulletin prematurely, we would have compromised the integrity of ongoing live memory forensics and left secondary databases exposed. The moment our third-party digital forensic partners verified the perimeter was secured, we triggered full regulatory disclosures in strict compliance with statutory frameworks."
+      }
+    }
+  ]
+}

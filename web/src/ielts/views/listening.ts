@@ -4,7 +4,16 @@ import { rawToBand } from '../bands';
 import { addAttempt } from '../progress';
 import { QuestionForm, renderQuestions, typeBreakdown } from '../questions';
 import { SetScore } from '../scoring';
-import { playSection, Playback, ttsAvailable } from '../tts';
+import {
+  playSection,
+  Playback,
+  ttsAvailable,
+  setPreferredAccent,
+  getPreferredAccent,
+  setExamRoomAmbience,
+  isExamRoomAmbienceEnabled
+} from '../tts';
+import { AccentCadenceType } from '../../core/audio-synthesizer';
 import { bandBadge, esc, h } from '../ui';
 import { TestResult } from './reading';
 
@@ -19,7 +28,35 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
   const play = h('button', 'ie-btn ie-btn-primary', 'Play');
   const submit = h('button', 'ie-btn', 'Submit answers');
   const tabs = h('div', 'ie-tabs');
-  bar.append(status, tabs, play, submit);
+
+  // Multi-accent cadence selector
+  const accentSelect = h('select', 'ie-select ie-accent-select', `
+    <option value="uk-rp">UK RP (Cambridge)</option>
+    <option value="general-american">General American</option>
+    <option value="australian">Australian</option>
+    <option value="scottish">Scottish</option>
+  `) as HTMLSelectElement;
+  accentSelect.value = getPreferredAccent();
+  accentSelect.title = 'Select examiner and speaker accent cadence';
+  accentSelect.addEventListener('change', () => {
+    setPreferredAccent(accentSelect.value as AccentCadenceType);
+  });
+
+  // Authentic Cambridge 40Hz acoustic exam room resonance toggle
+  const ambienceBtn = h(
+    'button',
+    'ie-btn ie-ambience-btn' + (isExamRoomAmbienceEnabled() ? ' is-active' : ''),
+    isExamRoomAmbienceEnabled() ? '🏛️ Ambience: ON' : '🏛️ Ambience: OFF'
+  );
+  ambienceBtn.title = 'Toggle subtle Cambridge exam hall pink noise and 40Hz room resonance';
+  ambienceBtn.addEventListener('click', () => {
+    const next = !isExamRoomAmbienceEnabled();
+    setExamRoomAmbience(next);
+    ambienceBtn.classList.toggle('is-active', next);
+    ambienceBtn.textContent = next ? '🏛️ Ambience: ON' : '🏛️ Ambience: OFF';
+  });
+
+  bar.append(status, tabs, accentSelect, ambienceBtn, play, submit);
   const panes: HTMLElement[] = [];
   const forms: QuestionForm[] = [];
   const played = new Set<number>();
@@ -60,6 +97,8 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
     play.textContent = exam ? 'Playing…' : 'Stop';
     if (exam) play.disabled = true;
     playback = playSection(sections[cur], {
+      accent: accentSelect.value as AccentCadenceType,
+      roomAmbience: isExamRoomAmbienceEnabled(),
       onLine: i => { status.textContent = `${sections[cur].script[i].speaker} speaking…`; },
       onEnd: () => { playback = null; play.textContent = 'Play'; refresh(); }
     });
@@ -93,14 +132,33 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
   });
 
   refresh();
-  return () => playback?.stop();
+  return () => {
+    playback?.stop();
+    setExamRoomAmbience(false);
+  };
 }
 
 export function listeningView(root: HTMLElement): () => void {
   let stop = () => {};
   const list = h('div', 'ie-cards');
-  root.append(h('h1', 'ie-title', 'Academic Listening'), h('p', 'ie-lead', 'Ten questions per section, voiced by browser text-to-speech with a different voice per speaker. Practice mode lets you replay; the mock plays each section once.'), list);
+
+  const labBanner = h('div', 'ie-lab-banner', `
+    <div class="ie-lab-banner-content">
+      <span class="ie-trap-category-pill">🎯 Interactive Audio Lab</span>
+      <h3>Listening Trap & Oral Self-Correction Audio Lab</h3>
+      <p class="ie-lead">Practice spotting oral self-corrections, restrictive qualifiers, reversal traps, and map navigation decoys across 12 authentic Cambridge-style audio scenarios with real-time waveform feedback.</p>
+    </div>
+    <a href="#listening-traps" class="ie-btn ie-btn-primary ie-lab-launch-btn">Launch Traps Lab (12 Drills) →</a>
+  `);
+
+  root.append(
+    h('h1', 'ie-title', 'Academic Listening'),
+    h('p', 'ie-lead', 'Ten questions per section, voiced by browser text-to-speech with a different voice per speaker. Practice mode lets you replay; the mock plays each section once.'),
+    labBanner,
+    list
+  );
   SECTIONS.forEach(s => {
+
     const c = h('button', 'ie-card', `<b>Section ${s.section}: ${esc(s.title)}</b><span>${s.speakers.length} speaker${s.speakers.length > 1 ? 's' : ''}</span><small>${s.questions.length} questions</small>`);
     c.addEventListener('click', () => {
       root.innerHTML = '';

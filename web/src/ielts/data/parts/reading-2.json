@@ -40,23 +40,23 @@
       {
         "id": "r07-q02",
         "type": "tfng",
-        "prompt": "Pluto was classified as the ninth planet for over 70 years.",
-        "answer": "TRUE",
-        "why": "Paragraph B states: 'For 76 years, from 1930 until 2006, Pluto held the status of the ninth planet.' 76 years is over 70 years."
+        "prompt": "The passage suggests that Pluto will eventually be reclassified as a planet if new evidence emerges.",
+        "answer": "NOT GIVEN",
+        "why": "Paragraph B states Pluto meets the first two criteria but fails the third based on current orbital overlap. The passage does not discuss whether future reclassification is possible."
       },
       {
         "id": "r07-q03",
         "type": "tfng",
         "prompt": "The New Horizons spacecraft took nine years to reach Pluto.",
         "answer": "TRUE",
-        "why": "Paragraph C states: 'launched by NASA in January 2006...to reach Pluto in July 2015. This nine-year journey.'"
+        "why": "The passage says the spacecraft was 'launched by NASA in January 2006' and reached Pluto 'in July 2015', which is nine years."
       },
       {
         "id": "r07-q04",
         "type": "tfng",
-        "prompt": "The Kuiper Belt extends further from the Sun than the scattered disk.",
+        "prompt": "The classical Kuiper Belt extends further from the Sun than the scattered disk region.",
         "answer": "FALSE",
-        "why": "Paragraph E states: 'the classical Kuiper Belt, extending from about 42 to 50 AU, and the scattered disk, extending beyond 50 AU.' The scattered disk extends beyond, so it goes further."
+        "why": "Paragraph E states the classical Kuiper Belt extends from about 42 to 50 AU, and the scattered disk extends beyond 50 AU. The scattered disk reaches further."
       },
       {
         "id": "r07-q05",
@@ -68,34 +68,34 @@
       {
         "id": "r07-q06",
         "type": "complete",
-        "prompt": "The first trans-Neptunian object discovered was designated 1992 ___.",
+        "prompt": "The first trans-Neptunian object, discovered by Jewitt and Luu in 1992, had a specific ___ designation.",
         "answer": [
           "QB1"
         ],
-        "why": "Paragraph A clearly states: 'designated 1992 QB1.' This is the exact designation given in the passage."
+        "why": "The passage says the object was 'designated 1992 QB1.'"
       },
       {
         "id": "r07-q07",
         "type": "complete",
-        "prompt": "The heart-shaped region on Pluto is called Tombaugh ___.",
+        "prompt": "A heart-shaped region on Pluto, about 1,600 kilometers across, is informally called Tombaugh _______.",
         "answer": [
           "Regio"
         ],
-        "why": "Paragraph C states: 'called Tombaugh Regio in honor of Pluto's discoverer Clyde Tombaugh.' Regio is the term used."
+        "why": "The passage says the region is 'informally called Tombaugh Regio in honor of Pluto's discoverer Clyde Tombaugh.'"
       },
       {
         "id": "r07-q08",
         "type": "complete",
-        "prompt": "Future Kuiper Belt missions will use radioisotope thermoelectric ___.",
+        "prompt": "At extreme distances from the Sun, solar panels lose effectiveness, so future probes will rely on radioisotope thermoelectric ___.",
         "answer": [
           "generators"
         ],
-        "why": "Paragraph F states: 'necessitating the use of radioisotope thermoelectric generators for power.' This is exactly 1 word from the passage."
+        "why": "Paragraph F states: necessitating the use of radioisotope thermoelectric generators for power."
       },
       {
         "id": "r07-q09",
         "type": "complete",
-        "prompt": "The Kuiper Belt's total mass is estimated at 0.1 times the mass of ___.",
+        "prompt": "Estimates put the combined mass of the Kuiper Belt at roughly one-tenth that of the planet _______.",
         "answer": [
           "Earth"
         ],
@@ -114,7 +114,7 @@
           "vi. NASA's Space Exploration Programs"
         ],
         "answer": "ii",
-        "why": "Paragraph A discusses Kuiper's 1951 theory and the 1992 discovery confirmation. Option ii 'Early Theories and Confirmation of the Kuiper Belt' directly matches this content."
+        "why": "Paragraph A covers Kuiper's 1951 theory and the 1992 confirmation, so option ii fits."
       },
       {
         "id": "r07-q11",
@@ -144,7 +144,7 @@
           "vi. NASA's Space Exploration Programs"
         ],
         "answer": "v",
-        "why": "Paragraph E discusses spectroscopic analysis, composition (methane, ammonia, ice) and the division into classical Kuiper Belt and scattered disk regions. Option v 'Spectroscopic Composition and Orbital Distribution of Kuiper Belt Objects' matches this content exactly."
+        "why": "Paragraph E covers spectroscopic composition (methane, ammonia, ice) and the two Kuiper Belt regions, so option v fits."
       },
       {
         "id": "r07-q13",
@@ -164,12 +164,12 @@
         "type": "mcq",
         "prompt": "Which dwarf planet's discovery directly triggered Pluto's reclassification?",
         "options": [
-          "A. Haumea",
+          "A. Eris",
           "B. Gonggong",
-          "C. Eris",
+          "C. Haumea",
           "D. Makemake"
         ],
-        "answer": "C",
+        "answer": "A",
         "why": "Paragraph D states: 'Eris, discovered in January 2005, triggered Pluto's reclassification because of its similar size and characteristics.'"
       }
     ]
@@ -210,7 +210,7 @@
         "type": "tfng",
         "prompt": "Patrick Blanc's vertical garden technique uses soil-based growing medium.",
         "answer": "FALSE",
-        "why": "Paragraph A states: 'which utilizes a specialized support structure that allows water and nutrients to circulate through a vertical growing medium, supporting various plant species without requiring soil.'"
+        "why": "The passage says the technique 'utilizes a specialized support structure that allows water and nutrients to circulate through a vertical growing medium, supporting various plant species without requiring soil.'"
       },
       {
         "id": "r08-q02",
@@ -229,9 +229,9 @@
       {
         "id": "r08-q04",
         "type": "tfng",
-        "prompt": "Most vertical gardens require automated irrigation systems.",
-        "answer": "TRUE",
-        "why": "Paragraph C states: 'Most vertical gardens require automated irrigation systems with sensors that monitor moisture levels.'"
+        "prompt": "Vertical gardens in Mexico City have a longer lifespan than those in Singapore.",
+        "answer": "NOT GIVEN",
+        "why": "The passage describes Mexico City's program ('approved a municipal program in 2013') and Singapore's installations but never compares how long the gardens last, so the claim is NOT GIVEN."
       },
       {
         "id": "r08-q05",
@@ -243,25 +243,25 @@
       {
         "id": "r08-q06",
         "type": "complete",
-        "prompt": "Patrick Blanc first publicly displayed his technique at the Musée du Quai Branly in ___.",
+        "prompt": "Patrick Blanc first demonstrated his hydroponics technique publicly in 2006 at a museum in ___.",
         "answer": [
           "Paris"
         ],
-        "why": "Paragraph A states: 'first publicly displayed at the Musée du Quai Branly in Paris in 2006.'"
+        "why": "Paragraph A states: first publicly displayed at the Musee du Quai Branly in Paris in 2006."
       },
       {
         "id": "r08-q07",
         "type": "complete",
-        "prompt": "The initial installation cost of vertical gardens can range from $300 to $1,000 per square ___.",
+        "prompt": "Installing a vertical garden typically costs between $300 and $1,000 per _______.",
         "answer": [
-          "meter"
+          "square meter"
         ],
-        "why": "Paragraph C states: 'The initial cost of installation can range from $300 to $1,000 per square meter.'"
+        "why": "Paragraph C states: The initial cost of installation can range from $300 to $1,000 per square meter."
       },
       {
         "id": "r08-q08",
         "type": "complete",
-        "prompt": "Singapore had implemented over 4,500 vertical garden installations by the year ___.",
+        "prompt": "The number of vertical garden installations in Singapore had risen above 4,500 by the year ___.",
         "answer": [
           "2020"
         ],
@@ -270,11 +270,11 @@
       {
         "id": "r08-q09",
         "type": "complete",
-        "prompt": "A 2018 study found office workers with green wall views had 37 percent lower ___ levels.",
+        "prompt": "According to a 2018 University of Melbourne study, office staff with a view of vertical gardens reported 37 percent less _______ than colleagues facing concrete walls.",
         "answer": [
           "stress"
         ],
-        "why": "Paragraph F states: 'office workers with views of vertical gardens demonstrated 37 percent lower stress levels.'"
+        "why": "Paragraph F states: office workers with views of vertical gardens demonstrated 37 percent lower stress levels."
       },
       {
         "id": "r08-q10",
@@ -289,7 +289,7 @@
           "vi. Architectural Design Principles"
         ],
         "answer": "ii",
-        "why": "Paragraph B discusses environmental advantages including air quality, thermal insulation, noise reduction, and biodiversity support. Option ii 'Environmental Benefits and Ecological Impact' directly describes this content."
+        "why": "Paragraph B covers air quality, thermal insulation, noise reduction and biodiversity support, so option ii fits."
       },
       {
         "id": "r08-q11",
@@ -319,7 +319,7 @@
           "vi. Architectural Design Principles"
         ],
         "answer": "iv",
-        "why": "Paragraph E discusses modular systems, water conservation, solar panel integration, and artificial intelligence applications. Option iv 'Technological Innovations and Advancements' is the best fit."
+        "why": "Paragraph E covers modular systems, water conservation, solar panel integration and AI applications, so option iv fits."
       },
       {
         "id": "r08-q13",
@@ -387,58 +387,58 @@
         "type": "ynng",
         "prompt": "The author suggests that variolation was safer than natural disease exposure.",
         "answer": "YES",
-        "why": "Paragraph A states: 'variolation gradually gained acceptance as its survival rate advantages became statistically apparent.' This indicates the author believes variolation had better outcomes than natural infection."
+        "why": "The passage says this practice 'nevertheless offered better survival odds than encountering the disease naturally.'"
       },
       {
         "id": "r09-q02",
-        "type": "ynng",
-        "prompt": "The author implies that early scientific colleagues fully accepted Jenner's vaccination theory immediately.",
-        "answer": "NO",
-        "why": "Paragraph B states: 'Initial scientific reception was mixed, with some colleagues expressing skepticism.' The author indicates skepticism existed, not full acceptance."
+        "type": "tfng",
+        "prompt": "Jenner's 1798 publication on vaccination was immediately accepted by the entire scientific community.",
+        "answer": "FALSE",
+        "why": "The passage says: 'Initial scientific reception was mixed, though skepticism gradually diminished.'"
       },
       {
         "id": "r09-q03",
         "type": "ynng",
         "prompt": "The author presents germ theory as a replacement for earlier medical explanatory frameworks.",
         "answer": "YES",
-        "why": "Paragraph C states: 'Germ theory replaced the prevailing miasma theory, which had incorrectly attributed disease to noxious vapors.' The author clearly indicates germ theory superseded miasma theory."
+        "why": "The passage says: 'The replacement of miasma theory with germ theory represented a fundamental scientific paradigm shift in medical thinking.'"
       },
       {
         "id": "r09-q04",
-        "type": "ynng",
-        "prompt": "The writer believes that twentieth-century vaccine safety concerns were largely unfounded.",
+        "type": "tfng",
+        "prompt": "The passage states that pertussis vaccine controversy caused a decline in vaccination rates in the twentieth century.",
         "answer": "NOT GIVEN",
-        "why": "Paragraph D mentions safety concerns including thalidomide and pertussis vaccine controversies and the development of safety testing protocols, but does not assert whether these concerns were founded or unfounded."
+        "why": "Paragraph D says pertussis controversies 'prompted development of more rigorous safety testing protocols and pharmacovigilance systems', but gives no vaccination rates."
       },
       {
         "id": "r09-q05",
-        "type": "ynng",
-        "prompt": "The author suggests that mRNA vaccine technology represented a novel approach to infectious disease prevention in 2020.",
-        "answer": "YES",
-        "why": "Paragraph E states: 'When the COVID-19 pandemic emerged in late 2019, mRNA vaccine technology had not yet been approved for infectious diseases' and 'represented the first large-scale application of this technology against an infectious pathogen,' indicating novelty."
+        "type": "tfng",
+        "prompt": "Before 2019, mRNA technology had been successfully used against infectious diseases.",
+        "answer": "FALSE",
+        "why": "The passage says mRNA vaccines 'had not received approval for infectious diseases prior to 2019.'"
       },
       {
         "id": "r09-q06",
         "type": "complete",
-        "prompt": "Edward Jenner introduced the term 'vaccination' in his 1798 work titled 'An Inquiry into the Causes and Effects of the Variolae ___.'",
+        "prompt": "Jenner's 1798 publication carried the Latin phrase 'Variolae ___' in its title.",
         "answer": [
           "Vaccinae"
         ],
-        "why": "Paragraph B states: \"his work titled 'An Inquiry into the Causes and Effects of the Variolae Vaccinae.'\" This is the exact title."
+        "why": "Paragraph B states that Jenner published 'An Inquiry into the Causes and Effects of the Variolae Vaccinae' in 1798."
       },
       {
         "id": "r09-q07",
         "type": "complete",
-        "prompt": "Louis Pasteur developed the first successful vaccine against ___ in 1885.",
+        "prompt": "Louis Pasteur's 1885 vaccine was the first successful one against _______.",
         "answer": [
           "rabies"
         ],
-        "why": "Paragraph C states: 'Pasteur developed the first successful vaccine against rabies in 1885.'"
+        "why": "The passage says: 'He developed the first successful rabies vaccine in 1885.'"
       },
       {
         "id": "r09-q08",
         "type": "complete",
-        "prompt": "The hepatitis B vaccine, licensed in 1986, was the first successful ___ vaccine.",
+        "prompt": "Approved in 1986, the hepatitis B vaccine was the first successful vaccine made with ___ technology.",
         "answer": [
           "recombinant DNA"
         ],
@@ -447,11 +447,11 @@
       {
         "id": "r09-q09",
         "type": "complete",
-        "prompt": "In 2019, measles cases in the United States reached 1,282, the highest number in ___ years.",
+        "prompt": "The 1,282 measles cases recorded in the United States in 2019 were the most in _______ years.",
         "answer": [
           "27"
         ],
-        "why": "Paragraph F states: 'In 2019, measles cases in the United States reached 1,282, the highest number in 27 years.'"
+        "why": "The passage says: 'In 2019, United States measles cases reached 1,282, representing the highest number in 27 years.'"
       },
       {
         "id": "r09-q10",
@@ -466,7 +466,7 @@
           "vi. Vaccine Safety and Regulatory Systems"
         ],
         "answer": "i",
-        "why": "Paragraph A discusses early variolation practices in India and China and their spread to Europe, matching 'Ancient Vaccination Techniques and Variolation.'"
+        "why": "Paragraph A covers early variolation in India and China and its spread to Europe, so option i fits."
       },
       {
         "id": "r09-q11",
@@ -496,12 +496,12 @@
           "vi. Vaccine Safety and Regulatory Systems"
         ],
         "answer": "iv",
-        "why": "Paragraph F discusses vaccine hesitancy, misinformation, distribution inequities, and vaccine nationalism. Option iv 'Vaccine Hesitancy, Inequity, and Modern Public Health Challenges' best describes this content."
+        "why": "Paragraph F covers vaccine hesitancy, misinformation, distribution inequities and vaccine nationalism, so option iv fits."
       },
       {
         "id": "r09-q13",
         "type": "mcq",
-        "prompt": "According to the passage, by what year had approximately 100,000 people in England received vaccinations?",
+        "prompt": "By which year had roughly 100,000 residents of England been vaccinated?",
         "options": [
           "A. 1796",
           "B. 1798",
@@ -509,12 +509,12 @@
           "D. 1807"
         ],
         "answer": "C",
-        "why": "Paragraph B states: 'By 1801, however, approximately 100,000 people in England had received vaccinations.'"
+        "why": "The passage says: 'By 1801, approximately 100,000 people in England had received vaccinations.'"
       },
       {
         "id": "r09-q14",
         "type": "mcq",
-        "prompt": "Which vaccine technology was authorized through emergency use procedures against COVID-19?",
+        "prompt": "Which vaccine technology had no prior approval for infectious disease use before 2020?",
         "options": [
           "A. Recombinant DNA vaccines",
           "B. mRNA vaccines",
@@ -522,7 +522,7 @@
           "D. Attenuated vaccines"
         ],
         "answer": "B",
-        "why": "Paragraph E states: 'The rapid deployment of mRNA vaccines against COVID-19 in 2020-2021, authorized through emergency use procedures.'"
+        "why": "Paragraph E states: mRNA vaccines had not received approval for infectious diseases prior to 2019. All other options were approved earlier."
       }
     ]
   },
@@ -562,28 +562,28 @@
         "type": "ynng",
         "prompt": "The author presents bread as having significance extending beyond its nutritional value.",
         "answer": "YES",
-        "why": "Paragraph A states: 'This historical pattern demonstrates how bread transcended its nutritional function to become a carrier of social meaning, political power, and economic value.' The author explicitly argues bread has significance beyond nutrition."
+        "why": "The passage says: 'This historical pattern demonstrates how bread transcended its fundamental nutritional function to become a carrier of profound social meaning, political power, and economic value.'"
       },
       {
         "id": "r10-q02",
         "type": "ynng",
-        "prompt": "The writer implies that Asian countries have less developed agricultural systems than Mediterranean regions.",
+        "prompt": "The author's analysis implies that Asian countries adopted rice over bread due to agricultural limitations.",
         "answer": "NOT GIVEN",
-        "why": "Paragraph B states that Asian countries have lower bread consumption because 'rice rather than bread serves as the primary staple carbohydrate.' This reflects cultural preference and agricultural tradition, not agricultural development levels."
+        "why": "The passage says consumption patterns are 'reflecting distinct cultural traditions, agricultural capacities, and dietary preferences' but never says rice is chosen because of limited farming, so the claim is NOT GIVEN."
       },
       {
         "id": "r10-q03",
         "type": "ynng",
         "prompt": "The author suggests that global wheat price increases disproportionately affected lower-income populations.",
         "answer": "YES",
-        "why": "Paragraph C states: 'triggering widespread food security crises particularly affecting lower-income populations dependent on wheat and bread consumption' and notes this forced families to reduce nutritious foods. This implies disproportionate impact."
+        "why": "The passage says the 2010-2012 price doubling was 'triggering widespread food security crises particularly affecting lower-income populations dependent on wheat', which implies a disproportionate effect."
       },
       {
         "id": "r10-q04",
-        "type": "ynng",
+        "type": "tfng",
         "prompt": "Industrial bread production improved the nutritional quality of consumed bread.",
-        "answer": "NO",
-        "why": "Paragraph D states: 'industrial production simultaneously reduced nutritional quality through refined flour processing, which removed bran and germ containing essential micronutrients, fiber, and phytonutrients.'"
+        "answer": "FALSE",
+        "why": "The passage says industrial production 'reduced nutritional quality through refined flour processing, which removed bran and germ containing essential micronutrients.'"
       },
       {
         "id": "r10-q05",
@@ -595,35 +595,34 @@
       {
         "id": "r10-q06",
         "type": "complete",
-        "prompt": "Bread consumption in Mediterranean countries averages between 60 to 80 kilograms per capita ___.",
+        "prompt": "In Mediterranean countries, average bread consumption is 60 to 80 kilograms per person _______.",
         "answer": [
           "annually"
         ],
-        "why": "Paragraph B states: 'averaging 60 to 80 kilograms per capita annually.' Annually is the exact term."
+        "why": "Paragraph B states: averaging 60 to 80 kilograms per capita annually, with bread integral to nearly every meal."
       },
       {
         "id": "r10-q07",
         "type": "complete",
-        "prompt": "Between 2010 and 2012, global ___ prices approximately doubled due to drought conditions.",
+        "prompt": "Between 2010 and 2012, the world price of _______ roughly doubled after droughts hit major growing regions.",
         "answer": [
           "wheat"
         ],
-        "why": "Paragraph C states: 'Between 2010 and 2012, global wheat prices approximately doubled due to drought conditions.'"
+        "why": "The passage says: 'Between 2010 and 2012, global wheat prices approximately doubled due to severe drought conditions.'"
       },
       {
         "id": "r10-q08",
         "type": "complete",
-        "prompt": "Industrial bread production reduced prices by approximately 30 to 40 percent relative to ___ production.",
+        "prompt": "Industrial bakeries cut bread prices by 30 to 40 percent compared with _______ production.",
         "answer": [
-          "artisanal",
-          "traditional"
+          "traditional artisanal"
         ],
-        "why": "Paragraph D states: 'reduced bread prices by approximately 30 to 40 percent relative to traditional artisanal production during the 1950s and 1960s.'"
+        "why": "Paragraph D states: reduced bread prices by approximately 30 to 40 percent relative to traditional artisanal production."
       },
       {
         "id": "r10-q09",
         "type": "complete",
-        "prompt": "The slow food movement was initiated in ___ in 1986.",
+        "prompt": "The slow food movement, which began in 1986, traces its origins to _______.",
         "answer": [
           "Italy"
         ],
@@ -657,7 +656,7 @@
           "vi. Global Climate Change and Agriculture"
         ],
         "answer": "ii",
-        "why": "Paragraph C discusses food security, poverty, price vulnerability, and how bread consumption relates to economic inequality. Option ii 'Bread Consumption and Socioeconomic Inequality' directly matches."
+        "why": "Paragraph C covers food security, poverty, price vulnerability and bread's link to inequality, so option ii fits."
       },
       {
         "id": "r10-q12",
@@ -690,7 +689,7 @@
       {
         "id": "r10-q14",
         "type": "match",
-        "prompt": "Match the following statements to the appropriate paragraphs (A-F). Which paragraph discusses bread's historical use as a medium of labor exchange?",
+        "prompt": "Which paragraph discusses bread's historical role in compensating workers for labor?",
         "options": [
           "A. Paragraph A",
           "B. Paragraph B",
@@ -700,7 +699,7 @@
           "F. Paragraph F"
         ],
         "answer": "A",
-        "why": "Paragraph A states: 'In ancient Egypt, bread served as a standardized medium of labor exchange, with workers receiving daily rations.'"
+        "why": "Paragraph A states: In ancient Egypt, bread served as a standardized medium of labor exchange, with workers receiving daily rations as compensation."
       }
     ]
   },
@@ -738,7 +737,7 @@
       {
         "id": "r11-q01",
         "type": "tfng",
-        "prompt": "Lithium-ion batteries powered approximately 70 percent of electric vehicles sold globally in 2023.",
+        "prompt": "Roughly seven in ten electric vehicles sold worldwide in 2023 ran on lithium-ion batteries.",
         "answer": "TRUE",
         "why": "Paragraph A states: 'powered approximately 70 percent of electric vehicles sold globally in 2023.'"
       },
@@ -766,23 +765,23 @@
       {
         "id": "r11-q05",
         "type": "tfng",
-        "prompt": "Perovskite solar cells are less efficient than silicon-based solar cells in commercial applications.",
-        "answer": "FALSE",
-        "why": "Paragraph D states: 'demonstrate laboratory efficiencies exceeding 30 percent compared to silicon's typical 15 to 22 percent commercial efficiency.' Perovskite efficiencies are higher."
+        "prompt": "Perovskite solar cells demonstrate equal or superior commercial efficiency to silicon-based solar cells.",
+        "answer": "NOT GIVEN",
+        "why": "Paragraph D provides perovskite laboratory efficiencies (exceeding 30 percent) and silicon commercial efficiency (15-22 percent), but no perovskite commercial figure, so direct commercial comparison is not established."
       },
       {
         "id": "r11-q06",
         "type": "complete",
-        "prompt": "Silicon-based solar cell costs declined by approximately 89 percent between 2010 and ___.",
+        "prompt": "The cost of silicon-based photovoltaic systems fell by roughly 89 percent during the decade following ___.",
         "answer": [
-          "2020"
+          "2010"
         ],
-        "why": "Paragraph D states: 'costs declined by approximately 89 percent between 2010 and 2020.'"
+        "why": "Paragraph D states: silicon-based solar cells costs declined by approximately 89 percent between 2010 and 2020."
       },
       {
         "id": "r11-q07",
         "type": "complete",
-        "prompt": "High-temperature superconductors were discovered beginning in ___.",
+        "prompt": "The first high-temperature superconductors came to light in _______.",
         "answer": [
           "1987"
         ],
@@ -791,7 +790,7 @@
       {
         "id": "r11-q08",
         "type": "complete",
-        "prompt": "The concentrated solar power facility in Ouarzazate, Morocco, was commissioned in ___ and incorporates molten salt storage.",
+        "prompt": "Morocco's Ouarzazate solar plant, a concentrated solar power site with molten salt storage, came online in ___.",
         "answer": [
           "2018"
         ],
@@ -800,13 +799,11 @@
       {
         "id": "r11-q09",
         "type": "complete",
-        "prompt": "Phase-change materials demonstrate specific heat capacities approximately 5 to 10 times higher than ___ used in conventional thermal storage.",
+        "prompt": "Phase-change materials have specific heat capacities roughly 5 to 10 times greater than those of ___, the traditional storage media.",
         "answer": [
-          "rock",
-          "sand",
           "rock or sand"
         ],
-        "why": "Paragraph F states: 'higher than rock or sand conventionally used in thermal storage.' Either term is correct."
+        "why": "Paragraph F states: 'higher than rock or sand conventionally used in thermal storage.' The passage names the pair, so the gap takes the full phrase."
       },
       {
         "id": "r11-q10",
@@ -915,42 +912,42 @@
       {
         "id": "r12-q01",
         "type": "tfng",
-        "prompt": "REM sleep comprises approximately 20 to 25 percent of total adult sleep time.",
-        "answer": "TRUE",
-        "why": "Paragraph A states: 'REM sleep, comprising approximately 20 to 25 percent of total adult sleep time.'"
+        "prompt": "Adults spend most of their sleep time in REM sleep.",
+        "answer": "FALSE",
+        "why": "Paragraph A: REM sleep comprises 'approximately 20 to 25 percent of total adult sleep time', while non-REM takes '75 to 80 percent'. Most sleep is non-REM, so the statement is contradicted."
       },
       {
         "id": "r12-q02",
         "type": "tfng",
-        "prompt": "Sleep spindles occur at frequencies between 12 to 16 Hertz.",
+        "prompt": "Sleep spindles help move memories from the hippocampus to another region of the brain.",
         "answer": "TRUE",
-        "why": "Paragraph B states: 'sleep-specific spindle oscillations, transient bursts of neural activity at 12 to 16 Hertz frequency.'"
+        "why": "Paragraph B: spindle oscillations 'facilitate transfer of hippocampal memories to the neocortex'. The neocortex is the other region."
       },
       {
         "id": "r12-q03",
         "type": "tfng",
-        "prompt": "Freud's dream theory has been completely replaced by modern neuroscience.",
-        "answer": "FALSE",
-        "why": "Paragraph C states: 'Modern neuroscience has moved beyond Freudian interpretations,' indicating movement beyond rather than complete replacement, and acknowledges emerging evidence for dreams' functions."
+        "prompt": "Hobson and McCarley developed their hypothesis by studying patients with sleep disorders.",
+        "answer": "NOT GIVEN",
+        "why": "Paragraph C names Hobson and McCarley and the year (1977) and explains what the hypothesis proposes, but says nothing about how they developed it or whom they studied."
       },
       {
         "id": "r12-q04",
         "type": "tfng",
-        "prompt": "Partial sleep deprivation defined as fewer than six hours nightly impairs executive function.",
+        "prompt": "Regularly sleeping less than six hours can weaken the mental skills used for planning and self-control.",
         "answer": "TRUE",
-        "why": "Paragraph D states: 'Partial sleep deprivation, defined as restricting sleep to fewer than six hours nightly, impairs...executive function.'"
+        "why": "Paragraph D: partial sleep deprivation, 'fewer than six hours nightly, impairs attention, working memory, and executive function'. Executive function is the set of skills for planning and self-control."
       },
       {
         "id": "r12-q05",
         "type": "tfng",
-        "prompt": "Blue light exposure suppresses melatonin production and promotes wakefulness.",
-        "answer": "TRUE",
-        "why": "Paragraph E states: 'Light exposure, particularly blue-wavelength light around 480 nanometers, suppresses melatonin production and promotes wakefulness.'"
+        "prompt": "Evening light from electronic devices affects children more strongly than adults.",
+        "answer": "NOT GIVEN",
+        "why": "Paragraph E says artificial evening light from devices 'interferes with melatonin and circadian rhythm alignment', but never compares children with adults."
       },
       {
         "id": "r12-q06",
         "type": "complete",
-        "prompt": "The hippocampus is a seahorse-shaped brain structure located in the ___ lobe.",
+        "prompt": "The hippocampus, which has a seahorse-like shape, lies within the ___ lobe.",
         "answer": [
           "temporal"
         ],
@@ -959,29 +956,29 @@
       {
         "id": "r12-q07",
         "type": "complete",
-        "prompt": "The suprachiasmatic nucleus contains approximately ___ neurons.",
+        "prompt": "The suprachiasmatic nucleus, the brain's main circadian pacemaker, contains roughly ___ neurons.",
         "answer": [
           "20,000"
         ],
-        "why": "Paragraph E states: 'The suprachiasmatic nucleus, a specialized hypothalamic structure containing approximately 20,000 neurons.'"
+        "why": "Paragraph E states: The suprachiasmatic nucleus containing approximately 20,000 neurons, functions as the central circadian pacemaker."
       },
       {
         "id": "r12-q08",
         "type": "complete",
-        "prompt": "Adenosine is a neuromodulatory ___ that builds up during waking activity.",
+        "prompt": "Adenosine, which accumulates while a person is awake, is a type of _______.",
         "answer": [
           "nucleoside"
         ],
-        "why": "Paragraph E states: 'Homeostatic sleep pressure...depends upon accumulation of adenosine, a neuromodulatory nucleoside.'"
+        "why": "The passage says adenosine is 'a neuromodulatory nucleoside that builds up during wakefulness and dissipates during sleep.'"
       },
       {
         "id": "r12-q09",
         "type": "complete",
-        "prompt": "The optimal bedroom temperature for sleep is approximately 16 to 19 degrees ___.",
+        "prompt": "Sleep hygiene advice suggests keeping a bedroom between 16 and 19 degrees _______.",
         "answer": [
           "Celsius"
         ],
-        "why": "Paragraph F states: 'bedroom temperature control around 16 to 19 degrees Celsius.'"
+        "why": "Paragraph F states: Sleep hygiene modifications include bedroom temperature 16-19 degrees Celsius."
       },
       {
         "id": "r12-q10",
@@ -1011,7 +1008,7 @@
           "vi. Circadian Rhythm Regulation Mechanisms"
         ],
         "answer": "iii",
-        "why": "Paragraph C discusses Freud's theory, activation-synthesis hypothesis, and competing theories about dreams' functions. Option iii 'Dream Content and Competing Neuroscientific Theories' matches this content."
+        "why": "Paragraph C covers Freud's theory, the activation-synthesis hypothesis and competing dream theories, so option iii fits."
       },
       {
         "id": "r12-q12",
@@ -1026,12 +1023,12 @@
           "vi. Circadian Rhythm Regulation Mechanisms"
         ],
         "answer": "v",
-        "why": "Paragraph E discusses the suprachiasmatic nucleus, circadian regulation, and homeostatic sleep pressure. Option v 'Neural and Hormonal Systems Regulating Sleep-Wake Cycles' describes this content."
+        "why": "Paragraph E covers the suprachiasmatic nucleus, circadian regulation and homeostatic sleep pressure, so option v fits."
       },
       {
         "id": "r12-q13",
         "type": "mcq",
-        "prompt": "According to epidemiological surveys conducted 2010-2020, approximately what percentage of adults in industrialized nations experience chronic insufficient sleep?",
+        "prompt": "Roughly what share of adults in industrialized countries had chronic insufficient sleep between 2010 and 2020?",
         "options": [
           "A. 15-20 percent",
           "B. 25-30 percent",
@@ -1052,7 +1049,7 @@
           "D. 76 percent"
         ],
         "answer": "C",
-        "why": "Paragraph F states: 'A randomized controlled trial published in JAMA Psychiatry in 2015...found that CBT-I produced...64 percent of CBT-I patients achieving remission.'"
+        "why": "The passage says: 'A 2015 JAMA Psychiatry trial comparing CBT-I to medication in 208 adults found CBT-I produced superior long-term outcomes with 64 percent remission versus 39 percent in the medication group.'"
       }
     ]
   }

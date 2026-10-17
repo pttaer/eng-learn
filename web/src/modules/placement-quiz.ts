@@ -4,7 +4,7 @@ import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import vocabularyData from '../assets/data/vocabulary.json';
 import collocationsData from '../assets/data/collocations.json';
-import grammarData from '../assets/data/grammar.json';
+import diagnosticData from '../assets/data/diagnostic-questions.json';
 import readingData from '../assets/data/reading.json';
 
 /**
@@ -32,7 +32,7 @@ export class PlacementQuiz {
     this.questions = buildQuestions(
       vocabularyData as any[],
       collocationsData as any[],
-      grammarData as any[],
+      (diagnosticData as any[]).filter(q => q.skill === 'grammar'),
       articles as any[]
     );
     this.overlay = document.createElement('div');

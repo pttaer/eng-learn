@@ -99,7 +99,7 @@ Newer techniques appear to offer partial remedies, at least for certain groups o
 - **IPA**: /ˈprɪv.əl.ɪdʒ/
 - **Definition**: Treat one thing as more important or authoritative than others, often without sufficient justification.
 - **Vietnamese**: đặt ưu tiên, coi trọng hơn hẳn, ưu ái một yếu tố so với các yếu tố khác
-- **Context**: Some ecologists have therefore advocated reporting a family of related measures, often expressed as effective numbers of species, rather than privileging any single index. Each choice reflects a judgment about which aspects of diversity matter most.
+- **Context**: Some ecologists have therefore advocated reporting a family of related measures, often expressed as effective numbers of species, rather than privilege any single index. Each choice reflects a judgment about which aspects of diversity matter most.
 - **Collocations**: privilege one interpretation over another, privilege theory over practice, privileging any single index
 - **Etymology**: Latin privilegium (a law for an individual), from privus (private) + lex, leg- (law).
 
