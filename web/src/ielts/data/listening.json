@@ -1538,5 +1538,3336 @@
     "why": "Lecturer says 'Modern computational fluid dynamics, or C F D, has transformed aircraft design. Engineers can now simulate airflow around complex shapes before building physical prototypes, reducing development time and cost significantly.'"
    }
   ]
+ },
+ {
+  "id": "l3-s1",
+  "section": 1,
+  "title": "Gym Membership Enquiry",
+  "speakers": [
+   {
+    "name": "Receptionist",
+    "lang": "en-GB",
+    "gender": "f"
+   },
+   {
+    "name": "Customer",
+    "lang": "en-AU",
+    "gender": "m"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Receptionist",
+    "text": "Hello, Riverside Fitness Centre. How can I help you?"
+   },
+   {
+    "speaker": "Customer",
+    "text": "Hi. I'm interested in a membership. What options do you have?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "We have three types. Standard is for off-peak hours only, that's before four in the afternoon. Premium gives access at any time. And there's a Student option."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Student sounds good. How much is it?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "The student membership is twenty-four pounds a month, and you need to show a valid student card."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Is there a joining fee?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "Yes, there's a one-off joining fee of thirty pounds, but it's waived if you pay for twelve months in advance."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Right. Do you have a swimming pool?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "The pool is open from six to ten in the morning and from five until nine in the evening. Lane swimming is in the mornings only."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Can I bring a friend to try it out?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "Yes, guests can come once for free if they book in advance by phone."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Great. Can I start on Monday the third?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "Certainly. I'll need your full name and date of birth."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Alan Fraser, the fourteenth of March, 1999."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Also, do you offer personal training?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "Yes, we have qualified trainers. A one-hour session is priced separately, and you can book one through the app once you've joined. They're popular, so it's worth booking early."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Good to know. Are there lockers in the changing rooms?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "There are lockers in both changing rooms. You'll need a refundable deposit for the key, which you get back when you return it. Towels are provided at the front desk, but there's a small charge for them."
+   },
+   {
+    "speaker": "Customer",
+    "text": "That's useful. Is there parking?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "There's a car park behind the building, and it's free for members. Bicycles can be locked at the rack near the entrance."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Brilliant. I think I'm sold. Can I sign up today?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "Of course. Let's get the forms completed, and I'll take your photo for the card."
+   },
+   {
+    "speaker": "Customer",
+    "text": "How long does it take to get the card?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "The card is printed while you wait, so you can use it straight away."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l3-s1-q01",
+    "type": "complete",
+    "prompt": "Student membership cost per month (pounds):",
+    "answer": [
+     "24",
+     "twenty-four",
+     "£24"
+    ],
+    "why": "The receptionist says 'The student membership is twenty-four pounds a month' in the first half of the call."
+   },
+   {
+    "id": "l3-s1-q02",
+    "type": "complete",
+    "prompt": "One-off joining fee (pounds):",
+    "answer": [
+     "30",
+     "thirty"
+    ],
+    "why": "The receptionist explains 'there's a one-off joining fee of thirty pounds'."
+   },
+   {
+    "id": "l3-s1-q03",
+    "type": "mcq",
+    "prompt": "The standard membership is only valid:",
+    "options": [
+     "A. at weekends",
+     "B. before four in the afternoon",
+     "C. after six in the evening",
+     "D. at any time"
+    ],
+    "answer": "B",
+    "why": "The receptionist says 'Standard is for off-peak hours only, that's before four in the afternoon.'"
+   },
+   {
+    "id": "l3-s1-q04",
+    "type": "complete",
+    "prompt": "The joining fee is waived if the member pays for ___ months in advance.",
+    "answer": [
+     "12",
+     "twelve"
+    ],
+    "why": "The receptionist says it is 'waived if you pay for twelve months in advance'."
+   },
+   {
+    "id": "l3-s1-q05",
+    "type": "complete",
+    "prompt": "The pool opens in the morning at (time):",
+    "answer": [
+     "6 a.m.",
+     "6am",
+     "6 am",
+     "six",
+     "six o'clock"
+    ],
+    "why": "The receptionist says 'The pool is open from six to ten in the morning'."
+   },
+   {
+    "id": "l3-s1-q06",
+    "type": "mcq",
+    "prompt": "Lane swimming is available:",
+    "options": [
+     "A. all day",
+     "B. in the mornings only",
+     "C. in the evenings only",
+     "D. at weekends only"
+    ],
+    "answer": "B",
+    "why": "The receptionist says 'Lane swimming is in the mornings only.'"
+   },
+   {
+    "id": "l3-s1-q07",
+    "type": "complete",
+    "prompt": "A guest can attend one free trial session if they ___.",
+    "answer": [
+     "book in advance by phone",
+     "book in advance",
+     "book by phone"
+    ],
+    "why": "The receptionist says 'guests can come once for free if they book in advance by phone.'"
+   },
+   {
+    "id": "l3-s1-q08",
+    "type": "complete",
+    "prompt": "The customer wants to start on:",
+    "answer": [
+     "Monday the third",
+     "Monday 3rd",
+     "Monday the 3rd"
+    ],
+    "why": "The customer asks 'Can I start on Monday the third?' and the receptionist replies 'Certainly.'"
+   },
+   {
+    "id": "l3-s1-q09",
+    "type": "complete",
+    "prompt": "The customer's date of birth:",
+    "answer": [
+     "14 March 1999",
+     "fourteenth of March 1999",
+     "14/03/1999",
+     "14 March, 1999"
+    ],
+    "why": "The customer gives 'the fourteenth of March, 1999' when asked for his date of birth."
+   },
+   {
+    "id": "l3-s1-q10",
+    "type": "mcq",
+    "prompt": "Which membership gives access at any time?",
+    "options": [
+     "A. Standard",
+     "B. Premium",
+     "C. Student",
+     "D. Guest"
+    ],
+    "answer": "B",
+    "why": "The receptionist says 'Premium gives access at any time.'"
+   }
+  ]
+ },
+ {
+  "id": "l3-s2",
+  "section": 2,
+  "title": "Guided Tour of the Botanic Garden",
+  "speakers": [
+   {
+    "name": "Guide",
+    "lang": "en-GB",
+    "gender": "f"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Guide",
+    "text": "Welcome to the Eastbank Botanic Garden. I'll outline the tour and a few rules before we begin."
+   },
+   {
+    "speaker": "Guide",
+    "text": "The tour lasts about seventy minutes and covers four zones. We begin in the tropical glasshouse, which is kept at twenty-six degrees."
+   },
+   {
+    "speaker": "Guide",
+    "text": "After that, we walk to the herb garden, then the rose walk, and finish in the old orchard. The orchard is closed to visitors in winter, so the tour doesn't go there from December to February."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Please don't touch the plants. The only exception is the scented herb garden, where you may rub the leaves gently."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Cameras are welcome, but flash photography is not allowed inside the glasshouse because it can harm the orchids."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Refreshments are available at the café near the gate. The café closes at four, half an hour before the garden does."
+   },
+   {
+    "speaker": "Guide",
+    "text": "The garden itself closes at half past four. If you lose anything, please come to the information desk by the main gate."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Next month we'll run a special night tour, but that requires a separate ticket costing fifteen pounds."
+   },
+   {
+    "speaker": "Guide",
+    "text": "The glasshouse also houses a collection of carnivorous plants. Some of them catch insects, and you may see them digesting prey if you look closely near the back wall."
+   },
+   {
+    "speaker": "Guide",
+    "text": "The rose walk is at its best in early summer. The roses are labelled with their names and the year they were introduced, so take a moment to read the boards."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Benches are placed along the walk, and you're welcome to sit and rest. Please keep to the paths, because the beds are fragile and easily damaged."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Children are welcome, but they should be supervised at all times, especially near the pond, which is quite deep."
+   },
+   {
+    "speaker": "Guide",
+    "text": "There's a shop at the exit selling seeds, plant guides and small gifts. Card payments are accepted, but cash is not."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Thank you for coming today. I hope you enjoy the garden, and please give us your feedback on the way out."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l3-s2-q01",
+    "type": "complete",
+    "prompt": "Length of the tour (minutes):",
+    "answer": [
+     "70",
+     "seventy"
+    ],
+    "why": "The guide says 'The tour lasts about seventy minutes and covers four zones.'"
+   },
+   {
+    "id": "l3-s2-q02",
+    "type": "complete",
+    "prompt": "Temperature in the tropical glasshouse (degrees):",
+    "answer": [
+     "26",
+     "twenty-six"
+    ],
+    "why": "The guide says the glasshouse 'is kept at twenty-six degrees'."
+   },
+   {
+    "id": "l3-s2-q03",
+    "type": "mcq",
+    "prompt": "The tour does not visit the orchard from:",
+    "options": [
+     "A. June to August",
+     "B. December to February",
+     "C. March to May",
+     "D. September to November"
+    ],
+    "answer": "B",
+    "why": "The orchard is closed in winter, 'so the tour doesn't go there from December to February.'"
+   },
+   {
+    "id": "l3-s2-q04",
+    "type": "complete",
+    "prompt": "The only plants visitors may touch are in the ___ garden.",
+    "answer": [
+     "scented herb",
+     "herb"
+    ],
+    "why": "The guide says 'The only exception is the scented herb garden, where you may rub the leaves gently.'"
+   },
+   {
+    "id": "l3-s2-q05",
+    "type": "mcq",
+    "prompt": "Why is flash photography banned in the glasshouse?",
+    "options": [
+     "A. It disturbs other visitors",
+     "B. It may harm the orchids",
+     "C. It damages the glass",
+     "D. It dazzles the staff"
+    ],
+    "answer": "B",
+    "why": "The guide says flash photography 'can harm the orchids'."
+   },
+   {
+    "id": "l3-s2-q06",
+    "type": "complete",
+    "prompt": "The café closes at (time):",
+    "answer": [
+     "4 pm",
+     "4 p.m.",
+     "4pm",
+     "four",
+     "four o'clock"
+    ],
+    "why": "The guide says 'The café closes at four, half an hour before the garden does.'"
+   },
+   {
+    "id": "l3-s2-q07",
+    "type": "complete",
+    "prompt": "The garden closes at (time):",
+    "answer": [
+     "4:30",
+     "4.30",
+     "half past four",
+     "4:30 pm"
+    ],
+    "why": "The guide says 'The garden itself closes at half past four.'"
+   },
+   {
+    "id": "l3-s2-q08",
+    "type": "complete",
+    "prompt": "Lost property should be taken to the ___ desk.",
+    "answer": [
+     "information"
+    ],
+    "why": "The guide says 'please come to the information desk by the main gate.'"
+   },
+   {
+    "id": "l3-s2-q09",
+    "type": "complete",
+    "prompt": "Price of the special night tour (pounds):",
+    "answer": [
+     "15",
+     "fifteen"
+    ],
+    "why": "The guide says the night tour 'requires a separate ticket costing fifteen pounds'."
+   },
+   {
+    "id": "l3-s2-q10",
+    "type": "mcq",
+    "prompt": "Where does the tour begin?",
+    "options": [
+     "A. the herb garden",
+     "B. the rose walk",
+     "C. the tropical glasshouse",
+     "D. the old orchard"
+    ],
+    "answer": "C",
+    "why": "The guide says 'We begin in the tropical glasshouse'."
+   }
+  ]
+ },
+ {
+  "id": "l3-s3",
+  "section": 3,
+  "title": "Planning a River Water Quality Project",
+  "speakers": [
+   {
+    "name": "Tutor",
+    "lang": "en-GB",
+    "gender": "m"
+   },
+   {
+    "name": "Student",
+    "lang": "en-AU",
+    "gender": "f"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Tutor",
+    "text": "Sam, have you settled on your group's research question for the environmental science project?"
+   },
+   {
+    "speaker": "Student",
+    "text": "We think we'll look at river water quality near the town, specifically nitrate levels."
+   },
+   {
+    "speaker": "Tutor",
+    "text": "Good. Where are you taking samples?"
+   },
+   {
+    "speaker": "Student",
+    "text": "Three sites: upstream of the factory, below the factory, and at the weir. We'll take samples every Tuesday for four weeks."
+   },
+   {
+    "speaker": "Tutor",
+    "text": "Why Tuesdays in particular?"
+   },
+   {
+    "speaker": "Student",
+    "text": "The river authority publishes flow data on Tuesdays, and we want to match our samples to the flow."
+   },
+   {
+    "speaker": "Tutor",
+    "text": "That's sensible. For the field tests, what method are you using?"
+   },
+   {
+    "speaker": "Student",
+    "text": "We're using test strips in the field and sending a few samples to the lab to check them."
+   },
+   {
+    "speaker": "Tutor",
+    "text": "Test strips are less accurate, so your report must mention that as a limitation."
+   },
+   {
+    "speaker": "Student",
+    "text": "We know. That's why we'll compare them with the lab results."
+   },
+   {
+    "speaker": "Tutor",
+    "text": "How many samples in total?"
+   },
+   {
+    "speaker": "Student",
+    "text": "Twelve per site, so thirty-six altogether, plus three blanks."
+   },
+   {
+    "speaker": "Tutor",
+    "text": "And who is doing the statistics?"
+   },
+   {
+    "speaker": "Student",
+    "text": "Dan will do the statistics. I'll write the methods section and the limitations."
+   },
+   {
+    "speaker": "Tutor",
+    "text": "When is the draft due?"
+   },
+   {
+    "speaker": "Student",
+    "text": "The draft is due on the twentieth of November, and we're presenting on the fourth of December."
+   },
+   {
+    "speaker": "Tutor",
+    "text": "Have you thought about the risks in the field, such as weather or access to the weir?"
+   },
+   {
+    "speaker": "Student",
+    "text": "Yes. We'll wear waders for the weir, and we'll never sample alone. We've also added a backup day in case of heavy rain."
+   },
+   {
+    "speaker": "Tutor",
+    "text": "Good. Make sure the risk assessment is signed before the first visit."
+   },
+   {
+    "speaker": "Student",
+    "text": "We already have the form. Dan is collecting signatures from the lab technician this week."
+   },
+   {
+    "speaker": "Tutor",
+    "text": "Excellent. And what will you do if a result looks odd?"
+   },
+   {
+    "speaker": "Student",
+    "text": "We'll repeat the test on a fresh sample and record both results, so the report shows that we checked."
+   },
+   {
+    "speaker": "Tutor",
+    "text": "That's the right approach. Keep your field notebook up to date as well; examiners look at it."
+   },
+   {
+    "speaker": "Student",
+    "text": "Will do. Thanks for the feedback."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l3-s3-q01",
+    "type": "complete",
+    "prompt": "The group's research focus is:",
+    "answer": [
+     "nitrate levels",
+     "nitrates",
+     "nitrate"
+    ],
+    "why": "The student says 'We think we'll look at river water quality near the town, specifically nitrate levels.'"
+   },
+   {
+    "id": "l3-s3-q02",
+    "type": "mcq",
+    "prompt": "How many sampling sites will the group use?",
+    "options": [
+     "A. two",
+     "B. three",
+     "C. four",
+     "D. five"
+    ],
+    "answer": "B",
+    "why": "The student lists 'Three sites: upstream of the factory, below the factory, and at the weir.'"
+   },
+   {
+    "id": "l3-s3-q03",
+    "type": "complete",
+    "prompt": "The day of the week on which samples are taken:",
+    "answer": [
+     "Tuesday",
+     "Tuesdays"
+    ],
+    "why": "The student says 'We'll take samples every Tuesday for four weeks.'"
+   },
+   {
+    "id": "l3-s3-q04",
+    "type": "mcq",
+    "prompt": "Why are samples taken on that day?",
+    "options": [
+     "A. The lab is open only then",
+     "B. To match the flow data",
+     "C. The river is cleaner then",
+     "D. The tutor asked for it"
+    ],
+    "answer": "B",
+    "why": "The student says the authority publishes flow data on Tuesdays and 'we want to match our samples to the flow.'"
+   },
+   {
+    "id": "l3-s3-q05",
+    "type": "complete",
+    "prompt": "The field testing method is:",
+    "answer": [
+     "test strips",
+     "testing strips",
+     "test strip"
+    ],
+    "why": "The student says 'We're using test strips in the field and sending a few samples to the lab to check them.'"
+   },
+   {
+    "id": "l3-s3-q06",
+    "type": "mcq",
+    "prompt": "The tutor says the test strips are:",
+    "options": [
+     "A. more expensive",
+     "B. less accurate",
+     "C. banned",
+     "D. faster to read"
+    ],
+    "answer": "B",
+    "why": "The tutor says 'Test strips are less accurate, so your report must mention that as a limitation.'"
+   },
+   {
+    "id": "l3-s3-q07",
+    "type": "complete",
+    "prompt": "Total number of samples, excluding blanks:",
+    "answer": [
+     "36",
+     "thirty-six"
+    ],
+    "why": "The student says 'Twelve per site, so thirty-six altogether, plus three blanks.'"
+   },
+   {
+    "id": "l3-s3-q08",
+    "type": "complete",
+    "prompt": "The group member who will do the statistics:",
+    "answer": [
+     "Dan"
+    ],
+    "why": "The student says 'Dan will do the statistics.'"
+   },
+   {
+    "id": "l3-s3-q09",
+    "type": "complete",
+    "prompt": "Draft due date:",
+    "answer": [
+     "20 November",
+     "20th of November",
+     "twentieth of November",
+     "November 20"
+    ],
+    "why": "The student says 'The draft is due on the twentieth of November.'"
+   },
+   {
+    "id": "l3-s3-q10",
+    "type": "complete",
+    "prompt": "Presentation date:",
+    "answer": [
+     "4 December",
+     "fourth of December",
+     "December 4"
+    ],
+    "why": "The student says 'we're presenting on the fourth of December.'"
+   }
+  ]
+ },
+ {
+  "id": "l3-s4",
+  "section": 4,
+  "title": "Pollinator Decline and Its Causes",
+  "speakers": [
+   {
+    "name": "Lecturer",
+    "lang": "en-US",
+    "gender": "m"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Lecturer",
+    "text": "Today we'll look at pollinator decline, specifically honeybees and wild bees."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Pollination supports about one third of the food crops that people eat, according to most estimates."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Researchers identify three main pressures on pollinators: habitat loss, pesticides, and disease."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Habitat loss is the most significant of the three. As farmland spreads, hedgerows and wildflower meadows disappear, and bees lose nesting sites and food."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Pesticides are a second factor. Some neonicotinoid chemicals are harmful even at low doses, although regulations now restrict their use in several regions."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "The third pressure is disease, particularly the Varroa mite, which weakens honeybee colonies by spreading viruses."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Climate change is also emerging as a factor. Flowering times are shifting, so some bees arrive when no flowers are available."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Some people assume that honeybees are the most important pollinators. In fact, many wild species, including solitary bees, are often more efficient pollinators for particular crops."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Solutions include planting wildflower strips along field edges, reducing pesticide use during flowering periods, and creating nest sites such as bare soil banks."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Let me say a little more about wild bees. There are thousands of species, and most of them are solitary. They do not produce honey or live in large colonies, which means they are often overlooked by the public."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Different bees pollinate different plants. Some species visit only a few types of flower, while others feed on a wide range. This specialisation can make some bees vulnerable when their preferred plants disappear."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Research methods have also changed. Scientists now use photographs taken by volunteers, along with DNA analysis of pollen collected from bees' bodies, to work out which plants each species depends on."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Public engagement is an important part of the work. Many local groups run survey days, where families can learn to identify bees and record what they see in gardens and parks."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Gardeners can help too. Leaving some areas of lawn to grow long, planting a range of flowers across the seasons, and avoiding unnecessary chemicals all make a difference."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Finally, remember that these measures are complementary. No single action will solve the problem, so policy, farming practice and individual behaviour all need to work together."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Next session we'll compare these approaches with the policies used in three European countries, and you should read the assigned case studies before then. Please also bring your questions about the survey design, because we'll discuss them at the start of the session. The reading list is available on the course page."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l3-s4-q01",
+    "type": "complete",
+    "prompt": "Share of food crops supported by pollination (approximately):",
+    "answer": [
+     "one third",
+     "a third",
+     "1/3"
+    ],
+    "why": "The lecturer says pollination 'supports about one third of the food crops that people eat'."
+   },
+   {
+    "id": "l3-s4-q02",
+    "type": "mcq",
+    "prompt": "Which pressure is described as the most significant?",
+    "options": [
+     "A. pesticides",
+     "B. disease",
+     "C. habitat loss",
+     "D. climate change"
+    ],
+    "answer": "C",
+    "why": "The lecturer says 'Habitat loss is the most significant of the three.'"
+   },
+   {
+    "id": "l3-s4-q03",
+    "type": "complete",
+    "prompt": "The pest that weakens honeybee colonies:",
+    "answer": [
+     "Varroa mite",
+     "the Varroa mite",
+     "Varroa"
+    ],
+    "why": "The lecturer names 'the Varroa mite, which weakens honeybee colonies by spreading viruses'."
+   },
+   {
+    "id": "l3-s4-q04",
+    "type": "complete",
+    "prompt": "The type of chemical described as harmful at low doses:",
+    "answer": [
+     "neonicotinoids",
+     "neonicotinoid",
+     "neonicotinoid chemicals"
+    ],
+    "why": "The lecturer says 'Some neonicotinoid chemicals are harmful even at low doses'."
+   },
+   {
+    "id": "l3-s4-q05",
+    "type": "mcq",
+    "prompt": "Why do some bees arrive when no flowers are available?",
+    "options": [
+     "A. They migrate too early",
+     "B. Flowering times have shifted",
+     "C. Spring is colder",
+     "D. Flowers have closed"
+    ],
+    "answer": "B",
+    "why": "The lecturer says 'Flowering times are shifting, so some bees arrive when no flowers are available.'"
+   },
+   {
+    "id": "l3-s4-q06",
+    "type": "mcq",
+    "prompt": "According to the lecturer, many wild species are:",
+    "options": [
+     "A. less common than honeybees",
+     "B. more efficient for some crops",
+     "C. protected by law",
+     "D. unable to fly far"
+    ],
+    "answer": "B",
+    "why": "The lecturer says many wild species 'are often more efficient pollinators for particular crops'."
+   },
+   {
+    "id": "l3-s4-q07",
+    "type": "complete",
+    "prompt": "One solution is planting wildflower ___ along field edges.",
+    "answer": [
+     "strips",
+     "strip"
+    ],
+    "why": "The lecturer says 'planting wildflower strips along field edges'."
+   },
+   {
+    "id": "l3-s4-q08",
+    "type": "complete",
+    "prompt": "Nest sites can be created as bare soil ___.",
+    "answer": [
+     "banks",
+     "bank"
+    ],
+    "why": "The lecturer says 'creating nest sites such as bare soil banks'."
+   },
+   {
+    "id": "l3-s4-q09",
+    "type": "mcq",
+    "prompt": "The lecturer's view on the belief that honeybees are the most important pollinators is:",
+    "options": [
+     "A. agreement",
+     "B. disagreement",
+     "C. uncertainty",
+     "D. no comment"
+    ],
+    "answer": "B",
+    "why": "The lecturer says 'In fact, many wild species ... are often more efficient pollinators for particular crops.'"
+   },
+   {
+    "id": "l3-s4-q10",
+    "type": "complete",
+    "prompt": "Regulations now ___ the use of pesticides in several regions.",
+    "answer": [
+     "restricted",
+     "restricted by regulation",
+     "limited"
+    ],
+    "why": "The lecturer says 'regulations now restrict their use in several regions.'"
+   }
+  ]
+ },
+ {
+  "id": "l4-s1",
+  "section": 1,
+  "title": "Car Hire Booking",
+  "speakers": [
+   {
+    "name": "Agent",
+    "lang": "en-AU",
+    "gender": "f"
+   },
+   {
+    "name": "Customer",
+    "lang": "en-GB",
+    "gender": "m"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Agent",
+    "text": "Good afternoon, Harbour Car Hire. What can I do for you?"
+   },
+   {
+    "speaker": "Customer",
+    "text": "I'd like to hire a car for a long weekend, from Friday the twelfth to Monday the fifteenth."
+   },
+   {
+    "speaker": "Agent",
+    "text": "Would you prefer an automatic or a manual?"
+   },
+   {
+    "speaker": "Customer",
+    "text": "Automatic please. And a small car, something economical."
+   },
+   {
+    "speaker": "Agent",
+    "text": "We have the Fiesta and the Corsa. The Corsa is slightly bigger and costs thirty-eight pounds a day, while the Fiesta is thirty-two."
+   },
+   {
+    "speaker": "Customer",
+    "text": "I'll take the Fiesta then."
+   },
+   {
+    "speaker": "Agent",
+    "text": "Good. Basic insurance is included, but full cover costs an extra eight pounds a day."
+   },
+   {
+    "speaker": "Customer",
+    "text": "I'll take the full cover, to be safe."
+   },
+   {
+    "speaker": "Agent",
+    "text": "Will you be driving outside the country?"
+   },
+   {
+    "speaker": "Customer",
+    "text": "No, only within the region."
+   },
+   {
+    "speaker": "Agent",
+    "text": "Pick-up is from our airport branch. Please bring your driving licence and a credit card in your name."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Is there a late return fee?"
+   },
+   {
+    "speaker": "Agent",
+    "text": "Yes, returns after six in the evening cost an extra thirty pounds."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Okay. My reference is HC four four one."
+   },
+   {
+    "speaker": "Agent",
+    "text": "Thank you. Enjoy your trip."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Do you have child seats available?"
+   },
+   {
+    "speaker": "Agent",
+    "text": "Yes, we can supply child seats for an extra charge of five pounds a day. Please tell us the age of the child when you book."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Okay, I'll think about that."
+   },
+   {
+    "speaker": "Agent",
+    "text": "Of course. Also, the car must be returned with a full tank of fuel, otherwise we charge for refuelling at a higher rate."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Understood. Is there a mileage limit?"
+   },
+   {
+    "speaker": "Agent",
+    "text": "No, the mileage is unlimited for this booking."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Great. How do I collect the keys?"
+   },
+   {
+    "speaker": "Agent",
+    "text": "Go to the desk in the arrivals hall. Show your confirmation email and the staff will hand you the keys and documents."
+   },
+   {
+    "speaker": "Customer",
+    "text": "Perfect. Thanks for your help."
+   },
+   {
+    "speaker": "Agent",
+    "text": "Is there anything else I can help you with today?"
+   },
+   {
+    "speaker": "Customer",
+    "text": "No, that's everything."
+   },
+   {
+    "speaker": "Agent",
+    "text": "Have a safe journey."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l4-s1-q01",
+    "type": "complete",
+    "prompt": "Pick-up date:",
+    "answer": [
+     "Friday the twelfth",
+     "Friday 12th",
+     "the twelfth"
+    ],
+    "why": "The customer says 'from Friday the twelfth to Monday the fifteenth.'"
+   },
+   {
+    "id": "l4-s1-q02",
+    "type": "complete",
+    "prompt": "Return date:",
+    "answer": [
+     "Monday the fifteenth",
+     "Monday 15th",
+     "the fifteenth"
+    ],
+    "why": "The customer says 'to Monday the fifteenth.'"
+   },
+   {
+    "id": "l4-s1-q03",
+    "type": "mcq",
+    "prompt": "Transmission type requested:",
+    "options": [
+     "A. manual",
+     "B. automatic",
+     "C. hybrid",
+     "D. electric"
+    ],
+    "answer": "B",
+    "why": "The customer says 'Automatic please. And a small car, something economical.'"
+   },
+   {
+    "id": "l4-s1-q04",
+    "type": "complete",
+    "prompt": "Daily price of the car chosen (pounds):",
+    "answer": [
+     "32",
+     "thirty-two"
+    ],
+    "why": "The agent says 'the Fiesta is thirty-two' pounds a day, and the customer chooses the Fiesta."
+   },
+   {
+    "id": "l4-s1-q05",
+    "type": "complete",
+    "prompt": "Extra daily cost of full insurance (pounds):",
+    "answer": [
+     "8",
+     "eight"
+    ],
+    "why": "The agent says 'full cover costs an extra eight pounds a day.'"
+   },
+   {
+    "id": "l4-s1-q06",
+    "type": "mcq",
+    "prompt": "Why does the customer choose full cover?",
+    "options": [
+     "A. It is required by law",
+     "B. To be safe",
+     "C. It is cheaper",
+     "D. The car is new"
+    ],
+    "answer": "B",
+    "why": "The customer says 'I'll take the full cover, to be safe.'"
+   },
+   {
+    "id": "l4-s1-q07",
+    "type": "mcq",
+    "prompt": "Where will the car be driven?",
+    "options": [
+     "A. abroad",
+     "B. within the region",
+     "C. across the border",
+     "D. nowhere"
+    ],
+    "answer": "B",
+    "why": "The customer says 'No, only within the region.'"
+   },
+   {
+    "id": "l4-s1-q08",
+    "type": "complete",
+    "prompt": "Pick-up location:",
+    "answer": [
+     "the airport branch",
+     "airport branch",
+     "airport"
+    ],
+    "why": "The agent says 'Pick-up is from our airport branch.'"
+   },
+   {
+    "id": "l4-s1-q09",
+    "type": "complete",
+    "prompt": "The late return charge applies to returns after (time):",
+    "answer": [
+     "6 pm",
+     "6 p.m.",
+     "6pm",
+     "six in the evening",
+     "six o'clock"
+    ],
+    "why": "The agent says 'returns after six in the evening cost an extra thirty pounds.'"
+   },
+   {
+    "id": "l4-s1-q10",
+    "type": "complete",
+    "prompt": "Booking reference:",
+    "answer": [
+     "HC441",
+     "HC 441",
+     "HC four four one",
+     "HC-441"
+    ],
+    "why": "The customer says 'My reference is HC four four one.'"
+   }
+  ]
+ },
+ {
+  "id": "l4-s2",
+  "section": 2,
+  "title": "Old Mill Quarter Walk",
+  "speakers": [
+   {
+    "name": "Guide",
+    "lang": "en-AU",
+    "gender": "m"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Guide",
+    "text": "Welcome to the Old Mill Quarter walk. This tour takes about ninety minutes and starts outside the town hall."
+   },
+   {
+    "speaker": "Guide",
+    "text": "The mill was built in eighteen twenty-two and produced flour until the nineteen-thirties. Its wheel is still original."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Next we go down to the canal. Barges carried coal along it from the mines, and the towpath is now a popular cycle route."
+   },
+   {
+    "speaker": "Guide",
+    "text": "The brick warehouse on your left was used to store cloth. It has been converted into apartments, but the external walls are protected, so no alterations to them are allowed."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Our final stop is St Anne's church. The bell tower was added in eighteen eighty and is the tallest structure in the quarter."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Please remember that the church asks for a donation of two pounds to enter the crypt. Photography is allowed everywhere except inside the crypt."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Toilets are available at the café by the canal, which opens at ten."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Before we leave the mill, notice the millstones on the ground floor. They were cut from a single block of granite and are much heavier than they look."
+   },
+   {
+    "speaker": "Guide",
+    "text": "The old granary next to the mill has been turned into a small exhibition. It shows photographs of the workers and the tools they used, and the displays are free to visit."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Walking east along the canal, you'll pass a row of cottages that were once home to the boatmen's families. Their gardens are still well kept, and some residents are happy to talk to visitors if you ask politely."
+   },
+   {
+    "speaker": "Guide",
+    "text": "The towpath can be muddy after rain, so wear sensible shoes. There is a bench halfway along, and it makes an ideal spot for a short break."
+   },
+   {
+    "speaker": "Guide",
+    "text": "If you have children with you, the playground near the church is a good place for them to run around while you finish the tour."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Thank you for joining the walk today. The tour map, with all the stops marked, is available from the town hall and from the café."
+   },
+   {
+    "speaker": "Guide",
+    "text": "Please note that the town hall displays are closed on public holidays, so plan your visit accordingly."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l4-s2-q01",
+    "type": "complete",
+    "prompt": "Duration of the walk (minutes):",
+    "answer": [
+     "90",
+     "ninety"
+    ],
+    "why": "The guide says 'This tour takes about ninety minutes.'"
+   },
+   {
+    "id": "l4-s2-q02",
+    "type": "complete",
+    "prompt": "Year the mill was built:",
+    "answer": [
+     "1822",
+     "eighteen twenty-two"
+    ],
+    "why": "The guide says 'The mill was built in eighteen twenty-two.'"
+   },
+   {
+    "id": "l4-s2-q03",
+    "type": "complete",
+    "prompt": "The mill stopped producing flour in the:",
+    "answer": [
+     "1930s",
+     "nineteen-thirties",
+     "thirties",
+     "1930's"
+    ],
+    "why": "The guide says it 'produced flour until the nineteen-thirties.'"
+   },
+   {
+    "id": "l4-s2-q04",
+    "type": "complete",
+    "prompt": "Barges carried ___ along the canal.",
+    "answer": [
+     "coal"
+    ],
+    "why": "The guide says 'Barges carried coal along it from the mines.'"
+   },
+   {
+    "id": "l4-s2-q05",
+    "type": "mcq",
+    "prompt": "The brick warehouse was originally used to store:",
+    "options": [
+     "A. grain",
+     "B. coal",
+     "C. cloth",
+     "D. timber"
+    ],
+    "answer": "C",
+    "why": "The guide says the warehouse 'was used to store cloth.'"
+   },
+   {
+    "id": "l4-s2-q06",
+    "type": "mcq",
+    "prompt": "Why can the warehouse walls not be altered?",
+    "options": [
+     "A. They are very old",
+     "B. They are protected",
+     "C. The owners refused",
+     "D. They are unsafe"
+    ],
+    "answer": "B",
+    "why": "The guide says 'the external walls are protected, so no alterations to them are allowed.'"
+   },
+   {
+    "id": "l4-s2-q07",
+    "type": "complete",
+    "prompt": "The bell tower was added in:",
+    "answer": [
+     "1880",
+     "eighteen eighty"
+    ],
+    "why": "The guide says 'The bell tower was added in eighteen eighty.'"
+   },
+   {
+    "id": "l4-s2-q08",
+    "type": "complete",
+    "prompt": "Donation to enter the crypt (pounds):",
+    "answer": [
+     "2",
+     "two"
+    ],
+    "why": "The guide says 'the church asks for a donation of two pounds to enter the crypt.'"
+   },
+   {
+    "id": "l4-s2-q09",
+    "type": "mcq",
+    "prompt": "Where is photography NOT allowed?",
+    "options": [
+     "A. everywhere",
+     "B. outside",
+     "C. inside the crypt",
+     "D. in the café"
+    ],
+    "answer": "C",
+    "why": "The guide says 'Photography is allowed everywhere except inside the crypt.'"
+   },
+   {
+    "id": "l4-s2-q10",
+    "type": "complete",
+    "prompt": "The café by the canal opens at (time):",
+    "answer": [
+     "10 am",
+     "10am",
+     "10 a.m.",
+     "ten",
+     "ten o'clock"
+    ],
+    "why": "The guide says 'the café by the canal, which opens at ten.'"
+   }
+  ]
+ },
+ {
+  "id": "l4-s3",
+  "section": 3,
+  "title": "Designing a Memory Experiment",
+  "speakers": [
+   {
+    "name": "Maya",
+    "lang": "en-US",
+    "gender": "f"
+   },
+   {
+    "name": "Tom",
+    "lang": "en-GB",
+    "gender": "m"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Maya",
+    "text": "Have you read the methods for our memory experiment yet?"
+   },
+   {
+    "speaker": "Tom",
+    "text": "Yes. Participants memorise a list of twenty words, then recall them after a delay."
+   },
+   {
+    "speaker": "Maya",
+    "text": "The delay is the important part. The professor wants us to test three intervals: immediate, five minutes, and twenty-four hours."
+   },
+   {
+    "speaker": "Tom",
+    "text": "So three groups? Or does each person do all three?"
+   },
+   {
+    "speaker": "Maya",
+    "text": "Each person does all three, in a counterbalanced order, so that practice doesn't bias the results."
+   },
+   {
+    "speaker": "Tom",
+    "text": "Good. How many participants do we need?"
+   },
+   {
+    "speaker": "Maya",
+    "text": "The minimum is forty, and the ethics committee has approved up to sixty."
+   },
+   {
+    "speaker": "Tom",
+    "text": "Forty sounds tight if people drop out."
+   },
+   {
+    "speaker": "Maya",
+    "text": "Yes, which is why we'll recruit from two departments, not just ours."
+   },
+   {
+    "speaker": "Tom",
+    "text": "What about the word list? Do we make our own?"
+   },
+   {
+    "speaker": "Maya",
+    "text": "No, we use the standard list from the lab. It's been checked for word frequency already."
+   },
+   {
+    "speaker": "Tom",
+    "text": "And the analysis? Is it SPSS?"
+   },
+   {
+    "speaker": "Maya",
+    "text": "The professor prefers R, so we'll learn that over the holiday."
+   },
+   {
+    "speaker": "Tom",
+    "text": "I'll need a tutorial for that."
+   },
+   {
+    "speaker": "Maya",
+    "text": "I'll send you one. Our report is due on the ninth of February."
+   },
+   {
+    "speaker": "Tom",
+    "text": "Who's going to be the research assistant on the testing days?"
+   },
+   {
+    "speaker": "Maya",
+    "text": "Priya offered. She's done the procedure before, so she can run the sessions and keep the timing accurate."
+   },
+   {
+    "speaker": "Tom",
+    "text": "That's good. What about the consent forms?"
+   },
+   {
+    "speaker": "Maya",
+    "text": "They're being translated into two other languages, because some participants won't be comfortable in English."
+   },
+   {
+    "speaker": "Tom",
+    "text": "Smart. And we need a debrief at the end, right?"
+   },
+   {
+    "speaker": "Maya",
+    "text": "Yes, we'll explain the purpose after each session and answer any questions. That's required by the committee."
+   },
+   {
+    "speaker": "Tom",
+    "text": "Fine. I'll draft the debrief script tonight."
+   },
+   {
+    "speaker": "Maya",
+    "text": "Great. Let's meet on Thursday to review the timing schedule together."
+   },
+   {
+    "speaker": "Tom",
+    "text": "Do we need ethics approval for the consent forms as well?"
+   },
+   {
+    "speaker": "Maya",
+    "text": "Yes, the committee has to approve the final versions before testing begins."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l4-s3-q01",
+    "type": "complete",
+    "prompt": "Number of words on the list:",
+    "answer": [
+     "20",
+     "twenty"
+    ],
+    "why": "Participants 'memorise a list of twenty words'."
+   },
+   {
+    "id": "l4-s3-q02",
+    "type": "mcq",
+    "prompt": "The three delay intervals are immediate, five minutes and:",
+    "options": [
+     "A. one hour",
+     "B. twenty-four hours",
+     "C. one week",
+     "D. two days"
+    ],
+    "answer": "B",
+    "why": "Maya lists 'immediate, five minutes, and twenty-four hours.'"
+   },
+   {
+    "id": "l4-s3-q03",
+    "type": "mcq",
+    "prompt": "Why is the order counterbalanced?",
+    "options": [
+     "A. so that practice does not bias results",
+     "B. to save time",
+     "C. because the lab is busy",
+     "D. to match other studies"
+    ],
+    "answer": "A",
+    "why": "Maya says the order is counterbalanced 'so that practice doesn't bias the results.'"
+   },
+   {
+    "id": "l4-s3-q04",
+    "type": "complete",
+    "prompt": "The minimum number of participants:",
+    "answer": [
+     "40",
+     "forty"
+    ],
+    "why": "Maya says 'The minimum is forty.'"
+   },
+   {
+    "id": "l4-s3-q05",
+    "type": "complete",
+    "prompt": "The ethics committee approved up to ___ participants.",
+    "answer": [
+     "60",
+     "sixty"
+    ],
+    "why": "Maya says the ethics committee 'has approved up to sixty.'"
+   },
+   {
+    "id": "l4-s3-q06",
+    "type": "complete",
+    "prompt": "Participants will be recruited from ___ departments.",
+    "answer": [
+     "two",
+     "2"
+    ],
+    "why": "Maya says 'we'll recruit from two departments, not just ours.'"
+   },
+   {
+    "id": "l4-s3-q07",
+    "type": "mcq",
+    "prompt": "Where does the word list come from?",
+    "options": [
+     "A. the students",
+     "B. the internet",
+     "C. the lab's standard list",
+     "D. a textbook"
+    ],
+    "answer": "C",
+    "why": "Maya says 'we use the standard list from the lab.'"
+   },
+   {
+    "id": "l4-s3-q08",
+    "type": "complete",
+    "prompt": "The analysis software the professor prefers:",
+    "answer": [
+     "R"
+    ],
+    "why": "Maya says 'The professor prefers R.'"
+   },
+   {
+    "id": "l4-s3-q09",
+    "type": "complete",
+    "prompt": "Tom says he needs a ___ for that software.",
+    "answer": [
+     "tutorial"
+    ],
+    "why": "Tom says 'I'll need a tutorial for that.'"
+   },
+   {
+    "id": "l4-s3-q10",
+    "type": "complete",
+    "prompt": "Report due date:",
+    "answer": [
+     "9 February",
+     "ninth of February",
+     "February 9",
+     "9th of February"
+    ],
+    "why": "Maya says 'our report is due on the ninth of February.'"
+   }
+  ]
+ },
+ {
+  "id": "l4-s4",
+  "section": 4,
+  "title": "Urban Heat Islands",
+  "speakers": [
+   {
+    "name": "Lecturer",
+    "lang": "en-GB",
+    "gender": "f"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Lecturer",
+    "text": "In this lecture we'll examine the urban heat island effect, the way cities become warmer than the surrounding rural areas."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "The difference is often several degrees at night. Dark roofs and asphalt absorb heat during the day and release it slowly after sunset."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "A major cause is the loss of vegetation. Trees and grass cool the air through evaporation, so cities with fewer green spaces tend to be hotter."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Tall buildings also play a role. They trap heat between them and reduce the air flow that would otherwise carry it away."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "The health effects are serious. Heat waves in cities are linked to more hospital admissions, particularly among older adults."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Planners have several responses. Green roofs, tree-lined streets and light-coloured paving can reduce temperatures significantly."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Some cities have also introduced cooling centres, which open during heat alerts."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "One common misconception is that the effect is only a problem in very large cities. In fact, even towns of a few tens of thousands of people show measurable heat islands."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Let's look at how the effect is measured. Researchers use weather stations in the city centre and in rural areas nearby, then compare temperatures at the same time of day."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Satellite data is also useful, because it can show surface temperatures across a whole region. However, surface readings are not the same as air temperatures, so both methods are needed."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "The effect varies with the seasons. It is generally strongest during calm, clear summer nights, when there is little wind to mix the air and the ground cannot cool quickly."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Cities can adapt in simple ways. Painting roofs white, planting street trees with wide canopies, and designing parks that connect to residential areas all help to reduce the build-up of heat."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Community involvement matters too. Residents who know which streets become hottest can help councils decide where to place shade structures and water fountains."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Next week we'll consider the economic costs of heat, including energy demand for air conditioning and lost productivity in workplaces during heat waves. Please read the case study on a large coastal city in the course pack before the seminar, and be ready to discuss how its planning rules have changed. Remember that the mid-term essay is due in three weeks."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "The seminar will also cover ways that architects can reduce heat in new buildings. Students who attended last year's session found the case studies especially useful for their assignments."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l4-s4-q01",
+    "type": "mcq",
+    "prompt": "When is the temperature difference often several degrees?",
+    "options": [
+     "A. midday",
+     "B. at night",
+     "C. at dawn",
+     "D. at weekends"
+    ],
+    "answer": "B",
+    "why": "The lecturer says 'The difference is often several degrees at night.'"
+   },
+   {
+    "id": "l4-s4-q02",
+    "type": "complete",
+    "prompt": "Materials that absorb heat during the day:",
+    "answer": [
+     "dark roofs and asphalt",
+     "dark roofs",
+     "asphalt"
+    ],
+    "why": "The lecturer says 'Dark roofs and asphalt absorb heat during the day.'"
+   },
+   {
+    "id": "l4-s4-q03",
+    "type": "complete",
+    "prompt": "Trees and grass cool the air through ___.",
+    "answer": [
+     "evaporation"
+    ],
+    "why": "The lecturer says 'Trees and grass cool the air through evaporation.'"
+   },
+   {
+    "id": "l4-s4-q04",
+    "type": "mcq",
+    "prompt": "Tall buildings affect the city by:",
+    "options": [
+     "A. adding moisture",
+     "B. trapping heat",
+     "C. creating wind",
+     "D. reflecting sunlight"
+    ],
+    "answer": "B",
+    "why": "The lecturer says 'They trap heat between them.'"
+   },
+   {
+    "id": "l4-s4-q05",
+    "type": "complete",
+    "prompt": "Heat waves are linked to more hospital admissions, particularly among ___.",
+    "answer": [
+     "older adults",
+     "older people",
+     "the elderly"
+    ],
+    "why": "The lecturer says 'more hospital admissions, particularly among older adults.'"
+   },
+   {
+    "id": "l4-s4-q06",
+    "type": "complete",
+    "prompt": "Green roofs, tree-lined streets and ___ paving can reduce temperatures.",
+    "answer": [
+     "light-coloured",
+     "light coloured"
+    ],
+    "why": "The lecturer says 'light-coloured paving can reduce temperatures significantly.'"
+   },
+   {
+    "id": "l4-s4-q07",
+    "type": "complete",
+    "prompt": "Cooling centres open during heat ___.",
+    "answer": [
+     "alerts",
+     "alert"
+    ],
+    "why": "The lecturer says 'cooling centres, which open during heat alerts.'"
+   },
+   {
+    "id": "l4-s4-q08",
+    "type": "mcq",
+    "prompt": "The misconception the lecturer describes is that the effect:",
+    "options": [
+     "A. is harmless",
+     "B. is only a problem in very large cities",
+     "C. affects only rural areas",
+     "D. is caused by traffic"
+    ],
+    "answer": "B",
+    "why": "The lecturer says 'the effect is only a problem in very large cities.'"
+   },
+   {
+    "id": "l4-s4-q09",
+    "type": "complete",
+    "prompt": "Towns with a few tens of thousands of people:",
+    "answer": [
+     "show measurable heat islands",
+     "show heat islands",
+     "measurable heat islands"
+    ],
+    "why": "The lecturer says 'even towns of a few tens of thousands of people show measurable heat islands.'"
+   },
+   {
+    "id": "l4-s4-q10",
+    "type": "mcq",
+    "prompt": "What is the main topic of the lecture?",
+    "options": [
+     "A. rural climate",
+     "B. urban heat islands",
+     "C. air pollution",
+     "D. cooling technology"
+    ],
+    "answer": "B",
+    "why": "The lecturer says 'we'll examine the urban heat island effect.'"
+   }
+  ]
+ },
+ {
+  "id": "l5-s1",
+  "section": 1,
+  "title": "Recycling Collection Enquiry",
+  "speakers": [
+   {
+    "name": "Council Officer",
+    "lang": "en-GB",
+    "gender": "f"
+   },
+   {
+    "name": "Resident",
+    "lang": "en-AU",
+    "gender": "m"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Council Officer",
+    "text": "Hello, Eastfield Council waste services. How can I help?"
+   },
+   {
+    "speaker": "Resident",
+    "text": "Hi, I missed my recycling collection last Thursday. The bin is still full."
+   },
+   {
+    "speaker": "Council Officer",
+    "text": "I'm sorry about that. Can I take your address and postcode?"
+   },
+   {
+    "speaker": "Resident",
+    "text": "It's fourteen Larch Avenue, postcode EF three seven two."
+   },
+   {
+    "speaker": "Council Officer",
+    "text": "Thank you. We collect paper and card on alternate weeks, and glass and plastic on the other weeks. Which bin is full?"
+   },
+   {
+    "speaker": "Resident",
+    "text": "The blue one, so paper and card."
+   },
+   {
+    "speaker": "Council Officer",
+    "text": "Then the next collection will be on Tuesday the twenty-second. Please put the bin out by seven in the morning."
+   },
+   {
+    "speaker": "Resident",
+    "text": "Okay. Can I put cardboard boxes in it too?"
+   },
+   {
+    "speaker": "Council Officer",
+    "text": "Yes, but the boxes must be flattened. Food-soiled card can't be recycled, so it goes in the general waste bin."
+   },
+   {
+    "speaker": "Resident",
+    "text": "What if I need a bigger bin?"
+   },
+   {
+    "speaker": "Council Officer",
+    "text": "Additional bins cost twelve pounds to deliver, and you'd pay a one-off fee of twenty pounds for the bin itself."
+   },
+   {
+    "speaker": "Resident",
+    "text": "That's more than I expected. I'll manage with the one I have."
+   },
+   {
+    "speaker": "Resident",
+    "text": "Also, do you collect garden waste?"
+   },
+   {
+    "speaker": "Council Officer",
+    "text": "Yes, garden waste is collected every other Friday, but only if you have signed up to the garden scheme. There's a separate annual fee for that."
+   },
+   {
+    "speaker": "Resident",
+    "text": "I haven't signed up. How do I do that?"
+   },
+   {
+    "speaker": "Council Officer",
+    "text": "You can sign up on our website, or call this number and we'll send a form to your address."
+   },
+   {
+    "speaker": "Resident",
+    "text": "And what about batteries and electrical items?"
+   },
+   {
+    "speaker": "Council Officer",
+    "text": "They should not go in any household bin. Take them to the recycling centre on Mill Road, which is open every day except Sunday."
+   },
+   {
+    "speaker": "Resident",
+    "text": "Got it. Thanks for explaining all that."
+   },
+   {
+    "speaker": "Council Officer",
+    "text": "You're welcome. Is there anything else I can help you with today?"
+   },
+   {
+    "speaker": "Resident",
+    "text": "No, that's all. Thanks."
+   },
+   {
+    "speaker": "Council Officer",
+    "text": "Have a good day."
+   },
+   {
+    "speaker": "Resident",
+    "text": "Thanks for that. Goodbye."
+   },
+   {
+    "speaker": "Council Officer",
+    "text": "Goodbye."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l5-s1-q01",
+    "type": "complete",
+    "prompt": "House number on Larch Avenue:",
+    "answer": [
+     "14",
+     "fourteen"
+    ],
+    "why": "The resident says 'It's fourteen Larch Avenue.'"
+   },
+   {
+    "id": "l5-s1-q02",
+    "type": "complete",
+    "prompt": "Postcode:",
+    "answer": [
+     "EF3 7 2",
+     "EF372",
+     "EF 372",
+     "EF three seven two"
+    ],
+    "why": "The resident gives 'postcode EF three seven two.'"
+   },
+   {
+    "id": "l5-s1-q03",
+    "type": "mcq",
+    "prompt": "Which bin is full?",
+    "options": [
+     "A. the green bin",
+     "B. the blue bin",
+     "C. the black bin",
+     "D. the brown bin"
+    ],
+    "answer": "B",
+    "why": "The resident says 'The blue one, so paper and card.'"
+   },
+   {
+    "id": "l5-s1-q04",
+    "type": "complete",
+    "prompt": "The next collection will be on:",
+    "answer": [
+     "Tuesday the twenty-second",
+     "Tuesday 22nd",
+     "22nd",
+     "the twenty-second"
+    ],
+    "why": "The officer says 'the next collection will be on Tuesday the twenty-second.'"
+   },
+   {
+    "id": "l5-s1-q05",
+    "type": "complete",
+    "prompt": "Bin should be put out by (time):",
+    "answer": [
+     "7 am",
+     "7am",
+     "7 a.m.",
+     "seven",
+     "seven in the morning"
+    ],
+    "why": "The officer says 'Please put the bin out by seven in the morning.'"
+   },
+   {
+    "id": "l5-s1-q06",
+    "type": "complete",
+    "prompt": "Cardboard boxes must be:",
+    "answer": [
+     "flattened"
+    ],
+    "why": "The officer says 'the boxes must be flattened.'"
+   },
+   {
+    "id": "l5-s1-q07",
+    "type": "mcq",
+    "prompt": "Where should food-soiled card go?",
+    "options": [
+     "A. the paper bin",
+     "B. the glass bin",
+     "C. the general waste bin",
+     "D. the garden waste"
+    ],
+    "answer": "C",
+    "why": "The officer says 'Food-soiled card can't be recycled, so it goes in the general waste bin.'"
+   },
+   {
+    "id": "l5-s1-q08",
+    "type": "complete",
+    "prompt": "Cost of delivering an additional bin (pounds):",
+    "answer": [
+     "12",
+     "twelve"
+    ],
+    "why": "The officer says 'Additional bins cost twelve pounds to deliver.'"
+   },
+   {
+    "id": "l5-s1-q09",
+    "type": "complete",
+    "prompt": "One-off fee for the bin itself (pounds):",
+    "answer": [
+     "20",
+     "twenty"
+    ],
+    "why": "The officer says 'a one-off fee of twenty pounds for the bin itself.'"
+   },
+   {
+    "id": "l5-s1-q10",
+    "type": "mcq",
+    "prompt": "What does the resident decide?",
+    "options": [
+     "A. to buy a bigger bin",
+     "B. to manage with the existing bin",
+     "C. to complain to the council",
+     "D. to request a refund"
+    ],
+    "answer": "B",
+    "why": "The resident says 'I'll manage with the one I have.'"
+   }
+  ]
+ },
+ {
+  "id": "l5-s2",
+  "section": 2,
+  "title": "Audio Guide: The Clockmakers' Gallery",
+  "speakers": [
+   {
+    "name": "Narrator",
+    "lang": "en-US",
+    "gender": "f"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Narrator",
+    "text": "Welcome to the Clockmakers' Gallery. This audio guide covers the four main rooms and takes about forty-five minutes."
+   },
+   {
+    "speaker": "Narrator",
+    "text": "The first room displays early pendulum clocks. The pendulum was introduced in sixteen fifty-six, and it made clocks far more accurate than before."
+   },
+   {
+    "speaker": "Narrator",
+    "text": "In the second room, you'll see the mechanisms. Look closely at the escapement, the part that releases the gears one tooth at a time."
+   },
+   {
+    "speaker": "Narrator",
+    "text": "The third room holds pocket watches. Many of them were made of silver, and the cases were often engraved by hand."
+   },
+   {
+    "speaker": "Narrator",
+    "text": "The final room contains a large astronomical clock. It shows the phases of the moon and the position of the sun, and it is wound once a week."
+   },
+   {
+    "speaker": "Narrator",
+    "text": "Please do not touch the exhibits. The gallery is closed on Mondays, and the café on the ground floor is open until half past five."
+   },
+   {
+    "speaker": "Narrator",
+    "text": "Guided tours are available on Saturdays at eleven, and booking is required."
+   },
+   {
+    "speaker": "Narrator",
+    "text": "The next room is dedicated to clock faces. Many were painted by hand, using enamel that was fired in a kiln, and some still show traces of the original colours."
+   },
+   {
+    "speaker": "Narrator",
+    "text": "Visitors often ask about the restoration work. Our conservators spend several months on each clock, cleaning the movements and replacing worn parts with original materials wherever possible."
+   },
+   {
+    "speaker": "Narrator",
+    "text": "Please use the lifts at the back of the building if you need step-free access. The staircase near the entrance is steep and has no handrail on the lower section."
+   },
+   {
+    "speaker": "Narrator",
+    "text": "Children under twelve may use the activity table in the reading corner, where they can try simple gears and levers under supervision."
+   },
+   {
+    "speaker": "Narrator",
+    "text": "A reminder that flash photography is not allowed in any room, although photographs without flash are welcome."
+   },
+   {
+    "speaker": "Narrator",
+    "text": "We hope you enjoy your visit. Feedback forms are available at the exit, and your comments help us plan future exhibitions."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l5-s2-q01",
+    "type": "complete",
+    "prompt": "Length of the audio guide (minutes):",
+    "answer": [
+     "45",
+     "forty-five"
+    ],
+    "why": "The narrator says 'takes about forty-five minutes.'"
+   },
+   {
+    "id": "l5-s2-q02",
+    "type": "complete",
+    "prompt": "Year the pendulum was introduced:",
+    "answer": [
+     "1656",
+     "sixteen fifty-six"
+    ],
+    "why": "The narrator says 'The pendulum was introduced in sixteen fifty-six.'"
+   },
+   {
+    "id": "l5-s2-q03",
+    "type": "mcq",
+    "prompt": "The escapement is the part that:",
+    "options": [
+     "A. winds the clock",
+     "B. releases the gears one tooth at a time",
+     "C. shows the time",
+     "D. protects the case"
+    ],
+    "answer": "B",
+    "why": "The narrator describes the escapement as 'the part that releases the gears one tooth at a time.'"
+   },
+   {
+    "id": "l5-s2-q04",
+    "type": "complete",
+    "prompt": "Pocket watches were often made of:",
+    "answer": [
+     "silver"
+    ],
+    "why": "The narrator says 'Many of them were made of silver.'"
+   },
+   {
+    "id": "l5-s2-q05",
+    "type": "complete",
+    "prompt": "Pocket watch cases were often ___ by hand.",
+    "answer": [
+     "engraved"
+    ],
+    "why": "The narrator says 'the cases were often engraved by hand.'"
+   },
+   {
+    "id": "l5-s2-q06",
+    "type": "mcq",
+    "prompt": "The large astronomical clock shows:",
+    "options": [
+     "A. the tides",
+     "B. the phases of the moon and the sun's position",
+     "C. the weather",
+     "D. the stars in the sky"
+    ],
+    "answer": "B",
+    "why": "The narrator says 'It shows the phases of the moon and the position of the sun.'"
+   },
+   {
+    "id": "l5-s2-q07",
+    "type": "complete",
+    "prompt": "How often is the astronomical clock wound?",
+    "answer": [
+     "once a week",
+     "weekly",
+     "every week"
+    ],
+    "why": "The narrator says 'it is wound once a week.'"
+   },
+   {
+    "id": "l5-s2-q08",
+    "type": "complete",
+    "prompt": "The gallery is closed on:",
+    "answer": [
+     "Mondays",
+     "Monday"
+    ],
+    "why": "The narrator says 'The gallery is closed on Mondays.'"
+   },
+   {
+    "id": "l5-s2-q09",
+    "type": "complete",
+    "prompt": "The café closes at (time):",
+    "answer": [
+     "5:30",
+     "5.30",
+     "half past five",
+     "5:30 pm"
+    ],
+    "why": "The narrator says 'the café on the ground floor is open until half past five.'"
+   },
+   {
+    "id": "l5-s2-q10",
+    "type": "complete",
+    "prompt": "Guided tours run on Saturdays at (time):",
+    "answer": [
+     "11 am",
+     "11am",
+     "11 a.m.",
+     "eleven",
+     "eleven o'clock"
+    ],
+    "why": "The narrator says 'Guided tours are available on Saturdays at eleven.'"
+   }
+  ]
+ },
+ {
+  "id": "l5-s3",
+  "section": 3,
+  "title": "Preparing for a Graduate Job Interview",
+  "speakers": [
+   {
+    "name": "Adviser",
+    "lang": "en-GB",
+    "gender": "m"
+   },
+   {
+    "name": "Student",
+    "lang": "en-US",
+    "gender": "f"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Adviser",
+    "text": "Hello Lucy. You have an interview with the logistics firm next week. How are you feeling about it?"
+   },
+   {
+    "speaker": "Student",
+    "text": "A bit nervous. I'm not sure how to answer questions about teamwork."
+   },
+   {
+    "speaker": "Adviser",
+    "text": "Use the STAR method: situation, task, action and result. Describe a real example from your placement."
+   },
+   {
+    "speaker": "Student",
+    "text": "I led a team of four during my placement at the warehouse. We reduced delivery errors."
+   },
+   {
+    "speaker": "Adviser",
+    "text": "That's a strong example. Quantify the result if you can. By how much did errors fall?"
+   },
+   {
+    "speaker": "Student",
+    "text": "By about a quarter over three months."
+   },
+   {
+    "speaker": "Adviser",
+    "text": "Excellent. The firm will also ask why you want to work for them. Have you researched their recent expansion?"
+   },
+   {
+    "speaker": "Student",
+    "text": "Yes, they opened a second distribution centre in the north this year."
+   },
+   {
+    "speaker": "Adviser",
+    "text": "Mention that, but don't just repeat the website. Explain what interests you about it."
+   },
+   {
+    "speaker": "Student",
+    "text": "Should I bring a portfolio?"
+   },
+   {
+    "speaker": "Adviser",
+    "text": "Bring a printed copy of your CV and your references, but the portfolio is not needed for this role."
+   },
+   {
+    "speaker": "Student",
+    "text": "Okay. What time do I need to arrive?"
+   },
+   {
+    "speaker": "Adviser",
+    "text": "Arrive fifteen minutes early. The interview is at ten thirty on Wednesday the eleventh, at their Central Park office."
+   },
+   {
+    "speaker": "Adviser",
+    "text": "One more thing: send a thank-you email within twenty-four hours of the interview."
+   },
+   {
+    "speaker": "Student",
+    "text": "Should I mention anything specific in the email?"
+   },
+   {
+    "speaker": "Adviser",
+    "text": "Refer to one point you discussed, and restate your interest. Keep it short, two or three sentences."
+   },
+   {
+    "speaker": "Student",
+    "text": "That sounds manageable. What if they ask about my weaknesses?"
+   },
+   {
+    "speaker": "Adviser",
+    "text": "Pick a real weakness and describe what you are doing to improve it. Avoid clichés like being a perfectionist."
+   },
+   {
+    "speaker": "Student",
+    "text": "Okay. I'll practise with a friend tonight."
+   },
+   {
+    "speaker": "Adviser",
+    "text": "Good plan. Good luck, Lucy. Thank you."
+   },
+   {
+    "speaker": "Adviser",
+    "text": "And remember to ask two or three questions at the end. It shows that you have researched the company."
+   },
+   {
+    "speaker": "Student",
+    "text": "Good idea. Thank you."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l5-s3-q01",
+    "type": "mcq",
+    "prompt": "Lucy is nervous about questions on:",
+    "options": [
+     "A. salary",
+     "B. teamwork",
+     "C. her degree",
+     "D. travel"
+    ],
+    "answer": "B",
+    "why": "Lucy says 'I'm not sure how to answer questions about teamwork.'"
+   },
+   {
+    "id": "l5-s3-q02",
+    "type": "complete",
+    "prompt": "The method the adviser recommends has four parts: situation, task, action and ___.",
+    "answer": [
+     "result"
+    ],
+    "why": "The adviser says 'Use the STAR method: situation, task, action and result.'"
+   },
+   {
+    "id": "l5-s3-q03",
+    "type": "complete",
+    "prompt": "Size of the team Lucy led (people):",
+    "answer": [
+     "4",
+     "four"
+    ],
+    "why": "Lucy says 'I led a team of four during my placement.'"
+   },
+   {
+    "id": "l5-s3-q04",
+    "type": "complete",
+    "prompt": "Reduction in delivery errors:",
+    "answer": [
+     "a quarter",
+     "about a quarter",
+     "25%",
+     "25 per cent"
+    ],
+    "why": "Lucy says 'By about a quarter over three months.'"
+   },
+   {
+    "id": "l5-s3-q05",
+    "type": "mcq",
+    "prompt": "What did the firm recently do?",
+    "options": [
+     "A. merge with another company",
+     "B. open a second distribution centre",
+     "C. close a warehouse",
+     "D. launch a new website"
+    ],
+    "answer": "B",
+    "why": "Lucy says 'they opened a second distribution centre in the north this year.'"
+   },
+   {
+    "id": "l5-s3-q06",
+    "type": "mcq",
+    "prompt": "The adviser says Lucy should not:",
+    "options": [
+     "A. repeat the website",
+     "B. wear formal clothes",
+     "C. arrive early",
+     "D. bring references"
+    ],
+    "answer": "A",
+    "why": "The adviser says 'don't just repeat the website.'"
+   },
+   {
+    "id": "l5-s3-q07",
+    "type": "mcq",
+    "prompt": "Is a portfolio needed for this role?",
+    "options": [
+     "A. yes, a printed one",
+     "B. yes, an online one",
+     "C. no",
+     "D. only for managers"
+    ],
+    "answer": "C",
+    "why": "The adviser says 'the portfolio is not needed for this role.'"
+   },
+   {
+    "id": "l5-s3-q08",
+    "type": "complete",
+    "prompt": "Documents Lucy should bring:",
+    "answer": [
+     "CV and your references",
+     "CV and references",
+     "a printed CV and references",
+     "references and CV"
+    ],
+    "why": "The adviser says 'Bring a printed copy of your CV and your references.'"
+   },
+   {
+    "id": "l5-s3-q09",
+    "type": "complete",
+    "prompt": "Lucy should arrive how many minutes early?",
+    "answer": [
+     "15",
+     "fifteen"
+    ],
+    "why": "The adviser says 'Arrive fifteen minutes early.'"
+   },
+   {
+    "id": "l5-s3-q10",
+    "type": "complete",
+    "prompt": "Interview time:",
+    "answer": [
+     "10:30",
+     "10.30",
+     "ten thirty",
+     "ten thirty on Wednesday the eleventh",
+     "10:30 on Wednesday the 11th",
+     "10.30 on Wednesday 11th"
+    ],
+    "why": "The adviser says 'The interview is at ten thirty on Wednesday the eleventh.'"
+   }
+  ]
+ },
+ {
+  "id": "l5-s4",
+  "section": 4,
+  "title": "Roman Roads",
+  "speakers": [
+   {
+    "name": "Lecturer",
+    "lang": "en-AU",
+    "gender": "m"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Lecturer",
+    "text": "Today's lecture is about Roman roads, which were among the most sophisticated transport networks of the ancient world."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "At their peak, the Roman road system covered more than eighty thousand kilometres. Most roads were built by soldiers, who were trained in surveying and construction."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "A typical road had several layers. The base was made of large stones, followed by smaller stones and gravel, and the top surface was paved with flat blocks."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Engineers aimed for straight lines wherever possible. Where a river or a hill blocked the way, they built bridges or cut through the rock."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Roads had practical purposes. They allowed armies to move quickly, and they carried messengers, traders and officials across the empire."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Milestones were placed along the roads at regular intervals, showing distances to major cities. Many of these stones survive today."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Some people assume the roads were only for military use. However, the evidence shows that merchants used them heavily, and local communities relied on them for everyday trade."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Next week we'll look at how the roads were maintained, which is a topic that is often overlooked in textbooks."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Let's consider how the roads were surveyed. Surveyors used simple instruments, including a groma, a cross-shaped device with plumb lines, to lay out straight alignments across uneven ground."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Once the route was marked, workers dug a trench and filled it with layers of material. The depth depended on the soil, and in wet areas the foundations were particularly deep."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Drainage was another important feature. Roads were often raised slightly above the surrounding land and fitted with ditches on each side, so that rainwater could run away from the surface."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Some sections still survive well in parts of Europe and North Africa, and their remains show how carefully the builders worked. Archaeologists study wheel ruts and bridge foundations to learn how the roads were used."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Finally, think about the scale of the project. Building such a network required large labour forces, organised supply chains for stone and timber, and strong central administration in Rome. Please read chapter six of the course reader before next week, and bring one question about the maintenance evidence. The reader includes photographs of several surviving milestones, which you should compare with the diagrams we looked at today. Remember the essay on infrastructure is due at the end of the month."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Bring your copy of the reader to the seminar. Attendance is recorded at the start of the session."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l5-s4-q01",
+    "type": "complete",
+    "prompt": "Length of the road network at its peak (kilometres, approximately):",
+    "answer": [
+     "80,000",
+     "80000",
+     "eighty thousand"
+    ],
+    "why": "The lecturer says 'the Roman road system covered more than eighty thousand kilometres.'"
+   },
+   {
+    "id": "l5-s4-q02",
+    "type": "mcq",
+    "prompt": "Who built most of the roads?",
+    "options": [
+     "A. merchants",
+     "B. soldiers",
+     "C. farmers",
+     "D. slaves"
+    ],
+    "answer": "B",
+    "why": "The lecturer says 'Most roads were built by soldiers.'"
+   },
+   {
+    "id": "l5-s4-q03",
+    "type": "complete",
+    "prompt": "The base layer of a typical road was made of:",
+    "answer": [
+     "large stones"
+    ],
+    "why": "The lecturer says 'The base was made of large stones.'"
+   },
+   {
+    "id": "l5-s4-q04",
+    "type": "complete",
+    "prompt": "The top surface was paved with flat ___.",
+    "answer": [
+     "blocks",
+     "block"
+    ],
+    "why": "The lecturer says 'the top surface was paved with flat blocks.'"
+   },
+   {
+    "id": "l5-s4-q05",
+    "type": "complete",
+    "prompt": "Where a hill blocked the way, engineers ___ through the rock.",
+    "answer": [
+     "cut"
+    ],
+    "why": "The lecturer says 'Where a river or a hill blocked the way, they built bridges or cut through the rock.'"
+   },
+   {
+    "id": "l5-s4-q06",
+    "type": "mcq",
+    "prompt": "What was the main practical purpose mentioned?",
+    "options": [
+     "A. tourism",
+     "B. moving armies quickly",
+     "C. farming",
+     "D. religious travel"
+    ],
+    "answer": "B",
+    "why": "The lecturer says 'They allowed armies to move quickly.'"
+   },
+   {
+    "id": "l5-s4-q07",
+    "type": "complete",
+    "prompt": "Milestones showed distances to major ___.",
+    "answer": [
+     "cities",
+     "city"
+    ],
+    "why": "The lecturer says 'showing distances to major cities.'"
+   },
+   {
+    "id": "l5-s4-q08",
+    "type": "mcq",
+    "prompt": "The lecturer says the roads were used heavily by:",
+    "options": [
+     "A. only soldiers",
+     "B. merchants",
+     "C. priests",
+     "D. students"
+    ],
+    "answer": "B",
+    "why": "The lecturer says 'the evidence shows that merchants used them heavily.'"
+   },
+   {
+    "id": "l5-s4-q09",
+    "type": "mcq",
+    "prompt": "The view that roads were only for military use is:",
+    "options": [
+     "A. supported by evidence",
+     "B. the lecturer's view",
+     "C. an assumption the lecturer rejects",
+     "D. not mentioned"
+    ],
+    "answer": "C",
+    "why": "The lecturer says 'Some people assume the roads were only for military use. However, the evidence shows...'"
+   },
+   {
+    "id": "l5-s4-q10",
+    "type": "complete",
+    "prompt": "Next week's topic is how the roads were:",
+    "answer": [
+     "maintained"
+    ],
+    "why": "The lecturer says 'Next week we'll look at how the roads were maintained.'"
+   }
+  ]
+ },
+ {
+  "id": "l6-s1",
+  "section": 1,
+  "title": "Hotel Check-in Problem",
+  "speakers": [
+   {
+    "name": "Receptionist",
+    "lang": "en-US",
+    "gender": "f"
+   },
+   {
+    "name": "Guest",
+    "lang": "en-AU",
+    "gender": "m"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Receptionist",
+    "text": "Good evening, welcome to the Lakeside Hotel. Do you have a reservation?"
+   },
+   {
+    "speaker": "Guest",
+    "text": "Yes, under Ortega. I booked a double room for three nights, from the twenty-first."
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "I see the booking. Unfortunately the double room is not ready. There's a problem with the heating in that wing."
+   },
+   {
+    "speaker": "Guest",
+    "text": "That's frustrating. I was told I'd have a room with a lake view."
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "I'm sorry. We can offer a twin room on the third floor. It also has a lake view, but it will be available only from nine tomorrow morning."
+   },
+   {
+    "speaker": "Guest",
+    "text": "So where would I stay tonight?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "We'll pay for a room at the Harbour Inn, two streets away. Breakfast is included there."
+   },
+   {
+    "speaker": "Guest",
+    "text": "Fine. Will I be able to get back to the hotel tomorrow?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "Yes, a taxi will collect you from the Harbour Inn at eight-thirty and bring you here."
+   },
+   {
+    "speaker": "Guest",
+    "text": "Thanks. Can I have the room charge removed for tonight, then?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "Of course. The room is free for tonight, and you'll also receive a voucher worth fifteen pounds for the restaurant."
+   },
+   {
+    "speaker": "Guest",
+    "text": "Is there a gym I can use?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "Yes, the gym is on the lower ground floor. It's open from six in the morning until ten at night."
+   },
+   {
+    "speaker": "Guest",
+    "text": "And the pool?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "The pool is open until eight. Towels are available at the pool entrance."
+   },
+   {
+    "speaker": "Guest",
+    "text": "Can I get a late breakfast?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "Breakfast finishes at ten-thirty, but room service is available all day."
+   },
+   {
+    "speaker": "Guest",
+    "text": "Good. Is there Wi-Fi in the rooms?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "Yes, the password is printed on your key card holder."
+   },
+   {
+    "speaker": "Guest",
+    "text": "One more question: is there an airport shuttle?"
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "Yes, it runs every hour from the front entrance. Enjoy your stay."
+   },
+   {
+    "speaker": "Receptionist",
+    "text": "Would you like help with your luggage to the room?"
+   },
+   {
+    "speaker": "Guest",
+    "text": "Yes, please. Thank you for your help."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l6-s1-q01",
+    "type": "complete",
+    "prompt": "Name on the reservation:",
+    "answer": [
+     "Ortega"
+    ],
+    "why": "The guest says 'Yes, under Ortega.'"
+   },
+   {
+    "id": "l6-s1-q02",
+    "type": "complete",
+    "prompt": "Number of nights booked:",
+    "answer": [
+     "3",
+     "three"
+    ],
+    "why": "The guest says 'a double room for three nights.'"
+   },
+   {
+    "id": "l6-s1-q03",
+    "type": "mcq",
+    "prompt": "What is the problem with the double room?",
+    "options": [
+     "A. it is too small",
+     "B. the heating is faulty",
+     "C. it is dirty",
+     "D. it is occupied"
+    ],
+    "answer": "B",
+    "why": "The receptionist says 'There's a problem with the heating in that wing.'"
+   },
+   {
+    "id": "l6-s1-q04",
+    "type": "complete",
+    "prompt": "The alternative room is a twin room on the ___ floor.",
+    "answer": [
+     "third",
+     "3rd"
+    ],
+    "why": "The receptionist offers 'a twin room on the third floor.'"
+   },
+   {
+    "id": "l6-s1-q05",
+    "type": "complete",
+    "prompt": "The alternative room is available from (time):",
+    "answer": [
+     "9 am",
+     "9am",
+     "9 a.m.",
+     "nine",
+     "nine in the morning"
+    ],
+    "why": "The receptionist says it 'will be available only from nine tomorrow morning.'"
+   },
+   {
+    "id": "l6-s1-q06",
+    "type": "complete",
+    "prompt": "Name of the hotel where the guest stays tonight:",
+    "answer": [
+     "Harbour Inn",
+     "the Harbour Inn"
+    ],
+    "why": "The receptionist says 'We'll pay for a room at the Harbour Inn, two streets away.'"
+   },
+   {
+    "id": "l6-s1-q07",
+    "type": "mcq",
+    "prompt": "What is included at the Harbour Inn?",
+    "options": [
+     "A. dinner",
+     "B. breakfast",
+     "C. parking",
+     "D. a taxi"
+    ],
+    "answer": "B",
+    "why": "The receptionist says 'Breakfast is included there.'"
+   },
+   {
+    "id": "l6-s1-q08",
+    "type": "complete",
+    "prompt": "Time the taxi collects the guest:",
+    "answer": [
+     "8:30",
+     "8.30",
+     "8:30 am",
+     "eight-thirty",
+     "half past eight"
+    ],
+    "why": "The receptionist says 'a taxi will collect you from the Harbour Inn at eight-thirty.'"
+   },
+   {
+    "id": "l6-s1-q09",
+    "type": "complete",
+    "prompt": "Value of the restaurant voucher (pounds):",
+    "answer": [
+     "15",
+     "fifteen"
+    ],
+    "why": "The receptionist says 'a voucher worth fifteen pounds for the restaurant.'"
+   },
+   {
+    "id": "l6-s1-q10",
+    "type": "mcq",
+    "prompt": "What does the guest ask for?",
+    "options": [
+     "A. a refund for the whole stay",
+     "B. the room charge removed for tonight",
+     "C. an upgrade to a suite",
+     "D. a late checkout"
+    ],
+    "answer": "B",
+    "why": "The guest says 'Can I have the room charge removed for tonight, then?'"
+   }
+  ]
+ },
+ {
+  "id": "l6-s2",
+  "section": 2,
+  "title": "Radio Announcement: Riverside Music Festival",
+  "speakers": [
+   {
+    "name": "Presenter",
+    "lang": "en-GB",
+    "gender": "m"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Presenter",
+    "text": "Coming up on the station, here's everything you need to know about this year's Riverside Music Festival."
+   },
+   {
+    "speaker": "Presenter",
+    "text": "The festival runs for three days, from the fourteenth to the sixteenth of July, in Hartley Park. Gates open at noon each day."
+   },
+   {
+    "speaker": "Presenter",
+    "text": "There are four stages this year. The biggest is the Riverside Stage, which holds about eight thousand people."
+   },
+   {
+    "speaker": "Presenter",
+    "text": "Tickets are available online or from the box office in the high street. A day ticket costs twenty-five pounds, and a weekend pass costs sixty."
+   },
+   {
+    "speaker": "Presenter",
+    "text": "Under-sixteens go free when accompanied by an adult, but they must have a ticket with a valid ID."
+   },
+   {
+    "speaker": "Presenter",
+    "text": "Parking is limited, so we recommend the park-and-ride service from the leisure centre. It runs every fifteen minutes."
+   },
+   {
+    "speaker": "Presenter",
+    "text": "Please note that glass bottles are not allowed inside the park. Water refill points are available near every stage."
+   },
+   {
+    "speaker": "Presenter",
+    "text": "Finally, the festival is cancelled in the event of severe weather, and refunds will be issued in full."
+   },
+   {
+    "speaker": "Presenter",
+    "text": "Before we go, a quick reminder about the children's area. The Little Acre zone offers face painting, puppet shows and craft tents, and it is staffed by trained volunteers all day."
+   },
+   {
+    "speaker": "Presenter",
+    "text": "Food traders will be serving dishes from around the world, with a special vegetarian village near the east gate. Prices are displayed clearly, and card payments are accepted at most stalls."
+   },
+   {
+    "speaker": "Presenter",
+    "text": "Accessibility matters to us. There are step-free routes between all stages, accessible toilets near the main gate, and a quiet area for visitors who need a break from the crowds."
+   },
+   {
+    "speaker": "Presenter",
+    "text": "If you're travelling by train, the nearest station is a ten-minute walk from the park. Taxis queue outside the station, but drivers can drop off only at the south entrance."
+   },
+   {
+    "speaker": "Presenter",
+    "text": "Volunteers are needed for the litter patrols. Sign up at the information tent, which opens at nine each morning."
+   },
+   {
+    "speaker": "Presenter",
+    "text": "Thanks for listening. Stay tuned for the full line-up announcement later this week, and we'll see you in the park."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l6-s2-q01",
+    "type": "complete",
+    "prompt": "Length of the festival (days):",
+    "answer": [
+     "3",
+     "three"
+    ],
+    "why": "The presenter says 'The festival runs for three days.'"
+   },
+   {
+    "id": "l6-s2-q02",
+    "type": "complete",
+    "prompt": "Venue:",
+    "answer": [
+     "Hartley Park"
+    ],
+    "why": "The presenter says 'in Hartley Park.'"
+   },
+   {
+    "id": "l6-s2-q03",
+    "type": "complete",
+    "prompt": "Gates open at (time):",
+    "answer": [
+     "noon",
+     "12 pm",
+     "12pm",
+     "12 noon",
+     "midday"
+    ],
+    "why": "The presenter says 'Gates open at noon each day.'"
+   },
+   {
+    "id": "l6-s2-q04",
+    "type": "complete",
+    "prompt": "Number of stages this year:",
+    "answer": [
+     "4",
+     "four"
+    ],
+    "why": "The presenter says 'There are four stages this year.'"
+   },
+   {
+    "id": "l6-s2-q05",
+    "type": "complete",
+    "prompt": "Capacity of the Riverside Stage:",
+    "answer": [
+     "8,000",
+     "8000",
+     "eight thousand"
+    ],
+    "why": "The presenter says 'which holds about eight thousand people.'"
+   },
+   {
+    "id": "l6-s2-q06",
+    "type": "complete",
+    "prompt": "Price of a day ticket (pounds):",
+    "answer": [
+     "25",
+     "twenty-five"
+    ],
+    "why": "The presenter says 'A day ticket costs twenty-five pounds.'"
+   },
+   {
+    "id": "l6-s2-q07",
+    "type": "mcq",
+    "prompt": "Under-sixteens can attend free if they:",
+    "options": [
+     "A. have a weekend pass",
+     "B. are accompanied by an adult",
+     "C. buy online",
+     "D. live locally"
+    ],
+    "answer": "B",
+    "why": "The presenter says 'Under-sixteens go free when accompanied by an adult.'"
+   },
+   {
+    "id": "l6-s2-q08",
+    "type": "complete",
+    "prompt": "The park-and-ride service runs every ___ minutes.",
+    "answer": [
+     "fifteen",
+     "15"
+    ],
+    "why": "The presenter says 'It runs every fifteen minutes.'"
+   },
+   {
+    "id": "l6-s2-q09",
+    "type": "complete",
+    "prompt": "Items not allowed inside the park:",
+    "answer": [
+     "glass bottles",
+     "glass"
+    ],
+    "why": "The presenter says 'glass bottles are not allowed inside the park.'"
+   },
+   {
+    "id": "l6-s2-q10",
+    "type": "mcq",
+    "prompt": "If severe weather cancels the festival, the organisers will:",
+    "options": [
+     "A. move it to next month",
+     "B. issue full refunds",
+     "C. issue half refunds",
+     "D. offer vouchers only"
+    ],
+    "answer": "B",
+    "why": "The presenter says 'refunds will be issued in full.'"
+   }
+  ]
+ },
+ {
+  "id": "l6-s3",
+  "section": 3,
+  "title": "Discussing a Library Design Project",
+  "speakers": [
+   {
+    "name": "Priya",
+    "lang": "en-GB",
+    "gender": "f"
+   },
+   {
+    "name": "Ben",
+    "lang": "en-AU",
+    "gender": "m"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Priya",
+    "text": "Ben, have you looked at the site plan for the library project? I'm worried about the entrance."
+   },
+   {
+    "speaker": "Ben",
+    "text": "Yes. The current design puts the entrance on the busy road side, which is noisy."
+   },
+   {
+    "speaker": "Priya",
+    "text": "Exactly. I think we should move it to the quieter courtyard, even though that adds a corridor."
+   },
+   {
+    "speaker": "Ben",
+    "text": "The corridor would cost extra, but the acoustics would improve a lot. Did you run the sound model?"
+   },
+   {
+    "speaker": "Priya",
+    "text": "Yes, the model shows a reduction of about ten decibels in the reading rooms if we do that."
+   },
+   {
+    "speaker": "Ben",
+    "text": "That's a big difference. What about daylight? The reading room faces north."
+   },
+   {
+    "speaker": "Priya",
+    "text": "North is actually good for steady light, without glare. But the east windows need shading."
+   },
+   {
+    "speaker": "Ben",
+    "text": "Agreed. We could add external louvres. They're cheaper than tinted glass."
+   },
+   {
+    "speaker": "Priya",
+    "text": "Let's check the budget first. The client has capped the materials spend at four hundred thousand pounds."
+   },
+   {
+    "speaker": "Ben",
+    "text": "Then we might have to drop the rooftop garden if the louvres push us over."
+   },
+   {
+    "speaker": "Priya",
+    "text": "Maybe. I'll draft the revised plan, and we'll show it to the client on Friday the sixth."
+   },
+   {
+    "speaker": "Ben",
+    "text": "Did the structural engineer confirm the louvre fixings will work?"
+   },
+   {
+    "speaker": "Priya",
+    "text": "Yes, she sent a note yesterday. The fixings are fine on the north elevation, but the east side needs reinforced brackets."
+   },
+   {
+    "speaker": "Ben",
+    "text": "That adds cost again. Can we use the same bracket design as the lecture hall?"
+   },
+   {
+    "speaker": "Priya",
+    "text": "Probably not, because the wall thickness is different. I'll ask her to check."
+   },
+   {
+    "speaker": "Ben",
+    "text": "Okay. What about the planting scheme for the courtyard?"
+   },
+   {
+    "speaker": "Priya",
+    "text": "The landscape team proposed native grasses, which are low maintenance and suit the local climate."
+   },
+   {
+    "speaker": "Ben",
+    "text": "Good. That keeps running costs down, which the client will like."
+   },
+   {
+    "speaker": "Priya",
+    "text": "Exactly. Let's keep the plan simple and clear for the presentation."
+   },
+   {
+    "speaker": "Ben",
+    "text": "Agreed. I'll update the drawings tonight."
+   },
+   {
+    "speaker": "Priya",
+    "text": "Thanks, Ben."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l6-s3-q01",
+    "type": "mcq",
+    "prompt": "What is Priya worried about?",
+    "options": [
+     "A. the roof",
+     "B. the entrance",
+     "C. the furniture",
+     "D. the lighting cost"
+    ],
+    "answer": "B",
+    "why": "Priya says 'I'm worried about the entrance.'"
+   },
+   {
+    "id": "l6-s3-q02",
+    "type": "mcq",
+    "prompt": "Priya suggests moving the entrance to the:",
+    "options": [
+     "A. busy road side",
+     "B. quieter courtyard",
+     "C. rooftop",
+     "D. car park"
+    ],
+    "answer": "B",
+    "why": "Priya says 'we should move it to the quieter courtyard.'"
+   },
+   {
+    "id": "l6-s3-q03",
+    "type": "complete",
+    "prompt": "Estimated reduction in noise in the reading rooms (decibels):",
+    "answer": [
+     "10",
+     "ten"
+    ],
+    "why": "Priya says the sound model 'shows a reduction of about ten decibels in the reading rooms.'"
+   },
+   {
+    "id": "l6-s3-q04",
+    "type": "mcq",
+    "prompt": "Which direction does the reading room face?",
+    "options": [
+     "A. north",
+     "B. south",
+     "C. east",
+     "D. west"
+    ],
+    "answer": "A",
+    "why": "Ben says 'The reading room faces north.'"
+   },
+   {
+    "id": "l6-s3-q05",
+    "type": "complete",
+    "prompt": "Windows that need shading face the:",
+    "answer": [
+     "east"
+    ],
+    "why": "Priya says 'But the east windows need shading.'"
+   },
+   {
+    "id": "l6-s3-q06",
+    "type": "complete",
+    "prompt": "Proposed shading: external ___.",
+    "answer": [
+     "louvres",
+     "louvers",
+     "louvre"
+    ],
+    "why": "Ben says 'We could add external louvres.'"
+   },
+   {
+    "id": "l6-s3-q07",
+    "type": "complete",
+    "prompt": "The client's cap on materials spending (pounds):",
+    "answer": [
+     "400,000",
+     "400000",
+     "four hundred thousand"
+    ],
+    "why": "Priya says 'The client has capped the materials spend at four hundred thousand pounds.'"
+   },
+   {
+    "id": "l6-s3-q08",
+    "type": "complete",
+    "prompt": "Feature that may be dropped to save money:",
+    "answer": [
+     "rooftop garden",
+     "the rooftop garden"
+    ],
+    "why": "Ben says 'we might have to drop the rooftop garden if the louvres push us over.'"
+   },
+   {
+    "id": "l6-s3-q09",
+    "type": "complete",
+    "prompt": "Priya will draft the revised plan. Who will receive it?",
+    "answer": [
+     "the client"
+    ],
+    "why": "Priya says 'we'll show it to the client on Friday the sixth.'"
+   },
+   {
+    "id": "l6-s3-q10",
+    "type": "complete",
+    "prompt": "Date of the client meeting:",
+    "answer": [
+     "Friday the sixth",
+     "6 (Friday)",
+     "Friday 6th",
+     "the sixth"
+    ],
+    "why": "Priya says 'we'll show it to the client on Friday the sixth.'"
+   }
+  ]
+ },
+ {
+  "id": "l6-s4",
+  "section": 4,
+  "title": "Monitoring Coral Reefs",
+  "speakers": [
+   {
+    "name": "Lecturer",
+    "lang": "en-US",
+    "gender": "f"
+   }
+  ],
+  "script": [
+   {
+    "speaker": "Lecturer",
+    "text": "This week's lecture covers coral reef monitoring, a field that depends on long-term data to detect change."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Coral reefs cover less than one percent of the ocean floor, yet they support roughly a quarter of all known marine species."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Monitoring teams usually record coral cover, the percentage of the seabed covered by living coral, along fixed transect lines."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Divers also count fish, but the counts are often unreliable because fish move. Video cameras placed on the reef now provide more consistent records."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "The biggest threat is bleaching. When water temperatures rise, corals expel the algae that live in their tissues, and they turn white."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Bleached corals can recover if temperatures return to normal quickly, but prolonged heat often kills them."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Local pressures such as sewage and overfishing make the situation worse, because they weaken reefs before the heat arrives."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "For your assignment, use the reef dataset from the university portal, and remember to report the sampling depth for each transect."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Let's consider how reefs recover after a bleaching event. Recovery depends on several factors, including the number of healthy corals nearby that can supply new larvae to the damaged area."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Fish populations also play a role. Herbivorous fish graze on algae, which keeps seaweed from covering the reef surface and gives new coral larvae space to settle."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Scientists have tested the use of heat-tolerant coral strains in restoration projects. Early results are encouraging, but the long-term survival of these corals is still uncertain."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Local communities are important partners in monitoring. Fishing cooperatives often notice changes in reef health before scientists do, and their observations can guide survey priorities."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Data quality matters enormously. Every survey should record the date, the tide level, the depth and the observer's name, so that results from different years can be compared fairly."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Remember that monitoring is not an end in itself. The purpose is to inform management decisions, such as where to set up marine protected areas and how to regulate fishing."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Next week we'll look at satellite monitoring, which can cover entire regions but cannot yet detect fine detail on individual corals. Please complete the reading on remote sensing in the course reader, and bring a short summary of one method to share with the group. The assignment rubric is posted on the course page, and it gives the weighting for each section."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Late submissions will not be accepted without a medical note. Your tutor will confirm the deadline by email."
+   }
+  ],
+  "questions": [
+   {
+    "id": "l6-s4-q01",
+    "type": "complete",
+    "prompt": "Share of the ocean floor covered by coral reefs:",
+    "answer": [
+     "less than one percent",
+     "under one percent",
+     "less than 1%",
+     "under 1%"
+    ],
+    "why": "The lecturer says 'Coral reefs cover less than one percent of the ocean floor.'"
+   },
+   {
+    "id": "l6-s4-q02",
+    "type": "complete",
+    "prompt": "Share of known marine species the reefs support:",
+    "answer": [
+     "a quarter",
+     "roughly a quarter",
+     "25%",
+     "25 per cent"
+    ],
+    "why": "The lecturer says reefs 'support roughly a quarter of all known marine species.'"
+   },
+   {
+    "id": "l6-s4-q03",
+    "type": "complete",
+    "prompt": "Coral cover is measured along fixed ___ lines.",
+    "answer": [
+     "transect",
+     "transects"
+    ],
+    "why": "The lecturer says teams record coral cover 'along fixed transect lines.'"
+   },
+   {
+    "id": "l6-s4-q04",
+    "type": "mcq",
+    "prompt": "Why are fish counts often unreliable?",
+    "options": [
+     "A. divers cannot see fish",
+     "B. fish move",
+     "C. the water is too cold",
+     "D. there are no fish"
+    ],
+    "answer": "B",
+    "why": "The lecturer says 'the counts are often unreliable because fish move.'"
+   },
+   {
+    "id": "l6-s4-q05",
+    "type": "complete",
+    "prompt": "The newer method that gives more consistent records:",
+    "answer": [
+     "video cameras",
+     "video camera",
+     "cameras"
+    ],
+    "why": "The lecturer says 'Video cameras placed on the reef now provide more consistent records.'"
+   },
+   {
+    "id": "l6-s4-q06",
+    "type": "complete",
+    "prompt": "The biggest threat to coral reefs is:",
+    "answer": [
+     "bleaching"
+    ],
+    "why": "The lecturer says 'The biggest threat is bleaching.'"
+   },
+   {
+    "id": "l6-s4-q07",
+    "type": "mcq",
+    "prompt": "When corals bleach, they expel:",
+    "options": [
+     "A. water",
+     "B. algae",
+     "C. sand",
+     "D. fish"
+    ],
+    "answer": "B",
+    "why": "The lecturer says corals 'expel the algae that live in their tissues.'"
+   },
+   {
+    "id": "l6-s4-q08",
+    "type": "mcq",
+    "prompt": "Bleached corals are likely to die when:",
+    "options": [
+     "A. the water is cleaned",
+     "B. heat lasts for a long time",
+     "C. fish return",
+     "D. divers visit"
+    ],
+    "answer": "B",
+    "why": "The lecturer says 'prolonged heat often kills them.'"
+   },
+   {
+    "id": "l6-s4-q09",
+    "type": "complete",
+    "prompt": "Local pressures named by the lecturer include sewage and:",
+    "answer": [
+     "overfishing"
+    ],
+    "why": "The lecturer says 'Local pressures such as sewage and overfishing make the situation worse.'"
+   },
+   {
+    "id": "l6-s4-q10",
+    "type": "complete",
+    "prompt": "For the assignment, students must report the sampling ___ for each transect.",
+    "answer": [
+     "depth"
+    ],
+    "why": "The lecturer says 'remember to report the sampling depth for each transect.'"
+   }
+  ]
  }
 ]

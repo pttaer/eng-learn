@@ -1,0 +1,847 @@
+[
+  {
+    "id": "l3-s1",
+    "section": 1,
+    "title": "Gym Membership Enquiry",
+    "speakers": [
+      {
+        "name": "Receptionist",
+        "lang": "en-GB",
+        "gender": "f"
+      },
+      {
+        "name": "Customer",
+        "lang": "en-AU",
+        "gender": "m"
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Receptionist",
+        "text": "Hello, Riverside Fitness Centre. How can I help you?"
+      },
+      {
+        "speaker": "Customer",
+        "text": "Hi. I'm interested in a membership. What options do you have?"
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "We have three types. Standard is for off-peak hours only, that's before four in the afternoon. Premium gives access at any time. And there's a Student option."
+      },
+      {
+        "speaker": "Customer",
+        "text": "Student sounds good. How much is it?"
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "The student membership is twenty-four pounds a month, and you need to show a valid student card."
+      },
+      {
+        "speaker": "Customer",
+        "text": "Is there a joining fee?"
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "Yes, there's a one-off joining fee of thirty pounds, but it's waived if you pay for twelve months in advance."
+      },
+      {
+        "speaker": "Customer",
+        "text": "Right. Do you have a swimming pool?"
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "The pool is open from six to ten in the morning and from five until nine in the evening. Lane swimming is in the mornings only."
+      },
+      {
+        "speaker": "Customer",
+        "text": "Can I bring a friend to try it out?"
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "Yes, guests can come once for free if they book in advance by phone."
+      },
+      {
+        "speaker": "Customer",
+        "text": "Great. Can I start on Monday the third?"
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "Certainly. I'll need your full name and date of birth."
+      },
+      {
+        "speaker": "Customer",
+        "text": "Alan Fraser, the fourteenth of March, 1999."
+      },
+      {
+        "speaker": "Customer",
+        "text": "Also, do you offer personal training?"
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "Yes, we have qualified trainers. A one-hour session is priced separately, and you can book one through the app once you've joined. They're popular, so it's worth booking early."
+      },
+      {
+        "speaker": "Customer",
+        "text": "Good to know. Are there lockers in the changing rooms?"
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "There are lockers in both changing rooms. You'll need a refundable deposit for the key, which you get back when you return it. Towels are provided at the front desk, but there's a small charge for them."
+      },
+      {
+        "speaker": "Customer",
+        "text": "That's useful. Is there parking?"
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "There's a car park behind the building, and it's free for members. Bicycles can be locked at the rack near the entrance."
+      },
+      {
+        "speaker": "Customer",
+        "text": "Brilliant. I think I'm sold. Can I sign up today?"
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "Of course. Let's get the forms completed, and I'll take your photo for the card."
+      },
+      {
+        "speaker": "Customer",
+        "text": "How long does it take to get the card?"
+      },
+      {
+        "speaker": "Receptionist",
+        "text": "The card is printed while you wait, so you can use it straight away."
+      }
+    ],
+    "questions": [
+      {
+        "id": "l3-s1-q01",
+        "type": "complete",
+        "prompt": "Student membership cost per month (pounds):",
+        "answer": [
+          "24",
+          "twenty-four",
+          "£24"
+        ],
+        "why": "The receptionist says 'The student membership is twenty-four pounds a month' in the first half of the call."
+      },
+      {
+        "id": "l3-s1-q02",
+        "type": "complete",
+        "prompt": "One-off joining fee (pounds):",
+        "answer": [
+          "30",
+          "thirty"
+        ],
+        "why": "The receptionist explains 'there's a one-off joining fee of thirty pounds'."
+      },
+      {
+        "id": "l3-s1-q03",
+        "type": "mcq",
+        "prompt": "The standard membership is only valid:",
+        "options": [
+          "A. at weekends",
+          "B. before four in the afternoon",
+          "C. after six in the evening",
+          "D. at any time"
+        ],
+        "answer": "B",
+        "why": "The receptionist says 'Standard is for off-peak hours only, that's before four in the afternoon.'"
+      },
+      {
+        "id": "l3-s1-q04",
+        "type": "complete",
+        "prompt": "The joining fee is waived if the member pays for ___ months in advance.",
+        "answer": [
+          "12",
+          "twelve"
+        ],
+        "why": "The receptionist says it is 'waived if you pay for twelve months in advance'."
+      },
+      {
+        "id": "l3-s1-q05",
+        "type": "complete",
+        "prompt": "The pool opens in the morning at (time):",
+        "answer": [
+          "6 a.m.",
+          "6am",
+          "6 am",
+          "six",
+          "six o'clock"
+        ],
+        "why": "The receptionist says 'The pool is open from six to ten in the morning'."
+      },
+      {
+        "id": "l3-s1-q06",
+        "type": "mcq",
+        "prompt": "Lane swimming is available:",
+        "options": [
+          "A. all day",
+          "B. in the mornings only",
+          "C. in the evenings only",
+          "D. at weekends only"
+        ],
+        "answer": "B",
+        "why": "The receptionist says 'Lane swimming is in the mornings only.'"
+      },
+      {
+        "id": "l3-s1-q07",
+        "type": "complete",
+        "prompt": "A guest can attend one free trial session if they ___.",
+        "answer": [
+          "book in advance by phone",
+          "book in advance",
+          "book by phone"
+        ],
+        "why": "The receptionist says 'guests can come once for free if they book in advance by phone.'"
+      },
+      {
+        "id": "l3-s1-q08",
+        "type": "complete",
+        "prompt": "The customer wants to start on:",
+        "answer": [
+          "Monday the third",
+          "Monday 3rd",
+          "Monday the 3rd"
+        ],
+        "why": "The customer asks 'Can I start on Monday the third?' and the receptionist replies 'Certainly.'"
+      },
+      {
+        "id": "l3-s1-q09",
+        "type": "complete",
+        "prompt": "The customer's date of birth:",
+        "answer": [
+          "14 March 1999",
+          "fourteenth of March 1999",
+          "14/03/1999",
+          "14 March, 1999"
+        ],
+        "why": "The customer gives 'the fourteenth of March, 1999' when asked for his date of birth."
+      },
+      {
+        "id": "l3-s1-q10",
+        "type": "mcq",
+        "prompt": "Which membership gives access at any time?",
+        "options": [
+          "A. Standard",
+          "B. Premium",
+          "C. Student",
+          "D. Guest"
+        ],
+        "answer": "B",
+        "why": "The receptionist says 'Premium gives access at any time.'"
+      }
+    ]
+  },
+  {
+    "id": "l3-s2",
+    "section": 2,
+    "title": "Guided Tour of the Botanic Garden",
+    "speakers": [
+      {
+        "name": "Guide",
+        "lang": "en-GB",
+        "gender": "f"
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Guide",
+        "text": "Welcome to the Eastbank Botanic Garden. I'll outline the tour and a few rules before we begin."
+      },
+      {
+        "speaker": "Guide",
+        "text": "The tour lasts about seventy minutes and covers four zones. We begin in the tropical glasshouse, which is kept at twenty-six degrees."
+      },
+      {
+        "speaker": "Guide",
+        "text": "After that, we walk to the herb garden, then the rose walk, and finish in the old orchard. The orchard is closed to visitors in winter, so the tour doesn't go there from December to February."
+      },
+      {
+        "speaker": "Guide",
+        "text": "Please don't touch the plants. The only exception is the scented herb garden, where you may rub the leaves gently."
+      },
+      {
+        "speaker": "Guide",
+        "text": "Cameras are welcome, but flash photography is not allowed inside the glasshouse because it can harm the orchids."
+      },
+      {
+        "speaker": "Guide",
+        "text": "Refreshments are available at the café near the gate. The café closes at four, half an hour before the garden does."
+      },
+      {
+        "speaker": "Guide",
+        "text": "The garden itself closes at half past four. If you lose anything, please come to the information desk by the main gate."
+      },
+      {
+        "speaker": "Guide",
+        "text": "Next month we'll run a special night tour, but that requires a separate ticket costing fifteen pounds."
+      },
+      {
+        "speaker": "Guide",
+        "text": "The glasshouse also houses a collection of carnivorous plants. Some of them catch insects, and you may see them digesting prey if you look closely near the back wall."
+      },
+      {
+        "speaker": "Guide",
+        "text": "The rose walk is at its best in early summer. The roses are labelled with their names and the year they were introduced, so take a moment to read the boards."
+      },
+      {
+        "speaker": "Guide",
+        "text": "Benches are placed along the walk, and you're welcome to sit and rest. Please keep to the paths, because the beds are fragile and easily damaged."
+      },
+      {
+        "speaker": "Guide",
+        "text": "Children are welcome, but they should be supervised at all times, especially near the pond, which is quite deep."
+      },
+      {
+        "speaker": "Guide",
+        "text": "There's a shop at the exit selling seeds, plant guides and small gifts. Card payments are accepted, but cash is not."
+      },
+      {
+        "speaker": "Guide",
+        "text": "Thank you for coming today. I hope you enjoy the garden, and please give us your feedback on the way out."
+      }
+    ],
+    "questions": [
+      {
+        "id": "l3-s2-q01",
+        "type": "complete",
+        "prompt": "Length of the tour (minutes):",
+        "answer": [
+          "70",
+          "seventy"
+        ],
+        "why": "The guide says 'The tour lasts about seventy minutes and covers four zones.'"
+      },
+      {
+        "id": "l3-s2-q02",
+        "type": "complete",
+        "prompt": "Temperature in the tropical glasshouse (degrees):",
+        "answer": [
+          "26",
+          "twenty-six"
+        ],
+        "why": "The guide says the glasshouse 'is kept at twenty-six degrees'."
+      },
+      {
+        "id": "l3-s2-q03",
+        "type": "mcq",
+        "prompt": "The tour does not visit the orchard from:",
+        "options": [
+          "A. June to August",
+          "B. December to February",
+          "C. March to May",
+          "D. September to November"
+        ],
+        "answer": "B",
+        "why": "The orchard is closed in winter, 'so the tour doesn't go there from December to February.'"
+      },
+      {
+        "id": "l3-s2-q04",
+        "type": "complete",
+        "prompt": "The only plants visitors may touch are in the ___ garden.",
+        "answer": [
+          "scented herb",
+          "herb"
+        ],
+        "why": "The guide says 'The only exception is the scented herb garden, where you may rub the leaves gently.'"
+      },
+      {
+        "id": "l3-s2-q05",
+        "type": "mcq",
+        "prompt": "Why is flash photography banned in the glasshouse?",
+        "options": [
+          "A. It disturbs other visitors",
+          "B. It may harm the orchids",
+          "C. It damages the glass",
+          "D. It dazzles the staff"
+        ],
+        "answer": "B",
+        "why": "The guide says flash photography 'can harm the orchids'."
+      },
+      {
+        "id": "l3-s2-q06",
+        "type": "complete",
+        "prompt": "The café closes at (time):",
+        "answer": [
+          "4 pm",
+          "4 p.m.",
+          "4pm",
+          "four",
+          "four o'clock"
+        ],
+        "why": "The guide says 'The café closes at four, half an hour before the garden does.'"
+      },
+      {
+        "id": "l3-s2-q07",
+        "type": "complete",
+        "prompt": "The garden closes at (time):",
+        "answer": [
+          "4:30",
+          "4.30",
+          "half past four",
+          "4:30 pm"
+        ],
+        "why": "The guide says 'The garden itself closes at half past four.'"
+      },
+      {
+        "id": "l3-s2-q08",
+        "type": "complete",
+        "prompt": "Lost property should be taken to the ___ desk.",
+        "answer": [
+          "information"
+        ],
+        "why": "The guide says 'please come to the information desk by the main gate.'"
+      },
+      {
+        "id": "l3-s2-q09",
+        "type": "complete",
+        "prompt": "Price of the special night tour (pounds):",
+        "answer": [
+          "15",
+          "fifteen"
+        ],
+        "why": "The guide says the night tour 'requires a separate ticket costing fifteen pounds'."
+      },
+      {
+        "id": "l3-s2-q10",
+        "type": "mcq",
+        "prompt": "Where does the tour begin?",
+        "options": [
+          "A. the herb garden",
+          "B. the rose walk",
+          "C. the tropical glasshouse",
+          "D. the old orchard"
+        ],
+        "answer": "C",
+        "why": "The guide says 'We begin in the tropical glasshouse'."
+      }
+    ]
+  },
+  {
+    "id": "l3-s3",
+    "section": 3,
+    "title": "Planning a River Water Quality Project",
+    "speakers": [
+      {
+        "name": "Tutor",
+        "lang": "en-GB",
+        "gender": "m"
+      },
+      {
+        "name": "Student",
+        "lang": "en-AU",
+        "gender": "f"
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Tutor",
+        "text": "Sam, have you settled on your group's research question for the environmental science project?"
+      },
+      {
+        "speaker": "Student",
+        "text": "We think we'll look at river water quality near the town, specifically nitrate levels."
+      },
+      {
+        "speaker": "Tutor",
+        "text": "Good. Where are you taking samples?"
+      },
+      {
+        "speaker": "Student",
+        "text": "Three sites: upstream of the factory, below the factory, and at the weir. We'll take samples every Tuesday for four weeks."
+      },
+      {
+        "speaker": "Tutor",
+        "text": "Why Tuesdays in particular?"
+      },
+      {
+        "speaker": "Student",
+        "text": "The river authority publishes flow data on Tuesdays, and we want to match our samples to the flow."
+      },
+      {
+        "speaker": "Tutor",
+        "text": "That's sensible. For the field tests, what method are you using?"
+      },
+      {
+        "speaker": "Student",
+        "text": "We're using test strips in the field and sending a few samples to the lab to check them."
+      },
+      {
+        "speaker": "Tutor",
+        "text": "Test strips are less accurate, so your report must mention that as a limitation."
+      },
+      {
+        "speaker": "Student",
+        "text": "We know. That's why we'll compare them with the lab results."
+      },
+      {
+        "speaker": "Tutor",
+        "text": "How many samples in total?"
+      },
+      {
+        "speaker": "Student",
+        "text": "Twelve per site, so thirty-six altogether, plus three blanks."
+      },
+      {
+        "speaker": "Tutor",
+        "text": "And who is doing the statistics?"
+      },
+      {
+        "speaker": "Student",
+        "text": "Dan will do the statistics. I'll write the methods section and the limitations."
+      },
+      {
+        "speaker": "Tutor",
+        "text": "When is the draft due?"
+      },
+      {
+        "speaker": "Student",
+        "text": "The draft is due on the twentieth of November, and we're presenting on the fourth of December."
+      },
+      {
+        "speaker": "Tutor",
+        "text": "Have you thought about the risks in the field, such as weather or access to the weir?"
+      },
+      {
+        "speaker": "Student",
+        "text": "Yes. We'll wear waders for the weir, and we'll never sample alone. We've also added a backup day in case of heavy rain."
+      },
+      {
+        "speaker": "Tutor",
+        "text": "Good. Make sure the risk assessment is signed before the first visit."
+      },
+      {
+        "speaker": "Student",
+        "text": "We already have the form. Dan is collecting signatures from the lab technician this week."
+      },
+      {
+        "speaker": "Tutor",
+        "text": "Excellent. And what will you do if a result looks odd?"
+      },
+      {
+        "speaker": "Student",
+        "text": "We'll repeat the test on a fresh sample and record both results, so the report shows that we checked."
+      },
+      {
+        "speaker": "Tutor",
+        "text": "That's the right approach. Keep your field notebook up to date as well; examiners look at it."
+      },
+      {
+        "speaker": "Student",
+        "text": "Will do. Thanks for the feedback."
+      }
+    ],
+    "questions": [
+      {
+        "id": "l3-s3-q01",
+        "type": "complete",
+        "prompt": "The group's research focus is:",
+        "answer": [
+          "nitrate levels",
+          "nitrates",
+          "nitrate"
+        ],
+        "why": "The student says 'We think we'll look at river water quality near the town, specifically nitrate levels.'"
+      },
+      {
+        "id": "l3-s3-q02",
+        "type": "mcq",
+        "prompt": "How many sampling sites will the group use?",
+        "options": [
+          "A. two",
+          "B. three",
+          "C. four",
+          "D. five"
+        ],
+        "answer": "B",
+        "why": "The student lists 'Three sites: upstream of the factory, below the factory, and at the weir.'"
+      },
+      {
+        "id": "l3-s3-q03",
+        "type": "complete",
+        "prompt": "The day of the week on which samples are taken:",
+        "answer": [
+          "Tuesday",
+          "Tuesdays"
+        ],
+        "why": "The student says 'We'll take samples every Tuesday for four weeks.'"
+      },
+      {
+        "id": "l3-s3-q04",
+        "type": "mcq",
+        "prompt": "Why are samples taken on that day?",
+        "options": [
+          "A. The lab is open only then",
+          "B. To match the flow data",
+          "C. The river is cleaner then",
+          "D. The tutor asked for it"
+        ],
+        "answer": "B",
+        "why": "The student says the authority publishes flow data on Tuesdays and 'we want to match our samples to the flow.'"
+      },
+      {
+        "id": "l3-s3-q05",
+        "type": "complete",
+        "prompt": "The field testing method is:",
+        "answer": [
+          "test strips",
+          "testing strips",
+          "test strip"
+        ],
+        "why": "The student says 'We're using test strips in the field and sending a few samples to the lab to check them.'"
+      },
+      {
+        "id": "l3-s3-q06",
+        "type": "mcq",
+        "prompt": "The tutor says the test strips are:",
+        "options": [
+          "A. more expensive",
+          "B. less accurate",
+          "C. banned",
+          "D. faster to read"
+        ],
+        "answer": "B",
+        "why": "The tutor says 'Test strips are less accurate, so your report must mention that as a limitation.'"
+      },
+      {
+        "id": "l3-s3-q07",
+        "type": "complete",
+        "prompt": "Total number of samples, excluding blanks:",
+        "answer": [
+          "36",
+          "thirty-six"
+        ],
+        "why": "The student says 'Twelve per site, so thirty-six altogether, plus three blanks.'"
+      },
+      {
+        "id": "l3-s3-q08",
+        "type": "complete",
+        "prompt": "The group member who will do the statistics:",
+        "answer": [
+          "Dan"
+        ],
+        "why": "The student says 'Dan will do the statistics.'"
+      },
+      {
+        "id": "l3-s3-q09",
+        "type": "complete",
+        "prompt": "Draft due date:",
+        "answer": [
+          "20 November",
+          "20th of November",
+          "twentieth of November",
+          "November 20"
+        ],
+        "why": "The student says 'The draft is due on the twentieth of November.'"
+      },
+      {
+        "id": "l3-s3-q10",
+        "type": "complete",
+        "prompt": "Presentation date:",
+        "answer": [
+          "4 December",
+          "fourth of December",
+          "December 4"
+        ],
+        "why": "The student says 'we're presenting on the fourth of December.'"
+      }
+    ]
+  },
+  {
+    "id": "l3-s4",
+    "section": 4,
+    "title": "Pollinator Decline and Its Causes",
+    "speakers": [
+      {
+        "name": "Lecturer",
+        "lang": "en-US",
+        "gender": "m"
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Lecturer",
+        "text": "Today we'll look at pollinator decline, specifically honeybees and wild bees."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Pollination supports about one third of the food crops that people eat, according to most estimates."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Researchers identify three main pressures on pollinators: habitat loss, pesticides, and disease."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Habitat loss is the most significant of the three. As farmland spreads, hedgerows and wildflower meadows disappear, and bees lose nesting sites and food."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Pesticides are a second factor. Some neonicotinoid chemicals are harmful even at low doses, although regulations now restrict their use in several regions."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "The third pressure is disease, particularly the Varroa mite, which weakens honeybee colonies by spreading viruses."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Climate change is also emerging as a factor. Flowering times are shifting, so some bees arrive when no flowers are available."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Some people assume that honeybees are the most important pollinators. In fact, many wild species, including solitary bees, are often more efficient pollinators for particular crops."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Solutions include planting wildflower strips along field edges, reducing pesticide use during flowering periods, and creating nest sites such as bare soil banks."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Let me say a little more about wild bees. There are thousands of species, and most of them are solitary. They do not produce honey or live in large colonies, which means they are often overlooked by the public."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Different bees pollinate different plants. Some species visit only a few types of flower, while others feed on a wide range. This specialisation can make some bees vulnerable when their preferred plants disappear."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Research methods have also changed. Scientists now use photographs taken by volunteers, along with DNA analysis of pollen collected from bees' bodies, to work out which plants each species depends on."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Public engagement is an important part of the work. Many local groups run survey days, where families can learn to identify bees and record what they see in gardens and parks."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Gardeners can help too. Leaving some areas of lawn to grow long, planting a range of flowers across the seasons, and avoiding unnecessary chemicals all make a difference."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Finally, remember that these measures are complementary. No single action will solve the problem, so policy, farming practice and individual behaviour all need to work together."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Next session we'll compare these approaches with the policies used in three European countries, and you should read the assigned case studies before then. Please also bring your questions about the survey design, because we'll discuss them at the start of the session. The reading list is available on the course page."
+      }
+    ],
+    "questions": [
+      {
+        "id": "l3-s4-q01",
+        "type": "complete",
+        "prompt": "Share of food crops supported by pollination (approximately):",
+        "answer": [
+          "one third",
+          "a third",
+          "1/3"
+        ],
+        "why": "The lecturer says pollination 'supports about one third of the food crops that people eat'."
+      },
+      {
+        "id": "l3-s4-q02",
+        "type": "mcq",
+        "prompt": "Which pressure is described as the most significant?",
+        "options": [
+          "A. pesticides",
+          "B. disease",
+          "C. habitat loss",
+          "D. climate change"
+        ],
+        "answer": "C",
+        "why": "The lecturer says 'Habitat loss is the most significant of the three.'"
+      },
+      {
+        "id": "l3-s4-q03",
+        "type": "complete",
+        "prompt": "The pest that weakens honeybee colonies:",
+        "answer": [
+          "Varroa mite",
+          "the Varroa mite",
+          "Varroa"
+        ],
+        "why": "The lecturer names 'the Varroa mite, which weakens honeybee colonies by spreading viruses'."
+      },
+      {
+        "id": "l3-s4-q04",
+        "type": "complete",
+        "prompt": "The type of chemical described as harmful at low doses:",
+        "answer": [
+          "neonicotinoids",
+          "neonicotinoid",
+          "neonicotinoid chemicals"
+        ],
+        "why": "The lecturer says 'Some neonicotinoid chemicals are harmful even at low doses'."
+      },
+      {
+        "id": "l3-s4-q05",
+        "type": "mcq",
+        "prompt": "Why do some bees arrive when no flowers are available?",
+        "options": [
+          "A. They migrate too early",
+          "B. Flowering times have shifted",
+          "C. Spring is colder",
+          "D. Flowers have closed"
+        ],
+        "answer": "B",
+        "why": "The lecturer says 'Flowering times are shifting, so some bees arrive when no flowers are available.'"
+      },
+      {
+        "id": "l3-s4-q06",
+        "type": "mcq",
+        "prompt": "According to the lecturer, many wild species are:",
+        "options": [
+          "A. less common than honeybees",
+          "B. more efficient for some crops",
+          "C. protected by law",
+          "D. unable to fly far"
+        ],
+        "answer": "B",
+        "why": "The lecturer says many wild species 'are often more efficient pollinators for particular crops'."
+      },
+      {
+        "id": "l3-s4-q07",
+        "type": "complete",
+        "prompt": "One solution is planting wildflower ___ along field edges.",
+        "answer": [
+          "strips",
+          "strip"
+        ],
+        "why": "The lecturer says 'planting wildflower strips along field edges'."
+      },
+      {
+        "id": "l3-s4-q08",
+        "type": "complete",
+        "prompt": "Nest sites can be created as bare soil ___.",
+        "answer": [
+          "banks",
+          "bank"
+        ],
+        "why": "The lecturer says 'creating nest sites such as bare soil banks'."
+      },
+      {
+        "id": "l3-s4-q09",
+        "type": "mcq",
+        "prompt": "The lecturer's view on the belief that honeybees are the most important pollinators is:",
+        "options": [
+          "A. agreement",
+          "B. disagreement",
+          "C. uncertainty",
+          "D. no comment"
+        ],
+        "answer": "B",
+        "why": "The lecturer says 'In fact, many wild species ... are often more efficient pollinators for particular crops.'"
+      },
+      {
+        "id": "l3-s4-q10",
+        "type": "complete",
+        "prompt": "Regulations now ___ the use of pesticides in several regions.",
+        "answer": [
+          "restricted",
+          "restricted by regulation",
+          "limited"
+        ],
+        "why": "The lecturer says 'regulations now restrict their use in several regions.'"
+      }
+    ]
+  }
+]

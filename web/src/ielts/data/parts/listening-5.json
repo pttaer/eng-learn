@@ -1,0 +1,822 @@
+[
+  {
+    "id": "l5-s1",
+    "section": 1,
+    "title": "Recycling Collection Enquiry",
+    "speakers": [
+      {
+        "name": "Council Officer",
+        "lang": "en-GB",
+        "gender": "f"
+      },
+      {
+        "name": "Resident",
+        "lang": "en-AU",
+        "gender": "m"
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Council Officer",
+        "text": "Hello, Eastfield Council waste services. How can I help?"
+      },
+      {
+        "speaker": "Resident",
+        "text": "Hi, I missed my recycling collection last Thursday. The bin is still full."
+      },
+      {
+        "speaker": "Council Officer",
+        "text": "I'm sorry about that. Can I take your address and postcode?"
+      },
+      {
+        "speaker": "Resident",
+        "text": "It's fourteen Larch Avenue, postcode EF three seven two."
+      },
+      {
+        "speaker": "Council Officer",
+        "text": "Thank you. We collect paper and card on alternate weeks, and glass and plastic on the other weeks. Which bin is full?"
+      },
+      {
+        "speaker": "Resident",
+        "text": "The blue one, so paper and card."
+      },
+      {
+        "speaker": "Council Officer",
+        "text": "Then the next collection will be on Tuesday the twenty-second. Please put the bin out by seven in the morning."
+      },
+      {
+        "speaker": "Resident",
+        "text": "Okay. Can I put cardboard boxes in it too?"
+      },
+      {
+        "speaker": "Council Officer",
+        "text": "Yes, but the boxes must be flattened. Food-soiled card can't be recycled, so it goes in the general waste bin."
+      },
+      {
+        "speaker": "Resident",
+        "text": "What if I need a bigger bin?"
+      },
+      {
+        "speaker": "Council Officer",
+        "text": "Additional bins cost twelve pounds to deliver, and you'd pay a one-off fee of twenty pounds for the bin itself."
+      },
+      {
+        "speaker": "Resident",
+        "text": "That's more than I expected. I'll manage with the one I have."
+      },
+      {
+        "speaker": "Resident",
+        "text": "Also, do you collect garden waste?"
+      },
+      {
+        "speaker": "Council Officer",
+        "text": "Yes, garden waste is collected every other Friday, but only if you have signed up to the garden scheme. There's a separate annual fee for that."
+      },
+      {
+        "speaker": "Resident",
+        "text": "I haven't signed up. How do I do that?"
+      },
+      {
+        "speaker": "Council Officer",
+        "text": "You can sign up on our website, or call this number and we'll send a form to your address."
+      },
+      {
+        "speaker": "Resident",
+        "text": "And what about batteries and electrical items?"
+      },
+      {
+        "speaker": "Council Officer",
+        "text": "They should not go in any household bin. Take them to the recycling centre on Mill Road, which is open every day except Sunday."
+      },
+      {
+        "speaker": "Resident",
+        "text": "Got it. Thanks for explaining all that."
+      },
+      {
+        "speaker": "Council Officer",
+        "text": "You're welcome. Is there anything else I can help you with today?"
+      },
+      {
+        "speaker": "Resident",
+        "text": "No, that's all. Thanks."
+      },
+      {
+        "speaker": "Council Officer",
+        "text": "Have a good day."
+      },
+      {
+        "speaker": "Resident",
+        "text": "Thanks for that. Goodbye."
+      },
+      {
+        "speaker": "Council Officer",
+        "text": "Goodbye."
+      }
+    ],
+    "questions": [
+      {
+        "id": "l5-s1-q01",
+        "type": "complete",
+        "prompt": "House number on Larch Avenue:",
+        "answer": [
+          "14",
+          "fourteen"
+        ],
+        "why": "The resident says 'It's fourteen Larch Avenue.'"
+      },
+      {
+        "id": "l5-s1-q02",
+        "type": "complete",
+        "prompt": "Postcode:",
+        "answer": [
+          "EF3 7 2",
+          "EF372",
+          "EF 372",
+          "EF three seven two"
+        ],
+        "why": "The resident gives 'postcode EF three seven two.'"
+      },
+      {
+        "id": "l5-s1-q03",
+        "type": "mcq",
+        "prompt": "Which bin is full?",
+        "options": [
+          "A. the green bin",
+          "B. the blue bin",
+          "C. the black bin",
+          "D. the brown bin"
+        ],
+        "answer": "B",
+        "why": "The resident says 'The blue one, so paper and card.'"
+      },
+      {
+        "id": "l5-s1-q04",
+        "type": "complete",
+        "prompt": "The next collection will be on:",
+        "answer": [
+          "Tuesday the twenty-second",
+          "Tuesday 22nd",
+          "22nd",
+          "the twenty-second"
+        ],
+        "why": "The officer says 'the next collection will be on Tuesday the twenty-second.'"
+      },
+      {
+        "id": "l5-s1-q05",
+        "type": "complete",
+        "prompt": "Bin should be put out by (time):",
+        "answer": [
+          "7 am",
+          "7am",
+          "7 a.m.",
+          "seven",
+          "seven in the morning"
+        ],
+        "why": "The officer says 'Please put the bin out by seven in the morning.'"
+      },
+      {
+        "id": "l5-s1-q06",
+        "type": "complete",
+        "prompt": "Cardboard boxes must be:",
+        "answer": [
+          "flattened"
+        ],
+        "why": "The officer says 'the boxes must be flattened.'"
+      },
+      {
+        "id": "l5-s1-q07",
+        "type": "mcq",
+        "prompt": "Where should food-soiled card go?",
+        "options": [
+          "A. the paper bin",
+          "B. the glass bin",
+          "C. the general waste bin",
+          "D. the garden waste"
+        ],
+        "answer": "C",
+        "why": "The officer says 'Food-soiled card can't be recycled, so it goes in the general waste bin.'"
+      },
+      {
+        "id": "l5-s1-q08",
+        "type": "complete",
+        "prompt": "Cost of delivering an additional bin (pounds):",
+        "answer": [
+          "12",
+          "twelve"
+        ],
+        "why": "The officer says 'Additional bins cost twelve pounds to deliver.'"
+      },
+      {
+        "id": "l5-s1-q09",
+        "type": "complete",
+        "prompt": "One-off fee for the bin itself (pounds):",
+        "answer": [
+          "20",
+          "twenty"
+        ],
+        "why": "The officer says 'a one-off fee of twenty pounds for the bin itself.'"
+      },
+      {
+        "id": "l5-s1-q10",
+        "type": "mcq",
+        "prompt": "What does the resident decide?",
+        "options": [
+          "A. to buy a bigger bin",
+          "B. to manage with the existing bin",
+          "C. to complain to the council",
+          "D. to request a refund"
+        ],
+        "answer": "B",
+        "why": "The resident says 'I'll manage with the one I have.'"
+      }
+    ]
+  },
+  {
+    "id": "l5-s2",
+    "section": 2,
+    "title": "Audio Guide: The Clockmakers' Gallery",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "lang": "en-US",
+        "gender": "f"
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Narrator",
+        "text": "Welcome to the Clockmakers' Gallery. This audio guide covers the four main rooms and takes about forty-five minutes."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "The first room displays early pendulum clocks. The pendulum was introduced in sixteen fifty-six, and it made clocks far more accurate than before."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "In the second room, you'll see the mechanisms. Look closely at the escapement, the part that releases the gears one tooth at a time."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "The third room holds pocket watches. Many of them were made of silver, and the cases were often engraved by hand."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "The final room contains a large astronomical clock. It shows the phases of the moon and the position of the sun, and it is wound once a week."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "Please do not touch the exhibits. The gallery is closed on Mondays, and the café on the ground floor is open until half past five."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "Guided tours are available on Saturdays at eleven, and booking is required."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "The next room is dedicated to clock faces. Many were painted by hand, using enamel that was fired in a kiln, and some still show traces of the original colours."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "Visitors often ask about the restoration work. Our conservators spend several months on each clock, cleaning the movements and replacing worn parts with original materials wherever possible."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "Please use the lifts at the back of the building if you need step-free access. The staircase near the entrance is steep and has no handrail on the lower section."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "Children under twelve may use the activity table in the reading corner, where they can try simple gears and levers under supervision."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "A reminder that flash photography is not allowed in any room, although photographs without flash are welcome."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "We hope you enjoy your visit. Feedback forms are available at the exit, and your comments help us plan future exhibitions."
+      }
+    ],
+    "questions": [
+      {
+        "id": "l5-s2-q01",
+        "type": "complete",
+        "prompt": "Length of the audio guide (minutes):",
+        "answer": [
+          "45",
+          "forty-five"
+        ],
+        "why": "The narrator says 'takes about forty-five minutes.'"
+      },
+      {
+        "id": "l5-s2-q02",
+        "type": "complete",
+        "prompt": "Year the pendulum was introduced:",
+        "answer": [
+          "1656",
+          "sixteen fifty-six"
+        ],
+        "why": "The narrator says 'The pendulum was introduced in sixteen fifty-six.'"
+      },
+      {
+        "id": "l5-s2-q03",
+        "type": "mcq",
+        "prompt": "The escapement is the part that:",
+        "options": [
+          "A. winds the clock",
+          "B. releases the gears one tooth at a time",
+          "C. shows the time",
+          "D. protects the case"
+        ],
+        "answer": "B",
+        "why": "The narrator describes the escapement as 'the part that releases the gears one tooth at a time.'"
+      },
+      {
+        "id": "l5-s2-q04",
+        "type": "complete",
+        "prompt": "Pocket watches were often made of:",
+        "answer": [
+          "silver"
+        ],
+        "why": "The narrator says 'Many of them were made of silver.'"
+      },
+      {
+        "id": "l5-s2-q05",
+        "type": "complete",
+        "prompt": "Pocket watch cases were often ___ by hand.",
+        "answer": [
+          "engraved"
+        ],
+        "why": "The narrator says 'the cases were often engraved by hand.'"
+      },
+      {
+        "id": "l5-s2-q06",
+        "type": "mcq",
+        "prompt": "The large astronomical clock shows:",
+        "options": [
+          "A. the tides",
+          "B. the phases of the moon and the sun's position",
+          "C. the weather",
+          "D. the stars in the sky"
+        ],
+        "answer": "B",
+        "why": "The narrator says 'It shows the phases of the moon and the position of the sun.'"
+      },
+      {
+        "id": "l5-s2-q07",
+        "type": "complete",
+        "prompt": "How often is the astronomical clock wound?",
+        "answer": [
+          "once a week",
+          "weekly",
+          "every week"
+        ],
+        "why": "The narrator says 'it is wound once a week.'"
+      },
+      {
+        "id": "l5-s2-q08",
+        "type": "complete",
+        "prompt": "The gallery is closed on:",
+        "answer": [
+          "Mondays",
+          "Monday"
+        ],
+        "why": "The narrator says 'The gallery is closed on Mondays.'"
+      },
+      {
+        "id": "l5-s2-q09",
+        "type": "complete",
+        "prompt": "The café closes at (time):",
+        "answer": [
+          "5:30",
+          "5.30",
+          "half past five",
+          "5:30 pm"
+        ],
+        "why": "The narrator says 'the café on the ground floor is open until half past five.'"
+      },
+      {
+        "id": "l5-s2-q10",
+        "type": "complete",
+        "prompt": "Guided tours run on Saturdays at (time):",
+        "answer": [
+          "11 am",
+          "11am",
+          "11 a.m.",
+          "eleven",
+          "eleven o'clock"
+        ],
+        "why": "The narrator says 'Guided tours are available on Saturdays at eleven.'"
+      }
+    ]
+  },
+  {
+    "id": "l5-s3",
+    "section": 3,
+    "title": "Preparing for a Graduate Job Interview",
+    "speakers": [
+      {
+        "name": "Adviser",
+        "lang": "en-GB",
+        "gender": "m"
+      },
+      {
+        "name": "Student",
+        "lang": "en-US",
+        "gender": "f"
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Adviser",
+        "text": "Hello Lucy. You have an interview with the logistics firm next week. How are you feeling about it?"
+      },
+      {
+        "speaker": "Student",
+        "text": "A bit nervous. I'm not sure how to answer questions about teamwork."
+      },
+      {
+        "speaker": "Adviser",
+        "text": "Use the STAR method: situation, task, action and result. Describe a real example from your placement."
+      },
+      {
+        "speaker": "Student",
+        "text": "I led a team of four during my placement at the warehouse. We reduced delivery errors."
+      },
+      {
+        "speaker": "Adviser",
+        "text": "That's a strong example. Quantify the result if you can. By how much did errors fall?"
+      },
+      {
+        "speaker": "Student",
+        "text": "By about a quarter over three months."
+      },
+      {
+        "speaker": "Adviser",
+        "text": "Excellent. The firm will also ask why you want to work for them. Have you researched their recent expansion?"
+      },
+      {
+        "speaker": "Student",
+        "text": "Yes, they opened a second distribution centre in the north this year."
+      },
+      {
+        "speaker": "Adviser",
+        "text": "Mention that, but don't just repeat the website. Explain what interests you about it."
+      },
+      {
+        "speaker": "Student",
+        "text": "Should I bring a portfolio?"
+      },
+      {
+        "speaker": "Adviser",
+        "text": "Bring a printed copy of your CV and your references, but the portfolio is not needed for this role."
+      },
+      {
+        "speaker": "Student",
+        "text": "Okay. What time do I need to arrive?"
+      },
+      {
+        "speaker": "Adviser",
+        "text": "Arrive fifteen minutes early. The interview is at ten thirty on Wednesday the eleventh, at their Central Park office."
+      },
+      {
+        "speaker": "Adviser",
+        "text": "One more thing: send a thank-you email within twenty-four hours of the interview."
+      },
+      {
+        "speaker": "Student",
+        "text": "Should I mention anything specific in the email?"
+      },
+      {
+        "speaker": "Adviser",
+        "text": "Refer to one point you discussed, and restate your interest. Keep it short, two or three sentences."
+      },
+      {
+        "speaker": "Student",
+        "text": "That sounds manageable. What if they ask about my weaknesses?"
+      },
+      {
+        "speaker": "Adviser",
+        "text": "Pick a real weakness and describe what you are doing to improve it. Avoid clichés like being a perfectionist."
+      },
+      {
+        "speaker": "Student",
+        "text": "Okay. I'll practise with a friend tonight."
+      },
+      {
+        "speaker": "Adviser",
+        "text": "Good plan. Good luck, Lucy. Thank you."
+      },
+      {
+        "speaker": "Adviser",
+        "text": "And remember to ask two or three questions at the end. It shows that you have researched the company."
+      },
+      {
+        "speaker": "Student",
+        "text": "Good idea. Thank you."
+      }
+    ],
+    "questions": [
+      {
+        "id": "l5-s3-q01",
+        "type": "mcq",
+        "prompt": "Lucy is nervous about questions on:",
+        "options": [
+          "A. salary",
+          "B. teamwork",
+          "C. her degree",
+          "D. travel"
+        ],
+        "answer": "B",
+        "why": "Lucy says 'I'm not sure how to answer questions about teamwork.'"
+      },
+      {
+        "id": "l5-s3-q02",
+        "type": "complete",
+        "prompt": "The method the adviser recommends has four parts: situation, task, action and ___.",
+        "answer": [
+          "result"
+        ],
+        "why": "The adviser says 'Use the STAR method: situation, task, action and result.'"
+      },
+      {
+        "id": "l5-s3-q03",
+        "type": "complete",
+        "prompt": "Size of the team Lucy led (people):",
+        "answer": [
+          "4",
+          "four"
+        ],
+        "why": "Lucy says 'I led a team of four during my placement.'"
+      },
+      {
+        "id": "l5-s3-q04",
+        "type": "complete",
+        "prompt": "Reduction in delivery errors:",
+        "answer": [
+          "a quarter",
+          "about a quarter",
+          "25%",
+          "25 per cent"
+        ],
+        "why": "Lucy says 'By about a quarter over three months.'"
+      },
+      {
+        "id": "l5-s3-q05",
+        "type": "mcq",
+        "prompt": "What did the firm recently do?",
+        "options": [
+          "A. merge with another company",
+          "B. open a second distribution centre",
+          "C. close a warehouse",
+          "D. launch a new website"
+        ],
+        "answer": "B",
+        "why": "Lucy says 'they opened a second distribution centre in the north this year.'"
+      },
+      {
+        "id": "l5-s3-q06",
+        "type": "mcq",
+        "prompt": "The adviser says Lucy should not:",
+        "options": [
+          "A. repeat the website",
+          "B. wear formal clothes",
+          "C. arrive early",
+          "D. bring references"
+        ],
+        "answer": "A",
+        "why": "The adviser says 'don't just repeat the website.'"
+      },
+      {
+        "id": "l5-s3-q07",
+        "type": "mcq",
+        "prompt": "Is a portfolio needed for this role?",
+        "options": [
+          "A. yes, a printed one",
+          "B. yes, an online one",
+          "C. no",
+          "D. only for managers"
+        ],
+        "answer": "C",
+        "why": "The adviser says 'the portfolio is not needed for this role.'"
+      },
+      {
+        "id": "l5-s3-q08",
+        "type": "complete",
+        "prompt": "Documents Lucy should bring:",
+        "answer": [
+          "CV and your references",
+            "CV and references",
+          "a printed CV and references",
+          "references and CV"
+        ],
+        "why": "The adviser says 'Bring a printed copy of your CV and your references.'"
+      },
+      {
+        "id": "l5-s3-q09",
+        "type": "complete",
+        "prompt": "Lucy should arrive how many minutes early?",
+        "answer": [
+          "15",
+          "fifteen"
+        ],
+        "why": "The adviser says 'Arrive fifteen minutes early.'"
+      },
+      {
+        "id": "l5-s3-q10",
+        "type": "complete",
+        "prompt": "Interview time:",
+        "answer": [
+          "10:30",
+            "10.30",
+            "ten thirty",
+            "ten thirty on Wednesday the eleventh",
+          "10:30 on Wednesday the 11th",
+          "10.30 on Wednesday 11th"
+        ],
+        "why": "The adviser says 'The interview is at ten thirty on Wednesday the eleventh.'"
+      }
+    ]
+  },
+  {
+    "id": "l5-s4",
+    "section": 4,
+    "title": "Roman Roads",
+    "speakers": [
+      {
+        "name": "Lecturer",
+        "lang": "en-AU",
+        "gender": "m"
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Lecturer",
+        "text": "Today's lecture is about Roman roads, which were among the most sophisticated transport networks of the ancient world."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "At their peak, the Roman road system covered more than eighty thousand kilometres. Most roads were built by soldiers, who were trained in surveying and construction."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "A typical road had several layers. The base was made of large stones, followed by smaller stones and gravel, and the top surface was paved with flat blocks."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Engineers aimed for straight lines wherever possible. Where a river or a hill blocked the way, they built bridges or cut through the rock."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Roads had practical purposes. They allowed armies to move quickly, and they carried messengers, traders and officials across the empire."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Milestones were placed along the roads at regular intervals, showing distances to major cities. Many of these stones survive today."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Some people assume the roads were only for military use. However, the evidence shows that merchants used them heavily, and local communities relied on them for everyday trade."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Next week we'll look at how the roads were maintained, which is a topic that is often overlooked in textbooks."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Let's consider how the roads were surveyed. Surveyors used simple instruments, including a groma, a cross-shaped device with plumb lines, to lay out straight alignments across uneven ground."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Once the route was marked, workers dug a trench and filled it with layers of material. The depth depended on the soil, and in wet areas the foundations were particularly deep."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Drainage was another important feature. Roads were often raised slightly above the surrounding land and fitted with ditches on each side, so that rainwater could run away from the surface."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Some sections still survive well in parts of Europe and North Africa, and their remains show how carefully the builders worked. Archaeologists study wheel ruts and bridge foundations to learn how the roads were used."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Finally, think about the scale of the project. Building such a network required large labour forces, organised supply chains for stone and timber, and strong central administration in Rome. Please read chapter six of the course reader before next week, and bring one question about the maintenance evidence. The reader includes photographs of several surviving milestones, which you should compare with the diagrams we looked at today. Remember the essay on infrastructure is due at the end of the month."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Bring your copy of the reader to the seminar. Attendance is recorded at the start of the session."
+      }
+    ],
+    "questions": [
+      {
+        "id": "l5-s4-q01",
+        "type": "complete",
+        "prompt": "Length of the road network at its peak (kilometres, approximately):",
+        "answer": [
+          "80,000",
+          "80000",
+          "eighty thousand"
+        ],
+        "why": "The lecturer says 'the Roman road system covered more than eighty thousand kilometres.'"
+      },
+      {
+        "id": "l5-s4-q02",
+        "type": "mcq",
+        "prompt": "Who built most of the roads?",
+        "options": [
+          "A. merchants",
+          "B. soldiers",
+          "C. farmers",
+          "D. slaves"
+        ],
+        "answer": "B",
+        "why": "The lecturer says 'Most roads were built by soldiers.'"
+      },
+      {
+        "id": "l5-s4-q03",
+        "type": "complete",
+        "prompt": "The base layer of a typical road was made of:",
+        "answer": [
+          "large stones"
+        ],
+        "why": "The lecturer says 'The base was made of large stones.'"
+      },
+      {
+        "id": "l5-s4-q04",
+        "type": "complete",
+        "prompt": "The top surface was paved with flat ___.",
+        "answer": [
+          "blocks",
+          "block"
+        ],
+        "why": "The lecturer says 'the top surface was paved with flat blocks.'"
+      },
+      {
+        "id": "l5-s4-q05",
+        "type": "complete",
+        "prompt": "Where a hill blocked the way, engineers ___ through the rock.",
+        "answer": [
+          "cut"
+        ],
+        "why": "The lecturer says 'Where a river or a hill blocked the way, they built bridges or cut through the rock.'"
+      },
+      {
+        "id": "l5-s4-q06",
+        "type": "mcq",
+        "prompt": "What was the main practical purpose mentioned?",
+        "options": [
+          "A. tourism",
+          "B. moving armies quickly",
+          "C. farming",
+          "D. religious travel"
+        ],
+        "answer": "B",
+        "why": "The lecturer says 'They allowed armies to move quickly.'"
+      },
+      {
+        "id": "l5-s4-q07",
+        "type": "complete",
+        "prompt": "Milestones showed distances to major ___.",
+        "answer": [
+          "cities",
+          "city"
+        ],
+        "why": "The lecturer says 'showing distances to major cities.'"
+      },
+      {
+        "id": "l5-s4-q08",
+        "type": "mcq",
+        "prompt": "The lecturer says the roads were used heavily by:",
+        "options": [
+          "A. only soldiers",
+          "B. merchants",
+          "C. priests",
+          "D. students"
+        ],
+        "answer": "B",
+        "why": "The lecturer says 'the evidence shows that merchants used them heavily.'"
+      },
+      {
+        "id": "l5-s4-q09",
+        "type": "mcq",
+        "prompt": "The view that roads were only for military use is:",
+        "options": [
+          "A. supported by evidence",
+          "B. the lecturer's view",
+          "C. an assumption the lecturer rejects",
+          "D. not mentioned"
+        ],
+        "answer": "C",
+        "why": "The lecturer says 'Some people assume the roads were only for military use. However, the evidence shows...'"
+      },
+      {
+        "id": "l5-s4-q10",
+        "type": "complete",
+        "prompt": "Next week's topic is how the roads were:",
+        "answer": [
+          "maintained"
+        ],
+        "why": "The lecturer says 'Next week we'll look at how the roads were maintained.'"
+      }
+    ]
+  }
+]
