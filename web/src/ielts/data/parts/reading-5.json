@@ -1,0 +1,891 @@
+[
+ {
+  "id": "r17",
+  "title": "Sound in Stone: The Acoustics of Ancient Theatres",
+  "topic": "Architecture and the physics of sound",
+  "band": 7.5,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Visitors to the theatre at Epidaurus, in southern Greece, are often told a story that seems hard to believe until they test it for themselves. A performer standing at the centre of the circular stage area, known as the orchestra, can speak in an ordinary voice and be heard clearly by spectators in the highest rows of the stone seating. Guides sometimes demonstrate the effect by tearing a sheet of paper or striking a match at the centre, and the sound can be heard at the top of the auditorium. The theatre was completed in the fourth century BCE, and for centuries its reputation rested almost entirely on experience rather than on measurement. Many visitors are surprised by how little effort the performer seems to need."
+   },
+   {
+    "label": "B",
+    "text": "Measurement became possible only when modern tools were applied to the question. In recent decades, acousticians have placed microphones and loudspeakers at different points around the seating and recorded how sound travels and fades. Their findings suggest that the theatre's clarity is not the result of a single feature but of several working together. The seats rise on a steep slope, so sound leaving the stage is not absorbed or blocked by the heads of the people in front. The hard limestone surfaces reflect sound back towards the audience, while the open sky means there is no ceiling to produce late echoes that would blur one word into the next."
+   },
+   {
+    "label": "C",
+    "text": "The idea that architecture could improve a voice is much older than modern acoustics. Vitruvius, a Roman architect writing in the first century BCE, described in his treatise De Architectura how small bronze vessels might be placed in niches beneath the seats. Each vessel, he explained, was tuned to a particular musical note so that when the actors' voices reached it, the sound would be amplified and returned with greater richness. Archaeologists have identified niches of roughly this kind in some ancient theatres. However, no complete set of tuned vessels has been recovered from any of them, and it is unclear whether Vitruvius was describing a common practice or an ideal that few builders ever tried to achieve."
+   },
+   {
+    "label": "D",
+    "text": "Modern researchers have approached the problem through scale models. By building small replicas of ancient auditoriums and recording sound inside them, they can test how the shape of the seating affects the way speech is heard. In one series of experiments, the shape of the seating bank turned out to matter more than the surface of the stone. Steep rows kept the ear of each listener at a clearer angle to the stage, and this reduced the amount of sound that was lost before it arrived. Such models are useful, but they cannot reproduce everything that happens in a real theatre, such as the noise of a crowd, the wind across the open top rows, or the movements of the performers themselves."
+   },
+   {
+    "label": "E",
+    "text": "The acoustics of these buildings may also have influenced the plays performed in them. Greek tragedy depended on the spoken word and on choral song, and an audience of thousands had to follow long speeches without any form of amplification. Some scholars argue that dramatists placed their most important lines where they would carry most easily, and that the building was part of the composition. Others are sceptical. Most plays were performed in many different theatres over the years, and a single script could not have been tailored to the acoustics of every venue. On this view, the sound of the buildings was a constraint that playwrights worked around rather than a tool they exploited. Performers also wore masks with enlarged mouths, which may have helped a voice carry across the open air, although this is difficult to test today."
+   },
+   {
+    "label": "F",
+    "text": "Roman builders took a different approach. Many Roman theatres were freestanding structures on flat ground, supported by vaulted substructures rather than cut into a hillside, and their elaborate stage buildings rose high behind the performers. These designs changed the way sound was reflected. A tall stage backdrop can return sound toward the audience, but it can also produce echoes if its surfaces are not carefully arranged. Some Roman theatres were covered by awnings to shade spectators from the sun, and this may have altered reverberation too. The overall effect is hard to isolate, because the same theatre was often rebuilt, enlarged or repaired over several centuries."
+   },
+   {
+    "label": "G",
+    "text": "The question of how well these theatres worked is therefore partly a question about what audiences expected. Ancient spectators judged a performance by criteria that differ from our own, and they were not listening to recordings or to amplified voices. For them, a good theatre was one in which the words could be followed and the crowd could share a single experience. Some researchers now argue that acoustics should be studied as part of that social setting. The stone, the slope and the sky were important, but so was the crowd, which could drown out a quiet actor or, when it fell silent, let a whisper travel across the whole hillside. In that sense, the acoustics of the theatre were a shared achievement of the builders, the performers and the spectators, rather than a property of the stone alone."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r17-q01",
+    "type": "tfng",
+    "prompt": "The theatre at Epidaurus was completed in the fourth century BCE.",
+    "answer": "TRUE",
+    "why": "Paragraph A: \"The theatre was completed in the fourth century BCE, and for centuries its reputation rested almost entirely on experience rather than on measurement.\""
+   },
+   {
+    "id": "r17-q02",
+    "type": "tfng",
+    "prompt": "All ancient theatres were cut into the sides of hills.",
+    "answer": "FALSE",
+    "why": "Paragraph F: \"Many Roman theatres were freestanding structures on flat ground, supported by vaulted substructures rather than cut into a hillside\". The word all is contradicted by many."
+   },
+   {
+    "id": "r17-q03",
+    "type": "tfng",
+    "prompt": "Vitruvius tested the bronze vessels himself inside a theatre.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph C: \"described in his treatise De Architectura how small bronze vessels might be placed in niches beneath the seats\". The passage describes his account but never says he tested the vessels."
+   },
+   {
+    "id": "r17-q04",
+    "type": "tfng",
+    "prompt": "Most Greek plays were performed in only one theatre.",
+    "answer": "FALSE",
+    "why": "Paragraph E: \"Most plays were performed in many different theatres over the years\"."
+   },
+   {
+    "id": "r17-q05",
+    "type": "heading",
+    "prompt": "Paragraph B",
+    "options": [
+     "i. A surprising effect that visitors can test",
+     "ii. Measurements that explain the clarity of speech",
+     "iii. A Roman account of tuned vessels",
+     "iv. What scale models reveal about seating",
+     "v. Whether the buildings shaped the plays themselves",
+     "vi. Changes introduced by Roman builders",
+     "vii. Acoustics as a shared social experience",
+     "viii. The cost of stone construction in antiquity"
+    ],
+    "answer": "ii",
+    "why": "Paragraph B: \"Their findings suggest that the theatre's clarity is not the result of a single feature but of several working together.\" Heading ii."
+   },
+   {
+    "id": "r17-q06",
+    "type": "heading",
+    "prompt": "Paragraph D",
+    "options": [
+     "i. A surprising effect that visitors can test",
+     "ii. Measurements that explain the clarity of speech",
+     "iii. A Roman account of tuned vessels",
+     "iv. What scale models reveal about seating",
+     "v. Whether the buildings shaped the plays themselves",
+     "vi. Changes introduced by Roman builders",
+     "vii. Acoustics as a shared social experience",
+     "viii. The cost of stone construction in antiquity"
+    ],
+    "answer": "iv",
+    "why": "Paragraph D: \"In one series of experiments, the shape of the seating bank turned out to matter more than the surface of the stone.\" Heading iv."
+   },
+   {
+    "id": "r17-q07",
+    "type": "heading",
+    "prompt": "Paragraph E",
+    "options": [
+     "i. A surprising effect that visitors can test",
+     "ii. Measurements that explain the clarity of speech",
+     "iii. A Roman account of tuned vessels",
+     "iv. What scale models reveal about seating",
+     "v. Whether the buildings shaped the plays themselves",
+     "vi. Changes introduced by Roman builders",
+     "vii. Acoustics as a shared social experience",
+     "viii. The cost of stone construction in antiquity"
+    ],
+    "answer": "v",
+    "why": "Paragraph E: \"Some scholars argue that dramatists placed their most important lines where they would carry most easily\". Heading v."
+   },
+   {
+    "id": "r17-q08",
+    "type": "heading",
+    "prompt": "Paragraph F",
+    "options": [
+     "i. A surprising effect that visitors can test",
+     "ii. Measurements that explain the clarity of speech",
+     "iii. A Roman account of tuned vessels",
+     "iv. What scale models reveal about seating",
+     "v. Whether the buildings shaped the plays themselves",
+     "vi. Changes introduced by Roman builders",
+     "vii. Acoustics as a shared social experience",
+     "viii. The cost of stone construction in antiquity"
+    ],
+    "answer": "vi",
+    "why": "Paragraph F: \"Many Roman theatres were freestanding structures on flat ground\", and the designs \"changed the way sound was reflected\". Heading vi."
+   },
+   {
+    "id": "r17-q09",
+    "type": "mcq",
+    "prompt": "What is the writer's main point about the clarity of the Epidaurus theatre?",
+    "options": [
+     "A. It depends on a single feature that could easily be copied.",
+     "B. It results from several features working together.",
+     "C. It has been fully explained by one modern experiment.",
+     "D. It was described in detail by Vitruvius."
+    ],
+    "answer": "B",
+    "why": "Paragraph B: \"the theatre's clarity is not the result of a single feature but of several working together\". A is contradicted by the same sentence; C is contradicted by the caution that scale models cannot reproduce everything; D is not stated."
+   },
+   {
+    "id": "r17-q10",
+    "type": "mcq",
+    "prompt": "According to paragraph G, what made a theatre good for ancient spectators?",
+    "options": [
+     "A. Amplified voices that reached every seat.",
+     "B. The words could be followed and the crowd could share one experience.",
+     "C. Recordings that could be replayed later.",
+     "D. Vessels tuned to musical notes."
+    ],
+    "answer": "B",
+    "why": "Paragraph G: \"For them, a good theatre was one in which the words could be followed and the crowd could share a single experience.\""
+   },
+   {
+    "id": "r17-q11",
+    "type": "short",
+    "prompt": "What material were the vessels described by Vitruvius made from?",
+    "answer": [
+     "bronze"
+    ],
+    "why": "Paragraph C: \"described in his treatise De Architectura how small bronze vessels might be placed in niches beneath the seats\"."
+   },
+   {
+    "id": "r17-q12",
+    "type": "short",
+    "prompt": "What kind of slope did the seats at Epidaurus rise on?",
+    "answer": [
+     "steep slope"
+    ],
+    "why": "Paragraph B: \"The seats rise on a steep slope, so sound leaving the stage is not absorbed or blocked by the heads of the people in front.\""
+   },
+   {
+    "id": "r17-q13",
+    "type": "sentence",
+    "prompt": "The central stage area of an ancient theatre was known as the ______.",
+    "answer": [
+     "orchestra"
+    ],
+    "why": "Paragraph A: \"A performer standing at the centre of the circular stage area, known as the orchestra, can speak in an ordinary voice\"."
+   },
+   {
+    "id": "r17-q14",
+    "type": "sentence",
+    "prompt": "In experiments with scale models, the ______ of the seating bank mattered more than the stone surface.",
+    "answer": [
+     "shape"
+    ],
+    "why": "Paragraph D: \"In one series of experiments, the shape of the seating bank turned out to matter more than the surface of the stone.\""
+   }
+  ]
+ },
+ {
+  "id": "r18",
+  "title": "Lichens as Living Air Monitors",
+  "topic": "Ecology and environmental monitoring",
+  "band": 7.5,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "A lichen is not a single organism but a partnership between a fungus and a photosynthetic partner, usually an alga or a cyanobacterium. The fungus provides a structure and holds water, while the photosynthetic partner makes food from sunlight. Lichens grow on rock, bark, soil and even bare metal, and they can survive for decades in places where few other organisms persist. Because they absorb water and nutrients mainly from the air and from rain rather than from roots, they are unusually sensitive to what is in the atmosphere around them. Some individuals are thought to be many centuries old. Because they are so widespread, a single species can be studied at many sites, which makes comparisons easier."
+   },
+   {
+    "label": "B",
+    "text": "This sensitivity was noticed long before lichens were used in any systematic way. Nineteenth-century observers in cities across Europe reported that certain species disappeared from trees near factories and busy streets, while others remained. Gradually, the absence of particular lichens came to be treated as a sign that the air had become foul, and some naturalists began to map the edges of the city by where the lichens grew. The idea was intuitive, but it rested on careful field observation rather than on chemical measurement. Early naturalists kept notebooks of such observations, and their lists were often compared from one season to the next."
+   },
+   {
+    "label": "C",
+    "text": "The approach became more rigorous in the twentieth century, when researchers began to compare lichen communities with measured levels of sulphur dioxide. Sulphur dioxide, released when coal and oil are burned, was a major cause of acid rain, and many sensitive species were found to vanish when concentrations rose above a certain level. Lichens that tolerated higher levels, by contrast, were often the hardier species that remained when the sensitive ones had gone. Surveys that recorded the presence and absence of species across a grid could therefore produce a simple index of air quality without expensive equipment. The surveys were cheap enough to be repeated by volunteers, which expanded the number of sites that could be checked. Later studies applied the same logic to nitrogen compounds from vehicles."
+   },
+   {
+    "label": "D",
+    "text": "The method has limits, however. Lichens respond to a mixture of pollutants rather than to a single compound, so it can be difficult to say which substance is responsible for a change. Growth rates are slow, sometimes only a few millimetres a year, which means that a lichen survey describes conditions over many years rather than in a given week. Other factors, including humidity, shade, the type of bark and the age of the tree, also affect which species can establish themselves, and these must be separated from the effects of pollution before any conclusion is drawn. Even so, a group of species that vanishes together is harder to dismiss than a single missing species. Analysts therefore usually report lichen results as a change in a group of species, rather than as a single figure that names one cause."
+   },
+   {
+    "label": "E",
+    "text": "Some researchers have therefore combined lichen surveys with a second technique. Lichen tissue can be collected and analysed for metals and nitrogen compounds, which accumulate in the thallus over time. Because the samples reflect the cumulative exposure of the organism, they can reveal patterns that a single air sample taken on one day would miss. In a few studies, the chemical profile of the lichens has been compared with data from traffic counters and industrial emission records, and the two sources of evidence have generally agreed. The technique is slower and more expensive than a simple survey, so it is usually reserved for sites where decisions about pollution control are at stake."
+   },
+   {
+    "label": "F",
+    "text": "Lichens have also been used in areas far from heavy industry. In regions where the air is clean, the presence of sensitive species such as certain long, hanging lichens is taken as evidence that the atmosphere is in good condition. Conservation agencies in several countries have included lichen indicators in their reports, although the threshold values they use vary from one region to another. Because of this variation, a score that is considered healthy in a mountain forest may not be a reliable guide in a lowland city. Local authorities that rely on such indicators are advised to repeat surveys at fixed sites so that changes over time can be seen clearly."
+   },
+   {
+    "label": "G",
+    "text": "The lesson, in the end, is that lichens are most useful when they are read alongside other evidence. They cannot replace a calibrated instrument, and they cannot tell a policymaker exactly what to fix. What they offer is a record of accumulated exposure, written slowly and without interruption over many years, that instruments installed for a short period cannot provide. Used carefully, that record can show where the air has been poor, and whether conditions are improving. A survey repeated every few years can therefore reveal a trend that no single measurement, however precise, would show alone."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r18-q01",
+    "type": "tfng",
+    "prompt": "Lichens take in most of their water and nutrients through their roots.",
+    "answer": "FALSE",
+    "why": "Paragraph A: \"Because they absorb water and nutrients mainly from the air and from rain rather than from roots\"."
+   },
+   {
+    "id": "r18-q02",
+    "type": "tfng",
+    "prompt": "Lichens grow only on the bark of trees.",
+    "answer": "FALSE",
+    "why": "Paragraph A: \"Lichens grow on rock, bark, soil and even bare metal\"."
+   },
+   {
+    "id": "r18-q03",
+    "type": "tfng",
+    "prompt": "Lichens can live in places where few other organisms survive.",
+    "answer": "TRUE",
+    "why": "Paragraph A: \"they can survive for decades in places where few other organisms persist\"."
+   },
+   {
+    "id": "r18-q04",
+    "type": "tfng",
+    "prompt": "Lichens are more numerous in cities than in the countryside.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph B: \"certain species disappeared from trees near factories and busy streets, while others remained\". The passage says which species vanished but gives no comparison of numbers between city and countryside."
+   },
+   {
+    "id": "r18-q05",
+    "type": "features",
+    "prompt": "first recorded lichens disappearing near factories",
+    "options": [
+     "A. observers in nineteenth-century European cities",
+     "B. twentieth-century researchers who measured sulphur dioxide",
+     "C. scientists who analysed lichen tissue for metals",
+     "D. conservation agencies that publish lichen indicators",
+     "E. growers who harvested lichens for dye-making"
+    ],
+    "answer": "A",
+    "why": "Paragraph B: \"Nineteenth-century observers in cities across Europe reported that certain species disappeared from trees near factories and busy streets\"."
+   },
+   {
+    "id": "r18-q06",
+    "type": "features",
+    "prompt": "compared lichen communities with measured levels of sulphur dioxide",
+    "options": [
+     "A. observers in nineteenth-century European cities",
+     "B. twentieth-century researchers who measured sulphur dioxide",
+     "C. scientists who analysed lichen tissue for metals",
+     "D. conservation agencies that publish lichen indicators",
+     "E. growers who harvested lichens for dye-making"
+    ],
+    "answer": "B",
+    "why": "Paragraph C: \"when researchers began to compare lichen communities with measured levels of sulphur dioxide\"."
+   },
+   {
+    "id": "r18-q07",
+    "type": "features",
+    "prompt": "analysed lichen tissue for metals and nitrogen compounds",
+    "options": [
+     "A. observers in nineteenth-century European cities",
+     "B. twentieth-century researchers who measured sulphur dioxide",
+     "C. scientists who analysed lichen tissue for metals",
+     "D. conservation agencies that publish lichen indicators",
+     "E. growers who harvested lichens for dye-making"
+    ],
+    "answer": "C",
+    "why": "Paragraph E: \"Lichen tissue can be collected and analysed for metals and nitrogen compounds\"."
+   },
+   {
+    "id": "r18-q08",
+    "type": "mcq",
+    "prompt": "According to paragraph D, why can a lichen survey be hard to interpret?",
+    "options": [
+     "A. Lichens grow so quickly that they cannot be counted.",
+     "B. Lichens respond to a mixture of pollutants rather than to a single compound.",
+     "C. Lichens are found only in rural areas.",
+     "D. Lichens cannot survive in clean air."
+    ],
+    "answer": "B",
+    "why": "Paragraph D: \"Lichens respond to a mixture of pollutants rather than to a single compound\". A contradicts the slow growth rates in the same paragraph; C and D are not stated."
+   },
+   {
+    "id": "r18-q09",
+    "type": "mcq",
+    "prompt": "What is the writer's main conclusion in paragraph G?",
+    "options": [
+     "A. Lichens should replace all calibrated instruments.",
+     "B. Lichens are most useful when read alongside other evidence.",
+     "C. Lichens can identify the exact pollutant responsible.",
+     "D. Lichens have little value in modern monitoring."
+    ],
+    "answer": "B",
+    "why": "Paragraph G: \"The lesson, in the end, is that lichens are most useful when they are read alongside other evidence.\" A is contradicted by \"They cannot replace a calibrated instrument\"; D is contradicted by \"Used carefully, that record can show where the air has been poor\"."
+   },
+   {
+    "id": "r18-q10",
+    "type": "sentence",
+    "prompt": "The photosynthetic partner of a lichen is usually an alga or a ______.",
+    "answer": [
+     "cyanobacterium"
+    ],
+    "why": "Paragraph A: \"a partnership between a fungus and a photosynthetic partner, usually an alga or a cyanobacterium\"."
+   },
+   {
+    "id": "r18-q11",
+    "type": "sentence",
+    "prompt": "A lichen survey describes conditions over many years because growth is ______.",
+    "answer": [
+     "slow"
+    ],
+    "why": "Paragraph D: \"Growth rates are slow, sometimes only a few millimetres a year, which means that a lichen survey describes conditions over many years\"."
+   },
+   {
+    "id": "r18-q12",
+    "type": "short",
+    "prompt": "Which gas, released when coal and oil are burned, was a major cause of acid rain?",
+    "answer": [
+     "sulphur dioxide"
+    ],
+    "why": "Paragraph C: \"Sulphur dioxide, released when coal and oil are burned, was a major cause of acid rain\"."
+   },
+   {
+    "id": "r18-q13",
+    "type": "short",
+    "prompt": "In which kind of area may a healthy lichen score be an unreliable guide?",
+    "answer": [
+     "lowland city"
+    ],
+    "why": "Paragraph F: \"a score that is considered healthy in a mountain forest may not be a reliable guide in a lowland city\"."
+   }
+  ]
+ },
+ {
+  "id": "r19",
+  "title": "Compass in the Head: How Birds Sense Magnetic Fields",
+  "topic": "Animal behaviour and sensory biology",
+  "band": 7.5,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Each autumn, billions of birds travel between breeding grounds and wintering areas, often crossing deserts, mountain ranges and open ocean. Many of them do so without landmarks, and some make their journeys at night, when the stars are the only visible guide. For much of the twentieth century, researchers assumed that birds relied mainly on the sun, the stars and the sense of smell, together with a memory of the route learned from their parents. Over time, evidence has accumulated that a further sense is involved: the ability to detect the Earth's magnetic field. Some experiments suggest that young birds can head in a broadly correct direction before they have ever made the journey."
+   },
+   {
+    "label": "B",
+    "text": "The idea was first taken seriously in the 1960s, when experiments on European robins suggested that the birds could orient themselves using magnetic cues. The birds were kept in cages in which they could see the sky, and their orientation changed when the magnetic field around them was rotated by a set of coils. Subsequent studies on other species produced similar results. The effect was clear enough to convince most researchers, but the mechanism remained a mystery, because a magnetic field is extremely weak compared with the forces that act on the cells of living tissue. Experimenters who wished to exclude visual cues sometimes tested birds under overcast skies, where the sun was hidden and only other information remained."
+   },
+   {
+    "label": "C",
+    "text": "One explanation focuses on a light-sensitive protein in the eye called cryptochrome. When light strikes the protein, it can create pairs of molecules with unpaired electrons, and the spin of those electrons is affected by the magnetic field. Chemists describe this as a radical pair mechanism. The idea is attractive because it links a magnetic effect to a visual signal, and it would explain why some birds seem to see a magnetic pattern superimposed on the landscape. Critics point out, however, that the proposed effect has been demonstrated mainly in laboratory conditions and in a limited number of species. Some scientists have also questioned whether the protein is present in the right part of the eye for the effect to matter, and this question remains open."
+   },
+   {
+    "label": "D",
+    "text": "A second line of evidence comes from experiments that disrupt the bird's ability to see light of particular colours. Some studies have shown that birds given light that is too dim or wrongly coloured lose their magnetic orientation, while birds in normal light can orient correctly. Since the magnetic sense appears to depend on what the bird sees, the eye may be more than an instrument for finding food and avoiding predators. Some researchers have gone further and suggested that the magnetic information may be perceived as a pattern across the retina, although this idea has yet to be tested directly. Birds in these studies also changed their behaviour when the light was altered, which made the results difficult to explain by other means."
+   },
+   {
+    "label": "E",
+    "text": "Not all evidence supports the same picture. Some experiments have found that birds respond to magnetic fields in ways that do not fit the radical pair model, and a few studies have pointed to a different structure, containing iron-rich particles, as a possible receptor. Iron-based receptors have been reported in the beaks of some animals, including pigeons, but their role in navigation has been hard to confirm. Researchers who favour the iron-based explanation argue that it would be more sensitive to changes in field strength, whereas the light-based model would be more sensitive to the direction of the field. Some scientists have proposed that both systems might operate together, each providing a different kind of information to the bird."
+   },
+   {
+    "label": "F",
+    "text": "Whatever the mechanism, the magnetic sense is useful only if birds can combine it with other cues. A migrating bird may use the magnetic field to estimate its latitude, for example, while relying on the position of the sun or on the pattern of coastlines to correct its course. Young birds on their first migration may also depend on an inherited direction, which they follow until they encounter new information. In this sense, navigation is not a single skill but a system of overlapping methods, each of which is checked against the others. Experienced adults, by contrast, appear to rely on a stored memory of familiar landmarks as well as on the magnetic signal."
+   },
+   {
+    "label": "G",
+    "text": "The study of bird navigation is therefore a study of uncertainty as much as of skill. Researchers can show that a sense exists, and they can measure the effect of altering it, but they still struggle to explain how a weak field becomes a reliable signal in a living body. Future work may depend on new tools, such as more precise magnetic coils and genetic methods, that can test individual parts of the system. Until then, the bird's compass remains partly unexplained, and the navigational map it appears to carry is best seen as an incomplete picture. For now, the best description of bird navigation is a set of cooperating mechanisms, some of which are understood far better than others."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r19-q01",
+    "type": "tfng",
+    "prompt": "Magnetic orientation was first taken seriously by researchers in the 1960s.",
+    "answer": "TRUE",
+    "why": "Paragraph B: \"The idea was first taken seriously in the 1960s, when experiments on European robins suggested that the birds could orient themselves using magnetic cues\"."
+   },
+   {
+    "id": "r19-q02",
+    "type": "tfng",
+    "prompt": "Birds kept in cages were unable to orient themselves.",
+    "answer": "FALSE",
+    "why": "Paragraph B: \"their orientation changed when the magnetic field around them was rotated by a set of coils\". The caged birds did orient, so the statement is contradicted."
+   },
+   {
+    "id": "r19-q03",
+    "type": "tfng",
+    "prompt": "The radical pair mechanism has been shown in every migratory species.",
+    "answer": "FALSE",
+    "why": "Paragraph C: \"the proposed effect has been demonstrated mainly in laboratory conditions and in a limited number of species\"."
+   },
+   {
+    "id": "r19-q04",
+    "type": "tfng",
+    "prompt": "Robins were the species most often used in early magnetic experiments.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph B: \"experiments on European robins suggested\" and \"Subsequent studies on other species produced similar results\". The passage names robins as early subjects but never says how often each species was used."
+   },
+   {
+    "id": "r19-q05",
+    "type": "heading",
+    "prompt": "Paragraph D",
+    "options": [
+     "i. Why the eye might matter to the sense",
+     "ii. Competing models with different predictions",
+     "iii. Combining the magnetic sense with other cues",
+     "iv. The first experiments on caged birds",
+     "v. A conclusion that leaves questions open",
+     "vi. Why birds migrate at all",
+     "vii. A light-sensitive protein as a possible mechanism",
+     "viii. How migration routes are mapped by satellites"
+    ],
+    "answer": "i",
+    "why": "Paragraph D: \"Since the magnetic sense appears to depend on what the bird sees, the eye may be more than an instrument for finding food and avoiding predators\". Heading i."
+   },
+   {
+    "id": "r19-q06",
+    "type": "heading",
+    "prompt": "Paragraph E",
+    "options": [
+     "i. Why the eye might matter to the sense",
+     "ii. Competing models with different predictions",
+     "iii. Combining the magnetic sense with other cues",
+     "iv. The first experiments on caged birds",
+     "v. A conclusion that leaves questions open",
+     "vi. Why birds migrate at all",
+     "vii. A light-sensitive protein as a possible mechanism",
+     "viii. How migration routes are mapped by satellites"
+    ],
+    "answer": "ii",
+    "why": "Paragraph E: \"Some experiments have found that birds respond to magnetic fields in ways that do not fit the radical pair model\". Heading ii."
+   },
+   {
+    "id": "r19-q07",
+    "type": "heading",
+    "prompt": "Paragraph F",
+    "options": [
+     "i. Why the eye might matter to the sense",
+     "ii. Competing models with different predictions",
+     "iii. Combining the magnetic sense with other cues",
+     "iv. The first experiments on caged birds",
+     "v. A conclusion that leaves questions open",
+     "vi. Why birds migrate at all",
+     "vii. A light-sensitive protein as a possible mechanism",
+     "viii. How migration routes are mapped by satellites"
+    ],
+    "answer": "iii",
+    "why": "Paragraph F: \"the magnetic sense is useful only if birds can combine it with other cues\". Heading iii."
+   },
+   {
+    "id": "r19-q08",
+    "type": "mcq",
+    "prompt": "What does paragraph C suggest about cryptochrome?",
+    "options": [
+     "A. It is found only in migratory birds.",
+     "B. It may link the magnetic effect to vision.",
+     "C. It has been shown to work in wild birds.",
+     "D. It is an iron-rich particle."
+    ],
+    "answer": "B",
+    "why": "Paragraph C: \"The idea is attractive because it links a magnetic effect to a visual signal\". C is contradicted by the laboratory limits in the same paragraph; D describes a different proposal in paragraph E."
+   },
+   {
+    "id": "r19-q09",
+    "type": "mcq",
+    "prompt": "What is the writer's conclusion about bird navigation?",
+    "options": [
+     "A. It is fully explained by the radical pair model.",
+     "B. Researchers can show that the sense exists but cannot yet fully explain it.",
+     "C. Birds rely on the magnetic sense alone.",
+     "D. Only young birds use magnetic cues."
+    ],
+    "answer": "B",
+    "why": "Paragraph G: \"Researchers can show that a sense exists, and they can measure the effect of altering it, but they still struggle to explain how a weak field becomes a reliable signal in a living body.\""
+   },
+   {
+    "id": "r19-q10",
+    "type": "short",
+    "prompt": "Which light-sensitive protein is proposed as a possible mechanism?",
+    "answer": [
+     "cryptochrome"
+    ],
+    "why": "Paragraph C: \"One explanation focuses on a light-sensitive protein in the eye called cryptochrome\"."
+   },
+   {
+    "id": "r19-q11",
+    "type": "short",
+    "prompt": "In which part of the body have iron-based receptors been reported?",
+    "answer": [
+     "beaks"
+    ],
+    "why": "Paragraph E: \"Iron-based receptors have been reported in the beaks of some animals, including pigeons\"."
+   },
+   {
+    "id": "r19-q12",
+    "type": "sentence",
+    "prompt": "Birds given light that is too dim or wrongly ______ lose their magnetic orientation.",
+    "answer": [
+     "coloured"
+    ],
+    "why": "Paragraph D: \"Some studies have shown that birds given light that is too dim or wrongly coloured lose their magnetic orientation\"."
+   },
+   {
+    "id": "r19-q13",
+    "type": "sentence",
+    "prompt": "A migrating bird may use the magnetic field to estimate its ______.",
+    "answer": [
+     "latitude"
+    ],
+    "why": "Paragraph F: \"A migrating bird may use the magnetic field to estimate its latitude\"."
+   }
+  ]
+ },
+ {
+  "id": "r20",
+  "title": "Free Shelves: The Public Library Movement in Victorian Britain",
+  "topic": "Social history and cultural policy",
+  "band": 8,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "In 1850, a free public library was an unusual institution in Britain. Most collections of books were held by universities, churches, learned societies or wealthy private owners, and borrowing from them was restricted to members who could pay subscriptions or who had the right social connections. Over the following decades, a movement emerged that argued that a town should provide books out of the rates, the local taxes paid by ratepayers, so that any resident could read without cost. By the end of the century, hundreds of towns had adopted some form of the arrangement, though the pace varied considerably between regions. Many of the institutions that did exist were private subscription libraries, which gave their members a degree of quiet status as well as access to print."
+   },
+   {
+    "label": "B",
+    "text": "The Public Libraries Act of 1850 gave towns the power to levy a rate for buildings and books, but it did not require them to do so, and its wording was permissive and cautious. Many councils were reluctant to spend public money on reading material, and some argued that a library would simply encourage idleness among the working classes. Adoption was often driven by local campaigners, such as printers, clergymen and tradesmen, who had seen libraries in America or continental Europe and wanted something similar at home. Local newspapers often reported these campaigns with enthusiasm, and debates in council chambers sometimes lasted for several meetings. By the 1890s, many towns had begun to treat libraries as a normal municipal service, alongside parks and baths."
+   },
+   {
+    "label": "C",
+    "text": "The movement's supporters often spoke about improvement, a word that carried moral as well as intellectual meaning. A library, they argued, could give a clerk or a factory worker access to the best thinking of the age and offer an alternative to the public house. Reformers did not always agree about what should be read. Some favoured histories and classic literature, while others insisted that newspapers, technical manuals and popular fiction were valuable in their own right. The tension between these views shaped the stock of many libraries, which often combined serious works with novels that committees had reluctantly approved. Several reformers also believed that a library should display its collection openly, so that the books themselves would attract readers who might otherwise never have entered."
+   },
+   {
+    "label": "D",
+    "text": "The rules governing access were as important as the books themselves. Many early libraries closed on weekday evenings or opened only at times when working people were at their jobs, which meant that their users were often clerks, shopkeepers and the sons of the middle class. Reading rooms that required silence and a formal dress code could discourage those who did not feel at ease in such surroundings. Some libraries introduced open shelves, which let readers choose their own books, while others kept volumes behind counters, and the difference had a noticeable effect on what people read. Opening hours were therefore a political question, not merely a practical one, and some committees argued about them for years."
+   },
+   {
+    "label": "E",
+    "text": "Historians have tried to measure what readers actually borrowed. Surviving registers from some towns suggest that fiction accounted for a large share of loans, sometimes more than half, which surprised reformers who had hoped for a shift towards serious works. Yet the figures are difficult to interpret. Many borrowers took out books for others, and some libraries recorded only the name of the household, not the individual reader. Moreover, a loan record shows what was taken away, not what was read, shared or abandoned at home. Some librarians compared their figures with those from other towns, but the differences were often caused by local rules rather than by reader tastes."
+   },
+   {
+    "label": "F",
+    "text": "Women were among the most enthusiastic users of the new libraries, although their access was often limited in practice. In some towns, women were admitted to lending departments but were not permitted to use the reference collections or the reading rooms in the evening. Committees sometimes argued that certain periodicals or novels were unsuitable for female readers, and such judgements were applied unevenly. Despite these restrictions, many libraries became places where women could read at a time when opportunities for education were still narrow. Their presence changed the atmosphere of many reading rooms, and some male users complained that the rooms had become less serious."
+   },
+   {
+    "label": "G",
+    "text": "The public library movement is best understood as a bundle of hopes that did not always coincide. It was an educational project, a moral project and a civic project, and each strand produced different tensions. Libraries did not simply transmit culture from the top down; they also responded to what ordinary people wanted to read. The shelves of a Victorian library therefore record a negotiation, and the books that were borrowed, returned and borrowed again tell a story about a society that was still deciding what a public reader should be. Their story is therefore not one of steady progress, but of compromise between the people who ran libraries and the people who used them. Such ambiguity is what makes the period interesting to historians."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r20-q01",
+    "type": "ynng",
+    "prompt": "The writer believes that the 1850 Act made public libraries compulsory.",
+    "answer": "NO",
+    "why": "Paragraph B: \"but it did not require them to do so\"."
+   },
+   {
+    "id": "r20-q02",
+    "type": "ynng",
+    "prompt": "The writer believes that open shelves affected which books people read.",
+    "answer": "YES",
+    "why": "Paragraph D: \"the difference had a noticeable effect on what people read\"."
+   },
+   {
+    "id": "r20-q03",
+    "type": "ynng",
+    "prompt": "The writer believes that loan records reveal what borrowers really read.",
+    "answer": "NO",
+    "why": "Paragraph E: \"a loan record shows what was taken away, not what was read, shared or abandoned at home\"."
+   },
+   {
+    "id": "r20-q04",
+    "type": "ynng",
+    "prompt": "The writer believes that the reading rooms were busier in the evenings than the lending desks.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph F: \"were not permitted to use the reference collections or the reading rooms in the evening\". The passage never compares how busy the reading rooms were with the lending desks."
+   },
+   {
+    "id": "r20-q05",
+    "type": "mcq",
+    "prompt": "What does the writer suggest about the 1850 Act?",
+    "options": [
+     "A. It was rejected by most councils.",
+     "B. It let towns raise money for libraries but did not compel them.",
+     "C. It set a national standard for library stock.",
+     "D. It gave women the right to borrow books."
+    ],
+    "answer": "B",
+    "why": "Paragraph B: \"gave towns the power to levy a rate for buildings and books, but it did not require them to do so\"."
+   },
+   {
+    "id": "r20-q06",
+    "type": "mcq",
+    "prompt": "According to paragraph D, which users were often found in early libraries?",
+    "options": [
+     "A. labourers who finished work late",
+     "B. clerks, shopkeepers and the sons of the middle class",
+     "C. members of universities and churches",
+     "D. women without jobs"
+    ],
+    "answer": "B",
+    "why": "Paragraph D: \"which meant that their users were often clerks, shopkeepers and the sons of the middle class\"."
+   },
+   {
+    "id": "r20-q07",
+    "type": "summary",
+    "prompt": "Summary: Local ______ often pushed towns to adopt libraries.",
+    "answer": [
+     "campaigners"
+    ],
+    "why": "Paragraph B: \"Adoption was often driven by local campaigners, such as printers, clergymen and tradesmen\"."
+   },
+   {
+    "id": "r20-q08",
+    "type": "summary",
+    "prompt": "Summary: Some libraries kept volumes behind ______ rather than on open shelves.",
+    "answer": [
+     "counters"
+    ],
+    "why": "Paragraph D: \"while others kept volumes behind counters\"."
+   },
+   {
+    "id": "r20-q09",
+    "type": "table",
+    "prompt": "Table, Reading rooms: silence and a formal ______ could discourage some visitors.",
+    "answer": [
+     "dress code"
+    ],
+    "why": "Paragraph D: \"Reading rooms that required silence and a formal dress code could discourage those who did not feel at ease\"."
+   },
+   {
+    "id": "r20-q10",
+    "type": "tfng",
+    "prompt": "Libraries were always open to working people on weekday evenings.",
+    "answer": "FALSE",
+    "why": "Paragraph D: \"Many early libraries closed on weekday evenings or opened only at times when working people were at their jobs\"."
+   },
+   {
+    "id": "r20-q11",
+    "type": "tfng",
+    "prompt": "Women could use every reading room in every library without restriction.",
+    "answer": "FALSE",
+    "why": "Paragraph F: \"In some towns, women were admitted to lending departments but were not permitted to use the reference collections or the reading rooms in the evening\"."
+   },
+   {
+    "id": "r20-q12",
+    "type": "short",
+    "prompt": "Which word, carrying moral as well as intellectual meaning, did supporters often use?",
+    "answer": [
+     "improvement"
+    ],
+    "why": "Paragraph C: \"a word that carried moral as well as intellectual meaning\"."
+   },
+   {
+    "id": "r20-q13",
+    "type": "short",
+    "prompt": "For what purposes could towns levy a rate under the 1850 Act?",
+    "answer": [
+     "buildings and books"
+    ],
+    "why": "Paragraph B: \"gave towns the power to levy a rate for buildings and books\"."
+   }
+  ]
+ },
+ {
+  "id": "r21",
+  "title": "Small Fragments, Long Memories: Microplastics in Freshwater",
+  "topic": "Environmental pollution",
+  "band": 8,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Plastic has become so common that its fragments now turn up almost everywhere researchers look. Particles smaller than five millimetres, known as microplastics, have been found in Arctic snow, in deep ocean sediment and in the stomachs of animals that live far from any city. Freshwater systems, including rivers, lakes and reservoirs, have received less attention than the sea, even though they are the main route by which plastic travels from land to the ocean. Understanding what happens to these particles in fresh water is therefore an important step in tracking pollution at its source. Their presence has become a standard question in environmental surveys, and their small size makes them difficult to remove once they are dispersed."
+   },
+   {
+    "label": "B",
+    "text": "Microplastics enter rivers in several ways. Some are deliberately manufactured at small sizes, such as the microbeads once added to facial scrubs and toothpastes, although many countries have since restricted them. Others come from the breakdown of larger items, including bags, bottles and fishing nets, which are weathered by sunlight and abrasion. Synthetic fibres shed from clothing are a third source. A single wash of a fleece jacket can release hundreds of fibres, many of which pass through sewage works and reach the river that receives the treated water. Tyre wear is another source that is easily overlooked, because tiny rubber particles from roads can be carried into drains during heavy rain."
+   },
+   {
+    "label": "C",
+    "text": "Once in a river, the particles behave differently from those in the open ocean. Currents are stronger and the water is shallower, so particles tend to be carried downstream and deposited in quieter stretches, such as the inside of bends, behind weirs and in lake margins. Heavy particles sink to the bed, where they may be buried by sediment, while lighter fragments can remain suspended for long distances. Because of this, the same river may hold very different concentrations of microplastic at different points along its length. Floods can move large quantities of stored particles at once, so a single storm may change the picture of a river for months."
+   },
+   {
+    "label": "D",
+    "text": "Measuring these concentrations is harder than it sounds. Samples are usually taken with nets or by pumping water through filters, and the smallest particles can pass through the mesh of the net. Organic matter, such as algae and decaying leaves, can also resemble plastic under a microscope, so analysts must confirm the composition of suspect particles with chemical methods. Different laboratories have used different size thresholds and reporting units, which makes it difficult to compare results from one river basin with those from another. Researchers therefore often report the number of particles per litre together with the size range, the sampling method and the laboratory that did the analysis."
+   },
+   {
+    "label": "E",
+    "text": "The effects on living organisms are still being studied. Laboratory experiments have shown that small invertebrates, such as water fleas, may eat microplastic particles and that this can reduce their feeding and growth. Fish have been observed to ingest fragments, although the amounts found in wild fish are usually small compared with what the animals eat in their normal diet. A further concern is that plastics can carry chemicals added during manufacture or chemicals that stick to their surfaces from the water, so an animal that swallows a particle may also take in a dose of pollutants. Some studies have also found that particles change the feeding behaviour of small organisms in ways that may affect the wider food web."
+   },
+   {
+    "label": "F",
+    "text": "The fate of microplastic in the freshwater environment also depends on biology. Biofilms, which are communities of bacteria and algae, grow on the surface of plastic within days, making the fragments heavier and altering how they drift. Some biofilms may attract the organisms that break down plastics, but others may simply help particles sink to the bottom. Researchers have found that a particle can change its behaviour over weeks, so a sample collected in one season may not represent the particles present in another. This makes it hard to predict the fate of any single particle, and it explains why long-term sampling is more informative than a single visit."
+   },
+   {
+    "label": "G",
+    "text": "Managing the problem will require action at several points. Better treatment of wastewater can remove a large share of fibres and beads before they reach rivers, although even advanced plants are not perfect filters. Reducing the release of plastics at the source, through product design and waste collection, would prevent many fragments from forming in the first place. Monitoring programmes that use consistent methods across catchments would help identify the most important sources. The aim is not to eliminate every particle, which is unrealistic, but to limit the amounts that reach the sea and the animals that depend on freshwater. Schools, local councils and manufacturers can all contribute by reducing unnecessary packaging and by supporting collection schemes that keep plastic out of watercourses. Simple habits, such as washing synthetic garments less often or using a filter bag, also have a measurable effect."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r21-q01",
+    "type": "tfng",
+    "prompt": "Microbeads once added to facial scrubs were a source of microplastic in rivers.",
+    "answer": "TRUE",
+    "why": "Paragraph B: \"Microplastics enter rivers in several ways\" and \"such as the microbeads once added to facial scrubs and toothpastes\"."
+   },
+   {
+    "id": "r21-q02",
+    "type": "tfng",
+    "prompt": "Microplastics are found only in the sea.",
+    "answer": "FALSE",
+    "why": "Paragraph A: \"have been found in Arctic snow, in deep ocean sediment and in the stomachs of animals that live far from any city\"."
+   },
+   {
+    "id": "r21-q03",
+    "type": "tfng",
+    "prompt": "Fish eat more microplastic than they consume in their normal diet.",
+    "answer": "FALSE",
+    "why": "Paragraph E: \"the amounts found in wild fish are usually small compared with what the animals eat in their normal diet\"."
+   },
+   {
+    "id": "r21-q04",
+    "type": "tfng",
+    "prompt": "Fibres shed from clothing add more microplastic to rivers than microbeads do.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph B: \"Synthetic fibres shed from clothing are a third source\". The passage lists the sources but never compares their quantities."
+   },
+   {
+    "id": "r21-q05",
+    "type": "match",
+    "prompt": "a method that may miss the smallest particles",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "D",
+    "why": "Paragraph D: \"the smallest particles can pass through the mesh of the net\"."
+   },
+   {
+    "id": "r21-q06",
+    "type": "match",
+    "prompt": "a surface growth that makes fragments heavier",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "F",
+    "why": "Paragraph F: \"grow on the surface of plastic within days, making the fragments heavier and altering how they drift\"."
+   },
+   {
+    "id": "r21-q07",
+    "type": "match",
+    "prompt": "where particles collect in a river",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "C",
+    "why": "Paragraph C: \"particles tend to be carried downstream and deposited in quieter stretches, such as the inside of bends\"."
+   },
+   {
+    "id": "r21-q08",
+    "type": "features",
+    "prompt": "may eat particles, which can reduce their feeding and growth",
+    "options": [
+     "A. small invertebrates such as water fleas",
+     "B. wild fish",
+     "C. bacteria and algae in biofilms",
+     "D. operators of wastewater plants"
+    ],
+    "answer": "A",
+    "why": "Paragraph E: \"small invertebrates, such as water fleas, may eat microplastic particles and that this can reduce their feeding and growth\"."
+   },
+   {
+    "id": "r21-q09",
+    "type": "features",
+    "prompt": "were observed to swallow fragments, usually in small amounts",
+    "options": [
+     "A. small invertebrates such as water fleas",
+     "B. wild fish",
+     "C. bacteria and algae in biofilms",
+     "D. operators of wastewater plants"
+    ],
+    "answer": "B",
+    "why": "Paragraph E: \"Fish have been observed to ingest fragments, although the amounts found in wild fish are usually small\"."
+   },
+   {
+    "id": "r21-q10",
+    "type": "summary",
+    "prompt": "Summary: Synthetic fibres from clothing can be released in large numbers during each ______ of a garment.",
+    "answer": [
+     "wash"
+    ],
+    "why": "Paragraph B: \"A single wash of a fleece jacket can release hundreds of fibres\"."
+   },
+   {
+    "id": "r21-q11",
+    "type": "summary",
+    "prompt": "Summary: Even advanced treatment plants are not ______ filters.",
+    "answer": [
+     "perfect"
+    ],
+    "why": "Paragraph G: \"although even advanced plants are not perfect filters\"."
+   },
+   {
+    "id": "r21-q12",
+    "type": "mcq",
+    "prompt": "What is the writer's main point about freshwater systems?",
+    "options": [
+     "A. They contain no plastic because of natural filtration.",
+     "B. They deserve attention because they carry plastic from land to the ocean.",
+     "C. They are less polluted than the sea.",
+     "D. They can be monitored only with chemical methods."
+    ],
+    "answer": "B",
+    "why": "Paragraph A: \"they are the main route by which plastic travels from land to the ocean\". A is contradicted by \"Microplastics enter rivers in several ways\" in paragraph B; C is not stated; D is contradicted by \"Samples are usually taken with nets or by pumping water through filters\" in paragraph D."
+   },
+   {
+    "id": "r21-q13",
+    "type": "mcq",
+    "prompt": "What does the writer say about the aim of managing microplastic?",
+    "options": [
+     "A. Eliminating every particle from the environment.",
+     "B. Limiting the amounts that reach the sea and freshwater animals.",
+     "C. Banning all synthetic clothing.",
+     "D. Measuring only the largest fragments."
+    ],
+    "answer": "B",
+    "why": "Paragraph G: \"The aim is not to eliminate every particle, which is unrealistic, but to limit the amounts that reach the sea and the animals that depend on freshwater\"."
+   },
+   {
+    "id": "r21-q14",
+    "type": "sentence",
+    "prompt": "Laboratory experiments show that water fleas may eat particles, which can reduce their feeding and ______.",
+    "answer": [
+     "growth"
+    ],
+    "why": "Paragraph E: \"this can reduce their feeding and growth\"."
+   }
+  ]
+ }
+]

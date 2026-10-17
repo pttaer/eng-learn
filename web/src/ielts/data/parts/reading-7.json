@@ -1,0 +1,733 @@
+[
+ {
+  "id": "r27",
+  "title": "Ice in the Shadows: Lunar Water and the Politics of Resource Claims",
+  "topic": "Space science and policy",
+  "band": 8.5,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "For decades, the Moon was regarded as a dry and lifeless body, a place where any useful material would have to be carried from Earth at great expense. That view changed when spacecraft missions and orbital instruments began to detect hydrogen in the permanently shadowed craters near the lunar poles. Hydrogen is often a sign of water ice, and the craters are cold enough that ice deposited there could survive for billions of years. Even a modest quantity of such ice would be valuable, because water can be split into hydrogen and oxygen, providing both breathable air and rocket propellant. The discovery has therefore turned a scientific curiosity into a strategic question. Some planners see the Moon as a stepping stone for missions to Mars, which would need supplies that are easier to produce locally than to launch."
+   },
+   {
+    "label": "B",
+    "text": "Scientists still disagree about how much ice the polar craters contain and in what form it occurs. Some measurements suggest that the ice is mixed with lunar soil in small proportions, perhaps only a few percent by weight, while other observations point to thicker deposits in a few favoured craters. The difference matters enormously for planning. A deposit that is thin and widely dispersed would require complex processing over a large area, whereas a concentrated deposit could support a small installation. Until better data are available, estimates of the resource remain uncertain, and engineers must design systems that can tolerate a wide range of outcomes."
+   },
+   {
+    "label": "C",
+    "text": "The technical challenges of extraction are considerable. Temperatures in the shadowed regions fall to levels far below those on Earth, and the surface is covered with fine dust that can damage machinery and seals. Mining equipment would need a source of power, and in permanent darkness the most practical option may be solar panels placed on nearby ridges, which receive sunlight for much of the lunar day. Engineers have also considered whether ice could be melted, heated or dissolved in solvents, and each method carries its own energy costs. A process that works in a laboratory may prove far less efficient when scaled up to an industrial level."
+   },
+   {
+    "label": "D",
+    "text": "The legal framework for lunar resources is less settled than the technology. The Outer Space Treaty of 1967 states that outer space is not subject to national appropriation by claim of sovereignty, yet it does not clearly settle whether private companies may extract and sell resources. Several countries have passed laws that allow their citizens to own materials recovered from the Moon, and some lawyers argue that this approach is consistent with the treaty. Others contend that such laws amount to a backdoor form of territorial claim, and that the treaty's principles require an international agreement before extraction on a large scale begins."
+   },
+   {
+    "label": "E",
+    "text": "The question of who benefits from lunar ice is also a question of fairness. Nations that possess advanced launch capacity and the capital to build infrastructure are better placed to exploit resources first, and early movers could establish zones of operation that other states find difficult to contest. Developing countries have argued that the Moon is part of a shared heritage and that the benefits of its resources should be distributed more widely. This argument draws on an older principle in international law, which holds that certain areas beyond national jurisdiction belong to humanity as a whole, although the principle has never been applied to the Moon in a binding way. Some states have proposed that revenue from lunar mining be shared through an international fund, although the details of such a fund remain unsettled."
+   },
+   {
+    "label": "F",
+    "text": "Competing approaches have emerged in response. One proposal would establish a set of rules, agreed among many states, that set out safety zones around extraction sites, require the sharing of data and limit the duration of claims. Another would rely on a voluntary code of conduct, which would be easier to agree but harder to enforce. Each option involves trade-offs between speed and legitimacy. A tight regime might discourage investment, while a loose one might allow a few actors to dominate the most valuable craters before anyone else can respond."
+   },
+   {
+    "label": "G",
+    "text": "The politics of lunar ice therefore reflects a wider debate about how new frontiers should be governed. Earlier frontiers, from the seas to the Antarctic continent, were eventually brought under shared rules, but often only after a period of competition and disputes. The Moon may follow a similar path, or it may set a different precedent if its resources are developed quickly by a small group of actors. What the ice has already made clear is that the question of ownership cannot be separated from the question of access, and that answers must be found before the first extraction begins, not after. Historians will judge the period by whether the rules were written before the most valuable sites were occupied, and by whether the benefits reached those who had no direct role in the missions."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r27-q01",
+    "type": "tfng",
+    "prompt": "Hydrogen detected in polar craters may indicate the presence of water ice.",
+    "answer": "TRUE",
+    "why": "Paragraph A: \"Hydrogen is often a sign of water ice\"."
+   },
+   {
+    "id": "r27-q02",
+    "type": "tfng",
+    "prompt": "Lunar ice would be useless for producing rocket fuel.",
+    "answer": "FALSE",
+    "why": "Paragraph A: \"water can be split into hydrogen and oxygen, providing both breathable air and rocket propellant\"."
+   },
+   {
+    "id": "r27-q03",
+    "type": "tfng",
+    "prompt": "All scientists agree on the amount of ice in the polar craters.",
+    "answer": "FALSE",
+    "why": "Paragraph B: \"Scientists still disagree about how much ice the polar craters contain\"."
+   },
+   {
+    "id": "r27-q04",
+    "type": "tfng",
+    "prompt": "Lunar ice has been shown to contain dissolved minerals of commercial value.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph A: \"Even a modest quantity of such ice would be valuable\". The passage discusses the ice itself and its uses, but says nothing about dissolved minerals."
+   },
+   {
+    "id": "r27-q05",
+    "type": "heading",
+    "prompt": "Paragraph B",
+    "options": [
+     "i. Why lunar ice would be useful to a settlement",
+     "ii. The uncertain size of the deposits",
+     "iii. Engineering obstacles in permanent darkness",
+     "iv. Gaps in the legal framework",
+     "v. A history of polar exploration on Earth",
+     "vi. The cost of launching payloads from Earth",
+     "vii. Competing approaches to governance",
+     "viii. Evidence from lunar rock samples"
+    ],
+    "answer": "ii",
+    "why": "Paragraph B: \"Scientists still disagree about how much ice the polar craters contain and in what form it occurs\". Heading ii."
+   },
+   {
+    "id": "r27-q06",
+    "type": "heading",
+    "prompt": "Paragraph C",
+    "options": [
+     "i. Why lunar ice would be useful to a settlement",
+     "ii. The uncertain size of the deposits",
+     "iii. Engineering obstacles in permanent darkness",
+     "iv. Gaps in the legal framework",
+     "v. A history of polar exploration on Earth",
+     "vi. The cost of launching payloads from Earth",
+     "vii. Competing approaches to governance",
+     "viii. Evidence from lunar rock samples"
+    ],
+    "answer": "iii",
+    "why": "Paragraph C: \"The technical challenges of extraction are considerable\". Heading iii."
+   },
+   {
+    "id": "r27-q07",
+    "type": "heading",
+    "prompt": "Paragraph F",
+    "options": [
+     "i. Why lunar ice would be useful to a settlement",
+     "ii. The uncertain size of the deposits",
+     "iii. Engineering obstacles in permanent darkness",
+     "iv. Gaps in the legal framework",
+     "v. A history of polar exploration on Earth",
+     "vi. The cost of launching payloads from Earth",
+     "vii. Competing approaches to governance",
+     "viii. Evidence from lunar rock samples"
+    ],
+    "answer": "vii",
+    "why": "Paragraph F: \"Competing approaches have emerged in response\". Heading vii."
+   },
+   {
+    "id": "r27-q08",
+    "type": "mcq",
+    "prompt": "What does the writer say about the Outer Space Treaty?",
+    "options": [
+     "A. It explicitly allows companies to sell lunar resources.",
+     "B. It does not clearly settle whether private companies may extract and sell resources.",
+     "C. It was signed by only one country.",
+     "D. It bans all activity on the Moon."
+    ],
+    "answer": "B",
+    "why": "Paragraph D: \"yet it does not clearly settle whether private companies may extract and sell resources\". A is contradicted by the same clause; C and D are not stated."
+   },
+   {
+    "id": "r27-q09",
+    "type": "mcq",
+    "prompt": "According to paragraph E, what do developing countries argue?",
+    "options": [
+     "A. The Moon should belong to the first country to land.",
+     "B. Lunar resources are part of a shared heritage whose benefits should be widely distributed.",
+     "C. Lunar ice should be left untouched forever.",
+     "D. Only launch capacity matters."
+    ],
+    "answer": "B",
+    "why": "Paragraph E: \"the Moon is part of a shared heritage and that the benefits of its resources should be distributed more widely\"."
+   },
+   {
+    "id": "r27-q10",
+    "type": "sentence",
+    "prompt": "Permanently shadowed craters near the Moon's ______ are where hydrogen has been detected.",
+    "answer": [
+     "poles"
+    ],
+    "why": "Paragraph A: \"permanently shadowed craters near the lunar poles\"."
+   },
+   {
+    "id": "r27-q11",
+    "type": "sentence",
+    "prompt": "Engineers have considered whether ice could be melted, heated or ______ in solvents.",
+    "answer": [
+     "dissolved"
+    ],
+    "why": "Paragraph C: \"could be melted, heated or dissolved in solvents\"."
+   },
+   {
+    "id": "r27-q12",
+    "type": "short",
+    "prompt": "What can water be split into, according to the passage?",
+    "answer": [
+     "hydrogen and oxygen"
+    ],
+    "why": "Paragraph A: \"water can be split into hydrogen and oxygen\"."
+   },
+   {
+    "id": "r27-q13",
+    "type": "short",
+    "prompt": "What do the solar panels on nearby ridges receive for much of the lunar day?",
+    "answer": [
+     "sunlight"
+    ],
+    "why": "Paragraph C: \"which receive sunlight for much of the lunar day\"."
+   },
+   {
+    "id": "r27-q14",
+    "type": "summary",
+    "prompt": "Summary: Ice in shadowed craters could be processed to produce ______ and rocket propellant.",
+    "answer": [
+     "breathable air"
+    ],
+    "why": "Paragraph A: \"providing both breathable air and rocket propellant\"."
+   }
+  ]
+ },
+ {
+  "id": "r28",
+  "title": "Wolves on the Ridge: Rewilding and the Reach of Predators",
+  "topic": "Ecology and conservation",
+  "band": 8,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "In the 1990s, a plan to return grey wolves to a large national park in the western United States attracted fierce opposition from ranchers and some local residents. Wolves had been removed from the region decades earlier, and the reintroduction was controversial because of the risk to livestock. Ecologists, however, were interested in a different consequence of the wolves' absence. Elk had grown in number, and their browsing had changed the structure of the vegetation along rivers. The reintroduction offered a rare opportunity to test a question that had been debated in ecology for decades: whether the removal of a top predator can alter an entire ecosystem. Supporters argued that the wolves would also reduce the number of coyotes, and that their presence would make the park more attractive to visitors."
+   },
+   {
+    "label": "B",
+    "text": "The idea that predators shape the systems they inhabit is known as a trophic cascade. In a simple version, predators reduce the abundance of herbivores, which in turn allows plants to grow more abundantly, and the effect spreads through the food web like a ripple. Early evidence for such cascades came from studies in kelp forests and lakes, where the removal or addition of predators changed the abundance of algae or plants several steps down the chain. Yet many ecologists doubted that the same logic would apply to large terrestrial systems, where habitats are more complex and prey can move over long distances. Early experiments were often carried out in small enclosures, which made it difficult to judge whether the results applied to open landscapes."
+   },
+   {
+    "label": "C",
+    "text": "Observations in the decade after the reintroduction suggested that the story was more complicated than a simple chain. Wolves did reduce the number of elk in some areas and changed where the elk spent their time. Elk avoided open valley bottoms where they could be easily caught, and in those places willow and aspen began to recover after decades of heavy browsing. However, the relationship was not uniform. Elk numbers were also affected by winter snow, disease and hunting outside the park, and some of the recovery in vegetation may have had other causes. Researchers also used satellite images to track changes in tree cover along the streams, and the results showed that young trees were returning in several places."
+   },
+   {
+    "label": "D",
+    "text": "The concept of behaviour-mediated effects helps to explain why the pattern was not a simple one. A predator's presence can influence herbivores even when its numbers are low, because prey animals adjust their routines to avoid danger. This landscape of fear may cause herbivores to feed less in risky places, which can allow vegetation there to recover. Such indirect effects are difficult to measure, since they depend on the perceptions and decisions of animals rather than on counts of individuals. Researchers have therefore relied on repeated surveys, tracking collars and long-term comparisons between sites. Some ecologists have described this as a form of ecological memory, in which the past behaviour of prey continues to shape the land long after the predators have changed."
+   },
+   {
+    "label": "E",
+    "text": "The reintroduction also raised questions about how the effects should be judged. Some scientists argued that the most striking changes were restricted to a few river valleys, and that the broader ecosystem had changed far less than popular accounts suggested. Others pointed out that the valleys were where biodiversity was concentrated, so changes there were ecologically important even if they were localised. Disagreement of this kind is common in conservation science, because the scale at which an effect is measured can determine whether it appears large or small. Each side in the debate drew on the same data, but they emphasised different parts of it, and a shared set of standards for measuring change has been slow to emerge."
+   },
+   {
+    "label": "F",
+    "text": "Rewilding projects in other regions have drawn on these findings, but they have also encountered different social and ecological conditions. In parts of Europe, large predators must share landscapes with dense human populations, and farmers may have little tolerance for losses to livestock. Compensation schemes, fencing and public education are used to reduce conflict, although their effectiveness varies. Projects that succeed tend to combine scientific monitoring with clear agreements about who bears the costs of coexistence, and this social dimension can be as decisive as any ecological mechanism. Local schools and volunteer groups have taken part in some projects, and their involvement has helped to build a sense of shared ownership of the landscape."
+   },
+   {
+    "label": "G",
+    "text": "The wolves of the western park have become a symbol of ecological restoration, but their real lesson may be more modest. Predators can influence ecosystems in ways that are sometimes surprising and sometimes subtle, and the strength of their effects depends on context. A cascade that is visible in one valley may be weak in another. For conservation, the goal is therefore not to reproduce a single dramatic outcome, but to understand the conditions under which predators can help to rebalance systems that have been simplified by human activity. Restoration is therefore best judged by whether communities, scientists and landowners can agree on what a healthy system should look like."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r28-q01",
+    "type": "tfng",
+    "prompt": "The wolves had been absent from the region for several decades before the reintroduction.",
+    "answer": "TRUE",
+    "why": "Paragraph A: \"Wolves had been removed from the region decades earlier\"."
+   },
+   {
+    "id": "r28-q02",
+    "type": "tfng",
+    "prompt": "Trophic cascades were first observed in grasslands.",
+    "answer": "FALSE",
+    "why": "Paragraph B: \"Early evidence for such cascades came from studies in kelp forests and lakes\"."
+   },
+   {
+    "id": "r28-q03",
+    "type": "tfng",
+    "prompt": "Elk numbers depended only on the presence of wolves.",
+    "answer": "FALSE",
+    "why": "Paragraph C: \"Elk numbers were also affected by winter snow, disease and hunting outside the park\"."
+   },
+   {
+    "id": "r28-q04",
+    "type": "tfng",
+    "prompt": "Rewilding in Europe has been less controversial than in the United States.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph F: \"In parts of Europe, large predators must share landscapes with dense human populations\". The passage describes European conditions but never compares the level of controversy with the American case."
+   },
+   {
+    "id": "r28-q05",
+    "type": "heading",
+    "prompt": "Paragraph B",
+    "options": [
+     "i. Why predators were once thought irrelevant to land systems",
+     "ii. Early evidence from aquatic systems and doubts about land",
+     "iii. Partial recovery of vegetation and other causes",
+     "iv. Indirect effects through changes in animal behaviour",
+     "v. Disagreement over the scale of change",
+     "vi. Coexistence and the social side of rewilding",
+     "vii. A cost-benefit analysis of reintroduction",
+     "viii. Lessons from European reintroduction programmes"
+    ],
+    "answer": "ii",
+    "why": "Paragraph B: \"Early evidence for such cascades came from studies in kelp forests and lakes\". Heading ii."
+   },
+   {
+    "id": "r28-q06",
+    "type": "heading",
+    "prompt": "Paragraph D",
+    "options": [
+     "i. Why predators were once thought irrelevant to land systems",
+     "ii. Early evidence from aquatic systems and doubts about land",
+     "iii. Partial recovery of vegetation and other causes",
+     "iv. Indirect effects through changes in animal behaviour",
+     "v. Disagreement over the scale of change",
+     "vi. Coexistence and the social side of rewilding",
+     "vii. A cost-benefit analysis of reintroduction",
+     "viii. Lessons from European reintroduction programmes"
+    ],
+    "answer": "iv",
+    "why": "Paragraph D: \"A predator's presence can influence herbivores even when its numbers are low\". Heading iv."
+   },
+   {
+    "id": "r28-q07",
+    "type": "heading",
+    "prompt": "Paragraph F",
+    "options": [
+     "i. Why predators were once thought irrelevant to land systems",
+     "ii. Early evidence from aquatic systems and doubts about land",
+     "iii. Partial recovery of vegetation and other causes",
+     "iv. Indirect effects through changes in animal behaviour",
+     "v. Disagreement over the scale of change",
+     "vi. Coexistence and the social side of rewilding",
+     "vii. A cost-benefit analysis of reintroduction",
+     "viii. Lessons from European reintroduction programmes"
+    ],
+    "answer": "vi",
+    "why": "Paragraph F: \"Projects that succeed tend to combine scientific monitoring with clear agreements about who bears the costs of coexistence\". Heading vi."
+   },
+   {
+    "id": "r28-q08",
+    "type": "mcq",
+    "prompt": "What does paragraph D suggest about predators?",
+    "options": [
+     "A. They can affect herbivores even when their numbers are low.",
+     "B. They affect only the animals they eat.",
+     "C. Their effects can be measured by counting individuals alone.",
+     "D. They have no influence on vegetation."
+    ],
+    "answer": "A",
+    "why": "Paragraph D: \"A predator's presence can influence herbivores even when its numbers are low\". B and D are contradicted by \"allow vegetation there to recover\"; C is contradicted by \"Such indirect effects are difficult to measure\"."
+   },
+   {
+    "id": "r28-q09",
+    "type": "mcq",
+    "prompt": "According to paragraph G, what should be the goal of conservation?",
+    "options": [
+     "A. To reproduce a single dramatic outcome.",
+     "B. To understand the conditions under which predators can rebalance simplified systems.",
+     "C. To remove all predators from parks.",
+     "D. To ignore local context."
+    ],
+    "answer": "B",
+    "why": "Paragraph G: \"the goal is therefore not to reproduce a single dramatic outcome, but to understand the conditions under which predators can help to rebalance systems that have been simplified by human activity\". D is contradicted by \"the strength of their effects depends on context\"."
+   },
+   {
+    "id": "r28-q10",
+    "type": "summary",
+    "prompt": "Summary: Browsing elk had changed the vegetation along the ______.",
+    "answer": [
+     "rivers"
+    ],
+    "why": "Paragraph A: \"their browsing had changed the structure of the vegetation along rivers\"."
+   },
+   {
+    "id": "r28-q11",
+    "type": "summary",
+    "prompt": "Summary: Elk avoided open valley ______ where they could be easily caught.",
+    "answer": [
+     "bottoms"
+    ],
+    "why": "Paragraph C: \"Elk avoided open valley bottoms where they could be easily caught\"."
+   },
+   {
+    "id": "r28-q12",
+    "type": "short",
+    "prompt": "What term describes the chain of effects that predators can set off?",
+    "answer": [
+     "trophic cascade"
+    ],
+    "why": "Paragraph B: \"The idea that predators shape the systems they inhabit is known as a trophic cascade\"."
+   },
+   {
+    "id": "r28-q13",
+    "type": "sentence",
+    "prompt": "Predators can influence herbivores even when their ______ are low.",
+    "answer": [
+     "numbers"
+    ],
+    "why": "Paragraph D: \"A predator's presence can influence herbivores even when its numbers are low\"."
+   }
+  ]
+ },
+ {
+  "id": "r29",
+  "title": "The Coastline Paradox: How Long Is a Shore?",
+  "topic": "Geography and mathematics",
+  "band": 8.5,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Ask a simple question, such as how long the coastline of a country is, and the answer depends heavily on the scale of the map used to measure it. A coastline drawn on a small-scale atlas shows only the broad outline of bays and headlands, while a large-scale chart captures every inlet, cove and rock. The second measurement will almost always be longer than the first, because it includes more of the irregularities. This observation, which became known as the coastline paradox, puzzled geographers for much of the twentieth century, since the length of a physical feature seemed to depend on how closely it was examined. Early textbooks often presented coastline lengths as if they were settled facts, which made the later discovery of the paradox all the more surprising. Walkers who follow the coast on foot often report distances that differ from the figures printed on maps."
+   },
+   {
+    "label": "B",
+    "text": "The mathematician Lewis Fry Richardson noticed a related pattern in the early 1960s, when he compared the reported lengths of borders and coastlines from different sources. He found that the measured length of a frontier grew as the unit of measurement shrank, and that the relationship could often be described by a simple power law. Richardson's data were collected for another purpose, and he did not develop a general theory from them. Nevertheless, his observations suggested that the usual idea of a fixed length for such boundaries was misleading in an important way. Richardson's tables included frontiers between neighbouring countries, and the figures varied so widely between sources that comparison was difficult."
+   },
+   {
+    "label": "C",
+    "text": "Benoit Mandelbrot later built on this insight to describe the geometry of such shapes. He argued that coastlines display a property called self-similarity, in which the pattern of irregularity looks much the same at different scales. A bay contains smaller bays, which contain yet smaller indentations, and so on. Mandelbrot used the term fractal to describe objects of this kind, and he proposed that their dimension, which can be a fraction rather than a whole number, provides a useful measure of their complexity. For coastlines, the fractal dimension tends to lie between one and two. Mandelbrot's work drew attention to the many natural forms that share this property, including clouds, river networks and the branching of trees."
+   },
+   {
+    "label": "D",
+    "text": "The practical consequences of this geometry are significant. Coastal engineers designing a sea wall need to know the true extent of the shoreline, while ecologists studying intertidal habitats must decide how finely to survey it. A measurement taken on a coarse scale may underestimate the area of habitat that a species actually uses, and a policy based on that figure may leave important zones unprotected. Scale is therefore not merely a technical detail, but a decision that shapes what is counted and what is ignored. Planners who ignore these effects may set boundaries or budgets on the basis of a figure that would change if the survey were repeated at a finer scale. The same problem affects estimates of the area of sand dunes, reefs and salt marshes."
+   },
+   {
+    "label": "E",
+    "text": "Some researchers have questioned whether the paradox is as serious as it first appears. In most applied work, the scale of measurement is chosen to suit a particular purpose, and the resulting figure is comparable across studies only if the same method is used. Standardisation, such as agreeing on a fixed unit of measurement or a set of rules for mapping, can therefore remove much of the confusion. The paradox remains a useful warning, but it does not mean that coastline lengths are meaningless. Scientists in several fields now publish the method they used along with any length they report, which allows readers to judge whether two figures can be compared."
+   },
+   {
+    "label": "F",
+    "text": "Digital mapping has added a further layer of complexity. Satellite images, aerial photographs and surveys made with global positioning equipment each capture the shoreline at different resolutions, and the tide changes its position twice a day. A coastline recorded at high tide may differ substantially from one recorded at low tide, and the difference can be larger in areas with gently sloping beaches. Modern researchers therefore need to specify not only the scale of their measurement but also the moment at which the line was drawn. In practice, many surveyors choose a mean tide level as a reference, although this choice is itself a convention that can shape the final figure."
+   },
+   {
+    "label": "G",
+    "text": "The coastline paradox is, in the end, a lesson about measurement itself. Every number that describes a natural feature depends on choices about what to include and how finely to look. Reporting a length without explaining those choices can give a false impression of precision. For geographers, mathematicians and planners alike, the coastline is a reminder that some quantities are not fixed properties of the world but outcomes of the questions that people ask about it. A good measurement, in this sense, is one whose assumptions are visible, and whose limits are stated as clearly as its results."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r29-q01",
+    "type": "tfng",
+    "prompt": "A coastline measured on a large-scale chart is longer than the same coastline on a small-scale atlas.",
+    "answer": "TRUE",
+    "why": "Paragraph A: \"The second measurement will almost always be longer than the first, because it includes more of the irregularities\"."
+   },
+   {
+    "id": "r29-q02",
+    "type": "tfng",
+    "prompt": "Richardson developed a general theory of coastlines in the early 1960s.",
+    "answer": "FALSE",
+    "why": "Paragraph B: \"Richardson's data were collected for another purpose, and he did not develop a general theory from them\"."
+   },
+   {
+    "id": "r29-q03",
+    "type": "tfng",
+    "prompt": "Mandelbrot argued that coastlines display self-similarity.",
+    "answer": "TRUE",
+    "why": "Paragraph C: \"He argued that coastlines display a property called self-similarity\"."
+   },
+   {
+    "id": "r29-q04",
+    "type": "tfng",
+    "prompt": "Standardised measurement methods have been adopted by all national mapping agencies.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph E: \"Standardisation, such as agreeing on a fixed unit of measurement or a set of rules for mapping, can therefore remove much of the confusion\". The passage recommends standardisation but does not report how far agencies have adopted it."
+   },
+   {
+    "id": "r29-q05",
+    "type": "match",
+    "prompt": "the reason a survey made at one tide level may differ from another",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "F",
+    "why": "Paragraph F: \"A coastline recorded at high tide may differ substantially from one recorded at low tide\"."
+   },
+   {
+    "id": "r29-q06",
+    "type": "match",
+    "prompt": "a property in which the same pattern appears at several scales",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "C",
+    "why": "Paragraph C: \"a property called self-similarity, in which the pattern of irregularity looks much the same at different scales\"."
+   },
+   {
+    "id": "r29-q07",
+    "type": "match",
+    "prompt": "a practical problem for engineers and ecologists",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "D",
+    "why": "Paragraph D: \"Coastal engineers designing a sea wall need to know the true extent of the shoreline, while ecologists studying intertidal habitats must decide how finely to survey it\"."
+   },
+   {
+    "id": "r29-q08",
+    "type": "mcq",
+    "prompt": "What does the writer conclude in paragraph E?",
+    "options": [
+     "A. The paradox makes coastline lengths meaningless.",
+     "B. The paradox is a useful warning but does not make lengths meaningless.",
+     "C. Standardisation is impossible.",
+     "D. Engineers should ignore the scale of measurement."
+    ],
+    "answer": "B",
+    "why": "Paragraph E: \"The paradox remains a useful warning, but it does not mean that coastline lengths are meaningless\". C is contradicted by \"can therefore remove much of the confusion\"."
+   },
+   {
+    "id": "r29-q09",
+    "type": "mcq",
+    "prompt": "According to paragraph G, what is the danger of reporting a length without an explanation?",
+    "options": [
+     "A. It reduces the cost of mapping.",
+     "B. It can give a false impression of precision.",
+     "C. It makes the shoreline easier to measure.",
+     "D. It proves that coastlines are fixed."
+    ],
+    "answer": "B",
+    "why": "Paragraph G: \"Reporting a length without explaining those choices can give a false impression of precision\"."
+   },
+   {
+    "id": "r29-q10",
+    "type": "short",
+    "prompt": "What is the name for a pattern that looks similar at different scales?",
+    "answer": [
+     "self-similarity"
+    ],
+    "why": "Paragraph C: \"a property called self-similarity, in which the pattern of irregularity looks much the same at different scales\"."
+   },
+   {
+    "id": "r29-q11",
+    "type": "short",
+    "prompt": "What term did Mandelbrot use to describe objects of this kind?",
+    "answer": [
+     "fractal"
+    ],
+    "why": "Paragraph C: \"Mandelbrot used the term fractal to describe objects of this kind\"."
+   },
+   {
+    "id": "r29-q12",
+    "type": "sentence",
+    "prompt": "The measured length of a frontier grew as the ______ of measurement shrank.",
+    "answer": [
+     "unit"
+    ],
+    "why": "Paragraph B: \"the measured length of a frontier grew as the unit of measurement shrank\"."
+   },
+   {
+    "id": "r29-q13",
+    "type": "sentence",
+    "prompt": "The tide changes the position of the shoreline ______ times a day.",
+    "answer": [
+     "twice"
+    ],
+    "why": "Paragraph F: \"the tide changes its position twice a day\"."
+   },
+   {
+    "id": "r29-q14",
+    "type": "table",
+    "prompt": "Table, Sources of error: a coastline surveyed at high tide differs from one surveyed at ______ tide.",
+    "answer": [
+     "low"
+    ],
+    "why": "Paragraph F: \"A coastline recorded at high tide may differ substantially from one recorded at low tide\"."
+   }
+  ]
+ },
+ {
+  "id": "r30",
+  "title": "The Long Fight Against Counterfeit Banknotes",
+  "topic": "Economic history and security printing",
+  "band": 8.5,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Counterfeiting is almost as old as money itself. Ancient coins were frequently debased, with cheap metal hidden beneath a thin layer of precious metal, and rulers sometimes profited from the practice by quietly reducing the value of their own currency. Paper money introduced new opportunities for fraud, because a note could be copied with ink, a press and a skilled engraver. As governments and banks began to issue notes in large quantities during the eighteenth and nineteenth centuries, the protection of the currency became a matter of national stability, not merely of commercial trust. Medieval rulers also tried to stop coin clipping, the practice of shaving small amounts of metal from the edges of coins, by introducing milled edges that made the damage visible. Paper money, when it first spread, was often regarded with suspicion for exactly this reason."
+   },
+   {
+    "label": "B",
+    "text": "The response was to make notes harder to imitate. Early security features were simple, such as watermarks, which could be seen when a note was held against a light, and intricate engraved patterns that were difficult to reproduce by hand. These measures were effective for a time, but photography and later colour printing made it possible to reproduce notes with increasing accuracy. Forgers who once needed years of training could now produce convincing copies with relatively inexpensive equipment, and the arms race between issuers and counterfeiters began to accelerate. Engraved notes gave the bearer a sense of value, because the detail of the design signalled that the issuer was serious about its currency. Several countries also introduced colour changes in their notes to make it harder for forgers to keep pace with their designs."
+   },
+   {
+    "label": "C",
+    "text": "Modern banknotes rely on a combination of layers, each designed to be checked in a different way. Some features can be inspected by ordinary members of the public, such as a raised texture that can be felt with the fingertips or a colour that shifts when the note is tilted. Others require a simple lamp or a magnifier, while the most sophisticated features are checked only by specialists with laboratory equipment. This layered approach means that a counterfeit may pass a casual inspection but fail a more detailed test, and that forgers must succeed at every level to avoid detection. Training programmes for cashiers and shopkeepers often focus on these checks, and some banks publish guides that explain the features in simple terms."
+   },
+   {
+    "label": "D",
+    "text": "Polymer notes, first introduced in Australia in the 1980s, have added another dimension to this contest. A plastic substrate is more difficult to tear and harder to damage through ordinary wear, and it can incorporate transparent windows and holographic elements that are difficult to replicate. Polymer notes also tend to last longer than paper ones, which reduces the cost of replacing worn notes. However, they are not immune to fraud, and some counterfeiters have attempted to copy the transparent sections or to alter genuine notes by chemical treatment. Designers of polymer notes have also had to consider how the surface will take ink and how it will behave in heat, cold and humidity."
+   },
+   {
+    "label": "E",
+    "text": "Counterfeiting is also shaped by economics. Forgery is worth the effort only when the expected gain outweighs the risk of detection, the cost of production and the penalty if caught. When a high-value note is easy to spend in a busy market, criminals may find it attractive, while a note that is rarely accepted in shops is less useful for them. Issuers therefore monitor where counterfeits are found and adjust their designs and distribution accordingly, which can change the balance of incentives over time. Counterfeit production is also a business, with its own costs of equipment, distribution and risk, and forgers respond to market signals just as legitimate firms do."
+   },
+   {
+    "label": "F",
+    "text": "Digital technology has changed the problem in ways that affect both sides. Scanners and printers are now widely available, which makes basic copying easier, but image processing and detection software also allow central banks to identify suspicious notes automatically. Machines in banks sort and authenticate notes at high speed, and their data can be used to spot patterns that individual cashiers would miss. Some authorities have also considered digital currencies, which avoid physical forgery altogether but raise different concerns about security and privacy. Specialised laboratories now compare suspect notes against databases of known forgeries, which allows investigators to trace the source of a batch."
+   },
+   {
+    "label": "G",
+    "text": "The history of counterfeiting shows that security is never finished. Each new feature invites an attempt to copy it, and each attempt prompts a further innovation. For the public, the most useful protection is awareness: knowing how to check a note and being alert to notes that feel or look wrong. For issuers, the challenge is to keep the currency trustworthy without making it so complicated that ordinary people cannot use it. In the long contest between printers and forgers, both sides have learned that trust is the most valuable thing to protect. The most successful security designs, in this sense, are those that remain understandable to the public while remaining difficult for criminals to master."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r30-q01",
+    "type": "tfng",
+    "prompt": "Some ancient coins were made of cheap metal covered by a thin layer of precious metal.",
+    "answer": "TRUE",
+    "why": "Paragraph A: \"with cheap metal hidden beneath a thin layer of precious metal\"."
+   },
+   {
+    "id": "r30-q02",
+    "type": "tfng",
+    "prompt": "Polymer notes are impossible to copy.",
+    "answer": "FALSE",
+    "why": "Paragraph D: \"However, they are not immune to fraud, and some counterfeiters have attempted to copy the transparent sections\"."
+   },
+   {
+    "id": "r30-q03",
+    "type": "tfng",
+    "prompt": "Most countries have now switched to polymer notes.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph D: \"Polymer notes, first introduced in Australia in the 1980s, have added another dimension to this contest\". The passage describes the technology but gives no figures on how many countries have adopted it."
+   },
+   {
+    "id": "r30-q04",
+    "type": "tfng",
+    "prompt": "Forgers always succeed at every level of inspection.",
+    "answer": "FALSE",
+    "why": "Paragraph C: \"a counterfeit may pass a casual inspection but fail a more detailed test\"."
+   },
+   {
+    "id": "r30-q05",
+    "type": "heading",
+    "prompt": "Paragraph D",
+    "options": [
+     "i. Ancient debasement and early paper fraud",
+     "ii. Early protections and the limits of simple features",
+     "iii. Layered features for different levels of checking",
+     "iv. The role of polymer and its trade-offs",
+     "v. Why forgery depends on economic incentives",
+     "vi. Digital tools on both sides of the contest",
+     "vii. A history of gold coinage",
+     "viii. Tax policy and the value of currency"
+    ],
+    "answer": "iv",
+    "why": "Paragraph D: \"Polymer notes, first introduced in Australia in the 1980s, have added another dimension to this contest\". Heading iv."
+   },
+   {
+    "id": "r30-q06",
+    "type": "heading",
+    "prompt": "Paragraph E",
+    "options": [
+     "i. Ancient debasement and early paper fraud",
+     "ii. Early protections and the limits of simple features",
+     "iii. Layered features for different levels of checking",
+     "iv. The role of polymer and its trade-offs",
+     "v. Why forgery depends on economic incentives",
+     "vi. Digital tools on both sides of the contest",
+     "vii. A history of gold coinage",
+     "viii. Tax policy and the value of currency"
+    ],
+    "answer": "v",
+    "why": "Paragraph E: \"Forgery is worth the effort only when the expected gain outweighs the risk of detection\". Heading v."
+   },
+   {
+    "id": "r30-q07",
+    "type": "heading",
+    "prompt": "Paragraph F",
+    "options": [
+     "i. Ancient debasement and early paper fraud",
+     "ii. Early protections and the limits of simple features",
+     "iii. Layered features for different levels of checking",
+     "iv. The role of polymer and its trade-offs",
+     "v. Why forgery depends on economic incentives",
+     "vi. Digital tools on both sides of the contest",
+     "vii. A history of gold coinage",
+     "viii. Tax policy and the value of currency"
+    ],
+    "answer": "vi",
+    "why": "Paragraph F: \"Digital technology has changed the problem in ways that affect both sides\". Heading vi."
+   },
+   {
+    "id": "r30-q08",
+    "type": "mcq",
+    "prompt": "What does the writer say about the economic side of counterfeiting?",
+    "options": [
+     "A. Forgery is always profitable.",
+     "B. Forgery is worthwhile only when the expected gain exceeds the risk and costs.",
+     "C. Issuers never change their designs.",
+     "D. Only rarely used notes are counterfeited."
+    ],
+    "answer": "B",
+    "why": "Paragraph E: \"Forgery is worth the effort only when the expected gain outweighs the risk of detection, the cost of production and the penalty if caught\". C is contradicted by \"adjust their designs and distribution\"."
+   },
+   {
+    "id": "r30-q09",
+    "type": "mcq",
+    "prompt": "According to paragraph G, what is the most useful protection for the public?",
+    "options": [
+     "A. Trusting every note equally.",
+     "B. Awareness of how to check a note.",
+     "C. Refusing all notes.",
+     "D. Relying only on digital currency."
+    ],
+    "answer": "B",
+    "why": "Paragraph G: \"For the public, the most useful protection is awareness: knowing how to check a note\"."
+   },
+   {
+    "id": "r30-q10",
+    "type": "short",
+    "prompt": "In which country were polymer notes first introduced?",
+    "answer": [
+     "Australia"
+    ],
+    "why": "Paragraph D: \"Polymer notes, first introduced in Australia in the 1980s\"."
+   },
+   {
+    "id": "r30-q11",
+    "type": "summary",
+    "prompt": "Summary: Counterfeiters of paper money could copy notes with ink, a press and a skilled ______.",
+    "answer": [
+     "engraver"
+    ],
+    "why": "Paragraph A: \"a note could be copied with ink, a press and a skilled engraver\"."
+   },
+   {
+    "id": "r30-q12",
+    "type": "sentence",
+    "prompt": "Early security features included ______, which could be seen when a note was held against a light.",
+    "answer": [
+     "watermarks"
+    ],
+    "why": "Paragraph B: \"such as watermarks, which could be seen when a note was held against a light\"."
+   },
+   {
+    "id": "r30-q13",
+    "type": "sentence",
+    "prompt": "Machines in banks sort and authenticate notes at high ______.",
+    "answer": [
+     "speed"
+    ],
+    "why": "Paragraph F: \"Machines in banks sort and authenticate notes at high speed\"."
+   }
+  ]
+ }
+]

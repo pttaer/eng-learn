@@ -1,0 +1,876 @@
+[
+ {
+  "id": "r22",
+  "title": "Life Without Sunlight: Chemosynthesis at Deep-Sea Vents",
+  "topic": "Marine biology",
+  "band": 8,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "In 1977, a team of researchers exploring the Pacific seabed with a submersible found something they had not expected. Along a ridge several kilometres below the surface, where no sunlight has ever reached, they discovered clusters of giant tube worms, clams and mussels growing around hot springs that issued from cracks in the rock. Biologists had assumed that almost all life depended on energy captured from light, either directly by plants or indirectly by animals that feed on them. The vent communities seemed to show that a different foundation was possible, one based on chemistry rather than on the sun. Many of the animals were new to science, and their collection required careful handling on the surface."
+   },
+   {
+    "label": "B",
+    "text": "The energy source is a process called chemosynthesis. Bacteria living in the vent water and inside the tissues of their hosts oxidise hydrogen sulphide, a gas that is toxic to most animals, and use the energy released to fix carbon dioxide into organic compounds. The reaction is similar in principle to photosynthesis, but the fuel is chemical rather than solar. In many vent animals, the bacteria live inside specialised organs, so that the host obtains its food without having to digest the bacteria in a conventional way. Some tube worms have no mouth or gut as adults and depend entirely on these internal partners. Because the bacteria supply food to the host, the host animal can thrive in water that would be lethal to most species."
+   },
+   {
+    "label": "C",
+    "text": "Chemosynthesis is not confined to deep vents. Similar communities have been found around cold seeps, where methane and other hydrocarbons leak slowly from the seabed, and around whale carcasses, which sink to the bottom and release fats and sulphide-rich decomposition products over many years. Each of these habitats is isolated and short-lived in geological terms, but the animals that live there tend to share a surprising number of species. This pattern has led some scientists to argue that the organisms must be able to disperse between widely separated sites, perhaps as larvae carried by currents. Researchers have also compared the genetic records of vent and seep animals, and some of these comparisons have revealed close relationships between species from distant ocean regions."
+   },
+   {
+    "label": "D",
+    "text": "The discovery of these ecosystems changed the way scientists thought about the origin of life. Many researchers have proposed that the first living systems may have arisen near hydrothermal vents, where chemical gradients between hot, mineral-rich water and cold seawater could provide both energy and raw materials. The hypothesis remains contested, because the early Earth's chemistry is difficult to reconstruct and because a vent does not in itself explain how a cell membrane first formed. Nevertheless, the vents showed that life could persist in conditions that were once considered too harsh to support anything more complex than microbes. Some of the proposed scenarios involve iron and sulphur minerals that could have catalysed early chemical reactions, although the details remain speculative."
+   },
+   {
+    "label": "E",
+    "text": "Vent ecosystems are also vulnerable. The chemical environment changes quickly, and a vent that is active for decades may become silent within a few years as the rock cools or the flow of fluid shifts. Animals that depend on a particular vent must either find a new source of hydrogen sulphide nearby or move to another site, and the dispersal distances involved can be large. Deep-sea mining has added a new concern, because mineral deposits associated with vents are attractive to companies, and the removal of the rock could destroy habitats whose communities recover slowly, if at all. Scientists monitoring vents often install instruments that record temperature and chemistry every few minutes, which allows changes to be detected long before biologists arrive."
+   },
+   {
+    "label": "F",
+    "text": "Researchers have begun to measure how quickly these communities recover after disturbance. In one study, a patch of seabed was artificially cleared and monitored over several years, and the first colonists were small, fast-reproducing animals that could arrive from neighbouring sites. Larger, slower species returned later, and some of them had not reappeared by the end of the study. Such results suggest that the natural recovery of a vent community depends on the availability of nearby populations, and that a single disturbance can reduce the diversity of an area for a long time. The results have been used to guide the design of protected areas, because a reserve must be large enough to supply colonists to neighbouring sites."
+   },
+   {
+    "label": "G",
+    "text": "The deep sea is often described as the least explored environment on Earth, and vents are among its most surprising features. They show that the energy and chemistry that sustain life can come from the interior of the planet rather than from the sun. They also raise a practical question for policymakers, which is how to protect a habitat that is hard to reach, slow to recover and linked to other habitats across the ocean. The answer will depend on mapping vents more completely before decisions are made about the resources they contain. Public interest in the deep sea has grown in recent years, partly because documentaries have shown glowing animals in darkness, and this attention has helped to build support for research expeditions."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r22-q01",
+    "type": "tfng",
+    "prompt": "The first vent communities were found in an area where sunlight reached the seabed.",
+    "answer": "FALSE",
+    "why": "Paragraph A: \"where no sunlight has ever reached\"."
+   },
+   {
+    "id": "r22-q02",
+    "type": "tfng",
+    "prompt": "Chemosynthesis uses energy released when a gas is oxidised.",
+    "answer": "TRUE",
+    "why": "Paragraph B: \"oxidise hydrogen sulphide, a gas that is toxic to most animals, and use the energy released to fix carbon dioxide\"."
+   },
+   {
+    "id": "r22-q03",
+    "type": "tfng",
+    "prompt": "Tube worms at vents grow faster than clams.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph B: \"Some tube worms have no mouth or gut as adults\". The passage describes the worms' internal partners but never compares their growth with that of clams."
+   },
+   {
+    "id": "r22-q04",
+    "type": "tfng",
+    "prompt": "Chemosynthetic communities have been found around cold seeps.",
+    "answer": "TRUE",
+    "why": "Paragraph C: \"Similar communities have been found around cold seeps, where methane and other hydrocarbons leak slowly from the seabed\"."
+   },
+   {
+    "id": "r22-q05",
+    "type": "mcq",
+    "prompt": "What does paragraph D say about the idea that life began at hydrothermal vents?",
+    "options": [
+     "A. It has been proven by the vent discoveries.",
+     "B. It remains a debated idea.",
+     "C. It was rejected soon after 1977.",
+     "D. It applies only to modern vents."
+    ],
+    "answer": "B",
+    "why": "Paragraph D: \"The hypothesis remains contested, because the early Earth's chemistry is difficult to reconstruct\". A is contradicted by the same sentence; C and D are not stated."
+   },
+   {
+    "id": "r22-q06",
+    "type": "mcq",
+    "prompt": "According to paragraph E, what makes vent animals vulnerable?",
+    "options": [
+     "A. Their bacteria cannot survive without oxygen.",
+     "B. Vent chemistry can change quickly, forcing animals to move or find a new source.",
+     "C. Predators feed on them in large numbers.",
+     "D. Mining is the only threat they face."
+    ],
+    "answer": "B",
+    "why": "Paragraph E: \"The chemical environment changes quickly, and a vent that is active for decades may become silent within a few years\". D is contradicted by the same paragraph, which names changing chemistry as well as mining."
+   },
+   {
+    "id": "r22-q07",
+    "type": "heading",
+    "prompt": "Paragraph C",
+    "options": [
+     "i. Why vents may have shaped the origin of life",
+     "ii. Communities that recover slowly after disturbance",
+     "iii. Other habitats that rely on chemosynthesis",
+     "iv. How bacteria turn chemicals into food",
+     "v. A discovery that overturned expectations",
+     "vi. Threats from human activity and changing vents",
+     "vii. The role of sunlight in the deep sea",
+     "viii. Migration patterns of deep-sea fish"
+    ],
+    "answer": "iii",
+    "why": "Paragraph C: \"Chemosynthesis is not confined to deep vents\". Heading iii."
+   },
+   {
+    "id": "r22-q08",
+    "type": "heading",
+    "prompt": "Paragraph E",
+    "options": [
+     "i. Why vents may have shaped the origin of life",
+     "ii. Communities that recover slowly after disturbance",
+     "iii. Other habitats that rely on chemosynthesis",
+     "iv. How bacteria turn chemicals into food",
+     "v. A discovery that overturned expectations",
+     "vi. Threats from human activity and changing vents",
+     "vii. The role of sunlight in the deep sea",
+     "viii. Migration patterns of deep-sea fish"
+    ],
+    "answer": "vi",
+    "why": "Paragraph E: \"The chemical environment changes quickly, and a vent that is active for decades may become silent within a few years\", then mining as \"a new concern\". Heading vi."
+   },
+   {
+    "id": "r22-q09",
+    "type": "heading",
+    "prompt": "Paragraph F",
+    "options": [
+     "i. Why vents may have shaped the origin of life",
+     "ii. Communities that recover slowly after disturbance",
+     "iii. Other habitats that rely on chemosynthesis",
+     "iv. How bacteria turn chemicals into food",
+     "v. A discovery that overturned expectations",
+     "vi. Threats from human activity and changing vents",
+     "vii. The role of sunlight in the deep sea",
+     "viii. Migration patterns of deep-sea fish"
+    ],
+    "answer": "ii",
+    "why": "Paragraph F: \"Such results suggest that the natural recovery of a vent community depends on the availability of nearby populations\". Heading ii."
+   },
+   {
+    "id": "r22-q10",
+    "type": "sentence",
+    "prompt": "The bacteria that drive chemosynthesis oxidise hydrogen ______, a gas that is toxic to most animals.",
+    "answer": [
+     "sulphide"
+    ],
+    "why": "Paragraph B: \"oxidise hydrogen sulphide, a gas that is toxic to most animals\"."
+   },
+   {
+    "id": "r22-q11",
+    "type": "sentence",
+    "prompt": "The first vent communities were discovered in ______ by a team exploring the Pacific seabed.",
+    "answer": [
+     "1977"
+    ],
+    "why": "Paragraph A: \"In 1977, a team of researchers exploring the Pacific seabed with a submersible found something they had not expected\"."
+   },
+   {
+    "id": "r22-q12",
+    "type": "short",
+    "prompt": "What do some adult tube worms lack, according to the passage?",
+    "answer": [
+     "mouth or gut"
+    ],
+    "why": "Paragraph B: \"Some tube worms have no mouth or gut as adults and depend entirely on these internal partners\"."
+   },
+   {
+    "id": "r22-q13",
+    "type": "short",
+    "prompt": "Which gas leaks slowly from the seabed at cold seeps?",
+    "answer": [
+     "methane"
+    ],
+    "why": "Paragraph C: \"where methane and other hydrocarbons leak slowly from the seabed\"."
+   }
+  ]
+ },
+ {
+  "id": "r23",
+  "title": "Time at Sea: The Longitude Problem and the Marine Chronometer",
+  "topic": "History of technology and navigation",
+  "band": 8,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "For most of history, sailors could determine their latitude with reasonable accuracy by measuring the height of the sun or a star above the horizon. Longitude was a far more difficult matter. To find east-west position, a navigator needed to know the time at a reference point, such as the home port, and compare it with local time at sea. Because the Earth turns by fifteen degrees every hour, a difference of four minutes between the two clocks corresponds to one degree of longitude. The problem was that no clock available in the seventeenth century could keep accurate time on a rolling ship for weeks at a time. Even a small error in the clock could place a ship many kilometres from its intended position. Early navigators often relied on dead reckoning, estimating their position from speed, heading and elapsed time, and such estimates could drift badly over long voyages."
+   },
+   {
+    "label": "B",
+    "text": "The scale of the difficulty became painfully clear in 1707, when a British fleet returning from operations in the Mediterranean ran aground on the rocks of the Isles of Scilly with the loss of several ships and well over a thousand men. The disaster was blamed partly on navigational error, and the British government responded by offering a substantial prize for a practical method of determining longitude at sea. The reward, set out in an Act of Parliament, was large enough to attract inventors from across Europe, and it created a competition that lasted for more than half a century. Shipwrecks of this kind were a regular feature of the age of sail, and each disaster increased public pressure on governments to act."
+   },
+   {
+    "label": "C",
+    "text": "Astronomical methods were the first serious rivals to the clock. One approach relied on the timing of eclipses of Jupiter's moons, which occur at predictable moments and could in principle be used as a universal clock. Another used the Moon's position against the background stars, a technique that required complex tables and long calculations. Both methods worked on land, where an observer could rest a telescope on solid ground, but they were difficult on a moving deck, where the images wavered and the observer could not easily see the moons through the glass. Each method also demanded a level of skill that few sailors possessed, and observers often needed hours of work to produce a single longitude estimate."
+   },
+   {
+    "label": "D",
+    "text": "The breakthrough came from a clockmaker named John Harrison, whose sequence of marine timekeepers culminated in a design that kept time with a precision far beyond that of earlier clocks. Harrison's early models were large and mechanically complex, and his progress was slowed by disputes with the Board of Longitude, which doubted that a mechanical device could meet the required standard. Only in the 1760s did a voyage to Jamaica confirm that his later chronometer could keep time accurately enough to win the prize. Harrison's work was supported at certain points by the Board itself, but the relationship was uneven, and he appealed to Parliament more than once."
+   },
+   {
+    "label": "E",
+    "text": "The chronometer was not an immediate success, however. Its cost was high, and many captains continued to rely on lunar distance tables well into the nineteenth century, partly because they trusted their own calculations more than an unfamiliar device. Clockmakers therefore had to demonstrate reliability repeatedly. Some instruments were tested on voyages of several months, and their rates were recorded against astronomical observations at each port, which allowed navigators to correct for drift and build confidence in the results. Lunar distance calculations were lengthy, and a navigator might spend an hour or more on a single set of observations before he could fix a position."
+   },
+   {
+    "label": "F",
+    "text": "Competition and standardisation eventually transformed the market. In the early nineteenth century, makers in London, Switzerland and France improved the mechanisms, reduced the size of the instruments and made them easier to produce in quantity. Government navies began to require chronometers on their ships, and merchant companies followed when insurance premiums and cargo losses offered a clear financial incentive. By the middle of the century, a chronometer had become a standard item of equipment rather than a costly experiment. Shipowners also learned that accurate navigation reduced the time spent searching for landfall, which saved fuel, wages and perishable cargo."
+   },
+   {
+    "label": "G",
+    "text": "The longitude problem is therefore a useful example of how a technical question can carry social, economic and political weight. The solution emerged from a combination of craft skill, public reward and institutional pressure, and it was refined by many hands over decades. It also shows that the boundary between a practical instrument and a scientific instrument was never fixed. A chronometer was a clock, but it was also a test of trust, in which a navigator had to believe that a machine could be right when the stars were hidden. Historians have often noted that the story of the chronometer is also a story about the people who were willing to test it, from captains to clockmakers. The problem therefore demanded patience as well as ingenuity."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r23-q01",
+    "type": "tfng",
+    "prompt": "The 1707 disaster was caused entirely by navigational error.",
+    "answer": "FALSE",
+    "why": "Paragraph B: \"The disaster was blamed partly on navigational error\"."
+   },
+   {
+    "id": "r23-q02",
+    "type": "tfng",
+    "prompt": "Each hour of time difference corresponds to fifteen degrees of longitude.",
+    "answer": "TRUE",
+    "why": "Paragraph A: \"Because the Earth turns by fifteen degrees every hour\"."
+   },
+   {
+    "id": "r23-q03",
+    "type": "tfng",
+    "prompt": "Harrison's first marine timekeepers were small and simple to build.",
+    "answer": "FALSE",
+    "why": "Paragraph D: \"Harrison's early models were large and mechanically complex\"."
+   },
+   {
+    "id": "r23-q04",
+    "type": "tfng",
+    "prompt": "Lunar distance tables were abandoned by captains as soon as chronometers became available.",
+    "answer": "FALSE",
+    "why": "Paragraph E: \"many captains continued to rely on lunar distance tables well into the nineteenth century\"."
+   },
+   {
+    "id": "r23-q05",
+    "type": "tfng",
+    "prompt": "The reward offered by the Longitude Act was worth more than a naval officer's lifetime pay.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph B: \"The reward, set out in an Act of Parliament, was large enough to attract inventors from across Europe\". The passage says the reward was large but never states its value."
+   },
+   {
+    "id": "r23-q06",
+    "type": "features",
+    "prompt": "designed a sequence of marine timekeepers",
+    "options": [
+     "A. the Board of Longitude",
+     "B. astronomers who timed the moons of Jupiter",
+     "C. John Harrison",
+     "D. makers in London, Switzerland and France",
+     "E. captains who used lunar distance tables"
+    ],
+    "answer": "C",
+    "why": "Paragraph D: \"a clockmaker named John Harrison, whose sequence of marine timekeepers culminated in a design\"."
+   },
+   {
+    "id": "r23-q07",
+    "type": "features",
+    "prompt": "doubted that a mechanical device could meet the standard",
+    "options": [
+     "A. the Board of Longitude",
+     "B. astronomers who timed the moons of Jupiter",
+     "C. John Harrison",
+     "D. makers in London, Switzerland and France",
+     "E. captains who used lunar distance tables"
+    ],
+    "answer": "A",
+    "why": "Paragraph D: \"disputes with the Board of Longitude, which doubted that a mechanical device could meet the required standard\"."
+   },
+   {
+    "id": "r23-q08",
+    "type": "features",
+    "prompt": "relied on lunar distance tables and their own calculations",
+    "options": [
+     "A. the Board of Longitude",
+     "B. astronomers who timed the moons of Jupiter",
+     "C. John Harrison",
+     "D. makers in London, Switzerland and France",
+     "E. captains who used lunar distance tables"
+    ],
+    "answer": "E",
+    "why": "Paragraph E: \"many captains continued to rely on lunar distance tables well into the nineteenth century, partly because they trusted their own calculations more than an unfamiliar device\"."
+   },
+   {
+    "id": "r23-q09",
+    "type": "mcq",
+    "prompt": "According to paragraph C, why were astronomical methods difficult at sea?",
+    "options": [
+     "A. The Moon was never visible from a ship.",
+     "B. The images wavered on a moving deck.",
+     "C. Telescopes could not be made small enough.",
+     "D. The tables had been lost."
+    ],
+    "answer": "B",
+    "why": "Paragraph C: \"but they were difficult on a moving deck, where the images wavered\". A, C and D are not stated in the passage."
+   },
+   {
+    "id": "r23-q10",
+    "type": "mcq",
+    "prompt": "What is the writer's main point in paragraph G?",
+    "options": [
+     "A. The longitude problem was solved by a single inventor.",
+     "B. The chronometer was a technical object that also required trust.",
+     "C. Navigators never trusted clocks.",
+     "D. Governments played no part in the solution."
+    ],
+    "answer": "B",
+    "why": "Paragraph G: \"A chronometer was a clock, but it was also a test of trust, in which a navigator had to believe that a machine could be right when the stars were hidden\". D is contradicted by the navies that required chronometers in paragraph F."
+   },
+   {
+    "id": "r23-q11",
+    "type": "short",
+    "prompt": "In what year did a British fleet run aground on the Isles of Scilly?",
+    "answer": [
+     "1707"
+    ],
+    "why": "Paragraph B: \"when a British fleet returning from operations in the Mediterranean ran aground on the rocks of the Isles of Scilly\"."
+   },
+   {
+    "id": "r23-q12",
+    "type": "short",
+    "prompt": "How many degrees of longitude does a four-minute time difference represent?",
+    "answer": [
+     "one degree"
+    ],
+    "why": "Paragraph A: \"a difference of four minutes between the two clocks corresponds to one degree of longitude\"."
+   },
+   {
+    "id": "r23-q13",
+    "type": "sentence",
+    "prompt": "The body that doubted a mechanical device could meet the standard was the Board of ______.",
+    "answer": [
+     "Longitude"
+    ],
+    "why": "Paragraph D: \"disputes with the Board of Longitude, which doubted that a mechanical device could meet the required standard\"."
+   }
+  ]
+ },
+ {
+  "id": "r24",
+  "title": "Collective Choice: How Honeybee Swarms Decide Where to Live",
+  "topic": "Animal behaviour and collective intelligence",
+  "band": 8.5,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "When a honeybee colony outgrows its hive, a large group of workers leaves with the old queen to find a new home. The swarm often settles temporarily on a branch while scouts search the surroundings for a suitable cavity. The choice of new home is one of the most consequential decisions a colony makes, because a poor site can lead to cold winters, exposure to predators or starvation. What is remarkable is that the colony makes this decision without a leader issuing orders. Instead, the choice emerges from the behaviour of many individuals who gather and assess information independently. Beekeepers have long observed swarming, and they sometimes capture a settled swarm in a box to start a new colony. Once the swarm has left, the scouts are typically the bees most likely to fly far from the cluster."
+   },
+   {
+    "label": "B",
+    "text": "The scouts are the first to search. Each one flies out to inspect possible sites, measuring the size, height and entrance of each cavity, and returns to the swarm to perform a waggle dance. The duration of the waggle run conveys information about the distance to the site, and the vigour of the dance is thought to signal its quality. Scouts that have found a promising location may dance for it for many minutes, and other scouts may then investigate and report back. Over time, the number of dancers supporting each option changes, and a few sites come to dominate the discussion. Some scouts report sites that are poor, and their dances may attract only a few followers before the dancing fades. The entire process may take several days, depending on the distance of the candidate sites and the weather."
+   },
+   {
+    "label": "C",
+    "text": "Researchers have shown that the process resembles a voting system in which the decision is reached through a threshold rather than a count of every vote. Once the number of scouts at a site rises above a certain level, workers begin to visit it more frequently and to pipe a signal that tells the rest of the swarm to prepare for departure. This quorum threshold is important, because it means that the colony commits to a single site in a relatively short time, rather than waiting until every scout has reported. Without this commitment, a swarm might split or stay where it is, and both outcomes can be fatal. The threshold is not fixed. It can change with the number of bees available and with the urgency of the situation."
+   },
+   {
+    "label": "D",
+    "text": "The strength of the system lies in its capacity to balance speed and accuracy. Experiments with artificial nest sites have shown that colonies tend to choose the best option among those they investigate, although they do not always find the very best site available. Scouts that visit several locations are more likely to find the best option, but they also take longer. A colony that decides too quickly may settle for an inferior cavity, while a colony that waits too long risks losing the swarm altogether. Experiments of this kind are demanding, because the researchers must control the number and quality of the sites on offer."
+   },
+   {
+    "label": "E",
+    "text": "Individual bees do not need to be clever for this to work. Each scout follows simple rules: it reports a site in proportion to its enthusiasm, it stops dancing for a site when it becomes less attractive, and it may be persuaded by another dancer to visit a new location. A model based on these rules reproduces many features of real swarms, including the way a colony switches its attention between sites. Some scientists have argued that the same principles could guide robots that must cooperate without central control. Each rule is local, meaning that a scout responds only to the dancers it happens to meet, not to the whole swarm."
+   },
+   {
+    "label": "F",
+    "text": "The biology of the colony also shapes the decision. Scouts differ in their willingness to search, and some are more persistent than others. Older bees may have more experience of particular cavity types, while younger bees may be more exploratory. The mix of individuals therefore influences the range of options considered. Where the composition of the swarm is unusual, for example after a colony has lost many experienced foragers, the decision process can change in ways that are not yet fully understood. Researchers have also noted that colonies with different backgrounds can make different choices, even when they face identical sites."
+   },
+   {
+    "label": "G",
+    "text": "The study of swarm decisions has broader implications than the bees themselves. It shows that a group can make a reliable choice without any individual holding complete information, and that good decisions can arise from a combination of exploration, reinforcement and a threshold for action. For human organisations, the lesson is that consensus need not require a central authority, but it does require mechanisms that can turn scattered opinions into a single commitment. The honeybee, in this sense, offers a model of collective intelligence that is both simple in its rules and sophisticated in its results. The honeybee's example therefore encourages organisations to design systems that allow many small decisions to add up to one reliable outcome."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r24-q01",
+    "type": "tfng",
+    "prompt": "Scouts are the first bees to search for a new nest site.",
+    "answer": "TRUE",
+    "why": "Paragraph B: \"The scouts are the first to search.\""
+   },
+   {
+    "id": "r24-q02",
+    "type": "tfng",
+    "prompt": "The queen bee issues orders that decide where the swarm goes.",
+    "answer": "FALSE",
+    "why": "Paragraph A: \"What is remarkable is that the colony makes this decision without a leader issuing orders\"."
+   },
+   {
+    "id": "r24-q03",
+    "type": "tfng",
+    "prompt": "Scouts live longer than foragers in a honeybee colony.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph F: \"Older bees may have more experience of particular cavity types\". The passage discusses experience and age but never states how long scouts or foragers live."
+   },
+   {
+    "id": "r24-q04",
+    "type": "tfng",
+    "prompt": "Honeybee colonies always choose the best nest site available.",
+    "answer": "FALSE",
+    "why": "Paragraph D: \"although they do not always find the very best site available\"."
+   },
+   {
+    "id": "r24-q05",
+    "type": "match",
+    "prompt": "a rule that makes the colony commit quickly to one site",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "C",
+    "why": "Paragraph C: \"This quorum threshold is important, because it means that the colony commits to a single site in a relatively short time\"."
+   },
+   {
+    "id": "r24-q06",
+    "type": "match",
+    "prompt": "how individual bees follow simple rules",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "E",
+    "why": "Paragraph E: \"Individual bees do not need to be clever for this to work. Each scout follows simple rules\"."
+   },
+   {
+    "id": "r24-q07",
+    "type": "match",
+    "prompt": "how the mix of individual bees can alter the process",
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "answer": "F",
+    "why": "Paragraph F: \"The mix of individuals therefore influences the range of options considered\"."
+   },
+   {
+    "id": "r24-q08",
+    "type": "mcq",
+    "prompt": "What does the writer say about the balance between speed and accuracy in paragraph D?",
+    "options": [
+     "A. Colonies always pick the fastest option.",
+     "B. A colony that decides too quickly may settle for an inferior cavity.",
+     "C. Colonies never choose an inferior site.",
+     "D. Speed and accuracy have no effect on each other."
+    ],
+    "answer": "B",
+    "why": "Paragraph D: \"A colony that decides too quickly may settle for an inferior cavity, while a colony that waits too long risks losing the swarm altogether\". The same paragraph says the colony must balance speed and accuracy, which rules out D."
+   },
+   {
+    "id": "r24-q09",
+    "type": "mcq",
+    "prompt": "According to paragraph G, what do human organisations need?",
+    "options": [
+     "A. A reason to abandon consensus.",
+     "B. Mechanisms that turn scattered opinions into a single commitment.",
+     "C. A central authority that gives orders.",
+     "D. Individuals who hold complete information."
+    ],
+    "answer": "B",
+    "why": "Paragraph G: \"consensus need not require a central authority, but it does require mechanisms that can turn scattered opinions into a single commitment\"."
+   },
+   {
+    "id": "r24-q10",
+    "type": "summary",
+    "prompt": "Summary: A colony commits to a site once the number of scouts there passes a ______.",
+    "answer": [
+     "threshold"
+    ],
+    "why": "Paragraph C: \"Once the number of scouts at a site rises above a certain level, workers begin to visit it more frequently\"."
+   },
+   {
+    "id": "r24-q11",
+    "type": "summary",
+    "prompt": "Summary: Scouts signal the quality of a site through the ______ of their dance.",
+    "answer": [
+     "vigour"
+    ],
+    "why": "Paragraph B: \"the vigour of the dance is thought to signal its quality\"."
+   },
+   {
+    "id": "r24-q12",
+    "type": "short",
+    "prompt": "What does the duration of the waggle run convey?",
+    "answer": [
+     "distance"
+    ],
+    "why": "Paragraph B: \"The duration of the waggle run conveys information about the distance to the site\"."
+   },
+   {
+    "id": "r24-q13",
+    "type": "short",
+    "prompt": "What do older bees have more experience of, according to paragraph F?",
+    "answer": [
+     "cavity types"
+    ],
+    "why": "Paragraph F: \"Older bees may have more experience of particular cavity types\"."
+   },
+   {
+    "id": "r24-q14",
+    "type": "sentence",
+    "prompt": "A model based on the scouts' simple rules reproduces many features of real ______.",
+    "answer": [
+     "swarms"
+    ],
+    "why": "Paragraph E: \"A model based on these rules reproduces many features of real swarms\"."
+   }
+  ]
+ },
+ {
+  "id": "r25",
+  "title": "Mauve and the Making of the Chemical Industry",
+  "topic": "History of chemistry and industry",
+  "band": 8,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "In 1856, an eighteen-year-old student named William Perkin was attempting to synthesise quinine, the anti-malarial drug, from coal tar when he obtained a dark, sticky residue that coloured the water in his flask a vivid purple. Perkin recognised that the substance might be useful as a dye, and he developed it into a commercial product within a few years. His discovery, mauveine, was among the first synthetic dyes and marked the beginning of a new relationship between laboratory chemistry and manufacturing. Before this, most colours had been extracted from plants, animals or minerals, often at great cost. His father, who had been a builder, supported the experiments financially. Perkin later built a factory near London, and the early years of production were difficult, with many failed batches and tight margins."
+   },
+   {
+    "label": "B",
+    "text": "Natural dyes had their own limitations. Indigo, one of the most valued blue dyes, was grown in large quantities in India and the Americas, and its production demanded labour, land and considerable skill. Madder, a red dye obtained from the roots of a plant, was similarly extensive in its cultivation. The supply of such dyes was seasonal and subject to the weather, and the price could fluctuate sharply. Synthetic dyes promised a steadier and cheaper source of colour, and they soon began to replace many natural products in the textile trade. Natural dye merchants sometimes adulterated their products, which made quality difficult to judge before the cloth had been dyed."
+   },
+   {
+    "label": "C",
+    "text": "The chemistry of coal tar was the key to this transformation. Coal tar, a by-product of coal gas production, contains a complex mixture of aromatic compounds, and chemists in the nineteenth century learned to isolate and modify some of them. Aniline, derived from benzene, became a starting material for a large family of dyes. The dye chemists who followed Perkin developed techniques for adding chemical groups to these molecules, changing their colour, fastness and affinity for particular fibres. Each change could be patented, and this encouraged firms to invest heavily in research laboratories. Several of the new compounds were named after the colours they produced, and the names quickly became part of everyday commercial language. By the end of the century, the German and Swiss producers dominated many of these markets."
+   },
+   {
+    "label": "D",
+    "text": "The relationship between science and industry also changed the way companies operated. German firms in particular built large research departments, employing trained chemists who worked on systematic programmes rather than relying on the chance discoveries of individuals. These laboratories were designed to explore families of compounds, to test their properties and to scale up production when a promising molecule was found. The result was a steady flow of new products, which gave the firms a lead over competitors who lacked comparable research capacity. Chemists trained in these laboratories often moved between firms, and their skills spread the methods of organic chemistry across the industry."
+   },
+   {
+    "label": "E",
+    "text": "The growth of the dye industry had consequences beyond the factory. The new colours spread quickly through fashion, and the mass availability of bright, inexpensive fabrics changed what ordinary people wore. At the same time, the chemical industry generated waste, including residues that polluted rivers near dye works. Early regulation was limited, and it was often left to local authorities to decide what was acceptable. The disputes that followed were an early sign of the environmental tensions that would later accompany the chemical industry as a whole. Municipal councils often discovered the problem only when fish died or water turned coloured, and by then the damage could be considerable. Local residents sometimes complained for years before any action was taken."
+   },
+   {
+    "label": "F",
+    "text": "The dye industry also raised questions about safety. Some early synthetic compounds were later found to be harmful, and the health of workers who handled aromatic amines was of particular concern. Investigations in the late nineteenth and early twentieth centuries documented bladder cancers among workers in certain dye factories, and this evidence eventually led to restrictions on the use of some compounds. The history is a reminder that the chemistry that produced colour could also produce harm, and that the benefits of innovation depend on how its risks are managed. Workers' compensation schemes were slow to develop, and many affected men received little support before the courts became involved. Eventually, legal limits on certain aromatic amines were introduced in several countries."
+   },
+   {
+    "label": "G",
+    "text": "Perkin's accident is therefore often told as a story of luck, but it is better understood as an early example of a larger shift. Discoveries that began in a laboratory became products, and products became the basis for companies that funded further research. The dye industry showed that chemistry could be organised as a productive enterprise, and that its outputs could reshape everyday life. It also established patterns that would recur in pharmaceuticals, plastics and fertilisers, in which an accidental observation was turned into a system. The lesson for modern readers is that the origins of many industries lie in ordinary laboratory work carried out with no clear commercial purpose."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r25-q01",
+    "type": "tfng",
+    "prompt": "Perkin was trying to make a dye when he discovered mauveine.",
+    "answer": "FALSE",
+    "why": "Paragraph A: \"was attempting to synthesise quinine, the anti-malarial drug, from coal tar\"."
+   },
+   {
+    "id": "r25-q02",
+    "type": "tfng",
+    "prompt": "Indigo was grown only in Europe.",
+    "answer": "FALSE",
+    "why": "Paragraph B: \"was grown in large quantities in India and the Americas\"."
+   },
+   {
+    "id": "r25-q03",
+    "type": "tfng",
+    "prompt": "German chemists were paid higher wages than British chemists.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph D: \"German firms in particular built large research departments, employing trained chemists\". The passage describes the research departments but says nothing about pay."
+   },
+   {
+    "id": "r25-q04",
+    "type": "tfng",
+    "prompt": "Dye chemists could patent the changes they made to molecules.",
+    "answer": "TRUE",
+    "why": "Paragraph C: \"Each change could be patented, and this encouraged firms to invest heavily in research laboratories\"."
+   },
+   {
+    "id": "r25-q05",
+    "type": "features",
+    "prompt": "built large research departments staffed by trained chemists",
+    "options": [
+     "A. Perkin",
+     "B. German firms",
+     "C. local authorities",
+     "D. workers who handled aromatic amines"
+    ],
+    "answer": "B",
+    "why": "Paragraph D: \"German firms in particular built large research departments, employing trained chemists\"."
+   },
+   {
+    "id": "r25-q06",
+    "type": "features",
+    "prompt": "suffered bladder cancers linked to certain compounds",
+    "options": [
+     "A. Perkin",
+     "B. German firms",
+     "C. local authorities",
+     "D. workers who handled aromatic amines"
+    ],
+    "answer": "D",
+    "why": "Paragraph F: \"documented bladder cancers among workers in certain dye factories\"."
+   },
+   {
+    "id": "r25-q07",
+    "type": "mcq",
+    "prompt": "What does the writer suggest about Perkin's discovery in paragraph G?",
+    "options": [
+     "A. It was the result of careful planning.",
+     "B. It is better understood as an early example of a larger shift.",
+     "C. It had no effect on other industries.",
+     "D. It was made possible by natural dyes."
+    ],
+    "answer": "B",
+    "why": "Paragraph G: \"Perkin's accident is therefore often told as a story of luck, but it is better understood as an early example of a larger shift\". A is contradicted by the word accident and the story of luck."
+   },
+   {
+    "id": "r25-q08",
+    "type": "mcq",
+    "prompt": "According to paragraph E, what was one consequence of the growth of the dye industry?",
+    "options": [
+     "A. Fashion stopped changing.",
+     "B. Rivers near dye works were sometimes polluted.",
+     "C. Governments banned all synthetic dyes.",
+     "D. Natural dyes became more popular."
+    ],
+    "answer": "B",
+    "why": "Paragraph E: \"residues that polluted rivers near dye works\". A is contradicted by \"The new colours spread quickly through fashion\"; C by \"Early regulation was limited\"; D by \"replace many natural products\" in paragraph B."
+   },
+   {
+    "id": "r25-q09",
+    "type": "table",
+    "prompt": "Table, Dye sources: Indigo was grown in large quantities in ______ and the Americas.",
+    "answer": [
+     "India"
+    ],
+    "why": "Paragraph B: \"Indigo, one of the most valued blue dyes, was grown in large quantities in India and the Americas\"."
+   },
+   {
+    "id": "r25-q10",
+    "type": "summary",
+    "prompt": "Summary: The dye chemistry that followed Perkin depended on coal ______, a by-product of coal gas production.",
+    "answer": [
+     "tar"
+    ],
+    "why": "Paragraph C: \"Coal tar, a by-product of coal gas production, contains a complex mixture of aromatic compounds\"."
+   },
+   {
+    "id": "r25-q11",
+    "type": "summary",
+    "prompt": "Summary: Early regulation of waste from dye works was ______.",
+    "answer": [
+     "limited"
+    ],
+    "why": "Paragraph E: \"Early regulation was limited, and it was often left to local authorities to decide what was acceptable\"."
+   },
+   {
+    "id": "r25-q12",
+    "type": "short",
+    "prompt": "What colour was the substance that Perkin obtained in his flask?",
+    "answer": [
+     "purple"
+    ],
+    "why": "Paragraph A: \"coloured the water in his flask a vivid purple\"."
+   },
+   {
+    "id": "r25-q13",
+    "type": "short",
+    "prompt": "What was the name of Perkin's dye?",
+    "answer": [
+     "mauveine"
+    ],
+    "why": "Paragraph A: \"His discovery, mauveine, was among the first synthetic dyes\"."
+   }
+  ]
+ },
+ {
+  "id": "r26",
+  "title": "Time Felt and Time Measured: The Psychology of Waiting in Line",
+  "topic": "Psychology and service design",
+  "band": 8,
+  "paragraphs": [
+   {
+    "label": "A",
+    "text": "Few experiences are as universally disliked as waiting in a queue. People tolerate delays at the bank, the supermarket or the airport with varying degrees of patience, yet the same few minutes can feel very different depending on circumstances. Service managers have long known that the length of a wait matters less than the way it is experienced. A queue that feels fair, comfortable and predictable is often more acceptable than a shorter queue that seems chaotic, and researchers have begun to examine why this is so. Their work has led to a body of ideas that designers now apply to everything from theme parks to hospital waiting rooms. Many people can recall a queue that felt endless even though it was short, and a queue that passed quickly despite its length."
+   },
+   {
+    "label": "B",
+    "text": "One influential set of observations concerns the perception of time itself. Waiting that is unoccupied tends to seem longer than waiting that is filled with activity, and waiting that is uncertain seems longer than waiting whose duration is known. A person who does not know how long a delay will last may feel that every minute is excessive, while someone told that the wait will be twenty minutes may accept it more calmly. Designers have exploited this by showing estimated waiting times on screens and by placing mirrors, music or information boards where people queue. Some researchers have also noted that the first minutes of a wait often feel longer than the last minutes, because attention is drawn to the delay early on."
+   },
+   {
+    "label": "C",
+    "text": "The sense of fairness is equally important. Queues that allow people to be served in the order in which they arrived are generally seen as legitimate, while systems that let some customers jump ahead provoke resentment, even when the people who jump have good reasons. Studies of ticket queues and check-in desks have found that visible unfairness can make people angry out of proportion to the actual delay they experience. Many organisations have responded by introducing single lines that feed several service points, a design that tends to be perceived as fairer than separate lines for each counter. Staff who explain the rules of a queue, and who treat people with courtesy, can often reduce the sense of unfairness even when the system remains the same."
+   },
+   {
+    "label": "D",
+    "text": "Comfort and environment affect how long a wait seems. Standing in a cramped space with little shelter from heat or noise makes waiting feel more burdensome, and a poorly lit or crowded area can increase anxiety. The presence of other people can be reassuring in some situations and irritating in others. A queue of strangers who appear calm may reduce tension, whereas a crowd that jostles and pushes can make even a short wait feel intolerable. The physical design of a waiting area therefore shapes the emotional experience of the people within it, even when the actual delay is unchanged. Noise from music, announcements and other customers can also change how time is experienced, and some venues deliberately use calm colours and soft lighting."
+   },
+   {
+    "label": "E",
+    "text": "Waiting also carries an expectation of value. People who have paid for a service often expect to be served quickly, and a delay can seem like a sign of poor management. When the wait is unexpected, the customer may attribute the delay to carelessness rather than to demand or circumstances beyond the provider's control. Explaining the reason for a delay can therefore change how it is judged. A brief announcement that a system is under heavy load, for example, may reduce complaints even though the queue is not shorter. Customers who receive regular updates often report higher satisfaction than those who wait in silence, even when the total time is identical."
+   },
+   {
+    "label": "F",
+    "text": "Researchers have tried to put these ideas into a practical framework. One approach distinguishes between the objective duration of a wait and the subjective experience of it, and it suggests that managers should focus on the features that most affect the second. These include the presence of distraction, the transparency of the process, the fairness of the order and the perceived value of the service. Because each of these factors can be changed without adding staff, they offer a way to improve experience at low cost. Designers who apply these principles often test their proposals with small groups before making any permanent changes to a building or system."
+   },
+   {
+    "label": "G",
+    "text": "Waiting is, in the end, a test of how an organisation treats its customers. The minutes that pass in a queue are fixed by capacity, but the meaning of those minutes is shaped by information, fairness and comfort. A well-designed wait can leave people feeling respected even when they are delayed, while a poorly designed one can damage trust long after the queue has moved. For designers, the challenge is to remember that time is experienced, not merely measured. The best waiting systems, in other words, respect both the clock and the customer, and they are judged more by how they feel than by how they are measured."
+   }
+  ],
+  "questions": [
+   {
+    "id": "r26-q01",
+    "type": "tfng",
+    "prompt": "Waiting seems longer when it is filled with activity.",
+    "answer": "FALSE",
+    "why": "Paragraph B: \"Waiting that is unoccupied tends to seem longer than waiting that is filled with activity\"."
+   },
+   {
+    "id": "r26-q02",
+    "type": "tfng",
+    "prompt": "People accept a delay more calmly when they know how long it will last.",
+    "answer": "TRUE",
+    "why": "Paragraph B: \"someone told that the wait will be twenty minutes may accept it more calmly\"."
+   },
+   {
+    "id": "r26-q03",
+    "type": "tfng",
+    "prompt": "Single lines are the cheapest option for organisations.",
+    "answer": "NOT GIVEN",
+    "why": "Paragraph C: \"a design that tends to be perceived as fairer than separate lines for each counter\". The passage discusses fairness but never discusses cost."
+   },
+   {
+    "id": "r26-q04",
+    "type": "tfng",
+    "prompt": "Jostling crowds make even short waits feel more tolerable.",
+    "answer": "FALSE",
+    "why": "Paragraph D: \"a crowd that jostles and pushes can make even a short wait feel intolerable\"."
+   },
+   {
+    "id": "r26-q05",
+    "type": "heading",
+    "prompt": "Paragraph C",
+    "options": [
+     "i. Why explaining a delay can change how it is judged",
+     "ii. How the setting of a queue affects comfort",
+     "iii. Why fairness matters to people in a line",
+     "iv. How uncertainty stretches the perceived wait",
+     "v. A history of queueing in cities",
+     "vi. The cost of staffing service counters",
+     "vii. Why waiting is linked to health outcomes",
+     "viii. Designs that reduce the number of visitors"
+    ],
+    "answer": "iii",
+    "why": "Paragraph C: \"Queues that allow people to be served in the order in which they arrived are generally seen as legitimate\". Heading iii."
+   },
+   {
+    "id": "r26-q06",
+    "type": "heading",
+    "prompt": "Paragraph D",
+    "options": [
+     "i. Why explaining a delay can change how it is judged",
+     "ii. How the setting of a queue affects comfort",
+     "iii. Why fairness matters to people in a line",
+     "iv. How uncertainty stretches the perceived wait",
+     "v. A history of queueing in cities",
+     "vi. The cost of staffing service counters",
+     "vii. Why waiting is linked to health outcomes",
+     "viii. Designs that reduce the number of visitors"
+    ],
+    "answer": "ii",
+    "why": "Paragraph D: \"Standing in a cramped space with little shelter from heat or noise makes waiting feel more burdensome\". Heading ii."
+   },
+   {
+    "id": "r26-q07",
+    "type": "heading",
+    "prompt": "Paragraph E",
+    "options": [
+     "i. Why explaining a delay can change how it is judged",
+     "ii. How the setting of a queue affects comfort",
+     "iii. Why fairness matters to people in a line",
+     "iv. How uncertainty stretches the perceived wait",
+     "v. A history of queueing in cities",
+     "vi. The cost of staffing service counters",
+     "vii. Why waiting is linked to health outcomes",
+     "viii. Designs that reduce the number of visitors"
+    ],
+    "answer": "i",
+    "why": "Paragraph E: \"Explaining the reason for a delay can therefore change how it is judged\". Heading i."
+   },
+   {
+    "id": "r26-q08",
+    "type": "mcq",
+    "prompt": "What is the writer's main point in paragraph G?",
+    "options": [
+     "A. Waiting time is set only by the number of staff.",
+     "B. Information, fairness and comfort shape how a wait is experienced.",
+     "C. Long waits never damage trust.",
+     "D. Designers should avoid all queues."
+    ],
+    "answer": "B",
+    "why": "Paragraph G: \"The minutes that pass in a queue are fixed by capacity, but the meaning of those minutes is shaped by information, fairness and comfort\". C is contradicted by \"can damage trust long after the queue has moved\"."
+   },
+   {
+    "id": "r26-q09",
+    "type": "mcq",
+    "prompt": "According to paragraph E, why might a delay be judged harshly?",
+    "options": [
+     "A. Customers expect value and may blame carelessness.",
+     "B. Staff always ignore complaints.",
+     "C. Announcements make queues longer.",
+     "D. Queues are always unfair."
+    ],
+    "answer": "A",
+    "why": "Paragraph E: \"People who have paid for a service often expect to be served quickly\" and \"the customer may attribute the delay to carelessness\". D is contradicted by the statement that a fair queue is more acceptable."
+   },
+   {
+    "id": "r26-q10",
+    "type": "short",
+    "prompt": "What emotion can visible unfairness provoke, according to paragraph C?",
+    "answer": [
+     "resentment"
+    ],
+    "why": "Paragraph C: \"systems that let some customers jump ahead provoke resentment\"."
+   },
+   {
+    "id": "r26-q11",
+    "type": "short",
+    "prompt": "What does a well-designed wait leave people feeling, according to the final paragraph?",
+    "answer": [
+     "respected"
+    ],
+    "why": "Paragraph G: \"A well-designed wait can leave people feeling respected even when they are delayed\"."
+   },
+   {
+    "id": "r26-q12",
+    "type": "sentence",
+    "prompt": "Waiting that is ______ tends to seem longer than waiting that is filled with activity.",
+    "answer": [
+     "unoccupied"
+    ],
+    "why": "Paragraph B: \"Waiting that is unoccupied tends to seem longer than waiting that is filled with activity\"."
+   },
+   {
+    "id": "r26-q13",
+    "type": "sentence",
+    "prompt": "A brief announcement may reduce complaints even though the queue is not ______.",
+    "answer": [
+     "shorter"
+    ],
+    "why": "Paragraph E: \"may reduce complaints even though the queue is not shorter\"."
+   }
+  ]
+ }
+]
