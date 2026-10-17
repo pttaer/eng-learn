@@ -173,7 +173,7 @@ h2, h3, h4, p, ul, ol, figure { margin: 0; }
 .ie-count-badge em { font-style: normal; color: var(--ink-primary); font-weight: 600; }
 
 .ie-strategy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--space-16); }
-.ie-strategy-card { display: flex; flex-direction: column; gap: var(--space-12); padding: var(--space-16); background: var(--bg-card); border: 1px solid var(--border-hairline); border-radius: 12px; transition: border-color 0.2s ease, box-shadow 0.2s ease; cursor: default; }
+.ie-strategy-card { min-width: 0; display: flex; flex-direction: column; gap: var(--space-12); padding: var(--space-16); background: var(--bg-card); border: 1px solid var(--border-hairline); border-radius: 12px; transition: border-color 0.2s ease, box-shadow 0.2s ease; cursor: default; }
 .ie-strategy-card:hover { border-color: var(--border-subtle); }
 .ie-strategy-card.is-open { border-color: var(--accent-cyan); background: var(--bg-surface); box-shadow: var(--shadow-card); }
 
@@ -265,7 +265,7 @@ h2, h3, h4, p, ul, ol, figure { margin: 0; }
 @media (max-width: 768px) {
   .ie-strategy-actions { flex-direction: column; align-items: stretch; }
   .ie-search-box { width: 100%; }
-  .ie-strategy-grid { grid-template-columns: 1fr; }
+  .ie-strategy-grid { grid-template-columns: minmax(0, 1fr); }
   .ie-formula-components, .ie-workbench-rules { grid-template-columns: 1fr; }
   .ie-eval-top { flex-direction: column; align-items: flex-start; }
 }
