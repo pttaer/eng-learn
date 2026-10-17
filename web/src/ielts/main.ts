@@ -4,6 +4,7 @@ import { readingDrillsView } from './views/reading-drills';
 import { listeningView } from './views/listening';
 import { writingView } from './views/writing';
 import { speakingView } from './views/speaking';
+import { pathView } from './views/path';
 import { vocabView } from './views/vocab';
 import { speakingSimulatorView } from './views/speaking-simulator';
 import { mockView, report } from './views/mock';
@@ -92,6 +93,7 @@ const ALL_ROUTES: RouteItem[] = [
   { id: 'speaking', label: 'Speaking', parentNavId: 'speaking', subnavGroup: 'speaking', view: speakingView },
   { id: 'speaking-simulator', label: 'Speaking Simulator', parentNavId: 'speaking', subnavGroup: 'speaking', view: speakingSimulatorView },
   { id: 'vocab', label: 'Vocabulary', parentNavId: 'vocab', view: vocabView },
+  { id: 'path', label: 'Study path', parentNavId: 'home', view: pathView },
   { id: 'strategy', label: 'Strategy', parentNavId: 'strategy', view: strategyView },
   { id: 'mock', label: 'Mock tests', parentNavId: 'mock', view: mockView }
 ];
@@ -121,6 +123,13 @@ function homeSuites(): HTMLElement {
   const cards = h('div', 'ie-cards ie-cards-wide');
 
   const SUITES = [
+    {
+      title: 'Guided 7.0 Path',
+      badge: 'Plan',
+      desc: 'Your 12-24 week roadmap from placement, weakest-skill focus and a readiness gate for each skill.',
+      primaryLink: '#path',
+      primaryText: 'Open study path'
+    },
     {
       title: 'Diagnostic Checkpoint',
       badge: 'Benchmark',
