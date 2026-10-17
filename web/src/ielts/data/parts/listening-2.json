@@ -117,12 +117,12 @@
    {
     "id": "l2-s1-q01",
     "type": "complete",
-    "prompt": "The customer's name is spelled C, A, T, H, E, R, I, N, E ___________",
+    "prompt": "The customer's surname is spelled:",
     "answer": [
      "Richardson",
      "richardson"
     ],
-    "why": "The customer says 'It's Catherine Richardson. That's C, A, T, H, E, R, I, N, E.' The first name spelling is given in the introduction but the last name Richardson is stated directly after."
+    "why": "The customer introduces herself: 'It's Catherine Richardson. That's C, A, T, H, E, R, I, N, E.' She spells her first name letter-by-letter, and states her surname is Richardson."
    },
    {
     "id": "l2-s1-q02",
@@ -147,16 +147,15 @@
    },
    {
     "id": "l2-s1-q04",
-    "type": "mcq",
-    "prompt": "When the customer first gives the phone number, what does she say initially?",
-    "options": [
-     "A. Oh seven six four double two double four one nine",
-     "B. Oh seven six four double three double four one nine",
-     "C. Oh seven six four double two double three one nine",
-     "D. Oh seven six four double two double four eight nine"
+    "type": "complete",
+    "prompt": "According to the technician, when will the customer receive the email report after the visit?",
+    "answer": [
+     "within two business days",
+     "within 2 business days",
+     "two business days",
+     "within two working days"
     ],
-    "answer": "A",
-    "why": "Customer states 'oh seven six four double two double four one nine' first, then corrects herself saying 'Let me check that again. It's oh seven six four double two double four eight nine, not one nine.' Option A is the incorrect initial number; options B and C are distractors that don't match either version."
+    "why": "The technician states: 'We'll give you a detailed report on the day, and we can also email it to you within two business days if you provide your email address.' This is the stated timeframe for the email copy of the report."
    },
    {
     "id": "l2-s1-q05",
@@ -194,13 +193,13 @@
     "type": "mcq",
     "prompt": "What additional cost might apply?",
     "options": [
-     "A. A charge for credit card payment",
-     "B. A charge if repairs are needed",
+     "A. A charge if repairs are needed",
+     "B. A charge for credit card payment",
      "C. A charge for emergency appointment",
      "D. A charge for technician travel time"
     ],
-    "answer": "B",
-    "why": "Technician says 'if you need any repairs, there would be an additional charge.' Option A is ruled out because credit card payment is mentioned but no fee is stated. Options C and D are not mentioned."
+    "answer": "A",
+    "why": "Technician says 'if you need any repairs, there would be an additional charge.' Option B is ruled out because credit card payment is mentioned but no fee is stated. Options C and D are not mentioned."
    },
    {
     "id": "l2-s1-q09",
@@ -208,11 +207,11 @@
     "prompt": "Which payment methods are accepted?",
     "options": [
      "A. Bank transfer or cash only",
-     "B. Credit cards or cheque only",
-     "C. All major credit cards or bank transfer",
+     "B. All major credit cards or bank transfer",
+     "C. Credit cards or cheque only",
      "D. All major credit cards only"
     ],
-    "answer": "C",
+    "answer": "B",
     "why": "Technician explicitly states 'Yes, we accept all major credit cards or bank transfer.' Options A, B, and D are incomplete or inaccurate."
    },
    {
@@ -221,11 +220,11 @@
     "prompt": "What does the technician say about the boiler model number?",
     "options": [
      "A. It is essential and must be provided before the visit",
-     "B. It is helpful but not required; the technician will identify it",
-     "C. It is only needed if repairs are expected",
+     "B. It is only needed if repairs are expected",
+     "C. It is helpful but not required; the technician will identify it",
      "D. It should be provided with the credit card on the day"
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "Technician says 'It would help if you could find the model number, but if you can't, don't worry. Our technician will identify it on the day.' This clearly indicates it is helpful but not required. Options A, C, and D misrepresent this."
    }
   ]
@@ -290,11 +289,11 @@
     "prompt": "Where should visitors start their tour according to the guide?",
     "options": [
      "A. Gallery Two",
-     "B. Gallery One",
-     "C. Gallery Three",
-     "D. Gallery Four"
+     "B. Gallery Three",
+     "C. Gallery Four",
+     "D. Gallery One"
     ],
-    "answer": "B",
+    "answer": "D",
     "why": "Guide states 'We recommend you start at Gallery One, where you will find the earliest locomotives from the eighteen sixties.' Options A, C, and D are later galleries not recommended as starting points."
    },
    {
@@ -316,11 +315,11 @@
     "prompt": "What was the extent of British railway network growth between 1870 and 1900?",
     "options": [
      "A. From one thousand to five thousand miles",
-     "B. From five thousand to over twenty thousand miles",
-     "C. From ten thousand to twenty thousand miles",
+     "B. From ten thousand to twenty thousand miles",
+     "C. From five thousand to over twenty thousand miles",
      "D. From two thousand to fifteen thousand miles"
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "Guide explicitly states 'Between eighteen seventy and nineteen hundred, the British railway network grew from five thousand miles to over twenty thousand miles.' Options A, C, and D contain incorrect numbers or date ranges."
    },
    {
@@ -328,18 +327,18 @@
     "type": "mcq",
     "prompt": "In which gallery will visitors find the signal box?",
     "options": [
-     "A. Gallery One",
-     "B. Gallery Two",
+     "A. Gallery Two",
+     "B. Gallery One",
      "C. Gallery Three",
      "D. Gallery Four"
     ],
-    "answer": "B",
+    "answer": "A",
     "why": "The guide says \"The signal box at the far end of Gallery Two demonstrates how train schedules were managed\"; Gallery One holds the earliest locomotives and Gallery Three the Flying Scotsman."
    },
    {
     "id": "l2-s2-q05",
     "type": "complete",
-    "prompt": "The signal box demonstrates how train schedules were managed using ___________ levers.",
+    "prompt": "In the signal box, workers controlled the track switches with _______ levers.",
     "answer": [
      "heavy"
     ],
@@ -348,56 +347,56 @@
    {
     "id": "l2-s2-q06",
     "type": "complete",
-    "prompt": "The Flying Scotsman was introduced in ___________ and achieved speeds over ninety miles per hour.",
+    "prompt": "The express train known as the Flying Scotsman first entered service in _______.",
     "answer": [
-     "nineteen twenty-three",
-     "1923"
+      "nineteen twenty-three",
+      "1923"
     ],
     "why": "Guide says 'The Flying Scotsman was introduced in nineteen twenty-three and became a symbol of luxury rail travel' and earlier mentions it 'regularly achieved speeds of over ninety miles per hour.'"
    },
    {
     "id": "l2-s2-q07",
     "type": "complete",
-    "prompt": "The evolution from mechanical to ___________ signals marks a major turning point in railway safety.",
+    "prompt": "Key advance in railway safety: transition from mechanical to ___________ signals",
     "answer": [
      "electric"
     ],
-    "why": "Guide states 'The evolution from mechanical signals to electric signals marks a major turning point in railway safety and efficiency.'"
+    "why": "The guide explains 'The evolution from mechanical signals to electric signals marks a major turning point in railway safety and efficiency.' Electric signals represent the technological advancement."
    },
    {
     "id": "l2-s2-q08",
     "type": "mcq",
     "prompt": "Why could modern diesel and electric locomotives be considered superior to steam engines?",
     "options": [
-     "A. They could haul lighter loads more quickly",
-     "B. They could haul heavier loads with greater fuel efficiency",
-     "C. They required more maintenance and skilled operators",
-     "D. They could only be used for passenger trains, not freight"
+     "A. They could operate faster speeds with smoother acceleration",
+     "B. They required less complex engineering and fewer parts",
+     "C. They could function reliably in all weather conditions",
+     "D. They could haul heavier loads with greater fuel efficiency"
     ],
-    "answer": "B",
-    "why": "Guide explains 'These engines could haul heavier loads with far greater fuel efficiency compared to steam engines.' Option A reverses the advantage; options C and D misrepresent the facts."
+    "answer": "D",
+    "why": "The guide explicitly states 'These engines could haul heavier loads with far greater fuel efficiency compared to steam engines.' Option D directly cites this advantage. The other options, while plausible improvements, are not mentioned in the audio guide."
    },
    {
     "id": "l2-s2-q09",
     "type": "complete",
-    "prompt": "Refreshments are available in the café on the upper ___________ level.",
+    "prompt": "Café location: upper ___________ level",
     "answer": [
      "mezzanine"
     ],
-    "why": "Guide states at the end 'refreshments are available in the café on the upper mezzanine level.'"
+    "why": "The guide says 'refreshments are available in the café on the upper mezzanine level.' Mezzanine is the level named."
    },
    {
     "id": "l2-s2-q10",
     "type": "mcq",
     "prompt": "Where is the museum shop located?",
     "options": [
-     "A. On the upper mezzanine",
-     "B. In Gallery Four",
-     "C. By the main entrance",
+     "A. By the main entrance",
+     "B. On the upper mezzanine",
+     "C. In Gallery Four",
      "D. In the interactive section"
     ],
-    "answer": "C",
-    "why": "Guide states 'The museum shop is located by the main entrance.' Option A refers to the café location; option B is Gallery Four location; option D is the interactive section."
+    "answer": "A",
+    "why": "Guide states 'The museum shop is located by the main entrance.' Option B is the café on the upper mezzanine, C is Gallery Four and D is the interactive section."
    }
   ]
  },
@@ -508,51 +507,51 @@
      "D. They changed from one reef to studying five different reefs"
     ],
     "answer": "B",
-    "why": "David states 'we were initially thinking about surveying multiple reef sites, but after reviewing the literature, we think focusing on one reef with multiple depth zones would be more manageable.' Options A reverses the change; options C and D misrepresent the actual revision."
+    "why": "David says 'after reviewing the literature, we think focusing on one reef with multiple depth zones would be more manageable.' Option A reverses the change; C and D misstate what they studied."
    },
    {
     "id": "l2-s3-q02",
     "type": "complete",
-    "prompt": "Amira changed her mind about including ___________ coverage in the study.",
+    "prompt": "Variable initially debated but then accepted: __________ coverage",
     "answer": [
      "algae"
     ],
-    "why": "Amira says 'Actually, I think algae coverage is crucial. Algae competes with coral for resources, so it's relevant to understanding reef resilience. I changed my mind about that.' She explicitly changed her position on including algae coverage."
+    "why": "Amira says 'Actually, I think algae coverage is crucial. Algae competes with coral for resources, so it's relevant to understanding reef resilience. I changed my mind about that.' Algae coverage became an agreed-upon measurement variable."
    },
    {
     "id": "l2-s3-q03",
     "type": "complete",
-    "prompt": "The students will collect data along a ___________-meter transect line at each depth.",
+    "prompt": "Transect line length used at each depth, in meters: _______",
     "answer": [
-     "fifty",
-     "50"
+      "fifty",
+      "50"
     ],
-    "why": "David states 'We'll use underwater photography and measurements along a fifty-meter transect line at each depth.'"
+    "why": "David describes the measurement protocol: 'We'll use underwater photography and measurements along a fifty-meter transect line at each depth.' Fifty meters is the transect line length."
    },
    {
     "id": "l2-s3-q04",
     "type": "mcq",
-    "prompt": "What initial method did the students consider for data collection?",
+    "prompt": "Which of the following methods did the students consider but ultimately reject?",
     "options": [
-     "A. Sending divers with electronic sensors",
-     "B. Using a submarine",
-     "C. Sending underwater robots",
-     "D. Using satellite imagery"
+     "A. Collecting underwater photography and transect measurements",
+     "B. Using fish traps to sample species composition",
+     "C. Using a submarine for deep-water observation",
+     "D. Comparing data with historical studies from the same reef"
     ],
-    "answer": "B",
-    "why": "Amira says 'We initially thought about using a submarine, but that's not realistic.' Options A, C, and D are not mentioned as initially considered methods."
+    "answer": "C",
+    "why": "Amira states 'We initially thought about using a submarine, but that's not realistic.' Options B and C are methods the students decided to use; option D is their comparison approach. Only option C represents a method they considered and rejected."
    },
    {
     "id": "l2-s3-q05",
     "type": "mcq",
     "prompt": "Why is the dry season chosen for fieldwork?",
     "options": [
-     "A. Because fewer fish are present at that time",
-     "B. Because water visibility is best",
+     "A. Because water visibility is best",
+     "B. Because fewer fish are present at that time",
      "C. Because water temperature is warmer",
      "D. Because funding is available only in that season"
     ],
-    "answer": "B",
+    "answer": "A",
     "why": "David explains 'We'd aim for September through November' and says 'spread across the dry season when water visibility is best.' Options A, C, and D are not mentioned as reasons."
    },
    {
@@ -580,10 +579,10 @@
     "options": [
      "A. Computer models predicting reef change",
      "B. Data from an adjacent healthy reef",
-     "C. Historical data from the same site collected five years prior",
-     "D. Laboratory samples of coral tissue"
+     "C. Laboratory samples of coral tissue",
+     "D. Historical data from the same site collected five years prior"
     ],
-    "answer": "C",
+    "answer": "D",
     "why": "Amira explains 'We're planning to compare current data with historical data from studies conducted at the same site five years ago. That will show us changes over time.' Options A, B, and D do not reflect the actual control method."
    },
    {
@@ -603,11 +602,11 @@
    {
     "id": "l2-s3-q10",
     "type": "complete",
-    "prompt": "Published studies on the same reef from twenty twenty-one provide ___________ data for the research.",
+    "prompt": "Function of prior studies from 2021: provides __________ data for comparison",
     "answer": [
      "baseline"
     ],
-    "why": "David states 'We found three published studies on the same reef from twenty twenty-one, so we have baseline data to reference.' Baseline is the term used to describe this foundational reference data."
+    "why": "David explains 'We found three published studies on the same reef from twenty twenty-one, so we have baseline data to reference.' Baseline data serves as the comparison point for measuring reef changes over time."
    }
   ]
  },
@@ -692,7 +691,7 @@
    {
     "id": "l2-s4-q01",
     "type": "complete",
-    "prompt": "Before the twentieth century, many inventors attempted flying machines based on ___________-wing designs.",
+    "prompt": "Early aviation concept: ___________ -wing designs mimicking birds",
     "answer": [
      "flapping"
     ],
@@ -701,7 +700,7 @@
    {
     "id": "l2-s4-q02",
     "type": "complete",
-    "prompt": "Sir George Cayley established three essential elements for sustained flight: a light structure, a powerful engine, and an understanding of ___________ and drag forces.",
+    "prompt": "Cayley identified three essentials for flight: structure, engine, and understanding of ___________ and drag",
     "answer": [
      "lift"
     ],
@@ -710,7 +709,7 @@
    {
     "id": "l2-s4-q03",
     "type": "complete",
-    "prompt": "Cayley's experiments showed that ___________, or cambered, wings produced more lift than flat surfaces.",
+    "prompt": "Wing efficiency breakthrough: ___________ (cambered) wings superior to flat design",
     "answer": [
      "curved"
     ],
@@ -719,36 +718,36 @@
    {
     "id": "l2-s4-q04",
     "type": "complete",
-    "prompt": "The main obstacle to progress in the nineteenth century was the lack of a suitable ___________ ___________.",
+    "prompt": "19th-century aviation barrier: unavailability of ___________ ___________ (2 words)",
     "answer": [
      "lightweight engine",
      "light weight engine"
     ],
-    "why": "Lecturer states 'The main obstacle was the lack of a suitable lightweight engine.' The phrase 'lightweight engine' must be completed to answer why steam engines were insufficient."
+    "why": "Lecturer states 'The main obstacle was the lack of a suitable lightweight engine.' This technological limitation prevented aircraft development during the 1800s."
    },
    {
     "id": "l2-s4-q05",
     "type": "complete",
-    "prompt": "The Wright brothers conducted hundreds of ___________ ___________ experiments to understand aerodynamic forces.",
+    "prompt": "Wright brothers' research method: hundreds of ___________ ___________ experiments (2 words)",
     "answer": [
      "wind tunnel",
      "wind-tunnel"
     ],
-    "why": "Lecturer says 'They conducted hundreds of wind tunnel experiments to understand aerodynamic forces.' 'Wind tunnel' completes the description of their experimental method."
+    "why": "Lecturer says 'They conducted hundreds of wind tunnel experiments to understand aerodynamic forces.' This systematic approach distinguished their work from previous aviation attempts."
    },
    {
     "id": "l2-s4-q06",
     "type": "complete",
-    "prompt": "The Wrights developed mechanisms to control pitch, roll, and ___________, making their aircraft stable and maneuverable.",
+    "prompt": "Three-axis control system: pitch, roll, and ___________",
     "answer": [
      "yaw"
     ],
-    "why": "Lecturer states 'They developed mechanisms to control pitch, roll, and yaw, making their aircraft stable and maneuverable in the air.'"
+    "why": "Lecturer states 'They developed mechanisms to control pitch, roll, and yaw, making their aircraft stable and maneuverable in the air.' This innovation was key to their success."
    },
    {
     "id": "l2-s4-q07",
     "type": "complete",
-    "prompt": "European designers, particularly the ___________, developed tapered wing designs for better aerodynamic performance.",
+    "prompt": "Tapered wing design innovation: developed by ___________ aeronautical designers",
     "answer": [
      "French"
     ],
@@ -757,7 +756,7 @@
    {
     "id": "l2-s4-q08",
     "type": "complete",
-    "prompt": "By nineteen twenty-five, aircraft incorporated ___________ wings, which were stronger and more aerodynamically efficient than braced structures.",
+    "prompt": "By 1925: wing design shift to ___________ type (eliminated bracing wires)",
     "answer": [
      "cantilever"
     ],
@@ -766,7 +765,7 @@
    {
     "id": "l2-s4-q09",
     "type": "complete",
-    "prompt": "The introduction of the ___________ in the nineteen forties revolutionized aerodynamics research.",
+    "prompt": "1940s aerodynamics breakthrough: introduction of ___________",
     "answer": [
      "jet engine"
     ],
@@ -775,7 +774,7 @@
    {
     "id": "l2-s4-q10",
     "type": "complete",
-    "prompt": "Modern C F D has transformed aircraft design by allowing engineers to simulate ___________ around complex shapes before building prototypes.",
+    "prompt": "CFD (computational fluid dynamics) application: simulate ___________ flow before prototyping",
     "answer": [
      "airflow"
     ],

@@ -83,7 +83,7 @@
 | 78 | take for granted | coi là hiển nhiên | EVERYDAY | We often take for granted how easily clean water reaches our homes. | B2 |
 | 79 | take into account | tính đến, xét đến | EVERYDAY | The final grade will take into account both coursework and the exam. | B2 |
 | 80 | take into consideration | cân nhắc, xem xét kỹ | EVERYDAY | Please take into consideration the needs of older passengers when planning the route. | C1 |
-| 81 | have a baby | sinh con | EVERYDAY | My cousin and her husband are going to have a baby in March. | A2 |
+| 81 | have a baby | có con | EVERYDAY | My cousin and her husband are going to have a baby in March. | A2 |
 | 82 | have a chat | trò chuyện, tán gẫu | EVERYDAY | Let's have a chat over coffee once the workshop finishes. | A2 |
 | 83 | have a conversation | có cuộc trò chuyện | EVERYDAY | We had a conversation about our future plans on the long drive home. | A2 |
 | 84 | have a discussion | thảo luận | EVERYDAY | The committee will have a discussion about the budget on Wednesday. | B1 |

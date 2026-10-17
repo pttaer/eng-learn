@@ -1,6 +1,14 @@
 import { Cefr, isCefr } from '../core/cefr';
 import { SKILL_BRANCHES } from '../core/skill-tree-data';
 import { SRSCardState } from '../core/srs-engine';
+import type { ImportMode, ImportResult, UnifiedProfile } from '../core/profile-sync-engine';
+
+export type { ImportMode, ImportResult, UnifiedProfile };
+
+export interface ProfileSyncEngineAdapter {
+  exportProfile(triggerDownload?: boolean): string;
+  importProfile(jsonStr: string, mode?: ImportMode): ImportResult;
+}
 
 export type SkillId = 'vocab' | 'grammar' | 'reading' | 'listening' | 'writing' | 'speaking';
 
@@ -9,6 +17,50 @@ export const ALL_SKILLS: readonly SkillId[] = ['vocab', 'grammar', 'reading', 'l
 export interface SkillProfile {
   overall: Cefr;
   skills: Record<SkillId, Cefr>;
+  assessedAt: string;
+}
+
+export type ErrorCode = 'G' | 'V' | 'WF' | 'C' | 'Sp' | 'P' | 'WO' | 'R' | 'Coh' | 'Pr';
+
+export const ALL_ERROR_CODES: readonly ErrorCode[] = [
+  'G', 'V', 'WF', 'C', 'Sp', 'P', 'WO', 'R', 'Coh', 'Pr'
+];
+
+export interface ErrorTaxonomyRecord {
+  id: string;
+  code: ErrorCode;
+  subcategory?: string;
+  contextPhrase: string;
+  userFault: string;
+  correction: string;
+  isL1Transfer: boolean;
+  l1Pattern?: string; // e.g., 'zero_copula', 'dual_conjunction', 'preposition_calque', 'final_consonant_drop'
+  skill?: SkillId;
+  timestamp: number;
+  recurrenceCount: number;
+  status: 'active' | 'in_remediation' | 'resolved';
+  lastPracticedAt?: number;
+  remediationCardId?: string;
+}
+
+export interface PreFlightChecklistRule {
+  id: string;
+  code: ErrorCode;
+  ruleTitle: string;
+  description: string;
+  goodExample: string;
+  badExample: string;
+  cleanStreak: number; // Retires when >= 3
+  createdAt: number;
+}
+
+export interface CatAssessmentRecord {
+  skill: SkillId;
+  theta: number; // Latent ability estimate (-3.0 to +3.0)
+  sem: number;   // Standard Error of Measurement
+  confidence: 'low' | 'medium' | 'high';
+  itemsAdministered: number;
+  calibratedLevel: Cefr;
   assessedAt: string;
 }
 
@@ -35,10 +87,18 @@ export interface AppStorageState {
   notificationsEnabled?: boolean;
   musicVolume?: number;
   musicMode?: string;
+  // v4 state extensions:
+  errorLedger?: {
+    records: Record<string, ErrorTaxonomyRecord>;
+    checklist: PreFlightChecklistRule[];
+    totalLogged: number;
+    totalResolved: number;
+  };
+  catProfiles?: Partial<Record<SkillId, CatAssessmentRecord>>;
 }
 
 const STORAGE_KEY = 'STARK_ENG_STATE';
-export const CURRENT_VERSION = 3;
+export const CURRENT_VERSION = 4;
 
 function getTodayString(): string {
   const d = new Date();
@@ -77,7 +137,14 @@ const DEFAULT_STATE: AppStorageState = {
   lastSyncTimestamp: Date.now(),
   notificationsEnabled: false,
   musicVolume: 0.35,
-  musicMode: 'off'
+  musicMode: 'off',
+  errorLedger: {
+    records: {},
+    checklist: [],
+    totalLogged: 0,
+    totalResolved: 0
+  },
+  catProfiles: {}
 };
 
 export class StorageManager {
@@ -114,9 +181,11 @@ export class StorageManager {
         placementDone: parsed.placementDone ?? !isCefr(parsed.learnerLevel),
         streak: { ...DEFAULT_STATE.streak, ...(parsed.streak || {}) },
         habitProgress: parsed.habitProgress || {},
-        cardStates: parsed.cardStates || {}
+        cardStates: parsed.cardStates || {},
+        errorLedger: this.migratedErrorLedger(parsed),
+        catProfiles: parsed.catProfiles || {}
       };
-      if (parsed.version !== CURRENT_VERSION || !parsed.skillLevels) {
+      if (parsed.version !== CURRENT_VERSION || !parsed.skillLevels || !parsed.errorLedger) {
         this.saveState(this.cachedState);
       }
       return this.cachedState;
@@ -164,6 +233,29 @@ export class StorageManager {
       }
     }
     return result;
+  }
+
+  private static migratedErrorLedger(parsed: Partial<AppStorageState>): {
+    records: Record<string, ErrorTaxonomyRecord>;
+    checklist: PreFlightChecklistRule[];
+    totalLogged: number;
+    totalResolved: number;
+  } {
+    const existing = parsed.errorLedger;
+    if (existing && typeof existing === 'object' && existing.records) {
+      return {
+        records: existing.records || {},
+        checklist: Array.isArray(existing.checklist) ? existing.checklist : [],
+        totalLogged: typeof existing.totalLogged === 'number' ? existing.totalLogged : Object.keys(existing.records || {}).length,
+        totalResolved: typeof existing.totalResolved === 'number' ? existing.totalResolved : 0
+      };
+    }
+    return {
+      records: {},
+      checklist: [],
+      totalLogged: 0,
+      totalResolved: 0
+    };
   }
 
   public static getSkillLevel(skill: SkillId): Cefr {
@@ -372,27 +464,304 @@ export class StorageManager {
     this.saveState(state);
   }
 
+  // =========================================================================
+  // FORMATIVE ERROR TAXONOMY & SPACED ERROR RECYCLING (SERL)
+  // =========================================================================
+
+  /**
+   * Records a learner error according to the 10-code CEFR error taxonomy.
+   * - Automatically updates recurrence counters.
+   * - Bridges into the SM-2 Spaced Repetition queue as a high-priority remediation card.
+   * - Synthesizes a Pre-Flight Checklist rule when an error pattern recurs >= 3 times.
+   */
+  public static recordError(input: {
+    id?: string;
+    code: ErrorCode;
+    subcategory?: string;
+    contextPhrase: string;
+    userFault: string;
+    correction: string;
+    isL1Transfer?: boolean;
+    l1Pattern?: string;
+    skill?: SkillId;
+  }): ErrorTaxonomyRecord {
+    const state = this.loadState();
+    if (!state.errorLedger) {
+      state.errorLedger = { records: {}, checklist: [], totalLogged: 0, totalResolved: 0 };
+    }
+
+    const ledger = state.errorLedger;
+    // Look for matching existing pattern by code + normalized fault
+    const normFault = input.userFault.trim().toLowerCase();
+    let existingId: string | undefined;
+
+    for (const [id, rec] of Object.entries(ledger.records)) {
+      if (rec.code === input.code && rec.userFault.trim().toLowerCase() === normFault) {
+        existingId = id;
+        break;
+      }
+    }
+
+    const errorId = input.id || existingId || `err_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`;
+    const now = Date.now();
+    let record: ErrorTaxonomyRecord;
+
+    if (existingId && ledger.records[existingId]) {
+      record = ledger.records[existingId];
+      record.recurrenceCount += 1;
+      record.timestamp = now;
+      record.contextPhrase = input.contextPhrase;
+      record.correction = input.correction;
+      record.status = 'active';
+      if (input.isL1Transfer !== undefined) record.isL1Transfer = input.isL1Transfer;
+      if (input.l1Pattern) record.l1Pattern = input.l1Pattern;
+    } else {
+      record = {
+        id: errorId,
+        code: input.code,
+        subcategory: input.subcategory,
+        contextPhrase: input.contextPhrase,
+        userFault: input.userFault,
+        correction: input.correction,
+        isL1Transfer: Boolean(input.isL1Transfer),
+        l1Pattern: input.l1Pattern,
+        skill: input.skill,
+        timestamp: now,
+        recurrenceCount: 1,
+        status: 'active'
+      };
+      ledger.records[errorId] = record;
+      ledger.totalLogged += 1;
+    }
+
+    // Spaced Error Recycling (SERL) bridge:
+    // Create or re-queue remediation flashcard in SM-2 cardStates
+    const remediationCardId = `remed_${record.code.toLowerCase()}_${record.id}`;
+    record.remediationCardId = remediationCardId;
+
+    if (!state.cardStates[remediationCardId]) {
+      state.cardStates[remediationCardId] = {
+        cardId: remediationCardId,
+        repetitions: 0,
+        interval: 1, // High frequency 1-day initial review
+        easeFactor: record.isL1Transfer ? 2.30 : 2.40, // Increased cognitive load for L1 transfer traps
+        dueDate: now, // Due immediately
+        lastReviewed: 0,
+        totalReviews: 0,
+        totalLapses: 0,
+        lapses: 0,
+        history: []
+      };
+    } else {
+      // Re-trigger due state for recurring lapse
+      const card = state.cardStates[remediationCardId];
+      card.dueDate = now;
+      card.lapses = (card.lapses ?? 0) + 1;
+      card.interval = 1;
+    }
+
+    // Pre-Flight Checklist Synthesis:
+    // If error pattern recurs >= 3 times, mount/update a rule on the Personal Editing Checklist
+    if (record.recurrenceCount >= 3) {
+      this.ensureChecklistRule(state, record);
+    }
+
+    this.saveState(state);
+    return record;
+  }
+
+  private static ensureChecklistRule(state: AppStorageState, record: ErrorTaxonomyRecord): void {
+    if (!state.errorLedger) return;
+    const checklist = state.errorLedger.checklist;
+    const ruleId = `rule_${record.code}_${record.l1Pattern || record.subcategory || 'general'}`;
+
+    const existing = checklist.find(r => r.id === ruleId);
+    if (existing) {
+      existing.cleanStreak = 0; // Reset clean streak when error recurs
+      return;
+    }
+
+    // Generate tailored pedagogical title and guidance from error taxonomy
+    let ruleTitle = `Check ${record.code} Pattern`;
+    let description = `Review for recurring ${record.code} errors before submitting.`;
+    if (record.code === 'G') {
+      ruleTitle = record.isL1Transfer ? 'Verify Copula & Tense Inflection' : 'Check Verb Agreement & Tenses';
+      description = 'Ensure every past event uses past simple and adjectives have a form of "be".';
+    } else if (record.code === 'Coh') {
+      ruleTitle = 'Avoid Dual Conjunction Collisions';
+      description = 'Do not combine Although/Even though with But in the same sentence.';
+    } else if (record.code === 'C') {
+      ruleTitle = 'Verify Collocational Prepositions';
+      description = 'Check fixed prepositions and verbs: e.g., depend on, spend on, increase by.';
+    } else if (record.code === 'WF') {
+      ruleTitle = 'Check Word Class & Derivation';
+      description = 'Verify part of speech (e.g. feel lonely [adj], not feel loneliness [noun]).';
+    } else if (record.code === 'WO') {
+      ruleTitle = 'Check Adverbial Word Order';
+      description = 'Keep Verb and Object adjacent (e.g. like English very much, not like very much English).';
+    }
+
+    const newRule: PreFlightChecklistRule = {
+      id: ruleId,
+      code: record.code,
+      ruleTitle,
+      description,
+      goodExample: record.correction,
+      badExample: record.userFault,
+      cleanStreak: 0,
+      createdAt: Date.now()
+    };
+
+    checklist.push(newRule);
+    // Limit active checklist to top 5 most relevant items
+    if (checklist.length > 5) {
+      // Keep rules with lowest cleanStreak
+      checklist.sort((a, b) => a.cleanStreak - b.cleanStreak);
+      state.errorLedger.checklist = checklist.slice(0, 5);
+    }
+  }
+
+  /**
+   * Retrieves the current active Pre-Flight Checklist rules.
+   * Rules are retired once cleanStreak >= 3.
+   */
+  public static getPreFlightChecklist(): PreFlightChecklistRule[] {
+    const state = this.loadState();
+    if (!state.errorLedger || !Array.isArray(state.errorLedger.checklist)) {
+      return [];
+    }
+    return state.errorLedger.checklist.filter(r => r.cleanStreak < 3);
+  }
+
+  /**
+   * Marks a pre-flight checklist rule as clean in a submission.
+   * When cleanStreak reaches >= 3, the rule is retired.
+   */
+  public static markChecklistRuleClean(ruleId: string): boolean {
+    const state = this.loadState();
+    if (!state.errorLedger) return false;
+    const rule = state.errorLedger.checklist.find(r => r.id === ruleId);
+    if (!rule) return false;
+
+    rule.cleanStreak += 1;
+    this.saveState(state);
+    return rule.cleanStreak >= 3;
+  }
+
+  public static getErrorRecords(): ErrorTaxonomyRecord[] {
+    const state = this.loadState();
+    return Object.values(state.errorLedger?.records || {});
+  }
+
+  public static getErrorRemediationQueue(): ErrorTaxonomyRecord[] {
+    const state = this.loadState();
+    const records = Object.values(state.errorLedger?.records || {});
+    return records.filter(r => r.status === 'active' || r.status === 'in_remediation');
+  }
+
+  public static resolveErrorRecord(errorId: string): void {
+    const state = this.loadState();
+    if (!state.errorLedger || !state.errorLedger.records[errorId]) return;
+    const rec = state.errorLedger.records[errorId];
+    if (rec.status !== 'resolved') {
+      rec.status = 'resolved';
+      state.errorLedger.totalResolved += 1;
+      this.saveState(state);
+    }
+  }
+
+  // =========================================================================
+  // COMPUTERIZED ADAPTIVE TESTING (CAT) STATE PERSISTENCE
+  // =========================================================================
+
+  public static getCatProfile(skill?: SkillId): CatAssessmentRecord | Record<SkillId, CatAssessmentRecord> | null {
+    const state = this.loadState();
+    const profiles = state.catProfiles || {};
+    if (skill) {
+      return profiles[skill] || null;
+    }
+    return profiles as Record<SkillId, CatAssessmentRecord>;
+  }
+
+  public static saveCatProfile(skill: SkillId, record: CatAssessmentRecord): void {
+    const state = this.loadState();
+    if (!state.catProfiles) {
+      state.catProfiles = {};
+    }
+    state.catProfiles[skill] = record;
+    // Align skillLevels with CAT calibrated level
+    if (!state.skillLevels) {
+      state.skillLevels = this.migratedSkillLevels(state, state.learnerLevel);
+    }
+    state.skillLevels[skill] = record.calibratedLevel;
+    this.saveState(state);
+  }
+
+  private static syncEngine: ProfileSyncEngineAdapter | null = null;
+
+  public static registerSyncEngine(engine: ProfileSyncEngineAdapter): void {
+    this.syncEngine = engine;
+  }
+
   public static exportBackup(): string {
     const state = this.loadState();
     return JSON.stringify(state, null, 2);
   }
 
+  public static exportUnifiedProfile(triggerDownload: boolean = true): string {
+    if (this.syncEngine) {
+      return this.syncEngine.exportProfile(triggerDownload);
+    }
+    if (typeof (globalThis as any).ProfileSyncEngine !== 'undefined') {
+      return (globalThis as any).ProfileSyncEngine.exportProfile(triggerDownload);
+    }
+    return this.exportBackup();
+  }
+
+  public static importUnifiedProfile(jsonStr: string, mode: ImportMode = 'overwrite'): ImportResult {
+    if (this.syncEngine) {
+      return this.syncEngine.importProfile(jsonStr, mode);
+    }
+    if (typeof (globalThis as any).ProfileSyncEngine !== 'undefined') {
+      return (globalThis as any).ProfileSyncEngine.importProfile(jsonStr, mode);
+    }
+    const success = this.importBackup(jsonStr);
+    return {
+      success,
+      mode,
+      detectedVersion: 4,
+      migratedFromLegacy: true,
+      itemsRestored: { singularityCards: 0, ieltsKeys: 0, errorRecords: 0 }
+    };
+  }
+
   public static importBackup(jsonString: string): boolean {
     try {
-      const parsed = JSON.parse(jsonString) as AppStorageState;
-      if (parsed && typeof parsed === 'object' && parsed.cardStates) {
-        if (!isCefr(parsed.learnerLevel)) this.seedLegacyTreeProgress(parsed);
-        const migratedLevel = this.migratedLevel(parsed);
-        this.saveState({
-          ...DEFAULT_STATE,
-          ...parsed,
-          version: CURRENT_VERSION,
-          learnerLevel: migratedLevel,
-          skillLevels: this.migratedSkillLevels(parsed, migratedLevel),
-          skillProfileHistory: Array.isArray(parsed.skillProfileHistory) ? parsed.skillProfileHistory : [],
-          placementDone: parsed.placementDone ?? !isCefr(parsed.learnerLevel)
-        });
-        return true;
+      const parsed = JSON.parse(jsonString) as any;
+      if (parsed && typeof parsed === 'object') {
+        // Transparently handle v5 UnifiedProfile envelope
+        if (parsed.version === 5 || parsed.singularity) {
+          const res = this.importUnifiedProfile(jsonString, 'overwrite');
+          return res.success;
+        }
+
+        // Handle v1-v4 backup formats
+        if (parsed.cardStates || parsed.learnerLevel) {
+          if (!isCefr(parsed.learnerLevel)) this.seedLegacyTreeProgress(parsed);
+          const migratedLevel = this.migratedLevel(parsed);
+          this.saveState({
+            ...DEFAULT_STATE,
+            ...parsed,
+            version: CURRENT_VERSION,
+            learnerLevel: migratedLevel,
+            skillLevels: this.migratedSkillLevels(parsed, migratedLevel),
+            skillProfileHistory: Array.isArray(parsed.skillProfileHistory) ? parsed.skillProfileHistory : [],
+            placementDone: parsed.placementDone ?? !isCefr(parsed.learnerLevel),
+            errorLedger: this.migratedErrorLedger(parsed),
+            catProfiles: parsed.catProfiles || {}
+          });
+          return true;
+        }
       }
       return false;
     } catch (err) {

@@ -16,6 +16,8 @@ export interface SRSCardState {
   nextReview?: number;    // Alias for dueDate (ms)
   totalReviews: number;
   totalLapses: number;
+  lapses?: number;
+  history?: any[];
 }
 
 export interface SRSDeckItem {

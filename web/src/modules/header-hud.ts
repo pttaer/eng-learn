@@ -11,7 +11,7 @@ import { ZenMode } from '../core/zen-mode';
 import { MultiSkillQuizModal } from './multi-skill-quiz-modal';
 import { ambientMusicEngine, AmbientMusicMode } from '../core/ambient-music-engine';
 
-const ROUTE_NAMES: Record<string, string> = { read: 'READING', write: 'WRITING', listen: 'LISTENING', speak: 'SPEAKING', vocab: 'VOCABULARY', colloc: 'COLLOCATIONS', grammar: 'GRAMMAR', habits: 'DAILY HABITS', singularity: 'SINGULARITY' };
+const ROUTE_NAMES: Record<string, string> = { read: 'READING', write: 'WRITING', listen: 'LISTENING', speak: 'SPEAKING', vocab: 'VOCABULARY', colloc: 'COLLOCATIONS', grammar: 'GRAMMAR', habits: 'DAILY HABITS', singularity: 'SINGULARITY', mediate: 'MEDIATION', cockpit: 'IELTS COCKPIT' };
 
 export class HeaderHUD {
   private element: HTMLElement;
@@ -19,6 +19,9 @@ export class HeaderHUD {
   private currentTheme: 'dark' | 'light' = 'dark';
   public onNavigateToTree?: () => void;
   public onNavigateToBlitz?: () => void;
+  public onNavigateToMediation?: () => void;
+  public onNavigateToAnalytics?: () => void;
+  public onNavigateToCockpit?: () => void;
 
   constructor() {
     this.element = document.createElement('header');
@@ -101,12 +104,31 @@ export class HeaderHUD {
         <button class="hud-btn btn-streak-pill" title="Daily Streak: ${currentStreak} days. Click to view Daily Workout on Constellation Tree" aria-label="Daily Streak: ${currentStreak} days">
           🔥 ${currentStreak}d
         </button>
+        <button class="hud-btn btn-mobile-menu-drawer" title="Open Mobile Navigation Menu" aria-label="Open Mobile Navigation Menu" aria-haspopup="dialog">
+          ☰
+        </button>
         <button class="hud-btn btn-skill-radar" title="Launch CEFR Multi-Skill Diagnostic & Celestial Radar" aria-label="Skill Radar" style="border-color: var(--cyan, #38bdf8); color: var(--cyan, #38bdf8); font-weight: 700;">
           ${icon('target', 12)}<span class="btn-label"> RADAR</span>
         </button>
         <button class="hud-btn btn-blitz" title="Launch 60-Second Roguelike Speed Blitz Mode" aria-label="Speed Blitz Mode" style="border-color: var(--accent-gold); color: var(--accent-gold); font-weight: 700;">
           ${icon('zap', 12)}<span class="btn-label"> BLITZ</span>
         </button>
+        <button class="hud-btn btn-mediation" title="Launch CEFR Mediation Workbench (Hotkey: M)" aria-label="CEFR Mediation Workbench" style="border-color: var(--accent-cyan, #38bdf8); color: var(--accent-cyan, #38bdf8); font-weight: 700;">
+          ⚖️<span class="btn-label"> MEDIATION</span>
+        </button>
+        <button class="hud-btn btn-analytics" title="Launch CEFR Analytics & SERL 2.0 Gauntlet Dashboard" aria-label="Analytics & SERL Dashboard" style="border-color: var(--accent-purple, #a855f7); color: var(--accent-purple, #a855f7); font-weight: 700;">
+          📊<span class="btn-label"> ANALYTICS</span>
+        </button>
+        <button class="hud-btn btn-ielts-cockpit" title="Launch CD-IELTS Exam Cockpit (Hotkey: C)" aria-label="CD-IELTS Exam Cockpit" style="border-color: var(--accent-gold, #f59e0b); color: var(--accent-gold, #f59e0b); font-weight: 700;">
+          🎓<span class="btn-label"> COCKPIT</span>
+        </button>
+        <button class="hud-btn btn-export-profile" title="Export Unified Student Profile (JSON)" aria-label="Export Profile" style="border-color: var(--accent-gold, #f59e0b); color: var(--accent-gold, #f59e0b); font-weight: 600;">
+          💾<span class="btn-label"> EXPORT</span>
+        </button>
+        <button class="hud-btn btn-import-profile" title="Import Unified Student Profile (JSON)" aria-label="Import Profile" style="border-color: var(--accent-cyan, #38bdf8); color: var(--accent-cyan, #38bdf8); font-weight: 600;">
+          📥<span class="btn-label"> IMPORT</span>
+        </button>
+        <input type="file" class="hud-profile-file-input" accept=".json,application/json" style="display: none;" />
         <button class="hud-btn btn-progression-pill" title="RPG Progression & Daily Quests" aria-label="RPG Progression">
           ${icon('zap', 12)} LVL ${progression.level}<span class="btn-label"> • ${progression.xp} XP</span>
         </button>
@@ -117,6 +139,29 @@ export class HeaderHUD {
         <button class="hud-btn btn-sound-toggle" title="Toggle audio mute" aria-label="Toggle audio mute" aria-pressed="${isMuted}">${HeaderHUD.soundLabel(isMuted)}</button>
         <button class="hud-btn btn-settings" title="Settings & Data Management" aria-label="Settings">${icon('settings')}<span class="btn-label"> Settings</span></button>
       </div>
+
+      <nav class="hud-bottom-nav" aria-label="Mobile Bottom Navigation">
+        <button class="bnav-btn bnav-tree ${isTree ? 'is-active' : ''}" aria-label="Constellation Tree" title="Constellation Tree">
+          <span class="bnav-icon">✦</span>
+          <span class="bnav-label">Tree</span>
+        </button>
+        <button class="bnav-btn bnav-blitz ${this.currentRoute === 'blitz' ? 'is-active' : ''}" aria-label="Speed Blitz" title="Speed Blitz">
+          <span class="bnav-icon">⚡</span>
+          <span class="bnav-label">Blitz</span>
+        </button>
+        <button class="bnav-btn bnav-radar" aria-label="Skill Radar" title="Skill Radar">
+          <span class="bnav-icon">🎯</span>
+          <span class="bnav-label">Radar</span>
+        </button>
+        <button class="bnav-btn bnav-cockpit ${this.currentRoute === 'cockpit' ? 'is-active' : ''}" aria-label="Exam Cockpit" title="Exam Cockpit">
+          <span class="bnav-icon">🎓</span>
+          <span class="bnav-label">Cockpit</span>
+        </button>
+        <button class="bnav-btn bnav-more" aria-label="More Actions" title="More Actions" aria-haspopup="dialog">
+          <span class="bnav-icon">☰</span>
+          <span class="bnav-label">More</span>
+        </button>
+      </nav>
     `;
 
     this.bindEvents();
@@ -182,6 +227,56 @@ export class HeaderHUD {
         this.onNavigateToBlitz();
       } else {
         window.location.hash = '#blitz';
+      }
+    });
+
+    const mediationBtn = this.element.querySelector('.btn-mediation') as HTMLButtonElement | null;
+    mediationBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      if (this.onNavigateToMediation) {
+        this.onNavigateToMediation();
+      } else {
+        window.location.hash = '#mediate';
+      }
+    });
+
+    const analyticsBtn = this.element.querySelector('.btn-analytics') as HTMLButtonElement | null;
+    analyticsBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      if (this.onNavigateToAnalytics) {
+        this.onNavigateToAnalytics();
+      } else {
+        window.location.hash = '#analytics';
+      }
+    });
+
+    const cockpitBtn = this.element.querySelector('.btn-ielts-cockpit') as HTMLButtonElement | null;
+    cockpitBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      if (this.onNavigateToCockpit) {
+        this.onNavigateToCockpit();
+      } else {
+        window.location.hash = '#cockpit';
+      }
+    });
+
+    const exportProfileBtn = this.element.querySelector('.btn-export-profile') as HTMLButtonElement | null;
+    exportProfileBtn?.addEventListener('click', () => {
+      HeaderHUD.exportUnifiedProfile();
+    });
+
+    const importProfileBtn = this.element.querySelector('.btn-import-profile') as HTMLButtonElement | null;
+    const profileFileInput = this.element.querySelector('.hud-profile-file-input') as HTMLInputElement | null;
+    importProfileBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      profileFileInput?.click();
+    });
+
+    profileFileInput?.addEventListener('change', async () => {
+      const file = profileFileInput.files?.[0];
+      if (file) {
+        await HeaderHUD.importUnifiedProfile(file);
+        profileFileInput.value = '';
       }
     });
 
@@ -277,6 +372,54 @@ export class HeaderHUD {
       AudioSynthesizer.play('click');
       this.openSettingsModal();
     });
+
+    const mobileDrawerBtn = this.element.querySelector('.btn-mobile-menu-drawer');
+    mobileDrawerBtn?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      this.openMobileActionSheet();
+    });
+
+    const bnavTree = this.element.querySelector('.bnav-tree');
+    bnavTree?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      if (this.onNavigateToTree) {
+        this.onNavigateToTree();
+      } else {
+        window.location.hash = '#tree';
+      }
+    });
+
+    const bnavBlitz = this.element.querySelector('.bnav-blitz');
+    bnavBlitz?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      if (this.onNavigateToBlitz) {
+        this.onNavigateToBlitz();
+      } else {
+        window.location.hash = '#blitz';
+      }
+    });
+
+    const bnavRadar = this.element.querySelector('.bnav-radar');
+    bnavRadar?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      MultiSkillQuizModal.open('radar');
+    });
+
+    const bnavCockpit = this.element.querySelector('.bnav-cockpit');
+    bnavCockpit?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      if (this.onNavigateToCockpit) {
+        this.onNavigateToCockpit();
+      } else {
+        window.location.hash = '#cockpit';
+      }
+    });
+
+    const bnavMore = this.element.querySelector('.bnav-more');
+    bnavMore?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      this.openMobileActionSheet();
+    });
   }
 
   private openLevelPicker(): void {
@@ -334,6 +477,191 @@ export class HeaderHUD {
     (modal.querySelector('.level-option.active') as HTMLElement | null)?.focus();
   }
 
+  public openMobileActionSheet(): void {
+    const existing = document.getElementById('mobile-action-sheet');
+    if (existing) existing.remove();
+
+    const isMuted = AudioSynthesizer.isMute();
+    const isZen = ZenMode.isZen();
+    const currentTheme = this.currentTheme;
+    const ambientMode = ambientMusicEngine.getMode();
+    const progression = ProgressionEngine.getState();
+    const opener = document.activeElement as HTMLElement | null;
+
+    const sheet = document.createElement('div');
+    sheet.id = 'mobile-action-sheet';
+    sheet.className = 'completion-modal-overlay interactive mobile-action-sheet-overlay';
+    sheet.setAttribute('role', 'dialog');
+    sheet.setAttribute('aria-modal', 'true');
+    sheet.setAttribute('aria-label', 'Mobile Navigation Menu');
+
+    sheet.innerHTML = `
+      <div class="completion-receipt-card mobile-action-sheet" style="max-width: 500px; width: 92%; max-height: 85vh; overflow-y: auto; padding: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="color: var(--accent-gold); font-size: 16px;">✦</span>
+            <span class="telemetry-label" style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: var(--ink-primary);">MOBILE CONTROLS</span>
+          </div>
+          <button class="hud-btn sheet-btn-close btn-modal-close" aria-label="Close Mobile Menu" style="min-width: 44px; min-height: 44px; padding: 4px 12px; font-size: 16px;">✕</button>
+        </div>
+
+        <div class="mobile-sheet-grid" style="display: flex; flex-direction: column; gap: 10px;">
+          <!-- Study Workbenches & RPG Progression -->
+          <button class="hud-btn sheet-btn-progression" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; gap: 12px;">
+            ${icon('zap', 16)} <span>Level ${progression.level} • ${progression.xp} XP Quests</span>
+          </button>
+          <button class="hud-btn sheet-btn-mediation" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8); gap: 12px;">
+            <span>⚖️</span> <span>CEFR Mediation Workbench</span>
+          </button>
+          <button class="hud-btn sheet-btn-analytics" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-purple, #a855f7); border-color: var(--accent-purple, #a855f7); gap: 12px;">
+            <span>📊</span> <span>CEFR Analytics &amp; SERL Dashboard</span>
+          </button>
+
+          <div style="height: 1px; background: var(--border-hairline); margin: 4px 0;"></div>
+
+          <!-- Secondary Audio & Immersion Controls -->
+          <button class="hud-btn sheet-btn-theme" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 12px;">
+            ${currentTheme === 'dark' ? icon('sun', 16) : icon('moon', 16)} <span>Toggle Theme: ${currentTheme === 'dark' ? 'Light' : 'Dark'}</span>
+          </button>
+          <button class="hud-btn sheet-btn-sound" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 12px;">
+            ${isMuted ? icon('mute', 16) : icon('volume', 16)} <span>Audio Sound Effects: ${isMuted ? 'Muted' : 'Enabled'}</span>
+          </button>
+          <button class="hud-btn sheet-btn-music" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 12px;">
+            ${icon('music', 16)} <span>Ambient Soundscape: ${HeaderHUD.ambientLabel(ambientMode)}</span>
+          </button>
+          <button class="hud-btn sheet-btn-zen ${isZen ? 'active' : ''}" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 12px;">
+            ${icon('eye', 16)} <span>Zen Immersion Mode: ${isZen ? 'Active' : 'Off'}</span>
+          </button>
+          <button class="hud-btn sheet-btn-tour" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 12px;">
+            ${icon('compass', 16)} <span>Re-run Onboarding Tour</span>
+          </button>
+
+          <div style="height: 1px; background: var(--border-hairline); margin: 4px 0;"></div>
+
+          <!-- Profile Portability & Settings -->
+          <button class="hud-btn sheet-btn-export" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-gold); border-color: var(--accent-gold); gap: 12px;">
+            <span>💾</span> <span>[ 💾 EXPORT PROFILE (JSON) ]</span>
+          </button>
+          <button class="hud-btn sheet-btn-import" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-cyan); border-color: var(--accent-cyan); gap: 12px;">
+            <span>📥</span> <span>[ 📥 IMPORT PROFILE (JSON) ]</span>
+          </button>
+          <input type="file" class="sheet-profile-file-input" accept=".json,application/json" style="display: none;" />
+
+          <button class="hud-btn sheet-btn-settings" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; gap: 12px;">
+            ${icon('settings', 16)} <span>Settings &amp; Data Management</span>
+          </button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(sheet);
+
+    const close = () => {
+      sheet.remove();
+      document.removeEventListener('keydown', onKey, true);
+      opener?.focus();
+    };
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        close();
+      }
+    };
+    document.addEventListener('keydown', onKey, true);
+
+    sheet.querySelector('.sheet-btn-close')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      close();
+    });
+
+    sheet.addEventListener('click', (e) => {
+      if (e.target === sheet) {
+        AudioSynthesizer.play('click');
+        close();
+      }
+    });
+
+    sheet.querySelector('.sheet-btn-progression')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      close();
+      ProgressionModal.open();
+    });
+
+    sheet.querySelector('.sheet-btn-mediation')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      close();
+      if (this.onNavigateToMediation) this.onNavigateToMediation();
+      else window.location.hash = '#mediate';
+    });
+
+    sheet.querySelector('.sheet-btn-analytics')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      close();
+      if (this.onNavigateToAnalytics) this.onNavigateToAnalytics();
+      else window.location.hash = '#analytics';
+    });
+
+    sheet.querySelector('.sheet-btn-theme')?.addEventListener('click', () => {
+      this.toggleTheme();
+      close();
+    });
+
+    sheet.querySelector('.sheet-btn-sound')?.addEventListener('click', () => {
+      AudioSynthesizer.toggleMute();
+      AudioSynthesizer.play('click');
+      close();
+      this.render();
+    });
+
+    sheet.querySelector('.sheet-btn-music')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      const nextMode = ambientMusicEngine.cycleMode();
+      this.updateAmbientButtonState(nextMode);
+      close();
+    });
+
+    sheet.querySelector('.sheet-btn-zen')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      ZenMode.toggle();
+      close();
+    });
+
+    sheet.querySelector('.sheet-btn-tour')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      close();
+      SpotlightTour.start(true);
+    });
+
+    sheet.querySelector('.sheet-btn-export')?.addEventListener('click', () => {
+      close();
+      HeaderHUD.exportUnifiedProfile();
+    });
+
+    const sheetFileInput = sheet.querySelector('.sheet-profile-file-input') as HTMLInputElement | null;
+    sheet.querySelector('.sheet-btn-import')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      sheetFileInput?.click();
+    });
+
+    sheetFileInput?.addEventListener('change', async () => {
+      const file = sheetFileInput.files?.[0];
+      if (file) {
+        close();
+        await HeaderHUD.importUnifiedProfile(file);
+      }
+    });
+
+    sheet.querySelector('.sheet-btn-settings')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      close();
+      this.openSettingsModal();
+    });
+
+    (sheet.querySelector('.sheet-btn-close') as HTMLElement | null)?.focus();
+  }
+
   private openSettingsModal(): void {
     const existing = document.getElementById('settings-modal');
     if (existing) existing.remove();
@@ -358,11 +686,11 @@ export class HeaderHUD {
           <button class="hud-btn btn-notifications-toggle ${StorageManager.isNotificationsEnabled() ? 'active' : ''}" style="padding: 12px; justify-content: center; font-weight: 600;" aria-pressed="${StorageManager.isNotificationsEnabled()}">
             🔔 Daily Review Alerts: ${StorageManager.isNotificationsEnabled() ? 'ON' : 'OFF'}
           </button>
-          <button class="hud-btn btn-backup-export" style="padding: 12px; justify-content: center; font-weight: 600;">
-            ${icon('download')} Export Progress Backup (JSON)
+          <button class="hud-btn btn-backup-export btn-profile-export" style="padding: 12px; justify-content: center; font-weight: 600;">
+            ${icon('download')} [ 💾 EXPORT PROFILE ]
           </button>
-          <button class="hud-btn btn-backup-import" style="padding: 12px; justify-content: center; font-weight: 600;">
-            ${icon('upload')} Restore from Backup (JSON)
+          <button class="hud-btn btn-backup-import btn-profile-import" style="padding: 12px; justify-content: center; font-weight: 600;">
+            ${icon('upload')} [ 📥 IMPORT PROFILE ]
           </button>
           <!-- Dual Audio Bus Controls -->
           <div class="settings-audio-section" style="display: flex; flex-direction: column; gap: 10px; padding: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-line); border-radius: 6px;">
@@ -503,61 +831,162 @@ export class HeaderHUD {
       modal.remove();
     });
 
-    modal.querySelector('.btn-backup-export')?.addEventListener('click', () => {
+    const exportBtn = modal.querySelector('.btn-profile-export') || modal.querySelector('.btn-backup-export');
+    exportBtn?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
-      const backupJson = StorageManager.exportBackup();
-      const blob = new Blob([backupJson], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `english-mastery-backup-${Date.now()}.json`;
-      a.click();
-      URL.revokeObjectURL(url);
+      HeaderHUD.exportUnifiedProfile();
     });
 
     const fileInput = modal.querySelector('.backup-file-input') as HTMLInputElement | null;
-    modal.querySelector('.btn-backup-import')?.addEventListener('click', () => {
+    const importBtn = modal.querySelector('.btn-profile-import') || modal.querySelector('.btn-backup-import');
+    importBtn?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
       fileInput?.click();
     });
 
-    fileInput?.addEventListener('change', () => {
+    fileInput?.addEventListener('change', async () => {
       const file = fileInput.files?.[0];
       if (!file) return;
-
-      const currentState = StorageManager.loadState();
-      const hasActiveData = (
-        (currentState.cardStates && Object.keys(currentState.cardStates).length > 0) ||
-        currentState.totalCardsReviewed > 0 ||
-        (currentState.streak && currentState.streak.currentStreak > 0)
-      );
-
-      if (hasActiveData) {
-        const confirmed = window.confirm(
-          'Active student progress detected in local storage.\n\nImporting this backup will overwrite your current progress.\n\nProceed?'
-        );
-        if (!confirmed) return;
+      const success = await HeaderHUD.importUnifiedProfile(file);
+      if (success) {
+        modal.remove();
       }
+      fileInput.value = '';
+    });
+  }
 
+  public static exportUnifiedProfile(): string {
+    AudioSynthesizer.play('click');
+    const jsonStr = StorageManager.exportUnifiedProfile(true);
+    HeaderHUD.showStatusDialog({
+      title: 'PROFILE EXPORTED',
+      message: 'Unified Student Profile (v5) successfully exported to your downloads folder.',
+      type: 'success'
+    });
+    return jsonStr;
+  }
+
+  public static async importUnifiedProfile(file: File): Promise<boolean> {
+    const currentState = StorageManager.loadState();
+    const hasActiveData = (
+      (currentState.cardStates && Object.keys(currentState.cardStates).length > 0) ||
+      currentState.totalCardsReviewed > 0 ||
+      (currentState.streak && currentState.streak.currentStreak > 0)
+    );
+
+    if (hasActiveData) {
+      const confirmed = window.confirm(
+        'Active student progress detected in local storage.\n\nImporting this profile will merge or overwrite your current progress.\n\nProceed?'
+      );
+      if (!confirmed) return false;
+    }
+
+    return new Promise<boolean>((resolve) => {
       const reader = new FileReader();
       reader.onload = (e) => {
         try {
           const raw = e.target?.result as string;
-          const success = StorageManager.importBackup(raw);
-          if (success) {
+          const result = StorageManager.importUnifiedProfile(raw, 'overwrite');
+          if (result && result.success) {
             AudioSynthesizer.play('level-up');
-            alert('Progress successfully restored.');
-            modal.remove();
-            window.location.reload();
+            const restored = result.itemsRestored;
+            const details = restored
+              ? `Restored: ${restored.singularityCards} SRS cards, ${restored.ieltsKeys} IELTS entries, ${restored.errorRecords} error patterns.`
+              : 'All profile and progress records restored.';
+            HeaderHUD.showStatusDialog({
+              title: 'PROFILE IMPORT SUCCESS',
+              message: `Unified Student Profile successfully restored (Schema v${result.detectedVersion || 5}).\n${details}`,
+              type: 'success',
+              onConfirm: () => {
+                window.location.reload();
+              }
+            });
+            resolve(true);
           } else {
-            alert('Invalid backup file.');
+            AudioSynthesizer.play('alarm');
+            HeaderHUD.showStatusDialog({
+              title: 'IMPORT FAILED',
+              message: 'Invalid profile data or unsupported schema version.',
+              type: 'error'
+            });
+            resolve(false);
           }
-        } catch {
-          alert('Failed to parse backup JSON.');
+        } catch (err) {
+          console.error('[HEADER_HUD] Profile import parse failed:', err);
+          AudioSynthesizer.play('alarm');
+          HeaderHUD.showStatusDialog({
+            title: 'IMPORT PARSE ERROR',
+            message: 'Failed to read or parse the selected JSON profile file.',
+            type: 'error'
+          });
+          resolve(false);
         }
+      };
+      reader.onerror = () => {
+        AudioSynthesizer.play('alarm');
+        HeaderHUD.showStatusDialog({
+          title: 'FILE READ ERROR',
+          message: 'An error occurred while reading the file from disk.',
+          type: 'error'
+        });
+        resolve(false);
       };
       reader.readAsText(file);
     });
+  }
+
+  public static showStatusDialog(options: {
+    title: string;
+    message: string;
+    type?: 'success' | 'error' | 'info';
+    onConfirm?: () => void;
+  }): HTMLElement {
+    document.getElementById('hud-status-dialog')?.remove();
+    const type = options.type || 'info';
+    const typeColor = type === 'success' ? 'var(--good, #22c55e)' : type === 'error' ? 'var(--urgent, #ef4444)' : 'var(--accent-gold, #f59e0b)';
+    const typeIcon = type === 'success' ? '✓' : type === 'error' ? '✕' : 'ℹ';
+
+    const dialog = document.createElement('div');
+    dialog.id = 'hud-status-dialog';
+    dialog.className = 'completion-modal-overlay interactive hud-status-dialog';
+    dialog.setAttribute('role', 'dialog');
+    dialog.setAttribute('aria-modal', 'true');
+    dialog.setAttribute('aria-label', options.title);
+
+    dialog.innerHTML = `
+      <div class="completion-receipt-card" style="max-width: 440px; width: 90%; border-top: 3px solid ${typeColor};">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+          <span style="font-size: 18px; color: ${typeColor}; font-weight: 700;">${typeIcon}</span>
+          <div class="telemetry-label" style="color: ${typeColor}; font-weight: 700; letter-spacing: 0.08em;">${options.title}</div>
+        </div>
+        <div style="font-size: 14px; line-height: 1.6; color: var(--ink-primary); margin-bottom: 20px; white-space: pre-line;">${options.message}</div>
+        <button class="hud-btn btn-status-confirm" style="width: 100%; justify-content: center; padding: 10px 0; font-weight: 700; color: ${typeColor}; border-color: ${typeColor};">
+          OK
+        </button>
+      </div>
+    `;
+
+    document.body.appendChild(dialog);
+
+    const close = () => {
+      dialog.remove();
+      document.removeEventListener('keydown', onKey, true);
+      if (options.onConfirm) options.onConfirm();
+    };
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' || e.key === 'Enter') {
+        e.preventDefault();
+        e.stopPropagation();
+        close();
+      }
+    };
+    document.addEventListener('keydown', onKey, true);
+
+    dialog.querySelector('.btn-status-confirm')?.addEventListener('click', close);
+    (dialog.querySelector('.btn-status-confirm') as HTMLElement | null)?.focus();
+
+    return dialog;
   }
 
   public updateTelemetry(routeName: string): void {

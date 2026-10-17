@@ -17,6 +17,8 @@ export interface MultiSkillQuestion {
   answer: number; // Index 0..3 of correct option
   explanation?: string;
   vietnamese?: string;
+  difficulty?: number;     // 2PL IRT b parameter (-2.5 to +2.5)
+  discrimination?: number; // 2PL IRT a parameter (typically 1.0 to 1.8)
 }
 
 export interface DiagnosticAnswer {
@@ -27,6 +29,10 @@ export interface DiagnosticAnswer {
   selectedOption: number;
   correctAnswer: number;
   isCorrect: boolean;
+  isGuessed?: boolean; // Per diagnostic-test.md §4: answer marked with ? gets 0.5 score
+  score?: number;      // 1.0 (correct), 0.5 (guessed correct), 0.0 (incorrect)
+  thetaAfter?: number; // Estimated ability after this response
+  semAfter?: number;   // Standard error after this response
 }
 
 export interface StageSummary {
@@ -38,6 +44,17 @@ export interface StageSummary {
   percentage: number;
 }
 
+export type CatConfidence = 'low' | 'medium' | 'high';
+
+export interface CatSkillEstimate {
+  skill: SkillId;
+  theta: number; // Latent ability parameter (-3.0 to +3.0)
+  sem: number;   // Standard Error of Measurement
+  confidence: CatConfidence;
+  itemsAdministered: number;
+  calibratedLevel: Cefr;
+}
+
 export interface DiagnosticResult {
   profile: SkillProfile;
   overallLevel: Cefr;
@@ -45,6 +62,18 @@ export interface DiagnosticResult {
   answers: DiagnosticAnswer[];
   totalCorrect: number;
   totalQuestions: number;
+  // Optional CAT IRT metrics
+  catSkillEstimates?: Record<SkillId, CatSkillEstimate>;
+  overallTheta?: number;
+  overallSem?: number;
+  overallConfidence?: CatConfidence;
+}
+
+export interface CatDiagnosticResult extends DiagnosticResult {
+  catSkillEstimates: Record<SkillId, CatSkillEstimate>;
+  overallTheta: number;
+  overallSem: number;
+  overallConfidence: CatConfidence;
 }
 
 export interface DiagnosticStageInfo {
@@ -102,6 +131,123 @@ export const DIAGNOSTIC_STAGES: readonly DiagnosticStageInfo[] = [
 export const QUICK_BATTERY_LEVELS: readonly Cefr[] = ['A2', 'B2', 'C1'];
 
 /**
+ * 2PL IRT Theta Difficulty anchors mapped to CEFR tiers.
+ */
+export const CEFR_THETA_CALIBRATION: Record<Cefr, number> = {
+  A1: -2.5,
+  A2: -1.5,
+  B1: -0.5,
+  B2: 0.5,
+  C1: 1.5,
+  C2: 2.5
+};
+
+/**
+ * Converts latent ability theta (-3.0 to +3.0) to corresponding CEFR tier.
+ */
+export function thetaToCefr(theta: number): Cefr {
+  if (theta < -2.0) return 'A1';
+  if (theta < -1.0) return 'A2';
+  if (theta < 0.0) return 'B1';
+  if (theta < 1.0) return 'B2';
+  if (theta < 2.0) return 'C1';
+  return 'C2';
+}
+
+/**
+ * 2-Parameter Logistic (2PL) Item Response Function:
+ * P(X = 1 | theta, b, a) = 1 / (1 + exp(-a * (theta - b)))
+ */
+export function calcIrtProbability(theta: number, b: number, a: number = 1.2): number {
+  const exponent = -a * (theta - b);
+  if (exponent > 40) return 0;
+  if (exponent < -40) return 1;
+  return 1 / (1 + Math.exp(exponent));
+}
+
+/**
+ * Fisher Information for 2PL IRT item:
+ * I(theta) = a^2 * P(theta) * (1 - P(theta))
+ */
+export function calcFisherInformation(theta: number, b: number, a: number = 1.2): number {
+  const p = calcIrtProbability(theta, b, a);
+  return (a * a) * p * (1 - p);
+}
+
+/**
+ * Standard Error of Measurement (SEM) given accumulated Fisher Information:
+ * SEM(theta) = 1 / sqrt(Sum(I_i) + 1/priorVariance)
+ */
+export function calcSem(totalInformation: number, priorVariance: number = 1.0): number {
+  const denom = totalInformation + (1 / priorVariance);
+  return denom > 0 ? 1 / Math.sqrt(denom) : 1.0;
+}
+
+/**
+ * Classifies CAT confidence rating from SEM and administered count.
+ */
+export function classifyCatConfidence(sem: number, administeredCount: number): CatConfidence {
+  if (sem <= 0.35 && administeredCount >= 3) return 'high';
+  if (sem <= 0.50 && administeredCount >= 2) return 'medium';
+  return 'low';
+}
+
+/**
+ * Sequential Bayesian EAP ability updating:
+ * delta = (a * (score - P(theta))) / (newInfo + 1/priorVariance)
+ */
+export function updateThetaEAP(
+  currentTheta: number,
+  response: number, // 1.0 (correct), 0.5 (guessed), 0.0 (incorrect)
+  b: number,
+  a: number = 1.2,
+  accumulatedInformation: number = 0,
+  priorVariance: number = 1.0
+): { newTheta: number; newInformation: number; sem: number } {
+  const p = calcIrtProbability(currentTheta, b, a);
+  const info = calcFisherInformation(currentTheta, b, a);
+  const newInformation = accumulatedInformation + info;
+  const delta = (a * (response - p)) / (newInformation + (1 / priorVariance));
+  const rawTheta = currentTheta + delta;
+  const clampedTheta = Math.max(-3.0, Math.min(3.0, rawTheta));
+  const sem = calcSem(newInformation, priorVariance);
+  return { newTheta: clampedTheta, newInformation, sem };
+}
+
+/**
+ * Selects candidate item from question pool that maximizes Fisher Information at current theta.
+ */
+export function selectNextCatItem(
+  pool: MultiSkillQuestion[],
+  administeredIds: Set<string>,
+  currentTheta: number,
+  targetSkill?: SkillId
+): MultiSkillQuestion | null {
+  const candidates = pool.filter(q => {
+    if (administeredIds.has(q.id)) return false;
+    if (targetSkill && q.skill !== targetSkill) return false;
+    return true;
+  });
+
+  if (candidates.length === 0) return null;
+
+  let bestItem: MultiSkillQuestion = candidates[0];
+  let maxInfo = -1;
+
+  for (const item of candidates) {
+    const b = item.difficulty ?? CEFR_THETA_CALIBRATION[item.level] ?? 0;
+    const a = item.discrimination ?? 1.2;
+    const info = calcFisherInformation(currentTheta, b, a);
+    if (info > maxInfo) {
+      maxInfo = info;
+      bestItem = item;
+    }
+  }
+
+  return bestItem;
+}
+
+/**
  * High-fidelity curated listening questions for Stage 4 covering A1 to C2.
  */
 export const CURATED_LISTENING_QUESTIONS: readonly MultiSkillQuestion[] = [
@@ -118,125 +264,127 @@ export const CURATED_LISTENING_QUESTIONS: readonly MultiSkillQuestion[] = [
       "Consonant-to-vowel catenation: /ɪ.zæ/ links smoothly",
       "Glottal stop separation: /ɪz | ˈænə/ with full pause",
       "Sound deletion: /z/ is completely dropped",
-      "Vowel lengthening: 'name' is stressed with /æz/"
+      "Vowel substitution: /ɪz/ turns into /eɪz/"
     ],
     answer: 0,
-    explanation: "When a word ending in a consonant (/z/ in 'is') is followed by a vowel (/æ/ in 'Anna'), catenation links them into /ɪ.zæ/.",
-    vietnamese: "Tên cô ấy là Anna. Hiện tượng nối âm phụ âm - nguyên âm giữa 'is' và 'Anna'."
+    explanation: "Consonant-to-vowel catenation links final consonant /z/ to initial vowel /æ/ without interruption.",
+    vietnamese: "Nối âm phụ âm sang nguyên âm /z/ sang /æ/.",
+    difficulty: -2.5,
+    discrimination: 1.2
   },
   {
     id: 'diag-a2-listen',
     stage: 4,
     skill: 'listening',
     level: 'A2',
-    prompt: "Listen to the audio. What happens to the preposition 'to' in fast spoken English?",
-    audioPrompt: "I want to go to the supermarket.",
-    ipa: "/aɪ wɒnt tə ɡəʊ tə ðə ˈsuːpəˌmɑːkɪt/",
-    context: "Audio: 'I want to go to the supermarket.'",
+    prompt: "Listen to the audio. What happens to the function word 'to' in 'going to' in fluent everyday speech?",
+    audioPrompt: "We are going to buy a new car.",
+    ipa: "/wɪər ˈɡoʊ.ɪŋ tə baɪ ə njuː kɑːr/",
+    context: "Audio: 'We are going to buy a new car.'",
     options: [
-      "Weak form reduction: /tuː/ reduces to unstressed schwa /tə/",
-      "Full strong vowel: /tuː/ is emphasized loudly",
-      "Consonant shift: /t/ turns into /d/ at word boundaries",
-      "Elision: the word 'to' is completely omitted"
+      "Weak form: /tuː/ reduces to schwa /tə/",
+      "Strong stress: /tuː/ is emphasized loudly",
+      "Elision: the word 'to' is completely omitted",
+      "Catenation: /t/ turns into /d/"
     ],
     answer: 0,
-    explanation: "Grammatical function words like 'to' weaken to unstressed /tə/ (schwa) in standard connected speech.",
-    vietnamese: "Tôi muốn đi siêu thị. Từ chức năng 'to' giảm âm thành âm schwa /tə/."
+    explanation: "In connected speech, unstressed 'to' reduces to weak form /tə/.",
+    vietnamese: "Dạng yếu (weak form): /tuː/ giản lược thành âm schwa /tə/.",
+    difficulty: -1.5,
+    discrimination: 1.2
   },
   {
     id: 'diag-b1-listen',
     stage: 4,
     skill: 'listening',
     level: 'B1',
-    prompt: "Listen to the audio. Which connected speech phenomenon occurs between 'looking' and 'at it'?",
-    audioPrompt: "What looks like patience is usually just a system that keeps working while you are not looking at it.",
-    ipa: "/ˈlʊkɪŋ‿æt‿ɪt/",
-    context: "Audio excerpt: '...while you are not looking at it.'",
+    prompt: "Listen to the audio. What phonetic phenomenon occurs at the word boundary in 'red bag'?",
+    audioPrompt: "She placed the red bag on the wooden table.",
+    ipa: "/ʃi pleɪst ðə reb bæɡ ɒn ðə ˈwʊd.ən ˈteɪ.bəl/",
+    context: "Audio: 'She placed the red bag on the wooden table.'",
     options: [
-      "Continuous consonant-vowel catenation across both word boundaries",
-      "Alveolar stop deletion: /t/ disappears completely in both words",
-      "Regressive nasal assimilation: /ŋ/ becomes /m/",
-      "Intrusive /r/ inserted between the open vowels"
+      "Regressive assimilation: alveolar /d/ assimilates to bilabial /b/",
+      "Elision: /d/ is pronounced as a silent vowel",
+      "Intrusive /r/ linking across syllables",
+      "Glottalization: /d/ replaced by loud aspiration"
     ],
     answer: 0,
-    explanation: "'looking at it' links smoothly without pauses: the final velar nasal and stops attach across boundaries [lʊ.kɪ.ŋæ.tɪt].",
-    vietnamese: "Catenation liên tục nối liền các âm đuôi với nguyên âm kế tiếp."
+    explanation: "Regressive assimilation occurs when the alveolar /d/ takes the bilabial place of articulation of following /b/, sounding like 'reb bag'.",
+    vietnamese: "Đồng hóa âm (regressive assimilation): âm /d/ biến thành âm môi /b/ trước từ 'bag'.",
+    difficulty: -0.5,
+    discrimination: 1.2
   },
   {
     id: 'diag-b2-listen',
     stage: 4,
     skill: 'listening',
     level: 'B2',
-    prompt: "Listen to the audio. Why does 'most creators' sound like [məʊs kriˈeɪtəz]?",
-    audioPrompt: "Without arbitrary limitations to direct their focus, most creators fall prey to the paralysis of infinite choice.",
-    ipa: "[məʊs kriˈeɪtəz]",
-    context: "Audio excerpt: '...most creators fall prey...'",
+    prompt: "Listen to the audio. What happens to the final alveolar /t/ in the word 'next' in 'next door'?",
+    audioPrompt: "The family living next door just adopted a rescue dog.",
+    ipa: "/ðə ˈfæm.əl.i ˈlɪv.ɪŋ neks dɔːr dʒʌst əˈdɒp.tɪd ə ˈres.kjuː dɒɡ/",
+    context: "Audio: 'The family living next door just adopted a rescue dog.'",
     options: [
-      "Alveolar stop elision: /t/ drops between consonants /s/ and /k/",
-      "Palatalization: /t/ blends with /k/ into an affricate /tʃ/",
-      "Glottal replacement: /t/ becomes a voiced flap [ɾ]",
-      "Epenthesis: an extra schwa vowel is inserted between words"
+      "Consonant cluster elision: /t/ is omitted between /ks/ and /d/",
+      "Assimilation: /t/ turns into voiced /z/",
+      "Gemination: /t/ duplicates into a double stop",
+      "Nasalization: /t/ becomes /n/"
     ],
     answer: 0,
-    explanation: "When an alveolar stop (/t/ or /d/) is flanked by other consonants across a word boundary, it undergoes elision (sound deletion).",
-    vietnamese: "Hiện tượng nuốt âm (elision): âm /t/ bị triệt tiêu khi đứng giữa hai phụ âm."
+    explanation: "Alveolar elision drops /t/ when it appears in a consonant cluster followed by another consonant.",
+    vietnamese: "Nuốt âm (elision): âm /t/ bị lược bỏ giữa cụm phụ âm /ks/ và /d/.",
+    difficulty: 0.5,
+    discrimination: 1.3
   },
   {
     id: 'diag-c1-listen',
     stage: 4,
     skill: 'listening',
     level: 'C1',
-    prompt: "Listen to the audio excerpt. Which two phonological phenomena occur in 'In an era' and 'feed optimization'?",
-    audioPrompt: "In an era dominated by algorithmic feed optimization, human cognitive bandwidth has become the ultimate scarce commodity.",
-    ipa: "[ɪ-nə-nɪərə]",
-    context: "Audio excerpt: 'In an era dominated by algorithmic feed optimization...'",
+    prompt: "Listen to the audio. What phonetic feature connects 'law and order' in non-rhotic native speech?",
+    audioPrompt: "The magistrate emphasized the indispensable need for law and order.",
+    ipa: "/ðə ˈmædʒ.ɪ.streɪt ˈem.fə.saɪzd ði ˌɪn.dɪˈspen.sə.bəl niːd fɔː lɔːr ən ˈɔː.dər/",
+    context: "Audio: 'The magistrate emphasized the indispensable need for law and order.'",
     options: [
-      "Double catenation [ɪ-nə-nɪərə] followed by coronal elision of /d/ before the vowel",
-      "Glottal stopping across all syllables with syllable-timed staccato rhythm",
-      "Velar assimilation converting /n/ to [ŋ] and complete gemination of /d/",
-      "Syllabic consonant formation with loss of all unstressed vowels"
+      "Intrusive /r/ inserted between /ɔː/ and /ə/",
+      "Voicing assimilation of /n/ into /ŋ/",
+      "Glottal reinforcement of the initial vowel in 'order'",
+      "Palatalization of /l/ to /j/"
     ],
     answer: 0,
-    explanation: "'In an era' links [ɪ-nə-nɪərə] via catenation, while 'feed optimization' demonstrates soft coronal boundary transition.",
-    vietnamese: "Hiện tượng nối âm liên tiếp và chuyển dịch ranh giới âm tiết trong phát ngôn tốc độ cao."
+    explanation: "Intrusive /r/ is inserted by non-rhotic speakers between two vowel sounds where no historical 'r' exists in spelling.",
+    vietnamese: "Âm /r/ chèn (intrusive /r/): chèn âm /r/ nối giữa hai nguyên âm /ɔː/ và /ə/.",
+    difficulty: 1.5,
+    discrimination: 1.4
   },
   {
     id: 'diag-c2-listen',
     stage: 4,
     skill: 'listening',
     level: 'C2',
-    prompt: "Listen to the audio. In fast executive cadence, identify the acoustic transition in 'often suffer from severe':",
-    audioPrompt: "Organizations that prioritize synchronous consensus often suffer from severe decision paralysis and diminished velocity.",
-    ipa: "[ˌɒf(ə)n ˈsʌfə frəm sɪˈvɪə]",
-    context: "Audio excerpt: '...often suffer from severe decision paralysis...'",
+    prompt: "Listen to the audio. In rapid oratorical speech, how does 'don't you think' phonetically coalesce?",
+    audioPrompt: "Don't you think the proposition carries unwarranted presuppositions?",
+    ipa: "/dəʊntʃu θɪŋk ðə ˌprɒp.əˈzɪʃ.ən ˈkær.iz ʌnˈwɒr.ən.tɪd ˌpriː.sʌp.əˈzɪʃ.ənz/",
+    context: "Audio: 'Don't you think the proposition carries unwarranted presuppositions?'",
     options: [
-      "Labiodental assimilation of /n/ toward [ɱ] with weak form reduction /frəm/",
-      "Full vocalic release of /t/ in 'often' with aspiration [tʰ]",
-      "Intrusive /w/ liaison bridging the fricative consonants",
-      "Pitch-accent inversion causing tonic syllable fronting"
+      "Coalescent assimilation: /t/ + /j/ merges into affricate /tʃ/",
+      "Total elision: both words reduce to an unvoiced whisper",
+      "Vowel nasalization without consonantal contact",
+      "Syllabic consonant formation with glottal stops"
     ],
     answer: 0,
-    explanation: "Fast connected speech reduces 'from' to weak form /frəm/ and /n/ before labiodental /f/ assimilates toward labiodental nasal [ɱ].",
-    vietnamese: "Đồng hóa vị trí cấu âm môi-răng kết hợp dạng yếu (weak form) trong nhịp điệu diễn thuyết chuyên sâu."
+    explanation: "Coalescent assimilation merges the final alveolar /t/ with palatal glide /j/ to produce postalveolar affricate /tʃ/ ('don'tchu').",
+    vietnamese: "Hòa âm (coalescent assimilation): âm /t/ kết hợp cùng /j/ tạo thành âm tắc xát /tʃ/.",
+    difficulty: 2.5,
+    discrimination: 1.5
   }
 ];
 
-function shuffle<T>(list: readonly T[], rng: () => number = Math.random): T[] {
-  const out = [...list];
-  for (let i = out.length - 1; i > 0; i--) {
-    const j = Math.floor(rng() * (i + 1));
-    [out[i], out[j]] = [out[j], out[i]];
-  }
-  return out;
-}
-
 /**
- * Evaluates the calibrated CEFR level for a skill based on answered questions.
- * Enforces educational ladder progression: failure at an earlier tier stops further promotion.
+ * Calibrates the CEFR level for a single skill based on testing records.
+ * Uses sequential ladder climbing: failure at an earlier tier prevents premature promotion.
  */
 export function calibrateSkillLevel(
-  records: Array<{ level: Cefr; isCorrect: boolean }>,
-  _totalInStage?: number
+  records: Array<{ level: Cefr; isCorrect: boolean }>
 ): Cefr {
   if (!records || records.length === 0) return 'A1';
 
@@ -261,19 +409,17 @@ export function calibrateSkillLevel(
       continue;
     }
 
-    // Passing threshold: 100% if single question, >= 66% (e.g. 2 of 3) if multiple
+    // Passing threshold: 100% if single question, >= 66% if multiple
     const passed = entry.total === 1 ? entry.correct >= 1 : (entry.correct / entry.total) >= 0.66;
 
     if (passed) {
       calibrated = lvl;
       passedAny = true;
     } else {
-      // Ladder climb stops at first failed tier
       break;
     }
   }
 
-  // If 0 questions passed at tested tiers, return A1
   if (!passedAny) {
     return 'A1';
   }
@@ -375,24 +521,19 @@ export interface BuildBatteryOptions {
  */
 export function buildDiagnosticBattery(options: BuildBatteryOptions = {}): MultiSkillQuestion[] {
   const mode = options.mode || 'quick';
+  const targetLevels = mode === 'quick' ? QUICK_BATTERY_LEVELS : CEFR_ORDER;
   const rng = options.rng || Math.random;
-  const targetLevels: readonly Cefr[] = mode === 'quick' ? QUICK_BATTERY_LEVELS : CEFR_ORDER;
 
   const battery: MultiSkillQuestion[] = [];
 
-  // Stage 1: Vocab & Collocations
+  // Partition curated questions if provided
   const stage1Questions: MultiSkillQuestion[] = [];
-  // Stage 2: Grammar
   const stage2Questions: MultiSkillQuestion[] = [];
-  // Stage 3: Reading
   const stage3Questions: MultiSkillQuestion[] = [];
-  // Stage 4: Listening
   const stage4Questions: MultiSkillQuestion[] = [];
-  // Stage 5: Writing
   const stage5Questions: MultiSkillQuestion[] = [];
 
-  // 1. Process curated questions if supplied
-  if (options.curatedQuestions && options.curatedQuestions.length > 0) {
+  if (options.curatedQuestions) {
     for (const q of options.curatedQuestions) {
       if (q.stage === 1 || q.skill === 'vocab') stage1Questions.push(q);
       else if (q.stage === 2 || q.skill === 'grammar') stage2Questions.push(q);
@@ -402,12 +543,10 @@ export function buildDiagnosticBattery(options: BuildBatteryOptions = {}): Multi
     }
   }
 
-  // 2. Ensure Stage 4 (Listening) has questions
   if (stage4Questions.length === 0) {
     stage4Questions.push(...CURATED_LISTENING_QUESTIONS);
   }
 
-  // 3. Helper to pick questions per level with fallback synthesis
   function selectQuestionsForStage(
     stageNum: number,
     skill: SkillId,
@@ -422,11 +561,9 @@ export function buildDiagnosticBattery(options: BuildBatteryOptions = {}): Multi
       if (matching.length > 0) {
         selected.push(matching[0]);
       } else if (backupItems && backupItems.length > 0) {
-        // Fallback synthesis from raw corpus
         const synthetic = synthesizeQuestion(stageNum, skill, lvl, backupItems, backupKind || '', rng);
         selected.push(synthetic);
       } else {
-        // Fallback placeholder with distractor parity
         selected.push(createPlaceholderQuestion(stageNum, skill, lvl));
       }
     }
@@ -440,9 +577,7 @@ export function buildDiagnosticBattery(options: BuildBatteryOptions = {}): Multi
   battery.push(...selectQuestionsForStage(4, 'listening', stage4Questions, options.listeningPassages, 'listening'));
   battery.push(...selectQuestionsForStage(5, 'writing', stage5Questions, options.rhetoricItems, 'writing'));
 
-  // Ensure randomized answer positioning if requested
   return battery.map((q, idx) => {
-    // Ensure all options are distinct
     const uniqueOptions = Array.from(new Set(q.options));
     let pad = 1;
     while (uniqueOptions.length < 4) {
@@ -456,7 +591,9 @@ export function buildDiagnosticBattery(options: BuildBatteryOptions = {}): Multi
       ...q,
       id: q.id || `diag-q-${idx + 1}`,
       options: shuffledOptions,
-      answer: newAnswer >= 0 ? newAnswer : 0
+      answer: newAnswer >= 0 ? newAnswer : 0,
+      difficulty: q.difficulty ?? CEFR_THETA_CALIBRATION[q.level] ?? 0,
+      discrimination: q.discrimination ?? 1.2
     };
   });
 }
@@ -476,7 +613,9 @@ function createPlaceholderQuestion(stage: number, skill: SkillId, level: Cefr): 
       `${level} flawed distractor formulation C`
     ],
     answer: 0,
-    explanation: `Demonstrates appropriate competence for ${level} ${skill}.`
+    explanation: `Demonstrates appropriate competence for ${level} ${skill}.`,
+    difficulty: CEFR_THETA_CALIBRATION[level] ?? 0,
+    discrimination: 1.2
   };
 }
 
@@ -488,15 +627,21 @@ function synthesizeQuestion(
   kind: string,
   rng: () => number
 ): MultiSkillQuestion {
-  const levelItems = items.filter(x => x.cefrLevel === level);
-  const pool = levelItems.length > 0 ? levelItems : items;
-  const picked = pool[Math.floor(rng() * pool.length)] || {};
+  const matching = items.filter(it => it.level === level || it.cefrLevel === level);
+  const pool = matching.length > 0 ? matching : items;
+  const picked = pool[Math.floor(rng() * pool.length)];
 
-  if (kind === 'colloc' && picked.phrase) {
-    const correct = picked.phrase;
-    const distractors = pool.filter(x => x.phrase && x.phrase !== correct).map(x => x.phrase).slice(0, 3);
-    while (distractors.length < 3) distractors.push(`${level} phrase ${distractors.length + 1}`);
-    const options = shuffle([correct, ...distractors], rng);
+  if (kind === 'colloc' && picked) {
+    const correct = picked.phrase || picked.word || 'essential collocation';
+    const sameLevelDistractors = pool
+      .filter(it => it !== picked)
+      .map(it => it.phrase || it.word)
+      .filter(Boolean);
+    const options = [correct, ...sameLevelDistractors.slice(0, 3)];
+    while (options.length < 4) {
+      options.push(`Alternative ${level} phrasing ${options.length}`);
+    }
+
     return {
       id: `diag-syn-colloc-${level}`,
       stage: 1,
@@ -506,16 +651,348 @@ function synthesizeQuestion(
       context: picked.example || `Essential ${level} usage pattern.`,
       options,
       answer: options.indexOf(correct),
-      vietnamese: picked.vietnamese || ''
+      vietnamese: picked.vietnamese || '',
+      difficulty: CEFR_THETA_CALIBRATION[level] ?? 0,
+      discrimination: 1.2
     };
   }
 
   return createPlaceholderQuestion(stage, skill, level);
 }
 
+function shuffle<T>(arr: T[], rng: () => number): T[] {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+// =========================================================================
+// COMPUTERIZED ADAPTIVE TESTING (CAT) PLACEMENT ENGINE
+// =========================================================================
+
+export interface CatPlacementEngineOptions {
+  questionPool?: MultiSkillQuestion[];
+  semThreshold?: number;     // Stopping rule SEM threshold (default: 0.35 per contract)
+  maxItemsPerSkill?: number; // Maximum items per skill (default: 5)
+  minItemsPerSkill?: number; // Minimum items before SEM check (default: 3)
+  maxTotalItems?: number;    // Maximum items for overall battery (default: 18 per contract)
+  initialTheta?: number;     // Initial starting ability (default: -0.5 for B1)
+}
+
+export class CatPlacementEngine {
+  private pool: MultiSkillQuestion[];
+  private semThreshold: number;
+  private maxItemsPerSkill: number;
+  private minItemsPerSkill: number;
+  private maxTotalItems: number;
+  private currentStageIndex: number = 0; // 0..4 (Stage 1..5)
+  private currentThetaBySkill: Record<SkillId, number>;
+  private infoBySkill: Record<SkillId, number>;
+  private administeredIds: Set<string> = new Set();
+  private answers: DiagnosticAnswer[] = [];
+  private currentQuestion: MultiSkillQuestion | null = null;
+  private quizCompleted: boolean = false;
+
+  constructor(options: CatPlacementEngineOptions = {}) {
+    this.pool = options.questionPool && options.questionPool.length > 0
+      ? options.questionPool
+      : buildDiagnosticBattery({ mode: 'comprehensive' });
+    this.semThreshold = options.semThreshold ?? 0.35;
+    this.maxItemsPerSkill = options.maxItemsPerSkill ?? 5;
+    this.minItemsPerSkill = options.minItemsPerSkill ?? 3;
+    this.maxTotalItems = options.maxTotalItems ?? 18;
+
+    const startTheta = options.initialTheta ?? -0.5; // B1 provisional anchor
+    this.currentThetaBySkill = {
+      vocab: startTheta,
+      grammar: startTheta,
+      reading: startTheta,
+      listening: startTheta,
+      writing: startTheta,
+      speaking: startTheta
+    };
+    this.infoBySkill = {
+      vocab: 0,
+      grammar: 0,
+      reading: 0,
+      listening: 0,
+      writing: 0,
+      speaking: 0
+    };
+
+    this.selectNextQuestion();
+  }
+
+  public getCurrentSkill(): SkillId {
+    return DIAGNOSTIC_STAGES[this.currentStageIndex]?.skill || 'vocab';
+  }
+
+  public getCurrentStageNumber(): number {
+    return this.currentStageIndex + 1;
+  }
+
+  public getCurrentQuestion(): MultiSkillQuestion | null {
+    return this.currentQuestion;
+  }
+
+  public getTheta(skill?: SkillId): number {
+    return skill ? this.currentThetaBySkill[skill] : this.getOverallTheta();
+  }
+
+  public getSem(skill?: SkillId): number {
+    const s = skill || this.getCurrentSkill();
+    return calcSem(this.infoBySkill[s]);
+  }
+
+  public isComplete(): boolean {
+    return this.quizCompleted;
+  }
+
+  public getAdministeredCount(): number {
+    return this.answers.length;
+  }
+
+  public getAnswers(): readonly DiagnosticAnswer[] {
+    return this.answers;
+  }
+
+  private selectNextQuestion(): void {
+    if (this.answers.length >= this.maxTotalItems) {
+      this.quizCompleted = true;
+      this.currentQuestion = null;
+      return;
+    }
+
+    const currentSkill = this.getCurrentSkill();
+    const stageAnswers = this.answers.filter(a => a.skill === currentSkill);
+    const currentSem = this.getSem(currentSkill);
+
+    // Stopping criteria for current skill stage:
+    const stageItemsMaxed = stageAnswers.length >= this.maxItemsPerSkill;
+    const stageSemMet = stageAnswers.length >= this.minItemsPerSkill && currentSem <= this.semThreshold;
+
+    if (stageItemsMaxed || stageSemMet) {
+      // Step to next stage
+      if (this.currentStageIndex + 1 < DIAGNOSTIC_STAGES.length) {
+        this.currentStageIndex += 1;
+        const prevTheta = this.currentThetaBySkill[currentSkill];
+        const nextSkill = this.getCurrentSkill();
+        // Warm-start next skill theta from previous skill
+        this.currentThetaBySkill[nextSkill] = (prevTheta + this.currentThetaBySkill[nextSkill]) / 2;
+        return this.selectNextQuestion();
+      } else {
+        this.quizCompleted = true;
+        this.currentQuestion = null;
+        return;
+      }
+    }
+
+    // Maximum Fisher Information item selection
+    const nextItem = selectNextCatItem(
+      this.pool,
+      this.administeredIds,
+      this.currentThetaBySkill[currentSkill],
+      currentSkill
+    );
+
+    if (!nextItem) {
+      if (this.currentStageIndex + 1 < DIAGNOSTIC_STAGES.length) {
+        this.currentStageIndex += 1;
+        return this.selectNextQuestion();
+      } else {
+        this.quizCompleted = true;
+        this.currentQuestion = null;
+        return;
+      }
+    }
+
+    this.currentQuestion = nextItem;
+  }
+
+  public recordAnswer(selectedOption: number, isGuessed: boolean = false): {
+    isCorrect: boolean;
+    correctAnswer: number;
+    newTheta: number;
+    sem: number;
+    stageCompleted: boolean;
+    quizCompleted: boolean;
+  } {
+    if (!this.currentQuestion) {
+      return {
+        isCorrect: false,
+        correctAnswer: -1,
+        newTheta: 0,
+        sem: 1.0,
+        stageCompleted: true,
+        quizCompleted: true
+      };
+    }
+
+    const q = this.currentQuestion;
+    const isCorrect = selectedOption === q.answer;
+    // Fractional credit 0.5 for guesses marked with '?' per diagnostic-test.md
+    const score = isCorrect ? (isGuessed ? 0.5 : 1.0) : 0.0;
+
+    const b = q.difficulty ?? CEFR_THETA_CALIBRATION[q.level] ?? 0;
+    const a = q.discrimination ?? 1.2;
+    const skill = q.skill;
+
+    const update = updateThetaEAP(
+      this.currentThetaBySkill[skill],
+      score,
+      b,
+      a,
+      this.infoBySkill[skill]
+    );
+
+    this.currentThetaBySkill[skill] = update.newTheta;
+    this.infoBySkill[skill] = update.newInformation;
+
+    this.administeredIds.add(q.id);
+    this.answers.push({
+      questionId: q.id,
+      stage: q.stage,
+      skill: q.skill,
+      level: q.level,
+      selectedOption,
+      correctAnswer: q.answer,
+      isCorrect,
+      isGuessed,
+      score,
+      thetaAfter: update.newTheta,
+      semAfter: update.sem
+    });
+
+    const prevStage = this.currentStageIndex;
+    this.selectNextQuestion();
+    const stageCompleted = this.currentStageIndex !== prevStage || this.quizCompleted;
+
+    return {
+      isCorrect,
+      correctAnswer: q.answer,
+      newTheta: update.newTheta,
+      sem: update.sem,
+      stageCompleted,
+      quizCompleted: this.quizCompleted
+    };
+  }
+
+  public getOverallTheta(): number {
+    const assessed: SkillId[] = ['vocab', 'grammar', 'reading', 'listening', 'writing'];
+    const thetas = assessed.map(s => this.currentThetaBySkill[s]).sort((a, b) => a - b);
+    return thetas[Math.floor(thetas.length / 2)];
+  }
+
+  public getCatResults(): CatDiagnosticResult {
+    const catSkillEstimates: Record<SkillId, CatSkillEstimate> = {} as any;
+    const stageSummaries: StageSummary[] = [];
+
+    for (const info of DIAGNOSTIC_STAGES) {
+      const skill = info.skill;
+      const stageAnswers = this.answers.filter(a => a.skill === skill);
+      const theta = this.currentThetaBySkill[skill];
+      const sem = this.getSem(skill);
+      const calibratedLevel = thetaToCefr(theta);
+      const confidence = classifyCatConfidence(sem, stageAnswers.length);
+      const correctCount = stageAnswers.filter(a => a.isCorrect).length;
+
+      catSkillEstimates[skill] = {
+        skill,
+        theta,
+        sem,
+        confidence,
+        itemsAdministered: stageAnswers.length,
+        calibratedLevel
+      };
+
+      stageSummaries.push({
+        stage: info.stage,
+        skill: info.skill,
+        calibratedLevel,
+        correctCount,
+        totalQuestions: stageAnswers.length,
+        percentage: stageAnswers.length > 0 ? Math.round((correctCount / stageAnswers.length) * 100) : 0
+      });
+    }
+
+    // Interpolate speaking proficiency from listening and writing
+    const speakingLevel = resolveSpeakingBaseline(
+      catSkillEstimates.listening.calibratedLevel,
+      catSkillEstimates.writing.calibratedLevel
+    );
+    const speakingTheta = (catSkillEstimates.listening.theta + catSkillEstimates.writing.theta) / 2;
+    catSkillEstimates.speaking = {
+      skill: 'speaking',
+      theta: speakingTheta,
+      sem: (catSkillEstimates.listening.sem + catSkillEstimates.writing.sem) / 2,
+      confidence: 'medium',
+      itemsAdministered: 0,
+      calibratedLevel: speakingLevel
+    };
+
+    const overallTheta = this.getOverallTheta();
+    const overallLevel = thetaToCefr(overallTheta);
+    const overallSem = calcSem(
+      Object.values(this.infoBySkill).reduce((acc, v) => acc + v, 0)
+    );
+    const overallConfidence = classifyCatConfidence(overallSem, this.answers.length);
+
+    const profile: SkillProfile = {
+      overall: overallLevel,
+      skills: {
+        vocab: catSkillEstimates.vocab.calibratedLevel,
+        grammar: catSkillEstimates.grammar.calibratedLevel,
+        reading: catSkillEstimates.reading.calibratedLevel,
+        listening: catSkillEstimates.listening.calibratedLevel,
+        writing: catSkillEstimates.writing.calibratedLevel,
+        speaking: speakingLevel
+      },
+      assessedAt: new Date().toISOString()
+    };
+
+    const totalCorrect = this.answers.filter(a => a.isCorrect).length;
+
+    return {
+      profile,
+      overallLevel,
+      stageSummaries,
+      answers: [...this.answers],
+      totalCorrect,
+      totalQuestions: this.answers.length,
+      catSkillEstimates,
+      overallTheta,
+      overallSem,
+      overallConfidence
+    };
+  }
+
+  public applyResults(persist: boolean = true): SkillProfile {
+    const results = this.getCatResults();
+    if (persist) {
+      StorageManager.saveSkillProfile(results.profile);
+      for (const [skill, est] of Object.entries(results.catSkillEstimates)) {
+        StorageManager.saveCatProfile(skill as SkillId, {
+          skill: skill as SkillId,
+          theta: est.theta,
+          sem: est.sem,
+          confidence: est.confidence,
+          itemsAdministered: est.itemsAdministered,
+          calibratedLevel: est.calibratedLevel,
+          assessedAt: results.profile.assessedAt
+        });
+      }
+    }
+    return results.profile;
+  }
+}
+
 /**
  * 5-Stage Sequential Diagnostic Runner.
  * Manages stepper transitions, answer recording, per-stage feedback, and profile persistence.
+ * Compatible with both linear battery and adaptive CAT item sequencing.
  */
 export class MultiSkillDiagnosticRunner {
   private questions: MultiSkillQuestion[];
@@ -594,7 +1071,7 @@ export class MultiSkillDiagnosticRunner {
     };
   }
 
-  public recordAnswer(selectedOption: number): {
+  public recordAnswer(selectedOption: number, isGuessed: boolean = false): {
     isCorrect: boolean;
     correctAnswer: number;
     explanation?: string;
@@ -612,6 +1089,7 @@ export class MultiSkillDiagnosticRunner {
     }
 
     const isCorrect = selectedOption === currentQ.answer;
+    const score = isCorrect ? (isGuessed ? 0.5 : 1.0) : 0.0;
 
     this.answers.push({
       questionId: currentQ.id,
@@ -620,7 +1098,9 @@ export class MultiSkillDiagnosticRunner {
       level: currentQ.level,
       selectedOption,
       correctAnswer: currentQ.answer,
-      isCorrect
+      isCorrect,
+      isGuessed,
+      score
     });
 
     const stageQuestions = this.getQuestionsForStage(this.currentStageIndex + 1);
@@ -665,6 +1145,7 @@ export class MultiSkillDiagnosticRunner {
 
   public getResults(): DiagnosticResult {
     const stageSummaries: StageSummary[] = [];
+    const catSkillEstimates: Record<SkillId, CatSkillEstimate> = {} as any;
 
     for (const info of DIAGNOSTIC_STAGES) {
       const stageAnswers = this.answers.filter(a => a.stage === info.stage);
@@ -674,6 +1155,24 @@ export class MultiSkillDiagnosticRunner {
       const calibratedLevel = calibrateSkillLevel(
         stageAnswers.map(a => ({ level: a.level, isCorrect: a.isCorrect }))
       );
+
+      // Estimate theta and SEM for this stage
+      let stageTheta = CEFR_THETA_CALIBRATION[calibratedLevel] ?? -0.5;
+      let stageInfo = 0;
+      for (const a of stageAnswers) {
+        const b = CEFR_THETA_CALIBRATION[a.level] ?? 0;
+        stageInfo += calcFisherInformation(stageTheta, b, 1.2);
+      }
+      const stageSem = calcSem(stageInfo);
+
+      catSkillEstimates[info.skill] = {
+        skill: info.skill,
+        theta: stageTheta,
+        sem: stageSem,
+        confidence: classifyCatConfidence(stageSem, stageAnswers.length),
+        itemsAdministered: stageAnswers.length,
+        calibratedLevel
+      };
 
       stageSummaries.push({
         stage: info.stage,
@@ -685,9 +1184,25 @@ export class MultiSkillDiagnosticRunner {
       });
     }
 
-    const profile = calibrateSkillProfile(this.answers);
+    const speakingLevel = resolveSpeakingBaseline(
+      catSkillEstimates.listening.calibratedLevel,
+      catSkillEstimates.writing.calibratedLevel
+    );
+    catSkillEstimates.speaking = {
+      skill: 'speaking',
+      theta: (catSkillEstimates.listening.theta + catSkillEstimates.writing.theta) / 2,
+      sem: (catSkillEstimates.listening.sem + catSkillEstimates.writing.sem) / 2,
+      confidence: 'medium',
+      itemsAdministered: 0,
+      calibratedLevel: speakingLevel
+    };
 
+    const profile = calibrateSkillProfile(this.answers);
     const totalCorrect = this.answers.filter(a => a.isCorrect).length;
+    const overallTheta = CEFR_THETA_CALIBRATION[profile.overall] ?? 0;
+    const overallSem = calcSem(
+      Object.values(catSkillEstimates).reduce((acc, v) => acc + (1 / (v.sem * v.sem || 1)), 0)
+    );
 
     return {
       profile,
@@ -695,7 +1210,22 @@ export class MultiSkillDiagnosticRunner {
       stageSummaries,
       answers: [...this.answers],
       totalCorrect,
-      totalQuestions: this.questions.length
+      totalQuestions: this.questions.length,
+      catSkillEstimates,
+      overallTheta,
+      overallSem,
+      overallConfidence: classifyCatConfidence(overallSem, this.answers.length)
+    };
+  }
+
+  public getCatResults(): CatDiagnosticResult {
+    const res = this.getResults();
+    return {
+      ...res,
+      catSkillEstimates: res.catSkillEstimates!,
+      overallTheta: res.overallTheta!,
+      overallSem: res.overallSem!,
+      overallConfidence: res.overallConfidence!
     };
   }
 
@@ -703,7 +1233,23 @@ export class MultiSkillDiagnosticRunner {
     const results = this.getResults();
     if (persist) {
       StorageManager.saveSkillProfile(results.profile);
+      if (results.catSkillEstimates) {
+        for (const [skill, est] of Object.entries(results.catSkillEstimates)) {
+          StorageManager.saveCatProfile(skill as SkillId, {
+            skill: skill as SkillId,
+            theta: est.theta,
+            sem: est.sem,
+            confidence: est.confidence,
+            itemsAdministered: est.itemsAdministered,
+            calibratedLevel: est.calibratedLevel,
+            assessedAt: results.profile.assessedAt
+          });
+        }
+      }
     }
     return results.profile;
   }
 }
+
+// Re-export Automated Essay Scoring (AES) engine
+export { AesScoringEngine, type AesEvaluationResult, type AesMetrics, type BandRewriteSuggestion, type IeltsTaskType } from './aes-scoring-engine';

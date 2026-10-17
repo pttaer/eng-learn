@@ -154,3 +154,114 @@ export function estimateBand(ratings: number[], words: number, task: 1 | 2): num
   const penalty = words < (task === 1 ? 150 : 250) ? 0.5 : 0;
   return Math.max(0, Math.round((mean - penalty) * 2) / 2);
 }
+
+export interface ParagraphEvaluation {
+  hasTopicSentence: boolean;
+  hasExplanation: boolean;
+  hasEvidence: boolean;
+  hasImpactSentence: boolean;
+  sentenceCount: number;
+  wordCount: number;
+  feedback: string[];
+  scoreEstimate: 'Band 6.0' | 'Band 7.0' | 'Band 8.0+';
+}
+
+const TOPIC_MARKERS = /\b(one (of the )?(primary|main|key|major|significant|central|crucial)|the (main|primary|chief|key|first|central)|firstly|first and foremost|to begin with|a (major|key|primary|significant|fundamental)|it is (clear|evident|arguable|undeniable|essential)|plays a (vital|crucial|major|key)|argument|advantage|disadvantage|benefit|drawback|factor|reason|cause|problem|solution|should|must|ought to|contend|argue|believe|maintain|suggest)\b/i;
+const CAUSAL_EXPLANATION = /\b(because|since|as a result|leads to|leading to|this means that|this is because|due to|owing to|in order to|thereby|causes|resulting in|results in|enables|allows|consequently|stems from|in turn|by doing so|this occurs because|which makes|triggers|generates|fosters|explains why|serves to|ensures that)\b/i;
+const CONCRETE_EVIDENCE = /\b(for instance|for example|specifically|such as|to illustrate|a case in point|evidence (from|suggests|shows)|studies (show|have shown|indicate)|research (indicates|shows|demonstrates)|according to|exemplified by|take (\w+ )?for example|in particular|as seen in|a notable example|data reveals|statistics show|case study)\b/i;
+const IMPACT_CONCLUDING = /\b(consequently|thus|therefore|as a consequence|hence|ultimately|this demonstrates that|this highlights that|this underscores that|this proves that|in this way|as such|it is clear that|clearly shows that|without this|the result is that|in turn|as a direct outcome|this ensures that|serves as|proves crucial)\b/i;
+
+/**
+ * Validates a body paragraph against Keino Campbell's 4-Sentence Paragraph Architecture:
+ * 1. Topic Sentence (main claim / stance)
+ * 2. Explanation (causal logic / mechanism)
+ * 3. Concrete Evidence (data point, study, or real-world exemplar)
+ * 4. Concluding / Impact Sentence (link back to thesis / broader implication)
+ */
+export function validateFourSentenceParagraph(text: string): ParagraphEvaluation {
+  const clean = text.trim();
+  if (!clean) {
+    return {
+      hasTopicSentence: false,
+      hasExplanation: false,
+      hasEvidence: false,
+      hasImpactSentence: false,
+      sentenceCount: 0,
+      wordCount: 0,
+      feedback: ['Please enter a paragraph to evaluate.'],
+      scoreEstimate: 'Band 6.0'
+    };
+  }
+
+  const sentences = clean.split(/(?<=[.!?])\s+/).filter(s => s.trim().length > 0);
+  const sentenceCount = sentences.length;
+  const words = clean.split(/\s+/).filter(Boolean);
+  const wordCount = words.length;
+
+  const firstSent = sentences[0] || '';
+  const startsWithEvidenceOrImpact = /^(for (example|instance)|specifically|take |such as|consequently|thus|therefore|in conclusion|overall)\b/i.test(firstSent);
+  const hasTopicSentence = sentenceCount >= 1 && (TOPIC_MARKERS.test(firstSent) || (firstSent.split(/\s+/).length >= 7 && !startsWithEvidenceOrImpact));
+
+  const hasExplanation = CAUSAL_EXPLANATION.test(clean);
+  const hasEvidence = CONCRETE_EVIDENCE.test(clean);
+  const hasImpactSentence = IMPACT_CONCLUDING.test(clean);
+
+  const feedback: string[] = [];
+
+  if (!hasTopicSentence) {
+    feedback.push('Missing clear Topic Sentence: Begin with a strong claim identifying the core argument.');
+  } else {
+    feedback.push('✓ Topic Sentence detected: Clear main claim established.');
+  }
+
+  if (!hasExplanation) {
+    feedback.push('Missing Explanation: Add causal reasoning using linkers like "because", "this means that", or "leads to".');
+  } else {
+    feedback.push('✓ Causal Explanation detected: Mechanism explained logically.');
+  }
+
+  if (!hasEvidence) {
+    feedback.push('Missing Concrete Evidence: Provide specific support or an exemplar using "for instance", "specifically", or a study reference.');
+  } else {
+    feedback.push('✓ Concrete Evidence detected: Specific illustration provided.');
+  }
+
+  if (!hasImpactSentence) {
+    feedback.push('Missing Impact/Concluding Sentence: Conclude with the broader consequence using "consequently", "thus", or "therefore".');
+  } else {
+    feedback.push('✓ Concluding Impact detected: Strong link back to broader thesis.');
+  }
+
+  if (sentenceCount < 4) {
+    feedback.push(`Paragraph has ${sentenceCount} sentence(s). Aim for 4 sentences for a fully balanced paragraph.`);
+  } else if (sentenceCount > 4) {
+    feedback.push(`Paragraph has ${sentenceCount} sentences. The 4-sentence formula keeps development concise and focused.`);
+  }
+
+  if (wordCount < 60) {
+    feedback.push(`Short paragraph (${wordCount} words). A well-developed Band 7+ body paragraph is typically 80–110 words.`);
+  }
+
+  const allFourPresent = hasTopicSentence && hasExplanation && hasEvidence && hasImpactSentence;
+  let scoreEstimate: 'Band 6.0' | 'Band 7.0' | 'Band 8.0+';
+
+  if (allFourPresent && sentenceCount === 4 && wordCount >= 75) {
+    scoreEstimate = 'Band 8.0+';
+  } else if (allFourPresent && wordCount >= 55) {
+    scoreEstimate = 'Band 7.0';
+  } else {
+    scoreEstimate = 'Band 6.0';
+  }
+
+  return {
+    hasTopicSentence,
+    hasExplanation,
+    hasEvidence,
+    hasImpactSentence,
+    sentenceCount,
+    wordCount,
+    feedback,
+    scoreEstimate
+  };
+}
+

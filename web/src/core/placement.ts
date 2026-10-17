@@ -1,4 +1,5 @@
 import { Cefr, CEFR_ORDER } from './cefr';
+import { pickDecoys } from './decoys';
 
 export type PlacementSkill = 'vocab' | 'collocation' | 'grammar' | 'reading';
 
@@ -30,14 +31,13 @@ export interface PhraseItem {
   [key: string]: any;
 }
 
+/** Curated multiple-choice grammar item (diagnostic-questions.json shape). */
 export interface GrammarItem {
-  cefrLevel: string;
-  promptSentence?: string;
-  prompt?: string;
-  targetTransformation?: string;
-  grammaticalCue?: string;
-  vietnamese?: string;
-  formula?: string;
+  level: string;
+  prompt: string;
+  context?: string;
+  options: string[];
+  answer: number;
   [key: string]: any;
 }
 
@@ -77,33 +77,32 @@ function toQuestion(
   prompt: string,
   context: string,
   correct: string,
-  pool: string[],
+  distractors: string[],
   rng: () => number
 ): PlacementQuestion {
-  const uniquePool = Array.from(new Set(pool.filter(v => typeof v === 'string' && v.trim() !== '' && v !== correct)));
-  const distractors = shuffle(uniquePool, rng).slice(0, 3);
-  let padIdx = 1;
-  while (distractors.length < 3) {
-    const filler = `${level} option ${padIdx++}`;
-    if (!distractors.includes(filler) && filler !== correct) {
-      distractors.push(filler);
-    }
-  }
   const options = shuffle([correct, ...distractors], rng);
   return { level, kind, prompt, context, options, answer: options.indexOf(correct) };
 }
 
+const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/** Blanks the target word in its sentence; null when the word isn't there as a whole word (the blank would be fake). */
+function blankOut(sentence: string, target: string): string | null {
+  const re = new RegExp('\\b' + escapeRe(target) + '\\b', 'i');
+  return re.test(sentence) ? sentence.replace(re, '[ _____ ]') : null;
+}
+
 /**
  * Builds exactly 24 diagnostic placement questions (4 per level A1-C2):
- * 1. Vocab: Vocabulary definition / meaning
- * 2. Collocation: Phrase completion / meaning
- * 3. Grammar: Syntactic transformation / cue
- * 4. Reading: Mini-passage cloze comprehension
+ * 1. Vocab: word -> meaning, decoys are related meanings of same-level words
+ * 2. Collocation: phrase -> meaning, decoys are related same-level phrases
+ * 3. Grammar: curated multiple-choice item for the level
+ * 4. Reading: mini-passage cloze, decoys share the target's part of speech
  */
 export function buildQuestions(
   words: WordItem[],
   phrases: PhraseItem[],
-  grammarRules: GrammarItem[] = [],
+  grammarItems: GrammarItem[] = [],
   readingArticles: any = [],
   rng: () => number = Math.random
 ): PlacementQuestion[] {
@@ -112,97 +111,63 @@ export function buildQuestions(
     ? readingArticles
     : (readingArticles && Array.isArray((readingArticles as any).articles) ? (readingArticles as any).articles : []);
 
+  const minedItems: Array<{ level: string; targetWord: string; contextSentence: string; partOfSpeech?: string; title?: string }> = [];
+  for (const art of normalizedReading) {
+    const mined = art.fourPassProtocol?.pass3SentenceMining;
+    const list = Array.isArray(mined) ? mined : (art.targetWord && art.contextSentence ? [art] : []);
+    for (const m of list) {
+      if (m.targetWord && m.contextSentence) {
+        minedItems.push({ level: art.cefrLevel, targetWord: m.targetWord.trim(), contextSentence: m.contextSentence, partOfSpeech: (m as any).partOfSpeech, title: art.title });
+      }
+    }
+  }
+
   for (const level of CEFR_ORDER) {
     // 1. Vocabulary Question
-    const w = words.filter(x => x.cefrLevel === level);
+    const w = words.filter(x => x.cefrLevel === level && x.wordOrChunk && x.vietnamese);
     if (w.length > 0) {
       const selected = shuffle(w, rng)[0];
-      const prompt = selected.wordOrChunk || selected.prompt || `${level} Word`;
-      const context = selected.contextSentence || selected.definition || '';
-      const correct = selected.vietnamese || selected.definition || prompt;
-      const pool = w.map(x => x.vietnamese || x.definition || x.wordOrChunk).filter(Boolean) as string[];
-      out.push(toQuestion(level, 'vocab', prompt, context, correct, pool, rng));
+      const decoys = pickDecoys(selected, words, 3, {
+        answer: x => x.vietnamese || '',
+        text: x => x.wordOrChunk || '',
+        bonus: x => (x.cefrLevel === level ? 4 : 0) + (x.mode && x.mode === selected.mode ? 2 : 0)
+      }, rng);
+      out.push(toQuestion(level, 'vocab', selected.wordOrChunk!, selected.contextSentence || '', selected.vietnamese!, decoys.map(x => x.vietnamese!), rng));
     }
 
     // 2. Collocation Question
-    const p = phrases.filter(x => x.cefrLevel === level);
+    const p = phrases.filter(x => x.cefrLevel === level && x.phrase && x.vietnamese);
     if (p.length > 0) {
       const selected = shuffle(p, rng)[0];
-      const prompt = selected.phrase || selected.prompt || `${level} Collocation`;
-      const context = selected.example || '';
-      const correct = selected.vietnamese || prompt;
-      const pool = p.map(x => x.vietnamese || x.phrase).filter(Boolean) as string[];
-      out.push(toQuestion(level, 'collocation', prompt, context, correct, pool, rng));
+      const decoys = pickDecoys(selected, phrases, 3, {
+        answer: x => x.vietnamese || '',
+        text: x => x.phrase || '',
+        bonus: x => (x.cefrLevel === level ? 4 : 0) + (x.category && x.category === selected.category ? 2 : 0)
+      }, rng);
+      out.push(toQuestion(level, 'collocation', selected.phrase!, selected.example || '', selected.vietnamese!, decoys.map(x => x.vietnamese!), rng));
     }
 
-    // 3. Grammar Question
-    const g = grammarRules.filter(x => x.cefrLevel === level);
+    // 3. Grammar Question: curated items whose distractors were written for that exact sentence
+    const g = grammarItems.filter(x => x.level === level && Array.isArray(x.options) && x.options.length > 1);
     if (g.length > 0) {
       const selected = shuffle(g, rng)[0];
-      const prompt = selected.promptSentence || selected.prompt || `${level} Grammar Prompt`;
-      const context = selected.grammaticalCue || selected.formula || 'Syntactic transformation';
-      const correct = selected.targetTransformation || selected.vietnamese || prompt;
-      const pool = g.map(x => x.targetTransformation || x.vietnamese).filter(Boolean) as string[];
-      out.push(toQuestion(level, 'grammar', prompt, context, correct, pool, rng));
-    } else {
-      // Fallback if grammar rules not provided
-      const fallbackPool = w.map(x => x.vietnamese || x.wordOrChunk).filter(Boolean) as string[];
-      out.push(toQuestion(level, 'grammar', `${level} Grammar structure`, 'Choose the correct form', `${level} grammatical resolution`, fallbackPool, rng));
+      const correct = selected.options[selected.answer];
+      out.push(toQuestion(level, 'grammar', selected.prompt, selected.context || '', correct, selected.options.filter(o => o !== correct), rng));
     }
 
     // 4. Reading Cloze Question
-    const r = normalizedReading.filter(x => x.cefrLevel === level);
-    const minedItems: Array<{ targetWord: string; contextSentence: string; title?: string }> = [];
-
-    for (const art of r) {
-      if (art.fourPassProtocol?.pass3SentenceMining && Array.isArray(art.fourPassProtocol.pass3SentenceMining)) {
-        for (const m of art.fourPassProtocol.pass3SentenceMining) {
-          if (m.targetWord && m.contextSentence) {
-            minedItems.push({ targetWord: m.targetWord, contextSentence: m.contextSentence, title: art.title });
-          }
-        }
-      } else if (art.targetWord && art.contextSentence) {
-        minedItems.push({ targetWord: art.targetWord, contextSentence: art.contextSentence, title: art.title });
-      }
-    }
-
-    if (minedItems.length > 0) {
-      const selected = shuffle(minedItems, rng)[0];
-      const target = selected.targetWord.trim();
-      let promptSentence = selected.contextSentence;
-      const escaped = target.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const re = new RegExp('\\b' + escaped + '\\b', 'i');
-      if (re.test(promptSentence)) {
-        promptSentence = promptSentence.replace(re, '[ _____ ]');
-      } else {
-        promptSentence = promptSentence.replace(target, '[ _____ ]');
-      }
+    // Decoys share the part of speech but come from other passages: words from the same passage often fit the blank too.
+    const clozeDecoys = (m: typeof minedItems[number]) => pickDecoys(m, minedItems, 3, {
+      answer: x => x.targetWord,
+      accept: x => x.title !== m.title && (!m.partOfSpeech || x.partOfSpeech === m.partOfSpeech),
+      bonus: x => (x.level === level ? 4 : 0)
+    }, rng);
+    const cloze = shuffle(minedItems.filter(m => m.level === level && blankOut(m.contextSentence, m.targetWord)), rng);
+    const selected = cloze.find(m => clozeDecoys(m).length === 3);
+    if (selected) {
+      const decoys = clozeDecoys(selected);
       const context = selected.title ? `From passage: "${selected.title}"` : 'Reading cloze comprehension';
-      const correct = target;
-      const pool = minedItems.map(m => m.targetWord.trim()).filter(Boolean);
-      out.push(toQuestion(level, 'reading', promptSentence, context, correct, pool, rng));
-    } else {
-      // Fallback: build reading cloze from words of that level
-      const poolWords = w.filter(x => x.wordOrChunk && x.contextSentence);
-      if (poolWords.length > 0) {
-        const selected = shuffle(poolWords, rng)[0];
-        const target = (selected.wordOrChunk || '').trim();
-        let promptSentence = selected.contextSentence || '';
-        const escaped = target.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        const re = new RegExp('\\b' + escaped + '\\b', 'i');
-        if (re.test(promptSentence)) {
-          promptSentence = promptSentence.replace(re, '[ _____ ]');
-        } else {
-          promptSentence = `${promptSentence} [ _____ ]`;
-        }
-        const context = 'Reading cloze comprehension';
-        const correct = target;
-        const pool = poolWords.map(x => (x.wordOrChunk || '').trim()).filter(Boolean);
-        out.push(toQuestion(level, 'reading', promptSentence, context, correct, pool, rng));
-      } else {
-        const fallbackWord = `${level} target`;
-        out.push(toQuestion(level, 'reading', `Sentence with [ _____ ] in context.`, 'Reading cloze', fallbackWord, [`${level} opt1`, `${level} opt2`, `${level} opt3`], rng));
-      }
+      out.push(toQuestion(level, 'reading', blankOut(selected.contextSentence, selected.targetWord)!, context, selected.targetWord, decoys.map(m => m.targetWord), rng));
     }
   }
 

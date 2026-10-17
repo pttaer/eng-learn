@@ -4,7 +4,7 @@
 | Index | Phrase | Vietnamese Meaning | Category | Example | CEFR |
 | :---: | :--- | :--- | :--- | :--- | :---: |
 | 251 | seal a deal | chốt hợp đồng / ký kết thỏa thuận thành công | BUSINESS | The two founders finally managed to seal a deal after a gruelling fortnight of talks. | B2 |
-| 252 | strike a deal | đạt được thỏa thuận | BUSINESS | Her team struck a deal with the distributor just before the quarterly deadline. | B2 |
+| 252 | strike a deal | chốt thỏa thuận | BUSINESS | Her team struck a deal with the distributor just before the quarterly deadline. | B2 |
 | 253 | broker a deal | làm trung gian dàn xếp thỏa thuận | BUSINESS | A veteran diplomat was hired to broker a deal between the rival shipping consortia. | C1 |
 | 254 | close a deal | kết thúc đàm phán và hoàn tất giao dịch | BUSINESS | Counsel expects the parties to close a deal on the acquisition by Friday. | B1 |
 | 255 | drive a hard bargain | đàm phán chặt chẽ / ép giá gắt gao | BUSINESS | The procurement chief is known to drive a hard bargain, even with long-standing suppliers. | C1 |

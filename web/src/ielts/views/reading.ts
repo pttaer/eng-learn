@@ -77,7 +77,26 @@ export function mountReadingTest(root: HTMLElement, passages: ReadingPassage[], 
 export function readingView(root: HTMLElement): () => void {
   let stop = () => {};
   const list = h('div', 'ie-cards');
-  root.append(h('h1', 'ie-title', 'Academic Reading'), h('p', 'ie-lead', 'One passage, 20 minutes, 13-14 questions. Same question types as the exam. Submit to see the evidence for every answer.'), list);
+  const hubBar = h('div', 'ie-reading-hub-actions');
+  const drillsLink = h(
+    'a',
+    'ie-btn ie-btn-primary ie-drills-hero-btn',
+    '⚡ 14 Question-Type Attack Drills Lab'
+  );
+  drillsLink.id = 'btn-launch-reading-drills';
+  drillsLink.href = '#reading-drills';
+  hubBar.append(drillsLink);
+
+  root.append(
+    h('h1', 'ie-title', 'Academic Reading'),
+    h(
+      'p',
+      'ie-lead',
+      'One passage, 20 minutes, 13-14 questions. Same question types as the exam. Submit to see the evidence for every answer.'
+    ),
+    hubBar,
+    list
+  );
   PASSAGES.forEach(p => {
     const words = p.paragraphs.reduce((a, x) => a + x.text.split(/\s+/).length, 0);
     const types = [...new Set(p.questions.map(q => q.type))].length;
