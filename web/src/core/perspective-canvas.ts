@@ -368,6 +368,7 @@ export class PerspectiveCanvas {
         container.style.pointerEvents = 'auto';
       }
       this.canvas.style.display = 'block';
+      CursorTracker.start();
       if (!this.running) {
         this.running = true;
         this.lastFrameTime = performance.now();
@@ -380,6 +381,7 @@ export class PerspectiveCanvas {
         container.style.pointerEvents = 'none';
       }
       this.canvas.style.display = 'none';
+      CursorTracker.stop();
       this.running = false;
       if (this.animFrameId !== null) {
         cancelAnimationFrame(this.animFrameId);
