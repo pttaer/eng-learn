@@ -8,3 +8,5 @@ screenshots/
 roster.json
 worktrees/
 data/scraped-ielts/
+.claude/*.local.json
+data/ielts_tips/articles/
