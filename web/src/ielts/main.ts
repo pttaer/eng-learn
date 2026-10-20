@@ -1,17 +1,7 @@
 import { h } from './ui';
-import { readingView } from './views/reading';
+import { report } from './report';
+import { lazyView, prefetchViews } from './lazy-view';
 import { readingDrillsView } from './views/reading-drills';
-import { listeningView } from './views/listening';
-import { writingView } from './views/writing';
-import { speakingView } from './views/speaking';
-import { pathView } from './views/path';
-import { vocabView } from './views/vocab';
-import { speakingSimulatorView } from './views/speaking-simulator';
-import { mockView, report } from './views/mock';
-import { strategyView } from './views/strategy';
-import { diagnosticView } from './views/diagnostic';
-import { writingStudioView } from './views/writing-studio';
-import { listeningTrapsView } from './views/listening-traps';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { SpeechEvaluator } from '../core/speech-evaluator';
 import * as ieltsTts from './tts';
@@ -83,19 +73,19 @@ const ALL_ROUTES: RouteItem[] = [
       return () => {};
     }
   },
-  { id: 'diagnostic', label: 'Diagnostic', parentNavId: 'diagnostic', view: diagnosticView },
-  { id: 'reading', label: 'Reading', parentNavId: 'reading', subnavGroup: 'reading', view: readingView },
+  { id: 'diagnostic', label: 'Diagnostic', parentNavId: 'diagnostic', view: lazyView(() => import('./views/diagnostic').then(m => m.diagnosticView)) },
+  { id: 'reading', label: 'Reading', parentNavId: 'reading', subnavGroup: 'reading', view: lazyView(() => import('./views/reading').then(m => m.readingView)) },
   { id: 'reading-drills', label: 'Reading Drills', parentNavId: 'reading', subnavGroup: 'reading', view: readingDrillsView },
-  { id: 'listening', label: 'Listening', parentNavId: 'listening', subnavGroup: 'listening', view: listeningView },
-  { id: 'listening-traps', label: 'Listening Traps', parentNavId: 'listening', subnavGroup: 'listening', view: listeningTrapsView },
-  { id: 'writing', label: 'Writing', parentNavId: 'writing', subnavGroup: 'writing', view: writingView },
-  { id: 'writing-studio', label: 'Writing Studio', parentNavId: 'writing', subnavGroup: 'writing', view: writingStudioView },
-  { id: 'speaking', label: 'Speaking', parentNavId: 'speaking', subnavGroup: 'speaking', view: speakingView },
-  { id: 'speaking-simulator', label: 'Speaking Simulator', parentNavId: 'speaking', subnavGroup: 'speaking', view: speakingSimulatorView },
-  { id: 'vocab', label: 'Vocabulary', parentNavId: 'vocab', view: vocabView },
-  { id: 'path', label: 'Study path', parentNavId: 'home', view: pathView },
-  { id: 'strategy', label: 'Strategy', parentNavId: 'strategy', view: strategyView },
-  { id: 'mock', label: 'Mock tests', parentNavId: 'mock', view: mockView }
+  { id: 'listening', label: 'Listening', parentNavId: 'listening', subnavGroup: 'listening', view: lazyView(() => import('./views/listening').then(m => m.listeningView)) },
+  { id: 'listening-traps', label: 'Listening Traps', parentNavId: 'listening', subnavGroup: 'listening', view: lazyView(() => import('./views/listening-traps').then(m => m.listeningTrapsView)) },
+  { id: 'writing', label: 'Writing', parentNavId: 'writing', subnavGroup: 'writing', view: lazyView(() => import('./views/writing').then(m => m.writingView)) },
+  { id: 'writing-studio', label: 'Writing Studio', parentNavId: 'writing', subnavGroup: 'writing', view: lazyView(() => import('./views/writing-studio').then(m => m.writingStudioView)) },
+  { id: 'speaking', label: 'Speaking', parentNavId: 'speaking', subnavGroup: 'speaking', view: lazyView(() => import('./views/speaking').then(m => m.speakingView)) },
+  { id: 'speaking-simulator', label: 'Speaking Simulator', parentNavId: 'speaking', subnavGroup: 'speaking', view: lazyView(() => import('./views/speaking-simulator').then(m => m.speakingSimulatorView)) },
+  { id: 'vocab', label: 'Vocabulary', parentNavId: 'vocab', view: lazyView(() => import('./views/vocab').then(m => m.vocabView)) },
+  { id: 'path', label: 'Study path', parentNavId: 'home', view: lazyView(() => import('./views/path').then(m => m.pathView)) },
+  { id: 'strategy', label: 'Strategy', parentNavId: 'strategy', view: lazyView(() => import('./views/strategy').then(m => m.strategyView)) },
+  { id: 'mock', label: 'Mock tests', parentNavId: 'mock', view: lazyView(() => import('./views/mock').then(m => m.mockView)) }
 ];
 
 function renderSubnavBanner(groupKey: string, currentHash: string): HTMLElement {
@@ -246,3 +236,5 @@ function route(): void {
 
 window.addEventListener('hashchange', route);
 route();
+document.getElementById('boot')?.remove();
+prefetchViews();

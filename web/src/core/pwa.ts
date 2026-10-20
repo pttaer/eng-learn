@@ -15,6 +15,8 @@ export function registerServiceWorker(): void {
   }
 
   window.addEventListener('load', () => {
+    // A controller already present means an update is replacing a running worker, not a first visit.
+    const hadController = !!navigator.serviceWorker.controller;
     navigator.serviceWorker
       .register('/sw.js', { scope: '/' })
       .then((registration) => {
@@ -51,10 +53,10 @@ export function registerServiceWorker(): void {
         console.warn('[PWA] Service Worker registration deferred:', error);
       });
 
-    // Handle seamless controller switch
+    // Handle seamless controller switch. A first visit claims the page silently; reload only on a real update.
     let refreshing = false;
     navigator.serviceWorker.addEventListener('controllerchange', () => {
-      if (!refreshing) {
+      if (hadController && !refreshing) {
         refreshing = true;
         window.location.reload();
       }

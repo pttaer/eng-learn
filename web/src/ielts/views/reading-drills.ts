@@ -1,4 +1,5 @@
 import { esc, h } from '../ui';
+import { feedback } from '../../core/feedback';
 
 export interface SynonymPair {
   promptWord: string;
@@ -701,6 +702,10 @@ export function readingDrillsView(root: HTMLElement): () => void {
       drillEvaluations[drill.id] = { attempted: true, correct: isCorrect };
       feedbackBox.hidden = false;
       renderFeedback(feedbackBox, drill, isCorrect);
+      feedback.emit(
+        { type: 'answer', result: isCorrect ? 'correct' : 'wrong', why: drill.rationale, mode: 'practice' },
+        feedbackBox
+      );
       updateHud();
     });
 

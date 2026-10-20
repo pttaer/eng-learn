@@ -222,6 +222,37 @@ export class MotionEngine {
     anime({ targets: el, scale: [1, 1.12, 1], easing: 'easeOutQuad', duration: 420 });
   }
 
+  /**
+   * Hover scale for one target. Cancels the running tween on the same element first,
+   * so fast pointer sweeps do not stack tweens.
+   */
+  public static hoverScale(el: HTMLElement | SVGElement, on: boolean): void {
+    if (this.isReducedMotion()) return;
+    anime.remove(el);
+    const anim = anime({
+      targets: el,
+      scale: on ? 1.3 : 1.0,
+      duration: on ? 600 : 320,
+      easing: on ? 'easeOutElastic(1, 0.6)' : 'easeOutQuart'
+    });
+    this.trackAnimation(anim);
+  }
+
+  /**
+   * Press bounce on click. Cancels the running tween on the same element first.
+   */
+  public static press(el: HTMLElement | SVGElement): void {
+    if (this.isReducedMotion()) return;
+    anime.remove(el);
+    const anim = anime({
+      targets: el,
+      scale: [0.92, 1.08, 1.0],
+      duration: 350,
+      easing: 'easeOutElastic(1, 0.5)'
+    });
+    this.trackAnimation(anim);
+  }
+
   private static trackAnimation(anim: anime.AnimeInstance): void {
     this.activeAnimations.push(anim);
     anim.complete = () => {

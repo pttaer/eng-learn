@@ -88,7 +88,8 @@ export class PerspectiveCanvas {
   private resize(): void {
     this.width = window.innerWidth;
     this.height = window.innerHeight;
-    this.dpr = Math.max(1, Math.min(window.devicePixelRatio || 1, 3));
+    // Capped at 2: a full-screen bitmap at 3x costs about 2.25x the fill work with no visible gain on phones
+    this.dpr = Math.max(1, Math.min(window.devicePixelRatio || 1, 2));
 
     this.canvas.width = Math.floor(this.width * this.dpr);
     this.canvas.height = Math.floor(this.height * this.dpr);
@@ -367,6 +368,7 @@ export class PerspectiveCanvas {
         container.style.pointerEvents = 'auto';
       }
       this.canvas.style.display = 'block';
+      CursorTracker.start();
       if (!this.running) {
         this.running = true;
         this.lastFrameTime = performance.now();
@@ -379,6 +381,7 @@ export class PerspectiveCanvas {
         container.style.pointerEvents = 'none';
       }
       this.canvas.style.display = 'none';
+      CursorTracker.stop();
       this.running = false;
       if (this.animFrameId !== null) {
         cancelAnimationFrame(this.animFrameId);

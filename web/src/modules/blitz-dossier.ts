@@ -15,6 +15,7 @@ import { icon } from '../utils/icons';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { ParticleCanvas } from '../core/particle-canvas';
 import { ProgressionEngine } from '../core/progression-engine';
+import { feedback } from '../core/feedback';
 import collocationsData from '../assets/data/collocations.json';
 import vocabularyData from '../assets/data/vocabulary.json';
 import { pickDecoys, meaningsOverlap } from '../core/decoys';
@@ -525,6 +526,7 @@ export class BlitzDossier {
     this.isProcessingAnswer = true;
     this.totalAnswered += 1;
     const isCorrect = choiceIndex === this.currentPrompt.correctIndex;
+    const why = this.currentPrompt.explanation;
 
     const chosenBtn = this.container.querySelector(`.btn-choice-${choiceIndex}`) as HTMLButtonElement | null;
     const otherIndex = choiceIndex === 0 ? 1 : 0;
@@ -545,12 +547,12 @@ export class BlitzDossier {
         chosenBtn.classList.add('flash-correct');
       }
 
-      // Check for streak milestone upgrade
+      // Streak milestones replace the plain correct cue so two sounds do not stack.
       if (this.streak === 5 || this.streak === 10 || this.streak === 15) {
-        AudioSynthesizer.play('streak-fire');
+        feedback.emit({ type: 'streak', count: this.streak }, chosenBtn ?? undefined);
         ParticleCanvas.burst(window.innerWidth / 2, window.innerHeight * 0.4, 25);
       } else {
-        AudioSynthesizer.play('absorb');
+        feedback.emit({ type: 'answer', result: 'correct', why, mode: 'practice' }, chosenBtn ?? undefined);
       }
     } else {
       this.streak = 0;
@@ -560,7 +562,7 @@ export class BlitzDossier {
       if (otherBtn) {
         otherBtn.classList.add('flash-correct-hint');
       }
-      AudioSynthesizer.play('alarm');
+      feedback.emit({ type: 'answer', result: 'wrong', why, mode: 'practice' }, chosenBtn ?? undefined);
     }
 
     this.updateHUDValues();
