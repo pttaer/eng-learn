@@ -175,6 +175,8 @@ function compileVocabulary() {
 }
 
 // 3b. Lexicon Dictionary Compiler (AWL 500 Corpus & O(1) Index)
+const splitRow = trimmed => trimmed.split('|').map(p => p.trim()).filter(Boolean);
+
 function compileLexicon() {
   const awlFile = path.join(CONTENT_DIR, 'vocabulary', 'awl-corpus.md');
   const lexiconDict = {};
@@ -186,7 +188,7 @@ function compileLexicon() {
     lines.forEach(line => {
       const trimmed = line.trim();
       if (!trimmed.startsWith('|') || trimmed.includes('Index') || trimmed.includes(':---')) return;
-      const parts = trimmed.split('|').map(p => p.trim()).filter(Boolean);
+      const parts = splitRow(trimmed);
       if (parts.length >= 8) {
         const index = parseInt(parts[0], 10);
         const word = parts[1].trim();
@@ -263,7 +265,7 @@ function compileLexicon() {
     lines.forEach(line => {
       const trimmed = line.trim();
       if (!trimmed.startsWith('|') || trimmed.includes('Index') || trimmed.includes(':---')) return;
-      const parts = trimmed.split('|').map(p => p.trim()).filter(Boolean);
+      const parts = splitRow(trimmed);
       if (parts.length >= 8) {
         const index = parseInt(parts[0], 10);
         const figure = parts[1].trim();
@@ -297,49 +299,6 @@ function compileLexicon() {
   if (keys.length > 0) {
     fs.writeFileSync(path.join(DATA_DIR, 'lexicon-dictionary.json'), JSON.stringify(lexiconDict, null, 2), 'utf8');
     console.log(`[COMPILE] lexicon-dictionary.json: ${keys.length} entries indexed.`);
-  }
-}
-
-// 3c. Master Rhetorical Figures Compiler (100 Entries)
-function compileRhetoric() {
-  const rhetoricFile = path.join(CONTENT_DIR, 'vocabulary', 'rhetoric-figures.md');
-  if (!fs.existsSync(rhetoricFile)) return;
-  const content = fs.readFileSync(rhetoricFile, 'utf8');
-  const lines = content.split(/\r?\n/);
-  const allRhetoric = [];
-
-  lines.forEach(line => {
-    const trimmed = line.trim();
-    if (!trimmed.startsWith('|') || trimmed.includes('Index') || trimmed.includes(':---')) return;
-    const parts = trimmed.split('|').map(p => p.trim()).filter(Boolean);
-    if (parts.length >= 8) {
-      const index = parseInt(parts[0], 10);
-      const figure = parts[1].trim();
-      const category = parts[2].trim();
-      const etymology = parts[3].trim();
-      const syntacticFormula = parts[4].trim();
-      const classicalExemplar = parts[5].trim();
-      const vietnamese = parts[6].trim();
-      const executiveApplication = parts[7].trim();
-
-      allRhetoric.push({
-        id: `rhetoric-${index}`,
-        index: index,
-        figure: figure,
-        category: category,
-        etymology: etymology,
-        syntacticFormula: syntacticFormula,
-        classicalExemplar: classicalExemplar,
-        vietnamese: vietnamese,
-        executiveApplication: executiveApplication
-      });
-    }
-  });
-
-  if (allRhetoric.length > 0) {
-    allRhetoric.sort((a, b) => a.index - b.index);
-    fs.writeFileSync(path.join(DATA_DIR, 'rhetoric.json'), JSON.stringify(allRhetoric, null, 2), 'utf8');
-    console.log(`[COMPILE] rhetoric.json: ${allRhetoric.length} rhetorical figures`);
   }
 }
 
@@ -651,7 +610,7 @@ function compileDiagnostic() {
   }
 }
 
-// 8. CD-IELTS Mock Simulator Compiler
+// 8. CD-IELTS Mock Simulator & L2 Pragmatic Roleplays Compiler
 function compileIelts() {
   const dir = path.join(CONTENT_DIR, 'ielts');
   if (!fs.existsSync(dir)) return;
@@ -662,7 +621,8 @@ function compileIelts() {
     reading: null,
     listening: null,
     writing: null,
-    speaking: null
+    speaking: null,
+    pragmaticRoleplays: []
   };
 
   // 1. Reading (Full 40 Questions across 3 Passages)
@@ -965,6 +925,54 @@ function compileIelts() {
     };
   }
 
+  // 5. Pragmatic Roleplays
+  const roleplayFile = path.join(dir, 'pragmatic-roleplays.md');
+  if (fs.existsSync(roleplayFile)) {
+    const raw = fs.readFileSync(roleplayFile, 'utf8').replace(/\r\n/g, '\n');
+    const sections = raw.split(/^##\s+/m).slice(1);
+    sections.forEach(sec => {
+      const lines = sec.split(/\r?\n/);
+      const title = lines[0].trim();
+      const item = { title, sieves: {} };
+
+      lines.slice(1).forEach(l => {
+        const m = l.match(/^-\s+\*\*([^*]+)\*\*:\s*(.*)$/);
+        if (m) {
+          const key = m[1].trim();
+          const val = m[2].trim();
+          if (key === 'ID') item.id = val;
+          else if (key === 'CEFR') item.cefrLevel = val;
+          else if (key === 'Domain') item.domain = val;
+          else if (key === 'Pragmatic Focus') item.pragmaticFocus = val;
+          else if (key === 'Interlocutor') item.interlocutor = val;
+          else if (key === 'Context') item.context = val;
+          else if (key === 'Friction') item.friction = val;
+          else if (key === 'Vietnamese Summary') item.vietnamese = val;
+        }
+      });
+
+      const exchangeMatch = sec.match(/\*Interlocutor Challenge\*:\s*"([^"]+)"[\s\S]*?\*Candidate Model Response\*:\s*"([^"]+)"/);
+      if (exchangeMatch) {
+        item.exemplarExchange = {
+          challenge: exchangeMatch[1].trim(),
+          modelResponse: exchangeMatch[2].trim()
+        };
+      }
+
+      const thesisSieve = sec.match(/\*Thesis Avoidance Sieve\*:\s*([^\n\r]+)/);
+      const connectorSieve = sec.match(/\*Mechanical Connector Sieve\*:\s*([^\n\r]+)/);
+      const clichéSieve = sec.match(/\*Thesaurus Clich[eé] Sieve\*:\s*([^\n\r]+)/);
+      const codaSieve = sec.match(/\*Phonetic Coda Release\*:\s*([^\n\r]+)/);
+
+      if (thesisSieve) item.sieves.thesisAvoidance = thesisSieve[1].trim();
+      if (connectorSieve) item.sieves.mechanicalConnectors = connectorSieve[1].trim();
+      if (clichéSieve) item.sieves.thesaurusClichés = clichéSieve[1].trim();
+      if (codaSieve) item.sieves.phoneticCoda = codaSieve[1].trim();
+
+      if (item.id) ieltsData.pragmaticRoleplays.push(item);
+    });
+  }
+
   const IELTS_DATA_DIR = path.join(__dirname, '..', 'src', 'ielts', 'data');
   if (!fs.existsSync(IELTS_DATA_DIR)) {
     fs.mkdirSync(IELTS_DATA_DIR, { recursive: true });
@@ -989,7 +997,7 @@ function compileIelts() {
   fs.writeFileSync(path.join(IELTS_DATA_DIR, 'ielts-mock.json'), JSON.stringify(mockData, null, 2), 'utf8');
   fs.writeFileSync(path.join(DATA_DIR, 'ielts-mock.json'), JSON.stringify(mockData, null, 2), 'utf8');
 
-  console.log(`[COMPILE] ielts.json & ielts-mock.json: Reading (${ieltsData.reading?.allQuestions?.length || 0} Qs in ${ieltsData.reading?.passages?.length || 0} Passages), Listening (${ieltsData.listening?.allQuestions?.length || 0} Qs in ${ieltsData.listening?.sections?.length || 0} Sections), Writing Tasks, Speaking Parts.`);
+  console.log(`[COMPILE] ielts.json & ielts-mock.json: Reading (${ieltsData.reading?.allQuestions?.length || 0} Qs in ${ieltsData.reading?.passages?.length || 0} Passages), Listening (${ieltsData.listening?.allQuestions?.length || 0} Qs in ${ieltsData.listening?.sections?.length || 0} Sections), Writing Tasks, Speaking Parts, and ${ieltsData.pragmaticRoleplays.length} Pragmatic Roleplays.`);
 }
 
 function compileIeltsCourse() {
@@ -2009,14 +2017,12 @@ function compileAll() {
   compileCollocations();
   compileGrammar();
   compileVocabulary();
-  compileRhetoric();
   compileLexicon();
   compileDrills();
   compileReading();
   compileListening();
   compileHabits();
   compileDiagnostic();
-  compileIelts();
   compileIeltsCourse();
   console.log(`[COMPILE] Finished in ${Date.now() - start}ms.`);
 }
@@ -2041,12 +2047,10 @@ module.exports = {
   compileCollocations,
   compileGrammar,
   compileVocabulary,
-  compileRhetoric,
   compileLexicon,
   compileDrills,
   compileReading,
   compileListening,
   compileHabits,
-  compileIelts,
   compileIeltsCourse
 };
