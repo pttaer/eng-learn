@@ -119,10 +119,10 @@
     "type": "mcq",
     "prompt": "What does the writer say about the Outer Space Treaty?",
     "options": [
-     "A. It explicitly allows companies to sell lunar resources.",
-     "B. It does not clearly settle whether private companies may extract and sell resources.",
-     "C. It was signed by only one country.",
-     "D. It bans all activity on the Moon."
+     "A. It explicitly allows private companies to sell lunar resources.",
+     "B. It leaves unclear whether private firms may sell resources.",
+     "C. It was signed by only a single country at the time it was drafted.",
+     "D. It bans all human and robotic activity on the Moon and planets."
     ],
     "answer": "B",
     "why": "Paragraph D: \"yet it does not clearly settle whether private companies may extract and sell resources\". A is contradicted by the same clause; C and D are not stated."
@@ -132,13 +132,13 @@
     "type": "mcq",
     "prompt": "According to paragraph E, what do developing countries argue?",
     "options": [
-     "A. The Moon should belong to the first country to land.",
-     "B. Lunar resources are part of a shared heritage whose benefits should be widely distributed.",
-     "C. Lunar ice should be left untouched forever.",
-     "D. Only launch capacity matters."
+     "A. The Moon should belong to the first country able to land there.",
+     "B. Lunar ice should be left untouched by every nation forever.",
+     "C. Only launch capacity matters when deciding who may mine.",
+     "D. The Moon is a shared heritage whose benefits should be spread."
     ],
-    "answer": "B",
-    "why": "Paragraph E: \"the Moon is part of a shared heritage and that the benefits of its resources should be distributed more widely\"."
+    "answer": "D",
+    "why": "Paragraph E: \"the Moon is part of a shared heritage and that the benefits of its resources should be distributed more widely\". A, B and C are not what developing countries argue."
    },
    {
     "id": "r27-q10",
@@ -307,26 +307,26 @@
     "type": "mcq",
     "prompt": "What does paragraph D suggest about predators?",
     "options": [
-     "A. They can affect herbivores even when their numbers are low.",
-     "B. They affect only the animals they eat.",
-     "C. Their effects can be measured by counting individuals alone.",
-     "D. They have no influence on vegetation."
+     "A. They affect only the particular animals that they actually kill.",
+     "B. Their effects can be measured by counting individuals alone.",
+     "C. They have no influence on vegetation or river habitats.",
+     "D. They can influence herbivores even when few remain."
     ],
-    "answer": "A",
-    "why": "Paragraph D: \"A predator's presence can influence herbivores even when its numbers are low\". B and D are contradicted by \"allow vegetation there to recover\"; C is contradicted by \"Such indirect effects are difficult to measure\"."
+    "answer": "D",
+    "why": "Paragraph D: \"A predator's presence can influence herbivores even when its numbers are low\". A and C are contradicted by \"allow vegetation there to recover\"; B is contradicted by \"Such indirect effects are difficult to measure\"."
    },
    {
     "id": "r28-q09",
     "type": "mcq",
     "prompt": "According to paragraph G, what should be the goal of conservation?",
     "options": [
-     "A. To reproduce a single dramatic outcome.",
-     "B. To understand the conditions under which predators can rebalance simplified systems.",
-     "C. To remove all predators from parks.",
-     "D. To ignore local context."
+     "A. To reproduce a single dramatic outcome in every valley.",
+     "B. To remove all large predators from national parks and reserves.",
+     "C. To learn when predators can help rebalance simplified systems.",
+     "D. To set aside local context when planning every restoration."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"the goal is therefore not to reproduce a single dramatic outcome, but to understand the conditions under which predators can help to rebalance systems that have been simplified by human activity\". D is contradicted by \"the strength of their effects depends on context\"."
+    "answer": "C",
+    "why": "Paragraph G: \"the goal is therefore not to reproduce a single dramatic outcome, but to understand the conditions under which predators can help to rebalance systems that have been simplified by human activity\". A is explicitly rejected; D is contradicted by \"the strength of their effects depends on context\"; B is not stated."
    },
    {
     "id": "r28-q10",
@@ -483,26 +483,26 @@
     "type": "mcq",
     "prompt": "What does the writer conclude in paragraph E?",
     "options": [
-     "A. The paradox makes coastline lengths meaningless.",
-     "B. The paradox is a useful warning but does not make lengths meaningless.",
-     "C. Standardisation is impossible.",
-     "D. Engineers should ignore the scale of measurement."
+     "A. The paradox makes all coastline lengths effectively meaningless.",
+     "B. It is a useful warning, not proof that lengths are meaningless.",
+     "C. Standardisation of measurement methods is impossible in practice.",
+     "D. Engineers can safely ignore the scale of measurement in design work."
     ],
     "answer": "B",
-    "why": "Paragraph E: \"The paradox remains a useful warning, but it does not mean that coastline lengths are meaningless\". C is contradicted by \"can therefore remove much of the confusion\"."
+    "why": "Paragraph E: \"The paradox remains a useful warning, but it does not mean that coastline lengths are meaningless\". A is contradicted by the same sentence; C is contradicted by \"can therefore remove much of the confusion\"; D is contradicted by paragraph D (\"Scale is therefore not merely a technical detail\")."
    },
    {
     "id": "r29-q09",
     "type": "mcq",
     "prompt": "According to paragraph G, what is the danger of reporting a length without an explanation?",
     "options": [
-     "A. It reduces the cost of mapping.",
-     "B. It can give a false impression of precision.",
-     "C. It makes the shoreline easier to measure.",
-     "D. It proves that coastlines are fixed."
+     "A. It can give a false impression of precision.",
+     "B. It reduces the overall cost of mapping a long coastline.",
+     "C. It makes the shoreline much easier to measure in future.",
+     "D. It proves that coastlines have fixed, stable lengths."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"Reporting a length without explaining those choices can give a false impression of precision\"."
+    "answer": "A",
+    "why": "Paragraph G: \"Reporting a length without explaining those choices can give a false impression of precision\". B, C and D are not stated; D is also the opposite of the paragraph's point that some quantities \"are not fixed properties of the world\"."
    },
    {
     "id": "r29-q10",
@@ -671,26 +671,26 @@
     "type": "mcq",
     "prompt": "What does the writer say about the economic side of counterfeiting?",
     "options": [
-     "A. Forgery is always profitable.",
-     "B. Forgery is worthwhile only when the expected gain exceeds the risk and costs.",
-     "C. Issuers never change their designs.",
-     "D. Only rarely used notes are counterfeited."
+     "A. Forgery is always profitable for anyone who owns a good printer.",
+     "B. Issuers never change their designs once they are in use.",
+     "C. It pays only when the likely gain outweighs risk and cost.",
+     "D. Only notes that are rarely used in shops are counterfeited."
     ],
-    "answer": "B",
-    "why": "Paragraph E: \"Forgery is worth the effort only when the expected gain outweighs the risk of detection, the cost of production and the penalty if caught\". C is contradicted by \"adjust their designs and distribution\"."
+    "answer": "C",
+    "why": "Paragraph E: 'Forgery is worth the effort only when the expected gain outweighs the risk of detection, the cost of production and the penalty if caught.' B is contradicted by the statement that issuers adjust their designs and distribution; D is contradicted by the passage point that a high-value note which is easy to spend may attract criminals, while a rarely accepted note is less useful to them; A contradicts the cost-and-risk point."
    },
    {
     "id": "r30-q09",
     "type": "mcq",
     "prompt": "According to paragraph G, what is the most useful protection for the public?",
     "options": [
-     "A. Trusting every note equally.",
-     "B. Awareness of how to check a note.",
-     "C. Refusing all notes.",
-     "D. Relying only on digital currency."
+     "A. Trusting every note equally without checking it.",
+     "B. Awareness of how to check a note properly.",
+     "C. Refusing all notes handed over by strangers.",
+     "D. Relying only on digital currency instead of cash."
     ],
     "answer": "B",
-    "why": "Paragraph G: \"For the public, the most useful protection is awareness: knowing how to check a note\"."
+    "why": "Paragraph G: \"For the public, the most useful protection is awareness: knowing how to check a note\". A, C and D are not given as protections."
    },
    {
     "id": "r30-q10",

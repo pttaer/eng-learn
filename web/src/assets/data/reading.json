@@ -10,7 +10,7 @@
       "genre": "Daily Life",
       "source": "Original text written for this app",
       "wordCount": 102,
-      "readingTime": "1.2 min @ 120 WPM (Intensive)",
+      "readingTime": "0.8 min @ 120 WPM (Intensive)",
       "content": "My name is Lan. I get up at six o'clock. I wash my face and eat breakfast. I have bread and an egg. I drink a cup of milk. Then I brush my teeth.\n\nI go to school at seven. I walk with my friend. We study English and maths. I like my teacher. She is kind. At twelve, we eat lunch. After lunch, we play in the yard.\n\nIn the afternoon, I go home. I do my homework at the table. My mother cooks dinner at six. We eat together. At ten o'clock, I go to bed. I am very tired.",
       "fourPassProtocol": {
         "pass1ColdRead": {
@@ -171,7 +171,7 @@
       "genre": "Family and Home",
       "source": "Original text written for this app",
       "wordCount": 102,
-      "readingTime": "1.2 min @ 120 WPM (Intensive)",
+      "readingTime": "0.8 min @ 120 WPM (Intensive)",
       "content": "I have a small family. There are five people. My father is a driver. My mother is a nurse. I have one brother and one sister. We live in a small house.\n\nMy brother is ten. He likes football. My sister is five. She likes cats. My grandmother lives with us. She is old and happy. Her name is Hoa. She makes tea every morning.\n\nWe have dinner together every evening. My mother makes soup. My father tells funny stories. We all laugh. After dinner, we watch TV. I love my family. I am happy at home. We are a happy family.",
       "fourPassProtocol": {
         "pass1ColdRead": {
@@ -332,7 +332,7 @@
       "genre": "Shopping and Food",
       "source": "Original text written for this app",
       "wordCount": 104,
-      "readingTime": "1.2 min @ 120 WPM (Intensive)",
+      "readingTime": "0.9 min @ 120 WPM (Intensive)",
       "content": "Today is Saturday. I go to the market with my mother. It is big and busy. There are many people. The market opens at six. We go there early.\n\nI see fruit and vegetables. The apples are red. The bananas are yellow. Apples are two dollars. Bananas are one dollar. My mother buys rice, fish and eggs. I carry the bag. It is a good day. I like the market.\n\nA woman sells flowers. They are pink and white. I want one flower. I ask, \"How much is it?\" She says, \"It is one dollar.\" I say thank you. We go home at ten.",
       "fourPassProtocol": {
         "pass1ColdRead": {
@@ -1109,466 +1109,494 @@
       "stage": "Stage 3: Advanced Competency (CEFR C1)",
       "cefrLevel": "C1",
       "genre": "Philosophy of Technology & Epistemology",
-      "source": "Adapted from long-form essays in The Atlantic & Aeon Essays",
-      "wordCount": 420,
-      "readingTime": "3.5 min @ 120 WPM (Intensive)",
-      "content": "In an era defined by the ubiquitous proliferation of generative synthetic media, the human epistemic commons faces an unprecedented structural crisis. For centuries, institutional trust rested upon an implicit perceptual heuristic: seeing was believing. When an evidentiary recording captured a physical event, judicial bodies and civic assemblies could legitimately anchor their deliberative judgment upon its factual veracity.\n\nToday, however, algorithmic generation tools have rendered authentic audio-visual artifacts virtually indistinguishable from synthesized illusions. This disruption does not merely deceive the gullible; rather, its most pernicious consequence is what legal scholars term the \"liar’s dividend.\" When any recording can be convincingly fabricated, culpable actors can effortlessly dismiss genuine documentation of wrongdoing as algorithmic forgery. Consequently, the social contract descends into pervasive cynicism, where skepticism ceases to be a healthy intellectual virtue and degenerates into an excuse for total disengagement.\n\nTo mitigate this epistemic decay, technologists advocate for cryptographic provenance standards anchored directly into hardware recording chips. Yet technological barriers alone cannot restore civic coherence. Unless educational systems institutionalize rigorous critical literacy—training citizens to scrutinize rhetorical intent, trace citation genealogies, and distinguish empirical verification from seductive resonance—society risks fracturing into insular echo chambers that obviate the very possibility of consensus reality.",
+      "source": "Original passage written for English Singularity",
+      "wordCount": 434,
+      "readingTime": "3.6 min @ 120 WPM (Intensive)",
+      "content": "Every community depends on a stock of knowledge that nobody personally owns and nearly everybody uses. We trust that the medicine in the cabinet matches its label, that the bridge was inspected, that the election count was tallied honestly, and we do so without verifying any of it ourselves. This shared reserve of reliable claims resembles a common pasture: it is valuable because it is open to all, and fragile for exactly the same reason.\n\nPastures are damaged when individuals take more than they replace, and the information commons is damaged in a similar way. A single misleading post costs its author almost nothing, yet each one slightly lowers the general confidence that a stranger's statement can be believed. Multiply that small loss across millions of messages, and the whole system begins to run on suspicion rather than credit.\n\nRecent technology has accelerated the process. Software can now produce fluent articles, convincing voices and photographs of events that never occurred, at a cost approaching zero. Fabrication has become cheap, while careful verification remains slow and expensive. This asymmetry matters more than any individual forgery, because it means that honest reporters are permanently outnumbered by the volume of material they are asked to check.\n\nA subtler danger follows. Once people know that anything can be faked, they may start to doubt whatever is inconvenient, including authentic evidence. A leaked document or a genuine recording can be waved away with a shrug and the single word \"synthetic\". Doubt, which once protected us against gullibility, becomes a convenient shelter for anyone who prefers not to be held accountable.\n\nSome remedies are technical. Cameras and publishing tools could attach verifiable records of origin to files, so that readers can trace an image back to a particular device and time. Such measures are welcome, but they only help those who bother to consult them, and a label offers no protection to somebody who has already decided what to believe.\n\nThe deeper repair is therefore cultural. Schools and newsrooms can teach people to ask who is speaking, what that person stands to gain, and whether independent sources agree. Institutions can earn confidence by publishing their corrections promptly and explaining their methods plainly, rather than demanding deference. Trust of this kind is rebuilt slowly, through repeated demonstrations that checking is worth the effort.\n\nNothing guarantees success. Yet a society that treats its shared knowledge as something to be maintained, like a reservoir or a road, stands a better chance of preserving the one condition on which public argument depends: a common set of facts about which reasonable people can still disagree.",
       "fourPassProtocol": {
         "pass1ColdRead": {
-          "thesisGist": "Generative AI degrades public trust not only by deceiving individuals but by enabling wrongdoers to dismiss real evidence (the liar’s dividend), requiring both cryptographic hardware verification and deep cognitive literacy to defend.",
+          "thesisGist": "Shared knowledge works like a common resource that cheap fabrication and reflexive doubt both wear down, so protecting it requires technical records of origin and, above all, a culture of checking and trustworthy institutions.",
           "markedLexicalTargets": [
-            "epistemic commons",
-            "ubiquitous proliferation",
-            "perceptual heuristic",
-            "factual veracity",
-            "pernicious consequence",
-            "liar’s dividend",
-            "culpable actors",
-            "cryptographic provenance",
-            "obviate consensus reality"
+            "fabrication",
+            "verification",
+            "asymmetry",
+            "gullibility",
+            "accountable",
+            "deference",
+            "commons"
           ],
           "comprehensionChecks": [
             {
-              "question": "Why is the \"liar’s dividend\" described as the most pernicious consequence of synthetic media?",
-              "answer": "It allows guilty individuals to avoid accountability by claiming that authentic incriminating evidence is merely an AI fabrication."
+              "question": "Why does the author compare shared knowledge to a common pasture?",
+              "answer": "Because it is valuable since it is open to all, and fragile for the same reason: individuals can take more than they replace."
             },
             {
-              "question": "What technological solution is proposed in paragraph 3?",
-              "answer": "Cryptographic provenance standards embedded directly into camera and recording hardware."
+              "question": "What imbalance does the author say matters more than any single forgery?",
+              "answer": "Fabrication has become cheap while careful verification remains slow and expensive, so honest reporters are outnumbered by the material they must check."
             },
             {
-              "question": "According to the author, why is technology alone insufficient to preserve the epistemic commons?",
-              "answer": "Without critical literacy to evaluate intent and evidence, society will still fracture into cynical echo chambers."
+              "question": "Why does the author think technical labels are not enough?",
+              "answer": "They only help people who bother to consult them, and they offer no protection to someone who has already decided what to believe."
             }
           ]
         },
         "pass2SyntaxDissection": [
           {
             "sentenceIndex": 1,
-            "sentence": "When any recording can be convincingly fabricated, culpable actors can effortlessly dismiss genuine documentation of wrongdoing as algorithmic forgery.",
+            "sentence": "Once people know that anything can be faked, they may start to doubt whatever is inconvenient, including authentic evidence.",
             "coreSVO": {
-              "subject": "culpable actors",
-              "verb": "can dismiss",
-              "objectOrComplement": "genuine documentation of wrongdoing as algorithmic forgery"
+              "subject": "they",
+              "verb": "may start",
+              "objectOrComplement": "to doubt whatever is inconvenient, including authentic evidence"
             },
             "subordinateClauses": [
               {
-                "type": "Adverbial Clause of Condition / Time",
-                "clause": "When any recording can be convincingly fabricated",
-                "function": "Establishes the structural technological precondition for bad-faith denial."
+                "type": "Adverbial Clause of Time with \"once\"",
+                "clause": "Once people know that anything can be faked",
+                "function": "Gives the triggering condition; it contains a further noun clause as the object of \"know\"."
+              },
+              {
+                "type": "Nominal Relative Clause",
+                "clause": "whatever is inconvenient",
+                "function": "Functions as the object of \"doubt\" and widens the scope to anything unwelcome."
               }
             ],
-            "syntacticAnalysis": "Fronted subordinate temporal clause (\"When...\") sets the stage; main clause employs paired adverbs (\"convincingly\", \"effortlessly\") and nominal compounds (\"algorithmic forgery\") to emphasize the asymmetric ease of bad-faith defense."
+            "syntacticAnalysis": "The fronted \"once\" clause presents the cause, and the main clause shows how a reasonable belief (anything can be faked) turns into a selective habit. The modal \"may\" marks the outcome as a risk, not a certainty, and the participial phrase \"including authentic evidence\" delivers the sting at the end."
           },
           {
             "sentenceIndex": 2,
-            "sentence": "Unless educational systems institutionalize rigorous critical literacy—training citizens to scrutinize rhetorical intent, trace citation genealogies, and distinguish empirical verification from seductive resonance—society risks fracturing into insular echo chambers that obviate the very possibility of consensus reality.",
+            "sentence": "Such measures are welcome, but they only help those who bother to consult them, and a label offers no protection to somebody who has already decided what to believe.",
             "coreSVO": {
-              "subject": "society",
-              "verb": "risks",
-              "objectOrComplement": "fracturing into insular echo chambers"
+              "subject": "Such measures (first clause); they (second clause); a label (third clause)",
+              "verb": "are; help; offers",
+              "objectOrComplement": "those who bother to consult them; no protection to somebody who has already decided what to believe"
             },
             "subordinateClauses": [
               {
-                "type": "Conditional Subordinate Clause",
-                "clause": "Unless educational systems institutionalize rigorous critical literacy",
-                "function": "Sets the non-negotiable educational intervention."
+                "type": "Relative Clause",
+                "clause": "who bother to consult them",
+                "function": "Restricts \"those\" to people who actually use the records."
               },
               {
-                "type": "Parenthetical Participial Elaborations (Em-dash)",
-                "clause": "training citizens to scrutinize..., trace..., and distinguish...",
-                "function": "Triadic parallel verbal infinitive phrases delineating the exact cognitive actions."
+                "type": "Relative Clause",
+                "clause": "who has already decided what to believe",
+                "function": "Describes the person the label cannot reach."
               },
               {
-                "type": "Relative Restrictive Clause",
-                "clause": "that obviate the very possibility of consensus reality",
-                "function": "Qualifies the fatal civilizational consequence of the echo chambers."
+                "type": "Noun Clause inside Infinitive Phrase",
+                "clause": "what to believe",
+                "function": "A reduced wh-clause naming the object of the decision."
               }
             ],
-            "syntacticAnalysis": "Periodic sentence structure with em-dash appositive expansion. The syntactic tension builds through the triadic verbs (\"scrutinize\", \"trace\", \"distinguish\") before resolving into the existential main clause risk."
+            "syntacticAnalysis": "A compound sentence of three coordinated clauses moves from concession (\"welcome\") to limitation (\"only help\") to a stronger limitation (\"no protection\"). Two parallel relative clauses give the sentence its balance, and the present-perfect \"has already decided\" shows the problem is one of settled attitude."
           }
         ],
         "pass3SentenceMining": [
           {
             "id": "mine-reading-art-1-1",
-            "targetWord": "epistemic",
-            "partOfSpeech": "adjective",
-            "ipa": "/ˌep.ɪˈstiː.mɪk/",
-            "definition": "Relating to knowledge or to the degree of its validation and grounds for truth.",
-            "vietnamese": "thuộc về tri thức luận, liên quan đến tính xác thực của nhận thức",
-            "contextSentence": "In an era defined by the ubiquitous proliferation of generative synthetic media, the human epistemic commons faces an unprecedented structural crisis.",
+            "targetWord": "fabrication",
+            "partOfSpeech": "noun",
+            "ipa": "/ˌfæb.rɪˈkeɪ.ʃən/",
+            "definition": "The act of inventing something false in order to deceive, or the act of making something.",
+            "vietnamese": "sự bịa đặt, sự ngụy tạo",
+            "contextSentence": "Fabrication has become cheap, while careful verification remains slow and expensive.",
             "collocations": [
-              "epistemic commons",
-              "epistemic crisis",
-              "epistemic vigilance",
-              "epistemic framework"
+              "a complete fabrication",
+              "fabrication of evidence",
+              "cheap fabrication"
             ],
-            "etymology": "Greek episteme (knowledge, understanding) from epistasthai (to know how)."
+            "etymology": "Latin fabricatio, from fabricare (to make), from faber (craftsman)."
           },
           {
             "id": "mine-reading-art-1-2",
-            "targetWord": "pernicious",
-            "partOfSpeech": "adjective",
-            "ipa": "/pəˈnɪʃ.əs/",
-            "definition": "Having a harmful effect, especially in a gradual, insidious, or subtle way.",
-            "vietnamese": "nguy hại ngấm ngầm, độc hại ăn sâu dần theo thời gian",
-            "contextSentence": "This disruption does not merely deceive the gullible; rather, its most pernicious consequence is what legal scholars term the \"liar’s dividend.\"",
+            "targetWord": "gullibility",
+            "partOfSpeech": "noun",
+            "ipa": "/ˌɡʌl.əˈbɪl.ə.ti/",
+            "definition": "The quality of being too ready to believe what one is told.",
+            "vietnamese": "tính cả tin, sự dễ bị lừa",
+            "contextSentence": "Doubt, which once protected us against gullibility, becomes a convenient shelter for anyone who prefers not to be held accountable.",
             "collocations": [
-              "pernicious consequence",
-              "pernicious influence",
-              "pernicious myth"
+              "exploit gullibility",
+              "public gullibility",
+              "sheer gullibility"
             ],
-            "etymology": "Latin perniciosus (destructive), from pernicies (ruin, destruction)."
+            "etymology": "From gullible, probably from the verb gull (to deceive), plus -ity."
           },
           {
             "id": "mine-reading-art-1-3",
-            "targetWord": "veracity",
+            "targetWord": "asymmetry",
             "partOfSpeech": "noun",
-            "ipa": "/vəˈræs.ə.ti/",
-            "definition": "Conformity to facts; accuracy, truthfulness, and habitual adherence to truth.",
-            "vietnamese": "tính xác thực, chân thực, sự phù hợp với sự thật khách quan",
-            "contextSentence": "Civic assemblies could legitimately anchor their deliberative judgment upon its factual veracity.",
+            "ipa": "/eɪˈsɪm.ə.tri/",
+            "definition": "A lack of equality or balance between two things or sides.",
+            "vietnamese": "sự bất đối xứng, sự mất cân bằng",
+            "contextSentence": "This asymmetry matters more than any individual forgery, because it means that honest reporters are permanently outnumbered by the volume of material they are asked to check.",
             "collocations": [
-              "factual veracity",
-              "question the veracity of",
-              "verify the veracity"
+              "an information asymmetry",
+              "a stark asymmetry",
+              "asymmetry of power"
             ],
-            "etymology": "Latin veracitas from verax (truthful), from verus (true)."
+            "etymology": "Greek asymmetria, from a- (not) + symmetria (due proportion)."
           },
           {
             "id": "mine-reading-art-1-4",
-            "targetWord": "obviate",
-            "partOfSpeech": "verb",
-            "ipa": "/ˈɒb.vi.eɪt/",
-            "definition": "Remove a need or difficulty; anticipate and make unnecessary.",
-            "vietnamese": "loại bỏ sự cần thiết của điều gì, thủ tiêu khả năng",
-            "contextSentence": "Society risks fracturing into insular echo chambers that obviate the very possibility of consensus reality.",
+            "targetWord": "deference",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈdef.ər.əns/",
+            "definition": "Polite submission to the judgment or authority of another person.",
+            "vietnamese": "sự tôn trọng phục tùng, sự nể trọng",
+            "contextSentence": "Institutions can earn confidence by publishing their corrections promptly and explaining their methods plainly, rather than demanding deference.",
             "collocations": [
-              "obviate the need for",
-              "obviate the possibility of",
-              "effectively obviate"
+              "show deference",
+              "out of deference to",
+              "demand deference"
             ],
-            "etymology": "Latin obviare (act to meet or prevent), from ob (against) + via (way)."
+            "etymology": "French deference, from Latin deferre (to carry away, yield)."
           }
         ],
         "pass4Synthesis": {
-          "modelPrécis": "Generative media fundamentally erodes institutional trust by providing culpable actors with plausible deniability (the liar’s dividend). Countering this epistemic decay requires not merely cryptographic hardware provenance standards, but cultivating rigorous civic critical literacy to evaluate evidence, lest hyper-polarized echo chambers permanently obviate consensus reality.",
+          "modelPrécis": "The author likens shared knowledge to a common pasture that each misleading message slightly depletes. Because fabrication is cheap and checking is costly, and because doubt can be turned against genuine evidence, technical records of origin help only partly; lasting protection depends on a culture of verification and on institutions that earn trust by explaining themselves.",
           "incorporatedVocabulary": [
-            "epistemic",
-            "liar’s dividend",
-            "provenance",
-            "obviate",
-            "veracity"
+            "fabrication",
+            "gullibility",
+            "asymmetry",
+            "deference"
           ],
-          "syntacticReconstruction": "Although hardware-level cryptographic signatures can verify digital provenance, they cannot forestall democratic paralysis unless citizens cultivate the analytical acumen to scrutinize rhetorical manipulation."
+          "syntacticReconstruction": "Although the asymmetry between cheap fabrication and costly checking tempts readers either toward gullibility or toward blanket doubt, institutions that explain their methods, instead of demanding deference, can slowly rebuild confidence."
         }
       }
     },
     {
       "id": "reading-art-2",
-      "title": "Cognitive Bandwidth, Subvocalization, and the Mechanics of Deep Reading",
+      "title": "Cognitive Bandwidth, Working Memory and the Limits of Attention",
       "stage": "Stage 4: Mastery & Polymathy (CEFR C2)",
       "cefrLevel": "C2",
       "genre": "Cognitive Neurobiology & Educational Psychology",
-      "source": "Adapted from Nature Neuroscience Commentary & Cognitive Literary Theory",
-      "wordCount": 460,
-      "readingTime": "3.8 min @ 120 WPM (Intensive)",
-      "content": "The human brain did not evolve a dedicated neurological circuit for deciphering printed typography; instead, literacy is an extraordinary feat of neuronal recycling, repurposing visual object recognition pathways alongside ancient phonological and semantic networks. Consequently, the transition from laborious decoding to effortless sight recognition depends heavily on how cognitive bandwidth is allocated across working memory.\n\nAt foundational stages, readers lean heavily on subvocalization—the covert auditory articulation of printed words in the mind's inner ear. While subvocalization provides essential phonological scaffolding for novice comprehenders grappling with complex syntax, its persistence at advanced stages imposes a velocity ceiling of roughly two hundred words per minute. Yet research does not support the claim that eliminating it is desirable; subvocalization remains largely automatic and contributes to comprehension, especially for difficult text, and speed-reading programs that promise to suppress it have shown little evidence of preserving understanding. Mastery therefore lies not in silencing inner speech but in making decoding so fluent on familiar syntactic terrain that working memory is freed for high-order inference, contextual synthesis, and rhetorical evaluation.\n\nMoreover, deliberate reading differs profoundly from the distracted skimming conditioned by digital hyperlinks. In extensive reading, immersion in rich syntactic architectures cultivates deep cognitive patience, allowing the brain to internalize subtle register shifts and sentence structures organically through Krashen’s celebrated input hypothesis ($i+1$). Conversely, intensive reading acts as the surgeon’s scalpel: by subjecting difficult paragraphs to rigorous clause deconstruction and active sentence mining, the polymath converts fleeting encounters with unfamiliar lexical items into durable, retrievable engrams. Without this dual equilibrium between extensive immersion and intensive dissection, genuine polyglot fluency remains an elusive mirage.",
+      "source": "Original passage written for English Singularity",
+      "wordCount": 424,
+      "readingTime": "3.5 min @ 120 WPM (Intensive)",
+      "content": "Attention is commonly imagined as a spotlight, yet the metaphor flatters the mind by implying a steady beam under voluntary control. Experimental evidence portrays something more precarious: a limited pool of processing capacity that must be rationed among competing demands, and that depletes quickly when those demands multiply.\n\nWorking memory, the mental workspace in which information is held and manipulated, is the most conspicuous bottleneck. Estimates of its capacity have been revised downward over the decades, from the celebrated figure of seven items to perhaps four discrete chunks, and the revision matters because virtually every complex act, whether parsing a contract or following a proof, depends upon keeping several elements simultaneously active.\n\nCognitive load theory partitions the burden into three components. Intrinsic load reflects the inherent difficulty of the material; extraneous load arises from poor presentation, such as a cluttered slide or a convoluted set of instructions; germane load denotes the effort devoted to building durable schemas. Instructional design succeeds, on this view, when it trims the extraneous component so that scarce capacity may be redirected towards the germane one.\n\nExpertise alters the arithmetic dramatically. A chess master does not scan pieces individually but perceives configurations as unified patterns, thereby compressing dozens of items into a handful of chunks. Novices, lacking such stored patterns, exhaust their capacity almost instantly, which explains why identical material can seem trivial to one person and impenetrable to another. Difficulty, in other words, resides in the relationship between task and mind rather than in the task alone.\n\nMultitasking, so often celebrated as a modern virtue, fares poorly under scrutiny. What feels like parallel processing is in fact rapid alternation, and every switch exacts a toll in time and accuracy as the brain reconfigures its goals and suppresses the residue of the previous task. Habitual multitaskers, curiously, tend to overestimate their own efficiency, a miscalibration that perpetuates the very behaviour impairing them.\n\nScarcity also shapes judgement outside the laboratory. Researchers studying people under chronic financial strain have found that worry consumes a measurable share of mental capacity, leaving fewer resources for planning and self-restraint. The resulting lapses are frequently mistaken for character flaws, when they more plausibly reflect an overdrawn cognitive budget. Such findings invite humility toward those whose decisions appear shortsighted.\n\nThe practical corollaries are neither exotic nor expensive. Reduce the number of simultaneous demands, externalize what can be written down, rehearse skills until they become automatic, and protect intervals of undivided focus. Each measure conserves bandwidth, and bandwidth, once squandered, is recovered only through rest and deliberate design.",
       "fourPassProtocol": {
         "pass1ColdRead": {
-          "thesisGist": "Reading is an acquired neuronal recycling process where fluent decoding frees working memory for high-level analysis, and subvocalization is a normal aid rather than a flaw to eliminate; true mastery demands a balanced regime of extensive immersion and intensive syntactic dissection.",
+          "thesisGist": "Attention is a limited, easily depleted resource centred on working memory, so learning, work and policy should reduce unnecessary load, build expertise that compresses information, and protect undivided focus.",
           "markedLexicalTargets": [
-            "neuronal recycling",
-            "cognitive bandwidth",
-            "subvocalization",
-            "phonological scaffolding",
-            "inner speech",
-            "high-order inference",
-            "input hypothesis",
-            "retrievable engrams"
+            "working memory",
+            "bottleneck",
+            "cognitive load",
+            "extraneous",
+            "germane",
+            "schemas",
+            "chunks",
+            "miscalibration",
+            "corollaries"
           ],
           "comprehensionChecks": [
             {
-              "question": "Why does the text state that the human brain did not evolve a dedicated reading circuit?",
-              "answer": "Because reading is an evolutionary recent invention that repurposes existing visual and phonological brain regions (neuronal recycling)."
+              "question": "Why does the author regard the spotlight metaphor of attention as flattering?",
+              "answer": "It implies a steady beam under voluntary control, whereas the evidence shows a limited pool of capacity that depletes quickly when demands multiply."
             },
             {
-              "question": "What is the role of subvocalization, and what limitation does it carry at advanced stages?",
-              "answer": "It gives novices phonological scaffolding for decoding and remains a normal part of comprehension; at the same time it is linked to a speed ceiling (roughly 200-300 WPM), so the goal is fluent decoding that frees bandwidth for inference, not eliminating inner speech."
+              "question": "How does expertise change the demands on working memory?",
+              "answer": "Experts such as chess masters perceive configurations as unified patterns, compressing dozens of items into a handful of chunks, while novices lack such patterns and exhaust their capacity almost instantly."
             },
             {
-              "question": "What metaphor illustrates the complementary nature of extensive and intensive reading?",
-              "answer": "Extensive reading provides deep cognitive immersion, while intensive reading functions as the surgeon’s scalpel (precise clause dissection)."
+              "question": "What does apparent multitasking actually consist of, and what does it cost?",
+              "answer": "Rapid alternation between tasks; each switch exacts a toll in time and accuracy as the brain reconfigures its goals."
             }
           ]
         },
         "pass2SyntaxDissection": [
           {
             "sentenceIndex": 1,
-            "sentence": "While subvocalization provides essential phonological scaffolding for novice comprehenders grappling with complex syntax, its persistence at advanced stages imposes a velocity ceiling of roughly two hundred words per minute.",
+            "sentence": "Novices, lacking such stored patterns, exhaust their capacity almost instantly, which explains why identical material can seem trivial to one person and impenetrable to another.",
             "coreSVO": {
-              "subject": "its persistence at advanced stages",
-              "verb": "imposes",
-              "objectOrComplement": "a velocity ceiling of roughly two hundred words per minute"
+              "subject": "Novices",
+              "verb": "exhaust",
+              "objectOrComplement": "their capacity"
             },
             "subordinateClauses": [
               {
-                "type": "Concessive Adverbial Clause",
-                "clause": "While subvocalization provides essential phonological scaffolding for novice comprehenders",
-                "function": "Acknowledges the pedagogical utility of subvocalization for beginners before contrasting its advanced drawback."
+                "type": "Participial Phrase, Causal Sense",
+                "clause": "lacking such stored patterns",
+                "function": "Inserted between commas, it gives the reason novices exhaust their capacity."
               },
               {
-                "type": "Participial Phrase Modifier",
-                "clause": "grappling with complex syntax",
-                "function": "Post-modifies \"novice comprehenders\", describing their cognitive struggle."
+                "type": "Non-restrictive Relative Clause with Sentential Antecedent",
+                "clause": "which explains why identical material can seem trivial...",
+                "function": "\"which\" refers to the whole preceding clause, not to a single noun."
+              },
+              {
+                "type": "Embedded Noun Clause",
+                "clause": "why identical material can seem trivial to one person and impenetrable to another",
+                "function": "Object of \"explains\"; the paired adjectives contrast the two kinds of reader."
               }
             ],
-            "syntacticAnalysis": "Concessive introductory clause (\"While...\") balances the tension between developmental necessity and long-term limitation. Main clause utilizes nominal abstractions (\"persistence\", \"velocity ceiling\") to establish quantitative clarity."
+            "syntacticAnalysis": "Three layers of embedding are packed into one sentence, moving from cause (lacking patterns) to effect (exhaustion) to general consequence (subjective difficulty). The antithesis \"trivial... impenetrable\" closes the sentence with a balanced contrast."
           },
           {
             "sentenceIndex": 2,
-            "sentence": "By subjecting difficult paragraphs to rigorous clause deconstruction and active sentence mining, the polymath converts fleeting encounters with unfamiliar lexical items into durable, retrievable engrams.",
+            "sentence": "Habitual multitaskers, curiously, tend to overestimate their own efficiency, a miscalibration that perpetuates the very behaviour impairing them.",
             "coreSVO": {
-              "subject": "the polymath",
-              "verb": "converts",
-              "objectOrComplement": "fleeting encounters with unfamiliar lexical items into durable, retrievable engrams"
+              "subject": "Habitual multitaskers",
+              "verb": "tend to overestimate",
+              "objectOrComplement": "their own efficiency"
             },
             "subordinateClauses": [
               {
-                "type": "Instrumental Prepositional Participial Phrase",
-                "clause": "By subjecting difficult paragraphs to rigorous clause deconstruction and active sentence mining",
-                "function": "Specifies the deliberate procedural methodology."
+                "type": "Sentence Adverb Parenthetical",
+                "clause": "curiously",
+                "function": "Signals the author's surprise at the finding."
+              },
+              {
+                "type": "Appositive with Restrictive Relative Clause",
+                "clause": "a miscalibration that perpetuates the very behaviour impairing them",
+                "function": "Renames the whole preceding idea and explains its self-reinforcing effect."
+              },
+              {
+                "type": "Reduced Relative Clause",
+                "clause": "impairing them",
+                "function": "Post-modifies \"behaviour\"; equivalent to \"that impairs them\"."
               }
             ],
-            "syntacticAnalysis": "Fronted instrumental phrase leads directly into the transformative verb \"converts X into Y\", contrasting the ephemeral (\"fleeting encounters\") with the permanent (\"durable, retrievable engrams\")."
+            "syntacticAnalysis": "The appositive \"a miscalibration...\" compresses a whole process into one noun phrase, and \"the very behaviour\" stresses the irony that the habit sustains itself."
           }
         ],
         "pass3SentenceMining": [
           {
             "id": "mine-reading-art-2-1",
-            "targetWord": "subvocalization",
+            "targetWord": "bottleneck",
             "partOfSpeech": "noun",
-            "ipa": "/ˌsʌb.vəʊ.kəl.aɪˈzeɪ.ʃən/",
-            "definition": "The internal, silent articulation of words while reading.",
-            "vietnamese": "sự phát âm thầm trong đầu khi đọc chữ",
-            "contextSentence": "At foundational stages, readers lean heavily on subvocalization—the covert auditory articulation of printed words in the mind's inner ear.",
+            "ipa": "/ˈbɒt.əl.nek/",
+            "definition": "A point of congestion or limited capacity that restricts the flow or speed of a whole process.",
+            "vietnamese": "điểm nghẽn, nút thắt cổ chai",
+            "contextSentence": "Working memory, the mental workspace in which information is held and manipulated, is the most conspicuous bottleneck.",
             "collocations": [
-              "habitual subvocalization",
-              "inner-speech subvocalization",
-              "reduce subvocalization"
+              "a major bottleneck",
+              "cognitive bottleneck",
+              "remove a bottleneck"
             ],
-            "etymology": "Prefix sub- (under) + vocalize (to utter; from Latin vox/vocalis, voice)."
+            "etymology": "From bottle + neck, the narrow part of a bottle that restricts pouring."
           },
           {
             "id": "mine-reading-art-2-2",
-            "targetWord": "scaffolding",
-            "partOfSpeech": "noun",
-            "ipa": "/ˈskæf.əl.dɪŋ/",
-            "definition": "Temporary support provided to learners to assist them in achieving higher levels of comprehension.",
-            "vietnamese": "khung nâng đỡ sư phạm, giá đỡ hỗ trợ học tập tạm thời",
-            "contextSentence": "Subvocalization provides essential phonological scaffolding for novice comprehenders grappling with complex syntax.",
+            "targetWord": "schemas",
+            "partOfSpeech": "noun (plural)",
+            "ipa": "/ˈskiː.məz/",
+            "definition": "Organised mental structures that group related knowledge and guide how new information is interpreted.",
+            "vietnamese": "các lược đồ nhận thức, khung kiến thức tổ chức sẵn trong trí nhớ",
+            "contextSentence": "Intrinsic load reflects the inherent difficulty of the material; extraneous load arises from poor presentation, such as a cluttered slide or a convoluted set of instructions; germane load denotes the effort devoted to building durable schemas.",
             "collocations": [
-              "instructional scaffolding",
-              "cognitive scaffolding",
-              "phonological scaffolding"
+              "build schemas",
+              "existing schemas",
+              "mental schemas"
             ],
-            "etymology": "Old French eschafaut (viewing platform, scaffold)."
+            "etymology": "Greek skhema (form, shape), via Latin schema."
           },
           {
             "id": "mine-reading-art-2-3",
-            "targetWord": "engram",
+            "targetWord": "miscalibration",
             "partOfSpeech": "noun",
-            "ipa": "/ˈen.ɡræm/",
-            "definition": "A hypothesized physical trace left by an experience in the brain’s neural tissue; a memory trace.",
-            "vietnamese": "dấu vết ký ức thần kinh, vết hằn ký ức sinh học trong não",
-            "contextSentence": "The polymath converts fleeting encounters with unfamiliar lexical items into a durable, retrievable engram.",
+            "ipa": "/ˌmɪsˌkæl.ɪˈbreɪ.ʃən/",
+            "definition": "A systematic mismatch between a person's confidence or self-assessment and their actual performance.",
+            "vietnamese": "sự đánh giá lệch, sự tự đánh giá sai so với thực tế",
+            "contextSentence": "Habitual multitaskers, curiously, tend to overestimate their own efficiency, a miscalibration that perpetuates the very behaviour impairing them.",
             "collocations": [
-              "memory engram",
-              "neural engram",
-              "retrievable engrams"
+              "confidence miscalibration",
+              "systematic miscalibration",
+              "correct a miscalibration"
             ],
-            "etymology": "Greek en (in) + gramma (letter, that which is written)."
+            "etymology": "Prefix mis- (wrongly) + calibration, from calibre (bore of a gun)."
           },
           {
             "id": "mine-reading-art-2-4",
-            "targetWord": "subordinate",
-            "partOfSpeech": "adjective / verb",
-            "ipa": "/səˈbɔː.dɪ.nət/",
-            "definition": "Lower in rank, importance, or syntactic dependency.",
-            "vietnamese": "phụ thuộc, thứ yếu (trong cú pháp: mệnh đề phụ)",
-            "contextSentence": "Immersion in rich syntactic architectures allows the brain to parse complex subordinate clauses without conscious strain.",
+            "targetWord": "corollaries",
+            "partOfSpeech": "noun (plural)",
+            "ipa": "/kəˈrɒl.ər.iz/",
+            "definition": "Natural consequences or practical conclusions that follow directly from an established idea.",
+            "vietnamese": "hệ quả tất yếu, những điều suy ra trực tiếp",
+            "contextSentence": "The practical corollaries are neither exotic nor expensive.",
             "collocations": [
-              "subordinate clause",
-              "subordinate conjunction",
-              "subordinate role"
+              "a natural corollary",
+              "practical corollary",
+              "corollary of the theory"
             ],
-            "etymology": "Latin sub- (under) + ordinare (to order, rank)."
+            "etymology": "Latin corollarium (a gift, a surplus), from corolla (small garland)."
           }
         ],
         "pass4Synthesis": {
-          "modelPrécis": "Reading recruits repurposed neural pathways where subvocalization provides vital phonological scaffolding while also tying reading speed to inner-speech pace. Achieving polymathic reading demands balancing extensive immersion for intuitive pattern absorption with intensive clause dissection to forge durable, retrievable memory engrams from challenging syntax.",
+          "modelPrécis": "Attention draws on a limited working memory that is easily overloaded by poor design and rapid task switching. Expertise compresses information into chunks, so the practical response is to cut extraneous demands, build durable schemas, and guard intervals of undivided focus.",
           "incorporatedVocabulary": [
-            "subvocalization",
-            "scaffolding",
-            "engram",
-            "neuronal recycling",
-            "velocity ceiling"
+            "bottleneck",
+            "schemas",
+            "chunks",
+            "miscalibration",
+            "corollaries"
           ],
-          "syntacticReconstruction": "Rather than treating subvocalization as a deficit, advanced readers rely on it for dense or poetic prose and read familiar material faster without trying to silence it."
+          "syntacticReconstruction": "Rather than celebrating multitasking, sensible institutions ration simultaneous demands so that scarce working memory is spent on understanding instead of on switching."
         }
       }
     },
     {
       "id": "reading-art-3",
-      "title": "The Architecture of Solitude and Attention in Knowledge Work",
+      "title": "Architecture, Solitude and the Right to Be Unobserved",
       "stage": "Stage 3: Advanced Competency (CEFR C1)",
       "cefrLevel": "C1",
       "genre": "Cultural Sociology & Deep Work Philosophy",
-      "source": "Adapted from Cal Newport & Joan Didion essay anthologies",
-      "wordCount": 440,
-      "readingTime": "3.6 min @ 120 WPM (Intensive)",
-      "content": "In the contemporary knowledge economy, hyper-connectivity is frequently conflated with organizational velocity. Open-plan offices and asynchronous notification streams promise frictionless collaboration, yet their insidious side effect is the systematic fragmentation of human attention. When deep, uninterrupted solitude is eliminated from daily practice, cognitive throughput degrades from rigorous original synthesis into reactive, performative busywork.\n\nPsychologists observe that switching focus between collaborative pings and analytical contemplation leaves an exhausting residue known as \"attention residue.\" Even a brief glance at an inbox notification can leave part of working memory tied to the interrupted task, and studies suggest full refocusing after an interruption can take many minutes. Under such fragmented conditions, knowledge workers lose the capacity for sustained syntactic immersion—the precise mental patience required to draft airtight legal briefs, deconstruct complex mathematical proofs, or read dense philosophical treatises without drifting into digital escapism.\n\nReclaiming cognitive autonomy requires institutionalizing deliberate boundaries. Elite practitioners do not merely resist distraction through sheer willpower; they architect low-entropy physical and digital sanctuaries. By scheduling multi-hour blocks of sacred monastic silence and treating attention as a scarce, finite resource, the modern intellectual safeguards the psychological conditions under which profound insight can quietly germinate.",
+      "source": "Original passage written for English Singularity",
+      "wordCount": 445,
+      "readingTime": "3.7 min @ 120 WPM (Intensive)",
+      "content": "Few buildings are designed with solitude in mind, and fewer still with the dignity of being alone. Architects have long prized the open vista, the shared atrium and the glass partition, all of which signal transparency and civic generosity. Yet a structure that exposes its occupants at every turn quietly withholds something people need in order to think: a place where nobody is watching.\n\nConsider the humble threshold. A door that closes, a corridor that bends, a window seat set back from the main room: such details do not merely divide space but grade it, creating a gradient from the communal to the intimate. Sociologists describe this gradient as the foundation of private life, because it lets a person decide, moment by moment, how much of themselves to disclose. Remove the gradient, and every hour becomes a performance.\n\nHistorical precedent supports the point. The medieval monastic cell, the scholar's study in a Renaissance townhouse, and the writer's garden shed were all modest in scale yet generous in effect. Their occupants rarely sought isolation for its own sake; they sought a setting in which sustained reflection would not be punctured by obligations. Smallness, paradoxically, was the source of their expansiveness, since a contained room narrows the world to the dimensions of a single problem.\n\nContemporary designers face a harder brief, for they must accommodate both collaboration and retreat within budgets that reward density. The temptation is to treat quiet as a luxury that can be offered through headphones rather than walls. Headphones, however, suppress sound without restoring privacy; a colleague can still approach, a glance can still land, and the body remains subtly braced for interruption. Genuine seclusion requires that the environment itself, not the individual's vigilance, absorb the burden of defence.\n\nAcoustic booths allow short periods of concentrated work, while reservable rooms signal that withdrawal is legitimate rather than antisocial. What unites these solutions is their acknowledgment that privacy is not an absence of community but a condition that makes meaningful community sustainable.\n\nThere is, nonetheless, a risk of romanticizing the hermit. Prolonged isolation corrodes judgement as readily as constant company erodes concentration, and no architect should presume that more enclosure is always better. The wiser aim is calibration: spaces that invite people inward when they wish to think and outward when they wish to converse, with the passage between the two kept short and unobtrusive.\n\nA building, in the end, is an argument about how people ought to live. Those that honour solitude assert that reflection is productive labour deserving of its own room, and that a society able to protect such rooms will, in time, be rewarded with better ideas and calmer minds.",
       "fourPassProtocol": {
         "pass1ColdRead": {
-          "thesisGist": "Constant workplace connectivity destroys the sustained solitude necessary for complex knowledge work via attention residue, requiring deliberate environmental architecture rather than mere willpower to defend deep cognitive focus.",
+          "thesisGist": "Buildings that treat exposure as a virtue deny people the private, graded space on which reflection depends, so good design must build seclusion into the environment itself and balance it with places for company.",
           "markedLexicalTargets": [
-            "conflated with",
-            "insidious side effect",
-            "cognitive throughput",
-            "attention residue",
-            "syntactic immersion",
-            "cognitive autonomy",
-            "low-entropy sanctuaries",
-            "germinate"
+            "civic generosity",
+            "threshold",
+            "gradient",
+            "disclose",
+            "punctured",
+            "seclusion",
+            "vigilance",
+            "calibration",
+            "unobtrusive"
           ],
           "comprehensionChecks": [
             {
-              "question": "What false equivalence does the knowledge economy make regarding connectivity?",
-              "answer": "It mistakenly conflates hyper-connectivity with genuine organizational velocity."
+              "question": "What does the author claim a fully exposed building withholds from its occupants?",
+              "answer": "A place where nobody is watching, which people need in order to think."
             },
             {
-              "question": "How does \"attention residue\" impair analytical capability?",
-              "answer": "Even a brief distraction can leave working memory partly tied up with the previous task, and regaining full focus can take many minutes."
+              "question": "Why does the author consider the gradient from the communal to the intimate so important?",
+              "answer": "It lets a person decide, moment by moment, how much of themselves to disclose; without it every hour becomes a performance."
             },
             {
-              "question": "What is the author's view on willpower versus environmental design?",
-              "answer": "Willpower is insufficient; elite practitioners succeed by deliberately architecting low-entropy, distraction-free physical and digital sanctuaries."
+              "question": "Why are headphones an inadequate substitute for walls?",
+              "answer": "They suppress sound without restoring privacy, since a colleague can still approach, a glance can still land, and the body stays braced for interruption."
             }
           ]
         },
         "pass2SyntaxDissection": [
           {
             "sentenceIndex": 1,
-            "sentence": "Open-plan offices and asynchronous notification streams promise frictionless collaboration, yet their insidious side effect is the systematic fragmentation of human attention.",
+            "sentence": "Yet a structure that exposes its occupants at every turn quietly withholds something people need in order to think: a place where nobody is watching.",
             "coreSVO": {
-              "subject": "Open-plan offices and asynchronous notification streams / their insidious side effect",
-              "verb": "promise / is",
-              "objectOrComplement": "frictionless collaboration / the systematic fragmentation of human attention"
+              "subject": "a structure that exposes its occupants at every turn",
+              "verb": "withholds",
+              "objectOrComplement": "something people need in order to think"
             },
             "subordinateClauses": [
               {
-                "type": "Coordinated Adversative Compound Sentence",
-                "clause": "yet their insidious side effect is...",
-                "function": "Contrasts corporate marketing promises against the harsh neurological reality."
+                "type": "Restrictive Relative Clause",
+                "clause": "that exposes its occupants at every turn",
+                "function": "Defines which kind of structure is being criticised."
+              },
+              {
+                "type": "Reduced Relative Clause with Infinitive of Purpose",
+                "clause": "people need in order to think",
+                "function": "Modifies \"something\"; the relative pronoun is omitted."
+              },
+              {
+                "type": "Relative Clause of Place",
+                "clause": "where nobody is watching",
+                "function": "Modifies \"a place\" and identifies the withheld thing."
               }
             ],
-            "syntacticAnalysis": "Compound coordination linked by the adversative conjunction \"yet\". The syntactic juxtaposition pits the aspirational adjective \"frictionless\" directly against the damning nominal phrase \"systematic fragmentation\"."
+            "syntacticAnalysis": "The sentence opens with the adversative \"Yet\", then delays its payoff behind a long subject. The colon introduces an appositive that names the \"something\", so the reader learns what is withheld only at the very end."
           },
           {
             "sentenceIndex": 2,
-            "sentence": "By scheduling multi-hour blocks of sacred monastic silence and treating attention as a scarce, finite resource, the modern intellectual safeguards the psychological conditions under which profound insight can quietly germinate.",
+            "sentence": "Genuine seclusion requires that the environment itself, not the individual's vigilance, absorb the burden of defence.",
             "coreSVO": {
-              "subject": "the modern intellectual",
-              "verb": "safeguards",
-              "objectOrComplement": "the psychological conditions"
+              "subject": "Genuine seclusion",
+              "verb": "requires",
+              "objectOrComplement": "that the environment itself, not the individual's vigilance, absorb the burden of defence"
             },
             "subordinateClauses": [
               {
-                "type": "Compound Gerund Prepositional Phrase",
-                "clause": "By scheduling multi-hour blocks... and treating attention...",
-                "function": "Specifies the twin operational habits of elite intellectual defense."
+                "type": "Mandative Noun Clause",
+                "clause": "that the environment itself... absorb the burden of defence",
+                "function": "The bare-infinitive verb \"absorb\" (subjunctive) follows \"requires\", expressing a necessary condition rather than a fact."
               },
               {
-                "type": "Relative Clause with Fronted Preposition",
-                "clause": "under which profound insight can quietly germinate",
-                "function": "Modifies \"psychological conditions\", expressing the fertile environment for creativity."
+                "type": "Contrastive Parenthetical",
+                "clause": "not the individual's vigilance",
+                "function": "Corrects the assumption that privacy is a matter of personal effort."
               }
             ],
-            "syntacticAnalysis": "Fronted compound participial phrases establish the dual disciplines of time-blocking and philosophical re-evaluation. The sentence concludes with organic metaphorical imagery (\"quietly germinate\")."
+            "syntacticAnalysis": "The mandative subjunctive gives the claim a prescriptive force, and the inserted \"not...\" phrase shifts responsibility from the person to the building in a single stroke."
           }
         ],
         "pass3SentenceMining": [
           {
             "id": "mine-reading-art-3-1",
-            "targetWord": "conflated",
-            "partOfSpeech": "verb (past participle)",
-            "ipa": "/kənˈfleɪtɪd/",
-            "definition": "Combined two or more separate ideas, entities, or arguments into one, often erroneously.",
-            "vietnamese": "đánh đồng, trộn lẫn hai khái niệm riêng biệt làm một",
-            "contextSentence": "In the contemporary knowledge economy, hyper-connectivity is frequently conflated with organizational velocity.",
+            "targetWord": "gradient",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈɡreɪ.di.ənt/",
+            "definition": "A gradual change from one state or level to another along a continuous scale.",
+            "vietnamese": "sự chuyển dần, thang mức độ liên tục",
+            "contextSentence": "Remove the gradient, and every hour becomes a performance.",
             "collocations": [
-              "conflate two concepts",
-              "erroneously conflated",
-              "conflate correlation with causation"
+              "a steep gradient",
+              "social gradient",
+              "gradient of privacy"
             ],
-            "etymology": "Latin conflat- (blown together), from con- (together) + flare (to blow)."
+            "etymology": "Latin gradus (step), via gradient, formed on the model of \"gradual\"."
           },
           {
             "id": "mine-reading-art-3-2",
-            "targetWord": "insidious",
-            "partOfSpeech": "adjective",
-            "ipa": "/ɪnˈsɪd.i.əs/",
-            "definition": "Proceeding in a gradual, subtle way, but with very harmful effects.",
-            "vietnamese": "nguy hiểm ngấm ngầm, có tác hại âm thầm mà khôn lường",
-            "contextSentence": "Open-plan offices promise frictionless collaboration, yet their insidious side effect is the systematic fragmentation of attention.",
+            "targetWord": "disclose",
+            "partOfSpeech": "verb",
+            "ipa": "/dɪsˈkləʊz/",
+            "definition": "To make secret or private information known to others.",
+            "vietnamese": "tiết lộ, để lộ ra",
+            "contextSentence": "Sociologists describe this gradient as the foundation of private life, because it lets a person decide, moment by moment, how much of themselves to disclose.",
             "collocations": [
-              "insidious threat",
-              "insidious nature",
-              "insidious disease"
+              "disclose information",
+              "fully disclose",
+              "reluctant to disclose"
             ],
-            "etymology": "Latin insidiosus, from insidiae (ambush, plot)."
+            "etymology": "Old French desclos (opened), from des- (undo) + clore (to close)."
           },
           {
             "id": "mine-reading-art-3-3",
-            "targetWord": "residue",
+            "targetWord": "vigilance",
             "partOfSpeech": "noun",
-            "ipa": "/ˈrez.ɪ.djuː/",
-            "definition": "A small amount of something that remains after the main part has gone or been taken.",
-            "vietnamese": "phần tàn dư, cặn bã còn vương lại",
-            "contextSentence": "Switching focus between collaborative pings and contemplation leaves an exhausting residue that impairs analytical throughput.",
+            "ipa": "/ˈvɪdʒ.ɪ.ləns/",
+            "definition": "Careful, sustained watchfulness for possible danger or difficulty.",
+            "vietnamese": "sự cảnh giác, sự thận trọng canh chừng",
+            "contextSentence": "Genuine seclusion requires that the environment itself, not the individual's vigilance, absorb the burden of defence.",
             "collocations": [
-              "attention residue",
-              "toxic residue",
-              "chemical residue"
+              "constant vigilance",
+              "maintain vigilance",
+              "heightened vigilance"
             ],
-            "etymology": "Old French residu, from Latin residuum (that which remains)."
+            "etymology": "Latin vigilantia, from vigilare (to be awake, to watch)."
           },
           {
             "id": "mine-reading-art-3-4",
-            "targetWord": "germinate",
-            "partOfSpeech": "verb",
-            "ipa": "/ˈdʒɜː.mɪ.neɪt/",
-            "definition": "Begin to grow and put out shoots after a period of dormancy; or come into inception (of an idea).",
-            "vietnamese": "nảy mầm, đâm chồi, bắt đầu hình thành và phát triển (ý tưởng)",
-            "contextSentence": "The modern intellectual safeguards the psychological conditions under which profound insight can quietly germinate.",
+            "targetWord": "calibration",
+            "partOfSpeech": "noun",
+            "ipa": "/ˌkæl.ɪˈbreɪ.ʃən/",
+            "definition": "The careful adjustment of something to reach the right balance or degree.",
+            "vietnamese": "sự hiệu chỉnh, sự điều chỉnh cho cân bằng",
+            "contextSentence": "The wiser aim is calibration: spaces that invite people inward when they wish to think and outward when they wish to converse, with the passage between the two kept short and unobtrusive.",
             "collocations": [
-              "germinate an idea",
-              "seeds germinate",
-              "allowed to germinate"
+              "careful calibration",
+              "fine calibration",
+              "calibration of risk"
             ],
-            "etymology": "Latin germinat- (sprouted), from germen (sprout, germ)."
+            "etymology": "From calibre (bore of a gun), from Arabic qalib (a mould), with the noun suffix -ation."
           }
         ],
         "pass4Synthesis": {
-          "modelPrécis": "Modern organizations erroneously conflate constant communication with velocity, producing cognitive fragmentation and debilitating attention residue. Shielding analytical throughput demands establishing low-entropy monastic routines where attention is guarded as finite capital, providing the deep uninterrupted space required for breakthrough insights to germinate.",
+          "modelPrécis": "Buildings that expose people at every turn withhold the unobserved space that thinking needs. Graded thresholds let occupants control disclosure, so genuine seclusion has to be designed into the environment rather than left to individual vigilance, while remaining balanced by spaces for conversation.",
           "incorporatedVocabulary": [
-            "conflate",
-            "attention residue",
-            "low-entropy",
-            "germinate",
-            "cognitive throughput"
+            "gradient",
+            "disclose",
+            "seclusion",
+            "vigilance",
+            "calibration"
           ],
-          "syntacticReconstruction": "Rather than succumbing to performative responsiveness, high-value contributors insulate their working memory through scheduled offline sanctuaries."
+          "syntacticReconstruction": "Rather than expecting occupants to defend their own concentration, thoughtful designers build the defence into the walls, the doors and the quiet corners of the building."
         }
       }
     },
@@ -1975,465 +2003,473 @@
       "stage": "Stage 4: Mastery & Polymathy (CEFR C2)",
       "cefrLevel": "C2",
       "genre": "Cognitive Science, Neuro-Ergonomics & Epistemology",
-      "source": "Contemporary Synthesis on Cognitive Ergonomics & Attentional Capital",
-      "wordCount": 460,
-      "readingTime": "3.8 min @ 120 WPM (Intensive)",
-      "content": "The contemporary intellectual landscape is dominated by an architectural contradiction: while the economic premium on high-order cognitive synthesis has reached unprecedented heights, the ambient environments in which knowledge workers operate are deliberately optimized for perpetual attentional disruption. Cognitive neuroscientists increasingly recognize that human consciousness does not possess a general-purpose, parallel-processing engine; rather, deep analytical thought is an intrinsically serial, resource-constrained biological phenomenon governed by the delicate thermodynamics of the prefrontal cortex.\n\nWhen an individual engages in deep work, neural networks within the frontoparietal control network orchestrate a state of sustained attentional coherence, dampening task-irrelevant sensory inputs through active GABAergic inhibition. However, this state of metabolic equilibrium is exquisitely fragile. Every exogenous intrusion—whether a notification chime, a fleeting chat ping, or an open browser tab—triggers an involuntary orienting reflex that shatters attentional synchrony. The subsequent effort to re-establish contextual depth incurs severe cognitive switching costs, leaving behind a persistent residue of attentional fragmentation that degrades the fidelity of abstract reasoning.\n\nTo thrive amidst this systemic distraction economy, modern knowledge practitioners must transition from naive self-control to deliberate environmental engineering. True cognitive mastery is not achieved by resisting temptations through sheer willpower, which rapidly depletes finite glucose reserves, but by constructing hermetic attentional sanctuaries and ritualized monastic blocks. By aligning work rhythms with circadian neurobiology and treating focused attention as an irreplaceable, non-fungible capital asset, the polymath cultivates the deep cognitive flow wherein complex original insights are synthesized and mastered.",
+      "source": "Original passage written for English Singularity",
+      "wordCount": 439,
+      "readingTime": "3.7 min @ 120 WPM (Intensive)",
+      "content": "Few assets are as prized and as carelessly squandered as sustained attention. Modern organisations pay handsomely for people who can reason through tangled problems, yet they furnish those same people with workplaces engineered to fragment every hour into scraps, each one claimed by a message, a meeting, or a banner sliding across the screen.\n\nThe mismatch rests on a misreading of the mind. We tend to picture thought as a broad river that can carry several cargoes at once, whereas careful analysis behaves more like a narrow bridge, admitting one load at a time. What passes for multitasking is, in practice, rapid alternation, and every crossing exacts a toll that the worker rarely notices and never itemises.\n\nThat toll is best understood as residue. When a person abandons a half-finished argument to answer a query, part of the mind lingers with the abandoned problem even as the new one demands full allegiance. The result is a divided effort: replies grow terse, inferences are drawn with less scrutiny, and subtle errors slip through unchallenged. Recovering the earlier depth can take far longer than the interruption itself.\n\nMany people respond to this predicament with resolve, promising themselves to ignore the phone and resist the inbox. Yet resolve is a perishable resource, and a strategy that demands its constant renewal is destined to fail by mid-afternoon. A more durable remedy lies in arranging circumstances so that distraction requires effort rather than abstention: a closed door, a silenced device, a task defined narrowly enough that its end is visible.\n\nRhythm matters as much as architecture. Most individuals possess a few hours each day in which their faculties are demonstrably sharper, and those hours are routinely surrendered to correspondence that could wait. Guarding that window for the most demanding work, and relegating the shallow chores to the weary remainder of the day, costs nothing and often doubles what is accomplished.\n\nNor should solitude be mistaken for idleness. Some of the most valuable cognitive labour is invisible: a mind turning over a difficulty, testing a connection, discarding it and trying another. Organisations that read quiet as inertia will, sooner or later, punish the very behaviour that generates their best ideas, and reward instead a frantic responsiveness that produces little of lasting worth.\n\nThe prescription, then, is neither austere nor mystical. Treat attention as a finite budget, defend it with structure rather than sentiment, and accept that depth is cultivated by what one declines as much as by what one undertakes. Those who learn this discipline find that their finest work was never prevented by a shortage of talent, only by a shortage of uninterrupted time.",
       "fourPassProtocol": {
         "pass1ColdRead": {
-          "thesisGist": "Deep analytical cognition is an intrinsically serial and metabolically fragile biological process that cannot withstand ubiquitous digital interruptions, necessitating a shift from reactive willpower to deliberate environmental engineering and ritualized attentional sanctuaries.",
+          "thesisGist": "Because careful thought proceeds one task at a time and every interruption leaves a costly residue, attention must be protected through deliberate structure, sensible timing and tolerated solitude rather than through willpower alone.",
           "markedLexicalTargets": [
-            "attentional disruption",
-            "frontoparietal network",
-            "metabolic equilibrium",
-            "exogenous intrusion",
-            "orienting reflex",
-            "cognitive switching costs",
-            "hermetic sanctuaries",
-            "non-fungible capital"
+            "residue",
+            "alternation",
+            "perishable",
+            "abstention",
+            "relegating",
+            "inertia",
+            "scrutiny",
+            "allegiance"
           ],
           "comprehensionChecks": [
             {
-              "question": "Why is human deep analytical cognition unable to function as a parallel-processing engine?",
-              "answer": "Because high-order analytical thought is biologically serial and resource-constrained, dependent on finite metabolic resources in the prefrontal cortex."
+              "question": "Why does the author compare careful analysis to a narrow bridge?",
+              "answer": "Because analysis admits only one load at a time; what is called multitasking is really rapid alternation, and each switch exacts a toll."
             },
             {
-              "question": "What neurological mechanism occurs when an individual experiences an exogenous intrusion during deep work?",
-              "answer": "An involuntary orienting reflex is triggered that dismantles GABAergic sensory inhibition, shattering neural synchrony and incurring heavy cognitive switching costs."
+              "question": "What happens to the quality of work when someone leaves a half-finished argument to answer a query?",
+              "answer": "Part of the mind stays with the abandoned problem, so replies become terse, inferences receive less scrutiny and subtle errors go unchallenged."
             },
             {
-              "question": "According to the author, why is willpower insufficient to combat attentional fragmentation?",
-              "answer": "Willpower is a metabolically depletable resource; durable focus requires structural environmental engineering and hermetic sanctuaries rather than ongoing self-restraint."
+              "question": "Why does the author consider resolve an unreliable defence against distraction?",
+              "answer": "Resolve is a perishable resource that is likely to fail by mid-afternoon, so a better remedy is to arrange circumstances in which distraction takes effort."
+            },
+            {
+              "question": "What risk do organisations run when they read quiet as inertia?",
+              "answer": "They punish the solitary thinking that generates their best ideas and reward frantic responsiveness that produces little of lasting worth."
             }
           ]
         },
         "pass2SyntaxDissection": [
           {
             "sentenceIndex": 1,
-            "sentence": "The contemporary intellectual landscape is dominated by an architectural contradiction: while the economic premium on high-order cognitive synthesis has reached unprecedented heights, the ambient environments in which knowledge workers operate are deliberately optimized for perpetual attentional disruption.",
+            "sentence": "Modern organisations pay handsomely for people who can reason through tangled problems, yet they furnish those same people with workplaces engineered to fragment every hour into scraps, each one claimed by a message, a meeting, or a banner sliding across the screen.",
             "coreSVO": {
-              "subject": "The contemporary intellectual landscape",
-              "verb": "is dominated",
-              "objectOrComplement": "by an architectural contradiction"
+              "subject": "Modern organisations",
+              "verb": "pay (coordinated with \"furnish\")",
+              "objectOrComplement": "handsomely for people (first clause); those same people (second clause)"
             },
             "subordinateClauses": [
               {
-                "type": "Adverbial Clause of Concession (Fronted Subordinate \"while\")",
-                "clause": "while the economic premium on high-order cognitive synthesis has reached unprecedented heights",
-                "function": "Establishes the macro-economic valuation of deep intellect."
+                "type": "Relative Clause Modifying \"people\"",
+                "clause": "who can reason through tangled problems",
+                "function": "Defines the kind of worker the organisations value."
               },
               {
-                "type": "Relative Clause Modifying \"ambient environments\"",
-                "clause": "in which knowledge workers operate",
-                "function": "Specifies the daily milieu."
+                "type": "Past Participial Phrase Modifying \"workplaces\"",
+                "clause": "engineered to fragment every hour into scraps",
+                "function": "Shows the deliberate design behind the disruption."
+              },
+              {
+                "type": "Absolute Construction",
+                "clause": "each one claimed by a message, a meeting, or a banner sliding across the screen",
+                "function": "Itemises the intruders with a tricolon."
               }
             ],
-            "syntacticAnalysis": "Passive opening framing the systemic conflict, followed by a colon elaborating a sharp structural paradox between the economic demand for deep thought and the technological reality of environmental disruption."
+            "syntacticAnalysis": "Two coordinated main clauses joined by \"yet\" set the reward for deep thinking against the habits that destroy it. The closing absolute phrase and its three-part list add concrete detail without a new finite verb."
           },
           {
             "sentenceIndex": 2,
-            "sentence": "True cognitive mastery is not achieved by resisting temptations through sheer willpower, which rapidly depletes finite glucose reserves, but by constructing hermetic attentional sanctuaries and ritualized monastic blocks.",
+            "sentence": "Yet resolve is a perishable resource, and a strategy that demands its constant renewal is destined to fail by mid-afternoon.",
             "coreSVO": {
-              "subject": "True cognitive mastery",
-              "verb": "is achieved",
-              "objectOrComplement": "by constructing hermetic attentional sanctuaries and ritualized monastic blocks"
+              "subject": "resolve (first clause); a strategy that demands its constant renewal (second clause)",
+              "verb": "is (first clause); is destined (second clause)",
+              "objectOrComplement": "a perishable resource (complement of the first clause)"
             },
             "subordinateClauses": [
               {
-                "type": "Non-restrictive Relative Clause",
-                "clause": "which rapidly depletes finite glucose reserves",
-                "function": "Explains the physiological failure of mere willpower."
+                "type": "Relative Clause Modifying \"strategy\"",
+                "clause": "that demands its constant renewal",
+                "function": "Explains why the strategy cannot last."
               }
             ],
-            "syntacticAnalysis": "Classic \"not A, but B\" contrastive periodic syntax. The non-restrictive clause injects neurobiological grounding into the first arm before the second arm resolves with active, concrete architectural solutions (\"hermetic sanctuaries\", \"monastic blocks\")."
+            "syntacticAnalysis": "A compound sentence opened by the contrastive \"Yet\". The first clause states a general truth and the second draws the practical consequence, with the infinitive \"to fail\" completing the passive-sounding \"is destined\"."
           }
         ],
         "pass3SentenceMining": [
           {
             "id": "mine-reading-art-6-1",
-            "targetWord": "exogenous",
-            "partOfSpeech": "adjective",
-            "ipa": "/ekˈsɒdʒ.ɪ.nəs/",
-            "definition": "Originating from outside; derived or developed from external causes or conditions.",
-            "vietnamese": "ngoại sinh, bắt nguồn từ bên ngoài, do tác nhân ngoại lai gây ra",
-            "contextSentence": "Every exogenous intrusion—whether a notification chime, a fleeting chat ping, or an open browser tab—triggers an involuntary orienting reflex that shatters attentional synchrony.",
+            "targetWord": "residue",
+            "partOfSpeech": "noun",
+            "ipa": "/ˈrez.ɪ.djuː/",
+            "definition": "What remains after the main part has gone or been removed; a lingering trace.",
+            "vietnamese": "phần còn sót lại, dư lượng, dấu vết còn lưu lại",
+            "contextSentence": "That toll is best understood as residue.",
             "collocations": [
-              "exogenous intrusion",
-              "exogenous shock",
-              "exogenous stimulus"
+              "attentional residue",
+              "chemical residue",
+              "leave a residue"
             ],
-            "etymology": "Greek exo (outside) + -genes (born of, producing)."
+            "etymology": "Latin residuum, from residere (to remain behind)."
           },
           {
             "id": "mine-reading-art-6-2",
-            "targetWord": "hermetic",
+            "targetWord": "perishable",
             "partOfSpeech": "adjective",
-            "ipa": "/hɜːˈmet.ɪk/",
-            "definition": "Complete and airtight; completely sealed against external influence, distraction, or intrusion.",
-            "vietnamese": "kín đáo tuyệt đối, cách ly hoàn toàn với bên ngoài, khép kín thanh tịnh",
-            "contextSentence": "Constructing hermetic attentional sanctuaries and ritualized monastic blocks.",
+            "ipa": "/ˈper.ɪ.ʃə.bəl/",
+            "definition": "Liable to decay or be used up quickly; not lasting.",
+            "vietnamese": "dễ hao mòn, không bền, nhanh cạn kiệt",
+            "contextSentence": "Yet resolve is a perishable resource, and a strategy that demands its constant renewal is destined to fail by mid-afternoon.",
             "collocations": [
-              "hermetic sanctuaries",
-              "hermetic seal",
-              "hermetic isolation"
+              "perishable goods",
+              "perishable resource",
+              "highly perishable"
             ],
-            "etymology": "Medieval Latin hermeticus, referring to Hermes Trismegistus (alchemical seal)."
+            "etymology": "Latin perire (to perish), via Old French perir, with the suffix -able."
           },
           {
             "id": "mine-reading-art-6-3",
-            "targetWord": "fidelity",
+            "targetWord": "scrutiny",
             "partOfSpeech": "noun",
-            "ipa": "/fɪˈdel.ə.ti/",
-            "definition": "The degree of exactness, accuracy, or faithfulness with which something is copied or produced; cognitive clarity of mental representations.",
-            "vietnamese": "độ chuẩn xác, tính toàn vẹn trung thực, độ sắc nét của nhận thức",
-            "contextSentence": "Attentional fragmentation degrades the fidelity of abstract reasoning.",
+            "ipa": "/ˈskruː.tɪ.ni/",
+            "definition": "Close, careful examination of something to judge its accuracy or worth.",
+            "vietnamese": "sự xem xét kỹ lưỡng, sự soi xét tỉ mỉ",
+            "contextSentence": "The result is a divided effort: replies grow terse, inferences are drawn with less scrutiny, and subtle errors slip through unchallenged.",
             "collocations": [
-              "fidelity of reasoning",
-              "high fidelity",
-              "representational fidelity"
+              "close scrutiny",
+              "public scrutiny",
+              "withstand scrutiny"
             ],
-            "etymology": "Latin fidelitas, from fidelis (faithful), from fides (faith, trust)."
+            "etymology": "Latin scrutinium, from scrutari (to search, to examine)."
           },
           {
             "id": "mine-reading-art-6-4",
-            "targetWord": "equilibrium",
+            "targetWord": "inertia",
             "partOfSpeech": "noun",
-            "ipa": "/ˌek.wɪˈlɪb.ri.əm/",
-            "definition": "A state in which opposing forces or influences are balanced; metabolic or mental stability.",
-            "vietnamese": "trạng thái cân bằng nội tại, sự điều hòa ổn định",
-            "contextSentence": "This state of metabolic equilibrium is exquisitely fragile.",
+            "ipa": "/ɪˈnɜː.ʃə/",
+            "definition": "A tendency to do nothing or to remain unchanged; lack of movement or activity.",
+            "vietnamese": "sự trì trệ, quán tính, tình trạng ỳ",
+            "contextSentence": "Organisations that read quiet as inertia will, sooner or later, punish the very behaviour that generates their best ideas, and reward instead a frantic responsiveness that produces little of lasting worth.",
             "collocations": [
-              "metabolic equilibrium",
-              "delicate equilibrium",
-              "maintain equilibrium"
+              "institutional inertia",
+              "overcome inertia",
+              "sheer inertia"
             ],
-            "etymology": "Latin aequilibrium, from aequus (equal) + libra (balance, scale)."
+            "etymology": "Latin inertia (idleness, unskilfulness), from iners (inactive)."
           }
         ],
         "pass4Synthesis": {
-          "modelPrécis": "High-order intellectual synthesis requires sustained neural synchrony in the frontoparietal control network, a biologically serial state easily shattered by digital interruptions. Overcoming attention residue and cognitive fatigue cannot depend on fragile willpower; rather, serious thinkers must deliberately architect hermetic, low-entropy environments to safeguard deep flow.",
+          "modelPrécis": "Careful thought admits one task at a time, so each interruption leaves a residue that lowers the quality of later work. Because resolve soon runs out, attention is better defended by arranging surroundings and schedules, and by valuing quiet thinking, than by willpower.",
           "incorporatedVocabulary": [
-            "exogenous",
-            "hermetic",
-            "fidelity",
-            "equilibrium"
+            "residue",
+            "perishable",
+            "scrutiny",
+            "inertia"
           ],
-          "syntacticReconstruction": "Because attentional coherence is an exquisitely fragile neurobiological state, shielding cognitive bandwidth demands the ruthless elimination of exogenous interruptions through environmental engineering rather than reliance on depletable willpower."
+          "syntacticReconstruction": "Since resolve is perishable and every interruption leaves a residue, deep work is protected less by determination than by a structure that makes distraction hard."
         }
       }
     },
     {
       "id": "reading-art-7",
-      "title": "In Praise of Idleness: The Ethics of Leisure and Economic Rationality",
+      "title": "Leisure, Labour and the Moral Myth of Overwork",
       "stage": "Stage 3: Advanced Competency (CEFR C1)",
       "cefrLevel": "C1",
       "genre": "Moral Philosophy, Political Economy & Social Ethics",
-      "source": "Adapted from Bertrand Russell (1932)",
-      "wordCount": 450,
+      "source": "Original passage written for English Singularity",
+      "wordCount": 455,
       "readingTime": "3.8 min @ 120 WPM (Intensive)",
-      "content": "Like most of my generation, I was brought up on the saying: \"Satan finds some mischief for idle hands to do.\" Being a highly virtuous child, I believed all that I was told, and acquired a conscience which has kept me working hard down to the present moment. But although my conscience has controlled my actions, my opinions have undergone a revolution. I think that there is far too much work done in the world, that immense harm is caused by the belief that work is virtuous, and that what needs to be preached in modern industrial countries is quite different from what always has been preached.\n\nFirst of all: what is work? Work is of two kinds: first, altering the position of matter at or near the earth's surface relatively to other such matter; second, telling other people to do so. The first kind is unpleasant and ill-paid; the second is pleasant and highly paid. The second kind is capable of indefinite extension: there are not only those who give orders, but those who give advice as to what orders should be given. In modern industrial society, the morality of work is the morality of slaves, designed by ruling oligarchies to convince the working majority that their toil is a noble moral duty rather than an extractive necessity.\n\nModern methods of production have given us the possibility of ease and security for all; we have chosen, instead, to have overwork for some and starvation for others. Hitherto we have continued to be as energetic as we were before there were machines; in this we have been foolish, but there is no reason to go on being foolish for ever. The wise use of leisure, it must be conceded, is a product of civilization and education. A person who has worked long hours all his life will become bored if he becomes suddenly idle. But without a considerable amount of leisure a human being is cut off from many of the best things, and civilization itself degenerates into sterile utilitarianism.",
+      "content": "Few of us question the instinct that a person who is not busy is a person who is wasting something. We absorb it early, from teachers who reward diligence and relatives who ask what we have achieved this week, and by adulthood it operates less like an opinion than like a reflex. Yet reflexes are not arguments, and this one deserves to be examined before it is allowed to organize another generation's lives.\n\nLabour is usually praised as though it were a single virtue, when in practice it covers activities of very different worth. Some work feeds, houses and heals people. Much of the rest exists mainly to keep other work in motion: reports that nobody reads, meetings convened to prepare for other meetings, and supervision of tasks that would be completed perfectly well without it.\n\nHistorically, the glorification of effort has been convenient for those who benefit from it. A society in which people feel uneasy whenever they rest is a society in which employers need offer fewer inducements, since the workers will police themselves. Guilt is a remarkably cheap form of management. It requires no supervisor, it travels home with the employee each evening, and it persuades even the exhausted that exhaustion is evidence of character.\n\nTechnology has weakened the practical case for such devotion. A modern workforce can produce, in a fraction of the hours its grandparents required, more than enough to meet everyone's basic needs. Instead of sharing the gain by shortening the working week, we have tended to raise our expectations of consumption and to keep the old hours, so that productivity has been converted into output rather than into freedom.\n\nSceptics reply that people given free time would squander it, and the objection contains a grain of truth. Leisure is a skill, and like any skill it atrophies without practice. Someone who has spent decades responding to deadlines may find an empty afternoon oppressive, and may hurry back to the office simply to escape the silence. But this shows that our education has neglected an important capacity, not that the capacity is unimportant.\n\nWhat does a well-used free hour produce? It may yield a friendship deepened over a long meal, an amateur's competence at the cello, a garden, an argument followed to its conclusion, or simply the attention to notice what one's own life contains. These goods are easy to mock precisely because they resist measurement, yet most people, asked what they would save from a burning house, choose them over their payslips.\n\nA society that wished to be civilized rather than merely busy would therefore treat rest as an achievement to be cultivated, and would judge its prosperity by the quality of the hours people keep for themselves.",
       "fourPassProtocol": {
         "pass1ColdRead": {
-          "thesisGist": "The moral veneration of relentless work is an ideological tool historically fabricated by privileged classes to enforce compliance, whereas modern industrial productivity makes a universal four-hour workday and cultivated leisure the true prerequisites for a flourishing civilization.",
+          "thesisGist": "The habit of equating busyness with virtue serves employers and obscures what rising productivity could offer, so a civilized society should cultivate leisure as a skill instead of treating rest as waste.",
           "markedLexicalTargets": [
-            "sterile utilitarianism",
-            "moral veneration",
-            "extractive necessity",
-            "ruling oligarchies",
-            "indefinite extension",
-            "wise use of leisure",
-            "ideological tool"
+            "diligence",
+            "inducements",
+            "atrophies",
+            "squander",
+            "oppressive",
+            "productivity",
+            "cultivated"
           ],
           "comprehensionChecks": [
             {
-              "question": "How does Russell anatomize the two fundamental categories of work?",
-              "answer": "First, physical labor that alters the position of matter on the earth's surface; second, managerial labor that commands or advises others on how to do so."
+              "question": "Why does the author object to praising labour as a single virtue?",
+              "answer": "Because work covers activities of very different worth: some feeds, houses and heals people, while much of the rest merely keeps other work in motion."
             },
             {
-              "question": "According to Russell, what is the historical origin of the belief that work is virtuous?",
-              "answer": "It was an ideological doctrine promoted by the wealthy and powerful to induce the laboring classes to work willingly beyond subsistence needs."
+              "question": "According to the passage, why is guilt a cheap form of management?",
+              "answer": "It needs no supervisor, it follows the employee home each evening, and it convinces even exhausted people that exhaustion shows good character."
             },
             {
-              "question": "Why does Russell argue that modern machine production justifies shortening work hours?",
-              "answer": "Because mechanized efficiency allows society to fulfill its material needs with minimal labor, liberating time for cultural, intellectual, and creative development."
+              "question": "What does the author conclude from the fact that some people find free time oppressive?",
+              "answer": "That education has neglected the skill of using leisure well, not that leisure itself is unimportant."
             }
           ]
         },
         "pass2SyntaxDissection": [
           {
             "sentenceIndex": 1,
-            "sentence": "Modern methods of production have given us the possibility of ease and security for all; we have chosen, instead, to have overwork for some and starvation for others.",
+            "sentence": "Instead of sharing the gain by shortening the working week, we have tended to raise our expectations of consumption and to keep the old hours, so that productivity has been converted into output rather than into freedom.",
             "coreSVO": {
-              "subject": "Modern methods of production",
-              "verb": "have given",
-              "objectOrComplement": "us the possibility of ease and security for all"
+              "subject": "we",
+              "verb": "have tended",
+              "objectOrComplement": "to raise our expectations of consumption and to keep the old hours (coordinated infinitive complements)"
             },
             "subordinateClauses": [
               {
-                "type": "Coordinated Antithetical Independent Clause (Semicolon)",
-                "clause": "we have chosen, instead, to have overwork for some and starvation for others",
-                "function": "Introduces the societal paradox through antithetical parallelism (\"ease and security for all\" vs \"overwork for some and starvation for others\")."
+                "type": "Fronted Prepositional Phrase with Gerund",
+                "clause": "Instead of sharing the gain by shortening the working week",
+                "function": "Names the alternative that was not chosen, nesting a second gerund (\"shortening\") inside the first."
+              },
+              {
+                "type": "Adverbial Clause of Result (\"so that\")",
+                "clause": "so that productivity has been converted into output rather than into freedom",
+                "function": "Presents the outcome of the two choices as a passive present-perfect clause."
               }
             ],
-            "syntacticAnalysis": "Balanced compound sentence linked by semicolon with parenthetical disjunctive adverb (\"instead\"). Contrasts technological potential with political failure through chiasmus and parallel prepositional phrases (\"for all\" versus \"for some ... for others\")."
+            "syntacticAnalysis": "A long periodic sentence whose fronted \"instead of\" phrase sets up the rejected option before the main clause reveals what was done. The closing contrast \"into output rather than into freedom\" balances two parallel prepositional phrases and ends on the key abstract noun."
           },
           {
             "sentenceIndex": 2,
-            "sentence": "But without a considerable amount of leisure a human being is cut off from many of the best things, and civilization itself degenerates into sterile utilitarianism.",
+            "sentence": "But this shows that our education has neglected an important capacity, not that the capacity is unimportant.",
             "coreSVO": {
-              "subject": "a human being",
-              "verb": "is cut off",
-              "objectOrComplement": "from many of the best things"
+              "subject": "this",
+              "verb": "shows",
+              "objectOrComplement": "that our education has neglected an important capacity"
             },
             "subordinateClauses": [
               {
-                "type": "Fronted Prepositional Conditional Modifier",
-                "clause": "without a considerable amount of leisure",
-                "function": "Sets the essential negative condition."
+                "type": "Noun Clause as Object",
+                "clause": "that our education has neglected an important capacity",
+                "function": "States the conclusion the author accepts."
               },
               {
-                "type": "Coordinated Resultative Clause",
-                "clause": "and civilization itself degenerates into sterile utilitarianism",
-                "function": "Scales the consequence from individual deprivation to macro-civilizational decay."
+                "type": "Contrastive Noun Clause with \"not\"",
+                "clause": "not that the capacity is unimportant",
+                "function": "Rejects the sceptic's alternative reading of the same evidence."
               }
             ],
-            "syntacticAnalysis": "Compounded predicate where the intensive reflexive pronoun (\"itself\") emphasizes the collective tragedy, culminating in the evocative conceptual nominalization \"sterile utilitarianism\"."
+            "syntacticAnalysis": "Two parallel \"that\" clauses are set against each other with \"not\", so the sentence corrects a misreading in a single line. The present-perfect \"has neglected\" locates the fault in past educational practice."
           }
         ],
         "pass3SentenceMining": [
           {
             "id": "mine-reading-art-7-1",
-            "targetWord": "utilitarianism",
+            "targetWord": "diligence",
             "partOfSpeech": "noun",
-            "ipa": "/juːˌtɪl.ɪˈteə.ri.ə.nɪ.zəm/",
-            "definition": "The doctrine that actions are right if they are useful or for the benefit of a majority; practical usefulness divorced from beauty, joy, or spiritual depth.",
-            "vietnamese": "chủ nghĩa công lợi, quan điểm thực dụng vị lợi ích trước mắt",
-            "contextSentence": "Civilization itself degenerates into sterile utilitarianism.",
+            "ipa": "/ˈdɪl.ɪ.dʒəns/",
+            "definition": "Careful and persistent effort in work or duty.",
+            "vietnamese": "sự siêng năng, sự cần cù",
+            "contextSentence": "We absorb it early, from teachers who reward diligence and relatives who ask what we have achieved this week, and by adulthood it operates less like an opinion than like a reflex.",
             "collocations": [
-              "sterile utilitarianism",
-              "crude utilitarianism",
-              "rigid utilitarianism"
+              "reward diligence",
+              "due diligence",
+              "admirable diligence"
             ],
-            "etymology": "Latin utilis (useful) + -arian + -ism."
+            "etymology": "Latin diligentia, from diligere (to value, love)."
           },
           {
             "id": "mine-reading-art-7-2",
-            "targetWord": "veneration",
+            "targetWord": "inducement",
             "partOfSpeech": "noun",
-            "ipa": "/ˌven.əˈreɪ.ʃən/",
-            "definition": "Great respect, reverence, or profound awe accorded to someone or something considered holy or intrinsically noble.",
-            "vietnamese": "sự sùng kính, lòng tôn kính thiêng liêng, sự tôn sùng mù quáng",
-            "contextSentence": "Immense harm is caused by the moral veneration of ceaseless toil.",
+            "ipa": "/ɪnˈdjuːs.mənt/",
+            "definition": "Something that persuades or influences a person to do something, such as a reward or benefit.",
+            "vietnamese": "sự khuyến khích, động cơ thúc đẩy, khoản ưu đãi",
+            "contextSentence": "A society in which people feel uneasy whenever they rest is a society in which employers need offer fewer inducements, since the workers will police themselves.",
             "collocations": [
-              "moral veneration",
-              "deep veneration",
-              "object of veneration"
+              "offer an inducement",
+              "financial inducement",
+              "strong inducement"
             ],
-            "etymology": "Latin veneratio, from venerari (to worship, revere)."
+            "etymology": "From Latin inducere (to lead in), via Old French enduire."
           },
           {
             "id": "mine-reading-art-7-3",
-            "targetWord": "extractive",
-            "partOfSpeech": "adjective",
-            "ipa": "/ɪkˈstræk.tɪv/",
-            "definition": "Tending toward or characterized by the extraction of resources, value, or labor without reciprocal contribution or replenishment.",
-            "vietnamese": "mang tính bòn rút, bóc lột, chỉ khai thác mà không bồi hoàn",
-            "contextSentence": "Convince the working majority that their toil is a noble duty rather than an extractive necessity.",
+            "targetWord": "atrophy",
+            "partOfSpeech": "verb",
+            "ipa": "/ˈæt.rə.fi/",
+            "definition": "To waste away or weaken gradually through lack of use.",
+            "vietnamese": "teo đi, suy yếu dần do không được sử dụng",
+            "contextSentence": "Leisure is a skill, and like any skill it atrophies without practice.",
             "collocations": [
-              "extractive necessity",
-              "extractive economy",
-              "extractive institutions"
+              "muscles atrophy",
+              "skills atrophy",
+              "atrophy through disuse"
             ],
-            "etymology": "Latin extractivus, from extrahere (draw out)."
+            "etymology": "Greek atrophia, from a- (without) + trophe (nourishment)."
           },
           {
             "id": "mine-reading-art-7-4",
-            "targetWord": "oligarchy",
-            "partOfSpeech": "noun",
-            "ipa": "/ˈɒl.ɪ.ɡɑː.ki/",
-            "definition": "A small group of people having control of a country, organization, or institution, typically governing in their own interest.",
-            "vietnamese": "tập đoàn đầu sỏ, chế độ quả đầu, nhóm thiểu số thống trị",
-            "contextSentence": "Morality designed by a ruling oligarchy to protect its accumulated privileges.",
+            "targetWord": "squander",
+            "partOfSpeech": "verb",
+            "ipa": "/ˈskwɒn.dər/",
+            "definition": "To waste something, especially money, time or an opportunity, in a careless way.",
+            "vietnamese": "phung phí, lãng phí",
+            "contextSentence": "Sceptics reply that people given free time would squander it, and the objection contains a grain of truth.",
             "collocations": [
-              "ruling oligarchies",
-              "financial oligarchy",
-              "entrench an oligarchy"
+              "squander an opportunity",
+              "squander resources",
+              "squander talent"
             ],
-            "etymology": "Greek oligarkhia, from oligos (few) + arkhein (to rule)."
+            "etymology": "Sixteenth-century English, of uncertain origin; first meant to scatter."
           }
         ],
         "pass4Synthesis": {
-          "modelPrécis": "Bertrand Russell deconstructs the traditional work ethic as an antiquated dogma used by privileged elites to perpetuate economic exploitation. In the machine age, where technological productivity can readily ensure universal security, liberating human beings from ceaseless toil to pursue cultivated leisure is the essential foundation of genuine culture, creativity, and humane civilization.",
+          "modelPrécis": "The author argues that admiration for constant busyness is an inherited reflex that benefits employers, not a sound principle. Because modern productivity could shorten working hours, the real problem is that people were never taught to use free time well, so leisure should be cultivated as a skill and treated as a mark of a civilized society.",
           "incorporatedVocabulary": [
-            "utilitarianism",
-            "veneration",
-            "extractive",
-            "oligarchy"
+            "diligence",
+            "inducement",
+            "atrophy",
+            "squander"
           ],
-          "syntacticReconstruction": "While the gospel of relentless toil was systematically promulgated to legitimize extractive economic arrangements, modern industrial surplus renders such self-abnegation an obstacle to civilizational flourishing."
+          "syntacticReconstruction": "Although a workforce that prizes diligence above all else needs few inducements to stay busy, the skill of leisure atrophies when it is never practised, and a society that cannot rest well will squander the very productivity it has gained."
         }
       }
     },
     {
       "id": "reading-art-8",
-      "title": "Politics and the English Language: Rhetorical Decadence and Syntactic Clarity",
+      "title": "Political Language and the Habits of Thought",
       "stage": "Stage 3: Advanced Competency (CEFR C1)",
       "cefrLevel": "C1",
       "genre": "Political Philosophy, Rhetoric & Stylistics",
-      "source": "Adapted from George Orwell (1946)",
-      "wordCount": 440,
-      "readingTime": "3.7 min @ 120 WPM (Intensive)",
-      "content": "Most people who bother with the matter at all would admit that the English language is in a bad way, but it is generally assumed that we cannot by conscious action do anything about it. Our civilization is decadent and our language—so the argument runs—must inevitably share in the general collapse. It follows that any struggle against the abuse of language is a sentimental archaism, like preferring candles to electric light or hansom cabs to aeroplanes. Underneath this lies the half-conscious belief that language is a natural growth and not an instrument which we shape for our own purposes.\n\nNow, it is clear that the decline of a language must ultimately have political and economic causes: it is not due simply to the bad influence of this or that individual writer. But an effect can become a cause, reinforcing the original cause and producing the same effect in an intensified form, and so on indefinitely. A man may take to drink because he feels himself to be a failure, and then fail all the more completely because he drinks. It is rather the same thing that is happening to the English language. It becomes ugly and inaccurate because our thoughts are foolish, but the slovenliness of our language makes it easier for us to have foolish thoughts.\n\nThe point is that the process is reversible. Modern English, especially written English, is full of bad habits which spread by imitation and which can be avoided if one is willing to take the necessary trouble. If one gets rid of these habits one can think more clearly, and to think clearly is a necessary first step toward political regeneration: so that the fight against bad English is not frivolous and is not the exclusive concern of professional writers. By pruning staleness of imagery, pretentious diction, and dying metaphors, we restore language as an authentic instrument of precision.",
+      "source": "Original passage written for English Singularity",
+      "wordCount": 432,
+      "readingTime": "3.6 min @ 120 WPM (Intensive)",
+      "content": "Public speech is usually judged by whether it persuades, rarely by whether it is honest, and that habit has a cost. A phrase that wins applause today can leave behind a vocabulary so worn and so vague that nobody can use it to describe anything accurately. When the words available for discussing a problem are all blurred, the problem itself begins to look blurred as well.\n\nConsider how officials describe unwelcome events. Layoffs become \"workforce realignment\", a bombing becomes \"kinetic activity\", and a broken promise becomes \"a change in the strategic landscape\". Each substitution is small, and each is defensible on its own terms. Taken together, however, they teach audiences to hear policy as weather: something that happens, without agents, without victims and without anyone to blame.\n\nThe mechanism is easy to describe. Abstract nouns and passive constructions allow a speaker to omit the person who acted. Stock metaphors, borrowed ready-made, spare the speaker from imagining what is being said. Long Latinate phrases lend an air of expertise while conveying very little. A writer who relies on these devices need not hold a view; he need only assemble pieces, much as a child assembles a kit, and the finished sentence will sound authoritative whether or not it means anything.\n\nThe consequences extend beyond style. If people habitually express themselves in ready-made formulas, they gradually lose the ability to notice when a formula does not fit the facts. Disagreement becomes a contest between slogans, and genuine inquiry, which requires hesitation and precise wording, comes to seem naive. Those in power benefit from this drift, since an audience that cannot articulate an objection is unlikely to raise one.\n\nIt would be comforting to blame a few cynical speechwriters, but the problem is more diffuse. Most of us borrow phrases when we are tired, anxious or eager to belong, and the borrowing feels harmless. Over time, however, the shared stock of expressions narrows, and with it the range of thoughts that can be comfortably voiced.\n\nFortunately, the damage is not irreversible. Language changes because people use it, and people can choose to use it differently. A useful discipline is to ask of any sentence who is doing what to whom, and to rewrite it until the answer is visible. Another is to distrust any figure of speech one has encountered so often that it no longer produces an image.\n\nNone of this requires literary talent. It requires only the willingness to prefer a clumsy but truthful sentence to a polished evasion, and a citizenry that practises this preference is far harder to manage by euphemism.",
       "fourPassProtocol": {
         "pass1ColdRead": {
-          "thesisGist": "Political and intellectual decadence corrupts language through stale metaphors and imprecise jargon, yet because linguistic slovenliness and foolish thoughts reinforce each other reciprocally, deliberate stylistic clarity is an indispensable catalyst for political and cognitive regeneration.",
+          "thesisGist": "Vague, ready-made political language hides responsibility and dulls the public's ability to think, but because people shape language by how they use it, the habit can be reversed by insisting on precise, honest sentences.",
           "markedLexicalTargets": [
-            "sentimental archaism",
-            "reciprocal causality",
-            "slovenliness of language",
-            "political regeneration",
-            "pretentious diction",
-            "dying metaphors",
-            "stale imagery",
-            "conscious instrument"
+            "Latinate",
+            "authoritative",
+            "articulate",
+            "diffuse",
+            "irreversible",
+            "evasion",
+            "euphemism"
           ],
           "comprehensionChecks": [
             {
-              "question": "What common fatalistic assumption about language decay does Orwell dispute?",
-              "answer": "The belief that linguistic decline is an inevitable byproduct of civilizational collapse that cannot be resisted or reversed by conscious human agency."
+              "question": "How do euphemisms such as \"kinetic activity\" change the way audiences hear policy?",
+              "answer": "They make policy sound like weather, something that simply happens, with no agents, victims or anyone to blame."
             },
             {
-              "question": "How does Orwell describe the recursive feedback loop between thought and language?",
-              "answer": "Slovenly language makes it easier to entertain foolish thoughts, while foolish thoughts in turn further debase language, producing an intensifying downward spiral."
+              "question": "According to the passage, why do those in power benefit when people rely on ready-made formulas?",
+              "answer": "An audience that cannot articulate an objection is unlikely to raise one."
             },
             {
-              "question": "Why is the campaign for clear English not merely a trivial aesthetic concern?",
-              "answer": "Because thinking clearly is the foundational prerequisite for political renewal and defending against authoritarian obfuscation."
+              "question": "What practical discipline does the author recommend for rewriting a sentence?",
+              "answer": "Ask who is doing what to whom, and rewrite the sentence until the answer is visible."
             }
           ]
         },
         "pass2SyntaxDissection": [
           {
             "sentenceIndex": 1,
-            "sentence": "Now, it is clear that the decline of a language must ultimately have political and economic causes: it is not due simply to the bad influence of this or that individual writer.",
+            "sentence": "If people habitually express themselves in ready-made formulas, they gradually lose the ability to notice when a formula does not fit the facts.",
             "coreSVO": {
-              "subject": "it (anticipatory / dummy subject)",
-              "verb": "is",
-              "objectOrComplement": "clear (predicate adjective)"
-            },
-            "subordinateClauses": [
-              {
-                "type": "Noun Clause as Delayed Subject",
-                "clause": "that the decline of a language must ultimately have political and economic causes",
-                "function": "Functions as the extraposed logical subject of the primary assertion."
-              },
-              {
-                "type": "Coordinated Antithetical Independent Clause (Colon)",
-                "clause": "it is not due simply to the bad influence of this or that individual writer",
-                "function": "Refutes the simplistic reductionist alternative after the colon."
-              }
-            ],
-            "syntacticAnalysis": "Extraposed copular construction using anticipatory \"it\" creates an objective, authoritative rhetorical stance; the colon introduces an immediate negative antithesis clarifying the systemic nature of the phenomenon."
-          },
-          {
-            "sentenceIndex": 2,
-            "sentence": "If one gets rid of these habits one can think more clearly, and to think clearly is a necessary first step toward political regeneration: so that the fight against bad English is not frivolous and is not the exclusive concern of professional writers.",
-            "coreSVO": {
-              "subject": "to think clearly (infinitive clause as subject)",
-              "verb": "is",
-              "objectOrComplement": "a necessary first step toward political regeneration"
+              "subject": "they",
+              "verb": "lose",
+              "objectOrComplement": "the ability to notice when a formula does not fit the facts"
             },
             "subordinateClauses": [
               {
                 "type": "Adverbial Clause of Condition",
-                "clause": "If one gets rid of these habits",
-                "function": "Sets the behavioural precondition for cognitive emancipation."
+                "clause": "If people habitually express themselves in ready-made formulas",
+                "function": "Sets the behavioural cause before the main clause states the effect."
               },
               {
-                "type": "Coordinated Independent Clause",
-                "clause": "one can think more clearly",
-                "function": "First cognitive consequence."
-              },
-              {
-                "type": "Adverbial Clause of Result (Subordinating Conjunction \"so that\")",
-                "clause": "so that the fight against bad English is not frivolous and is not the exclusive concern of professional writers",
-                "function": "Extends the stylistic act into a broader civic and democratic duty."
+                "type": "Adverbial Clause of Time, inside an Infinitive Phrase",
+                "clause": "when a formula does not fit the facts",
+                "function": "Specifies the occasion on which the lost ability would be needed."
               }
             ],
-            "syntacticAnalysis": "Compound-complex periodic architecture linking individual cognitive discipline (\"gets rid of habits\") directly to collective political renewal through an infinitive subject and dual negated predicates (\"not frivolous\", \"not exclusive concern\")."
+            "syntacticAnalysis": "A fronted conditional clause establishes cause, and the main clause delivers the consequence with the adverb \"gradually\" marking a slow process. The noun \"ability\" is post-modified by an infinitive phrase that itself contains a subordinate clause, giving a nested structure typical of C1 prose."
+          },
+          {
+            "sentenceIndex": 2,
+            "sentence": "Taken together, however, they teach audiences to hear policy as weather: something that happens, without agents, without victims and without anyone to blame.",
+            "coreSVO": {
+              "subject": "they",
+              "verb": "teach",
+              "objectOrComplement": "audiences to hear policy as weather (object plus infinitive complement)"
+            },
+            "subordinateClauses": [
+              {
+                "type": "Fronted Participial Phrase",
+                "clause": "Taken together",
+                "function": "Links the sentence back to the many small substitutions already described."
+              },
+              {
+                "type": "Relative Clause in Apposition after the Colon",
+                "clause": "that happens",
+                "function": "Defines \"something\" and introduces the series of negated prepositional phrases."
+              }
+            ],
+            "syntacticAnalysis": "The colon turns a metaphor into an explanation, and the triple \"without ...\" structure builds rhythm while removing every human participant from the picture. The sentence mirrors its own point by listing absences."
           }
         ],
         "pass3SentenceMining": [
           {
             "id": "mine-reading-art-8-1",
-            "targetWord": "archaism",
+            "targetWord": "euphemism",
             "partOfSpeech": "noun",
-            "ipa": "/ˈɑː.keɪ.ɪ.zəm/",
-            "definition": "A thing that is very old or old-fashioned, especially an archaic word, style, or idiom retained out of sentimentality.",
-            "vietnamese": "từ cổ, phong cách cổ xưa, sự hoài cổ lỗi thời",
-            "contextSentence": "It follows that any struggle against the abuse of language is a sentimental archaism, like preferring candles to electric light or hansom cabs to aeroplanes.",
+            "ipa": "/ˈjuː.fə.mɪ.zəm/",
+            "definition": "A mild or indirect word or phrase used in place of one that is considered harsh, blunt or unpleasant.",
+            "vietnamese": "lối nói trại, uyển ngữ",
+            "contextSentence": "It requires only the willingness to prefer a clumsy but truthful sentence to a polished evasion, and a citizenry that practises this preference is far harder to manage by euphemism.",
             "collocations": [
-              "sentimental archaism",
-              "deliberate archaism",
-              "quaint archaism"
+              "a polite euphemism",
+              "resort to euphemism",
+              "a common euphemism"
             ],
-            "etymology": "Greek arkhaismos, from arkhaios (ancient), from arkhe (beginning)."
+            "etymology": "Greek euphemismos, from eu- (well) + pheme (speech)."
           },
           {
             "id": "mine-reading-art-8-2",
-            "targetWord": "slovenliness",
-            "partOfSpeech": "noun",
-            "ipa": "/ˈslʌv.ən.li.nəs/",
-            "definition": "The quality of being untidy, careless, slipshod, or negligent, particularly in thought, expression, or appearance.",
-            "vietnamese": "sự cẩu thả, sự luộm thuộm, thói bất cẩn trong hành văn và tư duy",
-            "contextSentence": "The slovenliness of our language makes it easier for us to have foolish thoughts.",
+            "targetWord": "diffuse",
+            "partOfSpeech": "adjective",
+            "ipa": "/dɪˈfjuːs/",
+            "definition": "Spread over a wide area or among many sources rather than concentrated in one place.",
+            "vietnamese": "lan tỏa, phân tán, khó xác định nguồn gốc",
+            "contextSentence": "It would be comforting to blame a few cynical speechwriters, but the problem is more diffuse.",
             "collocations": [
-              "verbal slovenliness",
-              "mental slovenliness",
-              "intellectual slovenliness"
+              "a diffuse problem",
+              "diffuse responsibility",
+              "diffuse light"
             ],
-            "etymology": "Middle Dutch sloovin (careless person) + Germanic -ness."
+            "etymology": "Latin diffusus, past participle of diffundere (to pour out)."
           },
           {
             "id": "mine-reading-art-8-3",
-            "targetWord": "regeneration",
-            "partOfSpeech": "noun",
-            "ipa": "/rɪˌdʒen.əˈreɪ.ʃən/",
-            "definition": "The action or process of regenerating; renewal, revival, or rebirth, especially moral, political, or spiritual restoration.",
-            "vietnamese": "sự tái sinh, sự phục hưng, công cuộc đổi mới chấn hưng",
-            "contextSentence": "To think clearly is a necessary first step toward political regeneration.",
+            "targetWord": "articulate",
+            "partOfSpeech": "verb",
+            "ipa": "/ɑːˈtɪk.jə.leɪt/",
+            "definition": "To express an idea or feeling clearly in words.",
+            "vietnamese": "diễn đạt rõ ràng, trình bày mạch lạc",
+            "contextSentence": "Those in power benefit from this drift, since an audience that cannot articulate an objection is unlikely to raise one.",
             "collocations": [
-              "political regeneration",
-              "moral regeneration",
-              "economic regeneration"
+              "articulate a concern",
+              "articulate a vision",
+              "articulate clearly"
             ],
-            "etymology": "Latin regeneratio, from re- (again) + generare (beget, produce)."
+            "etymology": "Latin articulare (to divide into joints, to utter distinctly), from articulus (small joint)."
           },
           {
             "id": "mine-reading-art-8-4",
-            "targetWord": "pretentious",
+            "targetWord": "irreversible",
             "partOfSpeech": "adjective",
-            "ipa": "/prɪˈten.ʃəs/",
-            "definition": "Attempting to impress by affecting greater importance, talent, culture, or sophistication than is actually possessed.",
-            "vietnamese": "tự phụ, khoe mẽ, phô trương học thức một cách giả tạo",
-            "contextSentence": "By pruning staleness of imagery, pretentious diction, and dying metaphors, we restore language as an authentic instrument.",
+            "ipa": "/ˌɪr.ɪˈvɜː.sə.bəl/",
+            "definition": "Impossible to undo or return to a previous condition.",
+            "vietnamese": "không thể đảo ngược, không thể hoàn lại",
+            "contextSentence": "Fortunately, the damage is not irreversible.",
             "collocations": [
-              "pretentious diction",
-              "pretentious rhetoric",
-              "hopelessly pretentious"
+              "irreversible damage",
+              "irreversible decline",
+              "an irreversible decision"
             ],
-            "etymology": "French prétentieux, from Latin praetendere (stretch out before, allege)."
+            "etymology": "ir- (not) + reversible, from Latin revertere (to turn back)."
           }
         ],
         "pass4Synthesis": {
-          "modelPrécis": "Rather than accepting linguistic debasement as an inevitable symptom of civilizational decline, Orwell demonstrates that language and thought exist in a reciprocal feedback loop. Dismantling stale metaphors, pretentious diction, and passive evasion restores language as a precision instrument, establishing linguistic clarity as a vital prerequisite for cognitive autonomy and democratic resistance.",
+          "modelPrécis": "The author claims that vague, borrowed phrasing lets speakers hide who acts and who suffers, while teaching audiences to stop noticing the gap between words and facts. Because language is shaped by its users, the decline is reversible: asking who does what to whom, and preferring plain truth to polished evasion, protects both clear thought and public accountability.",
           "incorporatedVocabulary": [
-            "archaism",
-            "slovenliness",
-            "regeneration",
-            "pretentious"
+            "euphemism",
+            "diffuse",
+            "articulate",
+            "irreversible"
           ],
-          "syntacticReconstruction": "Inasmuch as political deception relies upon euphemistic abstraction to anesthetize critical judgment, the deliberate pruning of verbal slovenliness constitutes an urgent democratic imperative rather than an aesthetic indulgence."
+          "syntacticReconstruction": "Although the habit of speaking in euphemism is diffuse and tempting, it is not irreversible, for citizens who learn to articulate precisely what they mean make evasion far harder to sustain."
         }
       }
     },
@@ -3288,9 +3324,9 @@
       "cefrLevel": "B2",
       "genre": "Workplace Sociology & Organisational Dynamics",
       "source": "Original text written for English Singularity",
-      "wordCount": 295,
-      "readingTime": "2.1 min @ 140 WPM (Intensive)",
-      "content": "Over the past decade, remote and hybrid employment arrangements have evolved from emergency contingency plans into established pillars of contemporary corporate culture. While early advocates championed the unprecedented flexibility and autonomy afforded to professionals, contemporary analysts increasingly highlight the nuanced challenges that accompany a dispersed workforce. When physical office boundaries dissolve, maintaining spontaneous collaboration and mutual trust requires deliberate organizational architecture.\n\nOne prominent dilemma involves the erosion of informal mentoring. Junior employees in distributed environments frequently struggle to absorb tacit knowledge—the unwritten conventions, diplomatic phrasing, and negotiation subtleties traditionally acquired through passive observation of senior colleagues. Although scheduled video conferences facilitate structured status updates, they rarely reproduce the casual, serendipitous hallway interactions where creative breakthroughs and interpersonal rapport naturally develop.\n\nConsequently, forward-thinking organizations are redefining workplace communication. Rather than relying on constant synchronous availability, which inevitably fuels cognitive exhaustion and digital burnout, progressive leaders prioritize asynchronous transparency. By establishing exhaustive documentation repositories and clear communication protocols, enterprises enable team members to contribute meaningfully across disparate time zones without compromising their psychological well-being. Ultimately, the long-term viability of distributed employment depends not merely on advanced digital infrastructure, but on cultivating sustainable boundaries that balance collective accountability with personal autonomy.",
+      "wordCount": 286,
+      "readingTime": "2.0 min @ 140 WPM (Intensive)",
+      "content": "Over the past decade, remote and hybrid employment arrangements have evolved from emergency contingency plans into established pillars of contemporary corporate culture. While early advocates championed the unprecedented flexibility and autonomy afforded to professionals, contemporary analysts increasingly highlight the nuanced challenges that accompany a dispersed workforce. When physical office boundaries dissolve, maintaining spontaneous collaboration and mutual trust requires deliberate organizational architecture. Many firms now treat the design of meeting schedules, shared calendars and project tools as a matter of policy rather than habit.\n\nOne prominent dilemma involves the erosion of informal mentoring. Junior employees in distributed environments frequently struggle to absorb tacit knowledge—the unwritten conventions, diplomatic phrasing, and negotiation subtleties traditionally acquired through passive observation of senior colleagues. Although scheduled video conferences facilitate structured status updates, they rarely reproduce the casual, serendipitous hallway interactions where creative breakthroughs and interpersonal rapport naturally develop. Some companies have responded by assigning newcomers a designated mentor for their first six months, alongside short calls that have no agenda at all.\n\nConsequently, forward-thinking organizations are redefining workplace communication. Rather than relying on constant synchronous availability, which inevitably fuels cognitive exhaustion and digital burnout, progressive leaders prioritize asynchronous transparency. By establishing exhaustive documentation repositories and clear communication protocols, enterprises enable team members to contribute meaningfully across disparate time zones without compromising their psychological well-being. Ultimately, the long-term viability of distributed employment depends not merely on advanced digital infrastructure, but on cultivating sustainable boundaries that balance collective accountability with personal autonomy. Managers who judge performance by results rather than by how visibly staff are online tend to report less resentment and better retention. Such policies work only when leaders follow them, since a manager who sends messages at midnight quietly undermines the rule.",
       "fourPassProtocol": {
         "pass1ColdRead": {
           "thesisGist": "Remote work offers unprecedented flexibility, but preserving mentorship and collaboration requires replacing constant synchronous presence with deliberate asynchronous documentation and sustainable workplace boundaries.",
@@ -3492,9 +3528,9 @@
       "cefrLevel": "B2",
       "genre": "Environmental Science & Civil Engineering",
       "source": "Original text written for English Singularity",
-      "wordCount": 288,
-      "readingTime": "2.0 min @ 140 WPM (Intensive)",
-      "content": "As metropolitan populations swell toward unprecedented densities, urban planners are compelled to rethink the foundational principles governing city infrastructure. Traditional urban centers, characterized by sprawling vehicular highways and rigid zoning laws, have proven environmentally unsustainable and economically vulnerable. In response, municipalities worldwide are embracing the concept of the ecological city—a cohesive urban habitat designed to harmonize human activity with biological cycles.\n\nA central tenet of this paradigm is the transition from centralized energy grids toward decentralized, regenerative networks. Rather than importing fossil fuel energy from distant generating facilities, modern resilient neighborhoods incorporate integrated solar façades, micro-wind turbines, and localized geothermal pumps. Furthermore, civil engineers are revolutionizing wastewater management through constructed wetland bio-filtration systems. These installations purify stormwater runoff naturally while simultaneously expanding urban green corridors and combating the urban heat island effect.\n\nEqually decisive is the spatial reorganization of residential life. The widespread adoption of the fifteen-minute city framework ensures that daily necessities, commercial hubs, and recreational green spaces remain accessible within a brief walking or cycling radius. By curtailing dependency on private automobile transport, municipalities substantially reduce greenhouse emissions and mitigate pervasive respiratory illnesses. Ultimately, transforming dense urban landscapes into sustainable sanctuaries demands more than technological innovation; it requires collective civic dedication to ecological balance and equitable urban design.",
+      "wordCount": 290,
+      "readingTime": "2.1 min @ 140 WPM (Intensive)",
+      "content": "As metropolitan populations swell toward unprecedented densities, urban planners are compelled to rethink the foundational principles governing city infrastructure. Traditional urban centers, characterized by sprawling vehicular highways and rigid zoning laws, have proven environmentally unsustainable and economically vulnerable. In response, municipalities worldwide are embracing the concept of the ecological city—a cohesive urban habitat designed to harmonize human activity with biological cycles. Many of these changes began as small pilot schemes in a single district before they were adopted across the wider city.\n\nA central tenet of this paradigm is the transition from centralized energy grids toward decentralized, regenerative networks. Rather than importing fossil fuel energy from distant generating facilities, modern resilient neighborhoods incorporate integrated solar façades, micro-wind turbines, and localized geothermal pumps. Furthermore, civil engineers are revolutionizing wastewater management through constructed wetland bio-filtration systems. These installations purify stormwater runoff naturally while simultaneously expanding urban green corridors and combating the urban heat island effect. Several cities have also converted disused rail lines into linear parks, which store rainwater and cool the surrounding streets.\n\nEqually decisive is the spatial reorganization of residential life. The widespread adoption of the fifteen-minute city framework ensures that daily necessities, commercial hubs, and recreational green spaces remain accessible within a brief walking or cycling radius. By curtailing dependency on private automobile transport, municipalities substantially reduce greenhouse emissions and mitigate pervasive respiratory illnesses. Ultimately, transforming dense urban landscapes into sustainable sanctuaries demands more than technological innovation; it requires collective civic dedication to ecological balance and equitable urban design. Residents are more likely to support such changes when they can see the benefits for their own streets, so planners increasingly involve local communities from the earliest stage. Without that trust, even well-engineered projects tend to stall in public consultation.",
       "fourPassProtocol": {
         "pass1ColdRead": {
           "thesisGist": "Sustainable urban design addresses rapid metropolitan density by adopting decentralized renewable energy, natural wastewater filtration, and fifteen-minute pedestrian access to reduce environmental degradation and enhance communal well-being.",
@@ -3686,9 +3722,9 @@
       "cefrLevel": "B2",
       "genre": "Technology, Labor Economics & Lifelong Learning",
       "source": "Original text written for English Singularity",
-      "wordCount": 292,
-      "readingTime": "2.1 min @ 140 WPM (Intensive)",
-      "content": "The rapid proliferation of generative artificial intelligence and autonomous algorithmic systems has ignited intense debate across global labor markets. Whereas preceding waves of industrial automation predominantly supplanted manual and repetitive physical labor, advanced computational models now demonstrate remarkable proficiency in analytical synthesis, software compilation, and complex linguistic generation. Consequently, professionals who previously considered their expertise immune to technological disruption now face an urgent imperative to adapt.\n\nEconomists caution that the primary threat confronting workers is rarely outright obsolescence, but rather displacement by peers who harness machine intelligence effectively. Routine cognitive chores—such as compiling introductory market assessments, debugging standard code repositories, and drafting formulaic correspondence—are increasingly automated with minimal latency. Consequently, human value in modern enterprises is rapidly migrating upward toward higher-order capabilities: discerning problem formulation, cross-disciplinary contextualization, and ethical oversight.\n\nTo thrive in this evolving environment, forward-looking professionals must cultivate intellectual agility through lifelong reskilling. Educational curricula that emphasize rote memorization and mechanical task execution are fundamentally misaligned with contemporary labor requirements. Instead, developing metacognitive competence—the ability to critically evaluate algorithmic outputs, synthesize contradictory insights, and execute empathetic negotiation—constitutes the definitive competitive advantage. Embracing continuous pedagogical adaptation allows knowledge workers to transform artificial intelligence from a disruptive adversary into an indispensable cognitive partner.",
+      "wordCount": 273,
+      "readingTime": "1.9 min @ 140 WPM (Intensive)",
+      "content": "The rapid proliferation of generative artificial intelligence and autonomous algorithmic systems has ignited intense debate across global labor markets. Whereas preceding waves of industrial automation predominantly supplanted manual and repetitive physical labor, advanced computational models now demonstrate remarkable proficiency in analytical synthesis, software compilation, and complex linguistic generation. Consequently, professionals who previously considered their expertise immune to technological disruption now face an urgent imperative to adapt. Many of them had assumed that a university degree would protect their careers for life.\n\nEconomists caution that the primary threat confronting workers is rarely outright obsolescence, but rather displacement by peers who harness machine intelligence effectively. Routine cognitive chores—such as compiling introductory market assessments, debugging standard code repositories, and drafting formulaic correspondence—are increasingly automated with minimal latency. Consequently, human value in modern enterprises is rapidly migrating upward toward higher-order capabilities: discerning problem formulation, cross-disciplinary contextualization, and ethical oversight. Employers increasingly ask candidates to demonstrate these abilities through projects rather than through formal qualifications alone.\n\nTo thrive in this evolving environment, forward-looking professionals must cultivate intellectual agility through lifelong reskilling. Educational curricula that emphasize rote memorization and mechanical task execution are fundamentally misaligned with contemporary labor requirements. Instead, developing metacognitive competence—the ability to critically evaluate algorithmic outputs, synthesize contradictory insights, and execute empathetic negotiation—constitutes the definitive competitive advantage. Embracing continuous pedagogical adaptation allows knowledge workers to transform artificial intelligence from a disruptive adversary into an indispensable cognitive partner. Organisations that invest in training during working hours, rather than expecting staff to study in their own time, tend to retain their most capable employees. Such investment signals that adaptation is a shared responsibility rather than an individual burden.",
       "fourPassProtocol": {
         "pass1ColdRead": {
           "thesisGist": "Generative AI transforms cognitive labor by automating routine analytical tasks, necessitating a transition toward higher-order critical thinking, ethical governance, and continuous metacognitive reskilling.",

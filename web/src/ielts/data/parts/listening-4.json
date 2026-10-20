@@ -153,12 +153,12 @@
         "type": "mcq",
         "prompt": "Transmission type requested:",
         "options": [
-          "A. manual",
-          "B. automatic",
-          "C. hybrid",
-          "D. electric"
+          "A. manual, with a clutch pedal",
+          "B. hybrid, with a petrol engine",
+          "C. automatic",
+          "D. electric, with no gearbox"
         ],
-        "answer": "B",
+        "answer": "C",
         "why": "The customer says 'Automatic please. And a small car, something economical.'"
       },
       {
@@ -187,11 +187,11 @@
         "prompt": "Why does the customer choose full cover?",
         "options": [
           "A. It is required by law",
-          "B. To be safe",
-          "C. It is cheaper",
-          "D. The car is new"
+          "B. It is cheaper",
+          "C. The car is new",
+          "D. To be safe"
         ],
-        "answer": "B",
+        "answer": "D",
         "why": "The customer says 'I'll take the full cover, to be safe.'"
       },
       {
@@ -199,12 +199,12 @@
         "type": "mcq",
         "prompt": "Where will the car be driven?",
         "options": [
-          "A. abroad",
-          "B. within the region",
-          "C. across the border",
-          "D. nowhere"
+          "A. within the region",
+          "B. abroad, in mainland Europe",
+          "C. across the border by ferry",
+          "D. nowhere, it stays parked"
         ],
-        "answer": "B",
+        "answer": "A",
         "why": "The customer says 'No, only within the region.'"
       },
       {
@@ -362,11 +362,11 @@
         "prompt": "The brick warehouse was originally used to store:",
         "options": [
           "A. grain",
-          "B. coal",
-          "C. cloth",
+          "B. cloth",
+          "C. coal",
           "D. timber"
         ],
-        "answer": "C",
+        "answer": "B",
         "why": "The guide says the warehouse 'was used to store cloth.'"
       },
       {
@@ -374,12 +374,12 @@
         "type": "mcq",
         "prompt": "Why can the warehouse walls not be altered?",
         "options": [
-          "A. They are very old",
-          "B. They are protected",
-          "C. The owners refused",
-          "D. They are unsafe"
+          "A. They are very old and fragile",
+          "B. The owners refused permission",
+          "C. They are structurally unsafe",
+          "D. The walls are protected"
         ],
-        "answer": "B",
+        "answer": "D",
         "why": "The guide says 'the external walls are protected, so no alterations to them are allowed.'"
       },
       {
@@ -407,12 +407,12 @@
         "type": "mcq",
         "prompt": "Where is photography NOT allowed?",
         "options": [
-          "A. everywhere",
-          "B. outside",
-          "C. inside the crypt",
-          "D. in the café"
+          "A. inside the crypt",
+          "B. outside the church",
+          "C. everywhere on the tour",
+          "D. in the café by the canal"
         ],
-        "answer": "C",
+        "answer": "A",
         "why": "The guide says 'Photography is allowed everywhere except inside the crypt.'"
       },
       {
@@ -564,12 +564,12 @@
         "type": "mcq",
         "prompt": "The three delay intervals are immediate, five minutes and:",
         "options": [
-          "A. one hour",
-          "B. twenty-four hours",
-          "C. one week",
-          "D. two days"
+          "A. ninety minutes",
+          "B. one full week",
+          "C. twenty-four hours",
+          "D. two days, forty-eight hours"
         ],
-        "answer": "B",
+        "answer": "C",
         "why": "Maya lists 'immediate, five minutes, and twenty-four hours.'"
       },
       {
@@ -577,12 +577,12 @@
         "type": "mcq",
         "prompt": "Why is the order counterbalanced?",
         "options": [
-          "A. so that practice does not bias results",
-          "B. to save time",
-          "C. because the lab is busy",
-          "D. to match other studies"
+          "A. to save time during the testing sessions",
+          "B. so that practice does not bias results",
+          "C. because the lab is only free on some days",
+          "D. to match the design of earlier studies"
         ],
-        "answer": "A",
+        "answer": "B",
         "why": "Maya says the order is counterbalanced 'so that practice doesn't bias the results.'"
       },
       {
@@ -620,12 +620,12 @@
         "type": "mcq",
         "prompt": "Where does the word list come from?",
         "options": [
-          "A. the students",
-          "B. the internet",
-          "C. the lab's standard list",
-          "D. a textbook"
+          "A. created by the students in the group",
+          "B. an online word-frequency database",
+          "C. a textbook appendix",
+          "D. the lab's standard list"
         ],
-        "answer": "C",
+        "answer": "D",
         "why": "Maya says 'we use the standard list from the lab.'"
       },
       {
@@ -663,7 +663,7 @@
   {
     "id": "l4-s4",
     "section": 4,
-    "title": "Urban Heat Islands",
+    "title": "Recycling lithium-ion batteries",
     "speakers": [
       {
         "name": "Lecturer",
@@ -674,179 +674,167 @@
     "script": [
       {
         "speaker": "Lecturer",
-        "text": "In this lecture we'll examine the urban heat island effect, the way cities become warmer than the surrounding rural areas."
+        "text": "Today's lecture is about recycling lithium-ion batteries, and why it matters as electric vehicles become more common. We will look at how it is done, why it is difficult, and what is being done to improve the process."
       },
       {
         "speaker": "Lecturer",
-        "text": "The difference is often several degrees at night. Dark roofs and asphalt absorb heat during the day and release it slowly after sunset."
+        "text": "A typical car battery pack lasts around ten years. After that, it can often be reused in a home storage system before it is finally recycled."
       },
       {
         "speaker": "Lecturer",
-        "text": "A major cause is the loss of vegetation. Trees and grass cool the air through evaporation, so cities with fewer green spaces tend to be hotter."
+        "text": "The first step in recycling is discharging the battery completely, because a charged cell can catch fire during shredding."
       },
       {
         "speaker": "Lecturer",
-        "text": "Tall buildings also play a role. They trap heat between them and reduce the air flow that would otherwise carry it away."
+        "text": "Once the packs are safe, workers remove the casings and shred the cells into a mixture known as black mass."
       },
       {
         "speaker": "Lecturer",
-        "text": "The health effects are serious. Heat waves in cities are linked to more hospital admissions, particularly among older adults."
+        "text": "This black mass contains cobalt, nickel and lithium, which are the most valuable materials in the battery. Cobalt is especially important because it keeps the battery stable as it heats up."
       },
       {
         "speaker": "Lecturer",
-        "text": "Planners have several responses. Green roofs, tree-lined streets and light-coloured paving can reduce temperatures significantly."
+        "text": "There are two main ways to recover these metals. The first is smelting, in which the black mass is heated to very high temperatures. It is simple, but it uses a great deal of energy, and the lithium is usually lost."
       },
       {
         "speaker": "Lecturer",
-        "text": "Some cities have also introduced cooling centres, which open during heat alerts."
+        "text": "The second method is hydrometallurgy, where the metals are dissolved in acid and then separated chemically. It recovers more lithium and needs much less heat."
       },
       {
         "speaker": "Lecturer",
-        "text": "One common misconception is that the effect is only a problem in very large cities. In fact, even towns of a few tens of thousands of people show measurable heat islands."
+        "text": "A third, newer approach is direct recycling, which keeps the cathode material intact so that it can be used again in new cells. Researchers say this could cut costs, although it only works well when the battery type is known in advance."
       },
       {
         "speaker": "Lecturer",
-        "text": "Let's look at how the effect is measured. Researchers use weather stations in the city centre and in rural areas nearby, then compare temperatures at the same time of day."
+        "text": "So why bother? Mining cobalt causes serious environmental damage, and demand for lithium is rising quickly. Recycled metals could supply a significant share of future demand."
       },
       {
         "speaker": "Lecturer",
-        "text": "Satellite data is also useful, because it can show surface temperatures across a whole region. However, surface readings are not the same as air temperatures, so both methods are needed."
+        "text": "At present, only about five per cent of lithium-ion batteries are recycled worldwide. One reason is that batteries come in many different designs, which makes automated sorting difficult."
       },
       {
         "speaker": "Lecturer",
-        "text": "The effect varies with the seasons. It is generally strongest during calm, clear summer nights, when there is little wind to mix the air and the ground cannot cool quickly."
+        "text": "Another problem is transport. Damaged batteries are classed as hazardous goods, so moving them to a plant can cost more than the materials are worth."
       },
       {
         "speaker": "Lecturer",
-        "text": "Cities can adapt in simple ways. Painting roofs white, planting street trees with wide canopies, and designing parks that connect to residential areas all help to reduce the build-up of heat."
+        "text": "Some manufacturers are responding by designing packs that are easier to take apart, with bolts instead of glue. This also makes repairs and reuse much cheaper."
       },
       {
         "speaker": "Lecturer",
-        "text": "Community involvement matters too. Residents who know which streets become hottest can help councils decide where to place shade structures and water fountains."
+        "text": "Governments are also getting involved. The European Union now requires new batteries to contain a minimum amount of recycled content, and several countries have set up collection points at electrical shops."
       },
       {
         "speaker": "Lecturer",
-        "text": "Next week we'll consider the economic costs of heat, including energy demand for air conditioning and lost productivity in workplaces during heat waves. Please read the case study on a large coastal city in the course pack before the seminar, and be ready to discuss how its planning rules have changed. Remember that the mid-term essay is due in three weeks."
-      },
-      {
-        "speaker": "Lecturer",
-        "text": "The seminar will also cover ways that architects can reduce heat in new buildings. Students who attended last year's session found the case studies especially useful for their assignments."
+        "text": "For next week's seminar, please read the two articles on the course website and prepare a short summary of each. Your project proposals are due on Friday."
       }
     ],
     "questions": [
       {
         "id": "l4-s4-q01",
         "type": "mcq",
-        "prompt": "When is the temperature difference often several degrees?",
+        "prompt": "According to the lecturer, what is the first step in recycling a battery?",
         "options": [
-          "A. midday",
-          "B. at night",
-          "C. at dawn",
-          "D. at weekends"
+          "A. Removing the casings",
+          "B. Shredding the cells",
+          "C. Discharging the battery",
+          "D. Sorting the packs by type"
         ],
-        "answer": "B",
-        "why": "The lecturer says 'The difference is often several degrees at night.'"
+        "answer": "C",
+        "why": "The lecturer says 'The first step in recycling is discharging the battery completely'."
       },
       {
         "id": "l4-s4-q02",
         "type": "complete",
-        "prompt": "Materials that absorb heat during the day:",
+        "prompt": "Used car battery packs can be reused in a home ___ system.",
         "answer": [
-          "dark roofs and asphalt",
-          "dark roofs",
-          "asphalt"
+          "storage"
         ],
-        "why": "The lecturer says 'Dark roofs and asphalt absorb heat during the day.'"
+        "why": "The lecturer says 'it can often be reused in a home storage system'."
       },
       {
         "id": "l4-s4-q03",
         "type": "complete",
-        "prompt": "Trees and grass cool the air through ___.",
+        "prompt": "The shredded cells become a mixture called ___ mass.",
         "answer": [
-          "evaporation"
+          "black"
         ],
-        "why": "The lecturer says 'Trees and grass cool the air through evaporation.'"
+        "why": "The lecturer says 'shred the cells into a mixture known as black mass'."
       },
       {
         "id": "l4-s4-q04",
         "type": "mcq",
-        "prompt": "Tall buildings affect the city by:",
+        "prompt": "What is the main disadvantage of smelting?",
         "options": [
-          "A. adding moisture",
-          "B. trapping heat",
-          "C. creating wind",
-          "D. reflecting sunlight"
+          "A. It uses a lot of energy",
+          "B. It produces poisonous waste gas",
+          "C. It cannot recover cobalt or nickel",
+          "D. It takes several weeks to finish"
         ],
-        "answer": "B",
-        "why": "The lecturer says 'They trap heat between them.'"
+        "answer": "A",
+        "why": "The lecturer says 'it uses a great deal of energy'."
       },
       {
         "id": "l4-s4-q05",
         "type": "complete",
-        "prompt": "Heat waves are linked to more hospital admissions, particularly among ___.",
+        "prompt": "In hydrometallurgy, the metals are dissolved in ___.",
         "answer": [
-          "older adults",
-          "older people",
-          "the elderly"
+          "acid"
         ],
-        "why": "The lecturer says 'more hospital admissions, particularly among older adults.'"
+        "why": "The lecturer says 'the metals are dissolved in acid and then separated chemically'."
       },
       {
         "id": "l4-s4-q06",
         "type": "complete",
-        "prompt": "Green roofs, tree-lined streets and ___ paving can reduce temperatures.",
+        "prompt": "Direct recycling keeps the ___ material intact.",
         "answer": [
-          "light-coloured",
-          "light coloured"
+          "cathode"
         ],
-        "why": "The lecturer says 'light-coloured paving can reduce temperatures significantly.'"
+        "why": "The lecturer says 'direct recycling, which keeps the cathode material intact'."
       },
       {
         "id": "l4-s4-q07",
         "type": "complete",
-        "prompt": "Cooling centres open during heat ___.",
+        "prompt": "Only about ___ per cent of lithium-ion batteries are recycled worldwide.",
         "answer": [
-          "alerts",
-          "alert"
+          "five"
         ],
-        "why": "The lecturer says 'cooling centres, which open during heat alerts.'"
+        "why": "The lecturer says 'only about five per cent of lithium-ion batteries are recycled worldwide'."
       },
       {
         "id": "l4-s4-q08",
         "type": "mcq",
-        "prompt": "The misconception the lecturer describes is that the effect:",
+        "prompt": "According to the lecturer, why is sorting batteries difficult?",
         "options": [
-          "A. is harmless",
-          "B. is only a problem in very large cities",
-          "C. affects only rural areas",
-          "D. is caused by traffic"
+          "A. Labels are often missing",
+          "B. The packs are too heavy",
+          "C. The cells are sealed in glue",
+          "D. The designs vary so widely"
         ],
-        "answer": "B",
-        "why": "The lecturer says 'the effect is only a problem in very large cities.'"
+        "answer": "D",
+        "why": "The lecturer says 'batteries come in many different designs, which makes automated sorting difficult'."
       },
       {
         "id": "l4-s4-q09",
         "type": "complete",
-        "prompt": "Towns with a few tens of thousands of people:",
+        "prompt": "Damaged batteries are classed as ___ goods.",
         "answer": [
-          "show measurable heat islands",
-          "show heat islands",
-          "measurable heat islands"
+          "hazardous"
         ],
-        "why": "The lecturer says 'even towns of a few tens of thousands of people show measurable heat islands.'"
+        "why": "The lecturer says 'Damaged batteries are classed as hazardous goods'."
       },
       {
         "id": "l4-s4-q10",
         "type": "mcq",
-        "prompt": "What is the main topic of the lecture?",
+        "prompt": "What do some manufacturers now use to make packs easier to take apart?",
         "options": [
-          "A. rural climate",
-          "B. urban heat islands",
-          "C. air pollution",
-          "D. cooling technology"
+          "A. Magnets",
+          "B. Bolts",
+          "C. Clips",
+          "D. Tape"
         ],
         "answer": "B",
-        "why": "The lecturer says 'we'll examine the urban heat island effect.'"
+        "why": "The lecturer says 'with bolts instead of glue'."
       }
     ]
   }

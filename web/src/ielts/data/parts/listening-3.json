@@ -140,12 +140,12 @@
         "type": "mcq",
         "prompt": "The standard membership is only valid:",
         "options": [
-          "A. at weekends",
-          "B. before four in the afternoon",
-          "C. after six in the evening",
-          "D. at any time"
+          "A. before four in the afternoon",
+          "B. at weekends and public holidays",
+          "C. only after six in the evening",
+          "D. at any time of the day"
         ],
-        "answer": "B",
+        "answer": "A",
         "why": "The receptionist says 'Standard is for off-peak hours only, that's before four in the afternoon.'"
       },
       {
@@ -176,12 +176,12 @@
         "type": "mcq",
         "prompt": "Lane swimming is available:",
         "options": [
-          "A. all day",
-          "B. in the mornings only",
-          "C. in the evenings only",
+          "A. throughout the whole day",
+          "B. in the evenings after five",
+          "C. in the mornings only",
           "D. at weekends only"
         ],
-        "answer": "B",
+        "answer": "C",
         "why": "The receptionist says 'Lane swimming is in the mornings only.'"
       },
       {
@@ -329,11 +329,11 @@
         "prompt": "The tour does not visit the orchard from:",
         "options": [
           "A. June to August",
-          "B. December to February",
-          "C. March to May",
-          "D. September to November"
+          "B. March to May",
+          "C. September to November",
+          "D. December to February"
         ],
-        "answer": "B",
+        "answer": "D",
         "why": "The orchard is closed in winter, 'so the tour doesn't go there from December to February.'"
       },
       {
@@ -351,12 +351,12 @@
         "type": "mcq",
         "prompt": "Why is flash photography banned in the glasshouse?",
         "options": [
-          "A. It disturbs other visitors",
-          "B. It may harm the orchids",
+          "A. It may harm the orchids",
+          "B. It disturbs other visitors",
           "C. It damages the glass",
           "D. It dazzles the staff"
         ],
-        "answer": "B",
+        "answer": "A",
         "why": "The guide says flash photography 'can harm the orchids'."
       },
       {
@@ -409,11 +409,11 @@
         "prompt": "Where does the tour begin?",
         "options": [
           "A. the herb garden",
-          "B. the rose walk",
-          "C. the tropical glasshouse",
-          "D. the old orchard"
+          "B. the tropical glasshouse",
+          "C. the rose walk by the benches",
+          "D. the old orchard at the far end"
         ],
-        "answer": "C",
+        "answer": "B",
         "why": "The guide says 'We begin in the tropical glasshouse'."
       }
     ]
@@ -549,12 +549,12 @@
         "type": "mcq",
         "prompt": "How many sampling sites will the group use?",
         "options": [
-          "A. two",
-          "B. three",
-          "C. four",
-          "D. five"
+          "A. Two",
+          "B. Four",
+          "C. Three",
+          "D. Twelve"
         ],
-        "answer": "B",
+        "answer": "C",
         "why": "The student lists 'Three sites: upstream of the factory, below the factory, and at the weir.'"
       },
       {
@@ -573,11 +573,11 @@
         "prompt": "Why are samples taken on that day?",
         "options": [
           "A. The lab is open only then",
-          "B. To match the flow data",
-          "C. The river is cleaner then",
-          "D. The tutor asked for it"
+          "B. The river is cleaner then",
+          "C. The tutor asked for it",
+          "D. To match the flow data"
         ],
-        "answer": "B",
+        "answer": "D",
         "why": "The student says the authority publishes flow data on Tuesdays and 'we want to match our samples to the flow.'"
       },
       {
@@ -596,12 +596,12 @@
         "type": "mcq",
         "prompt": "The tutor says the test strips are:",
         "options": [
-          "A. more expensive",
-          "B. less accurate",
-          "C. banned",
+          "A. less accurate",
+          "B. more expensive",
+          "C. banned by the lab",
           "D. faster to read"
         ],
-        "answer": "B",
+        "answer": "A",
         "why": "The tutor says 'Test strips are less accurate, so your report must mention that as a limitation.'"
       },
       {
@@ -670,6 +670,10 @@
       },
       {
         "speaker": "Lecturer",
+        "text": "This matters for both farmers and consumers, because crops such as apples, berries and many oilseeds produce better yields when they are visited by a good variety of insects."
+      },
+      {
+        "speaker": "Lecturer",
         "text": "Researchers identify three main pressures on pollinators: habitat loss, pesticides, and disease."
       },
       {
@@ -690,11 +694,19 @@
       },
       {
         "speaker": "Lecturer",
+        "text": "Warmer winters can also confuse insects that normally stay dormant until spring, so the timing problem works in both directions."
+      },
+      {
+        "speaker": "Lecturer",
         "text": "Some people assume that honeybees are the most important pollinators. In fact, many wild species, including solitary bees, are often more efficient pollinators for particular crops."
       },
       {
         "speaker": "Lecturer",
         "text": "Solutions include planting wildflower strips along field edges, reducing pesticide use during flowering periods, and creating nest sites such as bare soil banks."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Several of these measures cost little. A farmer can leave a corner of a field uncut, and a council can change the way it mows roadside verges, without any large investment."
       },
       {
         "speaker": "Lecturer",
@@ -707,6 +719,10 @@
       {
         "speaker": "Lecturer",
         "text": "Research methods have also changed. Scientists now use photographs taken by volunteers, along with DNA analysis of pollen collected from bees' bodies, to work out which plants each species depends on."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "This kind of work was once very slow, because each specimen had to be identified by an expert under a microscope. Digital tools have made it possible to process far more records than a small team could manage alone."
       },
       {
         "speaker": "Lecturer",
@@ -743,11 +759,11 @@
         "prompt": "Which pressure is described as the most significant?",
         "options": [
           "A. pesticides",
-          "B. disease",
-          "C. habitat loss",
+          "B. habitat loss",
+          "C. disease",
           "D. climate change"
         ],
-        "answer": "C",
+        "answer": "B",
         "why": "The lecturer says 'Habitat loss is the most significant of the three.'"
       },
       {
@@ -777,12 +793,12 @@
         "type": "mcq",
         "prompt": "Why do some bees arrive when no flowers are available?",
         "options": [
-          "A. They migrate too early",
-          "B. Flowering times have shifted",
-          "C. Spring is colder",
-          "D. Flowers have closed"
+          "A. They migrate too early in spring",
+          "B. Spring has become colder",
+          "C. Flowering times have shifted",
+          "D. Flowers close earlier in the day"
         ],
-        "answer": "B",
+        "answer": "C",
         "why": "The lecturer says 'Flowering times are shifting, so some bees arrive when no flowers are available.'"
       },
       {
@@ -790,12 +806,12 @@
         "type": "mcq",
         "prompt": "According to the lecturer, many wild species are:",
         "options": [
-          "A. less common than honeybees",
-          "B. more efficient for some crops",
-          "C. protected by law",
-          "D. unable to fly far"
+          "A. less common than honeybees in farmland",
+          "B. protected by law in most regions",
+          "C. unable to fly far from their nests",
+          "D. more efficient for some crops"
         ],
-        "answer": "B",
+        "answer": "D",
         "why": "The lecturer says many wild species 'are often more efficient pollinators for particular crops'."
       },
       {
@@ -823,12 +839,12 @@
         "type": "mcq",
         "prompt": "The lecturer's view on the belief that honeybees are the most important pollinators is:",
         "options": [
-          "A. agreement",
-          "B. disagreement",
-          "C. uncertainty",
-          "D. no comment"
+          "A. disagreement",
+          "B. strong agreement",
+          "C. mild uncertainty",
+          "D. no comment either way"
         ],
-        "answer": "B",
+        "answer": "A",
         "why": "The lecturer says 'In fact, many wild species ... are often more efficient pollinators for particular crops.'"
       },
       {
@@ -836,11 +852,10 @@
         "type": "complete",
         "prompt": "Regulations now ___ the use of pesticides in several regions.",
         "answer": [
-          "restricted",
-          "restricted by regulation",
-          "limited"
+          "restrict",
+          "limit"
         ],
-        "why": "The lecturer says 'regulations now restrict their use in several regions.'"
+        "why": "The lecturer says 'regulations now restrict their use in several regions.' The gap needs the base verb, so 'restrict' (or 'limit') fits; 'restricted' and 'limited' do not fit the grammar."
       }
     ]
   }

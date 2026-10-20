@@ -142,11 +142,11 @@
         "prompt": "Which bin is full?",
         "options": [
           "A. the green bin",
-          "B. the blue bin",
-          "C. the black bin",
-          "D. the brown bin"
+          "B. the black bin",
+          "C. the brown bin",
+          "D. the blue bin"
         ],
-        "answer": "B",
+        "answer": "D",
         "why": "The resident says 'The blue one, so paper and card.'"
       },
       {
@@ -188,12 +188,12 @@
         "type": "mcq",
         "prompt": "Where should food-soiled card go?",
         "options": [
-          "A. the paper bin",
-          "B. the glass bin",
-          "C. the general waste bin",
-          "D. the garden waste"
+          "A. the general waste bin",
+          "B. the paper recycling bin",
+          "C. the glass recycling bin",
+          "D. the garden waste bin"
         ],
-        "answer": "C",
+        "answer": "A",
         "why": "The officer says 'Food-soiled card can't be recycled, so it goes in the general waste bin.'"
       },
       {
@@ -221,12 +221,12 @@
         "type": "mcq",
         "prompt": "What does the resident decide?",
         "options": [
-          "A. to buy a bigger bin",
-          "B. to manage with the existing bin",
-          "C. to complain to the council",
-          "D. to request a refund"
+          "A. to pay for an additional bin",
+          "B. to complain to the council",
+          "C. to keep the bin they have",
+          "D. to ask for a fee reduction"
         ],
-        "answer": "B",
+        "answer": "C",
         "why": "The resident says 'I'll manage with the one I have.'"
       }
     ]
@@ -322,10 +322,10 @@
         "type": "mcq",
         "prompt": "The escapement is the part that:",
         "options": [
-          "A. winds the clock",
-          "B. releases the gears one tooth at a time",
-          "C. shows the time",
-          "D. protects the case"
+          "A. winds the whole clock once a week",
+          "B. releases gears tooth by tooth",
+          "C. displays the time on the main dial",
+          "D. protects the movement from dust"
         ],
         "answer": "B",
         "why": "The narrator describes the escapement as 'the part that releases the gears one tooth at a time.'"
@@ -353,12 +353,12 @@
         "type": "mcq",
         "prompt": "The large astronomical clock shows:",
         "options": [
-          "A. the tides",
-          "B. the phases of the moon and the sun's position",
-          "C. the weather",
-          "D. the stars in the sky"
+          "A. the moon's phases and sun's position",
+          "B. the tides and the times of high water",
+          "C. the weather forecast for the coming week",
+          "D. the positions of the planets and stars"
         ],
-        "answer": "B",
+        "answer": "A",
         "why": "The narrator says 'It shows the phases of the moon and the position of the sun.'"
       },
       {
@@ -521,12 +521,12 @@
         "type": "mcq",
         "prompt": "Lucy is nervous about questions on:",
         "options": [
-          "A. salary",
-          "B. teamwork",
-          "C. her degree",
-          "D. travel"
+          "A. salary expectations",
+          "B. her degree results",
+          "C. travel arrangements",
+          "D. teamwork"
         ],
-        "answer": "B",
+        "answer": "D",
         "why": "Lucy says 'I'm not sure how to answer questions about teamwork.'"
       },
       {
@@ -565,12 +565,12 @@
         "type": "mcq",
         "prompt": "What did the firm recently do?",
         "options": [
-          "A. merge with another company",
-          "B. open a second distribution centre",
-          "C. close a warehouse",
-          "D. launch a new website"
+          "A. merge with another logistics company",
+          "B. close its oldest warehouse",
+          "C. open a second distribution centre",
+          "D. launch a customer website"
         ],
-        "answer": "B",
+        "answer": "C",
         "why": "Lucy says 'they opened a second distribution centre in the north this year.'"
       },
       {
@@ -578,12 +578,12 @@
         "type": "mcq",
         "prompt": "The adviser says Lucy should not:",
         "options": [
-          "A. repeat the website",
-          "B. wear formal clothes",
-          "C. arrive early",
-          "D. bring references"
+          "A. send a thank-you email",
+          "B. just repeat the website",
+          "C. bring a printed CV",
+          "D. arrive fifteen minutes early"
         ],
-        "answer": "A",
+        "answer": "B",
         "why": "The adviser says 'don't just repeat the website.'"
       },
       {
@@ -591,12 +591,12 @@
         "type": "mcq",
         "prompt": "Is a portfolio needed for this role?",
         "options": [
-          "A. yes, a printed one",
-          "B. yes, an online one",
-          "C. no",
+          "A. no, it is not needed",
+          "B. yes, a printed copy",
+          "C. yes, an online version",
           "D. only for managers"
         ],
-        "answer": "C",
+        "answer": "A",
         "why": "The adviser says 'the portfolio is not needed for this role.'"
       },
       {
@@ -605,7 +605,7 @@
         "prompt": "Documents Lucy should bring:",
         "answer": [
           "CV and your references",
-            "CV and references",
+          "CV and references",
           "a printed CV and references",
           "references and CV"
         ],
@@ -627,9 +627,9 @@
         "prompt": "Interview time:",
         "answer": [
           "10:30",
-            "10.30",
-            "ten thirty",
-            "ten thirty on Wednesday the eleventh",
+          "10.30",
+          "ten thirty",
+          "ten thirty on Wednesday the eleventh",
           "10:30 on Wednesday the 11th",
           "10.30 on Wednesday 11th"
         ],
@@ -667,11 +667,19 @@
       },
       {
         "speaker": "Lecturer",
+        "text": "Of course, a straight route was not always the quickest. On steep ground the engineers sometimes allowed the road to curve gently, so that wagons and animals could climb without difficulty."
+      },
+      {
+        "speaker": "Lecturer",
         "text": "Roads had practical purposes. They allowed armies to move quickly, and they carried messengers, traders and officials across the empire."
       },
       {
         "speaker": "Lecturer",
         "text": "Milestones were placed along the roads at regular intervals, showing distances to major cities. Many of these stones survive today."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Some of these stones carried an inscription naming the ruler who ordered the work, so they also served as a kind of public notice."
       },
       {
         "speaker": "Lecturer",
@@ -691,7 +699,15 @@
       },
       {
         "speaker": "Lecturer",
+        "text": "Along the way, small stations were set up where travellers could rest, change horses and find food. These stops made long journeys far more manageable for officials carrying urgent messages."
+      },
+      {
+        "speaker": "Lecturer",
         "text": "Drainage was another important feature. Roads were often raised slightly above the surrounding land and fitted with ditches on each side, so that rainwater could run away from the surface."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "A slight camber also helped, because water ran towards the edges instead of lying on the road. Without it, the surface would have broken up far sooner."
       },
       {
         "speaker": "Lecturer",
@@ -724,11 +740,11 @@
         "prompt": "Who built most of the roads?",
         "options": [
           "A. merchants",
-          "B. soldiers",
-          "C. farmers",
+          "B. farmers",
+          "C. soldiers",
           "D. slaves"
         ],
-        "answer": "B",
+        "answer": "C",
         "why": "The lecturer says 'Most roads were built by soldiers.'"
       },
       {
@@ -764,12 +780,12 @@
         "type": "mcq",
         "prompt": "What was the main practical purpose mentioned?",
         "options": [
-          "A. tourism",
-          "B. moving armies quickly",
-          "C. farming",
-          "D. religious travel"
+          "A. tourism for wealthy travellers",
+          "B. bringing water to farms",
+          "C. religious pilgrimage routes",
+          "D. moving armies quickly"
         ],
-        "answer": "B",
+        "answer": "D",
         "why": "The lecturer says 'They allowed armies to move quickly.'"
       },
       {
@@ -800,12 +816,12 @@
         "type": "mcq",
         "prompt": "The view that roads were only for military use is:",
         "options": [
-          "A. supported by evidence",
-          "B. the lecturer's view",
-          "C. an assumption the lecturer rejects",
-          "D. not mentioned"
+          "A. confirmed by the evidence shown",
+          "B. a mistaken assumption",
+          "C. the lecturer's own conclusion",
+          "D. never discussed in the lecture"
         ],
-        "answer": "C",
+        "answer": "B",
         "why": "The lecturer says 'Some people assume the roads were only for military use. However, the evidence shows...'"
       },
       {

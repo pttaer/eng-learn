@@ -41,48 +41,250 @@
       { "speaker": "Helen", "text": "Let me print your card details. Please sign here, and I'll take your photograph for the card." }
     ],
     "questions": [
-      { "id": "l7-s1-q01", "type": "complete", "prompt": "Applicant's surname, spelled letter by letter:", "answer": ["Pemberton", "P, E, M, B, E, R, T, O, N"], "why": "Daniel gives his surname and spells it: 'That's P, E, M, B, E, R, T, O, N.'" },
-      { "id": "l7-s1-q02", "type": "complete", "prompt": "Applicant's date of birth (day and month):", "answer": ["14 March", "14th March", "fourteenth of March"], "why": "He confirms it is 'the fourteenth of March, nineteen ninety-eight' when asked." },
-      { "id": "l7-s1-q03", "type": "complete", "prompt": "House number on Harbour Road:", "answer": ["37", "thirty-seven"], "why": "Daniel says he has moved to a different building, and 'It's number thirty-seven now.'" },
-      { "id": "l7-s1-q04", "type": "complete", "prompt": "Student membership fee for one year (pounds):", "answer": ["12.50", "twelve pounds fifty"], "why": "The librarian says 'It's twelve pounds fifty for the year' at the student rate." },
-      { "id": "l7-s1-q05", "type": "complete", "prompt": "Standard loan period (weeks):", "answer": ["3", "three"], "why": "She explains that 'Standard loans run for three weeks.'" },
-      { "id": "l7-s1-q06", "type": "complete", "prompt": "Maximum number of items borrowed at one time:", "answer": ["8", "eight"], "why": "The librarian says 'You can borrow up to eight items at a time.'" },
-      { "id": "l7-s1-q07", "type": "complete", "prompt": "Number of times each item can be renewed:", "answer": ["2", "twice", "two"], "why": "She says 'You can renew each item twice, provided nobody else has reserved it.'" },
-      { "id": "l7-s1-q08", "type": "mcq", "prompt": "Which document does Daniel use to prove his address?", "options": ["A. A passport", "B. A recent utility bill", "C. A driving licence", "D. A letter from the university"], "answer": "B", "why": "Daniel has a gas bill, and the librarian accepts 'a recent utility bill' as proof of address." },
-      { "id": "l7-s1-q09", "type": "mcq", "prompt": "Why does Daniel want a membership card?", "options": ["A. To use the computer lab", "B. To borrow books and book study rooms", "C. To join the reading club", "D. To use the university archive"], "answer": "B", "why": "He says 'I want a card so I can borrow books and book one of the study rooms.'" },
-      { "id": "l7-s1-q10", "type": "mcq", "prompt": "When does the library open on Saturdays?", "options": ["A. 8 am to 6 pm", "B. 9 am to 5 pm", "C. 10 am to 4 pm", "D. It is closed on Saturdays"], "answer": "B", "why": "The librarian says 'We're open from nine until five on Saturdays.'" }
+      {
+        "id": "l7-s1-q01",
+        "type": "complete",
+        "prompt": "Applicant's surname, spelled letter by letter:",
+        "answer": [
+          "Pemberton",
+          "P, E, M, B, E, R, T, O, N"
+        ],
+        "why": "Daniel gives his surname and spells it: 'That's P, E, M, B, E, R, T, O, N.'"
+      },
+      {
+        "id": "l7-s1-q02",
+        "type": "complete",
+        "prompt": "Applicant's date of birth (day and month):",
+        "answer": [
+          "14 March",
+          "14th March",
+          "fourteenth of March"
+        ],
+        "why": "He confirms it is 'the fourteenth of March, nineteen ninety-eight' when asked."
+      },
+      {
+        "id": "l7-s1-q03",
+        "type": "complete",
+        "prompt": "House number on Harbour Road:",
+        "answer": [
+          "37",
+          "thirty-seven"
+        ],
+        "why": "Daniel says he has moved to a different building, and 'It's number thirty-seven now.'"
+      },
+      {
+        "id": "l7-s1-q04",
+        "type": "complete",
+        "prompt": "Student membership fee for one year (pounds):",
+        "answer": [
+          "12.50",
+          "twelve pounds fifty"
+        ],
+        "why": "The librarian says 'It's twelve pounds fifty for the year' at the student rate."
+      },
+      {
+        "id": "l7-s1-q05",
+        "type": "complete",
+        "prompt": "Standard loan period (weeks):",
+        "answer": [
+          "3",
+          "three"
+        ],
+        "why": "She explains that 'Standard loans run for three weeks.'"
+      },
+      {
+        "id": "l7-s1-q06",
+        "type": "complete",
+        "prompt": "Maximum number of items borrowed at one time:",
+        "answer": [
+          "8",
+          "eight"
+        ],
+        "why": "The librarian says 'You can borrow up to eight items at a time.'"
+      },
+      {
+        "id": "l7-s1-q07",
+        "type": "complete",
+        "prompt": "Number of times each item can be renewed:",
+        "answer": [
+          "2",
+          "twice",
+          "two"
+        ],
+        "why": "She says 'You can renew each item twice, provided nobody else has reserved it.'"
+      },
+      {
+        "id": "l7-s1-q08",
+        "type": "mcq",
+        "prompt": "Which document does Daniel use to prove his address?",
+        "options": [
+          "A. A recent utility bill",
+          "B. A passport",
+          "C. A driving licence",
+          "D. A letter from the university"
+        ],
+        "answer": "A",
+        "why": "Daniel has a gas bill, and the librarian accepts 'a recent utility bill' as proof of address."
+      },
+      {
+        "id": "l7-s1-q09",
+        "type": "mcq",
+        "prompt": "Why does Daniel want a membership card?",
+        "options": [
+          "A. To use the computer lab and printers",
+          "B. To join the weekend reading club",
+          "C. To borrow books and book rooms",
+          "D. To use the university archive"
+        ],
+        "answer": "C",
+        "why": "He says 'I want a card so I can borrow books and book one of the study rooms.'"
+      },
+      {
+        "id": "l7-s1-q10",
+        "type": "mcq",
+        "prompt": "When does the library open on Saturdays?",
+        "options": [
+          "A. 10 am to 4 pm",
+          "B. It is closed on Saturdays",
+          "C. 8 am to 6 pm",
+          "D. 9 am to 5 pm"
+        ],
+        "answer": "D",
+        "why": "The librarian says 'We're open from nine until five on Saturdays.'"
+      }
     ]
   },
   {
     "id": "l7-s2",
     "section": 2,
-    "title": "Guided tour of Riverside Botanic Garden",
+    "title": "Guided tour of a regional water treatment works",
     "speakers": [
       { "name": "Ruth", "lang": "en-GB", "gender": "f" }
     ],
     "script": [
-      { "speaker": "Ruth", "text": "Good morning, everyone, and welcome to Riverside Botanic Garden. I'm Ruth, and I'll be guiding you around for the next hour." },
-      { "speaker": "Ruth", "text": "The tour begins at the north gate, next to the car park. If you arrived by bus, you'll need to walk about five minutes uphill to reach it." },
-      { "speaker": "Ruth", "text": "Before we set off, a few practical points. The café is open from ten in the morning until four in the afternoon. It's the only place on site where you can buy hot food, so plan your lunch around that." },
-      { "speaker": "Ruth", "text": "Our most famous feature is the tropical glasshouse. It was built in 1887, and it still houses plants that were brought back by Victorian plant hunters." },
-      { "speaker": "Ruth", "text": "Unfortunately, the Herb Garden is closed this month. The team is replacing the irrigation system, and the work should finish by the end of the season." },
-      { "speaker": "Ruth", "text": "Photography is welcome throughout the gardens, but please don't use flash inside the glasshouse, because the light can damage some of the older plants." },
-      { "speaker": "Ruth", "text": "You'll notice many of the orchids in the glasshouse are labelled with small cards. Please don't touch them. The oils from our hands can harm the flowers, and some of these orchids are extremely rare." },
-      { "speaker": "Ruth", "text": "Guided tours like this one usually last about sixty minutes, and then you're free to explore on your own. We have a lot of benches, so feel free to sit down whenever you need to." },
-      { "speaker": "Ruth", "text": "Now, if you hold a Riverside membership card, you can visit free on Tuesdays. Those visits don't need to be booked in advance. Everyone else pays the standard entry fee at the gate." },
-      { "speaker": "Ruth", "text": "Finally, please take your litter home with you. We don't have bins in the woodland area, in order to protect the wildlife." }
+      { "speaker": "Ruth", "text": "Good morning, everyone, and welcome to Hartley Water Treatment Works. I'm Ruth, and I'll be showing you round for the next ninety minutes." },
+      { "speaker": "Ruth", "text": "Before we start, please put on a hard hat and one of the yellow jackets from the box by the door. Visitors are not allowed on site without them. The site is quite noisy in places, so please stay with me at all times and listen carefully to any safety announcements." },
+      { "speaker": "Ruth", "text": "This works supplies drinking water to about two hundred thousand people. The water comes from a reservoir, which is six miles to the east. The site covers about forty hectares, and around sixty staff work here in shifts, because the works never closes." },
+      { "speaker": "Ruth", "text": "Our first stop is the screening house. Here the water passes through metal screens that catch leaves, twigs and any fish that have been drawn in." },
+      { "speaker": "Ruth", "text": "Next, we add a chemical called aluminium sulphate. It makes the tiny particles in the water stick together into larger lumps, known as floc." },
+      { "speaker": "Ruth", "text": "The floc settles in the large circular tanks you can see on your left. This stage takes about four hours." },
+      { "speaker": "Ruth", "text": "After that, the water is filtered through beds of sand and carbon. The carbon removes tastes and smells, which is why our water is so fresh." },
+      { "speaker": "Ruth", "text": "The final stage is disinfection. We add a small amount of chlorine to kill any remaining bacteria. The water is then tested every hour in the laboratory." },
+      { "speaker": "Ruth", "text": "Please don't take photographs of the control room, as it contains security equipment. Photography is fine everywhere else. If you have any questions, please ask as we walk, and I will do my best to answer them." },
+      { "speaker": "Ruth", "text": "At the end of the tour, we'll go to the visitor centre, where you can try the water yourself. It's open on weekdays until half past four. Finally, children under twelve cannot enter the pump hall because of the noise." }
     ],
     "questions": [
-      { "id": "l7-s2-q01", "type": "complete", "prompt": "The tour begins at the ______ gate.", "answer": ["north", "North"], "why": "Ruth says 'The tour begins at the north gate, next to the car park.'" },
-      { "id": "l7-s2-q02", "type": "complete", "prompt": "The café opens at ______ in the morning.", "answer": ["10", "ten"], "why": "She says the café is 'open from ten in the morning until four in the afternoon.'" },
-      { "id": "l7-s2-q03", "type": "mcq", "prompt": "Which area is closed this month?", "options": ["A. The tropical glasshouse", "B. The Herb Garden", "C. The café", "D. The woodland path"], "answer": "B", "why": "Ruth states 'the Herb Garden is closed this month' while the irrigation system is replaced." },
-      { "id": "l7-s2-q04", "type": "complete", "prompt": "The tropical glasshouse was built in ______.", "answer": ["1887"], "why": "Ruth says 'It was built in 1887, and it still houses plants' brought back by plant hunters." },
-      { "id": "l7-s2-q05", "type": "mcq", "prompt": "What is the rule about photography in the glasshouse?", "options": ["A. Cameras are not allowed", "B. Photos are allowed, but not with flash", "C. Only guides may take photos", "D. Photos need a permit"], "answer": "B", "why": "She says photography is welcome, 'but please don't use flash inside the glasshouse.'" },
-      { "id": "l7-s2-q06", "type": "mcq", "prompt": "Why must visitors not touch the orchids?", "options": ["A. They are poisonous", "B. Oils from hands can harm the flowers", "C. They are protected by a fence", "D. The labels could be lost"], "answer": "B", "why": "Ruth explains that 'The oils from our hands can harm the flowers.'" },
-      { "id": "l7-s2-q07", "type": "complete", "prompt": "Guided tours usually last about ______ minutes.", "answer": ["60", "sixty"], "why": "She says 'Guided tours like this one usually last about sixty minutes.'" },
-      { "id": "l7-s2-q08", "type": "mcq", "prompt": "Where can visitors sit down during the tour?", "options": ["A. Only in the café", "B. On benches throughout the gardens", "C. Only inside the glasshouse", "D. Sitting is not allowed"], "answer": "B", "why": "Ruth says 'We have a lot of benches, so feel free to sit down whenever you need to.'" },
-      { "id": "l7-s2-q09", "type": "complete", "prompt": "Members with a membership card can visit free on ______.", "answer": ["Tuesdays", "Tuesday"], "why": "She says members 'can visit free on Tuesdays' and do not need to book." },
-      { "id": "l7-s2-q10", "type": "mcq", "prompt": "What must visitors do with their rubbish?", "options": ["A. Leave it at the café", "B. Put it in bins by the gate", "C. Take it home with them", "D. Hand it to a guide"], "answer": "C", "why": "Ruth asks visitors to 'take your litter home with you' because there are no bins in the woodland." }
+      {
+        "id": "l7-s2-q01",
+        "type": "complete",
+        "prompt": "Visitors must wear a hard hat and a yellow ___.",
+        "answer": [
+          "jacket",
+          "jackets"
+        ],
+        "why": "Ruth says 'put on a hard hat and one of the yellow jackets from the box by the door'."
+      },
+      {
+        "id": "l7-s2-q02",
+        "type": "complete",
+        "prompt": "The works supplies drinking water to about ___ people.",
+        "answer": [
+          "two hundred thousand"
+        ],
+        "why": "Ruth says 'supplies drinking water to about two hundred thousand people'."
+      },
+      {
+        "id": "l7-s2-q03",
+        "type": "mcq",
+        "prompt": "Where is the reservoir in relation to the works?",
+        "options": [
+          "A. To the north",
+          "B. To the west",
+          "C. To the south",
+          "D. To the east"
+        ],
+        "answer": "D",
+        "why": "Ruth says 'a reservoir, which is six miles to the east'."
+      },
+      {
+        "id": "l7-s2-q04",
+        "type": "complete",
+        "prompt": "The screens catch leaves, twigs and ___.",
+        "answer": [
+          "fish"
+        ],
+        "why": "Ruth says 'catch leaves, twigs and any fish that have been drawn in'."
+      },
+      {
+        "id": "l7-s2-q05",
+        "type": "mcq",
+        "prompt": "What is the purpose of aluminium sulphate?",
+        "options": [
+          "A. To bind small particles",
+          "B. To remove unpleasant smells",
+          "C. To kill remaining bacteria",
+          "D. To make the water softer"
+        ],
+        "answer": "A",
+        "why": "Ruth says 'It makes the tiny particles in the water stick together'."
+      },
+      {
+        "id": "l7-s2-q06",
+        "type": "mcq",
+        "prompt": "How long does the settling stage take?",
+        "options": [
+          "A. About two hours",
+          "B. About three hours",
+          "C. About four hours",
+          "D. About six hours"
+        ],
+        "answer": "C",
+        "why": "Ruth says 'This stage takes about four hours.'"
+      },
+      {
+        "id": "l7-s2-q07",
+        "type": "complete",
+        "prompt": "The ___ in the filter beds removes tastes and smells.",
+        "answer": [
+          "carbon"
+        ],
+        "why": "Ruth says 'The carbon removes tastes and smells'."
+      },
+      {
+        "id": "l7-s2-q08",
+        "type": "mcq",
+        "prompt": "How often is the water tested in the laboratory?",
+        "options": [
+          "A. Every half hour",
+          "B. Once an hour",
+          "C. Every four hours",
+          "D. Once a day"
+        ],
+        "answer": "B",
+        "why": "Ruth says 'The water is then tested every hour in the laboratory.'"
+      },
+      {
+        "id": "l7-s2-q09",
+        "type": "complete",
+        "prompt": "Photography is not allowed in the ___ room.",
+        "answer": [
+          "control"
+        ],
+        "why": "Ruth says 'Please don't take photographs of the control room'."
+      },
+      {
+        "id": "l7-s2-q10",
+        "type": "mcq",
+        "prompt": "What time does the visitor centre close on weekdays?",
+        "options": [
+          "A. Four o'clock",
+          "B. Quarter to five",
+          "C. Half past three",
+          "D. Half past four"
+        ],
+        "answer": "D",
+        "why": "Ruth says 'It's open on weekdays until half past four.'"
+      }
     ]
   },
   {
@@ -116,16 +318,127 @@
       { "speaker": "Dr Marsh", "text": "Good. Your next step is to pilot the point-count method at one park this week. Come back to me with the results on Friday." }
     ],
     "questions": [
-      { "id": "l7-s3-q01", "type": "mcq", "prompt": "How many sites will be surveyed?", "options": ["A. Four", "B. Six", "C. Eight", "D. Ten"], "answer": "B", "why": "Priya says 'We've selected six sites across the city.'" },
-      { "id": "l7-s3-q02", "type": "mcq", "prompt": "Why did Priya choose the railway sites?", "options": ["A. They are quieter", "B. They are cheaper to access", "C. She expected more species there", "D. The council recommended them"], "answer": "C", "why": "She says 'I chose the railway sites because we expected more species there.'" },
-      { "id": "l7-s3-q03", "type": "complete", "prompt": "Length of each dawn survey (minutes):", "answer": ["45", "forty-five", "forty five"], "why": "Tom suggests 'we could reduce the survey to forty-five minutes.'" },
-      { "id": "l7-s3-q04", "type": "mcq", "prompt": "Why does Dr Marsh keep the dawn timing?", "options": ["A. Students prefer mornings", "B. Most species are most active then", "C. The recorders work only at dawn", "D. The university requires it"], "answer": "B", "why": "Dr Marsh explains that 'most species are most active then.'" },
-      { "id": "l7-s3-q05", "type": "mcq", "prompt": "Which recording method does Priya choose?", "options": ["A. Walking transects", "B. Point counts", "C. Camera traps", "D. Mist nets"], "answer": "B", "why": "She says 'I'd prefer to use a point count method' at one spot." },
-      { "id": "l7-s3-q06", "type": "complete", "prompt": "Radius around each point count (metres):", "answer": ["50", "fifty"], "why": "Priya says 'Fifty metres. Anything further and it's hard to be sure.'" },
-      { "id": "l7-s3-q07", "type": "complete", "prompt": "Cost of each sound recorder (pounds):", "answer": ["280", "two hundred and eighty"], "why": "Tom says 'About two hundred and eighty pounds per unit.'" },
-      { "id": "l7-s3-q08", "type": "mcq", "prompt": "How many sound recorders does the team have?", "options": ["A. One", "B. Two", "C. Three", "D. Six"], "answer": "C", "why": "Tom says 'We have budget for three, so we'd need to rotate them.'" },
-      { "id": "l7-s3-q09", "type": "mcq", "prompt": "What must be recorded at the start of each count?", "options": ["A. The number of students present", "B. Wind speed and temperature", "C. Traffic noise levels", "D. The time of sunrise"], "answer": "B", "why": "Priya says 'We'll record the wind speed and temperature at the start of each count.'" },
-      { "id": "l7-s3-q10", "type": "complete", "prompt": "Deadline for the final report:", "answer": ["the third of December", "3 December", "December 3", "3rd December"], "why": "Asked for the deadline, Priya answers 'The third of December.'" }
+      {
+        "id": "l7-s3-q01",
+        "type": "mcq",
+        "prompt": "How many sites will be surveyed?",
+        "options": [
+          "A. Five",
+          "B. Six",
+          "C. Seven",
+          "D. Eight"
+        ],
+        "answer": "B",
+        "why": "Priya says 'We've selected six sites across the city.'"
+      },
+      {
+        "id": "l7-s3-q02",
+        "type": "mcq",
+        "prompt": "Why did Priya choose the railway sites?",
+        "options": [
+          "A. She expected more bird species",
+          "B. They are cheaper to reach by public transport",
+          "C. The council recommended them for the survey",
+          "D. They are closer to the students' homes"
+        ],
+        "answer": "A",
+        "why": "She says 'I chose the railway sites because we expected more species there.'"
+      },
+      {
+        "id": "l7-s3-q03",
+        "type": "complete",
+        "prompt": "Length of each dawn survey (minutes):",
+        "answer": [
+          "45",
+          "forty-five",
+          "forty five"
+        ],
+        "why": "Tom suggests 'we could reduce the survey to forty-five minutes.'"
+      },
+      {
+        "id": "l7-s3-q04",
+        "type": "mcq",
+        "prompt": "Why does Dr Marsh keep the dawn timing?",
+        "options": [
+          "A. Students prefer working in the mornings",
+          "B. The recorders only work at dawn",
+          "C. Most bird species are active then",
+          "D. The university requires early starts"
+        ],
+        "answer": "C",
+        "why": "Dr Marsh explains that 'most species are most active then.'"
+      },
+      {
+        "id": "l7-s3-q05",
+        "type": "mcq",
+        "prompt": "Which recording method does Priya choose?",
+        "options": [
+          "A. Walking transects",
+          "B. Camera traps",
+          "C. Mist nets",
+          "D. Point counts"
+        ],
+        "answer": "D",
+        "why": "She says 'I'd prefer to use a point count method' at one spot."
+      },
+      {
+        "id": "l7-s3-q06",
+        "type": "complete",
+        "prompt": "Radius around each point count (metres):",
+        "answer": [
+          "50",
+          "fifty"
+        ],
+        "why": "Priya says 'Fifty metres. Anything further and it's hard to be sure.'"
+      },
+      {
+        "id": "l7-s3-q07",
+        "type": "complete",
+        "prompt": "Cost of each sound recorder (pounds):",
+        "answer": [
+          "280",
+          "two hundred and eighty"
+        ],
+        "why": "Tom says 'About two hundred and eighty pounds per unit.'"
+      },
+      {
+        "id": "l7-s3-q08",
+        "type": "mcq",
+        "prompt": "How many sound recorders does the team have?",
+        "options": [
+          "A. One",
+          "B. Two",
+          "C. Three",
+          "D. Six"
+        ],
+        "answer": "C",
+        "why": "Tom says 'We have budget for three, so we'd need to rotate them.'"
+      },
+      {
+        "id": "l7-s3-q09",
+        "type": "mcq",
+        "prompt": "What must be recorded at the start of each count?",
+        "options": [
+          "A. Wind speed and temperature",
+          "B. The number of students present",
+          "C. The level of traffic noise nearby",
+          "D. The exact time of sunrise today"
+        ],
+        "answer": "A",
+        "why": "Priya says 'We'll record the wind speed and temperature at the start of each count.'"
+      },
+      {
+        "id": "l7-s3-q10",
+        "type": "complete",
+        "prompt": "Deadline for the final report:",
+        "answer": [
+          "the third of December",
+          "3 December",
+          "December 3",
+          "3rd December"
+        ],
+        "why": "Asked for the deadline, Priya answers 'The third of December.'"
+      }
     ]
   },
   {
@@ -138,28 +451,118 @@
     "script": [
       { "speaker": "Dr Okafor", "text": "Today I want to look at terrace farming, one of the oldest methods humans have used to work steep land. You'll find terraces in the Andes, in the Philippines, and in the hills of southern Italy." },
       { "speaker": "Dr Okafor", "text": "The basic idea is simple. Instead of farming a steep slope as one continuous surface, farmers cut it into a series of flat steps. Each step, or terrace, holds soil and water in place." },
+      { "speaker": "Dr Okafor", "text": "These flat areas also make it easier to plough and plant, since seeds and fertiliser are no longer washed downhill by every shower." },
       { "speaker": "Dr Okafor", "text": "The most important benefit is erosion control. On a bare slope, heavy rain can wash away the topsoil within a few seasons. Terraces slow the water down, so the soil has time to soak in rather than run off." },
       { "speaker": "Dr Okafor", "text": "Terraces also make irrigation easier. Water can be directed across each level, and in many traditional systems it flows down from one terrace to the next. This is far more efficient than trying to water a steep hillside from the top." },
       { "speaker": "Dr Okafor", "text": "However, building terraces takes enormous effort. The retaining walls are usually built from local stone, and in a typical hillside project a team might need several years to finish a single terrace system." },
+      { "speaker": "Dr Okafor", "text": "The work is usually shared among families, with neighbours helping one another, because no single household could build a whole system alone." },
       { "speaker": "Dr Okafor", "text": "That is why maintenance matters so much. A terrace wall that is not repaired after a storm can collapse, and once one wall fails, the water it held can cut through the soil behind it very quickly." },
       { "speaker": "Dr Okafor", "text": "Now let's look at a case study. In a survey of abandoned terraces in a mountain region of Nepal, researchers found that nearly seventy percent of the walls had collapsed within twenty years of the farmers leaving." },
       { "speaker": "Dr Okafor", "text": "The researchers' main finding was that the loss of terraces was not caused by weather alone. Labour migration to the cities removed the people who used to repair the walls every year." },
+      { "speaker": "Dr Okafor", "text": "Without regular attention, even a well-built wall slowly bulges outwards as the soil behind it becomes saturated with water." },
       { "speaker": "Dr Okafor", "text": "This matters for policy. Some governments now offer grants to help farmers repair terraces before they fail, rather than paying for emergency work afterwards. Those programmes have proved cheaper in the long run." },
       { "speaker": "Dr Okafor", "text": "Let's turn to crop choice. On terraces, farmers traditionally grow crops with shallow roots, such as beans and potatoes, because deep roots can disturb the retaining walls." },
+      { "speaker": "Dr Okafor", "text": "Some farmers also plant grasses or small shrubs along the edges of each level, which helps to bind the soil together." },
       { "speaker": "Dr Okafor", "text": "A final point concerns water. Many terrace systems were designed around seasonal rain, so they store water in small ponds at the top of each slope. Modern engineers often copy this approach when they plan drainage for new housing estates." },
+      { "speaker": "Dr Okafor", "text": "These ponds also support wildlife, and in dry periods they give villagers a reserve of water close to their fields." },
       { "speaker": "Dr Okafor", "text": "For your assignment, I'd like you to compare two sites: one that still has working terraces and one where they have been abandoned. Use the evidence from the case study, and note the specific factor that explains the difference." }
     ],
     "questions": [
-      { "id": "l7-s4-q01", "type": "complete", "prompt": "Terrace farming: farmers cut steep land into a series of flat ______.", "answer": ["steps", "step"], "why": "The lecturer says farmers 'cut it into a series of flat steps.'" },
-      { "id": "l7-s4-q02", "type": "complete", "prompt": "The main benefit of terraces is ______ control.", "answer": ["erosion"], "why": "She says 'The most important benefit is erosion control.'" },
-      { "id": "l7-s4-q03", "type": "complete", "prompt": "Heavy rain can wash away the ______ within a few seasons.", "answer": ["topsoil"], "why": "She explains that heavy rain 'can wash away the topsoil within a few seasons.'" },
-      { "id": "l7-s4-q04", "type": "complete", "prompt": "Terrace walls are usually built from local ______.", "answer": ["stone"], "why": "She says 'The retaining walls are usually built from local stone.'" },
-      { "id": "l7-s4-q05", "type": "complete", "prompt": "A single terrace system may take several ______ to finish.", "answer": ["years", "year"], "why": "She says a team 'might need several years to finish a single terrace system.'" },
-      { "id": "l7-s4-q06", "type": "complete", "prompt": "In the Nepal survey, nearly ______ percent of the walls had collapsed.", "answer": ["seventy", "70"], "why": "The lecturer reports that 'nearly seventy percent of the walls had collapsed.'" },
-      { "id": "l7-s4-q07", "type": "complete", "prompt": "The researchers linked the loss of terraces to ______ migration to cities.", "answer": ["labour", "labor"], "why": "She says 'Labour migration to the cities removed the people who used to repair the walls.'" },
-      { "id": "l7-s4-q08", "type": "complete", "prompt": "Some governments offer ______ to help farmers repair terraces.", "answer": ["grants", "grant"], "why": "She says 'Some governments now offer grants to help farmers repair terraces.'" },
-      { "id": "l7-s4-q09", "type": "complete", "prompt": "Farmers grow shallow-rooted crops such as ______ and potatoes.", "answer": ["beans"], "why": "She names beans and potatoes as shallow-rooted crops grown on terraces." },
-      { "id": "l7-s4-q10", "type": "complete", "prompt": "Ponds store water at the ______ of each slope.", "answer": ["top"], "why": "She explains that systems store water 'in small ponds at the top of each slope.'" }
+      {
+        "id": "l7-s4-q01",
+        "type": "complete",
+        "prompt": "Terrace farming: farmers cut steep land into a series of flat ______.",
+        "answer": [
+          "steps",
+          "step"
+        ],
+        "why": "The lecturer says farmers 'cut it into a series of flat steps.'"
+      },
+      {
+        "id": "l7-s4-q02",
+        "type": "complete",
+        "prompt": "The main benefit of terraces is ______ control.",
+        "answer": [
+          "erosion"
+        ],
+        "why": "She says 'The most important benefit is erosion control.'"
+      },
+      {
+        "id": "l7-s4-q03",
+        "type": "complete",
+        "prompt": "Heavy rain can wash away the ______ within a few seasons.",
+        "answer": [
+          "topsoil"
+        ],
+        "why": "She explains that heavy rain 'can wash away the topsoil within a few seasons.'"
+      },
+      {
+        "id": "l7-s4-q04",
+        "type": "complete",
+        "prompt": "Terrace walls are usually built from local ______.",
+        "answer": [
+          "stone"
+        ],
+        "why": "She says 'The retaining walls are usually built from local stone.'"
+      },
+      {
+        "id": "l7-s4-q05",
+        "type": "complete",
+        "prompt": "A single terrace system may take several ______ to finish.",
+        "answer": [
+          "years",
+          "year"
+        ],
+        "why": "She says a team 'might need several years to finish a single terrace system.'"
+      },
+      {
+        "id": "l7-s4-q06",
+        "type": "complete",
+        "prompt": "In the Nepal survey, nearly ______ percent of the walls had collapsed.",
+        "answer": [
+          "seventy",
+          "70"
+        ],
+        "why": "The lecturer reports that 'nearly seventy percent of the walls had collapsed.'"
+      },
+      {
+        "id": "l7-s4-q07",
+        "type": "complete",
+        "prompt": "The researchers linked the loss of terraces to ______ migration to cities.",
+        "answer": [
+          "labour",
+          "labor"
+        ],
+        "why": "She says 'Labour migration to the cities removed the people who used to repair the walls.'"
+      },
+      {
+        "id": "l7-s4-q08",
+        "type": "complete",
+        "prompt": "Some governments offer ______ to help farmers repair terraces.",
+        "answer": [
+          "grants",
+          "grant"
+        ],
+        "why": "She says 'Some governments now offer grants to help farmers repair terraces.'"
+      },
+      {
+        "id": "l7-s4-q09",
+        "type": "complete",
+        "prompt": "Farmers grow shallow-rooted crops such as ______ and potatoes.",
+        "answer": [
+          "beans"
+        ],
+        "why": "She names beans and potatoes as shallow-rooted crops grown on terraces."
+      },
+      {
+        "id": "l7-s4-q10",
+        "type": "complete",
+        "prompt": "Ponds store water at the ______ of each slope.",
+        "answer": [
+          "top"
+        ],
+        "why": "She explains that systems store water 'in small ponds at the top of each slope.'"
+      }
     ]
   }
 ]

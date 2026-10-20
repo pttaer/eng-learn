@@ -335,3 +335,323 @@
 - **Synonyms**: climate
 - **Register**: Neutral / Everyday
 - **Remind Candidate**: false
+
+## airport
+- **ID**: vocab-a2-22
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: airport
+- **IPA**: /ˈeə.pɔːt/
+- **Definition**: A place where planes arrive and leave.
+- **Vietnamese**: sân bay
+- **Context**: We arrived at the airport two hours early.
+- **CEFR Rank**: A2
+- **Collocates**: at the airport, airport bus, airport security
+- **Synonyms**: -
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## ticket
+- **ID**: vocab-a2-23
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: ticket
+- **IPA**: /ˈtɪk.ɪt/
+- **Definition**: A piece of paper that lets you travel or enter a place.
+- **Vietnamese**: vé
+- **Context**: I bought two tickets for the concert.
+- **CEFR Rank**: A2
+- **Collocates**: buy a ticket, train ticket, ticket office
+- **Synonyms**: pass
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## hotel
+- **ID**: vocab-a2-24
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: hotel
+- **IPA**: /həʊˈtel/
+- **Definition**: A building where you pay to sleep for a few nights.
+- **Vietnamese**: khách sạn
+- **Context**: We stayed in a small hotel near the sea.
+- **CEFR Rank**: A2
+- **Collocates**: book a hotel, hotel room, stay in a hotel
+- **Synonyms**: -
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## map
+- **ID**: vocab-a2-25
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: map
+- **IPA**: /mæp/
+- **Definition**: A drawing that shows where places are.
+- **Vietnamese**: bản đồ
+- **Context**: Can you show me the way on the map?
+- **CEFR Rank**: A2
+- **Collocates**: read a map, city map, on the map
+- **Synonyms**: -
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## delay
+- **ID**: vocab-a2-26
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: delay
+- **IPA**: /dɪˈleɪ/
+- **Definition**: A time when something is late or waits longer than planned.
+- **Vietnamese**: sự chậm trễ, sự hoãn
+- **Context**: There was a long delay at the station.
+- **CEFR Rank**: A2
+- **Collocates**: a long delay, flight delay, without delay
+- **Synonyms**: wait
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## crowded
+- **ID**: vocab-a2-27
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: crowded
+- **IPA**: /ˈkraʊ.dɪd/
+- **Definition**: Full of people.
+- **Vietnamese**: đông người
+- **Context**: The market is always crowded on Sundays.
+- **CEFR Rank**: A2
+- **Collocates**: a crowded bus, crowded street, very crowded
+- **Synonyms**: busy, packed
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## invite
+- **ID**: vocab-a2-28
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: invite
+- **IPA**: /ɪnˈvaɪt/
+- **Definition**: To ask someone to come to a party or event.
+- **Vietnamese**: mời
+- **Context**: I want to invite my friends to dinner.
+- **CEFR Rank**: A2
+- **Collocates**: invite someone to dinner, invite friends, invited guests
+- **Synonyms**: -
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## borrow
+- **ID**: vocab-a2-29
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: borrow
+- **IPA**: /ˈbɒr.əʊ/
+- **Definition**: To take something from someone and give it back later.
+- **Vietnamese**: mượn
+- **Context**: Can I borrow your pen, please?
+- **CEFR Rank**: A2
+- **Collocates**: borrow money, borrow a book, borrow from a friend
+- **Synonyms**: -
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## neighbour
+- **ID**: vocab-a2-30
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: neighbour
+- **IPA**: /ˈneɪ.bər/
+- **Definition**: A person who lives near you.
+- **Vietnamese**: hàng xóm
+- **Context**: Our neighbour has a very friendly cat.
+- **CEFR Rank**: A2
+- **Collocates**: next-door neighbour, good neighbour, friendly neighbour
+- **Synonyms**: -
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## traffic
+- **ID**: vocab-a2-31
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: traffic
+- **IPA**: /ˈtræf.ɪk/
+- **Definition**: The cars and other vehicles on a road.
+- **Vietnamese**: giao thông, xe cộ
+- **Context**: The traffic was very bad this morning.
+- **CEFR Rank**: A2
+- **Collocates**: heavy traffic, traffic jam, traffic lights
+- **Synonyms**: -
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## pharmacy
+- **ID**: vocab-a2-32
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: pharmacy
+- **IPA**: /ˈfɑː.mə.si/
+- **Definition**: A shop where you buy medicine.
+- **Vietnamese**: hiệu thuốc
+- **Context**: The pharmacy opens at eight o'clock.
+- **CEFR Rank**: A2
+- **Collocates**: go to the pharmacy, a local pharmacy, pharmacy shop
+- **Synonyms**: chemist
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## recipe
+- **ID**: vocab-a2-33
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: recipe
+- **IPA**: /ˈres.ɪ.pi/
+- **Definition**: Instructions for how to cook a food.
+- **Vietnamese**: công thức nấu ăn
+- **Context**: This recipe is easy and quick.
+- **CEFR Rank**: A2
+- **Collocates**: follow a recipe, a family recipe, recipe book
+- **Synonyms**: -
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## repair
+- **ID**: vocab-a2-34
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: repair
+- **IPA**: /rɪˈpeər/
+- **Definition**: To fix something that is broken.
+- **Vietnamese**: sửa chữa
+- **Context**: He can repair bicycles.
+- **CEFR Rank**: A2
+- **Collocates**: repair a car, repair a roof, repair shop
+- **Synonyms**: fix, mend
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## comfortable
+- **ID**: vocab-a2-35
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: comfortable
+- **IPA**: /ˈkʌm.fə.tə.bəl/
+- **Definition**: Making you feel relaxed, not tired or in pain.
+- **Vietnamese**: thoải mái
+- **Context**: This sofa is very comfortable.
+- **CEFR Rank**: A2
+- **Collocates**: a comfortable chair, feel comfortable, comfortable shoes
+- **Synonyms**: cosy
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## dangerous
+- **ID**: vocab-a2-36
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: dangerous
+- **IPA**: /ˈdeɪn.dʒər.əs/
+- **Definition**: Able to hurt you or cause problems.
+- **Vietnamese**: nguy hiểm
+- **Context**: It is dangerous to swim here.
+- **CEFR Rank**: A2
+- **Collocates**: a dangerous road, dangerous animal, very dangerous
+- **Synonyms**: risky
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## popular
+- **ID**: vocab-a2-37
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: popular
+- **IPA**: /ˈpɒp.jə.lər/
+- **Definition**: Liked by many people.
+- **Vietnamese**: phổ biến, được ưa chuộng
+- **Context**: This is a popular place for tourists.
+- **CEFR Rank**: A2
+- **Collocates**: a popular song, popular with young people, very popular
+- **Synonyms**: -
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## earn
+- **ID**: vocab-a2-38
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: earn
+- **IPA**: /ɜːn/
+- **Definition**: To get money for work.
+- **Vietnamese**: kiếm (tiền)
+- **Context**: She earns a good salary in her new job.
+- **CEFR Rank**: A2
+- **Collocates**: earn money, earn a living, earn a lot
+- **Synonyms**: make
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## collect
+- **ID**: vocab-a2-39
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: collect
+- **IPA**: /kəˈlekt/
+- **Definition**: To bring things together or keep them as a hobby.
+- **Vietnamese**: thu thập, sưu tầm
+- **Context**: He likes to collect old coins.
+- **CEFR Rank**: A2
+- **Collocates**: collect stamps, collect money, collect information
+- **Synonyms**: gather
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## fever
+- **ID**: vocab-a2-40
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: fever
+- **IPA**: /ˈfiː.vər/
+- **Definition**: A body temperature that is higher than normal.
+- **Vietnamese**: cơn sốt
+- **Context**: The child has a fever and a cough.
+- **CEFR Rank**: A2
+- **Collocates**: have a fever, high fever, a slight fever
+- **Synonyms**: -
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false
+
+## schedule
+- **ID**: vocab-a2-41
+- **Mode**: CEFR_ASCENT
+- **Level**: 1
+- **CEFR**: A2
+- **Word**: schedule
+- **IPA**: /ˈʃed.juːl/
+- **Definition**: A plan that lists times for things to happen.
+- **Vietnamese**: lịch trình, thời khóa biểu
+- **Context**: My schedule is very full this week.
+- **CEFR Rank**: A2
+- **Collocates**: a busy schedule, bus schedule, on schedule
+- **Synonyms**: timetable
+- **Register**: Neutral / Everyday
+- **Remind Candidate**: false

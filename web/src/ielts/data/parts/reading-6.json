@@ -68,10 +68,10 @@
     "type": "mcq",
     "prompt": "What does paragraph D say about the idea that life began at hydrothermal vents?",
     "options": [
-     "A. It has been proven by the vent discoveries.",
-     "B. It remains a debated idea.",
-     "C. It was rejected soon after 1977.",
-     "D. It applies only to modern vents."
+     "A. It has been conclusively proven by the vent discoveries.",
+     "B. It is still debated among researchers.",
+     "C. It was rejected by most scientists shortly after 1977.",
+     "D. It applies only to modern vents, not to the early Earth."
     ],
     "answer": "B",
     "why": "Paragraph D: \"The hypothesis remains contested, because the early Earth's chemistry is difficult to reconstruct\". A is contradicted by the same sentence; C and D are not stated."
@@ -81,13 +81,13 @@
     "type": "mcq",
     "prompt": "According to paragraph E, what makes vent animals vulnerable?",
     "options": [
-     "A. Their bacteria cannot survive without oxygen.",
-     "B. Vent chemistry can change quickly, forcing animals to move or find a new source.",
-     "C. Predators feed on them in large numbers.",
-     "D. Mining is the only threat they face."
+     "A. Their symbiotic bacteria cannot survive without dissolved oxygen.",
+     "B. Predators on the sea floor feed on them in large numbers.",
+     "C. Vent chemistry can change quickly, so animals must move.",
+     "D. Deep-sea mining is the only serious threat that they face."
     ],
-    "answer": "B",
-    "why": "Paragraph E: \"The chemical environment changes quickly, and a vent that is active for decades may become silent within a few years\". D is contradicted by the same paragraph, which names changing chemistry as well as mining."
+    "answer": "C",
+    "why": "Paragraph E: \"The chemical environment changes quickly, and a vent that is active for decades may become silent within a few years\". D is contradicted by the same paragraph, which names changing chemistry as well as mining; A and B are not stated."
    },
    {
     "id": "r22-q07",
@@ -296,26 +296,26 @@
     "type": "mcq",
     "prompt": "According to paragraph C, why were astronomical methods difficult at sea?",
     "options": [
-     "A. The Moon was never visible from a ship.",
-     "B. The images wavered on a moving deck.",
-     "C. Telescopes could not be made small enough.",
-     "D. The tables had been lost."
+     "A. Telescope images wavered on a moving deck.",
+     "B. The Moon could never be seen clearly from a ship at night.",
+     "C. Telescopes could not be made small enough to carry on ships.",
+     "D. The necessary tables had been lost in a shipwreck."
     ],
-    "answer": "B",
-    "why": "Paragraph C: \"but they were difficult on a moving deck, where the images wavered\". A, C and D are not stated in the passage."
+    "answer": "A",
+    "why": "Paragraph C: \"but they were difficult on a moving deck, where the images wavered\". B, C and D are not stated in the passage."
    },
    {
     "id": "r23-q10",
     "type": "mcq",
     "prompt": "What is the writer's main point in paragraph G?",
     "options": [
-     "A. The longitude problem was solved by a single inventor.",
-     "B. The chronometer was a technical object that also required trust.",
-     "C. Navigators never trusted clocks.",
-     "D. Governments played no part in the solution."
+     "A. The longitude problem was solved by a single inventor working alone.",
+     "B. Navigators never trusted clocks of any kind on their ships.",
+     "C. Governments played no real part in finding the solution.",
+     "D. A chronometer was a clock that also demanded trust."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"A chronometer was a clock, but it was also a test of trust, in which a navigator had to believe that a machine could be right when the stars were hidden\". D is contradicted by the navies that required chronometers in paragraph F."
+    "answer": "D",
+    "why": "Paragraph G: \"A chronometer was a clock, but it was also a test of trust, in which a navigator had to believe that a machine could be right when the stars were hidden\". C is contradicted by the navies that required chronometers in paragraph F; A is contradicted by \"refined by many hands over decades\"."
    },
    {
     "id": "r23-q11",
@@ -463,26 +463,26 @@
     "type": "mcq",
     "prompt": "What does the writer say about the balance between speed and accuracy in paragraph D?",
     "options": [
-     "A. Colonies always pick the fastest option.",
-     "B. A colony that decides too quickly may settle for an inferior cavity.",
-     "C. Colonies never choose an inferior site.",
-     "D. Speed and accuracy have no effect on each other."
+     "A. Deciding too quickly can lead to a poorer cavity.",
+     "B. Colonies always pick whichever option is found fastest.",
+     "C. Colonies never end up in an inferior site, however fast.",
+     "D. Speed and accuracy have no effect on each other at all."
     ],
-    "answer": "B",
-    "why": "Paragraph D: \"A colony that decides too quickly may settle for an inferior cavity, while a colony that waits too long risks losing the swarm altogether\". The same paragraph says the colony must balance speed and accuracy, which rules out D."
+    "answer": "A",
+    "why": "Paragraph D: \"A colony that decides too quickly may settle for an inferior cavity, while a colony that waits too long risks losing the swarm altogether\". C is contradicted by \"they do not always find the very best site available\"; the same paragraph says the colony must balance speed and accuracy, which rules out D."
    },
    {
     "id": "r24-q09",
     "type": "mcq",
     "prompt": "According to paragraph G, what do human organisations need?",
     "options": [
-     "A. A reason to abandon consensus.",
-     "B. Mechanisms that turn scattered opinions into a single commitment.",
-     "C. A central authority that gives orders.",
-     "D. Individuals who hold complete information."
+     "A. A clear reason to abandon the search for consensus entirely.",
+     "B. A strong central authority that issues orders to everyone.",
+     "C. Ways to turn scattered opinions into one commitment.",
+     "D. Individual members who each hold complete information at the start."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"consensus need not require a central authority, but it does require mechanisms that can turn scattered opinions into a single commitment\"."
+    "answer": "C",
+    "why": "Paragraph G: \"consensus need not require a central authority, but it does require mechanisms that can turn scattered opinions into a single commitment\". B is contradicted by \"need not require a central authority\"; D is contradicted by \"without any individual holding complete information\"."
    },
    {
     "id": "r24-q10",
@@ -626,23 +626,23 @@
     "type": "mcq",
     "prompt": "What does the writer suggest about Perkin's discovery in paragraph G?",
     "options": [
-     "A. It was the result of careful planning.",
-     "B. It is better understood as an early example of a larger shift.",
-     "C. It had no effect on other industries.",
-     "D. It was made possible by natural dyes."
+     "A. It was the result of careful planning by a trained chemist.",
+     "B. It had no lasting effect on any later industries or products.",
+     "C. It was only made possible by earlier natural dye research.",
+     "D. It was an early example of a larger shift."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"Perkin's accident is therefore often told as a story of luck, but it is better understood as an early example of a larger shift\". A is contradicted by the word accident and the story of luck."
+    "answer": "D",
+    "why": "Paragraph G: \"Perkin's accident is therefore often told as a story of luck, but it is better understood as an early example of a larger shift\". A is contradicted by the word accident and the story of luck; B is contradicted by the patterns that \"would recur in pharmaceuticals, plastics and fertilisers\"; C is not stated."
    },
    {
     "id": "r25-q08",
     "type": "mcq",
     "prompt": "According to paragraph E, what was one consequence of the growth of the dye industry?",
     "options": [
-     "A. Fashion stopped changing.",
+     "A. Fashion stopped changing once bright colours became common.",
      "B. Rivers near dye works were sometimes polluted.",
-     "C. Governments banned all synthetic dyes.",
-     "D. Natural dyes became more popular."
+     "C. Governments banned all synthetic dyes within a few years.",
+     "D. Natural dyes became more popular than synthetic ones."
     ],
     "answer": "B",
     "why": "Paragraph E: \"residues that polluted rivers near dye works\". A is contradicted by \"The new colours spread quickly through fashion\"; C by \"Early regulation was limited\"; D by \"replace many natural products\" in paragraph B."
@@ -814,26 +814,26 @@
     "type": "mcq",
     "prompt": "What is the writer's main point in paragraph G?",
     "options": [
-     "A. Waiting time is set only by the number of staff.",
-     "B. Information, fairness and comfort shape how a wait is experienced.",
-     "C. Long waits never damage trust.",
-     "D. Designers should avoid all queues."
+     "A. Information, fairness and comfort shape the wait's meaning.",
+     "B. Waiting time is determined only by the number of staff on duty.",
+     "C. Long waits never damage customers' trust in an organisation.",
+     "D. Designers should aim to avoid all queues where possible."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"The minutes that pass in a queue are fixed by capacity, but the meaning of those minutes is shaped by information, fairness and comfort\". C is contradicted by \"can damage trust long after the queue has moved\"."
+    "answer": "A",
+    "why": "Paragraph G: \"The minutes that pass in a queue are fixed by capacity, but the meaning of those minutes is shaped by information, fairness and comfort\". C is contradicted by \"can damage trust long after the queue has moved\"; B and D are not the writer's point."
    },
    {
     "id": "r26-q09",
     "type": "mcq",
     "prompt": "According to paragraph E, why might a delay be judged harshly?",
     "options": [
-     "A. Customers expect value and may blame carelessness.",
-     "B. Staff always ignore complaints.",
-     "C. Announcements make queues longer.",
-     "D. Queues are always unfair."
+     "A. Staff always ignore customers' complaints about delays.",
+     "B. Announcements about the delay make the queue even longer.",
+     "C. Customers expect value and may blame carelessness.",
+     "D. Queues in service settings are always organised unfairly."
     ],
-    "answer": "A",
-    "why": "Paragraph E: \"People who have paid for a service often expect to be served quickly\" and \"the customer may attribute the delay to carelessness\". D is contradicted by the statement that a fair queue is more acceptable."
+    "answer": "C",
+    "why": "Paragraph E: \"People who have paid for a service often expect to be served quickly\" and \"the customer may attribute the delay to carelessness\". D is contradicted by the statement in paragraph C that a fair queue is more acceptable; B is contradicted by the point that an announcement \"may reduce complaints\"; A is not stated."
    },
    {
     "id": "r26-q10",

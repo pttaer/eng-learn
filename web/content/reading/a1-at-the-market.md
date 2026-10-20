@@ -6,7 +6,7 @@ cefrLevel: A1
 genre: "Shopping and Food"
 source: "Original text written for this app"
 wordCount: 104
-readingTime: "1.2 min @ 120 WPM (Intensive)"
+readingTime: "0.9 min @ 120 WPM (Intensive)"
 ---
 
 # Passage

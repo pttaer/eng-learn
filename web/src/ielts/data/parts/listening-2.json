@@ -193,39 +193,39 @@
     "type": "mcq",
     "prompt": "What additional cost might apply?",
     "options": [
-     "A. A charge if repairs are needed",
-     "B. A charge for credit card payment",
-     "C. A charge for emergency appointment",
+     "A. A charge for credit card payment",
+     "B. A charge for emergency appointments",
+     "C. A charge if repairs are needed",
      "D. A charge for technician travel time"
     ],
-    "answer": "A",
-    "why": "Technician says 'if you need any repairs, there would be an additional charge.' Option B is ruled out because credit card payment is mentioned but no fee is stated. Options C and D are not mentioned."
+    "answer": "C",
+    "why": "Technician says 'if you need any repairs, there would be an additional charge.' Option C matches. Option A is ruled out because credit card payment is mentioned but no fee is stated. Options B and D are not mentioned."
    },
    {
     "id": "l2-s1-q09",
     "type": "mcq",
     "prompt": "Which payment methods are accepted?",
     "options": [
-     "A. Bank transfer or cash only",
-     "B. All major credit cards or bank transfer",
-     "C. Credit cards or cheque only",
-     "D. All major credit cards only"
+     "A. Bank transfer or cash on the day only",
+     "B. Credit cards or personal cheque only",
+     "C. All major credit cards only, no transfers",
+     "D. All major credit cards or bank transfer"
     ],
-    "answer": "B",
-    "why": "Technician explicitly states 'Yes, we accept all major credit cards or bank transfer.' Options A, B, and D are incomplete or inaccurate."
+    "answer": "D",
+    "why": "Technician explicitly states 'Yes, we accept all major credit cards or bank transfer.' Option D matches; A, B and C are incomplete or inaccurate."
    },
    {
     "id": "l2-s1-q10",
     "type": "mcq",
     "prompt": "What does the technician say about the boiler model number?",
     "options": [
-     "A. It is essential and must be provided before the visit",
-     "B. It is only needed if repairs are expected",
-     "C. It is helpful but not required; the technician will identify it",
-     "D. It should be provided with the credit card on the day"
+     "A. It helps, but is not required; the technician can identify it",
+     "B. It is essential and must be emailed to the office before the visit",
+     "C. It is only needed if repairs are expected during the inspection",
+     "D. It should be shown to the technician along with the credit card"
     ],
-    "answer": "C",
-    "why": "Technician says 'It would help if you could find the model number, but if you can't, don't worry. Our technician will identify it on the day.' This clearly indicates it is helpful but not required. Options A, C, and D misrepresent this."
+    "answer": "A",
+    "why": "Technician says 'It would help if you could find the model number, but if you can't, don't worry. Our technician will identify it on the day.' This clearly indicates it is helpful but not required (A). Options B, C and D misrepresent this."
    }
   ]
  },
@@ -288,52 +288,52 @@
     "type": "mcq",
     "prompt": "Where should visitors start their tour according to the guide?",
     "options": [
-     "A. Gallery Two",
-     "B. Gallery Three",
-     "C. Gallery Four",
-     "D. Gallery One"
+     "A. Gallery Three",
+     "B. Gallery One",
+     "C. Gallery Two",
+     "D. Gallery Four"
     ],
-    "answer": "D",
-    "why": "Guide states 'We recommend you start at Gallery One, where you will find the earliest locomotives from the eighteen sixties.' Options A, C, and D are later galleries not recommended as starting points."
+    "answer": "B",
+    "why": "Guide states 'We recommend you start at Gallery One, where you will find the earliest locomotives from the eighteen sixties.' Options A, C and D are later galleries not recommended as starting points."
    },
    {
     "id": "l2-s2-q02",
     "type": "mcq",
     "prompt": "What was the maximum speed of the Stephenson locomotive?",
     "options": [
-     "A. Twenty miles per hour",
-     "B. Thirty miles per hour",
-     "C. Fifty miles per hour",
+     "A. Thirty miles per hour",
+     "B. Fifty miles per hour",
+     "C. Twenty-five miles per hour",
      "D. Ninety miles per hour"
     ],
-    "answer": "B",
-    "why": "Guide says 'It could reach speeds of up to thirty miles per hour, which was considered extraordinary at that time.' The Flying Scotsman reached ninety miles per hour, making option D incorrect. Options A and C are lower speeds."
+    "answer": "A",
+    "why": "Guide says 'It could reach speeds of up to thirty miles per hour, which was considered extraordinary at that time.' The Flying Scotsman reached ninety miles per hour, making option D incorrect. Options B and C are not mentioned."
    },
    {
     "id": "l2-s2-q03",
     "type": "mcq",
     "prompt": "What was the extent of British railway network growth between 1870 and 1900?",
     "options": [
-     "A. From one thousand to five thousand miles",
-     "B. From ten thousand to twenty thousand miles",
+     "A. From one thousand to just over five thousand miles",
+     "B. From ten thousand to about twenty thousand miles",
      "C. From five thousand to over twenty thousand miles",
-     "D. From two thousand to fifteen thousand miles"
+     "D. From two thousand to nearly fifteen thousand miles"
     ],
     "answer": "C",
-    "why": "Guide explicitly states 'Between eighteen seventy and nineteen hundred, the British railway network grew from five thousand miles to over twenty thousand miles.' Options A, C, and D contain incorrect numbers or date ranges."
+    "why": "Guide explicitly states 'Between eighteen seventy and nineteen hundred, the British railway network grew from five thousand miles to over twenty thousand miles.' Options A, B and D contain incorrect numbers."
    },
    {
     "id": "l2-s2-q04",
     "type": "mcq",
     "prompt": "In which gallery will visitors find the signal box?",
     "options": [
-     "A. Gallery Two",
-     "B. Gallery One",
-     "C. Gallery Three",
-     "D. Gallery Four"
+     "A. Gallery One",
+     "B. Gallery Three",
+     "C. Gallery Four",
+     "D. Gallery Two"
     ],
-    "answer": "A",
-    "why": "The guide says \"The signal box at the far end of Gallery Two demonstrates how train schedules were managed\"; Gallery One holds the earliest locomotives and Gallery Three the Flying Scotsman."
+    "answer": "D",
+    "why": "The guide says \"The signal box at the far end of Gallery Two demonstrates how train schedules were managed\"; Gallery One (A) holds the earliest locomotives and Gallery Three (B) the Flying Scotsman."
    },
    {
     "id": "l2-s2-q05",
@@ -349,8 +349,8 @@
     "type": "complete",
     "prompt": "The express train known as the Flying Scotsman first entered service in _______.",
     "answer": [
-      "nineteen twenty-three",
-      "1923"
+     "nineteen twenty-three",
+     "1923"
     ],
     "why": "Guide says 'The Flying Scotsman was introduced in nineteen twenty-three and became a symbol of luxury rail travel' and earlier mentions it 'regularly achieved speeds of over ninety miles per hour.'"
    },
@@ -368,13 +368,13 @@
     "type": "mcq",
     "prompt": "Why could modern diesel and electric locomotives be considered superior to steam engines?",
     "options": [
-     "A. They could operate faster speeds with smoother acceleration",
-     "B. They required less complex engineering and fewer parts",
+     "A. They required less complex engineering and fewer parts",
+     "B. They could haul heavier loads with greater fuel efficiency",
      "C. They could function reliably in all weather conditions",
-     "D. They could haul heavier loads with greater fuel efficiency"
+     "D. They could operate faster speeds with smoother acceleration"
     ],
-    "answer": "D",
-    "why": "The guide explicitly states 'These engines could haul heavier loads with far greater fuel efficiency compared to steam engines.' Option D directly cites this advantage. The other options, while plausible improvements, are not mentioned in the audio guide."
+    "answer": "B",
+    "why": "The guide explicitly states 'These engines could haul heavier loads with far greater fuel efficiency compared to steam engines.' Option B directly cites this advantage. The other options, while plausible improvements, are not mentioned in the audio guide."
    },
    {
     "id": "l2-s2-q09",
@@ -390,13 +390,13 @@
     "type": "mcq",
     "prompt": "Where is the museum shop located?",
     "options": [
-     "A. By the main entrance",
-     "B. On the upper mezzanine",
-     "C. In Gallery Four",
+     "A. On the upper mezzanine",
+     "B. In Gallery Four",
+     "C. By the main entrance",
      "D. In the interactive section"
     ],
-    "answer": "A",
-    "why": "Guide states 'The museum shop is located by the main entrance.' Option B is the café on the upper mezzanine, C is Gallery Four and D is the interactive section."
+    "answer": "C",
+    "why": "Guide states 'The museum shop is located by the main entrance.' Option A is the café on the upper mezzanine, B is Gallery Four and D is the interactive section."
    }
   ]
  },
@@ -501,13 +501,13 @@
     "type": "mcq",
     "prompt": "What was the students' original research design, and what did they change?",
     "options": [
-     "A. They changed from surveying one reef to surveying multiple reefs",
-     "B. They changed from surveying multiple reefs to focusing on one reef with multiple depth zones",
-     "C. They changed from surveying reefs to studying fish only",
-     "D. They changed from one reef to studying five different reefs"
+     "A. They changed from several reefs to one reef with multiple depth zones",
+     "B. They changed from surveying one reef to comparing multiple reef systems",
+     "C. They changed from surveying reefs to studying fish species at a single depth",
+     "D. They changed from one reef to comparing five different reef systems"
     ],
-    "answer": "B",
-    "why": "David says 'after reviewing the literature, we think focusing on one reef with multiple depth zones would be more manageable.' Option A reverses the change; C and D misstate what they studied."
+    "answer": "A",
+    "why": "David says 'after reviewing the literature, we think focusing on one reef with multiple depth zones would be more manageable.' Option A states the change; B reverses it, and C and D misstate what they studied."
    },
    {
     "id": "l2-s3-q02",
@@ -523,8 +523,8 @@
     "type": "complete",
     "prompt": "Transect line length used at each depth, in meters: _______",
     "answer": [
-      "fifty",
-      "50"
+     "fifty",
+     "50"
     ],
     "why": "David describes the measurement protocol: 'We'll use underwater photography and measurements along a fifty-meter transect line at each depth.' Fifty meters is the transect line length."
    },
@@ -535,24 +535,24 @@
     "options": [
      "A. Collecting underwater photography and transect measurements",
      "B. Using fish traps to sample species composition",
-     "C. Using a submarine for deep-water observation",
-     "D. Comparing data with historical studies from the same reef"
+     "C. Comparing data with historical studies from the same reef",
+     "D. Using a submarine for deep-water observation"
     ],
-    "answer": "C",
-    "why": "Amira states 'We initially thought about using a submarine, but that's not realistic.' Options B and C are methods the students decided to use; option D is their comparison approach. Only option C represents a method they considered and rejected."
+    "answer": "D",
+    "why": "Amira states 'We initially thought about using a submarine, but that's not realistic.' Options A and B are methods the students decided to use; option C is their comparison approach. Only option D represents a method they considered and rejected."
    },
    {
     "id": "l2-s3-q05",
     "type": "mcq",
     "prompt": "Why is the dry season chosen for fieldwork?",
     "options": [
-     "A. Because water visibility is best",
-     "B. Because fewer fish are present at that time",
+     "A. Because fewer fish are present at that time",
+     "B. Because water visibility is best",
      "C. Because water temperature is warmer",
      "D. Because funding is available only in that season"
     ],
-    "answer": "A",
-    "why": "David explains 'We'd aim for September through November' and says 'spread across the dry season when water visibility is best.' Options A, C, and D are not mentioned as reasons."
+    "answer": "B",
+    "why": "David explains 'We'd aim for September through November' and says 'spread across the dry season when water visibility is best.' Options A, C and D are not mentioned as reasons."
    },
    {
     "id": "l2-s3-q06",
@@ -577,13 +577,13 @@
     "type": "mcq",
     "prompt": "What will the students use as a basis for comparison to measure reef resilience?",
     "options": [
-     "A. Computer models predicting reef change",
-     "B. Data from an adjacent healthy reef",
-     "C. Laboratory samples of coral tissue",
-     "D. Historical data from the same site collected five years prior"
+     "A. Computer models predicting reef change over the next decade",
+     "B. Data from an adjacent healthy reef at similar depths",
+     "C. Historical data from the same site five years earlier",
+     "D. Laboratory samples of coral tissue grown in tanks"
     ],
-    "answer": "D",
-    "why": "Amira explains 'We're planning to compare current data with historical data from studies conducted at the same site five years ago. That will show us changes over time.' Options A, B, and D do not reflect the actual control method."
+    "answer": "C",
+    "why": "Amira explains 'We're planning to compare current data with historical data from studies conducted at the same site five years ago. That will show us changes over time.' Options A, B and D do not reflect the actual control method."
    },
    {
     "id": "l2-s3-q09",

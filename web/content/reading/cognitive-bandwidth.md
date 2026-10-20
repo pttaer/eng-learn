@@ -1,92 +1,103 @@
 ---
 id: reading-art-2
-title: "Cognitive Bandwidth, Subvocalization, and the Mechanics of Deep Reading"
+title: "Cognitive Bandwidth, Working Memory and the Limits of Attention"
 stage: "Stage 4: Mastery & Polymathy (CEFR C2)"
 cefrLevel: C2
 genre: "Cognitive Neurobiology & Educational Psychology"
-source: "Adapted from Nature Neuroscience Commentary & Cognitive Literary Theory"
-wordCount: 460
-readingTime: "3.8 min @ 120 WPM (Intensive)"
+source: "Original passage written for English Singularity"
+wordCount: 424
+readingTime: "3.5 min @ 120 WPM (Intensive)"
 ---
 
 # Passage
-The human brain did not evolve a dedicated neurological circuit for deciphering printed typography; instead, literacy is an extraordinary feat of neuronal recycling, repurposing visual object recognition pathways alongside ancient phonological and semantic networks. Consequently, the transition from laborious decoding to effortless sight recognition depends heavily on how cognitive bandwidth is allocated across working memory.
+Attention is commonly imagined as a spotlight, yet the metaphor flatters the mind by implying a steady beam under voluntary control. Experimental evidence portrays something more precarious: a limited pool of processing capacity that must be rationed among competing demands, and that depletes quickly when those demands multiply.
 
-At foundational stages, readers lean heavily on subvocalization—the covert auditory articulation of printed words in the mind's inner ear. While subvocalization provides essential phonological scaffolding for novice comprehenders grappling with complex syntax, its persistence at advanced stages imposes a velocity ceiling of roughly two hundred words per minute. Yet research does not support the claim that eliminating it is desirable; subvocalization remains largely automatic and contributes to comprehension, especially for difficult text, and speed-reading programs that promise to suppress it have shown little evidence of preserving understanding. Mastery therefore lies not in silencing inner speech but in making decoding so fluent on familiar syntactic terrain that working memory is freed for high-order inference, contextual synthesis, and rhetorical evaluation.
+Working memory, the mental workspace in which information is held and manipulated, is the most conspicuous bottleneck. Estimates of its capacity have been revised downward over the decades, from the celebrated figure of seven items to perhaps four discrete chunks, and the revision matters because virtually every complex act, whether parsing a contract or following a proof, depends upon keeping several elements simultaneously active.
 
-Moreover, deliberate reading differs profoundly from the distracted skimming conditioned by digital hyperlinks. In extensive reading, immersion in rich syntactic architectures cultivates deep cognitive patience, allowing the brain to internalize subtle register shifts and sentence structures organically through Krashen’s celebrated input hypothesis ($i+1$). Conversely, intensive reading acts as the surgeon’s scalpel: by subjecting difficult paragraphs to rigorous clause deconstruction and active sentence mining, the polymath converts fleeting encounters with unfamiliar lexical items into durable, retrievable engrams. Without this dual equilibrium between extensive immersion and intensive dissection, genuine polyglot fluency remains an elusive mirage.
+Cognitive load theory partitions the burden into three components. Intrinsic load reflects the inherent difficulty of the material; extraneous load arises from poor presentation, such as a cluttered slide or a convoluted set of instructions; germane load denotes the effort devoted to building durable schemas. Instructional design succeeds, on this view, when it trims the extraneous component so that scarce capacity may be redirected towards the germane one.
+
+Expertise alters the arithmetic dramatically. A chess master does not scan pieces individually but perceives configurations as unified patterns, thereby compressing dozens of items into a handful of chunks. Novices, lacking such stored patterns, exhaust their capacity almost instantly, which explains why identical material can seem trivial to one person and impenetrable to another. Difficulty, in other words, resides in the relationship between task and mind rather than in the task alone.
+
+Multitasking, so often celebrated as a modern virtue, fares poorly under scrutiny. What feels like parallel processing is in fact rapid alternation, and every switch exacts a toll in time and accuracy as the brain reconfigures its goals and suppresses the residue of the previous task. Habitual multitaskers, curiously, tend to overestimate their own efficiency, a miscalibration that perpetuates the very behaviour impairing them.
+
+Scarcity also shapes judgement outside the laboratory. Researchers studying people under chronic financial strain have found that worry consumes a measurable share of mental capacity, leaving fewer resources for planning and self-restraint. The resulting lapses are frequently mistaken for character flaws, when they more plausibly reflect an overdrawn cognitive budget. Such findings invite humility toward those whose decisions appear shortsighted.
+
+The practical corollaries are neither exotic nor expensive. Reduce the number of simultaneous demands, externalize what can be written down, rehearse skills until they become automatic, and protect intervals of undivided focus. Each measure conserves bandwidth, and bandwidth, once squandered, is recovered only through rest and deliberate design.
 
 ## Cold Read
-- **Thesis**: Reading is an acquired neuronal recycling process where fluent decoding frees working memory for high-level analysis, and subvocalization is a normal aid rather than a flaw to eliminate; true mastery demands a balanced regime of extensive immersion and intensive syntactic dissection.
-- **Targets**: neuronal recycling, cognitive bandwidth, subvocalization, phonological scaffolding, inner speech, high-order inference, input hypothesis, retrievable engrams
+- **Thesis**: Attention is a limited, easily depleted resource centred on working memory, so learning, work and policy should reduce unnecessary load, build expertise that compresses information, and protect undivided focus.
+- **Targets**: working memory, bottleneck, cognitive load, extraneous, germane, schemas, chunks, miscalibration, corollaries
 
 ### Comprehension Checks
-- Q: Why does the text state that the human brain did not evolve a dedicated reading circuit?
-  A: Because reading is an evolutionary recent invention that repurposes existing visual and phonological brain regions (neuronal recycling).
-- Q: What is the role of subvocalization, and what limitation does it carry at advanced stages?
-  A: It gives novices phonological scaffolding for decoding and remains a normal part of comprehension; at the same time it is linked to a speed ceiling (roughly 200-300 WPM), so the goal is fluent decoding that frees bandwidth for inference, not eliminating inner speech.
-- Q: What metaphor illustrates the complementary nature of extensive and intensive reading?
-  A: Extensive reading provides deep cognitive immersion, while intensive reading functions as the surgeon’s scalpel (precise clause dissection).
+- Q: Why does the author regard the spotlight metaphor of attention as flattering?
+  A: It implies a steady beam under voluntary control, whereas the evidence shows a limited pool of capacity that depletes quickly when demands multiply.
+- Q: How does expertise change the demands on working memory?
+  A: Experts such as chess masters perceive configurations as unified patterns, compressing dozens of items into a handful of chunks, while novices lack such patterns and exhaust their capacity almost instantly.
+- Q: What does apparent multitasking actually consist of, and what does it cost?
+  A: Rapid alternation between tasks; each switch exacts a toll in time and accuracy as the brain reconfigures its goals.
 
 ## Syntax Dissection
 ### Sentence 1
-- **Sentence**: While subvocalization provides essential phonological scaffolding for novice comprehenders grappling with complex syntax, its persistence at advanced stages imposes a velocity ceiling of roughly two hundred words per minute.
-- **Subject**: its persistence at advanced stages
-- **Verb**: imposes
-- **Object**: a velocity ceiling of roughly two hundred words per minute
+- **Sentence**: Novices, lacking such stored patterns, exhaust their capacity almost instantly, which explains why identical material can seem trivial to one person and impenetrable to another.
+- **Subject**: Novices
+- **Verb**: exhaust
+- **Object**: their capacity
 - **Subordinate Clauses**:
-  - [Concessive Adverbial Clause]: While subvocalization provides essential phonological scaffolding for novice comprehenders | Acknowledges the pedagogical utility of subvocalization for beginners before contrasting its advanced drawback.
-  - [Participial Phrase Modifier]: grappling with complex syntax | Post-modifies "novice comprehenders", describing their cognitive struggle.
-- **Analysis**: Concessive introductory clause ("While...") balances the tension between developmental necessity and long-term limitation. Main clause utilizes nominal abstractions ("persistence", "velocity ceiling") to establish quantitative clarity.
+  - [Participial Phrase, Causal Sense]: lacking such stored patterns | Inserted between commas, it gives the reason novices exhaust their capacity.
+  - [Non-restrictive Relative Clause with Sentential Antecedent]: which explains why identical material can seem trivial... | "which" refers to the whole preceding clause, not to a single noun.
+  - [Embedded Noun Clause]: why identical material can seem trivial to one person and impenetrable to another | Object of "explains"; the paired adjectives contrast the two kinds of reader.
+- **Analysis**: Three layers of embedding are packed into one sentence, moving from cause (lacking patterns) to effect (exhaustion) to general consequence (subjective difficulty). The antithesis "trivial... impenetrable" closes the sentence with a balanced contrast.
 
 ### Sentence 2
-- **Sentence**: By subjecting difficult paragraphs to rigorous clause deconstruction and active sentence mining, the polymath converts fleeting encounters with unfamiliar lexical items into durable, retrievable engrams.
-- **Subject**: the polymath
-- **Verb**: converts
-- **Object**: fleeting encounters with unfamiliar lexical items into durable, retrievable engrams
+- **Sentence**: Habitual multitaskers, curiously, tend to overestimate their own efficiency, a miscalibration that perpetuates the very behaviour impairing them.
+- **Subject**: Habitual multitaskers
+- **Verb**: tend to overestimate
+- **Object**: their own efficiency
 - **Subordinate Clauses**:
-  - [Instrumental Prepositional Participial Phrase]: By subjecting difficult paragraphs to rigorous clause deconstruction and active sentence mining | Specifies the deliberate procedural methodology.
-- **Analysis**: Fronted instrumental phrase leads directly into the transformative verb "converts X into Y", contrasting the ephemeral ("fleeting encounters") with the permanent ("durable, retrievable engrams").
+  - [Sentence Adverb Parenthetical]: curiously | Signals the author's surprise at the finding.
+  - [Appositive with Restrictive Relative Clause]: a miscalibration that perpetuates the very behaviour impairing them | Renames the whole preceding idea and explains its self-reinforcing effect.
+  - [Reduced Relative Clause]: impairing them | Post-modifies "behaviour"; equivalent to "that impairs them".
+- **Analysis**: The appositive "a miscalibration..." compresses a whole process into one noun phrase, and "the very behaviour" stresses the irony that the habit sustains itself.
 
 ## Sentence Mining
-### subvocalization
+### bottleneck
 - **Part of Speech**: noun
-- **IPA**: /ˌsʌb.vəʊ.kəl.aɪˈzeɪ.ʃən/
-- **Definition**: The internal, silent articulation of words while reading.
-- **Vietnamese**: sự phát âm thầm trong đầu khi đọc chữ
-- **Context**: At foundational stages, readers lean heavily on subvocalization—the covert auditory articulation of printed words in the mind's inner ear.
-- **Collocations**: habitual subvocalization, inner-speech subvocalization, reduce subvocalization
-- **Etymology**: Prefix sub- (under) + vocalize (to utter; from Latin vox/vocalis, voice).
+- **IPA**: /ˈbɒt.əl.nek/
+- **Definition**: A point of congestion or limited capacity that restricts the flow or speed of a whole process.
+- **Vietnamese**: điểm nghẽn, nút thắt cổ chai
+- **Context**: Working memory, the mental workspace in which information is held and manipulated, is the most conspicuous bottleneck.
+- **Collocations**: a major bottleneck, cognitive bottleneck, remove a bottleneck
+- **Etymology**: From bottle + neck, the narrow part of a bottle that restricts pouring.
 
-### scaffolding
+### schemas
+- **Part of Speech**: noun (plural)
+- **IPA**: /ˈskiː.məz/
+- **Definition**: Organised mental structures that group related knowledge and guide how new information is interpreted.
+- **Vietnamese**: các lược đồ nhận thức, khung kiến thức tổ chức sẵn trong trí nhớ
+- **Context**: Intrinsic load reflects the inherent difficulty of the material; extraneous load arises from poor presentation, such as a cluttered slide or a convoluted set of instructions; germane load denotes the effort devoted to building durable schemas.
+- **Collocations**: build schemas, existing schemas, mental schemas
+- **Etymology**: Greek skhema (form, shape), via Latin schema.
+
+### miscalibration
 - **Part of Speech**: noun
-- **IPA**: /ˈskæf.əl.dɪŋ/
-- **Definition**: Temporary support provided to learners to assist them in achieving higher levels of comprehension.
-- **Vietnamese**: khung nâng đỡ sư phạm, giá đỡ hỗ trợ học tập tạm thời
-- **Context**: Subvocalization provides essential phonological scaffolding for novice comprehenders grappling with complex syntax.
-- **Collocations**: instructional scaffolding, cognitive scaffolding, phonological scaffolding
-- **Etymology**: Old French eschafaut (viewing platform, scaffold).
+- **IPA**: /ˌmɪsˌkæl.ɪˈbreɪ.ʃən/
+- **Definition**: A systematic mismatch between a person's confidence or self-assessment and their actual performance.
+- **Vietnamese**: sự đánh giá lệch, sự tự đánh giá sai so với thực tế
+- **Context**: Habitual multitaskers, curiously, tend to overestimate their own efficiency, a miscalibration that perpetuates the very behaviour impairing them.
+- **Collocations**: confidence miscalibration, systematic miscalibration, correct a miscalibration
+- **Etymology**: Prefix mis- (wrongly) + calibration, from calibre (bore of a gun).
 
-### engram
-- **Part of Speech**: noun
-- **IPA**: /ˈen.ɡræm/
-- **Definition**: A hypothesized physical trace left by an experience in the brain’s neural tissue; a memory trace.
-- **Vietnamese**: dấu vết ký ức thần kinh, vết hằn ký ức sinh học trong não
-- **Context**: The polymath converts fleeting encounters with unfamiliar lexical items into a durable, retrievable engram.
-- **Collocations**: memory engram, neural engram, retrievable engrams
-- **Etymology**: Greek en (in) + gramma (letter, that which is written).
-
-### subordinate
-- **Part of Speech**: adjective / verb
-- **IPA**: /səˈbɔː.dɪ.nət/
-- **Definition**: Lower in rank, importance, or syntactic dependency.
-- **Vietnamese**: phụ thuộc, thứ yếu (trong cú pháp: mệnh đề phụ)
-- **Context**: Immersion in rich syntactic architectures allows the brain to parse complex subordinate clauses without conscious strain.
-- **Collocations**: subordinate clause, subordinate conjunction, subordinate role
-- **Etymology**: Latin sub- (under) + ordinare (to order, rank).
+### corollaries
+- **Part of Speech**: noun (plural)
+- **IPA**: /kəˈrɒl.ər.iz/
+- **Definition**: Natural consequences or practical conclusions that follow directly from an established idea.
+- **Vietnamese**: hệ quả tất yếu, những điều suy ra trực tiếp
+- **Context**: The practical corollaries are neither exotic nor expensive.
+- **Collocations**: a natural corollary, practical corollary, corollary of the theory
+- **Etymology**: Latin corollarium (a gift, a surplus), from corolla (small garland).
 
 ## Synthesis
-- **Model Précis**: Reading recruits repurposed neural pathways where subvocalization provides vital phonological scaffolding while also tying reading speed to inner-speech pace. Achieving polymathic reading demands balancing extensive immersion for intuitive pattern absorption with intensive clause dissection to forge durable, retrievable memory engrams from challenging syntax.
-- **Incorporated Vocabulary**: subvocalization, scaffolding, engram, neuronal recycling, velocity ceiling
-- **Syntactic Reconstruction**: Rather than treating subvocalization as a deficit, advanced readers rely on it for dense or poetic prose and read familiar material faster without trying to silence it.
+- **Model Précis**: Attention draws on a limited working memory that is easily overloaded by poor design and rapid task switching. Expertise compresses information into chunks, so the practical response is to cut extraneous demands, build durable schemas, and guard intervals of undivided focus.
+- **Incorporated Vocabulary**: bottleneck, schemas, chunks, miscalibration, corollaries
+- **Syntactic Reconstruction**: Rather than celebrating multitasking, sensible institutions ration simultaneous demands so that scarce working memory is spent on understanding instead of on switching.
 

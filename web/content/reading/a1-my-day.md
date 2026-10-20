@@ -6,7 +6,7 @@ cefrLevel: A1
 genre: "Daily Life"
 source: "Original text written for this app"
 wordCount: 102
-readingTime: "1.2 min @ 120 WPM (Intensive)"
+readingTime: "0.8 min @ 120 WPM (Intensive)"
 ---
 
 # Passage
