@@ -36,8 +36,9 @@ function checkQuestions(qs, where) {
 const reading = load('reading.json');
 assert(reading.length >= MIN.reading, `reading: ${reading.length}/${MIN.reading} passages`);
 uniq(reading, 'reading');
+const originals = load('originals-reading.json');
 const rTypes = {};
-reading.forEach(p => {
+[...reading, ...originals].forEach(p => {
   const n = p.paragraphs.reduce((a, x) => a + words(x.text), 0);
   assert(n >= 780 && n <= 1050, `reading ${p.id}: ${n} words (want 780-1050)`);
   assert(p.questions.length >= 13 && p.questions.length <= 14, `reading ${p.id}: ${p.questions.length} questions (want 13-14)`);
@@ -47,7 +48,7 @@ reading.forEach(p => {
   p.questions.forEach(q => rTypes[q.type] = (rTypes[q.type] || 0) + 1);
 });
 // Reading type spread, band ramp and evidence quotes: verify-ielts-reading.cjs.
-for (const lbl of reading) assert(lbl.paragraphs.every((p, i) => p.label === String.fromCharCode(65 + i)), `reading ${lbl.id}: paragraph labels must be A, B, C...`);
+for (const lbl of [...reading, ...originals]) assert(lbl.paragraphs.every((p, i) => p.label === String.fromCharCode(65 + i)), `reading ${lbl.id}: paragraph labels must be A, B, C...`);
 
 const listening = load('listening.json');
 assert(listening.length >= MIN.listening, `listening: ${listening.length}/${MIN.listening} sections`);

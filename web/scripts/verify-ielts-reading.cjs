@@ -17,9 +17,8 @@ const PASSAGES = 30;
 
 assert.strictEqual(reading.length, PASSAGES, `reading: ${reading.length}/${PASSAGES} passages`);
 const usedIn = {};
-reading.forEach((p, i) => {
-  const id = `r${String(i + 1).padStart(2, '0')}`;
-  assert.strictEqual(p.id, id, `reading[${i}]: id ${p.id}, want ${id} (mock tests take passages 3 at a time in order)`);
+const checkPassage = (p, id, usedIn) => {
+  assert.strictEqual(p.id, id, `${id}: id ${p.id}, want ${id} (mock tests take passages 3 at a time in order)`);
   assert(typeof p.band === 'number' && p.band >= 6 && p.band <= 8.5 && p.band * 2 % 1 === 0, `${id}: band ${p.band} (want 6-8.5 in half steps)`);
   const text = norm(p.paragraphs.map(x => x.text).join(' '));
   const n = words(text);
@@ -57,7 +56,11 @@ reading.forEach((p, i) => {
   const h = p.questions.filter(q => q.type === 'heading');
   assert.strictEqual(new Set(h.map(q => q.answer)).size, h.length, `${id}: a heading is used twice`);
   if (h.length) assert(h[0].options.length >= h.length + 2, `${id}: heading list needs 2+ distractors`);
-});
+};
+reading.forEach((p, i) => checkPassage(p, `r${String(i + 1).padStart(2, '0')}`, usedIn));
+// Original set (D1-B): same per-passage rules, no band ladder, its own ids.
+const originals = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'src', 'ielts', 'data', 'originals-reading.json'), 'utf8'));
+originals.forEach((p, i) => checkPassage(p, `o${String(i + 1).padStart(2, '0')}`, {}));
 
 for (let t = 0; t < PASSAGES / 3; t++) {
   const set = reading.slice(t * 3, t * 3 + 3);

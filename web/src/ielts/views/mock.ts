@@ -1,5 +1,6 @@
 import readingData from '../data/reading.json';
 import listeningData from '../data/listening.json';
+import originalReadingData from '../data/originals-reading.json';
 import { ListeningSection, ReadingPassage } from '../types';
 import { averageBands } from '../bands';
 import { attempts, readiness, recentBand } from '../progress';
@@ -10,6 +11,7 @@ import { ExamCockpitDossier } from '../../modules/exam-cockpit-dossier';
 
 const PASSAGES = readingData as ReadingPassage[];
 const SECTIONS = listeningData as ListeningSection[];
+const ORIGINAL_PASSAGES = originalReadingData as ReadingPassage[];
 
 /** Mounts the official 40-question CD-IELTS Exam Cockpit Station with 1-40 Navigator, Split Resizer & Band Modal */
 export function mountCockpitMockTest(host: HTMLElement, onBack: () => void): () => void {
@@ -91,6 +93,16 @@ export function mockView(root: HTMLElement): () => void {
       stop = mountReadingTest(host, readingSet(mocks('reading')), 60, true, () => host.append(back()));
     });
     cards.append(r);
+
+    // 2b. Original reading set, written for this app and kept apart from the 10-test ladder
+    const ro = h('button', 'ie-card', `<b>Original reading set 1</b><span>3 passages · 60 minutes</span><small>Written for this app</small>`);
+    ro.addEventListener('click', () => {
+      root.innerHTML = '';
+      const host = h('div');
+      root.append(host);
+      stop = mountReadingTest(host, ORIGINAL_PASSAGES, 60, true, () => host.append(back()));
+    });
+    cards.append(ro);
 
     // 3. Listening Mocks with 1-40 question coverage
     listeningTests().forEach((t, i) => {

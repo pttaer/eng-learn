@@ -12,5 +12,6 @@ const write = (name, data) => fs.writeFileSync(path.join(DATA, name), JSON.strin
 
 for (const k of ['reading', 'listening', 'writing1', 'writing2']) write(`${k}.json`, read(k));
 write('vocab.json', read('vocab'));
+write('originals-reading.json', read('originals-reading'));
 write('speaking.json', { part1: read('speaking-part1'), part2: read('speaking-part2') });
 console.log('[IELTS] merged data files');
