@@ -10,8 +10,10 @@
 
 import { SRSEngine, SRSCardState } from './srs-engine';
 import { StorageManager } from '../utils/storage';
-import { ProgressionEngine } from './progression-engine';
+import { ProgressionEngine, getTodayString } from './progression-engine';
 import { UsageTracker, localDayKey } from './usage-tracker';
+import { recentBand, Skill } from '../ielts/progress';
+import collocationsData from '../assets/data/collocations.json';
 
 export type NotificationPermissionState = 'granted' | 'denied' | 'default' | 'unsupported';
 
@@ -30,6 +32,53 @@ const DEFAULT_TAG = 'srs-review-due';
 // Daily reminder: after this local hour, at most once per local day, and only if the learner has not studied yet
 const REMINDER_HOUR = 18;
 const REMINDER_DAY_KEY = 'eng_reminder_day';
+
+// Card ids are 'colloc-N' (collocations) or 'lex-<word>' (saved from the lexicon drawer).
+const COLLOC_LABELS: Record<string, string> = {};
+for (const c of collocationsData as Array<{ id?: string; phrase?: string }>) {
+  if (c && c.id && c.phrase) COLLOC_LABELS[c.id] = c.phrase;
+}
+
+/** Readable word or phrase for a card id, or null when the id has no readable label. */
+function labelForCard(cardId: string): string | null {
+  if (COLLOC_LABELS[cardId]) return COLLOC_LABELS[cardId];
+  if (cardId.startsWith('lex-')) return cardId.slice(4).replace(/-/g, ' ');
+  return null;
+}
+
+/** Up to `limit` words from the most overdue cards, plus the total due count. */
+function dueWords(states: Record<string, SRSCardState>, limit = 3): { words: string[]; total: number } {
+  const now = Date.now();
+  const due = Object.entries(states)
+    .filter(([, s]) => s.dueDate <= now)
+    .sort((a, b) => a[1].dueDate - b[1].dueDate);
+  const words: string[] = [];
+  for (const [id] of due) {
+    const label = labelForCard(id);
+    if (label) words.push(label);
+    if (words.length === limit) break;
+  }
+  return { words, total: due.length };
+}
+
+const IELTS_SKILLS: Skill[] = ['listening', 'reading', 'writing', 'speaking'];
+
+/** Weakest IELTS skill by recent band, or null when there are no IELTS attempts yet. */
+function weakestIeltsSkill(): { skill: Skill; band: number } | null {
+  let weakest: { skill: Skill; band: number } | null = null;
+  for (const skill of IELTS_SKILLS) {
+    const band = recentBand(skill, 3);
+    if (band !== null && (!weakest || band < weakest.band)) weakest = { skill, band };
+  }
+  return weakest;
+}
+
+/** Opens an in-app hash route, or a separate page such as ielts.html#writing. */
+export function navigateTo(route: string): void {
+  if (typeof window === 'undefined') return;
+  if (route.includes('.html')) window.location.href = `/${route}`;
+  else window.location.hash = route;
+}
 
 export class NotificationEngine {
   private static periodicTimerId: any = null;
@@ -112,7 +161,7 @@ export class NotificationEngine {
         notif.onclick = () => {
           if (typeof window !== 'undefined') {
             window.focus();
-            window.location.hash = targetRoute;
+            navigateTo(targetRoute);
           }
           notif.close();
         };
@@ -139,22 +188,22 @@ export class NotificationEngine {
 
     // 1. Calculate due items
     let dueCount = 0;
+    let dueSample: { words: string[]; total: number } = { words: [], total: 0 };
     try {
       const states = cardStatesOverride ?? StorageManager.loadState().cardStates;
       dueCount = SRSEngine.getDueCount(states);
+      dueSample = dueWords(states);
     } catch {
       dueCount = 0;
     }
 
-    // 2. Calculate streak status
+    // 2. Streak status from the progression engine (same counter as the achievements view)
     let streak = 0;
     let needsStreakReminder = false;
     try {
-      const storageState = StorageManager.loadState();
-      streak = storageState.streak?.currentStreak || 0;
-      const lastActive = storageState.streak?.lastActiveDate || '';
-      const today = new Date().toISOString().slice(0, 10);
-      needsStreakReminder = streak > 0 && lastActive !== today;
+      const prog = ProgressionEngine.getState();
+      streak = prog.streak || 0;
+      needsStreakReminder = streak > 0 && prog.lastActiveDate !== getTodayString();
     } catch {
       streak = 0;
     }
@@ -162,7 +211,11 @@ export class NotificationEngine {
     // 3. Evaluate notification trigger
     if (dueCount > 0) {
       const title = `SRS Review Due (${dueCount} item${dueCount > 1 ? 's' : ''})`;
-      const body = `You have ${dueCount} flashcard${dueCount > 1 ? 's' : ''} ready for spaced repetition recall. Retain your mastery!`;
+      const named = dueSample.words.map(w => `"${w}"`).join(', ');
+      const more = dueCount > dueSample.words.length ? ` and ${dueCount - dueSample.words.length} more` : '';
+      const body = named
+        ? `Review now: ${named}${more}. Retain your mastery!`
+        : `You have ${dueCount} flashcard${dueCount > 1 ? 's' : ''} ready for spaced repetition recall. Retain your mastery!`;
       const isNative = await this.dispatch(title, {
         body,
         icon: DEFAULT_ICON,
@@ -214,7 +267,7 @@ export class NotificationEngine {
         icon: DEFAULT_ICON,
         badge: DEFAULT_ICON,
         tag: DEFAULT_TAG,
-        data: { route: '#collocations', type: 'daily_reminder' }
+        data: { route: reminder.route, type: 'daily_reminder' }
       });
       return {
         notified: true,
@@ -241,7 +294,7 @@ export class NotificationEngine {
    * Reminder built from the learner's progress. Null when not due: before REMINDER_HOUR,
    * already sent today, or already studied today.
    */
-  private static buildDailyReminder(): { title: string; body: string } | null {
+  private static buildDailyReminder(): { title: string; body: string; route: string } | null {
     try {
       if (new Date().getHours() < REMINDER_HOUR) return null;
       if (localStorage.getItem(REMINDER_DAY_KEY) === localDayKey()) return null;
@@ -249,9 +302,20 @@ export class NotificationEngine {
       const info = ProgressionEngine.getLevelInfo();
       const xpToNext = info.spanInLevel - info.progressInLevel;
       const left = this.questsLeft();
+      const progressLine = `Level ${info.level}, ${xpToNext} XP to the next rank, ${left} quest${left === 1 ? '' : 's'} left.`;
+      const focus = weakestIeltsSkill();
+      if (focus) {
+        const name = focus.skill.charAt(0).toUpperCase() + focus.skill.slice(1);
+        return {
+          title: `IELTS focus: ${name} (band ${focus.band.toFixed(1)})`,
+          body: `Ten minutes on your weakest skill today. ${progressLine}`,
+          route: `ielts.html#${focus.skill}`
+        };
+      }
       return {
         title: 'Time to learn today',
-        body: `Ten minutes keeps your streak. Level ${info.level}, ${xpToNext} XP to the next rank, ${left} quest${left === 1 ? '' : 's'} left.`
+        body: `Ten minutes keeps your streak. ${progressLine}`,
+        route: '#collocations'
       };
     } catch {
       return null;
@@ -340,7 +404,7 @@ export class NotificationEngine {
     toast.addEventListener('click', () => {
       dismiss();
       if (actionRoute && typeof window !== 'undefined') {
-        window.location.hash = actionRoute;
+        navigateTo(actionRoute);
       }
     });
 
