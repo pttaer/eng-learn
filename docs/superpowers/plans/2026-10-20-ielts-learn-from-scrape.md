@@ -160,7 +160,7 @@ Success criteria: the blueprint's counts match the rerun exactly; no sentence in
 ### Task 2: Provenance gate
 
 **Files:**
-- Create: `web/scripts/verify-ielts-provenance.cjs`
+- Create: `web/scripts/check-ielts-provenance.cjs`
 
 **Interfaces:**
 - Consumes: every `*.json` under `web/src/ielts/data/` (including `parts/`); the corpus under `IELTS_SCRAPE_DIR` (default `<repo>/data/scraped-ielts`)
@@ -227,7 +227,7 @@ Known limit: the gate catches verbatim and near-verbatim copying, not paraphrase
 From `worktrees/ielts-learn/web`:
 
 ```bash
-IELTS_SCRAPE_DIR=E:/Eng/data/scraped-ielts node scripts/verify-ielts-provenance.cjs
+IELTS_SCRAPE_DIR=E:/Eng/data/scraped-ielts node scripts/check-ielts-provenance.cjs
 ```
 
 Expected: `OK`. If it reports hits in the **existing** app data, stop and report the hits to the user before doing any other task. The current content may already derive from the scrape, and that changes the plan.
@@ -235,7 +235,7 @@ Expected: `OK`. If it reports hits in the **existing** app data, stop and report
 - [ ] **Step 3: Commit**
 
 ```bash
-git add web/scripts/verify-ielts-provenance.cjs
+git add web/scripts/check-ielts-provenance.cjs
 git commit -m "feat(ielts): add provenance gate against scraped corpus"
 ```
 
@@ -375,7 +375,7 @@ Success criteria: the chart and the model agree on every figure; all four verifi
 - [ ] **Step 1: Run the provenance gate on all content**
 
 ```bash
-IELTS_SCRAPE_DIR=E:/Eng/data/scraped-ielts node scripts/verify-ielts-provenance.cjs
+IELTS_SCRAPE_DIR=E:/Eng/data/scraped-ielts node scripts/check-ielts-provenance.cjs
 ```
 
 Expected: `OK`.
