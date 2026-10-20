@@ -315,7 +315,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: var(--shadow-hud);
+  box-shadow: var(--shadow-card);
 }
 
 /* ==========================================================================
@@ -899,7 +899,7 @@
 }
 
 .compression-table tr:hover td {
-  background: var(--hover-canvas-highlight);
+  background: var(--accent-cyan-soft);
 }
 
 .compression-table td.highlight-fluency {
@@ -1159,7 +1159,7 @@
 
 .grammar-vietnamese-callout {
   border-left: 3px solid var(--accent-gold);
-  background: var(--hover-canvas-highlight);
+  background: var(--accent-cyan-soft);
   padding: 8px 12px;
   margin: 10px 0;
   font-family: var(--font-sans);
@@ -3610,7 +3610,7 @@ html[data-motion="reduce"] {
   background: var(--bg-surface-sunk);
   border: 1px solid var(--border-hairline);
   border-radius: 6px;
-  margin-bottom: var(--space-14);
+  margin-bottom: var(--space-12);
 }
 
 .speed-control-group {
@@ -3710,7 +3710,7 @@ html[data-motion="reduce"] {
 
 .cloze-completion-banner {
   margin-top: var(--space-12);
-  padding: var(--space-10) var(--space-14);
+  padding: var(--space-8) var(--space-12);
   background: rgba(22, 163, 74, 0.1);
   border: 1px solid #16a34a;
   border-radius: 6px;
@@ -4800,7 +4800,7 @@ html[data-motion="reduce"] {
   align-items: flex-start;
   justify-content: space-between;
   gap: var(--space-12);
-  margin-bottom: var(--space-10);
+  margin-bottom: var(--space-8);
   flex-shrink: 0;
 }
 
@@ -4840,7 +4840,7 @@ html[data-motion="reduce"] {
 }
 
 .workbench-input-wrapper {
-  margin-bottom: var(--space-10);
+  margin-bottom: var(--space-8);
   flex-shrink: 0;
 }
 
@@ -7106,3 +7106,30 @@ html[data-motion="reduce"] .cd-cockpit-shell * {
   font-style: italic;
   color: var(--ink-primary, #f8fafc);
 }
+
+/* Gauntlet Challenge Styles */
+.gauntlet-progress-cluster {
+  background: var(--bg-surface-sunk, rgba(0, 0, 0, 0.25));
+  border: 1px solid var(--border-hairline, rgba(255, 255, 255, 0.08));
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.btn-speak-prompt {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: var(--cyan, #38bdf8);
+  border-color: var(--cyan, #38bdf8);
+  margin-left: auto;
+}
+
+.matrix-item {
+  transition: transform 0.15s ease;
+}
+
+.matrix-item:hover {
+  transform: translateY(-1px);
+}
+
