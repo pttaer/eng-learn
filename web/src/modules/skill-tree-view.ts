@@ -1,5 +1,4 @@
 import { icon } from '../utils/icons';
-import anime from 'animejs';
 import { SKILL_BRANCHES } from '../core/skill-tree-data';
 import { SkillTreeEngine } from '../core/skill-tree-engine';
 import { RouteId } from '../core/router';
@@ -596,37 +595,16 @@ export class SkillTreeView {
       const circleEl = nodeEl.querySelector('.node-circle');
 
       nodeEl.addEventListener('mouseenter', () => {
-        if (!MotionEngine.isReducedMotion() && circleEl) {
-          anime({
-            targets: circleEl,
-            scale: 1.3,
-            duration: 600,
-            easing: 'easeOutElastic(1, 0.6)'
-          });
-        }
+        if (circleEl) MotionEngine.hoverScale(circleEl as SVGElement, true);
       });
 
       nodeEl.addEventListener('mouseleave', () => {
-        if (!MotionEngine.isReducedMotion() && circleEl) {
-          anime({
-            targets: circleEl,
-            scale: 1.0,
-            duration: 320,
-            easing: 'easeOutQuart'
-          });
-        }
+        if (circleEl) MotionEngine.hoverScale(circleEl as SVGElement, false);
       });
 
       nodeEl.addEventListener('click', () => {
         AudioSynthesizer.play('click');
-        if (!MotionEngine.isReducedMotion()) {
-          anime({
-            targets: nodeEl,
-            scale: [0.92, 1.08, 1.0],
-            duration: 350,
-            easing: 'easeOutElastic(1, 0.5)'
-          });
-        }
+        MotionEngine.press(nodeEl as HTMLElement);
         const nodeId = (nodeEl as HTMLElement).dataset.nodeId;
         if (nodeId) {
           this.openNodeModal(nodeId);
