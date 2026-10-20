@@ -329,6 +329,17 @@
     "Is it harder to manage your time now than in the past?",
     "What wastes most of your time?"
    ]
+  },
+  {
+   "topic": "Cycling in the city",
+   "questions": [
+    "How do people usually travel around your city?",
+    "Do you ride a bicycle yourself?",
+    "Are there enough cycle lanes where you live?",
+    "Would you recommend cycling to a friend who lives in the city centre?",
+    "What are the main risks of cycling in heavy traffic?",
+    "Do you think cycling will become more popular in the future?"
+   ]
   }
  ],
  "part2": [
@@ -1467,6 +1478,31 @@
     "Why do some people stop learning once they finish school?"
    ],
    "modelAnswer": "A skill I'd really like to learn in the next few years is basic woodworking, so that I can make and repair simple furniture. I'd probably start with an evening course at a community workshop near my home, because I don't have any tools of my own and I think it's important to learn how to use them safely from someone experienced. Later on, I'd supplement that with online videos and practise at home once I'd bought a few essential tools. As for how long it would take, I imagine I could make something simple, like a small shelf, within a couple of months, but to become genuinely skilled would probably take several years of regular practice. There are a few reasons why I want to learn it. Most of my work involves sitting at a computer, so I'm drawn to the idea of doing something physical where you can see the result of your effort. I also dislike how often furniture is thrown away when it could easily be repaired. And, on a personal level, I think it would be very satisfying to have things in my home that I'd made myself."
+  },
+  {
+   "id": "s2-61",
+   "cue": "Describe a skill that an older family member taught you.",
+   "bullets": [
+    "what the skill was",
+    "who taught you and how old you were",
+    "how you practised it",
+    "and explain how useful the skill is for you today"
+   ],
+   "part3": [
+    "Why do some older people enjoy teaching younger relatives?",
+    "Are practical skills still passed down within families today?",
+    "Should schools teach the skills that families used to pass on?",
+    "How has technology changed the way people learn practical skills?",
+    "What skill do you think young people should learn from their grandparents?"
+   ],
+   "modelAnswer": "The skill I'd like to talk about is bread-making, which my grandmother taught me when I was about eleven. She had made bread every Sunday for as long as I could remember, and one afternoon she simply handed me the flour and told me to start. My first loaves were flat and far too dense, and she was very patient about it. We practised together most weekends for almost a year. She would show me how to tell when the dough had been kneaded enough, by pressing it with a finger and watching whether it sprang back. What I value most is that the lessons were never really about bread. She taught me to be patient with a task that goes wrong and to try again without getting upset. Today I still bake for my own family, and every time the kitchen smells of fresh bread, I'm reminded of her. The skill is useful in a practical way, because I save money and eat better, but its real value is the habit of patience she gave me.",
+   "band6": "I want to talk about a skill my grandmother taught me, it is making bread. I was about eleven years old when I started learning. At first my bread was not good, it was very hard and flat. But my grandmother was very patient and she showed me many times. We practised together every weekend for one year. She told me how to check the dough, you press it with your finger and if it goes back up then it is ready. This skill is useful for me now because I can make bread for my family and I do not need to buy it from the shop. It also helps me to relax after a long day at work. My grandmother is not alive now, but when I bake I remember her and I am very grateful for her lessons. I think this is a very good skill to learn from family.",
+   "notes": {
+    "fc": "Band 6 tells the story in a flat sequence and ends with a general opinion. Band 7 gives the turning point (the first failed loaves), explains the lesson beyond the skill itself, and closes with a reason that adds something new.",
+    "lr": "Band 6 repeats 'very' and 'good' and uses 'the skill' loosely. Band 7 uses precise items such as 'kneaded enough', 'sprang back' and 'went wrong', and paraphrases its own points.",
+    "gra": "Band 6 has tense slips in the narrative and a comma splice ('it is making bread'). Band 7 mixes past simple and past perfect ('had made', 'had been kneaded') and uses a relative clause to add information.",
+    "pron": "Stress the content words in 'the lessons were never really about bread', and pause after 'patient' to let the contrast land. Band 6 speakers often give every word equal stress, which hides the point."
+   }
   }
  ]
 }
