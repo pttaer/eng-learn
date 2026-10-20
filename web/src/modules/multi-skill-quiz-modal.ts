@@ -268,7 +268,7 @@ export class ListeningPromptComponent {
     if (hintBox) {
       hintBox.style.display = this.isHintOpen ? 'block' : 'none';
       if (this.isHintOpen) {
-        AudioSynthesizer.play('absorb');
+        feedback.emit({ type: 'hint', text: '' }, hintBox);
       } else {
         AudioSynthesizer.play('click');
       }
@@ -668,13 +668,14 @@ export class MultiSkillQuizModal {
       ` : ''}
 
       <!-- Options Group -->
-      <div role="group" aria-label="Choose the answer" style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8);">
+      <div role="group" aria-label="Choose the answer" data-feedback-scope style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8);">
         ${q.options.map((opt, i) => `
           <button class="hud-btn placement-option quiz-option" data-i="${i}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 12px 14px; text-align: left; white-space: normal; height: auto; text-transform: none; line-height: 1.4;">
             <span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: var(--bg-surface-sunk); color: var(--accent-gold); font-size: 11px; font-weight: 800; margin-right: 10px; flex-shrink: 0;">${i + 1}</span>
             <span>${this.escape(opt)}</span>
           </button>
         `).join('')}
+        <div class="quiz-feedback-slot" data-feedback-slot hidden style="font-size: 14px; line-height: 1.5; color: var(--ink-secondary); padding: 10px 14px; background: var(--bg-surface-sunk); border-left: 3px solid var(--accent-gold); border-radius: 4px;"></div>
       </div>
 
       <!-- Action Strip -->
@@ -743,12 +744,15 @@ export class MultiSkillQuizModal {
     if (isCorrect) {
       this.stageCorrectCounts[this.currentStageIndex]++;
     }
+    // Motion pops the chosen option; text lands in the answer group's slot. Typed gap answers (-1) fall back to the group.
+    const chosen = this.overlay.querySelectorAll<HTMLElement>('.placement-option')[choiceIdx];
+    const scope = this.overlay.querySelector<HTMLElement>('[data-feedback-scope]');
     feedback.emit({
       type: 'answer',
       result: isCorrect ? 'correct' : 'wrong',
       why: q.explanation ?? '',
       mode: 'practice'
-    });
+    }, chosen ?? scope ?? undefined);
 
     this.stageQuestionIndex++;
     if (this.stageQuestionIndex >= this.currentStageQuestions.length) {

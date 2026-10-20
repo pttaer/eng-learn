@@ -8,6 +8,7 @@ import grammarData from '../assets/data/grammar.json';
 import { Cefr, srsTier } from '../core/cefr';
 import { levelsWithContent, defaultLevel, levelChipsHtml } from '../core/level-filter';
 import { SkillTreeEngine } from '../core/skill-tree-engine';
+import { feedback } from '../core/feedback';
 
 export type GrammarMode = string;
 
@@ -152,7 +153,7 @@ export class GrammarDossier {
         const newLevel = (tab as HTMLElement).dataset.cefr as Cefr;
         const order = levelsWithContent(this.allDeck);
         if (order.indexOf(newLevel) > order.indexOf(this.activeLevel)) {
-          AudioSynthesizer.play('level-up');
+          feedback.emit({ type: 'milestone', label: `Level ${newLevel}` });
         } else {
           AudioSynthesizer.play('click');
         }
@@ -463,7 +464,7 @@ export class GrammarDossier {
 
     // Check tier completion (e.g. reviewed full list)
     if (this.currentIndex === 0 && this.reviewCountInRun >= this.currentList.length) {
-      AudioSynthesizer.play('level-up');
+      feedback.emit({ type: 'milestone', label: 'Set complete' });
       if (this.onBatchComplete) {
         this.onBatchComplete();
         return;
