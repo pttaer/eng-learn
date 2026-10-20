@@ -38,7 +38,7 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     maxWords: 1,
     decoy: 'Thursday',
     trapCue: 'no, wait a minute',
-    explanation: 'The speaker initially proposes Thursday, but immediately spots the conflict and self-corrects using "no, wait a minute" to Friday.',
+    explanation: 'The speaker first suggests Thursday, but notices the conflict right away and corrects it to Friday with "no, wait a minute".',
     keinoRule: 'Rule 1 (Section 1 Dialogues): Numbers, dates, and times are frequently revised mid-utterance. Never write down the first value heard until you listen past the pause.'
   },
   {
@@ -54,7 +54,7 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     maxWords: 2,
     decoy: 'sixty pounds',
     trapCue: 'actually, sorry',
-    explanation: 'The standard quote of sixty pounds is voided by the oral self-correction discourse marker "actually, sorry", revising the fee to forty-five pounds.',
+    explanation: 'The sixty-pound quote is corrected by "actually, sorry", changing the final fee to forty-five pounds.',
     keinoRule: 'Rule 2 (Spoken Repairs): Discourse markers such as "actually, sorry", "I mean", and "or rather" invalidate preceding nouns or digits in favor of the subsequent revised phrase.'
   },
   {
@@ -70,7 +70,7 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     maxWords: 1,
     decoy: 'conference room',
     trapCue: 'or rather',
-    explanation: 'The speaker updates the event venue using the formal self-correction marker "or rather", redirecting the listener from the conference room to the auditorium.',
+    explanation: 'The speaker changes the venue with "or rather", moving the talk from the conference room to the auditorium.',
     keinoRule: 'Rule 3 (Section 2 Logistics): Institutional monologues frequently state original plans before pivoting with "or rather" or "let me clarify" to the final venue.'
   },
 
@@ -88,7 +88,7 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     maxWords: 2,
     decoy: 'all visitors',
     trapCue: 'only',
-    explanation: 'The broad condition "all visitors" applies only to the gym suite; the restrictive qualifier "only" limits free pool access strictly to registered students.',
+    explanation: 'The phrase "all visitors" applies only to the fitness suite. "Only" restricts free pool use to registered students.',
     keinoRule: 'Rule 4 (Absolute Qualifiers): Watch for terms like "only", "all", and "solely". Examiners set traps by offering an inclusive group when the question demands an exclusive condition.'
   },
   {
@@ -104,7 +104,7 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     maxWords: 2,
     decoy: 'most participants',
     trapCue: 'solely',
-    explanation: 'The qualifier "solely" isolates laboratory technicians as the only cohort suffering chronic sleep deprivation, while "most participants" suffered only mild fatigue.',
+    explanation: '"Solely" singles out laboratory technicians for chronic sleep loss, while "most participants" had only mild fatigue.',
     keinoRule: 'Rule 5 (Academic Quantifiers): Do not confuse majority terms ("most", "predominantly") with restrictive identifiers ("solely", "exclusively"). Verify the exact symptom or attribute requested.'
   },
   {
@@ -120,7 +120,7 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     maxWords: 2,
     decoy: 'solar irradiance',
     trapCue: 'exclusively',
-    explanation: 'The lecturer refutes the historical assumption regarding solar irradiance, using "exclusively" to establish cloud cover as the verified mechanism.',
+    explanation: 'The lecturer rejects solar irradiance and uses "exclusively" to name cloud cover as the real cause.',
     keinoRule: 'Rule 6 (Scientific Hypotheses): In Section 4 academic lectures, historical theories are routinely posited as initial decoys before the speaker unveils the definitive factor using absolute qualifiers.'
   },
 
@@ -138,7 +138,7 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     maxWords: 2,
     decoy: 'express coach',
     trapCue: 'however / instead',
-    explanation: 'The initial intention ("express coach") is overturned by the contrastive coordinator "however" combined with "instead", establishing "electric ferry" as the actual booking.',
+    explanation: 'The plan for an "express coach" is reversed by "however" and "instead", making the electric ferry the booked option.',
     keinoRule: 'Rule 7 (Reversal Markers): Contrastive conjunctions like "however", "but", and "instead" reverse the premise. The authentic target always lies in the clause trailing the contrast.'
   },
   {
@@ -154,7 +154,7 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     maxWords: 2,
     decoy: 'retail banking',
     trapCue: 'on the contrary',
-    explanation: 'The tutor recommendation of retail banking is explicitly set aside with "on the contrary", leaving renewable energy as the chosen case study focus.',
+    explanation: 'The students set aside the tutor\'s advice on retail banking using "on the contrary", picking renewable energy instead.',
     keinoRule: 'Rule 8 (Tutorial Counter-Proposals): Tutors routinely offer advice in Section 3, but candidate evaluation depends on student consensus. Look for "on the contrary" or "we felt that".'
   },
   {
@@ -170,7 +170,7 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     maxWords: 2,
     decoy: 'titanium alloys',
     trapCue: 'instead',
-    explanation: 'The historic baseline ("titanium alloys") is replaced by "instead", pointing directly to modern commercial aviation reliance on "carbon composites".',
+    explanation: 'Titanium alloys describe older aircraft; "instead" introduces carbon composites as the material used in modern airliners.',
     keinoRule: 'Rule 9 (Chronological Pivots): Speakers contrast past methods with current practices. Words like "historically" or "early" flag decoys, while "instead" introduces the contemporary answer.'
   },
 
@@ -188,7 +188,7 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     maxWords: 2,
     decoy: 'student counseling center',
     trapCue: 'turn left past the roundabout / opposite',
-    explanation: 'The student counseling center is an intermediate building along the route, but the correct destination requires continuing past the roundabout to reach the health clinic opposite the sports pavilion.',
+    explanation: 'The counseling center is just a landmark along the way; continuing past the roundabout leads to the health clinic opposite the sports pavilion.',
     keinoRule: 'Rule 10 (Spatial Path Tracking): Keep your cursor actively moving along the street path as directed. Intermediate reference landmarks (like the counseling center) are waypoints, not the final destination.'
   },
   {
@@ -204,7 +204,7 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     maxWords: 2,
     decoy: 'pottery workshop',
     trapCue: 'ignore the pathway / bear right',
-    explanation: 'The audio presents a decoy workshop ("ignore the pathway toward the pottery workshop") before issuing the positive navigational command "bear right" to reach the blacksmith workshop beside the waterwheel.',
+    explanation: 'The speaker tells you to ignore the pottery path and bear right, which leads to the blacksmith workshop beside the waterwheel.',
     keinoRule: 'Rule 11 (Negative Waypoint Warnings): Decoy turns are flagged with negative instructions ("ignore", "do not take", "avoid"). Same-category distractors challenge careful listening.'
   },
   {
@@ -220,7 +220,7 @@ export const TRAP_SCENARIOS: TrapScenario[] = [
     maxWords: 2,
     decoy: 'deer meadow',
     trapCue: 'do not take / instead, continue straight',
-    explanation: 'The eastern ridge leads to the deer meadow, a rejected destination. The observation tower is a waypoint along the route. Continuing straight on the boardwalk arrives at the bird sanctuary.',
+    explanation: 'The deer meadow is ruled out and the tower is only a waypoint. Following the boardwalk straight ahead leads to the bird sanctuary.',
     keinoRule: 'Rule 12 (Terminal vs Intermediate Points): Phrasing such as "until you reach" indicates progress markers, while "instead" + "continue to reach" signals the authentic objective.'
   }
 ];

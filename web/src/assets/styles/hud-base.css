@@ -475,6 +475,27 @@ button:focus-visible,
   display: none;
 }
 
+.hud-corner-version {
+  position: fixed;
+  bottom: max(10px, env(safe-area-inset-bottom, 0px));
+  left: max(16px, env(safe-area-inset-left, 0px));
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted, #94a3b8);
+  opacity: 0.6;
+  pointer-events: none;
+  user-select: none;
+  z-index: var(--z-hud-base);
+}
+
+@media (max-width: 768px) {
+  .hud-corner-version {
+    bottom: calc(66px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
 /* Workspace Mount Area */
 #workspace-mount {
   position: relative;

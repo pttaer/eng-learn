@@ -1,52 +1,174 @@
 import vocabData from '../data/vocab.json';
+import iotVocabData from '../../assets/data/iot-vocabulary.json';
 import { SRSEngine, SRSCardState, SRSRating } from '../../core/srs-engine';
 import { ttsAvailable } from '../tts';
 import { esc, h } from '../ui';
 
 interface VocabItem {
-  id: string; topic: string; word: string; pos: string; band: number; use: string[];
-  definition: string; collocations: string[]; paraphrases: string[]; example: string;
+  id: string;
+  topic: string;
+  word: string;
+  pos: string;
+  band: number;
+  use: string[];
+  definition: string;
+  collocations: string[];
+  paraphrases: string[];
+  example: string;
+  vietnamese?: string;
+  cefrLevel?: string;
 }
 
 // Own storage key: the CEFR app's card states (STARK_ENG_STATE) are never touched.
 const KEY = 'IELTS_VOCAB_SRS';
-const DECK = vocabData as VocabItem[];
-const TOPICS = [...new Set(DECK.map(v => v.topic))];
-const SESSION = 20;
-// 'All topics' interleaves topics (item 1 of each, then item 2...) so new words are not one topic at a time.
-const MIXED = [...DECK].sort((a, b) => +a.id.slice(4) - +b.id.slice(4));
+const DECK_CORE = vocabData as VocabItem[];
+
+// Format IOT items into compatible VocabItem structures
+const DECK_IOT: VocabItem[] = (iotVocabData as any[]).map((it, idx) => ({
+  id: it.id || `iot-${idx}`,
+  topic: it.topic || 'General Academic',
+  word: it.word,
+  pos: it.pos || 'noun',
+  band: it.band || 7.0,
+  use: ['writing', 'speaking', 'reading'],
+  definition: it.definition || '',
+  collocations: Array.isArray(it.collocations) ? it.collocations : [],
+  paraphrases: [],
+  example: it.example || '',
+  vietnamese: it.vietnamese || '',
+  cefrLevel: it.cefrLevel || 'B2'
+}));
 
 function load(): Record<string, SRSCardState> {
-  try { return JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch { return {}; }
+  try {
+    return JSON.parse(localStorage.getItem(KEY) || '{}') || {};
+  } catch {
+    return {};
+  }
 }
+
 function save(s: Record<string, SRSCardState>): void {
-  try { localStorage.setItem(KEY, JSON.stringify(s)); } catch { /* storage full or blocked */ }
+  try {
+    localStorage.setItem(KEY, JSON.stringify(s));
+  } catch {
+    /* storage full or blocked */
+  }
 }
+
 // Band 7.5+ items start with the engine's harder ease factor.
 const level = (v: VocabItem): number => (v.band >= 7.5 ? 3 : 1);
+const SESSION = 20;
 
 export function vocabView(root: HTMLElement): () => void {
   let states = load();
-  let topic = 'all';
+  let activeDeckKey = 'core'; // 'core' | 'iot' | 'combined'
+  let activeTopic = 'all';
+  let activeBand = 'all';
+  let searchQuery = '';
   let queue: VocabItem[] = [];
 
-  root.append(h('h1', 'ie-title', 'Topic vocabulary'), h('p', 'ie-lead', `${DECK.length} band 6.5-8 words across ${TOPICS.length} Academic topics, with collocations and the paraphrases that Reading and Listening answers hide behind. Reviews are spaced: words you know come back later, words you miss come back tomorrow.`));
+  const titleHeader = h('h1', 'ie-title', 'IELTS Academic Vocabulary & Collocations Codex');
+  const leadDesc = h(
+    'p',
+    'ie-lead',
+    'Master high-yield academic vocabulary and authentic collocations across 171 topics. Backed by SuperMemo-2 Spaced Repetition (SRS) to guarantee long-term retention for Bands 7.0–8.5+.'
+  );
+
+  // Deck selector row
+  const deckSwitcher = h('div', 'ie-mode-switcher');
+  const btnCore = h(
+    'button',
+    'ie-mode-btn is-active',
+    `🎯 Core Mock Deck (${DECK_CORE.length.toLocaleString()})`
+  );
+  const btnIot = h(
+    'button',
+    'ie-mode-btn',
+    `🌐 IOT Topic Lexicon (${DECK_IOT.length.toLocaleString()})`
+  );
+  const btnCombined = h(
+    'button',
+    'ie-mode-btn',
+    `⚡ All Combined (${(DECK_CORE.length + DECK_IOT.length).toLocaleString()})`
+  );
+
+  deckSwitcher.append(btnCore, btnIot, btnCombined);
+
+  // Controls bar
   const bar = h('div', 'ie-testbar');
-  const select = h('select', 'ie-select ie-vselect');
-  select.setAttribute('aria-label', 'Topic');
-  select.innerHTML = `<option value="all">All topics</option>${TOPICS.map(t => `<option value="${t}">${t[0].toUpperCase() + t.slice(1)}</option>`).join('')}`;
+  
+  // Topic Select
+  const topicSelect = h('select', 'ie-select ie-vselect');
+  topicSelect.setAttribute('aria-label', 'Topic');
+
+  // Band Select
+  const bandSelect = h('select', 'ie-select');
+  bandSelect.setAttribute('aria-label', 'Target Band');
+  bandSelect.innerHTML = `
+    <option value="all">All Target Bands (6.5 - 8.5)</option>
+    <option value="6.5">Band 6.5</option>
+    <option value="7.0">Band 7.0</option>
+    <option value="7.5">Band 7.5+</option>
+  `;
+
+  // Search input
+  const searchInput = h('input', 'ie-input') as HTMLInputElement;
+  searchInput.type = 'search';
+  searchInput.placeholder = 'Search words, collocations, or Vietnamese...';
+  searchInput.style.maxWidth = '260px';
+
   const stats = h('span', 'ie-note ie-vstats');
   stats.setAttribute('aria-live', 'polite');
-  bar.append(select, stats);
-  const stage = h('div', 'ie-vstage');
-  root.append(bar, stage);
 
-  const pool = (): VocabItem[] => (topic === 'all' ? MIXED : DECK.filter(v => v.topic === topic));
+  bar.append(topicSelect, bandSelect, searchInput, stats);
+
+  const stage = h('div', 'ie-vstage');
+  root.append(titleHeader, leadDesc, deckSwitcher, bar, stage);
+
+  function getActiveDeck(): VocabItem[] {
+    if (activeDeckKey === 'core') return DECK_CORE;
+    if (activeDeckKey === 'iot') return DECK_IOT;
+    return [...DECK_CORE, ...DECK_IOT];
+  }
+
+  function updateTopicOptions(): void {
+    const deck = getActiveDeck();
+    const topics = [...new Set(deck.map(v => v.topic))].sort();
+    topicSelect.innerHTML = `<option value="all">All Topics (${topics.length})</option>${topics
+      .map(t => `<option value="${t}">${t[0].toUpperCase() + t.slice(1)}</option>`)
+      .join('')}`;
+    topicSelect.value = 'all';
+    activeTopic = 'all';
+  }
+
+  function getFilteredPool(): VocabItem[] {
+    let pool = getActiveDeck();
+    if (activeTopic !== 'all') {
+      pool = pool.filter(v => v.topic === activeTopic);
+    }
+    if (activeBand !== 'all') {
+      const b = parseFloat(activeBand);
+      pool = pool.filter(v => v.band >= b);
+    }
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase().trim();
+      pool = pool.filter(
+        v =>
+          v.word.toLowerCase().includes(q) ||
+          (v.vietnamese && v.vietnamese.toLowerCase().includes(q)) ||
+          v.definition.toLowerCase().includes(q) ||
+          v.collocations.some(c => c.toLowerCase().includes(q))
+      );
+    }
+    return pool;
+  }
+
   const showStats = (): void => {
-    const p = pool(), now = Date.now();
+    const p = getFilteredPool();
+    const now = Date.now();
     const seen = p.filter(v => states[v.id]);
     const due = seen.filter(v => states[v.id].dueDate <= now).length;
-    stats.textContent = `${due} due · ${p.length - seen.length} new · ${seen.length - due} scheduled`;
+    stats.textContent = `${p.length.toLocaleString()} words · ${due} due reviews · ${p.length - seen.length} unstudied`;
   };
 
   function next(): void {
@@ -54,44 +176,91 @@ export function vocabView(root: HTMLElement): () => void {
     stage.innerHTML = '';
     const v = queue.shift();
     if (!v) {
-      const done = h('div', 'ie-vcard', '<b>Session complete.</b><p class="ie-note">Come back later for due reviews, or start another round of new words.</p>');
-      const more = h('button', 'ie-btn ie-btn-primary', 'Another round');
+      const done = h(
+        'div',
+        'ie-vcard',
+        '<b>Session round complete!</b><p class="ie-note">You have reviewed all due cards for this deck batch. Come back later for spaced reviews or launch another round.</p>'
+      );
+      const more = h('button', 'ie-btn ie-btn-primary', 'Launch Next Round (20 Words)');
       more.addEventListener('click', start);
       done.append(more);
       stage.append(done);
       return;
     }
+
     const card = h('article', 'ie-vcard');
-    const tags = `<span class="ie-vtags">${esc(v.pos)} · band ${v.band.toFixed(1)} · ${v.use.map(esc).join(', ')} · ${esc(v.topic)}</span>`;
-    card.innerHTML = `${tags}<h2 class="ie-vword">${esc(v.word)}</h2><p class="ie-note">Say what it means and use it in a sentence, then reveal.</p>`;
+    const tags = `<span class="ie-vtags">${esc(v.pos)} · band ${v.band.toFixed(1)} ${
+      v.cefrLevel ? `(${v.cefrLevel})` : ''
+    } · ${esc(v.topic)}</span>`;
+    card.innerHTML = `${tags}<h2 class="ie-vword">${esc(
+      v.word
+    )}</h2><p class="ie-note">Recall the definition, Vietnamese meaning, and academic collocations, then reveal.</p>`;
+
     const actions = h('div', 'ie-vactions');
     if (ttsAvailable()) {
-      const say = h('button', 'ie-btn', 'Listen');
-      say.addEventListener('click', () => { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(v.word); u.lang = 'en-GB'; speechSynthesis.speak(u); });
+      const say = h('button', 'ie-btn', '🔊 Pronounce');
+      say.addEventListener('click', () => {
+        speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(v.word);
+        u.lang = 'en-GB';
+        speechSynthesis.speak(u);
+      });
       actions.append(say);
     }
-    const reveal = h('button', 'ie-btn ie-btn-primary', 'Reveal');
+
+    const reveal = h('button', 'ie-btn ie-btn-primary', 'Reveal Meaning & Collocations');
     actions.append(reveal);
     card.append(actions);
     stage.append(card);
     reveal.focus();
+
     reveal.addEventListener('click', () => {
-      card.querySelector('.ie-note')!.remove();
+      card.querySelector('.ie-note')?.remove();
       actions.remove();
-      card.append(h('div', 'ie-vback', `<p>${esc(v.definition)}</p><p class="ie-vex">${esc(v.example)}</p><dl><dt>Collocations</dt><dd>${v.collocations.map(esc).join(' · ')}</dd><dt>Paraphrases</dt><dd>${v.paraphrases.map(esc).join(' · ')}</dd></dl>`));
+
+      let vnBlock = '';
+      if (v.vietnamese) {
+        vnBlock = `<p style="color: var(--accent-cyan); font-weight: 600; margin-bottom: var(--space-6);">🇻🇳 ${esc(
+          v.vietnamese
+        )}</p>`;
+      }
+
+      let collocBlock = '';
+      if (v.collocations && v.collocations.length > 0) {
+        collocBlock = `<dt>Academic Collocations</dt><dd style="color: var(--ink-primary); font-weight: 500;">${v.collocations
+          .map(c => `<span style="display:inline-block; padding: 2px 8px; margin: 2px; border-radius: 6px; background: rgba(56, 189, 248, 0.12); color: var(--accent-cyan);">${esc(c)}</span>`)
+          .join(' ')}</dd>`;
+      }
+
+      let paraBlock = '';
+      if (v.paraphrases && v.paraphrases.length > 0) {
+        paraBlock = `<dt>Exam Paraphrases</dt><dd>${v.paraphrases.map(esc).join(' · ')}</dd>`;
+      }
+
+      card.append(
+        h(
+          'div',
+          'ie-vback',
+          `${vnBlock}<p>${esc(v.definition)}</p><p class="ie-vex">${esc(
+            v.example
+          )}</p><dl>${collocBlock}${paraBlock}</dl>`
+        )
+      );
+
       const rate = h('div', 'ie-vactions');
       const ask = (label: string, r: SRSRating): HTMLButtonElement => {
         const b = h('button', r === 'good' ? 'ie-btn ie-btn-primary' : 'ie-btn', label);
         b.addEventListener('click', () => {
           states[v.id] = SRSEngine.rateCard(states[v.id], v.id, r, level(v));
           save(states);
-          if (r === 'again') queue.push(v); // see it again before the session ends
+          if (r === 'again') queue.push(v);
           next();
         });
         return b;
       };
-      const good = ask('I knew it', 'good');
-      rate.append(ask('Again', 'again'), good);
+
+      const good = ask('I knew it (Easy)', 'good');
+      rate.append(ask('Review Again (Hard)', 'again'), good);
       card.append(rate);
       good.focus();
     });
@@ -99,11 +268,58 @@ export function vocabView(root: HTMLElement): () => void {
 
   function start(): void {
     states = load();
-    queue = SRSEngine.getDueCards(pool(), states, SESSION);
+    const pool = getFilteredPool();
+    queue = SRSEngine.getDueCards(pool, states, SESSION);
     next();
   }
 
-  select.addEventListener('change', () => { topic = select.value; start(); });
+  // Bind Switchers
+  btnCore.addEventListener('click', () => {
+    activeDeckKey = 'core';
+    btnCore.classList.add('is-active');
+    btnIot.classList.remove('is-active');
+    btnCombined.classList.remove('is-active');
+    updateTopicOptions();
+    start();
+  });
+
+  btnIot.addEventListener('click', () => {
+    activeDeckKey = 'iot';
+    btnIot.classList.add('is-active');
+    btnCore.classList.remove('is-active');
+    btnCombined.classList.remove('is-active');
+    updateTopicOptions();
+    start();
+  });
+
+  btnCombined.addEventListener('click', () => {
+    activeDeckKey = 'combined';
+    btnCombined.classList.add('is-active');
+    btnCore.classList.remove('is-active');
+    btnIot.classList.remove('is-active');
+    updateTopicOptions();
+    start();
+  });
+
+  topicSelect.addEventListener('change', () => {
+    activeTopic = topicSelect.value;
+    start();
+  });
+
+  bandSelect.addEventListener('change', () => {
+    activeBand = bandSelect.value;
+    start();
+  });
+
+  searchInput.addEventListener('input', () => {
+    searchQuery = searchInput.value;
+    start();
+  });
+
+  updateTopicOptions();
   start();
-  return () => { if (ttsAvailable()) speechSynthesis.cancel(); };
+
+  return () => {
+    if (ttsAvailable()) speechSynthesis.cancel();
+  };
 }

@@ -47,9 +47,9 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     ],
     correctAnswer: 'FALSE',
     trapExplanation:
-      'Qualifier Shift & Opposite Reality: The prompt asserts synthesizing the compound was "remarkably straightforward", whereas the passage explicitly describes it as "stubbornly difficult". When information is directly contradicted, the answer is FALSE, not NOT GIVEN.',
+      'The prompt claims synthesizing the compound was "remarkably straightforward", while the passage calls it "stubbornly difficult". When information is directly contradicted, the answer is FALSE, not NOT GIVEN.',
     rationale:
-      'The statement is FALSE because "remarkably straightforward" is the direct opposite of the passage’s empirical fact: quinine was a "stubbornly difficult" compound to synthesize.'
+      'The statement is FALSE because "remarkably straightforward" directly contradicts the passage, which says quinine was "stubbornly difficult" to synthesize.'
   },
 
   // 2. Yes / No / Not Given
@@ -77,9 +77,9 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     ],
     correctAnswer: 'YES',
     trapExplanation:
-      'Distinguishing Author Voice vs. Cited Opinions: The text mentions policymakers who defend tests, but the author’s personal voice ("In our estimation... deleterious consequences") directly endorses the negative evaluation.',
+      'The text mentions policymakers who defend tests, but the author uses "In our estimation" and "deleterious consequences" to argue that the tests have harmed problem solving.',
     rationale:
-      'The statement is YES because the writer explicitly argues ("In our estimation") that standardized test reliance causes "deleterious consequences" (adverse impact) for "creative problem-solving" (analytical creativity).'
+      'The statement is YES because the writer argues ("In our estimation") that relying on standardized tests causes "deleterious consequences" (adverse impact) for creative problem solving.'
   },
 
   // 3. Short Answer Questions
@@ -155,9 +155,9 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     ],
     correctAnswer: 'C',
     trapExplanation:
-      'Antonym Trap: Option B contradicts the text with "decline". "Exponential surge" maps to C (expansion), and "systemic resistance" maps to C (opposition).',
+      'Option B contradicts the text with "decline". "Exponential surge" maps to B (expansion), and "systemic resistance" maps to C (opposition).',
     rationale:
-      'Option B is correct: "exponential surge" = B (expansion), and "systemic resistance" = C (opposition). Both words maintain flawless grammatical and semantic cohesion in the summary.'
+      'Choice C is correct: Blank 1 matches B (expansion for "exponential surge"), and Blank 2 matches C (opposition for "systemic resistance").'
   },
 
   // 6. Table Completion
@@ -256,9 +256,9 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     ],
     correctAnswer: 'A',
     trapExplanation:
-      'Verbatim Word Match Trap: Option C quotes "green branding" and "premiums", but asserts the exact opposite of what the empirical trials proved.',
+      'Option C repeats words like "green branding" and "premiums" from the text, but makes the opposite claim from the trial findings.',
     rationale:
-      'Option B correctly paraphrases the finding: sales accelerated only when biodegradable alternatives reached "exact price parity" (cost matched) with conventional plastics.'
+      'Option A correctly paraphrases the finding: sales accelerated only when biodegradable alternatives reached "exact price parity" with conventional plastics.'
   },
 
   // 10. Choose 2 From a List
@@ -287,9 +287,9 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     ],
     correctAnswer: ['A', 'C'],
     trapExplanation:
-      'Mentioned-but-Refuted Trap: Options B and D mention benefits the passage explicitly states are "unsupported by acoustic field data". Option E is not mentioned.',
+      'Options B and D name claims that the passage notes are "unsupported by acoustic field data". Option E is not mentioned.',
     rationale:
-      'Only A ("attenuate localized heat island effects by up to 3.5°C") and C ("curtail stormwater runoff velocities, decreasing drainage overload") are empirically verified benefits by the text.'
+      'Only A ("attenuate localized heat island effects by up to 3.5°C") and C ("curtail stormwater runoff velocities, decreasing drainage overload") are supported by data in the text.'
   },
 
   // 11. Matching Headings
@@ -346,9 +346,9 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     ],
     correctAnswer: 'C',
     trapExplanation:
-      'Looking for Literal Keywords: Scanning for the literal word "comparison" will fail. Look for contrast discourse markers like "While" and comparative adverbs.',
+      'Scanning for the word "comparison" will not work here. Look for contrast words like "While" that set two things side by side.',
     rationale:
-      'Paragraph C explicitly contrasts "conventional hand-drawn cartography" with "contemporary LiDAR drone surveys", marking a methodological evolution in the discipline.'
+      'Paragraph C contrasts "conventional hand-drawn cartography" with "contemporary LiDAR drone surveys".'
   },
 
   // 13. Matching Features / Names
@@ -375,9 +375,9 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     ],
     correctAnswer: 'A',
     trapExplanation:
-      'Attribution Error: Professor Sterling appears second and discusses megafauna, but he argues droughts caused extinction, NOT hunting. Dr. Vance is the researcher who claims overhunting precipitated the collapse.',
+      'Professor Sterling also discusses megafauna, but blames droughts rather than hunting. Dr. Vance is the researcher who argues overhunting drove the collapse.',
     rationale:
-      'Dr. Elena Vance explicitly presented evidence that "human overhunting intensified... directly precipitating megafauna population collapse", matching the statement.'
+      'Dr. Elena Vance found that "human overhunting intensified... directly precipitating megafauna population collapse", matching the statement.'
   },
 
   // 14. Matching Sentence Endings
