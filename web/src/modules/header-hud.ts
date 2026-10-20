@@ -11,7 +11,7 @@ import { ZenMode } from '../core/zen-mode';
 import { MultiSkillQuizModal } from './multi-skill-quiz-modal';
 import { ambientMusicEngine, AmbientMusicMode } from '../core/ambient-music-engine';
 
-const ROUTE_NAMES: Record<string, string> = { read: 'READING', write: 'WRITING', listen: 'LISTENING', speak: 'SPEAKING', vocab: 'VOCABULARY', colloc: 'COLLOCATIONS', grammar: 'GRAMMAR', habits: 'DAILY HABITS', singularity: 'SINGULARITY', mediate: 'MEDIATION', cockpit: 'IELTS COCKPIT' };
+const ROUTE_NAMES: Record<string, string> = { read: 'READING', write: 'WRITING', listen: 'LISTENING', speak: 'SPEAKING', vocab: 'VOCABULARY', colloc: 'COLLOCATIONS', grammar: 'GRAMMAR', tenses: '12 TENSES', habits: 'DAILY HABITS', singularity: 'SINGULARITY', mediate: 'MEDIATION', cockpit: 'IELTS COCKPIT' };
 
 export class HeaderHUD {
   private element: HTMLElement;

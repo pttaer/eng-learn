@@ -1,5 +1,5 @@
 import { Cefr } from '../core/cefr';
-import { levelsWithContent, defaultLevel, levelChipsHtml } from '../core/level-filter';
+import { levelsWithContent, levelChipsHtml } from '../core/level-filter';
 import { icon } from '../utils/icons';
 import { AtomicCard } from '../core/atomic-card';
 import { SRSEngine } from '../core/srs-engine';
@@ -37,11 +37,12 @@ export class CollocationsDossier {
   constructor() {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-collocations interactive';
-    this.activeLevel = defaultLevel(collocationsData as CollocationItem[], StorageManager.getSkillLevel('vocab'));
+    this.activeLevel = 'ALL';
+    const dueCount = SRSEngine.getDueCards(collocationsData as CollocationItem[], StorageManager.loadState().cardStates, 1).length;
+    this.activeCategory = dueCount > 0 ? 'DUE' : 'ALL';
     this.filterCards();
     window.addEventListener('learner-level-change', () => {
-      this.activeLevel = defaultLevel(collocationsData as CollocationItem[], StorageManager.getSkillLevel('vocab'));
-      this.filterCards();
+      // Collocations are frequency & topic-based: never hide baseline collocations when learner level changes
       if (this.container.isConnected) this.render();
     });
   }

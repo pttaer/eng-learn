@@ -96,7 +96,7 @@ const CURATED_LISTENING_QUESTIONS: DiagnosticQuestionItem[] = [
     ],
     answer: 0,
     explanation: "In natural speech, unstressed function words 'to' and 'are' reduce to weak forms. Content and stressed words retain their full pronunciation.",
-    vietnamese: "Trong khẩu ngữ tự nhiên, các từ hàm 'to' và 'are' giảm âm trong vị trí không nhấn."
+    vietnamese: "Khi nói chuyện tự nhiên, các từ chức năng như 'to' và 'are' thường đọc lướt ở dạng yếu (weak form), nhường trọng âm cho các từ mang nghĩa chính."
   },
   {
     id: 'diag-a2-listen',
@@ -116,7 +116,7 @@ const CURATED_LISTENING_QUESTIONS: DiagnosticQuestionItem[] = [
     ],
     answer: 1,
     explanation: "'Could you' demonstrates palatal assimilation where the final /d/ and initial /j/ combine into /dʒ/, a common feature in rapid English speech.",
-    vietnamese: "'Could you' thể hiện biến âm giai mềm nơi /d/ và /j/ kết hợp thành /dʒ/."
+    vietnamese: "'Could you' là hiện tượng đồng hóa âm (palatal assimilation): âm /d/ cuối gặp âm /j/ đầu từ sau sẽ hòa thành /dʒ/."
   },
   {
     id: 'diag-b1-listen',
@@ -135,8 +135,8 @@ const CURATED_LISTENING_QUESTIONS: DiagnosticQuestionItem[] = [
       "'while you' preserves a full glottal stop"
     ],
     answer: 0,
-    explanation: "Natural speech welds 'looking at it' into a continuous stream [lʊkɪŋæt̚ɪt], with consonants in the middle linking across the word boundaries.",
-    vietnamese: "Khẩu ngữ tự nhiên nối 'looking at it' thành một chuỗi liên tục, với phụ âm liên kết qua các ranh giới từ."
+    explanation: "In fast speech, 'looking at it' links together into [lʊkɪŋæt̚ɪt], carrying consonants into the next vowels without pauses between words.",
+    vietnamese: "Khi nói nhanh, cụm 'looking at it' được nối âm liền mạch [lʊkɪŋæt̚ɪt], không bị ngắt quãng giữa các từ."
   },
   {
     id: 'diag-b2-listen',
@@ -156,7 +156,7 @@ const CURATED_LISTENING_QUESTIONS: DiagnosticQuestionItem[] = [
     ],
     answer: 2,
     explanation: "In rapid speech, the final /t/ in 'most' is deleted when followed by another stop /k/ in 'creators', creating the abbreviated [moʊs kriˈeɪtəz].",
-    vietnamese: "Trong khẩu ngữ nhanh, /t/ cuối trong 'most' bị xóa khi theo sau là một âm tắt khác /k/."
+    vietnamese: "Trong ngữ lưu nhanh, âm /t/ cuối từ 'most' được lược bỏ khi đứng liền trước phụ âm tắc /k/ của 'creators'."
   },
   {
     id: 'diag-c1-listen',
@@ -176,7 +176,7 @@ const CURATED_LISTENING_QUESTIONS: DiagnosticQuestionItem[] = [
     ],
     answer: 1,
     explanation: "The phrase 'in an era' shows characteristic vowel linking where unstressed vowels flow together in rapid connected speech without clear word breaks.",
-    vietnamese: "Cụm từ 'in an era' thể hiện việc nối âm nguyên âm nơi các nguyên âm không nhấn chảy thành một đơn vị liên tục."
+    vietnamese: "Cụm 'in an era' nối liền các nguyên âm không nhấn với nhau, tạo thành luồng âm thanh mượt mà không ngắt quãng."
   },
   {
     id: 'diag-c2-listen',
@@ -195,8 +195,8 @@ const CURATED_LISTENING_QUESTIONS: DiagnosticQuestionItem[] = [
       'Unreleased stops, vowel reduction, and variable timing on content words'
     ],
     answer: 3,
-    explanation: 'Native-like rapid delivery exhibits unreleased final stops (especially before another consonant), reduction of unstressed vowels, and flexible rhythm emphasizing important words.',
-    vietnamese: 'Khẩu ngữ tương tự bản xứ tốc độ nhanh thể hiện các âm tắc không phát hành, giảm âm nguyên âm không nhấn, và nhịp điệu mềm dẻo.'
+    explanation: 'Fast natural speech drops or leaves final stops unreleased, reduces unstressed vowels, and stretches stressed words for emphasis.',
+    vietnamese: "Người bản xứ khi nói nhanh thường nuốt âm tắc cuối (unreleased stop), giảm nhẹ các nguyên âm không mang trọng âm và nhấn mạnh vào từ quan trọng."
   }
 ];
 
