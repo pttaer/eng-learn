@@ -3,6 +3,7 @@ import { SkillId, ALL_SKILLS, SkillProfile, StorageManager } from '../utils/stor
 import { icon, IconName } from '../utils/icons';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import diagnosticDataRaw from '../assets/data/diagnostic-questions.json';
+import { feedback } from '../core/feedback';
 
 export interface DiagnosticQuestionItem {
   id: string;
@@ -741,14 +742,18 @@ export class MultiSkillQuizModal {
     this.stageAskedCounts[this.currentStageIndex]++;
     if (isCorrect) {
       this.stageCorrectCounts[this.currentStageIndex]++;
-      AudioSynthesizer.play('absorb');
-    } else {
-      AudioSynthesizer.play('alarm');
     }
+    feedback.emit({
+      type: 'answer',
+      result: isCorrect ? 'correct' : 'wrong',
+      why: q.explanation ?? '',
+      mode: 'practice'
+    });
 
     this.stageQuestionIndex++;
     if (this.stageQuestionIndex >= this.currentStageQuestions.length) {
       // Stage finished
+      feedback.emit({ type: 'milestone', label: 'Stage complete' });
       this.advanceStage();
     } else {
       this.renderQuestion();
