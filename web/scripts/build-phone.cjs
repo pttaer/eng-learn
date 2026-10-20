@@ -20,7 +20,7 @@ const safeJs = js => js
   .replace(/\/\/# sourceMappingURL=.*$/gm, '')
   .replace(/<\/script/gi, '<\\/script');
 
-const inlineFontUrls = (page, css) => css.replace(/url\(\.\/fonts\/([^)]+)\)/g, (_, f) =>
+const inlineFontUrls = (page, css) => css.replace(/url\(\.{1,2}\/fonts\/([^)]+)\)/g, (_, f) =>
   `url(${dataUri(path.join(buildDir(page), 'fonts', f), 'font/woff2')})`);
 
 function inlinePage(page) {
@@ -38,7 +38,7 @@ function inlinePage(page) {
     (_, p) => `<style>${inlineFontUrls(page, readBuild(page, p))}</style>`);
 
   // Links that only make sense on a server or the network
-  html = html.replace(/<link rel="(modulepreload|manifest|apple-touch-icon|preconnect)"[^>]*>\s*/g, '');
+  html = html.replace(/<link rel="(modulepreload|preload|manifest|apple-touch-icon|preconnect)"[^>]*>\s*/g, '');
   html = html.replace(/<link rel="icon"[^>]*>/,
     `<link rel="icon" href="${dataUri(path.join(buildDir(page), 'icon.svg'), 'image/svg+xml')}" />`);
 

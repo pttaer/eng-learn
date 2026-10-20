@@ -7,23 +7,56 @@
 const CACHE_VERSION = 'v1.1.0';
 const SHELL_CACHE = `stark-shell-${CACHE_VERSION}`;
 const ASSETS_CACHE = `stark-assets-${CACHE_VERSION}`;
+const MAX_ASSET_ENTRIES = 120;
+const NAV_TIMEOUT_MS = 4000;
 
 const SHELL_RESOURCES = [
   '/',
   '/index.html',
+  '/ielts.html',
   '/manifest.json',
   '/icon.svg',
   '/icon-192.png',
   '/icon-512.png'
 ];
 
-// 1. Installation: Pre-cache core architectural app shell
+// Keep only the newest `max` entries. Cache.keys() returns entries in insertion order.
+async function trimCache(name, max) {
+  const cache = await caches.open(name);
+  const keys = await cache.keys();
+  for (let i = 0; i < keys.length - max; i++) {
+    await cache.delete(keys[i]);
+  }
+}
+
+// Network-first with a timeout. On a slow network, answer from cache and keep the request running to refresh it.
+async function navigationResponse(request, cache) {
+  const cachedShell = () => cache.match(request)
+    .then((hit) => hit || cache.match('/index.html'))
+    .then((hit) => hit || cache.match('/'));
+  const network = fetch(request).then((res) => {
+    if (res && res.status === 200) cache.put(request, res.clone());
+    return res;
+  });
+  const timeout = new Promise((resolve) => setTimeout(() => resolve(null), NAV_TIMEOUT_MS));
+  try {
+    const first = await Promise.race([network, timeout]);
+    if (first) return first;
+  } catch (err) {
+    const fallback = await cachedShell();
+    if (fallback) return fallback;
+    throw err;
+  }
+  const fallback = await cachedShell();
+  return fallback || network;
+}
+
+// 1. Installation: Pre-cache core architectural app shell.
+// No skipWaiting here: a new version activates on the next full launch, so a page never reloads mid-session.
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(SHELL_CACHE).then((cache) => {
       return cache.addAll(SHELL_RESOURCES);
-    }).then(() => {
-      return self.skipWaiting();
     })
   );
 });
@@ -40,6 +73,8 @@ self.addEventListener('activate', (event) => {
             return caches.delete(staleName);
           })
       );
+    }).then(() => {
+      return trimCache(ASSETS_CACHE, MAX_ASSET_ENTRIES);
     }).then(() => {
       return self.clients.claim();
     })
@@ -67,19 +102,7 @@ self.addEventListener('fetch', (event) => {
   // Cache-first here pinned users to an old index.html (and its old hashed bundles) after every update.
   if (isNavigation || SHELL_RESOURCES.includes(url.pathname)) {
     event.respondWith(
-      caches.open(SHELL_CACHE).then(async (cache) => {
-        try {
-          const networkRes = await fetch(event.request);
-          if (networkRes && networkRes.status === 200) {
-            cache.put(event.request, networkRes.clone());
-          }
-          return networkRes;
-        } catch (err) {
-          const fallback = await cache.match(event.request) || await cache.match('/index.html') || await cache.match('/');
-          if (fallback) return fallback;
-          throw err;
-        }
-      })
+      caches.open(SHELL_CACHE).then((cache) => navigationResponse(event.request, cache))
     );
     return;
   }

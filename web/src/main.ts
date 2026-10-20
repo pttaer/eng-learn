@@ -504,6 +504,7 @@ class App {
 document.addEventListener('DOMContentLoaded', () => {
   (window as any).MotionEngine = MotionEngine;
   new App();
+  document.getElementById('boot')?.remove();
   registerServiceWorker();
   NotificationEngine.schedulePeriodicCheck();
 });
