@@ -72,7 +72,7 @@ Reclaiming cognitive autonomy requires institutionalizing deliberate boundaries.
 - **IPA**: /ˈrez.ɪ.djuː/
 - **Definition**: A small amount of something that remains after the main part has gone or been taken.
 - **Vietnamese**: phần tàn dư, cặn bã còn vương lại
-- **Context**: Switching focus between collaborative pings and contemplation leaves an exhausting residue known as "attention residue."
+- **Context**: Switching focus between collaborative pings and contemplation leaves an exhausting residue that impairs analytical throughput.
 - **Collocations**: attention residue, toxic residue, chemical residue
 - **Etymology**: Old French residu, from Latin residuum (that which remains).
 

@@ -332,7 +332,7 @@
    {
     "id": "r02-q11",
     "type": "table",
-    "prompt": "Table, Water features: cooling of 2 to 3 degrees Celsius within ______ meters.",
+    "prompt": "Table, Water features: a 2 to 3 °C drop in heat occurs within ______ meters.",
     "answer": [
      "500",
      "500 meters",
@@ -482,7 +482,7 @@
    {
     "id": "r03-q10",
     "type": "short",
-    "prompt": "Which part of the brain appears to be involved in monitoring one's own mental states?",
+    "prompt": "Which brain area is implicated in tracking an individual's own cognitive states?",
     "answer": [
      "anterior prefrontal cortex",
      "the anterior prefrontal cortex",
@@ -504,7 +504,7 @@
    {
     "id": "r03-q12",
     "type": "short",
-    "prompt": "What kind of practice develops both domain knowledge and domain-specific metacognitive skills?",
+    "prompt": "What specific training approach enhances subject expertise alongside specialized self-monitoring skills?",
     "answer": [
      "deliberate practice",
      "deliberate"
@@ -1199,7 +1199,7 @@
    {
     "id": "r07-q08",
     "type": "sentence",
-    "prompt": "Eruptions of ice or water instead of molten rock are known as ______.",
+    "prompt": "Surface discharges expelling icy slush or water rather than magma are termed ______.",
     "answer": [
      "cryovolcanism"
     ],

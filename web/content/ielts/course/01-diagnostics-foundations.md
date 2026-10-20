@@ -80,8 +80,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) are requiring
   - D) have required
 - **Correct**: 0
-- **Explanation**: The subject of the sentence is the singular head noun 'expansion', not the plural prepositional adjunct 'energy grids'. Singular subjects demand the third-person singular verb 'requires'.
-- **Impact on Band**: Prevents Band 7.0 GRA due to systematic subject-verb agreement slips with post-modified noun phrases.
+- **Explanation**: The subject is the singular noun 'expansion', not 'energy grids'. A singular subject takes the singular verb 'requires'.
+- **Impact on Band**: Subject-verb agreement errors with long noun phrases keep Grammatical Range and Accuracy below Band 7.0.
 
 #### Question 2
 - **ID**: `diag-02`
@@ -94,8 +94,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) had increased
   - D) has increased
 - **Correct**: 3
-- **Explanation**: The time marker 'Since the 1990s' anchors a continuous interval from a past point to the present, requiring the present perfect tense 'has increased'. Past simple incorrectly seals the action in the past.
-- **Impact on Band**: Caps GRA at Band 6.0 if past simple is incorrectly substituted for continuous historical trends.
+- **Explanation**: 'Since the 1990s' describes a trend starting in the past and continuing to the present, which takes the present perfect 'has increased'.
+- **Impact on Band**: Using the past simple for ongoing trends limits Grammatical Range and Accuracy to Band 6.0.
 
 #### Question 3
 - **ID**: `diag-03`
@@ -108,8 +108,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) Ø (no article)
   - D) a
 - **Correct**: 2
-- **Explanation**: 'Clean drinking water' is an uncountable noun used in a general sense, requiring the zero article (Ø). Using 'the' here is an erroneous over-generalization that restricts the meaning to a specific water source.
-- **Impact on Band**: Systematic article overuse or omission caps Lexical Resource and Grammatical Accuracy at Band 6.0.
+- **Explanation**: 'Clean drinking water' is an uncountable noun used generally here, so it takes no article (Ø). Adding 'the' would point to a specific water supply.
+- **Impact on Band**: Article mistakes across an essay restrict Lexical Resource and Grammatical Accuracy to Band 6.0.
 
 #### Question 4
 - **ID**: `diag-04`
@@ -122,8 +122,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) yet
   - D) Ø (no conjunction)
 - **Correct**: 3
-- **Explanation**: 'Although' is a subordinating conjunction introducing a dependent concession clause. English syntax prohibits a paired coordinating conjunction ('but', 'yet') or conjunctive adverb ('however') in the main clause.
-- **Impact on Band**: Double-conjunction structures ('Although... but...') represent a severe fossilized syntax error capping GRA at Band 5.5.
+- **Explanation**: 'Although' already connects the two clauses. English sentences cannot pair 'Although' with 'but', 'yet', or 'however' in the main clause.
+- **Impact on Band**: Pairing 'Although' with 'but' is a serious structural error that holds Grammatical Range and Accuracy to Band 5.5.
 
 #### Question 5
 - **ID**: `diag-05`
@@ -136,8 +136,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) to
   - D) on
 - **Correct**: 0
-- **Explanation**: Trend nouns indicating rise, fall, increase, or decline take the preposition 'in' when followed by the metric or variable undergoing the change (e.g., 'a decline in proportion').
-- **Impact on Band**: Misselecting prepositions in Task 1 trend descriptions destroys precision and penalizes Lexical Resource and GRA.
+- **Explanation**: Nouns of change like 'decline', 'rise', or 'drop' take 'in' before the metric that changed ('a decline in proportion').
+- **Impact on Band**: Wrong prepositions in Task 1 trend descriptions weaken both Lexical Resource and Grammatical Accuracy.
 
 #### Question 6
 - **ID**: `diag-06`
@@ -150,8 +150,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) derive
   - D) exert
 - **Correct**: 3
-- **Explanation**: The verb 'exert' forms the precise academic collocation with 'influence' ('exert influence'). 'Wield' collocates with power; 'manifest' with symptoms; 'derive' with benefits, none matching 'influence' in formal discourse.
-- **Impact on Band**: Band 7.0+ Lexical Resource requires using sophisticated collocations with precise verb-noun pairing in academic register.
+- **Explanation**: The natural pairing is 'exert influence'. You wield power, manifest symptoms, and derive benefits, but influence pairs with exert.
+- **Impact on Band**: Accurate verb-noun collocations are essential for reaching Band 7.0 or higher in Lexical Resource.
 
 #### Question 7
 - **ID**: `diag-07`
@@ -164,8 +164,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) are
   - D) was
 - **Correct**: 3
-- **Explanation**: In correlative constructions with 'neither... nor...', the verb agrees with the closer subject ('the transport ministry', singular), hence 'was'.
-- **Impact on Band**: Proves mastery of advanced proximity agreement rules required for Band 8.0 GRA.
+- **Explanation**: With 'neither... nor...', the verb agrees with the closer subject ('the transport ministry'), which is singular, so use 'was'.
+- **Impact on Band**: Handling proximity agreement accurately shows the grammatical control needed for Band 8.0.
 
 #### Question 8
 - **ID**: `diag-08`
@@ -178,8 +178,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) will have risen
   - D) has risen
 - **Correct**: 2
-- **Explanation**: The future time anchor 'By the time [present verb] ... in 2035' mandates the future perfect tense 'will have risen' to indicate completion prior to that future point. Simple future 'will rise' ignores the prospective aspect.
-- **Impact on Band**: Demonstrates command of complex temporal frameworks necessary for Band 8.0+ grammatical range.
+- **Explanation**: 'By the time' combined with a future year points to an action finished before that point, requiring the future perfect 'will have risen'.
+- **Impact on Band**: Using the future perfect correctly for future deadlines demonstrates Band 8.0 grammatical range.
 
 #### Question 9
 - **ID**: `diag-09`
@@ -192,8 +192,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) that
   - D) whom
 - **Correct**: 0
-- **Explanation**: A non-restrictive relative clause following a quantifier phrase ('the majority of') referring to inanimate things ('trials') requires the relative pronoun 'which'. Using 'them' creates a comma splice.
-- **Impact on Band**: Comma splices and run-on sentences restrict Coherence & Cohesion and GRA to Band 6.0.
+- **Explanation**: After a quantifier like 'the majority of' linking two clauses, use the relative pronoun 'which'. Using 'them' without a conjunction creates a comma splice.
+- **Impact on Band**: Comma splices reduce scores in both Coherence & Cohesion and Grammatical Accuracy.
 
 #### Question 10
 - **ID**: `diag-10`
@@ -206,8 +206,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) Ø
   - D) the
 - **Correct**: 3
-- **Explanation**: The definite article 'the' combined with an adjective ('unemployed') functions as a nominalized plural collective noun referring to the whole class of individuals. Neither quantifiers nor demonstratives work here.
-- **Impact on Band**: Accurate usage of nominalized adjectives reflects high-level syntactic dexterity (Band 7.5+ GRA).
+- **Explanation**: 'The' plus an adjective ('the unemployed') refers to the group as a whole and functions as a plural noun.
+- **Impact on Band**: Using group adjectives with 'the' demonstrates the syntactic variety expected at Band 7.5 and above.
 
 #### Question 11
 - **ID**: `diag-11`
@@ -220,8 +220,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) grave
   - D) pronounced
 - **Correct**: 2
-- **Explanation**: 'Grave threat' is the high-level academic collocation denoting severe and imminent peril. 'Acute' and 'critical' collocate with issues/situations but not threats; 'pronounced' suggests obvious but not threatening.
-- **Impact on Band**: Distinguishes high-register academic collocations from conversational near-synonyms; separates Band 7.0 from Band 8.0 lexical precision.
+- **Explanation**: 'Grave threat' is the standard collocation for a serious danger. 'Acute' and 'critical' pair with problems or situations, but not with threats.
+- **Impact on Band**: Choosing the exact collocate separates Band 7.0 from Band 8.0 lexical precision.
 
 #### Question 12
 - **ID**: `diag-12`
@@ -234,8 +234,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) are nations undertaking
   - D) nations have undertaken
 - **Correct**: 1
-- **Explanation**: Negative or restrictive adverbs ('rarely', 'seldom', 'hardly') at the beginning of a clause trigger subject-auxiliary inversion with the appropriate auxiliary ('do nations undertake'). Non-inverted and continuous structures fail the inversion rule.
-- **Impact on Band**: Controlled negative inversion demonstrates Band 8.5+ grammatical range.
+- **Explanation**: Placing 'Rarely' at the start of a sentence triggers inversion: auxiliary 'do' + subject + base verb 'undertake'.
+- **Impact on Band**: Accurate negative inversion demonstrates high grammatical range for Band 8.0 and above.
 
 #### Question 13
 - **ID**: `diag-13`
@@ -248,8 +248,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) at
   - D) on
 - **Correct**: 2
-- **Explanation**: The adjective/passive participle 'aimed' collocated with an objective takes the preposition 'at' + gerund ('aimed at mitigating').
-- **Impact on Band**: Dependent preposition inaccuracies undermine accuracy and cohesion in Task 2 essays.
+- **Explanation**: 'Aimed' takes the preposition 'at' followed by an -ing verb ('aimed at mitigating').
+- **Impact on Band**: Mistakes with dependent prepositions weaken sentence accuracy and cohesion in Task 2.
 
 #### Question 14
 - **ID**: `diag-14`
@@ -262,8 +262,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) do
   - D) execute
 - **Correct**: 1
-- **Explanation**: The canonical academic collocation is 'take measures' or 'adopt measures'. Using 'make measures' is a direct L1 translation error.
-- **Impact on Band**: Basic delexical verb substitution errors ('make' vs 'take') prevent attaining Band 7.0 in Lexical Resource.
+- **Explanation**: English uses 'take measures' or 'adopt measures', never 'make measures'.
+- **Impact on Band**: Confusing common verbs like 'make' and 'take' prevents reaching Band 7.0 in Lexical Resource.
 
 #### Question 15
 - **ID**: `diag-15`
@@ -276,8 +276,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) have been
   - D) were
 - **Correct**: 1
-- **Explanation**: With fraction and proportion expressions, agreement is determined by the noun in the prepositional phrase ('arable land', uncountable singular), requiring the singular verb 'is'.
-- **Impact on Band**: Demonstrates nuanced understanding of proportional concord essential for Task 1 report writing.
+- **Explanation**: With fractions or proportions, verb agreement follows the noun after 'of'. Because 'arable land' is uncountable, it takes the singular verb 'is'.
+- **Impact on Band**: Proportional agreement is essential for accurate descriptions in Task 1 reports.
 
 #### Question 16
 - **ID**: `diag-16`
@@ -290,8 +290,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) would have been
   - D) was
 - **Correct**: 2
-- **Explanation**: Third conditional inverted structure ('Had [subject] been...') requires the past conditional modal perfect in the main clause ('would have been mitigated'). The past anchor clarifies that the consequence is counterfactual to actual history.
-- **Impact on Band**: Accurate hypothetical reasoning is a hallmark of Band 8.0+ Task 2 essay arguments.
+- **Explanation**: An inverted third conditional ('Had the framework been...') needs 'would have been' in the main clause to describe a counterfactual past outcome.
+- **Impact on Band**: Hypothetical conditionals like this show the complex sentence range needed for Band 8.0.
 
 #### Question 17
 - **ID**: `diag-17`
@@ -304,8 +304,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) authorize
   - D) certify
 - **Correct**: 1
-- **Explanation**: 'Corroborate the hypothesis' is the precise academic collocation meaning to support with evidence. 'Ratify', 'authorize', and 'certify' collocate with official agreements or credentials, not hypotheses.
-- **Impact on Band**: Elevates Lexical Resource to Band 8.0 by utilizing precise academic register in formal academic discourse.
+- **Explanation**: Data can 'corroborate a hypothesis' (support it with evidence). 'Ratify', 'authorize', and 'certify' apply to laws, permits, or credentials, not scientific claims.
+- **Impact on Band**: Using specific research vocabulary helps raise Lexical Resource to Band 8.0.
 
 #### Question 18
 - **ID**: `diag-18`
@@ -318,8 +318,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) and thereby provide
   - D) which thereby provide
 - **Correct**: 1
-- **Explanation**: The adverb 'thereby' followed by a present participle ('providing') creates an adverbial clause of result, smoothly linking the action to its consequence.
-- **Impact on Band**: Participle clauses increase syntactic density and clausal complexity for Band 8.0 GRA.
+- **Explanation**: 'Thereby' followed by an -ing participle ('thereby providing') forms a result clause that connects the action to its effect.
+- **Impact on Band**: Participle clauses of result add syntactic variety for Band 8.0 Grammatical Range.
 
 #### Question 19
 - **ID**: `diag-19`
@@ -332,8 +332,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) for
   - D) to
 - **Correct**: 2
-- **Explanation**: The phrasal verb 'account for' is the obligatory academic expression for representing a proportion or percentage in Task 1 reports.
-- **Impact on Band**: Mandatory accuracy for Task 1 visual reports; incorrect prepositions lead to immediate score reductions in Task Achievement and GRA.
+- **Explanation**: 'Account for' is the standard phrase for representing a share or percentage ('accounted for 18%').
+- **Impact on Band**: Accurate proportion verbs are essential in Task 1 reports to avoid penalties in Task Achievement and grammar.
 
 #### Question 20
 - **ID**: `diag-20`
@@ -346,8 +346,8 @@ The diagnostic suite assesses baseline accuracy across high-frequency error vect
   - C) unwelcome
   - D) uncontrolled
 - **Correct**: 0
-- **Explanation**: 'Unprecedented degradation' is the high-level academic collocation indicating a level or severity never before experienced. 'Unintended', 'unwelcome', and 'uncontrolled' describe consequences but lack the formal gravity of 'unprecedented'.
-- **Impact on Band**: Demonstrates Band 8.0+ precision in selecting collocates that convey magnitude and historical significance in formal registers.
+- **Explanation**: 'Unprecedented degradation' means environmental damage on a scale never seen before. 'Unintended' and 'unwelcome' describe unwanted effects, but do not convey the historical scale of 'unprecedented'.
+- **Impact on Band**: Choosing adjectives that capture exact scale reflects Band 8.0 lexical precision.
 
 ---
 

@@ -92,7 +92,7 @@ We have dinner together every evening. My mother makes soup. My father tells fun
 - **IPA**: /ˈhæp.i/
 - **Definition**: Feeling good and pleased.
 - **Vietnamese**: vui, hạnh phúc
-- **Context**: I am happy at home. We are a happy family.
+- **Context**: We are a happy family.
 - **Collocations**: very happy, happy family, happy birthday
 - **Etymology**: From Old Norse happ (luck).
 

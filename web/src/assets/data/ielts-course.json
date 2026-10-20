@@ -1,7 +1,7 @@
 {
   "title": "IELTS Band 7+ Complete Prep Course Master Data",
   "standards": "IELTS 9-Band Descriptors & Cambridge Calibrated Assessment",
-  "compiledAt": "2026-10-16T04:39:12.474Z",
+  "compiledAt": "2026-10-20T07:55:29.235Z",
   "stats": {
     "strategyCards": 46,
     "diagnosticQuestions": 20,
@@ -22,8 +22,8 @@
         "have required"
       ],
       "correctIndex": 0,
-      "explanation": "The subject of the sentence is the singular head noun 'expansion', not the plural prepositional adjunct 'energy grids'. Singular subjects demand the third-person singular verb 'requires'.",
-      "impactOnBand": "Prevents Band 7.0 GRA due to systematic subject-verb agreement slips with post-modified noun phrases."
+      "explanation": "The subject is the singular noun 'expansion', not 'energy grids'. A singular subject takes the singular verb 'requires'.",
+      "impactOnBand": "Subject-verb agreement errors with long noun phrases keep Grammatical Range and Accuracy below Band 7.0."
     },
     {
       "id": "diag-02",
@@ -37,8 +37,8 @@
         "has increased"
       ],
       "correctIndex": 3,
-      "explanation": "The time marker 'Since the 1990s' anchors a continuous interval from a past point to the present, requiring the present perfect tense 'has increased'. Past simple incorrectly seals the action in the past.",
-      "impactOnBand": "Caps GRA at Band 6.0 if past simple is incorrectly substituted for continuous historical trends."
+      "explanation": "'Since the 1990s' describes a trend starting in the past and continuing to the present, which takes the present perfect 'has increased'.",
+      "impactOnBand": "Using the past simple for ongoing trends limits Grammatical Range and Accuracy to Band 6.0."
     },
     {
       "id": "diag-03",
@@ -52,8 +52,8 @@
         "a"
       ],
       "correctIndex": 2,
-      "explanation": "'Clean drinking water' is an uncountable noun used in a general sense, requiring the zero article (Ø). Using 'the' here is an erroneous over-generalization that restricts the meaning to a specific water source.",
-      "impactOnBand": "Systematic article overuse or omission caps Lexical Resource and Grammatical Accuracy at Band 6.0."
+      "explanation": "'Clean drinking water' is an uncountable noun used generally here, so it takes no article (Ø). Adding 'the' would point to a specific water supply.",
+      "impactOnBand": "Article mistakes across an essay restrict Lexical Resource and Grammatical Accuracy to Band 6.0."
     },
     {
       "id": "diag-04",
@@ -67,8 +67,8 @@
         "Ø (no conjunction)"
       ],
       "correctIndex": 3,
-      "explanation": "'Although' is a subordinating conjunction introducing a dependent concession clause. English syntax prohibits a paired coordinating conjunction ('but', 'yet') or conjunctive adverb ('however') in the main clause.",
-      "impactOnBand": "Double-conjunction structures ('Although... but...') represent a severe fossilized syntax error capping GRA at Band 5.5."
+      "explanation": "'Although' already connects the two clauses. English sentences cannot pair 'Although' with 'but', 'yet', or 'however' in the main clause.",
+      "impactOnBand": "Pairing 'Although' with 'but' is a serious structural error that holds Grammatical Range and Accuracy to Band 5.5."
     },
     {
       "id": "diag-05",
@@ -82,8 +82,8 @@
         "on"
       ],
       "correctIndex": 0,
-      "explanation": "Trend nouns indicating rise, fall, increase, or decline take the preposition 'in' when followed by the metric or variable undergoing the change (e.g., 'a decline in proportion').",
-      "impactOnBand": "Misselecting prepositions in Task 1 trend descriptions destroys precision and penalizes Lexical Resource and GRA."
+      "explanation": "Nouns of change like 'decline', 'rise', or 'drop' take 'in' before the metric that changed ('a decline in proportion').",
+      "impactOnBand": "Wrong prepositions in Task 1 trend descriptions weaken both Lexical Resource and Grammatical Accuracy."
     },
     {
       "id": "diag-06",
@@ -97,8 +97,8 @@
         "exert"
       ],
       "correctIndex": 3,
-      "explanation": "The verb 'exert' forms the precise academic collocation with 'influence' ('exert influence'). 'Wield' collocates with power; 'manifest' with symptoms; 'derive' with benefits, none matching 'influence' in formal discourse.",
-      "impactOnBand": "Band 7.0+ Lexical Resource requires using sophisticated collocations with precise verb-noun pairing in academic register."
+      "explanation": "The natural pairing is 'exert influence'. You wield power, manifest symptoms, and derive benefits, but influence pairs with exert.",
+      "impactOnBand": "Accurate verb-noun collocations are essential for reaching Band 7.0 or higher in Lexical Resource."
     },
     {
       "id": "diag-07",
@@ -112,8 +112,8 @@
         "was"
       ],
       "correctIndex": 3,
-      "explanation": "In correlative constructions with 'neither... nor...', the verb agrees with the closer subject ('the transport ministry', singular), hence 'was'.",
-      "impactOnBand": "Proves mastery of advanced proximity agreement rules required for Band 8.0 GRA."
+      "explanation": "With 'neither... nor...', the verb agrees with the closer subject ('the transport ministry'), which is singular, so use 'was'.",
+      "impactOnBand": "Handling proximity agreement accurately shows the grammatical control needed for Band 8.0."
     },
     {
       "id": "diag-08",
@@ -127,8 +127,8 @@
         "has risen"
       ],
       "correctIndex": 2,
-      "explanation": "The future time anchor 'By the time [present verb] ... in 2035' mandates the future perfect tense 'will have risen' to indicate completion prior to that future point. Simple future 'will rise' ignores the prospective aspect.",
-      "impactOnBand": "Demonstrates command of complex temporal frameworks necessary for Band 8.0+ grammatical range."
+      "explanation": "'By the time' combined with a future year points to an action finished before that point, requiring the future perfect 'will have risen'.",
+      "impactOnBand": "Using the future perfect correctly for future deadlines demonstrates Band 8.0 grammatical range."
     },
     {
       "id": "diag-09",
@@ -142,8 +142,8 @@
         "whom"
       ],
       "correctIndex": 0,
-      "explanation": "A non-restrictive relative clause following a quantifier phrase ('the majority of') referring to inanimate things ('trials') requires the relative pronoun 'which'. Using 'them' creates a comma splice.",
-      "impactOnBand": "Comma splices and run-on sentences restrict Coherence & Cohesion and GRA to Band 6.0."
+      "explanation": "After a quantifier like 'the majority of' linking two clauses, use the relative pronoun 'which'. Using 'them' without a conjunction creates a comma splice.",
+      "impactOnBand": "Comma splices reduce scores in both Coherence & Cohesion and Grammatical Accuracy."
     },
     {
       "id": "diag-10",
@@ -157,8 +157,8 @@
         "the"
       ],
       "correctIndex": 3,
-      "explanation": "The definite article 'the' combined with an adjective ('unemployed') functions as a nominalized plural collective noun referring to the whole class of individuals. Neither quantifiers nor demonstratives work here.",
-      "impactOnBand": "Accurate usage of nominalized adjectives reflects high-level syntactic dexterity (Band 7.5+ GRA)."
+      "explanation": "'The' plus an adjective ('the unemployed') refers to the group as a whole and functions as a plural noun.",
+      "impactOnBand": "Using group adjectives with 'the' demonstrates the syntactic variety expected at Band 7.5 and above."
     },
     {
       "id": "diag-11",
@@ -172,8 +172,8 @@
         "pronounced"
       ],
       "correctIndex": 2,
-      "explanation": "'Grave threat' is the high-level academic collocation denoting severe and imminent peril. 'Acute' and 'critical' collocate with issues/situations but not threats; 'pronounced' suggests obvious but not threatening.",
-      "impactOnBand": "Distinguishes high-register academic collocations from conversational near-synonyms; separates Band 7.0 from Band 8.0 lexical precision."
+      "explanation": "'Grave threat' is the standard collocation for a serious danger. 'Acute' and 'critical' pair with problems or situations, but not with threats.",
+      "impactOnBand": "Choosing the exact collocate separates Band 7.0 from Band 8.0 lexical precision."
     },
     {
       "id": "diag-12",
@@ -187,8 +187,8 @@
         "nations have undertaken"
       ],
       "correctIndex": 1,
-      "explanation": "Negative or restrictive adverbs ('rarely', 'seldom', 'hardly') at the beginning of a clause trigger subject-auxiliary inversion with the appropriate auxiliary ('do nations undertake'). Non-inverted and continuous structures fail the inversion rule.",
-      "impactOnBand": "Controlled negative inversion demonstrates Band 8.5+ grammatical range."
+      "explanation": "Placing 'Rarely' at the start of a sentence triggers inversion: auxiliary 'do' + subject + base verb 'undertake'.",
+      "impactOnBand": "Accurate negative inversion demonstrates high grammatical range for Band 8.0 and above."
     },
     {
       "id": "diag-13",
@@ -202,8 +202,8 @@
         "on"
       ],
       "correctIndex": 2,
-      "explanation": "The adjective/passive participle 'aimed' collocated with an objective takes the preposition 'at' + gerund ('aimed at mitigating').",
-      "impactOnBand": "Dependent preposition inaccuracies undermine accuracy and cohesion in Task 2 essays."
+      "explanation": "'Aimed' takes the preposition 'at' followed by an -ing verb ('aimed at mitigating').",
+      "impactOnBand": "Mistakes with dependent prepositions weaken sentence accuracy and cohesion in Task 2."
     },
     {
       "id": "diag-14",
@@ -217,8 +217,8 @@
         "execute"
       ],
       "correctIndex": 1,
-      "explanation": "The canonical academic collocation is 'take measures' or 'adopt measures'. Using 'make measures' is a direct L1 translation error.",
-      "impactOnBand": "Basic delexical verb substitution errors ('make' vs 'take') prevent attaining Band 7.0 in Lexical Resource."
+      "explanation": "English uses 'take measures' or 'adopt measures', never 'make measures'.",
+      "impactOnBand": "Confusing common verbs like 'make' and 'take' prevents reaching Band 7.0 in Lexical Resource."
     },
     {
       "id": "diag-15",
@@ -232,8 +232,8 @@
         "were"
       ],
       "correctIndex": 1,
-      "explanation": "With fraction and proportion expressions, agreement is determined by the noun in the prepositional phrase ('arable land', uncountable singular), requiring the singular verb 'is'.",
-      "impactOnBand": "Demonstrates nuanced understanding of proportional concord essential for Task 1 report writing."
+      "explanation": "With fractions or proportions, verb agreement follows the noun after 'of'. Because 'arable land' is uncountable, it takes the singular verb 'is'.",
+      "impactOnBand": "Proportional agreement is essential for accurate descriptions in Task 1 reports."
     },
     {
       "id": "diag-16",
@@ -247,8 +247,8 @@
         "was"
       ],
       "correctIndex": 2,
-      "explanation": "Third conditional inverted structure ('Had [subject] been...') requires the past conditional modal perfect in the main clause ('would have been mitigated'). The past anchor clarifies that the consequence is counterfactual to actual history.",
-      "impactOnBand": "Accurate hypothetical reasoning is a hallmark of Band 8.0+ Task 2 essay arguments."
+      "explanation": "An inverted third conditional ('Had the framework been...') needs 'would have been' in the main clause to describe a counterfactual past outcome.",
+      "impactOnBand": "Hypothetical conditionals like this show the complex sentence range needed for Band 8.0."
     },
     {
       "id": "diag-17",
@@ -262,8 +262,8 @@
         "certify"
       ],
       "correctIndex": 1,
-      "explanation": "'Corroborate the hypothesis' is the precise academic collocation meaning to support with evidence. 'Ratify', 'authorize', and 'certify' collocate with official agreements or credentials, not hypotheses.",
-      "impactOnBand": "Elevates Lexical Resource to Band 8.0 by utilizing precise academic register in formal academic discourse."
+      "explanation": "Data can 'corroborate a hypothesis' (support it with evidence). 'Ratify', 'authorize', and 'certify' apply to laws, permits, or credentials, not scientific claims.",
+      "impactOnBand": "Using specific research vocabulary helps raise Lexical Resource to Band 8.0."
     },
     {
       "id": "diag-18",
@@ -277,8 +277,8 @@
         "which thereby provide"
       ],
       "correctIndex": 1,
-      "explanation": "The adverb 'thereby' followed by a present participle ('providing') creates an adverbial clause of result, smoothly linking the action to its consequence.",
-      "impactOnBand": "Participle clauses increase syntactic density and clausal complexity for Band 8.0 GRA."
+      "explanation": "'Thereby' followed by an -ing participle ('thereby providing') forms a result clause that connects the action to its effect.",
+      "impactOnBand": "Participle clauses of result add syntactic variety for Band 8.0 Grammatical Range."
     },
     {
       "id": "diag-19",
@@ -292,8 +292,8 @@
         "to"
       ],
       "correctIndex": 2,
-      "explanation": "The phrasal verb 'account for' is the obligatory academic expression for representing a proportion or percentage in Task 1 reports.",
-      "impactOnBand": "Mandatory accuracy for Task 1 visual reports; incorrect prepositions lead to immediate score reductions in Task Achievement and GRA."
+      "explanation": "'Account for' is the standard phrase for representing a share or percentage ('accounted for 18%').",
+      "impactOnBand": "Accurate proportion verbs are essential in Task 1 reports to avoid penalties in Task Achievement and grammar."
     },
     {
       "id": "diag-20",
@@ -307,8 +307,8 @@
         "uncontrolled"
       ],
       "correctIndex": 0,
-      "explanation": "'Unprecedented degradation' is the high-level academic collocation indicating a level or severity never before experienced. 'Unintended', 'unwelcome', and 'uncontrolled' describe consequences but lack the formal gravity of 'unprecedented'.",
-      "impactOnBand": "Demonstrates Band 8.0+ precision in selecting collocates that convey magnitude and historical significance in formal registers."
+      "explanation": "'Unprecedented degradation' means environmental damage on a scale never seen before. 'Unintended' and 'unwelcome' describe unwanted effects, but do not convey the historical scale of 'unprecedented'.",
+      "impactOnBand": "Choosing adjectives that capture exact scale reflects Band 8.0 lexical precision."
     }
   ],
   "questionTypes": [
