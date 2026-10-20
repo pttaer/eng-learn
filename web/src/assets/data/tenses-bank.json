@@ -1,0 +1,1705 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "title": "12 Tenses Master Guide & Interactive Question Bank",
+    "totalTenses": 12,
+    "totalQuestions": 77,
+    "curatedQuestions": 37,
+    "importedGrammarQuestions": 40,
+    "families": [
+      "PRESENT",
+      "PAST",
+      "FUTURE"
+    ]
+  },
+  "tenses": [
+    {
+      "id": "present-simple",
+      "family": "PRESENT",
+      "name": "Present Simple",
+      "vietnameseName": "Hiện Tại Đơn",
+      "formula": {
+        "affirmative": "S + V(s/es)",
+        "negative": "S + do/does not + V-inf",
+        "interrogative": "Do/Does + S + V-inf?"
+      },
+      "signals": [
+        "always",
+        "usually",
+        "often",
+        "sometimes",
+        "rarely",
+        "never",
+        "every day",
+        "on Mondays",
+        "once a week"
+      ],
+      "coreUsage": "Diễn tả thói quen lặp đi lặp lại, sự thật hiển nhiên, chân lý khoa học, hoặc lịch trình cố định của tàu xe.",
+      "commonPitfall": "Quên thêm s/es ở ngôi thứ ba số ít (he, she, it) hoặc dùng nhầm động từ to be kèm động từ thường (*He is work*).",
+      "example": "Water boils at 100 degrees Celsius."
+    },
+    {
+      "id": "present-continuous",
+      "family": "PRESENT",
+      "name": "Present Continuous",
+      "vietnameseName": "Hiện Tại Tiếp Diễn",
+      "formula": {
+        "affirmative": "S + am/is/are + V-ing",
+        "negative": "S + am/is/are not + V-ing",
+        "interrogative": "Am/Is/Are + S + V-ing?"
+      },
+      "signals": [
+        "now",
+        "right now",
+        "at the moment",
+        "currently",
+        "Look!",
+        "Listen!",
+        "at present"
+      ],
+      "coreUsage": "Hành động đang diễn ra ngay lúc nói, tình trạng tạm thời, hoặc phàn nàn thói xấu lặp lại gây khó chịu (với always).",
+      "commonPitfall": "Dùng thì này với các động từ chỉ tri giác / trạng thái (stative verbs: like, know, understand, believe, want).",
+      "example": "She is preparing the quarterly financial report at the moment."
+    },
+    {
+      "id": "present-perfect",
+      "family": "PRESENT",
+      "name": "Present Perfect",
+      "vietnameseName": "Hiện Tại Hoàn Thành",
+      "formula": {
+        "affirmative": "S + have/has + V3/ed",
+        "negative": "S + have/has not + V3/ed",
+        "interrogative": "Have/Has + S + V3/ed?"
+      },
+      "signals": [
+        "already",
+        "yet",
+        "just",
+        "ever",
+        "never",
+        "since",
+        "for",
+        "recently",
+        "so far",
+        "up to now"
+      ],
+      "coreUsage": "Hành động xảy ra trong quá khứ không rõ thời điểm nhưng kết quả còn thấy ở hiện tại; trải nghiệm cuộc đời; bắt đầu ở quá khứ kéo dài đến nay.",
+      "commonPitfall": "Dùng mốc thời gian quá khứ xác định (yesterday, in 2020) với thì hoàn thành (phải dùng Past Simple thay thế).",
+      "example": "Our research team has published three empirical studies this year."
+    },
+    {
+      "id": "present-perfect-continuous",
+      "family": "PRESENT",
+      "name": "Present Perfect Continuous",
+      "vietnameseName": "Hiện Tại Hoàn Thành Tiếp Diễn",
+      "formula": {
+        "affirmative": "S + have/has + been + V-ing",
+        "negative": "S + have/has not + been + V-ing",
+        "interrogative": "Have/Has + S + been + V-ing?"
+      },
+      "signals": [
+        "all day",
+        "all morning",
+        "for 5 hours",
+        "how long",
+        "since 7 AM"
+      ],
+      "coreUsage": "Nhấn mạnh tính liên tục không đứt đoạn của hành động bắt đầu trong quá khứ và vẫn đang tiếp diễn ở hiện tại.",
+      "commonPitfall": "Nhầm lẫn với Present Perfect: Present Perfect nhấn mạnh 'kết quả / số lượng', còn Present Perfect Continuous nhấn mạnh 'quá trình / thời gian'.",
+      "example": "He has been debugging that distributed server algorithm for five hours straight."
+    },
+    {
+      "id": "past-simple",
+      "family": "PAST",
+      "name": "Past Simple",
+      "vietnameseName": "Quá Khứ Đơn",
+      "formula": {
+        "affirmative": "S + V2/ed",
+        "negative": "S + did not + V-inf",
+        "interrogative": "Did + S + V-inf?"
+      },
+      "signals": [
+        "yesterday",
+        "ago",
+        "last night",
+        "last week",
+        "in 1995",
+        "when I was young"
+      ],
+      "coreUsage": "Hành động đã bắt đầu và kết thúc hoàn toàn tại một thời điểm xác định trong quá khứ.",
+      "commonPitfall": "Quên đưa động từ về nguyên thể khi đã mượn trợ động từ *did not* hoặc trong câu hỏi *Did you...?*",
+      "example": "The committee approved the revised environmental directive yesterday."
+    },
+    {
+      "id": "past-continuous",
+      "family": "PAST",
+      "name": "Past Continuous",
+      "vietnameseName": "Quá Khứ Tiếp Diễn",
+      "formula": {
+        "affirmative": "S + was/were + V-ing",
+        "negative": "S + was/were not + V-ing",
+        "interrogative": "Was/Were + S + V-ing?"
+      },
+      "signals": [
+        "at 8 PM yesterday",
+        "at that moment",
+        "while",
+        "when",
+        "as"
+      ],
+      "coreUsage": "Hành động đang diễn ra tại một thời điểm cụ thể trong quá khứ, hoặc đang diễn ra thì hành động khác chen ngang.",
+      "commonPitfall": "Nhầm lẫn giữa *when* và *while*: *While* thường đi với hành động kéo dài (Past Continuous), *When* đi với hành động cắt ngang (Past Simple).",
+      "example": "While the lead engineer was explaining the architecture, the power went out."
+    },
+    {
+      "id": "past-perfect",
+      "family": "PAST",
+      "name": "Past Perfect",
+      "vietnameseName": "Quá Khứ Hoàn Thành",
+      "formula": {
+        "affirmative": "S + had + V3/ed",
+        "negative": "S + had not + V3/ed",
+        "interrogative": "Had + S + V3/ed?"
+      },
+      "signals": [
+        "by the time",
+        "before",
+        "after",
+        "by 2018",
+        "as soon as",
+        "until then"
+      ],
+      "coreUsage": "Hành động xảy ra và hoàn tất trước một hành động khác trong quá khứ (hành động trước dùng Past Perfect, hành động sau dùng Past Simple).",
+      "commonPitfall": "Lạm dụng Past Perfect khi hai hành động diễn ra nối tiếp nhau đơn thuần (chỉ dùng Past Simple theo thứ tự thời gian).",
+      "example": "By the time the paramedics arrived, the patient had already regained consciousness."
+    },
+    {
+      "id": "past-perfect-continuous",
+      "family": "PAST",
+      "name": "Past Perfect Continuous",
+      "vietnameseName": "Quá Khứ Hoàn Thành Tiếp Diễn",
+      "formula": {
+        "affirmative": "S + had + been + V-ing",
+        "negative": "S + had not + been + V-ing",
+        "interrogative": "Had + S + been + V-ing?"
+      },
+      "signals": [
+        "for two hours before",
+        "until that day",
+        "how long had you been"
+      ],
+      "coreUsage": "Nhấn mạnh quá trình liên tục của một hành động xảy ra trước và kéo dài đến một thời điểm khác trong quá khứ.",
+      "commonPitfall": "Nhầm lẫn với Past Continuous: Past Perfect Continuous nêu rõ khoảng thời gian kéo dài (for/since) trước mốc quá khứ.",
+      "example": "They had been negotiating the treaty for six months before reaching a breakthrough."
+    },
+    {
+      "id": "future-simple",
+      "family": "FUTURE",
+      "name": "Future Simple",
+      "vietnameseName": "Tương Lai Đơn",
+      "formula": {
+        "affirmative": "S + will + V-inf",
+        "negative": "S + will not (won't) + V-inf",
+        "interrogative": "Will + S + V-inf?"
+      },
+      "signals": [
+        "tomorrow",
+        "next week",
+        "soon",
+        "in the future",
+        "I think",
+        "probably",
+        "perhaps"
+      ],
+      "coreUsage": "Quyết định bột phát nảy ra ngay lúc nói, lời hứa hẹn, đề nghị giúp đỡ, hoặc dự đoán chủ quan không có căn cứ.",
+      "commonPitfall": "Dùng *will* cho những kế hoạch đã có lịch trình, bàn bạc sẵn từ trước (phải dùng *be going to* hoặc Present Continuous).",
+      "example": "I will send you the finalized spreadsheet as soon as I finish the review."
+    },
+    {
+      "id": "future-continuous",
+      "family": "FUTURE",
+      "name": "Future Continuous",
+      "vietnameseName": "Tương Lai Tiếp Diễn",
+      "formula": {
+        "affirmative": "S + will + be + V-ing",
+        "negative": "S + will not + be + V-ing",
+        "interrogative": "Will + S + be + V-ing?"
+      },
+      "signals": [
+        "at this time tomorrow",
+        "at 9 AM next Monday",
+        "this time next week"
+      ],
+      "coreUsage": "Hành động sẽ đang diễn ra tại một thời điểm hoặc khoảng thời gian xác định cụ thể trong tương lai.",
+      "commonPitfall": "Quên động từ nguyên thể 'be' sau *will*, viết sai thành *will V-ing*.",
+      "example": "At this time tomorrow, the delegation will be flying over the Atlantic."
+    },
+    {
+      "id": "future-perfect",
+      "family": "FUTURE",
+      "name": "Future Perfect",
+      "vietnameseName": "Tương Lai Hoàn Thành",
+      "formula": {
+        "affirmative": "S + will + have + V3/ed",
+        "negative": "S + will not + have + V3/ed",
+        "interrogative": "Will + S + have + V3/ed?"
+      },
+      "signals": [
+        "by tomorrow",
+        "by the end of this month",
+        "by 2030",
+        "by the time + Present Simple"
+      ],
+      "coreUsage": "Hành động sẽ được hoàn tất trước một mốc thời gian hoặc trước một hành động khác trong tương lai.",
+      "commonPitfall": "Dùng thì tương lai sau liên từ thời gian *by the time* (phải dùng Present Simple: *by the time you arrive*, không dùng *by the time you will arrive*).",
+      "example": "By the end of this decade, artificial intelligence will have transformed medical diagnostics."
+    },
+    {
+      "id": "future-perfect-continuous",
+      "family": "FUTURE",
+      "name": "Future Perfect Continuous",
+      "vietnameseName": "Tương Lai Hoàn Thành Tiếp Diễn",
+      "formula": {
+        "affirmative": "S + will + have + been + V-ing",
+        "negative": "S + will not + have + been + V-ing",
+        "interrogative": "Will + S + have + been + V-ing?"
+      },
+      "signals": [
+        "by next year... for 10 years",
+        "by the time... for",
+        "by November"
+      ],
+      "coreUsage": "Nhấn mạnh khoảng thời gian kéo dài liên tục của một hành động tính đến một mốc thời gian trong tương lai.",
+      "commonPitfall": "Đây là thì ít gặp nhất trong giao tiếp nhưng xuất hiện trong các bài thi học thuật để kiểm tra độ chính xác thời gian.",
+      "example": "By next month, Dr. Nguyen will have been teaching at Oxford University for 25 years."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-pres-sim-1",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "Dr. Sarah always _____ her clinic at precisely 7:30 every morning.",
+      "blankTarget": "opens",
+      "options": [
+        "opens",
+        "is opening",
+        "has opened",
+        "opened"
+      ],
+      "answer": 0,
+      "signal": "always, every morning",
+      "explanation": "'always' and 'every morning' denote a habitual routine, demanding Present Simple with third-person singular suffix '-s'.",
+      "vietnameseExplanation": "Trạng từ 'always' và 'every morning' chỉ thói quen lặp đi lặp lại hằng ngày, chủ ngữ ngôi thứ ba số ít (Dr. Sarah) đi với động từ thêm 's' (opens)."
+    },
+    {
+      "id": "q-pres-sim-2",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "The flight to Tokyo _____ at 10:15 tomorrow morning according to the airport schedule.",
+      "blankTarget": "departs",
+      "options": [
+        "will depart",
+        "departs",
+        "is departing",
+        "has departed"
+      ],
+      "answer": 1,
+      "signal": "at 10:15 tomorrow, according to the airport schedule",
+      "explanation": "Fixed official timetables and public schedules (planes, trains) use Present Simple even when referring to future events.",
+      "vietnameseExplanation": "Lịch trình tàu xe, máy bay cố định (timetables) sử dụng thì Hiện Tại Đơn để diễn đạt sự việc trong tương lai."
+    },
+    {
+      "id": "q-pres-sim-3",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "Water _____ at zero degrees Celsius under standard atmospheric pressure.",
+      "blankTarget": "freezes",
+      "options": [
+        "freezes",
+        "is freezing",
+        "will freeze",
+        "has frozen"
+      ],
+      "answer": 0,
+      "signal": "universal scientific fact",
+      "explanation": "Universal scientific truths and physical laws are expressed using Present Simple.",
+      "vietnameseExplanation": "Quy luật vật lý và chân lý khoa học hiển nhiên luôn chia ở thì Hiện Tại Đơn."
+    },
+    {
+      "id": "q-pres-sim-4",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "Our department head _____ not approve overtime requests unless submitted 48 hours in advance.",
+      "blankTarget": "does",
+      "options": [
+        "is",
+        "does",
+        "do",
+        "has"
+      ],
+      "answer": 1,
+      "signal": "habitual policy rule",
+      "explanation": "Negative present simple with third-person singular subject requires the auxiliary 'does not'.",
+      "vietnameseExplanation": "Câu phủ định Hiện Tại Đơn với chủ ngữ số ít (department head) cần mượn trợ động từ 'does not'."
+    },
+    {
+      "id": "q-pres-sim-5",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "How often _____ your manager conduct performance evaluation reviews?",
+      "blankTarget": "does",
+      "options": [
+        "does",
+        "is",
+        "has",
+        "did"
+      ],
+      "answer": 0,
+      "signal": "How often",
+      "explanation": "'How often' queries frequency of occurrence, requiring auxiliary 'does' for singular subject 'manager'.",
+      "vietnameseExplanation": "'How often' hỏi về tần suất định kỳ, câu hỏi Hiện Tại Đơn chủ ngữ số ít cần trợ động từ 'does'."
+    },
+    {
+      "id": "q-pres-con-1",
+      "tenseId": "present-continuous",
+      "tenseName": "Present Continuous",
+      "family": "PRESENT",
+      "prompt": "Please keep your voice down; the delegates _____ the bilateral trade agreement in the boardroom right now.",
+      "blankTarget": "are discussing",
+      "options": [
+        "discuss",
+        "are discussing",
+        "have discussed",
+        "discussed"
+      ],
+      "answer": 1,
+      "signal": "right now, Please keep your voice down",
+      "explanation": "'right now' and the imperative cue indicate an action in progress at the exact moment of utterance.",
+      "vietnameseExplanation": "'right now' và lời nhắc giữ trật tự cho thấy cuộc họp đang diễn ra ngay lúc nói $\\rightarrow$ Hiện Tại Tiếp Diễn."
+    },
+    {
+      "id": "q-pres-con-2",
+      "tenseId": "present-continuous",
+      "tenseName": "Present Continuous",
+      "family": "PRESENT",
+      "prompt": "Global temperatures _____ at an unprecedented rate due to carbon emissions.",
+      "blankTarget": "are rising",
+      "options": [
+        "rise",
+        "are rising",
+        "have risen",
+        "rose"
+      ],
+      "answer": 1,
+      "signal": "at an unprecedented rate (ongoing changing trend)",
+      "explanation": "Gradual trends and evolving global changes in progress require Present Continuous.",
+      "vietnameseExplanation": "Các xu hướng biến đổi đang tiếp diễn của thời đại (changing situations) sử dụng Hiện Tại Tiếp Diễn."
+    },
+    {
+      "id": "q-pres-con-3",
+      "tenseId": "present-continuous",
+      "tenseName": "Present Continuous",
+      "family": "PRESENT",
+      "prompt": "Look! The technicians _____ the backup power generators outside.",
+      "blankTarget": "are testing",
+      "options": [
+        "test",
+        "are testing",
+        "tested",
+        "have tested"
+      ],
+      "answer": 1,
+      "signal": "Look!",
+      "explanation": "Exclamatory sensory cues like 'Look!' or 'Listen!' alert to an action occurring in the present sensory field.",
+      "vietnameseExplanation": "Câu cảm thán 'Look!' báo hiệu hành động đang diễn ra trước mắt $\\rightarrow$ Hiện Tại Tiếp Diễn."
+    },
+    {
+      "id": "q-pres-con-4",
+      "tenseId": "present-continuous",
+      "tenseName": "Present Continuous",
+      "family": "PRESENT",
+      "prompt": "He is _____ complaining about his workload, which really demoralizes the team.",
+      "blankTarget": "constantly",
+      "options": [
+        "seldom",
+        "constantly",
+        "never",
+        "once"
+      ],
+      "answer": 1,
+      "signal": "is complaining (expressing annoyance)",
+      "explanation": "Present continuous coupled with 'constantly' or 'always' emphasizes an annoying, repetitive habit.",
+      "vietnameseExplanation": "Hiện Tại Tiếp Diễn kết hợp với 'constantly/always' diễn tả lời phàn nàn về một thói quen xấu gây khó chịu."
+    },
+    {
+      "id": "q-pres-prf-1",
+      "tenseId": "present-perfect",
+      "tenseName": "Present Perfect",
+      "family": "PRESENT",
+      "prompt": "The engineering department _____ three comprehensive audits since January.",
+      "blankTarget": "has completed",
+      "options": [
+        "completed",
+        "has completed",
+        "is completing",
+        "completes"
+      ],
+      "answer": 1,
+      "signal": "since January",
+      "explanation": "'since January' anchors a duration starting in the past and linking directly to the present, requiring Present Perfect.",
+      "vietnameseExplanation": "Cụm 'since January' (từ tháng 1 đến nay) là dấu hiệu kinh điển của thì Hiện Tại Hoàn Thành."
+    },
+    {
+      "id": "q-pres-prf-2",
+      "tenseId": "present-perfect",
+      "tenseName": "Present Perfect",
+      "family": "PRESENT",
+      "prompt": "Have you received the updated terms of service _____?",
+      "blankTarget": "yet",
+      "options": [
+        "already",
+        "yet",
+        "since",
+        "just"
+      ],
+      "answer": 1,
+      "signal": "question at the end of sentence",
+      "explanation": "'yet' is utilized in questions and negative statements to query whether an expected action has occurred.",
+      "vietnameseExplanation": "'yet' đứng ở cuối câu hỏi và câu phủ định để hỏi xem sự việc mong đợi đã xảy ra hay chưa."
+    },
+    {
+      "id": "q-pres-prf-3",
+      "tenseId": "present-perfect",
+      "tenseName": "Present Perfect",
+      "family": "PRESENT",
+      "prompt": "Our primary server has _____ restarted, so full functionality should be restored within minutes.",
+      "blankTarget": "just",
+      "options": [
+        "yet",
+        "ago",
+        "just",
+        "ever"
+      ],
+      "answer": 2,
+      "signal": "has just restarted (immediate past with present relevance)",
+      "explanation": "'just' fits between the auxiliary 'has' and past participle to signal an action concluded moments prior.",
+      "vietnameseExplanation": "'just' đứng giữa have/has và V3 để chỉ một hành động vừa mới xảy ra tức thì."
+    },
+    {
+      "id": "q-pres-prf-4",
+      "tenseId": "present-perfect",
+      "tenseName": "Present Perfect",
+      "family": "PRESENT",
+      "prompt": "This is the most intricate algorithm I have _____ encountered in my career.",
+      "blankTarget": "ever",
+      "options": [
+        "never",
+        "ever",
+        "yet",
+        "already"
+      ],
+      "answer": 1,
+      "signal": "This is the most + superlative",
+      "explanation": "Superlative structures ('This is the most...') customarily take a Present Perfect clause with 'ever'.",
+      "vietnameseExplanation": "Cấu trúc so sánh nhất ('This is the most...') đi kèm mệnh đề Hiện Tại Hoàn Thành với 'ever' (từng trải nghiệm)."
+    },
+    {
+      "id": "q-pres-pfc-1",
+      "tenseId": "present-perfect-continuous",
+      "tenseName": "Present Perfect Continuous",
+      "family": "PRESENT",
+      "prompt": "The legal analysts _____ the contract for four hours, and they still haven't finished the clauses.",
+      "blankTarget": "have been scrutinizing",
+      "options": [
+        "scrutinized",
+        "have scrutinized",
+        "have been scrutinizing",
+        "are scrutinizing"
+      ],
+      "answer": 2,
+      "signal": "for four hours, and they still haven't finished",
+      "explanation": "The continuation clause 'and they still haven't finished' proves ongoing duration, making Present Perfect Continuous essential.",
+      "vietnameseExplanation": "Vế sau 'and they still haven't finished' chứng minh hành động đọc hợp đồng đã kéo dài 4 tiếng và vẫn chưa xong."
+    },
+    {
+      "id": "q-pres-pfc-2",
+      "tenseId": "present-perfect-continuous",
+      "tenseName": "Present Perfect Continuous",
+      "family": "PRESENT",
+      "prompt": "Why are your clothes soaking wet? — I _____ the company garden in the rain.",
+      "blankTarget": "have been tending",
+      "options": [
+        "tended",
+        "had tended",
+        "have been tending",
+        "tend"
+      ],
+      "answer": 2,
+      "signal": "Why are your clothes soaking wet? (present visible evidence)",
+      "explanation": "A present visible consequence ('clothes soaking wet') resulting from a prolonged recent activity requires Present Perfect Continuous.",
+      "vietnameseExplanation": "Hậu quả nhãn tiền ở hiện tại (quần áo ướt sũng) do một hành động kéo dài liên tục vừa mới xảy ra $\\rightarrow$ Hiện Tại Hoàn Thành Tiếp Diễn."
+    },
+    {
+      "id": "q-pres-pfc-3",
+      "tenseId": "present-perfect-continuous",
+      "tenseName": "Present Perfect Continuous",
+      "family": "PRESENT",
+      "prompt": "How long _____ you been studying computational linguistics?",
+      "blankTarget": "have",
+      "options": [
+        "did",
+        "have",
+        "were",
+        "had"
+      ],
+      "answer": 1,
+      "signal": "How long... been studying",
+      "explanation": "'How long have you been V-ing' is the canonical question formula to ask about duration of an ongoing study or profession.",
+      "vietnameseExplanation": "Cấu trúc hỏi thời lượng việc đang làm: 'How long have you been + V-ing?'."
+    },
+    {
+      "id": "q-past-sim-1",
+      "tenseId": "past-simple",
+      "tenseName": "Past Simple",
+      "family": "PAST",
+      "prompt": "The founder _____ the technology venture in 2012 before selling it five years later.",
+      "blankTarget": "established",
+      "options": [
+        "has established",
+        "establishes",
+        "established",
+        "had established"
+      ],
+      "answer": 2,
+      "signal": "in 2012",
+      "explanation": "Specific past calendar years ('in 2012') restrict the predicate exclusively to Past Simple.",
+      "vietnameseExplanation": "Mốc thời gian xác định trong quá khứ 'in 2012' bắt buộc chia ở thì Quá Khứ Đơn (established)."
+    },
+    {
+      "id": "q-past-sim-2",
+      "tenseId": "past-simple",
+      "tenseName": "Past Simple",
+      "family": "PAST",
+      "prompt": "Why _____ the lead architect reject the preliminary blueprints during yesterday's briefing?",
+      "blankTarget": "did",
+      "options": [
+        "did",
+        "does",
+        "had",
+        "was"
+      ],
+      "answer": 0,
+      "signal": "yesterday's briefing",
+      "explanation": "Questions in the past simple require the past auxiliary 'did' regardless of the subject's person.",
+      "vietnameseExplanation": "Câu hỏi thời quá khứ có trạng từ 'yesterday' cần mượn trợ động từ 'did'."
+    },
+    {
+      "id": "q-past-sim-3",
+      "tenseId": "past-simple",
+      "tenseName": "Past Simple",
+      "family": "PAST",
+      "prompt": "Although they arrived late, they _____ not miss the keynote presentation.",
+      "blankTarget": "did",
+      "options": [
+        "do",
+        "did",
+        "were",
+        "had"
+      ],
+      "answer": 1,
+      "signal": "arrived late (past narrative)",
+      "explanation": "The coordinating past clause 'Although they arrived' maintains syntactic tense congruence with 'did not miss'.",
+      "vietnameseExplanation": "Sự đồng nhất về thì trong câu quá khứ: vế đầu dùng 'arrived', vế sau phủ định dùng 'did not miss'."
+    },
+    {
+      "id": "q-past-con-1",
+      "tenseId": "past-continuous",
+      "tenseName": "Past Continuous",
+      "family": "PAST",
+      "prompt": "At exactly 8:30 PM last night, the security team _____ the perimeter cameras.",
+      "blankTarget": "was recalibrating",
+      "options": [
+        "recalibrated",
+        "was recalibrating",
+        "has recalibrated",
+        "is recalibrating"
+      ],
+      "answer": 1,
+      "signal": "At exactly 8:30 PM last night",
+      "explanation": "A precise clock timestamp in the past ('At exactly 8:30 PM last night') requires Past Continuous.",
+      "vietnameseExplanation": "Một thời điểm chính xác cụ thể trong quá khứ (8:30 tối qua) bắt buộc chia thì Quá Khứ Tiếp Diễn."
+    },
+    {
+      "id": "q-past-con-2",
+      "tenseId": "past-continuous",
+      "tenseName": "Past Continuous",
+      "family": "PAST",
+      "prompt": "While the lead economist _____ the statistical model, an unexpected anomaly emerged.",
+      "blankTarget": "was testing",
+      "options": [
+        "tests",
+        "was testing",
+        "tested",
+        "has tested"
+      ],
+      "answer": 1,
+      "signal": "While, anomaly emerged (past simple interrupt)",
+      "explanation": "'While' introduces a background duration (Past Continuous) interrupted by a sudden discrete event ('emerged').",
+      "vietnameseExplanation": "Hành động đang diễn ra (kiểm thử mô hình) thì hành động khác xen vào (xuất hiện sự cố) $\\rightarrow$ vế While chia Quá Khứ Tiếp Diễn."
+    },
+    {
+      "id": "q-past-con-3",
+      "tenseId": "past-continuous",
+      "tenseName": "Past Continuous",
+      "family": "PAST",
+      "prompt": "The children were studying in the library while their parents _____ the academic counselor.",
+      "blankTarget": "were consulting",
+      "options": [
+        "consulted",
+        "were consulting",
+        "had consulted",
+        "are consulting"
+      ],
+      "answer": 1,
+      "signal": "were studying... while... (two parallel past ongoing actions)",
+      "explanation": "Two simultaneous ongoing actions happening in parallel in the past both take Past Continuous.",
+      "vietnameseExplanation": "Hai hành động xảy ra song song đồng thời trong quá khứ nối bằng 'while' đều chia Quá Khứ Tiếp Diễn."
+    },
+    {
+      "id": "q-past-prf-1",
+      "tenseId": "past-perfect",
+      "tenseName": "Past Perfect",
+      "family": "PAST",
+      "prompt": "By the time the fire department arrived at the scene, the security staff _____ the entire floor.",
+      "blankTarget": "had evacuated",
+      "options": [
+        "evacuated",
+        "had evacuated",
+        "was evacuating",
+        "has evacuated"
+      ],
+      "answer": 1,
+      "signal": "By the time + Past Simple",
+      "explanation": "'By the time + Past Simple' dictates that the primary event occurred prior to that past point, necessitating Past Perfect.",
+      "vietnameseExplanation": "'By the time' đi với Quá Khứ Đơn thì mệnh đề chính diễn tả hành động xảy ra trước đó phải chia Quá Khứ Hoàn Thành."
+    },
+    {
+      "id": "q-past-prf-2",
+      "tenseId": "past-perfect",
+      "tenseName": "Past Perfect",
+      "family": "PAST",
+      "prompt": "She discovered that someone _____ unauthorized modifications to the database before the audit started.",
+      "blankTarget": "had made",
+      "options": [
+        "made",
+        "had made",
+        "was making",
+        "has made"
+      ],
+      "answer": 1,
+      "signal": "before the audit started",
+      "explanation": "An action occurring earlier than a past point of discovery ('discovered... before the audit started') requires Past Perfect.",
+      "vietnameseExplanation": "Hành động sửa đổi database xảy ra trước khi phát hiện và trước khi kiểm toán bắt đầu $\\rightarrow$ Quá Khứ Hoàn Thành."
+    },
+    {
+      "id": "q-past-prf-3",
+      "tenseId": "past-perfect",
+      "tenseName": "Past Perfect",
+      "family": "PAST",
+      "prompt": "Hardly _____ the conference begun when a technical malfunction disrupted the broadcast.",
+      "blankTarget": "had",
+      "options": [
+        "did",
+        "was",
+        "had",
+        "has"
+      ],
+      "answer": 2,
+      "signal": "Hardly... when (inversion)",
+      "explanation": "Inversion formula 'Hardly + had + S + V3... when + Past Simple' indicates an immediate sequence in the past.",
+      "vietnameseExplanation": "Cấu trúc đảo ngữ chỉ hành động vừa mới xảy ra thì hành động khác ập tới: 'Hardly had + S + V3 when + Past Simple'."
+    },
+    {
+      "id": "q-past-pfc-1",
+      "tenseId": "past-perfect-continuous",
+      "tenseName": "Past Perfect Continuous",
+      "family": "PAST",
+      "prompt": "The team _____ on the cryptographic protocol for eighteen months before they finally secured the patent.",
+      "blankTarget": "had been working",
+      "options": [
+        "worked",
+        "was working",
+        "had been working",
+        "has been working"
+      ],
+      "answer": 2,
+      "signal": "for eighteen months before they finally secured",
+      "explanation": "Emphasizes the duration of an ongoing effort that preceded a definitive past milestone ('before they secured').",
+      "vietnameseExplanation": "Nhấn mạnh quá trình nghiên cứu liên tục suốt 18 tháng trước thời điểm nhận được bằng sáng chế trong quá khứ."
+    },
+    {
+      "id": "q-past-pfc-2",
+      "tenseId": "past-perfect-continuous",
+      "tenseName": "Past Perfect Continuous",
+      "family": "PAST",
+      "prompt": "Her voice was raspy because she _____ for three consecutive hours at the symposium.",
+      "blankTarget": "had been lecturing",
+      "options": [
+        "lectured",
+        "was lecturing",
+        "had been lecturing",
+        "has lectured"
+      ],
+      "answer": 2,
+      "signal": "Her voice was raspy (past consequence) because she... for three hours",
+      "explanation": "A past tangible state ('voice was raspy') caused by an ongoing prior activity requires Past Perfect Continuous.",
+      "vietnameseExplanation": "Hậu quả trong quá khứ (giọng bị khàn) do đã diễn thuyết liên tục suốt 3 tiếng trước đó $\\rightarrow$ Quá Khứ Hoàn Thành Tiếp Diễn."
+    },
+    {
+      "id": "q-fut-sim-1",
+      "tenseId": "future-simple",
+      "tenseName": "Future Simple",
+      "family": "FUTURE",
+      "prompt": "I completely forgot to send the receipt! Don't worry, I _____ it to you right away.",
+      "blankTarget": "will email",
+      "options": [
+        "email",
+        "will email",
+        "am emailing",
+        "have emailed"
+      ],
+      "answer": 1,
+      "signal": "Don't worry, I... right away (spontaneous decision)",
+      "explanation": "Spontaneous decisions made at the instant of speech are expressed with 'will + V-inf'.",
+      "vietnameseExplanation": "Quyết định bột phát nảy ra ngay tại thời điểm nói ('Quên gửi, để tôi gửi ngay') dùng Tương Lai Đơn với 'will'."
+    },
+    {
+      "id": "q-fut-sim-2",
+      "tenseId": "future-simple",
+      "tenseName": "Future Simple",
+      "family": "FUTURE",
+      "prompt": "Political analysts predict that consumer confidence _____ within the coming quarter.",
+      "blankTarget": "will rebound",
+      "options": [
+        "rebounds",
+        "will rebound",
+        "is rebounding",
+        "rebounded"
+      ],
+      "answer": 1,
+      "signal": "predict that... within the coming quarter",
+      "explanation": "Subjective speculative predictions about future conditions typically employ Future Simple with 'will'.",
+      "vietnameseExplanation": "Dự đoán chủ quan về tình hình tương lai sau các động từ như 'predict', 'think', 'believe' đi với 'will'."
+    },
+    {
+      "id": "q-fut-sim-3",
+      "tenseId": "future-simple",
+      "tenseName": "Future Simple",
+      "family": "FUTURE",
+      "prompt": "I promise I _____ never disclose the proprietary source code to any third party.",
+      "blankTarget": "will",
+      "options": [
+        "will",
+        "am",
+        "do",
+        "have"
+      ],
+      "answer": 0,
+      "signal": "I promise",
+      "explanation": "Promises and binding commitments consistently use 'will + base verb'.",
+      "vietnameseExplanation": "Lời hứa trang trọng ('I promise') luôn đi kèm với trợ động từ 'will'."
+    },
+    {
+      "id": "q-fut-con-1",
+      "tenseId": "future-continuous",
+      "tenseName": "Future Continuous",
+      "family": "FUTURE",
+      "prompt": "This time next week, we _____ through the Scandinavian fjords on our holiday.",
+      "blankTarget": "will be cruising",
+      "options": [
+        "will cruise",
+        "will be cruising",
+        "cruise",
+        "will have cruised"
+      ],
+      "answer": 1,
+      "signal": "This time next week",
+      "explanation": "'This time next week' specifies a continuous scene in progress at a future moment, requiring Future Continuous.",
+      "vietnameseExplanation": "'This time next week' (giờ này tuần sau) chỉ một hành động sẽ đang diễn ra tại thời điểm đó trong tương lai."
+    },
+    {
+      "id": "q-fut-con-2",
+      "tenseId": "future-continuous",
+      "tenseName": "Future Continuous",
+      "family": "FUTURE",
+      "prompt": "Please don't call the director at 10 AM tomorrow; she _____ a board meeting at that time.",
+      "blankTarget": "will be chairing",
+      "options": [
+        "chairs",
+        "will be chairing",
+        "chaired",
+        "will chair"
+      ],
+      "answer": 1,
+      "signal": "at 10 AM tomorrow, at that time",
+      "explanation": "Specifying a specific future clock time when an action will be underway demands Future Continuous.",
+      "vietnameseExplanation": "Tại một mốc giờ cụ thể trong tương lai (10h sáng mai) hành động sẽ đang diễn ra $\\rightarrow$ Tương Lai Tiếp Diễn."
+    },
+    {
+      "id": "q-fut-prf-1",
+      "tenseId": "future-perfect",
+      "tenseName": "Future Perfect",
+      "family": "FUTURE",
+      "prompt": "By the end of the fiscal year, our infrastructure team _____ the migration to the cloud.",
+      "blankTarget": "will have completed",
+      "options": [
+        "will complete",
+        "will have completed",
+        "completes",
+        "will be completing"
+      ],
+      "answer": 1,
+      "signal": "By the end of the fiscal year",
+      "explanation": "'By + future time marker' denotes completion prior to that boundary, mandating Future Perfect.",
+      "vietnameseExplanation": "'By the end of...' chỉ mốc thời hạn mà trước đó hành động sẽ hoàn thành xong xuôi $\\rightarrow$ Tương Lai Hoàn Thành."
+    },
+    {
+      "id": "q-fut-prf-2",
+      "tenseId": "future-perfect",
+      "tenseName": "Future Perfect",
+      "family": "FUTURE",
+      "prompt": "By the time the foreign dignitaries arrive at the summit, the treaty _____ signed.",
+      "blankTarget": "will have been",
+      "options": [
+        "will be",
+        "will have been",
+        "is",
+        "was"
+      ],
+      "answer": 1,
+      "signal": "By the time + Present Simple (passive future perfect)",
+      "explanation": "Future perfect passive: 'By the time + present simple... will have been + V3'.",
+      "vietnameseExplanation": "Thể bị động của Tương Lai Hoàn Thành kết hợp với mệnh đề 'By the time + Hiện Tại Đơn': will have been + V3."
+    },
+    {
+      "id": "q-fut-prf-3",
+      "tenseId": "future-perfect",
+      "tenseName": "Future Perfect",
+      "family": "FUTURE",
+      "prompt": "By December 2028, the spacecraft _____ over 500 million kilometers through deep space.",
+      "blankTarget": "will have traveled",
+      "options": [
+        "will travel",
+        "will have traveled",
+        "travels",
+        "is traveling"
+      ],
+      "answer": 1,
+      "signal": "By December 2028",
+      "explanation": "'By' followed by a future calendar year indicates an action completed before that date.",
+      "vietnameseExplanation": "'By December 2028' báo hiệu quãng đường sẽ được hoàn thành trước thời điểm đó $\\rightarrow$ Tương Lai Hoàn Thành."
+    },
+    {
+      "id": "q-fut-pfc-1",
+      "tenseId": "future-perfect-continuous",
+      "tenseName": "Future Perfect Continuous",
+      "family": "FUTURE",
+      "prompt": "By next September, Professor Vance _____ at this university for three full decades.",
+      "blankTarget": "will have been lecturing",
+      "options": [
+        "will lecture",
+        "will have been lecturing",
+        "is lecturing",
+        "will have lectured"
+      ],
+      "answer": 1,
+      "signal": "By next September... for three full decades",
+      "explanation": "'By + future marker' paired with an extensive continuous duration ('for three decades') indicates Future Perfect Continuous.",
+      "vietnameseExplanation": "Kết hợp mốc tương lai 'By next September' với khoảng thời gian kéo dài 'for three decades' để nhấn mạnh thâm niên liên tục."
+    },
+    {
+      "id": "q-fut-pfc-2",
+      "tenseId": "future-perfect-continuous",
+      "tenseName": "Future Perfect Continuous",
+      "family": "FUTURE",
+      "prompt": "When the clock strikes midnight, the coders _____ continuously for 24 hours in the hackathon.",
+      "blankTarget": "will have been programming",
+      "options": [
+        "will program",
+        "are programming",
+        "will have been programming",
+        "have programmed"
+      ],
+      "answer": 2,
+      "signal": "When the clock strikes... for 24 hours continuously",
+      "explanation": "Emphasizes the sustained continuous duration leading up to a specific future juncture.",
+      "vietnameseExplanation": "Nhấn mạnh quá trình lập trình liên tục suốt 24 giờ tính đến thời điểm đồng hồ điểm nửa đêm."
+    },
+    {
+      "id": "q-gram-gram-a1-1",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "I am a student. -> [Transform]: Negative with 'am'",
+      "blankTarget": "I am not a student.",
+      "options": [
+        "I am not a student.",
+        "I am no a student.",
+        "I am a student.",
+        "I I am a student."
+      ],
+      "answer": 0,
+      "signal": "Add 'not' after am, is or are.",
+      "explanation": "To make a negative sentence with 'be', we put 'not' after the verb. The verb 'be' stays in the sentence.",
+      "vietnameseExplanation": "Phủ định với 'be': thêm 'not' sau am/is/are. Tiếng Việt dùng 'không phải là', còn tiếng Anh vẫn giữ động từ 'be'.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a1-2",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "She is a teacher. -> [Transform]: Question with 'is'",
+      "blankTarget": "Is she a teacher?",
+      "options": [
+        "Is she a teacher?",
+        "Is a she teacher?",
+        "She is a teacher.",
+        "Is She is a teacher."
+      ],
+      "answer": 0,
+      "signal": "Put 'is' before the subject.",
+      "explanation": "In a question with 'be', the verb comes first. The subject comes after the verb.",
+      "vietnameseExplanation": "Câu hỏi với 'be': đưa am/is/are lên trước chủ ngữ. Tiếng Việt thêm 'không?' ở cuối câu, tiếng Anh đổi trật tự từ.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a1-3",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "He has a car. -> [Transform]: Negative with 'have'",
+      "blankTarget": "He does not have a car.",
+      "options": [
+        "He does not have a car.",
+        "He does no has a car.",
+        "He has a car.",
+        "He He has a car."
+      ],
+      "answer": 0,
+      "signal": "Use 'does not' and 'have' for he, she and it.",
+      "explanation": "We use 'do' or 'does' to make a negative with 'have'. After 'does not', the verb is 'have', not 'has'.",
+      "vietnameseExplanation": "Phủ định với 'have': dùng do not/does not + have. Với he/she/it dùng 'does not', và 'has' trở lại thành 'have'. Tiếng Việt chỉ cần thêm 'không'.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a1-4",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "You have a sister. -> [Transform]: Question with 'have'",
+      "blankTarget": "Do you have a sister?",
+      "options": [
+        "Do you have a sister?",
+        "Do you has a sister?",
+        "You have a sister.",
+        "Do You have a sister."
+      ],
+      "answer": 0,
+      "signal": "Start with 'Do' or 'Does' before the subject.",
+      "explanation": "We use 'do' or 'does' to ask a question with 'have'. The verb 'have' stays in its base form.",
+      "vietnameseExplanation": "Câu hỏi với 'have': thêm Do/Does ở đầu câu, động từ giữ nguyên là 'have'. Tiếng Việt dùng 'có ... không?'.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a1-5",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "There is a cat in the garden. -> [Transform]: Question with 'there is'",
+      "blankTarget": "Is there a cat in the garden?",
+      "options": [
+        "Is there a cat in the garden?",
+        "Is a there cat in the garden?",
+        "There is a cat in the garden.",
+        "Is There is a cat in the garden."
+      ],
+      "answer": 0,
+      "signal": "Put 'is' before 'there'.",
+      "explanation": "In a question, 'is' comes before 'there'. We use 'there is' for one thing.",
+      "vietnameseExplanation": "Câu hỏi với 'there is': đưa 'is' lên trước 'there'. Tiếng Việt dùng 'có ... không?', tiếng Anh đảo 'is' lên đầu câu.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a1-6",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "There are apples in the bag. -> [Transform]: Negative with 'there are'",
+      "blankTarget": "There are no apples in the bag.",
+      "options": [
+        "There are no apples in the bag.",
+        "There no are apples in the bag.",
+        "There are apples in the bag.",
+        "There is no apples in the bag."
+      ],
+      "answer": 0,
+      "signal": "Use 'no' before the plural noun.",
+      "explanation": "We use 'there are' for more than one thing. We add 'no' before the noun to say there are none.",
+      "vietnameseExplanation": "Phủ định với 'there are': dùng 'no' trước danh từ số nhiều. Tiếng Việt nói 'không có'; tiếng Anh vẫn giữ 'there are'.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a1-7",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "I can swim. -> [Transform]: Negative with 'can'",
+      "blankTarget": "I cannot swim.",
+      "options": [
+        "I cannot swim.",
+        "I swim. cannot",
+        "I can swim.",
+        "I I can swim."
+      ],
+      "answer": 0,
+      "signal": "Add 'not' after 'can'.",
+      "explanation": "'Can' shows ability. We add 'not' after it and use the base verb.",
+      "vietnameseExplanation": "Phủ định với 'can': thêm 'not' sau can (cannot hoặc can't). Động từ chính giữ nguyên, không thêm 'to'. Tiếng Việt dùng 'không thể' hoặc 'không biết'.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a1-8",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "She can cook. -> [Transform]: Question with 'can'",
+      "blankTarget": "Can she cook?",
+      "options": [
+        "Can she cook?",
+        "Can cook? she",
+        "She can cook.",
+        "Can She can cook."
+      ],
+      "answer": 0,
+      "signal": "Put 'can' before the subject.",
+      "explanation": "In a question with 'can', the word 'can' comes first. The main verb stays in the base form.",
+      "vietnameseExplanation": "Câu hỏi với 'can': đưa 'can' lên trước chủ ngữ. Không cần 'do/does'. Tiếng Việt thêm 'được không?' hoặc 'có thể ... không?'.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a1-9",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "I work in a shop. -> [Transform]: He or she and the verb",
+      "blankTarget": "She works in a shop.",
+      "options": [
+        "She works in a shop.",
+        "She in works a shop.",
+        "I work in a shop.",
+        "She I work in a shop."
+      ],
+      "answer": 0,
+      "signal": "Add -s to the verb after he, she or it.",
+      "explanation": "In the present simple, the verb changes after he, she and it. We add -s to the base verb.",
+      "vietnameseExplanation": "Với he/she/it, thêm -s hoặc -es vào động từ. Tiếng Việt không đổi động từ theo chủ ngữ, nên người học hay quên -s.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a1-10",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "They like fish. -> [Transform]: Negative with 'do not'",
+      "blankTarget": "They do not like fish.",
+      "options": [
+        "They do not like fish.",
+        "They do no like fish.",
+        "They like fish.",
+        "They They like fish."
+      ],
+      "answer": 0,
+      "signal": "Use 'do not' before the base verb.",
+      "explanation": "We use 'do not' to make a negative with I, you, we and they. The main verb stays in the base form.",
+      "vietnameseExplanation": "Phủ định thì hiện tại đơn: dùng do not + động từ nguyên mẫu. Tiếng Việt chỉ thêm 'không' trước động từ.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a1-11",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "He likes tea. -> [Transform]: Negative with 'does not'",
+      "blankTarget": "He does not like tea.",
+      "options": [
+        "He does not like tea.",
+        "He does no like tea.",
+        "He likes tea.",
+        "He He likes tea."
+      ],
+      "answer": 0,
+      "signal": "Use 'does not' and the base verb.",
+      "explanation": "With he, she and it, we use 'does not'. The main verb has no -s after it.",
+      "vietnameseExplanation": "Phủ định với he/she/it: dùng does not + động từ nguyên mẫu. Chữ -s chuyển sang 'does', nên động từ chính không còn -s.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a1-12",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "You live here. -> [Transform]: Yes/no question with 'do'",
+      "blankTarget": "Do you live here?",
+      "options": [
+        "Do you live here?",
+        "Do live you here?",
+        "You live here.",
+        "Do You live here."
+      ],
+      "answer": 0,
+      "signal": "Put 'Do' at the start of the sentence.",
+      "explanation": "We use 'do' to ask questions with I, you, we and they. The word order is Do, subject, verb.",
+      "vietnameseExplanation": "Câu hỏi Yes/No: thêm Do ở đầu câu, động từ giữ nguyên mẫu. Tiếng Việt thêm 'không?' ở cuối câu.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a1-13",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "She plays tennis. -> [Transform]: Yes/no question with 'does'",
+      "blankTarget": "Does she play tennis?",
+      "options": [
+        "Does she play tennis?",
+        "Does play she tennis?",
+        "She plays tennis.",
+        "Does She plays tennis."
+      ],
+      "answer": 0,
+      "signal": "Use 'Does' and remove the -s from the verb.",
+      "explanation": "With he, she and it, we start the question with 'does'. The main verb goes back to the base form.",
+      "vietnameseExplanation": "Câu hỏi với he/she/it: dùng Does ở đầu câu và bỏ -s ở động từ chính. Chỉ có một chỗ thể hiện ngôi thứ ba, đó là 'does'.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a1-14",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "You eat lunch at noon. -> [Transform]: Wh-question with 'do'",
+      "blankTarget": "When do you eat lunch?",
+      "options": [
+        "When do you eat lunch?",
+        "When you do eat lunch?",
+        "You eat lunch at noon.",
+        "When You eat lunch at noon."
+      ],
+      "answer": 0,
+      "signal": "Put the question word first, then 'do'.",
+      "explanation": "The question word comes at the start. Then we use 'do' or 'does' and the subject.",
+      "vietnameseExplanation": "Câu hỏi Wh với thì hiện tại đơn: Từ để hỏi + do/does + chủ ngữ + động từ nguyên mẫu. Tiếng Việt để từ hỏi ở cuối câu, tiếng Anh đưa lên đầu.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a1-15",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "I eat breakfast. -> [Transform]: Adverb 'always'",
+      "blankTarget": "I always eat breakfast.",
+      "options": [
+        "I always eat breakfast.",
+        "I eat always breakfast.",
+        "I eat breakfast.",
+        "I I eat breakfast."
+      ],
+      "answer": 0,
+      "signal": "Put 'always' before the main verb.",
+      "explanation": "Adverbs of frequency tell us how often something happens. They go before the main verb.",
+      "vietnameseExplanation": "Trạng từ tần suất (always, usually, never) đứng trước động từ chính. Tiếng Việt thường để 'luôn luôn' ở nhiều vị trí khác nhau.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a1-16",
+      "tenseId": "present-simple",
+      "tenseName": "Present Simple",
+      "family": "PRESENT",
+      "prompt": "He is late. -> [Transform]: Adverb with 'be'",
+      "blankTarget": "He is never late.",
+      "options": [
+        "He is never late.",
+        "He never is late.",
+        "He is late.",
+        "He He is late."
+      ],
+      "answer": 0,
+      "signal": "Put the adverb after 'is', 'am' or 'are'.",
+      "explanation": "With the verb 'be', the adverb comes after it. This is different from other verbs.",
+      "vietnameseExplanation": "Với động từ 'be', trạng từ tần suất đứng sau am/is/are, khác với động từ thường (đứng trước). Tiếng Việt thường đặt 'không bao giờ' trước động từ.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-1",
+      "tenseId": "past-simple",
+      "tenseName": "Past Simple",
+      "family": "PAST",
+      "prompt": "I walk to school every day. -> [Transform]: Past Simple: Regular Verb",
+      "blankTarget": "I walked to school yesterday.",
+      "options": [
+        "I walked to school yesterday.",
+        "I to walked school yesterday.",
+        "I walking to school yesterday.",
+        "I I walk to school every day."
+      ],
+      "answer": 0,
+      "signal": "Add -ed to the verb to talk about the past.",
+      "explanation": "The verb 'walk' becomes 'walked'. We use the past simple for a finished action.",
+      "vietnameseExplanation": "Thì quá khứ đơn với động từ có quy tắc: thêm -ed vào động từ. Tiếng Việt không đổi động từ mà dùng từ như \"đã\" hoặc \"hôm qua\".",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-2",
+      "tenseId": "past-simple",
+      "tenseName": "Past Simple",
+      "family": "PAST",
+      "prompt": "We study English and we plan a trip. -> [Transform]: Past Simple: Spelling of Regular Verbs",
+      "blankTarget": "We studied English and we planned a trip.",
+      "options": [
+        "We studied English and we planned a trip.",
+        "We English studied and we planned a trip.",
+        "We studiing English and we planning a trip.",
+        "We We study English and we plan a trip."
+      ],
+      "answer": 0,
+      "signal": "Change y to ied, and double the last letter in short verbs.",
+      "explanation": "'Study' ends in consonant plus y, so it becomes 'studied'. 'Plan' is a short verb, so we write 'planned'.",
+      "vietnameseExplanation": "Quy tắc chính tả khi thêm -ed: study đổi thành studied, plan gấp đôi phụ âm thành planned. Tiếng Việt không có quy tắc này.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-3",
+      "tenseId": "past-simple",
+      "tenseName": "Past Simple",
+      "family": "PAST",
+      "prompt": "I go to the market and buy some fruit. -> [Transform]: Past Simple: Irregular Verb",
+      "blankTarget": "I went to the market and bought some fruit.",
+      "options": [
+        "I went to the market and bought some fruit.",
+        "I to went the market and bought some fruit.",
+        "I go to the market and buy some fruit.",
+        "I I go to the market and buy some fruit."
+      ],
+      "answer": 0,
+      "signal": "Use the special past form of irregular verbs.",
+      "explanation": "'Go' becomes 'went' and 'buy' becomes 'bought'. These verbs do not take -ed.",
+      "vietnameseExplanation": "Động từ bất quy tắc có dạng quá khứ riêng (go - went, buy - bought) và phải học thuộc. Tiếng Việt chỉ thêm \"đã\" nên không có dạng riêng này.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-4",
+      "tenseId": "past-simple",
+      "tenseName": "Past Simple",
+      "family": "PAST",
+      "prompt": "She visited her aunt on Sunday. -> [Transform]: Past Simple: Negative",
+      "blankTarget": "She did not visit her aunt on Sunday.",
+      "options": [
+        "She did not visit her aunt on Sunday.",
+        "She did no visit her aunt on Sunday.",
+        "She not did visit her aunt on Sunday.",
+        "She She visited her aunt on Sunday."
+      ],
+      "answer": 0,
+      "signal": "Use did not and the base form of the verb.",
+      "explanation": "'Did not' shows the past, so the main verb stays in the base form. We say 'did not visit', not 'did not visited'.",
+      "vietnameseExplanation": "Câu phủ định quá khứ: did not (didn't) + động từ nguyên mẫu. Động từ trở về dạng gốc, không còn -ed. Tiếng Việt dùng \"không\" hoặc \"chưa\".",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-5",
+      "tenseId": "past-simple",
+      "tenseName": "Past Simple",
+      "family": "PAST",
+      "prompt": "You watched a film last night. -> [Transform]: Past Simple: Yes/No Question",
+      "blankTarget": "Did you watch a film last night?",
+      "options": [
+        "Did you watch a film last night?",
+        "Did watch you a film last night?",
+        "You watched a film last night.",
+        "Did You watched a film last night."
+      ],
+      "answer": 0,
+      "signal": "Put did at the start and use the base form of the verb.",
+      "explanation": "'Did' comes before the subject. The main verb goes back to the base form.",
+      "vietnameseExplanation": "Câu hỏi Yes/No ở quá khứ: Did + chủ ngữ + động từ nguyên mẫu? Tiếng Việt thêm \"không\" hoặc \"chưa\" ở cuối câu, còn tiếng Anh đưa Did lên đầu.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-6",
+      "tenseId": "past-simple",
+      "tenseName": "Past Simple",
+      "family": "PAST",
+      "prompt": "He bought a new phone yesterday. -> [Transform]: Past Simple: Wh- Question",
+      "blankTarget": "What did he buy yesterday?",
+      "options": [
+        "What did he buy yesterday?",
+        "What he did buy yesterday?",
+        "He bought a new phone yesterday.",
+        "What He bought a new phone yesterday."
+      ],
+      "answer": 0,
+      "signal": "Put the question word first, then did, the subject and the base verb.",
+      "explanation": "'What' replaces 'a new phone' and goes to the front. 'Did' stays before the subject, so 'buy' is in the base form.",
+      "vietnameseExplanation": "Câu hỏi có từ để hỏi ở quá khứ: Wh-word + did + chủ ngữ + động từ nguyên mẫu? Trong tiếng Việt từ để hỏi (\"cái gì\") thường đứng cuối câu, còn tiếng Anh đưa lên đầu.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-7",
+      "tenseId": "past-continuous",
+      "tenseName": "Past Continuous",
+      "family": "PAST",
+      "prompt": "I watch TV at eight o'clock. -> [Transform]: Past Continuous",
+      "blankTarget": "I was watching TV at eight o'clock last night.",
+      "options": [
+        "I was watching TV at eight o'clock last night.",
+        "I watching was TV at eight o'clock last night.",
+        "I were watching TV at eight o'clock last night.",
+        "I I watch TV at eight o'clock."
+      ],
+      "answer": 0,
+      "signal": "Use was or were and the -ing form for an action in progress in the past.",
+      "explanation": "We use 'was' with I, he, she and it. We use 'were' with you, we and they.",
+      "vietnameseExplanation": "Quá khứ tiếp diễn: was/were + V-ing, chỉ hành động đang diễn ra tại một thời điểm trong quá khứ. Tiếng Việt dùng \"đang\" kèm \"lúc đó\".",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-8",
+      "tenseId": "past-continuous",
+      "tenseName": "Past Continuous",
+      "family": "PAST",
+      "prompt": "I cooked dinner. The phone rang. -> [Transform]: Past Continuous with Past Simple",
+      "blankTarget": "I was cooking dinner when the phone rang.",
+      "options": [
+        "I was cooking dinner when the phone rang.",
+        "I cooking was dinner when the phone rang.",
+        "I were cooking dinner when the phone rang.",
+        "I I cooked dinner. The phone rang."
+      ],
+      "answer": 0,
+      "signal": "Use past continuous for the longer action and past simple for the short action.",
+      "explanation": "The long action is 'was cooking'. The short action is 'rang'.",
+      "vietnameseExplanation": "Hành động dài đang diễn ra (was cooking) thì bị hành động ngắn chen vào (rang), nối bằng when. Giống cấu trúc \"đang... thì...\" trong tiếng Việt.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-9",
+      "tenseId": "future-simple",
+      "tenseName": "Future Simple",
+      "family": "FUTURE",
+      "prompt": "I visit my grandmother on Saturday. -> [Transform]: Future with Going To: Plan",
+      "blankTarget": "I am going to visit my grandmother on Saturday.",
+      "options": [
+        "I am going to visit my grandmother on Saturday.",
+        "I going am to visit my grandmother on Saturday.",
+        "I visit my grandmother on Saturday.",
+        "I I visit my grandmother on Saturday."
+      ],
+      "answer": 0,
+      "signal": "Use am, is or are + going to + base verb for a plan.",
+      "explanation": "The plan was made before now. The verb after 'to' is in the base form.",
+      "vietnameseExplanation": "Dùng be going to + động từ nguyên mẫu cho dự định đã có từ trước. Tương đương \"định\" hoặc \"sẽ\" trong tiếng Việt.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-10",
+      "tenseId": "future-simple",
+      "tenseName": "Future Simple",
+      "family": "FUTURE",
+      "prompt": "She is going to buy a new bag. -> [Transform]: Future with Going To: Negative",
+      "blankTarget": "She is not going to buy a new bag.",
+      "options": [
+        "She is not going to buy a new bag.",
+        "She is no going to buy a new bag.",
+        "She is going to buy a new bag.",
+        "She She is going to buy a new bag."
+      ],
+      "answer": 0,
+      "signal": "Put not after am, is or are.",
+      "explanation": "We keep 'going to' and add 'not' after 'is'. The main verb 'buy' does not change.",
+      "vietnameseExplanation": "Phủ định của be going to: thêm not sau am/is/are. Tiếng Việt dùng \"không định\" hoặc \"sẽ không\".",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-11",
+      "tenseId": "future-simple",
+      "tenseName": "Future Simple",
+      "family": "FUTURE",
+      "prompt": "You are going to cook tonight. -> [Transform]: Future with Going To: Question",
+      "blankTarget": "Are you going to cook tonight?",
+      "options": [
+        "Are you going to cook tonight?",
+        "Are going you to cook tonight?",
+        "You are going to cook tonight.",
+        "Are You are going to cook tonight."
+      ],
+      "answer": 0,
+      "signal": "Move am, is or are before the subject.",
+      "explanation": "'Are' moves to the front of the sentence. The rest of the sentence stays the same.",
+      "vietnameseExplanation": "Câu hỏi với be going to: đảo am/is/are lên trước chủ ngữ. Tiếng Việt thêm \"không\" ở cuối câu hoặc dùng \"có... không\".",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-12",
+      "tenseId": "future-simple",
+      "tenseName": "Future Simple",
+      "family": "FUTURE",
+      "prompt": "I open the window. -> [Transform]: Future with Will: Decision or Offer",
+      "blankTarget": "I will open the window.",
+      "options": [
+        "I will open the window.",
+        "I open will the window.",
+        "I open the window.",
+        "I is open the window."
+      ],
+      "answer": 0,
+      "signal": "Use will + base verb for a quick decision or an offer.",
+      "explanation": "'Will' does not change for any subject. The verb after 'will' is always in the base form.",
+      "vietnameseExplanation": "Dùng will + động từ nguyên mẫu khi quyết định ngay lúc nói hoặc đưa ra lời đề nghị. Dịch là \"sẽ\" hoặc \"để tôi\".",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-13",
+      "tenseId": "future-simple",
+      "tenseName": "Future Simple",
+      "family": "FUTURE",
+      "prompt": "He will come to the meeting. -> [Transform]: Future with Will: Negative",
+      "blankTarget": "He will not come to the meeting.",
+      "options": [
+        "He will not come to the meeting.",
+        "He will no come to the meeting.",
+        "He will come to the meeting.",
+        "He is not come to the meeting."
+      ],
+      "answer": 0,
+      "signal": "Put not after will. The short form is won't.",
+      "explanation": "We add 'not' after 'will'. The short form 'won't' is common in speaking.",
+      "vietnameseExplanation": "Phủ định với will: will not (won't) + động từ nguyên mẫu. Tiếng Việt dùng \"sẽ không\".",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-14",
+      "tenseId": "future-simple",
+      "tenseName": "Future Simple",
+      "family": "FUTURE",
+      "prompt": "It will rain tomorrow. -> [Transform]: Future with Will: Question",
+      "blankTarget": "Will it rain tomorrow?",
+      "options": [
+        "Will it rain tomorrow?",
+        "Will rain it tomorrow?",
+        "It will rain tomorrow.",
+        "Will It will rain tomorrow."
+      ],
+      "answer": 0,
+      "signal": "Put will before the subject.",
+      "explanation": "'Will' moves to the front. The main verb stays in the base form.",
+      "vietnameseExplanation": "Câu hỏi với will: đưa will lên trước chủ ngữ. Tiếng Việt thêm \"không\" ở cuối: \"Ngày mai trời sẽ mưa không?\"",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-15",
+      "tenseId": "present-continuous",
+      "tenseName": "Present Continuous",
+      "family": "PRESENT",
+      "prompt": "I meet my friend at six. -> [Transform]: Present Continuous for Future Plans",
+      "blankTarget": "I am meeting my friend at six tonight.",
+      "options": [
+        "I am meeting my friend at six tonight.",
+        "I meeting am my friend at six tonight.",
+        "I meet my friend at six.",
+        "I I meet my friend at six."
+      ],
+      "answer": 0,
+      "signal": "Use am, is or are + verb-ing with a future time for a fixed plan.",
+      "explanation": "The word 'tonight' shows the future. The plan is fixed, for example with a time or a place.",
+      "vietnameseExplanation": "Hiện tại tiếp diễn dùng cho kế hoạch đã sắp xếp trong tương lai gần, thường có từ chỉ thời gian như \"tonight\" hoặc \"tomorrow\". Tiếng Việt dùng \"sẽ\" hoặc \"định\".",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-a2-16",
+      "tenseId": "present-continuous",
+      "tenseName": "Present Continuous",
+      "family": "PRESENT",
+      "prompt": "He is cooking dinner now. -> [Transform]: Present Continuous: Now vs Future Plan",
+      "blankTarget": "He is cooking dinner with his friends tomorrow.",
+      "options": [
+        "He is cooking dinner with his friends tomorrow.",
+        "He cooking is dinner with his friends tomorrow.",
+        "He is cooking dinner now.",
+        "He He is cooking dinner now."
+      ],
+      "answer": 0,
+      "signal": "Change the time word from now to a future time.",
+      "explanation": "With 'now', the action is happening at this moment. With 'tomorrow', it is a plan for the future.",
+      "vietnameseExplanation": "Cùng một cấu trúc is cooking, nhưng now chỉ việc đang xảy ra, còn tomorrow chỉ kế hoạch tương lai. Thời gian trong câu quyết định nghĩa.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-b1-1",
+      "tenseId": "present-perfect",
+      "tenseName": "Present Perfect",
+      "family": "PRESENT",
+      "prompt": "I lost my keys, so I can't open the door. -> [Transform]: Present Perfect: Result Now",
+      "blankTarget": "I have lost my keys, so I can't open the door.",
+      "options": [
+        "I have lost my keys, so I can't open the door.",
+        "I has lost my keys, so I can't open the door.",
+        "I lost my keys, so I can't open the door.",
+        "I I lost my keys, so I can't open the door."
+      ],
+      "answer": 0,
+      "signal": "Past action with a result that matters now uses have/has + past participle.",
+      "explanation": "The keys are still missing now, so the speaker uses the present perfect. The result is connected to the present.",
+      "vietnameseExplanation": "Hiện tại hoàn thành: hành động trong quá khứ nhưng kết quả còn ở hiện tại. Tiếng Việt dùng 'đã' cho mọi thì quá khứ, còn tiếng Anh phải chọn: 'have lost' (còn ảnh hưởng bây giờ) khác 'lost' (chỉ kể chuyện đã qua).",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-b1-2",
+      "tenseId": "present-perfect",
+      "tenseName": "Present Perfect",
+      "family": "PRESENT",
+      "prompt": "I started living here five years ago. -> [Transform]: Present Perfect with 'for'",
+      "blankTarget": "I have lived here for five years.",
+      "options": [
+        "I have lived here for five years.",
+        "I has lived here for five years.",
+        "I have living here for five years.",
+        "I I started living here five years ago."
+      ],
+      "answer": 0,
+      "signal": "'For' + a length of time shows how long a situation has continued until now.",
+      "explanation": "The situation started in the past and continues now. 'For five years' tells us the length of time.",
+      "vietnameseExplanation": "Dùng 'for' + khoảng thời gian (for five years = được năm năm). Tiếng Việt nói 'sống ở đây được năm năm' nên dễ dùng thì quá khứ; tiếng Anh dùng have + V3 vì việc vẫn tiếp diễn.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-b1-3",
+      "tenseId": "present-perfect",
+      "tenseName": "Present Perfect",
+      "family": "PRESENT",
+      "prompt": "She began working at the bank in 2019. -> [Transform]: Present Perfect with 'since'",
+      "blankTarget": "She has worked at the bank since 2019.",
+      "options": [
+        "She has worked at the bank since 2019.",
+        "She worked has at the bank since 2019.",
+        "She has working at the bank since 2019.",
+        "She have worked at the bank since 2019."
+      ],
+      "answer": 0,
+      "signal": "'Since' + a starting point in time shows when a situation began.",
+      "explanation": "The job began in 2019 and she still works there. 'Since' points to the start, not the length.",
+      "vietnameseExplanation": "Dùng 'since' + mốc thời gian (since 2019 = từ năm 2019). Khác với 'for' (khoảng thời gian), 'since' chỉ điểm bắt đầu. Tiếng Việt đều nói 'từ/được', nhưng tiếng Anh phải phân biệt hai từ này.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-b1-4",
+      "tenseId": "present-perfect",
+      "tenseName": "Present Perfect",
+      "family": "PRESENT",
+      "prompt": "He arrived a minute ago. -> [Transform]: Present Perfect with 'just'",
+      "blankTarget": "He has just arrived.",
+      "options": [
+        "He has just arrived.",
+        "He just has arrived.",
+        "He has just arriving.",
+        "He have just arrived."
+      ],
+      "answer": 0,
+      "signal": "'Just' between have/has and the participle means a very recent action.",
+      "explanation": "The action finished a very short time ago. 'Just' goes after has and before the participle.",
+      "vietnameseExplanation": "'Just' nghĩa là 'vừa mới'. Đặt giữa have/has và V3: 'has just arrived' (vừa mới đến). Tiếng Việt đặt 'vừa mới' trước động từ, tiếng Anh cũng đặt trước động từ chính nhưng sau trợ động từ.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-b1-5",
+      "tenseId": "present-perfect",
+      "tenseName": "Present Perfect",
+      "family": "PRESENT",
+      "prompt": "I don't need to cook because my brother cooked dinner earlier. -> [Transform]: Present Perfect with 'already'",
+      "blankTarget": "I don't need to cook because my brother has already cooked dinner.",
+      "options": [
+        "I don't need to cook because my brother has already cooked dinner.",
+        "I need don't to cook because my brother has already cooked dinner.",
+        "I don't neing to cook because my brother has already cooking dinner.",
+        "I don't need to cook because my brother have already cooked dinner."
+      ],
+      "answer": 0,
+      "signal": "'Already' in a positive sentence shows something happened sooner than expected.",
+      "explanation": "The dinner is ready now, so no cooking is needed. 'Already' stresses that it is done.",
+      "vietnameseExplanation": "'Already' nghĩa là 'đã... rồi' trong câu khẳng định, nhấn mạnh việc xong sớm hơn dự kiến. Đặt giữa have/has và V3. Tiếng Việt có 'đã... rồi' bao quanh động từ, tiếng Anh chỉ cần một từ 'already'.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-b1-6",
+      "tenseId": "present-perfect",
+      "tenseName": "Present Perfect",
+      "family": "PRESENT",
+      "prompt": "Did you finish the report? -> [Transform]: Present Perfect with 'yet'",
+      "blankTarget": "Have you finished the report yet?",
+      "options": [
+        "Have you finished the report yet?",
+        "Have finished you the report yet?",
+        "Have you finishing the report yet?",
+        "Have Did you finish the report?"
+      ],
+      "answer": 0,
+      "signal": "'Yet' at the end of a question or negative sentence asks about something expected.",
+      "explanation": "The speaker expects the report to be done soon. 'Yet' goes at the end of the question.",
+      "vietnameseExplanation": "'Yet' dùng trong câu hỏi và câu phủ định, nghĩa là 'chưa/đã... chưa', đặt ở cuối câu. Ví dụ: 'Have you finished yet?' (Bạn xong chưa?), 'I haven't finished yet' (Tôi chưa xong).",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-b1-7",
+      "tenseId": "present-perfect",
+      "tenseName": "Present Perfect",
+      "family": "PRESENT",
+      "prompt": "This is my first time eating sushi. -> [Transform]: Present Perfect for Life Experience",
+      "blankTarget": "I have never eaten sushi before.",
+      "options": [
+        "I have never eaten sushi before.",
+        "I has never eaten sushi before.",
+        "This is my first time eating sushi.",
+        "I This is my first time eating sushi."
+      ],
+      "answer": 0,
+      "signal": "'Never' with the present perfect talks about life experience up to now.",
+      "explanation": "The sentence talks about all of the speaker's life until now. No exact time is given.",
+      "vietnameseExplanation": "Dùng have/has + V3 với 'never/ever' để nói về kinh nghiệm sống ('chưa từng', 'đã từng'). Tiếng Việt dùng 'chưa từng/đã từng', tiếng Anh không nêu thời điểm cụ thể.",
+      "source": "grammar.json"
+    },
+    {
+      "id": "q-gram-gram-b1-8",
+      "tenseId": "present-continuous",
+      "tenseName": "Present Continuous",
+      "family": "PRESENT",
+      "prompt": "I started waiting for the bus at six, and I am still waiting. -> [Transform]: Present Perfect Continuous",
+      "blankTarget": "I have been waiting for the bus since six.",
+      "options": [
+        "I have been waiting for the bus since six.",
+        "I has been waiting for the bus since six.",
+        "I started waiting for the bus at six, and I am still waiting.",
+        "I I started waiting for the bus at six, and I am still waiting."
+      ],
+      "answer": 0,
+      "signal": "Have/has been + verb-ing shows an action that began in the past and is still happening.",
+      "explanation": "The waiting began at six and has not stopped. The continuous form shows the action is still in progress.",
+      "vietnameseExplanation": "Hiện tại hoàn thành tiếp diễn nhấn mạnh hành động kéo dài liên tục đến bây giờ, như 'đang... mãi từ...'. Cấu trúc: have/has been + V-ing, thường đi với for/since.",
+      "source": "grammar.json"
+    }
+  ]
+}

@@ -86,6 +86,9 @@ export class GrammarDossier {
     this.container.innerHTML = `
       <div class="dossier-control-bar">
         <div class="dossier-tabs grammar-mode-tabs">
+          <button type="button" class="hud-btn btn-jump-tenses" style="border-color: var(--accent-gold); color: var(--accent-gold); font-weight: 700;">
+            ${icon('zap')} ✦ 12 TENSES MASTER VAULT
+          </button>
           ${modes.map(m => `<button class="hud-btn mode-tab ${this.activeMode === m ? 'active' : ''}" data-mode="${m}">${MODE_TABS[m] || prettyMode(m)}</button>`).join('')}
         </div>
 
@@ -125,6 +128,12 @@ export class GrammarDossier {
   }
 
   private bindEvents(): void {
+    // 12 Tenses Vault button
+    this.container.querySelector('.btn-jump-tenses')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      window.location.hash = '#tenses';
+    });
+
     // Mode tabs
     const modeTabs = this.container.querySelectorAll('.mode-tab');
     modeTabs.forEach(tab => {

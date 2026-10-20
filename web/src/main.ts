@@ -16,6 +16,7 @@ import { SpeakingDossier } from './modules/speaking-dossier';
 import { VocabularyDossier } from './modules/vocabulary-dossier';
 import { CollocationsDossier } from './modules/collocations-dossier';
 import { GrammarDossier } from './modules/grammar-dossier';
+import { TensesDossier } from './modules/tenses-dossier';
 import { MissionLog } from './modules/mission-log';
 import { StorageManager } from './utils/storage';
 import { registerServiceWorker } from './core/pwa';
@@ -77,6 +78,7 @@ class App {
   private vocabularyDossier: VocabularyDossier;
   private collocationsDossier: CollocationsDossier;
   private grammarDossier: GrammarDossier;
+  private tensesDossier: TensesDossier;
   private missionLog: MissionLog;
   private blitzDossier: BlitzDossier;
   private mediationDossier: MediationDossier;
@@ -134,6 +136,8 @@ class App {
     this.vocabularyDossier = new VocabularyDossier();
     this.collocationsDossier = new CollocationsDossier();
     this.grammarDossier = new GrammarDossier();
+    this.tensesDossier = new TensesDossier();
+    this.tensesDossier.onNavigateBackToGrammar = () => this.router.navigate('grammar');
     this.missionLog = new MissionLog();
     this.blitzDossier = new BlitzDossier();
     this.mediationDossier = new MediationDossier();
@@ -321,6 +325,10 @@ class App {
         this.workspaceMount.appendChild(this.grammarDossier.render());
         this.activeDossierHandle = this.grammarDossier;
         break;
+      case 'tenses':
+        this.workspaceMount.appendChild(this.tensesDossier.render());
+        this.activeDossierHandle = this.tensesDossier;
+        break;
       case 'habits':
         this.workspaceMount.appendChild(this.missionLog.render());
         this.activeDossierHandle = this.missionLog;
@@ -330,7 +338,6 @@ class App {
         this.activeDossierHandle = this.blitzDossier;
         break;
       case 'mediate':
-      case 'mediation':
         this.workspaceMount.appendChild(this.mediationDossier.render());
         this.activeDossierHandle = this.mediationDossier;
         break;

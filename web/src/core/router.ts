@@ -1,4 +1,4 @@
-export type RouteId = 'tree' | 'read' | 'write' | 'listen' | 'speak' | 'vocab' | 'colloc' | 'grammar' | 'habits' | 'singularity' | 'blitz' | 'mediate' | 'mediation' | 'analytics' | 'cockpit';
+export type RouteId = 'tree' | 'read' | 'write' | 'listen' | 'speak' | 'vocab' | 'colloc' | 'grammar' | 'tenses' | 'habits' | 'singularity' | 'blitz' | 'mediate' | 'analytics' | 'cockpit';
 
 export type RouteChangeHandler = (route: RouteId) => void;
 
@@ -21,10 +21,9 @@ export class Router {
 
   private resolveRoute(): void {
     const rawHash = window.location.hash.replace(/^#\/?/, '').toLowerCase();
-    const normalized = rawHash === 'mediation' ? 'mediate' : rawHash;
-    const validRoutes: RouteId[] = ['tree', 'read', 'write', 'listen', 'speak', 'vocab', 'colloc', 'grammar', 'habits', 'singularity', 'blitz', 'mediate', 'mediation', 'analytics', 'cockpit'];
+    const validRoutes: RouteId[] = ['tree', 'read', 'write', 'listen', 'speak', 'vocab', 'colloc', 'grammar', 'tenses', 'habits', 'singularity', 'blitz', 'mediate', 'analytics', 'cockpit'];
 
-    const matched = validRoutes.find(r => r === normalized) || 'tree';
+    const matched = validRoutes.find(r => r === rawHash) || 'tree';
     this.currentRoute = matched;
 
     this.handlers.forEach(handler => handler(this.currentRoute));
