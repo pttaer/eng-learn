@@ -8,7 +8,6 @@ import { icon } from '../utils/icons';
 import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
-import lexiconDictionaryData from '../assets/data/lexicon-dictionary.json';
 import vocabularyData from '../assets/data/vocabulary.json';
 import collocationsData from '../assets/data/collocations.json';
 
@@ -58,9 +57,9 @@ export class LexiconDrawer {
 
   // High-performance O(1) Dictionary Lookup Map
   private dictionaryIndex: Map<string, LexiconEntry> = new Map();
+  private indexReady: Promise<void> | null = null;
 
   constructor() {
-    this.buildDictionaryIndex();
     this.createDOM();
     this.bindEvents();
   }
@@ -89,9 +88,28 @@ export class LexiconDrawer {
   }
 
   /**
+   * Loads the two large dictionaries on first use, then builds the index once.
+   * A failed load is cleared so the next open retries.
+   */
+  private ensureIndex(): Promise<void> {
+    if (!this.indexReady) {
+      this.indexReady = Promise.all([
+        import('../assets/data/lexicon-dictionary.json'),
+        import('../assets/data/iot-vocabulary.json')
+      ])
+        .then(([lexicon, iot]) => this.buildDictionaryIndex(lexicon.default, iot.default))
+        .catch(err => {
+          this.indexReady = null;
+          throw err;
+        });
+    }
+    return this.indexReady;
+  }
+
+  /**
    * Pre-indexes all lexicon, vocabulary, and collocation data for strict O(1) lookup.
    */
-  private buildDictionaryIndex(): void {
+  private buildDictionaryIndex(lexiconDictionaryData: any, iotVocabularyData: any): void {
     // 1. Ingest base lexicon dictionary
     if (lexiconDictionaryData && typeof lexiconDictionaryData === 'object') {
       if (Array.isArray(lexiconDictionaryData)) {
@@ -151,6 +169,26 @@ export class LexiconDrawer {
           contextSentence: ''
         };
         this.indexEntry(item.phrase, entry, false);
+      }
+    }
+
+    // 4. Ingest IELTS Online Tests Master Vocabulary (3,345 items & 10,015 collocations)
+    if (Array.isArray(iotVocabularyData)) {
+      for (const item of iotVocabularyData as any[]) {
+        if (!item || !item.word) continue;
+        const entry: LexiconEntry = {
+          id: item.id,
+          word: item.word,
+          ipa: '',
+          pos: item.pos || 'academic word',
+          root: item.topic ? 'IELTS Topic: ' + item.topic : '',
+          definition: item.definition || '',
+          vietnamese: item.vietnamese || '',
+          collocations: Array.isArray(item.collocations) ? item.collocations : [],
+          level: item.cefrLevel === 'C1' ? 4 : (item.cefrLevel === 'B2' ? 3 : 2),
+          contextSentence: item.example || ''
+        };
+        this.indexEntry(item.word, entry, false);
       }
     }
   }
@@ -456,6 +494,11 @@ export class LexiconDrawer {
    */
   public open(term: string): void {
     this.hideFloatingPill();
+    // A failed dictionary load still opens the drawer, with the fallback entry
+    this.ensureIndex().catch(() => undefined).then(() => this.openEntry(term));
+  }
+
+  private openEntry(term: string): void {
     const cleanWord = this.normalizeKey(term);
     let entry = this.lookup(cleanWord);
 
