@@ -1,5 +1,5 @@
 // web/scripts/verify-cd-ielts.cjs
-// Headless test suite asserting CD-IELTS Mock Suite & High-Stakes L2 Pragmatic Roleplays (ENG-107)
+// Headless test suite asserting CD-IELTS Mock Suite (ENG-107)
 const fs = require('fs');
 const path = require('path');
 const assert = require('assert');
@@ -8,15 +8,14 @@ const CONTENT_DIR = path.join(__dirname, '..', 'content');
 const DATA_DIR = path.join(__dirname, '..', 'src', 'assets', 'data');
 const { compileIelts } = require('./compile-content.cjs');
 
-console.log('[TEST] Starting CD-IELTS 4-Skill Mock Dataset & Pragmatic Roleplay Verification (ENG-107)...');
+console.log('[TEST] Starting CD-IELTS 4-Skill Mock Dataset Verification (ENG-107)...');
 
 // 1. Assert markdown source files exist
 const ieltsFiles = [
   'academic-reading.md',
   'listening-sections.md',
   'writing-tasks.md',
-  'speaking-cue-cards.md',
-  'pragmatic-roleplays.md'
+  'speaking-cue-cards.md'
 ];
 
 ieltsFiles.forEach(f => {
@@ -99,44 +98,6 @@ assert.ok(ielts.speaking.part2.modelMonologue && ielts.speaking.part2.modelMonol
 
 console.log('  [PASS] Speaking verified: Parts 1, 2 (cue card with 60s prep + Band 8.5 monologue), and Part 3 abstract discussion.');
 
-// --- E. Pragmatic Roleplays Verification ---
-assert.ok(Array.isArray(ielts.pragmaticRoleplays), 'pragmaticRoleplays must be an array');
-assert.strictEqual(ielts.pragmaticRoleplays.length, 4,
-  `Expected exactly 4 high-stakes pragmatic roleplays, got ${ielts.pragmaticRoleplays.length}`);
-
-const requiredRoleplayFields = [
-  'id', 'cefrLevel', 'domain', 'pragmaticFocus', 'interlocutor',
-  'context', 'friction', 'vietnamese', 'exemplarExchange', 'sieves'
-];
-
-ielts.pragmaticRoleplays.forEach(rp => {
-  requiredRoleplayFields.forEach(f => {
-    assert(rp[f] !== undefined, `Roleplay ${rp.id} missing field '${f}'`);
-  });
-
-  assert(rp.cefrLevel === 'C1' || rp.cefrLevel === 'C2',
-    `Roleplay ${rp.id} must be C1 or C2 level, got ${rp.cefrLevel}`);
-  assert.ok(rp.exemplarExchange.challenge && rp.exemplarExchange.modelResponse,
-    `Roleplay ${rp.id} missing complete exemplar exchange transcript`);
-
-  // Assert all 4 anti-fossilization sieves exist
-  const sieves = rp.sieves;
-  assert.ok(sieves.thesisAvoidance && sieves.thesisAvoidance.length > 0,
-    `Roleplay ${rp.id} missing thesis avoidance sieve`);
-  assert.ok(sieves.mechanicalConnectors && sieves.mechanicalConnectors.length > 0,
-    `Roleplay ${rp.id} missing mechanical connector sieve`);
-  assert.ok(sieves.thesaurusClichés && sieves.thesaurusClichés.length > 0,
-    `Roleplay ${rp.id} missing thesaurus cliché sieve`);
-  assert.ok(sieves.phoneticCoda && sieves.phoneticCoda.length > 0,
-    `Roleplay ${rp.id} missing phonetic coda release sieve`);
-
-  // Assert Vietnamese translation has diacritics
-  assert(/[àáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵđ]/i.test(rp.vietnamese),
-    `Roleplay ${rp.id} Vietnamese summary missing diacritics: ${rp.vietnamese}`);
-});
-
-console.log('  [PASS] 4 High-Stakes L2 Pragmatic Roleplays verified with all 4 Vietnamese L1 anti-fossilization sieves.');
-
 // --- F. Zero Regression Verification ---
 const grammar = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'grammar.json'), 'utf8'));
 assert(grammar.length >= 168, `Grammar regression: expected >= 168 rules, got ${grammar.length}`);
@@ -150,4 +111,4 @@ const collocations = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'collocation
 assert.strictEqual(collocations.length, 1336, `Collocations regression: expected 1336, got ${collocations.length}`);
 
 console.log('  [PASS] Zero regression on baseline datasets (168 grammar rules, 76 speaking drills, 76 writing drills, 60 scenarios, 1336 collocations).');
-console.log('[TEST] ALL CD-IELTS & PRAGMATIC ROLEPLAY INVARIANTS SATISFIED (ENG-107).\n');
+console.log('[TEST] ALL CD-IELTS INVARIANTS SATISFIED (ENG-107).\n');

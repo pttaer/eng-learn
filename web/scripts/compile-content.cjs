@@ -651,7 +651,7 @@ function compileDiagnostic() {
   }
 }
 
-// 8. CD-IELTS Mock Simulator & L2 Pragmatic Roleplays Compiler
+// 8. CD-IELTS Mock Simulator Compiler
 function compileIelts() {
   const dir = path.join(CONTENT_DIR, 'ielts');
   if (!fs.existsSync(dir)) return;
@@ -662,8 +662,7 @@ function compileIelts() {
     reading: null,
     listening: null,
     writing: null,
-    speaking: null,
-    pragmaticRoleplays: []
+    speaking: null
   };
 
   // 1. Reading (Full 40 Questions across 3 Passages)
@@ -966,54 +965,6 @@ function compileIelts() {
     };
   }
 
-  // 5. Pragmatic Roleplays
-  const roleplayFile = path.join(dir, 'pragmatic-roleplays.md');
-  if (fs.existsSync(roleplayFile)) {
-    const raw = fs.readFileSync(roleplayFile, 'utf8').replace(/\r\n/g, '\n');
-    const sections = raw.split(/^##\s+/m).slice(1);
-    sections.forEach(sec => {
-      const lines = sec.split(/\r?\n/);
-      const title = lines[0].trim();
-      const item = { title, sieves: {} };
-
-      lines.slice(1).forEach(l => {
-        const m = l.match(/^-\s+\*\*([^*]+)\*\*:\s*(.*)$/);
-        if (m) {
-          const key = m[1].trim();
-          const val = m[2].trim();
-          if (key === 'ID') item.id = val;
-          else if (key === 'CEFR') item.cefrLevel = val;
-          else if (key === 'Domain') item.domain = val;
-          else if (key === 'Pragmatic Focus') item.pragmaticFocus = val;
-          else if (key === 'Interlocutor') item.interlocutor = val;
-          else if (key === 'Context') item.context = val;
-          else if (key === 'Friction') item.friction = val;
-          else if (key === 'Vietnamese Summary') item.vietnamese = val;
-        }
-      });
-
-      const exchangeMatch = sec.match(/\*Interlocutor Challenge\*:\s*"([^"]+)"[\s\S]*?\*Candidate Model Response\*:\s*"([^"]+)"/);
-      if (exchangeMatch) {
-        item.exemplarExchange = {
-          challenge: exchangeMatch[1].trim(),
-          modelResponse: exchangeMatch[2].trim()
-        };
-      }
-
-      const thesisSieve = sec.match(/\*Thesis Avoidance Sieve\*:\s*([^\n\r]+)/);
-      const connectorSieve = sec.match(/\*Mechanical Connector Sieve\*:\s*([^\n\r]+)/);
-      const clichéSieve = sec.match(/\*Thesaurus Clich[eé] Sieve\*:\s*([^\n\r]+)/);
-      const codaSieve = sec.match(/\*Phonetic Coda Release\*:\s*([^\n\r]+)/);
-
-      if (thesisSieve) item.sieves.thesisAvoidance = thesisSieve[1].trim();
-      if (connectorSieve) item.sieves.mechanicalConnectors = connectorSieve[1].trim();
-      if (clichéSieve) item.sieves.thesaurusClichés = clichéSieve[1].trim();
-      if (codaSieve) item.sieves.phoneticCoda = codaSieve[1].trim();
-
-      if (item.id) ieltsData.pragmaticRoleplays.push(item);
-    });
-  }
-
   const IELTS_DATA_DIR = path.join(__dirname, '..', 'src', 'ielts', 'data');
   if (!fs.existsSync(IELTS_DATA_DIR)) {
     fs.mkdirSync(IELTS_DATA_DIR, { recursive: true });
@@ -1038,7 +989,7 @@ function compileIelts() {
   fs.writeFileSync(path.join(IELTS_DATA_DIR, 'ielts-mock.json'), JSON.stringify(mockData, null, 2), 'utf8');
   fs.writeFileSync(path.join(DATA_DIR, 'ielts-mock.json'), JSON.stringify(mockData, null, 2), 'utf8');
 
-  console.log(`[COMPILE] ielts.json & ielts-mock.json: Reading (${ieltsData.reading?.allQuestions?.length || 0} Qs in ${ieltsData.reading?.passages?.length || 0} Passages), Listening (${ieltsData.listening?.allQuestions?.length || 0} Qs in ${ieltsData.listening?.sections?.length || 0} Sections), Writing Tasks, Speaking Parts, and ${ieltsData.pragmaticRoleplays.length} Pragmatic Roleplays.`);
+  console.log(`[COMPILE] ielts.json & ielts-mock.json: Reading (${ieltsData.reading?.allQuestions?.length || 0} Qs in ${ieltsData.reading?.passages?.length || 0} Passages), Listening (${ieltsData.listening?.allQuestions?.length || 0} Qs in ${ieltsData.listening?.sections?.length || 0} Sections), Writing Tasks, Speaking Parts.`);
 }
 
 function compileIeltsCourse() {
