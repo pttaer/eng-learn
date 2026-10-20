@@ -2,6 +2,7 @@
 import courseData from '../../assets/data/ielts-course.json';
 import { DiagnosticEngine, DiagnosticQuestion, DiagnosticReport } from '../diagnostic-engine';
 import { esc, h } from '../ui';
+import { feedback } from '../../core/feedback';
 
 const SUBTYPE_NAMES: Record<string, string> = {
   subject_verb: 'Subject-Verb Concord',
@@ -191,6 +192,19 @@ export function diagnosticView(root: HTMLElement): () => void {
           const optIdx = parseInt(btn.dataset.opt!, 10);
           userAnswers[qId] = optIdx;
           render();
+          const answered = questions.find(item => item.id === qId);
+          const answeredCard = document.getElementById(`q-${qId}`);
+          if (answered && answeredCard) {
+            feedback.emit(
+              {
+                type: 'answer',
+                result: optIdx === answered.correctIndex ? 'correct' : 'wrong',
+                why: answered.explanation,
+                mode: 'practice'
+              },
+              answeredCard
+            );
+          }
         });
       });
 
