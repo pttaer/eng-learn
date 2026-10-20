@@ -33,6 +33,7 @@ import { ExamCockpitDossier } from './modules/exam-cockpit-dossier';
 import { SerlGauntletEngine } from './core/serl-gauntlet-engine';
 import { CardTiltController, NebulaCanvas } from './core/perspective-canvas';
 import { NotificationEngine } from './core/notification-engine';
+import { UsageTracker } from './core/usage-tracker';
 import { AmbientMusicEngine, ambientMusicEngine } from './core/ambient-music-engine';
 import { ProfileSyncEngine } from './core/profile-sync-engine';
 import { SpeechEvaluator } from './core/speech-evaluator';
@@ -514,4 +515,5 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('boot')?.remove();
   registerServiceWorker();
   NotificationEngine.schedulePeriodicCheck();
+  UsageTracker.start();
 });

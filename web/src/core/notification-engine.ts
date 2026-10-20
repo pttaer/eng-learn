@@ -10,12 +10,14 @@
 
 import { SRSEngine, SRSCardState } from './srs-engine';
 import { StorageManager } from '../utils/storage';
+import { ProgressionEngine } from './progression-engine';
+import { UsageTracker, localDayKey } from './usage-tracker';
 
 export type NotificationPermissionState = 'granted' | 'denied' | 'default' | 'unsupported';
 
 export interface CheckNotifyResult {
   notified: boolean;
-  reason?: 'due_cards' | 'streak_reminder';
+  reason?: 'due_cards' | 'streak_reminder' | 'daily_reminder';
   dueCount: number;
   streak: number;
   mode: 'native' | 'toast' | 'none';
@@ -25,6 +27,9 @@ const NOTIFICATIONS_ENABLED_KEY = 'eng_notifications_enabled';
 const LAST_NOTIFIED_KEY = 'eng_last_notification_timestamp';
 const DEFAULT_ICON = '/icon-192.png';
 const DEFAULT_TAG = 'srs-review-due';
+// Daily reminder: after this local hour, at most once per local day, and only if the learner has not studied yet
+const REMINDER_HOUR = 18;
+const REMINDER_DAY_KEY = 'eng_reminder_day';
 
 export class NotificationEngine {
   private static periodicTimerId: any = null;
@@ -177,7 +182,9 @@ export class NotificationEngine {
 
     if (needsStreakReminder) {
       const title = `Streak Protection Alert (${streak} Days)`;
-      const body = `Don't break your ${streak}-day study streak! Complete your daily workout today.`;
+      const left = this.questsLeft();
+      const questNote = left > 0 ? `${left} quest${left === 1 ? '' : 's'} left today.` : 'Today\'s quests are done.';
+      const body = `Don't break your ${streak}-day streak. ${questNote}`;
       const isNative = await this.dispatch(title, {
         body,
         icon: DEFAULT_ICON,
@@ -195,7 +202,60 @@ export class NotificationEngine {
       };
     }
 
+    const reminder = this.buildDailyReminder();
+    if (reminder) {
+      try {
+        localStorage.setItem(REMINDER_DAY_KEY, localDayKey());
+      } catch {
+        // Storage blocked: the reminder may repeat within the day
+      }
+      const isNative = await this.dispatch(reminder.title, {
+        body: reminder.body,
+        icon: DEFAULT_ICON,
+        badge: DEFAULT_ICON,
+        tag: DEFAULT_TAG,
+        data: { route: '#collocations', type: 'daily_reminder' }
+      });
+      return {
+        notified: true,
+        reason: 'daily_reminder',
+        dueCount: 0,
+        streak,
+        mode: isNative ? 'native' : 'toast'
+      };
+    }
+
     return { notified: false, dueCount: 0, streak, mode: 'none' };
+  }
+
+  /** Quests not yet completed today, from the progression engine. */
+  private static questsLeft(): number {
+    try {
+      return ProgressionEngine.getState().quests.filter(q => !q.completed).length;
+    } catch {
+      return 0;
+    }
+  }
+
+  /**
+   * Reminder built from the learner's progress. Null when not due: before REMINDER_HOUR,
+   * already sent today, or already studied today.
+   */
+  private static buildDailyReminder(): { title: string; body: string } | null {
+    try {
+      if (new Date().getHours() < REMINDER_HOUR) return null;
+      if (localStorage.getItem(REMINDER_DAY_KEY) === localDayKey()) return null;
+      if (UsageTracker.summary().todayMinutes > 0) return null;
+      const info = ProgressionEngine.getLevelInfo();
+      const xpToNext = info.spanInLevel - info.progressInLevel;
+      const left = this.questsLeft();
+      return {
+        title: 'Time to learn today',
+        body: `Ten minutes keeps your streak. Level ${info.level}, ${xpToNext} XP to the next rank, ${left} quest${left === 1 ? '' : 's'} left.`
+      };
+    } catch {
+      return null;
+    }
   }
 
   /**

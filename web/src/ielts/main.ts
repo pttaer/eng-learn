@@ -1,5 +1,7 @@
 import { h } from './ui';
 import { report } from './report';
+import { achievementsHtml } from '../core/achievements-card';
+import { UsageTracker } from '../core/usage-tracker';
 import { lazyView, prefetchViews } from './lazy-view';
 import { readingDrillsView } from './views/reading-drills';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
@@ -54,6 +56,13 @@ const SKILL_SUBNAVS: Record<string, { label: string; hash: string; icon: string 
 };
 
 // All 12 Full View Handlers with backward-compatible routing
+// Progress summary on the overview: time in app, answers, streak and milestone badges
+function progressSection(): HTMLElement {
+  const box = h('div');
+  box.innerHTML = achievementsHtml();
+  return box;
+}
+
 const ALL_ROUTES: RouteItem[] = [
   {
     id: 'home',
@@ -68,6 +77,7 @@ const ALL_ROUTES: RouteItem[] = [
           'Exam-format practice for all four skills. Listening and Reading are scored with official raw-score tables. Writing and Speaking give automatic checks plus rubric ratings. Everything runs 100% offline in your browser.'
         ),
         homeSuites(),
+        progressSection(),
         report()
       );
       return () => {};
@@ -238,3 +248,4 @@ window.addEventListener('hashchange', route);
 route();
 document.getElementById('boot')?.remove();
 prefetchViews();
+UsageTracker.start();

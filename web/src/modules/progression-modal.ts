@@ -8,6 +8,7 @@
 import { icon } from '../utils/icons';
 import { ProgressionEngine, ProgressionState, LevelInfo } from '../core/progression-engine';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
+import { achievementsHtml } from '../core/achievements-card';
 
 export class ProgressionModal {
   private static activeInstance: ProgressionModal | null = null;
@@ -133,6 +134,8 @@ export class ProgressionModal {
             <div class="progression-xp-fill" style="width: ${info.percentage}%;"></div>
           </div>
         </div>
+
+        ${achievementsHtml()}
 
         <!-- Daily Quests Checklist -->
         <div class="progression-quests-section">
