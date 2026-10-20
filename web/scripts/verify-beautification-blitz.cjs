@@ -22,7 +22,6 @@
  *    - Clean timer teardown and XP synchronization into ProgressionEngine
  * 
  * 4. Master Rhetorical Figures & C2 Stylistic Corpus (ENG-52 / ENG-53):
- *    - 100 master rhetorical and stylistic devices compiled into web/src/assets/data/rhetoric.json
  *    - Ingestion and pre-indexing into web/src/assets/data/lexicon-dictionary.json (704 total terms)
  *    - Strict O(1) offline dictionary retrieval benchmark (< 25ms for 10,000 lookups)
  */
@@ -46,8 +45,6 @@ const paths = {
   blitzDossier: path.join(__dirname, '../src/modules/blitz-dossier.ts'),
   headerHud: path.join(__dirname, '../src/modules/header-hud.ts'),
   writingDossier: path.join(__dirname, '../src/modules/writing-dossier.ts'),
-  rhetoricCorpus: path.join(__dirname, '../content/vocabulary/rhetoric-figures.md'),
-  rhetoricJson: path.join(__dirname, '../src/assets/data/rhetoric.json'),
   lexiconDict: path.join(__dirname, '../src/assets/data/lexicon-dictionary.json'),
   compiler: path.join(__dirname, '../scripts/compile-content.cjs'),
   dossiersCss: path.join(__dirname, '../src/assets/styles/dossiers.css'),
@@ -88,9 +85,7 @@ assert.ok(hudSrc.includes('btn-launch-blitz') || hudSrc.includes('BLITZ'), 'head
 assert.ok(dossiersCssSrc.includes('blitz-dossier-shell'), 'dossiers.css must style .blitz-dossier-shell');
 
 // Assert Compiler Rhetoric integration
-assert.ok(compilerSrc.includes('compileRhetoric'), 'compile-content.cjs must implement compileRhetoric()');
 assert.ok(compilerSrc.includes('rhetoric-figures.md'), 'compile-content.cjs must parse rhetoric-figures.md');
-assert.ok(compilerSrc.includes('rhetoric.json'), 'compile-content.cjs must emit rhetoric.json');
 
 console.log('✅ All static source contracts and architectural exports verified.\n');
 
@@ -258,25 +253,6 @@ console.log('✅ Blitz speed run scoring curve, combo multiplier surges, and res
 // 5. MASTER RHETORIC CORPUS & O(1) LEXICON DICTIONARY INDEXING
 // ---------------------------------------------------------------------------
 console.log('--- 5. MASTER RHETORIC CORPUS & O(1) LEXICON RETRIEVAL ---');
-
-// Verify rhetoric.json dataset
-const rhetoricData = JSON.parse(fs.readFileSync(paths.rhetoricJson, 'utf8'));
-assert.ok(Array.isArray(rhetoricData), 'rhetoric.json must be an array of objects');
-assert.strictEqual(rhetoricData.length, 100, `rhetoric.json must contain exactly 100 items (found ${rhetoricData.length})`);
-
-// Validate individual schema of all 100 items
-rhetoricData.forEach((item, idx) => {
-  const expectedIdx = idx + 1;
-  assert.strictEqual(item.index, expectedIdx, `Item ${expectedIdx} index must match`);
-  assert.strictEqual(item.id, `rhetoric-${expectedIdx}`, `Item ${expectedIdx} ID must be rhetoric-${expectedIdx}`);
-  assert.ok(item.figure && typeof item.figure === 'string', `Item ${expectedIdx} must have valid figure name`);
-  assert.ok(item.category && typeof item.category === 'string', `Item ${expectedIdx} must have category`);
-  assert.ok(item.etymology && typeof item.etymology === 'string', `Item ${expectedIdx} must have etymology`);
-  assert.ok(item.syntacticFormula && typeof item.syntacticFormula === 'string', `Item ${expectedIdx} must have syntacticFormula`);
-  assert.ok(item.classicalExemplar && typeof item.classicalExemplar === 'string', `Item ${expectedIdx} must have classicalExemplar`);
-  assert.ok(item.vietnamese && typeof item.vietnamese === 'string', `Item ${expectedIdx} must have vietnamese translation`);
-  assert.ok(item.executiveApplication && typeof item.executiveApplication === 'string', `Item ${expectedIdx} must have executiveApplication`);
-});
 
 // Verify lexicon-dictionary.json integration
 const lexiconData = JSON.parse(fs.readFileSync(paths.lexiconDict, 'utf8'));

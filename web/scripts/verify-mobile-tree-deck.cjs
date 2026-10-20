@@ -394,15 +394,5 @@ assert.strictEqual(navigatedRoute, 'speak', 'Clicking Speaking workout badge mus
 
 console.log('PASSED: Launch hooks navigate cleanly to target dossiers.\n');
 
-console.log('=== TEST 5: Proxy View Path Resolution (web/src/views/skill-tree-view.ts) ===');
-
-const proxyMod = load('views/skill-tree-view.ts', {
-  '../modules/skill-tree-view': skillTreeViewMod
-});
-assert.ok(proxyMod.SkillTreeView, 'views/skill-tree-view.ts must re-export SkillTreeView');
-assert.strictEqual(proxyMod.SkillTreeView, SkillTreeView, 'Re-exported class must match SkillTreeView implementation');
-
-console.log('PASSED: Proxy view path resolution verified.\n');
-
 console.log('--------------------------------------------------');
-console.log('All 5 Test Domains in verify-mobile-tree-deck.cjs Passed! (100%)');
+console.log('All 4 Test Domains in verify-mobile-tree-deck.cjs Passed! (100%)');

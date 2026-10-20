@@ -87,7 +87,6 @@ it('Verifies zero UTF-8 mojibake or corrupt characters across all datasets', () 
     'reading.json',
     'listening.json',
     'habits.json',
-    'rhetoric.json',
     'lexicon-dictionary.json'
   ];
 

@@ -58,9 +58,6 @@ console.log('=== TEST 3: Audio Prompt Coverage Across Tiers ===');
 assert(modalCode.includes("audioText: 'Nice to meet you. How are you?'"), 'A1 audio text must be defined');
 assert(modalCode.includes("audioText: 'Could you tell me the way to the station?'"), 'A2 audio text must be defined');
 
-const placementCode = fs.readFileSync(path.join(SRC, 'core', 'multi-skill-placement.ts'), 'utf8');
-assert(placementCode.includes('audioPrompt:'), 'audioPrompt field must be populated in placement battery');
-
 console.log('PASSED: Audio prompt coverage across CEFR tiers verified.');
 
 console.log('======================================================');

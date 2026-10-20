@@ -1,7 +1,7 @@
 // web/scripts/build-phone.cjs
 // Fully offline phone build: one HTML file per page, no server needed.
 // Output: web/release/phone/index.html and ielts.html. Open them from disk.
-// Each page is built alone (vite.phone.config.ts) so its JS is one chunk, then the JS, CSS
+// Each page is built alone (vite.config.ts with PHONE_PAGE) so its JS is one chunk, then the JS, CSS
 // and fonts are inlined. Does not run the content compiler, so no tracked JSON is rewritten.
 const fs = require('fs');
 const path = require('path');
@@ -52,7 +52,7 @@ function inlinePage(page) {
 
 fs.mkdirSync(OUT, { recursive: true });
 for (const page of PAGES) {
-  execSync('npx vite build --config vite.phone.config.ts', {
+  execSync('npx vite build', {
     cwd: WEB,
     stdio: 'inherit',
     shell: true,
