@@ -58,7 +58,8 @@
         "answer": [
           "14 March",
           "14th March",
-          "fourteenth of March"
+          "fourteenth of March",
+          "March 14"
         ],
         "why": "He confirms it is 'the fourteenth of March, nineteen ninety-eight' when asked."
       },
@@ -78,7 +79,8 @@
         "prompt": "Student membership fee for one year (pounds):",
         "answer": [
           "12.50",
-          "twelve pounds fifty"
+          "twelve pounds fifty",
+          "12.5"
         ],
         "why": "The librarian says 'It's twelve pounds fifty for the year' at the student rate."
       },
@@ -177,7 +179,7 @@
       {
         "id": "l7-s2-q01",
         "type": "complete",
-        "prompt": "Visitors must wear a hard hat and a yellow ___.",
+        "prompt": "Item of yellow clothing visitors must wear with a hard hat:",
         "answer": [
           "jacket",
           "jackets"
@@ -189,7 +191,8 @@
         "type": "complete",
         "prompt": "The works supplies drinking water to about ___ people.",
         "answer": [
-          "two hundred thousand"
+          "two hundred thousand",
+          "200,000"
         ],
         "why": "Ruth says 'supplies drinking water to about two hundred thousand people'."
       },
@@ -209,7 +212,7 @@
       {
         "id": "l7-s2-q04",
         "type": "complete",
-        "prompt": "The screens catch leaves, twigs and ___.",
+        "prompt": "Besides plant debris, what animals do the metal screens catch?",
         "answer": [
           "fish"
         ],
@@ -244,7 +247,7 @@
       {
         "id": "l7-s2-q07",
         "type": "complete",
-        "prompt": "The ___ in the filter beds removes tastes and smells.",
+        "prompt": "Filter material that takes away unpleasant tastes and odours:",
         "answer": [
           "carbon"
         ],
@@ -266,9 +269,11 @@
       {
         "id": "l7-s2-q09",
         "type": "complete",
-        "prompt": "Photography is not allowed in the ___ room.",
+        "prompt": "Room that visitors may not photograph:",
         "answer": [
-          "control"
+          "control",
+          "control room",
+          "the control room"
         ],
         "why": "Ruth says 'Please don't take photographs of the control room'."
       },
@@ -404,12 +409,12 @@
       {
         "id": "l7-s3-q08",
         "type": "mcq",
-        "prompt": "How many sound recorders does the team have?",
+        "prompt": "How many recorders can the team afford?",
         "options": [
-          "A. One",
-          "B. Two",
-          "C. Three",
-          "D. Six"
+          "A. 1",
+          "B. 2",
+          "C. 3",
+          "D. 6"
         ],
         "answer": "C",
         "why": "Tom says 'We have budget for three, so we'd need to rotate them.'"
@@ -435,7 +440,8 @@
           "the third of December",
           "3 December",
           "December 3",
-          "3rd December"
+          "3rd December",
+          "3rd of December"
         ],
         "why": "Asked for the deadline, Priya answers 'The third of December.'"
       }
@@ -471,7 +477,7 @@
       {
         "id": "l7-s4-q01",
         "type": "complete",
-        "prompt": "Terrace farming: farmers cut steep land into a series of flat ______.",
+        "prompt": "Terrace farming turns a steep slope into a sequence of level ______.",
         "answer": [
           "steps",
           "step"
@@ -481,7 +487,7 @@
       {
         "id": "l7-s4-q02",
         "type": "complete",
-        "prompt": "The main benefit of terraces is ______ control.",
+        "prompt": "What do terraces mainly help to control?",
         "answer": [
           "erosion"
         ],
@@ -490,7 +496,7 @@
       {
         "id": "l7-s4-q03",
         "type": "complete",
-        "prompt": "Heavy rain can wash away the ______ within a few seasons.",
+        "prompt": "On an unterraced slope, what can heavy rain remove in a few seasons?",
         "answer": [
           "topsoil"
         ],
@@ -499,16 +505,17 @@
       {
         "id": "l7-s4-q04",
         "type": "complete",
-        "prompt": "Terrace walls are usually built from local ______.",
+        "prompt": "Usual building material for the retaining walls:",
         "answer": [
-          "stone"
+          "stone",
+          "local stone"
         ],
         "why": "She says 'The retaining walls are usually built from local stone.'"
       },
       {
         "id": "l7-s4-q05",
         "type": "complete",
-        "prompt": "A single terrace system may take several ______ to finish.",
+        "prompt": "How long can one hillside terrace system take to build? Several ______.",
         "answer": [
           "years",
           "year"
@@ -518,7 +525,7 @@
       {
         "id": "l7-s4-q06",
         "type": "complete",
-        "prompt": "In the Nepal survey, nearly ______ percent of the walls had collapsed.",
+        "prompt": "Share of abandoned walls in the Nepal study that fell within twenty years (percent, approximately):",
         "answer": [
           "seventy",
           "70"
@@ -528,7 +535,7 @@
       {
         "id": "l7-s4-q07",
         "type": "complete",
-        "prompt": "The researchers linked the loss of terraces to ______ migration to cities.",
+        "prompt": "Type of migration the researchers blamed for the loss of terraces:",
         "answer": [
           "labour",
           "labor"
@@ -538,7 +545,7 @@
       {
         "id": "l7-s4-q08",
         "type": "complete",
-        "prompt": "Some governments offer ______ to help farmers repair terraces.",
+        "prompt": "Financial support some governments give for early terrace repairs:",
         "answer": [
           "grants",
           "grant"
@@ -548,16 +555,16 @@
       {
         "id": "l7-s4-q09",
         "type": "complete",
-        "prompt": "Farmers grow shallow-rooted crops such as ______ and potatoes.",
+        "prompt": "Shallow-rooted crop named alongside potatoes:",
         "answer": [
           "beans"
         ],
-        "why": "She names beans and potatoes as shallow-rooted crops grown on terraces."
+        "why": "She says farmers grow 'crops with shallow roots, such as beans and potatoes.'"
       },
       {
         "id": "l7-s4-q10",
         "type": "complete",
-        "prompt": "Ponds store water at the ______ of each slope.",
+        "prompt": "Position of the storage ponds on each slope:",
         "answer": [
           "top"
         ],

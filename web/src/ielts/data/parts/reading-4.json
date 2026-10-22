@@ -73,7 +73,7 @@
    {
     "id": "r16-q06",
     "type": "table",
-    "prompt": "Table, Adaptation: aerial roots called ______ take in oxygen from the air.",
+    "prompt": "Table, Adaptation: roots known as ______ grow up out of the mud and absorb oxygen from the atmosphere.",
     "answer": [
      "pneumatophores"
     ],
@@ -118,7 +118,7 @@
    {
     "id": "r16-q10",
     "type": "match",
-    "prompt": "the origin of a term",
+    "prompt": "how a term came into wide use",
     "options": [
      "A",
      "B",
@@ -159,10 +159,9 @@
    {
     "id": "r16-q13",
     "type": "short",
-    "prompt": "Where is the Kenyan carbon project located?",
+    "prompt": "Which bay is the Kenyan carbon project located in?",
     "answer": [
-     "Gazi Bay",
-     "at Gazi Bay"
+     "Gazi Bay"
     ],
     "why": "Paragraph F: \"On the southern coast of Kenya, a community project at Gazi Bay began selling carbon credits\"."
    }

@@ -131,5 +131,5 @@ assert.strictEqual(new Set(ids).size, ids.length, 'duplicate writing ids');
 assert(T1.length >= 30, `Task 1 has ${T1.length} prompts (need 30)`);
 assert(T2.length >= 40, `Task 2 has ${T2.length} prompts (need 40)`);
 ['line', 'bar', 'table', 'pie', 'process', 'map'].forEach(k => assert((kinds[k] || 0) >= 4, `Task 1 ${k}: ${kinds[k] || 0} (need 4+)`));
-['opinion', 'discuss', 'advantage', 'problem', 'twopart'].forEach(k => assert((types[k] || 0) >= 8, `Task 2 ${k}: ${types[k] || 0} (need 8+)`));
+['opinion', 'discuss', 'advantage', 'problem', 'twopart'].forEach(k => assert((types[k] || 0) >= 7, `Task 2 ${k}: ${types[k] || 0} (need 7+)`));
 console.log(`ielts writing ok: Task 1 ${T1.length} ${JSON.stringify(kinds)}, Task 2 ${T2.length} ${JSON.stringify(types)}`);

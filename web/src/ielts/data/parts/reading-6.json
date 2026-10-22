@@ -59,7 +59,7 @@
    {
     "id": "r22-q04",
     "type": "tfng",
-    "prompt": "Chemosynthetic communities have been found around cold seeps.",
+    "prompt": "Communities like those at vents also live where methane escapes slowly from the sea floor.",
     "answer": "TRUE",
     "why": "Paragraph C: \"Similar communities have been found around cold seeps, where methane and other hydrocarbons leak slowly from the seabed\"."
    },
@@ -83,7 +83,7 @@
     "options": [
      "A. Their symbiotic bacteria cannot survive without dissolved oxygen.",
      "B. Predators on the sea floor feed on them in large numbers.",
-     "C. Vent chemistry can change quickly, so animals must move.",
+     "C. Their habitat can stop supplying the chemicals they rely on.",
      "D. Deep-sea mining is the only serious threat that they face."
     ],
     "answer": "C",
@@ -143,7 +143,7 @@
    {
     "id": "r22-q10",
     "type": "sentence",
-    "prompt": "The bacteria that drive chemosynthesis oxidise hydrogen ______, a gas that is toxic to most animals.",
+    "prompt": "Vent bacteria gain energy by oxidising hydrogen ______, a gas poisonous to most animal life.",
     "answer": [
      "sulphide"
     ],
@@ -152,7 +152,7 @@
    {
     "id": "r22-q11",
     "type": "sentence",
-    "prompt": "The first vent communities were discovered in ______ by a team exploring the Pacific seabed.",
+    "prompt": "Researchers in a submersible first came across the vent animals in ______.",
     "answer": [
      "1977"
     ],
@@ -163,7 +163,8 @@
     "type": "short",
     "prompt": "What do some adult tube worms lack, according to the passage?",
     "answer": [
-     "mouth or gut"
+     "mouth or gut",
+     "mouth and gut"
     ],
     "why": "Paragraph B: \"Some tube worms have no mouth or gut as adults and depend entirely on these internal partners\"."
    },
@@ -266,7 +267,7 @@
    {
     "id": "r23-q07",
     "type": "features",
-    "prompt": "doubted that a mechanical device could meet the standard",
+    "prompt": "was sceptical that a machine could reach the accuracy required",
     "options": [
      "A. the Board of Longitude",
      "B. astronomers who timed the moons of Jupiter",
@@ -280,7 +281,7 @@
    {
     "id": "r23-q08",
     "type": "features",
-    "prompt": "relied on lunar distance tables and their own calculations",
+    "prompt": "trusted their own calculations more than a new instrument",
     "options": [
      "A. the Board of Longitude",
      "B. astronomers who timed the moons of Jupiter",
@@ -307,15 +308,15 @@
    {
     "id": "r23-q10",
     "type": "mcq",
-    "prompt": "What is the writer's main point in paragraph G?",
+    "prompt": "Which of the following does the writer state in paragraph G?",
     "options": [
-     "A. The longitude problem was solved by a single inventor working alone.",
-     "B. Navigators never trusted clocks of any kind on their ships.",
-     "C. Governments played no real part in finding the solution.",
-     "D. A chronometer was a clock that also demanded trust."
+     "A. The longitude puzzle had consequences well beyond navigation.",
+     "B. Government rewards were the only reason Harrison completed his invention.",
+     "C. Chronometers eliminated the need for human skill and trust at sea.",
+     "D. Astronomers and clockmakers worked in complete harmony throughout the period."
     ],
-    "answer": "D",
-    "why": "Paragraph G: \"A chronometer was a clock, but it was also a test of trust, in which a navigator had to believe that a machine could be right when the stars were hidden\". C is contradicted by the navies that required chronometers in paragraph F; A is contradicted by \"refined by many hands over decades\"."
+    "answer": "A",
+    "why": "Paragraph G: \"The longitude problem is therefore a useful example of how a technical question can carry social, economic and political weight. The solution emerged from a combination of craft skill, public reward and institutional pressure\"."
    },
    {
     "id": "r23-q11",
@@ -324,25 +325,31 @@
     "answer": [
      "1707"
     ],
-    "why": "Paragraph B: \"when a British fleet returning from operations in the Mediterranean ran aground on the rocks of the Isles of Scilly\"."
+    "why": "Paragraph B: \"The scale of the difficulty became painfully clear in 1707, when a British fleet returning from operations in the Mediterranean ran aground on the rocks of the Isles of Scilly\"."
    },
    {
     "id": "r23-q12",
     "type": "short",
     "prompt": "How many degrees of longitude does a four-minute time difference represent?",
     "answer": [
-     "one degree"
+     "one degree",
+     "one",
+     "1",
+     "1 degree",
+     "one",
+     "1",
+     "1 degree"
     ],
     "why": "Paragraph A: \"a difference of four minutes between the two clocks corresponds to one degree of longitude\"."
    },
    {
     "id": "r23-q13",
     "type": "sentence",
-    "prompt": "The body that doubted a mechanical device could meet the standard was the Board of ______.",
+    "prompt": "A sea trial to ______ in the 1760s showed that Harrison's later chronometer was accurate enough for the prize.",
     "answer": [
-     "Longitude"
+     "Jamaica"
     ],
-    "why": "Paragraph D: \"disputes with the Board of Longitude, which doubted that a mechanical device could meet the required standard\"."
+    "why": "Paragraph D: \"Only in the 1760s did a voyage to Jamaica confirm that his later chronometer could keep time accurately enough to win the prize\"."
    }
   ]
  },
@@ -385,7 +392,7 @@
    {
     "id": "r24-q01",
     "type": "tfng",
-    "prompt": "Scouts are the first bees to search for a new nest site.",
+    "prompt": "The search for a new home begins with the scout bees.",
     "answer": "TRUE",
     "why": "Paragraph B: \"The scouts are the first to search.\""
    },
@@ -489,16 +496,21 @@
     "type": "summary",
     "prompt": "Summary: A colony commits to a site once the number of scouts there passes a ______.",
     "answer": [
-     "threshold"
+     "threshold",
+     "quorum threshold",
+     "certain level",
+     "quorum threshold",
+     "certain level"
     ],
-    "why": "Paragraph C: \"Once the number of scouts at a site rises above a certain level, workers begin to visit it more frequently\"."
+    "why": "Paragraph C: \"Once the number of scouts at a site rises above a certain level, workers begin to visit it more frequently\" and \"This quorum threshold is important\"."
    },
    {
     "id": "r24-q11",
     "type": "summary",
-    "prompt": "Summary: Scouts signal the quality of a site through the ______ of their dance.",
+    "prompt": "Summary: The ______ with which a scout dances is believed to indicate how good a site is.",
     "answer": [
-     "vigour"
+     "vigour",
+     "vigor"
     ],
     "why": "Paragraph B: \"the vigour of the dance is thought to signal its quality\"."
    },
@@ -507,7 +519,8 @@
     "type": "short",
     "prompt": "What does the duration of the waggle run convey?",
     "answer": [
-     "distance"
+     "distance",
+     "the distance"
     ],
     "why": "Paragraph B: \"The duration of the waggle run conveys information about the distance to the site\"."
    },
@@ -516,14 +529,16 @@
     "type": "short",
     "prompt": "What do older bees have more experience of, according to paragraph F?",
     "answer": [
-     "cavity types"
+     "cavity types",
+     "particular cavity types",
+     "particular cavity types"
     ],
     "why": "Paragraph F: \"Older bees may have more experience of particular cavity types\"."
    },
    {
     "id": "r24-q14",
     "type": "sentence",
-    "prompt": "A model based on the scouts' simple rules reproduces many features of real ______.",
+    "prompt": "When the scouts' simple rules are built into a model, it copies many traits of real ______.",
     "answer": [
      "swarms"
     ],
@@ -629,7 +644,7 @@
      "A. It was the result of careful planning by a trained chemist.",
      "B. It had no lasting effect on any later industries or products.",
      "C. It was only made possible by earlier natural dye research.",
-     "D. It was an early example of a larger shift."
+     "D. It started a wider change in how chemistry was used."
     ],
     "answer": "D",
     "why": "Paragraph G: \"Perkin's accident is therefore often told as a story of luck, but it is better understood as an early example of a larger shift\". A is contradicted by the word accident and the story of luck; B is contradicted by the patterns that \"would recur in pharmaceuticals, plastics and fertilisers\"; C is not stated."
@@ -640,7 +655,7 @@
     "prompt": "According to paragraph E, what was one consequence of the growth of the dye industry?",
     "options": [
      "A. Fashion stopped changing once bright colours became common.",
-     "B. Rivers near dye works were sometimes polluted.",
+     "B. Waste from factories damaged nearby waterways.",
      "C. Governments banned all synthetic dyes within a few years.",
      "D. Natural dyes became more popular than synthetic ones."
     ],
@@ -650,25 +665,25 @@
    {
     "id": "r25-q09",
     "type": "table",
-    "prompt": "Table, Dye sources: Indigo was grown in large quantities in ______ and the Americas.",
+    "prompt": "Table, Dye sources: Madder (red) was extracted from the ______ of a plant.",
     "answer": [
-     "India"
+     "roots"
     ],
-    "why": "Paragraph B: \"Indigo, one of the most valued blue dyes, was grown in large quantities in India and the Americas\"."
+    "why": "Paragraph B: \"Madder, a red dye obtained from the roots of a plant, was similarly extensive in its cultivation\"."
    },
    {
     "id": "r25-q10",
     "type": "summary",
-    "prompt": "Summary: The dye chemistry that followed Perkin depended on coal ______, a by-product of coal gas production.",
+    "prompt": "Summary: Later dye chemists worked with a mixture of aromatic compounds found in coal ______, a waste product of the gas industry.",
     "answer": [
      "tar"
     ],
-    "why": "Paragraph C: \"Coal tar, a by-product of coal gas production, contains a complex mixture of aromatic compounds\"."
+    "why": "Paragraph C: \"The chemistry of coal tar was the key to this transformation. Coal tar, a by-product of coal gas production, contains a complex mixture of aromatic compounds\"."
    },
    {
     "id": "r25-q11",
     "type": "summary",
-    "prompt": "Summary: Early regulation of waste from dye works was ______.",
+    "prompt": "Summary: In the early years, controls on pollution from dye works were ______.",
     "answer": [
      "limited"
     ],
@@ -677,9 +692,11 @@
    {
     "id": "r25-q12",
     "type": "short",
-    "prompt": "What colour was the substance that Perkin obtained in his flask?",
+    "prompt": "What colour did the residue turn the water in Perkin's flask?",
     "answer": [
-     "purple"
+     "purple",
+     "vivid purple",
+     "vivid purple"
     ],
     "why": "Paragraph A: \"coloured the water in his flask a vivid purple\"."
    },
@@ -840,9 +857,13 @@
     "type": "short",
     "prompt": "What emotion can visible unfairness provoke, according to paragraph C?",
     "answer": [
-     "resentment"
+     "resentment",
+     "anger",
+     "angry",
+     "anger",
+     "angry"
     ],
-    "why": "Paragraph C: \"systems that let some customers jump ahead provoke resentment\"."
+    "why": "Paragraph C: \"systems that let some customers jump ahead provoke resentment\" and \"visible unfairness can make people angry out of proportion to the actual delay\"."
    },
    {
     "id": "r26-q11",
@@ -856,20 +877,20 @@
    {
     "id": "r26-q12",
     "type": "sentence",
-    "prompt": "Waiting that is ______ tends to seem longer than waiting that is filled with activity.",
+    "prompt": "Designers display estimated waiting times on ______ so that people can see how much longer they must stand in line.",
     "answer": [
-     "unoccupied"
+     "screens"
     ],
-    "why": "Paragraph B: \"Waiting that is unoccupied tends to seem longer than waiting that is filled with activity\"."
+    "why": "Paragraph B: \"Designers have exploited this by showing estimated waiting times on screens\"."
    },
    {
     "id": "r26-q13",
     "type": "sentence",
-    "prompt": "A brief announcement may reduce complaints even though the queue is not ______.",
+    "prompt": "Telling customers that a system is very busy can cut complaints without making the queue any ______.",
     "answer": [
      "shorter"
     ],
-    "why": "Paragraph E: \"may reduce complaints even though the queue is not shorter\"."
+    "why": "Paragraph E: \"A brief announcement that a system is under heavy load, for example, may reduce complaints even though the queue is not shorter.\""
    }
   ]
  }

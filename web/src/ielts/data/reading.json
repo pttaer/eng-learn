@@ -332,7 +332,7 @@
    {
     "id": "r02-q11",
     "type": "table",
-    "prompt": "Table, Water features: a 2 to 3 °C drop in heat occurs within ______ meters.",
+    "prompt": "Table, Water features: a 2 to 3 °C drop in temperature occurs within ______ meters.",
     "answer": [
      "500",
      "500 meters",
@@ -466,7 +466,8 @@
     "type": "summary",
     "prompt": "Summary: Effective learners often pause to check their ______.",
     "answer": [
-     "understanding"
+     "understanding",
+     "comprehension"
     ],
     "why": "Paragraph C: \"effective learners engage in continuous monitoring of comprehension, frequently pausing to check understanding\"."
    },
@@ -485,7 +486,6 @@
     "prompt": "Which brain area is implicated in tracking an individual's own cognitive states?",
     "answer": [
      "anterior prefrontal cortex",
-     "the anterior prefrontal cortex",
      "prefrontal cortex"
     ],
     "why": "Paragraph H: \"including the anterior prefrontal cortex, which appears involved in monitoring one's own mental states\"."
@@ -506,8 +506,7 @@
     "type": "short",
     "prompt": "What specific training approach enhances subject expertise alongside specialized self-monitoring skills?",
     "answer": [
-     "deliberate practice",
-     "deliberate"
+     "deliberate practice"
     ],
     "why": "Paragraph G: \"Deliberate practice facilitates development of both domain knowledge and domain-specific metacognitive skills\"."
    },
@@ -530,12 +529,12 @@
     "prompt": "Students who received explicit metacognitive instruction improved their standardized test performance by",
     "options": [
      "A. between 10 and 40 percent.",
-     "B. less than 10 percent in total.",
-     "C. exactly 40 percent in every case.",
-     "D. more than 40 percent in most trials."
+     "B. between 1 and 10 percent.",
+     "C. between 20 and 40 percent.",
+     "D. between 10 and 60 percent."
     ],
     "answer": "A",
-    "why": "Paragraph D: \"showed improvements ranging from 10 to 40 percent in standardized test performance\". The figure is a range, so B, C and D are all wrong."
+    "why": "Paragraph D: \"showed improvements ranging from 10 to 40 percent in standardized test performance\". B, C and D give the wrong lower or upper limit."
    }
   ]
  },
@@ -666,7 +665,7 @@
    {
     "id": "r04-q09",
     "type": "features",
-    "prompt": "stayed mainly logographic for more than three thousand years",
+    "prompt": "kept a mainly logographic form for over 3,000 years until alphabets appeared",
     "options": [
      "A. Cuneiform",
      "B. Egyptian hieroglyphs",
@@ -675,7 +674,7 @@
      "E. Chinese characters"
     ],
     "answer": "B",
-    "why": "Paragraph C: Egyptian hieroglyphics \"maintained a predominantly logographic structure throughout their history, persisting with remarkable consistency for over 3,000 years\"."
+    "why": "Paragraph C: Egyptian hieroglyphics \"maintained a predominantly logographic structure throughout their history, persisting with remarkable consistency for over 3,000 years until alphabetic writing systems emerged\". Chinese characters were not displaced (paragraph F)."
    },
    {
     "id": "r04-q10",
@@ -735,7 +734,7 @@
    },
    {
     "label": "B",
-    "text": "Dutch commercial expansion was laid during the late 16th century when religious conflict in the Spanish Netherlands created conditions for merchant migration to the north. The northern provinces, organized as the Dutch Republic following the Peace of Westphalia in 1648, possessed superior geography for maritime commerce due to their coastal location and extensive river systems. The Dutch developed superior navigational technologies, including more accurate maps and improved compass designs. The fluyt, a specialized merchant vessel designed in the 1590s and perfected during the 17th century, exemplified Dutch technological innovation. The fluyt featured deep cargo holds and high sides, enabling it to carry more cargo with smaller crews than competing vessels. This innovation reduced shipping costs by up to 50 percent compared to Spanish galleons, providing Dutch merchants with decisive advantages."
+    "text": "The foundations of Dutch commercial expansion were laid during the late 16th century when religious conflict in the Spanish Netherlands created conditions for merchant migration to the north. The northern provinces, organized as the Dutch Republic following the Peace of Westphalia in 1648, possessed superior geography for maritime commerce due to their coastal location and extensive river systems. The Dutch developed superior navigational technologies, including more accurate maps and improved compass designs. The fluyt, a specialized merchant vessel designed in the 1590s and perfected during the 17th century, exemplified Dutch technological innovation. The fluyt featured deep cargo holds and high sides, enabling it to carry more cargo with smaller crews than competing vessels. This innovation reduced shipping costs by up to 50 percent compared to Spanish galleons, providing Dutch merchants with decisive advantages."
    },
    {
     "label": "C",
@@ -889,7 +888,7 @@
      "A. It lacked the governmental and military powers granted to the VOC.",
      "B. Its fleet was destroyed by the British navy in the Atlantic.",
      "C. New Amsterdam proved too costly for the company to run.",
-     "D. Atlantic trade had different competitive conditions."
+     "D. The Atlantic was a different kind of market to compete in."
     ],
     "answer": "D",
     "why": "Paragraph D: \"The WIC's failure reflected different competitive conditions in Atlantic trade.\" A, B and C are never given as reasons."
@@ -1100,10 +1099,10 @@
     "type": "mcq",
     "prompt": "According to paragraph H, research on marine echolocation has already helped to",
     "options": [
-     "A. design autonomous underwater vehicles.",
-     "B. cut the costs of commercial shipping routes.",
-     "C. slow down the rate of ocean acidification.",
-     "D. cure hearing loss in human patients today."
+     "A. shape the building of underwater robots and sonar imaging equipment.",
+     "B. cut the costs of commercial shipping routes across the entire ocean.",
+     "C. slow down the rate of ocean acidification in shallow seas.",
+     "D. cure hearing loss in human patients who have been treated."
     ],
     "answer": "A",
     "why": "Paragraph H: \"Biosonar systems inspired by marine mammal echolocation have informed the design of acoustic imaging devices and autonomous underwater vehicles\". D is only something research \"may provide insights\" into; B and C are not achievements of the research."
@@ -1268,7 +1267,7 @@
     "type": "mcq",
     "prompt": "Why are the dwarf planets of the Kuiper Belt valuable to scientists?",
     "options": [
-     "A. They preserve evidence of the early solar system.",
+     "A. They hold clues to how the solar system first formed.",
      "B. They may be capable of supporting simple forms of life.",
      "C. They are relatively easy and cheap for probes to reach.",
      "D. They are the main source of the meteorites reaching Earth."
@@ -1422,7 +1421,7 @@
    {
     "id": "r08-q11",
     "type": "short",
-    "prompt": "By up to how much has automated irrigation reduced water use compared with traditional landscaping?",
+    "prompt": "By up to how much have advances in hydroponics and automated irrigation cut water use, compared with traditional landscaping?",
     "answer": [
      "70 percent",
      "70%",
@@ -1546,7 +1545,7 @@
    {
     "id": "r09-q08",
     "type": "summary",
-    "prompt": "Summary: By 1801, about ______ people in England had been vaccinated.",
+    "prompt": "Summary: Three years after Jenner published his work, around ______ people in England had been vaccinated.",
     "answer": [
      "100,000",
      "100000"
@@ -1556,7 +1555,7 @@
    {
     "id": "r09-q09",
     "type": "summary",
-    "prompt": "Summary: By 1807, several European nations had ______ vaccination programmes.",
+    "prompt": "Summary: Within a decade of that, some European governments had ______ vaccination, once it was clearly shown to work.",
     "answer": [
      "mandated"
     ],
@@ -1614,11 +1613,11 @@
     "options": [
      "A. The disease was completely eliminated there in 1980.",
      "B. Cases were spread evenly across every state in the country.",
-     "C. Cases in 2019 were the highest for 27 years.",
+     "C. In 2019 cases reached a level not seen since the 1990s.",
      "D. Vaccination against it began there only in 1990."
     ],
     "answer": "C",
-    "why": "Paragraph F: \"In 2019, United States measles cases reached 1,282, representing the highest number in 27 years\". A confuses measles with smallpox; B is contradicted (\"concentrated in communities with low vaccination coverage\"); D is wrong (programs began in 1963)."
+    "why": "Paragraph F: \"In 2019, United States measles cases reached 1,282, representing the highest number in 27 years\" (27 years before 2019 is 1992). A confuses measles with smallpox; B is contradicted (\"concentrated in communities with low vaccination coverage\"); D is wrong (programs began in 1963)."
    },
    {
     "id": "r09-q14",
@@ -1758,8 +1757,7 @@
     "type": "short",
     "prompt": "Which journal published the 2016 meta-analysis of whole-grain studies?",
     "answer": [
-     "British Medical Journal",
-     "the British Medical Journal"
+     "British Medical Journal"
     ],
     "why": "Paragraph F: \"A meta-analysis of 45 prospective cohort studies published in the British Medical Journal in 2016\"."
    },
@@ -1768,7 +1766,7 @@
     "type": "mcq",
     "prompt": "Why are poor families in developing nations hit hard by rising grain prices?",
     "options": [
-     "A. Bread provides most of their daily calories.",
+     "A. Grain-based foods supply most of their daily calories.",
      "B. They are unable to grow enough wheat for themselves.",
      "C. They strongly prefer to buy expensive whole-grain bread.",
      "D. Their governments place heavy taxes on bread sales."
@@ -1840,9 +1838,9 @@
    {
     "id": "r11-q03",
     "type": "tfng",
-    "prompt": "Cars with solid-state batteries are already on sale.",
+    "prompt": "Solid-state batteries are not expected to become commercially viable within this decade.",
     "answer": "FALSE",
-    "why": "Paragraph C: manufacturers \"have announced production timelines for solid-state batteries beginning in 2027\", so production has not yet started."
+    "why": "Paragraph C: manufacturers have announced production \"beginning in 2027, suggesting commercial viability approaching within the current decade\". The passage expects viability this decade, so FALSE."
    },
    {
     "id": "r11-q04",
@@ -2297,7 +2295,7 @@
    {
     "id": "r13-q10",
     "type": "summary",
-    "prompt": "Summary: In 2012, a sudden rise in carbon-14 was found in the rings of a Japanese ______.",
+    "prompt": "Summary: A discovery made public in 2012 revealed an abrupt carbon-14 increase in the growth rings of a ______ tree from Japan.",
     "answer": [
      "cedar"
     ],
@@ -2306,7 +2304,7 @@
    {
     "id": "r13-q11",
     "type": "summary",
-    "prompt": "Summary: Because these spikes occur in the same ring all over the world, they serve as fixed ______.",
+    "prompt": "Summary: Since trees across the globe record these events in the same ring, the events provide reliable dating ______.",
     "answer": [
      "markers"
     ],
@@ -2404,7 +2402,7 @@
    {
     "id": "r14-q04",
     "type": "ynng",
-    "prompt": "The Hawaiian language nests have been more successful than the Maori ones.",
+    "prompt": "The Hawaiian language nests have been more successful than the Māori ones.",
     "answer": "NOT GIVEN",
     "why": "Paragraph D says only that \"The model was soon adapted in Hawaii\". The writer never compares the success of the two programmes."
    },
@@ -2474,25 +2472,26 @@
    {
     "id": "r14-q10",
     "type": "sentence",
-    "prompt": "In the Maori language nests, children are often looked after by ______.",
+    "prompt": "In the Māori language nests, children are often looked after by ______.",
     "answer": [
      "grandparents"
     ],
-    "why": "Paragraph D: children are cared for in Maori, \"often by grandparents who learned the language as their first\"."
+    "why": "Paragraph D: children are cared for in Māori, \"often by grandparents who learned the language as their first\"."
    },
    {
     "id": "r14-q11",
     "type": "sentence",
     "prompt": "Old recordings kept in ______ have helped some communities recover lost words.",
     "answer": [
-     "university archives"
+     "university archives",
+     "archives"
     ],
     "why": "Paragraph F: \"Recordings made decades ago by anthropologists, often stored in university archives\"."
    },
    {
     "id": "r14-q12",
     "type": "short",
-    "prompt": "In which year were the first Maori language nests opened?",
+    "prompt": "In which year were the first Māori language nests opened?",
     "answer": [
      "1982"
     ],
@@ -2702,7 +2701,7 @@
     "type": "mcq",
     "prompt": "What does the writer say about active choice?",
     "options": [
-     "A. It avoids presuming what people want but adds effort.",
+     "A. It makes no assumptions about preferences, yet demands effort.",
      "B. It is the only truly neutral form of design available to planners.",
      "C. It has replaced defaults in most pension schemes and websites.",
      "D. It is a form of manipulation, especially when people are unaware."
@@ -2786,7 +2785,7 @@
    {
     "id": "r16-q06",
     "type": "table",
-    "prompt": "Table, Adaptation: aerial roots called ______ take in oxygen from the air.",
+    "prompt": "Table, Adaptation: roots known as ______ grow up out of the mud and absorb oxygen from the atmosphere.",
     "answer": [
      "pneumatophores"
     ],
@@ -2831,7 +2830,7 @@
    {
     "id": "r16-q10",
     "type": "match",
-    "prompt": "the origin of a term",
+    "prompt": "how a term came into wide use",
     "options": [
      "A",
      "B",
@@ -2872,10 +2871,9 @@
    {
     "id": "r16-q13",
     "type": "short",
-    "prompt": "Where is the Kenyan carbon project located?",
+    "prompt": "Which bay is the Kenyan carbon project located in?",
     "answer": [
-     "Gazi Bay",
-     "at Gazi Bay"
+     "Gazi Bay"
     ],
     "why": "Paragraph F: \"On the southern coast of Kenya, a community project at Gazi Bay began selling carbon credits\"."
    }
@@ -2920,7 +2918,7 @@
    {
     "id": "r17-q01",
     "type": "tfng",
-    "prompt": "The theatre at Epidaurus was completed in the fourth century BCE.",
+    "prompt": "Work on the Epidaurus theatre was finished during the 300s BCE.",
     "answer": "TRUE",
     "why": "Paragraph A: \"The theatre was completed in the fourth century BCE, and for centuries its reputation rested almost entirely on experience rather than on measurement.\""
    },
@@ -3024,7 +3022,7 @@
      "D. It was described in great detail by Vitruvius himself."
     ],
     "answer": "C",
-    "why": "Paragraph B: \"the theatre's clarity is not the result of a single feature but of several working together\". A is contradicted by the same sentence; B is contradicted by the caution that scale models cannot reproduce everything; D is not stated."
+    "why": "Paragraph B: \"the theatre's clarity is not the result of a single feature but of several working together\". A is contradicted by the same sentence; B is wrong because paragraph B reports measurements made \"In recent decades\" with microphones placed \"at different points around the seating\", not one experiment, and says only what the findings \"suggest\"; D is not stated."
    },
    {
     "id": "r17-q10",
@@ -3053,14 +3051,15 @@
     "type": "short",
     "prompt": "What kind of slope did the seats at Epidaurus rise on?",
     "answer": [
-     "steep slope"
+     "steep slope",
+     "steep"
     ],
     "why": "Paragraph B: \"The seats rise on a steep slope, so sound leaving the stage is not absorbed or blocked by the heads of the people in front.\""
    },
    {
     "id": "r17-q13",
     "type": "sentence",
-    "prompt": "The central stage area of an ancient theatre was known as the ______.",
+    "prompt": "At Epidaurus, the circular area where the performer stands is called the ______.",
     "answer": [
      "orchestra"
     ],
@@ -3069,7 +3068,7 @@
    {
     "id": "r17-q14",
     "type": "sentence",
-    "prompt": "In experiments with scale models, the ______ of the seating bank mattered more than the stone surface.",
+    "prompt": "Scale-model tests showed that the seating's ______ had a greater effect on hearing than the stone it was built from.",
     "answer": [
      "shape"
     ],
@@ -3147,7 +3146,7 @@
     "prompt": "first recorded lichens disappearing near factories",
     "options": [
      "A. observers in nineteenth-century European cities",
-     "B. twentieth-century researchers who measured sulphur dioxide",
+     "B. twentieth-century researchers who measured air pollutants",
      "C. scientists who analysed lichen tissue for metals",
      "D. conservation agencies that publish lichen indicators",
      "E. growers who harvested lichens for dye-making"
@@ -3158,10 +3157,10 @@
    {
     "id": "r18-q06",
     "type": "features",
-    "prompt": "compared lichen communities with measured levels of sulphur dioxide",
+    "prompt": "matched the species found at each site against recorded concentrations of a pollutant",
     "options": [
      "A. observers in nineteenth-century European cities",
-     "B. twentieth-century researchers who measured sulphur dioxide",
+     "B. twentieth-century researchers who measured air pollutants",
      "C. scientists who analysed lichen tissue for metals",
      "D. conservation agencies that publish lichen indicators",
      "E. growers who harvested lichens for dye-making"
@@ -3172,10 +3171,10 @@
    {
     "id": "r18-q07",
     "type": "features",
-    "prompt": "analysed lichen tissue for metals and nitrogen compounds",
+    "prompt": "measured substances that build up inside lichens over time",
     "options": [
      "A. observers in nineteenth-century European cities",
-     "B. twentieth-century researchers who measured sulphur dioxide",
+     "B. twentieth-century researchers who measured air pollutants",
      "C. scientists who analysed lichen tissue for metals",
      "D. conservation agencies that publish lichen indicators",
      "E. growers who harvested lichens for dye-making"
@@ -3186,7 +3185,7 @@
    {
     "id": "r18-q08",
     "type": "mcq",
-    "prompt": "According to paragraph D, why can a lichen survey be hard to interpret?",
+    "prompt": "According to paragraph D, why can lichens be hard to interpret as evidence of pollution?",
     "options": [
      "A. They respond to a mix of pollutants, not one compound.",
      "B. They grow so quickly that surveys cannot keep up with them.",
@@ -3199,7 +3198,7 @@
    {
     "id": "r18-q09",
     "type": "mcq",
-    "prompt": "What is the writer's main conclusion in paragraph G?",
+    "prompt": "What is the writer's main conclusion about lichens in paragraph G?",
     "options": [
      "A. They should now replace all calibrated instruments in monitoring.",
      "B. They can identify the exact pollutant responsible for damage.",
@@ -3212,7 +3211,7 @@
    {
     "id": "r18-q10",
     "type": "sentence",
-    "prompt": "The photosynthetic partner of a lichen is usually an alga or a ______.",
+    "prompt": "Besides an alga, the organism that makes food from sunlight inside a lichen can be a ______.",
     "answer": [
      "cyanobacterium"
     ],
@@ -3221,7 +3220,7 @@
    {
     "id": "r18-q11",
     "type": "sentence",
-    "prompt": "A lichen survey describes conditions over many years because growth is ______.",
+    "prompt": "Because lichens grow at a ______ rate, a survey reflects air quality across a long period.",
     "answer": [
      "slow"
     ],
@@ -3230,9 +3229,10 @@
    {
     "id": "r18-q12",
     "type": "short",
-    "prompt": "Which gas, released when coal and oil are burned, was a major cause of acid rain?",
+    "prompt": "Which gas, produced by burning fossil fuels, was a leading contributor to acid rain?",
     "answer": [
-     "sulphur dioxide"
+     "sulphur dioxide",
+     "sulfur dioxide"
     ],
     "why": "Paragraph C: \"Sulphur dioxide, released when coal and oil are burned, was a major cause of acid rain\"."
    },
@@ -3295,7 +3295,7 @@
     "type": "tfng",
     "prompt": "Birds kept in cages were unable to orient themselves.",
     "answer": "FALSE",
-    "why": "Paragraph B: \"their orientation changed when the magnetic field around them was rotated by a set of coils\". The caged birds did orient, so the statement is contradicted."
+    "why": "Paragraph B: \"experiments on European robins suggested that the birds could orient themselves using magnetic cues\" and \"their orientation changed when the magnetic field around them was rotated by a set of coils\". The caged birds did orient, so the statement is contradicted."
    },
    {
     "id": "r19-q03",
@@ -3402,14 +3402,15 @@
     "type": "short",
     "prompt": "In which part of the body have iron-based receptors been reported?",
     "answer": [
-     "beaks"
+     "beaks",
+     "beak"
     ],
     "why": "Paragraph E: \"Iron-based receptors have been reported in the beaks of some animals, including pigeons\"."
    },
    {
     "id": "r19-q12",
     "type": "sentence",
-    "prompt": "Birds given light that is too dim or wrongly ______ lose their magnetic orientation.",
+    "prompt": "Birds lose their magnetic orientation in light that is wrongly ______ or not bright enough.",
     "answer": [
      "coloured"
     ],
@@ -3418,7 +3419,7 @@
    {
     "id": "r19-q13",
     "type": "sentence",
-    "prompt": "A migrating bird may use the magnetic field to estimate its ______.",
+    "prompt": "Birds may rely on the magnetic field to judge their ______, while the sun or coastlines help them correct their course.",
     "answer": [
      "latitude"
     ],
@@ -3508,7 +3509,7 @@
     "type": "mcq",
     "prompt": "According to paragraph D, which users were often found in early libraries?",
     "options": [
-     "A. clerks, shopkeepers and the sons of the middle class",
+     "A. office workers, small traders and middle-class young men",
      "B. labourers and factory workers who finished work late in the evening",
      "C. members of universities, churches and learned societies",
      "D. unemployed women with plenty of time to read during the day"
@@ -3537,7 +3538,7 @@
    {
     "id": "r20-q09",
     "type": "table",
-    "prompt": "Table, Reading rooms: silence and a formal ______ could discourage some visitors.",
+    "prompt": "Table, Reading rooms: a required ______ and a rule of silence made some people feel unwelcome.",
     "answer": [
      "dress code"
     ],
@@ -3564,7 +3565,7 @@
     "answer": [
      "improvement"
     ],
-    "why": "Paragraph C: \"a word that carried moral as well as intellectual meaning\"."
+    "why": "Paragraph C: \"The movement's supporters often spoke about improvement, a word that carried moral as well as intellectual meaning.\""
    },
    {
     "id": "r20-q13",
@@ -3692,7 +3693,7 @@
    {
     "id": "r21-q08",
     "type": "features",
-    "prompt": "may eat particles, which can reduce their feeding and growth",
+    "prompt": "were shown in laboratory tests to eat particles, with harmful effects",
     "options": [
      "A. small invertebrates such as water fleas",
      "B. wild fish",
@@ -3727,7 +3728,7 @@
    {
     "id": "r21-q11",
     "type": "summary",
-    "prompt": "Summary: Even advanced treatment plants are not ______ filters.",
+    "prompt": "Summary: Even the most modern wastewater plants cannot work as ______ filters.",
     "answer": [
      "perfect"
     ],
@@ -3830,7 +3831,7 @@
    {
     "id": "r22-q04",
     "type": "tfng",
-    "prompt": "Chemosynthetic communities have been found around cold seeps.",
+    "prompt": "Communities like those at vents also live where methane escapes slowly from the sea floor.",
     "answer": "TRUE",
     "why": "Paragraph C: \"Similar communities have been found around cold seeps, where methane and other hydrocarbons leak slowly from the seabed\"."
    },
@@ -3854,7 +3855,7 @@
     "options": [
      "A. Their symbiotic bacteria cannot survive without dissolved oxygen.",
      "B. Predators on the sea floor feed on them in large numbers.",
-     "C. Vent chemistry can change quickly, so animals must move.",
+     "C. Their habitat can stop supplying the chemicals they rely on.",
      "D. Deep-sea mining is the only serious threat that they face."
     ],
     "answer": "C",
@@ -3914,7 +3915,7 @@
    {
     "id": "r22-q10",
     "type": "sentence",
-    "prompt": "The bacteria that drive chemosynthesis oxidise hydrogen ______, a gas that is toxic to most animals.",
+    "prompt": "Vent bacteria gain energy by oxidising hydrogen ______, a gas poisonous to most animal life.",
     "answer": [
      "sulphide"
     ],
@@ -3923,7 +3924,7 @@
    {
     "id": "r22-q11",
     "type": "sentence",
-    "prompt": "The first vent communities were discovered in ______ by a team exploring the Pacific seabed.",
+    "prompt": "Researchers in a submersible first came across the vent animals in ______.",
     "answer": [
      "1977"
     ],
@@ -3934,7 +3935,8 @@
     "type": "short",
     "prompt": "What do some adult tube worms lack, according to the passage?",
     "answer": [
-     "mouth or gut"
+     "mouth or gut",
+     "mouth and gut"
     ],
     "why": "Paragraph B: \"Some tube worms have no mouth or gut as adults and depend entirely on these internal partners\"."
    },
@@ -4037,7 +4039,7 @@
    {
     "id": "r23-q07",
     "type": "features",
-    "prompt": "doubted that a mechanical device could meet the standard",
+    "prompt": "was sceptical that a machine could reach the accuracy required",
     "options": [
      "A. the Board of Longitude",
      "B. astronomers who timed the moons of Jupiter",
@@ -4051,7 +4053,7 @@
    {
     "id": "r23-q08",
     "type": "features",
-    "prompt": "relied on lunar distance tables and their own calculations",
+    "prompt": "trusted their own calculations more than a new instrument",
     "options": [
      "A. the Board of Longitude",
      "B. astronomers who timed the moons of Jupiter",
@@ -4078,15 +4080,15 @@
    {
     "id": "r23-q10",
     "type": "mcq",
-    "prompt": "What is the writer's main point in paragraph G?",
+    "prompt": "Which of the following does the writer state in paragraph G?",
     "options": [
-     "A. The longitude problem was solved by a single inventor working alone.",
-     "B. Navigators never trusted clocks of any kind on their ships.",
-     "C. Governments played no real part in finding the solution.",
-     "D. A chronometer was a clock that also demanded trust."
+     "A. The longitude puzzle had consequences well beyond navigation.",
+     "B. Government rewards were the only reason Harrison completed his invention.",
+     "C. Chronometers eliminated the need for human skill and trust at sea.",
+     "D. Astronomers and clockmakers worked in complete harmony throughout the period."
     ],
-    "answer": "D",
-    "why": "Paragraph G: \"A chronometer was a clock, but it was also a test of trust, in which a navigator had to believe that a machine could be right when the stars were hidden\". C is contradicted by the navies that required chronometers in paragraph F; A is contradicted by \"refined by many hands over decades\"."
+    "answer": "A",
+    "why": "Paragraph G: \"The longitude problem is therefore a useful example of how a technical question can carry social, economic and political weight. The solution emerged from a combination of craft skill, public reward and institutional pressure\"."
    },
    {
     "id": "r23-q11",
@@ -4095,25 +4097,31 @@
     "answer": [
      "1707"
     ],
-    "why": "Paragraph B: \"when a British fleet returning from operations in the Mediterranean ran aground on the rocks of the Isles of Scilly\"."
+    "why": "Paragraph B: \"The scale of the difficulty became painfully clear in 1707, when a British fleet returning from operations in the Mediterranean ran aground on the rocks of the Isles of Scilly\"."
    },
    {
     "id": "r23-q12",
     "type": "short",
     "prompt": "How many degrees of longitude does a four-minute time difference represent?",
     "answer": [
-     "one degree"
+     "one degree",
+     "one",
+     "1",
+     "1 degree",
+     "one",
+     "1",
+     "1 degree"
     ],
     "why": "Paragraph A: \"a difference of four minutes between the two clocks corresponds to one degree of longitude\"."
    },
    {
     "id": "r23-q13",
     "type": "sentence",
-    "prompt": "The body that doubted a mechanical device could meet the standard was the Board of ______.",
+    "prompt": "A sea trial to ______ in the 1760s showed that Harrison's later chronometer was accurate enough for the prize.",
     "answer": [
-     "Longitude"
+     "Jamaica"
     ],
-    "why": "Paragraph D: \"disputes with the Board of Longitude, which doubted that a mechanical device could meet the required standard\"."
+    "why": "Paragraph D: \"Only in the 1760s did a voyage to Jamaica confirm that his later chronometer could keep time accurately enough to win the prize\"."
    }
   ]
  },
@@ -4156,7 +4164,7 @@
    {
     "id": "r24-q01",
     "type": "tfng",
-    "prompt": "Scouts are the first bees to search for a new nest site.",
+    "prompt": "The search for a new home begins with the scout bees.",
     "answer": "TRUE",
     "why": "Paragraph B: \"The scouts are the first to search.\""
    },
@@ -4260,16 +4268,21 @@
     "type": "summary",
     "prompt": "Summary: A colony commits to a site once the number of scouts there passes a ______.",
     "answer": [
-     "threshold"
+     "threshold",
+     "quorum threshold",
+     "certain level",
+     "quorum threshold",
+     "certain level"
     ],
-    "why": "Paragraph C: \"Once the number of scouts at a site rises above a certain level, workers begin to visit it more frequently\"."
+    "why": "Paragraph C: \"Once the number of scouts at a site rises above a certain level, workers begin to visit it more frequently\" and \"This quorum threshold is important\"."
    },
    {
     "id": "r24-q11",
     "type": "summary",
-    "prompt": "Summary: Scouts signal the quality of a site through the ______ of their dance.",
+    "prompt": "Summary: The ______ with which a scout dances is believed to indicate how good a site is.",
     "answer": [
-     "vigour"
+     "vigour",
+     "vigor"
     ],
     "why": "Paragraph B: \"the vigour of the dance is thought to signal its quality\"."
    },
@@ -4278,7 +4291,8 @@
     "type": "short",
     "prompt": "What does the duration of the waggle run convey?",
     "answer": [
-     "distance"
+     "distance",
+     "the distance"
     ],
     "why": "Paragraph B: \"The duration of the waggle run conveys information about the distance to the site\"."
    },
@@ -4287,14 +4301,16 @@
     "type": "short",
     "prompt": "What do older bees have more experience of, according to paragraph F?",
     "answer": [
-     "cavity types"
+     "cavity types",
+     "particular cavity types",
+     "particular cavity types"
     ],
     "why": "Paragraph F: \"Older bees may have more experience of particular cavity types\"."
    },
    {
     "id": "r24-q14",
     "type": "sentence",
-    "prompt": "A model based on the scouts' simple rules reproduces many features of real ______.",
+    "prompt": "When the scouts' simple rules are built into a model, it copies many traits of real ______.",
     "answer": [
      "swarms"
     ],
@@ -4400,7 +4416,7 @@
      "A. It was the result of careful planning by a trained chemist.",
      "B. It had no lasting effect on any later industries or products.",
      "C. It was only made possible by earlier natural dye research.",
-     "D. It was an early example of a larger shift."
+     "D. It started a wider change in how chemistry was used."
     ],
     "answer": "D",
     "why": "Paragraph G: \"Perkin's accident is therefore often told as a story of luck, but it is better understood as an early example of a larger shift\". A is contradicted by the word accident and the story of luck; B is contradicted by the patterns that \"would recur in pharmaceuticals, plastics and fertilisers\"; C is not stated."
@@ -4411,7 +4427,7 @@
     "prompt": "According to paragraph E, what was one consequence of the growth of the dye industry?",
     "options": [
      "A. Fashion stopped changing once bright colours became common.",
-     "B. Rivers near dye works were sometimes polluted.",
+     "B. Waste from factories damaged nearby waterways.",
      "C. Governments banned all synthetic dyes within a few years.",
      "D. Natural dyes became more popular than synthetic ones."
     ],
@@ -4421,25 +4437,25 @@
    {
     "id": "r25-q09",
     "type": "table",
-    "prompt": "Table, Dye sources: Indigo was grown in large quantities in ______ and the Americas.",
+    "prompt": "Table, Dye sources: Madder (red) was extracted from the ______ of a plant.",
     "answer": [
-     "India"
+     "roots"
     ],
-    "why": "Paragraph B: \"Indigo, one of the most valued blue dyes, was grown in large quantities in India and the Americas\"."
+    "why": "Paragraph B: \"Madder, a red dye obtained from the roots of a plant, was similarly extensive in its cultivation\"."
    },
    {
     "id": "r25-q10",
     "type": "summary",
-    "prompt": "Summary: The dye chemistry that followed Perkin depended on coal ______, a by-product of coal gas production.",
+    "prompt": "Summary: Later dye chemists worked with a mixture of aromatic compounds found in coal ______, a waste product of the gas industry.",
     "answer": [
      "tar"
     ],
-    "why": "Paragraph C: \"Coal tar, a by-product of coal gas production, contains a complex mixture of aromatic compounds\"."
+    "why": "Paragraph C: \"The chemistry of coal tar was the key to this transformation. Coal tar, a by-product of coal gas production, contains a complex mixture of aromatic compounds\"."
    },
    {
     "id": "r25-q11",
     "type": "summary",
-    "prompt": "Summary: Early regulation of waste from dye works was ______.",
+    "prompt": "Summary: In the early years, controls on pollution from dye works were ______.",
     "answer": [
      "limited"
     ],
@@ -4448,9 +4464,11 @@
    {
     "id": "r25-q12",
     "type": "short",
-    "prompt": "What colour was the substance that Perkin obtained in his flask?",
+    "prompt": "What colour did the residue turn the water in Perkin's flask?",
     "answer": [
-     "purple"
+     "purple",
+     "vivid purple",
+     "vivid purple"
     ],
     "why": "Paragraph A: \"coloured the water in his flask a vivid purple\"."
    },
@@ -4611,9 +4629,13 @@
     "type": "short",
     "prompt": "What emotion can visible unfairness provoke, according to paragraph C?",
     "answer": [
-     "resentment"
+     "resentment",
+     "anger",
+     "angry",
+     "anger",
+     "angry"
     ],
-    "why": "Paragraph C: \"systems that let some customers jump ahead provoke resentment\"."
+    "why": "Paragraph C: \"systems that let some customers jump ahead provoke resentment\" and \"visible unfairness can make people angry out of proportion to the actual delay\"."
    },
    {
     "id": "r26-q11",
@@ -4627,20 +4649,20 @@
    {
     "id": "r26-q12",
     "type": "sentence",
-    "prompt": "Waiting that is ______ tends to seem longer than waiting that is filled with activity.",
+    "prompt": "Designers display estimated waiting times on ______ so that people can see how much longer they must stand in line.",
     "answer": [
-     "unoccupied"
+     "screens"
     ],
-    "why": "Paragraph B: \"Waiting that is unoccupied tends to seem longer than waiting that is filled with activity\"."
+    "why": "Paragraph B: \"Designers have exploited this by showing estimated waiting times on screens\"."
    },
    {
     "id": "r26-q13",
     "type": "sentence",
-    "prompt": "A brief announcement may reduce complaints even though the queue is not ______.",
+    "prompt": "Telling customers that a system is very busy can cut complaints without making the queue any ______.",
     "answer": [
      "shorter"
     ],
-    "why": "Paragraph E: \"may reduce complaints even though the queue is not shorter\"."
+    "why": "Paragraph E: \"A brief announcement that a system is under heavy load, for example, may reduce complaints even though the queue is not shorter.\""
    }
   ]
  },
@@ -4788,7 +4810,7 @@
    {
     "id": "r27-q10",
     "type": "sentence",
-    "prompt": "Permanently shadowed craters near the Moon's ______ are where hydrogen has been detected.",
+    "prompt": "Hydrogen has been found in dark craters close to the Moon's ______.",
     "answer": [
      "poles"
     ],
@@ -4797,7 +4819,7 @@
    {
     "id": "r27-q11",
     "type": "sentence",
-    "prompt": "Engineers have considered whether ice could be melted, heated or ______ in solvents.",
+    "prompt": "Besides being melted or heated, the ice might be ______ in solvents.",
     "answer": [
      "dissolved"
     ],
@@ -4808,14 +4830,16 @@
     "type": "short",
     "prompt": "What can water be split into, according to the passage?",
     "answer": [
-     "hydrogen and oxygen"
+     "hydrogen and oxygen",
+     "oxygen and hydrogen",
+     "hydrogen, oxygen"
     ],
     "why": "Paragraph A: \"water can be split into hydrogen and oxygen\"."
    },
    {
     "id": "r27-q13",
     "type": "short",
-    "prompt": "What do the solar panels on nearby ridges receive for much of the lunar day?",
+    "prompt": "What do the ridges near the shadowed craters receive during most of the lunar day?",
     "answer": [
      "sunlight"
     ],
@@ -4985,7 +5009,7 @@
    {
     "id": "r28-q11",
     "type": "summary",
-    "prompt": "Summary: Elk avoided open valley ______ where they could be easily caught.",
+    "prompt": "Summary: Elk kept away from the open valley ______, where wolves could catch them easily.",
     "answer": [
      "bottoms"
     ],
@@ -4996,18 +5020,20 @@
     "type": "short",
     "prompt": "What term describes the chain of effects that predators can set off?",
     "answer": [
-     "trophic cascade"
+     "trophic cascade",
+     "trophic cascades",
+     "a trophic cascade"
     ],
     "why": "Paragraph B: \"The idea that predators shape the systems they inhabit is known as a trophic cascade\"."
    },
    {
     "id": "r28-q13",
     "type": "sentence",
-    "prompt": "Predators can influence herbivores even when their ______ are low.",
+    "prompt": "To study these indirect effects, researchers have used repeated surveys, long-term site comparisons and tracking ______.",
     "answer": [
-     "numbers"
+     "collars"
     ],
-    "why": "Paragraph D: \"A predator's presence can influence herbivores even when its numbers are low\"."
+    "why": "Paragraph D: \"Researchers have therefore relied on repeated surveys, tracking collars and long-term comparisons between sites\"."
    }
   ]
  },
@@ -5050,7 +5076,7 @@
    {
     "id": "r29-q01",
     "type": "tfng",
-    "prompt": "A coastline measured on a large-scale chart is longer than the same coastline on a small-scale atlas.",
+    "prompt": "A coastline measured on a large-scale chart is usually longer than the same coastline on a small-scale atlas.",
     "answer": "TRUE",
     "why": "Paragraph A: \"The second measurement will almost always be longer than the first, because it includes more of the irregularities\"."
    },
@@ -5064,7 +5090,7 @@
    {
     "id": "r29-q03",
     "type": "tfng",
-    "prompt": "Mandelbrot argued that coastlines display self-similarity.",
+    "prompt": "Mandelbrot believed that the irregular pattern of a coastline looks much the same when viewed at different scales.",
     "answer": "TRUE",
     "why": "Paragraph C: \"He argued that coastlines display a property called self-similarity\"."
    },
@@ -5094,7 +5120,7 @@
    {
     "id": "r29-q06",
     "type": "match",
-    "prompt": "a property in which the same pattern appears at several scales",
+    "prompt": "a mention of distances reported by people who walk along the coast",
     "options": [
      "A",
      "B",
@@ -5104,8 +5130,8 @@
      "F",
      "G"
     ],
-    "answer": "C",
-    "why": "Paragraph C: \"a property called self-similarity, in which the pattern of irregularity looks much the same at different scales\"."
+    "answer": "A",
+    "why": "Paragraph A: \"Walkers who follow the coast on foot often report distances that differ from the figures printed on maps\"."
    },
    {
     "id": "r29-q07",
@@ -5154,14 +5180,15 @@
     "type": "short",
     "prompt": "What is the name for a pattern that looks similar at different scales?",
     "answer": [
-     "self-similarity"
+     "self-similarity",
+     "self similarity"
     ],
     "why": "Paragraph C: \"a property called self-similarity, in which the pattern of irregularity looks much the same at different scales\"."
    },
    {
     "id": "r29-q11",
     "type": "short",
-    "prompt": "What term did Mandelbrot use to describe objects of this kind?",
+    "prompt": "What term did Mandelbrot use for shapes whose irregularity repeats at smaller and smaller scales?",
     "answer": [
      "fractal"
     ],
@@ -5170,7 +5197,7 @@
    {
     "id": "r29-q12",
     "type": "sentence",
-    "prompt": "The measured length of a frontier grew as the ______ of measurement shrank.",
+    "prompt": "Richardson found that a border appeared longer when a smaller ______ of measurement was used.",
     "answer": [
      "unit"
     ],
@@ -5179,20 +5206,21 @@
    {
     "id": "r29-q13",
     "type": "sentence",
-    "prompt": "The tide changes the position of the shoreline ______ times a day.",
+    "prompt": "The shoreline's position is altered by the tide ______ a day.",
     "answer": [
-     "twice"
+     "twice",
+     "two times"
     ],
     "why": "Paragraph F: \"the tide changes its position twice a day\"."
    },
    {
     "id": "r29-q14",
     "type": "table",
-    "prompt": "Table, Sources of error: a coastline surveyed at high tide differs from one surveyed at ______ tide.",
+    "prompt": "Table, Sources of error: many surveyors use the ______ tide level as a reference, which is itself a convention.",
     "answer": [
-     "low"
+     "mean"
     ],
-    "why": "Paragraph F: \"A coastline recorded at high tide may differ substantially from one recorded at low tide\"."
+    "why": "Paragraph F: \"many surveyors choose a mean tide level as a reference, although this choice is itself a convention that can shape the final figure\"."
    }
   ]
  },
@@ -5349,7 +5377,7 @@
    {
     "id": "r30-q11",
     "type": "summary",
-    "prompt": "Summary: Counterfeiters of paper money could copy notes with ink, a press and a skilled ______.",
+    "prompt": "Summary: Paper money could be forged by anyone with ink, a printing press and a talented ______.",
     "answer": [
      "engraver"
     ],
@@ -5358,7 +5386,7 @@
    {
     "id": "r30-q12",
     "type": "sentence",
-    "prompt": "Early security features included ______, which could be seen when a note was held against a light.",
+    "prompt": "Early notes carried ______, marks that showed up when the paper was held up to a light.",
     "answer": [
      "watermarks"
     ],
@@ -5367,7 +5395,7 @@
    {
     "id": "r30-q13",
     "type": "sentence",
-    "prompt": "Machines in banks sort and authenticate notes at high ______.",
+    "prompt": "Bank machines sort notes and check that they are genuine at great ______.",
     "answer": [
      "speed"
     ],

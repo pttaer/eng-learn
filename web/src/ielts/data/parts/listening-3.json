@@ -167,7 +167,9 @@
           "6am",
           "6 am",
           "six",
-          "six o'clock"
+          "six o'clock",
+          "6",
+          "6.00"
         ],
         "why": "The receptionist says 'The pool is open from six to ten in the morning'."
       },
@@ -202,7 +204,10 @@
         "answer": [
           "Monday the third",
           "Monday 3rd",
-          "Monday the 3rd"
+          "Monday the 3rd",
+          "the third",
+          "3rd",
+          "third"
         ],
         "why": "The customer asks 'Can I start on Monday the third?' and the receptionist replies 'Certainly.'"
       },
@@ -214,7 +219,9 @@
           "14 March 1999",
           "fourteenth of March 1999",
           "14/03/1999",
-          "14 March, 1999"
+          "14 March, 1999",
+          "14th March 1999",
+          "14th of March 1999"
         ],
         "why": "The customer gives 'the fourteenth of March, 1999' when asked for his date of birth."
       },
@@ -351,8 +358,8 @@
         "type": "mcq",
         "prompt": "Why is flash photography banned in the glasshouse?",
         "options": [
-          "A. It may harm the orchids",
-          "B. It disturbs other visitors",
+          "A. It could damage some flowers",
+          "B. It disturbs other visitors nearby",
           "C. It damages the glass",
           "D. It dazzles the staff"
         ],
@@ -362,13 +369,14 @@
       {
         "id": "l3-s2-q06",
         "type": "complete",
-        "prompt": "The café closes at (time):",
+        "prompt": "The café near the garden gate closes at (time):",
         "answer": [
           "4 pm",
           "4 p.m.",
           "4pm",
           "four",
-          "four o'clock"
+          "four o'clock",
+          "4"
         ],
         "why": "The guide says 'The café closes at four, half an hour before the garden does.'"
       },
@@ -380,7 +388,10 @@
           "4:30",
           "4.30",
           "half past four",
-          "4:30 pm"
+          "4:30 pm",
+          "4.30 pm",
+          "16:30",
+          "16.30"
         ],
         "why": "The guide says 'The garden itself closes at half past four.'"
       },
@@ -575,7 +586,7 @@
           "A. The lab is open only then",
           "B. The river is cleaner then",
           "C. The tutor asked for it",
-          "D. To match the flow data"
+          "D. To compare with rivers"
         ],
         "answer": "D",
         "why": "The student says the authority publishes flow data on Tuesdays and 'we want to match our samples to the flow.'"
@@ -596,7 +607,7 @@
         "type": "mcq",
         "prompt": "The tutor says the test strips are:",
         "options": [
-          "A. less accurate",
+          "A. not as precise",
           "B. more expensive",
           "C. banned by the lab",
           "D. faster to read"
@@ -631,7 +642,9 @@
           "20 November",
           "20th of November",
           "twentieth of November",
-          "November 20"
+          "November 20",
+          "20th November",
+          "November 20th"
         ],
         "why": "The student says 'The draft is due on the twentieth of November.'"
       },
@@ -642,7 +655,10 @@
         "answer": [
           "4 December",
           "fourth of December",
-          "December 4"
+          "December 4",
+          "4th December",
+          "4th of December",
+          "December 4th"
         ],
         "why": "The student says 'we're presenting on the fourth of December.'"
       }
@@ -791,11 +807,11 @@
       {
         "id": "l3-s4-q05",
         "type": "mcq",
-        "prompt": "Why do some bees arrive when no flowers are available?",
+        "prompt": "Why do some bees now find no flowers to feed on?",
         "options": [
           "A. They migrate too early in spring",
           "B. Spring has become colder",
-          "C. Flowering times have shifted",
+          "C. Plants bloom at different times",
           "D. Flowers close earlier in the day"
         ],
         "answer": "C",
@@ -809,7 +825,7 @@
           "A. less common than honeybees in farmland",
           "B. protected by law in most regions",
           "C. unable to fly far from their nests",
-          "D. more efficient for some crops"
+          "D. better at pollinating certain crops"
         ],
         "answer": "D",
         "why": "The lecturer says many wild species 'are often more efficient pollinators for particular crops'."
@@ -817,7 +833,7 @@
       {
         "id": "l3-s4-q07",
         "type": "complete",
-        "prompt": "One solution is planting wildflower ___ along field edges.",
+        "prompt": "Wildflowers can be grown in narrow ___ around the borders of fields.",
         "answer": [
           "strips",
           "strip"
@@ -827,7 +843,7 @@
       {
         "id": "l3-s4-q08",
         "type": "complete",
-        "prompt": "Nest sites can be created as bare soil ___.",
+        "prompt": "Bees can be given places to nest by making ___ of bare earth.",
         "answer": [
           "banks",
           "bank"
@@ -837,7 +853,7 @@
       {
         "id": "l3-s4-q09",
         "type": "mcq",
-        "prompt": "The lecturer's view on the belief that honeybees are the most important pollinators is:",
+        "prompt": "What does the lecturer think of the common idea that honeybees matter more than any other pollinator?",
         "options": [
           "A. disagreement",
           "B. strong agreement",
@@ -850,12 +866,11 @@
       {
         "id": "l3-s4-q10",
         "type": "complete",
-        "prompt": "Regulations now ___ the use of pesticides in several regions.",
+        "prompt": "In several regions, rules have been brought in to ___ the use of these chemicals.",
         "answer": [
-          "restrict",
-          "limit"
+          "restrict"
         ],
-        "why": "The lecturer says 'regulations now restrict their use in several regions.' The gap needs the base verb, so 'restrict' (or 'limit') fits; 'restricted' and 'limited' do not fit the grammar."
+        "why": "The lecturer says 'regulations now restrict their use in several regions.' The gap after 'to' needs the base verb, so 'restrict' fits; 'restricted' does not fit the grammar."
       }
     ]
   }

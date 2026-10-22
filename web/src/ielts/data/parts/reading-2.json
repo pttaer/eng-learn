@@ -157,7 +157,7 @@
     "type": "mcq",
     "prompt": "Why are the dwarf planets of the Kuiper Belt valuable to scientists?",
     "options": [
-     "A. They preserve evidence of the early solar system.",
+     "A. They hold clues to how the solar system first formed.",
      "B. They may be capable of supporting simple forms of life.",
      "C. They are relatively easy and cheap for probes to reach.",
      "D. They are the main source of the meteorites reaching Earth."
@@ -311,7 +311,7 @@
    {
     "id": "r08-q11",
     "type": "short",
-    "prompt": "By up to how much has automated irrigation reduced water use compared with traditional landscaping?",
+    "prompt": "By up to how much have advances in hydroponics and automated irrigation cut water use, compared with traditional landscaping?",
     "answer": [
      "70 percent",
      "70%",
@@ -435,7 +435,7 @@
    {
     "id": "r09-q08",
     "type": "summary",
-    "prompt": "Summary: By 1801, about ______ people in England had been vaccinated.",
+    "prompt": "Summary: Three years after Jenner published his work, around ______ people in England had been vaccinated.",
     "answer": [
      "100,000",
      "100000"
@@ -445,7 +445,7 @@
    {
     "id": "r09-q09",
     "type": "summary",
-    "prompt": "Summary: By 1807, several European nations had ______ vaccination programmes.",
+    "prompt": "Summary: Within a decade of that, some European governments had ______ vaccination, once it was clearly shown to work.",
     "answer": [
      "mandated"
     ],
@@ -503,11 +503,11 @@
     "options": [
      "A. The disease was completely eliminated there in 1980.",
      "B. Cases were spread evenly across every state in the country.",
-     "C. Cases in 2019 were the highest for 27 years.",
+     "C. In 2019 cases reached a level not seen since the 1990s.",
      "D. Vaccination against it began there only in 1990."
     ],
     "answer": "C",
-    "why": "Paragraph F: \"In 2019, United States measles cases reached 1,282, representing the highest number in 27 years\". A confuses measles with smallpox; B is contradicted (\"concentrated in communities with low vaccination coverage\"); D is wrong (programs began in 1963)."
+    "why": "Paragraph F: \"In 2019, United States measles cases reached 1,282, representing the highest number in 27 years\" (27 years before 2019 is 1992). A confuses measles with smallpox; B is contradicted (\"concentrated in communities with low vaccination coverage\"); D is wrong (programs began in 1963)."
    },
    {
     "id": "r09-q14",
@@ -647,8 +647,7 @@
     "type": "short",
     "prompt": "Which journal published the 2016 meta-analysis of whole-grain studies?",
     "answer": [
-     "British Medical Journal",
-     "the British Medical Journal"
+     "British Medical Journal"
     ],
     "why": "Paragraph F: \"A meta-analysis of 45 prospective cohort studies published in the British Medical Journal in 2016\"."
    },
@@ -657,7 +656,7 @@
     "type": "mcq",
     "prompt": "Why are poor families in developing nations hit hard by rising grain prices?",
     "options": [
-     "A. Bread provides most of their daily calories.",
+     "A. Grain-based foods supply most of their daily calories.",
      "B. They are unable to grow enough wheat for themselves.",
      "C. They strongly prefer to buy expensive whole-grain bread.",
      "D. Their governments place heavy taxes on bread sales."
@@ -729,9 +728,9 @@
    {
     "id": "r11-q03",
     "type": "tfng",
-    "prompt": "Cars with solid-state batteries are already on sale.",
+    "prompt": "Solid-state batteries are not expected to become commercially viable within this decade.",
     "answer": "FALSE",
-    "why": "Paragraph C: manufacturers \"have announced production timelines for solid-state batteries beginning in 2027\", so production has not yet started."
+    "why": "Paragraph C: manufacturers have announced production \"beginning in 2027, suggesting commercial viability approaching within the current decade\". The passage expects viability this decade, so FALSE."
    },
    {
     "id": "r11-q04",

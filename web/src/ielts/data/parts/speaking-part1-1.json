@@ -28,7 +28,7 @@
       "How long have you lived there?",
       "What do you like about your accommodation?",
       "Is there anything you would change about your home?",
-      "How important is it to have a comfortable home?",
+      "Is your home comfortable?",
       "Do you prefer living alone or with others?"
     ]
   },
@@ -59,10 +59,10 @@
     "questions": [
       "Do you enjoy cooking?",
       "What is your favourite cuisine?",
-      "Can you cook your national dishes?",
+      "Can you cook any traditional dishes from your country?",
       "How often do you eat out?",
       "What was your favourite food as a child?",
-      "Do you think it's important to eat healthy?"
+      "Do you try to eat healthily?"
     ]
   },
   {
@@ -71,9 +71,9 @@
       "How often do you use technology in your daily life?",
       "What technological devices do you use most?",
       "How has technology changed your life?",
-      "Do you think technology has more advantages or disadvantages?",
+      "Do you find technology useful in your daily life?",
       "What new technology would you like to have?",
-      "Do you think people spend too much time on technology?"
+      "Do you spend a lot of time on your phone?"
     ]
   },
   {
@@ -117,7 +117,7 @@
       "How often do you read?",
       "What was your favourite book as a child?",
       "Do you prefer reading physical books or digital books?",
-      "Has reading habits changed with technology?"
+      "Has technology changed the way you read?"
     ]
   },
   {

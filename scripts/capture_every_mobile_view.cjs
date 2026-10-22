@@ -1,24 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
-const puppeteer = require(path.resolve('E:/Eng/web/node_modules/puppeteer-core'));
+const puppeteer = require(path.resolve(__dirname, '../web/node_modules/puppeteer-core'));
 
 const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
-const DIST_DIR = path.resolve('E:/Eng/web/dist');
-const OUTPUT_DIRS = [
-  path.resolve('E:/Eng/screenshots/Mobile'),
-  path.resolve('E:/Eng/screenshots/mobile'),
-  path.resolve('E:/Eng/screenshots/Mobile/1.0.0'),
-  path.resolve('E:/Eng/Mobile/1.0.0'),
-  path.resolve('C:/Users/Dell/.gemini/antigravity-ide/brain/3e416960-52a7-4e9a-9260-ace1292f65df'),
-  path.resolve('C:/Users/Dell/.gemini/antigravity-ide/brain/f94827d0-ed8c-41ca-bb0d-70eb75190845')
-];
+const DIST_DIR = path.resolve(__dirname, '../web/dist');
+const OUTPUT_DIR = path.resolve(__dirname, '../Mobile/1.0.0');
 const PORT = 4195;
 const BASE_URL = `http://localhost:${PORT}/`;
 
-OUTPUT_DIRS.forEach(dir => {
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-});
+if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -60,8 +51,7 @@ function createStaticServer() {
 
 async function run() {
   console.log('=== CAPTURING EVERY SINGLE MOBILE VIEW (FULL AUDIT) ===');
-  console.log('Target directories:');
-  OUTPUT_DIRS.forEach(d => console.log('  -', d));
+  console.log('Target directory:\n  -', OUTPUT_DIR);
 
   const server = createStaticServer();
   await new Promise(resolve => server.listen(PORT, resolve));
@@ -129,12 +119,8 @@ async function run() {
         });
       }
       await new Promise(r => setTimeout(r, 250));
-      const primaryPath = path.join(OUTPUT_DIRS[0], filename);
+      const primaryPath = path.join(OUTPUT_DIR, filename);
       await page.screenshot({ path: primaryPath, fullPage: false });
-
-      for (let i = 1; i < OUTPUT_DIRS.length; i++) {
-        fs.copyFileSync(primaryPath, path.join(OUTPUT_DIRS[i], filename));
-      }
       captured.push({ filename, desc });
       console.log(`[CAPTURED ${captured.length.toString().padStart(2, '0')}] ${filename} — ${desc}`);
     };
@@ -561,9 +547,7 @@ ${captured.slice(30).map((c, i) => `| ${i + 31} | [\`${c.filename}\`](./${c.file
 *Captured with automated headless Chrome engine on mobile touch profile.*
 `;
 
-  OUTPUT_DIRS.forEach(dir => {
-    fs.writeFileSync(path.join(dir, 'README.md'), indexMd, 'utf8');
-  });
+  fs.writeFileSync(path.join(OUTPUT_DIR, 'README.md'), indexMd, 'utf8');
 
   console.log(`\n🎉 [ALL DONE] Captured all ${captured.length} mobile views successfully!`);
 }

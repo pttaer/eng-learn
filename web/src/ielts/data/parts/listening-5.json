@@ -132,7 +132,8 @@
           "EF3 7 2",
           "EF372",
           "EF 372",
-          "EF three seven two"
+          "EF three seven two",
+          "EF3 72"
         ],
         "why": "The resident gives 'postcode EF three seven two.'"
       },
@@ -157,7 +158,9 @@
           "Tuesday the twenty-second",
           "Tuesday 22nd",
           "22nd",
-          "the twenty-second"
+          "the twenty-second",
+          "Tuesday 22",
+          "22"
         ],
         "why": "The officer says 'the next collection will be on Tuesday the twenty-second.'"
       },
@@ -245,7 +248,7 @@
     "script": [
       {
         "speaker": "Narrator",
-        "text": "Welcome to the Clockmakers' Gallery. This audio guide covers the four main rooms and takes about forty-five minutes."
+        "text": "Welcome to the Clockmakers' Gallery. This audio guide covers the main rooms and takes about forty-five minutes."
       },
       {
         "speaker": "Narrator",
@@ -261,7 +264,7 @@
       },
       {
         "speaker": "Narrator",
-        "text": "The final room contains a large astronomical clock. It shows the phases of the moon and the position of the sun, and it is wound once a week."
+        "text": "The fourth room contains a large astronomical clock. It shows the phases of the moon and the position of the sun, and it is wound once a week."
       },
       {
         "speaker": "Narrator",
@@ -342,7 +345,7 @@
       {
         "id": "l5-s2-q05",
         "type": "complete",
-        "prompt": "Pocket watch cases were often ___ by hand.",
+        "prompt": "Many pocket watch cases were decorated by hand. They were ___.",
         "answer": [
           "engraved"
         ],
@@ -385,12 +388,15 @@
       {
         "id": "l5-s2-q09",
         "type": "complete",
-        "prompt": "The café closes at (time):",
+        "prompt": "Closing time of the ground-floor café:",
         "answer": [
           "5:30",
           "5.30",
           "half past five",
-          "5:30 pm"
+          "5:30 pm",
+          "5.30 pm",
+          "17:30",
+          "17.30"
         ],
         "why": "The narrator says 'the café on the ground floor is open until half past five.'"
       },
@@ -504,15 +510,15 @@
       },
       {
         "speaker": "Adviser",
-        "text": "Good plan. Good luck, Lucy. Thank you."
-      },
-      {
-        "speaker": "Adviser",
-        "text": "And remember to ask two or three questions at the end. It shows that you have researched the company."
+        "text": "Good plan. And remember to ask two or three questions at the end. It shows that you have researched the company."
       },
       {
         "speaker": "Student",
         "text": "Good idea. Thank you."
+      },
+      {
+        "speaker": "Adviser",
+        "text": "Good luck, Lucy."
       }
     ],
     "questions": [
@@ -532,7 +538,7 @@
       {
         "id": "l5-s3-q02",
         "type": "complete",
-        "prompt": "The method the adviser recommends has four parts: situation, task, action and ___.",
+        "prompt": "Last stage of the interview-answer method the adviser recommends:",
         "answer": [
           "result"
         ],
@@ -556,7 +562,9 @@
           "a quarter",
           "about a quarter",
           "25%",
-          "25 per cent"
+          "25 per cent",
+          "25 percent",
+          "quarter"
         ],
         "why": "Lucy says 'By about a quarter over three months.'"
       },
@@ -631,7 +639,8 @@
           "ten thirty",
           "ten thirty on Wednesday the eleventh",
           "10:30 on Wednesday the 11th",
-          "10.30 on Wednesday 11th"
+          "10.30 on Wednesday 11th",
+          "10:30 am"
         ],
         "why": "The adviser says 'The interview is at ten thirty on Wednesday the eleventh.'"
       }
@@ -759,17 +768,18 @@
       {
         "id": "l5-s4-q04",
         "type": "complete",
-        "prompt": "The top surface was paved with flat ___.",
+        "prompt": "Material laid flat to form the road's upper surface:",
         "answer": [
           "blocks",
-          "block"
+          "block",
+          "flat blocks"
         ],
         "why": "The lecturer says 'the top surface was paved with flat blocks.'"
       },
       {
         "id": "l5-s4-q05",
         "type": "complete",
-        "prompt": "Where a hill blocked the way, engineers ___ through the rock.",
+        "prompt": "When a hill stood in the way, engineers sometimes ___ straight through it.",
         "answer": [
           "cut"
         ],
@@ -791,7 +801,7 @@
       {
         "id": "l5-s4-q07",
         "type": "complete",
-        "prompt": "Milestones showed distances to major ___.",
+        "prompt": "Milestones told travellers how far it was to large ___.",
         "answer": [
           "cities",
           "city"

@@ -145,7 +145,7 @@
       {
         "id": "l6-s1-q04",
         "type": "complete",
-        "prompt": "The alternative room is a twin room on the ___ floor.",
+        "prompt": "Floor of the replacement twin room:",
         "answer": [
           "third",
           "3rd"
@@ -197,7 +197,8 @@
           "8.30",
           "8:30 am",
           "eight-thirty",
-          "half past eight"
+          "half past eight",
+          "8.30 am"
         ],
         "why": "The receptionist says 'a taxi will collect you from the Harbour Inn at eight-thirty.'"
       },
@@ -375,7 +376,7 @@
       {
         "id": "l6-s2-q08",
         "type": "complete",
-        "prompt": "The park-and-ride service runs every ___ minutes.",
+        "prompt": "Frequency of the park-and-ride buses (minutes):",
         "answer": [
           "fifteen",
           "15"
@@ -526,7 +527,7 @@
       {
         "id": "l6-s3-q02",
         "type": "mcq",
-        "prompt": "Priya suggests moving the entrance to the:",
+        "prompt": "Priya suggests moving the entrance to:",
         "options": [
           "A. the busy road side of the site",
           "B. the rooftop garden terrace",
@@ -605,7 +606,8 @@
         "type": "complete",
         "prompt": "Priya will draft the revised plan. Who will receive it?",
         "answer": [
-          "the client"
+          "the client",
+          "client"
         ],
         "why": "Priya says 'we'll show it to the client on Friday the sixth.'"
       },
@@ -615,9 +617,11 @@
         "prompt": "Date of the client meeting:",
         "answer": [
           "Friday the sixth",
-          "6 (Friday)",
+          "6th",
           "Friday 6th",
-          "the sixth"
+          "the sixth",
+          "Friday 6",
+          "6"
         ],
         "why": "Priya says 'we'll show it to the client on Friday the sixth.'"
       }
@@ -741,14 +745,16 @@
           "a quarter",
           "roughly a quarter",
           "25%",
-          "25 per cent"
+          "25 per cent",
+          "25 percent",
+          "quarter"
         ],
         "why": "The lecturer says reefs 'support roughly a quarter of all known marine species.'"
       },
       {
         "id": "l6-s4-q03",
         "type": "complete",
-        "prompt": "Coral cover is measured along fixed ___ lines.",
+        "prompt": "Name of the permanent survey lines used to record coral cover:",
         "answer": [
           "transect",
           "transects"
@@ -817,7 +823,7 @@
       {
         "id": "l6-s4-q09",
         "type": "complete",
-        "prompt": "Local pressures named by the lecturer include sewage and:",
+        "prompt": "Besides sewage, a local problem that weakens reefs:",
         "answer": [
           "overfishing"
         ],
@@ -826,9 +832,10 @@
       {
         "id": "l6-s4-q10",
         "type": "complete",
-        "prompt": "For the assignment, students must report the sampling ___ for each transect.",
+        "prompt": "Detail of each transect that students must include in the assignment:",
         "answer": [
-          "depth"
+          "depth",
+          "sampling depth"
         ],
         "why": "The lecturer says 'remember to report the sampling depth for each transect.'"
       }

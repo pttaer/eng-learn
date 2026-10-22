@@ -38,7 +38,7 @@
    {
     "id": "r17-q01",
     "type": "tfng",
-    "prompt": "The theatre at Epidaurus was completed in the fourth century BCE.",
+    "prompt": "Work on the Epidaurus theatre was finished during the 300s BCE.",
     "answer": "TRUE",
     "why": "Paragraph A: \"The theatre was completed in the fourth century BCE, and for centuries its reputation rested almost entirely on experience rather than on measurement.\""
    },
@@ -142,7 +142,7 @@
      "D. It was described in great detail by Vitruvius himself."
     ],
     "answer": "C",
-    "why": "Paragraph B: \"the theatre's clarity is not the result of a single feature but of several working together\". A is contradicted by the same sentence; B is contradicted by the caution that scale models cannot reproduce everything; D is not stated."
+    "why": "Paragraph B: \"the theatre's clarity is not the result of a single feature but of several working together\". A is contradicted by the same sentence; B is wrong because paragraph B reports measurements made \"In recent decades\" with microphones placed \"at different points around the seating\", not one experiment, and says only what the findings \"suggest\"; D is not stated."
    },
    {
     "id": "r17-q10",
@@ -171,14 +171,15 @@
     "type": "short",
     "prompt": "What kind of slope did the seats at Epidaurus rise on?",
     "answer": [
-     "steep slope"
+     "steep slope",
+     "steep"
     ],
     "why": "Paragraph B: \"The seats rise on a steep slope, so sound leaving the stage is not absorbed or blocked by the heads of the people in front.\""
    },
    {
     "id": "r17-q13",
     "type": "sentence",
-    "prompt": "The central stage area of an ancient theatre was known as the ______.",
+    "prompt": "At Epidaurus, the circular area where the performer stands is called the ______.",
     "answer": [
      "orchestra"
     ],
@@ -187,7 +188,7 @@
    {
     "id": "r17-q14",
     "type": "sentence",
-    "prompt": "In experiments with scale models, the ______ of the seating bank mattered more than the stone surface.",
+    "prompt": "Scale-model tests showed that the seating's ______ had a greater effect on hearing than the stone it was built from.",
     "answer": [
      "shape"
     ],
@@ -265,7 +266,7 @@
     "prompt": "first recorded lichens disappearing near factories",
     "options": [
      "A. observers in nineteenth-century European cities",
-     "B. twentieth-century researchers who measured sulphur dioxide",
+     "B. twentieth-century researchers who measured air pollutants",
      "C. scientists who analysed lichen tissue for metals",
      "D. conservation agencies that publish lichen indicators",
      "E. growers who harvested lichens for dye-making"
@@ -276,10 +277,10 @@
    {
     "id": "r18-q06",
     "type": "features",
-    "prompt": "compared lichen communities with measured levels of sulphur dioxide",
+    "prompt": "matched the species found at each site against recorded concentrations of a pollutant",
     "options": [
      "A. observers in nineteenth-century European cities",
-     "B. twentieth-century researchers who measured sulphur dioxide",
+     "B. twentieth-century researchers who measured air pollutants",
      "C. scientists who analysed lichen tissue for metals",
      "D. conservation agencies that publish lichen indicators",
      "E. growers who harvested lichens for dye-making"
@@ -290,10 +291,10 @@
    {
     "id": "r18-q07",
     "type": "features",
-    "prompt": "analysed lichen tissue for metals and nitrogen compounds",
+    "prompt": "measured substances that build up inside lichens over time",
     "options": [
      "A. observers in nineteenth-century European cities",
-     "B. twentieth-century researchers who measured sulphur dioxide",
+     "B. twentieth-century researchers who measured air pollutants",
      "C. scientists who analysed lichen tissue for metals",
      "D. conservation agencies that publish lichen indicators",
      "E. growers who harvested lichens for dye-making"
@@ -304,7 +305,7 @@
    {
     "id": "r18-q08",
     "type": "mcq",
-    "prompt": "According to paragraph D, why can a lichen survey be hard to interpret?",
+    "prompt": "According to paragraph D, why can lichens be hard to interpret as evidence of pollution?",
     "options": [
      "A. They respond to a mix of pollutants, not one compound.",
      "B. They grow so quickly that surveys cannot keep up with them.",
@@ -317,7 +318,7 @@
    {
     "id": "r18-q09",
     "type": "mcq",
-    "prompt": "What is the writer's main conclusion in paragraph G?",
+    "prompt": "What is the writer's main conclusion about lichens in paragraph G?",
     "options": [
      "A. They should now replace all calibrated instruments in monitoring.",
      "B. They can identify the exact pollutant responsible for damage.",
@@ -330,7 +331,7 @@
    {
     "id": "r18-q10",
     "type": "sentence",
-    "prompt": "The photosynthetic partner of a lichen is usually an alga or a ______.",
+    "prompt": "Besides an alga, the organism that makes food from sunlight inside a lichen can be a ______.",
     "answer": [
      "cyanobacterium"
     ],
@@ -339,7 +340,7 @@
    {
     "id": "r18-q11",
     "type": "sentence",
-    "prompt": "A lichen survey describes conditions over many years because growth is ______.",
+    "prompt": "Because lichens grow at a ______ rate, a survey reflects air quality across a long period.",
     "answer": [
      "slow"
     ],
@@ -348,9 +349,10 @@
    {
     "id": "r18-q12",
     "type": "short",
-    "prompt": "Which gas, released when coal and oil are burned, was a major cause of acid rain?",
+    "prompt": "Which gas, produced by burning fossil fuels, was a leading contributor to acid rain?",
     "answer": [
-     "sulphur dioxide"
+     "sulphur dioxide",
+     "sulfur dioxide"
     ],
     "why": "Paragraph C: \"Sulphur dioxide, released when coal and oil are burned, was a major cause of acid rain\"."
    },
@@ -413,7 +415,7 @@
     "type": "tfng",
     "prompt": "Birds kept in cages were unable to orient themselves.",
     "answer": "FALSE",
-    "why": "Paragraph B: \"their orientation changed when the magnetic field around them was rotated by a set of coils\". The caged birds did orient, so the statement is contradicted."
+    "why": "Paragraph B: \"experiments on European robins suggested that the birds could orient themselves using magnetic cues\" and \"their orientation changed when the magnetic field around them was rotated by a set of coils\". The caged birds did orient, so the statement is contradicted."
    },
    {
     "id": "r19-q03",
@@ -520,14 +522,15 @@
     "type": "short",
     "prompt": "In which part of the body have iron-based receptors been reported?",
     "answer": [
-     "beaks"
+     "beaks",
+     "beak"
     ],
     "why": "Paragraph E: \"Iron-based receptors have been reported in the beaks of some animals, including pigeons\"."
    },
    {
     "id": "r19-q12",
     "type": "sentence",
-    "prompt": "Birds given light that is too dim or wrongly ______ lose their magnetic orientation.",
+    "prompt": "Birds lose their magnetic orientation in light that is wrongly ______ or not bright enough.",
     "answer": [
      "coloured"
     ],
@@ -536,7 +539,7 @@
    {
     "id": "r19-q13",
     "type": "sentence",
-    "prompt": "A migrating bird may use the magnetic field to estimate its ______.",
+    "prompt": "Birds may rely on the magnetic field to judge their ______, while the sun or coastlines help them correct their course.",
     "answer": [
      "latitude"
     ],
@@ -626,7 +629,7 @@
     "type": "mcq",
     "prompt": "According to paragraph D, which users were often found in early libraries?",
     "options": [
-     "A. clerks, shopkeepers and the sons of the middle class",
+     "A. office workers, small traders and middle-class young men",
      "B. labourers and factory workers who finished work late in the evening",
      "C. members of universities, churches and learned societies",
      "D. unemployed women with plenty of time to read during the day"
@@ -655,7 +658,7 @@
    {
     "id": "r20-q09",
     "type": "table",
-    "prompt": "Table, Reading rooms: silence and a formal ______ could discourage some visitors.",
+    "prompt": "Table, Reading rooms: a required ______ and a rule of silence made some people feel unwelcome.",
     "answer": [
      "dress code"
     ],
@@ -682,7 +685,7 @@
     "answer": [
      "improvement"
     ],
-    "why": "Paragraph C: \"a word that carried moral as well as intellectual meaning\"."
+    "why": "Paragraph C: \"The movement's supporters often spoke about improvement, a word that carried moral as well as intellectual meaning.\""
    },
    {
     "id": "r20-q13",
@@ -810,7 +813,7 @@
    {
     "id": "r21-q08",
     "type": "features",
-    "prompt": "may eat particles, which can reduce their feeding and growth",
+    "prompt": "were shown in laboratory tests to eat particles, with harmful effects",
     "options": [
      "A. small invertebrates such as water fleas",
      "B. wild fish",
@@ -845,7 +848,7 @@
    {
     "id": "r21-q11",
     "type": "summary",
-    "prompt": "Summary: Even advanced treatment plants are not ______ filters.",
+    "prompt": "Summary: Even the most modern wastewater plants cannot work as ______ filters.",
     "answer": [
      "perfect"
     ],

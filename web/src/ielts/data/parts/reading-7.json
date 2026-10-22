@@ -143,7 +143,7 @@
    {
     "id": "r27-q10",
     "type": "sentence",
-    "prompt": "Permanently shadowed craters near the Moon's ______ are where hydrogen has been detected.",
+    "prompt": "Hydrogen has been found in dark craters close to the Moon's ______.",
     "answer": [
      "poles"
     ],
@@ -152,7 +152,7 @@
    {
     "id": "r27-q11",
     "type": "sentence",
-    "prompt": "Engineers have considered whether ice could be melted, heated or ______ in solvents.",
+    "prompt": "Besides being melted or heated, the ice might be ______ in solvents.",
     "answer": [
      "dissolved"
     ],
@@ -163,14 +163,16 @@
     "type": "short",
     "prompt": "What can water be split into, according to the passage?",
     "answer": [
-     "hydrogen and oxygen"
+     "hydrogen and oxygen",
+     "oxygen and hydrogen",
+     "hydrogen, oxygen"
     ],
     "why": "Paragraph A: \"water can be split into hydrogen and oxygen\"."
    },
    {
     "id": "r27-q13",
     "type": "short",
-    "prompt": "What do the solar panels on nearby ridges receive for much of the lunar day?",
+    "prompt": "What do the ridges near the shadowed craters receive during most of the lunar day?",
     "answer": [
      "sunlight"
     ],
@@ -340,7 +342,7 @@
    {
     "id": "r28-q11",
     "type": "summary",
-    "prompt": "Summary: Elk avoided open valley ______ where they could be easily caught.",
+    "prompt": "Summary: Elk kept away from the open valley ______, where wolves could catch them easily.",
     "answer": [
      "bottoms"
     ],
@@ -351,18 +353,20 @@
     "type": "short",
     "prompt": "What term describes the chain of effects that predators can set off?",
     "answer": [
-     "trophic cascade"
+     "trophic cascade",
+     "trophic cascades",
+     "a trophic cascade"
     ],
     "why": "Paragraph B: \"The idea that predators shape the systems they inhabit is known as a trophic cascade\"."
    },
    {
     "id": "r28-q13",
     "type": "sentence",
-    "prompt": "Predators can influence herbivores even when their ______ are low.",
+    "prompt": "To study these indirect effects, researchers have used repeated surveys, long-term site comparisons and tracking ______.",
     "answer": [
-     "numbers"
+     "collars"
     ],
-    "why": "Paragraph D: \"A predator's presence can influence herbivores even when its numbers are low\"."
+    "why": "Paragraph D: \"Researchers have therefore relied on repeated surveys, tracking collars and long-term comparisons between sites\"."
    }
   ]
  },
@@ -405,7 +409,7 @@
    {
     "id": "r29-q01",
     "type": "tfng",
-    "prompt": "A coastline measured on a large-scale chart is longer than the same coastline on a small-scale atlas.",
+    "prompt": "A coastline measured on a large-scale chart is usually longer than the same coastline on a small-scale atlas.",
     "answer": "TRUE",
     "why": "Paragraph A: \"The second measurement will almost always be longer than the first, because it includes more of the irregularities\"."
    },
@@ -419,7 +423,7 @@
    {
     "id": "r29-q03",
     "type": "tfng",
-    "prompt": "Mandelbrot argued that coastlines display self-similarity.",
+    "prompt": "Mandelbrot believed that the irregular pattern of a coastline looks much the same when viewed at different scales.",
     "answer": "TRUE",
     "why": "Paragraph C: \"He argued that coastlines display a property called self-similarity\"."
    },
@@ -449,7 +453,7 @@
    {
     "id": "r29-q06",
     "type": "match",
-    "prompt": "a property in which the same pattern appears at several scales",
+    "prompt": "a mention of distances reported by people who walk along the coast",
     "options": [
      "A",
      "B",
@@ -459,8 +463,8 @@
      "F",
      "G"
     ],
-    "answer": "C",
-    "why": "Paragraph C: \"a property called self-similarity, in which the pattern of irregularity looks much the same at different scales\"."
+    "answer": "A",
+    "why": "Paragraph A: \"Walkers who follow the coast on foot often report distances that differ from the figures printed on maps\"."
    },
    {
     "id": "r29-q07",
@@ -509,14 +513,15 @@
     "type": "short",
     "prompt": "What is the name for a pattern that looks similar at different scales?",
     "answer": [
-     "self-similarity"
+     "self-similarity",
+     "self similarity"
     ],
     "why": "Paragraph C: \"a property called self-similarity, in which the pattern of irregularity looks much the same at different scales\"."
    },
    {
     "id": "r29-q11",
     "type": "short",
-    "prompt": "What term did Mandelbrot use to describe objects of this kind?",
+    "prompt": "What term did Mandelbrot use for shapes whose irregularity repeats at smaller and smaller scales?",
     "answer": [
      "fractal"
     ],
@@ -525,7 +530,7 @@
    {
     "id": "r29-q12",
     "type": "sentence",
-    "prompt": "The measured length of a frontier grew as the ______ of measurement shrank.",
+    "prompt": "Richardson found that a border appeared longer when a smaller ______ of measurement was used.",
     "answer": [
      "unit"
     ],
@@ -534,20 +539,21 @@
    {
     "id": "r29-q13",
     "type": "sentence",
-    "prompt": "The tide changes the position of the shoreline ______ times a day.",
+    "prompt": "The shoreline's position is altered by the tide ______ a day.",
     "answer": [
-     "twice"
+     "twice",
+     "two times"
     ],
     "why": "Paragraph F: \"the tide changes its position twice a day\"."
    },
    {
     "id": "r29-q14",
     "type": "table",
-    "prompt": "Table, Sources of error: a coastline surveyed at high tide differs from one surveyed at ______ tide.",
+    "prompt": "Table, Sources of error: many surveyors use the ______ tide level as a reference, which is itself a convention.",
     "answer": [
-     "low"
+     "mean"
     ],
-    "why": "Paragraph F: \"A coastline recorded at high tide may differ substantially from one recorded at low tide\"."
+    "why": "Paragraph F: \"many surveyors choose a mean tide level as a reference, although this choice is itself a convention that can shape the final figure\"."
    }
   ]
  },
@@ -704,7 +710,7 @@
    {
     "id": "r30-q11",
     "type": "summary",
-    "prompt": "Summary: Counterfeiters of paper money could copy notes with ink, a press and a skilled ______.",
+    "prompt": "Summary: Paper money could be forged by anyone with ink, a printing press and a talented ______.",
     "answer": [
      "engraver"
     ],
@@ -713,7 +719,7 @@
    {
     "id": "r30-q12",
     "type": "sentence",
-    "prompt": "Early security features included ______, which could be seen when a note was held against a light.",
+    "prompt": "Early notes carried ______, marks that showed up when the paper was held up to a light.",
     "answer": [
      "watermarks"
     ],
@@ -722,7 +728,7 @@
    {
     "id": "r30-q13",
     "type": "sentence",
-    "prompt": "Machines in banks sort and authenticate notes at high ______.",
+    "prompt": "Bank machines sort notes and check that they are genuine at great ______.",
     "answer": [
      "speed"
     ],

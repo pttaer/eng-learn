@@ -133,7 +133,10 @@
         "answer": [
           "Friday the twelfth",
           "Friday 12th",
-          "the twelfth"
+          "the twelfth",
+          "12th",
+          "Friday 12",
+          "twelfth"
         ],
         "why": "The customer says 'from Friday the twelfth to Monday the fifteenth.'"
       },
@@ -144,7 +147,10 @@
         "answer": [
           "Monday the fifteenth",
           "Monday 15th",
-          "the fifteenth"
+          "the fifteenth",
+          "15th",
+          "Monday 15",
+          "fifteenth"
         ],
         "why": "The customer says 'to Monday the fifteenth.'"
       },
@@ -155,7 +161,7 @@
         "options": [
           "A. manual, with a clutch pedal",
           "B. hybrid, with a petrol engine",
-          "C. automatic",
+          "C. automatic, no clutch pedal",
           "D. electric, with no gearbox"
         ],
         "answer": "C",
@@ -189,7 +195,7 @@
           "A. It is required by law",
           "B. It is cheaper",
           "C. The car is new",
-          "D. To be safe"
+          "D. For peace of mind"
         ],
         "answer": "D",
         "why": "The customer says 'I'll take the full cover, to be safe.'"
@@ -199,7 +205,7 @@
         "type": "mcq",
         "prompt": "Where will the car be driven?",
         "options": [
-          "A. within the region",
+          "A. only in the local area",
           "B. abroad, in mainland Europe",
           "C. across the border by ferry",
           "D. nowhere, it stays parked"
@@ -227,7 +233,9 @@
           "6 p.m.",
           "6pm",
           "six in the evening",
-          "six o'clock"
+          "six o'clock",
+          "6",
+          "six"
         ],
         "why": "The agent says 'returns after six in the evening cost an extra thirty pounds.'"
       },
@@ -377,7 +385,7 @@
           "A. They are very old and fragile",
           "B. The owners refused permission",
           "C. They are structurally unsafe",
-          "D. The walls are protected"
+          "D. They have official protection"
         ],
         "answer": "D",
         "why": "The guide says 'the external walls are protected, so no alterations to them are allowed.'"
@@ -385,7 +393,7 @@
       {
         "id": "l4-s2-q07",
         "type": "complete",
-        "prompt": "The bell tower was added in:",
+        "prompt": "Year in which the church’s bell tower was constructed:",
         "answer": [
           "1880",
           "eighteen eighty"
@@ -424,7 +432,8 @@
           "10am",
           "10 a.m.",
           "ten",
-          "ten o'clock"
+          "ten o'clock",
+          "10"
         ],
         "why": "The guide says 'the café by the canal, which opens at ten.'"
       }
@@ -578,7 +587,7 @@
         "prompt": "Why is the order counterbalanced?",
         "options": [
           "A. to save time during the testing sessions",
-          "B. so that practice does not bias results",
+          "B. to stop learning effects skewing the data",
           "C. because the lab is only free on some days",
           "D. to match the design of earlier studies"
         ],
@@ -623,7 +632,7 @@
           "A. created by the students in the group",
           "B. an online word-frequency database",
           "C. a textbook appendix",
-          "D. the lab's standard list"
+          "D. a list the lab already uses"
         ],
         "answer": "D",
         "why": "Maya says 'we use the standard list from the lab.'"
@@ -654,7 +663,9 @@
           "9 February",
           "ninth of February",
           "February 9",
-          "9th of February"
+          "9th of February",
+          "9th February",
+          "February 9th"
         ],
         "why": "Maya says 'our report is due on the ninth of February.'"
       }
@@ -755,7 +766,7 @@
       {
         "id": "l4-s4-q03",
         "type": "complete",
-        "prompt": "The shredded cells become a mixture called ___ mass.",
+        "prompt": "Shredding the cells produces what is called ___ mass.",
         "answer": [
           "black"
         ],
@@ -777,7 +788,7 @@
       {
         "id": "l4-s4-q05",
         "type": "complete",
-        "prompt": "In hydrometallurgy, the metals are dissolved in ___.",
+        "prompt": "Hydrometallurgy uses ___ to dissolve the metals before they are separated.",
         "answer": [
           "acid"
         ],
@@ -786,7 +797,7 @@
       {
         "id": "l4-s4-q06",
         "type": "complete",
-        "prompt": "Direct recycling keeps the ___ material intact.",
+        "prompt": "In direct recycling, the ___ material is not broken down and can be reused.",
         "answer": [
           "cathode"
         ],
@@ -795,9 +806,10 @@
       {
         "id": "l4-s4-q07",
         "type": "complete",
-        "prompt": "Only about ___ per cent of lithium-ion batteries are recycled worldwide.",
+        "prompt": "Share of lithium-ion batteries currently recycled around the world: about ___ per cent.",
         "answer": [
-          "five"
+          "five",
+          "5"
         ],
         "why": "The lecturer says 'only about five per cent of lithium-ion batteries are recycled worldwide'."
       },
@@ -817,7 +829,7 @@
       {
         "id": "l4-s4-q09",
         "type": "complete",
-        "prompt": "Damaged batteries are classed as ___ goods.",
+        "prompt": "Batteries that are damaged count as ___ goods for transport purposes.",
         "answer": [
           "hazardous"
         ],

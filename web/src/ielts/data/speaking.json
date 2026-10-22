@@ -29,7 +29,7 @@
     "How long have you lived there?",
     "What do you like about your accommodation?",
     "Is there anything you would change about your home?",
-    "How important is it to have a comfortable home?",
+    "Is your home comfortable?",
     "Do you prefer living alone or with others?"
    ]
   },
@@ -60,10 +60,10 @@
    "questions": [
     "Do you enjoy cooking?",
     "What is your favourite cuisine?",
-    "Can you cook your national dishes?",
+    "Can you cook any traditional dishes from your country?",
     "How often do you eat out?",
     "What was your favourite food as a child?",
-    "Do you think it's important to eat healthy?"
+    "Do you try to eat healthily?"
    ]
   },
   {
@@ -72,9 +72,9 @@
     "How often do you use technology in your daily life?",
     "What technological devices do you use most?",
     "How has technology changed your life?",
-    "Do you think technology has more advantages or disadvantages?",
+    "Do you find technology useful in your daily life?",
     "What new technology would you like to have?",
-    "Do you think people spend too much time on technology?"
+    "Do you spend a lot of time on your phone?"
    ]
   },
   {
@@ -118,7 +118,7 @@
     "How often do you read?",
     "What was your favourite book as a child?",
     "Do you prefer reading physical books or digital books?",
-    "Has reading habits changed with technology?"
+    "Has technology changed the way you read?"
    ]
   },
   {
@@ -194,7 +194,7 @@
     "Do you have any pictures or paintings on the walls at home?",
     "Do you ever visit art galleries?",
     "What kind of art do you like?",
-    "Do you think art is important for children?",
+    "Is there an artist or painting you like?",
     "Would you like to learn a new artistic skill?"
    ]
   },
@@ -206,7 +206,7 @@
     "What do people usually do in parks in your city?",
     "Did you play in parks when you were a child?",
     "Do you have a garden, or would you like one?",
-    "Should cities create more green spaces?"
+    "Would you like more parks in your area?"
    ]
   },
   {
@@ -216,7 +216,7 @@
     "What animals are common in your country?",
     "Do you like visiting zoos or wildlife parks?",
     "Is there an animal you are afraid of?",
-    "Why do you think so many people keep pets?",
+    "Do your friends or family keep pets?",
     "Would you like to work with animals?"
    ]
   },
@@ -239,7 +239,7 @@
     "Do you find it easy to fall asleep?",
     "What do you do to relax before going to bed?",
     "Did you sleep more when you were younger?",
-    "Do you think people today get enough sleep?"
+    "Do you get enough sleep these days?"
    ]
   },
   {
@@ -247,7 +247,7 @@
    "questions": [
     "How do you usually celebrate your birthday?",
     "Which birthday do you remember most clearly?",
-    "Do you think birthdays are more important for children or adults?",
+    "Did you enjoy birthdays more when you were a child?",
     "Do you prefer giving or receiving birthday presents?",
     "How do people in your country celebrate birthdays?",
     "Do you always remember your friends' birthdays?"
@@ -282,7 +282,7 @@
     "How did you start learning English?",
     "What is the most difficult part of learning a new language?",
     "Would you like to learn another language in the future?",
-    "Do you think children learn languages more easily than adults?",
+    "Do you use any apps to learn languages?",
     "How do you practise English outside class?"
    ]
   },
@@ -294,7 +294,7 @@
     "What kinds of museums are there in your city?",
     "Did your school take you to museums when you were young?",
     "Do you prefer museums with interactive exhibits or traditional displays?",
-    "Should museums be free to enter?"
+    "Is there a museum you would like to visit?"
    ]
   },
   {
@@ -316,7 +316,7 @@
     "Can you concentrate when there is noise around you?",
     "Do you prefer to study or work in silence or with background sound?",
     "Was your neighbourhood noisier when you were a child?",
-    "Do you think cities should do more to reduce noise?"
+    "Do you do anything to avoid noise at home?"
    ]
   },
   {
@@ -337,8 +337,8 @@
     "Do you ride a bicycle yourself?",
     "Are there enough cycle lanes where you live?",
     "Would you recommend cycling to a friend who lives in the city centre?",
-    "What are the main risks of cycling in heavy traffic?",
-    "Do you think cycling will become more popular in the future?"
+    "Do you feel safe cycling in your city?",
+    "Would you like to cycle more often in the future?"
    ]
   }
  ],
@@ -495,7 +495,7 @@
     "How do people cope with unexpected major life events?",
     "What role does community support play in significant life events?"
    ],
-   "modelAnswer": "One of the most important events in my life was when I graduated from secondary school and passed my university entrance examination. This happened about four years ago, and it was a turning point for me in many ways. This event involved not just myself, but my entire family, particularly my parents and teachers who had supported me throughout my schooling. The actual day of the exam results was quite emotional – when I found out that I'd passed and got into my first-choice university, I felt an overwhelming sense of relief and achievement. To provide some context, I come from a family where I was the first generation to have the opportunity to attend university. My parents had worked incredibly hard to provide me with good education, and there were certainly moments during my final year when I doubted whether I could succeed. This achievement was important to me for several reasons. Firstly, it represented the culmination of years of hard work and dedication. Secondly, it opened up opportunities that wouldn't have been available otherwise – university education expanded my horizons and allowed me to pursue my genuine interests. Thirdly, and perhaps most significantly, it validated my parents' investment in my education and their sacrifices. Beyond the personal achievement, this event was a turning point in my life because it represented a transition to adulthood and independence. Moving to university meant leaving home and learning to navigate life on my own. The experience also instilled in me a deeper sense of responsibility and purpose. Since that event, I've become much more aware of how privileged I am and how important it is to make the most of these opportunities. It fundamentally shaped my current goals and aspirations."
+   "modelAnswer": "One of the most important events in my life was when I graduated from secondary school and passed my university entrance examination. This happened about four years ago, and it was a turning point for me in many ways. This event involved not just myself, but my entire family, particularly my parents and teachers who had supported me throughout my schooling. The actual day of the exam results was quite emotional – when I found out that I'd passed and got into my first-choice university, I felt an overwhelming sense of relief and achievement. To provide some context, I come from a family where I was the first person in my family to go to university. My parents had worked incredibly hard to provide me with good education, and there were certainly moments during my final year when I doubted whether I could succeed. This achievement was important to me for several reasons. Firstly, it represented the culmination of years of hard work and dedication. Secondly, it opened up opportunities that wouldn't have been available otherwise – university education expanded my horizons and allowed me to pursue my genuine interests. Thirdly, and perhaps most significantly, it validated my parents' investment in my education and their sacrifices. Beyond the personal achievement, this event was a turning point in my life because it represented a transition to adulthood and independence. Moving to university meant leaving home and learning to navigate life on my own. The experience also instilled in me a deeper sense of responsibility and purpose. Since that event, I've become much more aware of how privileged I am and how important it is to make the most of these opportunities. It fundamentally shaped my current goals and aspirations."
   },
   {
    "id": "s2-10",
@@ -543,10 +543,10 @@
    "part3": [
     "What do you think will be the most popular travel destinations in the future?",
     "How should tourism balance development and environmental conservation?",
-    "Has the pandemic changed the way people think about travel?",
+    "How has the internet changed the way people plan their trips?",
     "What are the cultural responsibilities of tourists visiting other countries?"
    ],
-   "modelAnswer": "I'd really like to visit Iceland at some point in the future. It's a country I've been fascinated by for quite some time, particularly because of its unique natural landscapes and geological features. If I were to visit, I'd obviously want to see the major attractions like Niagara Falls – well actually, the Icelandic equivalent – the waterfalls, geysers, and glaciers. I think I'd spend time exploring both the natural wonders and also the cultural aspects of the country. I'd love to experience the Northern Lights if I go during winter, and I'd also be interested in visiting the Blue Lagoon and exploring Reykjavik's culture and architecture. Ideally, I'd like to go with my close friends or family members. There's something special about sharing travel experiences with people you're close to. As for why I'd like to visit, it's primarily because Iceland represents a perfect combination of raw natural beauty and geographical significance. The country sits on the meeting point of the Atlantic and Arctic oceans, and it has dramatic geological features that showcase the earth's dynamic nature – volcanic landscapes, glacier systems, and geothermal activity. From an environmental perspective, Iceland is also quite progressive in terms of renewable energy use, which aligns with my interests in sustainability. Beyond the physical landscape, I'm curious about Icelandic culture and how people have adapted to living in such an extreme climate. The country has a fascinating history and a unique literature and artistic tradition. What really appeals to me is that visiting Iceland would combine my interests in environmental science, travel, and cultural exploration. I think it would be an incredibly enriching experience that would deepen my understanding of our planet's geography and human adaptation."
+   "modelAnswer": "I'd really like to visit Iceland at some point in the future. It's a country I've been fascinated by for quite some time, particularly because of its unique natural landscapes and geological features. If I were to visit, I'd obviously want to see the major attractions like Gullfoss waterfall, geysers and glaciers. I think I'd spend time exploring both the natural wonders and also the cultural aspects of the country. I'd love to experience the Northern Lights if I go during winter, and I'd also be interested in visiting the Blue Lagoon and exploring Reykjavik's culture and architecture. Ideally, I'd like to go with my close friends or family members. There's something special about sharing travel experiences with people you're close to. As for why I'd like to visit, it's primarily because Iceland represents a perfect combination of raw natural beauty and geographical significance. The country sits on the meeting point of the Atlantic and Arctic oceans, and it has dramatic geological features that showcase the earth's dynamic nature – volcanic landscapes, glacier systems, and geothermal activity. From an environmental perspective, Iceland is also quite progressive in terms of renewable energy use, which aligns with my interests in sustainability. Beyond the physical landscape, I'm curious about Icelandic culture and how people have adapted to living in such an extreme climate. The country has a fascinating history and a unique literature and artistic tradition. What really appeals to me is that visiting Iceland would combine my interests in environmental science, travel, and cultural exploration. I think it would be an incredibly enriching experience that would deepen my understanding of our planet's geography and human adaptation."
   },
   {
    "id": "s2-13",
@@ -580,7 +580,7 @@
     "What role do traditions play in building community identity?",
     "Do you think young people should learn about and participate in traditional practices?"
    ],
-   "modelAnswer": "I'd like to describe the tradition of Tet, which is the Vietnamese Lunar New Year celebration that's central to my family's cultural identity. Tet is celebrated once a year, typically in late January or February depending on the lunar calendar, and the celebration usually lasts for about a week, though the most significant days are the first three days of the new lunar year. The celebration involves multiple rituals and activities. Traditionally, families prepare special foods – we make a particular sticky rice cake called bánh chưng. We also clean our houses thoroughly to symbolize getting rid of bad luck and starting fresh. On the eve of Tet, we arrange offerings for our ancestors and pay respects. We gather for special meals, and it's customary to visit relatives and friends. Everyone wears new clothes, and children receive small gifts of money in red envelopes. Who participates really varies – immediate family members always participate actively, but often extended family members come together as well. For me, this tradition is deeply meaningful for several reasons. Firstly, it's a time when the entire extended family makes a conscious effort to be together, which in our modern dispersed society is increasingly rare. Secondly, it connects me to my cultural heritage and my ancestors. When I'm preparing bánh chưng following my grandmother's recipe or paying respects to ancestors, I feel connected to generations before me. Thirdly, the tradition embodies important values – renewal, gratitude, family loyalty, and hope for the future. The Tet celebration represents not just a new calendar year, but a philosophical reset and a reaffirmation of family bonds. Even though I now live away from Vietnam for studies, observing Tet, even in a modified way, reminds me of who I am and where I come from. It's a tradition that grounds me culturally and emotionally."
+   "modelAnswer": "I'd like to describe the tradition of Tet, which is the Vietnamese Lunar New Year celebration that's central to my family's cultural identity. Tet is celebrated once a year, typically in late January or February depending on the lunar calendar, and the celebration usually lasts for about a week, though the most significant days are the first three days of the new lunar year. The celebration involves multiple rituals and activities. Traditionally, families prepare special foods – we make a particular sticky rice cake called bánh chưng. We also clean our houses thoroughly to symbolize getting rid of bad luck and starting fresh. On the eve of Tet, we arrange offerings for our ancestors and pay respects. We gather for special meals, and it's customary to visit relatives and friends. Everyone wears new clothes, and children receive small gifts of money in red envelopes. Who participates really varies – immediate family members always participate actively, but often extended family members come together as well. For me, this tradition is deeply meaningful for several reasons. Firstly, it's a time when the entire extended family makes a conscious effort to be together, which in our modern dispersed society is increasingly rare. Secondly, it connects me to my cultural heritage and my ancestors. When I'm preparing bánh chưng following my grandmother's recipe or paying respects to ancestors, I feel connected to generations before me. Thirdly, the tradition embodies important values – renewal, gratitude, family loyalty, and hope for the future. Even though I now live away from Vietnam for studies, observing Tet, even in a modified way, reminds me of who I am and where I come from. It's a tradition that grounds me culturally and emotionally."
   },
   {
    "id": "s2-15",
@@ -597,7 +597,7 @@
     "Do you think people should follow their instincts or use logic when deciding?",
     "What are the consequences of making the wrong decision in significant life choices?"
    ],
-   "modelAnswer": "One of the most difficult decisions I've had to make was choosing between pursuing my passion for environmental science or accepting a very lucrative job offer from a large multinational company. This happened about two years ago when I was finishing secondary school and needed to decide on my university path and immediate future. The difficulty stemmed from several factors. Firstly, my family's financial situation – my parents had invested significantly in my education, and the high-paying job would have allowed me to contribute to the family immediately and reduce their financial burden. Secondly, I had received genuine interest from a prestigious company that, on paper, was an excellent opportunity with great salary and career prospects. However, I was also passionate about environmental science and believed that my skills could contribute meaningfully to addressing environmental challenges. What made it particularly difficult was that these two options represented fundamentally different values – financial security and family obligation versus personal fulfillment and societal contribution. After considerable reflection and discussion with my parents, I decided to pursue the university degree in environmental science. My reasoning was that I could always pursue financial opportunities later, but this passion for environmental work felt like a now-or-never decision. My parents were surprisingly supportive once they understood how much it meant to me, though I know they had some apprehension about the financial implications. Honestly, my feelings about this decision have been complex. There's been satisfaction in choosing something I'm genuinely passionate about, and my university experience has confirmed that I made the right choice. However, there's also been occasional anxiety about financial security and guilt about not immediately helping my family financially. But I believe that ultimately, making a choice aligned with your values, even when it's risky, tends to lead to greater fulfillment in the long run. This decision taught me that sometimes the brave choice and the financially prudent choice aren't the same thing, and that's okay."
+   "modelAnswer": "One of the most difficult decisions I've had to make was choosing between studying environmental science and accepting a well-paid job offer from a large company. This happened about four years ago, when I was finishing secondary school and had to decide what to do next. The difficulty stemmed from my family's financial situation. My parents had invested a lot in my education, and the job would have let me contribute to the household immediately and reduce their burden. At the same time, I was passionate about environmental science and believed I could contribute to solving real environmental problems. What made it so hard was that the two options represented different values – financial security and family obligation versus personal fulfilment. After considerable reflection and long discussions with my parents, I decided to go to university and study environmental science. My reasoning was that I could always look for well-paid work later, but this passion felt like a now-or-never choice. My parents were surprisingly supportive once they understood how much it meant to me, though I know they were anxious about money. Honestly, my feelings about the decision have been mixed. I'm satisfied that I chose something I care about, and my course has confirmed it was the right choice. However, I occasionally feel anxious about financial security and guilty about not helping my family sooner. Still, I believe that making a choice aligned with your values, even when it's risky, usually leads to greater fulfilment in the long run."
   },
   {
    "id": "s2-16",
@@ -615,7 +615,7 @@
     "In your opinion, should teachers focus more on academic knowledge or developing social skills?",
     "How might artificial intelligence affect the role of teachers in the future?"
    ],
-   "modelAnswer": "Well, I'd like to tell you about my secondary school physics teacher, Mr. Chen, who I really respected. He taught us for two years, and honestly, he was quite possibly the most memorable teacher I had throughout my education. He was quite a tall guy in his mid-forties with a really calm demeanor and, you know, he always had this particular way of explaining complex theories that somehow made them seem much simpler than they actually were. What I really admired about him was that he didn't just teach us the formulas and expect us to memorize them. Instead, he would often bring in real-world examples and conduct practical experiments in class to illustrate how physics worked in everyday life. Beyond his teaching, he was an incredibly patient person who seemed genuinely interested in his students' understanding rather than just getting through the curriculum. He'd spend extra time after class helping struggling students, and he never made anyone feel bad about asking questions, no matter how many times they had to ask. I suppose what I admired most was his dedication and enthusiasm for the subject, combined with his genuine care for his students' development. He made me realize that learning could be both engaging and enjoyable, and honestly, he was a big influence on my decision to pursue science at university."
+   "modelAnswer": "Well, I'd like to tell you about my secondary school physics teacher, Mr. Chen, who I really respected. He taught us for two years, and honestly, he was quite possibly the most memorable teacher I had throughout my education. He was quite a tall guy in his mid-forties with a really calm demeanour and, you know, he always had this particular way of explaining complex theories that somehow made them seem much simpler than they actually were. What I really admired about him was that he didn't just teach us the formulas and expect us to memorize them. Instead, he would often bring in real-world examples and conduct practical experiments in class to illustrate how physics worked in everyday life. Beyond his teaching, he was an incredibly patient person who seemed genuinely interested in his students' understanding rather than just getting through the curriculum. He'd spend extra time after class helping struggling students, and he never made anyone feel bad about asking questions, no matter how many times they had to ask. I suppose what I admired most was his dedication and enthusiasm for the subject, combined with his genuine care for his students' development. He made me realize that learning could be both engaging and enjoyable, and honestly, he was a big influence on my decision to pursue science at university."
   },
   {
    "id": "s2-17",
@@ -631,9 +631,9 @@
     "How do you think transportation will change in the next twenty years?",
     "What role does traveling play in building cultural understanding between different nations?",
     "Should governments invest more in improving public transportation systems?",
-    "How has the pandemic affected people's attitudes towards traveling?"
+    "How has social media affected people's attitudes towards travelling?"
    ],
-   "modelAnswer": "Right, so I'm going to talk about a trip I took to visit my grandmother in rural Vietnam about three years ago. I was flying from Ho Chi Minh City, and I had to take several connecting buses to reach her village, which was quite far inland. The main challenge was that the roads were absolutely terrible, basically just dirt tracks, and the journey that was supposed to take five hours ended up taking over twelve hours. To make matters worse, the vehicle broke down midway, and we were stranded in the middle of nowhere for several hours. To be honest, it was incredibly frustrating because I was exhausted, and I had no idea how long the breakdown would take. However, I managed to stay relatively calm by chatting with other passengers, drinking water, and just accepting that there was nothing I could do about the situation. I suppose what really helped was shifting my perspective and seeing it as an adventure rather than an ordeal. By the time I reached my grandmother's house, I was absolutely shattered, but the experience taught me a lot about patience and adaptability. It really put things into perspective, and I became much more grateful for the conveniences we often take for granted in the city. I also gained a deeper appreciation for my grandmother's resilience, living in such a remote area."
+   "modelAnswer": "Right, so I'm going to talk about a trip I took to visit my grandmother in rural Vietnam about three years ago. I was travelling from Ho Chi Minh City, and I had to take several connecting buses to reach her village, which was quite far inland. The main challenge was that the roads were absolutely terrible, basically just dirt tracks, and the journey that was supposed to take five hours ended up taking over twelve hours. To make matters worse, the vehicle broke down midway, and we were stranded in the middle of nowhere for several hours. To be honest, it was incredibly frustrating because I was exhausted, and I had no idea how long the breakdown would take. However, I managed to stay relatively calm by chatting with other passengers, drinking water, and just accepting that there was nothing I could do about the situation. I suppose what really helped was shifting my perspective and seeing it as an adventure rather than an ordeal. By the time I reached my grandmother's house, I was absolutely shattered, but the experience taught me a lot about patience and adaptability. It really put things into perspective, and I became much more grateful for the conveniences we often take for granted in the city. I also gained a deeper appreciation for my grandmother's resilience, living in such a remote area."
   },
   {
    "id": "s2-18",
@@ -651,7 +651,7 @@
     "What makes a public place successful and welcoming for different age groups?",
     "How can cities balance the need for public spaces with commercial development?"
    ],
-   "modelAnswer": "I'd like to describe the central park in my city, which is, well, absolutely my favorite public space. It's a fairly large park located right in the heart of the downtown area, and it's quite easily accessible by public transport. The park features lots of open grassy areas, several walking trails, a beautiful lake in the center, and various recreational facilities like tennis courts and basketball courts. There are always people there doing different activities—some jogging, others having picnics with their families, and quite a few just sitting on the benches reading or simply relaxing. On weekends, you'll often see street performers and local events happening there. What I really like about this place is that it offers a sense of tranquility amidst all the hustle and bustle of the city. Whenever I'm feeling stressed or just need a break from my routine, I head there and spend some time surrounded by nature. The fact that it brings together people from all walks of life and creates a sense of community is something I particularly appreciate. It's one of those spaces where you feel genuinely relaxed, and, you know, it's free to access, which is quite important for inclusivity."
+   "modelAnswer": "I'd like to describe the central park in my city, which is, well, absolutely my favourite public space. It's a fairly large park located right in the heart of the downtown area, and it's quite easily accessible by public transport. The park features lots of open grassy areas, several walking trails, a beautiful lake in the centre, and various recreational facilities like tennis courts and basketball courts. There are always people there doing different activities—some jogging, others having picnics with their families, and quite a few just sitting on the benches reading or simply relaxing. On weekends, you'll often see street performers and local events happening there. What I really like about this place is that it offers a sense of tranquility amidst all the hustle and bustle of the city. Whenever I'm feeling stressed or just need a break from my routine, I head there and spend some time surrounded by nature. The fact that it brings together people from all walks of life and creates a sense of community is something I particularly appreciate. It's one of those spaces where you feel genuinely relaxed, and, you know, it's free to access, which is quite important for inclusivity."
   },
   {
    "id": "s2-19",
@@ -669,7 +669,7 @@
     "What technologies do you think will become obsolete in the next decade?",
     "How can we balance the convenience of technology with concerns about privacy and security?"
    ],
-   "modelAnswer": "Well, I'd have to say my smartphone is probably the piece of technology I use most throughout the day, without a doubt. Honestly, I use it for practically everything—communication, work emails, navigation, entertainment, you name it. I wake up in the morning and check my messages, use it to plan my day through calendar reminders, and it accompanies me basically wherever I go. What I particularly like about it is the convenience it offers, being able to access information instantly and stay connected with friends and family regardless of where I am. The camera quality is impressive as well, so I can capture memories quite easily. More importantly though, without my smartphone, my life would be significantly disrupted. I rely on it for work-related tasks, coordinating with friends, managing my finances through banking apps, and even fitness tracking. Frankly, I can't imagine trying to navigate a city without GPS, or staying in touch with my family abroad without instant messaging and video calls. That said, I do recognize there's a downside to being so reliant on a single device, and I've tried to be more mindful about balancing screen time with other activities. But ultimately, it's become such an integral part of modern life that functioning without it seems almost impossible."
+   "modelAnswer": "Well, I'd have to say my laptop is probably the piece of technology I use most throughout the day, without a doubt. Honestly, I use it for practically everything – coursework, emails, research, video calls, watching films, you name it. I switch it on first thing in the morning to check my timetable, and it sits on my desk until late in the evening. What I particularly like about it is its power and flexibility. I can have ten windows open at once, write an essay in one and watch a lecture in another, which would be impossible on a small screen. The keyboard makes it comfortable to type for hours, and the battery lasts a whole day. More importantly though, without my laptop my life would be significantly disrupted. I couldn't submit assignments, edit documents, or join online classes, and I'd have to spend hours in the library just to use a shared computer. Frankly, I can't imagine writing a long report on a phone, or sharing files with my teammates without it. That said, I do recognise there's a downside to being so reliant on a single device, and I've tried to take regular breaks to rest my eyes and stretch. But ultimately, it's become such an integral part of my studies that functioning without it seems almost impossible."
   },
   {
    "id": "s2-20",
@@ -763,7 +763,7 @@
   },
   {
    "id": "s2-25",
-   "cue": "Describe a neighbor you know.",
+   "cue": "Describe a neighbour you know.",
    "bullets": [
     "who this person is",
     "how you know them",
@@ -777,7 +777,7 @@
     "What makes a good neighbor in today's society?",
     "How do different cultures view the concept of community differently?"
    ],
-   "modelAnswer": "Well, I'd like to describe my neighbor, Mrs. Wong, who I've known for about four years now since I moved into my current apartment. She's quite elderly, probably in her seventies, and has lived in the building for over twenty years. We initially met when she introduced herself during a building maintenance issue, and we've gradually developed a friendly relationship. Though we come from different generations and have quite different lifestyles, we share a genuine interest in gardening and cooking, which became the basis for our connection. She often grows vegetables in her small balcony garden, and she's taught me quite a bit about cultivating herbs and plants. I think of her as a genuinely kind and thoughtful person, quite patient, and always willing to help neighbors. She's the sort of person who notices when someone's having a rough time and offers practical help without being intrusive. When I was moving in, she helped me with recommendations for local services and has continued to be a source of useful information about the neighborhood. Though we're quite different in terms of age and background, I've come to respect her wisdom and appreciate her presence in the building. There's something reassuring about having a neighbor like her who actually cares about community. I think the world could use more people like Mrs. Wong who actively contribute to building stronger neighborhood connections rather than simply coexisting in isolated units."
+   "modelAnswer": "Well, I'd like to describe my neighbour, Mrs. Wong, who I've known for about four years now since I moved into my current apartment. She's quite elderly, probably in her seventies, and has lived in the building for over twenty years. We initially met when she introduced herself during a building maintenance issue, and we've gradually developed a friendly relationship. Though we come from different generations and have quite different lifestyles, we share a genuine interest in gardening and cooking, which became the basis for our connection. She often grows vegetables in her small balcony garden, and she's taught me quite a bit about cultivating herbs and plants. I think of her as a genuinely kind and thoughtful person, quite patient, and always willing to help neighbours. She's the sort of person who notices when someone's having a rough time and offers practical help without being intrusive. When I was moving in, she helped me with recommendations for local services and has continued to be a source of useful information about the neighbourhood. Though we're quite different in terms of age and background, I've come to respect her wisdom and appreciate her presence in the building. There's something reassuring about having a neighbour like her who actually cares about community. I think the world could use more people like Mrs. Wong who actively contribute to building stronger neighbourhood connections rather than simply coexisting in isolated units."
   },
   {
    "id": "s2-26",
@@ -795,7 +795,7 @@
     "What role does clothing play in professional settings?",
     "Do you think clothing preferences are more influenced by culture or personal taste?"
    ],
-   "modelAnswer": "I'm going to tell you about a denim jacket that I absolutely adore and wear quite frequently. I actually purchased it during a trip to Japan about three years ago at a vintage shop in Tokyo. It's a classic-cut jacket in a slightly faded blue, and it's got this particular worn-in quality that gives it a lot of character, rather than looking brand new. I tend to wear it during autumn and spring when the weather's a bit cool but not freezing, and it works with practically everything from casual jeans to dresses. What I particularly like about this jacket is that it's incredibly versatile, but beyond the practicality, there's something about it that feels quite personal. The faded color and subtle distressing give it a certain charm that you simply can't replicate with new clothing. Every time I wear it, it reminds me of my time in Japan and the experience of finding such a treasure in that little vintage shop. What I really appreciate is how it's become a sort of reliable companion—I reach for it constantly, and it seems to suit most occasions, which is quite rare for a single piece of clothing. There's also something quite appealing about wearing vintage clothing from a sustainability perspective, knowing that I'm not contributing to excessive consumption. Beyond all that though, it's the memories and the comfort associated with this particular jacket that make it special. It's interesting how a simple piece of clothing can carry such significance."
+   "modelAnswer": "I'm going to tell you about a denim jacket that I absolutely adore and wear quite frequently. I actually purchased it during a trip to Japan about three years ago at a vintage shop in Tokyo. It's a classic-cut jacket in a slightly faded blue, and it's got this particular worn-in quality that gives it a lot of character, rather than looking brand new. I tend to wear it during autumn and spring when the weather's a bit cool but not freezing, and it works with practically everything from casual jeans to dresses. What I particularly like about this jacket is that it's incredibly versatile, but beyond the practicality, there's something about it that feels quite personal. The faded colour and subtle distressing give it a certain charm that you simply can't replicate with new clothing. Every time I wear it, it reminds me of my time in Japan and the experience of finding such a treasure in that little vintage shop. What I really appreciate is how it's become a sort of reliable companion—I reach for it constantly, and it seems to suit most occasions, which is quite rare for a single piece of clothing. There's also something quite appealing about wearing vintage clothing from a sustainability perspective, knowing that I'm not contributing to excessive consumption. Beyond all that though, it's the memories and the comfort associated with this particular jacket that make it special. It's interesting how a simple piece of clothing can carry such significance."
   },
   {
    "id": "s2-27",
@@ -867,7 +867,7 @@
     "What strategies do you think are most effective for managing a busy lifestyle?",
     "Do you think there's a cultural difference in how different societies view busy-ness?"
    ],
-   "modelAnswer": "I'm going to talk about a particularly hectic period during university when I was juggling several significant commitments simultaneously. This was during my final year, and I had to balance completing my thesis project, working part-time to support myself financially, and preparing for my final examinations. The main reason I was so busy was that I'd underestimated the time required for my thesis, which involved quite complex data analysis and research, and it coincided with the busiest period at my part-time job. During this three-month stretch, I was probably working or studying almost every day, rarely having weekends completely free. It was quite demanding, to be honest, and there were certainly moments when I felt overwhelmed and questioned whether I could manage everything. To cope with this intensity, I had to develop quite strict organizational strategies. I created a detailed schedule allocating specific time blocks to different tasks, and I became quite disciplined about prioritizing what absolutely needed to be done versus what could wait. I also learned to delegate some work responsibilities and communicate my constraints to my employer, who were actually quite understanding. Additionally, I made sure to protect at least some personal time for exercise and sleep, as I realized that completely neglecting self-care would only make me less productive. The experience was challenging, certainly, but ultimately quite rewarding because I successfully managed to complete everything to a reasonable standard while maintaining my health. It taught me valuable lessons about prioritization, time management, and the importance of asking for help when necessary."
+   "modelAnswer": "I'm going to talk about a particularly hectic period during university when I was juggling several significant commitments simultaneously. This was during my final year, and I had to balance completing my thesis project, working part-time to support myself financially, and preparing for my final examinations. The main reason I was so busy was that I'd underestimated the time required for my thesis, which involved quite complex data analysis and research, and it coincided with the busiest period at my part-time job. During this three-month stretch, I was probably working or studying almost every day, rarely having weekends completely free. It was quite demanding, to be honest, and there were certainly moments when I felt overwhelmed and questioned whether I could manage everything. To cope with this intensity, I had to develop quite strict organizational strategies. I created a detailed schedule allocating specific time blocks to different tasks, and I became quite disciplined about prioritizing what absolutely needed to be done versus what could wait. I also learned to delegate some work responsibilities and communicate my constraints to my employer, who was actually quite understanding. Additionally, I made sure to protect at least some personal time for exercise and sleep, as I realized that completely neglecting self-care would only make me less productive. The experience was challenging, certainly, but ultimately quite rewarding because I successfully managed to complete everything to a reasonable standard while maintaining my health. It taught me valuable lessons about prioritization, time management, and the importance of asking for help when necessary."
   },
   {
    "id": "s2-31",

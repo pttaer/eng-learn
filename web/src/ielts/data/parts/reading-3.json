@@ -139,7 +139,7 @@
    {
     "id": "r13-q10",
     "type": "summary",
-    "prompt": "Summary: In 2012, a sudden rise in carbon-14 was found in the rings of a Japanese ______.",
+    "prompt": "Summary: A discovery made public in 2012 revealed an abrupt carbon-14 increase in the growth rings of a ______ tree from Japan.",
     "answer": [
      "cedar"
     ],
@@ -148,7 +148,7 @@
    {
     "id": "r13-q11",
     "type": "summary",
-    "prompt": "Summary: Because these spikes occur in the same ring all over the world, they serve as fixed ______.",
+    "prompt": "Summary: Since trees across the globe record these events in the same ring, the events provide reliable dating ______.",
     "answer": [
      "markers"
     ],
@@ -246,7 +246,7 @@
    {
     "id": "r14-q04",
     "type": "ynng",
-    "prompt": "The Hawaiian language nests have been more successful than the Maori ones.",
+    "prompt": "The Hawaiian language nests have been more successful than the Māori ones.",
     "answer": "NOT GIVEN",
     "why": "Paragraph D says only that \"The model was soon adapted in Hawaii\". The writer never compares the success of the two programmes."
    },
@@ -316,25 +316,26 @@
    {
     "id": "r14-q10",
     "type": "sentence",
-    "prompt": "In the Maori language nests, children are often looked after by ______.",
+    "prompt": "In the Māori language nests, children are often looked after by ______.",
     "answer": [
      "grandparents"
     ],
-    "why": "Paragraph D: children are cared for in Maori, \"often by grandparents who learned the language as their first\"."
+    "why": "Paragraph D: children are cared for in Māori, \"often by grandparents who learned the language as their first\"."
    },
    {
     "id": "r14-q11",
     "type": "sentence",
     "prompt": "Old recordings kept in ______ have helped some communities recover lost words.",
     "answer": [
-     "university archives"
+     "university archives",
+     "archives"
     ],
     "why": "Paragraph F: \"Recordings made decades ago by anthropologists, often stored in university archives\"."
    },
    {
     "id": "r14-q12",
     "type": "short",
-    "prompt": "In which year were the first Maori language nests opened?",
+    "prompt": "In which year were the first Māori language nests opened?",
     "answer": [
      "1982"
     ],
@@ -544,7 +545,7 @@
     "type": "mcq",
     "prompt": "What does the writer say about active choice?",
     "options": [
-     "A. It avoids presuming what people want but adds effort.",
+     "A. It makes no assumptions about preferences, yet demands effort.",
      "B. It is the only truly neutral form of design available to planners.",
      "C. It has replaced defaults in most pension schemes and websites.",
      "D. It is a form of manipulation, especially when people are unaware."

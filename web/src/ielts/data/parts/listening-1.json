@@ -135,7 +135,8 @@
         "answer": [
           "07709524491",
           "oh seven seven oh nine five two double four nine one",
-          "zero seven seven zero nine five two double four nine one"
+          "zero seven seven zero nine five two double four nine one",
+          "07709 524491"
         ],
         "why": "The student states 'oh seven seven oh nine five two double four nine one'. The administrator clarifies 'just double four, not three' and the student confirms 'Yes, that's correct.' The final number is 07709524491."
       },
@@ -147,7 +148,10 @@
           "Monday, July the eighth",
           "8 July",
           "July 8",
-          "eighth of July"
+          "eighth of July",
+          "8th July",
+          "July 8th",
+          "8th of July"
         ],
         "why": "The student clearly states 'From Monday, July the eighth' at the beginning of his booking. This is the start date for his accommodation needs."
       },
@@ -159,7 +163,11 @@
           "Monday, August the nineteenth",
           "19 August",
           "August 19",
-          "nineteenth"
+          "nineteenth",
+          "19th August",
+          "August 19th",
+          "19th of August",
+          "nineteenth of August"
         ],
         "why": "The student self-corrects and states 'Through Monday, August the nineteenth' after initially saying Sunday, August the eighteenth. The administrator confirms 'Monday the nineteenth of August' as the final departure date."
       },
@@ -170,7 +178,8 @@
         "answer": [
           "single bedroom",
           "single",
-          "single bedroom with ensuite bathroom"
+          "single bedroom with ensuite bathroom",
+          "single room"
         ],
         "why": "The student requests 'A single bedroom' with 'its own bathroom if possible'. This clearly indicates the room type and ensuite bathroom preference."
       },
@@ -203,7 +212,11 @@
         "answer": [
           "June the fifteenth",
           "15 June",
-          "June 15"
+          "June 15",
+          "15th June",
+          "June 15th",
+          "15th of June",
+          "fifteenth of June"
         ],
         "why": "The administrator states 'Payment must be received by June the fifteenth'. This is the explicit deadline for the one-month deposit."
       },
@@ -373,7 +386,8 @@
         "prompt": "Discount available for pensioners:",
         "answer": [
           "ten percent",
-          "10%"
+          "10%",
+          "10 percent"
         ],
         "why": "The guide explains: 'pensioners receive a ten percent discount.' This is the specific discount percentage stated for pensioners."
       },
@@ -510,7 +524,8 @@
         "prompt": "Solar installation costs have decreased by:",
         "answer": [
           "sixty percent",
-          "60%"
+          "60%",
+          "60 percent"
         ],
         "why": "Emma states explicitly: 'Our data shows that installation costs have dropped by sixty percent over the last decade.' This is the specific percentage reduction mentioned."
       },
@@ -553,7 +568,7 @@
       {
         "id": "l1-s3-q06",
         "type": "mcq",
-        "prompt": "What does James say we have not yet fully addressed?",
+        "prompt": "What does James say the group has not yet fully addressed?",
         "options": [
           "A. Government policy and regulatory frameworks",
           "B. Grid infrastructure and distribution capacity",
@@ -686,11 +701,11 @@
       {
         "id": "l1-s4-q02",
         "type": "complete",
-        "prompt": "Dr. Chen names two main types of carbon sequestration: _______ and geological.",
+        "prompt": "The approach that stores carbon in plants, soils and other living systems is called _______ sequestration.",
         "answer": [
           "biological"
         ],
-        "why": "Dr. Chen explicitly states: 'There are essentially two main approaches: biological and geological sequestration.' This directly identifies the two main types."
+        "why": "Dr. Chen names 'two main approaches: biological and geological sequestration', then explains that 'Biological sequestration involves storing carbon in living organisms and ecosystems.'"
       },
       {
         "id": "l1-s4-q03",
@@ -713,7 +728,7 @@
       {
         "id": "l1-s4-q05",
         "type": "complete",
-        "prompt": "Storage formations for geological sequestration include saline aquifers and depleted oil and gas _______.",
+        "prompt": "Apart from underground salt-water layers, CO2 can be stored in oil and gas _______ that are no longer productive.",
         "answer": [
           "fields"
         ],
@@ -732,7 +747,7 @@
       {
         "id": "l1-s4-q07",
         "type": "complete",
-        "prompt": "Carbon capture currently runs from one hundred fifty to _______ dollars per ton of carbon dioxide.",
+        "prompt": "Upper end of the current cost of capturing and storing a ton of CO2: _______ dollars.",
         "answer": [
           "two hundred",
           "200"
@@ -751,7 +766,7 @@
       {
         "id": "l1-s4-q09",
         "type": "complete",
-        "prompt": "Government policies for carbon sequestration: carbon pricing and __________",
+        "prompt": "Besides putting a price on carbon, governments encourage these projects through __________",
         "answer": [
           "tax incentives"
         ],
@@ -762,7 +777,8 @@
         "type": "complete",
         "prompt": "Sequestration effectiveness requires integration with emission reductions and __________ __________",
         "answer": [
-          "renewable energy development"
+          "renewable energy development",
+          "renewable energy"
         ],
         "why": "Dr. Chen concludes: 'it must be combined with emission reductions and renewable energy development to effectively address climate change.' Renewable energy development is the essential complementary strategy."
       }

@@ -124,7 +124,7 @@
    {
     "id": "o01-q09",
     "type": "mcq",
-    "prompt": "Why must surveyors measure water temperature and salinity?",
+    "prompt": "Why must surveyors measure the properties of the water?",
     "options": [
      "A. They alter the colour scheme of the final map.",
      "B. They change the speed of sound in water.",
@@ -146,7 +146,7 @@
    {
     "id": "o01-q11",
     "type": "sentence",
-    "prompt": "Mapping software removes spikes caused by fish shoals or ______.",
+    "prompt": "Software filters out false spikes produced by shoals of fish or ______.",
     "answer": [
      "air bubbles"
     ],
@@ -165,11 +165,11 @@
    {
     "id": "o01-q13",
     "type": "summary",
-    "prompt": "Summary: Before sonar data is used, surveyors correct the readings for ______ and salinity.",
+    "prompt": "Summary: Profiling instruments record the salinity, pressure and ______ of the water so that sonar readings can be corrected.",
     "answer": [
      "temperature"
     ],
-    "why": "Paragraph F says 'Temperature, salinity and pressure all change the speed of sound', so corrections are needed for these conditions."
+    "why": "Paragraph F says 'Temperature, salinity and pressure all change the speed of sound' and 'Surveyors must measure these properties with profiling instruments, and they apply a correction to the sonar readings'. Salinity and pressure are already named, so only temperature fills the gap."
    }
   ]
  },
@@ -216,7 +216,7 @@
    {
     "id": "o02-q01",
     "type": "tfng",
-    "prompt": "Rooftop hives are now found on many office blocks and hotels.",
+    "prompt": "Rooftop hives are now found on office blocks and hotels.",
     "answer": "TRUE",
     "why": "Paragraph A says 'Rooftop hives now appear on office blocks, hotels and railway stations'."
    },
@@ -232,14 +232,14 @@
     "type": "ynng",
     "prompt": "Concentrated urban hives can have no effect on wild pollinators.",
     "answer": "NO",
-    "why": "Paragraph G says 'hundreds of hives in a single park could do so', meaning they could affect wild populations."
+    "why": "Paragraph G notes that 'hundreds of hives in a single park could do so', meaning they could affect wild populations."
    },
    {
     "id": "o02-q04",
     "type": "ynng",
     "prompt": "The success of urban beekeeping depends mainly on how hives are managed.",
     "answer": "YES",
-    "why": "Paragraph H says 'The debate, then, is less about whether bees belong in cities and more about how they are managed'."
+    "why": "Paragraph H says 'The debate, then, is less about whether bees belong in cities and more about how they are managed. The most successful projects combine careful hive numbers, public education and planting schemes'."
    },
    {
     "id": "o02-q05",
@@ -333,18 +333,18 @@
     "type": "mcq",
     "prompt": "Why do critics worry about large numbers of managed colonies?",
     "options": [
-     "A. They may compete with wild pollinators.",
+     "A. They may take resources that wild bees need.",
      "B. They produce too little honey to be worthwhile.",
      "C. They damage the trees growing along city streets.",
      "D. They frighten away visitors from busy city parks."
     ],
     "answer": "A",
-    "why": "Paragraph F says 'large numbers of managed colonies in one place can compete with wild pollinators'."
+    "why": "Paragraph F says 'large numbers of managed colonies in one place can compete with wild pollinators such as solitary bees, which have fewer resources'."
    },
    {
     "id": "o02-q13",
     "type": "mcq",
-    "prompt": "According to the writer, the competition argument depends mainly on",
+    "prompt": "Supporters say the competition argument depends on",
     "options": [
      "A. the age and experience of the beekeeper.",
      "B. the market price of honey in the city.",
@@ -352,7 +352,7 @@
      "D. the length of the autumn flowering season."
     ],
     "answer": "C",
-    "why": "Paragraph G says 'the competition argument depends on the scale of the hives'."
+    "why": "Paragraph G says 'Supporters respond that the competition argument depends on the scale of the hives'."
    }
   ]
  },
@@ -469,7 +469,7 @@
    {
     "id": "o03-q06",
     "type": "sentence",
-    "prompt": "Seeds are dried to a precise ______ level before storage.",
+    "prompt": "Before storage, seeds are dried until they reach an exact ______ level.",
     "answer": [
      "moisture"
     ],
@@ -478,7 +478,7 @@
    {
     "id": "o03-q07",
     "type": "sentence",
-    "prompt": "Some seed banks depend on a mixture of grants, university support and ______.",
+    "prompt": "Besides grants and university support, some seed banks rely on ______ paid by researchers.",
     "answer": [
      "fees"
     ],
@@ -505,7 +505,7 @@
      "A. They are too expensive for most governments to use.",
      "B. Every seed bank in the world has already adopted them.",
      "C. They overstate the market value of wild crop relatives.",
-     "D. They ignore the social side of conservation."
+     "D. They give too little weight to social aspects."
     ],
     "answer": "D",
     "why": "Paragraph F says 'both approaches underrate the social side of conservation'."

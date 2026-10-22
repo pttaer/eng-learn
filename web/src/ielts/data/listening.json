@@ -135,7 +135,8 @@
     "answer": [
      "07709524491",
      "oh seven seven oh nine five two double four nine one",
-     "zero seven seven zero nine five two double four nine one"
+     "zero seven seven zero nine five two double four nine one",
+     "07709 524491"
     ],
     "why": "The student states 'oh seven seven oh nine five two double four nine one'. The administrator clarifies 'just double four, not three' and the student confirms 'Yes, that's correct.' The final number is 07709524491."
    },
@@ -147,7 +148,10 @@
      "Monday, July the eighth",
      "8 July",
      "July 8",
-     "eighth of July"
+     "eighth of July",
+     "8th July",
+     "July 8th",
+     "8th of July"
     ],
     "why": "The student clearly states 'From Monday, July the eighth' at the beginning of his booking. This is the start date for his accommodation needs."
    },
@@ -159,7 +163,11 @@
      "Monday, August the nineteenth",
      "19 August",
      "August 19",
-     "nineteenth"
+     "nineteenth",
+     "19th August",
+     "August 19th",
+     "19th of August",
+     "nineteenth of August"
     ],
     "why": "The student self-corrects and states 'Through Monday, August the nineteenth' after initially saying Sunday, August the eighteenth. The administrator confirms 'Monday the nineteenth of August' as the final departure date."
    },
@@ -170,7 +178,8 @@
     "answer": [
      "single bedroom",
      "single",
-     "single bedroom with ensuite bathroom"
+     "single bedroom with ensuite bathroom",
+     "single room"
     ],
     "why": "The student requests 'A single bedroom' with 'its own bathroom if possible'. This clearly indicates the room type and ensuite bathroom preference."
    },
@@ -203,7 +212,11 @@
     "answer": [
      "June the fifteenth",
      "15 June",
-     "June 15"
+     "June 15",
+     "15th June",
+     "June 15th",
+     "15th of June",
+     "fifteenth of June"
     ],
     "why": "The administrator states 'Payment must be received by June the fifteenth'. This is the explicit deadline for the one-month deposit."
    },
@@ -373,7 +386,8 @@
     "prompt": "Discount available for pensioners:",
     "answer": [
      "ten percent",
-     "10%"
+     "10%",
+     "10 percent"
     ],
     "why": "The guide explains: 'pensioners receive a ten percent discount.' This is the specific discount percentage stated for pensioners."
    },
@@ -510,7 +524,8 @@
     "prompt": "Solar installation costs have decreased by:",
     "answer": [
      "sixty percent",
-     "60%"
+     "60%",
+     "60 percent"
     ],
     "why": "Emma states explicitly: 'Our data shows that installation costs have dropped by sixty percent over the last decade.' This is the specific percentage reduction mentioned."
    },
@@ -553,7 +568,7 @@
    {
     "id": "l1-s3-q06",
     "type": "mcq",
-    "prompt": "What does James say we have not yet fully addressed?",
+    "prompt": "What does James say the group has not yet fully addressed?",
     "options": [
      "A. Government policy and regulatory frameworks",
      "B. Grid infrastructure and distribution capacity",
@@ -686,11 +701,11 @@
    {
     "id": "l1-s4-q02",
     "type": "complete",
-    "prompt": "Dr. Chen names two main types of carbon sequestration: _______ and geological.",
+    "prompt": "The approach that stores carbon in plants, soils and other living systems is called _______ sequestration.",
     "answer": [
      "biological"
     ],
-    "why": "Dr. Chen explicitly states: 'There are essentially two main approaches: biological and geological sequestration.' This directly identifies the two main types."
+    "why": "Dr. Chen names 'two main approaches: biological and geological sequestration', then explains that 'Biological sequestration involves storing carbon in living organisms and ecosystems.'"
    },
    {
     "id": "l1-s4-q03",
@@ -713,7 +728,7 @@
    {
     "id": "l1-s4-q05",
     "type": "complete",
-    "prompt": "Storage formations for geological sequestration include saline aquifers and depleted oil and gas _______.",
+    "prompt": "Apart from underground salt-water layers, CO2 can be stored in oil and gas _______ that are no longer productive.",
     "answer": [
      "fields"
     ],
@@ -732,7 +747,7 @@
    {
     "id": "l1-s4-q07",
     "type": "complete",
-    "prompt": "Carbon capture currently runs from one hundred fifty to _______ dollars per ton of carbon dioxide.",
+    "prompt": "Upper end of the current cost of capturing and storing a ton of CO2: _______ dollars.",
     "answer": [
      "two hundred",
      "200"
@@ -751,7 +766,7 @@
    {
     "id": "l1-s4-q09",
     "type": "complete",
-    "prompt": "Government policies for carbon sequestration: carbon pricing and __________",
+    "prompt": "Besides putting a price on carbon, governments encourage these projects through __________",
     "answer": [
      "tax incentives"
     ],
@@ -762,7 +777,8 @@
     "type": "complete",
     "prompt": "Sequestration effectiveness requires integration with emission reductions and __________ __________",
     "answer": [
-     "renewable energy development"
+     "renewable energy development",
+     "renewable energy"
     ],
     "why": "Dr. Chen concludes: 'it must be combined with emission reductions and renewable energy development to effectively address climate change.' Renewable energy development is the essential complementary strategy."
    }
@@ -891,7 +907,7 @@
      "Richardson",
      "richardson"
     ],
-    "why": "The customer introduces herself: 'It's Catherine Richardson. That's C, A, T, H, E, R, I, N, E.' She spells her first name letter-by-letter, and states her surname is Richardson."
+    "why": "The customer gives her name as 'Catherine Richardson'. The surname is spelled when the technician reads back the email: 'dot, r, i, c, h, a, r, d, s, o, n, at gmail dot com.'"
    },
    {
     "id": "l2-s1-q02",
@@ -1107,7 +1123,7 @@
    {
     "id": "l2-s2-q05",
     "type": "complete",
-    "prompt": "In the signal box, workers controlled the track switches with _______ levers.",
+    "prompt": "Operating the points and signals meant pulling levers that were _______.",
     "answer": [
      "heavy"
     ],
@@ -1328,7 +1344,8 @@
     "type": "complete",
     "prompt": "The fieldwork will take ___________ months, scheduled from September through November.",
     "answer": [
-     "three"
+     "three",
+     "3"
     ],
     "why": "David states 'We're planning three months in the field, spread across the dry season when water visibility is best. We'd aim for September through November.'"
    },
@@ -1337,7 +1354,8 @@
     "type": "complete",
     "prompt": "Data analysis will take approximately ___________ months after returning from fieldwork.",
     "answer": [
-     "two"
+     "two",
+     "2"
     ],
     "why": "Amira says 'We'll use statistical software to compare biodiversity indices between depth zones. We expect it to take another two months after we return from fieldwork.'"
    },
@@ -1425,7 +1443,7 @@
    },
    {
     "speaker": "Lecturer",
-    "text": "By the nineteen twenty five, aircraft designs incorporated cantilever wings, which eliminated the need for external bracing wires. Cantilever wings were stronger and more aerodynamically efficient than braced wing structures."
+    "text": "By nineteen twenty-five, aircraft designs incorporated cantilever wings, which eliminated the need for external bracing wires. Cantilever wings were stronger and more aerodynamically efficient than braced wing structures."
    },
    {
     "speaker": "Lecturer",
@@ -1469,7 +1487,7 @@
    {
     "id": "l2-s4-q02",
     "type": "complete",
-    "prompt": "Cayley identified three essentials for flight: structure, engine, and understanding of ___________ and drag",
+    "prompt": "Cayley's third requirement for sustained flight: knowing the forces of drag and ___________",
     "answer": [
      "lift"
     ],
@@ -1507,7 +1525,7 @@
    {
     "id": "l2-s4-q06",
     "type": "complete",
-    "prompt": "Three-axis control system: pitch, roll, and ___________",
+    "prompt": "The third axis the Wrights learned to control, besides pitch and roll: ___________",
     "answer": [
      "yaw"
     ],
@@ -1529,7 +1547,7 @@
     "answer": [
      "cantilever"
     ],
-    "why": "Lecturer explains 'By the nineteen twenty five, aircraft designs incorporated cantilever wings, which eliminated the need for external bracing wires. Cantilever wings were stronger and more aerodynamically efficient than braced wing structures.'"
+    "why": "Lecturer explains 'By nineteen twenty-five, aircraft designs incorporated cantilever wings, which eliminated the need for external bracing wires. Cantilever wings were stronger and more aerodynamically efficient than braced wing structures.'"
    },
    {
     "id": "l2-s4-q09",
@@ -1543,7 +1561,7 @@
    {
     "id": "l2-s4-q10",
     "type": "complete",
-    "prompt": "CFD (computational fluid dynamics) application: simulate ___________ flow before prototyping",
+    "prompt": "CFD (computational fluid dynamics) application: simulate ___________ around complex shapes before prototyping",
     "answer": [
      "airflow"
     ],
@@ -1719,7 +1737,9 @@
      "6am",
      "6 am",
      "six",
-     "six o'clock"
+     "six o'clock",
+     "6",
+     "6.00"
     ],
     "why": "The receptionist says 'The pool is open from six to ten in the morning'."
    },
@@ -1754,7 +1774,10 @@
     "answer": [
      "Monday the third",
      "Monday 3rd",
-     "Monday the 3rd"
+     "Monday the 3rd",
+     "the third",
+     "3rd",
+     "third"
     ],
     "why": "The customer asks 'Can I start on Monday the third?' and the receptionist replies 'Certainly.'"
    },
@@ -1766,7 +1789,9 @@
      "14 March 1999",
      "fourteenth of March 1999",
      "14/03/1999",
-     "14 March, 1999"
+     "14 March, 1999",
+     "14th March 1999",
+     "14th of March 1999"
     ],
     "why": "The customer gives 'the fourteenth of March, 1999' when asked for his date of birth."
    },
@@ -1903,8 +1928,8 @@
     "type": "mcq",
     "prompt": "Why is flash photography banned in the glasshouse?",
     "options": [
-     "A. It may harm the orchids",
-     "B. It disturbs other visitors",
+     "A. It could damage some flowers",
+     "B. It disturbs other visitors nearby",
      "C. It damages the glass",
      "D. It dazzles the staff"
     ],
@@ -1914,13 +1939,14 @@
    {
     "id": "l3-s2-q06",
     "type": "complete",
-    "prompt": "The café closes at (time):",
+    "prompt": "The café near the garden gate closes at (time):",
     "answer": [
      "4 pm",
      "4 p.m.",
      "4pm",
      "four",
-     "four o'clock"
+     "four o'clock",
+     "4"
     ],
     "why": "The guide says 'The café closes at four, half an hour before the garden does.'"
    },
@@ -1932,7 +1958,10 @@
      "4:30",
      "4.30",
      "half past four",
-     "4:30 pm"
+     "4:30 pm",
+     "4.30 pm",
+     "16:30",
+     "16.30"
     ],
     "why": "The guide says 'The garden itself closes at half past four.'"
    },
@@ -2127,7 +2156,7 @@
      "A. The lab is open only then",
      "B. The river is cleaner then",
      "C. The tutor asked for it",
-     "D. To match the flow data"
+     "D. To compare with rivers"
     ],
     "answer": "D",
     "why": "The student says the authority publishes flow data on Tuesdays and 'we want to match our samples to the flow.'"
@@ -2148,7 +2177,7 @@
     "type": "mcq",
     "prompt": "The tutor says the test strips are:",
     "options": [
-     "A. less accurate",
+     "A. not as precise",
      "B. more expensive",
      "C. banned by the lab",
      "D. faster to read"
@@ -2183,7 +2212,9 @@
      "20 November",
      "20th of November",
      "twentieth of November",
-     "November 20"
+     "November 20",
+     "20th November",
+     "November 20th"
     ],
     "why": "The student says 'The draft is due on the twentieth of November.'"
    },
@@ -2194,7 +2225,10 @@
     "answer": [
      "4 December",
      "fourth of December",
-     "December 4"
+     "December 4",
+     "4th December",
+     "4th of December",
+     "December 4th"
     ],
     "why": "The student says 'we're presenting on the fourth of December.'"
    }
@@ -2343,11 +2377,11 @@
    {
     "id": "l3-s4-q05",
     "type": "mcq",
-    "prompt": "Why do some bees arrive when no flowers are available?",
+    "prompt": "Why do some bees now find no flowers to feed on?",
     "options": [
      "A. They migrate too early in spring",
      "B. Spring has become colder",
-     "C. Flowering times have shifted",
+     "C. Plants bloom at different times",
      "D. Flowers close earlier in the day"
     ],
     "answer": "C",
@@ -2361,7 +2395,7 @@
      "A. less common than honeybees in farmland",
      "B. protected by law in most regions",
      "C. unable to fly far from their nests",
-     "D. more efficient for some crops"
+     "D. better at pollinating certain crops"
     ],
     "answer": "D",
     "why": "The lecturer says many wild species 'are often more efficient pollinators for particular crops'."
@@ -2369,7 +2403,7 @@
    {
     "id": "l3-s4-q07",
     "type": "complete",
-    "prompt": "One solution is planting wildflower ___ along field edges.",
+    "prompt": "Wildflowers can be grown in narrow ___ around the borders of fields.",
     "answer": [
      "strips",
      "strip"
@@ -2379,7 +2413,7 @@
    {
     "id": "l3-s4-q08",
     "type": "complete",
-    "prompt": "Nest sites can be created as bare soil ___.",
+    "prompt": "Bees can be given places to nest by making ___ of bare earth.",
     "answer": [
      "banks",
      "bank"
@@ -2389,7 +2423,7 @@
    {
     "id": "l3-s4-q09",
     "type": "mcq",
-    "prompt": "The lecturer's view on the belief that honeybees are the most important pollinators is:",
+    "prompt": "What does the lecturer think of the common idea that honeybees matter more than any other pollinator?",
     "options": [
      "A. disagreement",
      "B. strong agreement",
@@ -2402,12 +2436,11 @@
    {
     "id": "l3-s4-q10",
     "type": "complete",
-    "prompt": "Regulations now ___ the use of pesticides in several regions.",
+    "prompt": "In several regions, rules have been brought in to ___ the use of these chemicals.",
     "answer": [
-     "restrict",
-     "limit"
+     "restrict"
     ],
-    "why": "The lecturer says 'regulations now restrict their use in several regions.' The gap needs the base verb, so 'restrict' (or 'limit') fits; 'restricted' and 'limited' do not fit the grammar."
+    "why": "The lecturer says 'regulations now restrict their use in several regions.' The gap after 'to' needs the base verb, so 'restrict' fits; 'restricted' does not fit the grammar."
    }
   ]
  },
@@ -2545,7 +2578,10 @@
     "answer": [
      "Friday the twelfth",
      "Friday 12th",
-     "the twelfth"
+     "the twelfth",
+     "12th",
+     "Friday 12",
+     "twelfth"
     ],
     "why": "The customer says 'from Friday the twelfth to Monday the fifteenth.'"
    },
@@ -2556,7 +2592,10 @@
     "answer": [
      "Monday the fifteenth",
      "Monday 15th",
-     "the fifteenth"
+     "the fifteenth",
+     "15th",
+     "Monday 15",
+     "fifteenth"
     ],
     "why": "The customer says 'to Monday the fifteenth.'"
    },
@@ -2567,7 +2606,7 @@
     "options": [
      "A. manual, with a clutch pedal",
      "B. hybrid, with a petrol engine",
-     "C. automatic",
+     "C. automatic, no clutch pedal",
      "D. electric, with no gearbox"
     ],
     "answer": "C",
@@ -2601,7 +2640,7 @@
      "A. It is required by law",
      "B. It is cheaper",
      "C. The car is new",
-     "D. To be safe"
+     "D. For peace of mind"
     ],
     "answer": "D",
     "why": "The customer says 'I'll take the full cover, to be safe.'"
@@ -2611,7 +2650,7 @@
     "type": "mcq",
     "prompt": "Where will the car be driven?",
     "options": [
-     "A. within the region",
+     "A. only in the local area",
      "B. abroad, in mainland Europe",
      "C. across the border by ferry",
      "D. nowhere, it stays parked"
@@ -2639,7 +2678,9 @@
      "6 p.m.",
      "6pm",
      "six in the evening",
-     "six o'clock"
+     "six o'clock",
+     "6",
+     "six"
     ],
     "why": "The agent says 'returns after six in the evening cost an extra thirty pounds.'"
    },
@@ -2789,7 +2830,7 @@
      "A. They are very old and fragile",
      "B. The owners refused permission",
      "C. They are structurally unsafe",
-     "D. The walls are protected"
+     "D. They have official protection"
     ],
     "answer": "D",
     "why": "The guide says 'the external walls are protected, so no alterations to them are allowed.'"
@@ -2797,7 +2838,7 @@
    {
     "id": "l4-s2-q07",
     "type": "complete",
-    "prompt": "The bell tower was added in:",
+    "prompt": "Year in which the church’s bell tower was constructed:",
     "answer": [
      "1880",
      "eighteen eighty"
@@ -2836,7 +2877,8 @@
      "10am",
      "10 a.m.",
      "ten",
-     "ten o'clock"
+     "ten o'clock",
+     "10"
     ],
     "why": "The guide says 'the café by the canal, which opens at ten.'"
    }
@@ -2990,7 +3032,7 @@
     "prompt": "Why is the order counterbalanced?",
     "options": [
      "A. to save time during the testing sessions",
-     "B. so that practice does not bias results",
+     "B. to stop learning effects skewing the data",
      "C. because the lab is only free on some days",
      "D. to match the design of earlier studies"
     ],
@@ -3035,7 +3077,7 @@
      "A. created by the students in the group",
      "B. an online word-frequency database",
      "C. a textbook appendix",
-     "D. the lab's standard list"
+     "D. a list the lab already uses"
     ],
     "answer": "D",
     "why": "Maya says 'we use the standard list from the lab.'"
@@ -3066,7 +3108,9 @@
      "9 February",
      "ninth of February",
      "February 9",
-     "9th of February"
+     "9th of February",
+     "9th February",
+     "February 9th"
     ],
     "why": "Maya says 'our report is due on the ninth of February.'"
    }
@@ -3167,7 +3211,7 @@
    {
     "id": "l4-s4-q03",
     "type": "complete",
-    "prompt": "The shredded cells become a mixture called ___ mass.",
+    "prompt": "Shredding the cells produces what is called ___ mass.",
     "answer": [
      "black"
     ],
@@ -3189,7 +3233,7 @@
    {
     "id": "l4-s4-q05",
     "type": "complete",
-    "prompt": "In hydrometallurgy, the metals are dissolved in ___.",
+    "prompt": "Hydrometallurgy uses ___ to dissolve the metals before they are separated.",
     "answer": [
      "acid"
     ],
@@ -3198,7 +3242,7 @@
    {
     "id": "l4-s4-q06",
     "type": "complete",
-    "prompt": "Direct recycling keeps the ___ material intact.",
+    "prompt": "In direct recycling, the ___ material is not broken down and can be reused.",
     "answer": [
      "cathode"
     ],
@@ -3207,9 +3251,10 @@
    {
     "id": "l4-s4-q07",
     "type": "complete",
-    "prompt": "Only about ___ per cent of lithium-ion batteries are recycled worldwide.",
+    "prompt": "Share of lithium-ion batteries currently recycled around the world: about ___ per cent.",
     "answer": [
-     "five"
+     "five",
+     "5"
     ],
     "why": "The lecturer says 'only about five per cent of lithium-ion batteries are recycled worldwide'."
    },
@@ -3229,7 +3274,7 @@
    {
     "id": "l4-s4-q09",
     "type": "complete",
-    "prompt": "Damaged batteries are classed as ___ goods.",
+    "prompt": "Batteries that are damaged count as ___ goods for transport purposes.",
     "answer": [
      "hazardous"
     ],
@@ -3383,7 +3428,8 @@
      "EF3 7 2",
      "EF372",
      "EF 372",
-     "EF three seven two"
+     "EF three seven two",
+     "EF3 72"
     ],
     "why": "The resident gives 'postcode EF three seven two.'"
    },
@@ -3408,7 +3454,9 @@
      "Tuesday the twenty-second",
      "Tuesday 22nd",
      "22nd",
-     "the twenty-second"
+     "the twenty-second",
+     "Tuesday 22",
+     "22"
     ],
     "why": "The officer says 'the next collection will be on Tuesday the twenty-second.'"
    },
@@ -3496,7 +3544,7 @@
   "script": [
    {
     "speaker": "Narrator",
-    "text": "Welcome to the Clockmakers' Gallery. This audio guide covers the four main rooms and takes about forty-five minutes."
+    "text": "Welcome to the Clockmakers' Gallery. This audio guide covers the main rooms and takes about forty-five minutes."
    },
    {
     "speaker": "Narrator",
@@ -3512,7 +3560,7 @@
    },
    {
     "speaker": "Narrator",
-    "text": "The final room contains a large astronomical clock. It shows the phases of the moon and the position of the sun, and it is wound once a week."
+    "text": "The fourth room contains a large astronomical clock. It shows the phases of the moon and the position of the sun, and it is wound once a week."
    },
    {
     "speaker": "Narrator",
@@ -3593,7 +3641,7 @@
    {
     "id": "l5-s2-q05",
     "type": "complete",
-    "prompt": "Pocket watch cases were often ___ by hand.",
+    "prompt": "Many pocket watch cases were decorated by hand. They were ___.",
     "answer": [
      "engraved"
     ],
@@ -3636,12 +3684,15 @@
    {
     "id": "l5-s2-q09",
     "type": "complete",
-    "prompt": "The café closes at (time):",
+    "prompt": "Closing time of the ground-floor café:",
     "answer": [
      "5:30",
      "5.30",
      "half past five",
-     "5:30 pm"
+     "5:30 pm",
+     "5.30 pm",
+     "17:30",
+     "17.30"
     ],
     "why": "The narrator says 'the café on the ground floor is open until half past five.'"
    },
@@ -3755,15 +3806,15 @@
    },
    {
     "speaker": "Adviser",
-    "text": "Good plan. Good luck, Lucy. Thank you."
-   },
-   {
-    "speaker": "Adviser",
-    "text": "And remember to ask two or three questions at the end. It shows that you have researched the company."
+    "text": "Good plan. And remember to ask two or three questions at the end. It shows that you have researched the company."
    },
    {
     "speaker": "Student",
     "text": "Good idea. Thank you."
+   },
+   {
+    "speaker": "Adviser",
+    "text": "Good luck, Lucy."
    }
   ],
   "questions": [
@@ -3783,7 +3834,7 @@
    {
     "id": "l5-s3-q02",
     "type": "complete",
-    "prompt": "The method the adviser recommends has four parts: situation, task, action and ___.",
+    "prompt": "Last stage of the interview-answer method the adviser recommends:",
     "answer": [
      "result"
     ],
@@ -3807,7 +3858,9 @@
      "a quarter",
      "about a quarter",
      "25%",
-     "25 per cent"
+     "25 per cent",
+     "25 percent",
+     "quarter"
     ],
     "why": "Lucy says 'By about a quarter over three months.'"
    },
@@ -3882,7 +3935,8 @@
      "ten thirty",
      "ten thirty on Wednesday the eleventh",
      "10:30 on Wednesday the 11th",
-     "10.30 on Wednesday 11th"
+     "10.30 on Wednesday 11th",
+     "10:30 am"
     ],
     "why": "The adviser says 'The interview is at ten thirty on Wednesday the eleventh.'"
    }
@@ -4010,17 +4064,18 @@
    {
     "id": "l5-s4-q04",
     "type": "complete",
-    "prompt": "The top surface was paved with flat ___.",
+    "prompt": "Material laid flat to form the road's upper surface:",
     "answer": [
      "blocks",
-     "block"
+     "block",
+     "flat blocks"
     ],
     "why": "The lecturer says 'the top surface was paved with flat blocks.'"
    },
    {
     "id": "l5-s4-q05",
     "type": "complete",
-    "prompt": "Where a hill blocked the way, engineers ___ through the rock.",
+    "prompt": "When a hill stood in the way, engineers sometimes ___ straight through it.",
     "answer": [
      "cut"
     ],
@@ -4042,7 +4097,7 @@
    {
     "id": "l5-s4-q07",
     "type": "complete",
-    "prompt": "Milestones showed distances to major ___.",
+    "prompt": "Milestones told travellers how far it was to large ___.",
     "answer": [
      "cities",
      "city"
@@ -4232,7 +4287,7 @@
    {
     "id": "l6-s1-q04",
     "type": "complete",
-    "prompt": "The alternative room is a twin room on the ___ floor.",
+    "prompt": "Floor of the replacement twin room:",
     "answer": [
      "third",
      "3rd"
@@ -4284,7 +4339,8 @@
      "8.30",
      "8:30 am",
      "eight-thirty",
-     "half past eight"
+     "half past eight",
+     "8.30 am"
     ],
     "why": "The receptionist says 'a taxi will collect you from the Harbour Inn at eight-thirty.'"
    },
@@ -4462,7 +4518,7 @@
    {
     "id": "l6-s2-q08",
     "type": "complete",
-    "prompt": "The park-and-ride service runs every ___ minutes.",
+    "prompt": "Frequency of the park-and-ride buses (minutes):",
     "answer": [
      "fifteen",
      "15"
@@ -4613,7 +4669,7 @@
    {
     "id": "l6-s3-q02",
     "type": "mcq",
-    "prompt": "Priya suggests moving the entrance to the:",
+    "prompt": "Priya suggests moving the entrance to:",
     "options": [
      "A. the busy road side of the site",
      "B. the rooftop garden terrace",
@@ -4692,7 +4748,8 @@
     "type": "complete",
     "prompt": "Priya will draft the revised plan. Who will receive it?",
     "answer": [
-     "the client"
+     "the client",
+     "client"
     ],
     "why": "Priya says 'we'll show it to the client on Friday the sixth.'"
    },
@@ -4702,9 +4759,11 @@
     "prompt": "Date of the client meeting:",
     "answer": [
      "Friday the sixth",
-     "6 (Friday)",
+     "6th",
      "Friday 6th",
-     "the sixth"
+     "the sixth",
+     "Friday 6",
+     "6"
     ],
     "why": "Priya says 'we'll show it to the client on Friday the sixth.'"
    }
@@ -4828,14 +4887,16 @@
      "a quarter",
      "roughly a quarter",
      "25%",
-     "25 per cent"
+     "25 per cent",
+     "25 percent",
+     "quarter"
     ],
     "why": "The lecturer says reefs 'support roughly a quarter of all known marine species.'"
    },
    {
     "id": "l6-s4-q03",
     "type": "complete",
-    "prompt": "Coral cover is measured along fixed ___ lines.",
+    "prompt": "Name of the permanent survey lines used to record coral cover:",
     "answer": [
      "transect",
      "transects"
@@ -4904,7 +4965,7 @@
    {
     "id": "l6-s4-q09",
     "type": "complete",
-    "prompt": "Local pressures named by the lecturer include sewage and:",
+    "prompt": "Besides sewage, a local problem that weakens reefs:",
     "answer": [
      "overfishing"
     ],
@@ -4913,9 +4974,10 @@
    {
     "id": "l6-s4-q10",
     "type": "complete",
-    "prompt": "For the assignment, students must report the sampling ___ for each transect.",
+    "prompt": "Detail of each transect that students must include in the assignment:",
     "answer": [
-     "depth"
+     "depth",
+     "sampling depth"
     ],
     "why": "The lecturer says 'remember to report the sampling depth for each transect.'"
    }
@@ -5081,7 +5143,8 @@
     "answer": [
      "14 March",
      "14th March",
-     "fourteenth of March"
+     "fourteenth of March",
+     "March 14"
     ],
     "why": "He confirms it is 'the fourteenth of March, nineteen ninety-eight' when asked."
    },
@@ -5101,7 +5164,8 @@
     "prompt": "Student membership fee for one year (pounds):",
     "answer": [
      "12.50",
-     "twelve pounds fifty"
+     "twelve pounds fifty",
+     "12.5"
     ],
     "why": "The librarian says 'It's twelve pounds fifty for the year' at the student rate."
    },
@@ -5234,7 +5298,7 @@
    {
     "id": "l7-s2-q01",
     "type": "complete",
-    "prompt": "Visitors must wear a hard hat and a yellow ___.",
+    "prompt": "Item of yellow clothing visitors must wear with a hard hat:",
     "answer": [
      "jacket",
      "jackets"
@@ -5246,7 +5310,8 @@
     "type": "complete",
     "prompt": "The works supplies drinking water to about ___ people.",
     "answer": [
-     "two hundred thousand"
+     "two hundred thousand",
+     "200,000"
     ],
     "why": "Ruth says 'supplies drinking water to about two hundred thousand people'."
    },
@@ -5266,7 +5331,7 @@
    {
     "id": "l7-s2-q04",
     "type": "complete",
-    "prompt": "The screens catch leaves, twigs and ___.",
+    "prompt": "Besides plant debris, what animals do the metal screens catch?",
     "answer": [
      "fish"
     ],
@@ -5301,7 +5366,7 @@
    {
     "id": "l7-s2-q07",
     "type": "complete",
-    "prompt": "The ___ in the filter beds removes tastes and smells.",
+    "prompt": "Filter material that takes away unpleasant tastes and odours:",
     "answer": [
      "carbon"
     ],
@@ -5323,9 +5388,11 @@
    {
     "id": "l7-s2-q09",
     "type": "complete",
-    "prompt": "Photography is not allowed in the ___ room.",
+    "prompt": "Room that visitors may not photograph:",
     "answer": [
-     "control"
+     "control",
+     "control room",
+     "the control room"
     ],
     "why": "Ruth says 'Please don't take photographs of the control room'."
    },
@@ -5530,12 +5597,12 @@
    {
     "id": "l7-s3-q08",
     "type": "mcq",
-    "prompt": "How many sound recorders does the team have?",
+    "prompt": "How many recorders can the team afford?",
     "options": [
-     "A. One",
-     "B. Two",
-     "C. Three",
-     "D. Six"
+     "A. 1",
+     "B. 2",
+     "C. 3",
+     "D. 6"
     ],
     "answer": "C",
     "why": "Tom says 'We have budget for three, so we'd need to rotate them.'"
@@ -5561,7 +5628,8 @@
      "the third of December",
      "3 December",
      "December 3",
-     "3rd December"
+     "3rd December",
+     "3rd of December"
     ],
     "why": "Asked for the deadline, Priya answers 'The third of December.'"
    }
@@ -5652,7 +5720,7 @@
    {
     "id": "l7-s4-q01",
     "type": "complete",
-    "prompt": "Terrace farming: farmers cut steep land into a series of flat ______.",
+    "prompt": "Terrace farming turns a steep slope into a sequence of level ______.",
     "answer": [
      "steps",
      "step"
@@ -5662,7 +5730,7 @@
    {
     "id": "l7-s4-q02",
     "type": "complete",
-    "prompt": "The main benefit of terraces is ______ control.",
+    "prompt": "What do terraces mainly help to control?",
     "answer": [
      "erosion"
     ],
@@ -5671,7 +5739,7 @@
    {
     "id": "l7-s4-q03",
     "type": "complete",
-    "prompt": "Heavy rain can wash away the ______ within a few seasons.",
+    "prompt": "On an unterraced slope, what can heavy rain remove in a few seasons?",
     "answer": [
      "topsoil"
     ],
@@ -5680,16 +5748,17 @@
    {
     "id": "l7-s4-q04",
     "type": "complete",
-    "prompt": "Terrace walls are usually built from local ______.",
+    "prompt": "Usual building material for the retaining walls:",
     "answer": [
-     "stone"
+     "stone",
+     "local stone"
     ],
     "why": "She says 'The retaining walls are usually built from local stone.'"
    },
    {
     "id": "l7-s4-q05",
     "type": "complete",
-    "prompt": "A single terrace system may take several ______ to finish.",
+    "prompt": "How long can one hillside terrace system take to build? Several ______.",
     "answer": [
      "years",
      "year"
@@ -5699,7 +5768,7 @@
    {
     "id": "l7-s4-q06",
     "type": "complete",
-    "prompt": "In the Nepal survey, nearly ______ percent of the walls had collapsed.",
+    "prompt": "Share of abandoned walls in the Nepal study that fell within twenty years (percent, approximately):",
     "answer": [
      "seventy",
      "70"
@@ -5709,7 +5778,7 @@
    {
     "id": "l7-s4-q07",
     "type": "complete",
-    "prompt": "The researchers linked the loss of terraces to ______ migration to cities.",
+    "prompt": "Type of migration the researchers blamed for the loss of terraces:",
     "answer": [
      "labour",
      "labor"
@@ -5719,7 +5788,7 @@
    {
     "id": "l7-s4-q08",
     "type": "complete",
-    "prompt": "Some governments offer ______ to help farmers repair terraces.",
+    "prompt": "Financial support some governments give for early terrace repairs:",
     "answer": [
      "grants",
      "grant"
@@ -5729,16 +5798,16 @@
    {
     "id": "l7-s4-q09",
     "type": "complete",
-    "prompt": "Farmers grow shallow-rooted crops such as ______ and potatoes.",
+    "prompt": "Shallow-rooted crop named alongside potatoes:",
     "answer": [
      "beans"
     ],
-    "why": "She names beans and potatoes as shallow-rooted crops grown on terraces."
+    "why": "She says farmers grow 'crops with shallow roots, such as beans and potatoes.'"
    },
    {
     "id": "l7-s4-q10",
     "type": "complete",
-    "prompt": "Ponds store water at the ______ of each slope.",
+    "prompt": "Position of the storage ponds on each slope:",
     "answer": [
      "top"
     ],

@@ -63,7 +63,7 @@
    "a private gallery"
   ],
   "paraphrases": [
-   "an art museum",
+   "an exhibition hall",
    "an exhibition space"
   ],
   "example": "The new gallery attracts thousands of visitors each weekend."
@@ -86,7 +86,7 @@
   ],
   "paraphrases": [
    "a collection manager",
-   "a gallery keeper"
+   "keeper of a collection"
   ],
   "example": "The curator selected eighty paintings to represent the artist's early career."
  },
@@ -167,7 +167,7 @@
   ],
   "definition": "a piece of strong cloth on which an artist paints",
   "collocations": [
-   "an oil on canvas",
+   "oil on canvas",
    "a blank canvas",
    "a large canvas"
   ],
@@ -236,7 +236,7 @@
   "collocations": [
    "a literary genre",
    "a popular genre",
-   "cross genres"
+   "cross-genre"
   ],
   "paraphrases": [
    "a category of art",
@@ -1772,7 +1772,7 @@
   "collocations": [
    "perpetrator of a crime",
    "identify the perpetrator",
-   "brutal perpetrator"
+   "alleged perpetrator"
   ],
   "paraphrases": [
    "culprit",
@@ -3776,7 +3776,7 @@
    "tertiary sector"
   ],
   "paraphrases": [
-   "higher-level",
+   "university-level",
    "post-school"
   ],
   "example": "Participation in tertiary education has doubled across the region in a generation."
@@ -3800,7 +3800,7 @@
   ],
   "paraphrases": [
    "first-degree student",
-   "university student"
+   "degree student"
   ],
   "example": "Most undergraduates in the faculty live on campus during their first year."
  },
@@ -5278,7 +5278,7 @@
   ],
   "paraphrases": [
    "wind-driven generator",
-   "windmill-style generator"
+   "wind power unit"
   ],
   "example": "Offshore wind turbines can produce more power than those on land because winds are stronger and steadier."
  },
@@ -5322,7 +5322,7 @@
    "hydroelectric scheme"
   ],
   "paraphrases": [
-   "water-generated",
+   "hydro-powered",
    "water-powered"
   ],
   "example": "The new hydroelectric dam will supply electricity to nearly two million households."
@@ -5344,7 +5344,7 @@
    "geothermal heating"
   ],
   "paraphrases": [
-   "earth-heat",
+   "powered by the earth's heat",
    "heat from underground"
   ],
   "example": "Iceland heats most of its buildings with geothermal energy drawn from volcanic activity."
@@ -8548,7 +8548,7 @@
    "privileged upbringing"
   ],
   "paraphrases": [
-   "childhood training",
+   "childrearing",
    "the way someone is raised"
   ],
   "example": "A strict upbringing does not necessarily produce more disciplined adults than a relaxed one."
@@ -8592,8 +8592,7 @@
    "sibling relationship"
   ],
   "paraphrases": [
-   "brother or sister",
-   "fellow child"
+   "brother or sister"
   ],
   "example": "Children with an older sibling often acquire language skills more quickly than only children."
  },
@@ -8638,7 +8637,7 @@
   ],
   "paraphrases": [
    "family ties",
-   "blood relationship"
+   "family bonds"
   ],
   "example": "In many rural societies, kinship networks provide the main source of support in times of hardship."
  },
@@ -8682,7 +8681,7 @@
    "parent or guardian"
   ],
   "paraphrases": [
-   "carer",
+   "custodian",
    "person with legal charge of a child"
   ],
   "example": "Applicants under sixteen must obtain written consent from a parent or legal guardian."
@@ -8726,7 +8725,7 @@
    "ancestry research"
   ],
   "paraphrases": [
-   "forebears",
+   "lineage",
    "family origins"
   ],
   "example": "Online databases have made it far easier for ordinary people to research their ancestry."
@@ -8752,7 +8751,7 @@
    "bequest",
    "legacy"
   ],
-  "example": "Rising property prices mean that inheritance now matters more to young adults than their own salaries."
+  "example": "Rising property prices mean that an inheritance can matter a great deal to young adults buying their first home."
  },
  {
   "id": "fam-011",
@@ -9487,7 +9486,7 @@
    "unpaid caregiver"
   ],
   "paraphrases": [
-   "carer",
+   "custodian",
    "person providing care"
   ],
   "example": "Unpaid family caregivers save governments billions each year in social-care costs."
@@ -10515,7 +10514,7 @@
   ],
   "paraphrases": [
    "suitable for crops",
-   "cultivated"
+   "farmable"
   ],
   "example": "Urban expansion is steadily reducing the amount of arable land near major cities."
  },
@@ -10559,7 +10558,7 @@
   ],
   "paraphrases": [
    "small-scale farmer",
-   "peasant farmer"
+   "owner of a small farm"
   ],
   "example": "Smallholder farmers produce much of the food eaten in developing countries."
  },
@@ -17144,7 +17143,7 @@
   ],
   "paraphrases": [
    "way of saying words",
-   "enunciation"
+   "spoken form of words"
   ],
   "example": "Clear pronunciation matters more than a perfect accent in most conversations."
  },
@@ -18566,7 +18565,7 @@
   ],
   "definition": "the title of a newspaper story, printed in large letters",
   "collocations": [
-   "catch the headlines",
+   "hit the headlines",
    "front-page headline",
    "make headlines"
   ],
@@ -18640,7 +18639,7 @@
   ],
   "paraphrases": [
    "news reporting",
-   "the press"
+   "newsgathering"
   ],
   "example": "Investigative journalism has exposed corruption that official inquiries had failed to find."
  },
@@ -18729,7 +18728,7 @@
   ],
   "paraphrases": [
    "number of copies sold",
-   "sales figures"
+   "number of copies distributed"
   ],
   "example": "Printed newspapers have seen their circulation fall as readers turn to online news."
  },
@@ -18774,7 +18773,7 @@
   ],
   "paraphrases": [
    "regular payment plan",
-   "membership fee"
+   "prepaid delivery plan"
   ],
   "example": "An annual subscription to the magazine costs less than buying each issue separately."
  },
@@ -20266,7 +20265,7 @@
   ],
   "paraphrases": [
    "growing older",
-   "maturing"
+   "increasingly elderly"
   ],
   "example": "An ageing population places heavy demands on health services."
  },
@@ -20289,7 +20288,7 @@
   ],
   "paraphrases": [
    "number of births",
-   "rate of childbirth"
+   "births per thousand people"
   ],
   "example": "A falling birth rate means there will be fewer young people to support the elderly."
  },
@@ -20378,7 +20377,7 @@
   ],
   "paraphrases": [
    "official population count",
-   "population survey"
+   "population headcount"
   ],
   "example": "The census revealed that the city's population had doubled in twenty years."
  },
@@ -20416,7 +20415,7 @@
   ],
   "definition": "a person who receives a pension after retiring",
   "collocations": [
-   "retired pensioner",
+   "pensioner household",
    "elderly pensioner",
    "pensioner's income"
   ],
@@ -20509,7 +20508,7 @@
   "collocations": [
    "number of centenarians",
    "become a centenarian",
-   "oldest centenarian"
+   "centenarian population"
   ],
   "paraphrases": [
    "person aged 100 or over",
@@ -21892,7 +21891,7 @@
   ],
   "paraphrases": [
    "a tentative explanation",
-   "a proposed theory"
+   "a testable proposal"
   ],
   "example": "The researchers set out to test the hypothesis that sleep improves memory."
  },
@@ -23673,7 +23672,7 @@
   ],
   "paraphrases": [
    "keen to win",
-   "ambitious"
+   "driven to win"
   ],
   "example": "Highly competitive sport can put young players under intense pressure."
  },
@@ -23785,7 +23784,7 @@
   ],
   "paraphrases": [
    "boosting athletic results",
-   "athletic boosting"
+   "performance-boosting"
   ],
   "example": "Testing for performance-enhancing drugs has become more sophisticated every year."
  },
@@ -25298,7 +25297,7 @@
    "data encryption"
   ],
   "paraphrases": [
-   "coding of data",
+   "turning data into code",
    "scrambling information"
   ],
   "example": "Strong encryption protects messages from being read by anyone except the intended recipient."
@@ -26952,7 +26951,7 @@
   ],
   "paraphrases": [
    "expressway",
-   "highway"
+   "major road"
   ],
   "example": "The new motorway cut the journey between the two cities from four hours to two."
  },
@@ -27575,7 +27574,7 @@
    "speaking",
    "listening"
   ],
-  "definition": "an underground railway system in a city",
+  "definition": "a railway system that runs in tunnels beneath a city",
   "collocations": [
    "take the underground",
    "underground station",
@@ -28753,7 +28752,7 @@
   ],
   "paraphrases": [
    "large-scale tourism",
-   "travel by the crowd"
+   "tourism for the masses"
   ],
   "example": "Mass tourism has transformed quiet fishing villages into crowded resorts."
  },
@@ -31975,7 +31974,7 @@
   ],
   "paraphrases": [
    "supervisory",
-   "executive"
+   "administrative"
   ],
   "example": "Promotion to a managerial post often requires skills that technical training does not provide."
  },
@@ -31998,7 +31997,7 @@
   ],
   "paraphrases": [
    "business founder",
-   "business owner"
+   "start-up founder"
   ],
   "example": "Many young entrepreneurs struggle to obtain a loan because they lack collateral."
  },

@@ -130,7 +130,7 @@
     ],
     "paraphrases": [
       "expressway",
-      "highway"
+      "major road"
     ],
     "example": "The new motorway cut the journey between the two cities from four hours to two."
   },
@@ -753,7 +753,7 @@
       "speaking",
       "listening"
     ],
-    "definition": "an underground railway system in a city",
+    "definition": "a railway system that runs in tunnels beneath a city",
     "collocations": [
       "take the underground",
       "underground station",

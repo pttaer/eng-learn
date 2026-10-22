@@ -122,7 +122,7 @@
      "Richardson",
      "richardson"
     ],
-    "why": "The customer introduces herself: 'It's Catherine Richardson. That's C, A, T, H, E, R, I, N, E.' She spells her first name letter-by-letter, and states her surname is Richardson."
+    "why": "The customer gives her name as 'Catherine Richardson'. The surname is spelled when the technician reads back the email: 'dot, r, i, c, h, a, r, d, s, o, n, at gmail dot com.'"
    },
    {
     "id": "l2-s1-q02",
@@ -338,7 +338,7 @@
    {
     "id": "l2-s2-q05",
     "type": "complete",
-    "prompt": "In the signal box, workers controlled the track switches with _______ levers.",
+    "prompt": "Operating the points and signals meant pulling levers that were _______.",
     "answer": [
      "heavy"
     ],
@@ -559,7 +559,8 @@
     "type": "complete",
     "prompt": "The fieldwork will take ___________ months, scheduled from September through November.",
     "answer": [
-     "three"
+     "three",
+     "3"
     ],
     "why": "David states 'We're planning three months in the field, spread across the dry season when water visibility is best. We'd aim for September through November.'"
    },
@@ -568,7 +569,8 @@
     "type": "complete",
     "prompt": "Data analysis will take approximately ___________ months after returning from fieldwork.",
     "answer": [
-     "two"
+     "two",
+     "2"
     ],
     "why": "Amira says 'We'll use statistical software to compare biodiversity indices between depth zones. We expect it to take another two months after we return from fieldwork.'"
    },
@@ -656,7 +658,7 @@
    },
    {
     "speaker": "Lecturer",
-    "text": "By the nineteen twenty five, aircraft designs incorporated cantilever wings, which eliminated the need for external bracing wires. Cantilever wings were stronger and more aerodynamically efficient than braced wing structures."
+    "text": "By nineteen twenty-five, aircraft designs incorporated cantilever wings, which eliminated the need for external bracing wires. Cantilever wings were stronger and more aerodynamically efficient than braced wing structures."
    },
    {
     "speaker": "Lecturer",
@@ -700,7 +702,7 @@
    {
     "id": "l2-s4-q02",
     "type": "complete",
-    "prompt": "Cayley identified three essentials for flight: structure, engine, and understanding of ___________ and drag",
+    "prompt": "Cayley's third requirement for sustained flight: knowing the forces of drag and ___________",
     "answer": [
      "lift"
     ],
@@ -738,7 +740,7 @@
    {
     "id": "l2-s4-q06",
     "type": "complete",
-    "prompt": "Three-axis control system: pitch, roll, and ___________",
+    "prompt": "The third axis the Wrights learned to control, besides pitch and roll: ___________",
     "answer": [
      "yaw"
     ],
@@ -760,7 +762,7 @@
     "answer": [
      "cantilever"
     ],
-    "why": "Lecturer explains 'By the nineteen twenty five, aircraft designs incorporated cantilever wings, which eliminated the need for external bracing wires. Cantilever wings were stronger and more aerodynamically efficient than braced wing structures.'"
+    "why": "Lecturer explains 'By nineteen twenty-five, aircraft designs incorporated cantilever wings, which eliminated the need for external bracing wires. Cantilever wings were stronger and more aerodynamically efficient than braced wing structures.'"
    },
    {
     "id": "l2-s4-q09",
@@ -774,7 +776,7 @@
    {
     "id": "l2-s4-q10",
     "type": "complete",
-    "prompt": "CFD (computational fluid dynamics) application: simulate ___________ flow before prototyping",
+    "prompt": "CFD (computational fluid dynamics) application: simulate ___________ around complex shapes before prototyping",
     "answer": [
      "airflow"
     ],

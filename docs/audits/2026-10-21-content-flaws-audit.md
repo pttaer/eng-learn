@@ -20,7 +20,7 @@ Checks after the pass: `npm run content:compile` passes, `test:content` passes, 
 **Still open**
 
 - The per-topic folders `web/content/{collocations,diagnostic,drills,grammar,habits,ielts,listening,reading,vocabulary}/` are still on disk and tracked in git. The compiler ignores them. Deletion was blocked by the auto-mode permission classifier, so it is awaiting your approval. Copies are in the scratchpad backup `old-folders-2026-10-22`. Four verifiers now read the merged files instead (`verify-cefr-pedagogy`, `verify-diagnostic-questions`, `verify-adaptive-workout`, `verify-ielts-course-pipeline`), so they will not break when the folders go.
-- `src/ielts/data/parts/` (about 680 practice questions across 30 passages and 28 sections) was never audited.
+- `src/ielts/data/parts/` (about 680 practice questions across 30 passages and 28 sections) was never audited. Audit written 2026-10-22: see `2026-10-22-ielts-parts-audit.md`.
 - Writing-model statistics: only two were hedged. The rest remain unverified (no web access).
 - Day 29: C1 and C2 cut from 70 and 80 minutes to 60 each, matching other C days. Benchmark days 14, 21 and 28 are unchanged.
 

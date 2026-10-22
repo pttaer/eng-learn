@@ -332,7 +332,7 @@
    {
     "id": "r02-q11",
     "type": "table",
-    "prompt": "Table, Water features: a 2 to 3 °C drop in heat occurs within ______ meters.",
+    "prompt": "Table, Water features: a 2 to 3 °C drop in temperature occurs within ______ meters.",
     "answer": [
      "500",
      "500 meters",
@@ -466,7 +466,8 @@
     "type": "summary",
     "prompt": "Summary: Effective learners often pause to check their ______.",
     "answer": [
-     "understanding"
+     "understanding",
+     "comprehension"
     ],
     "why": "Paragraph C: \"effective learners engage in continuous monitoring of comprehension, frequently pausing to check understanding\"."
    },
@@ -485,7 +486,6 @@
     "prompt": "Which brain area is implicated in tracking an individual's own cognitive states?",
     "answer": [
      "anterior prefrontal cortex",
-     "the anterior prefrontal cortex",
      "prefrontal cortex"
     ],
     "why": "Paragraph H: \"including the anterior prefrontal cortex, which appears involved in monitoring one's own mental states\"."
@@ -506,8 +506,7 @@
     "type": "short",
     "prompt": "What specific training approach enhances subject expertise alongside specialized self-monitoring skills?",
     "answer": [
-     "deliberate practice",
-     "deliberate"
+     "deliberate practice"
     ],
     "why": "Paragraph G: \"Deliberate practice facilitates development of both domain knowledge and domain-specific metacognitive skills\"."
    },
@@ -530,12 +529,12 @@
     "prompt": "Students who received explicit metacognitive instruction improved their standardized test performance by",
     "options": [
      "A. between 10 and 40 percent.",
-     "B. less than 10 percent in total.",
-     "C. exactly 40 percent in every case.",
-     "D. more than 40 percent in most trials."
+     "B. between 1 and 10 percent.",
+     "C. between 20 and 40 percent.",
+     "D. between 10 and 60 percent."
     ],
     "answer": "A",
-    "why": "Paragraph D: \"showed improvements ranging from 10 to 40 percent in standardized test performance\". The figure is a range, so B, C and D are all wrong."
+    "why": "Paragraph D: \"showed improvements ranging from 10 to 40 percent in standardized test performance\". B, C and D give the wrong lower or upper limit."
    }
   ]
  },
@@ -666,7 +665,7 @@
    {
     "id": "r04-q09",
     "type": "features",
-    "prompt": "stayed mainly logographic for more than three thousand years",
+    "prompt": "kept a mainly logographic form for over 3,000 years until alphabets appeared",
     "options": [
      "A. Cuneiform",
      "B. Egyptian hieroglyphs",
@@ -675,7 +674,7 @@
      "E. Chinese characters"
     ],
     "answer": "B",
-    "why": "Paragraph C: Egyptian hieroglyphics \"maintained a predominantly logographic structure throughout their history, persisting with remarkable consistency for over 3,000 years\"."
+    "why": "Paragraph C: Egyptian hieroglyphics \"maintained a predominantly logographic structure throughout their history, persisting with remarkable consistency for over 3,000 years until alphabetic writing systems emerged\". Chinese characters were not displaced (paragraph F)."
    },
    {
     "id": "r04-q10",
@@ -735,7 +734,7 @@
    },
    {
     "label": "B",
-    "text": "Dutch commercial expansion was laid during the late 16th century when religious conflict in the Spanish Netherlands created conditions for merchant migration to the north. The northern provinces, organized as the Dutch Republic following the Peace of Westphalia in 1648, possessed superior geography for maritime commerce due to their coastal location and extensive river systems. The Dutch developed superior navigational technologies, including more accurate maps and improved compass designs. The fluyt, a specialized merchant vessel designed in the 1590s and perfected during the 17th century, exemplified Dutch technological innovation. The fluyt featured deep cargo holds and high sides, enabling it to carry more cargo with smaller crews than competing vessels. This innovation reduced shipping costs by up to 50 percent compared to Spanish galleons, providing Dutch merchants with decisive advantages."
+    "text": "The foundations of Dutch commercial expansion were laid during the late 16th century when religious conflict in the Spanish Netherlands created conditions for merchant migration to the north. The northern provinces, organized as the Dutch Republic following the Peace of Westphalia in 1648, possessed superior geography for maritime commerce due to their coastal location and extensive river systems. The Dutch developed superior navigational technologies, including more accurate maps and improved compass designs. The fluyt, a specialized merchant vessel designed in the 1590s and perfected during the 17th century, exemplified Dutch technological innovation. The fluyt featured deep cargo holds and high sides, enabling it to carry more cargo with smaller crews than competing vessels. This innovation reduced shipping costs by up to 50 percent compared to Spanish galleons, providing Dutch merchants with decisive advantages."
    },
    {
     "label": "C",
@@ -889,7 +888,7 @@
      "A. It lacked the governmental and military powers granted to the VOC.",
      "B. Its fleet was destroyed by the British navy in the Atlantic.",
      "C. New Amsterdam proved too costly for the company to run.",
-     "D. Atlantic trade had different competitive conditions."
+     "D. The Atlantic was a different kind of market to compete in."
     ],
     "answer": "D",
     "why": "Paragraph D: \"The WIC's failure reflected different competitive conditions in Atlantic trade.\" A, B and C are never given as reasons."
@@ -1100,10 +1099,10 @@
     "type": "mcq",
     "prompt": "According to paragraph H, research on marine echolocation has already helped to",
     "options": [
-     "A. design autonomous underwater vehicles.",
-     "B. cut the costs of commercial shipping routes.",
-     "C. slow down the rate of ocean acidification.",
-     "D. cure hearing loss in human patients today."
+     "A. shape the building of underwater robots and sonar imaging equipment.",
+     "B. cut the costs of commercial shipping routes across the entire ocean.",
+     "C. slow down the rate of ocean acidification in shallow seas.",
+     "D. cure hearing loss in human patients who have been treated."
     ],
     "answer": "A",
     "why": "Paragraph H: \"Biosonar systems inspired by marine mammal echolocation have informed the design of acoustic imaging devices and autonomous underwater vehicles\". D is only something research \"may provide insights\" into; B and C are not achievements of the research."
