@@ -126,7 +126,7 @@ function homeSuites(): HTMLElement {
     {
       title: 'Guided 7.0 Path',
       badge: 'Plan',
-      desc: 'Your 12-24 week roadmap from placement, weakest-skill focus and a readiness gate for each skill.',
+      desc: 'Roadmap length from recent attempts, Reading focus, and a readiness gate for each skill.',
       primaryLink: '#path',
       primaryText: 'Open study path'
     },

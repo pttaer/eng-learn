@@ -2,7 +2,6 @@ import { h, esc } from '../ui';
 import { playText, ttsAvailable, Playback } from '../tts';
 import { DistractorEngine } from '../distractor-engine';
 import { AudioSynthesizer } from '../../core/audio-synthesizer';
-import { addAttempt } from '../progress';
 
 export type TrapCategory = 'self_correction' | 'qualifier' | 'reversal' | 'map_direction';
 
@@ -560,7 +559,6 @@ export function listeningTrapsView(root: HTMLElement): () => void {
         playSfx('level-up');
         masteredSet.add(s.id);
         updateTracker();
-        addAttempt({ skill: 'listening', itemId: s.id, band: 8.5 });
         inputFeedback.innerHTML = `<p class="ie-feedback-msg is-success">✅ <strong>Correct!</strong> Exact word verified. See the full deconstruction below.</p>`;
         renderDeconstruction();
       } else {

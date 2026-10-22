@@ -7,19 +7,39 @@ const ts = require('typescript');
 const code = ts.transpileModule(fs.readFileSync(path.join(__dirname, '..', 'src', 'ielts', 'path.ts'), 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
 const mod = { exports: {} };
 new Function('module', 'exports', 'require', code)(mod, mod.exports, () => ({}));
-const { estimateStart, weeksFor, weakestSkill, roadmap, nextTask, gate, placementFrom } = mod.exports;
+const { estimateStart, currentBands, weeksFor, roadmapWeeks, extendedRoadmap, weakestSkill, roadmap, nextTask, gate, placementFrom } = mod.exports;
 
 // Estimator: mean of placement bands, rounded to the nearest half band; untested skills ignored.
 assert.strictEqual(estimateStart({ listening: 6, reading: 6.5 }), 6.5);
 assert.strictEqual(estimateStart({ writing: 5.5 }), 5.5);
 assert.strictEqual(estimateStart({}), null);
 
-// Week count: 12 at 7.0 or above, +6 per band below, capped at 24.
-assert.strictEqual(weeksFor(8), 12);
-assert.strictEqual(weeksFor(7), 12);
-assert.strictEqual(weeksFor(6.5), 15);
-assert.strictEqual(weeksFor(5.5), 21);
+// Current bands: last 3 attempts per skill; Listening and Reading use mocks only; placement is the fallback.
+const cur = currentBands([
+  { skill: 'listening', band: 5, mock: false }, { skill: 'listening', band: 6, mock: true }, { skill: 'listening', band: 7, mock: true },
+  { skill: 'writing', band: 4 }, { skill: 'writing', band: 6 }, { skill: 'writing', band: 6 }, { skill: 'writing', band: 6 },
+], { reading: 5.5 });
+assert.deepStrictEqual(cur, { listening: 6.5, reading: 5.5, writing: 6 });
+assert.strictEqual(estimateStart(cur), 6);
+assert.strictEqual(estimateStart(currentBands([], {})), null);
+
+// Week count: 6 per band below 7.0 (half band gives 3), capped at 24; no weeks at 7.0 or above.
+assert.strictEqual(weeksFor(8), 0);
+assert.strictEqual(weeksFor(7), 0);
+assert.strictEqual(weeksFor(6.5), 3);
+assert.strictEqual(weeksFor(5.5), 9);
 assert.strictEqual(weeksFor(3), 24);
+
+// Roadmap length: 0 only when all four gates pass; otherwise at least 4 weeks (one task cycle ending in a mock).
+const passAll = [
+  { skill: 'listening', band: 7, mock: true }, { skill: 'listening', band: 7, mock: true },
+  { skill: 'reading', band: 7, mock: true }, { skill: 'reading', band: 7, mock: true },
+  { skill: 'writing', band: 6.5 }, { skill: 'speaking', band: 6.5 },
+];
+assert.strictEqual(roadmapWeeks(7, passAll), 0);
+assert.strictEqual(roadmapWeeks(7, passAll.slice(0, 4)), 4, 'mean 7.0 with red gates still gets 4 weeks');
+assert.strictEqual(roadmapWeeks(6.5, []), 4);
+assert.strictEqual(roadmapWeeks(5, []), 12);
 
 // Weakest skill: lowest placement band; an untested skill comes first.
 assert.strictEqual(weakestSkill({ listening: 7, reading: 6, writing: 6.5, speaking: 6.5 }), 'reading');
@@ -42,6 +62,11 @@ assert.strictEqual(nextTask(plan, [1, 2]).week, 3);
 assert.strictEqual(nextTask(plan, [1, 3]).week, 2);
 assert.strictEqual(nextTask(plan, plan.map(w => w.week)), null);
 
+// Extended roadmap: once every week is done and a gate is still red, another 4-week cycle is added.
+assert.strictEqual(extendedRoadmap(4, 'reading', [1]).length, 4);
+assert.strictEqual(extendedRoadmap(4, 'reading', [1, 2, 3, 4]).length, 8);
+assert.strictEqual(nextTask(extendedRoadmap(4, 'reading', [1, 2, 3, 4]), [1, 2, 3, 4]).week, 5);
+
 // Readiness gate: Listening and Reading need two mocks at 7.0; Writing and Speaking need a 6.5 recent estimate.
 const att = [
   { skill: 'listening', band: 7, mock: true }, { skill: 'listening', band: 7, mock: true },
@@ -58,4 +83,4 @@ assert.strictEqual(gate('speaking', []).ok, false, 'no attempts never passes the
 // Placement is the earliest attempt per skill.
 assert.deepStrictEqual(placementFrom([{ skill: 'reading', band: 5.5 }, { skill: 'reading', band: 7 }, { skill: 'writing', band: 6 }]), { reading: 5.5, writing: 6 });
 
-console.log('ielts path ok: estimator, 12-24 week roadmap, weakest-skill focus, next task, readiness gate');
+console.log('ielts path ok: estimator, current bands, week length with 4-week minimum, weakest-skill focus, next task, readiness gate');

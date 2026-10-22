@@ -5,6 +5,8 @@ import type { Skill } from './progress';
 export const SKILLS: Skill[] = ['listening', 'reading', 'writing', 'speaking'];
 export const TARGET = 7;
 export const ROUTE: Record<Skill, string> = { listening: '#listening', reading: '#reading', writing: '#writing', speaking: '#speaking' };
+/** Focus skill for the roadmap: Reading, by choice. The learner does not yet trust the other skills' results. */
+export const FOCUS: Skill = 'reading';
 
 export type Placement = Partial<Record<Skill, number>>;
 export interface WeekPlan { week: number; skill: Skill; task: string; route: string }
@@ -12,17 +14,35 @@ export interface Attempt { skill: Skill; band: number; mock?: boolean }
 
 const TASKS = ['strategy cards', 'skill drill', 'vocabulary review', 'full mock'];
 
-/** Start band: mean of the placement bands, rounded to the nearest half band. Untested skills are left out. */
+/** Start band: mean of the bands passed in, rounded to the nearest half band. Untested skills are left out. */
 export function estimateStart(p: Placement): number | null {
   const v = SKILLS.map(s => p[s]).filter((x): x is number => typeof x === 'number');
   if (!v.length) return null;
   return Math.round((v.reduce((a, b) => a + b, 0) / v.length) * 2) / 2;
 }
 
-/** 12 weeks when already at 7.0, plus 6 weeks per band below it, capped at 24. */
+/** Current band per skill: mean of the last 3 attempts. Listening and Reading use mocks only, as the gate does. Placement is the fallback until a skill has such an attempt. */
+export function currentBands(att: Attempt[], placement: Placement): Placement {
+  const out: Placement = {};
+  for (const s of SKILLS) {
+    const mockOnly = s === 'listening' || s === 'reading';
+    const last = att.filter(a => a.skill === s && (!mockOnly || a.mock)).slice(-3);
+    const v = last.length ? last.reduce((t, a) => t + a.band, 0) / last.length : placement[s];
+    if (typeof v === 'number') out[s] = v;
+  }
+  return out;
+}
+
+/** 6 weeks per band below 7.0 (a half band gives 3), capped at 24. At 7.0 or above there are no weeks left. */
 export function weeksFor(start: number): number {
   const gap = Math.max(0, TARGET - start);
-  return Math.min(24, Math.max(12, Math.round(12 + gap * 6)));
+  return Math.min(24, Math.round(gap * 6));
+}
+
+/** Weeks left. 0 only once all four gates pass; until then at least 4 weeks, one full task cycle ending in a mock. */
+export function roadmapWeeks(start: number, att: Attempt[]): number {
+  if (SKILLS.every(s => gate(s, att).ok)) return 0;
+  return Math.max(4, weeksFor(start));
 }
 
 /** Lowest placement band. An untested skill counts as weakest so it is tested first. */
@@ -46,6 +66,13 @@ export function roadmap(weeks: number, weakest: Skill): WeekPlan[] {
 /** First week not yet marked done, or null when the whole roadmap is finished. */
 export function nextTask(plan: WeekPlan[], done: number[]): WeekPlan | null {
   return plan.find(w => !done.includes(w.week)) ?? null;
+}
+
+/** Roadmap that adds 4-week cycles once every week is marked done. Call only while a gate is still red. */
+export function extendedRoadmap(weeks: number, weakest: Skill, done: number[]): WeekPlan[] {
+  let plan = roadmap(weeks, weakest);
+  while (!nextTask(plan, done)) plan = roadmap(plan.length + 4, weakest);
+  return plan;
 }
 
 /** Readiness gate per skill. Listening and Reading: last two mocks at 7.0+. Writing and Speaking: recent estimate at 6.5+. */
