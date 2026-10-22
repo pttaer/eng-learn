@@ -777,29 +777,45 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
     const speechTimerRow = h('div', 'ie-testbar');
     const speechClock = h('span', 'ie-clock', '02:00');
     const startTalkBtn = h('button', 'ie-btn ie-btn-primary', 'Start 2-Minute Speech Timer');
+    const quickBtn = h('button', 'ie-btn', '20s answer');
+    const elabBtn = h('button', 'ie-btn', '60s answer');
+    const rungRow = h('div', 'ie-chips');
+    rungRow.append(quickBtn, elabBtn);
+    const phaseCue = h('p', 'ie-note', 'Phase prompts appear during the 2-minute timer.');
+    const startButtons = [startTalkBtn, quickBtn, elabBtn];
     let speechCd: Countdown | null = null;
 
-    startTalkBtn.addEventListener('click', () => {
-
-      startTalkBtn.disabled = true;
-      speechCd = countdown(120, left => {
+    // cues=true shows the prompt for the current stage of the 2-minute answer.
+    const startSpeech = (seconds: number, cues: boolean): void => {
+      if (speechCd) speechCd.stop();
+      startButtons.forEach(b => { b.disabled = true; });
+      if (!cues) phaseCue.textContent = 'Phase prompts appear during the 2-minute timer.';
+      speechCd = countdown(seconds, left => {
         speechClock.textContent = fmtTime(left);
+        if (cues) {
+          const elapsed = seconds - left;
+          phaseCue.textContent = elapsed < 30 ? 'Who and where' : elapsed < 75 ? 'What happened' : 'Why it mattered to you';
+        }
       }, () => {
         speechClock.textContent = '00:00 (Finished)';
-        startTalkBtn.disabled = false;
+        startButtons.forEach(b => { b.disabled = false; });
       });
-    });
+    };
 
+    startTalkBtn.addEventListener('click', () => startSpeech(120, true));
+    quickBtn.addEventListener('click', () => startSpeech(20, false));
+    elabBtn.addEventListener('click', () => startSpeech(60, false));
 
     const resetTalkBtn = h('button', 'ie-btn', 'Reset');
     resetTalkBtn.addEventListener('click', () => {
       if (speechCd) speechCd.stop();
       speechClock.textContent = '02:00';
-      startTalkBtn.disabled = false;
+      phaseCue.textContent = 'Phase prompts appear during the 2-minute timer.';
+      startButtons.forEach(b => { b.disabled = false; });
     });
 
     speechTimerRow.append(speechClock, startTalkBtn, resetTalkBtn);
-    speechSection.append(speechTimerRow);
+    speechSection.append(speechTimerRow, rungRow, phaseCue);
 
 
     labCard.append(timerRow, notepadGuide, notepadGrid, validateNotepadBtn, notepadResult, speechSection);
