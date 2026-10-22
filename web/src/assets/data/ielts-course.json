@@ -1,7 +1,7 @@
 {
   "title": "IELTS Band 7+ Complete Prep Course Master Data",
   "standards": "IELTS 9-Band Descriptors & Cambridge Calibrated Assessment",
-  "compiledAt": "2026-10-20T07:55:29.235Z",
+  "compiledAt": "2026-10-22T10:12:20.411Z",
   "stats": {
     "strategyCards": 46,
     "diagnosticQuestions": 20,
@@ -91,13 +91,13 @@
       "subType": "collocations",
       "prompt": "Rigorous laboratory analysis must _____ significant influence over the validity of research conclusions.",
       "options": [
-        "wield",
+        "dispel",
         "manifest",
         "derive",
         "exert"
       ],
       "correctIndex": 3,
-      "explanation": "The natural pairing is 'exert influence'. You wield power, manifest symptoms, and derive benefits, but influence pairs with exert.",
+      "explanation": "The natural pairing is 'exert influence'. 'Dispel' removes doubts, 'manifest' shows visible signs, and 'derive' takes benefit from a source, so none of them fits 'influence'.",
       "impactOnBand": "Accurate verb-noun collocations are essential for reaching Band 7.0 or higher in Lexical Resource."
     },
     {
@@ -166,13 +166,13 @@
       "subType": "collocations",
       "prompt": "Technological automation poses a _____ threat to traditional clerical vocations.",
       "options": [
-        "acute",
-        "critical",
+        "gentle",
+        "tepid",
         "grave",
-        "pronounced"
+        "unfounded"
       ],
       "correctIndex": 2,
-      "explanation": "'Grave threat' is the standard collocation for a serious danger. 'Acute' and 'critical' pair with problems or situations, but not with threats.",
+      "explanation": "'Grave threat' is the standard collocation for a serious danger. 'Gentle' and 'tepid' describe mild things, and 'unfounded' means the danger is not real.",
       "impactOnBand": "Choosing the exact collocate separates Band 7.0 from Band 8.0 lexical precision."
     },
     {
@@ -304,10 +304,10 @@
         "unprecedented",
         "unintended",
         "unwelcome",
-        "uncontrolled"
+        "unsurprising"
       ],
       "correctIndex": 0,
-      "explanation": "'Unprecedented degradation' means environmental damage on a scale never seen before. 'Unintended' and 'unwelcome' describe unwanted effects, but do not convey the historical scale of 'unprecedented'.",
+      "explanation": "'Unprecedented degradation' means environmental damage on a scale never seen before. 'Unintended' and 'unwelcome' describe unwanted effects, and 'unsurprising' describes something expected. None conveys the historical scale of 'unprecedented'.",
       "impactOnBand": "Choosing adjectives that capture exact scale reflects Band 8.0 lexical precision."
     }
   ],
@@ -328,7 +328,7 @@
       ],
       "traps": [
         "*Extrapolation Trap*: Assuming a statement is true based on real-world knowledge when the passage does not confirm it.",
-        "*Qualifier Shift*: Passage says *\"often\"*, but prompt claims *\"always\"* $\\to$ **FALSE**."
+        "*Qualifier Shift*: Passage says *\"often\"*, but prompt claims *\"always\"* → **FALSE**."
       ]
     },
     {

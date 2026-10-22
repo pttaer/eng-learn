@@ -40,13 +40,19 @@ const expectedFiles = [
   '07-speaking-mastery.md'
 ];
 
+// The seven course modules now live as <!-- SECTION: course/NN-... --> blocks in content/ielts.md.
+const IELTS_MD = path.join(WEB_DIR, 'content', 'ielts.md');
+assert(fs.existsSync(IELTS_MD), `Missing merged IELTS source: ${IELTS_MD}`);
+const ieltsMd = fs.readFileSync(IELTS_MD, 'utf8');
 expectedFiles.forEach(file => {
-  const fp = path.join(CONTENT_DIR, file);
-  assert(fs.existsSync(fp), `Missing partitioned course file: ${file}`);
-  const stat = fs.statSync(fp);
-  assert(stat.size > 2000, `Course file ${file} is too small (${stat.size} bytes), expected > 2000 bytes.`);
-  const content = fs.readFileSync(fp, 'utf8');
-  assert(content.startsWith('---'), `Course file ${file} missing frontmatter delimiter.`);
+  const marker = `<!-- SECTION: course/${file} -->`;
+  const start = ieltsMd.indexOf(marker);
+  assert(start >= 0, `Missing partitioned course section: ${file}`);
+  const rest = ieltsMd.slice(start + marker.length);
+  const next = rest.search(/<!-- SECTION: /);
+  const content = (next < 0 ? rest : rest.slice(0, next)).trim();
+  assert(content.length > 2000, `Course section ${file} is too small (${content.length} chars), expected > 2000.`);
+  assert(content.startsWith('---'), `Course section ${file} missing frontmatter delimiter.`);
 });
 console.log('✓ All 7 partitioned course files exist, are populated, and contain valid frontmatter.');
 

@@ -2,6 +2,7 @@ import { h, esc } from '../ui';
 import { playText, ttsAvailable, Playback } from '../tts';
 import { DistractorEngine } from '../distractor-engine';
 import { AudioSynthesizer } from '../../core/audio-synthesizer';
+import { icon, IconName } from '../../utils/icons';
 
 export type TrapCategory = 'self_correction' | 'qualifier' | 'reversal' | 'map_direction';
 
@@ -244,8 +245,10 @@ export function listeningTrapsView(root: HTMLElement): () => void {
 
   // Container elements
   const header = h('header', 'ie-traps-header');
+  const titleEl = h('h1', 'ie-title');
+  titleEl.innerHTML = `${icon('target', 18)} Listening Trap &amp; Oral Self-Correction Audio Lab`;
   header.append(
-    h('h1', 'ie-title', '🎯 Listening Trap & Oral Self-Correction Audio Lab'),
+    titleEl,
     h('p', 'ie-lead', 'Interactive Cambridge listening drills across Sections 1–4. Train your ear to detect oral self-corrections, restrictive qualifiers, reversal markers, and map direction decoys in real time.')
   );
 
@@ -256,18 +259,19 @@ export function listeningTrapsView(root: HTMLElement): () => void {
   root.append(header, trackerBar, filterRow, stage);
 
   // Filter tabs setup
-  const FILTERS: { id: 'all' | TrapCategory; label: string; icon: string }[] = [
-    { id: 'all', label: 'All Traps (12)', icon: '📚' },
-    { id: 'self_correction', label: 'Oral Self-Corrections (3)', icon: '🔄' },
-    { id: 'qualifier', label: 'Qualifiers (3)', icon: '⚠️' },
-    { id: 'reversal', label: 'Reversals (3)', icon: '🔀' },
-    { id: 'map_direction', label: 'Map Directions (3)', icon: '🗺️' },
+  const FILTERS: { id: 'all' | TrapCategory; label: string; iconName: IconName }[] = [
+    { id: 'all', label: 'All Traps (12)', iconName: 'layers' },
+    { id: 'self_correction', label: 'Oral Self-Corrections (3)', iconName: 'rotateCcw' },
+    { id: 'qualifier', label: 'Qualifiers (3)', iconName: 'alertTriangle' },
+    { id: 'reversal', label: 'Reversals (3)', iconName: 'compass' },
+    { id: 'map_direction', label: 'Map Directions (3)', iconName: 'compass' },
   ];
 
   const updateFilters = (): void => {
     filterRow.innerHTML = '';
     FILTERS.forEach(f => {
-      const btn = h('button', `ie-tab ${activeFilter === f.id ? 'is-on' : ''}`, `${f.icon} ${f.label}`);
+      const btn = h('button', `ie-tab ${activeFilter === f.id ? 'is-on' : ''}`);
+      btn.innerHTML = `${icon(f.iconName, 13)} ${f.label}`;
       btn.addEventListener('click', () => {
         if (activeFilter === f.id) return;
         activeFilter = f.id;
@@ -287,11 +291,11 @@ export function listeningTrapsView(root: HTMLElement): () => void {
   const updateTracker = (): void => {
     trackerBar.innerHTML = '';
     const filtered = getFilteredScenarios();
-    const countSpan = h('span', 'ie-clock', `Trap ${currentIdx + 1} of ${filtered.length}`);
+    const countSpan = h('span', 'ie-trap-count', `Trap ${currentIdx + 1} of ${filtered.length}`);
     const masteredBadge = h('span', 'ie-badge-mastered', `🏆 Mastered: ${masteredSet.size} / 12`);
     
     const navGroup = h('div', 'ie-traps-nav-group');
-    const prevBtn = h('button', 'ie-btn', '← Prev');
+    const prevBtn = h('button', 'ie-btn ie-btn-sm', '< Prev');
     prevBtn.disabled = currentIdx === 0;
     prevBtn.addEventListener('click', () => {
       if (currentIdx > 0) {
@@ -300,7 +304,7 @@ export function listeningTrapsView(root: HTMLElement): () => void {
       }
     });
 
-    const nextBtn = h('button', 'ie-btn', 'Next →');
+    const nextBtn = h('button', 'ie-btn ie-btn-sm', 'Next >');
     nextBtn.disabled = currentIdx >= filtered.length - 1;
     nextBtn.addEventListener('click', () => {
       if (currentIdx < filtered.length - 1) {
@@ -363,7 +367,7 @@ export function listeningTrapsView(root: HTMLElement): () => void {
 
       if (isPlaying) {
         // Draw active dynamic harmonics
-        ctx.strokeStyle = '#38bdf8';
+        ctx.strokeStyle = '#a5b4fc';
         ctx.lineWidth = 2.5;
         ctx.beginPath();
         for (let x = 0; x < w; x++) {
@@ -435,18 +439,18 @@ export function listeningTrapsView(root: HTMLElement): () => void {
           playback.stop();
           playback = null;
           isPlaying = false;
-          playBtn.textContent = '🔊 Play Scenario Audio';
+          playBtn.innerHTML = `${icon('volume', 13)} Play Scenario Audio`;
           drawWaveform();
         } else {
           isPlaying = true;
-          playBtn.textContent = '⏹️ Stop Audio';
+          playBtn.innerHTML = `${icon('stop', 13)} Stop Audio`;
           drawWaveform();
           playback = playText(s.script, {
             rate: speechRate,
             onEnd: () => {
               isPlaying = false;
               playback = null;
-              playBtn.textContent = '🔊 Play Scenario Audio';
+              playBtn.innerHTML = `${icon('volume', 13)} Play Scenario Audio`;
               drawWaveform();
             }
           });
@@ -467,15 +471,16 @@ export function listeningTrapsView(root: HTMLElement): () => void {
     const spotterGrid = h('div', 'ie-trap-spotter-grid');
     const spotterFeedback = h('div', 'ie-spotter-feedback');
 
-    const CATEGORIES: { cat: TrapCategory; label: string; icon: string }[] = [
-      { cat: 'self_correction', label: 'Oral Self-Correction', icon: '🔄' },
-      { cat: 'qualifier', label: 'Qualifier Trap', icon: '⚠️' },
-      { cat: 'reversal', label: 'Reversal Trap', icon: '🔀' },
-      { cat: 'map_direction', label: 'Map Direction Decoy', icon: '🗺️' }
+    const CATEGORIES: { cat: TrapCategory; label: string; iconName: IconName }[] = [
+      { cat: 'self_correction', label: 'Oral Self-Correction', iconName: 'rotateCcw' },
+      { cat: 'qualifier', label: 'Qualifier Trap', iconName: 'alertTriangle' },
+      { cat: 'reversal', label: 'Reversal Trap', iconName: 'compass' },
+      { cat: 'map_direction', label: 'Map Direction Decoy', iconName: 'compass' }
     ];
 
     CATEGORIES.forEach(c => {
-      const btn = h('button', 'ie-trap-btn', `${c.icon} ${c.label}`);
+      const btn = h('button', 'ie-trap-btn');
+      btn.innerHTML = `${icon(c.iconName, 13)} ${c.label}`;
       btn.addEventListener('click', () => {
         spotterGrid.querySelectorAll('.ie-trap-btn').forEach(b => {
           b.classList.remove('is-correct', 'is-incorrect');
@@ -484,11 +489,11 @@ export function listeningTrapsView(root: HTMLElement): () => void {
         if (c.cat === s.category) {
           btn.classList.add('is-correct');
           playSfx('absorb');
-          spotterFeedback.innerHTML = `<p class="ie-feedback-msg is-success">🎯 <strong>Spot on!</strong> This is an authentic <strong>${s.categoryLabel}</strong>. Note the cue word: <em>"${s.trapCue}"</em>.</p>`;
+          spotterFeedback.innerHTML = `<p class="ie-feedback-msg is-success">${icon('check', 13)} <strong>Spot on!</strong> This is an authentic <strong>${s.categoryLabel}</strong>. Note the cue word: <em>"${s.trapCue}"</em>.</p>`;
         } else {
           btn.classList.add('is-incorrect');
           playSfx('alarm');
-          spotterFeedback.innerHTML = `<p class="ie-feedback-msg is-error">❌ Not quite. Listen closely to the speaker's phrasing: did they amend, restrict, reverse, or give spatial direction?</p>`;
+          spotterFeedback.innerHTML = `<p class="ie-feedback-msg is-error">${icon('alertTriangle', 13)} Not quite. Listen closely to the speaker's phrasing: did they amend, restrict, reverse, or give spatial direction?</p>`;
         }
       });
       spotterGrid.append(btn);
@@ -539,11 +544,11 @@ export function listeningTrapsView(root: HTMLElement): () => void {
       );
 
       const transcriptBox = h('div', 'ie-transcript-box',
-        `<h4>📝 Audio Script Breakdown</h4><p class="ie-colorized-script">${colorized}</p><p class="ie-note">${esc(s.explanation)}</p>`
+        `<h4>${icon('edit', 14)} Audio Script Breakdown</h4><p class="ie-colorized-script">${colorized}</p><p class="ie-note">${esc(s.explanation)}</p>`
       );
 
       const ruleBox = h('div', 'ie-keino-rule-box',
-        `<h4>🎓 Keino Campbell Examiner Strategy</h4><p>${esc(s.keinoRule)}</p>`
+        `<h4>${icon('graduationCap', 14)} Keino Campbell Examiner Strategy</h4><p>${esc(s.keinoRule)}</p>`
       );
 
       deconstructContainer.append(transcriptBox, ruleBox);
@@ -559,13 +564,13 @@ export function listeningTrapsView(root: HTMLElement): () => void {
         playSfx('level-up');
         masteredSet.add(s.id);
         updateTracker();
-        inputFeedback.innerHTML = `<p class="ie-feedback-msg is-success">✅ <strong>Correct!</strong> Exact word verified. See the full deconstruction below.</p>`;
+        inputFeedback.innerHTML = `<p class="ie-feedback-msg is-success">${icon('check', 13)} <strong>Correct!</strong> Exact word verified. See the full deconstruction below.</p>`;
         renderDeconstruction();
       } else {
         input.classList.add('is-invalid');
         playSfx('alarm');
         const trapRes = DistractorEngine.detectTraps(s.script);
-        inputFeedback.innerHTML = `<p class="ie-feedback-msg is-error">⚠️ ${esc(res.reason || 'Incorrect answer')} [Risk: ${trapRes.riskLevel}]. <button class="ie-btn-link ie-reveal-btn">Reveal Explanation</button></p>`;
+        inputFeedback.innerHTML = `<p class="ie-feedback-msg is-error">${icon('alertTriangle', 13)} ${esc(res.reason || 'Incorrect answer')} [Risk: ${trapRes.riskLevel}]. <button class="ie-btn-link ie-reveal-btn">Reveal Explanation</button></p>`;
         inputFeedback.querySelector('.ie-reveal-btn')?.addEventListener('click', () => {
           renderDeconstruction();
         });

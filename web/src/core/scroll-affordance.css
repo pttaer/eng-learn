@@ -1,0 +1,121 @@
+/* ==========================================================================
+   HUD SCROLL AFFORDANCE & TRACK ARROWS
+   Tactile chevron indicators for horizontally scrollable tabs and controls
+   ========================================================================== */
+
+.hud-scroll-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.hud-scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000 !important;
+  border: 2px solid var(--accent-gold, #f59e0b) !important;
+  border-radius: 50% !important;
+  background: #141b2b !important;
+  color: var(--accent-gold, #f59e0b) !important;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.5), 0 3px 10px rgba(0, 0, 0, 0.85) !important;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  animation: hud-arrow-pulse 2s ease-in-out infinite;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+@keyframes hud-arrow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.4), 0 3px 10px rgba(0, 0, 0, 0.85);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(245, 158, 11, 0.8), 0 4px 14px rgba(0, 0, 0, 0.95);
+  }
+}
+
+.hud-scroll-arrow-left {
+  left: 2px;
+}
+
+.hud-scroll-arrow-right {
+  right: 2px;
+}
+
+.hud-scroll-arrow.is-visible {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.hud-scroll-arrow svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent-gold, #fbbf24) !important;
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.7));
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.hud-scroll-arrow:hover {
+  background: var(--accent-gold, #f59e0b) !important;
+  border-color: #ffffff !important;
+  color: #080a0f !important;
+  transform: translateY(-50%) scale(1.15) !important;
+}
+
+.hud-scroll-arrow:hover svg {
+  color: #080a0f !important;
+  filter: none;
+}
+
+.hud-scroll-arrow:active {
+  transform: translateY(-50%) scale(0.92) !important;
+}
+
+/* Dynamic Directional Mask Fades (Target only the scrollable element, NOT the arrow buttons) */
+.hud-scroll-track > .hud-scroll-arrow {
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+.hud-scroll-track > [data-has-scroll-arrows="true"] {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+.hud-scroll-track.can-scroll-right > [data-has-scroll-arrows="true"] {
+  -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 38px), transparent) !important;
+  mask-image: linear-gradient(90deg, #000 calc(100% - 38px), transparent) !important;
+}
+
+.hud-scroll-track.can-scroll-left.can-scroll-right > [data-has-scroll-arrows="true"] {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 38px, #000 calc(100% - 38px), transparent 100%) !important;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 38px, #000 calc(100% - 38px), transparent 100%) !important;
+}
+
+.hud-scroll-track.can-scroll-left:not(.can-scroll-right) > [data-has-scroll-arrows="true"] {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 38px) !important;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 38px) !important;
+}
+
+@media (max-width: 768px) {
+  .hud-scroll-arrow {
+    display: none !important;
+  }
+}

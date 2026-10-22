@@ -30,21 +30,32 @@ function parseFrontmatter(raw) {
   return { meta, body: match[2] };
 }
 
+function getIeltsSection(content, sectionName) {
+  const marker = `<!-- SECTION: ${sectionName} -->`;
+  const idx = content.indexOf(marker);
+  if (idx === -1) return '';
+  const after = content.slice(idx + marker.length).replace(/^\r?\n+/, '');
+  const nextIdx = after.search(/\n<!-- SECTION: /);
+  return nextIdx === -1 ? after.trim() : after.slice(0, nextIdx).trim();
+}
+
 // 1. Collocations Compiler
 function compileCollocations() {
+  const singleFile = path.join(CONTENT_DIR, 'collocations.md');
   const dir = path.join(CONTENT_DIR, 'collocations');
-  if (!fs.existsSync(dir)) return;
-  const files = fs.readdirSync(dir).filter(f => f.endsWith('.md')).sort();
-  if (files.length === 0) return;
+  const contents = [];
+  if (fs.existsSync(singleFile)) {
+    contents.push(fs.readFileSync(singleFile, 'utf8').replace(/\r\n/g, '\n'));
+  } else if (fs.existsSync(dir)) {
+    const files = fs.readdirSync(dir).filter(f => f.endsWith('.md')).sort();
+    files.forEach(f => contents.push(fs.readFileSync(path.join(dir, f), 'utf8').replace(/\r\n/g, '\n')));
+  } else return;
+
   const allItems = [];
-  
-  files.forEach(file => {
-    const content = fs.readFileSync(path.join(dir, file), 'utf8').replace(/\r\n/g, '\n');
-    const lines = content.split(/\r?\n/);
-    lines.forEach(line => {
+  contents.forEach(content => {
+    content.split(/\r?\n/).forEach(line => {
       const trimmed = line.trim();
       if (!trimmed.startsWith('|') || trimmed.includes('Index') || trimmed.includes(':---')) return;
-      // Positional cells: an empty Example must not shift CEFR into its slot
       const parts = trimmed.replace(/^\|/, '').replace(/\|$/, '').split('|').map(p => p.trim());
       if (parts.length >= 4 && parts[1]) {
         const index = parseInt(parts[0], 10);
@@ -70,21 +81,23 @@ function compileCollocations() {
 
 // 2. Grammar Compiler
 function compileGrammar() {
+  const singleFile = path.join(CONTENT_DIR, 'grammar.md');
   const dir = path.join(CONTENT_DIR, 'grammar');
-  if (!fs.existsSync(dir)) return;
-  const files = fs.readdirSync(dir).filter(f => f.endsWith('.md')).sort();
-  if (files.length === 0) return;
-  const allRules = [];
+  const contents = [];
+  if (fs.existsSync(singleFile)) {
+    contents.push(fs.readFileSync(singleFile, 'utf8').replace(/\r\n/g, '\n'));
+  } else if (fs.existsSync(dir)) {
+    const files = fs.readdirSync(dir).filter(f => f.endsWith('.md')).sort();
+    files.forEach(f => contents.push(fs.readFileSync(path.join(dir, f), 'utf8').replace(/\r\n/g, '\n')));
+  } else return;
 
-  files.forEach(file => {
-    const content = fs.readFileSync(path.join(dir, file), 'utf8').replace(/\r\n/g, '\n');
+  const allRules = [];
+  contents.forEach(content => {
     const sections = content.split(/^##\s+/m).slice(1);
-    
     sections.forEach(sec => {
       const lines = sec.split(/\r?\n/);
       const title = lines[0].trim();
       const item = { title };
-      
       lines.slice(1).forEach(l => {
         const m = l.match(/^-\s+\*\*([^*]+)\*\*:\s*(.*)$/);
         if (m) {
@@ -118,21 +131,24 @@ function compileGrammar() {
 
 // 3. Vocabulary Compiler
 function compileVocabulary() {
+  const singleFile = path.join(CONTENT_DIR, 'vocabulary.md');
   const dir = path.join(CONTENT_DIR, 'vocabulary');
-  if (!fs.existsSync(dir)) return;
-  const files = fs.readdirSync(dir).filter(f => f.endsWith('.md') && f !== 'awl-corpus.md' && f !== 'rhetoric-figures.md').sort();
-  if (files.length === 0) return;
+  const contents = [];
+  if (fs.existsSync(singleFile)) {
+    const raw = fs.readFileSync(singleFile, 'utf8').replace(/\r\n/g, '\n');
+    contents.push(raw.split('<!-- SECTION: AWL_CORPUS -->')[0]);
+  } else if (fs.existsSync(dir)) {
+    const files = fs.readdirSync(dir).filter(f => f.endsWith('.md') && f !== 'awl-corpus.md' && f !== 'rhetoric-figures.md').sort();
+    files.forEach(f => contents.push(fs.readFileSync(path.join(dir, f), 'utf8').replace(/\r\n/g, '\n')));
+  } else return;
+
   const allItems = [];
-
-  files.forEach(file => {
-    const content = fs.readFileSync(path.join(dir, file), 'utf8').replace(/\r\n/g, '\n');
+  contents.forEach(content => {
     const sections = content.split(/^##\s+/m).slice(1);
-
     sections.forEach(sec => {
       const lines = sec.split(/\r?\n/);
       const wordOrChunk = lines[0].trim();
       const item = { wordOrChunk, breakdown: {} };
-
       lines.slice(1).forEach(l => {
         const m = l.match(/^-\s+\*\*([^*]+)\*\*:\s*(.*)$/);
         if (m) {
@@ -178,13 +194,26 @@ function compileVocabulary() {
 const splitRow = trimmed => trimmed.split('|').map(p => p.trim()).filter(Boolean);
 
 function compileLexicon() {
+  const singleFile = path.join(CONTENT_DIR, 'vocabulary.md');
   const awlFile = path.join(CONTENT_DIR, 'vocabulary', 'awl-corpus.md');
+  const rhetoricFile = path.join(CONTENT_DIR, 'vocabulary', 'rhetoric-figures.md');
   const lexiconDict = {};
 
+  let awlContent = '';
+  let rhetoricContent = '';
+
+  if (fs.existsSync(singleFile)) {
+    const raw = fs.readFileSync(singleFile, 'utf8').replace(/\r\n/g, '\n');
+    awlContent = (raw.split('<!-- SECTION: AWL_CORPUS -->')[1] || '').split('<!-- SECTION: RHETORIC_FIGURES -->')[0] || '';
+    rhetoricContent = raw.split('<!-- SECTION: RHETORIC_FIGURES -->')[1] || '';
+  } else {
+    if (fs.existsSync(awlFile)) awlContent = fs.readFileSync(awlFile, 'utf8').replace(/\r\n/g, '\n');
+    if (fs.existsSync(rhetoricFile)) rhetoricContent = fs.readFileSync(rhetoricFile, 'utf8').replace(/\r\n/g, '\n');
+  }
+
   // 1. Ingest AWL 500 Corpus
-  if (fs.existsSync(awlFile)) {
-    const content = fs.readFileSync(awlFile, 'utf8');
-    const lines = content.split(/\r?\n/);
+  if (awlContent) {
+    const lines = awlContent.split(/\r?\n/);
     lines.forEach(line => {
       const trimmed = line.trim();
       if (!trimmed.startsWith('|') || trimmed.includes('Index') || trimmed.includes(':---')) return;
@@ -258,10 +287,8 @@ function compileLexicon() {
   }
 
   // 3. Ingest Rhetorical Figures into Lexicon Dictionary
-  const rhetoricFile = path.join(CONTENT_DIR, 'vocabulary', 'rhetoric-figures.md');
-  if (fs.existsSync(rhetoricFile)) {
-    const content = fs.readFileSync(rhetoricFile, 'utf8');
-    const lines = content.split(/\r?\n/);
+  if (rhetoricContent) {
+    const lines = rhetoricContent.split(/\r?\n/);
     lines.forEach(line => {
       const trimmed = line.trim();
       if (!trimmed.startsWith('|') || trimmed.includes('Index') || trimmed.includes(':---')) return;
@@ -304,108 +331,173 @@ function compileLexicon() {
 
 // 4. Drills Compiler (Speaking & Writing)
 function compileDrills() {
+  const singleFile = path.join(CONTENT_DIR, 'drills.md');
   const dir = path.join(CONTENT_DIR, 'drills');
-  if (!fs.existsSync(dir)) return;
   const drills = { speaking: [], writing: [], rubricSummary: {} };
 
-  // speaking*.md / writing*.md: one file per level (e.g. speaking-prompts-a1.md)
-  const drillFiles = prefix => fs.readdirSync(dir).filter(f => f.startsWith(prefix) && f.endsWith('.md')).sort();
+  if (fs.existsSync(singleFile)) {
+    const content = fs.readFileSync(singleFile, 'utf8').replace(/\r\n/g, '\n');
+    const sections = content.split(/^##\s+/m).slice(1);
+    const scenarios = [];
 
-  for (const speakName of drillFiles('speaking')) {
-    const speakFile = path.join(dir, speakName);
-    const content = fs.readFileSync(speakFile, 'utf8').replace(/\r\n/g, '\n');
-    content.split(/^##\s+/m).slice(1).forEach(sec => {
+    sections.forEach(sec => {
       const lines = sec.split(/\r?\n/);
       const title = lines[0].trim();
       const item = { title };
+      const rawMap = {};
       lines.slice(1).forEach(l => {
         const m = l.match(/^-\s+\*\*([^*]+)\*\*:\s*(.*)$/);
         if (m) {
-          const key = m[1].trim();
-          const val = m[2].trim();
-          if (key === 'ID') item.id = val;
-          else if (key === 'Index') item.index = parseInt(val, 10);
-          else if (key === 'Mode') item.mode = val;
-          else if (key === 'CEFR') item.cefrLevel = val;
-          else if (key === 'Prompt') item.prompt = val;
-          else if (key === 'Anchor') item.anchor = val;
-          else if (key === 'Collocations') item.collocations = val;
-          else if (key === 'Phonetic') item.phonetic = val;
-        }
-      });
-      if (item.id && item.prompt) drills.speaking.push(item);
-    });
-  }
-
-  for (const writeName of drillFiles('writing')) {
-    const writeFile = path.join(dir, writeName);
-    const content = fs.readFileSync(writeFile, 'utf8').replace(/\r\n/g, '\n');
-    content.split(/^##\s+/m).slice(1).forEach(sec => {
-      const lines = sec.split(/\r?\n/);
-      const title = lines[0].trim();
-      const item = { title, meal: {} };
-      lines.slice(1).forEach(l => {
-        const m = l.match(/^-\s+\*\*([^*]+)\*\*:\s*(.*)$/);
-        if (m) {
-          const key = m[1].trim();
-          const val = m[2].trim();
-          if (key === 'ID') item.id = val;
-          else if (key === 'Index') item.index = parseInt(val, 10);
-          else if (key === 'Mode') item.mode = val;
-          else if (key === 'CEFR') item.cefrLevel = val;
-          else if (key === 'Question') item.question = val;
-          else if (key === 'Register') item.register = val;
-          else if (key === 'Master Sentence') item.masterSentence = val;
-          else if (key === 'M') item.meal.m = val;
-          else if (key === 'E') item.meal.e = val;
-          else if (key === 'A') item.meal.a = val;
-          else if (key === 'L') item.meal.l = val;
-          else if (key === 'Stylistic') item.stylistic = val;
-        }
-      });
-      if (item.id && item.question) drills.writing.push(item);
-    });
-  }
-
-  // Parse Action-Oriented Communicative Scenarios (CEFR A1-C2)
-  const scenarios = [];
-  const scenarioFile = path.join(dir, 'communicative-scenarios.md');
-  if (fs.existsSync(scenarioFile)) {
-    const content = fs.readFileSync(scenarioFile, 'utf8').replace(/\r\n/g, '\n');
-    content.split(/^##\s+/m).slice(1).forEach(sec => {
-      const lines = sec.split(/\r?\n/);
-      const title = lines[0].trim();
-      const item = { title };
-      lines.slice(1).forEach(l => {
-        const m = l.match(/^-\s+\*\*([^*]+)\*\*:\s*(.*)$/);
-        if (m) {
-          const key = m[1].trim();
           let val = m[2].trim();
           if (val.startsWith('`') && val.endsWith('`')) val = val.slice(1, -1);
-          if (key === 'ID') item.id = val;
-          else if (key === 'Index') item.index = parseInt(val, 10);
-          else if (key === 'CEFR') item.cefrLevel = val;
-          else if (key === 'Mode') item.mode = val;
-          else if (key === 'Domain') item.domain = val;
-          else if (key === 'Can-Do') item.canDo = val;
-          else if (key === 'Interlocutor') item.interlocutor = val;
-          else if (key === 'Context') item.context = val;
-          else if (key === 'Friction') item.friction = val;
-          else if (key === 'Outcome') item.outcome = val;
-          else if (key === 'Time Condition') item.timeCondition = val;
-          else if (key === 'Scaffold') item.scaffold = val;
-          else if (key === 'Vietnamese') item.vietnamese = val;
+          rawMap[m[1].trim()] = val;
         }
       });
-      if (item.id && item.canDo) scenarios.push(item);
-    });
-  }
-  if (scenarios.length > 0) {
-    drills.scenarios = scenarios;
-    drills.communicativeScenarios = scenarios;
-  }
 
-  // Preserve existing rubricSummary if present
+      if (rawMap['Can-Do']) {
+        item.id = rawMap['ID'];
+        if (rawMap['Index']) item.index = parseInt(rawMap['Index'], 10);
+        if (rawMap['CEFR']) item.cefrLevel = rawMap['CEFR'];
+        if (rawMap['Mode']) item.mode = rawMap['Mode'];
+        if (rawMap['Domain']) item.domain = rawMap['Domain'];
+        item.canDo = rawMap['Can-Do'];
+        if (rawMap['Interlocutor']) item.interlocutor = rawMap['Interlocutor'];
+        if (rawMap['Context']) item.context = rawMap['Context'];
+        if (rawMap['Friction']) item.friction = rawMap['Friction'];
+        if (rawMap['Outcome']) item.outcome = rawMap['Outcome'];
+        if (rawMap['Time Condition']) item.timeCondition = rawMap['Time Condition'];
+        if (rawMap['Scaffold']) item.scaffold = rawMap['Scaffold'];
+        if (rawMap['Vietnamese']) item.vietnamese = rawMap['Vietnamese'];
+        if (item.id && item.canDo) scenarios.push(item);
+      } else if (rawMap['Question']) {
+        item.meal = {};
+        item.id = rawMap['ID'];
+        if (rawMap['Index']) item.index = parseInt(rawMap['Index'], 10);
+        if (rawMap['Mode']) item.mode = rawMap['Mode'];
+        if (rawMap['CEFR']) item.cefrLevel = rawMap['CEFR'];
+        item.question = rawMap['Question'];
+        if (rawMap['Register']) item.register = rawMap['Register'];
+        if (rawMap['Master Sentence']) item.masterSentence = rawMap['Master Sentence'];
+        if (rawMap['M']) item.meal.m = rawMap['M'];
+        if (rawMap['E']) item.meal.e = rawMap['E'];
+        if (rawMap['A']) item.meal.a = rawMap['A'];
+        if (rawMap['L']) item.meal.l = rawMap['L'];
+        if (rawMap['Stylistic']) item.stylistic = rawMap['Stylistic'];
+        if (item.id && item.question) drills.writing.push(item);
+      } else if (rawMap['Prompt']) {
+        item.id = rawMap['ID'];
+        if (rawMap['Index']) item.index = parseInt(rawMap['Index'], 10);
+        if (rawMap['Mode']) item.mode = rawMap['Mode'];
+        if (rawMap['CEFR']) item.cefrLevel = rawMap['CEFR'];
+        item.prompt = rawMap['Prompt'];
+        if (rawMap['Anchor']) item.anchor = rawMap['Anchor'];
+        if (rawMap['Collocations']) item.collocations = rawMap['Collocations'];
+        if (rawMap['Phonetic']) item.phonetic = rawMap['Phonetic'];
+        if (item.id && item.prompt) drills.speaking.push(item);
+      }
+    });
+
+    if (scenarios.length > 0) {
+      drills.scenarios = scenarios;
+      drills.communicativeScenarios = scenarios;
+    }
+  } else if (fs.existsSync(dir)) {
+    const drillFiles = prefix => fs.readdirSync(dir).filter(f => f.startsWith(prefix) && f.endsWith('.md')).sort();
+
+    for (const speakName of drillFiles('speaking')) {
+      const speakFile = path.join(dir, speakName);
+      const content = fs.readFileSync(speakFile, 'utf8').replace(/\r\n/g, '\n');
+      content.split(/^##\s+/m).slice(1).forEach(sec => {
+        const lines = sec.split(/\r?\n/);
+        const title = lines[0].trim();
+        const item = { title };
+        lines.slice(1).forEach(l => {
+          const m = l.match(/^-\s+\*\*([^*]+)\*\*:\s*(.*)$/);
+          if (m) {
+            const key = m[1].trim();
+            const val = m[2].trim();
+            if (key === 'ID') item.id = val;
+            else if (key === 'Index') item.index = parseInt(val, 10);
+            else if (key === 'Mode') item.mode = val;
+            else if (key === 'CEFR') item.cefrLevel = val;
+            else if (key === 'Prompt') item.prompt = val;
+            else if (key === 'Anchor') item.anchor = val;
+            else if (key === 'Collocations') item.collocations = val;
+            else if (key === 'Phonetic') item.phonetic = val;
+          }
+        });
+        if (item.id && item.prompt) drills.speaking.push(item);
+      });
+    }
+
+    for (const writeName of drillFiles('writing')) {
+      const writeFile = path.join(dir, writeName);
+      const content = fs.readFileSync(writeFile, 'utf8').replace(/\r\n/g, '\n');
+      content.split(/^##\s+/m).slice(1).forEach(sec => {
+        const lines = sec.split(/\r?\n/);
+        const title = lines[0].trim();
+        const item = { title, meal: {} };
+        lines.slice(1).forEach(l => {
+          const m = l.match(/^-\s+\*\*([^*]+)\*\*:\s*(.*)$/);
+          if (m) {
+            const key = m[1].trim();
+            const val = m[2].trim();
+            if (key === 'ID') item.id = val;
+            else if (key === 'Index') item.index = parseInt(val, 10);
+            else if (key === 'Mode') item.mode = val;
+            else if (key === 'CEFR') item.cefrLevel = val;
+            else if (key === 'Question') item.question = val;
+            else if (key === 'Register') item.register = val;
+            else if (key === 'Master Sentence') item.masterSentence = val;
+            else if (key === 'M') item.meal.m = val;
+            else if (key === 'E') item.meal.e = val;
+            else if (key === 'A') item.meal.a = val;
+            else if (key === 'L') item.meal.l = val;
+            else if (key === 'Stylistic') item.stylistic = val;
+          }
+        });
+        if (item.id && item.question) drills.writing.push(item);
+      });
+    }
+
+    const scenarioFile = path.join(dir, 'communicative-scenarios.md');
+    if (fs.existsSync(scenarioFile)) {
+      const content = fs.readFileSync(scenarioFile, 'utf8').replace(/\r\n/g, '\n');
+      const scenarios = [];
+      content.split(/^##\s+/m).slice(1).forEach(sec => {
+        const lines = sec.split(/\r?\n/);
+        const title = lines[0].trim();
+        const item = { title };
+        lines.slice(1).forEach(l => {
+          const m = l.match(/^-\s+\*\*([^*]+)\*\*:\s*(.*)$/);
+          if (m) {
+            const key = m[1].trim();
+            let val = m[2].trim();
+            if (val.startsWith('`') && val.endsWith('`')) val = val.slice(1, -1);
+            if (key === 'ID') item.id = val;
+            else if (key === 'Index') item.index = parseInt(val, 10);
+            else if (key === 'CEFR') item.cefrLevel = val;
+            else if (key === 'Mode') item.mode = val;
+            else if (key === 'Domain') item.domain = val;
+            else if (key === 'Can-Do') item.canDo = val;
+            else if (key === 'Interlocutor') item.interlocutor = val;
+            else if (key === 'Context') item.context = val;
+            else if (key === 'Friction') item.friction = val;
+            else if (key === 'Outcome') item.outcome = val;
+            else if (key === 'Time Condition') item.timeCondition = val;
+            else if (key === 'Scaffold') item.scaffold = val;
+            else if (key === 'Vietnamese') item.vietnamese = val;
+          }
+        });
+        if (item.id && item.canDo) scenarios.push(item);
+      });
+      if (scenarios.length > 0) {
+        drills.scenarios = scenarios;
+        drills.communicativeScenarios = scenarios;
+      }
+    }
+  } else return;
+
   const existingPath = path.join(DATA_DIR, 'drills.json');
   if (fs.existsSync(existingPath)) {
     try {
@@ -422,18 +514,24 @@ function compileDrills() {
 
 // 5. Reading Compiler
 function compileReading() {
+  const singleFile = path.join(CONTENT_DIR, 'reading.md');
   const dir = path.join(CONTENT_DIR, 'reading');
-  if (!fs.existsSync(dir)) return;
-  const files = fs.readdirSync(dir).filter(f => f.endsWith('.md')).sort();
-  if (files.length === 0) return;
   const readingData = {
     title: "Intensive Reading & Contextual Sentence Mining Dossier",
     pedagogy: "4-Pass Intensive Deconstruction & i+1 Spaced Repetition Mining",
     articles: []
   };
 
-  files.forEach(file => {
-    const raw = fs.readFileSync(path.join(dir, file), 'utf8').replace(/\r\n/g, '\n');
+  const rawArticles = [];
+  if (fs.existsSync(singleFile)) {
+    const raw = fs.readFileSync(singleFile, 'utf8').replace(/\r\n/g, '\n');
+    raw.split(/^<!-- ARTICLE: [^>]+ -->/m).slice(1).forEach(block => rawArticles.push(block.trim()));
+  } else if (fs.existsSync(dir)) {
+    const files = fs.readdirSync(dir).filter(f => f.endsWith('.md')).sort();
+    files.forEach(f => rawArticles.push(fs.readFileSync(path.join(dir, f), 'utf8').replace(/\r\n/g, '\n')));
+  } else return;
+
+  rawArticles.forEach(raw => {
     const { meta, body } = parseFrontmatter(raw);
     
     // Extract passage
@@ -575,51 +673,98 @@ function compileReading() {
 
 // 6. Listening & Habits Compilers
 function compileListening() {
-  const filePath = path.join(CONTENT_DIR, 'listening', 'phonetics-passages.md');
-  if (!fs.existsSync(filePath)) return;
-  const raw = fs.readFileSync(filePath, 'utf8').replace(/\r\n/g, '\n');
-  const jsonMatch = raw.match(/```json\r?\n([\s\S]*?)\r?\n```/);
-  if (jsonMatch) {
-    const data = JSON.parse(jsonMatch[1]);
-    // Extra levels live in passages-*.md, each with a ```json block holding a samplePassages array
-    const dir = path.join(CONTENT_DIR, 'listening');
-    for (const f of fs.readdirSync(dir).filter(f => /^passages-.*\.md$/.test(f)).sort()) {
-      const extra = fs.readFileSync(path.join(dir, f), 'utf8').replace(/\r\n/g, '\n').match(/```json\n([\s\S]*?)\n```/);
-      if (extra) data.samplePassages.push(...JSON.parse(extra[1]).samplePassages);
+  const singleFile = path.join(CONTENT_DIR, 'listening.md');
+  const legacyFile = path.join(CONTENT_DIR, 'listening', 'phonetics-passages.md');
+
+  if (fs.existsSync(singleFile)) {
+    const raw = fs.readFileSync(singleFile, 'utf8').replace(/\r\n/g, '\n');
+    const jsonMatch = raw.match(/```json\r?\n([\s\S]*?)\r?\n```/);
+    if (jsonMatch) {
+      const data = JSON.parse(jsonMatch[1]);
+      fs.writeFileSync(path.join(DATA_DIR, 'listening.json'), JSON.stringify(data, null, 2), 'utf8');
+      console.log(`[COMPILE] listening.json compiled.`);
     }
-    fs.writeFileSync(path.join(DATA_DIR, 'listening.json'), JSON.stringify(data, null, 2), 'utf8');
-    console.log(`[COMPILE] listening.json compiled.`);
+  } else if (fs.existsSync(legacyFile)) {
+    const raw = fs.readFileSync(legacyFile, 'utf8').replace(/\r\n/g, '\n');
+    const jsonMatch = raw.match(/```json\r?\n([\s\S]*?)\r?\n```/);
+    if (jsonMatch) {
+      const data = JSON.parse(jsonMatch[1]);
+      const dir = path.join(CONTENT_DIR, 'listening');
+      for (const f of fs.readdirSync(dir).filter(f => /^passages-.*\.md$/.test(f)).sort()) {
+        const extra = fs.readFileSync(path.join(dir, f), 'utf8').replace(/\r\n/g, '\n').match(/```json\n([\s\S]*?)\n```/);
+        if (extra) data.samplePassages.push(...JSON.parse(extra[1]).samplePassages);
+      }
+      fs.writeFileSync(path.join(DATA_DIR, 'listening.json'), JSON.stringify(data, null, 2), 'utf8');
+      console.log(`[COMPILE] listening.json compiled.`);
+    }
   }
 }
 
 function compileHabits() {
-  const filePath = path.join(CONTENT_DIR, 'habits', 'daily-plan.md');
-  if (!fs.existsSync(filePath)) return;
-  const raw = fs.readFileSync(filePath, 'utf8').replace(/\r\n/g, '\n');
-  const jsonMatch = raw.match(/```json\r?\n([\s\S]*?)\r?\n```/);
-  if (jsonMatch) {
-    const data = JSON.parse(jsonMatch[1]);
+  const jsonFile = path.join(CONTENT_DIR, 'habits.json');
+  const legacyFile = path.join(CONTENT_DIR, 'habits', 'daily-plan.md');
+
+  if (fs.existsSync(jsonFile)) {
+    const data = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
     fs.writeFileSync(path.join(DATA_DIR, 'habits.json'), JSON.stringify(data, null, 2), 'utf8');
     console.log(`[COMPILE] habits.json compiled.`);
+  } else if (fs.existsSync(legacyFile)) {
+    const raw = fs.readFileSync(legacyFile, 'utf8').replace(/\r\n/g, '\n');
+    const jsonMatch = raw.match(/```json\r?\n([\s\S]*?)\r?\n```/);
+    if (jsonMatch) {
+      const data = JSON.parse(jsonMatch[1]);
+      fs.writeFileSync(path.join(DATA_DIR, 'habits.json'), JSON.stringify(data, null, 2), 'utf8');
+      console.log(`[COMPILE] habits.json compiled.`);
+    }
   }
 }
 
 function compileDiagnostic() {
-  const filePath = path.join(CONTENT_DIR, 'diagnostic', 'diagnostic-questions.md');
-  if (!fs.existsSync(filePath)) return;
-  const raw = fs.readFileSync(filePath, 'utf8').replace(/\r\n/g, '\n');
-  const jsonMatch = raw.match(/```json\r?\n([\s\S]*?)\r?\n```/);
-  if (jsonMatch) {
-    const data = JSON.parse(jsonMatch[1]);
+  const jsonFile = path.join(CONTENT_DIR, 'diagnostic.json');
+  const legacyFile = path.join(CONTENT_DIR, 'diagnostic', 'diagnostic-questions.md');
+
+  if (fs.existsSync(jsonFile)) {
+    const data = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
     fs.writeFileSync(path.join(DATA_DIR, 'diagnostic-questions.json'), JSON.stringify(data, null, 2), 'utf8');
     console.log(`[COMPILE] diagnostic-questions.json: ${data.length} items`);
+  } else if (fs.existsSync(legacyFile)) {
+    const raw = fs.readFileSync(legacyFile, 'utf8').replace(/\r\n/g, '\n');
+    const jsonMatch = raw.match(/```json\r?\n([\s\S]*?)\r?\n```/);
+    if (jsonMatch) {
+      const data = JSON.parse(jsonMatch[1]);
+      fs.writeFileSync(path.join(DATA_DIR, 'diagnostic-questions.json'), JSON.stringify(data, null, 2), 'utf8');
+      console.log(`[COMPILE] diagnostic-questions.json: ${data.length} items`);
+    }
   }
 }
 
 // 8. CD-IELTS Mock Simulator & L2 Pragmatic Roleplays Compiler
+// Evidence lines: "*Why Qn*: ..." anywhere in a passage/section block attaches to question n as `why`.
+function attachWhy(block, questions) {
+  const whyByNumber = new Map();
+  for (const m of block.matchAll(/^\s*\*Why Q(\d+)\*:\s*(.+)$/gm)) {
+    whyByNumber.set(parseInt(m[1], 10), m[2].trim());
+  }
+  questions.forEach(q => {
+    if (whyByNumber.has(q.number)) q.why = whyByNumber.get(q.number);
+  });
+}
+
 function compileIelts() {
+  const singleFile = path.join(CONTENT_DIR, 'ielts.md');
   const dir = path.join(CONTENT_DIR, 'ielts');
-  if (!fs.existsSync(dir)) return;
+  if (!fs.existsSync(singleFile) && !fs.existsSync(dir)) return;
+
+  let ieltsMdContent = '';
+  if (fs.existsSync(singleFile)) {
+    ieltsMdContent = fs.readFileSync(singleFile, 'utf8').replace(/\r\n/g, '\n');
+  }
+
+  const readSection = (filename) => {
+    if (ieltsMdContent) return getIeltsSection(ieltsMdContent, filename);
+    const p = path.join(dir, filename);
+    return fs.existsSync(p) ? fs.readFileSync(p, 'utf8').replace(/\r\n/g, '\n') : '';
+  };
 
   const ieltsData = {
     title: "Computer-Delivered IELTS Academic & General Training Mock Suite",
@@ -632,9 +777,9 @@ function compileIelts() {
   };
 
   // 1. Reading (Full 40 Questions across 3 Passages)
-  const readingFile = path.join(dir, 'academic-reading.md');
-  if (fs.existsSync(readingFile)) {
-    const raw = fs.readFileSync(readingFile, 'utf8').replace(/\r\n/g, '\n');
+  const readingRaw = readSection('academic-reading.md');
+  if (readingRaw) {
+    const raw = readingRaw;
     const { meta, body } = parseFrontmatter(raw);
 
     const passageBlocks = body.split(/^# Reading Passage\s+/m).slice(1);
@@ -679,7 +824,7 @@ function compileIelts() {
       }
 
       // True / False / Not Given & Yes / No / Not Given (e.g. Q7-10, Q27-31)
-      const tfngMatches = block.matchAll(/- \*\*Question (\d+)\*\*:\s*([^\n\r]+)\r?\n\s*\*Key\*:\s*`([A-Z\s]+)`/g);
+      const tfngMatches = block.matchAll(/- \*\*Question (\d+)\*\*:\s*([^\n\r]+)\r?\n\s*\*Key\*:\s*`(TRUE|FALSE|NOT GIVEN|YES|NO)`/g);
       for (const m of tfngMatches) {
         const statement = m[2].trim();
         const key = m[3].trim();
@@ -735,6 +880,7 @@ function compileIelts() {
         }
       });
       const sortedQ = Array.from(uniqueQMap.values()).sort((a, b) => a.number - b.number);
+      attachWhy(block, sortedQ);
 
       passages.push({
         passageNumber: pNum,
@@ -763,9 +909,9 @@ function compileIelts() {
   }
 
   // 2. Listening (Full 40 Questions across 4 Sections)
-  const listeningFile = path.join(dir, 'listening-sections.md');
-  if (fs.existsSync(listeningFile)) {
-    const raw = fs.readFileSync(listeningFile, 'utf8').replace(/\r\n/g, '\n');
+  const listeningRaw = readSection('listening-sections.md');
+  if (listeningRaw) {
+    const raw = listeningRaw;
     const { meta, body } = parseFrontmatter(raw);
 
     const sectionBlocks = body.split(/^# Section\s+/m).slice(1);
@@ -853,6 +999,7 @@ function compileIelts() {
         }
       });
       const sortedQ = Array.from(uniqueQMap.values()).sort((a, b) => a.number - b.number);
+      attachWhy(block, sortedQ);
 
       sections.push({
         sectionNumber: sNum,
@@ -880,9 +1027,9 @@ function compileIelts() {
   }
 
   // 3. Writing (Tasks 1 & 2)
-  const writingFile = path.join(dir, 'writing-tasks.md');
-  if (fs.existsSync(writingFile)) {
-    const raw = fs.readFileSync(writingFile, 'utf8').replace(/\r\n/g, '\n');
+  const writingRaw = readSection('writing-tasks.md');
+  if (writingRaw) {
+    const raw = writingRaw;
     const { meta, body } = parseFrontmatter(raw);
 
     const taskParts = body.split(/## Task 2:/);
@@ -913,9 +1060,9 @@ function compileIelts() {
   }
 
   // 4. Speaking (Parts 1-3)
-  const speakingFile = path.join(dir, 'speaking-cue-cards.md');
-  if (fs.existsSync(speakingFile)) {
-    const raw = fs.readFileSync(speakingFile, 'utf8').replace(/\r\n/g, '\n');
+  const speakingRaw = readSection('speaking-cue-cards.md');
+  if (speakingRaw) {
+    const raw = speakingRaw;
     const { meta, body } = parseFrontmatter(raw);
     const part2ModelMatch = body.match(/### Band 8\.5 Model Monologue[^\n]*\r?\n([\s\S]*?)(?=\r?\n---|\$)/);
 
@@ -932,9 +1079,9 @@ function compileIelts() {
   }
 
   // 5. Pragmatic Roleplays
-  const roleplayFile = path.join(dir, 'pragmatic-roleplays.md');
-  if (fs.existsSync(roleplayFile)) {
-    const raw = fs.readFileSync(roleplayFile, 'utf8').replace(/\r\n/g, '\n');
+  const roleplayRaw = readSection('pragmatic-roleplays.md');
+  if (roleplayRaw) {
+    const raw = roleplayRaw;
     const sections = raw.split(/^##\s+/m).slice(1);
     sections.forEach(sec => {
       const lines = sec.split(/\r?\n/);
@@ -1008,9 +1155,10 @@ function compileIelts() {
 
 function compileIeltsCourse() {
   const IELTS_DATA_DIR = path.join(__dirname, "..", "src", "ielts", "data");
+  const singleFile = path.join(CONTENT_DIR, 'ielts.md');
   const courseDir = path.join(CONTENT_DIR, 'ielts', 'course');
-  if (!fs.existsSync(courseDir)) {
-    console.warn('[WARN] IELTS course content directory missing:', courseDir);
+  if (!fs.existsSync(singleFile) && !fs.existsSync(courseDir)) {
+    console.warn('[WARN] IELTS course content missing');
     return;
   }
 
@@ -1023,8 +1171,14 @@ function compileIeltsCourse() {
 
   const start = Date.now();
 
-  // Read the 7 markdown course files
+  let ieltsMdContent = '';
+  if (fs.existsSync(singleFile)) {
+    ieltsMdContent = fs.readFileSync(singleFile, 'utf8').replace(/\r\n/g, '\n');
+  }
+
+  // Read course sections from single ielts.md or legacy courseDir
   const readMd = (filename) => {
+    if (ieltsMdContent) return getIeltsSection(ieltsMdContent, `course/${filename}`);
     const fullPath = path.join(courseDir, filename);
     return fs.existsSync(fullPath) ? fs.readFileSync(fullPath, 'utf8').replace(/\r\n/g, '\n') : '';
   };
@@ -2029,6 +2183,7 @@ function compileAll() {
   compileListening();
   compileHabits();
   compileDiagnostic();
+  compileIelts();
   compileIeltsCourse();
   console.log(`[COMPILE] Finished in ${Date.now() - start}ms.`);
 }
@@ -2040,7 +2195,7 @@ if (require.main === module) {
 if (process.argv.includes('--watch')) {
   console.log('[WATCH] Watching web/content for changes...');
   fs.watch(CONTENT_DIR, { recursive: true }, (eventType, filename) => {
-    if (filename && filename.endsWith('.md')) {
+    if (filename && (filename.endsWith('.md') || filename.endsWith('.json'))) {
       console.log(`[WATCH] Change detected: ${filename}`);
       try { compileAll(); } catch (err) { console.error('[WATCH ERROR]', err.message); }
     }
@@ -2058,5 +2213,6 @@ module.exports = {
   compileReading,
   compileListening,
   compileHabits,
+  compileIelts,
   compileIeltsCourse
 };

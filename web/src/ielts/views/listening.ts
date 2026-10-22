@@ -16,6 +16,7 @@ import {
 import { AccentCadenceType } from '../../core/audio-synthesizer';
 import { bandBadge, esc, h } from '../ui';
 import { TestResult } from './reading';
+import { icon } from '../../utils/icons';
 
 const SECTIONS = listeningData as ListeningSection[];
 
@@ -67,15 +68,15 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
   // Authentic Cambridge 40Hz acoustic exam room resonance toggle
   const ambienceBtn = h(
     'button',
-    'ie-btn ie-ambience-btn' + (isExamRoomAmbienceEnabled() ? ' is-active' : ''),
-    isExamRoomAmbienceEnabled() ? '🏛️ Ambience: ON' : '🏛️ Ambience: OFF'
+    'ie-btn ie-ambience-btn' + (isExamRoomAmbienceEnabled() ? ' is-active' : '')
   );
+  ambienceBtn.innerHTML = `${icon('landmark', 13)} Ambience: ${isExamRoomAmbienceEnabled() ? 'ON' : 'OFF'}`;
   ambienceBtn.title = 'Toggle subtle Cambridge exam hall pink noise and 40Hz room resonance';
   ambienceBtn.addEventListener('click', () => {
     const next = !isExamRoomAmbienceEnabled();
     setExamRoomAmbience(next);
     ambienceBtn.classList.toggle('is-active', next);
-    ambienceBtn.textContent = next ? '🏛️ Ambience: ON' : '🏛️ Ambience: OFF';
+    ambienceBtn.innerHTML = `${icon('landmark', 13)} Ambience: ${next ? 'ON' : 'OFF'}`;
   });
 
   bar.append(status, tabs, accentSelect, ambienceBtn, play, submit);
@@ -180,7 +181,7 @@ export function listeningView(root: HTMLElement): () => void {
 
   const labBanner = h('div', 'ie-lab-banner', `
     <div class="ie-lab-banner-content">
-      <span class="ie-trap-category-pill">🎯 Interactive Audio Lab</span>
+      <span class="ie-trap-category-pill">${icon('target', 13)} Interactive Audio Lab</span>
       <h3>Listening Trap & Oral Self-Correction Audio Lab</h3>
       <p class="ie-lead">Practice spotting oral self-corrections, restrictive qualifiers, reversal traps, and map navigation decoys across 12 authentic Cambridge-style audio scenarios with real-time waveform feedback.</p>
     </div>

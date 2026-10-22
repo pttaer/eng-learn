@@ -479,31 +479,33 @@ export class PerspectiveCanvas {
     const cx = w / 2;
     const cy = h / 2;
 
-    // Pure white canvas background
-    ctx.fillStyle = '#ffffff';
+    const isDark = typeof document !== 'undefined' ? document.documentElement.getAttribute('data-theme') !== 'light' : true;
+
+    // Dark HUD canvas background (or clean paper white if light theme)
+    ctx.fillStyle = isDark ? '#080a0f' : '#ffffff';
     ctx.fillRect(0, 0, w, h);
 
     // 1. Draw 2.5D Architectural Perspective Grid Lines
-    this.drawPerspectiveGrid(ctx, cx, cy);
+    this.drawPerspectiveGrid(ctx, cx, cy, isDark);
 
     // 2. Draw Floating 2.5D Entities
-    this.drawEntities(ctx, cx, cy);
+    this.drawEntities(ctx, cx, cy, isDark);
 
     // 3. Draw Living Geometric Sea Urchin
     this.urchin.draw(ctx, cx, cy, CursorTracker.x, CursorTracker.y);
 
     // 4. Draw Shockwaves
-    this.drawShockwaves(ctx);
+    this.drawShockwaves(ctx, isDark);
 
     // 5. Draw Inverted Void Lens (Black Light)
     if (this.activeVoidLens && this.activeVoidLens.currentRadius > 3) {
-      this.drawVoidLens(ctx);
+      this.drawVoidLens(ctx, isDark);
     }
   }
 
-  private drawPerspectiveGrid(ctx: CanvasRenderingContext2D, cx: number, cy: number): void {
+  private drawPerspectiveGrid(ctx: CanvasRenderingContext2D, cx: number, cy: number, isDark: boolean = true): void {
     ctx.save();
-    ctx.strokeStyle = 'rgba(0, 0, 0, 0.05)';
+    ctx.strokeStyle = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.05)';
     ctx.lineWidth = 1;
 
     // Horizon centerline
@@ -536,7 +538,7 @@ export class PerspectiveCanvas {
     ctx.restore();
   }
 
-  private drawEntities(ctx: CanvasRenderingContext2D, cx: number, cy: number): void {
+  private drawEntities(ctx: CanvasRenderingContext2D, cx: number, cy: number, isDark: boolean = true): void {
     ctx.save();
 
     for (const ent of this.entities) {
@@ -563,7 +565,7 @@ export class PerspectiveCanvas {
 
       if (ent.isDecoy) {
         // Wireframe geometric decoy glyphs
-        ctx.strokeStyle = '#000000';
+        ctx.strokeStyle = isDark ? 'rgba(165, 180, 252, 0.4)' : '#000000';
         ctx.lineWidth = 1;
         ctx.strokeRect(-drawSize / 2, -drawSize / 2, drawSize, drawSize);
 
@@ -574,15 +576,15 @@ export class PerspectiveCanvas {
         ctx.stroke();
       } else {
         // Valid Learning Artifact (Marked by dual square + glyph)
-        ctx.strokeStyle = '#000000';
+        ctx.strokeStyle = isDark ? '#38bdf8' : '#000000';
         ctx.lineWidth = 1.5;
         ctx.strokeRect(-drawSize / 2, -drawSize / 2, drawSize, drawSize);
 
-        ctx.strokeStyle = 'rgba(0, 0, 0, 0.4)';
+        ctx.strokeStyle = isDark ? 'rgba(56, 189, 248, 0.35)' : 'rgba(0, 0, 0, 0.4)';
         ctx.strokeRect(-drawSize / 2 - 3, -drawSize / 2 - 3, drawSize + 6, drawSize + 6);
 
         // Monospace index label
-        ctx.fillStyle = '#000000';
+        ctx.fillStyle = isDark ? '#f8fafc' : '#000000';
         ctx.font = '8px "JetBrains Mono", monospace';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
@@ -595,37 +597,42 @@ export class PerspectiveCanvas {
     ctx.restore();
   }
 
-  private drawShockwaves(ctx: CanvasRenderingContext2D): void {
+  private drawShockwaves(ctx: CanvasRenderingContext2D, isDark: boolean = true): void {
     ctx.save();
     for (const sw of this.shockwaves) {
       ctx.beginPath();
       ctx.arc(sw.x, sw.y, sw.radius, 0, Math.PI * 2);
-      ctx.strokeStyle = `rgba(0, 0, 0, ${sw.alpha})`;
+      ctx.strokeStyle = isDark ? `rgba(165, 180, 252, ${sw.alpha})` : `rgba(0, 0, 0, ${sw.alpha})`;
       ctx.lineWidth = sw.lineWidth;
       ctx.stroke();
     }
     ctx.restore();
   }
 
-  private drawVoidLens(ctx: CanvasRenderingContext2D): void {
+  private drawVoidLens(ctx: CanvasRenderingContext2D, isDark: boolean = true): void {
     if (!this.activeVoidLens) return;
     const lens = this.activeVoidLens;
     const r = lens.currentRadius;
 
     ctx.save();
 
-    // Concentric black aura
+    // Concentric black/cyan aura
     ctx.beginPath();
     ctx.arc(lens.x, lens.y, r + 6, 0, Math.PI * 2);
-    ctx.strokeStyle = 'rgba(0, 0, 0, 0.35)';
+    ctx.strokeStyle = isDark ? 'rgba(56, 189, 248, 0.45)' : 'rgba(0, 0, 0, 0.35)';
     ctx.lineWidth = 1;
     ctx.stroke();
 
     // Solid Inverted Pitch-Black Void
     ctx.beginPath();
     ctx.arc(lens.x, lens.y, r, 0, Math.PI * 2);
-    ctx.fillStyle = '#000000';
+    ctx.fillStyle = isDark ? '#0d121c' : '#000000';
     ctx.fill();
+    if (isDark) {
+      ctx.strokeStyle = '#38bdf8';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
 
     // Crisp White Content inside Void Lens
     if (r > 60 && lens.entity.collocation) {

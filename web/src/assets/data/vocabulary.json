@@ -15,7 +15,7 @@
     },
     "id": "vocab-rf-1",
     "mode": "ROOT_FORGE",
-    "level": 1,
+    "level": 2,
     "cefrLevel": "C1",
     "ipa": "/ˈkrɒn.ɪk/",
     "definition": "Persisting for a long time or constantly recurring (typically of an illness or problem).",
@@ -84,7 +84,7 @@
     },
     "id": "vocab-rf-4",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ˈkrɒn.ɪ.kəl/",
     "definition": "A factual written account of important or historical events in the order of their occurrence.",
@@ -131,7 +131,7 @@
     },
     "id": "vocab-rf-6",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 1,
     "cefrLevel": "B2",
     "ipa": "/ˌkɒn.trəˈdɪkt/",
     "definition": "Deny the truth of a statement by asserting the opposite, or be in conflict with.",
@@ -176,7 +176,7 @@
     },
     "id": "vocab-rf-8",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ˌdʒʊə.rɪsˈdɪk.ʃən/",
     "definition": "The official power to make legal decisions and judgments over an area or domain.",
@@ -199,7 +199,7 @@
     },
     "id": "vocab-rf-9",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/əˈmɔː.fəs/",
     "definition": "Without a clearly defined shape or form; lacking organization or clear structure.",
@@ -221,7 +221,7 @@
     },
     "id": "vocab-rf-10",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ˌmet.əˈmɔː.fə.sɪs/",
     "definition": "A change of the form or nature of a thing or person into a completely different one.",
@@ -266,7 +266,7 @@
     },
     "id": "vocab-rf-12",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/mɔːˈfɒl.ə.dʒi/",
     "definition": "The branch of biology or linguistics that deals with the form of living organisms or words.",
@@ -289,7 +289,7 @@
     },
     "id": "vocab-rf-13",
     "mode": "ROOT_FORGE",
-    "level": 1,
+    "level": 2,
     "cefrLevel": "C1",
     "ipa": "/ˈem.pə.θi/",
     "definition": "The ability to understand and share the feelings of another.",
@@ -311,7 +311,7 @@
     },
     "id": "vocab-rf-14",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ˈæp.ə.θi/",
     "definition": "Lack of interest, enthusiasm, or concern.",
@@ -333,11 +333,11 @@
     },
     "id": "vocab-rf-15",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ænˈtɪp.ə.θi/",
     "definition": "A deep-seated feeling of aversion or hostility.",
-    "vietnamese": "ác cảm sâu sắc, sự thù ghét/bất hảo",
+    "vietnamese": "ác cảm sâu sắc, sự thù ghét",
     "contextSentence": "Historical antipathy between the two regulatory bodies stalled the antitrust investigation.",
     "isRemindCandidate": true
   },
@@ -425,11 +425,11 @@
     },
     "id": "vocab-rf-19",
     "mode": "ROOT_FORGE",
-    "level": 3,
+    "level": 2,
     "cefrLevel": "C1",
     "ipa": "/ɪnˈdjuːs/",
     "definition": "Succeed in persuading or leading someone to do something; bring about or give rise to.",
-    "vietnamese": "khiến cho, xui khiến, quy nạp, gây ra",
+    "vietnamese": "khiến cho, xui khiến, gây ra",
     "contextSentence": "Low interest rates induced reckless leverage across speculative capital markets.",
     "isRemindCandidate": true
   },
@@ -448,7 +448,7 @@
     },
     "id": "vocab-rf-20",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ˈdʌk.taɪl/",
     "definition": "Able to be drawn out into a thin wire; easily influenced or pliable.",
@@ -495,7 +495,7 @@
     },
     "id": "vocab-rf-22",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/məˈlev.əl.ənt/",
     "definition": "Having or showing a wish to do evil to others.",
@@ -586,7 +586,7 @@
     },
     "id": "vocab-rf-26",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 1,
     "cefrLevel": "B2",
     "ipa": "/prəˈvəʊk/",
     "definition": "Stimulate or give rise to a reaction or emotion, typically a strong or unwelcome one.",
@@ -769,7 +769,7 @@
     },
     "id": "vocab-rf-34",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ɪnˈdʒen.dər/",
     "definition": "Cause or give rise to a feeling, situation, or condition.",
@@ -791,7 +791,7 @@
     },
     "id": "vocab-rf-35",
     "mode": "ROOT_FORGE",
-    "level": 3,
+    "level": 2,
     "cefrLevel": "C1",
     "ipa": "/ɪnˈdɪdʒ.ɪ.nəs/",
     "definition": "Originating or occurring naturally in a particular place; native.",
@@ -814,7 +814,7 @@
     },
     "id": "vocab-rf-36",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ˈprɒdʒ.ə.ni/",
     "definition": "A descendant or the descendants of a person, animal, or plant; offspring.",
@@ -859,7 +859,7 @@
     },
     "id": "vocab-rf-38",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/prəˈtræk.tɪd/",
     "definition": "Lasting for a long time or longer than expected or usual.",
@@ -929,7 +929,7 @@
     },
     "id": "vocab-rf-41",
     "mode": "ROOT_FORGE",
-    "level": 1,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/fɪˈdel.ə.ti/",
     "definition": "Faithfulness to a person, cause, or belief; or the degree of exactness with which something is copied or reproduced.",
@@ -954,7 +954,7 @@
     },
     "id": "vocab-rf-42",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ɪnˈkred.jə.ləs/",
     "definition": "Unwilling or unable to believe something; showing disbelief.",
@@ -978,7 +978,7 @@
     },
     "id": "vocab-rf-43",
     "mode": "ROOT_FORGE",
-    "level": 1,
+    "level": 2,
     "cefrLevel": "C1",
     "ipa": "/ˈel.ə.kwənt/",
     "definition": "Fluent, expressive, and persuasive in speaking or writing; clearly expressing a feeling.",
@@ -1052,7 +1052,7 @@
     },
     "id": "vocab-rf-46",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ˌɪn.ədˈvɜː.tənt/",
     "definition": "Not resulting from deliberate intention or planning; unintentional, often through lack of attention.",
@@ -1223,7 +1223,7 @@
     },
     "id": "vocab-rf-53",
     "mode": "ROOT_FORGE",
-    "level": 1,
+    "level": 2,
     "cefrLevel": "C1",
     "ipa": "/səˈsep.tə.bəl/",
     "definition": "Likely to be influenced, harmed, or affected by a particular thing.",
@@ -1297,7 +1297,7 @@
     },
     "id": "vocab-rf-56",
     "mode": "ROOT_FORGE",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ˈem.ɪ.sər.i/",
     "definition": "A person sent on a special mission, usually as a diplomatic representative.",
@@ -1322,7 +1322,7 @@
     },
     "id": "vocab-rf-57",
     "mode": "ROOT_FORGE",
-    "level": 1,
+    "level": 2,
     "cefrLevel": "C1",
     "ipa": "/təˈneɪ.ʃəs/",
     "definition": "Holding firmly to something; persistent and determined, not easily giving up.",
@@ -1347,7 +1347,7 @@
     "id": "vocab-rf-58",
     "mode": "ROOT_FORGE",
     "level": 2,
-    "cefrLevel": "C2",
+    "cefrLevel": "C1",
     "ipa": "/ɪnˌkɒn.sɪˈkwen.ʃəl/",
     "definition": "Not important or significant; trivial.",
     "vietnamese": "không đáng kể, vụn vặt, chẳng quan trọng",
@@ -1395,8 +1395,8 @@
     },
     "id": "vocab-rf-60",
     "mode": "ROOT_FORGE",
-    "level": 1,
-    "cefrLevel": "B2",
+    "level": 2,
+    "cefrLevel": "C1",
     "ipa": "/ˈsjuː.də.nɪm/",
     "definition": "A fictitious name, especially one used by an author instead of their real name.",
     "vietnamese": "bút danh, tên giả",
@@ -1430,8 +1430,7 @@
       "cefrRank": "A1",
       "collocates": "older brother, younger brother, my brother",
       "synonyms": [
-        "sibling",
-        "boy"
+        "-"
       ],
       "register": "Neutral / Everyday"
     },
@@ -1472,8 +1471,7 @@
       "cefrRank": "A1",
       "collocates": "drink water, a glass of water, cold water",
       "synonyms": [
-        "drink",
-        "liquid"
+        "-"
       ],
       "register": "Neutral / Everyday"
     },
@@ -1514,7 +1512,7 @@
       "cefrRank": "A1",
       "collocates": "eat an apple, a red apple, apple juice",
       "synonyms": [
-        "fruit"
+        "-"
       ],
       "register": "Neutral / Everyday"
     },
@@ -1534,8 +1532,7 @@
       "cefrRank": "A1",
       "collocates": "cook rice, boiled rice, rice and chicken",
       "synonyms": [
-        "food",
-        "grain"
+        "-"
       ],
       "register": "Neutral / Everyday"
     },
@@ -1575,7 +1572,7 @@
       "cefrRank": "A1",
       "collocates": "in the kitchen, kitchen table, a small kitchen",
       "synonyms": [
-        "cooking room"
+        "-"
       ],
       "register": "Neutral / Everyday"
     },
@@ -1595,7 +1592,7 @@
       "cefrRank": "A1",
       "collocates": "go to bed, in bed, a big bed",
       "synonyms": [
-        "bunk"
+        "-"
       ],
       "register": "Neutral / Everyday"
     },
@@ -1615,8 +1612,7 @@
       "cefrRank": "A1",
       "collocates": "open the door, close the door, front door",
       "synonyms": [
-        "entrance",
-        "gate"
+        "-"
       ],
       "register": "Neutral / Everyday"
     },
@@ -1634,9 +1630,9 @@
     "wordOrChunk": "head",
     "breakdown": {
       "cefrRank": "A1",
-      "collocates": "my head, hurt my head, head and neck",
+      "collocates": "my head, head hurts, head and neck",
       "synonyms": [
-        "face"
+        "-"
       ],
       "register": "Neutral / Everyday"
     },
@@ -1656,8 +1652,7 @@
       "cefrRank": "A1",
       "collocates": "wash your hands, left hand, hand in hand",
       "synonyms": [
-        "arm",
-        "finger"
+        "-"
       ],
       "register": "Neutral / Everyday"
     },
@@ -1677,7 +1672,7 @@
       "cefrRank": "A1",
       "collocates": "blue eyes, close your eyes, open your eyes",
       "synonyms": [
-        "face"
+        "-"
       ],
       "register": "Neutral / Everyday"
     },
@@ -1697,8 +1692,7 @@
       "cefrRank": "A1",
       "collocates": "in the morning, good morning, every morning",
       "synonyms": [
-        "day",
-        "dawn"
+        "-"
       ],
       "register": "Neutral / Everyday"
     },
@@ -1718,7 +1712,7 @@
       "cefrRank": "A1",
       "collocates": "at night, good night, last night",
       "synonyms": [
-        "evening"
+        "nighttime"
       ],
       "register": "Neutral / Everyday"
     },
@@ -1738,7 +1732,7 @@
       "cefrRank": "A1",
       "collocates": "this week, next week, last week",
       "synonyms": [
-        "seven days"
+        "-"
       ],
       "register": "Neutral / Everyday"
     },
@@ -1758,7 +1752,7 @@
       "cefrRank": "A1",
       "collocates": "go to school, at school, school bag",
       "synonyms": [
-        "class"
+        "-"
       ],
       "register": "Neutral / Everyday"
     },
@@ -1776,7 +1770,7 @@
     "wordOrChunk": "shop",
     "breakdown": {
       "cefrRank": "A1",
-      "collocates": "a small shop, go to the shop, shop door",
+      "collocates": "a small shop, go to the shop, shop window",
       "synonyms": [
         "store"
       ],
@@ -1880,7 +1874,7 @@
       "cefrRank": "A1",
       "collocates": "open the door, open a book, open the window",
       "synonyms": [
-        "unlock"
+        "-"
       ],
       "register": "Neutral / Everyday"
     },
@@ -1962,7 +1956,7 @@
       "cefrRank": "A1",
       "collocates": "hot water, hot day, hot tea",
       "synonyms": [
-        "warm"
+        "boiling"
       ],
       "register": "Neutral / Everyday"
     },
@@ -2502,7 +2496,7 @@
     "wordOrChunk": "cheap",
     "breakdown": {
       "cefrRank": "A2",
-      "collocates": "cheap price, cheap ticket, quite cheap",
+      "collocates": "cheap flights, cheap ticket, quite cheap",
       "synonyms": [
         "inexpensive",
         "low-priced"
@@ -2598,7 +2592,7 @@
     "ipa": "/ˈhel.θi/",
     "definition": "Strong and well; good for your body.",
     "vietnamese": "khỏe mạnh, lành mạnh",
-    "contextSentence": "Eating fruit and vegetables is good for a healthy life.",
+    "contextSentence": "Fruit and vegetables are part of a healthy diet.",
     "isRemindCandidate": false
   },
   {
@@ -2732,7 +2726,6 @@
       "cefrRank": "A2",
       "collocates": "feel lonely, lonely life, a lonely place",
       "synonyms": [
-        "alone",
         "isolated"
       ],
       "register": "Neutral / Everyday"
@@ -2765,7 +2758,7 @@
     "ipa": "/əˈɡriː/",
     "definition": "Have the same opinion as another person.",
     "vietnamese": "đồng ý",
-    "contextSentence": "I agree with you, because the film was too long.",
+    "contextSentence": "I agree with you. The film was too long.",
     "isRemindCandidate": false
   },
   {
@@ -2831,12 +2824,12 @@
     "isRemindCandidate": false
   },
   {
-    "wordOrChunk": "the weather",
+    "wordOrChunk": "weather",
     "breakdown": {
       "cefrRank": "A2",
       "collocates": "good weather, check the weather, weather forecast",
       "synonyms": [
-        "climate"
+        "-"
       ],
       "register": "Neutral / Everyday"
     },
@@ -2936,7 +2929,7 @@
       "cefrRank": "A2",
       "collocates": "a long delay, flight delay, without delay",
       "synonyms": [
-        "wait"
+        "postponement"
       ],
       "register": "Neutral / Everyday"
     },
@@ -3055,7 +3048,7 @@
     "wordOrChunk": "pharmacy",
     "breakdown": {
       "cefrRank": "A2",
-      "collocates": "go to the pharmacy, a local pharmacy, pharmacy shop",
+      "collocates": "go to the pharmacy, a local pharmacy, pharmacy counter",
       "synonyms": [
         "chemist"
       ],
@@ -3253,14 +3246,14 @@
     "isRemindCandidate": false
   },
   {
-    "wordOrChunk": "opinion",
+    "wordOrChunk": "perspective",
     "breakdown": {
       "cefrRank": "B1",
-      "collocates": "opinion poll, personal opinion, share an opinion",
+      "collocates": "from my perspective, different perspective, broaden one's perspective",
       "synonyms": [
-        "view",
-        "belief",
-        "thought"
+        "viewpoint",
+        "outlook",
+        "standpoint"
       ],
       "register": "Neutral / Everyday"
     },
@@ -3268,10 +3261,10 @@
     "mode": "CEFR_ASCENT",
     "level": 1,
     "cefrLevel": "B1",
-    "ipa": "/əˈpɪn.jən/",
-    "definition": "What a person thinks or believes about something.",
-    "vietnamese": "ý kiến, quan điểm",
-    "contextSentence": "In my opinion, this film is better than the book.",
+    "ipa": "/pəˈspek.tɪv/",
+    "definition": "A particular way of considering or regarding something.",
+    "vietnamese": "góc nhìn, quan điểm",
+    "contextSentence": "Travelling abroad gave her a completely new perspective on life.",
     "isRemindCandidate": false
   },
   {
@@ -3300,7 +3293,7 @@
     "wordOrChunk": "environment",
     "breakdown": {
       "cefrRank": "B1",
-      "collocates": "protect the environment, work environment, environment friendly",
+      "collocates": "protect the environment, work environment, environmentally friendly",
       "synonyms": [
         "nature",
         "surroundings",
@@ -3325,8 +3318,7 @@
       "collocates": "work experience, gain experience, a great experience",
       "synonyms": [
         "skill",
-        "practice",
-        "event"
+        "practice"
       ],
       "register": "Neutral / Everyday"
     },
@@ -3391,7 +3383,6 @@
       "collocates": "make a decision, final decision, difficult decision",
       "synonyms": [
         "choice",
-        "conclusion",
         "judgement"
       ],
       "register": "Neutral / Everyday"
@@ -3413,8 +3404,7 @@
       "collocates": "cause damage, serious damage, damage to property",
       "synonyms": [
         "harm",
-        "destruction",
-        "injury"
+        "destruction"
       ],
       "register": "Neutral / Everyday"
     },
@@ -3457,7 +3447,6 @@
       "collocates": "make an effort, great effort, effort to improve",
       "synonyms": [
         "attempt",
-        "energy",
         "hard work"
       ],
       "register": "Neutral / Everyday"
@@ -3561,14 +3550,14 @@
     "isRemindCandidate": false
   },
   {
-    "wordOrChunk": "journey",
+    "wordOrChunk": "destination",
     "breakdown": {
       "cefrRank": "B1",
-      "collocates": "long journey, safe journey, journey home",
+      "collocates": "final destination, holiday destination, reach a destination",
       "synonyms": [
-        "trip",
-        "voyage",
-        "travel"
+        "arrival point",
+        "terminus",
+        "goal"
       ],
       "register": "Neutral / Everyday"
     },
@@ -3576,21 +3565,20 @@
     "mode": "CEFR_ASCENT",
     "level": 1,
     "cefrLevel": "B1",
-    "ipa": "/ˈdʒɜː.ni/",
-    "definition": "The act of travelling from one place to another.",
-    "vietnamese": "chuyến đi, hành trình",
-    "contextSentence": "The journey from Hanoi to Hue took us about thirteen hours.",
+    "ipa": "/ˌdes.tɪˈneɪ.ʃən/",
+    "definition": "The place where someone is going or where something is being sent.",
+    "vietnamese": "điểm đến, nơi đến",
+    "contextSentence": "Da Nang has become one of the most popular holiday destinations in Southeast Asia.",
     "isRemindCandidate": false
   },
   {
     "wordOrChunk": "society",
     "breakdown": {
       "cefrRank": "B1",
-      "collocates": "modern society, members of society, benefit society",
+      "collocates": "modern society, members of society, contribute to society",
       "synonyms": [
         "community",
-        "population",
-        "culture"
+        "the public"
       ],
       "register": "Neutral / Semi-formal"
     },
@@ -4073,7 +4061,7 @@
     "wordOrChunk": "tolerate",
     "breakdown": {
       "cefrRank": "B2",
-      "collocates": "tolerate noise, tolerate differences, hardly tolerate",
+      "collocates": "tolerate noise, tolerate differences, tolerate pain",
       "synonyms": [
         "accept",
         "bear"
@@ -4278,7 +4266,7 @@
       "cefrRank": "B2",
       "collocates": "an ambitious plan, ambitious goal, highly ambitious",
       "synonyms": [
-        "determined"
+        "driven"
       ],
       "register": "Neutral / Everyday"
     },
@@ -4376,7 +4364,7 @@
   {
     "wordOrChunk": "mitigate",
     "breakdown": {
-      "cefrRank": "B2 / AWL Sublist 2",
+      "cefrRank": "C1 / AWL Sublist 2",
       "collocates": "mitigate risks, mitigate impact, mitigate climate change",
       "synonyms": [
         "alleviate",
@@ -4387,18 +4375,18 @@
     },
     "id": "vocab-cefr-1",
     "mode": "CEFR_ASCENT",
-    "level": 1,
+    "level": 2,
     "cefrLevel": "C1",
     "ipa": "/ˈmɪt.ɪ.ɡeɪt/",
     "definition": "Make less severe, serious, or painful.",
     "vietnamese": "giảm nhẹ, xoa dịu tác động xấu",
-    "contextSentence": "Diversifying investments across uncorrelated asset classes helps mitigate catastrophic portfolio drawdowns.",
+    "contextSentence": "Planting trees along the river helps mitigate the damage caused by floods.",
     "isRemindCandidate": false
   },
   {
     "wordOrChunk": "anticipate",
     "breakdown": {
-      "cefrRank": "B1-B2",
+      "cefrRank": "B2",
       "collocates": "anticipate needs, anticipate obstacles, anticipate demand",
       "synonyms": [
         "foresee",
@@ -4414,7 +4402,7 @@
     "ipa": "/ænˈtɪs.ɪ.peɪt/",
     "definition": "Regard as probable; expect or predict, and take action in preparation.",
     "vietnamese": "dự tính trước, lường trước để chủ động ứng phó",
-    "contextSentence": "Engineers must anticipate peak network loads before launching the nationwide mobile campaign.",
+    "contextSentence": "The city should anticipate heavy traffic before the festival begins.",
     "isRemindCandidate": false
   },
   {
@@ -4436,7 +4424,7 @@
     "ipa": "/kəʊˈhɪə.rənt/",
     "definition": "Logical and consistent; forming a unified and readily understandable whole.",
     "vietnamese": "mạch lạc, chặt chẽ, nhất quán về mặt logic",
-    "contextSentence": "The candidate failed to articulate a coherent strategic roadmap for fiscal stabilization.",
+    "contextSentence": "The candidate failed to give a coherent plan for fixing the budget.",
     "isRemindCandidate": false
   },
   {
@@ -4458,13 +4446,13 @@
     "ipa": "/ˈɪm.plɪ.ment/",
     "definition": "Put a decision, plan, or agreement into effect.",
     "vietnamese": "triển khai thực hiện, thi hành kế hoạch",
-    "contextSentence": "The hospital plans to implement strict biosecurity protocols across all intensive care wards.",
+    "contextSentence": "The hospital plans to implement strict hygiene rules on every ward.",
     "isRemindCandidate": false
   },
   {
     "wordOrChunk": "constrain",
     "breakdown": {
-      "cefrRank": "B2 / AWL",
+      "cefrRank": "C1 / AWL",
       "collocates": "severely constrain, financial constraints, structural constraints",
       "synonyms": [
         "restrict",
@@ -4475,7 +4463,7 @@
     },
     "id": "vocab-cefr-5",
     "mode": "CEFR_ASCENT",
-    "level": 1,
+    "level": 2,
     "cefrLevel": "C1",
     "ipa": "/kənˈstreɪn/",
     "definition": "Severely restrict the scope, extent, or activity of something.",
@@ -4486,7 +4474,7 @@
   {
     "wordOrChunk": "empirical",
     "breakdown": {
-      "cefrRank": "B2 / AWL",
+      "cefrRank": "C1 / AWL",
       "collocates": "empirical data, empirical study, empirical validation",
       "synonyms": [
         "observational",
@@ -4497,7 +4485,7 @@
     },
     "id": "vocab-cefr-6",
     "mode": "CEFR_ASCENT",
-    "level": 1,
+    "level": 2,
     "cefrLevel": "C1",
     "ipa": "/ɪmˈpɪr.ɪ.kəl/",
     "definition": "Based on, concerned with, or verifiable by observation or experience rather than theory or pure logic.",
@@ -4524,13 +4512,13 @@
     "ipa": "/ˈfiː.zə.bəl/",
     "definition": "Possible to do easily or conveniently; workable and practically viable.",
     "vietnamese": "khả thi, có thể thực hiện được trong thực tế",
-    "contextSentence": "Due to severe silicon supply bottlenecks, delivering the product within two months is no longer feasible.",
+    "contextSentence": "Because of supply problems, finishing the product in two months is no longer feasible.",
     "isRemindCandidate": false
   },
   {
     "wordOrChunk": "intrinsic",
     "breakdown": {
-      "cefrRank": "B2",
+      "cefrRank": "C1",
       "collocates": "intrinsic value, intrinsic motivation, intrinsic reward",
       "synonyms": [
         "inherent",
@@ -4541,7 +4529,7 @@
     },
     "id": "vocab-cefr-8",
     "mode": "CEFR_ASCENT",
-    "level": 1,
+    "level": 2,
     "cefrLevel": "C1",
     "ipa": "/ɪnˈtrɪn.zɪk/",
     "definition": "Belonging naturally; essential, inherent to the core nature of a thing.",
@@ -4568,13 +4556,13 @@
     "ipa": "/ˈvɜː.sə.taɪl/",
     "definition": "Able to adapt or be adapted to many different functions or activities.",
     "vietnamese": "đa năng, linh hoạt, thích ứng với nhiều mục đích",
-    "contextSentence": "Python has established itself as an extraordinarily versatile programming language across data science and web development.",
+    "contextSentence": "Python is a versatile language that people use for data work and for building websites.",
     "isRemindCandidate": false
   },
   {
     "wordOrChunk": "sustain",
     "breakdown": {
-      "cefrRank": "B1-B2 / AWL",
+      "cefrRank": "B2 / AWL",
       "collocates": "sustain growth, sustain injuries, sustain momentum",
       "synonyms": [
         "maintain",
@@ -4590,7 +4578,7 @@
     "ipa": "/səˈsteɪn/",
     "definition": "Strengthen or support physically or mentally; maintain over an extended period.",
     "vietnamese": "duy trì bền bỉ, chống đỡ, duy trì liên tục",
-    "contextSentence": "Without adequate sleep and caloric intake, cognitive athletes cannot sustain peak analytical throughput.",
+    "contextSentence": "Without enough sleep and food, students cannot sustain their concentration for long.",
     "isRemindCandidate": false
   },
   {
@@ -4612,7 +4600,7 @@
     "ipa": "/prɪˈlɪm.ɪ.nər.i/",
     "definition": "Denoting an action or event preceding or done in preparation for something fuller or more important.",
     "vietnamese": "sơ bộ, bước đầu, mở đầu",
-    "contextSentence": "Preliminary clinical trials indicate that the compound reduces arterial inflammation by thirty percent.",
+    "contextSentence": "Preliminary results from the trial suggest that the medicine reduces pain by thirty percent.",
     "isRemindCandidate": false
   },
   {
@@ -4634,7 +4622,7 @@
     "ipa": "/ɪˈvæl.ju.eɪt/",
     "definition": "Form an idea of the amount, number, or value of; assess critically.",
     "vietnamese": "đánh giá, định giá một cách có phương pháp",
-    "contextSentence": "Venture capitalists evaluate founding teams based on their velocity of execution rather than static pitch decks.",
+    "contextSentence": "Investors evaluate a new company by how fast its team acts, not just by its presentation.",
     "isRemindCandidate": false
   },
   {
@@ -4656,7 +4644,7 @@
     "ipa": "/ˈæl.ə.keɪt/",
     "definition": "Distribute resources or duties for a particular purpose.",
     "vietnamese": "phân bổ (nguồn lực, ngân sách, nhân sự)",
-    "contextSentence": "The executive committee resolved to allocate twenty percent of net revenues toward quantum algorithm R&D.",
+    "contextSentence": "The committee decided to allocate twenty percent of its income to research on new technology.",
     "isRemindCandidate": false
   },
   {
@@ -4666,7 +4654,7 @@
       "collocates": "subsequent generations, subsequent events, subsequent chapters",
       "synonyms": [
         "ensuing",
-        "consequent",
+        "following",
         "succeeding"
       ],
       "register": "Academic & Formal Prose"
@@ -4678,7 +4666,7 @@
     "ipa": "/ˈsʌb.sɪ.kwənt/",
     "definition": "Coming after something in time; following.",
     "vietnamese": "xảy ra sau đó, tiếp theo sau",
-    "contextSentence": "The initial software patch resolved the memory leak, but subsequent updates caused networking regression.",
+    "contextSentence": "The first update fixed the memory problem, but subsequent updates caused new network errors.",
     "isRemindCandidate": false
   },
   {
@@ -4766,13 +4754,13 @@
     "ipa": "/ˈskruː.tɪ.naɪz/",
     "definition": "Examine or inspect closely and thoroughly with critical attention.",
     "vietnamese": "xem xét kỹ lưỡng, săm soi, kiểm tra gắt gao",
-    "contextSentence": "Financial regulators began to scrutinize the shadow banking firm’s off-balance-sheet special purpose vehicles.",
+    "contextSentence": "After the company collapsed, regulators began to scrutinize its accounts line by line.",
     "isRemindCandidate": false
   },
   {
     "wordOrChunk": "delineate",
     "breakdown": {
-      "cefrRank": "C1",
+      "cefrRank": "C2",
       "collocates": "delineate responsibilities, delineate boundaries, clearly delineate",
       "synonyms": [
         "demarcate",
@@ -4783,7 +4771,7 @@
     },
     "id": "vocab-cefr-19",
     "mode": "CEFR_ASCENT",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/dɪˈlɪn.i.eɪt/",
     "definition": "Describe, portray, or outline with precision; set forth boundaries clearly.",
@@ -4821,7 +4809,7 @@
       "synonyms": [
         "framework",
         "archetype",
-        "benchmark model"
+        "model"
       ],
       "register": "Epistemology & Science"
     },
@@ -4832,7 +4820,7 @@
     "ipa": "/ˈpær.ə.daɪm/",
     "definition": "A typical example or pattern of something; an overarching theoretical framework.",
     "vietnamese": "hệ hình, khuôn mẫu tư duy, chuẩn mực mẫu mực",
-    "contextSentence": "Deep learning represents an undeniable paradigm shift away from handcrafted symbolic rule systems.",
+    "contextSentence": "The printing press caused a paradigm shift in how people shared knowledge.",
     "isRemindCandidate": false
   },
   {
@@ -4860,7 +4848,7 @@
   {
     "wordOrChunk": "poignant",
     "breakdown": {
-      "cefrRank": "C1",
+      "cefrRank": "C2",
       "collocates": "poignant reminder, poignant portrait, poignant irony",
       "synonyms": [
         "affecting",
@@ -4871,7 +4859,7 @@
     },
     "id": "vocab-cefr-23",
     "mode": "CEFR_ASCENT",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ˈpɔɪ.njənt/",
     "definition": "Evoking a keen sense of sadness or regret; deeply touching and sharp in impact.",
@@ -4898,7 +4886,7 @@
     "ipa": "/ˈvɒl.ə.taɪl/",
     "definition": "Liable to change rapidly and unpredictably, especially for the worse.",
     "vietnamese": "biến động dữ dội, không ổn định, dễ bốc hơi/bùng nổ",
-    "contextSentence": "Emerging tech stocks experienced an extraordinarily volatile quarter amid geopolitical semiconductor restrictions.",
+    "contextSentence": "Oil prices were extremely volatile this quarter because of political tension.",
     "isRemindCandidate": false
   },
   {
@@ -4926,7 +4914,7 @@
   {
     "wordOrChunk": "disenfranchise",
     "breakdown": {
-      "cefrRank": "C1",
+      "cefrRank": "C2",
       "collocates": "disenfranchise voters, politically disenfranchised, economically disenfranchised",
       "synonyms": [
         "marginalize",
@@ -4937,7 +4925,7 @@
     },
     "id": "vocab-cefr-26",
     "mode": "CEFR_ASCENT",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ˌdɪs.ɪnˈfræn.tʃaɪz/",
     "definition": "Deprive someone of the right to vote, or of a right or privilege in society.",
@@ -4948,7 +4936,7 @@
   {
     "wordOrChunk": "corroborate",
     "breakdown": {
-      "cefrRank": "C1",
+      "cefrRank": "C2",
       "collocates": "corroborate evidence, corroborate testimony, independent findings corroborate",
       "synonyms": [
         "verify",
@@ -4959,12 +4947,12 @@
     },
     "id": "vocab-cefr-27",
     "mode": "CEFR_ASCENT",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/kəˈrɒb.ə.reɪt/",
     "definition": "Confirm or give support to a statement, theory, or finding with supplemental evidence.",
     "vietnamese": "chứng thực, củng cố thêm bằng chứng xác đáng",
-    "contextSentence": "Independent seismologists examined telemetry feeds to corroborate the government’s nuclear test claims.",
+    "contextSentence": "Independent scientists studied the records to corroborate the government’s claims about the explosion.",
     "isRemindCandidate": true
   },
   {
@@ -5105,9 +5093,8 @@
       "cefrRank": "C2 / GRE Mastery",
       "collocates": "juxtapose two images, sharply juxtapose, side-by-side juxtaposition",
       "synonyms": [
-        "collocate",
         "contrast",
-        "compare"
+        "set side by side"
       ],
       "register": "Artistic & Rhetorical Criticism"
     },
@@ -5267,7 +5254,7 @@
     },
     "id": "vocab-cefr-41",
     "mode": "CEFR_ASCENT",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ˈten.ju.əs/",
     "definition": "Very weak or slight; lacking a sound basis (of a link, argument, or hold on something).",
@@ -5289,7 +5276,7 @@
     },
     "id": "vocab-cefr-42",
     "mode": "CEFR_ASCENT",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ˈkəʊ.dʒənt/",
     "definition": "(Of an argument or case) clear, logical, and convincing.",
@@ -5311,7 +5298,7 @@
     },
     "id": "vocab-cefr-43",
     "mode": "CEFR_ASCENT",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ˈtæs.ɪt/",
     "definition": "Understood or implied without being directly stated.",
@@ -5377,7 +5364,7 @@
     },
     "id": "vocab-cefr-46",
     "mode": "CEFR_ASCENT",
-    "level": 2,
+    "level": 3,
     "cefrLevel": "C2",
     "ipa": "/ʌnˈten.ə.bəl/",
     "definition": "(Of a position, theory, or situation) not able to be maintained or defended against attack or objection.",
@@ -5814,7 +5801,7 @@
     "level": 1,
     "cefrLevel": "A2",
     "ipa": "/pʊt ɒn/",
-    "definition": "Wear clothes; place something on your body.",
+    "definition": "Start wearing clothes or an item; place something on your body.",
     "vietnamese": "mặc vào, đeo vào",
     "contextSentence": "It is cold outside, so put on your coat.",
     "isRemindCandidate": false
@@ -5835,6 +5822,294 @@
     "definition": "Learn a fact that you did not know before.",
     "vietnamese": "tìm ra, phát hiện, biết được",
     "contextSentence": "I want to find out what time the shop opens.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "turn off",
+    "breakdown": {
+      "verb": "turn (rotate a switch or handle)",
+      "particle": "OFF",
+      "semanticArchetype": "Disconnection & cessation",
+      "particleLogic": "OFF breaks the contact with the electrical circuit or flow, halting operation."
+    },
+    "id": "vocab-a2-pl-9",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/tɜːn ɒf/",
+    "definition": "Stop the flow of electricity, gas or water by moving a switch.",
+    "vietnamese": "tắt (đèn, thiết bị, vòi nước)",
+    "contextSentence": "Remember to turn off the lights before you leave the classroom.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "wake up",
+    "breakdown": {
+      "verb": "wake (cease sleep)",
+      "particle": "UP",
+      "semanticArchetype": "Rising consciousness",
+      "particleLogic": "UP signals an ascent from the deep subconscious state of sleep to full waking alertness."
+    },
+    "id": "vocab-a2-pl-10",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/weɪk ʌp/",
+    "definition": "Stop sleeping and become conscious and alert.",
+    "vietnamese": "thức giấc, tỉnh dậy",
+    "contextSentence": "I usually wake up early at weekends to go for a run.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "grow up",
+    "breakdown": {
+      "verb": "grow (increase in size)",
+      "particle": "UP",
+      "semanticArchetype": "Vertical development into completion",
+      "particleLogic": "UP illustrates physical height increase and progressing upward into full adulthood."
+    },
+    "id": "vocab-a2-pl-11",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ɡrəʊ ʌp/",
+    "definition": "Gradually change from being a child into an adult.",
+    "vietnamese": "lớn lên, trưởng thành",
+    "contextSentence": "She grew up in a peaceful village surrounded by mountains.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "try on",
+    "breakdown": {
+      "verb": "try (test or evaluate)",
+      "particle": "ON",
+      "semanticArchetype": "Physical contact with body",
+      "particleLogic": "ON brings the garment onto the surface of the body to test its fit."
+    },
+    "id": "vocab-a2-pl-12",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/traɪ ɒn/",
+    "definition": "Put on a piece of clothing to see if it fits and looks good.",
+    "vietnamese": "mặc thử (quần áo, giày dép)",
+    "contextSentence": "Can I try on this jacket in a smaller size?",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "take out",
+    "breakdown": {
+      "verb": "take (grasp and move)",
+      "particle": "OUT",
+      "semanticArchetype": "Extraction from an interior",
+      "particleLogic": "OUT marks movement from inside an enclosed boundary to the exterior space."
+    },
+    "id": "vocab-a2-pl-13",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/teɪk aʊt/",
+    "definition": "Remove something from inside a bag, container or pocket; or invite someone for a meal.",
+    "vietnamese": "lấy ra ngoài; mời ai đi ăn",
+    "contextSentence": "Please take out your notebooks and write down the homework.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "look at",
+    "breakdown": {
+      "verb": "look (use eyes to see)",
+      "particle": "AT",
+      "semanticArchetype": "Focal target orientation",
+      "particleLogic": "AT pinpoints a precise destination point for visual attention."
+    },
+    "id": "vocab-a2-pl-14",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/lʊk æt/",
+    "definition": "Direct your eyes towards a specific object or person.",
+    "vietnamese": "nhìn vào, ngắm nhìn",
+    "contextSentence": "Look at the board and read the first sentence carefully.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "go out",
+    "breakdown": {
+      "verb": "go (travel, move)",
+      "particle": "OUT",
+      "semanticArchetype": "Moving outside",
+      "particleLogic": "OUT means leaving home to go to the outside world."
+    },
+    "id": "vocab-a2-pl-15",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/ɡəʊ aʊt/",
+    "definition": "Leave your home to spend time with friends or enjoy an activity.",
+    "vietnamese": "đi ra ngoài chơi, hẹn hò",
+    "contextSentence": "Do you want to go out for dinner tonight?",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "come in",
+    "breakdown": {
+      "verb": "come (move toward the speaker)",
+      "particle": "IN",
+      "semanticArchetype": "Moving inside",
+      "particleLogic": "IN guides movement across a threshold into an enclosed space."
+    },
+    "id": "vocab-a2-pl-16",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/kʌm ɪn/",
+    "definition": "Enter a room, house or office.",
+    "vietnamese": "bước vào, mời vào",
+    "contextSentence": "Please knock before you come in.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "sit down",
+    "breakdown": {
+      "verb": "sit (rest on hips)",
+      "particle": "DOWN",
+      "semanticArchetype": "Downward vertical motion",
+      "particleLogic": "DOWN means moving lower onto a seat or surface."
+    },
+    "id": "vocab-a2-pl-17",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/sɪt daʊn/",
+    "definition": "Lower your body onto a chair or the floor.",
+    "vietnamese": "ngồi xuống",
+    "contextSentence": "The teacher asked all the students to sit down quietly.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "stand up",
+    "breakdown": {
+      "verb": "stand (remain on feet)",
+      "particle": "UP",
+      "semanticArchetype": "Upright vertical posture",
+      "particleLogic": "UP reflects rising from a lower resting position into full vertical readiness."
+    },
+    "id": "vocab-a2-pl-18",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/stænd ʌp/",
+    "definition": "Rise to an upright position on your feet.",
+    "vietnamese": "đứng dậy",
+    "contextSentence": "Everyone stood up when the anthem began playing.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "pick up",
+    "breakdown": {
+      "verb": "pick (select or grasp)",
+      "particle": "UP",
+      "semanticArchetype": "Elevation from surface",
+      "particleLogic": "UP denotes elevating an object away from ground level into one's hands."
+    },
+    "id": "vocab-a2-pl-19",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/pɪk ʌp/",
+    "definition": "Lift something from the floor or table; or collect someone in a vehicle.",
+    "vietnamese": "nhặt lên; đón ai bằng xe",
+    "contextSentence": "He picked up the dropped pen and handed it back to me.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "put down",
+    "breakdown": {
+      "verb": "put (place)",
+      "particle": "DOWN",
+      "semanticArchetype": "Resting upon a baseline",
+      "particleLogic": "DOWN completes the motion of releasing an object to rest securely on a floor or table."
+    },
+    "id": "vocab-a2-pl-20",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/pʊt daʊn/",
+    "definition": "Place something you are holding onto a surface; or write down notes.",
+    "vietnamese": "đặt xuống; ghi chép",
+    "contextSentence": "Put down your heavy bags and take a short rest.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "switch on",
+    "breakdown": {
+      "verb": "switch (toggle an electrical lever)",
+      "particle": "ON",
+      "semanticArchetype": "Electrical circuit activation",
+      "particleLogic": "ON signifies electrical connection and active operation."
+    },
+    "id": "vocab-a2-pl-21",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/swɪtʃ ɒn/",
+    "definition": "Press a switch to start an electrical device or light.",
+    "vietnamese": "bật công tắc, bật máy",
+    "contextSentence": "Can you switch on the air conditioner? It is very warm in here.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "switch off",
+    "breakdown": {
+      "verb": "switch (toggle an electrical lever)",
+      "particle": "OFF",
+      "semanticArchetype": "Electrical circuit deactivation",
+      "particleLogic": "OFF breaks physical contact in the circuit, terminating the power flow."
+    },
+    "id": "vocab-a2-pl-22",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/swɪtʃ ɒf/",
+    "definition": "Press a switch to stop an electrical device or appliance.",
+    "vietnamese": "tắt công tắc, tắt máy",
+    "contextSentence": "Always switch off the computer at the end of the working day.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "come on",
+    "breakdown": {
+      "verb": "come (advance toward goal)",
+      "particle": "ON",
+      "semanticArchetype": "Forward continuous momentum",
+      "particleLogic": "ON commands active forward momentum without hesitating."
+    },
+    "id": "vocab-a2-pl-23",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/kʌm ɒn/",
+    "definition": "Hurry up, or encourage someone to keep trying.",
+    "vietnamese": "nhanh lên, cố lên",
+    "contextSentence": "Come on, or we are going to miss the train!",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "write down",
+    "breakdown": {
+      "verb": "write (form letters)",
+      "particle": "DOWN",
+      "semanticArchetype": "Fixing ephemeral thoughts onto surface",
+      "particleLogic": "DOWN commits fleeting mental concepts downward onto solid paper for permanent keeping."
+    },
+    "id": "vocab-a2-pl-24",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "A2",
+    "ipa": "/raɪt daʊn/",
+    "definition": "Record words, numbers or ideas on paper.",
+    "vietnamese": "ghi chép lại, viết xuống",
+    "contextSentence": "Write down your email address so I can send you the details.",
     "isRemindCandidate": false
   },
   {
@@ -5982,6 +6257,726 @@
     "isRemindCandidate": false
   },
   {
+    "wordOrChunk": "look into",
+    "breakdown": {
+      "verb": "look (direct attention)",
+      "particle": "INTO",
+      "semanticArchetype": "Deep penetration into internal structure",
+      "particleLogic": "INTO directs the gaze beneath superficial layers to inspect root causes."
+    },
+    "id": "vocab-b1-pl-9",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/lʊk ˈɪn.tuː/",
+    "definition": "Investigate or examine the facts about a problem or situation.",
+    "vietnamese": "xem xét, điều tra, nghiên cứu kỹ",
+    "contextSentence": "The customer service manager promised to look into the delivery complaint right away.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "turn out",
+    "breakdown": {
+      "verb": "turn (change or evolve)",
+      "particle": "OUT",
+      "semanticArchetype": "Unfolding into visible outcome",
+      "particleLogic": "OUT portrays an evolving circumstance emerging out of uncertainty into clear reality."
+    },
+    "id": "vocab-b1-pl-10",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/tɜːn aʊt/",
+    "definition": "Happen in a particular way or have a particular result that was unexpected.",
+    "vietnamese": "hóa ra là, kết cục là",
+    "contextSentence": "The weather forecast predicted rain, but it turned out to be a sunny day.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "make up",
+    "breakdown": {
+      "verb": "make (construct, produce)",
+      "particle": "UP",
+      "semanticArchetype": "Restoring completeness",
+      "particleLogic": "UP signifies building back a damaged relationship to wholeness or inventing details to fill a narrative void."
+    },
+    "id": "vocab-b1-pl-11",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/meɪk ʌp/",
+    "definition": "Invent a story or excuse; or become friends again after an argument.",
+    "vietnamese": "bịa chuyện; làm hòa (sau tranh cãi)",
+    "contextSentence": "They had a serious disagreement yesterday, but they quickly made up this morning.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "look forward to",
+    "breakdown": {
+      "verb": "look (direct vision)",
+      "particle": "FORWARD",
+      "semanticArchetype": "Prospective temporal projection",
+      "particleLogic": "FORWARD projects anticipatory emotion along the timeline ahead towards an upcoming milestone."
+    },
+    "id": "vocab-b1-pl-12",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/lʊk ˈfɔː.wəd tuː/",
+    "definition": "Feel pleased and excited about an event that is going to happen in the future.",
+    "vietnamese": "mong đợi, trông ngóng",
+    "contextSentence": "We are all looking forward to starting our new project next month.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "run out of",
+    "breakdown": {
+      "verb": "run (flow swiftly)",
+      "particle": "OUT",
+      "semanticArchetype": "Complete depletion of reserves",
+      "particleLogic": "OUT marks the final volume of a resource exiting the boundaries of a container, leaving zero remaining."
+    },
+    "id": "vocab-b1-pl-13",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/rʌn aʊt əv/",
+    "definition": "Use all of a supply of something so that there is none left.",
+    "vietnamese": "cạn kiệt, dùng hết sạch",
+    "contextSentence": "We ran out of printer paper right before the board meeting began.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "get along with",
+    "breakdown": {
+      "verb": "get (navigate progress)",
+      "particle": "ALONG",
+      "semanticArchetype": "Parallel smooth motion",
+      "particleLogic": "ALONG denotes travelling parallel beside another without clashing or friction."
+    },
+    "id": "vocab-b1-pl-14",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/ɡet əˈlɒŋ wɪð/",
+    "definition": "Have a harmonious and friendly working or personal relationship with someone.",
+    "vietnamese": "hòa thuận, ăn ý với ai",
+    "contextSentence": "She gets along well with all her colleagues in the design department.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "give in",
+    "breakdown": {
+      "verb": "give (transfer ownership)",
+      "particle": "IN",
+      "semanticArchetype": "Inward collapse of boundary",
+      "particleLogic": "IN depicts yielding external resistance and letting opposing pressure enter one's territory."
+    },
+    "id": "vocab-b1-pl-15",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/ɡɪv ɪn/",
+    "definition": "Cease resistance to an opponent or demand; submit after arguing.",
+    "vietnamese": "nhượng bộ, đầu hàng, chịu thua",
+    "contextSentence": "After hours of arguing, the manager finally gave in and let the staff leave early.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "catch up with",
+    "breakdown": {
+      "verb": "catch (seize an advantage)",
+      "particle": "UP",
+      "semanticArchetype": "Closing an interval gap",
+      "particleLogic": "UP indicates ascending or accelerating to eliminate the deficit distance separating two entities."
+    },
+    "id": "vocab-b1-pl-16",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/kætʃ ʌp wɪð/",
+    "definition": "Reach the same standard or level as someone ahead; or exchange latest news with an acquaintance.",
+    "vietnamese": "bắt kịp (tiến độ); hàn huyên chia sẻ tin tức",
+    "contextSentence": "Let us meet for coffee on Friday so I can catch up with you.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "cut down on",
+    "breakdown": {
+      "verb": "cut (slice off excess)",
+      "particle": "DOWN",
+      "semanticArchetype": "Quantitative reduction",
+      "particleLogic": "DOWN truncates high measurement levels back toward a safer, lower ceiling."
+    },
+    "id": "vocab-b1-pl-17",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/kʌt daʊn ɒn/",
+    "definition": "Reduce the amount, size, or frequency of something you consume or do.",
+    "vietnamese": "cắt giảm (tiêu thụ, chi tiêu)",
+    "contextSentence": "The doctor advised him to cut down on sugar and processed carbohydrates.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "keep up with",
+    "breakdown": {
+      "verb": "keep (preserve status)",
+      "particle": "UP",
+      "semanticArchetype": "Sustaining elevation against inertia",
+      "particleLogic": "UP prevents falling into downward lag, sustaining parallel performance."
+    },
+    "id": "vocab-b1-pl-18",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/kiːp ʌp wɪð/",
+    "definition": "Maintain the same speed, pace or standard as someone or something changing rapidly.",
+    "vietnamese": "theo kịp, duy trì bắt nhịp tiến độ",
+    "contextSentence": "It is difficult to keep up with the latest technological developments in artificial intelligence.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "take up",
+    "breakdown": {
+      "verb": "take (adopt into possession)",
+      "particle": "UP",
+      "semanticArchetype": "Adoption into active schedule",
+      "particleLogic": "UP elevates an activity from passive disinterest into one's daily life focus."
+    },
+    "id": "vocab-b1-pl-19",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/teɪk ʌp/",
+    "definition": "Start a new hobby, activity or sport; or occupy an amount of time or space.",
+    "vietnamese": "bắt đầu sở thích mới; chiếm thời gian/không gian",
+    "contextSentence": "He decided to take up oil painting during his summer holiday.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "hold on",
+    "breakdown": {
+      "verb": "hold (maintain grasp)",
+      "particle": "ON",
+      "semanticArchetype": "Uninterrupted continuous contact",
+      "particleLogic": "ON maintains the live connection uninterrupted without breaking line communication."
+    },
+    "id": "vocab-b1-pl-20",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/həʊld ɒn/",
+    "definition": "Wait for a short time (especially on the telephone); or grip something tightly.",
+    "vietnamese": "giữ máy (điện thoại), chờ một chút; bám chặt",
+    "contextSentence": "Hold on a second while I transfer your call to technical support.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "pass away",
+    "breakdown": {
+      "verb": "pass (move beyond)",
+      "particle": "AWAY",
+      "semanticArchetype": "Gentle departure from presence",
+      "particleLogic": "AWAY softens finality by framing death as a quiet departure into distant rest."
+    },
+    "id": "vocab-b1-pl-21",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/pɑːs əˈweɪ/",
+    "definition": "Die (used as a gentle, polite euphemism to avoid causing distress).",
+    "vietnamese": "qua đời, từ trần (nói giảm nói tránh)",
+    "contextSentence": "His grandfather passed away peacefully in his sleep at the age of ninety.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "show up",
+    "breakdown": {
+      "verb": "show (reveal to sight)",
+      "particle": "UP",
+      "semanticArchetype": "Surfacing into visible horizon",
+      "particleLogic": "UP visualizes an entity rising above the visual threshold into explicit attendance."
+    },
+    "id": "vocab-b1-pl-22",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/ʃəʊ ʌp/",
+    "definition": "Arrive or appear at a place or event.",
+    "vietnamese": "xuất hiện, có mặt, đến",
+    "contextSentence": "Over fifty guests showed up at the anniversary celebration.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "fill in",
+    "breakdown": {
+      "verb": "fill (make complete)",
+      "particle": "IN",
+      "semanticArchetype": "Inserting content into voids",
+      "particleLogic": "IN places necessary identity data directly into blank textual boundaries."
+    },
+    "id": "vocab-b1-pl-23",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/fɪl ɪn/",
+    "definition": "Complete the blank sections of an official form or document with written details.",
+    "vietnamese": "điền thông tin vào mẫu đơn",
+    "contextSentence": "Please fill in this visa application form using black ink.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "drop off",
+    "breakdown": {
+      "verb": "drop (release downwards)",
+      "particle": "OFF",
+      "semanticArchetype": "Detachment at destination",
+      "particleLogic": "OFF releases a passenger or parcel from transit custody at their designated stop."
+    },
+    "id": "vocab-b1-pl-24",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/drɒp ɒf/",
+    "definition": "Take someone or something to a destination by car; or fall into a light sleep.",
+    "vietnamese": "chở ai đến nơi; thiu thiu ngủ",
+    "contextSentence": "I can drop you off at the station on my way to the office.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "calm down",
+    "breakdown": {
+      "verb": "calm (soothe turbulence)",
+      "particle": "DOWN",
+      "semanticArchetype": "De-escalation of internal agitation",
+      "particleLogic": "DOWN lowers elevated heart rates, adrenaline and emotional peaks back to baseline serenity."
+    },
+    "id": "vocab-b1-pl-25",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/kɑːm daʊn/",
+    "definition": "Stop feeling angry, excited or nervous and regain mental balance.",
+    "vietnamese": "bình tĩnh lại, trấn tĩnh",
+    "contextSentence": "Take several deep breaths and try to calm down before speaking.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "go on",
+    "breakdown": {
+      "verb": "go (proceed)",
+      "particle": "ON",
+      "semanticArchetype": "Forward continuous duration",
+      "particleLogic": "ON sustains active trajectory along time without pausing or ending."
+    },
+    "id": "vocab-b1-pl-26",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/ɡəʊ ɒn/",
+    "definition": "Continue without stopping; or happen.",
+    "vietnamese": "tiếp tục; xảy ra, diễn ra",
+    "contextSentence": "Please go on with your presentation, we are listening carefully.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "check in",
+    "breakdown": {
+      "verb": "check (verify details)",
+      "particle": "IN",
+      "semanticArchetype": "Formal entry into facility",
+      "particleLogic": "IN transfers the traveler from public outdoor transit into registered indoor custody."
+    },
+    "id": "vocab-b1-pl-27",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/tʃek ɪn/",
+    "definition": "Register arrival at a hotel, airport or conference desk.",
+    "vietnamese": "làm thủ tục nhận phòng / thủ tục lên máy bay",
+    "contextSentence": "Passengers must check in at least two hours before an international flight.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "get over",
+    "breakdown": {
+      "verb": "get (transition state)",
+      "particle": "OVER",
+      "semanticArchetype": "Surmounting an obstacle",
+      "particleLogic": "OVER visualizes clearing a towering emotional hurdle to regain normal health."
+    },
+    "id": "vocab-b1-pl-28",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B1",
+    "ipa": "/ɡet ˈəʊ.vər/",
+    "definition": "Recover from an illness, shock or emotional disappointment.",
+    "vietnamese": "vượt qua (nỗi buồn, khó khăn), khỏi bệnh",
+    "contextSentence": "It took her several weeks to get over the severe flu.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "come up with",
+    "breakdown": {
+      "verb": "come (arrive, emerge)",
+      "particle": "UP",
+      "semanticArchetype": "Surfacing into consciousness",
+      "particleLogic": "UP brings an innovative concept from deep cognitive reflection up into active dialogue."
+    },
+    "id": "vocab-b2-pl-1",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/kʌm ʌp wɪð/",
+    "definition": "Suggest or think of an idea, strategy, plan or solution.",
+    "vietnamese": "nảy ra (ý tưởng), đề xuất (giải pháp)",
+    "contextSentence": "The marketing team came up with an ingenious campaign to boost brand engagement.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "face up to",
+    "breakdown": {
+      "verb": "face (turn eyes towards)",
+      "particle": "UP",
+      "semanticArchetype": "Erect confrontation",
+      "particleLogic": "UP requires standing tall and lifting one's gaze rather than cowering in denial."
+    },
+    "id": "vocab-b2-pl-2",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/feɪs ʌp tuː/",
+    "definition": "Accept and confront an unpleasant fact, reality or consequence bravely.",
+    "vietnamese": "dũng cảm đối mặt với sự thật khó khăn",
+    "contextSentence": "Corporate leaders must face up to the financial realities of inflation.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "bring about",
+    "breakdown": {
+      "verb": "bring (convey, induce)",
+      "particle": "ABOUT",
+      "semanticArchetype": "Circumferential environmental shift",
+      "particleLogic": "ABOUT produces widespread, rotational reverberations throughout the surrounding system."
+    },
+    "id": "vocab-b2-pl-3",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/brɪŋ əˈbaʊt/",
+    "definition": "Make something happen, especially a major transformation or social reform.",
+    "vietnamese": "mang lại, dẫn đến, gây ra (biến chuyển lớn)",
+    "contextSentence": "Rapid advancements in automation brought about sweeping changes in manufacturing.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "weed out",
+    "breakdown": {
+      "verb": "weed (uproot wild plants)",
+      "particle": "OUT",
+      "semanticArchetype": "Extraction of defective components",
+      "particleLogic": "OUT discards useless or harmful invasive growths outside the boundary of the collective garden."
+    },
+    "id": "vocab-b2-pl-4",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/wiːd aʊt/",
+    "definition": "Remove unwanted, inferior or corrupt elements from a group or organization.",
+    "vietnamese": "loại bỏ phần tử xấu/kém chất lượng, thanh lọc",
+    "contextSentence": "Rigorous entrance evaluations are designed to weed out unsuitable applicants early.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "zero in on",
+    "breakdown": {
+      "verb": "zero (calibrate crosshairs)",
+      "particle": "IN + ON",
+      "semanticArchetype": "Pinpoint focal lock",
+      "particleLogic": "ON fixes the sightline directly upon the target surface, eliminating peripheral distractions."
+    },
+    "id": "vocab-b2-pl-5",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/ˈzɪə.rəʊ ɪn ɒn/",
+    "definition": "Direct all your attention, focus or efforts onto a specific target or problem.",
+    "vietnamese": "tập trung cao độ vào mục tiêu then chốt",
+    "contextSentence": "The audit team quickly zeroed in on the accounting discrepancies in the foreign subsidiary.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "stand out",
+    "breakdown": {
+      "verb": "stand (maintain posture)",
+      "particle": "OUT",
+      "semanticArchetype": "Salience through protrusion",
+      "particleLogic": "OUT steps forward beyond the uniform line of average peers into prominent public view."
+    },
+    "id": "vocab-b2-pl-6",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/stænd aʊt/",
+    "definition": "Be much better, more noticeable or prominent than similar people or things.",
+    "vietnamese": "nổi bật, xuất sắc vượt trội",
+    "contextSentence": "Her extensive international experience made her application stand out from the rest.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "back up",
+    "breakdown": {
+      "verb": "back (reinforce rear position)",
+      "particle": "UP",
+      "semanticArchetype": "Fortification from behind",
+      "particleLogic": "UP builds solid structural support directly behind an assertion to prevent it from collapsing."
+    },
+    "id": "vocab-b2-pl-7",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/bæk ʌp/",
+    "definition": "Support or verify an argument with evidence; or create a duplicate copy of electronic files.",
+    "vietnamese": "chứng minh bằng chứng cứ; sao lưu dữ liệu",
+    "contextSentence": "The research team gathered extensive empirical data to back up their hypothesis.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "lay off",
+    "breakdown": {
+      "verb": "lay (place down)",
+      "particle": "OFF",
+      "semanticArchetype": "Detachment from employment register",
+      "particleLogic": "OFF severs active contractual attachment to company payroll and workplace operations."
+    },
+    "id": "vocab-b2-pl-8",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/leɪ ɒf/",
+    "definition": "Stop employing workers because there is not enough work or revenue.",
+    "vietnamese": "sa thải nhân sự (do suy thoái/tái cấu trúc kinh tế)",
+    "contextSentence": "Due to falling consumer demand, the automotive plant had to lay off three hundred workers.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "hinge on",
+    "breakdown": {
+      "verb": "hinge (pivot upon a joint)",
+      "particle": "ON",
+      "semanticArchetype": "Pivotal physical dependency",
+      "particleLogic": "ON rests the entire structural weight and movement of an outcome upon a single anchor pin."
+    },
+    "id": "vocab-b2-pl-9",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/hɪndʒ ɒn/",
+    "definition": "Depend entirely on a single critical factor or decision for success.",
+    "vietnamese": "phụ thuộc hoàn toàn vào mấu chốt, xoay quanh",
+    "contextSentence": "The success of the merger hinges on obtaining antitrust regulatory approval.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "wear off",
+    "breakdown": {
+      "verb": "wear (erode by friction)",
+      "particle": "OFF",
+      "semanticArchetype": "Gradual surface dissolution",
+      "particleLogic": "OFF details the continuous wearing away of an active layer until baseline potency disappears."
+    },
+    "id": "vocab-b2-pl-10",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/weər ɒf/",
+    "definition": "Gradually lose effectiveness, intensity or physical impact over time.",
+    "vietnamese": "mất dần tác dụng, nhạt dần (thuốc, cảm giác)",
+    "contextSentence": "As the painkiller began to wear off, the patient felt the ache return in her knee.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "break out",
+    "breakdown": {
+      "verb": "break (fracture containment)",
+      "particle": "OUT",
+      "semanticArchetype": "Violent rupture of containment",
+      "particleLogic": "OUT captures volatile latent force smashing through boundaries into uncontrollable rampage."
+    },
+    "id": "vocab-b2-pl-11",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/breɪk aʊt/",
+    "definition": "Begin suddenly and violently (such as war, fire, epidemic disease or riots).",
+    "vietnamese": "bùng phát dữ dội (chiến tranh, dịch bệnh, hỏa hoạn)",
+    "contextSentence": "Emergency services responded rapidly when a massive fire broke out in the warehouse.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "put up with",
+    "breakdown": {
+      "verb": "put (accommodate)",
+      "particle": "UP",
+      "semanticArchetype": "Sustained erect endurance",
+      "particleLogic": "UP resists collapsing or lashing out, stoically maintaining emotional composure."
+    },
+    "id": "vocab-b2-pl-12",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/pʊt ʌp wɪð/",
+    "definition": "Tolerate or endure an unpleasant situation or irritating behavior without complaining.",
+    "vietnamese": "cam chịu, chịu đựng điều phiền toái",
+    "contextSentence": "Residents refused to put up with the continuous construction noise throughout the night.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "pan out",
+    "breakdown": {
+      "verb": "pan (wash gravel for gold)",
+      "particle": "OUT",
+      "semanticArchetype": "Extraction of gold from silt",
+      "particleLogic": "OUT originates from gold miners washing gravel in pans until valuable nuggets emerged."
+    },
+    "id": "vocab-b2-pl-13",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/pæn aʊt/",
+    "definition": "Develop in a particular way, or turn out successfully as anticipated.",
+    "vietnamese": "tiến triển tốt đẹp, đem lại kết quả khả quan",
+    "contextSentence": "His ambitious venture capital investment did not pan out the way he had hoped.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "scale back",
+    "breakdown": {
+      "verb": "scale (measure against standard)",
+      "particle": "BACK",
+      "semanticArchetype": "Retraction along magnitude spectrum",
+      "particleLogic": "BACK reverses expansion, pulling ambitions rearward to a sustainable defensive line."
+    },
+    "id": "vocab-b2-pl-14",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/skeɪl bæk/",
+    "definition": "Make something smaller in size, scope, budget or quantity than originally planned.",
+    "vietnamese": "thu hẹp quy mô, giảm bớt ngân sách",
+    "contextSentence": "The government was forced to scale back infrastructure spending during the fiscal deficit.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "fall behind",
+    "breakdown": {
+      "verb": "fall (drop downward)",
+      "particle": "BEHIND",
+      "semanticArchetype": "Spatial deficit in temporal race",
+      "particleLogic": "BEHIND charts the resulting deficit position when velocity fails to match advancing peers."
+    },
+    "id": "vocab-b2-pl-15",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/fɔːl bɪˈhaɪnd/",
+    "definition": "Fail to keep pace with a schedule, competitors, or financial obligations.",
+    "vietnamese": "tụt lại phía sau, chậm trễ hạn nộp",
+    "contextSentence": "If suppliers delay deliveries, the factory will fall behind schedule.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "step down",
+    "breakdown": {
+      "verb": "step (walk measuredly)",
+      "particle": "DOWN",
+      "semanticArchetype": "Voluntary descent from pedestal",
+      "particleLogic": "DOWN traces the dignified descent from a hierarchical high platform to common rank."
+    },
+    "id": "vocab-b2-pl-16",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/step daʊn/",
+    "definition": "Resign formally from an important position of authority or executive leadership.",
+    "vietnamese": "từ chức, rút lui khỏi vị trí lãnh đạo",
+    "contextSentence": "The chief executive decided to step down following accusations of regulatory non-compliance.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "opt out",
+    "breakdown": {
+      "verb": "opt (exercise choice)",
+      "particle": "OUT",
+      "semanticArchetype": "Elective boundary exit",
+      "particleLogic": "OUT marks the deliberate exercise of agency to remain external to collective mandates."
+    },
+    "id": "vocab-b2-pl-17",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/ɒpt aʊt/",
+    "definition": "Choose deliberately not to participate in a program, agreement or system.",
+    "vietnamese": "chủ động rút lui, chọn không tham gia",
+    "contextSentence": "Employees have the legal right to opt out of the voluntary pension program.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "tap into",
+    "breakdown": {
+      "verb": "tap (pierce a cask)",
+      "particle": "INTO",
+      "semanticArchetype": "Penetration of deep reservoir",
+      "particleLogic": "INTO pierces the outer protective casing to divert an internal reservoir into active use."
+    },
+    "id": "vocab-b2-pl-18",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/tæp ˈɪn.tuː/",
+    "definition": "Access, exploit and make good use of an abundant resource, market or network.",
+    "vietnamese": "khai thác, tận dụng (nguồn lực, thị trường tiềm năng)",
+    "contextSentence": "Renewable energy initiatives seek to tap into geothermal reservoirs beneath volcanic terrain.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "root out",
+    "breakdown": {
+      "verb": "root (search subterranean ground)",
+      "particle": "OUT",
+      "semanticArchetype": "Complete subterranean extirpation",
+      "particleLogic": "OUT drags hidden subterranean roots upward into open daylight so regrowth becomes impossible."
+    },
+    "id": "vocab-b2-pl-19",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/ruːt aʊt/",
+    "definition": "Find, expose and eliminate something bad or harmful completely.",
+    "vietnamese": "diệt trừ tận gốc, bài trừ, truy quét",
+    "contextSentence": "The new administration launched an anti-corruption task force to root out systemic bribery.",
+    "isRemindCandidate": false
+  },
+  {
+    "wordOrChunk": "brush up on",
+    "breakdown": {
+      "verb": "brush (dust off surface)",
+      "particle": "UP",
+      "semanticArchetype": "Surface polish to readiness",
+      "particleLogic": "UP buffs away the accumulated dust of disuse to restore cognitive fluency back to peak shine."
+    },
+    "id": "vocab-b2-pl-20",
+    "mode": "PARTICLE_LAB",
+    "level": 1,
+    "cefrLevel": "B2",
+    "ipa": "/brʌʃ ʌp ɒn/",
+    "definition": "Quickly improve, refresh or practice existing knowledge of a subject or skill.",
+    "vietnamese": "ôn tập lại, trau dồi nhanh kiến thức cũ",
+    "contextSentence": "She spent the weekend brushing up on her Spanish conversational skills before flying to Madrid.",
+    "isRemindCandidate": false
+  },
+  {
     "wordOrChunk": "scale up",
     "breakdown": {
       "verb": "scale (adjust size/grade)",
@@ -6009,7 +7004,7 @@
     },
     "id": "vocab-pl-2",
     "mode": "PARTICLE_LAB",
-    "level": 2,
+    "level": 1,
     "cefrLevel": "B2",
     "ipa": "/waɪnd ʌp/",
     "definition": "Bring an activity to an end, settle affairs; or find oneself in an unexpected situation or place.",
@@ -6050,7 +7045,7 @@
     "ipa": "/ˈsʌm.ən ʌp/",
     "definition": "Manage to call forth, gather, or produce energy, courage, or a mental image from within oneself.",
     "vietnamese": "lấy hết can đảm, khơi dậy nguồn năng lượng/ký ức từ bên trong",
-    "contextSentence": "She had to summon up all her moral fortitude to whistleblow against the fraudulent billing scheme.",
+    "contextSentence": "She had to summon up all her courage to blow the whistle on the fraudulent billing scheme.",
     "isRemindCandidate": false
   },
   {
@@ -6063,8 +7058,8 @@
     },
     "id": "vocab-pl-5",
     "mode": "PARTICLE_LAB",
-    "level": 3,
-    "cefrLevel": "C2",
+    "level": 2,
+    "cefrLevel": "C1",
     "ipa": "/tʃɔːk ʌp/",
     "definition": "Ascribe or attribute a success or failure to a particular cause or factor; register an achievement.",
     "vietnamese": "ghi nhận chiến tích, quy nguyên nhân cho điều gì",
@@ -6279,7 +7274,7 @@
     },
     "id": "vocab-pl-17",
     "mode": "PARTICLE_LAB",
-    "level": 2,
+    "level": 1,
     "cefrLevel": "B2",
     "ipa": "/kræk daʊn/",
     "definition": "Take severe measures against individuals or behaviors that violate laws or rules.",
@@ -6298,7 +7293,7 @@
     "id": "vocab-pl-18",
     "mode": "PARTICLE_LAB",
     "level": 2,
-    "cefrLevel": "C2",
+    "cefrLevel": "C1",
     "ipa": "/peər daʊn/",
     "definition": "Reduce something in size, amount, or scope by gradually cutting away superfluous elements.",
     "vietnamese": "cắt giảm tinh gọn, lược bỏ phần thừa",
@@ -6369,7 +7364,7 @@
     },
     "id": "vocab-pl-22",
     "mode": "PARTICLE_LAB",
-    "level": 2,
+    "level": 1,
     "cefrLevel": "B2",
     "ipa": "/ˈnær.əʊ daʊn/",
     "definition": "Reduce the number of possibilities or choices by filtering out unsuitable ones.",
@@ -6482,7 +7477,7 @@
     "ipa": "/peɪ ɒf/",
     "definition": "Yield good results, succeed; or settle a debt or balance completely.",
     "vietnamese": "đem lại thành quả xứng đáng, trả dứt điểm nợ nần",
-    "contextSentence": "Ten years of disciplined deliberate practice finally paid off when she won the international concerto gold.",
+    "contextSentence": "Ten years of disciplined deliberate practice finally paid off when she won an international piano competition.",
     "isRemindCandidate": false
   },
   {
@@ -6549,7 +7544,7 @@
     },
     "id": "vocab-pl-32",
     "mode": "PARTICLE_LAB",
-    "level": 2,
+    "level": 1,
     "cefrLevel": "B2",
     "ipa": "/piːl ɒf/",
     "definition": "Separate from a main group or trajectory; or remove a layer smoothly.",
@@ -6675,8 +7670,8 @@
     },
     "id": "vocab-pl-39",
     "mode": "PARTICLE_LAB",
-    "level": 2,
-    "cefrLevel": "C1",
+    "level": 1,
+    "cefrLevel": "B2",
     "ipa": "/ɪmˈbɑːk ɒn/",
     "definition": "Start, begin, or initiate a course of action, project, or journey.",
     "vietnamese": "bắt tay thực hiện, dấn thân vào một hành trình lớn",
@@ -6801,7 +7796,7 @@
     },
     "id": "vocab-pl-46",
     "mode": "PARTICLE_LAB",
-    "level": 3,
+    "level": 2,
     "cefrLevel": "C1",
     "ipa": "/ˈmʌd.əl θruː/",
     "definition": "Manage to cope or succeed despite lacking proper planning, skill, or resources.",
@@ -6873,7 +7868,7 @@
     },
     "id": "vocab-pl-50",
     "mode": "PARTICLE_LAB",
-    "level": 2,
+    "level": 1,
     "cefrLevel": "B2",
     "ipa": "/fɔːl bæk ɒn/",
     "definition": "Turn to something or someone for support when other options have failed.",
@@ -7017,7 +8012,7 @@
     },
     "id": "vocab-pl-58",
     "mode": "PARTICLE_LAB",
-    "level": 3,
+    "level": 2,
     "cefrLevel": "C1",
     "ipa": "/skɜːt əˈraʊnd/",
     "definition": "Avoid dealing with or talking directly about a difficult or awkward subject.",

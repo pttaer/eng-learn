@@ -16,6 +16,16 @@ import { bandBadge, countdown, Countdown, esc, fmtTime, h } from '../ui';
 const T1 = w1Data as Task1Prompt[];
 const T2 = w2Data as Task2Prompt[];
 
+// Chart kind codes as learners read them; unknown codes fall back to the raw code
+const CHART_KIND_LABEL: Record<string, string> = {
+  line: 'Line graph',
+  bar: 'Bar chart',
+  pie: 'Pie chart',
+  table: 'Table',
+  map: 'Map',
+  process: 'Process diagram'
+};
+
 const MODEL_4_SENTENCE_PARAGRAPH =
   'One primary reason for expanding public transit infrastructure is that it dramatically reduces urban traffic gridlock across metropolitan centers. Because high-capacity electric bus and rail networks transport thousands of commuters simultaneously, substantially fewer private automobiles crowd central arterial roadways during peak hours. For instance, cities like Tokyo and Singapore observed sharp reductions in daily commute delays following major rail investments. Consequently, urban air quality improves noticeably and economic productivity rises as workers spend far less time idling in congestion.';
 
@@ -502,7 +512,7 @@ export function writingView(root: HTMLElement): () => void {
     const toggleFormulaBtn = h(
       'button',
       'ie-btn ie-formula-toggle',
-      '📐 Task 1 Visual Formula Inspector'
+      'Task 1 Visual Formula Inspector'
     );
     toggleFormulaBtn.id = 'toggle-formula-inspector';
     toggleFormulaBtn.setAttribute('aria-expanded', 'false');
@@ -510,7 +520,7 @@ export function writingView(root: HTMLElement): () => void {
     const toggleWbBtn = h(
       'button',
       'ie-btn ie-workbench-toggle',
-      '🧱 Task 2 4-Sentence Paragraph Workbench'
+      'Task 2 4-Sentence Paragraph Workbench'
     );
     toggleWbBtn.id = 'toggle-paragraph-workbench';
     toggleWbBtn.setAttribute('aria-expanded', 'false');
@@ -518,7 +528,7 @@ export function writingView(root: HTMLElement): () => void {
     const launchStudioBtn = h(
       'a',
       'ie-btn ie-btn-primary ie-launch-studio-btn',
-      '🚀 Launch Writing Studio (6 Blueprints & 5 Architectures)'
+      'Launch Writing Studio (6 Blueprints & 5 Architectures)'
     ) as HTMLAnchorElement;
     launchStudioBtn.href = '#writing-studio';
 
@@ -560,7 +570,7 @@ export function writingView(root: HTMLElement): () => void {
           'button',
           `ie-card ie-prompt-card ie-task${task}-card`,
           `<b>${esc(task === 1 ? label : p.prompt.slice(0, 90) + (p.prompt.length > 90 ? '…' : ''))}</b><span>${
-            task === 1 ? esc((p as Task1Prompt).chart.kind) : esc(label)
+            task === 1 ? esc(CHART_KIND_LABEL[(p as Task1Prompt).chart.kind] ?? (p as Task1Prompt).chart.kind) : esc(label)
           }</span>`
         );
         c.setAttribute('data-task', String(task));

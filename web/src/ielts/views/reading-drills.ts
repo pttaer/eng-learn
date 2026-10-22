@@ -1,5 +1,6 @@
 import { esc, h } from '../ui';
 import { feedback } from '../../core/feedback';
+import { icon } from '../../utils/icons';
 
 export interface SynonymPair {
   promptWord: string;
@@ -441,10 +442,10 @@ export function readingDrillsView(root: HTMLElement): () => void {
       <span class="ie-hud-label">Drills Mastered</span>
     </div>
     <div class="ie-hud-actions">
+      <a href="#reading" class="ie-btn ie-btn-sm ie-btn-back">&lt; Back to Full Passages</a>
       <button type="button" class="ie-btn ie-btn-sm" id="btn-toggle-synonyms" aria-pressed="false">
         🔄 Toggle Synonym Engine
       </button>
-      <a href="#reading" class="ie-btn ie-btn-sm">← Back to Full Passages</a>
     </div>
   `;
   container.append(hud);
@@ -662,7 +663,7 @@ export function readingDrillsView(root: HTMLElement): () => void {
 
     // Prev / Next Buttons
     const navButtons = h('div', 'ie-drill-nav-btns');
-    const prevBtn = h('button', 'ie-btn ie-btn-sm', '← Previous');
+    const prevBtn = h('button', 'ie-btn ie-btn-sm', '< Previous');
     prevBtn.disabled = currentDrillIndex === 0;
     prevBtn.addEventListener('click', () => {
       if (currentDrillIndex > 0) {
@@ -756,11 +757,11 @@ export function readingDrillsView(root: HTMLElement): () => void {
       </div>
       <div class="ie-feedback-body">
         <div class="ie-feedback-section">
-          <h4>💡 Examiner Rationale &amp; Cognitive Match:</h4>
+          <h4>${icon('lightbulb', 14)} Examiner Rationale &amp; Cognitive Match:</h4>
           <p>${esc(drill.rationale)}</p>
         </div>
         <div class="ie-feedback-section ie-trap-warning">
-          <h4>⚠️ Examiner Trap Deconstruction:</h4>
+          <h4>${icon('alertTriangle', 14)} Examiner Trap Deconstruction:</h4>
           <p>${esc(drill.trapExplanation)}</p>
         </div>
       </div>

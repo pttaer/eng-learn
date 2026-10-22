@@ -9,7 +9,19 @@ import { ProgressionEngine } from '../core/progression-engine';
 import { ProgressionModal } from './progression-modal';
 import { ZenMode } from '../core/zen-mode';
 import { MultiSkillQuizModal } from './multi-skill-quiz-modal';
+import { PlacementQuiz } from './placement-quiz';
 import { ambientMusicEngine, AmbientMusicMode } from '../core/ambient-music-engine';
+import { HapticEngine } from '../core/haptic-engine';
+import { MistakeVault } from '../core/mistake-vault';
+import { CommuteAudioPlayer } from '../core/commute-audio-player';
+
+export interface ContextualDockAction {
+  id: string;
+  label: string;
+  iconHtml?: string;
+  onClick: () => void;
+  accent?: boolean;
+}
 
 const ROUTE_NAMES: Record<string, string> = { read: 'READING', write: 'WRITING', listen: 'LISTENING', speak: 'SPEAKING', vocab: 'VOCABULARY', colloc: 'COLLOCATIONS', grammar: 'GRAMMAR', tenses: '12 TENSES', habits: 'DAILY HABITS', singularity: 'SINGULARITY', mediate: 'MEDIATION', cockpit: 'IELTS COCKPIT' };
 
@@ -17,13 +29,18 @@ export class HeaderHUD {
   private element: HTMLElement;
   private currentRoute: string = 'tree';
   private currentTheme: 'dark' | 'light' = 'dark';
+  private paintedIndex: number | null = null;
+  private settleTimer: number | undefined;
   public onNavigateToTree?: () => void;
   public onNavigateToBlitz?: () => void;
   public onNavigateToMediation?: () => void;
   public onNavigateToAnalytics?: () => void;
   public onNavigateToCockpit?: () => void;
+  private static instance: HeaderHUD | null = null;
+  private contextualActions: ContextualDockAction[] | null = null;
 
   constructor() {
+    HeaderHUD.instance = this;
     this.element = document.createElement('header');
     this.element.className = 'hud-header interactive';
 
@@ -51,7 +68,7 @@ export class HeaderHUD {
       }
       const streakPill = this.element.querySelector('.btn-streak-pill');
       if (streakPill) {
-        streakPill.innerHTML = `🔥 ${progState.streak}d`;
+        streakPill.innerHTML = `${icon('flame', 13)} ${progState.streak}d`;
         streakPill.setAttribute('title', `Daily Streak: ${progState.streak} days. Click to view Daily Workout on Constellation Tree`);
         streakPill.setAttribute('aria-label', `Daily Streak: ${progState.streak} days`);
       }
@@ -78,13 +95,13 @@ export class HeaderHUD {
     this.element.innerHTML = `
       <div class="hud-brand" style="display: flex; align-items: center; gap: 12px;">
         ${!isTree ? `
-          <button class="hud-btn btn-back-tree" title="Return to Constellation Tree" aria-label="Return to Constellation Tree">
-            ${icon('arrowLeft')}<span class="btn-label"> Back to Constellation</span> Tree
+          <button class="hud-btn btn-back-tree" title="Return to Constellation Tree" aria-label="Return to Constellation Tree" style="border: none !important; background: transparent !important; box-shadow: none !important; padding: 4px 6px !important; display: inline-flex; align-items: center; gap: 4px; font-weight: 700; cursor: pointer;">
+            <span style="font-size: 14px; font-weight: 700;">&lt;</span><span class="btn-label"> Back to Constellation</span> Tree
           </button>
-          <span class="hud-status-badge active-route-badge" style="font-size: 11px;">${ROUTE_NAMES[this.currentRoute] ?? this.currentRoute.toUpperCase()}</span>
+          <span class="hud-status-badge active-route-badge" style="font-size: var(--font-kicker);">${ROUTE_NAMES[this.currentRoute] ?? this.currentRoute.toUpperCase()}</span>
         ` : `
-          <span class="hud-brand-title" style="font-size: 15px; font-weight: 700; letter-spacing: 0.1em; display: inline-flex; align-items: center; gap: 8px;">
-            <span style="color: var(--accent-gold); font-size: 13px;">✦</span> ENGLISH MASTERY
+          <span class="hud-brand-title" style="font-size: var(--font-body); font-weight: 700; letter-spacing: 0.1em; display: inline-flex; align-items: center; gap: 8px;">
+            <span style="color: var(--accent-gold); font-size: var(--font-body-compact);">✦</span> ENGLISH MASTERY
           </span>
         `}
           <button class="hud-status-badge btn-level" style="background: var(--accent-gold); color: var(--bg-canvas); border-radius: 4px; padding: 2px 8px; font-weight: 700; border-color: var(--accent-gold); cursor: pointer;" aria-haspopup="dialog" title="Your CEFR level (click to change)" aria-label="Your level: ${CEFR_LABELS[StorageManager.getLearnerLevel()]}. Change level">${StorageManager.getLearnerLevel()}</button>
@@ -92,41 +109,41 @@ export class HeaderHUD {
 
       <div class="hud-telemetry-cluster" style="display: flex; gap: 20px; align-items: center;">
         <div class="telemetry-item telemetry-streak-item" title="Consecutive days you finished the daily workout. Click to view Daily Workout on Constellation Tree" style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
-          <span class="telemetry-label" style="font-size: 11px;">STREAK:</span>
+          <span class="telemetry-label" style="font-size: var(--font-kicker);">STREAK:</span>
           <span class="telemetry-value telemetry-streak" style="color: var(--accent-gold); font-weight: 700;">${icon('flame')} ${currentStreak} DAYS</span>
         </div>        <div class="telemetry-item" title="Share of flashcard reviews you recalled correctly" style="display: flex; align-items: center; gap: 6px;">
-          <span class="telemetry-label" style="font-size: 11px;">RETENTION:</span>
+          <span class="telemetry-label" style="font-size: var(--font-kicker);">RETENTION:</span>
           <span class="telemetry-value telemetry-retention" style="color: var(--good); font-weight: 700;">${stats.retentionRate}%</span>
         </div>
       </div>
 
       <div class="hud-actions header-actions" style="display: flex; gap: 8px; align-items: center;">
         <button class="hud-btn btn-streak-pill" title="Daily Streak: ${currentStreak} days. Click to view Daily Workout on Constellation Tree" aria-label="Daily Streak: ${currentStreak} days">
-          🔥 ${currentStreak}d
+          ${icon('flame', 13)} ${currentStreak}d
         </button>
         <button class="hud-btn btn-mobile-menu-drawer" title="Open Mobile Navigation Menu" aria-label="Open Mobile Navigation Menu" aria-haspopup="dialog">
-          ☰
+          ${icon('menu', 16)}
         </button>
-        <button class="hud-btn btn-skill-radar" title="Launch CEFR Multi-Skill Diagnostic & Celestial Radar" aria-label="Skill Radar" style="border-color: var(--cyan, #38bdf8); color: var(--cyan, #38bdf8); font-weight: 700;">
+        <button class="hud-btn btn-skill-radar" title="Launch CEFR Multi-Skill Diagnostic & Celestial Radar" aria-label="Skill Radar" style="border-color: var(--accent-gold, #a5b4fc); color: var(--accent-gold, #a5b4fc); font-weight: 700;">
           ${icon('target', 12)}<span class="btn-label"> RADAR</span>
         </button>
         <button class="hud-btn btn-blitz" title="Launch 60-Second Roguelike Speed Blitz Mode" aria-label="Speed Blitz Mode" style="border-color: var(--accent-gold); color: var(--accent-gold); font-weight: 700;">
           ${icon('zap', 12)}<span class="btn-label"> BLITZ</span>
         </button>
-        <button class="hud-btn btn-mediation" title="Launch CEFR Mediation Workbench (Hotkey: M)" aria-label="CEFR Mediation Workbench" style="border-color: var(--accent-cyan, #38bdf8); color: var(--accent-cyan, #38bdf8); font-weight: 700;">
-          ⚖️<span class="btn-label"> MEDIATION</span>
+        <button class="hud-btn btn-mediation" title="Launch CEFR Mediation Workbench (Hotkey: M)" aria-label="CEFR Mediation Workbench" style="border-color: var(--accent-gold, #a5b4fc); color: var(--accent-gold, #a5b4fc); font-weight: 700;">
+          ${icon('scale', 12)}<span class="btn-label"> MEDIATION</span>
         </button>
         <button class="hud-btn btn-analytics" title="Launch CEFR Analytics & SERL 2.0 Gauntlet Dashboard" aria-label="Analytics & SERL Dashboard" style="border-color: var(--accent-purple, #a855f7); color: var(--accent-purple, #a855f7); font-weight: 700;">
-          📊<span class="btn-label"> ANALYTICS</span>
+          ${icon('layers', 12)}<span class="btn-label"> ANALYTICS</span>
         </button>
         <button class="hud-btn btn-ielts-cockpit" title="Launch CD-IELTS Exam Cockpit (Hotkey: C)" aria-label="CD-IELTS Exam Cockpit" style="border-color: var(--accent-gold, #f59e0b); color: var(--accent-gold, #f59e0b); font-weight: 700;">
-          🎓<span class="btn-label"> COCKPIT</span>
+          ${icon('graduationCap', 12)}<span class="btn-label"> COCKPIT</span>
         </button>
         <button class="hud-btn btn-export-profile" title="Export Unified Student Profile (JSON)" aria-label="Export Profile" style="border-color: var(--accent-gold, #f59e0b); color: var(--accent-gold, #f59e0b); font-weight: 600;">
-          💾<span class="btn-label"> EXPORT</span>
+          ${icon('download', 12)}<span class="btn-label"> EXPORT</span>
         </button>
         <button class="hud-btn btn-import-profile" title="Import Unified Student Profile (JSON)" aria-label="Import Profile" style="border-color: var(--accent-cyan, #38bdf8); color: var(--accent-cyan, #38bdf8); font-weight: 600;">
-          📥<span class="btn-label"> IMPORT</span>
+          ${icon('upload', 12)}<span class="btn-label"> IMPORT</span>
         </button>
         <input type="file" class="hud-profile-file-input" accept=".json,application/json" style="display: none;" />
         <button class="hud-btn btn-progression-pill" title="RPG Progression & Daily Quests" aria-label="RPG Progression">
@@ -142,29 +159,128 @@ export class HeaderHUD {
 
       <nav class="hud-bottom-nav" aria-label="Mobile Bottom Navigation">
         <button class="bnav-btn bnav-tree ${isTree ? 'is-active' : ''}" aria-label="Constellation Tree" title="Constellation Tree">
-          <span class="bnav-icon">✦</span>
+          <span class="bnav-icon">${icon('sparkles', 18)}</span>
           <span class="bnav-label">Tree</span>
         </button>
         <button class="bnav-btn bnav-blitz ${this.currentRoute === 'blitz' ? 'is-active' : ''}" aria-label="Speed Blitz" title="Speed Blitz">
-          <span class="bnav-icon">⚡</span>
+          <span class="bnav-icon">${icon('zap', 18)}</span>
           <span class="bnav-label">Blitz</span>
         </button>
         <button class="bnav-btn bnav-radar" aria-label="Skill Radar" title="Skill Radar">
-          <span class="bnav-icon">🎯</span>
+          <span class="bnav-icon">${icon('target', 18)}</span>
           <span class="bnav-label">Radar</span>
         </button>
         <button class="bnav-btn bnav-cockpit ${this.currentRoute === 'cockpit' ? 'is-active' : ''}" aria-label="Exam Cockpit" title="Exam Cockpit">
-          <span class="bnav-icon">🎓</span>
+          <span class="bnav-icon">${icon('graduationCap', 18)}</span>
           <span class="bnav-label">Cockpit</span>
         </button>
         <button class="bnav-btn bnav-more" aria-label="More Actions" title="More Actions" aria-haspopup="dialog">
-          <span class="bnav-icon">☰</span>
+          <span class="bnav-icon">${icon('menu', 18)}</span>
           <span class="bnav-label">More</span>
         </button>
       </nav>
     `;
 
     this.bindEvents();
+    if (this.contextualActions && this.contextualActions.length > 0) {
+      this.renderContextualDockElements();
+    } else {
+      this.syncBnavPaint();
+    }
+  }
+
+  public static setContextualDock(actions: ContextualDockAction[] | null): void {
+    if (this.instance) {
+      this.instance.setContextualDock(actions);
+    }
+  }
+
+  public setContextualDock(actions: ContextualDockAction[] | null): void {
+    this.contextualActions = actions;
+    const nav = this.element.querySelector<HTMLElement>('.hud-bottom-nav');
+    if (!nav) return;
+
+    if (!actions || actions.length === 0) {
+      nav.classList.remove('is-contextual');
+      this.render();
+    } else {
+      this.renderContextualDockElements();
+    }
+  }
+
+  private renderContextualDockElements(): void {
+    const nav = this.element.querySelector<HTMLElement>('.hud-bottom-nav');
+    if (!nav || !this.contextualActions || this.contextualActions.length === 0) return;
+
+    nav.classList.add('is-contextual');
+    nav.innerHTML = `
+      <button class="bnav-btn bnav-done" aria-label="Exit drill and return" title="Done / Back">
+        <span class="bnav-icon">✕</span>
+        <span class="bnav-label">Done</span>
+      </button>
+      ${this.contextualActions.map(act => `
+        <button class="bnav-btn bnav-context-act ${act.accent ? 'is-accent' : ''}" data-act-id="${act.id}" aria-label="${act.label}">
+          <span class="bnav-icon">${act.iconHtml || '✦'}</span>
+          <span class="bnav-label">${act.label}</span>
+        </button>
+      `).join('')}
+    `;
+
+    nav.querySelector('.bnav-done')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      HapticEngine.trigger('light');
+      this.setContextualDock(null);
+      if (this.onNavigateToTree) {
+        this.onNavigateToTree();
+      } else {
+        window.location.hash = '#tree';
+      }
+    });
+
+    this.contextualActions.forEach(act => {
+      nav.querySelector(`[data-act-id="${act.id}"]`)?.addEventListener('click', () => {
+        AudioSynthesizer.play('click');
+        HapticEngine.trigger('light');
+        act.onClick();
+      });
+    });
+  }
+
+  // Tab label sweep: the tapped label fills from grey to app color in the direction of travel,
+  // and the previous label drains the same way. A re-render replays from the last stop.
+  private paintBnav(btn: HTMLElement): void {
+    const nav = btn.closest<HTMLElement>('.hud-bottom-nav');
+    if (!nav) return;
+    const btns = Array.from(nav.querySelectorAll<HTMLElement>('.bnav-btn'));
+    const next = btns.indexOf(btn);
+    const prevIdx = this.paintedIndex;
+    if (prevIdx !== null && prevIdx !== next && btns[prevIdx]) {
+      const prev = btns[prevIdx];
+      nav.dataset.sweep = next > prevIdx ? 'ltr' : 'rtl';
+      prev.classList.add('is-painted');
+      void nav.offsetWidth;
+      prev.classList.remove('is-painted');
+      prev.classList.add('is-leaving');
+      window.setTimeout(() => prev.classList.remove('is-leaving'), 460);
+    }
+    btn.classList.add('is-painted');
+    // Settle only after the sweep: a route re-render inside that window still sweeps from the old tab
+    window.clearTimeout(this.settleTimer);
+    this.settleTimer = window.setTimeout(() => { this.paintedIndex = next; }, 460);
+  }
+
+  private syncBnavPaint(): void {
+    this.element.querySelectorAll<HTMLElement>('.bnav-label').forEach((label) => {
+      label.dataset.text = label.textContent ?? '';
+    });
+    const active = this.element.querySelector<HTMLElement>('.bnav-btn.is-active');
+    if (active) {
+      this.paintBnav(active);
+      return;
+    }
+    const nav = this.element.querySelector<HTMLElement>('.hud-bottom-nav');
+    const stop = nav?.querySelectorAll<HTMLElement>('.bnav-btn')[this.paintedIndex ?? -1];
+    if (stop) this.paintBnav(stop);
   }
 
   private themeLabel(): string {
@@ -420,6 +536,10 @@ export class HeaderHUD {
       AudioSynthesizer.play('click');
       this.openMobileActionSheet();
     });
+
+    this.element.querySelectorAll<HTMLElement>('.bnav-btn').forEach((btn) => {
+      btn.addEventListener('click', () => this.paintBnav(btn));
+    });
   }
 
   private openLevelPicker(): void {
@@ -434,11 +554,16 @@ export class HeaderHUD {
     modal.setAttribute('aria-modal', 'true');
     modal.setAttribute('aria-label', 'Choose your level');
     modal.innerHTML = `
-      <div class="completion-receipt-card" style="max-width: 420px; width: 90%;">
+      <div class="completion-receipt-card" style="max-width: 420px; width: 100%;">
         <div class="telemetry-label" style="margin-bottom: 8px;">YOUR LEVEL</div>
-        <button class="hud-btn btn-open-skill-radar" style="width: 100%; box-sizing: border-box; justify-content: center; padding: 10px 14px; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold); margin-bottom: var(--space-12);">
-          ${icon('target', 14)} <span style="margin-left: 6px;">[ 🎯 SKILL RADAR &amp; DIAGNOSTIC ]</span>
-        </button>
+        <div style="display: flex; flex-direction: column; gap: var(--space-8); margin-bottom: var(--space-12); width: 100%;">
+          <button class="hud-btn btn-open-placement-test" style="width: 100%; box-sizing: border-box; justify-content: center; padding: 10px 14px; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8);">
+            ${icon('compass', 14)} <span style="margin-left: 6px;">[ TAKE 2-MIN QUICK PLACEMENT TEST ]</span>
+          </button>
+          <button class="hud-btn btn-open-skill-radar" style="width: 100%; box-sizing: border-box; justify-content: center; padding: 10px 14px; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
+            ${icon('target', 14)} <span style="margin-left: 6px;">[ CELESTIAL RADAR &amp; DIAGNOSTIC ]</span>
+          </button>
+        </div>
         <div style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8); margin-bottom: var(--space-16);">
           ${CEFR_ORDER.map(l => `
             <button class="hud-btn level-option ${l === current ? 'active' : ''}" data-level="${l}" aria-pressed="${l === current}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 10px 14px; font-weight: 600;">${CEFR_LABELS[l]}</button>
@@ -458,6 +583,12 @@ export class HeaderHUD {
       if (e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); close(); }
     };
     document.addEventListener('keydown', onKey, true);
+
+    modal.querySelector('.btn-open-placement-test')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      close();
+      PlacementQuiz.open();
+    });
 
     modal.querySelector('.btn-open-skill-radar')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
@@ -497,12 +628,12 @@ export class HeaderHUD {
 
     sheet.innerHTML = `
       <div class="completion-receipt-card mobile-action-sheet" style="max-width: 500px; width: 92%; max-height: 85vh; overflow-y: auto; padding: 20px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px;">
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <span style="color: var(--accent-gold); font-size: 16px;">✦</span>
-            <span class="telemetry-label" style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: var(--ink-primary);">MOBILE CONTROLS</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px;">
+          <div style="display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1;">
+            <span style="color: var(--accent-gold); display: flex; align-items: center;">${icon('sparkles', 16)}</span>
+            <span class="telemetry-label" style="font-size: var(--font-body-compact); font-weight: 700; letter-spacing: 0.1em; color: var(--ink-primary); white-space: normal;">MOBILE CONTROLS</span>
           </div>
-          <button class="hud-btn sheet-btn-close btn-modal-close" aria-label="Close Mobile Menu" style="min-width: 44px; min-height: 44px; padding: 4px 12px; font-size: 16px;">✕</button>
+          <button class="sheet-btn-close btn-modal-close" aria-label="Close Mobile Menu" style="min-width: 44px; min-height: 44px; width: 44px; height: 44px; padding: 0; background: transparent; border: none; font-size: 16px; color: var(--ink-muted); cursor: pointer; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: color 0.15s ease;">✕</button>
         </div>
 
         <div class="mobile-sheet-grid" style="display: flex; flex-direction: column; gap: 10px;">
@@ -511,10 +642,19 @@ export class HeaderHUD {
             ${icon('zap', 16)} <span>Level ${progression.level} • ${progression.xp} XP Quests</span>
           </button>
           <button class="hud-btn sheet-btn-mediation" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8); gap: 12px;">
-            <span>⚖️</span> <span>CEFR Mediation Workbench</span>
+            ${icon('scale', 16)} <span>CEFR Mediation Workbench</span>
           </button>
           <button class="hud-btn sheet-btn-analytics" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-purple, #a855f7); border-color: var(--accent-purple, #a855f7); gap: 12px;">
-            <span>📊</span> <span>CEFR Analytics &amp; SERL Dashboard</span>
+            ${icon('layers', 16)} <span>CEFR Analytics &amp; SERL Dashboard</span>
+          </button>
+          <button class="hud-btn sheet-btn-tenses" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold); gap: 12px;">
+            ${icon('clock', 16)} <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">12 Tenses Master Vault</span>
+          </button>
+          <button class="hud-btn sheet-btn-mistake-vault" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; color: var(--critical, #ef4444); border-color: var(--critical, #ef4444); gap: 12px;">
+            ${icon('target', 16)} <span>Smart Mistake Vault &amp; Blitz</span>
+          </button>
+          <button class="hud-btn sheet-btn-commute-audio" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold); gap: 12px;">
+            ${icon('headphones', 16)} <span>Hands-Free Commute Audio Loop</span>
           </button>
 
           <div style="height: 1px; background: var(--border-hairline); margin: 4px 0;"></div>
@@ -540,10 +680,10 @@ export class HeaderHUD {
 
           <!-- Profile Portability & Settings -->
           <button class="hud-btn sheet-btn-export" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-gold); border-color: var(--accent-gold); gap: 12px;">
-            <span>💾</span> <span>[ 💾 EXPORT PROFILE (JSON) ]</span>
+            ${icon('download', 16)} <span>[ EXPORT PROFILE (JSON) ]</span>
           </button>
           <button class="hud-btn sheet-btn-import" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-cyan); border-color: var(--accent-cyan); gap: 12px;">
-            <span>📥</span> <span>[ 📥 IMPORT PROFILE (JSON) ]</span>
+            ${icon('upload', 16)} <span>[ IMPORT PROFILE (JSON) ]</span>
           </button>
           <input type="file" class="sheet-profile-file-input" accept=".json,application/json" style="display: none;" />
 
@@ -601,6 +741,26 @@ export class HeaderHUD {
       close();
       if (this.onNavigateToAnalytics) this.onNavigateToAnalytics();
       else window.location.hash = '#analytics';
+    });
+
+    sheet.querySelector('.sheet-btn-tenses')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      close();
+      window.location.hash = '#tenses';
+    });
+
+    sheet.querySelector('.sheet-btn-mistake-vault')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      HapticEngine.trigger('selection');
+      close();
+      MistakeVault.open();
+    });
+
+    sheet.querySelector('.sheet-btn-commute-audio')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      HapticEngine.trigger('selection');
+      close();
+      CommuteAudioPlayer.open();
     });
 
     sheet.querySelector('.sheet-btn-theme')?.addEventListener('click', () => {
@@ -670,16 +830,19 @@ export class HeaderHUD {
     modal.id = 'settings-modal';
     modal.className = 'completion-modal-overlay interactive';
     modal.innerHTML = `
-      <div class="completion-receipt-card" style="max-width: 520px; width: 90%;">
-        <div class="telemetry-label" style="margin-bottom: 8px;">SYSTEM SETTINGS & DATA BACKUP</div>
-        <h2 style="font-family: var(--font-mono); font-size: 20px; font-weight: 700; margin-bottom: 16px;">
+      <div class="completion-receipt-card" style="max-width: 520px; width: 100%; padding: 16px 12px; gap: 12px; box-sizing: border-box;">
+        <div class="telemetry-label" style="margin-bottom: 0;">SYSTEM SETTINGS & DATA BACKUP</div>
+        <h2 style="font-family: var(--font-mono); font-size: var(--font-h2); font-weight: 700; margin: 0;">
           Settings & Local Storage
         </h2>
-        <p style="font-size: 14px; line-height: 1.5; margin-bottom: 20px; color: var(--ink-secondary);">
+        <p style="font-size: var(--font-body-compact); line-height: 1.5; margin: 0; color: var(--ink-secondary);">
           Your progress, SRS intervals, and streaks are safely stored in your browser's local memory. You can export or import a backup JSON file anytime.
         </p>
 
-        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
+          <button class="hud-btn btn-restart-placement" style="padding: 12px; justify-content: center; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8);">
+            ${icon('target')} Retake 2-Min Placement Assessment
+          </button>
           <button class="hud-btn btn-restart-tour" style="padding: 12px; justify-content: center; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
             ${icon('compass')} Re-run Onboarding Tour
           </button>
@@ -693,28 +856,28 @@ export class HeaderHUD {
             ${icon('upload')} [ 📥 IMPORT PROFILE ]
           </button>
           <!-- Dual Audio Bus Controls -->
-          <div class="settings-audio-section" style="display: flex; flex-direction: column; gap: 10px; padding: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-line); border-radius: 6px;">
-            <div style="font-size: 11px; font-weight: 700; color: var(--accent-gold); letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px;">
+          <div class="settings-audio-section" style="display: flex; flex-direction: column; gap: 12px; padding: 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-line); border-radius: 6px;">
+            <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-gold); letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px;">
               ${icon('volume', 12)} DUAL AUDIO BUS CONTROLS
             </div>
 
-            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px;">
-              <label for="sfx-volume-slider" style="display: flex; align-items: center; gap: 6px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: var(--font-body-compact); gap: 12px;">
+              <label for="sfx-volume-slider" style="display: flex; align-items: center; gap: 6px; white-space: nowrap; flex-shrink: 0;">
                 SFX Volume: <span id="sfx-vol-label" style="font-family: var(--font-mono); font-weight: 600;">${Math.round(AudioSynthesizer.getVolume() * 100)}%</span>
               </label>
-              <input type="range" id="sfx-volume-slider" min="0" max="100" value="${Math.round(AudioSynthesizer.getVolume() * 100)}" style="width: 140px; cursor: pointer;" />
+              <input type="range" id="sfx-volume-slider" min="0" max="100" value="${Math.round(AudioSynthesizer.getVolume() * 100)}" style="width: 130px; cursor: pointer; flex-shrink: 0;" />
             </div>
 
-            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px;">
-              <label for="music-volume-slider" style="display: flex; align-items: center; gap: 6px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: var(--font-body-compact); gap: 12px;">
+              <label for="music-volume-slider" style="display: flex; align-items: center; gap: 6px; white-space: nowrap; flex-shrink: 0;">
                 Music Volume: <span id="music-vol-label" style="font-family: var(--font-mono); font-weight: 600;">${Math.round(ambientMusicEngine.getMusicVolume() * 100)}%</span>
               </label>
-              <input type="range" id="music-volume-slider" min="0" max="100" value="${Math.round(ambientMusicEngine.getMusicVolume() * 100)}" style="width: 140px; cursor: pointer;" />
+              <input type="range" id="music-volume-slider" min="0" max="100" value="${Math.round(ambientMusicEngine.getMusicVolume() * 100)}" style="width: 130px; cursor: pointer; flex-shrink: 0;" />
             </div>
 
-            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px;">
-              <label for="music-mode-select">Ambient Soundscape:</label>
-              <select id="music-mode-select" class="hud-select" style="background: var(--bg-card); color: var(--ink-primary); border: 1px solid var(--border-line); padding: 4px 8px; border-radius: 4px; font-size: 12px; cursor: pointer;">
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: var(--font-body-compact); gap: 12px;">
+              <label for="music-mode-select" style="white-space: nowrap; flex-shrink: 0;">Ambient Soundscape:</label>
+              <select id="music-mode-select" class="hud-select" style="width: 130px; background: var(--bg-card); color: var(--ink-primary); border: 1px solid var(--border-line); padding: 4px 8px; border-radius: 4px; font-size: var(--font-body-compact); cursor: pointer; flex-shrink: 0;">
                 <option value="off" ${ambientMusicEngine.getMode() === 'off' ? 'selected' : ''}>Off</option>
                 <option value="calm-chords" ${ambientMusicEngine.getMode() === 'calm-chords' ? 'selected' : ''}>Calm Chords</option>
                 <option value="celestial-void" ${ambientMusicEngine.getMode() === 'celestial-void' ? 'selected' : ''}>Celestial Void</option>
@@ -726,20 +889,26 @@ export class HeaderHUD {
           <button class="hud-btn btn-motion-toggle" style="padding: 12px; justify-content: center; font-weight: 600;" aria-pressed="${document.documentElement.dataset.motion === 'reduce'}">
             ${icon('zap')} <span class="motion-label">${document.documentElement.dataset.motion === 'reduce' ? 'Motion: Reduced' : 'Motion: Full'}</span>
           </button>
+
+          <button class="hud-btn btn-modal-close" style="width: 100%; justify-content: center; padding: 12px; font-weight: 600;">
+            Close Settings
+          </button>
           <input type="file" class="backup-file-input" accept=".json,application/json" style="display: none;" />
         </div>
-
-        <button class="hud-btn btn-modal-close" style="width: 100%; justify-content: center; padding: 10px 0;">
-          Close Settings
-        </button>
       </div>
     `;
 
     document.body.appendChild(modal);
 
+    modal.querySelector('.btn-restart-placement')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      closeModal();
+      PlacementQuiz.open();
+    });
+
     modal.querySelector('.btn-restart-tour')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
-      modal.remove();
+      closeModal();
       SpotlightTour.start(true);
     });
 
@@ -826,9 +995,27 @@ export class HeaderHUD {
       AudioSynthesizer.play('click');
     });
 
+    const closeModal = () => {
+      document.removeEventListener('keydown', onKeyDown);
+      modal.remove();
+    };
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
     modal.querySelector('.btn-modal-close')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
-      modal.remove();
+      closeModal();
     });
 
     const exportBtn = modal.querySelector('.btn-profile-export') || modal.querySelector('.btn-backup-export');
@@ -954,12 +1141,12 @@ export class HeaderHUD {
     dialog.setAttribute('aria-label', options.title);
 
     dialog.innerHTML = `
-      <div class="completion-receipt-card" style="max-width: 440px; width: 90%; border-top: 3px solid ${typeColor};">
+      <div class="completion-receipt-card" style="max-width: 440px; width: 100%; border-top: 3px solid ${typeColor};">
         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-          <span style="font-size: 18px; color: ${typeColor}; font-weight: 700;">${typeIcon}</span>
+          <span style="font-size: var(--font-h3); color: ${typeColor}; font-weight: 700;">${typeIcon}</span>
           <div class="telemetry-label" style="color: ${typeColor}; font-weight: 700; letter-spacing: 0.08em;">${options.title}</div>
         </div>
-        <div style="font-size: 14px; line-height: 1.6; color: var(--ink-primary); margin-bottom: 20px; white-space: pre-line;">${options.message}</div>
+        <div style="font-size: var(--font-h4); line-height: 1.6; color: var(--ink-primary); margin-bottom: 20px; white-space: pre-line;">${options.message}</div>
         <button class="hud-btn btn-status-confirm" style="width: 100%; justify-content: center; padding: 10px 0; font-weight: 700; color: ${typeColor}; border-color: ${typeColor};">
           OK
         </button>
@@ -991,6 +1178,9 @@ export class HeaderHUD {
 
   public updateTelemetry(routeName: string): void {
     this.currentRoute = routeName;
+    if (routeName === 'tree' || routeName === 'singularity') {
+      this.contextualActions = null;
+    }
     this.render();
   }
 }

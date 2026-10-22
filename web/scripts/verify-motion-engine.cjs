@@ -10,7 +10,7 @@ assert(fs.existsSync(enginePath), 'motion-engine.ts must exist');
 const engineTs = fs.readFileSync(enginePath, 'utf-8');
 
 // 1. Assert Anime.js imports and methods
-assert(engineTs.includes("import anime from 'animejs'"), "motion-engine.ts must import anime from animejs");
+assert(engineTs.includes("from 'animejs'"), "motion-engine.ts must import from animejs");
 assert(engineTs.includes('drawSvgLines'), "motion-engine.ts must export drawSvgLines method");
 assert(engineTs.includes('staggerEntrance'), "motion-engine.ts must export staggerEntrance method");
 assert(engineTs.includes('tweenNumber'), "motion-engine.ts must export tweenNumber method");

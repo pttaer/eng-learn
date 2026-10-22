@@ -196,7 +196,7 @@ it('Verifies Header HUD streak pill markup and click handler in header-hud.ts', 
 
   // Streak pill markup
   assert(code.includes('btn-streak-pill'), 'header-hud.ts must render button with class btn-streak-pill');
-  assert(code.includes('🔥 ${currentStreak}d'), 'streak pill must display 🔥 ${currentStreak}d format');
+  assert(code.includes('${currentStreak}d') && (code.includes("icon('flame'") || code.includes('🔥')), 'streak pill must display flame + ${currentStreak}d format');
   assert(code.includes('aria-label="Daily Streak: ${currentStreak} days"'), 'streak pill must have descriptive aria-label');
 
   // Streak pill click handler

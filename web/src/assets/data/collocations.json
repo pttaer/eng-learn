@@ -105,7 +105,7 @@
     "vietnamese": "thắc mắc, hỏi thăm thông tin",
     "category": "EVERYDAY",
     "example": "I'm writing to make an inquiry about your summer courses.",
-    "cefrLevel": "C1"
+    "cefrLevel": "B2"
   },
   {
     "id": "colloc-13",
@@ -212,7 +212,7 @@
     "phrase": "make a point",
     "vietnamese": "nêu ra một quan điểm, chứng minh một điều",
     "category": "EVERYDAY",
-    "example": "The speaker made a point of thanking every volunteer.",
+    "example": "In the meeting, she made a point about rising costs that nobody could ignore.",
     "cefrLevel": "B2"
   },
   {
@@ -445,7 +445,7 @@
     "index": 50,
     "phrase": "do without",
     "vietnamese": "sống thiếu, chấp nhận không có",
-    "category": "EVERYDAY",
+    "category": "IDIOMS",
     "example": "If the shop runs out of milk, we will simply have to do without.",
     "cefrLevel": "B2"
   },
@@ -939,7 +939,7 @@
     "id": "colloc-105",
     "index": 105,
     "phrase": "have doubts",
-    "vietnamese": "nghi ngờ",
+    "vietnamese": "hoài nghi, băn khoăn về tính khả thi",
     "category": "EVERYDAY",
     "example": "Even the manager had doubts about whether the plan would succeed.",
     "cefrLevel": "B2"
@@ -957,7 +957,7 @@
     "id": "colloc-107",
     "index": 107,
     "phrase": "have confidence in",
-    "vietnamese": "tự tin vào",
+    "vietnamese": "tin tưởng vào",
     "category": "EVERYDAY",
     "example": "Investors must have confidence in the bank before they deposit their savings.",
     "cefrLevel": "B2"
@@ -1334,16 +1334,16 @@
   {
     "id": "colloc-149",
     "index": 149,
-    "phrase": "give a hand",
+    "phrase": "give someone a hand",
     "vietnamese": "giúp một tay",
     "category": "EVERYDAY",
-    "example": "Could you give a hand with these heavy boxes?",
+    "example": "Could you give me a hand with these heavy boxes?",
     "cefrLevel": "B2"
   },
   {
     "id": "colloc-150",
     "index": 150,
-    "phrase": "give a lift",
+    "phrase": "give someone a lift",
     "vietnamese": "cho đi nhờ xe",
     "category": "EVERYDAY",
     "example": "My neighbor offered to give me a lift to the station.",
@@ -1487,10 +1487,10 @@
   {
     "id": "colloc-166",
     "index": 166,
-    "phrase": "pay respect to",
-    "vietnamese": "bày tỏ sự tôn kính đối với",
+    "phrase": "pay one's respects to",
+    "vietnamese": "bày tỏ lòng kính trọng, đến viếng",
     "category": "EVERYDAY",
-    "example": "Hundreds of mourners gathered to pay respect to the beloved teacher.",
+    "example": "Hundreds of mourners gathered to pay their respects to the beloved teacher.",
     "cefrLevel": "C1"
   },
   {
@@ -1787,7 +1787,7 @@
     "phrase": "set free",
     "vietnamese": "trả tự do",
     "category": "EVERYDAY",
-    "example": "The villagers set free the injured bird once it had healed.",
+    "example": "The villagers set the injured bird free once it had healed.",
     "cefrLevel": "B2"
   },
   {
@@ -1881,15 +1881,6 @@
     "cefrLevel": "B2"
   },
   {
-    "id": "colloc-210",
-    "index": 210,
-    "phrase": "run a campaign",
-    "vietnamese": "triển khai chiến dịch",
-    "category": "EVERYDAY",
-    "example": "The charity will run a campaign to raise funds for the new clinic.",
-    "cefrLevel": "C1"
-  },
-  {
     "id": "colloc-211",
     "index": 211,
     "phrase": "run an errand",
@@ -1969,15 +1960,6 @@
     "category": "EVERYDAY",
     "example": "After hours of talks, both sides came to an agreement on pricing.",
     "cefrLevel": "B2"
-  },
-  {
-    "id": "colloc-220",
-    "index": 220,
-    "phrase": "come into effect",
-    "vietnamese": "có hiệu lực",
-    "category": "EVERYDAY",
-    "example": "The new tax rules come into effect at midnight on the first of January.",
-    "cefrLevel": "C1"
   },
   {
     "id": "colloc-221",
@@ -2283,7 +2265,7 @@
     "vietnamese": "kết thúc đàm phán và hoàn tất giao dịch",
     "category": "BUSINESS",
     "example": "Counsel expects the parties to close a deal on the acquisition by Friday.",
-    "cefrLevel": "B1"
+    "cefrLevel": "B2"
   },
   {
     "id": "colloc-255",
@@ -2292,15 +2274,6 @@
     "vietnamese": "đàm phán chặt chẽ / ép giá gắt gao",
     "category": "BUSINESS",
     "example": "The procurement chief is known to drive a hard bargain, even with long-standing suppliers.",
-    "cefrLevel": "C1"
-  },
-  {
-    "id": "colloc-256",
-    "index": 256,
-    "phrase": "strike a bargain",
-    "vietnamese": "đạt được thỏa hiệp có lợi về giá cả và điều khoản",
-    "category": "BUSINESS",
-    "example": "After weeks of haggling, both sides managed to strike a bargain on pricing and delivery terms.",
     "cefrLevel": "C1"
   },
   {
@@ -2361,7 +2334,7 @@
     "id": "colloc-263",
     "index": 263,
     "phrase": "draw up an agreement",
-    "vietnamese": "lập biên bản thỏa thuận / lập hợp đồng",
+    "vietnamese": "soạn thảo thỏa thuận / lập hợp đồng",
     "category": "BUSINESS",
     "example": "Please draw up an agreement that reflects the revised payment schedule.",
     "cefrLevel": "B2"
@@ -2489,7 +2462,7 @@
     "phrase": "default on an obligation",
     "vietnamese": "không hoàn thành nghĩa vụ đã cam kết",
     "category": "BUSINESS",
-    "example": "The borrower worked tirelessly to avoid having to default on an obligation to its creditors.",
+    "example": "After sales collapsed, the firm was forced to default on an obligation to its creditors.",
     "cefrLevel": "C1"
   },
   {
@@ -2644,15 +2617,6 @@
     "category": "BUSINESS",
     "example": "The fintech firm plans to tap into a market of unbanked rural customers.",
     "cefrLevel": "C1"
-  },
-  {
-    "id": "colloc-295",
-    "index": 295,
-    "phrase": "capture market share",
-    "vietnamese": "chiếm lĩnh thị phần",
-    "category": "BUSINESS",
-    "example": "The new pricing model helped the firm capture market share from established competitors.",
-    "cefrLevel": "B2"
   },
   {
     "id": "colloc-296",
@@ -3084,7 +3048,7 @@
     "vietnamese": "nhà đầu tư thiên thần",
     "category": "BUSINESS",
     "example": "The entrepreneur's first backer was an angel investor who had run a similar business.",
-    "cefrLevel": "C2"
+    "cefrLevel": "C1"
   },
   {
     "id": "colloc-344",
@@ -3569,7 +3533,7 @@
     "phrase": "bottom line",
     "vietnamese": "kết quả kinh doanh lợi nhuận sau cùng",
     "category": "BUSINESS",
-    "example": "Whatever the strategy, the bottom line is that the division must turn a profit.",
+    "example": "Despite record sales, the bottom line shrank because shipping costs doubled.",
     "cefrLevel": "B2"
   },
   {
@@ -3702,7 +3666,7 @@
     "id": "colloc-412",
     "index": 412,
     "phrase": "poison pill",
-    "vietnamese": "chiến thuật viên thuốc độc (biện pháp phòng thủ chống thâu tóm)",
+    "vietnamese": "viên thuốc độc (biện pháp phòng thủ chống thâu tóm thù địch)",
     "category": "BUSINESS",
     "example": "Management adopted a poison pill that would dilute the raider's stake if it passed twenty percent.",
     "cefrLevel": "C2"
@@ -3899,10 +3863,10 @@
   {
     "id": "colloc-434",
     "index": 434,
-    "phrase": "breach of compliance",
-    "vietnamese": "hành vi vi phạm quy chuẩn tuân thủ",
+    "phrase": "compliance breach",
+    "vietnamese": "hành vi vi phạm quy định tuân thủ",
     "category": "BUSINESS",
-    "example": "An internal review concluded that the department's conduct amounted to a breach of compliance.",
+    "example": "An internal review concluded that the department's conduct amounted to a compliance breach.",
     "cefrLevel": "C1"
   },
   {
@@ -4482,15 +4446,6 @@
     "cefrLevel": "C1"
   },
   {
-    "id": "colloc-499",
-    "index": 499,
-    "phrase": "meet a tight deadline",
-    "vietnamese": "hoàn thành xuất sắc nhiệm vụ kịp thời hạn rất gấp rút",
-    "category": "BUSINESS",
-    "example": "The team had to work weekends to meet a tight deadline set by the client.",
-    "cefrLevel": "B1"
-  },
-  {
     "id": "colloc-500",
     "index": 500,
     "phrase": "blow a deadline",
@@ -4502,10 +4457,10 @@
   {
     "id": "colloc-501",
     "index": 501,
-    "phrase": "corroborate evidence",
-    "vietnamese": "củng cố/chứng thực bằng chứng",
+    "phrase": "corroborate a finding",
+    "vietnamese": "chứng thực, củng cố một phát hiện",
     "category": "ACADEMIC",
-    "example": "Independent replication of the results helped corroborate evidence that the original finding was not a statistical fluke.",
+    "example": "Independent replication in a second laboratory helped corroborate the finding that the original result was not a statistical fluke.",
     "cefrLevel": "C2"
   },
   {
@@ -4946,7 +4901,7 @@
     "phrase": "crunch the numbers",
     "vietnamese": "xử lý/tính toán các con số",
     "category": "ACADEMIC",
-    "example": "After the final survey wave closed, the statistician spent a week to crunch the numbers.",
+    "example": "After the final survey wave closed, the statistician spent a week crunching the numbers.",
     "cefrLevel": "C1"
   },
   {
@@ -5222,10 +5177,10 @@
   {
     "id": "colloc-581",
     "index": 581,
-    "phrase": "steep incline",
-    "vietnamese": "sự gia tăng dốc đứng",
+    "phrase": "steep rise",
+    "vietnamese": "sự gia tăng mạnh, tăng vọt",
     "category": "ACADEMIC",
-    "example": "The chart reveals a steep incline in energy demand during the first decade of industrialisation.",
+    "example": "The chart reveals a steep rise in energy demand during the first decade of industrialisation.",
     "cefrLevel": "B2"
   },
   {
@@ -5609,10 +5564,10 @@
   {
     "id": "colloc-624",
     "index": 624,
-    "phrase": "branch out",
-    "vietnamese": "tách nhánh mã nguồn",
+    "phrase": "create a branch",
+    "vietnamese": "tạo nhánh mã nguồn",
     "category": "ACADEMIC",
-    "example": "It is common practice to branch out from the main line when experimenting with a risky feature.",
+    "example": "Developers usually create a branch from the main line when experimenting with a risky feature.",
     "cefrLevel": "B2"
   },
   {
@@ -6239,10 +6194,10 @@
   {
     "id": "colloc-694",
     "index": 694,
-    "phrase": "underfitting the model",
-    "vietnamese": "chưa khớp mô hình/thiếu khớp",
+    "phrase": "underfit the data",
+    "vietnamese": "học thiếu, không khớp đủ với dữ liệu",
     "category": "ACADEMIC",
-    "example": "Underfitting the model leaves it too simple to capture meaningful relationships in the data.",
+    "example": "A model that is too simple will underfit the data and miss meaningful relationships.",
     "cefrLevel": "C2"
   },
   {
@@ -6594,15 +6549,6 @@
     "vietnamese": "rút ra kết luận",
     "category": "ACADEMIC",
     "example": "From the available evidence, it is reasonable to draw a conclusion about the treatment's short-term safety.",
-    "cefrLevel": "B2"
-  },
-  {
-    "id": "colloc-734",
-    "index": 734,
-    "phrase": "reach a conclusion",
-    "vietnamese": "đi đến kết luận",
-    "category": "ACADEMIC",
-    "example": "After weighing every dataset, the panel was able to reach a conclusion regarding the intervention's effectiveness.",
     "cefrLevel": "B2"
   },
   {
@@ -7023,7 +6969,7 @@
     "id": "colloc-781",
     "index": 781,
     "phrase": "infectious laugh",
-    "vietnamese": "nụ cười có sức lan tỏa, lây truyền",
+    "vietnamese": "tiếng cười có sức lan tỏa, dễ lây",
     "category": "IDIOMS",
     "example": "Her infectious laugh made even the gloomiest meetings feel lighter.",
     "cefrLevel": "C1"
@@ -7393,7 +7339,7 @@
     "index": 822,
     "phrase": "cognitive dissonance",
     "vietnamese": "sự bất hòa nhận thức",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Smokers often experience cognitive dissonance, knowing the risks yet continuing to light up.",
     "cefrLevel": "C2"
   },
@@ -7402,7 +7348,7 @@
     "index": 823,
     "phrase": "cognitive decline",
     "vietnamese": "sự suy giảm nhận thức",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Researchers are studying how diet might slow cognitive decline in older adults.",
     "cefrLevel": "C1"
   },
@@ -7411,7 +7357,7 @@
     "index": 824,
     "phrase": "subconscious mind",
     "vietnamese": "tâm trí tiềm thức",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Her subconscious mind seemed to solve the puzzle while she slept.",
     "cefrLevel": "C1"
   },
@@ -7420,7 +7366,7 @@
     "index": 825,
     "phrase": "conscious effort",
     "vietnamese": "nỗ lực có ý thức",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Learning a tonal language demands conscious effort, especially in the early months.",
     "cefrLevel": "C1"
   },
@@ -7429,7 +7375,7 @@
     "index": 826,
     "phrase": "psychological trauma",
     "vietnamese": "chấn thương tâm lý",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Years after the accident, he still struggled with psychological trauma.",
     "cefrLevel": "C1"
   },
@@ -7438,7 +7384,7 @@
     "index": 827,
     "phrase": "emotional distress",
     "vietnamese": "nỗi đau khổ, khủng hoảng tinh thần",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Prolonged unemployment can cause serious emotional distress in whole families.",
     "cefrLevel": "C1"
   },
@@ -7447,7 +7393,7 @@
     "index": 828,
     "phrase": "nervous breakdown",
     "vietnamese": "cơn suy nhược thần kinh",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Overwork finally pushed the young lawyer to the brink of a nervous breakdown.",
     "cefrLevel": "B2"
   },
@@ -7456,7 +7402,7 @@
     "index": 829,
     "phrase": "anxiety disorder",
     "vietnamese": "chứng rối loạn lo âu",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Her anxiety disorder made crowded trains almost impossible to board.",
     "cefrLevel": "C1"
   },
@@ -7465,7 +7411,7 @@
     "index": 830,
     "phrase": "panic attack",
     "vietnamese": "cơn hoảng loạn đột ngột",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "He had a panic attack in the lift and was rushed to hospital.",
     "cefrLevel": "B2"
   },
@@ -7474,7 +7420,7 @@
     "index": 831,
     "phrase": "cope with stress",
     "vietnamese": "đương đầu với căng thẳng",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Nurses learn to cope with stress through peer support and regular breaks.",
     "cefrLevel": "B2"
   },
@@ -7483,7 +7429,7 @@
     "index": 832,
     "phrase": "relieve stress",
     "vietnamese": "giải tỏa áp lực, xả stress",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "A brisk walk along the river is the best way I know to relieve stress.",
     "cefrLevel": "B2"
   },
@@ -7492,7 +7438,7 @@
     "index": 833,
     "phrase": "induce stress",
     "vietnamese": "gây ra áp lực căng thẳng",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Long commutes and noisy offices can induce stress even in resilient workers.",
     "cefrLevel": "C1"
   },
@@ -7501,7 +7447,7 @@
     "index": 834,
     "phrase": "chronic stress",
     "vietnamese": "căng thẳng mãn tính kéo dài",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Chronic stress has been linked to heart disease and weakened immunity.",
     "cefrLevel": "C1"
   },
@@ -7510,7 +7456,7 @@
     "index": 835,
     "phrase": "emotional resilience",
     "vietnamese": "khả năng phục hồi cảm xúc / sự kiên cường tâm lý",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Emotional resilience helped the family rebuild their lives after the flood.",
     "cefrLevel": "C1"
   },
@@ -7519,7 +7465,7 @@
     "index": 836,
     "phrase": "mental fatigue",
     "vietnamese": "sự kiệt quệ tinh thần / mệt mỏi trí óc",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "After eight hours of exams, the students suffered from severe mental fatigue.",
     "cefrLevel": "C1"
   },
@@ -7528,7 +7474,7 @@
     "index": 837,
     "phrase": "mental agility",
     "vietnamese": "sự nhạy bén, linh hoạt của trí tuệ",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Chess grandmasters are famous for their mental agility and rapid calculation.",
     "cefrLevel": "C2"
   },
@@ -7537,7 +7483,7 @@
     "index": 838,
     "phrase": "mental health awareness",
     "vietnamese": "nhận thức về sức khỏe tâm thần",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Schools are launching campaigns to raise mental health awareness among teenagers.",
     "cefrLevel": "C1"
   },
@@ -7546,7 +7492,7 @@
     "index": 839,
     "phrase": "seek therapy",
     "vietnamese": "tìm kiếm sự trị liệu tâm lý",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "After the divorce, he decided to seek therapy rather than suffer in silence.",
     "cefrLevel": "B2"
   },
@@ -7554,8 +7500,8 @@
     "id": "colloc-840",
     "index": 840,
     "phrase": "self-esteem",
-    "vietnamese": "lòng tự trọng, sự tự tôn",
-    "category": "IDIOMS",
+    "vietnamese": "sự tự trọng, lòng tự tin vào giá trị bản thân",
+    "category": "ACADEMIC",
     "example": "Teachers' encouragement can strengthen a child's self-esteem for life.",
     "cefrLevel": "B2"
   },
@@ -7563,8 +7509,8 @@
     "id": "colloc-841",
     "index": 841,
     "phrase": "low self-esteem",
-    "vietnamese": "lòng tự trọng thấp / mặc cảm tự ti",
-    "category": "IDIOMS",
+    "vietnamese": "thiếu tự tin vào giá trị bản thân / mặc cảm tự ti",
+    "category": "ACADEMIC",
     "example": "Constant criticism from her boss left her with painfully low self-esteem.",
     "cefrLevel": "B2"
   },
@@ -7572,8 +7518,8 @@
     "id": "colloc-842",
     "index": 842,
     "phrase": "boost self-esteem",
-    "vietnamese": "nâng cao lòng tự tôn, tự tin",
-    "category": "IDIOMS",
+    "vietnamese": "nâng cao sự tự tin vào giá trị bản thân",
+    "category": "ACADEMIC",
     "example": "Volunteering at the shelter helped boost his self-esteem after the layoff.",
     "cefrLevel": "C1"
   },
@@ -7582,7 +7528,7 @@
     "index": 843,
     "phrase": "inferiority complex",
     "vietnamese": "mặc cảm tự ti / phức cảm tự ti",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "He hid an inferiority complex behind jokes and a loud, confident manner.",
     "cefrLevel": "C1"
   },
@@ -7591,7 +7537,7 @@
     "index": 844,
     "phrase": "superiority complex",
     "vietnamese": "phức cảm tự tôn / ảo tưởng thượng đẳng",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Her superiority complex made colleagues avoid her at lunch.",
     "cefrLevel": "C2"
   },
@@ -7600,7 +7546,7 @@
     "index": 845,
     "phrase": "defense mechanism",
     "vietnamese": "cơ chế tự vệ tâm lý",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Humour can serve as a defence mechanism for people who fear being hurt.",
     "cefrLevel": "C1"
   },
@@ -7609,7 +7555,7 @@
     "index": 846,
     "phrase": "confirmation bias",
     "vietnamese": "thiên kiến xác nhận",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Confirmation bias leads us to read only the news that supports our views.",
     "cefrLevel": "C2"
   },
@@ -7681,7 +7627,7 @@
     "index": 854,
     "phrase": "short-term memory",
     "vietnamese": "trí nhớ ngắn hạn",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Short-term memory allows us to hold a phone number just long enough to dial it.",
     "cefrLevel": "B2"
   },
@@ -7699,7 +7645,7 @@
     "index": 856,
     "phrase": "social cohesion",
     "vietnamese": "sự gắn kết xã hội",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Shared festivals and local volunteering strengthened social cohesion in the neighbourhood.",
     "cefrLevel": "C2"
   },
@@ -7708,7 +7654,7 @@
     "index": 857,
     "phrase": "social mobility",
     "vietnamese": "sự dịch chuyển xã hội (về tầng lớp/thu nhập)",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Free university places improved social mobility for thousands of working-class families.",
     "cefrLevel": "C2"
   },
@@ -7717,7 +7663,7 @@
     "index": 858,
     "phrase": "social stratification",
     "vietnamese": "sự phân tầng xã hội",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Deep social stratification meant that one's surname could decide one's career.",
     "cefrLevel": "C2"
   },
@@ -7726,7 +7672,7 @@
     "index": 859,
     "phrase": "social fabric",
     "vietnamese": "kết cấu xã hội, nền tảng gắn kết xã hội",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Rapid inequality threatens the social fabric that holds communities together.",
     "cefrLevel": "C2"
   },
@@ -7735,7 +7681,7 @@
     "index": 860,
     "phrase": "social stigma",
     "vietnamese": "định kiến xã hội, kỳ thị xã hội",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Many patients avoid treatment because of the social stigma attached to mental illness.",
     "cefrLevel": "C2"
   },
@@ -7744,7 +7690,7 @@
     "index": 861,
     "phrase": "marginalize communities",
     "vietnamese": "gạt ra ngoài lề xã hội các cộng đồng",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Poor planning can marginalise communities by cutting them off from jobs and clinics.",
     "cefrLevel": "C2"
   },
@@ -7753,7 +7699,7 @@
     "index": 862,
     "phrase": "vulnerable groups",
     "vietnamese": "các nhóm dân cư dễ bị tổn thương",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Food banks provide an essential lifeline for vulnerable groups during harsh winters.",
     "cefrLevel": "C1"
   },
@@ -7762,7 +7708,7 @@
     "index": 863,
     "phrase": "ethnic minority",
     "vietnamese": "dân tộc thiểu số",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The government pledged funds to protect the language of the ethnic minority.",
     "cefrLevel": "C1"
   },
@@ -7771,7 +7717,7 @@
     "index": 864,
     "phrase": "cultural heritage",
     "vietnamese": "di sản văn hóa",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Restoring the old temple is vital to preserving the nation's cultural heritage.",
     "cefrLevel": "B2"
   },
@@ -7780,7 +7726,7 @@
     "index": 865,
     "phrase": "cultural assimilation",
     "vietnamese": "sự đồng hóa văn hóa",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Critics warned that forced cultural assimilation would erase the island's traditions.",
     "cefrLevel": "C2"
   },
@@ -7789,7 +7735,7 @@
     "index": 866,
     "phrase": "cultural diversity",
     "vietnamese": "sự đa dạng văn hóa",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The festival celebrates cultural diversity through food, music and dance from forty countries.",
     "cefrLevel": "B2"
   },
@@ -7798,7 +7744,7 @@
     "index": 867,
     "phrase": "generation gap",
     "vietnamese": "khoảng cách thế hệ",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "A growing generation gap made family dinners an exercise in diplomacy.",
     "cefrLevel": "B2"
   },
@@ -7807,7 +7753,7 @@
     "index": 868,
     "phrase": "civic engagement",
     "vietnamese": "sự tham gia của công dân vào đời sống xã hội",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Strong civic engagement showed in the record turnout at local council meetings.",
     "cefrLevel": "C2"
   },
@@ -7816,7 +7762,7 @@
     "index": 869,
     "phrase": "public outcry",
     "vietnamese": "sự phản đối kịch liệt từ công chúng",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "A public outcry forced the company to withdraw its offensive advertisement.",
     "cefrLevel": "C2"
   },
@@ -7825,7 +7771,7 @@
     "index": 870,
     "phrase": "civil unrest",
     "vietnamese": "bất ổn dân sự, bạo động xã hội",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Rising food prices fuelled civil unrest in several provincial capitals.",
     "cefrLevel": "C2"
   },
@@ -7834,7 +7780,7 @@
     "index": 871,
     "phrase": "mass migration",
     "vietnamese": "làn sóng di cư ồ ạt",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Wars and droughts have driven mass migration toward the cities.",
     "cefrLevel": "C1"
   },
@@ -7843,7 +7789,7 @@
     "index": 872,
     "phrase": "refugee crisis",
     "vietnamese": "cuộc khủng hoảng người tị nạn",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The refugee crisis strained the resources of every border town.",
     "cefrLevel": "B2"
   },
@@ -7852,7 +7798,7 @@
     "index": 873,
     "phrase": "demographic shift",
     "vietnamese": "sự dịch chuyển nhân khẩu học",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "A demographic shift toward younger city residents is changing local politics.",
     "cefrLevel": "C2"
   },
@@ -7861,7 +7807,7 @@
     "index": 874,
     "phrase": "aging population",
     "vietnamese": "dân số già hóa",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "An aging population puts growing pressure on pension systems and hospitals.",
     "cefrLevel": "C1"
   },
@@ -7870,7 +7816,7 @@
     "index": 875,
     "phrase": "birth rate",
     "vietnamese": "tỷ lệ sinh",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Many wealthy countries are alarmed by a falling birth rate.",
     "cefrLevel": "B2"
   },
@@ -7879,7 +7825,7 @@
     "index": 876,
     "phrase": "life expectancy",
     "vietnamese": "tuổi thọ trung bình",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Improved sanitation has raised life expectancy across the region.",
     "cefrLevel": "B2"
   },
@@ -7888,7 +7834,7 @@
     "index": 877,
     "phrase": "poverty line",
     "vietnamese": "chuẩn nghèo, ranh giới nghèo khó",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Millions of people live just above the poverty line, one illness from disaster.",
     "cefrLevel": "C1"
   },
@@ -7897,7 +7843,7 @@
     "index": 878,
     "phrase": "fall below the poverty line",
     "vietnamese": "rơi xuống dưới chuẩn nghèo",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "A single medical bill can cause a family to fall below the poverty line.",
     "cefrLevel": "C1"
   },
@@ -7906,7 +7852,7 @@
     "index": 879,
     "phrase": "eradicate poverty",
     "vietnamese": "xóa bỏ hoàn toàn đói nghèo",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The charity's founder dreamed of the day we could eradicate poverty entirely.",
     "cefrLevel": "C2"
   },
@@ -7915,7 +7861,7 @@
     "index": 880,
     "phrase": "alleviate poverty",
     "vietnamese": "xóa đói giảm nghèo, xoa dịu cảnh nghèo",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Microloans have helped to alleviate poverty in rural areas of the country.",
     "cefrLevel": "C2"
   },
@@ -7924,7 +7870,7 @@
     "index": 881,
     "phrase": "wealth gap",
     "vietnamese": "khoảng cách giàu nghèo",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The wealth gap between the city's richest and poorest districts keeps widening.",
     "cefrLevel": "C1"
   },
@@ -7933,7 +7879,7 @@
     "index": 882,
     "phrase": "income inequality",
     "vietnamese": "bất bình đẳng về thu nhập",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Economists argue that rising income inequality weakens trust in institutions.",
     "cefrLevel": "C1"
   },
@@ -7942,7 +7888,7 @@
     "index": 883,
     "phrase": "living standards",
     "vietnamese": "mức sống, tiêu chuẩn đời sống",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Better wages and healthcare have raised living standards across the whole province.",
     "cefrLevel": "C1"
   },
@@ -7951,7 +7897,7 @@
     "index": 884,
     "phrase": "cost of living",
     "vietnamese": "chi phí sinh hoạt",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Soaring rents have pushed the cost of living above what many teachers can bear.",
     "cefrLevel": "B2"
   },
@@ -7960,7 +7906,7 @@
     "index": 885,
     "phrase": "affordable housing",
     "vietnamese": "nhà ở giá cả phải chăng, vừa túi tiền",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The council promised to build more affordable housing for young families.",
     "cefrLevel": "C1"
   },
@@ -7969,7 +7915,7 @@
     "index": 886,
     "phrase": "urban sprawl",
     "vietnamese": "sự đô thị hóa mất kiểm soát / bành trướng đô thị",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Unchecked urban sprawl swallowed the farmland that once surrounded the town.",
     "cefrLevel": "C2"
   },
@@ -7978,7 +7924,7 @@
     "index": 887,
     "phrase": "brain drain",
     "vietnamese": "nạn chảy máu chất xám",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The brain drain left the country's hospitals short of experienced surgeons.",
     "cefrLevel": "C2"
   },
@@ -7987,7 +7933,7 @@
     "index": 888,
     "phrase": "human trafficking",
     "vietnamese": "nạn buôn bán người",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Police broke up a ring responsible for human trafficking across three borders.",
     "cefrLevel": "C1"
   },
@@ -7996,7 +7942,7 @@
     "index": 889,
     "phrase": "juvenile delinquency",
     "vietnamese": "tội phạm vị thành niên",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Youth centres have helped reduce juvenile delinquency in the district.",
     "cefrLevel": "C2"
   },
@@ -8005,7 +7951,7 @@
     "index": 890,
     "phrase": "crime rate",
     "vietnamese": "tỷ lệ tội phạm",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The mayor credited extra patrols for the fall in the crime rate.",
     "cefrLevel": "B2"
   },
@@ -8014,7 +7960,7 @@
     "index": 891,
     "phrase": "deter crime",
     "vietnamese": "răn đe, ngăn ngừa tội phạm",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Visible street lighting can deter crime more cheaply than additional prisons.",
     "cefrLevel": "C2"
   },
@@ -8023,7 +7969,7 @@
     "index": 892,
     "phrase": "petty crime",
     "vietnamese": "tội phạm vặt",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Petty crime such as pickpocketing rose sharply during the tourist season.",
     "cefrLevel": "C1"
   },
@@ -8032,7 +7978,7 @@
     "index": 893,
     "phrase": "violent crime",
     "vietnamese": "tội phạm bạo lực",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Residents demanded action after a series of violent crimes on the night bus.",
     "cefrLevel": "B2"
   },
@@ -8041,7 +7987,7 @@
     "index": 894,
     "phrase": "organized crime",
     "vietnamese": "tội phạm có tổ chức",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Investigators spent a decade dismantling a network of organised crime.",
     "cefrLevel": "C1"
   },
@@ -8050,7 +7996,7 @@
     "index": 895,
     "phrase": "capital punishment",
     "vietnamese": "án phạt tử hình",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Many nations have abolished capital punishment, citing the risk of wrongful convictions.",
     "cefrLevel": "C1"
   },
@@ -8059,7 +8005,7 @@
     "index": 896,
     "phrase": "community service",
     "vietnamese": "lao động công ích",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The judge sentenced the teenager to community service rather than jail.",
     "cefrLevel": "C1"
   },
@@ -8068,7 +8014,7 @@
     "index": 897,
     "phrase": "law enforcement",
     "vietnamese": "lực lượng thực thi pháp luật",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Local law enforcement worked closely with border officials to stop the smuggling.",
     "cefrLevel": "C1"
   },
@@ -8077,7 +8023,7 @@
     "index": 898,
     "phrase": "gender equality",
     "vietnamese": "bình đẳng giới",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Campaigners argue that true gender equality requires equal pay and shared childcare.",
     "cefrLevel": "B2"
   },
@@ -8086,7 +8032,7 @@
     "index": 899,
     "phrase": "gender bias",
     "vietnamese": "định kiến giới",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "A subtle gender bias in hiring kept qualified women out of senior jobs.",
     "cefrLevel": "C2"
   },
@@ -8095,7 +8041,7 @@
     "index": 900,
     "phrase": "sticky floor",
     "vietnamese": "\"sàn dính\" (rào cản ở bậc thấp)",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Researchers describe the sticky floor that keeps low-paid women stuck in entry-level roles.",
     "cefrLevel": "C2"
   },
@@ -8104,7 +8050,7 @@
     "index": 901,
     "phrase": "domestic violence",
     "vietnamese": "bạo lực gia đình",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Shelters offer safety and counselling to survivors of domestic violence.",
     "cefrLevel": "C1"
   },
@@ -8113,7 +8059,7 @@
     "index": 902,
     "phrase": "peer pressure",
     "vietnamese": "áp lực từ bạn bè đồng trang lứa",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Peer pressure pushed the shy teenager into trying things he later regretted.",
     "cefrLevel": "B2"
   },
@@ -8122,7 +8068,7 @@
     "index": 903,
     "phrase": "substance abuse",
     "vietnamese": "lạm dụng chất kích thích / ma túy",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Counsellors say early treatment of substance abuse greatly improves recovery odds.",
     "cefrLevel": "C1"
   },
@@ -8131,7 +8077,7 @@
     "index": 904,
     "phrase": "rehabilitation program",
     "vietnamese": "chương trình phục hồi nhân phẩm / cai nghiện",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "A residential rehabilitation program gave him the structure he needed to stay clean.",
     "cefrLevel": "C1"
   },
@@ -8140,7 +8086,7 @@
     "index": 905,
     "phrase": "welfare state",
     "vietnamese": "nhà nước phúc lợi",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The Nordic welfare state offers free education and generous unemployment benefits.",
     "cefrLevel": "C2"
   },
@@ -8149,7 +8095,7 @@
     "index": 906,
     "phrase": "climate change",
     "vietnamese": "biến đổi khí hậu",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Scientists warn that climate change will make coastal flooding far more frequent.",
     "cefrLevel": "B1"
   },
@@ -8158,7 +8104,7 @@
     "index": 907,
     "phrase": "global warming",
     "vietnamese": "hiện tượng nóng lên toàn cầu",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Global warming is melting the ice caps faster than earlier models predicted.",
     "cefrLevel": "B1"
   },
@@ -8167,7 +8113,7 @@
     "index": 908,
     "phrase": "greenhouse effect",
     "vietnamese": "hiệu ứng nhà kính",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Without the greenhouse effect, our planet would be too cold to support life.",
     "cefrLevel": "B2"
   },
@@ -8176,7 +8122,7 @@
     "index": 909,
     "phrase": "greenhouse gas emissions",
     "vietnamese": "khí thải nhà kính",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The treaty commits member states to cut greenhouse gas emissions by half.",
     "cefrLevel": "C1"
   },
@@ -8185,7 +8131,7 @@
     "index": 910,
     "phrase": "water footprint",
     "vietnamese": "lượng nước tiêu thụ gián tiếp",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "A single pair of jeans carries a surprisingly large water footprint.",
     "cefrLevel": "C2"
   },
@@ -8194,7 +8140,7 @@
     "index": 911,
     "phrase": "carbon neutral",
     "vietnamese": "trung hòa carbon",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The airline plans to become carbon neutral by offsetting its remaining flights.",
     "cefrLevel": "C1"
   },
@@ -8203,7 +8149,7 @@
     "index": 912,
     "phrase": "fossil fuels",
     "vietnamese": "nhiên liệu hóa thạch",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Burning fossil fuels remains the largest source of the world's carbon output.",
     "cefrLevel": "B2"
   },
@@ -8212,7 +8158,7 @@
     "index": 913,
     "phrase": "geothermal energy",
     "vietnamese": "năng lượng địa nhiệt",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Iceland heats thousands of homes with geothermal energy from volcanic springs.",
     "cefrLevel": "C2"
   },
@@ -8221,7 +8167,7 @@
     "index": 914,
     "phrase": "alternative energy",
     "vietnamese": "năng lượng thay thế",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Investors are pouring money into alternative energy such as tidal and hydrogen power.",
     "cefrLevel": "C1"
   },
@@ -8230,7 +8176,7 @@
     "index": 915,
     "phrase": "energy consumption",
     "vietnamese": "mức tiêu thụ năng lượng",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Energy consumption in the city drops sharply once the factories close for holidays.",
     "cefrLevel": "C1"
   },
@@ -8239,7 +8185,7 @@
     "index": 916,
     "phrase": "solar energy",
     "vietnamese": "năng lượng mặt trời",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Rooftop panels capture solar energy to power the entire school.",
     "cefrLevel": "B1"
   },
@@ -8248,7 +8194,7 @@
     "index": 917,
     "phrase": "wind power",
     "vietnamese": "năng lượng gió",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "A new wind power farm off the coast will supply a million homes.",
     "cefrLevel": "B1"
   },
@@ -8257,7 +8203,7 @@
     "index": 918,
     "phrase": "ozone layer",
     "vietnamese": "tầng ozon",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Aerosol chemicals once did serious harm to the ozone layer.",
     "cefrLevel": "B2"
   },
@@ -8266,7 +8212,7 @@
     "index": 919,
     "phrase": "depletion of the ozone layer",
     "vietnamese": "sự suy giảm, thủng tầng ozon",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Scientists first noticed the depletion of the ozone layer above the Antarctic.",
     "cefrLevel": "C2"
   },
@@ -8275,7 +8221,7 @@
     "index": 920,
     "phrase": "air pollution",
     "vietnamese": "ô nhiễm không khí",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Heavy air pollution forced the authorities to ban cars from the centre.",
     "cefrLevel": "B1"
   },
@@ -8284,7 +8230,7 @@
     "index": 921,
     "phrase": "water contamination",
     "vietnamese": "sự ô nhiễm nguồn nước",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Water contamination from the mine left villagers unable to drink from their wells.",
     "cefrLevel": "C2"
   },
@@ -8293,7 +8239,7 @@
     "index": 922,
     "phrase": "soil degradation",
     "vietnamese": "sự suy thoái độ phì nhiêu của đất",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Over-ploughing and excess fertiliser have led to widespread soil degradation.",
     "cefrLevel": "C2"
   },
@@ -8302,7 +8248,7 @@
     "index": 923,
     "phrase": "toxic waste",
     "vietnamese": "chất thải độc hại",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Inspectors found toxic waste leaking from rusted drums behind the factory.",
     "cefrLevel": "C1"
   },
@@ -8311,7 +8257,7 @@
     "index": 924,
     "phrase": "hazardous substances",
     "vietnamese": "các chất nguy hại",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Staff must wear protective gear when handling hazardous substances in the laboratory.",
     "cefrLevel": "C2"
   },
@@ -8320,7 +8266,7 @@
     "index": 925,
     "phrase": "waste disposal",
     "vietnamese": "việc xử lý rác thải",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Proper waste disposal prevents harmful chemicals from reaching rivers.",
     "cefrLevel": "C1"
   },
@@ -8329,7 +8275,7 @@
     "index": 926,
     "phrase": "illegal dumping",
     "vietnamese": "hành vi xả rác bừa bãi trái phép",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Fines for illegal dumping rose sharply after residents filmed lorries emptying rubbish by the road.",
     "cefrLevel": "C2"
   },
@@ -8338,16 +8284,16 @@
     "index": 927,
     "phrase": "landfill site",
     "vietnamese": "bãi chôn lấp rác thải",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The old landfill site has been converted into a public park.",
-    "cefrLevel": "C2"
+    "cefrLevel": "B2"
   },
   {
     "id": "colloc-928",
     "index": 928,
     "phrase": "biodegradable packaging",
     "vietnamese": "bao bì tự phân hủy sinh học",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The start-up sells biodegradable packaging that breaks down within months.",
     "cefrLevel": "C2"
   },
@@ -8356,7 +8302,7 @@
     "index": 929,
     "phrase": "single-use plastics",
     "vietnamese": "đồ nhựa dùng một lần",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Several countries are moving to ban single-use plastics such as straws and bags.",
     "cefrLevel": "C1"
   },
@@ -8365,7 +8311,7 @@
     "index": 930,
     "phrase": "recycle waste",
     "vietnamese": "tái chế rác thải",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Every household is asked to recycle waste and separate glass from paper.",
     "cefrLevel": "B1"
   },
@@ -8374,7 +8320,7 @@
     "index": 931,
     "phrase": "circular economy",
     "vietnamese": "nền kinh tế tuần hoàn",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "A circular economy keeps materials in use by repairing and reusing products.",
     "cefrLevel": "C2"
   },
@@ -8383,7 +8329,7 @@
     "index": 932,
     "phrase": "natural habitat",
     "vietnamese": "môi trường sống tự nhiên",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Hedgerows provide a natural habitat for dozens of small birds.",
     "cefrLevel": "B2"
   },
@@ -8392,7 +8338,7 @@
     "index": 933,
     "phrase": "habitat destruction",
     "vietnamese": "sự hủy hoại môi trường sống",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Palm plantations caused widespread habitat destruction in the island's rainforest.",
     "cefrLevel": "C2"
   },
@@ -8401,7 +8347,7 @@
     "index": 934,
     "phrase": "loss of biodiversity",
     "vietnamese": "sự mất mát đa dạng sinh học",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Scientists warn that the loss of biodiversity could destabilise entire food chains.",
     "cefrLevel": "C2"
   },
@@ -8409,9 +8355,9 @@
     "id": "colloc-935",
     "index": 935,
     "phrase": "endangered species",
-    "vietnamese": "các loài có nguy cơ tuyệt chủng",
-    "category": "IDIOMS",
-    "example": "Conservationists have listed endangered species such as the snow leopard on posters in schools.",
+    "vietnamese": "loài có nguy cơ tuyệt chủng",
+    "category": "ACADEMIC",
+    "example": "The snow leopard is an endangered species.",
     "cefrLevel": "B2"
   },
   {
@@ -8419,7 +8365,7 @@
     "index": 936,
     "phrase": "on the verge of extinction",
     "vietnamese": "trên bờ vực tuyệt chủng",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The northern white rhino is on the verge of extinction, with only two animals left.",
     "cefrLevel": "C1"
   },
@@ -8428,7 +8374,7 @@
     "index": 937,
     "phrase": "poaching of wildlife",
     "vietnamese": "săn trộm động vật hoang dã",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Strict penalties have failed to end the poaching of wildlife for ivory.",
     "cefrLevel": "C2"
   },
@@ -8437,7 +8383,7 @@
     "index": 938,
     "phrase": "wildlife conservation",
     "vietnamese": "bảo tồn động vật hoang dã",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Donations fund wildlife conservation projects across the African savannah.",
     "cefrLevel": "C1"
   },
@@ -8446,7 +8392,7 @@
     "index": 939,
     "phrase": "nature reserve",
     "vietnamese": "khu bảo tồn thiên nhiên",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The government declared the wetlands a protected nature reserve.",
     "cefrLevel": "C1"
   },
@@ -8455,7 +8401,7 @@
     "index": 940,
     "phrase": "deforestation",
     "vietnamese": "nạn phá rừng",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Deforestation in the region has accelerated as farmers clear land for soy.",
     "cefrLevel": "C1"
   },
@@ -8464,7 +8410,7 @@
     "index": 941,
     "phrase": "afforestation",
     "vietnamese": "việc trồng rừng / gây rừng",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Afforestation programmes are restoring bare hillsides with native trees.",
     "cefrLevel": "C2"
   },
@@ -8473,7 +8419,7 @@
     "index": 942,
     "phrase": "logging industry",
     "vietnamese": "ngành khai thác gỗ",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The logging industry employs thousands, yet it is criticised for harming old-growth forests.",
     "cefrLevel": "C2"
   },
@@ -8482,7 +8428,7 @@
     "index": 943,
     "phrase": "sustainable development",
     "vietnamese": "phát triển bền vững",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Sustainable development means meeting present needs without compromising future generations.",
     "cefrLevel": "C2"
   },
@@ -8491,7 +8437,7 @@
     "index": 944,
     "phrase": "trophic cascade",
     "vietnamese": "phản ứng dây chuyền trong hệ sinh thái",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The wolves' return triggered a trophic cascade that revived the river's banks and beavers.",
     "cefrLevel": "C2"
   },
@@ -8500,7 +8446,7 @@
     "index": 945,
     "phrase": "environmental degradation",
     "vietnamese": "sự suy thoái môi trường",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Intensive farming has led to severe environmental degradation across the plain.",
     "cefrLevel": "C2"
   },
@@ -8509,7 +8455,7 @@
     "index": 946,
     "phrase": "natural disaster",
     "vietnamese": "thảm họa thiên nhiên",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "A major natural disaster can erase decades of development in a few hours.",
     "cefrLevel": "B2"
   },
@@ -8518,16 +8464,16 @@
     "index": 947,
     "phrase": "flash flood",
     "vietnamese": "lũ quét, lũ ống",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "A flash flood swept through the canyon without any warning.",
-    "cefrLevel": "C2"
+    "cefrLevel": "B2"
   },
   {
     "id": "colloc-948",
     "index": 948,
     "phrase": "prolonged drought",
     "vietnamese": "hạn hán kéo dài",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "A prolonged drought left reservoirs half empty and crops withering.",
     "cefrLevel": "C1"
   },
@@ -8536,7 +8482,7 @@
     "index": 949,
     "phrase": "forest fire",
     "vietnamese": "cháy rừng",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "A careless campfire sparked a forest fire that burned for nine days.",
     "cefrLevel": "B2"
   },
@@ -8545,7 +8491,7 @@
     "index": 950,
     "phrase": "torrential rain",
     "vietnamese": "mưa như trút nước, mưa xối xả",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Torrential rain turned the mountain road into a river of mud.",
     "cefrLevel": "C1"
   },
@@ -8554,7 +8500,7 @@
     "index": 951,
     "phrase": "extreme weather events",
     "vietnamese": "các hiện tượng thời tiết cực đoan",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Extreme weather events such as heatwaves are becoming more common worldwide.",
     "cefrLevel": "C1"
   },
@@ -8563,7 +8509,7 @@
     "index": 952,
     "phrase": "rising sea levels",
     "vietnamese": "mực nước biển dâng cao",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Rising sea levels threaten to submerge low islands within decades.",
     "cefrLevel": "C1"
   },
@@ -8572,7 +8518,7 @@
     "index": 953,
     "phrase": "melting glaciers",
     "vietnamese": "các dòng sông băng tan chảy",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Melting glaciers are altering river flows and endangering water supplies downstream.",
     "cefrLevel": "C2"
   },
@@ -8581,7 +8527,7 @@
     "index": 954,
     "phrase": "oil spill",
     "vietnamese": "sự cố tràn dầu",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "The tanker accident caused an oil spill that blackened miles of coastline.",
     "cefrLevel": "C1"
   },
@@ -8590,7 +8536,7 @@
     "index": 955,
     "phrase": "green initiatives",
     "vietnamese": "các sáng kiến xanh, thân thiện môi trường",
-    "category": "IDIOMS",
+    "category": "ACADEMIC",
     "example": "Local green initiatives, from community gardens to bike lanes, have transformed the district.",
     "cefrLevel": "C1"
   },
@@ -8975,10 +8921,10 @@
   {
     "id": "colloc-998",
     "index": 998,
-    "phrase": "so far so good",
+    "phrase": "so far, so good",
     "vietnamese": "mọi chuyện đến giờ vẫn tốt đẹp",
     "category": "IDIOMS",
-    "example": "Three weeks into the project, it's been so far so good.",
+    "example": "\"How is the new job?\" \"So far, so good.\"",
     "cefrLevel": "B1"
   },
   {
@@ -9159,7 +9105,7 @@
     "vietnamese": "nghỉ ngơi một chút",
     "category": "EVERYDAY",
     "example": "You can have a rest now.",
-    "cefrLevel": "A1"
+    "cefrLevel": "A2"
   },
   {
     "id": "colloc-1019",
@@ -9486,24 +9432,6 @@
     "cefrLevel": "A1"
   },
   {
-    "id": "colloc-1055",
-    "index": 1055,
-    "phrase": "a big house",
-    "vietnamese": "một ngôi nhà lớn",
-    "category": "EVERYDAY",
-    "example": "They have a big house.",
-    "cefrLevel": "A1"
-  },
-  {
-    "id": "colloc-1056",
-    "index": 1056,
-    "phrase": "a small room",
-    "vietnamese": "một căn phòng nhỏ",
-    "category": "EVERYDAY",
-    "example": "I have a small room.",
-    "cefrLevel": "A1"
-  },
-  {
     "id": "colloc-1057",
     "index": 1057,
     "phrase": "live in a flat",
@@ -9765,15 +9693,6 @@
     "cefrLevel": "A1"
   },
   {
-    "id": "colloc-1086",
-    "index": 1086,
-    "phrase": "a new teacher",
-    "vietnamese": "một giáo viên mới",
-    "category": "EVERYDAY",
-    "example": "We have a new teacher.",
-    "cefrLevel": "A1"
-  },
-  {
     "id": "colloc-1087",
     "index": 1087,
     "phrase": "answer the question",
@@ -9843,15 +9762,6 @@
     "vietnamese": "đắt, tốn nhiều tiền",
     "category": "EVERYDAY",
     "example": "This bag costs a lot.",
-    "cefrLevel": "A1"
-  },
-  {
-    "id": "colloc-1095",
-    "index": 1095,
-    "phrase": "a cheap shirt",
-    "vietnamese": "một chiếc áo sơ mi rẻ",
-    "category": "EVERYDAY",
-    "example": "I want a cheap shirt.",
     "cefrLevel": "A1"
   },
   {
@@ -10026,15 +9936,6 @@
     "cefrLevel": "A1"
   },
   {
-    "id": "colloc-1115",
-    "index": 1115,
-    "phrase": "a nice hotel",
-    "vietnamese": "một khách sạn đẹp",
-    "category": "EVERYDAY",
-    "example": "We stay at a nice hotel.",
-    "cefrLevel": "A1"
-  },
-  {
     "id": "colloc-1116",
     "index": 1116,
     "phrase": "book a room",
@@ -10158,15 +10059,6 @@
     "vietnamese": "há miệng ra",
     "category": "EVERYDAY",
     "example": "Open your mouth, please.",
-    "cefrLevel": "A1"
-  },
-  {
-    "id": "colloc-1130",
-    "index": 1130,
-    "phrase": "a hot day",
-    "vietnamese": "một ngày nóng",
-    "category": "EVERYDAY",
-    "example": "It is a hot day.",
     "cefrLevel": "A1"
   },
   {
@@ -10368,15 +10260,6 @@
     "cefrLevel": "A2"
   },
   {
-    "id": "colloc-1162",
-    "index": 1162,
-    "phrase": "go straight ahead",
-    "vietnamese": "đi thẳng về phía trước",
-    "category": "EVERYDAY",
-    "example": "Go straight ahead and you will see the shop.",
-    "cefrLevel": "A2"
-  },
-  {
     "id": "colloc-1163",
     "index": 1163,
     "phrase": "cross the road",
@@ -10539,24 +10422,6 @@
     "cefrLevel": "A2"
   },
   {
-    "id": "colloc-1184",
-    "index": 1184,
-    "phrase": "wash your hands",
-    "vietnamese": "rửa tay",
-    "category": "EVERYDAY",
-    "example": "Wash your hands before you eat.",
-    "cefrLevel": "A2"
-  },
-  {
-    "id": "colloc-1185",
-    "index": 1185,
-    "phrase": "brush your teeth",
-    "vietnamese": "đánh răng",
-    "category": "EVERYDAY",
-    "example": "Brush your teeth twice a day.",
-    "cefrLevel": "A2"
-  },
-  {
     "id": "colloc-1186",
     "index": 1186,
     "phrase": "stay healthy",
@@ -10674,15 +10539,6 @@
     "cefrLevel": "A2"
   },
   {
-    "id": "colloc-1203",
-    "index": 1203,
-    "phrase": "meet friends",
-    "vietnamese": "gặp gỡ bạn bè",
-    "category": "EVERYDAY",
-    "example": "I meet friends in the cafe on Sundays.",
-    "cefrLevel": "A2"
-  },
-  {
     "id": "colloc-1204",
     "index": 1204,
     "phrase": "invite a friend",
@@ -10705,7 +10561,7 @@
     "index": 1206,
     "phrase": "send an email",
     "vietnamese": "gửi email",
-    "category": "BUSINESS",
+    "category": "EVERYDAY",
     "example": "I will send an email to the manager.",
     "cefrLevel": "A2"
   },
@@ -10895,7 +10751,7 @@
     "phrase": "lend money",
     "vietnamese": "cho vay tiền",
     "category": "EVERYDAY",
-    "example": "Can you lend money to me until Friday?",
+    "example": "Can you lend me some money until Friday?",
     "cefrLevel": "A2"
   },
   {
@@ -11097,15 +10953,6 @@
     "cefrLevel": "A2"
   },
   {
-    "id": "colloc-1262",
-    "index": 1262,
-    "phrase": "miss the plane",
-    "vietnamese": "lỡ chuyến bay",
-    "category": "EVERYDAY",
-    "example": "We ran to the gate but missed the plane.",
-    "cefrLevel": "A2"
-  },
-  {
     "id": "colloc-1265",
     "index": 1265,
     "phrase": "get on the bus",
@@ -11218,7 +11065,7 @@
     "index": 1277,
     "phrase": "express an opinion",
     "vietnamese": "bày tỏ ý kiến",
-    "category": "ACADEMIC",
+    "category": "EVERYDAY",
     "example": "Students should feel free to express an opinion in class.",
     "cefrLevel": "B1"
   },
@@ -11228,7 +11075,7 @@
     "phrase": "share an opinion",
     "vietnamese": "chia sẻ quan điểm",
     "category": "EVERYDAY",
-    "example": "I do not share your opinion about that restaurant.",
+    "example": "Everyone is welcome to share an opinion during the group discussion.",
     "cefrLevel": "B1"
   },
   {
@@ -11245,7 +11092,7 @@
     "index": 1280,
     "phrase": "for example",
     "vietnamese": "ví dụ",
-    "category": "ACADEMIC",
+    "category": "IDIOMS",
     "example": "Many sports are fun, for example football and tennis.",
     "cefrLevel": "B1"
   },
@@ -11254,7 +11101,7 @@
     "index": 1281,
     "phrase": "as a result",
     "vietnamese": "do đó, kết quả là",
-    "category": "ACADEMIC",
+    "category": "IDIOMS",
     "example": "It rained all week, and as a result the match was cancelled.",
     "cefrLevel": "B1"
   },
@@ -11301,24 +11148,6 @@
     "vietnamese": "làm thêm giờ",
     "category": "BUSINESS",
     "example": "He had to work overtime to finish the report.",
-    "cefrLevel": "B1"
-  },
-  {
-    "id": "colloc-1289",
-    "index": 1289,
-    "phrase": "full-time job",
-    "vietnamese": "công việc toàn thời gian",
-    "category": "BUSINESS",
-    "example": "She found a full-time job in a small bank.",
-    "cefrLevel": "B1"
-  },
-  {
-    "id": "colloc-1290",
-    "index": 1290,
-    "phrase": "part-time job",
-    "vietnamese": "công việc bán thời gian",
-    "category": "BUSINESS",
-    "example": "Many students have a part-time job in the evening.",
     "cefrLevel": "B1"
   },
   {
@@ -11670,7 +11499,7 @@
     "vietnamese": "lỡ tiết lộ bí mật",
     "category": "IDIOMS",
     "example": "Who spilled the beans about the surprise party?",
-    "cefrLevel": "B1"
+    "cefrLevel": "B2"
   },
   {
     "id": "colloc-1331",
@@ -11776,17 +11605,8 @@
     "index": 1342,
     "phrase": "make up",
     "vietnamese": "làm lành",
-    "category": "EVERYDAY",
+    "category": "IDIOMS",
     "example": "They had a fight, but I am sure they will make up soon.",
-    "cefrLevel": "B1"
-  },
-  {
-    "id": "colloc-1343",
-    "index": 1343,
-    "phrase": "trust someone",
-    "vietnamese": "tin tưởng ai đó",
-    "category": "EVERYDAY",
-    "example": "It takes time to trust someone you have just met.",
     "cefrLevel": "B1"
   },
   {
@@ -11794,7 +11614,7 @@
     "index": 1344,
     "phrase": "rely on",
     "vietnamese": "dựa vào, tin cậy vào",
-    "category": "EVERYDAY",
+    "category": "IDIOMS",
     "example": "You can rely on me to help you move house.",
     "cefrLevel": "B1"
   },
@@ -12012,15 +11832,6 @@
     "vietnamese": "thử xem",
     "category": "IDIOMS",
     "example": "I have never played chess, but I will give it a try.",
-    "cefrLevel": "B1"
-  },
-  {
-    "id": "colloc-1372",
-    "index": 1372,
-    "phrase": "keep your promise",
-    "vietnamese": "giữ lời hứa",
-    "category": "EVERYDAY",
-    "example": "A good friend always keeps their promise to you.",
     "cefrLevel": "B1"
   }
 ]

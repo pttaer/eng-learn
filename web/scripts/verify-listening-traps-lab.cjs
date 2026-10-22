@@ -41,6 +41,7 @@ const trapsMod = load('views/listening-traps.ts', {
   '../tts': mockTts,
   '../distractor-engine': { DistractorEngine },
   '../../core/audio-synthesizer': mockAudio,
+  '../../utils/icons': { icon: () => '<svg></svg>' },
   '../progress': mockProgress
 });
 

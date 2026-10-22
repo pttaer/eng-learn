@@ -172,10 +172,10 @@
       "source": "Original text written for this app",
       "wordCount": 102,
       "readingTime": "0.8 min @ 120 WPM (Intensive)",
-      "content": "I have a small family. There are five people. My father is a driver. My mother is a nurse. I have one brother and one sister. We live in a small house.\n\nMy brother is ten. He likes football. My sister is five. She likes cats. My grandmother lives with us. She is old and happy. Her name is Hoa. She makes tea every morning.\n\nWe have dinner together every evening. My mother makes soup. My father tells funny stories. We all laugh. After dinner, we watch TV. I love my family. I am happy at home. We are a happy family.",
+      "content": "I have a small family. There are six people. My father is a driver. My mother is a nurse. I have one brother and one sister. We live in a small house.\n\nMy brother is ten. He likes football. My sister is five. She likes cats. My grandmother lives with us. She is old and happy. Her name is Hoa. She makes tea every morning.\n\nWe have dinner together every evening. My mother makes soup. My father tells funny stories. We all laugh. After dinner, we watch TV. I love my family. I am happy at home. We are a happy family.",
       "fourPassProtocol": {
         "pass1ColdRead": {
-          "thesisGist": "This is a small family of five people. They live together and they are happy.",
+          "thesisGist": "This is a small family of six people. They live together and they are happy.",
           "markedLexicalTargets": [
             "family",
             "father",
@@ -187,7 +187,7 @@
           "comprehensionChecks": [
             {
               "question": "How many people are in the family?",
-              "answer": "There are five people."
+              "answer": "There are six people."
             },
             {
               "question": "What is the father's job?",
@@ -202,9 +202,9 @@
         "pass2SyntaxDissection": [
           {
             "sentenceIndex": 1,
-            "sentence": "There are five people.",
+            "sentence": "There are six people.",
             "coreSVO": {
-              "subject": "five people",
+              "subject": "six people",
               "verb": "are",
               "objectOrComplement": "none"
             },
@@ -312,7 +312,7 @@
           }
         ],
         "pass4Synthesis": {
-          "modelPrécis": "A girl has a small family of five people. Her parents work, her brother and sister like to play, and her grandmother makes tea. They eat dinner together and they are happy.",
+          "modelPrécis": "The writer has a small family of six people. The father is a driver, the mother is a nurse, and the grandmother makes tea. The brother likes football and the sister likes cats. They eat dinner together and they are happy.",
           "incorporatedVocabulary": [
             "family",
             "grandmother",
@@ -336,7 +336,7 @@
       "content": "Today is Saturday. I go to the market with my mother. It is big and busy. There are many people. The market opens at six. We go there early.\n\nI see fruit and vegetables. The apples are red. The bananas are yellow. Apples are two dollars. Bananas are one dollar. My mother buys rice, fish and eggs. I carry the bag. It is a good day. I like the market.\n\nA woman sells flowers. They are pink and white. I want one flower. I ask, \"How much is it?\" She says, \"It is one dollar.\" I say thank you. We go home at ten.",
       "fourPassProtocol": {
         "pass1ColdRead": {
-          "thesisGist": "A girl and her mother go to the market. They buy food, and the girl buys a flower.",
+          "thesisGist": "A child and the child's mother go to the market. The mother buys food, and the child asks for a flower.",
           "markedLexicalTargets": [
             "market",
             "fruit",
@@ -348,7 +348,7 @@
           "comprehensionChecks": [
             {
               "question": "Who goes to the market?",
-              "answer": "The girl and her mother go to the market."
+              "answer": "A child and the child's mother go to the market."
             },
             {
               "question": "What colour are the bananas?",
@@ -433,7 +433,7 @@
             "ipa": "/baɪ/",
             "definition": "To get something and give money for it.",
             "vietnamese": "mua",
-            "contextSentence": "My mother goes out to buy rice, fish and eggs.",
+            "contextSentence": "My mother buys rice, fish and eggs.",
             "collocations": [
               "buy food",
               "buy a bag",
@@ -473,7 +473,7 @@
           }
         ],
         "pass4Synthesis": {
-          "modelPrécis": "A girl goes to a busy market with her mother on Saturday. They buy fruit, rice, fish and eggs. The girl buys a flower for one dollar and they go home.",
+          "modelPrécis": "A child goes to a busy market with the child's mother on Saturday. The mother buys rice, fish and eggs. The child wants a flower for one dollar, and then they go home.",
           "incorporatedVocabulary": [
             "market",
             "vegetables",
@@ -558,7 +558,7 @@
           },
           {
             "sentenceIndex": 3,
-            "sentence": "We swam in the sea, but the water was very cold.",
+            "sentence": "Later, we swam in the sea, but the water was very cold.",
             "coreSVO": {
               "subject": "We",
               "verb": "swam",
@@ -593,7 +593,7 @@
             "ipa": "/ˈhɑː.bər/",
             "definition": "A place by the sea where boats stay safely.",
             "vietnamese": "bến cảng, bến tàu",
-            "contextSentence": "We ate fish and chips in a small cafe near the harbour.",
+            "contextSentence": "At lunch, we ate fish and chips in a small cafe near the harbour.",
             "collocations": [
               "a small harbour",
               "near the harbour",
@@ -607,8 +607,8 @@
             "partOfSpeech": "noun",
             "ipa": "/ˈtræf.ɪk/",
             "definition": "The cars, buses and other vehicles on a road.",
-            "vietnamese": "giao thông, xe cộ, tắc đường",
-            "contextSentence": "We left early to avoid the traffic.",
+            "vietnamese": "giao thông, xe cộ",
+            "contextSentence": "We left home early on Saturday morning because we wanted to avoid the traffic.",
             "collocations": [
               "heavy traffic",
               "avoid the traffic",
@@ -638,7 +638,7 @@
             "ipa": "/swɪm/",
             "definition": "To move through water by using your arms and legs.",
             "vietnamese": "bơi",
-            "contextSentence": "Later, we went to swim in the sea, but the water was very cold.",
+            "contextSentence": "Later, we swam in the sea, but the water was very cold.",
             "collocations": [
               "swim in the sea",
               "swim in a pool",
@@ -718,7 +718,7 @@
               "answer": "You should drink a lot of water."
             },
             {
-              "question": "How often did the writer start to run?",
+              "question": "How often did the writer run when he or she started last year?",
               "answer": "Twice a week."
             },
             {
@@ -758,7 +758,7 @@
           },
           {
             "sentenceIndex": 3,
-            "sentence": "Try to cook at home because it is cheaper and healthier. Fast food is quick, but it is not always good for you.",
+            "sentence": "Try to cook at home because it is cheaper and healthier.",
             "coreSVO": {
               "subject": "(you, understood)",
               "verb": "Try to cook",
@@ -814,7 +814,7 @@
             "ipa": "/ˈvedʒ.tə.bəl/",
             "definition": "A plant that you eat, such as a carrot or an onion.",
             "vietnamese": "rau, rau củ",
-            "contextSentence": "It is also important to eat a vegetable with every meal.",
+            "contextSentence": "It is also important to eat fruit and vegetables.",
             "collocations": [
               "fresh vegetables",
               "eat vegetables",
@@ -829,7 +829,7 @@
             "ipa": "/ˈʃʊɡ.ər/",
             "definition": "A sweet white or brown food used in drinks and cakes.",
             "vietnamese": "đường",
-            "contextSentence": "Many people eat too much sugar.",
+            "contextSentence": "Many people eat too much sugar, and it is bad for your health.",
             "collocations": [
               "too much sugar",
               "a spoon of sugar",
@@ -981,11 +981,11 @@
           },
           {
             "sentenceIndex": 4,
-            "sentence": "The door was locked and a sign said closed. It was closed, so he had a coffee and went back to the hotel.",
+            "sentence": "It was closed, so he had a coffee and went back to the hotel.",
             "coreSVO": {
-              "subject": "he",
-              "verb": "had, went",
-              "objectOrComplement": "a coffee"
+              "subject": "It",
+              "verb": "was",
+              "objectOrComplement": "(none; \"closed\" is a complement)"
             },
             "subordinateClauses": [
               {
@@ -994,7 +994,7 @@
                 "function": "Tom's choice after finding the museum closed."
               }
             ],
-            "syntacticAnalysis": "One cause (\"It was closed\") and two actions in a row. Ghi chú: \"had\" và \"went\" là quá khứ bất quy tắc của \"have\" và \"go\"."
+            "syntacticAnalysis": "One cause (\"It was closed\") and two actions in a row (\"had\" and \"went\"). Ghi chú: \"had\" và \"went\" là quá khứ bất quy tắc của \"have\" và \"go\"."
           }
         ],
         "pass3SentenceMining": [
@@ -1427,7 +1427,6 @@
           "incorporatedVocabulary": [
             "bottleneck",
             "schemas",
-            "chunks",
             "miscalibration",
             "corollaries"
           ],
@@ -1490,9 +1489,9 @@
                 "function": "Defines which kind of structure is being criticised."
               },
               {
-                "type": "Reduced Relative Clause with Infinitive of Purpose",
+                "type": "Contact (zero-relative) Clause",
                 "clause": "people need in order to think",
-                "function": "Modifies \"something\"; the relative pronoun is omitted."
+                "function": "Modifies \"something\"; the relative pronoun is omitted, and \"in order to think\" is a purpose phrase inside the clause."
               },
               {
                 "type": "Relative Clause of Place",
@@ -1539,7 +1538,7 @@
               "social gradient",
               "gradient of privacy"
             ],
-            "etymology": "Latin gradus (step), via gradient, formed on the model of \"gradual\"."
+            "etymology": "From Latin gradiens (stepping), from gradus (step)."
           },
           {
             "id": "mine-reading-art-3-2",
@@ -1592,7 +1591,6 @@
           "incorporatedVocabulary": [
             "gradient",
             "disclose",
-            "seclusion",
             "vigilance",
             "calibration"
           ],
@@ -1674,7 +1672,7 @@
             "coreSVO": {
               "subject": "To stand before the real façade",
               "verb": "was",
-              "objectOrComplement": "to watch two images fail to coincide"
+              "objectOrComplement": "(none; the complement is \"to watch two images fail to coincide\")"
             },
             "subordinateClauses": [
               {
@@ -1779,7 +1777,7 @@
             "ipa": "/rɪˈsɪnd/",
             "definition": "Formally revoke, cancel, or repeal an agreement, law, or decision.",
             "vietnamese": "hủy bỏ, thu hồi, bãi bỏ (một thỏa thuận, quyết định)",
-            "contextSentence": "The pact could lapse, but no one could rescind it entirely.",
+            "contextSentence": "The pact could lapse, but it could not be entirely rescinded.",
             "collocations": [
               "rescind a decision",
               "rescind an order",
@@ -1795,8 +1793,7 @@
             "palimpsest",
             "impertinent",
             "vertiginous",
-            "rescind",
-            "tacit pact"
+            "rescind"
           ],
           "syntacticReconstruction": "To return to a remembered place is to read a palimpsest whose later layers, however faithfully we try to scrape them away, will not consent to disappear."
         }
@@ -1852,7 +1849,7 @@
             "coreSVO": {
               "subject": "discretion / arbitrary power",
               "verb": "is / lurks",
-              "objectOrComplement": "not a supplement to legality but its antithesis"
+              "objectOrComplement": "(none; the complement of \"is\" is \"not a supplement to legality but its antithesis\")"
             },
             "subordinateClauses": [
               {
@@ -1901,7 +1898,7 @@
             "coreSVO": {
               "subject": "To deny this",
               "verb": "is",
-              "objectOrComplement": "not to eliminate discretion but merely to drive it underground"
+              "objectOrComplement": "(none; the complement is \"not to eliminate discretion but merely to drive it underground\")"
             },
             "subordinateClauses": [
               {
@@ -1990,8 +1987,7 @@
             "promulgate",
             "bulwark",
             "penumbral",
-            "ossify",
-            "open-textured"
+            "ossify"
           ],
           "syntacticReconstruction": "While precedent may well ossify the occasional error, to abandon it would not be to banish discretion but merely to relocate it where no one could hold it to account."
         }
@@ -1999,20 +1995,20 @@
     },
     {
       "id": "reading-art-6",
-      "title": "Deep Attention, Cognitive Architecture, and the Epistemology of Flow",
+      "title": "Deep Attention, Interruption, and the Architecture of Focus",
       "stage": "Stage 4: Mastery & Polymathy (CEFR C2)",
       "cefrLevel": "C2",
-      "genre": "Cognitive Science, Neuro-Ergonomics & Epistemology",
+      "genre": "Cognitive Science & Workplace Design",
       "source": "Original passage written for English Singularity",
-      "wordCount": 439,
-      "readingTime": "3.7 min @ 120 WPM (Intensive)",
-      "content": "Few assets are as prized and as carelessly squandered as sustained attention. Modern organisations pay handsomely for people who can reason through tangled problems, yet they furnish those same people with workplaces engineered to fragment every hour into scraps, each one claimed by a message, a meeting, or a banner sliding across the screen.\n\nThe mismatch rests on a misreading of the mind. We tend to picture thought as a broad river that can carry several cargoes at once, whereas careful analysis behaves more like a narrow bridge, admitting one load at a time. What passes for multitasking is, in practice, rapid alternation, and every crossing exacts a toll that the worker rarely notices and never itemises.\n\nThat toll is best understood as residue. When a person abandons a half-finished argument to answer a query, part of the mind lingers with the abandoned problem even as the new one demands full allegiance. The result is a divided effort: replies grow terse, inferences are drawn with less scrutiny, and subtle errors slip through unchallenged. Recovering the earlier depth can take far longer than the interruption itself.\n\nMany people respond to this predicament with resolve, promising themselves to ignore the phone and resist the inbox. Yet resolve is a perishable resource, and a strategy that demands its constant renewal is destined to fail by mid-afternoon. A more durable remedy lies in arranging circumstances so that distraction requires effort rather than abstention: a closed door, a silenced device, a task defined narrowly enough that its end is visible.\n\nRhythm matters as much as architecture. Most individuals possess a few hours each day in which their faculties are demonstrably sharper, and those hours are routinely surrendered to correspondence that could wait. Guarding that window for the most demanding work, and relegating the shallow chores to the weary remainder of the day, costs nothing and often doubles what is accomplished.\n\nNor should solitude be mistaken for idleness. Some of the most valuable cognitive labour is invisible: a mind turning over a difficulty, testing a connection, discarding it and trying another. Organisations that read quiet as inertia will, sooner or later, punish the very behaviour that generates their best ideas, and reward instead a frantic responsiveness that produces little of lasting worth.\n\nThe prescription, then, is neither austere nor mystical. Treat attention as a finite budget, defend it with structure rather than sentiment, and accept that depth is cultivated by what one declines as much as by what one undertakes. Those who learn this discipline find that their finest work was never prevented by a shortage of talent, only by a shortage of uninterrupted time.",
+      "wordCount": 458,
+      "readingTime": "3.8 min @ 120 WPM (Intensive)",
+      "content": "Few assets are as prized and as carelessly squandered as sustained attention. Modern organisations pay handsomely for people who can reason through tangled problems, yet they furnish those same people with workplaces engineered to fragment every hour into scraps, each one claimed by a message, a meeting, or a banner sliding across the screen.\n\nThe mismatch rests on a misreading of the mind. We tend to picture thought as a broad river that can carry several cargoes at once, whereas careful analysis behaves more like a narrow bridge, admitting one load at a time. A worker who breaks off a calculation to answer a message has not done two things at once; the worker has simply crossed from one task to the other, and every crossing exacts a toll that is rarely noticed and never itemised.\n\nThat toll is best understood as residue. When a person abandons a half-finished argument to answer a query, part of the mind lingers with the abandoned problem even as the new one demands full allegiance. The result is a divided effort: replies grow terse, inferences are drawn with less scrutiny, and subtle errors slip through unchallenged. Recovering the earlier depth can take far longer than the interruption itself.\n\nMany people respond to this predicament with resolve, promising themselves to ignore the phone and resist the inbox. Yet resolve is a perishable resource, and a strategy that demands its constant renewal is destined to fail by mid-afternoon. A more durable remedy lies in arranging circumstances so that distraction requires effort rather than abstention: a closed door, a silenced device, a task defined narrowly enough that its end is visible.\n\nRhythm matters as much as architecture. Most individuals possess a few hours each day in which their faculties are demonstrably sharper, and those hours are routinely surrendered to correspondence that could wait. Guarding that window for the most demanding work, and relegating the shallow chores to the weary remainder of the day, costs nothing and often doubles what is accomplished.\n\nNor should solitude be mistaken for idleness. Some of the most valuable cognitive labour is invisible: a mind turning over a difficulty, testing a connection, discarding it and trying another. Organisations that read quiet as inertia will, sooner or later, punish the very behaviour that generates their best ideas, and reward instead a frantic responsiveness that produces little of lasting worth.\n\nThe prescription, then, is neither austere nor mystical. Treat attention as a finite budget, defend it with structure rather than sentiment, and accept that depth is cultivated by what one declines as much as by what one undertakes. Those who learn this discipline find that their finest work was never prevented by a shortage of talent, only by a shortage of uninterrupted time.",
       "fourPassProtocol": {
         "pass1ColdRead": {
           "thesisGist": "Because careful thought proceeds one task at a time and every interruption leaves a costly residue, attention must be protected through deliberate structure, sensible timing and tolerated solitude rather than through willpower alone.",
           "markedLexicalTargets": [
             "residue",
-            "alternation",
+            "squandered",
             "perishable",
             "abstention",
             "relegating",
@@ -2023,7 +2019,7 @@
           "comprehensionChecks": [
             {
               "question": "Why does the author compare careful analysis to a narrow bridge?",
-              "answer": "Because analysis admits only one load at a time; what is called multitasking is really rapid alternation, and each switch exacts a toll."
+              "answer": "Because analysis admits only one load at a time, so a worker who switches to a second task has not done two things at once but has crossed over and paid a toll that usually goes unnoticed."
             },
             {
               "question": "What happens to the quality of work when someone leaves a half-finished argument to answer a query?",
@@ -2046,7 +2042,7 @@
             "coreSVO": {
               "subject": "Modern organisations",
               "verb": "pay (coordinated with \"furnish\")",
-              "objectOrComplement": "handsomely for people (first clause); those same people (second clause)"
+              "objectOrComplement": "(none in the first clause; \"handsomely\" is an adverb and \"for people who can reason through tangled problems\" is a prepositional phrase); those same people (second clause, object of \"furnish\")"
             },
             "subordinateClauses": [
               {
@@ -2369,9 +2365,9 @@
                 "function": "Sets the behavioural cause before the main clause states the effect."
               },
               {
-                "type": "Adverbial Clause of Time, inside an Infinitive Phrase",
+                "type": "Noun Clause (when-clause), inside an Infinitive Phrase",
                 "clause": "when a formula does not fit the facts",
-                "function": "Specifies the occasion on which the lost ability would be needed."
+                "function": "Object of \"notice\"; it names the situation that people lose the ability to recognise."
               }
             ],
             "syntacticAnalysis": "A fronted conditional clause establishes cause, and the main clause delivers the consequence with the adverb \"gradually\" marking a slow process. The noun \"ability\" is post-modified by an infinitive phrase that itself contains a subordinate clause, giving a nested structure typical of C1 prose."
@@ -2526,7 +2522,7 @@
             "coreSVO": {
               "subject": "Any tally of species in a given habitat",
               "verb": "is best regarded",
-              "objectOrComplement": "not as a census but as an estimate"
+              "objectOrComplement": "(none; the passive \"is best regarded\" takes the complement \"not as a census but as an estimate\")"
             },
             "subordinateClauses": [
               {
@@ -2642,7 +2638,7 @@
             "ipa": "/ɪkˈstræp.ə.leɪt/",
             "definition": "Extend known data or trends to estimate values beyond the observed range; infer the unknown from the known.",
             "vietnamese": "ngoại suy, suy rộng từ dữ liệu đã biết",
-            "contextSentence": "Statistical estimators, such as those that extrapolate from the number of species observed only once or twice, can provide a plausible lower bound on true richness, but they rest on assumptions that may not hold in every system. Different estimators applied to the same data may also produce noticeably different figures.",
+            "contextSentence": "Statistical estimators, such as those that extrapolate from the number of species observed only once or twice, can provide a plausible lower bound on true richness, but they rest on assumptions that may not hold in every system.",
             "collocations": [
               "extrapolate from data",
               "extrapolate a trend",
@@ -2658,7 +2654,7 @@
             "ipa": "/ˈprɪv.əl.ɪdʒ/",
             "definition": "Treat one thing as more important or authoritative than others, often without sufficient justification.",
             "vietnamese": "đặt ưu tiên, coi trọng hơn hẳn, ưu ái một yếu tố so với các yếu tố khác",
-            "contextSentence": "Some ecologists have therefore advocated reporting a family of related measures, often expressed as effective numbers of species, rather than privilege any single index. Each choice reflects a judgment about which aspects of diversity matter most.",
+            "contextSentence": "Some ecologists have therefore advocated reporting a family of related measures, often expressed as effective numbers of species, rather than privileging any single index.",
             "collocations": [
               "privilege one interpretation over another",
               "privilege theory over practice",
@@ -2673,8 +2669,7 @@
             "fraught",
             "cryptic",
             "extrapolate",
-            "privilege",
-            "consistent with"
+            "privilege"
           ],
           "syntacticReconstruction": "Although environmental DNA may appear to resolve the problem of cryptic species, its detections are perhaps best interpreted as consistent with presence rather than as proof of it."
         }
@@ -2753,11 +2748,11 @@
           },
           {
             "sentenceIndex": 3,
-            "sentence": "If I worked at home every day, I would probably miss the chats at lunchtime.",
+            "sentence": "If I worked at home every day, I would probably miss the chats at lunchtime and the small jokes during the day.",
             "coreSVO": {
               "subject": "I",
               "verb": "would miss",
-              "objectOrComplement": "the chats at lunchtime"
+              "objectOrComplement": "the chats at lunchtime and the small jokes during the day"
             },
             "subordinateClauses": [
               {
@@ -2809,7 +2804,7 @@
             "ipa": "/ˈkɒl.iːɡ/",
             "definition": "A person who works with you in the same company or team.",
             "vietnamese": "đồng nghiệp",
-            "contextSentence": "Some people feel lonely when they have no colleague to talk to at work.",
+            "contextSentence": "Some people have told me that they feel lonely because they rarely see their colleagues.",
             "collocations": [
               "a work colleague",
               "a former colleague",
@@ -2824,7 +2819,7 @@
             "ipa": "/ˈreə.li/",
             "definition": "Not often; almost never.",
             "vietnamese": "hiếm khi",
-            "contextSentence": "They rarely see their colleagues.",
+            "contextSentence": "Some people have told me that they feel lonely because they rarely see their colleagues.",
             "collocations": [
               "rarely see",
               "rarely happen",
@@ -2839,7 +2834,7 @@
             "ipa": "/strest/",
             "definition": "Feeling worried and unable to relax because of problems or too much work.",
             "vietnamese": "căng thẳng, bị áp lực",
-            "contextSentence": "You will feel less stressed and get more done.",
+            "contextSentence": "If you decide when to start and when to finish, you will feel less stressed and get more done.",
             "collocations": [
               "feel stressed",
               "stressed out",
@@ -2869,7 +2864,7 @@
             "ipa": "/ˈfriː.dəm/",
             "definition": "The power to choose what you do without being controlled.",
             "vietnamese": "sự tự do",
-            "contextSentence": "People could enjoy the freedom of home and still meet their team.",
+            "contextSentence": "If companies allowed their staff to work from home two or three days a week, people could enjoy the freedom of home and still meet their team.",
             "collocations": [
               "freedom of choice",
               "enjoy freedom",
@@ -2879,7 +2874,7 @@
           }
         ],
         "pass4Synthesis": {
-          "modelPrécis": "The writer thinks that working from home saves time and money and gives people freedom, but it can also make them lonely and tired. A mix of home and office days, with a clear daily plan, is the best choice.",
+          "modelPrécis": "The writer thinks that working from home saves time and money and gives people freedom, but it can also make them lonely and make it hard to stop working in the evening. A mix of home and office days, with a clear daily plan, is the best choice.",
           "incorporatedVocabulary": [
             "organise",
             "colleague",
@@ -3016,7 +3011,7 @@
             "ipa": "/ˌriːˈsaɪ.kəl/",
             "definition": "To treat used materials so that they can be used again.",
             "vietnamese": "tái chế",
-            "contextSentence": "In some places, people can return old bottles to recycle them.",
+            "contextSentence": "In some places, old bottles can be returned and recycled, which is a good idea.",
             "collocations": [
               "recycle paper",
               "recycle plastic",
@@ -3046,7 +3041,7 @@
             "ipa": "/rɪˌspɒn.sɪˈbɪl.ə.ti/",
             "definition": "A duty to deal with something or to take care of it.",
             "vietnamese": "trách nhiệm",
-            "contextSentence": "Governments and companies also have to take responsibility.",
+            "contextSentence": "Governments and companies also have to take responsibility, because they make most of the decisions about packaging.",
             "collocations": [
               "take responsibility",
               "a big responsibility",
@@ -3061,7 +3056,7 @@
             "ipa": "/tʃɑːdʒ/",
             "definition": "To ask someone to pay an amount of money for something.",
             "vietnamese": "tính phí, thu phí",
-            "contextSentence": "Many shops have already started to charge for plastic bags.",
+            "contextSentence": "Many shops have already started to charge for plastic bags, and this has made people think before they buy.",
             "collocations": [
               "charge for",
               "charge a fee",
@@ -3076,7 +3071,7 @@
             "ipa": "/ˈpæk.ɪ.dʒɪŋ/",
             "definition": "The materials, such as boxes and bags, that are used to wrap products.",
             "vietnamese": "bao bì, đóng gói",
-            "contextSentence": "They make most of the decisions about packaging.",
+            "contextSentence": "Governments and companies also have to take responsibility, because they make most of the decisions about packaging.",
             "collocations": [
               "plastic packaging",
               "food packaging",
@@ -3181,14 +3176,14 @@
             },
             "subordinateClauses": [
               {
-                "type": "Noun Clause",
+                "type": "That-Clause (complement of the adjective \"afraid\")",
                 "clause": "that people would laugh at me",
                 "function": "Explains what the writer was afraid of; \"would\" shows a past fear about the future."
               },
               {
-                "type": "Result Clause",
+                "type": "Coordinated Clause with \"so\"",
                 "clause": "so I stayed quiet in class",
-                "function": "Shows the result of the fear."
+                "function": "A second main clause that shows the result of the fear."
               }
             ],
             "syntacticAnalysis": "\"Would\" in a reported fear is the past form of \"will\". The linking word \"so\" joins the cause and the result."
@@ -3234,7 +3229,7 @@
             "ipa": "/ˈhæb.ɪt/",
             "definition": "Something that you do regularly, often without thinking.",
             "vietnamese": "thói quen",
-            "contextSentence": "A small habit is more important than a big effort.",
+            "contextSentence": "However, I have learned that small habits are more important than big efforts.",
             "collocations": [
               "a good habit",
               "a bad habit",
@@ -3264,7 +3259,7 @@
             "ipa": "/ˌrɪə.lɪˈstɪk/",
             "definition": "Sensible and possible to achieve.",
             "vietnamese": "thực tế, khả thi",
-            "contextSentence": "Choose a goal that is realistic.",
+            "contextSentence": "Choose a goal that is realistic, find something you enjoy, and do not compare yourself with other people.",
             "collocations": [
               "a realistic goal",
               "realistic expectations",
@@ -3279,7 +3274,7 @@
             "ipa": "/ɪmˈpruːv/",
             "definition": "To become better, or to make something better.",
             "vietnamese": "cải thiện, tiến bộ",
-            "contextSentence": "You will certainly improve if you keep going.",
+            "contextSentence": "You will not become perfect in a month, but you will certainly improve if you keep going.",
             "collocations": [
               "improve your English",
               "improve quickly",
@@ -3294,7 +3289,7 @@
             "ipa": "/kəmˈpeər/",
             "definition": "To look at two or more things to see how they are similar or different.",
             "vietnamese": "so sánh",
-            "contextSentence": "Do not compare yourself with other people.",
+            "contextSentence": "Choose a goal that is realistic, find something you enjoy, and do not compare yourself with other people.",
             "collocations": [
               "compare with",
               "compare to",
@@ -3319,14 +3314,14 @@
     },
     {
       "id": "reading-b2-1",
-      "title": "The Shifting Landscape of Remote Work Culture",
+      "title": "How Remote Work Is Reshaping Company Culture",
       "stage": "Stage 2: Competency & Fluidity (CEFR B2)",
       "cefrLevel": "B2",
       "genre": "Workplace Sociology & Organisational Dynamics",
       "source": "Original text written for English Singularity",
       "wordCount": 286,
       "readingTime": "2.0 min @ 140 WPM (Intensive)",
-      "content": "Over the past decade, remote and hybrid employment arrangements have evolved from emergency contingency plans into established pillars of contemporary corporate culture. While early advocates championed the unprecedented flexibility and autonomy afforded to professionals, contemporary analysts increasingly highlight the nuanced challenges that accompany a dispersed workforce. When physical office boundaries dissolve, maintaining spontaneous collaboration and mutual trust requires deliberate organizational architecture. Many firms now treat the design of meeting schedules, shared calendars and project tools as a matter of policy rather than habit.\n\nOne prominent dilemma involves the erosion of informal mentoring. Junior employees in distributed environments frequently struggle to absorb tacit knowledge—the unwritten conventions, diplomatic phrasing, and negotiation subtleties traditionally acquired through passive observation of senior colleagues. Although scheduled video conferences facilitate structured status updates, they rarely reproduce the casual, serendipitous hallway interactions where creative breakthroughs and interpersonal rapport naturally develop. Some companies have responded by assigning newcomers a designated mentor for their first six months, alongside short calls that have no agenda at all.\n\nConsequently, forward-thinking organizations are redefining workplace communication. Rather than relying on constant synchronous availability, which inevitably fuels cognitive exhaustion and digital burnout, progressive leaders prioritize asynchronous transparency. By establishing exhaustive documentation repositories and clear communication protocols, enterprises enable team members to contribute meaningfully across disparate time zones without compromising their psychological well-being. Ultimately, the long-term viability of distributed employment depends not merely on advanced digital infrastructure, but on cultivating sustainable boundaries that balance collective accountability with personal autonomy. Managers who judge performance by results rather than by how visibly staff are online tend to report less resentment and better retention. Such policies work only when leaders follow them, since a manager who sends messages at midnight quietly undermines the rule.",
+      "content": "Over the past decade, remote and hybrid employment arrangements have evolved from emergency contingency plans into established pillars of contemporary corporate culture. While early advocates championed the unprecedented flexibility and autonomy afforded to professionals, contemporary analysts increasingly highlight the nuanced challenges that accompany a dispersed workforce. When physical office boundaries dissolve, maintaining spontaneous collaboration and mutual trust requires deliberate organizational architecture. Many firms now treat the design of meeting schedules, shared calendars and project tools as a matter of policy rather than habit.\n\nOne prominent dilemma involves the erosion of informal mentoring. Junior employees in distributed environments frequently struggle to absorb tacit knowledge, such as the unwritten conventions, diplomatic phrasing, and negotiation subtleties traditionally acquired through passive observation of senior colleagues. Although scheduled video conferences facilitate structured status updates, they rarely reproduce the casual, unplanned hallway interactions where creative breakthroughs and interpersonal rapport naturally develop. Some companies have responded by assigning newcomers a designated mentor for their first six months, alongside short calls that have no agenda at all.\n\nConsequently, forward-thinking organizations are redefining workplace communication. Rather than relying on constant synchronous availability, which inevitably fuels cognitive exhaustion and digital burnout, progressive leaders prioritize asynchronous transparency. By establishing exhaustive documentation repositories and clear communication protocols, enterprises enable team members to contribute meaningfully across disparate time zones without compromising their psychological well-being. Ultimately, the long-term viability of distributed employment requires both reliable digital infrastructure and clear workplace boundaries that balance collective accountability with personal autonomy. Managers who judge performance by results rather than by how visibly staff are online tend to report less resentment and better retention. Such policies work only when leaders follow them, since a manager who sends messages at midnight quietly undermines the rule.",
       "fourPassProtocol": {
         "pass1ColdRead": {
           "thesisGist": "Remote work offers unprecedented flexibility, but preserving mentorship and collaboration requires replacing constant synchronous presence with deliberate asynchronous documentation and sustainable workplace boundaries.",
@@ -3343,7 +3338,15 @@
           "comprehensionChecks": [
             {
               "question": "What hidden difficulty do junior employees encounter in distributed environments?",
-              "answer": "They struggle to absorb tacit knowledge and nuanced workplace skills traditionally learned through passive observation of senior peers.\n  - Q: Why is constant synchronous availability considered detrimental?\n    A: It inevitably fuels cognitive exhaustion and digital burnout among employees.\n  - Q: How do progressive organizations support teams across multiple time zones?\n    A: By prioritizing asynchronous transparency through comprehensive documentation repositories and structured protocols."
+              "answer": "They struggle to absorb tacit knowledge and nuanced workplace skills traditionally learned through passive observation of senior peers."
+            },
+            {
+              "question": "Why is constant synchronous availability considered detrimental?",
+              "answer": "It inevitably fuels cognitive exhaustion and digital burnout among employees."
+            },
+            {
+              "question": "How do progressive organizations support teams across multiple time zones?",
+              "answer": "By prioritizing asynchronous transparency through comprehensive documentation repositories and structured protocols."
             }
           ]
         },
@@ -3354,20 +3357,14 @@
             "coreSVO": {
               "subject": "remote and hybrid employment arrangements",
               "verb": "have evolved",
-              "objectOrComplement": "(prepositional complements: from contingency plans into established pillars)"
+              "objectOrComplement": "(none; \"from emergency contingency plans into established pillars of contemporary corporate culture\" is a prepositional phrase)"
             },
-            "subordinateClauses": [
-              {
-                "type": "Prepositional Time Modifier",
-                "clause": "Over the past decade",
-                "function": "Situates the evolutionary transition across a historical continuum."
-              }
-            ],
-            "syntacticAnalysis": "Present perfect tense (\"have evolved\") denotes a process originating in past decades whose outcome governs present institutional reality. Compound noun phrases enrich conceptual precision."
+            "subordinateClauses": [],
+            "syntacticAnalysis": "The sentence has one finite clause and no subordinate clause. The opening phrase \"Over the past decade\" is a prepositional time adverbial. Present perfect tense (\"have evolved\") denotes a process originating in past years whose outcome governs the present. Compound noun phrases enrich conceptual precision."
           },
           {
             "sentenceIndex": 2,
-            "sentence": "While early advocates championed the unprecedented flexibility afforded to professionals, contemporary analysts increasingly highlight the nuanced challenges that accompany a dispersed workforce.",
+            "sentence": "While early advocates championed the unprecedented flexibility and autonomy afforded to professionals, contemporary analysts increasingly highlight the nuanced challenges that accompany a dispersed workforce.",
             "coreSVO": {
               "subject": "contemporary analysts",
               "verb": "highlight",
@@ -3376,7 +3373,7 @@
             "subordinateClauses": [
               {
                 "type": "Adverbial Concessive Clause",
-                "clause": "While early advocates championed the unprecedented flexibility afforded to professionals",
+                "clause": "While early advocates championed the unprecedented flexibility and autonomy afforded to professionals",
                 "function": "Contrasts initial optimism with mature analytical scrutiny."
               },
               {
@@ -3394,7 +3391,7 @@
           },
           {
             "sentenceIndex": 3,
-            "sentence": "Rather than relying on constant synchronous availability, which inevitably fuels cognitive exhaustion, progressive leaders prioritize asynchronous transparency.",
+            "sentence": "Rather than relying on constant synchronous availability, which inevitably fuels cognitive exhaustion and digital burnout, progressive leaders prioritize asynchronous transparency.",
             "coreSVO": {
               "subject": "progressive leaders",
               "verb": "prioritize",
@@ -3408,11 +3405,11 @@
               },
               {
                 "type": "Non-restrictive Relative Clause",
-                "clause": "which inevitably fuels cognitive exhaustion",
+                "clause": "which inevitably fuels cognitive exhaustion and digital burnout",
                 "function": "Supplies causal evaluation of synchronous expectations."
               }
             ],
-            "syntacticAnalysis": "Sentence-initial participial contrast directs focus immediately to strategic organizational differentiation."
+            "syntacticAnalysis": "The sentence-initial \"Rather than + -ing\" phrase has no subject of its own (it shares \"progressive leaders\") and directs focus immediately to strategic organizational differentiation."
           }
         ],
         "pass3SentenceMining": [
@@ -3423,7 +3420,7 @@
             "ipa": "/kənˈtɪn.dʒən.si/",
             "definition": "A future event or circumstance which is possible but cannot be predicted with certainty; a provision for an unforeseen event.",
             "vietnamese": "sự việc bất ngờ, tình huống dự phòng",
-            "contextSentence": "Remote and hybrid employment arrangements have evolved from emergency contingency plans into established pillars of contemporary corporate culture.",
+            "contextSentence": "Over the past decade, remote and hybrid employment arrangements have evolved from emergency contingency plans into established pillars of contemporary corporate culture.",
             "collocations": [
               "contingency plan",
               "prepare for contingencies",
@@ -3438,7 +3435,7 @@
             "ipa": "/ʌnˈpres.ɪ.den.tɪd/",
             "definition": "Never done or known before; without previous example.",
             "vietnamese": "chưa từng có, chưa từng có tiền lệ",
-            "contextSentence": "Early advocates championed the unprecedented flexibility afforded to professionals.",
+            "contextSentence": "While early advocates championed the unprecedented flexibility and autonomy afforded to professionals, contemporary analysts increasingly highlight the nuanced challenges that accompany a dispersed workforce.",
             "collocations": [
               "unprecedented scale",
               "unprecedented flexibility",
@@ -3453,7 +3450,7 @@
             "ipa": "/ˈtæs.ɪt/",
             "definition": "Understood or implied without being stated openly or directly.",
             "vietnamese": "ngầm hiểu, ngầm định, không diễn đạt bằng lời",
-            "contextSentence": "Junior employees frequently struggle to absorb tacit knowledge.",
+            "contextSentence": "Junior employees in distributed environments frequently struggle to absorb tacit knowledge, such as the unwritten conventions, diplomatic phrasing, and negotiation subtleties traditionally acquired through passive observation of senior colleagues.",
             "collocations": [
               "tacit knowledge",
               "tacit approval",
@@ -3463,18 +3460,18 @@
           },
           {
             "id": "mine-reading-b2-1-4",
-            "targetWord": "serendipitous",
-            "partOfSpeech": "adjective",
-            "ipa": "/ˌser.ənˈdɪp.ɪ.təs/",
-            "definition": "Occurring or discovered by chance in a happy, beneficial, or unexpected way.",
-            "vietnamese": "tình cờ may mắn, tình cờ phát hiện hữu ích",
-            "contextSentence": "Scheduled video calls rarely reproduce casual, serendipitous hallway interactions.",
+            "targetWord": "rapport",
+            "partOfSpeech": "noun",
+            "ipa": "/ræˈpɔː/",
+            "definition": "A close and friendly relationship in which people understand each other well.",
+            "vietnamese": "mối quan hệ thân thiết, sự hòa hợp",
+            "contextSentence": "Although scheduled video conferences facilitate structured status updates, they rarely reproduce the casual, unplanned hallway interactions where creative breakthroughs and interpersonal rapport naturally develop.",
             "collocations": [
-              "serendipitous discovery",
-              "serendipitous encounter",
-              "serendipitous breakthrough"
+              "build rapport",
+              "good rapport",
+              "establish a rapport"
             ],
-            "etymology": "Coined by Horace Walpole from the Persian fairy tale The Three Princes of Serendip."
+            "etymology": "From French rapport, from rapporter (to bring back)."
           },
           {
             "id": "mine-reading-b2-1-5",
@@ -3483,7 +3480,7 @@
             "ipa": "/eɪˈsɪŋ.krə.nəs/",
             "definition": "Not occurring at the same time; communication where participants respond at their convenience.",
             "vietnamese": "không đồng bộ, không cùng thời điểm",
-            "contextSentence": "Progressive leaders prioritize asynchronous transparency to safeguard well-being.",
+            "contextSentence": "Rather than relying on constant synchronous availability, which inevitably fuels cognitive exhaustion and digital burnout, progressive leaders prioritize asynchronous transparency.",
             "collocations": [
               "asynchronous communication",
               "asynchronous workflow",
@@ -3498,7 +3495,7 @@
             "ipa": "/ˌvaɪ.əˈbɪl.ə.ti/",
             "definition": "Ability to work successfully, survive, or maintain long-term sustainability.",
             "vietnamese": "tính khả thi, khả năng tồn tại và phát triển bền vững",
-            "contextSentence": "The long-term viability of distributed employment depends on cultivating sustainable boundaries.",
+            "contextSentence": "Ultimately, the long-term viability of distributed employment requires both reliable digital infrastructure and clear workplace boundaries that balance collective accountability with personal autonomy.",
             "collocations": [
               "commercial viability",
               "long-term viability",
@@ -3513,7 +3510,7 @@
             "contingency",
             "unprecedented",
             "tacit",
-            "serendipitous",
+            "rapport",
             "asynchronous",
             "viability"
           ],
@@ -3528,9 +3525,9 @@
       "cefrLevel": "B2",
       "genre": "Environmental Science & Civil Engineering",
       "source": "Original text written for English Singularity",
-      "wordCount": 290,
-      "readingTime": "2.1 min @ 140 WPM (Intensive)",
-      "content": "As metropolitan populations swell toward unprecedented densities, urban planners are compelled to rethink the foundational principles governing city infrastructure. Traditional urban centers, characterized by sprawling vehicular highways and rigid zoning laws, have proven environmentally unsustainable and economically vulnerable. In response, municipalities worldwide are embracing the concept of the ecological city—a cohesive urban habitat designed to harmonize human activity with biological cycles. Many of these changes began as small pilot schemes in a single district before they were adopted across the wider city.\n\nA central tenet of this paradigm is the transition from centralized energy grids toward decentralized, regenerative networks. Rather than importing fossil fuel energy from distant generating facilities, modern resilient neighborhoods incorporate integrated solar façades, micro-wind turbines, and localized geothermal pumps. Furthermore, civil engineers are revolutionizing wastewater management through constructed wetland bio-filtration systems. These installations purify stormwater runoff naturally while simultaneously expanding urban green corridors and combating the urban heat island effect. Several cities have also converted disused rail lines into linear parks, which store rainwater and cool the surrounding streets.\n\nEqually decisive is the spatial reorganization of residential life. The widespread adoption of the fifteen-minute city framework ensures that daily necessities, commercial hubs, and recreational green spaces remain accessible within a brief walking or cycling radius. By curtailing dependency on private automobile transport, municipalities substantially reduce greenhouse emissions and mitigate pervasive respiratory illnesses. Ultimately, transforming dense urban landscapes into sustainable sanctuaries demands more than technological innovation; it requires collective civic dedication to ecological balance and equitable urban design. Residents are more likely to support such changes when they can see the benefits for their own streets, so planners increasingly involve local communities from the earliest stage. Without that trust, even well-engineered projects tend to stall in public consultation.",
+      "wordCount": 287,
+      "readingTime": "2.0 min @ 140 WPM (Intensive)",
+      "content": "As metropolitan populations swell toward unprecedented densities, urban planners are compelled to rethink the foundational principles governing city infrastructure. Traditional urban centers, characterized by sprawling vehicular highways and rigid zoning laws, have proven environmentally unsustainable and economically vulnerable. In response, municipalities worldwide are embracing the concept of the ecological city, an urban habitat designed to harmonize human activity with biological cycles. Many of these changes began as small pilot schemes in a single district before they were adopted across the wider city.\n\nA central tenet of this paradigm is the transition from centralized energy grids toward decentralized, regenerative networks. Rather than importing fossil fuel energy from distant generating facilities, modern resilient neighborhoods incorporate integrated solar façades, micro-wind turbines, and localized geothermal pumps. Furthermore, civil engineers are revolutionizing wastewater management through constructed wetland filtration systems. These installations purify stormwater runoff naturally while simultaneously expanding urban green corridors and combating the urban heat island effect. Several cities have also converted disused rail lines into linear parks, which store rainwater and cool the surrounding streets.\n\nEqually decisive is the spatial reorganization of residential life. The widespread adoption of the fifteen-minute city framework ensures that daily necessities, commercial hubs, and recreational green spaces remain accessible within a brief walking or cycling radius. By curtailing dependency on private automobile transport, municipalities substantially reduce greenhouse emissions and mitigate pervasive respiratory illnesses. Ultimately, making dense cities truly sustainable demands more than engineering. It requires a shared commitment to ecological balance and thoughtful urban design. Residents are more likely to support such changes when they can see the benefits for their own streets, so planners increasingly involve local communities from the earliest stage. Without that trust, even well-engineered projects tend to stall in public consultation.",
       "fourPassProtocol": {
         "pass1ColdRead": {
           "thesisGist": "Sustainable urban design addresses rapid metropolitan density by adopting decentralized renewable energy, natural wastewater filtration, and fifteen-minute pedestrian access to reduce environmental degradation and enhance communal well-being.",
@@ -3539,7 +3536,7 @@
             "foundational principles",
             "rigid zoning",
             "decentralized networks",
-            "bio-filtration systems",
+            "filtration systems",
             "green corridors",
             "spatial reorganization",
             "greenhouse emissions"
@@ -3547,7 +3544,15 @@
           "comprehensionChecks": [
             {
               "question": "What fundamental limitation of traditional urban centers is highlighted?",
-              "answer": "Sprawling vehicular highways and rigid zoning laws have proven ecologically unsustainable and economically fragile.\n  - Q: How do decentralized energy networks differ from traditional systems?\n    A: They generate renewable energy locally through solar façades, micro-turbines, and geothermal pumps rather than importing distant fossil fuels.\n  - Q: What primary benefits stem from the fifteen-minute city model?\n    A: It curtails automobile reliance, reduces carbon emissions, and ensures essential services are within pedestrian proximity."
+              "answer": "Sprawling vehicular highways and rigid zoning laws have proven ecologically unsustainable and economically fragile."
+            },
+            {
+              "question": "How do decentralized energy networks differ from traditional systems?",
+              "answer": "They generate renewable energy locally through solar façades, micro-turbines, and geothermal pumps rather than importing distant fossil fuels."
+            },
+            {
+              "question": "What primary benefits stem from the fifteen-minute city model?",
+              "answer": "It curtails automobile reliance, reduces carbon emissions, and ensures essential services are within pedestrian proximity."
             }
           ]
         },
@@ -3576,33 +3581,33 @@
           },
           {
             "sentenceIndex": 2,
-            "sentence": "Rather than importing fossil fuel energy from distant facilities, modern resilient neighborhoods incorporate integrated solar façades.",
+            "sentence": "Rather than importing fossil fuel energy from distant generating facilities, modern resilient neighborhoods incorporate integrated solar façades, micro-wind turbines, and localized geothermal pumps.",
             "coreSVO": {
               "subject": "modern resilient neighborhoods",
               "verb": "incorporate",
-              "objectOrComplement": "integrated solar façades"
+              "objectOrComplement": "integrated solar façades, micro-wind turbines, and localized geothermal pumps"
             },
             "subordinateClauses": [
               {
-                "type": "Prepositional Contrast Clause",
-                "clause": "Rather than importing fossil fuel energy from distant facilities",
+                "type": "Non-finite \"Rather than\" Phrase",
+                "clause": "Rather than importing fossil fuel energy from distant generating facilities",
                 "function": "Rejects outdated centralized dependency in favor of local production."
               }
             ],
-            "syntacticAnalysis": "Concise participial inversion accentuates technical innovation in modern municipal engineering."
+            "syntacticAnalysis": "The fronted \"Rather than + -ing\" phrase has no subject of its own (it shares \"modern resilient neighborhoods\"). Nothing is inverted: the main clause keeps normal subject-verb-object order and names the alternative that neighborhoods adopt."
           },
           {
             "sentenceIndex": 3,
-            "sentence": "The widespread adoption of the fifteen-minute city framework ensures that daily necessities remain accessible within a brief walking radius.",
+            "sentence": "The widespread adoption of the fifteen-minute city framework ensures that daily necessities, commercial hubs, and recreational green spaces remain accessible within a brief walking or cycling radius.",
             "coreSVO": {
               "subject": "The widespread adoption of the fifteen-minute city framework",
               "verb": "ensures",
-              "objectOrComplement": "that daily necessities remain accessible within a brief walking radius (noun clause)"
+              "objectOrComplement": "that daily necessities, commercial hubs, and recreational green spaces remain accessible within a brief walking or cycling radius (noun clause)"
             },
             "subordinateClauses": [
               {
                 "type": "Noun Clause",
-                "clause": "that daily necessities remain accessible within a brief walking radius",
+                "clause": "that daily necessities, commercial hubs, and recreational green spaces remain accessible within a brief walking or cycling radius",
                 "function": "Functions as direct object specifying systemic operational outcome."
               }
             ],
@@ -3617,7 +3622,7 @@
             "ipa": "/faʊnˈdeɪ.ʃən.əl/",
             "definition": "Denoting an underlying basis or essential principle on which something is built.",
             "vietnamese": "mang tính nền tảng, cơ bản cốt lõi",
-            "contextSentence": "Urban planners are compelled to rethink the foundational principles governing city infrastructure.",
+            "contextSentence": "As metropolitan populations swell toward unprecedented densities, urban planners are compelled to rethink the foundational principles governing city infrastructure.",
             "collocations": [
               "foundational principle",
               "foundational concepts",
@@ -3632,7 +3637,7 @@
             "ipa": "/ˈpær.ə.daɪm/",
             "definition": "A typical example or pattern of something; a model or distinct conceptual framework.",
             "vietnamese": "mô hình, hệ hình tư duy, khuôn mẫu lý thuyết",
-            "contextSentence": "A central tenet of this paradigm is the transition from centralized grids.",
+            "contextSentence": "A central tenet of this paradigm is the transition from centralized energy grids toward decentralized, regenerative networks.",
             "collocations": [
               "paradigm shift",
               "dominant paradigm",
@@ -3647,7 +3652,7 @@
             "ipa": "/rɪˈdʒen.ər.ə.tɪv/",
             "definition": "Relating to or characterized by the renewal, revival, or biological restoration of energy or ecosystems.",
             "vietnamese": "có tính tái sinh, phục hồi tự nhiên",
-            "contextSentence": "Transitioning from centralized grids toward decentralized, regenerative networks.",
+            "contextSentence": "A central tenet of this paradigm is the transition from centralized energy grids toward decentralized, regenerative networks.",
             "collocations": [
               "regenerative agriculture",
               "regenerative medicine",
@@ -3662,7 +3667,7 @@
             "ipa": "/kɜːˈteɪl/",
             "definition": "To reduce in extent, quantity, or duration; to impose restrictions upon.",
             "vietnamese": "cắt giảm, hạn chế bớt, thu hẹp",
-            "contextSentence": "Cities reduce emissions when they curtail dependency on private automobile transport.",
+            "contextSentence": "By curtailing dependency on private automobile transport, municipalities substantially reduce greenhouse emissions and mitigate pervasive respiratory illnesses.",
             "collocations": [
               "curtail emissions",
               "curtail spending",
@@ -3677,7 +3682,7 @@
             "ipa": "/ˈmɪt.ɪ.ɡeɪt/",
             "definition": "To make less severe, serious, or painful; to alleviate adverse conditions.",
             "vietnamese": "giảm nhẹ, làm dịu bớt, xoa dịu tổn thất",
-            "contextSentence": "Pedestrian cities mitigate pervasive respiratory illnesses.",
+            "contextSentence": "By curtailing dependency on private automobile transport, municipalities substantially reduce greenhouse emissions and mitigate pervasive respiratory illnesses.",
             "collocations": [
               "mitigate risk",
               "mitigate climate change",
@@ -3687,31 +3692,31 @@
           },
           {
             "id": "mine-reading-b2-2-6",
-            "targetWord": "equitable",
+            "targetWord": "resilient",
             "partOfSpeech": "adjective",
-            "ipa": "/ˈek.wɪ.tə.bəl/",
-            "definition": "Fair and impartial; dealing fairly and equally with all concerned.",
-            "vietnamese": "công bằng, bình đẳng, hợp lý hợp tình",
-            "contextSentence": "Sustainable cities require dedication to ecological balance and equitable urban design.",
+            "ipa": "/rɪˈzɪl.i.ənt/",
+            "definition": "Able to recover quickly after problems or damage, or to cope well with change.",
+            "vietnamese": "có khả năng phục hồi, kiên cường",
+            "contextSentence": "Rather than importing fossil fuel energy from distant generating facilities, modern resilient neighborhoods incorporate integrated solar façades, micro-wind turbines, and localized geothermal pumps.",
             "collocations": [
-              "equitable distribution",
-              "equitable access",
-              "equitable treatment"
+              "resilient economy",
+              "resilient communities",
+              "remarkably resilient"
             ],
-            "etymology": "From Old French equitable, from Latin aequitas (equality, fairness)."
+            "etymology": "From Latin resilire (to spring back), from re- (back) + salire (to jump)."
           }
         ],
         "pass4Synthesis": {
-          "modelPrécis": "Rapid urban expansion necessitates a comprehensive transition toward ecological urban paradigms. By replacing centralized energy extraction with decentralized renewables, filtering stormwater through biological corridors, and restructuring municipal layouts into fifteen-minute pedestrian zones, modern cities significantly curtail vehicular emissions while establishing sustainable and equitable habitats.",
+          "modelPrécis": "Rapid urban expansion necessitates a comprehensive transition toward ecological urban paradigms. By replacing centralized energy extraction with decentralized renewables, filtering stormwater through constructed wetlands, and restructuring municipal layouts into fifteen-minute pedestrian zones, modern cities significantly curtail vehicular emissions while building sustainable and resilient habitats.",
           "incorporatedVocabulary": [
             "foundational",
             "paradigm",
             "regenerative",
             "curtail",
             "mitigate",
-            "equitable"
+            "resilient"
           ],
-          "syntacticReconstruction": "Insofar as rigid urban zoning exacerbates environmental pollution, implementing decentralized, regenerative infrastructures mitigates carbon emissions and fosters equitable living environments."
+          "syntacticReconstruction": "Insofar as rigid urban zoning exacerbates environmental pollution, implementing decentralized, regenerative infrastructures mitigates carbon emissions and fosters resilient living environments."
         }
       }
     },
@@ -3722,9 +3727,9 @@
       "cefrLevel": "B2",
       "genre": "Technology, Labor Economics & Lifelong Learning",
       "source": "Original text written for English Singularity",
-      "wordCount": 273,
-      "readingTime": "1.9 min @ 140 WPM (Intensive)",
-      "content": "The rapid proliferation of generative artificial intelligence and autonomous algorithmic systems has ignited intense debate across global labor markets. Whereas preceding waves of industrial automation predominantly supplanted manual and repetitive physical labor, advanced computational models now demonstrate remarkable proficiency in analytical synthesis, software compilation, and complex linguistic generation. Consequently, professionals who previously considered their expertise immune to technological disruption now face an urgent imperative to adapt. Many of them had assumed that a university degree would protect their careers for life.\n\nEconomists caution that the primary threat confronting workers is rarely outright obsolescence, but rather displacement by peers who harness machine intelligence effectively. Routine cognitive chores—such as compiling introductory market assessments, debugging standard code repositories, and drafting formulaic correspondence—are increasingly automated with minimal latency. Consequently, human value in modern enterprises is rapidly migrating upward toward higher-order capabilities: discerning problem formulation, cross-disciplinary contextualization, and ethical oversight. Employers increasingly ask candidates to demonstrate these abilities through projects rather than through formal qualifications alone.\n\nTo thrive in this evolving environment, forward-looking professionals must cultivate intellectual agility through lifelong reskilling. Educational curricula that emphasize rote memorization and mechanical task execution are fundamentally misaligned with contemporary labor requirements. Instead, developing metacognitive competence—the ability to critically evaluate algorithmic outputs, synthesize contradictory insights, and execute empathetic negotiation—constitutes the definitive competitive advantage. Embracing continuous pedagogical adaptation allows knowledge workers to transform artificial intelligence from a disruptive adversary into an indispensable cognitive partner. Organisations that invest in training during working hours, rather than expecting staff to study in their own time, tend to retain their most capable employees. Such investment signals that adaptation is a shared responsibility rather than an individual burden.",
+      "wordCount": 239,
+      "readingTime": "1.7 min @ 140 WPM (Intensive)",
+      "content": "The rapid proliferation of generative artificial intelligence and autonomous algorithms has ignited debate across global labor markets. Whereas preceding waves of automation replaced manual labor, advanced computational models now demonstrate remarkable proficiency in analytical synthesis. Consequently, professionals who previously considered their expertise immune to technological disruption now face an urgent imperative to adapt. Many had assumed that a university degree would protect their careers for life.\n\nEconomists caution that the primary threat confronting workers is rarely outright obsolescence, but rather displacement by peers who harness machine intelligence effectively. Routine cognitive tasks, such as compiling basic market summaries or drafting standard correspondence, are increasingly automated in seconds. Human value in modern enterprises is therefore shifting toward higher-order capabilities: problem formulation, strategic judgment, and ethical oversight. Employers increasingly ask candidates to demonstrate these abilities through practical projects rather than formal credentials alone.\n\nTo thrive in this environment, professionals must cultivate intellectual agility through lifelong reskilling. Curricula emphasizing rote memorization are misaligned with contemporary labor requirements. Instead, developing metacognitive competence (the ability to critically evaluate algorithmic outputs and resolve complex contradictions) offers a clear competitive advantage. Embracing continuous learning allows knowledge workers to treat artificial intelligence as a partner rather than a rival. Organisations that invest in training during working hours, rather than expecting staff to study in their own time, tend to retain their most capable employees. Such investment signals that adaptation is a shared responsibility rather than an individual burden.",
       "fourPassProtocol": {
         "pass1ColdRead": {
           "thesisGist": "Generative AI transforms cognitive labor by automating routine analytical tasks, necessitating a transition toward higher-order critical thinking, ethical governance, and continuous metacognitive reskilling.",
@@ -3741,14 +3746,22 @@
           "comprehensionChecks": [
             {
               "question": "How does current algorithmic automation differ from historical automation waves?",
-              "answer": "Historical automation primarily replaced physical labor, whereas modern AI automates complex cognitive, analytical, and linguistic tasks.\n  - Q: According to economists, what constitutes the actual competitive threat for workers?\n    A: Not complete obsolescence, but being outperformed and replaced by peers who adeptly utilize AI tools.\n  - Q: Which skills provide human professionals with a lasting advantage?\n    A: Higher-order capabilities including problem formulation, ethical oversight, cross-disciplinary synthesis, and empathetic negotiation."
+              "answer": "Historical automation primarily replaced physical labor, whereas modern AI automates routine cognitive and analytical tasks."
+            },
+            {
+              "question": "According to economists, what constitutes the actual competitive threat for workers?",
+              "answer": "Not complete obsolescence, but being outperformed and replaced by peers who adeptly utilize AI tools."
+            },
+            {
+              "question": "Which skills provide human professionals with a lasting advantage?",
+              "answer": "Higher-order capabilities: problem formulation, strategic judgment, and ethical oversight."
             }
           ]
         },
         "pass2SyntaxDissection": [
           {
             "sentenceIndex": 1,
-            "sentence": "Whereas preceding waves of automation supplanted manual labor, advanced computational models now demonstrate remarkable proficiency in analytical synthesis.",
+            "sentence": "Whereas preceding waves of automation replaced manual labor, advanced computational models now demonstrate remarkable proficiency in analytical synthesis.",
             "coreSVO": {
               "subject": "advanced computational models",
               "verb": "demonstrate",
@@ -3757,7 +3770,7 @@
             "subordinateClauses": [
               {
                 "type": "Adverbial Contrast Clause",
-                "clause": "Whereas preceding waves of automation supplanted manual labor",
+                "clause": "Whereas preceding waves of automation replaced manual labor",
                 "function": "Contextualizes historical precedent against current technological disruption."
               }
             ],
@@ -3765,7 +3778,7 @@
           },
           {
             "sentenceIndex": 2,
-            "sentence": "Economists caution that the primary threat confronting workers is rarely outright obsolescence, but rather displacement by peers who harness machine intelligence.",
+            "sentence": "Economists caution that the primary threat confronting workers is rarely outright obsolescence, but rather displacement by peers who harness machine intelligence effectively.",
             "coreSVO": {
               "subject": "Economists",
               "verb": "caution",
@@ -3773,9 +3786,9 @@
             },
             "subordinateClauses": [
               {
-                "type": "Noun Complement Clause",
-                "clause": "that the primary threat confronting workers is rarely outright obsolescence, but rather displacement by peers",
-                "function": "Direct object detailing professional risk."
+                "type": "Object Noun Clause",
+                "clause": "that the primary threat confronting workers is rarely outright obsolescence, but rather displacement by peers who harness machine intelligence effectively",
+                "function": "Object of \"caution\"; it reports the economists' claim about professional risk."
               },
               {
                 "type": "Participial Modifier",
@@ -3792,20 +3805,20 @@
           },
           {
             "sentenceIndex": 3,
-            "sentence": "Educational curricula that emphasize rote memorization are fundamentally misaligned with contemporary labor requirements.",
+            "sentence": "Curricula emphasizing rote memorization are misaligned with contemporary labor requirements.",
             "coreSVO": {
-              "subject": "Educational curricula",
+              "subject": "Curricula emphasizing rote memorization",
               "verb": "are (copular verb)",
-              "objectOrComplement": "(predicate adjective: fundamentally misaligned with contemporary labor requirements)"
+              "objectOrComplement": "(none; the complement is the adjective phrase \"misaligned with contemporary labor requirements\")"
             },
             "subordinateClauses": [
               {
-                "type": "Restrictive Relative Clause",
-                "clause": "that emphasize rote memorization",
-                "function": "Specifies the obsolete pedagogical approach."
+                "type": "Participial Modifier",
+                "clause": "emphasizing rote memorization",
+                "function": "Reduced relative clause (\"which emphasize rote memorization\") that specifies the outdated kind of curricula."
               }
             ],
-            "syntacticAnalysis": "Concise declarative asserting structural misalignment between legacy training and future workforce demands."
+            "syntacticAnalysis": "A concise declarative sentence. The present participle \"emphasizing\" post-modifies \"Curricula\", so the subject is a long noun phrase, and the copular verb links it to the complement \"misaligned...\"."
           }
         ],
         "pass3SentenceMining": [
@@ -3816,7 +3829,7 @@
             "ipa": "/prəˌlɪf.əˈreɪ.ʃən/",
             "definition": "Rapid increase in numbers, quantity, or spread; fast multiplication.",
             "vietnamese": "sự bùng nổ, sự gia tăng nhanh chóng, sự lan rộng",
-            "contextSentence": "The rapid proliferation of generative artificial intelligence and autonomous algorithmic systems has ignited intense debate across global labor markets.",
+            "contextSentence": "The rapid proliferation of generative artificial intelligence and autonomous algorithms has ignited debate across global labor markets.",
             "collocations": [
               "nuclear proliferation",
               "rapid proliferation",
@@ -3831,7 +3844,7 @@
             "ipa": "/ˌɒb.səˈles.əns/",
             "definition": "The state or process of becoming obsolete, outdated, or no longer used.",
             "vietnamese": "sự lỗi thời, tình trạng trở nên lạc hậu, sự mai một",
-            "contextSentence": "The primary threat confronting workers is rarely outright obsolescence.",
+            "contextSentence": "Economists caution that the primary threat confronting workers is rarely outright obsolescence, but rather displacement by peers who harness machine intelligence effectively.",
             "collocations": [
               "planned obsolescence",
               "rapid obsolescence",
@@ -3846,7 +3859,7 @@
             "ipa": "/dɪsˈpleɪs.mənt/",
             "definition": "The moving of something from its place, position, or employment by something else.",
             "vietnamese": "sự dịch chuyển, sự thay thế vị trí làm việc, sự dời chỗ",
-            "contextSentence": "Workers face displacement by peers who harness machine intelligence effectively.",
+            "contextSentence": "Economists caution that the primary threat confronting workers is rarely outright obsolescence, but rather displacement by peers who harness machine intelligence effectively.",
             "collocations": [
               "job displacement",
               "economic displacement",
@@ -3861,7 +3874,7 @@
             "ipa": "/prəˈfɪʃ.ən.si/",
             "definition": "A high degree of competence, skill, or expertise in an art, science, or subject.",
             "vietnamese": "sự thành thạo, trình độ chuyên môn cao",
-            "contextSentence": "AI models demonstrate remarkable proficiency in analytical synthesis.",
+            "contextSentence": "Whereas preceding waves of automation replaced manual labor, advanced computational models now demonstrate remarkable proficiency in analytical synthesis.",
             "collocations": [
               "language proficiency",
               "technical proficiency",
@@ -3876,7 +3889,7 @@
             "ipa": "/ɪmˈper.ə.tɪv/",
             "definition": "An essential, urgent, or unavoidable thing; a vital duty or requirement.",
             "vietnamese": "mệnh lệnh tất yếu, yêu cầu cấp thiết, đòi hỏi bức thiết",
-            "contextSentence": "Professionals face an urgent imperative to adapt through lifelong learning.",
+            "contextSentence": "Consequently, professionals who previously considered their expertise immune to technological disruption now face an urgent imperative to adapt.",
             "collocations": [
               "moral imperative",
               "strategic imperative",
@@ -3891,7 +3904,7 @@
             "ipa": "/ˌmet.əˈkɒɡ.nɪ.tɪv/",
             "definition": "Relating to awareness, monitoring, and understanding of one's own thought and learning processes.",
             "vietnamese": "thuộc siêu nhận thức, nhận thức về quá trình tư duy của chính mình",
-            "contextSentence": "Developing metacognitive competence constitutes the definitive competitive advantage.",
+            "contextSentence": "Instead, developing metacognitive competence (the ability to critically evaluate algorithmic outputs and resolve complex contradictions) offers a clear competitive advantage.",
             "collocations": [
               "metacognitive skills",
               "metacognitive awareness",

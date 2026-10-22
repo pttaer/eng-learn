@@ -1,5 +1,6 @@
 import { icon } from '../utils/icons';
 import { AudioSynthesizer } from './audio-synthesizer';
+import { HapticEngine } from './haptic-engine';
 
 export interface AtomicCardConfig {
   id: string;
@@ -260,13 +261,24 @@ export class AtomicCard {
     wrapper.appendChild(container);
 
     // ==========================================
-    // 3. GYRO 3D PARALLAX TILT
+    // 3. MOBILE GESTURE SWIPE DECK & GYRO TILT
     // ==========================================
+    const hintLeft = document.createElement('div');
+    hintLeft.className = 'card-swipe-hint hint-left';
+    hintLeft.innerHTML = '<span>◄ AGAIN</span>';
+
+    const hintRight = document.createElement('div');
+    hintRight.className = 'card-swipe-hint hint-right';
+    hintRight.innerHTML = '<span>GOOD ►</span>';
+
+    container.appendChild(hintLeft);
+    container.appendChild(hintRight);
+
     let tiltRaf: number | null = null;
     const maxTilt = 7;
 
     const onPointerMove = (e: PointerEvent) => {
-      if (e.pointerType === 'touch') return; // Do not apply parallax gyro tilt on touch screens
+      if (e.pointerType === 'touch' || isSwiping) return; // Do not apply parallax gyro tilt on touch screens or during drag
       if (document.documentElement.getAttribute('data-motion') === 'reduce') return;
       if (tiltRaf) cancelAnimationFrame(tiltRaf);
 
@@ -286,12 +298,172 @@ export class AtomicCard {
     };
 
     const onPointerLeave = () => {
+      if (isSwiping) return;
       if (tiltRaf) cancelAnimationFrame(tiltRaf);
       container.style.transform = 'rotateX(0deg) rotateY(0deg)';
     };
 
+    // --- Gesture Drag Physics State ---
+    let startX = 0;
+    let startY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    let isPointerDown = false;
+    let isSwiping = false;
+    let startTime = 0;
+    let dragEndedAt = 0;
+    let crossedThreshold = false;
+    let activePointerId: number | null = null;
+
+    const onSwipePointerDown = (e: PointerEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.closest('button, a, input, textarea, select')) return;
+
+      isPointerDown = true;
+      isSwiping = false;
+      crossedThreshold = false;
+      startX = e.clientX;
+      startY = e.clientY;
+      currentX = e.clientX;
+      currentY = e.clientY;
+      startTime = Date.now();
+      activePointerId = e.pointerId;
+    };
+
+    const onSwipePointerMove = (e: PointerEvent) => {
+      if (!isPointerDown || e.pointerId !== activePointerId) return;
+      currentX = e.clientX;
+      currentY = e.clientY;
+      const dx = currentX - startX;
+      const dy = currentY - startY;
+
+      if (!isSwiping) {
+        // Horizontal drags only; vertical movement is page scroll
+        if (Math.abs(dx) > 10 && Math.abs(dx) > Math.abs(dy)) {
+          isSwiping = true;
+          try {
+            container.setPointerCapture(e.pointerId);
+          } catch {}
+        }
+      }
+
+      if (isSwiping) {
+        e.preventDefault();
+        container.style.transition = 'none';
+        const rot = (dx / 320) * 14;
+        container.style.transform = `translate3d(${dx}px, ${dy * 0.35}px, 0) rotate(${rot}deg)`;
+
+        // Update hints
+        if (dx < -30) {
+          hintLeft.style.opacity = String(Math.min(1, (-dx - 30) / 70));
+          hintRight.style.opacity = '0';
+        } else if (dx > 30) {
+          hintRight.style.opacity = String(Math.min(1, (dx - 30) / 70));
+          hintLeft.style.opacity = '0';
+        } else {
+          hintLeft.style.opacity = '0';
+          hintRight.style.opacity = '0';
+        }
+
+        // Haptic feedback at decision boundary
+        if (Math.abs(dx) >= 100) {
+          if (!crossedThreshold) {
+            crossedThreshold = true;
+            HapticEngine.trigger('selection');
+          }
+        } else {
+          crossedThreshold = false;
+        }
+      }
+    };
+
+    const resetCardPosition = () => {
+      container.style.transition = 'transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+      container.style.transform = 'translate3d(0, 0, 0) rotate(0deg)';
+      hintLeft.style.opacity = '0';
+      hintRight.style.opacity = '0';
+    };
+
+    // Used after a committed swipe when the parent did not replace this card
+    const resetCardAfterRate = () => {
+      container.style.transition = 'none';
+      container.style.transform = '';
+      container.style.opacity = '';
+    };
+
+    const onSwipePointerUp = (e: PointerEvent) => {
+      if (!isPointerDown || e.pointerId !== activePointerId) return;
+      isPointerDown = false;
+      activePointerId = null;
+
+      try {
+        if (container.hasPointerCapture(e.pointerId)) {
+          container.releasePointerCapture(e.pointerId);
+        }
+      } catch {}
+
+      if (!isSwiping) return;
+      isSwiping = false;
+      dragEndedAt = Date.now();
+
+      const dx = currentX - startX;
+      const dy = currentY - startY;
+      const elapsed = Date.now() - startTime;
+      const velocity = Math.abs(dx) / Math.max(1, elapsed);
+
+      if (dx > 100 || (dx > 60 && velocity > 0.45)) {
+        // Swipe Right -> Good
+        HapticEngine.trigger('light');
+        container.style.transition = 'transform 0.28s ease-out, opacity 0.28s ease-out';
+        container.style.transform = `translate3d(${window.innerWidth}px, ${dy}px, 0) rotate(22deg)`;
+        container.style.opacity = '0';
+        setTimeout(() => {
+          doRate('good');
+          if (wrapper.isConnected) resetCardAfterRate();
+        }, 200);
+      } else if (dx < -100 || (dx < -60 && velocity > 0.45)) {
+        // Swipe Left -> Again
+        HapticEngine.trigger('warning');
+        container.style.transition = 'transform 0.28s ease-out, opacity 0.28s ease-out';
+        container.style.transform = `translate3d(-${window.innerWidth}px, ${dy}px, 0) rotate(-22deg)`;
+        container.style.opacity = '0';
+        setTimeout(() => {
+          doRate('again');
+          if (wrapper.isConnected) resetCardAfterRate();
+        }, 200);
+      } else {
+        // Spring back to center
+        resetCardPosition();
+      }
+    };
+
+    // A cancelled pointer (browser took the gesture) never commits a rating
+    const onSwipePointerCancel = (e: PointerEvent) => {
+      if (!isPointerDown || e.pointerId !== activePointerId) return;
+      isPointerDown = false;
+      activePointerId = null;
+      if (isSwiping) {
+        isSwiping = false;
+        dragEndedAt = Date.now();
+        resetCardPosition();
+      }
+    };
+
+    // A drag that ends on the card must not also register as a tap (which flips it)
+    const suppressClickAfterDrag = (e: MouseEvent) => {
+      if (Date.now() - dragEndedAt < 400) {
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    };
+
     container.addEventListener('pointermove', onPointerMove);
     container.addEventListener('pointerleave', onPointerLeave);
+    container.addEventListener('pointerdown', onSwipePointerDown);
+    container.addEventListener('pointermove', onSwipePointerMove);
+    container.addEventListener('pointerup', onSwipePointerUp);
+    container.addEventListener('pointercancel', onSwipePointerCancel);
+    container.addEventListener('click', suppressClickAfterDrag, true);
 
     return {
       element: wrapper,
@@ -308,6 +480,11 @@ export class AtomicCard {
         if (tiltRaf) cancelAnimationFrame(tiltRaf);
         container.removeEventListener('pointermove', onPointerMove);
         container.removeEventListener('pointerleave', onPointerLeave);
+        container.removeEventListener('pointerdown', onSwipePointerDown);
+        container.removeEventListener('pointermove', onSwipePointerMove);
+        container.removeEventListener('pointerup', onSwipePointerUp);
+        container.removeEventListener('pointercancel', onSwipePointerCancel);
+        container.removeEventListener('click', suppressClickAfterDrag, true);
         wrapper.remove();
       }
     };

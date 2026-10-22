@@ -365,15 +365,6 @@ export class ReadingDossier {
       btn.classList.toggle('is-active', isCur);
       btn.setAttribute('aria-selected', String(isCur));
     });
-
-    const fab = this.container.querySelector('#reading-mobile-quick-switch') as HTMLElement | null;
-    if (fab) {
-      const label = fab.querySelector('.fab-label');
-      if (label) {
-        label.textContent = this.mobileActiveTab === 'text' ? 'Switch to Analysis' : 'Switch to Text';
-      }
-      fab.setAttribute('aria-label', this.mobileActiveTab === 'text' ? 'Switch to Analysis' : 'Switch to Text');
-    }
   }
 
   constructor() {
@@ -698,7 +689,7 @@ export class ReadingDossier {
           ${info.etymology ? `
             <div class="vocab-drawer-field">
               <span class="vocab-field-label">ETYMOLOGY & ROOTS</span>
-              <p class="vocab-field-value" style="font-size: 11px; font-style: italic; color: var(--ink-muted);">${this.escapeHtml(info.etymology)}</p>
+              <p class="vocab-field-value" style="font-size: var(--font-kicker); font-style: italic; color: var(--ink-muted);">${this.escapeHtml(info.etymology)}</p>
             </div>
           ` : ''}
         </div>
@@ -759,43 +750,43 @@ export class ReadingDossier {
     slot.innerHTML = `
       <!-- Pass 1 Skim Timer & Focus Mode Bar -->
       <div class="skim-timer-bar">
-        <div>
+        <div class="skim-timer-info">
           <span>SKIM COUNTDOWN: </span>
-          <strong class="timer-display-text val-time" role="timer" aria-live="polite" aria-atomic="true" style="font-size: 13px;">00:${String(this.skimSecondsRemaining).padStart(2, '0')}</strong>
+          <strong class="timer-display-text val-time" role="timer" aria-live="polite" aria-atomic="true" style="font-size: var(--font-body-compact);">00:${String(this.skimSecondsRemaining).padStart(2, '0')}</strong>
         </div>
-        <div style="display: flex; gap: 8px;">
-          <button class="hud-btn btn-toggle-timer" style="padding: 4px 12px; font-size: 11px;">
+        <div class="skim-timer-actions">
+          <button type="button" class="hud-btn btn-toggle-timer ${this.isSkimTimerRunning ? 'is-running' : ''}">
             ${this.isSkimTimerRunning ? '⏸ Pause Timer' : '⏱ Start 60s Skim'}
           </button>
-          <button class="hud-btn btn-toggle-focus" style="padding: 4px 12px; font-size: 11px;">
+          <button type="button" class="hud-btn btn-toggle-focus ${this.isFocusModeActive ? 'is-active' : ''}">
             ${this.isFocusModeActive ? icon('eye') + ' Unblur Detail' : icon('target') + ' Focus Headings'}
           </button>
         </div>
       </div>
- 
+
       <!-- Mobile Segmented Split-Screen Tab Switcher (<= 768px) -->
-      <nav class="reading-mobile-tab-bar" role="tablist" aria-label="Reading Mobile View Switcher">
-        <button 
-          type="button" 
-          class="reading-mobile-tab-btn ${this.mobileActiveTab === 'text' ? 'is-active' : ''}" 
-          data-tab="text" 
-          role="tab" 
+      <nav class="reading-mobile-tab-bar" role="tablist" aria-label="Reading Mobile View Switcher" style="position: sticky; top: 0; z-index: 10; background: var(--bg-surface); border-bottom: 1px solid var(--border-hairline); padding: 8px; display: flex; gap: 8px;">
+        <button
+          type="button"
+          class="reading-mobile-tab-btn ${this.mobileActiveTab === 'text' ? 'is-active' : ''}"
+          data-tab="text"
+          role="tab"
           aria-selected="${this.mobileActiveTab === 'text'}"
         >
-          📖 Reading Text
+          ${icon('book', 14)} Reading Text
         </button>
-        <button 
-          type="button" 
-          class="reading-mobile-tab-btn ${this.mobileActiveTab === 'analysis' ? 'is-active' : ''}" 
-          data-tab="analysis" 
-          role="tab" 
+        <button
+          type="button"
+          class="reading-mobile-tab-btn ${this.mobileActiveTab === 'analysis' ? 'is-active' : ''}"
+          data-tab="analysis"
+          role="tab"
           aria-selected="${this.mobileActiveTab === 'analysis'}"
         >
-          🔍 Analysis & Exercises
+          ${icon('search', 14)} Analysis & Exercises
         </button>
       </nav>
 
-      <div class="reading-pass1-layout" data-mobile-active="${this.mobileActiveTab}" style="display: flex; gap: 24px; width: 100%; align-items: flex-start;">
+      <div class="reading-pass1-layout" data-mobile-active="${this.mobileActiveTab}" style="display: flex; gap: 24px; width: 100%; align-items: flex-start; overflow-y: auto;">
         <!-- Calm Document Reader (Strict 68ch measure & relaxed 1.75 line-height) -->
         <article class="calm-reader reading-text-pane" style="max-width: 68ch;">
           <div class="reading-header">
@@ -808,7 +799,7 @@ export class ReadingDossier {
           </div>
 
           <div class="pass-progression-bar">
-            <button class="hud-btn btn-proceed-next" style="padding: 8px 18px; font-weight: 700;">
+            <button class="hud-btn btn-proceed-next" style="padding: 8px 16px; font-weight: 700;">
               Proceed to Pass 2: Skeleton ${icon('arrowRight')}
             </button>
           </div>
@@ -820,7 +811,7 @@ export class ReadingDossier {
 
           <div class="reading-sidebar-card">
             <div class="telemetry-label">Thesis Gist</div>
-            <p class="reading-gist-text" style="font-size: 13px; line-height: 1.5; margin-top: 6px;">${data.thesisGist}</p>
+            <p class="reading-gist-text" style="font-size: var(--font-body-compact); line-height: 1.5; margin-top: 6px;">${data.thesisGist}</p>
           </div>
 
           <div class="reading-sidebar-card">
@@ -848,18 +839,6 @@ export class ReadingDossier {
           </div>
         </aside>
       </div>
-
-      <!-- Floating Quick-Switch Pill (Mobile <= 768px, >=48x48px Touch Target) -->
-      <button 
-        type="button" 
-        class="reading-mobile-quick-switch-fab" 
-        id="reading-mobile-quick-switch"
-        title="Flip between reading text and analysis"
-        aria-label="${this.mobileActiveTab === 'text' ? 'Switch to Analysis' : 'Switch to Text'}"
-      >
-        <span class="fab-icon">⚡</span>
-        <span class="fab-label">${this.mobileActiveTab === 'text' ? 'Switch to Analysis' : 'Switch to Text'}</span>
-      </button>
     `;
 
     // Render initial drawer state
@@ -885,12 +864,6 @@ export class ReadingDossier {
       });
     });
 
-    // Mobile Floating Quick-Switch Pill
-    const fabBtn = slot.querySelector('#reading-mobile-quick-switch');
-    fabBtn?.addEventListener('click', () => {
-      AudioSynthesizer.play('click');
-      this.toggleMobileActiveTab();
-    });
 
     // Bind clickable vocabulary targets in reading text
     const vocabTargets = slot.querySelectorAll('.vocab-target');
@@ -930,9 +903,11 @@ export class ReadingDossier {
       if (this.isSkimTimerRunning) {
         if (this.skimTimerInterval) clearInterval(this.skimTimerInterval);
         this.isSkimTimerRunning = false;
+        toggleTimerBtn.classList.remove('is-running');
         toggleTimerBtn.textContent = '▶ Resume Skim';
       } else {
         this.isSkimTimerRunning = true;
+        toggleTimerBtn.classList.add('is-running');
         toggleTimerBtn.textContent = '⏸ Pause Timer';
         this.skimTimerInterval = setInterval(() => {
           if (this.skimSecondsRemaining > 0) {
@@ -942,6 +917,8 @@ export class ReadingDossier {
             clearInterval(this.skimTimerInterval);
             this.isSkimTimerRunning = false;
             AudioSynthesizer.play('chime');
+            toggleTimerBtn.classList.remove('is-running');
+            toggleTimerBtn.classList.add('is-completed');
             toggleTimerBtn.textContent = '✓ Skim Completed';
           }
         }, 1000);
@@ -953,9 +930,11 @@ export class ReadingDossier {
       this.isFocusModeActive = !this.isFocusModeActive;
       if (this.isFocusModeActive) {
         readingBody?.classList.add('skim-focused');
+        toggleFocusBtn.classList.add('is-active');
         toggleFocusBtn.innerHTML = icon('eye') + ' Unblur Detail';
       } else {
         readingBody?.classList.remove('skim-focused');
+        toggleFocusBtn.classList.remove('is-active');
         toggleFocusBtn.innerHTML = icon('target') + ' Focus Headings';
       }
     });
@@ -1020,7 +999,7 @@ export class ReadingDossier {
         </div>
 
         <div class="pass-progression-bar">
-          <button class="hud-btn btn-proceed-next" style="padding: 8px 18px; font-weight: 700;">
+          <button class="hud-btn btn-proceed-next" style="padding: 8px 16px; font-weight: 700;">
             Proceed to Pass 3: Lexical Mining ${icon('arrowRight')}
           </button>
         </div>
@@ -1051,7 +1030,7 @@ export class ReadingDossier {
         <div class="mining-card-mount"></div>
 
         <div class="pass-progression-bar" style="margin-top: 16px;">
-          <button class="hud-btn btn-proceed-next" style="padding: 8px 18px; font-weight: 700;">
+          <button class="hud-btn btn-proceed-next" style="padding: 8px 16px; font-weight: 700;">
             Proceed to Pass 4: Critical Synthesis ${icon('arrowRight')}
           </button>
         </div>

@@ -217,21 +217,21 @@ export class ListeningDossier {
   public render(): HTMLElement {
     this.container.innerHTML = `
       <div class="dossier-control-bar">
-        <div class="dossier-tabs" style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-          <span class="telemetry-label">[PILLAR 03 // ACTIVE TRANSCRIPTION & PHONETICS]</span>
-          <div class="listening-mode-cluster" role="tablist" aria-label="Listening Mode">
-            <button type="button" class="hud-btn mode-tab ${this.currentMode === 'passive' ? 'active' : ''}" data-mode="passive" aria-pressed="${this.currentMode === 'passive'}">
-              📖 Passive Passages
-            </button>
-            <button type="button" class="hud-btn mode-tab ${this.currentMode === 'cloze' ? 'active' : ''}" data-mode="cloze" aria-pressed="${this.currentMode === 'cloze'}">
-              ✍️ Cloze Transcription
-            </button>
+        <div class="listening-header-row" style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 8px;">
+          <span class="telemetry-label" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">[PILLAR 04 // ACTIVE TRANSCRIPTION]</span>
+          <div class="dossier-status-pill">
+            <span class="telemetry-value">${this.currentMode === 'cloze' ? 'ACTIVE CLOZE' : '3-PASS PROTOCOL'}</span>
           </div>
         </div>
-        ${levelRowHtml(this.allPassages, this.activeLevel)}
-        <div class="dossier-status-pill">
-          <span class="telemetry-value">${this.currentMode === 'cloze' ? 'ACTIVE CLOZE GAP-FILL' : '3-PASS ACTIVE PROTOCOL'}</span>
+        <div class="listening-mode-cluster" role="tablist" aria-label="Listening Mode" style="display: flex; width: 100%; gap: 8px; margin-bottom: 8px;">
+          <button type="button" class="hud-btn mode-tab ${this.currentMode === 'passive' ? 'active' : ''}" data-mode="passive" aria-pressed="${this.currentMode === 'passive'}" style="flex: 1; justify-content: center; white-space: nowrap;">
+            ${icon('book', 13)} Passive Passages
+          </button>
+          <button type="button" class="hud-btn mode-tab ${this.currentMode === 'cloze' ? 'active' : ''}" data-mode="cloze" aria-pressed="${this.currentMode === 'cloze'}" style="flex: 1; justify-content: center; white-space: nowrap;">
+            ${icon('edit', 13)} Cloze Transcription
+          </button>
         </div>
+        ${levelRowHtml(this.allPassages, this.activeLevel)}
       </div>
       <div class="dossier-card-slot"></div>
       <div class="dossier-nav-bar">
@@ -345,17 +345,17 @@ export class ListeningDossier {
     const frontEl = document.createElement('div');
     frontEl.className = 'listening-front';
     frontEl.innerHTML = `
-      <div class="card-prompt-label">Pass 1 & 2 · Active Audio Transcription</div>
-      <div style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; margin-bottom: 8px;">
+      <div class="card-prompt-label" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Pass 1 & 2 · Active Transcription</div>
+      <div style="font-family: var(--font-sans); font-size: var(--font-body); font-weight: 600; margin-bottom: 8px;">
         Topic: ${item.title}
       </div>
       <div style="display: flex; gap: 8px; margin-bottom: 12px;">
-        <button type="button" class="hud-btn btn-play-audio" style="font-size: 11px; padding: 4px 10px;">▶ Play 1.0x</button>
-        <button type="button" class="hud-btn btn-play-slow" style="font-size: 11px; padding: 4px 10px;">⏵ Play 0.8x</button>
+        <button type="button" class="hud-btn btn-play-audio" style="font-size: var(--font-kicker); padding: 4px 10px;">▶ Play 1.0x</button>
+        <button type="button" class="hud-btn btn-play-slow" style="font-size: var(--font-kicker); padding: 4px 10px;">⏵ Play 0.8x</button>
       </div>
-      <textarea class="listening-transcribe-box" placeholder="Pass 2: Transcribe word-for-word here..." rows="3" style="width: 100%; font-family: var(--font-mono); font-size: 12px; padding: 10px; border: 1px solid var(--border-subtle); background: var(--bg-surface-sunk); color: var(--ink-primary); border-radius: 6px; outline: none; resize: none; box-sizing: border-box;"></textarea>
-      <div style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted); margin-top: 6px;">
-        Listen at least twice before pressing Space / Flip to reveal phonetic analysis.
+      <textarea class="listening-transcribe-box" placeholder="Pass 2: Transcribe word-for-word here..." rows="3" style="width: 100%; font-family: var(--font-mono); font-size: var(--font-body-compact); padding: 10px; border: 1px solid var(--border-subtle); background: var(--bg-surface-sunk); color: var(--ink-primary); border-radius: 6px; outline: none; resize: none; box-sizing: border-box;"></textarea>
+      <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); margin-top: 6px;">
+        Listen at least twice before pressing <span class="kbd-only">Space / </span>Flip to reveal phonetic analysis.
       </div>
     `;
 
@@ -389,24 +389,24 @@ export class ListeningDossier {
         <div class="card-prompt-label">
           CLOZE TRANSCRIPTION // CEFR ${item.cefrLevel}
         </div>
-        <div class="cloze-progress-badge" style="font-family: var(--font-mono); font-size: 11px;">
+        <div class="cloze-progress-badge" style="font-family: var(--font-mono); font-size: var(--font-kicker);">
           GAPS: <span class="cloze-correct-count" style="font-weight: 700; color: ${isComplete ? 'var(--good)' : 'var(--accent-gold)'};">${score.correct}</span> / <span class="cloze-total-count">${totalGaps}</span> (${score.percentage}%)
         </div>
       </div>
 
-      <div style="font-family: var(--font-sans); font-size: 15px; font-weight: 600; margin-bottom: 12px; color: var(--ink-primary);">
+      <div style="font-family: var(--font-sans); font-size: var(--font-body); font-weight: 600; margin-bottom: 12px; color: var(--ink-primary);">
         Topic: ${item.title}
       </div>
 
       <!-- Audio Player Strip with Speed Controls -->
       <div class="cloze-player-strip">
         <div style="display: flex; align-items: center; gap: 6px;">
-          <button type="button" class="hud-btn btn-cloze-play" style="font-size: 11px; padding: 4px 12px; font-weight: 700; background: var(--accent-gold); color: var(--bg-canvas); border: none;">
+          <button type="button" class="hud-btn btn-cloze-play" style="font-size: var(--font-kicker); padding: 4px 12px; font-weight: 700; background: var(--accent-gold); color: var(--bg-canvas); border: none;">
             ▶ Play Audio
           </button>
         </div>
         <div class="speed-control-group">
-          <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted); margin-right: 4px;">SPEED:</span>
+          <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); margin-right: 4px;">SPEED:</span>
           <button type="button" class="hud-btn btn-speed ${Math.abs(this.playbackSpeed - 0.8) < 0.01 ? 'active-speed' : ''}" data-speed="0.8" aria-pressed="${Math.abs(this.playbackSpeed - 0.8) < 0.01}">0.8x</button>
           <button type="button" class="hud-btn btn-speed ${Math.abs(this.playbackSpeed - 1.0) < 0.01 ? 'active-speed' : ''}" data-speed="1.0" aria-pressed="${Math.abs(this.playbackSpeed - 1.0) < 0.01}">1.0x</button>
           <button type="button" class="hud-btn btn-speed ${Math.abs(this.playbackSpeed - 1.2) < 0.01 ? 'active-speed' : ''}" data-speed="1.2" aria-pressed="${Math.abs(this.playbackSpeed - 1.2) < 0.01}">1.2x</button>
@@ -419,19 +419,19 @@ export class ListeningDossier {
       </div>
 
       <!-- Hint & Reset Controls -->
-      <div style="display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted);">
+      <div style="display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">
         <div>
           Listen closely & transcribe the missing phonetic words.
         </div>
         <div style="display: flex; gap: 6px;">
-          <button type="button" class="hud-btn btn-cloze-hint" style="font-size: 10px; padding: 2px 8px;">💡 Hint</button>
-          <button type="button" class="hud-btn btn-cloze-reset" style="font-size: 10px; padding: 2px 8px;">↺ Reset</button>
+          <button type="button" class="hud-btn btn-cloze-hint" style="font-size: var(--font-kicker); padding: 2px 8px;">${icon('lightbulb', 11)} Hint</button>
+          <button type="button" class="hud-btn btn-cloze-reset" style="font-size: var(--font-kicker); padding: 2px 8px;">↺ Reset</button>
         </div>
       </div>
 
       <!-- Completion Celebration Banner -->
       <div class="cloze-completion-banner" style="display: ${isComplete ? 'block' : 'none'};">
-        ★ ALL GAPS CORRECT (100% ACCURACY)! Press Space or Flip to review IPA & connected speech.
+        ★ ALL GAPS CORRECT (100% ACCURACY)! Press <span class="kbd-only">Space or </span>Flip to review IPA & connected speech.
       </div>
     `;
 
@@ -604,13 +604,13 @@ export class ListeningDossier {
 
     backEl.innerHTML = `
       <div class="card-prompt-label">Pass 3 · Phonetic Gap Analysis & Transcript</div>
-      <div class="card-main-text" style="font-size: 15px; font-weight: 600; line-height: 1.6; margin-bottom: 10px;">
+      <div class="card-main-text" style="font-size: var(--font-body); font-weight: 600; line-height: 1.6; margin-bottom: 10px;">
         ${transcriptHtml}
       </div>
-      <div class="card-ipa-text" style="font-size: 11px; margin-bottom: 8px; background: var(--bg-surface-sunk); color: var(--accent-gold); border: 1px solid var(--border-subtle); border-radius: 4px; padding: 6px 10px; font-family: var(--font-mono);">
+      <div class="card-ipa-text" style="font-size: var(--font-kicker); margin-bottom: 8px; background: var(--bg-surface-sunk); color: var(--accent-gold); border: 1px solid var(--border-subtle); border-radius: 4px; padding: 6px 10px; font-family: var(--font-mono);">
         IPA: ${this.escapeHTML(item.ipa)}
       </div>
-      <div style="font-family: var(--font-mono); font-size: 11px; line-height: 1.4; border-top: 1px dashed var(--border-hairline); padding-top: 6px;">
+      <div style="font-family: var(--font-mono); font-size: var(--font-kicker); line-height: 1.4; border-top: 1px dashed var(--border-hairline); padding-top: 6px;">
         <strong>CONNECTED SPEECH PHENOMENA:</strong><br />
         ${this.escapeHTML(item.traps)}
       </div>

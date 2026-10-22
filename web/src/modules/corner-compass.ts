@@ -46,8 +46,12 @@ export class CornerCompass {
           <span class="compass-item-code">07</span>
           <span class="compass-item-label">GRAMMAR</span>
         </button>
-        <button class="compass-menu-item" data-route="habits" title="30-Day Mission Log">
+        <button class="compass-menu-item" data-route="tenses" title="12 Tenses Master Vault & Random Drill">
           <span class="compass-item-code">08</span>
+          <span class="compass-item-label">TENSES</span>
+        </button>
+        <button class="compass-menu-item" data-route="habits" title="30-Day Mission Log">
+          <span class="compass-item-code">09</span>
           <span class="compass-item-label">HABITS</span>
         </button>
       </div>

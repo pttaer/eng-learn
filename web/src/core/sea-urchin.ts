@@ -308,6 +308,8 @@ export class SeaUrchin {
     const distToCenter = Math.hypot(dx, dy);
     const mouseAngle = Math.atan2(dy, dx);
 
+    const isDark = typeof document !== 'undefined' ? document.documentElement.getAttribute('data-theme') !== 'light' : true;
+
     ctx.save();
 
     // 1. Draw Wavefront Ripples
@@ -316,14 +318,14 @@ export class SeaUrchin {
       const alpha = Math.max(0, 0.75 * (1 - progress));
       ctx.beginPath();
       ctx.arc(r.x, r.y, r.radius, 0, Math.PI * 2);
-      ctx.strokeStyle = `rgba(0, 0, 0, ${alpha.toFixed(3)})`;
+      ctx.strokeStyle = isDark ? `rgba(165, 180, 252, ${alpha.toFixed(3)})` : `rgba(0, 0, 0, ${alpha.toFixed(3)})`;
       ctx.lineWidth = 1;
       ctx.stroke();
     }
 
     // 2. Draw Magnetic Radial Needle Spines with Gaussian Parting Cleft
     ctx.lineWidth = 1;
-    ctx.strokeStyle = '#000000';
+    ctx.strokeStyle = isDark ? '#e2e8f0' : '#000000';
 
     const omegaMax = 0.42; // Max parting deflection in radians (~24 deg)
     const sigmaTheta = 0.55; // Spread of Gaussian envelope (~31.5 deg)
@@ -377,18 +379,18 @@ export class SeaUrchin {
       ctx.stroke();
 
       // Subtle needle tip micro-bead
-      ctx.fillStyle = '#000000';
+      ctx.fillStyle = isDark ? '#a5b4fc' : '#000000';
       ctx.fillRect(Math.round(tipX) - 0.5, Math.round(tipY) - 0.5, 1.5, 1.5);
     }
 
-    // 3. Draw Pitch-Black Singularity Core
+    // 3. Draw Singularity Core
     const pulseOffset = this.reducedMotion ? 0 : Math.sin(this.pulsePhase) * 1.5;
     const coreR = this.baseRadius + pulseOffset;
 
     // Hairline outer event horizon
     ctx.beginPath();
     ctx.arc(cx, cy, coreR + 10 + (this.partingProgress * 18), 0, Math.PI * 2);
-    ctx.strokeStyle = 'rgba(0, 0, 0, 0.25)';
+    ctx.strokeStyle = isDark ? 'rgba(165, 180, 252, 0.45)' : 'rgba(0, 0, 0, 0.25)';
     ctx.lineWidth = 1;
     ctx.setLineDash([3, 3]);
     ctx.stroke();
@@ -397,21 +399,26 @@ export class SeaUrchin {
     // Solid core body
     ctx.beginPath();
     ctx.arc(cx, cy, coreR, 0, Math.PI * 2);
-    ctx.fillStyle = '#000000';
+    ctx.fillStyle = isDark ? '#080a0f' : '#000000';
     ctx.fill();
+    if (isDark) {
+      ctx.strokeStyle = 'rgba(165, 180, 252, 0.5)';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
 
     // 4. Central Telemetry / Core Void Center
     if (this.partingProgress > 0.1) {
       ctx.beginPath();
       ctx.arc(cx, cy, 18 * this.partingProgress, 0, Math.PI * 2);
-      ctx.fillStyle = '#ffffff';
+      ctx.fillStyle = isDark ? '#111622' : '#ffffff';
       ctx.fill();
-      ctx.strokeStyle = '#000000';
+      ctx.strokeStyle = isDark ? '#38bdf8' : '#000000';
       ctx.lineWidth = 1;
       ctx.stroke();
 
       // Core glyph
-      ctx.fillStyle = '#000000';
+      ctx.fillStyle = isDark ? '#38bdf8' : '#000000';
       ctx.font = '700 11px "JetBrains Mono", monospace';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
@@ -424,7 +431,7 @@ export class SeaUrchin {
       ctx.globalAlpha = alpha;
 
       for (const gw of this.gateways) {
-        this.drawGatewayNode(ctx, gw, cx, cy);
+        this.drawGatewayNode(ctx, gw, cx, cy, isDark);
       }
       ctx.globalAlpha = 1;
     }
@@ -436,7 +443,8 @@ export class SeaUrchin {
     ctx: CanvasRenderingContext2D,
     gw: PillarGateway,
     _cx: number,
-    _cy: number
+    _cy: number,
+    isDark: boolean = true
   ): void {
     ctx.save();
 
@@ -444,7 +452,7 @@ export class SeaUrchin {
     ctx.beginPath();
     ctx.moveTo(_cx, _cy);
     ctx.lineTo(gw.x, gw.y);
-    ctx.strokeStyle = 'rgba(0, 0, 0, 0.2)';
+    ctx.strokeStyle = isDark ? 'rgba(165, 180, 252, 0.35)' : 'rgba(0, 0, 0, 0.2)';
     ctx.lineWidth = 1;
     ctx.stroke();
 
@@ -454,30 +462,30 @@ export class SeaUrchin {
 
     if (gw.hovered) {
       // Inverted highlight
-      ctx.fillStyle = '#000000';
+      ctx.fillStyle = isDark ? '#38bdf8' : '#000000';
       ctx.fill();
-      ctx.strokeStyle = '#000000';
+      ctx.strokeStyle = isDark ? '#ffffff' : '#000000';
       ctx.lineWidth = 2;
       ctx.stroke();
 
       // Outer focus ring
       ctx.beginPath();
       ctx.arc(gw.x, gw.y, gw.radius + 6, 0, Math.PI * 2);
-      ctx.strokeStyle = '#000000';
+      ctx.strokeStyle = isDark ? '#38bdf8' : '#000000';
       ctx.lineWidth = 1.5;
       ctx.stroke();
 
       // Text inverted to white
-      ctx.fillStyle = '#ffffff';
+      ctx.fillStyle = isDark ? '#080a0f' : '#ffffff';
     } else {
-      ctx.fillStyle = '#ffffff';
+      ctx.fillStyle = isDark ? '#111622' : '#ffffff';
       ctx.fill();
-      ctx.strokeStyle = '#000000';
+      ctx.strokeStyle = isDark ? 'rgba(165, 180, 252, 0.6)' : '#000000';
       ctx.lineWidth = 1.5;
       ctx.stroke();
 
-      // Text is black
-      ctx.fillStyle = '#000000';
+      // Text is primary ink
+      ctx.fillStyle = isDark ? '#f8fafc' : '#000000';
     }
 
     // Text: Pillar Label
@@ -488,6 +496,9 @@ export class SeaUrchin {
 
     // Subtext: Code
     ctx.font = '9px "JetBrains Mono", monospace';
+    if (!gw.hovered && isDark) {
+      ctx.fillStyle = '#94a3b8';
+    }
     ctx.fillText(gw.code, gw.x, gw.y + 9);
 
     ctx.restore();

@@ -153,6 +153,7 @@ new Function('module', 'exports', 'require', diagViewCode)(diagViewMod, diagView
       esc: s => String(s).replace(/[&<>"]/g, '')
     };
   }
+  if (dep.includes('icons')) return { icon: () => '<svg></svg>' };
   if (dep.includes('core/feedback')) return { feedback: { emit: () => {} } };
   return require(dep);
 });

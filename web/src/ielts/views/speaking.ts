@@ -7,6 +7,7 @@ import { fluency, fluencyNote, Fluency } from '../fluency';
 import { bandBadge, countdown, Countdown, esc, fmtTime, h } from '../ui';
 import { playText, ttsAvailable, Playback } from '../tts';
 import { speakingSimulatorView } from './speaking-simulator';
+import { icon } from '../../utils/icons';
 
 
 const DATA = speakingData as SpeakingData;
@@ -297,18 +298,19 @@ function renderComparativeModels(host: HTMLElement, c: SpeakingPart2): void {
         if (activePlayback) {
           activePlayback.stop();
           activePlayback = null;
-          playBtn.textContent = `🔊 Listen to Model (Band ${m.band})`;
+          playBtn.innerHTML = `${icon('volume', 13)} Listen to Model (Band ${m.band})`;
         } else {
-          playBtn.textContent = '⏹️ Stop Audio';
+          playBtn.innerHTML = `${icon('stop', 13)} Stop Audio`;
           activePlayback = playText(m.text, {
             rate: 0.95,
             onEnd: () => {
               activePlayback = null;
-              playBtn.textContent = `🔊 Listen to Model (Band ${m.band})`;
+              playBtn.innerHTML = `${icon('volume', 13)} Listen to Model (Band ${m.band})`;
             }
           });
         }
       });
+      playBtn.innerHTML = `${icon('volume', 13)} Listen to Model (Band ${m.band})`;
     }
     actionsRow.append(playBtn);
 
@@ -359,7 +361,9 @@ export function speakingView(root: HTMLElement): () => void {
   alive = true;
   const menu = (): void => {
     stopAll();
+    const existingBanner = root.querySelector('.ie-subnav-banner');
     root.innerHTML = '';
+    if (existingBanner) root.append(existingBanner);
     root.append(h('h1', 'ie-title', 'Academic Speaking'), h('p', 'ie-lead', 'Recordings stay on your device. Pace and pauses are measured from the audio as a hint; the band is your own rubric rating, so it is an estimate.'));
     const cards = h('div', 'ie-cards');
     const f = h('button', 'ie-card', '<b>Full test</b><span>Parts 1, 2 and 3 in exam order</span><small>11-14 minutes</small>');

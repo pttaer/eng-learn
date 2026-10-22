@@ -7,6 +7,8 @@ import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { MotionEngine } from '../core/motion-engine';
 import { SkillTreeEngine } from '../core/skill-tree-engine';
+import { HeaderHUD } from './header-hud';
+import { CommuteAudioPlayer } from '../core/commute-audio-player';
 import collocationsData from '../assets/data/collocations.json';
 
 export interface CollocationItem {
@@ -157,8 +159,8 @@ export class CollocationsDossier {
     return `
       <div class="lexicon-table-container">
         <div class="lexicon-table-header-info">
-          <span class="telemetry-label">LEXICON ARCHIVE // ${totalItems} ENTRIES</span>
-          <span class="telemetry-label">DISPLAYING ${totalItems > 0 ? startIndex + 1 : 0}–${endIndex} OF ${totalItems}</span>
+          <span class="telemetry-label" style="white-space: nowrap;">ARCHIVE // ${totalItems} ENTRIES</span>
+          <span class="telemetry-label" style="white-space: nowrap;">· ${totalItems > 0 ? startIndex + 1 : 0}–${endIndex} / ${totalItems}</span>
         </div>
         <div class="lexicon-table-scroll-wrapper">
           <table class="lexicon-table">
@@ -407,6 +409,34 @@ export class CollocationsDossier {
     });
 
     slot.appendChild(this.currentCardHandle.element);
+
+    HeaderHUD.setContextualDock([
+      {
+        id: 'listen',
+        label: 'Listen',
+        iconHtml: icon('volume', 16),
+        onClick: () => {
+          if (item.phrase) AudioSynthesizer.speak(item.phrase);
+        }
+      },
+      {
+        id: 'commute',
+        label: 'Commute',
+        iconHtml: icon('headphones', 16),
+        onClick: () => {
+          CommuteAudioPlayer.open();
+        }
+      },
+      {
+        id: 'flip',
+        label: 'Flip',
+        iconHtml: '⟳',
+        accent: true,
+        onClick: () => {
+          this.currentCardHandle?.flip();
+        }
+      }
+    ]);
   }
 
   private handleRate(cardId: string, rating: 'again' | 'good'): void {
@@ -484,5 +514,9 @@ export class CollocationsDossier {
       }
     }
     return false;
+  }
+
+  public teardown(): void {
+    HeaderHUD.setContextualDock(null);
   }
 }

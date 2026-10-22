@@ -3,6 +3,7 @@ import { icon } from '../utils/icons';
 import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
+import { HeaderHUD } from './header-hud';
 import vocabularyData from '../assets/data/vocabulary.json';
 import { Cefr, srsTier } from '../core/cefr';
 import { levelsWithContent, defaultLevel, levelChipsHtml } from '../core/level-filter';
@@ -87,11 +88,11 @@ export class VocabularyDossier {
       <div class="vocab-telemetry-banner">
         <div class="telemetry-item">
           <span class="telemetry-label">ROGUELIKE RUN ENCOUNTERS</span>
-          <span class="telemetry-value streak-counter">${this.reviewCountInRun} CARDS</span>
+          <span class="telemetry-value streak-counter">${this.reviewCountInRun} reviewed</span>
         </div>
         <div class="telemetry-item">
           <span class="telemetry-label">TIER LOAD MODIFIER</span>
-          <span class="telemetry-value">${this.activeLevel === 'C1' || this.activeLevel === 'C2' ? 'EF 2.30 (HIGH COGNITIVE)' : 'EF 2.50 (CANONICAL)'}</span>
+          <span class="telemetry-value">${this.activeLevel === 'C1' || this.activeLevel === 'C2' ? 'Ease 2.30 (harder tier)' : 'Ease 2.50 (standard tier)'}</span>
         </div>
         <div class="telemetry-item">
           <span class="telemetry-label">REMIND DROP STATUS</span>
@@ -185,7 +186,7 @@ export class VocabularyDossier {
       statusBadge = srsState.repetitions >= 3 ? 'MASTERED' : 'REVIEW';
     }
 
-    let categoryLabel = `${item.mode.replace('_', ' ')} [${item.cefrLevel}]`;
+    let categoryLabel = `${item.mode.replace('_', ' ')} · ${item.cefrLevel}`;
     if (isRemind) {
       categoryLabel = `SURPRISE FLASH REMIND`;
     }
@@ -226,6 +227,26 @@ export class VocabularyDossier {
     });
 
     slot.appendChild(this.currentCardHandle.element);
+
+    HeaderHUD.setContextualDock([
+      {
+        id: 'listen',
+        label: 'Listen',
+        iconHtml: icon('volume', 16),
+        onClick: () => {
+          if (item.wordOrChunk) AudioSynthesizer.speak(item.wordOrChunk);
+        }
+      },
+      {
+        id: 'flip',
+        label: 'Flip',
+        iconHtml: '⟳',
+        accent: true,
+        onClick: () => {
+          this.currentCardHandle?.flip();
+        }
+      }
+    ]);
   }
 
   private handleRate(cardId: string, rating: 'again' | 'good', cardLevel: number): void {
@@ -236,7 +257,7 @@ export class VocabularyDossier {
     this.reviewCountInRun += 1;
     const streakEl = this.container.querySelector('.streak-counter');
     if (streakEl) {
-      streakEl.textContent = `${this.reviewCountInRun} CARDS`;
+      streakEl.textContent = `${this.reviewCountInRun} reviewed`;
     }
 
     // Roguelike surprise encounter logic:
@@ -302,5 +323,9 @@ export class VocabularyDossier {
       }
     }
     return false;
+  }
+
+  public teardown(): void {
+    HeaderHUD.setContextualDock(null);
   }
 }

@@ -15,7 +15,7 @@
  */
 
 import { Cefr } from './cefr';
-import { StorageManager } from '../utils/storage';
+import { StorageManager, SYNTHETIC_AGAIN_FAULT } from '../utils/storage';
 
 export type ErrorCategory =
   | 'SYNTACTIC'
@@ -98,7 +98,13 @@ export class SerlGauntletEngine {
     try {
       const raw = localStorage.getItem(STORAGE_SERL_KEY);
       if (raw) {
-        this.cachedRecords = JSON.parse(raw);
+        const parsed = JSON.parse(raw) as Record<string, SerlErrorRecord>;
+        // Retired path: flashcard "Again" used to be logged here. Drop those records once.
+        // Remove together with StorageManager.purgeSyntheticAgainErrors.
+        const stale = Object.keys(parsed).filter(id => parsed[id].learnerInput === SYNTHETIC_AGAIN_FAULT);
+        stale.forEach(id => delete parsed[id]);
+        this.cachedRecords = parsed;
+        if (stale.length > 0) this.saveRecords();
       } else {
         this.cachedRecords = {};
       }

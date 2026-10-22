@@ -98,6 +98,9 @@ export interface AppStorageState {
 }
 
 const STORAGE_KEY = 'STARK_ENG_STATE';
+
+// Marker written by the retired "every flashcard Again is an error" path. Used only to purge that data.
+export const SYNTHETIC_AGAIN_FAULT = 'Again (SRS Reset)';
 export const CURRENT_VERSION = 4;
 
 function getTodayString(): string {
@@ -185,7 +188,8 @@ export class StorageManager {
         errorLedger: this.migratedErrorLedger(parsed),
         catProfiles: parsed.catProfiles || {}
       };
-      if (parsed.version !== CURRENT_VERSION || !parsed.skillLevels || !parsed.errorLedger) {
+      const purged = this.purgeSyntheticAgainErrors(this.cachedState);
+      if (purged || parsed.version !== CURRENT_VERSION || !parsed.skillLevels || !parsed.errorLedger) {
         this.saveState(this.cachedState);
       }
       return this.cachedState;
@@ -233,6 +237,32 @@ export class StorageManager {
       }
     }
     return result;
+  }
+
+  /**
+   * Removes data written by the retired path that logged every flashcard "Again" as an error: the ledger
+   * records, their SRS remediation cards (which were due immediately and fed the reminder's due-word list),
+   * the counters, and checklist rules those records created. Idempotent; true only when something changed.
+   * Delete this block once no build from before the fix is still in use.
+   */
+  private static purgeSyntheticAgainErrors(state: AppStorageState): boolean {
+    const ledger = state.errorLedger;
+    if (!ledger) return false;
+    let changed = false;
+    for (const [id, rec] of Object.entries(ledger.records)) {
+      if (rec.userFault !== SYNTHETIC_AGAIN_FAULT) continue;
+      if (rec.remediationCardId) delete state.cardStates[rec.remediationCardId];
+      if (rec.status === 'resolved') ledger.totalResolved = Math.max(0, ledger.totalResolved - 1);
+      ledger.totalLogged = Math.max(0, ledger.totalLogged - 1);
+      delete ledger.records[id];
+      changed = true;
+    }
+    const rules = ledger.checklist.filter(r => r.badExample !== SYNTHETIC_AGAIN_FAULT);
+    if (rules.length !== ledger.checklist.length) {
+      ledger.checklist = rules;
+      changed = true;
+    }
+    return changed;
   }
 
   private static migratedErrorLedger(parsed: Partial<AppStorageState>): {

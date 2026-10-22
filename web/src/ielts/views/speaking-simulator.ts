@@ -554,8 +554,8 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
 
     // Header HUD
     const header = h('div', 'ie-sim-header');
-    const titleRow = h('div', 'ie-testbar');
-    const backBtn = h('button', 'ie-btn', '← Back to Speaking Hub');
+    const titleRow = h('div', 'ie-sim-nav-row');
+    const backBtn = h('button', 'ie-btn ie-btn-back', '< Back to Speaking');
     backBtn.addEventListener('click', () => {
       stopActiveAudio();
       engine.dispose();
@@ -563,13 +563,13 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
       else location.hash = '#speaking';
     });
 
-    const badge = h('span', 'ie-sim-badge', '3-Part Examiner Simulator (Band 7.0–8.5+)');
+    const badge = h('span', 'ie-sim-badge', 'Band 7.0–8.5+ Simulator');
     titleRow.append(backBtn, badge);
 
     const intro = h('div', 'ie-stage');
     intro.append(
       h('h1', 'ie-title', 'IELTS Speaking 3-Part Examiner Simulator'),
-      h('p', 'ie-lead', 'Interactive examination room executing Keino Campbell’s Band 7+ formulas and /ielts-coach principles: Direct Answer + 2–3 sentence extension, 1-minute 4-keyword notepad prep, native conversational fillers, and comparative deconstructions.')
+      h('p', 'ie-lead', 'Interactive examination room executing Keino Campbell’s Band 7+ formulas and examiner principles: Direct Answer + 2–3 sentence extension, 1-minute 4-keyword notepad prep, native conversational fillers, and comparative deconstructions.')
     );
 
     // Mode Navigation Tabs

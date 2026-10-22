@@ -1,5 +1,8 @@
 import { countdown, esc, fmtTime, h } from '../ui';
 import { validateFourSentenceParagraph, ParagraphEvaluation } from '../writing-heuristics';
+import { icon } from '../../utils/icons';
+import { HapticEngine } from '../../core/haptic-engine';
+import { AudioSynthesizer } from '../../core/audio-synthesizer';
 
 export interface DiffWordToken {
   type: 'match' | 'insert' | 'delete';
@@ -505,7 +508,7 @@ export const TASK2_ARCHITECTURES: Task2EssayArchitecture[] = [
 ];
 
 export function writingStudioView(root: HTMLElement): () => void {
-  let activeTab: 'task1' | 'task2' = 'task1';
+  let activeTab: 'task1' | 'task2' | 'clauses' = 'task1';
   let activeT1Index = 0;
   let activeT2Index = 0;
 
@@ -519,15 +522,19 @@ export function writingStudioView(root: HTMLElement): () => void {
     <div class="ie-studio-title-block">
       <span class="ie-studio-badge">KEINO CAMPBELL BAND 7+ SUITE</span>
       <h1 class="ie-title">Interactive Writing Studio</h1>
-      <p class="ie-lead">Master Task 1 with 6 progressive visual blueprints (strictly enforcing the 2-Sentence Overview zero-data rule), and architect Task 2 with 5 discursive architectures validated by the 4-sentence formula and Myers semantic diff.</p>
+      <p class="ie-lead">Master Task 1 with 6 progressive visual blueprints (strictly enforcing the 2-Sentence Overview zero-data rule), architect Task 2 with 5 discursive architectures validated by Myers semantic diff, and drill syntactic clause formulas with the Tactical Clause Builder.</p>
     </div>
   `;
 
   // Top Mode Switcher
   const modeSwitcher = h('div', 'ie-studio-mode-tabs');
-  const t1TabBtn = h('button', 'ie-tab is-on', '📊 Task 1 Blueprint Studio (6 Visuals)');
-  const t2TabBtn = h('button', 'ie-tab', '🏛️ Task 2 4-Sentence Essay Architect (5 Blueprints)');
-  modeSwitcher.append(t1TabBtn, t2TabBtn);
+  const t1TabBtn = h('button', 'ie-tab is-on');
+  t1TabBtn.innerHTML = `${icon('layers', 13)} Task 1 Visuals (6)`;
+  const t2TabBtn = h('button', 'ie-tab');
+  t2TabBtn.innerHTML = `${icon('edit', 13)} Task 2 Essays (5)`;
+  const clauseTabBtn = h('button', 'ie-tab');
+  clauseTabBtn.innerHTML = `${icon('target', 13)} Tactical Clause Builder`;
+  modeSwitcher.append(t1TabBtn, t2TabBtn, clauseTabBtn);
 
   const contentArea = h('div', 'ie-studio-content');
 
@@ -538,6 +545,7 @@ export function writingStudioView(root: HTMLElement): () => void {
     activeTab = 'task1';
     t1TabBtn.classList.add('is-on');
     t2TabBtn.classList.remove('is-on');
+    clauseTabBtn.classList.remove('is-on');
     renderStudio();
   });
 
@@ -545,24 +553,348 @@ export function writingStudioView(root: HTMLElement): () => void {
     activeTab = 'task2';
     t2TabBtn.classList.add('is-on');
     t1TabBtn.classList.remove('is-on');
+    clauseTabBtn.classList.remove('is-on');
     renderStudio();
   });
+
+  clauseTabBtn.addEventListener('click', () => {
+    activeTab = 'clauses';
+    clauseTabBtn.classList.add('is-on');
+    t1TabBtn.classList.remove('is-on');
+    t2TabBtn.classList.remove('is-on');
+    renderStudio();
+  });
+
+  function renderClauseBuilderStudio(container: HTMLElement): void {
+    const FORMULAS = [
+      {
+        id: 'concession',
+        title: 'Formula 1: Concession & Pivot',
+        badge: '[Subordinate Concession] + [Counter-Claim]',
+        description: 'Concede an opposing viewpoint with nuance before pivoting to an empirical counter-claim.',
+        slot1Label: '1. Subordinate Concession Clause',
+        slot1Tokens: [
+          'Although proponents argue that economic growth is paramount,',
+          'While it is frequently asserted that technology isolates individuals,',
+          'Even though rapid urbanization brings undeniable conveniences,'
+        ],
+        slot2Label: '2. Counter-Claim / Empirical Pivot',
+        slot2Tokens: [
+          'compelling empirical evidence indicates that environmental degradation inflicts irreversible harm.',
+          'careful societal analysis reveals that online communities foster profound global solidarity.',
+          'the resulting depletion of green spaces severely degrades urban residents\' physical wellbeing.'
+        ],
+        trapTokens: [
+          'but however this is completely untrue,',
+          'despite of popular opinions held by elders,',
+          'so therefore governments must immediately stop it,'
+        ],
+        trapNotes: [
+          'Two contrast linkers ("but", "however") in one clause. Use one.',
+          '"Despite" takes no "of": write "despite popular opinions".',
+          'Two consequence linkers ("so", "therefore") in one clause. Use one.'
+        ]
+      },
+      {
+        id: 'causal',
+        title: 'Formula 2: Causal Premise & Systemic Impact',
+        badge: '[Causal Premise] + [Systemic Outcome]',
+        description: 'Articulate structural cause-and-effect with high lexical density without simplistic linkers.',
+        slot1Label: '1. Causal Premise Clause',
+        slot1Tokens: [
+          'Given that automation continuously displaces repetitive manual labour,',
+          'In light of unprecedented global temperatures,',
+          'Since public healthcare infrastructure is severely overburdened,'
+        ],
+        slot2Label: '2. Systemic Outcome / Impact',
+        slot2Tokens: [
+          'policymakers must prioritize comprehensive digital reskilling initiatives.',
+          'international governing bodies must enforce stringent renewable energy mandates.',
+          'preventative medical education should be integrated into standard school curricula.'
+        ],
+        trapTokens: [
+          'due to the fact that governments fails to act,',
+          'so because of this problem happens everywhere,',
+          'and this makes everything become very bad,'
+        ],
+        trapNotes: [
+          'Subject-verb agreement: "governments" is plural, so the verb is "fail".',
+          'Two cause linkers ("so", "because of") in one clause. Use one.',
+          '"And" joins main clauses; slot 1 needs a subordinating linker.'
+        ]
+      },
+      {
+        id: 'inversion',
+        title: 'Formula 3: Conditional Inversion',
+        badge: '[Inverted Condition] + [Hypothetical Result]',
+        description: 'Invert the auxiliary in conditional clauses, e.g. "Had governments acted earlier".',
+        slot1Label: '1. Inverted Condition Clause',
+        slot1Tokens: [
+          'Had governments enforced stricter emissions targets earlier,',
+          'Were subsidies redirected towards public transit infrastructure,',
+          'Should municipal authorities fail to curb industrial runoff,'
+        ],
+        slot2Label: '2. Hypothetical / Modal Result',
+        slot2Tokens: [
+          'the severity of contemporary ecological crises would be substantially mitigated.',
+          'metropolitan carbon footprints would decline dramatically within five years.',
+          'surrounding aquatic ecosystems face imminent catastrophic collapse.'
+        ],
+        trapTokens: [
+          'if had governments done this earlier,',
+          'if they would invest more money into trains,',
+          'maybe the environment will be better tomorrow,'
+        ],
+        trapNotes: [
+          'Inversion replaces "if": "Had governments..." takes no "if".',
+          'No "would" in an if-clause. Use the past simple: "if they invested more".',
+          'A complete main clause with no subordinator cannot fill slot 1. "Maybe" is informal hedging.'
+        ]
+      },
+      {
+        id: 'policy',
+        title: 'Formula 4: Policy Intervention & Long-term Remedy',
+        badge: '[Actionable Policy] + [Long-term Impact]',
+        description: 'Synthesize actionable proposals for Task 2 recommendations and concluding solutions.',
+        slot1Label: '1. Policy / Action Clause',
+        slot1Tokens: [
+          'By subsidizing sustainable agricultural practices,',
+          'Through instituting rigorous transparency regulations in corporate governance,',
+          'Via targeted educational grants for underprivileged communities,'
+        ],
+        slot2Label: '2. Long-Term Societal Remedy',
+        slot2Tokens: [
+          'nations can simultaneously safeguard domestic food security and protect vital topsoil.',
+          'financial regulatory bodies can effectively preempt speculative economic crises.',
+          'developing economies can systematically narrow persistent socioeconomic divides.'
+        ],
+        trapTokens: [
+          'by subsidize sustainable farming,',
+          'in order for solving problems easily,',
+          'to making sure that citizens are happy,'
+        ],
+        trapNotes: [
+          '"By" takes a gerund: "by subsidizing", not "by subsidize".',
+          '"In order to" takes a bare verb: "in order to solve", not "in order for solving".',
+          '"To" takes a bare verb: "to make sure", not "to making sure".'
+        ]
+      }
+    ];
+
+    let activeFormulaIdx = 0;
+    let selectedTokens: string[] = [];
+
+    const arena = h('div', 'ie-clause-builder-arena');
+
+    function renderActiveFormula(): void {
+      const f = FORMULAS[activeFormulaIdx];
+
+      arena.innerHTML = `
+        <div class="ie-tabs ie-formula-tabs" style="display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px;">
+          ${FORMULAS.map((_, idx) => `
+            <button type="button" class="ie-tab ${idx === activeFormulaIdx ? 'is-on' : ''}" data-idx="${idx}">
+              Formula ${idx + 1}
+            </button>
+          `).join('')}
+        </div>
+
+        <div class="ie-clause-formula-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <span class="ie-clause-formula-badge">${f.badge}</span>
+            <span class="ie-skill-badge" style="background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700;">CLAUSE DRILL</span>
+          </div>
+          <h2 style="font-size: 17px; margin: 4px 0;">${f.title}</h2>
+          <p style="font-size: 13px; color: var(--ink-secondary); margin: 0; line-height: 1.4;">${f.description}</p>
+        </div>
+
+        <div class="ie-clause-workspace-card">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="ie-clause-slot-label">ASSEMBLED SENTENCE SLOT</span>
+            <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted);">${selectedTokens.length} Tokens</span>
+          </div>
+
+          <div class="ie-clause-assembled-box ${selectedTokens.length > 0 ? 'has-tokens' : ''}">
+            ${selectedTokens.length > 0 ? selectedTokens.map(tok => `
+              <span class="ie-clause-token-pill">
+                <span>${esc(tok)}</span>
+              </span>
+            `).join(' ') : `
+              <span class="ie-clause-placeholder-text">Tap tokens from the banks below to construct your academic sentence formula...</span>
+            `}
+          </div>
+
+          <div class="ie-clause-actions-row">
+            <button type="button" class="ie-btn ie-btn-sm ie-btn-undo" ${selectedTokens.length === 0 ? 'disabled' : ''}>
+              ${icon('skipBack', 14)} Undo Token
+            </button>
+            <button type="button" class="ie-btn ie-btn-sm ie-btn-reset" ${selectedTokens.length === 0 ? 'disabled' : ''}>
+              ${icon('rotateCcw', 14)} Reset Slot
+            </button>
+            <button type="button" class="ie-btn ie-btn-sm ie-btn-primary ie-btn-verify" ${selectedTokens.length === 0 ? 'disabled' : ''} style="margin-left: auto;">
+              ${icon('check', 14)} Verify Clause Syntax
+            </button>
+          </div>
+
+          <div class="ie-clause-feedback-mount"></div>
+        </div>
+
+        <div class="ie-clause-workspace-card">
+          <div class="ie-clause-bank-group">
+            <span class="ie-clause-slot-label">${f.slot1Label}</span>
+            <div class="ie-clause-tokens-list">
+              ${f.slot1Tokens.map(tok => `
+                <button type="button" class="ie-token-tap-btn ${selectedTokens.includes(tok) ? 'is-selected' : ''}" data-tok="${esc(tok)}">
+                  ${esc(tok)}
+                </button>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="ie-clause-bank-group">
+            <span class="ie-clause-slot-label">${f.slot2Label}</span>
+            <div class="ie-clause-tokens-list">
+              ${f.slot2Tokens.map(tok => `
+                <button type="button" class="ie-token-tap-btn ${selectedTokens.includes(tok) ? 'is-selected' : ''}" data-tok="${esc(tok)}">
+                  ${esc(tok)}
+                </button>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="ie-clause-bank-group">
+            <span class="ie-clause-slot-label" style="color: var(--critical, #ef4444);">Distractor &amp; Trap Tokens (Common Errors)</span>
+            <div class="ie-clause-tokens-list">
+              ${f.trapTokens.map(tok => `
+                <button type="button" class="ie-token-tap-btn is-trap ${selectedTokens.includes(tok) ? 'is-selected' : ''}" data-tok="${esc(tok)}">
+                  ${esc(tok)}
+                </button>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Event Bindings
+      arena.querySelectorAll('.ie-formula-tabs .ie-tab').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          activeFormulaIdx = Number((e.currentTarget as HTMLElement).dataset.idx);
+          selectedTokens = [];
+          HapticEngine.trigger('selection');
+          renderActiveFormula();
+        });
+      });
+
+      arena.querySelectorAll('.ie-token-tap-btn:not(.is-selected)').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const tok = (e.currentTarget as HTMLElement).dataset.tok;
+          if (tok && !selectedTokens.includes(tok)) {
+            selectedTokens.push(tok);
+            HapticEngine.trigger('light');
+            AudioSynthesizer.play('click');
+            renderActiveFormula();
+          }
+        });
+      });
+
+      arena.querySelector('.ie-btn-undo')?.addEventListener('click', () => {
+        if (selectedTokens.length > 0) {
+          selectedTokens.pop();
+          HapticEngine.trigger('light');
+          renderActiveFormula();
+        }
+      });
+
+      arena.querySelector('.ie-btn-reset')?.addEventListener('click', () => {
+        selectedTokens = [];
+        HapticEngine.trigger('selection');
+        renderActiveFormula();
+      });
+
+      const feedbackMount = arena.querySelector('.ie-clause-feedback-mount');
+      arena.querySelector('.ie-btn-verify')?.addEventListener('click', () => {
+        if (!feedbackMount) return;
+        const sentence = selectedTokens.join(' ').trim();
+
+        // 1. Check double connectors trap (e.g. although ... but)
+        if (/\b(although|even though|though)\b.*\b(but|however)\b/i.test(sentence)) {
+          HapticEngine.trigger('warning');
+          AudioSynthesizer.play('alarm');
+          feedbackMount.innerHTML = `
+            <div class="ie-clause-feedback-card is-warning">
+              <b>⚠️ REDUNDANT CONNECTOR TRAP:</b> "Although" and "but" cannot govern the same sentence clause. Subordinate clauses already establish concession; remove "but".
+            </div>
+          `;
+          return;
+        }
+
+        // 2. Check trap tokens
+        const trapIdx = f.trapTokens.findIndex(t => selectedTokens.includes(t));
+        if (trapIdx !== -1) {
+          HapticEngine.trigger('warning');
+          AudioSynthesizer.play('alarm');
+          feedbackMount.innerHTML = `
+            <div class="ie-clause-feedback-card is-warning">
+              <b>✗ TRAP TOKEN:</b> ${f.trapNotes[trapIdx]}
+            </div>
+          `;
+          return;
+        }
+
+        // 3. Structure: exactly one slot-1 clause, then one slot-2 clause, in that order
+        const [first, second] = selectedTokens;
+        if (selectedTokens.length !== 2 || !f.slot1Tokens.includes(first) || !f.slot2Tokens.includes(second)) {
+          HapticEngine.trigger('warning');
+          feedbackMount.innerHTML = `
+            <div class="ie-clause-feedback-card is-warning">
+              <b>⚠️ STRUCTURE INCOMPLETE:</b> Select one prefix clause from slot 1, then one outcome or counter-claim from slot 2, in that order.
+            </div>
+          `;
+          return;
+        }
+
+        // 4. Shape check passed. Says nothing about band; band needs a full paragraph.
+        HapticEngine.trigger('success');
+        AudioSynthesizer.play('chime');
+        feedbackMount.innerHTML = `
+          <div class="ie-clause-feedback-card is-success">
+            <b>✓ STRUCTURE CHECK PASSED:</b> Subordinate clause followed by main clause. This checks the shape of the formula only.
+          </div>
+        `;
+      });
+    }
+
+    renderActiveFormula();
+    container.innerHTML = '';
+    container.appendChild(arena);
+  }
 
   function renderStudio(): void {
     contentArea.innerHTML = '';
     if (activeTab === 'task1') {
       renderTask1Studio(contentArea);
-    } else {
+    } else if (activeTab === 'task2') {
       renderTask2Studio(contentArea);
+    } else {
+      renderClauseBuilderStudio(contentArea);
     }
   }
 
   function renderTask1Studio(container: HTMLElement): void {
     const bp = TASK1_BLUEPRINTS[activeT1Index] || TASK1_BLUEPRINTS[0];
 
+    const KIND_LABELS: Record<string, string> = {
+      line: 'Line Graph',
+      bar: 'Bar Chart',
+      pie: 'Pie Chart',
+      table: 'Data Table',
+      process: 'Process',
+      map: 'Map'
+    };
+
     const visualTabs = h('div', 'ie-tabs ie-visual-tabs');
     TASK1_BLUEPRINTS.forEach((item, idx) => {
-      const btn = h('button', `ie-tab ${idx === activeT1Index ? 'is-on' : ''}`, `${item.kind.toUpperCase()}: ${item.title.split(':')[0]}`);
+      const label = KIND_LABELS[item.kind.toLowerCase()] || item.kind;
+      const btn = h('button', `ie-tab ${idx === activeT1Index ? 'is-on' : ''}`, label);
       btn.addEventListener('click', () => {
         activeT1Index = idx;
         renderTask1Studio(container);
@@ -797,9 +1129,18 @@ export function writingStudioView(root: HTMLElement): () => void {
   function renderTask2Studio(container: HTMLElement): void {
     const arch = TASK2_ARCHITECTURES[activeT2Index] || TASK2_ARCHITECTURES[0];
 
+    const ARCH_NAMES = [
+      'Opinion',
+      'Discussion',
+      'Advantage',
+      'Problems',
+      'Two-Part'
+    ];
+
     const archTabs = h('div', 'ie-tabs ie-arch-tabs');
     TASK2_ARCHITECTURES.forEach((item, idx) => {
-      const btn = h('button', `ie-tab ${idx === activeT2Index ? 'is-on' : ''}`, `${item.title.split(':')[0]}`);
+      const label = ARCH_NAMES[idx] || item.title.split(':')[0];
+      const btn = h('button', `ie-tab ${idx === activeT2Index ? 'is-on' : ''}`, label);
       btn.addEventListener('click', () => {
         activeT2Index = idx;
         renderTask2Studio(container);
@@ -875,7 +1216,7 @@ export function writingStudioView(root: HTMLElement): () => void {
       <div class="ie-diff-console">
         <div class="ie-diff-header">
           <div>
-            <h3>🔍 Myers Semantic Diff (Candidate vs Band 8.5 Model)</h3>
+            <h3>${icon('search', 15)} Myers Semantic Diff (Candidate vs Band 8.5 Model)</h3>
             <p class="ie-note">Word-level LCS comparison against the authentic Band 8.5 exemplar model.</p>
           </div>
           <button type="button" class="ie-btn ie-btn-sm ie-run-diff">Execute Word Diff Analysis</button>

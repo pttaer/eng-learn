@@ -1,0 +1,512 @@
+[
+  {
+    "id": "diag-a1-vocab",
+    "level": "A1",
+    "skill": "vocab",
+    "stage": 1,
+    "prompt": "Choose the word that best completes the sentence:",
+    "context": "I need to buy some fresh ______ for a green salad: lettuce, cucumbers and onions.",
+    "options": [
+      "vegetables",
+      "fruits",
+      "grains",
+      "meat"
+    ],
+    "answer": 0,
+    "explanation": "Lettuce, cucumbers and onions are vegetables. Fruits, grains and meat are also food, but none of them is what the list describes.",
+    "vietnamese": "Tôi cần mua ít rau củ tươi để làm món salad: xà lách, dưa chuột và hành tây."
+  },
+  {
+    "id": "diag-a1-colloc",
+    "level": "A1",
+    "skill": "collocation",
+    "stage": 1,
+    "prompt": "Choose the correct verb that pairs naturally with the noun:",
+    "context": "Every evening after school, the children ______ their homework before dinner.",
+    "options": [
+      "make",
+      "do",
+      "create",
+      "build"
+    ],
+    "answer": 1,
+    "explanation": "The standard English collocation is 'do homework', never 'make homework'.",
+    "vietnamese": "Mỗi tối đi học về, bọn trẻ đều làm bài tập trước bữa ăn. Đi với 'homework' luôn dùng động từ 'do', không dùng 'make'."
+  },
+  {
+    "id": "diag-a1-gram",
+    "level": "A1",
+    "skill": "grammar",
+    "stage": 2,
+    "prompt": "Choose the correct verb form:",
+    "context": "My brother ______ in a software company in Hanoi.",
+    "options": [
+      "work",
+      "working",
+      "works",
+      "is work"
+    ],
+    "answer": 2,
+    "explanation": "The subject 'My brother' is third-person singular, which takes the present simple form 'works'. The other options use the wrong tense or agreement.",
+    "vietnamese": "Anh trai tôi làm việc ở một công ty phần mềm tại Hà Nội. Chủ ngữ ngôi thứ ba số ít (My brother) ở thì hiện tại đơn đi với động từ thêm -s (works)."
+  },
+  {
+    "id": "diag-a1-read",
+    "level": "A1",
+    "skill": "reading",
+    "stage": 3,
+    "prompt": "Read the short note and answer the question:",
+    "context": "Hi Anna, I am at the library now. The library closes at 5:00 PM, so let's meet at the café across the street at 5:15 PM. - Tom. Question: Where will Tom and Anna meet?",
+    "options": [
+      "At the library",
+      "At school",
+      "At home",
+      "At the café"
+    ],
+    "answer": 3,
+    "explanation": "Tom's note says: 'let's meet at the café across the street at 5:15 PM.'",
+    "vietnamese": "Chào Anna, mình đang ở thư viện. Thư viện đóng cửa lúc 5 giờ chiều, nên tụi mình hẹn gặp nhau ở quán cà phê bên kia đường lúc 5:15 nhé. — Tom. Hai người hẹn gặp nhau tại quán cà phê."
+  },
+  {
+    "id": "diag-a1-write",
+    "level": "A1",
+    "skill": "writing",
+    "stage": 5,
+    "prompt": "Choose the sentence with natural and grammatically correct English word order:",
+    "context": "Which sentence follows standard Subject + Verb + Object + Place + Time structure?",
+    "options": [
+      "She drinks tea in the garden every morning.",
+      "Drinks she tea every morning in the garden.",
+      "In the garden every morning tea she drinks.",
+      "She every morning drinks in the garden tea."
+    ],
+    "answer": 0,
+    "explanation": "Typical declarative word order is Subject (She) + Verb (drinks) + Object (tea) + Place (in the garden) + Time (every morning). 'Every morning in the garden' would also sound natural, but the other options break the basic Subject + Verb + Object order.",
+    "vietnamese": "Trật tự câu điển hình trong tiếng Anh: Chủ ngữ (She) + Động từ (drinks) + Tân ngữ (tea) + Nơi chốn (in the garden) + Thời gian (every morning)."
+  },
+  {
+    "id": "diag-a2-vocab",
+    "level": "A2",
+    "skill": "vocab",
+    "stage": 1,
+    "prompt": "Choose the word that best fits the travel context:",
+    "context": "Our flight was ______ by two hours because of fog.",
+    "options": [
+      "cancelled",
+      "delayed",
+      "missed",
+      "finished"
+    ],
+    "answer": 1,
+    "explanation": "A flight is delayed when it leaves later than planned, here by two hours because of fog. 'Cancelled' means the flight does not go at all, 'missed' is what a passenger does, and 'finished' does not describe a flight that has not left yet.",
+    "vietnamese": "Chuyến bay của chúng tôi bị hoãn hai tiếng vì sương mù. 'Delayed' nghĩa là bị lùi giờ bay, khác với 'cancelled' là bị hủy chuyến hoàn toàn."
+  },
+  {
+    "id": "diag-a2-colloc",
+    "level": "A2",
+    "skill": "collocation",
+    "stage": 1,
+    "prompt": "Choose the verb that best pairs with the noun in the sentence:",
+    "context": "Don't worry if you ______ a mistake while speaking; it is a natural part of practice.",
+    "options": [
+      "do",
+      "perform",
+      "make",
+      "cause"
+    ],
+    "answer": 2,
+    "explanation": "The established collocation is 'make a mistake'. English does not permit 'do a mistake'.",
+    "vietnamese": "Đừng ngại việc mắc lỗi khi nói; đó là điều rất tự nhiên khi luyện tập. Cụm từ cố định trong tiếng Anh luôn là 'make a mistake', không dùng 'do'."
+  },
+  {
+    "id": "diag-a2-gram",
+    "level": "A2",
+    "skill": "grammar",
+    "stage": 2,
+    "prompt": "Choose the correct verb form:",
+    "context": "Yesterday morning, she ______ her keys on the dining table before leaving.",
+    "options": [
+      "has left",
+      "leaves",
+      "is left",
+      "left"
+    ],
+    "answer": 3,
+    "explanation": "The phrase 'Yesterday morning' marks a finished past event, so it takes the past simple 'left'. The other choices use present or present perfect forms.",
+    "vietnamese": "Sáng hôm qua, cô ấy để chìa khóa trên bàn ăn trước khi ra khỏi nhà. Trạng từ thời gian trong quá khứ 'Yesterday morning' yêu cầu dùng thì quá khứ đơn (left)."
+  },
+  {
+    "id": "diag-a2-read",
+    "level": "A2",
+    "skill": "reading",
+    "stage": 3,
+    "prompt": "Read the short passage and identify one benefit Sarah gains:",
+    "context": "Walking to work takes twenty minutes longer than taking the bus, but Sarah prefers it. She feels more energetic during morning meetings and saves ten dollars every week. Question: What advantage does walking provide to Sarah?",
+    "options": [
+      "She spends less time commuting",
+      "She feels more energetic at work",
+      "The bus ticket became more expensive",
+      "She has time to buy breakfast"
+    ],
+    "answer": 1,
+    "explanation": "The passage says walking makes her feel more energetic during morning meetings. 'She spends less time commuting' contradicts the text (walking takes twenty minutes longer), and the bus ticket price and breakfast are never mentioned.",
+    "vietnamese": "Dù đi bộ mất nhiều thời gian hơn xe buýt, Sarah thấy tỉnh táo và giàu năng lượng hơn trong các cuộc họp sáng, đồng thời tiết kiệm được tiền xe."
+  },
+  {
+    "id": "diag-a2-write",
+    "level": "A2",
+    "skill": "writing",
+    "stage": 5,
+    "prompt": "Choose the sentence that correctly combines two contrasting ideas:",
+    "context": "Idea 1: The weather was cold and rainy. Idea 2: We enjoyed our weekend camping trip.",
+    "options": [
+      "The weather was cold and rainy, so we enjoyed our weekend camping trip.",
+      "Although the weather was cold and rainy, we enjoyed our weekend camping trip.",
+      "Because the weather was cold and rainy, we enjoyed our weekend camping trip.",
+      "Despite the weather was cold and rainy, we enjoyed our weekend camping trip."
+    ],
+    "answer": 1,
+    "explanation": "'Although' links two contrasting facts in one sentence. 'So' and 'because' wrongly say the bad weather caused the enjoyment, and 'despite' must be followed by a noun phrase ('despite the cold, rainy weather'), not a full clause.",
+    "vietnamese": "Dù trời mưa lạnh, chúng tôi vẫn có một chuyến cắm trại cuối tuần rất vui. 'Although' nối hai mệnh đề tương phản; còn 'despite' bắt buộc đi với danh từ hoặc cụm danh từ, không đi với một mệnh đề."
+  },
+  {
+    "id": "diag-b1-vocab",
+    "level": "B1",
+    "skill": "vocab",
+    "stage": 1,
+    "prompt": "Choose the phrasal verb that fits the context:",
+    "context": "Due to heavy thunderstorms, the organizers had to ______ the outdoor music festival completely; it will not take place this year.",
+    "options": [
+      "give up",
+      "put off",
+      "call off",
+      "look after"
+    ],
+    "answer": 2,
+    "explanation": "'Call off' means cancel. 'Put off' means postpone, but the sentence says the festival will not take place this year at all. 'Give up' (stop trying) and 'look after' (take care of) do not fit an event.",
+    "vietnamese": "Vì giông bão lớn, ban tổ chức buộc phải hủy hẳn lễ hội âm nhạc ngoài trời năm nay. 'Call off' là hủy bỏ hoàn toàn, khác với 'put off' là tạm hoãn sang ngày khác."
+  },
+  {
+    "id": "diag-b1-colloc",
+    "level": "B1",
+    "skill": "collocation",
+    "stage": 1,
+    "prompt": "Choose the word that best fits the sentence:",
+    "context": "Solar power is a ______ option for many countries that want to make cleaner energy.",
+    "options": [
+      "reluctant",
+      "punctual",
+      "viable",
+      "willing"
+    ],
+    "answer": 2,
+    "explanation": "'A viable option' means one that can really work. 'Reluctant', 'punctual' and 'willing' describe people, not options: a person can be willing, but an option cannot.",
+    "vietnamese": "Điện mặt trời là một phương án khả thi ('viable option') cho nhiều quốc gia muốn sản xuất năng lượng sạch hơn."
+  },
+  {
+    "id": "diag-b1-gram",
+    "level": "B1",
+    "skill": "grammar",
+    "stage": 2,
+    "prompt": "Choose the correct verb form:",
+    "context": "If I ______ more free time on weekends, I would volunteer at the local animal shelter.",
+    "options": [
+      "had",
+      "have",
+      "will have",
+      "would have"
+    ],
+    "answer": 0,
+    "explanation": "The main clause has 'would volunteer', so the if-clause takes the past simple 'had' to express an unreal present condition (second conditional).",
+    "vietnamese": "Nếu cuối tuần rảnh rỗi hơn, tôi sẽ đi làm tình nguyện ở trạm cứu hộ động vật. Mệnh đề chính dùng 'would volunteer' nên vế 'if' dùng thì quá khứ đơn (had) để diễn tả điều kiện trái với thực tế ở hiện tại (câu điều kiện loại 2)."
+  },
+  {
+    "id": "diag-b1-read",
+    "level": "B1",
+    "skill": "reading",
+    "stage": 3,
+    "prompt": "Read the text and choose the author's main idea:",
+    "context": "Many language learners try very hard to sound exactly like a native speaker. They spend hundreds of hours on small differences in vowel sounds. But in international communication, speaking clearly so that people understand you is more important than copying a native accent. Question: What is the author's main idea about accent training?",
+    "options": [
+      "Learners should spend more time on small vowel sounds",
+      "Clear communication is more important than copying a native accent",
+      "Regional accents always stop people understanding each other",
+      "You need a native-like accent to succeed at work"
+    ],
+    "answer": 1,
+    "explanation": "The author says that being understood matters more than copying a native accent: speaking clearly 'is more important than copying a native accent'.",
+    "vietnamese": "Tác giả khẳng định: trong giao tiếp quốc tế, nói rõ ràng để đôi bên hiểu nhau quan trọng hơn nhiều so với việc tốn hàng trăm giờ cố bắt chước y hệt giọng bản xứ."
+  },
+  {
+    "id": "diag-b1-write",
+    "level": "B1",
+    "skill": "writing",
+    "stage": 5,
+    "prompt": "Choose the sentence that best eliminates wordiness and improves clarity:",
+    "context": "Draft: Due to the fact that the company suffered severe financial losses, it made a decision to reduce employee staff numbers.",
+    "options": [
+      "Due to the fact that the company had severe losses, they made the decision for staff reduction.",
+      "Because the company had suffered losses, they decided that staff reduction was necessary.",
+      "Because the company suffered severe financial losses, it decided to downsize its staff.",
+      "The company's financial losses caused them to make a reduction decision for their staff numbers."
+    ],
+    "answer": 2,
+    "explanation": "'Because the company suffered severe financial losses, it decided to downsize its staff.' replaces the wordy 'Due to the fact that' with 'Because', and swaps the phrase 'made a decision to reduce' for the direct verb 'decided to downsize'.",
+    "vietnamese": "Dùng liên từ 'Because' ngắn gọn thay cho cụm rườm rà 'Due to the fact that', đồng thời dùng động từ trực tiếp 'decided to downsize' thay vì cụm danh từ hóa dài dòng 'made a decision to reduce'."
+  },
+  {
+    "id": "diag-b2-vocab",
+    "level": "B2",
+    "skill": "vocab",
+    "stage": 1,
+    "prompt": "Choose the word that best fits the sentence:",
+    "context": "Leading environmental scientists continue to ______ stricter regulations, arguing that they would protect rivers from industrial waste.",
+    "options": [
+      "suppress",
+      "question",
+      "observe",
+      "advocate"
+    ],
+    "answer": 3,
+    "explanation": "'Advocate' means publicly support. The scientists argue the rules would protect rivers, so they support them; 'suppress' and 'question' are the opposite, and 'observe' (follow or notice) does not match arguing for new rules.",
+    "vietnamese": "Nhiều nhà khoa học môi trường hàng đầu kiên trì lên tiếng ủng hộ ('advocate') các quy định siết chặt việc xả thải công nghiệp để bảo vệ nguồn nước."
+  },
+  {
+    "id": "diag-b2-colloc",
+    "level": "B2",
+    "skill": "collocation",
+    "stage": 1,
+    "prompt": "Choose the verb that correctly completes the legal sentence:",
+    "context": "If the contractor fails to deliver the equipment by the agreed deadline, they will ______ the contract.",
+    "options": [
+      "breach",
+      "fracture",
+      "infringe",
+      "demolish"
+    ],
+    "answer": 0,
+    "explanation": "In legal English, you breach a contract. Infringe applies to patents or copyrights, while fracture and demolish describe physical damage.",
+    "vietnamese": "Nếu nhà thầu không bàn giao thiết bị đúng hạn, họ sẽ bị coi là vi phạm hợp đồng. Trong văn bản pháp lý, đi với 'contract' luôn dùng động từ 'breach' (breach the contract), không dùng 'infringe' hay 'fracture'."
+  },
+  {
+    "id": "diag-b2-gram",
+    "level": "B2",
+    "skill": "grammar",
+    "stage": 2,
+    "prompt": "Choose the correct verb form:",
+    "context": "If the managers ______ the warning signs earlier, the company would have avoided last year's financial crisis.",
+    "options": [
+      "noticed",
+      "had noticed",
+      "would have noticed",
+      "would notice"
+    ],
+    "answer": 1,
+    "explanation": "The main clause has 'would have avoided', so the if-clause takes the past perfect 'had noticed' to talk about an unreal past situation (third conditional). 'Would have noticed' cannot go in an if-clause, and 'noticed' and 'would notice' point to the present or future.",
+    "vietnamese": "Nếu các quản lý nhận ra những dấu hiệu cảnh báo sớm hơn, công ty đã tránh được cuộc khủng hoảng tài chính năm ngoái. Mệnh đề chính dùng 'would have avoided' nên vế 'if' dùng thì quá khứ hoàn thành (had noticed) để diễn tả điều kiện trái với sự thật trong quá khứ (câu điều kiện loại 3)."
+  },
+  {
+    "id": "diag-b2-read",
+    "level": "B2",
+    "skill": "reading",
+    "stage": 3,
+    "prompt": "Read the analysis and identify the hidden drawback described:",
+    "context": "As teams spread out across the world, many companies now use tools that let people work at different times (asynchronous work). This helps them hire talented people from anywhere. However, it has also reduced the casual chats by the watercooler, where colleagues used to share know-how and spark unexpected ideas. Question: What hidden drawback of asynchronous work does the author highlight?",
+    "options": [
+      "Companies cannot hire skilled people from other countries",
+      "The software costs companies more money",
+      "Less casual sharing of knowledge and ideas",
+      "Everyday messages take longer to send"
+    ],
+    "answer": 2,
+    "explanation": "The author notes that remote work reduces the casual chats where people share know-how and spark new ideas.",
+    "vietnamese": "Tác giả chỉ ra điểm bất lợi của làm việc không đồng bộ (asynchronous): làm mất đi những cuộc trò chuyện tình cờ nơi công sở — vốn là cách mọi người chia sẻ kinh nghiệm thực tế và nảy ra những ý tưởng sáng tạo bất ngờ."
+  },
+  {
+    "id": "diag-b2-write",
+    "level": "B2",
+    "skill": "writing",
+    "stage": 5,
+    "prompt": "Choose the sentence that maintains strict grammatical parallelism in a coordinate series:",
+    "context": "Select the sentence where all coordinate elements share an identical grammatical form:",
+    "options": [
+      "The new project manager excels at setting clear objectives, to delegate authority, and motivates her team.",
+      "The new project manager excels at setting clear objectives, authority delegation, and team motivation.",
+      "The new project manager excels at clear objectives, delegating authority, and to motivate her team.",
+      "The new project manager excels at setting clear objectives, delegating authority, and motivating her team."
+    ],
+    "answer": 3,
+    "explanation": "All three coordinate elements use parallel gerund-participle phrases: 'setting clear objectives', 'delegating authority', and 'motivating her team'.",
+    "vietnamese": "Câu chuẩn cấu trúc song hành: cả ba vế liệt kê đều dùng dạng V-ing đồng nhất sau giới từ 'at' ('setting clear objectives, delegating authority, and motivating her team')."
+  },
+  {
+    "id": "diag-c1-vocab",
+    "level": "C1",
+    "skill": "vocab",
+    "stage": 1,
+    "prompt": "Choose the word that best fits the sentence:",
+    "context": "A tranquil and distraction-free environment is highly ______ to deep cognitive focus and sustained productivity.",
+    "options": [
+      "conducive",
+      "detrimental",
+      "irrelevant",
+      "contradictory"
+    ],
+    "answer": 0,
+    "explanation": "'Conducive to' means helping to produce a good outcome. 'Detrimental' means harmful, 'irrelevant' means unrelated, and 'contradictory' means conflicting.",
+    "vietnamese": "Không gian yên tĩnh, không xao nhãng tạo điều kiện rất tốt ('highly conducive to') cho việc tập trung tư duy sâu và làm việc hiệu quả lâu dài."
+  },
+  {
+    "id": "diag-c1-colloc",
+    "level": "C1",
+    "skill": "collocation",
+    "stage": 1,
+    "prompt": "Choose the verb that naturally completes the academic collocation:",
+    "context": "The newly released archival documents ______ considerable credence to the historian's controversial hypothesis.",
+    "options": [
+      "pay",
+      "lend",
+      "raise",
+      "hold"
+    ],
+    "answer": 1,
+    "explanation": "'Lend credence to' is the standard phrase for making an idea or claim more believable. 'Pay', 'raise' and 'hold' do not pair with 'credence'.",
+    "vietnamese": "Tài liệu lưu trữ mới công bố đã tăng thêm sức thuyết phục ('lend credence to') cho giả thuyết vốn gây nhiều tranh cãi của nhà sử học."
+  },
+  {
+    "id": "diag-c1-gram",
+    "level": "C1",
+    "skill": "grammar",
+    "stage": 2,
+    "prompt": "Choose the correct verb form:",
+    "context": "The regulatory commission recommended that the pharmaceutical company ______ all clinical trial data immediately.",
+    "options": [
+      "discloses",
+      "disclosed",
+      "disclose",
+      "should have disclosed"
+    ],
+    "answer": 2,
+    "explanation": "Verbs of recommendation such as 'recommend that' take the subjunctive in the that-clause, using the base form 'disclose' regardless of the subject or tense.",
+    "vietnamese": "Ủy ban quản lý đề nghị hãng dược công khai ngay dữ liệu thử nghiệm lâm sàng. Với thức giả định (subjunctive) sau các động từ như 'recommend that', động từ trong mệnh đề phụ luôn ở dạng nguyên thể không chia ('disclose'), bất kể chủ ngữ là số ít hay số nhiều."
+  },
+  {
+    "id": "diag-c1-read",
+    "level": "C1",
+    "skill": "reading",
+    "stage": 3,
+    "prompt": "Read the excerpt and identify the author's primary concern:",
+    "context": "The contemporary obsession with algorithmic optimization reduces human agency to predictive behavioral trajectories. By preempting genuine cognitive friction through hyper-personalized feeds, platforms engineer an epistemic cocoon that masquerades as effortless choice while steadily atrophying deliberative autonomy. Question: What is the deeper social consequence the author identifies?",
+    "options": [
+      "Users experience frustration when algorithms fail to predict their preferences",
+      "Platforms lose revenue due to inefficient content recommendations",
+      "The illusion of choice erodes users' capacity for independent critical thinking",
+      "Technical infrastructure requires increasingly complex neural networks"
+    ],
+    "answer": 2,
+    "explanation": "The author argues that algorithms weaken people's ability to think critically ('atrophy deliberative autonomy') by offering an easy bubble that feels like freedom but reduces real choice.",
+    "vietnamese": "Tác giả cảnh báo rằng các thuật toán cá nhân hóa nội dung đang tạo ra cảm giác tự do lựa chọn giả tạo, khiến người dùng dần thui chột khả năng tự suy ngẫm và tư duy phản biện độc lập."
+  },
+  {
+    "id": "diag-c1-write",
+    "level": "C1",
+    "skill": "writing",
+    "stage": 5,
+    "prompt": "Choose the revision demonstrating superior periodic cadence and rhetorical focus for academic prose:",
+    "context": "Which revision puts the background concession in a subordinate clause at the start, so the principal finding comes last and carries the emphasis?",
+    "options": [
+      "Although initial telemetry indicated minor orbital decay, subsequent calculations confirmed that the satellite had reached stable equilibrium.",
+      "Initial telemetry indicated minor orbital decay, but subsequent calculations confirmed that the satellite had reached stable equilibrium.",
+      "Subsequent calculations confirmed that the satellite had reached stable equilibrium, and initial telemetry had indicated minor orbital decay.",
+      "Subsequent calculations confirmed the satellite's stable equilibrium, initial telemetry having shown minor orbital decay beforehand."
+    ],
+    "answer": 0,
+    "explanation": "Putting the concession first with 'Although' keeps the background detail secondary and lets the main finding (stable equilibrium) carry the emphasis at the end of the sentence. The coordinated 'but' and 'and' versions give both facts equal weight.",
+    "vietnamese": "Đưa mệnh đề nhượng bộ lên đầu câu ('Although...') giúp nén thông tin nền xuống hàng thứ yếu, từ đó làm nổi bật kết luận quan trọng nhất ở mệnh đề chính: vệ tinh đã đạt trạng thái cân bằng ổn định."
+  },
+  {
+    "id": "diag-c2-vocab",
+    "level": "C2",
+    "skill": "vocab",
+    "stage": 1,
+    "prompt": "Choose the word that best fits the sentence:",
+    "context": "Despite months of multilateral diplomacy, the border dispute proved ______ to conventional mediation protocols.",
+    "options": [
+      "inconsequential",
+      "intractable",
+      "obsequious",
+      "ephemeral"
+    ],
+    "answer": 1,
+    "explanation": "'Intractable' means stubbornly resistant to management, resolution, or cure. 'Inconsequential' means trivial; 'obsequious' means slavishly obedient; 'ephemeral' means temporary. Only 'intractable' captures the idea of persistent difficulty.",
+    "vietnamese": "Dù trải qua nhiều tháng đàm phán đa phương, tranh chấp biên giới vẫn hoàn toàn bế tắc ('intractable'), không thể giải quyết bằng các quy trình hòa giải thông thường."
+  },
+  {
+    "id": "diag-c2-colloc",
+    "level": "C2",
+    "skill": "collocation",
+    "stage": 1,
+    "prompt": "Choose the prepositional phrase that best completes the judicial finding:",
+    "context": "The appellate tribunal struck down the executive decree, ruling that its enforcement was ______ the explicit statutory provisions of the constitution.",
+    "options": [
+      "in keeping with",
+      "on par with",
+      "at variance with",
+      "by dint of"
+    ],
+    "answer": 2,
+    "explanation": "'At variance with' means in direct conflict with a rule or principle. Striking down the decree means it contradicted the constitution.",
+    "vietnamese": "Tòa phúc thẩm bác bỏ sắc lệnh hành pháp vì kết luận rằng việc thi hành sắc lệnh này trái ngược hoàn toàn ('at variance with') với các điều khoản rõ ràng trong hiến pháp."
+  },
+  {
+    "id": "diag-c2-gram",
+    "level": "C2",
+    "skill": "grammar",
+    "stage": 2,
+    "prompt": "Choose the grammatically correct construction to complete the sentence:",
+    "context": "The central bank unexpectedly raised the benchmark interest rate, ______ to their lowest valuations in a decade.",
+    "options": [
+      "as equity prices plummeting",
+      "with equity prices to plummet",
+      "equity prices had plummeted",
+      "equity prices plummeting"
+    ],
+    "answer": 3,
+    "explanation": "The clause uses an absolute construction: a noun phrase ('equity prices') and a participle ('plummeting') describing what happened alongside the rate hike. 'as equity prices plummeting' lacks a finite verb, 'with equity prices to plummet' misuses an infinitive, and 'equity prices had plummeted' creates a comma splice.",
+    "vietnamese": "Ngân hàng trung ương bất ngờ tăng lãi suất điều hành, khiến giá cổ phiếu lao dốc xuống mức thấp nhất trong mười năm. Cụm tuyệt đối (nominative absolute) 'equity prices plummeting' bổ nghĩa tình huống đi kèm cho mệnh đề chính mà không cần liên từ hay to-be."
+  },
+  {
+    "id": "diag-c2-read",
+    "level": "C2",
+    "skill": "reading",
+    "stage": 3,
+    "prompt": "Read the philosophical passage and identify the author's primary thesis:",
+    "context": "Language does not merely register preexisting reality; it circumscribes the horizons of intelligible thought. When discourse is colonized by prefabricated ideological cant and decayed metaphors, the intellect forfeits its capacity for forensic appraisal. The regeneration of syntax is thus not an aesthetic indulgence, but the prerequisite for civic sanity. Question: What is the author's primary philosophical thesis?",
+    "options": [
+      "Linguistic precision is indispensable for preserving intellectual and civic freedom",
+      "Aesthetic ornamentation in prose naturally degenerates over historical epochs",
+      "Ideological uniformity is an inevitable consequence of mass political discourse",
+      "Grammatical rules should be relaxed to accommodate evolving popular idioms"
+    ],
+    "answer": 0,
+    "explanation": "The author argues that clear, precise language is necessary for independent thought and a healthy civic life.",
+    "vietnamese": "Luận điểm cốt lõi của tác giả: bảo vệ sự trong sáng và chuẩn xác của ngôn ngữ chính là nền tảng sống còn để giữ gìn tư duy độc lập và lý trí xã hội trước các sáo ngữ mị dân."
+  },
+  {
+    "id": "diag-c2-write",
+    "level": "C2",
+    "skill": "writing",
+    "stage": 5,
+    "prompt": "Identify the sentence that deploys the classical rhetorical figure of chiasmus:",
+    "context": "Which sentence achieves stylistic impact through an inverted syntactic reversal of its key concepts across coordinate clauses?",
+    "options": [
+      "We construct our civic institutions through sacrifice, and we preserve those institutions through vigilance.",
+      "We shape our architectural dwellings, and afterwards our dwellings shape our civic lives.",
+      "While our buildings are erected through human labor, our collective history is forged through hardship.",
+      "Because architects design with calculated foresight, citizens inhabit spaces of enduring harmony."
+    ],
+    "answer": 1,
+    "explanation": "'We shape our architectural dwellings, and afterwards our dwellings shape our civic lives.' is chiasmus: the order 'shape (A) ... dwellings (B)' is reversed in the second clause as 'dwellings (B) ... shape (A)'. The sentence with 'through sacrifice ... through vigilance' is parallelism; the 'While our buildings are erected' sentence is a simple antithetical comparison; the 'Because architects design' sentence is a causal complex sentence.",
+    "vietnamese": "Câu 'We shape our architectural dwellings, and afterwards our dwellings shape our civic lives' vận dụng phép đối xứng chéo (chiasmus, kết cấu ABBA): vế đầu là 'nhào nặn công trình' (shape ... dwellings), vế sau đảo ngược lại thành 'công trình nhào nặn' (dwellings shape ... lives)."
+  }
+]

@@ -57,13 +57,13 @@ export class PlacementQuiz {
   }
 
   private card(inner: string): void {
-    this.overlay.innerHTML = `<div class="completion-receipt-card" style="max-width: 520px; width: 90%;">${inner}</div>`;
+    this.overlay.innerHTML = `<div class="completion-receipt-card" style="max-width: 520px; width: 100%;">${inner}</div>`;
   }
 
   private renderIntro(): void {
     this.card(`
       <div class="telemetry-label" style="margin-bottom: var(--space-8);">FIND YOUR LEVEL</div>
-      <p style="font-size: 14px; line-height: 1.5; margin-bottom: var(--space-16); color: var(--ink-secondary);">
+      <p style="font-size: var(--font-h4); line-height: 1.5; margin-bottom: var(--space-16); color: var(--ink-secondary);">
         Answer a few quick questions and the app will start you at the right CEFR level (A1 to C2). It stops as soon as
         questions get too hard. You can change your level at any time.
       </p>
@@ -92,8 +92,8 @@ export class PlacementQuiz {
         <span>QUESTION ${this.index + 1} / ${this.questions.length} &middot; ${q.level}</span>
         <span class="hud-badge placement-skill-badge" style="letter-spacing: 0.05em; font-weight: 700; color: var(--gold-primary, #ca8a04);">${badgeText}</span>
       </div>
-      <div style="font-size: 20px; font-weight: 700; margin-bottom: var(--space-4);">${this.escape(q.prompt)}</div>
-      ${q.context ? `<div style="font-size: 13px; color: var(--ink-secondary); margin-bottom: var(--space-16);">${this.escape(q.context)}</div>` : '<div style="margin-bottom: var(--space-16);"></div>'}
+      <div style="font-size: var(--font-h2); font-weight: 700; margin-bottom: var(--space-4);">${this.escape(q.prompt)}</div>
+      ${q.context ? `<div style="font-size: var(--font-body-compact); color: var(--ink-secondary); margin-bottom: var(--space-16);">${this.escape(q.context)}</div>` : '<div style="margin-bottom: var(--space-16);"></div>'}
       <div role="group" aria-label="Choose the answer" style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8);">
         ${q.options.map((o, i) => `<button class="hud-btn placement-option" data-i="${i}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 10px 14px; text-align: left; white-space: normal; height: auto; text-transform: none;">${i + 1}. ${this.escape(o)}</button>`).join('')}
       </div>
@@ -125,8 +125,8 @@ export class PlacementQuiz {
     const level = placeLevel(this.correct);
     this.card(`
       <div class="telemetry-label" style="margin-bottom: var(--space-8);">YOUR LEVEL</div>
-      <div style="font-size: 24px; font-weight: 700; margin-bottom: var(--space-8);">${CEFR_LABELS[level]}</div>
-      <p style="font-size: 14px; color: var(--ink-secondary); margin-bottom: var(--space-16);">
+      <div style="font-size: var(--font-h1); font-weight: 700; margin-bottom: var(--space-8);">${CEFR_LABELS[level]}</div>
+      <p style="font-size: var(--font-h4); color: var(--ink-secondary); margin-bottom: var(--space-16);">
         This is a balanced 24-question multi-skill diagnostic estimate (Vocabulary, Collocations, Grammar, and Reading). Pick another level if it feels too easy or too hard.
       </p>
       <div style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8);">

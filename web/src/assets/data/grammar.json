@@ -11,7 +11,7 @@
     "vietnamese": "Đảo ngữ với Seldom: đưa trạng từ phủ định lên đầu câu, đảo trợ động từ 'did' lên trước chủ ngữ.",
     "formula": "Seldom + Auxiliary Verb + Subject + Main Verb (Base Form)",
     "analysis": "When negative frequency adverbs ('seldom', 'rarely', 'scarcely') are moved to the sentence-initial position for rhetorical emphasis, English requires standard subject-auxiliary inversion in the main clause.",
-    "exemplarContext": "Seldom did the board intervene in day-to-day algorithmic trading executions unless predetermined risk thresholds were breached."
+    "exemplarContext": "Seldom did early astronomers observe such sudden changes in planetary brightness without subsequent solar flare activity."
   },
   {
     "title": "Negative Inversion with 'Rarely'",
@@ -39,7 +39,7 @@
     "vietnamese": "Đảo ngữ với cấu trúc Vừa mới... thì (Hardly had + S + V3 when S + V2).",
     "formula": "Hardly + had + Subject + Past Participle... + when + Subject + Simple Past Verb",
     "analysis": "Used to describe an event immediately followed by another. The first past event requires past perfect inverted syntax ('Hardly had [subject] [participle]'), followed by the subordinate time conjunction 'when'.",
-    "exemplarContext": "Hardly had the regulatory mandate taken effect when arbitrageurs identified legal loopholes."
+    "exemplarContext": "Hardly had the research vessel dropped anchor in the archipelago when unexpected gale-force winds forced a change in course."
   },
   {
     "title": "Conditional Inversion Type 1 ('Should...')",
@@ -47,13 +47,13 @@
     "mode": "INVERSION_EMPHASIS",
     "level": 1,
     "cefrLevel": "C1",
-    "promptSentence": "If you encounter any anomalous discrepancies in the audit log, notify security immediately.",
-    "targetTransformation": "Should you encounter any anomalous discrepancies in the audit log, notify security immediately.",
+    "promptSentence": "If you encounter any discrepancies in the audit log, notify security immediately.",
+    "targetTransformation": "Should you encounter any discrepancies in the audit log, notify security immediately.",
     "grammaticalCue": "Omit 'if' and invert modal auxiliary 'should' to the front in conditional clauses.",
     "vietnamese": "Đảo ngữ câu điều kiện loại 1: Bỏ 'if', đảo 'Should' lên trước chủ ngữ để tăng tính trang trọng.",
     "formula": "Should + Subject + Base Verb..., [Imperative or Future Main Clause]",
     "analysis": "In formal and business English, replacing 'if + subject + present verb' with initial modal 'should' conveys high professional decorum without altering conditional truth semantics.",
-    "exemplarContext": "Should market volatility exceed five standard deviations, circuit breakers automatically halt trading."
+    "exemplarContext": "Should field investigators detect anomalous seismic signals near the dormant caldera, the geological observatory alerts civil protection teams without delay."
   },
   {
     "title": "It-Cleft Sentence for Subject Focus",
@@ -67,7 +67,7 @@
     "vietnamese": "Câu chẻ (It-cleft): Nhấn mạnh đích danh chủ ngữ gây ra hành động bằng cấu trúc 'It was X that...'",
     "formula": "It + is/was + Focused Element + that/who + Remaining Proposition",
     "analysis": "An it-cleft isolates the focal constituent (the subject) into the predicate of an introductory copula clause, explicitly contrasting it against competing alternative causes.",
-    "exemplarContext": "It was reckless leverage rather than technological failure that precipitated the exchange's collapse."
+    "exemplarContext": "It was structural masonry failure rather than foundation subsidence that precipitated the historic aqueduct's partial collapse."
   },
   {
     "title": "Negative Inversion with 'Not only... but also'",
@@ -92,10 +92,10 @@
     "promptSentence": "If the consortium were to withdraw funding, the infrastructure project would stall indefinitely.",
     "targetTransformation": "Were the consortium to withdraw funding, the infrastructure project would stall indefinitely.",
     "grammaticalCue": "Omit 'if' and invert subjunctive copula 'were' with infinitive complement.",
-    "vietnamese": "Đảo ngữ câu điều kiện loại 2: Đảo 'Were' lên đầu câu thay cho 'If', động từ chính chuyển thành 'to-V'.",
+    "vietnamese": "Đảo ngữ câu điều kiện loại 2: Đảo 'Were' lên đầu câu thay cho 'If', động từ chính chuyển thành 'to-V'. Cấu trúc này làm câu văn trang trọng hơn và ngụ ý rằng khả năng điều này xảy ra là rất thấp.",
     "formula": "Were + Subject + to-Infinitive..., Subject + would/could + Base Verb",
-    "analysis": "Omitting the conditional subordinator 'if' and advancing subjunctive 'were' creates a sleek, elevated hypothetical proposition indicating low subjective probability.",
-    "exemplarContext": "Were sovereign bond yields to spike unpredictably, refinancing costs across municipalities would double."
+    "analysis": "Omitting the conditional subordinator 'if' and advancing subjunctive 'were' creates an elevated hypothetical proposition indicating that the event is unlikely to happen.",
+    "exemplarContext": "Were international donors to withhold emergency funding, regional biodiversity preservation programs would halt within months."
   },
   {
     "title": "Wh-Cleft / Pseudo-Cleft with 'What...'",
@@ -109,7 +109,7 @@
     "vietnamese": "Câu chẻ giả (Wh-cleft / Pseudo-cleft): Đưa mệnh đề 'What...' lên đầu để dồn toàn bộ trọng tâm sang vị ngữ.",
     "formula": "What + Subject + Verb... + is/was + Focal Noun Phrase / Infinitive Phrase",
     "analysis": "A pseudo-cleft establishes a presupposition in the subject relative clause ('What we need'), reserving the informational climax for the complement following the copular verb 'is'.",
-    "exemplarContext": "What institutional investors crave during macroeconomic turbulence is predictability rather than heroic intervention."
+    "exemplarContext": "What documentary filmmakers seek during extended field expeditions is patience and genuine rapport with local communities."
   },
   {
     "title": "Prepositional Phrase Fronting with Full Inversion",
@@ -151,7 +151,7 @@
     "vietnamese": "Đảo ngữ câu điều kiện loại 3: Bỏ 'if', đảo 'Had' lên đầu câu trước chủ ngữ để diễn tả giả định quá khứ.",
     "formula": "Had + Subject + Past Participle..., Subject + would/might/could have + Past Participle",
     "analysis": "Third conditional inversion ('Had [subject] [participle]') eliminates conversational 'if', establishing a sharp counterfactual premise characteristic of rigorous academic historiography and legal analysis.",
-    "exemplarContext": "Had the committee audited off-balance-sheet vehicles, the liquidity crisis would have been arrested."
+    "exemplarContext": "Had the conservation team deployed acoustic monitoring sensors across the canopy earlier, the endangered gibbon population might have been documented far sooner."
   },
   {
     "title": "Negative Inversion with 'Not until...'",
@@ -165,10 +165,10 @@
     "vietnamese": "Đảo ngữ với 'Not until': Mệnh đề sau 'Not until' giữ nguyên, chỉ đảo trợ động từ ở mệnh đề chính.",
     "formula": "Not until + Subordinate Clause/Time Expression + Auxiliary + Subject + Main Verb",
     "analysis": "A common pitfall is attempting to invert the subordinate time clause. Correct grammar leaves the 'until' clause uninverted and applies auxiliary inversion exclusively to the governing matrix clause ('did the public understand').",
-    "exemplarContext": "Not until the forensic ledger was subpoenaed did regulators comprehend the magnitude of the embezzlement."
+    "exemplarContext": "Not until high-resolution satellite imagery became publicly available did glaciologists realize how quickly the ice shelf had fractured."
   },
   {
-    "title": "Comparative / Degree Inversion with 'So / Such... that'",
+    "title": "Degree Inversion with 'So... that'",
     "id": "gram-inv-13",
     "mode": "INVERSION_EMPHASIS",
     "level": 3,
@@ -182,7 +182,7 @@
     "exemplarContext": "So entrenched was the bureaucratic inertia that three successive cabinet reshuffles failed to enforce reform."
   },
   {
-    "title": "All-Cleft & Reverse Wh-Cleft",
+    "title": "All-Cleft",
     "id": "gram-inv-14",
     "mode": "INVERSION_EMPHASIS",
     "level": 3,
@@ -290,7 +290,7 @@
     "grammaticalCue": "Express counterfactual present desire using 'wish + past tense' to signal distance from reality.",
     "vietnamese": "Ước muốn trái ngược với thực tại ở hiện tại: Dùng 'wish + Past Simple' (did not rely).",
     "formula": "Subject + wish(es) + (that) + Subject + Simple Past Verb (signaling counterfactuality)",
-    "analysis": "The unreal past tense functions as a modal preterite, encoding subjective distance from current reality rather than chronological past time.",
+    "analysis": "The unreal past tense functions as a modal preterite, encoding subjective distance from current reality rather than chronological past time. The basic B1 version of this structure is gram-b1-14; this item practises it in a formal register.",
     "exemplarContext": "Economists wish central bank governors possessed more granular tools than blunt interest rate levers."
   },
   {
@@ -410,7 +410,7 @@
     "id": "gram-subj-12",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 3,
-    "cefrLevel": "B2",
+    "cefrLevel": "C1",
     "promptSentence": "Because the developers did not architect modular microservices in 2021, the application is unmaintainable today.",
     "targetTransformation": "Had the developers architected modular microservices in 2021, the application would be maintainable today.",
     "grammaticalCue": "Blend inverted past perfect condition ('Had... architected') with present modal result ('would be').",
@@ -434,7 +434,7 @@
     "exemplarContext": "Were sovereign debt markets less liquid, yesterday's treasury auction would have triggered widespread bond market panic."
   },
   {
-    "title": "Concessive Subjunctive 'Suffice it to say'",
+    "title": "Formulaic Subjunctive 'Suffice it to say'",
     "id": "gram-subj-14",
     "mode": "SUBJUNCTIVE_UNREAL",
     "level": 3,
@@ -584,7 +584,7 @@
     "grammaticalCue": "Convert prior causal clause into perfect participle 'Having + past participle'.",
     "vietnamese": "Rút gọn mệnh đề nguyên nhân xảy ra trước bằng phân từ hoàn thành 'Having + V3'.",
     "formula": "Having + Past Participle Phrase, Subject + Main Verb",
-    "analysis": "A perfect participle ('Having exhausted') explicitly marks anteriority—proving that the participial event was completed prior to the onset of the main clause action.",
+    "analysis": "A perfect participle ('Having exhausted') explicitly marks anteriority, showing that the participial event was completed prior to the onset of the main clause action.",
     "exemplarContext": "Having secured unanimous shareholder endorsement, the management board executed the cross-border merger."
   },
   {
@@ -624,7 +624,7 @@
     "promptSentence": "Because the market close was rapidly approaching, day traders liquidated their speculative derivative calls.",
     "targetTransformation": "The market close rapidly approaching, day traders liquidated their speculative derivative calls.",
     "grammaticalCue": "Create an absolute clause: noun phrase subject + participle phrase, grammatically independent of main clause.",
-    "vietnamese": "Cấu trúc tuyệt đối (Absolute Construction): Danh từ riêng đi với phân từ, không cần liên từ nối.",
+    "vietnamese": "Cấu trúc tuyệt đối (Absolute Construction): Cụm danh từ đi với phân từ, không cần liên từ nối.",
     "formula": "Noun Phrase + Participle (-ing / -ed) Phrase, Subject + Main Verb",
     "analysis": "An absolute construction possesses its own overt subject ('The market close'), distinct from the main clause subject ('day traders'). It attaches to the sentence without any subordinating conjunction.",
     "exemplarContext": "All quorum hurdles successfully cleared, the parliamentary assembly proceeded to ratify the constitution."
@@ -668,7 +668,7 @@
     "grammaticalCue": "Position negative particle 'Not' immediately before the perfect participle 'having anticipated'.",
     "vietnamese": "Rút gọn phân từ hoàn thành thể phủ định: Đặt 'Not' đứng trước 'Having + V3'.",
     "formula": "Not + having + Past Participle Phrase, Subject + Main Verb",
-    "analysis": "In negative participial constructions, standard syntactic rules require placing 'not' as the very first word preceding the auxiliary participle 'having', never internally.",
+    "analysis": "In negative participial constructions, 'not' usually comes first, directly before the perfect participle 'having' ('Not having anticipated'). The internal order 'Having not anticipated' does occur, but it is less usual in formal prose.",
     "exemplarContext": "Not having received written confirmation from the ministry, the general refused to mobilize reserve brigades."
   },
   {
@@ -683,7 +683,7 @@
     "vietnamese": "Kỹ thuật phân từ kép song hành (Double Participle Sandwich): Kết hợp hai cụm V3 tăng cường nhịp điệu dồn dập.",
     "formula": "Past Participle Phrase 1 and Past Participle Phrase 2, Subject + Main Verb",
     "analysis": "Stacking coordinated participial phrases in parallel rhythmically heightens causal tension before dropping the hammer on the final independent clause.",
-    "exemplarContext": "Stunned by the unexpected verdict and facing immediate extradition, the fugitive collapsed in open court."
+    "exemplarContext": "Stunned by the unexpected verdict and threatened with immediate extradition, the fugitive collapsed in open court."
   },
   {
     "title": "Absolute Construction Expressing Metric Outcome",
@@ -707,10 +707,10 @@
     "cefrLevel": "C2",
     "promptSentence": "Although it was seemingly an intractable logistical deadlock, the dispute was resolved within forty-eight hours.",
     "targetTransformation": "Though seemingly an intractable logistical deadlock, the dispute was resolved within forty-eight hours.",
-    "grammaticalCue": "Retain concessive 'Though' while ellipting expletive subject 'it' and copula 'was'.",
-    "vietnamese": "Rút gọn mệnh đề nhượng bộ bằng tỉnh lược (Ellipsis): Giữ 'Though', lược bỏ chủ ngữ giả và to-be.",
+    "grammaticalCue": "Retain concessive 'Though' while ellipting the subject pronoun 'it' and the copula 'was'.",
+    "vietnamese": "Rút gọn mệnh đề nhượng bộ bằng tỉnh lược (Ellipsis): Giữ 'Though', lược bỏ đại từ chủ ngữ 'it' và to-be.",
     "formula": "Though / Although + Adverb + Noun Phrase Complement, Subject + Main Verb",
-    "analysis": "Syntactic ellipsis eliminates empty expletives ('it was') in introductory concessive clauses, throwing maximum semantic weight directly onto the descriptive noun phrase complement.",
+    "analysis": "Syntactic ellipsis removes the subject pronoun plus copula ('it was') in introductory concessive clauses, throwing maximum semantic weight directly onto the descriptive noun phrase complement.",
     "exemplarContext": "Though initially a modest regional initiative, the economic corridor evolved into a trillion-dollar trade artery."
   },
   {
@@ -851,7 +851,7 @@
     "vietnamese": "Sửa lỗi đặt sai vị trí từ hạn định 'Only': Đặt 'only' ngay trước đối tượng cần bổ nghĩa (only three).",
     "formula": "Subject + Verb + only + Quantifier / Object Noun Phrase",
     "analysis": "Positioning 'only' before the verb 'flagged' technically asserts that flagging was the sole action the officer performed (e.g., she didn't approve or delete them). Moving it before 'three' correctly restricts the numerical count.",
-    "exemplarContext": "The appellate court granted certiorari to only one constitutional claim among the dozen raised."
+    "exemplarContext": "The appellate court granted review of only one constitutional claim among the dozen raised."
   },
   {
     "title": "Faulty Comparison / Illogical Parallelism ('More than that of')",
@@ -892,7 +892,7 @@
     "grammaticalCue": "Use restrictive pronoun 'that' without commas to define an essential subset of trade secrets.",
     "vietnamese": "Phân biệt mệnh đề quan hệ xác định (that) và không xác định (, which,): Chọn 'that' để xác định nhóm cụ thể.",
     "formula": "Noun Phrase + that + Restrictive Clause (no commas) + Predicate",
-    "analysis": "Surrounding the clause with commas and using 'which' implies that all trade secrets in existence were acquired during the venture. Omitting commas and using 'that' restricts the obligation exclusively to the subset acquired during the venture.",
+    "analysis": "Surrounding the clause with commas and using 'which' implies that all trade secrets in existence were acquired during the venture. Omitting commas and using 'that' restricts the obligation exclusively to the subset acquired during the venture. Note that reserving 'that' for restrictive clauses and 'which' for non-restrictive ones is an American style convention; British usage often accepts 'which' in restrictive clauses too, so the comma is the more reliable signal.",
     "exemplarContext": "Assets that are subject to sovereign freeze orders cannot be collateralized in repo markets."
   },
   {
@@ -907,7 +907,7 @@
     "vietnamese": "Sửa lỗi danh động từ lơ lửng: Lỗ hổng bảo mật không thể 'mổ xẻ mã độc', đội ngũ an ninh phải làm chủ ngữ.",
     "formula": "After + -ing Phrase, Human Agent Subject + Active Verb + Object",
     "analysis": "A passive main clause following a temporal prepositional gerund phrase falsely attributes the gerund's action to the grammatical subject ('the zero-day vulnerability'). Restoring the agent ('our security team') cures the semantic absurdity.",
-    "exemplarContext": "Upon completing the forensic autopsy of the insolvent exchange, the court-appointed liquidator filed for Chapter 11 protections."
+    "exemplarContext": "Upon completing the forensic autopsy of the insolvent exchange, the court-appointed liquidator filed claims against the former directors."
   },
   {
     "title": "Squinting Modifier Disambiguation",
@@ -917,10 +917,10 @@
     "cefrLevel": "C2",
     "promptSentence": "Board members who review compensation packages frequently express severe dissatisfaction.",
     "targetTransformation": "Board members who frequently review compensation packages express severe dissatisfaction.",
-    "grammaticalCue": "Disambiguate adverb 'frequently' so it clearly modifies either the relative clause or the main verb.",
-    "vietnamese": "Khắc phục bổ ngữ mập mờ (Squinting Modifier): Di chuyển 'frequently' để làm rõ xem họ xem xét thường xuyên hay phàn nàn thường xuyên.",
+    "grammaticalCue": "Disambiguate adverb 'frequently' so it clearly modifies 'review' (intended meaning: the reviewing is frequent, not the complaining).",
+    "vietnamese": "Khắc phục bổ ngữ mập mờ (Squinting Modifier): Di chuyển 'frequently' để làm rõ nghĩa. Ở đây, nghĩa cần diễn đạt là họ xem xét thường xuyên (không phải phàn nàn thường xuyên).",
     "formula": "Subject + who + Adverb + Verb... + Main Predicate",
-    "analysis": "A squinting modifier is sandwiched ambiguously between two syntactic verbs, making it impossible to determine whether 'frequently' modifies the preceding verb 'review' or the succeeding verb 'express'. Moving it inside the relative clause resolves the ambiguity.",
+    "analysis": "A squinting modifier is sandwiched ambiguously between two syntactic verbs, making it impossible to determine whether 'frequently' modifies the preceding verb 'review' or the succeeding verb 'express'. Moving it inside the relative clause ('who frequently review') resolves the ambiguity in the intended reading; if the writer meant that the complaining is frequent, the valid repair would instead be to move it to the end ('...express severe dissatisfaction frequently').",
     "exemplarContext": "Executives who consistently communicate clear architectural boundaries inspire enduring organizational trust."
   },
   {
@@ -959,7 +959,7 @@
     "cefrLevel": "C2",
     "promptSentence": "The transformation plan entails the restructuring of internal debt and to divest non-core semiconductor assets.",
     "targetTransformation": "The transformation plan entails restructuring internal debt and divesting non-core semiconductor assets.",
-    "grammaticalCue": "Eliminate clash between prepositional noun phrase 'the restructuring of' and infinitive 'to divest'.",
+    "grammaticalCue": "Eliminate clash between prepositional noun phrase 'the restructuring of' and infinitive 'to divest' by rewriting both coordinate objects as bare gerund (-ing) phrases.",
     "vietnamese": "Đồng bộ hóa danh từ hóa và động từ: Chuyển toàn bộ thành cụm danh động từ (restructuring... divesting...).",
     "formula": "Subject + entails + Gerund Phrase 1 and Gerund Phrase 2",
     "analysis": "Pairing a Latinate nominalization with an infinitive phrase produces clumsy, asymmetric syntax. Harmonizing both coordinate objects into direct gerund phrases creates aerodynamic structural balance.",
@@ -985,9 +985,9 @@
     "mode": "SYNTACTIC_PRECISION",
     "level": 2,
     "cefrLevel": "B2",
-    "promptSentence": "When the chief executive met the auditor, she insisted that her figures were accurate.",
+    "promptSentence": "The chief executive had written the quarterly report. When the chief executive met the auditor, she insisted that her figures were accurate.",
     "targetTransformation": "The chief executive insisted to the auditor that her own figures were accurate.",
-    "grammaticalCue": "Two singular female antecedents precede 'she' and 'her'; restructure so that the intended referent is the only salient candidate.",
+    "grammaticalCue": "Two singular female antecedents precede 'she' and 'her'; the intended referent is the chief executive (she wrote the report), so restructure so that she is the only salient candidate.",
     "vietnamese": "Sửa lỗi đại từ quy chiếu mơ hồ: khi có hai danh từ cùng giống, cùng số đứng trước, cần lặp lại danh từ hoặc tái cấu trúc câu để đại từ chỉ có một tiền ngữ duy nhất.",
     "formula": "Repeat the antecedent noun | Recast so the antecedent is the clause subject | Bind the possessive with 'own' or use a reflexive",
     "analysis": "A pronoun is ambiguous whenever more than one preceding noun phrase matches it in person, number and gender; readers then default to the subject or to the most recent noun, and either guess may be wrong. Repair strategies include repeating the noun, recasting the sentence so that the intended antecedent is the subject of the same clause, or adding 'own' to tie the possessive to that subject. Singular 'they' can create the same ambiguity when both antecedents are unspecified for gender.",
@@ -1127,7 +1127,7 @@
     "cefrLevel": "A1",
     "promptSentence": "I work in a shop.",
     "targetTransformation": "She works in a shop.",
-    "grammaticalCue": "Add -s to the verb after he, she or it.",
+    "grammaticalCue": "Change 'I' to 'she' and add -s to the verb.",
     "vietnamese": "Với he/she/it, thêm -s hoặc -es vào động từ. Tiếng Việt không đổi động từ theo chủ ngữ, nên người học hay quên -s.",
     "formula": "He/She/It + verb + s",
     "analysis": "In the present simple, the verb changes after he, she and it. We add -s to the base verb.",
@@ -1197,7 +1197,7 @@
     "cefrLevel": "A1",
     "promptSentence": "You eat lunch at noon.",
     "targetTransformation": "When do you eat lunch?",
-    "grammaticalCue": "Put the question word first, then 'do'.",
+    "grammaticalCue": "Ask about the time ('at noon'): put 'When' first, then 'do'.",
     "vietnamese": "Câu hỏi Wh với thì hiện tại đơn: Từ để hỏi + do/does + chủ ngữ + động từ nguyên mẫu. Tiếng Việt để từ hỏi ở cuối câu, tiếng Anh đưa lên đầu.",
     "formula": "Wh-word + do/does + subject + base verb?",
     "analysis": "The question word comes at the start. Then we use 'do' or 'does' and the subject.",
@@ -1225,7 +1225,7 @@
     "cefrLevel": "A1",
     "promptSentence": "He is late.",
     "targetTransformation": "He is never late.",
-    "grammaticalCue": "Put the adverb after 'is', 'am' or 'are'.",
+    "grammaticalCue": "Add 'never' and put it after 'is', 'am' or 'are'.",
     "vietnamese": "Với động từ 'be', trạng từ tần suất đứng sau am/is/are, khác với động từ thường (đứng trước). Tiếng Việt thường đặt 'không bao giờ' trước động từ.",
     "formula": "Subject + am/is/are + adverb",
     "analysis": "With the verb 'be', the adverb comes after it. This is different from other verbs.",
@@ -1254,10 +1254,10 @@
     "promptSentence": "She has one egg.",
     "targetTransformation": "She has an egg.",
     "grammaticalCue": "Use 'an' before a vowel sound.",
-    "vietnamese": "Mạo từ 'an' dùng trước từ bắt đầu bằng nguyên âm (a, e, i, o, u). Tiếng Việt dùng 'một' cho mọi danh từ, còn tiếng Anh phải chọn a hoặc an.",
+    "vietnamese": "Mạo từ 'an' dùng trước từ bắt đầu bằng âm nguyên âm (không phải chữ cái nguyên âm): 'an egg', 'an hour' (h câm), nhưng 'a university' (bắt đầu bằng âm /j/). Tiếng Việt dùng 'một' cho mọi danh từ, còn tiếng Anh phải chọn a hoặc an.",
     "formula": "an + noun starting with a vowel sound",
-    "analysis": "We use 'a' before a consonant sound and 'an' before a vowel sound. 'Egg' starts with a vowel sound.",
-    "exemplarContext": "I eat an apple every day."
+    "analysis": "We use 'a' before a consonant sound and 'an' before a vowel sound. 'Egg' starts with a vowel sound. The sound matters, not the spelling: 'hour' starts with a vowel sound (silent h), so we say 'an hour'; 'university' starts with the consonant sound /j/, so we say 'a university'.",
+    "exemplarContext": "I eat an apple, then wait an hour for a university bus."
   },
   {
     "title": "'a' and 'the'",
@@ -1299,7 +1299,7 @@
     "vietnamese": "Số nhiều của 'this' là 'these', và 'is' đổi thành 'are'. Danh từ phải thêm -s. Tiếng Việt chỉ thêm 'những' hoặc 'các'.",
     "formula": "These + are + plural noun",
     "analysis": "'These' is the plural of 'this'. We use 'are' and a plural noun with it.",
-    "exemplarContext": "Those are my shoes."
+    "exemplarContext": "These are my shoes."
   },
   {
     "title": "Wh-question with 'what'",
@@ -1587,12 +1587,12 @@
     "mode": "A2_COMPARISON_AND_MODALS",
     "level": 1,
     "cefrLevel": "A2",
-    "promptSentence": "The train is fast. The bus is not fast.",
+    "promptSentence": "The train is comfortable. The bus is not comfortable.",
     "targetTransformation": "The train is more comfortable than the bus.",
-    "grammaticalCue": "Use more before a long adjective, with no -er.",
-    "vietnamese": "Với tính từ dài (từ hai âm tiết trở lên) dùng more + adj + than, không thêm -er. Tiếng Việt vẫn chỉ dùng \"hơn\".",
+    "grammaticalCue": "Use more before a long adjective such as 'comfortable', with no -er.",
+    "vietnamese": "Với tính từ dài (ba âm tiết trở lên) dùng more + adj + than, không thêm -er. Tính từ hai âm tiết thì đa số dùng more (more careful, more modern), trừ những từ tận cùng bằng -y (happy - happier) và một số từ như narrow, simple, clever thường dùng -er. Tiếng Việt vẫn chỉ dùng \"hơn\".",
     "formula": "Subject + be + more + Adjective + than + Noun",
-    "analysis": "'Comfortable' is a long adjective, so we use 'more'. We never say 'more comfortabler'.",
+    "analysis": "'Comfortable' has three syllables, so we use 'more'. We never say 'more comfortabler'. Most adjectives with three or more syllables take 'more'; two-syllable adjectives mostly take 'more' too, except those ending in -y ('happier') and a few such as 'narrow', 'simple' and 'clever'.",
     "exemplarContext": "English is more interesting than maths for me."
   },
   {
@@ -1601,9 +1601,9 @@
     "mode": "A2_COMPARISON_AND_MODALS",
     "level": 1,
     "cefrLevel": "A2",
-    "promptSentence": "Today is good and hot.",
-    "targetTransformation": "Today is better, but yesterday was hotter.",
-    "grammaticalCue": "Good becomes better, and short adjectives like hot double the last letter.",
+    "promptSentence": "Today is hot and good. Yesterday was not so hot and not so good.",
+    "targetTransformation": "Today is hotter and better than yesterday.",
+    "grammaticalCue": "Compare today with yesterday: good becomes better, and short adjectives like hot double the last letter.",
     "vietnamese": "Một số tính từ đặc biệt: good - better, bad - worse. Tính từ ngắn như hot, big gấp đôi phụ âm cuối: hotter, bigger. Tiếng Việt không đổi hình thức từ.",
     "formula": "good → better; bad → worse; consonant + vowel + consonant → double + er",
     "analysis": "'Good' has a special form, 'better'. 'Hot' becomes 'hotter' with a double t.",
@@ -1673,10 +1673,10 @@
     "cefrLevel": "A2",
     "promptSentence": "Students wear a uniform at school.",
     "targetTransformation": "Students must wear a uniform at school.",
-    "grammaticalCue": "Use must or have to for a rule or something necessary.",
+    "grammaticalCue": "Use the modal 'must' (not 'have to') for a school rule.",
     "vietnamese": "Must và have to đều có nghĩa \"phải\". Must là quy định mạnh, have to là điều cần thiết từ bên ngoài. Phủ định khác nhau: mustn't là \"cấm\", don't have to là \"không cần\".",
     "formula": "Subject + must/have to + Base Verb",
-    "analysis": "'Must' is strong and does not change. With 'he' or 'she', we say 'has to'.",
+    "analysis": "'Must' is strong and does not change. With 'he' or 'she', we say 'has to'. In 'Students must wear a uniform' the sentence 'Students have to wear a uniform' is also correct; this exercise practises 'must'.",
     "exemplarContext": "She has to get up early on Monday."
   },
   {
@@ -1813,11 +1813,11 @@
     "cefrLevel": "B1",
     "promptSentence": "Plants die when they don't get water.",
     "targetTransformation": "If plants don't get water, they die.",
-    "grammaticalCue": "Zero conditional can also describe a general rule or a result that always follows.",
-    "vietnamese": "Câu điều kiện loại 0 cũng dùng cho quy luật chung. Cả hai vế dùng hiện tại đơn, không dùng 'will'. Sai thường gặp: 'If plants don't get water, they will die' khi nói quy luật chung.",
+    "grammaticalCue": "Zero conditional can also describe a general rule or a result that always follows; both clauses are usually present simple.",
+    "vietnamese": "Câu điều kiện loại 0 cũng dùng cho quy luật chung. Cả hai vế thường dùng hiện tại đơn. Lưu ý: 'If plants don't get water, they will die' vẫn đúng ngữ pháp (điều kiện loại 1, dự đoán), nhưng khi nói quy luật chung ta thường dùng hiện tại đơn ở cả hai vế.",
     "formula": "If + Subject + Present Simple, Subject + Present Simple",
-    "analysis": "The rule is general, so we do not use 'will'. The if-clause can also come second without a comma.",
-    "exemplarContext": "If I drink coffee late at night, I can't sleep."
+    "analysis": "The rule is general, so both clauses are usually in the present simple. 'If plants don't get water, they will die' is also grammatical, but it reads as a prediction (first conditional) rather than a general rule. The if-clause can also come second without a comma.",
+    "exemplarContext": "If I drink coffee late at night, I don't sleep well."
   },
   {
     "title": "First Conditional: Warning",
@@ -1872,7 +1872,7 @@
     "grammaticalCue": "'Wish' + past simple expresses a wish about a present situation that is not true.",
     "vietnamese": "'Wish' + quá khứ đơn diễn tả điều ước trái với thực tế hiện tại ('ước gì'). Tiếng Việt chỉ nói 'ước gì tôi sống gần biển', còn tiếng Anh phải lùi một thì: 'lived', không phải 'live'.",
     "formula": "Subject + wish + Subject + Past Simple",
-    "analysis": "The speaker does not live near the sea now. The past simple shows the wish is not real.",
+    "analysis": "The speaker does not live near the sea now. The past simple shows the wish is not real. The same structure appears in a formal register in gram-subj-3.",
     "exemplarContext": "I wish I had more free time."
   },
   {
@@ -2054,7 +2054,7 @@
     "vector": "FINAL_CONSONANTS",
     "trap": "Past ending deletion: Omitting regular past -ed because time adverbial already indicates past.",
     "level": 2,
-    "cefrLevel": "B1",
+    "cefrLevel": "A2",
     "promptSentence": "Yesterday the engineering team watch the presentation.",
     "targetTransformation": "Yesterday the engineering team watched the presentation.",
     "grammaticalCue": "Add -ed (/t/ after voiceless /tʃ/) to mark past tense on the finite verb.",
@@ -2064,7 +2064,7 @@
     "exemplarContext": "Last night the research team watched the documentary on renewable energy."
   },
   {
-    "title": "Final Consonant Cluster Retention with Stop-Fricative Sequences",
+    "title": "Final Consonant Cluster Retention with Fricative-Stop Sequences",
     "id": "gram-l1-04",
     "mode": "L1_CONTRASTIVE_REPAIR",
     "vector": "FINAL_CONSONANTS",
@@ -2074,7 +2074,7 @@
     "promptSentence": "The journalist as the minister several direct questions.",
     "targetTransformation": "The journalist asked the minister several direct questions.",
     "grammaticalCue": "Articulate the complete /skt/ triple coda cluster without epenthetic vowel insertion.",
-    "vietnamese": "Đơn giản hóa cụm phụ âm đuôi: Cụm /skt/ trong 'asked' hay /sks/ trong 'desks' thường bị nuốt chỉ còn /æs/. Hãy luyện giữ nguyên /s/ rồi bật /k/ và /t/.",
+    "vietnamese": "Đơn giản hóa cụm phụ âm đuôi: Cụm /skt/ trong 'asked' hay /sks/ trong 'desks' (/desks/) dễ bị rút gọn, ví dụ 'asked' chỉ còn /æs/ và 'desks' chỉ còn /des/. Hãy luyện giữ nguyên /s/ rồi bật /k/ và /t/ (hoặc /s/ cuối).",
     "formula": "Subject + Verb[Complex Cluster Coda] + Indirect Object + Direct Object",
     "analysis": "Complex English consonant clusters (/skt/, /ksts/, /mpts/) have no equivalent in Vietnamese phonology. Learners tend to elide internal stops or insert an intrusive schwa. Articulating the full coda maintains lexical precision.",
     "exemplarContext": "The auditor asked the financial officer for detailed balance sheet records."
@@ -2096,20 +2096,20 @@
     "exemplarContext": "The executive committee raises concerns regarding supply chain vulnerabilities."
   },
   {
-    "title": "Polysyllabic Coda Clustered Plural Preservation",
+    "title": "Plural Concord in Four-Consonant Codas",
     "id": "gram-l1-06",
     "mode": "L1_CONTRASTIVE_REPAIR",
     "vector": "FINAL_CONSONANTS",
-    "trap": "Triple coda elision under cognitive speech rate pressure in formal academic lexis.",
+    "trap": "Losing the plural /s/ at the end of a four-consonant coda (/ksts/) in academic nouns.",
     "level": 3,
     "cefrLevel": "C2",
-    "promptSentence": "The research fails to address key aspect of the statistical model.",
-    "targetTransformation": "The research fails to address key aspects of the statistical model.",
-    "grammaticalCue": "Preserve the /s/ plural morpheme following the /kt/ cluster (/spts/).",
-    "vietnamese": "Nuốt âm đuôi trong các danh từ trừu tượng đa âm tiết: 'Aspects' /'æspekts/ thường bị đọc thành /'æspek/ do áp lực phát âm cụm /kts/. Phải giữ trọn vẹn phụ âm đuôi.",
-    "formula": "Subject + Verb + Adjective + Plural Abstract Noun[-kts/-pts] + of + Noun Phrase",
-    "analysis": "Highly sophisticated C2 academic nouns such as 'aspects', 'contexts', and 'statistics' contain dense coda consonant chains that disintegrate under fast discourse. Rigorous muscular anchoring prevents loss of plural concord.",
-    "exemplarContext": "The empirical study synthesizes multiple aspects of macroeconomic volatility."
+    "promptSentence": "The study compared two distinct context of wage bargaining across developing economies.",
+    "targetTransformation": "The study compared two distinct contexts of wage bargaining across developing economies.",
+    "grammaticalCue": "Pronounce the final /s/ of 'contexts' (/ˈkɒntɛksts/) so the full coda /ksts/ is heard.",
+    "vietnamese": "Mất âm /s/ cuối trong cụm phụ âm dày: 'contexts' /ˈkɒntɛksts/ có chuỗi /ksts/. Khi nói nhanh, người Việt thường bỏ âm /s/ cuối, làm mất dấu hiệu số nhiều. Phải phát âm trọn cụm /ksts/.",
+    "formula": "Determiner + Quantifier + Plural Noun[-kts/-ksts] + of + Noun Phrase",
+    "analysis": "'Contexts' has a four-consonant coda, so the plural marker is the last sound and is the first to disappear in fast academic speech. Keeping /s/ preserves the plural and the agreement with 'two'.",
+    "exemplarContext": "The study examined several contexts of wage bargaining across developing economies."
   },
   {
     "title": "Adjective Predication Missing Copula",
@@ -2134,7 +2134,7 @@
     "vector": "ZERO_COPULA",
     "trap": "Negating predicate adjectives with 'not' directly: Phòng không sạch -> Room not clean.",
     "level": 1,
-    "cefrLevel": "A2",
+    "cefrLevel": "A1",
     "promptSentence": "This hotel room not comfortable for our family.",
     "targetTransformation": "This hotel room is not comfortable for our family.",
     "grammaticalCue": "Place 'is not' (or 'isn't') between the subject noun phrase and the adjective.",
@@ -2192,20 +2192,20 @@
     "exemplarContext": "Although the fiscal constraints were severe, the department delivered on all objectives."
   },
   {
-    "title": "Stative Adjective vs Stative Passive Verb Confusion",
+    "title": "Copula Retention After Finite Relative Clauses",
     "id": "gram-l1-12",
     "mode": "L1_CONTRASTIVE_REPAIR",
     "vector": "ZERO_COPULA",
-    "trap": "Conflating -ing participial adjectives with passive experiential states (Tôi bị chán -> I am boring).",
+    "trap": "Dropping the copula before a predicate adjective inside a long finite relative clause.",
     "level": 3,
     "cefrLevel": "C2",
-    "promptSentence": "The delegates were boring with the repetitive keynote address.",
-    "targetTransformation": "The delegates were bored by the repetitive keynote address.",
-    "grammaticalCue": "Use the -ed participial adjective 'bored' to express the internal emotional state of the subject.",
-    "vietnamese": "Nhầm lẫn tính từ đuôi -ing và -ed: Trong tiếng Việt từ 'chán' vừa chỉ cảm giác của bản thân, vừa chỉ tính chất của sự việc. Trong tiếng Anh, người trải qua cảm giác dùng đuôi -ed, tác nhân gây ra cảm giác dùng -ing.",
-    "formula": "Subject (Experiencer) + was/were + Bored + by/with + Agent",
-    "analysis": "Vietnamese neutralizes the semantic voice distinction between causer and experiencer in stative descriptors ('buồn', 'chán', 'mệt'). English obligates active participle (-ing) for stimulus properties and passive participle (-ed) for experiential mental states.",
-    "exemplarContext": "International observers were deeply bored by the redundant diplomatic speeches."
+    "promptSentence": "The findings that the panel reviewed unexpected in several respects.",
+    "targetTransformation": "The findings that the panel reviewed were unexpected in several respects.",
+    "grammaticalCue": "Keep the copula (was/were) before the predicate adjective, even when the relative clause is long.",
+    "vietnamese": "Tiếng Việt không cần động từ \"là\" trước tính từ vị ngữ, nên người học hay bỏ \"to be\" khi mệnh đề quan hệ dài. Tiếng Anh bắt buộc có động từ liên kết (was/were) trước tính từ vị ngữ, kể cả khi mệnh đề quan hệ đã dài.",
+    "formula": "Head Noun + that/which + Subject + Verb + was/were + Predicate Adjective",
+    "analysis": "A finite relative clause cannot end in a bare adjective: the predicate needs a linking verb. Reduced forms that drop the copula are allowed only in specific structures, not here.",
+    "exemplarContext": "The forecasts that the central bank published were considerably more pessimistic than the markets expected."
   },
   {
     "title": "Adverbial Presence Causing Finite Past Tense Deletion",
@@ -2214,7 +2214,7 @@
     "vector": "TENSE_ASPECT",
     "trap": "Relying on external temporal adverb to establish past time while leaving verb uninflected.",
     "level": 1,
-    "cefrLevel": "A1",
+    "cefrLevel": "A2",
     "promptSentence": "Yesterday afternoon my family visit the national museum.",
     "targetTransformation": "Yesterday afternoon my family visited the national museum.",
     "grammaticalCue": "Inflect the finite verb with past tense -ed even when temporal adverb 'yesterday' is present.",
@@ -2230,7 +2230,7 @@
     "vector": "TENSE_ASPECT",
     "trap": "Translating 'rồi' as clause-final 'already' with present simple verb: Tôi ăn cơm rồi -> I eat dinner already.",
     "level": 1,
-    "cefrLevel": "A2",
+    "cefrLevel": "B1",
     "promptSentence": "I submit the scholarship application already.",
     "targetTransformation": "I have already submitted the scholarship application.",
     "grammaticalCue": "Use the Present Perfect auxiliary 'have' + past participle with pre-verbal 'already'.",
@@ -2263,12 +2263,12 @@
     "trap": "Failing to backshift verb in reported speech because original statement was present tense.",
     "level": 2,
     "cefrLevel": "B2",
-    "promptSentence": "The finance director confirmed that the quarterly revenue is satisfactory.",
-    "targetTransformation": "The finance director confirmed that the quarterly revenue was satisfactory.",
-    "grammaticalCue": "Backshift the subordinate verb 'is' to past 'was' to agree with reporting verb 'confirmed'.",
-    "vietnamese": "Quên lùi thì trong câu gián tiếp: Tiếng Việt không có quy tắc lùi thì (Giám đốc xác nhận rằng doanh thu [ổn]). Tiếng Anh đòi hỏi mệnh đề sau động từ tường thuật quá khứ phải lùi về quá khứ tương ứng.",
+    "promptSentence": "When I phoned yesterday morning, the finance director told me that he is in a budget meeting.",
+    "targetTransformation": "When I phoned yesterday morning, the finance director told me that he was in a budget meeting.",
+    "grammaticalCue": "Backshift the subordinate verb 'is' to past 'was': the meeting belongs to yesterday morning, so the reported verb must be past.",
+    "vietnamese": "Quên lùi thì trong câu gián tiếp: Tiếng Việt không có quy tắc lùi thì (Giám đốc nói rằng ông ấy [đang họp]). Trong tiếng Anh, khi động từ tường thuật ở quá khứ, mặc định là lùi thì ở mệnh đề sau. Nếu điều được nói vẫn còn đúng ở hiện tại thì có thể giữ thì hiện tại, nhưng ở đây cuộc họp chỉ diễn ra hôm qua nên bắt buộc dùng 'was'.",
     "formula": "Subject + Past Reporting Verb + that + Subordinate Subject + Backshifted Past Verb",
-    "analysis": "Vietnamese lacks tense concordance; subordinate clauses maintain the temporal orientation of the reported utterance. English syntax imposes sequence-of-tense rules demanding morphological harmony with the matrix past verb.",
+    "analysis": "Vietnamese lacks tense concordance; subordinate clauses maintain the temporal orientation of the reported utterance. In English, backshift is the default after a past reporting verb, but it is optional when the reported statement is still true at the time of reporting ('The director said the revenue is satisfactory' is acceptable if it still is). Here the state was true only at a past moment, so the past form is the only natural choice.",
     "exemplarContext": "The technical lead reported that the production server was operating normally."
   },
   {
@@ -2279,7 +2279,7 @@
     "trap": "Flattening conditional tenses into present/future forms due to lack of conditional morphology in L1.",
     "level": 3,
     "cefrLevel": "C1",
-    "promptSentence": "If the security team detected the breach earlier, they will stop the data leak.",
+    "promptSentence": "The data leak happened last month. If the security team detected the breach earlier, they will stop the data leak.",
     "targetTransformation": "If the security team had detected the breach earlier, they would have stopped the data leak.",
     "grammaticalCue": "Use Past Perfect in the if-clause and 'would have' + past participle in the main clause for unfulfilled past hypothetical.",
     "vietnamese": "Không chia thì giả định trong câu điều kiện loại 3: Tiếng Việt chỉ dùng từ 'Nếu... thì...' mà không biến đổi động từ. Khi nói về điều trái với quá khứ, tiếng Anh bắt buộc dùng 'had + V3' và 'would have + V3'.",
@@ -2288,20 +2288,20 @@
     "exemplarContext": "If the risk committee had acted on the warnings, they would have mitigated the exposure."
   },
   {
-    "title": "Anteriority Alignment in Participial Discourse Constructions",
+    "title": "No Sooner Inversion and Past Perfect",
     "id": "gram-l1-18",
     "mode": "L1_CONTRASTIVE_REPAIR",
     "vector": "TENSE_ASPECT",
-    "trap": "Using bare present participle for completed prior actions, obscuring chronological sequence.",
+    "trap": "Using 'did' or the simple past in the inverted first clause of 'No sooner… than', where the perfect is required.",
     "level": 3,
     "cefrLevel": "C2",
-    "promptSentence": "Completing the audit report, the compliance team submitted their recommendations.",
-    "targetTransformation": "Having completed the audit report, the compliance team submitted their recommendations.",
-    "grammaticalCue": "Use the Perfect Participle 'Having completed' to clearly indicate that the action preceded the main clause.",
-    "vietnamese": "Dùng phân từ hiện tại (V-ing) thay vì phân từ hoàn thành (Having + V3) để chỉ hành động hoàn tất trước: Khi một hành động kết thúc hoàn toàn trước hành động chính, phải dùng 'Having + V3' để đảm bảo tính chuẩn xác C2.",
-    "formula": "Having + Past Participle + Object, Subject + Simple Past Verb + Object",
-    "analysis": "In formal C2 registers, simple participial clauses (-ing) denote concurrent or continuous circumstance. When representing anterior completed causation, perfect participles are obligatory to preserve syntactic rigor.",
-    "exemplarContext": "Having finalized the merger negotiations, the chairpersons released a joint communique."
+    "promptSentence": "No sooner did the data was released than analysts revised their models.",
+    "targetTransformation": "No sooner had the data been released than analysts revised their models.",
+    "grammaticalCue": "After 'No sooner', invert with 'had' + past participle and no 'did'.",
+    "vietnamese": "Trong cấu trúc đảo ngữ 'No sooner… than', tiếng Anh dùng 'had' + quá khứ phân từ cho hành động xảy ra trước. Người học hay dùng 'did' hoặc quá khứ đơn vì tiếng Việt không đánh dấu trình tự bằng trợ động từ.",
+    "formula": "No sooner + had + Subject + Past Participle + than + Subject + Simple Past",
+    "analysis": "This inverted perfect is a formal C2 pattern. 'Had' marks the first event and the simple past marks the second. Adding 'did' or using a simple past in the first clause makes the sequence unreadable.",
+    "exemplarContext": "No sooner had the regulator published the draft than three banks filed formal objections."
   },
   {
     "title": "Bare Singular Countable Nouns (Determiner Omission)",
@@ -2384,19 +2384,19 @@
     "exemplarContext": "Democratic society depends on transparent institutions to safeguard human rights."
   },
   {
-    "title": "Mass Abstract Nouns in Forensic Academic Epistemology",
+    "title": "Latinate Plural Criteria and Concord",
     "id": "gram-l1-24",
     "mode": "L1_CONTRASTIVE_REPAIR",
     "vector": "CLASSIFIERS_COUNT",
-    "trap": "Pluralizing mass epistemological lexis: researches, evidences, knowledges.",
+    "trap": "Treating the Latinate plural 'criteria' as a singular noun and using 'is' with it.",
     "level": 3,
     "cefrLevel": "C2",
-    "promptSentence": "These empirical researches provide compelling evidences supporting the hypothesis.",
-    "targetTransformation": "This empirical research provides compelling evidence supporting the hypothesis.",
-    "grammaticalCue": "Change demonstrative and verbs to singular concord with mass nouns 'research' and 'evidence'.",
-    "vietnamese": "Thêm -s vào các danh từ học thuật trừu tượng cao cấp ('researches', 'evidences'). Trong tiếng Anh học thuật C2, 'research' và 'evidence' là danh từ không đếm được; phải dùng số ít 'This research provides compelling evidence'.",
-    "formula": "Singular Demonstrative + Adjective + research + Singular Verb + Adjective + evidence",
-    "analysis": "At the C1/C2 threshold, persistent fossilization manifests in pluralizing high-register epistemological substantives ('research', 'evidence', 'feedback'). Rigorous academic peer-reviewed English strictly enforces singular mass agreement.",
-    "exemplarContext": "Recent epidemiological research provides incontrovertible evidence of environmental causation."
+    "promptSentence": "The criteria for admission is more stringent than before.",
+    "targetTransformation": "The criteria for admission are more stringent than before.",
+    "grammaticalCue": "'Criteria' is plural (singular: 'criterion'), so the verb is 'are'. Use 'is' only with 'the criterion'.",
+    "vietnamese": "'Criteria' là số nhiều của 'criterion' (tiêu chí). Tiếng Việt không đổi hình thức danh từ nên người học thường dùng 'criteria is' hoặc coi 'criteria' là danh từ không đếm được. Trong văn bản học thuật C2, cần dùng 'criteria are' hoặc 'the criterion is'.",
+    "formula": "The criteria for + Noun Phrase + are + Comparative Adjective",
+    "analysis": "Latinate plurals such as 'criteria', 'phenomena' and 'data' take plural concord in formal register. The singular form 'criterion' takes 'is'. Mixing the two causes agreement errors that academic readers notice at once.",
+    "exemplarContext": "The criteria for granting tenure are now applied more rigorously across faculties."
   }
 ]

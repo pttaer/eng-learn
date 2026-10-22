@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>IELTS Academic 7.0</title>
   <meta name="theme-color" content="#080a0f" />
+  <script>try{if(localStorage.getItem('eng_motion')==='reduce')document.documentElement.dataset.motion='reduce'}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="./icon.svg" />
   <link rel="preload" href="./fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="./fonts/fonts.css" />
   <link rel="stylesheet" href="./src/assets/styles/variables.css" />
+  <link rel="stylesheet" href="./src/core/scroll-affordance.css" />
   <link rel="stylesheet" href="./src/ielts/ielts.css" />
   <style>
   #boot{position:fixed;inset:0;z-index:2147483000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:16px;background:var(--bg-canvas,#080a0f);color:var(--ink-secondary,#cbd5e1);font:500 14px/1.5 var(--font-sans,system-ui,sans-serif);text-align:center}
@@ -20,6 +22,7 @@
   @keyframes boot-in{to{opacity:1}}@keyframes boot-pulse{from{opacity:.3}to{opacity:1}}
   @media (prefers-reduced-motion:reduce){#boot .boot-dot{animation:none}#boot .boot-row,#boot button{animation-duration:0s}}
   html[data-motion=reduce] #boot .boot-dot{animation:none}html[data-motion=reduce] #boot .boot-row,html[data-motion=reduce] #boot button{animation-duration:0s}
+  html[data-motion=reduce] *,html[data-motion=reduce] *::before,html[data-motion=reduce] *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   </style>
 </head>
 <body>

@@ -81,7 +81,7 @@ In response to these methodological challenges, contemporary researchers advocat
 *Complete the summary below. Choose **NO MORE THAN TWO WORDS** from the passage for each answer.*
 
 ### Cognitive Reserve and Neurological Compensation
-Epidemiological investigations demonstrate that bilingual individuals develop significant **[Question 11: cognitive reserve]**, allowing them to delay symptoms of dementia by several years. Even when physical structural atrophy occurs, the brain compensates by rerouting signals across an enhanced **[Question 12: frontoparietal network]**. Today, researchers study bilingualism through a **[Question 13: dimensional model]**, measuring varied linguistic switching habits and communicative contexts.
+Epidemiological investigations demonstrate that bilingual individuals develop significant **11 __________**, allowing them to delay symptoms of dementia by several years. Even when physical structural atrophy occurs, the brain compensates by rerouting signals across an enhanced **12 __________**. Today, researchers study bilingualism through a **13 __________**, measuring varied linguistic switching habits and communicative contexts.
 
 - **Question 11**: `cognitive reserve`
 - **Question 12**: `frontoparietal network`
@@ -160,13 +160,13 @@ Beyond technological and thermodynamic hurdles, Direct Air Capture occupies a co
 
 *Complete the sentences below. Choose **NO MORE THAN TWO WORDS** from the passage for each answer.*
 
-- **Question 23**: Unlike liquid contactors, solid capture systems pass ambient air through structured **[Question 23: monolithic honeycombs]** treated with basic amines.  
+- **Question 23**: Unlike liquid contactors, solid capture systems pass ambient air through structured **23 __________** treated with basic amines.  
   *Key*: `monolithic honeycombs`
-- **Question 24**: In the Carbfix process, supercritical carbon dioxide is dissolved under intense **[Question 24: hydraulic pressure]** prior to volcanic injection.  
+- **Question 24**: In the Carbfix process, supercritical carbon dioxide is dissolved under intense **24 __________** prior to volcanic injection.  
   *Key*: `hydraulic pressure`
-- **Question 25**: The energy consumed directly by capture machinery and blowers is termed the **[Question 25: parasitic energy]** load.  
+- **Question 25**: The energy consumed directly by capture machinery and blowers is termed the **25 __________** load.  
   *Key*: `parasitic energy`
-- **Question 26**: Carbon removal crediting requires incorruptible verification standards and rigorous **[Question 26: carbon accounting]** protocols.  
+- **Question 26**: Carbon removal crediting requires incorruptible verification standards and rigorous **26 __________** protocols.  
   *Key*: `carbon accounting`
 
 ---
@@ -224,15 +224,15 @@ Ultimately, the contemporary scientific synthesis views language neither as an i
 
 *Complete the sentences below. Choose **NO MORE THAN TWO WORDS** from the passage for each answer.*
 
-- **Question 32**: The spatial system of Guugu Yimithirr relies exclusively on an **[Question 32: absolute geocentric]** coordinate framework.  
+- **Question 32**: The spatial system of Guugu Yimithirr relies exclusively on an **32 __________** coordinate framework.  
   *Key*: `absolute geocentric`
-- **Question 33**: In addition to horizontal axes, Mandarin speakers frequently structure chronological sequences along a **[Question 33: vertical axis]**.  
+- **Question 33**: In addition to horizontal axes, Mandarin speakers frequently structure chronological sequences along a **33 __________**.  
   *Key*: `vertical axis`
-- **Question 34**: Grammatical gender in German and Spanish primes speakers to assign **[Question 34: anthropomorphic semantic]** associations to inanimate objects.  
+- **Question 34**: Grammatical gender in German and Spanish primes speakers to assign **34 __________** associations to inanimate objects.  
   *Key*: `anthropomorphic semantic`
-- **Question 35**: Tucanoan languages require speakers to attach a grammatical suffix stating their **[Question 35: source of knowledge]**.  
-  *Key*: `source of knowledge`
-- **Question 36**: Neurological studies demonstrate that linguistic categorization takes place within 100 to 200 milliseconds of **[Question 36: stimulus onset]**.  
+- **Question 35**: Tucanoan languages require speakers to attach a grammatical suffix indicating their source of **35 __________**.  
+  *Key*: `knowledge`
+- **Question 36**: Neurological studies demonstrate that linguistic categorization takes place within 100 to 200 milliseconds of **36 __________**.  
   *Key*: `stimulus onset`
 
 ---

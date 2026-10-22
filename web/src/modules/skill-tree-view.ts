@@ -9,6 +9,122 @@ import { NebulaCanvas } from '../core/perspective-canvas';
 import { ConstellationEngine } from './constellation-engine';
 import type { Cefr } from '../core/cefr';
 
+/** Hides a node label when it would overlap a label or node circle already kept (by level priority). */
+function hideCollidingLabels(svg: SVGElement): void {
+  // Collect all nodes with their positions and label elements
+  const nodes: Array<{
+    nodeEl: SVGGElement;
+    labelEl: SVGTextElement;
+    cx: number;
+    cy: number;
+    level: number;
+    box: DOMRect | null;
+  }> = [];
+
+  svg.querySelectorAll<SVGGElement>('g.constellation-node').forEach(nodeEl => {
+    const labelEl = nodeEl.querySelector<SVGTextElement>('text.node-title-label');
+    if (!labelEl) return;
+
+    // Get cx, cy from the node's parent g transform="translate(cx, cy)"
+    const parentG = nodeEl.parentElement as SVGGElement | HTMLElement | null;
+    const transform = parentG?.getAttribute('transform');
+    const match = transform?.match(/translate\(([\d.]+),\s*([\d.]+)\)/);
+    if (!match) return;
+
+    const cx = parseFloat(match[1]);
+    const cy = parseFloat(match[2]);
+    const level = parseInt((nodeEl.getAttribute('data-level') || '0'), 10);
+
+    nodes.push({
+      nodeEl,
+      labelEl,
+      cx,
+      cy,
+      level,
+      box: null
+    });
+  });
+
+  // Process by level descending (summit/higher levels first), then by DOM order
+  const sortedNodes = nodes.sort((a, b) => {
+    if (b.level !== a.level) return b.level - a.level;
+    return Array.from(svg.querySelectorAll('g.constellation-node')).indexOf(a.nodeEl) -
+           Array.from(svg.querySelectorAll('g.constellation-node')).indexOf(b.nodeEl);
+  });
+
+  const keptRects: Array<{ x1: number; x2: number; y1: number; y2: number; cx: number; cy: number; radius: number }> = [];
+
+  // Add summit circle as obstacle (28px diameter at 500, 35)
+  keptRects.push({ x1: 486, x2: 514, y1: 21, y2: 49, cx: 500, cy: 35, radius: 14 });
+
+  for (const node of sortedNodes) {
+    node.labelEl.style.display = '';
+
+    // Get label bounding box in viewport coords
+    const labelBox = node.labelEl.getBoundingClientRect();
+    if (labelBox.width === 0 || labelBox.height === 0) continue;
+
+    // Convert to viewBox coords (approximation): divide by viewport scale
+    const svgRect = svg.getBoundingClientRect();
+    const vbWidth = 1000;
+    const vbHeight = 620;
+    const scale = Math.min(svgRect.width / vbWidth, svgRect.height / vbHeight);
+
+    const labelVbX1 = (labelBox.left - svgRect.left) / scale;
+    const labelVbX2 = labelVbX1 + (labelBox.width / scale);
+    const labelVbY1 = (labelBox.top - svgRect.top) / scale;
+    const labelVbY2 = labelVbY1 + (labelBox.height / scale);
+
+    // Check collision with kept obstacles (circles and labels)
+    const collides = keptRects.some(rect => {
+      // Circle collision: check if label overlaps with node circle (radius + margin)
+      const circleMargin = 8;
+      const circleRadius = rect.radius + circleMargin;
+      if (node.cx === rect.cx && node.cy === rect.cy) return false; // Don't collide with own node
+
+      const dx = node.cx - rect.cx;
+      const dy = node.cy - rect.cy;
+      const distSq = dx * dx + dy * dy;
+      const minDistSq = (circleRadius + labelVbX2 - labelVbX1) * (circleRadius + labelVbX2 - labelVbX1);
+
+      if (distSq < minDistSq) return true;
+
+      // Rect-rect collision with label
+      return labelVbX1 < rect.x2 && labelVbX2 > rect.x1 && labelVbY1 < rect.y2 && labelVbY2 > rect.y1;
+    });
+
+    if (collides) {
+      node.labelEl.style.display = 'none';
+    } else {
+      // Add to kept obstacles
+      keptRects.push({
+        x1: labelVbX1,
+        x2: labelVbX2,
+        y1: labelVbY1,
+        y2: labelVbY2,
+        cx: node.cx,
+        cy: node.cy,
+        radius: 14
+      });
+    }
+  }
+
+  // Exact screen-space pass: a visible label may not touch any other node's circle
+  const circles = Array.from(svg.querySelectorAll<SVGGElement>('g.constellation-node')).map(g => ({
+    g,
+    rect: g.querySelector('.node-circle')?.getBoundingClientRect() ?? null,
+  }));
+  for (const node of sortedNodes) {
+    if (node.labelEl.style.display === 'none') continue;
+    const lr = node.labelEl.getBoundingClientRect();
+    if (lr.width === 0 || lr.height === 0) continue;
+    const touches = circles.some(c => c.g !== node.nodeEl && c.rect !== null &&
+      lr.left < c.rect.right + 2 && lr.right > c.rect.left - 2 &&
+      lr.top < c.rect.bottom + 2 && lr.bottom > c.rect.top - 2);
+    if (touches) node.labelEl.style.display = 'none';
+  }
+}
+
 export class SkillTreeView {
   private container: HTMLElement;
   private nebulaCanvas: NebulaCanvas | null = null;
@@ -88,14 +204,20 @@ export class SkillTreeView {
         this.panZoomTeardown = ConstellationEngine.setupPanZoom(containerEl, svgEl);
       }
 
+      // No overlapping node labels: the full name stays in each node's <title> tooltip
+      // Runs after the entrance animation settles, so label rects are at their final size
+      const labelSvg = this.container.querySelector('.constellation-svg-wrapper svg') as SVGElement | null;
+      if (labelSvg) setTimeout(() => hideCollidingLabels(labelSvg), 1600);
+
       // Procedural entrance animations via MotionEngine
       setTimeout(() => {
         if (!this.container.isConnected) return;
         const lines = this.container.querySelectorAll('.constellation-line');
         if (lines.length > 0) MotionEngine.drawSvgLines(lines as any);
 
-        const nodes = this.container.querySelectorAll('.constellation-node');
-        if (nodes.length > 0) MotionEngine.staggerEntrance(nodes as any, { from: 'bottom', delayStep: 25 });
+        const nodes = Array.from(this.container.querySelectorAll<SVGElement>('.constellation-node'))
+          .sort((a, b) => b.getBoundingClientRect().bottom - a.getBoundingClientRect().bottom);
+        if (nodes.length > 0) MotionEngine.staggerEntrance(nodes, { delayStep: 25 });
 
         MotionEngine.riseIn(this.container.querySelectorAll('.branch-summary-card'), 60);
         MotionEngine.fillBars(this.container.querySelectorAll('.branch-bar'));
@@ -211,35 +333,35 @@ export class SkillTreeView {
       <div class="workout-banner tree-command-panel" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 16px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; gap: 12px; box-shadow: var(--shadow-card); flex: 0 0 auto;">
         <div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px;">
           <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-            <span class="telemetry-label" style="letter-spacing: 0.12em; font-size: 10px; color: var(--accent-gold); font-weight: 700;">✦ CONSTELLATION ROADMAP ✦</span>
-            <span class="hud-status-badge" style="font-size: 10px; padding: 2px 8px; border-radius: 4px;">
+            <span class="telemetry-label" style="letter-spacing: 0.12em; font-size: var(--font-kicker); color: var(--accent-gold); font-weight: 700;">✦ CONSTELLATION ROADMAP ✦</span>
+            <span class="hud-status-badge" style="font-size: var(--font-kicker); padding: 2px 8px; border-radius: 4px;">
               RANK: <strong>${progress.currentRank}</strong>
             </span>
-            <span class="hud-status-badge" style="font-size: 10px; padding: 2px 8px; border-radius: 4px; border-color: var(--accent-gold); color: var(--accent-gold);">
+            <span class="hud-status-badge" style="font-size: var(--font-kicker); padding: 2px 8px; border-radius: 4px; border-color: var(--accent-gold); color: var(--accent-gold);">
               SUMMIT: <strong class="val-progress-pct">${progress.progressPct}%</strong> (${progress.masteredCount}/${progress.totalNodes} PERKS)
             </span>
           </div>
           <div style="display: flex; align-items: baseline; gap: 8px; overflow: hidden;">
-            <h1 style="font-size: 16px; font-weight: 700; margin: 0; font-family: var(--font-sans); color: var(--ink-primary); letter-spacing: -0.01em; white-space: nowrap;">
+            <h1 style="font-size: var(--font-body); font-weight: 700; margin: 0; font-family: var(--font-sans); color: var(--ink-primary); letter-spacing: -0.01em; white-space: nowrap;">
               The Path to C2 Native Mastery
             </h1>
             </div>
         </div>
 
-        <div class="workout-panel" style="flex: 0 0 auto; display: flex; align-items: center; gap: 12px; background: var(--bg-surface-sunk); border: 1px solid var(--border-hairline); border-radius: 6px; padding: 6px 14px;">
+        <div class="workout-panel" style="flex: 0 0 auto; display: flex; align-items: center; gap: 12px; background: rgba(255, 255, 255, 0.04); border: none; border-radius: 6px; padding: 8px 14px;">
           <div style="display: flex; flex-direction: column; gap: 2px;">
             <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
-              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-size: 10px;">★ TODAY'S 15-MINUTE WORKOUT [${workout.level}]</span>
-              <span class="telemetry-label" style="font-size: 10px;">${workout.left === 0 ? 'ALL 3 DRILLS DONE' : workout.left + ' OF 3 DRILLS REMAINING'}</span>
+              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-size: var(--font-kicker);">★ TODAY'S 15-MINUTE WORKOUT [${workout.level}]</span>
+              <span class="telemetry-label" style="font-size: var(--font-kicker);">${workout.left === 0 ? 'ALL 3 DRILLS DONE' : workout.left + ' OF 3 DRILLS REMAINING'}</span>
             </div>
-            <div class="workout-tasks" style="display: flex; gap: 10px; font-size: 11px; color: var(--ink-secondary);">
+            <div class="workout-tasks" style="display: flex; gap: 10px; font-size: var(--font-kicker); color: var(--ink-secondary);">
               ${workout.tasks.map(t => `
-              <div class="workout-task-chip" data-route="${t.route}" title="Jump to ${t.route} drill" style="display: flex; align-items: center; gap: 3px; cursor: pointer;${t.ok ? '' : ' opacity: 0.75;'}">
+              <div class="workout-task-chip" data-route="${t.route}" title="Jump to ${t.route} drill" style="display: flex; align-items: center; gap: 4px; cursor: pointer;${t.ok ? '' : ' opacity: 0.75;'}">
                 <span${t.ok ? ' style="color: var(--accent-gold); font-weight: 700;"' : ''}>${t.ok ? '✓' : '○'}</span> <span>${t.label}</span>
               </div>`).join('')}
             </div>
           </div>
-          <button class="hud-btn btn-continue-workout" style="justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 6px 16px; min-height: 34px; font-weight: 700; font-size: 11px; border: none; cursor: pointer; border-radius: 6px; white-space: nowrap; box-shadow: var(--shadow-glow);">
+          <button class="hud-btn btn-continue-workout" style="justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 6px 16px; min-height: 34px; font-weight: 700; font-size: var(--font-kicker); border: none; cursor: pointer; border-radius: 6px; white-space: nowrap; box-shadow: var(--shadow-glow);">
             Continue Today's Workout ${icon('arrowRight')}
           </button>
         </div>
@@ -360,7 +482,7 @@ export class SkillTreeView {
       const [line1, line2] = this.formatNodeLabel(node.title);
 
       nodesSvg += `
-        <g transform="translate(${cx}, ${cy})"><g class="constellation-node ${cursorClass}" data-node-id="${node.id}" style="cursor: pointer;" tabindex="0" role="button" aria-label="${node.title} (${status})">
+        <g transform="translate(${cx}, ${cy})"><g class="constellation-node ${cursorClass}" data-node-id="${node.id}" data-level="${node.level}" style="cursor: pointer;" tabindex="0" role="button" aria-label="${node.title} (${status})">
           <title>${node.title} (Level ${node.level} - CEFR ${node.cefrLevel})</title>
           ${haloSvg}
           <circle cx="0" cy="0" r="14" fill="${circleFill}" stroke="${circleStroke}" stroke-width="${strokeWidth}" class="node-circle" />
@@ -404,18 +526,18 @@ export class SkillTreeView {
       return `
         <div class="branch-summary-card" data-route="${branch.routeTarget}" tabindex="0" role="button" aria-label="Open ${branch.name}" title="${branch.name} — ${branch.tagline}" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: 6px; cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s; display: flex; flex-direction: column; justify-content: space-between; min-height: 50px; box-shadow: var(--shadow-btn);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-            <span style="font-family: var(--font-mono); font-size: 10.5px; color: var(--accent-gold); font-weight: 700; line-height: 1.25; max-width: 78%;">
+            <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--accent-gold); font-weight: 700; line-height: 1.25; max-width: 78%;">
               ✦ ${branch.name.toUpperCase()}
             </span>
-            <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--ink-primary);">
+            <span style="font-family: var(--font-mono); font-size: var(--font-kicker); font-weight: 700; color: var(--ink-primary);">
               ${pct}%
             </span>
           </div>
-          <div style="font-size: 11px; font-weight: 500; margin-bottom: 6px; line-height: 1.35; color: var(--ink-secondary);">
+          <div style="font-size: var(--font-kicker); font-weight: 500; margin-bottom: 6px; line-height: 1.35; color: var(--ink-secondary);">
             ${branch.tagline}
           </div>
           <div style="display: flex; align-items: center; gap: 8px;">
-            <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted); white-space: nowrap;">
+            <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); white-space: nowrap;">
               ${masteredInBranch}/${branchNodes.length} mastered
             </span>
             <div style="flex: 1; height: 4px; background: var(--border-hairline); border-radius: 2px; overflow: hidden;">
@@ -431,10 +553,10 @@ export class SkillTreeView {
     return `
       <div class="constellation-view-switcher" role="tablist" aria-label="Constellation Display Modes">
         <button class="view-switch-btn btn-view-star-map ${this.viewMode === 'map' ? 'active' : ''}" data-view="map" role="tab" aria-selected="${this.viewMode === 'map'}" aria-label="Switch to Star Map View">
-          <span class="btn-icon">🌌</span> <span class="btn-text">Star Map</span>
+          <span class="btn-icon">${icon('compass', 16)}</span> <span class="btn-text">Star Map</span>
         </button>
         <button class="view-switch-btn btn-view-skill-deck ${this.viewMode === 'deck' ? 'active' : ''}" data-view="deck" role="tab" aria-selected="${this.viewMode === 'deck'}" aria-label="Switch to Skill Deck View">
-          <span class="btn-icon">📱</span> <span class="btn-text">Skill Deck</span>
+          <span class="btn-icon">${icon('layers', 16)}</span> <span class="btn-text">Skill Deck</span>
         </button>
       </div>
     `;
@@ -632,56 +754,60 @@ export class SkillTreeView {
     const branch = SKILL_BRANCHES[node.branchId];
 
     modal.innerHTML = `
-      <div class="completion-receipt-card" style="max-width: 540px; width: 92%; text-align: left; background: var(--bg-surface); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-card);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-          <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">✦ ${branch.name.toUpperCase()} // LEVEL ${node.level}</span>
-          <span class="hud-status-badge" style="background: var(--accent-gold); color: var(--bg-canvas); font-size: 11px; font-weight: 700; border-color: var(--accent-gold);">CEFR ${node.cefrLevel}</span>
+      <div class="completion-receipt-card skill-node-card" style="max-width: 440px; width: 100%; padding: 18px 18px 20px 18px; text-align: left; align-items: stretch; background: var(--bg-card, #131823); border: 1px solid var(--border-subtle); border-radius: 8px; box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6); box-sizing: border-box;">
+        <div class="skill-node-topbar" style="display: flex; flex-direction: column; gap: 6px; width: 100%; margin-bottom: 12px; box-sizing: border-box;">
+          <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <span class="telemetry-label" style="color: var(--accent-gold); font-family: var(--font-mono); font-weight: 700; font-size: 11px; letter-spacing: 0.04em;">✦ ${branch.name.toUpperCase()} // LVL ${node.level}</span>
+          </div>
+          <div style="display: flex; justify-content: flex-end; width: 100%;">
+            <span class="hud-status-badge" style="background: rgba(165, 180, 252, 0.16); color: var(--accent-gold); font-family: var(--font-mono); font-size: 10.5px; font-weight: 700; border: 1px solid rgba(165, 180, 252, 0.25); border-radius: 5px; padding: 2px 8px; white-space: nowrap;">CEFR ${node.cefrLevel}</span>
+          </div>
         </div>
 
-        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 4px; font-family: var(--font-sans); color: var(--ink-primary);">
+        <h2 style="font-size: var(--font-h2); font-weight: 700; margin: 0 0 4px 0; font-family: var(--font-sans); color: var(--ink-primary); line-height: 1.25; text-align: left; width: 100%;">
           ${node.title}
         </h2>
-        <div style="font-family: var(--font-mono); font-size: 12px; color: var(--ink-muted); margin-bottom: 16px;">
+        <div style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--ink-muted); margin-bottom: 12px; text-align: left; width: 100%;">
           ${node.subtitle}
         </div>
 
-        <p style="font-size: 14px; line-height: 1.6; color: var(--ink-secondary); margin-bottom: 20px;">
+        <p style="font-size: var(--font-body-compact); line-height: 1.55; color: var(--ink-secondary); margin: 0 0 16px 0; text-align: left; width: 100%;">
           ${node.description}
         </p>
 
         <!-- Prerequisite / Gating Box -->
         ${status === 'locked' && prereqStatus ? `
-          <div style="background: var(--critical-soft); border: 1px solid var(--critical); padding: 12px 16px; border-radius: 6px; margin-bottom: 20px;">
-            <div style="font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--critical); margin-bottom: 4px;">
+          <div style="background: var(--critical-soft); border: 1px solid rgba(239, 68, 68, 0.3); padding: 12px 14px; border-radius: 8px; margin-bottom: 16px;">
+            <div style="font-family: var(--font-mono); font-size: var(--font-kicker); font-weight: 700; color: var(--critical); margin-bottom: 4px;">
               ${icon('lock', 12)} LOCKED — PREREQUISITE REQUIRED
             </div>
-            <div style="font-size: 13px; color: var(--ink-primary); line-height: 1.5;">
+            <div style="font-size: var(--text-xs); color: var(--ink-primary); line-height: 1.5;">
               Requires mastery in <strong>${prereqStatus.prereqName}</strong> (Current: ${prereqStatus.currentPct}% / Required: ${prereqStatus.requiredPct}%). Complete review drills in that skill first to unlock.
             </div>
           </div>
         ` : `
-          <div style="background: var(--accent-gold-soft); border: 1px solid var(--accent-gold); padding: 12px 16px; border-radius: 6px; margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 12px; font-weight: 700; margin-bottom: 6px;">
-              <span style="color: var(--accent-gold);">★ MASTERY RETENTION:</span>
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.06); padding: 12px 14px; border-radius: 10px; margin-bottom: 16px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: var(--font-kicker); font-weight: 700; margin-bottom: 8px;">
+              <span style="color: var(--accent-gold); letter-spacing: 0.04em;">★ MASTERY RETENTION:</span>
               <span style="color: var(--ink-primary);">${mastery}% / 80%</span>
             </div>
-            <div style="width: 100%; height: 6px; background: var(--border-hairline); border-radius: 3px; overflow: hidden;">
+            <div style="width: 100%; height: 6px; background: rgba(255, 255, 255, 0.08); border-radius: 3px; overflow: hidden;">
               <div style="width: ${mastery}%; height: 100%; background: var(--accent-gold); border-radius: 3px; box-shadow: 0 0 8px var(--accent-gold-soft);"></div>
             </div>
           </div>
         `}
 
-        <div style="display: flex; gap: 12px; margin-top: 8px;">
+        <div style="display: flex; gap: 8px; margin-top: 8px; width: 100%; box-sizing: border-box;">
           ${status !== 'locked' ? `
-            <button class="hud-btn btn-launch-drill" style="flex: 1; justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 12px; font-weight: 700; border: none; cursor: pointer; border-radius: 6px; box-shadow: var(--shadow-glow);">
-              Start Practice Drill ${icon('arrowRight')}
+            <button type="button" class="btn-launch-drill" style="flex: 1.4; min-height: 42px; padding: 10px 12px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; background: var(--accent-gold); color: #080a0f; font-family: var(--font-sans); font-weight: 700; font-size: 13px; border: 1px solid transparent; cursor: pointer; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); white-space: nowrap; box-sizing: border-box;">
+              Practice Drill ${icon('arrowRight')}
             </button>
           ` : `
-            <button class="hud-btn btn-train-prereq" style="flex: 1; justify-content: center; background: var(--bg-surface-sunk); color: var(--ink-primary); padding: 12px; font-weight: 600; border: 1px solid var(--border-subtle); cursor: pointer; border-radius: 6px;">
-              Train Prerequisite First ${icon('arrowRight')}
+            <button type="button" class="btn-train-prereq" style="flex: 1.4; min-height: 42px; padding: 10px 12px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; background: rgba(255, 255, 255, 0.06); color: var(--ink-primary); font-family: var(--font-sans); font-weight: 600; font-size: 13px; border: 1px solid rgba(255, 255, 255, 0.1); cursor: pointer; border-radius: 8px; white-space: nowrap; box-sizing: border-box;">
+              Train Prereq ${icon('arrowRight')}
             </button>
           `}
-          <button class="hud-btn btn-close-modal" style="padding: 12px 20px; justify-content: center; cursor: pointer; border-radius: 6px;">
+          <button type="button" class="btn-close-modal" style="flex: 1; min-height: 42px; padding: 10px 12px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.06); color: var(--ink-primary); font-family: var(--font-sans); font-weight: 600; font-size: 13px; border: 1px solid rgba(255, 255, 255, 0.1); cursor: pointer; border-radius: 8px; white-space: nowrap; box-sizing: border-box;">
             Close
           </button>
         </div>

@@ -162,6 +162,7 @@ const speakingMod = load('views/speaking.ts', {
   '../data/speaking.json': require('../src/ielts/data/speaking.json'),
   '../ui': mockUi,
   '../../core/acoustic-engine': mockAcoustic,
+  '../../utils/icons': { icon: () => '<svg></svg>' },
   '../tts': { playText: () => ({ stop: () => {} }), ttsAvailable: () => true },
   './speaking-simulator': { speakingSimulatorView: () => () => {} },
   '../progress': { addAttempt: () => {} },

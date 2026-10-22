@@ -7,6 +7,7 @@
 :root, html[data-theme="dark"] {
   color-scheme: dark;
   --page: #080a0f;
+  --scrim: rgba(5, 7, 13, 0.82);
   --bg-canvas: #080a0f;
   --bg-surface: #111622;
   --bg-card: #182030;
@@ -24,8 +25,10 @@
   --accent-gold-soft: rgba(165, 180, 252, 0.16);
   --accent-star: #c4b5fd;
   --accent-star-glow: rgba(196, 181, 253, 0.45);
-  --accent-cyan: #38bdf8;
-  --accent-cyan-soft: rgba(56, 189, 248, 0.16);
+  --accent-cyan: #a5b4fc;
+  --accent-cyan-soft: rgba(165, 180, 252, 0.16);
+  --cyan: #a5b4fc;
+  --cyan-soft: rgba(165, 180, 252, 0.16);
 
   /* Status Tokens */
   --good: #34d399;
@@ -69,15 +72,82 @@
   --font-mono: 'JetBrains Mono', 'SF Mono', 'Courier New', monospace;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
-  /* Scaled-Up Typographic Hierarchy */
-  --text-2xs: 11px;
-  --text-xs: 13px;
-  --text-sm: 15px;
-  --text-base: 18px;
-  --text-lg: 22px;
-  --text-xl: 28px;
-  --text-2xl: 36px;
-  --text-3xl: 48px;
+  /* Legacy size scale: aliased to the spec tokens above so nothing bypasses them */
+  --text-2xs: var(--font-kicker);
+  --text-xs: var(--font-body-compact);
+  --text-sm: var(--font-body);
+  --text-base: var(--font-h3);
+  --text-lg: var(--font-h1);
+  --text-xl: var(--font-h1);
+  --text-2xl: var(--font-h1);
+  --text-3xl: var(--font-h1);
+
+  /* ========================================================================
+     CANONICAL TYPOGRAPHY RULES: HEADER & CONTENT HIERARCHY
+     ======================================================================== */
+  /* H1: Display / Hero / Page Header */
+  --font-h1: clamp(22px, 3.5vw, 28px);
+  --font-h1-line: 1.25;
+  --font-h1-weight: 700;
+
+  /* H2: Dossier / Module / Pillar Banner */
+  --font-h2: clamp(15px, 2.5vw, 20px);
+  --font-h2-line: 1.3;
+  --font-h2-weight: 700;
+
+  /* H3: Card Title / Section Heading */
+  --font-h3: clamp(16px, 2vw, 18px);
+  --font-h3-line: 1.35;
+  --font-h3-weight: 600;
+
+  /* H4: Subheading / Field Group / Item Cue */
+  --font-h4: clamp(14px, 1.6vw, 15px);
+  --font-h4-line: 1.4;
+  --font-h4-weight: 600;
+
+  /* Kicker / Overline / Telemetry Label */
+  --font-kicker: 11px;
+  --font-kicker-line: 1.2;
+  --font-kicker-weight: 700;
+  --font-kicker-spacing: 0.08em;
+
+  /* Body Prose (Reading & Articles) */
+  --font-body: clamp(15px, 1.8vw, 16px);
+  --font-body-line: 1.65;
+
+  /* Body Compact (Explanations & Helper Text) */
+  --font-body-compact: 13px;
+  --font-body-compact-line: 1.5;
+
+  /* Focus Prompt (Flashcard Cue & Tense Sentence) */
+  --font-prompt: clamp(16px, 2.5vw, 22px);
+  --font-prompt-line: 1.35;
+  --font-prompt-weight: 600;
+
+  /* ========================================================================
+     CANONICAL PADDING RULES (DESKTOP & MOBILE TIERS)
+     ======================================================================== */
+  --pad-screen: 24px;
+  --pad-workspace: 24px;
+  --pad-card: clamp(14px, 2.5vw, 24px);
+  --pad-card-compact: clamp(10px, 1.8vw, 16px);
+  --pad-modal: clamp(16px, 3vw, 28px);
+  --pad-btn: 8px 16px;
+  --pad-btn-compact: 6px 12px;
+  --pad-chip: 4px 10px;
+  --pad-input: 10px 14px;
+
+  /* ========================================================================
+     CANONICAL SPACING & GAP RULES (4px / 8px SPATIAL RHYTHM)
+     ======================================================================== */
+  --gap-section: clamp(16px, 2.5vw, 32px);
+  --gap-block: clamp(12px, 1.5vw, 20px);
+  --gap-group: clamp(8px, 1vw, 12px);
+  --gap-element: clamp(6px, 0.6vw, 8px);
+  --gap-micro: 4px;
+  --gap-inline: 4px;
+  --bottom-nav-height: 60px;
+  --safe-bottom-dock: 84px;
 
   /* Motion & Dynamics (Composite Only) */
   --ease-snappy: cubic-bezier(0.16, 1, 0.3, 1);
@@ -97,6 +167,7 @@
 html[data-theme="light"] {
   color-scheme: light;
   --page: #fafaf9;
+  --scrim: rgba(255, 255, 255, 0.92);
   --bg-canvas: #fafaf9;
   --bg-surface: #ffffff;
   --bg-card: #ffffff;
@@ -114,8 +185,10 @@ html[data-theme="light"] {
   --accent-gold-soft: rgba(91, 91, 214, 0.10);
   --accent-star: #8b8ff0;
   --accent-star-glow: rgba(139, 143, 240, 0.35);
-  --accent-cyan: #0284c7;
-  --accent-cyan-soft: rgba(2, 132, 199, 0.12);
+  --accent-cyan: #5b5bd6;
+  --accent-cyan-soft: rgba(91, 91, 214, 0.12);
+  --cyan: #5b5bd6;
+  --cyan-soft: rgba(91, 91, 214, 0.12);
 
   /* Status Tokens */
   --good: #10b981;

@@ -11,13 +11,13 @@
     },
     "passageTitle": "The Neurobiology of Bilingual Executive Function",
     "paragraphs": {
-      "A": "For much of the twentieth century, clinical psychologists and educational theorists regarded childhood bilingualism with profound skepticism. Traditional pedagogical dogma posited that acquiring two linguistic systems simultaneously imposed a crippling cognitive burden on developing minds, leading to developmental delays, reduced vocabulary capacity, and chronic linguistic interference. However, over the past three decades, revolutionary advances in structural and functional neuroimaging—particularly functional Magnetic Resonance Imaging (fMRI) and event-related potential (ERP) electrophysiology—have systematically dismantled this deficit paradigm. Contemporary cognitive neuroscience reveals that the bilingual brain is not merely an expanded storage depot for two separate lexicons, but a fundamentally rewired neural architecture characterized by enhanced cognitive flexibility and heightened executive control.",
-      "B": "Central to understanding this cognitive divergence is the phenomenon of non-selective lexical access. Contrary to intuitive assumptions, when a bilingual individual communicates in one language, their non-target language does not remain dormant. Eye-tracking paradigms and semantic priming experiments have consistently demonstrated that both linguistic matrices remain perpetually active in parallel. For example, when an English-Vietnamese bilingual hears the English word \"desk,\" phonetic and semantic candidates from Vietnamese simultaneously ignite within the left inferior frontal gyrus. Consequently, the brain is engaged in an incessant neurocognitive juggling act, requiring continuous computational resources to suppress intrusive lexical competitors from the unselected language.",
-      "C": "This perpetual linguistic competition exercises the brain's executive control network—a distributed frontoparietal circuit encompassing the dorsolateral prefrontal cortex (DLPFC), the anterior cingulate cortex (ACC), and subcortical basal ganglia structures. In monolingual individuals, these neural circuits are mobilized primarily during novel, high-conflict reasoning tasks. In multilinguals, however, the executive control network is continuously recruited for routine speech production and comprehension. Decades of microsecond-level conflict resolution between competing phonetic and syntactic representations induce structural neuroplastic adaptation, strengthening white matter tracts such as the superior longitudinal fasciculus and increasing cortical gray matter volume in frontal and parietal hubs.",
-      "D": "The behavioral dividends of this structural remodeling are most pronounced in tasks measuring non-verbal attentional inhibition and task switching. In standard neuropsychological assessments such as the Simon Task and the Stroop Color-Word Test, participants must ignore misleading visual cues and respond solely to target stimuli. Multilingual subjects across all age cohorts consistently outperform their monolingual counterparts, registering significantly faster reaction times and fewer commission errors. Crucially, this bilingual advantage is not restricted to linguistic manipulation; rather, the lifelong management of dual linguistic streams cross-pollinates general non-verbal domain-general attentional mechanisms.",
-      "E": "Beyond behavioral speed advantages in young adults, the most momentous clinical implication of bilingual neuroplasticity manifests in cognitive aging. Epidemiological studies conducted across diverse demographic populations by Dr. Ellen Bialystok and colleagues indicate that lifelong bilingualism builds substantial cognitive reserve. Although bilingual individuals exhibit the exact same neuropathological biomarkers of Alzheimer's disease—such as amyloid-beta plaque accumulation and cerebral cortical atrophy—as monolinguals, they manifest clinical symptoms of cognitive dementia approximately four to five years later. The enhanced synaptic connectivity within the frontoparietal network allows the bilingual brain to compensate for localized structural decay by dynamically rerouting neural signaling through alternate pathways.",
+      "A": "For much of the twentieth century, clinical psychologists and educational theorists regarded childhood bilingualism with skepticism. Traditional pedagogical assumptions held that acquiring two linguistic systems simultaneously imposed a cognitive burden on young learners, leading to delays and linguistic interference. Over the past three decades, advances in neuroimaging, particularly functional Magnetic Resonance Imaging (fMRI) and event-related potential (ERP) electrophysiology, challenged this deficit view. Modern cognitive neuroscience reveals that bilingualism does more than expand vocabulary storage; it reshapes neural architecture, supporting cognitive flexibility and executive control.",
+      "B": "Central to understanding this divergence is non-selective lexical access. When a bilingual person communicates in one language, their other language does not remain dormant. Eye-tracking studies and semantic priming experiments demonstrate that both linguistic systems remain active in parallel. For example, when an English-Vietnamese bilingual hears the English word \"desk,\" phonetic and semantic candidates from Vietnamese activate at the same time in the left inferior frontal gyrus. As a result, the brain regularly draws on executive resources to suppress lexical competitors from the unselected language.",
+      "C": "This linguistic competition exercises the brain's executive control network, a distributed frontoparietal circuit encompassing the dorsolateral prefrontal cortex (DLPFC), the anterior cingulate cortex (ACC), and subcortical basal ganglia structures. In monolingual individuals, these circuits are mobilized primarily during novel, high-conflict reasoning tasks. In multilinguals, however, the executive control network helps handle routine speech production and comprehension. Decades of conflict resolution between competing phonetic and syntactic representations encourage structural neuroplastic adaptation, strengthening white matter tracts such as the superior longitudinal fasciculus and increasing cortical gray matter volume in frontal and parietal hubs.",
+      "D": "These structural changes are clearest in tasks measuring non-verbal attentional inhibition and task switching. In standard neuropsychological assessments such as the Simon Task and the Stroop Color-Word Test, participants must ignore misleading visual cues and respond solely to target stimuli. Multilingual subjects across age cohorts frequently outperform monolingual peers, recording faster reaction times and fewer commission errors. Crucially, this advantage extends beyond speech; managing dual linguistic streams reinforces broader attentional mechanisms.",
+      "E": "In cognitive aging, bilingual neuroplasticity shows clear medical implications. Epidemiological studies conducted across diverse populations by Dr. Ellen Bialystok and colleagues indicate that lifelong bilingualism builds substantial cognitive reserve. Although bilingual individuals show the neuropathological biomarkers of Alzheimer's disease, including amyloid-beta plaque accumulation and cerebral cortical atrophy, at rates comparable to monolinguals, they manifest clinical symptoms of cognitive dementia approximately four to five years later. Enhanced synaptic connectivity within the frontoparietal network allows the bilingual brain to compensate for localized structural decay by rerouting neural signaling through alternate pathways.",
       "F": "Nevertheless, the scientific consensus regarding the universal scope of the bilingual advantage has been contested by a vocal contingent of cognitive psychologists. Critics point out that numerous empirical replication studies fail to detect statistically significant executive differences between bilingual and monolingual cohorts, particularly in homogeneous laboratory samples. Meta-analyses have suggested that publication bias—wherein studies demonstrating positive effects are substantially more likely to be accepted by academic journals—may have inflated the perceived magnitude of the advantage. Furthermore, socio-economic status, immigrant background, and educational attainment frequently act as confounding variables that are difficult to isolate completely.",
-      "G": "In response to these methodological challenges, contemporary researchers advocate for a more nuanced dimensional model rather than a simplistic binary categorization. Rather than treating bilingualism as a static, monolithic trait, modern investigators evaluate continuous spectrum variables, including interactional diversity, age of acquisition, dialectal distance, and switching frequency across communicative domains. When examined through this granular lens, the neurobiological adaptations appear not as an inevitable blanket guarantee of superior intellect, but as an experience-dependent adaptation of the human brain to the specific communicative demands of its linguistic ecosystem."
+      "G": "In response to these methodological challenges, researchers advocate a dimensional model rather than a simple binary categorization. Rather than treating bilingualism as a uniform trait, investigators evaluate continuous spectrum variables, including interactional diversity, age of acquisition, dialectal distance, and switching frequency across settings. Examined through this lens, the neurobiological adaptations reflect an experience-dependent response to communicative demands, rather than a blanket guarantee of superior intellect."
     },
     "questions": [
       {
@@ -25,88 +25,101 @@
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph B",
-        "key": "v"
+        "key": "v",
+        "why": "Para B: \"both linguistic systems remain active in parallel\" = heading v. Headings i, vii and iii describe other paragraphs."
       },
       {
         "number": 2,
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph C",
-        "key": "vii"
+        "key": "vii",
+        "why": "Para C: \"structural neuroplastic adaptation, strengthening white matter tracts\" = vii (structural reinforcement of the frontoparietal circuit)."
       },
       {
         "number": 3,
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph D",
-        "key": "iii"
+        "key": "iii",
+        "why": "Para D: \"non-verbal attentional inhibition and task switching\" = iii. Heading vi covers clinical decline, which is para E."
       },
       {
         "number": 4,
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph E",
-        "key": "vi"
+        "key": "vi",
+        "why": "Para E: \"builds substantial cognitive reserve… rerouting neural signaling\" = vi (clinical defence against neurodegenerative decline)."
       },
       {
         "number": 5,
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph F",
-        "key": "i"
+        "key": "i",
+        "why": "Para F: \"numerous empirical replication studies fail to detect… publication bias\" = i (conflicting evidence and scepticism)."
       },
       {
         "number": 6,
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph G",
-        "key": "iv"
+        "key": "iv",
+        "why": "Para G: \"a dimensional model rather than a simple binary categorization\" = iv."
       },
       {
         "number": 7,
         "passage": 1,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Functional neuroimaging verified that the inactive language shuts down completely during single-language communication.",
-        "key": "FALSE"
+        "key": "FALSE",
+        "why": "Para B: both languages \"remain active in parallel\". \"Shuts down completely\" contradicts this → FALSE."
       },
       {
         "number": 8,
         "passage": 1,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Lifelong bilinguals prevent the physical accumulation of amyloid-beta plaques in brain tissue.",
-        "key": "FALSE"
+        "key": "FALSE",
+        "why": "Para E: bilinguals show plaque accumulation \"at rates comparable to monolinguals\". They delay symptoms; they do not prevent plaques → FALSE."
       },
       {
         "number": 9,
         "passage": 1,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Multilingual advantages in executive tasks are more pronounced in tone-language speakers than non-tonal speakers.",
-        "key": "NOT GIVEN"
+        "key": "NOT GIVEN",
+        "why": "No paragraph compares tone-language speakers with non-tonal speakers → NOT GIVEN."
       },
       {
         "number": 10,
         "passage": 1,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Some researchers argue that academic journals favored publishing positive studies on bilingual cognitive performance.",
-        "key": "TRUE"
+        "key": "TRUE",
+        "why": "Para F: publication bias means positive studies \"are substantially more likely to be accepted by academic journals\" → TRUE."
       },
       {
         "number": 11,
         "passage": 1,
         "type": "SUMMARY_COMPLETION",
-        "key": "cognitive reserve"
+        "key": "cognitive reserve",
+        "why": "Para E: \"lifelong bilingualism builds substantial cognitive reserve\" → cognitive reserve."
       },
       {
         "number": 12,
         "passage": 1,
         "type": "SUMMARY_COMPLETION",
-        "key": "frontoparietal network"
+        "key": "frontoparietal network",
+        "why": "Para E: \"Enhanced synaptic connectivity within the frontoparietal network\" → frontoparietal network."
       },
       {
         "number": 13,
         "passage": 1,
         "type": "SUMMARY_COMPLETION",
-        "key": "dimensional model"
+        "key": "dimensional model",
+        "why": "Para G: \"researchers advocate a dimensional model\" → dimensional model."
       }
     ],
     "passages": [
@@ -114,13 +127,13 @@
         "passageNumber": 1,
         "title": "The Neurobiology of Bilingual Executive Function",
         "paragraphs": {
-          "A": "For much of the twentieth century, clinical psychologists and educational theorists regarded childhood bilingualism with profound skepticism. Traditional pedagogical dogma posited that acquiring two linguistic systems simultaneously imposed a crippling cognitive burden on developing minds, leading to developmental delays, reduced vocabulary capacity, and chronic linguistic interference. However, over the past three decades, revolutionary advances in structural and functional neuroimaging—particularly functional Magnetic Resonance Imaging (fMRI) and event-related potential (ERP) electrophysiology—have systematically dismantled this deficit paradigm. Contemporary cognitive neuroscience reveals that the bilingual brain is not merely an expanded storage depot for two separate lexicons, but a fundamentally rewired neural architecture characterized by enhanced cognitive flexibility and heightened executive control.",
-          "B": "Central to understanding this cognitive divergence is the phenomenon of non-selective lexical access. Contrary to intuitive assumptions, when a bilingual individual communicates in one language, their non-target language does not remain dormant. Eye-tracking paradigms and semantic priming experiments have consistently demonstrated that both linguistic matrices remain perpetually active in parallel. For example, when an English-Vietnamese bilingual hears the English word \"desk,\" phonetic and semantic candidates from Vietnamese simultaneously ignite within the left inferior frontal gyrus. Consequently, the brain is engaged in an incessant neurocognitive juggling act, requiring continuous computational resources to suppress intrusive lexical competitors from the unselected language.",
-          "C": "This perpetual linguistic competition exercises the brain's executive control network—a distributed frontoparietal circuit encompassing the dorsolateral prefrontal cortex (DLPFC), the anterior cingulate cortex (ACC), and subcortical basal ganglia structures. In monolingual individuals, these neural circuits are mobilized primarily during novel, high-conflict reasoning tasks. In multilinguals, however, the executive control network is continuously recruited for routine speech production and comprehension. Decades of microsecond-level conflict resolution between competing phonetic and syntactic representations induce structural neuroplastic adaptation, strengthening white matter tracts such as the superior longitudinal fasciculus and increasing cortical gray matter volume in frontal and parietal hubs.",
-          "D": "The behavioral dividends of this structural remodeling are most pronounced in tasks measuring non-verbal attentional inhibition and task switching. In standard neuropsychological assessments such as the Simon Task and the Stroop Color-Word Test, participants must ignore misleading visual cues and respond solely to target stimuli. Multilingual subjects across all age cohorts consistently outperform their monolingual counterparts, registering significantly faster reaction times and fewer commission errors. Crucially, this bilingual advantage is not restricted to linguistic manipulation; rather, the lifelong management of dual linguistic streams cross-pollinates general non-verbal domain-general attentional mechanisms.",
-          "E": "Beyond behavioral speed advantages in young adults, the most momentous clinical implication of bilingual neuroplasticity manifests in cognitive aging. Epidemiological studies conducted across diverse demographic populations by Dr. Ellen Bialystok and colleagues indicate that lifelong bilingualism builds substantial cognitive reserve. Although bilingual individuals exhibit the exact same neuropathological biomarkers of Alzheimer's disease—such as amyloid-beta plaque accumulation and cerebral cortical atrophy—as monolinguals, they manifest clinical symptoms of cognitive dementia approximately four to five years later. The enhanced synaptic connectivity within the frontoparietal network allows the bilingual brain to compensate for localized structural decay by dynamically rerouting neural signaling through alternate pathways.",
+          "A": "For much of the twentieth century, clinical psychologists and educational theorists regarded childhood bilingualism with skepticism. Traditional pedagogical assumptions held that acquiring two linguistic systems simultaneously imposed a cognitive burden on young learners, leading to delays and linguistic interference. Over the past three decades, advances in neuroimaging, particularly functional Magnetic Resonance Imaging (fMRI) and event-related potential (ERP) electrophysiology, challenged this deficit view. Modern cognitive neuroscience reveals that bilingualism does more than expand vocabulary storage; it reshapes neural architecture, supporting cognitive flexibility and executive control.",
+          "B": "Central to understanding this divergence is non-selective lexical access. When a bilingual person communicates in one language, their other language does not remain dormant. Eye-tracking studies and semantic priming experiments demonstrate that both linguistic systems remain active in parallel. For example, when an English-Vietnamese bilingual hears the English word \"desk,\" phonetic and semantic candidates from Vietnamese activate at the same time in the left inferior frontal gyrus. As a result, the brain regularly draws on executive resources to suppress lexical competitors from the unselected language.",
+          "C": "This linguistic competition exercises the brain's executive control network, a distributed frontoparietal circuit encompassing the dorsolateral prefrontal cortex (DLPFC), the anterior cingulate cortex (ACC), and subcortical basal ganglia structures. In monolingual individuals, these circuits are mobilized primarily during novel, high-conflict reasoning tasks. In multilinguals, however, the executive control network helps handle routine speech production and comprehension. Decades of conflict resolution between competing phonetic and syntactic representations encourage structural neuroplastic adaptation, strengthening white matter tracts such as the superior longitudinal fasciculus and increasing cortical gray matter volume in frontal and parietal hubs.",
+          "D": "These structural changes are clearest in tasks measuring non-verbal attentional inhibition and task switching. In standard neuropsychological assessments such as the Simon Task and the Stroop Color-Word Test, participants must ignore misleading visual cues and respond solely to target stimuli. Multilingual subjects across age cohorts frequently outperform monolingual peers, recording faster reaction times and fewer commission errors. Crucially, this advantage extends beyond speech; managing dual linguistic streams reinforces broader attentional mechanisms.",
+          "E": "In cognitive aging, bilingual neuroplasticity shows clear medical implications. Epidemiological studies conducted across diverse populations by Dr. Ellen Bialystok and colleagues indicate that lifelong bilingualism builds substantial cognitive reserve. Although bilingual individuals show the neuropathological biomarkers of Alzheimer's disease, including amyloid-beta plaque accumulation and cerebral cortical atrophy, at rates comparable to monolinguals, they manifest clinical symptoms of cognitive dementia approximately four to five years later. Enhanced synaptic connectivity within the frontoparietal network allows the bilingual brain to compensate for localized structural decay by rerouting neural signaling through alternate pathways.",
           "F": "Nevertheless, the scientific consensus regarding the universal scope of the bilingual advantage has been contested by a vocal contingent of cognitive psychologists. Critics point out that numerous empirical replication studies fail to detect statistically significant executive differences between bilingual and monolingual cohorts, particularly in homogeneous laboratory samples. Meta-analyses have suggested that publication bias—wherein studies demonstrating positive effects are substantially more likely to be accepted by academic journals—may have inflated the perceived magnitude of the advantage. Furthermore, socio-economic status, immigrant background, and educational attainment frequently act as confounding variables that are difficult to isolate completely.",
-          "G": "In response to these methodological challenges, contemporary researchers advocate for a more nuanced dimensional model rather than a simplistic binary categorization. Rather than treating bilingualism as a static, monolithic trait, modern investigators evaluate continuous spectrum variables, including interactional diversity, age of acquisition, dialectal distance, and switching frequency across communicative domains. When examined through this granular lens, the neurobiological adaptations appear not as an inevitable blanket guarantee of superior intellect, but as an experience-dependent adaptation of the human brain to the specific communicative demands of its linguistic ecosystem."
+          "G": "In response to these methodological challenges, researchers advocate a dimensional model rather than a simple binary categorization. Rather than treating bilingualism as a uniform trait, investigators evaluate continuous spectrum variables, including interactional diversity, age of acquisition, dialectal distance, and switching frequency across settings. Examined through this lens, the neurobiological adaptations reflect an experience-dependent response to communicative demands, rather than a blanket guarantee of superior intellect."
         },
         "questions": [
           {
@@ -128,88 +141,101 @@
             "passage": 1,
             "type": "HEADING_MATCHING",
             "target": "Paragraph B",
-            "key": "v"
+            "key": "v",
+            "why": "Para B: \"both linguistic systems remain active in parallel\" = heading v. Headings i, vii and iii describe other paragraphs."
           },
           {
             "number": 2,
             "passage": 1,
             "type": "HEADING_MATCHING",
             "target": "Paragraph C",
-            "key": "vii"
+            "key": "vii",
+            "why": "Para C: \"structural neuroplastic adaptation, strengthening white matter tracts\" = vii (structural reinforcement of the frontoparietal circuit)."
           },
           {
             "number": 3,
             "passage": 1,
             "type": "HEADING_MATCHING",
             "target": "Paragraph D",
-            "key": "iii"
+            "key": "iii",
+            "why": "Para D: \"non-verbal attentional inhibition and task switching\" = iii. Heading vi covers clinical decline, which is para E."
           },
           {
             "number": 4,
             "passage": 1,
             "type": "HEADING_MATCHING",
             "target": "Paragraph E",
-            "key": "vi"
+            "key": "vi",
+            "why": "Para E: \"builds substantial cognitive reserve… rerouting neural signaling\" = vi (clinical defence against neurodegenerative decline)."
           },
           {
             "number": 5,
             "passage": 1,
             "type": "HEADING_MATCHING",
             "target": "Paragraph F",
-            "key": "i"
+            "key": "i",
+            "why": "Para F: \"numerous empirical replication studies fail to detect… publication bias\" = i (conflicting evidence and scepticism)."
           },
           {
             "number": 6,
             "passage": 1,
             "type": "HEADING_MATCHING",
             "target": "Paragraph G",
-            "key": "iv"
+            "key": "iv",
+            "why": "Para G: \"a dimensional model rather than a simple binary categorization\" = iv."
           },
           {
             "number": 7,
             "passage": 1,
             "type": "TRUE_FALSE_NOT_GIVEN",
             "statement": "Functional neuroimaging verified that the inactive language shuts down completely during single-language communication.",
-            "key": "FALSE"
+            "key": "FALSE",
+            "why": "Para B: both languages \"remain active in parallel\". \"Shuts down completely\" contradicts this → FALSE."
           },
           {
             "number": 8,
             "passage": 1,
             "type": "TRUE_FALSE_NOT_GIVEN",
             "statement": "Lifelong bilinguals prevent the physical accumulation of amyloid-beta plaques in brain tissue.",
-            "key": "FALSE"
+            "key": "FALSE",
+            "why": "Para E: bilinguals show plaque accumulation \"at rates comparable to monolinguals\". They delay symptoms; they do not prevent plaques → FALSE."
           },
           {
             "number": 9,
             "passage": 1,
             "type": "TRUE_FALSE_NOT_GIVEN",
             "statement": "Multilingual advantages in executive tasks are more pronounced in tone-language speakers than non-tonal speakers.",
-            "key": "NOT GIVEN"
+            "key": "NOT GIVEN",
+            "why": "No paragraph compares tone-language speakers with non-tonal speakers → NOT GIVEN."
           },
           {
             "number": 10,
             "passage": 1,
             "type": "TRUE_FALSE_NOT_GIVEN",
             "statement": "Some researchers argue that academic journals favored publishing positive studies on bilingual cognitive performance.",
-            "key": "TRUE"
+            "key": "TRUE",
+            "why": "Para F: publication bias means positive studies \"are substantially more likely to be accepted by academic journals\" → TRUE."
           },
           {
             "number": 11,
             "passage": 1,
             "type": "SUMMARY_COMPLETION",
-            "key": "cognitive reserve"
+            "key": "cognitive reserve",
+            "why": "Para E: \"lifelong bilingualism builds substantial cognitive reserve\" → cognitive reserve."
           },
           {
             "number": 12,
             "passage": 1,
             "type": "SUMMARY_COMPLETION",
-            "key": "frontoparietal network"
+            "key": "frontoparietal network",
+            "why": "Para E: \"Enhanced synaptic connectivity within the frontoparietal network\" → frontoparietal network."
           },
           {
             "number": 13,
             "passage": 1,
             "type": "SUMMARY_COMPLETION",
-            "key": "dimensional model"
+            "key": "dimensional model",
+            "why": "Para G: \"researchers advocate a dimensional model\" → dimensional model."
           }
         ]
       },
@@ -222,7 +248,7 @@
           "C": "Contemporary DAC architectures are divided into two primary technological lineages: liquid solvent contactors and solid sorbent filters. Liquid systems typically utilize high-pH aqueous hydroxide solutions, such as potassium hydroxide (KOH), which react rapidly with incoming carbon dioxide to form dissolved carbonate salts. This liquid sludge is then subjected to a series of chemical precipitate reactions and transferred to a calcination kiln operating at approximately 900 degrees Celsius to release pure carbon dioxide gas. Solid sorbent systems, conversely, route ambient air through structured monolithic honeycombs impregnated with basic chemical amines. Sorbent desorption requires considerably lower thermal activation (approximately 100 degrees Celsius), enabling the use of industrial waste heat or geothermal steam.",
           "D": "Capturing atmospheric carbon dioxide represents merely the inaugural phase of the carbon removal equation; permanent environmental sequestration constitutes the decisive second stage. Traditional approaches have advocated storing compressed supercritical CO2 within depleted hydrocarbon reservoirs or deep saline aquifers. However, concerns regarding long-term subterranean leakage have fueled interest in permanent geochemical biomineralization. Pioneered by the Carbfix initiative in southwestern Iceland, this process dissolves captured CO2 under intense hydraulic pressure into water and injects the fizzy mixture into reactive volcanic basalt formations. Within twenty-four months, natural in-situ chemical weathering reactions transform the dissolved carbon into solid calcium carbonate (calcite), locking the greenhouse gas into immovable subterranean rock permanently.",
           "E": "The commercial viability of large-scale DAC deployment hinges upon precipitous cost reductions. Current first-generation pilot facilities exhibit levelized capture costs ranging from $400 to $700 per metric ton of CO2 removed. For DAC to become an effective global climate stabilizer, analysts project that costs must fall below $100 to $150 per ton. Achieving this economic benchmark will require massive economies of scale, standardized modular engineering, and long-term carbon off-take commitments from multinational corporate buyers seeking durable, high-permanence carbon credits to fulfill net-zero pledges.",
-          "F": "Furthermore, rigorous life-cycle assessments (LCAs) emphasize that DAC facilities cannot be powered by conventional fossil-heavy electric grids. The auxiliary electrical and thermal demand required to operate fans, pumps, and thermal desorption units—known technically as parasitic energy loads—would result in substantial re-emissions of carbon dioxide if derived from coal or natural gas generation. Consequently, industrial DAC deployments must be strictly co-located with dedicated, low-carbon baseload energy assets, such as abundant geothermal reservoirs, nuclear power stations, or utility-scale solar and wind arrays with on-site energy storage.",
+          "F": "Furthermore, rigorous life-cycle assessments (LCAs) emphasize that DAC facilities cannot be powered by conventional fossil-heavy electric grids. The auxiliary electrical and thermal demand required to operate fans, pumps, and thermal desorption units, known technically as parasitic energy loads, would result in substantial re-emissions of carbon dioxide if derived from coal or natural gas generation. Consequently, industrial DAC deployments must be strictly co-located with dedicated, low-carbon baseload energy assets, such as abundant geothermal reservoirs, nuclear power stations, or utility-scale solar and wind arrays with on-site energy storage.",
           "G": "Beyond technological and thermodynamic hurdles, Direct Air Capture occupies a contested space within global climate governance. A prominent critique raised by environmental ethicists centers on the hazard of moral hazard: the apprehension that political and corporate decision-makers will view the prospect of future technological carbon removal as a license to prolong fossil fuel extraction in the present. To mitigate this risk, international regulatory frameworks insist upon clear boundary demarcation between emissions reduction mandates and engineered removal allowances, supported by incorruptible MRV (Monitoring, Reporting, and Verification) protocols and standardized carbon accounting standards."
         },
         "questions": [
@@ -231,87 +257,100 @@
             "passage": 2,
             "type": "MATCHING_INFORMATION",
             "key": "B",
-            "info": "The immense volume of ambient air required to capture a single ton of carbon dioxide"
+            "info": "The immense volume of ambient air required to capture a single ton of carbon dioxide",
+            "why": "Para B: \"roughly two to three million cubic meters of ambient air\" per tonne → B."
           },
           {
             "number": 15,
             "passage": 2,
             "type": "MATCHING_INFORMATION",
             "key": "D",
-            "info": "The subterranean geochemical transformation of dissolved carbon into permanent solid stone"
+            "info": "The subterranean geochemical transformation of dissolved carbon into permanent solid stone",
+            "why": "Para D: dissolved carbon becomes \"solid calcium carbonate (calcite)… permanently\" → D."
           },
           {
             "number": 16,
             "passage": 2,
             "type": "MATCHING_INFORMATION",
             "key": "C",
-            "info": "A technical comparison between liquid hydroxide contactors and solid amine sorbent filters"
+            "info": "A technical comparison between liquid hydroxide contactors and solid amine sorbent filters",
+            "why": "Para C contrasts \"liquid solvent contactors\" with \"solid sorbent filters\" → C."
           },
           {
             "number": 17,
             "passage": 2,
             "type": "MATCHING_INFORMATION",
             "key": "G",
-            "info": "Ethical concerns that atmospheric removal could disincentivize immediate emissions cuts"
+            "info": "Ethical concerns that atmospheric removal could disincentivize immediate emissions cuts",
+            "why": "Para G: \"the hazard of moral hazard… a license to prolong fossil fuel extraction\" → G."
           },
           {
             "number": 18,
             "passage": 2,
             "type": "MATCHING_INFORMATION",
             "key": "F",
-            "info": "The operational necessity of powering capture hardware with dedicated zero-carbon energy sources"
+            "info": "The operational necessity of powering capture hardware with dedicated zero-carbon energy sources",
+            "why": "Para F: \"must be strictly co-located with dedicated, low-carbon baseload energy assets\" → F."
           },
           {
             "number": 19,
             "passage": 2,
             "type": "MATCHING_INFORMATION",
             "key": "E",
-            "info": "Target economic price points and voluntary corporate carbon credit off-take agreements"
+            "info": "Target economic price points and voluntary corporate carbon credit off-take agreements",
+            "why": "Para E: costs \"must fall below $100 to $150\", with \"long-term carbon off-take commitments\" → E."
           },
           {
             "number": 20,
             "passage": 2,
             "type": "MULTIPLE_CHOICE",
             "question": "According to Paragraph B, the primary thermodynamic hurdle facing Direct Air Capture is:",
-            "key": "B"
+            "key": "D",
+            "why": "Para B: CO2 is \"extraordinarily dilute… approximately 0.04 percent\". A is para C, C and D are not in the passage → D."
           },
           {
             "number": 21,
             "passage": 2,
             "type": "MULTIPLE_CHOICE",
             "question": "What unique advantage does the basaltic biomineralization method described in Paragraph D offer?",
-            "key": "C"
+            "key": "A",
+            "why": "Para D: \"converts dissolved carbon dioxide into solid calcium carbonate… within twenty-four months\" → A. Water, fuel and fault options are not in the passage."
           },
           {
             "number": 22,
             "passage": 2,
             "type": "MULTIPLE_CHOICE",
             "question": "Why do environmental critics express concern regarding DAC in Paragraph G?",
-            "key": "A"
+            "key": "C",
+            "why": "Para G: critics fear a \"license to prolong fossil fuel extraction\" → C. Seismic, vapour and basalt-supply options are not raised."
           },
           {
             "number": 23,
             "passage": 2,
             "type": "SENTENCE_COMPLETION",
-            "key": "monolithic honeycombs"
+            "key": "monolithic honeycombs",
+            "why": "Para C: \"structured monolithic honeycombs impregnated with basic chemical amines\"."
           },
           {
             "number": 24,
             "passage": 2,
             "type": "SENTENCE_COMPLETION",
-            "key": "hydraulic pressure"
+            "key": "hydraulic pressure",
+            "why": "Para D: CO2 is \"dissolved… under intense hydraulic pressure\" before injection."
           },
           {
             "number": 25,
             "passage": 2,
             "type": "SENTENCE_COMPLETION",
-            "key": "parasitic energy"
+            "key": "parasitic energy",
+            "why": "Para F: the machinery load is \"known technically as parasitic energy loads\"."
           },
           {
             "number": 26,
             "passage": 2,
             "type": "SENTENCE_COMPLETION",
-            "key": "carbon accounting"
+            "key": "MRV",
+            "why": "Para G: \"incorruptible MRV (Monitoring, Reporting, and Verification) protocols\" → MRV."
           }
         ]
       },
@@ -319,14 +358,14 @@
         "passageNumber": 3,
         "title": "Linguistic Relativity, Cognitive Cartography and Cross-Cultural Epistemology",
         "paragraphs": {
-          "A": "For centuries, philosophers and philologists have debated whether language merely reflects pre-existing human thought or actively constrains and shapes it. In the early twentieth century, American anthropologists Edward Sapir and Benjamin Lee Whorf formalized the principle of linguistic relativity. In its most extreme, deterministic interpretation—often dubbed the strong Whorfian hypothesis—language acts as an inescapable mental cage, dictating what concepts an individual is capable of conceptualizing. While subsequent cognitive scientists emphatically rejected this strong determinism as empirically untenable, contemporary psycholinguistic research has revitalized the weak Whorfian hypothesis: the proposition that language subtly biases human attention, memory, and cognitive categorization in measurable ways.",
+          "A": "For centuries, philosophers and linguists have debated whether language merely reflects thought or actively shapes it. In the early twentieth century, American anthropologists Edward Sapir and Benjamin Lee Whorf formalized the principle of linguistic relativity. In its most extreme, deterministic interpretation, often called the strong Whorfian hypothesis, language acts as a mental boundary that dictates which concepts an individual can form. While cognitive scientists later rejected strict determinism as empirically unsupported, contemporary psycholinguistic research has revitalized the weak Whorfian hypothesis: the proposal that language subtly guides human attention, memory, and categorization in measurable ways.",
           "B": "The earliest battleground for testing linguistic relativity centered on color perception. In the 1970s, cognitive psychologist Eleanor Rosch conducted landmark studies with the Dani people of Papua New Guinea, whose language possesses only two basic color terms: *mili* (encompassing dark, cool hues) and *mola* (encompassing bright, warm hues). Despite this stark lexical dichotomy, Rosch discovered that Dani speakers distinguished chromatic focal boundaries and remembered colors with accuracy comparable to native English speakers. Subsequent computational analyses by Paul Kay and Terry Regier confirmed that universal neurophysiological properties of the human retina and visual cortex establish universal perceptual focal points, constraining cross-linguistic color naming worldwide.",
           "C": "However, when researchers redirected their investigations toward spatial orientation, striking evidence of cognitive relativity emerged. European languages predominantly utilize an egocentric relative spatial reference frame, describing object locations relative to the observer's body axis: \"the book is to your left,\" or \"step backward.\" In contrast, the Guugu Yimithirr indigenous community of northern Queensland, Australia, employs an absolute geocentric coordinate system. In Guugu Yimithirr, spatial references are anchored exclusively to cardinal directions: \"there is an ant on your southwest leg,\" or \"move the cup slightly to the north-northwest.\" Cognitive anthropologist Stephen Levinson demonstrated that Guugu Yimithirr speakers possess an extraordinarily accurate internal compass, tracking absolute cardinal bearings with subconscious precision, even in unfamiliar enclosed environments or when spun blindfolded.",
           "D": "This spatial divergence profoundly influences how linguistic communities conceptualize abstract dimensions, most notably the progression of time. English speakers intuitively conceptualize time along a horizontal axis, projecting the past behind them and the future ahead. Mandarin Chinese speakers, while utilizing horizontal time markers, frequently conceptualize chronological sequences along a vertical axis, employing spatial morphemes such as *shàng* (up/above) to denote earlier events and *xià* (down/below) to signify later occurrences. Most strikingly, the Aymara language of the Andean highlands exhibits a reverse temporal mapping: speakers describe the past as located in front of them (*nayra*, literally \"eye/front\") because past events have already occurred and can be seen by the mind's eye, whereas the unknown future (*qhipa*, \"back/behind\") lies behind the observer, unseen.",
           "E": "Linguistic structures also influence cognitive categorization through grammatical gender systems. In languages such as German and Spanish, inanimate nouns are arbitrarily categorized as grammatically masculine or feminine. Experimental research directed by Lera Boroditsky demonstrated that grammatical gender primes anthropomorphic semantic associations. When asked to select adjectives describing a \"key\"—a grammatically masculine noun in German (*der Schlüssel*) but feminine in Spanish (*la llave*)—German speakers favored words like \"hard, heavy, jagged, metal,\" whereas Spanish speakers described keys as \"golden, intricate, little, lovely.\" Conversely, a \"bridge\" is feminine in German (*die Brücke*) and masculine in Spanish (*el puente*); German speakers characterized bridges as \"beautiful, elegant, slender,\" while Spanish speakers selected \"dangerous, strong, sturdy, towering.\"",
           "F": "Furthermore, certain linguistic systems mandate the explicit morphological encoding of epistemology. In the indigenous Tucanoan languages of the northwest Amazon, verbs cannot be uttered without an obligatory evidential suffix indicating the speaker's source of knowledge. A speaker cannot merely state \"the jaguar killed the deer\"; they must append a grammatical suffix specifying whether they witnessed the event directly, heard it acoustic-sensory, inferred it from physical tracks, learned it through second-hand testimony, or assumed it based on situational context. Anthropological linguists suggest that lifelong adherence to compulsory evidentiality fosters heightened cognitive awareness regarding empirical veracity and information provenance.",
-          "G": "Recent neuroimaging investigations have illuminated the neurological mechanisms underpinning these cross-linguistic differences. Electroencephalographic (EEG) recordings during visual oddball tasks indicate that linguistic categorization effects occur astonishingly early in visual processing—within 100 to 200 milliseconds of stimulus onset. Crucially, these linguistic effects are lateralized primarily within the right visual field, which projects directly to the language-dominant left cerebral hemisphere. When visual stimuli are presented to the left visual field (projecting to the non-verbal right hemisphere), category boundary effects diminish significantly, confirming that language actively modulates visual perception at early cortical stages.",
-          "H": "Ultimately, the contemporary scientific synthesis views language neither as an insurmountable prison nor as an irrelevant epiphenomenon. Rather, human language functions as a habitual attentional spotlight. By requiring speakers to encode specific environmental features—whether cardinal bearings, temporal metaphors, or evidential provenance—linguistic systems train the human mind to attend automatically and effortlessly to salient facets of experience. Human cognition remains universally adaptable, yet the mother tongue leaves an indelible neural signature on the cognitive cartography of our mental universe."
+          "G": "Recent neuroimaging investigations have illuminated the neurological mechanisms underpinning these cross-linguistic differences. Electroencephalographic (EEG) recordings during visual oddball tasks indicate that linguistic categorization effects occur early in visual processing, within 100 to 200 milliseconds of stimulus onset. Crucially, these linguistic effects are lateralized primarily within the right visual field, which projects directly to the language-dominant left cerebral hemisphere. When visual stimuli are presented to the left visual field (projecting to the non-verbal right hemisphere), category boundary effects diminish significantly, confirming that language actively modulates visual perception at early cortical stages.",
+          "H": "Modern psycholinguistics views language as an attentional spotlight rather than an absolute mental barrier. By requiring speakers to encode specific environmental features, such as cardinal bearings, temporal metaphors, or evidential provenance, linguistic systems guide attention toward distinct aspects of experience. Human cognition remains adaptable across cultures, but native grammar leaves a lasting signature on everyday perception."
         },
         "questions": [
           {
@@ -334,93 +373,107 @@
             "passage": 3,
             "type": "YES_NO_NOT_GIVEN",
             "statement": "The strong version of the Sapir-Whorf hypothesis has been discredited by modern cognitive researchers.",
-            "key": "YES"
+            "key": "YES",
+            "why": "Para A: cognitive scientists \"later rejected strict determinism\" → YES."
           },
           {
             "number": 28,
             "passage": 3,
             "type": "YES_NO_NOT_GIVEN",
             "statement": "Guugu Yimithirr speakers struggle to determine cardinal directions when blindfolded in unfamiliar surroundings.",
-            "key": "NO"
+            "key": "NO",
+            "why": "Para C: Guugu Yimithirr speakers track bearings \"even when spun blindfolded\". The statement says the opposite → NO."
           },
           {
             "number": 29,
             "passage": 3,
             "type": "TRUE_FALSE_NOT_GIVEN",
             "statement": "Aymara is the only known language that conceptualizes the future as lying behind the speaker.",
-            "key": "NOT GIVEN"
+            "key": "NOT GIVEN",
+            "why": "Para D contrasts Mandarin and Aymara with English. It never says Aymara is the only such language → NOT GIVEN."
           },
           {
             "number": 30,
             "passage": 3,
             "type": "TRUE_FALSE_NOT_GIVEN",
             "statement": "Speakers of languages with evidential suffixes exhibit greater political skepticism than speakers of European languages.",
-            "key": "NOT GIVEN"
+            "key": "NOT GIVEN",
+            "why": "The passage never discusses political scepticism → NOT GIVEN."
           },
           {
             "number": 31,
             "passage": 3,
             "type": "YES_NO_NOT_GIVEN",
-            "statement": "Modern psycholinguistics views language as an attentional spotlight rather than an absolute mental barrier.",
-            "key": "YES"
+            "statement": "Modern psycholinguistics treats language as a guide to attention rather than an absolute barrier to thought.",
+            "key": "YES",
+            "why": "Para H: \"Modern psycholinguistics views language as an attentional spotlight rather than an absolute mental barrier\" → YES."
           },
           {
             "number": 32,
             "passage": 3,
             "type": "SENTENCE_COMPLETION",
-            "key": "absolute geocentric"
+            "key": "absolute geocentric",
+            "why": "Para C: \"an absolute geocentric coordinate system\" → absolute geocentric."
           },
           {
             "number": 33,
             "passage": 3,
             "type": "SENTENCE_COMPLETION",
-            "key": "vertical axis"
+            "key": "vertical axis",
+            "why": "Para D: Mandarin speakers \"conceptualize chronological sequences along a vertical axis\" → vertical axis."
           },
           {
             "number": 34,
             "passage": 3,
             "type": "SENTENCE_COMPLETION",
-            "key": "anthropomorphic semantic"
+            "key": "anthropomorphic semantic",
+            "why": "Para E: grammatical gender \"primes anthropomorphic semantic associations\" → anthropomorphic semantic."
           },
           {
             "number": 35,
             "passage": 3,
             "type": "SENTENCE_COMPLETION",
-            "key": "source of knowledge"
+            "key": "knowledge",
+            "why": "Para F: a suffix \"indicating the speaker's source of knowledge\" → knowledge."
           },
           {
             "number": 36,
             "passage": 3,
             "type": "SENTENCE_COMPLETION",
-            "key": "stimulus onset"
+            "key": "stimulus onset",
+            "why": "Para G: categorization occurs \"within 100 to 200 milliseconds of stimulus onset\" → stimulus onset."
           },
           {
             "number": 37,
             "passage": 3,
             "type": "MULTIPLE_CHOICE",
             "question": "What did Eleanor Rosch's research on the Dani people demonstrate regarding color perception?",
-            "key": "B"
+            "key": "B",
+            "why": "Para B: Rosch found Dani speakers \"distinguished chromatic focal boundaries… with accuracy comparable to native English speakers\". The universal-mechanism claim belongs to Kay and Regier, so A, C and D are not Rosch's finding."
           },
           {
             "number": 38,
             "passage": 3,
             "type": "MULTIPLE_CHOICE",
             "question": "How does the Aymara language conceptualize temporal orientation?",
-            "key": "C"
+            "key": "D",
+            "why": "Para D: the past is \"in front\" (nayra) and the future \"behind\" (qhipa) → D. The other options are not in the passage."
           },
           {
             "number": 39,
             "passage": 3,
             "type": "MULTIPLE_CHOICE",
             "question": "Why are the lateralized visual experiments in Paragraph G significant?",
-            "key": "B"
+            "key": "A",
+            "why": "Para G: category boundary effects are lateralized to the \"language-dominant left cerebral hemisphere\" → A."
           },
           {
             "number": 40,
             "passage": 3,
             "type": "MULTIPLE_CHOICE",
             "question": "What is the primary conclusion of the passage regarding the relationship between language and thought?",
-            "key": "C"
+            "key": "C",
+            "why": "Para H: language is \"an attentional spotlight rather than an absolute mental barrier\" → C. A, B and D overstate or misstate the passage."
           }
         ]
       }
@@ -431,268 +484,308 @@
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph B",
-        "key": "v"
+        "key": "v",
+        "why": "Para B: \"both linguistic systems remain active in parallel\" = heading v. Headings i, vii and iii describe other paragraphs."
       },
       {
         "number": 2,
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph C",
-        "key": "vii"
+        "key": "vii",
+        "why": "Para C: \"structural neuroplastic adaptation, strengthening white matter tracts\" = vii (structural reinforcement of the frontoparietal circuit)."
       },
       {
         "number": 3,
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph D",
-        "key": "iii"
+        "key": "iii",
+        "why": "Para D: \"non-verbal attentional inhibition and task switching\" = iii. Heading vi covers clinical decline, which is para E."
       },
       {
         "number": 4,
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph E",
-        "key": "vi"
+        "key": "vi",
+        "why": "Para E: \"builds substantial cognitive reserve… rerouting neural signaling\" = vi (clinical defence against neurodegenerative decline)."
       },
       {
         "number": 5,
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph F",
-        "key": "i"
+        "key": "i",
+        "why": "Para F: \"numerous empirical replication studies fail to detect… publication bias\" = i (conflicting evidence and scepticism)."
       },
       {
         "number": 6,
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph G",
-        "key": "iv"
+        "key": "iv",
+        "why": "Para G: \"a dimensional model rather than a simple binary categorization\" = iv."
       },
       {
         "number": 7,
         "passage": 1,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Functional neuroimaging verified that the inactive language shuts down completely during single-language communication.",
-        "key": "FALSE"
+        "key": "FALSE",
+        "why": "Para B: both languages \"remain active in parallel\". \"Shuts down completely\" contradicts this → FALSE."
       },
       {
         "number": 8,
         "passage": 1,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Lifelong bilinguals prevent the physical accumulation of amyloid-beta plaques in brain tissue.",
-        "key": "FALSE"
+        "key": "FALSE",
+        "why": "Para E: bilinguals show plaque accumulation \"at rates comparable to monolinguals\". They delay symptoms; they do not prevent plaques → FALSE."
       },
       {
         "number": 9,
         "passage": 1,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Multilingual advantages in executive tasks are more pronounced in tone-language speakers than non-tonal speakers.",
-        "key": "NOT GIVEN"
+        "key": "NOT GIVEN",
+        "why": "No paragraph compares tone-language speakers with non-tonal speakers → NOT GIVEN."
       },
       {
         "number": 10,
         "passage": 1,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Some researchers argue that academic journals favored publishing positive studies on bilingual cognitive performance.",
-        "key": "TRUE"
+        "key": "TRUE",
+        "why": "Para F: publication bias means positive studies \"are substantially more likely to be accepted by academic journals\" → TRUE."
       },
       {
         "number": 11,
         "passage": 1,
         "type": "SUMMARY_COMPLETION",
-        "key": "cognitive reserve"
+        "key": "cognitive reserve",
+        "why": "Para E: \"lifelong bilingualism builds substantial cognitive reserve\" → cognitive reserve."
       },
       {
         "number": 12,
         "passage": 1,
         "type": "SUMMARY_COMPLETION",
-        "key": "frontoparietal network"
+        "key": "frontoparietal network",
+        "why": "Para E: \"Enhanced synaptic connectivity within the frontoparietal network\" → frontoparietal network."
       },
       {
         "number": 13,
         "passage": 1,
         "type": "SUMMARY_COMPLETION",
-        "key": "dimensional model"
+        "key": "dimensional model",
+        "why": "Para G: \"researchers advocate a dimensional model\" → dimensional model."
       },
       {
         "number": 14,
         "passage": 2,
         "type": "MATCHING_INFORMATION",
         "key": "B",
-        "info": "The immense volume of ambient air required to capture a single ton of carbon dioxide"
+        "info": "The immense volume of ambient air required to capture a single ton of carbon dioxide",
+        "why": "Para B: \"roughly two to three million cubic meters of ambient air\" per tonne → B."
       },
       {
         "number": 15,
         "passage": 2,
         "type": "MATCHING_INFORMATION",
         "key": "D",
-        "info": "The subterranean geochemical transformation of dissolved carbon into permanent solid stone"
+        "info": "The subterranean geochemical transformation of dissolved carbon into permanent solid stone",
+        "why": "Para D: dissolved carbon becomes \"solid calcium carbonate (calcite)… permanently\" → D."
       },
       {
         "number": 16,
         "passage": 2,
         "type": "MATCHING_INFORMATION",
         "key": "C",
-        "info": "A technical comparison between liquid hydroxide contactors and solid amine sorbent filters"
+        "info": "A technical comparison between liquid hydroxide contactors and solid amine sorbent filters",
+        "why": "Para C contrasts \"liquid solvent contactors\" with \"solid sorbent filters\" → C."
       },
       {
         "number": 17,
         "passage": 2,
         "type": "MATCHING_INFORMATION",
         "key": "G",
-        "info": "Ethical concerns that atmospheric removal could disincentivize immediate emissions cuts"
+        "info": "Ethical concerns that atmospheric removal could disincentivize immediate emissions cuts",
+        "why": "Para G: \"the hazard of moral hazard… a license to prolong fossil fuel extraction\" → G."
       },
       {
         "number": 18,
         "passage": 2,
         "type": "MATCHING_INFORMATION",
         "key": "F",
-        "info": "The operational necessity of powering capture hardware with dedicated zero-carbon energy sources"
+        "info": "The operational necessity of powering capture hardware with dedicated zero-carbon energy sources",
+        "why": "Para F: \"must be strictly co-located with dedicated, low-carbon baseload energy assets\" → F."
       },
       {
         "number": 19,
         "passage": 2,
         "type": "MATCHING_INFORMATION",
         "key": "E",
-        "info": "Target economic price points and voluntary corporate carbon credit off-take agreements"
+        "info": "Target economic price points and voluntary corporate carbon credit off-take agreements",
+        "why": "Para E: costs \"must fall below $100 to $150\", with \"long-term carbon off-take commitments\" → E."
       },
       {
         "number": 20,
         "passage": 2,
         "type": "MULTIPLE_CHOICE",
         "question": "According to Paragraph B, the primary thermodynamic hurdle facing Direct Air Capture is:",
-        "key": "B"
+        "key": "D",
+        "why": "Para B: CO2 is \"extraordinarily dilute… approximately 0.04 percent\". A is para C, C and D are not in the passage → D."
       },
       {
         "number": 21,
         "passage": 2,
         "type": "MULTIPLE_CHOICE",
         "question": "What unique advantage does the basaltic biomineralization method described in Paragraph D offer?",
-        "key": "C"
+        "key": "A",
+        "why": "Para D: \"converts dissolved carbon dioxide into solid calcium carbonate… within twenty-four months\" → A. Water, fuel and fault options are not in the passage."
       },
       {
         "number": 22,
         "passage": 2,
         "type": "MULTIPLE_CHOICE",
         "question": "Why do environmental critics express concern regarding DAC in Paragraph G?",
-        "key": "A"
+        "key": "C",
+        "why": "Para G: critics fear a \"license to prolong fossil fuel extraction\" → C. Seismic, vapour and basalt-supply options are not raised."
       },
       {
         "number": 23,
         "passage": 2,
         "type": "SENTENCE_COMPLETION",
-        "key": "monolithic honeycombs"
+        "key": "monolithic honeycombs",
+        "why": "Para C: \"structured monolithic honeycombs impregnated with basic chemical amines\"."
       },
       {
         "number": 24,
         "passage": 2,
         "type": "SENTENCE_COMPLETION",
-        "key": "hydraulic pressure"
+        "key": "hydraulic pressure",
+        "why": "Para D: CO2 is \"dissolved… under intense hydraulic pressure\" before injection."
       },
       {
         "number": 25,
         "passage": 2,
         "type": "SENTENCE_COMPLETION",
-        "key": "parasitic energy"
+        "key": "parasitic energy",
+        "why": "Para F: the machinery load is \"known technically as parasitic energy loads\"."
       },
       {
         "number": 26,
         "passage": 2,
         "type": "SENTENCE_COMPLETION",
-        "key": "carbon accounting"
+        "key": "MRV",
+        "why": "Para G: \"incorruptible MRV (Monitoring, Reporting, and Verification) protocols\" → MRV."
       },
       {
         "number": 27,
         "passage": 3,
         "type": "YES_NO_NOT_GIVEN",
         "statement": "The strong version of the Sapir-Whorf hypothesis has been discredited by modern cognitive researchers.",
-        "key": "YES"
+        "key": "YES",
+        "why": "Para A: cognitive scientists \"later rejected strict determinism\" → YES."
       },
       {
         "number": 28,
         "passage": 3,
         "type": "YES_NO_NOT_GIVEN",
         "statement": "Guugu Yimithirr speakers struggle to determine cardinal directions when blindfolded in unfamiliar surroundings.",
-        "key": "NO"
+        "key": "NO",
+        "why": "Para C: Guugu Yimithirr speakers track bearings \"even when spun blindfolded\". The statement says the opposite → NO."
       },
       {
         "number": 29,
         "passage": 3,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Aymara is the only known language that conceptualizes the future as lying behind the speaker.",
-        "key": "NOT GIVEN"
+        "key": "NOT GIVEN",
+        "why": "Para D contrasts Mandarin and Aymara with English. It never says Aymara is the only such language → NOT GIVEN."
       },
       {
         "number": 30,
         "passage": 3,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Speakers of languages with evidential suffixes exhibit greater political skepticism than speakers of European languages.",
-        "key": "NOT GIVEN"
+        "key": "NOT GIVEN",
+        "why": "The passage never discusses political scepticism → NOT GIVEN."
       },
       {
         "number": 31,
         "passage": 3,
         "type": "YES_NO_NOT_GIVEN",
-        "statement": "Modern psycholinguistics views language as an attentional spotlight rather than an absolute mental barrier.",
-        "key": "YES"
+        "statement": "Modern psycholinguistics treats language as a guide to attention rather than an absolute barrier to thought.",
+        "key": "YES",
+        "why": "Para H: \"Modern psycholinguistics views language as an attentional spotlight rather than an absolute mental barrier\" → YES."
       },
       {
         "number": 32,
         "passage": 3,
         "type": "SENTENCE_COMPLETION",
-        "key": "absolute geocentric"
+        "key": "absolute geocentric",
+        "why": "Para C: \"an absolute geocentric coordinate system\" → absolute geocentric."
       },
       {
         "number": 33,
         "passage": 3,
         "type": "SENTENCE_COMPLETION",
-        "key": "vertical axis"
+        "key": "vertical axis",
+        "why": "Para D: Mandarin speakers \"conceptualize chronological sequences along a vertical axis\" → vertical axis."
       },
       {
         "number": 34,
         "passage": 3,
         "type": "SENTENCE_COMPLETION",
-        "key": "anthropomorphic semantic"
+        "key": "anthropomorphic semantic",
+        "why": "Para E: grammatical gender \"primes anthropomorphic semantic associations\" → anthropomorphic semantic."
       },
       {
         "number": 35,
         "passage": 3,
         "type": "SENTENCE_COMPLETION",
-        "key": "source of knowledge"
+        "key": "knowledge",
+        "why": "Para F: a suffix \"indicating the speaker's source of knowledge\" → knowledge."
       },
       {
         "number": 36,
         "passage": 3,
         "type": "SENTENCE_COMPLETION",
-        "key": "stimulus onset"
+        "key": "stimulus onset",
+        "why": "Para G: categorization occurs \"within 100 to 200 milliseconds of stimulus onset\" → stimulus onset."
       },
       {
         "number": 37,
         "passage": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "What did Eleanor Rosch's research on the Dani people demonstrate regarding color perception?",
-        "key": "B"
+        "key": "B",
+        "why": "Para B: Rosch found Dani speakers \"distinguished chromatic focal boundaries… with accuracy comparable to native English speakers\". The universal-mechanism claim belongs to Kay and Regier, so A, C and D are not Rosch's finding."
       },
       {
         "number": 38,
         "passage": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "How does the Aymara language conceptualize temporal orientation?",
-        "key": "C"
+        "key": "D",
+        "why": "Para D: the past is \"in front\" (nayra) and the future \"behind\" (qhipa) → D. The other options are not in the passage."
       },
       {
         "number": 39,
         "passage": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "Why are the lateralized visual experiments in Paragraph G significant?",
-        "key": "B"
+        "key": "A",
+        "why": "Para G: category boundary effects are lateralized to the \"language-dominant left cerebral hemisphere\" → A."
       },
       {
         "number": 40,
         "passage": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "What is the primary conclusion of the passage regarding the relationship between language and thought?",
-        "key": "C"
+        "key": "C",
+        "why": "Para H: language is \"an attentional spotlight rather than an absolute mental barrier\" → C. A, B and D overstate or misstate the passage."
       }
     ],
     "fullMockQuestions": [
@@ -701,268 +794,308 @@
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph B",
-        "key": "v"
+        "key": "v",
+        "why": "Para B: \"both linguistic systems remain active in parallel\" = heading v. Headings i, vii and iii describe other paragraphs."
       },
       {
         "number": 2,
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph C",
-        "key": "vii"
+        "key": "vii",
+        "why": "Para C: \"structural neuroplastic adaptation, strengthening white matter tracts\" = vii (structural reinforcement of the frontoparietal circuit)."
       },
       {
         "number": 3,
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph D",
-        "key": "iii"
+        "key": "iii",
+        "why": "Para D: \"non-verbal attentional inhibition and task switching\" = iii. Heading vi covers clinical decline, which is para E."
       },
       {
         "number": 4,
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph E",
-        "key": "vi"
+        "key": "vi",
+        "why": "Para E: \"builds substantial cognitive reserve… rerouting neural signaling\" = vi (clinical defence against neurodegenerative decline)."
       },
       {
         "number": 5,
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph F",
-        "key": "i"
+        "key": "i",
+        "why": "Para F: \"numerous empirical replication studies fail to detect… publication bias\" = i (conflicting evidence and scepticism)."
       },
       {
         "number": 6,
         "passage": 1,
         "type": "HEADING_MATCHING",
         "target": "Paragraph G",
-        "key": "iv"
+        "key": "iv",
+        "why": "Para G: \"a dimensional model rather than a simple binary categorization\" = iv."
       },
       {
         "number": 7,
         "passage": 1,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Functional neuroimaging verified that the inactive language shuts down completely during single-language communication.",
-        "key": "FALSE"
+        "key": "FALSE",
+        "why": "Para B: both languages \"remain active in parallel\". \"Shuts down completely\" contradicts this → FALSE."
       },
       {
         "number": 8,
         "passage": 1,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Lifelong bilinguals prevent the physical accumulation of amyloid-beta plaques in brain tissue.",
-        "key": "FALSE"
+        "key": "FALSE",
+        "why": "Para E: bilinguals show plaque accumulation \"at rates comparable to monolinguals\". They delay symptoms; they do not prevent plaques → FALSE."
       },
       {
         "number": 9,
         "passage": 1,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Multilingual advantages in executive tasks are more pronounced in tone-language speakers than non-tonal speakers.",
-        "key": "NOT GIVEN"
+        "key": "NOT GIVEN",
+        "why": "No paragraph compares tone-language speakers with non-tonal speakers → NOT GIVEN."
       },
       {
         "number": 10,
         "passage": 1,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Some researchers argue that academic journals favored publishing positive studies on bilingual cognitive performance.",
-        "key": "TRUE"
+        "key": "TRUE",
+        "why": "Para F: publication bias means positive studies \"are substantially more likely to be accepted by academic journals\" → TRUE."
       },
       {
         "number": 11,
         "passage": 1,
         "type": "SUMMARY_COMPLETION",
-        "key": "cognitive reserve"
+        "key": "cognitive reserve",
+        "why": "Para E: \"lifelong bilingualism builds substantial cognitive reserve\" → cognitive reserve."
       },
       {
         "number": 12,
         "passage": 1,
         "type": "SUMMARY_COMPLETION",
-        "key": "frontoparietal network"
+        "key": "frontoparietal network",
+        "why": "Para E: \"Enhanced synaptic connectivity within the frontoparietal network\" → frontoparietal network."
       },
       {
         "number": 13,
         "passage": 1,
         "type": "SUMMARY_COMPLETION",
-        "key": "dimensional model"
+        "key": "dimensional model",
+        "why": "Para G: \"researchers advocate a dimensional model\" → dimensional model."
       },
       {
         "number": 14,
         "passage": 2,
         "type": "MATCHING_INFORMATION",
         "key": "B",
-        "info": "The immense volume of ambient air required to capture a single ton of carbon dioxide"
+        "info": "The immense volume of ambient air required to capture a single ton of carbon dioxide",
+        "why": "Para B: \"roughly two to three million cubic meters of ambient air\" per tonne → B."
       },
       {
         "number": 15,
         "passage": 2,
         "type": "MATCHING_INFORMATION",
         "key": "D",
-        "info": "The subterranean geochemical transformation of dissolved carbon into permanent solid stone"
+        "info": "The subterranean geochemical transformation of dissolved carbon into permanent solid stone",
+        "why": "Para D: dissolved carbon becomes \"solid calcium carbonate (calcite)… permanently\" → D."
       },
       {
         "number": 16,
         "passage": 2,
         "type": "MATCHING_INFORMATION",
         "key": "C",
-        "info": "A technical comparison between liquid hydroxide contactors and solid amine sorbent filters"
+        "info": "A technical comparison between liquid hydroxide contactors and solid amine sorbent filters",
+        "why": "Para C contrasts \"liquid solvent contactors\" with \"solid sorbent filters\" → C."
       },
       {
         "number": 17,
         "passage": 2,
         "type": "MATCHING_INFORMATION",
         "key": "G",
-        "info": "Ethical concerns that atmospheric removal could disincentivize immediate emissions cuts"
+        "info": "Ethical concerns that atmospheric removal could disincentivize immediate emissions cuts",
+        "why": "Para G: \"the hazard of moral hazard… a license to prolong fossil fuel extraction\" → G."
       },
       {
         "number": 18,
         "passage": 2,
         "type": "MATCHING_INFORMATION",
         "key": "F",
-        "info": "The operational necessity of powering capture hardware with dedicated zero-carbon energy sources"
+        "info": "The operational necessity of powering capture hardware with dedicated zero-carbon energy sources",
+        "why": "Para F: \"must be strictly co-located with dedicated, low-carbon baseload energy assets\" → F."
       },
       {
         "number": 19,
         "passage": 2,
         "type": "MATCHING_INFORMATION",
         "key": "E",
-        "info": "Target economic price points and voluntary corporate carbon credit off-take agreements"
+        "info": "Target economic price points and voluntary corporate carbon credit off-take agreements",
+        "why": "Para E: costs \"must fall below $100 to $150\", with \"long-term carbon off-take commitments\" → E."
       },
       {
         "number": 20,
         "passage": 2,
         "type": "MULTIPLE_CHOICE",
         "question": "According to Paragraph B, the primary thermodynamic hurdle facing Direct Air Capture is:",
-        "key": "B"
+        "key": "D",
+        "why": "Para B: CO2 is \"extraordinarily dilute… approximately 0.04 percent\". A is para C, C and D are not in the passage → D."
       },
       {
         "number": 21,
         "passage": 2,
         "type": "MULTIPLE_CHOICE",
         "question": "What unique advantage does the basaltic biomineralization method described in Paragraph D offer?",
-        "key": "C"
+        "key": "A",
+        "why": "Para D: \"converts dissolved carbon dioxide into solid calcium carbonate… within twenty-four months\" → A. Water, fuel and fault options are not in the passage."
       },
       {
         "number": 22,
         "passage": 2,
         "type": "MULTIPLE_CHOICE",
         "question": "Why do environmental critics express concern regarding DAC in Paragraph G?",
-        "key": "A"
+        "key": "C",
+        "why": "Para G: critics fear a \"license to prolong fossil fuel extraction\" → C. Seismic, vapour and basalt-supply options are not raised."
       },
       {
         "number": 23,
         "passage": 2,
         "type": "SENTENCE_COMPLETION",
-        "key": "monolithic honeycombs"
+        "key": "monolithic honeycombs",
+        "why": "Para C: \"structured monolithic honeycombs impregnated with basic chemical amines\"."
       },
       {
         "number": 24,
         "passage": 2,
         "type": "SENTENCE_COMPLETION",
-        "key": "hydraulic pressure"
+        "key": "hydraulic pressure",
+        "why": "Para D: CO2 is \"dissolved… under intense hydraulic pressure\" before injection."
       },
       {
         "number": 25,
         "passage": 2,
         "type": "SENTENCE_COMPLETION",
-        "key": "parasitic energy"
+        "key": "parasitic energy",
+        "why": "Para F: the machinery load is \"known technically as parasitic energy loads\"."
       },
       {
         "number": 26,
         "passage": 2,
         "type": "SENTENCE_COMPLETION",
-        "key": "carbon accounting"
+        "key": "MRV",
+        "why": "Para G: \"incorruptible MRV (Monitoring, Reporting, and Verification) protocols\" → MRV."
       },
       {
         "number": 27,
         "passage": 3,
         "type": "YES_NO_NOT_GIVEN",
         "statement": "The strong version of the Sapir-Whorf hypothesis has been discredited by modern cognitive researchers.",
-        "key": "YES"
+        "key": "YES",
+        "why": "Para A: cognitive scientists \"later rejected strict determinism\" → YES."
       },
       {
         "number": 28,
         "passage": 3,
         "type": "YES_NO_NOT_GIVEN",
         "statement": "Guugu Yimithirr speakers struggle to determine cardinal directions when blindfolded in unfamiliar surroundings.",
-        "key": "NO"
+        "key": "NO",
+        "why": "Para C: Guugu Yimithirr speakers track bearings \"even when spun blindfolded\". The statement says the opposite → NO."
       },
       {
         "number": 29,
         "passage": 3,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Aymara is the only known language that conceptualizes the future as lying behind the speaker.",
-        "key": "NOT GIVEN"
+        "key": "NOT GIVEN",
+        "why": "Para D contrasts Mandarin and Aymara with English. It never says Aymara is the only such language → NOT GIVEN."
       },
       {
         "number": 30,
         "passage": 3,
         "type": "TRUE_FALSE_NOT_GIVEN",
         "statement": "Speakers of languages with evidential suffixes exhibit greater political skepticism than speakers of European languages.",
-        "key": "NOT GIVEN"
+        "key": "NOT GIVEN",
+        "why": "The passage never discusses political scepticism → NOT GIVEN."
       },
       {
         "number": 31,
         "passage": 3,
         "type": "YES_NO_NOT_GIVEN",
-        "statement": "Modern psycholinguistics views language as an attentional spotlight rather than an absolute mental barrier.",
-        "key": "YES"
+        "statement": "Modern psycholinguistics treats language as a guide to attention rather than an absolute barrier to thought.",
+        "key": "YES",
+        "why": "Para H: \"Modern psycholinguistics views language as an attentional spotlight rather than an absolute mental barrier\" → YES."
       },
       {
         "number": 32,
         "passage": 3,
         "type": "SENTENCE_COMPLETION",
-        "key": "absolute geocentric"
+        "key": "absolute geocentric",
+        "why": "Para C: \"an absolute geocentric coordinate system\" → absolute geocentric."
       },
       {
         "number": 33,
         "passage": 3,
         "type": "SENTENCE_COMPLETION",
-        "key": "vertical axis"
+        "key": "vertical axis",
+        "why": "Para D: Mandarin speakers \"conceptualize chronological sequences along a vertical axis\" → vertical axis."
       },
       {
         "number": 34,
         "passage": 3,
         "type": "SENTENCE_COMPLETION",
-        "key": "anthropomorphic semantic"
+        "key": "anthropomorphic semantic",
+        "why": "Para E: grammatical gender \"primes anthropomorphic semantic associations\" → anthropomorphic semantic."
       },
       {
         "number": 35,
         "passage": 3,
         "type": "SENTENCE_COMPLETION",
-        "key": "source of knowledge"
+        "key": "knowledge",
+        "why": "Para F: a suffix \"indicating the speaker's source of knowledge\" → knowledge."
       },
       {
         "number": 36,
         "passage": 3,
         "type": "SENTENCE_COMPLETION",
-        "key": "stimulus onset"
+        "key": "stimulus onset",
+        "why": "Para G: categorization occurs \"within 100 to 200 milliseconds of stimulus onset\" → stimulus onset."
       },
       {
         "number": 37,
         "passage": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "What did Eleanor Rosch's research on the Dani people demonstrate regarding color perception?",
-        "key": "B"
+        "key": "B",
+        "why": "Para B: Rosch found Dani speakers \"distinguished chromatic focal boundaries… with accuracy comparable to native English speakers\". The universal-mechanism claim belongs to Kay and Regier, so A, C and D are not Rosch's finding."
       },
       {
         "number": 38,
         "passage": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "How does the Aymara language conceptualize temporal orientation?",
-        "key": "C"
+        "key": "D",
+        "why": "Para D: the past is \"in front\" (nayra) and the future \"behind\" (qhipa) → D. The other options are not in the passage."
       },
       {
         "number": 39,
         "passage": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "Why are the lateralized visual experiments in Paragraph G significant?",
-        "key": "B"
+        "key": "A",
+        "why": "Para G: category boundary effects are lateralized to the \"language-dominant left cerebral hemisphere\" → A."
       },
       {
         "number": 40,
         "passage": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "What is the primary conclusion of the passage regarding the relationship between language and thought?",
-        "key": "C"
+        "key": "C",
+        "why": "Para H: language is \"an attentional spotlight rather than an absolute mental barrier\" → C. A, B and D overstate or misstate the passage."
       }
     ],
     "totalQuestions": 40
@@ -980,7 +1113,7 @@
       {
         "sectionNumber": 1,
         "title": "Community Solar Co-operative Membership Intake",
-        "transcript": "*CLERK: Good morning, Greenfields Community Solar Co-operative, David speaking. How can I help you today?*  \n*CALLER: Hello there. I saw your presentation at the district environmental forum last Thursday, and I'd like to register as an active household subscriber before the autumn allocation closes.*  \n*CLERK: Excellent. I can set up your subscriber intake right now. May I take your full name, please?*  \n*CALLER: Yes, it's Julian Sterling. That's S-T-E-R-L-I-N-G.*  \n*CLERK: Thank you, Mr. Sterling. And your current residential address?*  \n*CALLER: Number 42 Bramblewood Lane, Highfield.*  \n*CLERK: Is that B-R-A-M-B-L-E-W-O-O-D?*  \n*CALLER: Yes, precisely. And the postal code is HF8 4WZ.*  \n*CLERK: Got that. Now, what type of property is that—detached, semi-detached, or an apartment?*  \n*CALLER: It's a terraced cottage, built around 1920. Solid brick walls, unfortunately.*  \n*CLERK: Understood. That helps our engineers assess your rooftop structural compatibility. Now, regarding your current energy consumption, do you happen to have your annual electricity usage figure from your latest utility statement?*  \n*CALLER: Let me check my file... Ah yes, last year our annual consumption was approximately 3,400 kilowatt hours.*  \n*CLERK: That's right in the average bracket for a two-bedroom cottage. Now, which subscription tier were you looking at? We have the Tier 1 Community Shared Panel allocation, Tier 2 Direct Rooftop Array, and Tier 3 Battery Storage Integration.*  \n*CALLER: I'm primarily interested in the Community Shared Panel scheme, as our cottage roof faces northeast and gets significant morning shade.*  \n*CLERK: That's very common in Highfield. With the Community Shared scheme, your generation units come directly from our solar farm on the southern ridge. The quarterly membership contribution is ninety-five pounds.*  \n*CALLER: Ninety-five pounds per quarter, that sounds very reasonable.*  \n*CLERK: And regarding your preferred billing cycle and payment method, do you prefer monthly direct debit or quarterly invoice?*  \n*CALLER: Monthly direct debit is easiest for our household budgeting.*  \n*CLERK: Wonderful. Lastly, we need to schedule your site verification assessment. Our solar surveyor will visit to check your electrical consumer unit and smart meter installation. We have slots available on Tuesday the 14th of October or Thursday the 16th.*  \n*CALLER: Tuesday the 14th would suit me best, morning if possible.*  \n*CLERK: I have a slot at 10:30 AM on Tuesday the 14th of October with our engineer, Marcus Thorne. Does that suit?*  \n*CALLER: 10:30 AM is perfect.*  \n*CLERK: Brilliant. You will receive a confirmation pack by email with your reference code: SOL-8824. Welcome to the co-operative, Mr. Sterling!*",
+        "transcript": "*CLERK: Good morning, Greenfields Community Solar Co-operative, David speaking. How can I help you today?*  \n*CALLER: Hello there. I saw your presentation at the district environmental forum last Thursday, and I'd like to register as an active household subscriber before the autumn allocation closes.*  \n*CLERK: Excellent. I can set up your subscriber intake right now. May I take your full name, please?*  \n*CALLER: Yes, it's Julian Sterling. That's S-T-E-R-L-I-N-G.*  \n*CLERK: Thank you, Mr. Sterling. And your current residential address?*  \n*CALLER: Number 42 Bramblewood Lane, Highfield.*  \n*CLERK: Is that B-R-A-M-B-L-E-W-O-O-D?*  \n*CALLER: Yes, precisely. And the postal code is HF8 4WZ.*  \n*CLERK: Got that. Now, what type of property is that—detached, semi-detached, or an apartment?*  \n*CALLER: It's a terraced cottage, built around 1920. Solid brick walls, unfortunately.*  \n*CLERK: Understood. That helps our engineers assess your rooftop structural compatibility. Now, regarding your current energy consumption, do you happen to have your annual electricity usage figure from your latest utility statement?*  \n*CALLER: Let me check my file... Ah yes, last year our annual consumption was approximately 3,400 kilowatt hours.*  \n*CLERK: That's right in the average bracket for a two-bedroom cottage. Now, which subscription tier were you looking at? We have the Tier 1 Community Shared Panel allocation, Tier 2 Direct Rooftop Array, and Tier 3 Battery Storage Integration.*  \n*CALLER: I'm primarily interested in the Community Shared Panel scheme, as our cottage roof faces northeast and gets significant morning shade.*  \n*CLERK: That's very common in Highfield. With the Community Shared scheme, your generation units come directly from our solar farm on the southern ridge. The quarterly membership contribution is ninety-five pounds.*  \n*CALLER: Ninety-five pounds per quarter, that sounds very reasonable.*  \n*CLERK: And regarding your preferred billing cycle and payment method, do you prefer monthly direct debit or quarterly invoice?*  \n*CALLER: Monthly direct debit is easiest for our household budgeting.*  \n*CLERK: Wonderful. Lastly, we need to schedule your site verification assessment. Our solar surveyor will visit to check your electrical consumer unit and smart meter installation. We have slots available on Tuesday the 14th of October or Thursday the 16th.*  \n*CALLER: Tuesday the 14th would suit me best, morning if possible.*  \n*CLERK: I have a slot at 10:30 AM on Tuesday the 14th of October with our engineer, Marcus Hale. Does that suit?*  \n*CALLER: 10:30 AM is perfect.*  \n*CLERK: Brilliant. You will receive a confirmation pack by email with your reference code: SOL-8824. Welcome to the co-operative, Mr. Sterling!*",
         "questions": [
           {
             "number": 1,
@@ -988,7 +1121,8 @@
             "type": "FORM_COMPLETION",
             "prompt": "Street Address",
             "prefix": "",
-            "key": "42 Bramblewood"
+            "key": "42 Bramblewood",
+            "why": "CALLER: \"Number 42 Bramblewood Lane\" → 42 Bramblewood (\"Lane\" is printed on the form)."
           },
           {
             "number": 2,
@@ -996,7 +1130,8 @@
             "type": "FORM_COMPLETION",
             "prompt": "Postal Code",
             "prefix": "",
-            "key": "HF8 4WZ"
+            "key": "HF8 4WZ",
+            "why": "CALLER: \"the postal code is HF8 4WZ\"."
           },
           {
             "number": 3,
@@ -1004,7 +1139,8 @@
             "type": "FORM_COMPLETION",
             "prompt": "Property Type",
             "prefix": "",
-            "key": "terraced cottage"
+            "key": "terraced cottage",
+            "why": "CALLER: \"It's a terraced cottage, built around 1920\"."
           },
           {
             "number": 4,
@@ -1012,7 +1148,8 @@
             "type": "FORM_COMPLETION",
             "prompt": "Annual Energy Usage",
             "prefix": "",
-            "key": "3400"
+            "key": "3400",
+            "why": "CALLER: \"annual consumption was approximately 3,400 kilowatt hours\" → 3400."
           },
           {
             "number": 5,
@@ -1020,7 +1157,8 @@
             "type": "FORM_COMPLETION",
             "prompt": "Subscription Scheme",
             "prefix": "",
-            "key": "Community Shared"
+            "key": "Community Shared",
+            "why": "CALLER: \"I'm primarily interested in the Community Shared Panel scheme\" (not Tier 2 or Tier 3)."
           },
           {
             "number": 6,
@@ -1028,7 +1166,8 @@
             "type": "FORM_COMPLETION",
             "prompt": "Quarterly Fee",
             "prefix": "",
-            "key": "95 pounds"
+            "key": "95 pounds",
+            "why": "CLERK: \"The quarterly membership contribution is ninety-five pounds\" → 95 pounds."
           },
           {
             "number": 7,
@@ -1036,7 +1175,8 @@
             "type": "FORM_COMPLETION",
             "prompt": "Payment Method",
             "prefix": "",
-            "key": "monthly direct debit"
+            "key": "direct debit",
+            "why": "CALLER: \"Monthly direct debit is easiest\" → direct debit (two words; the form allows two words and/or a number)."
           },
           {
             "number": 8,
@@ -1044,7 +1184,8 @@
             "type": "FORM_COMPLETION",
             "prompt": "Assessment Date",
             "prefix": "",
-            "key": "14th October"
+            "key": "14th October",
+            "why": "CLERK and CALLER agree on \"Tuesday the 14th of October\" → 14th October."
           },
           {
             "number": 9,
@@ -1052,7 +1193,8 @@
             "type": "FORM_COMPLETION",
             "prompt": "Surveyor Name",
             "prefix": "Marcus",
-            "key": "Thorne"
+            "key": "Hale",
+            "why": "CLERK: \"our engineer, Marcus Hale\" → Hale (surname only)."
           },
           {
             "number": 10,
@@ -1060,7 +1202,8 @@
             "type": "FORM_COMPLETION",
             "prompt": "Membership Reference",
             "prefix": "",
-            "key": "SOL-8824"
+            "key": "SOL-8824",
+            "why": "CLERK: \"your reference code: SOL-8824\"."
           }
         ]
       },
@@ -1073,36 +1216,41 @@
             "number": 11,
             "section": 2,
             "type": "MULTIPLE_CHOICE",
-            "question": "What is the primary operational objective of the Riverside Eco-Park?",
-            "key": "B"
+            "question": "What can visitors buy at the Organic Seed Bank and Heritage Nursery?",
+            "key": "A",
+            "why": "GUIDE: \"you can purchase non-hybrid seeds here every weekend\". No objective is stated; the other options are not mentioned."
           },
           {
             "number": 12,
             "section": 2,
             "type": "MULTIPLE_CHOICE",
             "question": "What distinctive material was used to build the Bird Watching Hide?",
-            "key": "B"
+            "key": "C",
+            "why": "GUIDE: the hide \"was constructed entirely from reclaimed cedar shingles\"."
           },
           {
             "number": 13,
             "section": 2,
             "type": "MULTIPLE_CHOICE",
             "question": "The Children's Nature Play Area emphasizes:",
-            "key": "B"
+            "key": "B",
+            "why": "GUIDE: the play area has \"natural oak balancing logs, a sand-quarry pit, and living willow tunnels\". No climbing walls, mechanical swings or skate ramps are mentioned."
           },
           {
             "number": 14,
             "section": 2,
             "type": "MULTIPLE_CHOICE",
             "question": "What practical technique is demonstrated at the Eco-Composting Hub?",
-            "key": "B"
+            "key": "A",
+            "why": "GUIDE: composters \"demonstrate hot-aerobic composting and vermiculture techniques\"."
           },
           {
             "number": 15,
             "section": 2,
             "type": "MULTIPLE_CHOICE",
             "question": "How is the river irrigation pump powered at the eastern terminus?",
-            "key": "C"
+            "key": "C",
+            "why": "GUIDE: the pump uses \"photovoltaic solar arrays on its curved living-turf roof\"."
           },
           {
             "number": 16,
@@ -1110,7 +1258,8 @@
             "type": "MAP_MATCHING",
             "locationPrompt": "Organic Seed Bank & Heritage Nursery",
             "key": "A",
-            "facility": "North of the Visitor Pavilion"
+            "facility": "North of the Visitor Pavilion",
+            "why": "GUIDE: the Seed Bank is \"Immediately to your left, just north of the Visitor Pavilion\" → A."
           },
           {
             "number": 17,
@@ -1118,7 +1267,8 @@
             "type": "MAP_MATCHING",
             "locationPrompt": "Bird Watching Hide",
             "key": "B",
-            "facility": "Circular timber pavilion nestled among willows near the northern wetland"
+            "facility": "Circular timber pavilion nestled among willows near the northern wetland",
+            "why": "GUIDE: the hide is a \"large circular timber structure nestled among the weeping willows\" on the northern path → B."
           },
           {
             "number": 18,
@@ -1126,7 +1276,8 @@
             "type": "MAP_MATCHING",
             "locationPrompt": "Willow Creek Footbridge",
             "key": "C",
-            "facility": "Central crossing point connecting eastern and western sectors"
+            "facility": "Central crossing point connecting eastern and western sectors",
+            "why": "GUIDE: \"cross the Willow Creek Footbridge\" on the central avenue → C."
           },
           {
             "number": 19,
@@ -1134,7 +1285,8 @@
             "type": "MAP_MATCHING",
             "locationPrompt": "Children's Nature Play Area",
             "key": "D",
-            "facility": "Directly south of the Willow Creek Footbridge"
+            "facility": "Directly south of the Willow Creek Footbridge",
+            "why": "GUIDE: the play area is \"Immediately south of the Willow Creek Footbridge\" → D."
           },
           {
             "number": 20,
@@ -1142,7 +1294,8 @@
             "type": "MAP_MATCHING",
             "locationPrompt": "Solar Pumping Station",
             "key": "E",
-            "facility": "Eastern riverbank terminus adjacent to the river weir"
+            "facility": "Eastern riverbank terminus adjacent to the river weir",
+            "why": "GUIDE: the pumping station is at \"the eastern terminus where the main avenue meets the riverbank\" → E."
           }
         ]
       },
@@ -1156,70 +1309,80 @@
             "section": 3,
             "type": "MULTIPLE_CHOICE",
             "question": "What was Elena's primary difficulty during the inaugural coastal water sampling?",
-            "key": "B"
+            "key": "B",
+            "why": "ELENA: \"the sheer volume of airborne synthetic fibers from the research vessel's own crew clothing and polyester mooring lines\" → B."
           },
           {
             "number": 22,
             "section": 3,
             "type": "MULTIPLE_CHOICE",
             "question": "Why did Dr. Thorne advise against visual inspection under a stereomicroscope?",
-            "key": "A"
+            "key": "A",
+            "why": "THORNE: \"transparent cotton cellulose, chitin fragments, and glass fibers mimic degraded polyethylene particles almost identically\" → A."
           },
           {
             "number": 23,
             "section": 3,
             "type": "MULTIPLE_CHOICE",
             "question": "Which analytical tool did Elena select for definitive chemical polymer validation?",
-            "key": "B"
+            "key": "B",
+            "why": "ELENA: \"We've booked time on the Fourier-Transform Infrared, or FTIR, spectrometer\" → B."
           },
           {
             "number": 24,
             "section": 3,
             "type": "MULTIPLE_CHOICE",
             "question": "What unexpected phenomenon did the preliminary estuarine data demonstrate?",
-            "key": "C"
+            "key": "C",
+            "why": "ELENA: \"Microbial biofilm colonization… caused them to sink rapidly into benthic sediments\" → C."
           },
           {
             "number": 25,
             "section": 3,
             "type": "MULTIPLE_CHOICE",
             "question": "What next step did Dr. Thorne recommend for Elena's research timeline?",
-            "key": "C"
+            "key": "C",
+            "why": "THORNE: \"cross-referencing your estuarine particle trajectory simulations with regional satellite oceanographic telemetry first\" → C."
           },
           {
             "number": 26,
             "section": 3,
             "type": "MATCHING",
             "prompt": "Enzymatic Digestion",
-            "key": "B"
+            "key": "B",
+            "why": "ELENA on enzymatic digestion: \"Protease enzymes eliminate organic interfering biofilms without degrading the underlying plastic matrix\" → B."
           },
           {
             "number": 27,
             "section": 3,
             "type": "MATCHING",
             "prompt": "Micro-Raman Spectroscopy",
-            "key": "A"
+            "key": "A",
+            "why": "ELENA on Micro-Raman: \"guarantees non-destructive sample preservation down to one micrometer\" → A."
           },
           {
             "number": 28,
             "section": 3,
             "type": "MATCHING",
             "prompt": "Thermal Gravimetric Analysis",
-            "key": "C"
+            "key": "C",
+            "why": "ELENA on TGA: \"quantifies the exact chemical polymer ratios in multi-layer packaging\" → C."
           },
           {
             "number": 29,
             "section": 3,
             "type": "MATCHING",
             "prompt": "Scanning Electron Microscopy (SEM)",
-            "key": "E"
+            "key": "E",
+            "why": "ELENA on SEM: \"identify localized chemical weathering cracks, micro-pitting, and surface mechanical abrasion marks\" → E."
           },
           {
             "number": 30,
             "section": 3,
             "type": "MATCHING",
             "prompt": "Automated Nile Red Fluorescence",
-            "key": "F"
+            "key": "F",
+            "why": "ELENA on Nile Red: \"accelerating high-throughput batch sorting\" → F."
           }
         ]
       },
@@ -1233,70 +1396,80 @@
             "section": 4,
             "type": "NOTE_COMPLETION",
             "context": "Traditional theory incorrectly assumed air circulated via a subterranean",
-            "key": "thermosiphon"
+            "key": "thermosiphon",
+            "why": "PROFESSOR: the discarded theory is the \"thermosiphon hypothesis\" with \"a steady, unidirectional thermosiphon loop\" → thermosiphon."
           },
           {
             "number": 32,
             "section": 4,
             "type": "NOTE_COMPLETION",
             "context": "Ultrasonic anemometer sensors revealed wind currents create rhythmic",
-            "key": "pulses"
+            "key": "pulses",
+            "why": "PROFESSOR: wind \"generates high- and low-pressure fluctuations… driving rhythmic pulses of gas exchange\" → pulses."
           },
           {
             "number": 33,
             "section": 4,
             "type": "NOTE_COMPLETION",
             "context": "The mound core temperature is regulated within",
-            "key": "one degree"
+            "key": "one degree",
+            "why": "PROFESSOR: internal temperature \"remains regulated within just one degree Celsius\" → one degree."
           },
           {
             "number": 34,
             "section": 4,
             "type": "NOTE_COMPLETION",
             "context": "The mound exterior envelope provides massive",
-            "key": "thermal mass"
+            "key": "thermal mass",
+            "why": "PROFESSOR: \"this immense thermal mass absorbs solar radiation slowly\" → thermal mass."
           },
           {
             "number": 35,
             "section": 4,
             "type": "NOTE_COMPLETION",
             "context": "Stored energy is gradually released during cold",
-            "key": "nocturnal"
+            "key": "nocturnal",
+            "why": "PROFESSOR: heat \"radiates outward\" during \"the cold nocturnal hours\" → nocturnal."
           },
           {
             "number": 36,
             "section": 4,
             "type": "NOTE_COMPLETION",
-            "context": "Micro-porous tunnel networks allow continuous venting of toxic",
-            "key": "carbon dioxide"
+            "context": "Micro-porous tunnel networks allow continuous venting of metabolic",
+            "key": "carbon dioxide",
+            "why": "PROFESSOR: the tunnels allow \"the continuous dissipation of metabolic carbon dioxide\" → carbon dioxide."
           },
           {
             "number": 37,
             "section": 4,
             "type": "NOTE_COMPLETION",
             "context": "Architect Mick Pearce designed the Harare complex without conventional",
-            "key": "air conditioning"
+            "key": "air conditioning",
+            "why": "PROFESSOR: Pearce \"eliminated conventional, energy-intensive air conditioning chillers entirely\" → air conditioning."
           },
           {
             "number": 38,
             "section": 4,
             "type": "NOTE_COMPLETION",
             "context": "Basement fans draw ambient nighttime air upwards through specialized rooftop",
-            "key": "chimneys"
+            "key": "chimneys",
+            "why": "PROFESSOR: warm air exits \"through vertical exhaust chimneys on the rooftop\" → chimneys."
           },
           {
             "number": 39,
             "section": 4,
             "type": "NOTE_COMPLETION",
             "context": "The passive biomimetic cooling system reduced HVAC electricity usage by",
-            "key": "35 percent"
+            "key": "35 percent",
+            "why": "PROFESSOR: the building \"reduced HVAC electricity consumption by thirty-five percent\" → 35 percent."
           },
           {
             "number": 40,
             "section": 4,
             "type": "NOTE_COMPLETION",
             "context": "Contemporary research utilizes 3D-printed ceramic facades with engineered",
-            "key": "micro-porosity"
+            "key": "micro-porosity",
+            "why": "PROFESSOR: \"modular ceramic wall panels with engineered micro-porosity\" → micro-porosity."
           }
         ]
       }
@@ -1304,7 +1477,7 @@
     "section1": {
       "sectionNumber": 1,
       "title": "Community Solar Co-operative Membership Intake",
-      "transcript": "*CLERK: Good morning, Greenfields Community Solar Co-operative, David speaking. How can I help you today?*  \n*CALLER: Hello there. I saw your presentation at the district environmental forum last Thursday, and I'd like to register as an active household subscriber before the autumn allocation closes.*  \n*CLERK: Excellent. I can set up your subscriber intake right now. May I take your full name, please?*  \n*CALLER: Yes, it's Julian Sterling. That's S-T-E-R-L-I-N-G.*  \n*CLERK: Thank you, Mr. Sterling. And your current residential address?*  \n*CALLER: Number 42 Bramblewood Lane, Highfield.*  \n*CLERK: Is that B-R-A-M-B-L-E-W-O-O-D?*  \n*CALLER: Yes, precisely. And the postal code is HF8 4WZ.*  \n*CLERK: Got that. Now, what type of property is that—detached, semi-detached, or an apartment?*  \n*CALLER: It's a terraced cottage, built around 1920. Solid brick walls, unfortunately.*  \n*CLERK: Understood. That helps our engineers assess your rooftop structural compatibility. Now, regarding your current energy consumption, do you happen to have your annual electricity usage figure from your latest utility statement?*  \n*CALLER: Let me check my file... Ah yes, last year our annual consumption was approximately 3,400 kilowatt hours.*  \n*CLERK: That's right in the average bracket for a two-bedroom cottage. Now, which subscription tier were you looking at? We have the Tier 1 Community Shared Panel allocation, Tier 2 Direct Rooftop Array, and Tier 3 Battery Storage Integration.*  \n*CALLER: I'm primarily interested in the Community Shared Panel scheme, as our cottage roof faces northeast and gets significant morning shade.*  \n*CLERK: That's very common in Highfield. With the Community Shared scheme, your generation units come directly from our solar farm on the southern ridge. The quarterly membership contribution is ninety-five pounds.*  \n*CALLER: Ninety-five pounds per quarter, that sounds very reasonable.*  \n*CLERK: And regarding your preferred billing cycle and payment method, do you prefer monthly direct debit or quarterly invoice?*  \n*CALLER: Monthly direct debit is easiest for our household budgeting.*  \n*CLERK: Wonderful. Lastly, we need to schedule your site verification assessment. Our solar surveyor will visit to check your electrical consumer unit and smart meter installation. We have slots available on Tuesday the 14th of October or Thursday the 16th.*  \n*CALLER: Tuesday the 14th would suit me best, morning if possible.*  \n*CLERK: I have a slot at 10:30 AM on Tuesday the 14th of October with our engineer, Marcus Thorne. Does that suit?*  \n*CALLER: 10:30 AM is perfect.*  \n*CLERK: Brilliant. You will receive a confirmation pack by email with your reference code: SOL-8824. Welcome to the co-operative, Mr. Sterling!*",
+      "transcript": "*CLERK: Good morning, Greenfields Community Solar Co-operative, David speaking. How can I help you today?*  \n*CALLER: Hello there. I saw your presentation at the district environmental forum last Thursday, and I'd like to register as an active household subscriber before the autumn allocation closes.*  \n*CLERK: Excellent. I can set up your subscriber intake right now. May I take your full name, please?*  \n*CALLER: Yes, it's Julian Sterling. That's S-T-E-R-L-I-N-G.*  \n*CLERK: Thank you, Mr. Sterling. And your current residential address?*  \n*CALLER: Number 42 Bramblewood Lane, Highfield.*  \n*CLERK: Is that B-R-A-M-B-L-E-W-O-O-D?*  \n*CALLER: Yes, precisely. And the postal code is HF8 4WZ.*  \n*CLERK: Got that. Now, what type of property is that—detached, semi-detached, or an apartment?*  \n*CALLER: It's a terraced cottage, built around 1920. Solid brick walls, unfortunately.*  \n*CLERK: Understood. That helps our engineers assess your rooftop structural compatibility. Now, regarding your current energy consumption, do you happen to have your annual electricity usage figure from your latest utility statement?*  \n*CALLER: Let me check my file... Ah yes, last year our annual consumption was approximately 3,400 kilowatt hours.*  \n*CLERK: That's right in the average bracket for a two-bedroom cottage. Now, which subscription tier were you looking at? We have the Tier 1 Community Shared Panel allocation, Tier 2 Direct Rooftop Array, and Tier 3 Battery Storage Integration.*  \n*CALLER: I'm primarily interested in the Community Shared Panel scheme, as our cottage roof faces northeast and gets significant morning shade.*  \n*CLERK: That's very common in Highfield. With the Community Shared scheme, your generation units come directly from our solar farm on the southern ridge. The quarterly membership contribution is ninety-five pounds.*  \n*CALLER: Ninety-five pounds per quarter, that sounds very reasonable.*  \n*CLERK: And regarding your preferred billing cycle and payment method, do you prefer monthly direct debit or quarterly invoice?*  \n*CALLER: Monthly direct debit is easiest for our household budgeting.*  \n*CLERK: Wonderful. Lastly, we need to schedule your site verification assessment. Our solar surveyor will visit to check your electrical consumer unit and smart meter installation. We have slots available on Tuesday the 14th of October or Thursday the 16th.*  \n*CALLER: Tuesday the 14th would suit me best, morning if possible.*  \n*CLERK: I have a slot at 10:30 AM on Tuesday the 14th of October with our engineer, Marcus Hale. Does that suit?*  \n*CALLER: 10:30 AM is perfect.*  \n*CLERK: Brilliant. You will receive a confirmation pack by email with your reference code: SOL-8824. Welcome to the co-operative, Mr. Sterling!*",
       "questions": [
         {
           "number": 1,
@@ -1312,7 +1485,8 @@
           "type": "FORM_COMPLETION",
           "prompt": "Street Address",
           "prefix": "",
-          "key": "42 Bramblewood"
+          "key": "42 Bramblewood",
+          "why": "CALLER: \"Number 42 Bramblewood Lane\" → 42 Bramblewood (\"Lane\" is printed on the form)."
         },
         {
           "number": 2,
@@ -1320,7 +1494,8 @@
           "type": "FORM_COMPLETION",
           "prompt": "Postal Code",
           "prefix": "",
-          "key": "HF8 4WZ"
+          "key": "HF8 4WZ",
+          "why": "CALLER: \"the postal code is HF8 4WZ\"."
         },
         {
           "number": 3,
@@ -1328,7 +1503,8 @@
           "type": "FORM_COMPLETION",
           "prompt": "Property Type",
           "prefix": "",
-          "key": "terraced cottage"
+          "key": "terraced cottage",
+          "why": "CALLER: \"It's a terraced cottage, built around 1920\"."
         },
         {
           "number": 4,
@@ -1336,7 +1512,8 @@
           "type": "FORM_COMPLETION",
           "prompt": "Annual Energy Usage",
           "prefix": "",
-          "key": "3400"
+          "key": "3400",
+          "why": "CALLER: \"annual consumption was approximately 3,400 kilowatt hours\" → 3400."
         },
         {
           "number": 5,
@@ -1344,7 +1521,8 @@
           "type": "FORM_COMPLETION",
           "prompt": "Subscription Scheme",
           "prefix": "",
-          "key": "Community Shared"
+          "key": "Community Shared",
+          "why": "CALLER: \"I'm primarily interested in the Community Shared Panel scheme\" (not Tier 2 or Tier 3)."
         },
         {
           "number": 6,
@@ -1352,7 +1530,8 @@
           "type": "FORM_COMPLETION",
           "prompt": "Quarterly Fee",
           "prefix": "",
-          "key": "95 pounds"
+          "key": "95 pounds",
+          "why": "CLERK: \"The quarterly membership contribution is ninety-five pounds\" → 95 pounds."
         },
         {
           "number": 7,
@@ -1360,7 +1539,8 @@
           "type": "FORM_COMPLETION",
           "prompt": "Payment Method",
           "prefix": "",
-          "key": "monthly direct debit"
+          "key": "direct debit",
+          "why": "CALLER: \"Monthly direct debit is easiest\" → direct debit (two words; the form allows two words and/or a number)."
         },
         {
           "number": 8,
@@ -1368,7 +1548,8 @@
           "type": "FORM_COMPLETION",
           "prompt": "Assessment Date",
           "prefix": "",
-          "key": "14th October"
+          "key": "14th October",
+          "why": "CLERK and CALLER agree on \"Tuesday the 14th of October\" → 14th October."
         },
         {
           "number": 9,
@@ -1376,7 +1557,8 @@
           "type": "FORM_COMPLETION",
           "prompt": "Surveyor Name",
           "prefix": "Marcus",
-          "key": "Thorne"
+          "key": "Hale",
+          "why": "CLERK: \"our engineer, Marcus Hale\" → Hale (surname only)."
         },
         {
           "number": 10,
@@ -1384,7 +1566,8 @@
           "type": "FORM_COMPLETION",
           "prompt": "Membership Reference",
           "prefix": "",
-          "key": "SOL-8824"
+          "key": "SOL-8824",
+          "why": "CLERK: \"your reference code: SOL-8824\"."
         }
       ]
     },
@@ -1397,36 +1580,41 @@
           "number": 11,
           "section": 2,
           "type": "MULTIPLE_CHOICE",
-          "question": "What is the primary operational objective of the Riverside Eco-Park?",
-          "key": "B"
+          "question": "What can visitors buy at the Organic Seed Bank and Heritage Nursery?",
+          "key": "A",
+          "why": "GUIDE: \"you can purchase non-hybrid seeds here every weekend\". No objective is stated; the other options are not mentioned."
         },
         {
           "number": 12,
           "section": 2,
           "type": "MULTIPLE_CHOICE",
           "question": "What distinctive material was used to build the Bird Watching Hide?",
-          "key": "B"
+          "key": "C",
+          "why": "GUIDE: the hide \"was constructed entirely from reclaimed cedar shingles\"."
         },
         {
           "number": 13,
           "section": 2,
           "type": "MULTIPLE_CHOICE",
           "question": "The Children's Nature Play Area emphasizes:",
-          "key": "B"
+          "key": "B",
+          "why": "GUIDE: the play area has \"natural oak balancing logs, a sand-quarry pit, and living willow tunnels\". No climbing walls, mechanical swings or skate ramps are mentioned."
         },
         {
           "number": 14,
           "section": 2,
           "type": "MULTIPLE_CHOICE",
           "question": "What practical technique is demonstrated at the Eco-Composting Hub?",
-          "key": "B"
+          "key": "A",
+          "why": "GUIDE: composters \"demonstrate hot-aerobic composting and vermiculture techniques\"."
         },
         {
           "number": 15,
           "section": 2,
           "type": "MULTIPLE_CHOICE",
           "question": "How is the river irrigation pump powered at the eastern terminus?",
-          "key": "C"
+          "key": "C",
+          "why": "GUIDE: the pump uses \"photovoltaic solar arrays on its curved living-turf roof\"."
         },
         {
           "number": 16,
@@ -1434,7 +1622,8 @@
           "type": "MAP_MATCHING",
           "locationPrompt": "Organic Seed Bank & Heritage Nursery",
           "key": "A",
-          "facility": "North of the Visitor Pavilion"
+          "facility": "North of the Visitor Pavilion",
+          "why": "GUIDE: the Seed Bank is \"Immediately to your left, just north of the Visitor Pavilion\" → A."
         },
         {
           "number": 17,
@@ -1442,7 +1631,8 @@
           "type": "MAP_MATCHING",
           "locationPrompt": "Bird Watching Hide",
           "key": "B",
-          "facility": "Circular timber pavilion nestled among willows near the northern wetland"
+          "facility": "Circular timber pavilion nestled among willows near the northern wetland",
+          "why": "GUIDE: the hide is a \"large circular timber structure nestled among the weeping willows\" on the northern path → B."
         },
         {
           "number": 18,
@@ -1450,7 +1640,8 @@
           "type": "MAP_MATCHING",
           "locationPrompt": "Willow Creek Footbridge",
           "key": "C",
-          "facility": "Central crossing point connecting eastern and western sectors"
+          "facility": "Central crossing point connecting eastern and western sectors",
+          "why": "GUIDE: \"cross the Willow Creek Footbridge\" on the central avenue → C."
         },
         {
           "number": 19,
@@ -1458,7 +1649,8 @@
           "type": "MAP_MATCHING",
           "locationPrompt": "Children's Nature Play Area",
           "key": "D",
-          "facility": "Directly south of the Willow Creek Footbridge"
+          "facility": "Directly south of the Willow Creek Footbridge",
+          "why": "GUIDE: the play area is \"Immediately south of the Willow Creek Footbridge\" → D."
         },
         {
           "number": 20,
@@ -1466,7 +1658,8 @@
           "type": "MAP_MATCHING",
           "locationPrompt": "Solar Pumping Station",
           "key": "E",
-          "facility": "Eastern riverbank terminus adjacent to the river weir"
+          "facility": "Eastern riverbank terminus adjacent to the river weir",
+          "why": "GUIDE: the pumping station is at \"the eastern terminus where the main avenue meets the riverbank\" → E."
         }
       ]
     },
@@ -1480,70 +1673,80 @@
           "section": 3,
           "type": "MULTIPLE_CHOICE",
           "question": "What was Elena's primary difficulty during the inaugural coastal water sampling?",
-          "key": "B"
+          "key": "B",
+          "why": "ELENA: \"the sheer volume of airborne synthetic fibers from the research vessel's own crew clothing and polyester mooring lines\" → B."
         },
         {
           "number": 22,
           "section": 3,
           "type": "MULTIPLE_CHOICE",
           "question": "Why did Dr. Thorne advise against visual inspection under a stereomicroscope?",
-          "key": "A"
+          "key": "A",
+          "why": "THORNE: \"transparent cotton cellulose, chitin fragments, and glass fibers mimic degraded polyethylene particles almost identically\" → A."
         },
         {
           "number": 23,
           "section": 3,
           "type": "MULTIPLE_CHOICE",
           "question": "Which analytical tool did Elena select for definitive chemical polymer validation?",
-          "key": "B"
+          "key": "B",
+          "why": "ELENA: \"We've booked time on the Fourier-Transform Infrared, or FTIR, spectrometer\" → B."
         },
         {
           "number": 24,
           "section": 3,
           "type": "MULTIPLE_CHOICE",
           "question": "What unexpected phenomenon did the preliminary estuarine data demonstrate?",
-          "key": "C"
+          "key": "C",
+          "why": "ELENA: \"Microbial biofilm colonization… caused them to sink rapidly into benthic sediments\" → C."
         },
         {
           "number": 25,
           "section": 3,
           "type": "MULTIPLE_CHOICE",
           "question": "What next step did Dr. Thorne recommend for Elena's research timeline?",
-          "key": "C"
+          "key": "C",
+          "why": "THORNE: \"cross-referencing your estuarine particle trajectory simulations with regional satellite oceanographic telemetry first\" → C."
         },
         {
           "number": 26,
           "section": 3,
           "type": "MATCHING",
           "prompt": "Enzymatic Digestion",
-          "key": "B"
+          "key": "B",
+          "why": "ELENA on enzymatic digestion: \"Protease enzymes eliminate organic interfering biofilms without degrading the underlying plastic matrix\" → B."
         },
         {
           "number": 27,
           "section": 3,
           "type": "MATCHING",
           "prompt": "Micro-Raman Spectroscopy",
-          "key": "A"
+          "key": "A",
+          "why": "ELENA on Micro-Raman: \"guarantees non-destructive sample preservation down to one micrometer\" → A."
         },
         {
           "number": 28,
           "section": 3,
           "type": "MATCHING",
           "prompt": "Thermal Gravimetric Analysis",
-          "key": "C"
+          "key": "C",
+          "why": "ELENA on TGA: \"quantifies the exact chemical polymer ratios in multi-layer packaging\" → C."
         },
         {
           "number": 29,
           "section": 3,
           "type": "MATCHING",
           "prompt": "Scanning Electron Microscopy (SEM)",
-          "key": "E"
+          "key": "E",
+          "why": "ELENA on SEM: \"identify localized chemical weathering cracks, micro-pitting, and surface mechanical abrasion marks\" → E."
         },
         {
           "number": 30,
           "section": 3,
           "type": "MATCHING",
           "prompt": "Automated Nile Red Fluorescence",
-          "key": "F"
+          "key": "F",
+          "why": "ELENA on Nile Red: \"accelerating high-throughput batch sorting\" → F."
         }
       ]
     },
@@ -1557,70 +1760,80 @@
           "section": 4,
           "type": "NOTE_COMPLETION",
           "context": "Traditional theory incorrectly assumed air circulated via a subterranean",
-          "key": "thermosiphon"
+          "key": "thermosiphon",
+          "why": "PROFESSOR: the discarded theory is the \"thermosiphon hypothesis\" with \"a steady, unidirectional thermosiphon loop\" → thermosiphon."
         },
         {
           "number": 32,
           "section": 4,
           "type": "NOTE_COMPLETION",
           "context": "Ultrasonic anemometer sensors revealed wind currents create rhythmic",
-          "key": "pulses"
+          "key": "pulses",
+          "why": "PROFESSOR: wind \"generates high- and low-pressure fluctuations… driving rhythmic pulses of gas exchange\" → pulses."
         },
         {
           "number": 33,
           "section": 4,
           "type": "NOTE_COMPLETION",
           "context": "The mound core temperature is regulated within",
-          "key": "one degree"
+          "key": "one degree",
+          "why": "PROFESSOR: internal temperature \"remains regulated within just one degree Celsius\" → one degree."
         },
         {
           "number": 34,
           "section": 4,
           "type": "NOTE_COMPLETION",
           "context": "The mound exterior envelope provides massive",
-          "key": "thermal mass"
+          "key": "thermal mass",
+          "why": "PROFESSOR: \"this immense thermal mass absorbs solar radiation slowly\" → thermal mass."
         },
         {
           "number": 35,
           "section": 4,
           "type": "NOTE_COMPLETION",
           "context": "Stored energy is gradually released during cold",
-          "key": "nocturnal"
+          "key": "nocturnal",
+          "why": "PROFESSOR: heat \"radiates outward\" during \"the cold nocturnal hours\" → nocturnal."
         },
         {
           "number": 36,
           "section": 4,
           "type": "NOTE_COMPLETION",
-          "context": "Micro-porous tunnel networks allow continuous venting of toxic",
-          "key": "carbon dioxide"
+          "context": "Micro-porous tunnel networks allow continuous venting of metabolic",
+          "key": "carbon dioxide",
+          "why": "PROFESSOR: the tunnels allow \"the continuous dissipation of metabolic carbon dioxide\" → carbon dioxide."
         },
         {
           "number": 37,
           "section": 4,
           "type": "NOTE_COMPLETION",
           "context": "Architect Mick Pearce designed the Harare complex without conventional",
-          "key": "air conditioning"
+          "key": "air conditioning",
+          "why": "PROFESSOR: Pearce \"eliminated conventional, energy-intensive air conditioning chillers entirely\" → air conditioning."
         },
         {
           "number": 38,
           "section": 4,
           "type": "NOTE_COMPLETION",
           "context": "Basement fans draw ambient nighttime air upwards through specialized rooftop",
-          "key": "chimneys"
+          "key": "chimneys",
+          "why": "PROFESSOR: warm air exits \"through vertical exhaust chimneys on the rooftop\" → chimneys."
         },
         {
           "number": 39,
           "section": 4,
           "type": "NOTE_COMPLETION",
           "context": "The passive biomimetic cooling system reduced HVAC electricity usage by",
-          "key": "35 percent"
+          "key": "35 percent",
+          "why": "PROFESSOR: the building \"reduced HVAC electricity consumption by thirty-five percent\" → 35 percent."
         },
         {
           "number": 40,
           "section": 4,
           "type": "NOTE_COMPLETION",
           "context": "Contemporary research utilizes 3D-printed ceramic facades with engineered",
-          "key": "micro-porosity"
+          "key": "micro-porosity",
+          "why": "PROFESSOR: \"modular ceramic wall panels with engineered micro-porosity\" → micro-porosity."
         }
       ]
     },
@@ -1631,7 +1844,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Street Address",
         "prefix": "",
-        "key": "42 Bramblewood"
+        "key": "42 Bramblewood",
+        "why": "CALLER: \"Number 42 Bramblewood Lane\" → 42 Bramblewood (\"Lane\" is printed on the form)."
       },
       {
         "number": 2,
@@ -1639,7 +1853,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Postal Code",
         "prefix": "",
-        "key": "HF8 4WZ"
+        "key": "HF8 4WZ",
+        "why": "CALLER: \"the postal code is HF8 4WZ\"."
       },
       {
         "number": 3,
@@ -1647,7 +1862,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Property Type",
         "prefix": "",
-        "key": "terraced cottage"
+        "key": "terraced cottage",
+        "why": "CALLER: \"It's a terraced cottage, built around 1920\"."
       },
       {
         "number": 4,
@@ -1655,7 +1871,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Annual Energy Usage",
         "prefix": "",
-        "key": "3400"
+        "key": "3400",
+        "why": "CALLER: \"annual consumption was approximately 3,400 kilowatt hours\" → 3400."
       },
       {
         "number": 5,
@@ -1663,7 +1880,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Subscription Scheme",
         "prefix": "",
-        "key": "Community Shared"
+        "key": "Community Shared",
+        "why": "CALLER: \"I'm primarily interested in the Community Shared Panel scheme\" (not Tier 2 or Tier 3)."
       },
       {
         "number": 6,
@@ -1671,7 +1889,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Quarterly Fee",
         "prefix": "",
-        "key": "95 pounds"
+        "key": "95 pounds",
+        "why": "CLERK: \"The quarterly membership contribution is ninety-five pounds\" → 95 pounds."
       },
       {
         "number": 7,
@@ -1679,7 +1898,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Payment Method",
         "prefix": "",
-        "key": "monthly direct debit"
+        "key": "direct debit",
+        "why": "CALLER: \"Monthly direct debit is easiest\" → direct debit (two words; the form allows two words and/or a number)."
       },
       {
         "number": 8,
@@ -1687,7 +1907,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Assessment Date",
         "prefix": "",
-        "key": "14th October"
+        "key": "14th October",
+        "why": "CLERK and CALLER agree on \"Tuesday the 14th of October\" → 14th October."
       },
       {
         "number": 9,
@@ -1695,7 +1916,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Surveyor Name",
         "prefix": "Marcus",
-        "key": "Thorne"
+        "key": "Hale",
+        "why": "CLERK: \"our engineer, Marcus Hale\" → Hale (surname only)."
       },
       {
         "number": 10,
@@ -1703,42 +1925,48 @@
         "type": "FORM_COMPLETION",
         "prompt": "Membership Reference",
         "prefix": "",
-        "key": "SOL-8824"
+        "key": "SOL-8824",
+        "why": "CLERK: \"your reference code: SOL-8824\"."
       },
       {
         "number": 11,
         "section": 2,
         "type": "MULTIPLE_CHOICE",
-        "question": "What is the primary operational objective of the Riverside Eco-Park?",
-        "key": "B"
+        "question": "What can visitors buy at the Organic Seed Bank and Heritage Nursery?",
+        "key": "A",
+        "why": "GUIDE: \"you can purchase non-hybrid seeds here every weekend\". No objective is stated; the other options are not mentioned."
       },
       {
         "number": 12,
         "section": 2,
         "type": "MULTIPLE_CHOICE",
         "question": "What distinctive material was used to build the Bird Watching Hide?",
-        "key": "B"
+        "key": "C",
+        "why": "GUIDE: the hide \"was constructed entirely from reclaimed cedar shingles\"."
       },
       {
         "number": 13,
         "section": 2,
         "type": "MULTIPLE_CHOICE",
         "question": "The Children's Nature Play Area emphasizes:",
-        "key": "B"
+        "key": "B",
+        "why": "GUIDE: the play area has \"natural oak balancing logs, a sand-quarry pit, and living willow tunnels\". No climbing walls, mechanical swings or skate ramps are mentioned."
       },
       {
         "number": 14,
         "section": 2,
         "type": "MULTIPLE_CHOICE",
         "question": "What practical technique is demonstrated at the Eco-Composting Hub?",
-        "key": "B"
+        "key": "A",
+        "why": "GUIDE: composters \"demonstrate hot-aerobic composting and vermiculture techniques\"."
       },
       {
         "number": 15,
         "section": 2,
         "type": "MULTIPLE_CHOICE",
         "question": "How is the river irrigation pump powered at the eastern terminus?",
-        "key": "C"
+        "key": "C",
+        "why": "GUIDE: the pump uses \"photovoltaic solar arrays on its curved living-turf roof\"."
       },
       {
         "number": 16,
@@ -1746,7 +1974,8 @@
         "type": "MAP_MATCHING",
         "locationPrompt": "Organic Seed Bank & Heritage Nursery",
         "key": "A",
-        "facility": "North of the Visitor Pavilion"
+        "facility": "North of the Visitor Pavilion",
+        "why": "GUIDE: the Seed Bank is \"Immediately to your left, just north of the Visitor Pavilion\" → A."
       },
       {
         "number": 17,
@@ -1754,7 +1983,8 @@
         "type": "MAP_MATCHING",
         "locationPrompt": "Bird Watching Hide",
         "key": "B",
-        "facility": "Circular timber pavilion nestled among willows near the northern wetland"
+        "facility": "Circular timber pavilion nestled among willows near the northern wetland",
+        "why": "GUIDE: the hide is a \"large circular timber structure nestled among the weeping willows\" on the northern path → B."
       },
       {
         "number": 18,
@@ -1762,7 +1992,8 @@
         "type": "MAP_MATCHING",
         "locationPrompt": "Willow Creek Footbridge",
         "key": "C",
-        "facility": "Central crossing point connecting eastern and western sectors"
+        "facility": "Central crossing point connecting eastern and western sectors",
+        "why": "GUIDE: \"cross the Willow Creek Footbridge\" on the central avenue → C."
       },
       {
         "number": 19,
@@ -1770,7 +2001,8 @@
         "type": "MAP_MATCHING",
         "locationPrompt": "Children's Nature Play Area",
         "key": "D",
-        "facility": "Directly south of the Willow Creek Footbridge"
+        "facility": "Directly south of the Willow Creek Footbridge",
+        "why": "GUIDE: the play area is \"Immediately south of the Willow Creek Footbridge\" → D."
       },
       {
         "number": 20,
@@ -1778,147 +2010,168 @@
         "type": "MAP_MATCHING",
         "locationPrompt": "Solar Pumping Station",
         "key": "E",
-        "facility": "Eastern riverbank terminus adjacent to the river weir"
+        "facility": "Eastern riverbank terminus adjacent to the river weir",
+        "why": "GUIDE: the pumping station is at \"the eastern terminus where the main avenue meets the riverbank\" → E."
       },
       {
         "number": 21,
         "section": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "What was Elena's primary difficulty during the inaugural coastal water sampling?",
-        "key": "B"
+        "key": "B",
+        "why": "ELENA: \"the sheer volume of airborne synthetic fibers from the research vessel's own crew clothing and polyester mooring lines\" → B."
       },
       {
         "number": 22,
         "section": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "Why did Dr. Thorne advise against visual inspection under a stereomicroscope?",
-        "key": "A"
+        "key": "A",
+        "why": "THORNE: \"transparent cotton cellulose, chitin fragments, and glass fibers mimic degraded polyethylene particles almost identically\" → A."
       },
       {
         "number": 23,
         "section": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "Which analytical tool did Elena select for definitive chemical polymer validation?",
-        "key": "B"
+        "key": "B",
+        "why": "ELENA: \"We've booked time on the Fourier-Transform Infrared, or FTIR, spectrometer\" → B."
       },
       {
         "number": 24,
         "section": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "What unexpected phenomenon did the preliminary estuarine data demonstrate?",
-        "key": "C"
+        "key": "C",
+        "why": "ELENA: \"Microbial biofilm colonization… caused them to sink rapidly into benthic sediments\" → C."
       },
       {
         "number": 25,
         "section": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "What next step did Dr. Thorne recommend for Elena's research timeline?",
-        "key": "C"
+        "key": "C",
+        "why": "THORNE: \"cross-referencing your estuarine particle trajectory simulations with regional satellite oceanographic telemetry first\" → C."
       },
       {
         "number": 26,
         "section": 3,
         "type": "MATCHING",
         "prompt": "Enzymatic Digestion",
-        "key": "B"
+        "key": "B",
+        "why": "ELENA on enzymatic digestion: \"Protease enzymes eliminate organic interfering biofilms without degrading the underlying plastic matrix\" → B."
       },
       {
         "number": 27,
         "section": 3,
         "type": "MATCHING",
         "prompt": "Micro-Raman Spectroscopy",
-        "key": "A"
+        "key": "A",
+        "why": "ELENA on Micro-Raman: \"guarantees non-destructive sample preservation down to one micrometer\" → A."
       },
       {
         "number": 28,
         "section": 3,
         "type": "MATCHING",
         "prompt": "Thermal Gravimetric Analysis",
-        "key": "C"
+        "key": "C",
+        "why": "ELENA on TGA: \"quantifies the exact chemical polymer ratios in multi-layer packaging\" → C."
       },
       {
         "number": 29,
         "section": 3,
         "type": "MATCHING",
         "prompt": "Scanning Electron Microscopy (SEM)",
-        "key": "E"
+        "key": "E",
+        "why": "ELENA on SEM: \"identify localized chemical weathering cracks, micro-pitting, and surface mechanical abrasion marks\" → E."
       },
       {
         "number": 30,
         "section": 3,
         "type": "MATCHING",
         "prompt": "Automated Nile Red Fluorescence",
-        "key": "F"
+        "key": "F",
+        "why": "ELENA on Nile Red: \"accelerating high-throughput batch sorting\" → F."
       },
       {
         "number": 31,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "Traditional theory incorrectly assumed air circulated via a subterranean",
-        "key": "thermosiphon"
+        "key": "thermosiphon",
+        "why": "PROFESSOR: the discarded theory is the \"thermosiphon hypothesis\" with \"a steady, unidirectional thermosiphon loop\" → thermosiphon."
       },
       {
         "number": 32,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "Ultrasonic anemometer sensors revealed wind currents create rhythmic",
-        "key": "pulses"
+        "key": "pulses",
+        "why": "PROFESSOR: wind \"generates high- and low-pressure fluctuations… driving rhythmic pulses of gas exchange\" → pulses."
       },
       {
         "number": 33,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "The mound core temperature is regulated within",
-        "key": "one degree"
+        "key": "one degree",
+        "why": "PROFESSOR: internal temperature \"remains regulated within just one degree Celsius\" → one degree."
       },
       {
         "number": 34,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "The mound exterior envelope provides massive",
-        "key": "thermal mass"
+        "key": "thermal mass",
+        "why": "PROFESSOR: \"this immense thermal mass absorbs solar radiation slowly\" → thermal mass."
       },
       {
         "number": 35,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "Stored energy is gradually released during cold",
-        "key": "nocturnal"
+        "key": "nocturnal",
+        "why": "PROFESSOR: heat \"radiates outward\" during \"the cold nocturnal hours\" → nocturnal."
       },
       {
         "number": 36,
         "section": 4,
         "type": "NOTE_COMPLETION",
-        "context": "Micro-porous tunnel networks allow continuous venting of toxic",
-        "key": "carbon dioxide"
+        "context": "Micro-porous tunnel networks allow continuous venting of metabolic",
+        "key": "carbon dioxide",
+        "why": "PROFESSOR: the tunnels allow \"the continuous dissipation of metabolic carbon dioxide\" → carbon dioxide."
       },
       {
         "number": 37,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "Architect Mick Pearce designed the Harare complex without conventional",
-        "key": "air conditioning"
+        "key": "air conditioning",
+        "why": "PROFESSOR: Pearce \"eliminated conventional, energy-intensive air conditioning chillers entirely\" → air conditioning."
       },
       {
         "number": 38,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "Basement fans draw ambient nighttime air upwards through specialized rooftop",
-        "key": "chimneys"
+        "key": "chimneys",
+        "why": "PROFESSOR: warm air exits \"through vertical exhaust chimneys on the rooftop\" → chimneys."
       },
       {
         "number": 39,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "The passive biomimetic cooling system reduced HVAC electricity usage by",
-        "key": "35 percent"
+        "key": "35 percent",
+        "why": "PROFESSOR: the building \"reduced HVAC electricity consumption by thirty-five percent\" → 35 percent."
       },
       {
         "number": 40,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "Contemporary research utilizes 3D-printed ceramic facades with engineered",
-        "key": "micro-porosity"
+        "key": "micro-porosity",
+        "why": "PROFESSOR: \"modular ceramic wall panels with engineered micro-porosity\" → micro-porosity."
       }
     ],
     "fullMockQuestions": [
@@ -1928,7 +2181,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Street Address",
         "prefix": "",
-        "key": "42 Bramblewood"
+        "key": "42 Bramblewood",
+        "why": "CALLER: \"Number 42 Bramblewood Lane\" → 42 Bramblewood (\"Lane\" is printed on the form)."
       },
       {
         "number": 2,
@@ -1936,7 +2190,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Postal Code",
         "prefix": "",
-        "key": "HF8 4WZ"
+        "key": "HF8 4WZ",
+        "why": "CALLER: \"the postal code is HF8 4WZ\"."
       },
       {
         "number": 3,
@@ -1944,7 +2199,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Property Type",
         "prefix": "",
-        "key": "terraced cottage"
+        "key": "terraced cottage",
+        "why": "CALLER: \"It's a terraced cottage, built around 1920\"."
       },
       {
         "number": 4,
@@ -1952,7 +2208,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Annual Energy Usage",
         "prefix": "",
-        "key": "3400"
+        "key": "3400",
+        "why": "CALLER: \"annual consumption was approximately 3,400 kilowatt hours\" → 3400."
       },
       {
         "number": 5,
@@ -1960,7 +2217,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Subscription Scheme",
         "prefix": "",
-        "key": "Community Shared"
+        "key": "Community Shared",
+        "why": "CALLER: \"I'm primarily interested in the Community Shared Panel scheme\" (not Tier 2 or Tier 3)."
       },
       {
         "number": 6,
@@ -1968,7 +2226,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Quarterly Fee",
         "prefix": "",
-        "key": "95 pounds"
+        "key": "95 pounds",
+        "why": "CLERK: \"The quarterly membership contribution is ninety-five pounds\" → 95 pounds."
       },
       {
         "number": 7,
@@ -1976,7 +2235,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Payment Method",
         "prefix": "",
-        "key": "monthly direct debit"
+        "key": "direct debit",
+        "why": "CALLER: \"Monthly direct debit is easiest\" → direct debit (two words; the form allows two words and/or a number)."
       },
       {
         "number": 8,
@@ -1984,7 +2244,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Assessment Date",
         "prefix": "",
-        "key": "14th October"
+        "key": "14th October",
+        "why": "CLERK and CALLER agree on \"Tuesday the 14th of October\" → 14th October."
       },
       {
         "number": 9,
@@ -1992,7 +2253,8 @@
         "type": "FORM_COMPLETION",
         "prompt": "Surveyor Name",
         "prefix": "Marcus",
-        "key": "Thorne"
+        "key": "Hale",
+        "why": "CLERK: \"our engineer, Marcus Hale\" → Hale (surname only)."
       },
       {
         "number": 10,
@@ -2000,42 +2262,48 @@
         "type": "FORM_COMPLETION",
         "prompt": "Membership Reference",
         "prefix": "",
-        "key": "SOL-8824"
+        "key": "SOL-8824",
+        "why": "CLERK: \"your reference code: SOL-8824\"."
       },
       {
         "number": 11,
         "section": 2,
         "type": "MULTIPLE_CHOICE",
-        "question": "What is the primary operational objective of the Riverside Eco-Park?",
-        "key": "B"
+        "question": "What can visitors buy at the Organic Seed Bank and Heritage Nursery?",
+        "key": "A",
+        "why": "GUIDE: \"you can purchase non-hybrid seeds here every weekend\". No objective is stated; the other options are not mentioned."
       },
       {
         "number": 12,
         "section": 2,
         "type": "MULTIPLE_CHOICE",
         "question": "What distinctive material was used to build the Bird Watching Hide?",
-        "key": "B"
+        "key": "C",
+        "why": "GUIDE: the hide \"was constructed entirely from reclaimed cedar shingles\"."
       },
       {
         "number": 13,
         "section": 2,
         "type": "MULTIPLE_CHOICE",
         "question": "The Children's Nature Play Area emphasizes:",
-        "key": "B"
+        "key": "B",
+        "why": "GUIDE: the play area has \"natural oak balancing logs, a sand-quarry pit, and living willow tunnels\". No climbing walls, mechanical swings or skate ramps are mentioned."
       },
       {
         "number": 14,
         "section": 2,
         "type": "MULTIPLE_CHOICE",
         "question": "What practical technique is demonstrated at the Eco-Composting Hub?",
-        "key": "B"
+        "key": "A",
+        "why": "GUIDE: composters \"demonstrate hot-aerobic composting and vermiculture techniques\"."
       },
       {
         "number": 15,
         "section": 2,
         "type": "MULTIPLE_CHOICE",
         "question": "How is the river irrigation pump powered at the eastern terminus?",
-        "key": "C"
+        "key": "C",
+        "why": "GUIDE: the pump uses \"photovoltaic solar arrays on its curved living-turf roof\"."
       },
       {
         "number": 16,
@@ -2043,7 +2311,8 @@
         "type": "MAP_MATCHING",
         "locationPrompt": "Organic Seed Bank & Heritage Nursery",
         "key": "A",
-        "facility": "North of the Visitor Pavilion"
+        "facility": "North of the Visitor Pavilion",
+        "why": "GUIDE: the Seed Bank is \"Immediately to your left, just north of the Visitor Pavilion\" → A."
       },
       {
         "number": 17,
@@ -2051,7 +2320,8 @@
         "type": "MAP_MATCHING",
         "locationPrompt": "Bird Watching Hide",
         "key": "B",
-        "facility": "Circular timber pavilion nestled among willows near the northern wetland"
+        "facility": "Circular timber pavilion nestled among willows near the northern wetland",
+        "why": "GUIDE: the hide is a \"large circular timber structure nestled among the weeping willows\" on the northern path → B."
       },
       {
         "number": 18,
@@ -2059,7 +2329,8 @@
         "type": "MAP_MATCHING",
         "locationPrompt": "Willow Creek Footbridge",
         "key": "C",
-        "facility": "Central crossing point connecting eastern and western sectors"
+        "facility": "Central crossing point connecting eastern and western sectors",
+        "why": "GUIDE: \"cross the Willow Creek Footbridge\" on the central avenue → C."
       },
       {
         "number": 19,
@@ -2067,7 +2338,8 @@
         "type": "MAP_MATCHING",
         "locationPrompt": "Children's Nature Play Area",
         "key": "D",
-        "facility": "Directly south of the Willow Creek Footbridge"
+        "facility": "Directly south of the Willow Creek Footbridge",
+        "why": "GUIDE: the play area is \"Immediately south of the Willow Creek Footbridge\" → D."
       },
       {
         "number": 20,
@@ -2075,147 +2347,168 @@
         "type": "MAP_MATCHING",
         "locationPrompt": "Solar Pumping Station",
         "key": "E",
-        "facility": "Eastern riverbank terminus adjacent to the river weir"
+        "facility": "Eastern riverbank terminus adjacent to the river weir",
+        "why": "GUIDE: the pumping station is at \"the eastern terminus where the main avenue meets the riverbank\" → E."
       },
       {
         "number": 21,
         "section": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "What was Elena's primary difficulty during the inaugural coastal water sampling?",
-        "key": "B"
+        "key": "B",
+        "why": "ELENA: \"the sheer volume of airborne synthetic fibers from the research vessel's own crew clothing and polyester mooring lines\" → B."
       },
       {
         "number": 22,
         "section": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "Why did Dr. Thorne advise against visual inspection under a stereomicroscope?",
-        "key": "A"
+        "key": "A",
+        "why": "THORNE: \"transparent cotton cellulose, chitin fragments, and glass fibers mimic degraded polyethylene particles almost identically\" → A."
       },
       {
         "number": 23,
         "section": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "Which analytical tool did Elena select for definitive chemical polymer validation?",
-        "key": "B"
+        "key": "B",
+        "why": "ELENA: \"We've booked time on the Fourier-Transform Infrared, or FTIR, spectrometer\" → B."
       },
       {
         "number": 24,
         "section": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "What unexpected phenomenon did the preliminary estuarine data demonstrate?",
-        "key": "C"
+        "key": "C",
+        "why": "ELENA: \"Microbial biofilm colonization… caused them to sink rapidly into benthic sediments\" → C."
       },
       {
         "number": 25,
         "section": 3,
         "type": "MULTIPLE_CHOICE",
         "question": "What next step did Dr. Thorne recommend for Elena's research timeline?",
-        "key": "C"
+        "key": "C",
+        "why": "THORNE: \"cross-referencing your estuarine particle trajectory simulations with regional satellite oceanographic telemetry first\" → C."
       },
       {
         "number": 26,
         "section": 3,
         "type": "MATCHING",
         "prompt": "Enzymatic Digestion",
-        "key": "B"
+        "key": "B",
+        "why": "ELENA on enzymatic digestion: \"Protease enzymes eliminate organic interfering biofilms without degrading the underlying plastic matrix\" → B."
       },
       {
         "number": 27,
         "section": 3,
         "type": "MATCHING",
         "prompt": "Micro-Raman Spectroscopy",
-        "key": "A"
+        "key": "A",
+        "why": "ELENA on Micro-Raman: \"guarantees non-destructive sample preservation down to one micrometer\" → A."
       },
       {
         "number": 28,
         "section": 3,
         "type": "MATCHING",
         "prompt": "Thermal Gravimetric Analysis",
-        "key": "C"
+        "key": "C",
+        "why": "ELENA on TGA: \"quantifies the exact chemical polymer ratios in multi-layer packaging\" → C."
       },
       {
         "number": 29,
         "section": 3,
         "type": "MATCHING",
         "prompt": "Scanning Electron Microscopy (SEM)",
-        "key": "E"
+        "key": "E",
+        "why": "ELENA on SEM: \"identify localized chemical weathering cracks, micro-pitting, and surface mechanical abrasion marks\" → E."
       },
       {
         "number": 30,
         "section": 3,
         "type": "MATCHING",
         "prompt": "Automated Nile Red Fluorescence",
-        "key": "F"
+        "key": "F",
+        "why": "ELENA on Nile Red: \"accelerating high-throughput batch sorting\" → F."
       },
       {
         "number": 31,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "Traditional theory incorrectly assumed air circulated via a subterranean",
-        "key": "thermosiphon"
+        "key": "thermosiphon",
+        "why": "PROFESSOR: the discarded theory is the \"thermosiphon hypothesis\" with \"a steady, unidirectional thermosiphon loop\" → thermosiphon."
       },
       {
         "number": 32,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "Ultrasonic anemometer sensors revealed wind currents create rhythmic",
-        "key": "pulses"
+        "key": "pulses",
+        "why": "PROFESSOR: wind \"generates high- and low-pressure fluctuations… driving rhythmic pulses of gas exchange\" → pulses."
       },
       {
         "number": 33,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "The mound core temperature is regulated within",
-        "key": "one degree"
+        "key": "one degree",
+        "why": "PROFESSOR: internal temperature \"remains regulated within just one degree Celsius\" → one degree."
       },
       {
         "number": 34,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "The mound exterior envelope provides massive",
-        "key": "thermal mass"
+        "key": "thermal mass",
+        "why": "PROFESSOR: \"this immense thermal mass absorbs solar radiation slowly\" → thermal mass."
       },
       {
         "number": 35,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "Stored energy is gradually released during cold",
-        "key": "nocturnal"
+        "key": "nocturnal",
+        "why": "PROFESSOR: heat \"radiates outward\" during \"the cold nocturnal hours\" → nocturnal."
       },
       {
         "number": 36,
         "section": 4,
         "type": "NOTE_COMPLETION",
-        "context": "Micro-porous tunnel networks allow continuous venting of toxic",
-        "key": "carbon dioxide"
+        "context": "Micro-porous tunnel networks allow continuous venting of metabolic",
+        "key": "carbon dioxide",
+        "why": "PROFESSOR: the tunnels allow \"the continuous dissipation of metabolic carbon dioxide\" → carbon dioxide."
       },
       {
         "number": 37,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "Architect Mick Pearce designed the Harare complex without conventional",
-        "key": "air conditioning"
+        "key": "air conditioning",
+        "why": "PROFESSOR: Pearce \"eliminated conventional, energy-intensive air conditioning chillers entirely\" → air conditioning."
       },
       {
         "number": 38,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "Basement fans draw ambient nighttime air upwards through specialized rooftop",
-        "key": "chimneys"
+        "key": "chimneys",
+        "why": "PROFESSOR: warm air exits \"through vertical exhaust chimneys on the rooftop\" → chimneys."
       },
       {
         "number": 39,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "The passive biomimetic cooling system reduced HVAC electricity usage by",
-        "key": "35 percent"
+        "key": "35 percent",
+        "why": "PROFESSOR: the building \"reduced HVAC electricity consumption by thirty-five percent\" → 35 percent."
       },
       {
         "number": 40,
         "section": 4,
         "type": "NOTE_COMPLETION",
         "context": "Contemporary research utilizes 3D-printed ceramic facades with engineered",
-        "key": "micro-porosity"
+        "key": "micro-porosity",
+        "why": "PROFESSOR: \"modular ceramic wall panels with engineered micro-porosity\" → micro-porosity."
       }
     ],
     "totalQuestions": 40
@@ -2229,14 +2522,14 @@
     "task1": {
       "title": "Renewable Electricity Generation (2010-2025)",
       "chartSvg": "<svg viewBox=\"0 0 600 360\" class=\"ielts-chart-svg\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect width=\"600\" height=\"360\" fill=\"#0d1117\" rx=\"8\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"560\" y2=\"300\" stroke=\"#30363d\" stroke-width=\"1\"/>\n  <line x1=\"60\" y1=\"240\" x2=\"560\" y2=\"240\" stroke=\"#21262d\" stroke-width=\"1\"/>\n  <line x1=\"60\" y1=\"180\" x2=\"560\" y2=\"180\" stroke=\"#21262d\" stroke-width=\"1\"/>\n  <line x1=\"60\" y1=\"120\" x2=\"560\" y2=\"120\" stroke=\"#21262d\" stroke-width=\"1\"/>\n  <line x1=\"60\" y1=\"60\" x2=\"560\" y2=\"60\" stroke=\"#21262d\" stroke-width=\"1\"/>\n  <text x=\"50\" y=\"305\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"end\">0</text>\n  <text x=\"50\" y=\"245\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"end\">30</text>\n  <text x=\"50\" y=\"185\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"end\">60</text>\n  <text x=\"50\" y=\"125\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"end\">90</text>\n  <text x=\"50\" y=\"65\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"end\">120 TWh</text>\n  <text x=\"60\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2010</text>\n  <text x=\"160\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2013</text>\n  <text x=\"260\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2016</text>\n  <text x=\"360\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2019</text>\n  <text x=\"460\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2022</text>\n  <text x=\"560\" y=\"325\" fill=\"#8b949e\" font-size=\"11\" text-anchor=\"middle\">2025</text>\n  <!-- Hydro (Cyan) -->\n  <polyline fill=\"none\" stroke=\"#58a6ff\" stroke-width=\"3\" points=\"60,180 160,176 260,170 360,164 460,160 560,156\"/>\n  <!-- Wind (Green) -->\n  <polyline fill=\"none\" stroke=\"#3fb950\" stroke-width=\"3\" points=\"60,250 160,230 260,196 360,150 460,110 560,70\"/>\n  <!-- Solar (Orange) -->\n  <polyline fill=\"none\" stroke=\"#f0883e\" stroke-width=\"3\" points=\"60,290 160,284 260,264 360,232 460,180 560,120\"/>\n  <!-- Legend -->\n  <circle cx=\"160\" cy=\"30\" r=\"5\" fill=\"#58a6ff\"/><text x=\"172\" y=\"34\" fill=\"#c9d1d9\" font-size=\"11\">Hydro</text>\n  <circle cx=\"280\" cy=\"30\" r=\"5\" fill=\"#3fb950\"/><text x=\"292\" y=\"34\" fill=\"#c9d1d9\" font-size=\"11\">Wind</text>\n  <circle cx=\"400\" cy=\"30\" r=\"5\" fill=\"#f0883e\"/><text x=\"412\" y=\"34\" fill=\"#c9d1d9\" font-size=\"11\">Solar</text>\n</svg>",
-      "modelAnswer": "The line graph delineates the output of electricity derived from three renewable modalities—hydroelectric, wind, and solar photovoltaic systems—in a European nation between 2010 and 2025, calibrated in Terawatt-hours (TWh).\n\nOverall, total renewable electricity generation witnessed substantial expansion across the fifteen-year period. While hydroelectric generation maintained steady, plateaued dominance during the initial years, wind power experienced exponential acceleration to emerge as the pre-eminent source, closely mirrored by a dramatic late surge in solar output.\n\nIn 2010, hydroelectricity represented the predominant contributor at 60 TWh, whereas wind and solar generated modest yields of 25 TWh and 5 TWh respectively. Over the subsequent decade, hydroelectric capacity rose marginally, culminating at 72 TWh by 2025.\n\nConversely, wind generation exhibited remarkable momentum, overtaking hydroelectricity around 2018 at approximately 68 TWh before ascending steeply to attain a peak of 115 TWh in 2025. Solar power displayed an even steeper trajectory post-2016: after lingering below 20 TWh, it accelerated markedly over the final six years, eclipsing hydroelectricity by 2024 to conclude at 90 TWh.",
+      "modelAnswer": "The line graph illustrates electricity generation from three renewable energy sources (hydroelectric, wind, and solar photovoltaic systems) in a European nation between 2010 and 2025, measured in Terawatt-hours (TWh).\n\nOverall, total renewable electricity generation witnessed substantial expansion across the fifteen-year period. While hydroelectric generation maintained steady, plateaued dominance during the initial years, wind power experienced exponential acceleration to emerge as the pre-eminent source, closely mirrored by a dramatic late surge in solar output.\n\nIn 2010, hydroelectricity represented the predominant contributor at 60 TWh, whereas wind and solar generated modest yields of 25 TWh and 5 TWh respectively. Over the subsequent decade, hydroelectric capacity rose marginally, culminating at 72 TWh by 2025.\n\nConversely, wind generation exhibited remarkable momentum, overtaking hydroelectricity around 2018 at approximately 68 TWh before ascending steeply to attain a peak of 115 TWh in 2025. Solar power displayed an even steeper trajectory post-2016: after lingering below 20 TWh, it accelerated markedly over the final six years, eclipsing hydroelectricity by 2024 to conclude at 90 TWh.",
       "wordCount": 184
     },
     "task2": {
       "title": "Higher Education Funding Models (Tuition vs Free Access)",
       "prompt": "Some people argue that tertiary education should be fully funded by the state for all citizens, while others contend that university students should pay tuition fees because higher education primarily benefits the individual. Discuss both views and give your own opinion.",
       "band6Model": "Nowadays, many people debate whether university should be free or if students must pay tuition. This is a very controversial issue in modern society. In this essay, I will discuss both sides of the argument and give my own opinion.\n\nOn the one hand, some people believe that governments should pay for all university fees. The main reason is that education is a human right. If universities are completely free, poor students from poor families can study and get good jobs. For example, in some European countries like Germany, universities are free, so young people do not have student debt. Furthermore, having more educated doctors and engineers is good for the economy. Therefore, the state should invest money in education.\n\nOn the other hand, other people think students must pay for their own education. They argue that going to university gives high salaries in the future. Because university graduates earn much more money than high school graduates, it is not fair for normal taxpayers who do not go to university to pay for rich students. In addition, when universities charge tuition fees, they have more money to buy modern equipment and computers, which improves teaching quality.\n\nIn my opinion, I think a mixed system is the best choice. Completely free education can cause big taxes for citizens, but very high fees stop poor students from studying. Governments should give free scholarships to talented poor students, while rich students should pay reasonable fees. In conclusion, both views have good points, but a balanced policy is best.",
-      "band8Model": "The financial architecture of tertiary education remains a subject of intense socio-economic debate. While proponents of universal public subsidization assert that higher education is a non-excludable public good that accelerates meritocratic social mobility, detractors maintain that because degree holders capture substantial private wage premiums, tuition costs should be borne primarily by individual beneficiaries. This essay examines both perspectives before arguing that an income-contingent graduate contribution model offers the most equitable fiscal equilibrium.\n\nAdvocates of state-funded higher education anchor their rationale in positive macroeconomic externalities. A highly credentialed workforce fuels domestic innovation, attracts high-value foreign direct investment, and elevates national productivity. When tertiary matriculation is unencumbered by upfront tuition barriers, systemic socioeconomic stratification is alleviated, enabling academically gifted students from marginalized cohorts to enter high-status professions such as medicine, law, and engineering. Jurisdictions such as Norway and Germany demonstrate that public investment in human capital generates compounding returns via robust long-term fiscal revenue and diminished social welfare dependency.\n\nConversely, proponents of fee-based tertiary systems contend that universal state subsidization constitutes a regressive wealth transfer. Empirical labor-market data consistently confirms that university graduates command significantly higher lifetime earnings than non-graduate peers. Consequently, utilizing general tax revenues—contributed disproportionately by working-class laborers who may never attend university—to underwrite elite individual credentialing is fiscally inequitable. Furthermore, institutions reliant exclusively upon constrained state allocations frequently suffer from infrastructure underinvestment, whereas market-calibrated tuition revenues empower universities to expand research laboratories and recruit world-class faculty.\n\nIn my view, the dilemma is falsely framed as an absolute binary between unregulated marketization and blanket state paternalism. The optimal framework is an income-contingent deferred repayment mechanism, exemplified by the Australian HECS system. Under this paradigm, higher education remains free at the point of delivery, eliminating socioeconomic entry barriers, but graduates contribute a progressive percentage of their income once their post-graduation earnings exceed a dignified national threshold. This model reconciles equal societal opportunity with progressive fiscal fairness.",
+      "band8Model": "The financial architecture of tertiary education remains a subject of intense debate. While proponents of universal public funding argue that higher education is a public good that accelerates social mobility, detractors maintain that because graduates capture substantial private wage premiums, tuition costs should be borne primarily by the individuals who benefit. This essay examines both perspectives before arguing that an income-contingent graduate contribution model offers the most workable and equitable approach.\n\nAdvocates of state-funded higher education anchor their rationale in positive macroeconomic benefits. A highly credentialed workforce fuels domestic innovation, attracts high-value foreign direct investment, and elevates national productivity. When university matriculation is unencumbered by upfront tuition barriers, systemic socioeconomic inequalities are alleviated, enabling gifted students from lower-income backgrounds to enter professions such as medicine, law, and engineering. Countries such as Norway and Germany demonstrate that public investment in higher education yields compounding returns through stronger long-term tax revenues and reduced social welfare costs.\n\nConversely, proponents of fee-based tertiary systems contend that universal state subsidization constitutes a regressive wealth transfer. Empirical labor-market data consistently confirms that university graduates command significantly higher lifetime earnings than non-graduate peers. Consequently, utilizing general tax revenues, contributed in large part by working taxpayers who may never attend university, to underwrite individual credentialing is seen as inequitable. Furthermore, institutions reliant exclusively upon constrained state allocations frequently suffer from infrastructure underinvestment, whereas tuition revenues empower universities to expand research laboratories and recruit skilled faculty.\n\nIn my view, policy should not force a choice between completely market-driven tuition and total state financing. An income-contingent deferred repayment mechanism, exemplified by the Australian HECS system, provides a practical middle path. Under this framework, higher education remains free at the point of delivery, eliminating initial financial barriers, while graduates contribute a percentage of their income once their earnings exceed a designated threshold. This approach balances access with fair public spending.",
       "critique": "Band 6 exhibits mechanical linkers and superficial arguments; Band 8 exhibits income-contingent graduate contribution synthesis, nuanced hedging, and complex subordination."
     }
   },
@@ -2253,8 +2546,9 @@
     "part2": {
       "topic": "Describe a public initiative or community project that significantly improved your local area.",
       "prepTimeSeconds": 60,
-      "modelMonologue": "I would like to speak about a transformative urban regeneration initiative in my hometown that repurposed a decommissioned industrial railway canal into an interconnected linear greenway and biodiversity corridor. \n\nHistorically, this four-kilometer stretch had deteriorated into an eyesore—choked with industrial debris, illegal dumping, and fractured asphalt that effectively bisected our residential neighborhood. Approximately four years ago, a coalition of local landscape architects and neighborhood associations petitioned the municipal government. They successfully secured a joint public-private grant that combined civic crowdfunding with municipal green infrastructure bonds.\n\nOver eighteen months of community mobilization, volunteer planting drives replaced concrete drainage ditches with bioswales engineered with native wetland reeds to filter urban stormwater runoff. In addition, developers installed a continuous, solar-illuminated bicycle artery flanked by communal fruit trees, outdoor calisthenics zones, and permeable pedestrian boardwalks.\n\nWhat made this initiative exceptionally impactful was its holistic dual yield: it resolved both an ecological deficit and a social fracture. Ecologically, local temperature sensors registered a 1.8-degree drop in the surrounding urban heat island index. Socially, it decentralized recreational life away from enclosed commercial shopping malls into an open, democratic public commons where families, cyclists, and senior citizens mingle daily. It remains a shining model of collaborative civic governance."
+      "modelMonologue": "I'd like to talk about a local regeneration project in my hometown that turned an abandoned industrial railway canal into a linear park and green corridor.\n\nFor years, this four-kilometer stretch was a real eyesore. It was full of rubbish, broken asphalt, and old tracks, and it physically cut our neighborhood in half. About four years ago, a group of local residents and landscape designers got together and petitioned the city council. They ended up securing a matching grant that combined municipal funds with community crowdfunding.\n\nOver the next year and a half, local volunteers joined weekend planting drives, replacing concrete drainage ditches with wetland reed beds that help filter urban stormwater. The planners also put in a paved, well-lit cycle path lined with community fruit trees, outdoor exercise benches, and wooden boardwalks.\n\nWhat made the project so successful was how it solved two problems at once. Environmentally, temperature readings showed a noticeable cooling effect on the surrounding streets during summer heatwaves. But on a social level, it gave us a shared open space. Instead of spending weekends inside shopping malls, families, cyclists, and older neighbors now use the greenway every day. It genuinely brought the whole area back to life."
     },
     "part3Theme": "Urban Regeneration, Civic Responsibility & Future Cities"
-  }
+  },
+  "pragmaticRoleplays": []
 }

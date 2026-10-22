@@ -412,7 +412,7 @@
       "id": "speaking-2",
       "index": 2,
       "mode": "2-Minute Impromptu Jamming",
-      "cefrLevel": "B2",
+      "cefrLevel": "C1",
       "prompt": "Does asynchronous distributed work inherently diminish organizational agility and creative serendipity, or does it maximize deep productivity?",
       "anchor": "Thesis (agility vs. deep focus) → Structural trade-off (communication friction) → Strategic resolution (hybrid cadence)",
       "collocations": "organizational velocity, deep work, asynchronous communication, trade-off",
@@ -446,9 +446,9 @@
       "index": 5,
       "mode": "4-3-2 Fluency Drill",
       "cefrLevel": "C1",
-      "prompt": "Analyze whether Universal Basic Income provides a necessary safety net against technological unemployment or creates macroeconomic disincentives to labor.",
-      "anchor": "Economic justification (safety net against displacement) → Counter-argument (fiscal inflation & labor disincentive) → Balanced synthesis",
-      "collocations": "economic safety net, fiscal sustainability, labor participation, inflationary pressure",
+      "prompt": "Analyse whether Universal Basic Income provides a necessary safety net against technological unemployment or creates macroeconomic disincentives to labour.",
+      "anchor": "Economic justification (safety net against displacement) → Counter-argument (fiscal inflation & labour disincentive) → Balanced synthesis",
+      "collocations": "economic safety net, fiscal sustainability, labour participation, inflationary pressure",
       "phonetic": "Primary stress on the final noun of the compound 'Universal Basic INcome'; maintain steady breath support across long compound sentences."
     },
     {
@@ -467,7 +467,7 @@
       "id": "speaking-7",
       "index": 7,
       "mode": "4-3-2 Fluency Drill",
-      "cefrLevel": "B2",
+      "cefrLevel": "C1",
       "prompt": "Critique the role of standardized academic testing in higher education admissions in light of equity, predictive validity, and student potential.",
       "anchor": "Original objective (objective benchmark) → Inherent systemic bias (socioeconomic disparity) → Modern alternative (portfolio & diagnostic evaluation)",
       "collocations": "standardized testing, predictive validity, socioeconomic disparity, holistic assessment",
@@ -489,7 +489,7 @@
       "id": "speaking-9",
       "index": 9,
       "mode": "4-3-2 Fluency Drill",
-      "cefrLevel": "B2",
+      "cefrLevel": "C1",
       "prompt": "Discuss the societal trade-offs between the transactional efficiency of digital payments and the systematic erosion of financial privacy.",
       "anchor": "Operational convenience → State and corporate surveillance risks → Vulnerability of marginalized demographics without digital literacy",
       "collocations": "transactional efficiency, financial surveillance, central bank digital currency, digital divide",
@@ -523,9 +523,9 @@
       "index": 12,
       "mode": "2-Minute Impromptu Jamming",
       "cefrLevel": "C2",
-      "prompt": "How does the commercial extraction of behavioral surplus reshape individual human autonomy and democratic decision-making?",
-      "anchor": "Data extraction mechanism → Predictive behavioral modification → Subversion of consumer and voter sovereignty",
-      "collocations": "behavioral surplus, predictive analytics, data harvesting, democratic integrity",
+      "prompt": "How does the commercial extraction of behavioural surplus reshape individual human autonomy and democratic decision-making?",
+      "anchor": "Data extraction mechanism → Predictive behavioural modification → Subversion of consumer and voter sovereignty",
+      "collocations": "behavioural surplus, predictive analytics, data harvesting, democratic integrity",
       "phonetic": "Rhythmic cadence on the rule of three: 'monitored, modeled, and manipulated'."
     },
     {
@@ -548,7 +548,7 @@
       "prompt": "Where should the boundary lie between protecting freedom of expression and curbing malicious disinformation on digital platforms?",
       "anchor": "Free speech absolutism vs. harm prevention → The gatekeeping dilemma of private tech platforms → Transparent democratic oversight",
       "collocations": "freedom of expression, public interest, content moderation, malicious disinformation",
-      "phonetic": "Clear articulation of final consonant stops: /d/ in 'protecting freedom of speech and public trust'."
+      "phonetic": "Clear release of final consonant stops in 'protecting freedom of speech and public trust': /d/ in 'and', /k/ in 'public', /t/ in 'trust'."
     },
     {
       "title": "The Longevity Economy and Demographics",
@@ -556,7 +556,7 @@
       "index": 15,
       "mode": "4-3-2 Fluency Drill",
       "cefrLevel": "C1",
-      "prompt": "How will unprecedented population aging in developed societies reshape pension solvency, healthcare delivery, and generational wealth distribution?",
+      "prompt": "How will unprecedented population ageing in developed societies reshape pension solvency, healthcare delivery, and generational wealth distribution?",
       "anchor": "Demographic inversion (shrinking workforce) → Fiscal strain on healthcare & pensions → Innovations in automated eldercare and retirement age reforms",
       "collocations": "ageing population, pension solvency, healthcare infrastructure, generational equity",
       "phonetic": "Maintain energetic pitch variety across statistical explanations to avoid monotone pacing."
@@ -633,9 +633,9 @@
       "index": 22,
       "mode": "2-Minute Impromptu Jamming",
       "cefrLevel": "B2",
-      "prompt": "Do on-demand platform labor models liberate workers with schedule autonomy or institutionalize labor exploitation devoid of benefits and collective bargaining?",
+      "prompt": "Do on-demand platform labour models liberate workers with schedule autonomy or institutionalize labour exploitation devoid of benefits and collective bargaining?",
       "anchor": "The gig worker's promise of autonomy → The grim reality of algorithmic management and wage precarity → Modernizing portable worker benefits",
-      "collocations": "labor flexibility, economic precarity, collective bargaining, algorithmic management",
+      "collocations": "labour flexibility, economic precarity, collective bargaining, algorithmic management",
       "phonetic": "Antithetical balancing in cadence: 'offering the ILLUSION of independence, but the REALITY of vulnerability'."
     },
     {
@@ -654,9 +654,9 @@
       "id": "speaking-24",
       "index": 24,
       "mode": "2-Minute Impromptu Jamming",
-      "cefrLevel": "B2",
-      "prompt": "Evaluate the equity and environmental efficiency of charging dynamic tolls on vehicles entering dense metropolitan centers.",
-      "anchor": "Gridlock and particulate pollution baseline → Price elasticity mechanism and behavior modification → Mitigating regressivity via transit reinvestment",
+      "cefrLevel": "C1",
+      "prompt": "Evaluate the equity and environmental efficiency of charging dynamic tolls on vehicles entering dense metropolitan centres.",
+      "anchor": "Gridlock and particulate pollution baseline → Price elasticity mechanism and behaviour modification → Mitigating regressivity via transit reinvestment",
       "collocations": "congestion pricing, urban mobility, regressive taxation, environmental dividend",
       "phonetic": "Intonation drop on end-of-clause economic terms: '...reinvested directly into PUBLIC TRANSIT'."
     },
@@ -677,7 +677,7 @@
       "index": 26,
       "mode": "2-Minute Impromptu Jamming",
       "cefrLevel": "C1",
-      "prompt": "Analyze the psychological and environmental implications of shifting from hyper-consumerism to voluntary simplicity or minimalism in post-industrial societies.",
+      "prompt": "Analyse the psychological and environmental implications of shifting from hyper-consumerism to voluntary simplicity or minimalism in post-industrial societies.",
       "anchor": "Hedonic treadmill of consumer accumulation → Psychological exhaustion & ecological throughput → Intentional curation of material dependency",
       "collocations": "hedonic treadmill, conspicuous consumption, voluntary simplicity, ecological footprint",
       "phonetic": "Contrasting pace: hurried cadence mimicking consumerist frenzy, switching to measured tranquility when describing simplicity."
@@ -688,7 +688,7 @@
       "index": 27,
       "mode": "4-3-2 Fluency Drill",
       "cefrLevel": "C1",
-      "prompt": "Does training machine learning models on copyrighted creative works constitute legal 'fair use' or widespread digital theft of artistic labor?",
+      "prompt": "Does training machine learning models on copyrighted creative works constitute legal 'fair use' or widespread digital theft of artistic labour?",
       "anchor": "Fair use doctrine (transformative value) → Economic harm to living creators → Establishing statutory licensing regimes for AI datasets",
       "collocations": "intellectual property, fair use, copyright infringement, generative AI",
       "phonetic": "Clear vocal punctuation around legal citations and statutory principles."
@@ -753,7 +753,7 @@
       "id": "speaking-33",
       "index": 33,
       "mode": "4-3-2 Fluency Drill",
-      "cefrLevel": "B1",
+      "cefrLevel": "B2",
       "prompt": "Recount a moment that changed the direction of your life or career, making clear what you believed before, what happened, and how you see it now.",
       "anchor": "Backstory (past perfect and 'used to': who I had been) → The pivotal moment (past simple and past continuous: what happened) → Reflection (present perfect and present simple: what has changed since)",
       "collocations": "little did I know, in hindsight, a defining moment, it finally clicked, it dawned on me",
@@ -775,7 +775,7 @@
       "id": "speaking-35",
       "index": 35,
       "mode": "4-3-2 Fluency Drill",
-      "cefrLevel": "B1",
+      "cefrLevel": "B2",
       "prompt": "Explain to a curious twelve-year-old how vaccines train the immune system, without jargon and without talking down to them.",
       "anchor": "Relatable analogy (a wanted poster for germs) → Mechanism in plain steps (practice run, memory, faster response) → Check understanding (invite a question and restate the idea in one line)",
       "collocations": "think of it like, in other words, the gist of it, it boils down to, does that make sense",
@@ -870,7 +870,7 @@
       "question": "Write 4 sentences about your family.",
       "register": "Informal / Personal",
       "masterSentence": "There are four people in my family.",
-      "stylistic": "Use \"has\" for he or she: \"My father has a car.\""
+      "stylistic": "After \"he\" or \"she\", add \"s\" to the verb: \"he likes football\"."
     },
     {
       "title": "My Day",
@@ -893,7 +893,7 @@
       "title": "My Home",
       "meal": {
         "m": "I live in a small house near the park.",
-        "e": "There are three rooms and a kitchen.",
+        "e": "There is a kitchen and there are three rooms.",
         "a": "My bedroom has a bed, a desk and a window.",
         "l": "I like my home because it is quiet."
       },
@@ -1029,7 +1029,7 @@
       "title": "My Pet",
       "meal": {
         "m": "I have a small brown dog.",
-        "e": "His name is Bobo and he is two years old.",
+        "e": "The dog is called Bobo and he is two years old.",
         "a": "He likes to run in the park and eat meat.",
         "l": "Bobo is my friend and I love him."
       },
@@ -1052,7 +1052,7 @@
       },
       "id": "writing-a2-1",
       "index": 1,
-      "mode": "A2 Six-Sentence Paragraph",
+      "mode": "A2 Short Paragraph",
       "cefrLevel": "A2",
       "question": "Write about your last holiday. Where did you go and what did you do?",
       "register": "Informal / Personal",
@@ -1069,7 +1069,7 @@
       },
       "id": "writing-a2-2",
       "index": 2,
-      "mode": "A2 Six-Sentence Paragraph",
+      "mode": "A2 Short Paragraph",
       "cefrLevel": "A2",
       "question": "Write about your best friend. What is he or she like?",
       "register": "Informal / Personal",
@@ -1086,10 +1086,10 @@
       },
       "id": "writing-a2-3",
       "index": 3,
-      "mode": "A2 Six-Sentence Paragraph",
+      "mode": "A2 Short Paragraph",
       "cefrLevel": "A2",
       "question": "Write an email to invite a friend to your birthday party.",
-      "register": "Simple Formal / Email",
+      "register": "Informal / Email",
       "masterSentence": "I am writing to invite you to my birthday party.",
       "stylistic": "Start with 'I am writing to...' and end with 'I hope to see you'."
     },
@@ -1103,7 +1103,7 @@
       },
       "id": "writing-a2-4",
       "index": 4,
-      "mode": "A2 Six-Sentence Paragraph",
+      "mode": "A2 Short Paragraph",
       "cefrLevel": "A2",
       "question": "Write about a normal day in your life.",
       "register": "Informal / Personal",
@@ -1120,7 +1120,7 @@
       },
       "id": "writing-a2-5",
       "index": 5,
-      "mode": "A2 Six-Sentence Paragraph",
+      "mode": "A2 Short Paragraph",
       "cefrLevel": "A2",
       "question": "Describe the town or city where you live.",
       "register": "Informal / Personal",
@@ -1137,7 +1137,7 @@
       },
       "id": "writing-a2-6",
       "index": 6,
-      "mode": "A2 Six-Sentence Paragraph",
+      "mode": "A2 Short Paragraph",
       "cefrLevel": "A2",
       "question": "Write about a time you went shopping. What did you buy?",
       "register": "Informal / Personal",
@@ -1149,12 +1149,12 @@
       "meal": {
         "m": "Next weekend I am going to visit my grandparents.",
         "e": "They live in a small village near the mountains.",
-        "a": "We are going to cook lunch together, and then we will go for a walk.",
+        "a": "We are going to cook lunch together, and then we are going to go for a walk.",
         "l": "I think it will be a quiet and happy weekend."
       },
       "id": "writing-a2-7",
       "index": 7,
-      "mode": "A2 Six-Sentence Paragraph",
+      "mode": "A2 Short Paragraph",
       "cefrLevel": "A2",
       "question": "Write about your plans for next weekend.",
       "register": "Informal / Personal",
@@ -1171,7 +1171,7 @@
       },
       "id": "writing-a2-8",
       "index": 8,
-      "mode": "A2 Six-Sentence Paragraph",
+      "mode": "A2 Short Paragraph",
       "cefrLevel": "A2",
       "question": "Write an email to a hotel to ask for a room.",
       "register": "Simple Formal / Email",
@@ -1188,7 +1188,7 @@
       },
       "id": "writing-a2-9",
       "index": 9,
-      "mode": "A2 Six-Sentence Paragraph",
+      "mode": "A2 Short Paragraph",
       "cefrLevel": "A2",
       "question": "Write about your favourite food.",
       "register": "Informal / Personal",
@@ -1205,7 +1205,7 @@
       },
       "id": "writing-a2-10",
       "index": 10,
-      "mode": "A2 Six-Sentence Paragraph",
+      "mode": "A2 Short Paragraph",
       "cefrLevel": "A2",
       "question": "Write about a time you were ill.",
       "register": "Informal / Personal",
@@ -1222,7 +1222,7 @@
       },
       "id": "writing-a2-11",
       "index": 11,
-      "mode": "A2 Six-Sentence Paragraph",
+      "mode": "A2 Short Paragraph",
       "cefrLevel": "A2",
       "question": "Which is better for a weekend: staying at home or going out? Give your opinion.",
       "register": "Informal / Personal",
@@ -1239,7 +1239,7 @@
       },
       "id": "writing-a2-12",
       "index": 12,
-      "mode": "A2 Six-Sentence Paragraph",
+      "mode": "A2 Short Paragraph",
       "cefrLevel": "A2",
       "question": "Write a short note to your neighbour. Your music was too loud, and you want to say sorry.",
       "register": "Simple Formal / Email",
@@ -1317,18 +1317,18 @@
     {
       "title": "An Invitation to a Friend",
       "meal": {
-        "m": "I am having a birthday party next Saturday, and I would love you to come. It will be at my house, starting at six o'clock.",
-        "e": "For example, my mum is going to cook a lot of food, and we will play music and games. I have also invited some people from our old class.",
-        "a": "Because the house is hard to find, I will send you a map. If you want, you can stay the night, as we will probably finish late.",
+        "m": "I am planning a hiking trip to the mountains next weekend, and I would love you to come. We will leave early on Saturday morning and come back on Sunday evening.",
+        "e": "For example, we are going to walk to a beautiful lake and have a picnic there. I have also invited two friends from our old class.",
+        "a": "Because the trail is quite long, you will need good shoes and a bottle of water. If you want, you can borrow my spare backpack, as I do not need it.",
         "l": "Please tell me by Wednesday if you can come. I hope to see you there."
       },
       "id": "writing-b1-5",
       "index": 5,
       "mode": "B1 Eight-Sentence Paragraph",
       "cefrLevel": "B1",
-      "question": "Write a message to a friend inviting them to your birthday party. Give the details and ask for a reply.",
+      "question": "Write a message to a friend inviting them on a weekend hiking trip. Give the details and ask for a reply.",
       "register": "Informal / Personal",
-      "masterSentence": "I am having a birthday party next Saturday, and I would love you to come.",
+      "masterSentence": "I am planning a hiking trip to the mountains next weekend, and I would love you to come.",
       "stylistic": "Use 'would love' and 'I hope' to sound warm and friendly in a personal message."
     },
     {
@@ -1453,8 +1453,8 @@
     {
       "title": "The Epistemic Hazards of Synthetic Information",
       "meal": {
-        "m": "The ubiquitous proliferation of generative synthetic media fundamentally corrodes the epistemic integrity of modern jurisprudence by rendering authentic audio-visual evidence indistinguishable from fabricated artifacts.",
-        "e": "In federal courts, defense counsel have increasingly leveraged the 'liar's dividend'—a defense strategy whereby culpable defendants escape liability by alleging genuine surveillance footage is an AI deepfake.",
+        "m": "The ubiquitous proliferation of generative synthetic media fundamentally corrodes the epistemic integrity of modern jurisprudence by rendering authentic audio-visual evidence indistinguishable from fabricated artefacts.",
+        "e": "In federal courts, defence counsel have increasingly leveraged the 'liar's dividend'—a defence strategy whereby culpable defendants escape liability by alleging genuine surveillance footage is an AI deepfake.",
         "a": "Because digital forensic toolkits invariably lag behind diffusion-model capabilities, evidentiary gatekeepers can no longer rely on traditional perceptual heuristics, forcing juries to operate in an epistemic vacuum where verifiable reality is conflated with algorithmic illusion.",
         "l": "Consequently, unless strict cryptographic provenance standards are institutionalized at the hardware layer, the judicial system risks descending into a state of structural paralysis where no recording commands legal legitimacy."
       },
@@ -1464,14 +1464,14 @@
       "cefrLevel": "C2",
       "question": "Examine how the proliferation of hyper-realistic generative synthetic media threatens the epistemic foundations of judicial proceedings and public accountability.",
       "register": "Academic Jurisprudence / Legal Philosophy",
-      "masterSentence": "The ubiquitous proliferation of generative synthetic media fundamentally corrodes the epistemic integrity of modern jurisprudence by rendering authentic audio-visual evidence indistinguishable from fabricated artifacts.",
+      "masterSentence": "The ubiquitous proliferation of generative synthetic media fundamentally corrodes the epistemic integrity of modern jurisprudence by rendering authentic audio-visual evidence indistinguishable from fabricated artefacts.",
       "stylistic": "Nominalization chains ('proliferation', 'jurisprudence'), passive inversion, causal 'Because... can no longer rely' construction."
     },
     {
       "title": "Algorithmic Pricing and Consumer Surplus",
       "meal": {
-        "m": "Automated first-degree price discrimination enables dominant digital marketplaces to systematically expropriate consumer surplus and convert it into pure producer surplus through granular behavioral surveillance.",
-        "e": "Empirical pricing audits across major airline and hospitality aggregators demonstrate price discrepancies exceeding 35% for identical bookings based solely on user browsing history, device telemetry, and zip-code demographic profiling.",
+        "m": "Automated first-degree price discrimination enables dominant digital marketplaces to systematically expropriate consumer surplus and convert it into pure producer surplus through granular behavioural surveillance.",
+        "e": "Empirical pricing audits of airline and hospitality aggregators suggest that identical bookings can be offered at noticeably different prices depending on user browsing history, device type, and location.",
         "a": "By processing these high-dimensional data streams through predictive willingness-to-pay algorithms, platforms eradicate the traditional single-price market equilibrium, extracting the maximum financial reservation threshold from each transacting individual.",
         "l": "This algorithmic rent extraction undermines market efficiency, effectively replacing transparent competition with opaque, asymmetric price exploitation."
       },
@@ -1479,16 +1479,16 @@
       "index": 2,
       "mode": "MEAL Single-Paragraph Deep-Dive",
       "cefrLevel": "C2",
-      "question": "Analyze the economic ramifications of personalized first-degree dynamic price discrimination deployed by monopolistic e-commerce platforms.",
+      "question": "Analyse the economic ramifications of personalized first-degree dynamic price discrimination deployed by monopolistic e-commerce platforms.",
       "register": "Econometric & Antitrust Analysis",
-      "masterSentence": "Automated first-degree price discrimination enables dominant digital marketplaces to systematically expropriate consumer surplus and convert it into pure producer surplus through granular behavioral surveillance.",
+      "masterSentence": "Automated first-degree price discrimination enables dominant digital marketplaces to systematically expropriate consumer surplus and convert it into pure producer surplus through granular behavioural surveillance.",
       "stylistic": "Compound adjectives ('high-dimensional', 'single-price'), precise economic vocabulary, causative linking."
     },
     {
       "title": "The Meritocracy Trap in Modern Higher Education",
       "meal": {
         "m": "Far from functioning as an egalitarian engine of upward mobility, contemporary meritocratic credentialism has largely ossified into a dynastic sorting mechanism that legitimizes inherited socioeconomic privilege.",
-        "e": "Data from elite university admissions reveals that children from families in the top one percent are disproportionately represented by a factor of seventy-seven compared to peers from the bottom quintile, despite identical academic test percentiles.",
+        "e": "Research on elite university admissions suggests that children from families in the top one percent are heavily overrepresented compared with peers from the bottom quintile, a gap that some analyses find persists even among applicants with comparable test scores.",
         "a": "This disparity stems from the systemic privatization of preparatory capital—ranging from bespoke standardized-test tutoring to curated extracurricular portfolios—which wealthy dynasties deploy to convert financial assets into unassailable academic credentials.",
         "l": "In doing so, meritocracy conceals structural inequality beneath a veneer of individual virtue, leaving the disenfranchised to blame their own perceived inadequacies for systemic exclusion."
       },
@@ -1505,9 +1505,9 @@
       "title": "Architectural Determinism in Workplace Productivity",
       "meal": {
         "m": "The architectural dogma of the open-plan office degrades cognitive throughput by subjecting knowledge workers to unceasing sensory fragmentation and chronic attention residue.",
-        "e": "A landmark biometric study by Harvard researchers documented a 70% decrease in face-to-face interpersonal interactions and a corresponding 67% surge in asynchronous digital messaging following an enterprise transition to an open configuration.",
+        "e": "A Harvard study using wearable sensors documented a drop of roughly 70% in face-to-face interaction and a corresponding rise in electronic messaging after companies moved to open-plan configurations.",
         "a": "When engineers are exposed to ambient acoustic intrusion, the prefrontal cortex must continuously expend metabolic energy filtering irrelevant linguistic signals, preventing the attainment of sustained flow states essential for deep algorithmic synthesis.",
-        "l": "Ultimately, the spatial configuration designed to foster collaborative serendipity achieves the perverse inverse: an alienated workforce cloistered behind noise-canceling headphones."
+        "l": "As a result, a layout originally intended to encourage spontaneous collaboration often produces the opposite effect, leaving employees reliant on headphones simply to concentrate."
       },
       "id": "writing-4",
       "index": 4,
@@ -1539,7 +1539,7 @@
       "title": "Antibiotic Resistance and Intensive Livestock Farming",
       "meal": {
         "m": "The routine prophylactic administration of sub-therapeutic antibiotics in industrial livestock operations creates an ideal evolutionary breeding ground for multi-drug-resistant pathogen strains.",
-        "e": "Agricultural sector audits indicate that over 70% of medically important antimicrobial agents manufactured worldwide are administered not to treat diagnosed animal pathologies, but to artificially stimulate animal growth and prevent infections in crowded confinement.",
+        "e": "Surveys of antimicrobial sales suggest that a large share of the antimicrobials used worldwide goes to livestock, where much of it is given to stimulate growth or to prevent infection in crowded confinement rather than to treat diagnosed disease.",
         "a": "By subjecting trillions of commensal bacteria to chronic, non-lethal selective pressure, this practice rapidly selects for resistance plasmids that horizontal gene transfer subsequently transmits into human zoonotic pathogens.",
         "l": "Failing to decouple livestock commerce from antimicrobial dependency will inexorably usher in a post-antibiotic medical paradigm where routine clinical procedures carry fatal infection risks."
       },
@@ -1556,15 +1556,15 @@
       "title": "The Financialization of Urban Housing Markets",
       "meal": {
         "m": "The financialization of municipal residential real estate transforms shelter from an essential civic good into a speculative capital haven, structurally decoupling housing prices from domestic earning power.",
-        "e": "In metropolitan centers such as London, Toronto, and Sydney, institutional private-equity trusts expanded residential portfolios by over 400% between 2012 and 2022, while real median wage growth stagnated below 4% over the same duration.",
+        "e": "In metropolitan centres such as London, Toronto, and Sydney, institutional investors have substantially expanded their residential holdings in recent years, while real median wage growth has lagged well behind house prices.",
         "a": "When institutional investors with access to near-zero-cost international liquidity bid against working-class domestic wage earners, price discovery reflects cross-border asset management yields rather than local community affordability, permanently pricing generations out of homeownership.",
-        "l": "This dynamic exacerbates generational wealth fractures, hollowing out urban cores and relegating essential labor to distant, under-resourced peripheries."
+        "l": "This dynamic exacerbates generational wealth fractures, hollowing out urban cores and relegating essential labour to distant, under-resourced peripheries."
       },
       "id": "writing-7",
       "index": 7,
       "mode": "Franklin Copywork & Stylistic Deconstruction",
       "cefrLevel": "C2",
-      "question": "Analyze the consequences of treating residential real estate as a speculative global asset class rather than fundamental social infrastructure.",
+      "question": "Analyse the consequences of treating residential real estate as a speculative global asset class rather than fundamental social infrastructure.",
       "register": "Urban Political Economy",
       "masterSentence": "The financialization of municipal residential real estate transforms shelter from an essential civic good into a speculative capital haven, structurally decoupling housing prices from domestic earning power.",
       "stylistic": "Parallelism, syntactic compounding, sharp register contrast ('essential civic good' vs. 'speculative capital haven')."
@@ -1572,25 +1572,25 @@
     {
       "title": "Attention Scarcity in the Notification Economy",
       "meal": {
-        "m": "The digital attention economy deliberately re-engineers human cognitive ecology by exchanging sustained analytical focus for ephemeral bursts of dopamine-driven behavioral feedback.",
-        "e": "Neurocognitive telemetry reveals that the average office professional shifts visual focus or encounters a push-notification interruption every forty-seven seconds, requiring upwards of twenty minutes to reconstruct prior cognitive context.",
-        "a": "This pervasive interruption cadence prevents the brain from recruiting slow-wave executive circuitry required for syntactically dense reading or conceptual synthesis, effectively conditioning the neural architecture to tolerate only fragmented, bite-sized stimuli.",
+        "m": "The digital attention economy deliberately re-engineers human cognitive ecology by exchanging sustained analytical focus for ephemeral bursts of dopamine-driven behavioural feedback.",
+        "e": "Studies of workplace attention suggest that office professionals switch between screens or tasks roughly every minute, and that regaining the thread of an interrupted task can take many minutes.",
+        "a": "This pervasive interruption cadence prevents the brain from sustaining the executive attention required for syntactically dense reading or conceptual synthesis, effectively conditioning the neural architecture to tolerate only fragmented, bite-sized stimuli.",
         "l": "As a consequence, society suffers a progressive atrophy of deep intellectual endurance, compromising its capacity to deliberate on nuanced existential challenges."
       },
       "id": "writing-8",
       "index": 8,
       "mode": "MEAL Single-Paragraph Deep-Dive",
       "cefrLevel": "C2",
-      "question": "How does the commercial monetization of micro-interactions erode cognitive endurance and intellectual rigor?",
+      "question": "How does the commercial monetization of micro-interactions erode cognitive endurance and intellectual rigour?",
       "register": "Neuropsychology & Media Theory",
-      "masterSentence": "The digital attention economy deliberately re-engineers human cognitive ecology by exchanging sustained analytical focus for ephemeral bursts of dopamine-driven behavioral feedback.",
+      "masterSentence": "The digital attention economy deliberately re-engineers human cognitive ecology by exchanging sustained analytical focus for ephemeral bursts of dopamine-driven behavioural feedback.",
       "stylistic": "Precise anatomical/cognitive terminology, vivid causal verbs ('re-engineers', 'conditioning', 'atrophy')."
     },
     {
       "title": "The Social Cost of Carbon in Fiscal Policy",
       "meal": {
         "m": "Mandating an aggressive Social Cost of Carbon metric within federal procurement decisions is indispensable to correct the pervasive market failure that treats planetary atmospheric capacity as a cost-free waste repository.",
-        "e": "Recent integrated assessment climate modeling published by the EPA revised the estimated marginal damage of emitting a metric ton of carbon dioxide upward from $51 to $190, reflecting updated projections of agricultural disruption and climate-induced mortality.",
+        "e": "Recent integrated assessment climate modelling published by the EPA revised the estimated marginal damage of emitting a metric ton of carbon dioxide upward from $51 to $190, reflecting updated projections of agricultural disruption and climate-induced mortality.",
         "a": "When public authorities calculate project viability using an artificially deflated or non-existent carbon cost, carbon-intensive infrastructure appears spuriously economical, effectively subsidizing long-term climate damage with short-term public capital.",
         "l": "Internalizing this catastrophic externality ensures that public expenditures actively advance the ecological transition rather than locking in decades of fossil dependency."
       },
@@ -1607,9 +1607,9 @@
       "title": "Algorithmic Injustice in Predictive Policing",
       "meal": {
         "m": "Predictive policing algorithms do not illuminate objective crime hazards; rather, they construct self-fulfilling feedback loops that mathematicalize and amplify historic patterns of selective law enforcement.",
-        "e": "In cities utilizing predictive patrol dispatchers, historical arrest data heavily weighted toward low-level drug infractions prompted software systems to assign police patrols back to historically over-policed neighborhoods at triple the rate of affluent districts with comparable drug usage rates.",
-        "a": "Because algorithms accept historical arrest records as an unproblematic proxy for true criminality, heightened police concentration inevitably yields more recorded offenses in those designated zones, which are then fed back into the model to validate the initial bias.",
-        "l": "Under the deceptive armor of mathematical neutrality, automated systems effectively disguise discriminatory enforcement as incontrovertible statistical necessity."
+        "e": "In cities utilizing predictive patrol dispatchers, historical arrest data heavily weighted toward low-level drug infractions prompted software systems to assign police patrols back to historically over-policed neighbourhoods at triple the rate of affluent districts with comparable drug usage rates.",
+        "a": "Because algorithms accept historical arrest records as an unproblematic proxy for true criminality, heightened police concentration inevitably yields more recorded offences in those designated zones, which are then fed back into the model to validate the initial bias.",
+        "l": "Under the deceptive armour of mathematical neutrality, automated systems effectively disguise discriminatory enforcement as incontrovertible statistical necessity."
       },
       "id": "writing-10",
       "index": 10,
@@ -1632,7 +1632,7 @@
       "index": 11,
       "mode": "Franklin Copywork & Stylistic Deconstruction",
       "cefrLevel": "C1",
-      "question": "Analyze whether multinational corporations can maintain apolitical neutrality during periods of intense geopolitical conflict or domestic civil rights unrest.",
+      "question": "Analyse whether multinational corporations can maintain apolitical neutrality during periods of intense geopolitical conflict or domestic civil rights unrest.",
       "register": "Corporate Governance & Business Ethics",
       "masterSentence": "In an era of hyper-connected supply chains and stakeholder capitalism, corporate silence during severe humanitarian or civil crises no longer signals impartiality, but rather represents a tacit endorsement of the prevailing status quo.",
       "stylistic": "Parallel contrasts, assertive topic sentence, crisp concluding axiom."
@@ -1641,9 +1641,9 @@
       "title": "Neuroplasticity and Adult Second Language Acquisition",
       "meal": {
         "m": "While early childhood confers superior phonological flexibility, mature adult learners possess sophisticated metacognitive and syntactic processing capabilities that compensate for diminished instinctual neuroplasticity.",
-        "e": "Comparative neurolinguistic trials demonstrate that adult second-language learners acquire complex morphological rules and abstract grammatical frameworks nearly three times faster than adolescent cohorts when exposed to structured analytical instruction.",
+        "e": "Some comparative studies suggest that adult second-language learners can initially pick up complex morphological rules and abstract grammatical frameworks faster than adolescent cohorts when exposed to structured analytical instruction.",
         "a": "Adults leverage an expansive existing native conceptual schema, deploying conscious pattern recognition and mnemonic architecture to systematically deconstruct target-language syntax rather than relying exclusively on brute associative exposure.",
-        "l": "Consequently, second language mastery in adulthood is not biologically precluded, but hinges upon pedagogical frameworks that honor analytical cognitive maturity rather than mimicking infantile immersion."
+        "l": "Consequently, second language mastery in adulthood is not biologically precluded, but hinges upon pedagogical frameworks that honour analytical cognitive maturity rather than mimicking infantile immersion."
       },
       "id": "writing-12",
       "index": 12,
@@ -1652,12 +1652,12 @@
       "question": "Challenge the biological critical period hypothesis by highlighting adult cognitive advantages in secondary linguistic acquisition.",
       "register": "Applied Linguistics & Cognitive Psychology",
       "masterSentence": "While early childhood confers superior phonological flexibility, mature adult learners possess sophisticated metacognitive and syntactic processing capabilities that compensate for diminished instinctual neuroplasticity.",
-      "stylistic": "Syntactic concessions ('While... nevertheless...'), domain-specific vocabulary, strong causal coherence."
+      "stylistic": "Syntactic concession ('While early childhood confers...'), domain-specific vocabulary, strong causal coherence."
     },
     {
       "title": "Technological Sovereign Autarky vs. Interdependent Globalization",
       "meal": {
-        "m": "The pursuit of total semiconductor self-sufficiency represents an economically unviable illusion that ignores the hyper-specialized, multi-national division of labor inherent to modern microelectronics fabrication.",
+        "m": "The pursuit of total semiconductor self-sufficiency represents an economically unviable illusion that ignores the hyper-specialized, multi-national division of labour inherent to modern microelectronics fabrication.",
         "e": "A single advanced extreme ultraviolet (EUV) lithography scanner requires over 100,000 discrete components sourced from roughly 5,000 distinct suppliers across three continents, with core optics and laser systems exclusively monopolized by German and American specialists.",
         "a": "Attempting to duplicate this entire vertical ecosystem within domestic sovereign borders incurs staggering capital redundancies, crippling unit economics and depriving domestic designers of the global talent and innovation synergies that fuel chip performance.",
         "l": "Strategic resilience cannot be achieved through isolationist autarky; it demands cultivating deep, redundant alliances among interdependent technological democracies."
@@ -1668,14 +1668,14 @@
       "cefrLevel": "C2",
       "question": "Critique the strategic viability of advanced economies pursuing total technological independence in semiconductor fabrication.",
       "register": "Industrial Policy & Geopolitics",
-      "masterSentence": "The pursuit of total semiconductor self-sufficiency represents an economically unviable illusion that ignores the hyper-specialized, multi-national division of labor inherent to modern microelectronics fabrication.",
+      "masterSentence": "The pursuit of total semiconductor self-sufficiency represents an economically unviable illusion that ignores the hyper-specialized, multi-national division of labour inherent to modern microelectronics fabrication.",
       "stylistic": "Numerical evidence integration, strong nominalization, contrastive strategic resolution."
     },
     {
       "title": "The Commodification of Wilderness in Ecotourism",
       "meal": {
         "m": "Ecotourism frequently degenerates into an ecological paradox, wherein the commercial monetizing of pristine biodiversity inflicts irreversible environmental degradation upon the very habitats it purports to protect.",
-        "e": "Field studies across East African wildlife sanctuaries revealed that high-density luxury safari convoys disrupted apex predator hunting success rates by 38% and caused catastrophic soil compaction across critical migration corridors.",
+        "e": "Field studies in East African wildlife reserves suggest that dense safari vehicle traffic can disrupt the hunting success of apex predators and compact the soil along critical migration corridors.",
         "a": "To satisfy the affluent consumer's appetite for frictionless wilderness encounters, operators construct energy-intensive accommodations and access infrastructure, converting fragile biosphere refuges into curated, hyper-trafficked entertainment preserves.",
         "l": "True ecological stewardship requires demarcating inviolable wild zones entirely off-limits to market consumption, rather than sanitizing mass tourism with the greenwashed banner of conservation."
       },
@@ -1691,7 +1691,7 @@
     {
       "title": "The Pedagogy of Generative AI in Academic Assessment",
       "meal": {
-        "m": "The emergence of large language models obliterates the diagnostic validity of the traditional take-home essay, necessitating a paradigm shift toward oral defense, real-time synthesis, and process-based evaluation.",
+        "m": "The emergence of large language models obliterates the diagnostic validity of the traditional take-home essay, necessitating a paradigm shift toward oral defence, real-time synthesis, and process-based evaluation.",
         "e": "In randomized blind trials, modern AI generation systems consistently scored in the top quintile of undergraduate humanities take-home examinations while generating zero detectable syntactic or grammatical anomalies.",
         "a": "Because text generation has been commodified into an instantaneous push-button utility, evaluating student capability solely through the finalized text product measures tool fluency rather than internal cognitive digestion.",
         "l": "To cultivate genuine intellect, academia must abandon passive product-based grading and revive the Socratic dialogical tradition where scholars must defend and stress-test their ideas under live scrutiny."
@@ -1702,7 +1702,7 @@
       "cefrLevel": "C1",
       "question": "How must academic institutions redesign assessment frameworks in response to large language model capabilities?",
       "register": "Pedagogical Philosophy & Educational Policy",
-      "masterSentence": "The emergence of large language models obliterates the diagnostic validity of the traditional take-home essay, necessitating a paradigm shift toward oral defense, real-time synthesis, and process-based evaluation.",
+      "masterSentence": "The emergence of large language models obliterates the diagnostic validity of the traditional take-home essay, necessitating a paradigm shift toward oral defence, real-time synthesis, and process-based evaluation.",
       "stylistic": "Socratic allusion, assertive verb choices ('obliterates', 'commodified'), forward-looking imperative."
     },
     {
@@ -1711,7 +1711,7 @@
         "m": "Retrofitting thermal coal power plants with Carbon Capture and Storage (CCS) represents an expensive technological distraction that artificially prolongs the lifespan of obsolete, high-emission assets.",
         "e": "Operational audits of global commercial power-sector CCS installations indicate that capturing 90% of flue-gas carbon consumes nearly 30% of the plant's total energy output, inflating the levelized cost of electricity far beyond utility-scale solar and battery storage.",
         "a": "This parasitic energy penalty, combined with monumental capital expenditure for pipeline transportation and geological sequestration, renders captured coal power economically non-viable when compared against the plummeting cost curve of zero-emission renewables.",
-        "l": "Channeling public subsidies into post-combustion capture squanders precious fiscal capital that should be deployed toward modernizing grid flexibility and transmission lines."
+        "l": "Channelling public subsidies into post-combustion capture squanders precious fiscal capital that should be deployed toward modernizing grid flexibility and transmission lines."
       },
       "id": "writing-16",
       "index": 16,
@@ -1726,7 +1726,7 @@
       "title": "Restorative Justice vs. Retributive Incarceration",
       "meal": {
         "m": "Restorative justice models dramatically outperform retributive carceral systems in curtailing recidivism because they address the interpersonal rupture and psychosocial roots of crime rather than imposing passive dehumanization.",
-        "e": "Meta-analyses across European justice systems reveal that victim-offender mediation programs achieve a 34% reduction in repeat violent offenses compared to traditional correctional sentences of equal severity.",
+        "e": "Meta-analyses of victim-offender mediation programmes suggest that they can reduce repeat offending compared with traditional correctional sentences, although the size of the effect varies between studies.",
         "a": "While penal incarceration isolates individuals within criminogenic environments that sever social bonds and employability, restorative conferences force offenders to confront the human impact of their actions and construct concrete restitution compacts.",
         "l": "By transforming punishment from state-inflicted vengeance into active civic accountability, restorative frameworks heal victim trauma while successfully reintegrating the offender into the civil body."
       },
@@ -1760,7 +1760,7 @@
       "title": "Urban Heat Islands and Spatial Environmental Injustice",
       "meal": {
         "m": "Modern urban heat island vulnerabilities are not neutral geographic accidents; they reflect the enduring legacy of racist historical redlining policies that starved marginalized districts of vegetative canopy and permeable infrastructure.",
-        "e": "Satellite thermal imaging across 108 American metropolitan centers demonstrates that historically redlined neighborhoods are consistently up to 13°F hotter during peak heatwaves than their historically favored, tree-lined counterparts.",
+        "e": "Satellite thermal imaging across 108 American metropolitan centres demonstrates that historically redlined neighbourhoods are consistently up to 13°F hotter during peak heatwaves than their historically favoured, tree-lined counterparts.",
         "a": "Decades of disinvestment resulted in high concentrations of asphalt paving, elevated industrial zoning, and an almost total absence of municipal tree planting, creating dense thermal sinks that trap solar radiation and degrade respiratory health.",
         "l": "Urban climate resilience plans must therefore prioritize targeted spatial re-greening as a moral act of restorative civil rights rather than a decorative civic amenity."
       },
@@ -1768,7 +1768,7 @@
       "index": 19,
       "mode": "MEAL Single-Paragraph Deep-Dive",
       "cefrLevel": "C1",
-      "question": "Examine how historical municipal zoning practices and redlining exacerbate modern climate vulnerabilities across marginalized neighborhoods.",
+      "question": "Examine how historical municipal zoning practices and redlining exacerbate modern climate vulnerabilities across marginalized neighbourhoods.",
       "register": "Urban Geography & Environmental Justice",
       "masterSentence": "Modern urban heat island vulnerabilities are not neutral geographic accidents; they reflect the enduring legacy of racist historical redlining policies that starved marginalized districts of vegetative canopy and permeable infrastructure.",
       "stylistic": "Moral and historical framing, high-density scientific evidence, declarative conviction."
@@ -1779,7 +1779,7 @@
         "m": "Permitting private commercial aerospace conglomerates to establish de facto governance in orbital and lunar domains threatens to transform the celestial commons into a lawless frontier of corporate enclosure.",
         "e": "Mega-constellations launched by private entities currently account for over 60% of all active satellites in low Earth orbit, regularly forcing international astronomical observatories to discard deep-space imagery corrupted by orbital light pollution and radio interference.",
         "a": "Because international space treaties such as the 1967 Outer Space Treaty were drafted exclusively for sovereign states, commercial actors exploit regulatory loopholes to claim proprietary orbital slots and stake speculative claims on water ice deposits without democratic oversight.",
-        "l": "Without a robust, multilateral regulatory regime with enforceable sanctions, humankind risks repeating the tragic historical cycles of colonial resource exploitation beyond Earth's atmosphere."
+        "l": "Without an enforceable multilateral framework, commercial space expansion risks unregulated resource competition in orbit."
       },
       "id": "writing-20",
       "index": 20,
@@ -1788,32 +1788,32 @@
       "question": "Discuss the hazards of allowing commercial spaceflight entities to dictate operational norms in low Earth orbit and lunar resource rights.",
       "register": "International Space Law & Astropolitics",
       "masterSentence": "Permitting private commercial aerospace conglomerates to establish de facto governance in orbital and lunar domains threatens to transform the celestial commons into a lawless frontier of corporate enclosure.",
-      "stylistic": "Historical parallels ('celestial commons', 'colonial resource exploitation'), legal vocabulary, cohesive sequencing."
+      "stylistic": "Historical parallels ('celestial commons', 'lawless frontier'), legal vocabulary, cohesive sequencing."
     },
     {
       "title": "The Psychological Toll of Algorithmic Management in Logistics",
       "meal": {
-        "m": "The deployment of algorithmic surveillance systems in fulfillment centers reduces manual laborers to physiological components of an automated machine, inflicting acute musculoskeletal degradation and psychological alienation.",
+        "m": "The deployment of algorithmic surveillance systems in fulfilment centres reduces manual labourers to physiological components of an automated machine, inflicting acute musculoskeletal degradation and psychological alienation.",
         "e": "Workplace safety investigations in automated distribution hubs reveal that injury rates for workers monitored by second-by-second 'time-off-task' scanners are more than double the national industry average for traditional logistics facilities.",
         "a": "By stripping frontline workers of all pacing discretion and treating natural biological necessities as algorithmic infractions, these software control systems generate chronic sympathetic nervous system activation and severe cognitive burnout.",
-        "l": "Elevating enterprise fulfillment velocity at the expense of baseline human physiology represents a modern manifestation of digital sweatshop exploitation that demands strict statutory limits on automated pacing."
+        "l": "Elevating enterprise fulfilment velocity at the expense of baseline human physiology represents a modern manifestation of digital sweatshop exploitation that demands strict statutory limits on automated pacing."
       },
       "id": "writing-21",
       "index": 21,
       "mode": "MEAL Single-Paragraph Deep-Dive",
       "cefrLevel": "C1",
-      "question": "Analyze the human and cognitive consequences of real-time algorithmic tracking on warehouse and fulfillment workers.",
-      "register": "Labor Economics & Occupational Health",
-      "masterSentence": "The deployment of algorithmic surveillance systems in fulfillment centers reduces manual laborers to physiological components of an automated machine, inflicting acute musculoskeletal degradation and psychological alienation.",
+      "question": "Analyse the human and cognitive consequences of real-time algorithmic tracking on warehouse and fulfilment workers.",
+      "register": "Labour Economics & Occupational Health",
+      "masterSentence": "The deployment of algorithmic surveillance systems in fulfilment centres reduces manual labourers to physiological components of an automated machine, inflicting acute musculoskeletal degradation and psychological alienation.",
       "stylistic": "Biomedical vocabulary ('musculoskeletal degradation', 'sympathetic nervous system activation'), hard-hitting sociological critique."
     },
     {
       "title": "Central Bank Digital Currencies (CBDCs) and Authoritarian Control",
       "meal": {
-        "m": "While central bank digital currencies promise unprecedented monetary policy precision, their programmable architecture creates an insidious instrument for totalitarian surveillance and behavioral control.",
+        "m": "While central bank digital currencies promise unprecedented monetary policy precision, their programmable architecture creates an insidious instrument for totalitarian surveillance and behavioural control.",
         "e": "Experimental pilot implementations of state-backed digital currencies have integrated automated expiration dates and geographic spending restrictions, effectively preventing citizens from using funds outside authorized municipality boundaries.",
         "a": "Unlike physical cash, which preserves transactional anonymity and individual sovereignty, a centralized ledger grants state authorities the technical capability to instantaneously freeze assets or penalize dissidents with the click of an administrative key.",
-        "l": "Surrendering financial anonymity in the name of modernization risks constructing an unescapable digital panopticon wherein financial survival is contingent upon absolute political conformity."
+        "l": "Surrendering financial anonymity in the name of modernization risks constructing an inescapable digital panopticon wherein financial survival is contingent upon absolute political conformity."
       },
       "id": "writing-22",
       "index": 22,
@@ -1821,15 +1821,15 @@
       "cefrLevel": "C1",
       "question": "Evaluate the existential civil liberty threats posed by programmable fiat currencies managed by centralized banking authorities.",
       "register": "Political Philosophy & Monetary Economics",
-      "masterSentence": "While central bank digital currencies promise unprecedented monetary policy precision, their programmable architecture creates an insidious instrument for totalitarian surveillance and behavioral control.",
-      "stylistic": "Orwellian allusion ('digital panopticon'), stark contrasting clauses, powerful concluding cadence."
+      "masterSentence": "While central bank digital currencies promise unprecedented monetary policy precision, their programmable architecture creates an insidious instrument for totalitarian surveillance and behavioural control.",
+      "stylistic": "Foucauldian allusion ('digital panopticon'), stark contrasting clauses, powerful concluding cadence."
     },
     {
       "title": "The Crisis of Attention in Modern Literature and Long-Form Prose",
       "meal": {
         "m": "The digital epoch's relentless acceleration of communicative velocity has hollowed out the cultural ecosystem required for sustained contemplation, endangering the survival of complex, multi-layered prose.",
-        "e": "Publishing industry analytics reveal that average paragraph lengths in popular fiction have contracted by more than 50% over the past four decades, accompanied by an unprecedented collapse in the sales of experimental, syntactically challenging literary works.",
-        "a": "As digital interfaces train the human eye to skim for quick informational utility rather than savor polyphonic resonance, authors increasingly face commercial pressures to excise deliberate subordinate clauses, contemplative digressions, and psychological ambiguity in favor of rapid narrative pacing.",
+        "e": "Some analyses of the publishing industry suggest that paragraphs and sentences in popular fiction have grown shorter over recent decades, while experimental, syntactically challenging literary works have struggled to reach a mass readership.",
+        "a": "As digital interfaces train the human eye to skim for quick informational utility rather than savor polyphonic resonance, authors increasingly face commercial pressures to excise deliberate subordinate clauses, contemplative digressions, and psychological ambiguity in favour of rapid narrative pacing.",
         "l": "In sacrificing the meditative depth of the periodic sentence, modern literature risks forfeiting its most distinctive gift: the capacity to articulate the nuanced, contradictory depths of the human interior."
       },
       "id": "writing-23",
@@ -1845,41 +1845,41 @@
       "title": "The Fallacy of Corporate Social Responsibility (CSR)",
       "meal": {
         "m": "Voluntary Corporate Social Responsibility (CSR) campaigns function primarily as cosmetic public relations shields designed to preempt rigorous statutory regulation while leaving extractive core business models entirely untouched.",
-        "e": "Corporate disclosures from the world's top fossil fuel enterprises indicate that while advertising budgets showcasing green investments increased by over 300% in five years, actual capital allocation to zero-carbon projects remained below 3% of aggregate expenditures.",
-        "a": "Because publicly traded corporations are legally bound to maximize shareholder returns, executives cannot voluntarily prioritize ecological preservation or living wages whenever doing so threatens short-term profitability, rendering voluntary self-policing fundamentally contradictory.",
+        "e": "Analyses of corporate disclosures by major fossil fuel companies suggest that while spending on advertising that showcases green investments has risen sharply, only a small fraction of their capital expenditure goes to zero-carbon projects.",
+        "a": "Because publicly traded corporations are under strong pressure from investors to maximize returns, executives often struggle to prioritize ecological preservation or living wages whenever doing so threatens short-term profitability, rendering voluntary self-policing fundamentally unreliable.",
         "l": "Genuine socioeconomic accountability cannot be outsourced to corporate benevolence; it requires the coercive, democratic power of the state to impose binding legal mandates with punitive consequences."
       },
       "id": "writing-24",
       "index": 24,
       "mode": "MEAL Single-Paragraph Deep-Dive",
       "cefrLevel": "C1",
-      "question": "Critique the paradigm of voluntary corporate social responsibility as a substitute for mandatory government environmental and labor regulation.",
+      "question": "Critique the paradigm of voluntary corporate social responsibility as a substitute for mandatory government environmental and labour regulation.",
       "register": "Corporate Jurisprudence & Political Economy",
       "masterSentence": "Voluntary Corporate Social Responsibility (CSR) campaigns function primarily as cosmetic public relations shields designed to preempt rigorous statutory regulation while leaving extractive core business models entirely untouched.",
-      "stylistic": "Scathing critique, sharp numerical contrast, unyielding logical progression."
+      "stylistic": "Scathing critique, sharp contrast between rhetoric and spending, unyielding logical progression."
     },
     {
       "title": "Genetic Determinism and Predictive Health Insurance",
       "meal": {
         "m": "Permitting private insurance underwriters to integrate polygenic risk scores into policy pricing will establish a permanent genetic underclass systematically excluded from affordable medical coverage.",
-        "e": "Actuarial simulation models reveal that using polygenic screening to price oncology policies would raise annual insurance premiums by more than 800% for individuals carrying common hereditary markers, pricing tens of millions out of baseline insurance markets.",
+        "e": "Actuarial simulation models suggest that using polygenic screening to price oncology policies could raise annual insurance premiums substantially for individuals carrying common hereditary markers, potentially pricing many people out of baseline insurance markets.",
         "a": "Because genetic architecture is entirely non-modifiable and inherited, conditioning access to medical risk-pooling on biological inheritance subverts the fundamental moral purpose of insurance: the social distribution of unavoidable misfortune.",
-        "l": "Without robust legislative firewalls strictly prohibiting genetic underwriting, society will institutionalize a dystopian biological caste system where healthcare access is dictated at the moment of conception."
+        "l": "Without strict statutory prohibitions against genetic underwriting, private insurance markets risk penalizing individuals for hereditary health risks beyond their control."
       },
       "id": "writing-25",
       "index": 25,
       "mode": "MEAL Single-Paragraph Deep-Dive",
       "cefrLevel": "C1",
-      "question": "Analyze the societal risks of allowing private health and life insurers to utilize polygenic risk scores in underwriting actuarial policies.",
+      "question": "Analyse the societal risks of allowing private health and life insurers to utilize polygenic risk scores in underwriting actuarial policies.",
       "register": "Bioethics & Actuarial Science",
       "masterSentence": "Permitting private insurance underwriters to integrate polygenic risk scores into policy pricing will establish a permanent genetic underclass systematically excluded from affordable medical coverage.",
-      "stylistic": "Bioethical authority, vivid phrasing ('permanent genetic underclass', 'biological caste system'), urgent ethical imperative."
+      "stylistic": "Bioethical authority, vivid phrasing ('permanent genetic underclass', 'systematically excluded'), urgent ethical imperative."
     },
     {
       "title": "The Dark Side of High-Frequency Trading in Capital Markets",
       "meal": {
         "m": "Far from providing durable market liquidity, algorithmic high-frequency trading operates as a predatory tax on capital formation, injecting systemic fragility and latency arbitrage into financial markets.",
-        "e": "During historical flash crashes, algorithmic market makers withdrew hundreds of billions of dollars in bids within milliseconds of initial volatility spikes, causing premier blue-chip equities to plummet by over 60% before recovering minutes later.",
+        "e": "During historical flash crashes such as that of May 2010, many algorithmic market makers withdrew liquidity within moments of initial volatility spikes, causing some blue-chip equities to fall sharply before recovering within minutes.",
         "a": "Because HFT firms deploy colocation servers and proprietary algorithms to front-run institutional orders, their liquidity is phantom in nature—readily available during calm trading conditions, but evaporating instantaneously when genuine market stabilization is required.",
         "l": "Regulators must introduce financial transaction taxes and minimum resting times for quotes to dismantle these parasitic latency schemes and restore genuine stability to public capital exchanges."
       },
@@ -1895,8 +1895,8 @@
     {
       "title": "Decolonizing Academic Curricula in Western Universities",
       "meal": {
-        "m": "Decentering Eurocentric curricula in university education is not an exercise in ideological censorship, but an urgent intellectual necessity to dismantle the parochial illusion that Western thought represents the universal human experience.",
-        "e": "Curricular audits across major humanities departments in the Anglophone sphere reveal that non-Western authors and philosophical traditions constitute less than 8% of mandatory reading lists, despite representing over 80% of human global history.",
+        "m": "Decentring Eurocentric curricula in university education is not an exercise in ideological censorship, but an urgent intellectual necessity to dismantle the parochial illusion that Western thought represents the universal human experience.",
+        "e": "Curricular audits of humanities departments in the Anglophone world suggest that non-Western authors and philosophical traditions make up only a small minority of mandatory reading lists, even though most of the world's population and cultural heritage lies outside the West.",
         "a": "By systematically omitting rich non-Western philosophical, historiographical, and literary heritages, universities instill a distorted epistemological chauvinism that leaves graduates ill-equipped to comprehend the pluriverse of ideas shaping an interconnected 21st century.",
         "l": "Broadening the canon revitalizes the university's core mission: subjecting all intellectual traditions to rigorous inquiry, cross-pollination, and shared discovery."
       },
@@ -1904,9 +1904,9 @@
       "index": 27,
       "mode": "Franklin Copywork & Stylistic Deconstruction",
       "cefrLevel": "C2",
-      "question": "Examine the academic and epistemological necessity of decentering Eurocentric canons within university humanities and social sciences.",
+      "question": "Examine the academic and epistemological necessity of decentring Eurocentric canons within university humanities and social sciences.",
       "register": "Epistemology & Postcolonial Theory",
-      "masterSentence": "Decentering Eurocentric curricula in university education is not an exercise in ideological censorship, but an urgent intellectual necessity to dismantle the parochial illusion that Western thought represents the universal human experience.",
+      "masterSentence": "Decentring Eurocentric curricula in university education is not an exercise in ideological censorship, but an urgent intellectual necessity to dismantle the parochial illusion that Western thought represents the universal human experience.",
       "stylistic": "Philosophical nuance, balanced rhythmic sentence structure, dignified declarative ending."
     },
     {
@@ -1941,13 +1941,13 @@
       "question": "Demonstrate why physical thermodynamic limits invalidate neoclassical models of indefinite material and economic throughput.",
       "register": "Ecological Economics & Thermodynamics",
       "masterSentence": "Neoclassical economic dogma's premise of compounding material growth represents a thermodynamic impossibility that treats ecological biospheres as mere externalities to an abstracted mathematical model.",
-      "stylistic": "Scientific rigor ('low-entropy', 'Jevons paradox', 'planetary boundaries'), unflinching rhetorical force."
+      "stylistic": "Scientific rigour ('low-entropy', 'Jevons paradox', 'planetary boundaries'), unflinching rhetorical force."
     },
     {
       "title": "Autonomous AI Science and the Future of Discovery",
       "meal": {
         "m": "The transition from AI as an analytical assistant to an autonomous researcher running end-to-end scientific pipelines promises to compress centuries of scientific discovery into decades, while fundamentally challenging human intellectual primacy.",
-        "e": "Autonomous biological discovery platforms have already generated, synthesized, and experimentally validated hundreds of novel antibiotic and catalyst candidates in automated wet labs without human manual intervention at any phase of the experimental cycle.",
+        "e": "Autonomous 'self-driving laboratory' platforms have already been reported to design, synthesize, and experimentally test novel candidate antibiotics and catalysts in automated wet labs with minimal human intervention in the experimental cycle.",
         "a": "While these systems drastically accelerate the exploration of massive chemical and biological search spaces that dwarf human cognitive capacity, their opaque decision-making architectures risk creating a world of 'black-box science' where humanity possesses functional cures without understanding the underlying mechanistic principles.",
         "l": "To safeguard scientific truth, the future of discovery must not surrender foundational epistemological understanding in exchange for brute algorithmic utility."
       },
@@ -1971,7 +1971,7 @@
       "id": "writing-31",
       "index": 31,
       "mode": "MEAL Single-Paragraph Deep-Dive",
-      "cefrLevel": "B2",
+      "cefrLevel": "C1",
       "question": "Write the central paragraph of a formal letter to a building management company complaining that repeated heating failures have not been resolved despite earlier assurances.",
       "register": "Formal Correspondence / Complaint",
       "masterSentence": "Despite three written assurances since November, the heating system in our building remains unreliable, and I must now ask you to treat this matter as a formal complaint.",
@@ -1988,7 +1988,7 @@
       "id": "writing-32",
       "index": 32,
       "mode": "MEAL Single-Paragraph Deep-Dive",
-      "cefrLevel": "B2",
+      "cefrLevel": "C1",
       "question": "Write the recommendation paragraph of an internal report advising senior management on whether to introduce flexible start times for office staff.",
       "register": "Business Report / Recommendation",
       "masterSentence": "On balance, it is recommended that flexible start times be introduced on a six-month trial basis, subject to agreed core hours and a formal review at the end of the period.",
@@ -2022,7 +2022,7 @@
       "id": "writing-34",
       "index": 34,
       "mode": "MEAL Single-Paragraph Deep-Dive",
-      "cefrLevel": "B2",
+      "cefrLevel": "C1",
       "question": "Write a paragraph for a local newspaper paying tribute to a recently deceased family doctor who served the same community for four decades.",
       "register": "Obituary / Tribute",
       "masterSentence": "For forty years, Ellen Marsh served this town as its family doctor in the conviction that listening was the most powerful instrument she carried.",
@@ -2124,7 +2124,7 @@
       "id": "writing-40",
       "index": 40,
       "mode": "Franklin Copywork & Stylistic Deconstruction",
-      "cefrLevel": "B1",
+      "cefrLevel": "B2",
       "question": "Write the key paragraph of a public statement in which a company issues an apology to customers after a data breach exposed their contact details.",
       "register": "Crisis Communication / Public Apology",
       "masterSentence": "We let our customers down, and we are sorry: protecting your personal information is our responsibility, and on this occasion we failed to meet it.",
@@ -2142,8 +2142,8 @@
       "domain": "PUBLIC",
       "canDo": "Can ask and answer simple questions about personal details and immediate transactional needs in a structured setting.",
       "interlocutor": "Hotel receptionist (polite, speaks slowly and clearly).",
-      "context": "Arriving at an international hostel after a long flight; need to confirm booking and request Wi-Fi credentials.",
-      "friction": "The booking name has a slight spelling typo in the hostel reservation database.",
+      "context": "Arriving at an international hotel after a long flight; need to confirm booking and request Wi-Fi credentials.",
+      "friction": "The booking name has a slight spelling typo in the hotel reservation database.",
       "outcome": "Spell surname aloud, confirm 3-night stay, receive room key card and written Wi-Fi password.",
       "timeCondition": "2 minutes interaction; 30s preparation.",
       "scaffold": "\"Hello, I have a reservation under...\", \"My last name is spelled...\", \"Could I have the Wi-Fi code, please?\"",
@@ -2162,7 +2162,7 @@
       "friction": "Dairy milk is unavailable; must choose an alternative (oat or soy) and pay with contactless card.",
       "outcome": "Successfully order one coffee with plant-based milk and one pastry; confirm total price.",
       "timeCondition": "90 seconds interaction.",
-      "scaffold": "\"Could I have a black coffee and a croissant?\", \"Do you have oat milk?\", \"Can I pay by card?\"",
+      "scaffold": "\"Could I have a coffee with oat milk and a croissant?\", \"Do you have oat milk?\", \"Can I pay by card?\"",
       "vietnamese": "Gọi đồ ăn sáng tại ga tàu hỏa, xử lý tình huống hết sữa bò và thanh toán bằng thẻ chạm."
     },
     {
@@ -2190,7 +2190,7 @@
       "domain": "PUBLIC",
       "canDo": "Can ask for simple directions from point A to point B using basic interrogative phrases.",
       "interlocutor": "Local pedestrian on the street.",
-      "context": "Exiting a shopping center and needing the nearest metro entrance to avoid missing an appointment.",
+      "context": "Exiting a shopping centre and needing the nearest metro entrance to avoid missing an appointment.",
       "friction": "The main street is under construction, requiring a simple detour.",
       "outcome": "Understand directional cues (turn left, go straight, next to the pharmacy) and confirm arrival point.",
       "timeCondition": "90 seconds interaction.",
@@ -2205,8 +2205,8 @@
       "mode": "WRITTEN_INTERACTION",
       "domain": "PERSONAL",
       "canDo": "Can fill in forms with personal details (name, date of birth, nationality, address, emergency contact).",
-      "interlocutor": "Community sports center front desk officer.",
-      "context": "Signing up for a 30-day trial fitness pass at a local recreation center.",
+      "interlocutor": "Community sports centre front desk officer.",
+      "context": "Signing up for a 30-day trial fitness pass at a local recreation centre.",
       "friction": "Form requires an international phone prefix and local residential address formatting.",
       "outcome": "Correctly completed 6-field registration sheet with zero orthographic errors.",
       "timeCondition": "3 minutes writing.",
@@ -2226,7 +2226,7 @@
       "friction": "Character limit of 40 words per post.",
       "outcome": "A concise 3-sentence introduction covering name, current city, and reason for taking the course.",
       "timeCondition": "2 minutes writing.",
-      "scaffold": "\"Hello everyone! My name is... I live in... I am learning English because...\"",
+      "scaffold": "\"Hello everyone! My name is... I live in... I am taking this course because...\"",
       "vietnamese": "Viết đoạn giới thiệu bản thân ngắn gọn 3 câu trong diễn đàn lớp học trực tuyến giới hạn 40 từ."
     },
     {
@@ -2285,13 +2285,13 @@
       "mode": "SPOKEN_INTERACTION",
       "domain": "PUBLIC",
       "canDo": "Can state their name and confirm dates and times for routine appointments.",
-      "interlocutor": "Medical clinic receptionist.",
+      "interlocutor": "Dental clinic receptionist.",
       "context": "Routine telephone confirmation of a dentist consultation for tomorrow afternoon.",
-      "friction": "The proposed slot conflicts with work; must negotiate a slot 30 minutes later.",
-      "outcome": "Finalize rescheduled appointment at 4:30 PM and confirm doctor's room number.",
+      "friction": "The time offered is too early because of work; must ask for a later time.",
+      "outcome": "Agree on a later appointment at 4:30 PM and confirm the room number.",
       "timeCondition": "90 seconds call.",
       "scaffold": "\"My name is... I have an appointment tomorrow.\", \"Is 4:30 PM possible?\", \"Thank you, see you tomorrow.\"",
-      "vietnamese": "Gọi điện thoại xác nhận và dời lịch hẹn khám răng muộn hơn 30 phút để phù hợp lịch làm việc."
+      "vietnamese": "Gọi điện thoại xác nhận và dời lịch hẹn khám răng sang giờ muộn hơn để phù hợp lịch làm việc."
     },
     {
       "title": "Returning a Defective Electronic Charger",
@@ -2339,7 +2339,7 @@
       "outcome": "60-word email stating date of absence, reason, attached doctor's certificate, and asking for makeup date.",
       "timeCondition": "4 minutes writing.",
       "scaffold": "\"Dear Professor Smith, I am writing to apologize for missing...\", \"I was ill with flu...\", \"I attach my medical note.\"",
-      "vietnamese": "Viết email 60 từ xin phép vắng mặt buổi thực hành vì sốt xuất huyết, đính kèm giấy khám và xin lịch bù."
+      "vietnamese": "Viết email 60 từ xin phép vắng mặt buổi thực hành vì cúm nặng, đính kèm giấy khám và xin lịch bù."
     },
     {
       "title": "Describing Last Weekend's Hiking Incident",
@@ -2366,7 +2366,7 @@
       "domain": "PUBLIC",
       "canDo": "Can make travel arrangements, book tickets, and inquire about departure times and luggage allowances.",
       "interlocutor": "Railway booking office clerk.",
-      "context": "Planning an overnight train journey for three colleagues traveling to a regional seminar.",
+      "context": "Planning an overnight train journey for three colleagues travelling to a regional seminar.",
       "friction": "Upper berths are sold out; only lower berths with extra surcharge remain.",
       "outcome": "Negotiate three adjacent lower berths, confirm departure platform, obtain printed itinerary.",
       "timeCondition": "2 minutes interaction.",
@@ -2386,7 +2386,7 @@
       "friction": "Event depends on weather; must specify alternative rainy-day schedule.",
       "outcome": "A 70-word clear hallway notice outlining date, meeting spot, items to bring, and backup plan.",
       "timeCondition": "4 minutes writing.",
-      "scaffold": "\"Dear Neighbors, Please join our building clean-up day this Saturday at 9 AM.\", \"If it rains, we will meet on Sunday.\"",
+      "scaffold": "\"Dear Neighbours, Please join our building clean-up day this Saturday at 9 AM.\", \"If it rains, we will meet on Sunday.\"",
       "vietnamese": "Viết thông báo 70 từ dán sảnh chung cư kêu gọi dọn dẹp khuôn viên và nêu phương án dự phòng khi mưa."
     },
     {
@@ -2446,7 +2446,7 @@
       "domain": "PUBLIC",
       "canDo": "Can write simple messages stating a problem, its impact, and requesting management action.",
       "interlocutor": "Apartment building property manager.",
-      "context": "Upstairs neighbor conducting loud construction work during midnight hours for three consecutive nights.",
+      "context": "Upstairs neighbour conducting loud construction work during midnight hours for three consecutive nights.",
       "friction": "Need to remain polite and objective while making the urgency clear.",
       "outcome": "An 80-word email documenting dates, hours of disruption, and requesting enforcement of building quiet hours.",
       "timeCondition": "5 minutes writing.",
@@ -2462,11 +2462,11 @@
       "domain": "OCCUPATIONAL",
       "canDo": "Can give brief reasons and explanations for opinions, plans, and actions on familiar work-related topics.",
       "interlocutor": "Green Office Committee members during monthly meeting.",
-      "context": "Proposing a pilot organic waste collection program in the company kitchen.",
-      "friction": "Facilities team worries about odor and fruit flies; must propose closed-lid sealed bins.",
+      "context": "Proposing a pilot organic waste collection programme in the company kitchen.",
+      "friction": "Facilities team worries about odour and fruit flies; must propose closed-lid sealed bins.",
       "outcome": "3-minute structured pitch outlining cost, environmental benefit, and practical pest prevention.",
       "timeCondition": "3 minutes speech; 2 minutes prep.",
-      "scaffold": "\"The purpose of this proposal is to...\", \"One major advantage is...\", \"To address concerns about odor, we can...\"",
+      "scaffold": "\"The purpose of this proposal is to...\", \"One major advantage is...\", \"To address concerns about odour, we can...\"",
       "vietnamese": "Thuyết trình 3 phút đề xuất dự án phân loại rác hữu cơ tại văn phòng, giải quyết quan ngại về mùi hôi."
     },
     {
@@ -2476,13 +2476,13 @@
       "cefrLevel": "B1",
       "mode": "SPOKEN_INTERACTION",
       "domain": "PUBLIC",
-      "canDo": "Can deal with most situations likely to arise whilst traveling, including unexpected delays, rerouting, and hotel vouchers.",
+      "canDo": "Can deal with most situations likely to arise whilst travelling, including unexpected delays, rerouting, and hotel vouchers.",
       "interlocutor": "Airline customer service agent at crowded transit hub.",
       "context": "Connecting flight cancelled due to mechanical failure; next flight is 14 hours away.",
       "friction": "Agent offers airport lounge voucher; passenger needs overnight hotel room and meal allowance.",
       "outcome": "Politely assert airline passenger rights, secure guaranteed hotel accommodation, transportation voucher, and boarding pass.",
       "timeCondition": "3 minutes interaction.",
-      "scaffold": "\"Under airline regulations, because this is an overnight delay, am I entitled to hotel accommodation?\", \"Could you verify seats?\"",
+      "scaffold": "\"My flight was cancelled. Can I get a hotel for tonight, please?\", \"Are there seats on the next flight?\"",
       "vietnamese": "Thương lượng quyền lợi khi bị hủy chuyến bay chuyển tiếp qua đêm (khách sạn, xe đưa đón, phiếu ăn uống)."
     },
     {
@@ -2527,11 +2527,11 @@
       "canDo": "Can relay the main points of clear, factual texts on topics of general interest to peers who have not read the source.",
       "interlocutor": "Three university study group peers.",
       "context": "Summarizing a 600-word report on global electric vehicle battery recycling advances.",
-      "friction": "One peer is skeptical about commercial viability; must highlight cost data from the text.",
+      "friction": "One peer is sceptical about commercial viability; must highlight cost data from the text.",
       "outcome": "A 2-minute oral summary capturing the thesis, two supporting innovations, and market forecast.",
       "timeCondition": "2 minutes summary.",
       "scaffold": "\"The article mainly discusses...\", \"According to the researchers, the key breakthrough is...\", \"In conclusion, they predict...\"",
-      "vietnamese": "Tóm tắt bài báo khoa học 600 từ về tái chế pin xe điện cho nhóm học tập, làm rõ luận điểm tính khả thi kinh tế."
+      "vietnamese": "Tóm tắt bài báo/báo cáo 600 từ về tái chế pin xe điện cho nhóm học tập, làm rõ luận điểm tính khả thi kinh tế."
     },
     {
       "title": "Formal Inquiry Email Regarding Internship Criteria",
@@ -2559,7 +2559,7 @@
       "canDo": "Can describe a concrete past problem, actions taken, and the resolution using the STAR framework.",
       "interlocutor": "Senior HR interviewer for a mid-level project coordinator role.",
       "context": "Answering the classic behavioural question: \"Tell me about a time you had a disagreement with a team member.\"",
-      "friction": "Disagreement centered on workload allocation; required objective metric re-evaluation.",
+      "friction": "Disagreement centred on workload allocation; required objective metric re-evaluation.",
       "outcome": "A structured 2.5-minute response articulating Situation, Task, Action, and positive Result.",
       "timeCondition": "2.5 minutes speech.",
       "scaffold": "\"In my previous role, the situation was...\", \"My responsibility was to...\", \"To resolve this, I took the action of...\", \"As a result...\"",
@@ -2606,7 +2606,7 @@
       "domain": "PUBLIC",
       "canDo": "Can write short essays developing an argument with supporting reasons, simple pros and cons, and a conclusion.",
       "interlocutor": "University English academic writing examiner.",
-      "context": "Standard B1 argumentative essay topic: \"Should private vehicles be banned from historical city centers?\"",
+      "context": "Standard B1 argumentative essay topic: \"Should private vehicles be banned from historical city centres?\"",
       "friction": "Must balance environmental benefits against economic impact on local shopkeepers.",
       "outcome": "A 180-word 4-paragraph essay (Introduction, Pros, Cons, Balanced Personal Stance).",
       "timeCondition": "10 minutes writing.",
@@ -2622,12 +2622,12 @@
       "domain": "OCCUPATIONAL",
       "canDo": "Can give clear, systematically developed presentations with highlight of significant points and relevant supporting detail.",
       "interlocutor": "Chief Financial Officer and VP of Operations.",
-      "context": "Presenting a 12-month energy efficiency retrofitting program for corporate headquarters.",
+      "context": "Presenting a 12-month energy efficiency retrofitting programme for corporate headquarters.",
       "friction": "High upfront capital expenditure ($150,000) requires justifying return on investment (ROI) within 36 months.",
       "outcome": "4-minute structured presentation demonstrating payback curves, tax rebates, and ESG compliance benefits.",
       "timeCondition": "4 minutes speech; 3 minutes prep.",
       "scaffold": "\"Today I present our energy retrofitting roadmap.\", \"While upfront capital outlay is significant, the payback period is...\", \"Crucially, this ensures...\"",
-      "vietnamese": "Thuyết trình 4 phút trước CFO bảo vệ dự án kiểm toán năng lượng 150.000 USD với thời gian hoàn vốn 36 tháng."
+      "vietnamese": "Thuyết trình 4 phút trước CFO bảo vệ dự án cải tạo tiết kiệm năng lượng (retrofit) 150.000 USD với thời gian hoàn vốn 36 tháng."
     },
     {
       "title": "Cross-Departmental Resource Dispute Mediation",
@@ -2735,11 +2735,11 @@
       "canDo": "Can facilitate communication between parties with opposing viewpoints by reformulating ideas and identifying common ground.",
       "interlocutor": "Two co-founders disputing code ownership after deciding to dissolve their startup partnership.",
       "context": "One co-founder wrote the core backend; the other designed proprietary database schemas.",
-      "friction": "High emotional hostility and threats of immediate patent litigation.",
-      "outcome": "De-escalate hostile accusations, reframe contributions objectively, establish basis for a mutual non-exclusive license.",
+      "friction": "High emotional hostility and threats of immediate copyright litigation.",
+      "outcome": "De-escalate hostile accusations, reframe contributions objectively, establish basis for a mutual non-exclusive licence.",
       "timeCondition": "4 minutes dialogue.",
       "scaffold": "\"If I understand correctly, both of you want to avoid protracted legal costs.\", \"What John is proposing does not exclude your architecture...\", \"Can we explore...\"",
-      "vietnamese": "Trung gian hòa giải tranh chấp sở hữu trí tuệ giữa hai nhà đồng sáng lập, định hướng tới thỏa thuận cấp phép chéo."
+      "vietnamese": "Trung gian hòa giải tranh chấp bản quyền mã nguồn giữa hai nhà đồng sáng lập, định hướng tới thỏa thuận cấp phép không độc quyền."
     },
     {
       "title": "Formulating Policy Recommendations on Remote Work Flexibility",
@@ -2771,7 +2771,7 @@
       "outcome": "A 3.5-minute fluent monologue exploring smartphone addiction, algorithmic echo chambers, and human intentionality.",
       "timeCondition": "3.5 minutes speech; 1 minute prep.",
       "scaffold": "\"The assertion that tools dictate human cognitive architecture is increasingly validated by...\", \"That said, one must avoid extreme fatalism...\", \"In conclusion...\"",
-      "vietnamese": "Thuyết trình ngẫu ứng 3,5 phút về thuyết tiền định công nghệ và tác động của mạng xã hội đến tâm lý con người."
+      "vietnamese": "Thuyết trình ngẫu ứng 3,5 phút về thuyết quyết định luận công nghệ và tác động của mạng xã hội đến tâm lý con người."
     },
     {
       "title": "Delivering an Executive Keynote on Algorithmic Accountability",
@@ -2822,20 +2822,20 @@
       "vietnamese": "Viết bài phản biện học thuật 450 từ phân tích lỗi ngụy biện phương pháp luận trong báo cáo kinh tế của tác giả đoạt giải Nobel."
     },
     {
-      "title": "Diplomatic Crisis Mediation Following an Airspace Violation",
+      "title": "Cross-Border Aviation Technical Incident Mediation",
       "id": "scen-c1-04",
       "index": 44,
       "cefrLevel": "C1",
       "mode": "MEDIATION",
       "domain": "PUBLIC",
-      "canDo": "Can convey complex texts and positions diplomatically, managing ambiguity, redirecting tensions, and de-escalating hostility.",
-      "interlocutor": "Envoys from two regional superpowers engaged in escalating military posturing.",
-      "context": "Unannounced surveillance drone entered a disputed demilitarized maritime corridor.",
-      "friction": "State A demands public apologies; State B threatens reciprocal naval mobilization.",
-      "outcome": "Reframe the incident as a weather-induced navigational telemetry drift, allowing both powers to save face while establishing hotline verification.",
+      "canDo": "Can convey complex texts and positions diplomatically, managing ambiguity, redirecting tensions, and de-escalating disputes.",
+      "interlocutor": "Civil aviation authorities and diplomatic attachés.",
+      "context": "An unannounced civilian research flight entered a restricted regional corridor during severe storms.",
+      "friction": "Authority A suspects deliberate unauthorized entry; Authority B points to avionics failure and navigational drift.",
+      "outcome": "Test both accounts against the shared flight and weather data, then propose joint radar verification protocols that both authorities can accept.",
       "timeCondition": "5 minutes mediation.",
-      "scaffold": "\"If we parse the telemetry logs dispassionately, there exists plausible evidence of navigational sensor drift rather than hostile pre-meditation.\", \"By characterizing this as a technical anomaly, both delegations preserve sovereign dignity while instituting bilateral hotlines.\"",
-      "vietnamese": "Hòa giải ngoại giao cấp cao giữa hai cường quốc quân sự sau sự cố xâm phạm không phận, tạo lối thoát giữ thể diện cho cả hai bên."
+      "scaffold": "\"Looking closely at the flight telemetry and meteorological reports, we can test both accounts: does the flight path fit a deliberate entry, or a gradual navigational drift during severe turbulence?\", \"Whichever account the data supports, agreeing joint verification steps allows both civil aviation authorities to maintain protocol while setting up direct communication channels.\"",
+      "vietnamese": "Hòa giải sự cố hàng không dân dụng giữa hai cơ quan quản lý không lưu, đưa ra phương án xử lý dựa trên dữ liệu khí tượng và kỹ thuật bay."
     },
     {
       "title": "Defending an Academic Thesis Against Hostile Examination",
@@ -2845,12 +2845,12 @@
       "mode": "SPOKEN_INTERACTION",
       "domain": "EDUCATIONAL",
       "canDo": "Can formulate ideas and opinions with precision and relate own contribution skilfully to those of other speakers under pressure.",
-      "interlocutor": "Three senior professorial inquisitors during a doctoral viva voce defense.",
-      "context": "Defending a dissertation on neurocomputational models of semantic memory processing.",
-      "friction": "Lead examiner alleges that the model overfits synthetic lexical datasets and lacks biological plausibility.",
-      "outcome": "Cite cross-validated empirical neuroimaging benchmarks, demonstrate boundary conditions, and validate architectural integrity.",
-      "timeCondition": "5 minutes oral defense.",
-      "scaffold": "\"Professor Davis raises a foundational question regarding biological fidelity.\", \"However, the architecture deliberately decouples high-level semantic convergence from localized synaptic plasticity precisely because...\", \"The empirical telemetry clearly demonstrates...\"",
+      "interlocutor": "Three senior professorial examiners during a doctoral viva voce defence.",
+      "context": "Defending a dissertation on computational models of semantic memory processing.",
+      "friction": "Lead examiner argues that the model overfits synthetic datasets and lacks biological validity.",
+      "outcome": "Cite cross-validated empirical neuroimaging benchmarks, demonstrate boundary conditions, and defend architectural validity.",
+      "timeCondition": "5 minutes oral defence.",
+      "scaffold": "\"Professor Davis raises a foundational question regarding biological fidelity.\", \"However, the architecture deliberately separates high-level semantic convergence from localized synaptic plasticity because...\", \"The empirical data demonstrates consistent performance across diverse test sets.\"",
       "vietnamese": "Bảo vệ luận án tiến sĩ trước hội đồng phản biện gay gắt, bảo vệ tính xác thực sinh học của mô hình tính toán thần kinh."
     },
     {
@@ -2862,12 +2862,12 @@
       "domain": "PUBLIC",
       "canDo": "Can produce clear, well-structured legal and policy expositions, varying tone and register to conform to jurisdictional norms.",
       "interlocutor": "Supreme Constitutional Court judges.",
-      "context": "Amicus curiae submission on warrantless extraction of mobile geolocation metadata in criminal investigations.",
-      "friction": "Precedent is fragmented across analog-era search doctrines; must formulate modern digital expectations of privacy.",
-      "outcome": "A 400-word persuasive brief arguing that continuous mosaic tracking constitutes a Fourth Amendment constitutional search.",
+      "context": "Amicus curiae submission on warrantless collection of mobile geolocation metadata in criminal investigations.",
+      "friction": "Precedent is fragmented across analogue-era search doctrines; must formulate modern digital expectations of privacy.",
+      "outcome": "A 400-word persuasive brief arguing that continuous location tracking constitutes a constitutional search.",
       "timeCondition": "15 minutes writing.",
-      "scaffold": "\"May it please the Court: The question presented is whether the pervasive, friction-free interception of geolocation telemetry infringes upon reasonable societal expectations of privacy.\", \"Under the mosaic doctrine, aggregated data paints an intimate portrait of human conscience...\", \"Accordingly, this Court should hold...\"",
-      "vietnamese": "Soạn thảo bản kiến nghị pháp lý (Amicus Brief) 400 từ gửi Tòa án Tối cao bảo vệ quyền riêng tư dữ liệu định vị số."
+      "scaffold": "\"May it please the Court: The question presented is whether the pervasive collection of geolocation records infringes upon reasonable societal expectations of privacy.\", \"Under the mosaic doctrine, aggregated data paints an intimate portrait of daily personal life.\", \"Accordingly, this Court should hold that location tracking warrants judicial authorization.\"",
+      "vietnamese": "Soạn thảo bản kiến nghị pháp lý (Amicus Brief) 400 từ gửi Tòa án Hiến pháp bảo vệ quyền riêng tư dữ liệu định vị số."
     },
     {
       "title": "Managing a Hostile Shareholder Annual General Meeting",
@@ -2877,12 +2877,12 @@
       "mode": "SPOKEN_INTERACTION",
       "domain": "OCCUPATIONAL",
       "canDo": "Can handle difficult or aggressive interlocutors with composure, deploying tact, rhetorical agility, and diplomatic firmness.",
-      "interlocutor": "Activist hedge fund manager demanding immediate divestiture of carbon-intensive assets.",
+      "interlocutor": "Activist hedge fund manager demanding immediate divestiture of capital assets.",
       "context": "Livestreamed annual shareholder gathering with institutional investors and financial press watching.",
-      "friction": "Interlocutor interrupts repeatedly, accusing executive management of greenwashing and fiduciary negligence.",
-      "outcome": "Acknowledge shareholder urgency, refute accusations with auditable carbon-intensity metrics, and maintain meeting decorum.",
+      "friction": "Interlocutor interrupts repeatedly, accusing executive management of inefficiency and inadequate disclosure.",
+      "outcome": "Acknowledge shareholder concerns, refute accusations with audited balance sheet metrics, and maintain meeting decorum.",
       "timeCondition": "4 minutes dialogue.",
-      "scaffold": "\"I appreciate Mr. Vance's passion on this issue; however, characterizing our phased capital allocation as greenwashing misrepresents audited filings.\", \"Allow me to direct the assembly's attention to Table 4, which demonstrates a 38% decarbonization curve over 24 months.\"",
+      "scaffold": "\"I understand Mr. Vance's concern regarding capital deployment; however, characterizing our phased investments as inefficient misrepresents audited filings.\", \"Allow me to direct the assembly's attention to Table 4, which outlines our operating margin improvements over the past 24 months.\"",
       "vietnamese": "Ứng phó với cổ đông hoạt động tại Đại hội đồng cổ đông thường niên, bảo vệ uy tín doanh nghiệp trước cáo buộc thiếu minh bạch."
     },
     {
@@ -2894,11 +2894,11 @@
       "domain": "PERSONAL",
       "canDo": "Can act as an intermediary, explaining irony, cultural subtext, historical allusions, and satirical undertones.",
       "interlocutor": "Global community of 50 remote developers spanning 12 nationalities on Discord.",
-      "context": "A British colleague posted a dry, highly sarcastic satirical meme regarding project delays that offended colleagues from high-context cultures.",
+      "context": "A British colleague posted a dry, sarcastic meme regarding project delays that offended colleagues from high-context cultures.",
       "friction": "Offended members interpreted the post as literal accusations of professional incompetence.",
-      "outcome": "Write an empathetic, clarifying mediation post deconstructing the British humor tradition of self-deprecation and understatement.",
+      "outcome": "Write an empathetic, clarifying mediation post explaining the cultural context of British understatement and self-deprecation.",
       "timeCondition": "4 minutes writing.",
-      "scaffold": "\"To our global team members who felt unsettled by Tom's message: allow me to unpack the cultural mechanics of British ironic understatement.\", \"In this context, exaggerating the disaster is actually a form of self-deprecating coping, not an indictment of our engineers.\", \"Let us establish...\"",
+      "scaffold": "\"To team members who felt unsettled by Tom's message: allow me to unpack the cultural habit of British ironic understatement.\", \"In this context, downplaying the issue is a familiar form of coping humour, rather than criticism of our colleagues.\", \"Moving forward, let us agree on clearer communication norms across our channels.\"",
       "vietnamese": "Hòa giải hiểu lầm văn hóa trên kênh chat toàn cầu, giải thích phong cách châm biếm và tự trào kiểu Anh cho đồng nghiệp đa quốc gia."
     },
     {
@@ -2911,11 +2911,11 @@
       "canDo": "Can write sophisticated institutional frameworks balancing utilitarian scientific advancement with deontological ethical boundaries.",
       "interlocutor": "International Bioethics Oversight Board.",
       "context": "Establishing clinical boundaries for somatic versus germline CRISPR-Cas9 genome editing in human subjects.",
-      "friction": "Differentiating therapeutic eradication of monogenic fatal diseases from elective genetic enhancement.",
-      "outcome": "A 350-word policy framework setting down criteria for proportionality, informed consent, and irreversible transgenerational risk.",
+      "friction": "Differentiating therapeutic treatment of monogenic diseases from elective enhancement.",
+      "outcome": "A 350-word policy framework setting down criteria for proportionality, informed consent, and long-term risk assessment.",
       "timeCondition": "12 minutes writing.",
-      "scaffold": "\"The demarcation between curative intervention and elective phenotypic enhancement constitutes the principal ethical fault line of modern biotechnology.\", \"While somatic therapeutic applications command broad moral consensus, germline modifications introduce transgenerational moral hazards...\", \"We therefore recommend...\"",
-      "vietnamese": "Soạn thảo khung đạo đức y sinh học 350 từ phân định ranh giới giữa trị liệu chỉnh sửa gen soma và can thiệp dòng mầm di truyền."
+      "scaffold": "\"Distinguishing between therapeutic intervention and elective enhancement marks a primary ethical question in modern biotechnology.\", \"While somatic therapeutic applications command broad medical consensus, germline modifications introduce transgenerational risks.\", \"We therefore recommend independent oversight for all clinical protocols.\"",
+      "vietnamese": "Soạn thảo khung đạo đức y sinh học 350 từ phân định ranh giới giữa trị liệu chỉnh sửa gen soma và can thiệp di truyền."
     },
     {
       "title": "Mediating a Multi-Jurisdictional Commercial Franchise Breach",
@@ -2928,170 +2928,170 @@
       "interlocutor": "Master franchisor from Tokyo and regional master franchisee from Singapore.",
       "context": "Allegations of brand dilution through localized menu adaptations in Southeast Asian flagship stores.",
       "friction": "Tokyo demands strict culinary standardization; Singapore asserts local palate necessity for commercial viability.",
-      "outcome": "Craft a tiered \"Glocal\" compliance compromise allowing localized side dishes while preserving sacrosanct signature recipes.",
+      "outcome": "Craft a tiered compromise allowing localized side dishes while preserving signature core recipes.",
       "timeCondition": "5 minutes mediation.",
-      "scaffold": "\"If we dissect Tokyo's non-negotiable interest, it is brand pedigree preservation; whereas Singapore's imperative is immediate market survival.\", \"What if we formalize an 80/20 framework: 80% immutable core signatures, with 20% sanctioned localized accompaniments subject to quarterly culinary vetting?\"",
-      "vietnamese": "Hòa giải xung đột thương hiệu đa quốc gia giữa trụ sở Nhật Bản và đối tác nhượng quyền Singapore bằng chiến lược 'Glocal'."
+      "scaffold": "\"Tokyo's core interest is brand consistency, while Singapore's priority is responding to local customer preferences.\", \"A practical compromise is an 80/20 framework: 80% standardized menu items, with 20% approved local adaptations subject to quarterly review.\"",
+      "vietnamese": "Hòa giải xung đột thương hiệu đa quốc gia giữa trụ sở Nhật Bản và đối tác nhượng quyền Singapore bằng chiến lược kết hợp chuẩn mực và bản địa hóa."
     },
     {
-      "title": "The Forensic Rhetoric of Public Inquest Cross-Examination",
+      "title": "Public Inquest Examination on Institutional Compliance",
       "id": "scen-c2-01",
       "index": 51,
       "cefrLevel": "C2",
       "mode": "SPOKEN_PRODUCTION",
       "domain": "PUBLIC",
       "canDo": "Can produce smoothly flowing, elaborate, persuasive speech, weaving intricate argumentation with effortless stylistic mastery.",
-      "interlocutor": "Judicial Commissioners and national public audience at an inquiry into institutional systemic corruption.",
-      "context": "Delivering closing arguments as Lead Counsel for civil society victims following a 3-month public inquiry.",
-      "friction": "Opposing defense argued that systemic failures were merely anomalous administrative oversights.",
-      "outcome": "A 7-minute devastating rhetorical synthesis demonstrating deliberate institutional malfeasance, apathy, and systemic cover-up.",
+      "interlocutor": "Judicial Commissioners and public inquiry panel reviewing institutional compliance.",
+      "context": "Delivering closing arguments as Lead Counsel reviewing administrative records following a three-month inquiry.",
+      "friction": "Defense counsel argued that operational failures were isolated administrative oversights.",
+      "outcome": "A structured 7-minute synthesis demonstrating persistent organizational non-compliance and documentation gaps.",
       "timeCondition": "7 minutes speech; 5 minutes prep.",
-      "scaffold": "\"To dismiss three years of systematic administrative falsification as mere bureaucratic inadvertence is to elevate cynical apathy into a legal doctrine.\", \"The documentary record does not merely suggest complacency; it screams complicity.\", \"Justice in this forum demands that we dismantle the fiction of innocent ignorance.\"",
-      "vietnamese": "Diễn thuyết tranh biện pháp lý đỉnh cao 7 phút tại phiên điều trần công khai, lật tẩy lập luận ngụy biện về sự cố hành chính vô hại."
+      "scaffold": "\"Characterizing three years of recurring accounting discrepancies as simple oversight does not withstand scrutiny.\", \"The audit trail shows repeated instances where internal compliance alerts were overridden.\", \"A credible finding must address these documented management decisions directly.\"",
+      "vietnamese": "Diễn thuyết tranh biện pháp lý tại phiên điều trần, làm rõ các bằng chứng kiểm toán độc lập và trách nhiệm giải trình của ban quản lý."
     },
     {
-      "title": "Diplomatic Treaty Drafting Under Multilateral Sanction Deadlocks",
+      "title": "International Grain Transit Accord Mediation",
       "id": "scen-c2-02",
       "index": 52,
       "cefrLevel": "C2",
       "mode": "MEDIATION",
       "domain": "PUBLIC",
       "canDo": "Can mediate naturally in any role, appreciating fine shades of meaning, register shifts, and implicit sociolinguistic nuances.",
-      "interlocutor": "Foreign ministers and plenipotentiary ambassadors of three warring nation-states.",
-      "context": "Drafting an emergency maritime grain transit accord amid active armed conflict in international straits.",
-      "friction": "Nation A refuses to sign any document mentioning Nation B's maritime sovereignty; Nation B refuses inspection by third parties.",
-      "outcome": "Engineer a parallel bilateral tripartite communique with constructive ambiguity, securing de facto naval demilitarization.",
+      "interlocutor": "Envoys and ministerial representatives navigating shipping corridor disputes.",
+      "context": "Drafting an emergency maritime grain transit accord to ensure humanitarian shipping in contested waters.",
+      "friction": "Parties disagree on port inspection authority and sovereignty wording.",
+      "outcome": "Draft a parallel multilateral communique using neutral administrative verification to secure unhindered grain passage.",
       "timeCondition": "6 minutes mediation.",
-      "scaffold": "\"Diplomatic history demonstrates that when sovereignty declarations paralyze humanitarian passage, constructive ambiguity becomes an instrument of survival.\", \"By routing the legal instruments through simultaneous, independent depositories with the United Nations Secretary-General, neither sovereign concedes legitimacy while the physical grain moves unhindered.\"",
-      "vietnamese": "Hòa giải hiệp ước vận tải ngũ cốc giữa ba quốc gia xung đột, sử dụng kỹ thuật 'mơ hồ mang tính xây dựng' để vượt qua bế tắc chủ quyền."
+      "scaffold": "\"When formal sovereignty declarations stall humanitarian agreements, practical compromise often relies on neutral administrative mechanisms.\", \"Depositing parallel agreements with a neutral multilateral body allows each party to maintain its legal standing while essential shipments proceed without delay.\"",
+      "vietnamese": "Hòa giải hiệp ước vận tải quốc tế, sử dụng cơ chế bảo trợ độc lập để duy trì dòng hàng hóa thiết yếu qua các vùng tranh chấp."
     },
     {
-      "title": "Authoring an Authoritative Philosophy of Language Treatise",
+      "title": "Research Essay on Language Models and Semantic Understanding",
       "id": "scen-c2-03",
       "index": 53,
       "cefrLevel": "C2",
       "mode": "WRITTEN_PRODUCTION",
       "domain": "EDUCATIONAL",
       "canDo": "Can write smoothly flowing complex texts in an assured, authoritative personal style, with flawless structural command.",
-      "interlocutor": "Global philosophical academia and readers of prestigious university press monographs.",
-      "context": "An essay deconstructing Wittgenstein's Tractatus in light of modern deep learning transformer architectures.",
-      "friction": "Demonstrating that statistical probability distributions do not constitute semantic meaning or intentionality.",
-      "outcome": "A 600-word publishable essay deconstructing statistical token prediction versus phenomenological human understanding.",
+      "interlocutor": "Academic journal editorial board and computational linguistics researchers.",
+      "context": "An essay evaluating neural language models against theoretical frameworks of semantic grounding.",
+      "friction": "Demonstrating that statistical word association does not by itself establish intentional semantic meaning.",
+      "outcome": "A 600-word publishable essay evaluating distributional semantics versus grounded human understanding.",
       "timeCondition": "20 minutes writing.",
-      "scaffold": "\"The tempting conflation of syntactic ubiquity with semantic intentionality represents the perennial category error of contemporary computational linguistics.\", \"A neural architecture that predicts the subsequent lexical token with astonishing mathematical fidelity remains, at its metaphysical core, entirely blind to the ontological weight of the concepts it juggles.\", \"Understanding is not an emergent byproduct of vector convergence; it is an embodied encounter with reality.\"",
-      "vietnamese": "Soạn thảo tiểu luận triết học ngôn ngữ 600 từ phân tích sự khác biệt bản thể luận giữa mô hình ngôn ngữ lớn và ý niệm tư duy con người."
+      "scaffold": "\"Conflating syntactic fluency with semantic understanding remains a central debate in contemporary computational linguistics.\", \"While statistical models predict text patterns with high accuracy, pattern recognition differs fundamentally from grounded comprehension.\", \"Real comprehension requires situational awareness and communicative intent, which go beyond next-token probability distributions.\"",
+      "vietnamese": "Soạn thảo bài nghiên cứu học thuật phân tích sự khác biệt giữa năng lực xử lý ngôn ngữ thống kê và khả năng tư duy ngữ nghĩa thực thụ."
     },
     {
-      "title": "Defending Corporate Governance Integrity Against Predatory Takeovers",
+      "title": "Corporate Restructuring Defense in an Institutional Investor Forum",
       "id": "scen-c2-04",
       "index": 54,
       "cefrLevel": "C2",
       "mode": "SPOKEN_INTERACTION",
       "domain": "OCCUPATIONAL",
-      "canDo": "Can hold own in complex formal discussion at no disadvantage; persuasive; handles hostile, duplicitous questioning effortlessly.",
-      "interlocutor": "Ruthless hostile corporate raider and consortium of institutional arbitrageurs on live television.",
-      "context": "Defending a 100-year-old engineering firm against asset-stripping liquidation disguised as \"shareholder value creation\".",
-      "friction": "The raider deploys aggressive personal attacks, accusatory interruptions, and misleading short-term financial charts.",
-      "outcome": "Dismantle the raider's track record of post-acquisition bankruptcies, articulate long-term stakeholder capitalism, rally institutional holders.",
+      "canDo": "Can hold own in complex formal discussion at no disadvantage; persuasive; handles challenging questions effortlessly.",
+      "interlocutor": "Institutional investor consortium and financial media representatives.",
+      "context": "Defending a manufacturing enterprise against a breakup proposal in favour of long-term capital reinvestment.",
+      "friction": "Opponents advocate short-term share buybacks and immediate divestment of capital-intensive divisions.",
+      "outcome": "Present audited research productivity, customer retention data, and long-term operating return projections.",
       "timeCondition": "6 minutes interaction.",
-      "scaffold": "\"Mr. Sterling dresses predatory liquidation in the respectable garb of 'capital efficiency', but history remembers his prior acquisitions by their shuttered factories and plundered pension funds.\", \"True enterprise value is not measured by the quarterly spike you extract before dumping shares; it is built on patent integrity, labor mastery, and customer trust.\"",
-      "vietnamese": "Tranh biện trực tiếp 6 phút trên sóng truyền hình đập tan âm mưu thâu tóm thù địch và bán tháo tài sản của quỹ đầu cơ đầu sỏ."
+      "scaffold": "\"Characterizing this break-up as capital efficiency overlooks the operational record of past break-ups.\", \"Long-term shareholder value depends on workforce retention, research capability, and product reliability, rather than short-term balance sheet restructuring.\"",
+      "vietnamese": "Tranh luận bảo vệ chiến lược phát triển dài hạn của doanh nghiệp trước đề xuất chia tách doanh nghiệp và thoái vốn ngắn hạn."
     },
     {
-      "title": "Mediating a Tragic Clinical Bioethics End-of-Life Dispute",
+      "title": "Clinical Bioethics Consultation on Advance Care Directives",
       "id": "scen-c2-05",
       "index": 55,
       "cefrLevel": "C2",
       "mode": "MEDIATION",
       "domain": "PUBLIC",
-      "canDo": "Can navigate deeply sensitive, emotionally harrowing human crises, deploying infinite empathy, ethical nuance, and legal rigor.",
-      "interlocutor": "Grieving divided family members and the clinical intensive care physician team.",
-      "context": "Patient with catastrophic anoxic brain damage; living will is contested between deeply religious parents and designated secular spouse.",
-      "friction": "Parents threaten criminal murder complaints if ventilation is withdrawn; spouse insists on honoring patient's explicit verbal wishes.",
-      "outcome": "Guide both parties from adversarial legal threats to a sacred, shared recognition of the patient's dignity and peaceful release.",
+      "canDo": "Can navigate deeply sensitive human situations, deploying empathy, ethical clarity, and legal rigour.",
+      "interlocutor": "Family representatives and the intensive care clinical ethics committee.",
+      "context": "Patient with severe anoxic brain injury whose advance care directive is interpreted differently by family members.",
+      "friction": "Disagreement over the interpretation of documented patient preferences regarding mechanical life support.",
+      "outcome": "Guide participants toward consensus by reviewing the patient's explicit advance directive and clinical prognosis calmly.",
       "timeCondition": "6 minutes mediation.",
-      "scaffold": "\"In this room, grief has taken the form of defensive conflict, but what unites every person here is a fierce, boundless love for David.\", \"Our task today is not to win an argument over medical technology, but to listen together to what David himself asked of us when he was whole.\", \"Let us create a space where his release is accompanied by love rather than litigation.\"",
-      "vietnamese": "Điều giải ca đạo đức sinh học lâm sàng rút ống thở giữa gia đình tôn giáo và người bạn đời, chuyển hóa xung đột thành sự bình an cho bệnh nhân."
+      "scaffold": "\"Every member of this family wants what is best for David, even though you hold different views on medical intervention.\", \"Our priority is to clarify what David communicated in his advance care directive and find common ground on compassionate care.\", \"We can honour his personal wishes while ensuring every family member feels heard throughout this transition.\"",
+      "vietnamese": "Tham vấn đạo đức y khoa trong trường hợp chăm sóc cuối đời, hỗ trợ gia đình đạt được đồng thuận dựa trên chỉ dẫn chăm sóc trước và ý nguyện của bệnh nhân."
     },
     {
-      "title": "Epistemic Critique of Algorithmic Deliberation in Democratic Systems",
+      "title": "Epistemic Analysis of Digital Information Ecosystems",
       "id": "scen-c2-06",
       "index": 56,
       "cefrLevel": "C2",
       "mode": "WRITTEN_PRODUCTION",
       "domain": "PUBLIC",
-      "canDo": "Can produce complex, stylistically sophisticated political essays, integrating irony, metaphor, and rigorous forensic theory.",
-      "interlocutor": "Readers of an intellectual quarterly review (The Atlantic, Foreign Affairs).",
-      "context": "An essay exploring how predictive recommendation algorithms erode the epistemic commons required for representative democracy.",
-      "friction": "Avoiding simplistic anti-technology luddism while diagnosing profound civilizational hazards.",
-      "outcome": "A 550-word masterwork on algorithmic echo chambers, affective polarization, and the atrophy of civic empathy.",
+      "canDo": "Can produce complex, stylistically sophisticated political and sociological essays.",
+      "interlocutor": "Readers of an intellectual review publication.",
+      "context": "An essay exploring how engagement-optimized recommendation systems affect civic consensus in democratic societies.",
+      "friction": "Avoiding overly broad generalizations while diagnosing substantive institutional challenges.",
+      "outcome": "A 550-word analytical essay on recommendation algorithms, selective exposure, and public deliberation.",
       "timeCondition": "18 minutes writing.",
-      "scaffold": "\"Democracy was never engineered to withstand an epistemic architecture designed to monetize resentment.\", \"When the digital commons is partitioned into billions of bespoke reality corridors, the very concept of shared factual citizenship evaporates.\", \"What we witness today is not ideological disagreement, but reality fragmentation—a condition in which the shared civic world is liquidated in favor of addictive, solipsistic outrage loops.\"",
-      "vietnamese": "Viết bài xã luận học thuật 550 từ mổ xẻ hiện tượng thuật toán mạng xã hội làm xói mòn nền tảng nhận thức chung của nền dân chủ đại diện."
+      "scaffold": "\"Representative democracy presupposes a shared evidentiary commons, without which deliberation degenerates into the parallel monologues of fragmented publics.\", \"When engagement-optimized curation systematically privileges salience over accuracy, citizens come to inhabit divergent accounts of the same events, eroding the factual baseline on which deliberation depends.\", \"The central policy question is whether public oversight of recommender systems can be designed to safeguard free expression rather than to circumscribe it.\"",
+      "vietnamese": "Viết bài phân tích chính sách công về tác động của thuật toán gợi ý tin tức đối với nhận thức xã hội và sự đồng thuận dân chủ."
     },
     {
-      "title": "Negotiating an Unprecedented International Sovereign Debt Restructuring",
+      "title": "Sovereign Climate Debt Restructuring Negotiations",
       "id": "scen-c2-07",
       "index": 57,
       "cefrLevel": "C2",
       "mode": "SPOKEN_INTERACTION",
       "domain": "OCCUPATIONAL",
-      "canDo": "Can effortlessly negotiate complex macroeconomic treaties, restructuring debt haircuts, bond maturities, and IMF conditionality.",
-      "interlocutor": "Syndicate of international private bondholders, IMF Managing Director, and Paris Club sovereign creditors.",
-      "context": "A developing island nation facing catastrophic climate debt default following Category 5 cyclonic devastation.",
-      "friction": "Commercial bondholders demand 90 cents on the dollar; government reserves are completely exhausted.",
-      "outcome": "Negotiate a revolutionary \"Climate-Resilient Debt Clause\" (CRDC) freezing debt servicing for 36 months alongside a 35% principal haircut.",
+      "canDo": "Can negotiate complex macroeconomic agreements, addressing repayment terms, maturities, and multilateral facilities.",
+      "interlocutor": "Sovereign debt committee, multilateral development banks, and commercial bondholders.",
+      "context": "A developing coastal state negotiating debt terms following major typhoon damage to national infrastructure.",
+      "friction": "Commercial bondholders request full coupon payments while government revenue is diverted to emergency rebuilding.",
+      "outcome": "Negotiate climate-resilient pause clauses and extended amortization schedules tied to reconstruction milestones.",
       "timeCondition": "6 minutes negotiation.",
-      "scaffold": "\"To extract debt service from a nation whose ports lie submerged beneath storm surges is not merely fiscal cruelty; it is financial fantasy.\", \"If private creditors insist on immediate coupon redemption, the sovereign will formally default tomorrow, leaving your balance sheets with zero recovery.\", \"Accept the 35% principal reduction and 3-year moratorium, and we preserve a solvent, trading partner.\"",
-      "vietnamese": "Đàm phán tái cơ cấu nợ công quốc tế cho quốc đảo bị bão tàn phá, đưa điều khoản tạm hoãn trả nợ thảm họa khí hậu (CRDC) vào thỏa thuận."
+      "scaffold": "\"Demanding immediate full debt service from an economy rebuilding after natural disaster undermines both humanitarian recovery and long-term repayment capacity.\", \"A structured debt pause tied to reconstruction targets gives the country fiscal breathing room while protecting creditor value over time.\", \"Adopting climate-contingent debt clauses offers a predictable, equitable path toward sovereign solvency.\"",
+      "vietnamese": "Đàm phán tái cơ cấu nợ công quốc tế cho quốc gia chịu thiên tai, đưa điều khoản tạm hoãn trả nợ gắn với lộ trình phục hồi kinh tế."
     },
     {
-      "title": "Deconstructing Colonial Historiography in a Landmark Museum Provenance Dispute",
+      "title": "Museum Provenance Consultation on Cultural Artifacts",
       "id": "scen-c2-08",
       "index": 58,
       "cefrLevel": "C2",
       "mode": "MEDIATION",
       "domain": "PUBLIC",
-      "canDo": "Can mediate across entrenched historical, cultural, and post-colonial trauma, guiding institutions to restorative justice.",
-      "interlocutor": "Board of Trustees of an imperial national museum and ancestral representatives of an indigenous African kingdom.",
-      "context": "Repatriation of sacred ceremonial bronzes looted during an 1897 punitive military expedition.",
-      "friction": "Museum argues the bronzes are \"universal heritage\" better preserved in temperature-controlled metropolitan galleries.",
-      "outcome": "Reframe the dispute from property ownership to cultural healing, finalizing full unconditioned restitution with mutual research loans.",
+      "canDo": "Can mediate across differing historical perspectives, guiding cultural institutions toward constructive agreements.",
+      "interlocutor": "Museum Board of Trustees and international community delegation.",
+      "context": "Reviewing provenance documentation for ceremonial historical objects acquired during nineteenth-century military expeditions.",
+      "friction": "Differing interpretations of institutional custodianship versus source community restitution claims.",
+      "outcome": "Facilitate an agreement that weighs the institution's custodianship against the community's restitution claim, for example by settling legal title alongside long-term research and loan partnerships.",
       "timeCondition": "5 minutes mediation.",
-      "scaffold": "\"The narrative of 'universal custodianship' cannot be separated from the bayonets that severed these sacred artifacts from their living shrines.\", \"True preservation is not about climate-controlled display cases; it is about spiritual continuity and cultural dignity.\", \"By returning legal title unequivocally to the kingdom, the museum does not lose history—it finally enters moral alignment with it.\"",
-      "vietnamese": "Hòa giải tranh chấp cổ vật thuộc địa giữa bảo tàng hoàng gia và đại diện bộ tộc bản địa, hoàn trả vĩnh viễn các bảo vật tâm linh bị cướp bóc."
+      "scaffold": "\"Examining the documented provenance of these objects requires acknowledging the colonial context in which they were acquired.\", \"Long-term cultural partnerships work best when legal title is settled in a way both sides can accept, opening the door to reciprocal research loans and joint exhibitions.\", \"Both the museum's duty of custodianship and the community's restitution claim deserve a fair hearing, and a lasting agreement should address each of them openly.\"",
+      "vietnamese": "Hòa giải tranh chấp nguồn gốc hiện vật bảo tàng, xây dựng thỏa thuận cân bằng giữa vai trò lưu giữ của bảo tàng và yêu cầu hoàn trả của cộng đồng, kết hợp hợp tác nghiên cứu quốc tế."
     },
     {
-      "title": "Composing an Authoritative Legal Dissent on Surveillance Capitalism",
+      "title": "Constitutional Analysis of Public Surveillance Technologies",
       "id": "scen-c2-09",
       "index": 59,
       "cefrLevel": "C2",
       "mode": "WRITTEN_PRODUCTION",
       "domain": "PUBLIC",
-      "canDo": "Can draft monumental judicial dissents of enduring historical and jurisprudential resonance, utilizing masterful prose cadence.",
-      "interlocutor": "Future legal generations, constitutional scholars, and the democratic public.",
-      "context": "A dissenting opinion in a 5-4 ruling upholding corporate ownership of biometric behavioral telemetry extracted from public spaces.",
-      "friction": "Majority opinion relied on outdated property analogies; dissent must establish privacy as an inalienable human dignity right.",
-      "outcome": "A 500-word soaring judicial dissent warning of the totalitarian peril of automated biometric commodification.",
+      "canDo": "Can draft rigorous legal dissents and policy commentaries of clear jurisprudential weight.",
+      "interlocutor": "Legal scholars, appellate judiciary, and civil liberties analysts.",
+      "context": "A commentary on the constitutional implications of commercial automated biometric tracking in public spaces.",
+      "friction": "Balancing traditional public-space observation doctrines with continuous automated data aggregation.",
+      "outcome": "A 500-word analysis examining whether automated biometric monitoring constitutes an unreasonable search.",
       "timeCondition": "18 minutes writing.",
-      "scaffold": "\"Today, the majority of this Court surrenders the sacred redoubt of human personality to the ledger of behavioral commerce.\", \"When every heartbeat, every glance, and every involuntary neural tremor is harvested and commodified without consent, freedom ceases to be a living condition and becomes an algorithmic illusion.\", \"I dissent from this tragic abdication of constitutional duty.\"",
-      "vietnamese": "Soạn thảo bản ý kiến bất đồng tư pháp (Judicial Dissent) 500 từ cảnh báo nguy cơ độc tài khi thương mại hóa dữ liệu sinh trắc học công cộng."
+      "scaffold": "\"Permitting the continuous collection of personal behavioural data in public spaces alters everyday privacy in fundamental ways.\", \"When personal movements and physical traits are catalogued without meaningful consent, individuals lose the ability to navigate public life freely.\", \"Constitutional protections against unreasonable intrusion should adapt to technological tools that track everyday conduct across public domains.\"",
+      "vietnamese": "Soạn thảo luận điểm pháp lý về bảo vệ quyền riêng tư số, phân tích lý do hiến pháp cần điều chỉnh trước các công nghệ giám sát công cộng."
     },
     {
-      "title": "Keynote Address on the Restoration of Humanist Literature in the Age of Synthetic Text",
+      "title": "Keynote Address on Human Authorship in Modern Literature",
       "id": "scen-c2-10",
       "index": 60,
       "cefrLevel": "C2",
       "mode": "SPOKEN_PRODUCTION",
       "domain": "EDUCATIONAL",
-      "canDo": "Can speak with extraordinary rhetorical power, syntactic cadence, emotional resonance, and memorable philosophical insight.",
-      "interlocutor": "1,000 international writers, scholars, and critics at the PEN International World Voices Congress.",
-      "context": "Inaugural address on why generative statistical text engines can never replace authentic mortal literature.",
-      "friction": "Widespread cultural despair and anxiety over the apparent replacement of human literary authorship by machines.",
-      "outcome": "An unforgettable 7-minute address affirming that great literature derives its power from mortal suffering, vulnerability, and love.",
+      "canDo": "Can deliver a persuasive, articulate address with clear rhetorical structure and memorable insights.",
+      "interlocutor": "Writers, translators, and literature educators at an international literary symposium.",
+      "context": "Opening address on the continued value of lived human experience in contemporary writing.",
+      "friction": "Concerns that automated text generators diminish public appreciation for original literary work.",
+      "outcome": "A thoughtful 7-minute address highlighting the irreplaceable role of personal voice and lived perspective in literature.",
       "timeCondition": "7 minutes speech; 5 minutes prep.",
-      "scaffold": "\"A machine can synthesize every permutation of grief, but it can never mourn.\", \"It can assemble the vocabulary of devotion, but it can never tremble before the mortal frailty of another human being.\", \"Literature is not an exercise in syntax arrangement; it is the bloody, luminous testimony of a soul that knows it must die.\", \"As long as human beings love, bleed, and hope in the shadow of mortality, the human voice remains sacred and irreplaceable.\"",
-      "vietnamese": "Diễn thuyết khai mạc đại hội văn bút quốc tế 7 phút khẳng định giá trị trường tồn bất khả thay thế của văn học nhân bản trước làn sóng văn bản nhân tạo."
+      "scaffold": "\"Literature endures because it is the one medium in which lived experience, with all its doubt, tenderness, and fallibility, is rendered legible to strangers.\", \"Automated text generation can replicate the surface of a literary style, but it cannot supply the personal stakes, the sense of something risked, from which authentic storytelling derives its urgency.\", \"Writers will continue to matter precisely because readers do not merely want fluent sentences; they seek assurance that another consciousness stands behind them.\"",
+      "vietnamese": "Thuyết trình tại hội thảo văn học về giá trị nguyên bản của sáng tác văn chương trước sự phát triển của các công cụ sinh văn bản tự động."
     }
   ],
   "communicativeScenarios": [
@@ -3104,8 +3104,8 @@
       "domain": "PUBLIC",
       "canDo": "Can ask and answer simple questions about personal details and immediate transactional needs in a structured setting.",
       "interlocutor": "Hotel receptionist (polite, speaks slowly and clearly).",
-      "context": "Arriving at an international hostel after a long flight; need to confirm booking and request Wi-Fi credentials.",
-      "friction": "The booking name has a slight spelling typo in the hostel reservation database.",
+      "context": "Arriving at an international hotel after a long flight; need to confirm booking and request Wi-Fi credentials.",
+      "friction": "The booking name has a slight spelling typo in the hotel reservation database.",
       "outcome": "Spell surname aloud, confirm 3-night stay, receive room key card and written Wi-Fi password.",
       "timeCondition": "2 minutes interaction; 30s preparation.",
       "scaffold": "\"Hello, I have a reservation under...\", \"My last name is spelled...\", \"Could I have the Wi-Fi code, please?\"",
@@ -3124,7 +3124,7 @@
       "friction": "Dairy milk is unavailable; must choose an alternative (oat or soy) and pay with contactless card.",
       "outcome": "Successfully order one coffee with plant-based milk and one pastry; confirm total price.",
       "timeCondition": "90 seconds interaction.",
-      "scaffold": "\"Could I have a black coffee and a croissant?\", \"Do you have oat milk?\", \"Can I pay by card?\"",
+      "scaffold": "\"Could I have a coffee with oat milk and a croissant?\", \"Do you have oat milk?\", \"Can I pay by card?\"",
       "vietnamese": "Gọi đồ ăn sáng tại ga tàu hỏa, xử lý tình huống hết sữa bò và thanh toán bằng thẻ chạm."
     },
     {
@@ -3152,7 +3152,7 @@
       "domain": "PUBLIC",
       "canDo": "Can ask for simple directions from point A to point B using basic interrogative phrases.",
       "interlocutor": "Local pedestrian on the street.",
-      "context": "Exiting a shopping center and needing the nearest metro entrance to avoid missing an appointment.",
+      "context": "Exiting a shopping centre and needing the nearest metro entrance to avoid missing an appointment.",
       "friction": "The main street is under construction, requiring a simple detour.",
       "outcome": "Understand directional cues (turn left, go straight, next to the pharmacy) and confirm arrival point.",
       "timeCondition": "90 seconds interaction.",
@@ -3167,8 +3167,8 @@
       "mode": "WRITTEN_INTERACTION",
       "domain": "PERSONAL",
       "canDo": "Can fill in forms with personal details (name, date of birth, nationality, address, emergency contact).",
-      "interlocutor": "Community sports center front desk officer.",
-      "context": "Signing up for a 30-day trial fitness pass at a local recreation center.",
+      "interlocutor": "Community sports centre front desk officer.",
+      "context": "Signing up for a 30-day trial fitness pass at a local recreation centre.",
       "friction": "Form requires an international phone prefix and local residential address formatting.",
       "outcome": "Correctly completed 6-field registration sheet with zero orthographic errors.",
       "timeCondition": "3 minutes writing.",
@@ -3188,7 +3188,7 @@
       "friction": "Character limit of 40 words per post.",
       "outcome": "A concise 3-sentence introduction covering name, current city, and reason for taking the course.",
       "timeCondition": "2 minutes writing.",
-      "scaffold": "\"Hello everyone! My name is... I live in... I am learning English because...\"",
+      "scaffold": "\"Hello everyone! My name is... I live in... I am taking this course because...\"",
       "vietnamese": "Viết đoạn giới thiệu bản thân ngắn gọn 3 câu trong diễn đàn lớp học trực tuyến giới hạn 40 từ."
     },
     {
@@ -3247,13 +3247,13 @@
       "mode": "SPOKEN_INTERACTION",
       "domain": "PUBLIC",
       "canDo": "Can state their name and confirm dates and times for routine appointments.",
-      "interlocutor": "Medical clinic receptionist.",
+      "interlocutor": "Dental clinic receptionist.",
       "context": "Routine telephone confirmation of a dentist consultation for tomorrow afternoon.",
-      "friction": "The proposed slot conflicts with work; must negotiate a slot 30 minutes later.",
-      "outcome": "Finalize rescheduled appointment at 4:30 PM and confirm doctor's room number.",
+      "friction": "The time offered is too early because of work; must ask for a later time.",
+      "outcome": "Agree on a later appointment at 4:30 PM and confirm the room number.",
       "timeCondition": "90 seconds call.",
       "scaffold": "\"My name is... I have an appointment tomorrow.\", \"Is 4:30 PM possible?\", \"Thank you, see you tomorrow.\"",
-      "vietnamese": "Gọi điện thoại xác nhận và dời lịch hẹn khám răng muộn hơn 30 phút để phù hợp lịch làm việc."
+      "vietnamese": "Gọi điện thoại xác nhận và dời lịch hẹn khám răng sang giờ muộn hơn để phù hợp lịch làm việc."
     },
     {
       "title": "Returning a Defective Electronic Charger",
@@ -3301,7 +3301,7 @@
       "outcome": "60-word email stating date of absence, reason, attached doctor's certificate, and asking for makeup date.",
       "timeCondition": "4 minutes writing.",
       "scaffold": "\"Dear Professor Smith, I am writing to apologize for missing...\", \"I was ill with flu...\", \"I attach my medical note.\"",
-      "vietnamese": "Viết email 60 từ xin phép vắng mặt buổi thực hành vì sốt xuất huyết, đính kèm giấy khám và xin lịch bù."
+      "vietnamese": "Viết email 60 từ xin phép vắng mặt buổi thực hành vì cúm nặng, đính kèm giấy khám và xin lịch bù."
     },
     {
       "title": "Describing Last Weekend's Hiking Incident",
@@ -3328,7 +3328,7 @@
       "domain": "PUBLIC",
       "canDo": "Can make travel arrangements, book tickets, and inquire about departure times and luggage allowances.",
       "interlocutor": "Railway booking office clerk.",
-      "context": "Planning an overnight train journey for three colleagues traveling to a regional seminar.",
+      "context": "Planning an overnight train journey for three colleagues travelling to a regional seminar.",
       "friction": "Upper berths are sold out; only lower berths with extra surcharge remain.",
       "outcome": "Negotiate three adjacent lower berths, confirm departure platform, obtain printed itinerary.",
       "timeCondition": "2 minutes interaction.",
@@ -3348,7 +3348,7 @@
       "friction": "Event depends on weather; must specify alternative rainy-day schedule.",
       "outcome": "A 70-word clear hallway notice outlining date, meeting spot, items to bring, and backup plan.",
       "timeCondition": "4 minutes writing.",
-      "scaffold": "\"Dear Neighbors, Please join our building clean-up day this Saturday at 9 AM.\", \"If it rains, we will meet on Sunday.\"",
+      "scaffold": "\"Dear Neighbours, Please join our building clean-up day this Saturday at 9 AM.\", \"If it rains, we will meet on Sunday.\"",
       "vietnamese": "Viết thông báo 70 từ dán sảnh chung cư kêu gọi dọn dẹp khuôn viên và nêu phương án dự phòng khi mưa."
     },
     {
@@ -3408,7 +3408,7 @@
       "domain": "PUBLIC",
       "canDo": "Can write simple messages stating a problem, its impact, and requesting management action.",
       "interlocutor": "Apartment building property manager.",
-      "context": "Upstairs neighbor conducting loud construction work during midnight hours for three consecutive nights.",
+      "context": "Upstairs neighbour conducting loud construction work during midnight hours for three consecutive nights.",
       "friction": "Need to remain polite and objective while making the urgency clear.",
       "outcome": "An 80-word email documenting dates, hours of disruption, and requesting enforcement of building quiet hours.",
       "timeCondition": "5 minutes writing.",
@@ -3424,11 +3424,11 @@
       "domain": "OCCUPATIONAL",
       "canDo": "Can give brief reasons and explanations for opinions, plans, and actions on familiar work-related topics.",
       "interlocutor": "Green Office Committee members during monthly meeting.",
-      "context": "Proposing a pilot organic waste collection program in the company kitchen.",
-      "friction": "Facilities team worries about odor and fruit flies; must propose closed-lid sealed bins.",
+      "context": "Proposing a pilot organic waste collection programme in the company kitchen.",
+      "friction": "Facilities team worries about odour and fruit flies; must propose closed-lid sealed bins.",
       "outcome": "3-minute structured pitch outlining cost, environmental benefit, and practical pest prevention.",
       "timeCondition": "3 minutes speech; 2 minutes prep.",
-      "scaffold": "\"The purpose of this proposal is to...\", \"One major advantage is...\", \"To address concerns about odor, we can...\"",
+      "scaffold": "\"The purpose of this proposal is to...\", \"One major advantage is...\", \"To address concerns about odour, we can...\"",
       "vietnamese": "Thuyết trình 3 phút đề xuất dự án phân loại rác hữu cơ tại văn phòng, giải quyết quan ngại về mùi hôi."
     },
     {
@@ -3438,13 +3438,13 @@
       "cefrLevel": "B1",
       "mode": "SPOKEN_INTERACTION",
       "domain": "PUBLIC",
-      "canDo": "Can deal with most situations likely to arise whilst traveling, including unexpected delays, rerouting, and hotel vouchers.",
+      "canDo": "Can deal with most situations likely to arise whilst travelling, including unexpected delays, rerouting, and hotel vouchers.",
       "interlocutor": "Airline customer service agent at crowded transit hub.",
       "context": "Connecting flight cancelled due to mechanical failure; next flight is 14 hours away.",
       "friction": "Agent offers airport lounge voucher; passenger needs overnight hotel room and meal allowance.",
       "outcome": "Politely assert airline passenger rights, secure guaranteed hotel accommodation, transportation voucher, and boarding pass.",
       "timeCondition": "3 minutes interaction.",
-      "scaffold": "\"Under airline regulations, because this is an overnight delay, am I entitled to hotel accommodation?\", \"Could you verify seats?\"",
+      "scaffold": "\"My flight was cancelled. Can I get a hotel for tonight, please?\", \"Are there seats on the next flight?\"",
       "vietnamese": "Thương lượng quyền lợi khi bị hủy chuyến bay chuyển tiếp qua đêm (khách sạn, xe đưa đón, phiếu ăn uống)."
     },
     {
@@ -3489,11 +3489,11 @@
       "canDo": "Can relay the main points of clear, factual texts on topics of general interest to peers who have not read the source.",
       "interlocutor": "Three university study group peers.",
       "context": "Summarizing a 600-word report on global electric vehicle battery recycling advances.",
-      "friction": "One peer is skeptical about commercial viability; must highlight cost data from the text.",
+      "friction": "One peer is sceptical about commercial viability; must highlight cost data from the text.",
       "outcome": "A 2-minute oral summary capturing the thesis, two supporting innovations, and market forecast.",
       "timeCondition": "2 minutes summary.",
       "scaffold": "\"The article mainly discusses...\", \"According to the researchers, the key breakthrough is...\", \"In conclusion, they predict...\"",
-      "vietnamese": "Tóm tắt bài báo khoa học 600 từ về tái chế pin xe điện cho nhóm học tập, làm rõ luận điểm tính khả thi kinh tế."
+      "vietnamese": "Tóm tắt bài báo/báo cáo 600 từ về tái chế pin xe điện cho nhóm học tập, làm rõ luận điểm tính khả thi kinh tế."
     },
     {
       "title": "Formal Inquiry Email Regarding Internship Criteria",
@@ -3521,7 +3521,7 @@
       "canDo": "Can describe a concrete past problem, actions taken, and the resolution using the STAR framework.",
       "interlocutor": "Senior HR interviewer for a mid-level project coordinator role.",
       "context": "Answering the classic behavioural question: \"Tell me about a time you had a disagreement with a team member.\"",
-      "friction": "Disagreement centered on workload allocation; required objective metric re-evaluation.",
+      "friction": "Disagreement centred on workload allocation; required objective metric re-evaluation.",
       "outcome": "A structured 2.5-minute response articulating Situation, Task, Action, and positive Result.",
       "timeCondition": "2.5 minutes speech.",
       "scaffold": "\"In my previous role, the situation was...\", \"My responsibility was to...\", \"To resolve this, I took the action of...\", \"As a result...\"",
@@ -3568,7 +3568,7 @@
       "domain": "PUBLIC",
       "canDo": "Can write short essays developing an argument with supporting reasons, simple pros and cons, and a conclusion.",
       "interlocutor": "University English academic writing examiner.",
-      "context": "Standard B1 argumentative essay topic: \"Should private vehicles be banned from historical city centers?\"",
+      "context": "Standard B1 argumentative essay topic: \"Should private vehicles be banned from historical city centres?\"",
       "friction": "Must balance environmental benefits against economic impact on local shopkeepers.",
       "outcome": "A 180-word 4-paragraph essay (Introduction, Pros, Cons, Balanced Personal Stance).",
       "timeCondition": "10 minutes writing.",
@@ -3584,12 +3584,12 @@
       "domain": "OCCUPATIONAL",
       "canDo": "Can give clear, systematically developed presentations with highlight of significant points and relevant supporting detail.",
       "interlocutor": "Chief Financial Officer and VP of Operations.",
-      "context": "Presenting a 12-month energy efficiency retrofitting program for corporate headquarters.",
+      "context": "Presenting a 12-month energy efficiency retrofitting programme for corporate headquarters.",
       "friction": "High upfront capital expenditure ($150,000) requires justifying return on investment (ROI) within 36 months.",
       "outcome": "4-minute structured presentation demonstrating payback curves, tax rebates, and ESG compliance benefits.",
       "timeCondition": "4 minutes speech; 3 minutes prep.",
       "scaffold": "\"Today I present our energy retrofitting roadmap.\", \"While upfront capital outlay is significant, the payback period is...\", \"Crucially, this ensures...\"",
-      "vietnamese": "Thuyết trình 4 phút trước CFO bảo vệ dự án kiểm toán năng lượng 150.000 USD với thời gian hoàn vốn 36 tháng."
+      "vietnamese": "Thuyết trình 4 phút trước CFO bảo vệ dự án cải tạo tiết kiệm năng lượng (retrofit) 150.000 USD với thời gian hoàn vốn 36 tháng."
     },
     {
       "title": "Cross-Departmental Resource Dispute Mediation",
@@ -3697,11 +3697,11 @@
       "canDo": "Can facilitate communication between parties with opposing viewpoints by reformulating ideas and identifying common ground.",
       "interlocutor": "Two co-founders disputing code ownership after deciding to dissolve their startup partnership.",
       "context": "One co-founder wrote the core backend; the other designed proprietary database schemas.",
-      "friction": "High emotional hostility and threats of immediate patent litigation.",
-      "outcome": "De-escalate hostile accusations, reframe contributions objectively, establish basis for a mutual non-exclusive license.",
+      "friction": "High emotional hostility and threats of immediate copyright litigation.",
+      "outcome": "De-escalate hostile accusations, reframe contributions objectively, establish basis for a mutual non-exclusive licence.",
       "timeCondition": "4 minutes dialogue.",
       "scaffold": "\"If I understand correctly, both of you want to avoid protracted legal costs.\", \"What John is proposing does not exclude your architecture...\", \"Can we explore...\"",
-      "vietnamese": "Trung gian hòa giải tranh chấp sở hữu trí tuệ giữa hai nhà đồng sáng lập, định hướng tới thỏa thuận cấp phép chéo."
+      "vietnamese": "Trung gian hòa giải tranh chấp bản quyền mã nguồn giữa hai nhà đồng sáng lập, định hướng tới thỏa thuận cấp phép không độc quyền."
     },
     {
       "title": "Formulating Policy Recommendations on Remote Work Flexibility",
@@ -3733,7 +3733,7 @@
       "outcome": "A 3.5-minute fluent monologue exploring smartphone addiction, algorithmic echo chambers, and human intentionality.",
       "timeCondition": "3.5 minutes speech; 1 minute prep.",
       "scaffold": "\"The assertion that tools dictate human cognitive architecture is increasingly validated by...\", \"That said, one must avoid extreme fatalism...\", \"In conclusion...\"",
-      "vietnamese": "Thuyết trình ngẫu ứng 3,5 phút về thuyết tiền định công nghệ và tác động của mạng xã hội đến tâm lý con người."
+      "vietnamese": "Thuyết trình ngẫu ứng 3,5 phút về thuyết quyết định luận công nghệ và tác động của mạng xã hội đến tâm lý con người."
     },
     {
       "title": "Delivering an Executive Keynote on Algorithmic Accountability",
@@ -3784,20 +3784,20 @@
       "vietnamese": "Viết bài phản biện học thuật 450 từ phân tích lỗi ngụy biện phương pháp luận trong báo cáo kinh tế của tác giả đoạt giải Nobel."
     },
     {
-      "title": "Diplomatic Crisis Mediation Following an Airspace Violation",
+      "title": "Cross-Border Aviation Technical Incident Mediation",
       "id": "scen-c1-04",
       "index": 44,
       "cefrLevel": "C1",
       "mode": "MEDIATION",
       "domain": "PUBLIC",
-      "canDo": "Can convey complex texts and positions diplomatically, managing ambiguity, redirecting tensions, and de-escalating hostility.",
-      "interlocutor": "Envoys from two regional superpowers engaged in escalating military posturing.",
-      "context": "Unannounced surveillance drone entered a disputed demilitarized maritime corridor.",
-      "friction": "State A demands public apologies; State B threatens reciprocal naval mobilization.",
-      "outcome": "Reframe the incident as a weather-induced navigational telemetry drift, allowing both powers to save face while establishing hotline verification.",
+      "canDo": "Can convey complex texts and positions diplomatically, managing ambiguity, redirecting tensions, and de-escalating disputes.",
+      "interlocutor": "Civil aviation authorities and diplomatic attachés.",
+      "context": "An unannounced civilian research flight entered a restricted regional corridor during severe storms.",
+      "friction": "Authority A suspects deliberate unauthorized entry; Authority B points to avionics failure and navigational drift.",
+      "outcome": "Test both accounts against the shared flight and weather data, then propose joint radar verification protocols that both authorities can accept.",
       "timeCondition": "5 minutes mediation.",
-      "scaffold": "\"If we parse the telemetry logs dispassionately, there exists plausible evidence of navigational sensor drift rather than hostile pre-meditation.\", \"By characterizing this as a technical anomaly, both delegations preserve sovereign dignity while instituting bilateral hotlines.\"",
-      "vietnamese": "Hòa giải ngoại giao cấp cao giữa hai cường quốc quân sự sau sự cố xâm phạm không phận, tạo lối thoát giữ thể diện cho cả hai bên."
+      "scaffold": "\"Looking closely at the flight telemetry and meteorological reports, we can test both accounts: does the flight path fit a deliberate entry, or a gradual navigational drift during severe turbulence?\", \"Whichever account the data supports, agreeing joint verification steps allows both civil aviation authorities to maintain protocol while setting up direct communication channels.\"",
+      "vietnamese": "Hòa giải sự cố hàng không dân dụng giữa hai cơ quan quản lý không lưu, đưa ra phương án xử lý dựa trên dữ liệu khí tượng và kỹ thuật bay."
     },
     {
       "title": "Defending an Academic Thesis Against Hostile Examination",
@@ -3807,12 +3807,12 @@
       "mode": "SPOKEN_INTERACTION",
       "domain": "EDUCATIONAL",
       "canDo": "Can formulate ideas and opinions with precision and relate own contribution skilfully to those of other speakers under pressure.",
-      "interlocutor": "Three senior professorial inquisitors during a doctoral viva voce defense.",
-      "context": "Defending a dissertation on neurocomputational models of semantic memory processing.",
-      "friction": "Lead examiner alleges that the model overfits synthetic lexical datasets and lacks biological plausibility.",
-      "outcome": "Cite cross-validated empirical neuroimaging benchmarks, demonstrate boundary conditions, and validate architectural integrity.",
-      "timeCondition": "5 minutes oral defense.",
-      "scaffold": "\"Professor Davis raises a foundational question regarding biological fidelity.\", \"However, the architecture deliberately decouples high-level semantic convergence from localized synaptic plasticity precisely because...\", \"The empirical telemetry clearly demonstrates...\"",
+      "interlocutor": "Three senior professorial examiners during a doctoral viva voce defence.",
+      "context": "Defending a dissertation on computational models of semantic memory processing.",
+      "friction": "Lead examiner argues that the model overfits synthetic datasets and lacks biological validity.",
+      "outcome": "Cite cross-validated empirical neuroimaging benchmarks, demonstrate boundary conditions, and defend architectural validity.",
+      "timeCondition": "5 minutes oral defence.",
+      "scaffold": "\"Professor Davis raises a foundational question regarding biological fidelity.\", \"However, the architecture deliberately separates high-level semantic convergence from localized synaptic plasticity because...\", \"The empirical data demonstrates consistent performance across diverse test sets.\"",
       "vietnamese": "Bảo vệ luận án tiến sĩ trước hội đồng phản biện gay gắt, bảo vệ tính xác thực sinh học của mô hình tính toán thần kinh."
     },
     {
@@ -3824,12 +3824,12 @@
       "domain": "PUBLIC",
       "canDo": "Can produce clear, well-structured legal and policy expositions, varying tone and register to conform to jurisdictional norms.",
       "interlocutor": "Supreme Constitutional Court judges.",
-      "context": "Amicus curiae submission on warrantless extraction of mobile geolocation metadata in criminal investigations.",
-      "friction": "Precedent is fragmented across analog-era search doctrines; must formulate modern digital expectations of privacy.",
-      "outcome": "A 400-word persuasive brief arguing that continuous mosaic tracking constitutes a Fourth Amendment constitutional search.",
+      "context": "Amicus curiae submission on warrantless collection of mobile geolocation metadata in criminal investigations.",
+      "friction": "Precedent is fragmented across analogue-era search doctrines; must formulate modern digital expectations of privacy.",
+      "outcome": "A 400-word persuasive brief arguing that continuous location tracking constitutes a constitutional search.",
       "timeCondition": "15 minutes writing.",
-      "scaffold": "\"May it please the Court: The question presented is whether the pervasive, friction-free interception of geolocation telemetry infringes upon reasonable societal expectations of privacy.\", \"Under the mosaic doctrine, aggregated data paints an intimate portrait of human conscience...\", \"Accordingly, this Court should hold...\"",
-      "vietnamese": "Soạn thảo bản kiến nghị pháp lý (Amicus Brief) 400 từ gửi Tòa án Tối cao bảo vệ quyền riêng tư dữ liệu định vị số."
+      "scaffold": "\"May it please the Court: The question presented is whether the pervasive collection of geolocation records infringes upon reasonable societal expectations of privacy.\", \"Under the mosaic doctrine, aggregated data paints an intimate portrait of daily personal life.\", \"Accordingly, this Court should hold that location tracking warrants judicial authorization.\"",
+      "vietnamese": "Soạn thảo bản kiến nghị pháp lý (Amicus Brief) 400 từ gửi Tòa án Hiến pháp bảo vệ quyền riêng tư dữ liệu định vị số."
     },
     {
       "title": "Managing a Hostile Shareholder Annual General Meeting",
@@ -3839,12 +3839,12 @@
       "mode": "SPOKEN_INTERACTION",
       "domain": "OCCUPATIONAL",
       "canDo": "Can handle difficult or aggressive interlocutors with composure, deploying tact, rhetorical agility, and diplomatic firmness.",
-      "interlocutor": "Activist hedge fund manager demanding immediate divestiture of carbon-intensive assets.",
+      "interlocutor": "Activist hedge fund manager demanding immediate divestiture of capital assets.",
       "context": "Livestreamed annual shareholder gathering with institutional investors and financial press watching.",
-      "friction": "Interlocutor interrupts repeatedly, accusing executive management of greenwashing and fiduciary negligence.",
-      "outcome": "Acknowledge shareholder urgency, refute accusations with auditable carbon-intensity metrics, and maintain meeting decorum.",
+      "friction": "Interlocutor interrupts repeatedly, accusing executive management of inefficiency and inadequate disclosure.",
+      "outcome": "Acknowledge shareholder concerns, refute accusations with audited balance sheet metrics, and maintain meeting decorum.",
       "timeCondition": "4 minutes dialogue.",
-      "scaffold": "\"I appreciate Mr. Vance's passion on this issue; however, characterizing our phased capital allocation as greenwashing misrepresents audited filings.\", \"Allow me to direct the assembly's attention to Table 4, which demonstrates a 38% decarbonization curve over 24 months.\"",
+      "scaffold": "\"I understand Mr. Vance's concern regarding capital deployment; however, characterizing our phased investments as inefficient misrepresents audited filings.\", \"Allow me to direct the assembly's attention to Table 4, which outlines our operating margin improvements over the past 24 months.\"",
       "vietnamese": "Ứng phó với cổ đông hoạt động tại Đại hội đồng cổ đông thường niên, bảo vệ uy tín doanh nghiệp trước cáo buộc thiếu minh bạch."
     },
     {
@@ -3856,11 +3856,11 @@
       "domain": "PERSONAL",
       "canDo": "Can act as an intermediary, explaining irony, cultural subtext, historical allusions, and satirical undertones.",
       "interlocutor": "Global community of 50 remote developers spanning 12 nationalities on Discord.",
-      "context": "A British colleague posted a dry, highly sarcastic satirical meme regarding project delays that offended colleagues from high-context cultures.",
+      "context": "A British colleague posted a dry, sarcastic meme regarding project delays that offended colleagues from high-context cultures.",
       "friction": "Offended members interpreted the post as literal accusations of professional incompetence.",
-      "outcome": "Write an empathetic, clarifying mediation post deconstructing the British humor tradition of self-deprecation and understatement.",
+      "outcome": "Write an empathetic, clarifying mediation post explaining the cultural context of British understatement and self-deprecation.",
       "timeCondition": "4 minutes writing.",
-      "scaffold": "\"To our global team members who felt unsettled by Tom's message: allow me to unpack the cultural mechanics of British ironic understatement.\", \"In this context, exaggerating the disaster is actually a form of self-deprecating coping, not an indictment of our engineers.\", \"Let us establish...\"",
+      "scaffold": "\"To team members who felt unsettled by Tom's message: allow me to unpack the cultural habit of British ironic understatement.\", \"In this context, downplaying the issue is a familiar form of coping humour, rather than criticism of our colleagues.\", \"Moving forward, let us agree on clearer communication norms across our channels.\"",
       "vietnamese": "Hòa giải hiểu lầm văn hóa trên kênh chat toàn cầu, giải thích phong cách châm biếm và tự trào kiểu Anh cho đồng nghiệp đa quốc gia."
     },
     {
@@ -3873,11 +3873,11 @@
       "canDo": "Can write sophisticated institutional frameworks balancing utilitarian scientific advancement with deontological ethical boundaries.",
       "interlocutor": "International Bioethics Oversight Board.",
       "context": "Establishing clinical boundaries for somatic versus germline CRISPR-Cas9 genome editing in human subjects.",
-      "friction": "Differentiating therapeutic eradication of monogenic fatal diseases from elective genetic enhancement.",
-      "outcome": "A 350-word policy framework setting down criteria for proportionality, informed consent, and irreversible transgenerational risk.",
+      "friction": "Differentiating therapeutic treatment of monogenic diseases from elective enhancement.",
+      "outcome": "A 350-word policy framework setting down criteria for proportionality, informed consent, and long-term risk assessment.",
       "timeCondition": "12 minutes writing.",
-      "scaffold": "\"The demarcation between curative intervention and elective phenotypic enhancement constitutes the principal ethical fault line of modern biotechnology.\", \"While somatic therapeutic applications command broad moral consensus, germline modifications introduce transgenerational moral hazards...\", \"We therefore recommend...\"",
-      "vietnamese": "Soạn thảo khung đạo đức y sinh học 350 từ phân định ranh giới giữa trị liệu chỉnh sửa gen soma và can thiệp dòng mầm di truyền."
+      "scaffold": "\"Distinguishing between therapeutic intervention and elective enhancement marks a primary ethical question in modern biotechnology.\", \"While somatic therapeutic applications command broad medical consensus, germline modifications introduce transgenerational risks.\", \"We therefore recommend independent oversight for all clinical protocols.\"",
+      "vietnamese": "Soạn thảo khung đạo đức y sinh học 350 từ phân định ranh giới giữa trị liệu chỉnh sửa gen soma và can thiệp di truyền."
     },
     {
       "title": "Mediating a Multi-Jurisdictional Commercial Franchise Breach",
@@ -3890,170 +3890,170 @@
       "interlocutor": "Master franchisor from Tokyo and regional master franchisee from Singapore.",
       "context": "Allegations of brand dilution through localized menu adaptations in Southeast Asian flagship stores.",
       "friction": "Tokyo demands strict culinary standardization; Singapore asserts local palate necessity for commercial viability.",
-      "outcome": "Craft a tiered \"Glocal\" compliance compromise allowing localized side dishes while preserving sacrosanct signature recipes.",
+      "outcome": "Craft a tiered compromise allowing localized side dishes while preserving signature core recipes.",
       "timeCondition": "5 minutes mediation.",
-      "scaffold": "\"If we dissect Tokyo's non-negotiable interest, it is brand pedigree preservation; whereas Singapore's imperative is immediate market survival.\", \"What if we formalize an 80/20 framework: 80% immutable core signatures, with 20% sanctioned localized accompaniments subject to quarterly culinary vetting?\"",
-      "vietnamese": "Hòa giải xung đột thương hiệu đa quốc gia giữa trụ sở Nhật Bản và đối tác nhượng quyền Singapore bằng chiến lược 'Glocal'."
+      "scaffold": "\"Tokyo's core interest is brand consistency, while Singapore's priority is responding to local customer preferences.\", \"A practical compromise is an 80/20 framework: 80% standardized menu items, with 20% approved local adaptations subject to quarterly review.\"",
+      "vietnamese": "Hòa giải xung đột thương hiệu đa quốc gia giữa trụ sở Nhật Bản và đối tác nhượng quyền Singapore bằng chiến lược kết hợp chuẩn mực và bản địa hóa."
     },
     {
-      "title": "The Forensic Rhetoric of Public Inquest Cross-Examination",
+      "title": "Public Inquest Examination on Institutional Compliance",
       "id": "scen-c2-01",
       "index": 51,
       "cefrLevel": "C2",
       "mode": "SPOKEN_PRODUCTION",
       "domain": "PUBLIC",
       "canDo": "Can produce smoothly flowing, elaborate, persuasive speech, weaving intricate argumentation with effortless stylistic mastery.",
-      "interlocutor": "Judicial Commissioners and national public audience at an inquiry into institutional systemic corruption.",
-      "context": "Delivering closing arguments as Lead Counsel for civil society victims following a 3-month public inquiry.",
-      "friction": "Opposing defense argued that systemic failures were merely anomalous administrative oversights.",
-      "outcome": "A 7-minute devastating rhetorical synthesis demonstrating deliberate institutional malfeasance, apathy, and systemic cover-up.",
+      "interlocutor": "Judicial Commissioners and public inquiry panel reviewing institutional compliance.",
+      "context": "Delivering closing arguments as Lead Counsel reviewing administrative records following a three-month inquiry.",
+      "friction": "Defense counsel argued that operational failures were isolated administrative oversights.",
+      "outcome": "A structured 7-minute synthesis demonstrating persistent organizational non-compliance and documentation gaps.",
       "timeCondition": "7 minutes speech; 5 minutes prep.",
-      "scaffold": "\"To dismiss three years of systematic administrative falsification as mere bureaucratic inadvertence is to elevate cynical apathy into a legal doctrine.\", \"The documentary record does not merely suggest complacency; it screams complicity.\", \"Justice in this forum demands that we dismantle the fiction of innocent ignorance.\"",
-      "vietnamese": "Diễn thuyết tranh biện pháp lý đỉnh cao 7 phút tại phiên điều trần công khai, lật tẩy lập luận ngụy biện về sự cố hành chính vô hại."
+      "scaffold": "\"Characterizing three years of recurring accounting discrepancies as simple oversight does not withstand scrutiny.\", \"The audit trail shows repeated instances where internal compliance alerts were overridden.\", \"A credible finding must address these documented management decisions directly.\"",
+      "vietnamese": "Diễn thuyết tranh biện pháp lý tại phiên điều trần, làm rõ các bằng chứng kiểm toán độc lập và trách nhiệm giải trình của ban quản lý."
     },
     {
-      "title": "Diplomatic Treaty Drafting Under Multilateral Sanction Deadlocks",
+      "title": "International Grain Transit Accord Mediation",
       "id": "scen-c2-02",
       "index": 52,
       "cefrLevel": "C2",
       "mode": "MEDIATION",
       "domain": "PUBLIC",
       "canDo": "Can mediate naturally in any role, appreciating fine shades of meaning, register shifts, and implicit sociolinguistic nuances.",
-      "interlocutor": "Foreign ministers and plenipotentiary ambassadors of three warring nation-states.",
-      "context": "Drafting an emergency maritime grain transit accord amid active armed conflict in international straits.",
-      "friction": "Nation A refuses to sign any document mentioning Nation B's maritime sovereignty; Nation B refuses inspection by third parties.",
-      "outcome": "Engineer a parallel bilateral tripartite communique with constructive ambiguity, securing de facto naval demilitarization.",
+      "interlocutor": "Envoys and ministerial representatives navigating shipping corridor disputes.",
+      "context": "Drafting an emergency maritime grain transit accord to ensure humanitarian shipping in contested waters.",
+      "friction": "Parties disagree on port inspection authority and sovereignty wording.",
+      "outcome": "Draft a parallel multilateral communique using neutral administrative verification to secure unhindered grain passage.",
       "timeCondition": "6 minutes mediation.",
-      "scaffold": "\"Diplomatic history demonstrates that when sovereignty declarations paralyze humanitarian passage, constructive ambiguity becomes an instrument of survival.\", \"By routing the legal instruments through simultaneous, independent depositories with the United Nations Secretary-General, neither sovereign concedes legitimacy while the physical grain moves unhindered.\"",
-      "vietnamese": "Hòa giải hiệp ước vận tải ngũ cốc giữa ba quốc gia xung đột, sử dụng kỹ thuật 'mơ hồ mang tính xây dựng' để vượt qua bế tắc chủ quyền."
+      "scaffold": "\"When formal sovereignty declarations stall humanitarian agreements, practical compromise often relies on neutral administrative mechanisms.\", \"Depositing parallel agreements with a neutral multilateral body allows each party to maintain its legal standing while essential shipments proceed without delay.\"",
+      "vietnamese": "Hòa giải hiệp ước vận tải quốc tế, sử dụng cơ chế bảo trợ độc lập để duy trì dòng hàng hóa thiết yếu qua các vùng tranh chấp."
     },
     {
-      "title": "Authoring an Authoritative Philosophy of Language Treatise",
+      "title": "Research Essay on Language Models and Semantic Understanding",
       "id": "scen-c2-03",
       "index": 53,
       "cefrLevel": "C2",
       "mode": "WRITTEN_PRODUCTION",
       "domain": "EDUCATIONAL",
       "canDo": "Can write smoothly flowing complex texts in an assured, authoritative personal style, with flawless structural command.",
-      "interlocutor": "Global philosophical academia and readers of prestigious university press monographs.",
-      "context": "An essay deconstructing Wittgenstein's Tractatus in light of modern deep learning transformer architectures.",
-      "friction": "Demonstrating that statistical probability distributions do not constitute semantic meaning or intentionality.",
-      "outcome": "A 600-word publishable essay deconstructing statistical token prediction versus phenomenological human understanding.",
+      "interlocutor": "Academic journal editorial board and computational linguistics researchers.",
+      "context": "An essay evaluating neural language models against theoretical frameworks of semantic grounding.",
+      "friction": "Demonstrating that statistical word association does not by itself establish intentional semantic meaning.",
+      "outcome": "A 600-word publishable essay evaluating distributional semantics versus grounded human understanding.",
       "timeCondition": "20 minutes writing.",
-      "scaffold": "\"The tempting conflation of syntactic ubiquity with semantic intentionality represents the perennial category error of contemporary computational linguistics.\", \"A neural architecture that predicts the subsequent lexical token with astonishing mathematical fidelity remains, at its metaphysical core, entirely blind to the ontological weight of the concepts it juggles.\", \"Understanding is not an emergent byproduct of vector convergence; it is an embodied encounter with reality.\"",
-      "vietnamese": "Soạn thảo tiểu luận triết học ngôn ngữ 600 từ phân tích sự khác biệt bản thể luận giữa mô hình ngôn ngữ lớn và ý niệm tư duy con người."
+      "scaffold": "\"Conflating syntactic fluency with semantic understanding remains a central debate in contemporary computational linguistics.\", \"While statistical models predict text patterns with high accuracy, pattern recognition differs fundamentally from grounded comprehension.\", \"Real comprehension requires situational awareness and communicative intent, which go beyond next-token probability distributions.\"",
+      "vietnamese": "Soạn thảo bài nghiên cứu học thuật phân tích sự khác biệt giữa năng lực xử lý ngôn ngữ thống kê và khả năng tư duy ngữ nghĩa thực thụ."
     },
     {
-      "title": "Defending Corporate Governance Integrity Against Predatory Takeovers",
+      "title": "Corporate Restructuring Defense in an Institutional Investor Forum",
       "id": "scen-c2-04",
       "index": 54,
       "cefrLevel": "C2",
       "mode": "SPOKEN_INTERACTION",
       "domain": "OCCUPATIONAL",
-      "canDo": "Can hold own in complex formal discussion at no disadvantage; persuasive; handles hostile, duplicitous questioning effortlessly.",
-      "interlocutor": "Ruthless hostile corporate raider and consortium of institutional arbitrageurs on live television.",
-      "context": "Defending a 100-year-old engineering firm against asset-stripping liquidation disguised as \"shareholder value creation\".",
-      "friction": "The raider deploys aggressive personal attacks, accusatory interruptions, and misleading short-term financial charts.",
-      "outcome": "Dismantle the raider's track record of post-acquisition bankruptcies, articulate long-term stakeholder capitalism, rally institutional holders.",
+      "canDo": "Can hold own in complex formal discussion at no disadvantage; persuasive; handles challenging questions effortlessly.",
+      "interlocutor": "Institutional investor consortium and financial media representatives.",
+      "context": "Defending a manufacturing enterprise against a breakup proposal in favour of long-term capital reinvestment.",
+      "friction": "Opponents advocate short-term share buybacks and immediate divestment of capital-intensive divisions.",
+      "outcome": "Present audited research productivity, customer retention data, and long-term operating return projections.",
       "timeCondition": "6 minutes interaction.",
-      "scaffold": "\"Mr. Sterling dresses predatory liquidation in the respectable garb of 'capital efficiency', but history remembers his prior acquisitions by their shuttered factories and plundered pension funds.\", \"True enterprise value is not measured by the quarterly spike you extract before dumping shares; it is built on patent integrity, labor mastery, and customer trust.\"",
-      "vietnamese": "Tranh biện trực tiếp 6 phút trên sóng truyền hình đập tan âm mưu thâu tóm thù địch và bán tháo tài sản của quỹ đầu cơ đầu sỏ."
+      "scaffold": "\"Characterizing this break-up as capital efficiency overlooks the operational record of past break-ups.\", \"Long-term shareholder value depends on workforce retention, research capability, and product reliability, rather than short-term balance sheet restructuring.\"",
+      "vietnamese": "Tranh luận bảo vệ chiến lược phát triển dài hạn của doanh nghiệp trước đề xuất chia tách doanh nghiệp và thoái vốn ngắn hạn."
     },
     {
-      "title": "Mediating a Tragic Clinical Bioethics End-of-Life Dispute",
+      "title": "Clinical Bioethics Consultation on Advance Care Directives",
       "id": "scen-c2-05",
       "index": 55,
       "cefrLevel": "C2",
       "mode": "MEDIATION",
       "domain": "PUBLIC",
-      "canDo": "Can navigate deeply sensitive, emotionally harrowing human crises, deploying infinite empathy, ethical nuance, and legal rigor.",
-      "interlocutor": "Grieving divided family members and the clinical intensive care physician team.",
-      "context": "Patient with catastrophic anoxic brain damage; living will is contested between deeply religious parents and designated secular spouse.",
-      "friction": "Parents threaten criminal murder complaints if ventilation is withdrawn; spouse insists on honoring patient's explicit verbal wishes.",
-      "outcome": "Guide both parties from adversarial legal threats to a sacred, shared recognition of the patient's dignity and peaceful release.",
+      "canDo": "Can navigate deeply sensitive human situations, deploying empathy, ethical clarity, and legal rigour.",
+      "interlocutor": "Family representatives and the intensive care clinical ethics committee.",
+      "context": "Patient with severe anoxic brain injury whose advance care directive is interpreted differently by family members.",
+      "friction": "Disagreement over the interpretation of documented patient preferences regarding mechanical life support.",
+      "outcome": "Guide participants toward consensus by reviewing the patient's explicit advance directive and clinical prognosis calmly.",
       "timeCondition": "6 minutes mediation.",
-      "scaffold": "\"In this room, grief has taken the form of defensive conflict, but what unites every person here is a fierce, boundless love for David.\", \"Our task today is not to win an argument over medical technology, but to listen together to what David himself asked of us when he was whole.\", \"Let us create a space where his release is accompanied by love rather than litigation.\"",
-      "vietnamese": "Điều giải ca đạo đức sinh học lâm sàng rút ống thở giữa gia đình tôn giáo và người bạn đời, chuyển hóa xung đột thành sự bình an cho bệnh nhân."
+      "scaffold": "\"Every member of this family wants what is best for David, even though you hold different views on medical intervention.\", \"Our priority is to clarify what David communicated in his advance care directive and find common ground on compassionate care.\", \"We can honour his personal wishes while ensuring every family member feels heard throughout this transition.\"",
+      "vietnamese": "Tham vấn đạo đức y khoa trong trường hợp chăm sóc cuối đời, hỗ trợ gia đình đạt được đồng thuận dựa trên chỉ dẫn chăm sóc trước và ý nguyện của bệnh nhân."
     },
     {
-      "title": "Epistemic Critique of Algorithmic Deliberation in Democratic Systems",
+      "title": "Epistemic Analysis of Digital Information Ecosystems",
       "id": "scen-c2-06",
       "index": 56,
       "cefrLevel": "C2",
       "mode": "WRITTEN_PRODUCTION",
       "domain": "PUBLIC",
-      "canDo": "Can produce complex, stylistically sophisticated political essays, integrating irony, metaphor, and rigorous forensic theory.",
-      "interlocutor": "Readers of an intellectual quarterly review (The Atlantic, Foreign Affairs).",
-      "context": "An essay exploring how predictive recommendation algorithms erode the epistemic commons required for representative democracy.",
-      "friction": "Avoiding simplistic anti-technology luddism while diagnosing profound civilizational hazards.",
-      "outcome": "A 550-word masterwork on algorithmic echo chambers, affective polarization, and the atrophy of civic empathy.",
+      "canDo": "Can produce complex, stylistically sophisticated political and sociological essays.",
+      "interlocutor": "Readers of an intellectual review publication.",
+      "context": "An essay exploring how engagement-optimized recommendation systems affect civic consensus in democratic societies.",
+      "friction": "Avoiding overly broad generalizations while diagnosing substantive institutional challenges.",
+      "outcome": "A 550-word analytical essay on recommendation algorithms, selective exposure, and public deliberation.",
       "timeCondition": "18 minutes writing.",
-      "scaffold": "\"Democracy was never engineered to withstand an epistemic architecture designed to monetize resentment.\", \"When the digital commons is partitioned into billions of bespoke reality corridors, the very concept of shared factual citizenship evaporates.\", \"What we witness today is not ideological disagreement, but reality fragmentation—a condition in which the shared civic world is liquidated in favor of addictive, solipsistic outrage loops.\"",
-      "vietnamese": "Viết bài xã luận học thuật 550 từ mổ xẻ hiện tượng thuật toán mạng xã hội làm xói mòn nền tảng nhận thức chung của nền dân chủ đại diện."
+      "scaffold": "\"Representative democracy presupposes a shared evidentiary commons, without which deliberation degenerates into the parallel monologues of fragmented publics.\", \"When engagement-optimized curation systematically privileges salience over accuracy, citizens come to inhabit divergent accounts of the same events, eroding the factual baseline on which deliberation depends.\", \"The central policy question is whether public oversight of recommender systems can be designed to safeguard free expression rather than to circumscribe it.\"",
+      "vietnamese": "Viết bài phân tích chính sách công về tác động của thuật toán gợi ý tin tức đối với nhận thức xã hội và sự đồng thuận dân chủ."
     },
     {
-      "title": "Negotiating an Unprecedented International Sovereign Debt Restructuring",
+      "title": "Sovereign Climate Debt Restructuring Negotiations",
       "id": "scen-c2-07",
       "index": 57,
       "cefrLevel": "C2",
       "mode": "SPOKEN_INTERACTION",
       "domain": "OCCUPATIONAL",
-      "canDo": "Can effortlessly negotiate complex macroeconomic treaties, restructuring debt haircuts, bond maturities, and IMF conditionality.",
-      "interlocutor": "Syndicate of international private bondholders, IMF Managing Director, and Paris Club sovereign creditors.",
-      "context": "A developing island nation facing catastrophic climate debt default following Category 5 cyclonic devastation.",
-      "friction": "Commercial bondholders demand 90 cents on the dollar; government reserves are completely exhausted.",
-      "outcome": "Negotiate a revolutionary \"Climate-Resilient Debt Clause\" (CRDC) freezing debt servicing for 36 months alongside a 35% principal haircut.",
+      "canDo": "Can negotiate complex macroeconomic agreements, addressing repayment terms, maturities, and multilateral facilities.",
+      "interlocutor": "Sovereign debt committee, multilateral development banks, and commercial bondholders.",
+      "context": "A developing coastal state negotiating debt terms following major typhoon damage to national infrastructure.",
+      "friction": "Commercial bondholders request full coupon payments while government revenue is diverted to emergency rebuilding.",
+      "outcome": "Negotiate climate-resilient pause clauses and extended amortization schedules tied to reconstruction milestones.",
       "timeCondition": "6 minutes negotiation.",
-      "scaffold": "\"To extract debt service from a nation whose ports lie submerged beneath storm surges is not merely fiscal cruelty; it is financial fantasy.\", \"If private creditors insist on immediate coupon redemption, the sovereign will formally default tomorrow, leaving your balance sheets with zero recovery.\", \"Accept the 35% principal reduction and 3-year moratorium, and we preserve a solvent, trading partner.\"",
-      "vietnamese": "Đàm phán tái cơ cấu nợ công quốc tế cho quốc đảo bị bão tàn phá, đưa điều khoản tạm hoãn trả nợ thảm họa khí hậu (CRDC) vào thỏa thuận."
+      "scaffold": "\"Demanding immediate full debt service from an economy rebuilding after natural disaster undermines both humanitarian recovery and long-term repayment capacity.\", \"A structured debt pause tied to reconstruction targets gives the country fiscal breathing room while protecting creditor value over time.\", \"Adopting climate-contingent debt clauses offers a predictable, equitable path toward sovereign solvency.\"",
+      "vietnamese": "Đàm phán tái cơ cấu nợ công quốc tế cho quốc gia chịu thiên tai, đưa điều khoản tạm hoãn trả nợ gắn với lộ trình phục hồi kinh tế."
     },
     {
-      "title": "Deconstructing Colonial Historiography in a Landmark Museum Provenance Dispute",
+      "title": "Museum Provenance Consultation on Cultural Artifacts",
       "id": "scen-c2-08",
       "index": 58,
       "cefrLevel": "C2",
       "mode": "MEDIATION",
       "domain": "PUBLIC",
-      "canDo": "Can mediate across entrenched historical, cultural, and post-colonial trauma, guiding institutions to restorative justice.",
-      "interlocutor": "Board of Trustees of an imperial national museum and ancestral representatives of an indigenous African kingdom.",
-      "context": "Repatriation of sacred ceremonial bronzes looted during an 1897 punitive military expedition.",
-      "friction": "Museum argues the bronzes are \"universal heritage\" better preserved in temperature-controlled metropolitan galleries.",
-      "outcome": "Reframe the dispute from property ownership to cultural healing, finalizing full unconditioned restitution with mutual research loans.",
+      "canDo": "Can mediate across differing historical perspectives, guiding cultural institutions toward constructive agreements.",
+      "interlocutor": "Museum Board of Trustees and international community delegation.",
+      "context": "Reviewing provenance documentation for ceremonial historical objects acquired during nineteenth-century military expeditions.",
+      "friction": "Differing interpretations of institutional custodianship versus source community restitution claims.",
+      "outcome": "Facilitate an agreement that weighs the institution's custodianship against the community's restitution claim, for example by settling legal title alongside long-term research and loan partnerships.",
       "timeCondition": "5 minutes mediation.",
-      "scaffold": "\"The narrative of 'universal custodianship' cannot be separated from the bayonets that severed these sacred artifacts from their living shrines.\", \"True preservation is not about climate-controlled display cases; it is about spiritual continuity and cultural dignity.\", \"By returning legal title unequivocally to the kingdom, the museum does not lose history—it finally enters moral alignment with it.\"",
-      "vietnamese": "Hòa giải tranh chấp cổ vật thuộc địa giữa bảo tàng hoàng gia và đại diện bộ tộc bản địa, hoàn trả vĩnh viễn các bảo vật tâm linh bị cướp bóc."
+      "scaffold": "\"Examining the documented provenance of these objects requires acknowledging the colonial context in which they were acquired.\", \"Long-term cultural partnerships work best when legal title is settled in a way both sides can accept, opening the door to reciprocal research loans and joint exhibitions.\", \"Both the museum's duty of custodianship and the community's restitution claim deserve a fair hearing, and a lasting agreement should address each of them openly.\"",
+      "vietnamese": "Hòa giải tranh chấp nguồn gốc hiện vật bảo tàng, xây dựng thỏa thuận cân bằng giữa vai trò lưu giữ của bảo tàng và yêu cầu hoàn trả của cộng đồng, kết hợp hợp tác nghiên cứu quốc tế."
     },
     {
-      "title": "Composing an Authoritative Legal Dissent on Surveillance Capitalism",
+      "title": "Constitutional Analysis of Public Surveillance Technologies",
       "id": "scen-c2-09",
       "index": 59,
       "cefrLevel": "C2",
       "mode": "WRITTEN_PRODUCTION",
       "domain": "PUBLIC",
-      "canDo": "Can draft monumental judicial dissents of enduring historical and jurisprudential resonance, utilizing masterful prose cadence.",
-      "interlocutor": "Future legal generations, constitutional scholars, and the democratic public.",
-      "context": "A dissenting opinion in a 5-4 ruling upholding corporate ownership of biometric behavioral telemetry extracted from public spaces.",
-      "friction": "Majority opinion relied on outdated property analogies; dissent must establish privacy as an inalienable human dignity right.",
-      "outcome": "A 500-word soaring judicial dissent warning of the totalitarian peril of automated biometric commodification.",
+      "canDo": "Can draft rigorous legal dissents and policy commentaries of clear jurisprudential weight.",
+      "interlocutor": "Legal scholars, appellate judiciary, and civil liberties analysts.",
+      "context": "A commentary on the constitutional implications of commercial automated biometric tracking in public spaces.",
+      "friction": "Balancing traditional public-space observation doctrines with continuous automated data aggregation.",
+      "outcome": "A 500-word analysis examining whether automated biometric monitoring constitutes an unreasonable search.",
       "timeCondition": "18 minutes writing.",
-      "scaffold": "\"Today, the majority of this Court surrenders the sacred redoubt of human personality to the ledger of behavioral commerce.\", \"When every heartbeat, every glance, and every involuntary neural tremor is harvested and commodified without consent, freedom ceases to be a living condition and becomes an algorithmic illusion.\", \"I dissent from this tragic abdication of constitutional duty.\"",
-      "vietnamese": "Soạn thảo bản ý kiến bất đồng tư pháp (Judicial Dissent) 500 từ cảnh báo nguy cơ độc tài khi thương mại hóa dữ liệu sinh trắc học công cộng."
+      "scaffold": "\"Permitting the continuous collection of personal behavioural data in public spaces alters everyday privacy in fundamental ways.\", \"When personal movements and physical traits are catalogued without meaningful consent, individuals lose the ability to navigate public life freely.\", \"Constitutional protections against unreasonable intrusion should adapt to technological tools that track everyday conduct across public domains.\"",
+      "vietnamese": "Soạn thảo luận điểm pháp lý về bảo vệ quyền riêng tư số, phân tích lý do hiến pháp cần điều chỉnh trước các công nghệ giám sát công cộng."
     },
     {
-      "title": "Keynote Address on the Restoration of Humanist Literature in the Age of Synthetic Text",
+      "title": "Keynote Address on Human Authorship in Modern Literature",
       "id": "scen-c2-10",
       "index": 60,
       "cefrLevel": "C2",
       "mode": "SPOKEN_PRODUCTION",
       "domain": "EDUCATIONAL",
-      "canDo": "Can speak with extraordinary rhetorical power, syntactic cadence, emotional resonance, and memorable philosophical insight.",
-      "interlocutor": "1,000 international writers, scholars, and critics at the PEN International World Voices Congress.",
-      "context": "Inaugural address on why generative statistical text engines can never replace authentic mortal literature.",
-      "friction": "Widespread cultural despair and anxiety over the apparent replacement of human literary authorship by machines.",
-      "outcome": "An unforgettable 7-minute address affirming that great literature derives its power from mortal suffering, vulnerability, and love.",
+      "canDo": "Can deliver a persuasive, articulate address with clear rhetorical structure and memorable insights.",
+      "interlocutor": "Writers, translators, and literature educators at an international literary symposium.",
+      "context": "Opening address on the continued value of lived human experience in contemporary writing.",
+      "friction": "Concerns that automated text generators diminish public appreciation for original literary work.",
+      "outcome": "A thoughtful 7-minute address highlighting the irreplaceable role of personal voice and lived perspective in literature.",
       "timeCondition": "7 minutes speech; 5 minutes prep.",
-      "scaffold": "\"A machine can synthesize every permutation of grief, but it can never mourn.\", \"It can assemble the vocabulary of devotion, but it can never tremble before the mortal frailty of another human being.\", \"Literature is not an exercise in syntax arrangement; it is the bloody, luminous testimony of a soul that knows it must die.\", \"As long as human beings love, bleed, and hope in the shadow of mortality, the human voice remains sacred and irreplaceable.\"",
-      "vietnamese": "Diễn thuyết khai mạc đại hội văn bút quốc tế 7 phút khẳng định giá trị trường tồn bất khả thay thế của văn học nhân bản trước làn sóng văn bản nhân tạo."
+      "scaffold": "\"Literature endures because it is the one medium in which lived experience, with all its doubt, tenderness, and fallibility, is rendered legible to strangers.\", \"Automated text generation can replicate the surface of a literary style, but it cannot supply the personal stakes, the sense of something risked, from which authentic storytelling derives its urgency.\", \"Writers will continue to matter precisely because readers do not merely want fluent sentences; they seek assurance that another consciousness stands behind them.\"",
+      "vietnamese": "Thuyết trình tại hội thảo văn học về giá trị nguyên bản của sáng tác văn chương trước sự phát triển của các công cụ sinh văn bản tự động."
     }
   ]
 }

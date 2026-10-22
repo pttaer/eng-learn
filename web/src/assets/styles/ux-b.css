@@ -6,7 +6,7 @@
 .copywork-studio .model-sentence-display, .copywork-diff-container { overflow-wrap: anywhere; }
 @media (max-width: 600px) {
   .copywork-studio .hud-btn, .btn-advance-round, .btn-view-matrix, .post-take-actions .hud-btn,
-  .btn-timer-toggle, .btn-take-complete, .nav-btn-prev, .nav-btn-next { min-height: 44px !important; font-size: 13px !important; }
+  .btn-timer-toggle, .btn-take-complete, .nav-btn-prev, .nav-btn-next { min-height: 44px !important; font-size: var(--font-body-compact) !important; }
   .post-take-actions .hud-btn { flex: 1 1 100%; justify-content: center; white-space: normal; height: auto; }
   .post-take-metrics { flex-direction: column; align-items: flex-start; gap: 4px; }
   .speaking-oscilloscope-container { min-width: 0; flex-basis: 100% !important; }

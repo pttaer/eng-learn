@@ -330,12 +330,12 @@ export class ListeningPromptComponent {
           <button type="button" class="hud-btn btn-listening-play" style="font-weight: 700; color: var(--cyan, #38bdf8); border-color: var(--cyan, #38bdf8); padding: 8px 14px;">
             ${icon('volume', 14)} <span style="margin-left: 6px;">▶ Play Audio</span>
           </button>
-          <button type="button" class="hud-btn btn-phonetic-hint" aria-expanded="false" style="font-size: 11px; padding: 6px 10px;">
-            💡 Phonetic Hint
+          <button type="button" class="hud-btn btn-phonetic-hint" aria-expanded="false" style="font-size: var(--font-kicker); padding: 6px 10px;">
+            ${icon('lightbulb', 13)} Phonetic Hint
           </button>
         </div>
         <div class="listening-speed-group" role="group" aria-label="Playback speed" style="display: flex; align-items: center; gap: 4px;">
-          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted); margin-right: 4px;">SPEED:</span>
+          <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); margin-right: 4px;">SPEED:</span>
           <button type="button" class="hud-btn speed-chip btn-speed ${Math.abs(this.speechRate - 0.8) < 0.01 ? 'active-speed' : ''}" data-speed="0.8" aria-pressed="${Math.abs(this.speechRate - 0.8) < 0.01}">0.8x</button>
           <button type="button" class="hud-btn speed-chip btn-speed ${Math.abs(this.speechRate - 1.0) < 0.01 ? 'active-speed' : ''}" data-speed="1.0" aria-pressed="${Math.abs(this.speechRate - 1.0) < 0.01}">1.0x</button>
           <button type="button" class="hud-btn speed-chip btn-speed ${Math.abs(this.speechRate - 1.2) < 0.01 ? 'active-speed' : ''}" data-speed="1.2" aria-pressed="${Math.abs(this.speechRate - 1.2) < 0.01}">1.2x</button>
@@ -343,25 +343,25 @@ export class ListeningPromptComponent {
       </div>
 
       <!-- Phonetic Hint Callout -->
-      <div class="phonetic-hint-box" style="display: none; margin-bottom: var(--space-12); padding: 10px 14px; background: var(--bg-surface-sunk); border-left: 3px solid var(--cyan, #38bdf8); border-radius: 4px; font-family: var(--font-mono); font-size: 12px; color: var(--ink-secondary);">
-        <div style="font-weight: 700; color: var(--cyan, #38bdf8); margin-bottom: 3px; font-size: 11px;">PHONETIC PHENOMENA:</div>
+      <div class="phonetic-hint-box" style="display: none; margin-bottom: var(--space-12); padding: 10px 14px; background: var(--bg-surface-sunk); border-left: 3px solid var(--cyan, #38bdf8); border-radius: 4px; font-family: var(--font-mono); font-size: var(--font-body-compact); color: var(--ink-secondary);">
+        <div style="font-weight: 700; color: var(--cyan, #38bdf8); margin-bottom: 4px; font-size: var(--font-kicker);">PHONETIC PHENOMENA:</div>
         <div>${this.escape(phoneticsContent)}</div>
       </div>
 
       <!-- Connected-Speech Gap-Fill Console -->
       <div class="connected-speech-gap-card" style="margin-bottom: var(--space-16); padding: 12px 14px; background: var(--bg-surface-sunk); border: 1px solid var(--border-subtle); border-radius: 6px;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-          <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted);">
+          <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">
             CONNECTED-SPEECH GAP-FILL // TYPE THE LINKED PHRASE:
           </span>
         </div>
         <div class="listening-gap-input-row" style="display: flex; gap: 8px; align-items: center;">
-          <input type="text" class="listening-gap-input" placeholder="Type linked words (or select option below)..." autocomplete="off" spellcheck="false" style="flex: 1; padding: 8px 12px; font-family: var(--font-mono); font-size: 13px; background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 4px; color: var(--ink-primary); outline: none;">
-          <button type="button" class="hud-btn btn-verify-gap" style="padding: 8px 14px; font-weight: 700; font-size: 12px; border-color: var(--accent-gold); color: var(--accent-gold);">
+          <input type="text" class="listening-gap-input" placeholder="Type linked words (or select option below)..." autocomplete="off" spellcheck="false" style="flex: 1; padding: 8px 12px; font-family: var(--font-mono); font-size: var(--font-body-compact); background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 4px; color: var(--ink-primary); outline: none;">
+          <button type="button" class="hud-btn btn-verify-gap" style="padding: 8px 14px; font-weight: 700; font-size: var(--font-body-compact); border-color: var(--accent-gold); color: var(--accent-gold);">
             Verify Gap
           </button>
         </div>
-        <div class="listening-gap-feedback" style="display: none; margin-top: 6px; font-family: var(--font-mono); font-size: 11px;"></div>
+        <div class="listening-gap-feedback" style="display: none; margin-top: 6px; font-family: var(--font-mono); font-size: var(--font-kicker);"></div>
       </div>
     `;
 
@@ -508,7 +508,7 @@ export class MultiSkillQuizModal {
 
   private card(inner: string, maxWidth: string = '620px'): void {
     this.overlay.innerHTML = `
-      <div class="completion-receipt-card multi-skill-card" style="max-width: ${maxWidth}; width: 92%; max-height: 90vh; overflow-y: auto;">
+      <div class="completion-receipt-card multi-skill-card" style="max-width: ${maxWidth}; width: 100%; max-height: 90vh; overflow-y: auto;">
         ${inner}
       </div>
     `;
@@ -523,10 +523,10 @@ export class MultiSkillQuizModal {
         <span>INITIATIVE 21 &middot; MULTI-SKILL CEFR DIAGNOSTIC</span>
         <span class="skill-badge-pill">${icon('target', 12)} CELESTIAL RADAR</span>
       </div>
-      <h2 style="font-size: 22px; font-weight: 800; margin: 0 0 var(--space-8) 0; letter-spacing: -0.02em;">
+      <h2 style="font-size: var(--font-h1); font-weight: 800; margin: 0 0 var(--space-8) 0; letter-spacing: -0.02em;">
         Calibrate Your Language Proficiency
       </h2>
-      <p style="font-size: 14px; line-height: 1.6; margin-bottom: var(--space-16); color: var(--ink-secondary);">
+      <p style="font-size: var(--font-h4); line-height: 1.6; margin-bottom: var(--space-16); color: var(--ink-secondary);">
         Unlike traditional single-level tests, language mastery is asymmetric. This diagnostic evaluates
         <strong>5 distinct skills</strong> (Vocabulary, Grammar, Reading, Listening, and Writing) with 3 adaptive questions each
         (<strong>15 questions total &middot; ~2 minutes</strong>).
@@ -648,16 +648,16 @@ export class MultiSkillQuizModal {
         <span class="skill-badge-pill">${icon(stageDef.iconName, 12)} ${stageDef.name} &middot; ${q.level}</span>
       </div>
 
-      <div style="font-size: 13px; color: var(--ink-muted); margin-bottom: var(--space-8); line-height: 1.4;">
+      <div style="font-size: var(--font-body-compact); color: var(--ink-muted); margin-bottom: var(--space-8); line-height: 1.4;">
         ${stageDef.briefing}
       </div>
 
-      <div style="font-size: 17px; font-weight: 700; margin-bottom: var(--space-8); line-height: 1.4;">
+      <div style="font-size: var(--font-h3); font-weight: 700; margin-bottom: var(--space-8); line-height: 1.4;">
         ${this.escape(q.prompt)}
       </div>
 
       ${q.context ? `
-        <div class="quiz-context-box" style="font-size: 14px; line-height: 1.5; color: var(--ink-secondary); padding: 10px 14px; background: var(--bg-surface-sunk); border-left: 3px solid var(--accent-gold); border-radius: 4px; margin-bottom: var(--space-16);">
+        <div class="quiz-context-box" style="font-size: var(--font-h4); line-height: 1.5; color: var(--ink-secondary); padding: 10px 14px; background: var(--bg-surface-sunk); border-left: 3px solid var(--accent-gold); border-radius: 4px; margin-bottom: var(--space-16);">
           ${this.escape(q.context)}
         </div>
       ` : '<div style="margin-bottom: var(--space-12);"></div>'}
@@ -671,17 +671,17 @@ export class MultiSkillQuizModal {
       <div role="group" aria-label="Choose the answer" data-feedback-scope style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8);">
         ${q.options.map((opt, i) => `
           <button class="hud-btn placement-option quiz-option" data-i="${i}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 12px 14px; text-align: left; white-space: normal; height: auto; text-transform: none; line-height: 1.4;">
-            <span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: var(--bg-surface-sunk); color: var(--accent-gold); font-size: 11px; font-weight: 800; margin-right: 10px; flex-shrink: 0;">${i + 1}</span>
+            <span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: var(--bg-surface-sunk); color: var(--accent-gold); font-size: var(--font-kicker); font-weight: 800; margin-right: 10px; flex-shrink: 0;">${i + 1}</span>
             <span>${this.escape(opt)}</span>
           </button>
         `).join('')}
-        <div class="quiz-feedback-slot" data-feedback-slot hidden style="font-size: 14px; line-height: 1.5; color: var(--ink-secondary); padding: 10px 14px; background: var(--bg-surface-sunk); border-left: 3px solid var(--accent-gold); border-radius: 4px;"></div>
+        <div class="quiz-feedback-slot" data-feedback-slot hidden style="font-size: var(--font-h4); line-height: 1.5; color: var(--ink-secondary); padding: 10px 14px; background: var(--bg-surface-sunk); border-left: 3px solid var(--accent-gold); border-radius: 4px;"></div>
       </div>
 
       <!-- Action Strip -->
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: var(--space-16); font-size: 11px; color: var(--ink-muted);">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: var(--space-16); font-size: var(--font-kicker); color: var(--ink-muted);">
         <span>Hotkeys: <strong>1 - 4</strong> to select &middot; <strong>Esc</strong> to exit</span>
-        <button class="hud-btn quiz-skip-stage-btn" style="padding: 4px 10px; font-size: 11px;">
+        <button class="hud-btn quiz-skip-stage-btn" style="padding: 4px 10px; font-size: var(--font-kicker);">
           Skip Stage &rarr;
         </button>
       </div>
@@ -827,10 +827,10 @@ export class MultiSkillQuizModal {
       </div>
 
       <div style="text-align: center; margin-bottom: var(--space-8);">
-        <h2 style="font-size: 24px; font-weight: 800; margin: 0; letter-spacing: -0.02em;">
+        <h2 style="font-size: var(--font-h1); font-weight: 800; margin: 0; letter-spacing: -0.02em;">
           ${CEFR_LABELS[overallLevel]}
         </h2>
-        <p style="font-size: 13px; color: var(--ink-secondary); margin: 4px 0 0 0;">
+        <p style="font-size: var(--font-body-compact); color: var(--ink-secondary); margin: 4px 0 0 0;">
           Multi-skill diagnostic profile calibrated across 5 core language axes.
         </p>
       </div>
@@ -911,7 +911,7 @@ export class MultiSkillQuizModal {
       this.close();
     });
 
-    (this.overlay.querySelector('.btn-apply-profile') as HTMLElement | null)?.focus();
+    (this.overlay.querySelector('.btn-apply-profile') as HTMLElement | null)?.focus({ preventScroll: true });
   }
 
   private applyAndSaveProfile(): void {
@@ -954,8 +954,9 @@ export class MultiSkillQuizModal {
   // =========================================================================
   public static generateRadarSvg(skills: Record<SkillId, Cefr>, size: number = 320): string {
     const cx = 160;
-    const cy = 150;
-    const maxRadius = 100;
+    const cy = 130;
+    const maxRadius = 80;
+    const labelRadius = 104;
 
     // 5 radar axes matching the 5 tested skills
     const axes: Array<{ skill: SkillId; label: string }> = [
@@ -982,7 +983,7 @@ export class MultiSkillQuizModal {
       }).join(' ');
 
       // Tier label placed along the top spoke
-      const labelY = cy - r + 9;
+      const labelY = cy - r + 8;
       return `
         <polygon points="${points}" class="radar-ring radar-ring-${tier}" stroke="var(--ink-muted, #94a3b8)" stroke-width="0.8" stroke-dasharray="2,3" fill="none" opacity="0.35" />
         <text x="${cx + 3}" y="${labelY.toFixed(1)}" class="radar-tier-label" font-size="8" fill="var(--ink-muted, #94a3b8)" opacity="0.7">${tier}</text>
@@ -990,7 +991,6 @@ export class MultiSkillQuizModal {
     }).join('');
 
     // 2. Axis Spoke Lines & Labels
-    const labelRadius = maxRadius + 24;
     const spokesMarkup = axes.map((axis, i) => {
       const angle = getAngle(i);
       const outerX = cx + maxRadius * Math.cos(angle);
@@ -1001,7 +1001,7 @@ export class MultiSkillQuizModal {
 
       return `
         <line x1="${cx}" y1="${cy}" x2="${outerX.toFixed(1)}" y2="${outerY.toFixed(1)}" class="radar-axis-spoke" stroke="var(--ink-muted, #94a3b8)" stroke-width="1" opacity="0.3" />
-        <text x="${textX.toFixed(1)}" y="${textY.toFixed(1)}" class="radar-axis-label" text-anchor="middle" dominant-baseline="central" font-size="9" font-weight="700" letter-spacing="0.06em" fill="var(--ink-secondary, #cbd5e1)">
+        <text x="${textX.toFixed(1)}" y="${textY.toFixed(1)}" class="radar-axis-label" text-anchor="middle" dominant-baseline="central" font-size="8.5" font-weight="700" letter-spacing="0.05em" fill="var(--ink-secondary, #cbd5e1)">
           ${axis.label} (${skillLevel})
         </text>
       `;
@@ -1020,11 +1020,13 @@ export class MultiSkillQuizModal {
     const polygonPtsStr = valuePoints.map(p => p.ptStr).join(' ');
 
     const nodesMarkup = valuePoints.map(p => `
-      <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="4.5" class="radar-node-dot" fill="var(--accent-gold, #a5b4fc)" stroke="var(--bg-canvas, #080a0f)" stroke-width="2" />
+      <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="4" class="radar-node-dot" fill="var(--accent-gold, #a5b4fc)" stroke="var(--bg-canvas, #080a0f)" stroke-width="2" />
     `).join('');
 
+    const svgHeight = Math.round(size * 240 / 320);
+
     return `
-      <svg width="${size}" height="${size}" viewBox="0 0 320 300" class="celestial-radar-svg" role="img" aria-label="Celestial Radar Proficiency Chart">
+      <svg width="${size}" height="${svgHeight}" viewBox="0 0 320 240" class="celestial-radar-svg" role="img" aria-label="Celestial Radar Proficiency Chart">
         <defs>
           <filter id="radar-glow" x="-20%" y="-20%" width="140%" height="140%">
             <feGaussianBlur stdDeviation="3.5" result="blur" />
@@ -1039,7 +1041,7 @@ export class MultiSkillQuizModal {
         <!-- Axis Spokes -->
         ${spokesMarkup}
         <!-- Learner Calibrated Filled Polygon -->
-        <polygon points="${polygonPtsStr}" class="radar-value-polygon" fill="rgba(56, 189, 248, 0.25)" stroke="var(--cyan, #38bdf8)" stroke-width="2.5" filter="url(#radar-glow)" />
+        <polygon points="${polygonPtsStr}" class="radar-value-polygon" fill="rgba(165, 180, 252, 0.25)" stroke="var(--accent-gold, #a5b4fc)" stroke-width="2.5" filter="url(#radar-glow)" />
         <!-- Node Dots -->
         ${nodesMarkup}
       </svg>

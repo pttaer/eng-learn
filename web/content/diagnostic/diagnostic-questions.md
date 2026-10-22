@@ -117,8 +117,8 @@ Tài liệu này cung cấp ma trận 30 câu hỏi thẩm định chuẩn hóa 
       "She every morning drinks in the garden tea."
     ],
     "answer": 0,
-    "explanation": "Standard declarative word order requires Subject (She) + Verb (drinks) + Object (tea) + Place (in the garden) + Time (every morning).",
-    "vietnamese": "Trật tự câu chuẩn trong tiếng Anh: Chủ ngữ (She) + Động từ (drinks) + Tân ngữ (tea) + Nơi chốn (in the garden) + Thời gian (every morning)."
+    "explanation": "Typical declarative word order is Subject (She) + Verb (drinks) + Object (tea) + Place (in the garden) + Time (every morning). 'Every morning in the garden' would also sound natural, but the other options break the basic Subject + Verb + Object order.",
+    "vietnamese": "Trật tự câu điển hình trong tiếng Anh: Chủ ngữ (She) + Động từ (drinks) + Tân ngữ (tea) + Nơi chốn (in the garden) + Thời gian (every morning)."
   },
   {
     "id": "diag-a2-vocab",
@@ -126,16 +126,16 @@ Tài liệu này cung cấp ma trận 30 câu hỏi thẩm định chuẩn hóa 
     "skill": "vocab",
     "stage": 1,
     "prompt": "Choose the word that best fits the travel context:",
-    "context": "We arrived late at the airport because our flight was ______ by two hours due to dense fog.",
+    "context": "Our flight was ______ by two hours because of fog.",
     "options": [
       "cancelled",
       "delayed",
-      "rerouted",
-      "diverted"
+      "missed",
+      "finished"
     ],
     "answer": 1,
-    "explanation": "A flight is delayed when bad weather pushes back its departure time. 'Cancelled' means the flight was called off entirely, while 'rerouted' and 'diverted' mean taking another path or landing at a different airport.",
-    "vietnamese": "Chúng tôi đến sân bay muộn vì chuyến bay bị hoãn hai tiếng do sương mù dày. 'Delayed' nghĩa là bị lùi giờ bay, khác với 'cancelled' là bị hủy chuyến hoàn toàn."
+    "explanation": "A flight is delayed when it leaves later than planned, here by two hours because of fog. 'Cancelled' means the flight does not go at all, 'missed' is what a passenger does, and 'finished' does not describe a flight that has not left yet.",
+    "vietnamese": "Chuyến bay của chúng tôi bị hoãn hai tiếng vì sương mù. 'Delayed' nghĩa là bị lùi giờ bay, khác với 'cancelled' là bị hủy chuyến hoàn toàn."
   },
   {
     "id": "diag-a2-colloc",
@@ -169,7 +169,7 @@ Tài liệu này cung cấp ma trận 30 câu hỏi thẩm định chuẩn hóa 
     ],
     "answer": 3,
     "explanation": "The phrase 'Yesterday morning' marks a finished past event, so it takes the past simple 'left'. The other choices use present or present perfect forms.",
-    "vietnamese": "Sáng hôm qua, cô ấy để quên chìa khóa trên bàn ăn trước khi đi làm. Trạng từ thời gian trong quá khứ 'Yesterday morning' yêu cầu dùng thì quá khứ đơn (left)."
+    "vietnamese": "Sáng hôm qua, cô ấy để chìa khóa trên bàn ăn trước khi ra khỏi nhà. Trạng từ thời gian trong quá khứ 'Yesterday morning' yêu cầu dùng thì quá khứ đơn (left)."
   },
   {
     "id": "diag-a2-read",
@@ -180,12 +180,12 @@ Tài liệu này cung cấp ma trận 30 câu hỏi thẩm định chuẩn hóa 
     "context": "Walking to work takes twenty minutes longer than taking the bus, but Sarah prefers it. She feels more energetic during morning meetings and saves ten dollars every week. Question: What advantage does walking provide to Sarah?",
     "options": [
       "She spends less time commuting",
-      "She experiences higher energy levels for work",
-      "The bus ticket price increased dramatically",
+      "She feels more energetic at work",
+      "The bus ticket became more expensive",
       "She has time to buy breakfast"
     ],
     "answer": 1,
-    "explanation": "The passage explains that walking makes her feel more energetic during morning meetings, meaning it provides her with higher energy levels for work. Option 0 contradicts the text (it takes 20 minutes longer), while options 2 and 3 are never mentioned.",
+    "explanation": "The passage says walking makes her feel more energetic during morning meetings. 'She spends less time commuting' contradicts the text (walking takes twenty minutes longer), and the bus ticket price and breakfast are never mentioned.",
     "vietnamese": "Dù đi bộ mất nhiều thời gian hơn xe buýt, Sarah thấy tỉnh táo và giàu năng lượng hơn trong các cuộc họp sáng, đồng thời tiết kiệm được tiền xe."
   },
   {
@@ -228,7 +228,7 @@ Tài liệu này cung cấp ma trận 30 câu hỏi thẩm định chuẩn hóa 
     "skill": "collocation",
     "stage": 1,
     "prompt": "Choose the word that best fits the sentence:",
-    "context": "Solar power has become a ______ option for developing regions seeking to reduce carbon emissions without compromising energy security.",
+    "context": "Solar power is a ______ option for many countries that want to make cleaner energy.",
     "options": [
       "reluctant",
       "punctual",
@@ -237,7 +237,7 @@ Tài liệu này cung cấp ma trận 30 câu hỏi thẩm định chuẩn hóa 
     ],
     "answer": 2,
     "explanation": "'A viable option' means one that can really work. 'Reluctant', 'punctual' and 'willing' describe people, not options: a person can be willing, but an option cannot.",
-    "vietnamese": "Điện mặt trời đã trở thành một phương án khả thi ('viable option') cho các quốc gia đang phát triển muốn giảm phát thải carbon mà vẫn bảo đảm an ninh năng lượng."
+    "vietnamese": "Điện mặt trời là một phương án khả thi ('viable option') cho nhiều quốc gia muốn sản xuất năng lượng sạch hơn."
   },
   {
     "id": "diag-b1-gram",
@@ -261,17 +261,17 @@ Tài liệu này cung cấp ma trận 30 câu hỏi thẩm định chuẩn hóa 
     "level": "B1",
     "skill": "reading",
     "stage": 3,
-    "prompt": "Read the excerpt and determine the author's primary argument:",
-    "context": "Many language learners obsess over achieving an indistinguishable native accent, often spending hundreds of hours on minute vowel nuances. Yet international communication prioritizes acoustic clarity and mutual intelligibility over regional mimicry. Question: What is the author's core thesis regarding accent training?",
+    "prompt": "Read the text and choose the author's main idea:",
+    "context": "Many language learners try very hard to sound exactly like a native speaker. They spend hundreds of hours on small differences in vowel sounds. But in international communication, speaking clearly so that people understand you is more important than copying a native accent. Question: What is the author's main idea about accent training?",
     "options": [
-      "Learners should spend more time perfecting individual vowels",
-      "Clear communication is more important than mimicking a native accent",
-      "Regional accents inevitably prevent mutual understanding",
-      "Native-like pronunciation is required for professional success"
+      "Learners should spend more time on small vowel sounds",
+      "Clear communication is more important than copying a native accent",
+      "Regional accents always stop people understanding each other",
+      "You need a native-like accent to succeed at work"
     ],
     "answer": 1,
-    "explanation": "The author argues that being understood matters more than copying a native accent: communication favors 'acoustic clarity and mutual intelligibility over regional mimicry'.",
-    "vietnamese": "Tác giả khẳng định: trong giao tiếp quốc tế, nói rõ ràng để đôi bên hiểu nhau quan trọng hơn nhiều so với việc tốn hàng trăm giờ cố bắt chước y hệt ngữ điệu bản xứ."
+    "explanation": "The author says that being understood matters more than copying a native accent: speaking clearly 'is more important than copying a native accent'.",
+    "vietnamese": "Tác giả khẳng định: trong giao tiếp quốc tế, nói rõ ràng để đôi bên hiểu nhau quan trọng hơn nhiều so với việc tốn hàng trăm giờ cố bắt chước y hệt giọng bản xứ."
   },
   {
     "id": "diag-b1-write",
@@ -287,7 +287,7 @@ Tài liệu này cung cấp ma trận 30 câu hỏi thẩm định chuẩn hóa 
       "The company's financial losses caused them to make a reduction decision for their staff numbers."
     ],
     "answer": 2,
-    "explanation": "Option 2 replaces the wordy 'Due to the fact that' with 'Because', and swaps the phrase 'made a decision to reduce' for the direct verb 'decided to downsize'.",
+    "explanation": "'Because the company suffered severe financial losses, it decided to downsize its staff.' replaces the wordy 'Due to the fact that' with 'Because', and swaps the phrase 'made a decision to reduce' for the direct verb 'decided to downsize'.",
     "vietnamese": "Dùng liên từ 'Because' ngắn gọn thay cho cụm rườm rà 'Due to the fact that', đồng thời dùng động từ trực tiếp 'decided to downsize' thay vì cụm danh từ hóa dài dòng 'made a decision to reduce'."
   },
   {
@@ -329,17 +329,17 @@ Tài liệu này cung cấp ma trận 30 câu hỏi thẩm định chuẩn hóa 
     "level": "B2",
     "skill": "grammar",
     "stage": 2,
-    "prompt": "Choose the correct word order to complete the sentence:",
-    "context": "Seldom ______ such fierce resistance from shareholders during annual meetings.",
+    "prompt": "Choose the correct verb form:",
+    "context": "If the managers ______ the warning signs earlier, the company would have avoided last year's financial crisis.",
     "options": [
-      "the executive team encountered",
-      "did the executive team encounter",
-      "had the executive team encounter",
-      "the executives encountering"
+      "noticed",
+      "had noticed",
+      "would have noticed",
+      "would notice"
     ],
     "answer": 1,
-    "explanation": "Starting a sentence with the negative adverb 'Seldom' requires inversion: auxiliary 'did' + subject + base verb 'encounter'.",
-    "vietnamese": "Hiếm khi ban giám đốc vấp phải sự phản đối gay gắt đến vậy từ các cổ đông. Khi trạng từ phủ định 'Seldom' đứng đầu câu để nhấn mạnh, ta phải đảo trợ động từ lên trước chủ ngữ: 'Seldom did the executive team encounter'."
+    "explanation": "The main clause has 'would have avoided', so the if-clause takes the past perfect 'had noticed' to talk about an unreal past situation (third conditional). 'Would have noticed' cannot go in an if-clause, and 'noticed' and 'would notice' point to the present or future.",
+    "vietnamese": "Nếu các quản lý nhận ra những dấu hiệu cảnh báo sớm hơn, công ty đã tránh được cuộc khủng hoảng tài chính năm ngoái. Mệnh đề chính dùng 'would have avoided' nên vế 'if' dùng thì quá khứ hoàn thành (had noticed) để diễn tả điều kiện trái với sự thật trong quá khứ (câu điều kiện loại 3)."
   },
   {
     "id": "diag-b2-read",
@@ -347,16 +347,16 @@ Tài liệu này cung cấp ma trận 30 câu hỏi thẩm định chuẩn hóa 
     "skill": "reading",
     "stage": 3,
     "prompt": "Read the analysis and identify the hidden drawback described:",
-    "context": "The rapid decentralization of corporate teams has accelerated asynchronous collaboration tools, enabling global talent acquisition. However, it has simultaneously eroded tacit knowledge transfer (the spontaneous exchanges by the watercooler that historically sparked unexpected innovations). Question: What hidden drawback of asynchronous work does the author highlight?",
+    "context": "As teams spread out across the world, many companies now use tools that let people work at different times (asynchronous work). This helps them hire talented people from anywhere. However, it has also reduced the casual chats by the watercooler, where colleagues used to share know-how and spark unexpected ideas. Question: What hidden drawback of asynchronous work does the author highlight?",
     "options": [
-      "An inability to recruit specialized international talent",
-      "Higher administrative costs of enterprise software licenses",
-      "The loss of spontaneous informal knowledge sharing",
-      "Decreased velocity in routine digital communications"
+      "Companies cannot hire skilled people from other countries",
+      "The software costs companies more money",
+      "Less casual sharing of knowledge and ideas",
+      "Everyday messages take longer to send"
     ],
     "answer": 2,
-    "explanation": "The author notes that remote work weakens tacit knowledge transfer, the spontaneous hallway conversations that often spark creative ideas.",
-    "vietnamese": "Tác giả chỉ ra điểm bất lợi của làm việc từ xa bất đối xứng: làm mất đi những cuộc trò chuyện tình cờ nơi công sở — vốn là cách mọi người chia sẻ kinh nghiệm thực tế và nảy ra những ý tưởng sáng tạo bất ngờ."
+    "explanation": "The author notes that remote work reduces the casual chats where people share know-how and spark new ideas.",
+    "vietnamese": "Tác giả chỉ ra điểm bất lợi của làm việc không đồng bộ (asynchronous): làm mất đi những cuộc trò chuyện tình cờ nơi công sở — vốn là cách mọi người chia sẻ kinh nghiệm thực tế và nảy ra những ý tưởng sáng tạo bất ngờ."
   },
   {
     "id": "diag-b2-write",
@@ -400,13 +400,13 @@ Tài liệu này cung cấp ma trận 30 câu hỏi thẩm định chuẩn hóa 
     "prompt": "Choose the verb that naturally completes the academic collocation:",
     "context": "The newly released archival documents ______ considerable credence to the historian's controversial hypothesis.",
     "options": [
-      "grant",
+      "pay",
       "lend",
-      "yield",
-      "accord"
+      "raise",
+      "hold"
     ],
     "answer": 1,
-    "explanation": "'Lend credence to' is the standard phrase for making an idea or claim more believable. Words like 'grant' or 'accord' can mean giving, but they do not pair with 'credence'.",
+    "explanation": "'Lend credence to' is the standard phrase for making an idea or claim more believable. 'Pay', 'raise' and 'hold' do not pair with 'credence'.",
     "vietnamese": "Tài liệu lưu trữ mới công bố đã tăng thêm sức thuyết phục ('lend credence to') cho giả thuyết vốn gây nhiều tranh cãi của nhà sử học."
   },
   {
@@ -424,7 +424,7 @@ Tài liệu này cung cấp ma trận 30 câu hỏi thẩm định chuẩn hóa 
     ],
     "answer": 2,
     "explanation": "Verbs of recommendation such as 'recommend that' take the subjunctive in the that-clause, using the base form 'disclose' regardless of the subject or tense.",
-    "vietnamese": "Ủy ban quản lý yêu cầu hãng dược phải công khai ngay dữ liệu thử nghiệm lâm sàng. Với thức giả định (subjunctive) sau các động từ như 'recommend that', động từ trong mệnh đề phụ luôn ở dạng nguyên thể không chia ('disclose'), bất kể chủ ngữ là số ít hay số nhiều."
+    "vietnamese": "Ủy ban quản lý đề nghị hãng dược công khai ngay dữ liệu thử nghiệm lâm sàng. Với thức giả định (subjunctive) sau các động từ như 'recommend that', động từ trong mệnh đề phụ luôn ở dạng nguyên thể không chia ('disclose'), bất kể chủ ngữ là số ít hay số nhiều."
   },
   {
     "id": "diag-c1-read",
@@ -449,16 +449,16 @@ Tài liệu này cung cấp ma trận 30 câu hỏi thẩm định chuẩn hóa 
     "skill": "writing",
     "stage": 5,
     "prompt": "Choose the revision demonstrating superior periodic cadence and rhetorical focus for academic prose:",
-    "context": "Which revision best subordinates background context to deliver emphatic focus on the principal finding?",
+    "context": "Which revision puts the background concession in a subordinate clause at the start, so the principal finding comes last and carries the emphasis?",
     "options": [
       "Although initial telemetry indicated minor orbital decay, subsequent calculations confirmed that the satellite had reached stable equilibrium.",
       "Initial telemetry indicated minor orbital decay, but subsequent calculations confirmed that the satellite had reached stable equilibrium.",
-      "Subsequent calculations confirmed that the satellite reached stable equilibrium, even though initial telemetry indicated minor orbital decay.",
+      "Subsequent calculations confirmed that the satellite had reached stable equilibrium, and initial telemetry had indicated minor orbital decay.",
       "Subsequent calculations confirmed the satellite's stable equilibrium, initial telemetry having shown minor orbital decay beforehand."
     ],
     "answer": 0,
-    "explanation": "Putting the concession first with 'Although' keeps the background detail secondary and lets the main finding (stable equilibrium) carry the emphasis at the end of the sentence.",
-    "vietnamese": "Đưa mệnh đề nhượng bộ lên đầu câu ('Although...') giúp nén thông tin nền xuống hàng thứ yếu, từ đó làm nổi bật kết luận quan trọng nhất ở mệnh đề chính: vệ tinh đã đạt quỹ đạo ổn định."
+    "explanation": "Putting the concession first with 'Although' keeps the background detail secondary and lets the main finding (stable equilibrium) carry the emphasis at the end of the sentence. The coordinated 'but' and 'and' versions give both facts equal weight.",
+    "vietnamese": "Đưa mệnh đề nhượng bộ lên đầu câu ('Although...') giúp nén thông tin nền xuống hàng thứ yếu, từ đó làm nổi bật kết luận quan trọng nhất ở mệnh đề chính: vệ tinh đã đạt trạng thái cân bằng ổn định."
   },
   {
     "id": "diag-c2-vocab",
@@ -508,7 +508,7 @@ Tài liệu này cung cấp ma trận 30 câu hỏi thẩm định chuẩn hóa 
       "equity prices plummeting"
     ],
     "answer": 3,
-    "explanation": "The clause uses an absolute construction: a noun phrase ('equity prices') and a participle ('plummeting') describing what happened alongside the rate hike. Option 0 lacks a finite verb, option 1 misuses an infinitive, and option 2 creates a comma splice.",
+    "explanation": "The clause uses an absolute construction: a noun phrase ('equity prices') and a participle ('plummeting') describing what happened alongside the rate hike. 'as equity prices plummeting' lacks a finite verb, 'with equity prices to plummet' misuses an infinitive, and 'equity prices had plummeted' creates a comma splice.",
     "vietnamese": "Ngân hàng trung ương bất ngờ tăng lãi suất điều hành, khiến giá cổ phiếu lao dốc xuống mức thấp nhất trong mười năm. Cụm tuyệt đối (nominative absolute) 'equity prices plummeting' bổ nghĩa tình huống đi kèm cho mệnh đề chính mà không cần liên từ hay to-be."
   },
   {
@@ -542,8 +542,8 @@ Tài liệu này cung cấp ma trận 30 câu hỏi thẩm định chuẩn hóa 
       "Because architects design with calculated foresight, citizens inhabit spaces of enduring harmony."
     ],
     "answer": 1,
-    "explanation": "Option 1 exemplifies chiasmus: the conceptual structure 'shape (A) ... dwellings (B)' is inverted in the second clause as 'dwellings (B) ... shape (A)'. Option 0 illustrates epistrophe/parallelism ('through sacrifice ... through vigilance'); option 2 is a simple antithetical comparison; option 3 is a causal complex sentence.",
-    "vietnamese": "Câu 2 vận dụng chuẩn xác phép đảo ngữ chiasmus (kết cấu ABBA): vế đầu là 'nhào nặn công trình' (shape ... dwellings), vế sau đảo ngược lại thành 'công trình nhào nặn' (dwellings shape ... lives)."
+    "explanation": "'We shape our architectural dwellings, and afterwards our dwellings shape our civic lives.' is chiasmus: the order 'shape (A) ... dwellings (B)' is reversed in the second clause as 'dwellings (B) ... shape (A)'. The sentence with 'through sacrifice ... through vigilance' is parallelism; the 'While our buildings are erected' sentence is a simple antithetical comparison; the 'Because architects design' sentence is a causal complex sentence.",
+    "vietnamese": "Câu 'We shape our architectural dwellings, and afterwards our dwellings shape our civic lives' vận dụng phép đối xứng chéo (chiasmus, kết cấu ABBA): vế đầu là 'nhào nặn công trình' (shape ... dwellings), vế sau đảo ngược lại thành 'công trình nhào nặn' (dwellings shape ... lives)."
   }
 ]
 ```

@@ -282,7 +282,7 @@ export class ExamCockpitDossier {
           aria-selected="${this.mobileActiveTab === 'passage'}"
           aria-controls="cd-left-pane"
         >
-          📖 Reading Passage
+          ${icon('book', 14)} Reading Passage
         </button>
         <button 
           type="button" 
@@ -292,7 +292,7 @@ export class ExamCockpitDossier {
           aria-selected="${this.mobileActiveTab === 'questions'}"
           aria-controls="cd-right-pane"
         >
-          📝 Questions (1-40)
+          ${icon('edit', 14)} Questions (1-40)
         </button>
       </nav>
 
@@ -349,7 +349,7 @@ export class ExamCockpitDossier {
         title="Flip between passage and questions"
         aria-label="${this.mobileActiveTab === 'passage' ? 'Switch to Questions' : 'Switch to Passage'}"
       >
-        <span class="fab-icon">⚡</span>
+        <span class="fab-icon">${icon('zap', 14)}</span>
         <span class="fab-label">${this.mobileActiveTab === 'passage' ? 'Switch to Questions' : 'Switch to Passage'}</span>
       </button>
 
@@ -544,7 +544,7 @@ export class ExamCockpitDossier {
           ` : ''}
           ${q.isFlagged ? '<span class="cd-flagged-tag">🚩 Flagged for review</span>' : ''}
           ${this.isReviewMode ? `
-            <span class="cd-review-badge ${isCorrect ? 'is-correct' : 'is-incorrect'}" style="font-weight: 700; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: ${isCorrect ? 'rgba(16,185,129,0.2)' : 'rgba(239,68,68,0.2)'}; color: ${isCorrect ? '#10b981' : '#ef4444'};">
+            <span class="cd-review-badge ${isCorrect ? 'is-correct' : 'is-incorrect'}" style="font-weight: 700; font-size: var(--font-kicker); padding: 2px 8px; border-radius: 4px; background: ${isCorrect ? 'rgba(16,185,129,0.2)' : 'rgba(239,68,68,0.2)'}; color: ${isCorrect ? '#10b981' : '#ef4444'};">
               ${isCorrect ? '✓ Correct' : '✗ Incorrect'}
             </span>
           ` : ''}
@@ -588,7 +588,7 @@ export class ExamCockpitDossier {
             <div style="font-weight: 700; margin-bottom: 4px; color: ${isCorrect ? '#10b981' : '#ef4444'};">
               ${isCorrect ? '✓ Verified Against Text' : `✗ Correct Answer: "${this.escapeHtml(q.correctAnswer || '')}"`}
             </div>
-            <div style="font-size: 12px; color: var(--ink-secondary); line-height: 1.5;">
+            <div style="font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">
               ${this.escapeHtml(q.explanation || 'Refer to the referenced paragraph in the passage for the contextual rationale.')}
             </div>
           </div>
@@ -1181,7 +1181,7 @@ export class ExamCockpitDossier {
     modal.innerHTML = `
       <div class="completion-receipt-card cd-submit-modal-card">
         <div class="telemetry-label">[ OFFICIAL EXAM SUBMISSION SUMMARY ]</div>
-        <h2 style="font-family: var(--font-mono); font-size: 18px; font-weight: 700; margin: 12px 0;">
+        <h2 style="font-family: var(--font-mono); font-size: var(--font-h3); font-weight: 700; margin: 12px 0;">
           Review Before Final Lock
         </h2>
 
@@ -1191,8 +1191,8 @@ export class ExamCockpitDossier {
           <div style="color: var(--accent-gold);"><strong>${flaggedCount}</strong> Flagged</div>
         </div>
 
-        <p style="font-size: 13px; color: var(--ink-muted); margin-bottom: 20px;">
-          Are you sure you want to end this test? Once submitted, your answers will be sealed and graded against the official Cambridge 9.0 Band Scale.
+        <p style="font-size: var(--font-body-compact); color: var(--ink-muted); margin-bottom: 20px;">
+          Are you sure you want to end this test? Once submitted, your answers will be sealed and graded against the 9.0 band scale.
         </p>
 
         <div style="display: flex; gap: 12px;">
@@ -1318,7 +1318,7 @@ export class ExamCockpitDossier {
     modal.className = 'completion-modal-overlay interactive cd-band-modal-overlay';
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-modal', 'true');
-    modal.setAttribute('aria-label', 'Official Cambridge Band Score Report');
+    modal.setAttribute('aria-label', 'Band Score Report');
 
     const needlePos = Math.min(100, Math.max(0, (data.bandScore / 9.0) * 100));
 
@@ -1331,15 +1331,15 @@ export class ExamCockpitDossier {
 
         <div class="cd-band-header-badge">
           <div>
-            <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-secondary);">OFFICIAL RESULT</div>
+            <div style="font-size: var(--font-kicker); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-secondary);">OFFICIAL RESULT</div>
             <div class="cd-band-number">BAND ${data.bandScore.toFixed(1)}</div>
-            <div style="font-size: 13px; font-weight: 700; color: var(--accent-gold); margin-top: 2px;">${data.descriptor}</div>
+            <div style="font-size: var(--font-body-compact); font-weight: 700; color: var(--accent-gold); margin-top: 2px;">${data.descriptor}</div>
           </div>
           <div style="text-align: right;">
-            <span class="hud-pill" style="font-size: 14px; font-weight: 800; padding: 4px 10px; background: var(--accent-cyan); color: #080a0f; border-radius: 4px;">
+            <span class="hud-pill" style="font-size: var(--font-h4); font-weight: 800; padding: 4px 10px; background: var(--accent-cyan); color: #080a0f; border-radius: 4px;">
               CEFR ${data.cefr}
             </span>
-            <div style="font-size: 12px; margin-top: 6px; font-family: var(--font-mono); color: var(--ink-primary); font-weight: 700;">
+            <div style="font-size: var(--font-body-compact); margin-top: 6px; font-family: var(--font-mono); color: var(--ink-primary); font-weight: 700;">
               ${data.rawScore} / 40 Raw (${data.pct}%)
             </div>
           </div>
@@ -1347,7 +1347,7 @@ export class ExamCockpitDossier {
 
         <!-- Visual Cambridge Band Gauge -->
         <div style="margin: 16px 0 24px;">
-          <div style="display: flex; justify-content: space-between; font-size: 11px; font-family: var(--font-mono); color: var(--ink-muted); margin-bottom: 4px;">
+          <div style="display: flex; justify-content: space-between; font-size: var(--font-kicker); font-family: var(--font-mono); color: var(--ink-muted); margin-bottom: 4px;">
             <span>Band 0.0</span>
             <span>Band 5.0</span>
             <span>Band 6.5</span>
@@ -1362,24 +1362,24 @@ export class ExamCockpitDossier {
         <!-- 3-Passage Breakdown -->
         <div class="cd-breakdown-grid">
           <div class="cd-breakdown-card">
-            <div style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">PASSAGE 1</div>
-            <div style="font-size: 16px; font-weight: 800; font-family: var(--font-mono); margin: 4px 0;">${data.p1Correct} / 13</div>
-            <div style="font-size: 11px; color: var(--accent-cyan); font-weight: 600;">${Math.round((data.p1Correct / 13) * 100)}%</div>
+            <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted);">PASSAGE 1</div>
+            <div style="font-size: var(--font-body); font-weight: 800; font-family: var(--font-mono); margin: 4px 0;">${data.p1Correct} / 13</div>
+            <div style="font-size: var(--font-kicker); color: var(--accent-cyan); font-weight: 600;">${Math.round((data.p1Correct / 13) * 100)}%</div>
           </div>
           <div class="cd-breakdown-card">
-            <div style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">PASSAGE 2</div>
-            <div style="font-size: 16px; font-weight: 800; font-family: var(--font-mono); margin: 4px 0;">${data.p2Correct} / 13</div>
-            <div style="font-size: 11px; color: var(--accent-cyan); font-weight: 600;">${Math.round((data.p2Correct / 13) * 100)}%</div>
+            <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted);">PASSAGE 2</div>
+            <div style="font-size: var(--font-body); font-weight: 800; font-family: var(--font-mono); margin: 4px 0;">${data.p2Correct} / 13</div>
+            <div style="font-size: var(--font-kicker); color: var(--accent-cyan); font-weight: 600;">${Math.round((data.p2Correct / 13) * 100)}%</div>
           </div>
           <div class="cd-breakdown-card">
-            <div style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">PASSAGE 3</div>
-            <div style="font-size: 16px; font-weight: 800; font-family: var(--font-mono); margin: 4px 0;">${data.p3Correct} / 14</div>
-            <div style="font-size: 11px; color: var(--accent-cyan); font-weight: 600;">${Math.round((data.p3Correct / 14) * 100)}%</div>
+            <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted);">PASSAGE 3</div>
+            <div style="font-size: var(--font-body); font-weight: 800; font-family: var(--font-mono); margin: 4px 0;">${data.p3Correct} / 14</div>
+            <div style="font-size: var(--font-kicker); color: var(--accent-cyan); font-weight: 600;">${Math.round((data.p3Correct / 14) * 100)}%</div>
           </div>
         </div>
 
         <!-- Question Types Breakdown -->
-        <div style="display: flex; justify-content: space-around; font-size: 12px; font-family: var(--font-mono); padding: 8px 12px; background: var(--bg-surface-sunk); border-radius: 4px; margin-bottom: 20px;">
+        <div style="display: flex; justify-content: space-around; font-size: var(--font-body-compact); font-family: var(--font-mono); padding: 8px 12px; background: var(--bg-surface-sunk); border-radius: 4px; margin-bottom: 20px;">
           <div>TFNG: <strong>${data.tfngCorrect}/13</strong></div>
           <div>MCQ: <strong>${data.mcqCorrect}/13</strong></div>
           <div>Gap: <strong>${data.gapCorrect}/14</strong></div>
@@ -1388,10 +1388,10 @@ export class ExamCockpitDossier {
         <!-- Action Buttons -->
         <div style="display: flex; gap: 10px;">
           <button class="hud-btn btn-review-exam" style="flex: 1; justify-content: center; min-height: 44px; font-weight: 700; background: var(--accent-cyan); color: #080a0f;">
-            [ 🔍 REVIEW TEST WITH ANSWERS ]
+            ${icon('search', 14)} <span style="margin-left: 6px;">REVIEW TEST WITH ANSWERS</span>
           </button>
           <button class="hud-btn btn-retake-exam" style="flex: 1; justify-content: center; min-height: 44px; font-weight: 700;">
-            [ 🔄 RETAKE TEST ]
+            ${icon('rotateCcw', 14)} <span style="margin-left: 6px;">RETAKE TEST</span>
           </button>
           <button class="hud-btn btn-close-report" style="padding: 0 16px; justify-content: center; min-height: 44px;">
             Close

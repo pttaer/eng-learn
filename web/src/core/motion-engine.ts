@@ -1,7 +1,8 @@
-import anime from 'animejs';
+import { animate, createTimeline, spring, stagger, svg, utils } from 'animejs';
+import type { JSAnimation, Timeline } from 'animejs';
 
 export class MotionEngine {
-  private static activeAnimations: anime.AnimeInstance[] = [];
+  private static activeAnimations: JSAnimation[] = [];
 
   public static isReducedMotion(): boolean {
     if (typeof document === 'undefined') return false;
@@ -13,9 +14,9 @@ export class MotionEngine {
   }
 
   /**
-   * Procedurally draws SVG line filaments using strokeDashoffset
+   * Procedurally draws SVG line filaments using svg.createDrawable
    */
-  public static drawSvgLines(targets: string | NodeList | SVGElement[]): anime.AnimeInstance | null {
+  public static drawSvgLines(targets: string | NodeList | SVGElement[]): JSAnimation | null {
     if (this.isReducedMotion()) return null;
 
     try {
@@ -25,12 +26,11 @@ export class MotionEngine {
         if (elements.length === 0) return null;
       }
 
-      const anim = anime({
-        targets: elements,
-        strokeDashoffset: [anime.setDashoffset, 0],
-        easing: 'easeInOutSine',
+      const anim = animate(svg.createDrawable(elements), {
+        draw: ['0 0', '0 1'],
+        ease: 'inOutSine',
         duration: 1200,
-        delay: (_el: any, i: number) => i * 45
+        delay: stagger(45)
       });
 
       this.trackAnimation(anim);
@@ -41,24 +41,26 @@ export class MotionEngine {
   }
 
   /**
-   * Cascading elastic node entrances
+   * Cascading elastic node entrances, in the order given
    */
   public static staggerEntrance(
     targets: string | NodeList | HTMLElement[] | SVGElement[],
-    options: { from?: 'bottom' | 'center' | 'first' | 'last'; delayStep?: number } = {}
-  ): anime.AnimeInstance | null {
+    options: { delayStep?: number } = {}
+  ): JSAnimation | null {
     if (this.isReducedMotion()) return null;
 
-    const fromVal = options.from || 'bottom';
     const delayStep = options.delayStep || 35;
 
-    const anim = anime({
-      targets,
+    const anim = animate(targets, {
       scale: [0.3, 1],
       opacity: [0, 1],
-      easing: 'easeOutElastic(1, 0.75)',
+      ease: 'outElastic(1, .75)',
       duration: 850,
-      delay: anime.stagger(delayStep, { from: fromVal as any })
+      delay: stagger(delayStep),
+      onComplete: () => {
+        const els = typeof targets === 'string' ? document.querySelectorAll<HTMLElement>(targets) : targets;
+        Array.from(els as ArrayLike<HTMLElement>).forEach(el => el.style.removeProperty('opacity'));
+      }
     });
 
     this.trackAnimation(anim);
@@ -74,20 +76,19 @@ export class MotionEngine {
     endVal: number,
     suffix: string = '',
     duration: number = 800
-  ): anime.AnimeInstance | null {
+  ): JSAnimation | null {
     if (this.isReducedMotion()) {
       targetEl.textContent = `${Math.round(endVal)}${suffix}`;
       return null;
     }
 
     const obj = { val: startVal };
-    const anim = anime({
-      targets: obj,
+    const anim = animate(obj, {
       val: endVal,
-      round: 1,
-      easing: 'easeOutExpo',
+      modifier: (v: number) => Math.round(v),
+      ease: 'outExpo',
       duration,
-      update: () => {
+      onUpdate: () => {
         targetEl.textContent = `${obj.val}${suffix}`;
       }
     });
@@ -99,29 +100,28 @@ export class MotionEngine {
   /**
    * Fluid spring modal reveal (Backdrop fade + card scale-up)
    */
-  public static springModal(modalEl: HTMLElement, cardEl: HTMLElement): anime.AnimeTimelineInstance {
+  public static springModal(modalEl: HTMLElement, cardEl: HTMLElement): Timeline {
     if (this.isReducedMotion()) {
       modalEl.style.opacity = '1';
       cardEl.style.transform = 'none';
-      return anime.timeline();
+      return createTimeline();
     }
 
-    const tl = anime.timeline({
-      easing: 'easeOutCubic'
+    const tl = createTimeline({
+      defaults: { ease: 'outCubic' }
     });
 
-    tl.add({
-      targets: modalEl,
+    tl.add(modalEl, {
       opacity: [0, 1],
       duration: 180
     }).add(
+      cardEl,
       {
-        targets: cardEl,
-        translateY: [24, 0],
+        y: [24, 0],
         scale: [0.94, 1],
         opacity: [0, 1],
         duration: 360,
-        easing: 'easeOutBack'
+        ease: 'outBack'
       },
       '-=100'
     );
@@ -132,7 +132,7 @@ export class MotionEngine {
   /**
    * Spatial page/card entrance transition
    */
-  public static fadeSlideIn(targetEl: HTMLElement, direction: 'up' | 'down' = 'up'): anime.AnimeInstance | null {
+  public static fadeSlideIn(targetEl: HTMLElement, direction: 'up' | 'down' = 'up'): JSAnimation | null {
     if (this.isReducedMotion()) {
       targetEl.style.opacity = '1';
       targetEl.style.transform = 'none';
@@ -140,11 +140,10 @@ export class MotionEngine {
     }
 
     const yOffset = direction === 'up' ? [20, 0] : [-20, 0];
-    const anim = anime({
-      targets: targetEl,
-      translateY: yOffset,
+    const anim = animate(targetEl, {
+      y: yOffset,
       opacity: [0, 1],
-      easing: 'easeOutQuart',
+      ease: 'outQuart',
       duration: 460
     });
 
@@ -155,15 +154,14 @@ export class MotionEngine {
   /**
    * Soft staggered rise for cards and list items
    */
-  public static riseIn(targets: string | NodeList | HTMLElement[], delayStep = 45): anime.AnimeInstance | null {
+  public static riseIn(targets: string | NodeList | HTMLElement[], delayStep = 45): JSAnimation | null {
     if (this.isReducedMotion()) return null;
-    const anim = anime({
-      targets,
-      translateY: [14, 0],
+    const anim = animate(targets, {
+      y: [14, 0],
       opacity: [0, 1],
-      easing: 'easeOutQuart',
+      ease: 'outQuart',
       duration: 560,
-      delay: anime.stagger(delayStep, { start: 80 })
+      delay: stagger(delayStep, { start: 80 })
     });
     this.trackAnimation(anim);
     return anim;
@@ -172,14 +170,14 @@ export class MotionEngine {
   /**
    * Progress bars grow from zero to their data-pct width
    */
-  public static fillBars(targets: string | NodeList | HTMLElement[]): anime.AnimeInstance | null {
+  public static fillBars(targets: string | NodeList | HTMLElement[]): JSAnimation | null {
     if (this.isReducedMotion()) return null;
-    const anim = anime({
-      targets,
-      width: (el: HTMLElement) => ['0%', `${el.dataset.pct ?? 0}%`],
-      easing: 'easeOutCubic',
+    utils.set(targets, { width: '0%' });
+    const anim = animate(targets, {
+      width: (el: unknown) => `${(el as HTMLElement).dataset.pct ?? 0}%`,
+      ease: 'outCubic',
       duration: 1000,
-      delay: anime.stagger(70, { start: 300 })
+      delay: stagger(70, { start: 300 })
     });
     this.trackAnimation(anim);
     return anim;
@@ -188,17 +186,16 @@ export class MotionEngine {
   /**
    * Slow endless breathing glow; paused by cancelAll() on route change
    */
-  public static breathe(targets: string | NodeList | SVGElement[] | HTMLElement[]): anime.AnimeInstance | null {
+  public static breathe(targets: string | NodeList | SVGElement[] | HTMLElement[]): JSAnimation | null {
     if (this.isReducedMotion()) return null;
-    const anim = anime({
-      targets,
+    const anim = animate(targets, {
       opacity: [0.25, 0.75],
       scale: [0.94, 1.1],
-      direction: 'alternate',
+      alternate: true,
       loop: true,
-      easing: 'easeInOutSine',
+      ease: 'inOutSine',
       duration: 2400,
-      delay: anime.stagger(220)
+      delay: stagger(220)
     });
     this.trackAnimation(anim);
     return anim;
@@ -209,8 +206,8 @@ export class MotionEngine {
    */
   public static lift(el: HTMLElement | SVGElement, on: boolean, amount = 3): void {
     if (this.isReducedMotion()) return;
-    anime.remove(el);
-    anime({ targets: el, translateY: on ? -amount : 0, easing: 'spring(1, 90, 14, 0)' });
+    utils.remove(el);
+    animate(el, { y: on ? -amount : 0, ease: spring({ stiffness: 90, damping: 14 }) });
   }
 
   /**
@@ -218,8 +215,8 @@ export class MotionEngine {
    */
   public static pop(el: HTMLElement | SVGElement): void {
     if (this.isReducedMotion()) return;
-    anime.remove(el);
-    anime({ targets: el, scale: [1, 1.12, 1], easing: 'easeOutQuad', duration: 420 });
+    utils.remove(el);
+    animate(el, { scale: [1, 1.12, 1], ease: 'outQuad', duration: 420 });
   }
 
   /**
@@ -228,12 +225,11 @@ export class MotionEngine {
    */
   public static hoverScale(el: HTMLElement | SVGElement, on: boolean): void {
     if (this.isReducedMotion()) return;
-    anime.remove(el);
-    const anim = anime({
-      targets: el,
+    utils.remove(el);
+    const anim = animate(el, {
       scale: on ? 1.3 : 1.0,
       duration: on ? 600 : 320,
-      easing: on ? 'easeOutElastic(1, 0.6)' : 'easeOutQuart'
+      ease: on ? 'outElastic(1, .6)' : 'outQuart'
     });
     this.trackAnimation(anim);
   }
@@ -243,21 +239,20 @@ export class MotionEngine {
    */
   public static press(el: HTMLElement | SVGElement): void {
     if (this.isReducedMotion()) return;
-    anime.remove(el);
-    const anim = anime({
-      targets: el,
+    utils.remove(el);
+    const anim = animate(el, {
       scale: [0.92, 1.08, 1.0],
       duration: 350,
-      easing: 'easeOutElastic(1, 0.5)'
+      ease: 'outElastic(1, .5)'
     });
     this.trackAnimation(anim);
   }
 
-  private static trackAnimation(anim: anime.AnimeInstance): void {
+  private static trackAnimation(anim: JSAnimation): void {
     this.activeAnimations.push(anim);
-    anim.complete = () => {
+    anim.then(() => {
       this.activeAnimations = this.activeAnimations.filter(a => a !== anim);
-    };
+    });
   }
 
   public static cancelAll(): void {

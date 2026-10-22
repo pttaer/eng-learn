@@ -2,6 +2,7 @@ import { StorageManager } from '../utils/storage';
 import { icon } from '../utils/icons';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { MotionEngine } from '../core/motion-engine';
+import { ScrollAffordance } from '../core/scroll-affordance';
 import { Cefr } from '../core/cefr';
 import habitsData from '../assets/data/habits.json';
 
@@ -51,19 +52,19 @@ export class MissionLog {
 
   public render(): HTMLElement {
     this.container.innerHTML = `
-      <div class="dossier-control-bar">
-        <div class="dossier-tabs" style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-          <span class="telemetry-label">[30-DAY HABIT ENGINE // KINETIC ROADMAP]</span>
-          <div class="habit-level-chips" style="display: inline-flex; gap: 4px; margin-left: 8px;">
+      <div class="dossier-control-bar mission-control-bar" style="display: flex; flex-direction: column; align-items: stretch; gap: 8px; width: 100%;">
+        <div class="mission-header-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+          <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-family: var(--font-mono); font-size: var(--font-kicker);">[HABITS // KINETIC ROADMAP]</span>
+          <div class="habit-level-chips" style="display: inline-flex; gap: 4px;">
             ${(['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as Cefr[]).map(lvl => `
-              <button class="hud-chip habit-level-chip ${lvl === this.activeLevel ? 'active' : ''}" data-level="${lvl}" style="padding: 2px 8px; font-size: 10px; cursor: pointer; border-radius: 4px; border: 1px solid ${lvl === this.activeLevel ? 'var(--accent-gold)' : 'var(--border-subtle)'}; background: ${lvl === this.activeLevel ? 'var(--accent-gold)' : 'var(--bg-surface)'}; color: ${lvl === this.activeLevel ? 'var(--bg-canvas)' : 'var(--ink-secondary)'}; font-weight: 700;">
+              <button class="hud-chip habit-level-chip ${lvl === this.activeLevel ? 'active' : ''}" data-level="${lvl}" style="padding: 3px 8px; font-size: var(--font-kicker); cursor: pointer; border-radius: 4px; border: 1px solid ${lvl === this.activeLevel ? 'var(--accent-gold)' : 'var(--border-subtle)'}; background: ${lvl === this.activeLevel ? 'var(--accent-gold)' : 'var(--bg-surface)'}; color: ${lvl === this.activeLevel ? 'var(--bg-canvas)' : 'var(--ink-secondary)'}; font-weight: 700; white-space: nowrap;">
                 ${lvl}
               </button>
             `).join('')}
           </div>
         </div>
-        <div class="dossier-status-pill">
-          <span class="telemetry-value">LEVEL ${this.activeLevel} DAILY WORKOUT</span>
+        <div class="dossier-status-pill" style="display: flex; justify-content: space-between; align-items: center; padding: 0;">
+          <span class="telemetry-value" style="font-size: var(--font-body-compact); font-weight: 700;">LEVEL ${this.activeLevel} // DAILY WORKOUT</span>
         </div>
       </div>
       <div class="mission-log-main">
@@ -109,6 +110,8 @@ export class MissionLog {
 
       track.appendChild(chip);
     });
+
+    ScrollAffordance.attach(track as HTMLElement);
   }
 
   private renderActiveDayCard(): void {
@@ -126,9 +129,9 @@ export class MissionLog {
     slot.innerHTML = `
       <div class="mission-card">
         <div class="card-header-bar">
-          <div class="card-meta-left" style="display: flex; align-items: center; gap: 8px;">
-            <span>[WEEK 0${day.week} // ${day.phase.toUpperCase()}]</span>
-            <span class="hud-status-badge" style="font-size: 10px; padding: 1px 6px; border-radius: 3px; border: 1px solid var(--accent-gold); color: var(--accent-gold); font-weight: 700;">
+          <div class="card-meta-left" style="display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1 1 auto;">
+            <span class="mission-phase-badge" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">[WEEK 0${day.week} // ${day.phase.toUpperCase()}]</span>
+            <span class="hud-status-badge" style="font-size: var(--font-kicker); padding: 1px 6px; border-radius: 3px; border: 1px solid var(--accent-gold); color: var(--accent-gold); font-weight: 700;">
               LEVEL: ${currentLevel}
             </span>
             <span class="card-badge-status ${progress.completed ? 'badge-completed' : ''}">
@@ -142,7 +145,7 @@ export class MissionLog {
 
         <div class="mission-body">
           <div class="card-prompt-label">DAILY OBJECTIVE</div>
-          <div class="card-main-text" style="font-size: 18px; margin-bottom: 16px;">
+          <div class="card-main-text" style="font-size: var(--font-h3); margin-bottom: 16px;">
             ${day.title}
           </div>
 
@@ -165,7 +168,7 @@ export class MissionLog {
             <span class="telemetry-value">${progress.completedTasks.length} / ${tasks.length} TASKS</span>
           </div>
           <div class="mission-actions">
-            ${progress.completed ? '<span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700;">[STREAK REGISTERED]</span>' : ''}
+            ${progress.completed ? '<span style="font-family: var(--font-mono); font-size: var(--font-kicker); font-weight: 700;">[STREAK REGISTERED]</span>' : ''}
           </div>
         </div>
       </div>

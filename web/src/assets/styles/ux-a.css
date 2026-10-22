@@ -42,7 +42,7 @@
 /* Phones: mode / difficulty tab rows wrap compactly instead of stacking one per line or clipping */
 @media (max-width: 600px) {
   .dossier-tabs, .dossier-control-bar { flex-wrap: wrap; gap: 6px; min-width: 0; }
-  .dossier-tabs .hud-btn, .dossier-tabs .filter-tab { padding: 6px 10px; font-size: 11px; min-height: 44px; }
+  .dossier-tabs .hud-btn, .dossier-tabs .filter-tab { padding: 6px 10px; font-size: var(--font-kicker); min-height: 44px; }
   .card-header-bar { flex-wrap: wrap; gap: 6px; }
   .card-meta-left { flex-wrap: wrap; gap: 4px 8px; }
 }

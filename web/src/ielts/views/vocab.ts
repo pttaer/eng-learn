@@ -3,6 +3,7 @@ import iotVocabData from '../../assets/data/iot-vocabulary.json';
 import { SRSEngine, SRSCardState, SRSRating } from '../../core/srs-engine';
 import { ttsAvailable } from '../tts';
 import { esc, h } from '../ui';
+import { icon } from '../../utils/icons';
 
 interface VocabItem {
   id: string;
@@ -76,33 +77,59 @@ export function vocabView(root: HTMLElement): () => void {
 
   // Deck selector row
   const deckSwitcher = h('div', 'ie-mode-switcher');
-  const btnCore = h(
-    'button',
-    'ie-mode-btn is-active',
-    `🎯 Core Mock Deck (${DECK_CORE.length.toLocaleString()})`
-  );
-  const btnIot = h(
-    'button',
-    'ie-mode-btn',
-    `🌐 IOT Topic Lexicon (${DECK_IOT.length.toLocaleString()})`
-  );
-  const btnCombined = h(
-    'button',
-    'ie-mode-btn',
-    `⚡ All Combined (${(DECK_CORE.length + DECK_IOT.length).toLocaleString()})`
-  );
+  deckSwitcher.setAttribute('role', 'tablist');
+  deckSwitcher.setAttribute('aria-label', 'Vocabulary Decks');
+
+  const btnCore = h('button', 'ie-mode-btn is-active');
+  btnCore.setAttribute('type', 'button');
+  btnCore.setAttribute('role', 'tab');
+  btnCore.setAttribute('aria-selected', 'true');
+  btnCore.innerHTML = `
+    <span class="ie-mode-icon">${icon('target', 13)}</span>
+    <span class="ie-mode-label">
+      <span class="ie-mode-full">Core Mock Deck</span>
+      <span class="ie-mode-short">Core</span>
+    </span>
+    <span class="ie-mode-count">${DECK_CORE.length.toLocaleString()}</span>
+  `;
+
+  const btnIot = h('button', 'ie-mode-btn');
+  btnIot.setAttribute('type', 'button');
+  btnIot.setAttribute('role', 'tab');
+  btnIot.setAttribute('aria-selected', 'false');
+  btnIot.innerHTML = `
+    <span class="ie-mode-icon">${icon('globe', 13)}</span>
+    <span class="ie-mode-label">
+      <span class="ie-mode-full">IOT Topic Lexicon</span>
+      <span class="ie-mode-short">Topics</span>
+    </span>
+    <span class="ie-mode-count">${DECK_IOT.length.toLocaleString()}</span>
+  `;
+
+  const btnCombined = h('button', 'ie-mode-btn');
+  btnCombined.setAttribute('type', 'button');
+  btnCombined.setAttribute('role', 'tab');
+  btnCombined.setAttribute('aria-selected', 'false');
+  btnCombined.innerHTML = `
+    <span class="ie-mode-icon">${icon('zap', 13)}</span>
+    <span class="ie-mode-label">
+      <span class="ie-mode-full">All Combined</span>
+      <span class="ie-mode-short">All</span>
+    </span>
+    <span class="ie-mode-count">${(DECK_CORE.length + DECK_IOT.length).toLocaleString()}</span>
+  `;
 
   deckSwitcher.append(btnCore, btnIot, btnCombined);
 
   // Controls bar
-  const bar = h('div', 'ie-testbar');
+  const bar = h('div', 'ie-testbar ie-vocab-controls');
   
   // Topic Select
   const topicSelect = h('select', 'ie-select ie-vselect');
   topicSelect.setAttribute('aria-label', 'Topic');
 
   // Band Select
-  const bandSelect = h('select', 'ie-select');
+  const bandSelect = h('select', 'ie-select ie-vband');
   bandSelect.setAttribute('aria-label', 'Target Band');
   bandSelect.innerHTML = `
     <option value="all">All Target Bands (6.5 - 8.5)</option>
@@ -112,10 +139,9 @@ export function vocabView(root: HTMLElement): () => void {
   `;
 
   // Search input
-  const searchInput = h('input', 'ie-input') as HTMLInputElement;
+  const searchInput = h('input', 'ie-input ie-vsearch') as HTMLInputElement;
   searchInput.type = 'search';
   searchInput.placeholder = 'Search words, collocations, or Vietnamese...';
-  searchInput.style.maxWidth = '260px';
 
   const stats = h('span', 'ie-note ie-vstats');
   stats.setAttribute('aria-live', 'polite');
@@ -277,8 +303,11 @@ export function vocabView(root: HTMLElement): () => void {
   btnCore.addEventListener('click', () => {
     activeDeckKey = 'core';
     btnCore.classList.add('is-active');
+    btnCore.setAttribute('aria-selected', 'true');
     btnIot.classList.remove('is-active');
+    btnIot.setAttribute('aria-selected', 'false');
     btnCombined.classList.remove('is-active');
+    btnCombined.setAttribute('aria-selected', 'false');
     updateTopicOptions();
     start();
   });
@@ -286,8 +315,11 @@ export function vocabView(root: HTMLElement): () => void {
   btnIot.addEventListener('click', () => {
     activeDeckKey = 'iot';
     btnIot.classList.add('is-active');
+    btnIot.setAttribute('aria-selected', 'true');
     btnCore.classList.remove('is-active');
+    btnCore.setAttribute('aria-selected', 'false');
     btnCombined.classList.remove('is-active');
+    btnCombined.setAttribute('aria-selected', 'false');
     updateTopicOptions();
     start();
   });
@@ -295,8 +327,11 @@ export function vocabView(root: HTMLElement): () => void {
   btnCombined.addEventListener('click', () => {
     activeDeckKey = 'combined';
     btnCombined.classList.add('is-active');
+    btnCombined.setAttribute('aria-selected', 'true');
     btnCore.classList.remove('is-active');
+    btnCore.setAttribute('aria-selected', 'false');
     btnIot.classList.remove('is-active');
+    btnIot.setAttribute('aria-selected', 'false');
     updateTopicOptions();
     start();
   });

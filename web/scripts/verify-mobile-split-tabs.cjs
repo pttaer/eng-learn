@@ -67,10 +67,13 @@ assert(readingContent.includes('setMobileActiveTab'), 'ReadingDossier must expos
 assert(readingContent.includes('toggleMobileActiveTab'), 'ReadingDossier must expose toggleMobileActiveTab()');
 assert(readingContent.includes('applyMobileTabState'), 'ReadingDossier must implement applyMobileTabState()');
 assert(readingContent.includes('reading-mobile-tab-bar'), 'ReadingDossier template must contain reading-mobile-tab-bar');
-assert(readingContent.includes('reading-mobile-quick-switch'), 'ReadingDossier template must contain reading-mobile-quick-switch');
+assert(!readingContent.includes('reading-mobile-quick-switch'), 'ReadingDossier quick-switch button must be removed (use sticky tab bar instead)');
 assert(readingContent.includes('data-mobile-active'), 'ReadingDossier template must set data-mobile-active');
 
-console.log('  ✓ ReadingDossier mobile switcher methods & template verified.\n');
+// Verify CSS: tab bar must have position: sticky
+assert(/\.reading-mobile-tab-bar[^{]*\{[^}]*position:\s*sticky/.test(cssContent), 'ReadingDossier tab bar must have position: sticky');
+
+console.log('  ✓ ReadingDossier mobile tab bar with sticky positioning verified.\n');
 
 // 4. Simulated DOM behavior test (JSDOM-like headless validation)
 console.log('4. Testing programmatic tab switching state transitions...');

@@ -189,7 +189,7 @@
   "contract": {
     "id": "awl-12",
     "word": "contract",
-    "ipa": "/ˈkɒn.trækt/",
+    "ipa": "/ˈkɒn.trækt/ (n.), /kənˈtrækt/ (v.)",
     "pos": "n./v.",
     "partOfSpeech": "n./v.",
     "root": "con- (together) + trahere (draw) -> contraction, contractor",
@@ -689,12 +689,12 @@
     "definition": "One part in every hundred.",
     "vietnamese": "phần trăm, tỷ lệ phần trăm",
     "collocations": [
-      "substantial percent",
+      "percent of the total",
       "percent increase",
       "ninety percent"
     ],
     "level": 1,
-    "contextSentence": "Exemplar collocation: substantial percent."
+    "contextSentence": "Exemplar collocation: percent of the total."
   },
   "period": {
     "id": "awl-42",
@@ -1043,7 +1043,7 @@
     "pos": "v.",
     "partOfSpeech": "v.",
     "root": "ad- (to) + ministrare (serve) -> administration, administrator",
-    "definition": "Manage and be responsible for the running of a business or organization.",
+    "definition": "Manage and be responsible for the running of a business or organization (a less common variant of administer).",
     "vietnamese": "quản lý hành chính, điều hành tổ chức",
     "collocations": [
       "administrate policy",
@@ -1503,7 +1503,7 @@
     "partOfSpeech": "v.",
     "root": "in- (not) + jus (right, law) -> injury, injurious",
     "definition": "Do physical harm or damage to; harm one's reputation.",
-    "vietnamese": "làm tổn thương, gây tổn hại pháp lý",
+    "vietnamese": "làm bị thương, làm tổn hại (danh tiếng)",
     "collocations": [
       "injure severely",
       "fatal injury",
@@ -1744,7 +1744,7 @@
     "vietnamese": "mua sắm, tậu được; sức bám đòn bẩy",
     "collocations": [
       "purchase goods",
-      "purchase power",
+      "purchasing power",
       "leverage purchase"
     ],
     "level": 1,
@@ -1979,7 +1979,7 @@
     "partOfSpeech": "n.",
     "root": "texere (weave) -> textual, context",
     "definition": "A book or other written or printed work, regarded in terms of its content.",
-    "vietnamese": "văn bản, thủ bản, tài liệu chữ",
+    "vietnamese": "văn bản, bản văn",
     "collocations": [
       "sacred text",
       "decipher the text",
@@ -2008,7 +2008,7 @@
   "transfer": {
     "id": "awl-119",
     "word": "transfer",
-    "ipa": "/trænsˈfɜːr/",
+    "ipa": "/trænsˈfɜːr/ (v.), /ˈtræns.fɜːr/ (n.)",
     "pos": "v./n.",
     "partOfSpeech": "v./n.",
     "root": "trans- (across) + ferre (carry) -> transference",
@@ -2232,7 +2232,7 @@
     "ipa": "/kɔːr/",
     "pos": "n./adj.",
     "partOfSpeech": "n./adj.",
-    "root": "cor (heart) -> encored",
+    "root": "cor (heart) -> cordial, courage, concord",
     "definition": "The central or most important part of something.",
     "vietnamese": "cốt lõi, trọng tâm trung tâm",
     "collocations": [
@@ -2419,7 +2419,7 @@
     "ipa": "/ˈfreɪm.wɜːk/",
     "pos": "n.",
     "partOfSpeech": "n.",
-    "root": "frame + work -> reframework",
+    "root": "frame + work (English compound)",
     "definition": "An essential supporting structure of a building, vehicle, or idea.",
     "vietnamese": "khung cơ cấu, khuôn khổ lý thuyết",
     "collocations": [
@@ -2674,7 +2674,7 @@
     "ipa": "/ˈaʊt.kʌm/",
     "pos": "n.",
     "partOfSpeech": "n.",
-    "root": "out + come -> final result",
+    "root": "out + come (English compound)",
     "definition": "The way a thing turns out; a consequence.",
     "vietnamese": "kết quả đầu ra, hệ quả chung cuộc",
     "collocations": [
@@ -2879,7 +2879,7 @@
     "pos": "n.",
     "partOfSpeech": "n.",
     "root": "secare (divide, cut) -> sexual, sexuality",
-    "definition": "Either of the two main categories (male and female) into which things are divided.",
+    "definition": "Either of the two main categories (male and female) into which living things are divided.",
     "vietnamese": "giới tính sinh học",
     "collocations": [
       "biological sex",
@@ -3405,7 +3405,7 @@
     "ipa": "/ɡəʊl/",
     "pos": "n.",
     "partOfSpeech": "n.",
-    "root": "gal (obstacle, boundary) -> goalie",
+    "root": "gal (obstacle, boundary; origin uncertain) -> goalkeeper, goalpost",
     "definition": "The object of a person's ambition or effort; an aim or desired result.",
     "vietnamese": "mục tiêu, đích nhắm phấn đấu",
     "collocations": [
@@ -3694,7 +3694,7 @@
     "ipa": "/ˌəʊ.vərˈɔːl/",
     "pos": "adj./adv.",
     "partOfSpeech": "adj./adv.",
-    "root": "over + all -> generally",
+    "root": "over + all (English compound) -> overview, overlap",
     "definition": "Taking everything into account; in general.",
     "vietnamese": "toàn diện, tổng thể nhìn chung",
     "collocations": [
@@ -3717,7 +3717,7 @@
     "collocations": [
       "run parallel to",
       "draw a parallel",
-      "unprecedented parallel"
+      "striking parallel"
     ],
     "level": 2,
     "contextSentence": "Exemplar collocation: run parallel to."
@@ -3827,7 +3827,7 @@
   "project": {
     "id": "awl-226",
     "word": "project",
-    "ipa": "/ˈprɒdʒ.ekt/",
+    "ipa": "/ˈprɒdʒ.ekt/ (n.), /prəˈdʒekt/ (v.)",
     "pos": "n./v.",
     "partOfSpeech": "n./v.",
     "root": "pro- (forward) + jacere (throw) -> projection",
@@ -4512,7 +4512,7 @@
     "partOfSpeech": "n.",
     "root": "generare (beget) -> generational",
     "definition": "All of the people born and living at about the same time.",
-    "vietnamese": "thế hệ, sự phát điện/sáng tạo",
+    "vietnamese": "thế hệ, đời (người)",
     "collocations": [
       "future generations",
       "generation gap",
@@ -4597,7 +4597,7 @@
     "partOfSpeech": "n.",
     "root": "margo (edge, border) -> marginal, marginalize",
     "definition": "The edge or border of something; the amount by which a thing is won or falls short.",
-    "vietnamese": "biên giới, lề giấy, tỷ suất lợi nhuận",
+    "vietnamese": "mép, lề giấy; mức chênh lệch, biên lợi nhuận",
     "collocations": [
       "profit margin",
       "margin of error",
@@ -4801,7 +4801,7 @@
     "partOfSpeech": "n.",
     "root": "psukhe (soul, mind) + -logia (study) -> psychological",
     "definition": "The scientific study of the human mind and its functions.",
-    "vietnamese": "tâm lý học, trạng thái tâm can",
+    "vietnamese": "tâm lý học; tâm lý (của một người hay một nhóm)",
     "collocations": [
       "clinical psychology",
       "cognitive psychology",
@@ -5037,7 +5037,7 @@
     "ipa": "/ˈwel.feər/",
     "pos": "n.",
     "partOfSpeech": "n.",
-    "root": "well + fare (fare well) -> warfare",
+    "root": "well + fare (to travel, get along) -> farewell, wayfarer",
     "definition": "The health, happiness, and fortunes of a person or group; financial support.",
     "vietnamese": "phúc lợi xã hội, an sinh thịnh vượng",
     "collocations": [
@@ -5054,7 +5054,7 @@
     "ipa": "/weərˈæz/",
     "pos": "conj.",
     "partOfSpeech": "conj.",
-    "root": "where + as -> in contrast",
+    "root": "where + as (English compound) -> whereby, wherever",
     "definition": "In contrast or comparison with the fact that.",
     "vietnamese": "trong khi đó, ngược lại hoàn toàn",
     "collocations": [
@@ -5226,7 +5226,7 @@
     "partOfSpeech": "adj./n./v.",
     "root": "brevis (short) -> brevity, debrief",
     "definition": "Of short duration; concise in use of words; instruct someone beforehand.",
-    "vietnamese": "ngắn gọn, xúc tích; chỉ thị vắn tắt",
+    "vietnamese": "ngắn gọn, súc tích; chỉ thị vắn tắt",
     "collocations": [
       "brief overview",
       "keep it brief",
@@ -5496,16 +5496,16 @@
     "ipa": "/ˌfɜː.ðəˈmɔːr/",
     "pos": "adv.",
     "partOfSpeech": "adv.",
-    "root": "further + more -> moreover",
+    "root": "further + more (English compound) -> furthermost, furthering",
     "definition": "In addition; besides (used to introduce a fresh consideration).",
     "vietnamese": "hơn nữa, vả lại, thêm vào đó",
     "collocations": [
-      "furthermore it must be noted",
-      "furthermore the data indicates",
-      "and furthermore"
+      "and furthermore",
+      "furthermore it follows",
+      "furthermore it is clear"
     ],
     "level": 2,
-    "contextSentence": "Exemplar collocation: furthermore it must be noted."
+    "contextSentence": "Exemplar collocation: and furthermore."
   },
   "gender": {
     "id": "awl-325",
@@ -5683,7 +5683,7 @@
     "ipa": "/ˈɪn.tə.vəl/",
     "pos": "n.",
     "partOfSpeech": "n.",
-    "root": "inter- (between) + vallum (rampart) -> intervalic",
+    "root": "inter- (between) + vallum (rampart) -> interval",
     "definition": "An intervening time or space; a pause or break in activity.",
     "vietnamese": "khoảng thời gian, cự ly ngắt quãng",
     "collocations": [
@@ -5756,7 +5756,7 @@
     "vietnamese": "bộ ngành chính phủ, thánh chức",
     "collocations": [
       "ministry of finance",
-      "prime ministry",
+      "ministry of defense",
       "entering the ministry"
     ],
     "level": 2,
@@ -5802,7 +5802,7 @@
     "ipa": "/ˌnev.ə.ðəˈles/",
     "pos": "adv.",
     "partOfSpeech": "adv.",
-    "root": "never + the + less -> nonetheless",
+    "root": "never + the + less (English compound) -> lessen",
     "definition": "In spite of that; notwithstanding; all the same.",
     "vietnamese": "tuy nhiên, dẫu vậy, dẫu sao",
     "collocations": [
@@ -5819,7 +5819,7 @@
     "ipa": "/ˌəʊ.vəˈsiːz/",
     "pos": "adj./adv.",
     "partOfSpeech": "adj./adv.",
-    "root": "over + sea -> foreign",
+    "root": "over + sea (English compound) -> seafarer, seaward",
     "definition": "In or to a foreign country, especially one across the sea.",
     "vietnamese": "hải ngoại, nước ngoài qua biển",
     "collocations": [
@@ -6003,7 +6003,7 @@
   "transport": {
     "id": "awl-354",
     "word": "transport",
-    "ipa": "/trænˈspɔːt/",
+    "ipa": "/trænˈspɔːt/ (v.), /ˈtræn.spɔːt/ (n.)",
     "pos": "v./n.",
     "partOfSpeech": "v./n.",
     "root": "trans- (across) + portare (carry) -> transportation",
@@ -6199,7 +6199,7 @@
     "collocations": [
       "comprise several modules",
       "comprise the majority",
-      "is comprised of"
+      "comprise a wide range of"
     ],
     "level": 3,
     "contextSentence": "Exemplar collocation: comprise several modules."
@@ -6241,12 +6241,12 @@
   "convert": {
     "id": "awl-368",
     "word": "convert",
-    "ipa": "/kənˈvɜːt/",
+    "ipa": "/kənˈvɜːt/ (v.), /ˈkɒn.vɜːt/ (n.)",
     "pos": "v./n.",
     "partOfSpeech": "v./n.",
     "root": "con- (together) + vertere (turn) -> conversion",
     "definition": "Change the form, character, or function of something.",
-    "vietnamese": "chuyển đổi hệ thống, quy đạo",
+    "vietnamese": "chuyển đổi, biến đổi; cải đạo (sang tôn giáo khác)",
     "collocations": [
       "convert currency",
       "convert into energy",
@@ -6875,7 +6875,7 @@
     "partOfSpeech": "adj./n.",
     "root": "solus (alone) -> solely",
     "definition": "One and only; belonging or restricted to one person or group.",
-    "vietnamese": "duy nhất, độc quyền; lòng bàn chân",
+    "vietnamese": "duy nhất, độc quyền",
     "collocations": [
       "sole survivor",
       "sole beneficiary",
@@ -6890,7 +6890,7 @@
     "ipa": "/ˈsʌm.wɒt/",
     "pos": "adv.",
     "partOfSpeech": "adv.",
-    "root": "some + what -> slightly",
+    "root": "some + what (English compound) -> somehow, somewhere",
     "definition": "To a moderate extent or degree.",
     "vietnamese": "phần nào, hơi hơi một chút",
     "collocations": [
@@ -7219,7 +7219,7 @@
     "collocations": [
       "cognitive bias",
       "institutional bias",
-      "confirm bias"
+      "confirmation bias"
     ],
     "level": 3,
     "contextSentence": "Exemplar collocation: cognitive bias."
@@ -7230,7 +7230,7 @@
     "ipa": "/tʃɑːt/",
     "pos": "n./v.",
     "partOfSpeech": "n./v.",
-    "root": "khartes (papyrus roll) -> unchartered",
+    "root": "khartes (papyrus roll) -> uncharted, charter",
     "definition": "A sheet of information in the form of a table, graph, or diagram.",
     "vietnamese": "biểu đồ thống kê, hải đồ dẫn đường",
     "collocations": [
@@ -7474,7 +7474,7 @@
     "collocations": [
       "eventual outcome",
       "eventual downfall",
-      "lead to eventual"
+      "eventual success"
     ],
     "level": 3,
     "contextSentence": "Exemplar collocation: eventual outcome."
@@ -7499,7 +7499,7 @@
   "exploit": {
     "id": "awl-442",
     "word": "exploit",
-    "ipa": "/ɪkˈsplɔɪt/",
+    "ipa": "/ɪkˈsplɔɪt/ (v.), /ˈek.splɔɪt/ (n.)",
     "pos": "v./n.",
     "partOfSpeech": "v./n.",
     "root": "ex- (out) + plicare (fold) -> exploitation",
@@ -7553,7 +7553,7 @@
     "ipa": "/ˈhaɪ.laɪt/",
     "pos": "v./n.",
     "partOfSpeech": "v./n.",
-    "root": "high + light -> illumination",
+    "root": "high + light (English compound) -> lighten, lighthouse",
     "definition": "Draw special attention to; an outstanding part of an event or period.",
     "vietnamese": "làm nổi bật, điểm nhấn quan trọng",
     "collocations": [
@@ -7708,7 +7708,7 @@
     "partOfSpeech": "adj.",
     "root": "nucleus (kernel, core) -> nucleic",
     "definition": "Relating to the nucleus of an atom; relating to weapons or energy.",
-    "vietnamese": "thuộc hạt nhân, trung tâm gia đình",
+    "vietnamese": "thuộc hạt nhân; (gia đình) hạt nhân",
     "collocations": [
       "nuclear family",
       "nuclear deterrent",
@@ -7723,7 +7723,7 @@
     "ipa": "/ˈɒf.set/",
     "pos": "v./n.",
     "partOfSpeech": "v./n.",
-    "root": "off + set -> counterbalance",
+    "root": "off + set (English compound) -> setback, setup",
     "definition": "Counterbalance, counteract, or compensate for something.",
     "vietnamese": "bù trừ, triệt tiêu tác động",
     "collocations": [
@@ -7961,7 +7961,7 @@
     "ipa": "/ˌðeəˈbaɪ/",
     "pos": "adv.",
     "partOfSpeech": "adv.",
-    "root": "there + by -> by that means",
+    "root": "there + by (English compound) -> thereafter, therefore",
     "definition": "By that means; as a result of that.",
     "vietnamese": "bằng cách đó, nhờ thế mà",
     "collocations": [
@@ -8063,7 +8063,7 @@
     "ipa": "/ˈwaɪd.spred/",
     "pos": "adj.",
     "partOfSpeech": "adj.",
-    "root": "wide + spread -> ubiquitous",
+    "root": "wide + spread (English compound)",
     "definition": "Found or distributed over a large area or number of people.",
     "vietnamese": "lan rộng khắp nơi, phổ biến rộng rãi",
     "collocations": [
@@ -8165,7 +8165,7 @@
     "ipa": "/bɪˈhɑːf/",
     "pos": "n.",
     "partOfSpeech": "n.",
-    "root": "bi- (by) + helfe (help, side) -> in support",
+    "root": "be + half (Old English) -> halve, halfway",
     "definition": "In the interests of a person or group; as a representative of.",
     "vietnamese": "thay mặt, đại diện quyền lợi",
     "collocations": [
@@ -8222,7 +8222,7 @@
     "collocations": [
       "coincide with findings",
       "coincide with the release",
-      "purely coincide"
+      "coincide exactly"
     ],
     "level": 3,
     "contextSentence": "Exemplar collocation: coincide with findings."
@@ -8514,7 +8514,7 @@
       "chronological",
       "anachronism"
     ],
-    "level": 1,
+    "level": 2,
     "contextSentence": "The city faces a chronic shortage of affordable housing for municipal workers."
   },
   "synchronize": {
@@ -8565,7 +8565,7 @@
       "chronology",
       "chronometry"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "The memoir is a vivid chronicle of the rise and collapse of the dot-com bubble."
   },
   "indict": {
@@ -8598,7 +8598,7 @@
       "jurisprudence",
       "juridical"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "Cross-border cybercrimes frequently fall outside the territorial jurisdiction of national police."
   },
   "amorphous": {
@@ -8615,7 +8615,7 @@
       "amorphously",
       "morphology"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "The startup operated as an amorphous collective before adopting a hierarchical management model."
   },
   "metamorphosis": {
@@ -8631,7 +8631,7 @@
       "metamorphic",
       "metamorphose"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "The manufacturing company underwent a painful metamorphosis into a pure software enterprise."
   },
   "anthropomorphic": {
@@ -8664,7 +8664,7 @@
       "morpheme",
       "morphologist"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "Understanding inflectional morphology accelerates vocabulary acquisition across Romance languages."
   },
   "empathy": {
@@ -8681,7 +8681,7 @@
       "empathize",
       "sympathy"
     ],
-    "level": 1,
+    "level": 2,
     "contextSentence": "High-performing negotiators exhibit cognitive empathy without sacrificing strategic firmness."
   },
   "apathy": {
@@ -8697,7 +8697,7 @@
       "apathetic",
       "apathetically"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "Widespread voter apathy poses an existential threat to democratic accountability."
   },
   "antipathy": {
@@ -8708,12 +8708,12 @@
     "partOfSpeech": "word",
     "root": "path (Greek: feeling)",
     "definition": "A deep-seated feeling of aversion or hostility.",
-    "vietnamese": "ác cảm sâu sắc, sự thù ghét/bất hảo",
+    "vietnamese": "ác cảm sâu sắc, sự thù ghét",
     "collocations": [
       "antipathetic",
       "sympathy"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "Historical antipathy between the two regulatory bodies stalled the antitrust investigation."
   },
   "pathology": {
@@ -8764,7 +8764,7 @@
       "aqueduct",
       "viaduct"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "Copper is prized in electrical engineering because it is exceptionally ductile and conductive."
   },
   "benevolent": {
@@ -8799,7 +8799,7 @@
       "malice",
       "malicious"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "Autonomous weapons systems raise ethical perils should they fall into malevolent hands."
   },
   "benign": {
@@ -8849,7 +8849,7 @@
       "provocation",
       "provoker"
     ],
-    "level": 2,
+    "level": 1,
     "contextSentence": "The imposition of unilateral tariffs provoked sharp retaliatory measures from trade partners."
   },
   "equivocate": {
@@ -8984,7 +8984,7 @@
       "generation",
       "progenitor"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "Opaque compensation matrices invariably engender resentment among top contributors."
   },
   "indigenous": {
@@ -9000,7 +9000,7 @@
       "indigeneity",
       "indigenously"
     ],
-    "level": 3,
+    "level": 2,
     "contextSentence": "The ecosystem depends upon preserving indigenous flora against aggressive invasive shrubs."
   },
   "progeny": {
@@ -9017,7 +9017,7 @@
       "genesis",
       "genetic"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "Modern generative transformers are the direct intellectual progeny of 1980s neural network theory."
   },
   "protracted": {
@@ -9033,7 +9033,7 @@
       "protract",
       "protraction"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "After a protracted patent dispute lasting four years, both corporations signed a cross-license pact."
   },
   "intractable": {
@@ -9085,7 +9085,7 @@
       "diffident",
       "perfidious"
     ],
-    "level": 1,
+    "level": 3,
     "contextSentence": "The translator aimed for fidelity to the poet's rhythm as much as to his literal meaning."
   },
   "incredulous": {
@@ -9104,7 +9104,7 @@
       "credence",
       "credential"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "The villagers listened with incredulous faces as the engineer explained that the river would be diverted around their valley."
   },
   "eloquent": {
@@ -9122,7 +9122,7 @@
       "colloquial",
       "soliloquy"
     ],
-    "level": 1,
+    "level": 2,
     "contextSentence": "Her eloquent tribute at the memorial service moved even strangers to tears."
   },
   "loquacious": {
@@ -9178,7 +9178,7 @@
       "adverse",
       "advertise"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "An inadvertent click on reply-all sent the confidential salary list to the entire department."
   },
   "impending": {
@@ -9307,7 +9307,7 @@
       "perceive",
       "capture"
     ],
-    "level": 1,
+    "level": 2,
     "contextSentence": "Young rice seedlings are highly susceptible to cold snaps in early spring."
   },
   "incipient": {
@@ -9363,7 +9363,7 @@
       "missive",
       "dismiss"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "The king sent a trusted emissary across the mountains to negotiate the release of the captured merchants."
   },
   "tenacious": {
@@ -9382,7 +9382,7 @@
       "retain",
       "detain"
     ],
-    "level": 1,
+    "level": 2,
     "contextSentence": "A tenacious local reporter spent six years tracing where the flood relief money had actually gone."
   },
   "inconsequential": {
@@ -9437,7 +9437,7 @@
       "antonym",
       "eponym"
     ],
-    "level": 1,
+    "level": 2,
     "contextSentence": "Several of the country's best-loved poets published under pseudonyms to slip past the censors."
   },
   "mother": {
@@ -9638,7 +9638,7 @@
     "vietnamese": "cái đầu",
     "collocations": [
       "my head",
-      "hurt my head",
+      "head hurts",
       "head and neck"
     ],
     "level": 1,
@@ -9758,7 +9758,7 @@
     "collocations": [
       "a small shop",
       "go to the shop",
-      "shop door"
+      "shop window"
     ],
     "level": 1,
     "contextSentence": "The shop opens at nine."
@@ -10368,7 +10368,7 @@
     "definition": "Not costing much money.",
     "vietnamese": "rẻ",
     "collocations": [
-      "cheap price",
+      "cheap flights",
       "cheap ticket",
       "quite cheap"
     ],
@@ -10441,7 +10441,7 @@
       "stay healthy"
     ],
     "level": 1,
-    "contextSentence": "Eating fruit and vegetables is good for a healthy life."
+    "contextSentence": "Fruit and vegetables are part of a healthy diet."
   },
   "exercise": {
     "id": "vocab-a2-10",
@@ -10577,7 +10577,7 @@
       "agree to go"
     ],
     "level": 1,
-    "contextSentence": "I agree with you, because the film was too long."
+    "contextSentence": "I agree with you. The film was too long."
   },
   "opinion": {
     "id": "vocab-a2-18",
@@ -10630,9 +10630,9 @@
     "level": 1,
     "contextSentence": "The book was boring, so I stopped reading it."
   },
-  "the weather": {
+  "weather": {
     "id": "vocab-a2-21",
-    "word": "the weather",
+    "word": "weather",
     "ipa": "/ðə ˈweð.ər/",
     "pos": "word",
     "partOfSpeech": "word",
@@ -10829,7 +10829,7 @@
     "collocations": [
       "go to the pharmacy",
       "a local pharmacy",
-      "pharmacy shop"
+      "pharmacy counter"
     ],
     "level": 1,
     "contextSentence": "The pharmacy opens at eight o'clock."
@@ -11123,6 +11123,23 @@
     "level": 1,
     "contextSentence": "We need to reduce the amount of rubbish we throw away."
   },
+  "destination": {
+    "id": "vocab-b1-15",
+    "word": "destination",
+    "ipa": "/ˌdes.tɪˈneɪ.ʃən/",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
+    "definition": "The place where someone is going or where something is being sent.",
+    "vietnamese": "điểm đến, nơi đến",
+    "collocations": [
+      "final destination",
+      "holiday destination",
+      "reach a destination"
+    ],
+    "level": 1,
+    "contextSentence": "Da Nang has become one of the most popular holiday destinations in Southeast Asia."
+  },
   "society": {
     "id": "vocab-b1-16",
     "word": "society",
@@ -11135,7 +11152,7 @@
     "collocations": [
       "modern society",
       "members of society",
-      "benefit society"
+      "contribute to society"
     ],
     "level": 1,
     "contextSentence": "Young people play an important part in modern society."
@@ -11441,7 +11458,7 @@
     "collocations": [
       "tolerate noise",
       "tolerate differences",
-      "hardly tolerate"
+      "tolerate pain"
     ],
     "level": 1,
     "contextSentence": "I cannot tolerate rude behaviour."
@@ -11647,8 +11664,8 @@
       "mitigate impact",
       "mitigate climate change"
     ],
-    "level": 1,
-    "contextSentence": "Diversifying investments across uncorrelated asset classes helps mitigate catastrophic portfolio drawdowns."
+    "level": 2,
+    "contextSentence": "Planting trees along the river helps mitigate the damage caused by floods."
   },
   "feasible": {
     "id": "vocab-cefr-7",
@@ -11665,7 +11682,7 @@
       "feasible alternative"
     ],
     "level": 1,
-    "contextSentence": "Due to severe silicon supply bottlenecks, delivering the product within two months is no longer feasible."
+    "contextSentence": "Because of supply problems, finishing the product in two months is no longer feasible."
   },
   "intrinsic": {
     "id": "vocab-cefr-8",
@@ -11681,7 +11698,7 @@
       "intrinsic motivation",
       "intrinsic reward"
     ],
-    "level": 1,
+    "level": 2,
     "contextSentence": "Curiosity and mastery provide intrinsic motivation that far outlasts short-term monetary bonuses."
   },
   "versatile": {
@@ -11699,7 +11716,7 @@
       "versatile approach"
     ],
     "level": 1,
-    "contextSentence": "Python has established itself as an extraordinarily versatile programming language across data science and web development."
+    "contextSentence": "Python is a versatile language that people use for data work and for building websites."
   },
   "preliminary": {
     "id": "vocab-cefr-11",
@@ -11716,7 +11733,7 @@
       "preliminary assessment"
     ],
     "level": 1,
-    "contextSentence": "Preliminary clinical trials indicate that the compound reduces arterial inflammation by thirty percent."
+    "contextSentence": "Preliminary results from the trial suggest that the medicine reduces pain by thirty percent."
   },
   "substantiate": {
     "id": "vocab-cefr-15",
@@ -11784,7 +11801,7 @@
       "scrutinize records"
     ],
     "level": 2,
-    "contextSentence": "Financial regulators began to scrutinize the shadow banking firm’s off-balance-sheet special purpose vehicles."
+    "contextSentence": "After the company collapsed, regulators began to scrutinize its accounts line by line."
   },
   "delineate": {
     "id": "vocab-cefr-19",
@@ -11800,7 +11817,7 @@
       "delineate boundaries",
       "clearly delineate"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "The architectural contract must clearly delineate the respective liabilities of the general contractor and structural engineers."
   },
   "propensity": {
@@ -11851,7 +11868,7 @@
       "poignant portrait",
       "poignant irony"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "The documentary delivers a poignant portrait of how deindustrialization hollowed out rural communities."
   },
   "volatile": {
@@ -11869,7 +11886,7 @@
       "volatile temperament"
     ],
     "level": 2,
-    "contextSentence": "Emerging tech stocks experienced an extraordinarily volatile quarter amid geopolitical semiconductor restrictions."
+    "contextSentence": "Oil prices were extremely volatile this quarter because of political tension."
   },
   "unprecedented": {
     "id": "vocab-cefr-25",
@@ -11902,7 +11919,7 @@
       "politically disenfranchised",
       "economically disenfranchised"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "Strict voter identification hurdles disproportionately disenfranchise low-income and transient citizens."
   },
   "corroborate": {
@@ -11919,8 +11936,8 @@
       "corroborate testimony",
       "independent findings corroborate"
     ],
-    "level": 2,
-    "contextSentence": "Independent seismologists examined telemetry feeds to corroborate the government’s nuclear test claims."
+    "level": 3,
+    "contextSentence": "Independent scientists studied the records to corroborate the government’s claims about the explosion."
   },
   "obviate": {
     "id": "vocab-cefr-28",
@@ -12158,7 +12175,7 @@
       "tenuous grasp",
       "tenuous hold on power"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "The prosecution's case rested on a tenuous link between the defendant and a phone found near the scene."
   },
   "cogent": {
@@ -12176,7 +12193,7 @@
       "cogent reason",
       "cogent analysis"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "Her cogent case for rent control won over even the doubters on the housing committee."
   },
   "tacit": {
@@ -12194,7 +12211,7 @@
       "tacit consent",
       "tacit knowledge"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "By saying nothing at the meeting, the minister gave tacit approval to the cuts."
   },
   "ambivalent": {
@@ -12248,7 +12265,7 @@
       "morally untenable",
       "render untenable"
     ],
-    "level": 2,
+    "level": 3,
     "contextSentence": "Once the leaked emails surfaced, the chairman's position became untenable and he resigned within a week."
   },
   "specious": {
@@ -12588,7 +12605,7 @@
     "pos": "phrasal verb",
     "partOfSpeech": "phrasal verb",
     "root": "",
-    "definition": "Wear clothes; place something on your body.",
+    "definition": "Start wearing clothes or an item; place something on your body.",
     "vietnamese": "mặc vào, đeo vào",
     "collocations": [],
     "level": 1,
@@ -12606,6 +12623,214 @@
     "collocations": [],
     "level": 1,
     "contextSentence": "I want to find out what time the shop opens."
+  },
+  "turn off": {
+    "id": "vocab-a2-pl-9",
+    "word": "turn off",
+    "ipa": "/tɜːn ɒf/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Stop the flow of electricity, gas or water by moving a switch.",
+    "vietnamese": "tắt (đèn, thiết bị, vòi nước)",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Remember to turn off the lights before you leave the classroom."
+  },
+  "wake up": {
+    "id": "vocab-a2-pl-10",
+    "word": "wake up",
+    "ipa": "/weɪk ʌp/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Stop sleeping and become conscious and alert.",
+    "vietnamese": "thức giấc, tỉnh dậy",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "I usually wake up early at weekends to go for a run."
+  },
+  "grow up": {
+    "id": "vocab-a2-pl-11",
+    "word": "grow up",
+    "ipa": "/ɡrəʊ ʌp/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Gradually change from being a child into an adult.",
+    "vietnamese": "lớn lên, trưởng thành",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "She grew up in a peaceful village surrounded by mountains."
+  },
+  "try on": {
+    "id": "vocab-a2-pl-12",
+    "word": "try on",
+    "ipa": "/traɪ ɒn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Put on a piece of clothing to see if it fits and looks good.",
+    "vietnamese": "mặc thử (quần áo, giày dép)",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Can I try on this jacket in a smaller size?"
+  },
+  "take out": {
+    "id": "vocab-a2-pl-13",
+    "word": "take out",
+    "ipa": "/teɪk aʊt/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Remove something from inside a bag, container or pocket; or invite someone for a meal.",
+    "vietnamese": "lấy ra ngoài; mời ai đi ăn",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Please take out your notebooks and write down the homework."
+  },
+  "look at": {
+    "id": "vocab-a2-pl-14",
+    "word": "look at",
+    "ipa": "/lʊk æt/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Direct your eyes towards a specific object or person.",
+    "vietnamese": "nhìn vào, ngắm nhìn",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Look at the board and read the first sentence carefully."
+  },
+  "go out": {
+    "id": "vocab-a2-pl-15",
+    "word": "go out",
+    "ipa": "/ɡəʊ aʊt/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Leave your home to spend time with friends or enjoy an activity.",
+    "vietnamese": "đi ra ngoài chơi, hẹn hò",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Do you want to go out for dinner tonight?"
+  },
+  "come in": {
+    "id": "vocab-a2-pl-16",
+    "word": "come in",
+    "ipa": "/kʌm ɪn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Enter a room, house or office.",
+    "vietnamese": "bước vào, mời vào",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Please knock before you come in."
+  },
+  "sit down": {
+    "id": "vocab-a2-pl-17",
+    "word": "sit down",
+    "ipa": "/sɪt daʊn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Lower your body onto a chair or the floor.",
+    "vietnamese": "ngồi xuống",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "The teacher asked all the students to sit down quietly."
+  },
+  "stand up": {
+    "id": "vocab-a2-pl-18",
+    "word": "stand up",
+    "ipa": "/stænd ʌp/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Rise to an upright position on your feet.",
+    "vietnamese": "đứng dậy",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Everyone stood up when the anthem began playing."
+  },
+  "pick up": {
+    "id": "vocab-a2-pl-19",
+    "word": "pick up",
+    "ipa": "/pɪk ʌp/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Lift something from the floor or table; or collect someone in a vehicle.",
+    "vietnamese": "nhặt lên; đón ai bằng xe",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "He picked up the dropped pen and handed it back to me."
+  },
+  "put down": {
+    "id": "vocab-a2-pl-20",
+    "word": "put down",
+    "ipa": "/pʊt daʊn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Place something you are holding onto a surface; or write down notes.",
+    "vietnamese": "đặt xuống; ghi chép",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Put down your heavy bags and take a short rest."
+  },
+  "switch on": {
+    "id": "vocab-a2-pl-21",
+    "word": "switch on",
+    "ipa": "/swɪtʃ ɒn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Press a switch to start an electrical device or light.",
+    "vietnamese": "bật công tắc, bật máy",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Can you switch on the air conditioner? It is very warm in here."
+  },
+  "switch off": {
+    "id": "vocab-a2-pl-22",
+    "word": "switch off",
+    "ipa": "/swɪtʃ ɒf/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Press a switch to stop an electrical device or appliance.",
+    "vietnamese": "tắt công tắc, tắt máy",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Always switch off the computer at the end of the working day."
+  },
+  "come on": {
+    "id": "vocab-a2-pl-23",
+    "word": "come on",
+    "ipa": "/kʌm ɒn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Hurry up, or encourage someone to keep trying.",
+    "vietnamese": "nhanh lên, cố lên",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Come on, or we are going to miss the train!"
+  },
+  "write down": {
+    "id": "vocab-a2-pl-24",
+    "word": "write down",
+    "ipa": "/raɪt daʊn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Record words, numbers or ideas on paper.",
+    "vietnamese": "ghi chép lại, viết xuống",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Write down your email address so I can send you the details."
   },
   "carry out": {
     "id": "vocab-b1-pl-1",
@@ -12711,6 +12936,526 @@
     "level": 1,
     "contextSentence": "My grandparents brought up five children on a small farm."
   },
+  "look into": {
+    "id": "vocab-b1-pl-9",
+    "word": "look into",
+    "ipa": "/lʊk ˈɪn.tuː/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Investigate or examine the facts about a problem or situation.",
+    "vietnamese": "xem xét, điều tra, nghiên cứu kỹ",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "The customer service manager promised to look into the delivery complaint right away."
+  },
+  "turn out": {
+    "id": "vocab-b1-pl-10",
+    "word": "turn out",
+    "ipa": "/tɜːn aʊt/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Happen in a particular way or have a particular result that was unexpected.",
+    "vietnamese": "hóa ra là, kết cục là",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "The weather forecast predicted rain, but it turned out to be a sunny day."
+  },
+  "make up": {
+    "id": "vocab-b1-pl-11",
+    "word": "make up",
+    "ipa": "/meɪk ʌp/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Invent a story or excuse; or become friends again after an argument.",
+    "vietnamese": "bịa chuyện; làm hòa (sau tranh cãi)",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "They had a serious disagreement yesterday, but they quickly made up this morning."
+  },
+  "look forward to": {
+    "id": "vocab-b1-pl-12",
+    "word": "look forward to",
+    "ipa": "/lʊk ˈfɔː.wəd tuː/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Feel pleased and excited about an event that is going to happen in the future.",
+    "vietnamese": "mong đợi, trông ngóng",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "We are all looking forward to starting our new project next month."
+  },
+  "run out of": {
+    "id": "vocab-b1-pl-13",
+    "word": "run out of",
+    "ipa": "/rʌn aʊt əv/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Use all of a supply of something so that there is none left.",
+    "vietnamese": "cạn kiệt, dùng hết sạch",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "We ran out of printer paper right before the board meeting began."
+  },
+  "get along with": {
+    "id": "vocab-b1-pl-14",
+    "word": "get along with",
+    "ipa": "/ɡet əˈlɒŋ wɪð/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Have a harmonious and friendly working or personal relationship with someone.",
+    "vietnamese": "hòa thuận, ăn ý với ai",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "She gets along well with all her colleagues in the design department."
+  },
+  "give in": {
+    "id": "vocab-b1-pl-15",
+    "word": "give in",
+    "ipa": "/ɡɪv ɪn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Cease resistance to an opponent or demand; submit after arguing.",
+    "vietnamese": "nhượng bộ, đầu hàng, chịu thua",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "After hours of arguing, the manager finally gave in and let the staff leave early."
+  },
+  "catch up with": {
+    "id": "vocab-b1-pl-16",
+    "word": "catch up with",
+    "ipa": "/kætʃ ʌp wɪð/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Reach the same standard or level as someone ahead; or exchange latest news with an acquaintance.",
+    "vietnamese": "bắt kịp (tiến độ); hàn huyên chia sẻ tin tức",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Let us meet for coffee on Friday so I can catch up with you."
+  },
+  "cut down on": {
+    "id": "vocab-b1-pl-17",
+    "word": "cut down on",
+    "ipa": "/kʌt daʊn ɒn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Reduce the amount, size, or frequency of something you consume or do.",
+    "vietnamese": "cắt giảm (tiêu thụ, chi tiêu)",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "The doctor advised him to cut down on sugar and processed carbohydrates."
+  },
+  "keep up with": {
+    "id": "vocab-b1-pl-18",
+    "word": "keep up with",
+    "ipa": "/kiːp ʌp wɪð/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Maintain the same speed, pace or standard as someone or something changing rapidly.",
+    "vietnamese": "theo kịp, duy trì bắt nhịp tiến độ",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "It is difficult to keep up with the latest technological developments in artificial intelligence."
+  },
+  "take up": {
+    "id": "vocab-b1-pl-19",
+    "word": "take up",
+    "ipa": "/teɪk ʌp/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Start a new hobby, activity or sport; or occupy an amount of time or space.",
+    "vietnamese": "bắt đầu sở thích mới; chiếm thời gian/không gian",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "He decided to take up oil painting during his summer holiday."
+  },
+  "hold on": {
+    "id": "vocab-b1-pl-20",
+    "word": "hold on",
+    "ipa": "/həʊld ɒn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Wait for a short time (especially on the telephone); or grip something tightly.",
+    "vietnamese": "giữ máy (điện thoại), chờ một chút; bám chặt",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Hold on a second while I transfer your call to technical support."
+  },
+  "pass away": {
+    "id": "vocab-b1-pl-21",
+    "word": "pass away",
+    "ipa": "/pɑːs əˈweɪ/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Die (used as a gentle, polite euphemism to avoid causing distress).",
+    "vietnamese": "qua đời, từ trần (nói giảm nói tránh)",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "His grandfather passed away peacefully in his sleep at the age of ninety."
+  },
+  "show up": {
+    "id": "vocab-b1-pl-22",
+    "word": "show up",
+    "ipa": "/ʃəʊ ʌp/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Arrive or appear at a place or event.",
+    "vietnamese": "xuất hiện, có mặt, đến",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Over fifty guests showed up at the anniversary celebration."
+  },
+  "fill in": {
+    "id": "vocab-b1-pl-23",
+    "word": "fill in",
+    "ipa": "/fɪl ɪn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Complete the blank sections of an official form or document with written details.",
+    "vietnamese": "điền thông tin vào mẫu đơn",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Please fill in this visa application form using black ink."
+  },
+  "drop off": {
+    "id": "vocab-b1-pl-24",
+    "word": "drop off",
+    "ipa": "/drɒp ɒf/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Take someone or something to a destination by car; or fall into a light sleep.",
+    "vietnamese": "chở ai đến nơi; thiu thiu ngủ",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "I can drop you off at the station on my way to the office."
+  },
+  "calm down": {
+    "id": "vocab-b1-pl-25",
+    "word": "calm down",
+    "ipa": "/kɑːm daʊn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Stop feeling angry, excited or nervous and regain mental balance.",
+    "vietnamese": "bình tĩnh lại, trấn tĩnh",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Take several deep breaths and try to calm down before speaking."
+  },
+  "go on": {
+    "id": "vocab-b1-pl-26",
+    "word": "go on",
+    "ipa": "/ɡəʊ ɒn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Continue without stopping; or happen.",
+    "vietnamese": "tiếp tục; xảy ra, diễn ra",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Please go on with your presentation, we are listening carefully."
+  },
+  "check in": {
+    "id": "vocab-b1-pl-27",
+    "word": "check in",
+    "ipa": "/tʃek ɪn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Register arrival at a hotel, airport or conference desk.",
+    "vietnamese": "làm thủ tục nhận phòng / thủ tục lên máy bay",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Passengers must check in at least two hours before an international flight."
+  },
+  "get over": {
+    "id": "vocab-b1-pl-28",
+    "word": "get over",
+    "ipa": "/ɡet ˈəʊ.vər/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Recover from an illness, shock or emotional disappointment.",
+    "vietnamese": "vượt qua (nỗi buồn, khó khăn), khỏi bệnh",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "It took her several weeks to get over the severe flu."
+  },
+  "come up with": {
+    "id": "vocab-b2-pl-1",
+    "word": "come up with",
+    "ipa": "/kʌm ʌp wɪð/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Suggest or think of an idea, strategy, plan or solution.",
+    "vietnamese": "nảy ra (ý tưởng), đề xuất (giải pháp)",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "The marketing team came up with an ingenious campaign to boost brand engagement."
+  },
+  "face up to": {
+    "id": "vocab-b2-pl-2",
+    "word": "face up to",
+    "ipa": "/feɪs ʌp tuː/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Accept and confront an unpleasant fact, reality or consequence bravely.",
+    "vietnamese": "dũng cảm đối mặt với sự thật khó khăn",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Corporate leaders must face up to the financial realities of inflation."
+  },
+  "bring about": {
+    "id": "vocab-b2-pl-3",
+    "word": "bring about",
+    "ipa": "/brɪŋ əˈbaʊt/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Make something happen, especially a major transformation or social reform.",
+    "vietnamese": "mang lại, dẫn đến, gây ra (biến chuyển lớn)",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Rapid advancements in automation brought about sweeping changes in manufacturing."
+  },
+  "weed out": {
+    "id": "vocab-b2-pl-4",
+    "word": "weed out",
+    "ipa": "/wiːd aʊt/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Remove unwanted, inferior or corrupt elements from a group or organization.",
+    "vietnamese": "loại bỏ phần tử xấu/kém chất lượng, thanh lọc",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Rigorous entrance evaluations are designed to weed out unsuitable applicants early."
+  },
+  "zero in on": {
+    "id": "vocab-b2-pl-5",
+    "word": "zero in on",
+    "ipa": "/ˈzɪə.rəʊ ɪn ɒn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Direct all your attention, focus or efforts onto a specific target or problem.",
+    "vietnamese": "tập trung cao độ vào mục tiêu then chốt",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "The audit team quickly zeroed in on the accounting discrepancies in the foreign subsidiary."
+  },
+  "stand out": {
+    "id": "vocab-b2-pl-6",
+    "word": "stand out",
+    "ipa": "/stænd aʊt/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Be much better, more noticeable or prominent than similar people or things.",
+    "vietnamese": "nổi bật, xuất sắc vượt trội",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Her extensive international experience made her application stand out from the rest."
+  },
+  "back up": {
+    "id": "vocab-b2-pl-7",
+    "word": "back up",
+    "ipa": "/bæk ʌp/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Support or verify an argument with evidence; or create a duplicate copy of electronic files.",
+    "vietnamese": "chứng minh bằng chứng cứ; sao lưu dữ liệu",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "The research team gathered extensive empirical data to back up their hypothesis."
+  },
+  "lay off": {
+    "id": "vocab-b2-pl-8",
+    "word": "lay off",
+    "ipa": "/leɪ ɒf/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Stop employing workers because there is not enough work or revenue.",
+    "vietnamese": "sa thải nhân sự (do suy thoái/tái cấu trúc kinh tế)",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Due to falling consumer demand, the automotive plant had to lay off three hundred workers."
+  },
+  "hinge on": {
+    "id": "vocab-b2-pl-9",
+    "word": "hinge on",
+    "ipa": "/hɪndʒ ɒn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Depend entirely on a single critical factor or decision for success.",
+    "vietnamese": "phụ thuộc hoàn toàn vào mấu chốt, xoay quanh",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "The success of the merger hinges on obtaining antitrust regulatory approval."
+  },
+  "wear off": {
+    "id": "vocab-b2-pl-10",
+    "word": "wear off",
+    "ipa": "/weər ɒf/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Gradually lose effectiveness, intensity or physical impact over time.",
+    "vietnamese": "mất dần tác dụng, nhạt dần (thuốc, cảm giác)",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "As the painkiller began to wear off, the patient felt the ache return in her knee."
+  },
+  "break out": {
+    "id": "vocab-b2-pl-11",
+    "word": "break out",
+    "ipa": "/breɪk aʊt/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Begin suddenly and violently (such as war, fire, epidemic disease or riots).",
+    "vietnamese": "bùng phát dữ dội (chiến tranh, dịch bệnh, hỏa hoạn)",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Emergency services responded rapidly when a massive fire broke out in the warehouse."
+  },
+  "put up with": {
+    "id": "vocab-b2-pl-12",
+    "word": "put up with",
+    "ipa": "/pʊt ʌp wɪð/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Tolerate or endure an unpleasant situation or irritating behavior without complaining.",
+    "vietnamese": "cam chịu, chịu đựng điều phiền toái",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Residents refused to put up with the continuous construction noise throughout the night."
+  },
+  "pan out": {
+    "id": "vocab-b2-pl-13",
+    "word": "pan out",
+    "ipa": "/pæn aʊt/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Develop in a particular way, or turn out successfully as anticipated.",
+    "vietnamese": "tiến triển tốt đẹp, đem lại kết quả khả quan",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "His ambitious venture capital investment did not pan out the way he had hoped."
+  },
+  "scale back": {
+    "id": "vocab-b2-pl-14",
+    "word": "scale back",
+    "ipa": "/skeɪl bæk/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Make something smaller in size, scope, budget or quantity than originally planned.",
+    "vietnamese": "thu hẹp quy mô, giảm bớt ngân sách",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "The government was forced to scale back infrastructure spending during the fiscal deficit."
+  },
+  "fall behind": {
+    "id": "vocab-b2-pl-15",
+    "word": "fall behind",
+    "ipa": "/fɔːl bɪˈhaɪnd/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Fail to keep pace with a schedule, competitors, or financial obligations.",
+    "vietnamese": "tụt lại phía sau, chậm trễ hạn nộp",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "If suppliers delay deliveries, the factory will fall behind schedule."
+  },
+  "step down": {
+    "id": "vocab-b2-pl-16",
+    "word": "step down",
+    "ipa": "/step daʊn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Resign formally from an important position of authority or executive leadership.",
+    "vietnamese": "từ chức, rút lui khỏi vị trí lãnh đạo",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "The chief executive decided to step down following accusations of regulatory non-compliance."
+  },
+  "opt out": {
+    "id": "vocab-b2-pl-17",
+    "word": "opt out",
+    "ipa": "/ɒpt aʊt/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Choose deliberately not to participate in a program, agreement or system.",
+    "vietnamese": "chủ động rút lui, chọn không tham gia",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Employees have the legal right to opt out of the voluntary pension program."
+  },
+  "tap into": {
+    "id": "vocab-b2-pl-18",
+    "word": "tap into",
+    "ipa": "/tæp ˈɪn.tuː/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Access, exploit and make good use of an abundant resource, market or network.",
+    "vietnamese": "khai thác, tận dụng (nguồn lực, thị trường tiềm năng)",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "Renewable energy initiatives seek to tap into geothermal reservoirs beneath volcanic terrain."
+  },
+  "root out": {
+    "id": "vocab-b2-pl-19",
+    "word": "root out",
+    "ipa": "/ruːt aʊt/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Find, expose and eliminate something bad or harmful completely.",
+    "vietnamese": "diệt trừ tận gốc, bài trừ, truy quét",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "The new administration launched an anti-corruption task force to root out systemic bribery."
+  },
+  "brush up on": {
+    "id": "vocab-b2-pl-20",
+    "word": "brush up on",
+    "ipa": "/brʌʃ ʌp ɒn/",
+    "pos": "phrasal verb",
+    "partOfSpeech": "phrasal verb",
+    "root": "",
+    "definition": "Quickly improve, refresh or practice existing knowledge of a subject or skill.",
+    "vietnamese": "ôn tập lại, trau dồi nhanh kiến thức cũ",
+    "collocations": [],
+    "level": 1,
+    "contextSentence": "She spent the weekend brushing up on her Spanish conversational skills before flying to Madrid."
+  },
   "scale up": {
     "id": "vocab-pl-1",
     "word": "scale up",
@@ -12734,7 +13479,7 @@
     "definition": "Bring an activity to an end, settle affairs; or find oneself in an unexpected situation or place.",
     "vietnamese": "kết thúc, thanh lý giải thể (doanh nghiệp), rơi vào tình thế",
     "collocations": [],
-    "level": 2,
+    "level": 1,
     "contextSentence": "If the firm fails to secure bridge financing, creditors will force the directors to wind up the business."
   },
   "bottle up": {
@@ -12761,7 +13506,7 @@
     "vietnamese": "lấy hết can đảm, khơi dậy nguồn năng lượng/ký ức từ bên trong",
     "collocations": [],
     "level": 2,
-    "contextSentence": "She had to summon up all her moral fortitude to whistleblow against the fraudulent billing scheme."
+    "contextSentence": "She had to summon up all her courage to blow the whistle on the fraudulent billing scheme."
   },
   "chalk up": {
     "id": "vocab-pl-5",
@@ -12773,7 +13518,7 @@
     "definition": "Ascribe or attribute a success or failure to a particular cause or factor; register an achievement.",
     "vietnamese": "ghi nhận chiến tích, quy nguyên nhân cho điều gì",
     "collocations": [],
-    "level": 3,
+    "level": 2,
     "contextSentence": "Let’s chalk up the botched presentation to jet lag and inadequate rehearsals rather than incompetence."
   },
   "cheer up": {
@@ -12929,7 +13674,7 @@
     "definition": "Take severe measures against individuals or behaviors that violate laws or rules.",
     "vietnamese": "trấn áp, siết chặt kỷ cương, xử lý mạnh tay",
     "collocations": [],
-    "level": 2,
+    "level": 1,
     "contextSentence": "The aviation authority decided to crack down on unauthorized drone operations near runways."
   },
   "pare down": {
@@ -12994,7 +13739,7 @@
     "definition": "Reduce the number of possibilities or choices by filtering out unsuitable ones.",
     "vietnamese": "thu hẹp danh sách lựa chọn/phạm vi",
     "collocations": [],
-    "level": 2,
+    "level": 1,
     "contextSentence": "The search committee managed to narrow down two hundred applicants to three finalists."
   },
   "play down": {
@@ -13073,7 +13818,7 @@
     "vietnamese": "đem lại thành quả xứng đáng, trả dứt điểm nợ nần",
     "collocations": [],
     "level": 1,
-    "contextSentence": "Ten years of disciplined deliberate practice finally paid off when she won the international concerto gold."
+    "contextSentence": "Ten years of disciplined deliberate practice finally paid off when she won an international piano competition."
   },
   "set off": {
     "id": "vocab-pl-29",
@@ -13124,7 +13869,7 @@
     "definition": "Separate from a main group or trajectory; or remove a layer smoothly.",
     "vietnamese": "tách lẻ khỏi đội hình, bóc tách ra",
     "collocations": [],
-    "level": 2,
+    "level": 1,
     "contextSentence": "During the high-speed flight demonstration, the wingman peeled off to initiate a solo climbing roll."
   },
   "bank on": {
@@ -13215,7 +13960,7 @@
     "definition": "Start, begin, or initiate a course of action, project, or journey.",
     "vietnamese": "bắt tay thực hiện, dấn thân vào một hành trình lớn",
     "collocations": [],
-    "level": 2,
+    "level": 1,
     "contextSentence": "The engineering team is about to embark on a multi-year migration to microservices."
   },
   "press on": {
@@ -13306,7 +14051,7 @@
     "definition": "Manage to cope or succeed despite lacking proper planning, skill, or resources.",
     "vietnamese": "xoay xở cho qua, lóng ngóng nhưng rồi cũng vượt qua được",
     "collocations": [],
-    "level": 3,
+    "level": 2,
     "contextSentence": "With no instructions and a toddler underfoot, we somehow muddled through assembling the bookcase."
   },
   "scrape through": {
@@ -13358,7 +14103,7 @@
     "definition": "Turn to something or someone for support when other options have failed.",
     "vietnamese": "dựa vào, cầu viện đến (phương án dự phòng)",
     "collocations": [],
-    "level": 2,
+    "level": 1,
     "contextSentence": "When the harvest failed, families fell back on their savings and the vegetables in their home gardens."
   },
   "cut back": {
@@ -13462,7 +14207,7 @@
     "definition": "Avoid dealing with or talking directly about a difficult or awkward subject.",
     "vietnamese": "né tránh, lảng tránh, nói vòng vo quanh vấn đề",
     "collocations": [],
-    "level": 3,
+    "level": 2,
     "contextSentence": "The interview skirted around the actor's legal troubles and focused instead on his new film."
   },
   "come across as": {
@@ -13553,7 +14298,7 @@
       "Scheme of Repetition"
     ],
     "level": 3,
-    "contextSentence": "'...government of the people, by the people, for the people, shall not perish from the earth.' — Abraham Lincoln."
+    "contextSentence": "'Are they Hebrews? So am I. Are they Israelites? So am I. Are they the seed of Abraham? So am I.' — 2 Corinthians 11:22 (KJV, lightly modernised)."
   },
   "symploce": {
     "id": "rhetoric-5",
@@ -13601,7 +14346,7 @@
       "Scheme of Repetition"
     ],
     "level": 3,
-    "contextSentence": "'Blood hath bought blood, and blows have answer'd blows.' — William Shakespeare, King John."
+    "contextSentence": "'Nothing will come of nothing: speak again.' — William Shakespeare, King Lear, I.i."
   },
   "polysyndeton": {
     "id": "rhetoric-8",
@@ -13649,7 +14394,7 @@
       "Scheme of Wordplay"
     ],
     "level": 3,
-    "contextSentence": "'She arrived in a taxi and a state of utter distress.' — P.G. Wodehouse."
+    "contextSentence": "'She left the party in a taxi and a temper.' (Constructed example.)"
   },
   "syllepsis": {
     "id": "rhetoric-11",
@@ -13665,7 +14410,7 @@
       "Scheme of Wordplay"
     ],
     "level": 3,
-    "contextSentence": "'He carried a strobe light and the responsibility for the lives of his men.' — Tim O'Brien, The Things They Carried."
+    "contextSentence": "'He carried a strobe light and the responsibility for the lives of his men.' — Tim O'Brien, The Things They Carried. (attribution unverified)"
   },
   "litotes": {
     "id": "rhetoric-12",
@@ -13713,7 +14458,7 @@
       "Discursive Strategy"
     ],
     "level": 3,
-    "contextSentence": "'Now, someone will say: 'Yes, but what about the cost?' To that objection I reply...' — Cicero."
+    "contextSentence": "'Some will object that this is too costly. To that objection I reply: doing nothing costs far more.' (Constructed example.)"
   },
   "antithesis": {
     "id": "rhetoric-15",
@@ -13841,7 +14586,7 @@
       "Scheme of Omission"
     ],
     "level": 3,
-    "contextSentence": "'To err is human; to forgive, divine.' (Omission of 'is' in second clause)."
+    "contextSentence": "'Beauty is truth, truth beauty.' — John Keats, Ode on a Grecian Urn (omission of 'is' in second clause)."
   },
   "aposiopesis": {
     "id": "rhetoric-23",
@@ -14058,14 +14803,14 @@
     "pos": "rhetorical device",
     "partOfSpeech": "rhetorical device",
     "root": "Greek anthropos (human) + morphe (form).",
-    "definition": "Trope of Meaning: Treating non-human animals, deities, or objects as literally having human physical form and motivations.",
+    "definition": "Trope of Meaning: Treating non-human animals, deities, or objects as literally having human physical form and motivations (unlike Personification, a passing figure of speech).",
     "vietnamese": "Phép nhân hình hóa; miêu tả sự vật hoặc sinh vật như thể chúng thực sự có nhân hình và động cơ tâm lý như con người.",
     "collocations": [
       "Anthropomorphism",
       "Trope of Meaning"
     ],
     "level": 3,
-    "contextSentence": "'The engine groaned, coughed in protest, and stubbornly refused to ignite.'"
+    "contextSentence": "In Animal Farm, the pigs walk upright, wear clothes and run the farm like a human committee. — George Orwell."
   },
   "hyperbole": {
     "id": "rhetoric-37",
@@ -14138,7 +14883,7 @@
     "pos": "rhetorical device",
     "partOfSpeech": "rhetorical device",
     "root": "Greek eironeia (dissimulation, assumed ignorance).",
-    "definition": "Trope of Contrast: Expression of meaning by using language that signifies the opposite, typically for humor or emphasis.",
+    "definition": "Trope of Contrast: Expression of meaning by using language that signifies the opposite, typically for humor or emphasis (verbal irony); also a situation whose outcome sharply contradicts what was expected (situational irony).",
     "vietnamese": "Phép nghịch mỉa (mỉa mai tình huống/ngữ nghĩa); dùng lời lẽ biểu đạt trái ngược với bản chất thực tế nhằm làm nổi bật mâu thuẫn trớ trêu.",
     "collocations": [
       "Irony",
@@ -14363,7 +15108,7 @@
     "partOfSpeech": "rhetorical device",
     "root": "Greek klimax (ladder, staircase). Also termed Auxesis.",
     "definition": "Scheme of Order: Arrangement of words, phrases, or clauses in an ascending order of importance, force, or intensity.",
-    "vietnamese": "Phép tiến thoái tam cấp (tiệm tiến tăng tiến); sắp xếp các vế câu theo trật tự tăng dần về mức độ quan trọng hoặc cảm xúc.",
+    "vietnamese": "Phép tiệm tiến (tăng tiến); sắp xếp các vế câu theo trật tự tăng dần về mức độ quan trọng hoặc cảm xúc.",
     "collocations": [
       "Climax",
       "Scheme of Order"
@@ -14411,13 +15156,13 @@
     "partOfSpeech": "rhetorical device",
     "root": "Greek tetra- (four) + kolon (limb, clause).",
     "definition": "Scheme of Rhythm: A rhetorical series composed of four parallel words, phrases, or clauses.",
-    "vietnamese": "Phép tứ đoạn luận; cấu trúc chuỗi bốn vế câu đối xứng nhằm tạo sự chắc chắn, vững chãi như một chiếc bàn bốn chân.",
+    "vietnamese": "Phép bốn vế song song; chuỗi bốn từ, cụm từ hoặc mệnh đề cân đối nhằm tạo sự chắc chắn, vững chãi như một chiếc bàn bốn chân.",
     "collocations": [
       "Tetracolon",
       "Scheme of Rhythm"
     ],
     "level": 3,
-    "contextSentence": "'That government of the people, by the people, for the people, shall not perish from the earth.' (Lincoln expanded cadence)."
+    "contextSentence": "'I have nothing to offer but blood, toil, tears and sweat.' — Winston Churchill, 13 May 1940."
   },
   "isocolon": {
     "id": "rhetoric-59",
@@ -14433,7 +15178,7 @@
       "Scheme of Rhythm"
     ],
     "level": 3,
-    "contextSentence": "'An envious heart makes a treacherous ear.' — Zora Neale Hurston, Their Eyes Were Watching God."
+    "contextSentence": "'Reading maketh a full man; conference a ready man; and writing an exact man.' — Francis Bacon, Of Studies."
   },
   "bicolon": {
     "id": "rhetoric-60",
@@ -14443,7 +15188,7 @@
     "partOfSpeech": "rhetorical device",
     "root": "Latin bi- (two) + Greek kolon (clause).",
     "definition": "Scheme of Rhythm: A rhetorical sentence composed of two parallel clauses of equivalent cadence or syntactic shape.",
-    "vietnamese": "Phép nhị đoạn luật; kết hợp hai vế câu đối sánh ngắn gọn, xúc tích, tạo nên những câu châm ngôn ghi nhớ tức thì.",
+    "vietnamese": "Phép nhị đoạn luật; kết hợp hai vế câu đối sánh ngắn gọn, súc tích, tạo nên những câu châm ngôn ghi nhớ tức thì.",
     "collocations": [
       "Bicolon",
       "Scheme of Rhythm"
@@ -14561,7 +15306,7 @@
       "Discursive Strategy"
     ],
     "level": 3,
-    "contextSentence": "'Tantaene animis caelestibus irae? (Can heavenly minds harbor such bitter wrath?)' — Virgil, Aeneid."
+    "contextSentence": "'Tantae molis erat Romanam condere gentem. (So vast was the labor of founding the Roman nation!)' — Virgil, Aeneid 1.33."
   },
   "sententia": {
     "id": "rhetoric-68",
@@ -14682,11 +15427,11 @@
     "pos": "rhetorical device",
     "partOfSpeech": "rhetorical device",
     "root": "Greek khrestos (useful) + mathein (to learn).",
-    "definition": "Pedagogical Compilation: A collection of choice literary or educational passages used especially in acquiring language mastery.",
+    "definition": "Reference Term (not a rhetorical figure): A collection of choice literary or educational passages used especially in acquiring language mastery.",
     "vietnamese": "Tuyển tập tinh hoa học thuật; tập hợp các đoạn văn mẫu mực nhất từ các bậc thầy nhằm mục đích rèn luyện văn phong C2.",
     "collocations": [
       "Chrestomathy",
-      "Pedagogical Compilation"
+      "Reference Term (not a rhetorical figure)"
     ],
     "level": 3,
     "contextSentence": "'A volume of foundational essays compiled for polyglots and rhetorical scholars.'"
@@ -14698,11 +15443,11 @@
     "pos": "rhetorical device",
     "partOfSpeech": "rhetorical device",
     "root": "Greek poly- (many) + syllogismos (reckoning together).",
-    "definition": "Logical Architecture: A chain of syllogisms in which the conclusion of each becomes the premise of the next.",
+    "definition": "Logical Form (not a rhetorical figure): A chain of syllogisms in which the conclusion of each becomes the premise of the next.",
     "vietnamese": "Phép tam đoạn luận liên hoàn; chuỗi các tam đoạn luận mắt xích trong đó kết luận của luận thức trước làm tiền đề cho luận thức sau.",
     "collocations": [
       "Polysyllogism",
-      "Logical Architecture"
+      "Logical Form (not a rhetorical figure)"
     ],
     "level": 3,
     "contextSentence": "'All humans are mortal; Socrates is human; therefore Socrates is mortal. All mortal beings require caution; therefore Socrates requires caution.'"
@@ -14817,7 +15562,7 @@
       "Syntactic Architecture"
     ],
     "level": 3,
-    "contextSentence": "'Although the quarterly revenue exceeded expectations, because operational overhead surged dramatically, net margin contracted.'"
+    "contextSentence": "'Although quarterly revenue exceeded expectations, net margin contracted because operating costs, which had risen since spring, surged when the new plant opened.'"
   },
   "periodic sentence": {
     "id": "rhetoric-84",
@@ -14865,7 +15610,7 @@
       "Discursive Strategy"
     ],
     "level": 3,
-    "contextSentence": "'Why do you sleep, when the enemy is at the gates? How long will you abuse our patience?' — Cicero against Catiline."
+    "contextSentence": "'Why do you sleep, when the enemy is at the gates? How long will you abuse our patience?' — adapted from Cicero, In Catilinam I (paraphrase, not a literal translation)."
   },
   "bdelygmia": {
     "id": "rhetoric-87",
@@ -14897,7 +15642,7 @@
       "Discursive Strategy"
     ],
     "level": 3,
-    "contextSentence": "'A knave, a rascal, an eater of broken meats; a base, proud, shallow, beggarly, three-suited, hundred-pound, filthy knave.' — King Lear."
+    "contextSentence": "'A knave; a rascal; an eater of broken meats; a base, proud, shallow, beggarly, three-suited, hundred-pound, filthy, worsted-stocking knave.' — William Shakespeare, King Lear, II.ii (Kent to Oswald)."
   },
   "tapinosis": {
     "id": "rhetoric-89",
@@ -14962,22 +15707,6 @@
     ],
     "level": 3,
     "contextSentence": "'Let us dispense with corporate euphemisms: our flagship product has failed in the marketplace, and we must pivot.'"
-  },
-  "euphemos": {
-    "id": "rhetoric-93",
-    "word": "Euphemos",
-    "ipa": "",
-    "pos": "rhetorical device",
-    "partOfSpeech": "rhetorical device",
-    "root": "Greek eu- (well) + pheme (voice) -> solemn benediction or auspicious invocation.",
-    "definition": "Discursive Strategy: A solemn blessing or auspicious statement designed to consecrate a beginning or invite good fortune.",
-    "vietnamese": "Phép chúc tụng cát tường; lời chúc phúc trang trọng nhằm mở đầu một sứ mệnh vĩ đại hoặc phong thánh cho một cam kết chung.",
-    "collocations": [
-      "Euphemos",
-      "Discursive Strategy"
-    ],
-    "level": 3,
-    "contextSentence": "'May prosperity attend your enterprise and honor crown your endeavors.'"
   },
   "dialogismus": {
     "id": "rhetoric-94",

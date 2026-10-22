@@ -39,8 +39,16 @@ assert(grammar[0].id && grammar[0].promptSentence && grammar[0].targetTransforma
 // 4. Validate vocabulary.json
 const vocab = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'vocabulary.json'), 'utf8'));
 assert(Array.isArray(vocab), 'vocabulary must be an array');
-assert(vocab.length >= 180, `Expected at least 180 vocabulary items, got ${vocab.length}`);
+assert(vocab.length >= 350, `Expected at least 350 vocabulary items, got ${vocab.length}`);
 assert(vocab[0].id && vocab[0].wordOrChunk && vocab[0].definition && vocab[0].breakdown, 'Vocabulary item schema mismatch');
+
+const particleLabItems = vocab.filter(x => x.mode === 'PARTICLE_LAB');
+assert(particleLabItems.length >= 100, `Expected at least 100 particle lab items, got ${particleLabItems.length}`);
+particleLabItems.forEach(pl => {
+  assert(pl.breakdown.particle, `Missing particle for ${pl.id}`);
+  assert(pl.breakdown.particleLogic, `Missing particle logic for ${pl.id}`);
+  assert(pl.breakdown.semanticArchetype, `Missing semantic archetype for ${pl.id}`);
+});
 
 // 5. Validate drills.json
 const drills = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'drills.json'), 'utf8'));

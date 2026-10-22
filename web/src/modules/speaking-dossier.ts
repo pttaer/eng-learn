@@ -188,16 +188,16 @@ export class SpeakingDossier {
       <div class="dossier-control-bar">
         <div class="speaking-mode-cluster">
           <button class="hud-btn mode-tab ${this.mode === 'nation' ? 'active-tab' : ''}" data-mode="nation">
-            ⏱️ Nation 4-3-2 Fluency
+            ${icon('clock', 13)} 4-3-2 Fluency
           </button>
           <button class="hud-btn mode-tab ${this.mode === 'roleplay' ? 'active-tab' : ''}" data-mode="roleplay">
-            🎙️ Spoken Conversation Partner
+            ${icon('mic', 13)} Conversation Partner
           </button>
           <button class="hud-btn mode-tab ${this.mode === 'formant' ? 'active-tab' : ''}" data-mode="formant">
-            🔬 Formant Vowel & Minimal Pairs Lab
+            ${icon('music', 13)} Formant & Pairs Lab
           </button>
           <button class="hud-btn mode-tab ${this.mode === 'ielts' ? 'active-tab' : ''}" data-mode="ielts">
-            🎓 IELTS Speaking Examiner
+            ${icon('graduationCap', 13)} IELTS Examiner
           </button>
         </div>
         ${this.mode === 'nation' ? levelRowHtml(this.allItems as any[], this.activeLevel) : ''}
@@ -303,7 +303,7 @@ export class SpeakingDossier {
           </div>
           <div class="briefing-actions">
             <button class="hud-btn btn-coach-toggle ${coachEnabled ? 'active-coach' : ''}">
-              ${coachEnabled ? '🎓 Coach Notes: ON' : '🎓 Coach Notes: OFF'}
+              ${coachEnabled ? `${icon('graduationCap', 13)} Coach Notes: ON` : `${icon('graduationCap', 13)} Coach Notes: OFF`}
             </button>
             <button class="hud-btn btn-roleplay-reset">↺ Restart Scene</button>
           </div>
@@ -311,13 +311,13 @@ export class SpeakingDossier {
         <div class="briefing-meta">
           <div class="meta-item"><span class="meta-label">Setting:</span> ${scenario.setting}</div>
           <div class="meta-item"><span class="meta-label">Roles:</span> Partner (${scenario.partnerRole}) ⟷ You (${scenario.learnerRole})</div>
-          <div class="meta-item goal-item"><span class="meta-label">Target Goal:</span> 🎯 ${scenario.learnerGoal}</div>
+          <div class="meta-item goal-item"><span class="meta-label">Target Goal:</span> ${icon('target', 12)} ${scenario.learnerGoal}</div>
         </div>
       </div>
 
       <div class="roleplay-phrase-box-container">
         <div class="phrase-box-header">
-          <span class="phrase-box-title">💡 Guided Phrase Box (${scenario.cefrLevel} Scaffolding):</span>
+          <span class="phrase-box-title">${icon('lightbulb', 13)} Guided Phrase Box (${scenario.cefrLevel} Scaffolding):</span>
         </div>
         <div class="phrase-chips-rack">
           ${scenario.phraseBox.map(ph => `
@@ -341,7 +341,7 @@ export class SpeakingDossier {
 
           <div class="interaction-controls">
             <button class="hud-btn btn-partner-mic ${this.isPartnerRecording ? 'recording-active' : ''}">
-              ${this.isPartnerRecording ? '⏹️ Stop & Submit Spoken Take' : '🎙️ Hold / Click to Speak Response'}
+              ${this.isPartnerRecording ? `${icon('stop', 13)} Stop &amp; Submit Spoken Take` : `${icon('mic', 13)} Hold / Click to Speak Response`}
             </button>
 
             <div class="quick-response-box">
@@ -355,18 +355,18 @@ export class SpeakingDossier {
       ` : `
         <div class="roleplay-completion-card">
           <div class="completion-header">
-            <h4>🏆 CEFR Scenario Completed: ${scenario.title} [${scenario.cefrLevel}]</h4>
+            <h4>${icon('trophy', 14)} CEFR Scenario Completed: ${scenario.title} [${scenario.cefrLevel}]</h4>
             <span class="badge-success">CAN-DO ACHIEVED</span>
           </div>
           <div class="completion-grid">
             <div class="completion-col">
-              <h5>✅ What Went Well</h5>
+              <h5>${icon('check', 13)} What Went Well</h5>
               <ul>
                 ${summary?.whatWentWell.map(w => `<li>${w}</li>`).join('') || ''}
               </ul>
             </div>
             <div class="completion-col">
-              <h5>🎯 Key Recasts & Nuance</h5>
+              <h5>${icon('target', 13)} Key Recasts &amp; Nuance</h5>
               ${summary?.keyErrors.length ? `
                 <ul class="error-recasts-list">
                   ${summary.keyErrors.map(e => `
@@ -396,7 +396,7 @@ export class SpeakingDossier {
     if (msg.sender === 'coach') {
       return `
         <div class="roleplay-bubble coach-bubble">
-          <div class="coach-icon">🎓</div>
+          <div class="coach-icon">${icon('graduationCap', 16)}</div>
           <div class="coach-content">${msg.text}</div>
         </div>
       `;
@@ -671,7 +671,7 @@ export class SpeakingDossier {
     const cardHandle = AtomicCard.create({
       id: item.id,
       pillar: 'SPEAK',
-      category: '4-3-2 DRILL',
+      category: '4-3-2',
       indexStr: `[ ${String(item.index).padStart(2, '0')} / ${this.items.length} ]`,
       statusBadge,
       front: {
@@ -712,22 +712,22 @@ export class SpeakingDossier {
     const perf = this.roundsPerformance[this.currentRoundIdx];
 
     frontEl.innerHTML = `
-      <div class="card-prompt-label">
-        NATION 4-3-2 DRILL // ROUND ${this.currentRoundIdx + 1} OF 3 [${allocatedMins} MIN]
+      <div class="card-prompt-label" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+        4-3-2 DRILL // ROUND ${this.currentRoundIdx + 1}/3 (${allocatedMins}M)
       </div>
 
-      <div class="card-main-text" style="font-size: 15px; font-weight: 600; line-height: 1.4; margin-bottom: 8px;">
+      <div class="card-main-text" style="font-size: var(--font-body); font-weight: 600; line-height: 1.4; margin-bottom: 8px;">
         "${item.prompt}"
       </div>
 
       <!-- 15s Mental Anchor -->
-      <div style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-secondary); margin-bottom: 10px; border-left: 2px solid var(--ink-primary); padding-left: 8px; background: rgba(0, 0, 0, 0.02);">
+      <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-secondary); margin-bottom: 10px; border-left: 2px solid var(--ink-primary); padding-left: 8px; background: rgba(0, 0, 0, 0.02);">
         <strong>15S MENTAL ANCHOR:</strong> ${item.anchor}
       </div>
 
       <!-- Collocation Voice Radar Strip -->
       <div style="margin-bottom: 8px;">
-        <div style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted); margin-bottom: 4px;">
+        <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); margin-bottom: 4px;">
           [TARGET COLLOCATIONS // ACOUSTIC RADAR]
         </div>
         <div class="collocation-radar-strip">
@@ -750,13 +750,13 @@ export class SpeakingDossier {
               <path class="timer-progress-ring" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                 fill="none" stroke="var(--accent-gold)" stroke-width="2.5" stroke-dasharray="100, 100" />
             </svg>
-            <div class="timer-display-text" role="timer" aria-live="polite" aria-atomic="true" aria-label="Speaking take countdown timer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 13px; font-weight: 700;">
+            <div class="timer-display-text" role="timer" aria-live="polite" aria-atomic="true" aria-label="Speaking take countdown timer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: var(--font-body-compact); font-weight: 700;">
               ${this.formatTime(this.secondsRemaining)}
             </div>
           </div>
           <div style="display: flex; gap: 4px; margin-top: 6px;">
-            <button type="button" class="hud-btn btn-timer-toggle" aria-label="Start or pause timer" title="Start or pause timer" style="padding: 2px 8px; font-size: 10px;">${this.isTimerRunning ? '⏸ Pause' : '▶ Start'}</button>
-            <button type="button" class="hud-btn btn-take-complete" aria-label="Stop and finish take" title="Stop and finish take" style="padding: 2px 8px; font-size: 10px;" ${!this.isTimerRunning ? 'disabled' : ''}>⏹ Stop</button>
+            <button type="button" class="hud-btn btn-timer-toggle" aria-label="Start or pause timer" title="Start or pause timer" style="padding: 2px 8px; font-size: var(--font-kicker);">${this.isTimerRunning ? '⏸ Pause' : '▶ Start'}</button>
+            <button type="button" class="hud-btn btn-take-complete" aria-label="Stop and finish take" title="Stop and finish take" style="padding: 2px 8px; font-size: var(--font-kicker);" ${!this.isTimerRunning ? 'disabled' : ''}>⏹ Stop</button>
           </div>
         </div>
 
@@ -779,15 +779,15 @@ export class SpeakingDossier {
             <span>COLLOC: <strong>${perf.spottedCollocations}/${perf.totalCollocations}</strong></span>
           </div>
           <div class="post-take-actions">
-            <button type="button" class="hud-btn btn-play-exemplar" style="font-size: 10px; padding: 2px 8px;">▶ Exemplar</button>
-            <button type="button" class="hud-btn btn-play-take" style="font-size: 10px; padding: 2px 8px;">▶ Your Take</button>
-            <button type="button" class="hud-btn btn-stop-audio" style="font-size: 10px; padding: 2px 8px;">⏹ Stop</button>
+            <button type="button" class="hud-btn btn-play-exemplar" style="font-size: var(--font-kicker); padding: 2px 8px;">▶ Exemplar</button>
+            <button type="button" class="hud-btn btn-play-take" style="font-size: var(--font-kicker); padding: 2px 8px;">▶ Your Take</button>
+            <button type="button" class="hud-btn btn-stop-audio" style="font-size: var(--font-kicker); padding: 2px 8px;">⏹ Stop</button>
             ${this.currentRoundIdx < 2 ? `
-              <button type="button" class="hud-btn btn-advance-round" style="font-size: 10px; padding: 2px 10px; background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none;">
+              <button type="button" class="hud-btn btn-advance-round" style="font-size: var(--font-kicker); padding: 2px 10px; background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none;">
                 Advance to Round ${this.currentRoundIdx + 2} (${this.rounds[this.currentRoundIdx + 1] / 60} min) ${icon('arrowRight')}
               </button>
             ` : `
-              <button type="button" class="hud-btn btn-view-matrix" style="font-size: 10px; padding: 2px 10px; background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none;">
+              <button type="button" class="hud-btn btn-view-matrix" style="font-size: var(--font-kicker); padding: 2px 10px; background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none;">
                 View 3-Round Compression Matrix ${icon('arrowRight')}
               </button>
             `}
@@ -895,7 +895,7 @@ export class SpeakingDossier {
             const isRound3 = rIdx === 2;
             if (perf) {
               const silencePct = Math.round(perf.silenceRatio * 100);
-              const tag = isRound3 ? ' <span style="font-size: 9px; opacity: 0.8;">(Peak Fluency)</span>' : '';
+              const tag = isRound3 ? ' <span style="font-size: var(--font-kicker); opacity: 0.8;">(Peak Fluency)</span>' : '';
               return `
                 <tr class="${isRound3 ? 'highlight-fluency' : ''}">
                   <td><strong>ROUND ${rIdx + 1}</strong> (${allocatedMins} MIN)</td>
@@ -921,17 +921,17 @@ export class SpeakingDossier {
       </table>
 
       <!-- Target Collocations Reference -->
-      <div style="margin-top: 12px; font-family: var(--font-sans); font-size: 13px;">
+      <div style="margin-top: 12px; font-family: var(--font-sans); font-size: var(--font-body-compact);">
         <strong>Target Collocations:</strong>
-        <div style="font-family: var(--font-mono); font-size: 12px; background: var(--bg-surface-sunk); border: 1px solid var(--border-subtle); color: var(--ink-primary); border-radius: 4px; padding: 6px 10px; margin-top: 4px;">
+        <div style="font-family: var(--font-mono); font-size: var(--font-body-compact); background: var(--bg-surface-sunk); border: 1px solid var(--border-subtle); color: var(--ink-primary); border-radius: 4px; padding: 6px 10px; margin-top: 4px;">
           ${item.collocations}
         </div>
       </div>
 
       <!-- Phonetics & Prosody Guidance -->
-      <div style="font-family: var(--font-sans); font-size: 13px; border-top: 1px dashed var(--border-hairline); padding-top: 8px; margin-top: 8px;">
+      <div style="font-family: var(--font-sans); font-size: var(--font-body-compact); border-top: 1px dashed var(--border-hairline); padding-top: 8px; margin-top: 8px;">
         <strong>Phonetics & Prosody Check:</strong>
-        <p style="font-family: var(--font-mono); font-size: 12px; color: var(--ink-secondary); margin-top: 4px;">
+        <p style="font-family: var(--font-mono); font-size: var(--font-body-compact); color: var(--ink-secondary); margin-top: 4px;">
           ${item.phonetic}
         </p>
       </div>
@@ -1285,21 +1285,21 @@ export class SpeakingDossier {
       <div class="formant-quadrilateral-card">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
           <div>
-            <h3 style="margin: 0; font-size: 16px; font-weight: 700; color: var(--ink-primary);">🔬 Acoustic Formant Vowel Lab</h3>
-            <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted);">2D F1/F2 IPA VOWEL SPACE // SUB-BIN PARABOLIC SPECTRAL TRACKING</span>
+            <h3 style="margin: 0; font-size: var(--font-body); font-weight: 700; color: var(--ink-primary);">🔬 Acoustic Formant Vowel Lab</h3>
+            <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">2D F1/F2 IPA VOWEL SPACE // SUB-BIN PARABOLIC SPECTRAL TRACKING</span>
           </div>
           <div style="display: flex; gap: 8px;">
-            <button class="hud-btn btn-play-vowel-synth" style="font-size: 11px; padding: 4px 10px;">
-              🔊 Hear Synthetic Formant Model
+            <button class="hud-btn btn-play-vowel-synth" style="font-size: var(--font-kicker); padding: 4px 10px;">
+              ${icon('volume', 12)} Hear Synthetic Formant Model
             </button>
-            <button class="hud-btn btn-toggle-formant-mic ${this.isFormantTracking ? 'recording-active' : ''}" style="font-size: 11px; padding: 4px 12px;">
-              ${this.isFormantTracking ? '⏹️ Stop Mic Track' : '🎙️ Start Mic Resonance Track'}
+            <button class="hud-btn btn-toggle-formant-mic ${this.isFormantTracking ? 'recording-active' : ''}" style="font-size: var(--font-kicker); padding: 4px 12px;">
+              ${this.isFormantTracking ? `${icon('stop', 12)} Stop Mic Track` : `${icon('mic', 12)} Start Mic Resonance Track`}
             </button>
           </div>
         </div>
 
         <div class="vowel-pills-bar">
-          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted); align-self: center; margin-right: 4px;">TARGET VOWEL:</span>
+          <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); align-self: center; margin-right: 4px;">TARGET VOWEL:</span>
           ${VOWEL_BENCHMARKS.map(b => `
             <button class="hud-btn vowel-pill ${b.phoneme === this.activeVowel.phoneme ? 'active-pill' : ''}" data-phoneme="${b.phoneme}">
               <strong>${b.phoneme}</strong> (${b.example})
@@ -1344,29 +1344,29 @@ export class SpeakingDossier {
 
           <div class="formant-telemetry-console" style="display: flex; flex-direction: column; gap: 10px;">
             <div class="telemetry-box" style="padding: 12px; background: rgba(0,0,0,0.25); border: 1px solid var(--border-hairline); border-radius: 6px;">
-              <span class="telemetry-label" style="display: block; font-size: 10px; color: var(--ink-muted); margin-bottom: 4px;">TARGET VOWEL SPECIFICATION</span>
-              <div style="font-size: 15px; font-weight: 700; color: var(--accent-gold); margin-bottom: 4px;">
+              <span class="telemetry-label" style="display: block; font-size: var(--font-kicker); color: var(--ink-muted); margin-bottom: 4px;">TARGET VOWEL SPECIFICATION</span>
+              <div style="font-size: var(--font-body); font-weight: 700; color: var(--accent-gold); margin-bottom: 4px;">
                 ${this.activeVowel.phoneme} — "${this.activeVowel.example}"
               </div>
-              <div style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-secondary);">
+              <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-secondary);">
                 Target F1: <strong>${this.activeVowel.f1} Hz</strong> | Target F2: <strong>${this.activeVowel.f2} Hz</strong>
               </div>
-              <div style="font-size: 11px; color: #f59e0b; margin-top: 6px;">
-                ⚠️ <em>${this.activeVowel.l1Contrast || 'Focus on precise sustained resonance.'}</em>
+              <div style="font-size: var(--font-kicker); color: #f59e0b; margin-top: 6px;">
+                ${icon('alertTriangle', 12)} <em>${this.activeVowel.l1Contrast || 'Focus on precise sustained resonance.'}</em>
               </div>
             </div>
 
             <div class="telemetry-box" style="padding: 12px; background: rgba(0,0,0,0.25); border: 1px solid var(--border-hairline); border-radius: 6px;">
-              <span class="telemetry-label" style="display: block; font-size: 10px; color: var(--ink-muted); margin-bottom: 4px;">LIVE SPOKEN BIOFEEDBACK</span>
-              <div style="font-family: var(--font-mono); font-size: 12px; color: var(--ink-primary); margin-bottom: 4px;">
+              <span class="telemetry-label" style="display: block; font-size: var(--font-kicker); color: var(--ink-muted); margin-bottom: 4px;">LIVE SPOKEN BIOFEEDBACK</span>
+              <div style="font-family: var(--font-mono); font-size: var(--font-body-compact); color: var(--ink-primary); margin-bottom: 4px;">
                 F1 (Height): <strong>${hasLiveFormant ? this.currentFormant!.f1 + ' Hz' : '---'}</strong> | F2 (Backness): <strong>${hasLiveFormant ? this.currentFormant!.f2 + ' Hz' : '---'}</strong>
               </div>
-              <div style="font-size: 12px; line-height: 1.4; color: ${this.currentFormant?.nearestVowel?.isTargetMatch ? 'var(--good, #34d399)' : 'var(--ink-secondary)'};">
+              <div style="font-size: var(--font-body-compact); line-height: 1.4; color: ${this.currentFormant?.nearestVowel?.isTargetMatch ? 'var(--good, #34d399)' : 'var(--ink-secondary)'};">
                 ${hasLiveFormant ? (this.currentFormant!.nearestVowel?.driftGuidance || 'Tracking voice...') : 'Speak or hold target vowel to track resonance on chart.'}
               </div>
               <div style="margin-top: 8px;">
-                <button class="hud-btn btn-sim-resonance" style="font-size: 10px; padding: 2px 8px;">
-                  ⚡ Test Benchmark Resonance
+                <button class="hud-btn btn-sim-resonance" style="font-size: var(--font-kicker); padding: 2px 8px;">
+                  ${icon('zap', 11)} Test Benchmark Resonance
                 </button>
               </div>
             </div>
@@ -1377,11 +1377,11 @@ export class SpeakingDossier {
       <div class="minimal-pairs-card">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">
           <div>
-            <h4 style="margin: 0; font-size: 15px; font-weight: 700; color: var(--ink-primary);">⚡ Interactive Minimal Pairs Audio Drill Engine</h4>
-            <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted);">TRI-FACTOR ACOUSTIC VERIFICATION: DURATION RATIO (>=1.35x), FORMANT DELTA, CODA RELEASE TRANSIENT</span>
+            <h4 style="margin: 0; font-size: var(--font-body); font-weight: 700; color: var(--ink-primary);">${icon('zap', 14)} Interactive Minimal Pairs Audio Drill Engine</h4>
+            <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">TRI-FACTOR ACOUSTIC VERIFICATION: DURATION RATIO (>=1.35x), FORMANT DELTA, CODA RELEASE TRANSIENT</span>
           </div>
-          <button class="hud-btn btn-evaluate-pair" style="font-size: 11px; padding: 4px 12px; background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none;">
-            ⚖️ Evaluate Acoustic Contrast
+          <button class="hud-btn btn-evaluate-pair" style="font-size: var(--font-kicker); padding: 4px 12px; background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none;">
+            ${icon('scale', 12)} Evaluate Acoustic Contrast
           </button>
         </div>
 
@@ -1400,9 +1400,9 @@ export class SpeakingDossier {
               <span class="pair-word-ipa">${this.activeMinimalPair.ipaA}</span>
             </div>
             <div style="display: flex; gap: 6px;">
-              <button class="hud-btn btn-speak-word-a" style="font-size: 10px; padding: 2px 8px;">🔊 Model Audio</button>
-              <button class="hud-btn btn-record-word-a ${this.pairTakeA.isRecording ? 'recording-active' : ''}" style="font-size: 10px; padding: 2px 8px;">
-                ${this.pairTakeA.isRecording ? '⏹️ Stop Take' : '🎙️ Record Take A'}
+              <button class="hud-btn btn-speak-word-a" style="font-size: var(--font-kicker); padding: 2px 8px;">${icon('volume', 11)} Model Audio</button>
+              <button class="hud-btn btn-record-word-a ${this.pairTakeA.isRecording ? 'recording-active' : ''}" style="font-size: var(--font-kicker); padding: 2px 8px;">
+                ${this.pairTakeA.isRecording ? `${icon('stop', 11)} Stop Take` : `${icon('mic', 11)} Record Take A`}
               </button>
             </div>
             <div class="pair-metrics-box">
@@ -1417,9 +1417,9 @@ export class SpeakingDossier {
               <span class="pair-word-ipa">${this.activeMinimalPair.ipaB}</span>
             </div>
             <div style="display: flex; gap: 6px;">
-              <button class="hud-btn btn-speak-word-b" style="font-size: 10px; padding: 2px 8px;">🔊 Model Audio</button>
-              <button class="hud-btn btn-record-word-b ${this.pairTakeB.isRecording ? 'recording-active' : ''}" style="font-size: 10px; padding: 2px 8px;">
-                ${this.pairTakeB.isRecording ? '⏹️ Stop Take' : '🎙️ Record Take B'}
+              <button class="hud-btn btn-speak-word-b" style="font-size: var(--font-kicker); padding: 2px 8px;">${icon('volume', 11)} Model Audio</button>
+              <button class="hud-btn btn-record-word-b ${this.pairTakeB.isRecording ? 'recording-active' : ''}" style="font-size: var(--font-kicker); padding: 2px 8px;">
+                ${this.pairTakeB.isRecording ? `${icon('stop', 11)} Stop Take` : `${icon('mic', 11)} Record Take B`}
               </button>
             </div>
             <div class="pair-metrics-box">
@@ -1433,18 +1433,18 @@ export class SpeakingDossier {
           <div class="pair-result-panel" style="padding: 12px 16px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-hairline); border-radius: 6px; margin-top: 10px;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
               <span style="font-weight: 700; color: ${this.latestPairResult.passed ? 'var(--good, #34d399)' : '#f59e0b'};">
-                ${this.latestPairResult.passed ? '✅ ACOUSTIC CONTRAST ACCREDITED' : '⚠️ CONTRAST REFINEMENT REQUIRED'}
+                ${this.latestPairResult.passed ? `${icon('check', 13)} ACOUSTIC CONTRAST ACCREDITED` : `${icon('alertTriangle', 13)} CONTRAST REFINEMENT REQUIRED`}
               </span>
-              <span style="font-family: var(--font-mono); font-size: 14px; font-weight: 800; color: var(--accent-gold);">
+              <span style="font-family: var(--font-mono); font-size: var(--font-h4); font-weight: 800; color: var(--accent-gold);">
                 SCORE: ${this.latestPairResult.overallScore} / 100
               </span>
             </div>
-            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-secondary); margin-bottom: 4px;">
+            <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-secondary); margin-bottom: 4px;">
               Duration Ratio: <strong>${this.latestPairResult.durationRatio}x</strong> (${this.latestPairResult.durationPassed ? '✓ Meets target' : '✗ Insufficient length difference'}) |
               Formant Separation: <strong>${this.latestPairResult.formantDelta} Hz</strong> |
               Coda Transient: <strong>${this.latestPairResult.codaTransientDetected ? '✓ Detected' : 'No burst'}</strong>
             </div>
-            <p style="font-size: 12px; margin: 0; color: var(--ink-primary); line-height: 1.4;">
+            <p style="font-size: var(--font-body-compact); margin: 0; color: var(--ink-primary); line-height: 1.4;">
               ${this.latestPairResult.feedback}
             </p>
           </div>
@@ -1631,10 +1631,10 @@ export class SpeakingDossier {
       <div class="ielts-card">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
           <div>
-            <h3 style="margin: 0; font-size: 16px; font-weight: 700; color: var(--ink-primary);">🎓 Official IELTS Speaking Examiner Simulator</h3>
-            <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted);">CAMBRIDGE 9-BAND CRITERIA (FC, LR, GRA, PR) // MULTI-STAGE EXAMINER INTERLOCUTOR</span>
+            <h3 style="margin: 0; font-size: var(--font-body); font-weight: 700; color: var(--ink-primary);">${icon('graduationCap', 16)} Official IELTS Speaking Examiner Simulator</h3>
+            <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">CAMBRIDGE 9-BAND CRITERIA (FC, LR, GRA, PR) // MULTI-STAGE EXAMINER INTERLOCUTOR</span>
           </div>
-          <button class="hud-btn btn-restart-ielts" style="font-size: 11px; padding: 4px 10px;">
+          <button class="hud-btn btn-restart-ielts" style="font-size: var(--font-kicker); padding: 4px 10px;">
             ↺ Reset Test
           </button>
         </div>
@@ -1651,26 +1651,26 @@ export class SpeakingDossier {
         ${this.ieltsStage === 'intro' ? `
           <div class="ielts-intro-pane" style="padding: 16px; background: rgba(0,0,0,0.25); border-radius: 6px;">
             <div class="ielts-examiner-prompt-box">
-              <span class="ielts-examiner-avatar">👨‍🏫</span>
+              <span class="ielts-examiner-avatar">${icon('graduationCap', 18)}</span>
               <div class="ielts-examiner-text">
                 "Welcome to the IELTS Speaking assessment simulation. I am your examiner, Dr. Harrison. The test consists of three parts designed to assess your Fluency & Coherence, Lexical Resource, Grammatical Range & Accuracy, and Pronunciation. Please speak clearly at a natural pace."
               </div>
             </div>
-            <div style="font-size: 13px; line-height: 1.6; color: var(--ink-secondary); margin-bottom: 16px;">
+            <div style="font-size: var(--font-body-compact); line-height: 1.6; color: var(--ink-secondary); margin-bottom: 16px;">
               • <strong>Part 1 (4-5 min):</strong> General introductory inquiries regarding your background, studies/work, and everyday habits.<br>
               • <strong>Part 2 (3-4 min):</strong> Individual long turn with 60 seconds preparation to organize points, followed by 120 seconds uninterrupted monologue.<br>
               • <strong>Part 3 (4-5 min):</strong> Abstract two-way discursive discussion probing societal and conceptual dimensions.
             </div>
-            <button class="hud-btn btn-start-ielts-exam" style="background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; padding: 8px 20px; font-size: 13px; border: none;">
-              🚀 Begin Official Speaking Interview →
+            <button class="hud-btn btn-start-ielts-exam" style="background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; padding: 8px 20px; font-size: var(--font-body-compact); border: none;">
+              ${icon('rocket', 14)} Begin Official Speaking Interview →
             </button>
           </div>
         ` : this.ieltsStage === 'part1' ? `
           <div class="ielts-part1-pane">
             <div class="ielts-examiner-prompt-box">
-              <span class="ielts-examiner-avatar">👨‍🏫</span>
+              <span class="ielts-examiner-avatar">${icon('graduationCap', 18)}</span>
               <div>
-                <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted); display: block; margin-bottom: 4px;">
+                <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); display: block; margin-bottom: 4px;">
                   EXAMINER // PART 1 QUESTION ${this.ieltsQuestionIndex + 1} OF ${this.ieltsPart1Questions.length}
                 </span>
                 <div class="ielts-examiner-text">
@@ -1682,9 +1682,9 @@ export class SpeakingDossier {
             <div class="ielts-response-console" style="margin-top: 14px; display: flex; flex-direction: column; gap: 8px;">
               <div style="display: flex; gap: 8px;">
                 <button class="hud-btn btn-ielts-mic ${this.isIeltsRecording ? 'recording-active' : ''}" style="flex: 1;">
-                  ${this.isIeltsRecording ? '⏹️ Stop & Submit Spoken Response' : '🎙️ Hold / Click to Speak Response'}
+                  ${this.isIeltsRecording ? `${icon('stop', 13)} Stop &amp; Submit Spoken Response` : `${icon('mic', 13)} Hold / Click to Speak Response`}
                 </button>
-                <button class="hud-btn btn-hear-examiner">🔊 Hear Question</button>
+                <button class="hud-btn btn-hear-examiner">${icon('volume', 12)} Hear Question</button>
               </div>
               <div style="display: flex; gap: 8px;">
                 <input type="text" class="ielts-text-fallback" placeholder="Or type your spoken response here..." style="flex: 1; padding: 8px 12px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-hairline); border-radius: 4px; color: var(--ink-primary);" />
@@ -1695,12 +1695,12 @@ export class SpeakingDossier {
         ` : this.ieltsStage === 'part2_prep' ? `
           <div class="ielts-part2-prep-pane">
             <div class="ielts-cue-card">
-              <div class="ielts-cue-card-title">📋 ${this.ieltsCueCard.title}</div>
-              <p style="font-size: 14px; font-weight: 600; margin: 4px 0 10px; color: var(--ink-primary);">
+              <div class="ielts-cue-card-title">${icon('edit', 14)} ${this.ieltsCueCard.title}</div>
+              <p style="font-size: var(--font-h4); font-weight: 600; margin: 4px 0 10px; color: var(--ink-primary);">
                 ${this.ieltsCueCard.topic}
               </p>
-              <span style="font-size: 12px; color: var(--ink-muted);">You should say:</span>
-              <ul style="margin: 6px 0; padding-left: 20px; font-size: 13px; line-height: 1.5; color: var(--ink-secondary);">
+              <span style="font-size: var(--font-body-compact); color: var(--ink-muted);">You should say:</span>
+              <ul style="margin: 6px 0; padding-left: 20px; font-size: var(--font-body-compact); line-height: 1.5; color: var(--ink-secondary);">
                 ${this.ieltsCueCard.bulletPoints.map(bp => `<li>${bp}</li>`).join('')}
               </ul>
             </div>
@@ -1711,11 +1711,11 @@ export class SpeakingDossier {
                   <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2.8" />
                   <path class="prep-progress-ring" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--accent-gold)" stroke-width="2.8" stroke-dasharray="${Math.max(0, (this.ieltsPrepSeconds / 60) * 100)}, 100" />
                 </svg>
-                <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 16px; font-weight: 800; color: var(--accent-gold);">
+                <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: var(--font-body); font-weight: 800; color: var(--accent-gold);">
                   ${this.ieltsPrepSeconds}s
                 </div>
               </div>
-              <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted);">
+              <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">
                 [PREPARATION TIME REMAINING // SCRATCHPAD ACTIVE]
               </span>
             </div>
@@ -1724,15 +1724,15 @@ export class SpeakingDossier {
 
             <div style="margin-top: 12px; display: flex; justify-content: flex-end;">
               <button class="hud-btn btn-begin-monologue-early" style="background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none; padding: 6px 16px;">
-                ⏭️ Ready: Begin 2-Minute Monologue Now →
+                Ready: Begin 2-Minute Monologue Now →
               </button>
             </div>
           </div>
         ` : this.ieltsStage === 'part2_monologue' ? `
           <div class="ielts-part2-monologue-pane">
             <div style="padding: 10px 14px; background: rgba(0,0,0,0.25); border: 1px solid var(--border-hairline); border-radius: 6px; margin-bottom: 12px;">
-              <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted);">CANDIDATE PREPARATION SCRATCHPAD:</span>
-              <p style="font-family: var(--font-mono); font-size: 12px; margin: 4px 0 0; color: var(--ink-secondary);">
+              <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">CANDIDATE PREPARATION SCRATCHPAD:</span>
+              <p style="font-family: var(--font-mono); font-size: var(--font-body-compact); margin: 4px 0 0; color: var(--ink-secondary);">
                 ${this.ieltsCandidateNotes || '<em>(No written notes taken)</em>'}
               </p>
             </div>
@@ -1743,27 +1743,27 @@ export class SpeakingDossier {
                   <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2.8" />
                   <path class="monologue-progress-ring" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#ef4444" stroke-width="2.8" stroke-dasharray="${Math.max(0, (this.ieltsMonologueSeconds / 120) * 100)}, 100" />
                 </svg>
-                <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 18px; font-weight: 800; color: #ef4444;">
+                <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: var(--font-h3); font-weight: 800; color: #ef4444;">
                   ${this.formatTime(this.ieltsMonologueSeconds)}
                 </div>
               </div>
-              <span style="font-family: var(--font-mono); font-size: 11px; color: #ef4444; font-weight: 700;">
+              <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: #ef4444; font-weight: 700;">
                 ● PART 2 UNINTERRUPTED MONOLOGUE IN PROGRESS (120S BUDGET)
               </span>
             </div>
 
             <div style="display: flex; justify-content: center; margin-top: 12px;">
               <button class="hud-btn btn-finish-monologue-early" style="background: rgba(239, 68, 68, 0.2); border: 1px solid #ef4444; color: #ef4444; font-weight: 700; padding: 6px 16px;">
-                ⏹️ Complete Monologue Early & Move to Part 3
+                ${icon('stop', 13)} Complete Monologue Early &amp; Move to Part 3
               </button>
             </div>
           </div>
         ` : this.ieltsStage === 'part3' ? `
           <div class="ielts-part3-pane">
             <div class="ielts-examiner-prompt-box">
-              <span class="ielts-examiner-avatar">👨‍🏫</span>
+              <span class="ielts-examiner-avatar">${icon('graduationCap', 18)}</span>
               <div>
-                <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted); display: block; margin-bottom: 4px;">
+                <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); display: block; margin-bottom: 4px;">
                   EXAMINER // PART 3 ABSTRACT INQUIRY ${this.ieltsQuestionIndex + 1} OF ${this.ieltsPart3Questions.length}
                 </span>
                 <div class="ielts-examiner-text">
@@ -1775,9 +1775,9 @@ export class SpeakingDossier {
             <div class="ielts-response-console" style="margin-top: 14px; display: flex; flex-direction: column; gap: 8px;">
               <div style="display: flex; gap: 8px;">
                 <button class="hud-btn btn-ielts-mic ${this.isIeltsRecording ? 'recording-active' : ''}" style="flex: 1;">
-                  ${this.isIeltsRecording ? '⏹️ Stop & Submit Spoken Response' : '🎙️ Hold / Click to Speak Response'}
+                  ${this.isIeltsRecording ? `${icon('stop', 13)} Stop &amp; Submit Spoken Response` : `${icon('mic', 13)} Hold / Click to Speak Response`}
                 </button>
-                <button class="hud-btn btn-hear-examiner">🔊 Hear Question</button>
+                <button class="hud-btn btn-hear-examiner">${icon('volume', 12)} Hear Question</button>
               </div>
               <div style="display: flex; gap: 8px;">
                 <input type="text" class="ielts-text-fallback" placeholder="Or type your discursive response here..." style="flex: 1; padding: 8px 12px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-hairline); border-radius: 4px; color: var(--ink-primary);" />
@@ -1787,14 +1787,14 @@ export class SpeakingDossier {
           </div>
         ` : `
           <div class="ielts-scorecard-pane">
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; background: rgba(202, 138, 4, 0.12); border: 1px solid var(--accent-gold); border-radius: 6px; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; background: var(--bg-surface); border: 1px solid var(--border-hairline); border-left: 3px solid var(--accent-gold); border-radius: 6px; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
               <div>
-                <h4 style="margin: 0; font-size: 16px; font-weight: 800; color: var(--ink-primary);">OFFICIAL IELTS SPEAKING ASSESSMENT REPORT</h4>
-                <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-secondary);">CALIBRATED AGAINST CAMBRIDGE PUBLIC BAND DESCRIPTORS</span>
+                <h4 style="margin: 0; font-size: var(--font-body); font-weight: 800; color: var(--ink-primary);">OFFICIAL IELTS SPEAKING ASSESSMENT REPORT</h4>
+                <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-secondary);">CALIBRATED AGAINST CAMBRIDGE PUBLIC BAND DESCRIPTORS</span>
               </div>
               <div style="text-align: right;">
-                <span style="font-size: 11px; color: var(--ink-muted); display: block;">OVERALL BAND</span>
-                <span style="font-family: var(--font-mono); font-size: 26px; font-weight: 900; color: var(--accent-gold);">
+                <span style="font-size: var(--font-kicker); color: var(--ink-muted); display: block;">OVERALL BAND</span>
+                <span style="font-family: var(--font-mono); font-size: var(--font-h1); font-weight: 900; color: var(--accent-gold);">
                   BAND ${this.ieltsScorecard?.overallBand || 7.5}
                 </span>
               </div>
@@ -1802,24 +1802,24 @@ export class SpeakingDossier {
 
             <div class="ielts-scorecard-grid">
               <div class="ielts-criterion-card">
-                <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted);">FLUENCY & COHERENCE</span>
+                <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">FLUENCY & COHERENCE</span>
                 <span class="ielts-criterion-band">Band ${this.ieltsScorecard?.fcBand || 7.5}</span>
-                <p style="font-size: 11px; color: var(--ink-secondary); margin: 0; line-height: 1.4;">${this.ieltsScorecard?.comments.fc || 'Speaks at length without noticeable effort or loss of coherence.'}</p>
+                <p style="font-size: var(--font-kicker); color: var(--ink-secondary); margin: 0; line-height: 1.4;">${this.ieltsScorecard?.comments.fc || 'Speaks at length without noticeable effort or loss of coherence.'}</p>
               </div>
               <div class="ielts-criterion-card">
-                <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted);">LEXICAL RESOURCE</span>
+                <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">LEXICAL RESOURCE</span>
                 <span class="ielts-criterion-band">Band ${this.ieltsScorecard?.lrBand || 8.0}</span>
-                <p style="font-size: 11px; color: var(--ink-secondary); margin: 0; line-height: 1.4;">${this.ieltsScorecard?.comments.lr || 'Uses a wide, flexible vocabulary resource readily and flexibly to discuss topics.'}</p>
+                <p style="font-size: var(--font-kicker); color: var(--ink-secondary); margin: 0; line-height: 1.4;">${this.ieltsScorecard?.comments.lr || 'Uses a wide, flexible vocabulary resource readily and flexibly to discuss topics.'}</p>
               </div>
               <div class="ielts-criterion-card">
-                <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted);">GRAMMATICAL RANGE</span>
+                <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">GRAMMATICAL RANGE</span>
                 <span class="ielts-criterion-band">Band ${this.ieltsScorecard?.graBand || 7.5}</span>
-                <p style="font-size: 11px; color: var(--ink-secondary); margin: 0; line-height: 1.4;">${this.ieltsScorecard?.comments.gra || 'Produces a wide range of complex structures with good flexibility and accuracy.'}</p>
+                <p style="font-size: var(--font-kicker); color: var(--ink-secondary); margin: 0; line-height: 1.4;">${this.ieltsScorecard?.comments.gra || 'Produces a wide range of complex structures with good flexibility and accuracy.'}</p>
               </div>
               <div class="ielts-criterion-card">
-                <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted);">PRONUNCIATION</span>
+                <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">PRONUNCIATION</span>
                 <span class="ielts-criterion-band">Band ${this.ieltsScorecard?.prBand || 7.5}</span>
-                <p style="font-size: 11px; color: var(--ink-secondary); margin: 0; line-height: 1.4;">${this.ieltsScorecard?.comments.pr || 'Uses a wide range of phonological features to convey precise subtle meaning.'}</p>
+                <p style="font-size: var(--font-kicker); color: var(--ink-secondary); margin: 0; line-height: 1.4;">${this.ieltsScorecard?.comments.pr || 'Uses a wide range of phonological features to convey precise subtle meaning.'}</p>
               </div>
             </div>
 

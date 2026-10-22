@@ -32,6 +32,7 @@ const DEFAULT_TAG = 'srs-review-due';
 // Daily reminder: after this local hour, at most once per local day, and only if the learner has not studied yet
 const REMINDER_HOUR = 18;
 const REMINDER_DAY_KEY = 'eng_reminder_day';
+const STREAK_ALERT_DAY_KEY = 'eng_streak_alert_day';
 
 // Card ids are 'colloc-N' (collocations) or 'lex-<word>' (saved from the lexicon drawer).
 const COLLOC_LABELS: Record<string, string> = {};
@@ -234,6 +235,17 @@ export class NotificationEngine {
     }
 
     if (needsStreakReminder) {
+      // Show at most once per calendar day
+      try {
+        if (localStorage.getItem(STREAK_ALERT_DAY_KEY) === localDayKey()) {
+          // Already shown today
+          return { notified: false, dueCount: 0, streak, mode: 'none' };
+        }
+        localStorage.setItem(STREAK_ALERT_DAY_KEY, localDayKey());
+      } catch {
+        // Storage blocked: proceed anyway
+      }
+
       const title = `Streak Protection Alert (${streak} Days)`;
       const left = this.questsLeft();
       const questNote = left > 0 ? `${left} quest${left === 1 ? '' : 's'} left today.` : 'Today\'s quests are done.';
@@ -335,7 +347,7 @@ export class NotificationEngine {
       const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
       const posStyles = isMobile ? [
         'position: fixed',
-        'bottom: max(80px, calc(env(safe-area-inset-bottom, 0px) + 72px))',
+        'top: max(64px, calc(env(safe-area-inset-top, 0px) + 56px))',
         'left: 16px',
         'right: 16px',
         'z-index: 100008',
@@ -383,11 +395,11 @@ export class NotificationEngine {
     toast.innerHTML = `
       <img src="${DEFAULT_ICON}" alt="Notification Icon" style="width: 28px; height: 28px; border-radius: 4px; flex-shrink: 0;" />
       <div style="flex: 1; min-width: 0;">
-        <div class="toast-title" style="font-weight: 700; font-size: 13px; line-height: 1.3; color: var(--accent-gold, #ca8a04); margin-bottom: 2px;">${title}</div>
-        <div class="toast-body" style="font-size: 12px; line-height: 1.4; color: var(--text-secondary, #94a3b8);">${body}</div>
-        <div style="font-size: 10px; font-weight: 700; color: var(--accent-cyan, #38bdf8); margin-top: 6px; letter-spacing: 0.05em;">TAP TO DRILL →</div>
+        <div class="toast-title" style="font-weight: 700; font-size: var(--font-body-compact); line-height: 1.3; color: var(--accent-gold, #ca8a04); margin-bottom: 2px;">${title}</div>
+        <div class="toast-body" style="font-size: var(--font-body-compact); line-height: 1.4; color: var(--text-secondary, #94a3b8);">${body}</div>
+        <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-cyan, #38bdf8); margin-top: 6px; letter-spacing: 0.05em;">TAP TO DRILL →</div>
       </div>
-      <button class="btn-toast-close" aria-label="Dismiss" style="background: none; border: none; color: var(--text-muted, #64748b); font-size: 16px; cursor: pointer; padding: 0 4px; line-height: 1;">&times;</button>
+      <button class="btn-toast-close" aria-label="Dismiss" style="background: none; border: none; color: var(--text-muted, #64748b); font-size: var(--font-body); cursor: pointer; padding: 0 4px; line-height: 1;">&times;</button>
     `;
 
     const dismiss = () => {

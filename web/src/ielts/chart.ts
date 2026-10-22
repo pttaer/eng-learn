@@ -1,7 +1,7 @@
 import { Task1Chart } from './types';
 import { esc } from './ui';
 
-const COLORS = ['#38bdf8', '#a5b4fc', '#34d399', '#fbbf24', '#f87171', '#c4b5fd'];
+const COLORS = ['#a5b4fc', '#c4b5fd', '#818cf8', '#fbbf24', '#34d399', '#f87171'];
 const W = 640;
 const H = 320;
 const PAD = { l: 52, r: 16, t: 20, b: 44 };

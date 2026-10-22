@@ -31,6 +31,9 @@ import { MediationDossier } from './modules/mediation-dossier';
 import { AnalyticsDossier } from './modules/analytics-dossier';
 import { ExamCockpitDossier } from './modules/exam-cockpit-dossier';
 import { SerlGauntletEngine } from './core/serl-gauntlet-engine';
+import { HapticEngine } from './core/haptic-engine';
+import { CommuteAudioPlayer } from './core/commute-audio-player';
+import { MistakeVault } from './core/mistake-vault';
 import { CardTiltController, NebulaCanvas } from './core/perspective-canvas';
 import { NotificationEngine } from './core/notification-engine';
 import { UsageTracker } from './core/usage-tracker';
@@ -38,10 +41,14 @@ import { AmbientMusicEngine, ambientMusicEngine } from './core/ambient-music-eng
 import { ProfileSyncEngine } from './core/profile-sync-engine';
 import { SpeechEvaluator } from './core/speech-evaluator';
 import { ConstellationEngine } from './modules/constellation-engine';
+import { ScrollAffordance } from './core/scroll-affordance';
 import collocationsData from './assets/data/collocations.json';
 
 // Expose engines to window for automated headless testing & telemetry inspection
 (window as any).AudioSynthesizer = AudioSynthesizer;
+(window as any).HapticEngine = HapticEngine;
+(window as any).CommuteAudioPlayer = CommuteAudioPlayer;
+(window as any).MistakeVault = MistakeVault;
 (window as any).MotionEngine = MotionEngine;
 (window as any).ParticleCanvas = ParticleCanvas;
 (window as any).SpotlightTour = SpotlightTour;
@@ -55,6 +62,7 @@ import collocationsData from './assets/data/collocations.json';
 (window as any).ExamCockpitDossier = ExamCockpitDossier;
 (window as any).SerlGauntletEngine = SerlGauntletEngine;
 (window as any).MultiSkillQuizModal = MultiSkillQuizModal;
+(window as any).PlacementQuiz = PlacementQuiz;
 (window as any).StorageManager = StorageManager;
 (window as any).ProfileSyncEngine = ProfileSyncEngine;
 (window as any).SpeechEvaluator = SpeechEvaluator;
@@ -105,11 +113,12 @@ class App {
     LexiconDrawer.init();
     CardTiltController.init();
 
-    // Global Micro-Interactions: Tactile audio feedback on button clicks
+    // Global Micro-Interactions: Tactile audio & haptic feedback on button clicks
     document.addEventListener('click', (e) => {
       const target = (e.target as HTMLElement)?.closest('button, .hud-btn, .dock-btn, .compass-menu-item, .branch-summary-card');
       if (target) {
         AudioSynthesizer.play('click');
+        HapticEngine.trigger('light');
       }
     }, { capture: true });
 
@@ -203,6 +212,7 @@ class App {
     this.router = new Router();
     this.bindNavigation();
     this.bindKeyboardShortcuts();
+    ScrollAffordance.initGlobalObserver();
 
     // 5. First run: placement quiz, then the Spotlight Onboarding Tour prompt
     const promptTour = () => {
@@ -214,8 +224,15 @@ class App {
         }, 700);
       }
     };
-    if (StorageManager.isPlacementDone()) promptTour();
-    else setTimeout(() => PlacementQuiz.open(promptTour), 300);
+
+    const hasQuizHash = window.location.hash === '#placement' || window.location.hash === '#quiz';
+    if (hasQuizHash) {
+      setTimeout(() => PlacementQuiz.open(promptTour), 300);
+    } else if (StorageManager.isPlacementDone()) {
+      promptTour();
+    } else {
+      setTimeout(() => PlacementQuiz.open(promptTour), 300);
+    }
   }
 
   private bindNavigation(): void {
@@ -355,6 +372,7 @@ class App {
         break;
     }
 
+    ScrollAffordance.scan(this.workspaceMount);
     MotionEngine.fadeSlideIn(this.workspaceMount, 'up');
   }
 
@@ -437,20 +455,20 @@ class App {
     modal.innerHTML = `
       <div class="completion-receipt-card">
         <div class="telemetry-label" style="margin-bottom: 8px;">[MISSION DIRECTIVE COMPLETE]</div>
-        <h2 style="font-family: var(--font-mono); font-size: 20px; font-weight: 700; margin-bottom: 16px;">
+        <h2 style="font-family: var(--font-mono); font-size: var(--font-h2); font-weight: 700; margin-bottom: 16px;">
           ${moduleName}
         </h2>
         <div style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; width: 100%; padding: 16px 0; margin-bottom: 20px; display: flex; justify-content: space-around;">
           <div>
             <div class="telemetry-label">STREAK</div>
-            <div class="telemetry-value" style="font-size: 18px;">${state.streak.currentStreak} DAYS</div>
+            <div class="telemetry-value" style="font-size: var(--font-h3);">${state.streak.currentStreak} DAYS</div>
           </div>
           <div>
             <div class="telemetry-label">TOTAL REVIEWS</div>
-            <div class="telemetry-value" style="font-size: 18px;">${state.totalCardsReviewed}</div>
+            <div class="telemetry-value" style="font-size: var(--font-h3);">${state.totalCardsReviewed}</div>
           </div>
         </div>
-        <p style="font-size: 13px; line-height: 1.4; margin-bottom: 24px;">
+        <p style="font-size: var(--font-body-compact); line-height: 1.4; margin-bottom: 24px;">
           Neural engrams indexed and synchronized into browser memory. All spaced repetition intervals successfully updated.
         </p>
         <button class="hud-btn btn-receipt-close" style="width: 100%; justify-content: center; padding: 10px 0;">
@@ -485,10 +503,10 @@ class App {
         Welcome to English Singularity. Would you like a 60-second interactive guided tour of your command telemetry, skill tree, and habit loop?
       </p>
       <div class="toast-actions">
-        <button class="hud-btn btn-toast-dismiss" style="padding: 4px 10px; font-size: 11px;">
+        <button class="hud-btn btn-toast-dismiss" style="padding: 4px 10px; font-size: var(--font-kicker);">
           DISMISS
         </button>
-        <button class="hud-btn btn-toast-start" style="padding: 4px 12px; font-size: 11px; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
+        <button class="hud-btn btn-toast-start" style="padding: 4px 12px; font-size: var(--font-kicker); font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
           START TOUR ${icon('arrowRight')}
         </button>
       </div>

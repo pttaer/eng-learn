@@ -1,0 +1,35 @@
+{
+  "total_tips_collected": 746,
+  "total_listing_pages_crawled": 122,
+  "total_views": 19791183,
+  "total_words": 415451,
+  "by_skill": {
+    "Listening": 21,
+    "Grammar": 155,
+    "Writing": 156,
+    "Reading": 43,
+    "General & Strategies": 117,
+    "Speaking": 80,
+    "Vocabulary": 174
+  },
+  "by_category": {
+    "Listening Tips": 21,
+    "Ielts Grammar": 1,
+    "Writing Correction": 20,
+    "Reading Tips": 43,
+    "Recent Actual Tests": 41,
+    "Writing Tips": 81,
+    "Speaking tips": 31,
+    "General": 44,
+    "Speaking Recent Actual Tests": 43,
+    "IELTS Grammar": 154,
+    "Announcements": 29,
+    "Writing Recent Actual Tests": 55,
+    "IELTS Vocabulary": 174,
+    "Speaking Tips": 6,
+    "Iot News": 1,
+    "Other": 1,
+    "Immigration": 1
+  },
+  "duration_seconds": 46.75
+}

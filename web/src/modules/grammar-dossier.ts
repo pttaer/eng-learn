@@ -87,8 +87,8 @@ export class GrammarDossier {
     this.container.innerHTML = `
       <div class="dossier-control-bar">
         <div class="dossier-tabs grammar-mode-tabs">
-          <button type="button" class="hud-btn btn-jump-tenses" style="border-color: var(--accent-gold); color: var(--accent-gold); font-weight: 700;">
-            ${icon('zap')} ✦ 12 TENSES MASTER VAULT
+          <button type="button" class="hud-btn btn-jump-tenses" style="border-color: var(--accent-gold); color: var(--accent-gold); font-weight: 700; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;">
+            ${icon('sparkles', 13)} 12 TENSES VAULT
           </button>
           ${modes.map(m => `<button class="hud-btn mode-tab ${this.activeMode === m ? 'active' : ''}" data-mode="${m}">${MODE_TABS[m] || prettyMode(m)}</button>`).join('')}
         </div>
@@ -106,7 +106,7 @@ export class GrammarDossier {
         </div>
         <div class="telemetry-item">
           <span class="telemetry-label">COGNITIVE LOAD FACTOR</span>
-          <span class="telemetry-value">${this.activeLevel === 'C1' || this.activeLevel === 'C2' ? 'EF 2.30 (HIGH COGNITIVE)' : 'EF 2.50 (CANONICAL)'}</span>
+          <span class="telemetry-value">${this.activeLevel === 'C1' || this.activeLevel === 'C2' ? 'Ease 2.30 (harder tier)' : 'Ease 2.50 (standard tier)'}</span>
         </div>
         <div class="telemetry-item">
           <span class="telemetry-label">SYNTAX CLASSIFIER</span>
@@ -204,17 +204,17 @@ export class GrammarDossier {
       statusBadge = srsState.repetitions >= 3 ? 'MASTERED' : 'REVIEW';
     }
 
-    const categoryLabel = `${item.mode.replace('_', ' ')} [${item.cefrLevel}]`;
+    const categoryLabel = `${item.mode.replace('_', ' ')} · ${item.cefrLevel}`;
 
     // FRONT: Prompt sentence, Cue, Formula Bar, and Interactive Transformation Console (ENG-60)
     const frontEl = document.createElement('div');
     frontEl.className = 'grammar-front-content';
     frontEl.innerHTML = `
-      <div class="card-prompt-label">SYNTACTIC TRANSFORMATION // ${item.title.toUpperCase()}</div>
-      <div class="card-main-text" style="font-size: 16px; line-height: 1.62; font-weight: 500; max-width: 68ch; margin: 10px 0;">
+      <div class="card-prompt-label" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">SYNTAX // ${item.title.toUpperCase()}</div>
+      <div class="card-main-text" style="font-size: var(--font-body); line-height: 1.62; font-weight: 500; max-width: 68ch; margin: 10px 0;">
         "${item.promptSentence}"
       </div>
-      <div class="card-sub-text" style="font-family: var(--font-mono); font-size: 12px; margin-bottom: 8px;">
+      <div class="card-sub-text" style="font-family: var(--font-mono); font-size: var(--font-body-compact); margin-bottom: 8px;">
         CUE: ${item.grammaticalCue}
       </div>
       <div class="grammar-formula-bar" style="margin-bottom: 12px;">
@@ -253,7 +253,7 @@ export class GrammarDossier {
 
     backEl.innerHTML = `
       <div class="card-prompt-label">TARGET RESOLUTION // ${item.title.toUpperCase()}</div>
-      <div class="card-main-text" style="font-size: 16px; line-height: 1.62; font-weight: 700; max-width: 68ch; margin: 10px 0;">
+      <div class="card-main-text" style="font-size: var(--font-body); line-height: 1.62; font-weight: 700; max-width: 68ch; margin: 10px 0;">
         "${item.targetTransformation}"
       </div>
 
@@ -272,20 +272,20 @@ export class GrammarDossier {
 
       <!-- Vietnamese Comparative Syntax Drawer -->
       <div class="grammar-vietnamese-callout">
-        <strong>[VIETNAMESE L1 COMPARATIVE INTERFERENCE]:</strong>
+        <strong style="white-space: normal; overflow-wrap: anywhere;">[VIETNAMESE L1 COMPARATIVE INTERFERENCE]:</strong>
         ${item.vietnamese}
       </div>
 
       <!-- Rhetorical Analysis -->
       <div class="grammar-analysis-box" style="margin-top: 8px;">
         <span class="telemetry-label">[RHETORICAL & SYNTACTIC ANALYSIS]:</span>
-        <p style="font-size: 13px; line-height: 1.5; margin-top: 4px;">${item.analysis}</p>
+        <p style="font-size: var(--font-body-compact); line-height: 1.5; margin-top: 4px;">${item.analysis}</p>
       </div>
 
       <!-- Contrastive Advanced Register Exemplar -->
       <div class="grammar-exemplar-box" style="margin-top: 8px;">
         <span class="telemetry-label">[CONTRASTIVE EXEMPLAR IN ADVANCED REGISTER]:</span>
-        <blockquote style="font-style: italic; border-left: 2px solid var(--accent-gold); padding-left: 10px; margin: 6px 0; font-size: 13px; line-height: 1.5;">
+        <blockquote style="font-style: italic; border-left: 2px solid var(--accent-gold); padding-left: 10px; margin: 6px 0; font-size: var(--font-body-compact); line-height: 1.5;">
           "${item.exemplarContext}"
         </blockquote>
       </div>

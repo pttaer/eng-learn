@@ -73,8 +73,8 @@ const testSkills = {
 };
 
 // Check that regex or function can produce valid SVG
-const svgRegex = /<svg[^>]*viewBox="0 0 320 300"[^>]*>[\s\S]*?<\/svg>/;
-assert.match(modalSrc, svgRegex, 'SVG template must produce valid SVG markup with viewBox 0 0 320 300');
+const svgRegex = /<svg[^>]*viewBox="0 0 320 240"[^>]*>[\s\S]*?<\/svg>/;
+assert.match(modalSrc, svgRegex, 'SVG template must produce valid SVG markup with viewBox 0 0 320 240 (tightened to content)');
 console.log('  ✓ Celestial Radar SVG Pentagram geometry, filters, and rings verified.');
 
 // TEST 4: Header HUD Trigger Integration

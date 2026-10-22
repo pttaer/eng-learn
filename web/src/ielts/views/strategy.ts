@@ -2,6 +2,7 @@ import strategyData from '../data/strategy.json';
 import tipsData from '../../assets/data/ielts-tips.json';
 import { esc, h } from '../ui';
 import { ttsAvailable } from '../tts';
+import { icon, IconName } from '../../utils/icons';
 
 export interface StrategyCard {
   id: string;
@@ -23,7 +24,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'rd-01',
     skill: 'Reading',
     title: 'True / False / Not Given (T/F/NG)',
-    sectionRef: 'Sec 15: Academic Reading Specific Question Strategy (Lectures 115, 121, 122)',
+    sectionRef: 'Academic Reading Question Strategy',
     formula: 'Step 1: Identify 2-3 target keywords in statement -> Step 2: Scan passage for synonym cluster -> Step 3: Compare strict semantic meaning (TRUE = identical meaning; FALSE = opposite/contradicts; NOT GIVEN = no statement made).',
     traps: [
       'Absolute qualifiers (always, never, all, solely, only) vs hedged text (often, typically, largely)',
@@ -46,7 +47,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'rd-02',
     skill: 'Reading',
     title: 'Yes / No / Not Given (Y/N/NG)',
-    sectionRef: 'Sec 15: Academic Reading Specific Question Strategy (Lectures 113, 114, 116-120)',
+    sectionRef: 'Academic Reading Question Strategy',
     formula: 'Step 1: Isolate author stance / claim (not empirical facts) -> Step 2: Locate writer\'s voice in passage -> Step 3: Match stance (YES = agrees with writer\'s opinion; NO = contradicts writer\'s opinion; NOT GIVEN = writer expresses no view).',
     traps: [
       'Distinguishing between reported researcher findings vs the author\'s personal argumentation',
@@ -69,7 +70,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'rd-03',
     skill: 'Reading',
     title: 'Matching Headings',
-    sectionRef: 'Sec 15: Academic Reading Specific Question Strategy (Lectures 166-171)',
+    sectionRef: 'Academic Reading Question Strategy',
     formula: 'Step 1: Read heading list first, circling contrasting focus words -> Step 2: Skim paragraph first 1-2 sentences and concluding sentence -> Step 3: Match overarching central concept -> Step 4: Eliminate used headings.',
     traps: [
       'Detail traps: a heading mentioning a specific word or statistic that only appears in one subordinate clause',
@@ -92,7 +93,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'rd-04',
     skill: 'Reading',
     title: 'Matching Information (Paragraph Location)',
-    sectionRef: 'Sec 15: Academic Reading Specific Question Strategy (Lectures 160-165)',
+    sectionRef: 'Academic Reading Question Strategy',
     formula: 'Step 1: Parse functional stem ("a reference to...", "a description of...", "an explanation of...") -> Step 2: Underline core category noun -> Step 3: Scan for communicative role across candidate paragraphs.',
     traps: [
       'NB instruction: "You may use any letter more than once" indicates at least one paragraph has multiple matches',
@@ -115,7 +116,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'rd-05',
     skill: 'Reading',
     title: 'Matching Features (Categorization)',
-    sectionRef: 'Sec 15: Academic Reading Specific Question Strategy (Lectures 157-159)',
+    sectionRef: 'Academic Reading Question Strategy',
     formula: 'Step 1: Scan passage to locate and highlight all named entities (researchers, organizations, years) -> Step 2: Read context immediately before and after each occurrence -> Step 3: Match with statements.',
     traps: [
       'A single researcher or entity may appear in 3 different paragraphs throughout the passage',
@@ -137,7 +138,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'rd-06',
     skill: 'Reading',
     title: 'Matching Sentence Endings',
-    sectionRef: 'Sec 15: Academic Reading Specific Question Strategy (Lectures 157-159)',
+    sectionRef: 'Academic Reading Question Strategy',
     formula: 'Step 1: Read incomplete sentence stem and identify target concept -> Step 2: Use grammatical parsing (agreement, tense, prepositional collocation) to eliminate incompatible endings -> Step 3: Verify semantic match in passage.',
     traps: [
       'Grammatically smooth endings that directly contradict passage facts',
@@ -159,7 +160,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'rd-07',
     skill: 'Reading',
     title: 'Multiple Choice (Standard Single Choice)',
-    sectionRef: 'Sec 15: Academic Reading Specific Question Strategy (Lectures 145-149)',
+    sectionRef: 'Academic Reading Question Strategy',
     formula: 'Step 1: Read question stem only (cover options A-D) -> Step 2: Locate target paragraph section -> Step 3: Formulate your own answer in your mind -> Step 4: Uncover options and eliminate 3 distractors.',
     traps: [
       'Distractor options using verbatim words from the passage lifted out of context',
@@ -181,7 +182,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'rd-08',
     skill: 'Reading',
     title: 'Multiple Choice (Pick Multiple from List)',
-    sectionRef: 'Sec 15: Academic Reading Specific Question Strategy (Lectures 154-156)',
+    sectionRef: 'Academic Reading Question Strategy',
     formula: 'Step 1: Check required count (e.g. TWO or THREE options) -> Step 2: Identify category boundaries in question stem -> Step 3: Scan passage and check off each candidate item.',
     traps: [
       'Selecting fewer or more options than instructed by the prompt',
@@ -203,7 +204,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'rd-09',
     skill: 'Reading',
     title: 'Sentence Completion',
-    sectionRef: 'Sec 15: Academic Reading Specific Question Strategy (Lectures 150-153)',
+    sectionRef: 'Academic Reading Question Strategy',
     formula: 'Step 1: Note word limit (e.g. NO MORE THAN TWO WORDS) -> Step 2: Predict grammatical part of speech and semantic field -> Step 3: Scan passage for synonym anchors -> Step 4: Extract verbatim words.',
     traps: [
       'Inflecting or changing word form (e.g. writing "analyzing" when passage says "analysis")',
@@ -225,7 +226,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'rd-10',
     skill: 'Reading',
     title: 'Summary Completion',
-    sectionRef: 'Sec 15: Academic Reading Specific Question Strategy (Lectures 133-135)',
+    sectionRef: 'Academic Reading Question Strategy',
     formula: 'Step 1: Skim summary heading and identify passage boundaries -> Step 2: Predict parts of speech for each numbered gap -> Step 3: Scan passage and extract exact words or match word bank synonyms.',
     traps: [
       'When a word bank (A-H) is supplied, bank words are SYNONYMS of passage words; do not write passage words',
@@ -247,7 +248,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'rd-11',
     skill: 'Reading',
     title: 'Table Completion',
-    sectionRef: 'Sec 15: Academic Reading Specific Question Strategy (Lectures 142-144)',
+    sectionRef: 'Academic Reading Question Strategy',
     formula: 'Step 1: Read row and column headers to understand the categorization matrix -> Step 2: Trace coordinates for the target blank -> Step 3: Locate parallel table structure in passage -> Step 4: Extract verbatim word(s).',
     traps: [
       'Misreading row vs column alignment',
@@ -269,7 +270,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'rd-12',
     skill: 'Reading',
     title: 'Flow-Chart Completion',
-    sectionRef: 'Sec 15: Academic Reading Specific Question Strategy (Lectures 136-137)',
+    sectionRef: 'Academic Reading Question Strategy',
     formula: 'Step 1: Trace arrow directions and step numbers -> Step 2: Identify sequence signposts (first, subsequently, following this, finally) -> Step 3: Extract sequential terms verbatim.',
     traps: [
       'Reverse-order descriptions in the text (e.g. "Step B is preceded by Step A")',
@@ -291,7 +292,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'rd-13',
     skill: 'Reading',
     title: 'Diagram Label Completion',
-    sectionRef: 'Sec 15: Academic Reading Specific Question Strategy (Lectures 138-141)',
+    sectionRef: 'Academic Reading Question Strategy',
     formula: 'Step 1: Examine physical layout (top, bottom, interior, exterior, arrows) -> Step 2: Scan for spatial and structural nouns -> Step 3: Match spatial labels to technical terms in text.',
     traps: [
       'Directional disorientation (inlet vs outlet, upper vs lower valve)',
@@ -313,7 +314,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'rd-14',
     skill: 'Reading',
     title: 'Short Answer Questions',
-    sectionRef: 'Sec 15: Academic Reading Specific Question Strategy (Lectures 123-126)',
+    sectionRef: 'Academic Reading Question Strategy',
     formula: 'Step 1: Parse interrogative word (Who, What, Where, When, How much) to determine datum type -> Step 2: Underline question keywords -> Step 3: Scan text and extract concise verbatim answer.',
     traps: [
       'Writing complete sentences when only a concise 1-3 word phrase is required',
@@ -339,7 +340,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'ls-01',
     skill: 'Listening',
     title: 'Distractors, Negations & Oral Self-Corrections',
-    sectionRef: 'Sec 4-7: Listening Tactics & Traps',
+    sectionRef: 'Listening Tactics & Traps',
     formula: 'Rule: The first number, date, or name stated is almost always a distractor. Wait for the speaker to self-correct ("Actually...", "No, wait...", "I thought so, but...") before recording your final answer.',
     traps: [
       'Preliminary offers contradicted by later constraints',
@@ -361,7 +362,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'ls-02',
     skill: 'Listening',
     title: 'Map & Plan Navigation',
-    sectionRef: 'Sec 8: Listening Map/Diagram Navigation',
+    sectionRef: 'Listening Map/Diagram Navigation',
     formula: 'Step 1: Anchor starting point ("You are standing here at the entrance") -> Step 2: Establish compass bearings (North/South/East/West) and clock directions -> Step 3: Track speaker path step-by-step.',
     traps: [
       'Confusing "to your left" with "on the western boundary"',
@@ -383,7 +384,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'ls-03',
     skill: 'Listening',
     title: 'Spelling, Numbers & Exact-Word Verification',
-    sectionRef: 'Sec 9-12: Form Completion & Section 4 Monologues',
+    sectionRef: 'Form Completion & Section 4 Monologues',
     formula: 'Constraint: Write EXACT words heard from the audio. Zero inflection changes. No added plurals, no converted tenses.',
     traps: [
       'Double letter pronunciation: "double-L", "double-E"',
@@ -408,7 +409,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'wt1-01',
     skill: 'Writing Task 1',
     title: 'Task 1 Visual Architecture & The 2-Sentence Overview',
-    sectionRef: 'Sec 24: Academic Task 1 Strategy & Formulas',
+    sectionRef: 'Academic Task 1 Strategy & Formulas',
     formula: 'Structure: Paragraph 1 (Paraphrased Prompt) + Paragraph 2 (2-Sentence Overview with ZERO raw figures) + Paragraph 3 (Body 1: Dominant Group) + Paragraph 4 (Body 2: Secondary Group). Minimum 150 words.',
     traps: [
       'Listing raw numbers in the overview (overview must state broad trends/contrasts only)',
@@ -430,7 +431,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'wt1-02',
     skill: 'Writing Task 1',
     title: 'Process & Map Descriptions',
-    sectionRef: 'Sec 25: Process Diagrams & Comparative Maps',
+    sectionRef: 'Process Diagrams & Comparative Maps',
     formula: 'Process Formula: Passive voice ("is transferred", "are processed") + Sequential linkers (initially, subsequently, following this, ultimately) + Overview identifying total stages and cyclic/linear nature.',
     traps: [
       'Using active voice for automated factory steps ("workers pack" vs "goods are packaged")',
@@ -456,7 +457,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'wt2-01',
     skill: 'Writing Task 2',
     title: 'The 4-Sentence Body Paragraph Architecture',
-    sectionRef: 'Sec 28: Keino Campbell Unified Organization Method',
+    sectionRef: 'Unified Writing Organization Method',
     formula: 'Sentence 1 (Topic Claim) -> Sentence 2 (Causal Explanation: mechanism/why) -> Sentence 3 (Concrete Evidence: specific exemplar) -> Sentence 4 (Concluding Impact: link to thesis). Exactly 4 sentences, 80-110 words.',
     traps: [
       'Listing multiple undeveloped ideas instead of developing one single main idea deeply',
@@ -478,7 +479,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'wt2-02',
     skill: 'Writing Task 2',
     title: '5 Discursive Essay Architectures',
-    sectionRef: 'Sec 29: 5 Master Architectures (Opinion, Discuss, Adv/Disadv, Problem-Solution, Two-Part)',
+    sectionRef: '5 Master Essay Architectures',
     formula: 'Architecture Selection: 1. Opinion (Stance in intro, 2 supporting bodies) | 2. Discussion (Body 1 View A, Body 2 View B + opinion) | 3. Advantages/Disadvantages | 4. Problem-Solution | 5. Two-Part Question.',
     traps: [
       'Failing to address both views in a "Discuss both views and give your opinion" prompt',
@@ -504,7 +505,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'sp-01',
     skill: 'Speaking',
     title: 'Part 1: The 2-3 Sentence Formula',
-    sectionRef: 'Sec 30: Speaking Part 1 Warm-up Strategy',
+    sectionRef: 'Speaking Part 1 Warm-up Strategy',
     formula: 'Formula: Direct Answer + Reason (Why) + Specific Detail / Example. Never answer with a single word or single short sentence; never deliver a memorized speech.',
     traps: [
       'One-word answers ("Yes.", "Not really.") that force examiner probing',
@@ -525,7 +526,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'sp-02',
     skill: 'Speaking',
     title: 'Part 2: 1-Minute Prep 4-Keyword Bullet Notepad Strategy',
-    sectionRef: 'Sec 31-33: Cue Card Mastery',
+    sectionRef: 'Speaking Part 2 Cue Card Mastery',
     formula: 'Prep Strategy: Spend the 60 seconds writing exactly 4 keywords corresponding to the 4 prompt bullets. During monologue, speak for ~30 seconds per bullet point to hit 2 full minutes.',
     traps: [
       'Writing full sentences during the 60-second prep time instead of keywords',
@@ -546,7 +547,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'sp-03',
     skill: 'Speaking',
     title: 'Part 3: Analytical Reasoning & Societal Speculation',
-    sectionRef: 'Sec 34-35: Abstract Discursive Analysis',
+    sectionRef: 'Speaking Part 3 Abstract Discussion',
     formula: 'Formula: General Position ("From a broader perspective...") + Causal Analysis + Societal Exemplar + Contrast / Future Speculation. Shift focus from personal anecdotes to societal trends.',
     traps: [
       'Answering personal stories ("My brother and I...") instead of analyzing society at large',
@@ -571,7 +572,7 @@ const MASTER_COURSE_CARDS: StrategyCard[] = [
     id: 'cbt-01',
     skill: 'CBT Navigation',
     title: 'Computer-Based IELTS Navigation & Hotkeys',
-    sectionRef: 'Sec 23: CBT Ergonomics & Interface Tactics',
+    sectionRef: 'CBT Ergonomics & Interface Tactics',
     formula: 'Navigation Tactics: Split-screen divider positioning (50/50 or 60/40) + Text Highlighter (Right click / Popover) + Notepad + Review Matrix check before timer expiration.',
     traps: [
       'Highlighting too much text so the passage becomes visually cluttered',
@@ -671,22 +672,41 @@ export function strategyView(root: HTMLElement): () => void {
     h(
       'p',
       'ie-lead',
-      'The authoritative IELTS strategy compendium: 46 tactical exam blueprints from the Band 7+ master curriculum alongside 746 official articles & lessons from IELTS Online Tests.'
+      'The IELTS strategy compendium: 46 exam blueprints from the Band 7+ curriculum alongside 746 articles & lessons from IELTS Online Tests.'
     )
   );
 
   // Master Mode Switcher
   const modeSwitcher = h('div', 'ie-mode-switcher');
-  const btnBlueprints = h(
-    'button',
-    'ie-mode-btn is-active',
-    `📐 46 Tactical Blueprints (Formulas & Traps)`
-  );
-  const btnVault = h(
-    'button',
-    'ie-mode-btn',
-    `💡 746 IELTS Knowledge Vault & Tips Explorer`
-  );
+  modeSwitcher.setAttribute('role', 'tablist');
+  modeSwitcher.setAttribute('aria-label', 'Strategy Codex Modes');
+
+  const btnBlueprints = h('button', 'ie-mode-btn is-active');
+  btnBlueprints.setAttribute('type', 'button');
+  btnBlueprints.setAttribute('role', 'tab');
+  btnBlueprints.setAttribute('aria-selected', 'true');
+  btnBlueprints.innerHTML = `
+    <span class="ie-mode-icon">${icon('layers', 13)}</span>
+    <span class="ie-mode-label">
+      <span class="ie-mode-full">46 Tactical Blueprints (Formulas & Traps)</span>
+      <span class="ie-mode-short">Blueprints</span>
+    </span>
+    <span class="ie-mode-count">46</span>
+  `;
+
+  const btnVault = h('button', 'ie-mode-btn');
+  btnVault.setAttribute('type', 'button');
+  btnVault.setAttribute('role', 'tab');
+  btnVault.setAttribute('aria-selected', 'false');
+  btnVault.innerHTML = `
+    <span class="ie-mode-icon">${icon('lightbulb', 13)}</span>
+    <span class="ie-mode-label">
+      <span class="ie-mode-full">746 Knowledge Vault & Tips Explorer</span>
+      <span class="ie-mode-short">Tips Vault</span>
+    </span>
+    <span class="ie-mode-count">746</span>
+  `;
+
   modeSwitcher.append(btnBlueprints, btnVault);
   root.append(modeSwitcher);
 
@@ -840,7 +860,7 @@ export function strategyView(root: HTMLElement): () => void {
       if (c.traps && c.traps.length) {
         trapsBlock = `
           <div class="ie-drawer-section ie-section-traps">
-            <h4>⚠️ Common Examiner Traps &amp; Distractors</h4>
+            <h4>${icon('alertTriangle', 14)} Common Examiner Traps &amp; Distractors</h4>
             <ul class="ie-traps-list">
               ${c.traps.map(tr => `<li>${esc(tr)}</li>`).join('')}
             </ul>
@@ -852,7 +872,7 @@ export function strategyView(root: HTMLElement): () => void {
       if (c.synonymPairs && c.synonymPairs.length) {
         synBlock = `
           <div class="ie-drawer-section ie-section-synonyms">
-            <h4>🔄 Exam Synonym Mapping Engine</h4>
+            <h4>${icon('rotateCcw', 14)} Exam Synonym Mapping Engine</h4>
             <div class="ie-table-wrap">
               <table class="ie-table ie-synonym-table">
                 <thead>
@@ -877,7 +897,7 @@ export function strategyView(root: HTMLElement): () => void {
 
       const tipsBlock = `
         <div class="ie-drawer-section ie-section-tips">
-          <h4>💡 Actionable Execution Tips</h4>
+          <h4>${icon('lightbulb', 14)} Actionable Execution Tips</h4>
           <ul class="ie-tips-list">
             ${c.tips.map(t => `<li>${esc(t)}</li>`).join('')}
           </ul>
@@ -924,30 +944,31 @@ export function strategyView(root: HTMLElement): () => void {
   vSearchInput.type = 'search';
   vSearchInput.placeholder = 'Search 746 tips, rules, essays, or grammar lessons...';
   vSearchInput.setAttribute('aria-label', 'Search IELTS Tips');
-  const searchIcon = h('span', 'ie-tips-search-icon', '🔍');
+  const searchIcon = h('span', 'ie-tips-search-icon');
+  searchIcon.innerHTML = icon('search', 14);
   searchWrap.append(searchIcon, vSearchInput);
 
   const sortSelect = h('select', 'ie-tips-sort') as HTMLSelectElement;
   sortSelect.setAttribute('aria-label', 'Sort tips');
   sortSelect.innerHTML = `
-    <option value="views">🔥 Most Popular (Views)</option>
-    <option value="rating">⭐ Highest Rated</option>
-    <option value="date">📅 Newest Added</option>
+    <option value="views">Most Popular (Views)</option>
+    <option value="rating">Highest Rated</option>
+    <option value="date">Newest Added</option>
   `;
 
   barTop.append(searchWrap, sortSelect);
 
   // Skill filter chips
   const chipsRow = h('div', 'ie-tips-chips');
-  const skillChips = [
-    { id: 'all', label: 'All', icon: '🌐' },
-    { id: 'Writing', label: 'Writing', icon: '✍️' },
-    { id: 'Grammar', label: 'Grammar 101', icon: '🏛️' },
-    { id: 'Vocabulary', label: 'Vocabulary', icon: '📚' },
-    { id: 'Speaking', label: 'Speaking', icon: '🎙️' },
-    { id: 'Reading', label: 'Reading', icon: '📖' },
-    { id: 'Listening', label: 'Listening', icon: '🎧' },
-    { id: 'General & Strategies', label: 'General & Strategies', icon: '🧭' }
+  const skillChips: { id: string; label: string; iconName: IconName }[] = [
+    { id: 'all', label: 'All', iconName: 'globe' },
+    { id: 'Writing', label: 'Writing', iconName: 'edit' },
+    { id: 'Grammar', label: 'Grammar 101', iconName: 'landmark' },
+    { id: 'Vocabulary', label: 'Vocabulary', iconName: 'book' },
+    { id: 'Speaking', label: 'Speaking', iconName: 'mic' },
+    { id: 'Reading', label: 'Reading', iconName: 'book' },
+    { id: 'Listening', label: 'Listening', iconName: 'headphones' },
+    { id: 'General & Strategies', label: 'General & Strategies', iconName: 'compass' }
   ];
 
   function renderChips(): void {
@@ -959,9 +980,9 @@ export function strategyView(root: HTMLElement): () => void {
           : ALL_TIPS.filter(t => t.skill === sc.id).length;
       const chip = h(
         'button',
-        `ie-tips-chip ${vaultSkill === sc.id ? 'is-active' : ''}`,
-        `<span>${sc.icon}</span> <span>${esc(sc.label)}</span> <span class="ie-tips-chip-count">${count}</span>`
+        `ie-tips-chip ${vaultSkill === sc.id ? 'is-active' : ''}`
       );
+      chip.innerHTML = `<span>${icon(sc.iconName, 13)}</span> <span>${esc(sc.label)}</span> <span class="ie-tips-chip-count">${count}</span>`;
       chip.addEventListener('click', () => {
         vaultSkill = sc.id;
         vaultLimit = 24;
@@ -1158,14 +1179,18 @@ export function strategyView(root: HTMLElement): () => void {
   // Switcher event handlers
   btnBlueprints.addEventListener('click', () => {
     btnBlueprints.classList.add('is-active');
+    btnBlueprints.setAttribute('aria-selected', 'true');
     btnVault.classList.remove('is-active');
+    btnVault.setAttribute('aria-selected', 'false');
     blueprintsContainer.style.display = 'block';
     vaultContainer.style.display = 'none';
   });
 
   btnVault.addEventListener('click', () => {
     btnVault.classList.add('is-active');
+    btnVault.setAttribute('aria-selected', 'true');
     btnBlueprints.classList.remove('is-active');
+    btnBlueprints.setAttribute('aria-selected', 'false');
     blueprintsContainer.style.display = 'none';
     vaultContainer.style.display = 'block';
     renderChips();

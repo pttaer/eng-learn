@@ -295,7 +295,7 @@ export const SKILL_BRANCHES: Record<BranchId, SkillBranch> = {
         id: 'wri-a2',
         branchId: 'writing',
         level: 2,
-        title: 'Six-Sentence Paragraph',
+        title: 'Short Paragraph',
         subtitle: 'A2 Short Paragraphs',
         description: 'Write a short paragraph with past and future time and simple linking words.',
         cefrLevel: 'A2',

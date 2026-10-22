@@ -6,9 +6,7 @@ const assert = require('assert');
 console.log('[TEST] Starting Level-Adaptive Daily Workout & Habit Scaling Verification...');
 
 const DATA_DIR = path.join(__dirname, '..', 'src', 'assets', 'data');
-const CONTENT_DIR = path.join(__dirname, '..', 'content');
 const HABITS_JSON_PATH = path.join(DATA_DIR, 'habits.json');
-const DAILY_PLAN_MD_PATH = path.join(CONTENT_DIR, 'habits', 'daily-plan.md');
 
 const CEFR_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
@@ -49,14 +47,7 @@ for (const day of habitsData.days) {
 }
 console.log('  ✓ All 30 days contain calibrated tasksByLevel for A1, A2, B1, B2, C1, and C2');
 
-// 4. Verify Markdown Documentation alignment
-assert(fs.existsSync(DAILY_PLAN_MD_PATH), `daily-plan.md missing at ${DAILY_PLAN_MD_PATH}`);
-const mdContent = fs.readFileSync(DAILY_PLAN_MD_PATH, 'utf8');
-assert(mdContent.includes('## 1.1 Level-Adaptive Daily Workout Matrix'), 'daily-plan.md missing Section 1.1 Matrix');
-for (const lvl of CEFR_LEVELS) {
-  assert(mdContent.includes(`**${lvl}`), `daily-plan.md missing table entry for ${lvl}`);
-}
-console.log('  ✓ Markdown documentation in daily-plan.md correctly reflects level matrix');
+// 4. The old daily-plan.md documentation was retired; habits.json is the source of truth (checked above).
 
 // 5. Test workout resolution logic across all CEFR tiers
 function simulateWorkout(level, doneReviews = {}) {

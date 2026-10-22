@@ -6,8 +6,8 @@
 
 :root {
   --card-width-fluid: clamp(340px, 92vw, 760px);
-  --card-height-fluid: clamp(420px, 58vh, 520px);
-  --card-padding-fluid: clamp(16px, 3.5vw, 32px);
+  --card-height-fluid: auto;
+  --card-padding-fluid: var(--pad-card);
 }
 
 /* Slot as Container Context */
@@ -24,7 +24,7 @@
   perspective: 1200px;
   width: var(--card-width-fluid);
   max-width: 760px;
-  min-height: var(--card-height-fluid);
+  min-height: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,20 +34,24 @@
 .atomic-card-container {
   position: relative;
   width: 100%;
-  min-height: var(--card-height-fluid);
+  min-height: 0;
   transform-style: preserve-3d;
   transition: transform var(--duration-fast) var(--ease-snappy);
   user-select: none;
   contain: layout style;
-  touch-action: manipulation;
+  /* Horizontal drags are swipe-rating; vertical stays native scroll */
+  touch-action: pan-y pinch-zoom;
 }
 
+/* Both faces share one grid cell, so the card is as tall as its taller face */
 .atomic-card-inner,
 .atomic-card-flipper {
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   width: 100%;
-  height: 100%;
-  min-height: inherit;
+  height: auto;
+  min-height: 0;
   transform-style: preserve-3d;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform;
@@ -60,12 +64,11 @@
 
 /* Card Faces */
 .card-face {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  grid-area: 1 / 1;
   width: 100%;
-  height: 100%;
-  min-height: inherit;
+  height: auto;
+  min-height: 0;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: 8px;
@@ -73,18 +76,38 @@
   -webkit-backface-visibility: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: var(--card-padding-fluid);
   box-sizing: border-box;
   box-shadow: var(--shadow-card);
-  overflow-y: auto;
-  overscroll-behavior: contain;
+  overflow: visible;
   touch-action: manipulation;
 }
 
 .card-face-back,
 .card-face.face-back {
   transform: rotateY(180deg);
+}
+
+/* Hide non-showing face to prevent stretching */
+.atomic-card-flipper:not(.is-flipped) > .card-face-back,
+.atomic-card-flipper:not(.is-flipped) > .face-back,
+.atomic-card-inner:not(.is-flipped) > .card-face-back,
+.atomic-card-inner:not(.is-flipped) > .face-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.atomic-card-flipper.is-flipped > .card-face-front,
+.atomic-card-flipper.is-flipped > .face-front,
+.atomic-card-inner.is-flipped > .card-face-front,
+.atomic-card-inner.is-flipped > .face-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 /* Architectural Corner Notches */
@@ -196,9 +219,9 @@
 
 .card-main-text {
   font-family: var(--font-sans);
-  font-size: clamp(20px, 3.2vw, 28px);
-  font-weight: 700;
-  line-height: 1.35;
+  font-size: var(--font-prompt);
+  font-weight: var(--font-prompt-weight);
+  line-height: var(--font-prompt-line);
   color: var(--ink-primary);
   word-break: break-word;
 }
@@ -238,6 +261,7 @@
   border-top: 1px solid var(--border-hairline);
   padding-top: var(--space-16);
   gap: var(--space-12);
+  margin-top: auto;
 }
 
 .dock-btn {
@@ -302,28 +326,86 @@
 
   .card-header-bar,
   .card-header-hud {
-    flex-wrap: wrap;
-    gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 6px;
+    width: 100%;
+    border-bottom: 1px solid var(--border-hairline);
+    padding-bottom: 8px;
+  }
+
+  .card-meta-left,
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .card-meta-left .telemetry-badge {
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .card-badge-status,
   .card-status-badge {
-    font-size: 10px;
-    padding: 2px 6px;
+    font-size: var(--font-kicker);
+    padding: 1px 5px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .card-meta-right,
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+
+  .card-index-counter {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .card-audio-btn,
+  .btn-audio-speak {
+    min-width: var(--touch-target-min);
+    min-height: var(--touch-target-min);
+    height: 32px;
+    padding: 2px 8px;
+    font-size: var(--font-kicker);
+    border-radius: 4px;
+    white-space: nowrap;
+    gap: 4px;
+    flex-shrink: 0;
   }
 
   .card-bottom-dock,
   .card-action-dock,
   .card-rating-dock {
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 6px;
     width: 100%;
   }
 
   .dock-btn,
   .card-rating-dock .hud-btn {
-    width: 100%;
-    min-height: 48px;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 44px;
+    padding: 6px 8px;
+    font-size: var(--font-body-compact);
+    line-height: 1.2;
+    white-space: nowrap !important;
+    text-align: center;
   }
 }
 
@@ -388,4 +470,41 @@
     display: none !important;
     opacity: 0 !important;
   }
+}
+
+/* ==========================================================================
+   MOBILE GESTURE SWIPE DECK HINTS (ENG-MOBILE-1)
+   ========================================================================== */
+.card-swipe-hint {
+  position: absolute;
+  top: 18px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-family: var(--font-mono, monospace);
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.card-swipe-hint.hint-left {
+  left: 18px;
+  background: rgba(239, 68, 68, 0.25);
+  border: 1.5px solid var(--critical, #ef4444);
+  color: #fca5a5;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.card-swipe-hint.hint-right {
+  right: 18px;
+  background: rgba(34, 197, 94, 0.25);
+  border: 1.5px solid var(--good, #22c55e);
+  color: #86efac;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }

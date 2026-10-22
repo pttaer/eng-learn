@@ -5,12 +5,29 @@ import { UsageTracker } from '../core/usage-tracker';
 import { lazyView, prefetchViews } from './lazy-view';
 import { readingDrillsView } from './views/reading-drills';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
+import { HapticEngine } from '../core/haptic-engine';
+import { CommuteAudioPlayer } from '../core/commute-audio-player';
+import { MistakeVault } from '../core/mistake-vault';
 import { SpeechEvaluator } from '../core/speech-evaluator';
+import { ScrollAffordance } from '../core/scroll-affordance';
 import * as ieltsTts from './tts';
+import { icon, IconName } from '../utils/icons';
 
 (window as any).AudioSynthesizer = AudioSynthesizer;
+(window as any).HapticEngine = HapticEngine;
+(window as any).CommuteAudioPlayer = CommuteAudioPlayer;
+(window as any).MistakeVault = MistakeVault;
 (window as any).SpeechEvaluator = SpeechEvaluator;
 (window as any).ieltsTts = ieltsTts;
+
+// Global Micro-Interactions: Tactile audio & haptic feedback on button clicks
+document.addEventListener('click', (e) => {
+  const target = (e.target as HTMLElement)?.closest('button, .ie-btn, .ie-nav a, .ie-subnav-link, .ie-tab');
+  if (target) {
+    AudioSynthesizer.play('click');
+    HapticEngine.trigger('light');
+  }
+}, { capture: true });
 
 type View = (root: HTMLElement) => () => void;
 
@@ -36,22 +53,22 @@ const PRIMARY_NAV = [
 ];
 
 // Subnav item definitions for the 4 core skill studios
-const SKILL_SUBNAVS: Record<string, { label: string; hash: string; icon: string }[]> = {
+const SKILL_SUBNAVS: Record<string, { label: string; hash: string; iconName: IconName }[]> = {
   reading: [
-    { label: 'Timed Exam Passages', hash: '#reading', icon: '📖' },
-    { label: '14 Attack Drills & Synonym Lab', hash: '#reading-drills', icon: '🎯' }
+    { label: 'Timed Passages', hash: '#reading', iconName: 'book' },
+    { label: '14 Attack Drills Lab', hash: '#reading-drills', iconName: 'target' }
   ],
   listening: [
-    { label: 'Sections 1–4 Audio Practice', hash: '#listening', icon: '🎧' },
-    { label: 'Trap & Self-Correction Audio Lab', hash: '#listening-traps', icon: '🎯' }
+    { label: 'Sections 1–4 Audio', hash: '#listening', iconName: 'headphones' },
+    { label: 'Traps & Audio Lab', hash: '#listening-traps', iconName: 'target' }
   ],
   writing: [
-    { label: 'Timed Prompts & Rubrics', hash: '#writing', icon: '✍️' },
-    { label: 'Visual Blueprints & 4-Sentence Architect', hash: '#writing-studio', icon: '🏛️' }
+    { label: 'Prompts & Rubrics', hash: '#writing', iconName: 'edit' },
+    { label: 'Blueprints & Architect', hash: '#writing-studio', iconName: 'layers' }
   ],
   speaking: [
-    { label: 'Speaking Prompts & Notepad', hash: '#speaking', icon: '🎙️' },
-    { label: '3-Part Examiner Simulator & Fillers', hash: '#speaking-simulator', icon: '🏛️' }
+    { label: 'Prompts & Notepad', hash: '#speaking', iconName: 'mic' },
+    { label: 'Examiner Simulator', hash: '#speaking-simulator', iconName: 'graduationCap' }
   ]
 };
 
@@ -109,7 +126,8 @@ function renderSubnavBanner(groupKey: string, currentHash: string): HTMLElement 
 
   items.forEach(it => {
     const isCurrent = it.hash === currentHash;
-    const a = h('a', `ie-subnav-link ${isCurrent ? 'is-active' : ''}`, `${it.icon} ${it.label}`) as HTMLAnchorElement;
+    const a = h('a', `ie-subnav-link ${isCurrent ? 'is-active' : ''}`) as HTMLAnchorElement;
+    a.innerHTML = `${icon(it.iconName, 13)} <span>${it.label}</span>`;
     a.href = it.hash;
     if (isCurrent) a.setAttribute('aria-current', 'page');
     group.append(a);
@@ -211,12 +229,61 @@ const main = document.getElementById('ie-main')!;
 let cleanup: () => void = () => {};
 
 header.innerHTML = `
-  <a class="ie-brand" href="#home">IELTS <b>7.0</b></a>
-  <nav class="ie-nav" aria-label="IELTS sections">
-    ${PRIMARY_NAV.map(n => `<a href="#${n.id}" data-id="${n.id}">${n.label}</a>`).join('')}
-  </nav>
-  <a class="ie-back" href="./index.html">← English Singularity</a>
+  <div class="ie-top-bar">
+    <a class="ie-back" href="./index.html">&lt; English Singularity</a>
+    <a class="ie-brand" href="#home">IELTS <b>7.0</b></a>
+    <div class="ie-top-actions" style="margin-left: auto; display: flex; gap: 8px;">
+      <button type="button" class="ie-btn ie-btn-sm ie-btn-commute" title="Hands-Free Commute Audio Loop" aria-label="Hands-Free Commute Audio Loop" style="padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px;">
+        ${icon('headphones', 14)} <span class="ie-action-label" style="font-size: var(--font-kicker); font-weight: 700;">AUDIO</span>
+      </button>
+      <button type="button" class="ie-btn ie-btn-sm ie-btn-vault" title="Smart Mistake Vault" aria-label="Smart Mistake Vault" style="padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px; color: var(--accent-gold); border-color: var(--accent-gold);">
+        ${icon('target', 14)} <span class="ie-action-label" style="font-size: var(--font-kicker); font-weight: 700;">VAULT</span>
+      </button>
+    </div>
+  </div>
+  <div class="ie-nav-track">
+    <button type="button" class="ie-nav-arrow ie-nav-arrow-left" aria-label="Scroll navigation left" tabindex="-1">
+      ${icon('chevronLeft', 16)}
+    </button>
+    <nav class="ie-nav" aria-label="IELTS sections">
+      ${PRIMARY_NAV.map(n => `<a href="#${n.id}" data-id="${n.id}">${n.label}</a>`).join('')}
+    </nav>
+    <button type="button" class="ie-nav-arrow ie-nav-arrow-right" aria-label="Scroll navigation right" tabindex="-1">
+      ${icon('chevronRight', 16)}
+    </button>
+  </div>
 `;
+
+header.querySelector('.ie-btn-commute')?.addEventListener('click', () => {
+  CommuteAudioPlayer.open();
+});
+
+header.querySelector('.ie-btn-vault')?.addEventListener('click', () => {
+  MistakeVault.open();
+});
+
+const nav = header.querySelector<HTMLElement>('.ie-nav')!;
+const leftArrow = header.querySelector<HTMLButtonElement>('.ie-nav-arrow-left')!;
+const rightArrow = header.querySelector<HTMLButtonElement>('.ie-nav-arrow-right')!;
+
+function updateNavArrows(): void {
+  if (!nav || !leftArrow || !rightArrow) return;
+  const canScrollLeft = nav.scrollLeft > 6;
+  const canScrollRight = nav.scrollLeft < (nav.scrollWidth - nav.clientWidth - 6);
+  leftArrow.classList.toggle('is-visible', canScrollLeft);
+  rightArrow.classList.toggle('is-visible', canScrollRight);
+}
+
+leftArrow.addEventListener('click', () => {
+  nav.scrollBy({ left: -160, behavior: 'smooth' });
+});
+
+rightArrow.addEventListener('click', () => {
+  nav.scrollBy({ left: 160, behavior: 'smooth' });
+});
+
+nav.addEventListener('scroll', updateNavArrows, { passive: true });
+window.addEventListener('resize', updateNavArrows, { passive: true });
 
 function route(): void {
   cleanup();
@@ -242,8 +309,38 @@ function route(): void {
 
   cleanup = item.view(main);
   window.scrollTo(0, 0);
+  revealActiveTabs();
+  ScrollAffordance.scan(main);
 }
 
+/* Scroll the active tab into view inside its sideways strip (strip only, never the page) */
+function revealActiveTabs(): void {
+  const pairs: [string, string][] = [
+    ['.ie-nav', 'a.is-on'],
+    ['.ie-subnav-group', '.ie-subnav-link.is-active']
+  ];
+  for (const [stripSel, tabSel] of pairs) {
+    const strip = document.querySelector<HTMLElement>(stripSel);
+    const tab = strip?.querySelector<HTMLElement>(tabSel);
+    if (!strip || !tab || strip.scrollWidth <= strip.clientWidth) continue;
+
+    const stripRect = strip.getBoundingClientRect();
+    const tabRect = tab.getBoundingClientRect();
+    const padLeft = parseFloat(getComputedStyle(strip).paddingLeft) || 14;
+    const padRight = parseFloat(getComputedStyle(strip).paddingRight) || 14;
+
+    // Check if tab is already comfortably in view within strip
+    const isFullyVisible = tabRect.left >= (stripRect.left + padLeft - 2) && tabRect.right <= (stripRect.right - padRight + 2);
+    if (isFullyVisible) continue;
+
+    // Scroll so that tab aligns flush with the left padding
+    const currentOffsetFromStrip = tabRect.left - stripRect.left;
+    strip.scrollLeft += (currentOffsetFromStrip - padLeft);
+  }
+  updateNavArrows();
+}
+
+ScrollAffordance.initGlobalObserver();
 window.addEventListener('hashchange', route);
 route();
 document.getElementById('boot')?.remove();

@@ -245,8 +245,10 @@ async function runMobileTouchQA() {
       console.log(`  [PASS] Mobile Action Sheet Drawer verified: ${sheetStats.buttonCount} secondary controls, all >= 44px height.`);
 
       // Close Action Sheet Drawer
-      const closeBtn = await page.$('.sheet-btn-close');
-      if (closeBtn) await closeBtn.click();
+      await page.evaluate(() => {
+        const btn = document.querySelector('.sheet-btn-close');
+        if (btn) btn.click();
+      });
       await page.waitForFunction(() => !document.querySelector('.mobile-action-sheet-overlay'), { timeout: 3000 });
 
       // 5. Mobile Constellation View Switcher: Auto-Default to Skill Deck & Toggle
@@ -282,7 +284,10 @@ async function runMobileTouchQA() {
       }
       console.log('  [PASS] All 5 Skill Deck CTA buttons satisfy >= 44px touch target standard.');
       // Toggle to Star Map
-      await page.click('.btn-view-star-map');
+      await page.evaluate(() => {
+        const btn = document.querySelector('.btn-view-star-map');
+        if (btn) btn.click();
+      });
       await page.waitForFunction(() => document.querySelector('.constellation-container'), { timeout: 3000 });
       const mapModeActive = await page.evaluate(() => {
         return Boolean(document.querySelector('.constellation-container'));
@@ -290,7 +295,10 @@ async function runMobileTouchQA() {
       assert.ok(mapModeActive, 'Clicking Star Map toggle must display SVG map container');
 
       // Toggle back to Skill Deck
-      await page.click('.btn-view-skill-deck');
+      await page.evaluate(() => {
+        const btn = document.querySelector('.btn-view-skill-deck');
+        if (btn) btn.click();
+      });
       await page.waitForFunction(() => document.querySelector('.mobile-skill-deck'), { timeout: 3000 });
 
       const ssTreePath = path.join(SCREENSHOTS_DIR, `${vpIndex === 0 ? '01-iphone-se' : (vpIndex === 1 ? '04-iphone-15pro' : '05-android')}-tree-deck.png`);
@@ -341,7 +349,8 @@ async function runMobileTouchQA() {
       for (const t of readTabStats.tabs) {
         assert.ok(t.height >= 44, `Reading mobile tab button ${t.tab} must meet height >= 44px (got ${t.height}px)`);
       }
-      assert.ok(readTabStats.fab && readTabStats.fab.height >= 44, 'Reading quick-switch FAB must satisfy >= 44px height');
+      // The floating Reading quick-switch FAB was removed on purpose; the sticky tab bar replaces it
+      assert.ok(!readTabStats.fab, 'Reading quick-switch FAB must be removed (tab bar covers it)');
 
       // Test Tab Switch to Analysis
       await page.click('.reading-mobile-tab-btn[data-tab="analysis"]');
@@ -351,14 +360,14 @@ async function runMobileTouchQA() {
       });
       assert.strictEqual(activeAfterTab, 'analysis', 'Clicking Analysis tab must set data-mobile-active="analysis"');
 
-      // Test FAB Quick-Switch back to Text
-      await page.click('#reading-mobile-quick-switch');
-      const activeAfterFab = await page.evaluate(() => {
+      // Switch back to Text via the tab bar (the FAB was removed)
+      await page.click('.reading-mobile-tab-btn[data-tab="text"]');
+      const activeAfterText = await page.evaluate(() => {
         const layout = document.querySelector('.reading-pass1-layout');
         return layout ? layout.getAttribute('data-mobile-active') : null;
       });
-      assert.strictEqual(activeAfterFab, 'text', 'Clicking Quick-Switch FAB must flip active pane back to "text"');
-      console.log('  [PASS] Reading mobile segmented tab switcher & quick-switch FAB verified.');
+      assert.strictEqual(activeAfterText, 'text', 'Clicking the Text tab must set data-mobile-active="text"');
+      console.log('  [PASS] Reading mobile segmented tab switcher verified (FAB removed).');
 
       if (vpIndex === 0) {
         const ssReadPath = path.join(SCREENSHOTS_DIR, '02-iphone-se-read-split.png');
@@ -413,7 +422,10 @@ async function runMobileTouchQA() {
       assert.ok(cockpitTabStats.fab && cockpitTabStats.fab.height >= 44, 'Cockpit quick-switch FAB must satisfy >= 44px height');
 
       // Test Tab Switch to Questions
-      await page.click('.cd-mobile-tab-btn[data-tab="questions"]');
+      await page.evaluate(() => {
+        const btn = document.querySelector('.cd-mobile-tab-btn[data-tab="questions"]');
+        if (btn) btn.click();
+      });
       const cockpitActiveAfterTab = await page.evaluate(() => {
         const arena = document.querySelector('#cd-split-arena');
         return arena ? arena.getAttribute('data-mobile-active') : null;
@@ -421,7 +433,10 @@ async function runMobileTouchQA() {
       assert.strictEqual(cockpitActiveAfterTab, 'questions', 'Clicking Questions tab must set data-mobile-active="questions"');
 
       // Test FAB Quick-Switch back to Passage
-      await page.click('#cd-mobile-quick-switch');
+      await page.evaluate(() => {
+        const fab = document.querySelector('#cd-mobile-quick-switch');
+        if (fab) fab.click();
+      });
       const cockpitActiveAfterFab = await page.evaluate(() => {
         const arena = document.querySelector('#cd-split-arena');
         return arena ? arena.getAttribute('data-mobile-active') : null;

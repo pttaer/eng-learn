@@ -19,6 +19,7 @@ import { icon } from '../utils/icons';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { StorageManager } from '../utils/storage';
 import { ProgressionEngine } from '../core/progression-engine';
+import { ScrollAffordance } from '../core/scroll-affordance';
 
 export type MediationMode = 'TEXT_STREAMLINE' | 'DATA_EXPLAIN' | 'PRAGMATIC_REPAIR' | 'SPEED_BLITZ';
 
@@ -280,10 +281,10 @@ export class MediationDossier {
         <!-- Mobile Segmented Tab Selector (<768px viewport) -->
         <div class="mediation-mobile-toggle-bar" role="tablist" aria-label="Mobile Workbench Pane View">
           <button class="mobile-toggle-btn ${this.activeMobileTab === 'source' ? 'active' : ''}" data-pane="source" role="tab" aria-selected="${this.activeMobileTab === 'source'}">
-            ${icon('book', 12)} 1. Source Dossier (45%)
+            ${icon('book', 12)} <span>1. Source Document</span>
           </button>
           <button class="mobile-toggle-btn ${this.activeMobileTab === 'workbench' ? 'active' : ''}" data-pane="workbench" role="tab" aria-selected="${this.activeMobileTab === 'workbench'}">
-            ${icon('zap', 12)} 2. Active Composition (55%)
+            ${icon('zap', 12)} <span>2. Composition</span>
           </button>
         </div>
       </header>
@@ -303,7 +304,7 @@ export class MediationDossier {
           </div>
 
           <div class="panel-goal-banner">
-            <span class="goal-icon">🎯</span>
+            <span class="goal-icon">${icon('target', 14)}</span>
             <span class="goal-text"><strong>GOAL:</strong> ${scenario.goal}</span>
           </div>
 
@@ -343,7 +344,7 @@ export class MediationDossier {
             <textarea 
               id="mediation-textarea" 
               class="mediation-textarea" 
-              placeholder="Draft your mediated communication here (Press Ctrl+Enter to evaluate)..."
+              placeholder="Draft your mediated communication here${matchMedia('(pointer: coarse)').matches ? '' : ' (Press Ctrl+Enter to evaluate)'}..."
               aria-label="Mediation Draft Input"
               spellcheck="false"
             ></textarea>
@@ -351,7 +352,7 @@ export class MediationDossier {
 
           <div class="workbench-actions-bar">
             <button class="hud-btn btn-evaluate-resolution" id="btn-evaluate" title="Evaluate Resolution against CEFR Mediation Rubric (Ctrl+Enter)">
-              ${icon('zap', 14)} <span class="btn-text">EVALUATE RESOLUTION [Ctrl+Enter]</span>
+              ${icon('zap', 14)} <span class="btn-text">EVALUATE RESOLUTION <span class="kbd-badge kbd-only">[Ctrl+Enter]</span></span>
             </button>
             <button class="hud-btn btn-toggle-exemplar" id="btn-exemplar" title="Inspect Exemplar Benchmark">
               ${icon('eye', 14)} <span class="btn-text">EXEMPLAR MODEL</span>
@@ -432,6 +433,11 @@ export class MediationDossier {
         }
       });
     });
+
+    const modeTrack = this.container.querySelector('.mediation-category-selector') as HTMLElement | null;
+    if (modeTrack) {
+      ScrollAffordance.attach(modeTrack);
+    }
 
     // Mobile pane toggle buttons
     const mobileBtns = this.container.querySelectorAll('.mobile-toggle-btn');
@@ -820,7 +826,7 @@ export class MediationDossier {
         <!-- Pragmatic Linter Warning / Praise -->
         ${evalResult.pragmaticFlags.length > 0 ? `
           <div class="pragmatic-linter-alert">
-            <span class="alert-icon">⚡</span>
+            <span class="alert-icon">${icon('zap', 14)}</span>
             <div class="alert-content">
               <strong>Pragmatic Tone Flags Detected:</strong>
               <ul>
@@ -875,16 +881,16 @@ export class MediationDossier {
     modal.innerHTML = `
       <div class="completion-receipt-card exemplar-modal-card">
         <div class="telemetry-label" style="margin-bottom: 8px;">[EXEMPLAR MEDIATION BENCHMARK // ${scenario.level}]</div>
-        <h3 style="font-family: var(--font-mono); font-size: 16px; font-weight: 700; margin-bottom: 12px; color: var(--accent-gold);">
+        <h3 style="font-family: var(--font-mono); font-size: var(--font-body); font-weight: 700; margin-bottom: 12px; color: var(--accent-gold);">
           ${scenario.title}
         </h3>
         
-        <div class="exemplar-text-box" style="background: var(--bg-surface-sunk); padding: 14px; border: 1px solid var(--border-subtle); border-radius: 6px; font-size: 14px; line-height: 1.6; margin-bottom: 16px; color: var(--ink-primary);">
+        <div class="exemplar-text-box" style="background: var(--bg-surface-sunk); padding: 14px; border: 1px solid var(--border-subtle); border-radius: 6px; font-size: var(--font-h4); line-height: 1.6; margin-bottom: 16px; color: var(--ink-primary);">
           "${this.escapeHtml(scenario.exemplarModel)}"
         </div>
 
         ${scenario.vietnameseExplanation ? `
-          <div class="vietnamese-pedagogy-box" style="background: var(--bg-surface); padding: 12px; border-left: 3px solid var(--accent-gold); margin-bottom: 16px; font-size: 13px; line-height: 1.5; color: var(--ink-secondary);">
+          <div class="vietnamese-pedagogy-box" style="background: var(--bg-surface); padding: 12px; border-left: 3px solid var(--accent-gold); margin-bottom: 16px; font-size: var(--font-body-compact); line-height: 1.5; color: var(--ink-secondary);">
             <strong>Phân tích sư phạm (CEFR Companion 2020):</strong><br>
             ${this.escapeHtml(scenario.vietnameseExplanation)}
           </div>

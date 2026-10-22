@@ -5,6 +5,7 @@ import { addAttempt } from '../progress';
 import { QuestionForm, renderQuestions, typeBreakdown } from '../questions';
 import { SetScore } from '../scoring';
 import { bandBadge, countdown, Countdown, esc, fmtTime, h } from '../ui';
+import { icon } from '../../utils/icons';
 
 const PASSAGES = readingData as ReadingPassage[];
 
@@ -80,9 +81,9 @@ export function readingView(root: HTMLElement): () => void {
   const hubBar = h('div', 'ie-reading-hub-actions');
   const drillsLink = h(
     'a',
-    'ie-btn ie-btn-primary ie-drills-hero-btn',
-    '⚡ 14 Question-Type Attack Drills Lab'
+    'ie-btn ie-btn-primary ie-drills-hero-btn'
   );
+  drillsLink.innerHTML = `${icon('target', 14)} 14 Question-Type Attack Drills Lab`;
   drillsLink.id = 'btn-launch-reading-drills';
   drillsLink.href = '#reading-drills';
   hubBar.append(drillsLink);

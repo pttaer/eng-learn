@@ -8,6 +8,7 @@ import { report } from '../report';
 import { mountReadingTest } from './reading';
 import { mountListeningTest } from './listening';
 import { ExamCockpitDossier } from '../../modules/exam-cockpit-dossier';
+import { icon } from '../../utils/icons';
 
 const PASSAGES = readingData as ReadingPassage[];
 const SECTIONS = listeningData as ListeningSection[];
@@ -22,14 +23,15 @@ export function mountCockpitMockTest(host: HTMLElement, onBack: () => void): () 
   const topNav = h('div', 'ie-cockpit-top-nav');
   topNav.style.cssText = 'padding: 8px 16px; display: flex; justify-content: space-between; align-items: center; background: var(--bg-surface-sunk, #0f172a); border-bottom: 1px solid var(--border-line, rgba(255,255,255,0.1));';
   
-  const backBtn = h('button', 'ie-btn ie-btn-secondary', '← Back to Mock Overview');
+  const backBtn = h('button', 'ie-btn ie-btn-back', '< Back to Mock Overview');
   backBtn.addEventListener('click', () => {
     cockpit.teardown();
     onBack();
   });
 
-  const titleSpan = h('span', 'ie-cockpit-nav-title', '🎓 CD-IELTS 40-Question Exam Cockpit Station (Passages 1–3 · 60m Timer)');
-  titleSpan.style.cssText = 'font-family: var(--font-mono, monospace); font-size: 12px; font-weight: 700; color: var(--accent-gold, #f59e0b);';
+  const titleSpan = h('span', 'ie-cockpit-nav-title');
+  titleSpan.innerHTML = `${icon('graduationCap', 14)} CD-IELTS 40-Question Exam Cockpit Station (Passages 1–3 · 60m Timer)`;
+  titleSpan.style.cssText = 'font-family: var(--font-mono, monospace); font-size: var(--font-body-compact); font-weight: 700; color: var(--accent-gold, #f59e0b); display: inline-flex; align-items: center; gap: 6px;';
 
   topNav.append(backBtn, titleSpan);
   host.append(topNav, cockpitEl);
@@ -62,7 +64,7 @@ export function mockView(root: HTMLElement): () => void {
     const mocks = (s: 'reading' | 'listening') => attempts().filter(a => a.skill === s && a.mock).length;
     root.append(
       h('h1', 'ie-title', 'Mock tests'),
-      h('p', 'ie-lead', 'Official Cambridge exam conditions. Reading: 3 passages, 40 questions, 60 minutes with 10m & 5m warning alerts. Full 1–40 navigator strip, dual-pane split-screen resizer, and post-test 9.0 Band Conversion Modal.')
+      h('p', 'ie-lead', 'Exam conditions. Reading: 3 passages, 40 questions, 60 minutes with 10m & 5m warning alerts. Full 1–40 navigator strip, dual-pane split-screen resizer, and post-test 9.0 Band Conversion Modal.')
     );
 
     const cards = h('div', 'ie-cards');
@@ -70,10 +72,10 @@ export function mockView(root: HTMLElement): () => void {
     // 1. Prominent CD-IELTS 40-Question Exam Cockpit Station Card
     const cockpitCard = h('button', 'ie-card ie-card-hero btn-launch-cockpit-mock', `
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-        <span style="font-size: 11px; font-weight: 700; color: var(--accent-gold, #f59e0b); letter-spacing: 0.08em; text-transform: uppercase;">OFFICIAL CD-IELTS STATION</span>
-        <span style="font-size: 12px; font-weight: 700; color: var(--accent-cyan, #38bdf8);">${mocks('reading')} completed</span>
+        <span style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-gold, #a5b4fc); letter-spacing: 0.08em; text-transform: uppercase;">CD-IELTS STATION</span>
+        <span style="font-size: var(--font-body-compact); font-weight: 700; color: var(--accent-cyan, #a5b4fc);">${mocks('reading')} completed</span>
       </div>
-      <b style="font-size: 16px;">🎓 Full 40-Question CD-IELTS Mock (Exam Cockpit)</b>
+      <b style="font-size: var(--font-body);">${icon('graduationCap', 16)} Full 40-Question CD-IELTS Mock (Exam Cockpit)</b>
       <span>3 Passages (1–40) · 60m Timer · 10m/5m Alerts · 1-40 Navigator &amp; Passage Filters · Draggable Split Gutter · Band 9.0 Modal</span>
     `);
     cockpitCard.addEventListener('click', () => {

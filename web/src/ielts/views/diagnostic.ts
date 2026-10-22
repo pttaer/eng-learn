@@ -3,6 +3,7 @@ import courseData from '../../assets/data/ielts-course.json';
 import { DiagnosticEngine, DiagnosticQuestion, DiagnosticReport } from '../diagnostic-engine';
 import { esc, h } from '../ui';
 import { feedback } from '../../core/feedback';
+import { icon, IconName } from '../../utils/icons';
 
 const SUBTYPE_NAMES: Record<string, string> = {
   subject_verb: 'Subject-Verb Concord',
@@ -13,13 +14,13 @@ const SUBTYPE_NAMES: Record<string, string> = {
   collocations: 'Academic Collocations'
 };
 
-const SUBTYPE_ICONS: Record<string, string> = {
-  subject_verb: '⚖️',
-  tenses: '⏳',
-  articles: '🔤',
-  clauses: '🔗',
-  prepositions: '🎯',
-  collocations: '📚'
+const SUBTYPE_ICONS: Record<string, IconName> = {
+  subject_verb: 'scale',
+  tenses: 'clock',
+  articles: 'edit',
+  clauses: 'layers',
+  prepositions: 'target',
+  collocations: 'book'
 };
 
 export function diagnosticView(root: HTMLElement): () => void {
@@ -46,7 +47,7 @@ export function diagnosticView(root: HTMLElement): () => void {
       <h1 class="ie-title">Grammar & Vocabulary Diagnostic Checkpoint</h1>
       <p class="ie-lead">
         Identify and isolate high-frequency morphosyntactic and lexical flaws before attempting full essays or speaking tests.
-        Calibrated against official Cambridge IELTS Band 5.5 to 8.5+ descriptors.
+        Calibrated against the public IELTS band descriptors, 5.5 to 8.5+.
       </p>
     `;
     container.append(header);
@@ -134,14 +135,14 @@ export function diagnosticView(root: HTMLElement): () => void {
       card.id = `q-${q.id}`;
 
       const subtypeName = SUBTYPE_NAMES[q.subType] || q.subType;
-      const icon = SUBTYPE_ICONS[q.subType] || '📝';
+      const subIconKey = SUBTYPE_ICONS[q.subType] || 'book';
 
       card.innerHTML = `
         <div class="ie-diag-card-head">
           <div class="ie-diag-meta">
             <span class="ie-diag-number">Q${qNum}</span>
             <span class="ie-pill ie-pill-${q.category === 'grammar' ? 'blue' : 'purple'}">${esc(q.category.toUpperCase())}</span>
-            <span class="ie-pill ie-pill-sub">${icon} ${esc(subtypeName)}</span>
+            <span class="ie-pill ie-pill-sub">${icon(subIconKey, 11)} ${esc(subtypeName)}</span>
           </div>
           ${isAnswered ? `
             <span class="ie-diag-result-status ${isCorrect ? 'is-status-correct' : 'is-status-incorrect'}">
@@ -177,7 +178,7 @@ export function diagnosticView(root: HTMLElement): () => void {
             </div>
             <p class="ie-explain-text">${esc(q.explanation)}</p>
             <div class="ie-impact-alert">
-              <span class="ie-impact-icon">⚠️</span>
+              <span class="ie-impact-icon">${icon('alertTriangle', 14)}</span>
               <span class="ie-impact-text"><strong>Impact on Band:</strong> ${esc(q.impactOnBand)}</span>
             </div>
           </div>
@@ -290,7 +291,7 @@ export function diagnosticView(root: HTMLElement): () => void {
     subTypes.forEach(st => {
       const summary = report.subTypeBreakdown[st];
       const name = SUBTYPE_NAMES[st] || st;
-      const icon = SUBTYPE_ICONS[st] || '📌';
+      const iconKey = SUBTYPE_ICONS[st] || 'target';
       const pct = summary.percentage;
       const statusCls = pct >= 80 ? 'good' : pct >= 50 ? 'warning' : 'danger';
       const statusLabel = pct >= 80 ? 'Mastered (Band 7.0+)' : pct >= 50 ? 'At Risk (Band 6.0-6.5)' : 'Critical Flaw (< Band 6.0)';
@@ -301,7 +302,7 @@ export function diagnosticView(root: HTMLElement): () => void {
       card.innerHTML = `
         <div class="ie-tax-head">
           <div class="ie-tax-title">
-            <span class="ie-tax-icon">${icon}</span>
+            <span class="ie-tax-icon">${icon(iconKey, 14)}</span>
             <div>
               <h4>${esc(name)}</h4>
               <span class="ie-tax-status ie-status-${statusCls}">${statusLabel}</span>

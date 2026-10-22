@@ -11,8 +11,8 @@ const storageTs = fs.readFileSync(path.join(__dirname, '../src/utils/storage.ts'
 
 // 1. Header HUD: Streak Counter Pill & Format '🔥 <N>d'
 assert(headerHudTs.includes('btn-streak-pill'), 'header-hud.ts must define .btn-streak-pill button');
-assert(headerHudTs.includes('🔥 ${currentStreak}d') || headerHudTs.includes('🔥 ${progState.streak}d'),
-  'header-hud.ts must render streak in "🔥 <N>d" format');
+assert(headerHudTs.includes('${currentStreak}d') && (headerHudTs.includes("icon('flame'") || headerHudTs.includes('🔥')),
+  'header-hud.ts must render streak in flame icon + "<N>d" format');
 assert(headerHudTs.includes('currentStreak = progression.streak || state.streak.currentStreak || 0'),
   'header-hud.ts must derive streak from progression / storage streak state');
 console.log('✓ Suite 1: Dynamic streak counter pill (🔥 <N>d) verified in header-hud.ts');
