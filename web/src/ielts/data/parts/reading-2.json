@@ -144,10 +144,10 @@
     "type": "mcq",
     "prompt": "What is the evidence that Jupiter and Saturn moved early in the history of the solar system?",
     "options": [
-     "A. direct telescope observations of the planets moving",
-     "B. computer models that recreate the present layout of the belt",
-     "C. the chemical make-up of Eris",
-     "D. photographs taken by New Horizons"
+     "A. direct telescope observations of the giant planets changing orbit",
+     "B. computer simulations of the belt's current layout",
+     "C. the chemical make-up of the dwarf planet Eris and its ices",
+     "D. close-up photographs taken by the New Horizons spacecraft"
     ],
     "answer": "B",
     "why": "Paragraph E: \"Evidence for this migration comes from computer simulations that reproduce the current distribution of Kuiper Belt objects\". A, C and D are not offered as evidence of migration."
@@ -157,13 +157,13 @@
     "type": "mcq",
     "prompt": "Why are the dwarf planets of the Kuiper Belt valuable to scientists?",
     "options": [
-     "A. They may support simple life.",
-     "B. They keep a record of conditions in the early solar system.",
-     "C. They are relatively easy to reach.",
-     "D. They are the source of most meteorites."
+     "A. They preserve evidence of the early solar system.",
+     "B. They may be capable of supporting simple forms of life.",
+     "C. They are relatively easy and cheap for probes to reach.",
+     "D. They are the main source of the meteorites reaching Earth."
     ],
-    "answer": "B",
-    "why": "Paragraph D: they are \"believed to be remnants from the early solar system, preserved in their icy state\". C is contradicted by paragraph F (\"the vast distances involved\"); A and D are not mentioned."
+    "answer": "A",
+    "why": "Paragraph D: they are \"believed to be remnants from the early solar system, preserved in their icy state\". C is contradicted by paragraph F (\"the vast distances involved\"); B and D are not mentioned."
    }
   ]
  },
@@ -324,26 +324,26 @@
     "type": "mcq",
     "prompt": "According to paragraph C, why are vertical gardens found mainly on high-value properties?",
     "options": [
-     "A. Planning laws forbid them on homes.",
-     "B. They are expensive to keep running.",
-     "C. Few plants can grow on walls.",
-     "D. Most residents dislike them."
+     "A. Planning laws in most cities forbid them on private homes.",
+     "B. Few plant species are able to survive growing on walls.",
+     "C. They are expensive to keep running.",
+     "D. Most residents dislike the way they look on buildings."
     ],
-    "answer": "B",
-    "why": "Paragraph C: \"These operational costs have limited adoption primarily to high-value properties\". A, C and D are not mentioned."
+    "answer": "C",
+    "why": "Paragraph C: \"These operational costs have limited adoption primarily to high-value properties\". A, B and D are not mentioned."
    },
    {
     "id": "r08-q13",
     "type": "mcq",
     "prompt": "What did the 2018 University of Melbourne study find?",
     "options": [
-     "A. Workers who could see vertical gardens were less stressed.",
-     "B. Vertical gardens reduced traffic noise by 37 percent.",
-     "C. Workers preferred views of concrete walls.",
-     "D. Green walls made workers more productive."
+     "A. Vertical gardens cut traffic noise outside offices by 37 percent.",
+     "B. Workers preferred views of plain concrete walls to plants.",
+     "C. Green walls made workers more productive and more creative.",
+     "D. Workers with views of green walls felt less stress."
     ],
-    "answer": "A",
-    "why": "Paragraph F: \"office workers with views of vertical gardens demonstrated 37 percent lower stress levels\". The 37 percent refers to stress, not noise (B); C is the opposite; productivity (D) is not measured."
+    "answer": "D",
+    "why": "Paragraph F: \"office workers with views of vertical gardens demonstrated 37 percent lower stress levels\". The 37 percent refers to stress, not noise (A); B is the opposite; productivity and creativity (C) are not measured."
    }
   ]
  },
@@ -501,26 +501,26 @@
     "type": "mcq",
     "prompt": "What does the writer say about measles in the United States?",
     "options": [
-     "A. Cases in 2019 were the highest for 27 years.",
-     "B. The disease was eliminated in 1980.",
-     "C. Cases were spread evenly across the country.",
-     "D. Vaccination began there in 1990."
+     "A. The disease was completely eliminated there in 1980.",
+     "B. Cases were spread evenly across every state in the country.",
+     "C. Cases in 2019 were the highest for 27 years.",
+     "D. Vaccination against it began there only in 1990."
     ],
-    "answer": "A",
-    "why": "Paragraph F: \"In 2019, United States measles cases reached 1,282, representing the highest number in 27 years\". B confuses measles with smallpox; C is contradicted (\"concentrated in communities with low vaccination coverage\"); D is wrong (programs began in 1963)."
+    "answer": "C",
+    "why": "Paragraph F: \"In 2019, United States measles cases reached 1,282, representing the highest number in 27 years\". A confuses measles with smallpox; B is contradicted (\"concentrated in communities with low vaccination coverage\"); D is wrong (programs began in 1963)."
    },
    {
     "id": "r09-q14",
     "type": "mcq",
     "prompt": "In paragraph F, \"vaccine nationalism\" describes a situation in which",
     "options": [
-     "A. rich countries secured vaccines first while poorer countries waited.",
-     "B. governments refused to use foreign vaccines.",
-     "C. each country made vaccination compulsory.",
-     "D. countries produced all their own vaccines."
+     "A. governments refused to use vaccines made by other countries.",
+     "B. wealthy countries got vaccines while poorer ones waited.",
+     "C. each country made vaccination compulsory for all its citizens.",
+     "D. countries produced all of their own vaccines without imports."
     ],
-    "answer": "A",
-    "why": "Paragraph F: \"wealthy nations prioritized vaccine acquisition while lower-income nations faced substantial distribution delays\". B, C and D are not described."
+    "answer": "B",
+    "why": "Paragraph F: \"wealthy nations prioritized vaccine acquisition while lower-income nations faced substantial distribution delays\". A, C and D are not described."
    }
   ]
  },
@@ -658,9 +658,9 @@
     "prompt": "Why are poor families in developing nations hit hard by rising grain prices?",
     "options": [
      "A. Bread provides most of their daily calories.",
-     "B. They are unable to grow wheat themselves.",
-     "C. They prefer expensive whole-grain bread.",
-     "D. Their governments tax bread heavily."
+     "B. They are unable to grow enough wheat for themselves.",
+     "C. They strongly prefer to buy expensive whole-grain bread.",
+     "D. Their governments place heavy taxes on bread sales."
     ],
     "answer": "A",
     "why": "Paragraph C: grain-based foods \"often constitute 60 to 70 percent of total caloric intake for populations living in poverty, creating acute vulnerability\". B, C and D are not mentioned."
@@ -670,13 +670,13 @@
     "type": "mcq",
     "prompt": "What point does the writer make at the end of paragraph F?",
     "options": [
-     "A. Cost can stop people from acting on what they know about nutrition.",
-     "B. People in developing nations dislike the taste of whole grains.",
-     "C. Low-carbohydrate diets are most popular in poorer countries.",
-     "D. Whole-grain bread is cheaper than white bread in developing nations."
+     "A. People in developing nations dislike the taste of whole grains.",
+     "B. Low-carbohydrate diets are most popular in poorer countries.",
+     "C. Whole-grain bread is cheaper than white bread in developing nations.",
+     "D. Cost can stop people acting on nutritional knowledge."
     ],
-    "answer": "A",
-    "why": "Paragraph F: \"nutritional knowledge does not translate to dietary change due to economic barriers\". D is the opposite: refined white bread is \"more accessible\". B and C are not stated."
+    "answer": "D",
+    "why": "Paragraph F: \"nutritional knowledge does not translate to dietary change due to economic barriers\". C is the opposite: refined white bread is \"more accessible\". A and B are not stated."
    }
   ]
  },
@@ -835,26 +835,26 @@
     "type": "mcq",
     "prompt": "What is the main obstacle to wider use of superconducting cables?",
     "options": [
-     "A. their high construction cost",
-     "B. a shortage of liquid nitrogen",
-     "C. their low current capacity",
-     "D. failures in pilot projects"
+     "A. a shortage of liquid nitrogen for cooling",
+     "B. their poor current-carrying capacity",
+     "C. their high capital cost over copper",
+     "D. repeated failures in pilot installations"
     ],
-    "answer": "A",
-    "why": "Paragraph E: \"capital costs approximately three times higher than conventional copper-based transmission infrastructure\". B is wrong (nitrogen is made \"through well-established industrial processes\"); C and D are contradicted by \"critical current densities sufficient\" and \"successful operation\"."
+    "answer": "C",
+    "why": "Paragraph E: \"capital costs approximately three times higher than conventional copper-based transmission infrastructure\". A is wrong (nitrogen is made \"through well-established industrial processes\"); B and D are contradicted by \"critical current densities sufficient\" and \"successful operation\"."
    },
    {
     "id": "r11-q13",
     "type": "mcq",
     "prompt": "Phase-change materials are attractive mainly because they",
     "options": [
-     "A. allow heat to be stored in a smaller space.",
-     "B. need no stabilising compounds.",
-     "C. last for an unlimited number of cycles.",
-     "D. are cheaper than rock or sand."
+     "A. need no stabilising compounds to stay effective.",
+     "B. allow heat to be stored in a smaller space.",
+     "C. last for an unlimited number of heating cycles in practice.",
+     "D. are far cheaper to produce than rock or sand."
     ],
-    "answer": "A",
-    "why": "Paragraph F: their heat capacities are \"approximately 5 to 10 times higher than rock or sand conventionally used in thermal storage, enabling more compact storage systems\". B and C are contradicted by research on \"stabilizing matrix compounds\" to reach 1,000 cycles; D is not stated."
+    "answer": "B",
+    "why": "Paragraph F: their heat capacities are \"approximately 5 to 10 times higher than rock or sand conventionally used in thermal storage, enabling more compact storage systems\". A and C are contradicted by research on \"stabilizing matrix compounds\" to reach 1,000 cycles; D is not stated."
    }
   ]
  },
@@ -1010,13 +1010,13 @@
     "type": "mcq",
     "prompt": "What does the writer say about Freud's view of dreams?",
     "options": [
-     "A. Current research suggests dreams are mostly neural noise rather than hidden wishes.",
-     "B. Brain scans have confirmed that dreams express unconscious wishes.",
-     "C. It explains why dreams happen in non-REM sleep.",
-     "D. Hobson and McCarley developed it further."
+     "A. Brain scans have confirmed that dreams express unconscious wishes.",
+     "B. It explains why most dreams happen during non-REM sleep.",
+     "C. Hobson and McCarley later refined it with brain-scan evidence.",
+     "D. Research now suggests dreams are mostly neural noise."
     ],
-    "answer": "A",
-    "why": "Paragraph C: \"Contrary to Freudian dream theory, contemporary research suggests dreams primarily reflect neural noise rather than encoding meaningful psychological information\". B is the opposite; C and D are not stated."
+    "answer": "D",
+    "why": "Paragraph C: \"Contrary to Freudian dream theory, contemporary research suggests dreams primarily reflect neural noise rather than encoding meaningful psychological information\". A is the opposite; B and C are not stated."
    },
    {
     "id": "r12-q13",
@@ -1024,9 +1024,9 @@
     "prompt": "According to paragraph B, people with higher spindle density",
     "options": [
      "A. tend to do better on intelligence tests.",
-     "B. spend more time in REM sleep.",
-     "C. have more vivid dreams.",
-     "D. need less sleep overall."
+     "B. spend a larger share of the night in REM sleep.",
+     "C. report having more vivid and memorable dreams.",
+     "D. need noticeably less sleep overall than others."
     ],
     "answer": "A",
     "why": "Paragraph B: \"individuals exhibiting higher spindle density demonstrating superior performance on intelligence tests\". B, C and D are not linked to spindles in the passage."
@@ -1036,13 +1036,13 @@
     "type": "mcq",
     "prompt": "In the 2015 trial, compared with medication, CBT-I",
     "options": [
-     "A. led to a higher rate of long-term remission.",
-     "B. was about equally effective.",
-     "C. caused more side effects.",
-     "D. worked more quickly."
+     "A. was about equally effective over the long term.",
+     "B. led to a higher rate of long-term remission.",
+     "C. caused more side effects than the medication did.",
+     "D. produced improvements more quickly than medication."
     ],
-    "answer": "A",
-    "why": "Paragraph F: \"CBT-I produced superior long-term outcomes with 64 percent remission versus 39 percent in the medication group\". B is contradicted by the figures; C and D are not reported."
+    "answer": "B",
+    "why": "Paragraph F: \"CBT-I produced superior long-term outcomes with 64 percent remission versus 39 percent in the medication group\". A is contradicted by the figures; C and D are not reported."
    }
   ]
  }

@@ -171,13 +171,13 @@
     "type": "mcq",
     "prompt": "According to paragraph D, identical printed texts helped scholars mainly because",
     "options": [
-     "A. they were cheaper than manuscripts.",
-     "B. readers in different places could refer to the same pages.",
-     "C. they were all printed in Latin.",
-     "D. they were free from government control."
+     "A. they were considerably cheaper to buy than handwritten manuscripts.",
+     "B. they were all printed in Latin, a language shared by scholars.",
+     "C. they were produced free from the control of political authorities.",
+     "D. readers in different places could refer to the same pages."
     ],
-    "answer": "B",
-    "why": "Paragraph D: \"different readers across Europe could reference the same page numbers and exact passages\". A is a point from paragraph C, not the reason given here; C is not stated; D is contradicted, since authorities \"attempted to control it through censorship and licensing\"."
+    "answer": "D",
+    "why": "Paragraph D: \"different readers across Europe could reference the same page numbers and exact passages\". A is a point from paragraph C, not the reason given here; B is not stated; C is contradicted, since authorities \"attempted to control it through censorship and licensing\"."
    }
   ]
  },
@@ -345,10 +345,10 @@
     "type": "mcq",
     "prompt": "What does paragraph G say about using several mitigation strategies together?",
     "options": [
-     "A. It is less effective than one well-funded measure.",
+     "A. It is less effective than relying on one well-funded measure.",
      "B. It can cool a city more than any single strategy.",
-     "C. It only works in very large cities.",
-     "D. It depends on international agreements."
+     "C. It only works in very large cities with big budgets.",
+     "D. It depends on international agreements between governments."
     ],
     "answer": "B",
     "why": "Paragraph G: combined strategies \"can achieve cumulative temperature reductions exceeding individual strategy outcomes\". A is the opposite; C is not stated; D is contradicted in paragraph H, which says mitigation \"can be implemented through local action\"."
@@ -359,9 +359,9 @@
     "prompt": "According to paragraph H, one advantage of tackling urban heat islands rather than global climate change is that",
     "options": [
      "A. results can be seen within a few years.",
-     "B. no public money is needed.",
-     "C. it also reverses global warming.",
-     "D. it needs no new technology."
+     "B. no public money or financial incentives are needed.",
+     "C. it also reverses global warming within a decade.",
+     "D. it needs no new technology or planning changes."
     ],
     "answer": "A",
     "why": "Paragraph H: local mitigation \"can produce measurable results within years rather than decades\". B and D are not stated (paragraph G even mentions \"Financial incentives\"), and C is never claimed."
@@ -516,26 +516,26 @@
     "type": "mcq",
     "prompt": "What risk of some digital learning environments is described in paragraph E?",
     "options": [
-     "A. Their feedback arrives too slowly to be useful.",
-     "B. They may remove the need for learners to check their own understanding.",
-     "C. They are too expensive for most schools.",
-     "D. They discourage students from asking teachers questions."
+     "A. Their feedback arrives too slowly for students to make use of it.",
+     "B. They are too expensive for most schools and universities to afford.",
+     "C. They may stop learners from monitoring their own understanding.",
+     "D. They discourage students from asking their teachers questions."
     ],
-    "answer": "B",
-    "why": "Paragraph E: some environments \"may impair metacognitive development by removing the necessity for learners to actively monitor their own understanding\". A is contradicted (adaptive systems give \"real-time feedback\"); C and D are not mentioned."
+    "answer": "C",
+    "why": "Paragraph E: some environments \"may impair metacognitive development by removing the necessity for learners to actively monitor their own understanding\". A is contradicted (adaptive systems give \"real-time feedback\"); B and D are not mentioned."
    },
    {
     "id": "r03-q14",
     "type": "mcq",
     "prompt": "Students who received explicit metacognitive instruction improved their standardized test performance by",
     "options": [
-     "A. less than 10 percent.",
-     "B. between 10 and 40 percent.",
+     "A. between 10 and 40 percent.",
+     "B. less than 10 percent in total.",
      "C. exactly 40 percent in every case.",
-     "D. more than 40 percent."
+     "D. more than 40 percent in most trials."
     ],
-    "answer": "B",
-    "why": "Paragraph D: \"showed improvements ranging from 10 to 40 percent in standardized test performance\". The figure is a range, so A, C and D are all wrong."
+    "answer": "A",
+    "why": "Paragraph D: \"showed improvements ranging from 10 to 40 percent in standardized test performance\". The figure is a range, so B, C and D are all wrong."
    }
   ]
  },
@@ -700,10 +700,10 @@
     "type": "mcq",
     "prompt": "What does the writer suggest about the Indus Valley civilisation in paragraph D?",
     "options": [
-     "A. Its script was used only on pottery.",
+     "A. Its script was found only on pottery and household storage jars.",
      "B. The spread of its script points to a central administration.",
-     "C. Its language was certainly Dravidian.",
-     "D. Its script contained over a thousand signs."
+     "C. Its language has been conclusively identified as an early Dravidian one.",
+     "D. Its script contained well over a thousand distinct signs in total."
     ],
     "answer": "B",
     "why": "Paragraph D: the distribution and consistency of the script \"suggests that centralized administration existed during this period\". A is wrong (the script is found on \"Over 4,000 seals\"); C is only what \"Some scholars propose\"; D is contradicted by \"approximately 400 to 600 distinct signs\"."
@@ -713,13 +713,13 @@
     "type": "mcq",
     "prompt": "According to paragraph E, what was the main effect of the Phoenician alphabet?",
     "options": [
-     "A. It made reading and writing easier to learn.",
-     "B. It replaced Chinese characters.",
-     "C. It was restricted to temple scribes.",
-     "D. It increased the number of signs writers needed."
+     "A. It replaced Chinese characters across East Asia.",
+     "B. It restricted literacy to a small class of temple scribes.",
+     "C. It made reading and writing easier to learn.",
+     "D. It increased the number of signs writers needed to master."
     ],
-    "answer": "A",
-    "why": "Paragraph E: it \"substantially reduced the cognitive burden required for literacy compared to logographic systems\". B is contradicted by paragraph F; C and D are the opposite of what is said."
+    "answer": "C",
+    "why": "Paragraph E: it \"substantially reduced the cognitive burden required for literacy compared to logographic systems\". A is contradicted by paragraph F; B and D are the opposite of what is said."
    }
   ]
  },
@@ -886,13 +886,13 @@
     "type": "mcq",
     "prompt": "According to paragraph D, why did the West India Company (WIC) make losses?",
     "options": [
-     "A. It lacked the governmental powers of the VOC.",
-     "B. Trade in the Atlantic was competitive in a different way.",
-     "C. Its fleet was destroyed by the British navy.",
-     "D. New Amsterdam was too costly to run."
+     "A. It lacked the governmental and military powers granted to the VOC.",
+     "B. Its fleet was destroyed by the British navy in the Atlantic.",
+     "C. New Amsterdam proved too costly for the company to run.",
+     "D. Atlantic trade had different competitive conditions."
     ],
-    "answer": "B",
-    "why": "Paragraph D: \"The WIC's failure reflected different competitive conditions in Atlantic trade.\" A, C and D are never given as reasons."
+    "answer": "D",
+    "why": "Paragraph D: \"The WIC's failure reflected different competitive conditions in Atlantic trade.\" A, B and C are never given as reasons."
    },
    {
     "id": "r05-q13",
@@ -1074,10 +1074,10 @@
     "type": "mcq",
     "prompt": "What is the function of the melon?",
     "options": [
-     "A. It stores oxygen for deep dives.",
+     "A. It stores extra oxygen to support long, deep dives.",
      "B. It focuses clicks into a directional beam.",
-     "C. It carries echoes to the inner ear.",
-     "D. It produces the clicking sounds."
+     "C. It carries returning echoes along the jaw to the inner ear.",
+     "D. It produces the clicking sounds in the nasal cavity."
     ],
     "answer": "B",
     "why": "Paragraph B: the melon \"functions as a biological acoustic lens, focusing echolocation clicks into a directional beam\". C is done by \"specialized fatty channels\" in the lower jaw; D happens in \"the phonic lips and monkey lips structures\"; A is not mentioned."
@@ -1087,23 +1087,23 @@
     "type": "mcq",
     "prompt": "Why do sperm whales use lower frequencies than dolphins?",
     "options": [
-     "A. Lower frequencies lose less strength in the deep ocean.",
-     "B. Lower frequencies cannot be heard by their prey.",
-     "C. Their brains cannot process high frequencies.",
-     "D. They need the sounds mainly for communication."
+     "A. Lower frequencies cannot be detected by the squid they hunt.",
+     "B. Their brains are unable to process high frequencies at all.",
+     "C. Lower frequencies lose less energy in deep water.",
+     "D. They need the sounds mainly for communicating over long distances."
     ],
-    "answer": "A",
-    "why": "Paragraph D: sperm whales use \"5 to 15 kilohertz, reducing attenuation in deep ocean environments\". Attenuation means loss of strength. B, C and D are not stated."
+    "answer": "C",
+    "why": "Paragraph D: sperm whales use \"5 to 15 kilohertz, reducing attenuation in deep ocean environments\". Attenuation means loss of strength. A, B and D are not stated as the reason."
    },
    {
     "id": "r06-q14",
     "type": "mcq",
     "prompt": "According to paragraph H, research on marine echolocation has already helped to",
     "options": [
-     "A. design underwater vehicles.",
-     "B. reduce shipping costs.",
-     "C. slow ocean acidification.",
-     "D. cure hearing loss in humans."
+     "A. design autonomous underwater vehicles.",
+     "B. cut the costs of commercial shipping routes.",
+     "C. slow down the rate of ocean acidification.",
+     "D. cure hearing loss in human patients today."
     ],
     "answer": "A",
     "why": "Paragraph H: \"Biosonar systems inspired by marine mammal echolocation have informed the design of acoustic imaging devices and autonomous underwater vehicles\". D is only something research \"may provide insights\" into; B and C are not achievements of the research."
@@ -1255,10 +1255,10 @@
     "type": "mcq",
     "prompt": "What is the evidence that Jupiter and Saturn moved early in the history of the solar system?",
     "options": [
-     "A. direct telescope observations of the planets moving",
-     "B. computer models that recreate the present layout of the belt",
-     "C. the chemical make-up of Eris",
-     "D. photographs taken by New Horizons"
+     "A. direct telescope observations of the giant planets changing orbit",
+     "B. computer simulations of the belt's current layout",
+     "C. the chemical make-up of the dwarf planet Eris and its ices",
+     "D. close-up photographs taken by the New Horizons spacecraft"
     ],
     "answer": "B",
     "why": "Paragraph E: \"Evidence for this migration comes from computer simulations that reproduce the current distribution of Kuiper Belt objects\". A, C and D are not offered as evidence of migration."
@@ -1268,13 +1268,13 @@
     "type": "mcq",
     "prompt": "Why are the dwarf planets of the Kuiper Belt valuable to scientists?",
     "options": [
-     "A. They may support simple life.",
-     "B. They keep a record of conditions in the early solar system.",
-     "C. They are relatively easy to reach.",
-     "D. They are the source of most meteorites."
+     "A. They preserve evidence of the early solar system.",
+     "B. They may be capable of supporting simple forms of life.",
+     "C. They are relatively easy and cheap for probes to reach.",
+     "D. They are the main source of the meteorites reaching Earth."
     ],
-    "answer": "B",
-    "why": "Paragraph D: they are \"believed to be remnants from the early solar system, preserved in their icy state\". C is contradicted by paragraph F (\"the vast distances involved\"); A and D are not mentioned."
+    "answer": "A",
+    "why": "Paragraph D: they are \"believed to be remnants from the early solar system, preserved in their icy state\". C is contradicted by paragraph F (\"the vast distances involved\"); B and D are not mentioned."
    }
   ]
  },
@@ -1435,26 +1435,26 @@
     "type": "mcq",
     "prompt": "According to paragraph C, why are vertical gardens found mainly on high-value properties?",
     "options": [
-     "A. Planning laws forbid them on homes.",
-     "B. They are expensive to keep running.",
-     "C. Few plants can grow on walls.",
-     "D. Most residents dislike them."
+     "A. Planning laws in most cities forbid them on private homes.",
+     "B. Few plant species are able to survive growing on walls.",
+     "C. They are expensive to keep running.",
+     "D. Most residents dislike the way they look on buildings."
     ],
-    "answer": "B",
-    "why": "Paragraph C: \"These operational costs have limited adoption primarily to high-value properties\". A, C and D are not mentioned."
+    "answer": "C",
+    "why": "Paragraph C: \"These operational costs have limited adoption primarily to high-value properties\". A, B and D are not mentioned."
    },
    {
     "id": "r08-q13",
     "type": "mcq",
     "prompt": "What did the 2018 University of Melbourne study find?",
     "options": [
-     "A. Workers who could see vertical gardens were less stressed.",
-     "B. Vertical gardens reduced traffic noise by 37 percent.",
-     "C. Workers preferred views of concrete walls.",
-     "D. Green walls made workers more productive."
+     "A. Vertical gardens cut traffic noise outside offices by 37 percent.",
+     "B. Workers preferred views of plain concrete walls to plants.",
+     "C. Green walls made workers more productive and more creative.",
+     "D. Workers with views of green walls felt less stress."
     ],
-    "answer": "A",
-    "why": "Paragraph F: \"office workers with views of vertical gardens demonstrated 37 percent lower stress levels\". The 37 percent refers to stress, not noise (B); C is the opposite; productivity (D) is not measured."
+    "answer": "D",
+    "why": "Paragraph F: \"office workers with views of vertical gardens demonstrated 37 percent lower stress levels\". The 37 percent refers to stress, not noise (A); B is the opposite; productivity and creativity (C) are not measured."
    }
   ]
  },
@@ -1612,26 +1612,26 @@
     "type": "mcq",
     "prompt": "What does the writer say about measles in the United States?",
     "options": [
-     "A. Cases in 2019 were the highest for 27 years.",
-     "B. The disease was eliminated in 1980.",
-     "C. Cases were spread evenly across the country.",
-     "D. Vaccination began there in 1990."
+     "A. The disease was completely eliminated there in 1980.",
+     "B. Cases were spread evenly across every state in the country.",
+     "C. Cases in 2019 were the highest for 27 years.",
+     "D. Vaccination against it began there only in 1990."
     ],
-    "answer": "A",
-    "why": "Paragraph F: \"In 2019, United States measles cases reached 1,282, representing the highest number in 27 years\". B confuses measles with smallpox; C is contradicted (\"concentrated in communities with low vaccination coverage\"); D is wrong (programs began in 1963)."
+    "answer": "C",
+    "why": "Paragraph F: \"In 2019, United States measles cases reached 1,282, representing the highest number in 27 years\". A confuses measles with smallpox; B is contradicted (\"concentrated in communities with low vaccination coverage\"); D is wrong (programs began in 1963)."
    },
    {
     "id": "r09-q14",
     "type": "mcq",
     "prompt": "In paragraph F, \"vaccine nationalism\" describes a situation in which",
     "options": [
-     "A. rich countries secured vaccines first while poorer countries waited.",
-     "B. governments refused to use foreign vaccines.",
-     "C. each country made vaccination compulsory.",
-     "D. countries produced all their own vaccines."
+     "A. governments refused to use vaccines made by other countries.",
+     "B. wealthy countries got vaccines while poorer ones waited.",
+     "C. each country made vaccination compulsory for all its citizens.",
+     "D. countries produced all of their own vaccines without imports."
     ],
-    "answer": "A",
-    "why": "Paragraph F: \"wealthy nations prioritized vaccine acquisition while lower-income nations faced substantial distribution delays\". B, C and D are not described."
+    "answer": "B",
+    "why": "Paragraph F: \"wealthy nations prioritized vaccine acquisition while lower-income nations faced substantial distribution delays\". A, C and D are not described."
    }
   ]
  },
@@ -1769,9 +1769,9 @@
     "prompt": "Why are poor families in developing nations hit hard by rising grain prices?",
     "options": [
      "A. Bread provides most of their daily calories.",
-     "B. They are unable to grow wheat themselves.",
-     "C. They prefer expensive whole-grain bread.",
-     "D. Their governments tax bread heavily."
+     "B. They are unable to grow enough wheat for themselves.",
+     "C. They strongly prefer to buy expensive whole-grain bread.",
+     "D. Their governments place heavy taxes on bread sales."
     ],
     "answer": "A",
     "why": "Paragraph C: grain-based foods \"often constitute 60 to 70 percent of total caloric intake for populations living in poverty, creating acute vulnerability\". B, C and D are not mentioned."
@@ -1781,13 +1781,13 @@
     "type": "mcq",
     "prompt": "What point does the writer make at the end of paragraph F?",
     "options": [
-     "A. Cost can stop people from acting on what they know about nutrition.",
-     "B. People in developing nations dislike the taste of whole grains.",
-     "C. Low-carbohydrate diets are most popular in poorer countries.",
-     "D. Whole-grain bread is cheaper than white bread in developing nations."
+     "A. People in developing nations dislike the taste of whole grains.",
+     "B. Low-carbohydrate diets are most popular in poorer countries.",
+     "C. Whole-grain bread is cheaper than white bread in developing nations.",
+     "D. Cost can stop people acting on nutritional knowledge."
     ],
-    "answer": "A",
-    "why": "Paragraph F: \"nutritional knowledge does not translate to dietary change due to economic barriers\". D is the opposite: refined white bread is \"more accessible\". B and C are not stated."
+    "answer": "D",
+    "why": "Paragraph F: \"nutritional knowledge does not translate to dietary change due to economic barriers\". C is the opposite: refined white bread is \"more accessible\". A and B are not stated."
    }
   ]
  },
@@ -1946,26 +1946,26 @@
     "type": "mcq",
     "prompt": "What is the main obstacle to wider use of superconducting cables?",
     "options": [
-     "A. their high construction cost",
-     "B. a shortage of liquid nitrogen",
-     "C. their low current capacity",
-     "D. failures in pilot projects"
+     "A. a shortage of liquid nitrogen for cooling",
+     "B. their poor current-carrying capacity",
+     "C. their high capital cost over copper",
+     "D. repeated failures in pilot installations"
     ],
-    "answer": "A",
-    "why": "Paragraph E: \"capital costs approximately three times higher than conventional copper-based transmission infrastructure\". B is wrong (nitrogen is made \"through well-established industrial processes\"); C and D are contradicted by \"critical current densities sufficient\" and \"successful operation\"."
+    "answer": "C",
+    "why": "Paragraph E: \"capital costs approximately three times higher than conventional copper-based transmission infrastructure\". A is wrong (nitrogen is made \"through well-established industrial processes\"); B and D are contradicted by \"critical current densities sufficient\" and \"successful operation\"."
    },
    {
     "id": "r11-q13",
     "type": "mcq",
     "prompt": "Phase-change materials are attractive mainly because they",
     "options": [
-     "A. allow heat to be stored in a smaller space.",
-     "B. need no stabilising compounds.",
-     "C. last for an unlimited number of cycles.",
-     "D. are cheaper than rock or sand."
+     "A. need no stabilising compounds to stay effective.",
+     "B. allow heat to be stored in a smaller space.",
+     "C. last for an unlimited number of heating cycles in practice.",
+     "D. are far cheaper to produce than rock or sand."
     ],
-    "answer": "A",
-    "why": "Paragraph F: their heat capacities are \"approximately 5 to 10 times higher than rock or sand conventionally used in thermal storage, enabling more compact storage systems\". B and C are contradicted by research on \"stabilizing matrix compounds\" to reach 1,000 cycles; D is not stated."
+    "answer": "B",
+    "why": "Paragraph F: their heat capacities are \"approximately 5 to 10 times higher than rock or sand conventionally used in thermal storage, enabling more compact storage systems\". A and C are contradicted by research on \"stabilizing matrix compounds\" to reach 1,000 cycles; D is not stated."
    }
   ]
  },
@@ -2121,13 +2121,13 @@
     "type": "mcq",
     "prompt": "What does the writer say about Freud's view of dreams?",
     "options": [
-     "A. Current research suggests dreams are mostly neural noise rather than hidden wishes.",
-     "B. Brain scans have confirmed that dreams express unconscious wishes.",
-     "C. It explains why dreams happen in non-REM sleep.",
-     "D. Hobson and McCarley developed it further."
+     "A. Brain scans have confirmed that dreams express unconscious wishes.",
+     "B. It explains why most dreams happen during non-REM sleep.",
+     "C. Hobson and McCarley later refined it with brain-scan evidence.",
+     "D. Research now suggests dreams are mostly neural noise."
     ],
-    "answer": "A",
-    "why": "Paragraph C: \"Contrary to Freudian dream theory, contemporary research suggests dreams primarily reflect neural noise rather than encoding meaningful psychological information\". B is the opposite; C and D are not stated."
+    "answer": "D",
+    "why": "Paragraph C: \"Contrary to Freudian dream theory, contemporary research suggests dreams primarily reflect neural noise rather than encoding meaningful psychological information\". A is the opposite; B and C are not stated."
    },
    {
     "id": "r12-q13",
@@ -2135,9 +2135,9 @@
     "prompt": "According to paragraph B, people with higher spindle density",
     "options": [
      "A. tend to do better on intelligence tests.",
-     "B. spend more time in REM sleep.",
-     "C. have more vivid dreams.",
-     "D. need less sleep overall."
+     "B. spend a larger share of the night in REM sleep.",
+     "C. report having more vivid and memorable dreams.",
+     "D. need noticeably less sleep overall than others."
     ],
     "answer": "A",
     "why": "Paragraph B: \"individuals exhibiting higher spindle density demonstrating superior performance on intelligence tests\". B, C and D are not linked to spindles in the passage."
@@ -2147,13 +2147,13 @@
     "type": "mcq",
     "prompt": "In the 2015 trial, compared with medication, CBT-I",
     "options": [
-     "A. led to a higher rate of long-term remission.",
-     "B. was about equally effective.",
-     "C. caused more side effects.",
-     "D. worked more quickly."
+     "A. was about equally effective over the long term.",
+     "B. led to a higher rate of long-term remission.",
+     "C. caused more side effects than the medication did.",
+     "D. produced improvements more quickly than medication."
     ],
-    "answer": "A",
-    "why": "Paragraph F: \"CBT-I produced superior long-term outcomes with 64 percent remission versus 39 percent in the medication group\". B is contradicted by the figures; C and D are not reported."
+    "answer": "B",
+    "why": "Paragraph F: \"CBT-I produced superior long-term outcomes with 64 percent remission versus 39 percent in the medication group\". A is contradicted by the figures; C and D are not reported."
    }
   ]
  },
@@ -2317,26 +2317,26 @@
     "type": "mcq",
     "prompt": "What is the writer's main point about the divergence problem?",
     "options": [
-     "A. It shows that tree rings cannot be used to study climate.",
-     "B. The link between tree growth and climate may change over time.",
-     "C. It affects only forests in the south.",
-     "D. Its causes have now been fully explained."
+     "A. The climate-growth relationship may not stay constant.",
+     "B. It proves that tree rings cannot be trusted as a climate record.",
+     "C. It affects only forests in the southern half of the continent.",
+     "D. Its causes have now been fully explained by researchers."
     ],
-    "answer": "B",
-    "why": "Paragraph F: \"it is a reminder that the link between climate and growth may not remain constant\". A is too strong; C is contradicted (\"In some northern forests\"); D is contradicted (\"Researchers still debate the causes\")."
+    "answer": "A",
+    "why": "Paragraph F: \"it is a reminder that the link between climate and growth may not remain constant\". B is too strong; C is contradicted (\"In some northern forests\"); D is contradicted (\"Researchers still debate the causes\")."
    },
    {
     "id": "r13-q13",
     "type": "mcq",
     "prompt": "The 2021 study of the Norse site in Newfoundland",
     "options": [
-     "A. used the radiation spike of 993 CE to date wood cut in 1021.",
-     "B. used the spike of 774 CE to date the site.",
-     "C. matched the wood against European oak chronologies.",
-     "D. showed that Europeans reached the Americas in 993."
+     "A. used the earlier spike of 774 CE to date wood from the site.",
+     "B. matched the wood against European oak and pine chronologies.",
+     "C. used the spike of 993 CE to date wood felled in 1021.",
+     "D. showed that Europeans had reached the Americas by 993 CE."
     ],
-    "answer": "A",
-    "why": "Paragraph E: \"a team used a later spike, from 993 CE, to show that wood at a Norse site in Newfoundland had been cut in 1021\". B names the wrong spike; C is not mentioned; D confuses the spike year with the felling year."
+    "answer": "C",
+    "why": "Paragraph E: \"a team used a later spike, from 993 CE, to show that wood at a Norse site in Newfoundland had been cut in 1021\". A names the wrong spike; B is not mentioned; D confuses the spike year with the felling year."
    }
   ]
  },
@@ -2676,36 +2676,36 @@
     "type": "mcq",
     "prompt": "According to the implied endorsement explanation, people keep the default because they",
     "options": [
-     "A. believe it has been recommended by experts.",
-     "B. cannot find the alternative options.",
-     "C. have been legally required to accept it.",
-     "D. have compared all the options carefully."
+     "A. cannot easily find the other options on offer.",
+     "B. have been legally required to accept whatever is pre-selected.",
+     "C. have carefully compared all of the available options.",
+     "D. believe it has been recommended by experts."
     ],
-    "answer": "A",
-    "why": "Paragraph D: \"Many people assume that the default has been chosen by experts and therefore represents sensible advice\". B and C are not mentioned; D describes the standard model the passage rejects."
+    "answer": "D",
+    "why": "Paragraph D: \"Many people assume that the default has been chosen by experts and therefore represents sensible advice\". A and B are not mentioned; C describes the standard model the passage rejects."
    },
    {
     "id": "r15-q13",
     "type": "mcq",
     "prompt": "Why does the writer mention recent analyses in paragraph F?",
     "options": [
-     "A. to suggest that many nudges may be weaker than early studies claimed",
-     "B. to prove that defaults have no real effect",
-     "C. to show that nudges are now illegal in Europe",
-     "D. to argue that unpublished studies are more reliable"
+     "A. to prove that defaults have no real effect on behaviour at all",
+     "B. to show that nudges have now been made illegal across Europe",
+     "C. to argue that unpublished studies are the more reliable ones",
+     "D. to suggest that many nudges may be weaker than first claimed"
     ],
-    "answer": "A",
-    "why": "Paragraph F: \"the average effect of many nudges may be far smaller than early research implied\". B is contradicted (\"defaults remain among the more robust interventions\"); C overstates a ruling about one kind of consent box; D is not claimed."
+    "answer": "D",
+    "why": "Paragraph F: \"the average effect of many nudges may be far smaller than early research implied\". A is contradicted (\"defaults remain among the more robust interventions\"); B overstates a ruling about one kind of consent box; C is not claimed."
    },
    {
     "id": "r15-q14",
     "type": "mcq",
     "prompt": "What does the writer say about active choice?",
     "options": [
-     "A. It avoids assuming what people want but makes them do the work defaults remove.",
-     "B. It is the only neutral form of design.",
-     "C. It has replaced defaults in most pension schemes.",
-     "D. It is a form of manipulation."
+     "A. It avoids presuming what people want but adds effort.",
+     "B. It is the only truly neutral form of design available to planners.",
+     "C. It has replaced defaults in most pension schemes and websites.",
+     "D. It is a form of manipulation, especially when people are unaware."
     ],
     "answer": "A",
     "why": "Paragraph G: active choice \"avoids presuming what people want, but it imposes the very effort that defaults were designed to remove\". B is contradicted (\"no such thing as a neutral design\"); C and D are not stated."
@@ -3019,25 +3019,25 @@
     "prompt": "What is the writer's main point about the clarity of the Epidaurus theatre?",
     "options": [
      "A. It depends on a single feature that could easily be copied.",
-     "B. It results from several features working together.",
-     "C. It has been fully explained by one modern experiment.",
-     "D. It was described in detail by Vitruvius."
+     "B. It has been fully explained by a single modern experiment.",
+     "C. It results from several features working together.",
+     "D. It was described in great detail by Vitruvius himself."
     ],
-    "answer": "B",
-    "why": "Paragraph B: \"the theatre's clarity is not the result of a single feature but of several working together\". A is contradicted by the same sentence; C is contradicted by the caution that scale models cannot reproduce everything; D is not stated."
+    "answer": "C",
+    "why": "Paragraph B: \"the theatre's clarity is not the result of a single feature but of several working together\". A is contradicted by the same sentence; B is contradicted by the caution that scale models cannot reproduce everything; D is not stated."
    },
    {
     "id": "r17-q10",
     "type": "mcq",
     "prompt": "According to paragraph G, what made a theatre good for ancient spectators?",
     "options": [
-     "A. Amplified voices that reached every seat.",
-     "B. The words could be followed and the crowd could share one experience.",
-     "C. Recordings that could be replayed later.",
-     "D. Vessels tuned to musical notes."
+     "A. Amplified voices that carried clearly to every seat in the house.",
+     "B. Words that could be followed in a shared crowd experience.",
+     "C. Recordings of the performance that could be replayed later.",
+     "D. Bronze vessels tuned to musical notes beneath the seats."
     ],
     "answer": "B",
-    "why": "Paragraph G: \"For them, a good theatre was one in which the words could be followed and the crowd could share a single experience.\""
+    "why": "Paragraph G: \"For them, a good theatre was one in which the words could be followed and the crowd could share a single experience.\" A and C are ruled out (\"they were not listening to recordings or to amplified voices\"); D is Vitruvius's idea from paragraph C, not the spectators' criterion."
    },
    {
     "id": "r17-q11",
@@ -3188,26 +3188,26 @@
     "type": "mcq",
     "prompt": "According to paragraph D, why can a lichen survey be hard to interpret?",
     "options": [
-     "A. Lichens grow so quickly that they cannot be counted.",
-     "B. Lichens respond to a mixture of pollutants rather than to a single compound.",
-     "C. Lichens are found only in rural areas.",
-     "D. Lichens cannot survive in clean air."
+     "A. They respond to a mix of pollutants, not one compound.",
+     "B. They grow so quickly that surveys cannot keep up with them.",
+     "C. They are found only in rural areas away from traffic.",
+     "D. They are unable to survive for long in clean, unpolluted air."
     ],
-    "answer": "B",
-    "why": "Paragraph D: \"Lichens respond to a mixture of pollutants rather than to a single compound\". A contradicts the slow growth rates in the same paragraph; C and D are not stated."
+    "answer": "A",
+    "why": "Paragraph D: \"Lichens respond to a mixture of pollutants rather than to a single compound\". B contradicts the slow growth rates in the same paragraph; C and D are not stated."
    },
    {
     "id": "r18-q09",
     "type": "mcq",
     "prompt": "What is the writer's main conclusion in paragraph G?",
     "options": [
-     "A. Lichens should replace all calibrated instruments.",
-     "B. Lichens are most useful when read alongside other evidence.",
-     "C. Lichens can identify the exact pollutant responsible.",
-     "D. Lichens have little value in modern monitoring."
+     "A. They should now replace all calibrated instruments in monitoring.",
+     "B. They can identify the exact pollutant responsible for damage.",
+     "C. They work best when read alongside other evidence.",
+     "D. They have little value in modern air-quality monitoring."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"The lesson, in the end, is that lichens are most useful when they are read alongside other evidence.\" A is contradicted by \"They cannot replace a calibrated instrument\"; D is contradicted by \"Used carefully, that record can show where the air has been poor\"."
+    "answer": "C",
+    "why": "Paragraph G: \"The lesson, in the end, is that lichens are most useful when they are read alongside other evidence.\" A is contradicted by \"They cannot replace a calibrated instrument\"; B is contradicted by \"they cannot tell a policymaker exactly what to fix\"; D is contradicted by \"Used carefully, that record can show where the air has been poor\"."
    },
    {
     "id": "r18-q10",
@@ -3367,26 +3367,26 @@
     "type": "mcq",
     "prompt": "What does paragraph C suggest about cryptochrome?",
     "options": [
-     "A. It is found only in migratory birds.",
-     "B. It may link the magnetic effect to vision.",
-     "C. It has been shown to work in wild birds.",
-     "D. It is an iron-rich particle."
+     "A. It is found only in birds that migrate long distances.",
+     "B. It has been shown to work in wild birds on migration.",
+     "C. It is an iron-rich particle found in the beak.",
+     "D. It may link the magnetic effect to vision."
     ],
-    "answer": "B",
-    "why": "Paragraph C: \"The idea is attractive because it links a magnetic effect to a visual signal\". C is contradicted by the laboratory limits in the same paragraph; D describes a different proposal in paragraph E."
+    "answer": "D",
+    "why": "Paragraph C: \"The idea is attractive because it links a magnetic effect to a visual signal\". B is contradicted by the laboratory limits in the same paragraph; C describes a different proposal in paragraph E; A is not stated."
    },
    {
     "id": "r19-q09",
     "type": "mcq",
     "prompt": "What is the writer's conclusion about bird navigation?",
     "options": [
-     "A. It is fully explained by the radical pair model.",
-     "B. Researchers can show that the sense exists but cannot yet fully explain it.",
-     "C. Birds rely on the magnetic sense alone.",
-     "D. Only young birds use magnetic cues."
+     "A. It is now fully explained by the radical pair model of cryptochrome.",
+     "B. The sense clearly exists, but it is only partly explained.",
+     "C. Birds rely on the magnetic sense alone to find their way home.",
+     "D. Only young birds on their first migration use magnetic cues."
     ],
     "answer": "B",
-    "why": "Paragraph G: \"Researchers can show that a sense exists, and they can measure the effect of altering it, but they still struggle to explain how a weak field becomes a reliable signal in a living body.\""
+    "why": "Paragraph G: \"Researchers can show that a sense exists, and they can measure the effect of altering it, but they still struggle to explain how a weak field becomes a reliable signal in a living body.\" A, C and D all conflict with the passage (paragraphs C, E and F)."
    },
    {
     "id": "r19-q10",
@@ -3495,26 +3495,26 @@
     "type": "mcq",
     "prompt": "What does the writer suggest about the 1850 Act?",
     "options": [
-     "A. It was rejected by most councils.",
-     "B. It let towns raise money for libraries but did not compel them.",
-     "C. It set a national standard for library stock.",
-     "D. It gave women the right to borrow books."
+     "A. It was rejected outright by most local councils at first.",
+     "B. It set a national standard for the books libraries must hold.",
+     "C. It let towns fund libraries but did not compel them.",
+     "D. It gave women the legal right to borrow library books."
     ],
-    "answer": "B",
-    "why": "Paragraph B: \"gave towns the power to levy a rate for buildings and books, but it did not require them to do so\"."
+    "answer": "C",
+    "why": "Paragraph B: \"gave towns the power to levy a rate for buildings and books, but it did not require them to do so\". A, B and D are not stated."
    },
    {
     "id": "r20-q06",
     "type": "mcq",
     "prompt": "According to paragraph D, which users were often found in early libraries?",
     "options": [
-     "A. labourers who finished work late",
-     "B. clerks, shopkeepers and the sons of the middle class",
-     "C. members of universities and churches",
-     "D. women without jobs"
+     "A. clerks, shopkeepers and the sons of the middle class",
+     "B. labourers and factory workers who finished work late in the evening",
+     "C. members of universities, churches and learned societies",
+     "D. unemployed women with plenty of time to read during the day"
     ],
-    "answer": "B",
-    "why": "Paragraph D: \"which meant that their users were often clerks, shopkeepers and the sons of the middle class\"."
+    "answer": "A",
+    "why": "Paragraph D: \"which meant that their users were often clerks, shopkeepers and the sons of the middle class\". B is contradicted (libraries closed or opened \"when working people were at their jobs\"); C and D are not given as the typical users."
    },
    {
     "id": "r20-q07",
@@ -3738,10 +3738,10 @@
     "type": "mcq",
     "prompt": "What is the writer's main point about freshwater systems?",
     "options": [
-     "A. They contain no plastic because of natural filtration.",
-     "B. They deserve attention because they carry plastic from land to the ocean.",
-     "C. They are less polluted than the sea.",
-     "D. They can be monitored only with chemical methods."
+     "A. They contain almost no plastic because of natural filtration.",
+     "B. They are the main route by which plastic reaches the sea.",
+     "C. They are generally less heavily polluted than the open sea.",
+     "D. They can be monitored only with advanced chemical methods."
     ],
     "answer": "B",
     "why": "Paragraph A: \"they are the main route by which plastic travels from land to the ocean\". A is contradicted by \"Microplastics enter rivers in several ways\" in paragraph B; C is not stated; D is contradicted by \"Samples are usually taken with nets or by pumping water through filters\" in paragraph D."
@@ -3751,13 +3751,13 @@
     "type": "mcq",
     "prompt": "What does the writer say about the aim of managing microplastic?",
     "options": [
-     "A. Eliminating every particle from the environment.",
-     "B. Limiting the amounts that reach the sea and freshwater animals.",
-     "C. Banning all synthetic clothing.",
-     "D. Measuring only the largest fragments."
+     "A. Eliminating every last particle from the natural environment.",
+     "B. Banning all synthetic clothing and plastic packaging outright.",
+     "C. Measuring only the largest visible fragments in each river.",
+     "D. Limiting how much reaches the sea and freshwater animals."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"The aim is not to eliminate every particle, which is unrealistic, but to limit the amounts that reach the sea and the animals that depend on freshwater\"."
+    "answer": "D",
+    "why": "Paragraph G: \"The aim is not to eliminate every particle, which is unrealistic, but to limit the amounts that reach the sea and the animals that depend on freshwater\". A is explicitly rejected; B and C are not stated."
    },
    {
     "id": "r21-q14",
@@ -3839,10 +3839,10 @@
     "type": "mcq",
     "prompt": "What does paragraph D say about the idea that life began at hydrothermal vents?",
     "options": [
-     "A. It has been proven by the vent discoveries.",
-     "B. It remains a debated idea.",
-     "C. It was rejected soon after 1977.",
-     "D. It applies only to modern vents."
+     "A. It has been conclusively proven by the vent discoveries.",
+     "B. It is still debated among researchers.",
+     "C. It was rejected by most scientists shortly after 1977.",
+     "D. It applies only to modern vents, not to the early Earth."
     ],
     "answer": "B",
     "why": "Paragraph D: \"The hypothesis remains contested, because the early Earth's chemistry is difficult to reconstruct\". A is contradicted by the same sentence; C and D are not stated."
@@ -3852,13 +3852,13 @@
     "type": "mcq",
     "prompt": "According to paragraph E, what makes vent animals vulnerable?",
     "options": [
-     "A. Their bacteria cannot survive without oxygen.",
-     "B. Vent chemistry can change quickly, forcing animals to move or find a new source.",
-     "C. Predators feed on them in large numbers.",
-     "D. Mining is the only threat they face."
+     "A. Their symbiotic bacteria cannot survive without dissolved oxygen.",
+     "B. Predators on the sea floor feed on them in large numbers.",
+     "C. Vent chemistry can change quickly, so animals must move.",
+     "D. Deep-sea mining is the only serious threat that they face."
     ],
-    "answer": "B",
-    "why": "Paragraph E: \"The chemical environment changes quickly, and a vent that is active for decades may become silent within a few years\". D is contradicted by the same paragraph, which names changing chemistry as well as mining."
+    "answer": "C",
+    "why": "Paragraph E: \"The chemical environment changes quickly, and a vent that is active for decades may become silent within a few years\". D is contradicted by the same paragraph, which names changing chemistry as well as mining; A and B are not stated."
    },
    {
     "id": "r22-q07",
@@ -4067,26 +4067,26 @@
     "type": "mcq",
     "prompt": "According to paragraph C, why were astronomical methods difficult at sea?",
     "options": [
-     "A. The Moon was never visible from a ship.",
-     "B. The images wavered on a moving deck.",
-     "C. Telescopes could not be made small enough.",
-     "D. The tables had been lost."
+     "A. Telescope images wavered on a moving deck.",
+     "B. The Moon could never be seen clearly from a ship at night.",
+     "C. Telescopes could not be made small enough to carry on ships.",
+     "D. The necessary tables had been lost in a shipwreck."
     ],
-    "answer": "B",
-    "why": "Paragraph C: \"but they were difficult on a moving deck, where the images wavered\". A, C and D are not stated in the passage."
+    "answer": "A",
+    "why": "Paragraph C: \"but they were difficult on a moving deck, where the images wavered\". B, C and D are not stated in the passage."
    },
    {
     "id": "r23-q10",
     "type": "mcq",
     "prompt": "What is the writer's main point in paragraph G?",
     "options": [
-     "A. The longitude problem was solved by a single inventor.",
-     "B. The chronometer was a technical object that also required trust.",
-     "C. Navigators never trusted clocks.",
-     "D. Governments played no part in the solution."
+     "A. The longitude problem was solved by a single inventor working alone.",
+     "B. Navigators never trusted clocks of any kind on their ships.",
+     "C. Governments played no real part in finding the solution.",
+     "D. A chronometer was a clock that also demanded trust."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"A chronometer was a clock, but it was also a test of trust, in which a navigator had to believe that a machine could be right when the stars were hidden\". D is contradicted by the navies that required chronometers in paragraph F."
+    "answer": "D",
+    "why": "Paragraph G: \"A chronometer was a clock, but it was also a test of trust, in which a navigator had to believe that a machine could be right when the stars were hidden\". C is contradicted by the navies that required chronometers in paragraph F; A is contradicted by \"refined by many hands over decades\"."
    },
    {
     "id": "r23-q11",
@@ -4234,26 +4234,26 @@
     "type": "mcq",
     "prompt": "What does the writer say about the balance between speed and accuracy in paragraph D?",
     "options": [
-     "A. Colonies always pick the fastest option.",
-     "B. A colony that decides too quickly may settle for an inferior cavity.",
-     "C. Colonies never choose an inferior site.",
-     "D. Speed and accuracy have no effect on each other."
+     "A. Deciding too quickly can lead to a poorer cavity.",
+     "B. Colonies always pick whichever option is found fastest.",
+     "C. Colonies never end up in an inferior site, however fast.",
+     "D. Speed and accuracy have no effect on each other at all."
     ],
-    "answer": "B",
-    "why": "Paragraph D: \"A colony that decides too quickly may settle for an inferior cavity, while a colony that waits too long risks losing the swarm altogether\". The same paragraph says the colony must balance speed and accuracy, which rules out D."
+    "answer": "A",
+    "why": "Paragraph D: \"A colony that decides too quickly may settle for an inferior cavity, while a colony that waits too long risks losing the swarm altogether\". C is contradicted by \"they do not always find the very best site available\"; the same paragraph says the colony must balance speed and accuracy, which rules out D."
    },
    {
     "id": "r24-q09",
     "type": "mcq",
     "prompt": "According to paragraph G, what do human organisations need?",
     "options": [
-     "A. A reason to abandon consensus.",
-     "B. Mechanisms that turn scattered opinions into a single commitment.",
-     "C. A central authority that gives orders.",
-     "D. Individuals who hold complete information."
+     "A. A clear reason to abandon the search for consensus entirely.",
+     "B. A strong central authority that issues orders to everyone.",
+     "C. Ways to turn scattered opinions into one commitment.",
+     "D. Individual members who each hold complete information at the start."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"consensus need not require a central authority, but it does require mechanisms that can turn scattered opinions into a single commitment\"."
+    "answer": "C",
+    "why": "Paragraph G: \"consensus need not require a central authority, but it does require mechanisms that can turn scattered opinions into a single commitment\". B is contradicted by \"need not require a central authority\"; D is contradicted by \"without any individual holding complete information\"."
    },
    {
     "id": "r24-q10",
@@ -4397,23 +4397,23 @@
     "type": "mcq",
     "prompt": "What does the writer suggest about Perkin's discovery in paragraph G?",
     "options": [
-     "A. It was the result of careful planning.",
-     "B. It is better understood as an early example of a larger shift.",
-     "C. It had no effect on other industries.",
-     "D. It was made possible by natural dyes."
+     "A. It was the result of careful planning by a trained chemist.",
+     "B. It had no lasting effect on any later industries or products.",
+     "C. It was only made possible by earlier natural dye research.",
+     "D. It was an early example of a larger shift."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"Perkin's accident is therefore often told as a story of luck, but it is better understood as an early example of a larger shift\". A is contradicted by the word accident and the story of luck."
+    "answer": "D",
+    "why": "Paragraph G: \"Perkin's accident is therefore often told as a story of luck, but it is better understood as an early example of a larger shift\". A is contradicted by the word accident and the story of luck; B is contradicted by the patterns that \"would recur in pharmaceuticals, plastics and fertilisers\"; C is not stated."
    },
    {
     "id": "r25-q08",
     "type": "mcq",
     "prompt": "According to paragraph E, what was one consequence of the growth of the dye industry?",
     "options": [
-     "A. Fashion stopped changing.",
+     "A. Fashion stopped changing once bright colours became common.",
      "B. Rivers near dye works were sometimes polluted.",
-     "C. Governments banned all synthetic dyes.",
-     "D. Natural dyes became more popular."
+     "C. Governments banned all synthetic dyes within a few years.",
+     "D. Natural dyes became more popular than synthetic ones."
     ],
     "answer": "B",
     "why": "Paragraph E: \"residues that polluted rivers near dye works\". A is contradicted by \"The new colours spread quickly through fashion\"; C by \"Early regulation was limited\"; D by \"replace many natural products\" in paragraph B."
@@ -4585,26 +4585,26 @@
     "type": "mcq",
     "prompt": "What is the writer's main point in paragraph G?",
     "options": [
-     "A. Waiting time is set only by the number of staff.",
-     "B. Information, fairness and comfort shape how a wait is experienced.",
-     "C. Long waits never damage trust.",
-     "D. Designers should avoid all queues."
+     "A. Information, fairness and comfort shape the wait's meaning.",
+     "B. Waiting time is determined only by the number of staff on duty.",
+     "C. Long waits never damage customers' trust in an organisation.",
+     "D. Designers should aim to avoid all queues where possible."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"The minutes that pass in a queue are fixed by capacity, but the meaning of those minutes is shaped by information, fairness and comfort\". C is contradicted by \"can damage trust long after the queue has moved\"."
+    "answer": "A",
+    "why": "Paragraph G: \"The minutes that pass in a queue are fixed by capacity, but the meaning of those minutes is shaped by information, fairness and comfort\". C is contradicted by \"can damage trust long after the queue has moved\"; B and D are not the writer's point."
    },
    {
     "id": "r26-q09",
     "type": "mcq",
     "prompt": "According to paragraph E, why might a delay be judged harshly?",
     "options": [
-     "A. Customers expect value and may blame carelessness.",
-     "B. Staff always ignore complaints.",
-     "C. Announcements make queues longer.",
-     "D. Queues are always unfair."
+     "A. Staff always ignore customers' complaints about delays.",
+     "B. Announcements about the delay make the queue even longer.",
+     "C. Customers expect value and may blame carelessness.",
+     "D. Queues in service settings are always organised unfairly."
     ],
-    "answer": "A",
-    "why": "Paragraph E: \"People who have paid for a service often expect to be served quickly\" and \"the customer may attribute the delay to carelessness\". D is contradicted by the statement that a fair queue is more acceptable."
+    "answer": "C",
+    "why": "Paragraph E: \"People who have paid for a service often expect to be served quickly\" and \"the customer may attribute the delay to carelessness\". D is contradicted by the statement in paragraph C that a fair queue is more acceptable; B is contradicted by the point that an announcement \"may reduce complaints\"; A is not stated."
    },
    {
     "id": "r26-q10",
@@ -4764,10 +4764,10 @@
     "type": "mcq",
     "prompt": "What does the writer say about the Outer Space Treaty?",
     "options": [
-     "A. It explicitly allows companies to sell lunar resources.",
-     "B. It does not clearly settle whether private companies may extract and sell resources.",
-     "C. It was signed by only one country.",
-     "D. It bans all activity on the Moon."
+     "A. It explicitly allows private companies to sell lunar resources.",
+     "B. It leaves unclear whether private firms may sell resources.",
+     "C. It was signed by only a single country at the time it was drafted.",
+     "D. It bans all human and robotic activity on the Moon and planets."
     ],
     "answer": "B",
     "why": "Paragraph D: \"yet it does not clearly settle whether private companies may extract and sell resources\". A is contradicted by the same clause; C and D are not stated."
@@ -4777,13 +4777,13 @@
     "type": "mcq",
     "prompt": "According to paragraph E, what do developing countries argue?",
     "options": [
-     "A. The Moon should belong to the first country to land.",
-     "B. Lunar resources are part of a shared heritage whose benefits should be widely distributed.",
-     "C. Lunar ice should be left untouched forever.",
-     "D. Only launch capacity matters."
+     "A. The Moon should belong to the first country able to land there.",
+     "B. Lunar ice should be left untouched by every nation forever.",
+     "C. Only launch capacity matters when deciding who may mine.",
+     "D. The Moon is a shared heritage whose benefits should be spread."
     ],
-    "answer": "B",
-    "why": "Paragraph E: \"the Moon is part of a shared heritage and that the benefits of its resources should be distributed more widely\"."
+    "answer": "D",
+    "why": "Paragraph E: \"the Moon is part of a shared heritage and that the benefits of its resources should be distributed more widely\". A, B and C are not what developing countries argue."
    },
    {
     "id": "r27-q10",
@@ -4952,26 +4952,26 @@
     "type": "mcq",
     "prompt": "What does paragraph D suggest about predators?",
     "options": [
-     "A. They can affect herbivores even when their numbers are low.",
-     "B. They affect only the animals they eat.",
-     "C. Their effects can be measured by counting individuals alone.",
-     "D. They have no influence on vegetation."
+     "A. They affect only the particular animals that they actually kill.",
+     "B. Their effects can be measured by counting individuals alone.",
+     "C. They have no influence on vegetation or river habitats.",
+     "D. They can influence herbivores even when few remain."
     ],
-    "answer": "A",
-    "why": "Paragraph D: \"A predator's presence can influence herbivores even when its numbers are low\". B and D are contradicted by \"allow vegetation there to recover\"; C is contradicted by \"Such indirect effects are difficult to measure\"."
+    "answer": "D",
+    "why": "Paragraph D: \"A predator's presence can influence herbivores even when its numbers are low\". A and C are contradicted by \"allow vegetation there to recover\"; B is contradicted by \"Such indirect effects are difficult to measure\"."
    },
    {
     "id": "r28-q09",
     "type": "mcq",
     "prompt": "According to paragraph G, what should be the goal of conservation?",
     "options": [
-     "A. To reproduce a single dramatic outcome.",
-     "B. To understand the conditions under which predators can rebalance simplified systems.",
-     "C. To remove all predators from parks.",
-     "D. To ignore local context."
+     "A. To reproduce a single dramatic outcome in every valley.",
+     "B. To remove all large predators from national parks and reserves.",
+     "C. To learn when predators can help rebalance simplified systems.",
+     "D. To set aside local context when planning every restoration."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"the goal is therefore not to reproduce a single dramatic outcome, but to understand the conditions under which predators can help to rebalance systems that have been simplified by human activity\". D is contradicted by \"the strength of their effects depends on context\"."
+    "answer": "C",
+    "why": "Paragraph G: \"the goal is therefore not to reproduce a single dramatic outcome, but to understand the conditions under which predators can help to rebalance systems that have been simplified by human activity\". A is explicitly rejected; D is contradicted by \"the strength of their effects depends on context\"; B is not stated."
    },
    {
     "id": "r28-q10",
@@ -5128,26 +5128,26 @@
     "type": "mcq",
     "prompt": "What does the writer conclude in paragraph E?",
     "options": [
-     "A. The paradox makes coastline lengths meaningless.",
-     "B. The paradox is a useful warning but does not make lengths meaningless.",
-     "C. Standardisation is impossible.",
-     "D. Engineers should ignore the scale of measurement."
+     "A. The paradox makes all coastline lengths effectively meaningless.",
+     "B. It is a useful warning, not proof that lengths are meaningless.",
+     "C. Standardisation of measurement methods is impossible in practice.",
+     "D. Engineers can safely ignore the scale of measurement in design work."
     ],
     "answer": "B",
-    "why": "Paragraph E: \"The paradox remains a useful warning, but it does not mean that coastline lengths are meaningless\". C is contradicted by \"can therefore remove much of the confusion\"."
+    "why": "Paragraph E: \"The paradox remains a useful warning, but it does not mean that coastline lengths are meaningless\". A is contradicted by the same sentence; C is contradicted by \"can therefore remove much of the confusion\"; D is contradicted by paragraph D (\"Scale is therefore not merely a technical detail\")."
    },
    {
     "id": "r29-q09",
     "type": "mcq",
     "prompt": "According to paragraph G, what is the danger of reporting a length without an explanation?",
     "options": [
-     "A. It reduces the cost of mapping.",
-     "B. It can give a false impression of precision.",
-     "C. It makes the shoreline easier to measure.",
-     "D. It proves that coastlines are fixed."
+     "A. It can give a false impression of precision.",
+     "B. It reduces the overall cost of mapping a long coastline.",
+     "C. It makes the shoreline much easier to measure in future.",
+     "D. It proves that coastlines have fixed, stable lengths."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"Reporting a length without explaining those choices can give a false impression of precision\"."
+    "answer": "A",
+    "why": "Paragraph G: \"Reporting a length without explaining those choices can give a false impression of precision\". B, C and D are not stated; D is also the opposite of the paragraph's point that some quantities \"are not fixed properties of the world\"."
    },
    {
     "id": "r29-q10",
@@ -5316,26 +5316,26 @@
     "type": "mcq",
     "prompt": "What does the writer say about the economic side of counterfeiting?",
     "options": [
-     "A. Forgery is always profitable.",
-     "B. Forgery is worthwhile only when the expected gain exceeds the risk and costs.",
-     "C. Issuers never change their designs.",
-     "D. Only rarely used notes are counterfeited."
+     "A. Forgery is always profitable for anyone who owns a good printer.",
+     "B. Issuers never change their designs once they are in use.",
+     "C. It pays only when the likely gain outweighs risk and cost.",
+     "D. Only notes that are rarely used in shops are counterfeited."
     ],
-    "answer": "B",
-    "why": "Paragraph E: \"Forgery is worth the effort only when the expected gain outweighs the risk of detection, the cost of production and the penalty if caught\". C is contradicted by \"adjust their designs and distribution\"."
+    "answer": "C",
+    "why": "Paragraph E: 'Forgery is worth the effort only when the expected gain outweighs the risk of detection, the cost of production and the penalty if caught.' B is contradicted by the statement that issuers adjust their designs and distribution; D is contradicted by the passage point that a high-value note which is easy to spend may attract criminals, while a rarely accepted note is less useful to them; A contradicts the cost-and-risk point."
    },
    {
     "id": "r30-q09",
     "type": "mcq",
     "prompt": "According to paragraph G, what is the most useful protection for the public?",
     "options": [
-     "A. Trusting every note equally.",
-     "B. Awareness of how to check a note.",
-     "C. Refusing all notes.",
-     "D. Relying only on digital currency."
+     "A. Trusting every note equally without checking it.",
+     "B. Awareness of how to check a note properly.",
+     "C. Refusing all notes handed over by strangers.",
+     "D. Relying only on digital currency instead of cash."
     ],
     "answer": "B",
-    "why": "Paragraph G: \"For the public, the most useful protection is awareness: knowing how to check a note\"."
+    "why": "Paragraph G: \"For the public, the most useful protection is awareness: knowing how to check a note\". A, C and D are not given as protections."
    },
    {
     "id": "r30-q10",

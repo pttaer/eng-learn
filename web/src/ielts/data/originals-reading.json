@@ -100,11 +100,12 @@
     "type": "mcq",
     "prompt": "Why did nineteenth-century charts of ocean depth contain many gaps?",
     "options": [
-     "A. The charts were drawn by hand in colour.",
-     "B. Measuring a single spot could take hours.",
-     "C. Ships refused to carry lead weights."
+     "A. Measuring a single spot could take hours.",
+     "B. The charts were drawn by hand using colour codes.",
+     "C. Ships refused to carry heavy lead weights on board.",
+     "D. Most sea areas were closed to survey ships by law."
     ],
-    "answer": "B",
+    "answer": "A",
     "why": "Paragraph A says 'a ship could take hours to measure a single spot'."
    },
    {
@@ -112,11 +113,12 @@
     "type": "mcq",
     "prompt": "How does a multibeam system differ from an earlier echo sounder?",
     "options": [
-     "A. It sends many beams across the ship's track.",
-     "B. It measures water temperature directly.",
-     "C. It needs no satellite positioning."
+     "A. It measures water temperature directly at every depth.",
+     "B. It needs no satellite positioning or motion sensors.",
+     "C. It uses a heavier weighted line lowered from the stern.",
+     "D. It sends many beams across the ship's track."
     ],
-    "answer": "A",
+    "answer": "D",
     "why": "Paragraph D says 'a multibeam system sends out a fan of many beams across the ship's track'."
    },
    {
@@ -124,11 +126,12 @@
     "type": "mcq",
     "prompt": "Why must surveyors measure water temperature and salinity?",
     "options": [
-     "A. They change the speed of sound.",
-     "B. They alter the colour of the final map.",
-     "C. They are needed to calculate tides."
+     "A. They alter the colour scheme of the final map.",
+     "B. They change the speed of sound in water.",
+     "C. They are needed in order to calculate the local tides.",
+     "D. They decide how deep the survey ship may safely sail."
     ],
-    "answer": "A",
+    "answer": "B",
     "why": "Paragraph F says 'Temperature, salinity and pressure all change the speed of sound'."
    },
    {
@@ -330,11 +333,12 @@
     "type": "mcq",
     "prompt": "Why do critics worry about large numbers of managed colonies?",
     "options": [
-     "A. They produce too little honey.",
-     "B. They may compete with wild pollinators.",
-     "C. They damage city trees."
+     "A. They may compete with wild pollinators.",
+     "B. They produce too little honey to be worthwhile.",
+     "C. They damage the trees growing along city streets.",
+     "D. They frighten away visitors from busy city parks."
     ],
-    "answer": "B",
+    "answer": "A",
     "why": "Paragraph F says 'large numbers of managed colonies in one place can compete with wild pollinators'."
    },
    {
@@ -342,11 +346,12 @@
     "type": "mcq",
     "prompt": "According to the writer, the competition argument depends mainly on",
     "options": [
-     "A. the age of the beekeeper.",
-     "B. the scale of the hives.",
-     "C. the price of honey."
+     "A. the age and experience of the beekeeper.",
+     "B. the market price of honey in the city.",
+     "C. the scale of the hives involved.",
+     "D. the length of the autumn flowering season."
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "Paragraph G says 'the competition argument depends on the scale of the hives'."
    }
   ]
@@ -484,11 +489,12 @@
     "type": "mcq",
     "prompt": "Why is the insurance value of a seed collection uncertain?",
     "options": [
-     "A. Storage costs are unknown.",
-     "B. The probability of a disaster is hard to estimate.",
-     "C. Seeds lose value when they are sold."
+     "A. Annual storage costs are not known to anyone.",
+     "B. Seeds lose most of their value once they are sold.",
+     "C. Seed banks hold too few wild plant varieties to matter.",
+     "D. Nobody can say how likely a disaster is."
     ],
-    "answer": "B",
+    "answer": "D",
     "why": "Paragraph D says 'the probability of a disaster is hard to estimate, so the insurance value of any particular collection is uncertain'."
    },
    {
@@ -496,11 +502,12 @@
     "type": "mcq",
     "prompt": "What do critics say about the two economic approaches?",
     "options": [
-     "A. They ignore the social side of conservation.",
-     "B. They are too expensive to use.",
-     "C. Every seed bank has already adopted them."
+     "A. They are too expensive for most governments to use.",
+     "B. Every seed bank in the world has already adopted them.",
+     "C. They overstate the market value of wild crop relatives.",
+     "D. They ignore the social side of conservation."
     ],
-    "answer": "A",
+    "answer": "D",
     "why": "Paragraph F says 'both approaches underrate the social side of conservation'."
    },
    {

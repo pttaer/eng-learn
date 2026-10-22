@@ -111,3 +111,57 @@ Resolved: WAI-ARIA roving tabindex (0 for selected, -1 for inactive), ArrowLeft/
 Audit: the CEFR app alone cannot reach IELTS 7.0 (no exam format, timing or band scoring; Listening 4-34 word passages, Reading <= 460 words). Plan: `docs/superpowers/plans/2026-10-06-ielts-7-readiness.md`.
 Added: separate app side `web/ielts.html` + `web/src/ielts/` (Reading, Listening, Writing Task 1/2, Speaking Parts 1-3, strategy cards, timed mocks, band report, 7.0 readiness gate). Content in `src/ielts/data/` (12 reading passages, 8 listening sections = 2 tests, 16 Task 1, 20 Task 2, 12 Part 1 topics, 30 cue cards). Scoring is local: official raw-score band tables, offline writing heuristics, self-rated rubric for Writing/Speaking. No external API.
 Still open: answer keys are model-written and model-audited, not human-checked; Listening uses browser TTS voices (not real exam audio); Writing/Speaking bands are self-estimates; IELTS topic vocabulary deck (plan Task 8) not built; pre-existing `tsc` errors in `core/srs-engine.ts` (duplicate functions, not from this work).
+
+## Update 2026-10-20 (progress, reminders, achievements)
+
+Not covered by any earlier audit. Added on develop:
+- `206b279` progress view and daily reminder: `core/usage-tracker.ts` (minutes and answer counts, storage key `eng_usage_v1`), `core/achievements-card.ts`, `core/notification-engine.ts`.
+- `befb939` achievements card redesign (gradient header, rank tiers, points).
+- `559475d` reminder names up to three overdue SRS cards, points at the weakest IELTS skill, streak read from the progression engine, `navigateTo()` routes native and toast taps.
+
+Shown in: IELTS overview (`src/ielts/main.ts`) and progression modal (`src/modules/progression-modal.ts`).
+
+Existing checks, all passing: `verify-notifications.cjs`, `verify-eng73-streak-notifications.cjs`, `verify-progression-engine.cjs`. They cover notification payloads, the streak pill and the notification toggle. They do not cover the reminder changes above.
+
+Still open (manual check only, no automated coverage):
+- `usage-tracker.ts`: day rollover, minute and answer counts.
+- `achievementsFor()` thresholds and the redesigned achievements card.
+- Reminder named due words, weakest-skill pick in `notification-engine.ts`, and `navigateTo()` routing.
+
+## Update 2026-10-20 (recheck)
+
+Resolved since the 2026-10-06 entry (verified in code today):
+- anime.js v3 to v4 (`web/package.json` `^4.5.0`, all calls in `core/motion-engine.ts`). Global reduced-motion rule (`hud-base.css:709`) now also covers `::before`/`::after` and `scroll-behavior`. IELTS page reads the in-app Motion setting (`ielts.html`).
+- Corner compass: closed menu is `inert` (`corner-compass.ts:132`), and its animation loop honors `data-motion` (`corner-compass.ts:178-180`).
+- Hidden card face: `inert` toggled on the hidden face (`atomic-card.ts:72-73`, `:186`).
+- Particle and perspective canvases honor `data-motion` (`particle-canvas.ts:31`, `perspective-canvas.ts:286`).
+- Speaking dossier: has `isReducedMotion()` (`speaking-dossier.ts:1222`) and a static-frame path for reduced motion (`:1203`).
+- `tsc --noEmit` passes. The `core/srs-engine.ts` errors noted on 2026-10-06 are gone.
+
+Still open, not rechecked today:
+- anime.js v4 checked in headless Chrome only (end states, no page errors), not on a device.
+- Large files not split: `audio-synthesizer.ts` 2711 lines, `speaking-dossier.ts` 2153, `exam-cockpit-dossier.ts` 1449, `reading-dossier.ts` 1225.
+- Installer needs a Defender exclusion for `web/release` before `npm run dist:win`.
+- IELTS answer keys not human-checked; Writing/Speaking bands self-estimated; topic vocabulary deck not built; CEFR listening still a stub (per 2026-10-03 audit).
+
+## Update 2026-10-20 (content fixes)
+
+Fixed:
+- CEFR reading: wordCount and readingTime are now computed from the passage text in compile-content.cjs. The hand-typed frontmatter was stale for 9 articles (not truncation). Length ladder now A1 103, A2 168, B1 235, B2 283, C1 439, C2 439 words.
+- CEFR reading: B2 passages lengthened by sentences only (3 files). Five "Adapted from" passages and deep-work-cognition rewritten as original text, source label updated, zero 8-word overlap with the old text. Old texts remain in git history.
+- IELTS reading and listening MCQ: answer-letter and option-length bias fixed. Correct option was the longest in 47/58 reading and 48/88 listening items; now 0/58 and 1/88. Letters roughly even. Originals (7 MCQ) also rebalanced; their three-option items gained a fourth distractor.
+- IELTS listening l3-s4-q10: accepts "restrict" and "limit". Was "restricted" and "limited", which do not fit the grammar.
+- IELTS listening Section 4 lengthened to 518-533 words (in-repo mock Section 4 is 535). Real-exam length cannot be checked offline; the scraped corpus has no transcripts.
+- IELTS listening topics replaced: l4-s4 (lithium-ion battery recycling) and l7-s2 (water treatment works tour), which repeated reading r02 and l3-s2.
+- Tenses bank: option positions balanced. The correct answer was never option D; now 26/26/25/25.
+- CEFR vocabulary: +20 A1, +20 A2, +20 B1, +17 B2 entries (new file b2-core-words.md). Level counts now A1 50, A2 50, B1 50, B2 50, C1 64, C2 77. New IPA and Vietnamese are model-written; five were flagged uncertain by the drafting pass and need human review.
+
+Reframed, not changed:
+- CEFR listening "stub": the dossier is a dictation and cloze drill, so short items are by design. Not padded.
+- IELTS listening types: only complete, mcq and match in the data. Retagging would not add behaviour; map labelling and choose-two need new UI and images. Not done.
+- ielts-mock.json is not imported by the app. The mock view mounts the practice reading and listening data, so mock tests reuse practice passages. Not changed.
+
+Still open:
+- Answer keys are checked by script (literal answers, verbatim evidence, letter spread), not by a human read of every item.
+- Five pre-existing npm test failures unchanged (icons import path in three scripts, streak pill format in two).
+- Duplicate vocabulary words: journey, opinion.

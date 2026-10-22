@@ -1,4 +1,4 @@
-import { esc, h } from '../ui';
+import { countdown, esc, fmtTime, h } from '../ui';
 import { validateFourSentenceParagraph, ParagraphEvaluation } from '../writing-heuristics';
 
 export interface DiffWordToken {
@@ -594,6 +594,10 @@ export function writingStudioView(root: HTMLElement): () => void {
               <p class="ie-note">One single clear sentence identifying metric, categories, and timeframe.</p>
             </div>
           </div>
+          <div class="ie-testbar ie-t1-intro-timer">
+            <span class="ie-clock">01:00</span>
+            <button type="button" class="ie-btn ie-btn-sm ie-t1-intro-start">Start 60-second paraphrase</button>
+          </div>
           <textarea class="ie-textarea ie-t1-intro-input" placeholder="The line graph illustrates..."></textarea>
           <div class="ie-step-feedback ie-intro-feedback"></div>
         </div>
@@ -703,6 +707,18 @@ export function writingStudioView(root: HTMLElement): () => void {
 
     [introInput, overviewInput, body1Input, body2Input].forEach(inp => {
       inp.addEventListener('focus', () => { lastActiveInput = inp; });
+    });
+
+    const introClock = card.querySelector<HTMLElement>('.ie-t1-intro-timer .ie-clock')!;
+    const introStart = card.querySelector<HTMLButtonElement>('.ie-t1-intro-start')!;
+    introStart.addEventListener('click', () => {
+      introStart.disabled = true;
+      countdown(60, left => {
+        introClock.textContent = fmtTime(left);
+      }, () => {
+        introClock.textContent = '00:00 (Time up)';
+        introStart.disabled = false;
+      });
     });
 
     card.querySelectorAll('.ie-chip').forEach(btn => {

@@ -159,26 +159,26 @@
     "type": "mcq",
     "prompt": "What is the writer's main point about the divergence problem?",
     "options": [
-     "A. It shows that tree rings cannot be used to study climate.",
-     "B. The link between tree growth and climate may change over time.",
-     "C. It affects only forests in the south.",
-     "D. Its causes have now been fully explained."
+     "A. The climate-growth relationship may not stay constant.",
+     "B. It proves that tree rings cannot be trusted as a climate record.",
+     "C. It affects only forests in the southern half of the continent.",
+     "D. Its causes have now been fully explained by researchers."
     ],
-    "answer": "B",
-    "why": "Paragraph F: \"it is a reminder that the link between climate and growth may not remain constant\". A is too strong; C is contradicted (\"In some northern forests\"); D is contradicted (\"Researchers still debate the causes\")."
+    "answer": "A",
+    "why": "Paragraph F: \"it is a reminder that the link between climate and growth may not remain constant\". B is too strong; C is contradicted (\"In some northern forests\"); D is contradicted (\"Researchers still debate the causes\")."
    },
    {
     "id": "r13-q13",
     "type": "mcq",
     "prompt": "The 2021 study of the Norse site in Newfoundland",
     "options": [
-     "A. used the radiation spike of 993 CE to date wood cut in 1021.",
-     "B. used the spike of 774 CE to date the site.",
-     "C. matched the wood against European oak chronologies.",
-     "D. showed that Europeans reached the Americas in 993."
+     "A. used the earlier spike of 774 CE to date wood from the site.",
+     "B. matched the wood against European oak and pine chronologies.",
+     "C. used the spike of 993 CE to date wood felled in 1021.",
+     "D. showed that Europeans had reached the Americas by 993 CE."
     ],
-    "answer": "A",
-    "why": "Paragraph E: \"a team used a later spike, from 993 CE, to show that wood at a Norse site in Newfoundland had been cut in 1021\". B names the wrong spike; C is not mentioned; D confuses the spike year with the felling year."
+    "answer": "C",
+    "why": "Paragraph E: \"a team used a later spike, from 993 CE, to show that wood at a Norse site in Newfoundland had been cut in 1021\". A names the wrong spike; B is not mentioned; D confuses the spike year with the felling year."
    }
   ]
  },
@@ -518,36 +518,36 @@
     "type": "mcq",
     "prompt": "According to the implied endorsement explanation, people keep the default because they",
     "options": [
-     "A. believe it has been recommended by experts.",
-     "B. cannot find the alternative options.",
-     "C. have been legally required to accept it.",
-     "D. have compared all the options carefully."
+     "A. cannot easily find the other options on offer.",
+     "B. have been legally required to accept whatever is pre-selected.",
+     "C. have carefully compared all of the available options.",
+     "D. believe it has been recommended by experts."
     ],
-    "answer": "A",
-    "why": "Paragraph D: \"Many people assume that the default has been chosen by experts and therefore represents sensible advice\". B and C are not mentioned; D describes the standard model the passage rejects."
+    "answer": "D",
+    "why": "Paragraph D: \"Many people assume that the default has been chosen by experts and therefore represents sensible advice\". A and B are not mentioned; C describes the standard model the passage rejects."
    },
    {
     "id": "r15-q13",
     "type": "mcq",
     "prompt": "Why does the writer mention recent analyses in paragraph F?",
     "options": [
-     "A. to suggest that many nudges may be weaker than early studies claimed",
-     "B. to prove that defaults have no real effect",
-     "C. to show that nudges are now illegal in Europe",
-     "D. to argue that unpublished studies are more reliable"
+     "A. to prove that defaults have no real effect on behaviour at all",
+     "B. to show that nudges have now been made illegal across Europe",
+     "C. to argue that unpublished studies are the more reliable ones",
+     "D. to suggest that many nudges may be weaker than first claimed"
     ],
-    "answer": "A",
-    "why": "Paragraph F: \"the average effect of many nudges may be far smaller than early research implied\". B is contradicted (\"defaults remain among the more robust interventions\"); C overstates a ruling about one kind of consent box; D is not claimed."
+    "answer": "D",
+    "why": "Paragraph F: \"the average effect of many nudges may be far smaller than early research implied\". A is contradicted (\"defaults remain among the more robust interventions\"); B overstates a ruling about one kind of consent box; C is not claimed."
    },
    {
     "id": "r15-q14",
     "type": "mcq",
     "prompt": "What does the writer say about active choice?",
     "options": [
-     "A. It avoids assuming what people want but makes them do the work defaults remove.",
-     "B. It is the only neutral form of design.",
-     "C. It has replaced defaults in most pension schemes.",
-     "D. It is a form of manipulation."
+     "A. It avoids presuming what people want but adds effort.",
+     "B. It is the only truly neutral form of design available to planners.",
+     "C. It has replaced defaults in most pension schemes and websites.",
+     "D. It is a form of manipulation, especially when people are unaware."
     ],
     "answer": "A",
     "why": "Paragraph G: active choice \"avoids presuming what people want, but it imposes the very effort that defaults were designed to remove\". B is contradicted (\"no such thing as a neutral design\"); C and D are not stated."

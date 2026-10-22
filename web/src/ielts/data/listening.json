@@ -212,13 +212,13 @@
     "type": "mcq",
     "prompt": "What does the room rate include?",
     "options": [
-     "A. Water and heating, but not electricity",
-     "B. Only the room rental",
-     "C. Water, heating, and electricity",
-     "D. All utilities and laundry"
+     "A. Water and heating, not electricity",
+     "B. Only the room rental, with no utilities",
+     "C. Water, heating and electricity together",
+     "D. All utilities plus a weekly laundry allowance"
     ],
     "answer": "A",
-    "why": "The administrator explains 'It includes water and heating, but you'll need to pay for your own electricity.' This directly contradicts options A, B, and D, which incorrectly include all utilities or only the room."
+    "why": "The administrator explains 'It includes water and heating, but you'll need to pay for your own electricity.' Option A matches. B says nothing but the room is included, C wrongly adds electricity, and D adds laundry, which is never mentioned."
    },
    {
     "id": "l1-s1-q10",
@@ -226,12 +226,12 @@
     "prompt": "What discount is available for this six-week booking?",
     "options": [
      "A. Five percent off the room rate",
-     "B. Ten percent off the room rate",
-     "C. Twelve percent off the room rate",
-     "D. Free electricity for the first week"
+     "B. Twelve percent off the room rate",
+     "C. Free electricity for the first week",
+     "D. Ten percent off the room rate"
     ],
-    "answer": "B",
-    "why": "The administrator states 'for a six-week booking, we can offer a ten percent discount on the room rate.' Option B is the correct percentage; A and C are wrong percentages, and D is a different benefit."
+    "answer": "D",
+    "why": "The administrator states 'for a six-week booking, we can offer a ten percent discount on the room rate.' Option D is the correct percentage; A and B are wrong percentages, and C is a different benefit."
    }
   ]
  },
@@ -336,25 +336,25 @@
     "prompt": "What is located to the right of the main entrance in the Grand Hall?",
     "options": [
      "A. The Cafe and refreshment area",
-     "B. The Interactive Exhibits on the Ground Floor",
-     "C. The Gift Shop",
-     "D. The Children's Discovery Area"
+     "B. The Children's Discovery Area",
+     "C. The Gift Shop area",
+     "D. The Interactive Exhibits area"
     ],
     "answer": "C",
-    "why": "The guide states: 'To your right, the Gift Shop sells books, models, and souvenirs. Just past that, you'll see the Cafe.' Option C identifies the location immediately to the right; the Cafe is beyond the Gift Shop, not directly to the right."
+    "why": "The guide states: 'To your right, the Gift Shop sells books, models, and souvenirs. Just past that, you'll see the Cafe.' Option C is directly to the right; the Cafe (A) is beyond the Gift Shop, and B and D are on the Ground Floor, not in the Grand Hall."
    },
    {
     "id": "l1-s2-q06",
     "type": "mcq",
     "prompt": "When are guided tours offered?",
     "options": [
-     "A. Every hour starting at nine AM",
-     "B. Every two hours starting at nine AM",
-     "C. Only on weekends at two PM",
-     "D. Every two hours starting at ten AM"
+     "A. Every hour starting at ten AM",
+     "B. Every two hours starting at ten AM",
+     "C. Every two hours starting at nine AM",
+     "D. Only on weekends at two PM"
     ],
-    "answer": "D",
-    "why": "The guide specifies: 'We do offer guided tours every two hours starting at ten AM.' Option D matches this exactly, while the other options state incorrect times or frequencies."
+    "answer": "B",
+    "why": "The guide specifies: 'We do offer guided tours every two hours starting at ten AM.' Option B matches exactly; A has the wrong frequency, C the wrong start time, and D the wrong days and time."
    },
    {
     "id": "l1-s2-q07",
@@ -382,26 +382,26 @@
     "type": "mcq",
     "prompt": "In which area is photography not permitted?",
     "options": [
-     "A. The Archive Room and Audio-Visual Theater",
-     "B. The Gift Shop",
-     "C. The Historical Galleries and Archive Room",
-     "D. All exhibition areas"
+     "A. The Gift Shop and the Cafe",
+     "B. The Historical Galleries and Archive Room",
+     "C. All exhibition areas, including the Art Gallery",
+     "D. The Archive Room and Audio-Visual Theater"
     ],
-    "answer": "A",
-    "why": "The guide states: 'photography is allowed in most areas, except in the Archive Room and the Audio-Visual Theater.' Option A correctly identifies both restricted areas, while the others include locations where photography is actually allowed."
+    "answer": "D",
+    "why": "The guide states: 'photography is allowed in most areas, except in the Archive Room and the Audio-Visual Theater.' Option D names both restricted areas, while A, B and C include places where photography is allowed (the Galleries only ban flash)."
    },
    {
     "id": "l1-s2-q10",
     "type": "mcq",
     "prompt": "How can visitors identify museum staff members?",
     "options": [
-     "A. They wear name badges",
-     "B. They wear blue uniforms",
-     "C. They wear red uniforms",
+     "A. They wear blue uniforms",
+     "B. They wear red uniforms",
+     "C. They wear name badges on lanyards",
      "D. They carry clipboards"
     ],
-    "answer": "B",
-    "why": "The guide explains: 'They're identifiable by their blue uniforms.' Option B is the only one that correctly describes the staff identification method mentioned in the script."
+    "answer": "A",
+    "why": "The guide explains: 'They're identifiable by their blue uniforms.' Option A is the only one that matches; B has the wrong colour, and C and D are never mentioned."
    }
   ]
  },
@@ -519,26 +519,26 @@
     "type": "mcq",
     "prompt": "According to James, what is a major barrier to renewable energy adoption?",
     "options": [
-     "A. High technology costs",
-     "B. Lack of government interest",
-     "C. Insufficient grid capacity and infrastructure",
-     "D. Limited population demand"
+     "A. High technology and installation costs",
+     "B. Weak grid capacity to distribute power",
+     "C. Lack of government interest in renewables",
+     "D. Limited public demand for solar power"
     ],
-    "answer": "C",
-    "why": "James states: 'Many developing nations lack the grid capacity to distribute solar power effectively.' Option C correctly identifies this infrastructure barrier, while other options represent different or opposite concerns."
+    "answer": "B",
+    "why": "James states: 'Many developing nations lack the grid capacity to distribute solar power effectively.' Option B names this barrier; A, C and D are not what he says."
    },
    {
     "id": "l1-s3-q04",
     "type": "mcq",
     "prompt": "What solution does Emma propose to address infrastructure limitations?",
     "options": [
-     "A. Expanding the national grid capacity",
-     "B. Installing large solar farms at centralized locations",
-     "C. Government regulatory frameworks",
-     "D. Community microgrids"
+     "A. Expanding the national grid",
+     "B. Building large centralised solar farms",
+     "C. Stricter government regulation",
+     "D. Decentralised community microgrids"
     ],
     "answer": "D",
-    "why": "Emma states: 'There are decentralized solutions like community microgrids that could bypass the need for extensive infrastructure.' Option D names Emma's specific proposal. B refers to the barrier James raised; C is a related approach but not Emma's suggestion; D is the policy solution James identifies."
+    "why": "Emma states: 'There are decentralized solutions like community microgrids that could bypass the need for extensive infrastructure.' Option D is her proposal. A is the opposite of bypassing infrastructure, B is centralised rather than decentralised, and C is the policy angle James raises."
    },
    {
     "id": "l1-s3-q05",
@@ -598,13 +598,13 @@
     "type": "mcq",
     "prompt": "According to Professor Harris, the report should include at least how many original case studies?",
     "options": [
-     "A. Two case studies",
-     "B. Five case studies",
-     "C. Three case studies",
-     "D. Eight case studies"
+     "A. Three case studies",
+     "B. Eight case studies",
+     "C. Five case studies",
+     "D. Four case studies"
     ],
-    "answer": "B",
-    "why": "Professor Harris instructs: 'Make sure you include a literature review, your methodology, and at least five original case studies.' Option B correctly states the minimum number of case studies required."
+    "answer": "C",
+    "why": "Professor Harris instructs: 'Make sure you include a literature review, your methodology, and at least five original case studies.' Option C states the minimum; A, B and D are different numbers."
    }
   ]
  },
@@ -634,11 +634,19 @@
    },
    {
     "speaker": "Dr. Robert Chen",
+    "text": "Land management matters here. Protecting existing woodland is usually more effective than planting new trees, because a young plantation takes a long time to match the storage of an established forest."
+   },
+   {
+    "speaker": "Dr. Robert Chen",
     "text": "Wetlands are another important biological carbon sink. These ecosystems store carbon in their soil and vegetation at much higher rates than upland areas. Peatlands, which are a type of wetland dominated by peat moss, can store carbon for thousands of years. Unfortunately, when peatlands are drained for agriculture or development, that stored carbon is released back into the atmosphere as carbon dioxide."
    },
    {
     "speaker": "Dr. Robert Chen",
     "text": "Now, geological sequestration involves injecting carbon dioxide deep underground into geological formations. These formations, typically deep saline aquifers or depleted oil and gas fields, can safely store carbon dioxide indefinitely. The permanence of geological storage makes it an attractive option for long-term climate mitigation."
+   },
+   {
+    "speaker": "Dr. Robert Chen",
+    "text": "Engineers choose these sites carefully. The rock above the reservoir must be dense enough to act as a seal, and the site is monitored afterwards to check that nothing leaks back towards the surface."
    },
    {
     "speaker": "Dr. Robert Chen",
@@ -651,6 +659,10 @@
    {
     "speaker": "Dr. Robert Chen",
     "text": "Several countries have begun implementing carbon sequestration as part of their climate strategy. Norway, for example, has been a leader in this field. They store carbon dioxide captured from industrial facilities in geological formations beneath the North Sea. This project, called Sleipner, has been operating successfully since nineteen ninety-six."
+   },
+   {
+    "speaker": "Dr. Robert Chen",
+    "text": "Of course, a project of this kind needs more than good engineering. Local communities want to know that the storage is safe, so operators have to share their monitoring results openly and answer questions from the public."
    },
    {
     "speaker": "Dr. Robert Chen",
@@ -950,39 +962,39 @@
     "type": "mcq",
     "prompt": "What additional cost might apply?",
     "options": [
-     "A. A charge if repairs are needed",
-     "B. A charge for credit card payment",
-     "C. A charge for emergency appointment",
+     "A. A charge for credit card payment",
+     "B. A charge for emergency appointments",
+     "C. A charge if repairs are needed",
      "D. A charge for technician travel time"
     ],
-    "answer": "A",
-    "why": "Technician says 'if you need any repairs, there would be an additional charge.' Option B is ruled out because credit card payment is mentioned but no fee is stated. Options C and D are not mentioned."
+    "answer": "C",
+    "why": "Technician says 'if you need any repairs, there would be an additional charge.' Option C matches. Option A is ruled out because credit card payment is mentioned but no fee is stated. Options B and D are not mentioned."
    },
    {
     "id": "l2-s1-q09",
     "type": "mcq",
     "prompt": "Which payment methods are accepted?",
     "options": [
-     "A. Bank transfer or cash only",
-     "B. All major credit cards or bank transfer",
-     "C. Credit cards or cheque only",
-     "D. All major credit cards only"
+     "A. Bank transfer or cash on the day only",
+     "B. Credit cards or personal cheque only",
+     "C. All major credit cards only, no transfers",
+     "D. All major credit cards or bank transfer"
     ],
-    "answer": "B",
-    "why": "Technician explicitly states 'Yes, we accept all major credit cards or bank transfer.' Options A, B, and D are incomplete or inaccurate."
+    "answer": "D",
+    "why": "Technician explicitly states 'Yes, we accept all major credit cards or bank transfer.' Option D matches; A, B and C are incomplete or inaccurate."
    },
    {
     "id": "l2-s1-q10",
     "type": "mcq",
     "prompt": "What does the technician say about the boiler model number?",
     "options": [
-     "A. It is essential and must be provided before the visit",
-     "B. It is only needed if repairs are expected",
-     "C. It is helpful but not required; the technician will identify it",
-     "D. It should be provided with the credit card on the day"
+     "A. It helps, but is not required; the technician can identify it",
+     "B. It is essential and must be emailed to the office before the visit",
+     "C. It is only needed if repairs are expected during the inspection",
+     "D. It should be shown to the technician along with the credit card"
     ],
-    "answer": "C",
-    "why": "Technician says 'It would help if you could find the model number, but if you can't, don't worry. Our technician will identify it on the day.' This clearly indicates it is helpful but not required. Options A, C, and D misrepresent this."
+    "answer": "A",
+    "why": "Technician says 'It would help if you could find the model number, but if you can't, don't worry. Our technician will identify it on the day.' This clearly indicates it is helpful but not required (A). Options B, C and D misrepresent this."
    }
   ]
  },
@@ -1045,52 +1057,52 @@
     "type": "mcq",
     "prompt": "Where should visitors start their tour according to the guide?",
     "options": [
-     "A. Gallery Two",
-     "B. Gallery Three",
-     "C. Gallery Four",
-     "D. Gallery One"
+     "A. Gallery Three",
+     "B. Gallery One",
+     "C. Gallery Two",
+     "D. Gallery Four"
     ],
-    "answer": "D",
-    "why": "Guide states 'We recommend you start at Gallery One, where you will find the earliest locomotives from the eighteen sixties.' Options A, C, and D are later galleries not recommended as starting points."
+    "answer": "B",
+    "why": "Guide states 'We recommend you start at Gallery One, where you will find the earliest locomotives from the eighteen sixties.' Options A, C and D are later galleries not recommended as starting points."
    },
    {
     "id": "l2-s2-q02",
     "type": "mcq",
     "prompt": "What was the maximum speed of the Stephenson locomotive?",
     "options": [
-     "A. Twenty miles per hour",
-     "B. Thirty miles per hour",
-     "C. Fifty miles per hour",
+     "A. Thirty miles per hour",
+     "B. Fifty miles per hour",
+     "C. Twenty-five miles per hour",
      "D. Ninety miles per hour"
     ],
-    "answer": "B",
-    "why": "Guide says 'It could reach speeds of up to thirty miles per hour, which was considered extraordinary at that time.' The Flying Scotsman reached ninety miles per hour, making option D incorrect. Options A and C are lower speeds."
+    "answer": "A",
+    "why": "Guide says 'It could reach speeds of up to thirty miles per hour, which was considered extraordinary at that time.' The Flying Scotsman reached ninety miles per hour, making option D incorrect. Options B and C are not mentioned."
    },
    {
     "id": "l2-s2-q03",
     "type": "mcq",
     "prompt": "What was the extent of British railway network growth between 1870 and 1900?",
     "options": [
-     "A. From one thousand to five thousand miles",
-     "B. From ten thousand to twenty thousand miles",
+     "A. From one thousand to just over five thousand miles",
+     "B. From ten thousand to about twenty thousand miles",
      "C. From five thousand to over twenty thousand miles",
-     "D. From two thousand to fifteen thousand miles"
+     "D. From two thousand to nearly fifteen thousand miles"
     ],
     "answer": "C",
-    "why": "Guide explicitly states 'Between eighteen seventy and nineteen hundred, the British railway network grew from five thousand miles to over twenty thousand miles.' Options A, C, and D contain incorrect numbers or date ranges."
+    "why": "Guide explicitly states 'Between eighteen seventy and nineteen hundred, the British railway network grew from five thousand miles to over twenty thousand miles.' Options A, B and D contain incorrect numbers."
    },
    {
     "id": "l2-s2-q04",
     "type": "mcq",
     "prompt": "In which gallery will visitors find the signal box?",
     "options": [
-     "A. Gallery Two",
-     "B. Gallery One",
-     "C. Gallery Three",
-     "D. Gallery Four"
+     "A. Gallery One",
+     "B. Gallery Three",
+     "C. Gallery Four",
+     "D. Gallery Two"
     ],
-    "answer": "A",
-    "why": "The guide says \"The signal box at the far end of Gallery Two demonstrates how train schedules were managed\"; Gallery One holds the earliest locomotives and Gallery Three the Flying Scotsman."
+    "answer": "D",
+    "why": "The guide says \"The signal box at the far end of Gallery Two demonstrates how train schedules were managed\"; Gallery One (A) holds the earliest locomotives and Gallery Three (B) the Flying Scotsman."
    },
    {
     "id": "l2-s2-q05",
@@ -1125,13 +1137,13 @@
     "type": "mcq",
     "prompt": "Why could modern diesel and electric locomotives be considered superior to steam engines?",
     "options": [
-     "A. They could operate faster speeds with smoother acceleration",
-     "B. They required less complex engineering and fewer parts",
+     "A. They required less complex engineering and fewer parts",
+     "B. They could haul heavier loads with greater fuel efficiency",
      "C. They could function reliably in all weather conditions",
-     "D. They could haul heavier loads with greater fuel efficiency"
+     "D. They could operate faster speeds with smoother acceleration"
     ],
-    "answer": "D",
-    "why": "The guide explicitly states 'These engines could haul heavier loads with far greater fuel efficiency compared to steam engines.' Option D directly cites this advantage. The other options, while plausible improvements, are not mentioned in the audio guide."
+    "answer": "B",
+    "why": "The guide explicitly states 'These engines could haul heavier loads with far greater fuel efficiency compared to steam engines.' Option B directly cites this advantage. The other options, while plausible improvements, are not mentioned in the audio guide."
    },
    {
     "id": "l2-s2-q09",
@@ -1147,13 +1159,13 @@
     "type": "mcq",
     "prompt": "Where is the museum shop located?",
     "options": [
-     "A. By the main entrance",
-     "B. On the upper mezzanine",
-     "C. In Gallery Four",
+     "A. On the upper mezzanine",
+     "B. In Gallery Four",
+     "C. By the main entrance",
      "D. In the interactive section"
     ],
-    "answer": "A",
-    "why": "Guide states 'The museum shop is located by the main entrance.' Option B is the café on the upper mezzanine, C is Gallery Four and D is the interactive section."
+    "answer": "C",
+    "why": "Guide states 'The museum shop is located by the main entrance.' Option A is the café on the upper mezzanine, B is Gallery Four and D is the interactive section."
    }
   ]
  },
@@ -1258,13 +1270,13 @@
     "type": "mcq",
     "prompt": "What was the students' original research design, and what did they change?",
     "options": [
-     "A. They changed from surveying one reef to surveying multiple reefs",
-     "B. They changed from surveying multiple reefs to focusing on one reef with multiple depth zones",
-     "C. They changed from surveying reefs to studying fish only",
-     "D. They changed from one reef to studying five different reefs"
+     "A. They changed from several reefs to one reef with multiple depth zones",
+     "B. They changed from surveying one reef to comparing multiple reef systems",
+     "C. They changed from surveying reefs to studying fish species at a single depth",
+     "D. They changed from one reef to comparing five different reef systems"
     ],
-    "answer": "B",
-    "why": "David says 'after reviewing the literature, we think focusing on one reef with multiple depth zones would be more manageable.' Option A reverses the change; C and D misstate what they studied."
+    "answer": "A",
+    "why": "David says 'after reviewing the literature, we think focusing on one reef with multiple depth zones would be more manageable.' Option A states the change; B reverses it, and C and D misstate what they studied."
    },
    {
     "id": "l2-s3-q02",
@@ -1292,24 +1304,24 @@
     "options": [
      "A. Collecting underwater photography and transect measurements",
      "B. Using fish traps to sample species composition",
-     "C. Using a submarine for deep-water observation",
-     "D. Comparing data with historical studies from the same reef"
+     "C. Comparing data with historical studies from the same reef",
+     "D. Using a submarine for deep-water observation"
     ],
-    "answer": "C",
-    "why": "Amira states 'We initially thought about using a submarine, but that's not realistic.' Options B and C are methods the students decided to use; option D is their comparison approach. Only option C represents a method they considered and rejected."
+    "answer": "D",
+    "why": "Amira states 'We initially thought about using a submarine, but that's not realistic.' Options A and B are methods the students decided to use; option C is their comparison approach. Only option D represents a method they considered and rejected."
    },
    {
     "id": "l2-s3-q05",
     "type": "mcq",
     "prompt": "Why is the dry season chosen for fieldwork?",
     "options": [
-     "A. Because water visibility is best",
-     "B. Because fewer fish are present at that time",
+     "A. Because fewer fish are present at that time",
+     "B. Because water visibility is best",
      "C. Because water temperature is warmer",
      "D. Because funding is available only in that season"
     ],
-    "answer": "A",
-    "why": "David explains 'We'd aim for September through November' and says 'spread across the dry season when water visibility is best.' Options A, C, and D are not mentioned as reasons."
+    "answer": "B",
+    "why": "David explains 'We'd aim for September through November' and says 'spread across the dry season when water visibility is best.' Options A, C and D are not mentioned as reasons."
    },
    {
     "id": "l2-s3-q06",
@@ -1334,13 +1346,13 @@
     "type": "mcq",
     "prompt": "What will the students use as a basis for comparison to measure reef resilience?",
     "options": [
-     "A. Computer models predicting reef change",
-     "B. Data from an adjacent healthy reef",
-     "C. Laboratory samples of coral tissue",
-     "D. Historical data from the same site collected five years prior"
+     "A. Computer models predicting reef change over the next decade",
+     "B. Data from an adjacent healthy reef at similar depths",
+     "C. Historical data from the same site five years earlier",
+     "D. Laboratory samples of coral tissue grown in tanks"
     ],
-    "answer": "D",
-    "why": "Amira explains 'We're planning to compare current data with historical data from studies conducted at the same site five years ago. That will show us changes over time.' Options A, B, and D do not reflect the actual control method."
+    "answer": "C",
+    "why": "Amira explains 'We're planning to compare current data with historical data from studies conducted at the same site five years ago. That will show us changes over time.' Options A, B and D do not reflect the actual control method."
    },
    {
     "id": "l2-s3-q09",
@@ -1680,12 +1692,12 @@
     "type": "mcq",
     "prompt": "The standard membership is only valid:",
     "options": [
-     "A. at weekends",
-     "B. before four in the afternoon",
-     "C. after six in the evening",
-     "D. at any time"
+     "A. before four in the afternoon",
+     "B. at weekends and public holidays",
+     "C. only after six in the evening",
+     "D. at any time of the day"
     ],
-    "answer": "B",
+    "answer": "A",
     "why": "The receptionist says 'Standard is for off-peak hours only, that's before four in the afternoon.'"
    },
    {
@@ -1716,12 +1728,12 @@
     "type": "mcq",
     "prompt": "Lane swimming is available:",
     "options": [
-     "A. all day",
-     "B. in the mornings only",
-     "C. in the evenings only",
+     "A. throughout the whole day",
+     "B. in the evenings after five",
+     "C. in the mornings only",
      "D. at weekends only"
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "The receptionist says 'Lane swimming is in the mornings only.'"
    },
    {
@@ -1869,11 +1881,11 @@
     "prompt": "The tour does not visit the orchard from:",
     "options": [
      "A. June to August",
-     "B. December to February",
-     "C. March to May",
-     "D. September to November"
+     "B. March to May",
+     "C. September to November",
+     "D. December to February"
     ],
-    "answer": "B",
+    "answer": "D",
     "why": "The orchard is closed in winter, 'so the tour doesn't go there from December to February.'"
    },
    {
@@ -1891,12 +1903,12 @@
     "type": "mcq",
     "prompt": "Why is flash photography banned in the glasshouse?",
     "options": [
-     "A. It disturbs other visitors",
-     "B. It may harm the orchids",
+     "A. It may harm the orchids",
+     "B. It disturbs other visitors",
      "C. It damages the glass",
      "D. It dazzles the staff"
     ],
-    "answer": "B",
+    "answer": "A",
     "why": "The guide says flash photography 'can harm the orchids'."
    },
    {
@@ -1949,11 +1961,11 @@
     "prompt": "Where does the tour begin?",
     "options": [
      "A. the herb garden",
-     "B. the rose walk",
-     "C. the tropical glasshouse",
-     "D. the old orchard"
+     "B. the tropical glasshouse",
+     "C. the rose walk by the benches",
+     "D. the old orchard at the far end"
     ],
-    "answer": "C",
+    "answer": "B",
     "why": "The guide says 'We begin in the tropical glasshouse'."
    }
   ]
@@ -2089,12 +2101,12 @@
     "type": "mcq",
     "prompt": "How many sampling sites will the group use?",
     "options": [
-     "A. two",
-     "B. three",
-     "C. four",
-     "D. five"
+     "A. Two",
+     "B. Four",
+     "C. Three",
+     "D. Twelve"
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "The student lists 'Three sites: upstream of the factory, below the factory, and at the weir.'"
    },
    {
@@ -2113,11 +2125,11 @@
     "prompt": "Why are samples taken on that day?",
     "options": [
      "A. The lab is open only then",
-     "B. To match the flow data",
-     "C. The river is cleaner then",
-     "D. The tutor asked for it"
+     "B. The river is cleaner then",
+     "C. The tutor asked for it",
+     "D. To match the flow data"
     ],
-    "answer": "B",
+    "answer": "D",
     "why": "The student says the authority publishes flow data on Tuesdays and 'we want to match our samples to the flow.'"
    },
    {
@@ -2136,12 +2148,12 @@
     "type": "mcq",
     "prompt": "The tutor says the test strips are:",
     "options": [
-     "A. more expensive",
-     "B. less accurate",
-     "C. banned",
+     "A. less accurate",
+     "B. more expensive",
+     "C. banned by the lab",
      "D. faster to read"
     ],
-    "answer": "B",
+    "answer": "A",
     "why": "The tutor says 'Test strips are less accurate, so your report must mention that as a limitation.'"
    },
    {
@@ -2210,6 +2222,10 @@
    },
    {
     "speaker": "Lecturer",
+    "text": "This matters for both farmers and consumers, because crops such as apples, berries and many oilseeds produce better yields when they are visited by a good variety of insects."
+   },
+   {
+    "speaker": "Lecturer",
     "text": "Researchers identify three main pressures on pollinators: habitat loss, pesticides, and disease."
    },
    {
@@ -2230,11 +2246,19 @@
    },
    {
     "speaker": "Lecturer",
+    "text": "Warmer winters can also confuse insects that normally stay dormant until spring, so the timing problem works in both directions."
+   },
+   {
+    "speaker": "Lecturer",
     "text": "Some people assume that honeybees are the most important pollinators. In fact, many wild species, including solitary bees, are often more efficient pollinators for particular crops."
    },
    {
     "speaker": "Lecturer",
     "text": "Solutions include planting wildflower strips along field edges, reducing pesticide use during flowering periods, and creating nest sites such as bare soil banks."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Several of these measures cost little. A farmer can leave a corner of a field uncut, and a council can change the way it mows roadside verges, without any large investment."
    },
    {
     "speaker": "Lecturer",
@@ -2247,6 +2271,10 @@
    {
     "speaker": "Lecturer",
     "text": "Research methods have also changed. Scientists now use photographs taken by volunteers, along with DNA analysis of pollen collected from bees' bodies, to work out which plants each species depends on."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "This kind of work was once very slow, because each specimen had to be identified by an expert under a microscope. Digital tools have made it possible to process far more records than a small team could manage alone."
    },
    {
     "speaker": "Lecturer",
@@ -2283,11 +2311,11 @@
     "prompt": "Which pressure is described as the most significant?",
     "options": [
      "A. pesticides",
-     "B. disease",
-     "C. habitat loss",
+     "B. habitat loss",
+     "C. disease",
      "D. climate change"
     ],
-    "answer": "C",
+    "answer": "B",
     "why": "The lecturer says 'Habitat loss is the most significant of the three.'"
    },
    {
@@ -2317,12 +2345,12 @@
     "type": "mcq",
     "prompt": "Why do some bees arrive when no flowers are available?",
     "options": [
-     "A. They migrate too early",
-     "B. Flowering times have shifted",
-     "C. Spring is colder",
-     "D. Flowers have closed"
+     "A. They migrate too early in spring",
+     "B. Spring has become colder",
+     "C. Flowering times have shifted",
+     "D. Flowers close earlier in the day"
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "The lecturer says 'Flowering times are shifting, so some bees arrive when no flowers are available.'"
    },
    {
@@ -2330,12 +2358,12 @@
     "type": "mcq",
     "prompt": "According to the lecturer, many wild species are:",
     "options": [
-     "A. less common than honeybees",
-     "B. more efficient for some crops",
-     "C. protected by law",
-     "D. unable to fly far"
+     "A. less common than honeybees in farmland",
+     "B. protected by law in most regions",
+     "C. unable to fly far from their nests",
+     "D. more efficient for some crops"
     ],
-    "answer": "B",
+    "answer": "D",
     "why": "The lecturer says many wild species 'are often more efficient pollinators for particular crops'."
    },
    {
@@ -2363,12 +2391,12 @@
     "type": "mcq",
     "prompt": "The lecturer's view on the belief that honeybees are the most important pollinators is:",
     "options": [
-     "A. agreement",
-     "B. disagreement",
-     "C. uncertainty",
-     "D. no comment"
+     "A. disagreement",
+     "B. strong agreement",
+     "C. mild uncertainty",
+     "D. no comment either way"
     ],
-    "answer": "B",
+    "answer": "A",
     "why": "The lecturer says 'In fact, many wild species ... are often more efficient pollinators for particular crops.'"
    },
    {
@@ -2376,11 +2404,10 @@
     "type": "complete",
     "prompt": "Regulations now ___ the use of pesticides in several regions.",
     "answer": [
-     "restricted",
-     "restricted by regulation",
-     "limited"
+     "restrict",
+     "limit"
     ],
-    "why": "The lecturer says 'regulations now restrict their use in several regions.'"
+    "why": "The lecturer says 'regulations now restrict their use in several regions.' The gap needs the base verb, so 'restrict' (or 'limit') fits; 'restricted' and 'limited' do not fit the grammar."
    }
   ]
  },
@@ -2538,12 +2565,12 @@
     "type": "mcq",
     "prompt": "Transmission type requested:",
     "options": [
-     "A. manual",
-     "B. automatic",
-     "C. hybrid",
-     "D. electric"
+     "A. manual, with a clutch pedal",
+     "B. hybrid, with a petrol engine",
+     "C. automatic",
+     "D. electric, with no gearbox"
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "The customer says 'Automatic please. And a small car, something economical.'"
    },
    {
@@ -2572,11 +2599,11 @@
     "prompt": "Why does the customer choose full cover?",
     "options": [
      "A. It is required by law",
-     "B. To be safe",
-     "C. It is cheaper",
-     "D. The car is new"
+     "B. It is cheaper",
+     "C. The car is new",
+     "D. To be safe"
     ],
-    "answer": "B",
+    "answer": "D",
     "why": "The customer says 'I'll take the full cover, to be safe.'"
    },
    {
@@ -2584,12 +2611,12 @@
     "type": "mcq",
     "prompt": "Where will the car be driven?",
     "options": [
-     "A. abroad",
-     "B. within the region",
-     "C. across the border",
-     "D. nowhere"
+     "A. within the region",
+     "B. abroad, in mainland Europe",
+     "C. across the border by ferry",
+     "D. nowhere, it stays parked"
     ],
-    "answer": "B",
+    "answer": "A",
     "why": "The customer says 'No, only within the region.'"
    },
    {
@@ -2747,11 +2774,11 @@
     "prompt": "The brick warehouse was originally used to store:",
     "options": [
      "A. grain",
-     "B. coal",
-     "C. cloth",
+     "B. cloth",
+     "C. coal",
      "D. timber"
     ],
-    "answer": "C",
+    "answer": "B",
     "why": "The guide says the warehouse 'was used to store cloth.'"
    },
    {
@@ -2759,12 +2786,12 @@
     "type": "mcq",
     "prompt": "Why can the warehouse walls not be altered?",
     "options": [
-     "A. They are very old",
-     "B. They are protected",
-     "C. The owners refused",
-     "D. They are unsafe"
+     "A. They are very old and fragile",
+     "B. The owners refused permission",
+     "C. They are structurally unsafe",
+     "D. The walls are protected"
     ],
-    "answer": "B",
+    "answer": "D",
     "why": "The guide says 'the external walls are protected, so no alterations to them are allowed.'"
    },
    {
@@ -2792,12 +2819,12 @@
     "type": "mcq",
     "prompt": "Where is photography NOT allowed?",
     "options": [
-     "A. everywhere",
-     "B. outside",
-     "C. inside the crypt",
-     "D. in the café"
+     "A. inside the crypt",
+     "B. outside the church",
+     "C. everywhere on the tour",
+     "D. in the café by the canal"
     ],
-    "answer": "C",
+    "answer": "A",
     "why": "The guide says 'Photography is allowed everywhere except inside the crypt.'"
    },
    {
@@ -2949,12 +2976,12 @@
     "type": "mcq",
     "prompt": "The three delay intervals are immediate, five minutes and:",
     "options": [
-     "A. one hour",
-     "B. twenty-four hours",
-     "C. one week",
-     "D. two days"
+     "A. ninety minutes",
+     "B. one full week",
+     "C. twenty-four hours",
+     "D. two days, forty-eight hours"
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "Maya lists 'immediate, five minutes, and twenty-four hours.'"
    },
    {
@@ -2962,12 +2989,12 @@
     "type": "mcq",
     "prompt": "Why is the order counterbalanced?",
     "options": [
-     "A. so that practice does not bias results",
-     "B. to save time",
-     "C. because the lab is busy",
-     "D. to match other studies"
+     "A. to save time during the testing sessions",
+     "B. so that practice does not bias results",
+     "C. because the lab is only free on some days",
+     "D. to match the design of earlier studies"
     ],
-    "answer": "A",
+    "answer": "B",
     "why": "Maya says the order is counterbalanced 'so that practice doesn't bias the results.'"
    },
    {
@@ -3005,12 +3032,12 @@
     "type": "mcq",
     "prompt": "Where does the word list come from?",
     "options": [
-     "A. the students",
-     "B. the internet",
-     "C. the lab's standard list",
-     "D. a textbook"
+     "A. created by the students in the group",
+     "B. an online word-frequency database",
+     "C. a textbook appendix",
+     "D. the lab's standard list"
     ],
-    "answer": "C",
+    "answer": "D",
     "why": "Maya says 'we use the standard list from the lab.'"
    },
    {
@@ -3048,7 +3075,7 @@
  {
   "id": "l4-s4",
   "section": 4,
-  "title": "Urban Heat Islands",
+  "title": "Recycling lithium-ion batteries",
   "speakers": [
    {
     "name": "Lecturer",
@@ -3059,179 +3086,167 @@
   "script": [
    {
     "speaker": "Lecturer",
-    "text": "In this lecture we'll examine the urban heat island effect, the way cities become warmer than the surrounding rural areas."
+    "text": "Today's lecture is about recycling lithium-ion batteries, and why it matters as electric vehicles become more common. We will look at how it is done, why it is difficult, and what is being done to improve the process."
    },
    {
     "speaker": "Lecturer",
-    "text": "The difference is often several degrees at night. Dark roofs and asphalt absorb heat during the day and release it slowly after sunset."
+    "text": "A typical car battery pack lasts around ten years. After that, it can often be reused in a home storage system before it is finally recycled."
    },
    {
     "speaker": "Lecturer",
-    "text": "A major cause is the loss of vegetation. Trees and grass cool the air through evaporation, so cities with fewer green spaces tend to be hotter."
+    "text": "The first step in recycling is discharging the battery completely, because a charged cell can catch fire during shredding."
    },
    {
     "speaker": "Lecturer",
-    "text": "Tall buildings also play a role. They trap heat between them and reduce the air flow that would otherwise carry it away."
+    "text": "Once the packs are safe, workers remove the casings and shred the cells into a mixture known as black mass."
    },
    {
     "speaker": "Lecturer",
-    "text": "The health effects are serious. Heat waves in cities are linked to more hospital admissions, particularly among older adults."
+    "text": "This black mass contains cobalt, nickel and lithium, which are the most valuable materials in the battery. Cobalt is especially important because it keeps the battery stable as it heats up."
    },
    {
     "speaker": "Lecturer",
-    "text": "Planners have several responses. Green roofs, tree-lined streets and light-coloured paving can reduce temperatures significantly."
+    "text": "There are two main ways to recover these metals. The first is smelting, in which the black mass is heated to very high temperatures. It is simple, but it uses a great deal of energy, and the lithium is usually lost."
    },
    {
     "speaker": "Lecturer",
-    "text": "Some cities have also introduced cooling centres, which open during heat alerts."
+    "text": "The second method is hydrometallurgy, where the metals are dissolved in acid and then separated chemically. It recovers more lithium and needs much less heat."
    },
    {
     "speaker": "Lecturer",
-    "text": "One common misconception is that the effect is only a problem in very large cities. In fact, even towns of a few tens of thousands of people show measurable heat islands."
+    "text": "A third, newer approach is direct recycling, which keeps the cathode material intact so that it can be used again in new cells. Researchers say this could cut costs, although it only works well when the battery type is known in advance."
    },
    {
     "speaker": "Lecturer",
-    "text": "Let's look at how the effect is measured. Researchers use weather stations in the city centre and in rural areas nearby, then compare temperatures at the same time of day."
+    "text": "So why bother? Mining cobalt causes serious environmental damage, and demand for lithium is rising quickly. Recycled metals could supply a significant share of future demand."
    },
    {
     "speaker": "Lecturer",
-    "text": "Satellite data is also useful, because it can show surface temperatures across a whole region. However, surface readings are not the same as air temperatures, so both methods are needed."
+    "text": "At present, only about five per cent of lithium-ion batteries are recycled worldwide. One reason is that batteries come in many different designs, which makes automated sorting difficult."
    },
    {
     "speaker": "Lecturer",
-    "text": "The effect varies with the seasons. It is generally strongest during calm, clear summer nights, when there is little wind to mix the air and the ground cannot cool quickly."
+    "text": "Another problem is transport. Damaged batteries are classed as hazardous goods, so moving them to a plant can cost more than the materials are worth."
    },
    {
     "speaker": "Lecturer",
-    "text": "Cities can adapt in simple ways. Painting roofs white, planting street trees with wide canopies, and designing parks that connect to residential areas all help to reduce the build-up of heat."
+    "text": "Some manufacturers are responding by designing packs that are easier to take apart, with bolts instead of glue. This also makes repairs and reuse much cheaper."
    },
    {
     "speaker": "Lecturer",
-    "text": "Community involvement matters too. Residents who know which streets become hottest can help councils decide where to place shade structures and water fountains."
+    "text": "Governments are also getting involved. The European Union now requires new batteries to contain a minimum amount of recycled content, and several countries have set up collection points at electrical shops."
    },
    {
     "speaker": "Lecturer",
-    "text": "Next week we'll consider the economic costs of heat, including energy demand for air conditioning and lost productivity in workplaces during heat waves. Please read the case study on a large coastal city in the course pack before the seminar, and be ready to discuss how its planning rules have changed. Remember that the mid-term essay is due in three weeks."
-   },
-   {
-    "speaker": "Lecturer",
-    "text": "The seminar will also cover ways that architects can reduce heat in new buildings. Students who attended last year's session found the case studies especially useful for their assignments."
+    "text": "For next week's seminar, please read the two articles on the course website and prepare a short summary of each. Your project proposals are due on Friday."
    }
   ],
   "questions": [
    {
     "id": "l4-s4-q01",
     "type": "mcq",
-    "prompt": "When is the temperature difference often several degrees?",
+    "prompt": "According to the lecturer, what is the first step in recycling a battery?",
     "options": [
-     "A. midday",
-     "B. at night",
-     "C. at dawn",
-     "D. at weekends"
+     "A. Removing the casings",
+     "B. Shredding the cells",
+     "C. Discharging the battery",
+     "D. Sorting the packs by type"
     ],
-    "answer": "B",
-    "why": "The lecturer says 'The difference is often several degrees at night.'"
+    "answer": "C",
+    "why": "The lecturer says 'The first step in recycling is discharging the battery completely'."
    },
    {
     "id": "l4-s4-q02",
     "type": "complete",
-    "prompt": "Materials that absorb heat during the day:",
+    "prompt": "Used car battery packs can be reused in a home ___ system.",
     "answer": [
-     "dark roofs and asphalt",
-     "dark roofs",
-     "asphalt"
+     "storage"
     ],
-    "why": "The lecturer says 'Dark roofs and asphalt absorb heat during the day.'"
+    "why": "The lecturer says 'it can often be reused in a home storage system'."
    },
    {
     "id": "l4-s4-q03",
     "type": "complete",
-    "prompt": "Trees and grass cool the air through ___.",
+    "prompt": "The shredded cells become a mixture called ___ mass.",
     "answer": [
-     "evaporation"
+     "black"
     ],
-    "why": "The lecturer says 'Trees and grass cool the air through evaporation.'"
+    "why": "The lecturer says 'shred the cells into a mixture known as black mass'."
    },
    {
     "id": "l4-s4-q04",
     "type": "mcq",
-    "prompt": "Tall buildings affect the city by:",
+    "prompt": "What is the main disadvantage of smelting?",
     "options": [
-     "A. adding moisture",
-     "B. trapping heat",
-     "C. creating wind",
-     "D. reflecting sunlight"
+     "A. It uses a lot of energy",
+     "B. It produces poisonous waste gas",
+     "C. It cannot recover cobalt or nickel",
+     "D. It takes several weeks to finish"
     ],
-    "answer": "B",
-    "why": "The lecturer says 'They trap heat between them.'"
+    "answer": "A",
+    "why": "The lecturer says 'it uses a great deal of energy'."
    },
    {
     "id": "l4-s4-q05",
     "type": "complete",
-    "prompt": "Heat waves are linked to more hospital admissions, particularly among ___.",
+    "prompt": "In hydrometallurgy, the metals are dissolved in ___.",
     "answer": [
-     "older adults",
-     "older people",
-     "the elderly"
+     "acid"
     ],
-    "why": "The lecturer says 'more hospital admissions, particularly among older adults.'"
+    "why": "The lecturer says 'the metals are dissolved in acid and then separated chemically'."
    },
    {
     "id": "l4-s4-q06",
     "type": "complete",
-    "prompt": "Green roofs, tree-lined streets and ___ paving can reduce temperatures.",
+    "prompt": "Direct recycling keeps the ___ material intact.",
     "answer": [
-     "light-coloured",
-     "light coloured"
+     "cathode"
     ],
-    "why": "The lecturer says 'light-coloured paving can reduce temperatures significantly.'"
+    "why": "The lecturer says 'direct recycling, which keeps the cathode material intact'."
    },
    {
     "id": "l4-s4-q07",
     "type": "complete",
-    "prompt": "Cooling centres open during heat ___.",
+    "prompt": "Only about ___ per cent of lithium-ion batteries are recycled worldwide.",
     "answer": [
-     "alerts",
-     "alert"
+     "five"
     ],
-    "why": "The lecturer says 'cooling centres, which open during heat alerts.'"
+    "why": "The lecturer says 'only about five per cent of lithium-ion batteries are recycled worldwide'."
    },
    {
     "id": "l4-s4-q08",
     "type": "mcq",
-    "prompt": "The misconception the lecturer describes is that the effect:",
+    "prompt": "According to the lecturer, why is sorting batteries difficult?",
     "options": [
-     "A. is harmless",
-     "B. is only a problem in very large cities",
-     "C. affects only rural areas",
-     "D. is caused by traffic"
+     "A. Labels are often missing",
+     "B. The packs are too heavy",
+     "C. The cells are sealed in glue",
+     "D. The designs vary so widely"
     ],
-    "answer": "B",
-    "why": "The lecturer says 'the effect is only a problem in very large cities.'"
+    "answer": "D",
+    "why": "The lecturer says 'batteries come in many different designs, which makes automated sorting difficult'."
    },
    {
     "id": "l4-s4-q09",
     "type": "complete",
-    "prompt": "Towns with a few tens of thousands of people:",
+    "prompt": "Damaged batteries are classed as ___ goods.",
     "answer": [
-     "show measurable heat islands",
-     "show heat islands",
-     "measurable heat islands"
+     "hazardous"
     ],
-    "why": "The lecturer says 'even towns of a few tens of thousands of people show measurable heat islands.'"
+    "why": "The lecturer says 'Damaged batteries are classed as hazardous goods'."
    },
    {
     "id": "l4-s4-q10",
     "type": "mcq",
-    "prompt": "What is the main topic of the lecture?",
+    "prompt": "What do some manufacturers now use to make packs easier to take apart?",
     "options": [
-     "A. rural climate",
-     "B. urban heat islands",
-     "C. air pollution",
-     "D. cooling technology"
+     "A. Magnets",
+     "B. Bolts",
+     "C. Clips",
+     "D. Tape"
     ],
     "answer": "B",
-    "why": "The lecturer says 'we'll examine the urban heat island effect.'"
+    "why": "The lecturer says 'with bolts instead of glue'."
    }
   ]
  },
@@ -3378,11 +3393,11 @@
     "prompt": "Which bin is full?",
     "options": [
      "A. the green bin",
-     "B. the blue bin",
-     "C. the black bin",
-     "D. the brown bin"
+     "B. the black bin",
+     "C. the brown bin",
+     "D. the blue bin"
     ],
-    "answer": "B",
+    "answer": "D",
     "why": "The resident says 'The blue one, so paper and card.'"
    },
    {
@@ -3424,12 +3439,12 @@
     "type": "mcq",
     "prompt": "Where should food-soiled card go?",
     "options": [
-     "A. the paper bin",
-     "B. the glass bin",
-     "C. the general waste bin",
-     "D. the garden waste"
+     "A. the general waste bin",
+     "B. the paper recycling bin",
+     "C. the glass recycling bin",
+     "D. the garden waste bin"
     ],
-    "answer": "C",
+    "answer": "A",
     "why": "The officer says 'Food-soiled card can't be recycled, so it goes in the general waste bin.'"
    },
    {
@@ -3457,12 +3472,12 @@
     "type": "mcq",
     "prompt": "What does the resident decide?",
     "options": [
-     "A. to buy a bigger bin",
-     "B. to manage with the existing bin",
-     "C. to complain to the council",
-     "D. to request a refund"
+     "A. to pay for an additional bin",
+     "B. to complain to the council",
+     "C. to keep the bin they have",
+     "D. to ask for a fee reduction"
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "The resident says 'I'll manage with the one I have.'"
    }
   ]
@@ -3558,10 +3573,10 @@
     "type": "mcq",
     "prompt": "The escapement is the part that:",
     "options": [
-     "A. winds the clock",
-     "B. releases the gears one tooth at a time",
-     "C. shows the time",
-     "D. protects the case"
+     "A. winds the whole clock once a week",
+     "B. releases gears tooth by tooth",
+     "C. displays the time on the main dial",
+     "D. protects the movement from dust"
     ],
     "answer": "B",
     "why": "The narrator describes the escapement as 'the part that releases the gears one tooth at a time.'"
@@ -3589,12 +3604,12 @@
     "type": "mcq",
     "prompt": "The large astronomical clock shows:",
     "options": [
-     "A. the tides",
-     "B. the phases of the moon and the sun's position",
-     "C. the weather",
-     "D. the stars in the sky"
+     "A. the moon's phases and sun's position",
+     "B. the tides and the times of high water",
+     "C. the weather forecast for the coming week",
+     "D. the positions of the planets and stars"
     ],
-    "answer": "B",
+    "answer": "A",
     "why": "The narrator says 'It shows the phases of the moon and the position of the sun.'"
    },
    {
@@ -3757,12 +3772,12 @@
     "type": "mcq",
     "prompt": "Lucy is nervous about questions on:",
     "options": [
-     "A. salary",
-     "B. teamwork",
-     "C. her degree",
-     "D. travel"
+     "A. salary expectations",
+     "B. her degree results",
+     "C. travel arrangements",
+     "D. teamwork"
     ],
-    "answer": "B",
+    "answer": "D",
     "why": "Lucy says 'I'm not sure how to answer questions about teamwork.'"
    },
    {
@@ -3801,12 +3816,12 @@
     "type": "mcq",
     "prompt": "What did the firm recently do?",
     "options": [
-     "A. merge with another company",
-     "B. open a second distribution centre",
-     "C. close a warehouse",
-     "D. launch a new website"
+     "A. merge with another logistics company",
+     "B. close its oldest warehouse",
+     "C. open a second distribution centre",
+     "D. launch a customer website"
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "Lucy says 'they opened a second distribution centre in the north this year.'"
    },
    {
@@ -3814,12 +3829,12 @@
     "type": "mcq",
     "prompt": "The adviser says Lucy should not:",
     "options": [
-     "A. repeat the website",
-     "B. wear formal clothes",
-     "C. arrive early",
-     "D. bring references"
+     "A. send a thank-you email",
+     "B. just repeat the website",
+     "C. bring a printed CV",
+     "D. arrive fifteen minutes early"
     ],
-    "answer": "A",
+    "answer": "B",
     "why": "The adviser says 'don't just repeat the website.'"
    },
    {
@@ -3827,12 +3842,12 @@
     "type": "mcq",
     "prompt": "Is a portfolio needed for this role?",
     "options": [
-     "A. yes, a printed one",
-     "B. yes, an online one",
-     "C. no",
+     "A. no, it is not needed",
+     "B. yes, a printed copy",
+     "C. yes, an online version",
      "D. only for managers"
     ],
-    "answer": "C",
+    "answer": "A",
     "why": "The adviser says 'the portfolio is not needed for this role.'"
    },
    {
@@ -3903,11 +3918,19 @@
    },
    {
     "speaker": "Lecturer",
+    "text": "Of course, a straight route was not always the quickest. On steep ground the engineers sometimes allowed the road to curve gently, so that wagons and animals could climb without difficulty."
+   },
+   {
+    "speaker": "Lecturer",
     "text": "Roads had practical purposes. They allowed armies to move quickly, and they carried messengers, traders and officials across the empire."
    },
    {
     "speaker": "Lecturer",
     "text": "Milestones were placed along the roads at regular intervals, showing distances to major cities. Many of these stones survive today."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Some of these stones carried an inscription naming the ruler who ordered the work, so they also served as a kind of public notice."
    },
    {
     "speaker": "Lecturer",
@@ -3927,7 +3950,15 @@
    },
    {
     "speaker": "Lecturer",
+    "text": "Along the way, small stations were set up where travellers could rest, change horses and find food. These stops made long journeys far more manageable for officials carrying urgent messages."
+   },
+   {
+    "speaker": "Lecturer",
     "text": "Drainage was another important feature. Roads were often raised slightly above the surrounding land and fitted with ditches on each side, so that rainwater could run away from the surface."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "A slight camber also helped, because water ran towards the edges instead of lying on the road. Without it, the surface would have broken up far sooner."
    },
    {
     "speaker": "Lecturer",
@@ -3960,11 +3991,11 @@
     "prompt": "Who built most of the roads?",
     "options": [
      "A. merchants",
-     "B. soldiers",
-     "C. farmers",
+     "B. farmers",
+     "C. soldiers",
      "D. slaves"
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "The lecturer says 'Most roads were built by soldiers.'"
    },
    {
@@ -4000,12 +4031,12 @@
     "type": "mcq",
     "prompt": "What was the main practical purpose mentioned?",
     "options": [
-     "A. tourism",
-     "B. moving armies quickly",
-     "C. farming",
-     "D. religious travel"
+     "A. tourism for wealthy travellers",
+     "B. bringing water to farms",
+     "C. religious pilgrimage routes",
+     "D. moving armies quickly"
     ],
-    "answer": "B",
+    "answer": "D",
     "why": "The lecturer says 'They allowed armies to move quickly.'"
    },
    {
@@ -4036,12 +4067,12 @@
     "type": "mcq",
     "prompt": "The view that roads were only for military use is:",
     "options": [
-     "A. supported by evidence",
-     "B. the lecturer's view",
-     "C. an assumption the lecturer rejects",
-     "D. not mentioned"
+     "A. confirmed by the evidence shown",
+     "B. a mistaken assumption",
+     "C. the lecturer's own conclusion",
+     "D. never discussed in the lecture"
     ],
-    "answer": "C",
+    "answer": "B",
     "why": "The lecturer says 'Some people assume the roads were only for military use. However, the evidence shows...'"
    },
    {
@@ -4190,12 +4221,12 @@
     "type": "mcq",
     "prompt": "What is the problem with the double room?",
     "options": [
-     "A. it is too small",
-     "B. the heating is faulty",
-     "C. it is dirty",
-     "D. it is occupied"
+     "A. the heating is faulty",
+     "B. it is too small for two guests",
+     "C. it has not been cleaned yet",
+     "D. it is already occupied"
     ],
-    "answer": "B",
+    "answer": "A",
     "why": "The receptionist says 'There's a problem with the heating in that wing.'"
    },
    {
@@ -4237,11 +4268,11 @@
     "prompt": "What is included at the Harbour Inn?",
     "options": [
      "A. dinner",
-     "B. breakfast",
-     "C. parking",
-     "D. a taxi"
+     "B. parking",
+     "C. breakfast",
+     "D. late checkout"
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "The receptionist says 'Breakfast is included there.'"
    },
    {
@@ -4272,12 +4303,12 @@
     "type": "mcq",
     "prompt": "What does the guest ask for?",
     "options": [
-     "A. a refund for the whole stay",
-     "B. the room charge removed for tonight",
-     "C. an upgrade to a suite",
-     "D. a late checkout"
+     "A. a refund for the whole three-night stay",
+     "B. an upgrade to a suite with a lake view",
+     "C. a late checkout on the final morning",
+     "D. the room charge removed for tonight"
     ],
-    "answer": "B",
+    "answer": "D",
     "why": "The guest says 'Can I have the room charge removed for tonight, then?'"
    }
   ]
@@ -4421,9 +4452,9 @@
     "prompt": "Under-sixteens can attend free if they:",
     "options": [
      "A. have a weekend pass",
-     "B. are accompanied by an adult",
-     "C. buy online",
-     "D. live locally"
+     "B. come with an adult",
+     "C. buy their ticket online",
+     "D. live near the park"
     ],
     "answer": "B",
     "why": "The presenter says 'Under-sixteens go free when accompanied by an adult.'"
@@ -4453,12 +4484,12 @@
     "type": "mcq",
     "prompt": "If severe weather cancels the festival, the organisers will:",
     "options": [
-     "A. move it to next month",
-     "B. issue full refunds",
-     "C. issue half refunds",
-     "D. offer vouchers only"
+     "A. move it to the following month",
+     "B. offer vouchers instead of refunds",
+     "C. issue full refunds",
+     "D. refund half the ticket price"
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "The presenter says 'refunds will be issued in full.'"
    }
   ]
@@ -4571,12 +4602,12 @@
     "type": "mcq",
     "prompt": "What is Priya worried about?",
     "options": [
-     "A. the roof",
-     "B. the entrance",
-     "C. the furniture",
-     "D. the lighting cost"
+     "A. the entrance",
+     "B. the roof design",
+     "C. the lighting cost",
+     "D. the furniture layout"
     ],
-    "answer": "B",
+    "answer": "A",
     "why": "Priya says 'I'm worried about the entrance.'"
    },
    {
@@ -4584,12 +4615,12 @@
     "type": "mcq",
     "prompt": "Priya suggests moving the entrance to the:",
     "options": [
-     "A. busy road side",
-     "B. quieter courtyard",
-     "C. rooftop",
-     "D. car park"
+     "A. the busy road side of the site",
+     "B. the rooftop garden terrace",
+     "C. the car park at the rear",
+     "D. the quieter courtyard"
     ],
-    "answer": "B",
+    "answer": "D",
     "why": "Priya says 'we should move it to the quieter courtyard.'"
    },
    {
@@ -4607,12 +4638,12 @@
     "type": "mcq",
     "prompt": "Which direction does the reading room face?",
     "options": [
-     "A. north",
-     "B. south",
-     "C. east",
+     "A. south-east",
+     "B. north",
+     "C. south",
      "D. west"
     ],
-    "answer": "A",
+    "answer": "B",
     "why": "Ben says 'The reading room faces north.'"
    },
    {
@@ -4701,11 +4732,19 @@
    },
    {
     "speaker": "Lecturer",
+    "text": "Many people living on the coast also depend on reefs, since they provide food and act as natural barriers that reduce the force of waves during storms."
+   },
+   {
+    "speaker": "Lecturer",
     "text": "Monitoring teams usually record coral cover, the percentage of the seabed covered by living coral, along fixed transect lines."
    },
    {
     "speaker": "Lecturer",
     "text": "Divers also count fish, but the counts are often unreliable because fish move. Video cameras placed on the reef now provide more consistent records."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Recording can continue for long periods, and the footage can be reviewed later by several people, which reduces the chance of individual error."
    },
    {
     "speaker": "Lecturer",
@@ -4725,6 +4764,10 @@
    },
    {
     "speaker": "Lecturer",
+    "text": "Note that the dataset comes from several different teams, so you should read the notes that accompany each file before you start your analysis."
+   },
+   {
+    "speaker": "Lecturer",
     "text": "Let's consider how reefs recover after a bleaching event. Recovery depends on several factors, including the number of healthy corals nearby that can supply new larvae to the damaged area."
    },
    {
@@ -4737,11 +4780,19 @@
    },
    {
     "speaker": "Lecturer",
+    "text": "Another approach is to move healthy fragments from one site to another, but this is slow and expensive, so it is only practical for small areas."
+   },
+   {
+    "speaker": "Lecturer",
     "text": "Local communities are important partners in monitoring. Fishing cooperatives often notice changes in reef health before scientists do, and their observations can guide survey priorities."
    },
    {
     "speaker": "Lecturer",
     "text": "Data quality matters enormously. Every survey should record the date, the tide level, the depth and the observer's name, so that results from different years can be compared fairly."
+   },
+   {
+    "speaker": "Lecturer",
+    "text": "Training is part of this too: volunteers need clear instructions so that everyone records things in the same way."
    },
    {
     "speaker": "Lecturer",
@@ -4796,12 +4847,12 @@
     "type": "mcq",
     "prompt": "Why are fish counts often unreliable?",
     "options": [
-     "A. divers cannot see fish",
-     "B. fish move",
-     "C. the water is too cold",
-     "D. there are no fish"
+     "A. divers cannot see the fish clearly",
+     "B. the water is too cold to dive",
+     "C. the fish keep moving",
+     "D. some reefs have no fish"
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "The lecturer says 'the counts are often unreliable because fish move.'"
    },
    {
@@ -4829,10 +4880,10 @@
     "type": "mcq",
     "prompt": "When corals bleach, they expel:",
     "options": [
-     "A. water",
-     "B. algae",
-     "C. sand",
-     "D. fish"
+     "A. salt water",
+     "B. the algae",
+     "C. coral sand",
+     "D. small fish"
     ],
     "answer": "B",
     "why": "The lecturer says corals 'expel the algae that live in their tissues.'"
@@ -4842,12 +4893,12 @@
     "type": "mcq",
     "prompt": "Bleached corals are likely to die when:",
     "options": [
-     "A. the water is cleaned",
-     "B. heat lasts for a long time",
-     "C. fish return",
-     "D. divers visit"
+     "A. the water is cleaned up",
+     "B. fish return to the reef",
+     "C. divers visit the site",
+     "D. heat lasts a long time"
     ],
-    "answer": "B",
+    "answer": "D",
     "why": "The lecturer says 'prolonged heat often kills them.'"
    },
    {
@@ -5090,12 +5141,12 @@
     "type": "mcq",
     "prompt": "Which document does Daniel use to prove his address?",
     "options": [
-     "A. A passport",
-     "B. A recent utility bill",
+     "A. A recent utility bill",
+     "B. A passport",
      "C. A driving licence",
      "D. A letter from the university"
     ],
-    "answer": "B",
+    "answer": "A",
     "why": "Daniel has a gas bill, and the librarian accepts 'a recent utility bill' as proof of address."
    },
    {
@@ -5103,12 +5154,12 @@
     "type": "mcq",
     "prompt": "Why does Daniel want a membership card?",
     "options": [
-     "A. To use the computer lab",
-     "B. To borrow books and book study rooms",
-     "C. To join the reading club",
+     "A. To use the computer lab and printers",
+     "B. To join the weekend reading club",
+     "C. To borrow books and book rooms",
      "D. To use the university archive"
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "He says 'I want a card so I can borrow books and book one of the study rooms.'"
    },
    {
@@ -5116,12 +5167,12 @@
     "type": "mcq",
     "prompt": "When does the library open on Saturdays?",
     "options": [
-     "A. 8 am to 6 pm",
-     "B. 9 am to 5 pm",
-     "C. 10 am to 4 pm",
-     "D. It is closed on Saturdays"
+     "A. 10 am to 4 pm",
+     "B. It is closed on Saturdays",
+     "C. 8 am to 6 pm",
+     "D. 9 am to 5 pm"
     ],
-    "answer": "B",
+    "answer": "D",
     "why": "The librarian says 'We're open from nine until five on Saturdays.'"
    }
   ]
@@ -5129,7 +5180,7 @@
  {
   "id": "l7-s2",
   "section": 2,
-  "title": "Guided tour of Riverside Botanic Garden",
+  "title": "Guided tour of a regional water treatment works",
   "speakers": [
    {
     "name": "Ruth",
@@ -5140,159 +5191,156 @@
   "script": [
    {
     "speaker": "Ruth",
-    "text": "Good morning, everyone, and welcome to Riverside Botanic Garden. I'm Ruth, and I'll be guiding you around for the next hour."
+    "text": "Good morning, everyone, and welcome to Hartley Water Treatment Works. I'm Ruth, and I'll be showing you round for the next ninety minutes."
    },
    {
     "speaker": "Ruth",
-    "text": "The tour begins at the north gate, next to the car park. If you arrived by bus, you'll need to walk about five minutes uphill to reach it."
+    "text": "Before we start, please put on a hard hat and one of the yellow jackets from the box by the door. Visitors are not allowed on site without them. The site is quite noisy in places, so please stay with me at all times and listen carefully to any safety announcements."
    },
    {
     "speaker": "Ruth",
-    "text": "Before we set off, a few practical points. The café is open from ten in the morning until four in the afternoon. It's the only place on site where you can buy hot food, so plan your lunch around that."
+    "text": "This works supplies drinking water to about two hundred thousand people. The water comes from a reservoir, which is six miles to the east. The site covers about forty hectares, and around sixty staff work here in shifts, because the works never closes."
    },
    {
     "speaker": "Ruth",
-    "text": "Our most famous feature is the tropical glasshouse. It was built in 1887, and it still houses plants that were brought back by Victorian plant hunters."
+    "text": "Our first stop is the screening house. Here the water passes through metal screens that catch leaves, twigs and any fish that have been drawn in."
    },
    {
     "speaker": "Ruth",
-    "text": "Unfortunately, the Herb Garden is closed this month. The team is replacing the irrigation system, and the work should finish by the end of the season."
+    "text": "Next, we add a chemical called aluminium sulphate. It makes the tiny particles in the water stick together into larger lumps, known as floc."
    },
    {
     "speaker": "Ruth",
-    "text": "Photography is welcome throughout the gardens, but please don't use flash inside the glasshouse, because the light can damage some of the older plants."
+    "text": "The floc settles in the large circular tanks you can see on your left. This stage takes about four hours."
    },
    {
     "speaker": "Ruth",
-    "text": "You'll notice many of the orchids in the glasshouse are labelled with small cards. Please don't touch them. The oils from our hands can harm the flowers, and some of these orchids are extremely rare."
+    "text": "After that, the water is filtered through beds of sand and carbon. The carbon removes tastes and smells, which is why our water is so fresh."
    },
    {
     "speaker": "Ruth",
-    "text": "Guided tours like this one usually last about sixty minutes, and then you're free to explore on your own. We have a lot of benches, so feel free to sit down whenever you need to."
+    "text": "The final stage is disinfection. We add a small amount of chlorine to kill any remaining bacteria. The water is then tested every hour in the laboratory."
    },
    {
     "speaker": "Ruth",
-    "text": "Now, if you hold a Riverside membership card, you can visit free on Tuesdays. Those visits don't need to be booked in advance. Everyone else pays the standard entry fee at the gate."
+    "text": "Please don't take photographs of the control room, as it contains security equipment. Photography is fine everywhere else. If you have any questions, please ask as we walk, and I will do my best to answer them."
    },
    {
     "speaker": "Ruth",
-    "text": "Finally, please take your litter home with you. We don't have bins in the woodland area, in order to protect the wildlife."
+    "text": "At the end of the tour, we'll go to the visitor centre, where you can try the water yourself. It's open on weekdays until half past four. Finally, children under twelve cannot enter the pump hall because of the noise."
    }
   ],
   "questions": [
    {
     "id": "l7-s2-q01",
     "type": "complete",
-    "prompt": "The tour begins at the ______ gate.",
+    "prompt": "Visitors must wear a hard hat and a yellow ___.",
     "answer": [
-     "north",
-     "North"
+     "jacket",
+     "jackets"
     ],
-    "why": "Ruth says 'The tour begins at the north gate, next to the car park.'"
+    "why": "Ruth says 'put on a hard hat and one of the yellow jackets from the box by the door'."
    },
    {
     "id": "l7-s2-q02",
     "type": "complete",
-    "prompt": "The café opens at ______ in the morning.",
+    "prompt": "The works supplies drinking water to about ___ people.",
     "answer": [
-     "10",
-     "ten"
+     "two hundred thousand"
     ],
-    "why": "She says the café is 'open from ten in the morning until four in the afternoon.'"
+    "why": "Ruth says 'supplies drinking water to about two hundred thousand people'."
    },
    {
     "id": "l7-s2-q03",
     "type": "mcq",
-    "prompt": "Which area is closed this month?",
+    "prompt": "Where is the reservoir in relation to the works?",
     "options": [
-     "A. The tropical glasshouse",
-     "B. The Herb Garden",
-     "C. The café",
-     "D. The woodland path"
+     "A. To the north",
+     "B. To the west",
+     "C. To the south",
+     "D. To the east"
     ],
-    "answer": "B",
-    "why": "Ruth states 'the Herb Garden is closed this month' while the irrigation system is replaced."
+    "answer": "D",
+    "why": "Ruth says 'a reservoir, which is six miles to the east'."
    },
    {
     "id": "l7-s2-q04",
     "type": "complete",
-    "prompt": "The tropical glasshouse was built in ______.",
+    "prompt": "The screens catch leaves, twigs and ___.",
     "answer": [
-     "1887"
+     "fish"
     ],
-    "why": "Ruth says 'It was built in 1887, and it still houses plants' brought back by plant hunters."
+    "why": "Ruth says 'catch leaves, twigs and any fish that have been drawn in'."
    },
    {
     "id": "l7-s2-q05",
     "type": "mcq",
-    "prompt": "What is the rule about photography in the glasshouse?",
+    "prompt": "What is the purpose of aluminium sulphate?",
     "options": [
-     "A. Cameras are not allowed",
-     "B. Photos are allowed, but not with flash",
-     "C. Only guides may take photos",
-     "D. Photos need a permit"
+     "A. To bind small particles",
+     "B. To remove unpleasant smells",
+     "C. To kill remaining bacteria",
+     "D. To make the water softer"
     ],
-    "answer": "B",
-    "why": "She says photography is welcome, 'but please don't use flash inside the glasshouse.'"
+    "answer": "A",
+    "why": "Ruth says 'It makes the tiny particles in the water stick together'."
    },
    {
     "id": "l7-s2-q06",
     "type": "mcq",
-    "prompt": "Why must visitors not touch the orchids?",
+    "prompt": "How long does the settling stage take?",
     "options": [
-     "A. They are poisonous",
-     "B. Oils from hands can harm the flowers",
-     "C. They are protected by a fence",
-     "D. The labels could be lost"
+     "A. About two hours",
+     "B. About three hours",
+     "C. About four hours",
+     "D. About six hours"
     ],
-    "answer": "B",
-    "why": "Ruth explains that 'The oils from our hands can harm the flowers.'"
+    "answer": "C",
+    "why": "Ruth says 'This stage takes about four hours.'"
    },
    {
     "id": "l7-s2-q07",
     "type": "complete",
-    "prompt": "Guided tours usually last about ______ minutes.",
+    "prompt": "The ___ in the filter beds removes tastes and smells.",
     "answer": [
-     "60",
-     "sixty"
+     "carbon"
     ],
-    "why": "She says 'Guided tours like this one usually last about sixty minutes.'"
+    "why": "Ruth says 'The carbon removes tastes and smells'."
    },
    {
     "id": "l7-s2-q08",
     "type": "mcq",
-    "prompt": "Where can visitors sit down during the tour?",
+    "prompt": "How often is the water tested in the laboratory?",
     "options": [
-     "A. Only in the café",
-     "B. On benches throughout the gardens",
-     "C. Only inside the glasshouse",
-     "D. Sitting is not allowed"
+     "A. Every half hour",
+     "B. Once an hour",
+     "C. Every four hours",
+     "D. Once a day"
     ],
     "answer": "B",
-    "why": "Ruth says 'We have a lot of benches, so feel free to sit down whenever you need to.'"
+    "why": "Ruth says 'The water is then tested every hour in the laboratory.'"
    },
    {
     "id": "l7-s2-q09",
     "type": "complete",
-    "prompt": "Members with a membership card can visit free on ______.",
+    "prompt": "Photography is not allowed in the ___ room.",
     "answer": [
-     "Tuesdays",
-     "Tuesday"
+     "control"
     ],
-    "why": "She says members 'can visit free on Tuesdays' and do not need to book."
+    "why": "Ruth says 'Please don't take photographs of the control room'."
    },
    {
     "id": "l7-s2-q10",
     "type": "mcq",
-    "prompt": "What must visitors do with their rubbish?",
+    "prompt": "What time does the visitor centre close on weekdays?",
     "options": [
-     "A. Leave it at the café",
-     "B. Put it in bins by the gate",
-     "C. Take it home with them",
-     "D. Hand it to a guide"
+     "A. Four o'clock",
+     "B. Quarter to five",
+     "C. Half past three",
+     "D. Half past four"
     ],
-    "answer": "C",
-    "why": "Ruth asks visitors to 'take your litter home with you' because there are no bins in the woodland."
+    "answer": "D",
+    "why": "Ruth says 'It's open on weekdays until half past four.'"
    }
   ]
  },
@@ -5401,10 +5449,10 @@
     "type": "mcq",
     "prompt": "How many sites will be surveyed?",
     "options": [
-     "A. Four",
+     "A. Five",
      "B. Six",
-     "C. Eight",
-     "D. Ten"
+     "C. Seven",
+     "D. Eight"
     ],
     "answer": "B",
     "why": "Priya says 'We've selected six sites across the city.'"
@@ -5414,12 +5462,12 @@
     "type": "mcq",
     "prompt": "Why did Priya choose the railway sites?",
     "options": [
-     "A. They are quieter",
-     "B. They are cheaper to access",
-     "C. She expected more species there",
-     "D. The council recommended them"
+     "A. She expected more bird species",
+     "B. They are cheaper to reach by public transport",
+     "C. The council recommended them for the survey",
+     "D. They are closer to the students' homes"
     ],
-    "answer": "C",
+    "answer": "A",
     "why": "She says 'I chose the railway sites because we expected more species there.'"
    },
    {
@@ -5438,12 +5486,12 @@
     "type": "mcq",
     "prompt": "Why does Dr Marsh keep the dawn timing?",
     "options": [
-     "A. Students prefer mornings",
-     "B. Most species are most active then",
-     "C. The recorders work only at dawn",
-     "D. The university requires it"
+     "A. Students prefer working in the mornings",
+     "B. The recorders only work at dawn",
+     "C. Most bird species are active then",
+     "D. The university requires early starts"
     ],
-    "answer": "B",
+    "answer": "C",
     "why": "Dr Marsh explains that 'most species are most active then.'"
    },
    {
@@ -5452,11 +5500,11 @@
     "prompt": "Which recording method does Priya choose?",
     "options": [
      "A. Walking transects",
-     "B. Point counts",
-     "C. Camera traps",
-     "D. Mist nets"
+     "B. Camera traps",
+     "C. Mist nets",
+     "D. Point counts"
     ],
-    "answer": "B",
+    "answer": "D",
     "why": "She says 'I'd prefer to use a point count method' at one spot."
    },
    {
@@ -5497,12 +5545,12 @@
     "type": "mcq",
     "prompt": "What must be recorded at the start of each count?",
     "options": [
-     "A. The number of students present",
-     "B. Wind speed and temperature",
-     "C. Traffic noise levels",
-     "D. The time of sunrise"
+     "A. Wind speed and temperature",
+     "B. The number of students present",
+     "C. The level of traffic noise nearby",
+     "D. The exact time of sunrise today"
     ],
-    "answer": "B",
+    "answer": "A",
     "why": "Priya says 'We'll record the wind speed and temperature at the start of each count.'"
    },
    {
@@ -5541,6 +5589,10 @@
    },
    {
     "speaker": "Dr Okafor",
+    "text": "These flat areas also make it easier to plough and plant, since seeds and fertiliser are no longer washed downhill by every shower."
+   },
+   {
+    "speaker": "Dr Okafor",
     "text": "The most important benefit is erosion control. On a bare slope, heavy rain can wash away the topsoil within a few seasons. Terraces slow the water down, so the soil has time to soak in rather than run off."
    },
    {
@@ -5550,6 +5602,10 @@
    {
     "speaker": "Dr Okafor",
     "text": "However, building terraces takes enormous effort. The retaining walls are usually built from local stone, and in a typical hillside project a team might need several years to finish a single terrace system."
+   },
+   {
+    "speaker": "Dr Okafor",
+    "text": "The work is usually shared among families, with neighbours helping one another, because no single household could build a whole system alone."
    },
    {
     "speaker": "Dr Okafor",
@@ -5565,6 +5621,10 @@
    },
    {
     "speaker": "Dr Okafor",
+    "text": "Without regular attention, even a well-built wall slowly bulges outwards as the soil behind it becomes saturated with water."
+   },
+   {
+    "speaker": "Dr Okafor",
     "text": "This matters for policy. Some governments now offer grants to help farmers repair terraces before they fail, rather than paying for emergency work afterwards. Those programmes have proved cheaper in the long run."
    },
    {
@@ -5573,7 +5633,15 @@
    },
    {
     "speaker": "Dr Okafor",
+    "text": "Some farmers also plant grasses or small shrubs along the edges of each level, which helps to bind the soil together."
+   },
+   {
+    "speaker": "Dr Okafor",
     "text": "A final point concerns water. Many terrace systems were designed around seasonal rain, so they store water in small ponds at the top of each slope. Modern engineers often copy this approach when they plan drainage for new housing estates."
+   },
+   {
+    "speaker": "Dr Okafor",
+    "text": "These ponds also support wildlife, and in dry periods they give villagers a reserve of water close to their fields."
    },
    {
     "speaker": "Dr Okafor",

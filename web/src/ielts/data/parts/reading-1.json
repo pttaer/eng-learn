@@ -171,13 +171,13 @@
     "type": "mcq",
     "prompt": "According to paragraph D, identical printed texts helped scholars mainly because",
     "options": [
-     "A. they were cheaper than manuscripts.",
-     "B. readers in different places could refer to the same pages.",
-     "C. they were all printed in Latin.",
-     "D. they were free from government control."
+     "A. they were considerably cheaper to buy than handwritten manuscripts.",
+     "B. they were all printed in Latin, a language shared by scholars.",
+     "C. they were produced free from the control of political authorities.",
+     "D. readers in different places could refer to the same pages."
     ],
-    "answer": "B",
-    "why": "Paragraph D: \"different readers across Europe could reference the same page numbers and exact passages\". A is a point from paragraph C, not the reason given here; C is not stated; D is contradicted, since authorities \"attempted to control it through censorship and licensing\"."
+    "answer": "D",
+    "why": "Paragraph D: \"different readers across Europe could reference the same page numbers and exact passages\". A is a point from paragraph C, not the reason given here; B is not stated; C is contradicted, since authorities \"attempted to control it through censorship and licensing\"."
    }
   ]
  },
@@ -345,10 +345,10 @@
     "type": "mcq",
     "prompt": "What does paragraph G say about using several mitigation strategies together?",
     "options": [
-     "A. It is less effective than one well-funded measure.",
+     "A. It is less effective than relying on one well-funded measure.",
      "B. It can cool a city more than any single strategy.",
-     "C. It only works in very large cities.",
-     "D. It depends on international agreements."
+     "C. It only works in very large cities with big budgets.",
+     "D. It depends on international agreements between governments."
     ],
     "answer": "B",
     "why": "Paragraph G: combined strategies \"can achieve cumulative temperature reductions exceeding individual strategy outcomes\". A is the opposite; C is not stated; D is contradicted in paragraph H, which says mitigation \"can be implemented through local action\"."
@@ -359,9 +359,9 @@
     "prompt": "According to paragraph H, one advantage of tackling urban heat islands rather than global climate change is that",
     "options": [
      "A. results can be seen within a few years.",
-     "B. no public money is needed.",
-     "C. it also reverses global warming.",
-     "D. it needs no new technology."
+     "B. no public money or financial incentives are needed.",
+     "C. it also reverses global warming within a decade.",
+     "D. it needs no new technology or planning changes."
     ],
     "answer": "A",
     "why": "Paragraph H: local mitigation \"can produce measurable results within years rather than decades\". B and D are not stated (paragraph G even mentions \"Financial incentives\"), and C is never claimed."
@@ -516,26 +516,26 @@
     "type": "mcq",
     "prompt": "What risk of some digital learning environments is described in paragraph E?",
     "options": [
-     "A. Their feedback arrives too slowly to be useful.",
-     "B. They may remove the need for learners to check their own understanding.",
-     "C. They are too expensive for most schools.",
-     "D. They discourage students from asking teachers questions."
+     "A. Their feedback arrives too slowly for students to make use of it.",
+     "B. They are too expensive for most schools and universities to afford.",
+     "C. They may stop learners from monitoring their own understanding.",
+     "D. They discourage students from asking their teachers questions."
     ],
-    "answer": "B",
-    "why": "Paragraph E: some environments \"may impair metacognitive development by removing the necessity for learners to actively monitor their own understanding\". A is contradicted (adaptive systems give \"real-time feedback\"); C and D are not mentioned."
+    "answer": "C",
+    "why": "Paragraph E: some environments \"may impair metacognitive development by removing the necessity for learners to actively monitor their own understanding\". A is contradicted (adaptive systems give \"real-time feedback\"); B and D are not mentioned."
    },
    {
     "id": "r03-q14",
     "type": "mcq",
     "prompt": "Students who received explicit metacognitive instruction improved their standardized test performance by",
     "options": [
-     "A. less than 10 percent.",
-     "B. between 10 and 40 percent.",
+     "A. between 10 and 40 percent.",
+     "B. less than 10 percent in total.",
      "C. exactly 40 percent in every case.",
-     "D. more than 40 percent."
+     "D. more than 40 percent in most trials."
     ],
-    "answer": "B",
-    "why": "Paragraph D: \"showed improvements ranging from 10 to 40 percent in standardized test performance\". The figure is a range, so A, C and D are all wrong."
+    "answer": "A",
+    "why": "Paragraph D: \"showed improvements ranging from 10 to 40 percent in standardized test performance\". The figure is a range, so B, C and D are all wrong."
    }
   ]
  },
@@ -700,10 +700,10 @@
     "type": "mcq",
     "prompt": "What does the writer suggest about the Indus Valley civilisation in paragraph D?",
     "options": [
-     "A. Its script was used only on pottery.",
+     "A. Its script was found only on pottery and household storage jars.",
      "B. The spread of its script points to a central administration.",
-     "C. Its language was certainly Dravidian.",
-     "D. Its script contained over a thousand signs."
+     "C. Its language has been conclusively identified as an early Dravidian one.",
+     "D. Its script contained well over a thousand distinct signs in total."
     ],
     "answer": "B",
     "why": "Paragraph D: the distribution and consistency of the script \"suggests that centralized administration existed during this period\". A is wrong (the script is found on \"Over 4,000 seals\"); C is only what \"Some scholars propose\"; D is contradicted by \"approximately 400 to 600 distinct signs\"."
@@ -713,13 +713,13 @@
     "type": "mcq",
     "prompt": "According to paragraph E, what was the main effect of the Phoenician alphabet?",
     "options": [
-     "A. It made reading and writing easier to learn.",
-     "B. It replaced Chinese characters.",
-     "C. It was restricted to temple scribes.",
-     "D. It increased the number of signs writers needed."
+     "A. It replaced Chinese characters across East Asia.",
+     "B. It restricted literacy to a small class of temple scribes.",
+     "C. It made reading and writing easier to learn.",
+     "D. It increased the number of signs writers needed to master."
     ],
-    "answer": "A",
-    "why": "Paragraph E: it \"substantially reduced the cognitive burden required for literacy compared to logographic systems\". B is contradicted by paragraph F; C and D are the opposite of what is said."
+    "answer": "C",
+    "why": "Paragraph E: it \"substantially reduced the cognitive burden required for literacy compared to logographic systems\". A is contradicted by paragraph F; B and D are the opposite of what is said."
    }
   ]
  },
@@ -886,13 +886,13 @@
     "type": "mcq",
     "prompt": "According to paragraph D, why did the West India Company (WIC) make losses?",
     "options": [
-     "A. It lacked the governmental powers of the VOC.",
-     "B. Trade in the Atlantic was competitive in a different way.",
-     "C. Its fleet was destroyed by the British navy.",
-     "D. New Amsterdam was too costly to run."
+     "A. It lacked the governmental and military powers granted to the VOC.",
+     "B. Its fleet was destroyed by the British navy in the Atlantic.",
+     "C. New Amsterdam proved too costly for the company to run.",
+     "D. Atlantic trade had different competitive conditions."
     ],
-    "answer": "B",
-    "why": "Paragraph D: \"The WIC's failure reflected different competitive conditions in Atlantic trade.\" A, C and D are never given as reasons."
+    "answer": "D",
+    "why": "Paragraph D: \"The WIC's failure reflected different competitive conditions in Atlantic trade.\" A, B and C are never given as reasons."
    },
    {
     "id": "r05-q13",
@@ -1074,10 +1074,10 @@
     "type": "mcq",
     "prompt": "What is the function of the melon?",
     "options": [
-     "A. It stores oxygen for deep dives.",
+     "A. It stores extra oxygen to support long, deep dives.",
      "B. It focuses clicks into a directional beam.",
-     "C. It carries echoes to the inner ear.",
-     "D. It produces the clicking sounds."
+     "C. It carries returning echoes along the jaw to the inner ear.",
+     "D. It produces the clicking sounds in the nasal cavity."
     ],
     "answer": "B",
     "why": "Paragraph B: the melon \"functions as a biological acoustic lens, focusing echolocation clicks into a directional beam\". C is done by \"specialized fatty channels\" in the lower jaw; D happens in \"the phonic lips and monkey lips structures\"; A is not mentioned."
@@ -1087,23 +1087,23 @@
     "type": "mcq",
     "prompt": "Why do sperm whales use lower frequencies than dolphins?",
     "options": [
-     "A. Lower frequencies lose less strength in the deep ocean.",
-     "B. Lower frequencies cannot be heard by their prey.",
-     "C. Their brains cannot process high frequencies.",
-     "D. They need the sounds mainly for communication."
+     "A. Lower frequencies cannot be detected by the squid they hunt.",
+     "B. Their brains are unable to process high frequencies at all.",
+     "C. Lower frequencies lose less energy in deep water.",
+     "D. They need the sounds mainly for communicating over long distances."
     ],
-    "answer": "A",
-    "why": "Paragraph D: sperm whales use \"5 to 15 kilohertz, reducing attenuation in deep ocean environments\". Attenuation means loss of strength. B, C and D are not stated."
+    "answer": "C",
+    "why": "Paragraph D: sperm whales use \"5 to 15 kilohertz, reducing attenuation in deep ocean environments\". Attenuation means loss of strength. A, B and D are not stated as the reason."
    },
    {
     "id": "r06-q14",
     "type": "mcq",
     "prompt": "According to paragraph H, research on marine echolocation has already helped to",
     "options": [
-     "A. design underwater vehicles.",
-     "B. reduce shipping costs.",
-     "C. slow ocean acidification.",
-     "D. cure hearing loss in humans."
+     "A. design autonomous underwater vehicles.",
+     "B. cut the costs of commercial shipping routes.",
+     "C. slow down the rate of ocean acidification.",
+     "D. cure hearing loss in human patients today."
     ],
     "answer": "A",
     "why": "Paragraph H: \"Biosonar systems inspired by marine mammal echolocation have informed the design of acoustic imaging devices and autonomous underwater vehicles\". D is only something research \"may provide insights\" into; B and C are not achievements of the research."

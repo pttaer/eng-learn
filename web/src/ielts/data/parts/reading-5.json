@@ -137,25 +137,25 @@
     "prompt": "What is the writer's main point about the clarity of the Epidaurus theatre?",
     "options": [
      "A. It depends on a single feature that could easily be copied.",
-     "B. It results from several features working together.",
-     "C. It has been fully explained by one modern experiment.",
-     "D. It was described in detail by Vitruvius."
+     "B. It has been fully explained by a single modern experiment.",
+     "C. It results from several features working together.",
+     "D. It was described in great detail by Vitruvius himself."
     ],
-    "answer": "B",
-    "why": "Paragraph B: \"the theatre's clarity is not the result of a single feature but of several working together\". A is contradicted by the same sentence; C is contradicted by the caution that scale models cannot reproduce everything; D is not stated."
+    "answer": "C",
+    "why": "Paragraph B: \"the theatre's clarity is not the result of a single feature but of several working together\". A is contradicted by the same sentence; B is contradicted by the caution that scale models cannot reproduce everything; D is not stated."
    },
    {
     "id": "r17-q10",
     "type": "mcq",
     "prompt": "According to paragraph G, what made a theatre good for ancient spectators?",
     "options": [
-     "A. Amplified voices that reached every seat.",
-     "B. The words could be followed and the crowd could share one experience.",
-     "C. Recordings that could be replayed later.",
-     "D. Vessels tuned to musical notes."
+     "A. Amplified voices that carried clearly to every seat in the house.",
+     "B. Words that could be followed in a shared crowd experience.",
+     "C. Recordings of the performance that could be replayed later.",
+     "D. Bronze vessels tuned to musical notes beneath the seats."
     ],
     "answer": "B",
-    "why": "Paragraph G: \"For them, a good theatre was one in which the words could be followed and the crowd could share a single experience.\""
+    "why": "Paragraph G: \"For them, a good theatre was one in which the words could be followed and the crowd could share a single experience.\" A and C are ruled out (\"they were not listening to recordings or to amplified voices\"); D is Vitruvius's idea from paragraph C, not the spectators' criterion."
    },
    {
     "id": "r17-q11",
@@ -306,26 +306,26 @@
     "type": "mcq",
     "prompt": "According to paragraph D, why can a lichen survey be hard to interpret?",
     "options": [
-     "A. Lichens grow so quickly that they cannot be counted.",
-     "B. Lichens respond to a mixture of pollutants rather than to a single compound.",
-     "C. Lichens are found only in rural areas.",
-     "D. Lichens cannot survive in clean air."
+     "A. They respond to a mix of pollutants, not one compound.",
+     "B. They grow so quickly that surveys cannot keep up with them.",
+     "C. They are found only in rural areas away from traffic.",
+     "D. They are unable to survive for long in clean, unpolluted air."
     ],
-    "answer": "B",
-    "why": "Paragraph D: \"Lichens respond to a mixture of pollutants rather than to a single compound\". A contradicts the slow growth rates in the same paragraph; C and D are not stated."
+    "answer": "A",
+    "why": "Paragraph D: \"Lichens respond to a mixture of pollutants rather than to a single compound\". B contradicts the slow growth rates in the same paragraph; C and D are not stated."
    },
    {
     "id": "r18-q09",
     "type": "mcq",
     "prompt": "What is the writer's main conclusion in paragraph G?",
     "options": [
-     "A. Lichens should replace all calibrated instruments.",
-     "B. Lichens are most useful when read alongside other evidence.",
-     "C. Lichens can identify the exact pollutant responsible.",
-     "D. Lichens have little value in modern monitoring."
+     "A. They should now replace all calibrated instruments in monitoring.",
+     "B. They can identify the exact pollutant responsible for damage.",
+     "C. They work best when read alongside other evidence.",
+     "D. They have little value in modern air-quality monitoring."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"The lesson, in the end, is that lichens are most useful when they are read alongside other evidence.\" A is contradicted by \"They cannot replace a calibrated instrument\"; D is contradicted by \"Used carefully, that record can show where the air has been poor\"."
+    "answer": "C",
+    "why": "Paragraph G: \"The lesson, in the end, is that lichens are most useful when they are read alongside other evidence.\" A is contradicted by \"They cannot replace a calibrated instrument\"; B is contradicted by \"they cannot tell a policymaker exactly what to fix\"; D is contradicted by \"Used carefully, that record can show where the air has been poor\"."
    },
    {
     "id": "r18-q10",
@@ -485,26 +485,26 @@
     "type": "mcq",
     "prompt": "What does paragraph C suggest about cryptochrome?",
     "options": [
-     "A. It is found only in migratory birds.",
-     "B. It may link the magnetic effect to vision.",
-     "C. It has been shown to work in wild birds.",
-     "D. It is an iron-rich particle."
+     "A. It is found only in birds that migrate long distances.",
+     "B. It has been shown to work in wild birds on migration.",
+     "C. It is an iron-rich particle found in the beak.",
+     "D. It may link the magnetic effect to vision."
     ],
-    "answer": "B",
-    "why": "Paragraph C: \"The idea is attractive because it links a magnetic effect to a visual signal\". C is contradicted by the laboratory limits in the same paragraph; D describes a different proposal in paragraph E."
+    "answer": "D",
+    "why": "Paragraph C: \"The idea is attractive because it links a magnetic effect to a visual signal\". B is contradicted by the laboratory limits in the same paragraph; C describes a different proposal in paragraph E; A is not stated."
    },
    {
     "id": "r19-q09",
     "type": "mcq",
     "prompt": "What is the writer's conclusion about bird navigation?",
     "options": [
-     "A. It is fully explained by the radical pair model.",
-     "B. Researchers can show that the sense exists but cannot yet fully explain it.",
-     "C. Birds rely on the magnetic sense alone.",
-     "D. Only young birds use magnetic cues."
+     "A. It is now fully explained by the radical pair model of cryptochrome.",
+     "B. The sense clearly exists, but it is only partly explained.",
+     "C. Birds rely on the magnetic sense alone to find their way home.",
+     "D. Only young birds on their first migration use magnetic cues."
     ],
     "answer": "B",
-    "why": "Paragraph G: \"Researchers can show that a sense exists, and they can measure the effect of altering it, but they still struggle to explain how a weak field becomes a reliable signal in a living body.\""
+    "why": "Paragraph G: \"Researchers can show that a sense exists, and they can measure the effect of altering it, but they still struggle to explain how a weak field becomes a reliable signal in a living body.\" A, C and D all conflict with the passage (paragraphs C, E and F)."
    },
    {
     "id": "r19-q10",
@@ -613,26 +613,26 @@
     "type": "mcq",
     "prompt": "What does the writer suggest about the 1850 Act?",
     "options": [
-     "A. It was rejected by most councils.",
-     "B. It let towns raise money for libraries but did not compel them.",
-     "C. It set a national standard for library stock.",
-     "D. It gave women the right to borrow books."
+     "A. It was rejected outright by most local councils at first.",
+     "B. It set a national standard for the books libraries must hold.",
+     "C. It let towns fund libraries but did not compel them.",
+     "D. It gave women the legal right to borrow library books."
     ],
-    "answer": "B",
-    "why": "Paragraph B: \"gave towns the power to levy a rate for buildings and books, but it did not require them to do so\"."
+    "answer": "C",
+    "why": "Paragraph B: \"gave towns the power to levy a rate for buildings and books, but it did not require them to do so\". A, B and D are not stated."
    },
    {
     "id": "r20-q06",
     "type": "mcq",
     "prompt": "According to paragraph D, which users were often found in early libraries?",
     "options": [
-     "A. labourers who finished work late",
-     "B. clerks, shopkeepers and the sons of the middle class",
-     "C. members of universities and churches",
-     "D. women without jobs"
+     "A. clerks, shopkeepers and the sons of the middle class",
+     "B. labourers and factory workers who finished work late in the evening",
+     "C. members of universities, churches and learned societies",
+     "D. unemployed women with plenty of time to read during the day"
     ],
-    "answer": "B",
-    "why": "Paragraph D: \"which meant that their users were often clerks, shopkeepers and the sons of the middle class\"."
+    "answer": "A",
+    "why": "Paragraph D: \"which meant that their users were often clerks, shopkeepers and the sons of the middle class\". B is contradicted (libraries closed or opened \"when working people were at their jobs\"); C and D are not given as the typical users."
    },
    {
     "id": "r20-q07",
@@ -856,10 +856,10 @@
     "type": "mcq",
     "prompt": "What is the writer's main point about freshwater systems?",
     "options": [
-     "A. They contain no plastic because of natural filtration.",
-     "B. They deserve attention because they carry plastic from land to the ocean.",
-     "C. They are less polluted than the sea.",
-     "D. They can be monitored only with chemical methods."
+     "A. They contain almost no plastic because of natural filtration.",
+     "B. They are the main route by which plastic reaches the sea.",
+     "C. They are generally less heavily polluted than the open sea.",
+     "D. They can be monitored only with advanced chemical methods."
     ],
     "answer": "B",
     "why": "Paragraph A: \"they are the main route by which plastic travels from land to the ocean\". A is contradicted by \"Microplastics enter rivers in several ways\" in paragraph B; C is not stated; D is contradicted by \"Samples are usually taken with nets or by pumping water through filters\" in paragraph D."
@@ -869,13 +869,13 @@
     "type": "mcq",
     "prompt": "What does the writer say about the aim of managing microplastic?",
     "options": [
-     "A. Eliminating every particle from the environment.",
-     "B. Limiting the amounts that reach the sea and freshwater animals.",
-     "C. Banning all synthetic clothing.",
-     "D. Measuring only the largest fragments."
+     "A. Eliminating every last particle from the natural environment.",
+     "B. Banning all synthetic clothing and plastic packaging outright.",
+     "C. Measuring only the largest visible fragments in each river.",
+     "D. Limiting how much reaches the sea and freshwater animals."
     ],
-    "answer": "B",
-    "why": "Paragraph G: \"The aim is not to eliminate every particle, which is unrealistic, but to limit the amounts that reach the sea and the animals that depend on freshwater\"."
+    "answer": "D",
+    "why": "Paragraph G: \"The aim is not to eliminate every particle, which is unrealistic, but to limit the amounts that reach the sea and the animals that depend on freshwater\". A is explicitly rejected; B and C are not stated."
    },
    {
     "id": "r21-q14",

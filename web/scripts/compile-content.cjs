@@ -450,6 +450,12 @@ function compileReading() {
       }
     };
 
+    // Word count and reading time come from the passage text; frontmatter values drift.
+    const wordTotal = content.split(/\s+/).filter(Boolean).length;
+    article.wordCount = wordTotal;
+    const wpm = Number((String(meta.readingTime || '').match(/@\s*(\d+)\s*WPM/) || [])[1]);
+    if (wpm) article.readingTime = String(meta.readingTime).replace(/^[\d.]+\s*min/, `${(wordTotal / wpm).toFixed(1)} min`);
+
     // Extract Cold Read
     const coldMatch = body.match(/##\s+Cold Read\r?\n([\s\S]*?)(?=\r?\n##\s+Syntax|$)/);
     if (coldMatch) {

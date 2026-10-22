@@ -19,6 +19,28 @@ import { TestResult } from './reading';
 
 const SECTIONS = listeningData as ListeningSection[];
 
+// Quotes in a `why` are matched to script lines after case and punctuation are stripped.
+const normText = (t: string): string => t.toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim();
+
+/** Script line indexes quoted in the `why` of the given questions. */
+export function evidenceLineIndexes(sec: ListeningSection, questionIds: Set<string>): Set<number> {
+  const out = new Set<number>();
+  for (const q of sec.questions) {
+    if (!questionIds.has(q.id)) continue;
+    // A quote opens after a space, bracket or start and closes before space or punctuation, so "there's" does not split it.
+    // Ellipses split one quote into separate segments, since a single script line rarely holds the whole span.
+    const quotes = [...(q.why || '').matchAll(/(?:^|[\s(\u201C\u2018"])["\u201C\u2018']([^"\u201C\u201D\u2018\u2019]{4,}?)["\u201D\u2019'](?=[\s.,;:!?)]|$)/g)]
+      .flatMap(m => (m[1] ?? '').split(/\.{3}|\u2026/))
+      .map(normText)
+      .filter(qq => qq.length > 0);
+    sec.script.forEach((line, i) => {
+      const t = ' ' + normText(line.text) + ' ';
+      if (quotes.some(qq => t.includes(' ' + qq + ' '))) out.add(i);
+    });
+  }
+  return out;
+}
+
 /** Runs sections in order. exam=true plays each section once (no replay); practice allows replay and shows the transcript after submit. */
 export function mountListeningTest(root: HTMLElement, sections: ListeningSection[], exam: boolean, mock: boolean, onDone?: (r: TestResult) => void): () => void {
   root.innerHTML = '';
@@ -61,6 +83,7 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
   const forms: QuestionForm[] = [];
   const played = new Set<number>();
   let cur = 0;
+  let replay: Playback | null = null;
   let n = 1;
   sections.forEach((s, i) => {
     const pane = h('section', 'ie-qcol ie-listen-pane');
@@ -119,6 +142,18 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
         c.n += v.n;
       }
       const tr = h('details', 'ie-transcript', `<summary>Transcript: Section ${sections[i].section}</summary>` + sections[i].script.map(l => `<p><b>${esc(l.speaker)}:</b> ${esc(l.text)}</p>`).join(''));
+      if (!exam && ttsAvailable()) {
+        const marked = evidenceLineIndexes(sections[i], new Set(s.wrong));
+        tr.querySelectorAll('p').forEach((p, j) => {
+          if (!marked.has(j)) return;
+          const replayBtn = h('button', 'ie-btn ie-btn-sm', 'Hear at 0.8x');
+          replayBtn.addEventListener('click', () => {
+            replay?.stop();
+            replay = playSection({ ...sections[i], script: [sections[i].script[j]] }, { rate: 0.8, accent: accentSelect.value as AccentCadenceType });
+          });
+          p.append(replayBtn);
+        });
+      }
       panes[i].append(tr);
     });
     const band = rawToBand('listening', total.raw, total.of);
@@ -134,6 +169,7 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
   refresh();
   return () => {
     playback?.stop();
+    replay?.stop();
     setExamRoomAmbience(false);
   };
 }

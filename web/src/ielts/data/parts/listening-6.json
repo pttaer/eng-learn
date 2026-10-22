@@ -134,12 +134,12 @@
         "type": "mcq",
         "prompt": "What is the problem with the double room?",
         "options": [
-          "A. it is too small",
-          "B. the heating is faulty",
-          "C. it is dirty",
-          "D. it is occupied"
+          "A. the heating is faulty",
+          "B. it is too small for two guests",
+          "C. it has not been cleaned yet",
+          "D. it is already occupied"
         ],
-        "answer": "B",
+        "answer": "A",
         "why": "The receptionist says 'There's a problem with the heating in that wing.'"
       },
       {
@@ -181,11 +181,11 @@
         "prompt": "What is included at the Harbour Inn?",
         "options": [
           "A. dinner",
-          "B. breakfast",
-          "C. parking",
-          "D. a taxi"
+          "B. parking",
+          "C. breakfast",
+          "D. late checkout"
         ],
-        "answer": "B",
+        "answer": "C",
         "why": "The receptionist says 'Breakfast is included there.'"
       },
       {
@@ -216,12 +216,12 @@
         "type": "mcq",
         "prompt": "What does the guest ask for?",
         "options": [
-          "A. a refund for the whole stay",
-          "B. the room charge removed for tonight",
-          "C. an upgrade to a suite",
-          "D. a late checkout"
+          "A. a refund for the whole three-night stay",
+          "B. an upgrade to a suite with a lake view",
+          "C. a late checkout on the final morning",
+          "D. the room charge removed for tonight"
         ],
-        "answer": "B",
+        "answer": "D",
         "why": "The guest says 'Can I have the room charge removed for tonight, then?'"
       }
     ]
@@ -365,9 +365,9 @@
         "prompt": "Under-sixteens can attend free if they:",
         "options": [
           "A. have a weekend pass",
-          "B. are accompanied by an adult",
-          "C. buy online",
-          "D. live locally"
+          "B. come with an adult",
+          "C. buy their ticket online",
+          "D. live near the park"
         ],
         "answer": "B",
         "why": "The presenter says 'Under-sixteens go free when accompanied by an adult.'"
@@ -397,12 +397,12 @@
         "type": "mcq",
         "prompt": "If severe weather cancels the festival, the organisers will:",
         "options": [
-          "A. move it to next month",
-          "B. issue full refunds",
-          "C. issue half refunds",
-          "D. offer vouchers only"
+          "A. move it to the following month",
+          "B. offer vouchers instead of refunds",
+          "C. issue full refunds",
+          "D. refund half the ticket price"
         ],
-        "answer": "B",
+        "answer": "C",
         "why": "The presenter says 'refunds will be issued in full.'"
       }
     ]
@@ -515,12 +515,12 @@
         "type": "mcq",
         "prompt": "What is Priya worried about?",
         "options": [
-          "A. the roof",
-          "B. the entrance",
-          "C. the furniture",
-          "D. the lighting cost"
+          "A. the entrance",
+          "B. the roof design",
+          "C. the lighting cost",
+          "D. the furniture layout"
         ],
-        "answer": "B",
+        "answer": "A",
         "why": "Priya says 'I'm worried about the entrance.'"
       },
       {
@@ -528,12 +528,12 @@
         "type": "mcq",
         "prompt": "Priya suggests moving the entrance to the:",
         "options": [
-          "A. busy road side",
-          "B. quieter courtyard",
-          "C. rooftop",
-          "D. car park"
+          "A. the busy road side of the site",
+          "B. the rooftop garden terrace",
+          "C. the car park at the rear",
+          "D. the quieter courtyard"
         ],
-        "answer": "B",
+        "answer": "D",
         "why": "Priya says 'we should move it to the quieter courtyard.'"
       },
       {
@@ -551,12 +551,12 @@
         "type": "mcq",
         "prompt": "Which direction does the reading room face?",
         "options": [
-          "A. north",
-          "B. south",
-          "C. east",
+          "A. south-east",
+          "B. north",
+          "C. south",
           "D. west"
         ],
-        "answer": "A",
+        "answer": "B",
         "why": "Ben says 'The reading room faces north.'"
       },
       {
@@ -645,11 +645,19 @@
       },
       {
         "speaker": "Lecturer",
+        "text": "Many people living on the coast also depend on reefs, since they provide food and act as natural barriers that reduce the force of waves during storms."
+      },
+      {
+        "speaker": "Lecturer",
         "text": "Monitoring teams usually record coral cover, the percentage of the seabed covered by living coral, along fixed transect lines."
       },
       {
         "speaker": "Lecturer",
         "text": "Divers also count fish, but the counts are often unreliable because fish move. Video cameras placed on the reef now provide more consistent records."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Recording can continue for long periods, and the footage can be reviewed later by several people, which reduces the chance of individual error."
       },
       {
         "speaker": "Lecturer",
@@ -669,6 +677,10 @@
       },
       {
         "speaker": "Lecturer",
+        "text": "Note that the dataset comes from several different teams, so you should read the notes that accompany each file before you start your analysis."
+      },
+      {
+        "speaker": "Lecturer",
         "text": "Let's consider how reefs recover after a bleaching event. Recovery depends on several factors, including the number of healthy corals nearby that can supply new larvae to the damaged area."
       },
       {
@@ -681,11 +693,19 @@
       },
       {
         "speaker": "Lecturer",
+        "text": "Another approach is to move healthy fragments from one site to another, but this is slow and expensive, so it is only practical for small areas."
+      },
+      {
+        "speaker": "Lecturer",
         "text": "Local communities are important partners in monitoring. Fishing cooperatives often notice changes in reef health before scientists do, and their observations can guide survey priorities."
       },
       {
         "speaker": "Lecturer",
         "text": "Data quality matters enormously. Every survey should record the date, the tide level, the depth and the observer's name, so that results from different years can be compared fairly."
+      },
+      {
+        "speaker": "Lecturer",
+        "text": "Training is part of this too: volunteers need clear instructions so that everyone records things in the same way."
       },
       {
         "speaker": "Lecturer",
@@ -740,12 +760,12 @@
         "type": "mcq",
         "prompt": "Why are fish counts often unreliable?",
         "options": [
-          "A. divers cannot see fish",
-          "B. fish move",
-          "C. the water is too cold",
-          "D. there are no fish"
+          "A. divers cannot see the fish clearly",
+          "B. the water is too cold to dive",
+          "C. the fish keep moving",
+          "D. some reefs have no fish"
         ],
-        "answer": "B",
+        "answer": "C",
         "why": "The lecturer says 'the counts are often unreliable because fish move.'"
       },
       {
@@ -773,10 +793,10 @@
         "type": "mcq",
         "prompt": "When corals bleach, they expel:",
         "options": [
-          "A. water",
-          "B. algae",
-          "C. sand",
-          "D. fish"
+          "A. salt water",
+          "B. the algae",
+          "C. coral sand",
+          "D. small fish"
         ],
         "answer": "B",
         "why": "The lecturer says corals 'expel the algae that live in their tissues.'"
@@ -786,12 +806,12 @@
         "type": "mcq",
         "prompt": "Bleached corals are likely to die when:",
         "options": [
-          "A. the water is cleaned",
-          "B. heat lasts for a long time",
-          "C. fish return",
-          "D. divers visit"
+          "A. the water is cleaned up",
+          "B. fish return to the reef",
+          "C. divers visit the site",
+          "D. heat lasts a long time"
         ],
-        "answer": "B",
+        "answer": "D",
         "why": "The lecturer says 'prolonged heat often kills them.'"
       },
       {

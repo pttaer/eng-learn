@@ -212,13 +212,13 @@
         "type": "mcq",
         "prompt": "What does the room rate include?",
         "options": [
-          "A. Water and heating, but not electricity",
-          "B. Only the room rental",
-          "C. Water, heating, and electricity",
-          "D. All utilities and laundry"
+          "A. Water and heating, not electricity",
+          "B. Only the room rental, with no utilities",
+          "C. Water, heating and electricity together",
+          "D. All utilities plus a weekly laundry allowance"
         ],
         "answer": "A",
-        "why": "The administrator explains 'It includes water and heating, but you'll need to pay for your own electricity.' This directly contradicts options A, B, and D, which incorrectly include all utilities or only the room."
+        "why": "The administrator explains 'It includes water and heating, but you'll need to pay for your own electricity.' Option A matches. B says nothing but the room is included, C wrongly adds electricity, and D adds laundry, which is never mentioned."
       },
       {
         "id": "l1-s1-q10",
@@ -226,12 +226,12 @@
         "prompt": "What discount is available for this six-week booking?",
         "options": [
           "A. Five percent off the room rate",
-          "B. Ten percent off the room rate",
-          "C. Twelve percent off the room rate",
-          "D. Free electricity for the first week"
+          "B. Twelve percent off the room rate",
+          "C. Free electricity for the first week",
+          "D. Ten percent off the room rate"
         ],
-        "answer": "B",
-        "why": "The administrator states 'for a six-week booking, we can offer a ten percent discount on the room rate.' Option B is the correct percentage; A and C are wrong percentages, and D is a different benefit."
+        "answer": "D",
+        "why": "The administrator states 'for a six-week booking, we can offer a ten percent discount on the room rate.' Option D is the correct percentage; A and B are wrong percentages, and C is a different benefit."
       }
     ]
   },
@@ -336,25 +336,25 @@
         "prompt": "What is located to the right of the main entrance in the Grand Hall?",
         "options": [
           "A. The Cafe and refreshment area",
-          "B. The Interactive Exhibits on the Ground Floor",
-          "C. The Gift Shop",
-          "D. The Children's Discovery Area"
+          "B. The Children's Discovery Area",
+          "C. The Gift Shop area",
+          "D. The Interactive Exhibits area"
         ],
         "answer": "C",
-        "why": "The guide states: 'To your right, the Gift Shop sells books, models, and souvenirs. Just past that, you'll see the Cafe.' Option C identifies the location immediately to the right; the Cafe is beyond the Gift Shop, not directly to the right."
+        "why": "The guide states: 'To your right, the Gift Shop sells books, models, and souvenirs. Just past that, you'll see the Cafe.' Option C is directly to the right; the Cafe (A) is beyond the Gift Shop, and B and D are on the Ground Floor, not in the Grand Hall."
       },
       {
         "id": "l1-s2-q06",
         "type": "mcq",
         "prompt": "When are guided tours offered?",
         "options": [
-          "A. Every hour starting at nine AM",
-          "B. Every two hours starting at nine AM",
-          "C. Only on weekends at two PM",
-          "D. Every two hours starting at ten AM"
+          "A. Every hour starting at ten AM",
+          "B. Every two hours starting at ten AM",
+          "C. Every two hours starting at nine AM",
+          "D. Only on weekends at two PM"
         ],
-        "answer": "D",
-        "why": "The guide specifies: 'We do offer guided tours every two hours starting at ten AM.' Option D matches this exactly, while the other options state incorrect times or frequencies."
+        "answer": "B",
+        "why": "The guide specifies: 'We do offer guided tours every two hours starting at ten AM.' Option B matches exactly; A has the wrong frequency, C the wrong start time, and D the wrong days and time."
       },
       {
         "id": "l1-s2-q07",
@@ -382,26 +382,26 @@
         "type": "mcq",
         "prompt": "In which area is photography not permitted?",
         "options": [
-          "A. The Archive Room and Audio-Visual Theater",
-          "B. The Gift Shop",
-          "C. The Historical Galleries and Archive Room",
-          "D. All exhibition areas"
+          "A. The Gift Shop and the Cafe",
+          "B. The Historical Galleries and Archive Room",
+          "C. All exhibition areas, including the Art Gallery",
+          "D. The Archive Room and Audio-Visual Theater"
         ],
-        "answer": "A",
-        "why": "The guide states: 'photography is allowed in most areas, except in the Archive Room and the Audio-Visual Theater.' Option A correctly identifies both restricted areas, while the others include locations where photography is actually allowed."
+        "answer": "D",
+        "why": "The guide states: 'photography is allowed in most areas, except in the Archive Room and the Audio-Visual Theater.' Option D names both restricted areas, while A, B and C include places where photography is allowed (the Galleries only ban flash)."
       },
       {
         "id": "l1-s2-q10",
         "type": "mcq",
         "prompt": "How can visitors identify museum staff members?",
         "options": [
-          "A. They wear name badges",
-          "B. They wear blue uniforms",
-          "C. They wear red uniforms",
+          "A. They wear blue uniforms",
+          "B. They wear red uniforms",
+          "C. They wear name badges on lanyards",
           "D. They carry clipboards"
         ],
-        "answer": "B",
-        "why": "The guide explains: 'They're identifiable by their blue uniforms.' Option B is the only one that correctly describes the staff identification method mentioned in the script."
+        "answer": "A",
+        "why": "The guide explains: 'They're identifiable by their blue uniforms.' Option A is the only one that matches; B has the wrong colour, and C and D are never mentioned."
       }
     ]
   },
@@ -519,26 +519,26 @@
         "type": "mcq",
         "prompt": "According to James, what is a major barrier to renewable energy adoption?",
         "options": [
-          "A. High technology costs",
-          "B. Lack of government interest",
-          "C. Insufficient grid capacity and infrastructure",
-          "D. Limited population demand"
+          "A. High technology and installation costs",
+          "B. Weak grid capacity to distribute power",
+          "C. Lack of government interest in renewables",
+          "D. Limited public demand for solar power"
         ],
-        "answer": "C",
-        "why": "James states: 'Many developing nations lack the grid capacity to distribute solar power effectively.' Option C correctly identifies this infrastructure barrier, while other options represent different or opposite concerns."
+        "answer": "B",
+        "why": "James states: 'Many developing nations lack the grid capacity to distribute solar power effectively.' Option B names this barrier; A, C and D are not what he says."
       },
       {
         "id": "l1-s3-q04",
         "type": "mcq",
         "prompt": "What solution does Emma propose to address infrastructure limitations?",
         "options": [
-          "A. Expanding the national grid capacity",
-          "B. Installing large solar farms at centralized locations",
-          "C. Government regulatory frameworks",
-          "D. Community microgrids"
+          "A. Expanding the national grid",
+          "B. Building large centralised solar farms",
+          "C. Stricter government regulation",
+          "D. Decentralised community microgrids"
         ],
         "answer": "D",
-        "why": "Emma states: 'There are decentralized solutions like community microgrids that could bypass the need for extensive infrastructure.' Option D names Emma's specific proposal. B refers to the barrier James raised; C is a related approach but not Emma's suggestion; D is the policy solution James identifies."
+        "why": "Emma states: 'There are decentralized solutions like community microgrids that could bypass the need for extensive infrastructure.' Option D is her proposal. A is the opposite of bypassing infrastructure, B is centralised rather than decentralised, and C is the policy angle James raises."
       },
       {
         "id": "l1-s3-q05",
@@ -598,13 +598,13 @@
         "type": "mcq",
         "prompt": "According to Professor Harris, the report should include at least how many original case studies?",
         "options": [
-          "A. Two case studies",
-          "B. Five case studies",
-          "C. Three case studies",
-          "D. Eight case studies"
+          "A. Three case studies",
+          "B. Eight case studies",
+          "C. Five case studies",
+          "D. Four case studies"
         ],
-        "answer": "B",
-        "why": "Professor Harris instructs: 'Make sure you include a literature review, your methodology, and at least five original case studies.' Option B correctly states the minimum number of case studies required."
+        "answer": "C",
+        "why": "Professor Harris instructs: 'Make sure you include a literature review, your methodology, and at least five original case studies.' Option C states the minimum; A, B and D are different numbers."
       }
     ]
   },
@@ -634,11 +634,19 @@
       },
       {
         "speaker": "Dr. Robert Chen",
+        "text": "Land management matters here. Protecting existing woodland is usually more effective than planting new trees, because a young plantation takes a long time to match the storage of an established forest."
+      },
+      {
+        "speaker": "Dr. Robert Chen",
         "text": "Wetlands are another important biological carbon sink. These ecosystems store carbon in their soil and vegetation at much higher rates than upland areas. Peatlands, which are a type of wetland dominated by peat moss, can store carbon for thousands of years. Unfortunately, when peatlands are drained for agriculture or development, that stored carbon is released back into the atmosphere as carbon dioxide."
       },
       {
         "speaker": "Dr. Robert Chen",
         "text": "Now, geological sequestration involves injecting carbon dioxide deep underground into geological formations. These formations, typically deep saline aquifers or depleted oil and gas fields, can safely store carbon dioxide indefinitely. The permanence of geological storage makes it an attractive option for long-term climate mitigation."
+      },
+      {
+        "speaker": "Dr. Robert Chen",
+        "text": "Engineers choose these sites carefully. The rock above the reservoir must be dense enough to act as a seal, and the site is monitored afterwards to check that nothing leaks back towards the surface."
       },
       {
         "speaker": "Dr. Robert Chen",
@@ -651,6 +659,10 @@
       {
         "speaker": "Dr. Robert Chen",
         "text": "Several countries have begun implementing carbon sequestration as part of their climate strategy. Norway, for example, has been a leader in this field. They store carbon dioxide captured from industrial facilities in geological formations beneath the North Sea. This project, called Sleipner, has been operating successfully since nineteen ninety-six."
+      },
+      {
+        "speaker": "Dr. Robert Chen",
+        "text": "Of course, a project of this kind needs more than good engineering. Local communities want to know that the storage is safe, so operators have to share their monitoring results openly and answer questions from the public."
       },
       {
         "speaker": "Dr. Robert Chen",
