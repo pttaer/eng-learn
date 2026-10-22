@@ -454,6 +454,113 @@ standards: "Cambridge Listening Specifications"
 
 *Label the map below. Choose the correct letter, **A–E**, for each facility.*
 
+```xml
+<svg viewBox="0 0 680 400" class="ielts-map-svg" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="riverGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1f6feb" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#388bfd" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="wetlandGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#238636" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#1f6feb" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="680" height="400" fill="#0d1117" rx="8" stroke="#30363d" stroke-width="1.5"/>
+  
+  <!-- Map Title -->
+  <text x="30" y="32" fill="#f0f6fc" font-size="14" font-weight="700" font-family="system-ui, sans-serif">Riverside Eco-Park &amp; Community Food Forest — Visitor Plan</text>
+
+  <!-- Compass Rose -->
+  <g transform="translate(620, 45)">
+    <circle cx="0" cy="0" r="18" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <path d="M 0 -14 L 4 -2 L 0 0 L -4 -2 Z" fill="#f85149"/>
+    <path d="M 0 14 L 4 2 L 0 0 L -4 2 Z" fill="#8b949e"/>
+    <text x="0" y="-18" fill="#f85149" font-size="10" font-weight="bold" text-anchor="middle">N</text>
+  </g>
+
+  <!-- River along Eastern Perimeter -->
+  <path d="M 590 0 C 580 120, 610 260, 595 400 L 680 400 L 680 0 Z" fill="url(#riverGrad)"/>
+  <text x="635" y="210" fill="#f0f6fc" font-size="12" font-style="italic" font-weight="600" text-anchor="middle" transform="rotate(90 635 210)">RIVER WEIR</text>
+
+  <!-- Willow Creek flowing across -->
+  <path d="M 330 400 C 340 300, 360 210, 420 180 C 480 150, 540 180, 595 190" fill="none" stroke="#388bfd" stroke-width="14" stroke-linecap="round" opacity="0.6"/>
+  <text x="390" y="270" fill="#58a6ff" font-size="10" font-style="italic" transform="rotate(-65 390 270)">Willow Creek</text>
+
+  <!-- Wetlands in the North -->
+  <ellipse cx="400" cy="85" rx="90" ry="35" fill="url(#wetlandGrad)" stroke="#238636" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="400" y="88" fill="#7ee787" font-size="10" font-weight="500" text-anchor="middle">Tidal Wetlands &amp; Reed Beds</text>
+
+  <!-- Main Car Park & Western Perimeter -->
+  <rect x="25" y="140" width="65" height="110" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="57" y="195" fill="#8b949e" font-size="10" font-weight="600" text-anchor="middle">CAR</text>
+  <text x="57" y="210" fill="#8b949e" font-size="10" font-weight="600" text-anchor="middle">PARK</text>
+
+  <!-- Visitor Pavilion (Entrance) -->
+  <rect x="110" y="170" width="80" height="50" rx="4" fill="#1f2937" stroke="#e3b341" stroke-width="1.5"/>
+  <text x="150" y="192" fill="#f3ba2f" font-size="9" font-weight="bold" text-anchor="middle">VISITOR</text>
+  <text x="150" y="206" fill="#f3ba2f" font-size="9" font-weight="bold" text-anchor="middle">PAVILION</text>
+  <text x="150" y="235" fill="#f85149" font-size="9" font-weight="bold" text-anchor="middle">● YOU ARE HERE</text>
+
+  <!-- Central Boardwalk / Main Avenue -->
+  <path d="M 190 195 L 350 195 L 430 195 L 590 195" fill="none" stroke="#8b949e" stroke-width="8" stroke-dasharray="1 0"/>
+  <text x="255" y="185" fill="#8b949e" font-size="9" font-weight="bold">Central Boardwalk</text>
+
+  <!-- Northern curved path to wetlands -->
+  <path d="M 150 170 Q 180 80, 310 80" fill="none" stroke="#6e7681" stroke-width="4" stroke-dasharray="5 3"/>
+
+  <!-- [A] Immediately north of Visitor Pavilion -->
+  <g transform="translate(150, 110)">
+    <rect x="-35" y="-22" width="70" height="38" rx="4" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+    <circle cx="-20" cy="-3" r="10" fill="#1f6feb"/>
+    <text x="-20" y="1" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">A</text>
+    <text x="5" y="-6" fill="#c9d1d9" font-size="8" font-weight="600">Organic</text>
+    <text x="5" y="6" fill="#c9d1d9" font-size="8" font-weight="600">Seed Bank</text>
+  </g>
+
+  <!-- [B] Circular structure near northern wetlands among willows -->
+  <g transform="translate(325, 80)">
+    <circle cx="0" cy="0" r="22" fill="#161b22" stroke="#2ea043" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="11" fill="#238636"/>
+    <text x="0" y="4" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">B</text>
+    <text x="0" y="32" fill="#c9d1d9" font-size="9" font-weight="600" text-anchor="middle">Timber Hide</text>
+  </g>
+
+  <!-- [C] Willow Creek Footbridge -->
+  <g transform="translate(385, 195)">
+    <rect x="-18" y="-12" width="36" height="24" rx="3" fill="#8a63d2" stroke="#bc8cff" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="9" fill="#6e40c9"/>
+    <text x="0" y="4" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">C</text>
+    <text x="0" y="-16" fill="#d2a8ff" font-size="9" font-weight="600" text-anchor="middle">Footbridge</text>
+  </g>
+
+  <!-- [D] Nature Play Area immediately south of footbridge -->
+  <g transform="translate(385, 275)">
+    <rect x="-42" y="-22" width="84" height="42" rx="4" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+    <circle cx="-25" cy="-1" r="10" fill="#d29922"/>
+    <text x="-25" y="3" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">D</text>
+    <text x="8" y="-5" fill="#c9d1d9" font-size="8" font-weight="600">Nature</text>
+    <text x="8" y="7" fill="#c9d1d9" font-size="8" font-weight="600">Play Area</text>
+  </g>
+
+  <!-- Hazel Coppice & Composting Hub in SE -->
+  <g transform="translate(490, 310)">
+    <rect x="-35" y="-18" width="70" height="36" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="0" y="-3" fill="#8b949e" font-size="8" text-anchor="middle">Eco-Composting</text>
+    <text x="0" y="9" fill="#8b949e" font-size="8" text-anchor="middle">Education Hub</text>
+  </g>
+
+  <!-- [E] Eastern Terminus at Riverbank Weir -->
+  <g transform="translate(560, 195)">
+    <rect x="-30" y="-24" width="60" height="48" rx="4" fill="#161b22" stroke="#f778ba" stroke-width="1.5"/>
+    <circle cx="0" cy="-6" r="10" fill="#db61a2"/>
+    <text x="0" y="-2" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">E</text>
+    <text x="0" y="15" fill="#c9d1d9" font-size="8" font-weight="600" text-anchor="middle">Solar Pump</text>
+  </g>
+</svg>
+```
+
 - **Question 16**: Organic Seed Bank & Heritage Nursery: `A` (North of the Visitor Pavilion)
 - **Question 17**: Bird Watching Hide: `B` (Circular timber pavilion nestled among willows near the northern wetland)
 - **Question 18**: Willow Creek Footbridge: `C` (Central crossing point connecting eastern and western sectors)
