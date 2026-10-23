@@ -35,7 +35,7 @@ const ROUTE_NAMES: Record<string, string> = {
   habits: 'HABITS • Thói quen',
   singularity: 'SINGULARITY • Bản đồ',
   mediate: 'MEDIATION • Diễn đạt',
-  cockpit: 'IELTS COCKPIT • Luyện thi'
+  cockpit: 'IELTS COCKPIT'
 };
 
 export class HeaderHUD {
@@ -55,7 +55,7 @@ export class HeaderHUD {
   constructor() {
     HeaderHUD.instance = this;
     this.element = document.createElement('header');
-    this.element.className = 'hud-header apple-glass interactive';
+    this.element.className = 'hud-header interactive';
 
     // Initialize theme from storage or default to dark (game HUD aesthetic)
     const savedTheme = localStorage.getItem('eng_theme');
