@@ -113,11 +113,14 @@ async function run() {
     });
 
     const shot = async (filename, desc, preserveModals = false) => {
-      if (!preserveModals) {
-        await page.evaluate(() => {
+      await page.evaluate((preserve) => {
+        window.scrollTo(0, 0);
+        const mount = document.getElementById('workspace-mount');
+        if (mount) mount.scrollTop = 0;
+        if (!preserve) {
           document.querySelectorAll('.completion-modal-overlay:not(.interactive), #tour-welcome-toast, .spotlight-overlay, .spotlight-tooltip, #notification-toast-container').forEach(el => el.remove());
-        });
-      }
+        }
+      }, preserveModals);
       await new Promise(r => setTimeout(r, 250));
       const primaryPath = path.join(OUTPUT_DIR, filename);
       const buffer = await page.screenshot({ fullPage: false });
