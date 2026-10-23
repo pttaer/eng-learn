@@ -356,7 +356,7 @@ export class ListeningPromptComponent {
           </span>
         </div>
         <div class="listening-gap-input-row" style="display: flex; gap: 8px; align-items: center;">
-          <input type="text" class="listening-gap-input" placeholder="Type linked words (or select option below)..." autocomplete="off" spellcheck="false" style="flex: 1; padding: 8px 12px; font-family: var(--font-mono); font-size: var(--font-body-compact); background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 4px; color: var(--ink-primary); outline: none;">
+          <input type="text" class="listening-gap-input" placeholder="Type linked words (or select option below)..." autocomplete="off" spellcheck="false" style="flex: 1; padding: 8px 12px; font-family: var(--font-mono); font-size: var(--font-body-compact); background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm, 6px); color: var(--ink-primary); outline: none;">
           <button type="button" class="hud-btn btn-verify-gap" style="padding: 8px 14px; font-weight: 700; font-size: var(--font-body-compact); border-color: var(--accent-gold); color: var(--accent-gold);">
             Verify Gap
           </button>

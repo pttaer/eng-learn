@@ -5,9 +5,9 @@
    ========================================================================== */
 
 :root {
-  --card-width-fluid: clamp(340px, 92vw, 760px);
+  --card-width-fluid: 100%;
   --card-height-fluid: auto;
-  --card-padding-fluid: var(--pad-card);
+  --card-padding-fluid: var(--pad-card, clamp(14px, 2.5vw, 24px));
 }
 
 /* Slot as Container Context */
@@ -120,6 +120,7 @@
   height: 8px;
   border-top: 2px solid var(--accent-gold);
   border-left: 2px solid var(--accent-gold);
+  border-top-left-radius: var(--radius-md, 8px);
   pointer-events: none;
 }
 
@@ -132,6 +133,7 @@
   height: 8px;
   border-bottom: 2px solid var(--accent-gold);
   border-right: 2px solid var(--accent-gold);
+  border-bottom-right-radius: var(--radius-md, 8px);
   pointer-events: none;
 }
 
@@ -160,6 +162,7 @@
   padding: 2px 8px;
   font-size: var(--text-2xs);
   border: 1px solid var(--ink-primary);
+  border-radius: var(--radius-xs, 4px);
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -176,6 +179,7 @@
 .btn-audio-speak {
   background: transparent;
   border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-sm, 6px);
   min-width: 44px;
   min-height: 44px;
   padding: 4px 10px;

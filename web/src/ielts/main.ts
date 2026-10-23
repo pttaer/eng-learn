@@ -230,7 +230,7 @@ let cleanup: () => void = () => {};
 
 header.innerHTML = `
   <div class="ie-top-bar">
-    <a class="ie-back" href="./index.html">&lt; English Singularity</a>
+    <a class="ie-back" href="./index.html"><span class="ie-back-arrow">←</span> English Singularity</a>
     <a class="ie-brand" href="#home">IELTS <b>7.0</b></a>
     <div class="ie-top-actions" style="margin-left: auto; display: flex; gap: 8px;">
       <button type="button" class="ie-btn ie-btn-sm ie-btn-commute" title="Hands-Free Commute Audio Loop" aria-label="Hands-Free Commute Audio Loop" style="padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px;">

@@ -555,7 +555,7 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
     // Header HUD
     const header = h('div', 'ie-sim-header');
     const titleRow = h('div', 'ie-sim-nav-row');
-    const backBtn = h('button', 'ie-btn ie-btn-back', '< Back to Speaking');
+    const backBtn = h('button', 'ie-btn ie-btn-back', '<span class="ie-back-arrow">←</span> Back to Speaking');
     backBtn.addEventListener('click', () => {
       stopActiveAudio();
       engine.dispose();

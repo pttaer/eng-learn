@@ -442,7 +442,7 @@ export function readingDrillsView(root: HTMLElement): () => void {
       <span class="ie-hud-label">Drills Mastered</span>
     </div>
     <div class="ie-hud-actions">
-      <a href="#reading" class="ie-btn ie-btn-sm ie-btn-back">&lt; Back to Full Passages</a>
+      <a href="#reading" class="ie-btn ie-btn-sm ie-btn-back"><span class="ie-back-arrow">←</span> Back to Full Passages</a>
       <button type="button" class="ie-btn ie-btn-sm" id="btn-toggle-synonyms" aria-pressed="false">
         🔄 Toggle Synonym Engine
       </button>
@@ -663,7 +663,7 @@ export function readingDrillsView(root: HTMLElement): () => void {
 
     // Prev / Next Buttons
     const navButtons = h('div', 'ie-drill-nav-btns');
-    const prevBtn = h('button', 'ie-btn ie-btn-sm', '< Previous');
+    const prevBtn = h('button', 'ie-btn ie-btn-sm', '← Previous');
     prevBtn.disabled = currentDrillIndex === 0;
     prevBtn.addEventListener('click', () => {
       if (currentDrillIndex > 0) {

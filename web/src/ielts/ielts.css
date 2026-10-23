@@ -15,7 +15,7 @@ svg.icon, .icon {
 }
 
 #ielts-app { min-height: 100dvh; display: flex; flex-direction: column; }
-.ie-header { display: flex; align-items: center; gap: var(--space-16); flex-wrap: wrap; padding: var(--space-12) 24px; border-bottom: 1px solid var(--border-hairline); background: var(--bg-surface); position: sticky; top: 0; z-index: 5; }
+.ie-header { display: flex; align-items: center; gap: var(--space-16); flex-wrap: wrap; padding: var(--space-12) var(--pad-screen-right) var(--space-12) var(--pad-screen-left); border-bottom: 1px solid var(--border-hairline); background: var(--bg-surface); position: sticky; top: 0; z-index: 5; }
 .ie-top-bar { display: contents; }
 .ie-nav-track { position: relative; display: flex; align-items: center; flex: 1; min-width: 0; }
 .ie-nav-arrow { display: none; }
@@ -29,19 +29,20 @@ svg.icon, .icon {
 .ie-btn-back {
   color: var(--ink-secondary) !important;
   text-decoration: none !important;
-  padding: 4px 6px !important;
+  padding: 6px 8px !important;
   border-radius: 6px !important;
   min-height: 36px !important;
   display: inline-flex !important;
   align-items: center !important;
-  gap: 6px !important;
+  gap: 10px !important;
   font-size: var(--text-xs) !important;
   font-weight: 700 !important;
   border: none !important;
   background: transparent !important;
   box-shadow: none !important;
   outline: none !important;
-  transition: color 0.15s ease;
+  transition: color 0.15s ease, background 0.15s ease;
+  cursor: pointer;
 }
 .ie-back:hover,
 .ie-btn-back:hover {
@@ -49,6 +50,21 @@ svg.icon, .icon {
   color: var(--accent-cyan) !important;
   border: none !important;
   box-shadow: none !important;
+}
+
+.ie-back-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+  transition: transform 0.15s ease;
+}
+
+.ie-back:hover .ie-back-arrow,
+.ie-btn-back:hover .ie-back-arrow {
+  transform: translateX(-3px);
 }
 
 .ie-main { width: 100%; max-width: 1040px; margin: 0 auto; padding: var(--pad-workspace); display: flex; flex-direction: column; gap: var(--gap-block); }
@@ -239,8 +255,8 @@ small, sub, sup { font-size: var(--font-kicker); }
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-    padding-bottom: 4px !important;
+    scrollbar-width: thin !important;
+    padding-bottom: 6px !important;
     gap: var(--gap-element, 6px) !important;
     width: 100% !important;
   }
@@ -250,7 +266,8 @@ small, sub, sup { font-size: var(--font-kicker); }
   .ie-visual-tabs::-webkit-scrollbar,
   .ie-arch-tabs::-webkit-scrollbar,
   .ie-drills-nav-tabs::-webkit-scrollbar {
-    display: none !important;
+    height: var(--scrollbar-size, 5px) !important;
+    display: block !important;
   }
   .ie-tab,
   .ie-drill-tab {
@@ -1130,17 +1147,14 @@ small, sub, sup { font-size: var(--font-kicker); }
 .ie-writing-studio-shell { display: flex; flex-direction: column; gap: var(--space-16); }
 .ie-studio-header { padding: var(--space-16); background: var(--bg-surface); border: 1px solid var(--border-hairline); border-radius: 12px; }
 .ie-studio-badge { display: inline-block; font-size: var(--font-kicker); font-weight: 800; color: var(--accent-cyan); background: var(--accent-cyan-soft); padding: 2px var(--space-8); border-radius: 6px; letter-spacing: 0.05em; margin-bottom: var(--space-6); }
-.ie-studio-mode-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; padding: 4px; background: var(--bg-surface-sunk); border: 1px solid var(--border-hairline); border-radius: 10px; width: 100%; box-sizing: border-box; }
+.ie-studio-mode-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; padding: 4px; background: var(--bg-surface-sunk); border: none; border-radius: 10px; width: 100%; box-sizing: border-box; }
 /* The global mobile tab rule forces nowrap !important; the studio switcher is a 3-column grid and must wrap */
-.ie-studio-mode-tabs .ie-tab { white-space: normal !important; }
-.ie-studio-mode-tabs .ie-tab { min-width: 0; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 6px; min-height: var(--touch-target-min); border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--ink-secondary); font-size: var(--font-body-compact); font-weight: 600; cursor: pointer; text-align: center; transition: all 0.15s ease; }
-.ie-studio-mode-tabs .ie-tab.is-on { background: var(--bg-card); color: var(--accent-cyan); border-color: var(--border-subtle); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35); font-weight: 700; }
-.ie-visual-tabs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin-bottom: var(--space-8); }
-.ie-visual-tabs .ie-tab { display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px 4px; font-size: var(--text-xs); font-weight: 600; min-height: var(--touch-target-min); white-space: nowrap; border-radius: 8px; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-secondary); transition: all 0.15s ease; }
-.ie-visual-tabs .ie-tab.is-on { background: var(--accent-cyan-soft); color: var(--accent-cyan); border-color: var(--accent-cyan); font-weight: 700; }
-.ie-arch-tabs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: var(--space-8); }
-.ie-arch-tabs .ie-tab { display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px 4px; font-size: var(--text-xs); font-weight: 600; min-height: var(--touch-target-min); white-space: nowrap; border-radius: 8px; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-secondary); transition: all 0.15s ease; }
-.ie-arch-tabs .ie-tab.is-on { background: var(--accent-cyan-soft); color: var(--accent-cyan); border-color: var(--accent-cyan); font-weight: 700; }
+.ie-studio-mode-tabs .ie-tab { white-space: normal !important; min-width: 0; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 6px; min-height: 48px; border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--ink-secondary); font-size: var(--font-body-compact); font-weight: 600; cursor: pointer; text-align: center; line-height: 1.25; transition: all 0.15s ease; }
+.ie-studio-mode-tabs .ie-tab.is-on { background: var(--bg-card); color: var(--accent-cyan); border-color: transparent; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35); font-weight: 700; }
+.ie-visual-tabs, .ie-arch-tabs { display: flex; flex-direction: row; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; gap: 8px; padding: 2px 2px 6px 2px; margin-bottom: var(--space-12); scrollbar-width: thin; }
+.ie-visual-tabs::-webkit-scrollbar, .ie-arch-tabs::-webkit-scrollbar { height: var(--scrollbar-size, 5px); display: block; }
+.ie-visual-tabs .ie-tab, .ie-arch-tabs .ie-tab { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; text-align: center; padding: 8px 14px; font-size: var(--text-xs); font-weight: 600; min-height: 40px; white-space: nowrap; border-radius: 8px; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-secondary); transition: all 0.15s ease; }
+.ie-visual-tabs .ie-tab.is-on, .ie-arch-tabs .ie-tab.is-on { background: var(--accent-cyan-soft); color: var(--accent-cyan); border-color: var(--accent-cyan); font-weight: 700; }
 
 .ie-blueprint-arena, .ie-architect-arena { display: flex; flex-direction: column; gap: var(--space-16); }
 .ie-bp-prompt-card, .ie-arch-prompt-card { display: flex; flex-direction: column; gap: var(--space-8); padding: var(--space-16); background: var(--bg-surface); border: 1px solid var(--border-hairline); border-radius: 12px; }
@@ -1751,7 +1765,7 @@ small, sub, sup { font-size: var(--font-kicker); }
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 24px;
+  padding: 16px var(--pad-screen-right) 16px var(--pad-screen-left);
   box-sizing: border-box;
   opacity: 0;
   pointer-events: none;
@@ -1849,7 +1863,7 @@ small, sub, sup { font-size: var(--font-kicker); }
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding: 10px 24px 4px 24px;
+    padding: 10px var(--pad-screen-right) 4px var(--pad-screen-left);
     gap: 8px;
     background: var(--bg-surface);
     border-bottom: 1px solid var(--border-hairline);
@@ -1882,6 +1896,7 @@ small, sub, sup { font-size: var(--font-kicker); }
     border-radius: 6px;
     display: inline-flex;
     align-items: center;
+    gap: 10px !important;
     border: none !important;
     background: transparent !important;
     box-shadow: none !important;
@@ -1905,17 +1920,18 @@ small, sub, sup { font-size: var(--font-kicker); }
     overflow-y: hidden;
     gap: 8px;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    scrollbar-width: thin;
     /* Edge-to-edge full bleed with 24px start/end padding aligning with screen inset */
     margin: 0;
-    padding: 2px 24px 8px 24px;
+    padding: 2px var(--pad-screen-right) 8px var(--pad-screen-left);
     width: 100%;
     box-sizing: border-box;
-    scroll-padding: 0 24px;
+    scroll-padding: 0 var(--pad-screen-right) 0 var(--pad-screen-left);
   }
 
   .ie-nav::-webkit-scrollbar {
-    display: none;
+    height: var(--scrollbar-size, 5px);
+    display: block;
   }
 
   .ie-nav-arrow {
@@ -2241,12 +2257,13 @@ small, sub, sup { font-size: var(--font-kicker); }
     flex-wrap: nowrap;
     min-width: 0;
     overflow-x: auto;
-    scrollbar-width: none;
+    scrollbar-width: thin;
     padding-right: 28px;
+    padding-bottom: 6px;
     -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
     mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
   }
-  .ie-nav::-webkit-scrollbar { display: none; }
+  .ie-nav::-webkit-scrollbar { height: var(--scrollbar-size, 5px); display: block; }
   .ie-nav > * { flex: 0 0 auto; white-space: nowrap; min-height: 44px; }
 
   /* Segmented switchers (Blueprints / Vault, Core / Topic / Combined) share the row evenly */
@@ -2443,7 +2460,7 @@ small, sub, sup { font-size: var(--font-kicker); }
   position: relative !important;
   background: var(--bg-card) !important;
   border: 1px solid var(--border-subtle) !important;
-  border-radius: 8px !important;
+  border-radius: var(--radius-md, 8px) !important;
   box-shadow: var(--shadow-card);
 }
 
@@ -2457,6 +2474,7 @@ small, sub, sup { font-size: var(--font-kicker); }
   height: 8px !important;
   border-top: 2px solid var(--accent-gold) !important;
   border-left: 2px solid var(--accent-gold) !important;
+  border-top-left-radius: var(--radius-md, 8px) !important;
   pointer-events: none !important;
   z-index: 2 !important;
 }
@@ -2471,6 +2489,7 @@ small, sub, sup { font-size: var(--font-kicker); }
   height: 8px !important;
   border-bottom: 2px solid var(--accent-gold) !important;
   border-right: 2px solid var(--accent-gold) !important;
+  border-bottom-right-radius: var(--radius-md, 8px) !important;
   pointer-events: none !important;
   z-index: 2 !important;
 }

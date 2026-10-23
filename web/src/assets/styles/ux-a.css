@@ -85,7 +85,7 @@
 @media (max-width: 900px) { .workout-panel { max-width: 100%; flex: 1 1 auto !important; } .workout-panel .workout-tasks { flex-wrap: wrap; } }
 @media (max-width: 360px) {
   .header-actions .hud-btn { padding: 6px 8px !important; min-width: 40px; }
-  .hud-header, header.hud-header { gap: 6px !important; padding-left: 8px !important; padding-right: 8px !important; }
+  .hud-header, header.hud-header { gap: 6px !important; padding-left: 0 !important; padding-right: 0 !important; }
 }
 @media (max-width: 900px) { .workout-panel > div:first-child { flex: 1 1 240px !important; min-width: 0; } .skill-tree-shell h1 { white-space: normal !important; } }
 @media (max-width: 360px) { .hud-brand-title { display: none !important; } .hud-rank-badge { display: none !important; } }

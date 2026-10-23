@@ -57,19 +57,19 @@ export class PlacementQuiz {
   }
 
   private card(inner: string): void {
-    this.overlay.innerHTML = `<div class="completion-receipt-card" style="max-width: 520px; width: 100%;">${inner}</div>`;
+    this.overlay.innerHTML = `<div class="completion-receipt-card placement-quiz-card" style="max-width: 520px; width: 100%; text-align: left; align-items: stretch; box-sizing: border-box;">${inner}</div>`;
   }
 
   private renderIntro(): void {
     this.card(`
-      <div class="telemetry-label" style="margin-bottom: var(--space-8);">FIND YOUR LEVEL</div>
-      <p style="font-size: var(--font-h4); line-height: 1.5; margin-bottom: var(--space-16); color: var(--ink-secondary);">
+      <div class="telemetry-label" style="margin-bottom: var(--space-8); letter-spacing: 0.1em; color: var(--accent-gold); font-weight: 700;">✦ FIND YOUR LEVEL ✦</div>
+      <p style="font-size: var(--font-h4); line-height: 1.5; margin: 0 0 var(--space-16) 0; color: var(--ink-secondary);">
         Answer a few quick questions and the app will start you at the right CEFR level (A1 to C2). It stops as soon as
         questions get too hard. You can change your level at any time.
       </p>
       <div style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8);">
-        <button class="hud-btn placement-start" style="width: 100%; justify-content: center; padding: 12px 0; font-weight: 700;">Start (about 2 minutes)</button>
-        <button class="hud-btn placement-skip" style="width: 100%; justify-content: center; padding: 10px 0;">Skip and start at A1</button>
+        <button class="hud-btn placement-start" style="width: 100%; justify-content: center; min-height: 44px; padding: 12px 0; font-weight: 700; border-radius: 6px;">Start (about 2 minutes)</button>
+        <button class="hud-btn placement-skip" style="width: 100%; justify-content: center; min-height: 44px; padding: 10px 0; border-radius: 6px;">Skip and start at A1</button>
       </div>
     `);
     this.overlay.querySelector('.placement-start')?.addEventListener('click', () => this.renderQuestion());
@@ -88,16 +88,16 @@ export class PlacementQuiz {
     };
     const badgeText = badgeMap[q.kind] || `[ ${q.kind.toUpperCase()} ]`;
     this.card(`
-      <div class="telemetry-label" style="margin-bottom: var(--space-8); display: flex; align-items: center; justify-content: space-between;">
+      <div class="telemetry-label" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-8);">
         <span>QUESTION ${this.index + 1} / ${this.questions.length} &middot; ${q.level}</span>
         <span class="hud-badge placement-skill-badge" style="letter-spacing: 0.05em; font-weight: 700; color: var(--gold-primary, #ca8a04);">${badgeText}</span>
       </div>
-      <div style="font-size: var(--font-h2); font-weight: 700; margin-bottom: var(--space-4);">${this.escape(q.prompt)}</div>
-      ${q.context ? `<div style="font-size: var(--font-body-compact); color: var(--ink-secondary); margin-bottom: var(--space-16);">${this.escape(q.context)}</div>` : '<div style="margin-bottom: var(--space-16);"></div>'}
+      <div class="placement-prompt-title" style="font-size: var(--font-h3); font-weight: 700; line-height: 1.35; margin: 0 0 ${q.context ? 'var(--space-8)' : 'var(--space-16)'} 0; color: var(--ink-primary);">${this.escape(q.prompt)}</div>
+      ${q.context ? `<div class="placement-context-box" style="font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5; margin: 0 0 var(--space-16) 0;">${this.escape(q.context)}</div>` : ''}
       <div role="group" aria-label="Choose the answer" style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8);">
-        ${q.options.map((o, i) => `<button class="hud-btn placement-option" data-i="${i}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 10px 14px; text-align: left; white-space: normal; height: auto; text-transform: none;">${i + 1}. ${this.escape(o)}</button>`).join('')}
+        ${q.options.map((o, i) => `<button class="hud-btn placement-option" data-i="${i}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 12px 14px; text-align: left; white-space: normal; min-height: 44px; text-transform: none; border-radius: 6px; font-family: var(--font-mono); font-size: var(--font-body-compact); line-height: 1.4;">${i + 1}. ${this.escape(o)}</button>`).join('')}
       </div>
-      <button class="hud-btn placement-skip" style="width: 100%; justify-content: center; padding: 8px 0; margin-top: var(--space-16);">Skip the quiz</button>
+      <button class="hud-btn placement-skip" style="width: 100%; justify-content: center; min-height: 40px; padding: 8px 0; margin-top: var(--space-12); border-radius: 6px;">Skip the quiz</button>
     `);
     this.overlay.querySelectorAll<HTMLElement>('.placement-option').forEach(btn => {
       btn.addEventListener('click', () => this.answer(Number(btn.dataset.i)));

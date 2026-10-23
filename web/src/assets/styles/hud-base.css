@@ -153,22 +153,22 @@ svg.icon,
   stroke: var(--accent-gold);
 }
 
-/* Custom Scrollbar */
+/* Custom Minimal Scrollbar */
 ::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
+  width: var(--scrollbar-size, 5px);
+  height: var(--scrollbar-size, 5px);
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-canvas);
+  background: var(--scrollbar-track, transparent);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border-subtle);
-  border-radius: 2px;
+  background-color: var(--scrollbar-thumb, rgba(255, 255, 255, 0.22));
+  border-radius: var(--radius-full, 9999px);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-gold);
+  background-color: var(--scrollbar-thumb-hover, rgba(255, 255, 255, 0.45));
 }
 
 /* Base Canvas Shell */
@@ -251,7 +251,7 @@ svg.icon,
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: max(10px, env(safe-area-inset-top, 0px)) max(24px, env(safe-area-inset-right, 0px)) max(10px, env(safe-area-inset-bottom, 0px)) max(24px, env(safe-area-inset-left, 0px));
+  padding: max(10px, env(safe-area-inset-top, 0px)) max(var(--pad-screen-right), env(safe-area-inset-right, 0px)) max(10px, env(safe-area-inset-bottom, 0px)) max(var(--pad-screen-left), env(safe-area-inset-left, 0px));
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -423,6 +423,7 @@ svg.icon,
   height: var(--touch-target-min, 44px);
   padding: 0 var(--space-12);
   border: var(--border-width) solid var(--ink-primary);
+  border-radius: var(--radius-sm, 6px);
   background: var(--bg-canvas);
   color: var(--ink-primary);
   box-sizing: border-box;
@@ -541,27 +542,89 @@ svg.icon,
   box-shadow: var(--shadow-glow);
 }
 
-/* High-Contrast Dedicated Styling for Back to Constellation Tree (Borderless) */
-.hud-btn.btn-back-tree {
-  background: transparent !important;
-  border: none !important;
-  color: var(--ink-secondary) !important;
+/* Universal Form Control Outline & Radius Standard */
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  border-radius: var(--radius-sm, 6px);
+  box-sizing: border-box;
+}
+
+/* Clean Unified Navigation Controls: Back Button & Level Badge */
+.hud-btn.btn-back-tree,
+.hud-btn.btn-level,
+.hud-status-badge.btn-level {
+  height: 36px;
+  min-height: 36px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
   font-weight: 700;
-  padding: 4px 6px !important;
+  letter-spacing: 0.05em;
+  padding: 0 10px;
   border-radius: 6px;
-  box-shadow: none !important;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  box-sizing: border-box;
+  box-shadow: none;
   cursor: pointer;
+  transition: all var(--duration-fast);
+}
+
+.hud-btn.btn-back-tree {
+  color: var(--ink-secondary);
+  gap: 6px;
 }
 
 .hud-btn.btn-back-tree:hover {
-  background: transparent !important;
-  color: var(--accent-gold) !important;
-  border: none !important;
-  box-shadow: none !important;
-  transform: none !important;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--ink-primary);
+  border-color: var(--accent-gold);
+}
+
+.hud-btn.btn-back-tree .back-arrow {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hud-btn.btn-level,
+.hud-status-badge.btn-level {
+  color: var(--accent-gold);
+  min-width: 36px;
+}
+
+.hud-btn.btn-level:hover,
+.hud-status-badge.btn-level:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  transform: translateY(-1px);
+}
+
+.hud-status-badge.active-route-badge {
+  height: 36px;
+  min-height: 36px;
+  padding: 0 10px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: var(--bg-surface-sunk);
+  border: 1px solid var(--border-hairline);
+  color: var(--ink-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--font-kicker);
+  letter-spacing: 0.08em;
 }
 
 /* Dual-Layer Coaxial Focus Ring for WCAG 2.2 AAA */
@@ -1175,6 +1238,10 @@ body.zen-active,
   }
 
   .mobile-action-sheet {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: left !important;
     width: 100% !important;
     max-width: 520px !important;
     border-radius: 16px 16px 0 0 !important;
@@ -1185,6 +1252,14 @@ body.zen-active,
     max-height: 90dvh !important;
     overflow-y: auto !important;
     animation: slideUpSheet 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .mobile-action-sheet-header {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
   }
 
   .sheet-btn-close {
@@ -1203,6 +1278,8 @@ body.zen-active,
     justify-content: center !important;
     cursor: pointer !important;
     transition: all 0.15s ease !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
   }
 
   .sheet-btn-close:hover,

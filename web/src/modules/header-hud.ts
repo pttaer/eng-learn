@@ -93,10 +93,10 @@ export class HeaderHUD {
     const currentStreak = progression.streak || state.streak.currentStreak || 0;
 
     this.element.innerHTML = `
-      <div class="hud-brand" style="display: flex; align-items: center; gap: 12px;">
+      <div class="hud-brand" style="display: flex; align-items: center; gap: 8px;">
         ${!isTree ? `
-          <button class="hud-btn btn-back-tree" title="Return to Constellation Tree" aria-label="Return to Constellation Tree" style="border: none !important; background: transparent !important; box-shadow: none !important; padding: 4px 6px !important; display: inline-flex; align-items: center; gap: 4px; font-weight: 700; cursor: pointer;">
-            <span style="font-size: 14px; font-weight: 700;">&lt;</span><span class="btn-label"> Back to Constellation</span> Tree
+          <button class="hud-btn btn-back-tree" title="Return to Constellation Tree" aria-label="Return to Constellation Tree">
+            <span class="back-arrow">←</span><span class="btn-label"> CONSTELLATION</span> TREE
           </button>
           <span class="hud-status-badge active-route-badge" style="font-size: var(--font-kicker);">${ROUTE_NAMES[this.currentRoute] ?? this.currentRoute.toUpperCase()}</span>
         ` : `
@@ -104,7 +104,7 @@ export class HeaderHUD {
             <span style="color: var(--accent-gold); font-size: var(--font-body-compact);">✦</span> ENGLISH MASTERY
           </span>
         `}
-          <button class="hud-status-badge btn-level" style="background: var(--accent-gold); color: var(--bg-canvas); border-radius: 4px; padding: 2px 8px; font-weight: 700; border-color: var(--accent-gold); cursor: pointer;" aria-haspopup="dialog" title="Your CEFR level (click to change)" aria-label="Your level: ${CEFR_LABELS[StorageManager.getLearnerLevel()]}. Change level">${StorageManager.getLearnerLevel()}</button>
+        <button class="hud-btn btn-level" aria-haspopup="dialog" title="Your CEFR level (click to change)" aria-label="Your level: ${CEFR_LABELS[StorageManager.getLearnerLevel()]}. Change level">${StorageManager.getLearnerLevel()}</button>
       </div>
 
       <div class="hud-telemetry-cluster" style="display: flex; gap: 20px; align-items: center;">
@@ -627,13 +627,13 @@ export class HeaderHUD {
     sheet.setAttribute('aria-label', 'Mobile Navigation Menu');
 
     sheet.innerHTML = `
-      <div class="completion-receipt-card mobile-action-sheet" style="max-width: 500px; width: 92%; max-height: 85vh; overflow-y: auto; padding: 20px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px;">
+      <div class="completion-receipt-card mobile-action-sheet" style="max-width: 500px; width: 92%; max-height: 85vh; overflow-y: auto; padding: 20px; align-items: stretch; text-align: left; box-sizing: border-box;">
+        <div class="mobile-action-sheet-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%; box-sizing: border-box; margin-bottom: 16px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px;">
           <div style="display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1;">
             <span style="color: var(--accent-gold); display: flex; align-items: center;">${icon('sparkles', 16)}</span>
             <span class="telemetry-label" style="font-size: var(--font-body-compact); font-weight: 700; letter-spacing: 0.1em; color: var(--ink-primary); white-space: normal;">MOBILE CONTROLS</span>
           </div>
-          <button class="sheet-btn-close btn-modal-close" aria-label="Close Mobile Menu" style="min-width: 44px; min-height: 44px; width: 44px; height: 44px; padding: 0; background: transparent; border: none; font-size: 16px; color: var(--ink-muted); cursor: pointer; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: color 0.15s ease;">✕</button>
+          <button class="sheet-btn-close btn-modal-close" aria-label="Close Mobile Menu" style="min-width: 44px; min-height: 44px; width: 44px; height: 44px; padding: 0; background: transparent; border: none; font-size: 16px; color: var(--ink-muted); cursor: pointer; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: color 0.15s ease; margin-left: auto; flex-shrink: 0;">✕</button>
         </div>
 
         <div class="mobile-sheet-grid" style="display: flex; flex-direction: column; gap: 10px;">

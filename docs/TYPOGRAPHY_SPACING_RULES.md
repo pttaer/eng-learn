@@ -52,15 +52,28 @@ Padding is structured in 6 strict tiers to maintain clear elevation and touch co
 +---------------------------------------------------------------+
 ```
 
+### Canonical Reference Exemplar (The Gold Standard View)
+
+> **Exemplar Source:** IELTS Academic Writing View (`Mobile/1.0.0/37-mobile-ielts-writing.png` / `web/src/ielts/views/writing.ts` + `web/src/ielts/ielts.css`)  
+> **Mandate:** All views across the application (Dossiers, Skill Tree, Placement Quiz, 12 Tenses, IELTS, Modals) must follow this visual spacing rhythm and padding rule.
+
+- **Workspace Inset:** Defined by single sources of truth `--pad-screen-left: 12px;` and `--pad-screen-right: 12px;` in `variables.css`. Page Title, Lead paragraph, Hub Buttons, Section Subheadings, and Cards align flush along the same left edge.
+- **Card Surface Geometry:** `padding: 16px` on all sides, `border-radius: 12px`, `border: 1px solid var(--border-hairline)`, and `display: flex; flex-direction: column; gap: 8px`.
+- **Card Content Rhythm:** Bold card title (`<b>`) followed by an `8px` gap, then secondary metadata (`<span>` / `<small>`).
+- **Interactive Buttons:** `padding: 8px 18px`, `border-radius: 9px`, stacked with `8px`–`12px` gap. Primary action button is filled with accent color (`var(--accent-cyan)` or lavender) with high-contrast text.
+- **Section Separation:** `var(--gap-block)` (`12px` mobile / `16px`–`20px` desktop) between cards and between button stacks and section headers.
+- **Top Header Bar:** `padding: 12px var(--pad-screen-right) 12px var(--pad-screen-left)`, sticky with `gap: 8px` on navigation pills (`padding: 8px 12px`, `border-radius: 8px`).
+
 ### Padding Tier Specifications
 
-1. **Tier 1: Screen & Viewport Inset (`--pad-screen`)**
-   - **Desktop & Mobile:** `24px` horizontal (consistent across all app views, modals, and IELTS suite), `10px`–`16px` vertical (incorporating `env(safe-area-inset)`)
-   - Token: `24px`
+1. **Tier 1: Screen & Viewport Inset (Single Source of Truth in `variables.css`)**
+   - **Left Inset:** `--pad-screen-left: 12px;` (1 place to control all left padding)
+   - **Right Inset:** `--pad-screen-right: 12px;` (1 place to control all right padding)
+   - **Vertical:** `10px`–`16px` (incorporating `env(safe-area-inset)`)
 
 2. **Tier 2: Workspace & Module Mounting Inset (`--pad-workspace`)**
-   - **Desktop & Mobile:** `24px` left/right consistent across all views; mobile keeps `84px` bottom safe dock clearance (under the bottom nav only)
-   - Token: `24px`
+   - **Formula:** `16px var(--pad-screen-right) 24px var(--pad-screen-left);`
+   - **Desktop & Mobile:** Automatically inherits `--pad-screen-left` and `--pad-screen-right`; mobile keeps `84px` bottom safe dock clearance (under the bottom nav only)
 
 3. **Tier 3: Card & Surface Inset (`--pad-card`)**
    - **Desktop:** `24px` all sides

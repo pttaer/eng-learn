@@ -360,7 +360,7 @@ export class NotificationEngine {
       ] : [
         'position: fixed',
         'bottom: max(24px, calc(env(safe-area-inset-bottom, 0px) + 20px))',
-        'right: max(24px, calc(env(safe-area-inset-right, 0px) + 20px))',
+        'right: max(var(--pad-screen-right, 12px), calc(env(safe-area-inset-right, 0px) + 20px))',
         'z-index: 100008',
         'display: flex',
         'flex-direction: column',

@@ -295,7 +295,7 @@ export function listeningTrapsView(root: HTMLElement): () => void {
     const masteredBadge = h('span', 'ie-badge-mastered', `🏆 Mastered: ${masteredSet.size} / 12`);
     
     const navGroup = h('div', 'ie-traps-nav-group');
-    const prevBtn = h('button', 'ie-btn ie-btn-sm', '< Prev');
+    const prevBtn = h('button', 'ie-btn ie-btn-sm', '← Prev');
     prevBtn.disabled = currentIdx === 0;
     prevBtn.addEventListener('click', () => {
       if (currentIdx > 0) {
@@ -304,7 +304,7 @@ export function listeningTrapsView(root: HTMLElement): () => void {
       }
     });
 
-    const nextBtn = h('button', 'ie-btn ie-btn-sm', 'Next >');
+    const nextBtn = h('button', 'ie-btn ie-btn-sm', 'Next →');
     nextBtn.disabled = currentIdx >= filtered.length - 1;
     nextBtn.addEventListener('click', () => {
       if (currentIdx < filtered.length - 1) {

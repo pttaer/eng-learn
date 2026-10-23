@@ -73,7 +73,7 @@ export class CornerCompass {
     // Elevate above iOS Home Indicator and dynamic gesture areas with safe-area fallback
     this.element.style.position = 'fixed';
     this.element.style.bottom = 'max(24px, calc(env(safe-area-inset-bottom, 0px) + 16px))';
-    this.element.style.right = 'max(24px, calc(env(safe-area-inset-right, 0px) + 16px))';
+    this.element.style.right = 'max(var(--pad-screen-right, 12px), calc(env(safe-area-inset-right, 0px) + 16px))';
     this.element.style.zIndex = 'var(--z-modal-lens, 90)';
     this.element.style.userSelect = 'none';
     (this.element.style as any).webkitUserSelect = 'none';

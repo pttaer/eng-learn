@@ -1687,7 +1687,7 @@ export class SpeakingDossier {
                 <button class="hud-btn btn-hear-examiner">${icon('volume', 12)} Hear Question</button>
               </div>
               <div style="display: flex; gap: 8px;">
-                <input type="text" class="ielts-text-fallback" placeholder="Or type your spoken response here..." style="flex: 1; padding: 8px 12px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-hairline); border-radius: 4px; color: var(--ink-primary);" />
+                <input type="text" class="ielts-text-fallback" placeholder="Or type your spoken response here..." style="flex: 1; padding: 8px 12px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm, 6px); color: var(--ink-primary);" />
                 <button class="hud-btn btn-submit-ielts-turn" style="background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none; padding: 0 16px;">Send</button>
               </div>
             </div>
@@ -1780,7 +1780,7 @@ export class SpeakingDossier {
                 <button class="hud-btn btn-hear-examiner">${icon('volume', 12)} Hear Question</button>
               </div>
               <div style="display: flex; gap: 8px;">
-                <input type="text" class="ielts-text-fallback" placeholder="Or type your discursive response here..." style="flex: 1; padding: 8px 12px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-hairline); border-radius: 4px; color: var(--ink-primary);" />
+                <input type="text" class="ielts-text-fallback" placeholder="Or type your discursive response here..." style="flex: 1; padding: 8px 12px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm, 6px); color: var(--ink-primary);" />
                 <button class="hud-btn btn-submit-ielts-turn" style="background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none; padding: 0 16px;">Send</button>
               </div>
             </div>

@@ -44,6 +44,15 @@
   --border-solid: rgba(255, 255, 255, 0.32);
   --border-width: 1px;
 
+  /* Canonical Border Radius Hierarchy */
+  --radius-xs: 4px;       /* Micro badges, pills, small tags */
+  --radius-sm: 6px;       /* Form controls, inputs, buttons, search bars, tabs */
+  --radius: 8px;          /* Standard cards, HUD panels, dossier containers */
+  --radius-md: 8px;       /* Alias for standard card/panel radius */
+  --radius-lg: 12px;      /* Modals, feature dialogs, hero cards */
+  --radius-xl: 16px;      /* Outer containers, action sheets */
+  --radius-full: 9999px;  /* Pill buttons, avatar rings */
+
   /* Elevation Shadows & Luminous Glows */
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.55), 0 0 1px rgba(255, 255, 255, 0.14);
   --shadow-glow: 0 0 16px rgba(165, 180, 252, 0.25);
@@ -53,6 +62,12 @@
   --touch-target-min: 44px;
   --focus-ring-inner: #a5b4fc;
   --focus-ring-outer: #080a0f;
+
+  /* Minimal Universal Scrollbar Tokens */
+  --scrollbar-size: 5px;
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: rgba(255, 255, 255, 0.22);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.45);
 
   /* 8pt Spatial Scale & Hygiene Tokens */
   --space-2: 2px;
@@ -126,9 +141,15 @@
 
   /* ========================================================================
      CANONICAL PADDING RULES (DESKTOP & MOBILE TIERS)
+     Single source of truth for app-wide left and right padding
      ======================================================================== */
-  --pad-screen: 24px;
-  --pad-workspace: 24px;
+  --pad-screen-left: 12px;
+  --pad-screen-right: 12px;
+  --pad-screen-x: var(--pad-screen-left);
+  --pad-screen: var(--pad-screen-left);
+  --pad-workspace-left: var(--pad-screen-left);
+  --pad-workspace-right: var(--pad-screen-right);
+  --pad-workspace: 16px var(--pad-screen-right) 24px var(--pad-screen-left);
   --pad-card: clamp(14px, 2.5vw, 24px);
   --pad-card-compact: clamp(10px, 1.8vw, 16px);
   --pad-modal: clamp(16px, 3vw, 28px);
@@ -204,6 +225,15 @@ html[data-theme="light"] {
   --border-solid: #0f172a;
   --border-width: 1px;
 
+  /* Canonical Border Radius Hierarchy */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
   /* Elevation Shadows & Luminous Glows */
   --shadow-card: 0 2px 10px rgba(15, 23, 42, 0.05);
   --shadow-glow: 0 0 12px rgba(91, 91, 214, 0.18);
@@ -211,4 +241,39 @@ html[data-theme="light"] {
 
   --focus-ring-inner: #0f172a;
   --focus-ring-outer: #ffffff;
+
+  /* Minimal Universal Scrollbar Tokens (Light Mode) */
+  --scrollbar-thumb: rgba(15, 23, 42, 0.20);
+  --scrollbar-thumb-hover: rgba(15, 23, 42, 0.45);
+}
+
+/* ========================================================================
+   CANONICAL MINIMAL SCROLLBAR RULES
+   Sleek, transparent, non-intrusive pill scrollbars for all scrollable areas
+   ======================================================================== */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-size, 5px);
+  height: var(--scrollbar-size, 5px);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track, transparent);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: var(--radius-full, 9999px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }

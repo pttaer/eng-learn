@@ -217,18 +217,18 @@ export class ListeningDossier {
   public render(): HTMLElement {
     this.container.innerHTML = `
       <div class="dossier-control-bar">
-        <div class="listening-header-row" style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 8px;">
-          <span class="telemetry-label" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">[PILLAR 04 // ACTIVE TRANSCRIPTION]</span>
+        <div class="listening-header-row">
+          <span class="telemetry-label">[PILLAR 04 // ACTIVE TRANSCRIPTION]</span>
           <div class="dossier-status-pill">
             <span class="telemetry-value">${this.currentMode === 'cloze' ? 'ACTIVE CLOZE' : '3-PASS PROTOCOL'}</span>
           </div>
         </div>
-        <div class="listening-mode-cluster" role="tablist" aria-label="Listening Mode" style="display: flex; width: 100%; gap: 8px; margin-bottom: 8px;">
-          <button type="button" class="hud-btn mode-tab ${this.currentMode === 'passive' ? 'active' : ''}" data-mode="passive" aria-pressed="${this.currentMode === 'passive'}" style="flex: 1; justify-content: center; white-space: nowrap;">
-            ${icon('book', 13)} Passive Passages
+        <div class="listening-mode-cluster" role="tablist" aria-label="Listening Mode">
+          <button type="button" class="hud-btn mode-tab ${this.currentMode === 'passive' ? 'active' : ''}" data-mode="passive" aria-pressed="${this.currentMode === 'passive'}">
+            ${icon('book', 13)} <span class="tab-label"><span class="tab-label-prefix">Passive </span>Passages</span>
           </button>
-          <button type="button" class="hud-btn mode-tab ${this.currentMode === 'cloze' ? 'active' : ''}" data-mode="cloze" aria-pressed="${this.currentMode === 'cloze'}" style="flex: 1; justify-content: center; white-space: nowrap;">
-            ${icon('edit', 13)} Cloze Transcription
+          <button type="button" class="hud-btn mode-tab ${this.currentMode === 'cloze' ? 'active' : ''}" data-mode="cloze" aria-pressed="${this.currentMode === 'cloze'}">
+            ${icon('edit', 13)} <span class="tab-label">Cloze<span class="tab-label-suffix"> Transcription</span></span>
           </button>
         </div>
         ${levelRowHtml(this.allPassages, this.activeLevel)}

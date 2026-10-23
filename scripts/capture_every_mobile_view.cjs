@@ -120,7 +120,20 @@ async function run() {
       }
       await new Promise(r => setTimeout(r, 250));
       const primaryPath = path.join(OUTPUT_DIR, filename);
-      await page.screenshot({ path: primaryPath, fullPage: false });
+      const buffer = await page.screenshot({ fullPage: false });
+      let written = false;
+      for (let attempt = 0; attempt < 5; attempt++) {
+        try {
+          await fs.promises.writeFile(primaryPath, buffer);
+          written = true;
+          break;
+        } catch (e) {
+          await new Promise(r => setTimeout(r, 200));
+        }
+      }
+      if (!written) {
+        fs.writeFileSync(primaryPath, buffer);
+      }
       captured.push({ filename, desc });
       console.log(`[CAPTURED ${captured.length.toString().padStart(2, '0')}] ${filename} — ${desc}`);
     };

@@ -1,7 +1,8 @@
 # Project rules
 
 ## UI spacing & layout consistency
-- Canonical Specification: Strictly follow [`docs/TYPOGRAPHY_SPACING_RULES.md`](file:///e:/Eng/docs/TYPOGRAPHY_SPACING_RULES.md) for all typography scales, padding tiers, and 4px/8px gap rhythms.
+- Canonical Specification: Strictly follow [`docs/TYPOGRAPHY_SPACING_RULES.md`](file:///e:/Eng/docs/TYPOGRAPHY_SPACING_RULES.md) and [`.agents/rules/canonical-spacing.md`](file:///e:/Eng/.agents/rules/canonical-spacing.md).
+- Reference Exemplar (Gold Standard): The IELTS Academic Writing Hub view (`Mobile/1.0.0/37-mobile-ielts-writing.png`) defines the canonical padding & spacing rule for all views across the app: 24px screen/workspace inset with flush-left alignment, 16px all-around card padding with 12px border radius, 8px internal card gap, 8px-12px button gaps with 9px radius, and 12px-20px section/block rhythms.
 - Typography Hierarchy: Use semantic tokens (`--font-h1`, `--font-h2`, `--font-h3`, `--font-h4`, `--font-kicker`, `--font-body`, `--font-prompt`). Never use arbitrary pixel sizes like 19px, 21px, etc.
 - Spacing Scale: Follow the 4px/8px rhythm (`--gap-section`: 32/16px, `--gap-block`: 20/12px, `--gap-group`: 12/8px, `--gap-element`: 8/6px). No ad-hoc margins that stack on top of a parent `gap`.
 - Padding Tiers: Use `--pad-screen`, `--pad-workspace`, `--pad-card`, `--pad-card-compact`, `--pad-modal`, `--pad-btn`.
