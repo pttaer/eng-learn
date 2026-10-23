@@ -1,6 +1,7 @@
 import { icon } from '../utils/icons';
 import { AudioSynthesizer } from './audio-synthesizer';
 import { HapticEngine } from './haptic-engine';
+import { AcousticHaptics } from './acoustic-haptics';
 
 export interface AtomicCardConfig {
   id: string;
@@ -78,6 +79,7 @@ export class AtomicCard {
         flipBtn.setAttribute('aria-expanded', String(isFlipped));
       }
 
+      AcousticHaptics.flip();
       AudioSynthesizer.play('flip');
       if (config.onFlip) {
         config.onFlip(isFlipped);
@@ -94,9 +96,18 @@ export class AtomicCard {
       }, 150);
     };
 
-    // Rate Action
+    // Rate Action (Forgiving & Gentle)
     const doRate = (rating: 'again' | 'good') => {
-      AudioSynthesizer.play(rating === 'good' ? 'click' : 'alarm');
+      if (rating === 'again') {
+        AcousticHaptics.nudge();
+        container.classList.remove('apple-shake');
+        void container.offsetWidth;
+        container.classList.add('apple-shake');
+        setTimeout(() => container.classList.remove('apple-shake'), 360);
+      } else {
+        AcousticHaptics.tap();
+        AudioSynthesizer.play('click');
+      }
       if (config.onRate) {
         config.onRate(rating);
       }

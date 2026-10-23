@@ -1,0 +1,92 @@
+/* ==========================================================================
+   APPLE-CALM FORGIVING TOAST & PROGRESS PILL
+   ========================================================================== */
+
+.apple-toast-undo {
+  position: fixed;
+  bottom: calc(var(--bottom-nav-height, 60px) + 24px);
+  left: 50%;
+  transform: translateX(-50%) translateY(20px) scale(0.95);
+  background: rgba(18, 23, 34, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full, 9999px);
+  box-shadow: 0 12px 36px -4px rgba(0, 0, 0, 0.55), 0 2px 8px -2px rgba(0, 0, 0, 0.25);
+  padding: 8px 16px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 260ms var(--spring-bounce, cubic-bezier(0.34, 1.56, 0.64, 1)),
+              opacity 200ms ease;
+}
+
+html[data-theme="light"] .apple-toast-undo {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 28px -4px rgba(0, 0, 0, 0.12);
+}
+
+.apple-toast-undo.apple-toast-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.apple-toast-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13.5px;
+  color: var(--ink-primary, #f8fafc);
+}
+
+.apple-toast-btn {
+  background: rgba(165, 180, 252, 0.18);
+  border: 1px solid rgba(165, 180, 252, 0.32);
+  color: var(--accent-gold, #a5b4fc);
+  border-radius: var(--radius-full, 9999px);
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 120ms ease, background 150ms ease;
+}
+
+.apple-toast-btn:hover {
+  background: rgba(165, 180, 252, 0.28);
+}
+
+.apple-toast-btn:active {
+  transform: scale(0.96);
+}
+
+.apple-toast-btn kbd {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 1px 4px;
+  font-size: 10px;
+  font-family: var(--font-mono, monospace);
+  opacity: 0.85;
+}
+
+.apple-toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--accent-gold, #a5b4fc);
+  width: 100%;
+  animation: apple-toast-drain linear forwards;
+}
+
+@keyframes apple-toast-drain {
+  from { width: 100%; }
+  to { width: 0%; }
+}

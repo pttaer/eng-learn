@@ -23,7 +23,20 @@ export interface ContextualDockAction {
   accent?: boolean;
 }
 
-const ROUTE_NAMES: Record<string, string> = { read: 'READING', write: 'WRITING', listen: 'LISTENING', speak: 'SPEAKING', vocab: 'VOCABULARY', colloc: 'COLLOCATIONS', grammar: 'GRAMMAR', tenses: '12 TENSES', habits: 'DAILY HABITS', singularity: 'SINGULARITY', mediate: 'MEDIATION', cockpit: 'IELTS COCKPIT' };
+const ROUTE_NAMES: Record<string, string> = {
+  read: 'READING • Đọc hiểu',
+  write: 'WRITING • Viết câu',
+  listen: 'LISTENING • Nghe thấm',
+  speak: 'SPEAKING • Nói tự nhiên',
+  vocab: 'VOCABULARY • Từ vựng',
+  colloc: 'COLLOCATIONS • Cặp từ',
+  grammar: 'GRAMMAR • Ngữ pháp',
+  tenses: '12 TENSES • 12 Thì cốt lõi',
+  habits: 'HABITS • Thói quen',
+  singularity: 'SINGULARITY • Bản đồ',
+  mediate: 'MEDIATION • Diễn đạt',
+  cockpit: 'IELTS COCKPIT • Luyện thi'
+};
 
 export class HeaderHUD {
   private element: HTMLElement;
@@ -42,7 +55,7 @@ export class HeaderHUD {
   constructor() {
     HeaderHUD.instance = this;
     this.element = document.createElement('header');
-    this.element.className = 'hud-header interactive';
+    this.element.className = 'hud-header apple-glass interactive';
 
     // Initialize theme from storage or default to dark (game HUD aesthetic)
     const savedTheme = localStorage.getItem('eng_theme');

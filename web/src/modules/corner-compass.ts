@@ -1,4 +1,5 @@
 import { AudioSynthesizer } from '../core/audio-synthesizer';
+import { AcousticHaptics } from '../core/acoustic-haptics';
 
 export class CornerCompass {
   private element: HTMLElement;
@@ -127,6 +128,7 @@ export class CornerCompass {
       e.stopPropagation();
       this.isMenuOpen = !this.isMenuOpen;
       trigger?.setAttribute('aria-expanded', String(this.isMenuOpen));
+      AcousticHaptics.tap();
       AudioSynthesizer.play('click');
       if (this.isMenuOpen) {
         menu.classList.add('menu-open'); (menu as HTMLElement).inert = false;
@@ -148,6 +150,7 @@ export class CornerCompass {
       item.addEventListener('click', (e) => {
         e.stopPropagation();
         const route = (item as HTMLElement).dataset.route || 'singularity';
+        AcousticHaptics.tap();
         AudioSynthesizer.play('void-open');
         this.isMenuOpen = false;
         trigger?.setAttribute('aria-expanded', 'false');

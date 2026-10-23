@@ -7,6 +7,8 @@ import { HeaderHUD } from './header-hud';
 import vocabularyData from '../assets/data/vocabulary.json';
 import { Cefr, srsTier } from '../core/cefr';
 import { levelsWithContent, defaultLevel, levelChipsHtml } from '../core/level-filter';
+import { UndoManager } from '../core/undo-manager';
+import { AcousticHaptics } from '../core/acoustic-haptics';
 
 export type VocabMode = string;
 
@@ -87,16 +89,16 @@ export class VocabularyDossier {
 
       <div class="vocab-telemetry-banner">
         <div class="telemetry-item">
-          <span class="telemetry-label">ROGUELIKE RUN ENCOUNTERS</span>
-          <span class="telemetry-value streak-counter">${this.reviewCountInRun} reviewed</span>
+          <span class="telemetry-label">TIẾN TRÌNH HÔM NAY</span>
+          <span class="telemetry-value streak-counter">${this.reviewCountInRun} từ đã ôn</span>
         </div>
         <div class="telemetry-item">
-          <span class="telemetry-label">TIER LOAD MODIFIER</span>
-          <span class="telemetry-value">${this.activeLevel === 'C1' || this.activeLevel === 'C2' ? 'Ease 2.30 (harder tier)' : 'Ease 2.50 (standard tier)'}</span>
+          <span class="telemetry-label">CẤP ĐỘ CEFR</span>
+          <span class="telemetry-value">${this.activeLevel} • ${this.activeLevel === 'C1' || this.activeLevel === 'C2' ? 'Nâng cao' : 'Nền tảng'}</span>
         </div>
         <div class="telemetry-item">
-          <span class="telemetry-label">REMIND DROP STATUS</span>
-          <span class="telemetry-value remind-status-indicator">ACTIVE (10% PROBABILITY)</span>
+          <span class="telemetry-label">NHẮC LẠI ĐÚNG LÚC</span>
+          <span class="telemetry-value remind-status-indicator">TỰ ĐỘNG THEO DÕI</span>
         </div>
       </div>
 
@@ -153,6 +155,7 @@ export class VocabularyDossier {
 
   private navigateCard(delta: number): void {
     if (this.currentList.length === 0) return;
+    AcousticHaptics.tap();
     this.activeRemindCard = null; // Clear surprise status on manual step
     this.currentIndex = (this.currentIndex + delta + this.currentList.length) % this.currentList.length;
     this.renderCurrentCard();
@@ -254,10 +257,24 @@ export class VocabularyDossier {
     const nextCardState = SRSEngine.rateCard(srsState, cardId, rating, cardLevel);
     StorageManager.setCardState(cardId, nextCardState);
 
+    const prevIndex = this.currentIndex;
+    UndoManager.register('Đã đánh giá từ vựng', () => {
+      const state = StorageManager.loadState();
+      if (srsState) {
+        state.cardStates[cardId] = srsState;
+      } else {
+        delete state.cardStates[cardId];
+      }
+      StorageManager.saveState(state);
+      this.reviewCountInRun = Math.max(0, this.reviewCountInRun - 1);
+      this.currentIndex = prevIndex;
+      this.renderCurrentCard();
+    });
+
     this.reviewCountInRun += 1;
     const streakEl = this.container.querySelector('.streak-counter');
     if (streakEl) {
-      streakEl.textContent = `${this.reviewCountInRun} reviewed`;
+      streakEl.textContent = `${this.reviewCountInRun} từ đã ôn`;
     }
 
     // Roguelike surprise encounter logic:

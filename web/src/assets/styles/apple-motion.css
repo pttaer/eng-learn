@@ -1,0 +1,103 @@
+/* ==========================================================================
+   APPLE-CALM MOTION & TACTILE SENSORY DYNAMICS
+   Native CSS Spring Physics, Ambient Hints & Forgiving Visual States
+   ========================================================================== */
+
+/* Tactile Spring Press */
+.apple-press,
+.hud-btn:active,
+.atomic-btn:active,
+.article-tab:active,
+.pass-tab:active,
+.mode-tab:active {
+  transform: scale(0.975);
+  transition: transform 120ms var(--spring-press, cubic-bezier(0.2, 0.8, 0.2, 1));
+}
+
+/* Gentle Spring Shake for Mistakes (No Aggressive Red Buzzer) */
+@keyframes apple-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+.apple-shake {
+  animation: apple-shake 340ms var(--spring-smooth, cubic-bezier(0.16, 1, 0.3, 1)) both;
+}
+
+/* Ambient Breathing Pulse (Appears after 5s idle to guide hesitant learners) */
+@keyframes ambient-hint-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(165, 180, 252, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(165, 180, 252, 0.22);
+  }
+}
+
+.ambient-hint-pulse {
+  animation: ambient-hint-pulse 2.4s ease-in-out infinite;
+}
+
+/* Continuous Curvature Squircles */
+.squircle-sm { border-radius: var(--radius-squircle-sm, 10px); }
+.squircle-md { border-radius: var(--radius-squircle-md, 16px); }
+.squircle-lg { border-radius: var(--radius-squircle-lg, 24px); }
+
+/* Frosted Glass Surface */
+.apple-glass {
+  background: rgba(18, 23, 34, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-hairline, rgba(255, 255, 255, 0.06));
+}
+
+html[data-theme="light"] .apple-glass {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Paragraph Focus Dimming (Zen Mode) */
+.reading-paragraph {
+  line-height: 1.75;
+  margin-bottom: 1.4em;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm, 6px);
+  transition: opacity 220ms ease, background-color 200ms ease;
+}
+
+.reading-text-pane:hover .reading-paragraph:not(:hover),
+.reading-text-pane:focus-within .reading-paragraph:not(:focus) {
+  opacity: 0.45;
+}
+
+.reading-paragraph:hover,
+.reading-paragraph:focus {
+  opacity: 1 !important;
+  background-color: rgba(165, 180, 252, 0.06);
+}
+
+.paragraph-dimmed {
+  opacity: 0.42;
+  transition: opacity 220ms ease;
+}
+
+.paragraph-focused {
+  opacity: 1;
+  transition: opacity 220ms ease;
+}
+
+/* Respect User Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .apple-press,
+  .hud-btn:active,
+  .atomic-btn:active {
+    transform: none !important;
+  }
+  .apple-shake,
+  .ambient-hint-pulse {
+    animation: none !important;
+  }
+}
