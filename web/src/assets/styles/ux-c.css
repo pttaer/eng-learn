@@ -360,23 +360,39 @@
     gap: 12px !important;
   }
 
-  /* Telemetry Banners: compact single-row flex */
-  .vocab-telemetry-banner {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    gap: 12px !important;
-    padding: 10px 14px !important;
-    margin: 0 !important;
-    border-radius: 8px !important;
+  /* Apple Vocabulary Mobile Clean Spacing */
+  .vocab-apple-header {
+    gap: 8px !important;
+    padding: 0 4px !important;
   }
 
-  .vocab-telemetry-banner .telemetry-label {
-    font-size: var(--font-kicker) !important;
+  .vocab-segmented-control {
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+  }
+  .vocab-segmented-control::-webkit-scrollbar {
+    display: none !important;
   }
 
-  .vocab-telemetry-banner .telemetry-value {
-    font-size: var(--font-kicker) !important;
+  .vocab-seg-btn {
+    font-size: 12px !important;
+    padding: 6px 8px !important;
+    min-height: 36px !important;
+  }
+
+  .vocab-apple-nav {
+    margin-top: 8px !important;
+    padding: 0 4px !important;
+  }
+
+  .vocab-hints-pill {
+    display: none !important;
+  }
+
+  .vocab-nav-btn {
+    padding: 6px 14px !important;
+    font-size: 12px !important;
+    min-height: 38px !important;
   }
 
   /* 12 Tenses Master Vault Mobile Overhaul */

@@ -890,27 +890,196 @@
    VOCABULARY DOSSIER (PILLAR 05 ROGUELIKE)
    ========================================================================== */
 
-.vocab-level-selector {
-  display: flex;
-  align-items: center;
-  gap: var(--space-6);
-}
-
-.vocab-telemetry-banner {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  border: 1px solid var(--border-hairline);
-  padding: var(--space-8) var(--space-16);
-  background: var(--bg-surface);
-  flex-wrap: wrap;
-  gap: var(--space-8);
-}
-
-.telemetry-item {
+/* Apple-Inspired Minimalist Vocabulary Dossier */
+.vocab-apple-header {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--space-10, 10px);
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.vocab-segmented-control {
+  display: flex;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 3px;
+  border-radius: var(--radius-md, 10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 3px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.vocab-seg-btn {
+  flex: 1;
+  min-height: 36px;
+  padding: 6px 10px;
+  font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
+  font-size: var(--text-xs, 12px);
+  font-weight: 600;
+  color: var(--ink-secondary, #94a3b8);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm, 7px);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.vocab-seg-btn:hover {
+  color: var(--ink-primary, #ffffff);
+}
+
+.vocab-seg-btn.is-active {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+}
+
+.vocab-meta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.vocab-level-chips {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.vocab-progress-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-kicker, 11px);
+  font-family: var(--font-mono, monospace);
+  color: var(--ink-secondary, #94a3b8);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 4px 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.vocab-count-indicator strong {
+  color: var(--accent-gold, #f59e0b);
+}
+
+.vocab-progress-track {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.vocab-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vocab-apple-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  max-width: 680px;
+  margin: 12px auto 0 auto;
+  box-sizing: border-box;
+}
+
+.vocab-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  min-height: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--ink-primary, #f1f5f9);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.vocab-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.vocab-hints-pill {
+  font-size: 11px;
+  font-family: var(--font-mono, monospace);
+  color: var(--ink-muted, #64748b);
+  letter-spacing: 0.02em;
+}
+
+/* Flashcard Front/Back Ergonomics in Vocabulary Dossier */
+.dossier-vocabulary .card-action-dock .btn-rate-again,
+.dossier-vocabulary .card-action-dock .btn-rate-good {
+  display: none !important;
+}
+
+.dossier-vocabulary .card-action-dock .btn-flip-trigger {
+  flex: 1 1 100% !important;
+  width: 100% !important;
+  min-height: 48px !important;
+  background: var(--accent-gold, #f59e0b) !important;
+  color: #080a0f !important;
+  font-weight: 800 !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35) !important;
+  border: none !important;
+}
+
+.dossier-vocabulary .card-rating-dock {
+  display: flex !important;
+  gap: 10px !important;
+}
+
+.dossier-vocabulary .card-rating-dock .btn-rate-again {
+  flex: 1 !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  background: rgba(239, 68, 68, 0.15) !important;
+  border: 1px solid rgba(239, 68, 68, 0.4) !important;
+  color: #fca5a5 !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+}
+
+.dossier-vocabulary .card-rating-dock .btn-rate-good {
+  flex: 1 !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  background: rgba(34, 197, 94, 0.15) !important;
+  border: 1px solid rgba(34, 197, 94, 0.4) !important;
+  color: #86efac !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+}
+
+.dossier-vocabulary .card-rating-dock .btn-flip-back {
+  flex: 0 0 auto !important;
+  min-width: 44px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
 }
 
 

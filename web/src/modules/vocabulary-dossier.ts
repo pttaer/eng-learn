@@ -75,39 +75,51 @@ export class VocabularyDossier {
 
   public render(): HTMLElement {
     const modes = this.modesAtLevel();
+    const totalCount = Math.max(1, this.currentList.length);
+    const progressPct = Math.min(100, Math.round(((this.currentIndex + 1) / totalCount) * 100));
+
     this.container.innerHTML = `
-      <div class="dossier-control-bar">
-        <div class="dossier-tabs vocab-mode-tabs">
-          ${modes.map(m => `<button class="hud-btn mode-tab ${this.activeMode === m ? 'active' : ''}" data-mode="${m}">${MODE_TABS[m] || prettyMode(m)}</button>`).join('')}
+      <div class="vocab-apple-header">
+        <!-- Segmented Mode Control -->
+        <div class="vocab-segmented-control" role="tablist" aria-label="Chế độ học từ vựng">
+          ${modes.map(m => `
+            <button class="vocab-seg-btn mode-tab ${this.activeMode === m ? 'is-active' : ''}" data-mode="${m}" role="tab" aria-selected="${this.activeMode === m}">
+              ${(MODE_TABS[m] || prettyMode(m)).replace(/^Mode [A-C]: /, '')}
+            </button>
+          `).join('')}
         </div>
 
-        <div class="vocab-level-selector">
-          <span class="telemetry-label" style="margin-right: 8px;">LEVEL:</span>
-          ${levelChipsHtml(levelsWithContent(this.allDeck), this.activeLevel)}
+        <!-- CEFR Level Chips & Progress Strip -->
+        <div class="vocab-meta-bar">
+          <div class="vocab-level-chips" role="radiogroup" aria-label="Chọn cấp độ CEFR">
+            ${levelChipsHtml(levelsWithContent(this.allDeck), this.activeLevel)}
+          </div>
+          <div class="vocab-progress-badge">
+            <span class="vocab-count-indicator">Thẻ <strong class="card-counter">${this.currentIndex + 1} / ${totalCount}</strong></span>
+            <span class="streak-counter">${this.reviewCountInRun} đã ôn</span>
+          </div>
+        </div>
+
+        <!-- Hairline Progress Bar -->
+        <div class="vocab-progress-track" role="progressbar" aria-valuenow="${progressPct}" aria-valuemin="0" aria-valuemax="100">
+          <div class="vocab-progress-fill" style="width: ${progressPct}%;"></div>
         </div>
       </div>
 
-      <div class="vocab-telemetry-banner">
-        <div class="telemetry-item">
-          <span class="telemetry-label">TIẾN TRÌNH HÔM NAY</span>
-          <span class="telemetry-value streak-counter">${this.reviewCountInRun} từ đã ôn</span>
-        </div>
-        <div class="telemetry-item">
-          <span class="telemetry-label">CẤP ĐỘ CEFR</span>
-          <span class="telemetry-value">${this.activeLevel} • ${this.activeLevel === 'C1' || this.activeLevel === 'C2' ? 'Nâng cao' : 'Nền tảng'}</span>
-        </div>
-        <div class="telemetry-item">
-          <span class="telemetry-label">NHẮC LẠI ĐÚNG LÚC</span>
-          <span class="telemetry-value remind-status-indicator">TỰ ĐỘNG THEO DÕI</span>
-        </div>
-      </div>
-
+      <!-- Flashcard Slot -->
       <div class="dossier-card-slot"></div>
 
-      <div class="dossier-nav-bar">
-        <button class="hud-btn nav-btn-prev">${icon('arrowLeft')} Prev</button>
-        <span class="telemetry-value card-counter">NODE ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}</span>
-        <button class="hud-btn nav-btn-next">Next ${icon('arrowRight')}</button>
+      <!-- Minimal Apple Navigation Bar -->
+      <div class="vocab-apple-nav">
+        <button type="button" class="vocab-nav-btn nav-btn-prev" aria-label="Thẻ trước (Phím ←)">
+          ${icon('arrowLeft', 14)} <span>Trước</span>
+        </button>
+        <div class="vocab-hints-pill">
+          <span>Phím tắt: <strong>SPACE</strong> lật • <strong>1</strong> chưa nhớ • <strong>2</strong> đã nhớ</span>
+        </div>
+        <button type="button" class="vocab-nav-btn nav-btn-next" aria-label="Thẻ tiếp theo (Phím →)">
+          <span>Tiếp</span> ${icon('arrowRight', 14)}
+        </button>
       </div>
     `;
 
@@ -161,7 +173,12 @@ export class VocabularyDossier {
     this.renderCurrentCard();
     const counter = this.container.querySelector('.card-counter');
     if (counter) {
-      counter.textContent = `NODE [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]`;
+      counter.textContent = `${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}`;
+    }
+    const fill = this.container.querySelector('.vocab-progress-fill') as HTMLElement | null;
+    if (fill) {
+      const pct = Math.min(100, Math.round(((this.currentIndex + 1) / Math.max(1, this.currentList.length)) * 100));
+      fill.style.width = `${pct}%`;
     }
   }
 
@@ -231,25 +248,8 @@ export class VocabularyDossier {
 
     slot.appendChild(this.currentCardHandle.element);
 
-    HeaderHUD.setContextualDock([
-      {
-        id: 'listen',
-        label: 'Listen',
-        iconHtml: icon('volume', 16),
-        onClick: () => {
-          if (item.wordOrChunk) AudioSynthesizer.speak(item.wordOrChunk);
-        }
-      },
-      {
-        id: 'flip',
-        label: 'Flip',
-        iconHtml: '⟳',
-        accent: true,
-        onClick: () => {
-          this.currentCardHandle?.flip();
-        }
-      }
-    ]);
+    // Keep global mobile bottom dock cleanly visible instead of overriding with duplicate actions
+    HeaderHUD.setContextualDock(null);
   }
 
   private handleRate(cardId: string, rating: 'again' | 'good', cardLevel: number): void {
@@ -312,7 +312,12 @@ export class VocabularyDossier {
     this.renderCurrentCard();
     const counter = this.container.querySelector('.card-counter');
     if (counter) {
-      counter.textContent = `NODE [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]`;
+      counter.textContent = `${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}`;
+    }
+    const fill = this.container.querySelector('.vocab-progress-fill') as HTMLElement | null;
+    if (fill) {
+      const pct = Math.min(100, Math.round(((this.currentIndex + 1) / Math.max(1, this.currentList.length)) * 100));
+      fill.style.width = `${pct}%`;
     }
   }
 
