@@ -79,9 +79,9 @@ function headerHtml(info: LevelInfo, summary: UsageSummary, streak: number): str
     <div style="width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: ${i <= tier ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.18)'}; color: ${i <= tier ? '#5b5fc7' : 'rgba(255,255,255,0.55)'};">${icon(name, 16)}</div>`).join('');
   return `
     <div style="background: linear-gradient(160deg, #8488e8 0%, #5b5fc7 100%); color: #fff; padding: 16px 20px 20px; text-align: center;">
-      <div style="font-size: var(--font-kicker); letter-spacing: 0.18em; opacity: 0.85;">ACHIEVEMENTS</div>
+      <div style="font-size: var(--font-kicker); letter-spacing: var(--font-kicker-spacing); opacity: 0.85;">ACHIEVEMENTS</div>
       <div style="font-size: var(--font-h1); font-weight: 300; line-height: 1.1; margin-top: 6px;">${info.xp.toLocaleString()}</div>
-      <div style="font-size: var(--font-kicker); letter-spacing: 0.16em; opacity: 0.8;">TOTAL POINTS</div>
+      <div style="font-size: var(--font-kicker); letter-spacing: var(--font-kicker-spacing); opacity: 0.8;">TOTAL POINTS</div>
       <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
         <span style="font-size: var(--font-kicker); letter-spacing: 0.08em; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,0.2);">${away.toLocaleString()} POINTS AWAY</span>
       </div>
@@ -89,7 +89,7 @@ function headerHtml(info: LevelInfo, summary: UsageSummary, streak: number): str
         <div style="width: ${info.percentage}%; height: 100%; background: #fff; border-radius: 3px;"></div>
       </div>
       <div style="display: flex; justify-content: space-between; gap: 6px; margin-top: 14px;">${tiers}</div>
-      <div style="font-size: var(--font-kicker); letter-spacing: 0.14em; margin-top: 8px; opacity: 0.9;">${info.rankTitle}</div>
+      <div style="font-size: var(--font-kicker); letter-spacing: var(--font-kicker-spacing); margin-top: 8px; opacity: 0.9;">${info.rankTitle}</div>
       <div style="font-size: var(--font-body-compact); margin-top: 12px; opacity: 0.9;">${summary.hours.toFixed(1)} h in app &middot; ${summary.answers} questions &middot; ${Math.round(summary.todayMinutes)} min today &middot; ${streak}-day streak</div>
     </div>`;
 }

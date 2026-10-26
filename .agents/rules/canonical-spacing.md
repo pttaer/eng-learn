@@ -82,3 +82,20 @@ From now on, all views across the application must strictly adhere to the paddin
 - Never use random arbitrary padding like `13px`, `19px`, `21px`, or `30px`.
 - Never let cards or buttons touch the screen edge; always preserve the `24px` workspace inset.
 - Never wrap card contents with uneven margins; always rely on `padding: 16px` and `gap: 8px`.
+
+---
+
+## 5. Mobile Vertical Rhythm & Text Alignment (added 2026-10-26)
+
+Mirrors spec §6 in `docs/TYPOGRAPHY_SPACING_RULES.md`. Both must stay in sync.
+
+- **One rule per class.** A class is defined once. A later duplicate silently overrides tokens.
+- **Kickers:** `--font-kicker` (11px), `--font-kicker-spacing` (0.08em), uppercase. No inline `letter-spacing` or font-size overrides.
+- **Badges and chips stay on one line** (`white-space: nowrap`). A flex row holding a kicker plus a badge uses `flex-wrap: wrap; gap: 4px 8px`.
+- **Alignment is flush-left.** Centre only a whole hero or empty-state card, where every line inside is centred.
+- **No symmetric ornaments on left-aligned text.** Use `✦ TITLE`, never `✦ TITLE ✦`.
+- **No 0–4px gaps between stacked text blocks.** Mobile tiers: element 6px, group 8px, block 12px, section 16px. Exempt: a heading with its own one-line subtitle (line-height spacing), and table rows.
+- **No fixed-height nested scroll box for a content list on mobile.** The page scrolls. Canvas and map views are exempt.
+- **Full-width CTA labels wrap** inside the button (`white-space: normal`). They never overflow.
+- **Every clickable is at least 44×44 on phones** (`button`, `a[href]`, `[role=button]`, `[role=tab]`, `[data-route]`). Inline prose links are exempt.
+- **Mobile titles and labels wrap.** No `text-overflow: ellipsis` on them.

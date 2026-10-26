@@ -35,6 +35,7 @@ const ROUTE_NAMES: Record<string, string> = {
   habits: 'HABITS • Thói quen',
   singularity: 'SINGULARITY • Bản đồ',
   mediate: 'MEDIATION • Diễn đạt',
+  drills: 'DRILLS • Luyện tập',
   cockpit: 'IELTS COCKPIT'
 };
 
@@ -644,7 +645,7 @@ export class HeaderHUD {
         <div class="mobile-action-sheet-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%; box-sizing: border-box; margin-bottom: 16px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px;">
           <div style="display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1;">
             <span style="color: var(--accent-gold); display: flex; align-items: center;">${icon('sparkles', 16)}</span>
-            <span class="telemetry-label" style="font-size: var(--font-body-compact); font-weight: 700; letter-spacing: 0.1em; color: var(--ink-primary); white-space: normal;">MOBILE CONTROLS</span>
+            <span class="telemetry-label" style="font-weight: 700; color: var(--ink-primary); white-space: normal;">MOBILE CONTROLS</span>
           </div>
           <button class="sheet-btn-close btn-modal-close" aria-label="Close Mobile Menu" style="min-width: 44px; min-height: 44px; width: 44px; height: 44px; padding: 0; background: transparent; border: none; font-size: 16px; color: var(--ink-muted); cursor: pointer; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: color 0.15s ease; margin-left: auto; flex-shrink: 0;">✕</button>
         </div>
@@ -656,6 +657,9 @@ export class HeaderHUD {
           </button>
           <button class="hud-btn sheet-btn-mediation" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8); gap: 12px;">
             ${icon('scale', 16)} <span>CEFR Mediation Workbench</span>
+          </button>
+          <button class="hud-btn sheet-btn-drills" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-gold); border-color: var(--accent-gold); gap: 12px;">
+            ${icon('layers', 16)} <span>Practice Drills, Sounds &amp; Email</span>
           </button>
           <button class="hud-btn sheet-btn-analytics" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-purple, #a855f7); border-color: var(--accent-purple, #a855f7); gap: 12px;">
             ${icon('layers', 16)} <span>CEFR Analytics &amp; SERL Dashboard</span>
@@ -747,6 +751,12 @@ export class HeaderHUD {
       close();
       if (this.onNavigateToMediation) this.onNavigateToMediation();
       else window.location.hash = '#mediate';
+    });
+
+    sheet.querySelector('.sheet-btn-drills')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      close();
+      window.location.hash = '#drills';
     });
 
     sheet.querySelector('.sheet-btn-analytics')?.addEventListener('click', () => {
@@ -1157,7 +1167,7 @@ export class HeaderHUD {
       <div class="completion-receipt-card" style="max-width: 440px; width: 100%; border-top: 3px solid ${typeColor};">
         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
           <span style="font-size: var(--font-h3); color: ${typeColor}; font-weight: 700;">${typeIcon}</span>
-          <div class="telemetry-label" style="color: ${typeColor}; font-weight: 700; letter-spacing: 0.08em;">${options.title}</div>
+          <div class="telemetry-label" style="color: ${typeColor}; font-weight: 700;">${options.title}</div>
         </div>
         <div style="font-size: var(--font-h4); line-height: 1.6; color: var(--ink-primary); margin-bottom: 20px; white-space: pre-line;">${options.message}</div>
         <button class="hud-btn btn-status-confirm" style="width: 100%; justify-content: center; padding: 10px 0; font-weight: 700; color: ${typeColor}; border-color: ${typeColor};">

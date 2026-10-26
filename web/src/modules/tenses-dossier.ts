@@ -425,7 +425,7 @@ export class TensesDossier {
     return `
       <div class="gauntlet-scorecard-wrap" style="width: 100%; max-width: 820px; margin: 0 auto;">
         <div class="tenses-card-question" style="text-align: center; gap: 20px;">
-          <div class="telemetry-label" style="font-size: var(--font-h4); letter-spacing: 0.15em; color: var(--accent-gold); display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <div class="telemetry-label" style="font-size: var(--font-h4); color: var(--accent-gold); display: flex; align-items: center; justify-content: center; gap: 8px;">
             ${icon('target', 16)} 12-TENSE GAUNTLET DIAGNOSTIC RECEIPT
           </div>
 

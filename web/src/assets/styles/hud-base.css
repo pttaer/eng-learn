@@ -264,20 +264,18 @@ svg.icon,
 }
 
 /* Telemetry Typography & Monospace Labeling */
-.telemetry-label {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-}
-
 .telemetry-value {
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   letter-spacing: 0.05em;
   font-weight: 600;
   color: var(--ink-primary);
+}
+
+/* Badges hold one line, so "[ LABEL ]" never breaks inside its brackets */
+.hud-badge {
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* HUD Header Navigation Bar */

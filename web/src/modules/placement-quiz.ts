@@ -62,7 +62,7 @@ export class PlacementQuiz {
 
   private renderIntro(): void {
     this.card(`
-      <div class="telemetry-label" style="margin-bottom: var(--space-8); letter-spacing: 0.1em; color: var(--accent-gold); font-weight: 700;">✦ TÌM ĐIỂM XUẤT PHÁT CỦA BẠN ✦</div>
+      <div class="telemetry-label" style="margin-bottom: var(--space-8); color: var(--accent-gold); font-weight: 700;">✦ TÌM ĐIỂM XUẤT PHÁT CỦA BẠN</div>
       <p style="font-size: var(--font-h4); line-height: 1.6; margin: 0 0 var(--space-16) 0; color: var(--ink-secondary);">
         Chỉ mất khoảng 2 phút với các câu hỏi gợi mở nhẹ nhàng (từ A1 đến C2). App sẽ tự động dừng ngay khi câu hỏi bắt đầu vượt quá nhịp độ của bạn để bạn không bị mệt. Bạn luôn có thể đổi cấp độ bất kỳ lúc nào.
       </p>
@@ -87,8 +87,8 @@ export class PlacementQuiz {
     };
     const badgeText = badgeMap[q.kind] || `[ ${q.kind.toUpperCase()} ]`;
     this.card(`
-      <div class="telemetry-label" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-8);">
-        <span>CÂU HỎI ${this.index + 1} / ${this.questions.length} &middot; CẤP ĐỘ ${q.level}</span>
+      <div class="telemetry-label" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 8px; margin-bottom: var(--space-8);">
+        <span>CÂU HỎI ${this.index + 1} / ${this.questions.length} &middot; CẤP ĐỘ&nbsp;${q.level}</span>
         <span class="hud-badge placement-skill-badge" style="letter-spacing: 0.05em; font-weight: 700; color: var(--gold-primary, #ca8a04);">${badgeText}</span>
       </div>
       <div class="placement-prompt-title" style="font-size: var(--font-h3); font-weight: 700; line-height: 1.35; margin: 0 0 ${q.context ? 'var(--space-8)' : 'var(--space-16)'} 0; color: var(--ink-primary);">${this.escape(q.prompt)}</div>
@@ -96,7 +96,7 @@ export class PlacementQuiz {
       <div role="group" aria-label="Choose the answer" style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8);">
         ${q.options.map((o, i) => `<button class="hud-btn placement-option apple-press" data-i="${i}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 12px 14px; text-align: left; white-space: normal; min-height: 44px; text-transform: none; border-radius: var(--radius-squircle-sm, 10px); font-family: var(--font-sans); font-size: var(--font-body-compact); line-height: 1.4;"><strong style="font-family: var(--font-mono); margin-right: 8px;">${i + 1}.</strong> ${this.escape(o)}</button>`).join('')}
       </div>
-      <button class="hud-btn placement-skip apple-press" style="width: 100%; justify-content: center; min-height: 40px; padding: 8px 0; margin-top: var(--space-12); border-radius: var(--radius-squircle-sm, 10px);">Bỏ qua bài khảo sát</button>
+      <button class="hud-btn placement-skip apple-press" style="width: 100%; justify-content: center; min-height: 44px; padding: 8px 0; margin-top: var(--space-12); border-radius: var(--radius-squircle-sm, 10px);">Bỏ qua bài khảo sát</button>
     `);
     this.overlay.querySelectorAll<HTMLElement>('.placement-option').forEach(btn => {
       btn.addEventListener('click', () => this.answer(Number(btn.dataset.i)));

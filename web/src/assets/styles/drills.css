@@ -1,0 +1,275 @@
+/* Drills route: practice sets, phonemic chart, email builder. */
+
+.drills-dossier {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-block);
+}
+
+.drills-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-element);
+}
+
+.drills-title {
+  font-size: var(--font-h2);
+  margin: 0;
+}
+
+.drill-kicker {
+  font-family: var(--font-mono);
+  font-size: var(--font-kicker);
+  letter-spacing: var(--font-kicker-spacing);
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--text-muted, inherit);
+}
+
+.drill-mono {
+  font-family: var(--font-mono);
+}
+
+.drill-note,
+.drill-card-objective,
+.drill-passage,
+.drill-why,
+.drill-answer {
+  font-size: var(--font-body);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.drill-passage {
+  white-space: pre-line;
+  padding: var(--pad-card);
+  border-radius: 12px;
+  border: 1px solid var(--border-hairline);
+}
+
+/* Tabs and chips: one row each, 44px targets. */
+.drills-tabs,
+.drill-chips,
+.drill-actions,
+.drill-runner-head,
+.drill-card-meta,
+.drill-item-head,
+.sound-words,
+.email-tiles,
+.email-register-scale {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-group);
+  align-items: center;
+}
+
+.drill-tab,
+.drill-chip,
+.drill-btn,
+.drill-option,
+.drill-select,
+.drill-gap,
+.sound-tile,
+.email-tile {
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+}
+
+.drill-tab,
+.drill-chip,
+.drill-btn,
+.drill-option,
+.sound-tile,
+.email-tile {
+  padding: 0 var(--gap-block);
+  border-radius: 9px;
+  border: 1px solid var(--border-hairline);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.drill-tab[aria-selected="true"],
+.drill-chip[aria-pressed="true"],
+.drill-option.is-selected,
+.sound-tile.is-selected {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.drill-btn {
+  font-weight: 600;
+}
+
+.drill-btn-ghost {
+  border-style: dashed;
+}
+
+.drill-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-group);
+}
+
+.drill-card,
+.drill-item,
+.sound-detail,
+.email-sample,
+.email-draft {
+  padding: var(--pad-card);
+  border-radius: 12px;
+  border: 1px solid var(--border-hairline);
+}
+
+.drill-card,
+.drill-items,
+.drill-runner-head,
+.drill-item,
+.drill-pair,
+.email-register,
+.email-tile-group,
+.sounds-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-element);
+}
+
+.drill-card-title {
+  font-size: var(--font-h3);
+  margin: 0;
+}
+
+.drill-item.is-right {
+  border-color: var(--accent-cyan, #38bdf8);
+}
+
+.drill-item.is-wrong {
+  border-color: var(--critical, #ef4444);
+}
+
+.drill-item.is-playing {
+  box-shadow: 0 0 0 2px var(--accent-gold);
+}
+
+.drill-prompt {
+  font-size: var(--font-prompt, var(--font-body));
+  margin: 0;
+}
+
+.drill-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-group);
+}
+
+.drill-gap {
+  font: inherit;
+  padding: 0 var(--gap-group);
+  border-radius: 9px;
+  border: 1px solid var(--border-hairline);
+  background: transparent;
+  color: inherit;
+  width: min(12em, 100%);
+}
+
+.drill-select {
+  font: inherit;
+  width: 100%;
+  padding: 0 var(--gap-group);
+  border-radius: 9px;
+  border: 1px solid var(--border-hairline);
+  background: transparent;
+  color: inherit;
+  font-size: max(16px, var(--font-body));
+}
+
+.drill-pair {
+  gap: var(--gap-element);
+}
+
+.drill-score {
+  font-size: var(--font-body);
+}
+
+/* Sounds tab */
+.sounds-panel,
+.email-builder {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-block);
+}
+
+.sounds-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--touch-target-min), 1fr));
+  gap: var(--gap-group);
+}
+
+.sound-tile {
+  font-family: var(--font-mono);
+  font-size: var(--font-body);
+  padding: 0;
+}
+
+.sound-detail-symbol {
+  font-family: var(--font-mono);
+  font-size: var(--font-h3);
+}
+
+.sound-detail-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-group);
+  align-items: baseline;
+}
+
+/* Email tab */
+.email-slider {
+  width: 100%;
+  min-height: var(--touch-target-min);
+}
+
+.email-register-scale {
+  justify-content: space-between;
+  font-size: var(--font-kicker);
+}
+
+.email-sample {
+  white-space: pre-wrap;
+  font-family: var(--font-sans, inherit);
+  font-size: var(--font-body);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.email-tile {
+  font-size: var(--font-body);
+  text-align: left;
+  padding: var(--gap-group) var(--gap-block);
+}
+
+.email-tile-informal {
+  border-style: dashed;
+}
+
+.email-tile-formal {
+  border-color: var(--accent-cyan, #38bdf8);
+}
+
+.email-draft {
+  width: 100%;
+  font: inherit;
+  font-size: max(16px, var(--font-body));
+  background: transparent;
+  color: inherit;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .drills-dossier {
+    padding-bottom: calc(var(--safe-bottom-dock) + env(safe-area-inset-bottom));
+  }
+}

@@ -122,6 +122,7 @@ export class ScrollAffordance {
     '.reading-mobile-tab-bar',
     '.cd-mobile-tab-bar',
     '.constellation-view-switcher',
+    '.workout-tasks',
     '.speaking-mode-cluster',
     '.listening-mode-cluster',
     '.dossier-protocol-tabs',

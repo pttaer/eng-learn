@@ -754,7 +754,7 @@ export class SpeakingDossier {
               ${this.formatTime(this.secondsRemaining)}
             </div>
           </div>
-          <div style="display: flex; gap: 4px; margin-top: 6px;">
+          <div style="display: flex; gap: 8px; margin-top: 6px;">
             <button type="button" class="hud-btn btn-timer-toggle" aria-label="Start or pause timer" title="Start or pause timer" style="padding: 2px 8px; font-size: var(--font-kicker);">${this.isTimerRunning ? '⏸ Pause' : '▶ Start'}</button>
             <button type="button" class="hud-btn btn-take-complete" aria-label="Stop and finish take" title="Stop and finish take" style="padding: 2px 8px; font-size: var(--font-kicker);" ${!this.isTimerRunning ? 'disabled' : ''}>⏹ Stop</button>
           </div>

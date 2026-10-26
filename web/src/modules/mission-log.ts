@@ -55,7 +55,7 @@ export class MissionLog {
       <div class="dossier-control-bar mission-control-bar" style="display: flex; flex-direction: column; align-items: stretch; gap: 8px; width: 100%;">
         <div class="mission-header-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
           <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-family: var(--font-mono); font-size: var(--font-kicker);">[HABITS // KINETIC ROADMAP]</span>
-          <div class="habit-level-chips" style="display: inline-flex; gap: 4px;">
+          <div class="habit-level-chips" style="display: inline-flex; gap: 6px;">
             ${(['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as Cefr[]).map(lvl => `
               <button class="hud-chip habit-level-chip ${lvl === this.activeLevel ? 'active' : ''}" data-level="${lvl}" style="padding: 3px 8px; font-size: var(--font-kicker); cursor: pointer; border-radius: 4px; border: 1px solid ${lvl === this.activeLevel ? 'var(--accent-gold)' : 'var(--border-subtle)'}; background: ${lvl === this.activeLevel ? 'var(--accent-gold)' : 'var(--bg-surface)'}; color: ${lvl === this.activeLevel ? 'var(--bg-canvas)' : 'var(--ink-secondary)'}; font-weight: 700; white-space: nowrap;">
                 ${lvl}

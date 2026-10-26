@@ -331,14 +331,11 @@ export class SkillTreeView {
     const workout = this.getWorkout();
     return `
       <div class="workout-banner tree-command-panel" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 16px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; gap: 12px; box-shadow: var(--shadow-card); flex: 0 0 auto;">
-        <div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px;">
+        <div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
           <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-            <span class="telemetry-label" style="letter-spacing: 0.12em; font-size: var(--font-kicker); color: var(--accent-gold); font-weight: 700;">✦ CONSTELLATION ROADMAP ✦</span>
-            <span class="hud-status-badge" style="font-size: var(--font-kicker); padding: 2px 8px; border-radius: 4px;">
-              RANK: <strong>${progress.currentRank}</strong>
-            </span>
+            <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">✦ CONSTELLATION ROADMAP</span>
             <span class="hud-status-badge" style="font-size: var(--font-kicker); padding: 2px 8px; border-radius: 4px; border-color: var(--accent-gold); color: var(--accent-gold);">
-              SUMMIT: <strong class="val-progress-pct">${progress.progressPct}%</strong> (${progress.masteredCount}/${progress.totalNodes} PERKS)
+              RANK: <strong>${progress.currentRank}</strong> · SUMMIT: <strong class="val-progress-pct">${progress.progressPct}%</strong> (${progress.masteredCount}/${progress.totalNodes})
             </span>
           </div>
           <div style="display: flex; align-items: baseline; gap: 8px; overflow: hidden;">
@@ -349,8 +346,8 @@ export class SkillTreeView {
         </div>
 
         <div class="workout-panel" style="flex: 0 0 auto; display: flex; align-items: center; gap: 12px; background: rgba(255, 255, 255, 0.04); border: none; border-radius: 6px; padding: 8px 14px;">
-          <div style="display: flex; flex-direction: column; gap: 2px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 8px;">
               <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-size: var(--font-kicker);">★ TODAY'S 15-MINUTE WORKOUT [${workout.level}]</span>
               <span class="telemetry-label" style="font-size: var(--font-kicker);">${workout.left === 0 ? 'ALL 3 DRILLS DONE' : workout.left + ' OF 3 DRILLS REMAINING'}</span>
             </div>
@@ -596,7 +593,11 @@ export class SkillTreeView {
               </button>
 
               <div class="deck-card-perks-section">
-                <div class="deck-section-title">✦ UNLOCKED PERKS & WORKOUT DRILLS</div>
+                <details class="deck-perks-details">
+                  <summary class="deck-section-title deck-perks-summary">
+                    <span>✦ UNLOCKED PERKS & WORKOUT DRILLS</span>
+                    <span class="deck-perks-count">${b.perks.slice(0, 5).length} ${b.perks.slice(0, 5).length === 1 ? 'perk' : 'perks'} · ${b.workoutTasks.length} ${b.workoutTasks.length === 1 ? 'drill' : 'drills'}</span>
+                  </summary>
                 <div class="deck-perk-badges">
                   ${b.perks.slice(0, 5).map(p => `
                     <div class="deck-badge deck-perk-badge ${p.status === 'mastered' ? 'is-mastered' : (p.status === 'unlocked' ? 'is-unlocked' : 'is-locked')}" data-node-id="${p.id}" data-route="${p.routeTarget}" role="button" tabindex="0" aria-label="${p.title} (${p.status})">
@@ -611,6 +612,7 @@ export class SkillTreeView {
                     </div>
                   `).join('')}
                 </div>
+                </details>
               </div>
             </div>
           `).join('')}
@@ -757,7 +759,7 @@ export class SkillTreeView {
       <div class="completion-receipt-card skill-node-card" style="max-width: 440px; width: 100%; padding: 18px 18px 20px 18px; text-align: left; align-items: stretch; background: var(--bg-card, #131823); border: 1px solid var(--border-subtle); border-radius: 8px; box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6); box-sizing: border-box;">
         <div class="skill-node-topbar" style="display: flex; flex-direction: column; gap: 6px; width: 100%; margin-bottom: 12px; box-sizing: border-box;">
           <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-            <span class="telemetry-label" style="color: var(--accent-gold); font-family: var(--font-mono); font-weight: 700; font-size: 11px; letter-spacing: 0.04em;">✦ ${branch.name.toUpperCase()} // LVL ${node.level}</span>
+            <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">✦ ${branch.name.toUpperCase()} // LVL ${node.level}</span>
           </div>
           <div style="display: flex; justify-content: flex-end; width: 100%;">
             <span class="hud-status-badge" style="background: rgba(165, 180, 252, 0.16); color: var(--accent-gold); font-family: var(--font-mono); font-size: 10.5px; font-weight: 700; border: 1px solid rgba(165, 180, 252, 0.25); border-radius: 5px; padding: 2px 8px; white-space: nowrap;">CEFR ${node.cefrLevel}</span>

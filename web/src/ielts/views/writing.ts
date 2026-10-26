@@ -2,7 +2,7 @@ import w1Data from '../data/writing1.json';
 import w2Data from '../data/writing2.json';
 import { Task1Prompt, Task2Prompt } from '../types';
 import { addAttempt } from '../progress';
-import { renderChart } from '../chart';
+import { linkModelToChart, renderChart } from '../chart';
 import {
   DESCRIPTORS,
   RUBRIC,
@@ -465,10 +465,15 @@ function mountEditor(
       <div class="ie-estimate"></div>
       <button class="ie-btn ie-btn-primary ie-save">Save estimate</button>
     </div>
-    <div class="ie-feedback-wide"><h3>Band 7+ model answer</h3>${p.model
+    <div class="ie-feedback-wide"><h3>Band 7+ model answer</h3><div class="ie-model">${p.model
       .split(/\n\s*\n/)
-      .map(x => `<p>${esc(x)}</p>`)
-      .join('')}<h3>What makes it band 7</h3><p>${esc(p.notes)}</p></div>`;
+      .map(x => `<p>${x
+        .split(/(?<=[.!?])\s+/)
+        .map((s, i) => `<span class="ie-sent" data-sent="${i}">${esc(s)}</span>`)
+        .join(' ')}</p>`)
+      .join('')}</div><h3>What makes it band 7</h3><p>${esc(p.notes)}</p></div>`;
+    const modelEl = out.querySelector('.ie-model') as HTMLElement | null;
+    if (task === 1 && modelEl && (p as Task1Prompt).chart) linkModelToChart(modelEl, (p as Task1Prompt).chart);
 
     const estEl = out.querySelector('.ie-estimate') as HTMLElement;
     const ratings = (): number[] =>

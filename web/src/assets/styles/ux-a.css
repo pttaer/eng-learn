@@ -13,7 +13,7 @@
 
 /* Reading: full article titles, readable meta row, stacked columns on narrow screens */
 .article-tab { white-space: normal; text-align: left; line-height: 1.3; }
-.reading-meta-telemetry { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; }
+.reading-meta-telemetry { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
 .reading-meta-telemetry .telemetry-value + .telemetry-value::before { content: "·"; margin-right: 14px; opacity: 0.5; }
 @media (max-width: 800px) {
   .dossier-reading .reading-pass1-layout { flex-direction: column !important; }

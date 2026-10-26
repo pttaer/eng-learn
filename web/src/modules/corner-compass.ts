@@ -55,6 +55,10 @@ export class CornerCompass {
           <span class="compass-item-code">09</span>
           <span class="compass-item-label">HABITS</span>
         </button>
+        <button class="compass-menu-item" data-route="drills" title="Practice Drills, Sounds & Email">
+          <span class="compass-item-code">10</span>
+          <span class="compass-item-label">DRILLS</span>
+        </button>
       </div>
       <div class="compass-trigger" title="Toggle HUD Quick-Nav">
         <canvas class="compass-canvas" width="60" height="60"></canvas>

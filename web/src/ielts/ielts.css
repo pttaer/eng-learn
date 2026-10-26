@@ -371,7 +371,7 @@ small, sub, sup { font-size: var(--font-kicker); }
 .ie-fcode { font-family: 'JetBrains Mono', monospace; font-size: var(--font-kicker); color: var(--accent-star); background: var(--bg-surface-sunk); padding: var(--space-6) var(--space-8); border-radius: 6px; border: 1px solid var(--border-hairline); white-space: pre-wrap; word-break: break-word; }
 
 .ie-btn-xs { min-height: 28px; padding: 3px 10px; font-size: var(--font-kicker); border-radius: 6px; }
-.ie-btn-sm { min-height: var(--touch-target-min); padding: 7px 16px; font-size: var(--text-xs); border-radius: 8px; }
+.ie-btn-sm { min-height: var(--touch-target-min); padding: 7px 16px; font-size: var(--text-xs); border-radius: 8px; white-space: normal !important; }
 /* 36px only for fine-pointer desktops (spec); touch devices keep the 44px floor from the block below */
 @media (hover: hover) and (pointer: fine) {
   .ie-btn-sm { min-height: 36px; }
@@ -459,6 +459,7 @@ small, sub, sup { font-size: var(--font-kicker); }
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  white-space: nowrap;
   font-size: var(--font-kicker);
   font-weight: 700;
   text-transform: uppercase;
@@ -1151,6 +1152,11 @@ small, sub, sup { font-size: var(--font-kicker); }
 /* The global mobile tab rule forces nowrap !important; the studio switcher is a 3-column grid and must wrap */
 .ie-studio-mode-tabs .ie-tab { white-space: normal !important; min-width: 0; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 6px; min-height: 48px; border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--ink-secondary); font-size: var(--font-body-compact); font-weight: 600; cursor: pointer; text-align: center; line-height: 1.25; transition: all 0.15s ease; }
 .ie-studio-mode-tabs .ie-tab.is-on { background: var(--bg-card); color: var(--accent-cyan); border-color: transparent; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35); font-weight: 700; }
+/* Three tabs share a phone row: at 11px and without the icon, "Tactical Clause Builder" sets on two lines, not three */
+@media (max-width: 768px) {
+  .ie-studio-mode-tabs .ie-tab { font-size: var(--font-kicker); padding: 8px 4px; }
+  .ie-studio-mode-tabs .ie-tab svg { display: none; }
+}
 .ie-visual-tabs, .ie-arch-tabs { display: flex; flex-direction: row; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; gap: 8px; padding: 2px 2px 6px 2px; margin-bottom: var(--space-12); scrollbar-width: thin; }
 .ie-visual-tabs::-webkit-scrollbar, .ie-arch-tabs::-webkit-scrollbar { height: var(--scrollbar-size, 5px); display: block; }
 .ie-visual-tabs .ie-tab, .ie-arch-tabs .ie-tab { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; text-align: center; padding: 8px 14px; font-size: var(--text-xs); font-weight: 600; min-height: 40px; white-space: nowrap; border-radius: 8px; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-secondary); transition: all 0.15s ease; }

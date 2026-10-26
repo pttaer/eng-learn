@@ -3860,7 +3860,7 @@ html[data-motion="reduce"] {
 
   .blitz-mechanic-card {
     padding: 8px 10px !important;
-    gap: 4px !important;
+    gap: 6px !important;
   }
 
   .blitz-mechanic-card .mechanic-desc {

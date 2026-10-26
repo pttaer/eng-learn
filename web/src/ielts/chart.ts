@@ -6,6 +6,42 @@ const W = 640;
 const H = 320;
 const PAD = { l: 52, r: 16, t: 20, b: 44 };
 
+/** Chart labels and values a model sentence refers to. */
+export function chartMentions(c: Task1Chart, sentence: string): { labels: string[]; values: number[] } {
+  const text = sentence.toLowerCase();
+  const labels = (c.labels ?? []).filter(l => text.includes(l.toLowerCase()));
+  const numbers = (sentence.match(/\d+(?:\.\d+)?/g) ?? []).map(Number);
+  const values = (c.series ?? []).flatMap(s => s.values).filter(v => numbers.includes(v));
+  return { labels, values };
+}
+
+/** Dim chart marks the sentence does not refer to; restore all marks when it refers to none. */
+function highlightChartMarks(svg: Element, m: { labels: string[]; values: number[] }): void {
+  const any = m.labels.length > 0 || m.values.length > 0;
+  svg.querySelectorAll<SVGElement>('[data-label]').forEach(el => {
+    const on = m.labels.length > 0
+      ? m.labels.includes(el.dataset.label ?? '')
+      : m.values.includes(Number(el.dataset.value));
+    el.style.opacity = !any || on ? '1' : '0.3';
+  });
+}
+
+/** Link model-answer sentences (spans .ie-sent) to the matching chart marks as they reach the middle of the view. */
+export function linkModelToChart(model: HTMLElement, c: Task1Chart): void {
+  const svg = [...document.querySelectorAll<SVGElement>('svg.ie-svg')].find(s => s.getAttribute('aria-label') === c.title);
+  if (!svg || typeof IntersectionObserver === 'undefined') return;
+  const io = new IntersectionObserver(entries => {
+    if (!model.isConnected) {
+      io.disconnect();
+      return;
+    }
+    for (const e of entries) {
+      if (e.isIntersecting) highlightChartMarks(svg, chartMentions(c, e.target.textContent ?? ''));
+    }
+  }, { rootMargin: '-40% 0px -40% 0px' });
+  model.querySelectorAll('.ie-sent').forEach(el => io.observe(el));
+}
+
 function niceMax(v: number): number {
   const p = Math.pow(10, Math.floor(Math.log10(v || 1)));
   return Math.ceil(v / p) * p;
@@ -38,7 +74,7 @@ function line(c: Task1Chart): string {
   const paths = series.map((s, k) => {
     const col = COLORS[k % COLORS.length];
     return `<polyline fill="none" stroke="${col}" stroke-width="2.5" points="${s.values.map((v, i) => `${x(i)},${y(v)}`).join(' ')}"/>` +
-      s.values.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="3.5" fill="${col}"><title>${esc(s.name)} ${esc(labels[i])}: ${v}</title></circle>`).join('');
+      s.values.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="3.5" fill="${col}" data-label="${esc(labels[i])}" data-value="${v}"><title>${esc(s.name)} ${esc(labels[i])}: ${v}</title></circle>`).join('');
   }).join('');
   return `<svg viewBox="0 0 ${W} ${H}" class="ie-svg" role="img" aria-label="${esc(c.title)}">${axes(max, labels, c.unit || '')}${paths}</svg>${legend(series.map(s => s.name))}`;
 }
@@ -55,7 +91,7 @@ function bar(c: Task1Chart): string {
     const v = s.values[i];
     const bh = (ih * v) / max;
     const bx = PAD.l + group * i + (group - bw * series.length) / 2 + bw * k;
-    return `<rect x="${bx}" y="${PAD.t + ih - bh}" width="${bw - 2}" height="${bh}" fill="${COLORS[k % COLORS.length]}"><title>${esc(s.name)} ${esc(l)}: ${v}</title></rect>`;
+    return `<rect x="${bx}" y="${PAD.t + ih - bh}" width="${bw - 2}" height="${bh}" fill="${COLORS[k % COLORS.length]}" data-label="${esc(l)}" data-value="${v}"><title>${esc(s.name)} ${esc(l)}: ${v}</title></rect>`;
   }).join('')).join('');
   return `<svg viewBox="0 0 ${W} ${H}" class="ie-svg" role="img" aria-label="${esc(c.title)}">${axes(max, labels, c.unit || '')}${bars}</svg>${legend(series.map(s => s.name))}`;
 }
@@ -73,7 +109,7 @@ function pie(c: Task1Chart): string {
     const large = a1 - a0 > Math.PI ? 1 : 0;
     const d = `M${cx},${cy} L${cx + R * Math.cos(a0)},${cy + R * Math.sin(a0)} A${R},${R} 0 ${large} 1 ${cx + R * Math.cos(a1)},${cy + R * Math.sin(a1)} Z`;
     a0 = a1;
-    return `<path d="${d}" fill="${COLORS[i % COLORS.length]}" stroke="var(--bg-card)" stroke-width="2"><title>${esc(labels[i])}: ${v}%</title></path>`;
+    return `<path d="${d}" fill="${COLORS[i % COLORS.length]}" stroke="var(--bg-card)" stroke-width="2" data-label="${esc(labels[i])}" data-value="${v}"><title>${esc(labels[i])}: ${v}%</title></path>`;
   }).join('');
   const rows = labels.map((l, i) => `<li><i style="background:${COLORS[i % COLORS.length]}"></i>${esc(l)} <b>${vals[i]}%</b></li>`).join('');
   return `<div class="ie-pie"><svg viewBox="0 0 320 300" class="ie-svg ie-svg-pie" role="img" aria-label="${esc(c.title)}">${slices}</svg><ul class="ie-pie-key">${rows}</ul></div>`;

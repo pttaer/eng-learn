@@ -1,0 +1,2386 @@
+{
+  "version": 1,
+  "sets": [
+    {
+      "id": "ex-ellipsis",
+      "title": "Ellipsis in Spoken English",
+      "skill": "grammar",
+      "cefrLevel": "C1",
+      "minutes": 3,
+      "objective": "Identify which words are dropped in short questions and replies (articles, auxiliaries, subject pronouns).",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-ellipsis-1",
+          "prompt": "Which words are understood but omitted from this response? A: 'Have you seen the latest proposal?' B: 'Not yet, actually.'",
+          "options": [
+            "the subject 'I' and the verb 'have seen'",
+            "the preposition 'by'",
+            "the article 'a'",
+            "the auxiliary 'do'"
+          ],
+          "answer": 0,
+          "why": "'Not yet, actually' is elliptical; the full form would be 'I have not seen it yet'. Subject and main verb are omitted."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-ellipsis-2",
+          "statement": "In the exchange 'Are you coming?' 'I think so', the word 'so' is an elliptical form standing for the entire clause 'are you coming'.",
+          "answer": true,
+          "why": "'So' in 'I think so' is an elliptical form representing the complete predicate, equivalent to 'I think [you] are coming'."
+        },
+        {
+          "type": "gap",
+          "id": "ex-ellipsis-3",
+          "prompt": "Complete the elliptical response: A: 'Would you like tea or coffee?' B: 'I'd prefer ___.'",
+          "answers": [
+            "tea",
+            "coffee"
+          ],
+          "why": "The noun after 'prefer' is elided because the options were already mentioned in the question."
+        },
+        {
+          "type": "choice",
+          "id": "ex-ellipsis-4",
+          "prompt": "Which explains the ellipsis in this exchange? A: 'Has she confirmed the meeting?' B: 'Not that I know of.'",
+          "options": [
+            "the adverb 'not' stands alone without a supporting clause",
+            "the prepositional phrase modifies a suppressed noun",
+            "the conditional structure is implied rather than stated",
+            "the auxiliary and main verb from the question are omitted"
+          ],
+          "answer": 3,
+          "why": "'Not that I know of' omits 'has she confirmed', which are understood from the question."
+        },
+        {
+          "type": "match",
+          "id": "ex-ellipsis-5",
+          "pairs": [
+            {
+              "left": "Can you fix the printer?",
+              "right": "I'll try."
+            },
+            {
+              "left": "Do they want to attend?",
+              "right": "I doubt it."
+            },
+            {
+              "left": "Should we reschedule?",
+              "right": "Probably not."
+            }
+          ],
+          "why": "In each response, the speaker omits the main clause (the infinitive, verb phrase, or clause) which is recoverable from context."
+        }
+      ]
+    },
+    {
+      "id": "ex-fronting-ellipsis",
+      "title": "Fronting and Substitution in Dialogue",
+      "skill": "grammar",
+      "cefrLevel": "C1",
+      "minutes": 3,
+      "objective": "Understand substitution and ellipsis in conversation (for example 'So it is', 'Not so', 'Do it' and 'I think so').",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-fronting-1",
+          "prompt": "What does 'so' refer to in this exchange? A: 'The presentation was rather lengthy.' B: 'So it was.'",
+          "options": [
+            "the entire situation that the presentation was lengthy",
+            "the presentation itself",
+            "the word 'lengthy'",
+            "the past tense of the original statement"
+          ],
+          "answer": 0,
+          "why": "'So it was' is a substitution where 'so' stands for the whole predicate 'was rather lengthy', affirming A's statement."
+        },
+        {
+          "type": "gap",
+          "id": "ex-fronting-2",
+          "prompt": "Complete the response using a fronting structure: A: 'I expect she'll be upset.' B: 'She ___, actually.'",
+          "answers": [
+            "won't be",
+            "isn't",
+            "won't"
+          ],
+          "why": "A negated verb is fronted for emphasis and contrast, with the auxiliary or main verb moved forward in the clause."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-fronting-3",
+          "statement": "In 'Difficult as it is, I'll manage', the phrase 'Difficult as it is' is a concessive clause with the adjective moved to the front.",
+          "answer": true,
+          "why": "'Difficult as it is' means 'although it is difficult'; the adjective moves to the front, so it is a concessive clause, not a relative clause."
+        },
+        {
+          "type": "choice",
+          "id": "ex-fronting-4",
+          "prompt": "What is the function of 'so' in 'They said they'd call, and they did so'?",
+          "options": [
+            "It shows consequence.",
+            "It acts as a pro-verb, replacing the infinitive 'call'.",
+            "It shows the result of calling.",
+            "It signals a temporal connection."
+          ],
+          "answer": 1,
+          "why": "'Did so' uses 'so' as a pro-verb with 'do' to avoid repeating 'called'."
+        },
+        {
+          "type": "match",
+          "id": "ex-fronting-5",
+          "pairs": [
+            {
+              "left": "They've requested more funding.",
+              "right": "So they have."
+            },
+            {
+              "left": "I don't believe he'll resign.",
+              "right": "Not so, I think."
+            },
+            {
+              "left": "Can you arrange the meeting?",
+              "right": "I'll do so immediately."
+            }
+          ],
+          "why": "Each response uses substitution ('so' or 'do so') to replace words already mentioned, avoiding repetition."
+        }
+      ]
+    },
+    {
+      "id": "ex-which-relative",
+      "title": "Which as a Relative Pronoun: Clause vs Noun",
+      "skill": "grammar",
+      "cefrLevel": "C1",
+      "minutes": 3,
+      "objective": "Understand 'which' as a relative pronoun referring to a whole clause versus a single noun.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-which-relative-1",
+          "prompt": "What does 'which' refer to in this sentence? 'The budget was cut significantly, which surprised everyone in the department.'",
+          "options": [
+            "the amount of the cut",
+            "everyone in the department",
+            "the entire situation that the budget was cut",
+            "the budget itself"
+          ],
+          "answer": 2,
+          "why": "'Which' refers to the complete clause 'the budget was cut significantly', not just the noun 'budget'. This is a sentential relative."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-which-relative-2",
+          "statement": "In 'The report, which I received yesterday, contains several errors', 'which' refers to the entire clause 'the report contains errors'.",
+          "answer": false,
+          "why": "'Which' here refers to the noun 'report' (the object of 'received'), not to an entire clause or situation."
+        },
+        {
+          "type": "choice",
+          "id": "ex-which-relative-3",
+          "prompt": "In which sentence does 'which' refer to a whole clause rather than a single noun?",
+          "options": [
+            "She missed the deadline, which caused considerable frustration.",
+            "The document which was updated last week has been filed.",
+            "The system which manages our accounts requires an upgrade.",
+            "The procedures which we follow are outdated."
+          ],
+          "answer": 0,
+          "why": "In 'She missed the deadline, which caused frustration', 'which' refers to the entire situation, not just 'deadline'."
+        },
+        {
+          "type": "gap",
+          "id": "ex-which-relative-4",
+          "prompt": "Fill in the relative pronoun: 'The project was postponed indefinitely, ___ left the team demoralised.'",
+          "answers": [
+            "which"
+          ],
+          "why": "Only 'which' can introduce a non-restrictive relative clause that refers to a whole preceding clause, not just a noun."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-which-relative-5",
+          "statement": "A comma before 'which' always indicates that it refers to a whole clause rather than a single noun.",
+          "answer": false,
+          "why": "A comma indicates a non-restrictive clause, but 'which' can refer to a single noun non-restrictively too. Context determines the reference."
+        }
+      ]
+    },
+    {
+      "id": "ex-reporting-verbs",
+      "title": "Reporting Verbs and Their Patterns",
+      "skill": "grammar",
+      "cefrLevel": "C1",
+      "minutes": 5,
+      "objective": "Master reporting verbs (threaten, deny, advise, admit, urge) and the grammatical pattern that follows each.",
+      "items": [
+        {
+          "type": "match",
+          "id": "ex-reporting-1",
+          "pairs": [
+            {
+              "left": "deny",
+              "right": "She denied taking the documents."
+            },
+            {
+              "left": "advise",
+              "right": "We advised them to postpone the launch."
+            },
+            {
+              "left": "threaten",
+              "right": "He threatened to resign if his demands weren't met."
+            },
+            {
+              "left": "admit",
+              "right": "She admitted that she had made an error."
+            }
+          ],
+          "why": "Each verb requires a specific pattern: deny (gerund), advise (object + to-infinitive), threaten (to-infinitive), admit (that-clause or gerund)."
+        },
+        {
+          "type": "choice",
+          "id": "ex-reporting-2",
+          "prompt": "Which sentence is grammatically correct?",
+          "options": [
+            "The committee urged to approve the proposal.",
+            "The committee urged that the proposal should be approved.",
+            "The committee urged approving the proposal.",
+            "The committee urged for the proposal to be approved."
+          ],
+          "answer": 1,
+          "why": "'Urge' takes a that-clause with subjunctive (should + infinitive) or object + to-infinitive. Only the second sentence is correct."
+        },
+        {
+          "type": "gap",
+          "id": "ex-reporting-3",
+          "prompt": "Complete the sentence: 'The witness denied ___ the accused at the time of the incident.'",
+          "answers": [
+            "seeing",
+            "having seen"
+          ],
+          "why": "'Deny' is followed by a gerund (-ing) or perfect gerund, not the infinitive."
+        },
+        {
+          "type": "choice",
+          "id": "ex-reporting-4",
+          "prompt": "What is the most natural way to report this statement? Original: 'You must attend the conference.' Speaker: The director.",
+          "options": [
+            "The director threatened us to attend the conference.",
+            "The director admitted us to attend the conference.",
+            "The director advised us to attend the conference.",
+            "The director denied attending the conference."
+          ],
+          "answer": 2,
+          "why": "'Advise' takes object + to-infinitive. The director's insistence is best reported with this pattern."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-reporting-5",
+          "statement": "Both 'threaten to do something' and 'threaten doing something' are equally acceptable in formal English.",
+          "answer": false,
+          "why": "'Threaten' is primarily followed by to-infinitive. Gerund is non-standard and less reliable in formal contexts."
+        }
+      ]
+    },
+    {
+      "id": "ex-cover-letter",
+      "title": "Formal Language in Job Applications",
+      "skill": "writing",
+      "cefrLevel": "C1",
+      "minutes": 5,
+      "objective": "Master formal job-application language.",
+      "passage": "I am writing to express my strong interest in the Senior Analyst position advertised on your careers portal. With eight years of experience in financial reporting and process optimisation, I am confident that my expertise aligns with your organisation's requirements. In my current role at Harrison Finance, I have led cross-functional teams to streamline accounting procedures, resulting in a 23 per cent reduction in processing time. My proficiency in both GAAP and IFRS standards, combined with my proven track record in regulatory compliance, positions me as a valuable addition to your department. I am eager to bring my analytical skills and dedication to excellence to your esteemed firm.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-cover-letter-1",
+          "prompt": "Which phrase is most appropriate for a formal cover letter opening?",
+          "options": [
+            "I'm really keen on working for your company.",
+            "I am writing to express my strong interest in the position.",
+            "Hi there, I'd love to apply for your job opening.",
+            "I'm reaching out because you have a job I want."
+          ],
+          "answer": 1,
+          "why": "This phrase is formal, professional, and widely used in job applications without being too casual."
+        },
+        {
+          "type": "choice",
+          "id": "ex-cover-letter-2",
+          "prompt": "In the passage, what is the function of the phrase 'with my proven track record'?",
+          "options": [
+            "It apologises for lack of experience.",
+            "It adds supporting evidence to justify the applicant's confidence.",
+            "It introduces a weakness.",
+            "It questions the organisation's standards."
+          ],
+          "answer": 1,
+          "why": "The phrase strengthens the applicant's claim by providing concrete evidence of past achievements and capabilities."
+        },
+        {
+          "type": "gap",
+          "id": "ex-cover-letter-3",
+          "prompt": "Fill in the gap with the most formal option: 'I am confident that my expertise ___ your organisational needs.'",
+          "answers": [
+            "aligns with",
+            "fits with",
+            "matches"
+          ],
+          "why": "'Aligns with' is the most formal and professional phrasing, commonly used in formal correspondence."
+        },
+        {
+          "type": "choice",
+          "id": "ex-cover-letter-4",
+          "prompt": "Which would be the least appropriate way to end a formal cover letter?",
+          "options": [
+            "I look forward to discussing how I can contribute to your team.",
+            "Fingers crossed you'll give me a chance!",
+            "I would welcome the opportunity to discuss this further.",
+            "Thank you for considering my application."
+          ],
+          "answer": 1,
+          "why": "'Fingers crossed' is very informal and colloquial, unsuitable for formal job application."
+        },
+        {
+          "type": "choice",
+          "id": "ex-cover-letter-5",
+          "prompt": "How should the percentage reduction mentioned in the passage be properly written in formal correspondence?",
+          "options": [
+            "23 per cent",
+            "23 percent",
+            "twenty-three percent",
+            "23%"
+          ],
+          "answer": 0,
+          "why": "In British English formal writing, numbers above twenty are written as numerals with 'per cent' as two separate words."
+        }
+      ]
+    },
+    {
+      "id": "ex-formal-informal",
+      "title": "Register: Formal and Informal Language",
+      "skill": "writing",
+      "cefrLevel": "C1",
+      "minutes": 5,
+      "objective": "Distinguish whether a phrase is suited to formal or informal writing contexts.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-formal-informal-1",
+          "prompt": "Which phrase would be appropriate in a formal academic essay?",
+          "options": [
+            "The findings were pretty interesting.",
+            "The findings were inconsistent with prior research.",
+            "The findings were kind of surprising.",
+            "The findings were really cool."
+          ],
+          "answer": 1,
+          "why": "This phrase is precise and academic. The others use informal intensifiers, hedging, or colloquial language."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-formal-informal-2",
+          "statement": "The phrase 'We've got to sort this out ASAP' is more formal than 'We must resolve this matter promptly'.",
+          "answer": false,
+          "why": "'We've got to' is informal; 'must resolve' with 'promptly' is formal and professional."
+        },
+        {
+          "type": "choice",
+          "id": "ex-formal-informal-3",
+          "prompt": "Which would be the most appropriate phrase in a formal business letter?",
+          "options": [
+            "We're gonna handle your complaint.",
+            "We'll sort you out soon.",
+            "We're looking into your issue.",
+            "We shall undertake a thorough investigation into your concern."
+          ],
+          "answer": 3,
+          "why": "'Undertake', 'thorough investigation', and 'shall' are formal and professional in tone."
+        },
+        {
+          "type": "gap",
+          "id": "ex-formal-informal-4",
+          "prompt": "Choose the formal alternative: 'The project was a bit behind schedule' → 'The project experienced ___ delays.'",
+          "answers": [
+            "unforeseen",
+            "unexpected",
+            "significant"
+          ],
+          "why": "'Unforeseen' or 'unexpected' are formal ways to describe delays; they replace the informal 'a bit behind'."
+        },
+        {
+          "type": "choice",
+          "id": "ex-formal-informal-5",
+          "prompt": "Which sentence uses language appropriate for informal dialogue between colleagues?",
+          "options": [
+            "We need to get that policy in place pretty quick.",
+            "The aforementioned protocol necessitates immediate implementation.",
+            "The system's parametric constraints demand rigorous adherence.",
+            "Expedited implementation of the aforementioned protocol is imperative."
+          ],
+          "answer": 0,
+          "why": "This uses everyday language ('need', 'pretty quick', 'get in place') suitable for informal conversation."
+        }
+      ]
+    },
+    {
+      "id": "ex-complaining",
+      "title": "Polite but Firm Complaint Wording",
+      "skill": "writing",
+      "cefrLevel": "C2",
+      "minutes": 5,
+      "objective": "Select the most appropriate phrasing for polite but firm complaint wording.",
+      "passage": "Dear Sir or Madam, I am writing to lodge a formal complaint regarding the defective goods received on 15 October. Upon inspection, the unit failed to meet the specifications outlined in your product description, with visible damage to the packaging and significant malfunction of the primary components. Despite my initial request for a replacement on 18 October, I have received neither a response nor a resolution within the promised timeframe. This unacceptable delay has caused considerable inconvenience to my business operations. I expect a full replacement or refund to be processed immediately. Should this matter not be resolved to my satisfaction within seven business days, I shall have no alternative but to pursue the matter through formal channels. Your prompt attention to this urgent matter is appreciated.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-complaining-1",
+          "prompt": "Which opening is most appropriate for a formal complaint letter?",
+          "options": [
+            "I'm absolutely furious about the rubbish goods you sent me.",
+            "You've really messed up this time.",
+            "I am writing to lodge a formal complaint regarding...",
+            "Your company is terrible and I'm never buying from you again."
+          ],
+          "answer": 2,
+          "why": "This phrase is professional, formal, and clearly states the purpose without being emotional or accusatory."
+        },
+        {
+          "type": "choice",
+          "id": "ex-complaining-2",
+          "prompt": "In the passage, the phrase 'This unacceptable delay has caused considerable inconvenience' functions as:",
+          "options": [
+            "An apology for the delay.",
+            "A statement of the impact, using measured but firm language.",
+            "A prediction of future problems.",
+            "An excuse for not acting sooner."
+          ],
+          "answer": 1,
+          "why": "'Considerable inconvenience' is firm without being hostile, making the complaint's seriousness clear whilst maintaining professionalism."
+        },
+        {
+          "type": "gap",
+          "id": "ex-complaining-3",
+          "prompt": "Fill in the gap with the most appropriate phrase: 'I expected your organisation ___ by this deadline.'",
+          "answers": [
+            "to honour its commitment",
+            "to deliver as promised",
+            "to meet its obligations"
+          ],
+          "why": "These formal phrases convey firmness whilst remaining professional, contrasting expectation with failure without rudeness."
+        },
+        {
+          "type": "choice",
+          "id": "ex-complaining-4",
+          "prompt": "Which phrase is most effective in a firm closing to a complaint letter?",
+          "options": [
+            "If you don't fix this, I'll sue you!",
+            "Should this matter not be resolved to my satisfaction within seven days, I shall pursue formal channels.",
+            "You better hurry up or else.",
+            "I'm warning you, fix it now!"
+          ],
+          "answer": 1,
+          "why": "This states consequences clearly and formally without threats. It uses measured language whilst being unmistakably firm."
+        },
+        {
+          "type": "choice",
+          "id": "ex-complaining-5",
+          "prompt": "In the passage, why does the writer say 'Your prompt attention to this urgent matter is appreciated' despite the complaint?",
+          "options": [
+            "The complaint is not really serious.",
+            "The writer is being sarcastic.",
+            "Maintaining professionalism and courtesy whilst making a firm demand is effective in formal complaints.",
+            "The writer is apologising for complaining."
+          ],
+          "answer": 2,
+          "why": "This closing balances firmness with professionalism, ending courteously rather than with hostility, which is more effective in formal complaints."
+        }
+      ]
+    },
+    {
+      "id": "ex-bank-accounts",
+      "title": "Opening a Bank Account",
+      "skill": "listening",
+      "cefrLevel": "C1",
+      "minutes": 6,
+      "objective": "Understand a spoken explanation of opening a bank account in the UK, including required documents and conditions; recognise idioms in context.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-bank-accounts-1",
+          "prompt": "What does the speaker say about providing proof of address?",
+          "speak": "When you're opening an account, you'll need to bring a utility bill or council tax letter. These documents are a few months old at most. Banks are sticklers for this—they won't budge on the rules.",
+          "options": [
+            "It must be a recent document",
+            "A driving licence is sufficient",
+            "Any old bill will be accepted",
+            "Only council tax letters are valid"
+          ],
+          "answer": 0,
+          "why": "The speaker says documents must be 'a few months old at most', indicating they must be recent."
+        },
+        {
+          "type": "gap",
+          "id": "ex-bank-accounts-2",
+          "prompt": "Fill in the gap: 'Banks are ___ for this—they won't budge on the rules.'",
+          "speak": "When you're opening an account, you'll need to bring a utility bill or council tax letter. These documents are a few months old at most. Banks are sticklers for this—they won't budge on the rules.",
+          "answers": [
+            "sticklers",
+            "stickler"
+          ],
+          "why": "The speaker uses the idiom 'be sticklers for' to mean strict about following rules."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-bank-accounts-3",
+          "statement": "The speaker mentions that you need a minimum salary requirement to open a standard current account.",
+          "speak": "Most UK banks offer standard current accounts with no minimum salary. However, if you want a premium account with perks like travel insurance, that's a different story—they may have conditions attached.",
+          "answer": false,
+          "why": "The speaker explicitly states 'no minimum salary' is required for standard accounts."
+        },
+        {
+          "type": "choice",
+          "id": "ex-bank-accounts-4",
+          "prompt": "What does the speaker suggest about premium accounts?",
+          "speak": "Most UK banks offer standard current accounts with no minimum salary. However, if you want a premium account with perks like travel insurance, that's a different story—they may have conditions attached.",
+          "options": [
+            "They are always cheaper than standard accounts",
+            "They may come with conditions",
+            "They don't exist at most banks",
+            "They never include travel insurance"
+          ],
+          "answer": 1,
+          "why": "The speaker says premium accounts 'may have conditions attached' compared to standard ones."
+        },
+        {
+          "type": "match",
+          "id": "ex-bank-accounts-5",
+          "speak": "You'll also want to ask about overdraft limits. Some banks are generous—they'll extend a thousand pounds or more. Others play it safe and offer just a few hundred. It all depends on your employment status and credit history.",
+          "pairs": [
+            {
+              "left": "Generous banks",
+              "right": "Extend a thousand pounds or more"
+            },
+            {
+              "left": "Conservative banks",
+              "right": "Offer just a few hundred"
+            },
+            {
+              "left": "Overdraft decision factor",
+              "right": "Credit history and employment"
+            }
+          ],
+          "why": "The speaker describes banks' different overdraft approaches and explains what influences the decision."
+        }
+      ]
+    },
+    {
+      "id": "ex-can-you-understand",
+      "title": "Identifying Speaker Intent",
+      "skill": "listening",
+      "cefrLevel": "C1",
+      "minutes": 3,
+      "objective": "Identify what a speaker is doing in a short exchange: clarifying, interrupting, confirming, agreeing, or closing a meeting.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-can-you-understand-1",
+          "prompt": "What is the second speaker doing?",
+          "speak": "Speaker A: 'So we'll go ahead with the November launch.' Speaker B: 'Just to confirm—that's the fifth of November, not earlier, correct?'",
+          "options": [
+            "Disagreeing with the plan",
+            "Clarifying a specific detail",
+            "Closing the meeting",
+            "Interrupting rudely"
+          ],
+          "answer": 1,
+          "why": "Speaker B asks 'just to confirm' a specific date, which is a clarification technique."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-can-you-understand-2",
+          "statement": "The first speaker is ready to commit to the November launch.",
+          "speak": "Speaker A: 'So we'll go ahead with the November launch.' Speaker B: 'Just to confirm—that's the fifth of November, not earlier, correct?'",
+          "answer": true,
+          "why": "Speaker A states 'we'll go ahead', showing commitment to the launch."
+        },
+        {
+          "type": "choice",
+          "id": "ex-can-you-understand-3",
+          "prompt": "What is Speaker C doing in this exchange?",
+          "speak": "Speaker D: 'I think we should reconsider the budget.' Speaker C: 'I'm inclined to agree, though I'd like to see the latest figures first.'",
+          "options": [
+            "Interrupting Speaker D",
+            "Completely disagreeing",
+            "Agreeing with a caveat",
+            "Closing the discussion"
+          ],
+          "answer": 2,
+          "why": "Speaker C says 'inclined to agree' but adds a condition ('I'd like to see the latest figures first')."
+        },
+        {
+          "type": "gap",
+          "id": "ex-can-you-understand-4",
+          "prompt": "Fill in the gap: 'I'm ___ to agree, though I'd like to see the latest figures first.'",
+          "speak": "Speaker D: 'I think we should reconsider the budget.' Speaker C: 'I'm inclined to agree, though I'd like to see the latest figures first.'",
+          "answers": [
+            "inclined"
+          ],
+          "why": "The speaker uses 'inclined' to show partial agreement pending additional information."
+        }
+      ]
+    },
+    {
+      "id": "ex-voicemail",
+      "title": "Understanding Voicemail Messages",
+      "skill": "listening",
+      "cefrLevel": "C1",
+      "minutes": 3,
+      "objective": "Understand general meaning of voicemail messages; recognise and interpret phrasal verbs such as 'push back', 'bring forward', and 'make it in'.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-voicemail-1",
+          "prompt": "What does the caller want to happen to the meeting?",
+          "speak": "Hi Marcus, it's Elena from Project Swift. Listen, we need to push back our steering committee meeting by at least two weeks. Can you confirm that works for you? Cheers.",
+          "options": [
+            "Move it earlier",
+            "Cancel it completely",
+            "Delay it by two weeks",
+            "Keep it as scheduled"
+          ],
+          "answer": 2,
+          "why": "The caller says 'push back our meeting by at least two weeks', meaning postpone it."
+        },
+        {
+          "type": "gap",
+          "id": "ex-voicemail-2",
+          "prompt": "Fill in the gap: 'We need to ___ our steering committee meeting by at least two weeks.'",
+          "speak": "Hi Marcus, it's Elena from Project Swift. Listen, we need to push back our steering committee meeting by at least two weeks. Can you confirm that works for you? Cheers.",
+          "answers": [
+            "push back"
+          ],
+          "why": "The phrasal verb 'push back' means to postpone or delay something."
+        },
+        {
+          "type": "choice",
+          "id": "ex-voicemail-3",
+          "prompt": "What is the situation with the recruitment event?",
+          "speak": "Hello, it's David calling. I'm afraid we'll have to bring forward the graduate recruitment event to early October instead of November. It's due to venue availability. Let me know if you can make it in on such short notice.",
+          "options": [
+            "It's being delayed indefinitely",
+            "It's being moved to an earlier date",
+            "It's been cancelled",
+            "It's being moved to a later date"
+          ],
+          "answer": 1,
+          "why": "The speaker says 'bring forward to early October instead of November', meaning move it earlier."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-voicemail-4",
+          "statement": "The speaker thinks the recipient will definitely be able to attend the event.",
+          "speak": "Hello, it's David calling. I'm afraid we'll have to bring forward the graduate recruitment event to early October instead of November. It's due to venue availability. Let me know if you can make it in on such short notice.",
+          "answer": false,
+          "why": "The speaker says 'if you can make it in', showing uncertainty about their attendance."
+        }
+      ]
+    },
+    {
+      "id": "ex-product-id",
+      "title": "Identifying Products from Descriptions",
+      "skill": "listening",
+      "cefrLevel": "C1",
+      "minutes": 5,
+      "objective": "Identify a specific product from a spoken description using context clues and descriptive language.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-product-id-1",
+          "prompt": "Based on the description, what is the product?",
+          "speak": "This gadget is brilliant if you're tired of tangled cables on your desk. It's got multiple charging ports and a power button you can reach without fumbling. You can charge your phone, tablet, and laptop all at once. Perfect for people who work from home.",
+          "options": [
+            "A desk organiser",
+            "A multi-port charging station",
+            "A laptop stand",
+            "A cable management box"
+          ],
+          "answer": 1,
+          "why": "The speaker describes multiple charging ports and the ability to charge several devices simultaneously."
+        },
+        {
+          "type": "gap",
+          "id": "ex-product-id-2",
+          "prompt": "Fill in the gap: 'This gadget is brilliant if you're tired of ___ cables on your desk.'",
+          "speak": "This gadget is brilliant if you're tired of tangled cables on your desk. It's got multiple charging ports and a power button you can reach without fumbling. You can charge your phone, tablet, and laptop all at once. Perfect for people who work from home.",
+          "answers": [
+            "tangled"
+          ],
+          "why": "The speaker describes the problem this product solves: tangled cables."
+        },
+        {
+          "type": "choice",
+          "id": "ex-product-id-3",
+          "prompt": "Which devices can you charge at the same time?",
+          "speak": "You can charge your phone, tablet, and laptop all at once. It's got enough wattage to handle demanding devices. The cable that comes with it is reinforced, so it won't fray after a few weeks.",
+          "options": [
+            "Only phones and tablets",
+            "Only laptops",
+            "Phone, tablet, and laptop",
+            "Any three devices without limit"
+          ],
+          "answer": 2,
+          "why": "The speaker explicitly mentions 'your phone, tablet, and laptop all at once'."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-product-id-4",
+          "statement": "The cable is designed to be durable.",
+          "speak": "You can charge your phone, tablet, and laptop all at once. It's got enough wattage to handle demanding devices. The cable that comes with it is reinforced, so it won't fray after a few weeks.",
+          "answer": true,
+          "why": "The speaker says the cable is 'reinforced, so it won't fray', indicating durability."
+        },
+        {
+          "type": "choice",
+          "id": "ex-product-id-5",
+          "prompt": "What advantage does the speaker give for people who work from home?",
+          "speak": "Perfect for people who work from home. You just set it up once, and you don't have to think about charging anymore. Everything stays charged throughout the day.",
+          "options": [
+            "It reduces electricity costs",
+            "It looks professional",
+            "You don't have to worry about charging devices",
+            "It's cheaper than individual chargers"
+          ],
+          "answer": 2,
+          "why": "The speaker emphasises you don't have to think about charging and devices stay charged all day."
+        }
+      ]
+    },
+    {
+      "id": "ex-restaurant-review",
+      "title": "Restaurant Review Analysis",
+      "skill": "listening",
+      "cefrLevel": "C2",
+      "minutes": 5,
+      "objective": "Understand a spoken restaurant review; identify the speaker's attitude and key details about the dining experience.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-restaurant-review-1",
+          "prompt": "What is the speaker's overall attitude towards the restaurant?",
+          "speak": "I visited Meridian last Thursday, and I must say, the experience was rather more impressive than I'd anticipated. The menu showcased seasonal British produce, though I confess some dishes felt slightly overwrought. The dessert menu was exceptional—truly, one of the best I've encountered in a neighbourhood establishment.",
+          "options": [
+            "Highly critical and disappointed",
+            "Cautiously positive with minor reservations",
+            "Lukewarm and indifferent",
+            "Overwhelmingly enthusiastic"
+          ],
+          "answer": 1,
+          "why": "The speaker finds it 'more impressive than anticipated' but notes some dishes were 'overwrought', showing balanced positivity."
+        },
+        {
+          "type": "gap",
+          "id": "ex-restaurant-review-2",
+          "prompt": "Fill in the gap: 'Some dishes felt slightly ___.'",
+          "speak": "I visited Meridian last Thursday, and I must say, the experience was rather more impressive than I'd anticipated. The menu showcased seasonal British produce, though I confess some dishes felt slightly overwrought. The dessert menu was exceptional—truly, one of the best I've encountered in a neighbourhood establishment.",
+          "answers": [
+            "overwrought"
+          ],
+          "why": "The speaker uses 'overwrought' to mean overly elaborate or complicated in preparation."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-restaurant-review-3",
+          "statement": "The menu primarily featured imported ingredients.",
+          "speak": "I visited Meridian last Thursday, and I must say, the experience was rather more impressive than I'd anticipated. The menu showcased seasonal British produce, though I confess some dishes felt slightly overwrought. The dessert menu was exceptional—truly, one of the best I've encountered in a neighbourhood establishment.",
+          "answer": false,
+          "why": "The speaker says the menu showcased 'seasonal British produce', not imported ingredients."
+        },
+        {
+          "type": "choice",
+          "id": "ex-restaurant-review-4",
+          "prompt": "How does the speaker characterise the dessert menu?",
+          "speak": "The dessert menu was exceptional—truly, one of the best I've encountered in a neighbourhood establishment. The waiter was knowledgeable without being pretentious, which is refreshing.",
+          "options": [
+            "Outstanding for a local restaurant",
+            "Standard but competently curated",
+            "Disappointing and poorly selected",
+            "Limited and somewhat overpriced"
+          ],
+          "answer": 0,
+          "why": "The speaker calls it 'exceptional' and 'one of the best' in a neighbourhood restaurant."
+        },
+        {
+          "type": "match",
+          "id": "ex-restaurant-review-5",
+          "speak": "The service was attentive without hovering, the atmosphere struck the right balance between relaxed and refined, and the bill, whilst not inexpensive, represented fair value for the quality.",
+          "pairs": [
+            {
+              "left": "Service style",
+              "right": "Attentive without hovering"
+            },
+            {
+              "left": "Atmosphere",
+              "right": "Relaxed and refined balance"
+            },
+            {
+              "left": "Price assessment",
+              "right": "Fair value for quality"
+            }
+          ],
+          "why": "The speaker details three aspects: service approach, environmental tone, and value proposition."
+        }
+      ]
+    },
+    {
+      "id": "ex-implied-meaning",
+      "title": "Reading Between the Lines",
+      "skill": "listening",
+      "cefrLevel": "C1",
+      "minutes": 5,
+      "objective": "Understand what a speaker implies from context rather than states directly.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-implied-meaning-1",
+          "prompt": "What does the speaker imply about the proposed solution?",
+          "speak": "Well, I suppose we could try it that way, though I'd be curious to know what our legal department thinks about it. And naturally, we'll need to consider the cost implications. It's certainly... creative.",
+          "options": [
+            "It's definitely the best approach",
+            "It's straightforward and affordable",
+            "She has concerns but is being diplomatic",
+            "She's enthusiastic about testing it"
+          ],
+          "answer": 2,
+          "why": "Words like 'suppose', 'curious', 'cost implications', and the hesitant 'creative' suggest diplomatic skepticism."
+        },
+        {
+          "type": "choice",
+          "id": "ex-implied-meaning-2",
+          "prompt": "What does the speaker's tone suggest about the candidate?",
+          "speak": "Oh, he's very... energetic. Certainly brings enthusiasm to meetings. He's got bags of ideas, though some were a bit... unconventional for our sector. Still, you can't fault his commitment.",
+          "options": [
+            "The candidate is unreliable and unprepared",
+            "The candidate is well-meaning but possibly unsuitable",
+            "The candidate exceeded all expectations",
+            "The candidate is perfectly suited for the role"
+          ],
+          "answer": 1,
+          "why": "Phrases like 'unconventional for our sector' and backhanded compliments ('you can't fault his commitment') suggest reservations."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-implied-meaning-3",
+          "statement": "The speaker is directly criticising the project's progress.",
+          "speak": "The project is advancing. We're on track, more or less. A few unexpected challenges cropped up, but these things happen. I wouldn't say we're behind schedule exactly.",
+          "answer": false,
+          "why": "The speaker uses vague positive language ('advancing', 'more or less') and minimises problems, implying subtle concerns rather than direct criticism."
+        },
+        {
+          "type": "gap",
+          "id": "ex-implied-meaning-4",
+          "prompt": "Fill in the gap: 'A few unexpected ___ cropped up, but these things happen.'",
+          "speak": "The project is advancing. We're on track, more or less. A few unexpected challenges cropped up, but these things happen. I wouldn't say we're behind schedule exactly.",
+          "answers": [
+            "challenges",
+            "challenge"
+          ],
+          "why": "The speaker mentions 'unexpected challenges' when discussing the project's progress."
+        }
+      ]
+    },
+    {
+      "id": "ex-short-dialogues",
+      "title": "Colloquial Conversations",
+      "skill": "listening",
+      "cefrLevel": "C1",
+      "minutes": 5,
+      "objective": "Understand colloquial short dialogues; determine how the speaker feels or how they are speaking.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-short-dialogues-1",
+          "prompt": "How does Speaker A feel about the situation?",
+          "speak": "Speaker A: 'Did you manage to get tickets for the concert?' Speaker B: 'No, they sold out in minutes.' Speaker A: 'Ah, gutting. I was really looking forward to that.'",
+          "options": [
+            "Relieved",
+            "Disappointed",
+            "Amused",
+            "Indifferent"
+          ],
+          "answer": 1,
+          "why": "Speaker A says 'gutting' (British colloquial for very disappointing) and mentions looking forward to it."
+        },
+        {
+          "type": "gap",
+          "id": "ex-short-dialogues-2",
+          "prompt": "Fill in the gap: 'Ah, ___. I was really looking forward to that.'",
+          "speak": "Speaker A: 'Did you manage to get tickets for the concert?' Speaker B: 'No, they sold out in minutes.' Speaker A: 'Ah, gutting. I was really looking forward to that.'",
+          "answers": [
+            "gutting"
+          ],
+          "why": "Speaker A uses the colloquial expression 'gutting' to express disappointment."
+        },
+        {
+          "type": "choice",
+          "id": "ex-short-dialogues-3",
+          "prompt": "What is the tone of this exchange?",
+          "speak": "Speaker C: 'You've been quiet lately. Everything alright?' Speaker D: 'Yeah, just been knackered at work. Nothing I can't handle, though.'",
+          "options": [
+            "Concerned and reassuring",
+            "Sarcastic",
+            "Purely transactional",
+            "Confrontational"
+          ],
+          "answer": 0,
+          "why": "Speaker C shows concern, and Speaker D reassures them despite being tired."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-short-dialogues-4",
+          "statement": "Speaker D is serious about a major problem.",
+          "speak": "Speaker C: 'You've been quiet lately. Everything alright?' Speaker D: 'Yeah, just been knackered at work. Nothing I can't handle, though.'",
+          "answer": false,
+          "why": "Speaker D says 'nothing I can't handle', downplaying the situation."
+        },
+        {
+          "type": "choice",
+          "id": "ex-short-dialogues-5",
+          "prompt": "What does Speaker E's response suggest?",
+          "speak": "Speaker F: 'Want to grab lunch tomorrow?' Speaker E: 'Eh, bit snowed under at the moment, but I'll let you know.'",
+          "options": [
+            "They've no interest in lunch",
+            "They prefer dinner instead",
+            "They're definitely available",
+            "They're unsure and busy"
+          ],
+          "answer": 3,
+          "why": "Speaker E says they're 'snowed under' (overwhelmed) and non-committal ('I'll let you know')."
+        }
+      ]
+    },
+    {
+      "id": "ex-subtle-attitudes",
+      "title": "Detecting Attitude Through Language",
+      "skill": "listening",
+      "cefrLevel": "C2",
+      "minutes": 3,
+      "objective": "Identify attitude shown through word choice and tone of voice; distinguish between subtle shades of meaning.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-subtle-attitudes-1",
+          "prompt": "What attitude does the speaker convey through their word choices?",
+          "speak": "The decision was made by those in charge, shall we say, without much consultation from those of us actually doing the work. I suppose it's efficient in theory.",
+          "options": [
+            "Enthusiastic acceptance",
+            "Barely concealed resentment",
+            "Confused uncertainty",
+            "Professional indifference"
+          ],
+          "answer": 1,
+          "why": "Phrases like 'shall we say' and 'I suppose' paired with criticisms ('without much consultation') convey veiled frustration."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-subtle-attitudes-2",
+          "statement": "The speaker believes the decision-making process was adequately transparent.",
+          "speak": "The decision was made by those in charge, shall we say, without much consultation from those of us actually doing the work. I suppose it's efficient in theory.",
+          "answer": false,
+          "why": "The speaker criticises the lack of consultation and is being sarcastic about efficiency."
+        },
+        {
+          "type": "choice",
+          "id": "ex-subtle-attitudes-3",
+          "prompt": "What is the speaker's view of the new policy?",
+          "speak": "It's admirable, in a way, that they're attempting to address the issue. Though I suspect the implementation may prove considerably more complicated than they've anticipated. Time will tell, I suppose.",
+          "options": [
+            "They're doubtful despite acknowledging good intent",
+            "They're entirely supportive",
+            "They haven't formed an opinion yet",
+            "They think it will definitely succeed"
+          ],
+          "answer": 0,
+          "why": "Words like 'admirable in a way' and 'I suspect' complications show measured skepticism beneath surface politeness."
+        },
+        {
+          "type": "gap",
+          "id": "ex-subtle-attitudes-4",
+          "prompt": "Fill in the gap: 'It's ___, in a way, that they're attempting to address the issue.'",
+          "speak": "It's admirable, in a way, that they're attempting to address the issue. Though I suspect the implementation may prove considerably more complicated than they've anticipated. Time will tell, I suppose.",
+          "answers": [
+            "admirable"
+          ],
+          "why": "The word 'admirable' is qualified by 'in a way', showing the speaker's reserved endorsement."
+        }
+      ]
+    },
+    {
+      "id": "ex-word-stress",
+      "title": "Stress in Common Words",
+      "skill": "pronunciation",
+      "cefrLevel": "C1",
+      "minutes": 5,
+      "objective": "Recognise stress patterns in two- and three-syllable words and place word stress correctly.",
+      "items": [
+        {
+          "type": "stress",
+          "id": "stress-1-banana",
+          "word": "banana",
+          "options": [
+            "Ooo",
+            "oOo"
+          ],
+          "answer": 1,
+          "why": "Banana is ba-NA-na: the stress falls on the second syllable."
+        },
+        {
+          "type": "stress",
+          "id": "stress-2-mountain",
+          "word": "mountain",
+          "options": [
+            "Ooo",
+            "oOo"
+          ],
+          "answer": 0,
+          "why": "Mountain is MOUN-tain: the stress falls on the first syllable."
+        },
+        {
+          "type": "stress",
+          "id": "stress-3-tomorrow",
+          "word": "tomorrow",
+          "options": [
+            "Ooo",
+            "oOo"
+          ],
+          "answer": 1,
+          "why": "Tomorrow is to-MOR-row: the stress falls on the second syllable."
+        },
+        {
+          "type": "stress",
+          "id": "stress-4-elephant",
+          "word": "elephant",
+          "options": [
+            "Ooo",
+            "oOo"
+          ],
+          "answer": 0,
+          "why": "Elephant is EL-e-phant: the stress falls on the first syllable."
+        },
+        {
+          "type": "choice",
+          "id": "choice-1-stress-word",
+          "prompt": "Which word has stress on the second syllable?",
+          "options": [
+            "machine",
+            "example",
+            "winter"
+          ],
+          "answer": 0,
+          "why": "'Machine' is pronounced ma-CHINE; 'example' is EX-am-ple and 'winter' is WIN-ter, both first syllable."
+        }
+      ]
+    },
+    {
+      "id": "ex-us-uk-pronunciation",
+      "title": "US and UK Pronunciations",
+      "skill": "pronunciation",
+      "cefrLevel": "C1",
+      "minutes": 3,
+      "objective": "Distinguish how the same word sounds different in American and British English.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "pron-1-vitamin",
+          "prompt": "How do British speakers pronounce 'vitamin'?",
+          "options": [
+            "VIT-a-min",
+            "vi-TAM-in"
+          ],
+          "answer": 0,
+          "accent": "uk",
+          "speak": "In British English, vitamin is pronounced VIT-a-min with stress on the first syllable.",
+          "why": "British English stresses the first syllable: VIT-a-min."
+        },
+        {
+          "type": "choice",
+          "id": "pron-2-schedule",
+          "prompt": "How do Americans pronounce 'schedule'?",
+          "options": [
+            "SHED-ule",
+            "SKED-ule"
+          ],
+          "answer": 1,
+          "accent": "us",
+          "speak": "Americans typically say SKED-ule without the 'sh' sound.",
+          "why": "American English uses a 'k' sound at the start: SKED-ule."
+        },
+        {
+          "type": "choice",
+          "id": "pron-3-privacy",
+          "prompt": "How do British speakers pronounce 'privacy'?",
+          "options": [
+            "PRIV-a-cy",
+            "PRI-va-cy"
+          ],
+          "answer": 0,
+          "accent": "uk",
+          "speak": "In British English, privacy stresses the first syllable: PRI-va-cy.",
+          "why": "British English stresses the first syllable with a short 'a' sound."
+        },
+        {
+          "type": "choice",
+          "id": "pron-4-mobile",
+          "prompt": "How do Americans pronounce 'mobile'?",
+          "options": [
+            "MO-beel",
+            "MOH-bul"
+          ],
+          "answer": 1,
+          "accent": "us",
+          "speak": "Americans say MOH-bul, ending with an unstressed syllable.",
+          "why": "American English ends with an unstressed schwa sound: MOH-bul."
+        },
+        {
+          "type": "truefalse",
+          "id": "pron-5-difference",
+          "statement": "Both British and American speakers stress the second syllable of the word 'schedule.'",
+          "answer": false,
+          "why": "Americans pronounce schedule as SKED-ule (first syllable stress), while it may vary in British English; but the key difference is the initial 'k' versus 'sh' sound."
+        }
+      ]
+    },
+    {
+      "id": "ex-intonation",
+      "title": "Intonation and Meaning",
+      "skill": "pronunciation",
+      "cefrLevel": "C1",
+      "minutes": 3,
+      "objective": "Understand how falling and rising intonation changes the meaning or function of an utterance.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "inton-1-question",
+          "prompt": "What does rising intonation signal at the end of 'You're coming to the meeting'?",
+          "options": [
+            "A statement of fact",
+            "A question seeking confirmation",
+            "A command"
+          ],
+          "answer": 1,
+          "why": "Rising intonation turns a statement into a yes/no question or request for confirmation."
+        },
+        {
+          "type": "truefalse",
+          "id": "inton-2-certainty",
+          "statement": "Falling intonation at the end of a statement suggests the speaker is uncertain.",
+          "answer": false,
+          "why": "Falling intonation signals finality and certainty; rising intonation suggests hesitation or uncertainty."
+        },
+        {
+          "type": "choice",
+          "id": "inton-3-sarcasm",
+          "prompt": "If someone says 'That's a great idea' with falling intonation and slow delivery, what do they likely mean?",
+          "options": [
+            "Interest in discussing further",
+            "Genuine approval",
+            "Sarcasm or disapproval"
+          ],
+          "answer": 2,
+          "why": "Falling intonation combined with slow, exaggerated delivery often signals sarcasm or the opposite meaning."
+        },
+        {
+          "type": "choice",
+          "id": "inton-4-list",
+          "prompt": "When listing items, 'I need apples, oranges, bananas', what intonation pattern is typical?",
+          "options": [
+            "Falling on every word",
+            "Rising on apples and oranges, falling on bananas",
+            "Level on every word",
+            "Rising on bananas only"
+          ],
+          "answer": 1,
+          "why": "Items in a list have rising or level tone except the final item, which falls to signal the list is complete."
+        }
+      ]
+    },
+    {
+      "id": "ex-four-syllable-stress",
+      "title": "Four-Syllable Word Stress",
+      "skill": "pronunciation",
+      "cefrLevel": "C2",
+      "minutes": 5,
+      "objective": "Master stress patterns in four-syllable words, including words with secondary stress.",
+      "items": [
+        {
+          "type": "stress",
+          "id": "stress-4-1-education",
+          "word": "education",
+          "options": [
+            "oOoo",
+            "ooOo",
+            "Oooo"
+          ],
+          "answer": 1,
+          "why": "Education is pronounced ed-yu-KAY-shun with primary stress on the third syllable."
+        },
+        {
+          "type": "stress",
+          "id": "stress-4-2-particular",
+          "word": "particular",
+          "options": [
+            "oOoo",
+            "Oooo",
+            "ooOo"
+          ],
+          "answer": 0,
+          "why": "Particular is pronounced par-TIC-u-lar with primary stress on the second syllable."
+        },
+        {
+          "type": "stress",
+          "id": "stress-4-3-technology",
+          "word": "technology",
+          "options": [
+            "Oooo",
+            "oOoo",
+            "ooOo"
+          ],
+          "answer": 1,
+          "why": "Technology is pronounced tek-NOL-o-jee with primary stress on the second syllable."
+        },
+        {
+          "type": "stress",
+          "id": "stress-4-4-community",
+          "word": "community",
+          "options": [
+            "ooOo",
+            "Oooo",
+            "oOoo"
+          ],
+          "answer": 2,
+          "why": "Community is pronounced co-MMU-ni-ty with primary stress on the second syllable."
+        },
+        {
+          "type": "choice",
+          "id": "stress-4-5-syllables",
+          "prompt": "Which word has stress on the first syllable?",
+          "options": [
+            "photograph",
+            "photography",
+            "photographer"
+          ],
+          "answer": 0,
+          "why": "Photograph: PHOT-o-graph (first syllable); photography: pho-TOG-ra-phy (second syllable)."
+        }
+      ]
+    },
+    {
+      "id": "ex-stressed-words",
+      "title": "Contrastive Stress",
+      "skill": "pronunciation",
+      "cefrLevel": "C1",
+      "minutes": 3,
+      "objective": "Identify which word the speaker stresses to change the meaning or focus of a sentence.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "stress-contr-1",
+          "prompt": "In 'I think WE should handle this,' which word is stressed and why?",
+          "options": [
+            "'I' — to emphasise the speaker's view",
+            "'WE' — to suggest shared responsibility",
+            "'should' — to express obligation"
+          ],
+          "answer": 1,
+          "why": "Stressing 'WE' implies the decision should involve everyone, shifting focus from individual to collective action."
+        },
+        {
+          "type": "choice",
+          "id": "stress-contr-2",
+          "prompt": "'She likes COFFEE, not tea.' Why stress 'coffee'?",
+          "options": [
+            "To clarify which beverage she prefers",
+            "To suggest coffee is unusual",
+            "To emphasise the speaker's preference"
+          ],
+          "answer": 0,
+          "why": "Contrastive stress on 'coffee' highlights what she does prefer when contrasted with what she doesn't (tea)."
+        },
+        {
+          "type": "choice",
+          "id": "stress-contr-3",
+          "prompt": "'We finished the PROJECT on time.' What does stressing 'project' imply?",
+          "options": [
+            "The speaker is proud of this achievement",
+            "The project was difficult",
+            "Other tasks were not finished on time"
+          ],
+          "answer": 2,
+          "why": "Stressing 'project' suggests that while the project was done on time, perhaps other things were not."
+        },
+        {
+          "type": "truefalse",
+          "id": "stress-contr-4",
+          "statement": "Contrastive stress always makes a sentence sound angry or negative.",
+          "answer": false,
+          "why": "Contrastive stress simply shifts focus or creates contrast; the emotional tone depends on context and intonation."
+        }
+      ]
+    },
+    {
+      "id": "ex-money-matters",
+      "title": "Banking and Finance",
+      "skill": "reading",
+      "cefrLevel": "C1",
+      "minutes": 8,
+      "objective": "Understand a passage about banking, current accounts, and savings; recognise key financial vocabulary.",
+      "passage": "Opening a current account is one of the most straightforward financial decisions adults make. Most banks offer similar features: a debit card, regular statements, and the ability to deposit and withdraw funds easily. However, understanding the fine print matters. Many accounts include overdraft protection, which allows you to spend beyond your balance up to a set limit—but this comes with interest charges. If you are eligible for an interest-bearing savings account, you can build wealth by setting aside a lump sum initially and letting it accrue interest over time. Some people opt out of overdraft protection to avoid overspending, whilst others prefer the flexibility. When choosing between accounts, review whether you receive a monthly statement, which balance queries cost, and what happens if your account falls inactive. The right choice depends on your spending habits and financial goals.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "banking-1-overdraft",
+          "prompt": "According to the passage, what is the main risk of overdraft protection?",
+          "options": [
+            "Your account may be closed",
+            "You pay interest charges on borrowed money",
+            "The bank will not allow withdrawals"
+          ],
+          "answer": 1,
+          "why": "The passage states overdraft protection 'comes with interest charges.'"
+        },
+        {
+          "type": "gap",
+          "id": "banking-2-lump-sum",
+          "prompt": "If you want to save efficiently, the passage suggests depositing a ___ initially and letting interest build.",
+          "answers": [
+            "lump sum"
+          ],
+          "why": "The passage explains that 'setting aside a lump sum initially' helps build wealth through accrued interest."
+        },
+        {
+          "type": "truefalse",
+          "id": "banking-3-eligible",
+          "statement": "Everyone is eligible for an interest-bearing savings account.",
+          "answer": false,
+          "why": "The passage says 'if you are eligible,' implying eligibility criteria exist and not everyone qualifies."
+        },
+        {
+          "type": "choice",
+          "id": "banking-4-opt-out",
+          "prompt": "Why might someone opt out of overdraft protection?",
+          "options": [
+            "To avoid spending more than they can afford",
+            "To reduce monthly fees",
+            "To earn more interest"
+          ],
+          "answer": 0,
+          "why": "The passage states some people 'opt out of overdraft protection to avoid overspending.'"
+        },
+        {
+          "type": "choice",
+          "id": "banking-5-choice",
+          "prompt": "What should you review when choosing an account?",
+          "options": [
+            "The colour of your debit card",
+            "Only the interest rate",
+            "Monthly statements, balance query costs, and inactivity policies"
+          ],
+          "answer": 2,
+          "why": "The passage advises to 'review whether you receive a monthly statement, which balance queries cost, and what happens if your account falls inactive.'"
+        }
+      ]
+    },
+    {
+      "id": "ex-text-messages",
+      "title": "Reading Text Messages",
+      "skill": "reading",
+      "cefrLevel": "C1",
+      "minutes": 3,
+      "objective": "Understand tone, sarcasm, and idioms in informal written communication.",
+      "passage": "Mia: Do you seriously expect me to finish that report by Friday? Josh: Well, I'm not letting you go without a solid plan. Mia: Fine. I'll start tonight. Josh: Brilliant. Thanks for understanding.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "text-1-tone",
+          "prompt": "What is Mia's tone in her first message?",
+          "options": [
+            "Enthusiastic",
+            "Frustrated or sceptical",
+            "Confused"
+          ],
+          "answer": 1,
+          "why": "'Do you seriously expect me' with a question mark signals doubt and frustration about the unrealistic deadline."
+        },
+        {
+          "type": "choice",
+          "id": "text-2-letting-go",
+          "prompt": "What does Josh mean by 'I'm not letting you go without a solid plan'?",
+          "options": [
+            "He insists they create a plan before proceeding",
+            "He is angry with Mia",
+            "He is dismissing Mia"
+          ],
+          "answer": 0,
+          "why": "This is an idiom meaning 'I won't allow you to proceed without' a solid plan; it shows he wants planning first."
+        },
+        {
+          "type": "truefalse",
+          "id": "text-3-agreement",
+          "statement": "By saying 'Fine,' Mia is genuinely happy about the task.",
+          "answer": false,
+          "why": "'Fine' here signals reluctant acceptance; combined with 'I'll start tonight,' it shows she is complying but not enthusiastically."
+        },
+        {
+          "type": "choice",
+          "id": "text-4-josh-response",
+          "prompt": "Josh says 'Brilliant. Thanks for understanding.' What does he value?",
+          "options": [
+            "Mia's speed",
+            "Mia's enthusiasm",
+            "Mia's willingness to cooperate despite difficulty"
+          ],
+          "answer": 2,
+          "why": "He praises her for 'understanding,' meaning he appreciates that she grasps the importance and has agreed to help."
+        }
+      ]
+    },
+    {
+      "id": "ex-world-of-work",
+      "title": "Job Application Language",
+      "skill": "reading",
+      "cefrLevel": "C2",
+      "minutes": 3,
+      "objective": "Understand formal language conventions in professional job applications and identify key rhetorical strategies.",
+      "passage": "I am writing to express my strong interest in the Senior Software Engineer position at your esteemed organisation. With eight years of progressive experience in full-stack development and a demonstrated track record of delivering high-impact solutions, I am confident that my technical expertise and leadership capabilities align precisely with your requirements. My recent achievements include spearheading a cross-functional initiative that reduced system latency by 40%, and mentoring junior developers to achieve industry certifications. I am particularly drawn to your commitment to innovation and would welcome the opportunity to contribute to your ambitious roadmap.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "job-1-purpose",
+          "prompt": "What is the primary purpose of the opening sentence?",
+          "options": [
+            "To describe the writer's background",
+            "To formally state the application's intent and express genuine interest",
+            "To list qualifications"
+          ],
+          "answer": 1,
+          "why": "The sentence 'I am writing to express my strong interest' formally establishes the letter's purpose and demonstrates engagement."
+        },
+        {
+          "type": "gap",
+          "id": "job-2-track-record",
+          "prompt": "The writer mentions a 'demonstrated ___ of delivering solutions' to prove value.",
+          "answers": [
+            "track record"
+          ],
+          "why": "'Track record' is a formal phrase meaning proven history of success, used in professional writing to show accomplishments."
+        },
+        {
+          "type": "choice",
+          "id": "job-3-motivation",
+          "prompt": "Why does the writer mention the company's 'commitment to innovation'?",
+          "options": [
+            "To show alignment between personal values and company culture",
+            "To question the organisation's direction",
+            "To criticise past practices"
+          ],
+          "answer": 0,
+          "why": "Stating 'particularly drawn to your commitment' shows the writer's motivation is genuine and values-aligned, not just salary-seeking."
+        },
+        {
+          "type": "truefalse",
+          "id": "job-4-informal",
+          "statement": "The language used in this application letter is informal and conversational.",
+          "answer": false,
+          "why": "Phrases like 'esteemed organisation,' 'progressive experience,' and 'spearheading' are formal, professional, and carefully chosen."
+        }
+      ]
+    },
+    {
+      "id": "ex-property-for-sale",
+      "title": "Property Listing",
+      "skill": "reading",
+      "cefrLevel": "C2",
+      "minutes": 3,
+      "objective": "Read a property description and extract factual details, recognise marketing language, and answer comprehension questions.",
+      "passage": "Riverside Manor is a handsome Victorian villa set on 2.5 acres of mature parkland in the heart of the Cotswolds. Built in 1887, this prestigious property features original cornicing, high ceilings, and hardwood floors throughout its nine reception rooms. The master suite enjoys views across the valley, whilst the fully equipped kitchen has been sympathetically updated to combine period charm with modern convenience. The property includes a self-contained cottage, ideal for guest accommodation or rental income, and extensive outbuildings suitable for conversion to additional living space. The grounds are enhanced by a natural spring-fed pond and established woodland. Access is via a private drive, and the property is positioned near excellent schools and market towns. Early viewings are strongly recommended for this rare opportunity.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "property-1-size",
+          "prompt": "How much land comes with Riverside Manor?",
+          "options": [
+            "1 acre",
+            "2.5 acres",
+            "5 acres"
+          ],
+          "answer": 1,
+          "why": "The passage explicitly states the property is 'set on 2.5 acres of mature parkland.'"
+        },
+        {
+          "type": "gap",
+          "id": "property-2-built",
+          "prompt": "Riverside Manor was built in ___.",
+          "answers": [
+            "1887"
+          ],
+          "why": "The passage states 'Built in 1887,' establishing the construction date."
+        },
+        {
+          "type": "choice",
+          "id": "property-3-cottage",
+          "prompt": "What is suggested as a use for the self-contained cottage?",
+          "options": [
+            "Guest accommodation or generating rental income",
+            "Storage for farm equipment",
+            "Staff quarters only"
+          ],
+          "answer": 0,
+          "why": "The passage describes it as 'ideal for guest accommodation or rental income,' offering two distinct purposes."
+        },
+        {
+          "type": "truefalse",
+          "id": "property-4-original",
+          "statement": "The kitchen retains all original Victorian fixtures and fittings.",
+          "answer": false,
+          "why": "The passage says the kitchen 'has been sympathetically updated to combine period charm with modern convenience,' meaning some original features have been modernised."
+        },
+        {
+          "type": "choice",
+          "id": "property-5-outbuildings",
+          "prompt": "What does the passage suggest about the outbuildings?",
+          "options": [
+            "They are occupied by staff",
+            "They are currently unusable",
+            "They could be converted into additional homes"
+          ],
+          "answer": 2,
+          "why": "The passage notes they are 'suitable for conversion to additional living space,' indicating development potential."
+        }
+      ]
+    },
+    {
+      "id": "ex-communication",
+      "title": "Communicating Clearly",
+      "skill": "vocabulary",
+      "cefrLevel": "C1",
+      "minutes": 8,
+      "objective": "idioms and phrasal verbs of communication (for example \"getting at\", \"on hold\", \"move on\", \"get back to someone\") and precise word choice in context (illustrate versus demonstrate, jargon versus slogans, misleading versus misguided, released versus published).",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-communication-1",
+          "prompt": "When the director didn't ___ the issue directly, we all sensed she was avoiding something serious.",
+          "options": [
+            "get to",
+            "move on",
+            "hold on",
+            "get back to"
+          ],
+          "answer": 0,
+          "why": "'Get to' the issue means to reach or address its core; 'move on' means continue, 'hold on' means wait, and 'get back to' means reply later."
+        },
+        {
+          "type": "gap",
+          "id": "ex-communication-2",
+          "prompt": "The project was put on ___ while the company reassessed its priorities.",
+          "answers": [
+            "hold"
+          ],
+          "why": "On hold means suspended or postponed; a fixed phrase indicating something is temporarily paused."
+        },
+        {
+          "type": "choice",
+          "id": "ex-communication-3",
+          "prompt": "The consultant used too much ___ in her report, making it impossible for non-specialists to understand.",
+          "options": [
+            "slogans",
+            "jargon",
+            "idioms",
+            "metaphors"
+          ],
+          "answer": 1,
+          "why": "Jargon refers to technical or specialised vocabulary that obscures meaning; slogans are catchphrases, not technical language."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-communication-4",
+          "statement": "A misleading statement is one that is mistaken or confused in its reasoning.",
+          "answer": false,
+          "why": "Misleading means deliberately or unintentionally designed to deceive; misguided means poorly reasoned or ill-advised."
+        },
+        {
+          "type": "choice",
+          "id": "ex-communication-5",
+          "prompt": "The findings were ___ in three peer-reviewed journals simultaneously.",
+          "options": [
+            "released",
+            "published",
+            "illustrated",
+            "demonstrated"
+          ],
+          "answer": 1,
+          "why": "Published is the correct word for academic work appearing in journals; released suggests making available to the public."
+        }
+      ]
+    },
+    {
+      "id": "ex-more-definitions",
+      "title": "Word Forms in Context",
+      "skill": "vocabulary",
+      "cefrLevel": "C1",
+      "minutes": 5,
+      "objective": "word families. Use the noun or adjective form of a verb in a gap (for example endeavour, differentiate, dominate, contradict).",
+      "items": [
+        {
+          "type": "gap",
+          "id": "ex-more-definitions-1",
+          "prompt": "Despite her best ___, she could not convince the committee to change their position.",
+          "answers": [
+            "endeavour",
+            "endeavor"
+          ],
+          "why": "Endeavour (noun) means an attempt or effort; the verb form would be 'endeavour to do', but here we need the noun."
+        },
+        {
+          "type": "gap",
+          "id": "ex-more-definitions-2",
+          "prompt": "The ___ factor between the two theories became increasingly clear as research progressed.",
+          "answers": [
+            "differentiating"
+          ],
+          "why": "A differentiating factor is one that makes things distinct or sets them apart from one another."
+        },
+        {
+          "type": "choice",
+          "id": "ex-more-definitions-3",
+          "prompt": "Her ___ personality meant she had a strong influence on team decisions.",
+          "options": [
+            "dominating",
+            "dominated",
+            "dominance",
+            "dominant"
+          ],
+          "answer": 3,
+          "why": "Dominant (adjective) describes something that is most influential or powerful; dominating is a verb form, dominance is a noun."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-more-definitions-4",
+          "statement": "A contradiction in evidence means the evidence supports two opposite conclusions.",
+          "answer": true,
+          "why": "A contradiction is a direct opposition between two statements or facts; they cannot both be true simultaneously."
+        },
+        {
+          "type": "match",
+          "id": "ex-more-definitions-5",
+          "pairs": [
+            {
+              "left": "endeavour",
+              "right": "a serious attempt to achieve something"
+            },
+            {
+              "left": "differentiate",
+              "right": "to recognise or show the difference between things"
+            },
+            {
+              "left": "dominate",
+              "right": "to have the strongest influence or control"
+            },
+            {
+              "left": "contradict",
+              "right": "to assert the opposite of what someone has said"
+            }
+          ],
+          "why": "Matching word forms to their definitions reinforces understanding of word families and precise meanings."
+        }
+      ]
+    },
+    {
+      "id": "ex-body-health-2",
+      "title": "Health and Wellbeing Phrases",
+      "skill": "vocabulary",
+      "cefrLevel": "C2",
+      "minutes": 8,
+      "objective": "body and health vocabulary in fixed phrases (for example \"run down\", \"come down with\", \"a stiff neck\", \"on the mend\").",
+      "items": [
+        {
+          "type": "gap",
+          "id": "ex-body-health-2-1",
+          "prompt": "Marcus seemed exhausted all week because he had been ___ for months, struggling with fatigue and low immunity.",
+          "answers": [
+            "run down"
+          ],
+          "why": "Run down means tired and in poor health, typically from overwork or stress; a fixed phrase describing physical depletion."
+        },
+        {
+          "type": "choice",
+          "id": "ex-body-health-2-2",
+          "prompt": "The teacher worried that she might ___ influenza from one of her students.",
+          "options": [
+            "come down with",
+            "go down with",
+            "pick up",
+            "catch"
+          ],
+          "answer": 0,
+          "why": "Come down with means to become ill with a specific disease; pick up is informal, go down with is British but less common for illness onset."
+        },
+        {
+          "type": "gap",
+          "id": "ex-body-health-2-3",
+          "prompt": "After sleeping awkwardly, Daniel woke with ___ and struggled to turn his head.",
+          "answers": [
+            "a stiff neck",
+            "stiff neck"
+          ],
+          "why": "A stiff neck is a fixed phrase describing limited neck movement due to muscle tension or inflammation."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-body-health-2-4",
+          "statement": "If someone is on the mend, they are gradually recovering from an illness or injury.",
+          "answer": true,
+          "why": "On the mend means in the process of recovering or improving; the metaphor refers to something being repaired or restored."
+        },
+        {
+          "type": "choice",
+          "id": "ex-body-health-2-5",
+          "prompt": "The ___ in his shoulder was painful but temporary, lasting only a few days before it faded completely.",
+          "options": [
+            "cough",
+            "ailment",
+            "ache",
+            "rash"
+          ],
+          "answer": 2,
+          "why": "An ache is a dull, lasting pain in one part of the body, which fits a temporary pain in a shoulder. A cough is a specific symptom, an ailment is a general illness, and a rash is a skin condition."
+        }
+      ]
+    },
+    {
+      "id": "ex-formal-word-meanings",
+      "title": "Formal Vocabulary",
+      "skill": "vocabulary",
+      "cefrLevel": "C2",
+      "minutes": 3,
+      "objective": "meanings of formal words (for example \"ameliorate\", \"tenuous\", \"pertinent\", \"expedite\").",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-formal-word-meanings-1",
+          "prompt": "The new policy was designed to ___ the living conditions of rural communities.",
+          "options": [
+            "worsen",
+            "ameliorate",
+            "examine",
+            "document"
+          ],
+          "answer": 1,
+          "why": "Ameliorate means to make better or improve; worsen is the opposite, examine and document don't fit the context."
+        },
+        {
+          "type": "gap",
+          "id": "ex-formal-word-meanings-2",
+          "prompt": "The evidence linking the suspect to the crime was ___, resting on circumstantial details rather than solid proof.",
+          "answers": [
+            "tenuous"
+          ],
+          "why": "Tenuous means weak, insubstantial, or based on flimsy evidence; describes a connection that is barely holding together."
+        },
+        {
+          "type": "choice",
+          "id": "ex-formal-word-meanings-3",
+          "prompt": "Your comments were ___ to the discussion and helped clarify the key issues.",
+          "options": [
+            "pertinent",
+            "obstructive",
+            "tangential",
+            "irrelevant"
+          ],
+          "answer": 0,
+          "why": "Pertinent means relevant and applicable to the matter at hand; the other options suggest irrelevance or obstruction."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-formal-word-meanings-4",
+          "statement": "To expedite a process means to deliberately slow it down for careful consideration.",
+          "answer": false,
+          "why": "Expedite means to speed up or hasten a process; it is the opposite of slowing something down."
+        },
+        {
+          "type": "match",
+          "id": "ex-formal-word-meanings-5",
+          "pairs": [
+            {
+              "left": "ameliorate",
+              "right": "to make better or improve"
+            },
+            {
+              "left": "tenuous",
+              "right": "weak or insubstantial, lacking solid foundation"
+            },
+            {
+              "left": "pertinent",
+              "right": "relevant and applicable to a specific matter"
+            }
+          ],
+          "why": "Matching formal words to their definitions reinforces understanding of sophisticated vocabulary at C2 level."
+        }
+      ]
+    },
+    {
+      "id": "ex-body-health-1",
+      "title": "Health and Wellbeing",
+      "skill": "vocabulary",
+      "cefrLevel": "C1",
+      "minutes": 8,
+      "objective": "health and wellbeing vocabulary in context (symptoms, treatments, habits).",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-body-health-1-1",
+          "prompt": "The patient complained of ___ in the lower back, which had persisted for several weeks.",
+          "options": [
+            "strain",
+            "discharge",
+            "fatigue",
+            "nausea"
+          ],
+          "answer": 0,
+          "why": "Strain (muscular tension or injury) fits the context of lower back pain; discharge, fatigue, nausea are other symptoms."
+        },
+        {
+          "type": "gap",
+          "id": "ex-body-health-1-2",
+          "prompt": "The doctor prescribed antibiotics to treat the ___ infection.",
+          "answers": [
+            "bacterial"
+          ],
+          "why": "Bacterial (adjective) describes an infection caused by bacteria; used to distinguish from viral infections."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-body-health-1-3",
+          "statement": "A vaccination is a treatment given to cure a disease that someone already has.",
+          "answer": false,
+          "why": "A vaccination prevents disease by building immunity; treatment cures an existing disease."
+        },
+        {
+          "type": "choice",
+          "id": "ex-body-health-1-4",
+          "prompt": "Regular exercise and a balanced diet are essential ___ for maintaining good health.",
+          "options": [
+            "symptoms",
+            "treatments",
+            "habits",
+            "risks"
+          ],
+          "answer": 2,
+          "why": "Habits (regular practices or routines) are what maintain health; symptoms indicate illness, treatments cure it, risks threaten it."
+        },
+        {
+          "type": "gap",
+          "id": "ex-body-health-1-5",
+          "prompt": "The physiotherapist recommended ___ therapy to help recover mobility after the injury.",
+          "answers": [
+            "rehabilitation",
+            "rehab"
+          ],
+          "why": "Rehabilitation therapy helps restore function and mobility after injury or illness; a standard term in healthcare."
+        }
+      ]
+    },
+    {
+      "id": "ex-precise-words",
+      "title": "Shades of Meaning",
+      "skill": "vocabulary",
+      "cefrLevel": "C2",
+      "minutes": 3,
+      "objective": "near-synonyms with different connotations (for example \"fastidious\" versus \"meticulous\", \"frugal\" versus \"stingy\").",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-precise-words-1",
+          "prompt": "Elena's ___ attention to detail ensured that every report met the highest standards.",
+          "options": [
+            "fastidious",
+            "meticulous",
+            "pedantic",
+            "obsessive"
+          ],
+          "answer": 1,
+          "why": "Meticulous (very careful and precise) suits professional excellence; fastidious emphasises cleanliness, pedantic is negative."
+        },
+        {
+          "type": "gap",
+          "id": "ex-precise-words-2",
+          "prompt": "Her ___ approach to household expenses meant she never wasted money on unnecessary items.",
+          "answers": [
+            "frugal"
+          ],
+          "why": "Frugal means economical and unwasteful in a positive sense; stingy implies unwillingness to spend fairly."
+        },
+        {
+          "type": "choice",
+          "id": "ex-precise-words-3",
+          "prompt": "The critic was ___ in dismissing the entire exhibition without acknowledging any merit.",
+          "options": [
+            "fastidious",
+            "meticulous",
+            "dismissive",
+            "frugal"
+          ],
+          "answer": 2,
+          "why": "Dismissive (showing lack of respect or consideration) describes an attitude; fastidious and meticulous describe care, frugal is about spending."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-precise-words-4",
+          "statement": "A meticulous person and a fastidious person have identical concerns about cleanliness.",
+          "answer": false,
+          "why": "Meticulous emphasises precision in work; fastidious emphasises cleanliness and careful standards about environment and presentation."
+        },
+        {
+          "type": "match",
+          "id": "ex-precise-words-5",
+          "pairs": [
+            {
+              "left": "fastidious",
+              "right": "very concerned with cleanliness and details; can be overly sensitive"
+            },
+            {
+              "left": "meticulous",
+              "right": "extremely careful and precise in work; shows great attention to detail"
+            },
+            {
+              "left": "frugal",
+              "right": "economical with money; avoiding waste in a positive, prudent way"
+            }
+          ],
+          "why": "Matching near-synonyms to their distinct meanings clarifies connotations and proper usage in context."
+        }
+      ]
+    },
+    {
+      "id": "ex-statements-opinions",
+      "title": "Expressing Views",
+      "skill": "vocabulary",
+      "cefrLevel": "C1",
+      "minutes": 3,
+      "objective": "prepositions and fixed forms after opinion and qualifying phrases (for example \"sceptical about\", \"in keeping with\", \"on the whole\").",
+      "items": [
+        {
+          "type": "gap",
+          "id": "ex-statements-opinions-1",
+          "prompt": "James remained ___ the proposal, believing the risks outweighed the potential benefits.",
+          "answers": [
+            "sceptical about"
+          ],
+          "why": "Sceptical about (or sceptical of) is the fixed phrase meaning doubtful or unconvinced regarding something."
+        },
+        {
+          "type": "choice",
+          "id": "ex-statements-opinions-2",
+          "prompt": "The new office layout was ___ the company's commitment to flexible working arrangements.",
+          "options": [
+            "in keeping with",
+            "in line with",
+            "consistent to",
+            "matching with"
+          ],
+          "answer": 0,
+          "why": "In keeping with means in harmony or agreement with; in line with is similar but less formal; the others are not fixed phrases."
+        },
+        {
+          "type": "gap",
+          "id": "ex-statements-opinions-3",
+          "prompt": "___, the presentation was well organised, though a few technical issues arose.",
+          "answers": [
+            "On the whole",
+            "on the whole"
+          ],
+          "why": "On the whole is a fixed phrase introducing a balanced or overall opinion; means 'in general' or 'considering everything'."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-statements-opinions-4",
+          "statement": "To be sceptical about something means to accept it without questioning.",
+          "answer": false,
+          "why": "Sceptical means having doubts or not convinced; the opposite of accepting something without question."
+        },
+        {
+          "type": "choice",
+          "id": "ex-statements-opinions-5",
+          "prompt": "Her interpretation was ___ the original author's intentions, matching them closely.",
+          "options": [
+            "at odds with",
+            "at variance with",
+            "in accord with",
+            "against"
+          ],
+          "answer": 2,
+          "why": "In accord with means in agreement or harmony with; at odds/variance mean disagreement or conflict."
+        }
+      ]
+    },
+    {
+      "id": "ex-idiomatic",
+      "title": "Idioms and Expressions",
+      "skill": "vocabulary",
+      "cefrLevel": "C1",
+      "minutes": 3,
+      "objective": "idioms that complete a sentence (for example \"bite the bullet\", \"a blessing in disguise\", \"the last straw\").",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-idiomatic-1",
+          "prompt": "Rather than delay further, the board decided to ___ and approve the merger.",
+          "options": [
+            "bite the bullet",
+            "pass the buck",
+            "jump the gun",
+            "cut corners"
+          ],
+          "answer": 0,
+          "why": "Bite the bullet means to face a difficult situation bravely; the other idioms suggest evasion, impatience, or shortcuts."
+        },
+        {
+          "type": "gap",
+          "id": "ex-idiomatic-2",
+          "prompt": "Losing her job initially seemed devastating, but it proved to be ___, opening doors to a better career.",
+          "answers": [
+            "a blessing in disguise"
+          ],
+          "why": "A blessing in disguise is an idiom meaning something that seems bad initially but turns out to be fortunate."
+        },
+        {
+          "type": "choice",
+          "id": "ex-idiomatic-3",
+          "prompt": "When he cancelled their holiday plans at the last moment, it was ___ for their relationship.",
+          "options": [
+            "a blow to",
+            "a setback to",
+            "a challenge to",
+            "the last straw"
+          ],
+          "answer": 3,
+          "why": "The last straw is an idiom meaning the final problem that causes collapse or breakdown; the others are less idiomatic."
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-idiomatic-4",
+          "statement": "To bite the bullet means to avoid making a difficult decision.",
+          "answer": false,
+          "why": "To bite the bullet means to face and deal with something difficult; it's about confronting, not avoiding."
+        },
+        {
+          "type": "match",
+          "id": "ex-idiomatic-5",
+          "pairs": [
+            {
+              "left": "bite the bullet",
+              "right": "to face a difficult situation courageously"
+            },
+            {
+              "left": "a blessing in disguise",
+              "right": "something apparently bad that turns out to be fortunate"
+            },
+            {
+              "left": "the last straw",
+              "right": "a final problem causing the breaking point"
+            }
+          ],
+          "why": "Matching idioms to their meanings reinforces understanding of figurative language at C1 level."
+        }
+      ]
+    },
+    {
+      "id": "ex-science-fiction",
+      "title": "The Speculative Mirror: How Science Fiction Shapes Our Understanding of Technology",
+      "skill": "reading",
+      "cefrLevel": "C1",
+      "minutes": 8,
+      "objective": "Identify referencing words and discourse linkers that connect ideas in science-fiction criticism; understand how the genre functions as commentary on contemporary technological anxieties.",
+      "passage": "Science fiction's enduring appeal lies in its capacity to interrogate our relationship with technology before we fully understand it. Rather than merely predicting gadgets and innovations, the genre operates as a sophisticated thought experiment. When authors construct futures where artificial intelligence surpasses human cognition, or where digital consciousness replaces biological identity, they invite readers to examine our present assumptions about progress. This reflective function distinguishes science fiction from other speculative narratives. Moreover, such stories become cultural markers against which societies measure themselves. As technologies emerge that once seemed purely fictional—facial recognition systems, autonomous vehicles, neural interfaces—we find ourselves referencing these literary precedents to articulate concerns. Consequently, the genre shifts from entertainment to critical apparatus. Furthermore, the prevalence of dystopian narratives suggests a fundamental anxiety about technological determinism itself. In other words, the repeated question in contemporary science fiction is not whether we can develop something, but whether we should. Authors like Voss and Chen have demonstrated that the most compelling speculative fiction addresses power structures embedded within technological systems. These writers recognise that innovations carry ideological weight; they are never neutral tools. Hence, science fiction remains essential not as prophecy, but as ethical scaffolding for navigating genuine technological transformation.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-science-fiction-1",
+          "prompt": "According to the passage, when the author says that science fiction 'operates as a sophisticated thought experiment' (paragraph 1), this means that such fiction:",
+          "options": [
+            "provides accurate predictions about future inventions",
+            "entertains readers with implausible technological fantasy",
+            "creates imaginary scenarios to test ideas and assumptions",
+            "documents historical developments in a speculative manner"
+          ],
+          "answer": 2,
+          "why": "The passage states the genre invites readers to 'examine our present assumptions about progress' through constructed futures."
+        },
+        {
+          "type": "gap",
+          "id": "ex-science-fiction-2",
+          "prompt": "The passage indicates that when real technologies emerge that 'once seemed purely fictional,' people begin to ___ these literary precedents to articulate concerns.",
+          "answers": [
+            "reference",
+            "referencing"
+          ],
+          "why": "Direct quote: 'we find ourselves referencing these literary precedents to articulate concerns.'"
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-science-fiction-3",
+          "statement": "According to the passage, the primary function of science fiction is to predict technological innovations that will later become reality.",
+          "answer": false,
+          "why": "The passage explicitly states the genre's function is not prophecy but serving as 'ethical scaffolding' and 'critical apparatus.'"
+        },
+        {
+          "type": "match",
+          "id": "ex-science-fiction-4",
+          "pairs": [
+            {
+              "left": "This reflective function",
+              "right": "distinguishes science fiction from other speculative narratives"
+            },
+            {
+              "left": "Consequently, the genre shifts",
+              "right": "from entertainment to critical apparatus"
+            },
+            {
+              "left": "Hence, science fiction remains essential",
+              "right": "not as prophecy, but as ethical scaffolding"
+            }
+          ],
+          "why": "Linkers (This, Consequently, Hence) connect cause-effect relationships across ideas in the passage."
+        },
+        {
+          "type": "choice",
+          "id": "ex-science-fiction-5",
+          "prompt": "The phrase 'In other words' in the third paragraph signals that the author is:",
+          "options": [
+            "contradicting the previous statement",
+            "providing a clearer restatement of an earlier point",
+            "introducing a completely new topic",
+            "moving from examples to abstract theory"
+          ],
+          "answer": 1,
+          "why": "The phrase introduces a rephrased version of the anxiety about technological determinism: 'not whether we can develop something, but whether we should.'"
+        }
+      ]
+    },
+    {
+      "id": "ex-forensic-linguistics",
+      "title": "Words as Evidence: The Role of Language Analysis in Criminal Investigation",
+      "skill": "reading",
+      "cefrLevel": "C1",
+      "minutes": 8,
+      "objective": "Comprehend how forensic linguists identify authorship and analyse recorded statements to solve crimes; understand the relationship between linguistic features and investigative conclusions.",
+      "passage": "Forensic linguistics applies rigorous linguistic analysis to legal and criminal contexts, transforming spoken and written language into probative evidence. When investigators encounter ransom notes, threatening emails, or ambiguous witness statements, linguists examine patterns that remain largely invisible to untrained observers. These patterns—frequency of specific vocabulary choices, sentence construction preferences, idiosyncratic phrases—constitute what scholars term an individual's linguistic fingerprint. The discipline gained prominence during the 1990s when authorship analysis helped identify anonymous letter-writers and document forgers. Contemporary applications extend further: linguists analyse the consistency of recorded confessions, detect fabrication in witness testimony, and even identify coerced statements where linguistic markers reveal psychological pressure. The methodology relies upon comparative analysis; linguists establish a reference corpus from a suspect's known writing or speech, then compare it systematically against disputed samples. This rigorous approach means that linguistic evidence, when properly collected and analysed, meets the threshold for admissibility in courts worldwide. Nonetheless, critics argue that the discipline lacks complete standardisation in its protocols. Therefore, recent initiatives have focused on establishing internationally agreed benchmarks. As a result, forensic linguistics now functions as a legitimate subdiscipline within both linguistics and forensic science. Additionally, universities have begun offering specialised certification programmes in the field. Consequently, the calibre and consistency of expert testimony has improved substantially since the early applications of the discipline.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-forensic-linguistics-1",
+          "prompt": "What does the passage suggest is the most fundamental characteristic of forensic linguistic evidence?",
+          "options": [
+            "It comprises patterns of language use that are unique to individuals",
+            "It is always admissible in all legal jurisdictions",
+            "It is more reliable than DNA evidence in identifying suspects",
+            "It eliminates the need for witness testimony in criminal cases"
+          ],
+          "answer": 0,
+          "why": "The passage explains that these patterns 'constitute what scholars term an individual's linguistic fingerprint.'"
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-forensic-linguistics-2",
+          "statement": "According to the passage, forensic linguists can determine authorship of disputed documents by comparing them with known writing samples from suspects.",
+          "answer": true,
+          "why": "The passage describes the 'comparative analysis' methodology: establishing a corpus from 'a suspect's known writing' then comparing it 'systematically against disputed samples.'"
+        },
+        {
+          "type": "gap",
+          "id": "ex-forensic-linguistics-3",
+          "prompt": "The passage states that forensic linguistics gained prominence in the 1990s when it helped identify ___ letter-writers and document forgers.",
+          "answers": [
+            "anonymous"
+          ],
+          "why": "Direct quote: 'authorship analysis helped identify anonymous letter-writers and document forgers.'"
+        },
+        {
+          "type": "match",
+          "id": "ex-forensic-linguistics-4",
+          "pairs": [
+            {
+              "left": "Nonetheless, critics argue",
+              "right": "that the discipline lacks complete standardisation in its protocols"
+            },
+            {
+              "left": "Therefore, recent initiatives",
+              "right": "have focused on establishing internationally agreed benchmarks"
+            },
+            {
+              "left": "As a result, forensic linguistics",
+              "right": "now functions as a legitimate subdiscipline"
+            }
+          ],
+          "why": "Discourse markers (Nonetheless, Therefore, As a result) reveal cause-effect and counter-argument relationships."
+        },
+        {
+          "type": "choice",
+          "id": "ex-forensic-linguistics-5",
+          "prompt": "When the passage mentions that linguists 'detect fabrication in witness testimony,' it implies that:",
+          "options": [
+            "all witness statements contain deliberate lies",
+            "witnesses intentionally employ forensic linguistic techniques",
+            "linguistic evidence is more important than physical evidence",
+            "certain linguistic markers can reveal when someone is not telling the truth"
+          ],
+          "answer": 3,
+          "why": "The passage indicates linguists can analyse 'linguistic markers' that 'reveal psychological pressure' and fabrication in testimony."
+        }
+      ]
+    },
+    {
+      "id": "ex-ethical-journalism",
+      "title": "Truth, Sources, and the Architecture of Responsible Reporting",
+      "skill": "reading",
+      "cefrLevel": "C2",
+      "minutes": 8,
+      "objective": "Analyse how journalists balance accuracy with fairness; distinguish between factual claims and opinion; evaluate the importance of sourcing and corrections in maintaining credibility.",
+      "passage": "Contemporary journalism operates within an increasingly complex ecosystem where the distinction between information and interpretation has become dangerously ambiguous. Responsible reporting demands more than merely assembling claims; it requires journalists to construct a transparent architecture wherein sources are identified, competing perspectives are represented, and the evidentiary foundation of each assertion is clearly visible to readers. The collapse of this transparency occurs when outlets conflate analysis with reporting, often presenting opinionated commentary as factual narration. Critically, the responsibility for clarity does not rest solely with journalists but extends to readers who must develop media literacy sufficient to distinguish speculation from substantiation. Nonetheless, publications bear primary accountability for this distinction. When errors emerge—and they inevitably do—correction protocols reveal institutional commitment to accuracy rather than narrative consistency. Furthermore, the speed of digital dissemination has exacerbated the tension between verification and timeliness; many outlets now publish rapidly without adequate sourcing, then issue corrections quietly after stories have circulated widely. Consequently, damage to credibility accumulates faster than remedial efforts can repair it. The most ethical publications adopt what might be called restorative transparency: they acknowledge errors prominently, explain the corrective process, and revisit stories with updated evidence. By contrast, organisations that bury corrections signal that reputation management matters more than epistemic integrity. Hence, the markers of ethically sound journalism are not primarily stylistic but structural—visible sourcing, proportional weight given to competing claims, and a visible commitment to revision. These characteristics transform journalism from mere information transfer into something resembling genuine knowledge architecture.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-ethical-journalism-1",
+          "prompt": "The passage suggests that the primary distinction between ethical and unethical journalism lies in:",
+          "options": [
+            "the author's writing style and rhetorical flourishes",
+            "the structural transparency of sources and the representation of competing perspectives",
+            "the speed at which stories are published online",
+            "whether the journalist has formally trained at a university"
+          ],
+          "answer": 1,
+          "why": "The passage states 'the markers of ethically sound journalism are not primarily stylistic but structural—visible sourcing, proportional weight given to competing claims.'"
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-ethical-journalism-2",
+          "statement": "According to the passage, readers bear no responsibility for distinguishing between factual claims and opinion in journalism.",
+          "answer": false,
+          "why": "The passage explicitly states responsibility 'extends to readers who must develop media literacy sufficient to distinguish speculation from substantiation.'"
+        },
+        {
+          "type": "gap",
+          "id": "ex-ethical-journalism-3",
+          "prompt": "The passage argues that when publications publish rapidly without adequate sourcing and then issue corrections quietly, the damage to credibility accumulates faster than ___ efforts can repair it.",
+          "answers": [
+            "remedial"
+          ],
+          "why": "Direct quote: 'damage to credibility accumulates faster than remedial efforts can repair it.'"
+        },
+        {
+          "type": "choice",
+          "id": "ex-ethical-journalism-4",
+          "prompt": "What does the passage imply by describing ethical journalism as 'restorative transparency'?",
+          "options": [
+            "Publications should avoid publishing any stories that contain even minor inaccuracies",
+            "Publications should prioritise speed of publication over accuracy verification",
+            "Publications should publicly acknowledge errors, explain corrections, and revisit stories with updated evidence",
+            "Publications should refuse to correct any previously published material"
+          ],
+          "answer": 2,
+          "why": "The passage explains that ethical outlets 'acknowledge errors prominently, explain the corrective process, and revisit stories with updated evidence.'"
+        },
+        {
+          "type": "match",
+          "id": "ex-ethical-journalism-5",
+          "pairs": [
+            {
+              "left": "Responsible reporting demands",
+              "right": "transparent sourcing and representation of competing perspectives"
+            },
+            {
+              "left": "The collapse of transparency occurs",
+              "right": "when outlets conflate analysis with reporting"
+            },
+            {
+              "left": "Hence, markers of ethical journalism",
+              "right": "are structural rather than stylistic"
+            }
+          ],
+          "why": "These pairs show logical relationships (demand → requirement; collapse → cause; hence → conclusion) between concepts."
+        }
+      ]
+    },
+    {
+      "id": "ex-socio-cultural",
+      "title": "The Unwritten Code: How Shared Institutions Shape Collective Identity",
+      "skill": "reading",
+      "cefrLevel": "C2",
+      "minutes": 8,
+      "objective": "Comprehend how national institutions and cultural references function as mirrors of collective identity; analyse the passage's argument about tacit cultural knowledge.",
+      "passage": "The National Trust in Britain exemplifies how ostensibly peripheral institutions become repositories of national identity in ways that transcend their formal purpose. Established originally to preserve buildings and landscapes of significant historical value, the organisation has metamorphosed into something far more symbolically resonant. Membership conveys not merely access to country houses and gardens but participation in a distinctly British cultural conversation. This seemingly paradoxical phenomenon—wherein an administrative body tasked with conservation becomes a marker of class, education, and cultural capital—reveals profound truths about how societies construct shared meaning. Furthermore, the ritual of National Trust visits functions as a kind of cultural currency; families signal sophistication through their engagement with such institutions. Nonetheless, this observation does not imply cynicism toward genuinely held appreciation for heritage preservation. Rather, it highlights the symbiotic relationship between individual values and institutional prestige. Consequently, the National Trust operates simultaneously as genuine sanctuary for historical artefacts and as symbol of Britishness itself. What appears as mere aesthetic appreciation masks deeper negotiations about belonging and social position. In other words, when an individual chooses to join the Trust or visit a protected estate, they are not merely consuming leisure activity but inscribing themselves within a particular narrative about British identity. Moreover, the organisation's expansion reflects changing definitions of heritage itself; contemporary concerns about environmental stewardship and industrial archaeology now sit alongside traditional architectural conservation. Hence, the Trust embodies a living archive wherein past, present, and future orientations toward Britishness remain perpetually contested and renewed.",
+      "items": [
+        {
+          "type": "choice",
+          "id": "ex-socio-cultural-1",
+          "prompt": "According to the passage, the National Trust functions as a 'marker of class, education, and cultural capital' primarily because:",
+          "options": [
+            "membership fees are prohibitively expensive for working-class families",
+            "the organisation actively discriminates against certain groups of people",
+            "it was established exclusively for aristocratic families",
+            "visiting its properties has become associated with particular social positions and cultural values"
+          ],
+          "answer": 3,
+          "why": "The passage explains that membership and engagement with the Trust signal 'sophistication' and function as 'cultural currency' in British society."
+        },
+        {
+          "type": "gap",
+          "id": "ex-socio-cultural-2",
+          "prompt": "The passage argues that when individuals visit National Trust estates, they are not merely consuming leisure activity but inscribing themselves within a particular ___ about British identity.",
+          "answers": [
+            "narrative"
+          ],
+          "why": "Direct quote: 'they are not merely consuming leisure activity but inscribing themselves within a particular narrative about British identity.'"
+        },
+        {
+          "type": "truefalse",
+          "id": "ex-socio-cultural-3",
+          "statement": "The passage suggests that the National Trust's role as a cultural symbol is inconsistent with its legitimate function of preserving historical sites.",
+          "answer": false,
+          "why": "The passage states the Trust 'operates simultaneously as genuine sanctuary for historical artefacts and as symbol of Britishness itself.'"
+        },
+        {
+          "type": "match",
+          "id": "ex-socio-cultural-4",
+          "pairs": [
+            {
+              "left": "Consequently, the National Trust operates",
+              "right": "simultaneously as genuine sanctuary and as symbol of Britishness"
+            },
+            {
+              "left": "In other words, when an individual chooses to join",
+              "right": "they are inscribing themselves within a narrative about British identity"
+            },
+            {
+              "left": "Hence, the Trust embodies",
+              "right": "a living archive wherein orientations toward Britishness remain perpetually contested and renewed"
+            }
+          ],
+          "why": "Discourse markers (Consequently, In other words, Hence) structure the argument's progression and clarify relationships between ideas."
+        },
+        {
+          "type": "choice",
+          "id": "ex-socio-cultural-5",
+          "prompt": "What does the passage imply by noting that contemporary heritage concerns now include 'environmental stewardship and industrial archaeology'?",
+          "options": [
+            "Definitions of British heritage and identity are evolving and expanding",
+            "The National Trust has abandoned its original purpose of preserving country houses",
+            "Environmental concerns are more important than architectural conservation",
+            "The Trust has become less selective about which institutions it protects"
+          ],
+          "answer": 0,
+          "why": "The passage states this expansion 'reflects changing definitions of heritage itself' and emphasises that orientations toward Britishness remain 'perpetually contested and renewed.'"
+        }
+      ]
+    }
+  ]
+}

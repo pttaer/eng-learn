@@ -94,7 +94,7 @@ export class AnalyticsDossier {
               ${RADAR_AXES.map(axis => {
                 const val = masteries[axis.id] || 0;
                 return `
-                  <div class="axis-pill-item" style="display: flex; flex-direction: column; gap: 2px; background: rgba(255,255,255,0.03); padding: 6px 10px; border-radius: 8px;">
+                  <div class="axis-pill-item" style="display: flex; flex-direction: column; gap: 6px; background: rgba(255,255,255,0.03); padding: 6px 10px; border-radius: 8px;">
                     <span style="font-size: var(--font-kicker); color: var(--ink-muted, #94a3b8); font-weight: 600;">${axis.label}</span>
                     <span style="font-size: var(--font-body-compact); font-weight: 700; color: ${axis.color};">${val}% <small style="font-size: var(--font-kicker); opacity: 0.7;">(${this.pctToCefr(val)})</small></span>
                   </div>
@@ -202,7 +202,7 @@ export class AnalyticsDossier {
         <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted, #94a3b8); letter-spacing: 0.05em;">ITEMS READY FOR REHABILITATION:</div>
         ${dueErrors.slice(0, 4).map(err => `
           <div class="serl-queue-item" data-id="${err.id}" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-hairline, rgba(255,255,255,0.06)); border-radius: 8px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: flex; flex-direction: column; gap: 2px; max-width: 70%;">
+            <div style="display: flex; flex-direction: column; gap: 6px; max-width: 70%;">
               <span style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-purple, #a855f7);">${err.category} • ${err.sourceModule.toUpperCase()}</span>
               <span style="font-size: var(--font-body-compact); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ink-primary, #fff);">"${err.prompt}"</span>
               <span style="font-size: var(--font-kicker); color: var(--critical, #f43f5e);">Flaw: "${err.learnerInput}" &rarr; <span style="color: var(--good, #10b981);">${err.expectedOutput}</span></span>

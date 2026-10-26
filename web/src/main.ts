@@ -28,6 +28,7 @@ import { ZenMode } from './core/zen-mode';
 import { LexiconDrawer } from './modules/lexicon-drawer';
 import { BlitzDossier } from './modules/blitz-dossier';
 import { MediationDossier } from './modules/mediation-dossier';
+import { DrillsDossier } from './modules/drills-dossier';
 import { AnalyticsDossier } from './modules/analytics-dossier';
 import { ExamCockpitDossier } from './modules/exam-cockpit-dossier';
 import { SerlGauntletEngine } from './core/serl-gauntlet-engine';
@@ -91,6 +92,7 @@ class App {
   private missionLog: MissionLog;
   private blitzDossier: BlitzDossier;
   private mediationDossier: MediationDossier;
+  private drillsDossier: DrillsDossier;
   private analyticsDossier: AnalyticsDossier;
   private examCockpit: ExamCockpitDossier;
 
@@ -151,6 +153,7 @@ class App {
     this.missionLog = new MissionLog();
     this.blitzDossier = new BlitzDossier();
     this.mediationDossier = new MediationDossier();
+    this.drillsDossier = new DrillsDossier();
     this.analyticsDossier = new AnalyticsDossier();
     this.examCockpit = new ExamCockpitDossier();
 
@@ -358,6 +361,10 @@ class App {
       case 'mediate':
         this.workspaceMount.appendChild(this.mediationDossier.render());
         this.activeDossierHandle = this.mediationDossier;
+        break;
+      case 'drills':
+        this.workspaceMount.appendChild(this.drillsDossier.render());
+        this.activeDossierHandle = this.drillsDossier;
         break;
       case 'analytics':
         this.workspaceMount.appendChild(this.analyticsDossier.render());

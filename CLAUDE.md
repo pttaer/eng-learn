@@ -16,6 +16,14 @@
 - Two typefaces max: `--font-sans` for reading and UI, `--font-mono` for telemetry, kickers, CEFR levels, timers, indices and keycaps.
 - Anti-patterns (see spec §6): no vertical stacking of horizontal tabs on mobile; no crushed tables (wrap in horizontal scroll, `min-width: 600px`, `white-space: nowrap`); no corner compass or watermark over the mobile bottom nav; rating buttons stay in one row.
 - After any layout/CSS change, measure sibling gaps and widths on all routes at desktop (1440) and phone (390) widths, then screenshot and look at them before calling it done.
+- Kickers: `--font-kicker` (11px) with `--font-kicker-spacing` (0.08em), no inline overrides. One rule per class; a duplicate silently overrides tokens.
+- Badges and chips stay on one line. A row holding a kicker plus a badge wraps with `gap: 4px 8px`.
+- Alignment is flush-left. Centre only a whole hero or empty-state card. No `✦ TITLE ✦` on left-aligned text.
+- No 0–4px gaps between stacked text blocks on mobile: element 6px, group 8px, block 12px, section 16px. Exempt: a heading with its own one-line subtitle, and table rows.
+- No fixed-height nested scroll box for a content list on mobile; the page scrolls (canvas and map views exempt).
+- Full-width CTA labels wrap inside the button; they never overflow.
+- Every clickable (`button`, `a[href]`, `[role=button]`, `[role=tab]`, `[data-route]`) is at least 44×44 on phones. Inline prose links are exempt.
+- Mobile titles and labels wrap. No `text-overflow: ellipsis` on them.
 
 ## IELTS app rules
 - IELTS is a separate app side (`web/ielts.html`, `web/src/ielts/`), Academic only.
