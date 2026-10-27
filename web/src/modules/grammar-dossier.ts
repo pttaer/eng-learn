@@ -9,6 +9,7 @@ import { Cefr, srsTier } from '../core/cefr';
 import { levelsWithContent, defaultLevel, levelChipsHtml } from '../core/level-filter';
 import { SkillTreeEngine } from '../core/skill-tree-engine';
 import { feedback } from '../core/feedback';
+import { t } from '../core/i18n';
 
 export type GrammarMode = string;
 
@@ -65,6 +66,9 @@ export class GrammarDossier {
       this.filterDeck();
       if (this.container.isConnected) this.render();
     });
+    window.addEventListener('eng:locale-changed', () => {
+      if (this.container.isConnected) this.render();
+    });
   }
 
   private modesAtLevel(): GrammarMode[] {
@@ -88,13 +92,13 @@ export class GrammarDossier {
       <div class="dossier-control-bar">
         <div class="dossier-tabs grammar-mode-tabs">
           <button type="button" class="hud-btn btn-jump-tenses" style="border-color: var(--accent-gold); color: var(--accent-gold); font-weight: 700; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;">
-            ${icon('sparkles', 13)} 12 TENSES VAULT
+            ${icon('sparkles', 13)} ${t('dossier.twelve_verb_tenses')}
           </button>
           ${modes.map(m => `<button class="hud-btn mode-tab ${this.activeMode === m ? 'active' : ''}" data-mode="${m}">${MODE_TABS[m] || prettyMode(m)}</button>`).join('')}
         </div>
 
         <div class="grammar-level-selector">
-          <span class="telemetry-label" style="margin-right: 8px;">LEVEL:</span>
+          <span class="telemetry-label" style="margin-right: 8px;">${t('category.level')}:</span>
           ${levelChipsHtml(levelsWithContent(this.allDeck), this.activeLevel)}
         </div>
       </div>
@@ -117,9 +121,9 @@ export class GrammarDossier {
       <div class="dossier-card-slot"></div>
 
       <div class="dossier-nav-bar">
-        <button class="hud-btn nav-btn-prev">${icon('arrowLeft')} Prev</button>
+        <button class="hud-btn nav-btn-prev">${icon('arrowLeft')} ${t('action.prev')}</button>
         <span class="telemetry-value card-counter">SYNTAX NODE ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}</span>
-        <button class="hud-btn nav-btn-next">Next ${icon('arrowRight')}</button>
+        <button class="hud-btn nav-btn-next">${t('action.next')} ${icon('arrowRight')}</button>
       </div>
     `;
 
@@ -190,7 +194,7 @@ export class GrammarDossier {
       slot.innerHTML = `
         <div class="empty-state-notice">
           <div class="telemetry-label">[TIER DEPLETED]</div>
-          <p>No grammar items available for this mode and difficulty level.</p>
+          <p>${t('vocab.empty_tier')}</p>
         </div>
       `;
       return;
@@ -210,7 +214,7 @@ export class GrammarDossier {
     const frontEl = document.createElement('div');
     frontEl.className = 'grammar-front-content';
     frontEl.innerHTML = `
-      <div class="card-prompt-label" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">SYNTAX // ${item.title.toUpperCase()}</div>
+      <div class="card-prompt-label">SYNTAX // ${item.title.toUpperCase()}</div>
       <div class="card-main-text" style="font-size: var(--font-body); line-height: 1.62; font-weight: 500; max-width: 68ch; margin: 10px 0;">
         "${item.promptSentence}"
       </div>
@@ -231,12 +235,12 @@ export class GrammarDossier {
             type="text"
             class="grammar-transform-input"
             id="grammar-transform-input"
-            placeholder="Type transformed syntactic resolution (or press Space to flip)..."
+            placeholder="${t('placeholder.type_response')}"
             autocomplete="off"
             spellcheck="false"
             aria-label="Type transformed syntactic resolution"
           />
-          <button type="button" class="hud-btn grammar-verify-btn" aria-label="Verify Transformation">
+          <button type="button" class="hud-btn grammar-verify-btn" aria-label="Verify Transformation" data-i18n="grammar.verify_transformation">
             ${icon('zap', 14)} [ Verify Transformation ]
           </button>
         </div>
@@ -340,17 +344,20 @@ export class GrammarDossier {
         return;
       }
 
-      const diffTokens = computeDiffTokens(userText, targetText);
+      const cleanUser = userText.replace(/[’‘]/g, "'").replace(/[“”]/g, '"');
+      const cleanTarget = targetText.replace(/[’‘]/g, "'").replace(/[“”]/g, '"');
+
+      const diffTokens = computeDiffTokens(cleanUser, cleanTarget);
       let matchCount = 0;
       for (const token of diffTokens) {
         if (token.type === 'match') {
           matchCount += token.value.length;
         }
       }
-      const maxLen = Math.max(targetText.length, userText.length);
+      const maxLen = Math.max(cleanTarget.length, cleanUser.length);
       const accuracyPct = maxLen === 0 ? 100 : Math.round((matchCount / maxLen) * 100);
-      const isCaseInsensitiveExact = userText.toLowerCase() === targetText.toLowerCase() ||
-        userText.toLowerCase().replace(/[.,!?;:]$/, '') === targetText.toLowerCase().replace(/[.,!?;:]$/, '');
+      const isCaseInsensitiveExact = cleanUser.toLowerCase() === cleanTarget.toLowerCase() ||
+        cleanUser.toLowerCase().replace(/[.,!?;:]$/, '') === cleanTarget.toLowerCase().replace(/[.,!?;:]$/, '');
       const isSuccess = isCaseInsensitiveExact || accuracyPct >= 90;
 
       const diffHtml = this.formatInlineDiffHtml(diffTokens);
@@ -509,5 +516,9 @@ export class GrammarDossier {
       }
     }
     return false;
+  }
+
+  public teardown(): void {
+    this.currentCardHandle = null;
   }
 }

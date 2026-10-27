@@ -1,6 +1,7 @@
 import { esc, h } from '../ui';
 import { feedback } from '../../core/feedback';
 import { icon } from '../../utils/icons';
+import { t } from '../../core/i18n';
 
 export interface SynonymPair {
   promptWord: string;
@@ -557,22 +558,24 @@ export function readingDrillsView(root: HTMLElement): () => void {
     synMatrix.hidden = !isSynonymActive;
     synMatrix.innerHTML = `
       <h4>🔄 Active Exam Synonym Mapping Engine</h4>
-      <table class="ie-table ie-synonym-table">
-        <thead>
-          <tr>
-            <th>Question Stem Phrase</th>
-            <th>Passage Counterpart (Paraphrase)</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${drill.synonymPairs
-            .map(
-              sp =>
-                `<tr><td><code>${esc(sp.promptWord)}</code></td><td><code>${esc(sp.passageWord)}</code></td></tr>`
-            )
-            .join('')}
-        </tbody>
-      </table>
+      <div class="ie-table-wrap">
+        <table class="ie-table ie-synonym-table">
+          <thead>
+            <tr>
+              <th>Question Stem Phrase</th>
+              <th>Passage Counterpart (Paraphrase)</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${drill.synonymPairs
+              .map(
+                sp =>
+                  `<tr><td><code>${esc(sp.promptWord)}</code></td><td><code>${esc(sp.passageWord)}</code></td></tr>`
+              )
+              .join('')}
+          </tbody>
+        </table>
+      </div>
     `;
     passageCol.append(synMatrix);
 
@@ -657,13 +660,13 @@ export function readingDrillsView(root: HTMLElement): () => void {
 
     // Actions & Check Button
     const actions = h('div', 'ie-drill-actions');
-    const checkBtn = h('button', 'ie-btn ie-btn-primary ie-drill-check-btn', 'Check Answer');
+    const checkBtn = h('button', 'ie-btn ie-btn-primary ie-drill-check-btn', t('ielts.check_answers', undefined, 'Check Answer'));
     checkBtn.id = 'btn-check-drill';
     actions.append(checkBtn);
 
     // Prev / Next Buttons
     const navButtons = h('div', 'ie-drill-nav-btns');
-    const prevBtn = h('button', 'ie-btn ie-btn-sm', '← Previous');
+    const prevBtn = h('button', 'ie-btn ie-btn-sm', `← ${t('common.back', undefined, 'Previous')}`);
     prevBtn.disabled = currentDrillIndex === 0;
     prevBtn.addEventListener('click', () => {
       if (currentDrillIndex > 0) {
@@ -672,7 +675,7 @@ export function readingDrillsView(root: HTMLElement): () => void {
       }
     });
 
-    const nextBtn = h('button', 'ie-btn ie-btn-sm', 'Next Drill →');
+    const nextBtn = h('button', 'ie-btn ie-btn-sm', `${t('common.next', undefined, 'Next Drill')} →`);
     nextBtn.disabled = currentDrillIndex === READING_DRILLS.length - 1;
     nextBtn.addEventListener('click', () => {
       if (currentDrillIndex < READING_DRILLS.length - 1) {

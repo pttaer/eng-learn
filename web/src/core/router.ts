@@ -1,4 +1,4 @@
-export type RouteId = 'tree' | 'read' | 'write' | 'listen' | 'speak' | 'vocab' | 'colloc' | 'grammar' | 'tenses' | 'habits' | 'singularity' | 'blitz' | 'mediate' | 'analytics' | 'cockpit' | 'drills';
+export type RouteId = 'tree' | 'read' | 'write' | 'listen' | 'speak' | 'vocab' | 'colloc' | 'grammar' | 'tenses' | 'habits' | 'singularity' | 'blitz' | 'mediate' | 'analytics' | 'cockpit' | 'drills' | 'settings';
 
 export type RouteChangeHandler = (route: RouteId) => void;
 
@@ -21,9 +21,15 @@ export class Router {
 
   private resolveRoute(): void {
     const rawHash = window.location.hash.replace(/^#\/?/, '').toLowerCase();
-    const validRoutes: RouteId[] = ['tree', 'read', 'write', 'listen', 'speak', 'vocab', 'colloc', 'grammar', 'tenses', 'habits', 'singularity', 'blitz', 'mediate', 'analytics', 'cockpit', 'drills'];
+    const validRoutes: RouteId[] = ['tree', 'read', 'write', 'listen', 'speak', 'vocab', 'colloc', 'grammar', 'tenses', 'habits', 'singularity', 'blitz', 'mediate', 'analytics', 'cockpit', 'drills', 'settings'];
 
-    const matched = validRoutes.find(r => r === rawHash) || 'tree';
+    const aliases: Record<string, RouteId> = {
+      'reading': 'read',
+      'writing': 'write',
+      'listening': 'listen',
+      'speaking': 'speak'
+    };
+    const matched = validRoutes.find(r => r === rawHash) || aliases[rawHash] || 'tree';
     this.currentRoute = matched;
 
     this.handlers.forEach(handler => handler(this.currentRoute));

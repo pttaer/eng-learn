@@ -1,98 +1,298 @@
 /* ux-a: agent-owned overrides */
-.dossier-reading .article-tabs { flex-wrap: wrap; }
+.dossier-reading .article-tabs {
+  flex-wrap: wrap;
+}
+
 .dossier-reading .article-tab,
 .dossier-reading .stepper-step,
 .dossier-reading .hud-btn,
 .dossier-reading .reading-meta-telemetry .telemetry-value,
-.dossier-reading .lexicon-table th { white-space: normal; overflow-wrap: anywhere; }
-.dossier-reading .reading-meta-telemetry { flex-wrap: wrap; }
-@media (max-width: 600px) {
-  .dossier-reading .hud-btn, .dossier-reading .vocab-chip, .dossier-reading .stepper-step { min-height: 44px; }
-  .dossier-reading .dossier-control-bar { flex-wrap: wrap; gap: 8px; }
+.dossier-reading .lexicon-table th {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.dossier-reading .reading-meta-telemetry {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+
+  .dossier-reading .hud-btn,
+  .dossier-reading .vocab-chip,
+  .dossier-reading .stepper-step {
+    min-height: 44px;
+  }
+
+  .dossier-reading .dossier-control-bar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 }
 
 /* Reading: full article titles, readable meta row, stacked columns on narrow screens */
-.article-tab { white-space: normal; text-align: left; line-height: 1.3; }
-.reading-meta-telemetry { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
-.reading-meta-telemetry .telemetry-value + .telemetry-value::before { content: "·"; margin-right: 14px; opacity: 0.5; }
-@media (max-width: 800px) {
-  .dossier-reading .reading-pass1-layout { flex-direction: column !important; }
-  .dossier-reading .reading-text-pane { max-width: 100% !important; width: 100%; }
-  .dossier-reading .reading-sidebar-pane { width: 100% !important; }
-  .dossier-reading .article-tabs { flex-direction: column; align-items: stretch; width: 100%; }
-  .dossier-reading .reading-pass-stepper { overflow-x: auto; }
+.article-tab {
+  white-space: normal;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.reading-meta-telemetry {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  align-items: center;
+}
+
+.reading-meta-telemetry .telemetry-value+.telemetry-value::before {
+  content: "·";
+  margin-right: 14px;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .dossier-reading .reading-pass1-layout {
+    flex-direction: column !important;
+  }
+
+  .dossier-reading .reading-text-pane {
+    max-width: 100% !important;
+    width: 100%;
+  }
+
+  .dossier-reading .reading-sidebar-pane {
+    width: 100% !important;
+  }
+
+  .dossier-reading .article-tabs {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .dossier-reading .reading-pass-stepper {
+    overflow-x: auto;
+  }
 }
 
 /* Phones: article tabs become a snap-scrolling strip (no truncation, no tall stack) */
-@media (max-width: 800px) {
-  .dossier-reading .article-tabs { flex-direction: row; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x proximity; gap: 8px; padding-bottom: 6px; }
-  .dossier-reading .article-tab { flex: 0 0 72%; scroll-snap-align: start; min-height: 44px; }
-  .reading-meta-telemetry .telemetry-value + .telemetry-value::before { content: none; }
-  .dossier-reading .reading-pass-stepper { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; overflow: visible; }
-  .dossier-reading .reading-pass-stepper .stepper-arrow { display: none; }
-  .dossier-reading .reading-pass-stepper > * { white-space: normal; min-width: 0; }
+@media (max-width: 768px) {
+  .dossier-reading .article-tabs {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    gap: 8px;
+    padding-bottom: 6px;
+  }
+
+  .dossier-reading .article-tab {
+    flex: 0 0 72%;
+    scroll-snap-align: start;
+    min-height: 44px;
+  }
+
+  .reading-meta-telemetry .telemetry-value+.telemetry-value::before {
+    content: none;
+  }
+
+  .dossier-reading .reading-pass-stepper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    overflow: visible;
+  }
+
+  .dossier-reading .reading-pass-stepper .stepper-arrow {
+    display: none;
+  }
+
+  .dossier-reading .reading-pass-stepper>* {
+    white-space: normal;
+    min-width: 0;
+  }
 }
+
 /* Phones: Prev / counter / Next stay readable on every study screen */
-@media (max-width: 600px) {
-  .dossier-nav-bar { flex-wrap: wrap; gap: 8px; }
-  .dossier-nav-bar > .telemetry-value { order: -1; flex: 1 0 100%; text-align: center; }
-  .dossier-nav-bar > .hud-btn { flex: 1 1 0; justify-content: center; min-height: 44px; }
+@media (max-width: 768px) {
+  .dossier-nav-bar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .dossier-nav-bar>.telemetry-value {
+    order: -1;
+    flex: 1 0 100%;
+    text-align: center;
+  }
+
+  .dossier-nav-bar>.hud-btn {
+    flex: 1 1 0;
+    justify-content: center;
+    min-height: 44px;
+  }
 }
 
 /* Phones: mode / difficulty tab rows wrap compactly instead of stacking one per line or clipping */
-@media (max-width: 600px) {
-  .dossier-tabs, .dossier-control-bar { flex-wrap: wrap; gap: 6px; min-width: 0; }
-  .dossier-tabs .hud-btn, .dossier-tabs .filter-tab { padding: 6px 10px; font-size: var(--font-kicker); min-height: 44px; }
-  .card-header-bar { flex-wrap: wrap; gap: 6px; }
-  .card-meta-left { flex-wrap: wrap; gap: 4px 8px; }
+@media (max-width: 768px) {
+
+  .dossier-tabs,
+  .dossier-control-bar {
+    flex-wrap: wrap;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .dossier-tabs .hud-btn,
+  .dossier-tabs .filter-tab {
+    padding: 6px 10px;
+    font-size: var(--font-kicker);
+    min-height: 44px;
+  }
+
+  .card-header-bar {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .card-meta-left {
+    flex-wrap: wrap;
+    gap: 4px 8px;
+  }
 }
 
 /* Reading article picker: grid on desktop, snap strip on phones (final word, beats earlier flex rules) */
-.dossier-reading .article-tabs { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; width: 100%; }
-.dossier-reading .article-tab { width: auto; flex: none; }
-.dossier-reading .dossier-control-bar { align-items: flex-start; }
-.dossier-reading .reading-meta-telemetry { flex: 0 0 auto; }
-@media (max-width: 800px) {
-  .dossier-reading .article-tabs { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 78%; overflow-x: auto !important; scroll-snap-type: x proximity; padding-bottom: 6px; }
-  .dossier-reading .article-tab { scroll-snap-align: start; }
+.dossier-reading .article-tabs {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
 }
-.dossier-reading .dossier-control-bar { flex-direction: column; align-items: stretch; gap: 8px; }
-.dossier-reading .article-tabs { align-items: stretch; }
-.dossier-reading .article-tab { height: 100%; align-items: flex-start; justify-content: flex-start; }
+
+.dossier-reading .article-tab {
+  width: auto;
+  flex: none;
+}
+
+.dossier-reading .dossier-control-bar {
+  align-items: flex-start;
+}
+
+.dossier-reading .reading-meta-telemetry {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 768px) {
+  .dossier-reading .article-tabs {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 78%;
+    overflow-x: auto !important;
+    scroll-snap-type: x proximity;
+    padding-bottom: 6px;
+  }
+
+  .dossier-reading .article-tab {
+    scroll-snap-align: start;
+  }
+}
+
+.dossier-reading .dossier-control-bar {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.dossier-reading .article-tabs {
+  align-items: stretch;
+}
+
+.dossier-reading .article-tab {
+  height: 100%;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 
 /* Phones: keep the skill tree legible; pan sideways instead of shrinking labels to nothing */
-@media (max-width: 600px) {
-  .constellation-container { overflow-x: auto !important; overflow-y: hidden; min-height: 360px !important; -webkit-overflow-scrolling: touch; }
-  .constellation-container > svg { width: 820px !important; min-width: 820px; height: 100% !important; }
+@media (max-width: 768px) {
+  .constellation-container {
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    min-height: 360px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .constellation-container>svg {
+    width: 820px !important;
+    min-width: 820px;
+    height: 100% !important;
+  }
 }
 
-/* Tablets and small phones: header never runs off-screen; level selector wraps */
-@media (max-width: 1100px) {
-  .header-actions .btn-label { display: none; }
-  .header-actions { flex-shrink: 0; }
+/* Mobile: header never runs off-screen; level selector wraps */
+@media (max-width: 768px) {
+  .header-actions .btn-label {
+    display: none;
+  }
+
+  .header-actions {
+    flex-shrink: 0;
+  }
 }
+
 @media (max-width: 360px) {
-  .hud-brand-title { display: none; }
-  .header-actions { gap: 4px !important; }
+  .hud-brand-title {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 4px !important;
+  }
 }
-.vocab-level-selector, .grammar-level-selector { flex-wrap: wrap; }
-@media (max-width: 900px) {
-  .btn-back-tree .btn-label { display: none; }
-  .workout-panel { flex-wrap: wrap !important; }
-  .workout-panel .btn-continue-workout { flex: 1 1 100%; }
+
+.vocab-level-selector,
+.grammar-level-selector {
+  flex-wrap: wrap;
 }
-@media (max-width: 360px) { .hud-rank-badge { display: none; } }
-@media (max-width: 900px) { .workout-panel { max-width: 100%; flex: 1 1 auto !important; } .workout-panel .workout-tasks { flex-wrap: wrap; } }
+
+@media (max-width: 768px) {
+  .btn-back-tree .btn-label {
+    display: none;
+  }
+
+  .skill-tree-shell h1 {
+    white-space: normal !important;
+  }
+}
+
 @media (max-width: 360px) {
-  .header-actions .hud-btn { padding: 6px 8px !important; min-width: 40px; }
-  .hud-header, header.hud-header { gap: 6px !important; padding-left: 0 !important; padding-right: 0 !important; }
-}
-@media (max-width: 900px) { .workout-panel > div:first-child { flex: 1 1 240px !important; min-width: 0; } .skill-tree-shell h1 { white-space: normal !important; } }
-@media (max-width: 360px) { .hud-brand-title { display: none !important; } .hud-rank-badge { display: none !important; } }
-@media (max-width: 360px) { .hud-header { flex-wrap: wrap !important; } .hud-brand { min-width: 0; flex: 1 1 auto; } .hud-actions { margin-left: auto; } }
-@media (max-width: 900px) { .workout-panel .btn-continue-workout { white-space: normal !important; max-width: 100%; text-align: center; box-sizing: border-box; } }
-@media (max-width: 900px) {
-  .workout-panel { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; }
-  .workout-panel > * { min-width: 0; max-width: 100%; }
-  .workout-panel .workout-tasks { flex-wrap: wrap; }
+  .hud-rank-badge {
+    display: none !important;
+  }
+
+  .hud-brand-title {
+    display: none !important;
+  }
+
+  .header-actions .hud-btn {
+    padding: 6px 8px !important;
+    min-width: 40px;
+  }
+
+  .hud-header,
+  header.hud-header {
+    gap: 6px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    flex-wrap: wrap !important;
+  }
+
+  .hud-brand {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .hud-actions {
+    margin-left: auto;
+  }
 }

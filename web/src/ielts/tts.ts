@@ -24,6 +24,7 @@ const MALE = /\bmale\b|david|george|mark|daniel|ryan|guy|james|richard|william|a
 // Global settings for IELTS audio player
 let preferredAccent: AccentCadenceType = 'uk-rp';
 let roomAmbienceEnabled: boolean = false;
+const activePlaybacks = new Set<Playback>();
 
 export function setPreferredAccent(accent: AccentCadenceType): void {
   if (ACCENT_CADENCE_MODELS[accent]) {
@@ -125,12 +126,14 @@ export function playSection(sec: ListeningSection, opts: PlaySectionOptions = {}
   }
 
   let stopped = false;
+  let sectionTimer: any = null;
   const next = (i: number) => {
     if (stopped) return;
     if (i >= sec.script.length) {
       if (roomStarted && !roomAmbienceEnabled) {
         AudioSynthesizer.playExamRoomAmbience(false);
       }
+      activePlaybacks.delete(playback);
       opts.onEnd?.();
       return;
     }
@@ -145,24 +148,33 @@ export function playSection(sec: ListeningSection, opts: PlaySectionOptions = {}
     u.pitch = m?.pitch ?? 1;
     u.rate = opts.rate ?? AudioSynthesizer.getCadenceModel(activeAccent).rate;
     u.onstart = () => opts.onLine?.(i);
-    u.onend = () => setTimeout(() => next(i + 1), 450);
+    u.onend = () => {
+      if (!stopped) sectionTimer = setTimeout(() => next(i + 1), 450);
+    };
     u.onerror = () => {
-      if (!stopped) setTimeout(() => next(i + 1), 450);
+      if (!stopped) sectionTimer = setTimeout(() => next(i + 1), 450);
     };
     synth.speak(u);
   };
 
   next(0);
 
-  return {
+  const playback: Playback = {
     stop() {
       stopped = true;
+      if (sectionTimer) {
+        clearTimeout(sectionTimer);
+        sectionTimer = null;
+      }
       synth.cancel();
       if (roomStarted && !roomAmbienceEnabled) {
         AudioSynthesizer.playExamRoomAmbience(false);
       }
+      activePlaybacks.delete(playback);
     }
   };
+  activePlaybacks.add(playback);
+  return playback;
 }
 
 export interface PlayTextOptions {
@@ -214,6 +226,7 @@ export function playText(text: string, opts?: PlayTextOptions): Playback {
       if (roomStarted && !roomAmbienceEnabled) {
         AudioSynthesizer.playExamRoomAmbience(false);
       }
+      activePlaybacks.delete(playback);
       opts?.onEnd?.();
       return;
     }
@@ -253,7 +266,7 @@ export function playText(text: string, opts?: PlayTextOptions): Playback {
 
   speakNext();
 
-  return {
+  const playback: Playback = {
     stop(): void {
       stopped = true;
       if (timer) {
@@ -264,6 +277,32 @@ export function playText(text: string, opts?: PlayTextOptions): Playback {
       if (roomStarted && !roomAmbienceEnabled) {
         AudioSynthesizer.playExamRoomAmbience(false);
       }
+      activePlaybacks.delete(playback);
     }
   };
+  activePlaybacks.add(playback);
+  return playback;
+}
+
+/**
+ * Centrally stops all running IELTS speech playback, pending speech timers,
+ * and clears ambient exam audio across views.
+ */
+export function stopAll(): void {
+  activePlaybacks.forEach(p => {
+    try {
+      p.stop();
+    } catch {}
+  });
+  activePlaybacks.clear();
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+    try {
+      window.speechSynthesis.cancel();
+    } catch {}
+  }
+  if (!roomAmbienceEnabled) {
+    try {
+      AudioSynthesizer.playExamRoomAmbience(false);
+    } catch {}
+  }
 }

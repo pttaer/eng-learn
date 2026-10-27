@@ -4,41 +4,142 @@
     "section": 1,
     "title": "Library membership enquiry",
     "speakers": [
-      { "name": "Helen", "lang": "en-GB", "gender": "f" },
-      { "name": "Daniel", "lang": "en-AU", "gender": "m" }
+      {
+        "name": "Helen",
+        "lang": "en-GB",
+        "gender": "f"
+      },
+      {
+        "name": "Daniel",
+        "lang": "en-AU",
+        "gender": "m"
+      }
     ],
     "script": [
-      { "speaker": "Helen", "text": "Good morning, and welcome to the Eastside Public Library. How can I help you today?" },
-      { "speaker": "Daniel", "text": "Good morning. I'd like to become a member, please. I want a card so I can borrow books and book one of the study rooms." },
-      { "speaker": "Helen", "text": "Of course. The first step is a short registration form. Could I take your surname, please?" },
-      { "speaker": "Daniel", "text": "It's Pemberton. That's P, E, M, B, E, R, T, O, N." },
-      { "speaker": "Helen", "text": "Thank you. And your first name?" },
-      { "speaker": "Daniel", "text": "Daniel." },
-      { "speaker": "Helen", "text": "Could you confirm your date of birth for me?" },
-      { "speaker": "Daniel", "text": "Yes. It's the fourteenth of March, nineteen ninety-eight." },
-      { "speaker": "Helen", "text": "Lovely. Now I need your current address. Are you still in the flat on Harbour Road?" },
-      { "speaker": "Daniel", "text": "I am, but I've moved to a different building on the same road. It's number thirty-seven now." },
-      { "speaker": "Helen", "text": "Thirty-seven Harbour Road. Is that right?" },
-      { "speaker": "Daniel", "text": "That's right." },
-      { "speaker": "Helen", "text": "And a contact number?" },
-      { "speaker": "Daniel", "text": "It's zero four one two, three four five, six seven eight." },
-      { "speaker": "Helen", "text": "Thanks. Now, the fees. Adults pay twenty-five pounds a year. Full-time students pay half that rate, but you'll need to show a valid student card." },
-      { "speaker": "Daniel", "text": "I'm a full-time student at the university, so I'll bring my card. What's the student rate exactly?" },
-      { "speaker": "Helen", "text": "It's twelve pounds fifty for the year. That covers everything except fines for late returns." },
-      { "speaker": "Daniel", "text": "Fair enough. How long does the membership last?" },
-      { "speaker": "Helen", "text": "One year from the day you join. You can borrow up to eight items at a time." },
-      { "speaker": "Daniel", "text": "Eight. And how long can I keep them?" },
-      { "speaker": "Helen", "text": "Standard loans run for three weeks. You can renew each item twice, provided nobody else has reserved it." },
-      { "speaker": "Daniel", "text": "Can I renew online?" },
-      { "speaker": "Helen", "text": "Yes, online or by phone. Just have your card number ready." },
-      { "speaker": "Daniel", "text": "Good. What do I need to prove my address?" },
-      { "speaker": "Helen", "text": "A recent utility bill or a bank statement with your name and new address on it. Your student card covers your identity." },
-      { "speaker": "Daniel", "text": "I've got a gas bill in my bag. Will that do?" },
-      { "speaker": "Helen", "text": "Perfect, as long as it's dated within the last three months." },
-      { "speaker": "Daniel", "text": "Great. Also, are the study rooms bookable at weekends?" },
-      { "speaker": "Helen", "text": "They are. We're open from nine until five on Saturdays, and rooms can be booked for up to two hours at a time." },
-      { "speaker": "Daniel", "text": "Two hours. That should be enough for my group project." },
-      { "speaker": "Helen", "text": "Let me print your card details. Please sign here, and I'll take your photograph for the card." }
+      {
+        "speaker": "Helen",
+        "text": "Good morning, and welcome to the Eastside Public Library. How can I help you today?"
+      },
+      {
+        "speaker": "Daniel",
+        "text": "Good morning. I'd like to become a member, please. I want a card so I can borrow books and book one of the study rooms."
+      },
+      {
+        "speaker": "Helen",
+        "text": "Of course. The first step is a short registration form. Could I take your surname, please?"
+      },
+      {
+        "speaker": "Daniel",
+        "text": "It's Pemberton. That's P, E, M, B, E, R, T, O, N."
+      },
+      {
+        "speaker": "Helen",
+        "text": "Thank you. And your first name?"
+      },
+      {
+        "speaker": "Daniel",
+        "text": "Daniel."
+      },
+      {
+        "speaker": "Helen",
+        "text": "Could you confirm your date of birth for me?"
+      },
+      {
+        "speaker": "Daniel",
+        "text": "Yes. It's the fourteenth of March, nineteen ninety-eight."
+      },
+      {
+        "speaker": "Helen",
+        "text": "Lovely. Now I need your current address. Are you still in the flat on Harbour Road?"
+      },
+      {
+        "speaker": "Daniel",
+        "text": "I am, but I've moved to a different building on the same road. It's number thirty-seven now."
+      },
+      {
+        "speaker": "Helen",
+        "text": "Thirty-seven Harbour Road. Is that right?"
+      },
+      {
+        "speaker": "Daniel",
+        "text": "That's right."
+      },
+      {
+        "speaker": "Helen",
+        "text": "And a contact number?"
+      },
+      {
+        "speaker": "Daniel",
+        "text": "It's zero four one two, three four five, six seven eight."
+      },
+      {
+        "speaker": "Helen",
+        "text": "Thanks. Now, the fees. Adults pay twenty-five pounds a year. Full-time students pay half that rate, but you'll need to show a valid student card."
+      },
+      {
+        "speaker": "Daniel",
+        "text": "I'm a full-time student at the university, so I'll bring my card. What's the student rate exactly?"
+      },
+      {
+        "speaker": "Helen",
+        "text": "It's twelve pounds fifty for the year. That covers everything except fines for late returns."
+      },
+      {
+        "speaker": "Daniel",
+        "text": "Fair enough. How long does the membership last?"
+      },
+      {
+        "speaker": "Helen",
+        "text": "One year from the day you join. You can borrow up to eight items at a time."
+      },
+      {
+        "speaker": "Daniel",
+        "text": "Eight. And how long can I keep them?"
+      },
+      {
+        "speaker": "Helen",
+        "text": "Standard loans run for three weeks. You can renew each item twice, provided nobody else has reserved it."
+      },
+      {
+        "speaker": "Daniel",
+        "text": "Can I renew online?"
+      },
+      {
+        "speaker": "Helen",
+        "text": "Yes, online or by phone. Just have your card number ready."
+      },
+      {
+        "speaker": "Daniel",
+        "text": "Good. What do I need to prove my address?"
+      },
+      {
+        "speaker": "Helen",
+        "text": "A recent utility bill or a bank statement with your name and new address on it. Your student card covers your identity."
+      },
+      {
+        "speaker": "Daniel",
+        "text": "I've got a gas bill in my bag. Will that do?"
+      },
+      {
+        "speaker": "Helen",
+        "text": "Perfect, as long as it's dated within the last three months."
+      },
+      {
+        "speaker": "Daniel",
+        "text": "Great. Also, are the study rooms bookable at weekends?"
+      },
+      {
+        "speaker": "Helen",
+        "text": "They are. We're open from nine until five on Saturdays, and rooms can be booked for up to two hours at a time."
+      },
+      {
+        "speaker": "Daniel",
+        "text": "Two hours. That should be enough for my group project."
+      },
+      {
+        "speaker": "Helen",
+        "text": "Let me print your card details. Please sign here, and I'll take your photograph for the card."
+      }
     ],
     "questions": [
       {
@@ -144,7 +245,7 @@
       {
         "id": "l7-s1-q10",
         "type": "mcq",
-        "prompt": "When does the library open on Saturdays?",
+        "prompt": "What are the library's opening hours on Saturdays?",
         "options": [
           "A. 10 am to 4 pm",
           "B. It is closed on Saturdays",
@@ -161,19 +262,53 @@
     "section": 2,
     "title": "Guided tour of a regional water treatment works",
     "speakers": [
-      { "name": "Ruth", "lang": "en-GB", "gender": "f" }
+      {
+        "name": "Ruth",
+        "lang": "en-GB",
+        "gender": "f"
+      }
     ],
     "script": [
-      { "speaker": "Ruth", "text": "Good morning, everyone, and welcome to Hartley Water Treatment Works. I'm Ruth, and I'll be showing you round for the next ninety minutes." },
-      { "speaker": "Ruth", "text": "Before we start, please put on a hard hat and one of the yellow jackets from the box by the door. Visitors are not allowed on site without them. The site is quite noisy in places, so please stay with me at all times and listen carefully to any safety announcements." },
-      { "speaker": "Ruth", "text": "This works supplies drinking water to about two hundred thousand people. The water comes from a reservoir, which is six miles to the east. The site covers about forty hectares, and around sixty staff work here in shifts, because the works never closes." },
-      { "speaker": "Ruth", "text": "Our first stop is the screening house. Here the water passes through metal screens that catch leaves, twigs and any fish that have been drawn in." },
-      { "speaker": "Ruth", "text": "Next, we add a chemical called aluminium sulphate. It makes the tiny particles in the water stick together into larger lumps, known as floc." },
-      { "speaker": "Ruth", "text": "The floc settles in the large circular tanks you can see on your left. This stage takes about four hours." },
-      { "speaker": "Ruth", "text": "After that, the water is filtered through beds of sand and carbon. The carbon removes tastes and smells, which is why our water is so fresh." },
-      { "speaker": "Ruth", "text": "The final stage is disinfection. We add a small amount of chlorine to kill any remaining bacteria. The water is then tested every hour in the laboratory." },
-      { "speaker": "Ruth", "text": "Please don't take photographs of the control room, as it contains security equipment. Photography is fine everywhere else. If you have any questions, please ask as we walk, and I will do my best to answer them." },
-      { "speaker": "Ruth", "text": "At the end of the tour, we'll go to the visitor centre, where you can try the water yourself. It's open on weekdays until half past four. Finally, children under twelve cannot enter the pump hall because of the noise." }
+      {
+        "speaker": "Ruth",
+        "text": "Good morning, everyone, and welcome to Hartley Water Treatment Works. I'm Ruth, and I'll be showing you round for the next ninety minutes."
+      },
+      {
+        "speaker": "Ruth",
+        "text": "Before we start, please put on a hard hat and one of the yellow jackets from the box by the door. Visitors are not allowed on site without them. The site is quite noisy in places, so please stay with me at all times and listen carefully to any safety announcements."
+      },
+      {
+        "speaker": "Ruth",
+        "text": "This works supplies drinking water to about two hundred thousand people. The water comes from a reservoir, which is six miles to the east. The site covers about forty hectares, and around sixty staff work here in shifts, because the works never closes."
+      },
+      {
+        "speaker": "Ruth",
+        "text": "Our first stop is the screening house. Here the water passes through metal screens that catch leaves, twigs and any fish that have been drawn in."
+      },
+      {
+        "speaker": "Ruth",
+        "text": "Next, we add a chemical called aluminium sulphate. It makes the tiny particles in the water stick together into larger lumps, known as floc."
+      },
+      {
+        "speaker": "Ruth",
+        "text": "The floc settles in the large circular tanks you can see on your left. This stage takes about four hours."
+      },
+      {
+        "speaker": "Ruth",
+        "text": "After that, the water is filtered through beds of sand and carbon. The carbon removes tastes and smells, which is why our water is so fresh."
+      },
+      {
+        "speaker": "Ruth",
+        "text": "The final stage is disinfection. We add a small amount of chlorine to kill any remaining bacteria. The water is then tested every hour in the laboratory."
+      },
+      {
+        "speaker": "Ruth",
+        "text": "Please don't take photographs of the control room, as it contains security equipment. Photography is fine everywhere else. If you have any questions, please ask as we walk, and I will do my best to answer them."
+      },
+      {
+        "speaker": "Ruth",
+        "text": "At the end of the tour, we'll go to the visitor centre, where you can try the water yourself. It's open on weekdays until half past four. Finally, children under twelve cannot enter the pump hall because of the noise."
+      }
     ],
     "questions": [
       {
@@ -297,30 +432,99 @@
     "section": 3,
     "title": "Planning an urban bird survey",
     "speakers": [
-      { "name": "Dr Marsh", "lang": "en-GB", "gender": "m" },
-      { "name": "Priya", "lang": "en-GB", "gender": "f" },
-      { "name": "Tom", "lang": "en-AU", "gender": "m" }
+      {
+        "name": "Dr Marsh",
+        "lang": "en-GB",
+        "gender": "m"
+      },
+      {
+        "name": "Priya",
+        "lang": "en-GB",
+        "gender": "f"
+      },
+      {
+        "name": "Tom",
+        "lang": "en-AU",
+        "gender": "m"
+      }
     ],
     "script": [
-      { "speaker": "Dr Marsh", "text": "Right, let's go through the plan for your urban bird survey. Priya, you've drafted the sampling sites. Talk us through them." },
-      { "speaker": "Priya", "text": "Sure. We've selected six sites across the city: two parks, two residential streets, and two near the railway line. I chose the railway sites because we expected more species there, but I'm not sure that's the case." },
-      { "speaker": "Dr Marsh", "text": "That's a useful hypothesis to test. Tom, what about timing?" },
-      { "speaker": "Tom", "text": "We were going to survey at dawn for one hour, but I'm worried that's too early for some students who don't live nearby. Could we do late morning instead?" },
-      { "speaker": "Dr Marsh", "text": "Dawn is standard for bird counts, because most species are most active then. You'd miss a lot of activity later in the day." },
-      { "speaker": "Tom", "text": "Right, I hadn't considered that. So we keep dawn, but we could reduce the survey to forty-five minutes." },
-      { "speaker": "Dr Marsh", "text": "Forty-five minutes should be fine if you're consistent. Priya, what about the recording method? Were you planning to note every bird you see?" },
-      { "speaker": "Priya", "text": "Actually, I'd prefer to use a point count method: stand still at one spot and record every bird heard or seen within a fixed radius for ten minutes." },
-      { "speaker": "Dr Marsh", "text": "Good. That's standard for urban habitats, where you can't walk long transects easily. What radius did you decide on?" },
-      { "speaker": "Priya", "text": "Fifty metres. Anything further and it's hard to be sure which bird you're hearing." },
-      { "speaker": "Dr Marsh", "text": "Agreed. Tom, you wanted to add a sound-recording device?" },
-      { "speaker": "Tom", "text": "Yes, a small recorder left at each site overnight. It would let us check species we might have missed, and we can analyse the recordings later." },
-      { "speaker": "Dr Marsh", "text": "Helpful, but it comes with a cost. Do you know what the equipment costs?" },
-      { "speaker": "Tom", "text": "About two hundred and eighty pounds per unit. We have budget for three, so we'd need to rotate them between the six sites." },
-      { "speaker": "Dr Marsh", "text": "Then rotate them, and be clear in your report that the overnight data covers fewer sites. Also, don't forget the weather. Surveys shouldn't go ahead in heavy rain or strong wind." },
-      { "speaker": "Priya", "text": "We've put that in the protocol. We'll record the wind speed and temperature at the start of each count." },
-      { "speaker": "Dr Marsh", "text": "Excellent. And the final deadline for the report?" },
-      { "speaker": "Priya", "text": "The third of December. We'll need the data processed by mid-November to leave time for writing." },
-      { "speaker": "Dr Marsh", "text": "Good. Your next step is to pilot the point-count method at one park this week. Come back to me with the results on Friday." }
+      {
+        "speaker": "Dr Marsh",
+        "text": "Right, let's go through the plan for your urban bird survey. Priya, you've drafted the sampling sites. Talk us through them."
+      },
+      {
+        "speaker": "Priya",
+        "text": "Sure. We've selected six sites across the city: two parks, two residential streets, and two near the railway line. I chose the railway sites because we expected more species there, but I'm not sure that's the case."
+      },
+      {
+        "speaker": "Dr Marsh",
+        "text": "That's a useful hypothesis to test. Tom, what about timing?"
+      },
+      {
+        "speaker": "Tom",
+        "text": "We were going to survey at dawn for one hour, but I'm worried that's too early for some students who don't live nearby. Could we do late morning instead?"
+      },
+      {
+        "speaker": "Dr Marsh",
+        "text": "Dawn is standard for bird counts, because most species are most active then. You'd miss a lot of activity later in the day."
+      },
+      {
+        "speaker": "Tom",
+        "text": "Right, I hadn't considered that. So we keep dawn, but we could reduce the survey to forty-five minutes."
+      },
+      {
+        "speaker": "Dr Marsh",
+        "text": "Forty-five minutes should be fine if you're consistent. Priya, what about the recording method? Were you planning to note every bird you see?"
+      },
+      {
+        "speaker": "Priya",
+        "text": "Actually, I'd prefer to use a point count method: stand still at one spot and record every bird heard or seen within a fixed radius for ten minutes."
+      },
+      {
+        "speaker": "Dr Marsh",
+        "text": "Good. That's standard for urban habitats, where you can't walk long transects easily. What radius did you decide on?"
+      },
+      {
+        "speaker": "Priya",
+        "text": "Fifty metres. Anything further and it's hard to be sure which bird you're hearing."
+      },
+      {
+        "speaker": "Dr Marsh",
+        "text": "Agreed. Tom, you wanted to add a sound-recording device?"
+      },
+      {
+        "speaker": "Tom",
+        "text": "Yes, a small recorder left at each site overnight. It would let us check species we might have missed, and we can analyse the recordings later."
+      },
+      {
+        "speaker": "Dr Marsh",
+        "text": "Helpful, but it comes with a cost. Do you know what the equipment costs?"
+      },
+      {
+        "speaker": "Tom",
+        "text": "About two hundred and eighty pounds per unit. We have budget for three, so we'd need to rotate them between the six sites."
+      },
+      {
+        "speaker": "Dr Marsh",
+        "text": "Then rotate them, and be clear in your report that the overnight data covers fewer sites. Also, don't forget the weather. Surveys shouldn't go ahead in heavy rain or strong wind."
+      },
+      {
+        "speaker": "Priya",
+        "text": "We've put that in the protocol. We'll record the wind speed and temperature at the start of each count."
+      },
+      {
+        "speaker": "Dr Marsh",
+        "text": "Excellent. And the final deadline for the report?"
+      },
+      {
+        "speaker": "Priya",
+        "text": "The third of December. We'll need the data processed by mid-November to leave time for writing."
+      },
+      {
+        "speaker": "Dr Marsh",
+        "text": "Good. Your next step is to pilot the point-count method at one park this week. Come back to me with the results on Friday."
+      }
     ],
     "questions": [
       {
@@ -452,26 +656,81 @@
     "section": 4,
     "title": "Terrace farming and soil erosion",
     "speakers": [
-      { "name": "Dr Okafor", "lang": "en-GB", "gender": "f" }
+      {
+        "name": "Dr Okafor",
+        "lang": "en-GB",
+        "gender": "f"
+      }
     ],
     "script": [
-      { "speaker": "Dr Okafor", "text": "Today I want to look at terrace farming, one of the oldest methods humans have used to work steep land. You'll find terraces in the Andes, in the Philippines, and in the hills of southern Italy." },
-      { "speaker": "Dr Okafor", "text": "The basic idea is simple. Instead of farming a steep slope as one continuous surface, farmers cut it into a series of flat steps. Each step, or terrace, holds soil and water in place." },
-      { "speaker": "Dr Okafor", "text": "These flat areas also make it easier to plough and plant, since seeds and fertiliser are no longer washed downhill by every shower." },
-      { "speaker": "Dr Okafor", "text": "The most important benefit is erosion control. On a bare slope, heavy rain can wash away the topsoil within a few seasons. Terraces slow the water down, so the soil has time to soak in rather than run off." },
-      { "speaker": "Dr Okafor", "text": "Terraces also make irrigation easier. Water can be directed across each level, and in many traditional systems it flows down from one terrace to the next. This is far more efficient than trying to water a steep hillside from the top." },
-      { "speaker": "Dr Okafor", "text": "However, building terraces takes enormous effort. The retaining walls are usually built from local stone, and in a typical hillside project a team might need several years to finish a single terrace system." },
-      { "speaker": "Dr Okafor", "text": "The work is usually shared among families, with neighbours helping one another, because no single household could build a whole system alone." },
-      { "speaker": "Dr Okafor", "text": "That is why maintenance matters so much. A terrace wall that is not repaired after a storm can collapse, and once one wall fails, the water it held can cut through the soil behind it very quickly." },
-      { "speaker": "Dr Okafor", "text": "Now let's look at a case study. In a survey of abandoned terraces in a mountain region of Nepal, researchers found that nearly seventy percent of the walls had collapsed within twenty years of the farmers leaving." },
-      { "speaker": "Dr Okafor", "text": "The researchers' main finding was that the loss of terraces was not caused by weather alone. Labour migration to the cities removed the people who used to repair the walls every year." },
-      { "speaker": "Dr Okafor", "text": "Without regular attention, even a well-built wall slowly bulges outwards as the soil behind it becomes saturated with water." },
-      { "speaker": "Dr Okafor", "text": "This matters for policy. Some governments now offer grants to help farmers repair terraces before they fail, rather than paying for emergency work afterwards. Those programmes have proved cheaper in the long run." },
-      { "speaker": "Dr Okafor", "text": "Let's turn to crop choice. On terraces, farmers traditionally grow crops with shallow roots, such as beans and potatoes, because deep roots can disturb the retaining walls." },
-      { "speaker": "Dr Okafor", "text": "Some farmers also plant grasses or small shrubs along the edges of each level, which helps to bind the soil together." },
-      { "speaker": "Dr Okafor", "text": "A final point concerns water. Many terrace systems were designed around seasonal rain, so they store water in small ponds at the top of each slope. Modern engineers often copy this approach when they plan drainage for new housing estates." },
-      { "speaker": "Dr Okafor", "text": "These ponds also support wildlife, and in dry periods they give villagers a reserve of water close to their fields." },
-      { "speaker": "Dr Okafor", "text": "For your assignment, I'd like you to compare two sites: one that still has working terraces and one where they have been abandoned. Use the evidence from the case study, and note the specific factor that explains the difference." }
+      {
+        "speaker": "Dr Okafor",
+        "text": "Today I want to look at terrace farming, one of the oldest methods humans have used to work steep land. You'll find terraces in the Andes, in the Philippines, and in the hills of southern Italy."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "The basic idea is simple. Instead of farming a steep slope as one continuous surface, farmers cut it into a series of flat steps. Each step, or terrace, holds soil and water in place."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "These flat areas also make it easier to plough and plant, since seeds and fertiliser are no longer washed downhill by every shower."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "The most important benefit is erosion control. On a bare slope, heavy rain can wash away the topsoil within a few seasons. Terraces slow the water down, so the soil has time to soak in rather than run off."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "Terraces also make irrigation easier. Water can be directed across each level, and in many traditional systems it flows down from one terrace to the next. This is far more efficient than trying to water a steep hillside from the top."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "However, building terraces takes enormous effort. The retaining walls are usually built from local stone, and in a typical hillside project a team might need several years to finish a single terrace system."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "The work is usually shared among families, with neighbours helping one another, because no single household could build a whole system alone."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "That is why maintenance matters so much. A terrace wall that is not repaired after a storm can collapse, and once one wall fails, the water it held can cut through the soil behind it very quickly."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "Now let's look at a case study. In a survey of abandoned terraces in a mountain region of Nepal, researchers found that nearly seventy percent of the walls had collapsed within twenty years of the farmers leaving."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "The researchers' main finding was that the loss of terraces was not caused by weather alone. Labour migration to the cities removed the people who used to repair the walls every year."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "Without regular attention, even a well-built wall slowly bulges outwards as the soil behind it becomes saturated with water."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "This matters for policy. Some governments now offer grants to help farmers repair terraces before they fail, rather than paying for emergency work afterwards. Those programmes have proved cheaper in the long run."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "Let's turn to crop choice. On terraces, farmers traditionally grow crops with shallow roots, such as beans and potatoes, because deep roots can disturb the retaining walls."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "Some farmers also plant grasses or small shrubs along the edges of each level, which helps to bind the soil together."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "A final point concerns water. Many terrace systems were designed around seasonal rain, so they store water in small ponds at the top of each slope. Modern engineers often copy this approach when they plan drainage for new housing estates."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "These ponds also support wildlife, and in dry periods they give villagers a reserve of water close to their fields."
+      },
+      {
+        "speaker": "Dr Okafor",
+        "text": "For your assignment, I'd like you to compare two sites: one that still has working terraces and one where they have been abandoned. Use the evidence from the case study, and note the specific factor that explains the difference."
+      }
     ],
     "questions": [
       {

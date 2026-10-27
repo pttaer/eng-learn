@@ -1,16 +1,20 @@
 package app.englishsingularity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.ConsoleMessage;
+import android.webkit.JavascriptInterface;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import org.json.JSONObject;
 
 /**
  * Hosts the offline phone build (index.html, ielts.html) bundled in assets/.
@@ -22,6 +26,41 @@ public class MainActivity extends Activity {
 
     private WebView webView;
     private ValueCallback<Uri[]> filePathCallback;
+
+    public class WidgetBridge {
+        @JavascriptInterface
+        public void updateWidgetData(String jsonStr) {
+            try {
+                JSONObject obj = new JSONObject(jsonStr);
+                SharedPreferences prefs = getSharedPreferences(SingularityWidgetProvider.PREFS_NAME, Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+
+                if (obj.has("streak")) {
+                    editor.putInt(SingularityWidgetProvider.PREF_STREAK, obj.optInt("streak", 1));
+                }
+                if (obj.has("progress")) {
+                    editor.putString(SingularityWidgetProvider.PREF_PROGRESS, obj.optString("progress"));
+                }
+                if (obj.has("word")) {
+                    editor.putString(SingularityWidgetProvider.PREF_WORD, obj.optString("word"));
+                    editor.putString(SingularityWidgetProvider.PREF_PHONETIC, obj.optString("phonetic", ""));
+                    editor.putString(SingularityWidgetProvider.PREF_MEANING, obj.optString("meaning", ""));
+                    editor.putString(SingularityWidgetProvider.PREF_EXAMPLE, obj.optString("example", ""));
+                    String tagsVal = obj.optString("tags", "").trim();
+                    if (!tagsVal.isEmpty()) {
+                        editor.putString(SingularityWidgetProvider.PREF_TAGS, tagsVal);
+                    } else {
+                        editor.remove(SingularityWidgetProvider.PREF_TAGS);
+                    }
+                }
+                editor.apply();
+
+                SingularityWidgetProvider.updateAllWidgets(MainActivity.this);
+            } catch (Exception e) {
+                Log.e(TAG, "Error updating widget data from JS", e);
+            }
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +76,9 @@ public class MainActivity extends Activity {
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);   // localStorage holds all progress
         settings.setAllowFileAccess(true);
+
+        // Bridge to receive streak & vocabulary telemetry from the web app
+        webView.addJavascriptInterface(new WidgetBridge(), "AndroidWidgetBridge");
 
         // Keep every navigation inside the WebView (asset pages link to each other)
         webView.setWebViewClient(new WebViewClient());
@@ -70,7 +112,47 @@ public class MainActivity extends Activity {
             }
         });
 
-        webView.loadUrl("file:///android_asset/index.html");
+        // Determine initial URL based on deep-link action
+        String initialUrl = "file:///android_asset/index.html";
+        Intent intent = getIntent();
+        if (intent != null && intent.getAction() != null) {
+            if (SingularityWidgetProvider.ACTION_OPEN_VOCAB.equals(intent.getAction())) {
+                initialUrl = "file:///android_asset/index.html#vocab";
+            } else if (SingularityWidgetProvider.ACTION_OPEN_IELTS.equals(intent.getAction())) {
+                initialUrl = "file:///android_asset/ielts.html";
+            } else if (SingularityWidgetProvider.ACTION_OPEN_READING.equals(intent.getAction())) {
+                initialUrl = "file:///android_asset/index.html#reading";
+            } else if (SingularityWidgetProvider.ACTION_OPEN_WRITING.equals(intent.getAction())) {
+                initialUrl = "file:///android_asset/index.html#writing";
+            } else if (SingularityWidgetProvider.ACTION_OPEN_LISTENING.equals(intent.getAction())) {
+                initialUrl = "file:///android_asset/index.html#listening";
+            } else if (SingularityWidgetProvider.ACTION_OPEN_SPEAKING.equals(intent.getAction())) {
+                initialUrl = "file:///android_asset/index.html#speaking";
+            }
+        }
+
+        webView.loadUrl(initialUrl);
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        if (intent != null && intent.getAction() != null && webView != null) {
+            if (SingularityWidgetProvider.ACTION_OPEN_VOCAB.equals(intent.getAction())) {
+                webView.loadUrl("file:///android_asset/index.html#vocab");
+            } else if (SingularityWidgetProvider.ACTION_OPEN_IELTS.equals(intent.getAction())) {
+                webView.loadUrl("file:///android_asset/ielts.html");
+            } else if (SingularityWidgetProvider.ACTION_OPEN_READING.equals(intent.getAction())) {
+                webView.loadUrl("file:///android_asset/index.html#reading");
+            } else if (SingularityWidgetProvider.ACTION_OPEN_WRITING.equals(intent.getAction())) {
+                webView.loadUrl("file:///android_asset/index.html#writing");
+            } else if (SingularityWidgetProvider.ACTION_OPEN_LISTENING.equals(intent.getAction())) {
+                webView.loadUrl("file:///android_asset/index.html#listening");
+            } else if (SingularityWidgetProvider.ACTION_OPEN_SPEAKING.equals(intent.getAction())) {
+                webView.loadUrl("file:///android_asset/index.html#speaking");
+            }
+        }
     }
 
     @Override

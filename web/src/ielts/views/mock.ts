@@ -90,7 +90,7 @@ export function mockView(root: HTMLElement): () => void {
     const r = h('button', 'ie-card', `<b>Reading mock (Standard Split)</b><span>3 passages · 60 minutes</span><small>${mocks('reading')} taken</small>`);
     r.addEventListener('click', () => {
       root.innerHTML = '';
-      const host = h('div');
+      const host = h('div', 'ie-stage');
       root.append(host);
       stop = mountReadingTest(host, readingSet(mocks('reading')), 60, true, () => host.append(back()));
     });
@@ -100,7 +100,7 @@ export function mockView(root: HTMLElement): () => void {
     const ro = h('button', 'ie-card', `<b>Original reading set 1</b><span>3 passages · 60 minutes</span><small>Written for this app</small>`);
     ro.addEventListener('click', () => {
       root.innerHTML = '';
-      const host = h('div');
+      const host = h('div', 'ie-stage');
       root.append(host);
       stop = mountReadingTest(host, ORIGINAL_PASSAGES, 60, true, () => host.append(back()));
     });
@@ -111,7 +111,7 @@ export function mockView(root: HTMLElement): () => void {
       const c = h('button', 'ie-card', `<b>Listening mock ${i + 1}</b><span>4 sections · played once</span><small>${t.reduce((a, s) => a + s.questions.length, 0)} questions (1–40)</small>`);
       c.addEventListener('click', () => {
         root.innerHTML = '';
-        const host = h('div');
+        const host = h('div', 'ie-stage');
         root.append(host);
         stop = mountListeningTest(host, t, true, true, () => host.append(back()));
       });

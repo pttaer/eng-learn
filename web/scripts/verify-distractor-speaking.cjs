@@ -167,7 +167,8 @@ const speakingMod = load('views/speaking.ts', {
   './speaking-simulator': { speakingSimulatorView: () => () => {} },
   '../progress': { addAttempt: () => {} },
   '../fluency': { fluency: () => null, fluencyNote: () => '' },
-  '../writing-heuristics': { DESCRIPTORS: {}, RUBRIC: { speaking: [] } }
+  '../writing-heuristics': { DESCRIPTORS: {}, RUBRIC: { speaking: [] } },
+  '../../core/i18n': { t: (k, p, d) => d || k, I18n: { getLocale: () => 'en', onLocaleChange: () => () => {} } }
 });
 
 

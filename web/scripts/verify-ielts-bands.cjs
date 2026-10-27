@@ -21,8 +21,10 @@ assert.strictEqual(rawToBand('listening', 30), 7);
 assert.strictEqual(rawToBand('listening', 29), 6.5);
 assert.strictEqual(rawToBand('listening', 32), 7.5);
 assert.strictEqual(rawToBand('listening', 40), 9);
-assert.strictEqual(rawToBand('reading', 15, 20), 7, '15/20 scales to 30/40');
-assert.strictEqual(rawToBand('reading', 0), 2);
+assert.strictEqual(rawToBand('reading', 0), 0);
+assert.strictEqual(rawToBand('reading', 1), 1);
+assert.strictEqual(rawToBand('reading', 2), 1);
+assert.strictEqual(averageBands([]), 0);
 assert.strictEqual(averageBands([7, 7, 6.5, 6.5]), 7);      // 6.75 -> 7.0
 assert.strictEqual(averageBands([6.5, 6.5, 6, 6.5]), 6.5);  // 6.375 -> 6.5
 assert.strictEqual(averageBands([6, 6, 6, 6.5]), 6);        // 6.125 -> 6.0

@@ -13,6 +13,7 @@ const WEB = path.join(__dirname, '..');
 const ANDROID_SRC = path.join(WEB, 'android');
 const OUT = path.join(WEB, 'release', 'android');
 const BUILD = path.join(OUT, 'build');
+const DEX_CACHE = path.join(OUT, 'dex-cache');
 const APK = path.join(OUT, 'English-Singularity-debug.apk');
 
 const SDK = process.env.ANDROID_HOME || 'C:\\Users\\Dell\\AppData\\Local\\Android\\Sdk';
@@ -53,6 +54,51 @@ function listFiles(dir, ext) {
   });
 }
 
+function getLatestMtime(target) {
+  let latest = 0;
+  if (!fs.existsSync(target)) return latest;
+  const stat = fs.statSync(target);
+  if (!stat.isDirectory()) return stat.mtimeMs;
+  for (const entry of fs.readdirSync(target, { withFileTypes: true })) {
+    const full = path.join(target, entry.name);
+    if (entry.isDirectory()) {
+      if (['node_modules', 'dist', 'release', '.git'].includes(entry.name)) continue;
+      latest = Math.max(latest, getLatestMtime(full));
+    } else {
+      latest = Math.max(latest, fs.statSync(full).mtimeMs);
+    }
+  }
+  return latest;
+}
+
+function isApkFresh() {
+  if (process.argv.includes('--force')) return false;
+  if (!fs.existsSync(APK)) return false;
+  const apkTime = fs.statSync(APK).mtimeMs;
+
+  const inputs = [
+    path.join(WEB, 'src'),
+    path.join(WEB, 'android'),
+    path.join(WEB, 'public'),
+    path.join(WEB, 'index.html'),
+    path.join(WEB, 'ielts.html'),
+    path.join(WEB, 'vite.config.ts'),
+    path.join(__dirname, 'build-phone.cjs'),
+    __filename
+  ];
+  const newestIn = Math.max(...inputs.map(getLatestMtime));
+  return apkTime > newestIn;
+}
+
+// 0s Build Instant Cache Hit Check
+if (isApkFresh()) {
+  console.log(`⚡ [APK] Up-to-date in 0.00s! ${path.relative(WEB, APK)} (${Math.round(fs.statSync(APK).size / 1024)} KB) is cached.`);
+  console.log(`⚡ [APK] Use --force to trigger a clean re-compilation.`);
+  process.exit(0);
+}
+
+const t0 = Date.now();
+
 // 1. Fresh offline pages
 run('node', [path.join(__dirname, 'build-phone.cjs')]);
 
@@ -67,6 +113,7 @@ const dirs = {
 };
 Object.values(dirs).forEach(d => fs.mkdirSync(d, { recursive: true }));
 fs.mkdirSync(OUT, { recursive: true });
+fs.mkdirSync(DEX_CACHE, { recursive: true });
 
 // 3. Assets: the two phone pages, exactly as built (everything inlined)
 for (const page of ['index.html', 'ielts.html']) {
@@ -92,38 +139,68 @@ run(AAPT2, [
   '--target-sdk-version', String(TARGET_SDK),
   '--version-code', String(VERSION_CODE),
   '--version-name', VERSION_NAME,
+  '--enable-sparse-encoding',
+  '--enable-compact-entries',
   '--java', dirs.gen,
   compiledRes,
 ]);
 
-// 6. javac (source/target 11; --release would conflict with android.jar)
-const mainSrc = path.join(ANDROID_SRC, 'src', 'app', 'englishsingularity', 'MainActivity.java');
-const rJava = path.join(dirs.gen, 'app', 'englishsingularity', 'R.java');
-run(JAVAC, ['-source', '11', '-target', '11', '-encoding', 'UTF-8', '-classpath', PLATFORM_JAR,
-  '-d', dirs.classes, rJava, mainSrc], { quiet: true });
-
-// 7. d8 -> classes.dex
-const classFiles = listFiles(dirs.classes, '.class');
-run(JAVA, ['-cp', D8_JAR, 'com.android.tools.r8.D8', '--lib', PLATFORM_JAR, '--min-api', String(MIN_SDK),
-  '--output', dirs.dex, ...classFiles], { quiet: true });
+// 6 & 7: Check DEX Cache to skip javac and d8 when Java source is unchanged
+const javaSrcFiles = listFiles(path.join(ANDROID_SRC, 'src'), '.java');
+const cachedDex = path.join(DEX_CACHE, 'classes.dex');
 const dexFile = path.join(dirs.dex, 'classes.dex');
 
-// 8. Append classes.dex to the APK, stored (uncompressed), as the Android installer expects
+const javaMtime = Math.max(...javaSrcFiles.map(f => fs.statSync(f).mtimeMs));
+if (fs.existsSync(cachedDex) && fs.statSync(cachedDex).mtimeMs > javaMtime && !process.argv.includes('--force')) {
+  fs.copyFileSync(cachedDex, dexFile);
+} else {
+  // 6. javac (source/target 11; --release would conflict with android.jar)
+  const rJava = path.join(dirs.gen, 'app', 'englishsingularity', 'R.java');
+  run(JAVAC, ['-source', '11', '-target', '11', '-encoding', 'UTF-8', '-classpath', PLATFORM_JAR,
+    '-d', dirs.classes, rJava, ...javaSrcFiles], { quiet: true });
+
+  // 7. d8 -> classes.dex
+  const classFiles = listFiles(dirs.classes, '.class');
+  run(JAVA, ['-cp', D8_JAR, 'com.android.tools.r8.D8', '--lib', PLATFORM_JAR, '--min-api', String(MIN_SDK),
+    '--output', dirs.dex, ...classFiles], { quiet: true });
+
+  fs.copyFileSync(dexFile, cachedDex);
+}
+
+// 8. Assemble the APK with maximum Deflate compression (level 9) before zipalign,
+// while keeping classes.dex and uncompressed assets stored (ZIP_STORED) as Android expects
 const py = `
-import sys, zipfile
+import sys, zipfile, os
 apk, dex = sys.argv[1], sys.argv[2]
-with zipfile.ZipFile(apk, 'a') as z:
-    if 'classes.dex' in z.namelist():
-        raise SystemExit('classes.dex already present')
-    z.write(dex, 'classes.dex', compress_type=zipfile.ZIP_STORED)
-print('added classes.dex')
+temp_apk = apk + '.tmp'
+with zipfile.ZipFile(apk, 'r') as zin, zipfile.ZipFile(temp_apk, 'w') as zout:
+    for item in zin.infolist():
+        if item.filename == 'classes.dex':
+            continue
+        data = zin.read(item.filename)
+        if item.compress_type == zipfile.ZIP_STORED:
+            zout.writestr(item, data)
+        else:
+            zi = zipfile.ZipInfo(item.filename, item.date_time)
+            zi.compress_type = zipfile.ZIP_DEFLATED
+            zout.writestr(zi, data, compresslevel=9)
+    # classes.dex must be STORED (uncompressed) for Android installer runtime mmap
+    zout.write(dex, 'classes.dex', compress_type=zipfile.ZIP_STORED)
+os.replace(temp_apk, apk)
+print('assembled APK with deflate level 9 and stored classes.dex')
 `;
 const pyRun = spawnSync('python', ['-', linked, dexFile], { input: py, encoding: 'utf8' });
-if (pyRun.status !== 0) throw new Error('python append failed: ' + (pyRun.stderr || pyRun.stdout));
+if (pyRun.status !== 0) throw new Error('python assembly failed: ' + (pyRun.stderr || pyRun.stdout));
 
 // 9. Align, then sign with the existing debug key (zipalign must run before signing)
+// Use Zopfli recompression (-z) unless --fast is explicitly requested, maximizing compression
 const aligned = path.join(BUILD, 'aligned.apk');
-run(ZIPALIGN, ['-p', '-f', '4', linked, aligned]);
+const zipalignArgs = ['-p', '-f', '4'];
+if (!process.argv.includes('--fast')) {
+  zipalignArgs.unshift('-z');
+}
+zipalignArgs.push(linked, aligned);
+run(ZIPALIGN, zipalignArgs);
 
 if (!fs.existsSync(KEYSTORE)) {
   fs.mkdirSync(path.dirname(KEYSTORE), { recursive: true });
@@ -141,7 +218,7 @@ const badging = execFileSync(AAPT2, ['dump', 'badging', APK], { encoding: 'utf8'
 const pkg = (badging.match(/package: name='([^']+)' versionCode='(\d+)' versionName='([^']*)'/) || []).slice(1);
 const sdks = (badging.match(/sdkVersion:'(\d+)'|targetSdkVersion:'(\d+)'/g) || []).join(' ');
 const perms = (badging.match(/uses-permission: name='([^']+)'/g) || []).map(p => p.replace(/.*name='|'$/g, ''));
-console.log(`[APK] ${path.relative(WEB, APK)} (${Math.round(fs.statSync(APK).size / 1024)} KB)`);
+console.log(`[APK] Built in ${((Date.now() - t0) / 1000).toFixed(2)}s -> ${path.relative(WEB, APK)} (${Math.round(fs.statSync(APK).size / 1024)} KB)`);
 console.log(`[APK] package=${pkg[0]} versionCode=${pkg[1]} versionName=${pkg[2]} ${sdks}`);
 console.log(`[APK] permissions: ${perms.length ? perms.join(', ') : 'none (fully offline)'}`);
 if (perms.includes('android.permission.INTERNET')) throw new Error('INTERNET permission must not be present');

@@ -7,9 +7,10 @@ import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { MotionEngine } from '../core/motion-engine';
 import { SkillTreeEngine } from '../core/skill-tree-engine';
+import { ScrollAffordance } from '../core/scroll-affordance';
 import { HeaderHUD } from './header-hud';
-import { CommuteAudioPlayer } from '../core/commute-audio-player';
 import collocationsData from '../assets/data/collocations.json';
+import { t } from '../core/i18n';
 
 export interface CollocationItem {
   id: string;
@@ -45,6 +46,9 @@ export class CollocationsDossier {
     this.filterCards();
     window.addEventListener('learner-level-change', () => {
       // Collocations are frequency & topic-based: never hide baseline collocations when learner level changes
+      if (this.container.isConnected) this.render();
+    });
+    window.addEventListener('eng:locale-changed', () => {
       if (this.container.isConnected) this.render();
     });
   }
@@ -92,35 +96,35 @@ export class CollocationsDossier {
 
   public render(): HTMLElement {
     const total = (collocationsData as CollocationItem[]).length;
-    const levelChips = `<button class="hud-btn level-tab ${this.activeLevel === 'ALL' ? 'active' : ''}" data-cefr="ALL" aria-pressed="${this.activeLevel === 'ALL'}">All</button>`
+    const levelChips = `<button class="hud-btn level-tab ${this.activeLevel === 'ALL' ? 'active' : ''}" data-cefr="ALL" aria-pressed="${this.activeLevel === 'ALL'}">${t('category.all')}</button>`
       + levelChipsHtml(levelsWithContent(collocationsData as CollocationItem[]), this.activeLevel === 'ALL' ? ('' as Cefr) : this.activeLevel);
     this.container.innerHTML = `
       <div class="collocations-mode-header">
         <div class="view-mode-toggle">
-          <button class="hud-btn view-toggle-btn ${this.viewMode === 'drill' ? 'active' : ''}" data-view="drill">${icon('zap')} Active SRS Drill</button>
-          <button class="hud-btn view-toggle-btn ${this.viewMode === 'dictionary' ? 'active' : ''}" data-view="dictionary">${icon('book')} Full Lexicon (${total.toLocaleString()})</button>
+          <button class="hud-btn view-toggle-btn ${this.viewMode === 'drill' ? 'active' : ''}" data-view="drill">${icon('zap')} ${t('colloc.active_srs')}</button>
+          <button class="hud-btn view-toggle-btn ${this.viewMode === 'dictionary' ? 'active' : ''}" data-view="dictionary">${icon('book')} ${t('colloc.full_lexicon', { total: total.toLocaleString() })}</button>
         </div>
         <div class="lexicon-badge-summary">
-          <span class="telemetry-value">TOTAL: ${total.toLocaleString()} COLLOCATIONS</span>
+          <span class="telemetry-value">${t('colloc.total_count', { total: total.toLocaleString() })}</span>
         </div>
       </div>
 
       <div class="dossier-control-bar">
         <div class="dossier-tabs">
-          ${this.viewMode === 'drill' ? `<button class="hud-btn filter-tab ${this.activeCategory === 'DUE' ? 'active' : ''}" data-cat="DUE">${icon('zap')} SRS Due</button>` : ''}
-          <button class="hud-btn filter-tab ${this.activeCategory === 'ALL' ? 'active' : ''}" data-cat="ALL">All Categories</button>
-          <button class="hud-btn filter-tab ${this.activeCategory === 'EVERYDAY' ? 'active' : ''}" data-cat="EVERYDAY">Everyday</button>
-          <button class="hud-btn filter-tab ${this.activeCategory === 'BUSINESS' ? 'active' : ''}" data-cat="BUSINESS">Business</button>
-          <button class="hud-btn filter-tab ${this.activeCategory === 'ACADEMIC' ? 'active' : ''}" data-cat="ACADEMIC">Academic</button>
-          <button class="hud-btn filter-tab ${this.activeCategory === 'IDIOMS' ? 'active' : ''}" data-cat="IDIOMS">Idioms</button>
+          ${this.viewMode === 'drill' ? `<button class="hud-btn filter-tab ${this.activeCategory === 'DUE' ? 'active' : ''}" data-cat="DUE">${icon('zap')} ${t('colloc.srs_due')}</button>` : ''}
+          <button class="hud-btn filter-tab ${this.activeCategory === 'ALL' ? 'active' : ''}" data-cat="ALL">${t('category.all_categories')}</button>
+          <button class="hud-btn filter-tab ${this.activeCategory === 'EVERYDAY' ? 'active' : ''}" data-cat="EVERYDAY">${t('category.everyday')}</button>
+          <button class="hud-btn filter-tab ${this.activeCategory === 'BUSINESS' ? 'active' : ''}" data-cat="BUSINESS">${t('category.business')}</button>
+          <button class="hud-btn filter-tab ${this.activeCategory === 'ACADEMIC' ? 'active' : ''}" data-cat="ACADEMIC">${t('category.academic')}</button>
+          <button class="hud-btn filter-tab ${this.activeCategory === 'IDIOMS' ? 'active' : ''}" data-cat="IDIOMS">${t('category.idioms')}</button>
         </div>
         <div class="control-row">
         ${this.activeCategory === 'DUE' && this.viewMode === 'drill' ? '' : `<div class="vocab-level-selector">
-          <span class="telemetry-label" style="margin-right: 8px;">LEVEL:</span>
+          <span class="telemetry-label" style="margin-right: 8px;">${t('category.level')}:</span>
           ${levelChips}
         </div>`}
         <div class="dossier-search-wrapper">
-          <input type="search" aria-label="Search collocations" class="dossier-search-input" placeholder="SEARCH COLLOCATIONS... (CTRL+K)" value="${this.escapeHtml(this.searchQuery)}" />
+          <input type="search" aria-label="Search collocations" class="dossier-search-input" placeholder="${t('placeholder.search_collocations')}" value="${this.escapeHtml(this.searchQuery)}" />
         </div>
         </div>
       </div>
@@ -134,6 +138,7 @@ export class CollocationsDossier {
     } else {
       this.bindDictionaryTableEvents();
     }
+    ScrollAffordance.scan(this.container);
     return this.container;
   }
 
@@ -141,9 +146,9 @@ export class CollocationsDossier {
     return `
       <div class="dossier-card-slot"></div>
       <div class="dossier-nav-bar">
-        <button class="hud-btn nav-btn-prev">${icon('arrowLeft')} Prev</button>
+        <button class="hud-btn nav-btn-prev">${icon('arrowLeft')} ${t('action.prev')}</button>
         <span class="telemetry-value card-counter">VAULT ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}</span>
-        <button class="hud-btn nav-btn-next">Next ${icon('arrowRight')}</button>
+        <button class="hud-btn nav-btn-next">${t('action.next')} ${icon('arrowRight')}</button>
       </div>
     `;
   }
@@ -159,7 +164,7 @@ export class CollocationsDossier {
     return `
       <div class="lexicon-table-container">
         <div class="lexicon-table-header-info">
-          <span class="telemetry-label" style="white-space: nowrap;">ARCHIVE // ${totalItems} ENTRIES</span>
+          <span class="telemetry-label" style="white-space: nowrap;">${t('colloc.archive_entries', { total: totalItems })}</span>
           <span class="telemetry-label" style="white-space: nowrap;">· ${totalItems > 0 ? startIndex + 1 : 0}–${endIndex} / ${totalItems}</span>
         </div>
         <div class="lexicon-table-scroll-wrapper">
@@ -167,9 +172,9 @@ export class CollocationsDossier {
             <thead>
               <tr>
                 <th style="width: 60px; text-align: center;">#</th>
-                <th>COLLOCATION PHRASE</th>
+                <th>${t('colloc.collocation_phrase')}</th>
                 <th style="width: 110px;">CATEGORY</th>
-                <th>VIETNAMESE TRANSLATION</th>
+                <th>${t('colloc.vietnamese_header')}</th>
                 <th style="width: 80px; text-align: center;">AUDIO</th>
                 <th style="width: 110px; text-align: center;">SRS STATUS</th>
                 <th style="width: 80px; text-align: center;">PRACTICE</th>
@@ -180,7 +185,7 @@ export class CollocationsDossier {
                 <tr>
                   <td colspan="7" class="lexicon-empty-cell">
                     <div class="telemetry-label">Zero records match query</div>
-                    <p>No collocation entries found matching the filter criteria.</p>
+                    <p>${t('colloc.zero_records')}</p>
                   </td>
                 </tr>
               ` : pageItems.map(item => {
@@ -202,7 +207,7 @@ export class CollocationsDossier {
                       <span class="colloc-status-badge status-${statusBadge.toLowerCase()}">${statusBadge}</span>
                     </td>
                     <td class="lexicon-col-drill">
-                      <button class="hud-btn btn-drill-row" data-id="${item.id}" title="Practice in SRS Drill">DRILL</button>
+                      <button class="hud-btn btn-drill-row" data-id="${item.id}" title="${t('action.practice')}">${t('colloc.drill_btn')}</button>
                     </td>
                   </tr>
                 `;
@@ -211,9 +216,9 @@ export class CollocationsDossier {
           </table>
         </div>
         <div class="lexicon-pagination-bar">
-          <button class="hud-btn page-btn-prev" ${this.currentPage <= 1 ? 'disabled' : ''}>${icon('arrowLeft')} Prev 50</button>
-          <span class="telemetry-value page-indicator">PAGE ${this.currentPage} / ${totalPages} (${totalItems > 0 ? startIndex + 1 : 0}–${endIndex} of ${totalItems})</span>
-          <button class="hud-btn page-btn-next" ${this.currentPage >= totalPages ? 'disabled' : ''}>Next 50 ${icon('arrowRight')}</button>
+          <button class="hud-btn page-btn-prev" ${this.currentPage <= 1 ? 'disabled' : ''}>${icon('arrowLeft')} ${t('colloc.prev_50')}</button>
+          <span class="telemetry-value page-indicator">${t('colloc.page_info', { current: this.currentPage, total: totalPages })} (${totalItems > 0 ? startIndex + 1 : 0}–${endIndex} of ${totalItems})</span>
+          <button class="hud-btn page-btn-next" ${this.currentPage >= totalPages ? 'disabled' : ''}>${t('colloc.next_50')} ${icon('arrowRight')}</button>
         </div>
       </div>
     `;
@@ -392,6 +397,7 @@ export class CollocationsDossier {
       category: item.category,
       indexStr: `[ ${this.currentIndex + 1} / ${this.currentList.length} ]`,
       statusBadge,
+      hideFrontRating: true,
       front: {
         promptLabel: 'COLLOCATION // RECALL MEANING',
         mainText: item.phrase,
@@ -410,33 +416,8 @@ export class CollocationsDossier {
 
     slot.appendChild(this.currentCardHandle.element);
 
-    HeaderHUD.setContextualDock([
-      {
-        id: 'listen',
-        label: 'Listen',
-        iconHtml: icon('volume', 16),
-        onClick: () => {
-          if (item.phrase) AudioSynthesizer.speak(item.phrase);
-        }
-      },
-      {
-        id: 'commute',
-        label: 'Commute',
-        iconHtml: icon('headphones', 16),
-        onClick: () => {
-          CommuteAudioPlayer.open();
-        }
-      },
-      {
-        id: 'flip',
-        label: 'Flip',
-        iconHtml: '⟳',
-        accent: true,
-        onClick: () => {
-          this.currentCardHandle?.flip();
-        }
-      }
-    ]);
+    // Keep global mobile bottom dock cleanly visible instead of overriding with duplicate actions
+    HeaderHUD.setContextualDock(null);
   }
 
   private handleRate(cardId: string, rating: 'again' | 'good'): void {

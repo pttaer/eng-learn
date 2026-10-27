@@ -332,7 +332,7 @@ export class MediationDossier {
         <section class="mediation-workbench-panel" aria-label="Active Mediation Console">
           <div class="workbench-header-strip">
             <div class="workbench-title-group">
-              <span class="telemetry-label">[ ACTIVE MEDIATION RESOLUTION ]</span>
+              <span class="telemetry-label">Active Mediation Composition</span>
               <span class="telemetry-sub">Synthesize and adapt for recipient without copying verbatim text</span>
             </div>
             <div class="word-count-badge" id="live-word-count-badge">
@@ -352,13 +352,13 @@ export class MediationDossier {
 
           <div class="workbench-actions-bar">
             <button class="hud-btn btn-evaluate-resolution" id="btn-evaluate" title="Evaluate Resolution against CEFR Mediation Rubric (Ctrl+Enter)">
-              ${icon('zap', 14)} <span class="btn-text">EVALUATE RESOLUTION <span class="kbd-badge kbd-only">[Ctrl+Enter]</span></span>
+              ${icon('zap', 14)} <span class="btn-text">Evaluate Response <span class="kbd-badge kbd-only">[Ctrl+Enter]</span></span>
             </button>
             <button class="hud-btn btn-toggle-exemplar" id="btn-exemplar" title="Inspect Exemplar Benchmark">
-              ${icon('eye', 14)} <span class="btn-text">EXEMPLAR MODEL</span>
+              ${icon('eye', 14)} <span class="btn-text">Model Benchmark</span>
             </button>
             <button class="hud-btn btn-reset-draft" id="btn-reset" title="Clear Draft">
-              ${icon('rotateCcw', 14)} <span class="btn-text">CLEAR</span>
+              ${icon('rotateCcw', 14)} <span class="btn-text">Clear</span>
             </button>
           </div>
 
@@ -408,12 +408,9 @@ export class MediationDossier {
     return `
       <div class="feedback-placeholder-state">
         <div class="placeholder-icon">${icon('target', 24)}</div>
-        <div class="placeholder-title">AWAITING MEDIATION EVALUATION</div>
+        <div class="placeholder-title">Awaiting Evaluation</div>
         <p class="placeholder-text">
-          Compose your synthesized resolution on the console above and press 
-          <kbd>Ctrl+Enter</kbd> or click <strong>EVALUATE RESOLUTION</strong>. 
-          The engine will execute real-time Myers diff analysis, verify factual fidelity, 
-          detect verbatim copying, and check pragmatic netiquette.
+          Compose your synthesized resolution above and <span class="desktop-only">press <kbd>Ctrl+Enter</kbd> or </span>click <strong>Evaluate Response</strong> to inspect rubric feedback.
         </p>
       </div>
     `;
@@ -790,7 +787,7 @@ export class MediationDossier {
         <div class="evaluation-header-bar">
           <div class="verdict-group">
             <span class="verdict-icon">${evalResult.isPassed ? '✓' : '⚠'}</span>
-            <span class="verdict-title">${evalResult.isPassed ? 'MEDIATION RESOLUTION VERIFIED' : 'REVISION NEEDED'}</span>
+            <span class="verdict-title">${evalResult.isPassed ? 'Mediation Criteria Met' : 'Revision Recommended'}</span>
             <span class="hud-status-badge cefr-award-badge">${evalResult.awardedCefr} BAND</span>
           </div>
           <div class="composite-score-box">
@@ -913,5 +910,6 @@ export class MediationDossier {
 
   public teardown(): void {
     this.lastEvaluation = null;
+    document.querySelectorAll('.exemplar-modal-card').forEach(c => c.closest('.completion-modal-overlay')?.remove());
   }
 }

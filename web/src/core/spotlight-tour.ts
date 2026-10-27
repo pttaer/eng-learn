@@ -13,10 +13,10 @@ export interface TourStep {
 export const TOUR_STEPS: TourStep[] = [
   {
     target: '.hud-telemetry-cluster',
-    fallbackTarget: '.app-header',
+    fallbackTarget: '.hud-brand-title',
     title: 'Neural Engram Telemetry',
     desc: 'Track your daily study streak, overall C2 Summit completion percentage, and active SM-2 retention rate across all 1,000 collocations and grammar rules.',
-    badge: 'STEP 1 OF 6 // DIRECTIVE HUD',
+    badge: 'DIRECTIVE HUD',
     route: 'tree'
   },
   {
@@ -24,7 +24,7 @@ export const TOUR_STEPS: TourStep[] = [
     fallbackTarget: '#workout-banner',
     title: "★ Today's 15-Minute Workout",
     desc: 'Your mandatory daily tripartite cognitive workout: 10 Spaced Collocations, 1 Benjamin Franklin MEAL Copywork, and 1 Nation 4-3-2 Speaking take.',
-    badge: 'STEP 2 OF 6 // ROUTINE',
+    badge: 'DAILY ROUTINE',
     route: 'tree'
   },
   {
@@ -32,7 +32,7 @@ export const TOUR_STEPS: TourStep[] = [
     fallbackTarget: '#constellation-svg',
     title: 'Prerequisite Constellation Matrix',
     desc: 'Navigate 25 engram nodes spanning 5 levels of linguistic sophistication. Master foundational tier 1 perks to illuminate pathways toward the C2 Summit.',
-    badge: 'STEP 3 OF 6 // SKILL TREE',
+    badge: 'SKILL TREE',
     route: 'tree'
   },
   {
@@ -40,7 +40,7 @@ export const TOUR_STEPS: TourStep[] = [
     fallbackTarget: '.constellation-node',
     title: '★ Perk Engram & Gated Criteria',
     desc: 'Click any star node to inspect syllabus objectives, required prerequisite skills, and retention metrics before launching targeted drills.',
-    badge: 'STEP 4 OF 6 // ENGRAM PERK',
+    badge: 'ENGRAM PERK',
     route: 'tree'
   },
   {
@@ -48,7 +48,7 @@ export const TOUR_STEPS: TourStep[] = [
     fallbackTarget: '.constellation-footer-grid',
     title: 'The 5 Mastery Disciplines',
     desc: 'Syntactic Architecture, Lexical Precision, Rhetoric & Copywork, Prosody Fluency, and Epistemic Deconstruction. Click any pillar to jump directly into its dedicated studio.',
-    badge: 'STEP 5 OF 6 // DISCIPLINES',
+    badge: 'DISCIPLINES',
     route: 'tree'
   },
   {
@@ -56,7 +56,7 @@ export const TOUR_STEPS: TourStep[] = [
     fallbackTarget: '.header-actions',
     title: 'Sensory Settings & Backup Sync',
     desc: 'Toggle Pythagorean Just-Intonation procedural soundscapes, export your JSON progress backup, or restore across multiple desktop and mobile devices.',
-    badge: 'STEP 6 OF 6 // SYSTEM',
+    badge: 'SYSTEM SETTINGS',
     route: 'tree'
   }
 ];
@@ -136,7 +136,7 @@ export class SpotlightTour {
               </div>
               <span class="tour-step-count" id="tourStepCount">1 / 6</span>
             </div>
-            <div style="display:flex;gap:6px;">
+            <div class="tour-card-actions">
               <button class="ctrl" id="tourPrevBtn">← Previous</button>
               <button class="ctrl" id="tourSkipBtn">Skip</button>
               <button class="ctrl ctrl-primary" id="tourNextBtn">Next →</button>
@@ -310,7 +310,7 @@ export class SpotlightTour {
     // Update Step Badge
     const badgeEl = this.overlay.querySelector('#tourStepBadge');
     if (badgeEl) {
-      badgeEl.textContent = step.badge ? `${step.badge} • Step ${stepNumber}/${totalSteps}` : `Step ${stepNumber} of ${totalSteps}`;
+      badgeEl.textContent = step.badge ? `STEP ${stepNumber} OF ${totalSteps} // ${step.badge}` : `Step ${stepNumber} of ${totalSteps}`;
     }
 
     // Update Title & Desc

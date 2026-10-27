@@ -3,6 +3,7 @@ import { validateFourSentenceParagraph, ParagraphEvaluation } from '../writing-h
 import { icon } from '../../utils/icons';
 import { HapticEngine } from '../../core/haptic-engine';
 import { AudioSynthesizer } from '../../core/audio-synthesizer';
+import { t } from '../../core/i18n';
 
 export interface DiffWordToken {
   type: 'match' | 'insert' | 'delete';
@@ -522,16 +523,19 @@ export function writingStudioView(root: HTMLElement): () => void {
     <div class="ie-studio-title-block">
       <span class="ie-studio-badge">KEINO CAMPBELL BAND 7+ SUITE</span>
       <h1 class="ie-title">Interactive Writing Studio</h1>
-      <p class="ie-lead">Master Task 1 with 6 progressive visual blueprints (strictly enforcing the 2-Sentence Overview zero-data rule), architect Task 2 with 5 discursive architectures validated by Myers semantic diff, and drill syntactic clause formulas with the Tactical Clause Builder.</p>
+      <details class="ie-theory-details">
+        <summary>Task 1 &amp; Task 2 Architecture Principles</summary>
+        <p class="ie-lead">Master Task 1 with 6 progressive visual blueprints (strictly enforcing the 2-Sentence Overview zero-data rule), architect Task 2 with 5 discursive architectures validated by Myers semantic diff, and drill syntactic clause formulas with the Tactical Clause Builder.</p>
+      </details>
     </div>
   `;
 
   // Top Mode Switcher
   const modeSwitcher = h('div', 'ie-studio-mode-tabs');
   const t1TabBtn = h('button', 'ie-tab is-on');
-  t1TabBtn.innerHTML = `${icon('layers', 13)} Task 1 Visuals (6)`;
+  t1TabBtn.innerHTML = `${icon('layers', 13)} ${t('ielts.task1', undefined, 'Task 1')} Visuals (6)`;
   const t2TabBtn = h('button', 'ie-tab');
-  t2TabBtn.innerHTML = `${icon('edit', 13)} Task 2 Essays (5)`;
+  t2TabBtn.innerHTML = `${icon('edit', 13)} ${t('ielts.task2', undefined, 'Task 2')} Essays (5)`;
   const clauseTabBtn = h('button', 'ie-tab');
   clauseTabBtn.innerHTML = `${icon('target', 13)} Tactical Clause Builder`;
   modeSwitcher.append(t1TabBtn, t2TabBtn, clauseTabBtn);
@@ -882,19 +886,20 @@ export function writingStudioView(root: HTMLElement): () => void {
   function renderTask1Studio(container: HTMLElement): void {
     const bp = TASK1_BLUEPRINTS[activeT1Index] || TASK1_BLUEPRINTS[0];
 
-    const KIND_LABELS: Record<string, string> = {
-      line: 'Line Graph',
-      bar: 'Bar Chart',
-      pie: 'Pie Chart',
-      table: 'Data Table',
-      process: 'Process',
-      map: 'Map'
+    const KIND_LABELS: Record<string, { full: string; short: string }> = {
+      line: { full: 'Line Graph', short: 'Line' },
+      bar: { full: 'Bar Chart', short: 'Bar' },
+      pie: { full: 'Pie Chart', short: 'Pie' },
+      table: { full: 'Data Table', short: 'Table' },
+      process: { full: 'Process', short: 'Process' },
+      map: { full: 'Map', short: 'Map' }
     };
 
     const visualTabs = h('div', 'ie-tabs ie-visual-tabs');
     TASK1_BLUEPRINTS.forEach((item, idx) => {
-      const label = KIND_LABELS[item.kind.toLowerCase()] || item.kind;
-      const btn = h('button', `ie-tab ${idx === activeT1Index ? 'is-on' : ''}`, label);
+      const labels = KIND_LABELS[item.kind.toLowerCase()] || { full: item.kind, short: item.kind };
+      const btn = h('button', `ie-tab ${idx === activeT1Index ? 'is-on' : ''}`);
+      btn.innerHTML = `<span class="ie-tab-full">${labels.full}</span><span class="ie-tab-short">${labels.short}</span>`;
       btn.addEventListener('click', () => {
         activeT1Index = idx;
         renderTask1Studio(container);
@@ -911,9 +916,10 @@ export function writingStudioView(root: HTMLElement): () => void {
         </div>
         <h2 class="ie-sub">${esc(bp.title)}</h2>
         <p class="ie-prompt-text"><b>Prompt:</b> ${esc(bp.prompt)}</p>
-        <div class="ie-data-brief-box">
-          <b>📊 Visual Data Digest:</b> <span>${esc(bp.dataBrief)}</span>
-        </div>
+        <details class="ie-data-brief-box">
+          <summary><b>📊 Visual Data Digest</b></summary>
+          <span>${esc(bp.dataBrief)}</span>
+        </details>
       </div>
 
       <div class="ie-t1-steps-grid">

@@ -84,15 +84,6 @@ export class ExamCockpitDossier {
       btn.classList.toggle('is-active', isCur);
       btn.setAttribute('aria-selected', String(isCur));
     });
-
-    const fab = this.container.querySelector('#cd-mobile-quick-switch') as HTMLElement | null;
-    if (fab) {
-      const label = fab.querySelector('.fab-label');
-      if (label) {
-        label.textContent = this.mobileActiveTab === 'passage' ? 'Switch to Questions' : 'Switch to Passage';
-      }
-      fab.setAttribute('aria-label', this.mobileActiveTab === 'passage' ? 'Switch to Questions' : 'Switch to Passage');
-    }
   }
 
   // Split-screen drag resizer state
@@ -256,7 +247,8 @@ export class ExamCockpitDossier {
 
           <!-- Module Selector -->
           <button class="cd-btn cd-btn-module-toggle" id="btn-module-toggle" title="Switch between Reading and Writing mode">
-            ${this.currentModule === 'READING' ? 'SWITCH TO WRITING' : 'SWITCH TO READING'}
+            <span class="cd-toggle-long">${this.currentModule === 'READING' ? 'SWITCH TO WRITING' : 'SWITCH TO READING'}</span>
+            <span class="cd-toggle-short">${this.currentModule === 'READING' ? 'WRITING' : 'READING'}</span>
           </button>
 
           <!-- Fullscreen Toggle -->
@@ -340,18 +332,6 @@ export class ExamCockpitDossier {
         </section>
 
       </main>
-
-      <!-- Floating Quick-Switch Pill (Mobile <= 768px, >=48x48px Touch Target) -->
-      <button 
-        type="button" 
-        class="cd-mobile-quick-switch-fab" 
-        id="cd-mobile-quick-switch"
-        title="Flip between passage and questions"
-        aria-label="${this.mobileActiveTab === 'passage' ? 'Switch to Questions' : 'Switch to Passage'}"
-      >
-        <span class="fab-icon">${icon('zap', 14)}</span>
-        <span class="fab-label">${this.mobileActiveTab === 'passage' ? 'Switch to Questions' : 'Switch to Passage'}</span>
-      </button>
 
       <!-- Bottom Question Matrix Palette & Navigation Bar (48px) -->
       <footer class="cd-bottom-bar" role="navigation" aria-label="Question Navigation Palette">
@@ -759,13 +739,6 @@ export class ExamCockpitDossier {
       });
     });
 
-    // Mobile Floating Quick-Switch Pill
-    const quickSwitchBtn = this.container.querySelector('#cd-mobile-quick-switch');
-    quickSwitchBtn?.addEventListener('click', () => {
-      AudioSynthesizer.play('click');
-      this.toggleMobileActiveTab();
-    });
-
     // Text selection highlighter tool
     const passageScroll = this.container.querySelector('#cd-passage-scroll');
     passageScroll?.addEventListener('mouseup', () => {
@@ -1125,8 +1098,8 @@ export class ExamCockpitDossier {
 
   public checkQuestionCorrect(q: QuestionItem): boolean {
     if (!q.userAnswer) return false;
-    const user = q.userAnswer.trim().toLowerCase();
-    const correct = (q.correctAnswer || '').trim().toLowerCase();
+    const user = q.userAnswer.trim().toLowerCase().replace(/[’‘]/g, "'").replace(/[“”]/g, '"');
+    const correct = (q.correctAnswer || '').trim().toLowerCase().replace(/[’‘]/g, "'").replace(/[“”]/g, '"');
 
     if (q.type === 'tfng') {
       return user === correct;
@@ -1137,13 +1110,17 @@ export class ExamCockpitDossier {
       return false;
     }
     if (q.type === 'gap') {
-      return user === correct;
+      const cleanUser = user.replace(/[.,!?;:]+$/, '').replace(/\s+/g, ' ').trim();
+      const cleanCorrect = correct.replace(/[.,!?;:]+$/, '').replace(/\s+/g, ' ').trim();
+      return cleanUser === cleanCorrect;
     }
     return false;
   }
 
   public rawToBand(skill: 'listening' | 'reading', raw: number, of: number = 40): number {
     const scaled = of === 40 ? raw : Math.round((raw / of) * 40);
+    if (scaled <= 0) return 0;
+    if (scaled <= 2) return 1.0;
     const readingTable: [number, number][] = [
       [39, 9], [37, 8.5], [35, 8], [33, 7.5], [30, 7], [27, 6.5],
       [23, 6], [19, 5.5], [15, 5], [13, 4.5], [10, 4], [8, 3.5], [6, 3], [4, 2.5]

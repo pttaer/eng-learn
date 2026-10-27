@@ -12,6 +12,7 @@ import {
   ParagraphEvaluation
 } from '../writing-heuristics';
 import { bandBadge, countdown, Countdown, esc, fmtTime, h } from '../ui';
+import { t } from '../../core/i18n';
 
 const T1 = w1Data as Task1Prompt[];
 const T2 = w2Data as Task2Prompt[];
@@ -336,7 +337,7 @@ function mountEditor(
   const min = task === 1 ? 150 : 250;
   root.innerHTML = '';
 
-  const backBtn = h('button', 'ie-btn', 'All prompts');
+  const backBtn = h('button', 'ie-btn', t('ielts.all_prompts', undefined, 'All prompts'));
   backBtn.addEventListener('click', back);
 
   const head = h('div', 'ie-testbar');
@@ -355,7 +356,7 @@ function mountEditor(
     toggleBtn.setAttribute('aria-expanded', 'false');
   }
 
-  const submit = h('button', 'ie-btn ie-btn-primary', 'Submit for feedback');
+  const submit = h('button', 'ie-btn ie-btn-primary', t('ielts.submit_for_feedback', undefined, 'Submit for feedback'));
   head.append(clock, count, toggleBtn, submit);
 
   const brief = h(
@@ -463,7 +464,7 @@ function mountEditor(
       )}</p>
       ${rate}
       <div class="ie-estimate"></div>
-      <button class="ie-btn ie-btn-primary ie-save">Save estimate</button>
+      <button class="ie-btn ie-btn-primary ie-save">${t('ielts.save_estimate', undefined, 'Save estimate')}</button>
     </div>
     <div class="ie-feedback-wide"><h3>Band 7+ model answer</h3><div class="ie-model">${p.model
       .split(/\n\s*\n/)
@@ -488,7 +489,7 @@ function mountEditor(
     out.querySelector('.ie-save')!.addEventListener('click', e => {
       addAttempt({ skill: 'writing', itemId: p.id, band: update(), raw: r.words, estimate: true });
       (e.target as HTMLButtonElement).disabled = true;
-      (e.target as HTMLButtonElement).textContent = 'Saved';
+      (e.target as HTMLButtonElement).textContent = t('ielts.saved', undefined, 'Saved');
     });
     out.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
@@ -504,7 +505,7 @@ export function writingView(root: HTMLElement): () => void {
     root.innerHTML = '';
 
     root.append(
-      h('h1', 'ie-title', 'Academic Writing'),
+      h('h1', 'ie-title', t('ielts.nav_writing', undefined, 'Academic Writing')),
       h(
         'p',
         'ie-lead',
@@ -530,14 +531,8 @@ export function writingView(root: HTMLElement): () => void {
     toggleWbBtn.id = 'toggle-paragraph-workbench';
     toggleWbBtn.setAttribute('aria-expanded', 'false');
 
-    const launchStudioBtn = h(
-      'a',
-      'ie-btn ie-btn-primary ie-launch-studio-btn',
-      'Launch Writing Studio (6 Blueprints & 5 Architectures)'
-    ) as HTMLAnchorElement;
-    launchStudioBtn.href = '#writing-studio';
-
-    quickTools.append(toggleFormulaBtn, toggleWbBtn, launchStudioBtn);
+    // Navigation to #writing-studio is unified in main.ts top subnavigation bar
+    quickTools.append(toggleFormulaBtn, toggleWbBtn);
     root.append(quickTools);
 
     // Mount inspector & workbench containers for standalone use on writing hub

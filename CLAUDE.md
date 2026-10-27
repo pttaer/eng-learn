@@ -14,7 +14,9 @@
 - Never let a slot be smaller than its content (no `contain: size` on content slots); siblings must not overlap.
 - Check padding, gaps and alignment on every view, not just the one being edited. Awkward or inconsistent spacing is a bug.
 - Two typefaces max: `--font-sans` for reading and UI, `--font-mono` for telemetry, kickers, CEFR levels, timers, indices and keycaps.
-- Anti-patterns (see spec §6): no vertical stacking of horizontal tabs on mobile; no crushed tables (wrap in horizontal scroll, `min-width: 600px`, `white-space: nowrap`); no corner compass or watermark over the mobile bottom nav; rating buttons stay in one row.
+- Anti-patterns (see spec §11): no vertical stacking of horizontal tabs on mobile; no crushed tables (wrap in horizontal scroll, `min-width: 600px`, `white-space: nowrap`); no corner compass or watermark over the mobile bottom nav; rating buttons stay in one row; no double outlines / concentric borders (never place a stroked box or card inside another bordered surface; use pure tonal elevation with zero inner border).
+- Apple-Calm & Sensory UI: use continuous curvature tokens (`--radius-squircle-sm: 10px`, `--radius-squircle-md: 16px`, `--radius-squircle-lg: 24px`, `--radius-pill: 9999px`), spring presses (`scale(0.975)`), gentle mistake shakes (`@keyframes apple-shake`), procedural acoustic haptics (`acoustic-haptics.ts`), and 4-second Universal Undo toasts (`undo-manager.ts`).
+- Defensive Input Normalisation: sanitize smart quotes (`’‘` -> `'`, `“”` -> `"`) and strip trailing punctuation in exercise engines so autocorrect never causes false negatives.
 - After any layout/CSS change, measure sibling gaps and widths on all routes at desktop (1440) and phone (390) widths, then screenshot and look at them before calling it done.
 - Kickers: `--font-kicker` (11px) with `--font-kicker-spacing` (0.08em), no inline overrides. One rule per class; a duplicate silently overrides tokens.
 - Badges and chips stay on one line. A row holding a kicker plus a badge wraps with `gap: 4px 8px`.

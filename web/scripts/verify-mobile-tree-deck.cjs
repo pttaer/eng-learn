@@ -256,6 +256,7 @@ const skillTreeViewMod = load('modules/skill-tree-view.ts', {
   '../core/skill-tree-engine': treeEngineMod,
   '../core/router': {},
   '../core/audio-synthesizer': { AudioSynthesizer: { play: () => {} } },
+  '../core/i18n': { t: (k, p, d) => d || k, I18n: { getLocale: () => 'en', onLocaleChange: () => () => {} } },
   '../core/motion-engine': {
     MotionEngine: {
       drawSvgLines: () => {},

@@ -11,6 +11,7 @@ import { MotionEngine } from '../core/motion-engine';
 import { ProgressionEngine } from '../core/progression-engine';
 import { ScrollAffordance } from '../core/scroll-affordance';
 import tensesData from '../assets/data/tenses-bank.json';
+import { t } from '../core/i18n';
 
 export interface TenseMetadata {
   id: string;
@@ -80,6 +81,9 @@ export class TensesDossier {
     this.allQuestions = (tensesData as any).questions || [];
     this.filterPool();
     this.pickNextRandomQuestion();
+    window.addEventListener('eng:locale-changed', () => {
+      if (this.container.isConnected) this.render();
+    });
   }
 
   private filterPool(): void {
@@ -148,19 +152,19 @@ export class TensesDossier {
       <div class="tenses-mode-header">
         <div class="view-mode-toggle">
           <button class="hud-btn view-toggle-btn ${this.viewMode === 'drill' ? 'active' : ''}" data-view="drill" style="white-space: nowrap;">
-            ${icon('dice', 13)} Random Drill (${this.currentPool.length} Qs)
+            ${icon('dice', 13)} ${t('tenses.random_drill', { count: this.currentPool.length })}
           </button>
           <button class="hud-btn view-toggle-btn ${this.viewMode === 'gauntlet' ? 'active' : ''}" data-view="gauntlet" style="white-space: nowrap;">
-            ${icon('target', 13)} 12-Tense Gauntlet
+            ${icon('target', 13)} ${t('tenses.gauntlet')}
           </button>
           <button class="hud-btn view-toggle-btn ${this.viewMode === 'reference' ? 'active' : ''}" data-view="reference" style="white-space: nowrap;">
-            ${icon('book', 13)} 12 Tenses Codex
+            ${icon('book', 13)} ${t('tenses.codex')}
           </button>
         </div>
 
         <div class="tenses-top-actions">
           <button class="hud-btn btn-switch-grammar" style="border: none !important; background: transparent !important; box-shadow: none !important; color: var(--cyan, #38bdf8); padding: 4px 6px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
-            <span style="font-size: 14px; font-weight: 700;">&lt;</span> Advanced Syntax (B2–C2)
+            <span style="font-size: 14px; font-weight: 700;">&lt;</span> ${t('tenses.advanced_syntax')}
           </button>
         </div>
       </div>
@@ -168,16 +172,16 @@ export class TensesDossier {
       ${this.viewMode !== 'gauntlet' ? `
         <div class="dossier-control-bar tenses-control-bar">
           <div class="dossier-tabs tenses-family-tabs">
-            <button class="hud-btn filter-tab ${this.activeFamily === 'ALL' ? 'active' : ''}" data-family="ALL">All 12 Tenses</button>
-            <button class="hud-btn filter-tab ${this.activeFamily === 'PRESENT' ? 'active' : ''}" data-family="PRESENT">Present (4)</button>
-            <button class="hud-btn filter-tab ${this.activeFamily === 'PAST' ? 'active' : ''}" data-family="PAST">Past (4)</button>
-            <button class="hud-btn filter-tab ${this.activeFamily === 'FUTURE' ? 'active' : ''}" data-family="FUTURE">Future (4)</button>
+            <button class="hud-btn filter-tab ${this.activeFamily === 'ALL' ? 'active' : ''}" data-family="ALL">${t('tenses.all_tenses')}</button>
+            <button class="hud-btn filter-tab ${this.activeFamily === 'PRESENT' ? 'active' : ''}" data-family="PRESENT">${t('tenses.present')}</button>
+            <button class="hud-btn filter-tab ${this.activeFamily === 'PAST' ? 'active' : ''}" data-family="PAST">${t('tenses.past')}</button>
+            <button class="hud-btn filter-tab ${this.activeFamily === 'FUTURE' ? 'active' : ''}" data-family="FUTURE">${t('tenses.future')}</button>
           </div>
 
           <div class="tenses-dropdown-selector">
-            <label for="tense-select" class="telemetry-label" style="margin-right: 8px;">FILTER TENSE:</label>
+            <label for="tense-select" class="telemetry-label" style="margin-right: 8px;">${t('tenses.filter_tense')}</label>
             <select id="tense-select" class="tenses-select-input">
-              <option value="ALL" ${this.selectedTenseId === 'ALL' ? 'selected' : ''}>-- All Tenses in Family --</option>
+              <option value="ALL" ${this.selectedTenseId === 'ALL' ? 'selected' : ''}>${t('tenses.all_in_family')}</option>
               ${(tensesData as any).tenses
                 .filter((t: TenseMetadata) => this.activeFamily === 'ALL' || t.family === this.activeFamily)
                 .map((t: TenseMetadata) => `<option value="${t.id}" ${this.selectedTenseId === t.id ? 'selected' : ''}>${t.name} (${t.vietnameseName})</option>`)
@@ -186,20 +190,22 @@ export class TensesDossier {
           </div>
         </div>
 
-        <div class="tenses-telemetry-cluster">
-          <div class="telemetry-item">
-            <span class="telemetry-label">DRILL ACCURACY</span>
-            <span class="telemetry-value" style="color: var(--accent-gold); font-weight: 700;">${this.score} / ${this.totalAttempted} (${this.totalAttempted > 0 ? Math.round((this.score / this.totalAttempted) * 100) : 0}%)</span>
+        ${this.viewMode === 'drill' ? `
+          <div class="tenses-telemetry-cluster">
+            <div class="telemetry-item">
+              <span class="telemetry-label">${t('tenses.drill_accuracy')}</span>
+              <span class="telemetry-value" style="color: var(--accent-gold); font-weight: 700;">${this.score} / ${this.totalAttempted} (${this.totalAttempted > 0 ? Math.round((this.score / this.totalAttempted) * 100) : 0}%)</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">${t('tenses.hot_streak')}</span>
+              <span class="telemetry-value" style="color: var(--good); font-weight: 700;">${icon('flame', 12)} ${t('tenses.streak_in_row', { count: this.streak })}</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">${t('tenses.active_pool')}</span>
+              <span class="telemetry-value">${t('tenses.questions_count', { count: this.currentPool.length })}</span>
+            </div>
           </div>
-          <div class="telemetry-item">
-            <span class="telemetry-label">HOT STREAK</span>
-            <span class="telemetry-value" style="color: var(--good); font-weight: 700;">${icon('flame', 12)} ${this.streak} IN A ROW</span>
-          </div>
-          <div class="telemetry-item">
-            <span class="telemetry-label">ACTIVE QUESTION POOL</span>
-            <span class="telemetry-value">${this.currentPool.length} QUESTIONS</span>
-          </div>
-        </div>
+        ` : ''}
       ` : ''}
 
       <div class="tenses-main-stage">
@@ -223,7 +229,7 @@ export class TensesDossier {
       return `
         <div class="empty-state-notice">
           <div class="telemetry-label">Zero questions available</div>
-          <p>No questions found in this tense filter. Please choose another family.</p>
+          <p>${t('tenses.zero_questions')}</p>
         </div>
       `;
     }
@@ -239,7 +245,7 @@ export class TensesDossier {
             <span class="hud-badge tense-family-badge family-${q.family.toLowerCase()}">${q.family}</span>
             <span class="telemetry-value tense-title-tag" title="${this.escapeHtml(q.tenseName + (vnName ? ' // ' + vnName : ''))}"><span class="tense-en-title">${q.tenseName}</span>${vnName ? ` <span class="tense-vn-title">// ${vnName}</span>` : ''}</span>
             <button type="button" class="hud-btn btn-speak-prompt" data-text="${this.escapeHtml(spokenText)}" title="Listen to complete sentence audio" aria-label="Listen to sentence">
-              ${icon('volume', 14)} Pronounce
+              ${icon('volume', 14)} ${t('action.pronounce')}
             </button>
           </div>
 
@@ -249,7 +255,7 @@ export class TensesDossier {
 
           ${q.signal ? `
             <div class="tenses-signal-pill">
-              <span class="telemetry-label" style="color: var(--accent-gold);">${icon('target', 12)} KEYWORD SIGNAL:</span>
+              <span class="telemetry-label" style="color: var(--accent-gold);">${icon('target', 12)} ${t('feedback.keyword_signal')}:</span>
               <strong style="color: var(--ink-primary);">${this.escapeHtml(q.signal)}</strong>
             </div>
           ` : ''}
@@ -282,18 +288,18 @@ export class TensesDossier {
           ${this.hasAnswered ? `
             <div class="tenses-explanation-drawer ${this.isCorrect ? 'result-success' : 'result-failure'}">
               <div class="explanation-header">
-                <strong>${this.isCorrect ? '✓ CHÍNH XÁC / WELL DONE!' : '✗ CHƯA ĐÚNG / INCORRECT'}</strong>
-                <span class="correct-answer-callout">Đáp án đúng: <u>${this.escapeHtml(this.currentShuffledOptions[this.currentCorrectIndex])}</u></span>
+                <strong>${this.isCorrect ? '✓ ' + t('feedback.correct') : '✗ ' + t('feedback.try_again')}</strong>
+                <span class="correct-answer-callout">${t('action.show_answer')}: <u>${this.escapeHtml(this.currentShuffledOptions[this.currentCorrectIndex])}</u></span>
               </div>
               <div class="explanation-body">
                 <p class="explanation-en"><strong>Grammar Rule:</strong> ${this.escapeHtml(q.explanation)}</p>
                 ${q.vietnameseExplanation ? `
-                  <p class="explanation-vn"><strong>Giải thích tiếng Việt:</strong> ${this.escapeHtml(q.vietnameseExplanation)}</p>
+                  <p class="explanation-vn"><strong>${t('feedback.vietnamese_translation')}:</strong> ${this.escapeHtml(q.vietnameseExplanation)}</p>
                 ` : ''}
               </div>
               <div class="explanation-actions">
                 <button class="hud-btn btn-next-random-question" style="background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; padding: 10px 20px;">
-                  ${icon('dice', 14)} RANDOM NEXT QUESTION (Enter / Space)
+                  ${icon('dice', 14)} ${t('action.next')} (Enter / Space)
                 </button>
               </div>
             </div>
@@ -327,8 +333,8 @@ export class TensesDossier {
           <!-- Gauntlet Header & Progress Bar -->
           <div class="gauntlet-progress-cluster">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-              <span class="telemetry-label" style="font-weight: 700; color: var(--accent-gold); display: flex; align-items: center; gap: 6px;">${icon('target', 14)} 12-TENSE GAUNTLET // QUESTION ${this.gauntletIndex + 1} OF 12</span>
-              <span class="telemetry-value">${progressPct}% COMPLETE</span>
+              <span class="telemetry-label" style="font-weight: 700; color: var(--accent-gold); display: flex; align-items: center; gap: 6px;">${icon('target', 14)} 12-Tense Mastery · Question ${this.gauntletIndex + 1} of 12</span>
+              <span class="telemetry-value">${progressPct}% complete</span>
             </div>
             <div class="gauntlet-progress-track" style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
               <div class="gauntlet-progress-fill" style="width: ${progressPct}%; height: 100%; background: var(--accent-gold); transition: width 0.3s ease;"></div>
@@ -409,7 +415,7 @@ export class TensesDossier {
     const scorePct = Math.round((correctCount / total) * 100);
 
     let gradeTitle = 'C1/C2 NATIVE TENSE MASTERY';
-    let gradeComment = 'Khả năng chia động từ và phân tích ngữ cảnh thời gian của bạn đạt chuẩn chuẩn xác tuyệt đối!';
+    let gradeComment = 'Khả năng chia động từ và phân tích ngữ cảnh thời gian của bạn đạt độ chuẩn xác tuyệt đối!';
     let gradeColor = 'var(--good, #22c55e)';
 
     if (scorePct < 60) {

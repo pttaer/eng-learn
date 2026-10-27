@@ -329,6 +329,13 @@ export class StorageManager {
 
   /** v1 users (no learnerLevel yet) never see the quiz; brand-new users do. */
   public static isPlacementDone(): boolean {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed.placementDone === true) return true;
+      }
+    } catch (e) {}
     return this.loadState().placementDone;
   }
 

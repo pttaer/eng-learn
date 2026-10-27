@@ -3,6 +3,7 @@ import { playText, ttsAvailable, Playback } from '../tts';
 import { DistractorEngine } from '../distractor-engine';
 import { AudioSynthesizer } from '../../core/audio-synthesizer';
 import { icon, IconName } from '../../utils/icons';
+import { t } from '../../core/i18n';
 
 export type TrapCategory = 'self_correction' | 'qualifier' | 'reversal' | 'map_direction';
 
@@ -247,10 +248,12 @@ export function listeningTrapsView(root: HTMLElement): () => void {
   const header = h('header', 'ie-traps-header');
   const titleEl = h('h1', 'ie-title');
   titleEl.innerHTML = `${icon('target', 18)} Listening Trap &amp; Oral Self-Correction Audio Lab`;
-  header.append(
-    titleEl,
-    h('p', 'ie-lead', 'Interactive Cambridge listening drills across Sections 1–4. Train your ear to detect oral self-corrections, restrictive qualifiers, reversal markers, and map direction decoys in real time.')
-  );
+  const leadDetails = h('details', 'ie-theory-details');
+  leadDetails.innerHTML = `
+    <summary>Cambridge Trap Detection Guidelines (Sections 1–4)</summary>
+    <p class="ie-lead">Train your ear to detect oral self-corrections, restrictive qualifiers, reversal markers, and map direction decoys in real time.</p>
+  `;
+  header.append(titleEl, leadDetails);
 
   const trackerBar = h('div', 'ie-testbar ie-traps-tracker');
   const filterRow = h('div', 'ie-tabs ie-traps-filter-tabs');
@@ -346,7 +349,7 @@ export function listeningTrapsView(root: HTMLElement): () => void {
     const canvas = document.createElement('canvas');
     canvas.className = 'ie-trap-waveform';
     canvas.width = 560;
-    canvas.height = 70;
+    canvas.height = 36;
     const ctx = canvas.getContext('2d')!;
 
     // Waveform rendering loop
@@ -411,7 +414,7 @@ export function listeningTrapsView(root: HTMLElement): () => void {
 
     // Player action row
     const playBar = h('div', 'ie-testbar ie-trap-playbar');
-    const playBtn = h('button', 'ie-btn ie-btn-primary ie-trap-play-btn', '🔊 Play Scenario Audio');
+    const playBtn = h('button', 'ie-btn ie-btn-primary ie-trap-play-btn', `🔊 ${t('ielts.play_audio', undefined, 'Play')} Scenario Audio`);
     
     // Speed toggles
     const speedGroup = h('div', 'ie-speed-group');
@@ -514,7 +517,7 @@ export function listeningTrapsView(root: HTMLElement): () => void {
     input.className = 'ie-trap-input';
     input.placeholder = `Type exact answer (max ${s.maxWords} word${s.maxWords === 1 ? '' : 's'})...`;
 
-    const checkBtn = h('button', 'ie-btn ie-btn-primary', 'Validate Answer');
+    const checkBtn = h('button', 'ie-btn ie-btn-primary', t('ielts.check_answers', undefined, 'Validate Answer'));
     const inputFeedback = h('div', 'ie-input-feedback');
 
     // Deconstruction container (Step 3)

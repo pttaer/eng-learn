@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">English Singularity</string>
+    <string name="widget_name">Singularity Tiêu Điểm Hàng Ngày</string>
+    <string name="widget_description">Hiển thị chuỗi ngày học, mục tiêu hàng ngày và thẻ từ vựng C2/IELTS ở chế độ thu gọn, tiêu chuẩn hoặc mở rộng.</string>
+    <string name="widget_streak_format">🔥 Chuỗi %1$d ngày</string>
+    <string name="widget_streak_compact_format">🔥 %1$d ngày</string>
+    <string name="widget_btn_study">Học tiếp</string>
+    <string name="widget_btn_ielts">IELTS</string>
+    <string name="widget_next">Tiếp ↻</string>
+    <string name="widget_next_compact">↻</string>
+    <string name="widget_def_label">ĐỊNH NGHĨA</string>
+    <string name="widget_ex_label">VÍ DỤ NGỮ CẢNH</string>
+    <string name="widget_cefr_tag">C2 HÀN LÂM</string>
+
+    <!-- Tabs & Navigation -->
+    <string name="widget_tab_word">📖 Thẻ từ</string>
+    <string name="widget_tab_quests">🎯 Nhiệm vụ</string>
+    <string name="widget_tab_pillars">⚡ 4 Trụ cột</string>
+    <string name="widget_daily_focus">Tiêu điểm hôm nay</string>
+
+    <!-- Sections & Headers -->
+    <string name="widget_quests_title">NHIỆM VỤ HÀNG NGÀY</string>
+    <string name="widget_pillars_title">4 TRỤ CỘT CỐT LÕI</string>
+    <string name="widget_pillar_reading">📖 Đọc hiểu</string>
+    <string name="widget_pillar_listening">🎧 Luyện nghe</string>
+    <string name="widget_pillar_writing">✍️ Luyện viết</string>
+    <string name="widget_pillar_speaking">🗣️ Luyện nói</string>
+    <string name="widget_empty_state">Mở ứng dụng để đồng bộ tiến trình học</string>
+
+    <!-- Audio & Active Recall Controls -->
+    <string name="widget_btn_audio_word">🔊 Từ</string>
+    <string name="widget_btn_audio_sentence">🎧 Câu</string>
+    <string name="widget_btn_recall_hide">👁 Ẩn</string>
+    <string name="widget_btn_recall_reveal">👁 Mở</string>
+
+    <!-- Pillar Subtitles & Suite Button -->
+    <string name="widget_reading_subtitle">Tốc độ &amp; Tổng hợp</string>
+    <string name="widget_writing_subtitle">Xưởng viết Task 1 &amp; 2</string>
+    <string name="widget_listening_subtitle">Luyện phản xạ âm</string>
+    <string name="widget_speaking_subtitle">Mô phỏng Giám khảo</string>
+    <string name="widget_btn_launch_ielts">🏛️ Mở Bộ luyện IELTS Academic →</string>
+</resources>

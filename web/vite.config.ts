@@ -8,12 +8,17 @@ const phonePage = process.env.PHONE_PAGE;
 export default defineConfig(phonePage ? {
   root: '.',
   base: './',
+  json: {
+    stringify: true
+  },
   build: {
     outDir: `release/phone-build/${phonePage.replace(/\.html$/, '')}`,
     emptyOutDir: true,
     // Older Android System WebView must run the bundle. Emulator (Android 11) ships WebView 83, so target chrome80
     target: ['es2020', 'chrome80'],
     sourcemap: false,
+    reportCompressedSize: false,
+    chunkSizeWarningLimit: 10000,
     rollupOptions: {
       input: resolve(__dirname, phonePage),
       output: { inlineDynamicImports: true },
@@ -22,6 +27,9 @@ export default defineConfig(phonePage ? {
 } : {
   root: '.',
   base: './',
+  json: {
+    stringify: true
+  },
   server: {
     port: 3000,
     open: false
@@ -29,7 +37,9 @@ export default defineConfig(phonePage ? {
   build: {
     outDir: 'dist',
     target: 'esnext',
-    sourcemap: true,
+    reportCompressedSize: false,
+    chunkSizeWarningLimit: 4000,
+    sourcemap: process.env.SOURCEMAP === 'true',
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),

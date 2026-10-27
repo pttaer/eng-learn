@@ -10,8 +10,10 @@ import { CommuteAudioPlayer } from '../core/commute-audio-player';
 import { MistakeVault } from '../core/mistake-vault';
 import { SpeechEvaluator } from '../core/speech-evaluator';
 import { ScrollAffordance } from '../core/scroll-affordance';
+import { syncAndroidWidget, WidgetBridge } from '../core/widget-bridge';
 import * as ieltsTts from './tts';
 import { icon, IconName } from '../utils/icons';
+import { I18n, t } from '../core/i18n';
 
 (window as any).AudioSynthesizer = AudioSynthesizer;
 (window as any).HapticEngine = HapticEngine;
@@ -19,6 +21,7 @@ import { icon, IconName } from '../utils/icons';
 (window as any).MistakeVault = MistakeVault;
 (window as any).SpeechEvaluator = SpeechEvaluator;
 (window as any).ieltsTts = ieltsTts;
+(window as any).WidgetBridge = WidgetBridge;
 
 // Global Micro-Interactions: Tactile audio & haptic feedback on button clicks
 document.addEventListener('click', (e) => {
@@ -41,34 +44,34 @@ interface RouteItem {
 
 // 8 Primary Executive Navbar Sections
 const PRIMARY_NAV = [
-  { id: 'home', label: 'Overview' },
-  { id: 'diagnostic', label: 'Diagnostic' },
-  { id: 'reading', label: 'Reading' },
-  { id: 'listening', label: 'Listening' },
-  { id: 'writing', label: 'Writing' },
-  { id: 'speaking', label: 'Speaking' },
-  { id: 'vocab', label: 'Vocabulary' },
-  { id: 'strategy', label: 'Strategy' },
-  { id: 'mock', label: 'Mock tests' }
+  { id: 'home', labelKey: 'ielts.nav_overview', label: 'Overview' },
+  { id: 'diagnostic', labelKey: 'ielts.nav_diagnostic', label: 'Diagnostic' },
+  { id: 'reading', labelKey: 'ielts.nav_reading', label: 'Reading' },
+  { id: 'listening', labelKey: 'ielts.nav_listening', label: 'Listening' },
+  { id: 'writing', labelKey: 'ielts.nav_writing', label: 'Writing' },
+  { id: 'speaking', labelKey: 'ielts.nav_speaking', label: 'Speaking' },
+  { id: 'vocab', labelKey: 'ielts.nav_vocab', label: 'Vocabulary' },
+  { id: 'strategy', labelKey: 'ielts.nav_strategy', label: 'Strategy' },
+  { id: 'mock', labelKey: 'ielts.nav_mock', label: 'Mock tests' }
 ];
 
 // Subnav item definitions for the 4 core skill studios
-const SKILL_SUBNAVS: Record<string, { label: string; hash: string; iconName: IconName }[]> = {
+const SKILL_SUBNAVS: Record<string, { labelKey: string; label: string; hash: string; iconName: IconName }[]> = {
   reading: [
-    { label: 'Timed Passages', hash: '#reading', iconName: 'book' },
-    { label: '14 Attack Drills Lab', hash: '#reading-drills', iconName: 'target' }
+    { labelKey: 'ielts.subnav_timed_passages', label: 'Timed Passages', hash: '#reading', iconName: 'book' },
+    { labelKey: 'ielts.subnav_attack_drills', label: '14 Attack Drills Lab', hash: '#reading-drills', iconName: 'target' }
   ],
   listening: [
-    { label: 'Sections 1–4 Audio', hash: '#listening', iconName: 'headphones' },
-    { label: 'Traps & Audio Lab', hash: '#listening-traps', iconName: 'target' }
+    { labelKey: 'ielts.subnav_sections_audio', label: 'Sections 1–4 Audio', hash: '#listening', iconName: 'headphones' },
+    { labelKey: 'ielts.subnav_traps_audio', label: 'Traps & Audio Lab', hash: '#listening-traps', iconName: 'target' }
   ],
   writing: [
-    { label: 'Prompts & Rubrics', hash: '#writing', iconName: 'edit' },
-    { label: 'Blueprints & Architect', hash: '#writing-studio', iconName: 'layers' }
+    { labelKey: 'ielts.subnav_prompts_rubrics', label: 'Prompts & Rubrics', hash: '#writing', iconName: 'edit' },
+    { labelKey: 'ielts.subnav_blueprints', label: 'Blueprints & Architect', hash: '#writing-studio', iconName: 'layers' }
   ],
   speaking: [
-    { label: 'Prompts & Notepad', hash: '#speaking', iconName: 'mic' },
-    { label: 'Examiner Simulator', hash: '#speaking-simulator', iconName: 'graduationCap' }
+    { labelKey: 'ielts.subnav_prompts_notepad', label: 'Prompts & Notepad', hash: '#speaking', iconName: 'mic' },
+    { labelKey: 'ielts.subnav_examiner_sim', label: 'Examiner Simulator', hash: '#speaking-simulator', iconName: 'graduationCap' }
   ]
 };
 
@@ -87,11 +90,15 @@ const ALL_ROUTES: RouteItem[] = [
     parentNavId: 'home',
     view: root => {
       root.append(
-        h('h1', 'ie-title', 'IELTS Academic: road to 7.0'),
+        h('h1', 'ie-title', t('ielts.road_to_7', undefined, 'IELTS Academic: road to 7.0')),
         h(
           'p',
           'ie-lead',
-          'Exam-format practice for all four skills. Listening and Reading are scored with standard raw-score conversion tables. Writing and Speaking give automatic checks plus rubric ratings. Everything runs 100% offline in your browser.'
+          t(
+            'ielts.road_to_7_lead',
+            undefined,
+            'Exam-format practice for all four skills. Listening and Reading are scored with standard raw-score conversion tables. Writing and Speaking give automatic checks plus rubric ratings. Everything runs 100% offline in your browser.'
+          )
         ),
         homeSuites(),
         progressSection(),
@@ -121,13 +128,13 @@ function renderSubnavBanner(groupKey: string, currentHash: string): HTMLElement 
 
   const banner = h('div', 'ie-subnav-banner');
   const group = h('div', 'ie-subnav-group');
-  const label = h('span', 'ie-subnav-label', `${groupKey.toUpperCase()} STUDIO:`);
+  const label = h('span', 'ie-subnav-label', `${groupKey.toUpperCase()} ${t('ielts.subnav_studio', undefined, 'STUDIO:')}`);
   group.append(label);
 
   items.forEach(it => {
     const isCurrent = it.hash === currentHash;
     const a = h('a', `ie-subnav-link ${isCurrent ? 'is-active' : ''}`) as HTMLAnchorElement;
-    a.innerHTML = `${icon(it.iconName, 13)} <span>${it.label}</span>`;
+    a.innerHTML = `${icon(it.iconName, 13)} <span>${t(it.labelKey, undefined, it.label)}</span>`;
     a.href = it.hash;
     if (isCurrent) a.setAttribute('aria-current', 'page');
     group.append(a);
@@ -142,68 +149,68 @@ function homeSuites(): HTMLElement {
 
   const SUITES = [
     {
-      title: 'Guided 7.0 Path',
-      badge: 'Plan',
-      desc: 'Roadmap length from recent attempts, Reading focus, and a readiness gate for each skill.',
+      title: t('ielts.card_guided_path_title', undefined, 'Guided 7.0 Path'),
+      badge: t('ielts.card_guided_path_badge', undefined, 'Plan'),
+      desc: t('ielts.card_guided_path_desc', undefined, 'Roadmap length from recent attempts, Reading focus, and a readiness gate for each skill.'),
       primaryLink: '#path',
-      primaryText: 'Open study path'
+      primaryText: t('ielts.card_guided_path_btn', undefined, 'Open study path')
     },
     {
-      title: 'Diagnostic Checkpoint',
-      badge: 'Benchmark',
-      desc: '20 Cambridge morphosyntactic and lexical items with immediate option reveals, 6-flaw error taxonomy radar, and 4-step remediation plan.',
+      title: t('ielts.card_diag_title', undefined, 'Diagnostic Checkpoint'),
+      badge: t('ielts.card_diag_badge', undefined, 'Benchmark'),
+      desc: t('ielts.card_diag_desc', undefined, '20 Cambridge morphosyntactic and lexical items with immediate option reveals, 6-flaw error taxonomy radar, and 4-step remediation plan.'),
       primaryLink: '#diagnostic',
-      primaryText: 'Launch Diagnostic Checkpoint'
+      primaryText: t('ielts.card_diag_btn', undefined, 'Launch Diagnostic Checkpoint')
     },
     {
-      title: 'Academic Reading Suite',
-      badge: 'Passages + Drills',
-      desc: '3 timed authentic academic reading passages with calibrated band scoring, plus the 14 Question-Type Attack Drills Lab and live Exam Synonym Engine.',
+      title: t('ielts.card_reading_title', undefined, 'Academic Reading Suite'),
+      badge: t('ielts.card_reading_badge', undefined, 'Passages + Drills'),
+      desc: t('ielts.card_reading_desc', undefined, '3 timed authentic academic reading passages with calibrated band scoring, plus the 14 Question-Type Attack Drills Lab and live Exam Synonym Engine.'),
       primaryLink: '#reading',
-      primaryText: 'Timed Passages',
+      primaryText: t('ielts.card_reading_btn1', undefined, 'Timed Passages'),
       subLink: '#reading-drills',
-      subText: '14 Attack Drills Lab'
+      subText: t('ielts.card_reading_btn2', undefined, '14 Attack Drills Lab')
     },
     {
-      title: 'Academic Listening Suite',
-      badge: 'Audio + Trap Lab',
-      desc: '4 authentic multi-speaker dialogue and lecture sections, plus the Listening Trap & Oral Self-Correction Audio Lab with waveform visualizer.',
+      title: t('ielts.card_listening_title', undefined, 'Academic Listening Suite'),
+      badge: t('ielts.card_listening_badge', undefined, 'Audio + Trap Lab'),
+      desc: t('ielts.card_listening_desc', undefined, '4 authentic multi-speaker dialogue and lecture sections, plus the Listening Trap & Oral Self-Correction Audio Lab with waveform visualizer.'),
       primaryLink: '#listening',
-      primaryText: 'Sections 1–4 Audio',
+      primaryText: t('ielts.card_listening_btn1', undefined, 'Sections 1–4 Audio'),
       subLink: '#listening-traps',
-      subText: 'Trap Audio Lab'
+      subText: t('ielts.card_listening_btn2', undefined, 'Trap Audio Lab')
     },
     {
-      title: 'Academic Writing Suite',
-      badge: 'Blueprints + Diff',
-      desc: 'Timed Task 1 report generator and Task 2 essay workbench, featuring 6 visual blueprints (zero-data overview rule) and 5 architectures with Myers diff.',
+      title: t('ielts.card_writing_title', undefined, 'Academic Writing Suite'),
+      badge: t('ielts.card_writing_badge', undefined, 'Blueprints + Diff'),
+      desc: t('ielts.card_writing_desc', undefined, 'Timed Task 1 report generator and Task 2 essay workbench, featuring 6 visual blueprints (zero-data overview rule) and 5 architectures with Myers diff.'),
       primaryLink: '#writing',
-      primaryText: 'Timed Tasks 1 & 2',
+      primaryText: t('ielts.card_writing_btn1', undefined, 'Timed Tasks 1 & 2'),
       subLink: '#writing-studio',
-      subText: 'Blueprint & Essay Studio'
+      subText: t('ielts.card_writing_btn2', undefined, 'Blueprint & Essay Studio')
     },
     {
-      title: 'Academic Speaking Suite',
-      badge: 'Interlocutor + Fillers',
-      desc: 'Speaking interview practice with audio recording and 1-minute notepad, plus the 3-Part Examiner Simulator with conversational filler detection.',
+      title: t('ielts.card_speaking_title', undefined, 'Academic Speaking Suite'),
+      badge: t('ielts.card_speaking_badge', undefined, 'Interlocutor + Fillers'),
+      desc: t('ielts.card_speaking_desc', undefined, 'Speaking interview practice with audio recording and 1-minute notepad, plus the 3-Part Examiner Simulator with conversational filler detection.'),
       primaryLink: '#speaking',
-      primaryText: 'Practice Prompts',
+      primaryText: t('ielts.card_speaking_btn1', undefined, 'Practice Prompts'),
       subLink: '#speaking-simulator',
-      subText: '3-Part Examiner Simulator'
+      subText: t('ielts.card_speaking_btn2', undefined, '3-Part Examiner Simulator')
     },
     {
-      title: 'Master Strategy Hub',
-      badge: 'Tactical Vault',
-      desc: '46 tactical cards across all 7 skills derived from Keino Campbell’s masterclass, featuring expandable formula drawers and high-yield traps.',
+      title: t('ielts.card_strategy_title', undefined, 'Master Strategy Hub'),
+      badge: t('ielts.card_strategy_badge', undefined, 'Tactical Vault'),
+      desc: t('ielts.card_strategy_desc', undefined, '46 tactical cards across all 7 skills derived from Keino Campbell’s masterclass, featuring expandable formula drawers and high-yield traps.'),
       primaryLink: '#strategy',
-      primaryText: 'Explore Tactical Cards'
+      primaryText: t('ielts.card_strategy_btn', undefined, 'Explore Tactical Cards')
     },
     {
-      title: 'Full Mock Exam Cockpit',
-      badge: 'CD-IELTS Simulator',
-      desc: 'Complete 4-skill timed mock exams replicating computer-delivered test day conditions with split-screen resizer and theme picker.',
+      title: t('ielts.card_mock_title', undefined, 'Full Mock Exam Cockpit'),
+      badge: t('ielts.card_mock_badge', undefined, 'CD-IELTS Simulator'),
+      desc: t('ielts.card_mock_desc', undefined, 'Complete 4-skill timed mock exams replicating computer-delivered test day conditions with split-screen resizer and theme picker.'),
       primaryLink: '#mock',
-      primaryText: 'Start Full Mock Exam'
+      primaryText: t('ielts.card_mock_btn', undefined, 'Start Full Mock Exam')
     }
   ];
 
@@ -228,16 +235,20 @@ const header = document.getElementById('ie-header')!;
 const main = document.getElementById('ie-main')!;
 let cleanup: () => void = () => {};
 
-header.innerHTML = `
+function renderHeader(): void {
+  header.innerHTML = `
   <div class="ie-top-bar">
     <a class="ie-back" href="./index.html"><span class="ie-back-arrow">←</span> English Singularity</a>
     <a class="ie-brand" href="#home">IELTS <b>7.0</b></a>
-    <div class="ie-top-actions" style="margin-left: auto; display: flex; gap: 8px;">
-      <button type="button" class="ie-btn ie-btn-sm ie-btn-commute" title="Hands-Free Commute Audio Loop" aria-label="Hands-Free Commute Audio Loop" style="padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px;">
-        ${icon('headphones', 14)} <span class="ie-action-label" style="font-size: var(--font-kicker); font-weight: 700;">AUDIO</span>
+    <div class="ie-top-actions" style="margin-left: auto; display: flex; gap: 8px; align-items: center;">
+      <button type="button" class="ie-btn ie-btn-sm ie-btn-lang" title="${t('ielts.toggle_lang', undefined, 'Switch language (EN/VI)')}" aria-label="${t('ielts.toggle_lang', undefined, 'Switch language (EN/VI)')}" style="padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: var(--font-kicker);">
+        ${icon('globe', 12)} <span class="btn-label">${I18n.getLocale() === 'en' ? 'VI' : 'EN'}</span>
       </button>
-      <button type="button" class="ie-btn ie-btn-sm ie-btn-vault" title="Smart Mistake Vault" aria-label="Smart Mistake Vault" style="padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px; color: var(--accent-gold); border-color: var(--accent-gold);">
-        ${icon('target', 14)} <span class="ie-action-label" style="font-size: var(--font-kicker); font-weight: 700;">VAULT</span>
+      <button type="button" class="ie-btn ie-btn-sm ie-btn-commute" title="${t('ielts.commute_tooltip', undefined, 'Hands-Free Commute Audio Loop')}" aria-label="${t('ielts.commute_tooltip', undefined, 'Hands-Free Commute Audio Loop')}" style="padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px;">
+        ${icon('headphones', 14)} <span class="ie-action-label" style="font-size: var(--font-kicker); font-weight: 700;">${t('ielts.audio_commute', undefined, 'AUDIO')}</span>
+      </button>
+      <button type="button" class="ie-btn ie-btn-sm ie-btn-vault" title="${t('ielts.vault_tooltip', undefined, 'Smart Mistake Vault')}" aria-label="${t('ielts.vault_tooltip', undefined, 'Smart Mistake Vault')}" style="padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px; color: var(--accent-gold); border-color: var(--accent-gold);">
+        ${icon('target', 14)} <span class="ie-action-label" style="font-size: var(--font-kicker); font-weight: 700;">${t('ielts.vault', undefined, 'VAULT')}</span>
       </button>
     </div>
   </div>
@@ -246,7 +257,7 @@ header.innerHTML = `
       ${icon('chevronLeft', 16)}
     </button>
     <nav class="ie-nav" aria-label="IELTS sections">
-      ${PRIMARY_NAV.map(n => `<a href="#${n.id}" data-id="${n.id}">${n.label}</a>`).join('')}
+      ${PRIMARY_NAV.map(n => `<a href="#${n.id}" data-id="${n.id}">${t(n.labelKey, undefined, n.label)}</a>`).join('')}
     </nav>
     <button type="button" class="ie-nav-arrow ie-nav-arrow-right" aria-label="Scroll navigation right" tabindex="-1">
       ${icon('chevronRight', 16)}
@@ -254,39 +265,65 @@ header.innerHTML = `
   </div>
 `;
 
-header.querySelector('.ie-btn-commute')?.addEventListener('click', () => {
-  CommuteAudioPlayer.open();
-});
+  header.querySelector('.ie-btn-lang')?.addEventListener('click', () => {
+    AudioSynthesizer.play('click');
+    HapticEngine.trigger('light');
+    I18n.toggleLocale();
+    document.documentElement.lang = I18n.getLocale();
+  });
 
-header.querySelector('.ie-btn-vault')?.addEventListener('click', () => {
-  MistakeVault.open();
-});
+  header.querySelector('.ie-btn-commute')?.addEventListener('click', () => {
+    CommuteAudioPlayer.open();
+  });
 
-const nav = header.querySelector<HTMLElement>('.ie-nav')!;
-const leftArrow = header.querySelector<HTMLButtonElement>('.ie-nav-arrow-left')!;
-const rightArrow = header.querySelector<HTMLButtonElement>('.ie-nav-arrow-right')!;
+  header.querySelector('.ie-btn-vault')?.addEventListener('click', () => {
+    MistakeVault.open();
+  });
 
-function updateNavArrows(): void {
-  if (!nav || !leftArrow || !rightArrow) return;
-  const canScrollLeft = nav.scrollLeft > 6;
-  const canScrollRight = nav.scrollLeft < (nav.scrollWidth - nav.clientWidth - 6);
-  leftArrow.classList.toggle('is-visible', canScrollLeft);
-  rightArrow.classList.toggle('is-visible', canScrollRight);
+  const nav = header.querySelector<HTMLElement>('.ie-nav')!;
+  const leftArrow = header.querySelector<HTMLButtonElement>('.ie-nav-arrow-left')!;
+  const rightArrow = header.querySelector<HTMLButtonElement>('.ie-nav-arrow-right')!;
+
+  function updateNavArrows(): void {
+    if (!nav || !leftArrow || !rightArrow) return;
+    const canScrollLeft = nav.scrollLeft > 6;
+    const canScrollRight = nav.scrollLeft < (nav.scrollWidth - nav.clientWidth - 6);
+    leftArrow.classList.toggle('is-visible', canScrollLeft);
+    rightArrow.classList.toggle('is-visible', canScrollRight);
+    nav.classList.toggle('can-scroll-left', canScrollLeft);
+    nav.classList.toggle('can-scroll-right', canScrollRight);
+  }
+
+  leftArrow.addEventListener('click', () => {
+    nav.scrollBy({ left: -160, behavior: 'smooth' });
+  });
+
+  rightArrow.addEventListener('click', () => {
+    nav.scrollBy({ left: 160, behavior: 'smooth' });
+  });
+
+  nav.addEventListener('scroll', updateNavArrows, { passive: true });
+  window.addEventListener('resize', updateNavArrows, { passive: true });
+  updateNavArrows();
 }
 
-leftArrow.addEventListener('click', () => {
-  nav.scrollBy({ left: -160, behavior: 'smooth' });
-});
-
-rightArrow.addEventListener('click', () => {
-  nav.scrollBy({ left: 160, behavior: 'smooth' });
-});
-
-nav.addEventListener('scroll', updateNavArrows, { passive: true });
-window.addEventListener('resize', updateNavArrows, { passive: true });
-
 function route(): void {
-  cleanup();
+  try {
+    cleanup();
+  } catch (err) {
+    console.warn('[IELTS] Route cleanup notice:', err);
+  }
+  cleanup = () => {};
+
+  // Global teardown: immediately halt audio, speech synthesis, and exam room ambience
+  ieltsTts.stopAll();
+  AudioSynthesizer.stopSpeech();
+  CommuteAudioPlayer.close();
+  MistakeVault.close();
+
+  // Clean up any stray bottom docks, selection pills, or overlays attached to body
+  document.querySelectorAll('.ie-dock-reading, .ie-selection-pill').forEach(el => el.remove());
+
   const rawHash = location.hash || '#home';
   const id = rawHash.replace(/^#/, '') || 'home';
   const item = ALL_ROUTES.find(r => r.id === id) || ALL_ROUTES[0];
@@ -337,12 +374,19 @@ function revealActiveTabs(): void {
     const currentOffsetFromStrip = tabRect.left - stripRect.left;
     strip.scrollLeft += (currentOffsetFromStrip - padLeft);
   }
-  updateNavArrows();
 }
 
+// React to locale changes
+I18n.onLocaleChange(() => {
+  renderHeader();
+  route();
+});
+
+renderHeader();
 ScrollAffordance.initGlobalObserver();
 window.addEventListener('hashchange', route);
 route();
 document.getElementById('boot')?.remove();
 prefetchViews();
 UsageTracker.start();
+syncAndroidWidget();

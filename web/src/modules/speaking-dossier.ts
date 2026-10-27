@@ -22,6 +22,7 @@ import {
   RoleplayMessage
 } from '../core/conversation-partner-engine';
 import drillsData from '../assets/data/drills.json';
+import { t } from '../core/i18n';
 
 export type SpeakingMode = 'nation' | 'roleplay' | 'formant' | 'ielts';
 
@@ -203,10 +204,10 @@ export class SpeakingDossier {
         ${this.mode === 'nation' ? levelRowHtml(this.allItems as any[], this.activeLevel) : ''}
         <div class="dossier-status-pill">
           <span class="telemetry-value">
-            ${this.mode === 'nation' ? `${this.items.length} PROMPTS` :
-              this.mode === 'roleplay' ? `${BUILTIN_SCENARIOS.length} SCENARIOS (A1-C2)` :
-              this.mode === 'formant' ? '8 IPA TARGETS // MINIMAL PAIRS' :
-              'IELTS SPEAKING EXAMINER // BAND 9.0'}
+            ${this.mode === 'nation' ? t('speaking.prompts_count', { count: this.items.length }) :
+              this.mode === 'roleplay' ? t('speaking.scenarios_count', { count: BUILTIN_SCENARIOS.length }) :
+              this.mode === 'formant' ? t('speaking.formant_lab_status') :
+              t('speaking.ielts_status')}
           </span>
         </div>
       </div>
@@ -214,9 +215,9 @@ export class SpeakingDossier {
         ${this.mode === 'nation' ? `
           <div class="dossier-card-slot"></div>
           <div class="dossier-nav-bar">
-            <button class="hud-btn nav-btn-prev">${icon('arrowLeft')} Prev Prompt</button>
+            <button class="hud-btn nav-btn-prev">${icon('arrowLeft')} ${t('action.prev')}</button>
             <span class="telemetry-value card-counter">PROMPT ${this.currentIndex + 1} / ${this.items.length}</span>
-            <button class="hud-btn nav-btn-next">Next Prompt ${icon('arrowRight')}</button>
+            <button class="hud-btn nav-btn-next">${t('action.next')} ${icon('arrowRight')}</button>
           </div>
         ` : this.mode === 'roleplay' ? `
           <div class="roleplay-workspace"></div>
@@ -305,7 +306,7 @@ export class SpeakingDossier {
             <button class="hud-btn btn-coach-toggle ${coachEnabled ? 'active-coach' : ''}">
               ${coachEnabled ? `${icon('graduationCap', 13)} Coach Notes: ON` : `${icon('graduationCap', 13)} Coach Notes: OFF`}
             </button>
-            <button class="hud-btn btn-roleplay-reset">↺ Restart Scene</button>
+            <button class="hud-btn btn-roleplay-reset">↺ ${t('speaking.restart_scene')}</button>
           </div>
         </div>
         <div class="briefing-meta">
@@ -341,12 +342,12 @@ export class SpeakingDossier {
 
           <div class="interaction-controls">
             <button class="hud-btn btn-partner-mic ${this.isPartnerRecording ? 'recording-active' : ''}">
-              ${this.isPartnerRecording ? `${icon('stop', 13)} Stop &amp; Submit Spoken Take` : `${icon('mic', 13)} Hold / Click to Speak Response`}
+              ${this.isPartnerRecording ? `${icon('stop', 13)} ${t('speaking.stop_submit')}` : `${icon('mic', 13)} ${t('speaking.record_mic')}`}
             </button>
 
             <div class="quick-response-box">
               <input type="text" class="roleplay-text-input" placeholder="Type or confirm spoken response here..." />
-              <button class="hud-btn btn-send-turn">Send Turn</button>
+              <button class="hud-btn btn-send-turn">${t('speaking.send_turn')}</button>
             </div>
           </div>
 
@@ -712,7 +713,7 @@ export class SpeakingDossier {
     const perf = this.roundsPerformance[this.currentRoundIdx];
 
     frontEl.innerHTML = `
-      <div class="card-prompt-label" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+      <div class="card-prompt-label">
         4-3-2 DRILL // ROUND ${this.currentRoundIdx + 1}/3 (${allocatedMins}M)
       </div>
 
@@ -878,47 +879,49 @@ export class SpeakingDossier {
       <div class="card-prompt-label">NATION 4-3-2 FLUENCY COMPRESSION MATRIX</div>
 
       <!-- 3-Round Compression Comparison Table -->
-      <table class="compression-table">
-        <thead>
-          <tr>
-            <th>ROUND</th>
-            <th>ALLOTTED</th>
-            <th>TIME SPOKEN</th>
-            <th>SILENCE %</th>
-            <th>COLLOCATIONS ACTIVATED</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${[0, 1, 2].map((rIdx) => {
-            const perf = this.roundsPerformance[rIdx];
-            const allocatedMins = this.rounds[rIdx] / 60;
-            const isRound3 = rIdx === 2;
-            if (perf) {
-              const silencePct = Math.round(perf.silenceRatio * 100);
-              const tag = isRound3 ? ' <span style="font-size: var(--font-kicker); opacity: 0.8;">(Peak Fluency)</span>' : '';
-              return `
-                <tr class="${isRound3 ? 'highlight-fluency' : ''}">
-                  <td><strong>ROUND ${rIdx + 1}</strong> (${allocatedMins} MIN)</td>
-                  <td>${allocatedMins}:00</td>
-                  <td>${this.formatTime(Math.round(perf.actualSeconds))}</td>
-                  <td>${silencePct}%</td>
-                  <td>${perf.spottedCollocations} / ${perf.totalCollocations}${tag}</td>
-                </tr>
-              `;
-            } else {
-              return `
-                <tr>
-                  <td>ROUND ${rIdx + 1} (${allocatedMins} MIN)</td>
-                  <td>${allocatedMins}:00</td>
-                  <td style="color: var(--ink-muted);">--:--</td>
-                  <td style="color: var(--ink-muted);">--%</td>
-                  <td style="color: var(--ink-muted);">--</td>
-                </tr>
-              `;
-            }
-          }).join('')}
-        </tbody>
-      </table>
+      <div class="compression-table-wrapper">
+        <table class="compression-table">
+          <thead>
+            <tr>
+              <th>ROUND</th>
+              <th>ALLOTTED</th>
+              <th>TIME SPOKEN</th>
+              <th>SILENCE %</th>
+              <th>COLLOCATIONS ACTIVATED</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${[0, 1, 2].map((rIdx) => {
+              const perf = this.roundsPerformance[rIdx];
+              const allocatedMins = this.rounds[rIdx] / 60;
+              const isRound3 = rIdx === 2;
+              if (perf) {
+                const silencePct = Math.round(perf.silenceRatio * 100);
+                const tag = isRound3 ? ' <span style="font-size: var(--font-kicker); opacity: 0.8;">(Peak Fluency)</span>' : '';
+                return `
+                  <tr class="${isRound3 ? 'highlight-fluency' : ''}">
+                    <td><strong>ROUND ${rIdx + 1}</strong> (${allocatedMins} MIN)</td>
+                    <td>${allocatedMins}:00</td>
+                    <td>${this.formatTime(Math.round(perf.actualSeconds))}</td>
+                    <td>${silencePct}%</td>
+                    <td>${perf.spottedCollocations} / ${perf.totalCollocations}${tag}</td>
+                  </tr>
+                `;
+              } else {
+                return `
+                  <tr>
+                    <td>ROUND ${rIdx + 1} (${allocatedMins} MIN)</td>
+                    <td>${allocatedMins}:00</td>
+                    <td style="color: var(--ink-muted);">--:--</td>
+                    <td style="color: var(--ink-muted);">--%</td>
+                    <td style="color: var(--ink-muted);">--</td>
+                  </tr>
+                `;
+              }
+            }).join('')}
+          </tbody>
+        </table>
+      </div>
 
       <!-- Target Collocations Reference -->
       <div style="margin-top: 12px; font-family: var(--font-sans); font-size: var(--font-body-compact);">
@@ -2116,6 +2119,13 @@ export class SpeakingDossier {
 
   public dispose(): void {
     this.resetPromptState();
+    if (this.isPartnerRecording) {
+      this.stopPartnerRecording();
+    }
+    this.stopFormantTracking();
+    this.stopIeltsRecording();
+    this.resetIeltsState();
+    AudioSynthesizer.stopSpeech();
     if (this.waveformRaf) {
       cancelAnimationFrame(this.waveformRaf);
       this.waveformRaf = null;

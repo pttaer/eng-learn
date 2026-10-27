@@ -1,4 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">English Singularity</string>
+    <string name="widget_name">Singularity Daily Focus</string>
+    <string name="widget_description">Displays your streak, daily goal, and active C2/IELTS vocabulary card in compact, standard, or expanded views.</string>
+    <string name="widget_streak_format">🔥 %1$d Day Streak</string>
+    <string name="widget_streak_compact_format">🔥 %1$dd</string>
+    <string name="widget_btn_study">Study</string>
+    <string name="widget_btn_ielts">IELTS</string>
+    <string name="widget_next">Next ↻</string>
+    <string name="widget_next_compact">↻</string>
+    <string name="widget_def_label">DEFINITION</string>
+    <string name="widget_ex_label">CONTEXTUAL EXAMPLE</string>
+    <string name="widget_cefr_tag">C2 ACADEMIC</string>
+
+    <!-- Tabs & Navigation -->
+    <string name="widget_tab_word">📖 Word Card</string>
+    <string name="widget_tab_quests">🎯 Quests</string>
+    <string name="widget_tab_pillars">⚡ 4 Pillars</string>
+    <string name="widget_daily_focus">Daily Focus</string>
+
+    <!-- Sections & Headers -->
+    <string name="widget_quests_title">DAILY QUESTS</string>
+    <string name="widget_pillars_title">4 CORE PILLARS</string>
+    <string name="widget_pillar_reading">📖 Reading</string>
+    <string name="widget_pillar_listening">🎧 Listening</string>
+    <string name="widget_pillar_writing">✍️ Writing</string>
+    <string name="widget_pillar_speaking">🗣️ Speaking</string>
+    <string name="widget_empty_state">Open the app to sync your learning focus</string>
+
+    <!-- Audio & Active Recall Controls -->
+    <string name="widget_btn_audio_word">🔊 Word</string>
+    <string name="widget_btn_audio_sentence">🎧 Sentence</string>
+    <string name="widget_btn_recall_hide">👁 Hide</string>
+    <string name="widget_btn_recall_reveal">👁 Reveal</string>
+
+    <!-- Pillar Subtitles & Suite Button -->
+    <string name="widget_reading_subtitle">Speed &amp; Synthesis</string>
+    <string name="widget_writing_subtitle">Task 1 &amp; 2 Studio</string>
+    <string name="widget_listening_subtitle">Acoustic Drills</string>
+    <string name="widget_speaking_subtitle">Examiner Simulator</string>
+    <string name="widget_btn_launch_ielts">🏛️ Launch IELTS Academic Suite →</string>
 </resources>

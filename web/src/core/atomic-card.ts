@@ -27,6 +27,7 @@ export interface AtomicCardConfig {
     customContent?: HTMLElement;
   };
   audioText?: string;
+  hideFrontRating?: boolean;
   onRate?: (rating: 'again' | 'good') => void;
   onFlip?: (isFlipped: boolean) => void;
 }
@@ -159,26 +160,36 @@ export class AtomicCard {
     // Bottom Action Dock
     const frontDock = document.createElement('div');
     frontDock.className = 'card-bottom-dock card-action-dock';
-    frontDock.innerHTML = `
-      <button type="button" class="dock-btn dock-btn-again btn-rate-again" aria-label="Rate repetition Again: failed recall, reset interval"><span style="color: var(--critical); font-weight: 800;">✗</span> Again <span class="kbd-badge">1</span></button>
-      <button type="button" class="dock-btn dock-btn-flip btn-flip-trigger" aria-expanded="false" aria-label="Flip card to view answer targets"><span style="color: var(--accent-gold); font-weight: 800;">⟳</span> Flip Reveal <span class="kbd-badge">SPACE</span></button>
-      <button type="button" class="dock-btn dock-btn-good btn-rate-good" aria-label="Rate repetition Good: successful recall, advance interval"><span style="color: var(--good); font-weight: 800;">✓</span> Good <span class="kbd-badge">2</span></button>
-    `;
+    if (config.hideFrontRating) {
+      frontDock.innerHTML = `
+        <button type="button" class="dock-btn dock-btn-flip btn-flip-trigger" aria-expanded="false" aria-label="Flip card to view answer targets"><span style="color: var(--accent-gold); font-weight: 800;">⟳</span> Flip Reveal <span class="kbd-badge">SPACE</span></button>
+      `;
+      frontDock.querySelector('.btn-flip-trigger')?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        doFlip();
+      });
+    } else {
+      frontDock.innerHTML = `
+        <button type="button" class="dock-btn dock-btn-again btn-rate-again" aria-label="Rate repetition Again: failed recall, reset interval"><span style="color: var(--critical); font-weight: 800;">✗</span> Again <span class="kbd-badge">1</span></button>
+        <button type="button" class="dock-btn dock-btn-flip btn-flip-trigger" aria-expanded="false" aria-label="Flip card to view answer targets"><span style="color: var(--accent-gold); font-weight: 800;">⟳</span> Flip Reveal <span class="kbd-badge">SPACE</span></button>
+        <button type="button" class="dock-btn dock-btn-good btn-rate-good" aria-label="Rate repetition Good: successful recall, advance interval"><span style="color: var(--good); font-weight: 800;">✓</span> Good <span class="kbd-badge">2</span></button>
+      `;
 
-    frontDock.querySelector('.btn-rate-again')?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      doRate('again');
-    });
+      frontDock.querySelector('.btn-rate-again')?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        doRate('again');
+      });
 
-    frontDock.querySelector('.btn-flip-trigger')?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      doFlip();
-    });
+      frontDock.querySelector('.btn-flip-trigger')?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        doFlip();
+      });
 
-    frontDock.querySelector('.btn-rate-good')?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      doRate('good');
-    });
+      frontDock.querySelector('.btn-rate-good')?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        doRate('good');
+      });
+    }
 
     // Body click flips card (unless user clicked on interactive elements)
     frontBody.addEventListener('click', (e) => {

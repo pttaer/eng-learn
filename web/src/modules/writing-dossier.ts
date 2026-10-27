@@ -7,6 +7,7 @@ import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { SkillTreeEngine } from '../core/skill-tree-engine';
 import { MotionEngine } from '../core/motion-engine';
 import drillsData from '../assets/data/drills.json';
+import { t } from '../core/i18n';
 
 export interface WritingItem {
   id: string;
@@ -41,8 +42,10 @@ export interface WritingTelemetry {
 }
 
 export function computeDiffTokens(original: string, candidate: string): ProofreadDiffToken[] {
-  const o = original.split('');
-  const c = candidate.split('');
+  const normOriginal = original.replace(/[’‘]/g, "'").replace(/[“”]/g, '"');
+  const normCandidate = candidate.replace(/[’‘]/g, "'").replace(/[“”]/g, '"');
+  const o = normOriginal.split('');
+  const c = normCandidate.split('');
   const m = o.length;
   const n = c.length;
 
@@ -78,11 +81,13 @@ export function computeDiffTokens(original: string, candidate: string): Proofrea
 }
 
 export function calculateWritingMetrics(targetStr: string, typedStr: string, elapsedSec: number): WritingTelemetry {
-  const charsTyped = typedStr.length;
+  const normTarget = targetStr.replace(/[’‘]/g, "'").replace(/[“”]/g, '"');
+  const normTyped = typedStr.replace(/[’‘]/g, "'").replace(/[“”]/g, '"');
+  const charsTyped = normTyped.length;
   const minutes = Math.max(0.016, elapsedSec / 60);
   const grossWpm = Math.round((charsTyped / 5) / minutes);
 
-  const diffTokens = computeDiffTokens(targetStr, typedStr);
+  const diffTokens = computeDiffTokens(normTarget, normTyped);
   let errorCount = 0;
   let matchCount = 0;
   for (const token of diffTokens) {
@@ -94,8 +99,8 @@ export function calculateWritingMetrics(targetStr: string, typedStr: string, ela
   }
 
   const netWpm = Math.max(0, Math.round(((charsTyped / 5) - Math.floor(errorCount / 2)) / minutes));
-  const accuracyPct = targetStr.length === 0 ? 100 : Math.max(0, Math.min(100, Math.round((matchCount / targetStr.length) * 100)));
-  const completed = matchCount === targetStr.length && errorCount === 0;
+  const accuracyPct = normTarget.length === 0 ? 100 : Math.max(0, Math.min(100, Math.round((matchCount / normTarget.length) * 100)));
+  const completed = matchCount === normTarget.length && errorCount === 0;
 
   return {
     grossWpm,
@@ -129,6 +134,9 @@ export class WritingDossier {
     this.activeLevel = defaultLevel(this.allItems, StorageManager.getSkillLevel('writing'));
     this.items = this.allItems.filter(i => i.cefrLevel === this.activeLevel);
     window.addEventListener('learner-level-change', () => this.setLevel(defaultLevel(this.allItems, StorageManager.getSkillLevel('writing'))));
+    window.addEventListener('eng:locale-changed', () => {
+      if (this.container.isConnected) this.render();
+    });
   }
 
   private setLevel(level: Cefr): void {
@@ -154,16 +162,16 @@ export class WritingDossier {
         <!-- Top Studio Bar -->
         <div class="dossier-control-bar" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px;">
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px;">
-            <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">[PILLAR 03 // FRANKLIN COPYWORK]</span>
+            <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.franklin_copywork')}</span>
             <span class="hud-status-badge register-badge" title="Register: ${item.register}">REGISTER: ${item.register.split('/')[0].trim()}</span>
             ${levelRowHtml(this.allItems, this.activeLevel)}
           </div>
           <div class="step-indicator" style="display: flex; gap: 8px; font-family: var(--font-mono); font-size: var(--font-kicker);">
-            <span class="${this.currentStep === 'analyze' ? 'active-step' : ''}">1. ANALYZE</span>
+            <span class="${this.currentStep === 'analyze' ? 'active-step' : ''}">${t('writing.step1_analyze')}</span>
             <span>→</span>
-            <span class="${this.currentStep === 'type' ? 'active-step' : ''}">2. RECALL & TYPE</span>
+            <span class="${this.currentStep === 'type' ? 'active-step' : ''}">${t('writing.step2_type')}</span>
             <span>→</span>
-            <span class="${this.currentStep === 'diff' ? 'active-step' : ''}">3. EVALUATE</span>
+            <span class="${this.currentStep === 'diff' ? 'active-step' : ''}">${t('writing.step3_evaluate')}</span>
           </div>
         </div>
 
@@ -174,11 +182,11 @@ export class WritingDossier {
 
         <!-- Bottom Navigation & Counter -->
         <div class="dossier-nav-bar" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-hairline); padding-top: var(--space-16); width: 100%; max-width: none; box-sizing: border-box;">
-          <button class="hud-btn nav-btn-prev" ${this.currentIndex === 0 ? 'disabled' : ''}>${icon('arrowLeft')} Prev Prompt</button>
+          <button class="hud-btn nav-btn-prev" ${this.currentIndex === 0 ? 'disabled' : ''}>${icon('arrowLeft')} ${t('writing.prev_prompt')}</button>
           <span class="telemetry-value card-counter" style="font-family: var(--font-mono); font-size: var(--font-body-compact);">
-            PROMPT ${this.currentIndex + 1} / ${this.items.length}
+            ${t('writing.prompt_counter', { current: this.currentIndex + 1, total: this.items.length })}
           </span>
-          <button class="hud-btn nav-btn-next" ${this.currentIndex === this.items.length - 1 ? 'disabled' : ''}>Next Prompt ${icon('arrowRight')}</button>
+          <button class="hud-btn nav-btn-next" ${this.currentIndex === this.items.length - 1 ? 'disabled' : ''}>${t('writing.next_prompt')} ${icon('arrowRight')}</button>
         </div>
       </div>
     `;
@@ -213,8 +221,8 @@ export class WritingDossier {
         return `
           <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: var(--pad-card, 28px); border-radius: 8px; box-shadow: var(--shadow-card);">
             <div class="copywork-header-row">
-              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">STEP 1 // RHETORICAL ARCHITECTURE</span>
-              <button class="hud-btn btn-speak-model" style="padding: 6px 14px; font-size: var(--font-kicker);" title="Listen to Native Pronunciation">${icon('volume')} Play Model</button>
+              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.step1_heading')}</span>
+              <button class="hud-btn btn-speak-model" style="padding: 6px 14px; font-size: var(--font-kicker);" title="Listen to Native Pronunciation">${icon('volume')} ${t('writing.play_model')}</button>
             </div>
 
             <div class="model-sentence-display" style="font-size: var(--font-h2); line-height: 1.6; font-weight: 500; color: var(--ink-primary); max-width: 68ch; margin: 16px 0 20px 0; border-left: 3px solid var(--accent-gold); padding-left: 16px;">
@@ -223,7 +231,7 @@ export class WritingDossier {
 
             <!-- MEAL Structural Decomposition -->
             <div class="meal-blueprint-box" style="border: 1px solid var(--border-hairline); padding: 16px; background: var(--bg-surface-sunk); border-radius: 6px; margin-bottom: 20px;">
-              <div class="telemetry-label" style="margin-bottom: 10px;">MEAL STRUCTURAL SCAFFOLDING</div>
+              <div class="telemetry-label" style="margin-bottom: 10px;">${t('writing.meal_scaffolding')}</div>
               <div style="display: grid; grid-template-columns: 32px 1fr; gap: 8px 12px; font-size: var(--font-body-compact); line-height: 1.5;">
                 <strong style="font-family: var(--font-mono); color: var(--accent-gold);">M:</strong> <span>${item.meal.m}</span>
                 <strong style="font-family: var(--font-mono); color: var(--accent-gold);">E:</strong> <span>${item.meal.e}</span>
@@ -233,11 +241,11 @@ export class WritingDossier {
             </div>
 
             <div style="font-size: var(--font-body-compact); color: var(--ink-muted); margin-bottom: 24px; line-height: 1.5;">
-              <strong>Rhetorical Commentary:</strong> ${item.stylistic}
+              <strong>${t('writing.rhetorical_commentary')}</strong> ${item.stylistic}
             </div>
 
             <button class="hud-btn btn-proceed-type" style="width: 100%; justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 14px 0; font-size: var(--font-h4); font-weight: 700; border: none; cursor: pointer; border-radius: 6px; box-shadow: var(--shadow-glow);">
-              Memorized — Hide Model & Start Typing ${icon('arrowRight')}
+              ${t('writing.memorized_start')} ${icon('arrowRight')}
             </button>
           </div>
         `;

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <!-- Apply saved theme and motion before first paint, so light-theme users never see a dark flash -->
-  <script>try{var d=document.documentElement,t=localStorage.getItem('eng_theme');if(t==='light'||t==='dark')d.dataset.theme=t;if(localStorage.getItem('eng_motion')==='reduce')d.dataset.motion='reduce'}catch(e){}</script>
+  <script>try{var d=document.documentElement,t=localStorage.getItem('eng_theme');if(t==='light'||t==='dark')d.dataset.theme=t;if(localStorage.getItem('eng_motion')==='reduce')d.dataset.motion='reduce';var l=localStorage.getItem('eng_locale');if(l==='vi'||l==='en')document.documentElement.lang=l}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>English Singularity</title>
 

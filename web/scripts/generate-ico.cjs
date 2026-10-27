@@ -190,7 +190,11 @@ function buildIcoFile(resolutions) {
 }
 
 const outputPath = path.join(__dirname, '../public/icon.ico');
-console.log('[ICO GENERATOR] Generating multi-resolution icon.ico...');
+if (!process.argv.includes('--force') && fs.existsSync(outputPath)) {
+  console.log('[ICO GENERATOR] icon.ico exists in public/ (skipping generation, use --force to overwrite)');
+} else {
+  console.log('[ICO GENERATOR] Generating multi-resolution icon.ico...');
 const icoBuffer = buildIcoFile([256, 128, 64, 48, 32, 16]);
 fs.writeFileSync(outputPath, icoBuffer);
 console.log(`✅ [ICO GENERATOR COMPLETE] Successfully generated ${outputPath} (${(icoBuffer.length / 1024).toFixed(1)} KB)`);
+}

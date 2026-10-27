@@ -584,7 +584,7 @@
     "prompt": "Aside from development banks, renewable projects are mainly funded by _______.",
     "answer": [
      "private investors",
-     "investors interested in green technology"
+     "green technology investors"
     ],
     "why": "Emma explains: 'Most funding comes from international development banks and private investors interested in green technology.' This is the second major funding source she identifies."
    },
@@ -766,7 +766,7 @@
    {
     "id": "l1-s4-q09",
     "type": "complete",
-    "prompt": "Besides putting a price on carbon, governments encourage these projects through __________",
+    "prompt": "Besides putting a price on carbon, governments encourage these projects through __________.",
     "answer": [
      "tax incentives"
     ],
@@ -775,7 +775,7 @@
    {
     "id": "l1-s4-q10",
     "type": "complete",
-    "prompt": "Sequestration effectiveness requires integration with emission reductions and __________ __________",
+    "prompt": "Sequestration effectiveness requires integration with emission reductions and __________.",
     "answer": [
      "renewable energy development",
      "renewable energy"
@@ -1761,7 +1761,6 @@
     "type": "complete",
     "prompt": "A guest can attend one free trial session if they ___.",
     "answer": [
-     "book in advance by phone",
      "book in advance",
      "book by phone"
     ],
@@ -5229,7 +5228,7 @@
    {
     "id": "l7-s1-q10",
     "type": "mcq",
-    "prompt": "When does the library open on Saturdays?",
+    "prompt": "What are the library's opening hours on Saturdays?",
     "options": [
      "A. 10 am to 4 pm",
      "B. It is closed on Saturdays",

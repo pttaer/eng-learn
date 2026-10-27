@@ -21,17 +21,15 @@ console.log('1. Verifying CSS styling rules...');
 
 // Desktop hiding invariant
 assert(cssContent.includes('.cd-mobile-tab-bar') && cssContent.includes('.reading-mobile-tab-bar'), 'CSS should define mobile tab bars');
-assert(cssContent.includes('.cd-mobile-quick-switch-fab') && cssContent.includes('.reading-mobile-quick-switch-fab'), 'CSS should define mobile quick-switch FABs');
 
 // Check desktop hiding
-const desktopHideRegex = /\.cd-mobile-tab-bar[\s\S]*?\.cd-mobile-quick-switch-fab[\s\S]*?display:\s*none\s*!important/i;
-assert(desktopHideRegex.test(cssContent), 'Desktop styles must hide mobile tab bar and quick switch FAB');
+const desktopHideRegex = /\.cd-mobile-tab-bar[\s\S]*?display:\s*none\s*!important/i;
+assert(desktopHideRegex.test(cssContent), 'Desktop styles must hide mobile tab bar');
 
 // Check media query presence
 assert(cssContent.includes('@media (max-width: 768px)'), 'Must include @media (max-width: 768px) query');
 
 // Check touch target min dimensions in CSS
-assert(cssContent.includes('min-height: 48px') || cssContent.includes('min-height: 50px'), 'Quick-switch FAB must satisfy >= 48px target');
 assert(cssContent.includes('min-width: 44px') && cssContent.includes('min-height: 44px'), 'Question matrix buttons must have min 44x44px target on mobile');
 
 // Check pane switching data attributes in CSS
@@ -52,7 +50,7 @@ assert(cockpitContent.includes('setMobileActiveTab'), 'ExamCockpitDossier must e
 assert(cockpitContent.includes('toggleMobileActiveTab'), 'ExamCockpitDossier must expose toggleMobileActiveTab()');
 assert(cockpitContent.includes('applyMobileTabState'), 'ExamCockpitDossier must implement applyMobileTabState()');
 assert(cockpitContent.includes('cd-mobile-tab-bar'), 'ExamCockpitDossier template must contain cd-mobile-tab-bar');
-assert(cockpitContent.includes('cd-mobile-quick-switch'), 'ExamCockpitDossier template must contain cd-mobile-quick-switch');
+assert(!cockpitContent.includes('cd-mobile-quick-switch'), 'ExamCockpitDossier quick-switch button must be removed (use sticky tab bar instead)');
 assert(cockpitContent.includes('data-mobile-active'), 'ExamCockpitDossier template must set data-mobile-active');
 
 console.log('  ✓ ExamCockpitDossier mobile switcher methods & template verified.\n');
@@ -94,7 +92,6 @@ class MockExamCockpit {
     this.arena = { dataset: { mobileActive: 'passage' } };
     this.tabPassage = { classList: createMockClassList(['is-active']), attributes: { 'aria-selected': 'true' } };
     this.tabQuestions = { classList: createMockClassList([]), attributes: { 'aria-selected': 'false' } };
-    this.quickBtn = { innerHTML: '', attributes: { 'aria-label': '' } };
     this.applyMobileTabState();
   }
 
@@ -117,15 +114,11 @@ class MockExamCockpit {
       this.tabPassage.attributes['aria-selected'] = 'true';
       this.tabQuestions.classList.remove('is-active');
       this.tabQuestions.attributes['aria-selected'] = 'false';
-      this.quickBtn.innerHTML = '<span class="fab-icon">⚡</span> Questions (1-40) →';
-      this.quickBtn.attributes['aria-label'] = 'Switch to questions';
     } else {
       this.tabQuestions.classList.add('is-active');
       this.tabQuestions.attributes['aria-selected'] = 'true';
       this.tabPassage.classList.remove('is-active');
       this.tabPassage.attributes['aria-selected'] = 'false';
-      this.quickBtn.innerHTML = '<span class="fab-icon">⚡</span> ← Reading Passage';
-      this.quickBtn.attributes['aria-label'] = 'Switch to reading passage';
     }
   }
 }
@@ -141,12 +134,10 @@ assert.strictEqual(cockpitInstance.getMobileActiveTab(), 'questions');
 assert.strictEqual(cockpitInstance.arena.dataset.mobileActive, 'questions');
 assert.strictEqual(cockpitInstance.tabQuestions.attributes['aria-selected'], 'true');
 assert.strictEqual(cockpitInstance.tabPassage.attributes['aria-selected'], 'false');
-assert(cockpitInstance.quickBtn.innerHTML.includes('Reading Passage'));
 
 cockpitInstance.toggleMobileActiveTab();
 assert.strictEqual(cockpitInstance.getMobileActiveTab(), 'passage');
 assert.strictEqual(cockpitInstance.arena.dataset.mobileActive, 'passage');
-assert(cockpitInstance.quickBtn.innerHTML.includes('Questions (1-40)'));
 
 console.log('  ✓ Mock Cockpit tab switching simulation passed.');
 

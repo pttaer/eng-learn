@@ -187,7 +187,7 @@
 - **Prompt**: A friend wants to visit your town. Give some advice.
 - **Anchor**: The best time to come → Places to see and food to try → Things to be careful about
 - **Collocations**: you should, the best time to visit, try the local food, take an umbrella
-- **Phonetic**: Word stress: say 'ADvice' with stress on the first part, and 'viSIT' on the second.
+- **Phonetic**: Word stress: say 'adVICE' with stress on the second part, and 'VISit' on the first.
 
 ## My Daily Routine
 - **ID**: speaking-a2-7

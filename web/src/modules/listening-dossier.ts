@@ -6,6 +6,7 @@ import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import listeningData from '../assets/data/listening.json';
+import { t } from '../core/i18n';
 
 export type ListeningMode = 'passive' | 'cloze';
 
@@ -37,17 +38,26 @@ const STOP_WORDS = new Set([
   'same', 'than', 'too', 'very', 'can', 'will', 'just', 'should', 'now'
 ]);
 
+export function cleanListeningWord(text: string): string {
+  return text
+    .trim()
+    .toLowerCase()
+    .replace(/[’‘]/g, "'")
+    .replace(/[“”]/g, '"')
+    .replace(/[^a-z0-9']/g, '');
+}
+
 /**
  * Extracts and tokenizes a passage into normal text and blanked cloze keywords.
  */
 export function parseClozeTokens(audioText: string, explicitGaps?: string[]): { tokens: ClozeToken[]; totalGaps: number } {
   const rawWords = audioText.split(/\s+/).filter(Boolean);
   const explicitSet = explicitGaps && explicitGaps.length > 0
-    ? new Set(explicitGaps.map(g => g.toLowerCase().trim()))
+    ? new Set(explicitGaps.map(g => cleanListeningWord(g)))
     : null;
 
   const parsed = rawWords.map((raw) => {
-    const clean = raw.toLowerCase().replace(/[^a-z0-9']/g, '');
+    const clean = cleanListeningWord(raw);
     const m = raw.match(/([^a-zA-Z0-9']+)$/);
     const trailingPunct = m ? m[1] : '';
     return { raw, clean, trailingPunct };
@@ -133,6 +143,9 @@ export class ListeningDossier {
       this.applyLevel();
       if (this.container.isConnected) this.render();
     });
+    window.addEventListener('eng:locale-changed', () => {
+      if (this.container.isConnected) this.render();
+    });
   }
 
   private applyLevel(): void {
@@ -189,7 +202,7 @@ export class ListeningDossier {
     const { tokens } = this.getClozeTokens(currentItem);
     const token = tokens.find(t => t.type === 'blank' && t.gapIndex === gapIndex);
     if (!token) return false;
-    const cleanUser = userVal.trim().toLowerCase().replace(/[^a-z0-9']/g, '');
+    const cleanUser = cleanListeningWord(userVal);
     return cleanUser === token.cleanWord;
   }
 
@@ -203,7 +216,7 @@ export class ListeningDossier {
     tokens.forEach(t => {
       if (t.type === 'blank' && t.gapIndex !== undefined) {
         const userVal = this.userGapInputs.get(t.gapIndex) || '';
-        const cleanUser = userVal.trim().toLowerCase().replace(/[^a-z0-9']/g, '');
+        const cleanUser = cleanListeningWord(userVal);
         if (cleanUser === t.cleanWord) {
           correct++;
         }
@@ -218,27 +231,22 @@ export class ListeningDossier {
     this.container.innerHTML = `
       <div class="dossier-control-bar">
         <div class="listening-header-row">
-          <span class="telemetry-label">[PILLAR 04 // ACTIVE TRANSCRIPTION]</span>
+          <span class="telemetry-label">${t('listening.active_transcription')}</span>
           <div class="dossier-status-pill">
-            <span class="telemetry-value">${this.currentMode === 'cloze' ? 'ACTIVE CLOZE' : '3-PASS PROTOCOL'}</span>
+            <span class="telemetry-value">${this.currentMode === 'cloze' ? t('listening.active_cloze') : t('listening.three_pass_protocol')}</span>
           </div>
         </div>
         <div class="listening-mode-cluster" role="tablist" aria-label="Listening Mode">
           <button type="button" class="hud-btn mode-tab ${this.currentMode === 'passive' ? 'active' : ''}" data-mode="passive" aria-pressed="${this.currentMode === 'passive'}">
-            ${icon('book', 13)} <span class="tab-label"><span class="tab-label-prefix">Passive </span>Passages</span>
+            ${icon('book', 13)} <span class="tab-label">${t('listening.passive_passages')}</span>
           </button>
           <button type="button" class="hud-btn mode-tab ${this.currentMode === 'cloze' ? 'active' : ''}" data-mode="cloze" aria-pressed="${this.currentMode === 'cloze'}">
-            ${icon('edit', 13)} <span class="tab-label">Cloze<span class="tab-label-suffix"> Transcription</span></span>
+            ${icon('edit', 13)} <span class="tab-label">${t('listening.cloze_transcription')}</span>
           </button>
         </div>
         ${levelRowHtml(this.allPassages, this.activeLevel)}
       </div>
       <div class="dossier-card-slot"></div>
-      <div class="dossier-nav-bar">
-        <button class="hud-btn nav-btn-prev" ${this.currentIndex === 0 ? 'disabled' : ''}>${icon('arrowLeft')} Prev Passage</button>
-        <span class="telemetry-value card-counter">Passage ${this.currentIndex + 1} / ${this.passages.length}</span>
-        <button class="hud-btn nav-btn-next" ${this.currentIndex >= this.passages.length - 1 ? 'disabled' : ''}>Next Passage ${icon('arrowRight')}</button>
-      </div>
     `;
 
     this.bindEvents();
@@ -261,22 +269,6 @@ export class ListeningDossier {
           this.setMode(mode);
         }
       });
-    });
-
-    this.container.querySelector('.nav-btn-prev')?.addEventListener('click', () => {
-      if (this.currentIndex > 0) {
-        this.currentIndex -= 1;
-        this.userGapInputs.clear();
-        this.renderCurrentCard();
-      }
-    });
-
-    this.container.querySelector('.nav-btn-next')?.addEventListener('click', () => {
-      if (this.currentIndex < this.passages.length - 1) {
-        this.currentIndex += 1;
-        this.userGapInputs.clear();
-        this.renderCurrentCard();
-      }
     });
   }
 
@@ -309,6 +301,7 @@ export class ListeningDossier {
       category: this.currentMode === 'cloze' ? 'CLOZE TRANSCRIPTION' : 'PHONETICS',
       indexStr: `${String(this.currentIndex + 1).padStart(2, '0')} / ${String(this.passages.length).padStart(2, '0')}`,
       statusBadge,
+      hideFrontRating: true,
       front: {
         customContent: frontEl,
         mainText: item.title
@@ -334,18 +327,13 @@ export class ListeningDossier {
 
     this.currentCardHandle = cardHandle;
     slot.appendChild(cardHandle.element);
-
-    const counter = this.container.querySelector('.card-counter');
-    if (counter) {
-      counter.textContent = `Passage ${this.currentIndex + 1} / ${this.passages.length}`;
-    }
   }
 
   private renderPassiveFront(item: ListeningPassage): HTMLElement {
     const frontEl = document.createElement('div');
     frontEl.className = 'listening-front';
     frontEl.innerHTML = `
-      <div class="card-prompt-label" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Pass 1 & 2 · Active Transcription</div>
+      <div class="card-prompt-label">Pass 1 & 2 · Active Transcription</div>
       <div style="font-family: var(--font-sans); font-size: var(--font-body); font-weight: 600; margin-bottom: 8px;">
         Topic: ${item.title}
       </div>
@@ -447,7 +435,7 @@ export class ListeningDossier {
 
       const idx = token.gapIndex ?? 0;
       const currentVal = this.userGapInputs.get(idx) || '';
-      const cleanUser = currentVal.trim().toLowerCase().replace(/[^a-z0-9']/g, '');
+      const cleanUser = cleanListeningWord(currentVal);
 
       let statusClass = '';
       if (cleanUser.length > 0) {
@@ -489,7 +477,7 @@ export class ListeningDossier {
     inputs.forEach(input => {
       input.addEventListener('input', () => {
         const gapIdx = parseInt(input.dataset.gapIndex || '0', 10);
-        const target = (input.dataset.answer || '').toLowerCase();
+        const target = cleanListeningWord(input.dataset.answer || '');
         const userVal = input.value;
         this.userGapInputs.set(gapIdx, userVal);
 
@@ -497,7 +485,7 @@ export class ListeningDossier {
         const pitchMod = 0.94 + Math.random() * 0.12;
         AudioSynthesizer.playMechanicalClick(pitchMod);
 
-        const clean = userVal.trim().toLowerCase().replace(/[^a-z0-9']/g, '');
+        const clean = cleanListeningWord(userVal);
         const wasCorrect = input.classList.contains('is-correct');
 
         if (clean.length === 0) {
@@ -511,8 +499,8 @@ export class ListeningDossier {
             // Auto-advance focus to next incomplete gap
             for (const otherInput of Array.from(inputs)) {
               const otherIdx = parseInt(otherInput.dataset.gapIndex || '0', 10);
-              const otherClean = (this.userGapInputs.get(otherIdx) || '').trim().toLowerCase().replace(/[^a-z0-9']/g, '');
-              const otherTarget = (otherInput.dataset.answer || '').toLowerCase();
+              const otherClean = cleanListeningWord(this.userGapInputs.get(otherIdx) || '');
+              const otherTarget = cleanListeningWord(otherInput.dataset.answer || '');
               if (otherClean !== otherTarget) {
                 otherInput.focus();
                 break;
@@ -563,8 +551,8 @@ export class ListeningDossier {
       e.stopPropagation();
       for (const input of Array.from(inputs)) {
         const gapIdx = parseInt(input.dataset.gapIndex || '0', 10);
-        const target = (input.dataset.answer || '').toLowerCase();
-        const currentClean = (this.userGapInputs.get(gapIdx) || '').trim().toLowerCase().replace(/[^a-z0-9']/g, '');
+        const target = cleanListeningWord(input.dataset.answer || '');
+        const currentClean = cleanListeningWord(this.userGapInputs.get(gapIdx) || '');
         if (currentClean !== target && target.length > 0) {
           const hint = target.slice(0, Math.min(2, target.length));
           input.value = hint;
@@ -654,5 +642,11 @@ export class ListeningDossier {
       return true;
     }
     return false;
+  }
+
+  public teardown(): void {
+    AudioSynthesizer.stopSpeech();
+    this.currentCardHandle = null;
+    this.userGapInputs.clear();
   }
 }

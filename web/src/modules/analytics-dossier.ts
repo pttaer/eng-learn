@@ -14,6 +14,7 @@ import { SkillId } from '../utils/storage';
 import { SkillTreeEngine } from '../core/skill-tree-engine';
 import { SerlGauntletEngine, SerlErrorRecord, RehabMicroDrill } from '../core/serl-gauntlet-engine';
 import { icon } from '../utils/icons';
+import { t } from '../core/i18n';
 
 export interface AxisDefinition {
   id: string;
@@ -44,6 +45,9 @@ export class AnalyticsDossier {
     this.container.className = 'analytics-dossier-shell';
     this.container.setAttribute('role', 'region');
     this.container.setAttribute('aria-label', 'Learner Mastery Analytics Dashboard');
+    window.addEventListener('eng:locale-changed', () => {
+      if (this.container.isConnected) this.render();
+    });
   }
 
   public render(): HTMLElement {
@@ -77,8 +81,8 @@ export class AnalyticsDossier {
           <div class="analytics-card radar-card" style="background: var(--bg-surface, #0f172a); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 16px 20px;">
             <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
               <div>
-                <span class="badge-sub" style="font-size: var(--font-kicker); font-weight: 700; letter-spacing: 0.08em; color: var(--cyan, #38bdf8); text-transform: uppercase;">CEFR 6-AXIS HEXAGONAL SPECTRUM</span>
-                <h2 style="margin: 2px 0 0; font-size: var(--font-h3); font-weight: 700;">Competency Radar</h2>
+                <span class="badge-sub" style="font-size: var(--font-kicker); font-weight: 700; letter-spacing: 0.08em; color: var(--cyan, #38bdf8); text-transform: uppercase;">${t('analytics.spectrum_header')}</span>
+                <h2 style="margin: 2px 0 0; font-size: var(--font-h3); font-weight: 700;">${t('analytics.competency_radar')}</h2>
               </div>
               <div class="band-pill" style="background: rgba(56, 189, 248, 0.12); border: 1px solid var(--cyan, #38bdf8); padding: 4px 12px; border-radius: 999px; font-size: var(--font-body-compact); font-weight: 700; color: var(--cyan, #38bdf8);">
                 IELTS ~${overallBand.toFixed(1)} BAND

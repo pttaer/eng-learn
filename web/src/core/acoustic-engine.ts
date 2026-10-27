@@ -62,9 +62,12 @@ export class AcousticEngine {
   }
 
   public async init(): Promise<boolean> {
-    if (!this.isAvailable) return false;
+    if (!this.isAvailable) {
+      this.checkAvailability();
+      if (!this.isAvailable) return false;
+    }
     try {
-      if (!this.micStream) {
+      if (!this.micStream || !this.micStream.active) {
         this.micStream = await navigator.mediaDevices.getUserMedia({
           audio: {
             echoCancellation: true,
@@ -73,9 +76,10 @@ export class AcousticEngine {
           }
         });
       }
-      if (!this.audioCtx) {
+      if (!this.audioCtx || this.audioCtx.state === 'closed') {
         const AudioCtxClass = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
         this.audioCtx = new AudioCtxClass();
+        this.analyser = null;
       }
       if (this.audioCtx.state === 'suspended') {
         await this.audioCtx.resume();
@@ -88,7 +92,6 @@ export class AcousticEngine {
       }
       return true;
     } catch {
-      this.isAvailable = false;
       return false;
     }
   }
@@ -374,6 +377,7 @@ export class AcousticEngine {
       this.audioCtx.close().catch(() => {});
       this.audioCtx = null;
     }
+    this.analyser = null;
     if (this.activeTakeUrl) {
       URL.revokeObjectURL(this.activeTakeUrl);
       this.activeTakeUrl = null;

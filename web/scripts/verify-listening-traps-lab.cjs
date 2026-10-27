@@ -42,6 +42,7 @@ const trapsMod = load('views/listening-traps.ts', {
   '../distractor-engine': { DistractorEngine },
   '../../core/audio-synthesizer': mockAudio,
   '../../utils/icons': { icon: () => '<svg></svg>' },
+  '../../core/i18n': { t: (k, p, d) => d || k, I18n: { getLocale: () => 'en', onLocaleChange: () => () => {} } },
   '../progress': mockProgress
 });
 

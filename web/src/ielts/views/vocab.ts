@@ -68,11 +68,11 @@ export function vocabView(root: HTMLElement): () => void {
   let searchQuery = '';
   let queue: VocabItem[] = [];
 
-  const titleHeader = h('h1', 'ie-title', 'IELTS Academic Vocabulary & Collocations Codex');
+  const titleHeader = h('h1', 'ie-title', 'IELTS Academic Vocabulary & Collocations');
   const leadDesc = h(
     'p',
     'ie-lead',
-    'Master high-yield academic vocabulary and authentic collocations across 171 topics. Backed by SuperMemo-2 Spaced Repetition (SRS) to guarantee long-term retention for Bands 7.0–8.5+.'
+    'High-yield academic vocabulary and authentic collocations with spaced repetition.'
   );
 
   // Deck selector row
@@ -122,8 +122,10 @@ export function vocabView(root: HTMLElement): () => void {
   deckSwitcher.append(btnCore, btnIot, btnCombined);
 
   // Controls bar
-  const bar = h('div', 'ie-testbar ie-vocab-controls');
-  
+  const bar = h('div', 'ie-vocab-controls');
+
+  const selectsRow = h('div', 'ie-vocab-selects-row');
+
   // Topic Select
   const topicSelect = h('select', 'ie-select ie-vselect');
   topicSelect.setAttribute('aria-label', 'Topic');
@@ -138,15 +140,17 @@ export function vocabView(root: HTMLElement): () => void {
     <option value="7.5">Band 7.5+</option>
   `;
 
+  selectsRow.append(topicSelect, bandSelect);
+
   // Search input
   const searchInput = h('input', 'ie-input ie-vsearch') as HTMLInputElement;
   searchInput.type = 'search';
-  searchInput.placeholder = 'Search words, collocations, or Vietnamese...';
+  searchInput.placeholder = 'Search vocabulary...';
 
   const stats = h('span', 'ie-note ie-vstats');
   stats.setAttribute('aria-live', 'polite');
 
-  bar.append(topicSelect, bandSelect, searchInput, stats);
+  bar.append(selectsRow, searchInput, stats);
 
   const stage = h('div', 'ie-vstage');
   root.append(titleHeader, leadDesc, deckSwitcher, bar, stage);
@@ -215,9 +219,8 @@ export function vocabView(root: HTMLElement): () => void {
     }
 
     const card = h('article', 'ie-vcard');
-    const tags = `<span class="ie-vtags">${esc(v.pos)} · band ${v.band.toFixed(1)} ${
-      v.cefrLevel ? `(${v.cefrLevel})` : ''
-    } · ${esc(v.topic)}</span>`;
+    const tags = `<span class="ie-vtags">${esc(v.pos)} · band ${v.band.toFixed(1)} ${v.cefrLevel ? `(${v.cefrLevel})` : ''
+      } · ${esc(v.topic)}</span>`;
     card.innerHTML = `${tags}<h2 class="ie-vword">${esc(
       v.word
     )}</h2><p class="ie-note">Recall the definition, Vietnamese meaning, and academic collocations, then reveal.</p>`;

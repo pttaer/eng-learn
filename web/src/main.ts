@@ -31,6 +31,7 @@ import { MediationDossier } from './modules/mediation-dossier';
 import { DrillsDossier } from './modules/drills-dossier';
 import { AnalyticsDossier } from './modules/analytics-dossier';
 import { ExamCockpitDossier } from './modules/exam-cockpit-dossier';
+import { SettingsDossier } from './modules/settings-dossier';
 import { SerlGauntletEngine } from './core/serl-gauntlet-engine';
 import { HapticEngine } from './core/haptic-engine';
 import { CommuteAudioPlayer } from './core/commute-audio-player';
@@ -43,6 +44,8 @@ import { ProfileSyncEngine } from './core/profile-sync-engine';
 import { SpeechEvaluator } from './core/speech-evaluator';
 import { ConstellationEngine } from './modules/constellation-engine';
 import { ScrollAffordance } from './core/scroll-affordance';
+import { syncAndroidWidget, WidgetBridge } from './core/widget-bridge';
+import { I18n, t, LOCALE_EVENT } from './core/i18n';
 import collocationsData from './assets/data/collocations.json';
 
 // Expose engines to window for automated headless testing & telemetry inspection
@@ -61,6 +64,7 @@ import collocationsData from './assets/data/collocations.json';
 (window as any).MediationDossier = MediationDossier;
 (window as any).AnalyticsDossier = AnalyticsDossier;
 (window as any).ExamCockpitDossier = ExamCockpitDossier;
+(window as any).SettingsDossier = SettingsDossier;
 (window as any).SerlGauntletEngine = SerlGauntletEngine;
 (window as any).MultiSkillQuizModal = MultiSkillQuizModal;
 (window as any).PlacementQuiz = PlacementQuiz;
@@ -73,6 +77,9 @@ import collocationsData from './assets/data/collocations.json';
 (window as any).NotificationEngine = NotificationEngine;
 (window as any).AmbientMusicEngine = AmbientMusicEngine;
 (window as any).ambientMusicEngine = ambientMusicEngine;
+(window as any).WidgetBridge = WidgetBridge;
+(window as any).I18n = I18n;
+(window as any).t = t;
 
 class App {
   private router: Router;
@@ -95,6 +102,7 @@ class App {
   private drillsDossier: DrillsDossier;
   private analyticsDossier: AnalyticsDossier;
   private examCockpit: ExamCockpitDossier;
+  private settingsDossier: SettingsDossier;
 
   private workspaceMount: HTMLElement;
   private activeDossierHandle: any = null;
@@ -156,6 +164,7 @@ class App {
     this.drillsDossier = new DrillsDossier();
     this.analyticsDossier = new AnalyticsDossier();
     this.examCockpit = new ExamCockpitDossier();
+    this.settingsDossier = new SettingsDossier();
 
     // Bind Completion Rituals
     this.examCockpit.onTestSubmitted = () => {
@@ -216,6 +225,17 @@ class App {
     this.bindNavigation();
     this.bindKeyboardShortcuts();
     ScrollAffordance.initGlobalObserver();
+
+    // 4.1 Initialize I18n DOM localization & listen for locale changes
+    I18n.localizeDom(document.body);
+    window.addEventListener(LOCALE_EVENT, () => {
+      I18n.localizeDom(document.body);
+      I18n.localizeDom(this.workspaceMount);
+      const currentRoute = this.router.getCurrentRoute();
+      if (currentRoute) {
+        this.headerHud.updateTelemetry(currentRoute);
+      }
+    });
 
     // 5. First run: placement quiz, then the Spotlight Onboarding Tour prompt
     const promptTour = () => {
@@ -283,6 +303,11 @@ class App {
       this.router.navigate('cockpit');
     };
 
+    // Header Settings navigation
+    this.headerHud.onNavigateToSettings = () => {
+      this.router.navigate('settings');
+    };
+
     // Route listener
     this.router.onRoute((route) => {
       this.handleRouteChange(route);
@@ -291,14 +316,34 @@ class App {
 
   private handleRouteChange(route: RouteId): void {
     MotionEngine.cancelAll();
+    AudioSynthesizer.stopSpeech();
+    AudioSynthesizer.stopFocusHum();
+    AudioSynthesizer.playExamRoomAmbience(false);
+    LexiconDrawer.close();
+    MistakeVault.close();
+    CommuteAudioPlayer.close();
+    SpotlightTour.close();
+    ParticleCanvas.clear();
+    HeaderHUD.setContextualDock(null);
+
+    // Clean up any stray modals or floating toasts attached to document.body
+    document.querySelectorAll('.completion-modal-overlay, #skill-node-modal, #tour-welcome-toast').forEach(el => el.remove());
+
     if (this.activeDossierHandle && typeof this.activeDossierHandle.teardown === 'function') {
-      this.activeDossierHandle.teardown();
+      try {
+        this.activeDossierHandle.teardown();
+      } catch (err) {
+        console.warn('[ROUTER] Active dossier teardown error:', err);
+      }
     }
     this.headerHud.updateTelemetry(route);
     this.workspaceMount.innerHTML = '';
     this.workspaceMount.classList.remove('tree-mode');
     this.workspaceMount.classList.remove('cockpit-mode');
     this.activeDossierHandle = null;
+
+    window.scrollTo(0, 0);
+    this.workspaceMount.scrollTop = 0;
 
     if (route === 'singularity') {
       this.perspectiveCanvas.setVisible(true);
@@ -375,10 +420,15 @@ class App {
         this.workspaceMount.appendChild(this.examCockpit.render());
         this.activeDossierHandle = this.examCockpit;
         break;
+      case 'settings':
+        this.workspaceMount.appendChild(this.settingsDossier.render());
+        this.activeDossierHandle = this.settingsDossier;
+        break;
       default:
         break;
     }
 
+    I18n.localizeDom(this.workspaceMount);
     ScrollAffordance.scan(this.workspaceMount);
     MotionEngine.fadeSlideIn(this.workspaceMount, 'up');
   }
@@ -541,4 +591,5 @@ document.addEventListener('DOMContentLoaded', () => {
   registerServiceWorker();
   NotificationEngine.schedulePeriodicCheck();
   UsageTracker.start();
+  syncAndroidWidget();
 });

@@ -38,9 +38,12 @@
 }
 
 @keyframes hud-arrow-pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 8px rgba(245, 158, 11, 0.4), 0 3px 10px rgba(0, 0, 0, 0.85);
   }
+
   50% {
     box-shadow: 0 0 16px rgba(245, 158, 11, 0.8), 0 4px 14px rgba(0, 0, 0, 0.95);
   }
@@ -85,12 +88,12 @@
 }
 
 /* Dynamic Directional Mask Fades (Target only the scrollable element, NOT the arrow buttons) */
-.hud-scroll-track > .hud-scroll-arrow {
+.hud-scroll-track>.hud-scroll-arrow {
   -webkit-mask-image: none !important;
   mask-image: none !important;
 }
 
-.hud-scroll-track > [data-has-scroll-arrows="true"] {
+.hud-scroll-track>[data-has-scroll-arrows="true"] {
   flex: 1 1 auto !important;
   min-width: 0 !important;
   width: 100% !important;
@@ -99,23 +102,31 @@
   mask-image: none !important;
 }
 
-.hud-scroll-track.can-scroll-right > [data-has-scroll-arrows="true"] {
-  -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 38px), transparent) !important;
-  mask-image: linear-gradient(90deg, #000 calc(100% - 38px), transparent) !important;
+.hud-scroll-track.can-scroll-right>[data-has-scroll-arrows="true"]:not(.view-mode-toggle):not(.ie-tabs) {
+  -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 32px), transparent) !important;
+  mask-image: linear-gradient(90deg, #000 calc(100% - 32px), transparent) !important;
 }
 
-.hud-scroll-track.can-scroll-left.can-scroll-right > [data-has-scroll-arrows="true"] {
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 38px, #000 calc(100% - 38px), transparent 100%) !important;
-  mask-image: linear-gradient(90deg, transparent 0%, #000 38px, #000 calc(100% - 38px), transparent 100%) !important;
+.hud-scroll-track.can-scroll-left.can-scroll-right>[data-has-scroll-arrows="true"]:not(.view-mode-toggle):not(.ie-tabs) {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 32px, #000 calc(100% - 32px), transparent 100%) !important;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 32px, #000 calc(100% - 32px), transparent 100%) !important;
 }
 
-.hud-scroll-track.can-scroll-left:not(.can-scroll-right) > [data-has-scroll-arrows="true"] {
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 38px) !important;
-  mask-image: linear-gradient(90deg, transparent 0%, #000 38px) !important;
+.hud-scroll-track.can-scroll-left:not(.can-scroll-right)>[data-has-scroll-arrows="true"]:not(.view-mode-toggle):not(.ie-tabs) {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 32px) !important;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 32px) !important;
 }
 
 @media (max-width: 768px) {
   .hud-scroll-arrow {
     display: none !important;
+  }
+
+  .hud-scroll-track>[data-has-scroll-arrows="true"],
+  .hud-scroll-track.can-scroll-right>[data-has-scroll-arrows="true"],
+  .hud-scroll-track.can-scroll-left.can-scroll-right>[data-has-scroll-arrows="true"],
+  .hud-scroll-track.can-scroll-left:not(.can-scroll-right)>[data-has-scroll-arrows="true"] {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
   }
 }

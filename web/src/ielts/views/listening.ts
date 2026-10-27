@@ -17,11 +17,12 @@ import { AccentCadenceType } from '../../core/audio-synthesizer';
 import { bandBadge, esc, h } from '../ui';
 import { TestResult } from './reading';
 import { icon } from '../../utils/icons';
+import { t } from '../../core/i18n';
 
 const SECTIONS = listeningData as ListeningSection[];
 
 // Quotes in a `why` are matched to script lines after case and punctuation are stripped.
-const normText = (t: string): string => t.toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim();
+const normText = (str: string): string => str.toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim();
 
 /** Script line indexes quoted in the `why` of the given questions. */
 export function evidenceLineIndexes(sec: ListeningSection, questionIds: Set<string>): Set<number> {
@@ -35,8 +36,8 @@ export function evidenceLineIndexes(sec: ListeningSection, questionIds: Set<stri
       .map(normText)
       .filter(qq => qq.length > 0);
     sec.script.forEach((line, i) => {
-      const t = ' ' + normText(line.text) + ' ';
-      if (quotes.some(qq => t.includes(' ' + qq + ' '))) out.add(i);
+      const textNorm = ' ' + normText(line.text) + ' ';
+      if (quotes.some(qq => textNorm.includes(' ' + qq + ' '))) out.add(i);
     });
   }
   return out;
@@ -48,8 +49,8 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
   let playback: Playback | null = null;
   const bar = h('div', 'ie-testbar');
   const status = h('span', 'ie-clock', ttsAvailable() ? 'Press Play to start' : 'Text-to-speech is not available in this browser');
-  const play = h('button', 'ie-btn ie-btn-primary', 'Play');
-  const submit = h('button', 'ie-btn', 'Submit answers');
+  const play = h('button', 'ie-btn ie-btn-primary', t('ielts.play_audio', undefined, 'Play'));
+  const submit = h('button', 'ie-btn', t('ielts.submit_answers', undefined, 'Submit answers'));
   const tabs = h('div', 'ie-tabs');
 
   // Multi-accent cadence selector
@@ -95,8 +96,8 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
     pane.append(form.el);
     panes.push(pane);
     forms.push(form);
-    const t = h('button', 'ie-tab' + (i === 0 ? ' is-on' : ''), `Section ${s.section}`);
-    t.addEventListener('click', () => {
+    const tabBtn = h('button', 'ie-tab' + (i === 0 ? ' is-on' : ''), `${t('ielts.section', undefined, 'Section')} ${s.section}`);
+    tabBtn.addEventListener('click', () => {
       playback?.stop();
       play.textContent = 'Play';
       cur = i;
@@ -104,7 +105,7 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
       tabs.querySelectorAll('.ie-tab').forEach((x, j) => x.classList.toggle('is-on', j === i));
       refresh();
     });
-    tabs.append(t);
+    tabs.append(tabBtn);
   });
   const result = h('section', 'ie-result');
   result.hidden = true;
@@ -177,31 +178,22 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
 
 export function listeningView(root: HTMLElement): () => void {
   let stop = () => {};
-  const list = h('div', 'ie-cards');
-
-  const labBanner = h('div', 'ie-lab-banner', `
-    <div class="ie-lab-banner-content">
-      <span class="ie-trap-category-pill">${icon('target', 13)} Interactive Audio Lab</span>
-      <h3>Listening Trap & Oral Self-Correction Audio Lab</h3>
-      <p class="ie-lead">Practice spotting oral self-corrections, restrictive qualifiers, reversal traps, and map navigation decoys across 12 authentic Cambridge-style audio scenarios with real-time waveform feedback.</p>
-    </div>
-    <a href="#listening-traps" class="ie-btn ie-btn-primary ie-lab-launch-btn">Launch Traps Lab (12 Drills) →</a>
-  `);
+  // Navigation to #listening-traps (ie-lab-banner) is unified in main.ts top subnavigation bar
+  const list = h('div', 'ie-card-grid');
 
   root.append(
-    h('h1', 'ie-title', 'Academic Listening'),
-    h('p', 'ie-lead', 'Ten questions per section, voiced by browser text-to-speech with a different voice per speaker. Practice mode lets you replay; the mock plays each section once.'),
-    labBanner,
+    h('h1', 'ie-title', t('ielts.nav_listening', undefined, 'Academic Listening')),
+    h('p', 'ie-lead', t('ielts.listening_lead', undefined, 'Ten questions per section, voiced by browser text-to-speech with a different voice per speaker. Practice mode lets you replay; the mock plays each section once.')),
     list
   );
   SECTIONS.forEach(s => {
 
-    const c = h('button', 'ie-card', `<b>Section ${s.section}: ${esc(s.title)}</b><span>${s.speakers.length} speaker${s.speakers.length > 1 ? 's' : ''}</span><small>${s.questions.length} questions</small>`);
+    const c = h('button', 'ie-card', `<b>${t('ielts.section', undefined, 'Section')} ${s.section}: ${esc(s.title)}</b><span>${s.speakers.length} speaker${s.speakers.length > 1 ? 's' : ''}</span><small>${s.questions.length} questions</small>`);
     c.addEventListener('click', () => {
       root.innerHTML = '';
-      const back = h('button', 'ie-btn', 'All sections');
+      const back = h('button', 'ie-btn', t('ielts.all_sections', undefined, 'All sections'));
       back.addEventListener('click', () => { stop(); root.innerHTML = ''; stop = listeningView(root); });
-      const host = h('div');
+      const host = h('div', 'ie-stage');
       root.append(back, host);
       stop = mountListeningTest(host, [s], false, false);
     });

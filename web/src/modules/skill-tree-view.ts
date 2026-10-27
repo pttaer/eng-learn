@@ -316,6 +316,8 @@ export class SkillTreeView {
   }
 
   public teardown(): void {
+    const modal = document.getElementById('skill-node-modal');
+    if (modal) modal.remove();
     if (this.nebulaCanvas) {
       this.nebulaCanvas.destroy();
       this.nebulaCanvas = null;
@@ -330,36 +332,36 @@ export class SkillTreeView {
     const progress = SkillTreeEngine.calculateSummitProgress();
     const workout = this.getWorkout();
     return `
-      <div class="workout-banner tree-command-panel" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 16px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; gap: 12px; box-shadow: var(--shadow-card); flex: 0 0 auto;">
-        <div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
-          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-            <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">✦ CONSTELLATION ROADMAP</span>
+      <div class="workout-banner tree-command-panel" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; gap: 8px; box-shadow: var(--shadow-card); flex: 0 0 auto;">
+        <div class="workout-banner-header" style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 4px;">
+          <div class="workout-banner-stats" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">✦ ROADMAP</span>
             <span class="hud-status-badge" style="font-size: var(--font-kicker); padding: 2px 8px; border-radius: 4px; border-color: var(--accent-gold); color: var(--accent-gold);">
-              RANK: <strong>${progress.currentRank}</strong> · SUMMIT: <strong class="val-progress-pct">${progress.progressPct}%</strong> (${progress.masteredCount}/${progress.totalNodes})
+              RANK: <strong>${progress.currentRank}</strong> · SUMMIT: <strong class="val-progress-pct">${progress.progressPct}%</strong> <span class="workout-banner-count">(${progress.masteredCount}/${progress.totalNodes})</span>
             </span>
           </div>
           <div style="display: flex; align-items: baseline; gap: 8px; overflow: hidden;">
-            <h1 style="font-size: var(--font-body); font-weight: 700; margin: 0; font-family: var(--font-sans); color: var(--ink-primary); letter-spacing: -0.01em; white-space: nowrap;">
+            <h1 class="workout-banner-title" style="font-size: var(--font-body); font-weight: 700; margin: 0; font-family: var(--font-sans); color: var(--ink-primary); letter-spacing: -0.01em; white-space: nowrap;">
               The Path to C2 Native Mastery
             </h1>
-            </div>
+          </div>
         </div>
 
-        <div class="workout-panel" style="flex: 0 0 auto; display: flex; align-items: center; gap: 12px; background: rgba(255, 255, 255, 0.04); border: none; border-radius: 6px; padding: 8px 14px;">
-          <div style="display: flex; flex-direction: column; gap: 8px;">
-            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 8px;">
-              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-size: var(--font-kicker);">★ TODAY'S 15-MINUTE WORKOUT [${workout.level}]</span>
-              <span class="telemetry-label" style="font-size: var(--font-kicker);">${workout.left === 0 ? 'ALL 3 DRILLS DONE' : workout.left + ' OF 3 DRILLS REMAINING'}</span>
+        <div class="workout-panel" style="flex: 0 0 auto; display: flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.04); border: none; border-radius: 6px; padding: 6px 10px;">
+          <div class="workout-panel-info" style="display: flex; flex-direction: column; gap: 4px;">
+            <div class="workout-panel-header" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 8px;">
+              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-size: var(--font-kicker);">★ WORKOUT [${workout.level}]</span>
+              <span class="telemetry-label workout-remaining-label" style="font-size: var(--font-kicker);">${workout.left === 0 ? 'ALL DONE ✓' : workout.left + ' LEFT'}</span>
             </div>
-            <div class="workout-tasks" style="display: flex; gap: 10px; font-size: var(--font-kicker); color: var(--ink-secondary);">
+            <div class="workout-tasks" style="display: flex; gap: 8px; font-size: var(--font-kicker); color: var(--ink-secondary);">
               ${workout.tasks.map(t => `
               <div class="workout-task-chip" data-route="${t.route}" title="Jump to ${t.route} drill" style="display: flex; align-items: center; gap: 4px; cursor: pointer;${t.ok ? '' : ' opacity: 0.75;'}">
                 <span${t.ok ? ' style="color: var(--accent-gold); font-weight: 700;"' : ''}>${t.ok ? '✓' : '○'}</span> <span>${t.label}</span>
               </div>`).join('')}
             </div>
           </div>
-          <button class="hud-btn btn-continue-workout" style="justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 6px 16px; min-height: 34px; font-weight: 700; font-size: var(--font-kicker); border: none; cursor: pointer; border-radius: 6px; white-space: nowrap; box-shadow: var(--shadow-glow);">
-            Continue Today's Workout ${icon('arrowRight')}
+          <button class="hud-btn btn-continue-workout" style="justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 6px 14px; min-height: 34px; font-weight: 700; font-size: var(--font-kicker); border: none; cursor: pointer; border-radius: 6px; white-space: nowrap; box-shadow: var(--shadow-glow);">
+            <span>Continue</span> ${icon('arrowRight')}
           </button>
         </div>
       </div>
@@ -549,11 +551,11 @@ export class SkillTreeView {
   private renderViewSwitcher(): string {
     return `
       <div class="constellation-view-switcher" role="tablist" aria-label="Constellation Display Modes">
+        <button class="view-switch-btn btn-view-skill-deck ${this.viewMode === 'deck' ? 'active' : ''}" data-view="deck" role="tab" aria-selected="${this.viewMode === 'deck'}" aria-label="Switch to Skill Grid View">
+          <span class="btn-icon">${icon('grid', 16)}</span> <span class="btn-text">Skill Grid</span>
+        </button>
         <button class="view-switch-btn btn-view-star-map ${this.viewMode === 'map' ? 'active' : ''}" data-view="map" role="tab" aria-selected="${this.viewMode === 'map'}" aria-label="Switch to Star Map View">
           <span class="btn-icon">${icon('compass', 16)}</span> <span class="btn-text">Star Map</span>
-        </button>
-        <button class="view-switch-btn btn-view-skill-deck ${this.viewMode === 'deck' ? 'active' : ''}" data-view="deck" role="tab" aria-selected="${this.viewMode === 'deck'}" aria-label="Switch to Skill Deck View">
-          <span class="btn-icon">${icon('layers', 16)}</span> <span class="btn-text">Skill Deck</span>
         </button>
       </div>
     `;
@@ -563,46 +565,45 @@ export class SkillTreeView {
     const branches = ConstellationEngine.getMobileDeckBranches();
 
     return `
-      <div class="mobile-skill-deck" role="region" aria-label="Mobile Skill Deck Carousel">
+      <div class="mobile-skill-deck" role="region" aria-label="Skill Grid Roadmap">
         <div class="deck-carousel-track">
           ${branches.map(b => `
-            <div class="deck-branch-card" data-branch="${b.id}" data-route="${b.routeTarget}">
+            <div class="deck-branch-card" data-branch="${b.id}" data-route="${b.routeTarget}" tabindex="0" role="region" aria-label="${b.name} Skill Card">
               <div class="deck-card-header">
-                <div class="deck-card-title-group">
-                  <div class="deck-branch-icon-badge">${icon(b.iconName, 20)}</div>
-                  <div>
+                <div class="deck-header-top">
+                  <div class="deck-header-lead" style="display: flex; align-items: center; gap: 6px; min-width: 0;">
+                    <div class="deck-branch-icon-badge">${icon(b.iconName, 16)}</div>
                     <h2 class="deck-branch-name">${b.name}</h2>
-                    <p class="deck-branch-tagline">${b.tagline}</p>
                   </div>
+                  <span class="hud-status-badge deck-cefr-badge">${b.cefrLevel}</span>
                 </div>
-                <span class="hud-status-badge deck-cefr-badge">CEFR ${b.cefrLevel}</span>
+                <div class="deck-branch-tagline">${b.tagline}</div>
               </div>
 
               <div class="deck-mastery-block">
                 <div class="deck-mastery-labels">
-                  <span class="deck-mastery-pct-text">MASTERY <strong>${b.masteryPct}%</strong></span>
-                  <span class="deck-perks-count-text">${b.unlockedPerks}/${b.totalPerks} Active Perks</span>
+                  <span class="deck-mastery-pct-text">Mastery <strong>${b.masteryPct}%</strong></span>
+                  <span class="deck-perks-count-text">${b.unlockedPerks}/${b.totalPerks} Perks</span>
                 </div>
                 <div class="deck-progress-bar-track">
                   <div class="deck-progress-bar-fill" style="width: ${b.masteryPct}%;"></div>
                 </div>
               </div>
 
-              <button class="hud-btn btn-enter-dossier" data-route="${b.routeTarget}" aria-label="Enter ${b.name} Dossier">
-                <span>Enter ${b.name} Dossier</span> ${icon('arrowRight', 16)}
+              <button class="hud-btn btn-enter-dossier" data-route="${b.routeTarget}" aria-label="Enter ${b.name}">
+                <span>Vào ${b.name === 'Collocations / Grammar' ? 'Cụm từ' : (b.name === 'Reading' ? 'Đọc' : (b.name === 'Writing' ? 'Viết' : (b.name === 'Listening' ? 'Nghe' : 'Nói')))}</span> ${icon('arrowRight', 14)}
               </button>
 
               <div class="deck-card-perks-section">
                 <details class="deck-perks-details">
                   <summary class="deck-section-title deck-perks-summary">
-                    <span>✦ UNLOCKED PERKS & WORKOUT DRILLS</span>
-                    <span class="deck-perks-count">${b.perks.slice(0, 5).length} ${b.perks.slice(0, 5).length === 1 ? 'perk' : 'perks'} · ${b.workoutTasks.length} ${b.workoutTasks.length === 1 ? 'drill' : 'drills'}</span>
+                    <span>✦ ${b.perks.slice(0, 5).length} Perks & Drills</span>
                   </summary>
                 <div class="deck-perk-badges">
                   ${b.perks.slice(0, 5).map(p => `
                     <div class="deck-badge deck-perk-badge ${p.status === 'mastered' ? 'is-mastered' : (p.status === 'unlocked' ? 'is-unlocked' : 'is-locked')}" data-node-id="${p.id}" data-route="${p.routeTarget}" role="button" tabindex="0" aria-label="${p.title} (${p.status})">
                       <span class="badge-status-dot"></span>
-                      <span class="badge-text">${p.title} [${p.cefrLevel}]</span>
+                      <span class="badge-text">${p.title}</span>
                     </div>
                   `).join('')}
                   ${b.workoutTasks.map(t => `
@@ -623,8 +624,9 @@ export class SkillTreeView {
 
   private bindEvents(): void {
     this.container.addEventListener('keydown', (e: KeyboardEvent) => {
-      const el = (e.target as Element).closest('.constellation-node, .branch-summary-card, .deck-badge');
+      const el = (e.target as Element).closest('.constellation-node, .branch-summary-card, .deck-badge, .deck-branch-card');
       if (el && (e.key === 'Enter' || e.key === ' ')) {
+        if (e.target !== el && (e.target as Element).closest('button, details, summary, input')) return;
         e.preventDefault();
         el.dispatchEvent(new MouseEvent('click', { bubbles: true }));
       }
@@ -638,6 +640,18 @@ export class SkillTreeView {
         if (targetView && targetView !== this.viewMode) {
           AudioSynthesizer.play('click');
           this.setViewMode(targetView);
+        }
+      });
+    });
+
+    // Deck card click
+    this.container.querySelectorAll('.deck-branch-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if ((e.target as HTMLElement).closest('.btn-enter-dossier, .deck-badge, details, summary')) return;
+        const route = (card as HTMLElement).dataset.route as RouteId;
+        if (route && this.onNavigate) {
+          AudioSynthesizer.play('click');
+          this.onNavigate(route);
         }
       });
     });
@@ -762,7 +776,7 @@ export class SkillTreeView {
             <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">✦ ${branch.name.toUpperCase()} // LVL ${node.level}</span>
           </div>
           <div style="display: flex; justify-content: flex-end; width: 100%;">
-            <span class="hud-status-badge" style="background: rgba(165, 180, 252, 0.16); color: var(--accent-gold); font-family: var(--font-mono); font-size: 10.5px; font-weight: 700; border: 1px solid rgba(165, 180, 252, 0.25); border-radius: 5px; padding: 2px 8px; white-space: nowrap;">CEFR ${node.cefrLevel}</span>
+            <span class="hud-status-badge" style="background: rgba(165, 180, 252, 0.16); color: var(--accent-gold); font-family: var(--font-mono); font-size: var(--font-kicker); font-weight: 700; border: 1px solid rgba(165, 180, 252, 0.25); border-radius: 5px; padding: 2px 8px; white-space: nowrap;">CEFR ${node.cefrLevel}</span>
           </div>
         </div>
 

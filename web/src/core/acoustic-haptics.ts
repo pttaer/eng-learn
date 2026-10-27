@@ -6,6 +6,25 @@ class AcousticHapticsEngine {
   private ctx: AudioContext | null = null;
   private muted = false;
 
+  constructor() {
+    if (typeof window !== 'undefined') {
+      try {
+        const stored = localStorage.getItem('eng_master_muted');
+        if (stored !== null) {
+          this.muted = stored === 'true';
+        } else {
+          const raw = localStorage.getItem('eng_state');
+          if (raw) {
+            const parsed = JSON.parse(raw);
+            if (parsed && typeof parsed.soundMuted === 'boolean') {
+              this.muted = parsed.soundMuted;
+            }
+          }
+        }
+      } catch {}
+    }
+  }
+
   private getContext(): AudioContext | null {
     if (this.muted || typeof window === 'undefined') return null;
     if (!this.ctx) {

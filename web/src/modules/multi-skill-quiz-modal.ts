@@ -281,9 +281,9 @@ export class ListeningPromptComponent {
   }
 
   public verifyGap(userText: string): boolean {
-    const cleanUser = userText.trim().toLowerCase().replace(/[^a-z0-9']/g, '');
+    const cleanUser = userText.trim().toLowerCase().replace(/[’‘]/g, "'").replace(/[“”]/g, '"').replace(/[^a-z0-9']/g, '');
     const target = this.question.gapTarget || this.question.options[this.question.answer];
-    const cleanTarget = target.trim().toLowerCase().replace(/[^a-z0-9']/g, '');
+    const cleanTarget = target.trim().toLowerCase().replace(/[’‘]/g, "'").replace(/[“”]/g, '"').replace(/[^a-z0-9']/g, '');
     const isCorrect = cleanUser.length > 0 && cleanUser === cleanTarget;
 
     const inputEl = this.element.querySelector('.listening-gap-input') as HTMLInputElement | null;
@@ -356,8 +356,8 @@ export class ListeningPromptComponent {
           </span>
         </div>
         <div class="listening-gap-input-row" style="display: flex; gap: 8px; align-items: center;">
-          <input type="text" class="listening-gap-input" placeholder="Type linked words (or select option below)..." autocomplete="off" spellcheck="false" style="flex: 1; padding: 8px 12px; font-family: var(--font-mono); font-size: var(--font-body-compact); background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm, 6px); color: var(--ink-primary); outline: none;">
-          <button type="button" class="hud-btn btn-verify-gap" style="padding: 8px 14px; font-weight: 700; font-size: var(--font-body-compact); border-color: var(--accent-gold); color: var(--accent-gold);">
+          <input type="text" class="listening-gap-input" placeholder="Type linked words (or select option below)..." autocomplete="off" spellcheck="false" style="flex: 1; min-height: var(--touch-target-min, 44px); box-sizing: border-box; padding: 8px 12px; font-family: var(--font-mono); font-size: max(16px, var(--font-body)); background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm, 6px); color: var(--ink-primary); outline: none;">
+          <button type="button" class="hud-btn btn-verify-gap" style="min-height: var(--touch-target-min, 44px); padding: 8px 14px; font-weight: 700; font-size: var(--font-body-compact); border-color: var(--accent-gold); color: var(--accent-gold);">
             Verify Gap
           </button>
         </div>
@@ -508,7 +508,7 @@ export class MultiSkillQuizModal {
 
   private card(inner: string, maxWidth: string = '620px'): void {
     this.overlay.innerHTML = `
-      <div class="completion-receipt-card multi-skill-card" style="max-width: ${maxWidth}; width: 100%; max-height: 90vh; overflow-y: auto;">
+      <div class="completion-receipt-card multi-skill-card" style="max-width: ${maxWidth}; width: 100%; max-height: 90dvh; overflow-y: auto;">
         ${inner}
       </div>
     `;
@@ -799,13 +799,13 @@ export class MultiSkillQuizModal {
   private resolveSkillCefr(_skill: SkillId, correctCount: number): Cefr {
     // 3 questions asked:
     // 3 correct -> C2 (Mastery)
-    // 2 correct -> B2 (Upper-Intermediate)
+    // 2 correct -> C1 (Effective Operational Proficiency)
     // 1 correct -> B1 (Intermediate)
-    // 0 correct -> A2 / A1 (Elementary)
+    // 0 correct -> A1 (Breakthrough)
     if (correctCount >= 3) return 'C2';
-    if (correctCount === 2) return 'B2';
+    if (correctCount === 2) return 'C1';
     if (correctCount === 1) return 'B1';
-    return 'A2';
+    return 'A1';
   }
 
   public playSpeechPrompt(text: string, rate?: number): void {

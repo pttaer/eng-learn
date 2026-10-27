@@ -52,6 +52,7 @@
   --radius-lg: 12px;      /* Modals, feature dialogs, hero cards */
   --radius-xl: 16px;      /* Outer containers, action sheets */
   --radius-full: 9999px;  /* Pill buttons, avatar rings */
+  --radius-pill: 9999px;  /* Canonical pill alias */
   --radius-squircle-sm: 10px;
   --radius-squircle-md: 16px;
   --radius-squircle-lg: 24px;
@@ -163,7 +164,7 @@
   --pad-card: clamp(14px, 2.5vw, 24px);
   --pad-card-compact: clamp(10px, 1.8vw, 16px);
   --pad-modal: clamp(16px, 3vw, 28px);
-  --pad-btn: 8px 16px;
+  --pad-btn: 8px 18px;
   --pad-btn-compact: 6px 12px;
   --pad-chip: 4px 10px;
   --pad-input: 10px 14px;

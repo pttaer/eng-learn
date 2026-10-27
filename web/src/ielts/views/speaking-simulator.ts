@@ -566,10 +566,10 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
     const badge = h('span', 'ie-sim-badge', 'Band 7.0–8.5+ Simulator');
     titleRow.append(backBtn, badge);
 
-    const intro = h('div', 'ie-stage');
+    const intro = h('div', 'ie-sim-intro');
     intro.append(
-      h('h1', 'ie-title', 'IELTS Speaking 3-Part Examiner Simulator'),
-      h('p', 'ie-lead', 'Interactive examination room executing Keino Campbell’s Band 7+ formulas and examiner principles: Direct Answer + 2–3 sentence extension, 1-minute 4-keyword notepad prep, native conversational fillers, and comparative deconstructions.')
+      h('h1', 'ie-title', 'IELTS Speaking Examiner Simulator'),
+      h('p', 'ie-lead', 'Interactive examination room practicing Keino Campbell Band 7+ formulas with real-time feedback.')
     );
 
     // Mode Navigation Tabs

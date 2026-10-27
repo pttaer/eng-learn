@@ -19,6 +19,7 @@ import { feedback } from '../core/feedback';
 import collocationsData from '../assets/data/collocations.json';
 import vocabularyData from '../assets/data/vocabulary.json';
 import { pickDecoys, meaningsOverlap } from '../core/decoys';
+import { t } from '../core/i18n';
 
 /** Verbs whose collocations are worth blanking; phrases starting with a noun or adjective are skipped. */
 const BLANKABLE_VERBS = new Set(['make', 'take', 'have', 'do', 'get', 'give', 'keep', 'pay', 'break', 'catch', 'set', 'run', 'hold', 'reach', 'draw', 'gain', 'raise', 'bear', 'bring', 'meet', 'lose', 'miss', 'tell', 'say', 'play', 'strike', 'cut', 'save', 'spend', 'waste', 'follow', 'pose', 'conduct', 'carry', 'attract', 'commit', 'launch', 'exert', 'render']);
@@ -197,14 +198,14 @@ export class BlitzDossier {
     this.container.innerHTML = `
       <div class="blitz-ready-card" role="dialog" aria-labelledby="blitz-ready-title">
         <div class="blitz-badge-cluster">
-          <span class="blitz-glow-badge">${icon('zap', 12)} ROGUELIKE SPEED RUN</span>
-          <span class="blitz-high-score-badge">HIGH SCORE: <strong>${this.highScore.toLocaleString()} PTS</strong></span>
+          <span class="blitz-glow-badge">${icon('zap', 12)} Rapid Recall Drill</span>
+          <span class="blitz-high-score-badge">Best Score: <strong>${this.highScore.toLocaleString()} pts</strong></span>
         </div>
 
-        <h1 class="blitz-ready-title" id="blitz-ready-title">60-SECOND RAPID BLITZ</h1>
+        <h1 class="blitz-ready-title" id="blitz-ready-title">${t('blitz.subtitle')}</h1>
         <p class="blitz-ready-desc">
-          Push your linguistic intuition to absolute cognitive limits. 60 seconds of high-velocity collocation
-          and C2 lexical recall. Chain correct answers to trigger exponential combo multipliers!
+          Test your lexical fluency with a timed rapid-recall session. 60 seconds of high-frequency collocation
+          and advanced vocabulary practice. Chain correct answers to build your streak multiplier!
         </p>
 
         <div class="blitz-mechanics-grid">
@@ -215,10 +216,10 @@ export class BlitzDossier {
           </div>
           <div class="blitz-mechanic-card">
             <div class="mechanic-icon">${icon('flame', 22)}</div>
-            <div class="mechanic-title">Combo Multipliers</div>
+            <div class="mechanic-title">Streak Multipliers</div>
             <div class="mechanic-detail">5 Streak = 2x • 10 Streak = 3x • 15+ Streak = 4x Max Surge.</div>
           </div>
-          <div class="blitz-mechanic-card">
+          <div class="blitz-mechanic-card mechanic-hotkeys">
             <div class="mechanic-icon">${icon('keyboard', 22)}</div>
             <div class="mechanic-title">Instant Hotkeys</div>
             <div class="mechanic-detail">Press <kbd>[1]</kbd> or <kbd>[←]</kbd> for Left • <kbd>[2]</kbd> or <kbd>[→]</kbd> for Right.</div>
@@ -227,7 +228,7 @@ export class BlitzDossier {
 
         <div class="blitz-ready-actions">
           <button type="button" class="hud-btn blitz-start-btn" id="blitz-start-btn" aria-label="Start 60-Second Blitz Drill">
-            ${icon('zap')} START BLITZ DRILL
+            ${icon('zap')} ${t('blitz.start')}
           </button>
           <span class="blitz-hotkey-hint">Press <kbd>Space</kbd> or <kbd>Enter</kbd> to Launch</span>
         </div>
@@ -782,6 +783,16 @@ export class BlitzDossier {
     if (this.keyListener) {
       document.removeEventListener('keydown', this.keyListener);
       this.keyListener = null;
+    }
+    if (this.state === 'RUNNING') {
+      this.state = 'READY';
+      this.timeRemaining = BLITZ_DURATION_SECONDS;
+      this.score = 0;
+      this.streak = 0;
+      this.maxStreak = 0;
+      this.correctCount = 0;
+      this.totalAnswered = 0;
+      this.isProcessingAnswer = false;
     }
   }
 

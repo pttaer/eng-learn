@@ -4,7 +4,7 @@
 .radar-chip { white-space: normal; text-align: left; overflow-wrap: anywhere; }
 .copywork-studio textarea { min-height: 140px; }
 .copywork-studio .model-sentence-display, .copywork-diff-container { overflow-wrap: anywhere; }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .copywork-studio .hud-btn, .btn-advance-round, .btn-view-matrix, .post-take-actions .hud-btn,
   .btn-timer-toggle, .btn-take-complete, .nav-btn-prev, .nav-btn-next { min-height: 44px !important; font-size: var(--font-body-compact) !important; }
   .post-take-actions .hud-btn { flex: 1 1 100%; justify-content: center; white-space: normal; height: auto; }

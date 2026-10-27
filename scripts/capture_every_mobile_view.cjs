@@ -424,7 +424,7 @@ async function run() {
           st.cardStates = {};
           localStorage.setItem('eng_singularity_state_v1', JSON.stringify(st));
           const prog = { streak: 5, lastActiveDate: '2020-01-01', questsCompleted: [] };
-          localStorage.setItem('eng_progression', JSON.stringify(prog));
+          localStorage.setItem('eng_progression_v1', JSON.stringify(prog));
         } catch (e) {}
         if (window.NotificationEngine && typeof window.NotificationEngine.evaluateStatus === 'function') {
           window.NotificationEngine.evaluateStatus();

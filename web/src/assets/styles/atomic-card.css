@@ -110,32 +110,7 @@
   width: 100%;
 }
 
-/* Architectural Corner Notches */
-.card-face::before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  width: 8px;
-  height: 8px;
-  border-top: 2px solid var(--accent-gold);
-  border-left: 2px solid var(--accent-gold);
-  border-top-left-radius: var(--radius-md, 8px);
-  pointer-events: none;
-}
 
-.card-face::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  right: -1px;
-  width: 8px;
-  height: 8px;
-  border-bottom: 2px solid var(--accent-gold);
-  border-right: 2px solid var(--accent-gold);
-  border-bottom-right-radius: var(--radius-md, 8px);
-  pointer-events: none;
-}
 
 /* Zone 1: Top Telemetry Header */
 .card-header-bar,

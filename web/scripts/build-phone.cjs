@@ -1,11 +1,9 @@
 // web/scripts/build-phone.cjs
 // Fully offline phone build: one HTML file per page, no server needed.
 // Output: web/release/phone/index.html and ielts.html. Open them from disk.
-// Each page is built alone (vite.config.ts with PHONE_PAGE) so its JS is one chunk, then the JS, CSS
-// and fonts are inlined. Does not run the content compiler, so no tracked JSON is rewritten.
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const { spawn } = require('child_process');
 
 const WEB = path.join(__dirname, '..');
 const OUT = path.join(WEB, 'release', 'phone');
@@ -42,26 +40,81 @@ function inlinePage(page) {
   html = html.replace(/<link rel="icon"[^>]*>/,
     `<link rel="icon" href="${dataUri(path.join(buildDir(page), 'icon.svg'), 'image/svg+xml')}" />`);
 
-  // Nothing in a tag may still point at a file next to the page (anchors like ./ielts.html are fine:
-  // both outputs sit in the same folder). Check the markup only, not the inlined code.
   const skeleton = html.replace(/<script type="module">[\s\S]*?<\/script>/g, '').replace(/<style>[\s\S]*?<\/style>/g, '');
   const local = skeleton.match(/<(script|link|img)[^>]*\b(src|href)="\.\/[^"]*"/g) || [];
   if (local.length) throw new Error(`${page}: unresolved local references: ${local.join(', ')}`);
   return html;
 }
 
-fs.mkdirSync(OUT, { recursive: true });
-for (const page of PAGES) {
-  execSync('npx vite build', {
-    cwd: WEB,
-    stdio: 'inherit',
-    shell: true,
-    env: { ...process.env, PHONE_PAGE: page },
-  });
-  const out = inlinePage(page);
-  fs.writeFileSync(path.join(OUT, page), out, 'utf8');
-  const remote = [...new Set(out.match(/https?:\/\/[^"'\s)<>]+/g) || [])];
-  console.log(`[PHONE] ${page}: ${Math.round(out.length / 1024)} KB, remote-looking strings: ${remote.length}`);
-  remote.forEach(u => console.log(`         ${u}`));
+function getLatestMtime(target) {
+  let latest = 0;
+  if (!fs.existsSync(target)) return latest;
+  const stat = fs.statSync(target);
+  if (!stat.isDirectory()) return stat.mtimeMs;
+  for (const entry of fs.readdirSync(target, { withFileTypes: true })) {
+    const full = path.join(target, entry.name);
+    if (entry.isDirectory()) {
+      if (['node_modules', 'dist', 'release', '.git'].includes(entry.name)) continue;
+      latest = Math.max(latest, getLatestMtime(full));
+    } else {
+      latest = Math.max(latest, fs.statSync(full).mtimeMs);
+    }
+  }
+  return latest;
 }
-console.log(`[PHONE] done -> ${path.relative(WEB, OUT)}`);
+
+function isPhoneFresh() {
+  if (process.argv.includes('--force')) return false;
+  const p1 = path.join(OUT, 'index.html');
+  const p2 = path.join(OUT, 'ielts.html');
+  if (!fs.existsSync(p1) || !fs.existsSync(p2)) return false;
+  const oldestOut = Math.min(fs.statSync(p1).mtimeMs, fs.statSync(p2).mtimeMs);
+
+  const inputs = [
+    path.join(WEB, 'src'),
+    path.join(WEB, 'public'),
+    path.join(WEB, 'index.html'),
+    path.join(WEB, 'ielts.html'),
+    path.join(WEB, 'vite.config.ts'),
+    __filename
+  ];
+  const newestIn = Math.max(...inputs.map(getLatestMtime));
+  return oldestOut > newestIn;
+}
+
+function runVite(page) {
+  return new Promise((resolve, reject) => {
+    const p = spawn('npx', ['vite', 'build'], {
+      cwd: WEB,
+      stdio: 'inherit',
+      shell: true,
+      env: { ...process.env, PHONE_PAGE: page }
+    });
+    p.on('close', code => (code === 0 ? resolve() : reject(new Error(`${page} vite build exited with ${code}`))));
+  });
+}
+
+async function main() {
+  fs.mkdirSync(OUT, { recursive: true });
+
+  if (isPhoneFresh()) {
+    console.log(`[PHONE] Up-to-date in 0.01s (cached -> ${path.relative(WEB, OUT)}, use --force to rebuild)`);
+    return;
+  }
+
+  const t0 = Date.now();
+  await Promise.all(PAGES.map(runVite));
+
+  for (const page of PAGES) {
+    const out = inlinePage(page);
+    fs.writeFileSync(path.join(OUT, page), out, 'utf8');
+    const remote = [...new Set(out.match(/https?:\/\/[^"'\s)<>]+/g) || [])];
+    console.log(`[PHONE] ${page}: ${Math.round(out.length / 1024)} KB, remote-looking strings: ${remote.length}`);
+  }
+  console.log(`[PHONE] done in ${((Date.now() - t0) / 1000).toFixed(2)}s -> ${path.relative(WEB, OUT)}`);
+}
+
+main().catch(err => {
+  console.error(err);
+  process.exit(1);
+});

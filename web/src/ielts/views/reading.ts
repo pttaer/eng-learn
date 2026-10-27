@@ -7,6 +7,7 @@ import { SetScore } from '../scoring';
 import { bandBadge, countdown, Countdown, esc, fmtTime, h } from '../ui';
 import { renderParagraphSpans, mergeHighlightRanges } from '../reading-engine';
 import { icon } from '../../utils/icons';
+import { t } from '../../core/i18n';
 
 const PASSAGES = readingData as ReadingPassage[];
 
@@ -117,7 +118,7 @@ export function mountReadingTest(
   let timer: Countdown | null = null;
   const bar = h('div', 'ie-testbar');
   const clock = h('span', 'ie-clock');
-  const submit = h('button', 'ie-btn ie-btn-primary', 'Submit answers');
+  const submit = h('button', 'ie-btn ie-btn-primary', t('ielts.submit_answers', undefined, 'Submit answers'));
   const tabs = h('div', 'ie-tabs');
   bar.append(clock, tabs, submit);
 
@@ -143,10 +144,10 @@ export function mountReadingTest(
 
   // Mobile persistent bottom dock
   const dock = h('nav', 'ie-reading-dock');
-  const dockClock = h('span', 'ie-dock-clock', 'Untimed');
-  const dockPassageBtn = h('button', 'ie-dock-tab is-active', '📖 Passage');
+  const dockClock = h('span', 'ie-dock-clock', t('ielts.untimed', undefined, 'Untimed'));
+  const dockPassageBtn = h('button', 'ie-dock-tab is-active', `📖 ${t('ielts.passage', undefined, 'Passage')}`);
   dockPassageBtn.type = 'button';
-  const dockQuestionsBtn = h('button', 'ie-dock-tab', `✍️ Questions (0/${passages[0]?.questions.length || 0})`);
+  const dockQuestionsBtn = h('button', 'ie-dock-tab', `✍️ ${t('ielts.questions_label', undefined, 'Questions')} (0/${passages[0]?.questions.length || 0})`);
   dockQuestionsBtn.type = 'button';
   dock.append(dockClock, dockPassageBtn, dockQuestionsBtn);
 
@@ -156,7 +157,7 @@ export function mountReadingTest(
     const p = passages[passageIdx];
     if (!p) return;
     const answered = answeredCounts[passageIdx] || 0;
-    dockQuestionsBtn.textContent = `✍️ Questions (${answered}/${p.questions.length})`;
+    dockQuestionsBtn.textContent = `✍️ ${t('ielts.questions_label', undefined, 'Questions')} (${answered}/${p.questions.length})`;
   };
 
   const switchMobilePane = (target: 'passage' | 'questions', overrideScroll = false) => {
@@ -297,8 +298,8 @@ export function mountReadingTest(
     panes.push(pane);
     forms.push(form);
 
-    const t = h('button', 'ie-tab' + (i === 0 ? ' is-on' : ''), passages.length > 1 ? `Passage ${i + 1}` : 'Passage');
-    t.addEventListener('click', () => {
+    const tabBtn = h('button', 'ie-tab' + (i === 0 ? ' is-on' : ''), passages.length > 1 ? `${t('ielts.passage', undefined, 'Passage')} ${i + 1}` : t('ielts.passage', undefined, 'Passage'));
+    tabBtn.addEventListener('click', () => {
       const oldP = passages[currentPassageIndex];
       const cur = scrollMap.get(oldP.id) || { passage: 0, questions: 0 };
       if (typeof window !== 'undefined') {
@@ -324,7 +325,7 @@ export function mountReadingTest(
         });
       }
     });
-    tabs.append(t);
+    tabs.append(tabBtn);
   });
 
   const result = h('section', 'ie-result');
@@ -452,7 +453,7 @@ export function mountReadingTest(
     timer?.stop();
     submit.disabled = true;
     pill.hidden = true;
-    dockClock.textContent = 'Review';
+    dockClock.textContent = t('ielts.review', undefined, 'Review');
     dockClock.classList.remove('ie-urgent');
     const total: SetScore = { raw: 0, of: 0, byType: {}, wrong: [] };
     forms.forEach(f => {
@@ -465,7 +466,7 @@ export function mountReadingTest(
         c.n += v.n;
       }
     });
-    dockQuestionsBtn.textContent = `✍️ Questions (${total.raw}/${total.of})`;
+    dockQuestionsBtn.textContent = `✍️ ${t('ielts.questions_label', undefined, 'Questions')} (${total.raw}/${total.of})`;
     const band = rawToBand('reading', total.raw, total.of);
     addAttempt({ skill: 'reading', itemId: passages.map(p => p.id).join('+'), band, raw: total.raw, of: total.of, byType: total.byType, mock });
     result.hidden = false;
@@ -491,8 +492,8 @@ export function mountReadingTest(
       finish
     );
   } else {
-    clock.textContent = 'Untimed';
-    dockClock.textContent = 'Untimed';
+    clock.textContent = t('ielts.untimed', undefined, 'Untimed');
+    dockClock.textContent = t('ielts.untimed', undefined, 'Untimed');
   }
 
   return () => {
@@ -515,17 +516,17 @@ export function readingView(root: HTMLElement): () => void {
     'a',
     'ie-btn ie-btn-primary ie-drills-hero-btn'
   );
-  drillsLink.innerHTML = `${icon('target', 14)} 14 Question-Type Attack Drills Lab`;
+  drillsLink.innerHTML = `${icon('target', 14)} ${t('ielts.subnav_attack_drills', undefined, '14 Question-Type Attack Drills Lab')}`;
   drillsLink.id = 'btn-launch-reading-drills';
   drillsLink.href = '#reading-drills';
   hubBar.append(drillsLink);
 
   root.append(
-    h('h1', 'ie-title', 'Academic Reading'),
+    h('h1', 'ie-title', t('ielts.nav_reading', undefined, 'Academic Reading')),
     h(
       'p',
       'ie-lead',
-      'One passage, 20 minutes, 13-14 questions. Same question types as the exam. Submit to see the evidence for every answer.'
+      t('ielts.reading_lead', undefined, 'One passage, 20 minutes, 13-14 questions. Same question types as the exam. Submit to see the evidence for every answer.')
     ),
     hubBar,
     list
@@ -536,7 +537,7 @@ export function readingView(root: HTMLElement): () => void {
     const c = h('button', 'ie-card', `<b>${esc(p.title)}</b><span>${esc(p.topic)}</span><small>${words} words · ${p.questions.length} questions · ${types} types</small>`);
     c.addEventListener('click', () => {
       root.innerHTML = '';
-      const back = h('button', 'ie-btn', 'All passages');
+      const back = h('button', 'ie-btn', t('ielts.all_passages', undefined, 'All passages'));
       back.addEventListener('click', () => { stop(); root.innerHTML = ''; stop = readingView(root); });
       const host = h('div', 'ie-stage');
       root.append(back, host);

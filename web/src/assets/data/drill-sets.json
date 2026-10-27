@@ -1038,8 +1038,8 @@
           "id": "stress-2-mountain",
           "word": "mountain",
           "options": [
-            "Ooo",
-            "oOo"
+            "Oo",
+            "oO"
           ],
           "answer": 0,
           "why": "Mountain is MOUN-tain: the stress falls on the first syllable."
@@ -1072,11 +1072,11 @@
           "prompt": "Which word has stress on the second syllable?",
           "options": [
             "machine",
-            "example",
+            "market",
             "winter"
           ],
           "answer": 0,
-          "why": "'Machine' is pronounced ma-CHINE; 'example' is EX-am-ple and 'winter' is WIN-ter, both first syllable."
+          "why": "'Machine' is pronounced ma-CHINE (second syllable); 'market' is MAR-ket and 'winter' is WIN-ter, both first syllable."
         }
       ]
     },
@@ -1124,8 +1124,8 @@
           ],
           "answer": 0,
           "accent": "uk",
-          "speak": "In British English, privacy stresses the first syllable: PRI-va-cy.",
-          "why": "British English stresses the first syllable with a short 'a' sound."
+          "speak": "In British English, privacy is pronounced PRIV-a-cy with a short 'i' sound in the first syllable.",
+          "why": "British English uses a short 'i' sound: PRIV-a-cy, whereas American English uses PRI-va-cy."
         },
         {
           "type": "choice",
@@ -1635,6 +1635,8 @@
           "id": "ex-more-definitions-1",
           "prompt": "Despite her best ___, she could not convince the committee to change their position.",
           "answers": [
+            "endeavours",
+            "endeavors",
             "endeavour",
             "endeavor"
           ],
@@ -1973,7 +1975,10 @@
           "id": "ex-statements-opinions-1",
           "prompt": "James remained ___ the proposal, believing the risks outweighed the potential benefits.",
           "answers": [
-            "sceptical about"
+            "sceptical about",
+            "skeptical about",
+            "sceptical of",
+            "skeptical of"
           ],
           "why": "Sceptical about (or sceptical of) is the fixed phrase meaning doubtful or unconvinced regarding something."
         },

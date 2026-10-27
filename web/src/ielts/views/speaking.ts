@@ -6,8 +6,8 @@ import { DESCRIPTORS, RUBRIC } from '../writing-heuristics';
 import { fluency, fluencyNote, Fluency } from '../fluency';
 import { bandBadge, countdown, Countdown, esc, fmtTime, h } from '../ui';
 import { playText, ttsAvailable, Playback } from '../tts';
-import { speakingSimulatorView } from './speaking-simulator';
 import { icon } from '../../utils/icons';
+import { t } from '../../core/i18n';
 
 
 const DATA = speakingData as SpeakingData;
@@ -84,7 +84,7 @@ function askAll(stage: HTMLElement, label: string, qs: string[], seconds: number
       if (!alive) return;
       if (a) takes.push(a);
       stage.insertAdjacentHTML('beforeend', fluencyHint(a));
-      const nx = h('button', 'ie-btn', i + 1 < qs.length ? 'Next question' : 'Continue');
+      const nx = h('button', 'ie-btn', i + 1 < qs.length ? t('ielts.next_question', undefined, 'Next question') : t('common.continue', undefined, 'Continue'));
       nx.addEventListener('click', () => { i++; ask(); });
       stage.append(nx);
     });
@@ -95,7 +95,7 @@ function askAll(stage: HTMLElement, label: string, qs: string[], seconds: number
 
 function rater(host: HTMLElement, itemId: string, summary = ''): void {
   const rows = RUBRIC.speaking.map((c, i) => `<label class="ie-rate"><span>${c}</span><select data-i="${i}">${[5, 5.5, 6, 6.5, 7, 7.5, 8].map(b => `<option value="${b}"${b === 6 ? ' selected' : ''}>${b.toFixed(1)}</option>`).join('')}</select></label>`).join('');
-  const box = h('div', 'ie-result ie-feedback', `<div class="ie-feedback-col"><h3>Rate yourself</h3><p class="ie-note">7 = ${esc(DESCRIPTORS[7])}</p>${summary}${rows}<div class="ie-estimate"></div><button class="ie-btn ie-btn-primary ie-save">Save estimate</button></div>`);
+  const box = h('div', 'ie-result ie-feedback', `<div class="ie-feedback-col"><h3>${t('ielts.rate_yourself', undefined, 'Rate yourself')}</h3><p class="ie-note">7 = ${esc(DESCRIPTORS[7])}</p>${summary}${rows}<div class="ie-estimate"></div><button class="ie-btn ie-btn-primary ie-save">${t('ielts.save_estimate', undefined, 'Save estimate')}</button></div>`);
   host.append(box);
   const est = box.querySelector('.ie-estimate') as HTMLElement;
   const band = (): number => {
@@ -369,12 +369,10 @@ export function speakingView(root: HTMLElement): () => void {
     const f = h('button', 'ie-card', '<b>Full test</b><span>Parts 1, 2 and 3 in exam order</span><small>11-14 minutes</small>');
     const a = h('button', 'ie-card', `<b>Part 1</b><span>Interview</span><small>${DATA.part1.length} topics</small>`);
     const b = h('button', 'ie-card', `<b>Parts 2 and 3</b><span>Cue card + discussion</span><small>${DATA.part2.length} cue cards</small>`);
-    const sim = h('button', 'ie-card', `<b>3-Part Examiner Simulator</b><span>Interactive Real-Time Drill</span><small>Direct Answer formula, 60s 4-keyword prep, native fillers & comparative deconstructions</small>`);
     f.addEventListener('click', () => fullTest(root, menu));
     a.addEventListener('click', () => part1(root, menu));
     b.addEventListener('click', () => part2(root, menu));
-    sim.addEventListener('click', () => speakingSimulatorView(root, menu));
-    cards.append(f, a, b, sim);
+    cards.append(f, a, b);
     root.append(cards);
   };
   menu();

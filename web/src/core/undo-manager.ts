@@ -15,7 +15,8 @@ class UndoManagerSingleton {
   constructor() {
     if (typeof window !== 'undefined') {
       window.addEventListener('keydown', (e) => {
-        if ((e.key === 'z' || e.key === 'Z') && (e.ctrlKey || e.metaKey || !this.isEditingInput(e))) {
+        if (this.isEditingInput(e)) return;
+        if (e.key === 'z' || e.key === 'Z') {
           if (this.currentAction) {
             e.preventDefault();
             this.triggerUndo();

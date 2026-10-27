@@ -7,6 +7,7 @@ import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { SkillTreeEngine } from '../core/skill-tree-engine';
 import readingData from '../assets/data/reading.json';
+import { t } from '../core/i18n';
 
 export interface ReadingArticle {
   id: string;
@@ -58,6 +59,27 @@ export interface ArticlePassConfig {
   badge: string;
   instruction: string;
 }
+
+export const getReadingPassBadge = (pass: ReadingPass): string => {
+  if (pass === 1) return t('reading.pass1_badge');
+  if (pass === 2) return t('reading.pass2_badge');
+  if (pass === 3) return t('reading.pass3_badge');
+  return t('reading.pass4_badge');
+};
+
+export const getReadingPassTitle = (pass: ReadingPass): string => {
+  if (pass === 1) return t('reading.pass1_title');
+  if (pass === 2) return t('reading.pass2_title');
+  if (pass === 3) return t('reading.pass3_title');
+  return t('reading.pass4_title');
+};
+
+export const getReadingPassInstruction = (pass: ReadingPass): string => {
+  if (pass === 1) return t('reading.pass1_instruction');
+  if (pass === 2) return t('reading.pass2_instruction');
+  if (pass === 3) return t('reading.pass3_instruction');
+  return t('reading.pass4_instruction');
+};
 
 export const READING_PASS_CONFIGS: ArticlePassConfig[] = [
   {
@@ -390,7 +412,7 @@ export class ReadingDossier {
 
     this.container.innerHTML = `
       <div class="dossier-control-bar">
-        <div class="dossier-tabs article-tabs" role="tablist" aria-label="Articles">
+        <div class="dossier-tabs article-tabs" role="tablist" aria-label="${t('reading.articles')}">
           ${this.articles.map((art, idx) => `
             <button role="tab" aria-selected="${idx === this.currentArticleIndex}" tabindex="${idx === this.currentArticleIndex ? '0' : '-1'}" class="hud-btn article-tab ${idx === this.currentArticleIndex ? 'active' : ''}" data-idx="${idx}" title="${this.escapeHtml(art.title)}" aria-label="Article ${idx + 1}: ${this.escapeHtml(art.title)}">
               Art 0${idx + 1}: ${art.title}
@@ -400,20 +422,20 @@ export class ReadingDossier {
         ${levelRowHtml(this.allArticles, this.activeLevel)}
         <div class="article-meta-telemetry reading-meta-telemetry">
           <span class="telemetry-value">CEFR: ${article.cefrLevel}</span>
-          <span class="telemetry-value">WORDS: ${article.wordCount}</span>
+          <span class="telemetry-value">${t('reading.words_count', { count: article.wordCount })}</span>
           <span class="telemetry-value">${article.readingTime.toUpperCase()}</span>
         </div>
       </div>
 
       <!-- Stepped 4-Pass Cognitive Scaffolding Header -->
-      <div class="reading-pass-stepper" role="tablist" aria-label="Reading passes">
+      <div class="reading-pass-stepper" role="tablist" aria-label="Reading passes" data-i18n-aria-label="reading.reading_passes">
         ${READING_PASS_CONFIGS.map(cfg => {
           const isActive = cfg.pass === this.currentPass;
           const isCompleted = cfg.pass < this.currentPass;
           const statusPrefix = isCompleted ? '✓ ' : '';
           return `
             <button role="tab" id="reading-pass-tab-${cfg.pass}" aria-controls="reading-pass-panel" aria-selected="${isActive}" tabindex="${isActive ? '0' : '-1'}" class="stepper-step ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''}" data-pass="${cfg.pass}" aria-label="Pass ${cfg.pass}: ${cfg.badge}">
-              <span class="step-badge">${statusPrefix}${cfg.badge}</span>
+              <span class="step-badge">${statusPrefix}${getReadingPassBadge(cfg.pass)}</span>
             </button>
           `;
         }).join('<span class="stepper-arrow" aria-hidden="true">→</span>')}
@@ -1200,5 +1222,12 @@ export class ReadingDossier {
       }
     }
     return false;
+  }
+
+  public teardown(): void {
+    this.clearSkimTimer();
+    this.closeVocabDrawer();
+    AudioSynthesizer.stopSpeech();
+    this.currentCardHandle = null;
   }
 }

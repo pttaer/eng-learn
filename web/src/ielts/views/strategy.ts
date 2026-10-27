@@ -959,7 +959,7 @@ export function strategyView(root: HTMLElement): () => void {
   barTop.append(searchWrap, sortSelect);
 
   // Skill filter chips
-  const chipsRow = h('div', 'ie-tips-chips');
+  const chipsRow = h('div', 'ie-tips-chips scrollable-pill-strip');
   const skillChips: { id: string; label: string; iconName: IconName }[] = [
     { id: 'all', label: 'All', iconName: 'globe' },
     { id: 'Writing', label: 'Writing', iconName: 'edit' },

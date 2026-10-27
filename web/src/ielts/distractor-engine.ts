@@ -201,7 +201,16 @@ export class DistractorEngine {
       return { valid: false, reason: 'Empty answer provided' };
     }
 
-    const rawInputWords = userInput.trim().split(/\s+/).filter(Boolean);
+    // Defensive input normalization: smart quotes -> ASCII quotes
+    const sanitizeQuotes = (s: string) => s.replace(/[’‘]/g, "'").replace(/[“”]/g, '"');
+    const sanitizedInput = sanitizeQuotes(userInput);
+    const sanitizedTarget = sanitizeQuotes(passageTarget);
+
+    // In IELTS Academic rules, compound numbers (e.g. forty-five / forty five, twenty-first / twenty first) count as a single word
+    const COMPOUND_NUMBER_REGEX = /\b(twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)[\s-]+(one|two|three|four|five|six|seven|eight|nine|first|second|third|fourth|fifth|sixth|seventh|eighth|ninth)\b/gi;
+    const normalizedWordCountInput = sanitizedInput.replace(COMPOUND_NUMBER_REGEX, '$1-$2');
+
+    const rawInputWords = normalizedWordCountInput.trim().split(/\s+/).filter(Boolean);
     if (rawInputWords.length > maxWords) {
       return {
         valid: false,
@@ -214,7 +223,7 @@ export class DistractorEngine {
       return { valid: false, reason: 'Empty answer provided' };
     }
 
-    const targetWords = passageTarget.split(/\s+/).map(cleanWord).filter(Boolean);
+    const targetWords = sanitizedTarget.split(/\s+/).map(cleanWord).filter(Boolean);
     if (targetWords.length === 0) {
       return { valid: false, reason: 'Passage target is empty' };
     }
@@ -222,8 +231,10 @@ export class DistractorEngine {
     const cleanedInput = inputWords.join(' ');
     const cleanedTarget = targetWords.join(' ');
 
-    // Exact whole-string equality
-    if (cleanedInput === cleanedTarget) {
+    const normalizeHyphens = (s: string) => s.replace(/(\w)-(\w)/g, '$1 $2').toLowerCase();
+
+    // Exact whole-string equality (including hyphen-to-space normalization)
+    if (cleanedInput === cleanedTarget || normalizeHyphens(cleanedInput) === normalizeHyphens(cleanedTarget)) {
       return { valid: true };
     }
 
@@ -247,9 +258,32 @@ export class DistractorEngine {
       return { valid: true };
     }
 
+    // Subsequence check with hyphens normalized to spaces
+    const normInputTokens = inputWords.flatMap(w => w.split('-')).filter(Boolean);
+    const normTargetTokens = targetWords.flatMap(w => w.split('-')).filter(Boolean);
+    const isNormSubsequence = (): boolean => {
+      if (normInputTokens.length > normTargetTokens.length) return false;
+      for (let i = 0; i <= normTargetTokens.length - normInputTokens.length; i++) {
+        let match = true;
+        for (let j = 0; j < normInputTokens.length; j++) {
+          if (normTargetTokens[i + j] !== normInputTokens[j]) {
+            match = false;
+            break;
+          }
+        }
+        if (match) return true;
+      }
+      return false;
+    };
+
+    if (isNormSubsequence()) {
+      return { valid: true };
+    }
+
     // Check for morphological inflections (added suffixes)
+    const allTargetTokens = Array.from(new Set([...targetWords, ...normTargetTokens]));
     for (const uWord of inputWords) {
-      for (const tWord of targetWords) {
+      for (const tWord of allTargetTokens) {
         const suffix = detectAddedSuffix(uWord, tWord);
         if (suffix) {
           return {

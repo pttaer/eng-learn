@@ -41,13 +41,12 @@ export function diagnosticView(root: HTMLElement): () => void {
     const header = h('div', 'ie-diag-header');
     header.innerHTML = `
       <div class="ie-diag-badge-row">
-        <span class="ie-pill ie-pill-accent">Section 3 Foundation</span>
-        <span class="ie-pill ie-pill-neutral">20 Questions • ~15 Minutes</span>
+        <span class="ie-pill ie-pill-accent">Foundation Checkpoint</span>
+        <span class="ie-pill ie-pill-neutral">20 Questions • 15 Mins</span>
       </div>
-      <h1 class="ie-title">Grammar & Vocabulary Diagnostic Checkpoint</h1>
-      <p class="ie-lead">
-        Identify and isolate high-frequency morphosyntactic and lexical flaws before attempting full essays or speaking tests.
-        Calibrated against the public IELTS band descriptors, 5.5 to 8.5+.
+      <h1 class="ie-title">Grammar &amp; Vocabulary Diagnostic</h1>
+      <p class="ie-lead ie-diag-lead">
+        Identify and isolate high-frequency morphosyntactic and lexical flaws. Calibrated against IELTS band descriptors 5.5–8.5+.
       </p>
     `;
     container.append(header);

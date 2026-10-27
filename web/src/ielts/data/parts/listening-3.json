@@ -191,7 +191,6 @@
         "type": "complete",
         "prompt": "A guest can attend one free trial session if they ___.",
         "answer": [
-          "book in advance by phone",
           "book in advance",
           "book by phone"
         ],

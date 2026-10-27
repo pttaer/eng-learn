@@ -419,7 +419,8 @@ async function runMobileTouchQA() {
       for (const t of cockpitTabStats.tabs) {
         assert.ok(t.height >= 44, `Cockpit mobile tab button ${t.tab} must meet height >= 44px (got ${t.height}px)`);
       }
-      assert.ok(cockpitTabStats.fab && cockpitTabStats.fab.height >= 44, 'Cockpit quick-switch FAB must satisfy >= 44px height');
+      // The floating Cockpit quick-switch FAB was removed on purpose; the sticky tab bar replaces it
+      assert.ok(!cockpitTabStats.fab, 'Cockpit quick-switch FAB must be removed (tab bar covers it)');
 
       // Test Tab Switch to Questions
       await page.evaluate(() => {
@@ -432,17 +433,17 @@ async function runMobileTouchQA() {
       });
       assert.strictEqual(cockpitActiveAfterTab, 'questions', 'Clicking Questions tab must set data-mobile-active="questions"');
 
-      // Test FAB Quick-Switch back to Passage
+      // Test Tab Switch back to Passage via segmented tab bar
       await page.evaluate(() => {
-        const fab = document.querySelector('#cd-mobile-quick-switch');
-        if (fab) fab.click();
+        const btn = document.querySelector('.cd-mobile-tab-btn[data-tab="passage"]');
+        if (btn) btn.click();
       });
-      const cockpitActiveAfterFab = await page.evaluate(() => {
+      const cockpitActiveAfterPassage = await page.evaluate(() => {
         const arena = document.querySelector('#cd-split-arena');
         return arena ? arena.getAttribute('data-mobile-active') : null;
       });
-      assert.strictEqual(cockpitActiveAfterFab, 'passage', 'Clicking Quick-Switch FAB must flip active pane back to "passage"');
-      console.log('  [PASS] Cockpit mobile segmented tab switcher & quick-switch FAB verified.');
+      assert.strictEqual(cockpitActiveAfterPassage, 'passage', 'Clicking Passage tab must flip active pane back to "passage"');
+      console.log('  [PASS] Cockpit mobile segmented tab switcher verified (FAB removed).');
 
       // 1-40 Question Matrix Button Touch Target Invariant
       const matrixButtonStats = await page.evaluate(() => {

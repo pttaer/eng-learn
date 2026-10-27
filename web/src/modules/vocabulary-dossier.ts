@@ -9,6 +9,7 @@ import { Cefr, srsTier } from '../core/cefr';
 import { levelsWithContent, defaultLevel, levelChipsHtml } from '../core/level-filter';
 import { UndoManager } from '../core/undo-manager';
 import { AcousticHaptics } from '../core/acoustic-haptics';
+import { t } from '../core/i18n';
 
 export type VocabMode = string;
 
@@ -19,6 +20,13 @@ const MODE_TABS: Record<string, string> = {
 };
 
 const prettyMode = (m: string) => m.split('_').map(w => w.charAt(0) + w.slice(1).toLowerCase()).join(' ');
+
+const getModeLabel = (m: string): string => {
+  if (m === 'ROOT_FORGE') return t('vocab.root_forge');
+  if (m === 'CEFR_ASCENT') return t('vocab.cefr_ascent');
+  if (m === 'PARTICLE_LAB') return t('vocab.particle_lab');
+  return (MODE_TABS[m] || prettyMode(m)).replace(/^Mode [A-C]: /, '');
+};
 
 export interface VocabItem {
   id: string;
@@ -57,6 +65,9 @@ export class VocabularyDossier {
       this.filterDeck();
       if (this.container.isConnected) this.render();
     });
+    window.addEventListener('eng:locale-changed', () => {
+      if (this.container.isConnected) this.render();
+    });
   }
 
   private modesAtLevel(): VocabMode[] {
@@ -81,22 +92,22 @@ export class VocabularyDossier {
     this.container.innerHTML = `
       <div class="vocab-apple-header">
         <!-- Segmented Mode Control -->
-        <div class="vocab-segmented-control" role="tablist" aria-label="Chế độ học từ vựng">
+        <div class="vocab-segmented-control" role="tablist" aria-label="${t('vocab.title')}">
           ${modes.map(m => `
             <button class="vocab-seg-btn mode-tab ${this.activeMode === m ? 'is-active' : ''}" data-mode="${m}" role="tab" aria-selected="${this.activeMode === m}">
-              ${(MODE_TABS[m] || prettyMode(m)).replace(/^Mode [A-C]: /, '')}
+              ${getModeLabel(m)}
             </button>
           `).join('')}
         </div>
 
         <!-- CEFR Level Chips & Progress Strip -->
         <div class="vocab-meta-bar">
-          <div class="vocab-level-chips" role="radiogroup" aria-label="Chọn cấp độ CEFR">
+          <div class="vocab-level-chips" role="radiogroup" aria-label="${t('action.filter_level')}">
             ${levelChipsHtml(levelsWithContent(this.allDeck), this.activeLevel)}
           </div>
           <div class="vocab-progress-badge">
-            <span class="vocab-count-indicator">Thẻ <strong class="card-counter">${this.currentIndex + 1} / ${totalCount}</strong></span>
-            <span class="streak-counter">${this.reviewCountInRun} đã ôn</span>
+            <span class="vocab-count-indicator"><strong class="card-counter">${t('vocab.card_counter', { current: this.currentIndex + 1, total: totalCount })}</strong></span>
+            <span class="streak-counter">${t('vocab.reviewed_count', { count: this.reviewCountInRun })}</span>
           </div>
         </div>
 
@@ -111,14 +122,14 @@ export class VocabularyDossier {
 
       <!-- Minimal Apple Navigation Bar -->
       <div class="vocab-apple-nav">
-        <button type="button" class="vocab-nav-btn nav-btn-prev" aria-label="Thẻ trước (Phím ←)">
-          ${icon('arrowLeft', 14)} <span>Trước</span>
+        <button type="button" class="vocab-nav-btn nav-btn-prev" aria-label="${t('vocab.prev')} (←)">
+          ${icon('arrowLeft', 14)} <span>${t('vocab.prev')}</span>
         </button>
         <div class="vocab-hints-pill">
-          <span>Phím tắt: <strong>SPACE</strong> lật • <strong>1</strong> chưa nhớ • <strong>2</strong> đã nhớ</span>
+          <span>${t('vocab.shortcut_hint')}</span>
         </div>
-        <button type="button" class="vocab-nav-btn nav-btn-next" aria-label="Thẻ tiếp theo (Phím →)">
-          <span>Tiếp</span> ${icon('arrowRight', 14)}
+        <button type="button" class="vocab-nav-btn nav-btn-next" aria-label="${t('vocab.next')} (→)">
+          <span>${t('vocab.next')}</span> ${icon('arrowRight', 14)}
         </button>
       </div>
     `;
@@ -191,7 +202,7 @@ export class VocabularyDossier {
       slot.innerHTML = `
         <div class="empty-state-notice">
           <div class="telemetry-label">[TIER DEPLETED]</div>
-          <p>No cards available for this mode and difficulty level.</p>
+          <p>${t('vocab.empty_tier')}</p>
         </div>
       `;
       return;
@@ -208,7 +219,7 @@ export class VocabularyDossier {
 
     let categoryLabel = `${item.mode.replace('_', ' ')} · ${item.cefrLevel}`;
     if (isRemind) {
-      categoryLabel = `SURPRISE FLASH REMIND`;
+      categoryLabel = t('vocab.surprise_remind');
     }
 
     let backSubText = '';
@@ -229,6 +240,7 @@ export class VocabularyDossier {
       category: categoryLabel,
       indexStr: `[ ${this.currentIndex + 1} / ${this.currentList.length} ]`,
       statusBadge,
+      hideFrontRating: true,
       front: {
         promptLabel: isRemind ? 'RETRIEVAL ENGRAM CHECK' : 'CHALLENGE // RECALL & DECONSTRUCT',
         mainText: item.wordOrChunk,
@@ -236,7 +248,7 @@ export class VocabularyDossier {
       },
       back: {
         promptLabel: 'SEMANTIC MATRIX & MORPHOLOGY',
-        mainText: `${item.definition}\n\nVietnamese: "${item.vietnamese}"`,
+        mainText: `${item.definition}\n\n${t('feedback.vietnamese_translation')}: "${item.vietnamese}"`,
         subText: backSubText,
         ipa: item.ipa
       },
@@ -258,7 +270,7 @@ export class VocabularyDossier {
     StorageManager.setCardState(cardId, nextCardState);
 
     const prevIndex = this.currentIndex;
-    UndoManager.register('Đã đánh giá từ vựng', () => {
+    UndoManager.register(t('vocab.rated_undo'), () => {
       const state = StorageManager.loadState();
       if (srsState) {
         state.cardStates[cardId] = srsState;
@@ -274,7 +286,7 @@ export class VocabularyDossier {
     this.reviewCountInRun += 1;
     const streakEl = this.container.querySelector('.streak-counter');
     if (streakEl) {
-      streakEl.textContent = `${this.reviewCountInRun} từ đã ôn`;
+      streakEl.textContent = t('vocab.reviewed_words', { count: this.reviewCountInRun });
     }
 
     // Roguelike surprise encounter logic:

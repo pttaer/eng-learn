@@ -1,5 +1,6 @@
 import { StorageManager } from '../utils/storage';
 import { HapticEngine } from './haptic-engine';
+import { AcousticHaptics } from './acoustic-haptics';
 
 export type SoundEffectType =
   | 'click'
@@ -448,6 +449,7 @@ export class AudioSynthesizer {
     // Restore saved volume and mute states
     try {
       this.isMuted = StorageManager.isSoundMuted();
+      AcousticHaptics.setMuted(this.isMuted);
       const savedVol = localStorage.getItem('eng_master_volume');
       if (savedVol !== null) {
         const parsed = parseFloat(savedVol);
@@ -641,6 +643,7 @@ export class AudioSynthesizer {
     try {
       localStorage.setItem('eng_master_muted', String(this.isMuted));
     } catch {}
+    AcousticHaptics.setMuted(this.isMuted);
     return this.isMuted;
   }
 
@@ -650,6 +653,7 @@ export class AudioSynthesizer {
     try {
       localStorage.setItem('eng_master_muted', String(this.isMuted));
     } catch {}
+    AcousticHaptics.setMuted(this.isMuted);
   }
 
   public static isMute(): boolean {

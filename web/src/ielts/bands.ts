@@ -5,6 +5,8 @@ const LISTENING: [number, number][] = [[39, 9], [37, 8.5], [35, 8], [32, 7.5], [
 /** Band for a raw score; scores out of fewer than 40 questions are scaled to 40. */
 export function rawToBand(skill: 'listening' | 'reading', raw: number, of = 40): number {
   const scaled = of === 40 ? raw : Math.round((raw / of) * 40);
+  if (!Number.isFinite(scaled) || scaled <= 0) return 0;
+  if (scaled <= 2) return 1;
   const table = skill === 'reading' ? READING : LISTENING;
   const hit = table.find(([min]) => scaled >= min);
   return hit ? hit[1] : 2;
@@ -12,6 +14,7 @@ export function rawToBand(skill: 'listening' | 'reading', raw: number, of = 40):
 
 /** IELTS overall: mean of the four bands, rounded to nearest half band (.25 and .75 round up). */
 export function averageBands(bands: number[]): number {
+  if (!bands.length) return 0;
   const mean = bands.reduce((a, b) => a + b, 0) / bands.length;
   return Math.round(mean * 2) / 2;
 }

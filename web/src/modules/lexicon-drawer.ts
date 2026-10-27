@@ -10,6 +10,7 @@ import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import vocabularyData from '../assets/data/vocabulary.json';
 import collocationsData from '../assets/data/collocations.json';
+import { t } from '../core/i18n';
 
 export interface LexiconEntry {
   id?: string;
@@ -279,41 +280,41 @@ export class LexiconDrawer {
             </button>
           </div>
         </div>
-        <button type="button" class="hud-btn lexicon-drawer-close" id="lexicon-drawer-close" aria-label="Close Lexicon Drawer" title="Close (Esc)">
+        <button type="button" class="hud-btn lexicon-drawer-close" id="lexicon-drawer-close" aria-label="${t('lexicon.close')}" title="Close (Esc)">
           ✕
         </button>
       </div>
 
       <div class="lexicon-drawer-body">
         <div class="lexicon-section lexicon-root-section" id="lexicon-root-section">
-          <div class="lexicon-section-label">GRECO-LATIN ROOT & MORPHOLOGY</div>
+          <div class="lexicon-section-label">${t('lexicon.etymology')}</div>
           <div class="lexicon-section-content lexicon-root-value" id="lexicon-root-val"></div>
         </div>
 
         <div class="lexicon-section lexicon-def-section">
-          <div class="lexicon-section-label">MEANING / DEFINITION</div>
+          <div class="lexicon-section-label">${t('lexicon.definition')}</div>
           <div class="lexicon-section-content lexicon-def-value" id="lexicon-def-val"></div>
         </div>
 
         <div class="lexicon-section lexicon-vn-section">
-          <div class="lexicon-section-label">VIETNAMESE EQUIVALENT</div>
+          <div class="lexicon-section-label">${t('lexicon.vietnamese')}</div>
           <div class="lexicon-section-content lexicon-vn-value" id="lexicon-vn-val"></div>
         </div>
 
         <div class="lexicon-section lexicon-colloc-section" id="lexicon-colloc-section">
-          <div class="lexicon-section-label">ACADEMIC COLLOCATIONS</div>
+          <div class="lexicon-section-label">${t('lexicon.collocations')}</div>
           <div class="lexicon-colloc-tags" id="lexicon-colloc-tags"></div>
         </div>
 
         <div class="lexicon-section lexicon-context-section" id="lexicon-context-section">
-          <div class="lexicon-section-label">CONTEXT & EXEMPLAR</div>
+          <div class="lexicon-section-label">${t('lexicon.context')}</div>
           <div class="lexicon-section-content lexicon-context-value" id="lexicon-context-val"></div>
         </div>
       </div>
 
       <div class="lexicon-drawer-footer">
         <button type="button" class="hud-btn lexicon-srs-btn" id="lexicon-srs-btn" aria-label="Add word to SRS Spaced Repetition Deck">
-          + Add to SRS Deck
+          ${t('lexicon.bookmark_srs')}
         </button>
         <div class="lexicon-srs-status" id="lexicon-srs-status" aria-live="polite"></div>
       </div>

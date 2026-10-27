@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="widget_bg_color">#12141a</color>
+    <color name="widget_border_color">#262a36</color>
+    <color name="widget_text_primary">#f3f4f6</color>
+    <color name="widget_text_secondary">#9ca3af</color>
+    <color name="widget_text_muted">#64748b</color>
+    <!-- App Main Color: Signature Celestial Lavender / Indigo (#a5b4fc) -->
+    <color name="widget_accent_primary">#a5b4fc</color>
+    <color name="widget_accent_amber">#a5b4fc</color>
+    <color name="widget_accent_star">#c4b5fd</color>
+    <color name="widget_accent_blue">#38bdf8</color>
+    <color name="widget_surface_pill">#1c2233</color>
+    <color name="widget_surface_button">#252b3b</color>
+    <color name="widget_tag_bg">#181f2f</color>
+    <color name="widget_tag_border">#2a354d</color>
+</resources>

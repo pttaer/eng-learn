@@ -76,6 +76,69 @@
       "qId": "r14-q13",
       "type": "COMPLETION_NOT_IN_PASSAGE",
       "detail": "Answer \"gardening and cooking\" not found in passage text"
+    },
+    {
+      "file": "reading-5.json",
+      "passageId": "r18",
+      "qId": "r18-q12",
+      "type": "COMPLETION_NOT_IN_PASSAGE",
+      "detail": "Answer \"sulfur dioxide\" not found in passage text"
+    },
+    {
+      "file": "reading-6.json",
+      "passageId": "r22",
+      "qId": "r22-q12",
+      "type": "COMPLETION_NOT_IN_PASSAGE",
+      "detail": "Answer \"mouth and gut\" not found in passage text"
+    },
+    {
+      "file": "reading-6.json",
+      "passageId": "r23",
+      "qId": "r23-q12",
+      "type": "COMPLETION_NOT_IN_PASSAGE",
+      "detail": "Answer \"1 degree\" not found in passage text"
+    },
+    {
+      "file": "reading-6.json",
+      "passageId": "r23",
+      "qId": "r23-q12",
+      "type": "COMPLETION_NOT_IN_PASSAGE",
+      "detail": "Answer \"1 degree\" not found in passage text"
+    },
+    {
+      "file": "reading-6.json",
+      "passageId": "r24",
+      "qId": "r24-q11",
+      "type": "COMPLETION_NOT_IN_PASSAGE",
+      "detail": "Answer \"vigor\" not found in passage text"
+    },
+    {
+      "file": "reading-7.json",
+      "passageId": "r27",
+      "qId": "r27-q12",
+      "type": "COMPLETION_NOT_IN_PASSAGE",
+      "detail": "Answer \"oxygen and hydrogen\" not found in passage text"
+    },
+    {
+      "file": "reading-7.json",
+      "passageId": "r27",
+      "qId": "r27-q12",
+      "type": "COMPLETION_NOT_IN_PASSAGE",
+      "detail": "Answer \"hydrogen, oxygen\" not found in passage text"
+    },
+    {
+      "file": "reading-7.json",
+      "passageId": "r28",
+      "qId": "r28-q12",
+      "type": "COMPLETION_NOT_IN_PASSAGE",
+      "detail": "Answer \"trophic cascades\" not found in passage text"
+    },
+    {
+      "file": "reading-7.json",
+      "passageId": "r29",
+      "qId": "r29-q13",
+      "type": "COMPLETION_NOT_IN_PASSAGE",
+      "detail": "Answer \"two times\" not found in passage text"
     }
   ],
   "listening": [
@@ -92,6 +155,13 @@
       "qId": "l1-s1-q02",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"zero seven seven zero nine five two double four nine one\" not found in script"
+    },
+    {
+      "file": "listening-1.json",
+      "secId": "l1-s1",
+      "qId": "l1-s1-q02",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"07709 524491\" not found in script"
     },
     {
       "file": "listening-1.json",
@@ -117,6 +187,27 @@
     {
       "file": "listening-1.json",
       "secId": "l1-s1",
+      "qId": "l1-s1-q03",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"8th July\" not found in script"
+    },
+    {
+      "file": "listening-1.json",
+      "secId": "l1-s1",
+      "qId": "l1-s1-q03",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"July 8th\" not found in script"
+    },
+    {
+      "file": "listening-1.json",
+      "secId": "l1-s1",
+      "qId": "l1-s1-q03",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"8th of July\" not found in script"
+    },
+    {
+      "file": "listening-1.json",
+      "secId": "l1-s1",
       "qId": "l1-s1-q04",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"19 August\" not found in script"
@@ -127,6 +218,27 @@
       "qId": "l1-s1-q04",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"August 19\" not found in script"
+    },
+    {
+      "file": "listening-1.json",
+      "secId": "l1-s1",
+      "qId": "l1-s1-q04",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"19th August\" not found in script"
+    },
+    {
+      "file": "listening-1.json",
+      "secId": "l1-s1",
+      "qId": "l1-s1-q04",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"August 19th\" not found in script"
+    },
+    {
+      "file": "listening-1.json",
+      "secId": "l1-s1",
+      "qId": "l1-s1-q04",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"19th of August\" not found in script"
     },
     {
       "file": "listening-1.json",
@@ -179,6 +291,34 @@
     },
     {
       "file": "listening-1.json",
+      "secId": "l1-s1",
+      "qId": "l1-s1-q08",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"15th June\" not found in script"
+    },
+    {
+      "file": "listening-1.json",
+      "secId": "l1-s1",
+      "qId": "l1-s1-q08",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"June 15th\" not found in script"
+    },
+    {
+      "file": "listening-1.json",
+      "secId": "l1-s1",
+      "qId": "l1-s1-q08",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"15th of June\" not found in script"
+    },
+    {
+      "file": "listening-1.json",
+      "secId": "l1-s1",
+      "qId": "l1-s1-q08",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"fifteenth of June\" not found in script"
+    },
+    {
+      "file": "listening-1.json",
       "secId": "l1-s2",
       "qId": "l1-s2-q07",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
@@ -200,6 +340,13 @@
     },
     {
       "file": "listening-1.json",
+      "secId": "l1-s2",
+      "qId": "l1-s2-q08",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"10 percent\" not found in script"
+    },
+    {
+      "file": "listening-1.json",
       "secId": "l1-s3",
       "qId": "l1-s3-q01",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
@@ -211,6 +358,13 @@
       "qId": "l1-s3-q02",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"60%\" not found in script"
+    },
+    {
+      "file": "listening-1.json",
+      "secId": "l1-s3",
+      "qId": "l1-s3-q02",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"60 percent\" not found in script"
     },
     {
       "file": "listening-1.json",
@@ -312,6 +466,20 @@
     },
     {
       "file": "listening-2.json",
+      "secId": "l2-s3",
+      "qId": "l2-s3-q06",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"3\" not found in script"
+    },
+    {
+      "file": "listening-2.json",
+      "secId": "l2-s3",
+      "qId": "l2-s3-q07",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"2\" not found in script"
+    },
+    {
+      "file": "listening-2.json",
       "secId": "l2-s4",
       "qId": "l2-s4-q04",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
@@ -376,6 +544,20 @@
     {
       "file": "listening-3.json",
       "secId": "l3-s1",
+      "qId": "l3-s1-q05",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"6\" not found in script"
+    },
+    {
+      "file": "listening-3.json",
+      "secId": "l3-s1",
+      "qId": "l3-s1-q05",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"6.00\" not found in script"
+    },
+    {
+      "file": "listening-3.json",
+      "secId": "l3-s1",
       "qId": "l3-s1-q07",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"book by phone\" not found in script"
@@ -397,6 +579,13 @@
     {
       "file": "listening-3.json",
       "secId": "l3-s1",
+      "qId": "l3-s1-q08",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"3rd\" not found in script"
+    },
+    {
+      "file": "listening-3.json",
+      "secId": "l3-s1",
       "qId": "l3-s1-q09",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"14 March 1999\" not found in script"
@@ -414,6 +603,20 @@
       "qId": "l3-s1-q09",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"14 March, 1999\" not found in script"
+    },
+    {
+      "file": "listening-3.json",
+      "secId": "l3-s1",
+      "qId": "l3-s1-q09",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"14th March 1999\" not found in script"
+    },
+    {
+      "file": "listening-3.json",
+      "secId": "l3-s1",
+      "qId": "l3-s1-q09",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"14th of March 1999\" not found in script"
     },
     {
       "file": "listening-3.json",
@@ -460,6 +663,13 @@
     {
       "file": "listening-3.json",
       "secId": "l3-s2",
+      "qId": "l3-s2-q06",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"4\" not found in script"
+    },
+    {
+      "file": "listening-3.json",
+      "secId": "l3-s2",
       "qId": "l3-s2-q07",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"4:30\" not found in script"
@@ -477,6 +687,27 @@
       "qId": "l3-s2-q07",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"4:30 pm\" not found in script"
+    },
+    {
+      "file": "listening-3.json",
+      "secId": "l3-s2",
+      "qId": "l3-s2-q07",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"4.30 pm\" not found in script"
+    },
+    {
+      "file": "listening-3.json",
+      "secId": "l3-s2",
+      "qId": "l3-s2-q07",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"16:30\" not found in script"
+    },
+    {
+      "file": "listening-3.json",
+      "secId": "l3-s2",
+      "qId": "l3-s2-q07",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"16.30\" not found in script"
     },
     {
       "file": "listening-3.json",
@@ -530,6 +761,20 @@
     {
       "file": "listening-3.json",
       "secId": "l3-s3",
+      "qId": "l3-s3-q09",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"20th November\" not found in script"
+    },
+    {
+      "file": "listening-3.json",
+      "secId": "l3-s3",
+      "qId": "l3-s3-q09",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"November 20th\" not found in script"
+    },
+    {
+      "file": "listening-3.json",
+      "secId": "l3-s3",
       "qId": "l3-s3-q10",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"4 December\" not found in script"
@@ -540,6 +785,27 @@
       "qId": "l3-s3-q10",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"December 4\" not found in script"
+    },
+    {
+      "file": "listening-3.json",
+      "secId": "l3-s3",
+      "qId": "l3-s3-q10",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"4th December\" not found in script"
+    },
+    {
+      "file": "listening-3.json",
+      "secId": "l3-s3",
+      "qId": "l3-s3-q10",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"4th of December\" not found in script"
+    },
+    {
+      "file": "listening-3.json",
+      "secId": "l3-s3",
+      "qId": "l3-s3-q10",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"December 4th\" not found in script"
     },
     {
       "file": "listening-3.json",
@@ -563,13 +829,6 @@
       "detail": "Answer \"neonicotinoids\" not found in script"
     },
     {
-      "file": "listening-3.json",
-      "secId": "l3-s4",
-      "qId": "l3-s4-q10",
-      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
-      "detail": "Answer \"limit\" not found in script"
-    },
-    {
       "file": "listening-4.json",
       "secId": "l4-s1",
       "qId": "l4-s1-q01",
@@ -579,9 +838,37 @@
     {
       "file": "listening-4.json",
       "secId": "l4-s1",
+      "qId": "l4-s1-q01",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"12th\" not found in script"
+    },
+    {
+      "file": "listening-4.json",
+      "secId": "l4-s1",
+      "qId": "l4-s1-q01",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"Friday 12\" not found in script"
+    },
+    {
+      "file": "listening-4.json",
+      "secId": "l4-s1",
       "qId": "l4-s1-q02",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"Monday 15th\" not found in script"
+    },
+    {
+      "file": "listening-4.json",
+      "secId": "l4-s1",
+      "qId": "l4-s1-q02",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"15th\" not found in script"
+    },
+    {
+      "file": "listening-4.json",
+      "secId": "l4-s1",
+      "qId": "l4-s1-q02",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"Monday 15\" not found in script"
     },
     {
       "file": "listening-4.json",
@@ -631,6 +918,13 @@
       "qId": "l4-s1-q09",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"six o'clock\" not found in script"
+    },
+    {
+      "file": "listening-4.json",
+      "secId": "l4-s1",
+      "qId": "l4-s1-q09",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"6\" not found in script"
     },
     {
       "file": "listening-4.json",
@@ -725,6 +1019,13 @@
     },
     {
       "file": "listening-4.json",
+      "secId": "l4-s2",
+      "qId": "l4-s2-q10",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"10\" not found in script"
+    },
+    {
+      "file": "listening-4.json",
       "secId": "l4-s3",
       "qId": "l4-s3-q01",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
@@ -773,6 +1074,27 @@
       "detail": "Answer \"9th of February\" not found in script"
     },
     {
+      "file": "listening-4.json",
+      "secId": "l4-s3",
+      "qId": "l4-s3-q10",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"9th February\" not found in script"
+    },
+    {
+      "file": "listening-4.json",
+      "secId": "l4-s3",
+      "qId": "l4-s3-q10",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"February 9th\" not found in script"
+    },
+    {
+      "file": "listening-4.json",
+      "secId": "l4-s4",
+      "qId": "l4-s4-q07",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"5\" not found in script"
+    },
+    {
       "file": "listening-5.json",
       "secId": "l5-s1",
       "qId": "l5-s1-q01",
@@ -803,6 +1125,13 @@
     {
       "file": "listening-5.json",
       "secId": "l5-s1",
+      "qId": "l5-s1-q02",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"EF3 72\" not found in script"
+    },
+    {
+      "file": "listening-5.json",
+      "secId": "l5-s1",
       "qId": "l5-s1-q04",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"Tuesday 22nd\" not found in script"
@@ -813,6 +1142,20 @@
       "qId": "l5-s1-q04",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"22nd\" not found in script"
+    },
+    {
+      "file": "listening-5.json",
+      "secId": "l5-s1",
+      "qId": "l5-s1-q04",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"Tuesday 22\" not found in script"
+    },
+    {
+      "file": "listening-5.json",
+      "secId": "l5-s1",
+      "qId": "l5-s1-q04",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"22\" not found in script"
     },
     {
       "file": "listening-5.json",
@@ -901,6 +1244,27 @@
     {
       "file": "listening-5.json",
       "secId": "l5-s2",
+      "qId": "l5-s2-q09",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"5.30 pm\" not found in script"
+    },
+    {
+      "file": "listening-5.json",
+      "secId": "l5-s2",
+      "qId": "l5-s2-q09",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"17:30\" not found in script"
+    },
+    {
+      "file": "listening-5.json",
+      "secId": "l5-s2",
+      "qId": "l5-s2-q09",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"17.30\" not found in script"
+    },
+    {
+      "file": "listening-5.json",
+      "secId": "l5-s2",
       "qId": "l5-s2-q10",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"11 am\" not found in script"
@@ -946,6 +1310,13 @@
       "qId": "l5-s3-q04",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"25 per cent\" not found in script"
+    },
+    {
+      "file": "listening-5.json",
+      "secId": "l5-s3",
+      "qId": "l5-s3-q04",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"25 percent\" not found in script"
     },
     {
       "file": "listening-5.json",
@@ -1002,6 +1373,13 @@
       "qId": "l5-s3-q10",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"10.30 on Wednesday 11th\" not found in script"
+    },
+    {
+      "file": "listening-5.json",
+      "secId": "l5-s3",
+      "qId": "l5-s3-q10",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"10:30 am\" not found in script"
     },
     {
       "file": "listening-5.json",
@@ -1093,6 +1471,13 @@
       "qId": "l6-s1-q08",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"half past eight\" not found in script"
+    },
+    {
+      "file": "listening-6.json",
+      "secId": "l6-s1",
+      "qId": "l6-s1-q08",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"8.30 am\" not found in script"
     },
     {
       "file": "listening-6.json",
@@ -1204,7 +1589,7 @@
       "secId": "l6-s3",
       "qId": "l6-s3-q10",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
-      "detail": "Answer \"6 (Friday)\" not found in script"
+      "detail": "Answer \"6th\" not found in script"
     },
     {
       "file": "listening-6.json",
@@ -1212,6 +1597,20 @@
       "qId": "l6-s3-q10",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"Friday 6th\" not found in script"
+    },
+    {
+      "file": "listening-6.json",
+      "secId": "l6-s3",
+      "qId": "l6-s3-q10",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"Friday 6\" not found in script"
+    },
+    {
+      "file": "listening-6.json",
+      "secId": "l6-s3",
+      "qId": "l6-s3-q10",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"6\" not found in script"
     },
     {
       "file": "listening-6.json",
@@ -1251,6 +1650,13 @@
     {
       "file": "listening-6.json",
       "secId": "l6-s4",
+      "qId": "l6-s4-q02",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"25 percent\" not found in script"
+    },
+    {
+      "file": "listening-6.json",
+      "secId": "l6-s4",
       "qId": "l6-s4-q03",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"transects\" not found in script"
@@ -1272,6 +1678,13 @@
     {
       "file": "listening-7.json",
       "secId": "l7-s1",
+      "qId": "l7-s1-q02",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"March 14\" not found in script"
+    },
+    {
+      "file": "listening-7.json",
+      "secId": "l7-s1",
       "qId": "l7-s1-q03",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"37\" not found in script"
@@ -1282,6 +1695,13 @@
       "qId": "l7-s1-q04",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"12.50\" not found in script"
+    },
+    {
+      "file": "listening-7.json",
+      "secId": "l7-s1",
+      "qId": "l7-s1-q04",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"12.5\" not found in script"
     },
     {
       "file": "listening-7.json",
@@ -1303,6 +1723,13 @@
       "qId": "l7-s1-q07",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"2\" not found in script"
+    },
+    {
+      "file": "listening-7.json",
+      "secId": "l7-s2",
+      "qId": "l7-s2-q02",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"200,000\" not found in script"
     },
     {
       "file": "listening-7.json",
@@ -1345,6 +1772,13 @@
       "qId": "l7-s3-q10",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"3rd December\" not found in script"
+    },
+    {
+      "file": "listening-7.json",
+      "secId": "l7-s3",
+      "qId": "l7-s3-q10",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"3rd of December\" not found in script"
     },
     {
       "file": "listening-7.json",

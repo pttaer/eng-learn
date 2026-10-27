@@ -217,5 +217,12 @@ if (!fs.existsSync(publicDir)) {
   fs.mkdirSync(publicDir, { recursive: true });
 }
 
-renderHudIcon(192, path.join(publicDir, 'icon-192.png'));
-renderHudIcon(512, path.join(publicDir, 'icon-512.png'));
+const p192 = path.join(publicDir, 'icon-192.png');
+const p512 = path.join(publicDir, 'icon-512.png');
+
+if (!process.argv.includes('--force') && fs.existsSync(p192) && fs.existsSync(p512)) {
+  console.log('[PWA ICON] Icons exist in public/ (skipping generation, use --force to overwrite)');
+} else {
+  renderHudIcon(192, p192);
+  renderHudIcon(512, p512);
+}
