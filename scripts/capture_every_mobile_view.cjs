@@ -325,11 +325,17 @@ async function run() {
     await page.goto(`${BASE_URL}#vocab`, { waitUntil: 'networkidle0' });
     await new Promise(r => setTimeout(r, 500));
     await page.evaluate(() => {
+      const container = document.querySelector('.corner-compass-container');
+      if (container) container.style.setProperty('display', 'block', 'important');
       const trigger = document.querySelector('.compass-trigger');
       if (trigger) trigger.click();
     });
     await new Promise(r => setTimeout(r, 500));
     await shot('24-mobile-corner-compass.png', 'Radial Quick-Navigation Corner Compass Menu', true);
+    await page.evaluate(() => {
+      const container = document.querySelector('.corner-compass-container');
+      if (container) container.style.removeProperty('display');
+    });
 
     // 25. Celestial Radar Pentagram Diagnostic Modal
     await page.goto(`${BASE_URL}#tree`, { waitUntil: 'networkidle0' });
@@ -394,7 +400,7 @@ async function run() {
       await page.evaluate(() => {
         localStorage.removeItem('eng_spotlight_completed');
         if (window.SpotlightTour && typeof window.SpotlightTour.start === 'function') {
-          window.SpotlightTour.start();
+          window.SpotlightTour.start(true);
         }
       });
       await new Promise(r => setTimeout(r, 600));
@@ -410,11 +416,21 @@ async function run() {
 
     // 30. Daily Streak Protection Toast Notification
     try {
-      await page.evaluateOnNewDocument(() => {
+      await page.evaluate(() => {
         localStorage.removeItem('eng_streak_alert_day');
+        try {
+          const raw = localStorage.getItem('eng_singularity_state_v1');
+          const st = raw ? JSON.parse(raw) : {};
+          st.cardStates = {};
+          localStorage.setItem('eng_singularity_state_v1', JSON.stringify(st));
+          const prog = { streak: 5, lastActiveDate: '2020-01-01', questsCompleted: [] };
+          localStorage.setItem('eng_progression', JSON.stringify(prog));
+        } catch (e) {}
+        if (window.NotificationEngine && typeof window.NotificationEngine.evaluateStatus === 'function') {
+          window.NotificationEngine.evaluateStatus();
+        }
       });
-      await page.goto(`${BASE_URL}#tree`, { waitUntil: 'networkidle0' });
-      await new Promise(r => setTimeout(r, 700));
+      await new Promise(r => setTimeout(r, 600));
       await shot('30-mobile-streak-toast.png', 'Daily Streak Protection Alert Toast Notification', true);
     } catch (e) {
       console.warn('Streak toast error:', e.message);
@@ -528,6 +544,16 @@ async function run() {
 
     // 44. IELTS Personalized Study Path
     await page.goto(`${BASE_URL}ielts.html#path`, { waitUntil: 'networkidle0' });
+    await page.evaluate(() => {
+      const mockAttempts = {
+        reading: [{ band: 6.0, timestamp: Date.now() }],
+        listening: [{ band: 6.0, timestamp: Date.now() }],
+        writing: [{ band: 6.0, timestamp: Date.now() }],
+        speaking: [{ band: 6.0, timestamp: Date.now() }]
+      };
+      localStorage.setItem('IELTS_ATTEMPTS', JSON.stringify(mockAttempts));
+    });
+    await page.reload({ waitUntil: 'networkidle0' });
     await new Promise(r => setTimeout(r, 600));
     await shot('44-mobile-ielts-study-path.png', 'IELTS Personalized 12-Week Study Path');
 

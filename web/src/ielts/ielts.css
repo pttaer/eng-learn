@@ -1258,7 +1258,7 @@ small, sub, sup { font-size: var(--font-kicker); }
 .ie-trap-btn.is-incorrect { background: rgba(239, 68, 68, 0.15); border-color: #ef4444; color: #ef4444; }
 
 .ie-input-row { display: flex; gap: var(--space-8); align-items: center; flex-wrap: wrap; }
-.ie-trap-input { flex: 1; min-width: 220px; padding: var(--space-8) var(--space-12); background: var(--bg-surface-sunk); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--ink-primary); font-size: var(--text-sm); }
+.ie-trap-input { flex: 1; min-width: 220px; min-height: var(--touch-target-min, 44px); box-sizing: border-box; padding: var(--space-8) var(--space-12); background: var(--bg-surface-sunk); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--ink-primary); font-size: max(16px, var(--font-body, 14px)); }
 .ie-trap-input:focus { border-color: var(--accent-cyan); outline: none; }
 .ie-trap-input.is-valid { border-color: #22c55e; background: rgba(34, 197, 94, 0.08); }
 .ie-trap-input.is-invalid { border-color: #ef4444; background: rgba(239, 68, 68, 0.08); }

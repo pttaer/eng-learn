@@ -228,9 +228,11 @@
 
 .mission-task-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--space-12);
   padding: var(--space-8) var(--space-12);
+  min-height: var(--touch-target-min, 44px);
+  box-sizing: border-box;
   border: 1px solid var(--border-hairline);
   border-radius: var(--radius-sm, 6px);
   cursor: pointer;

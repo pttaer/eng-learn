@@ -69,7 +69,14 @@ export interface DrillSetFile {
 export type DrillResponse = number | string | boolean | string[] | null | undefined;
 
 export function normaliseAnswer(text: string): string {
-  return text.trim().toLowerCase().replace(/\s+/g, ' ');
+  return text
+    .trim()
+    .toLowerCase()
+    .replace(/[’‘]/g, "'")
+    .replace(/[“”]/g, '"')
+    .replace(/[.,!?;:]+$/, '')
+    .trim()
+    .replace(/\s+/g, ' ');
 }
 
 export function isItemCorrect(item: DrillItem, response: DrillResponse): boolean {

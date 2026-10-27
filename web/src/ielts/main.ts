@@ -91,7 +91,7 @@ const ALL_ROUTES: RouteItem[] = [
         h(
           'p',
           'ie-lead',
-          'Exam-format practice for all four skills. Listening and Reading are scored with official raw-score tables. Writing and Speaking give automatic checks plus rubric ratings. Everything runs 100% offline in your browser.'
+          'Exam-format practice for all four skills. Listening and Reading are scored with standard raw-score conversion tables. Writing and Speaking give automatic checks plus rubric ratings. Everything runs 100% offline in your browser.'
         ),
         homeSuites(),
         progressSection(),
@@ -158,7 +158,7 @@ function homeSuites(): HTMLElement {
     {
       title: 'Academic Reading Suite',
       badge: 'Passages + Drills',
-      desc: '3 timed authentic academic reading passages with official band scoring, plus the 14 Question-Type Attack Drills Lab and live Exam Synonym Engine.',
+      desc: '3 timed authentic academic reading passages with calibrated band scoring, plus the 14 Question-Type Attack Drills Lab and live Exam Synonym Engine.',
       primaryLink: '#reading',
       primaryText: 'Timed Passages',
       subLink: '#reading-drills',
@@ -201,7 +201,7 @@ function homeSuites(): HTMLElement {
     {
       title: 'Full Mock Exam Cockpit',
       badge: 'CD-IELTS Simulator',
-      desc: 'Complete 4-skill timed mock exams replicating official British Council / IDP test day conditions with split-screen resizer and theme picker.',
+      desc: 'Complete 4-skill timed mock exams replicating computer-delivered test day conditions with split-screen resizer and theme picker.',
       primaryLink: '#mock',
       primaryText: 'Start Full Mock Exam'
     }

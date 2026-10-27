@@ -1077,10 +1077,10 @@ body.zen-active,
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    min-width: 48px;
-    min-height: 48px;
-    width: 48px;
-    height: 48px;
+    min-width: var(--touch-target-min, 44px);
+    min-height: var(--touch-target-min, 44px);
+    width: var(--touch-target-min, 44px);
+    height: var(--touch-target-min, 44px);
     padding: 0;
     font-size: var(--font-h2);
     font-weight: 700;

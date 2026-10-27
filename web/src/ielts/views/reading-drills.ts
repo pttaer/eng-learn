@@ -102,7 +102,7 @@ export const READING_DRILLS: ReadingDrillItem[] = [
     inputType: 'text',
     correctAnswer: ['two months', 'approximately two months'],
     trapExplanation:
-      'Word Count Penalty: Writing "of approximately two months" (4 words) is automatically marked incorrect on official IELTS. Drop extraneous prepositions.',
+      'Word Count Penalty: Writing "of approximately two months" (4 words) is automatically marked incorrect on IELTS. Drop extraneous prepositions.',
     rationale:
       'The passage states the contractor experienced an "unavoidable delay of approximately two months". Lifting "two months" or "approximately two months" precisely answers the time lost within the 3-word limit.'
   },
@@ -429,7 +429,7 @@ export function readingDrillsView(root: HTMLElement): () => void {
     <div class="ie-drills-title-group">
       <div class="ie-badge-band ie-badge-reading-tag">READING LAB</div>
       <h1 class="ie-title">14 Reading Question-Type Attack Drills</h1>
-      <p class="ie-lead">Master Keino Campbell’s Band 7+ tactical algorithms for all 14 official IELTS Reading question types. Featuring live passage scanning, instant synonym matrix mapping, and granular examiner error deconstruction.</p>
+      <p class="ie-lead">Master Keino Campbell’s Band 7+ tactical algorithms for all 14 Academic Reading question types. Featuring live passage scanning, instant synonym matrix mapping, and granular examiner error deconstruction.</p>
     </div>
   `;
   container.append(head);

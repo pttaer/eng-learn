@@ -14,6 +14,6 @@ export function report(): HTMLElement {
       <div class="ie-bandcell ie-bandcell-main"><small>Overall</small><b>${known.length === 4 ? averageBands(known).toFixed(1) : '–'}</b>${known.length < 4 ? `<em>needs all 4 skills</em>` : ''}</div></div>
     <h3>${rd.ready ? 'Ready for 7.0' : 'Not yet ready for 7.0'}</h3>
     <ul class="ie-breakdown">${rd.lines.map(l => `<li><span>${esc(l)}</span></li>`).join('')}</ul>
-    <p class="ie-note">Bands use the last 3 attempts per skill. Listening and Reading come from official raw-score tables. Writing and Speaking come from your own rubric ratings, so they can only support the result, never certify it.</p>`;
+    <p class="ie-note">Bands use the last 3 attempts per skill. Listening and Reading come from standard raw-score conversion tables. Writing and Speaking come from your own rubric ratings, so they can only support the result, never certify it.</p>`;
   return box;
 }

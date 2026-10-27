@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-block);
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .drills-head {
@@ -13,7 +17,11 @@
 }
 
 .drills-title {
+  font-family: var(--font-mono);
   font-size: var(--font-h2);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   margin: 0;
 }
 
@@ -268,8 +276,4 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-  .drills-dossier {
-    padding-bottom: calc(var(--safe-bottom-dock) + env(safe-area-inset-bottom));
-  }
-}
+
