@@ -30,17 +30,25 @@ export function parseWordConstraint(text: string): WordConstraint | null {
 }
 
 export function countWordsAndNumbers(text: string): { words: number; numbers: number; total: number } {
-  const tokens = text.trim().split(/\s+/).filter(Boolean);
+  const cleaned = text
+    .replace(/[’‘]/g, "'")
+    .replace(/[“”]/g, '"')
+    .trim();
+  const rawTokens = cleaned.split(/\s+/).filter(Boolean);
   let words = 0;
   let numbers = 0;
-  for (const t of tokens) {
-    if (/^\d+(?:[.,]\d+)?%?$/.test(t)) {
+  for (const t of rawTokens) {
+    // Strip trailing sentence punctuation attached to words or numbers
+    const cleanToken = t.replace(/[.,;!?]+$/, '');
+    if (!cleanToken) continue;
+    // Numbers: digits, decimals, thousands separators, percentages, currency symbols, and simple ranges (e.g. 10-15)
+    if (/^[$£€]?\d+(?:[.,]\d+)*%?$|^\d+-\d+$/.test(cleanToken)) {
       numbers++;
     } else {
       words++;
     }
   }
-  return { words, numbers, total: tokens.length };
+  return { words, numbers, total: words + numbers };
 }
 
 export function countWords(text: string): number {
@@ -73,6 +81,10 @@ export function resolveQuestionWordConstraint(q: IeltsQuestion): WordConstraint 
   return null;
 }
 
+function escapeRegex(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 export function explainMiss(q: IeltsQuestion, given: string): MissReason {
   if (isCorrect(q, given)) return 'correct';
   const constraint = resolveQuestionWordConstraint(q);
@@ -84,7 +96,10 @@ export function explainMiss(q: IeltsQuestion, given: string): MissReason {
     const accepted = Array.isArray(q.answer) ? q.answer : [q.answer];
     if (accepted.some(a => {
       const na = norm(a);
-      return na.length > 0 && normGiven.includes(na);
+      if (!na) return false;
+      // Match as whole tokens/phrases rather than arbitrary substrings (e.g. avoid 'art' in 'smart')
+      const pattern = new RegExp(`(?:^|\\s)${escapeRegex(na)}(?:\\s|$)`);
+      return pattern.test(normGiven);
     })) {
       return 'exceeded_limit';
     }

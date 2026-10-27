@@ -17,7 +17,7 @@ export const typeLabel = (t: string): string => TYPE_LABEL[t] || t;
 
 const keyOf = (opt: string): string => opt.split(/[.)]/)[0].trim();
 
-function control(q: IeltsQuestion, n: number, onChange: () => void): HTMLElement {
+function control(q: IeltsQuestion, n: number): HTMLElement {
   const wrap = h('div', 'ie-q', `<div class="ie-q-head"><span class="ie-q-n">${n}</span><span class="ie-q-prompt">${esc(q.prompt)}</span></div>`);
   const body = h('div', 'ie-q-body');
   wrap.dataset.qid = q.id;
@@ -26,14 +26,12 @@ function control(q: IeltsQuestion, n: number, onChange: () => void): HTMLElement
     body.classList.add('ie-choices');
     choices.forEach(c => {
       const l = h('label', 'ie-choice', `<input type="radio" name="${q.id}" value="${c}"><span>${c}</span>`);
-      l.querySelector('input')!.addEventListener('change', onChange);
       body.append(l);
     });
   } else if (q.type === 'mcq') {
     body.classList.add('ie-choices', 'ie-choices-col');
     (q.options || []).forEach(o => {
       const l = h('label', 'ie-choice', `<input type="radio" name="${q.id}" value="${esc(keyOf(o))}"><span>${esc(o)}</span>`);
-      l.querySelector('input')!.addEventListener('change', onChange);
       body.append(l);
     });
   } else if (q.type === 'heading' || q.type === 'match' || q.type === 'features') {
@@ -41,7 +39,6 @@ function control(q: IeltsQuestion, n: number, onChange: () => void): HTMLElement
     sel.name = q.id;
     sel.setAttribute('aria-label', `Answer for question ${n}`);
     sel.innerHTML = `<option value="">Choose…</option>` + (q.options || []).map(o => `<option value="${esc(keyOf(o))}">${esc(o)}</option>`).join('');
-    sel.addEventListener('change', onChange);
     body.append(sel);
   } else {
     const inp = h('input', 'ie-input');
@@ -57,22 +54,23 @@ function control(q: IeltsQuestion, n: number, onChange: () => void): HTMLElement
     body.append(inp);
 
     if (constraint && constraint.maxWords != null) {
-      const meter = h('span', 'ie-word-meter', `0/${constraint.maxWords} words`);
+      const formatMeter = (words: number, within: boolean): string => {
+        if (constraint.maxWords === 0) {
+          return within ? 'Number only' : 'Words not allowed (Number only!)';
+        }
+        return within
+          ? `${words}/${constraint.maxWords} words`
+          : `${words}/${constraint.maxWords} words (Exceeds limit!)`;
+      };
+      const meter = h('span', 'ie-word-meter', formatMeter(0, true));
       const updateMeter = () => {
         const { words } = countWordsAndNumbers(inp.value);
         const within = isWithinLimit(inp.value, constraint.maxWords, constraint.allowNumber);
-        meter.textContent = within
-          ? `${words}/${constraint.maxWords} words`
-          : `${words}/${constraint.maxWords} words (Exceeds limit!)`;
+        meter.textContent = formatMeter(words, within);
         meter.classList.toggle('is-exceeded', !within);
       };
-      inp.addEventListener('input', () => {
-        updateMeter();
-        onChange();
-      });
+      inp.addEventListener('input', updateMeter);
       body.append(meter);
-    } else {
-      inp.addEventListener('input', onChange);
     }
   }
   wrap.append(body);
@@ -127,7 +125,7 @@ export function renderQuestions(
       el.append(h('ul', 'ie-q-list', q.options.map(o => `<li>${esc(o)}</li>`).join('')));
       lastOptions.list = q.options;
     }
-    el.append(control(q, n++, handleUpdate));
+    el.append(control(q, n++));
   }
 
   el.addEventListener('input', handleUpdate);

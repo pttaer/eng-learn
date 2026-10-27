@@ -2892,7 +2892,7 @@ small, sub, sup { font-size: var(--font-kicker); }
     align-items: center;
     justify-content: space-between;
     gap: 8px;
-    padding: 8px var(--pad-screen-left, 12px) calc(var(--safe-bottom-dock, 84px) + env(safe-area-inset-bottom)) var(--pad-screen-left, 12px);
+    padding: 8px var(--pad-screen-right, 12px) calc(var(--safe-bottom-dock, 84px) + env(safe-area-inset-bottom)) var(--pad-screen-left, 12px);
     background: var(--bg-surface, #ffffff);
     border-top: 1px solid var(--border-hairline, rgba(0, 0, 0, 0.08));
     box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
@@ -2956,6 +2956,14 @@ small, sub, sup { font-size: var(--font-kicker); }
   }
   .ie-stage {
     padding-bottom: calc(var(--safe-bottom-dock, 84px) + 24px + env(safe-area-inset-bottom));
+  }
+  /* Invariant 4: Prevent iOS Safari auto-zoom on input focus */
+  .ie-input,
+  .ie-select,
+  input,
+  select,
+  textarea {
+    font-size: max(16px, var(--font-body, 16px)) !important;
   }
 }
 

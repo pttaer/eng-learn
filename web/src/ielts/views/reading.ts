@@ -12,22 +12,54 @@ const PASSAGES = readingData as ReadingPassage[];
 
 export interface TestResult { raw: number; of: number; band: number; byType: SetScore['byType'] }
 
-function getRangeOffsets(paraEl: HTMLElement, range: Range): { start: number; end: number } | null {
+function getRangeOffsets(
+  paraEl: HTMLElement,
+  range: Range
+): { start: number; end: number } | null {
+  const startsInLabel = (range.startContainer.nodeType === Node.TEXT_NODE &&
+    (range.startContainer.parentElement as HTMLElement)?.closest('.ie-plabel')) ||
+    (range.startContainer as HTMLElement)?.classList?.contains('ie-plabel');
+  const endsInLabel = (range.endContainer.nodeType === Node.TEXT_NODE &&
+    (range.endContainer.parentElement as HTMLElement)?.closest('.ie-plabel')) ||
+    (range.endContainer as HTMLElement)?.classList?.contains('ie-plabel');
+
+  // If selection is entirely contained within the paragraph label itself, ignore
+  if (startsInLabel && endsInLabel && paraEl.contains(range.startContainer) && paraEl.contains(range.endContainer)) {
+    return null;
+  }
+
+  const startsInside = paraEl.contains(range.startContainer) && !startsInLabel;
+  const endsInside = paraEl.contains(range.endContainer) && !endsInLabel;
+
   let currentOffset = 0;
-  let start = -1;
+  let start = startsInside ? -1 : 0;
   let end = -1;
 
-  const walker = document.createTreeWalker(paraEl, NodeFilter.SHOW_TEXT);
+  const walker = document.createTreeWalker(paraEl, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      if ((node.parentElement as HTMLElement)?.closest('.ie-plabel')) {
+        return NodeFilter.FILTER_REJECT;
+      }
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+
   let node: Node | null;
   while ((node = walker.nextNode())) {
     const len = node.textContent?.length || 0;
-    if (node === range.startContainer) {
+    if (startsInside && node === range.startContainer) {
       start = currentOffset + range.startOffset;
     }
-    if (node === range.endContainer) {
+    if (endsInside && node === range.endContainer) {
       end = currentOffset + range.endOffset;
     }
     currentOffset += len;
+  }
+
+  if (currentOffset === 0) return null;
+
+  if (!endsInside) {
+    end = currentOffset;
   }
 
   if (start === -1 && range.startContainer === paraEl) {
@@ -38,7 +70,10 @@ function getRangeOffsets(paraEl: HTMLElement, range: Range): { start: number; en
   }
 
   if (start !== -1 && end !== -1 && start < end) {
-    return { start, end };
+    return {
+      start: Math.max(0, start),
+      end: Math.min(currentOffset, end)
+    };
   }
   return null;
 }
@@ -169,7 +204,7 @@ export function mountReadingTest(
     const text = h('article', 'ie-passage');
     renderPassageContent(text, p, highlightsMap.get(p.id) || [], undefined);
 
-    // Clicking existing mark clears it
+    // Tapping existing mark shows floating action pill to remove it
     text.addEventListener('click', (e) => {
       const mark = (e.target as HTMLElement).closest<HTMLElement>('.ie-mark');
       if (!mark) return;
@@ -179,10 +214,29 @@ export function mountReadingTest(
       const start = Number(mark.dataset.start);
       const end = Number(mark.dataset.end);
 
-      const current = highlightsMap.get(p.id) || [];
-      const updated = current.filter(h => !(h.paraIndex === pIdx && h.start <= start && h.end >= end));
-      highlightsMap.set(p.id, updated);
-      renderPassageContent(text, p, updated, activeEvidence);
+      const rect = mark.getBoundingClientRect();
+      pill.innerHTML = `
+        <button type="button" class="ie-pill-btn ie-pill-remove-mark" title="Remove highlight">🗑️ Remove highlight</button>
+        <button type="button" class="ie-pill-btn ie-pill-cancel" title="Cancel">✕</button>
+      `;
+      pill.hidden = false;
+      pill.style.position = 'fixed';
+      pill.style.top = `${Math.max(10, rect.top - 48)}px`;
+      pill.style.left = `${Math.max(10, rect.left + rect.width / 2)}px`;
+
+      const onRemove = () => {
+        const current = highlightsMap.get(p.id) || [];
+        const updated = current.filter(h => !(h.paraIndex === pIdx && h.start < end && h.end > start));
+        highlightsMap.set(p.id, updated);
+        renderPassageContent(text, p, updated, activeEvidence);
+        pill.hidden = true;
+      };
+      const onCancel = () => {
+        pill.hidden = true;
+      };
+
+      pill.querySelector('.ie-pill-remove-mark')?.addEventListener('click', onRemove, { once: true });
+      pill.querySelector('.ie-pill-cancel')?.addEventListener('click', onCancel, { once: true });
     });
 
     const form = renderQuestions(p.questions, n, (answered, total) => {
@@ -219,15 +273,16 @@ export function mountReadingTest(
         chip = h('div', 'ie-return-chip');
         text.prepend(chip);
       }
-      const qNum = p.questions.findIndex(x => x.id === qid) + 1;
+      const card = pane.querySelector<HTMLElement>(`[data-qid="${qid}"]`);
+      const qNum = card?.querySelector('.ie-q-n')?.textContent ||
+        String(passages.slice(0, i).reduce((sum, prevP) => sum + prevP.questions.length, 0) + p.questions.findIndex(x => x.id === qid) + 1);
       chip.innerHTML = `<button type="button" class="ie-btn-return">↩ Back to Question #${qNum}</button>`;
       chip.querySelector('.ie-btn-return')!.addEventListener('click', () => {
-        switchMobilePane('questions');
+        switchMobilePane('questions', true);
         chip?.remove();
         activeEvidence = undefined;
         renderPassageContent(text, p, highlightsMap.get(p.id) || [], undefined);
 
-        const card = pane.querySelector<HTMLElement>(`[data-qid="${qid}"]`);
         if (card) {
           card.scrollIntoView({ behavior: 'smooth', block: 'center' });
           card.setAttribute('tabindex', '-1');
@@ -244,6 +299,14 @@ export function mountReadingTest(
 
     const t = h('button', 'ie-tab' + (i === 0 ? ' is-on' : ''), passages.length > 1 ? `Passage ${i + 1}` : 'Passage');
     t.addEventListener('click', () => {
+      const oldP = passages[currentPassageIndex];
+      const cur = scrollMap.get(oldP.id) || { passage: 0, questions: 0 };
+      if (typeof window !== 'undefined') {
+        if (mobilePane === 'passage') cur.passage = window.scrollY;
+        else cur.questions = window.scrollY;
+        scrollMap.set(oldP.id, cur);
+      }
+
       currentPassageIndex = i;
       panes.forEach((x, j) => {
         x.hidden = j !== i;
@@ -251,6 +314,15 @@ export function mountReadingTest(
       });
       tabs.querySelectorAll('.ie-tab').forEach((x, j) => x.classList.toggle('is-on', j === i));
       updateDockCounter(i);
+
+      const newP = passages[i];
+      const newCur = scrollMap.get(newP.id) || { passage: 0, questions: 0 };
+      if (typeof window !== 'undefined' && typeof window.scrollTo === 'function') {
+        const restoreY = mobilePane === 'passage' ? newCur.passage : newCur.questions;
+        requestAnimationFrame(() => {
+          window.scrollTo({ top: restoreY, behavior: 'instant' as ScrollBehavior });
+        });
+      }
     });
     tabs.append(t);
   });
@@ -284,33 +356,16 @@ export function mountReadingTest(
   root.addEventListener('focusout', onFocusOut);
 
   // Floating highlight pill logic
-  const updateSelectionPill = () => {
-    if (typeof window === 'undefined' || typeof window.getSelection !== 'function') return;
-    const sel = window.getSelection();
-    if (!sel || sel.isCollapsed || !sel.rangeCount) {
-      pill.hidden = true;
-      return;
-    }
-    const range = sel.getRangeAt(0);
-    const activePane = panes[currentPassageIndex];
-    const article = activePane?.querySelector('.ie-passage');
-    if (!article || !article.contains(range.commonAncestorContainer)) {
-      pill.hidden = true;
-      return;
-    }
-    const rect = range.getBoundingClientRect();
-    if (rect.width === 0 && rect.height === 0) {
-      pill.hidden = true;
-      return;
-    }
-    pill.hidden = false;
-    pill.style.position = 'fixed';
-    pill.style.top = `${Math.max(10, rect.top - 48)}px`;
-    pill.style.left = `${Math.max(10, rect.left + rect.width / 2)}px`;
+  const renderSelectionPillButtons = () => {
+    pill.innerHTML = `
+      <button type="button" class="ie-pill-btn ie-pill-mark" title="Highlight text">🖍️ Highlight</button>
+      <button type="button" class="ie-pill-btn ie-pill-clear" title="Clear selection">✕ Clear</button>
+    `;
+    pill.querySelector('.ie-pill-mark')?.addEventListener('click', onMarkClick);
+    pill.querySelector('.ie-pill-clear')?.addEventListener('click', onClearClick);
   };
-  document.addEventListener('selectionchange', updateSelectionPill);
 
-  pill.querySelector('.ie-pill-mark')?.addEventListener('click', () => {
+  const onMarkClick = () => {
     if (typeof window === 'undefined' || typeof window.getSelection !== 'function') return;
     const sel = window.getSelection();
     if (!sel || sel.isCollapsed || !sel.rangeCount) return;
@@ -341,14 +396,44 @@ export function mountReadingTest(
 
     sel.removeAllRanges();
     pill.hidden = true;
-  });
+  };
 
-  pill.querySelector('.ie-pill-clear')?.addEventListener('click', () => {
+  const onClearClick = () => {
     if (typeof window !== 'undefined' && typeof window.getSelection === 'function') {
       window.getSelection()?.removeAllRanges();
     }
     pill.hidden = true;
-  });
+  };
+
+  const updateSelectionPill = () => {
+    if (typeof window === 'undefined' || typeof window.getSelection !== 'function') return;
+    const sel = window.getSelection();
+    if (!sel || sel.isCollapsed || !sel.rangeCount) {
+      // Don't auto-hide if a mark action menu is showing
+      if (!pill.querySelector('.ie-pill-remove-mark')) {
+        pill.hidden = true;
+      }
+      return;
+    }
+    const range = sel.getRangeAt(0);
+    const activePane = panes[currentPassageIndex];
+    const article = activePane?.querySelector('.ie-passage');
+    if (!article || !article.contains(range.commonAncestorContainer)) {
+      pill.hidden = true;
+      return;
+    }
+    const rect = range.getBoundingClientRect();
+    if (rect.width === 0 && rect.height === 0) {
+      pill.hidden = true;
+      return;
+    }
+    renderSelectionPillButtons();
+    pill.hidden = false;
+    pill.style.position = 'fixed';
+    pill.style.top = `${Math.max(10, rect.top - 48)}px`;
+    pill.style.left = `${Math.max(10, rect.left + rect.width / 2)}px`;
+  };
+  document.addEventListener('selectionchange', updateSelectionPill);
 
   // Media query listener
   const mql = typeof window !== 'undefined' && typeof window.matchMedia === 'function'
@@ -366,8 +451,9 @@ export function mountReadingTest(
   const finish = (): void => {
     timer?.stop();
     submit.disabled = true;
-    dock.hidden = true;
     pill.hidden = true;
+    dockClock.textContent = 'Review';
+    dockClock.classList.remove('ie-urgent');
     const total: SetScore = { raw: 0, of: 0, byType: {}, wrong: [] };
     forms.forEach(f => {
       const s = f.reveal();
@@ -379,6 +465,7 @@ export function mountReadingTest(
         c.n += v.n;
       }
     });
+    dockQuestionsBtn.textContent = `✍️ Questions (${total.raw}/${total.of})`;
     const band = rawToBand('reading', total.raw, total.of);
     addAttempt({ skill: 'reading', itemId: passages.map(p => p.id).join('+'), band, raw: total.raw, of: total.of, byType: total.byType, mock });
     result.hidden = false;

@@ -72,6 +72,14 @@ assert.strictEqual(isWithinLimit('year 1450', 0, true), false); // 1 word > 0
 // Percentages and decimals
 assert.strictEqual(isWithinLimit('80%', 0, true), true);
 assert.strictEqual(isWithinLimit('12.5', 0, true), true);
+
+// Large numbers with multiple commas and trailing punctuation
+assert.strictEqual(isWithinLimit('1,000,000', 0, true), true);
+assert.strictEqual(isWithinLimit('1440.', 0, true), true);
+assert.strictEqual(isWithinLimit('$30', 0, true), true);
+assert.strictEqual(isWithinLimit('£50', 0, true), true);
+assert.strictEqual(isWithinLimit('10-15', 0, true), true);
+assert.strictEqual(isWithinLimit('100,000 people', 2, true), true);
 console.log('   ✓ isWithinLimit passed.');
 
 // 3. explainMiss
@@ -104,6 +112,19 @@ const qArrayAns = {
 assert.strictEqual(explainMiss(qArrayAns, 'months'), 'correct');
 assert.strictEqual(explainMiss(qArrayAns, 'several months'), 'exceeded_limit');
 assert.strictEqual(explainMiss(qArrayAns, 'years'), 'wrong');
+
+// Substring false-positive prevention: 'art' should not trigger on 'smart'
+const qArt = {
+  id: 'q3',
+  type: 'complete',
+  prompt: 'ONE WORD ONLY: It was a form of ______.',
+  answer: 'art',
+  why: 'Paragraph A: work of art',
+  maxWords: 1,
+  allowNumber: false
+};
+assert.strictEqual(explainMiss(qArt, 'a smart solution for the entire problem'), 'wrong'); // 7 words, 'smart' contains 'art' but is not 'art'
+assert.strictEqual(explainMiss(qArt, 'beautiful work of art'), 'exceeded_limit'); // contains whole token 'art'
 console.log('   ✓ explainMiss passed.');
 
 // 4. mergeHighlightRanges

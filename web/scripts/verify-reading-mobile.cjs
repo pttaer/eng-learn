@@ -32,6 +32,11 @@ assert(cssContent.includes('@media (max-width: 768px)'), 'Must include @media (m
 assert(cssContent.includes('--safe-bottom-dock'), 'Must utilize --safe-bottom-dock');
 assert(cssContent.includes('--touch-target-min'), 'Must utilize --touch-target-min');
 assert(cssContent.includes('--pad-screen-left'), 'Must utilize --pad-screen-left');
+assert(cssContent.includes('--pad-screen-right'), 'Must utilize --pad-screen-right');
+assert(
+  /font-size:\s*max\(16px/i.test(cssContent),
+  'Must enforce font-size: max(16px, ...) on mobile to prevent iOS Safari auto-zoom'
+);
 
 // Pane visibility rules on mobile
 assert(
