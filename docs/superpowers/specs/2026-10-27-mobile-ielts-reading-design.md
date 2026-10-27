@@ -94,8 +94,8 @@ IELTS Academic Reading tests assess 3 passages (40 questions total) in 60 minute
 
 ---
 
-### Pillar D: Live Word-Limit Validation Engine
-* **Constraint Parsing:**
+### Pillar D: Live Word-Limit Validation Engine & Miss Diagnostics
+* **Constraint Parsing Semantics (Fix 3 & Fix 4):**
   * Parsed once on test initialization into:
     ```ts
     export interface WordConstraint {
@@ -103,17 +103,70 @@ IELTS Academic Reading tests assess 3 passages (40 questions total) in 60 minute
       allowNumber: boolean;
     }
     ```
-  * Matches:
-    - `/NO MORE THAN (ONE|TWO|THREE) WORDS(?:\s+AND\/OR A NUMBER)?/i`
-    - `/ONE WORD(?:\s+ONLY)?(?:\s+AND\/OR A NUMBER)?/i`
-    - `/(?:A|ONE) NUMBER ONLY/i`
+  * Semantic rules:
+    - `"A NUMBER ONLY"` / `"ONE NUMBER ONLY"`: `maxWords: 0, allowNumber: true`.
+    - `"NO MORE THAN TWO WORDS AND/OR A NUMBER"`: `maxWords: 2, allowNumber: true`.
+    - `"NO MORE THAN THREE WORDS"`: `maxWords: 3, allowNumber: false`.
+    - `"ONE WORD ONLY"`: `maxWords: 1, allowNumber: false`.
+  * Regex matching is ordered from most specific to loosest with word boundaries:
+    1. `/NO MORE THAN ONE WORD(?:\s+AND\/OR A NUMBER)?/i` -> `{ maxWords: 1, allowNumber: /NUMBER/i.test(...) }`
+    2. `/NO MORE THAN TWO WORDS(?:\s+AND\/OR A NUMBER)?/i` -> `{ maxWords: 2, allowNumber: /NUMBER/i.test(...) }`
+    3. `/NO MORE THAN THREE WORDS(?:\s+AND\/OR A NUMBER)?/i` -> `{ maxWords: 3, allowNumber: /NUMBER/i.test(...) }`
+    4. `/\b(?:A|ONE)\s+NUMBER\s+ONLY\b/i` -> `{ maxWords: 0, allowNumber: true }`
+    5. `/\bONE WORD(?:\s+ONLY)?(?:\s+AND\/OR A NUMBER)?\b/i` -> `{ maxWords: 1, allowNumber: /NUMBER/i.test(...) }`
+  * Questions without a parsed constraint on completion types default to standard fallback (`maxWords: 3, allowNumber: true`) with a dev-time warning logged.
+  * Unconstrained questions (`q.maxWords == null` e.g. radios, selects) always return `true`.
+
+* **Validation Function (`isWithinLimit`):**
+  ```ts
+  export function isWithinLimit(answer: string, maxWords: number | null, allowNumber: boolean = true): boolean {
+    if (maxWords == null) return true;
+    const tokens = answer.trim().split(/\s+/).filter(Boolean);
+    if (!tokens.length) return true;
+    
+    let words = 0;
+    let numbers = 0;
+    for (const t of tokens) {
+      if (/^\d+(?:[.,]\d+)?%?$/.test(t)) {
+        numbers++;
+      } else {
+        words++;
+      }
+    }
+    if (numbers > (allowNumber ? 1 : 0)) return false;
+    return words <= maxWords;
+  }
+  ```
+
+* **Dev-Time Invariant Check (Fix 1 - Rule 18):**
+  * On module load / test run, iterate every accepted answer in `reading.json` across completion questions.
+  * Verify `assert(isWithinLimit(acceptedAnswer, q.maxWords, q.allowNumber))` passes for 100% of authored answers. Fail loud on any discrepancy.
+
+* **Targeted Miss Diagnostics (`explainMiss` - Fix 2):**
+  * `isCorrect(q, given): boolean` remains strictly boolean to protect existing callers.
+  * A dedicated diagnostic helper handles post-test feedback:
+    ```ts
+    export type MissReason = 'correct' | 'exceeded_limit' | 'wrong';
+    export function explainMiss(q: IeltsQuestion, given: string): MissReason {
+      if (isCorrect(q, given)) return 'correct';
+      if (!isWithinLimit(given, q.maxWords ?? null, q.allowNumber ?? true)) {
+        const normGiven = norm(given);
+        const accepted = Array.isArray(q.answer) ? q.answer : [q.answer];
+        // Only trigger exceeded_limit if the candidate actually wrote the key terms plus extra words
+        if (accepted.some(a => normGiven.includes(norm(a)))) {
+          return 'exceeded_limit';
+        }
+      }
+      return 'wrong';
+    }
+    ```
+  * In the UI, if `explainMiss` returns `'exceeded_limit'`, the feedback highlights: *"Contains the correct keywords, but exceeds the word limit (maximum ${q.maxWords} words) — automatic zero in IELTS."*
+
 * **Real-Time Input Badge:**
   * Fill-in-the-blank inputs render an adjacent `.ie-word-meter`:
     - `1/2 words` (subtle ink secondary).
     - `3/2 words (Exceeds limit!)` with `.is-exceeded` (amber/red indicator).
-* **Deterministic Scoring Sync:**
-  * `scoring.ts` uses the shared `isWithinLimit(answer, q.maxWords, q.allowNumber)` check.
-  * Over-limit submissions fail with explicit diagnostic feedback: *"Exceeded word limit (maximum X words)"*.
+
 
 ---
 
@@ -138,3 +191,4 @@ IELTS Academic Reading tests assess 3 passages (40 questions total) in 60 minute
 4. **Highlighting & Merging:** Select text across two words -> tap Highlight -> select overlapping word -> verify single merged `<mark>`.
 5. **Evidence Jump:** Submit test -> tap `Inspect in passage` on Q2 -> verify passage opens, sentence pulses in green/blue, and tapping `Back to Question #2` returns to the question card.
 6. **Word Count Validation:** Type 3 words in a "NO MORE THAN TWO WORDS" input -> verify badge displays `3/2 words` in warning red, and scorer records violation.
+
