@@ -44,35 +44,55 @@
     "type": "tfng",
     "prompt": "Gutenberg's press was adapted from equipment used in making wine and olive oil.",
     "answer": "TRUE",
-    "why": "Paragraph A: \"combined with a screw press adapted from existing wine and olive presses\". The press itself came from wine and olive presses, so the statement agrees."
+    "why": "Paragraph A: \"combined with a screw press adapted from existing wine and olive presses\". The press itself came from wine and olive presses, so the statement agrees.",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 555,
+     "end": 627,
+     "evidenceText": "combined with a screw press adapted from existing wine and olive presses"
+    }
    },
    {
     "id": "r01-q02",
     "type": "tfng",
     "prompt": "Most of the Gutenberg Bibles that were originally printed survive today.",
     "answer": "FALSE",
-    "why": "Paragraph B: \"Approximately 49 copies of the original 180 printed Gutenberg Bibles are known to survive today\". 49 out of 180 is well under half, so the statement is contradicted."
+    "why": "Paragraph B: \"Approximately 49 copies of the original 180 printed Gutenberg Bibles are known to survive today\". 49 out of 180 is well under half, so the statement is contradicted.",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 513,
+     "end": 608,
+     "evidenceText": "Approximately 49 copies of the original 180 printed Gutenberg Bibles are known to survive today"
+    }
    },
    {
     "id": "r01-q03",
     "type": "tfng",
     "prompt": "William Caxton learned the skills of printing in Germany.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph C only says \"William Caxton established the first printing press in 1476 at Westminster\". Where he learned printing is never mentioned, so it is NOT GIVEN."
+    "why": "Paragraph C only says \"William Caxton established the first printing press in 1476 at Westminster\". Where he learned printing is never mentioned, so it is NOT GIVEN.",
+    "evidence": null
    },
    {
     "id": "r01-q04",
     "type": "tfng",
     "prompt": "Book prices rose during the century after printing spread across Europe.",
     "answer": "FALSE",
-    "why": "Paragraph C: \"The costs of producing books fell dramatically, with prices decreasing by up to 80 percent within a century\". Prices fell, which contradicts the statement."
+    "why": "Paragraph C: \"The costs of producing books fell dramatically, with prices decreasing by up to 80 percent within a century\". Prices fell, which contradicts the statement.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 605,
+     "end": 712,
+     "evidenceText": "The costs of producing books fell dramatically, with prices decreasing by up to 80 percent within a century"
+    }
    },
    {
     "id": "r01-q05",
     "type": "tfng",
     "prompt": "Benjamin Franklin built the first printing press in North America.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph E says only that \"Benjamin Franklin's work in 18th-century Philadelphia advanced printing techniques\". Nothing says whose press came first in North America."
+    "why": "Paragraph E says only that \"Benjamin Franklin's work in 18th-century Philadelphia advanced printing techniques\". Nothing says whose press came first in North America.",
+    "evidence": null
    },
    {
     "id": "r01-q06",
@@ -88,7 +108,12 @@
      "vii. The cost of training new printers"
     ],
     "answer": "i",
-    "why": "Paragraph B describes Gutenberg's earliest output: \"The earliest printed books produced by Gutenberg were remarkable for their quality and precision\". Heading i fits; nothing here is about cost or censorship."
+    "why": "Paragraph B describes Gutenberg's earliest output: \"The earliest printed books produced by Gutenberg were remarkable for their quality and precision\". Heading i fits; nothing here is about cost or censorship.",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 0,
+     "end": 740
+    }
    },
    {
     "id": "r01-q07",
@@ -104,7 +129,12 @@
      "vii. The cost of training new printers"
     ],
     "answer": "ii",
-    "why": "Paragraph C: \"By 1480, printing presses had been established in more than 110 cities and towns\". The paragraph traces the spread of printing from place to place, so heading ii."
+    "why": "Paragraph C: \"By 1480, printing presses had been established in more than 110 cities and towns\". The paragraph traces the spread of printing from place to place, so heading ii.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 0,
+     "end": 779
+    }
    },
    {
     "id": "r01-q08",
@@ -120,7 +150,12 @@
      "vii. The cost of training new printers"
     ],
     "answer": "iv",
-    "why": "Paragraph E: \"The Times of London adopted the first steam-powered printing press\" and this allowed \"newspapers to emerge as a dominant medium of mass communication\". Heading iv covers both."
+    "why": "Paragraph E: \"The Times of London adopted the first steam-powered printing press\" and this allowed \"newspapers to emerge as a dominant medium of mass communication\". Heading iv covers both.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 0,
+     "end": 793
+    }
    },
    {
     "id": "r01-q09",
@@ -136,7 +171,12 @@
      "vii. The cost of training new printers"
     ],
     "answer": "v",
-    "why": "Paragraph G: \"it also created new challenges and debates that persist to the present day\", then lists copyright, false information and loss of memorisation. Heading v."
+    "why": "Paragraph G: \"it also created new challenges and debates that persist to the present day\", then lists copyright, false information and loss of memorisation. Heading v.",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 0,
+     "end": 903
+    }
    },
    {
     "id": "r01-q10",
@@ -145,7 +185,16 @@
     "answer": [
      "months"
     ],
-    "why": "Paragraph A: \"a process that could take months to complete a single volume\"."
+    "why": "Paragraph A: \"a process that could take months to complete a single volume\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 249,
+     "end": 309,
+     "evidenceText": "a process that could take months to complete a single volume"
+    },
+    "instruction": "Write NO MORE THAN TWO WORDS",
+    "maxWords": 2,
+    "allowNumber": false
    },
    {
     "id": "r01-q11",
@@ -154,17 +203,34 @@
     "answer": [
      "Westminster"
     ],
-    "why": "Paragraph C: \"William Caxton established the first printing press in 1476 at Westminster\"."
+    "why": "Paragraph C: \"William Caxton established the first printing press in 1476 at Westminster\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 216,
+     "end": 290,
+     "evidenceText": "William Caxton established the first printing press in 1476 at Westminster"
+    },
+    "instruction": "Write NO MORE THAN TWO WORDS",
+    "maxWords": 2,
+    "allowNumber": false
    },
    {
     "id": "r01-q12",
     "type": "sentence",
     "prompt": "Robert's continuous machine made it possible to mass-produce relatively ______ paper.",
     "answer": [
-     "inexpensive",
-     "inexpensive paper"
+     "inexpensive"
     ],
-    "why": "Paragraph F: \"enabling mass production of relatively inexpensive paper\"."
+    "why": "Paragraph F: \"enabling mass production of relatively inexpensive paper\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 263,
+     "end": 319,
+     "evidenceText": "enabling mass production of relatively inexpensive paper"
+    },
+    "instruction": "Write NO MORE THAN TWO WORDS",
+    "maxWords": 2,
+    "allowNumber": false
    },
    {
     "id": "r01-q13",
@@ -177,7 +243,13 @@
      "D. readers in different places could refer to the same pages."
     ],
     "answer": "D",
-    "why": "Paragraph D: \"different readers across Europe could reference the same page numbers and exact passages\". A is a point from paragraph C, not the reason given here; B is not stated; C is contradicted, since authorities \"attempted to control it through censorship and licensing\"."
+    "why": "Paragraph D: \"different readers across Europe could reference the same page numbers and exact passages\". A is a point from paragraph C, not the reason given here; B is not stated; C is contradicted, since authorities \"attempted to control it through censorship and licensing\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 288,
+     "end": 376,
+     "evidenceText": "different readers across Europe could reference the same page numbers and exact passages"
+    }
    }
   ]
  },
@@ -305,8 +377,7 @@
     "type": "table",
     "prompt": "Table, Tree planting (Los Angeles): aims to raise canopy cover from 20 percent to ______ percent.",
     "answer": [
-     "35",
-     "35 percent"
+     "35"
     ],
     "why": "Paragraph D: \"to increase canopy coverage from the current 20 percent to 35 percent\"."
    },

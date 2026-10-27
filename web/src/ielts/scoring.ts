@@ -1,6 +1,6 @@
 import { IeltsQuestion } from './types';
 
-const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9\s.%-]/g, '').replace(/\s+/g, ' ').trim().replace(/\.+$/, '');
+export const norm = (s: string): string => s.toLowerCase().replace(/[’‘]/g, "'").replace(/[“”]/g, '"').replace(/[^a-z0-9\s.%'-]/g, '').replace(/\s+/g, ' ').trim().replace(/\.+$/, '');
 
 export function isCorrect(q: IeltsQuestion, given: string): boolean {
   const g = norm(given);

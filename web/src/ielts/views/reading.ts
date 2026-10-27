@@ -1,18 +1,83 @@
 import readingData from '../data/reading.json';
-import { ReadingPassage } from '../types';
+import { ReadingPassage, UserHighlight, TextOffsetRange, EvidenceAnchor } from '../types';
 import { rawToBand } from '../bands';
 import { addAttempt } from '../progress';
 import { QuestionForm, renderQuestions, typeBreakdown } from '../questions';
 import { SetScore } from '../scoring';
 import { bandBadge, countdown, Countdown, esc, fmtTime, h } from '../ui';
+import { renderParagraphSpans, mergeHighlightRanges } from '../reading-engine';
 import { icon } from '../../utils/icons';
 
 const PASSAGES = readingData as ReadingPassage[];
 
 export interface TestResult { raw: number; of: number; band: number; byType: SetScore['byType'] }
 
+function getRangeOffsets(paraEl: HTMLElement, range: Range): { start: number; end: number } | null {
+  let currentOffset = 0;
+  let start = -1;
+  let end = -1;
+
+  const walker = document.createTreeWalker(paraEl, NodeFilter.SHOW_TEXT);
+  let node: Node | null;
+  while ((node = walker.nextNode())) {
+    const len = node.textContent?.length || 0;
+    if (node === range.startContainer) {
+      start = currentOffset + range.startOffset;
+    }
+    if (node === range.endContainer) {
+      end = currentOffset + range.endOffset;
+    }
+    currentOffset += len;
+  }
+
+  if (start === -1 && range.startContainer === paraEl) {
+    start = 0;
+  }
+  if (end === -1 && range.endContainer === paraEl) {
+    end = currentOffset;
+  }
+
+  if (start !== -1 && end !== -1 && start < end) {
+    return { start, end };
+  }
+  return null;
+}
+
+function renderPassageContent(
+  article: HTMLElement,
+  p: ReadingPassage,
+  highlights: UserHighlight[],
+  transientEvidence?: EvidenceAnchor
+): void {
+  const h2 = article.querySelector('h2');
+  const returnChip = article.querySelector('.ie-return-chip');
+  article.innerHTML = '';
+  if (h2) article.append(h2);
+  else article.append(h('h2', '', esc(p.title)));
+  if (returnChip) article.append(returnChip);
+
+  p.paragraphs.forEach((para, i) => {
+    const pEl = h('p', 'ie-para');
+    pEl.dataset.paraIndex = String(i);
+    const label = h('b', 'ie-plabel', para.label);
+    pEl.append(label);
+    const paraMarks = highlights.filter(m => m.paraIndex === i);
+    const paraEvidence = (transientEvidence && transientEvidence.paraIndex === i)
+      ? transientEvidence
+      : undefined;
+    pEl.append(renderParagraphSpans(para.text, paraMarks, paraEvidence));
+    article.append(pEl);
+  });
+}
+
 /** Runs one or more passages as a single timed test. Used by practice (1 passage, 20 min) and the mock (3 passages, 60 min). */
-export function mountReadingTest(root: HTMLElement, passages: ReadingPassage[], minutes: number, mock: boolean, onDone?: (r: TestResult) => void): () => void {
+export function mountReadingTest(
+  root: HTMLElement,
+  passages: ReadingPassage[],
+  minutes: number,
+  mock: boolean,
+  onDone?: (r: TestResult) => void
+): () => void {
   root.innerHTML = '';
   let timer: Countdown | null = null;
   const bar = h('div', 'ie-testbar');
@@ -20,34 +85,289 @@ export function mountReadingTest(root: HTMLElement, passages: ReadingPassage[], 
   const submit = h('button', 'ie-btn ie-btn-primary', 'Submit answers');
   const tabs = h('div', 'ie-tabs');
   bar.append(clock, tabs, submit);
+
+  const highlightsMap = new Map<string, UserHighlight[]>();
+  const scrollMap = new Map<string, { passage: number; questions: number }>();
+  passages.forEach(p => {
+    highlightsMap.set(p.id, []);
+    scrollMap.set(p.id, { passage: 0, questions: 0 });
+  });
+
+  let currentPassageIndex = 0;
+  let mobilePane: 'passage' | 'questions' = 'passage';
+  let activeEvidence: EvidenceAnchor | undefined = undefined;
+
+  // Floating selection action pill
+  const pill = h('div', 'ie-selection-pill');
+  pill.hidden = true;
+  pill.innerHTML = `
+    <button type="button" class="ie-pill-btn ie-pill-mark" title="Highlight text">🖍️ Highlight</button>
+    <button type="button" class="ie-pill-btn ie-pill-clear" title="Clear selection">✕ Clear</button>
+  `;
+  root.append(pill);
+
+  // Mobile persistent bottom dock
+  const dock = h('nav', 'ie-reading-dock');
+  const dockClock = h('span', 'ie-dock-clock', 'Untimed');
+  const dockPassageBtn = h('button', 'ie-dock-tab is-active', '📖 Passage');
+  dockPassageBtn.type = 'button';
+  const dockQuestionsBtn = h('button', 'ie-dock-tab', `✍️ Questions (0/${passages[0]?.questions.length || 0})`);
+  dockQuestionsBtn.type = 'button';
+  dock.append(dockClock, dockPassageBtn, dockQuestionsBtn);
+
+  const answeredCounts = passages.map(() => 0);
+
+  const updateDockCounter = (passageIdx: number) => {
+    const p = passages[passageIdx];
+    if (!p) return;
+    const answered = answeredCounts[passageIdx] || 0;
+    dockQuestionsBtn.textContent = `✍️ Questions (${answered}/${p.questions.length})`;
+  };
+
+  const switchMobilePane = (target: 'passage' | 'questions', overrideScroll = false) => {
+    const p = passages[currentPassageIndex];
+    const pane = panes[currentPassageIndex];
+    const cur = scrollMap.get(p.id) || { passage: 0, questions: 0 };
+
+    if (typeof window !== 'undefined') {
+      if (mobilePane === 'passage') {
+        cur.passage = window.scrollY;
+      } else {
+        cur.questions = window.scrollY;
+      }
+      scrollMap.set(p.id, cur);
+    }
+
+    mobilePane = target;
+    if (pane) {
+      pane.dataset.mobilePane = target;
+    }
+
+    dockPassageBtn.classList.toggle('is-active', target === 'passage');
+    dockQuestionsBtn.classList.toggle('is-active', target === 'questions');
+
+    if (!overrideScroll && typeof window !== 'undefined' && typeof window.scrollTo === 'function') {
+      const restoreY = target === 'passage' ? cur.passage : cur.questions;
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: restoreY, behavior: 'instant' as ScrollBehavior });
+      });
+    }
+  };
+
+  dockPassageBtn.addEventListener('click', () => switchMobilePane('passage'));
+  dockQuestionsBtn.addEventListener('click', () => switchMobilePane('questions'));
+
   const panes: HTMLElement[] = [];
   const forms: QuestionForm[] = [];
   let n = 1;
+
   passages.forEach((p, i) => {
     const pane = h('section', 'ie-split');
+    pane.dataset.mobilePane = mobilePane;
     pane.hidden = i > 0;
-    const text = h('article', 'ie-passage', `<h2>${esc(p.title)}</h2>` + p.paragraphs.map(x => `<p><b class="ie-plabel">${x.label}</b>${esc(x.text)}</p>`).join(''));
-    const form = renderQuestions(p.questions, n);
+
+    const text = h('article', 'ie-passage');
+    renderPassageContent(text, p, highlightsMap.get(p.id) || [], undefined);
+
+    // Clicking existing mark clears it
+    text.addEventListener('click', (e) => {
+      const mark = (e.target as HTMLElement).closest<HTMLElement>('.ie-mark');
+      if (!mark) return;
+      const pEl = mark.closest<HTMLElement>('.ie-para');
+      if (!pEl) return;
+      const pIdx = Number(pEl.dataset.paraIndex);
+      const start = Number(mark.dataset.start);
+      const end = Number(mark.dataset.end);
+
+      const current = highlightsMap.get(p.id) || [];
+      const updated = current.filter(h => !(h.paraIndex === pIdx && h.start <= start && h.end >= end));
+      highlightsMap.set(p.id, updated);
+      renderPassageContent(text, p, updated, activeEvidence);
+    });
+
+    const form = renderQuestions(p.questions, n, (answered, total) => {
+      answeredCounts[i] = answered;
+      if (i === currentPassageIndex) {
+        dockQuestionsBtn.textContent = `✍️ Questions (${answered}/${total})`;
+      }
+    });
     n += p.questions.length;
+
+    // Evidence cross-linking delegated handler
+    pane.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.ie-btn-inspect-evidence');
+      if (!btn) return;
+      const qid = btn.dataset.qid;
+      if (!qid) return;
+      const q = p.questions.find(x => x.id === qid);
+      if (!q || !q.evidence) return;
+
+      activeEvidence = q.evidence;
+      renderPassageContent(text, p, highlightsMap.get(p.id) || [], activeEvidence);
+
+      // Switch to passage view, overriding scroll restoration
+      switchMobilePane('passage', true);
+
+      // Scroll target paragraph or evidence span into view
+      const targetPara = text.querySelector<HTMLElement>(`[data-para-index="${q.evidence.paraIndex}"]`);
+      const targetSpan = targetPara?.querySelector<HTMLElement>('.ie-evidence') || targetPara;
+      targetSpan?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      // Render sticky return chip at top of passage
+      let chip = text.querySelector<HTMLElement>('.ie-return-chip');
+      if (!chip) {
+        chip = h('div', 'ie-return-chip');
+        text.prepend(chip);
+      }
+      const qNum = p.questions.findIndex(x => x.id === qid) + 1;
+      chip.innerHTML = `<button type="button" class="ie-btn-return">↩ Back to Question #${qNum}</button>`;
+      chip.querySelector('.ie-btn-return')!.addEventListener('click', () => {
+        switchMobilePane('questions');
+        chip?.remove();
+        activeEvidence = undefined;
+        renderPassageContent(text, p, highlightsMap.get(p.id) || [], undefined);
+
+        const card = pane.querySelector<HTMLElement>(`[data-qid="${qid}"]`);
+        if (card) {
+          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          card.setAttribute('tabindex', '-1');
+          card.focus({ preventScroll: true });
+        }
+      });
+    });
+
     const qs = h('div', 'ie-qcol');
     qs.append(form.el);
     pane.append(text, qs);
     panes.push(pane);
     forms.push(form);
+
     const t = h('button', 'ie-tab' + (i === 0 ? ' is-on' : ''), passages.length > 1 ? `Passage ${i + 1}` : 'Passage');
     t.addEventListener('click', () => {
-      panes.forEach((x, j) => { x.hidden = j !== i; });
+      currentPassageIndex = i;
+      panes.forEach((x, j) => {
+        x.hidden = j !== i;
+        if (j === i) x.dataset.mobilePane = mobilePane;
+      });
       tabs.querySelectorAll('.ie-tab').forEach((x, j) => x.classList.toggle('is-on', j === i));
+      updateDockCounter(i);
     });
     tabs.append(t);
   });
+
   const result = h('section', 'ie-result');
   result.hidden = true;
-  root.append(bar, ...panes, result);
+  root.append(bar, ...panes, dock, result);
+
+  // Soft keyboard dock handling with 100ms debounce
+  let keyboardTimer: ReturnType<typeof setTimeout> | null = null;
+  const onFocusIn = (e: FocusEvent) => {
+    const target = e.target as HTMLElement | null;
+    if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')) {
+      if (keyboardTimer) {
+        clearTimeout(keyboardTimer);
+        keyboardTimer = null;
+      }
+      dock.classList.add('is-keyboard-open');
+    }
+  };
+  const onFocusOut = (e: FocusEvent) => {
+    const target = e.target as HTMLElement | null;
+    if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')) {
+      if (keyboardTimer) clearTimeout(keyboardTimer);
+      keyboardTimer = setTimeout(() => {
+        dock.classList.remove('is-keyboard-open');
+      }, 100);
+    }
+  };
+  root.addEventListener('focusin', onFocusIn);
+  root.addEventListener('focusout', onFocusOut);
+
+  // Floating highlight pill logic
+  const updateSelectionPill = () => {
+    if (typeof window === 'undefined' || typeof window.getSelection !== 'function') return;
+    const sel = window.getSelection();
+    if (!sel || sel.isCollapsed || !sel.rangeCount) {
+      pill.hidden = true;
+      return;
+    }
+    const range = sel.getRangeAt(0);
+    const activePane = panes[currentPassageIndex];
+    const article = activePane?.querySelector('.ie-passage');
+    if (!article || !article.contains(range.commonAncestorContainer)) {
+      pill.hidden = true;
+      return;
+    }
+    const rect = range.getBoundingClientRect();
+    if (rect.width === 0 && rect.height === 0) {
+      pill.hidden = true;
+      return;
+    }
+    pill.hidden = false;
+    pill.style.position = 'fixed';
+    pill.style.top = `${Math.max(10, rect.top - 48)}px`;
+    pill.style.left = `${Math.max(10, rect.left + rect.width / 2)}px`;
+  };
+  document.addEventListener('selectionchange', updateSelectionPill);
+
+  pill.querySelector('.ie-pill-mark')?.addEventListener('click', () => {
+    if (typeof window === 'undefined' || typeof window.getSelection !== 'function') return;
+    const sel = window.getSelection();
+    if (!sel || sel.isCollapsed || !sel.rangeCount) return;
+    const range = sel.getRangeAt(0);
+    const p = passages[currentPassageIndex];
+    const pane = panes[currentPassageIndex];
+    const article = pane?.querySelector('.ie-passage') as HTMLElement;
+    if (!article) return;
+
+    const paras = Array.from(article.querySelectorAll<HTMLElement>('.ie-para'));
+    const newRanges: TextOffsetRange[] = [];
+
+    paras.forEach(pEl => {
+      const pIdx = Number(pEl.dataset.paraIndex);
+      if (!sel.containsNode(pEl, true)) return;
+      const offsets = getRangeOffsets(pEl, range);
+      if (offsets) {
+        newRanges.push({ paraIndex: pIdx, start: offsets.start, end: offsets.end });
+      }
+    });
+
+    if (newRanges.length) {
+      const current = highlightsMap.get(p.id) || [];
+      const merged = mergeHighlightRanges([...current, ...newRanges]);
+      highlightsMap.set(p.id, merged.map((r, idx) => ({ ...r, id: `h_${idx}_${Date.now()}` })));
+      renderPassageContent(article, p, highlightsMap.get(p.id) || [], activeEvidence);
+    }
+
+    sel.removeAllRanges();
+    pill.hidden = true;
+  });
+
+  pill.querySelector('.ie-pill-clear')?.addEventListener('click', () => {
+    if (typeof window !== 'undefined' && typeof window.getSelection === 'function') {
+      window.getSelection()?.removeAllRanges();
+    }
+    pill.hidden = true;
+  });
+
+  // Media query listener
+  const mql = typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+    ? window.matchMedia('(max-width: 768px)')
+    : null;
+  const onMediaChange = () => {
+    panes.forEach(pane => {
+      pane.dataset.mobilePane = mobilePane;
+    });
+  };
+  if (mql) {
+    mql.addEventListener('change', onMediaChange);
+  }
 
   const finish = (): void => {
     timer?.stop();
     submit.disabled = true;
+    dock.hidden = true;
+    pill.hidden = true;
     const total: SetScore = { raw: 0, of: 0, byType: {}, wrong: [] };
     forms.forEach(f => {
       const s = f.reveal();
@@ -70,9 +390,34 @@ export function mountReadingTest(root: HTMLElement, passages: ReadingPassage[], 
   };
 
   submit.addEventListener('click', finish);
-  if (minutes > 0) timer = countdown(minutes * 60, l => { clock.textContent = fmtTime(Math.max(0, l)); clock.classList.toggle('ie-urgent', l <= 120); }, finish);
-  else clock.textContent = 'Untimed';
-  return () => timer?.stop();
+  if (minutes > 0) {
+    timer = countdown(
+      minutes * 60,
+      l => {
+        const formatted = fmtTime(Math.max(0, l));
+        clock.textContent = formatted;
+        dockClock.textContent = `⏱ ${formatted}`;
+        const isUrgent = l <= 120;
+        clock.classList.toggle('ie-urgent', isUrgent);
+        dockClock.classList.toggle('ie-urgent', isUrgent);
+      },
+      finish
+    );
+  } else {
+    clock.textContent = 'Untimed';
+    dockClock.textContent = 'Untimed';
+  }
+
+  return () => {
+    timer?.stop();
+    root.removeEventListener('focusin', onFocusIn);
+    root.removeEventListener('focusout', onFocusOut);
+    document.removeEventListener('selectionchange', updateSelectionPill);
+    if (mql) mql.removeEventListener('change', onMediaChange);
+    if (keyboardTimer) clearTimeout(keyboardTimer);
+    dock.remove();
+    pill.remove();
+  };
 }
 
 export function readingView(root: HTMLElement): () => void {
@@ -106,7 +451,7 @@ export function readingView(root: HTMLElement): () => void {
       root.innerHTML = '';
       const back = h('button', 'ie-btn', 'All passages');
       back.addEventListener('click', () => { stop(); root.innerHTML = ''; stop = readingView(root); });
-      const host = h('div');
+      const host = h('div', 'ie-stage');
       root.append(back, host);
       stop = mountReadingTest(host, [p], 20, false);
     });

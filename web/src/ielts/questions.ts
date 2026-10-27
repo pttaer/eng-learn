@@ -1,5 +1,11 @@
 import { IeltsQuestion } from './types';
 import { SetScore, isCorrect, scoreSet } from './scoring';
+import {
+  explainMiss,
+  isWithinLimit,
+  resolveQuestionWordConstraint,
+  countWordsAndNumbers
+} from './reading-engine';
 import { esc, h } from './ui';
 
 const TYPE_LABEL: Record<string, string> = {
@@ -43,9 +49,31 @@ function control(q: IeltsQuestion, n: number, onChange: () => void): HTMLElement
     inp.name = q.id;
     inp.autocomplete = 'off';
     inp.setAttribute('aria-label', `Answer for question ${n}`);
-    inp.placeholder = 'Write no more than three words';
-    inp.addEventListener('input', onChange);
+    const constraint = resolveQuestionWordConstraint(q);
+    const limitMatch = q.prompt.match(/(ONE WORD ONLY|NO MORE THAN (?:TWO|THREE) WORDS(?:\s+AND\/OR A NUMBER)?)/i);
+    inp.placeholder = limitMatch
+      ? limitMatch[1]
+      : (constraint ? `Write no more than ${constraint.maxWords} word${constraint.maxWords === 1 ? '' : 's'}` : 'Write no more than three words');
     body.append(inp);
+
+    if (constraint && constraint.maxWords != null) {
+      const meter = h('span', 'ie-word-meter', `0/${constraint.maxWords} words`);
+      const updateMeter = () => {
+        const { words } = countWordsAndNumbers(inp.value);
+        const within = isWithinLimit(inp.value, constraint.maxWords, constraint.allowNumber);
+        meter.textContent = within
+          ? `${words}/${constraint.maxWords} words`
+          : `${words}/${constraint.maxWords} words (Exceeds limit!)`;
+        meter.classList.toggle('is-exceeded', !within);
+      };
+      inp.addEventListener('input', () => {
+        updateMeter();
+        onChange();
+      });
+      body.append(meter);
+    } else {
+      inp.addEventListener('input', onChange);
+    }
   }
   wrap.append(body);
   return wrap;
@@ -59,11 +87,36 @@ export interface QuestionForm {
 }
 
 /** Renders questions grouped by type (IELTS order). `startAt` continues numbering across passages/sections. */
-export function renderQuestions(questions: IeltsQuestion[], startAt = 1, onChange: () => void = () => {}): QuestionForm {
+export function renderQuestions(
+  questions: IeltsQuestion[],
+  startAt = 1,
+  onChange: (answered: number, total: number) => void = () => {}
+): QuestionForm {
   const el = h('div', 'ie-questions');
   let n = startAt;
   let lastType = '';
   const lastOptions: { list?: string[] } = {};
+
+  const countAnswered = (): number => {
+    let count = 0;
+    for (const q of questions) {
+      const radio = el.querySelector<HTMLInputElement>(`input[name="${q.id}"]:checked`);
+      if (radio && radio.value.trim().length > 0) {
+        count++;
+        continue;
+      }
+      const field = el.querySelector<HTMLInputElement | HTMLSelectElement>(`[name="${q.id}"]:not([type="radio"])`);
+      if (field && field.value.trim().length > 0) {
+        count++;
+      }
+    }
+    return count;
+  };
+
+  const handleUpdate = () => {
+    onChange(countAnswered(), questions.length);
+  };
+
   for (const q of questions) {
     if (q.type !== lastType) {
       el.append(h('h3', 'ie-q-group', typeLabel(q.type)));
@@ -74,8 +127,12 @@ export function renderQuestions(questions: IeltsQuestion[], startAt = 1, onChang
       el.append(h('ul', 'ie-q-list', q.options.map(o => `<li>${esc(o)}</li>`).join('')));
       lastOptions.list = q.options;
     }
-    el.append(control(q, n++, onChange));
+    el.append(control(q, n++, handleUpdate));
   }
+
+  el.addEventListener('input', handleUpdate);
+  el.addEventListener('change', handleUpdate);
+
   const answers = (): Record<string, string> => {
     const out: Record<string, string> = {};
     for (const q of questions) {
@@ -93,7 +150,25 @@ export function renderQuestions(questions: IeltsQuestion[], startAt = 1, onChang
       const ok = isCorrect(q, given[q.id]);
       box.classList.add(ok ? 'ie-right' : 'ie-wrong');
       const ans = Array.isArray(q.answer) ? q.answer.join(' / ') : q.answer;
-      box.append(h('div', 'ie-why', `<strong>${ok ? 'Correct' : `Your answer: ${esc(given[q.id] || '(blank)')} · Correct: ${esc(ans)}`}</strong><span>${esc(q.why)}</span>`));
+
+      let extraHtml = '';
+      if (!ok) {
+        const miss = explainMiss(q, given[q.id] || '');
+        if (miss === 'exceeded_limit') {
+          const limit = q.maxWords ?? resolveQuestionWordConstraint(q)?.maxWords ?? 3;
+          extraHtml += `<div class="ie-miss-warning">Contains correct terms but exceeded word limit (${limit} words max) — automatic zero in IELTS.</div>`;
+        }
+      }
+
+      if (q.evidence !== undefined) {
+        if (q.evidence === null) {
+          extraHtml += `<div class="ie-evidence-action"><span class="ie-evidence-silent">No evidence in passage (NOT GIVEN)</span></div>`;
+        } else {
+          extraHtml += `<div class="ie-evidence-action"><button type="button" class="ie-btn ie-btn-inspect-evidence" data-qid="${q.id}">🔍 Inspect in passage</button></div>`;
+        }
+      }
+
+      box.append(h('div', 'ie-why', `<strong>${ok ? 'Correct' : `Your answer: ${esc(given[q.id] || '(blank)')} · Correct: ${esc(ans)}`}</strong><span>${esc(q.why)}</span>${extraHtml}`));
     }
     return scoreSet(questions, given);
   };

@@ -1,5 +1,24 @@
 export type QuestionType = 'tfng' | 'ynng' | 'heading' | 'match' | 'features' | 'complete' | 'sentence' | 'summary' | 'table' | 'mcq' | 'short';
 
+export interface TextOffsetRange {
+  paraIndex: number;
+  start: number;
+  end: number;
+}
+
+export interface UserHighlight extends TextOffsetRange {
+  id: string;
+}
+
+export interface EvidenceAnchor extends TextOffsetRange {
+  evidenceText?: string;
+}
+
+export interface WordConstraint {
+  maxWords: number;
+  allowNumber: boolean;
+}
+
 export interface IeltsQuestion {
   id: string;
   type: QuestionType;
@@ -10,6 +29,10 @@ export interface IeltsQuestion {
   answer: string | string[];
   /** Evidence line from the passage/script, plus why the other answers fail. */
   why: string;
+  maxWords?: number;
+  allowNumber?: boolean;
+  instruction?: string;
+  evidence?: EvidenceAnchor | null;
 }
 
 export interface ReadingPassage {
