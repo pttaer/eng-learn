@@ -65,26 +65,57 @@ export class UsageTracker {
   private static lastFlush = 0;
   private static pendingMs = 0;
   private static pendingAnswers = 0;
+  private static isInitialized = false;
 
   public static start(): void {
-    if (this.timer !== null || typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return;
     const now = Date.now();
     this.lastTick = now;
     this.lastInput = now;
     this.lastFlush = now;
 
-    const touch = () => {
-      this.lastInput = Date.now();
-    };
-    ['pointerdown', 'keydown', 'touchstart', 'wheel'].forEach(name =>
-      window.addEventListener(name, touch, { passive: true })
-    );
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'hidden') this.flush();
-    });
-    window.addEventListener('pagehide', () => this.flush());
+    if (!this.isInitialized) {
+      this.isInitialized = true;
+      const touch = () => {
+        this.lastInput = Date.now();
+        if (this.timer === null && (typeof document === 'undefined' || document.visibilityState === 'visible')) {
+          this.resumeTimer();
+        }
+      };
+      ['pointerdown', 'keydown', 'touchstart', 'wheel'].forEach(name =>
+        window.addEventListener(name, touch, { passive: true })
+      );
+      if (typeof document !== 'undefined') {
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'hidden') {
+            this.flush();
+            this.stopTimer();
+          } else {
+            this.resumeTimer();
+          }
+        });
+      }
+      window.addEventListener('pagehide', () => {
+        this.flush();
+        this.stopTimer();
+      });
+    }
 
+    this.resumeTimer();
+  }
+
+  private static resumeTimer(): void {
+    if (this.timer !== null || typeof window === 'undefined') return;
+    if (typeof document !== 'undefined' && document.visibilityState === 'hidden') return;
+    this.lastTick = Date.now();
     this.timer = setInterval(() => this.tick(), TICK_MS);
+  }
+
+  private static stopTimer(): void {
+    if (this.timer !== null) {
+      clearInterval(this.timer);
+      this.timer = null;
+    }
   }
 
   private static tick(): void {
@@ -96,6 +127,12 @@ export class UsageTracker {
       this.pendingMs += Math.min(elapsed, TICK_MS * 2);
     }
     if (now - this.lastFlush >= FLUSH_MS) this.flush();
+
+    // Zero-CPU idle suspension: pause timer if idle beyond IDLE_MS or tab hidden
+    if (now - this.lastInput > IDLE_MS || document.visibilityState === 'hidden') {
+      this.flush();
+      this.stopTimer();
+    }
   }
 
   public static recordAnswer(): void {

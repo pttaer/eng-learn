@@ -1,4 +1,6 @@
 // IELTS progress lives in its own localStorage key; the CEFR app's state is never touched.
+import { t } from '../core/i18n';
+
 const KEY = 'IELTS_STATE';
 
 export type Skill = 'listening' | 'reading' | 'writing' | 'speaking';
@@ -50,13 +52,27 @@ export function readiness(): { ready: boolean; lines: string[] } {
     const l = last2(skill);
     const ok = l.length === 2 && l.every(a => a.band >= 7);
     if (!ok) ready = false;
-    lines.push(`${skill}: ${l.length < 2 ? `${l.length}/2 mocks taken` : `last 2 mocks ${l.map(a => a.band).join(', ')}`}${ok ? ' (pass)' : ' (need 7.0 twice)'}`);
+    const skillName = t(`ielts.${skill}`, undefined, skill);
+    const status = l.length < 2
+      ? t('ielts.readiness_mocks_taken', { count: l.length }, `${l.length}/2 mocks taken`)
+      : `${t('ielts.readiness_last_2', undefined, 'last 2 mocks')} ${l.map(a => a.band).join(', ')}`;
+    const req = ok
+      ? ` (${t('ielts.readiness_pass', undefined, 'pass')})`
+      : ` (${t('ielts.readiness_need_7_twice', undefined, 'need 7.0 twice')})`;
+    lines.push(`${skillName}: ${status}${req}`);
   }
   for (const skill of ['writing', 'speaking'] as const) {
     const b = recentBand(skill, 3);
     const ok = b !== null && b >= 6.5;
     if (!ok) ready = false;
-    lines.push(`${skill}: ${b === null ? 'no estimate yet' : `estimate ${b}`}${ok ? ' (pass)' : ' (need 6.5+)'}`);
+    const skillName = t(`ielts.${skill}`, undefined, skill);
+    const status = b === null
+      ? t('ielts.readiness_no_estimate', undefined, 'no estimate yet')
+      : `${t('ielts.readiness_estimate', undefined, 'estimate')} ${b}`;
+    const req = ok
+      ? ` (${t('ielts.readiness_pass', undefined, 'pass')})`
+      : ` (${t('ielts.readiness_need_65', undefined, 'need 6.5+')})`;
+    lines.push(`${skillName}: ${status}${req}`);
   }
   return { ready, lines };
 }

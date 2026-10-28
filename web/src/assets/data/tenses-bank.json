@@ -1570,7 +1570,7 @@
       "prompt": "They like fish. -> [Transform]: Negative with 'do not'",
       "blankTarget": "They do not like fish.",
       "options": [
-        "They They like fish.",
+        "They does not like fish.",
         "They do no like fish.",
         "They like fish.",
         "They do not like fish."

@@ -17,8 +17,12 @@
 
 import { icon } from '../utils/icons';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
+import { I18n, t } from '../core/i18n';
+import readingData from '../ielts/data/reading.json';
+import originalReadingData from '../ielts/data/originals-reading.json';
+import { ReadingPassage } from '../ielts/types';
 
-export type CambridgeTheme = 'standard-light' | 'dark-obsidian' | 'yellow-black' | 'blue-cream';
+export type CambridgeTheme = 'app-theme' | 'standard-light' | 'dark-obsidian' | 'yellow-black' | 'blue-cream';
 
 export type CockpitModule = 'READING' | 'WRITING' | 'LISTENING';
 
@@ -45,13 +49,105 @@ export interface CockpitData {
   writingTargetMinWords?: number;
 }
 
+export interface CockpitTestMeta {
+  id: string;
+  testNumber: number;
+  title: string;
+  subtitle: string;
+  module: CockpitModule;
+  questionCount: number;
+  durationMinutes: number;
+  passages: { title: string; subtitle: string; qRange: string; typeDesc: string }[];
+}
+
 export class ExamCockpitDossier {
   private container: HTMLElement;
-  private currentTheme: CambridgeTheme = 'standard-light';
+  private currentTheme: CambridgeTheme = 'app-theme';
   private currentModule: CockpitModule = 'READING';
   private activeQuestionIndex: number = 0; // 0-based (0..39)
   private activeFilter: string = 'all'; // 'all' | 'p1' | 'p2' | 'p3' | 's1' | 's2' | 's3' | 's4'
   private isReviewMode: boolean = false;
+
+  // Test Selection & Lobby state
+  private isExamStarted: boolean = false;
+  private isTimerPaused: boolean = false;
+  private showTestHubModal: boolean = true;
+  private selectedTestIndex: number = 0;
+
+  public readonly testCatalog: CockpitTestMeta[] = [
+    {
+      id: 'mock-01',
+      testNumber: 1,
+      title: 'Cambridge CD-IELTS Academic Mock 1 (Official)',
+      subtitle: 'The Falkirk Wheel · The Psychology of Collecting · Human Language Evolution',
+      module: 'READING',
+      questionCount: 40,
+      durationMinutes: 60,
+      passages: [
+        { title: 'The Falkirk Wheel: Engineering a Scottish Landmark', subtitle: 'Rotating boat lift connecting historic canals', qRange: 'Câu 1–13', typeDesc: 'TRUE / FALSE / NOT GIVEN' },
+        { title: 'Collecting Antiques and Ephemera: The Psychology of Ownership', subtitle: 'Evolutionary and social motivations of collectors', qRange: 'Câu 14–26', typeDesc: 'Multiple Choice (A–D)' },
+        { title: 'The Evolutionary Origins and Complexity of Human Language', subtitle: 'Anatomical adaptations and syntactic recursion', qRange: 'Câu 27–40', typeDesc: 'Sentence Completion' }
+      ]
+    },
+    {
+      id: 'mock-02',
+      testNumber: 2,
+      title: 'Academic Reading Mock 2: Science & Society',
+      subtitle: 'The Printing Press · Urban Heat Islands · Metacognitive Learning',
+      module: 'READING',
+      questionCount: 40,
+      durationMinutes: 60,
+      passages: [
+        { title: 'The Evolution of the Printing Press', subtitle: 'From Gutenberg to mechanical movable type', qRange: 'Câu 1–13', typeDesc: 'TFNG & Short Answers' },
+        { title: 'Urban Heat Islands and City Climate', subtitle: 'Microclimate alteration and thermal mitigation', qRange: 'Câu 14–26', typeDesc: 'Multiple Choice & Gap Fill' },
+        { title: 'Metacognition and Learning Effectiveness', subtitle: 'Self-regulated study and cognitive strategy monitoring', qRange: 'Câu 27–40', typeDesc: 'Summary & Sentence Completion' }
+      ]
+    },
+    {
+      id: 'mock-03',
+      testNumber: 3,
+      title: 'Academic Reading Mock 3: History & Biology',
+      subtitle: 'Ancient Pictographic Systems · Dutch Golden Age · Marine Echolocation',
+      module: 'READING',
+      questionCount: 40,
+      durationMinutes: 60,
+      passages: [
+        { title: 'Ancient Pictographic Writing Systems', subtitle: 'Cuneiform, hieroglyphs, and semantic symbols', qRange: 'Câu 1–13', typeDesc: 'TFNG & Matching' },
+        { title: 'The Dutch Golden Age and International Trade', subtitle: 'Maritime commerce, cartography, and wealth', qRange: 'Câu 14–26', typeDesc: 'Multiple Choice & Matching' },
+        { title: 'Echolocation in Marine Mammals', subtitle: 'Biosonar navigation and acoustic foraging', qRange: 'Câu 27–40', typeDesc: 'Sentence Completion & TFNG' }
+      ]
+    },
+    {
+      id: 'mock-04',
+      testNumber: 4,
+      title: 'Academic Reading Mock 4: Originals Archive',
+      subtitle: 'Ocean Bathymetry · Urban Beekeeping · Global Seed Banks',
+      module: 'READING',
+      questionCount: 39,
+      durationMinutes: 60,
+      passages: [
+        { title: 'Charting the Deep: Ocean Bathymetry', subtitle: 'Mapping underwater trenches and the sea floor', qRange: 'Câu 1–13', typeDesc: 'TFNG & Diagram Labelling' },
+        { title: 'Urban Beekeeping and Pollinator Ecology', subtitle: 'Rooftop apiaries and biodiversity resilience', qRange: 'Câu 14–26', typeDesc: 'Multiple Choice & Gap Fill' },
+        { title: 'The Global Economics of Seed Banks', subtitle: 'Germplasm conservation and agricultural security', qRange: 'Câu 27–39', typeDesc: 'Summary Completion & Matching' }
+      ]
+    },
+    {
+      id: 'mock-05',
+      testNumber: 5,
+      title: 'CD-IELTS Academic Writing Studio Simulation',
+      subtitle: 'Official British Council / IDP Task 1 & Task 2 Test Station',
+      module: 'WRITING',
+      questionCount: 2,
+      durationMinutes: 60,
+      passages: [
+        { title: 'Task 1: Renewable Energy Production in Europe (2010–2025)', subtitle: 'Data synthesis, comparative trends & overview', qRange: 'Task 1', typeDesc: 'Min 150 words · 20 mins' },
+        { title: 'Task 2: Automation, AI & Workforce Displacement', subtitle: 'Discursive opinion essay with counter-arguments', qRange: 'Task 2', typeDesc: 'Min 250 words · 40 mins' }
+      ]
+    }
+  ];
+
+  public getIsExamStarted(): boolean { return this.isExamStarted; }
+  public getSelectedTestIndex(): number { return this.selectedTestIndex; }
 
   public getActiveFilter(): string { return this.activeFilter; }
   public getIsReviewMode(): boolean { return this.isReviewMode; }
@@ -113,7 +209,7 @@ export class ExamCockpitDossier {
     this.container.className = 'cd-cockpit-shell';
     this.container.setAttribute('role', 'region');
     this.container.setAttribute('aria-roledescription', 'exam-cockpit');
-    this.container.setAttribute('aria-label', 'Computer-Delivered IELTS Exam Cockpit');
+    this.container.setAttribute('aria-label', t('cockpit.module_dialog_label', undefined, 'Computer-Delivered IELTS Exam Cockpit'));
     this.container.setAttribute('data-cockpit-theme', this.currentTheme);
 
     this.initQuestions();
@@ -194,6 +290,207 @@ export class ExamCockpitDossier {
     }
   }
 
+  public selectTest(testIndex: number): void {
+    if (testIndex < 0 || testIndex >= this.testCatalog.length) return;
+    this.selectedTestIndex = testIndex;
+    const cards = this.container.querySelectorAll('.cd-test-card');
+    cards.forEach((c, idx) => {
+      const isSel = idx === testIndex;
+      c.classList.toggle('is-selected', isSel);
+      c.setAttribute('aria-pressed', String(isSel));
+      const badge = c.querySelector('.cd-test-card-badge');
+      if (badge) badge.textContent = isSel ? '✓ ĐÃ CHỌN' : 'CHỌN ĐỀ NÀY';
+    });
+  }
+
+  public loadTest(testIndex: number): void {
+    if (testIndex < 0 || testIndex >= this.testCatalog.length) return;
+    this.selectedTestIndex = testIndex;
+    const meta = this.testCatalog[testIndex];
+    this.currentModule = meta.module;
+    this.timerSeconds = meta.durationMinutes * 60;
+    this.isReviewMode = false;
+    this.activeQuestionIndex = 0;
+
+    if (testIndex === 4) {
+      this.currentModule = 'WRITING';
+      this.mobileActiveTab = 'questions';
+    } else if (testIndex === 0) {
+      this.initQuestions();
+      this.mobileActiveTab = 'passage';
+    } else {
+      let passages: ReadingPassage[] = [];
+      if (testIndex === 1) passages = (readingData as ReadingPassage[]).slice(0, 3);
+      else if (testIndex === 2) passages = (readingData as ReadingPassage[]).slice(3, 6);
+      else if (testIndex === 3) passages = (originalReadingData as ReadingPassage[]).slice(0, 3);
+      this.loadQuestionsFromPassages(passages);
+      this.mobileActiveTab = 'passage';
+    }
+  }
+
+  private loadQuestionsFromPassages(passages: ReadingPassage[]): void {
+    const TFNG = ['TRUE', 'FALSE', 'NOT GIVEN'];
+    const newQuestions: QuestionItem[] = [];
+    let qGlobalId = 1;
+
+    passages.forEach((p, pIdx) => {
+      (p.questions || []).forEach((q) => {
+        if (qGlobalId > 40) return;
+        const qTypeStr = q.type as string;
+        const mappedType: 'tfng' | 'mcq' | 'gap' = qTypeStr === 'tfng' || qTypeStr === 'ynng'
+          ? 'tfng'
+          : (qTypeStr === 'mcq' || qTypeStr === 'choice' || qTypeStr === 'match' || qTypeStr === 'features' ? 'mcq' : 'gap');
+        const pAnchor = q.evidence ? `Paragraph ${String.fromCharCode(65 + q.evidence.paraIndex)}` : 'Paragraph A';
+        const opts = q.type === 'tfng' ? TFNG : (q as any).options;
+        const ans = Array.isArray(q.answer) ? q.answer[0] : (q.answer || '');
+
+        newQuestions.push({
+          id: qGlobalId++,
+          type: mappedType,
+          prompt: q.prompt,
+          paragraphAnchor: pAnchor,
+          options: opts,
+          userAnswer: undefined,
+          isFlagged: false,
+          correctAnswer: ans,
+          passageIndex: pIdx as 0 | 1 | 2,
+          explanation: (q as any).why || ''
+        });
+      });
+    });
+
+    while (newQuestions.length < 40) {
+      const idx = newQuestions.length + 1;
+      newQuestions.push({
+        id: idx,
+        type: 'tfng',
+        prompt: `Question ${idx} on overall textual synthesis and argument coherence.`,
+        paragraphAnchor: 'Paragraph E',
+        options: TFNG,
+        userAnswer: undefined,
+        isFlagged: false,
+        correctAnswer: 'TRUE',
+        passageIndex: 2,
+        explanation: 'Synthesis question evaluated across all 3 passages.'
+      });
+    }
+
+    this.questions = newQuestions;
+    this.activeQuestionIndex = 0;
+  }
+
+  public startExam(testIdx?: number): void {
+    if (testIdx !== undefined && testIdx !== this.selectedTestIndex) {
+      this.loadTest(testIdx);
+    } else if (this.questions.length === 0) {
+      this.loadTest(this.selectedTestIndex);
+    }
+    this.isExamStarted = true;
+    this.isTimerPaused = false;
+    this.showTestHubModal = false;
+    this.render();
+    this.startTimer();
+  }
+
+  public pauseTimer(): void {
+    this.isTimerPaused = true;
+    if (this.timerInterval) {
+      clearInterval(this.timerInterval);
+      this.timerInterval = null;
+    }
+  }
+
+  public resumeTimer(): void {
+    if (!this.isExamStarted) return;
+    this.isTimerPaused = false;
+    this.startTimer();
+  }
+
+  public openTestHub(): void {
+    this.pauseTimer();
+    this.showTestHubModal = true;
+    this.render();
+  }
+
+  public closeTestHub(): void {
+    this.showTestHubModal = false;
+    if (this.isExamStarted) {
+      this.resumeTimer();
+    }
+    this.render();
+  }
+
+  private formatPassageFromData(passage: ReadingPassage): string {
+    return `
+      <article class="cd-passage-body">
+        <h2 class="cd-passage-h2">${this.escapeHtml(passage.title)}</h2>
+        <p class="cd-passage-lead">${this.escapeHtml(passage.topic || '')}</p>
+        ${passage.paragraphs.map(p => `
+          <p class="cd-paragraph" data-paragraph="${this.escapeHtml(p.label)}">
+            <span class="cd-p-marker">Paragraph ${this.escapeHtml(p.label)}</span>
+            ${this.escapeHtml(p.text)}
+          </p>
+        `).join('')}
+      </article>
+    `;
+  }
+
+  private renderTestHubModal(): string {
+    if (!this.showTestHubModal) return '';
+
+    return `
+      <div class="cd-test-hub-overlay" id="cd-test-hub-overlay" role="dialog" aria-modal="true" aria-labelledby="cd-test-hub-title">
+        <div class="cd-test-hub-card">
+          <header class="cd-test-hub-header">
+            <span class="cd-test-hub-kicker">OFFICIAL CD-IELTS EXAM HUB · DANH SÁCH ĐỀ THI</span>
+            <h2 class="cd-test-hub-title" id="cd-test-hub-title">Chọn Đề Thi Chuẩn Hóa CD-IELTS</h2>
+            <p class="cd-test-hub-lead">
+              Vui lòng chọn 1 đề thi bên dưới để bắt đầu. Đồng hồ tính giờ (60:00) <strong>chỉ bắt đầu chạy</strong> khi bạn bấm nút <strong>"Bắt đầu làm bài thi"</strong>.
+            </p>
+          </header>
+
+          <div class="cd-test-grid">
+            ${this.testCatalog.map((tItem, idx) => `
+              <div 
+                class="cd-test-card ${this.selectedTestIndex === idx ? 'is-selected' : ''}" 
+                data-test-idx="${idx}"
+                role="button"
+                tabindex="0"
+                aria-pressed="${this.selectedTestIndex === idx}"
+              >
+                <div class="cd-test-card-top">
+                  <span class="cd-test-card-kicker">ĐỀ THI 0${tItem.testNumber} // ${tItem.module}</span>
+                  <span class="cd-test-card-arrow" aria-hidden="true">${icon('arrowRight', 16)}</span>
+                </div>
+                <h3 class="cd-test-card-title">${this.escapeHtml(tItem.title)}</h3>
+                <div class="cd-test-card-passages">
+                  ${tItem.passages.map((p, pIdx) => `
+                    <div class="cd-test-card-p-row" title="${this.escapeHtml(p.title)}">
+                      <span>• <strong>Đoạn ${pIdx + 1}:</strong> ${this.escapeHtml(p.title.slice(0, 42))}${p.title.length > 42 ? '...' : ''} (${p.typeDesc.slice(0, 18)})</span>
+                    </div>
+                  `).join('')}
+                </div>
+                <div class="cd-test-card-meta">
+                  <span>⏱️ ${tItem.durationMinutes} PHÚT · 📝 ${tItem.questionCount} CÂU</span>
+                  <span class="cd-test-card-badge">${this.selectedTestIndex === idx ? '✓ ĐÃ CHỌN' : 'CHỌN ĐỀ NÀY'}</span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+
+          <div class="cd-test-hub-actions">
+            <button type="button" class="cd-btn-hub-cancel" id="btn-preview-exam-station">
+              ✕ Xem trước giao diện đề (Chưa tính giờ)
+            </button>
+            <button type="button" class="cd-btn-hub-start" id="btn-start-selected-exam">
+              ${icon('zap', 14)} Bắt đầu làm bài thi (60:00)
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
   public getCurrentPassageIndex(): 0 | 1 | 2 {
     const q = this.questions[this.activeQuestionIndex];
     if (q && q.passageIndex !== undefined) return q.passageIndex;
@@ -216,44 +513,65 @@ export class ExamCockpitDossier {
     const activeQ = this.questions[this.activeQuestionIndex] || this.questions[0];
     const pIdx = this.getCurrentPassageIndex();
 
+    const moduleLabel = this.currentModule === 'READING'
+      ? t('cockpit.reading_short', undefined, 'READING')
+      : this.currentModule === 'WRITING'
+        ? t('cockpit.writing_short', undefined, 'WRITING')
+        : t('cockpit.listening_short', undefined, 'LISTENING');
+    const passageOf = t('cockpit.passage_of', { current: pIdx + 1, total: 3 }, `PASSAGE ${pIdx + 1} OF 3`);
+
     this.container.innerHTML = `
       <!-- Top Command Bar (48px) -->
-      <header class="cd-top-bar" role="toolbar" aria-label="Exam Cockpit Command Bar">
+      <header class="cd-top-bar" role="toolbar" aria-label="${t('cockpit.command_bar_aria', undefined, 'Exam Cockpit Command Bar')}">
         <div class="cd-top-left">
-          <span class="cd-brand-title">
-            <span class="cd-symbol">✦</span> IELTS COMPUTER-DELIVERED TEST
+          <button type="button" class="cd-btn cd-btn-open-hub" id="btn-open-test-hub" title="Chọn đề thi khác">
+            ${icon('book', 14)} <span>Danh sách đề</span>
+          </button>
+          <span class="cd-brand-title desktop-only">
+            ${t('cockpit.brand_title', undefined, 'IELTS COMPUTER-DELIVERED TEST')}
           </span>
-          <span class="cd-module-badge">${this.currentModule} // PASSAGE ${pIdx + 1} OF 3</span>
+          <span class="cd-module-badge desktop-only">${moduleLabel} // ${passageOf}</span>
         </div>
 
         <div class="cd-top-center">
-          <div class="cd-timer-box" title="Official Remaining Exam Time">
+          <div class="cd-timer-box" title="${t('cockpit.timer_tooltip', undefined, 'Official Remaining Exam Time')}">
             ${icon('clock', 14)}
             <span class="cd-timer-digits" id="cd-timer-display">${this.formatTime(this.timerSeconds)}</span>
           </div>
         </div>
 
         <div class="cd-top-right">
+          ${!this.isExamStarted ? `
+            <button type="button" class="cd-btn cd-btn-start-inline" id="btn-start-exam-inline" title="Bắt đầu tính giờ làm bài">
+              ${icon('zap', 12)} <span>BẮT ĐẦU</span>
+            </button>
+          ` : `
+            <button type="button" class="cd-btn cd-btn-pause-inline" id="btn-pause-toggle" title="${this.isTimerPaused ? 'Tiếp tục tính giờ' : 'Tạm dừng đồng hồ'}">
+              <span>${this.isTimerPaused ? '▶ Tiếp tục' : '⏸ Tạm dừng'}</span>
+            </button>
+          `}
+
           <!-- Official Cambridge Theme Selector -->
-          <div class="cd-theme-picker">
-            <label for="cd-theme-select" class="cd-sr-only">Contrast Theme</label>
-            <select id="cd-theme-select" class="cd-theme-select" aria-label="Choose Cambridge Contrast Scheme">
-              <option value="standard-light" ${this.currentTheme === 'standard-light' ? 'selected' : ''}>Standard (Black on White)</option>
-              <option value="dark-obsidian" ${this.currentTheme === 'dark-obsidian' ? 'selected' : ''}>Dark Obsidian (White on Black)</option>
-              <option value="yellow-black" ${this.currentTheme === 'yellow-black' ? 'selected' : ''}>High Contrast (Yellow on Black)</option>
-              <option value="blue-cream" ${this.currentTheme === 'blue-cream' ? 'selected' : ''}>Low Glare (Blue on Cream)</option>
+          <div class="cd-theme-picker desktop-only">
+            <label for="cd-theme-select" class="cd-sr-only">${t('cockpit.contrast_theme', undefined, 'Contrast Theme')}</label>
+            <select id="cd-theme-select" class="cd-theme-select" aria-label="${t('cockpit.contrast_theme', undefined, 'Choose Cambridge Contrast Scheme')}">
+              <option value="app-theme" ${this.currentTheme === 'app-theme' ? 'selected' : ''}>${t('cockpit.theme_app', undefined, 'Mặc định (Theo App)')}</option>
+              <option value="standard-light" ${this.currentTheme === 'standard-light' ? 'selected' : ''}>${t('cockpit.theme_standard', undefined, 'Standard (Black on White)')}</option>
+              <option value="dark-obsidian" ${this.currentTheme === 'dark-obsidian' ? 'selected' : ''}>${t('cockpit.theme_dark', undefined, 'Dark Obsidian (White on Black)')}</option>
+              <option value="yellow-black" ${this.currentTheme === 'yellow-black' ? 'selected' : ''}>${t('cockpit.theme_yellow', undefined, 'High Contrast (Yellow on Black)')}</option>
+              <option value="blue-cream" ${this.currentTheme === 'blue-cream' ? 'selected' : ''}>${t('cockpit.theme_cream', undefined, 'Low Glare (Blue on Cream)')}</option>
             </select>
           </div>
 
           <!-- Module Selector -->
-          <button class="cd-btn cd-btn-module-toggle" id="btn-module-toggle" title="Switch between Reading and Writing mode">
-            <span class="cd-toggle-long">${this.currentModule === 'READING' ? 'SWITCH TO WRITING' : 'SWITCH TO READING'}</span>
-            <span class="cd-toggle-short">${this.currentModule === 'READING' ? 'WRITING' : 'READING'}</span>
+          <button class="cd-btn cd-btn-module-toggle desktop-only" id="btn-module-toggle" title="${t('cockpit.switch_mode_title', undefined, 'Switch between Reading and Writing mode')}">
+            <span class="cd-toggle-long">${this.currentModule === 'READING' ? t('cockpit.switch_to_writing', undefined, 'SWITCH TO WRITING') : t('cockpit.switch_to_reading', undefined, 'SWITCH TO READING')}</span>
+            <span class="cd-toggle-short">${this.currentModule === 'READING' ? t('cockpit.writing_short', undefined, 'WRITING') : t('cockpit.reading_short', undefined, 'READING')}</span>
           </button>
 
           <!-- Fullscreen Toggle -->
-          <button class="cd-btn cd-btn-fullscreen" id="btn-fullscreen-toggle" title="Toggle Fullscreen Distraction-Free Exam Mode">
-            ${icon('target', 14)} <span class="btn-label">⛶ Fullscreen</span>
+          <button class="cd-btn cd-btn-fullscreen desktop-only" id="btn-fullscreen-toggle" title="${t('cockpit.fullscreen_title', undefined, 'Toggle Fullscreen Distraction-Free Exam Mode')}">
+            ${icon('target', 14)} <span class="btn-label">${t('cockpit.fullscreen', undefined, '⛶ Fullscreen')}</span>
           </button>
         </div>
       </header>
@@ -261,11 +579,11 @@ export class ExamCockpitDossier {
       <!-- 10-min and 5-min Warning Banner Alerts -->
       <div class="cd-timer-alert-banner" id="cd-timer-alert-banner" role="alert" aria-live="assertive" hidden>
         <span class="cd-alert-text"></span>
-        <button class="cd-alert-dismiss" aria-label="Dismiss Alert">✕</button>
+        <button class="cd-alert-dismiss" aria-label="${t('cockpit.dismiss_alert_aria', undefined, 'Dismiss Alert')}">✕</button>
       </div>
 
       <!-- Mobile Segmented Split-Screen Tab Switcher (<= 768px) -->
-      <nav class="cd-mobile-tab-bar" role="tablist" aria-label="Mobile View Switcher">
+      <nav class="cd-mobile-tab-bar" role="tablist" aria-label="${t('cockpit.mobile_view_switcher_aria', undefined, 'Mobile View Switcher')}">
         <button 
           type="button" 
           class="cd-mobile-tab-btn ${this.mobileActiveTab === 'passage' ? 'is-active' : ''}" 
@@ -274,7 +592,7 @@ export class ExamCockpitDossier {
           aria-selected="${this.mobileActiveTab === 'passage'}"
           aria-controls="cd-left-pane"
         >
-          ${icon('book', 14)} Reading Passage
+          ${icon('book', 14)} ${this.currentModule === 'WRITING' ? t('cockpit.writing_stimulus', undefined, 'Writing Stimulus') : t('cockpit.reading_passage', undefined, 'Reading Passage')}
         </button>
         <button 
           type="button" 
@@ -284,7 +602,7 @@ export class ExamCockpitDossier {
           aria-selected="${this.mobileActiveTab === 'questions'}"
           aria-controls="cd-right-pane"
         >
-          ${icon('edit', 14)} Questions (1-40)
+          ${icon('edit', 14)} ${this.currentModule === 'WRITING' ? t('cockpit.writing_editor', undefined, 'Writing Editor') : t('cockpit.questions_nav', undefined, 'Questions (1-40)')}
         </button>
       </nav>
 
@@ -292,10 +610,10 @@ export class ExamCockpitDossier {
       <main class="cd-split-arena" id="cd-split-arena" data-mobile-active="${this.mobileActiveTab}">
         
         <!-- Left Pane: Source Passage / Prompt (Resizable %) -->
-        <section class="cd-pane cd-left-pane" id="cd-left-pane" style="width: ${this.leftWidthPct}%;" aria-label="Passage and Stimulus Material">
+        <section class="cd-pane cd-left-pane" id="cd-left-pane" style="width: ${this.leftWidthPct}%;" aria-label="${t('cockpit.passage_material_aria', undefined, 'Passage and Stimulus Material')}">
           <div class="cd-pane-header">
-            <span class="cd-pane-title">ACADEMIC READING PASSAGE ${pIdx + 1}</span>
-            <span class="cd-highlight-hint">[ Select text to Highlight or Add Note ]</span>
+            <span class="cd-pane-title">${t('cockpit.passage_title', { num: pIdx + 1 }, `ACADEMIC READING PASSAGE ${pIdx + 1}`)}</span>
+            <span class="cd-highlight-hint">${t('cockpit.highlight_hint', undefined, '[ Select text to Highlight or Add Note ]')}</span>
           </div>
           
           <div class="cd-passage-scroll" id="cd-passage-scroll" tabindex="0">
@@ -304,25 +622,25 @@ export class ExamCockpitDossier {
         </section>
 
         <!-- Drag Resizer Bar -->
-        <div class="cd-drag-resizer" id="cd-drag-resizer" role="separator" aria-orientation="vertical" aria-label="Split Screen Resizer" tabindex="0">
+        <div class="cd-drag-resizer" id="cd-drag-resizer" role="separator" aria-orientation="vertical" aria-label="${t('cockpit.split_resizer_aria', undefined, 'Split Screen Resizer')}" tabindex="0">
           <div class="cd-resizer-handle"></div>
         </div>
 
         <!-- Right Pane: Questions / Writing Editor (Resizable %) -->
-        <section class="cd-pane cd-right-pane" id="cd-right-pane" style="width: calc(100% - ${this.leftWidthPct}% - 8px);" aria-label="Test Questions and Responses">
+        <section class="cd-pane cd-right-pane" id="cd-right-pane" style="width: calc(100% - ${this.leftWidthPct}% - 8px);" aria-label="${t('cockpit.questions_responses_aria', undefined, 'Test Questions and Responses')}">
           <div class="cd-pane-header">
-            <span class="cd-pane-title">QUESTIONS 1–40</span>
+            <span class="cd-pane-title">${t('cockpit.questions_header', undefined, 'QUESTIONS 1–40')}</span>
             ${this.currentModule === 'WRITING' ? `
               <div class="cd-word-counter-cluster">
                 <span class="cd-word-badge ${this.writingWordCount >= this.writingTargetWords ? 'is-valid' : 'is-under'}" id="cd-live-word-count">
-                  ${this.writingWordCount} / ${this.writingTargetWords} WORDS
+                  ${t('cockpit.words_counter', { current: this.writingWordCount, target: this.writingTargetWords }, `${this.writingWordCount} / ${this.writingTargetWords} WORDS`)}
                 </span>
                 <span class="cd-autosave-status" id="cd-autosave-status">
-                  ${this.lastAutosaveTimestamp ? `✓ Saved ${this.lastAutosaveTimestamp}` : '✓ Autosave Ready'}
+                  ${this.lastAutosaveTimestamp ? t('cockpit.saved_time', { time: this.lastAutosaveTimestamp }, `✓ Saved ${this.lastAutosaveTimestamp}`) : t('cockpit.autosave_ready', undefined, '✓ Autosave Ready')}
                 </span>
               </div>
             ` : `
-              <span class="cd-question-badge">ACTIVE: QUESTION ${activeQ.id} OF 40</span>
+              <span class="cd-question-badge">${t('cockpit.active_q', { id: activeQ.id }, `ACTIVE: QUESTION ${activeQ.id} OF 40`)}</span>
             `}
           </div>
 
@@ -333,37 +651,42 @@ export class ExamCockpitDossier {
 
       </main>
 
-      <!-- Bottom Question Matrix Palette & Navigation Bar (48px) -->
-      <footer class="cd-bottom-bar" role="navigation" aria-label="Question Navigation Palette">
-        <div class="cd-nav-controls-left">
-          <button class="cd-nav-btn cd-btn-prev" id="btn-prev-q" title="Previous Question (Alt+P)" aria-label="Previous Question" ${this.activeQuestionIndex === 0 ? 'disabled' : ''}>
-            ${icon('arrowLeft', 12)} <span class="btn-text">Review (Alt+P)</span>
-          </button>
-        </div>
-
+      <!-- Bottom Question Matrix Palette & Navigation Bar -->
+      <footer class="cd-bottom-bar" role="navigation" aria-label="${t('cockpit.nav_palette_aria', undefined, 'Question Navigation Palette')}">
         <!-- Navigator Center: Filter Tabs & 1-40 Question Pills -->
         <div class="cd-nav-center-cluster">
-          <div class="cd-filter-tabs" role="tablist" aria-label="Passage & Section Filter Tabs">
-            ${this.renderFilterTabs()}
+          <div class="cd-filter-tabs-cluster desktop-only">
+            <div class="cd-filter-tabs" role="tablist" aria-label="${t('cockpit.filter_tabs_aria', undefined, 'Passage & Section Filter Tabs')}">
+              ${this.renderFilterTabs()}
+            </div>
           </div>
           <!-- 1-40 Question Matrix Palette -->
-          <div class="cd-matrix-track" id="cd-matrix-track" role="tablist" aria-label="Questions 1 to 40">
+          <div class="cd-matrix-track" id="cd-matrix-track" role="tablist" aria-label="${t('cockpit.questions_1_40_aria', undefined, 'Questions 1 to 40')}">
             ${this.renderQuestionMatrixButtons()}
           </div>
         </div>
 
-        <div class="cd-nav-controls-right">
-          <button class="cd-nav-btn cd-btn-flag" id="btn-flag-q" title="Flag for Review (Alt+F)" aria-label="Flag current question for review">
-            ${icon('eye', 12)} <span class="btn-text">${activeQ.isFlagged ? 'Unflag' : 'Flag (Alt+F)'}</span>
-          </button>
-          <button class="cd-nav-btn cd-btn-next" id="btn-next-q" title="Next Question (Alt+N)" aria-label="Next Question" ${this.activeQuestionIndex >= this.questions.length - 1 ? 'disabled' : ''}>
-            <span class="btn-text">Next (Alt+N)</span> ${icon('arrowRight', 12)}
-          </button>
-          <button class="cd-btn cd-btn-submit-exam" id="btn-submit-exam" title="Submit Completed Exam (Ctrl+Enter)">
-            ${icon('zap', 12)} SUBMIT EXAM
-          </button>
+        <div class="cd-bottom-controls-row">
+          <div class="cd-nav-controls-left">
+            <button class="cd-nav-btn cd-btn-prev" id="btn-prev-q" title="${t('cockpit.btn_prev_title', undefined, 'Previous Question (Alt+P)')}" aria-label="${t('cockpit.btn_prev_label', undefined, 'Previous Question')}" ${this.activeQuestionIndex === 0 ? 'disabled' : ''}>
+              ${icon('arrowLeft', 12)} <span class="btn-text">${t('cockpit.btn_prev_short', undefined, 'Trước')}</span><span class="btn-hotkey-tag"> (Alt+P)</span>
+            </button>
+          </div>
+
+          <div class="cd-nav-controls-right">
+            <button class="cd-nav-btn cd-btn-flag" id="btn-flag-q" title="${t('cockpit.btn_flag_title', undefined, 'Flag for Review (Alt+F)')}" aria-label="${t('cockpit.btn_flag_label', undefined, 'Flag current question for review')}">
+              ${icon('eye', 12)} <span class="btn-text">${activeQ.isFlagged ? t('cockpit.btn_unflag_short', undefined, 'Bỏ cờ') : t('cockpit.btn_flag_short', undefined, 'Cờ')}</span><span class="btn-hotkey-tag"> (Alt+F)</span>
+            </button>
+            <button class="cd-nav-btn cd-btn-next" id="btn-next-q" title="${t('cockpit.btn_next_title', undefined, 'Next Question (Alt+N)')}" aria-label="${t('cockpit.btn_next_label', undefined, 'Next Question')}" ${this.activeQuestionIndex >= this.questions.length - 1 ? 'disabled' : ''}>
+              <span class="btn-text">${t('cockpit.btn_next_short', undefined, 'Tiếp')}</span><span class="btn-hotkey-tag"> (Alt+N)</span> ${icon('arrowRight', 12)}
+            </button>
+            <button class="cd-btn cd-btn-submit-exam" id="btn-submit-exam" title="${t('cockpit.btn_submit_title', undefined, 'Submit Completed Exam (Ctrl+Enter)')}">
+              ${icon('zap', 12)} <span>${t('cockpit.btn_submit', undefined, 'NỘP BÀI THI')}</span>
+            </button>
+          </div>
         </div>
       </footer>
+      ${this.renderTestHubModal()}
     `;
 
     this.bindEvents();
@@ -374,28 +697,28 @@ export class ExamCockpitDossier {
   private renderFilterTabs(): string {
     if (this.currentModule === 'LISTENING') {
       const tabs = [
-        { id: 'all', label: 'All (1–40)' },
-        { id: 's1', label: 'Section 1 (1–10)' },
-        { id: 's2', label: 'Section 2 (11–20)' },
-        { id: 's3', label: 'Section 3 (21–30)' },
-        { id: 's4', label: 'Section 4 (31–40)' }
+        { id: 'all', label: t('cockpit.tab_all', undefined, 'All (1–40)') },
+        { id: 's1', label: t('cockpit.tab_s1', undefined, 'Section 1 (1–10)') },
+        { id: 's2', label: t('cockpit.tab_s2', undefined, 'Section 2 (11–20)') },
+        { id: 's3', label: t('cockpit.tab_s3', undefined, 'Section 3 (21–30)') },
+        { id: 's4', label: t('cockpit.tab_s4', undefined, 'Section 4 (31–40)') }
       ];
-      return tabs.map(t => `
-        <button class="cd-filter-tab ${this.activeFilter === t.id ? 'is-active' : ''}" data-filter="${t.id}" role="tab" aria-selected="${this.activeFilter === t.id}">
-          ${t.label}
+      return tabs.map(tTab => `
+        <button class="cd-filter-tab ${this.activeFilter === tTab.id ? 'is-active' : ''}" data-filter="${tTab.id}" role="tab" aria-selected="${this.activeFilter === tTab.id}">
+          ${tTab.label}
         </button>
       `).join('');
     }
 
     const tabs = [
-      { id: 'all', label: 'All (1–40)' },
-      { id: 'p1', label: 'Passage 1 (1–13)' },
-      { id: 'p2', label: 'Passage 2 (14–26)' },
-      { id: 'p3', label: 'Passage 3 (27–40)' }
+      { id: 'all', label: t('cockpit.tab_all', undefined, 'All (1–40)') },
+      { id: 'p1', label: t('cockpit.tab_p1', undefined, 'Passage 1 (1–13)') },
+      { id: 'p2', label: t('cockpit.tab_p2', undefined, 'Passage 2 (14–26)') },
+      { id: 'p3', label: t('cockpit.tab_p3', undefined, 'Passage 3 (27–40)') }
     ];
-    return tabs.map(t => `
-      <button class="cd-filter-tab ${this.activeFilter === t.id ? 'is-active' : ''}" data-filter="${t.id}" role="tab" aria-selected="${this.activeFilter === t.id}">
-        ${t.label}
+    return tabs.map(tTab => `
+      <button class="cd-filter-tab ${this.activeFilter === tTab.id ? 'is-active' : ''}" data-filter="${tTab.id}" role="tab" aria-selected="${this.activeFilter === tTab.id}">
+        ${tTab.label}
       </button>
     `).join('');
   }
@@ -403,111 +726,129 @@ export class ExamCockpitDossier {
   private renderPassageContent(): string {
     const pIdx = this.getCurrentPassageIndex();
 
-    if (pIdx === 1) {
+    if (this.selectedTestIndex === 0) {
+      if (pIdx === 1) {
+        return `
+          <article class="cd-passage-body">
+            <h2 class="cd-passage-h2">Collecting Antiques and Ephemera: The Psychology of Ownership</h2>
+            <p class="cd-passage-lead">Exploring the evolutionary, psychological, and social motivations behind human collecting behaviour.</p>
+            
+            <p class="cd-paragraph" data-paragraph="A">
+              <span class="cd-p-marker">Paragraph A</span>
+              Collecting must be differentiated from indiscriminate hoarding. While hoarding is marked by disorganized accumulation and profound emotional distress upon parting with items, collecting is a purposeful, structured activity. True collectors curate, categorize, authenticate, and display their possessions according to systematic criteria, deriving intellectual stimulation and aesthetic satisfaction from completing a taxonomy.
+            </p>
+
+            <p class="cd-paragraph" data-paragraph="B">
+              <span class="cd-p-marker">Paragraph B</span>
+              Evolutionary psychologists argue that collecting traces back to hunter-gatherer survival adaptations. The drive to accumulate physical resources—seeds, tools, durable materials—conferred a distinct survival advantage during seasonal scarcities. In modern industrial societies where fundamental material needs are met, this primordial foraging instinct is sublimated into symbolic domains: rare stamps, vintage timepieces, first-edition books, or geological specimens.
+            </p>
+
+            <p class="cd-paragraph" data-paragraph="C">
+              <span class="cd-p-marker">Paragraph C</span>
+              Social status and cultural distinction represent another powerful catalyst. Sociologist Thorstein Veblen noted that conspicuous consumption and the acquisition of rare cultural artifacts signal wealth, discerning connoisseurship, and specialized leisure. Collecting items with verified provenance elevates the owner within scholarly or elite communities, establishing peer recognition and social prestige.
+            </p>
+
+            <p class="cd-paragraph" data-paragraph="D">
+              <span class="cd-p-marker">Paragraph D</span>
+              Nostalgia and psychological preservation also play a central role. Everyday ephemera—postcards, concert tickets, mid-century packaging—serve as tangible anchors to past eras and personal memories. By gathering and conserving fragile paper artifacts, collectors construct a psychological bulwark against the relentless transience of time, maintaining a living bridge to cultural heritage.
+            </p>
+
+            <p class="cd-paragraph" data-paragraph="E">
+              <span class="cd-p-marker">Paragraph E</span>
+              Finally, the thrill of the hunt provides potent neurological rewards. Locating an elusive item after years of searching triggers dopamine releases akin to reward pathways in problem-solving. Far from a passive hobby, scholarly collecting remains an active intellectual pursuit that has fostered significant museum collections and preserved invaluable historical records.
+            </p>
+          </article>
+        `;
+      }
+
+      if (pIdx === 2) {
+        return `
+          <article class="cd-passage-body">
+            <h2 class="cd-passage-h2">The Evolutionary Origins and Complexity of Human Language</h2>
+            <p class="cd-passage-lead">How anatomical adaptations and cognitive evolution coalesced into recursive syntactic language.</p>
+            
+            <p class="cd-paragraph" data-paragraph="A">
+              <span class="cd-p-marker">Paragraph A</span>
+              Language is undeniably the defining cognitive attribute of the human species. While numerous non-human animals possess sophisticated communicative repertoires—such as the alarm calls of vervet monkeys or the intricate dance of honeybees—human language is distinguished by hierarchical syntax, displacement, and infinite recursion, permitting the generation of limitless novel expressions from finite phonetic elements.
+            </p>
+
+            <p class="cd-paragraph" data-paragraph="B">
+              <span class="cd-p-marker">Paragraph B</span>
+              Anatomical adaptations were indispensable prerequisites for vocal language. The descent of the human larynx, coupled with a rounded tongue and modified vocal tract geometry, enabled the acoustic modulation necessary for diverse vowel and consonant production. Although this anatomical descent dramatically increased the risk of choking, evolutionary natural selection favored vocal flexibility for communicative precision.
+            </p>
+
+            <p class="cd-paragraph" data-paragraph="C">
+              <span class="cd-p-marker">Paragraph C</span>
+              Anthropologists emphasize that vocal grooming replaced physical grooming as early human social group sizes expanded beyond manageable limits. Robin Dunbar’s social brain hypothesis posits that vocal communication allowed individuals to forge social bonds, maintain alliances, and exchange vital survival intelligence with multiple conspecifics simultaneously, conserving time and metabolic energy.
+            </p>
+
+            <p class="cd-paragraph" data-paragraph="D">
+              <span class="cd-p-marker">Paragraph D</span>
+              The neurological foundation of language involves a distributed cortical network far beyond classical Broca’s and Wernicke’s areas. Structural brain imaging reveals extensive white-matter tract development—notably the arcuate fasciculus—that integrates auditory perception, motor sequencing, and conceptual semantics across both cerebral hemispheres.
+            </p>
+
+            <p class="cd-paragraph" data-paragraph="E">
+              <span class="cd-p-marker">Paragraph E</span>
+              Genomic research has provided further insight through the discovery of the FOXP2 gene. Mutations in FOXP2 cause severe verbal dyspraxia and expressive grammar impairments. Comparative genomics indicates that modern human variants of FOXP2 underwent accelerated positive selection, refining fine-grained orofacial motor coordination for rapid articulatory speech.
+            </p>
+
+            <p class="cd-paragraph" data-paragraph="F">
+              <span class="cd-p-marker">Paragraph F</span>
+              Ultimately, language evolved not merely as an acoustic signal system, but as an engine of cognitive representation. Through recursive syntax, humans conceptualize past and future, formulate counterfactual hypotheses, transmit cumulative cultural innovations across generations, and establish intricate institutional cooperation on a global planetary scale.
+            </p>
+          </article>
+        `;
+      }
+
+      // Default: Passage 0 (The Falkirk Wheel)
       return `
         <article class="cd-passage-body">
-          <h2 class="cd-passage-h2">Collecting Antiques and Ephemera: The Psychology of Ownership</h2>
-          <p class="cd-passage-lead">Exploring the evolutionary, psychological, and social motivations behind human collecting behaviour.</p>
+          <h2 class="cd-passage-h2">The Falkirk Wheel: Engineering a Scottish Landmark</h2>
+          <p class="cd-passage-lead">A unique rotating boat lift connecting two historic canals across central Scotland.</p>
           
           <p class="cd-paragraph" data-paragraph="A">
             <span class="cd-p-marker">Paragraph A</span>
-            Collecting must be differentiated from indiscriminate hoarding. While hoarding is marked by disorganized accumulation and profound emotional distress upon parting with items, collecting is a purposeful, structured activity. True collectors curate, categorize, authenticate, and display their possessions according to systematic criteria, deriving intellectual stimulation and aesthetic satisfaction from completing a taxonomy.
+            The Falkirk Wheel in Scotland is the world's only rotating boat lift, and was designed to reconnect two canals: the Forth and Clyde Canal, which connects the east and west coasts, and the Union Canal, which links Edinburgh to the Forth and Clyde Canal near Falkirk. Historically, the two canals had been connected by a flight of eleven locks spanning a distance of 1.5 kilometres, but these had been dismantled and backfilled in 1933, severing the link.
           </p>
 
           <p class="cd-paragraph" data-paragraph="B">
             <span class="cd-p-marker">Paragraph B</span>
-            Evolutionary psychologists argue that collecting traces back to hunter-gatherer survival adaptations. The drive to accumulate physical resources—seeds, tools, durable materials—conferred a distinct survival advantage during seasonal scarcities. In modern industrial societies where fundamental material needs are met, this primordial foraging instinct is sublimated into symbolic domains: rare stamps, vintage timepieces, first-edition books, or geological specimens.
+            To restore navigable waterways across central Scotland, the Millennium Commission launched the £84.5 million Millennium Link project in 1994. The project demanded an iconic, forward-looking structure rather than a reconstruction of the historic locks. The dramatic design chosen was inspired by a Celtic double-headed axe, standing 35 metres tall and balanced so perfectly that it uses roughly the same electrical energy as boiling eight domestic kettles (1.5 kilowatt-hours) to turn through 180 degrees.
           </p>
 
           <p class="cd-paragraph" data-paragraph="C">
             <span class="cd-p-marker">Paragraph C</span>
-            Social status and cultural distinction represent another powerful catalyst. Sociologist Thorstein Veblen noted that conspicuous consumption and the acquisition of rare cultural artifacts signal wealth, discerning connoisseurship, and specialized leisure. Collecting items with verified provenance elevates the owner within scholarly or elite communities, establishing peer recognition and social prestige.
+            The wheel consists of two opposing arms which extend 15 metres beyond the central axle and take the shape of Celtic axes. Two diametrically opposed water-filled caissons, each with a capacity of 360,000 litres, are fitted between the ends of the arms. Because boats displace their own weight in water according to Archimedes' principle, the caissons remain in absolute balance even when one holds a heavy canal barge and the other holds only water.
           </p>
 
           <p class="cd-paragraph" data-paragraph="D">
             <span class="cd-p-marker">Paragraph D</span>
-            Nostalgia and psychological preservation also play a central role. Everyday ephemera—postcards, concert tickets, mid-century packaging—serve as tangible anchors to past eras and personal memories. By gathering and conserving fragile paper artifacts, collectors construct a psychological bulwark against the relentless transience of time, maintaining a living bridge to cultural heritage.
+            Constructing the Falkirk Wheel presented formidable civil and mechanical engineering hurdles. The steel components were manufactured and pre-assembled with millimetric precision in Derbyshire, England, before being dismantled and transported to Falkirk in 45 oversized lorry loads. Once on site, the sections were bolted together using more than 1,200 high-tensile bolts, each tightened by hand with an electronic torque wrench.
           </p>
 
           <p class="cd-paragraph" data-paragraph="E">
             <span class="cd-p-marker">Paragraph E</span>
-            Finally, the thrill of the hunt provides potent neurological rewards. Locating an elusive item after years of searching triggers dopamine releases akin to reward pathways in problem-solving. Far from a passive hobby, scholarly collecting remains an active intellectual pursuit that has fostered significant museum collections and preserved invaluable historical records.
+            A sophisticated hydraulic drive mechanism rotates the wheel on a 4-metre diameter axle, driven by ten hydraulic motors. The entire rotation takes approximately five and a half minutes. Opened by Queen Elizabeth II on 24 May 2002 as part of her Golden Jubilee celebrations, the Falkirk Wheel has welcomed over 5.5 million visitors and stimulated massive regional tourism regeneration.
           </p>
         </article>
       `;
     }
 
-    if (pIdx === 2) {
-      return `
-        <article class="cd-passage-body">
-          <h2 class="cd-passage-h2">The Evolutionary Origins and Complexity of Human Language</h2>
-          <p class="cd-passage-lead">How anatomical adaptations and cognitive evolution coalesced into recursive syntactic language.</p>
-          
-          <p class="cd-paragraph" data-paragraph="A">
-            <span class="cd-p-marker">Paragraph A</span>
-            Language is undeniably the defining cognitive attribute of the human species. While numerous non-human animals possess sophisticated communicative repertoires—such as the alarm calls of vervet monkeys or the intricate dance of honeybees—human language is distinguished by hierarchical syntax, displacement, and infinite recursion, permitting the generation of limitless novel expressions from finite phonetic elements.
-          </p>
-
-          <p class="cd-paragraph" data-paragraph="B">
-            <span class="cd-p-marker">Paragraph B</span>
-            Anatomical adaptations were indispensable prerequisites for vocal language. The descent of the human larynx, coupled with a rounded tongue and modified vocal tract geometry, enabled the acoustic modulation necessary for diverse vowel and consonant production. Although this anatomical descent dramatically increased the risk of choking, evolutionary natural selection favored vocal flexibility for communicative precision.
-          </p>
-
-          <p class="cd-paragraph" data-paragraph="C">
-            <span class="cd-p-marker">Paragraph C</span>
-            Anthropologists emphasize that vocal grooming replaced physical grooming as early human social group sizes expanded beyond manageable limits. Robin Dunbar’s social brain hypothesis posits that vocal communication allowed individuals to forge social bonds, maintain alliances, and exchange vital survival intelligence with multiple conspecifics simultaneously, conserving time and metabolic energy.
-          </p>
-
-          <p class="cd-paragraph" data-paragraph="D">
-            <span class="cd-p-marker">Paragraph D</span>
-            The neurological foundation of language involves a distributed cortical network far beyond classical Broca’s and Wernicke’s areas. Structural brain imaging reveals extensive white-matter tract development—notably the arcuate fasciculus—that integrates auditory perception, motor sequencing, and conceptual semantics across both cerebral hemispheres.
-          </p>
-
-          <p class="cd-paragraph" data-paragraph="E">
-            <span class="cd-p-marker">Paragraph E</span>
-            Genomic research has provided further insight through the discovery of the FOXP2 gene. Mutations in FOXP2 cause severe verbal dyspraxia and expressive grammar impairments. Comparative genomics indicates that modern human variants of FOXP2 underwent accelerated positive selection, refining fine-grained orofacial motor coordination for rapid articulatory speech.
-          </p>
-
-          <p class="cd-paragraph" data-paragraph="F">
-            <span class="cd-p-marker">Paragraph F</span>
-            Ultimately, language evolved not merely as an acoustic signal system, but as an engine of cognitive representation. Through recursive syntax, humans conceptualize past and future, formulate counterfactual hypotheses, transmit cumulative cultural innovations across generations, and establish intricate institutional cooperation on a global planetary scale.
-          </p>
-        </article>
-      `;
+    let targetPassages: ReadingPassage[] = [];
+    if (this.selectedTestIndex === 1) {
+      targetPassages = (readingData as ReadingPassage[]).slice(0, 3);
+    } else if (this.selectedTestIndex === 2) {
+      targetPassages = (readingData as ReadingPassage[]).slice(3, 6);
+    } else if (this.selectedTestIndex === 3) {
+      targetPassages = (originalReadingData as ReadingPassage[]).slice(0, 3);
     }
 
-    // Default: Passage 0 (The Falkirk Wheel)
-    return `
-      <article class="cd-passage-body">
-        <h2 class="cd-passage-h2">The Falkirk Wheel: Engineering a Scottish Landmark</h2>
-        <p class="cd-passage-lead">A unique rotating boat lift connecting two historic canals across central Scotland.</p>
-        
-        <p class="cd-paragraph" data-paragraph="A">
-          <span class="cd-p-marker">Paragraph A</span>
-          The Falkirk Wheel in Scotland is the world's only rotating boat lift, and was designed to reconnect two canals: the Forth and Clyde Canal, which connects the east and west coasts, and the Union Canal, which links Edinburgh to the Forth and Clyde Canal near Falkirk. Historically, the two canals had been connected by a flight of eleven locks spanning a distance of 1.5 kilometres, but these had been dismantled and backfilled in 1933, severing the link.
-        </p>
+    const p = targetPassages[pIdx] || targetPassages[0];
+    if (p) {
+      return this.formatPassageFromData(p);
+    }
 
-        <p class="cd-paragraph" data-paragraph="B">
-          <span class="cd-p-marker">Paragraph B</span>
-          To restore navigable waterways across central Scotland, the Millennium Commission launched the £84.5 million Millennium Link project in 1994. The project demanded an iconic, forward-looking structure rather than a reconstruction of the historic locks. The dramatic design chosen was inspired by a Celtic double-headed axe, standing 35 metres tall and balanced so perfectly that it uses roughly the same electrical energy as boiling eight domestic kettles (1.5 kilowatt-hours) to turn through 180 degrees.
-        </p>
-
-        <p class="cd-paragraph" data-paragraph="C">
-          <span class="cd-p-marker">Paragraph C</span>
-          The wheel consists of two opposing arms which extend 15 metres beyond the central axle and take the shape of Celtic axes. Two diametrically opposed water-filled caissons, each with a capacity of 360,000 litres, are fitted between the ends of the arms. Because boats displace their own weight in water according to Archimedes' principle, the caissons remain in absolute balance even when one holds a heavy canal barge and the other holds only water.
-        </p>
-
-        <p class="cd-paragraph" data-paragraph="D">
-          <span class="cd-p-marker">Paragraph D</span>
-          Constructing the Falkirk Wheel presented formidable civil and mechanical engineering hurdles. The steel components were manufactured and pre-assembled with millimetric precision in Derbyshire, England, before being dismantled and transported to Falkirk in 45 oversized lorry loads. Once on site, the sections were bolted together using more than 1,200 high-tensile bolts, each tightened by hand with an electronic torque wrench.
-        </p>
-
-        <p class="cd-paragraph" data-paragraph="E">
-          <span class="cd-p-marker">Paragraph E</span>
-          A sophisticated hydraulic drive mechanism rotates the wheel on a 4-metre diameter axle, driven by ten hydraulic motors. The entire rotation takes approximately five and a half minutes. Opened by Queen Elizabeth II on 24 May 2002 as part of her Golden Jubilee celebrations, the Falkirk Wheel has welcomed over 5.5 million visitors and stimulated massive regional tourism regeneration.
-        </p>
-      </article>
-    `;
+    return '<p class="cd-paragraph">Passage content unavailable.</p>';
   }
 
   private renderQuestionForm(q: QuestionItem): string {
@@ -516,16 +857,16 @@ export class ExamCockpitDossier {
     return `
       <div class="cd-question-card ${this.isReviewMode ? (isCorrect ? 'review-correct' : 'review-incorrect') : ''}" data-qid="${q.id}">
         <div class="cd-q-header">
-          <span class="cd-q-num">Question ${q.id} of 40</span>
+          <span class="cd-q-num">${t('cockpit.q_num_of', { id: q.id }, `Question ${q.id} of 40`)}</span>
           ${q.paragraphAnchor ? `
-            <button class="cd-anchor-jump-btn" data-jump="${q.paragraphAnchor}" title="Jump to ${q.paragraphAnchor} in passage">
-              ${icon('target', 12)} Jump to Paragraph ${q.paragraphAnchor}
+            <button class="cd-anchor-jump-btn" data-jump="${q.paragraphAnchor}" title="${t('cockpit.jump_to_anchor_title', { anchor: q.paragraphAnchor }, `Jump to ${q.paragraphAnchor} in passage`)}">
+              ${icon('target', 12)} ${t('cockpit.jump_to_para', { anchor: q.paragraphAnchor }, `Jump to Paragraph ${q.paragraphAnchor}`)}
             </button>
           ` : ''}
-          ${q.isFlagged ? '<span class="cd-flagged-tag">🚩 Flagged for review</span>' : ''}
+          ${q.isFlagged ? `<span class="cd-flagged-tag">${t('cockpit.flagged_tag', undefined, '🚩 Flagged for review')}</span>` : ''}
           ${this.isReviewMode ? `
             <span class="cd-review-badge ${isCorrect ? 'is-correct' : 'is-incorrect'}" style="font-weight: 700; font-size: var(--font-kicker); padding: 2px 8px; border-radius: 4px; background: ${isCorrect ? 'rgba(16,185,129,0.2)' : 'rgba(239,68,68,0.2)'}; color: ${isCorrect ? '#10b981' : '#ef4444'};">
-              ${isCorrect ? '✓ Correct' : '✗ Incorrect'}
+              ${isCorrect ? t('cockpit.correct', undefined, '✓ Correct') : t('cockpit.incorrect', undefined, '✗ Incorrect')}
             </span>
           ` : ''}
         </div>
@@ -533,7 +874,7 @@ export class ExamCockpitDossier {
         <p class="cd-q-prompt">${this.escapeHtml(q.prompt)}</p>
 
         ${q.type === 'tfng' || q.type === 'mcq' ? `
-          <div class="cd-options-group" role="radiogroup" aria-label="Question ${q.id} Answer Options">
+          <div class="cd-options-group" role="radiogroup" aria-label="${t('cockpit.q_options_aria', { id: q.id }, `Question ${q.id} Answer Options`)}">
             ${(q.options || []).map((opt, _idx) => `
               <label class="cd-option-label ${q.userAnswer === opt ? 'is-selected' : ''}">
                 <input 
@@ -551,12 +892,12 @@ export class ExamCockpitDossier {
           </div>
         ` : `
           <div class="cd-gap-input-wrapper">
-            <label for="cd-gap-${q.id}" class="cd-sr-only">Type answer for Question ${q.id}</label>
+            <label for="cd-gap-${q.id}" class="cd-sr-only">${t('cockpit.type_answer_aria', { id: q.id }, `Type answer for Question ${q.id}`)}</label>
             <input 
               type="text" 
               id="cd-gap-${q.id}" 
               class="cd-text-input" 
-              placeholder="Type your answer here..." 
+              placeholder="${t('cockpit.type_answer_ph', undefined, 'Type your answer here...')}" 
               value="${this.escapeHtml(q.userAnswer || '')}"
               ${this.isReviewMode ? 'readonly' : ''}
             />
@@ -566,17 +907,17 @@ export class ExamCockpitDossier {
         ${this.isReviewMode ? `
           <div class="cd-review-explanation-box">
             <div style="font-weight: 700; margin-bottom: 4px; color: ${isCorrect ? '#10b981' : '#ef4444'};">
-              ${isCorrect ? '✓ Verified Against Text' : `✗ Correct Answer: "${this.escapeHtml(q.correctAnswer || '')}"`}
+              ${isCorrect ? t('cockpit.verified_text', undefined, '✓ Verified Against Text') : t('cockpit.correct_ans_is', { ans: this.escapeHtml(q.correctAnswer || '') }, `✗ Correct Answer: "${this.escapeHtml(q.correctAnswer || '')}"`)}
             </div>
             <div style="font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">
-              ${this.escapeHtml(q.explanation || 'Refer to the referenced paragraph in the passage for the contextual rationale.')}
+              ${this.escapeHtml(q.explanation || t('cockpit.default_explanation', undefined, 'Refer to the referenced paragraph in the passage for the contextual rationale.'))}
             </div>
           </div>
         ` : ''}
 
         <div class="cd-q-nav-actions">
           <button class="cd-btn cd-btn-save-next" id="btn-save-advance">
-            Save &amp; Continue ${icon('arrowRight', 12)}
+            ${t('cockpit.save_continue', undefined, 'Save & Continue')} ${icon('arrowRight', 12)}
           </button>
         </div>
       </div>
@@ -588,21 +929,21 @@ export class ExamCockpitDossier {
     return `
       <div class="cd-writing-console">
         <div class="cd-writing-prompt-box">
-          <h3 class="cd-writing-h3">Writing Task 2: Formal Academic Argument</h3>
+          <h3 class="cd-writing-h3">${t('cockpit.writing_h3', undefined, 'Writing Task 2: Formal Academic Argument')}</h3>
           <p class="cd-writing-prompt">
             Some people believe that technological developments are leading to the loss of traditional cultures, 
             while others argue that technology can help preserve and revitalise them. 
             Discuss both views and give your own opinion.
           </p>
-          <span class="cd-writing-min-note">Write at least ${this.writingTargetWords} words. Suggested time: 40 minutes.</span>
+          <span class="cd-writing-min-note">${t('cockpit.writing_min_note', { target: this.writingTargetWords }, `Write at least ${this.writingTargetWords} words. Suggested time: 40 minutes.`)}</span>
         </div>
 
         <div class="cd-writing-textarea-wrapper">
-          <label for="cd-writing-textarea" class="cd-sr-only">Your Task 2 Response</label>
+          <label for="cd-writing-textarea" class="cd-sr-only">${t('cockpit.task2_response_aria', undefined, 'Your Task 2 Response')}</label>
           <textarea 
             id="cd-writing-textarea" 
             class="cd-writing-textarea" 
-            placeholder="Type your essay response here. Leave a blank line between paragraphs..."
+            placeholder="${t('cockpit.essay_placeholder', undefined, 'Type your essay response here. Leave a blank line between paragraphs...')}"
             spellcheck="false"
           >${this.escapeHtml(savedDraft)}</textarea>
         </div>
@@ -639,13 +980,19 @@ export class ExamCockpitDossier {
         reviewClass
       ].filter(Boolean).join(' ');
 
+      const statusText = isAnswered
+        ? t('cockpit.status_answered', undefined, 'Answered')
+        : t('cockpit.status_unanswered', undefined, 'Unanswered');
+      const flagSuffix = isFlagged ? t('cockpit.status_flagged_suffix', undefined, ' (Flagged)') : '';
+      const buttonTitle = t('cockpit.q_status_title', { id: q.id, status: statusText, flag: flagSuffix }, `Question ${q.id}: ${statusText}${flagSuffix}`);
+
       return `
         <button 
           class="${classes}" 
           data-qidx="${idx}" 
           role="tab" 
           aria-selected="${isCurrent}"
-          title="Question ${q.id}: ${isAnswered ? 'Answered' : 'Unanswered'}${isFlagged ? ' (Flagged)' : ''}"
+          title="${buttonTitle}"
         >
           ${q.id}${isFlagged ? '<span class="flag-dot">•</span>' : ''}
         </button>
@@ -680,6 +1027,7 @@ export class ExamCockpitDossier {
     this.container.querySelector('#btn-module-toggle')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
       this.currentModule = this.currentModule === 'READING' ? 'WRITING' : 'READING';
+      this.mobileActiveTab = this.currentModule === 'WRITING' ? 'questions' : 'passage';
       this.render();
     });
 
@@ -833,6 +1181,55 @@ export class ExamCockpitDossier {
       this.render();
     });
 
+    // Test Hub modal triggers & events
+    this.container.querySelector('#btn-open-test-hub')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      this.openTestHub();
+    });
+
+    this.container.querySelector('#btn-preview-exam-station')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      this.closeTestHub();
+    });
+
+    this.container.querySelector('#btn-start-selected-exam')?.addEventListener('click', () => {
+      AudioSynthesizer.play('chime');
+      this.startExam(this.selectedTestIndex);
+    });
+
+    this.container.querySelector('#btn-start-exam-inline')?.addEventListener('click', () => {
+      AudioSynthesizer.play('chime');
+      this.startExam(this.selectedTestIndex);
+    });
+
+    this.container.querySelector('#btn-pause-toggle')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      if (this.isTimerPaused) {
+        this.resumeTimer();
+      } else {
+        this.pauseTimer();
+      }
+      this.render();
+    });
+
+    const testCards = this.container.querySelectorAll('.cd-test-card');
+    testCards.forEach(card => {
+      card.addEventListener('click', () => {
+        AudioSynthesizer.play('click');
+        const idx = parseInt((card as HTMLElement).dataset.testIdx || '0', 10);
+        this.selectTest(idx);
+      });
+    });
+
+    // Ensure matrix track is scrolled cleanly to start on Q0
+    const track = this.container.querySelector('.cd-matrix-track') as HTMLElement | null;
+    if (this.activeQuestionIndex === 0) {
+      if (track) track.scrollLeft = 0;
+    } else {
+      const currentActiveBtn = this.container.querySelector(`.cd-q-matrix-btn[data-qidx="${this.activeQuestionIndex}"]`);
+      currentActiveBtn?.scrollIntoView({ inline: 'nearest', block: 'nearest', behavior: 'smooth' });
+    }
+
     // Submit button
     this.container.querySelector('#btn-submit-exam')?.addEventListener('click', () => {
       this.promptSubmitExam();
@@ -873,7 +1270,7 @@ export class ExamCockpitDossier {
     this.writingWordCount = words;
     const badge = this.container.querySelector('#cd-live-word-count');
     if (badge) {
-      badge.textContent = `${this.writingWordCount} / ${this.writingTargetWords} WORDS`;
+      badge.textContent = t('cockpit.words_counter', { current: this.writingWordCount, target: this.writingTargetWords }, `${this.writingWordCount} / ${this.writingTargetWords} WORDS`);
       badge.className = `cd-word-badge ${this.writingWordCount >= this.writingTargetWords ? 'is-valid' : 'is-under'}`;
     }
   }
@@ -888,7 +1285,7 @@ export class ExamCockpitDossier {
           const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
           this.lastAutosaveTimestamp = timeStr;
           const statusEl = this.container.querySelector('#cd-autosave-status');
-          if (statusEl) statusEl.textContent = `✓ Saved ${timeStr}`;
+          if (statusEl) statusEl.textContent = t('cockpit.saved_time', { time: timeStr }, `✓ Saved ${timeStr}`);
         } catch {
           // storage quota guard
         }
@@ -917,8 +1314,8 @@ export class ExamCockpitDossier {
     pop.style.top = `${rect.top - 38}px`;
     pop.style.left = `${rect.left + rect.width / 2}px`;
     pop.innerHTML = `
-      <button class="cd-pop-btn cd-pop-highlight" id="btn-apply-highlight">${icon('eye', 12)} Highlight</button>
-      <button class="cd-pop-btn cd-pop-clear" id="btn-clear-highlight">Clear</button>
+      <button class="cd-pop-btn cd-pop-highlight" id="btn-apply-highlight">${icon('eye', 12)} ${t('cockpit.highlight', undefined, 'Highlight')}</button>
+      <button class="cd-pop-btn cd-pop-clear" id="btn-clear-highlight">${t('cockpit.clear_highlight', undefined, 'Clear')}</button>
     `;
 
     pop.querySelector('#btn-apply-highlight')?.addEventListener('click', (e) => {
@@ -965,6 +1362,7 @@ export class ExamCockpitDossier {
   }
 
   private startTimer(): void {
+    if (!this.isExamStarted || this.isTimerPaused) return;
     if (this.timerInterval) clearInterval(this.timerInterval);
     this.timerInterval = setInterval(() => {
       if (this.timerSeconds > 0) {
@@ -981,13 +1379,13 @@ export class ExamCockpitDossier {
 
         // 10-minute warning banner alert
         if (this.timerSeconds === 600) {
-          this.showTimerAlert('⚠️ 10-MINUTE ALERT: 10 minutes remaining. Verify that answers for Passages 1 and 2 are recorded.', 'is-10min-warning');
+          this.showTimerAlert(t('cockpit.alert_10min', undefined, '⚠️ 10-MINUTE ALERT: 10 minutes remaining. Verify that answers for Passages 1 and 2 are recorded.'), 'is-10min-warning');
           AudioSynthesizer.play('alarm');
         }
 
         // 5-minute urgent banner alert
         if (this.timerSeconds === 300) {
-          this.showTimerAlert('🚨 5-MINUTE URGENT ALERT: 5 minutes remaining! Finalize all flagged questions now.', 'is-5min-urgent');
+          this.showTimerAlert(t('cockpit.alert_5min', undefined, '🚨 5-MINUTE URGENT ALERT: 5 minutes remaining! Finalize all flagged questions now.'), 'is-5min-urgent');
           AudioSynthesizer.play('alarm');
         }
       } else {
@@ -1029,10 +1427,10 @@ export class ExamCockpitDossier {
 
   public toggleFullscreen(): void {
     if (!document.fullscreenElement) {
-      this.container.requestFullscreen?.().catch(() => {});
+      this.container.requestFullscreen?.().catch(() => { });
       this.container.classList.add('is-fullscreen-exam');
     } else {
-      document.exitFullscreen?.().catch(() => {});
+      document.exitFullscreen?.().catch(() => { });
       this.container.classList.remove('is-fullscreen-exam');
     }
   }
@@ -1118,8 +1516,10 @@ export class ExamCockpitDossier {
   }
 
   public rawToBand(skill: 'listening' | 'reading', raw: number, of: number = 40): number {
-    const scaled = of === 40 ? raw : Math.round((raw / of) * 40);
-    if (scaled <= 0) return 0;
+    const safeRaw = Number.isFinite(raw) ? raw : 0;
+    const safeOf = Number.isFinite(of) && of > 0 ? of : 40;
+    const scaled = safeOf === 40 ? safeRaw : Math.round((safeRaw / safeOf) * 40);
+    if (!Number.isFinite(scaled) || scaled <= 0) return 0;
     if (scaled <= 2) return 1.0;
     const readingTable: [number, number][] = [
       [39, 9], [37, 8.5], [35, 8], [33, 7.5], [30, 7], [27, 6.5],
@@ -1135,13 +1535,13 @@ export class ExamCockpitDossier {
   }
 
   public getBandDescriptor(band: number): { cefr: string; descriptor: string } {
-    if (band >= 8.5) return { cefr: 'C2', descriptor: 'Expert User' };
-    if (band >= 7.5) return { cefr: 'C1', descriptor: 'Very Good User' };
-    if (band >= 7.0) return { cefr: 'C1', descriptor: 'Good User' };
-    if (band >= 6.0) return { cefr: 'B2', descriptor: 'Competent User' };
-    if (band >= 5.0) return { cefr: 'B1', descriptor: 'Modest User' };
-    if (band >= 4.0) return { cefr: 'B1', descriptor: 'Limited User' };
-    return { cefr: 'A2', descriptor: 'Extremely Limited User' };
+    if (band >= 8.5) return { cefr: 'C2', descriptor: t('cockpit.descriptor_expert', undefined, 'Expert User (Fully Operational Command)') };
+    if (band >= 7.5) return { cefr: 'C1', descriptor: t('cockpit.descriptor_very_good', undefined, 'Very Good User (Operational Command with Occasional Inaccuracies)') };
+    if (band >= 7.0) return { cefr: 'C1', descriptor: t('cockpit.descriptor_good', undefined, 'Good User with Operational Command') };
+    if (band >= 6.0) return { cefr: 'B2', descriptor: t('cockpit.descriptor_competent', undefined, 'Competent User (Generally Effective Command)') };
+    if (band >= 5.0) return { cefr: 'B1', descriptor: t('cockpit.descriptor_modest', undefined, 'Modest User (Partial Command)') };
+    if (band >= 4.0) return { cefr: 'B1', descriptor: t('cockpit.descriptor_limited', undefined, 'Limited User (Basic Competence in Familiar Situations)') };
+    return { cefr: 'A2', descriptor: t('cockpit.descriptor_extremely_limited', undefined, 'Extremely Limited User') };
   }
 
   private promptSubmitExam(): void {
@@ -1153,31 +1553,31 @@ export class ExamCockpitDossier {
     modal.className = 'completion-modal-overlay interactive';
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-modal', 'true');
-    modal.setAttribute('aria-label', 'Submit Exam Confirmation');
+    modal.setAttribute('aria-label', t('cockpit.submit_confirmation_label', undefined, 'Submit Exam Confirmation'));
 
     modal.innerHTML = `
       <div class="completion-receipt-card cd-submit-modal-card">
-        <div class="telemetry-label">[ OFFICIAL EXAM SUBMISSION SUMMARY ]</div>
+        <div class="telemetry-label">${t('cockpit.submit_telemetry', undefined, '[ OFFICIAL EXAM SUBMISSION SUMMARY ]')}</div>
         <h2 style="font-family: var(--font-mono); font-size: var(--font-h3); font-weight: 700; margin: 12px 0;">
-          Review Before Final Lock
+          ${t('cockpit.submit_title', undefined, 'Review Before Final Lock')}
         </h2>
 
         <div class="cd-summary-stats-box" style="display: flex; justify-content: space-around; margin: 16px 0; padding: 12px; background: var(--bg-surface-sunk); border-radius: 6px;">
-          <div><strong>${answeredCount}</strong> / 40 Answered</div>
-          <div><strong>${40 - answeredCount}</strong> Unanswered</div>
-          <div style="color: var(--accent-gold);"><strong>${flaggedCount}</strong> Flagged</div>
+          <div><strong>${answeredCount}</strong> / 40 ${t('cockpit.submit_answered', undefined, 'Answered')}</div>
+          <div><strong>${40 - answeredCount}</strong> ${t('cockpit.submit_unanswered', undefined, 'Unanswered')}</div>
+          <div style="color: var(--accent-gold);"><strong>${flaggedCount}</strong> ${t('cockpit.submit_flagged', undefined, 'Flagged')}</div>
         </div>
 
         <p style="font-size: var(--font-body-compact); color: var(--ink-muted); margin-bottom: 20px;">
-          Are you sure you want to end this test? Once submitted, your answers will be sealed and graded against the 9.0 band scale.
+          ${t('cockpit.submit_desc', undefined, 'Are you sure you want to end this test? Once submitted, your answers will be sealed and graded against the 9.0 band scale.')}
         </p>
 
-        <div style="display: flex; gap: 12px;">
-          <button class="hud-btn btn-confirm-submit" style="flex: 1; justify-content: center; background: var(--accent-cyan); color: #080a0f; font-weight: 700; min-height: 44px;">
-            [ CONFIRM &amp; GRADE TEST ]
+        <div class="apple-modal-actions action-stack" style="display: flex; flex-direction: column; gap: 12px; width: 100%; margin-top: 18px;">
+          <button type="button" class="hud-btn btn-confirm-submit" style="width: 100%; justify-content: center; background: var(--accent-cyan); color: #080a0f; font-weight: 700; min-height: 48px; border-radius: var(--radius-btn, 10px);">
+            ${t('cockpit.btn_confirm_submit', undefined, 'Confirm & Grade Test')}
           </button>
-          <button class="hud-btn btn-cancel-submit" style="flex: 1; justify-content: center; min-height: 44px;">
-            [ RETURN TO TEST ]
+          <button type="button" class="apple-bottom-close-btn btn-cancel-submit">
+            ${t('cockpit.btn_cancel_submit', undefined, 'Return to Test')}
           </button>
         </div>
       </div>
@@ -1279,12 +1679,13 @@ export class ExamCockpitDossier {
     cefr: string;
     descriptor: string;
     pct: number;
-    p1Correct: number;
-    p2Correct: number;
-    p3Correct: number;
-    tfngCorrect: number;
-    mcqCorrect: number;
-    gapCorrect: number;
+    p1Correct?: number;
+    p2Correct?: number;
+    p3Correct?: number;
+    tfngCorrect?: number;
+    mcqCorrect?: number;
+    gapCorrect?: number;
+    module?: CockpitModule;
     timeExpired?: boolean;
   }): void {
     const existing = document.getElementById('cd-band-conversion-modal');
@@ -1295,29 +1696,53 @@ export class ExamCockpitDossier {
     modal.className = 'completion-modal-overlay interactive cd-band-modal-overlay';
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-modal', 'true');
-    modal.setAttribute('aria-label', 'Band Score Report');
+    modal.setAttribute('aria-label', t('cockpit.band_report_title', undefined, 'Band Score Report'));
 
+    const raw = Number.isFinite(data.rawScore) ? data.rawScore : 0;
+    const p1 = Number.isFinite(data.p1Correct) ? (data.p1Correct as number) : Math.round(raw * (13 / 40));
+    const p2 = Number.isFinite(data.p2Correct) ? (data.p2Correct as number) : Math.round(raw * (13 / 40));
+    const p3 = Number.isFinite(data.p3Correct) ? (data.p3Correct as number) : Math.max(0, raw - p1 - p2);
+    const tfng = Number.isFinite(data.tfngCorrect) ? (data.tfngCorrect as number) : Math.min(13, p1);
+    const mcq = Number.isFinite(data.mcqCorrect) ? (data.mcqCorrect as number) : Math.min(13, p2);
+    const gap = Number.isFinite(data.gapCorrect) ? (data.gapCorrect as number) : Math.min(14, p3);
+
+    const rawModule = data.module || (this.currentModule === 'LISTENING' ? 'LISTENING' : 'READING');
+    const displayModule = rawModule === 'LISTENING'
+      ? t('cockpit.listening_short', undefined, 'LISTENING')
+      : rawModule === 'WRITING'
+        ? t('cockpit.writing_short', undefined, 'WRITING')
+        : t('cockpit.reading_short', undefined, 'READING');
+    const activeDescriptor = this.getBandDescriptor(data.bandScore).descriptor;
     const needlePos = Math.min(100, Math.max(0, (data.bandScore / 9.0) * 100));
+    const isVi = I18n.getLocale() === 'vi';
 
     modal.innerHTML = `
       <div class="cd-band-modal-card">
-        <div class="telemetry-label" style="display: flex; justify-content: space-between; align-items: center;">
-          <span>[ OFFICIAL CAMBRIDGE 9.0 BAND SCALE REPORT ]</span>
-          <span>${this.currentModule} // 40 QUESTIONS</span>
+        <div class="cd-telemetry-header" style="margin-bottom: var(--space-12); display: flex; flex-direction: column; gap: 4px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-8);">
+            <span class="telemetry-label" style="letter-spacing: 0.08em; font-weight: 700;">${t('cockpit.report_header', undefined, 'CAMBRIDGE 9.0 OFFICIAL REPORT')}</span>
+            <span class="hud-status-badge" style="letter-spacing: 0.06em; font-weight: 700; white-space: nowrap;">${t('cockpit.module_40q', { module: displayModule }, `${displayModule} &middot; 40 Qs`)}</span>
+          </div>
+          <div class="telemetry-label" style="color: var(--ink-muted); font-size: var(--font-kicker); letter-spacing: 0.06em;">
+            ${t('cockpit.band_breakdown', undefined, 'BAND CONVERSION &amp; SECTION BREAKDOWN')}
+          </div>
         </div>
 
         <div class="cd-band-header-badge">
           <div>
-            <div style="font-size: var(--font-kicker); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-secondary);">OFFICIAL RESULT</div>
-            <div class="cd-band-number">BAND ${data.bandScore.toFixed(1)}</div>
-            <div style="font-size: var(--font-body-compact); font-weight: 700; color: var(--accent-gold); margin-top: 2px;">${data.descriptor}</div>
+            <div style="font-size: var(--font-kicker); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-secondary);">${t('cockpit.official_result', undefined, 'OFFICIAL RESULT')}</div>
+            <div class="cd-band-number">${t('cockpit.band_score', { score: data.bandScore.toFixed(1) }, `BAND ${data.bandScore.toFixed(1)}`)}</div>
+            <div style="font-size: var(--font-body-compact); font-weight: 700; color: var(--accent-gold); margin-top: 2px;">${activeDescriptor}</div>
           </div>
           <div style="text-align: right;">
-            <span class="hud-pill" style="font-size: var(--font-h4); font-weight: 800; padding: 4px 10px; background: var(--accent-cyan); color: #080a0f; border-radius: 4px;">
+            <span class="hud-pill" style="font-size: var(--font-h4); font-weight: 800; padding: 4px 10px; background: var(--accent-gold); color: var(--bg-canvas); border-radius: var(--radius-pill, 9999px); white-space: nowrap; flex-shrink: 0; border: none; display: inline-block;">
               CEFR ${data.cefr}
             </span>
             <div style="font-size: var(--font-body-compact); margin-top: 6px; font-family: var(--font-mono); color: var(--ink-primary); font-weight: 700;">
-              ${data.rawScore} / 40 Raw (${data.pct}%)
+              ${(() => {
+                const safePct = Number.isFinite(data.pct) ? data.pct : Math.round((raw / 40) * 100);
+                return t('cockpit.raw_score_format', { raw, pct: safePct }, `${raw} / 40 Raw (${safePct}%)`);
+              })()}
             </div>
           </div>
         </div>
@@ -1325,59 +1750,70 @@ export class ExamCockpitDossier {
         <!-- Visual Cambridge Band Gauge -->
         <div style="margin: 16px 0 24px;">
           <div style="display: flex; justify-content: space-between; font-size: var(--font-kicker); font-family: var(--font-mono); color: var(--ink-muted); margin-bottom: 4px;">
-            <span>Band 0.0</span>
-            <span>Band 5.0</span>
-            <span>Band 6.5</span>
-            <span>Band 7.5</span>
-            <span>Band 9.0</span>
+            <span>${t('cockpit.band_n', { n: '0.0' }, 'Band 0.0')}</span>
+            <span>${t('cockpit.band_n', { n: '5.0' }, 'Band 5.0')}</span>
+            <span>${t('cockpit.band_n', { n: '6.5' }, 'Band 6.5')}</span>
+            <span>${t('cockpit.band_n', { n: '7.5' }, 'Band 7.5')}</span>
+            <span>${t('cockpit.band_n', { n: '9.0' }, 'Band 9.0')}</span>
           </div>
           <div class="cd-scale-gauge-track">
-            <div class="cd-scale-gauge-needle" style="left: ${needlePos}%;" title="Score Band ${data.bandScore}"></div>
+            <div class="cd-scale-gauge-needle" style="left: ${needlePos}%;" title="${t('cockpit.band_gauge_title', { score: data.bandScore.toFixed(1) }, `Score Band ${data.bandScore}`)}"></div>
           </div>
         </div>
 
         <!-- 3-Passage Breakdown -->
         <div class="cd-breakdown-grid">
           <div class="cd-breakdown-card">
-            <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted);">PASSAGE 1</div>
-            <div style="font-size: var(--font-body); font-weight: 800; font-family: var(--font-mono); margin: 4px 0;">${data.p1Correct} / 13</div>
-            <div style="font-size: var(--font-kicker); color: var(--accent-cyan); font-weight: 600;">${Math.round((data.p1Correct / 13) * 100)}%</div>
+            <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted);">${t('cockpit.passage_n', { n: 1 }, 'PASSAGE 1')}</div>
+            <div style="font-size: var(--font-body); font-weight: 800; font-family: var(--font-mono); margin: 4px 0;">${p1} / 13</div>
+            <div style="font-size: var(--font-kicker); color: var(--accent-cyan); font-weight: 600;">${Math.round((p1 / 13) * 100)}%</div>
           </div>
           <div class="cd-breakdown-card">
-            <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted);">PASSAGE 2</div>
-            <div style="font-size: var(--font-body); font-weight: 800; font-family: var(--font-mono); margin: 4px 0;">${data.p2Correct} / 13</div>
-            <div style="font-size: var(--font-kicker); color: var(--accent-cyan); font-weight: 600;">${Math.round((data.p2Correct / 13) * 100)}%</div>
+            <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted);">${t('cockpit.passage_n', { n: 2 }, 'PASSAGE 2')}</div>
+            <div style="font-size: var(--font-body); font-weight: 800; font-family: var(--font-mono); margin: 4px 0;">${p2} / 13</div>
+            <div style="font-size: var(--font-kicker); color: var(--accent-cyan); font-weight: 600;">${Math.round((p2 / 13) * 100)}%</div>
           </div>
           <div class="cd-breakdown-card">
-            <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted);">PASSAGE 3</div>
-            <div style="font-size: var(--font-body); font-weight: 800; font-family: var(--font-mono); margin: 4px 0;">${data.p3Correct} / 14</div>
-            <div style="font-size: var(--font-kicker); color: var(--accent-cyan); font-weight: 600;">${Math.round((data.p3Correct / 14) * 100)}%</div>
+            <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted);">${t('cockpit.passage_n', { n: 3 }, 'PASSAGE 3')}</div>
+            <div style="font-size: var(--font-body); font-weight: 800; font-family: var(--font-mono); margin: 4px 0;">${p3} / 14</div>
+            <div style="font-size: var(--font-kicker); color: var(--accent-cyan); font-weight: 600;">${Math.round((p3 / 14) * 100)}%</div>
           </div>
         </div>
 
         <!-- Question Types Breakdown -->
-        <div style="display: flex; justify-content: space-around; font-size: var(--font-body-compact); font-family: var(--font-mono); padding: 8px 12px; background: var(--bg-surface-sunk); border-radius: 4px; margin-bottom: 20px;">
-          <div>TFNG: <strong>${data.tfngCorrect}/13</strong></div>
-          <div>MCQ: <strong>${data.mcqCorrect}/13</strong></div>
-          <div>Gap: <strong>${data.gapCorrect}/14</strong></div>
+        <div class="cd-breakdown-types" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; font-size: var(--font-kicker); font-family: var(--font-mono); padding: 10px 12px; background: var(--bg-surface-sunk); border-radius: var(--radius-squircle-sm, 10px); margin-bottom: 20px; text-align: center;">
+          <div><span style="color: var(--ink-muted);">${t('cockpit.type_tfng', undefined, 'TFNG:')}</span> <strong style="color: var(--ink-primary);">${tfng}/13</strong></div>
+          <div><span style="color: var(--ink-muted);">${t('cockpit.type_mcq', undefined, 'MCQ:')}</span> <strong style="color: var(--ink-primary);">${mcq}/13</strong></div>
+          <div><span style="color: var(--ink-muted);">${t('cockpit.type_gap', undefined, 'GAP:')}</span> <strong style="color: var(--ink-primary);">${gap}/14</strong></div>
         </div>
 
         <!-- Action Buttons -->
-        <div style="display: flex; gap: 10px;">
-          <button class="hud-btn btn-review-exam" style="flex: 1; justify-content: center; min-height: 44px; font-weight: 700; background: var(--accent-cyan); color: #080a0f;">
-            ${icon('search', 14)} <span style="margin-left: 6px;">REVIEW TEST WITH ANSWERS</span>
-          </button>
-          <button class="hud-btn btn-retake-exam" style="flex: 1; justify-content: center; min-height: 44px; font-weight: 700;">
-            ${icon('rotateCcw', 14)} <span style="margin-left: 6px;">RETAKE TEST</span>
-          </button>
-          <button class="hud-btn btn-close-report" style="padding: 0 16px; justify-content: center; min-height: 44px;">
-            Close
+        <div class="cd-modal-actions">
+          <div class="cd-modal-btn-row">
+            <button type="button" class="cd-modal-action-btn btn-review-exam apple-press">
+              ${icon('search', 16)}<span>${t('cockpit.btn_review_answers', undefined, isVi ? 'Xem lại câu trả lời' : 'Review Answers')}</span>
+            </button>
+            <button type="button" class="cd-modal-action-btn btn-retake-exam apple-press">
+              ${icon('rotateCcw', 16)}<span>${t('cockpit.btn_retake_test', undefined, isVi ? 'Làm lại bài thi' : 'Retake Test')}</span>
+            </button>
+            <button type="button" class="cd-modal-action-btn btn-hub-return apple-press">
+              ${icon('book', 16)}<span>${isVi ? 'Danh sách đề' : 'Test Catalog'}</span>
+            </button>
+          </div>
+          <button type="button" class="apple-bottom-close-btn btn-close-report apple-press">
+            ${t('cockpit.btn_close_report', undefined, isVi ? 'Đóng báo cáo kết quả' : 'Close Score Report')}
           </button>
         </div>
       </div>
     `;
 
     document.body.appendChild(modal);
+
+    modal.querySelector('.btn-hub-return')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      modal.remove();
+      this.openTestHub();
+    });
 
     modal.querySelector('.btn-close-report')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
@@ -1404,8 +1840,6 @@ export class ExamCockpitDossier {
       this.activeQuestionIndex = 0;
       this.render();
     });
-
-    (modal.querySelector('.btn-review-exam') as HTMLElement)?.focus();
   }
 
   private escapeHtml(str: string): string {

@@ -350,7 +350,7 @@ export class NotificationEngine {
         'top: max(64px, calc(env(safe-area-inset-top, 0px) + 56px))',
         'left: 16px',
         'right: 16px',
-        'z-index: 100008',
+        'z-index: var(--z-toast, 1000)',
         'display: flex',
         'flex-direction: column',
         'gap: 10px',
@@ -361,7 +361,7 @@ export class NotificationEngine {
         'position: fixed',
         'bottom: max(24px, calc(env(safe-area-inset-bottom, 0px) + 20px))',
         'right: max(var(--pad-screen-right, 12px), calc(env(safe-area-inset-right, 0px) + 20px))',
-        'z-index: 100008',
+        'z-index: var(--z-toast, 1000)',
         'display: flex',
         'flex-direction: column',
         'gap: 10px',
@@ -399,7 +399,7 @@ export class NotificationEngine {
         <div class="toast-body" style="font-size: var(--font-body-compact); line-height: 1.4; color: var(--text-secondary, #94a3b8);">${body}</div>
         <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-cyan, #38bdf8); margin-top: 6px; letter-spacing: 0.05em;">TAP TO DRILL →</div>
       </div>
-      <button class="btn-toast-close" aria-label="Dismiss" style="background: none; border: none; color: var(--text-muted, #64748b); font-size: var(--font-body); cursor: pointer; padding: 0 4px; line-height: 1;">&times;</button>
+      <button class="btn-toast-close" aria-label="Dismiss" style="background: none; border: none; color: var(--text-muted, #64748b); font-size: var(--font-body); cursor: pointer; min-width: var(--touch-target-min, 44px); min-height: var(--touch-target-min, 44px); display: inline-flex; align-items: center; justify-content: center; margin: -8px -8px -8px 0; touch-action: manipulation;">&times;</button>
     `;
 
     const dismiss = () => {

@@ -3,6 +3,7 @@ import tipsData from '../../assets/data/ielts-tips.json';
 import { esc, h } from '../ui';
 import { ttsAvailable } from '../tts';
 import { icon, IconName } from '../../utils/icons';
+import { t } from '../../core/i18n';
 
 export interface StrategyCard {
   id: string;
@@ -668,7 +669,7 @@ export function strategyView(root: HTMLElement): () => void {
 
   root.innerHTML = '';
   root.append(
-    h('h1', 'ie-title', 'IELTS Master Strategy & Knowledge Codex'),
+    h('h1', 'ie-title', t('ielts.strategy_title', undefined, 'IELTS Master Strategy & Knowledge Codex')),
     h(
       'p',
       'ie-lead',
@@ -688,7 +689,7 @@ export function strategyView(root: HTMLElement): () => void {
   btnBlueprints.innerHTML = `
     <span class="ie-mode-icon">${icon('layers', 13)}</span>
     <span class="ie-mode-label">
-      <span class="ie-mode-full">46 Tactical Blueprints (Formulas & Traps)</span>
+      <span class="ie-mode-full">${t('strategy.tactical_blueprints', undefined, '46 Tactical Blueprints (Formulas & Traps)')}</span>
       <span class="ie-mode-short">Blueprints</span>
     </span>
     <span class="ie-mode-count">46</span>
@@ -701,7 +702,7 @@ export function strategyView(root: HTMLElement): () => void {
   btnVault.innerHTML = `
     <span class="ie-mode-icon">${icon('lightbulb', 13)}</span>
     <span class="ie-mode-label">
-      <span class="ie-mode-full">746 Knowledge Vault & Tips Explorer</span>
+      <span class="ie-mode-full">${t('strategy.knowledge_vault', undefined, '746 Knowledge Vault & Tips Explorer')}</span>
       <span class="ie-mode-short">Tips Vault</span>
     </span>
     <span class="ie-mode-count">746</span>
@@ -758,17 +759,17 @@ export function strategyView(root: HTMLElement): () => void {
   });
   searchBox.append(searchInput);
 
-  const expandAllBtn = h('button', 'ie-btn ie-expand-all', 'Expand All Drawers');
+  const expandAllBtn = h('button', 'ie-btn ie-expand-all', t('strategy.btn_show_details'));
   let allExpanded = false;
   expandAllBtn.addEventListener('click', () => {
     allExpanded = !allExpanded;
-    expandAllBtn.textContent = allExpanded ? 'Collapse All Drawers' : 'Expand All Drawers';
+    expandAllBtn.textContent = allExpanded ? t('strategy.btn_hide_details') : t('strategy.btn_show_details');
     cardsGrid.querySelectorAll('.ie-strategy-card').forEach(cardEl => {
       cardEl.classList.toggle('is-open', allExpanded);
       const toggle = cardEl.querySelector('.ie-drawer-toggle');
       if (toggle) {
         toggle.setAttribute('aria-expanded', allExpanded ? 'true' : 'false');
-        toggle.textContent = allExpanded ? 'Hide Details ▲' : 'Details & Formula ▼';
+        toggle.textContent = allExpanded ? t('strategy.btn_hide_details') : t('strategy.btn_show_details');
       }
     });
   });
@@ -807,7 +808,7 @@ export function strategyView(root: HTMLElement): () => void {
       return titleMatch || skillMatch || formulaMatch || tipsMatch || trapsMatch || synMatch;
     });
 
-    countBadge.innerHTML = `Showing <b>${filtered.length}</b> strategy card${filtered.length === 1 ? '' : 's'}${
+    countBadge.innerHTML = `${t('strategy.showing_count', { count: filtered.length }, `Showing <b>${filtered.length}</b> strategy cards`)}${
       currentSkillFilter !== 'all' ? ` in <em>${esc(currentSkillFilter)}</em>` : ''
     }${searchQuery ? ` matching "<em>${esc(searchQuery)}</em>"` : ''}`;
 
@@ -841,7 +842,7 @@ export function strategyView(root: HTMLElement): () => void {
         ? `<div class="ie-formula-snippet"><code>${esc(c.formula)}</code></div>`
         : '';
 
-      const toggleBtn = h('button', 'ie-btn ie-drawer-toggle', 'Details & Formula ▼');
+      const toggleBtn = h('button', 'ie-btn ie-drawer-toggle', t('strategy.btn_show_details'));
       toggleBtn.setAttribute('aria-expanded', 'false');
 
       const drawer = h('div', 'ie-strategy-drawer');
@@ -897,7 +898,7 @@ export function strategyView(root: HTMLElement): () => void {
 
       const tipsBlock = `
         <div class="ie-drawer-section ie-section-tips">
-          <h4>${icon('lightbulb', 14)} Actionable Execution Tips</h4>
+          <h4>${icon('lightbulb', 14)} ${t('strategy.actionable_tips')}</h4>
           <ul class="ie-tips-list">
             ${c.tips.map(t => `<li>${esc(t)}</li>`).join('')}
           </ul>
@@ -910,7 +911,7 @@ export function strategyView(root: HTMLElement): () => void {
         if (e) e.stopPropagation();
         const isOpen = card.classList.toggle('is-open');
         toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        toggleBtn.textContent = isOpen ? 'Hide Details ▲' : 'Details & Formula ▼';
+        toggleBtn.textContent = isOpen ? t('strategy.btn_hide_details') : t('strategy.btn_show_details');
       }
 
       toggleBtn.addEventListener('click', toggleOpen);
@@ -942,7 +943,7 @@ export function strategyView(root: HTMLElement): () => void {
   const searchWrap = h('div', 'ie-tips-search-wrap');
   const vSearchInput = h('input', 'ie-tips-search') as HTMLInputElement;
   vSearchInput.type = 'search';
-  vSearchInput.placeholder = 'Search 746 tips, rules, essays, or grammar lessons...';
+  vSearchInput.placeholder = t('strategy.search_ph');
   vSearchInput.setAttribute('aria-label', 'Search IELTS Tips');
   const searchIcon = h('span', 'ie-tips-search-icon');
   searchIcon.innerHTML = icon('search', 14);
@@ -951,24 +952,24 @@ export function strategyView(root: HTMLElement): () => void {
   const sortSelect = h('select', 'ie-tips-sort') as HTMLSelectElement;
   sortSelect.setAttribute('aria-label', 'Sort tips');
   sortSelect.innerHTML = `
-    <option value="views">Most Popular (Views)</option>
-    <option value="rating">Highest Rated</option>
-    <option value="date">Newest Added</option>
+    <option value="views">${t('strategy.sort_views')}</option>
+    <option value="rating">${t('strategy.sort_rating')}</option>
+    <option value="date">${t('strategy.sort_date')}</option>
   `;
 
   barTop.append(searchWrap, sortSelect);
 
   // Skill filter chips
   const chipsRow = h('div', 'ie-tips-chips scrollable-pill-strip');
-  const skillChips: { id: string; label: string; iconName: IconName }[] = [
-    { id: 'all', label: 'All', iconName: 'globe' },
-    { id: 'Writing', label: 'Writing', iconName: 'edit' },
-    { id: 'Grammar', label: 'Grammar 101', iconName: 'landmark' },
-    { id: 'Vocabulary', label: 'Vocabulary', iconName: 'book' },
-    { id: 'Speaking', label: 'Speaking', iconName: 'mic' },
-    { id: 'Reading', label: 'Reading', iconName: 'book' },
-    { id: 'Listening', label: 'Listening', iconName: 'headphones' },
-    { id: 'General & Strategies', label: 'General & Strategies', iconName: 'compass' }
+  const skillChips: { id: string; getLabel: () => string; iconName: IconName }[] = [
+    { id: 'all', getLabel: () => t('strategy.chip_all'), iconName: 'globe' },
+    { id: 'Writing', getLabel: () => t('strategy.chip_writing'), iconName: 'edit' },
+    { id: 'Grammar', getLabel: () => t('strategy.chip_grammar'), iconName: 'landmark' },
+    { id: 'Vocabulary', getLabel: () => t('strategy.chip_vocab'), iconName: 'book' },
+    { id: 'Speaking', getLabel: () => t('strategy.chip_speaking'), iconName: 'mic' },
+    { id: 'Reading', getLabel: () => t('strategy.chip_reading'), iconName: 'book' },
+    { id: 'Listening', getLabel: () => t('strategy.chip_listening'), iconName: 'headphones' },
+    { id: 'General & Strategies', getLabel: () => t('strategy.chip_general'), iconName: 'compass' }
   ];
 
   function renderChips(): void {
@@ -982,7 +983,7 @@ export function strategyView(root: HTMLElement): () => void {
         'button',
         `ie-tips-chip ${vaultSkill === sc.id ? 'is-active' : ''}`
       );
-      chip.innerHTML = `<span>${icon(sc.iconName, 13)}</span> <span>${esc(sc.label)}</span> <span class="ie-tips-chip-count">${count}</span>`;
+      chip.innerHTML = `<span>${icon(sc.iconName, 13)}</span> <span>${esc(sc.getLabel())}</span> <span class="ie-tips-chip-count">${count}</span>`;
       chip.addEventListener('click', () => {
         vaultSkill = sc.id;
         vaultLimit = 24;
@@ -1002,9 +1003,11 @@ export function strategyView(root: HTMLElement): () => void {
   const vaultGrid = h('div', 'ie-tips-grid');
   vaultContainer.append(vaultGrid);
 
-  const loadMoreBtn = h('button', 'ie-btn ie-btn-primary', 'Load More Strategies (24+)');
-  loadMoreBtn.style.margin = 'var(--space-16) auto';
-  loadMoreBtn.style.display = 'block';
+  const loadMoreBtn = h('button', 'ie-btn ie-btn-primary', t('strategy.btn_load_more'));
+  loadMoreBtn.style.margin = 'var(--space-16) 0 0 0';
+  loadMoreBtn.style.display = 'inline-flex';
+  loadMoreBtn.style.alignItems = 'center';
+  loadMoreBtn.style.justifyContent = 'center';
   loadMoreBtn.addEventListener('click', () => {
     vaultLimit += 24;
     renderVault();
@@ -1015,15 +1018,16 @@ export function strategyView(root: HTMLElement): () => void {
   const modalOverlay = h('div', 'ie-tip-modal-overlay');
   const modalBox = h('div', 'ie-tip-modal-box');
   const modalHeader = h('div', 'ie-tip-modal-header');
-  const modalTitle = h('h3', '', 'Strategy Guide');
+  const modalTitle = h('h3', '', t('strategy.guide_modal_title'));
   modalTitle.style.margin = '0';
   modalTitle.style.fontSize = 'var(--text-lg)';
-  const closeBtn = h('button', 'ie-tip-modal-close', '✕');
-  closeBtn.setAttribute('aria-label', 'Close modal');
-  modalHeader.append(modalTitle, closeBtn);
+  modalHeader.append(modalTitle);
 
   const modalBody = h('div', 'ie-tip-modal-body');
-  modalBox.append(modalHeader, modalBody);
+  const modalFooter = h('div', 'apple-modal-footer');
+  const bottomCloseBtn = h('button', 'apple-bottom-close-btn', t('common.close', undefined, 'Close'));
+  modalFooter.append(bottomCloseBtn);
+  modalBox.append(modalHeader, modalBody, modalFooter);
   modalOverlay.append(modalBox);
   root.append(modalOverlay);
 
@@ -1032,15 +1036,17 @@ export function strategyView(root: HTMLElement): () => void {
     if (ttsAvailable()) speechSynthesis.cancel();
   }
 
-  closeBtn.addEventListener('click', closeModal);
+  bottomCloseBtn.addEventListener('click', closeModal);
   modalOverlay.addEventListener('click', e => {
     if (e.target === modalOverlay) closeModal();
   });
-  document.addEventListener('keydown', e => {
+  const onKey = (e: KeyboardEvent) => {
     if (e.key === 'Escape' && modalOverlay.classList.contains('is-active')) {
       closeModal();
     }
-  });
+  };
+  document.addEventListener('keydown', onKey);
+
 
   function openTipDetail(tip: TipItem): void {
     modalTitle.textContent = tip.title;
@@ -1059,7 +1065,7 @@ export function strategyView(root: HTMLElement): () => void {
 
     const audioRow = h('div', '', '');
     if (ttsAvailable()) {
-      const listenBtn = h('button', 'ie-btn', '🔊 Listen to Audio Lesson (en-GB)');
+      const listenBtn = h('button', 'ie-btn', t('strategy.btn_listen_audio'));
       listenBtn.addEventListener('click', () => {
         speechSynthesis.cancel();
         const textToRead = `${tip.title}. ${tip.summary}. ${tip.content_text.slice(0, 1500)}`;
@@ -1073,7 +1079,7 @@ export function strategyView(root: HTMLElement): () => void {
 
     const summaryBox = h('div', 'ie-tipcard', `
       <div style="padding: var(--space-12); background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--accent-cyan); border-radius: 8px; margin: var(--space-12) 0;">
-        <b style="color: var(--accent-cyan);">Executive Key Takeaways:</b>
+        <b style="color: var(--accent-cyan);">${t('strategy.takeaways_title')}</b>
         <p style="margin-top: var(--space-6); color: var(--ink-primary);">${esc(tip.summary)}</p>
       </div>
     `);
@@ -1120,16 +1126,20 @@ export function strategyView(root: HTMLElement): () => void {
     }
 
     const totalViewsInFilter = filtered.reduce((acc, it) => acc + it.views, 0);
-    vaultStats.innerHTML = `Displaying <b>${Math.min(vaultLimit, filtered.length)}</b> of <b>${filtered.length}</b> articles ${
-      vaultSkill !== 'all' ? `in <em>${esc(vaultSkill)}</em>` : ''
-    } · Cumulative views: <b>${totalViewsInFilter.toLocaleString()}</b>`;
+    const inSkillText = vaultSkill !== 'all' ? t('strategy.in_skill', { skill: vaultSkill }) : '';
+    vaultStats.innerHTML = t('strategy.stats_display', {
+      min: Math.min(vaultLimit, filtered.length).toString(),
+      len: filtered.length.toString(),
+      inSkill: inSkillText,
+      views: totalViewsInFilter.toLocaleString()
+    });
 
     if (!filtered.length) {
       vaultGrid.append(
         h(
           'div',
           'ie-empty-message',
-          '<p class="ie-note">No articles match your current search. Try clearing keywords or selecting "All".</p>'
+          `<p class="ie-note">${t('strategy.empty_message')}</p>`
         )
       );
       loadMoreBtn.style.display = 'none';
@@ -1157,7 +1167,7 @@ export function strategyView(root: HTMLElement): () => void {
         <span style="color: var(--ink-muted); font-size: var(--text-2xs);">${
           tip.rating ? `⭐ ${tip.rating.toFixed(1)} (${esc(tip.votes)})` : esc(tip.date)
         }</span>
-        <span class="ie-tip-read-btn">Read Full Guide →</span>
+        <span class="ie-tip-read-btn">${t('strategy.btn_read_full')}</span>
       `;
 
       card.append(metaHeader, titleEl, summaryEl, footer);
@@ -1213,6 +1223,7 @@ export function strategyView(root: HTMLElement): () => void {
   renderCards();
 
   return () => {
+    document.removeEventListener('keydown', onKey);
     if (ttsAvailable()) speechSynthesis.cancel();
   };
 }

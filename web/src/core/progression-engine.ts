@@ -7,6 +7,7 @@
  */
 
 import { AudioSynthesizer } from './audio-synthesizer';
+import { AcousticHaptics } from './acoustic-haptics';
 import { StorageManager } from '../utils/storage';
 
 export interface DailyQuest {
@@ -91,6 +92,9 @@ export function getYesterdayString(): string {
   const day = String(d.getDate()).padStart(2, '0');
   return `${year}-${month}-${day}`;
 }
+
+export const getDaysBetween = (d1: string, d2: string): number =>
+  (!d1 || !d2) ? 999 : Math.round(Math.abs(Date.parse(d2) - Date.parse(d1)) / 864e5);
 
 export function calculateLevelFromXP(xp: number): number {
   const validXp = Math.max(0, xp || 0);
@@ -263,7 +267,16 @@ export class ProgressionEngine {
     } else if (!this.state.lastActiveDate) {
       this.state.streak = 1;
     } else {
-      this.state.streak = 1;
+      const daysDiff = getDaysBetween(this.state.lastActiveDate, today);
+      if (daysDiff === 2) {
+        // Rest Day Shield: Missed exactly 1 day. Preserve streak continuity!
+        this.state.streak += 1;
+        try {
+          AcousticHaptics.chime();
+        } catch {}
+      } else {
+        this.state.streak = 1;
+      }
     }
 
     this.state.lastActiveDate = today;
@@ -336,7 +349,12 @@ export class ProgressionEngine {
 
     if (completedAny) {
       try {
-        AudioSynthesizer.play('absorb');
+        const allCompletedNow = this.state.quests.every(q => q.completed);
+        if (allCompletedNow) {
+          AcousticHaptics.chime();
+        } else {
+          AudioSynthesizer.play('absorb');
+        }
         if (typeof window !== 'undefined' && (window as any).ParticleCanvas) {
           (window as any).ParticleCanvas.burst();
         }

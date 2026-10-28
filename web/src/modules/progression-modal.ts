@@ -9,6 +9,7 @@ import { icon } from '../utils/icons';
 import { ProgressionEngine, ProgressionState, LevelInfo } from '../core/progression-engine';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { achievementsHtml } from '../core/achievements-card';
+import { t } from '../core/i18n';
 
 export class ProgressionModal {
   private static activeInstance: ProgressionModal | null = null;
@@ -93,11 +94,8 @@ export class ProgressionModal {
         <!-- Top Control Bar -->
         <div class="progression-card-header">
           <div class="telemetry-label" style="color: var(--accent-gold); display: flex; align-items: center; gap: 6px;">
-            <span>✦</span> RPG MASTERY TELEMETRY
+            ${t('rpg.telemetry_title', undefined, 'RPG MASTERY TELEMETRY')}
           </div>
-          <button class="progression-btn-close btn-modal-close" title="Close Progression Modal (Esc)" aria-label="Close">
-            ✕
-          </button>
         </div>
 
         <!-- Level & Rank Badge Hero -->
@@ -109,13 +107,13 @@ export class ProgressionModal {
             </div>
           </div>
           <div class="progression-hero-details">
-            <div class="progression-rank-title">${info.rankTitle}</div>
+            <div class="progression-rank-title">${t('rank.' + info.rankTitle.toLowerCase().replace(/\s+/g, '_'), undefined, info.rankTitle)}</div>
             <div class="progression-hero-sub">
               <span class="progression-streak-pill">
-                ${icon('flame', 12)} ${state.streak} DAY STREAK
+                ${icon('flame', 12)} ${t('rpg.day_streak', { count: state.streak }, `${state.streak} DAY STREAK`)}
               </span>
               <span class="progression-total-xp">
-                ${icon('zap', 12)} ${state.xp.toLocaleString()} TOTAL XP
+                ${icon('zap', 12)} ${t('rpg.total_xp', { count: state.xp.toLocaleString() }, `${state.xp.toLocaleString()} TOTAL XP`)}
               </span>
             </div>
           </div>
@@ -124,7 +122,7 @@ export class ProgressionModal {
         <!-- XP Progress Bar to Next Level -->
         <div class="progression-xp-section">
           <div class="progression-xp-meta">
-            <span class="telemetry-label">NEXT RANK PROGRESS</span>
+            <span class="telemetry-label">${t('rpg.next_rank', undefined, 'NEXT RANK PROGRESS')}</span>
             <span class="progression-xp-numbers font-mono">
               <strong>${info.progressInLevel}</strong> / ${info.spanInLevel} XP
               <span class="progression-xp-pct">(${info.percentage}%)</span>
@@ -141,16 +139,18 @@ export class ProgressionModal {
         <div class="progression-quests-section">
           <div class="progression-quests-header">
             <div class="telemetry-label">
-              DAILY QUEST DIRECTIVES
+              ${t('rpg.daily_quests', undefined, 'DAILY QUEST DIRECTIVES')}
             </div>
             <div class="progression-quests-status-badge ${allCompleted ? 'all-done' : ''}">
-              ${completedQuests} / ${state.quests.length} COMPLETED
+              ${t('rpg.completed_status', { completed: completedQuests, total: state.quests.length }, `${completedQuests} / ${state.quests.length} COMPLETED`)}
             </div>
           </div>
 
           <div class="progression-quest-list">
             ${state.quests.map((quest) => {
-              const pct = Math.min(100, Math.round((quest.current / quest.target) * 100));
+              const target = Number.isFinite(quest.target) && quest.target > 0 ? quest.target : 1;
+              const current = Number.isFinite(quest.current) ? quest.current : 0;
+              const pct = Math.min(100, Math.max(0, Math.round((current / target) * 100)));
               return `
                 <div class="progression-quest-card ${quest.completed ? 'quest-completed' : ''}" data-quest-id="${quest.id}">
                   <div class="quest-status-icon" aria-hidden="true">
@@ -158,10 +158,10 @@ export class ProgressionModal {
                   </div>
                   <div class="quest-info">
                     <div class="quest-title-row">
-                      <span class="quest-title">${quest.title}</span>
+                      <span class="quest-title">${t('quest.' + quest.id + '_title', undefined, quest.title)}</span>
                       <span class="quest-reward-pill">+${quest.xpReward} XP</span>
                     </div>
-                    <div class="quest-desc">${quest.description}</div>
+                    <div class="quest-desc">${t('quest.' + quest.id + '_desc', undefined, quest.description)}</div>
                     <div class="quest-progress-bar-row">
                       <div class="quest-progress-track">
                         <div class="quest-progress-fill" style="width: ${pct}%;"></div>
@@ -176,25 +176,20 @@ export class ProgressionModal {
         </div>
 
         <!-- Action Footer -->
-        <div class="progression-footer">
-          <button class="hud-btn btn-modal-done" style="width: 100%; justify-content: center; padding: 12px; font-weight: 700; border-color: var(--accent-gold); color: var(--accent-gold);">
-            RETURN TO COMMAND CORE
+        <div class="apple-modal-footer progression-footer">
+          <button type="button" class="apple-bottom-close-btn btn-modal-done">
+            ${t('common.close', undefined, 'Close')}
           </button>
         </div>
       </div>
     `;
 
-    // Re-bind click event to the close button
-    const closeBtn = this.overlay.querySelector('.progression-btn-close');
-    closeBtn?.addEventListener('click', () => {
-      AudioSynthesizer.play('click');
-      this.close();
-    });
-
-    const doneBtn = this.overlay.querySelector('.btn-modal-done');
-    doneBtn?.addEventListener('click', () => {
-      AudioSynthesizer.play('click');
-      this.close();
+    // Re-bind click event to close buttons
+    this.overlay.querySelectorAll('.btn-modal-done, .progression-btn-close').forEach(btn => {
+      btn.addEventListener('click', () => {
+        AudioSynthesizer.play('click');
+        this.close();
+      });
     });
   }
 
@@ -214,3 +209,6 @@ export class ProgressionModal {
     ProgressionModal.activeInstance = null;
   }
 }
+
+(window as any).ProgressionModal = ProgressionModal;
+

@@ -189,16 +189,16 @@ export class SpeakingDossier {
       <div class="dossier-control-bar">
         <div class="speaking-mode-cluster">
           <button class="hud-btn mode-tab ${this.mode === 'nation' ? 'active-tab' : ''}" data-mode="nation">
-            ${icon('clock', 13)} 4-3-2 Fluency
+            ${icon('clock', 13)} ${t('speaking.mode_nation', undefined, '4-3-2 Fluency')}
           </button>
           <button class="hud-btn mode-tab ${this.mode === 'roleplay' ? 'active-tab' : ''}" data-mode="roleplay">
-            ${icon('mic', 13)} Conversation Partner
+            ${icon('mic', 13)} ${t('speaking.mode_roleplay', undefined, 'Conversation Partner')}
           </button>
           <button class="hud-btn mode-tab ${this.mode === 'formant' ? 'active-tab' : ''}" data-mode="formant">
-            ${icon('music', 13)} Formant & Pairs Lab
+            ${icon('music', 13)} ${t('speaking.mode_formant', undefined, 'Formant & Pairs Lab')}
           </button>
           <button class="hud-btn mode-tab ${this.mode === 'ielts' ? 'active-tab' : ''}" data-mode="ielts">
-            ${icon('graduationCap', 13)} IELTS Examiner
+            ${icon('graduationCap', 13)} ${t('speaking.mode_ielts', undefined, 'IELTS Examiner')}
           </button>
         </div>
         ${this.mode === 'nation' ? levelRowHtml(this.allItems as any[], this.activeLevel) : ''}
@@ -216,7 +216,7 @@ export class SpeakingDossier {
           <div class="dossier-card-slot"></div>
           <div class="dossier-nav-bar">
             <button class="hud-btn nav-btn-prev">${icon('arrowLeft')} ${t('action.prev')}</button>
-            <span class="telemetry-value card-counter">PROMPT ${this.currentIndex + 1} / ${this.items.length}</span>
+            <span class="telemetry-value card-counter">${t('common.prompt_counter', { current: this.currentIndex + 1, total: this.items.length }, `PROMPT ${this.currentIndex + 1} / ${this.items.length}`)}</span>
             <button class="hud-btn nav-btn-next">${t('action.next')} ${icon('arrowRight')}</button>
           </div>
         ` : this.mode === 'roleplay' ? `
@@ -714,7 +714,7 @@ export class SpeakingDossier {
 
     frontEl.innerHTML = `
       <div class="card-prompt-label">
-        4-3-2 DRILL // ROUND ${this.currentRoundIdx + 1}/3 (${allocatedMins}M)
+        ${t('speaking.drill_round', { round: this.currentRoundIdx + 1, mins: allocatedMins }, `4-3-2 DRILL // ROUND ${this.currentRoundIdx + 1}/3 (${allocatedMins}M)`)}
       </div>
 
       <div class="card-main-text" style="font-size: var(--font-body); font-weight: 600; line-height: 1.4; margin-bottom: 8px;">
@@ -723,13 +723,13 @@ export class SpeakingDossier {
 
       <!-- 15s Mental Anchor -->
       <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-secondary); margin-bottom: 10px; border-left: 2px solid var(--ink-primary); padding-left: 8px; background: rgba(0, 0, 0, 0.02);">
-        <strong>15S MENTAL ANCHOR:</strong> ${item.anchor}
+        <strong>${t('speaking.mental_anchor', undefined, '15S MENTAL ANCHOR:')}</strong> ${item.anchor}
       </div>
 
       <!-- Collocation Voice Radar Strip -->
       <div style="margin-bottom: 8px;">
         <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); margin-bottom: 4px;">
-          [TARGET COLLOCATIONS // ACOUSTIC RADAR]
+          ${t('speaking.target_colloc_radar', undefined, '[TARGET COLLOCATIONS // ACOUSTIC RADAR]')}
         </div>
         <div class="collocation-radar-strip">
           ${targetStatus.map((t) => `
@@ -764,8 +764,8 @@ export class SpeakingDossier {
         <!-- Dual-Trace Oscilloscope Canvas -->
         <div class="speaking-oscilloscope-container" style="flex: 1; margin-top: 0;">
           <div class="oscilloscope-header">
-            <span>TRACK 1: NATIVE BENCHMARK F₀</span>
-            <span>TRACK 2: ${this.isTimerRunning ? 'LIVE MIC TAKE' : (this.latestAnalysis ? 'STUDENT PITCH PROFILE' : 'STUDENT TAKE IDLE')}</span>
+            <span>${t('speaking.track1_benchmark', undefined, 'TRACK 1: NATIVE BENCHMARK F₀')}</span>
+            <span>TRACK 2: ${this.isTimerRunning ? t('speaking.live_mic_take', undefined, 'LIVE MIC TAKE') : (this.latestAnalysis ? t('speaking.student_pitch_profile', undefined, 'STUDENT PITCH PROFILE') : t('speaking.student_take_idle', undefined, 'STUDENT TAKE IDLE'))}</span>
           </div>
           <canvas class="speaking-waveform-canvas" width="480" height="72"></canvas>
         </div>
@@ -980,6 +980,10 @@ export class SpeakingDossier {
       this.timerInterval = null;
     }
     this.isTimerRunning = false;
+    if (this.waveformRaf) {
+      cancelAnimationFrame(this.waveformRaf);
+      this.waveformRaf = null;
+    }
     this.collocationSpotter.stopListening();
     AudioSynthesizer.play('alarm');
 
@@ -1078,6 +1082,19 @@ export class SpeakingDossier {
     if (typeof window !== 'undefined' && window.matchMedia) {
       window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener?.('change', () => {
         this.handleMotionChange();
+      });
+    }
+
+    if (typeof document !== 'undefined') {
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          if (this.waveformRaf !== null) {
+            cancelAnimationFrame(this.waveformRaf);
+            this.waveformRaf = null;
+          }
+        } else if (this.isTimerRunning && !this.isReducedMotion() && this.activeCanvas && this.activeCanvas.isConnected) {
+          this.initDualTraceCanvas(this.activeCanvas);
+        }
       });
     }
   }
@@ -1202,8 +1219,14 @@ export class SpeakingDossier {
       this.waveformRaf = null;
     }
 
-    if (this.isReducedMotion() && !this.isTimerRunning) {
+    if (this.isReducedMotion()) {
       // Zero-cycle suspension: draw single static frame and do not schedule requestAnimationFrame
+      this.drawWaveformFrame(canvas);
+      return;
+    }
+
+    if (!this.isTimerRunning) {
+      // Zero-CPU idle suspension: draw single static frame and do not schedule requestAnimationFrame
       this.drawWaveformFrame(canvas);
       return;
     }
@@ -1211,7 +1234,17 @@ export class SpeakingDossier {
     const draw = () => {
       this.drawWaveformFrame(canvas);
 
-      if (this.isReducedMotion() && !this.isTimerRunning) {
+      if (this.isReducedMotion() || !this.isTimerRunning) {
+        this.waveformRaf = null;
+        return;
+      }
+
+      if (typeof document !== 'undefined' && document.hidden) {
+        this.waveformRaf = null;
+        return;
+      }
+
+      if (!canvas.isConnected) {
         this.waveformRaf = null;
         return;
       }
@@ -1302,7 +1335,7 @@ export class SpeakingDossier {
         </div>
 
         <div class="vowel-pills-bar">
-          <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); align-self: center; margin-right: 4px;">TARGET VOWEL:</span>
+          <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); align-self: center; margin-right: 4px;">${t('speaking.target_vowel', undefined, 'TARGET VOWEL:')}</span>
           ${VOWEL_BENCHMARKS.map(b => `
             <button class="hud-btn vowel-pill ${b.phoneme === this.activeVowel.phoneme ? 'active-pill' : ''}" data-phoneme="${b.phoneme}">
               <strong>${b.phoneme}</strong> (${b.example})
@@ -1369,7 +1402,7 @@ export class SpeakingDossier {
               </div>
               <div style="margin-top: 8px;">
                 <button class="hud-btn btn-sim-resonance" style="font-size: var(--font-kicker); padding: 2px 8px;">
-                  ${icon('zap', 11)} Test Benchmark Resonance
+                  ${icon('zap', 11)} ${t('speaking.test_resonance', undefined, 'Test Benchmark Resonance')}
                 </button>
               </div>
             </div>

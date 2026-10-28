@@ -89,6 +89,25 @@ html[data-theme="light"] .apple-glass {
   transition: opacity 220ms ease;
 }
 
+/* Universal Skeleton Shimmer Utility */
+.skeleton-box,
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--shimmer-base, rgba(255, 255, 255, 0.05)) 0%,
+    var(--shimmer-highlight, rgba(255, 255, 255, 0.12)) 50%,
+    var(--shimmer-base, rgba(255, 255, 255, 0.05)) 100%
+  );
+  background-size: 200% 100%;
+  animation: apple-shimmer 1.8s ease-in-out infinite;
+  border-radius: var(--radius-sm, 6px);
+}
+
+@keyframes apple-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
 /* Respect User Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   .apple-press,
@@ -97,7 +116,13 @@ html[data-theme="light"] .apple-glass {
     transform: none !important;
   }
   .apple-shake,
-  .ambient-hint-pulse {
+  .ambient-hint-pulse,
+  .skeleton-box,
+  .skeleton-shimmer {
     animation: none !important;
+  }
+  .skeleton-box,
+  .skeleton-shimmer {
+    background: var(--shimmer-base, rgba(255, 255, 255, 0.05));
   }
 }

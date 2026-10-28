@@ -363,7 +363,7 @@ export class SerlGauntletEngine {
           newStreak: record.rehabStreak,
           graduated: true,
           nextDueTimestamp: record.nextDueTimestamp,
-          feedback: `★ ENGRAM SEALED! "${record.expectedOutput}" successfully rehabilitated and graduated from the active Gauntlet.`
+          feedback: `☆ ENGRAM SEALED! "${record.expectedOutput}" successfully rehabilitated and graduated from the active Gauntlet.`
         };
       } else {
         // Advance to next interval

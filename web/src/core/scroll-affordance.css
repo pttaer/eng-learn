@@ -22,7 +22,7 @@
   display: flex !important;
   align-items: center;
   justify-content: center;
-  z-index: 1000 !important;
+  z-index: var(--z-sticky, 100) !important;
   border: 2px solid var(--accent-gold, #f59e0b) !important;
   border-radius: 50% !important;
   background: #141b2b !important;
@@ -32,7 +32,6 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  animation: hud-arrow-pulse 2s ease-in-out infinite;
   box-sizing: border-box;
   padding: 0;
 }
@@ -60,6 +59,7 @@
 .hud-scroll-arrow.is-visible {
   opacity: 1 !important;
   pointer-events: auto !important;
+  animation: hud-arrow-pulse 2s ease-in-out 3 alternate;
 }
 
 .hud-scroll-arrow svg {
@@ -102,17 +102,17 @@
   mask-image: none !important;
 }
 
-.hud-scroll-track.can-scroll-right>[data-has-scroll-arrows="true"]:not(.view-mode-toggle):not(.ie-tabs) {
+.hud-scroll-track.can-scroll-right>[data-has-scroll-arrows="true"]:not(.view-mode-toggle):not(.ie-tabs):not(.cd-matrix-track) {
   -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 32px), transparent) !important;
   mask-image: linear-gradient(90deg, #000 calc(100% - 32px), transparent) !important;
 }
 
-.hud-scroll-track.can-scroll-left.can-scroll-right>[data-has-scroll-arrows="true"]:not(.view-mode-toggle):not(.ie-tabs) {
+.hud-scroll-track.can-scroll-left.can-scroll-right>[data-has-scroll-arrows="true"]:not(.view-mode-toggle):not(.ie-tabs):not(.cd-matrix-track) {
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 32px, #000 calc(100% - 32px), transparent 100%) !important;
   mask-image: linear-gradient(90deg, transparent 0%, #000 32px, #000 calc(100% - 32px), transparent 100%) !important;
 }
 
-.hud-scroll-track.can-scroll-left:not(.can-scroll-right)>[data-has-scroll-arrows="true"]:not(.view-mode-toggle):not(.ie-tabs) {
+.hud-scroll-track.can-scroll-left:not(.can-scroll-right)>[data-has-scroll-arrows="true"]:not(.view-mode-toggle):not(.ie-tabs):not(.cd-matrix-track) {
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 32px) !important;
   mask-image: linear-gradient(90deg, transparent 0%, #000 32px) !important;
 }

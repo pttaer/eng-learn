@@ -20,6 +20,7 @@ import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { StorageManager } from '../utils/storage';
 import { ProgressionEngine } from '../core/progression-engine';
 import { ScrollAffordance } from '../core/scroll-affordance';
+import { t } from '../core/i18n';
 
 export type MediationMode = 'TEXT_STREAMLINE' | 'DATA_EXPLAIN' | 'PRAGMATIC_REPAIR' | 'SPEED_BLITZ';
 
@@ -252,16 +253,16 @@ export class MediationDossier {
         <div class="control-row">
           <div class="mediation-category-selector" role="tablist" aria-label="Mediation Modes">
             <button class="hud-btn mode-tab ${this.currentMode === 'TEXT_STREAMLINE' ? 'active' : ''}" data-mode="TEXT_STREAMLINE" role="tab" aria-selected="${this.currentMode === 'TEXT_STREAMLINE'}">
-              ${icon('book', 12)} <span class="tab-label">Text Streamlining</span>
+              ${icon('book', 12)} <span class="tab-label">${t('mediation.tab_streamline', undefined, 'Text Streamlining')}</span>
             </button>
             <button class="hud-btn mode-tab ${this.currentMode === 'DATA_EXPLAIN' ? 'active' : ''}" data-mode="DATA_EXPLAIN" role="tab" aria-selected="${this.currentMode === 'DATA_EXPLAIN'}">
               ${icon('target', 12)} <span class="tab-label">Data &amp; Visuals</span>
             </button>
             <button class="hud-btn mode-tab ${this.currentMode === 'PRAGMATIC_REPAIR' ? 'active' : ''}" data-mode="PRAGMATIC_REPAIR" role="tab" aria-selected="${this.currentMode === 'PRAGMATIC_REPAIR'}">
-              ${icon('zap', 12)} <span class="tab-label">Pragmatic Netiquette</span>
+              ${icon('zap', 12)} <span class="tab-label">${t('mediation.tab_netiquette', undefined, 'Pragmatic Netiquette')}</span>
             </button>
             <button class="hud-btn mode-tab ${this.currentMode === 'SPEED_BLITZ' ? 'active' : ''}" data-mode="SPEED_BLITZ" role="tab" aria-selected="${this.currentMode === 'SPEED_BLITZ'}">
-              ${icon('clock', 12)} <span class="tab-label">Rapid Blitz</span>
+              ${icon('clock', 12)} <span class="tab-label">${t('mediation.tab_blitz', undefined, 'Rapid Blitz')}</span>
             </button>
           </div>
 
@@ -270,7 +271,7 @@ export class MediationDossier {
               ${icon('arrowLeft', 12)}
             </button>
             <span class="mediation-page-indicator">
-              SCENARIO <strong>${this.currentScenarioIndex + 1}</strong> / ${this.currentScenarios.length}
+              Scenario <strong>${this.currentScenarioIndex + 1}</strong> of ${this.currentScenarios.length}
             </span>
             <button class="hud-btn btn-next-scenario" title="Next Scenario" aria-label="Next Scenario" ${this.currentScenarioIndex >= this.currentScenarios.length - 1 ? 'disabled' : ''}>
               ${icon('arrowRight', 12)}
@@ -281,10 +282,10 @@ export class MediationDossier {
         <!-- Mobile Segmented Tab Selector (<768px viewport) -->
         <div class="mediation-mobile-toggle-bar" role="tablist" aria-label="Mobile Workbench Pane View">
           <button class="mobile-toggle-btn ${this.activeMobileTab === 'source' ? 'active' : ''}" data-pane="source" role="tab" aria-selected="${this.activeMobileTab === 'source'}">
-            ${icon('book', 12)} <span>1. Source Document</span>
+            ${icon('book', 12)} <span>${t('mediation.source_doc', undefined, '1. Source Document')}</span>
           </button>
           <button class="mobile-toggle-btn ${this.activeMobileTab === 'workbench' ? 'active' : ''}" data-pane="workbench" role="tab" aria-selected="${this.activeMobileTab === 'workbench'}">
-            ${icon('zap', 12)} <span>2. Composition</span>
+            ${icon('zap', 12)} <span>${t('mediation.composition', undefined, '2. Composition')}</span>
           </button>
         </div>
       </header>
@@ -300,18 +301,18 @@ export class MediationDossier {
               <span class="hud-status-badge badge-recipient" title="Target Recipient Persona">👤 ${scenario.recipient}</span>
               <span class="hud-status-badge badge-channel" title="Target Communication Channel">💬 ${scenario.channel}</span>
             </div>
-            <span class="target-envelope-pill">TARGET: ${scenario.targetWordRange[0]}-${scenario.targetWordRange[1]} WORDS</span>
+            <span class="target-envelope-pill">${t('mediation.target_words', { min: scenario.targetWordRange[0], max: scenario.targetWordRange[1] }, `TARGET: ${scenario.targetWordRange[0]}-${scenario.targetWordRange[1]} WORDS`)}</span>
           </div>
 
           <div class="panel-goal-banner">
             <span class="goal-icon">${icon('target', 14)}</span>
-            <span class="goal-text"><strong>GOAL:</strong> ${scenario.goal}</span>
+            <span class="goal-text"><strong>${t('mediation.goal_label', undefined, 'GOAL:')}</strong> ${scenario.goal}</span>
           </div>
 
           <div class="source-document-scroll" tabindex="0" role="region" aria-label="Authentic Source Content">
             <div class="source-document-header">
               <span class="doc-title">${scenario.title}</span>
-              <span class="doc-meta">[Source Length: ${this.countWords(scenario.sourceText)} words]</span>
+              <span class="doc-meta">${t('mediation.source_length', { count: this.countWords(scenario.sourceText) }, `[Source Length: ${this.countWords(scenario.sourceText)} words]`)}</span>
             </div>
             <div class="source-document-body ${scenario.sourceType}">
               ${this.formatSourceText(scenario.sourceText, scenario.sourceType)}
@@ -320,7 +321,7 @@ export class MediationDossier {
 
           <div class="source-telemetry-footer">
             <div class="anchor-tags-wrapper">
-              <span class="anchor-label">KEY CONCEPTS TO MEDIATE:</span>
+              <span class="anchor-label">${t('mediation.key_concepts', undefined, 'KEY CONCEPTS TO MEDIATE:')}</span>
               <div class="anchor-chips-row">
                 ${scenario.keyAnchors.map(a => `<span class="anchor-chip" title="Key concept">${a}</span>`).join('')}
               </div>
@@ -332,11 +333,11 @@ export class MediationDossier {
         <section class="mediation-workbench-panel" aria-label="Active Mediation Console">
           <div class="workbench-header-strip">
             <div class="workbench-title-group">
-              <span class="telemetry-label">Active Mediation Composition</span>
-              <span class="telemetry-sub">Synthesize and adapt for recipient without copying verbatim text</span>
+              <span class="telemetry-label">${t('mediation.active_comp', undefined, 'Active Mediation Composition')}</span>
+              <span class="telemetry-sub">${t('mediation.synthesize_hint', undefined, 'Synthesize and adapt for recipient without copying verbatim text')}</span>
             </div>
             <div class="word-count-badge" id="live-word-count-badge">
-              0 / ${scenario.targetWordRange[1]} WORDS
+              0 / ${scenario.targetWordRange[1]} words
             </div>
           </div>
 
@@ -352,13 +353,13 @@ export class MediationDossier {
 
           <div class="workbench-actions-bar">
             <button class="hud-btn btn-evaluate-resolution" id="btn-evaluate" title="Evaluate Resolution against CEFR Mediation Rubric (Ctrl+Enter)">
-              ${icon('zap', 14)} <span class="btn-text">Evaluate Response <span class="kbd-badge kbd-only">[Ctrl+Enter]</span></span>
+              ${icon('zap', 14)} <span class="btn-text">${t('mediation.evaluate_btn', undefined, 'Evaluate Response')} <span class="kbd-badge kbd-only">[Ctrl+Enter]</span></span>
             </button>
             <button class="hud-btn btn-toggle-exemplar" id="btn-exemplar" title="Inspect Exemplar Benchmark">
-              ${icon('eye', 14)} <span class="btn-text">Model Benchmark</span>
+              ${icon('eye', 14)} <span class="btn-text">${t('mediation.model_benchmark', undefined, 'Model Benchmark')}</span>
             </button>
             <button class="hud-btn btn-reset-draft" id="btn-reset" title="Clear Draft">
-              ${icon('rotateCcw', 14)} <span class="btn-text">Clear</span>
+              ${icon('rotateCcw', 14)} <span class="btn-text">${t('mediation.clear_draft', undefined, 'Clear')}</span>
             </button>
           </div>
 
@@ -408,7 +409,7 @@ export class MediationDossier {
     return `
       <div class="feedback-placeholder-state">
         <div class="placeholder-icon">${icon('target', 24)}</div>
-        <div class="placeholder-title">Awaiting Evaluation</div>
+        <div class="placeholder-title">${t('mediation.awaiting_eval', undefined, 'Awaiting Evaluation')}</div>
         <p class="placeholder-text">
           Compose your synthesized resolution above and <span class="desktop-only">press <kbd>Ctrl+Enter</kbd> or </span>click <strong>Evaluate Response</strong> to inspect rubric feedback.
         </p>
@@ -893,9 +894,11 @@ export class MediationDossier {
           </div>
         ` : ''}
 
-        <button class="hud-btn btn-close-modal" style="width: 100%; justify-content: center; padding: 10px; font-weight: 700;">
-          [ CLOSE BENCHMARK ]
-        </button>
+        <div class="apple-modal-footer">
+          <button type="button" class="apple-bottom-close-btn btn-close-modal">
+            ${t('common.close', undefined, 'Close')}
+          </button>
+        </div>
       </div>
     `;
 
@@ -910,6 +913,5 @@ export class MediationDossier {
 
   public teardown(): void {
     this.lastEvaluation = null;
-    document.querySelectorAll('.exemplar-modal-card').forEach(c => c.closest('.completion-modal-overlay')?.remove());
   }
 }

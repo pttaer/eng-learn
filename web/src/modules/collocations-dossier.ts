@@ -399,12 +399,12 @@ export class CollocationsDossier {
       statusBadge,
       hideFrontRating: true,
       front: {
-        promptLabel: 'COLLOCATION // RECALL MEANING',
+        promptLabel: t('colloc.prompt_label', undefined, 'COLLOCATION // RECALL MEANING'),
         mainText: item.phrase,
-        subText: 'Activate lexical retrieval before flipping'
+        subText: t('colloc.flip_hint', undefined, 'Activate lexical retrieval before flipping')
       },
       back: {
-        promptLabel: 'TARGET MEANING & USAGE',
+        promptLabel: t('colloc.meaning_label', undefined, 'TARGET MEANING & USAGE'),
         mainText: item.vietnamese,
         subText: item.example ? `“${this.escapeHtml(item.example)}”` : `Core Category: ${item.category}`
       },

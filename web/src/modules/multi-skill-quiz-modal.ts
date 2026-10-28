@@ -4,6 +4,7 @@ import { icon, IconName } from '../utils/icons';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import diagnosticDataRaw from '../assets/data/diagnostic-questions.json';
 import { feedback } from '../core/feedback';
+import { t } from '../core/i18n';
 
 export interface DiagnosticQuestionItem {
   id: string;
@@ -328,7 +329,7 @@ export class ListeningPromptComponent {
       <div class="listening-player-strip" style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-8); padding: 10px 14px; background: var(--bg-surface-sunk); border-radius: 6px; margin-bottom: var(--space-12);">
         <div style="display: flex; align-items: center; gap: 8px;">
           <button type="button" class="hud-btn btn-listening-play" style="font-weight: 700; color: var(--cyan, #38bdf8); border-color: var(--cyan, #38bdf8); padding: 8px 14px;">
-            ${icon('volume', 14)} <span style="margin-left: 6px;">▶ Play Audio</span>
+            ${icon('volume', 14)}<span>▶ Play Audio</span>
           </button>
           <button type="button" class="hud-btn btn-phonetic-hint" aria-expanded="false" style="font-size: var(--font-kicker); padding: 6px 10px;">
             ${icon('lightbulb', 13)} Phonetic Hint
@@ -436,13 +437,24 @@ export class MultiSkillQuizModal {
   // Speech rate for listening playback
   private speechRate: number = 1.0;
   private activeListeningComponent: ListeningPromptComponent | null = null;
+  private static activeInstance: MultiSkillQuizModal | null = null;
 
   public static open(initialView: 'quiz' | 'radar' = 'quiz', onDone: () => void = () => {}): MultiSkillQuizModal {
-    return new MultiSkillQuizModal(initialView, onDone);
+    this.closeActive();
+    const inst = new MultiSkillQuizModal(initialView, onDone);
+    this.activeInstance = inst;
+    return inst;
   }
 
   public static openRadarOnly(onDone: () => void = () => {}): MultiSkillQuizModal {
-    return new MultiSkillQuizModal('radar', onDone);
+    return this.open('radar', onDone);
+  }
+
+  public static closeActive(): void {
+    if (this.activeInstance) {
+      this.activeInstance.close();
+      this.activeInstance = null;
+    }
   }
 
   private constructor(initialView: 'quiz' | 'radar', onDone: () => void) {
@@ -458,6 +470,7 @@ export class MultiSkillQuizModal {
 
     // Create modal DOM overlay
     this.overlay = document.createElement('div');
+    this.overlay.id = 'multi-skill-quiz-modal';
     this.overlay.className = 'completion-modal-overlay interactive multi-skill-modal-overlay';
     this.overlay.setAttribute('role', 'dialog');
     this.overlay.setAttribute('aria-modal', 'true');
@@ -519,17 +532,20 @@ export class MultiSkillQuizModal {
   // =========================================================================
   private renderIntro(): void {
     this.card(`
-      <div class="telemetry-label" style="margin-bottom: var(--space-8); display: flex; align-items: center; justify-content: space-between;">
-        <span>INITIATIVE 21 &middot; MULTI-SKILL CEFR DIAGNOSTIC</span>
-        <span class="skill-badge-pill">${icon('target', 12)} CELESTIAL RADAR</span>
+      <div class="quiz-telemetry-header" style="margin-bottom: var(--space-12); display: flex; flex-direction: column; gap: 4px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-8);">
+          <span class="telemetry-label" style="letter-spacing: 0.08em; font-weight: 700;">${t('quiz.initiative', undefined, 'INITIATIVE 21')}</span>
+          <span class="skill-badge-pill">${icon('target', 12)} ${t('quiz.celestial_radar', undefined, 'CELESTIAL RADAR')}</span>
+        </div>
+        <div class="telemetry-label" style="color: var(--ink-muted); font-size: var(--font-kicker); letter-spacing: 0.06em;">
+          ${t('quiz.diagnostic_kicker', undefined, 'MULTI-SKILL CEFR DIAGNOSTIC')}
+        </div>
       </div>
       <h2 style="font-size: var(--font-h1); font-weight: 800; margin: 0 0 var(--space-8) 0; letter-spacing: -0.02em;">
-        Calibrate Your Language Proficiency
+        ${t('quiz.intro_title', undefined, 'Calibrate Your Language Proficiency')}
       </h2>
       <p style="font-size: var(--font-h4); line-height: 1.6; margin-bottom: var(--space-16); color: var(--ink-secondary);">
-        Unlike traditional single-level tests, language mastery is asymmetric. This diagnostic evaluates
-        <strong>5 distinct skills</strong> (Vocabulary, Grammar, Reading, Listening, and Writing) with 3 adaptive questions each
-        (<strong>15 questions total &middot; ~2 minutes</strong>).
+        ${t('quiz.intro_desc', undefined, 'Unlike traditional single-level tests, language mastery is asymmetric. This diagnostic evaluates 5 distinct skills (Vocabulary, Grammar, Reading, Listening, and Writing) with 3 adaptive questions each (15 questions total · ~2 minutes).')}
       </p>
       
       <div class="stepper-header" style="margin-bottom: var(--space-20);">
@@ -543,15 +559,15 @@ export class MultiSkillQuizModal {
         </div>
       </div>
 
-      <div style="display: flex; flex-direction: column; gap: var(--space-8); width: 100%;">
+      <div class="action-stack modal-actions" style="display: flex; flex-direction: column; gap: 12px; width: 100%; margin-top: 20px;">
         <button class="hud-btn quiz-start-btn" style="width: 100%; justify-content: center; padding: 12px 0; font-weight: 700; background: var(--accent-gold); color: var(--bg-canvas); border-color: var(--accent-gold);">
-          ${icon('zap', 14)} Start Diagnostic (15 Questions)
+          ${icon('zap', 14)} ${t('quiz.start_diagnostic', undefined, 'Start Diagnostic (15 Questions)')}
         </button>
         <button class="hud-btn quiz-radar-direct-btn" style="width: 100%; justify-content: center; padding: 10px 0; font-weight: 600;">
-          ${icon('target', 14)} View Current Radar Profile
+          ${icon('target', 14)} ${t('quiz.view_radar', undefined, 'View Current Radar Profile')}
         </button>
-        <button class="hud-btn quiz-cancel-btn" style="width: 100%; justify-content: center; padding: 8px 0; color: var(--ink-muted);">
-          Cancel &amp; Keep Current Levels
+        <button class="apple-bottom-close-btn quiz-cancel-btn">
+          ${t('quiz.cancel_keep', undefined, 'Cancel & Keep Current Levels')}
         </button>
       </div>
     `);
@@ -575,7 +591,7 @@ export class MultiSkillQuizModal {
   // =========================================================================
   // QUIZ ENGINE & STEPPER RUNNER
   // =========================================================================
-  private startQuiz(): void {
+  public startQuiz(): void {
     this.currentStageIndex = 0;
     this.stageQuestionIndex = 0;
     this.stageCorrectCounts = [0, 0, 0, 0, 0];
@@ -642,10 +658,18 @@ export class MultiSkillQuizModal {
         </div>
       </div>
 
-      <!-- Question Subheader -->
-      <div class="telemetry-label" style="margin-bottom: var(--space-8); display: flex; align-items: center; justify-content: space-between;">
-        <span>STAGE ${this.currentStageIndex + 1} OF 5 &middot; QUESTION ${this.stageQuestionIndex + 1} OF 3 (TOTAL ${globalQIndex}/${totalQuestions})</span>
-        <span class="skill-badge-pill">${icon(stageDef.iconName, 12)} ${stageDef.name} &middot; ${q.level}</span>
+      <!-- Question Subheader: Defensive Multi-Row Telemetry -->
+      <div class="quiz-telemetry-header" style="margin-bottom: var(--space-12); display: flex; flex-direction: column; gap: 6px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-8);">
+          <span class="telemetry-label" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 700; color: var(--ink-primary); font-size: var(--font-kicker); letter-spacing: 0.06em;">
+            ${icon(stageDef.iconName, 13)} ${stageDef.name.toUpperCase()}
+          </span>
+          <span class="skill-badge-pill">${q.level}</span>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-8); font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); letter-spacing: 0.06em;">
+          <span>${t('quiz.stage_info', { stage: this.currentStageIndex + 1, question: this.stageQuestionIndex + 1 }, `STAGE ${this.currentStageIndex + 1}/5 · QUESTION ${this.stageQuestionIndex + 1}/3`)}</span>
+          <span style="white-space: nowrap;">${t('quiz.total_info', { current: globalQIndex, total: totalQuestions }, `TOTAL ${globalQIndex}/${totalQuestions}`)}</span>
+        </div>
       </div>
 
       <div style="font-size: var(--font-body-compact); color: var(--ink-muted); margin-bottom: var(--space-8); line-height: 1.4;">
@@ -668,21 +692,21 @@ export class MultiSkillQuizModal {
       ` : ''}
 
       <!-- Options Group -->
-      <div role="group" aria-label="Choose the answer" data-feedback-scope style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8);">
+      <div role="group" aria-label="Choose the answer" data-feedback-scope class="action-stack" style="width: 100%; display: flex; flex-direction: column; gap: 12px;">
         ${q.options.map((opt, i) => `
-          <button class="hud-btn placement-option quiz-option" data-i="${i}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 12px 14px; text-align: left; white-space: normal; height: auto; text-transform: none; line-height: 1.4;">
+          <button class="hud-btn placement-option quiz-option" data-i="${i}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 12px 14px; text-align: left; white-space: normal; height: auto; text-transform: none; line-height: 1.4; border-radius: var(--radius-btn, 10px);">
             <span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: var(--bg-surface-sunk); color: var(--accent-gold); font-size: var(--font-kicker); font-weight: 800; margin-right: 10px; flex-shrink: 0;">${i + 1}</span>
             <span>${this.escape(opt)}</span>
           </button>
         `).join('')}
-        <div class="quiz-feedback-slot" data-feedback-slot hidden style="font-size: var(--font-h4); line-height: 1.5; color: var(--ink-secondary); padding: 10px 14px; background: var(--bg-surface-sunk); border-left: 3px solid var(--accent-gold); border-radius: 4px;"></div>
+        <div class="quiz-feedback-slot" data-feedback-slot hidden style="font-size: var(--font-h4); line-height: 1.5; color: var(--ink-secondary); padding: 10px 14px; background: var(--bg-surface-sunk); border-left: 3px solid var(--accent-gold); border-radius: var(--radius-squircle-sm, 10px);"></div>
       </div>
 
       <!-- Action Strip -->
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: var(--space-16); font-size: var(--font-kicker); color: var(--ink-muted);">
-        <span>Hotkeys: <strong>1 - 4</strong> to select &middot; <strong>Esc</strong> to exit</span>
-        <button class="hud-btn quiz-skip-stage-btn" style="padding: 4px 10px; font-size: var(--font-kicker);">
-          Skip Stage &rarr;
+      <div class="quiz-footer-strip" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 20px; font-size: var(--font-kicker); color: var(--ink-muted); width: 100%;">
+        <span class="quiz-hotkeys-hint" style="line-height: 1.4;">${t('quiz.hotkeys_hint', undefined, 'Hotkeys: 1 - 4 to select · Esc to exit')}</span>
+        <button class="hud-btn quiz-skip-stage-btn apple-press" style="min-height: 44px; padding: 8px 14px; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);">
+          ${t('quiz.skip_stage', undefined, 'Skip Stage →')}
         </button>
       </div>
     `);
@@ -757,7 +781,7 @@ export class MultiSkillQuizModal {
     this.stageQuestionIndex++;
     if (this.stageQuestionIndex >= this.currentStageQuestions.length) {
       // Stage finished
-      feedback.emit({ type: 'milestone', label: 'Stage complete' });
+      feedback.emit({ type: 'milestone', label: t('quiz.stage_complete', undefined, 'Stage complete') });
       this.advanceStage();
     } else {
       this.renderQuestion();
@@ -821,9 +845,14 @@ export class MultiSkillQuizModal {
     const radarSvg = MultiSkillQuizModal.generateRadarSvg(this.calibratedLevels, 320);
 
     this.card(`
-      <div class="telemetry-label" style="margin-bottom: var(--space-8); display: flex; align-items: center; justify-content: space-between;">
-        <span>DIAGNOSTIC COMPLETE &middot; CELESTIAL RADAR PROFILE</span>
-        <span class="skill-badge-pill">${icon('target', 12)} ${overallLevel} OVERALL</span>
+      <div class="quiz-telemetry-header" style="margin-bottom: var(--space-12); display: flex; flex-direction: column; gap: 4px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-8);">
+          <span class="telemetry-label" style="letter-spacing: 0.08em; font-weight: 700;">${t('quiz.diagnostic_complete', undefined, 'DIAGNOSTIC COMPLETE')}</span>
+          <span class="skill-badge-pill">${icon('target', 12)} ${t('quiz.overall', { level: overallLevel }, `${overallLevel} OVERALL`)}</span>
+        </div>
+        <div class="telemetry-label" style="color: var(--ink-muted); font-size: var(--font-kicker); letter-spacing: 0.06em;">
+          ${t('quiz.radar_title', undefined, 'CEFR 5-AXIS SKILL RADAR')}
+        </div>
       </div>
 
       <div style="text-align: center; margin-bottom: var(--space-8);">
@@ -831,7 +860,7 @@ export class MultiSkillQuizModal {
           ${CEFR_LABELS[overallLevel]}
         </h2>
         <p style="font-size: var(--font-body-compact); color: var(--ink-secondary); margin: 4px 0 0 0;">
-          Multi-skill diagnostic profile calibrated across 5 core language axes.
+          ${t('quiz.radar_desc', undefined, 'Multi-skill diagnostic calibrated across 5 core language axes.')}
         </p>
       </div>
 
@@ -842,7 +871,7 @@ export class MultiSkillQuizModal {
 
       <!-- Skill Breakdown & Manual Override Grid -->
       <div class="telemetry-label" style="margin-bottom: var(--space-8);">
-        INDEPENDENT SKILL CALIBRATION (CLICK TO OVERRIDE)
+        ${t('quiz.skill_calibration_hint', undefined, 'Skill Calibration · Tap Level to Adjust')}
       </div>
 
       <div class="skill-breakdown-grid">
@@ -864,16 +893,16 @@ export class MultiSkillQuizModal {
       </div>
 
       <!-- Actions -->
-      <div style="display: flex; flex-direction: column; gap: var(--space-8); width: 100%; margin-top: var(--space-16);">
+      <div class="action-stack radar-actions-cluster" style="display: flex; flex-direction: column; gap: 12px; width: 100%; margin-top: 22px;">
         <button class="hud-btn btn-apply-profile" style="width: 100%; justify-content: center; padding: 12px 0; font-weight: 700; background: var(--accent-gold); color: var(--bg-canvas); border-color: var(--accent-gold);">
-          ${icon('zap', 14)} Apply Profile &amp; Calibrate App
+          ${icon('zap', 14)} ${t('quiz.apply_profile', undefined, 'Apply Profile & Calibrate App')}
         </button>
-        <div style="display: flex; gap: var(--space-8);">
+        <div style="display: flex; gap: 12px;">
           <button class="hud-btn btn-retake-quiz" style="flex: 1; justify-content: center; padding: 8px 0;">
-            ${icon('target', 12)} Retake Diagnostic
+            ${icon('target', 12)} ${t('quiz.retake_diagnostic', undefined, 'Retake Diagnostic')}
           </button>
-          <button class="hud-btn btn-cancel-results" style="flex: 1; justify-content: center; padding: 8px 0; color: var(--ink-muted);">
-            Close
+          <button class="apple-bottom-close-btn btn-cancel-results" style="flex: 1; justify-content: center;">
+            ${t('common.close', undefined, 'Close')}
           </button>
         </div>
       </div>
@@ -1054,6 +1083,7 @@ export class MultiSkillQuizModal {
     this.activeListeningComponent = null;
     document.removeEventListener('keydown', this.keyHandler, true);
     this.overlay.remove();
+    MultiSkillQuizModal.activeInstance = null;
     this.opener?.focus();
   }
 

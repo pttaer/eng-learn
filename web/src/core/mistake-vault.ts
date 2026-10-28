@@ -3,6 +3,7 @@ import { HapticEngine } from './haptic-engine';
 import { AudioSynthesizer } from './audio-synthesizer';
 import { icon } from '../utils/icons';
 import { Cefr } from './cefr';
+import { t } from './i18n';
 
 export class MistakeVault {
   private static isInitialized = false;
@@ -97,44 +98,43 @@ export class MistakeVault {
     container.innerHTML = `
       <div class="vault-header">
         <div class="vault-title-group">
-          <span class="vault-kicker">SPACED ERROR REHABILITATION (SERL 2.0)</span>
-          <h2 class="vault-title">${icon('target', 20)} Smart Mistake Vault</h2>
+          <span class="vault-kicker">${t('vault.kicker', undefined, 'SPACED ERROR REHABILITATION (SERL 2.0)')}</span>
+          <h2 class="vault-title">${icon('target', 20)} ${t('vault.title', undefined, 'Smart Mistake Vault')}</h2>
         </div>
-        <button type="button" class="vault-btn-close" aria-label="Close Mistake Vault">✕</button>
       </div>
 
       <div class="vault-stats-grid">
         <div class="vault-stat-card is-accent">
           <span class="stat-num">${activeRecords.length}</span>
-          <span class="stat-label">Pending Recovery</span>
+          <span class="stat-label">${t('vault.pending_recovery', undefined, 'Pending Recovery')}</span>
         </div>
         <div class="vault-stat-card">
           <span class="stat-num">${stats.totalGraduated}</span>
-          <span class="stat-label">Engrams Sealed</span>
+          <span class="stat-label">${t('vault.engrams_sealed', undefined, 'Engrams Sealed')}</span>
         </div>
         <div class="vault-stat-card">
           <span class="stat-num">${allRecords.length}</span>
-          <span class="stat-label">Total Logged</span>
+          <span class="stat-label">${t('vault.total_logged', undefined, 'Total Logged')}</span>
         </div>
       </div>
 
       <div class="vault-main-action">
         ${activeRecords.length > 0 ? `
           <button type="button" class="vault-btn-primary btn-start-blitz">
-            ${icon('zap', 18)} Start Recovery Blitz (${activeRecords.length} Due)
+            ${icon('zap', 18)} ${t('vault.start_blitz', { count: activeRecords.length }, `Start Recovery Blitz (${activeRecords.length} Due)`)}
           </button>
         ` : `
           <div class="vault-empty-state">
-            <span class="empty-icon" style="color: var(--good, #22c55e); font-size: var(--font-h1);">✦</span>
-            <h3>All Engrams Stabilized</h3>
-            <p>No mistakes are currently pending rehabilitation. Logged errors will queue here.</p>
+            <span class="empty-icon" style="color: var(--good, #22c55e); font-size: var(--font-h1);">✓</span>
+            <h3>${t('vault.all_stabilized', undefined, 'All Engrams Stabilized')}</h3>
+            <p>${t('vault.no_mistakes', undefined, 'No mistakes are currently pending rehabilitation. Logged errors will queue here.')}</p>
           </div>
         `}
       </div>
 
       ${allRecords.length > 0 ? `
         <div class="vault-history-section">
-          <h3 class="vault-section-title">Active Error Registry</h3>
+          <h3 class="vault-section-title">${t('vault.active_registry', undefined, 'Active Error Registry')}</h3>
           <div class="vault-records-list">
             ${allRecords.slice(0, 15).map(r => `
               <div class="vault-record-item ${r.status === 'graduated' ? 'is-graduated' : ''}">
@@ -150,9 +150,17 @@ export class MistakeVault {
           </div>
         </div>
       ` : ''}
+
+      <div class="apple-modal-footer">
+        <button type="button" class="apple-bottom-close-btn btn-modal-close" aria-label="${t('common.close', undefined, 'Close')}">
+          ${t('common.close', undefined, 'Close')}
+        </button>
+      </div>
     `;
 
-    container.querySelector('.vault-btn-close')?.addEventListener('click', () => this.close());
+    container.querySelectorAll('.vault-btn-close, .btn-modal-close').forEach(b => {
+      b.addEventListener('click', () => this.close());
+    });
     container.querySelector('.btn-start-blitz')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
       HapticEngine.trigger('selection');

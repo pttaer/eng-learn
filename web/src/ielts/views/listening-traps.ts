@@ -247,11 +247,11 @@ export function listeningTrapsView(root: HTMLElement): () => void {
   // Container elements
   const header = h('header', 'ie-traps-header');
   const titleEl = h('h1', 'ie-title');
-  titleEl.innerHTML = `${icon('target', 18)} Listening Trap &amp; Oral Self-Correction Audio Lab`;
+  titleEl.innerHTML = `${icon('target', 18)} ${t('traps.title')}`;
   const leadDetails = h('details', 'ie-theory-details');
   leadDetails.innerHTML = `
-    <summary>Cambridge Trap Detection Guidelines (Sections 1–4)</summary>
-    <p class="ie-lead">Train your ear to detect oral self-corrections, restrictive qualifiers, reversal markers, and map direction decoys in real time.</p>
+    <summary>${t('traps.summary')}</summary>
+    <p class="ie-lead">${t('traps.lead')}</p>
   `;
   header.append(titleEl, leadDetails);
 
@@ -262,19 +262,19 @@ export function listeningTrapsView(root: HTMLElement): () => void {
   root.append(header, trackerBar, filterRow, stage);
 
   // Filter tabs setup
-  const FILTERS: { id: 'all' | TrapCategory; label: string; iconName: IconName }[] = [
-    { id: 'all', label: 'All Traps (12)', iconName: 'layers' },
-    { id: 'self_correction', label: 'Oral Self-Corrections (3)', iconName: 'rotateCcw' },
-    { id: 'qualifier', label: 'Qualifiers (3)', iconName: 'alertTriangle' },
-    { id: 'reversal', label: 'Reversals (3)', iconName: 'compass' },
-    { id: 'map_direction', label: 'Map Directions (3)', iconName: 'compass' },
+  const FILTERS: { id: 'all' | TrapCategory; getLabel: () => string; iconName: IconName }[] = [
+    { id: 'all', getLabel: () => t('traps.tab_all', { count: 12 }), iconName: 'layers' },
+    { id: 'self_correction', getLabel: () => t('traps.tab_self_correction', { count: 3 }), iconName: 'rotateCcw' },
+    { id: 'qualifier', getLabel: () => t('traps.tab_qualifier', { count: 3 }), iconName: 'alertTriangle' },
+    { id: 'reversal', getLabel: () => t('traps.tab_reversal', { count: 3 }), iconName: 'compass' },
+    { id: 'map_direction', getLabel: () => t('traps.tab_map_direction', { count: 3 }), iconName: 'compass' },
   ];
 
   const updateFilters = (): void => {
     filterRow.innerHTML = '';
     FILTERS.forEach(f => {
       const btn = h('button', `ie-tab ${activeFilter === f.id ? 'is-on' : ''}`);
-      btn.innerHTML = `${icon(f.iconName, 13)} ${f.label}`;
+      btn.innerHTML = `${icon(f.iconName, 13)} ${f.getLabel()}`;
       btn.addEventListener('click', () => {
         if (activeFilter === f.id) return;
         activeFilter = f.id;
@@ -294,11 +294,11 @@ export function listeningTrapsView(root: HTMLElement): () => void {
   const updateTracker = (): void => {
     trackerBar.innerHTML = '';
     const filtered = getFilteredScenarios();
-    const countSpan = h('span', 'ie-trap-count', `Trap ${currentIdx + 1} of ${filtered.length}`);
-    const masteredBadge = h('span', 'ie-badge-mastered', `🏆 Mastered: ${masteredSet.size} / 12`);
+    const countSpan = h('span', 'ie-trap-count', t('traps.count_label', { current: currentIdx + 1, total: filtered.length }));
+    const masteredBadge = h('span', 'ie-badge-mastered', t('traps.mastered_label', { count: masteredSet.size }));
     
     const navGroup = h('div', 'ie-traps-nav-group');
-    const prevBtn = h('button', 'ie-btn ie-btn-sm', '← Prev');
+    const prevBtn = h('button', 'ie-btn ie-btn-sm', `← ${t('common.back')}`);
     prevBtn.disabled = currentIdx === 0;
     prevBtn.addEventListener('click', () => {
       if (currentIdx > 0) {
@@ -307,7 +307,7 @@ export function listeningTrapsView(root: HTMLElement): () => void {
       }
     });
 
-    const nextBtn = h('button', 'ie-btn ie-btn-sm', 'Next →');
+    const nextBtn = h('button', 'ie-btn ie-btn-sm', `${t('common.next')} →`);
     nextBtn.disabled = currentIdx >= filtered.length - 1;
     nextBtn.addEventListener('click', () => {
       if (currentIdx < filtered.length - 1) {
@@ -356,6 +356,22 @@ export function listeningTrapsView(root: HTMLElement): () => void {
     let isPlaying = false;
     let wavePhase = 0;
     const drawWaveform = (): void => {
+      if (!isPlaying || !canvas.isConnected) {
+        if (animFrameId !== null) {
+          cancelAnimationFrame(animFrameId);
+          animFrameId = null;
+        }
+        canvas.style.display = 'none';
+        return;
+      }
+      if (typeof document !== 'undefined' && document.hidden) {
+        if (animFrameId !== null) {
+          cancelAnimationFrame(animFrameId);
+          animFrameId = null;
+        }
+        return;
+      }
+      canvas.style.display = 'block';
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const w = canvas.width;
       const h_mid = canvas.height / 2;
@@ -368,53 +384,57 @@ export function listeningTrapsView(root: HTMLElement): () => void {
       ctx.lineTo(w, h_mid);
       ctx.stroke();
 
-      if (isPlaying) {
-        // Draw active dynamic harmonics
-        ctx.strokeStyle = '#a5b4fc';
-        ctx.lineWidth = 2.5;
-        ctx.beginPath();
-        for (let x = 0; x < w; x++) {
-          const norm = x / w;
-          const env = Math.sin(norm * Math.PI); // tapering envelope
-          const wave = Math.sin(norm * 24 + wavePhase) * 16 * env +
-                       Math.sin(norm * 48 - wavePhase * 1.5) * 8 * env;
-          const y = h_mid + wave;
-          if (x === 0) ctx.moveTo(x, y);
-          else ctx.lineTo(x, y);
-        }
-        ctx.stroke();
-
-        // Secondary glow harmonic
-        ctx.strokeStyle = 'rgba(56, 189, 248, 0.4)';
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        for (let x = 0; x < w; x++) {
-          const norm = x / w;
-          const env = Math.sin(norm * Math.PI);
-          const wave = Math.cos(norm * 18 + wavePhase * 0.8) * 10 * env;
-          const y = h_mid + wave;
-          if (x === 0) ctx.moveTo(x, y);
-          else ctx.lineTo(x, y);
-        }
-        ctx.stroke();
-
-        wavePhase += 0.12;
-        animFrameId = requestAnimationFrame(drawWaveform);
-      } else {
-        // Flat resting line
-        ctx.strokeStyle = 'rgba(56, 189, 248, 0.35)';
-        ctx.lineWidth = 1.5;
-        ctx.beginPath();
-        ctx.moveTo(0, h_mid);
-        ctx.lineTo(w, h_mid);
-        ctx.stroke();
+      // Draw active dynamic harmonics
+      ctx.strokeStyle = '#a5b4fc';
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      for (let x = 0; x < w; x++) {
+        const norm = x / w;
+        const env = Math.sin(norm * Math.PI); // tapering envelope
+        const wave = Math.sin(norm * 24 + wavePhase) * 14 * env +
+                     Math.sin(norm * 48 - wavePhase * 1.5) * 6 * env;
+        const y = h_mid + wave;
+        if (x === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
       }
+      ctx.stroke();
+
+      // Secondary glow harmonic
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.4)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      for (let x = 0; x < w; x++) {
+        const norm = x / w;
+        const env = Math.sin(norm * Math.PI);
+        const wave = Math.cos(norm * 18 + wavePhase * 0.8) * 8 * env;
+        const y = h_mid + wave;
+        if (x === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+
+      wavePhase += 0.12;
+      animFrameId = requestAnimationFrame(drawWaveform);
     };
+
+    if (typeof document !== 'undefined') {
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          if (animFrameId !== null) {
+            cancelAnimationFrame(animFrameId);
+            animFrameId = null;
+          }
+        } else if (isPlaying && canvas.isConnected && animFrameId === null) {
+          drawWaveform();
+        }
+      });
+    }
+
     drawWaveform();
 
     // Player action row
     const playBar = h('div', 'ie-testbar ie-trap-playbar');
-    const playBtn = h('button', 'ie-btn ie-btn-primary ie-trap-play-btn', `🔊 ${t('ielts.play_audio', undefined, 'Play')} Scenario Audio`);
+    const playBtn = h('button', 'ie-btn ie-btn-primary ie-trap-play-btn', `${icon('volume', 14)} ${t('traps.btn_play_audio')}`);
     
     // Speed toggles
     const speedGroup = h('div', 'ie-speed-group');
@@ -435,25 +455,25 @@ export function listeningTrapsView(root: HTMLElement): () => void {
 
     if (!ttsAvailable()) {
       playBtn.disabled = true;
-      playBtn.textContent = 'TTS Unavailable in Browser';
+      playBtn.textContent = t('traps.tts_unavailable');
     } else {
       playBtn.addEventListener('click', () => {
         if (isPlaying && playback) {
           playback.stop();
           playback = null;
           isPlaying = false;
-          playBtn.innerHTML = `${icon('volume', 13)} Play Scenario Audio`;
+          playBtn.innerHTML = `${icon('volume', 13)} ${t('traps.btn_play_audio')}`;
           drawWaveform();
         } else {
           isPlaying = true;
-          playBtn.innerHTML = `${icon('stop', 13)} Stop Audio`;
+          playBtn.innerHTML = `${icon('stop', 13)} ${t('traps.btn_stop_audio')}`;
           drawWaveform();
           playback = playText(s.script, {
             rate: speechRate,
             onEnd: () => {
               isPlaying = false;
               playback = null;
-              playBtn.innerHTML = `${icon('volume', 13)} Play Scenario Audio`;
+              playBtn.innerHTML = `${icon('volume', 13)} ${t('traps.btn_play_audio')}`;
               drawWaveform();
             }
           });
@@ -467,18 +487,18 @@ export function listeningTrapsView(root: HTMLElement): () => void {
     // Step 1: Trap Category Spotter Challenge
     const step1Box = h('section', 'ie-trap-section');
     step1Box.append(
-      h('h3', 'ie-step-title', 'Step 1: Identify the Trap Category'),
-      h('p', 'ie-note', 'Listen to the recording and select which distractor pattern was employed by the speaker:')
+      h('h3', 'ie-step-title', t('traps.step1_title')),
+      h('p', 'ie-note', t('traps.step1_note'))
     );
 
     const spotterGrid = h('div', 'ie-trap-spotter-grid');
     const spotterFeedback = h('div', 'ie-spotter-feedback');
 
     const CATEGORIES: { cat: TrapCategory; label: string; iconName: IconName }[] = [
-      { cat: 'self_correction', label: 'Oral Self-Correction', iconName: 'rotateCcw' },
-      { cat: 'qualifier', label: 'Qualifier Trap', iconName: 'alertTriangle' },
-      { cat: 'reversal', label: 'Reversal Trap', iconName: 'compass' },
-      { cat: 'map_direction', label: 'Map Direction Decoy', iconName: 'compass' }
+      { cat: 'self_correction', label: t('traps.cat_self_correction', undefined, 'Oral Self-Correction'), iconName: 'rotateCcw' },
+      { cat: 'qualifier', label: t('traps.cat_qualifier', undefined, 'Qualifier Trap'), iconName: 'alertTriangle' },
+      { cat: 'reversal', label: t('traps.cat_reversal', undefined, 'Reversal Trap'), iconName: 'compass' },
+      { cat: 'map_direction', label: t('traps.cat_map_direction', undefined, 'Map Direction Decoy'), iconName: 'compass' }
     ];
 
     CATEGORIES.forEach(c => {
@@ -507,7 +527,7 @@ export function listeningTrapsView(root: HTMLElement): () => void {
     // Step 2: Exact-Word Input Challenge
     const step2Box = h('section', 'ie-trap-section');
     step2Box.append(
-      h('h3', 'ie-step-title', 'Step 2: Enter the Exact-Word Answer'),
+      h('h3', 'ie-step-title', t('traps.step2_title')),
       h('p', 'ie-cue', `${s.question} (Write NO MORE THAN ${s.maxWords === 1 ? 'ONE WORD' : 'TWO WORDS'})`)
     );
 
@@ -517,7 +537,7 @@ export function listeningTrapsView(root: HTMLElement): () => void {
     input.className = 'ie-trap-input';
     input.placeholder = `Type exact answer (max ${s.maxWords} word${s.maxWords === 1 ? '' : 's'})...`;
 
-    const checkBtn = h('button', 'ie-btn ie-btn-primary', t('ielts.check_answers', undefined, 'Validate Answer'));
+    const checkBtn = h('button', 'ie-btn ie-btn-primary', t('traps.btn_validate'));
     const inputFeedback = h('div', 'ie-input-feedback');
 
     // Deconstruction container (Step 3)
@@ -547,11 +567,11 @@ export function listeningTrapsView(root: HTMLElement): () => void {
       );
 
       const transcriptBox = h('div', 'ie-transcript-box',
-        `<h4>${icon('edit', 14)} Audio Script Breakdown</h4><p class="ie-colorized-script">${colorized}</p><p class="ie-note">${esc(s.explanation)}</p>`
+        `<h4>${icon('edit', 14)} ${t('traps.script_breakdown')}</h4><p class="ie-colorized-script">${colorized}</p><p class="ie-note">${esc(s.explanation)}</p>`
       );
 
       const ruleBox = h('div', 'ie-keino-rule-box',
-        `<h4>${icon('graduationCap', 14)} Keino Campbell Examiner Strategy</h4><p>${esc(s.keinoRule)}</p>`
+        `<h4>${icon('graduationCap', 14)} ${t('traps.keino_strategy')}</h4><p>${esc(s.keinoRule)}</p>`
       );
 
       deconstructContainer.append(transcriptBox, ruleBox);
@@ -573,7 +593,7 @@ export function listeningTrapsView(root: HTMLElement): () => void {
         input.classList.add('is-invalid');
         playSfx('alarm');
         const trapRes = DistractorEngine.detectTraps(s.script);
-        inputFeedback.innerHTML = `<p class="ie-feedback-msg is-error">${icon('alertTriangle', 13)} ${esc(res.reason || 'Incorrect answer')} [Risk: ${trapRes.riskLevel}]. <button class="ie-btn-link ie-reveal-btn">Reveal Explanation</button></p>`;
+        inputFeedback.innerHTML = `<p class="ie-feedback-msg is-error">${icon('alertTriangle', 13)} ${esc(res.reason || 'Incorrect answer')} [Risk: ${trapRes.riskLevel}]. <button class="ie-btn-link ie-reveal-btn">${t('traps.btn_reveal_explanation')}</button></p>`;
         inputFeedback.querySelector('.ie-reveal-btn')?.addEventListener('click', () => {
           renderDeconstruction();
         });

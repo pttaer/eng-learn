@@ -107,7 +107,7 @@ export class ConstellationEngine {
     });
     const listeningMastered = listeningPerks.filter(p => p.status === 'mastered').length;
     const listeningUnlocked = listeningPerks.filter(p => p.status !== 'locked').length;
-    const listeningPct = Math.round(listeningPerks.reduce((acc, p) => acc + p.masteryPct, 0) / listeningPerks.length);
+    const listeningPct = listeningPerks.length > 0 ? Math.round(listeningPerks.reduce((acc, p) => acc + p.masteryPct, 0) / listeningPerks.length) : 0;
 
     // 4. Speaking Branch
     const speakingNodes = SKILL_BRANCHES.speaking.nodes;

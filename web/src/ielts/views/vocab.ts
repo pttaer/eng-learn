@@ -4,6 +4,7 @@ import { SRSEngine, SRSCardState, SRSRating } from '../../core/srs-engine';
 import { ttsAvailable } from '../tts';
 import { esc, h } from '../ui';
 import { icon } from '../../utils/icons';
+import { t } from '../../core/i18n';
 
 interface VocabItem {
   id: string;
@@ -68,11 +69,11 @@ export function vocabView(root: HTMLElement): () => void {
   let searchQuery = '';
   let queue: VocabItem[] = [];
 
-  const titleHeader = h('h1', 'ie-title', 'IELTS Academic Vocabulary & Collocations');
+  const titleHeader = h('h1', 'ie-title', t('ielts.vocab_title', undefined, 'IELTS Academic Vocabulary & Collocations'));
   const leadDesc = h(
     'p',
     'ie-lead',
-    'High-yield academic vocabulary and authentic collocations with spaced repetition.'
+    t('ielts.vocab_lead', undefined, 'High-yield academic vocabulary and authentic collocations with spaced repetition.')
   );
 
   // Deck selector row
@@ -87,8 +88,8 @@ export function vocabView(root: HTMLElement): () => void {
   btnCore.innerHTML = `
     <span class="ie-mode-icon">${icon('target', 13)}</span>
     <span class="ie-mode-label">
-      <span class="ie-mode-full">Core Mock Deck</span>
-      <span class="ie-mode-short">Core</span>
+      <span class="ie-mode-full">${t('vocab.deck_core_full')}</span>
+      <span class="ie-mode-short">${t('vocab.deck_core_short')}</span>
     </span>
     <span class="ie-mode-count">${DECK_CORE.length.toLocaleString()}</span>
   `;
@@ -100,8 +101,8 @@ export function vocabView(root: HTMLElement): () => void {
   btnIot.innerHTML = `
     <span class="ie-mode-icon">${icon('globe', 13)}</span>
     <span class="ie-mode-label">
-      <span class="ie-mode-full">IOT Topic Lexicon</span>
-      <span class="ie-mode-short">Topics</span>
+      <span class="ie-mode-full">${t('vocab.deck_topics_full')}</span>
+      <span class="ie-mode-short">${t('vocab.deck_topics_short')}</span>
     </span>
     <span class="ie-mode-count">${DECK_IOT.length.toLocaleString()}</span>
   `;
@@ -113,8 +114,8 @@ export function vocabView(root: HTMLElement): () => void {
   btnCombined.innerHTML = `
     <span class="ie-mode-icon">${icon('zap', 13)}</span>
     <span class="ie-mode-label">
-      <span class="ie-mode-full">All Combined</span>
-      <span class="ie-mode-short">All</span>
+      <span class="ie-mode-full">${t('vocab.deck_combined_full')}</span>
+      <span class="ie-mode-short">${t('vocab.deck_combined_short')}</span>
     </span>
     <span class="ie-mode-count">${(DECK_CORE.length + DECK_IOT.length).toLocaleString()}</span>
   `;
@@ -134,10 +135,10 @@ export function vocabView(root: HTMLElement): () => void {
   const bandSelect = h('select', 'ie-select ie-vband');
   bandSelect.setAttribute('aria-label', 'Target Band');
   bandSelect.innerHTML = `
-    <option value="all">All Target Bands (6.5 - 8.5)</option>
-    <option value="6.5">Band 6.5</option>
-    <option value="7.0">Band 7.0</option>
-    <option value="7.5">Band 7.5+</option>
+    <option value="all">${t('vocab.all_bands')}</option>
+    <option value="6.5">${t('vocab.band_65')}</option>
+    <option value="7.0">${t('vocab.band_70')}</option>
+    <option value="7.5">${t('vocab.band_75')}</option>
   `;
 
   selectsRow.append(topicSelect, bandSelect);
@@ -145,7 +146,7 @@ export function vocabView(root: HTMLElement): () => void {
   // Search input
   const searchInput = h('input', 'ie-input ie-vsearch') as HTMLInputElement;
   searchInput.type = 'search';
-  searchInput.placeholder = 'Search vocabulary...';
+  searchInput.placeholder = t('vocab.search_ph');
 
   const stats = h('span', 'ie-note ie-vstats');
   stats.setAttribute('aria-live', 'polite');
@@ -164,7 +165,7 @@ export function vocabView(root: HTMLElement): () => void {
   function updateTopicOptions(): void {
     const deck = getActiveDeck();
     const topics = [...new Set(deck.map(v => v.topic))].sort();
-    topicSelect.innerHTML = `<option value="all">All Topics (${topics.length})</option>${topics
+    topicSelect.innerHTML = `<option value="all">${t('vocab.all_topics')}</option>${topics
       .map(t => `<option value="${t}">${t[0].toUpperCase() + t.slice(1)}</option>`)
       .join('')}`;
     topicSelect.value = 'all';
@@ -198,7 +199,11 @@ export function vocabView(root: HTMLElement): () => void {
     const now = Date.now();
     const seen = p.filter(v => states[v.id]);
     const due = seen.filter(v => states[v.id].dueDate <= now).length;
-    stats.textContent = `${p.length.toLocaleString()} words · ${due} due reviews · ${p.length - seen.length} unstudied`;
+    stats.textContent = t('vocab.stats_format', {
+      total: p.length.toLocaleString(),
+      due: due.toString(),
+      unstudied: (p.length - seen.length).toString()
+    });
   };
 
   function next(): void {
@@ -209,9 +214,9 @@ export function vocabView(root: HTMLElement): () => void {
       const done = h(
         'div',
         'ie-vcard',
-        '<b>Session round complete!</b><p class="ie-note">You have reviewed all due cards for this deck batch. Come back later for spaced reviews or launch another round.</p>'
+        `<b>${t('vocab.session_complete_title')}</b><p class="ie-note">${t('vocab.session_complete_note')}</p>`
       );
-      const more = h('button', 'ie-btn ie-btn-primary', 'Launch Next Round (20 Words)');
+      const more = h('button', 'ie-btn ie-btn-primary', t('vocab.btn_launch_next_round'));
       more.addEventListener('click', start);
       done.append(more);
       stage.append(done);
@@ -223,11 +228,11 @@ export function vocabView(root: HTMLElement): () => void {
       } · ${esc(v.topic)}</span>`;
     card.innerHTML = `${tags}<h2 class="ie-vword">${esc(
       v.word
-    )}</h2><p class="ie-note">Recall the definition, Vietnamese meaning, and academic collocations, then reveal.</p>`;
+    )}</h2><p class="ie-note">${t('vocab.recall_hint')}</p>`;
 
     const actions = h('div', 'ie-vactions');
     if (ttsAvailable()) {
-      const say = h('button', 'ie-btn', '🔊 Pronounce');
+      const say = h('button', 'ie-btn', t('vocab.btn_pronounce'));
       say.addEventListener('click', () => {
         speechSynthesis.cancel();
         const u = new SpeechSynthesisUtterance(v.word);
@@ -237,7 +242,7 @@ export function vocabView(root: HTMLElement): () => void {
       actions.append(say);
     }
 
-    const reveal = h('button', 'ie-btn ie-btn-primary', 'Reveal Meaning & Collocations');
+    const reveal = h('button', 'ie-btn ie-btn-primary', t('vocab.btn_reveal'));
     actions.append(reveal);
     card.append(actions);
     stage.append(card);
@@ -256,14 +261,14 @@ export function vocabView(root: HTMLElement): () => void {
 
       let collocBlock = '';
       if (v.collocations && v.collocations.length > 0) {
-        collocBlock = `<dt>Academic Collocations</dt><dd style="color: var(--ink-primary); font-weight: 500;">${v.collocations
-          .map(c => `<span style="display:inline-block; padding: 2px 8px; margin: 2px; border-radius: 6px; background: rgba(56, 189, 248, 0.12); color: var(--accent-cyan);">${esc(c)}</span>`)
-          .join(' ')}</dd>`;
+        collocBlock = `<dt>${t('vocab.academic_collocations')}</dt><dd style="color: var(--ink-primary); font-weight: 500; display: flex; flex-wrap: wrap; gap: 4px 6px;">${v.collocations
+          .map(c => `<span style="display:inline-block; padding: 2px 8px; border-radius: var(--radius-pill, 9999px); background: rgba(56, 189, 248, 0.12); color: var(--accent-cyan); white-space: nowrap; flex-shrink: 0; border: none;">${esc(c)}</span>`)
+          .join('')}</dd>`;
       }
 
       let paraBlock = '';
       if (v.paraphrases && v.paraphrases.length > 0) {
-        paraBlock = `<dt>Exam Paraphrases</dt><dd>${v.paraphrases.map(esc).join(' · ')}</dd>`;
+        paraBlock = `<dt>${t('vocab.exam_paraphrases')}</dt><dd>${v.paraphrases.map(esc).join(' · ')}</dd>`;
       }
 
       card.append(
@@ -288,8 +293,8 @@ export function vocabView(root: HTMLElement): () => void {
         return b;
       };
 
-      const good = ask('I knew it (Easy)', 'good');
-      rate.append(ask('Review Again (Hard)', 'again'), good);
+      const good = ask(t('vocab.btn_knew_easy'), 'good');
+      rate.append(ask(t('vocab.btn_review_again'), 'again'), good);
       card.append(rate);
       good.focus();
     });

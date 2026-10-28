@@ -26,7 +26,7 @@
   position: fixed;
   bottom: 24px;
   right: 24px;
-  z-index: 99999;
+  z-index: var(--z-toast, 1000);
   width: min(380px, calc(100vw - 32px));
   background: color-mix(in srgb, var(--bg-surface, #14171f) 96%, #000);
   backdrop-filter: blur(16px);
@@ -104,7 +104,7 @@
   border-radius: calc(var(--radius-sm, 8px) + 3px);
   border: 1.5px solid var(--accent-gold);
   opacity: 0.6;
-  animation: tourGlowPulse 2s infinite ease-in-out;
+  animation: tourGlowPulse 2s 4 alternate ease-in-out;
   pointer-events: none;
   transform: translateZ(0);
 }
@@ -144,26 +144,26 @@
 /* Directional Bouncing Keyframe Triggers */
 .tour-arrow.arrow-left,
 .tour-arrow[data-direction="left"] {
-  animation: bounceLeft 1.2s infinite ease-in-out;
+  animation: bounceLeft 1.2s 4 ease-in-out;
 }
 
 .tour-arrow.arrow-right,
 .tour-arrow[data-direction="right"] {
-  animation: bounceRight 1.2s infinite ease-in-out;
+  animation: bounceRight 1.2s 4 ease-in-out;
 }
 
 .tour-arrow.arrow-top,
 .tour-arrow.arrow-up,
 .tour-arrow[data-direction="top"],
 .tour-arrow[data-direction="up"] {
-  animation: bounceUp 1.2s infinite ease-in-out;
+  animation: bounceUp 1.2s 4 ease-in-out;
 }
 
 .tour-arrow.arrow-bottom,
 .tour-arrow.arrow-down,
 .tour-arrow[data-direction="bottom"],
 .tour-arrow[data-direction="down"] {
-  animation: bounceDown 1.2s infinite ease-in-out;
+  animation: bounceDown 1.2s 4 ease-in-out;
 }
 
 @keyframes bounceLeft {
@@ -357,7 +357,7 @@
   font-size: var(--font-kicker);
   font-weight: 600;
   padding: 8px 16px;
-  border-radius: var(--radius-sm, 6px);
+  border-radius: var(--radius-btn, 10px);
   border: 1px solid var(--border-subtle);
   background: var(--bg-surface, #111622);
   color: var(--ink-primary);

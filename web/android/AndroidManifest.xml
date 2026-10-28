@@ -32,6 +32,8 @@
                 <action android:name="app.englishsingularity.ACTION_SPEAK_SENTENCE" />
                 <action android:name="app.englishsingularity.ACTION_TOGGLE_RECALL" />
                 <action android:name="app.englishsingularity.ACTION_SELECT_TAB" />
+                <action android:name="app.englishsingularity.ACTION_ANSWER_QUIZ" />
+                <action android:name="app.englishsingularity.ACTION_NEXT_QUIZ" />
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"

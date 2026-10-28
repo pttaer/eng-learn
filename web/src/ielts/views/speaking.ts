@@ -9,7 +9,6 @@ import { playText, ttsAvailable, Playback } from '../tts';
 import { icon } from '../../utils/icons';
 import { t } from '../../core/i18n';
 
-
 const DATA = speakingData as SpeakingData;
 const engine = new AcousticEngine();
 // Live timers and an alive flag so leaving the view mid-session never fires a timer or reopens the mic elsewhere.
@@ -35,12 +34,15 @@ function say(text: string): void {
 
 /** Record one answer, cut off at `seconds`. Null when the mic is unavailable or the view was left. */
 async function record(host: HTMLElement, seconds: number): Promise<AcousticAnalysis | null> {
-  if (!(await engine.init())) { host.append(h('p', 'ie-note', 'Microphone unavailable. Speak aloud anyway and rate yourself.')); return null; }
+  if (!(await engine.init())) {
+    host.append(h('p', 'ie-note', t('speaking.mic_unavailable', undefined, 'Microphone unavailable. Speak aloud anyway and rate yourself.')));
+    return null;
+  }
   if (!alive) return null;
   await engine.startRecording();
   return new Promise(resolve => {
     const clock = h('span', 'ie-clock');
-    const stop = h('button', 'ie-btn ie-btn-primary', 'Stop');
+    const stop = h('button', 'ie-btn ie-btn-primary', t('speaking.btn_stop', undefined, 'Stop'));
     const row = h('div', 'ie-testbar');
     row.append(clock, stop);
     host.append(row);
@@ -63,10 +65,10 @@ function fluencyHint(a: AcousticAnalysis | null): string {
 /** Sums takes into one session-level fluency picture. */
 function total(takes: AcousticAnalysis[]): Fluency | null {
   if (!takes.length) return null;
-  const fs = takes.map(t => fluency(t.energySamples));
+  const fs = takes.map(tTake => fluency(tTake.energySamples));
   const sum = (k: keyof Fluency): number => fs.reduce((a, f) => a + f[k], 0);
   const sec = sum('speakingSec');
-  return { speakingSec: Math.round(sec), pauses: sum('pauses'), longPauses: sum('longPauses'), meanRunSec: Math.round((sec / (sum('pauses') + fs.length)) * 10) / 10, syllables: sum('syllables'), estWpm: sec ? Math.round((sum('syllables') / 1.5) * (60 / sec)) : 0 };
+  return { speakingSec: Math.round(sec), pauses: sum('pauses'), longPauses: sum('longPauses'), meanRunSec: Math.round((sec / Math.max(1, sum('pauses') + fs.length)) * 10) / 10, syllables: sum('syllables'), estWpm: sec ? Math.round((sum('syllables') / 1.5) * (60 / sec)) : 0 };
 }
 
 /** Asks each question in turn (read aloud), records up to `seconds`, then calls onDone. */
@@ -77,7 +79,7 @@ function askAll(stage: HTMLElement, label: string, qs: string[], seconds: number
     if (i >= qs.length) { onDone(); return; }
     stage.innerHTML = `<p class="ie-note">${esc(label)}: question ${i + 1} of ${qs.length}</p><p class="ie-cue">${esc(qs[i])}</p>`;
     say(qs[i]);
-    const go = h('button', 'ie-btn ie-btn-primary', `Answer (${seconds} s max)`);
+    const go = h('button', 'ie-btn ie-btn-primary', t('speaking.btn_answer_max', { seconds }, `Answer (${seconds} s max)`));
     go.addEventListener('click', async () => {
       go.remove();
       const a = await record(stage, seconds);
@@ -109,24 +111,24 @@ function rater(host: HTMLElement, itemId: string, summary = ''): void {
   box.querySelector('.ie-save')!.addEventListener('click', e => {
     addAttempt({ skill: 'speaking', itemId, band: band(), estimate: true });
     (e.target as HTMLButtonElement).disabled = true;
-    (e.target as HTMLButtonElement).textContent = 'Saved';
+    (e.target as HTMLButtonElement).textContent = t('speaking.btn_saved', undefined, 'Saved');
   });
 }
 
 /** Band-6 vs band-7 contrast when the card has one, else the band-7 model alone. */
 function samples(c: SpeakingPart2): HTMLElement {
-  if (!c.band6 || !c.notes) return h('div', 'ie-stage', `<h3>Band 7 model answer</h3><p>${esc(c.modelAnswer)}</p>`);
+  if (!c.band6 || !c.notes) return h('div', 'ie-stage', `<h3>${t('speaking.band7_model_title', undefined, 'Band 7 model answer')}</h3><p>${esc(c.modelAnswer)}</p>`);
   const n = c.notes;
-  return h('div', 'ie-result ie-feedback', `<div class="ie-feedback-col"><h3>Band 6 sample</h3><p>${esc(c.band6)}</p></div><div class="ie-feedback-col"><h3>Band 7 sample</h3><p>${esc(c.modelAnswer)}</p></div><div class="ie-feedback-wide"><h3>What separates 6 from 7</h3><p><b>Fluency and coherence.</b> ${esc(n.fc)}</p><p><b>Lexical resource.</b> ${esc(n.lr)}</p><p><b>Grammar.</b> ${esc(n.gra)}</p><p><b>Pronunciation.</b> ${esc(n.pron)}</p></div>`);
+  return h('div', 'ie-result ie-feedback', `<div class="ie-feedback-col"><h3>${t('speaking.band6_sample_title', undefined, 'Band 6 sample')}</h3><p>${esc(c.band6)}</p></div><div class="ie-feedback-col"><h3>${t('speaking.band7_sample_title', undefined, 'Band 7 sample')}</h3><p>${esc(c.modelAnswer)}</p></div><div class="ie-feedback-wide"><h3>${t('speaking.what_separates_6_7', undefined, 'What separates 6 from 7')}</h3><p><b>${t('speaking.criteria_fc', undefined, 'Fluency and coherence.')}</b> ${esc(n.fc)}</p><p><b>${t('speaking.criteria_lr', undefined, 'Lexical resource.')}</b> ${esc(n.lr)}</p><p><b>${t('speaking.criteria_gra', undefined, 'Grammar.')}</b> ${esc(n.gra)}</p><p><b>${t('speaking.criteria_pron', undefined, 'Pronunciation.')}</b> ${esc(n.pron)}</p></div>`);
 }
 
 /** Part 2 (1 min prep, 2 min talk) then Part 3 follow-ups, then samples and the rater. */
 function longTurn(stage: HTMLElement, c: SpeakingPart2, takes: AcousticAnalysis[], itemId: string): void {
   stage.innerHTML = '';
-  stage.append(h('p', 'ie-note', 'Part 2: long turn'), h('article', 'ie-passage ie-cuecard', `<p class="ie-cue">${esc(c.cue)}</p><p>You should say:</p><ul>${c.bullets.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`));
+  stage.append(h('p', 'ie-note', t('speaking.p2_long_turn', undefined, 'Part 2: long turn')), h('article', 'ie-passage ie-cuecard', `<p class="ie-cue">${esc(c.cue)}</p><p>${t('speaking.you_should_say', undefined, 'You should say:')}</p><ul>${c.bullets.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`));
   say(`${c.cue} You have one minute to prepare.`);
   const clock = h('p', 'ie-clock', '01:00');
-  const skip = h('button', 'ie-btn', 'Start speaking now');
+  const skip = h('button', 'ie-btn', t('speaking.btn_start_speaking_now', undefined, 'Start speaking now'));
   const prep = h('div', 'ie-testbar');
   prep.append(clock, skip);
   const pad = h('div', 'ie-prep-card ie-notepad');
@@ -138,18 +140,18 @@ function longTurn(stage: HTMLElement, c: SpeakingPart2, takes: AcousticAnalysis[
     row.append(inp); pad.append(row);
     return inp;
   });
-  stage.append(h('p', 'ie-note', 'Jot one keyword per bullet. The talk starts when the minute ends.'), prep, pad);
+  stage.append(h('p', 'ie-note', t('speaking.jot_keywords_note', undefined, 'Jot one keyword per bullet. The talk starts when the minute ends.')), prep, pad);
   const talk = async (): Promise<void> => {
     cd.stop(); timers.delete(cd); prep.remove(); pad.remove();
     const notes = inputs.map(x => x.value.trim()).filter(Boolean);
     if (notes.length) stage.append(h('ul', 'ie-notes-scratchpad', notes.map(n => `<li>${esc(n)}</li>`).join('')));
-    stage.append(h('p', 'ie-lead', 'Speak now. The recording stops at 2:00.'));
+    stage.append(h('p', 'ie-lead', t('speaking.speak_now_note', undefined, 'Speak now. The recording stops at 2:00.')));
     const a = await record(stage, 120);
     if (!alive) return;
     if (a) takes.push(a);
     stage.insertAdjacentHTML('beforeend', fluencyHint(a));
-    const next = h('button', 'ie-btn ie-btn-primary', 'Go to Part 3');
-    next.addEventListener('click', () => askAll(stage, 'Part 3: discussion', c.part3, 45, takes, () => finish(stage, c, takes, itemId)));
+    const next = h('button', 'ie-btn ie-btn-primary', t('speaking.btn_go_part3', undefined, 'Go to Part 3'));
+    next.addEventListener('click', () => askAll(stage, t('speaking.part3_discussion', undefined, 'Part 3: discussion'), c.part3, 45, takes, () => finish(stage, c, takes, itemId)));
     stage.append(next);
   };
   const cd = timer(60, l => { clock.textContent = fmtTime(l); }, talk);
@@ -157,24 +159,29 @@ function longTurn(stage: HTMLElement, c: SpeakingPart2, takes: AcousticAnalysis[
 }
 
 function finish(stage: HTMLElement, c: SpeakingPart2, takes: AcousticAnalysis[], itemId: string): void {
-  stage.innerHTML = '<p class="ie-lead">Session finished. Compare with the samples, then rate yourself on the four criteria.</p>';
-  const t = total(takes);
+  stage.innerHTML = `<p class="ie-lead">${t('speaking.session_finished', undefined, 'Session finished. Compare with the samples, then rate yourself on the four criteria.')}</p>`;
+  const tFluency = total(takes);
   stage.append(samples(c));
   renderComparativeModels(stage, c);
-  rater(stage, itemId, t ? `<p class="ie-note">Whole session: ${metrics(t)}</p>` : '');
+  rater(stage, itemId, tFluency ? `<p class="ie-note">${t('speaking.whole_session', undefined, 'Whole session:')} ${metrics(tFluency)}</p>` : '');
 }
 
 function fullTest(root: HTMLElement, back: () => void): void {
   root.innerHTML = '';
-  const b = h('button', 'ie-btn', 'Back');
+  const b = h('button', 'ie-btn', t('common.back', undefined, 'Back'));
   b.addEventListener('click', back);
   const stage = h('div', 'ie-stage');
-  root.append(h('h1', 'ie-title', 'Full speaking test'), h('p', 'ie-lead', 'About 11-14 minutes, as in the exam: Part 1 interview on two topics, Part 2 cue card with one minute to prepare, Part 3 discussion. The examiner reads each question aloud.'), b, stage);
+  root.append(
+    h('h1', 'ie-title', t('speaking.full_test_h1', undefined, 'Full speaking test')),
+    h('p', 'ie-lead', t('speaking.full_test_lead', undefined, 'About 11-14 minutes, as in the exam: Part 1 interview on two topics, Part 2 cue card with one minute to prepare, Part 3 discussion. The examiner reads each question aloud.')),
+    b,
+    stage
+  );
   const [t1, t2] = [...DATA.part1].sort(() => Math.random() - 0.5);
   const card = pick(DATA.part2);
   const qs = [...t1.questions.slice(0, 4), ...t2.questions.slice(0, 4)];
   const takes: AcousticAnalysis[] = [];
-  const start = h('button', 'ie-btn ie-btn-primary', 'Start the test');
+  const start = h('button', 'ie-btn ie-btn-primary', t('speaking.btn_start_test', undefined, 'Start the test'));
   start.addEventListener('click', () => askAll(stage, `Part 1: ${t1.topic}, then ${t2.topic}`, qs, 30, takes, () => longTurn(stage, card, takes, `full-${card.id}`)));
   stage.append(start);
 }
@@ -182,43 +189,49 @@ function fullTest(root: HTMLElement, back: () => void): void {
 function part1(root: HTMLElement, back: () => void): void {
   stopAll();
   root.innerHTML = '';
-  root.append(h('h1', 'ie-title', 'Part 1: Introduction and interview'), h('p', 'ie-lead', 'Answer each question in 2-3 sentences (20-30 seconds). Extend with a reason or example.'));
+  root.append(
+    h('h1', 'ie-title', t('speaking.p1_intro_title', undefined, 'Part 1: Introduction and interview')),
+    h('p', 'ie-lead', t('speaking.p1_intro_lead', undefined, 'Answer each question in 2-3 sentences (20-30 seconds). Extend with a reason or example.'))
+  );
   const list = h('div', 'ie-cards');
-  DATA.part1.forEach(t => {
-    const c = h('button', 'ie-card', `<b>${esc(t.topic)}</b><small>${t.questions.length} questions</small>`);
-    c.addEventListener('click', () => runPart1(root, t.topic, t.questions, back));
+  DATA.part1.forEach(topicItem => {
+    const c = h('button', 'ie-card', `<b>${esc(topicItem.topic)}</b><small>${t('speaking.part1_topics', { count: topicItem.questions.length }, `${topicItem.questions.length} questions`)}</small>`);
+    c.addEventListener('click', () => runPart1(root, topicItem.topic, topicItem.questions, back));
     list.append(c);
   });
-  const b = h('button', 'ie-btn', 'Back');
+  const b = h('button', 'ie-btn', t('common.back', undefined, 'Back'));
   b.addEventListener('click', back);
   root.append(b, list);
 }
 
 function runPart1(root: HTMLElement, topic: string, qs: string[], back: () => void): void {
   root.innerHTML = '';
-  const b = h('button', 'ie-btn', 'All topics');
+  const b = h('button', 'ie-btn', t('speaking.btn_all_topics', undefined, 'All topics'));
   b.addEventListener('click', () => part1(root, back));
   const stage = h('div', 'ie-stage');
   root.append(b, h('h2', 'ie-sub', esc(topic)), stage);
   const takes: AcousticAnalysis[] = [];
   askAll(stage, topic, qs, 30, takes, () => {
-    const t = total(takes);
-    stage.innerHTML = '<p class="ie-lead">Topic finished.</p>';
-    rater(stage, `p1-${topic}`, t ? `<p class="ie-note">${metrics(t)}</p>` : '');
+    const tFluency = total(takes);
+    stage.innerHTML = `<p class="ie-lead">${t('speaking.topic_finished', undefined, 'Topic finished.')}</p>`;
+    rater(stage, `p1-${topic}`, tFluency ? `<p class="ie-note">${metrics(tFluency)}</p>` : '');
   });
 }
 
 function part2(root: HTMLElement, back: () => void): void {
   stopAll();
   root.innerHTML = '';
-  root.append(h('h1', 'ie-title', 'Parts 2 and 3: Long turn and discussion'), h('p', 'ie-lead', 'One minute to prepare, then speak for up to two minutes. Part 3 follow-ups come after. Cards marked with a sample show band 6 and band 7 side by side.'));
+  root.append(
+    h('h1', 'ie-title', t('speaking.p23_title', undefined, 'Parts 2 and 3: Long turn and discussion')),
+    h('p', 'ie-lead', t('speaking.p23_lead', undefined, 'One minute to prepare, then speak for up to two minutes. Part 3 follow-ups come after. Cards marked with a sample show band 6 and band 7 side by side.'))
+  );
   const list = h('div', 'ie-cards');
   DATA.part2.forEach(c => {
     const card = h('button', 'ie-card', `<b>${esc(c.cue)}</b><small>${c.part3.length} Part 3 questions${c.band6 ? ' · band 6 vs 7 sample' : ''}</small>`);
     card.addEventListener('click', () => runPart2(root, c, back));
     list.append(card);
   });
-  const b = h('button', 'ie-btn', 'Back');
+  const b = h('button', 'ie-btn', t('common.back', undefined, 'Back'));
   b.addEventListener('click', back);
   root.append(b, list);
 }
@@ -326,8 +339,8 @@ function renderComparativeModels(host: HTMLElement, c: SpeakingPart2): void {
     const tabBtn = h('button', `ie-tab ${idx === activeIndex ? 'is-on' : ''}`, `Band ${m.band}`);
     tabBtn.addEventListener('click', () => {
       if (activeIndex === idx) return;
-      tabsRow.querySelectorAll('.ie-tab').forEach((t, i) => {
-        t.classList.toggle('is-on', i === idx);
+      tabsRow.querySelectorAll('.ie-tab').forEach((tTab, i) => {
+        tTab.classList.toggle('is-on', i === idx);
       });
       activeIndex = idx;
       renderActiveModel();
@@ -342,7 +355,7 @@ function renderComparativeModels(host: HTMLElement, c: SpeakingPart2): void {
 
 function runPart2(root: HTMLElement, c: SpeakingPart2, back: () => void): void {
   root.innerHTML = '';
-  const b = h('button', 'ie-btn', 'All cue cards');
+  const b = h('button', 'ie-btn', t('speaking.btn_all_cue_cards', undefined, 'All cue cards'));
   b.addEventListener('click', () => part2(root, back));
   const stage = h('div', 'ie-stage');
   root.append(b, stage);
@@ -350,12 +363,11 @@ function runPart2(root: HTMLElement, c: SpeakingPart2, back: () => void): void {
 }
 
 function stopAll(): void {
-  timers.forEach(t => t.stop());
+  timers.forEach(tTimer => tTimer.stop());
   timers.clear();
   if ('speechSynthesis' in window) speechSynthesis.cancel();
   if (engine.isRecording) void engine.stopRecording();
 }
-
 
 export function speakingView(root: HTMLElement): () => void {
   alive = true;
@@ -364,11 +376,11 @@ export function speakingView(root: HTMLElement): () => void {
     const existingBanner = root.querySelector('.ie-subnav-banner');
     root.innerHTML = '';
     if (existingBanner) root.append(existingBanner);
-    root.append(h('h1', 'ie-title', 'Academic Speaking'), h('p', 'ie-lead', 'Recordings stay on your device. Pace and pauses are measured from the audio as a hint; the band is your own rubric rating, so it is an estimate.'));
+    root.append(h('h1', 'ie-title', t('speaking.title', undefined, 'Academic Speaking')), h('p', 'ie-lead', t('speaking.lead', undefined, 'Recordings stay on your device. Pace and pauses are measured from the audio as a hint; the band is your own rubric rating, so it is an estimate.')));
     const cards = h('div', 'ie-cards');
-    const f = h('button', 'ie-card', '<b>Full test</b><span>Parts 1, 2 and 3 in exam order</span><small>11-14 minutes</small>');
-    const a = h('button', 'ie-card', `<b>Part 1</b><span>Interview</span><small>${DATA.part1.length} topics</small>`);
-    const b = h('button', 'ie-card', `<b>Parts 2 and 3</b><span>Cue card + discussion</span><small>${DATA.part2.length} cue cards</small>`);
+    const f = h('button', 'ie-card', `<b>${t('speaking.full_test_title', undefined, 'Full test')}</b><span>${t('speaking.full_test_sub', undefined, 'Parts 1, 2 and 3 in exam order')}</span><small>${t('speaking.full_test_time', undefined, '11-14 minutes')}</small>`);
+    const a = h('button', 'ie-card', `<b>${t('speaking.part1_title', undefined, 'Part 1')}</b><span>${t('speaking.part1_sub', undefined, 'Interview')}</span><small>${t('speaking.part1_topics', { count: DATA.part1.length }, `${DATA.part1.length} topics`)}</small>`);
+    const b = h('button', 'ie-card', `<b>${t('speaking.part23_title', undefined, 'Parts 2 and 3')}</b><span>${t('speaking.part23_sub', undefined, 'Cue card + discussion')}</span><small>${t('speaking.part23_cards', { count: DATA.part2.length }, `${DATA.part2.length} cue cards`)}</small>`);
     f.addEventListener('click', () => fullTest(root, menu));
     a.addEventListener('click', () => part1(root, menu));
     b.addEventListener('click', () => part2(root, menu));
@@ -378,4 +390,3 @@ export function speakingView(root: HTMLElement): () => void {
   menu();
   return () => { alive = false; stopAll(); engine.dispose(); };
 }
-

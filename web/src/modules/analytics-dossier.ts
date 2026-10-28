@@ -78,13 +78,13 @@ export class AnalyticsDossier {
         <div class="analytics-visuals-col" style="display: flex; flex-direction: column; gap: 20px;">
           
           <!-- Radar Card -->
-          <div class="analytics-card radar-card" style="background: var(--bg-surface, #0f172a); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 16px 20px;">
+          <div class="analytics-card radar-card" style="background: var(--bg-surface, #0f172a); border: 1px solid var(--border-hairline); border-radius: 12px; padding: 16px;">
             <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
               <div>
                 <span class="badge-sub" style="font-size: var(--font-kicker); font-weight: 700; letter-spacing: 0.08em; color: var(--cyan, #38bdf8); text-transform: uppercase;">${t('analytics.spectrum_header')}</span>
                 <h2 style="margin: 2px 0 0; font-size: var(--font-h3); font-weight: 700;">${t('analytics.competency_radar')}</h2>
               </div>
-              <div class="band-pill" style="background: rgba(56, 189, 248, 0.12); border: 1px solid var(--cyan, #38bdf8); padding: 4px 12px; border-radius: 999px; font-size: var(--font-body-compact); font-weight: 700; color: var(--cyan, #38bdf8);">
+              <div class="band-pill" style="background: rgba(56, 189, 248, 0.12); border: none; padding: 4px 12px; border-radius: var(--radius-pill, 9999px); font-size: var(--font-body-compact); font-weight: 700; color: var(--cyan, #38bdf8); white-space: nowrap; flex-shrink: 0;">
                 IELTS ~${overallBand.toFixed(1)} BAND
               </div>
             </div>
@@ -108,7 +108,7 @@ export class AnalyticsDossier {
           </div>
 
           <!-- IELTS Trajectory Card -->
-          <div class="analytics-card trajectory-card" style="background: var(--bg-surface, #0f172a); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 16px 20px;">
+          <div class="analytics-card trajectory-card" style="background: var(--bg-surface, #0f172a); border: 1px solid var(--border-hairline); border-radius: 12px; padding: 16px;">
             <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
               <div>
                 <span class="badge-sub" style="font-size: var(--font-kicker); font-weight: 700; letter-spacing: 0.08em; color: var(--accent-gold, #f59e0b); text-transform: uppercase;">PREDICTIVE 30-DAY CORRIDOR</span>
@@ -123,7 +123,7 @@ export class AnalyticsDossier {
             <div style="display: flex; justify-content: space-between; font-size: var(--font-kicker); color: var(--ink-muted, #94a3b8); margin-top: 8px;">
               <span>● Day 1 (Baseline)</span>
               <span>--- Projected Curve (±0.5 Band)</span>
-              <span>★ Day 30 Target</span>
+              <span>☆ Day 30 Target</span>
             </div>
           </div>
 
@@ -132,14 +132,14 @@ export class AnalyticsDossier {
         <!-- RIGHT COLUMN: SERL 2.0 REHABILITATION GAUNTLET -->
         <div class="analytics-serl-col" style="display: flex; flex-direction: column; gap: 20px;">
           
-          <div class="analytics-card serl-card" style="background: var(--bg-surface, #0f172a); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 16px 20px; flex: 1; display: flex; flex-direction: column;">
+          <div class="analytics-card serl-card" style="background: var(--bg-surface, #0f172a); border: 1px solid var(--border-hairline); border-radius: 12px; padding: 16px; flex: 1; display: flex; flex-direction: column;">
             
             <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
               <div>
                 <span class="badge-sub" style="font-size: var(--font-kicker); font-weight: 700; letter-spacing: 0.08em; color: var(--accent-purple, #a855f7); text-transform: uppercase;">SERL 2.0 ADAPTIVE ENGINE</span>
                 <h2 style="margin: 2px 0 0; font-size: var(--font-h3); font-weight: 700;">Error Rehabilitation Gauntlet</h2>
               </div>
-              <div class="serl-count-badge" style="background: rgba(168, 85, 247, 0.15); border: 1px solid var(--accent-purple, #a855f7); color: var(--accent-purple, #a855f7); padding: 4px 10px; border-radius: 999px; font-size: var(--font-kicker); font-weight: 700;">
+              <div class="serl-count-badge" style="background: rgba(168, 85, 247, 0.15); border: none; color: var(--accent-purple, #a855f7); padding: 4px 10px; border-radius: var(--radius-pill, 9999px); font-size: var(--font-kicker); font-weight: 700; white-space: nowrap; flex-shrink: 0;">
                 ${serlStats.totalDue} DUE / ${serlStats.totalActive} ACTIVE
               </div>
             </div>
@@ -153,15 +153,15 @@ export class AnalyticsDossier {
             <!-- SERL Telemetry Bar -->
             <div class="serl-telemetry-bar" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px;">
               <div style="background: rgba(255,255,255,0.03); padding: 8px 10px; border-radius: 8px; text-align: center;">
-                <div style="font-size: var(--font-kicker); color: var(--ink-muted, #94a3b8);">ACTIVE QUEUE</div>
+                <div style="font-size: var(--font-kicker); color: var(--ink-muted, #94a3b8);">${t('analytics.active_queue', undefined, 'ACTIVE QUEUE')}</div>
                 <div style="font-size: var(--font-body); font-weight: 700; color: var(--accent-purple, #a855f7);">${serlStats.totalActive}</div>
               </div>
               <div style="background: rgba(255,255,255,0.03); padding: 8px 10px; border-radius: 8px; text-align: center;">
-                <div style="font-size: var(--font-kicker); color: var(--ink-muted, #94a3b8);">TOTAL LAPSES</div>
+                <div style="font-size: var(--font-kicker); color: var(--ink-muted, #94a3b8);">${t('analytics.total_lapses', undefined, 'TOTAL LAPSES')}</div>
                 <div style="font-size: var(--font-body); font-weight: 700; color: var(--critical, #f43f5e);">${serlStats.totalLapses}</div>
               </div>
               <div style="background: rgba(255,255,255,0.03); padding: 8px 10px; border-radius: 8px; text-align: center;">
-                <div style="font-size: var(--font-kicker); color: var(--ink-muted, #94a3b8);">SEALED ENGRAMS</div>
+                <div style="font-size: var(--font-kicker); color: var(--ink-muted, #94a3b8);">${t('analytics.sealed_engrams', undefined, 'SEALED ENGRAMS')}</div>
                 <div style="font-size: var(--font-body); font-weight: 700; color: var(--good, #10b981);">${serlStats.totalGraduated}</div>
               </div>
             </div>
@@ -189,13 +189,13 @@ export class AnalyticsDossier {
     if (dueErrors.length === 0) {
       return `
         <div class="serl-empty-state" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border: 1px dashed var(--border-subtle, rgba(255,255,255,0.12)); border-radius: 10px; padding: 30px 20px;">
-          <div style="font-size: var(--font-h1); margin-bottom: 10px;">✨</div>
-          <h4 style="margin: 0 0 6px; font-size: var(--font-h4); font-weight: 700;">Rehabilitation Queue Clear</h4>
+          <div style="color: var(--ink-good); margin-bottom: 10px;">${icon('check', 32)}</div>
+          <h4 style="margin: 0 0 6px; font-size: var(--font-h4); font-weight: 700;">${t('analytics.queue_clear', undefined, 'Rehabilitation Queue Clear')}</h4>
           <p style="margin: 0 0 16px; font-size: var(--font-body-compact); color: var(--ink-muted, #94a3b8); max-width: 280px;">
             Zero pending error lapses currently due. As you practice drills and mock exams, mistakes will auto-feed here.
           </p>
-          <button class="btn-seed-sample-drill" style="background: rgba(56, 189, 248, 0.1); border: 1px solid var(--cyan, #38bdf8); color: var(--cyan, #38bdf8); padding: 8px 16px; border-radius: 8px; font-size: var(--font-body-compact); font-weight: 600; cursor: pointer;">
-            + Test Sample Rehabilitation Micro-Drill
+          <button class="btn-seed-sample-drill" style="background: rgba(56, 189, 248, 0.1); border: 1px solid var(--cyan, #38bdf8); color: var(--cyan, #38bdf8); padding: 8px 16px; border-radius: var(--radius-btn, 10px); font-size: var(--font-body-compact); font-weight: 600; cursor: pointer; min-height: var(--touch-target-min, 44px); display: inline-flex; align-items: center; justify-content: center;">
+            ${t('analytics.test_sample_drill', undefined, '+ Test Sample Rehabilitation Micro-Drill')}
           </button>
         </div>
       `;
@@ -203,7 +203,7 @@ export class AnalyticsDossier {
 
     return `
       <div class="serl-queue-list" style="display: flex; flex-direction: column; gap: 10px;">
-        <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted, #94a3b8); letter-spacing: 0.05em;">ITEMS READY FOR REHABILITATION:</div>
+        <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted, #94a3b8); letter-spacing: 0.05em;">${t('analytics.items_ready', undefined, 'ITEMS READY FOR REHABILITATION:')}</div>
         ${dueErrors.slice(0, 4).map(err => `
           <div class="serl-queue-item" data-id="${err.id}" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-hairline, rgba(255,255,255,0.06)); border-radius: 8px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center;">
             <div style="display: flex; flex-direction: column; gap: 6px; max-width: 70%;">
@@ -211,8 +211,8 @@ export class AnalyticsDossier {
               <span style="font-size: var(--font-body-compact); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ink-primary, #fff);">"${err.prompt}"</span>
               <span style="font-size: var(--font-kicker); color: var(--critical, #f43f5e);">Flaw: "${err.learnerInput}" &rarr; <span style="color: var(--good, #10b981);">${err.expectedOutput}</span></span>
             </div>
-            <button class="btn-launch-drill" data-id="${err.id}" style="background: var(--accent-purple, #a855f7); border: none; color: #fff; padding: 6px 12px; border-radius: 6px; font-size: var(--font-kicker); font-weight: 700; cursor: pointer;">
-              REHAB &rarr;
+            <button class="btn-launch-drill" data-id="${err.id}" style="background: var(--accent-purple, #a855f7); border: none; color: #fff; padding: 6px 14px; border-radius: var(--radius-btn, 10px); font-size: var(--font-kicker); font-weight: 700; cursor: pointer; min-height: var(--touch-target-min, 44px); display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+              ${t('analytics.rehab_btn', undefined, 'REHAB &rarr;')}
             </button>
           </div>
         `).join('')}
@@ -249,15 +249,15 @@ export class AnalyticsDossier {
         ${drill.stage === 'spot' && drill.options ? `
           <div class="drill-options-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
             ${drill.options.map(opt => `
-              <button class="btn-drill-option" data-opt="${opt}" style="background: var(--bg-card, #1e293b); border: 1px solid var(--border-subtle, rgba(255,255,255,0.12)); color: var(--ink-primary, #fff); padding: 10px; border-radius: 8px; font-size: var(--font-body-compact); font-weight: 600; cursor: pointer; text-align: left;">
+              <button class="btn-drill-option" data-opt="${opt}" style="background: var(--bg-card, #1e293b); border: 1px solid var(--border-subtle, rgba(255,255,255,0.12)); color: var(--ink-primary, #fff); padding: 10px; border-radius: var(--radius-btn, 10px); font-size: var(--font-body-compact); font-weight: 600; cursor: pointer; text-align: left;">
                 ${opt}
               </button>
             `).join('')}
           </div>
         ` : `
           <div class="drill-input-box" style="display: flex; gap: 8px;">
-            <input type="text" id="drill-answer-input" class="drill-input" placeholder="Type canonical structure..." style="flex: 1; background: var(--bg-surface-sunk, #0b1120); border: 1px solid var(--border-subtle, rgba(255,255,255,0.15)); border-radius: 6px; padding: 8px 12px; color: #fff; font-size: var(--font-body-compact);" />
-            <button id="btn-submit-drill-input" style="background: var(--accent-purple, #a855f7); border: none; color: #fff; padding: 8px 16px; border-radius: 6px; font-size: var(--font-body-compact); font-weight: 700; cursor: pointer;">
+            <input type="text" id="drill-answer-input" class="drill-input" placeholder="${t('analytics.type_canonical', undefined, 'Type canonical structure...')}" style="flex: 1; background: var(--bg-surface-sunk, #0b1120); border: 1px solid var(--border-subtle, rgba(255,255,255,0.15)); border-radius: 6px; padding: 8px 12px; color: #fff; font-size: var(--font-body-compact);" />
+            <button id="btn-submit-drill-input" style="background: var(--accent-purple, #a855f7); border: none; color: #fff; padding: 8px 16px; border-radius: var(--radius-btn, 10px); font-size: var(--font-body-compact); font-weight: 700; cursor: pointer;">
               SUBMIT
             </button>
           </div>
@@ -545,7 +545,7 @@ export class AnalyticsDossier {
 
         <!-- Target Line -->
         <line x1="${padX}" y1="${targetY.toFixed(1)}" x2="${(width - padX).toFixed(1)}" y2="${targetY.toFixed(1)}" stroke="var(--accent-gold, #f59e0b)" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.8" />
-        <text x="${width - padX + 4}" y="${targetY.toFixed(1)}" dominant-baseline="central" font-size="9" font-weight="700" fill="var(--accent-gold, #f59e0b)">★ ${targetBand}</text>
+        <text x="${width - padX + 4}" y="${targetY.toFixed(1)}" dominant-baseline="central" font-size="9" font-weight="700" fill="var(--accent-gold, #f59e0b)">☆ ${targetBand}</text>
 
         <!-- Confidence Corridor -->
         <polygon points="${corridorPoints}" fill="rgba(56, 189, 248, 0.12)" />

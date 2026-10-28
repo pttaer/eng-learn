@@ -267,7 +267,7 @@ svg.icon,
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 100005;
+  z-index: var(--z-cursor, 9999);
 }
 
 /* HUD Overlay Layer */
@@ -522,14 +522,14 @@ svg.icon,
   min-height: var(--touch-target-min, 44px);
   padding: var(--space-8) var(--space-16);
   border: 1px solid var(--border-subtle);
-  border-radius: 6px;
+  border-radius: var(--radius-btn, 10px);
   background: var(--bg-surface);
   color: var(--ink-primary);
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
+  font-family: var(--font-sans);
+  font-size: var(--font-body-compact);
   font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  text-transform: none;
   cursor: pointer;
   outline: none;
   box-shadow: var(--shadow-btn);
@@ -585,6 +585,41 @@ select {
   box-sizing: border-box;
 }
 
+/* Base HUD Action Button Standard */
+.hud-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  min-height: var(--touch-target-min, 44px);
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: var(--text-sm, 14px);
+  font-weight: 600;
+  line-height: 1.25;
+  border-radius: var(--radius-btn, 10px);
+  border: 1px solid var(--border-hairline);
+  background: var(--bg-surface-elevated, rgba(255, 255, 255, 0.05));
+  color: var(--ink-primary);
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all 0.15s ease;
+}
+
+.hud-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--ink-primary);
+}
+
+.hud-btn svg,
+.hud-btn .icon {
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
 /* Clean Unified Navigation Controls: Back Button & Level Badge */
 .hud-btn.btn-back-tree,
 .hud-btn.btn-level,
@@ -598,7 +633,7 @@ select {
   font-weight: 700;
   letter-spacing: 0.05em;
   padding: 0 10px;
-  border-radius: 6px;
+  border-radius: var(--radius-btn, 10px);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -673,7 +708,46 @@ button:focus-visible,
 [tabindex]:focus-visible {
   outline: 2px solid var(--focus-ring-inner) !important;
   outline-offset: 2px !important;
-  box-shadow: 0 0 0 4px var(--focus-ring-outer) !important;
+  box-shadow: 0 0 0 2px var(--focus-ring-outer) !important;
+}
+
+/* Action stack & button cluster spacing invariant (guarantees focus ring buffer >= 8px) */
+.action-stack,
+.modal-actions,
+.button-stack,
+.placement-actions-cluster,
+.radar-actions-cluster {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ==========================================================================
+   CANONICAL BUTTON RADIUS STANDARD (User Design Mandate)
+   All interactive buttons across the application share the exact same radius
+   Token: --radius-btn: 10px
+   ========================================================================== */
+button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-close):not(.commute-btn-close):not(.commute-btn-ctrl):not(.skill-node-close-btn):not([data-circle]),
+.hud-btn,
+.dock-btn,
+.ie-btn,
+.cd-btn,
+.apple-bottom-close-btn,
+.btn-primary,
+.btn-secondary,
+.skill-btn-primary,
+.skill-btn-secondary,
+.placement-option,
+.quiz-option,
+.level-tab,
+.level-option,
+.tenses-choice-btn,
+.blitz-choice-btn,
+.blitz-action-btn,
+.blitz-start-btn {
+  border-radius: var(--radius-btn, 10px) !important;
 }
 
 /* Keyboard Shortcut Badge */
@@ -955,11 +1029,7 @@ html[data-motion="reduce"] *::after {
   }
 }
 
-@media (max-width: 760px) {
-  /* Aligned with 768px master breakpoint */
-}
-
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .hud-header {
     justify-content: flex-start;
   }
@@ -1113,8 +1183,8 @@ body.zen-active,
   min-width: 0;
 }
 
-/* Mid-width: drop the telemetry strip and button labels so the header stays one row */
-@media (max-width: 1280px) {
+/* Mobile: drop the telemetry strip and button labels so the header stays one row */
+@media (max-width: 768px) {
 
   .hud-header .hud-telemetry-cluster,
   .hud-header .btn-label {
@@ -1244,10 +1314,18 @@ body.zen-active,
   }
 
   .bnav-btn .bnav-label {
+    position: relative;
+    display: inline-block;
+    color: var(--ink-secondary);
     font-size: var(--font-kicker);
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    text-align: center;
   }
 
   .bnav-btn:hover,
@@ -1270,19 +1348,17 @@ body.zen-active,
 
   /* Tab label sweep: grey label, app-color overlay wiped in the direction of travel.
      The overlay is the same text clipped by clip-path, so it can wipe left-to-right or right-to-left. */
-  .bnav-btn .bnav-label {
-    position: relative;
-    display: inline-block;
-    color: var(--ink-secondary);
-  }
-
   .bnav-label::after {
     content: attr(data-text);
     position: absolute;
     left: 0;
     top: 0;
+    width: 100%;
     color: var(--accent-gold);
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
     clip-path: inset(0 100% 0 0);
     transition: clip-path 420ms cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
@@ -1315,7 +1391,7 @@ body.zen-active,
   .mobile-action-sheet-overlay {
     position: fixed;
     inset: 0;
-    z-index: 2000;
+    z-index: var(--z-modal, 900);
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -1688,7 +1764,7 @@ body.zen-active,
 }
 
 .deck-perks-count {
-  font-size: 10px;
+  font-size: var(--font-kicker, 11px);
   font-weight: 600;
   opacity: 0.85;
 }
@@ -1778,7 +1854,7 @@ body.zen-active,
 .mistake-vault-modal-overlay {
   position: fixed;
   inset: 0;
-  z-index: 10000;
+  z-index: var(--z-modal, 900);
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -2122,7 +2198,7 @@ body.zen-active,
 .commute-player-overlay {
   position: fixed;
   inset: 0;
-  z-index: 10000;
+  z-index: var(--z-modal, 900);
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);

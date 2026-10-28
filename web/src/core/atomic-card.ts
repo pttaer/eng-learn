@@ -2,6 +2,7 @@ import { icon } from '../utils/icons';
 import { AudioSynthesizer } from './audio-synthesizer';
 import { HapticEngine } from './haptic-engine';
 import { AcousticHaptics } from './acoustic-haptics';
+import { t } from './i18n';
 
 export interface AtomicCardConfig {
   id: string;
@@ -121,17 +122,21 @@ export class AtomicCard {
     faceFront.className = 'card-face card-face-front face-front';
     faceFront.setAttribute('aria-hidden', 'false');
 
+    const statusLabel = config.statusBadge === 'NEW' 
+      ? t('card.status_new', undefined, 'NEW')
+      : (config.statusBadge === 'REVIEW' ? t('card.status_review', undefined, 'REVIEW') : t('card.status_mastered', undefined, 'MASTERED'));
+
     // Header Zone
     const frontHeader = document.createElement('div');
     frontHeader.className = 'card-header-bar card-header-hud';
     frontHeader.innerHTML = `
       <div class="card-meta-left header-left">
-        <span class="telemetry-badge">[${config.pillar} // ${config.category}]</span>
-        <span class="card-badge-status card-status-badge">${config.statusBadge}</span>
+        <span class="telemetry-badge">[${t('card.pillar.' + config.pillar.toLowerCase(), undefined, config.pillar)} // ${t('card.cat.' + config.category.toLowerCase().replace(/[^a-z0-9]+/g, '_'), undefined, config.category)}]</span>
+        <span class="card-badge-status card-status-badge">${statusLabel}</span>
       </div>
       <div class="card-meta-right header-right">
         <span class="card-index-counter">${config.indexStr}</span>
-        ${config.audioText ? `<button type="button" class="card-audio-btn btn-audio-speak" aria-label="Listen to pronunciation of prompt" title="Listen (P)">${icon('volume')} AUDIO</button>` : ''}
+        ${config.audioText ? `<button type="button" class="card-audio-btn btn-audio-speak" aria-label="Listen to pronunciation of prompt" title="Listen (P)">${icon('volume')} ${t('card.audio', undefined, 'AUDIO')}</button>` : ''}
       </div>
     `;
 
@@ -150,7 +155,7 @@ export class AtomicCard {
       frontBody.appendChild(config.front.customContent);
     } else {
       frontBody.innerHTML = `
-        <div class="card-prompt-label">${config.front.promptLabel || 'CHALLENGE // PROMPT'}</div>
+        <div class="card-prompt-label">${config.front.promptLabel || t('card.challenge_prompt', undefined, 'CHALLENGE // PROMPT')}</div>
         <div class="card-main-text">${config.front.mainText || ''}</div>
         ${config.front.subText ? `<div class="card-sub-text">${config.front.subText}</div>` : ''}
         ${config.front.phoneticText ? `<div class="card-ipa-text card-phonetic-text">${config.front.phoneticText}</div>` : ''}
@@ -162,7 +167,7 @@ export class AtomicCard {
     frontDock.className = 'card-bottom-dock card-action-dock';
     if (config.hideFrontRating) {
       frontDock.innerHTML = `
-        <button type="button" class="dock-btn dock-btn-flip btn-flip-trigger" aria-expanded="false" aria-label="Flip card to view answer targets"><span style="color: var(--accent-gold); font-weight: 800;">⟳</span> Flip Reveal <span class="kbd-badge">SPACE</span></button>
+        <button type="button" class="dock-btn dock-btn-flip btn-flip-trigger" aria-expanded="false" aria-label="Flip card to view answer targets"><span style="color: var(--accent-gold); font-weight: 800;">⟳</span> ${t('card.flip_reveal', undefined, 'Flip Reveal')} <span class="kbd-badge">SPACE</span></button>
       `;
       frontDock.querySelector('.btn-flip-trigger')?.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -170,9 +175,9 @@ export class AtomicCard {
       });
     } else {
       frontDock.innerHTML = `
-        <button type="button" class="dock-btn dock-btn-again btn-rate-again" aria-label="Rate repetition Again: failed recall, reset interval"><span style="color: var(--critical); font-weight: 800;">✗</span> Again <span class="kbd-badge">1</span></button>
-        <button type="button" class="dock-btn dock-btn-flip btn-flip-trigger" aria-expanded="false" aria-label="Flip card to view answer targets"><span style="color: var(--accent-gold); font-weight: 800;">⟳</span> Flip Reveal <span class="kbd-badge">SPACE</span></button>
-        <button type="button" class="dock-btn dock-btn-good btn-rate-good" aria-label="Rate repetition Good: successful recall, advance interval"><span style="color: var(--good); font-weight: 800;">✓</span> Good <span class="kbd-badge">2</span></button>
+        <button type="button" class="dock-btn dock-btn-again btn-rate-again" aria-label="Rate repetition Again: failed recall, reset interval"><span style="color: var(--critical); font-weight: 800;">✗</span> ${t('card.again', undefined, 'Again')} <span class="kbd-badge">1</span></button>
+        <button type="button" class="dock-btn dock-btn-flip btn-flip-trigger" aria-expanded="false" aria-label="Flip card to view answer targets"><span style="color: var(--accent-gold); font-weight: 800;">⟳</span> ${t('card.flip_reveal', undefined, 'Flip Reveal')} <span class="kbd-badge">SPACE</span></button>
+        <button type="button" class="dock-btn dock-btn-good btn-rate-good" aria-label="Rate repetition Good: successful recall, advance interval"><span style="color: var(--good); font-weight: 800;">✓</span> ${t('card.good', undefined, 'Good')} <span class="kbd-badge">2</span></button>
       `;
 
       frontDock.querySelector('.btn-rate-again')?.addEventListener('click', (e) => {
@@ -214,11 +219,11 @@ export class AtomicCard {
     backHeader.className = 'card-header-bar card-header-hud';
     backHeader.innerHTML = `
       <div class="card-meta-left header-left">
-        <span class="telemetry-badge">[${config.pillar} // RESOLUTION]</span>
+        <span class="telemetry-badge">[${t('card.pillar.' + config.pillar.toLowerCase(), undefined, config.pillar)} // ${t('card.resolution', undefined, 'RESOLUTION')}]</span>
       </div>
       <div class="card-meta-right header-right">
         <span class="card-index-counter">${config.indexStr}</span>
-        ${config.audioText ? `<button type="button" class="card-audio-btn btn-audio-speak" aria-label="Listen to pronunciation of prompt" title="Listen (P)">${icon('volume')} AUDIO</button>` : ''}
+        ${config.audioText ? `<button type="button" class="card-audio-btn btn-audio-speak" aria-label="Listen to pronunciation of prompt" title="Listen (P)">${icon('volume')} ${t('card.audio', undefined, 'AUDIO')}</button>` : ''}
       </div>
     `;
 
@@ -236,7 +241,7 @@ export class AtomicCard {
       backBody.appendChild(config.back.customContent);
     } else {
       backBody.innerHTML = `
-        <div class="card-prompt-label">${config.back.promptLabel || 'RESOLUTION // TRANSLATION'}</div>
+        <div class="card-prompt-label">${config.back.promptLabel || t('card.resolution_translation', undefined, 'RESOLUTION // TRANSLATION')}</div>
         <div class="card-main-text">${config.back.mainText || ''}</div>
         ${config.back.ipa ? `<div class="card-ipa-text">${config.back.ipa}</div>` : ''}
         ${config.back.explanation ? `<div class="card-explanation">${config.back.explanation}</div>` : ''}
@@ -247,9 +252,9 @@ export class AtomicCard {
     const backDock = document.createElement('div');
     backDock.className = 'card-bottom-dock card-rating-dock';
     backDock.innerHTML = `
-      <button type="button" class="dock-btn dock-btn-again btn-rate-again" aria-label="Rate repetition Again: failed recall, reset interval"><span style="color: var(--critical); font-weight: 800;">✗</span> Again <span class="kbd-badge">1</span></button>
-      <button type="button" class="dock-btn dock-btn-flip btn-flip-back" aria-label="Flip card back to prompt face"><span style="color: var(--accent-gold); font-weight: 800;">⟳</span> Flip Return <span class="kbd-badge">SPACE</span></button>
-      <button type="button" class="dock-btn dock-btn-good btn-rate-good" aria-label="Rate repetition Good: successful recall, advance interval"><span style="color: var(--good); font-weight: 800;">✓</span> Good <span class="kbd-badge">2</span></button>
+      <button type="button" class="dock-btn dock-btn-again btn-rate-again" aria-label="Rate repetition Again: failed recall, reset interval"><span style="color: var(--critical); font-weight: 800;">✗</span> ${t('card.again', undefined, 'Again')} <span class="kbd-badge">1</span></button>
+      <button type="button" class="dock-btn dock-btn-flip btn-flip-back" aria-label="Flip card back to prompt face"><span style="color: var(--accent-gold); font-weight: 800;">⟳</span> ${t('card.flip_return', undefined, 'Flip Return')} <span class="kbd-badge">SPACE</span></button>
+      <button type="button" class="dock-btn dock-btn-good btn-rate-good" aria-label="Rate repetition Good: successful recall, advance interval"><span style="color: var(--good); font-weight: 800;">✓</span> ${t('card.good', undefined, 'Good')} <span class="kbd-badge">2</span></button>
     `;
 
     backDock.querySelector('.btn-rate-again')?.addEventListener('click', (e) => {

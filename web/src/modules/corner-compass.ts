@@ -71,6 +71,7 @@ export class CornerCompass {
     this.applySafePositioning();
     this.bindEvents();
     this.bindTouchInteractions();
+    this.bindActivityListeners();
     this.startMiniUrchinLoop();
   }
 
@@ -178,6 +179,36 @@ export class CornerCompass {
 
   private animId: number | null = null;
   private motionObserver: MutationObserver | null = null;
+  private isVisibleState: boolean = true;
+  private lastActiveTime: number = typeof Date !== 'undefined' ? Date.now() : 0;
+  private userActiveBound: boolean = false;
+
+  private bindActivityListeners(): void {
+    if (this.userActiveBound || typeof window === 'undefined') return;
+    this.userActiveBound = true;
+    const onActive = () => {
+      this.lastActiveTime = Date.now();
+      if (this.isVisibleState && this.animId === null && !this.isReducedMotion()) {
+        this.startMiniUrchinLoop();
+      }
+    };
+    ['pointermove', 'touchstart', 'keydown', 'wheel'].forEach(evt => {
+      window.addEventListener(evt, onActive, { passive: true });
+    });
+    this.element.addEventListener('pointerenter', onActive, { passive: true });
+    if (typeof document !== 'undefined') {
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          if (this.animId !== null) {
+            cancelAnimationFrame(this.animId);
+            this.animId = null;
+          }
+        } else if (this.isVisibleState && !this.isReducedMotion()) {
+          onActive();
+        }
+      });
+    }
+  }
 
   public isReducedMotion(): boolean {
     if (typeof document === 'undefined') return false;
@@ -236,6 +267,15 @@ export class CornerCompass {
       if (this.isReducedMotion()) {
         this.animId = null;
         this.drawMiniUrchin();
+        return;
+      }
+      if (typeof document !== 'undefined' && document.hidden) {
+        this.animId = null;
+        return;
+      }
+      if (!this.isMenuOpen && Date.now() - this.lastActiveTime > 3500) {
+        // Zero-CPU idle suspension: pause spinning when user is idle
+        this.animId = null;
         return;
       }
       this.angleOffset += 0.02;
@@ -299,6 +339,7 @@ export class CornerCompass {
   }
 
   public setVisible(visible: boolean): void {
+    this.isVisibleState = visible;
     this.element.style.display = visible ? 'block' : 'none';
     if (!visible) {
       if (this.animId !== null) {
@@ -306,6 +347,8 @@ export class CornerCompass {
         this.animId = null;
       }
     } else {
+      this.lastActiveTime = Date.now();
+      this.bindActivityListeners();
       if (!this.isReducedMotion() && this.animId === null) {
         this.startMiniUrchinLoop();
       } else if (this.isReducedMotion()) {

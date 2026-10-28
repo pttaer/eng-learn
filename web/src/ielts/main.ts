@@ -128,7 +128,8 @@ function renderSubnavBanner(groupKey: string, currentHash: string): HTMLElement 
 
   const banner = h('div', 'ie-subnav-banner');
   const group = h('div', 'ie-subnav-group');
-  const label = h('span', 'ie-subnav-label', `${groupKey.toUpperCase()} ${t('ielts.subnav_studio', undefined, 'STUDIO:')}`);
+  const groupName = t(`ielts.skill_${groupKey}`, undefined, groupKey.toUpperCase());
+  const label = h('span', 'ie-subnav-label', `${groupName.toUpperCase()} ${t('ielts.subnav_studio', undefined, 'STUDIO:')}`);
   group.append(label);
 
   items.forEach(it => {
@@ -238,7 +239,7 @@ let cleanup: () => void = () => {};
 function renderHeader(): void {
   header.innerHTML = `
   <div class="ie-top-bar">
-    <a class="ie-back" href="./index.html"><span class="ie-back-arrow">←</span> English Singularity</a>
+    <a class="ie-back" href="./index.html"><span class="ie-back-arrow">←</span> ${t('ielts.back_to_singularity', undefined, 'English Singularity')}</a>
     <a class="ie-brand" href="#home">IELTS <b>7.0</b></a>
     <div class="ie-top-actions" style="margin-left: auto; display: flex; gap: 8px; align-items: center;">
       <button type="button" class="ie-btn ie-btn-sm ie-btn-lang" title="${t('ielts.toggle_lang', undefined, 'Switch language (EN/VI)')}" aria-label="${t('ielts.toggle_lang', undefined, 'Switch language (EN/VI)')}" style="padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: var(--font-kicker);">
@@ -317,7 +318,6 @@ function route(): void {
 
   // Global teardown: immediately halt audio, speech synthesis, and exam room ambience
   ieltsTts.stopAll();
-  AudioSynthesizer.stopSpeech();
   CommuteAudioPlayer.close();
   MistakeVault.close();
 

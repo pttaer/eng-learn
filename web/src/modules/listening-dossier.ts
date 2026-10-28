@@ -333,17 +333,17 @@ export class ListeningDossier {
     const frontEl = document.createElement('div');
     frontEl.className = 'listening-front';
     frontEl.innerHTML = `
-      <div class="card-prompt-label">Pass 1 & 2 · Active Transcription</div>
+      <div class="card-prompt-label">${t('listening.pass_transcription', undefined, 'Pass 1 & 2 · Active Transcription')}</div>
       <div style="font-family: var(--font-sans); font-size: var(--font-body); font-weight: 600; margin-bottom: 8px;">
-        Topic: ${item.title}
+        ${t('listening.topic_label', undefined, 'Topic')}: ${item.title}
       </div>
       <div style="display: flex; gap: 8px; margin-bottom: 12px;">
         <button type="button" class="hud-btn btn-play-audio" style="font-size: var(--font-kicker); padding: 4px 10px;">▶ Play 1.0x</button>
         <button type="button" class="hud-btn btn-play-slow" style="font-size: var(--font-kicker); padding: 4px 10px;">⏵ Play 0.8x</button>
       </div>
-      <textarea class="listening-transcribe-box" placeholder="Pass 2: Transcribe word-for-word here..." rows="3" style="width: 100%; font-family: var(--font-mono); font-size: var(--font-body-compact); padding: 10px; border: 1px solid var(--border-subtle); background: var(--bg-surface-sunk); color: var(--ink-primary); border-radius: 6px; outline: none; resize: none; box-sizing: border-box;"></textarea>
+      <textarea class="listening-transcribe-box" placeholder="${t('listening.transcribe_ph', undefined, 'Pass 2: Transcribe word-for-word here...')}" rows="3" style="width: 100%; font-family: var(--font-mono); font-size: max(16px, var(--font-body)); padding: 10px; border: 1px solid var(--border-subtle); background: var(--bg-surface-sunk); color: var(--ink-primary); border-radius: 6px; outline: none; resize: none; box-sizing: border-box;"></textarea>
       <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); margin-top: 6px;">
-        Listen at least twice before pressing <span class="kbd-only">Space / </span>Flip to reveal phonetic analysis.
+        ${t('listening.flip_hint', undefined, 'Listen at least twice before pressing Space / Flip to reveal phonetic analysis.')}
       </div>
     `;
 
@@ -409,7 +409,7 @@ export class ListeningDossier {
       <!-- Hint & Reset Controls -->
       <div style="display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">
         <div>
-          Listen closely & transcribe the missing phonetic words.
+          ${t('listening.transcribe_missing', undefined, 'Listen closely & transcribe the missing phonetic words.')}
         </div>
         <div style="display: flex; gap: 6px;">
           <button type="button" class="hud-btn btn-cloze-hint" style="font-size: var(--font-kicker); padding: 2px 8px;">${icon('lightbulb', 11)} Hint</button>
@@ -419,7 +419,7 @@ export class ListeningDossier {
 
       <!-- Completion Celebration Banner -->
       <div class="cloze-completion-banner" style="display: ${isComplete ? 'block' : 'none'};">
-        ★ ALL GAPS CORRECT (100% ACCURACY)! Press <span class="kbd-only">Space or </span>Flip to review IPA & connected speech.
+        ☆ ALL GAPS CORRECT (100% ACCURACY)! Press <span class="kbd-only">Space or </span>Flip to review IPA & connected speech.
       </div>
     `;
 
@@ -645,7 +645,6 @@ export class ListeningDossier {
   }
 
   public teardown(): void {
-    AudioSynthesizer.stopSpeech();
     this.currentCardHandle = null;
     this.userGapInputs.clear();
   }

@@ -4,15 +4,19 @@ import { DiagnosticEngine, DiagnosticQuestion, DiagnosticReport } from '../diagn
 import { esc, h } from '../ui';
 import { feedback } from '../../core/feedback';
 import { icon, IconName } from '../../utils/icons';
+import { t } from '../../core/i18n';
 
-const SUBTYPE_NAMES: Record<string, string> = {
-  subject_verb: 'Subject-Verb Concord',
-  tenses: 'Tense Consistency & Aspect',
-  articles: 'Article Omission & Precision',
-  clauses: 'Clausal Subordination & Modifiers',
-  prepositions: 'Dependent Prepositions',
-  collocations: 'Academic Collocations'
-};
+function getSubTypeName(st: string): string {
+  switch (st) {
+    case 'subject_verb': return t('diag.subtype_subject_verb', undefined, 'Subject-Verb Concord');
+    case 'tenses': return t('diag.subtype_tenses', undefined, 'Tense Consistency & Aspect');
+    case 'articles': return t('diag.subtype_articles', undefined, 'Article Omission & Precision');
+    case 'clauses': return t('diag.subtype_clauses', undefined, 'Clausal Subordination & Modifiers');
+    case 'prepositions': return t('diag.subtype_prepositions', undefined, 'Dependent Prepositions');
+    case 'collocations': return t('diag.subtype_collocations', undefined, 'Academic Collocations');
+    default: return st;
+  }
+}
 
 const SUBTYPE_ICONS: Record<string, IconName> = {
   subject_verb: 'scale',
@@ -41,12 +45,12 @@ export function diagnosticView(root: HTMLElement): () => void {
     const header = h('div', 'ie-diag-header');
     header.innerHTML = `
       <div class="ie-diag-badge-row">
-        <span class="ie-pill ie-pill-accent">Foundation Checkpoint</span>
-        <span class="ie-pill ie-pill-neutral">20 Questions • 15 Mins</span>
+        <span class="ie-pill ie-pill-accent">${t('diag.foundation_checkpoint', undefined, 'Foundation Checkpoint')}</span>
+        <span class="ie-pill ie-pill-neutral">${t('diag.checkpoint_meta', undefined, '20 Questions • 15 Mins')}</span>
       </div>
-      <h1 class="ie-title">Grammar &amp; Vocabulary Diagnostic</h1>
+      <h1 class="ie-title">${t('diag.title', undefined, 'Grammar & Vocabulary Diagnostic')}</h1>
       <p class="ie-lead ie-diag-lead">
-        Identify and isolate high-frequency morphosyntactic and lexical flaws. Calibrated against IELTS band descriptors 5.5–8.5+.
+        ${t('diag.lead', undefined, 'Identify and isolate high-frequency morphosyntactic and lexical flaws. Calibrated against IELTS band descriptors 5.5–8.5+.')}
       </p>
     `;
     container.append(header);
@@ -62,13 +66,13 @@ export function diagnosticView(root: HTMLElement): () => void {
       const banner = h('div', 'ie-diag-cached-banner');
       banner.innerHTML = `
         <div class="ie-cached-info">
-          <span class="ie-cached-label">Previous Diagnostic Record</span>
-          <span class="ie-cached-score"><strong>${esc(cachedReport.bandEstimate)}</strong> (${cachedReport.score}/20 — ${cachedReport.percentage}%)</span>
-          <span class="ie-cached-date">Recorded on ${new Date(cachedReport.timestamp).toLocaleDateString()}</span>
+          <span class="ie-cached-label">${t('diag.prev_record', undefined, 'Previous Diagnostic Record')}</span>
+          <span class="ie-cached-score"><strong>${esc(cachedReport.bandEstimate)}</strong> (${cachedReport.score}/20 — ${Number.isFinite(cachedReport.percentage) ? cachedReport.percentage : Math.round((cachedReport.score / 20) * 100)}%)</span>
+          <span class="ie-cached-date">${t('diag.recorded_on', { date: new Date(cachedReport.timestamp).toLocaleDateString() }, `Recorded on ${new Date(cachedReport.timestamp).toLocaleDateString()}`)}</span>
         </div>
         <div class="ie-cached-actions">
-          <button class="ie-btn ie-btn-sm ie-btn-primary" id="btn-view-cached">View Analysis & Study Plan</button>
-          <button class="ie-btn ie-btn-sm ie-btn-outline" id="btn-retake-new">Retake Diagnostic</button>
+          <button class="ie-btn ie-btn-sm ie-btn-primary" id="btn-view-cached">${t('diag.btn_view_analysis', undefined, 'View Analysis & Study Plan')}</button>
+          <button class="ie-btn ie-btn-sm ie-btn-outline" id="btn-retake-new">${t('diag.btn_retake', undefined, 'Retake Diagnostic')}</button>
         </div>
       `;
       banner.querySelector('#btn-view-cached')?.addEventListener('click', () => {
@@ -91,13 +95,13 @@ export function diagnosticView(root: HTMLElement): () => void {
     const toolbar = h('div', 'ie-diag-toolbar');
     toolbar.innerHTML = `
       <div class="ie-diag-filter-tabs">
-        <button class="ie-tab-btn ${currentFilter === 'all' ? 'is-active' : ''}" data-filter="all">All (${totalCount})</button>
-        <button class="ie-tab-btn ${currentFilter === 'grammar' ? 'is-active' : ''}" data-filter="grammar">Grammar (10)</button>
-        <button class="ie-tab-btn ${currentFilter === 'vocabulary' ? 'is-active' : ''}" data-filter="vocabulary">Vocabulary (10)</button>
+        <button class="ie-tab-btn ${currentFilter === 'all' ? 'is-active' : ''}" data-filter="all">${t('diag.tab_all', { count: totalCount }, `All (${totalCount})`)}</button>
+        <button class="ie-tab-btn ${currentFilter === 'grammar' ? 'is-active' : ''}" data-filter="grammar">${t('diag.tab_grammar', { count: 10 }, 'Grammar (10)')}</button>
+        <button class="ie-tab-btn ${currentFilter === 'vocabulary' ? 'is-active' : ''}" data-filter="vocabulary">${t('diag.tab_vocab', { count: 10 }, 'Vocabulary (10)')}</button>
       </div>
       <div class="ie-diag-progress-wrap">
         <div class="ie-diag-progress-label">
-          <span>Progress: <strong>${answeredCount}/${totalCount}</strong> answered</span>
+          <span>${t('diag.progress_answered', { answered: answeredCount, total: totalCount }, `Progress: <strong>${answeredCount}/${totalCount}</strong> answered`)}</span>
           <span>${progressPercent}%</span>
         </div>
         <div class="ie-progress-track">
@@ -133,7 +137,7 @@ export function diagnosticView(root: HTMLElement): () => void {
       const card = h('article', `ie-diag-card ${isAnswered ? (isCorrect ? 'is-answered-correct' : 'is-answered-incorrect') : ''}`);
       card.id = `q-${q.id}`;
 
-      const subtypeName = SUBTYPE_NAMES[q.subType] || q.subType;
+      const subtypeName = getSubTypeName(q.subType);
       const subIconKey = SUBTYPE_ICONS[q.subType] || 'book';
 
       card.innerHTML = `
@@ -145,9 +149,9 @@ export function diagnosticView(root: HTMLElement): () => void {
           </div>
           ${isAnswered ? `
             <span class="ie-diag-result-status ${isCorrect ? 'is-status-correct' : 'is-status-incorrect'}">
-              ${isCorrect ? '✓ Correct' : '✗ Incorrect'}
+              ${isCorrect ? t('diag.status_correct', undefined, '✓ Correct') : t('diag.status_incorrect', undefined, '✗ Incorrect')}
             </span>
-          ` : '<span class="ie-diag-unanswered">Pending</span>'}
+          ` : `<span class="ie-diag-unanswered">${t('diag.status_pending', undefined, 'Pending')}</span>`}
         </div>
         <p class="ie-diag-prompt">${esc(q.prompt)}</p>
         <div class="ie-diag-options">
@@ -173,12 +177,12 @@ export function diagnosticView(root: HTMLElement): () => void {
         ${isAnswered ? `
           <div class="ie-diag-explanation">
             <div class="ie-explain-header">
-              <strong>${isCorrect ? 'Explanation:' : 'Why this error matters:'}</strong>
+              <strong>${isCorrect ? t('diag.explanation_correct', undefined, 'Explanation:') : t('diag.explanation_flaw', undefined, 'Why this error matters:')}</strong>
             </div>
             <p class="ie-explain-text">${esc(q.explanation)}</p>
             <div class="ie-impact-alert">
               <span class="ie-impact-icon">${icon('alertTriangle', 14)}</span>
-              <span class="ie-impact-text"><strong>Impact on Band:</strong> ${esc(q.impactOnBand)}</span>
+              <span class="ie-impact-text"><strong>${t('diag.impact_on_band', undefined, 'Impact on Band:')}</strong> ${esc(q.impactOnBand)}</span>
             </div>
           </div>
         ` : ''}
@@ -219,12 +223,16 @@ export function diagnosticView(root: HTMLElement): () => void {
 
     bottomBar.innerHTML = `
       <div class="ie-bottom-info">
-        <span>${answeredCount}/${totalCount} questions evaluated.</span>
-        ${!allAnswered ? '<span class="ie-bottom-hint">Answer all 20 questions to generate a full error taxonomy and study roadmap.</span>' : '<span class="ie-bottom-hint is-ready">All items answered! Ready for final evaluation.</span>'}
+        <span>${t('diag.bottom_evaluated', { answered: answeredCount, total: totalCount }, `${answeredCount}/${totalCount} questions evaluated.`)}</span>
+        ${!allAnswered
+          ? `<span class="ie-bottom-hint">${t('diag.bottom_hint_incomplete', undefined, 'Answer all 20 questions to generate a full error taxonomy and study roadmap.')}</span>`
+          : `<span class="ie-bottom-hint is-ready">${t('diag.bottom_hint_ready', undefined, 'All items answered! Ready for final evaluation.')}</span>`}
       </div>
       <div class="ie-bottom-actions">
         <button class="ie-btn ie-btn-primary ${answeredCount >= 5 ? '' : 'is-disabled'}" id="btn-finish-eval">
-          ${allAnswered ? 'Generate Full Assessment & Study Plan' : `Evaluate Progress (${answeredCount}/${totalCount})`}
+          ${allAnswered
+            ? t('diag.btn_generate_assessment', undefined, 'Generate Full Assessment & Study Plan')
+            : t('diag.btn_evaluate_progress', { answered: answeredCount, total: totalCount }, `Evaluate Progress (${answeredCount}/${totalCount})`)}
         </button>
       </div>
     `;
@@ -249,20 +257,20 @@ export function diagnosticView(root: HTMLElement): () => void {
     const hero = h('div', `ie-results-hero ${isBand7Plus ? 'is-high-band' : 'is-mid-band'}`);
     hero.innerHTML = `
       <div class="ie-hero-score-block">
-        <span class="ie-hero-eyebrow">Estimated Band Baseline</span>
+        <span class="ie-hero-eyebrow">${t('diag.estimated_band_baseline', undefined, 'Estimated Band Baseline')}</span>
         <div class="ie-hero-band">${esc(report.bandEstimate)}</div>
-        <div class="ie-hero-fraction">Score: <strong>${report.score} / ${report.totalQuestions}</strong> (${report.percentage}%)</div>
+        <div class="ie-hero-fraction">${t('diag.score_fraction', { score: report.score, total: report.totalQuestions, pct: report.percentage }, `Score: <strong>${report.score} / ${report.totalQuestions}</strong> (${report.percentage}%)`)}</div>
       </div>
       <div class="ie-hero-summary">
-        <h3>${isBand7Plus ? 'Band 7.0+ Structural Foundations Confirmed' : 'Systematic Error Vectors Cap Band Score'}</h3>
+        <h3>${isBand7Plus ? t('diag.summary_title_high', undefined, 'Band 7.0+ Structural Foundations Confirmed') : t('diag.summary_title_mid', undefined, 'Systematic Error Vectors Cap Band Score')}</h3>
         <p>
           ${isBand7Plus
-            ? 'Your grammatical control and academic lexical choices demonstrate the consistency required for Band 7.0–8.0. Focus on high-level clausal variety and stylistic concision.'
-            : 'Specific recurring errors in sentence architecture and lexical collocation are currently capping your Grammatical Range & Accuracy (GRA) and Lexical Resource (LR). Follow the targeted prescriptions below.'}
+            ? t('diag.summary_desc_high', undefined, 'Your grammatical control and academic lexical choices demonstrate the consistency required for Band 7.0–8.0. Focus on high-level clausal variety and stylistic concision.')
+            : t('diag.summary_desc_mid', undefined, 'Specific recurring errors in sentence architecture and lexical collocation are currently capping your Grammatical Range & Accuracy (GRA) and Lexical Resource (LR). Follow the targeted prescriptions below.')}
         </p>
         <div class="ie-hero-cta">
-          <button class="ie-btn ie-btn-sm ie-btn-secondary" id="btn-retake-quiz">Retake Assessment</button>
-          <a class="ie-btn ie-btn-sm ie-btn-outline" href="#writing">Open Writing Workbench →</a>
+          <button class="ie-btn ie-btn-sm ie-btn-secondary" id="btn-retake-quiz">${t('diag.btn_retake_assessment', undefined, 'Retake Assessment')}</button>
+          <a class="ie-btn ie-btn-sm ie-btn-outline" href="#writing">${t('diag.btn_open_workbench', undefined, 'Open Writing Workbench →')}</a>
         </div>
       </div>
     `;
@@ -279,8 +287,8 @@ export function diagnosticView(root: HTMLElement): () => void {
     const taxonomySec = h('section', 'ie-diag-sec');
     taxonomySec.innerHTML = `
       <div class="ie-sec-header">
-        <h2>6-Vector Error Taxonomy Breakdown</h2>
-        <p class="ie-sec-desc">Granular accuracy scores across the six most common failure points in academic exam writing.</p>
+        <h2>${t('diag.sec_taxonomy_title', undefined, '6-Vector Error Taxonomy Breakdown')}</h2>
+        <p class="ie-sec-desc">${t('diag.sec_taxonomy_desc', undefined, 'Granular accuracy scores across the six most common failure points in academic exam writing.')}</p>
       </div>
     `;
 
@@ -289,11 +297,15 @@ export function diagnosticView(root: HTMLElement): () => void {
 
     subTypes.forEach(st => {
       const summary = report.subTypeBreakdown[st];
-      const name = SUBTYPE_NAMES[st] || st;
+      const name = getSubTypeName(st);
       const iconKey = SUBTYPE_ICONS[st] || 'target';
       const pct = summary.percentage;
       const statusCls = pct >= 80 ? 'good' : pct >= 50 ? 'warning' : 'danger';
-      const statusLabel = pct >= 80 ? 'Mastered (Band 7.0+)' : pct >= 50 ? 'At Risk (Band 6.0-6.5)' : 'Critical Flaw (< Band 6.0)';
+      const statusLabel = pct >= 80
+        ? t('diag.tax_status_mastered', undefined, 'Mastered (Band 7.0+)')
+        : pct >= 50
+          ? t('diag.tax_status_risk', undefined, 'At Risk (Band 6.0-6.5)')
+          : t('diag.tax_status_critical', undefined, 'Critical Flaw (< Band 6.0)');
 
       const flaw = report.flawsDetected.find(f => f.subType === st);
 
@@ -312,10 +324,10 @@ export function diagnosticView(root: HTMLElement): () => void {
         <div class="ie-tax-bar-track">
           <div class="ie-tax-bar-fill ie-bar-${statusCls}" style="width: ${pct}%;"></div>
         </div>
-        <div class="ie-tax-ratio">${summary.correct} of ${summary.total} correct</div>
+        <div class="ie-tax-ratio">${t('diag.tax_ratio', { correct: summary.correct, total: summary.total }, `${summary.correct} of ${summary.total} correct`)}</div>
         <div class="ie-tax-body">
-          <p class="ie-tax-rec"><strong>Prescription:</strong> ${esc(flaw ? flaw.recommendation : 'Maintain active recall and audit for slips under time pressure.')}</p>
-          <p class="ie-tax-impact"><strong>Rubric Impact:</strong> ${esc(flaw ? flaw.impactOnBand : 'Contributes positively toward Band 7.5+ GRA/LR.')}</p>
+          <p class="ie-tax-rec"><strong>${t('diag.tax_label_prescription', undefined, 'Prescription:')}</strong> ${esc(flaw ? flaw.recommendation : t('diag.tax_default_rec', undefined, 'Maintain active recall and audit for slips under time pressure.'))}</p>
+          <p class="ie-tax-impact"><strong>${t('diag.tax_label_rubric_impact', undefined, 'Rubric Impact:')}</strong> ${esc(flaw ? flaw.impactOnBand : t('diag.tax_default_impact', undefined, 'Contributes positively toward Band 7.5+ GRA/LR.'))}</p>
         </div>
       `;
       grid.append(card);
@@ -329,8 +341,8 @@ export function diagnosticView(root: HTMLElement): () => void {
       const checklistSec = h('section', 'ie-diag-sec');
       checklistSec.innerHTML = `
         <div class="ie-sec-header">
-          <h2>Pre-Flight Self-Correction Checklist</h2>
-          <p class="ie-sec-desc">Before submitting Task 1 or Task 2 essays, audit your drafts against these detected vulnerability rules.</p>
+          <h2>${t('diag.sec_checklist_title', undefined, 'Pre-Flight Self-Correction Checklist')}</h2>
+          <p class="ie-sec-desc">${t('diag.sec_checklist_desc', undefined, 'Before submitting Task 1 or Task 2 essays, audit your drafts against these detected vulnerability rules.')}</p>
         </div>
         <ul class="ie-checklist-items">
           ${report.checklistItems.map(item => `
@@ -345,36 +357,37 @@ export function diagnosticView(root: HTMLElement): () => void {
     }
 
     // Section 3: Personalized Study Plan
+    const lowestVectors = report.flawsDetected.map(f => getSubTypeName(f.subType)).slice(0, 2).join(', ') || 'lexical register';
     const planSec = h('section', 'ie-diag-sec');
     planSec.innerHTML = `
       <div class="ie-sec-header">
-        <h2>Personalized Band 7+ Remediation Roadmap</h2>
-        <p class="ie-sec-desc">Direct 4-step path forward calibrated to your current diagnostic profile.</p>
+        <h2>${t('diag.sec_roadmap_title', undefined, 'Personalized Band 7+ Remediation Roadmap')}</h2>
+        <p class="ie-sec-desc">${t('diag.sec_roadmap_desc', undefined, 'Direct 4-step path forward calibrated to your current diagnostic profile.')}</p>
       </div>
       <div class="ie-roadmap-grid">
         <div class="ie-roadmap-card">
           <div class="ie-roadmap-step">Step 1</div>
-          <h4>Targeted Clausal & Morphosyntactic Drills</h4>
-          <p>Prioritize remediation on your lowest scoring vectors (${report.flawsDetected.map(f => SUBTYPE_NAMES[f.subType] || f.subType).slice(0, 2).join(', ') || 'lexical register'}).</p>
-          <a class="ie-roadmap-link" href="#strategy">Review Question Strategy & Traps →</a>
+          <h4>${t('diag.step1_title', undefined, 'Targeted Clausal & Morphosyntactic Drills')}</h4>
+          <p>${t('diag.step1_desc', { vectors: lowestVectors }, `Prioritize remediation on your lowest scoring vectors (${lowestVectors}).`)}</p>
+          <a class="ie-roadmap-link" href="#strategy">${t('diag.step1_link', undefined, 'Review Question Strategy & Traps →')}</a>
         </div>
         <div class="ie-roadmap-card">
           <div class="ie-roadmap-step">Step 2</div>
-          <h4>Task 1 Visual Overview & Data Grouping</h4>
-          <p>Master the Keino Campbell 2-Sentence Overview rule and practice grouping dynamic vs static datasets.</p>
-          <a class="ie-roadmap-link" href="#writing">Open Task 1 Formula Inspector →</a>
+          <h4>${t('diag.step2_title', undefined, 'Task 1 Visual Overview & Data Grouping')}</h4>
+          <p>${t('diag.step2_desc', undefined, 'Master the Keino Campbell 2-Sentence Overview rule and practice grouping dynamic vs static datasets.')}</p>
+          <a class="ie-roadmap-link" href="#writing">${t('diag.step2_link', undefined, 'Open Task 1 Formula Inspector →')}</a>
         </div>
         <div class="ie-roadmap-card">
           <div class="ie-roadmap-step">Step 3</div>
-          <h4>Task 2 4-Sentence Paragraph Workbench</h4>
-          <p>Compose essays using strictly 4 sentences per body paragraph (Topic -> Explanation -> Evidence -> Impact).</p>
-          <a class="ie-roadmap-link" href="#writing">Launch Paragraph Workbench →</a>
+          <h4>${t('diag.step3_title', undefined, 'Task 2 4-Sentence Paragraph Workbench')}</h4>
+          <p>${t('diag.step3_desc', undefined, 'Compose essays using strictly 4 sentences per body paragraph (Topic -> Explanation -> Evidence -> Impact).')}</p>
+          <a class="ie-roadmap-link" href="#writing">${t('diag.step3_link', undefined, 'Launch Paragraph Workbench →')}</a>
         </div>
         <div class="ie-roadmap-card">
           <div class="ie-roadmap-step">Step 4</div>
-          <h4>Timed Mock Simulation & AES Feedback</h4>
-          <p>Run full-length timed mock tests and evaluate clausal complexity (MLT, clausal density) in the AES Engine.</p>
-          <a class="ie-roadmap-link" href="#mock">Start Computer-Delivered Mock →</a>
+          <h4>${t('diag.step4_title', undefined, 'Timed Mock Simulation & AES Feedback')}</h4>
+          <p>${t('diag.step4_desc', undefined, 'Run full-length timed mock tests and evaluate clausal complexity (MLT, clausal density) in the AES Engine.')}</p>
+          <a class="ie-roadmap-link" href="#mock">${t('diag.step4_link', undefined, 'Start Computer-Delivered Mock →')}</a>
         </div>
       </div>
     `;

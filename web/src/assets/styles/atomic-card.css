@@ -249,7 +249,7 @@
   min-width: 44px;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  border-radius: 6px;
+  border-radius: var(--radius-btn, 10px);
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   font-weight: 600;

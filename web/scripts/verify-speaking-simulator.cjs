@@ -42,7 +42,8 @@ const mockAcoustic = {
 const simModule = load('views/speaking-simulator.ts', {
   '../ui': mockUi,
   '../tts': mockTts,
-  '../../core/acoustic-engine': mockAcoustic
+  '../../core/acoustic-engine': mockAcoustic,
+  '../../core/i18n': { t: (k, p, d) => d || k, I18n: { getLocale: () => 'en', onLocaleChange: () => () => {} } }
 });
 
 const {

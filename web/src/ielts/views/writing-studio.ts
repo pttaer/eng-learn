@@ -521,11 +521,11 @@ export function writingStudioView(root: HTMLElement): () => void {
   const header = h('div', 'ie-studio-header');
   header.innerHTML = `
     <div class="ie-studio-title-block">
-      <span class="ie-studio-badge">KEINO CAMPBELL BAND 7+ SUITE</span>
-      <h1 class="ie-title">Interactive Writing Studio</h1>
+      <span class="ie-studio-badge">${t('wstudio.badge', undefined, 'KEINO CAMPBELL BAND 7+ SUITE')}</span>
+      <h1 class="ie-title">${t('wstudio.title', undefined, 'Interactive Writing Studio')}</h1>
       <details class="ie-theory-details">
-        <summary>Task 1 &amp; Task 2 Architecture Principles</summary>
-        <p class="ie-lead">Master Task 1 with 6 progressive visual blueprints (strictly enforcing the 2-Sentence Overview zero-data rule), architect Task 2 with 5 discursive architectures validated by Myers semantic diff, and drill syntactic clause formulas with the Tactical Clause Builder.</p>
+        <summary>${t('wstudio.principles_summary', undefined, 'Task 1 &amp; Task 2 Architecture Principles')}</summary>
+        <p class="ie-lead">${t('wstudio.principles_desc', undefined, 'Master Task 1 with 6 progressive visual blueprints (strictly enforcing the 2-Sentence Overview zero-data rule), architect Task 2 with 5 discursive architectures validated by Myers semantic diff, and drill syntactic clause formulas with the Tactical Clause Builder.')}</p>
       </details>
     </div>
   `;
@@ -533,11 +533,11 @@ export function writingStudioView(root: HTMLElement): () => void {
   // Top Mode Switcher
   const modeSwitcher = h('div', 'ie-studio-mode-tabs');
   const t1TabBtn = h('button', 'ie-tab is-on');
-  t1TabBtn.innerHTML = `${icon('layers', 13)} ${t('ielts.task1', undefined, 'Task 1')} Visuals (6)`;
+  t1TabBtn.innerHTML = `${icon('layers', 13)} ${t('wstudio.tab_task1', undefined, 'Task 1 Visuals (6)')}`;
   const t2TabBtn = h('button', 'ie-tab');
-  t2TabBtn.innerHTML = `${icon('edit', 13)} ${t('ielts.task2', undefined, 'Task 2')} Essays (5)`;
+  t2TabBtn.innerHTML = `${icon('edit', 13)} ${t('wstudio.tab_task2', undefined, 'Task 2 Essays (5)')}`;
   const clauseTabBtn = h('button', 'ie-tab');
-  clauseTabBtn.innerHTML = `${icon('target', 13)} Tactical Clause Builder`;
+  clauseTabBtn.innerHTML = `${icon('target', 13)} ${t('wstudio.tab_clauses', undefined, 'Tactical Clause Builder')}`;
   modeSwitcher.append(t1TabBtn, t2TabBtn, clauseTabBtn);
 
   const contentArea = h('div', 'ie-studio-content');
@@ -705,7 +705,7 @@ export function writingStudioView(root: HTMLElement): () => void {
         <div class="ie-clause-formula-card">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
             <span class="ie-clause-formula-badge">${f.badge}</span>
-            <span class="ie-skill-badge" style="background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700;">CLAUSE DRILL</span>
+            <span class="ie-skill-badge" style="background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700;">${t('wstudio.clause_drill_badge', undefined, 'CLAUSE DRILL')}</span>
           </div>
           <h2 style="font-size: 17px; margin: 4px 0;">${f.title}</h2>
           <p style="font-size: 13px; color: var(--ink-secondary); margin: 0; line-height: 1.4;">${f.description}</p>
@@ -713,7 +713,7 @@ export function writingStudioView(root: HTMLElement): () => void {
 
         <div class="ie-clause-workspace-card">
           <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span class="ie-clause-slot-label">ASSEMBLED SENTENCE SLOT</span>
+            <span class="ie-clause-slot-label">${t('wstudio.assembled_slot_label', undefined, 'ASSEMBLED SENTENCE SLOT')}</span>
             <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted);">${selectedTokens.length} Tokens</span>
           </div>
 
@@ -723,19 +723,19 @@ export function writingStudioView(root: HTMLElement): () => void {
                 <span>${esc(tok)}</span>
               </span>
             `).join(' ') : `
-              <span class="ie-clause-placeholder-text">Tap tokens from the banks below to construct your academic sentence formula...</span>
+              <span class="ie-clause-placeholder-text">${t('wstudio.clause_ph', undefined, 'Tap tokens from the banks below to construct your academic sentence formula...')}</span>
             `}
           </div>
 
           <div class="ie-clause-actions-row">
             <button type="button" class="ie-btn ie-btn-sm ie-btn-undo" ${selectedTokens.length === 0 ? 'disabled' : ''}>
-              ${icon('skipBack', 14)} Undo Token
+              ${icon('skipBack', 14)} ${t('wstudio.btn_undo_token', undefined, 'Undo Token')}
             </button>
             <button type="button" class="ie-btn ie-btn-sm ie-btn-reset" ${selectedTokens.length === 0 ? 'disabled' : ''}>
-              ${icon('rotateCcw', 14)} Reset Slot
+              ${icon('rotateCcw', 14)} ${t('wstudio.btn_reset_slot', undefined, 'Reset Slot')}
             </button>
             <button type="button" class="ie-btn ie-btn-sm ie-btn-primary ie-btn-verify" ${selectedTokens.length === 0 ? 'disabled' : ''} style="margin-left: auto;">
-              ${icon('check', 14)} Verify Clause Syntax
+              ${icon('check', 14)} ${t('wstudio.btn_verify_syntax', undefined, 'Verify Clause Syntax')}
             </button>
           </div>
 
@@ -912,12 +912,12 @@ export function writingStudioView(root: HTMLElement): () => void {
       <div class="ie-bp-prompt-card">
         <div class="ie-bp-header-row">
           <span class="ie-skill-badge">TASK 1 // ${bp.kind.toUpperCase()}</span>
-          <button type="button" class="ie-btn ie-btn-sm ie-load-t1-model">Load Band 8.5 Model Blueprint</button>
+          <button type="button" class="ie-btn ie-btn-sm ie-load-t1-model">${t('wstudio.btn_load_t1_model', undefined, 'Load Band 8.5 Model Blueprint')}</button>
         </div>
         <h2 class="ie-sub">${esc(bp.title)}</h2>
         <p class="ie-prompt-text"><b>Prompt:</b> ${esc(bp.prompt)}</p>
         <details class="ie-data-brief-box">
-          <summary><b>📊 Visual Data Digest</b></summary>
+          <summary><b>📊 ${t('wstudio.data_digest', undefined, 'Visual Data Digest')}</b></summary>
           <span>${esc(bp.dataBrief)}</span>
         </details>
       </div>
@@ -928,15 +928,15 @@ export function writingStudioView(root: HTMLElement): () => void {
           <div class="ie-step-head">
             <span class="ie-step-n">1</span>
             <div>
-              <b>Step 1: Paraphrased Introduction</b>
-              <p class="ie-note">One single clear sentence identifying metric, categories, and timeframe.</p>
+              <b>${t('wstudio.step1_title', undefined, 'Step 1: Paraphrased Introduction')}</b>
+              <p class="ie-note">${t('wstudio.step1_note', undefined, 'One single clear sentence identifying metric, categories, and timeframe.')}</p>
             </div>
           </div>
           <div class="ie-testbar ie-t1-intro-timer">
             <span class="ie-clock">01:00</span>
-            <button type="button" class="ie-btn ie-btn-sm ie-t1-intro-start">Start 60-second paraphrase</button>
+            <button type="button" class="ie-btn ie-btn-sm ie-t1-intro-start">${t('wstudio.btn_start_intro_timer', undefined, 'Start 60-second paraphrase')}</button>
           </div>
-          <textarea class="ie-textarea ie-t1-intro-input" placeholder="The line graph illustrates..."></textarea>
+          <textarea class="ie-textarea ie-t1-intro-input" placeholder="${t('wstudio.intro_ph', undefined, 'The line graph illustrates...')}"></textarea>
           <div class="ie-step-feedback ie-intro-feedback"></div>
         </div>
 
@@ -945,8 +945,8 @@ export function writingStudioView(root: HTMLElement): () => void {
           <div class="ie-step-head">
             <span class="ie-step-n">2</span>
             <div>
-              <b>Step 2: Two-Sentence Overview (Strict Zero-Data Rule)</b>
-              <p class="ie-note">Sentence 1: Dominant trend. Sentence 2: Key contrast. STRICTLY 0 RAW FIGURES!</p>
+              <b>${t('wstudio.step2_title', undefined, 'Step 2: Two-Sentence Overview (Strict Zero-Data Rule)')}</b>
+              <p class="ie-note">${t('wstudio.step2_note', undefined, 'Sentence 1: Dominant trend. Sentence 2: Key contrast. STRICTLY 0 RAW FIGURES!')}</p>
             </div>
           </div>
           <textarea class="ie-textarea ie-t1-overview-input" placeholder="Overall, it is evident that [dominant trend]... In stark contrast, [key anomaly]..."></textarea>
@@ -964,8 +964,8 @@ export function writingStudioView(root: HTMLElement): () => void {
           <div class="ie-step-head">
             <span class="ie-step-n">3</span>
             <div>
-              <b>Step 3: Body Paragraph 1 (Primary Data Group)</b>
-              <p class="ie-note">Group 2-3 dominant trajectories. Detail starting figures, change rates, and peaks.</p>
+              <b>${t('wstudio.step3_title', undefined, 'Step 3: Body Paragraph 1 (Primary Data Group)')}</b>
+              <p class="ie-note">${t('wstudio.step3_note', undefined, 'Group 2-3 dominant trajectories. Detail starting figures, change rates, and peaks.')}</p>
             </div>
           </div>
           <textarea class="ie-textarea ie-t1-body1-input" placeholder="Regarding the primary categories..."></textarea>
@@ -977,8 +977,8 @@ export function writingStudioView(root: HTMLElement): () => void {
           <div class="ie-step-head">
             <span class="ie-step-n">4</span>
             <div>
-              <b>Step 4: Body Paragraph 2 (Secondary Contrasts)</b>
-              <p class="ie-note">Detail remaining categories, minor fluctuations, or static figures with prepositions.</p>
+              <b>${t('wstudio.step4_title', undefined, 'Step 4: Body Paragraph 2 (Secondary Contrasts)')}</b>
+              <p class="ie-note">${t('wstudio.step4_note', undefined, 'Detail remaining categories, minor fluctuations, or static figures with prepositions.')}</p>
             </div>
           </div>
           <textarea class="ie-textarea ie-t1-body2-input" placeholder="By contrast, figures for..."></textarea>
@@ -1018,14 +1018,14 @@ export function writingStudioView(root: HTMLElement): () => void {
       <!-- Assembled Report Console -->
       <div class="ie-assembled-console">
         <div class="ie-assembled-head">
-          <h3>📄 Complete Assembled Task 1 Report</h3>
+          <h3>📄 ${t('wstudio.assembled_title', undefined, 'Complete Assembled Task 1 Report')}</h3>
           <div class="ie-assembled-metrics">
             <span class="ie-t1-total-words">0 / 150 words</span>
-            <button type="button" class="ie-btn ie-btn-sm ie-copy-report">Copy Complete Report</button>
+            <button type="button" class="ie-btn ie-btn-sm ie-copy-report">${t('wstudio.btn_copy_report', undefined, 'Copy Complete Report')}</button>
           </div>
         </div>
         <div class="ie-assembled-preview">
-          <p class="ie-preview-placeholder">Draft the 4 steps above to assemble your complete report in real-time.</p>
+          <p class="ie-preview-placeholder">${t('wstudio.assembled_ph', undefined, 'Draft the 4 steps above to assemble your complete report in real-time.')}</p>
         </div>
       </div>
     `;
@@ -1075,10 +1075,10 @@ export function writingStudioView(root: HTMLElement): () => void {
       const oVal = validateTask1Overview(overviewInput.value);
       overviewFeedback.innerHTML = `
         <ul class="ie-checklist-items">
-          <li class="${oVal.hasNumbers ? 'is-invalid' : 'is-valid'}">${oVal.hasNumbers ? '⚠️ Raw numbers detected (forbidden in overview)!' : '✓ Zero Raw Numbers Rule satisfied.'}</li>
+          <li class="${oVal.hasNumbers ? 'is-invalid' : 'is-valid'}">${oVal.hasNumbers ? t('wstudio.chk_numbers_invalid') : t('wstudio.chk_numbers_valid')}</li>
           <li class="${oVal.sentenceCount === 2 ? 'is-valid' : 'is-warn'}">${oVal.sentenceCount} / 2 Sentences</li>
-          <li class="${oVal.hasTrend ? 'is-valid' : 'is-invalid'}">${oVal.hasTrend ? '✓ Main trend articulated' : '✗ Missing main trend'}</li>
-          <li class="${oVal.hasContrast ? 'is-valid' : 'is-invalid'}">${oVal.hasContrast ? '✓ Key contrast / anomaly articulated' : '✗ Missing key contrast'}</li>
+          <li class="${oVal.hasTrend ? 'is-valid' : 'is-invalid'}">${oVal.hasTrend ? t('wstudio.chk_trend_valid') : t('wstudio.chk_trend_invalid')}</li>
+          <li class="${oVal.hasContrast ? 'is-valid' : 'is-invalid'}">${oVal.hasContrast ? t('wstudio.chk_contrast_valid') : t('wstudio.chk_contrast_invalid')}</li>
         </ul>
       `;
 
@@ -1094,7 +1094,7 @@ export function writingStudioView(root: HTMLElement): () => void {
       wordCountBadge.className = `ie-t1-total-words ${totalWords >= 150 ? 'is-good' : 'is-low'}`;
 
       if (!combined) {
-        previewEl.innerHTML = '<p class="ie-preview-placeholder">Draft the 4 steps above to assemble your complete report in real-time.</p>';
+        previewEl.innerHTML = `<p class="ie-preview-placeholder">${t('wstudio.assembled_ph')}</p>`;
       } else {
         previewEl.innerHTML = [p1, p2, p3, p4]
           .filter(Boolean)
@@ -1123,8 +1123,8 @@ export function writingStudioView(root: HTMLElement): () => void {
       copyBtn.addEventListener('click', () => {
         const text = [introInput.value, overviewInput.value, body1Input.value, body2Input.value].filter(Boolean).join('\n\n');
         navigator.clipboard.writeText(text).then(() => {
-          copyBtn.textContent = '✓ Copied!';
-          setTimeout(() => { copyBtn.textContent = 'Copy Complete Report'; }, 2000);
+          copyBtn.textContent = t('wstudio.copied');
+          setTimeout(() => { copyBtn.textContent = t('wstudio.btn_copy_report'); }, 2000);
         });
       });
     }
@@ -1159,12 +1159,12 @@ export function writingStudioView(root: HTMLElement): () => void {
       <div class="ie-arch-prompt-card">
         <div class="ie-bp-header-row">
           <span class="ie-skill-badge">TASK 2 // ${arch.type.toUpperCase()}</span>
-          <button type="button" class="ie-btn ie-btn-sm ie-load-t2-model">Load Band 8.5 Model Essay</button>
+          <button type="button" class="ie-btn ie-btn-sm ie-load-t2-model">${t('wstudio.btn_load_t2_model')}</button>
         </div>
         <h2 class="ie-sub">${esc(arch.title)}</h2>
         <p class="ie-prompt-text"><b>Prompt:</b> ${esc(arch.prompt)}</p>
         <div class="ie-data-brief-box">
-          <b>📐 Architectural Blueprint:</b> <span>${esc(arch.architectureGuide)}</span>
+          <b>📐 ${t('wstudio.arch_blueprint')}</b> <span>${esc(arch.architectureGuide)}</span>
         </div>
       </div>
 
@@ -1172,7 +1172,7 @@ export function writingStudioView(root: HTMLElement): () => void {
         <!-- Introduction -->
         <div class="ie-section-box">
           <div class="ie-section-head">
-            <b>1. Introduction (Paraphrase + Clear Thesis Stance)</b>
+            <b>${t('wstudio.t2_step1')}</b>
           </div>
           <textarea class="ie-textarea ie-t2-intro" placeholder="State background context and direct thesis stance..."></textarea>
         </div>
@@ -1180,7 +1180,7 @@ export function writingStudioView(root: HTMLElement): () => void {
         <!-- Body Paragraph 1 (4-Sentence Formula) -->
         <div class="ie-section-box ie-body-architect-box">
           <div class="ie-section-head">
-            <b>2. Body Paragraph 1 (Keino Campbell 4-Sentence Formula)</b>
+            <b>${t('wstudio.t2_step2')}</b>
             <div class="ie-body-badges ie-b1-badges">
               <span class="ie-eval-badge ie-b1-topic">S1: Topic</span>
               <span class="ie-eval-badge ie-b1-expl">S2: Explanation</span>
@@ -1196,7 +1196,7 @@ export function writingStudioView(root: HTMLElement): () => void {
         <!-- Body Paragraph 2 (4-Sentence Formula) -->
         <div class="ie-section-box ie-body-architect-box">
           <div class="ie-section-head">
-            <b>3. Body Paragraph 2 (Keino Campbell 4-Sentence Formula)</b>
+            <b>${t('wstudio.t2_step3')}</b>
             <div class="ie-body-badges ie-b2-badges">
               <span class="ie-eval-badge ie-b2-topic">S1: Topic</span>
               <span class="ie-eval-badge ie-b2-expl">S2: Explanation</span>
@@ -1212,7 +1212,7 @@ export function writingStudioView(root: HTMLElement): () => void {
         <!-- Conclusion -->
         <div class="ie-section-box">
           <div class="ie-section-head">
-            <b>4. Conclusion (Thesis Synthesis)</b>
+            <b>${t('wstudio.t2_step4')}</b>
           </div>
           <textarea class="ie-textarea ie-t2-concl" placeholder="In conclusion, reiterate main positions without introducing brand new points..."></textarea>
         </div>
@@ -1222,18 +1222,18 @@ export function writingStudioView(root: HTMLElement): () => void {
       <div class="ie-diff-console">
         <div class="ie-diff-header">
           <div>
-            <h3>${icon('search', 15)} Myers Semantic Diff (Candidate vs Band 8.5 Model)</h3>
-            <p class="ie-note">Word-level LCS comparison against the authentic Band 8.5 exemplar model.</p>
+            <h3>${icon('search', 15)} ${t('wstudio.diff_title')}</h3>
+            <p class="ie-note">${t('wstudio.diff_desc')}</p>
           </div>
-          <button type="button" class="ie-btn ie-btn-sm ie-run-diff">Execute Word Diff Analysis</button>
+          <button type="button" class="ie-btn ie-btn-sm ie-run-diff">${t('wstudio.btn_run_diff')}</button>
         </div>
         <div class="ie-diff-legend">
-          <span class="diff-legend-item"><i class="leg-match"></i> Shared Vocabulary (Match)</span>
-          <span class="diff-legend-item"><i class="leg-insert"></i> Your Phrasing (Insertion)</span>
-          <span class="diff-legend-item"><i class="leg-delete"></i> Band 8.5 Benchmark (Omission)</span>
+          <span class="diff-legend-item"><i class="leg-match"></i> ${t('wstudio.diff_match')}</span>
+          <span class="diff-legend-item"><i class="leg-insert"></i> ${t('wstudio.diff_insert')}</span>
+          <span class="diff-legend-item"><i class="leg-delete"></i> ${t('wstudio.diff_delete')}</span>
         </div>
         <div class="ie-diff-stream-box">
-          <p class="ie-diff-empty">Click "Execute Word Diff Analysis" to compare your essay draft with the Band 8.5 model.</p>
+          <p class="ie-diff-empty">${t('wstudio.diff_empty')}</p>
         </div>
       </div>
     `;

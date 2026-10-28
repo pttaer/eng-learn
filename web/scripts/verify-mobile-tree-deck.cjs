@@ -245,7 +245,8 @@ const constellationEngineMod = load('modules/constellation-engine.ts', {
   '../utils/storage': storageMod,
   '../core/cefr': cefrMod,
   '../core/router': {},
-  '../utils/icons': iconsMod
+  '../utils/icons': iconsMod,
+  '../core/i18n': { t: (k, p, d) => d || k, I18n: { getLocale: () => 'en', onLocaleChange: () => () => {} } }
 });
 const { ConstellationEngine } = constellationEngineMod;
 

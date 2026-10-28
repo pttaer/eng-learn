@@ -90,7 +90,7 @@
 .sound-tile,
 .email-tile {
   padding: 0 var(--gap-block);
-  border-radius: 9px;
+  border-radius: var(--radius-btn, 10px);
   border: 1px solid var(--border-hairline);
   background: transparent;
   color: inherit;
@@ -129,6 +129,10 @@
   padding: var(--pad-card);
   border-radius: 12px;
   border: 1px solid var(--border-hairline);
+}
+
+.sound-detail:empty {
+  display: none !important;
 }
 
 .drill-card,
@@ -174,23 +178,26 @@
 
 .drill-gap {
   font: inherit;
+  font-size: max(16px, var(--font-body));
   padding: 0 var(--gap-group);
-  border-radius: 9px;
+  border-radius: var(--radius-btn, 10px);
   border: 1px solid var(--border-hairline);
   background: transparent;
   color: inherit;
   width: min(12em, 100%);
+  min-height: var(--touch-target-min, 44px);
 }
 
 .drill-select {
   font: inherit;
   width: 100%;
   padding: 0 var(--gap-group);
-  border-radius: 9px;
+  border-radius: var(--radius-btn, 10px);
   border: 1px solid var(--border-hairline);
   background: transparent;
   color: inherit;
   font-size: max(16px, var(--font-body));
+  min-height: var(--touch-target-min, 44px);
 }
 
 .drill-pair {

@@ -462,6 +462,12 @@ async function runMobileTouchQA() {
       console.log(`  [PASS] Cockpit 1-40 question navigator pills verified for >= 44x44px mobile touch ergonomics.`);
 
       if (vpIndex === 0) {
+        // Dismiss test hub modal to screenshot the split-screen test station with bottom bar
+        await page.evaluate(() => {
+          const btn = document.querySelector('#btn-preview-exam-station') || document.querySelector('#btn-start-selected-exam');
+          if (btn) btn.click();
+        });
+        await new Promise(r => setTimeout(r, 400));
         const ssCockpitPath = path.join(SCREENSHOTS_DIR, '03-iphone-se-cockpit-split.png');
         await page.screenshot({ path: ssCockpitPath, fullPage: false });
         console.log(`  [SCREENSHOT] Saved: ${ssCockpitPath}`);

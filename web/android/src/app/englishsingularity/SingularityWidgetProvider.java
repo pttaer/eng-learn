@@ -39,12 +39,17 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
     public static final String PREF_WORD_INDEX = "word_rotation_index";
     public static final String PREF_ACTIVE_TAB = "expanded_active_tab";
     public static final String PREF_RECALL_MASKED = "recall_masked";
+    public static final String PREF_QUIZ_INDEX = "widget_quiz_index";
+    public static final String PREF_QUIZ_SELECTED = "widget_quiz_selected";
+    public static final String PREF_QUIZ_SCORE = "widget_quiz_score";
 
     public static final String ACTION_NEXT_WORD = "app.englishsingularity.ACTION_NEXT_WORD";
     public static final String ACTION_SPEAK_WORD = "app.englishsingularity.ACTION_SPEAK_WORD";
     public static final String ACTION_SPEAK_SENTENCE = "app.englishsingularity.ACTION_SPEAK_SENTENCE";
     public static final String ACTION_TOGGLE_RECALL = "app.englishsingularity.ACTION_TOGGLE_RECALL";
     public static final String ACTION_SELECT_TAB = "app.englishsingularity.ACTION_SELECT_TAB";
+    public static final String ACTION_ANSWER_QUIZ = "app.englishsingularity.ACTION_ANSWER_QUIZ";
+    public static final String ACTION_NEXT_QUIZ = "app.englishsingularity.ACTION_NEXT_QUIZ";
     public static final String ACTION_OPEN_VOCAB = "app.englishsingularity.ACTION_OPEN_VOCAB";
     public static final String ACTION_OPEN_IELTS = "app.englishsingularity.ACTION_OPEN_IELTS";
     public static final String ACTION_OPEN_READING = "app.englishsingularity.ACTION_OPEN_READING";
@@ -52,77 +57,135 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
     public static final String ACTION_OPEN_LISTENING = "app.englishsingularity.ACTION_OPEN_LISTENING";
     public static final String ACTION_OPEN_SPEAKING = "app.englishsingularity.ACTION_OPEN_SPEAKING";
 
-    // Curated offline C2 / Academic IELTS pool for standalone offline widget rotation
+    // Curated offline C2 / Academic IELTS pool for standalone offline widget rotation & quiz
     private static final String[][] OFFLINE_WORDS = {
         {
             "Ephemeral",
             "/ɪˈfem.ər.əl/ • adj",
             "Lasting for only a very short time; transient or fleeting.",
             "“Fame in the digital era is intensely ephemeral, vanishing as swiftly as it emerges.”",
-            "✦ Collocations: ephemeral nature, ephemeral pleasure  •  Synonyms: transient, fleeting"
+            "Collocations: ephemeral nature, ephemeral pleasure  •  Synonyms: transient, fleeting",
+            "Phù du, ngắn ngủi, sớm nở tối tàn"
         },
         {
             "Ubiquitous",
             "/juːˈbɪk.wɪ.təs/ • adj",
             "Present, appearing, or found everywhere simultaneously.",
             "“Mobile devices have become ubiquitous in daily modern life.”",
-            "✦ Collocations: ubiquitous presence, ubiquitous influence  •  Synonyms: omnipresent, pervasive"
+            "Collocations: ubiquitous presence, ubiquitous influence  •  Synonyms: omnipresent, pervasive",
+            "Phổ biến khắp nơi, đâu đâu cũng thấy"
         },
         {
             "Paradigm",
             "/ˈpær.ə.daɪm/ • n",
             "A typical example, pattern, model, or conceptual framework.",
             "“The shift marked an entirely new paradigm in economic thought.”",
-            "✦ Collocations: paradigm shift, dominant paradigm  •  Synonyms: archetype, model, standard"
+            "Collocations: paradigm shift, dominant paradigm  •  Synonyms: archetype, model, standard",
+            "Mô hình chuẩn mực, khuôn mẫu tư duy"
         },
         {
             "Salient",
             "/ˈseɪ.li.ənt/ • adj",
             "Most noticeable, prominent, or of pivotal importance.",
             "“She highlighted the salient features of the academic proposal.”",
-            "✦ Collocations: salient point, salient feature  •  Synonyms: prominent, conspicuous, pivotal"
+            "Collocations: salient point, salient feature  •  Synonyms: prominent, conspicuous, pivotal",
+            "Nổi bật, then chốt, đáng chú ý nhất"
         },
         {
             "Mitigate",
             "/ˈmɪt.ɪ.ɡeɪt/ • v",
             "Make less severe, serious, painful, or damaging.",
             "“Stringent safeguards mitigate systemic failure risk.”",
-            "✦ Collocations: mitigate risk, mitigate impact  •  Synonyms: alleviate, attenuate, reduce"
+            "Collocations: mitigate risk, mitigate impact  •  Synonyms: alleviate, attenuate, reduce",
+            "Làm giảm nhẹ, xoa dịu, giảm thiểu tác hại"
         },
         {
             "Juxtapose",
             "/ˌdʒʌk.stəˈpəʊz/ • v",
             "Place close together for contrasting effect.",
             "“The essay juxtaposes urban decay and modern high-tech.”",
-            "✦ Collocations: juxtapose with, starkly juxtaposed  •  Synonyms: compare, contrast, collate"
+            "Collocations: juxtapose with, starkly juxtaposed  •  Synonyms: compare, contrast, collate",
+            "Đặt cạnh nhau để làm nổi bật tương phản"
         },
         {
             "Plausible",
             "/ˈplɔː.zə.bəl/ • adj",
             "Reasonable or probable; having an appearance of truth.",
             "“The investigator offered a plausible explanation for the anomaly.”",
-            "✦ Collocations: plausible explanation, highly plausible  •  Synonyms: credible, believable, feasible"
+            "Collocations: plausible explanation, highly plausible  •  Synonyms: credible, believable, feasible",
+            "Hợp lý, đáng tin cậy, có thể xảy ra"
         },
         {
             "Exacerbate",
             "/ɪɡˈzæs.ə.beɪt/ • v",
             "Make a problem, bad situation, or negative feeling worse.",
             "“Budget cutbacks will exacerbate the existing labor shortage.”",
-            "✦ Collocations: exacerbate tension, exacerbate crisis  •  Synonyms: aggravate, worsen, inflame"
+            "Collocations: exacerbate tension, exacerbate crisis  •  Synonyms: aggravate, worsen, inflame",
+            "Làm trầm trọng thêm, làm xấu đi tình hình"
         },
         {
             "Proponent",
             "/prəˈpəʊ.nənt/ • n",
             "A person who advocates a theory, proposal, or course of action.",
             "“He was an articulate proponent of sustainable clean energy.”",
-            "✦ Collocations: leading proponent, vocal proponent  •  Synonyms: advocate, champion, supporter"
+            "Collocations: leading proponent, vocal proponent  •  Synonyms: advocate, champion, supporter",
+            "Người ủng hộ tích cực, người đề xướng"
         },
         {
             "Comprehensive",
             "/ˌkɒm.prɪˈhen.sɪv/ • adj",
             "Including or dealing with all or nearly all aspects of something.",
             "“The research paper provides a comprehensive review of the empirical data.”",
-            "✦ Collocations: comprehensive review, comprehensive guide  •  Synonyms: exhaustive, thorough, complete"
+            "Collocations: comprehensive review, comprehensive guide  •  Synonyms: exhaustive, thorough, complete",
+            "Toàn diện, bao quát tất cả khía cạnh"
+        },
+        {
+            "Pragmatic",
+            "/præɡˈmæt.ɪk/ • adj",
+            "Dealing with things sensibly and realistically based on practical results.",
+            "“They adopted a pragmatic approach to resolve the complex dilemma.”",
+            "Collocations: pragmatic approach, pragmatic solution  •  Synonyms: practical, sensible, realistic",
+            "Thực tế, thực dụng, trọng tính khả thi"
+        },
+        {
+            "Ambivalent",
+            "/æmˈbɪv.ə.lənt/ • adj",
+            "Having mixed feelings or contradictory ideas about something.",
+            "“Many scholars remain ambivalent about the rapid proliferation of AI.”",
+            "Collocations: feel ambivalent, highly ambivalent  •  Synonyms: equivocal, uncertain, undecided",
+            "Lưỡng lự, có cảm xúc trái chiều mâu thuẫn"
+        },
+        {
+            "Conundrum",
+            "/kəˈnʌn.drəm/ • n",
+            "A confusing and difficult problem or question.",
+            "“Balancing economic growth with conservation is a major policy conundrum.”",
+            "Collocations: ethical conundrum, solve a conundrum  •  Synonyms: enigma, puzzle, dilemma",
+            "Câu đố hóc búa, bài toán nan giải"
+        },
+        {
+            "Resilient",
+            "/rɪˈzɪl.jənt/ • adj",
+            "Able to withstand or recover quickly from difficult conditions.",
+            "“The local ecosystem proved remarkably resilient against severe droughts.”",
+            "Collocations: resilient economy, highly resilient  •  Synonyms: robust, adaptable, buoyant",
+            "Kiên cường, bền bỉ, phục hồi nhanh chóng"
+        },
+        {
+            "Tenacious",
+            "/təˈneɪ.ʃəs/ • adj",
+            "Tending to keep a firm hold of something; clinging or determined.",
+            "“Her tenacious defense of human rights earned international acclaim.”",
+            "Collocations: tenacious grip, tenacious pursuit  •  Synonyms: persistent, resolute, steadfast",
+            "Kiên trì, ngoan cường, bám đuổi đến cùng"
+        },
+        {
+            "Scrutinize",
+            "/ˈskruː.tɪ.naɪz/ • v",
+            "Examine or inspect closely and thoroughly.",
+            "“Regulators must rigorously scrutinize the bank's internal transactions.”",
+            "Collocations: closely scrutinize, carefully scrutinized  •  Synonyms: inspect, examine, audit",
+            "Soi xét kỹ lưỡng, kiểm tra thấu đáo"
         }
     };
 
@@ -283,7 +346,7 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             // TABBED EXPANDED WIDGET SETUP (ViewFlipper)
             // ==========================================
             int activeTab = prefs.getInt(PREF_ACTIVE_TAB, 0);
-            if (activeTab < 0 || activeTab > 2) activeTab = 0;
+            if (activeTab < 0 || activeTab > 3) activeTab = 0;
 
             // Switch ViewFlipper active displayed child
             views.setInt(R.id.widget_flipper, "setDisplayedChild", activeTab);
@@ -297,11 +360,14 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             views.setInt(R.id.widget_tab_word, "setBackgroundResource", activeTab == 0 ? activeBg : inactiveBg);
             views.setTextColor(R.id.widget_tab_word, activeTab == 0 ? activeColor : inactiveColor);
 
-            views.setInt(R.id.widget_tab_quests, "setBackgroundResource", activeTab == 1 ? activeBg : inactiveBg);
-            views.setTextColor(R.id.widget_tab_quests, activeTab == 1 ? activeColor : inactiveColor);
+            views.setInt(R.id.widget_tab_quiz, "setBackgroundResource", activeTab == 1 ? activeBg : inactiveBg);
+            views.setTextColor(R.id.widget_tab_quiz, activeTab == 1 ? activeColor : inactiveColor);
 
-            views.setInt(R.id.widget_tab_pillars, "setBackgroundResource", activeTab == 2 ? activeBg : inactiveBg);
-            views.setTextColor(R.id.widget_tab_pillars, activeTab == 2 ? activeColor : inactiveColor);
+            views.setInt(R.id.widget_tab_quests, "setBackgroundResource", activeTab == 2 ? activeBg : inactiveBg);
+            views.setTextColor(R.id.widget_tab_quests, activeTab == 2 ? activeColor : inactiveColor);
+
+            views.setInt(R.id.widget_tab_pillars, "setBackgroundResource", activeTab == 3 ? activeBg : inactiveBg);
+            views.setTextColor(R.id.widget_tab_pillars, activeTab == 3 ? activeColor : inactiveColor);
 
             // Tab Click PendingIntents
             Intent tab0 = new Intent(context, SingularityWidgetProvider.class);
@@ -313,14 +379,20 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             Intent tab1 = new Intent(context, SingularityWidgetProvider.class);
             tab1.setAction(ACTION_SELECT_TAB);
             tab1.putExtra("tab_index", 1);
-            views.setOnClickPendingIntent(R.id.widget_tab_quests, PendingIntent.getBroadcast(
+            views.setOnClickPendingIntent(R.id.widget_tab_quiz, PendingIntent.getBroadcast(
                 context, 1001, tab1, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
 
             Intent tab2 = new Intent(context, SingularityWidgetProvider.class);
             tab2.setAction(ACTION_SELECT_TAB);
             tab2.putExtra("tab_index", 2);
-            views.setOnClickPendingIntent(R.id.widget_tab_pillars, PendingIntent.getBroadcast(
+            views.setOnClickPendingIntent(R.id.widget_tab_quests, PendingIntent.getBroadcast(
                 context, 1002, tab2, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
+
+            Intent tab3 = new Intent(context, SingularityWidgetProvider.class);
+            tab3.setAction(ACTION_SELECT_TAB);
+            tab3.putExtra("tab_index", 3);
+            views.setOnClickPendingIntent(R.id.widget_tab_pillars, PendingIntent.getBroadcast(
+                context, 1003, tab3, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
 
             // --- TAB 1 (Word Card) ---
             views.setTextViewText(R.id.widget_word, word);
@@ -365,16 +437,119 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             views.setViewVisibility(R.id.widget_tags_container, hasTags ? View.VISIBLE : View.GONE);
             if (hasTags) {
                 if (isMasked) {
-                    views.setTextViewText(R.id.widget_tags, "✦ [Active Recall Mode] Tap '👁 Reveal' to uncover meaning & collocations");
+                    views.setTextViewText(R.id.widget_tags, "[Active Recall Mode] Tap '👁 Reveal' to uncover meaning & collocations");
                 } else {
                     views.setTextViewText(R.id.widget_tags, tags);
                 }
             }
 
-            // --- TAB 2 (Quests) ---
+            boolean isVietnamese = progress != null && (progress.contains("Cấp") || progress.contains("Nhiệm vụ"));
+
+            // --- TAB 2 (Vocab Flash Quiz) ---
+            int quizIdx = prefs.getInt(PREF_QUIZ_INDEX, 0);
+            int quizSelected = prefs.getInt(PREF_QUIZ_SELECTED, -1);
+            int quizScore = prefs.getInt(PREF_QUIZ_SCORE, 0);
+
+            int targetWordIdx = Math.abs(quizIdx) % OFFLINE_WORDS.length;
+            String quizWord = OFFLINE_WORDS[targetWordIdx][0];
+            String quizPhonetic = OFFLINE_WORDS[targetWordIdx][1];
+            String correctDef = (isVietnamese && OFFLINE_WORDS[targetWordIdx].length > 5)
+                ? OFFLINE_WORDS[targetWordIdx][5]
+                : OFFLINE_WORDS[targetWordIdx][2];
+
+            int distractor1Idx = (targetWordIdx + 3) % OFFLINE_WORDS.length;
+            String distractor1 = (isVietnamese && OFFLINE_WORDS[distractor1Idx].length > 5)
+                ? OFFLINE_WORDS[distractor1Idx][5]
+                : OFFLINE_WORDS[distractor1Idx][2];
+
+            int distractor2Idx = (targetWordIdx + 7) % OFFLINE_WORDS.length;
+            String distractor2 = (isVietnamese && OFFLINE_WORDS[distractor2Idx].length > 5)
+                ? OFFLINE_WORDS[distractor2Idx][5]
+                : OFFLINE_WORDS[distractor2Idx][2];
+
+            // Determine randomized correct position (0, 1, or 2)
+            int correctSlot = Math.abs(quizIdx * 7 + 1) % 3;
+            String[] options = new String[3];
+            if (correctSlot == 0) {
+                options[0] = correctDef;
+                options[1] = distractor1;
+                options[2] = distractor2;
+            } else if (correctSlot == 1) {
+                options[0] = distractor1;
+                options[1] = correctDef;
+                options[2] = distractor2;
+            } else {
+                options[0] = distractor1;
+                options[1] = distractor2;
+                options[2] = correctDef;
+            }
+
+            views.setTextViewText(R.id.widget_quiz_question, quizWord + "  " + quizPhonetic);
+            String scoreText = isVietnamese
+                ? ("🧠 " + quizScore + " Đúng (+" + (quizScore * 10) + " XP)")
+                : ("🧠 " + quizScore + " Correct (+" + (quizScore * 10) + " XP)");
+            views.setTextViewText(R.id.widget_quiz_score, scoreText);
+
+            int[] optContainerIds = { R.id.widget_quiz_opt_1, R.id.widget_quiz_opt_2, R.id.widget_quiz_opt_3 };
+            int[] optTextIds = { R.id.widget_quiz_opt_text_1, R.id.widget_quiz_opt_text_2, R.id.widget_quiz_opt_text_3 };
+            String[] prefixes = { "A. ", "B. ", "C. " };
+
+            if (quizSelected == -1) {
+                // Unanswered state
+                views.setTextViewText(R.id.widget_quiz_feedback, isVietnamese ? "Chọn 1 đáp án để kiểm tra phản xạ" : "Tap an option to test active recall");
+                views.setTextColor(R.id.widget_quiz_feedback, 0xFFA5B4FC);
+
+                for (int i = 0; i < 3; i++) {
+                    views.setTextViewText(optTextIds[i], prefixes[i] + options[i]);
+                    views.setTextColor(optTextIds[i], 0xFFF3F4F6);
+                    views.setInt(optContainerIds[i], "setBackgroundResource", R.drawable.widget_btn_bg);
+
+                    Intent optIntent = new Intent(context, SingularityWidgetProvider.class);
+                    optIntent.setAction(ACTION_ANSWER_QUIZ);
+                    optIntent.putExtra("option_index", i);
+                    views.setOnClickPendingIntent(optContainerIds[i], PendingIntent.getBroadcast(
+                        context, 700 + i, optIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
+                }
+            } else {
+                // Answered state
+                boolean isUserCorrect = (quizSelected == correctSlot);
+                if (isUserCorrect) {
+                    views.setTextViewText(R.id.widget_quiz_feedback, isVietnamese ? ("🎉 Chính xác! (+10 XP) • " + quizWord) : ("🎉 Correct! (+10 XP) • " + quizWord));
+                    views.setTextColor(R.id.widget_quiz_feedback, 0xFFA5B4FC);
+                } else {
+                    views.setTextViewText(R.id.widget_quiz_feedback, (isVietnamese ? "❌ Chưa đúng! Đáp án đúng: " : "❌ Incorrect! Correct: ") + correctDef);
+                    views.setTextColor(R.id.widget_quiz_feedback, 0xFFF87171);
+                }
+
+                for (int i = 0; i < 3; i++) {
+                    if (i == correctSlot) {
+                        views.setTextViewText(optTextIds[i], "✔ " + prefixes[i] + options[i]);
+                        views.setTextColor(optTextIds[i], 0xFFA5B4FC);
+                        views.setInt(optContainerIds[i], "setBackgroundResource", R.drawable.widget_tab_active_bg);
+                    } else if (i == quizSelected) {
+                        views.setTextViewText(optTextIds[i], "✖ " + prefixes[i] + options[i]);
+                        views.setTextColor(optTextIds[i], 0xFFEF4444);
+                        views.setInt(optContainerIds[i], "setBackgroundResource", R.drawable.widget_btn_bg);
+                    } else {
+                        views.setTextViewText(optTextIds[i], prefixes[i] + options[i]);
+                        views.setTextColor(optTextIds[i], 0xFF64748B);
+                        views.setInt(optContainerIds[i], "setBackgroundResource", R.drawable.widget_btn_bg);
+                    }
+
+                    // Once answered, clicking options does not re-trigger
+                    views.setOnClickPendingIntent(optContainerIds[i], null);
+                }
+            }
+
+            // Next question action
+            Intent nextQuizIntent = new Intent(context, SingularityWidgetProvider.class);
+            nextQuizIntent.setAction(ACTION_NEXT_QUIZ);
+            views.setOnClickPendingIntent(R.id.widget_quiz_action_next, PendingIntent.getBroadcast(
+                context, 800, nextQuizIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
+
+            // --- TAB 3 (Quests) ---
             int level = 4;
             int completedQuests = 2;
-            boolean isVietnamese = progress != null && (progress.contains("Cấp") || progress.contains("Nhiệm vụ"));
             if (progress != null) {
                 try {
                     if (progress.contains("Lv.")) {
@@ -552,9 +727,34 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             updateAllWidgets(context);
         } else if (ACTION_SELECT_TAB.equals(action)) {
             int tabIndex = intent.getIntExtra("tab_index", 0);
-            if (tabIndex < 0 || tabIndex > 2) tabIndex = 0;
+            if (tabIndex < 0 || tabIndex > 3) tabIndex = 0;
             SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
             prefs.edit().putInt(PREF_ACTIVE_TAB, tabIndex).apply();
+            updateAllWidgets(context);
+        } else if (ACTION_ANSWER_QUIZ.equals(action)) {
+            int opt = intent.getIntExtra("option_index", -1);
+            SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+            int currentSelected = prefs.getInt(PREF_QUIZ_SELECTED, -1);
+            if (currentSelected == -1 && opt >= 0 && opt <= 2) {
+                int quizIdx = prefs.getInt(PREF_QUIZ_INDEX, 0);
+                int correctSlot = Math.abs(quizIdx * 7 + 1) % 3;
+                int score = prefs.getInt(PREF_QUIZ_SCORE, 0);
+                if (opt == correctSlot) {
+                    score++;
+                }
+                prefs.edit()
+                    .putInt(PREF_QUIZ_SELECTED, opt)
+                    .putInt(PREF_QUIZ_SCORE, score)
+                    .apply();
+                updateAllWidgets(context);
+            }
+        } else if (ACTION_NEXT_QUIZ.equals(action)) {
+            SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+            int quizIdx = prefs.getInt(PREF_QUIZ_INDEX, 0);
+            prefs.edit()
+                .putInt(PREF_QUIZ_INDEX, quizIdx + 1)
+                .putInt(PREF_QUIZ_SELECTED, -1)
+                .apply();
             updateAllWidgets(context);
         } else if (ACTION_TOGGLE_RECALL.equals(action)) {
             SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);

@@ -165,6 +165,7 @@ class App {
     this.analyticsDossier = new AnalyticsDossier();
     this.examCockpit = new ExamCockpitDossier();
     this.settingsDossier = new SettingsDossier();
+    (window as any).__singularityApp = this;
 
     // Bind Completion Rituals
     this.examCockpit.onTestSubmitted = () => {
@@ -319,6 +320,11 @@ class App {
     AudioSynthesizer.stopSpeech();
     AudioSynthesizer.stopFocusHum();
     AudioSynthesizer.playExamRoomAmbience(false);
+    if (ZenMode.isActive()) {
+      ZenMode.setZenMode(false);
+    }
+    PlacementQuiz.close();
+    MultiSkillQuizModal.closeActive();
     LexiconDrawer.close();
     MistakeVault.close();
     CommuteAudioPlayer.close();
@@ -327,7 +333,7 @@ class App {
     HeaderHUD.setContextualDock(null);
 
     // Clean up any stray modals or floating toasts attached to document.body
-    document.querySelectorAll('.completion-modal-overlay, #skill-node-modal, #tour-welcome-toast').forEach(el => el.remove());
+    document.querySelectorAll('.completion-modal-overlay, .hud-modal-overlay, #skill-node-modal, #tour-welcome-toast').forEach(el => el.remove());
 
     if (this.activeDossierHandle && typeof this.activeDossierHandle.teardown === 'function') {
       try {
@@ -528,9 +534,11 @@ class App {
         <p style="font-size: var(--font-body-compact); line-height: 1.4; margin-bottom: 24px;">
           Neural engrams indexed and synchronized into browser memory. All spaced repetition intervals successfully updated.
         </p>
-        <button class="hud-btn btn-receipt-close" style="width: 100%; justify-content: center; padding: 10px 0;">
-          [ RETURN TO SINGULARITY CORE ]
-        </button>
+        <div class="apple-modal-footer">
+          <button type="button" class="apple-bottom-close-btn btn-receipt-close">
+            ${t('common.close', undefined, 'Close')}
+          </button>
+        </div>
       </div>
     `;
 

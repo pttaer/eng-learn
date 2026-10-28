@@ -1,3 +1,4 @@
+import { t } from '../core/i18n';
 /**
  * Drills route: 36 Cambridge-style practice sets, a phonemic chart (Sounds) and a
  * business email builder (Email). Sets run in-place: answer, check, read the why.
@@ -70,8 +71,8 @@ export class DrillsDossier {
   private draw(): void {
     this.root.innerHTML = `
       <header class="drills-head">
-        <span class="drill-kicker">DRILLS</span>
-        <h2 class="drills-title">Practice sets</h2>
+        <span class="drill-kicker">${t('drills.head_kicker', undefined, 'DRILLS')}</span>
+        <h2 class="drills-title">${t('drills.head_title', undefined, 'Practice sets')}</h2>
       </header>
       <div class="drills-tabs" role="tablist">${TABS.map(t => `
         <button type="button" role="tab" class="drill-tab" data-action="tab" data-value="${t.id}" aria-selected="${t.id === this.tab}">${t.label}</button>`).join('')}
@@ -96,11 +97,11 @@ export class DrillsDossier {
         <div class="drill-card-meta"><span class="drill-kicker">${esc(s.skill)}</span><span class="drill-mono">${s.cefrLevel}</span><span class="drill-mono">${s.minutes} min</span></div>
         <h3 class="drill-card-title">${esc(s.title)}</h3>
         <p class="drill-card-objective">${esc(s.objective)}</p>
-        <button type="button" class="drill-btn" data-action="open" data-value="${s.id}">Start</button>
+        <button type="button" class="drill-btn" data-action="open" data-value="${s.id}">${t('drills.start_btn', undefined, 'Start')}</button>
       </article>`).join('');
     panel.innerHTML = `
       <div class="drill-chips" role="group" aria-label="Skill">${chips}</div>
-      <p class="drill-note">${list.length} sets</p>
+      <p class="drill-note">${list.length} ${t('drills.sets_count', undefined, 'sets')}</p>
       <div class="drill-list">${cards}</div>`;
   }
 
@@ -109,15 +110,15 @@ export class DrillsDossier {
     const score = this.checked ? scoreSet(set, this.responses) : null;
     const passage = set.passage ? `<div class="drill-passage">${esc(set.passage)}</div>` : '';
     const listen = hasAudio
-      ? `<button type="button" class="drill-btn drill-btn-ghost" data-action="listen-all">${this.playingId ? 'Stop' : 'Listen along'}</button>`
+      ? `<button type="button" class="drill-btn drill-btn-ghost" data-action="listen-all">${this.playingId ? t('drills.stop', undefined, 'Stop') : t('drills.listen_along', undefined, 'Listen along')}</button>`
       : '';
     const footer = score
       ? `<div class="drill-score" aria-live="polite"><span class="drill-mono">${score.correct} / ${score.total}</span> correct</div>
-         <button type="button" class="drill-btn" data-action="reset">Try again</button>`
-      : `<button type="button" class="drill-btn" data-action="check">Check answers</button>`;
+         <button type="button" class="drill-btn" data-action="reset">${t('drills.try_again', undefined, 'Try again')}</button>`
+      : `<button type="button" class="drill-btn" data-action="check">${t('drills.check_answers', undefined, 'Check answers')}</button>`;
     return `
       <div class="drill-runner-head">
-        <button type="button" class="drill-btn drill-btn-ghost" data-action="back">All sets</button>
+        <button type="button" class="drill-btn drill-btn-ghost" data-action="back">${t('drills.all_sets', undefined, 'All sets')}</button>
         <span class="drill-mono">${set.cefrLevel} • ${set.minutes} min</span>
       </div>
       <h3 class="drill-card-title">${esc(set.title)}</h3>
@@ -133,7 +134,7 @@ export class DrillsDossier {
     const playing = this.playingId === item.id ? 'is-playing' : '';
     const disabled = this.checked ? 'disabled' : '';
     const play = item.speak
-      ? `<button type="button" class="drill-btn drill-btn-ghost" data-action="play" data-item="${item.id}" aria-label="Play item ${n + 1}">Play ▶</button>`
+      ? `<button type="button" class="drill-btn drill-btn-ghost" data-action="play" data-item="${item.id}" aria-label="Play item ${n + 1}">${t('drills.play_btn', undefined, 'Play ▶')}</button>`
       : '';
     let body = '';
     switch (item.type) {

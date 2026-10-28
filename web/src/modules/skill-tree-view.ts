@@ -1,3 +1,14 @@
+const NODE_BRANCH_META: Record<string, { name: string; icon: string }> = {
+  reading: { name: 'Reading', icon: 'book' },
+  writing: { name: 'Writing', icon: 'edit' },
+  listening: { name: 'Listening', icon: 'volume' },
+  speaking: { name: 'Speaking', icon: 'messageCircle' },
+  grammar: { name: 'Grammar', icon: 'layers' },
+  collocations: { name: 'Vocabulary', icon: 'compass' },
+  collocations_grammar: { name: 'Collocations & Grammar', icon: 'compass' },
+  mediation: { name: 'Mediation', icon: 'globe' },
+};
+
 import { icon } from '../utils/icons';
 import { SKILL_BRANCHES } from '../core/skill-tree-data';
 import { SkillTreeEngine } from '../core/skill-tree-engine';
@@ -8,6 +19,7 @@ import { StorageManager } from '../utils/storage';
 import { NebulaCanvas } from '../core/perspective-canvas';
 import { ConstellationEngine } from './constellation-engine';
 import type { Cefr } from '../core/cefr';
+import { t } from '../core/i18n';
 
 /** Hides a node label when it would overlap a label or node circle already kept (by level priority). */
 function hideCollidingLabels(svg: SVGElement): void {
@@ -269,45 +281,45 @@ export class SkillTreeView {
     switch (level) {
       case 'A1':
         tasks = [
-          { route: 'vocab' as RouteId, ok: done.vocab >= 5, label: `${Math.min(done.vocab, 5)}/5 Vocabulary Cards` },
-          { route: 'colloc' as RouteId, ok: done.colloc >= 1, label: '1 A1 Collocation Drill' },
-          { route: 'listen' as RouteId, ok: done.listen >= 1, label: '1 Phonetic Listen' }
+          { route: 'vocab' as RouteId, ok: done.vocab >= 5, label: `${Math.min(done.vocab, 5)}/5 ${t('tree.task_vocab_cards', undefined, 'Vocabulary Cards')}` },
+          { route: 'colloc' as RouteId, ok: done.colloc >= 1, label: t('tree.task_a1_colloc', undefined, '1 A1 Collocation Drill') },
+          { route: 'listen' as RouteId, ok: done.listen >= 1, label: t('tree.task_phonetic_listen', undefined, '1 Phonetic Listen') }
         ];
         break;
       case 'A2':
         tasks = [
-          { route: 'vocab' as RouteId, ok: done.vocab >= 5, label: `${Math.min(done.vocab, 5)}/5 Vocabulary Cards` },
-          { route: 'grammar' as RouteId, ok: done.grammar >= 1, label: '1 A2 Grammar Rule' },
-          { route: 'read' as RouteId, ok: done.reading >= 1, label: '1 Short Reading Pass' }
+          { route: 'vocab' as RouteId, ok: done.vocab >= 5, label: `${Math.min(done.vocab, 5)}/5 ${t('tree.task_vocab_cards', undefined, 'Vocabulary Cards')}` },
+          { route: 'grammar' as RouteId, ok: done.grammar >= 1, label: t('tree.task_a2_grammar', undefined, '1 A2 Grammar Rule') },
+          { route: 'read' as RouteId, ok: done.reading >= 1, label: t('tree.task_short_reading', undefined, '1 Short Reading Pass') }
         ];
         break;
       case 'B1':
         tasks = [
-          { route: 'colloc' as RouteId, ok: done.colloc >= 8, label: `${Math.min(done.colloc, 8)}/8 Collocations Reviewed` },
-          { route: 'grammar' as RouteId, ok: done.grammar >= 1, label: '1 B1 Grammar Rule' },
-          { route: 'write' as RouteId, ok: done.writing >= 1, label: '1 Paragraph Copywork' }
+          { route: 'colloc' as RouteId, ok: done.colloc >= 8, label: `${Math.min(done.colloc, 8)}/8 ${t('tree.task_colloc_reviewed', undefined, 'Collocations Reviewed')}` },
+          { route: 'grammar' as RouteId, ok: done.grammar >= 1, label: t('tree.task_b1_grammar', undefined, '1 B1 Grammar Rule') },
+          { route: 'write' as RouteId, ok: done.writing >= 1, label: t('tree.task_para_copywork', undefined, '1 Paragraph Copywork') }
         ];
         break;
       case 'B2':
         tasks = [
-          { route: 'colloc' as RouteId, ok: done.colloc >= 10, label: `${Math.min(done.colloc, 10)}/10 Collocations Reviewed` },
-          { route: 'grammar' as RouteId, ok: done.grammar >= 1, label: '1 B2 Inversion Rule' },
-          { route: 'speak' as RouteId, ok: done.speaking >= 1, label: '1 Speech Take (4-3-2 Fluency)' }
+          { route: 'colloc' as RouteId, ok: done.colloc >= 10, label: `${Math.min(done.colloc, 10)}/10 ${t('tree.task_colloc_reviewed', undefined, 'Collocations Reviewed')}` },
+          { route: 'grammar' as RouteId, ok: done.grammar >= 1, label: t('tree.task_b2_inversion', undefined, '1 B2 Inversion Rule') },
+          { route: 'speak' as RouteId, ok: done.speaking >= 1, label: t('tree.task_speech_take', undefined, '1 Speech (4-3-2 Take)') }
         ];
         break;
       case 'C1':
         tasks = [
-          { route: 'colloc' as RouteId, ok: done.colloc >= 15, label: `${Math.min(done.colloc, 15)}/15 Collocations Reviewed` },
-          { route: 'write' as RouteId, ok: done.writing >= 1, label: '1 Rhetorical Copywork' },
-          { route: 'speak' as RouteId, ok: done.speaking >= 1, label: '1 Nation 4-3-2 Take' }
+          { route: 'colloc' as RouteId, ok: done.colloc >= 15, label: `${Math.min(done.colloc, 15)}/15 ${t('tree.task_colloc_reviewed', undefined, 'Collocations Reviewed')}` },
+          { route: 'write' as RouteId, ok: done.writing >= 1, label: t('tree.task_rhetorical_copywork', undefined, '1 Rhetorical Copywork') },
+          { route: 'speak' as RouteId, ok: done.speaking >= 1, label: t('tree.task_nation_take', undefined, '1 Nation 4-3-2 Take') }
         ];
         break;
       case 'C2':
       default:
         tasks = [
-          { route: 'colloc' as RouteId, ok: done.colloc >= 20, label: `${Math.min(done.colloc, 20)}/20 Collocations Reviewed` },
-          { route: 'write' as RouteId, ok: done.writing >= 1, label: '1 Master Copywork' },
-          { route: 'read' as RouteId, ok: done.reading >= 1, label: '1 C2 Intensive Reading Analysis' }
+          { route: 'colloc' as RouteId, ok: done.colloc >= 20, label: `${Math.min(done.colloc, 20)}/20 ${t('tree.task_colloc_reviewed', undefined, 'Collocations Reviewed')}` },
+          { route: 'write' as RouteId, ok: done.writing >= 1, label: t('tree.task_master_copywork', undefined, '1 Master Copywork') },
+          { route: 'read' as RouteId, ok: done.reading >= 1, label: t('tree.task_intensive_reading', undefined, '1 Intensive Reading Pass') }
         ];
         break;
     }
@@ -332,36 +344,40 @@ export class SkillTreeView {
     const progress = SkillTreeEngine.calculateSummitProgress();
     const workout = this.getWorkout();
     return `
-      <div class="workout-banner tree-command-panel" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; gap: 8px; box-shadow: var(--shadow-card); flex: 0 0 auto;">
-        <div class="workout-banner-header" style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 4px;">
-          <div class="workout-banner-stats" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-            <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">✦ ROADMAP</span>
-            <span class="hud-status-badge" style="font-size: var(--font-kicker); padding: 2px 8px; border-radius: 4px; border-color: var(--accent-gold); color: var(--accent-gold);">
-              RANK: <strong>${progress.currentRank}</strong> · SUMMIT: <strong class="val-progress-pct">${progress.progressPct}%</strong> <span class="workout-banner-count">(${progress.masteredCount}/${progress.totalNodes})</span>
+      <div class="workout-banner tree-command-panel">
+        <div class="workout-banner-header">
+          <div class="workout-banner-stats">
+            <span class="telemetry-label">${t('tree.roadmap', undefined, 'ROADMAP')}</span>
+            <span class="workout-rank-metric">
+              ${t('tree.rank', undefined, 'RANK:')} <strong>${t('rank.' + progress.currentRank.toLowerCase().replace(/\s+/g, '_'), undefined, progress.currentRank)}</strong>
             </span>
           </div>
-          <div style="display: flex; align-items: baseline; gap: 8px; overflow: hidden;">
-            <h1 class="workout-banner-title" style="font-size: var(--font-body); font-weight: 700; margin: 0; font-family: var(--font-sans); color: var(--ink-primary); letter-spacing: -0.01em; white-space: nowrap;">
-              The Path to C2 Native Mastery
-            </h1>
+          <div class="workout-summit-row">
+            <span class="workout-summit-pct">
+              ${t('tree.summit', undefined, 'SUMMIT:')} <strong class="val-progress-pct">${progress.progressPct}%</strong>
+            </span>
+            <span class="workout-banner-count">(${progress.masteredCount}/${progress.totalNodes} ${t('tree.nodes', undefined, 'Nodes')})</span>
+          </div>
+          <div class="workout-summit-bar-track">
+            <div class="workout-summit-bar-fill" style="width: ${progress.progressPct}%;"></div>
           </div>
         </div>
 
-        <div class="workout-panel" style="flex: 0 0 auto; display: flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.04); border: none; border-radius: 6px; padding: 6px 10px;">
-          <div class="workout-panel-info" style="display: flex; flex-direction: column; gap: 4px;">
-            <div class="workout-panel-header" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 8px;">
-              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-size: var(--font-kicker);">★ WORKOUT [${workout.level}]</span>
-              <span class="telemetry-label workout-remaining-label" style="font-size: var(--font-kicker);">${workout.left === 0 ? 'ALL DONE ✓' : workout.left + ' LEFT'}</span>
+        <div class="workout-panel">
+          <div class="workout-panel-info">
+            <div class="workout-panel-header">
+              <span class="telemetry-label">☆ ${t('tree.workout', undefined, 'WORKOUT')} [${workout.level}]</span>
+              <span class="telemetry-label workout-remaining-label">${workout.left === 0 ? t('tree.all_done', undefined, 'ALL DONE ✓') : workout.left + ' ' + t('tree.left', undefined, 'LEFT')}</span>
             </div>
-            <div class="workout-tasks" style="display: flex; gap: 8px; font-size: var(--font-kicker); color: var(--ink-secondary);">
-              ${workout.tasks.map(t => `
-              <div class="workout-task-chip" data-route="${t.route}" title="Jump to ${t.route} drill" style="display: flex; align-items: center; gap: 4px; cursor: pointer;${t.ok ? '' : ' opacity: 0.75;'}">
-                <span${t.ok ? ' style="color: var(--accent-gold); font-weight: 700;"' : ''}>${t.ok ? '✓' : '○'}</span> <span>${t.label}</span>
+            <div class="workout-tasks">
+              ${workout.tasks.map(tTask => `
+              <div class="workout-task-chip" data-route="${tTask.route}" title="Jump to ${tTask.route} drill">
+                <span${tTask.ok ? ' style="color: var(--accent-gold); font-weight: 700;"' : ''}>${tTask.ok ? '✓' : '○'}</span> <span>${tTask.label}</span>
               </div>`).join('')}
             </div>
           </div>
-          <button class="hud-btn btn-continue-workout" style="justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 6px 14px; min-height: 34px; font-weight: 700; font-size: var(--font-kicker); border: none; cursor: pointer; border-radius: 6px; white-space: nowrap; box-shadow: var(--shadow-glow);">
-            <span>Continue</span> ${icon('arrowRight')}
+          <button class="hud-btn btn-continue-workout">
+            <span>${t('common.continue', undefined, 'Continue')}</span> ${icon('arrowRight')}
           </button>
         </div>
       </div>
@@ -434,7 +450,7 @@ export class SkillTreeView {
         <circle cx="0" cy="0" r="22" fill="url(#summitGlow)" class="summit-halo" />
         <circle cx="0" cy="0" r="14" fill="var(--bg-card)" stroke="var(--accent-gold)" stroke-width="2.5" />
         <circle cx="0" cy="0" r="6" fill="var(--accent-gold)" />
-        <text x="0" y="24" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700" fill="var(--accent-gold)" class="node-title-label">★ C2 SUMMIT ★</text>
+        <text x="0" y="24" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700" fill="var(--accent-gold)" class="node-title-label">☆ C2 SUMMIT ☆</text>
       </g>
     `;
 
@@ -464,7 +480,7 @@ export class SkillTreeView {
         circleStroke = 'var(--accent-star)';
         strokeWidth = '2.5';
         cursorClass = 'node-mastered';
-        symbol = '★';
+        symbol = '☆';
         textFill = 'var(--bg-canvas)';
         haloSvg = `<circle cx="0" cy="0" r="20" fill="none" stroke="var(--accent-gold)" stroke-width="1.5" opacity="0.45" class="star-halo" />`;
       } else if (status === 'locked') {
@@ -521,23 +537,25 @@ export class SkillTreeView {
     return Object.values(SKILL_BRANCHES).map(branch => {
       const branchNodes = branch.nodes;
       const masteredInBranch = branchNodes.filter(n => SkillTreeEngine.getNodeStatus(n.id) === 'mastered').length;
-      const pct = Math.round((masteredInBranch / branchNodes.length) * 100);
+      const pct = branchNodes.length > 0 ? Math.round((masteredInBranch / branchNodes.length) * 100) : 0;
+      const bName = t(`branch.${branch.id}.name`, undefined, branch.name);
+      const bTagline = t(`branch.${branch.id}.tagline`, undefined, branch.tagline);
       return `
-        <div class="branch-summary-card" data-route="${branch.routeTarget}" tabindex="0" role="button" aria-label="Open ${branch.name}" title="${branch.name} — ${branch.tagline}" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: 6px; cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s; display: flex; flex-direction: column; justify-content: space-between; min-height: 50px; box-shadow: var(--shadow-btn);">
+        <div class="branch-summary-card" data-route="${branch.routeTarget}" tabindex="0" role="button" aria-label="Open ${bName}" title="${bName} — ${bTagline}" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: var(--radius-btn, 10px); cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s; display: flex; flex-direction: column; justify-content: space-between; min-height: 50px; box-shadow: var(--shadow-btn);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
             <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--accent-gold); font-weight: 700; line-height: 1.25; max-width: 78%;">
-              ✦ ${branch.name.toUpperCase()}
+              ${bName.toUpperCase()}
             </span>
             <span style="font-family: var(--font-mono); font-size: var(--font-kicker); font-weight: 700; color: var(--ink-primary);">
               ${pct}%
             </span>
           </div>
           <div style="font-size: var(--font-kicker); font-weight: 500; margin-bottom: 6px; line-height: 1.35; color: var(--ink-secondary);">
-            ${branch.tagline}
+            ${bTagline}
           </div>
           <div style="display: flex; align-items: center; gap: 8px;">
             <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); white-space: nowrap;">
-              ${masteredInBranch}/${branchNodes.length} mastered
+              ${masteredInBranch}/${branchNodes.length} ${t('tree.mastered', undefined, 'mastered')}
             </span>
             <div style="flex: 1; height: 4px; background: var(--border-hairline); border-radius: 2px; overflow: hidden;">
               <div class="branch-bar" data-pct="${pct}" style="width: ${pct}%; height: 100%; background: var(--accent-gold); border-radius: 2px; box-shadow: 0 0 6px var(--accent-gold-soft);"></div>
@@ -552,10 +570,10 @@ export class SkillTreeView {
     return `
       <div class="constellation-view-switcher" role="tablist" aria-label="Constellation Display Modes">
         <button class="view-switch-btn btn-view-skill-deck ${this.viewMode === 'deck' ? 'active' : ''}" data-view="deck" role="tab" aria-selected="${this.viewMode === 'deck'}" aria-label="Switch to Skill Grid View">
-          <span class="btn-icon">${icon('grid', 16)}</span> <span class="btn-text">Skill Grid</span>
+          <span class="btn-icon">${icon('grid', 16)}</span> <span class="btn-text">${t('tree.skill_grid', undefined, 'Skill Grid')}</span>
         </button>
         <button class="view-switch-btn btn-view-star-map ${this.viewMode === 'map' ? 'active' : ''}" data-view="map" role="tab" aria-selected="${this.viewMode === 'map'}" aria-label="Switch to Star Map View">
-          <span class="btn-icon">${icon('compass', 16)}</span> <span class="btn-text">Star Map</span>
+          <span class="btn-icon">${icon('compass', 16)}</span> <span class="btn-text">${t('tree.star_map', undefined, 'Star Map')}</span>
         </button>
       </div>
     `;
@@ -569,35 +587,37 @@ export class SkillTreeView {
         <div class="deck-carousel-track">
           ${branches.map(b => `
             <div class="deck-branch-card" data-branch="${b.id}" data-route="${b.routeTarget}" tabindex="0" role="region" aria-label="${b.name} Skill Card">
-              <div class="deck-card-header">
-                <div class="deck-header-top">
-                  <div class="deck-header-lead" style="display: flex; align-items: center; gap: 6px; min-width: 0;">
+              <button class="hud-btn btn-enter-dossier" data-route="${b.routeTarget}" aria-label="Enter ${b.name}">
+                ${icon('arrowRight', 16)}
+              </button>
+
+              <div class="deck-card-top">
+                <div class="deck-card-header">
+                  <div class="deck-header-lead" style="display: flex; align-items: center; gap: 7px; min-width: 0;">
                     <div class="deck-branch-icon-badge">${icon(b.iconName, 16)}</div>
                     <h2 class="deck-branch-name">${b.name}</h2>
                   </div>
-                  <span class="hud-status-badge deck-cefr-badge">${b.cefrLevel}</span>
                 </div>
-                <div class="deck-branch-tagline">${b.tagline}</div>
+                <div class="deck-branch-sub">
+                  <span class="hud-status-badge deck-cefr-badge">${b.cefrLevel}</span>
+                  <span class="deck-branch-tagline">${b.tagline}</span>
+                </div>
               </div>
 
               <div class="deck-mastery-block">
                 <div class="deck-mastery-labels">
-                  <span class="deck-mastery-pct-text">Mastery <strong>${b.masteryPct}%</strong></span>
-                  <span class="deck-perks-count-text">${b.unlockedPerks}/${b.totalPerks} Perks</span>
+                  <span class="deck-mastery-pct-text">${b.masteryPct}%</span>
+                  <span class="deck-perks-count-text">${b.unlockedPerks}/${b.totalPerks} ${t('tree.perks', undefined, 'Perks')}</span>
                 </div>
                 <div class="deck-progress-bar-track">
                   <div class="deck-progress-bar-fill" style="width: ${b.masteryPct}%;"></div>
                 </div>
               </div>
 
-              <button class="hud-btn btn-enter-dossier" data-route="${b.routeTarget}" aria-label="Enter ${b.name}">
-                <span>Vào ${b.name === 'Collocations / Grammar' ? 'Cụm từ' : (b.name === 'Reading' ? 'Đọc' : (b.name === 'Writing' ? 'Viết' : (b.name === 'Listening' ? 'Nghe' : 'Nói')))}</span> ${icon('arrowRight', 14)}
-              </button>
-
               <div class="deck-card-perks-section">
                 <details class="deck-perks-details">
                   <summary class="deck-section-title deck-perks-summary">
-                    <span>✦ ${b.perks.slice(0, 5).length} Perks & Drills</span>
+                    <span>${b.perks.slice(0, 5).length} ${t('tree.perks_and_drills', undefined, 'Perks & Drills')}</span>
                   </summary>
                 <div class="deck-perk-badges">
                   ${b.perks.slice(0, 5).map(p => `
@@ -696,6 +716,13 @@ export class SkillTreeView {
     });
 
     // Continue workout button
+    this.container.querySelector('.btn-blitz-espresso')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      if (this.onNavigate) {
+        this.onNavigate('blitz');
+      }
+    });
+
     this.container.querySelector('.btn-continue-workout')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
       if (this.onNavigate) {
@@ -768,63 +795,60 @@ export class SkillTreeView {
     modal.className = 'completion-modal-overlay interactive';
 
     const branch = SKILL_BRANCHES[node.branchId];
+    const branchMeta = NODE_BRANCH_META[node.branchId] || { name: branch ? branch.name : 'Skill', icon: 'target' };
 
     modal.innerHTML = `
-      <div class="completion-receipt-card skill-node-card" style="max-width: 440px; width: 100%; padding: 18px 18px 20px 18px; text-align: left; align-items: stretch; background: var(--bg-card, #131823); border: 1px solid var(--border-subtle); border-radius: 8px; box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6); box-sizing: border-box;">
-        <div class="skill-node-topbar" style="display: flex; flex-direction: column; gap: 6px; width: 100%; margin-bottom: 12px; box-sizing: border-box;">
-          <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-            <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">✦ ${branch.name.toUpperCase()} // LVL ${node.level}</span>
-          </div>
-          <div style="display: flex; justify-content: flex-end; width: 100%;">
-            <span class="hud-status-badge" style="background: rgba(165, 180, 252, 0.16); color: var(--accent-gold); font-family: var(--font-mono); font-size: var(--font-kicker); font-weight: 700; border: 1px solid rgba(165, 180, 252, 0.25); border-radius: 5px; padding: 2px 8px; white-space: nowrap;">CEFR ${node.cefrLevel}</span>
-          </div>
+      <div class="completion-receipt-card skill-node-card">
+        <div class="skill-node-topbar">
+          <span class="skill-branch-pill">${icon(branchMeta.icon as any, 14)} ${branchMeta.name} · ${t('nav.level', undefined, 'Level')} ${node.level}</span>
+          <span class="skill-cefr-pill">CEFR ${node.cefrLevel}</span>
         </div>
 
-        <h2 style="font-size: var(--font-h2); font-weight: 700; margin: 0 0 4px 0; font-family: var(--font-sans); color: var(--ink-primary); line-height: 1.25; text-align: left; width: 100%;">
+        <h2 class="skill-node-title">
           ${node.title}
         </h2>
-        <div style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--ink-muted); margin-bottom: 12px; text-align: left; width: 100%;">
+        <div class="skill-node-subtitle">
           ${node.subtitle}
         </div>
 
-        <p style="font-size: var(--font-body-compact); line-height: 1.55; color: var(--ink-secondary); margin: 0 0 16px 0; text-align: left; width: 100%;">
+        <p class="skill-node-desc">
           ${node.description}
         </p>
 
         <!-- Prerequisite / Gating Box -->
         ${status === 'locked' && prereqStatus ? `
-          <div style="background: var(--critical-soft); border: 1px solid rgba(239, 68, 68, 0.3); padding: 12px 14px; border-radius: 8px; margin-bottom: 16px;">
-            <div style="font-family: var(--font-mono); font-size: var(--font-kicker); font-weight: 700; color: var(--critical); margin-bottom: 4px;">
-              ${icon('lock', 12)} LOCKED — PREREQUISITE REQUIRED
+          <div style="background: var(--critical-soft); padding: 12px 14px; border-radius: var(--radius-squircle-sm, 10px); margin-bottom: 16px;">
+            <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--critical); margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+              ${icon('lock', 12)} ${t('tree.prereq_required', undefined, 'Prerequisite Required')}
             </div>
             <div style="font-size: var(--text-xs); color: var(--ink-primary); line-height: 1.5;">
-              Requires mastery in <strong>${prereqStatus.prereqName}</strong> (Current: ${prereqStatus.currentPct}% / Required: ${prereqStatus.requiredPct}%). Complete review drills in that skill first to unlock.
+              Requires mastery in <strong>${prereqStatus.prereqName}</strong> (${prereqStatus.currentPct}% / ${prereqStatus.requiredPct}% needed). Complete review drills in that skill first to unlock.
             </div>
           </div>
         ` : `
-          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.06); padding: 12px 14px; border-radius: 10px; margin-bottom: 16px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: var(--font-kicker); font-weight: 700; margin-bottom: 8px;">
-              <span style="color: var(--accent-gold); letter-spacing: 0.04em;">★ MASTERY RETENTION:</span>
-              <span style="color: var(--ink-primary);">${mastery}% / 80%</span>
+          <div class="skill-mastery-box">
+            <div class="skill-mastery-labels">
+              <span style="color: var(--ink-secondary); font-weight: 500;">${t('tree.mastery_retention', undefined, 'Mastery retention')}</span>
+              <span style="color: var(--ink-primary); font-weight: 700;">${mastery}% / 80%</span>
             </div>
-            <div style="width: 100%; height: 6px; background: rgba(255, 255, 255, 0.08); border-radius: 3px; overflow: hidden;">
-              <div style="width: ${mastery}%; height: 100%; background: var(--accent-gold); border-radius: 3px; box-shadow: 0 0 8px var(--accent-gold-soft);"></div>
+            <div class="skill-mastery-track">
+              <div class="skill-mastery-fill" style="width: ${mastery}%;"></div>
             </div>
           </div>
         `}
 
-        <div style="display: flex; gap: 8px; margin-top: 8px; width: 100%; box-sizing: border-box;">
+        <div class="skill-node-actions action-stack" style="display: flex; flex-direction: column; gap: 12px; width: 100%; margin-top: 18px;">
           ${status !== 'locked' ? `
-            <button type="button" class="btn-launch-drill" style="flex: 1.4; min-height: 42px; padding: 10px 12px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; background: var(--accent-gold); color: #080a0f; font-family: var(--font-sans); font-weight: 700; font-size: 13px; border: 1px solid transparent; cursor: pointer; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); white-space: nowrap; box-sizing: border-box;">
-              Practice Drill ${icon('arrowRight')}
+            <button type="button" class="skill-btn-primary btn-launch-drill">
+              ${t('tree.practice_drill', undefined, 'Practice Drill')} ${icon('arrowRight')}
             </button>
           ` : `
-            <button type="button" class="btn-train-prereq" style="flex: 1.4; min-height: 42px; padding: 10px 12px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; background: rgba(255, 255, 255, 0.06); color: var(--ink-primary); font-family: var(--font-sans); font-weight: 600; font-size: 13px; border: 1px solid rgba(255, 255, 255, 0.1); cursor: pointer; border-radius: 8px; white-space: nowrap; box-sizing: border-box;">
-              Train Prereq ${icon('arrowRight')}
+            <button type="button" class="skill-btn-primary btn-train-prereq">
+              ${t('tree.train_prereq', undefined, 'Train Prereq')} ${icon('arrowRight')}
             </button>
           `}
-          <button type="button" class="btn-close-modal" style="flex: 1; min-height: 42px; padding: 10px 12px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.06); color: var(--ink-primary); font-family: var(--font-sans); font-weight: 600; font-size: 13px; border: 1px solid rgba(255, 255, 255, 0.1); cursor: pointer; border-radius: 8px; white-space: nowrap; box-sizing: border-box;">
-            Close
+          <button type="button" class="apple-bottom-close-btn btn-modal-close" aria-label="${t('common.close', undefined, 'Close')}">
+            ${t('common.close', undefined, 'Close')}
           </button>
         </div>
       </div>
@@ -837,9 +861,13 @@ export class SkillTreeView {
       MotionEngine.springModal(modal, cardEl);
     }
 
-    modal.querySelector('.btn-close-modal')?.addEventListener('click', () => {
+    const closeModal = () => {
       AudioSynthesizer.play('click');
       modal.remove();
+    };
+
+    modal.querySelectorAll('.btn-modal-close, .skill-node-close-btn').forEach(btn => {
+      btn.addEventListener('click', closeModal);
     });
 
     modal.querySelector('.btn-launch-drill')?.addEventListener('click', () => {

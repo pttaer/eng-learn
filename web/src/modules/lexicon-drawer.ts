@@ -312,9 +312,12 @@ export class LexiconDrawer {
         </div>
       </div>
 
-      <div class="lexicon-drawer-footer">
+      <div class="lexicon-drawer-footer apple-modal-footer">
         <button type="button" class="hud-btn lexicon-srs-btn" id="lexicon-srs-btn" aria-label="Add word to SRS Spaced Repetition Deck">
           ${t('lexicon.bookmark_srs')}
+        </button>
+        <button type="button" class="apple-bottom-close-btn btn-lexicon-bottom-close" id="lexicon-bottom-close" aria-label="${t('common.close', undefined, 'Close')}">
+          ${t('common.close', undefined, 'Close')}
         </button>
         <div class="lexicon-srs-status" id="lexicon-srs-status" aria-live="polite"></div>
       </div>
@@ -361,6 +364,7 @@ export class LexiconDrawer {
   private bindEvents(): void {
     // Close button & backdrop click
     this.closeBtn.addEventListener('click', () => this.close());
+    this.container.querySelector('#lexicon-bottom-close')?.addEventListener('click', () => this.close());
     this.backdrop.addEventListener('click', () => this.close());
 
     // Escape hotkey listener
@@ -727,3 +731,6 @@ export class LexiconDrawer {
     this.floatingPill.remove();
   }
 }
+
+(window as any).LexiconDrawer = LexiconDrawer;
+

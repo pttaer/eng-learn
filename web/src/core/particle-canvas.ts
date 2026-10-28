@@ -54,6 +54,14 @@ export class ParticleCanvas {
         }
       });
     }
+
+    if (typeof document !== 'undefined') {
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          this.clear();
+        }
+      });
+    }
   }
 
   public static init(canvas?: HTMLCanvasElement | null): void {

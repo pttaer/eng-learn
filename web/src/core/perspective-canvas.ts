@@ -82,6 +82,7 @@ export class PerspectiveCanvas {
     this.initEntities();
     this.bindEvents();
     this.setupMotionObserver();
+    this.bindActivity();
     this.startLoop();
   }
 
@@ -326,6 +327,35 @@ export class PerspectiveCanvas {
   }
 
   private lastFrameTime: number = performance.now();
+  private lastActiveTime: number = typeof Date !== 'undefined' ? Date.now() : 0;
+  private activityBound: boolean = false;
+
+  private bindActivity(): void {
+    if (this.activityBound || typeof window === 'undefined') return;
+    this.activityBound = true;
+    const onActive = () => {
+      this.lastActiveTime = Date.now();
+      if (this.running && this.animFrameId === null && !this.isReducedMotion()) {
+        this.lastFrameTime = performance.now();
+        this.startLoop();
+      }
+    };
+    ['pointermove', 'touchstart', 'keydown', 'wheel'].forEach(evt => {
+      window.addEventListener(evt, onActive, { passive: true });
+    });
+    if (typeof document !== 'undefined') {
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          if (this.animFrameId !== null) {
+            cancelAnimationFrame(this.animFrameId);
+            this.animFrameId = null;
+          }
+        } else if (this.running && !this.isReducedMotion()) {
+          onActive();
+        }
+      });
+    }
+  }
 
   private startLoop(): void {
     if (!this.running) return;
@@ -348,6 +378,15 @@ export class PerspectiveCanvas {
         this.draw();
         return;
       }
+      if (typeof document !== 'undefined' && document.hidden) {
+        this.animFrameId = null;
+        return;
+      }
+      if (Date.now() - this.lastActiveTime > 20000) {
+        // Zero-CPU idle suspension on singularity core canvas after 20s inactivity
+        this.animFrameId = null;
+        return;
+      }
       const rawDt = (now - this.lastFrameTime) / 1000;
       this.lastFrameTime = now;
       const dt = Math.min(rawDt > 0 ? rawDt : 0.016, 0.033);
@@ -362,6 +401,8 @@ export class PerspectiveCanvas {
   public setVisible(visible: boolean): void {
     const container = document.getElementById('canvas-container');
     if (visible) {
+      this.lastActiveTime = Date.now();
+      this.bindActivity();
       if (container) {
         container.style.display = 'block';
         container.style.opacity = '1';
@@ -974,7 +1015,39 @@ export class NebulaCanvas {
     }
   }
 
+  private lastActiveTime: number = typeof Date !== 'undefined' ? Date.now() : 0;
+  private activityBound: boolean = false;
+
+  private bindActivity(): void {
+    if (this.activityBound || typeof window === 'undefined') return;
+    this.activityBound = true;
+    const onActive = () => {
+      this.lastActiveTime = Date.now();
+      if (this.running && this.animId === null && !this.isReducedMotion) {
+        this.lastTime = performance.now();
+        this.start();
+      }
+    };
+    ['pointermove', 'touchstart', 'keydown', 'wheel'].forEach(evt => {
+      window.addEventListener(evt, onActive, { passive: true });
+    });
+    if (typeof document !== 'undefined') {
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          if (this.animId !== null) {
+            cancelAnimationFrame(this.animId);
+            this.animId = null;
+          }
+        } else if (this.running && !this.isReducedMotion) {
+          onActive();
+        }
+      });
+    }
+  }
+
   public start(): void {
+    this.lastActiveTime = Date.now();
+    this.bindActivity();
     if (this.running && this.animId !== null) return;
     this.running = true;
     this.lastTime = performance.now();
@@ -995,6 +1068,15 @@ export class NebulaCanvas {
       if (this.isReducedMotion) {
         this.animId = null;
         this.draw(now, 0);
+        return;
+      }
+      if (typeof document !== 'undefined' && document.hidden) {
+        this.animId = null;
+        return;
+      }
+      if (Date.now() - this.lastActiveTime > 15000) {
+        // Zero-CPU idle suspension: pause nebula drift after 15s of user inactivity
+        this.animId = null;
         return;
       }
       const dt = Math.min((now - this.lastTime) / 1000, 0.05);

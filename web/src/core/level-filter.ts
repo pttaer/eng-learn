@@ -1,5 +1,6 @@
 import { Cefr, CEFR_ORDER, effectiveLevel } from './cefr';
 import { StorageManager } from '../utils/storage';
+import { t } from './i18n';
 
 interface Leveled { cefrLevel?: string }
 
@@ -28,5 +29,5 @@ export function bindLevelChips(root: HTMLElement, onPick: (level: Cefr) => void)
 
 /** Chip row markup shared by the pillar control bars. */
 export function levelRowHtml(items: Leveled[], active: Cefr): string {
-  return `<div class="vocab-level-selector"><span class="telemetry-label" style="margin-right: 8px;">LEVEL:</span>${levelChipsHtml(levelsWithContent(items), active)}</div>`;
+  return `<div class="vocab-level-selector"><span class="telemetry-label" style="margin-right: 8px;">${t('nav.level', undefined, 'LEVEL').toUpperCase()}:</span>${levelChipsHtml(levelsWithContent(items), active)}</div>`;
 }

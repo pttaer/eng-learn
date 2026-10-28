@@ -219,10 +219,10 @@ export class WritingDossier {
     switch (this.currentStep) {
       case 'analyze':
         return `
-          <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: var(--pad-card, 28px); border-radius: 8px; box-shadow: var(--shadow-card);">
+          <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 16px; border-radius: 12px; box-shadow: var(--shadow-card);">
             <div class="copywork-header-row">
               <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.step1_heading')}</span>
-              <button class="hud-btn btn-speak-model" style="padding: 6px 14px; font-size: var(--font-kicker);" title="Listen to Native Pronunciation">${icon('volume')} ${t('writing.play_model')}</button>
+              <button class="hud-btn btn-speak-model" style="padding: 6px 14px; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);" title="Listen to Native Pronunciation">${icon('volume')} ${t('writing.play_model')}</button>
             </div>
 
             <div class="model-sentence-display" style="font-size: var(--font-h2); line-height: 1.6; font-weight: 500; color: var(--ink-primary); max-width: 68ch; margin: 16px 0 20px 0; border-left: 3px solid var(--accent-gold); padding-left: 16px;">
@@ -230,7 +230,7 @@ export class WritingDossier {
             </div>
 
             <!-- MEAL Structural Decomposition -->
-            <div class="meal-blueprint-box" style="border: 1px solid var(--border-hairline); padding: 16px; background: var(--bg-surface-sunk); border-radius: 6px; margin-bottom: 20px;">
+            <div class="meal-blueprint-box" style="border: none; padding: 16px; background: var(--bg-surface-sunk); border-radius: var(--radius-squircle-sm, 10px); margin-bottom: 20px;">
               <div class="telemetry-label" style="margin-bottom: 10px;">${t('writing.meal_scaffolding')}</div>
               <div style="display: grid; grid-template-columns: 32px 1fr; gap: 8px 12px; font-size: var(--font-body-compact); line-height: 1.5;">
                 <strong style="font-family: var(--font-mono); color: var(--accent-gold);">M:</strong> <span>${item.meal.m}</span>
@@ -244,7 +244,7 @@ export class WritingDossier {
               <strong>${t('writing.rhetorical_commentary')}</strong> ${item.stylistic}
             </div>
 
-            <button class="hud-btn btn-proceed-type" style="width: 100%; justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 14px 0; font-size: var(--font-h4); font-weight: 700; border: none; cursor: pointer; border-radius: 6px; box-shadow: var(--shadow-glow);">
+            <button class="hud-btn btn-proceed-type" style="width: 100%; justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 14px 0; font-size: var(--font-h4); font-weight: 700; border: none; cursor: pointer; border-radius: var(--radius-btn, 10px); box-shadow: var(--shadow-glow);">
               ${t('writing.memorized_start')} ${icon('arrowRight')}
             </button>
           </div>
@@ -252,24 +252,24 @@ export class WritingDossier {
 
       case 'type':
         return `
-          <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: var(--pad-card, 28px); border-radius: 8px; box-shadow: var(--shadow-card);">
+          <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 16px; border-radius: 12px; box-shadow: var(--shadow-card);">
             <div class="copywork-header-row">
-              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">STEP 2 // RECONSTRUCT FROM MEMORY</span>
-              <button class="hud-btn btn-peek-model" style="padding: 6px 14px; font-size: var(--font-kicker);">${icon('eye')} Peek Model (2s)</button>
+              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.step2_title', undefined, 'STEP 2 // RECONSTRUCT FROM MEMORY')}</span>
+              <button class="hud-btn btn-peek-model" style="padding: 6px 14px; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);">${icon('eye')} ${t('writing.peek_model', undefined, 'Peek Model (2s)')}</button>
             </div>
 
-            <div id="peek-container" style="display: none; font-size: var(--font-body); line-height: 1.5; color: var(--ink-muted); padding: 12px; background: var(--bg-surface-sunk); border: 1px dashed var(--border-subtle); margin-bottom: 16px; border-radius: 6px;">
+            <div id="peek-container" style="display: none; font-size: var(--font-body); line-height: 1.5; color: var(--ink-muted); padding: 12px; background: var(--bg-surface-sunk); border: none; margin-bottom: 16px; border-radius: var(--radius-squircle-sm, 10px);">
               "${item.masterSentence}"
             </div>
 
             <div style="font-size: var(--font-h4); margin-bottom: 12px; color: var(--ink-secondary);">
-              Topic: <strong>${item.title}</strong> (${item.register})
+              ${t('writing.topic_label', undefined, 'Topic:')} <strong>${item.title}</strong> (${item.register})
             </div>
 
             <textarea
               class="copywork-input"
               rows="6"
-              placeholder="Reconstruct the complete master sentence from memory..."
+              placeholder="${t('writing.reconstruct_placeholder', undefined, 'Reconstruct the complete master sentence from memory...')}"
               style="width: 100%; font-family: var(--font-sans); font-size: var(--font-h3); line-height: 1.65; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 6px; box-sizing: border-box; resize: vertical; outline: none; background: var(--bg-canvas); color: var(--ink-primary);"
             >${this.typedContent}</textarea>
 
@@ -278,8 +278,8 @@ export class WritingDossier {
               <span id="elapsed-timer">TIME: 00:00</span>
             </div>
 
-            <button class="hud-btn btn-evaluate-type" style="width: 100%; justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 14px 0; font-size: var(--font-h4); font-weight: 700; border: none; cursor: pointer; border-radius: 6px; box-shadow: var(--shadow-glow);">
-              Evaluate Reconstruction ${icon('arrowRight')}
+            <button class="hud-btn btn-evaluate-type" style="width: 100%; justify-content: center; background: var(--accent-gold); color: var(--bg-canvas); padding: 14px 0; font-size: var(--font-h4); font-weight: 700; border: none; cursor: pointer; border-radius: var(--radius-btn, 10px); box-shadow: var(--shadow-glow);">
+              ${t('writing.evaluate_reconstruction', undefined, 'Evaluate Reconstruction')} ${icon('arrowRight')}
             </button>
           </div>
         `;
@@ -289,56 +289,56 @@ export class WritingDossier {
         const tokens = computeDiffTokens(item.masterSentence, this.typedContent);
 
         return `
-          <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: var(--pad-card, 28px); border-radius: 8px; box-shadow: var(--shadow-card);">
+          <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 16px; border-radius: 12px; box-shadow: var(--shadow-card);">
             <div class="copywork-header-row">
-              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">STEP 3 // MYERS-HIRSCHBERG SPLIT-DIFF</span>
-              <span class="telemetry-value" style="color: var(--accent-gold); font-size: var(--font-body); font-weight: 700;">ACCURACY: ${metrics.accuracyPct}%</span>
+              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.step3_title', undefined, 'STEP 3 // MYERS-HIRSCHBERG SPLIT-DIFF')}</span>
+              <span class="telemetry-value" style="color: var(--accent-gold); font-size: var(--font-body); font-weight: 700;">${t('writing.accuracy_label', undefined, 'ACCURACY:')} ${metrics.accuracyPct}%</span>
             </div>
 
             <!-- Fluency Metrics Bar -->
             <div class="copywork-metrics-grid">
               <div>
-                <div class="telemetry-label">ACCURACY</div>
-                <div class="val-accuracy" style="font-size: var(--font-body); font-weight: 700; color: var(--good);">${metrics.accuracyPct}%</div>
+                <div class="telemetry-label">${t('writing.accuracy', undefined, 'ACCURACY')}</div>
+                <div class="val-accuracy" style="font-size: var(--font-body); font-weight: 700; color: var(--ink-good);">${metrics.accuracyPct}%</div>
               </div>
               <div>
-                <div class="telemetry-label">NET WPM</div>
+                <div class="telemetry-label">${t('writing.net_wpm', undefined, 'NET WPM')}</div>
                 <div class="val-wpm" style="font-size: var(--font-body); font-weight: 700;">${metrics.netWpm}</div>
               </div>
               <div>
-                <div class="telemetry-label">ERRORS</div>
-                <div class="val-errors" style="font-size: var(--font-body); font-weight: 700; color: ${metrics.errorCount === 0 ? 'var(--good)' : 'var(--critical)'};">${metrics.errorCount}</div>
+                <div class="telemetry-label">${t('writing.errors', undefined, 'ERRORS')}</div>
+                <div class="val-errors" style="font-size: var(--font-body); font-weight: 700; color: ${metrics.errorCount === 0 ? 'var(--ink-good)' : 'var(--ink-critical)'};">${metrics.errorCount}</div>
               </div>
               <div>
-                <div class="telemetry-label">TIME</div>
+                <div class="telemetry-label">${t('writing.time', undefined, 'TIME')}</div>
                 <div class="val-time" style="font-size: var(--font-body); font-weight: 700;">${metrics.elapsedSec}s</div>
               </div>
             </div>
 
             <!-- Original Exemplar -->
             <div style="margin-bottom: 16px;">
-              <div class="telemetry-label" style="margin-bottom: 6px;">ORIGINAL EXEMPLAR</div>
-              <div style="font-size: var(--font-body); line-height: 1.6; padding: 14px; background: var(--bg-surface-sunk); border-left: 3px solid var(--accent-gold); border-radius: 4px; color: var(--ink-primary);">
+              <div class="telemetry-label" style="margin-bottom: 6px;">${t('writing.original_exemplar', undefined, 'ORIGINAL EXEMPLAR')}</div>
+              <div style="font-size: var(--font-body); line-height: 1.6; padding: 14px; background: var(--bg-surface-sunk); border-left: 3px solid var(--accent-gold); border-radius: var(--radius-squircle-sm, 10px); color: var(--ink-primary);">
                 "${item.masterSentence}"
               </div>
             </div>
 
             <!-- Side-by-Side Highlighted Diff -->
             <div style="margin-bottom: 24px;">
-              <div class="telemetry-label" style="margin-bottom: 6px;">YOUR RECONSTRUCTION & CORRECTIONS</div>
-              <div class="copywork-diff-container" role="region" aria-label="Myers split-diff evaluation" aria-live="polite" aria-atomic="true" style="font-size: var(--font-body); line-height: 1.8; padding: 14px; border: 1px solid var(--border-subtle); border-radius: 6px; background: var(--bg-canvas);">
+              <div class="telemetry-label" style="margin-bottom: 6px;">${t('writing.reconstruction_corrections', undefined, 'YOUR RECONSTRUCTION & CORRECTIONS')}</div>
+              <div class="copywork-diff-container" role="region" aria-label="Myers split-diff evaluation" aria-live="polite" aria-atomic="true" style="font-size: var(--font-body); line-height: 1.8; padding: 14px; border: none; border-radius: var(--radius-squircle-sm, 10px); background: var(--bg-canvas);">
                 ${this.renderDiffHTML(tokens)}
               </div>
             </div>
 
             <!-- Self-Assessment SRS Rating Bar -->
             <div style="border-top: 1px solid var(--border-hairline); padding-top: 16px;">
-              <div class="telemetry-label" style="text-align: center; margin-bottom: 12px;">LOG RETENTION RATING // UPDATE CONSTELLATION MASTERY</div>
+              <div class="telemetry-label" style="text-align: center; margin-bottom: 12px;">${t('writing.log_retention_rating', undefined, 'LOG RETENTION RATING // UPDATE CONSTELLATION MASTERY')}</div>
               <div class="copywork-srs-grid">
-                <button class="hud-btn btn-rate-srs" data-rating="0" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); border-radius: 6px;"><span style="color: var(--critical); font-weight: 700;">✗</span> Again (1)</button>
-                <button class="hud-btn btn-rate-srs" data-rating="2" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); border-radius: 6px;"><span style="color: var(--warning); font-weight: 700;">▲</span> Hard (2)</button>
-                <button class="hud-btn btn-rate-srs" data-rating="3" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); font-weight: 700; border-radius: 6px;"><span style="color: var(--good); font-weight: 700;">✓</span> Good (3)</button>
-                <button class="hud-btn btn-rate-srs" data-rating="5" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); color: var(--accent-gold); font-weight: 700; border-radius: 6px;">★ Easy (4)</button>
+                <button class="hud-btn btn-rate-srs" data-rating="0" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); border-radius: var(--radius-btn, 10px);"><span style="color: var(--critical); font-weight: 700;">✗</span> Again (1)</button>
+                <button class="hud-btn btn-rate-srs" data-rating="2" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); border-radius: var(--radius-btn, 10px);"><span style="color: var(--warning); font-weight: 700;">▲</span> Hard (2)</button>
+                <button class="hud-btn btn-rate-srs" data-rating="3" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); font-weight: 700; border-radius: var(--radius-btn, 10px);"><span style="color: var(--good); font-weight: 700;">✓</span> Good (3)</button>
+                <button class="hud-btn btn-rate-srs" data-rating="5" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); color: var(--accent-gold); font-weight: 700; border-radius: var(--radius-btn, 10px);">☆ Easy (4)</button>
               </div>
             </div>
           </div>
@@ -498,5 +498,7 @@ export class WritingDossier {
 
   public teardown(): void {
     this.clearTimer();
+    this.currentStep = 'analyze';
+    this.typedContent = '';
   }
 }

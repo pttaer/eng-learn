@@ -18,6 +18,7 @@ const T1 = w1Data as Task1Prompt[];
 const T2 = w2Data as Task2Prompt[];
 
 // Chart kind codes as learners read them; unknown codes fall back to the raw code
+const getChartKindLabel = (k: string): string => t('chart.' + k, undefined, CHART_KIND_LABEL[k] ?? k);
 const CHART_KIND_LABEL: Record<string, string> = {
   line: 'Line graph',
   bar: 'Bar chart',
@@ -26,6 +27,22 @@ const CHART_KIND_LABEL: Record<string, string> = {
   map: 'Map',
   process: 'Process diagram'
 };
+
+const ESSAY_TYPE_LABEL: Record<string, string> = {
+  opinion: 'Opinion (Agree / Disagree)',
+  discuss: 'Discussion + Opinion',
+  problem_solution: 'Problems & Solutions',
+  advantages_disadvantages: 'Advantages & Disadvantages',
+  twopart: 'Two-Part Question',
+  direct: 'Direct Question',
+};
+
+function truncatePrompt(str: string, maxLen = 95): string {
+  if (str.length <= maxLen) return str;
+  const sub = str.slice(0, maxLen);
+  const lastSpace = sub.lastIndexOf(' ');
+  return (lastSpace > 45 ? sub.slice(0, lastSpace) : sub) + '…';
+}
 
 const MODEL_4_SENTENCE_PARAGRAPH =
   'One primary reason for expanding public transit infrastructure is that it dramatically reduces urban traffic gridlock across metropolitan centers. Because high-capacity electric bus and rail networks transport thousands of commuters simultaneously, substantially fewer private automobiles crowd central arterial roadways during peak hours. For instance, cities like Tokyo and Singapore observed sharp reductions in daily commute delays following major rail investments. Consequently, urban air quality improves noticeably and economic productivity rises as workers spend far less time idling in congestion.';
@@ -51,67 +68,63 @@ export function renderFormulaInspector(targetArea?: HTMLTextAreaElement): HTMLEl
   inspector.innerHTML = `
     <div class="ie-inspector-head">
       <div>
-        <h3>📐 Task 1 Visual Formula Inspector</h3>
-        <p class="ie-note">Keino Campbell's 4-part visual report architecture. Strict 2-Sentence Overview rule with ZERO numbers.</p>
+        <h3>📐 ${t('wstudio.principles_summary')}</h3>
+        <p class="ie-note">${t('wstudio.principles_desc')}</p>
       </div>
-      <button type="button" class="ie-btn ie-btn-sm ie-inspector-close" aria-label="Close formula inspector">✕ Close</button>
+      <button type="button" class="ie-btn ie-btn-sm ie-inspector-close" aria-label="${t('common.close')}">✕ ${t('common.close')}</button>
     </div>
 
     <div class="ie-formula-components">
       <div class="ie-formula-card">
         <div class="ie-fcard-head">
           <span class="ie-fnum">1</span>
-          <b>Paraphrased Introduction</b>
+          <b>${t('wstudio.step1_title', undefined, 'Paraphrased Introduction')}</b>
         </div>
-        <p class="ie-fdesc">Paraphrase the prompt statement in exactly one sentence. Define metric, units, and timeframe.</p>
+        <p class="ie-fdesc">${t('wstudio.step1_note', undefined, 'Paraphrase the prompt statement in exactly one sentence. Define metric, units, and timeframe.')}</p>
         <code class="ie-fcode">[Metric/Subject] + [illustrates/depicts/compares] + [Categories/Units] + [between X and Y / over a N-year timeframe]</code>
-        ${
-          targetArea
-            ? `<button type="button" class="ie-btn ie-btn-xs ie-insert-btn" data-template="The graph illustrates [metric] across [categories] between [start] and [end], measured in [units].">Insert Template</button>`
-            : ''
-        }
+        ${targetArea
+      ? `<button type="button" class="ie-btn ie-btn-xs ie-insert-btn" data-template="The graph illustrates [metric] across [categories] between [start] and [end], measured in [units].">${t('writing.btn_insert_template')}</button>`
+      : ''
+    }
       </div>
 
       <div class="ie-formula-card">
         <div class="ie-fcard-head">
           <span class="ie-fnum">2</span>
-          <b>2-Sentence Overview (Zero Data Rule)</b>
+          <b>${t('wstudio.step2_title', undefined, '2-Sentence Overview (Zero Data Rule)')}</b>
         </div>
-        <p class="ie-fdesc">Two distinct sentences identifying primary trend and notable contrast. Never include specific numbers.</p>
+        <p class="ie-fdesc">${t('wstudio.step2_note', undefined, 'Two distinct sentences identifying primary trend and notable contrast. Never include specific numbers.')}</p>
         <code class="ie-fcode">Overall, [highest category/dominant trend]. In stark contrast, [lowest category/anomalous trajectory].</code>
-        ${
-          targetArea
-            ? `<button type="button" class="ie-btn ie-btn-xs ie-insert-btn" data-template="Overall, it is evident that [dominant feature] experienced the most pronounced growth over the surveyed period. In contrast, [secondary category] remained comparatively subdued throughout.">Insert Template</button>`
-            : ''
-        }
+        ${targetArea
+      ? `<button type="button" class="ie-btn ie-btn-xs ie-insert-btn" data-template="Overall, it is evident that [dominant feature] experienced the most pronounced growth over the surveyed period. In contrast, [secondary category] remained comparatively subdued throughout.">${t('writing.btn_insert_template')}</button>`
+      : ''
+    }
       </div>
 
       <div class="ie-formula-card">
         <div class="ie-fcard-head">
           <span class="ie-fnum">3</span>
-          <b>Body Paragraph 1 (Primary Data Group)</b>
+          <b>${t('wstudio.step3_title', undefined, 'Body Paragraph 1 (Primary Data Group)')}</b>
         </div>
-        <p class="ie-fdesc">Group 2-3 dominant trajectories. Detail starting figure, rate of change, and peak values.</p>
+        <p class="ie-fdesc">${t('wstudio.step3_note', undefined, 'Group 2-3 dominant trajectories. Detail starting figure, rate of change, and peak values.')}</p>
         <code class="ie-fcode">Regarding [Group 1], figures commenced at [X] in [Year] before surging substantially to reach [Y]...</code>
-        ${
-          targetArea
-            ? `<button type="button" class="ie-btn ie-btn-xs ie-insert-btn" data-template="Regarding the dominant categories, figures commenced at [X] in [start year] before escalating steadily to reach a peak of [Y] in [peak year].">Insert Template</button>`
-            : ''
-        }
+        ${targetArea
+      ? `<button type="button" class="ie-btn ie-btn-xs ie-insert-btn" data-template="Regarding the dominant categories, figures commenced at [X] in [start year] before escalating steadily to reach a peak of [Y] in [peak year].">${t('writing.btn_insert_template')}</button>`
+      : ''
+    }
       </div>
 
       <div class="ie-formula-card">
         <div class="ie-fcard-head">
           <span class="ie-fnum">4</span>
-          <b>Body Paragraph 2 (Secondary Contrasts)</b>
+          <b>${t('wstudio.step4_title', undefined, 'Body Paragraph 2 (Secondary Contrasts)')}</b>
         </div>
-        <p class="ie-fdesc">Address remaining categories, fluctuations, or static trends with comparative linkers.</p>
+        <p class="ie-fdesc">${t('wstudio.step4_note', undefined, 'Address remaining categories, fluctuations, or static trends with comparative linkers.')}</p>
         <code class="ie-fcode">By contrast, [Group 2] hovered around [X] throughout the timeframe, despite minor fluctuations...</code>
-        ${
-          targetArea
-            ? `<button type="button" class="ie-btn ie-btn-xs ie-insert-btn" data-template="By contrast, figures for [secondary group] exhibited a markedly different trajectory, plummeting from [X] to [Y] by the close of the period.">Insert Template</button>`
-            : ''
-        }
+        ${targetArea
+      ? `<button type="button" class="ie-btn ie-btn-xs ie-insert-btn" data-template="By contrast, figures for [secondary group] exhibited a markedly different trajectory, plummeting from [X] to [Y] by the close of the period.">${t('writing.btn_insert_template')}</button>`
+      : ''
+    }
       </div>
     </div>
 
@@ -122,8 +135,8 @@ export function renderFormulaInspector(targetArea?: HTMLTextAreaElement): HTMLEl
         <span class="ie-vocab-label">Trend Verbs:</span>
         <div class="ie-chips">
           ${['surged', 'plummeted', 'escalated steadily', 'declined gradually', 'plateaued', 'leveled off', 'peaked at', 'hovered around', 'fluctuated wildly']
-            .map(w => `<button type="button" class="ie-chip" data-word="${w}">${w}</button>`)
-            .join('')}
+      .map(w => `<button type="button" class="ie-chip" data-word="${w}">${w}</button>`)
+      .join('')}
         </div>
       </div>
 
@@ -131,8 +144,8 @@ export function renderFormulaInspector(targetArea?: HTMLTextAreaElement): HTMLEl
         <span class="ie-vocab-label">Degree &amp; Speed:</span>
         <div class="ie-chips">
           ${['dramatically', 'substantially', 'marginally', 'exponentially', 'negligibly', 'moderately', 'progressively']
-            .map(w => `<button type="button" class="ie-chip" data-word="${w}">${w}</button>`)
-            .join('')}
+      .map(w => `<button type="button" class="ie-chip" data-word="${w}">${w}</button>`)
+      .join('')}
         </div>
       </div>
 
@@ -140,8 +153,8 @@ export function renderFormulaInspector(targetArea?: HTMLTextAreaElement): HTMLEl
         <span class="ie-vocab-label">Prepositions of Change:</span>
         <div class="ie-chips">
           ${['increased by 15%', 'rose to 85%', 'commenced at', 'stood at', 'dropped to a trough of']
-            .map(w => `<button type="button" class="ie-chip" data-word="${w}">${w}</button>`)
-            .join('')}
+      .map(w => `<button type="button" class="ie-chip" data-word="${w}">${w}</button>`)
+      .join('')}
         </div>
       </div>
 
@@ -149,8 +162,8 @@ export function renderFormulaInspector(targetArea?: HTMLTextAreaElement): HTMLEl
         <span class="ie-vocab-label">Quantifiers &amp; Proportions:</span>
         <div class="ie-chips">
           ${['the vast majority', 'a negligible fraction', 'approximately one third', 'roughly two-fifths', 'accounted for', 'doubled']
-            .map(w => `<button type="button" class="ie-chip" data-word="${w}">${w}</button>`)
-            .join('')}
+      .map(w => `<button type="button" class="ie-chip" data-word="${w}">${w}</button>`)
+      .join('')}
         </div>
       </div>
     </div>
@@ -195,41 +208,40 @@ export function renderParagraphWorkbench(targetArea?: HTMLTextAreaElement): HTML
   workbench.innerHTML = `
     <div class="ie-workbench-head">
       <div>
-        <h3>🧱 Task 2: 4-Sentence Paragraph Workbench</h3>
-        <p class="ie-note">Keino Campbell's strict 4-sentence body paragraph formula. Live semantic &amp; structural validation.</p>
+        <h3>🧱 ${t('writing.wb_head_title')}</h3>
+        <p class="ie-note">${t('writing.wb_head_note')}</p>
       </div>
-      <button type="button" class="ie-btn ie-btn-sm ie-workbench-close" aria-label="Close paragraph workbench">✕ Close</button>
+      <button type="button" class="ie-btn ie-btn-sm ie-workbench-close" aria-label="${t('common.close')}">✕ ${t('common.close')}</button>
     </div>
 
     <div class="ie-workbench-rules">
-      <div class="ie-rule-pill"><span class="ie-pill-n">1</span> <b>Topic Sentence</b>: Direct, assertive argument claim</div>
-      <div class="ie-rule-pill"><span class="ie-pill-n">2</span> <b>Explanation</b>: Causal mechanism (because, this means that, leads to)</div>
-      <div class="ie-rule-pill"><span class="ie-pill-n">3</span> <b>Concrete Evidence</b>: Real exemplar (for instance, specifically)</div>
-      <div class="ie-rule-pill"><span class="ie-pill-n">4</span> <b>Concluding Impact</b>: Link back to thesis (consequently, thus, therefore)</div>
+      <div class="ie-rule-pill"><span class="ie-pill-n">1</span> <b>${t('writing.rule_topic')}</b></div>
+      <div class="ie-rule-pill"><span class="ie-pill-n">2</span> <b>${t('writing.rule_explanation')}</b></div>
+      <div class="ie-rule-pill"><span class="ie-pill-n">3</span> <b>${t('writing.rule_evidence')}</b></div>
+      <div class="ie-rule-pill"><span class="ie-pill-n">4</span> <b>${t('writing.rule_impact')}</b></div>
     </div>
 
     <div class="ie-workbench-editor-box">
-      <label for="workbench-paragraph-input" class="ie-wb-label"><b>Test Paragraph Sandbox:</b></label>
-      <textarea id="workbench-paragraph-input" class="ie-textarea ie-workbench-input" placeholder="Draft or paste a body paragraph here to test the 4-sentence formula in real-time..."></textarea>
+      <label for="workbench-paragraph-input" class="ie-wb-label"><b>${t('writing.sandbox_label')}</b></label>
+      <textarea id="workbench-paragraph-input" class="ie-textarea ie-workbench-input" placeholder="${t('writing.sandbox_ph')}"></textarea>
       
       <div class="ie-workbench-actions">
-        <button type="button" class="ie-btn ie-btn-sm" id="workbench-load-model">Load Band 8+ Model Paragraph</button>
-        ${
-          targetArea
-            ? `<button type="button" class="ie-btn ie-btn-sm ie-btn-primary" id="workbench-insert-essay">Insert into Essay</button>`
-            : ''
-        }
-        <button type="button" class="ie-btn ie-btn-sm" id="workbench-clear">Clear</button>
+        <button type="button" class="ie-btn ie-btn-sm" id="workbench-load-model">${t('writing.btn_load_model_p')}</button>
+        ${targetArea
+      ? `<button type="button" class="ie-btn ie-btn-sm ie-btn-primary" id="workbench-insert-essay">${t('writing.btn_insert_essay')}</button>`
+      : ''
+    }
+        <button type="button" class="ie-btn ie-btn-sm" id="workbench-clear">${t('writing.btn_clear')}</button>
       </div>
     </div>
 
     <div id="workbench-results" class="ie-workbench-eval">
       <div class="ie-eval-top">
         <div class="ie-eval-badges">
-          <span class="ie-eval-badge ie-badge-topic" data-valid="false">Sentence 1: Topic Claim</span>
-          <span class="ie-eval-badge ie-badge-explanation" data-valid="false">Sentence 2: Causal Logic</span>
-          <span class="ie-eval-badge ie-badge-evidence" data-valid="false">Sentence 3: Concrete Evidence</span>
-          <span class="ie-eval-badge ie-badge-impact" data-valid="false">Sentence 4: Impact Link</span>
+          <span class="ie-eval-badge ie-badge-topic" data-valid="false">${t('writing.topic_claim_label')}</span>
+          <span class="ie-eval-badge ie-badge-explanation" data-valid="false">${t('writing.causal_logic_label')}</span>
+          <span class="ie-eval-badge ie-badge-evidence" data-valid="false">${t('writing.evidence_label')}</span>
+          <span class="ie-eval-badge ie-badge-impact" data-valid="false">${t('writing.impact_label')}</span>
           <span class="ie-eval-badge ie-badge-band" data-band="6.0">Band 6.0</span>
         </div>
         <div class="ie-eval-metrics">
@@ -239,9 +251,9 @@ export function renderParagraphWorkbench(targetArea?: HTMLTextAreaElement): HTML
       </div>
 
       <div class="ie-eval-feedback-box">
-        <h4>Diagnostic Feedback:</h4>
+        <h4>${t('writing.diag_feedback_title')}</h4>
         <ul class="ie-workbench-feedback">
-          <li>Enter text above to trigger live 4-sentence validation.</li>
+          <li>${t('writing.diag_feedback_ph')}</li>
         </ul>
       </div>
     </div>
@@ -262,27 +274,27 @@ export function renderParagraphWorkbench(targetArea?: HTMLTextAreaElement): HTML
     const report: ParagraphEvaluation = validateFourSentenceParagraph(text);
 
     badgeTopic.setAttribute('data-valid', String(report.hasTopicSentence));
-    badgeTopic.textContent = report.hasTopicSentence ? '✓ Topic Claim' : '✗ Missing Topic';
+    badgeTopic.textContent = report.hasTopicSentence ? t('writing.topic_valid') : t('writing.topic_invalid');
     badgeTopic.className = `ie-eval-badge ie-badge-topic ${report.hasTopicSentence ? 'is-valid' : 'is-invalid'}`;
 
     badgeExplanation.setAttribute('data-valid', String(report.hasExplanation));
-    badgeExplanation.textContent = report.hasExplanation ? '✓ Causal Logic' : '✗ Missing Explanation';
+    badgeExplanation.textContent = report.hasExplanation ? t('writing.expl_valid') : t('writing.expl_invalid');
     badgeExplanation.className = `ie-eval-badge ie-badge-explanation ${report.hasExplanation ? 'is-valid' : 'is-invalid'}`;
 
     badgeEvidence.setAttribute('data-valid', String(report.hasEvidence));
-    badgeEvidence.textContent = report.hasEvidence ? '✓ Concrete Evidence' : '✗ Missing Evidence';
+    badgeEvidence.textContent = report.hasEvidence ? t('writing.evid_valid') : t('writing.evid_invalid');
     badgeEvidence.className = `ie-eval-badge ie-badge-evidence ${report.hasEvidence ? 'is-valid' : 'is-invalid'}`;
 
     badgeImpact.setAttribute('data-valid', String(report.hasImpactSentence));
-    badgeImpact.textContent = report.hasImpactSentence ? '✓ Impact Link' : '✗ Missing Impact';
+    badgeImpact.textContent = report.hasImpactSentence ? t('writing.imp_valid') : t('writing.imp_invalid');
     badgeImpact.className = `ie-eval-badge ie-badge-impact ${report.hasImpactSentence ? 'is-valid' : 'is-invalid'}`;
 
     badgeBand.setAttribute('data-band', report.scoreEstimate);
     badgeBand.textContent = report.scoreEstimate;
     badgeBand.className = `ie-eval-badge ie-badge-band band-${report.scoreEstimate.replace(/[^0-9]/g, '')}`;
 
-    metricSent.textContent = `${report.sentenceCount} / 4 sentences`;
-    metricWords.textContent = `${report.wordCount} words`;
+    metricSent.textContent = t('writing.sentences_count', { count: report.sentenceCount });
+    metricWords.textContent = t('writing.words_count', { count: report.wordCount });
 
     feedbackList.innerHTML = report.feedback.map(f => `<li>${esc(f)}</li>`).join('');
   }
@@ -347,11 +359,11 @@ function mountEditor(
   // Interactive workbench / inspector toggle button
   let toggleBtn: HTMLElement;
   if (task === 1) {
-    toggleBtn = h('button', 'ie-btn ie-formula-toggle', '📐 Visual Formula Inspector');
+    toggleBtn = h('button', 'ie-btn ie-formula-toggle', `📐 ${t('writing.formula_inspector_title', undefined, 'Visual Formula Inspector')}`);
     toggleBtn.id = 'toggle-formula-inspector';
     toggleBtn.setAttribute('aria-expanded', 'false');
   } else {
-    toggleBtn = h('button', 'ie-btn ie-workbench-toggle', '🧱 4-Sentence Paragraph Workbench');
+    toggleBtn = h('button', 'ie-btn ie-workbench-toggle', `🧱 ${t('writing.workbench_title', undefined, '4-Sentence Paragraph Workbench')}`);
     toggleBtn.id = 'toggle-paragraph-workbench';
     toggleBtn.setAttribute('aria-expanded', 'false');
   }
@@ -363,13 +375,13 @@ function mountEditor(
     'article',
     'ie-passage',
     `<h2>Writing Task ${task}</h2><p>${esc(p.prompt)}</p>` +
-      (task === 1 ? renderChart((p as Task1Prompt).chart) : '') +
-      `<p class="ie-note">Write at least ${min} words. Suggested time: ${minutes} minutes.</p>`
+    (task === 1 ? renderChart((p as Task1Prompt).chart) : '') +
+    `<p class="ie-note">${t('writing.min_words_suggested', { min, minTime: minutes }, `Write at least ${min} words. Suggested time: ${minutes} minutes.`)}</p>`
   );
 
   const area = h('textarea', 'ie-textarea') as HTMLTextAreaElement;
   area.setAttribute('aria-label', `Your Task ${task} answer`);
-  area.placeholder = 'Type your answer here. Leave a blank line between paragraphs.';
+  area.placeholder = t('writing.editor_ph', undefined, 'Type your answer here. Leave a blank line between paragraphs.');
 
   const editor = h('div', 'ie-qcol');
   editor.append(area);
@@ -432,7 +444,7 @@ function mountEditor(
     const crit = task === 1 ? RUBRIC.task1 : RUBRIC.task2;
     const flags = r.flags.length
       ? r.flags.map(f => `<li>${esc(f)}</li>`).join('')
-      : '<li>No automatic flags. Check accuracy and development yourself.</li>';
+      : `<li>${t('writing.no_flags', undefined, 'No automatic flags. Check accuracy and development yourself.')}</li>`;
     const rate = crit
       .map(
         (c, i) =>
@@ -452,27 +464,25 @@ function mountEditor(
 
     out.hidden = false;
     out.innerHTML = `<div class="ie-feedback-col">
-      <h3>Automatic checks</h3>
+      <h3>${t('writing.automatic_checks', undefined, 'Automatic checks')}</h3>
       <ul class="ie-stats"><li><b>${r.words}</b> words</li><li><b>${r.paragraphs}</b> paragraphs</li><li><b>${r.sentences}</b> sentences</li><li><b>${r.linkers.length}</b> linkers</li><li><b>${r.complexSentences}</b> complex</li><li><b>${r.lexicalDiversity}</b> diversity</li></ul>
       <ul class="ie-flags">${flags}</ul>
-      <p class="ie-note">These checks count features. They cannot judge accuracy, relevance or ideas.</p>
+      <p class="ie-note">${t('writing.checks_note', undefined, 'These checks count features. They cannot judge accuracy, relevance or ideas.')}</p>
     </div>
     <div class="ie-feedback-col">
-      <h3>Rate yourself against the model</h3>
-      <p class="ie-note">Read the model and notes, then rate each criterion honestly. 7 = ${esc(
-        DESCRIPTORS[7]
-      )}</p>
+      <h3>${t('writing.rate_against_model', undefined, 'Rate yourself against the model')}</h3>
+      <p class="ie-note">${t('writing.rate_note', { desc: esc(DESCRIPTORS[7]) }, `Read the model and notes, then rate each criterion honestly. 7 = ${esc(DESCRIPTORS[7])}`)}</p>
       ${rate}
       <div class="ie-estimate"></div>
       <button class="ie-btn ie-btn-primary ie-save">${t('ielts.save_estimate', undefined, 'Save estimate')}</button>
     </div>
-    <div class="ie-feedback-wide"><h3>Band 7+ model answer</h3><div class="ie-model">${p.model
-      .split(/\n\s*\n/)
-      .map(x => `<p>${x
-        .split(/(?<=[.!?])\s+/)
-        .map((s, i) => `<span class="ie-sent" data-sent="${i}">${esc(s)}</span>`)
-        .join(' ')}</p>`)
-      .join('')}</div><h3>What makes it band 7</h3><p>${esc(p.notes)}</p></div>`;
+    <div class="ie-feedback-wide"><h3>${t('writing.model_answer_band7', undefined, 'Band 7+ model answer')}</h3><div class="ie-model">${p.model
+        .split(/\n\s*\n/)
+        .map(x => `<p>${x
+          .split(/(?<=[.!?])\s+/)
+          .map((s, i) => `<span class="ie-sent" data-sent="${i}">${esc(s)}</span>`)
+          .join(' ')}</p>`)
+        .join('')}</div><h3>${t('writing.what_makes_it_7', undefined, 'What makes it band 7')}</h3><p>${esc(p.notes)}</p></div>`;
     const modelEl = out.querySelector('.ie-model') as HTMLElement | null;
     if (task === 1 && modelEl && (p as Task1Prompt).chart) linkModelToChart(modelEl, (p as Task1Prompt).chart);
 
@@ -498,7 +508,7 @@ function mountEditor(
 }
 
 export function writingView(root: HTMLElement): () => void {
-  let stop = () => {};
+  let stop = () => { };
 
   const render = (): void => {
     stop();
@@ -509,7 +519,7 @@ export function writingView(root: HTMLElement): () => void {
       h(
         'p',
         'ie-lead',
-        'Task 1: describe the visual in 150+ words (20 min). Task 2: write a 250+ word essay (40 min). Explore the interactive Visual Formula Inspector and 4-Sentence Paragraph Workbench below or inside any prompt.'
+        t('writing.view_lead', undefined, 'Task 1: describe the visual in 150+ words (20 min). Task 2: write a 250+ word essay (40 min). Explore the interactive Visual Formula Inspector and 4-Sentence Paragraph Workbench below or inside any prompt.')
       )
     );
 
@@ -518,7 +528,7 @@ export function writingView(root: HTMLElement): () => void {
     const toggleFormulaBtn = h(
       'button',
       'ie-btn ie-formula-toggle',
-      'Task 1 Visual Formula Inspector'
+      t('writing.formula_inspector_title', undefined, 'Task 1 Visual Formula Inspector')
     );
     toggleFormulaBtn.id = 'toggle-formula-inspector';
     toggleFormulaBtn.setAttribute('aria-expanded', 'false');
@@ -526,7 +536,7 @@ export function writingView(root: HTMLElement): () => void {
     const toggleWbBtn = h(
       'button',
       'ie-btn ie-workbench-toggle',
-      'Task 2 4-Sentence Paragraph Workbench'
+      t('writing.workbench_title', undefined, 'Task 2 4-Sentence Paragraph Workbench')
     );
     toggleWbBtn.id = 'toggle-paragraph-workbench';
     toggleWbBtn.setAttribute('aria-expanded', 'false');
@@ -565,12 +575,14 @@ export function writingView(root: HTMLElement): () => void {
       root.append(h('h2', 'ie-sub', `Task ${task}`));
       const cards = h('div', 'ie-cards');
       list.forEach(p => {
-        const label = task === 1 ? (p as Task1Prompt).chart.title : (p as Task2Prompt).essayType;
+        const label = task === 1
+          ? (p as Task1Prompt).chart.title
+          : (ESSAY_TYPE_LABEL[(p as Task2Prompt).essayType] ?? (p as Task2Prompt).essayType);
+        const promptDisplay = task === 1 ? label : truncatePrompt(p.prompt);
         const c = h(
           'button',
           `ie-card ie-prompt-card ie-task${task}-card`,
-          `<b>${esc(task === 1 ? label : p.prompt.slice(0, 90) + (p.prompt.length > 90 ? '…' : ''))}</b><span>${
-            task === 1 ? esc(CHART_KIND_LABEL[(p as Task1Prompt).chart.kind] ?? (p as Task1Prompt).chart.kind) : esc(label)
+          `<b>${esc(promptDisplay)}</b><span>${task === 1 ? esc(getChartKindLabel((p as Task1Prompt).chart.kind) ?? (p as Task1Prompt).chart.kind) : esc(label)
           }</span>`
         );
         c.setAttribute('data-task', String(task));
@@ -580,7 +592,7 @@ export function writingView(root: HTMLElement): () => void {
         });
         cards.append(c);
       });
-      if (!list.length) cards.append(h('p', 'ie-note', 'No prompts loaded yet.'));
+      if (!list.length) cards.append(h('p', 'ie-note', t('writing.no_prompts', undefined, 'No prompts loaded yet.')));
       root.append(cards);
     }
   };

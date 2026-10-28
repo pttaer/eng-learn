@@ -189,7 +189,8 @@ with zipfile.ZipFile(apk, 'r') as zin, zipfile.ZipFile(temp_apk, 'w') as zout:
 os.replace(temp_apk, apk)
 print('assembled APK with deflate level 9 and stored classes.dex')
 `;
-const pyRun = spawnSync('python', ['-', linked, dexFile], { input: py, encoding: 'utf8' });
+const PYTHON = fs.existsSync('D:\\Python\\python.exe') ? 'D:\\Python\\python.exe' : (spawnSync('py', ['--version']).status === 0 ? 'py' : 'python');
+const pyRun = spawnSync(PYTHON, ['-', linked, dexFile], { input: py, encoding: 'utf8' });
 if (pyRun.status !== 0) throw new Error('python assembly failed: ' + (pyRun.stderr || pyRun.stdout));
 
 // 9. Align, then sign with the existing debug key (zipalign must run before signing)

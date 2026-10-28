@@ -217,8 +217,8 @@ export function mountReadingTest(
 
       const rect = mark.getBoundingClientRect();
       pill.innerHTML = `
-        <button type="button" class="ie-pill-btn ie-pill-remove-mark" title="Remove highlight">🗑️ Remove highlight</button>
-        <button type="button" class="ie-pill-btn ie-pill-cancel" title="Cancel">✕</button>
+        <button type="button" class="ie-pill-btn ie-pill-remove-mark" title="${t('reading.btn_remove_highlight', undefined, 'Remove highlight')}">${t('reading.btn_remove_highlight', undefined, '🗑️ Remove highlight')}</button>
+        <button type="button" class="ie-pill-btn ie-pill-cancel" title="${t('common.cancel', undefined, 'Cancel')}">✕</button>
       `;
       pill.hidden = false;
       pill.style.position = 'fixed';
@@ -243,7 +243,7 @@ export function mountReadingTest(
     const form = renderQuestions(p.questions, n, (answered, total) => {
       answeredCounts[i] = answered;
       if (i === currentPassageIndex) {
-        dockQuestionsBtn.textContent = `✍️ Questions (${answered}/${total})`;
+        dockQuestionsBtn.textContent = `✍️ ${t('ielts.questions_label', undefined, 'Questions')} (${answered}/${total})`;
       }
     });
     n += p.questions.length;
@@ -277,7 +277,7 @@ export function mountReadingTest(
       const card = pane.querySelector<HTMLElement>(`[data-qid="${qid}"]`);
       const qNum = card?.querySelector('.ie-q-n')?.textContent ||
         String(passages.slice(0, i).reduce((sum, prevP) => sum + prevP.questions.length, 0) + p.questions.findIndex(x => x.id === qid) + 1);
-      chip.innerHTML = `<button type="button" class="ie-btn-return">↩ Back to Question #${qNum}</button>`;
+      chip.innerHTML = `<button type="button" class="ie-btn-return">${t('reading.btn_back_to_q', { qNum }, `↩ Back to Question #${qNum}`)}</button>`;
       chip.querySelector('.ie-btn-return')!.addEventListener('click', () => {
         switchMobilePane('questions', true);
         chip?.remove();
@@ -359,8 +359,8 @@ export function mountReadingTest(
   // Floating highlight pill logic
   const renderSelectionPillButtons = () => {
     pill.innerHTML = `
-      <button type="button" class="ie-pill-btn ie-pill-mark" title="Highlight text">🖍️ Highlight</button>
-      <button type="button" class="ie-pill-btn ie-pill-clear" title="Clear selection">✕ Clear</button>
+      <button type="button" class="ie-pill-btn ie-pill-mark" title="${t('reading.btn_highlight', undefined, 'Highlight text')}">${t('reading.btn_highlight', undefined, '🖍️ Highlight')}</button>
+      <button type="button" class="ie-pill-btn ie-pill-clear" title="${t('reading.btn_clear', undefined, 'Clear selection')}">${t('reading.btn_clear', undefined, '✕ Clear')}</button>
     `;
     pill.querySelector('.ie-pill-mark')?.addEventListener('click', onMarkClick);
     pill.querySelector('.ie-pill-clear')?.addEventListener('click', onClearClick);
@@ -470,7 +470,9 @@ export function mountReadingTest(
     const band = rawToBand('reading', total.raw, total.of);
     addAttempt({ skill: 'reading', itemId: passages.map(p => p.id).join('+'), band, raw: total.raw, of: total.of, byType: total.byType, mock });
     result.hidden = false;
-    result.innerHTML = `${bandBadge(band, 'Reading')}<div><h3>${total.raw}/${total.of} correct</h3><p class="ie-note">Band is scaled to 40 questions. ${total.of < 40 ? 'Short sets give a rough guide only.' : ''}</p><ul class="ie-breakdown">${typeBreakdown(total.byType)}</ul></div>`;
+    const correctText = t('reading.result_correct', { raw: total.raw, of: total.of }, `${total.raw}/${total.of} correct`);
+    const noteText = `${t('reading.result_note', undefined, 'Band is scaled to 40 questions.')} ${total.of < 40 ? t('reading.short_sets_note', undefined, 'Short sets give a rough guide only.') : ''}`;
+    result.innerHTML = `${bandBadge(band, 'Reading')}<div><h3>${correctText}</h3><p class="ie-note">${noteText}</p><ul class="ie-breakdown">${typeBreakdown(total.byType)}</ul></div>`;
     panes.forEach(x => { x.hidden = false; });
     tabs.hidden = true;
     result.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -509,7 +511,7 @@ export function mountReadingTest(
 }
 
 export function readingView(root: HTMLElement): () => void {
-  let stop = () => {};
+  let stop = () => { };
   const list = h('div', 'ie-cards');
   const hubBar = h('div', 'ie-reading-hub-actions');
   const drillsLink = h(
@@ -534,7 +536,10 @@ export function readingView(root: HTMLElement): () => void {
   PASSAGES.forEach(p => {
     const words = p.paragraphs.reduce((a, x) => a + x.text.split(/\s+/).length, 0);
     const types = [...new Set(p.questions.map(q => q.type))].length;
-    const c = h('button', 'ie-card', `<b>${esc(p.title)}</b><span>${esc(p.topic)}</span><small>${words} words · ${p.questions.length} questions · ${types} types</small>`);
+    const metaText = t('reading.card_meta', { words, questions: p.questions.length, types }, `${words} words · ${p.questions.length} questions · ${types} types`);
+    const topicKey = 'ielts.reading_topic_' + p.topic.toLowerCase().replace(/[^a-z0-9]+/g, '_');
+    const topicLabel = t(topicKey, undefined, p.topic);
+    const c = h('button', 'ie-card', `<b>${esc(p.title)}</b><span>${esc(topicLabel)}</span><small>${metaText}</small>`);
     c.addEventListener('click', () => {
       root.innerHTML = '';
       const back = h('button', 'ie-btn', t('ielts.all_passages', undefined, 'All passages'));
@@ -545,6 +550,6 @@ export function readingView(root: HTMLElement): () => void {
     });
     list.append(c);
   });
-  if (!PASSAGES.length) list.append(h('p', 'ie-note', 'No passages loaded yet.'));
+  if (!PASSAGES.length) list.append(h('p', 'ie-note', t('reading.no_passages', undefined, 'No passages loaded yet.')));
   return () => stop();
 }

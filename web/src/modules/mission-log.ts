@@ -5,6 +5,7 @@ import { MotionEngine } from '../core/motion-engine';
 import { ScrollAffordance } from '../core/scroll-affordance';
 import { Cefr } from '../core/cefr';
 import habitsData from '../assets/data/habits.json';
+import { t } from '../core/i18n';
 
 export interface HabitDay {
   day: number;
@@ -54,17 +55,17 @@ export class MissionLog {
     this.container.innerHTML = `
       <div class="dossier-control-bar mission-control-bar" style="display: flex; flex-direction: column; align-items: stretch; gap: 8px; width: 100%;">
         <div class="mission-header-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-          <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-family: var(--font-mono); font-size: var(--font-kicker);">[HABITS // KINETIC ROADMAP]</span>
+          <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-family: var(--font-mono); font-size: var(--font-kicker);">[${t('habits.kicker', undefined, 'HABITS // KINETIC ROADMAP')}]</span>
           <div class="habit-level-chips" style="display: inline-flex; gap: 6px;">
             ${(['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as Cefr[]).map(lvl => `
-              <button class="hud-chip habit-level-chip ${lvl === this.activeLevel ? 'active' : ''}" data-level="${lvl}" style="padding: 3px 8px; font-size: var(--font-kicker); cursor: pointer; border-radius: 4px; border: 1px solid ${lvl === this.activeLevel ? 'var(--accent-gold)' : 'var(--border-subtle)'}; background: ${lvl === this.activeLevel ? 'var(--accent-gold)' : 'var(--bg-surface)'}; color: ${lvl === this.activeLevel ? 'var(--bg-canvas)' : 'var(--ink-secondary)'}; font-weight: 700; white-space: nowrap;">
+              <button class="hud-chip habit-level-chip ${lvl === this.activeLevel ? 'active' : ''}" data-level="${lvl}" style="padding: 3px 8px; font-size: var(--font-kicker); cursor: pointer; border-radius: var(--radius-btn, 10px); border: 1px solid ${lvl === this.activeLevel ? 'var(--accent-gold)' : 'var(--border-subtle)'}; background: ${lvl === this.activeLevel ? 'var(--accent-gold)' : 'var(--bg-surface)'}; color: ${lvl === this.activeLevel ? 'var(--bg-canvas)' : 'var(--ink-secondary)'}; font-weight: 700; white-space: nowrap;">
                 ${lvl}
               </button>
             `).join('')}
           </div>
         </div>
         <div class="dossier-status-pill" style="display: flex; justify-content: space-between; align-items: center; padding: 0;">
-          <span class="telemetry-value" style="font-size: var(--font-body-compact); font-weight: 700;">LEVEL ${this.activeLevel} // DAILY WORKOUT</span>
+          <span class="telemetry-value" style="font-size: var(--font-body-compact); font-weight: 700;">LEVEL ${this.activeLevel} // ${t('habits.daily_workout', undefined, 'DAILY WORKOUT')}</span>
         </div>
       </div>
       <div class="mission-log-main">
@@ -74,9 +75,9 @@ export class MissionLog {
         <div class="mission-day-card-slot"></div>
       </div>
       <div class="dossier-nav-bar">
-        <button class="hud-btn nav-btn-prev-day">${icon('arrowLeft')} Prev Day</button>
-        <span class="telemetry-value active-day-indicator">DAY ${this.activeDayIndex + 1} / 30</span>
-        <button class="hud-btn nav-btn-next-day">Next Day ${icon('arrowRight')}</button>
+        <button class="hud-btn nav-btn-prev-day">${icon('arrowLeft')} ${t('habits.prev_day', undefined, 'Prev Day')}</button>
+        <span class="telemetry-value active-day-indicator">${t('habits.day_indicator', { current: this.activeDayIndex + 1, total: 30 }, `DAY ${this.activeDayIndex + 1} / 30`)}</span>
+        <button class="hud-btn nav-btn-next-day">${t('habits.next_day', undefined, 'Next Day')} ${icon('arrowRight')}</button>
       </div>
     `;
 
@@ -132,10 +133,10 @@ export class MissionLog {
           <div class="card-meta-left" style="display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1 1 auto;">
             <span class="mission-phase-badge" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">[WEEK 0${day.week} // ${day.phase.toUpperCase()}]</span>
             <span class="hud-status-badge" style="font-size: var(--font-kicker); padding: 1px 6px; border-radius: 3px; border: 1px solid var(--accent-gold); color: var(--accent-gold); font-weight: 700;">
-              LEVEL: ${currentLevel}
+              ${t('habits.level_label', undefined, 'LEVEL:')} ${currentLevel}
             </span>
             <span class="card-badge-status ${progress.completed ? 'badge-completed' : ''}">
-              ${progress.completed ? 'COMPLETED ✓' : 'IN PROGRESS'}
+              ${progress.completed ? t('habits.status_completed', undefined, 'COMPLETED ✓') : t('habits.status_in_progress', undefined, 'IN PROGRESS')}
             </span>
           </div>
           <div class="card-meta-right">
@@ -144,7 +145,7 @@ export class MissionLog {
         </div>
 
         <div class="mission-body">
-          <div class="card-prompt-label">DAILY OBJECTIVE</div>
+          <div class="card-prompt-label">${t('habits.daily_objective', undefined, 'DAILY OBJECTIVE')}</div>
           <div class="card-main-text" style="font-size: var(--font-h3); margin-bottom: 16px;">
             ${day.title}
           </div>
@@ -164,8 +165,8 @@ export class MissionLog {
 
         <div class="card-bottom-dock">
           <div class="mission-completion-stat">
-            <span class="telemetry-label">PROGRESS:</span>
-            <span class="telemetry-value">${progress.completedTasks.length} / ${tasks.length} TASKS</span>
+            <span class="telemetry-label">${t('habits.progress_label', undefined, 'PROGRESS:')}</span>
+            <span class="telemetry-value">${progress.completedTasks.length} / ${tasks.length} ${t('habits.tasks_label', undefined, 'TASKS')}</span>
           </div>
           <div class="mission-actions">
             ${progress.completed ? '<span style="font-family: var(--font-mono); font-size: var(--font-kicker); font-weight: 700;">[STREAK REGISTERED]</span>' : ''}

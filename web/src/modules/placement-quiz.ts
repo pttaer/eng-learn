@@ -2,6 +2,7 @@ import { Cefr, CEFR_LABELS, CEFR_ORDER } from '../core/cefr';
 import { PlacementQuestion, buildQuestions, placeLevel, PASS_MARK, QUESTIONS_PER_LEVEL } from '../core/placement';
 import { StorageManager } from '../utils/storage';
 import { AcousticHaptics } from '../core/acoustic-haptics';
+import { t } from '../core/i18n';
 import vocabularyData from '../assets/data/vocabulary.json';
 import collocationsData from '../assets/data/collocations.json';
 import diagnosticData from '../assets/data/diagnostic-questions.json';
@@ -20,9 +21,19 @@ export class PlacementQuiz {
   private opener: HTMLElement | null;
   private onDone: () => void;
   private keyHandler: (e: KeyboardEvent) => void;
+  private static activeInstance: PlacementQuiz | null = null;
 
   public static open(onDone: () => void = () => {}): void {
-    new PlacementQuiz(onDone);
+    this.close();
+    this.activeInstance = new PlacementQuiz(onDone);
+  }
+
+  public static close(): void {
+    if (this.activeInstance) {
+      document.removeEventListener('keydown', this.activeInstance.keyHandler, true);
+      this.activeInstance.overlay.remove();
+      this.activeInstance = null;
+    }
   }
 
   private constructor(onDone: () => void) {
@@ -62,13 +73,13 @@ export class PlacementQuiz {
 
   private renderIntro(): void {
     this.card(`
-      <div class="telemetry-label" style="margin-bottom: var(--space-8); color: var(--accent-gold); font-weight: 700;">✦ TÌM ĐIỂM XUẤT PHÁT CỦA BẠN</div>
-      <p style="font-size: var(--font-h4); line-height: 1.6; margin: 0 0 var(--space-16) 0; color: var(--ink-secondary);">
-        Chỉ mất khoảng 2 phút với các câu hỏi gợi mở nhẹ nhàng (từ A1 đến C2). App sẽ tự động dừng ngay khi câu hỏi bắt đầu vượt quá nhịp độ của bạn để bạn không bị mệt. Bạn luôn có thể đổi cấp độ bất kỳ lúc nào.
+      <div class="telemetry-label" style="margin-bottom: var(--space-8); color: var(--accent-gold); font-weight: 700;">${t('placement.title', undefined, 'FIND YOUR STARTING POINT')}</div>
+      <p style="font-size: var(--font-h4); line-height: 1.6; margin: 0 0 var(--space-20, 20px) 0; color: var(--ink-secondary);">
+        ${t('placement.intro', undefined, 'Takes about 2 minutes with gentle exploratory questions (from A1 to C2). The test stops dynamically as soon as questions exceed your pace so you never feel exhausted. You can adjust your level anytime.')}
       </p>
-      <div style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8);">
-        <button class="hud-btn placement-start apple-press" style="width: 100%; justify-content: center; min-height: 44px; padding: 12px 0; font-weight: 700; border-radius: var(--radius-squircle-sm, 10px);">Bắt đầu (khoảng 2 phút)</button>
-        <button class="hud-btn placement-skip apple-press" style="width: 100%; justify-content: center; min-height: 44px; padding: 10px 0; border-radius: var(--radius-squircle-sm, 10px);">Bỏ qua và bắt đầu ở A1</button>
+      <div class="action-stack placement-actions-cluster" style="width: 100%; display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+        <button class="hud-btn placement-start btn-start-placement apple-press" style="width: 100%; justify-content: center; min-height: 44px; padding: 12px 0; font-weight: 700; border-radius: var(--radius-btn, 10px);">${t('placement.start_btn', undefined, 'Start (~2 mins)')}</button>
+        <button class="hud-btn placement-skip apple-press" style="width: 100%; justify-content: center; min-height: 44px; padding: 10px 0; border-radius: var(--radius-btn, 10px);">${t('placement.skip_to_a1', undefined, 'Skip and start at A1')}</button>
       </div>
     `);
     this.overlay.querySelector('.placement-start')?.addEventListener('click', () => this.renderQuestion());
@@ -80,23 +91,23 @@ export class PlacementQuiz {
     const q = this.questions[this.index];
     if (!q) return this.renderResult();
     const badgeMap: Record<string, string> = {
-      vocab: '[ TỪ VỰNG ]',
-      collocation: '[ CỤM TỪ ]',
-      grammar: '[ NGỮ PHÁP ]',
-      reading: '[ ĐỌC HIỂU ]'
+      vocab: `[ ${t('dossier.vocab', undefined, 'VOCABULARY').toUpperCase()} ]`,
+      collocation: `[ ${t('dossier.collocations', undefined, 'COLLOCATIONS').toUpperCase()} ]`,
+      grammar: `[ ${t('dossier.grammar', undefined, 'GRAMMAR').toUpperCase()} ]`,
+      reading: `[ ${t('dossier.reading', undefined, 'READING').toUpperCase()} ]`
     };
     const badgeText = badgeMap[q.kind] || `[ ${q.kind.toUpperCase()} ]`;
     this.card(`
       <div class="telemetry-label" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 8px; margin-bottom: var(--space-8);">
-        <span>CÂU HỎI ${this.index + 1} / ${this.questions.length} &middot; CẤP ĐỘ&nbsp;${q.level}</span>
-        <span class="hud-badge placement-skill-badge" style="letter-spacing: 0.05em; font-weight: 700; color: var(--gold-primary, #ca8a04);">${badgeText}</span>
+        <span>${t('placement.question_header', { current: this.index + 1, total: this.questions.length, level: q.level }, `QUESTION ${this.index + 1} / ${this.questions.length} · LEVEL ${q.level}`)}</span>
+        <span class="hud-badge placement-skill-badge" style="letter-spacing: 0.08em; font-weight: 700; color: var(--gold-primary, #ca8a04); text-transform: uppercase; white-space: nowrap; flex-shrink: 0;">${badgeText}</span>
       </div>
       <div class="placement-prompt-title" style="font-size: var(--font-h3); font-weight: 700; line-height: 1.35; margin: 0 0 ${q.context ? 'var(--space-8)' : 'var(--space-16)'} 0; color: var(--ink-primary);">${this.escape(q.prompt)}</div>
       ${q.context ? `<div class="placement-context-box" style="font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5; margin: 0 0 var(--space-16) 0;">${this.escape(q.context)}</div>` : ''}
-      <div role="group" aria-label="Choose the answer" style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8);">
-        ${q.options.map((o, i) => `<button class="hud-btn placement-option apple-press" data-i="${i}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 12px 14px; text-align: left; white-space: normal; min-height: 44px; text-transform: none; border-radius: var(--radius-squircle-sm, 10px); font-family: var(--font-sans); font-size: var(--font-body-compact); line-height: 1.4;"><strong style="font-family: var(--font-mono); margin-right: 8px;">${i + 1}.</strong> ${this.escape(o)}</button>`).join('')}
+      <div role="group" aria-label="Choose the answer" class="action-stack" style="width: 100%; display: flex; flex-direction: column; gap: 12px; margin-top: 14px;">
+        ${q.options.map((o, i) => `<button class="hud-btn placement-option apple-press" data-i="${i}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 12px 14px; text-align: left; white-space: normal; min-height: 44px; text-transform: none; border-radius: var(--radius-btn, 10px); font-family: var(--font-sans); font-size: var(--font-body-compact); line-height: 1.4; display: inline-flex; align-items: center; gap: 8px;"><strong style="font-family: var(--font-mono); flex-shrink: 0;">${i + 1}.</strong> <span>${this.escape(o)}</span></button>`).join('')}
       </div>
-      <button class="hud-btn placement-skip apple-press" style="width: 100%; justify-content: center; min-height: 44px; padding: 8px 0; margin-top: var(--space-12); border-radius: var(--radius-squircle-sm, 10px);">Bỏ qua bài khảo sát</button>
+      <button class="hud-btn placement-skip apple-press" style="width: 100%; justify-content: center; min-height: 44px; padding: 8px 0; margin-top: 18px; border-radius: var(--radius-btn, 10px);">${t('placement.skip_survey', undefined, 'Skip diagnostic quiz')}</button>
     `);
     this.overlay.querySelectorAll<HTMLElement>('.placement-option').forEach(btn => {
       btn.addEventListener('click', () => this.answer(Number(btn.dataset.i)));
@@ -125,18 +136,18 @@ export class PlacementQuiz {
     this.renderQuestion();
   }
 
-  private renderResult(): void {
+  public renderResult(): void {
     const level = placeLevel(this.correct);
     this.card(`
-      <div class="telemetry-label" style="margin-bottom: var(--space-8);">YOUR LEVEL</div>
+      <div class="telemetry-label" style="margin-bottom: var(--space-8);">${t('placement.your_level', undefined, 'YOUR LEVEL')}</div>
       <div style="font-size: var(--font-h1); font-weight: 700; margin-bottom: var(--space-8);">${CEFR_LABELS[level]}</div>
       <p style="font-size: var(--font-h4); color: var(--ink-secondary); margin-bottom: var(--space-16);">
-        This is a balanced 24-question multi-skill diagnostic estimate (Vocabulary, Collocations, Grammar, and Reading). Pick another level if it feels too easy or too hard.
+        ${t('placement.result_desc', undefined, 'This is a balanced 24-question multi-skill diagnostic estimate (Vocabulary, Collocations, Grammar, and Reading). Pick another level if it feels too easy or too hard.')}
       </p>
-      <div style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8);">
-        <button class="hud-btn placement-accept" style="width: 100%; justify-content: center; padding: 12px 0; font-weight: 700;">Start at ${level}</button>
-        <div style="display: flex; flex-wrap: wrap; gap: var(--space-8); justify-content: center;">
-          ${CEFR_ORDER.filter(l => l !== level).map(l => `<button class="hud-btn placement-pick" data-level="${l}" style="padding: 6px 12px;">${l}</button>`).join('')}
+      <div class="action-stack placement-actions-cluster" style="width: 100%; display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+        <button class="hud-btn placement-accept" style="width: 100%; justify-content: center; min-height: 44px; padding: 12px 0; font-weight: 700; border-radius: var(--radius-btn, 10px);">${t('placement.start_at', { level }, `Start at ${level}`)}</button>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 10px; justify-content: center; margin-top: 6px;">
+          ${CEFR_ORDER.filter(l => l !== level).map(l => `<button class="hud-btn placement-pick" data-level="${l}" style="padding: 6px 14px; min-height: 44px; min-width: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center; justify-content: center;">${l}</button>`).join('')}
         </div>
       </div>
     `);
@@ -157,6 +168,7 @@ export class PlacementQuiz {
     window.dispatchEvent(new CustomEvent('learner-level-change'));
     document.removeEventListener('keydown', this.keyHandler, true);
     this.overlay.remove();
+    PlacementQuiz.activeInstance = null;
     this.opener?.focus();
     this.onDone();
   }
@@ -165,3 +177,6 @@ export class PlacementQuiz {
     return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 }
+
+(window as any).PlacementQuiz = PlacementQuiz;
+

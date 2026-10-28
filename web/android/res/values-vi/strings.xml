@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">English Singularity</string>
-    <string name="widget_name">Singularity Tiêu Điểm Hàng Ngày</string>
+    <string name="widget_name">Tiêu Điểm Singularity</string>
     <string name="widget_description">Hiển thị chuỗi ngày học, mục tiêu hàng ngày và thẻ từ vựng C2/IELTS ở chế độ thu gọn, tiêu chuẩn hoặc mở rộng.</string>
     <string name="widget_streak_format">🔥 Chuỗi %1$d ngày</string>
     <string name="widget_streak_compact_format">🔥 %1$d ngày</string>
@@ -11,13 +11,22 @@
     <string name="widget_next_compact">↻</string>
     <string name="widget_def_label">ĐỊNH NGHĨA</string>
     <string name="widget_ex_label">VÍ DỤ NGỮ CẢNH</string>
-    <string name="widget_cefr_tag">C2 HÀN LÂM</string>
+    <string name="widget_cefr_tag">C2 HỌC THUẬT</string>
 
     <!-- Tabs & Navigation -->
     <string name="widget_tab_word">📖 Thẻ từ</string>
-    <string name="widget_tab_quests">🎯 Nhiệm vụ</string>
-    <string name="widget_tab_pillars">⚡ 4 Trụ cột</string>
+    <string name="widget_tab_quiz">🧠 Quiz</string>
+    <string name="widget_tab_quests">🎯 Quests</string>
+    <string name="widget_tab_pillars">⚡ Trụ cột</string>
     <string name="widget_daily_focus">Tiêu điểm hôm nay</string>
+
+    <!-- Vocab Quiz -->
+    <string name="widget_quiz_prompt">CHỌN NGHĨA CHÍNH XÁC CỦA TỪ:</string>
+    <string name="widget_quiz_score_format">🧠 %1$d Đúng (+%2$d XP)</string>
+    <string name="widget_quiz_correct">🎉 Chính xác! (+10 XP) • %1$s</string>
+    <string name="widget_quiz_wrong">❌ Chưa đúng! Đáp án đúng: %1$s</string>
+    <string name="widget_quiz_hint">Chọn 1 đáp án để kiểm tra phản xạ</string>
+    <string name="widget_quiz_next">Câu khác ↻</string>
 
     <!-- Sections & Headers -->
     <string name="widget_quests_title">NHIỆM VỤ HÀNG NGÀY</string>
@@ -32,7 +41,7 @@
     <string name="widget_btn_audio_word">🔊 Từ</string>
     <string name="widget_btn_audio_sentence">🎧 Câu</string>
     <string name="widget_btn_recall_hide">👁 Ẩn</string>
-    <string name="widget_btn_recall_reveal">👁 Mở</string>
+    <string name="widget_btn_recall_reveal">👁 Hiện</string>
 
     <!-- Pillar Subtitles & Suite Button -->
     <string name="widget_reading_subtitle">Tốc độ &amp; Tổng hợp</string>

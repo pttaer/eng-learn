@@ -43,7 +43,7 @@ const FALLBACK_WORDS: WidgetCustomWord[] = [
     definition: 'Lasting for only a short period of time; fleeting or transient.',
     vietnamese: 'phù du, ngắn ngủi, sớm nở tối tàn',
     example: '“Fame in the digital era is intensely ephemeral, vanishing as swiftly as it emerges.”',
-    tags: '✦ Collocations: ephemeral nature, ephemeral pleasure  •  Synonyms: transient, fleeting'
+    tags: 'Collocations: ephemeral nature, ephemeral pleasure  •  Synonyms: transient, fleeting'
   },
   {
     word: 'Ubiquitous',
@@ -51,7 +51,7 @@ const FALLBACK_WORDS: WidgetCustomWord[] = [
     definition: 'Present, appearing, or found everywhere simultaneously.',
     vietnamese: 'phổ biến khắp nơi, đâu đâu cũng thấy',
     example: '“Mobile devices have become ubiquitous in daily modern life.”',
-    tags: '✦ Collocations: ubiquitous presence, ubiquitous influence  •  Synonyms: omnipresent, pervasive'
+    tags: 'Collocations: ubiquitous presence, ubiquitous influence  •  Synonyms: omnipresent, pervasive'
   },
   {
     word: 'Paradigm',
@@ -59,7 +59,7 @@ const FALLBACK_WORDS: WidgetCustomWord[] = [
     definition: 'A typical example, pattern, model, or conceptual framework.',
     vietnamese: 'mô hình, khuôn mẫu chuẩn mực',
     example: '“The shift marked an entirely new paradigm in economic thought.”',
-    tags: '✦ Collocations: paradigm shift, dominant paradigm  •  Synonyms: archetype, model, standard'
+    tags: 'Collocations: paradigm shift, dominant paradigm  •  Synonyms: archetype, model, standard'
   }
 ];
 

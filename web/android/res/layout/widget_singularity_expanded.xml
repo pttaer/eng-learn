@@ -7,14 +7,12 @@
     android:orientation="vertical"
     android:padding="12dp">
 
-    <!-- Clean Segmented Tab Controller (Zero Double Outline) -->
+    <!-- File Explorer Folder Tabs Controller (Strictly Equal Weight) -->
     <LinearLayout
         android:id="@+id/widget_tab_strip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/widget_badge_bg"
-        android:padding="3dp"
+        android:layout_marginBottom="0dp"
         android:orientation="horizontal">
 
         <TextView
@@ -29,7 +27,22 @@
             android:paddingBottom="6dp"
             android:text="@string/widget_tab_word"
             android:textColor="@color/widget_accent_primary"
-            android:textSize="11.5sp"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/widget_tab_quiz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/widget_tab_inactive_bg"
+            android:gravity="center"
+            android:letterSpacing="0.04"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="@string/widget_tab_quiz"
+            android:textColor="@color/widget_text_muted"
+            android:textSize="11sp"
             android:textStyle="bold" />
 
         <TextView
@@ -44,7 +57,7 @@
             android:paddingBottom="6dp"
             android:text="@string/widget_tab_quests"
             android:textColor="@color/widget_text_muted"
-            android:textSize="11.5sp"
+            android:textSize="11sp"
             android:textStyle="bold" />
 
         <TextView
@@ -59,16 +72,18 @@
             android:paddingBottom="6dp"
             android:text="@string/widget_tab_pillars"
             android:textColor="@color/widget_text_muted"
-            android:textSize="11.5sp"
+            android:textSize="11sp"
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- Seamless Content ViewFlipper (Zero Inner Border Box) -->
+    <!-- File Explorer Folder Body (ViewFlipper) -->
     <ViewFlipper
         android:id="@+id/widget_flipper"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="@drawable/widget_folder_body"
+        android:padding="8dp"
         android:inAnimation="@android:anim/fade_in"
         android:outAnimation="@android:anim/fade_out">
 
@@ -293,13 +308,201 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:maxLines="2"
-                    android:text="✦ Collocations: ephemeral nature, ephemeral pleasure  •  Synonyms: transient, fleeting"
+                    android:text="Collocations: ephemeral nature, ephemeral pleasure  •  Synonyms: transient, fleeting"
                     android:textColor="@color/widget_accent_primary"
                     android:textSize="11sp" />
             </LinearLayout>
         </LinearLayout>
 
-        <!-- TAB 2: 🎯 Quests -->
+        <!-- TAB 2: 🧠 Vocab Flash Quiz -->
+        <LinearLayout
+            android:id="@+id/widget_tab_quiz_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Subheader Bar: Quiz Score Pill + Level + Next Question ↻ -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/widget_quiz_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/widget_badge_bg"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="2.5dp"
+                        android:text="🧠 0 Đúng (+0 XP)"
+                        android:textColor="@color/widget_accent_primary"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/widget_quiz_badge_cefr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/widget_badge_bg"
+                        android:letterSpacing="0.08"
+                        android:paddingLeft="7dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingRight="7dp"
+                        android:paddingBottom="2.5dp"
+                        android:text="C2 QUIZ"
+                        android:textColor="@color/widget_accent_primary"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/widget_quiz_action_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/widget_btn_bg"
+                    android:paddingLeft="9dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="9dp"
+                    android:paddingBottom="3dp"
+                    android:text="@string/widget_quiz_next"
+                    android:textColor="@color/widget_text_secondary"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <!-- Question Prompt Box -->
+            <TextView
+                android:id="@+id/widget_quiz_prompt_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:letterSpacing="0.08"
+                android:text="@string/widget_quiz_prompt"
+                android:textColor="@color/widget_text_muted"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widget_quiz_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="Ephemeral"
+                android:textColor="@color/widget_text_primary"
+                android:textSize="17.5sp"
+                android:textStyle="bold" />
+
+            <!-- Options Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <!-- Option A -->
+                <RelativeLayout
+                    android:id="@+id/widget_quiz_opt_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/widget_btn_bg"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/widget_quiz_opt_text_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="A. Fleeting or transient"
+                        android:textColor="@color/widget_text_primary"
+                        android:textSize="11.5sp" />
+                </RelativeLayout>
+
+                <!-- Option B -->
+                <RelativeLayout
+                    android:id="@+id/widget_quiz_opt_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/widget_btn_bg"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/widget_quiz_opt_text_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="B. Present everywhere"
+                        android:textColor="@color/widget_text_primary"
+                        android:textSize="11.5sp" />
+                </RelativeLayout>
+
+                <!-- Option C -->
+                <RelativeLayout
+                    android:id="@+id/widget_quiz_opt_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/widget_btn_bg"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/widget_quiz_opt_text_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="C. Make less severe"
+                        android:textColor="@color/widget_text_primary"
+                        android:textSize="11.5sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Instant Feedback Banner -->
+            <TextView
+                android:id="@+id/widget_quiz_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/widget_tag_bg"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingLeft="8dp"
+                android:paddingTop="4dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:text="@string/widget_quiz_hint"
+                android:textColor="@color/widget_accent_primary"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- TAB 3: 🎯 Quests -->
         <LinearLayout
             android:id="@+id/widget_tab2_content"
             android:layout_width="match_parent"

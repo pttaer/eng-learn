@@ -126,11 +126,11 @@ export class SettingsDossier {
         <header class="settings-header" style="display: flex; flex-direction: column; gap: 8px; text-align: left; width: 100%;">
           <div style="display: flex; align-items: center; gap: 8px;">
             <span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); letter-spacing: var(--font-kicker-spacing, 0.08em); font-weight: 700; font-family: var(--font-mono); text-transform: uppercase;">
-              SYSTEM PREFERENCES &amp; TELEMETRY
+              ${t('settings.telemetry_kicker', undefined, 'SYSTEM PREFERENCES & TELEMETRY')}
             </span>
           </div>
           <h1 style="margin: 0; font-size: var(--font-h1, 24px); font-family: var(--font-mono); font-weight: 700; color: var(--ink-primary); line-height: 1.2;">
-            Settings &amp; Environment
+            ${t('settings.environment_title', undefined, 'Settings & Environment')}
           </h1>
           <p style="margin: 0; font-size: var(--font-body-compact, 14px); color: var(--ink-secondary); line-height: 1.5;">
             Quản lý trình độ CEFR, cấu hình hệ thống âm thanh kép, thông báo chu kỳ SRS, giao diện tập trung và sao lưu dữ liệu toàn diện.
@@ -183,10 +183,10 @@ export class SettingsDossier {
           <!-- Quick Action Buttons -->
           <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px;">
             <button type="button" class="hud-btn btn-action-placement" style="flex: 1; min-width: 220px; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8);">
-              ${icon('target', 16)} <span style="margin-left: 6px;">Làm lại Test xếp lớp 2 phút</span>
+              ${icon('target', 16)}<span>Làm lại Test xếp lớp 2 phút</span>
             </button>
             <button type="button" class="hud-btn btn-action-radar" style="flex: 1; min-width: 220px; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
-              ${icon('compass', 16)} <span style="margin-left: 6px;">Celestial Radar &amp; Chẩn đoán</span>
+              ${icon('compass', 16)}<span>${t('settings.celestial_radar_diagnostic', undefined, 'Celestial Radar & Chẩn đoán')}</span>
             </button>
           </div>
         </section>
@@ -211,10 +211,10 @@ export class SettingsDossier {
                 ${t('settings.language', undefined, 'Ngôn ngữ giao diện (Interface Language)')}:
               </span>
               <div style="display: flex; gap: 8px;">
-                <button type="button" class="hud-btn btn-locale-choice ${I18n.getLocale() === 'en' ? 'active' : ''}" data-locale="en" style="flex: 1; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 600; ${I18n.getLocale() === 'en' ? 'border-color: var(--accent-cyan); color: var(--accent-cyan); font-weight: 700;' : ''}">
+                <button type="button" class="hud-btn btn-locale-choice ${I18n.getLocale() === 'en' ? 'active' : ''}" data-locale="en" style="flex: 1; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 600;">
                   English (US/UK)
                 </button>
-                <button type="button" class="hud-btn btn-locale-choice ${I18n.getLocale() === 'vi' ? 'active' : ''}" data-locale="vi" style="flex: 1; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 600; ${I18n.getLocale() === 'vi' ? 'border-color: var(--accent-cyan); color: var(--accent-cyan); font-weight: 700;' : ''}">
+                <button type="button" class="hud-btn btn-locale-choice ${I18n.getLocale() === 'vi' ? 'active' : ''}" data-locale="vi" style="flex: 1; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 600;">
                   Tiếng Việt (Bản địa)
                 </button>
               </div>
@@ -256,7 +256,7 @@ export class SettingsDossier {
               </span>
             </div>
             <button type="button" class="hud-btn btn-toggle-mute ${isMuted ? 'active' : ''}" style="min-height: 38px; padding: 6px 12px; font-weight: 700;">
-              ${isMuted ? icon('mute', 14) : icon('volume', 14)} <span style="margin-left: 4px;">${isMuted ? 'Đang tắt tiếng' : 'Âm thanh bật'}</span>
+              ${isMuted ? icon('mute', 14) : icon('volume', 14)}<span>${isMuted ? 'Đang tắt tiếng' : 'Âm thanh bật'}</span>
             </button>
           </div>
 
@@ -391,10 +391,10 @@ export class SettingsDossier {
           <!-- Import / Export Actions -->
           <div style="display: flex; flex-wrap: wrap; gap: 8px;">
             <button type="button" class="hud-btn btn-export-profile" style="flex: 1; min-width: 200px; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
-              ${icon('download', 16)} <span style="margin-left: 6px;">[ 💾 XUẤT PROFILE (JSON) ]</span>
+              ${icon('download', 16)}<span>[ 💾 XUẤT PROFILE (JSON) ]</span>
             </button>
             <button type="button" class="hud-btn btn-import-profile" style="flex: 1; min-width: 200px; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8);">
-              ${icon('upload', 16)} <span style="margin-left: 6px;">[ 📥 NHẬP PROFILE (JSON) ]</span>
+              ${icon('upload', 16)}<span>[ 📥 NHẬP PROFILE (JSON) ]</span>
             </button>
             <input type="file" class="settings-file-input" accept=".json,application/json" style="display: none;" />
           </div>
@@ -433,10 +433,10 @@ export class SettingsDossier {
 
           <div style="display: flex; flex-direction: column; gap: 8px; width: 100%; margin-top: 4px;">
             <button type="button" class="hud-btn btn-rerun-tour" style="width: 100%; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 600; white-space: normal; line-height: 1.35; text-align: center;">
-              ${icon('compass', 16)} <span style="margin-left: 6px;">Xem lại Spotlight Tour</span>
+              ${icon('compass', 16)}<span>Xem lại Spotlight Tour</span>
             </button>
             <button type="button" class="hud-btn btn-open-quests" style="width: 100%; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 600; white-space: normal; line-height: 1.35; text-align: center;">
-              ${icon('zap', 16)} <span style="margin-left: 6px;">Xem Quests &amp; Huy hiệu XP</span>
+              ${icon('zap', 16)}<span>Xem Quests &amp; Huy hiệu XP</span>
             </button>
           </div>
         </section>

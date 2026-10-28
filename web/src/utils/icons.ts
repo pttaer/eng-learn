@@ -48,6 +48,7 @@ const PATHS = {
   pause: '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>',
   skipBack: '<polygon points="19 20 9 12 19 4 19 20"/><line x1="5" y1="19" x2="5" y2="5"/>',
   skipForward: '<polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19"/>',
+  x: '<path d="M18 6 6 18M6 6l12 12"/>',
 } as const;
 
 export type IconName = keyof typeof PATHS;

@@ -105,15 +105,15 @@ export class GrammarDossier {
 
       <div class="vocab-telemetry-banner">
         <div class="telemetry-item">
-          <span class="telemetry-label">SYNTACTIC DRILL RUN</span>
-          <span class="telemetry-value streak-counter">${this.reviewCountInRun} TRANSFORMATIONS</span>
+          <span class="telemetry-label">${t('grammar.syntactic_drill_run', undefined, 'SYNTACTIC DRILL RUN')}</span>
+          <span class="telemetry-value streak-counter">${this.reviewCountInRun} ${t('grammar.transformations', undefined, 'TRANSFORMATIONS')}</span>
         </div>
         <div class="telemetry-item">
-          <span class="telemetry-label">COGNITIVE LOAD FACTOR</span>
+          <span class="telemetry-label">${t('grammar.cognitive_load_factor', undefined, 'COGNITIVE LOAD FACTOR')}</span>
           <span class="telemetry-value">${this.activeLevel === 'C1' || this.activeLevel === 'C2' ? 'Ease 2.30 (harder tier)' : 'Ease 2.50 (standard tier)'}</span>
         </div>
         <div class="telemetry-item">
-          <span class="telemetry-label">SYNTAX CLASSIFIER</span>
+          <span class="telemetry-label">${t('grammar.syntax_classifier', undefined, 'SYNTAX CLASSIFIER')}</span>
           <span class="telemetry-value">${modeTitles[this.activeMode] || prettyMode(this.activeMode).toUpperCase()}</span>
         </div>
       </div>
@@ -222,13 +222,13 @@ export class GrammarDossier {
         CUE: ${item.grammaticalCue}
       </div>
       <div class="grammar-formula-bar" style="margin-bottom: 12px;">
-        [ STEP-BY-STEP SYNTACTIC FORMULA ]: ${item.formula}
+        [ ${t('grammar.formula_step', undefined, 'STEP-BY-STEP SYNTACTIC FORMULA')} ]: ${item.formula}
       </div>
 
       <!-- Interactive Syntactic Transformation Console (ENG-60) -->
       <div class="grammar-transform-console">
         <label for="grammar-transform-input" class="telemetry-label" style="display: block; margin-bottom: 6px;">
-          [ ACTIVE SYNTACTIC TRANSFORMATION INPUT ]:
+          [ ${t('grammar.active_input', undefined, 'ACTIVE SYNTACTIC TRANSFORMATION INPUT')} ]:
         </label>
         <div class="grammar-input-row">
           <input
@@ -256,14 +256,14 @@ export class GrammarDossier {
     const repairDiffHtml = this.formatRepairDiffHtml(diffTokens);
 
     backEl.innerHTML = `
-      <div class="card-prompt-label">TARGET RESOLUTION // ${item.title.toUpperCase()}</div>
+      <div class="card-prompt-label">${t('grammar.target_resolution', undefined, 'TARGET RESOLUTION')} // ${item.title.toUpperCase()}</div>
       <div class="card-main-text" style="font-size: var(--font-body); line-height: 1.62; font-weight: 700; max-width: 68ch; margin: 10px 0;">
         "${item.targetTransformation}"
       </div>
 
       <!-- Syntactic Repair Diff -->
       <div class="grammar-repair-diff-box">
-        <div class="telemetry-label" style="margin-bottom: 4px;">[SYNTACTIC REPAIR DIFF: BASELINE → TRANSFORMED]</div>
+        <div class="telemetry-label" style="margin-bottom: 4px;">[${t('grammar.repair_diff_title', undefined, 'SYNTACTIC REPAIR DIFF: BASELINE → TRANSFORMED')}]</div>
         <div class="repair-diff-content" style="line-height: 1.8;">
           ${repairDiffHtml}
         </div>
@@ -271,24 +271,24 @@ export class GrammarDossier {
 
       <!-- Formula Bar -->
       <div class="grammar-formula-bar">
-        [ STEP-BY-STEP SYNTACTIC MATRIX ]: ${item.formula}
+        [ ${t('grammar.syntactic_matrix_step', undefined, 'STEP-BY-STEP SYNTACTIC MATRIX')} ]: ${item.formula}
       </div>
 
       <!-- Vietnamese Comparative Syntax Drawer -->
       <div class="grammar-vietnamese-callout">
-        <strong style="white-space: normal; overflow-wrap: anywhere;">[VIETNAMESE L1 COMPARATIVE INTERFERENCE]:</strong>
+        <strong style="white-space: normal; overflow-wrap: anywhere;">[${t('grammar.l1_interference', undefined, 'VIETNAMESE L1 COMPARATIVE INTERFERENCE')}]:</strong>
         ${item.vietnamese}
       </div>
 
       <!-- Rhetorical Analysis -->
       <div class="grammar-analysis-box" style="margin-top: 8px;">
-        <span class="telemetry-label">[RHETORICAL & SYNTACTIC ANALYSIS]:</span>
+        <span class="telemetry-label">[${t('grammar.rhetorical_analysis', undefined, 'RHETORICAL & SYNTACTIC ANALYSIS')}]:</span>
         <p style="font-size: var(--font-body-compact); line-height: 1.5; margin-top: 4px;">${item.analysis}</p>
       </div>
 
       <!-- Contrastive Advanced Register Exemplar -->
       <div class="grammar-exemplar-box" style="margin-top: 8px;">
-        <span class="telemetry-label">[CONTRASTIVE EXEMPLAR IN ADVANCED REGISTER]:</span>
+        <span class="telemetry-label">[${t('grammar.contrastive_exemplar', undefined, 'CONTRASTIVE EXEMPLAR IN ADVANCED REGISTER')}]:</span>
         <blockquote style="font-style: italic; border-left: 2px solid var(--accent-gold); padding-left: 10px; margin: 6px 0; font-size: var(--font-body-compact); line-height: 1.5;">
           "${item.exemplarContext}"
         </blockquote>
@@ -516,9 +516,5 @@ export class GrammarDossier {
       }
     }
     return false;
-  }
-
-  public teardown(): void {
-    this.currentCardHandle = null;
   }
 }

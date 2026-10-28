@@ -714,6 +714,11 @@ export class ReadingDossier {
               <p class="vocab-field-value" style="font-size: var(--font-kicker); font-style: italic; color: var(--ink-muted);">${this.escapeHtml(info.etymology)}</p>
             </div>
           ` : ''}
+          <div class="apple-modal-footer">
+            <button type="button" class="apple-bottom-close-btn btn-close-drawer" aria-label="${t('common.close', undefined, 'Close')}">
+              ${t('common.close', undefined, 'Close')}
+            </button>
+          </div>
         </div>
       </div>
     `;
@@ -722,8 +727,10 @@ export class ReadingDossier {
       AudioSynthesizer.speak(info.targetWord);
     });
 
-    slot.querySelector('.btn-close-drawer')?.addEventListener('click', () => {
-      this.closeVocabDrawer();
+    slot.querySelectorAll('.btn-close-drawer').forEach(btn => {
+      btn.addEventListener('click', () => {
+        this.closeVocabDrawer();
+      });
     });
   }
 
@@ -773,7 +780,7 @@ export class ReadingDossier {
       <!-- Pass 1 Skim Timer & Focus Mode Bar -->
       <div class="skim-timer-bar">
         <div class="skim-timer-info">
-          <span>SKIM COUNTDOWN: </span>
+          <span>${t('reading.skim_countdown', undefined, 'SKIM COUNTDOWN:')} </span>
           <strong class="timer-display-text val-time" role="timer" aria-live="polite" aria-atomic="true" style="font-size: var(--font-body-compact);">00:${String(this.skimSecondsRemaining).padStart(2, '0')}</strong>
         </div>
         <div class="skim-timer-actions">
@@ -832,12 +839,12 @@ export class ReadingDossier {
           <div class="vocab-drawer-slot"></div>
 
           <div class="reading-sidebar-card">
-            <div class="telemetry-label">Thesis Gist</div>
+            <div class="telemetry-label">${t('reading.thesis_gist', undefined, 'Thesis Gist')}</div>
             <p class="reading-gist-text" style="font-size: var(--font-body-compact); line-height: 1.5; margin-top: 6px;">${data.thesisGist}</p>
           </div>
 
           <div class="reading-sidebar-card">
-            <div class="telemetry-label">Marked Lexical Targets (${data.markedLexicalTargets.length})</div>
+            <div class="telemetry-label">${t('reading.marked_targets', undefined, 'Marked Lexical Targets')} (${data.markedLexicalTargets.length})</div>
             <div class="reading-tag-cloud">
               ${data.markedLexicalTargets.map((t: string) => `
                 <button type="button" class="reading-tag vocab-chip" data-word="${this.escapeHtml(t)}">
@@ -853,7 +860,7 @@ export class ReadingDossier {
               <div class="comp-check-item">
                 <div class="comp-question">${idx + 1}. ${check.question}</div>
                 <details class="comp-answer-reveal">
-                  <summary class="hud-btn-link" style="cursor: pointer; color: var(--accent-gold); font-weight: 600;">Reveal Verification</summary>
+                  <summary class="hud-btn-link" style="cursor: pointer; color: var(--accent-gold); font-weight: 600;">${t('reading.reveal_verification', undefined, 'Reveal Verification')}</summary>
                   <p class="comp-answer">${check.answer}</p>
                 </details>
               </div>
@@ -1227,7 +1234,6 @@ export class ReadingDossier {
   public teardown(): void {
     this.clearSkimTimer();
     this.closeVocabDrawer();
-    AudioSynthesizer.stopSpeech();
     this.currentCardHandle = null;
   }
 }

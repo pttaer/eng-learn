@@ -48,36 +48,39 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
   root.innerHTML = '';
   let playback: Playback | null = null;
   const bar = h('div', 'ie-testbar');
-  const status = h('span', 'ie-clock', ttsAvailable() ? 'Press Play to start' : 'Text-to-speech is not available in this browser');
+  const status = h('span', 'ie-clock', ttsAvailable() ? t('listening.press_play', undefined, 'Press Play to start') : t('listening.tts_unavailable', undefined, 'Text-to-speech is not available in this browser'));
   const play = h('button', 'ie-btn ie-btn-primary', t('ielts.play_audio', undefined, 'Play'));
   const submit = h('button', 'ie-btn', t('ielts.submit_answers', undefined, 'Submit answers'));
   const tabs = h('div', 'ie-tabs');
 
   // Multi-accent cadence selector
   const accentSelect = h('select', 'ie-select ie-accent-select', `
-    <option value="uk-rp">UK RP (Cambridge)</option>
-    <option value="general-american">General American</option>
-    <option value="australian">Australian</option>
-    <option value="scottish">Scottish</option>
+    <option value="uk-rp">${t('listening.accent_uk')}</option>
+    <option value="general-american">${t('listening.accent_us')}</option>
+    <option value="australian">${t('listening.accent_au')}</option>
+    <option value="scottish">${t('listening.accent_sc')}</option>
   `) as HTMLSelectElement;
   accentSelect.value = getPreferredAccent();
-  accentSelect.title = 'Select examiner and speaker accent cadence';
+  accentSelect.title = t('listening.accent_title');
   accentSelect.addEventListener('change', () => {
     setPreferredAccent(accentSelect.value as AccentCadenceType);
   });
 
   // Authentic Cambridge 40Hz acoustic exam room resonance toggle
+  const getAmbienceText = (active: boolean) =>
+    t('listening.ambience_btn', { status: active ? t('nav.active') : t('nav.off') });
+
   const ambienceBtn = h(
     'button',
     'ie-btn ie-ambience-btn' + (isExamRoomAmbienceEnabled() ? ' is-active' : '')
   );
-  ambienceBtn.innerHTML = `${icon('landmark', 13)} Ambience: ${isExamRoomAmbienceEnabled() ? 'ON' : 'OFF'}`;
-  ambienceBtn.title = 'Toggle subtle Cambridge exam hall pink noise and 40Hz room resonance';
+  ambienceBtn.innerHTML = `${icon('landmark', 13)} ${getAmbienceText(isExamRoomAmbienceEnabled())}`;
+  ambienceBtn.title = t('listening.ambience_title');
   ambienceBtn.addEventListener('click', () => {
     const next = !isExamRoomAmbienceEnabled();
     setExamRoomAmbience(next);
     ambienceBtn.classList.toggle('is-active', next);
-    ambienceBtn.innerHTML = `${icon('landmark', 13)} Ambience: ${next ? 'ON' : 'OFF'}`;
+    ambienceBtn.innerHTML = `${icon('landmark', 13)} ${getAmbienceText(next)}`;
   });
 
   bar.append(status, tabs, accentSelect, ambienceBtn, play, submit);
@@ -99,7 +102,7 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
     const tabBtn = h('button', 'ie-tab' + (i === 0 ? ' is-on' : ''), `${t('ielts.section', undefined, 'Section')} ${s.section}`);
     tabBtn.addEventListener('click', () => {
       playback?.stop();
-      play.textContent = 'Play';
+      play.textContent = t('ielts.play_audio', undefined, 'Play');
       cur = i;
       panes.forEach((x, j) => { x.hidden = j !== i; });
       tabs.querySelectorAll('.ie-tab').forEach((x, j) => x.classList.toggle('is-on', j === i));
@@ -113,19 +116,19 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
 
   const refresh = (): void => {
     play.disabled = !ttsAvailable() || (exam && played.has(cur));
-    status.textContent = exam && played.has(cur) ? 'Played once. Answer from memory, as in the exam.' : ttsAvailable() ? 'Press Play to start' : status.textContent;
+    status.textContent = exam && played.has(cur) ? t('listening.played_once', undefined, 'Played once. Answer from memory, as in the exam.') : ttsAvailable() ? t('listening.press_play', undefined, 'Press Play to start') : status.textContent;
   };
 
   play.addEventListener('click', () => {
-    if (playback) { playback.stop(); playback = null; play.textContent = 'Play'; return; }
+    if (playback) { playback.stop(); playback = null; play.textContent = t('ielts.play_audio', undefined, 'Play'); return; }
     played.add(cur);
-    play.textContent = exam ? 'Playing…' : 'Stop';
+    play.textContent = exam ? t('listening.playing', undefined, 'Playing…') : t('listening.stop', undefined, 'Stop');
     if (exam) play.disabled = true;
     playback = playSection(sections[cur], {
       accent: accentSelect.value as AccentCadenceType,
       roomAmbience: isExamRoomAmbienceEnabled(),
-      onLine: i => { status.textContent = `${sections[cur].script[i].speaker} speaking…`; },
-      onEnd: () => { playback = null; play.textContent = 'Play'; refresh(); }
+      onLine: i => { status.textContent = t('listening.speaker_speaking', { speaker: sections[cur].script[i].speaker }, `${sections[cur].script[i].speaker} speaking…`); },
+      onEnd: () => { playback = null; play.textContent = t('ielts.play_audio', undefined, 'Play'); refresh(); }
     });
   });
 
@@ -143,12 +146,12 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
         c.ok += v.ok;
         c.n += v.n;
       }
-      const tr = h('details', 'ie-transcript', `<summary>Transcript: Section ${sections[i].section}</summary>` + sections[i].script.map(l => `<p><b>${esc(l.speaker)}:</b> ${esc(l.text)}</p>`).join(''));
+      const tr = h('details', 'ie-transcript', `<summary>${t('listening.transcript_section', { sec: sections[i].section }, `Transcript: Section ${sections[i].section}`)}</summary>` + sections[i].script.map(l => `<p><b>${esc(l.speaker)}:</b> ${esc(l.text)}</p>`).join(''));
       if (!exam && ttsAvailable()) {
         const marked = evidenceLineIndexes(sections[i], new Set(s.wrong));
         tr.querySelectorAll('p').forEach((p, j) => {
           if (!marked.has(j)) return;
-          const replayBtn = h('button', 'ie-btn ie-btn-sm', 'Hear at 0.8x');
+          const replayBtn = h('button', 'ie-btn ie-btn-sm', t('listening.hear_at_08x', undefined, 'Hear at 0.8x'));
           replayBtn.addEventListener('click', () => {
             replay?.stop();
             replay = playSection({ ...sections[i], script: [sections[i].script[j]] }, { rate: 0.8, accent: accentSelect.value as AccentCadenceType });
@@ -161,7 +164,9 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
     const band = rawToBand('listening', total.raw, total.of);
     addAttempt({ skill: 'listening', itemId: sections.map(s => s.id).join('+'), band, raw: total.raw, of: total.of, byType: total.byType, mock });
     result.hidden = false;
-    result.innerHTML = `${bandBadge(band, 'Listening')}<div><h3>${total.raw}/${total.of} correct</h3><p class="ie-note">Band is scaled to 40 questions. Browser voices are not real exam audio; treat the band as a guide.</p><ul class="ie-breakdown">${typeBreakdown(total.byType)}</ul></div>`;
+    const correctText = t('reading.result_correct', { raw: total.raw, of: total.of }, `${total.raw}/${total.of} correct`);
+    const noteText = t('listening.result_note', undefined, 'Band is scaled to 40 questions. Browser voices are not real exam audio; treat the band as a guide.');
+    result.innerHTML = `${bandBadge(band, 'Listening')}<div><h3>${correctText}</h3><p class="ie-note">${noteText}</p><ul class="ie-breakdown">${typeBreakdown(total.byType)}</ul></div>`;
     panes.forEach(x => { x.hidden = false; });
     tabs.hidden = true;
     result.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -177,9 +182,9 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
 }
 
 export function listeningView(root: HTMLElement): () => void {
-  let stop = () => {};
+  let stop = () => { };
   // Navigation to #listening-traps (ie-lab-banner) is unified in main.ts top subnavigation bar
-  const list = h('div', 'ie-card-grid');
+  const list = h('div', 'ie-cards');
 
   root.append(
     h('h1', 'ie-title', t('ielts.nav_listening', undefined, 'Academic Listening')),
@@ -187,8 +192,9 @@ export function listeningView(root: HTMLElement): () => void {
     list
   );
   SECTIONS.forEach(s => {
-
-    const c = h('button', 'ie-card', `<b>${t('ielts.section', undefined, 'Section')} ${s.section}: ${esc(s.title)}</b><span>${s.speakers.length} speaker${s.speakers.length > 1 ? 's' : ''}</span><small>${s.questions.length} questions</small>`);
+    const spkText = t('listening.speakers_count', { count: s.speakers.length }, `${s.speakers.length} speakers`);
+    const qCountText = t('listening.questions_count', { count: s.questions.length }, `${s.questions.length} questions`);
+    const c = h('button', 'ie-card', `<b>${t('ielts.section', undefined, 'Section')} ${s.section}: ${esc(s.title)}</b><span>${spkText}</span><small>${qCountText}</small>`);
     c.addEventListener('click', () => {
       root.innerHTML = '';
       const back = h('button', 'ie-btn', t('ielts.all_sections', undefined, 'All sections'));
@@ -199,6 +205,6 @@ export function listeningView(root: HTMLElement): () => void {
     });
     list.append(c);
   });
-  if (!SECTIONS.length) list.append(h('p', 'ie-note', 'No sections loaded yet.'));
+  if (!SECTIONS.length) list.append(h('p', 'ie-note', t('listening.no_sections', undefined, 'No sections loaded yet.')));
   return () => stop();
 }

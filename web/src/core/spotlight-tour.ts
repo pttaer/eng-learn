@@ -1,5 +1,6 @@
 import { AudioSynthesizer } from './audio-synthesizer';
 import { ParticleCanvas } from './particle-canvas';
+import { t } from './i18n';
 
 export interface TourStep {
   target: string;
@@ -22,7 +23,7 @@ export const TOUR_STEPS: TourStep[] = [
   {
     target: '.workout-banner',
     fallbackTarget: '#workout-banner',
-    title: "★ Today's 15-Minute Workout",
+    title: "☆ Today's 15-Minute Workout",
     desc: 'Your mandatory daily tripartite cognitive workout: 10 Spaced Collocations, 1 Benjamin Franklin MEAL Copywork, and 1 Nation 4-3-2 Speaking take.',
     badge: 'DAILY ROUTINE',
     route: 'tree'
@@ -38,7 +39,7 @@ export const TOUR_STEPS: TourStep[] = [
   {
     target: '.constellation-node[data-node-id="voc-1"]',
     fallbackTarget: '.constellation-node',
-    title: '★ Perk Engram & Gated Criteria',
+    title: '☆ Perk Engram & Gated Criteria',
     desc: 'Click any star node to inspect syllabus objectives, required prerequisite skills, and retention metrics before launching targeted drills.',
     badge: 'ENGRAM PERK',
     route: 'tree'
@@ -156,7 +157,10 @@ export class SpotlightTour {
     const closeBtn = overlay.querySelector('#tourCloseBtn');
     if (closeBtn) closeBtn.addEventListener('click', () => this.close());
 
-    const skipBtn = overlay.querySelector('#tourSkipBtn');
+    const skipBtn = overlay.querySelector('#tourSkipBtn') as HTMLElement | null;
+    if (skipBtn) skipBtn.textContent = t('tour.btn_skip', undefined, 'Skip');
+    const closeBtnEl = overlay.querySelector('#tourCloseBtn');
+    if (closeBtnEl) closeBtnEl.setAttribute('title', t('tour.close_title', undefined, 'Close (Esc)'));
     if (skipBtn) skipBtn.addEventListener('click', () => this.close());
 
     const prevBtn = overlay.querySelector('#tourPrevBtn');
@@ -310,15 +314,16 @@ export class SpotlightTour {
     // Update Step Badge
     const badgeEl = this.overlay.querySelector('#tourStepBadge');
     if (badgeEl) {
-      badgeEl.textContent = step.badge ? `STEP ${stepNumber} OF ${totalSteps} // ${step.badge}` : `Step ${stepNumber} of ${totalSteps}`;
+      const badgeText = step.badge ? t('tour.badge_' + step.badge.toLowerCase().replace(/[^a-z0-9]+/g, '_'), undefined, step.badge) : '';
+      badgeEl.textContent = badgeText ? t('tour.step_with_badge', { current: stepNumber, total: totalSteps, badge: badgeText }, `STEP ${stepNumber} OF ${totalSteps} // ${badgeText}`) : t('tour.step_of', { current: stepNumber, total: totalSteps }, `Step ${stepNumber} of ${totalSteps}`);
     }
 
     // Update Title & Desc
     const titleEl = this.overlay.querySelector('#tourTitle');
-    if (titleEl) titleEl.textContent = step.title;
+    if (titleEl) titleEl.textContent = t(`tour.step${stepNumber}_title`, undefined, step.title);
 
     const descEl = this.overlay.querySelector('#tourDesc');
-    if (descEl) descEl.textContent = step.desc;
+    if (descEl) descEl.textContent = t(`tour.step${stepNumber}_desc`, undefined, step.desc);
 
     // Update Mini Progress Bar HUD
     const miniBar = this.overlay.querySelector('#tourMiniBar') as HTMLElement | null;
@@ -336,12 +341,13 @@ export class SpotlightTour {
     const prevBtn = this.overlay.querySelector('#tourPrevBtn') as HTMLElement | null;
     if (prevBtn) {
       prevBtn.style.visibility = this.currentStepIndex === 0 ? 'hidden' : 'visible';
+      prevBtn.textContent = t('tour.btn_prev', undefined, '← Previous');
     }
 
     const nextBtn = this.overlay.querySelector('#tourNextBtn') as HTMLElement | null;
     if (nextBtn) {
       const isLast = this.currentStepIndex === totalSteps - 1;
-      nextBtn.textContent = isLast ? 'Finish' : 'Next →';
+      nextBtn.textContent = isLast ? t('tour.btn_finish', undefined, 'Finish') : t('tour.btn_next', undefined, 'Next →');
     }
 
     // Position spotlight and arrow with animation frame

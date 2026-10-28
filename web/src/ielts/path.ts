@@ -1,6 +1,7 @@
 // Guided 7.0 study path: pure logic, no DOM and no storage, so the verifier can run it under Node.
 // Rules are written up in docs/curriculum/ielts_path.md; keep the two in step.
 import type { Skill } from './progress';
+export type { Skill };
 
 export const SKILLS: Skill[] = ['listening', 'reading', 'writing', 'speaking'];
 export const TARGET = 7;

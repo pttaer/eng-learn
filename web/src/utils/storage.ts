@@ -470,13 +470,14 @@ export class StorageManager {
     if (!state.streak.lastActiveDate) {
       state.streak.currentStreak = 1;
     } else {
-      const last = new Date(state.streak.lastActiveDate);
-      const now = new Date(today);
-      const diffDays = Math.round((now.getTime() - last.getTime()) / (1000 * 60 * 60 * 24));
+      const diffDays = Math.round((Date.parse(today) - Date.parse(state.streak.lastActiveDate)) / 864e5);
 
       if (diffDays === 1) {
         state.streak.currentStreak += 1;
-      } else if (diffDays > 1) {
+      } else if (diffDays === 2) {
+        // Rest Day Shield: missed exactly 1 day, preserve streak!
+        state.streak.currentStreak += 1;
+      } else if (diffDays > 2) {
         state.streak.currentStreak = 1;
       }
     }

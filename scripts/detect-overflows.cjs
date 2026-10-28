@@ -154,36 +154,48 @@ async function run() {
     localStorage.setItem('eng_locale', 'vi');
   });
 
+  const locales = ['vi', 'en'];
   const routes = [
     'tree', 'read', 'write', 'listen', 'speak', 'vocab', 'colloc', 'grammar',
     'tenses', 'habits', 'blitz', 'mediate', 'drills', 'analytics', 'cockpit', 'settings'
   ];
-
-  console.log('\n=== SCANNING ALL 16 MAIN APP ROUTES (360px VIEWPORT) ===\n');
-
-  for (const route of routes) {
-    await page.goto(`${BASE_URL}#${route}`, { waitUntil: 'networkidle0' });
-    await new Promise(r => setTimeout(r, 350));
-    const issues = await checkCurrentViewOverflow(page, route);
-    if (issues.length > 0) {
-      console.log(`[ROUTE #${route}] Found ${issues.length} overflow issues:`);
-      for (const i of issues.slice(0, 5)) console.log(`  - ${i.type}: ${i.text || i.detail}`);
-    } else {
-      console.log(`[ROUTE #${route}] ✓ ZERO OVERFLOWS`);
-    }
-  }
-
-  console.log('\n=== SCANNING ALL 9 IELTS APP ROUTES (ielts.html, 360px VIEWPORT) ===\n');
   const ieltsRoutes = ['home', 'diagnostic', 'reading', 'listening', 'writing', 'speaking', 'vocab', 'strategy', 'mock'];
-  for (const ir of ieltsRoutes) {
-    await page.goto(`${BASE_URL}ielts.html#${ir}`, { waitUntil: 'networkidle0' });
-    await new Promise(r => setTimeout(r, 350));
-    const issues = await checkCurrentViewOverflow(page, ir);
-    if (issues.length > 0) {
-      console.log(`[IELTS #${ir}] Found ${issues.length} overflow issues:`);
-      for (const i of issues.slice(0, 5)) console.log(`  - ${i.type}: ${i.text || i.detail}`);
-    } else {
-      console.log(`[IELTS #${ir}] ✓ ZERO OVERFLOWS`);
+
+  for (const locale of locales) {
+    console.log(`\n======================================================`);
+    console.log(`=== RUNNING OVERFLOW AUDIT: LOCALE = [ ${locale.toUpperCase()} ] ===`);
+    console.log(`======================================================\n`);
+
+    await page.goto(`${BASE_URL}#tree`, { waitUntil: 'networkidle0' });
+    await page.evaluate((loc) => {
+      localStorage.setItem('eng_locale', loc);
+      if (window.I18n) window.I18n.setLocale(loc);
+    }, locale);
+
+    console.log(`\n--- 16 Main App Routes (${locale}) ---`);
+    for (const route of routes) {
+      await page.goto(`${BASE_URL}#${route}`, { waitUntil: 'networkidle0' });
+      await new Promise(r => setTimeout(r, 350));
+      const issues = await checkCurrentViewOverflow(page, route);
+      if (issues.length > 0) {
+        console.log(`[ROUTE #${route}] Found ${issues.length} overflow issues:`);
+        for (const i of issues.slice(0, 5)) console.log(`  - ${i.type}: ${i.text || i.detail}`);
+      } else {
+        console.log(`[ROUTE #${route}] ✓ ZERO OVERFLOWS`);
+      }
+    }
+
+    console.log(`\n--- 9 IELTS App Routes (${locale}) ---`);
+    for (const ir of ieltsRoutes) {
+      await page.goto(`${BASE_URL}ielts.html#${ir}`, { waitUntil: 'networkidle0' });
+      await new Promise(r => setTimeout(r, 350));
+      const issues = await checkCurrentViewOverflow(page, ir);
+      if (issues.length > 0) {
+        console.log(`[IELTS #${ir}] Found ${issues.length} overflow issues:`);
+        for (const i of issues.slice(0, 5)) console.log(`  - ${i.type}: ${i.text || i.detail}`);
+      } else {
+        console.log(`[IELTS #${ir}] ✓ ZERO OVERFLOWS`);
+      }
     }
   }
 

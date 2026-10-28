@@ -25,6 +25,10 @@ export interface ContextualDockAction {
   accent?: boolean;
 }
 
+export function getRouteName(route: string): string {
+  return t(`nav.route_${route}`, undefined, ROUTE_NAMES[route] ?? route.toUpperCase());
+}
+
 const ROUTE_NAMES: Record<string, string> = {
   read: 'READING • Đọc hiểu',
   write: 'WRITING • Viết câu',
@@ -115,12 +119,12 @@ export class HeaderHUD {
       <div class="hud-brand" style="display: flex; align-items: center; gap: 8px;">
         ${!isTree ? `
           <button class="hud-btn btn-back-tree" title="${t('nav.back_to_constellation', undefined, 'Return to Constellation Tree')}" aria-label="${t('nav.back_to_constellation', undefined, 'Return to Constellation Tree')}">
-            <span class="back-arrow">←</span><span class="btn-label"> CONSTELLATION</span> TREE
+            <span class="back-arrow">←</span><span class="btn-label"> ${t('nav.constellation', undefined, 'CONSTELLATION')}</span> ${t('nav.tree', undefined, 'TREE').toUpperCase()}
           </button>
-          <span class="hud-status-badge active-route-badge" style="font-size: var(--font-kicker);">${ROUTE_NAMES[this.currentRoute] ?? this.currentRoute.toUpperCase()}</span>
+          <span class="hud-status-badge active-route-badge" style="font-size: var(--font-kicker);">${getRouteName(this.currentRoute)}</span>
         ` : `
           <span class="hud-brand-title" style="font-size: var(--font-body); font-weight: 700; letter-spacing: 0.1em; display: inline-flex; align-items: center; gap: 8px;">
-            <span style="color: var(--accent-gold); font-size: var(--font-body-compact);">✦</span> ENGLISH MASTERY
+            ${t('nav.brand_mastery', undefined, 'ENGLISH MASTERY')}
           </span>
         `}
         <button class="hud-btn btn-level" aria-haspopup="dialog" title="${t('nav.change_level', undefined, 'Your CEFR level (click to change)')}" aria-label="${t('nav.change_level', undefined, 'Change Level')}: ${CEFR_LABELS[StorageManager.getLearnerLevel()]}">${StorageManager.getLearnerLevel()}</button>
@@ -137,7 +141,7 @@ export class HeaderHUD {
       </div>
 
       <div class="hud-actions header-actions" style="display: flex; gap: 8px; align-items: center;">
-        <button class="hud-btn btn-streak-pill" title="${t('nav.daily_streak', undefined, 'Daily Streak')}: ${currentStreak} days. ${t('nav.view_workout', undefined, 'Click to view Daily Workout on Constellation Tree')}" aria-label="${t('nav.daily_streak', undefined, 'Daily Streak')}: ${currentStreak} days" /* aria-label="Daily Streak: ${currentStreak} days" */>
+        <button class="hud-btn btn-streak-pill" title="${t('nav.daily_streak', undefined, 'Daily Streak')}: ${currentStreak} days. ${t('nav.view_workout', undefined, 'Click to view Daily Workout on Constellation Tree')}" aria-label="Daily Streak: ${currentStreak} days">
           ${icon('flame', 13)} ${currentStreak}d
         </button>
         <button class="hud-btn btn-mobile-menu-drawer" title="${t('nav.mobile_menu', undefined, 'Open Mobile Navigation Menu')}" aria-label="${t('nav.mobile_menu', undefined, 'Open Mobile Navigation Menu')}" aria-haspopup="dialog">
@@ -217,6 +221,13 @@ export class HeaderHUD {
     }
   }
 
+  public static closeActiveOverlay(): void {
+    document.getElementById('mobile-nav-sheet')?.remove();
+    document.getElementById('profile-status-dialog')?.remove();
+    document.getElementById('profile-transfer-modal')?.remove();
+    document.getElementById('settings-dialog')?.remove();
+  }
+
   public setContextualDock(actions: ContextualDockAction[] | null): void {
     this.contextualActions = actions;
     const nav = this.element.querySelector<HTMLElement>('.hud-bottom-nav');
@@ -242,7 +253,7 @@ export class HeaderHUD {
       </button>
       ${this.contextualActions.map(act => `
         <button class="bnav-btn bnav-context-act ${act.accent ? 'is-accent' : ''}" data-act-id="${act.id}" aria-label="${act.label}">
-          <span class="bnav-icon">${act.iconHtml || '✦'}</span>
+          <span class="bnav-icon">${act.iconHtml || '☆'}</span>
           <span class="bnav-label">${act.label}</span>
         </button>
       `).join('')}
@@ -319,10 +330,10 @@ export class HeaderHUD {
 
   private static ambientLabel(mode: AmbientMusicMode): string {
     switch (mode) {
-      case 'calm-chords': return 'Chords';
-      case 'celestial-void': return 'Void';
-      case 'zen-drone': return 'Zen';
-      default: return 'Music';
+      case 'calm-chords': return t('ambient.chords', undefined, 'Chords');
+      case 'celestial-void': return t('ambient.void', undefined, 'Void');
+      case 'zen-drone': return t('ambient.zen', undefined, 'Zen');
+      default: return t('ambient.music', undefined, 'Music');
     }
   }
 
@@ -590,20 +601,22 @@ export class HeaderHUD {
     modal.innerHTML = `
       <div class="completion-receipt-card" style="max-width: 420px; width: 100%;">
         <div class="telemetry-label" style="margin-bottom: 8px;">${t('nav.change_level', undefined, 'YOUR LEVEL')}</div>
-        <div style="display: flex; flex-direction: column; gap: var(--space-8); margin-bottom: var(--space-12); width: 100%;">
+        <div class="action-stack" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; width: 100%;">
           <button class="hud-btn btn-open-placement-test" style="width: 100%; box-sizing: border-box; justify-content: center; padding: 10px 14px; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8);">
-            ${icon('compass', 14)} <span style="margin-left: 6px;">[ ${t('settings.reset_placement', undefined, 'TAKE 2-MIN QUICK PLACEMENT TEST')} ]</span>
+            ${icon('compass', 16)}<span>[ ${t('settings.reset_placement', undefined, 'TAKE 2-MIN QUICK PLACEMENT TEST')} ]</span>
           </button>
           <button class="hud-btn btn-open-skill-radar" style="width: 100%; box-sizing: border-box; justify-content: center; padding: 10px 14px; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
-            ${icon('target', 14)} <span style="margin-left: 6px;">[ ${t('dossier.celestial_radar', undefined, 'CELESTIAL RADAR & DIAGNOSTIC')} ]</span>
+            ${icon('target', 16)}<span>[ ${t('dossier.celestial_radar', undefined, 'CELESTIAL RADAR & DIAGNOSTIC')} ]</span>
           </button>
         </div>
-        <div style="width: 100%; display: flex; flex-direction: column; gap: var(--space-8); margin-bottom: var(--space-16);">
+        <div class="action-stack" style="width: 100%; display: flex; flex-direction: column; gap: 12px; margin-bottom: 18px;">
           ${CEFR_ORDER.map(l => `
             <button class="hud-btn level-option ${l === current ? 'active' : ''}" data-level="${l}" aria-pressed="${l === current}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 10px 14px; font-weight: 600;">${CEFR_LABELS[l]}</button>
           `).join('')}
         </div>
-        <button class="hud-btn btn-modal-close" style="width: 100%; justify-content: center; padding: 10px 0;">${t('common.cancel', undefined, 'Cancel')}</button>
+        <div class="apple-modal-footer">
+          <button type="button" class="apple-bottom-close-btn btn-modal-close">${t('common.cancel', undefined, 'Cancel')}</button>
+        </div>
       </div>
     `;
     document.body.appendChild(modal);
@@ -653,6 +666,9 @@ export class HeaderHUD {
     const progression = ProgressionEngine.getState();
     const opener = document.activeElement as HTMLElement | null;
 
+    // Dismiss any active floating toast notifications so they don't occlude modal header
+    document.querySelectorAll('.apple-toast, .streak-freeze-card, .toast-container').forEach(t => t.remove());
+
     const sheet = document.createElement('div');
     sheet.id = 'mobile-action-sheet';
     sheet.className = 'completion-modal-overlay interactive mobile-action-sheet-overlay';
@@ -661,76 +677,81 @@ export class HeaderHUD {
     sheet.setAttribute('aria-label', 'Mobile Navigation Menu');
 
     sheet.innerHTML = `
-      <div class="completion-receipt-card mobile-action-sheet" style="max-width: 500px; width: 92%; max-height: 85dvh; overflow-y: auto; padding: 20px; align-items: stretch; text-align: left; box-sizing: border-box;">
-        <div class="mobile-action-sheet-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%; box-sizing: border-box; margin-bottom: 16px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px;">
+      <div class="completion-receipt-card mobile-action-sheet" style="max-width: 500px; width: 92%; max-height: 85dvh; display: flex; flex-direction: column; overflow: hidden; padding: 20px; align-items: stretch; text-align: left; box-sizing: border-box;">
+        <div class="mobile-action-sheet-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%; box-sizing: border-box; margin-bottom: 16px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px; flex-shrink: 0;">
           <div style="display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1;">
             <span style="color: var(--accent-gold); display: flex; align-items: center;">${icon('sparkles', 16)}</span>
             <span class="telemetry-label" style="font-weight: 700; color: var(--ink-primary); white-space: normal;">${t('nav.mobile_controls', undefined, 'MOBILE CONTROLS')}</span>
           </div>
-          <button class="sheet-btn-close btn-modal-close" aria-label="${t('common.close', undefined, 'Close Mobile Menu')}" style="min-width: 44px; min-height: 44px; width: 44px; height: 44px; padding: 0; background: transparent; border: none; font-size: 16px; color: var(--ink-muted); cursor: pointer; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: color 0.15s ease; margin-left: auto; flex-shrink: 0;">✕</button>
         </div>
 
-        <div class="mobile-sheet-grid" style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="mobile-sheet-grid" style="display: flex; flex-direction: column; gap: 12px; overflow-y: auto; flex: 1; min-height: 0; padding-right: 2px;">
           <!-- Language Switcher Row -->
-          <button class="hud-btn sheet-btn-locale" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8); gap: 12px;">
+          <button class="hud-btn sheet-btn-locale" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8); gap: 8px;">
             ${icon('globe', 16)} <span>${t('settings.language', undefined, 'Language')}: ${I18n.getLocale() === 'en' ? 'English (EN)' : 'Tiếng Việt (VI)'}</span>
           </button>
 
           <!-- Study Workbenches & RPG Progression -->
-          <button class="hud-btn sheet-btn-progression" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; gap: 12px;">
+          <button class="hud-btn sheet-btn-progression" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; gap: 8px;">
             ${icon('zap', 16)} <span>${t('nav.level', undefined, 'Level')} ${progression.level} • ${progression.xp} XP ${t('widget.quests', undefined, 'Quests')}</span>
           </button>
-          <button class="hud-btn sheet-btn-mediation" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8); gap: 12px;">
+          <button class="hud-btn sheet-btn-mediation" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8); gap: 8px;">
             ${icon('scale', 16)} <span>${t('nav.cefr_mediation', undefined, 'CEFR Mediation Workbench')}</span>
           </button>
-          <button class="hud-btn sheet-btn-drills" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-gold); border-color: var(--accent-gold); gap: 12px;">
+          <button class="hud-btn sheet-btn-drills" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-gold); border-color: var(--accent-gold); gap: 8px;">
             ${icon('layers', 16)} <span>${t('nav.drills', undefined, 'Practice Drills, Sounds & Email')}</span>
           </button>
-          <button class="hud-btn sheet-btn-analytics" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-purple, #a855f7); border-color: var(--accent-purple, #a855f7); gap: 12px;">
+          <button class="hud-btn sheet-btn-analytics" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-purple, #a855f7); border-color: var(--accent-purple, #a855f7); gap: 8px;">
             ${icon('layers', 16)} <span>${t('nav.analytics_serl', undefined, 'CEFR Analytics & SERL Dashboard')}</span>
           </button>
-          <button class="hud-btn sheet-btn-tenses" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold); gap: 12px;">
+          <button class="hud-btn sheet-btn-tenses" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold); gap: 8px;">
             ${icon('clock', 16)} <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${t('dossier.twelve_tenses', undefined, '12 Tenses Master Vault')}</span>
           </button>
-          <button class="hud-btn sheet-btn-mistake-vault" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; color: var(--critical, #ef4444); border-color: var(--critical, #ef4444); gap: 12px;">
+          <button class="hud-btn sheet-btn-mistake-vault" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; color: var(--critical, #ef4444); border-color: var(--critical, #ef4444); gap: 8px;">
             ${icon('target', 16)} <span>${t('nav.mistake_vault', undefined, 'Smart Mistake Vault & Blitz')}</span>
           </button>
-          <button class="hud-btn sheet-btn-commute-audio" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold); gap: 12px;">
+          <button class="hud-btn sheet-btn-commute-audio" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold); gap: 8px;">
             ${icon('headphones', 16)} <span>${t('nav.commute_audio', undefined, 'Hands-Free Commute Audio Loop')}</span>
           </button>
 
           <div style="height: 1px; background: var(--border-hairline); margin: 4px 0;"></div>
 
           <!-- Secondary Audio & Immersion Controls -->
-          <button class="hud-btn sheet-btn-theme" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 12px;">
+          <button class="hud-btn sheet-btn-theme" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 8px;">
             ${currentTheme === 'dark' ? icon('sun', 16) : icon('moon', 16)} <span>${t('nav.theme_toggle', undefined, 'Toggle Theme')}: ${currentTheme === 'dark' ? t('settings.light', undefined, 'Light') : t('settings.dark', undefined, 'Dark')}</span>
           </button>
-          <button class="hud-btn sheet-btn-sound" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 12px;">
+          <button class="hud-btn sheet-btn-sound" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 8px;">
             ${isMuted ? icon('mute', 16) : icon('volume', 16)} <span>${t('settings.sound_music', undefined, 'Audio Sound Effects')}: ${isMuted ? t('nav.muted', undefined, 'Muted') : t('nav.enabled', undefined, 'Enabled')}</span>
           </button>
-          <button class="hud-btn sheet-btn-music" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 12px;">
+          <button class="hud-btn sheet-btn-music" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 8px;">
             ${icon('music', 16)} <span>${t('settings.ambient_music', undefined, 'Ambient Soundscape')}: ${HeaderHUD.ambientLabel(ambientMode)}</span>
           </button>
-          <button class="hud-btn sheet-btn-zen ${isZen ? 'active' : ''}" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 12px;">
+          <button class="hud-btn sheet-btn-zen ${isZen ? 'active' : ''}" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 8px;">
             ${icon('eye', 16)} <span>${t('nav.zen_immersion_mode', undefined, 'Zen Immersion Mode')}: ${isZen ? t('nav.active', undefined, 'Active') : t('nav.off', undefined, 'Off')}</span>
           </button>
-          <button class="hud-btn sheet-btn-tour" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 12px;">
+          <button class="hud-btn sheet-btn-tour" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 8px;">
             ${icon('compass', 16)} <span>${t('settings.reset_tour', undefined, 'Re-run Onboarding Tour')}</span>
           </button>
 
           <div style="height: 1px; background: var(--border-hairline); margin: 4px 0;"></div>
 
           <!-- Profile Portability & Settings -->
-          <button class="hud-btn sheet-btn-export" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-gold); border-color: var(--accent-gold); gap: 12px;">
+          <button class="hud-btn sheet-btn-export" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-gold); border-color: var(--accent-gold); gap: 8px;">
             ${icon('download', 16)} <span>[ ${t('settings.export_profile', undefined, 'EXPORT PROFILE (JSON)')} ]</span>
           </button>
-          <button class="hud-btn sheet-btn-import" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-cyan); border-color: var(--accent-cyan); gap: 12px;">
+          <button class="hud-btn sheet-btn-import" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-cyan); border-color: var(--accent-cyan); gap: 8px;">
             ${icon('upload', 16)} <span>[ ${t('settings.import_profile', undefined, 'IMPORT PROFILE (JSON)')} ]</span>
           </button>
           <input type="file" class="sheet-profile-file-input" accept=".json,application/json" style="display: none;" />
 
           <button class="hud-btn sheet-btn-settings" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; gap: 12px;">
             ${icon('settings', 16)} <span>${t('nav.settings_data_management', undefined, 'Settings & Data Management')}</span>
+          </button>
+        </div>
+
+        <div class="apple-modal-footer">
+          <button type="button" class="apple-bottom-close-btn btn-modal-close sheet-btn-close" aria-label="${t('common.close', undefined, 'Close')}">
+            ${t('common.close', undefined, 'Close')}
           </button>
         </div>
       </div>
@@ -753,9 +774,11 @@ export class HeaderHUD {
     };
     document.addEventListener('keydown', onKey, true);
 
-    sheet.querySelector('.sheet-btn-close')?.addEventListener('click', () => {
-      AudioSynthesizer.play('click');
-      close();
+    sheet.querySelectorAll('.btn-modal-close, .sheet-btn-close').forEach(btn => {
+      btn.addEventListener('click', () => {
+        AudioSynthesizer.play('click');
+        close();
+      });
     });
 
     sheet.addEventListener('click', (e) => {
@@ -902,8 +925,8 @@ export class HeaderHUD {
 
         <div style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
           <!-- Language Segmented Control -->
-          <div class="settings-locale-section" style="display: flex; flex-direction: column; gap: 8px; padding: 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-line); border-radius: 6px;">
-            <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-gold); letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px;">
+          <div class="settings-locale-section" style="display: flex; flex-direction: column; gap: 8px; padding: 12px; background: rgba(255,255,255,0.03); border: none; border-radius: var(--radius-squircle-sm, 10px);">
+            <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-gold); letter-spacing: 0.08em; text-transform: uppercase; display: flex; align-items: center; gap: 6px;">
               ${icon('globe', 12)} ${t('settings.language', undefined, 'LANGUAGE / NGÔN NGỮ')}
             </div>
             <div class="locale-segmented-control" style="display: flex; gap: 8px; width: 100%;">
@@ -916,23 +939,23 @@ export class HeaderHUD {
             </div>
           </div>
 
-          <button class="hud-btn btn-restart-placement" style="padding: 12px; justify-content: center; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8);">
+          <button class="hud-btn btn-restart-placement" style="padding: 12px; justify-content: center; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8); gap: 8px;">
             ${icon('target')} ${t('settings.reset_placement', undefined, 'Retake 2-Min Placement Assessment')}
           </button>
-          <button class="hud-btn btn-restart-tour" style="padding: 12px; justify-content: center; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
+          <button class="hud-btn btn-restart-tour" style="padding: 12px; justify-content: center; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold); gap: 8px;">
             ${icon('compass')} ${t('settings.reset_tour', undefined, 'Re-run Onboarding Tour')}
           </button>
-          <button class="hud-btn btn-notifications-toggle ${StorageManager.isNotificationsEnabled() ? 'active' : ''}" style="padding: 12px; justify-content: center; font-weight: 600;" aria-pressed="${StorageManager.isNotificationsEnabled()}">
-            🔔 Daily Review Alerts: ${StorageManager.isNotificationsEnabled() ? 'ON' : 'OFF'}
+          <button class="hud-btn btn-notifications-toggle ${StorageManager.isNotificationsEnabled() ? 'active' : ''}" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;" aria-pressed="${StorageManager.isNotificationsEnabled()}">
+            🔔 ${t('settings.daily_review_alerts', undefined, 'Daily Review Alerts')}: ${StorageManager.isNotificationsEnabled() ? t('settings.alerts_on', undefined, 'ON') : t('settings.alerts_off', undefined, 'OFF')}
           </button>
-          <button class="hud-btn btn-backup-export btn-profile-export" style="padding: 12px; justify-content: center; font-weight: 600;">
-            ${icon('download')} [ 💾 ${t('settings.export_profile', undefined, 'EXPORT PROFILE')} ]
+          <button class="hud-btn btn-backup-export btn-profile-export" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;">
+            ${icon('download', 16)} [ ${t('settings.export_profile', undefined, 'EXPORT PROFILE')} ]
           </button>
-          <button class="hud-btn btn-backup-import btn-profile-import" style="padding: 12px; justify-content: center; font-weight: 600;">
-            ${icon('upload')} [ 📥 ${t('settings.import_profile', undefined, 'IMPORT PROFILE')} ]
+          <button class="hud-btn btn-backup-import btn-profile-import" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;">
+            ${icon('upload', 16)} [ ${t('settings.import_profile', undefined, 'IMPORT PROFILE')} ]
           </button>
           <!-- Dual Audio Bus Controls -->
-          <div class="settings-audio-section" style="display: flex; flex-direction: column; gap: 12px; padding: 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-line); border-radius: 6px;">
+          <div class="settings-audio-section" style="display: flex; flex-direction: column; gap: 12px; padding: 12px; background: rgba(255,255,255,0.03); border: none; border-radius: var(--radius-squircle-sm, 10px);">
             <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-gold); letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px;">
               ${icon('volume', 12)} ${t('settings.sound_music', undefined, 'DUAL AUDIO BUS CONTROLS')}
             </div>
@@ -966,9 +989,11 @@ export class HeaderHUD {
             ${icon('zap')} <span class="motion-label">${document.documentElement.dataset.motion === 'reduce' ? t('settings.reduced_motion', undefined, 'Motion: Reduced') : t('settings.motion', undefined, 'Motion: Full')}</span>
           </button>
 
-          <button class="hud-btn btn-modal-close" style="width: 100%; justify-content: center; padding: 12px; font-weight: 600;">
-            ${t('settings.close', undefined, 'Close Settings')}
-          </button>
+          <div class="apple-modal-footer">
+            <button type="button" class="apple-bottom-close-btn btn-modal-close">
+              ${t('settings.close', undefined, 'Close Settings')}
+            </button>
+          </div>
           <input type="file" class="backup-file-input" accept=".json,application/json" style="display: none;" />
         </div>
       </div>
@@ -1237,8 +1262,8 @@ export class HeaderHUD {
           <div class="telemetry-label" style="color: ${typeColor}; font-weight: 700;">${options.title}</div>
         </div>
         <div style="font-size: var(--font-h4); line-height: 1.6; color: var(--ink-primary); margin-bottom: 20px; white-space: pre-line;">${options.message}</div>
-        <button class="hud-btn btn-status-confirm" style="width: 100%; justify-content: center; padding: 10px 0; font-weight: 700; color: ${typeColor}; border-color: ${typeColor};">
-          OK
+        <button class="hud-btn btn-status-confirm" style="width: 100%; justify-content: center; padding: 10px 0; font-weight: 700; color: ${typeColor}; border-color: ${typeColor}; border-radius: var(--radius-btn, 10px);">
+          ${t('common.ok', undefined, 'OK')}
         </button>
       </div>
     `;

@@ -30,13 +30,33 @@
   --cyan: #a5b4fc;
   --cyan-soft: rgba(165, 180, 252, 0.16);
 
-  /* Status Tokens */
+  /* Status Tokens & WCAG 2.2 AAA Contrast Pairs (Dark Mode) */
   --good: #34d399;
   --good-soft: rgba(52, 211, 153, 0.16);
+  --good-border: rgba(52, 211, 153, 0.35);
   --warning: #fbbf24;
   --warning-soft: rgba(251, 191, 36, 0.16);
+  --warning-border: rgba(251, 191, 36, 0.35);
   --critical: #f87171;
   --critical-soft: rgba(248, 113, 113, 0.16);
+  --critical-border: rgba(248, 113, 113, 0.35);
+  --info: #60a5fa;
+  --info-soft: rgba(96, 165, 250, 0.16);
+  --info-border: rgba(96, 165, 250, 0.35);
+
+  /* Semantic Ink on Status (High Contrast Text) */
+  --ink-good: #34d399;
+  --ink-warning: #fbbf24;
+  --ink-critical: #f87171;
+  --ink-info: #60a5fa;
+  --ink-on-good: #064e3b;
+  --ink-on-warning: #78350f;
+  --ink-on-critical: #ffffff;
+  --ink-on-info: #ffffff;
+
+  /* Skeleton Loading & Shimmer Tokens (Dark Mode) */
+  --shimmer-base: rgba(255, 255, 255, 0.05);
+  --shimmer-highlight: rgba(255, 255, 255, 0.12);
 
   /* Architectural Borders & Lines */
   --border-hairline: rgba(255, 255, 255, 0.06);
@@ -54,6 +74,7 @@
   --radius-full: 9999px;  /* Pill buttons, avatar rings */
   --radius-pill: 9999px;  /* Canonical pill alias */
   --radius-squircle-sm: 10px;
+  --radius-btn: 10px;     /* Canonical unified button radius */
   --radius-squircle-md: 16px;
   --radius-squircle-lg: 24px;
 
@@ -188,11 +209,25 @@
   --duration-fast: 180ms;
   --duration-normal: 260ms;
 
-  /* HUD Specific Z-Indices */
+  /* ========================================================================
+     CANONICAL Z-INDEX HIERARCHY SCALE
+     Predictable stacking context preventing arbitrary numbers (9999, 100005)
+     ======================================================================== */
+  --z-sunk: -1;
+  --z-base: 0;
   --z-canvas-bg: 1;
+  --z-surface: 5;
   --z-hud-base: 10;
-  --z-card-layer: 50;
-  --z-modal-lens: 100;
+  --z-sticky: 100;
+  --z-card-layer: 200;
+  --z-bottom-nav: 400;
+  --z-dropdown: 500;
+  --z-drawer: 600;
+  --z-modal-backdrop: 800;
+  --z-modal: 900;
+  --z-modal-lens: 900;
+  --z-toast: 1000;
+  --z-tooltip: 1100;
   --z-cursor: 9999;
 }
 
@@ -222,13 +257,33 @@ html[data-theme="light"] {
   --cyan: #5b5bd6;
   --cyan-soft: rgba(91, 91, 214, 0.12);
 
-  /* Status Tokens */
+  /* Status Tokens & WCAG 2.2 AAA Contrast Pairs (Light Mode) */
   --good: #10b981;
   --good-soft: rgba(16, 185, 129, 0.12);
+  --good-border: rgba(16, 185, 129, 0.35);
   --warning: #f59e0b;
   --warning-soft: rgba(245, 158, 11, 0.12);
+  --warning-border: rgba(245, 158, 11, 0.35);
   --critical: #ef4444;
   --critical-soft: rgba(239, 68, 68, 0.12);
+  --critical-border: rgba(239, 68, 68, 0.35);
+  --info: #2563eb;
+  --info-soft: rgba(37, 99, 235, 0.10);
+  --info-border: rgba(37, 99, 235, 0.30);
+
+  /* Semantic Ink on Status (Light Mode WCAG 4.5:1+ Floor) */
+  --ink-good: #047857;
+  --ink-warning: #92400e;
+  --ink-critical: #b91c1c;
+  --ink-info: #1d4ed8;
+  --ink-on-good: #ffffff;
+  --ink-on-warning: #ffffff;
+  --ink-on-critical: #ffffff;
+  --ink-on-info: #ffffff;
+
+  /* Skeleton Loading & Shimmer Tokens (Light Mode) */
+  --shimmer-base: rgba(15, 23, 42, 0.06);
+  --shimmer-highlight: rgba(15, 23, 42, 0.14);
 
   /* Architectural Borders & Lines */
   --border-hairline: rgba(15, 23, 42, 0.10);
@@ -243,6 +298,7 @@ html[data-theme="light"] {
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
+  --radius-btn: 10px;
   --radius-full: 9999px;
 
   /* Elevation Shadows & Luminous Glows */

@@ -100,12 +100,13 @@ function pie(c: Task1Chart): string {
   const labels = c.labels!;
   const vals = c.series![0].values;
   const total = vals.reduce((a, b) => a + b, 0);
+  const safeTotal = total > 0 ? total : 1;
   let a0 = -Math.PI / 2;
   const R = 110;
   const cx = 160;
   const cy = 150;
   const slices = vals.map((v, i) => {
-    const a1 = a0 + (v / total) * Math.PI * 2;
+    const a1 = a0 + (v / safeTotal) * Math.PI * 2;
     const large = a1 - a0 > Math.PI ? 1 : 0;
     const d = `M${cx},${cy} L${cx + R * Math.cos(a0)},${cy + R * Math.sin(a0)} A${R},${R} 0 ${large} 1 ${cx + R * Math.cos(a1)},${cy + R * Math.sin(a1)} Z`;
     a0 = a1;

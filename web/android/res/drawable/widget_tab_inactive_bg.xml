@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Transparent inactive tab (zero double outline) -->
+<!-- File Explorer Inactive Folder Tab: Recessed tab -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
-    <solid android:color="#00000000" />
+    <solid android:color="#11151e" />
+    <corners
+        android:topLeftRadius="7dp"
+        android:topRightRadius="7dp"
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="0dp" />
+    <stroke
+        android:width="1dp"
+        android:color="#202636" />
 </shape>

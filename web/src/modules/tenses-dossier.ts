@@ -154,10 +154,10 @@ export class TensesDossier {
           <button class="hud-btn view-toggle-btn ${this.viewMode === 'drill' ? 'active' : ''}" data-view="drill" style="white-space: nowrap;">
             ${icon('dice', 13)} ${t('tenses.random_drill', { count: this.currentPool.length })}
           </button>
-          <button class="hud-btn view-toggle-btn ${this.viewMode === 'gauntlet' ? 'active' : ''}" data-view="gauntlet" style="white-space: nowrap;">
+          <button class="hud-btn view-toggle-btn ${this.viewMode === 'gauntlet' ? 'active' : ''}" data-view="gauntlet" data-mode="gauntlet" style="white-space: nowrap;">
             ${icon('target', 13)} ${t('tenses.gauntlet')}
           </button>
-          <button class="hud-btn view-toggle-btn ${this.viewMode === 'reference' ? 'active' : ''}" data-view="reference" style="white-space: nowrap;">
+          <button class="hud-btn view-toggle-btn ${this.viewMode === 'reference' ? 'active' : ''}" data-view="reference" data-mode="codex" style="white-space: nowrap;">
             ${icon('book', 13)} ${t('tenses.codex')}
           </button>
         </div>
@@ -332,9 +332,9 @@ export class TensesDossier {
         <div class="tenses-card-question">
           <!-- Gauntlet Header & Progress Bar -->
           <div class="gauntlet-progress-cluster">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-              <span class="telemetry-label" style="font-weight: 700; color: var(--accent-gold); display: flex; align-items: center; gap: 6px;">${icon('target', 14)} 12-Tense Mastery · Question ${this.gauntletIndex + 1} of 12</span>
-              <span class="telemetry-value">${progressPct}% complete</span>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; gap: 8px;">
+              <span class="telemetry-label" style="font-weight: 700; color: var(--accent-gold); display: flex; align-items: center; gap: 6px;">${icon('target', 14)} Question ${this.gauntletIndex + 1} of 12</span>
+              <span class="telemetry-value" style="white-space: nowrap; font-weight: 600;">${progressPct}% complete</span>
             </div>
             <div class="gauntlet-progress-track" style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
               <div class="gauntlet-progress-fill" style="width: ${progressPct}%; height: 100%; background: var(--accent-gold); transition: width 0.3s ease;"></div>
@@ -355,7 +355,7 @@ export class TensesDossier {
 
           ${q.signal ? `
             <div class="tenses-signal-pill">
-              <span class="telemetry-label" style="color: var(--accent-gold);">${icon('target', 12)} KEYWORD SIGNAL:</span>
+              <span class="telemetry-label" style="color: var(--accent-gold);">${icon('target', 12)} Keyword signal:</span>
               <strong style="color: var(--ink-primary);">${this.escapeHtml(q.signal)}</strong>
             </div>
           ` : ''}
@@ -432,7 +432,7 @@ export class TensesDossier {
       <div class="gauntlet-scorecard-wrap" style="width: 100%; max-width: 820px; margin: 0 auto;">
         <div class="tenses-card-question" style="text-align: center; gap: 20px;">
           <div class="telemetry-label" style="font-size: var(--font-h4); color: var(--accent-gold); display: flex; align-items: center; justify-content: center; gap: 8px;">
-            ${icon('target', 16)} 12-TENSE GAUNTLET DIAGNOSTIC RECEIPT
+            ${icon('target', 16)} ${t('tenses.receipt_title', undefined, '12-TENSE GAUNTLET DIAGNOSTIC RECEIPT')}
           </div>
 
           <div style="font-size: var(--font-h1); font-weight: 800; color: ${gradeColor}; font-family: var(--font-mono);">
@@ -458,13 +458,13 @@ export class TensesDossier {
 
           <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
             <button class="hud-btn btn-restart-gauntlet" style="background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; padding: 12px 24px; display: inline-flex; align-items: center; gap: 8px;">
-              ${icon('target', 14)} RE-TAKE 12-TENSE GAUNTLET
+              ${icon('target', 14)} ${t('tenses.retake_gauntlet', undefined, 'RE-TAKE 12-TENSE GAUNTLET')}
             </button>
             <button class="hud-btn btn-go-codex" style="padding: 12px 24px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
-              ${icon('sparkles', 14)} VIEW 12 TENSES CODEX
+              ${icon('sparkles', 14)} ${t('tenses.view_codex', undefined, 'VIEW 12 TENSES CODEX')}
             </button>
             <button class="hud-btn btn-go-drill" style="padding: 12px 24px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
-              ${icon('dice', 14)} FREE RANDOM DRILL
+              ${icon('dice', 14)} ${t('tenses.free_drill', undefined, 'FREE RANDOM DRILL')}
             </button>
           </div>
         </div>
@@ -748,4 +748,27 @@ export class TensesDossier {
   public teardown(): void {
     // Clean up handles if needed
   }
+
+  public showSampleScorecard(): void {
+    this.viewMode = 'gauntlet';
+    this.gauntletCompleted = true;
+    this.gauntletResults = [
+      { tenseId: 't1', tenseName: 'Present Simple', isCorrect: true },
+      { tenseId: 't2', tenseName: 'Present Continuous', isCorrect: true },
+      { tenseId: 't3', tenseName: 'Present Perfect', isCorrect: true },
+      { tenseId: 't4', tenseName: 'Present Perfect Continuous', isCorrect: true },
+      { tenseId: 't5', tenseName: 'Past Simple', isCorrect: true },
+      { tenseId: 't6', tenseName: 'Past Continuous', isCorrect: true },
+      { tenseId: 't7', tenseName: 'Past Perfect', isCorrect: true },
+      { tenseId: 't8', tenseName: 'Past Perfect Continuous', isCorrect: false },
+      { tenseId: 't9', tenseName: 'Future Simple', isCorrect: true },
+      { tenseId: 't10', tenseName: 'Future Continuous', isCorrect: true },
+      { tenseId: 't11', tenseName: 'Future Perfect', isCorrect: true },
+      { tenseId: 't12', tenseName: 'Future Perfect Continuous', isCorrect: true }
+    ];
+    this.render();
+  }
 }
+
+(window as any).TensesDossier = TensesDossier;
+

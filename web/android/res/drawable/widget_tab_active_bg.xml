@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Clean elevated tab pill (zero double outline) -->
+<!-- File Explorer Active Folder Tab: Top rounded, elevated surface, accent border -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
-    <solid android:color="#242c3f" />
-    <corners android:radius="7dp" />
+    <solid android:color="#182030" />
+    <corners
+        android:topLeftRadius="8dp"
+        android:topRightRadius="8dp"
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="0dp" />
+    <stroke
+        android:width="1dp"
+        android:color="#2d384e" />
 </shape>

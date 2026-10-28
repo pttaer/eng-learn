@@ -289,20 +289,9 @@ export function playText(text: string, opts?: PlayTextOptions): Playback {
  * and clears ambient exam audio across views.
  */
 export function stopAll(): void {
-  activePlaybacks.forEach(p => {
-    try {
-      p.stop();
-    } catch {}
-  });
+  activePlaybacks.forEach(p => p.stop());
   activePlaybacks.clear();
   if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-    try {
-      window.speechSynthesis.cancel();
-    } catch {}
-  }
-  if (!roomAmbienceEnabled) {
-    try {
-      AudioSynthesizer.playExamRoomAmbience(false);
-    } catch {}
+    try { window.speechSynthesis.cancel(); } catch {}
   }
 }

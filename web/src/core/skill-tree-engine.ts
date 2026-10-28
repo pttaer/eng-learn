@@ -167,7 +167,7 @@ export class SkillTreeEngine {
     }
 
     const totalNodes = allNodes.length; // 25
-    const progressPct = Math.round((masteredCount / totalNodes) * 100);
+    const progressPct = totalNodes > 0 ? Math.round((masteredCount / totalNodes) * 100) : 0;
 
     // Progress titles only; the learner's CEFR level is shown separately in the header
     let currentRank = 'Explorer';

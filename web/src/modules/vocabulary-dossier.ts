@@ -242,12 +242,12 @@ export class VocabularyDossier {
       statusBadge,
       hideFrontRating: true,
       front: {
-        promptLabel: isRemind ? 'RETRIEVAL ENGRAM CHECK' : 'CHALLENGE // RECALL & DECONSTRUCT',
+        promptLabel: isRemind ? t('vocab.engram_check', undefined, 'RETRIEVAL ENGRAM CHECK') : t('vocab.prompt_label', undefined, 'CHALLENGE // RECALL & DECONSTRUCT'),
         mainText: item.wordOrChunk,
         subText: item.contextSentence
       },
       back: {
-        promptLabel: 'SEMANTIC MATRIX & MORPHOLOGY',
+        promptLabel: t('vocab.semantic_matrix', undefined, 'SEMANTIC MATRIX & MORPHOLOGY'),
         mainText: `${item.definition}\n\n${t('feedback.vietnamese_translation')}: "${item.vietnamese}"`,
         subText: backSubText,
         ipa: item.ipa

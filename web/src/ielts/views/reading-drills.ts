@@ -413,6 +413,12 @@ export const READING_DRILLS: ReadingDrillItem[] = [
   }
 ];
 
+function getOrderCategoryLabel(cat: string): string {
+  if (cat === 'Sequential') return t('rdrills.order_sequential', undefined, 'Sequential');
+  if (cat === 'Mainly Sequential') return t('rdrills.order_mainly_sequential', undefined, 'Mainly Sequential');
+  return t('rdrills.order_global', undefined, 'Global / Non-Sequential');
+}
+
 export function readingDrillsView(root: HTMLElement): () => void {
   let currentDrillIndex = 0;
   const userAnswers: Record<string, string | string[]> = {};
@@ -428,9 +434,9 @@ export function readingDrillsView(root: HTMLElement): () => void {
   const head = h('header', 'ie-drills-header');
   head.innerHTML = `
     <div class="ie-drills-title-group">
-      <div class="ie-badge-band ie-badge-reading-tag">READING LAB</div>
-      <h1 class="ie-title">14 Reading Question-Type Attack Drills</h1>
-      <p class="ie-lead">Master Keino Campbell’s Band 7+ tactical algorithms for all 14 Academic Reading question types. Featuring live passage scanning, instant synonym matrix mapping, and granular examiner error deconstruction.</p>
+      <div class="ie-badge-band ie-badge-reading-tag">${t('rdrills.badge', undefined, 'READING LAB')}</div>
+      <h1 class="ie-title">${t('rdrills.title', undefined, '14 Reading Question-Type Attack Drills')}</h1>
+      <p class="ie-lead">${t('rdrills.lead', undefined, 'Master Keino Campbell’s Band 7+ tactical algorithms for all 14 Academic Reading question types. Featuring live passage scanning, instant synonym matrix mapping, and granular examiner error deconstruction.')}</p>
     </div>
   `;
   container.append(head);
@@ -440,12 +446,12 @@ export function readingDrillsView(root: HTMLElement): () => void {
   hud.innerHTML = `
     <div class="ie-hud-metric">
       <span class="ie-hud-num" id="drills-mastered-count">0 / 14</span>
-      <span class="ie-hud-label">Drills Mastered</span>
+      <span class="ie-hud-label">${t('rdrills.drills_mastered', undefined, 'Drills Mastered')}</span>
     </div>
     <div class="ie-hud-actions">
-      <a href="#reading" class="ie-btn ie-btn-sm ie-btn-back"><span class="ie-back-arrow">←</span> Back to Full Passages</a>
+      <a href="#reading" class="ie-btn ie-btn-sm ie-btn-back"><span class="ie-back-arrow">←</span> ${t('rdrills.btn_back_passages', undefined, 'Back to Full Passages')}</a>
       <button type="button" class="ie-btn ie-btn-sm" id="btn-toggle-synonyms" aria-pressed="false">
-        🔄 Toggle Synonym Engine
+        🔄 ${t('rdrills.btn_toggle_synonyms', undefined, 'Toggle Synonym Engine')}
       </button>
     </div>
   `;
@@ -518,11 +524,11 @@ export function readingDrillsView(root: HTMLElement): () => void {
     const metaStrip = h('div', 'ie-drill-meta-strip');
     metaStrip.innerHTML = `
       <div class="ie-drill-tags">
-        <span class="ie-pill ie-pill-type">Question Type ${drill.typeNumber} of 14</span>
-        <span class="ie-pill ie-pill-order">${esc(drill.orderCategory)}</span>
+        <span class="ie-pill ie-pill-type">${t('rdrills.type_badge', { type: drill.typeNumber }, `Question Type ${drill.typeNumber} of 14`)}</span>
+        <span class="ie-pill ie-pill-order">${esc(getOrderCategoryLabel(drill.orderCategory))}</span>
       </div>
       <div class="ie-drill-rule">
-        <b>📐 Tactical Rule:</b> <span>${esc(drill.ruleSnippet)}</span>
+        <b>📐 ${t('rdrills.tactical_rule', undefined, 'Tactical Rule:')}</b> <span>${esc(drill.ruleSnippet)}</span>
       </div>
     `;
 
@@ -545,8 +551,8 @@ export function readingDrillsView(root: HTMLElement): () => void {
 
     passageCol.innerHTML = `
       <div class="ie-passage-head">
-        <h3>Passage Excerpt</h3>
-        <small class="ie-note">Authentic Academic IELTS Reading Context</small>
+        <h3>${t('rdrills.passage_head', undefined, 'Passage Excerpt')}</h3>
+        <small class="ie-note">${t('rdrills.passage_note', undefined, 'Authentic Academic IELTS Reading Context')}</small>
       </div>
       <div class="ie-passage-body">
         <p>${formattedPassage}</p>
@@ -557,13 +563,13 @@ export function readingDrillsView(root: HTMLElement): () => void {
     const synMatrix = h('div', 'ie-syn-matrix');
     synMatrix.hidden = !isSynonymActive;
     synMatrix.innerHTML = `
-      <h4>🔄 Active Exam Synonym Mapping Engine</h4>
+      <h4>🔄 ${t('rdrills.syn_engine_title', undefined, 'Active Exam Synonym Mapping Engine')}</h4>
       <div class="ie-table-wrap">
         <table class="ie-table ie-synonym-table">
           <thead>
             <tr>
-              <th>Question Stem Phrase</th>
-              <th>Passage Counterpart (Paraphrase)</th>
+              <th>${t('rdrills.col_stem_phrase', undefined, 'Question Stem Phrase')}</th>
+              <th>${t('rdrills.col_passage_counterpart', undefined, 'Passage Counterpart (Paraphrase)')}</th>
             </tr>
           </thead>
           <tbody>
@@ -644,8 +650,8 @@ export function readingDrillsView(root: HTMLElement): () => void {
       input.type = 'text';
       input.className = 'ie-input ie-drill-text-input';
       input.id = 'drill-text-input';
-      input.placeholder = 'Type exact words lifted directly from the text...';
-      input.setAttribute('aria-label', 'Your answer');
+      input.placeholder = t('rdrills.input_placeholder', undefined, 'Type exact words lifted directly from the text...');
+      input.setAttribute('aria-label', t('rdrills.input_aria', undefined, 'Your answer'));
       if (typeof userAnswers[drill.id] === 'string') {
         input.value = userAnswers[drill.id] as string;
       }
@@ -675,7 +681,7 @@ export function readingDrillsView(root: HTMLElement): () => void {
       }
     });
 
-    const nextBtn = h('button', 'ie-btn ie-btn-sm', `${t('common.next', undefined, 'Next Drill')} →`);
+    const nextBtn = h('button', 'ie-btn ie-btn-sm', `${t('rdrills.next_drill', undefined, 'Next Drill')} →`);
     nextBtn.disabled = currentDrillIndex === READING_DRILLS.length - 1;
     nextBtn.addEventListener('click', () => {
       if (currentDrillIndex < READING_DRILLS.length - 1) {
@@ -755,16 +761,16 @@ export function readingDrillsView(root: HTMLElement): () => void {
   function renderFeedback(box: HTMLElement, drill: ReadingDrillItem, isCorrect: boolean): void {
     box.innerHTML = `
       <div class="ie-feedback-banner ${isCorrect ? 'is-correct' : 'is-incorrect'}">
-        <span class="ie-eval-verdict">${isCorrect ? '✓ Correct Answer' : '✗ Incorrect Attempt'}</span>
-        <span class="ie-eval-band-badge">${isCorrect ? 'Band 8.0+ Precision' : 'Needs Calibration'}</span>
+        <span class="ie-eval-verdict">${isCorrect ? t('rdrills.correct_verdict', undefined, '✓ Correct Answer') : t('rdrills.incorrect_verdict', undefined, '✗ Incorrect Attempt')}</span>
+        <span class="ie-eval-band-badge">${isCorrect ? t('rdrills.badge_precision', undefined, 'Band 8.0+ Precision') : t('rdrills.badge_needs_calibration', undefined, 'Needs Calibration')}</span>
       </div>
       <div class="ie-feedback-body">
         <div class="ie-feedback-section">
-          <h4>${icon('lightbulb', 14)} Examiner Rationale &amp; Cognitive Match:</h4>
+          <h4>${icon('lightbulb', 14)} ${t('rdrills.rationale_title', undefined, 'Examiner Rationale &amp; Cognitive Match:')}</h4>
           <p>${esc(drill.rationale)}</p>
         </div>
         <div class="ie-feedback-section ie-trap-warning">
-          <h4>${icon('alertTriangle', 14)} Examiner Trap Deconstruction:</h4>
+          <h4>${icon('alertTriangle', 14)} ${t('rdrills.trap_title', undefined, 'Examiner Trap Deconstruction:')}</h4>
           <p>${esc(drill.trapExplanation)}</p>
         </div>
       </div>

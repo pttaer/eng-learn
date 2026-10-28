@@ -1,5 +1,6 @@
 import { HapticEngine } from './haptic-engine';
 import { icon } from '../utils/icons';
+import { t } from './i18n';
 
 export interface CommuteAudioItem {
   id: string;
@@ -331,7 +332,7 @@ export class CommuteAudioPlayer {
     if (indexEl) indexEl.textContent = `${this.currentIndex + 1} / ${this.playlist.length}`;
     if (playBtn) {
       playBtn.innerHTML = this.isPlaying ? icon('pause', 22) : icon('play', 22);
-      playBtn.setAttribute('aria-label', this.isPlaying ? 'Pause Loop' : 'Play Loop');
+      playBtn.setAttribute('aria-label', this.isPlaying ? t('commute.pause_loop', undefined, 'Pause Loop') : t('commute.play_loop', undefined, 'Play Loop'));
     }
   }
 
@@ -341,10 +342,10 @@ export class CommuteAudioPlayer {
     container.innerHTML = `
       <div class="commute-player-header">
         <div class="commute-brand-group">
-          <span class="commute-kicker">HANDS-FREE COMMUTE & WALK</span>
-          <h2 class="commute-title">${icon('headphones', 18)} Autonomous Audio Loop</h2>
+          <span class="commute-kicker">${t('commute.kicker', undefined, 'HANDS-FREE COMMUTE & WALK')}</span>
+          <h2 class="commute-title">${icon('headphones', 18)} ${t('commute.title', undefined, 'Autonomous Audio Loop')}</h2>
         </div>
-        <button type="button" class="commute-btn-close" aria-label="Close Audio Player">✕</button>
+        <button type="button" class="commute-btn-close" aria-label="${t('commute.close_player', undefined, 'Close Audio Player')}">✕</button>
       </div>
 
       <div class="commute-display-card">
@@ -354,12 +355,12 @@ export class CommuteAudioPlayer {
         </div>
 
         <div class="commute-prompt-wrapper">
-          <span class="commute-sub-label">PROMPT // ACTIVE RECALL</span>
+          <span class="commute-sub-label">${t('commute.prompt_label', undefined, 'PROMPT // ACTIVE RECALL')}</span>
           <div class="commute-item-prompt">${item.prompt}</div>
         </div>
 
         <div class="commute-answer-wrapper">
-          <span class="commute-sub-label">TARGET RESOLUTION</span>
+          <span class="commute-sub-label">${t('commute.target_resolution', undefined, 'TARGET RESOLUTION')}</span>
           <div class="commute-item-answer">${item.answer}</div>
           <div class="commute-item-meaning">${item.meaning}</div>
         </div>
@@ -367,7 +368,7 @@ export class CommuteAudioPlayer {
 
       <div class="commute-controls-row">
         <button type="button" class="commute-btn-ctrl commute-btn-prev" aria-label="Previous Track">${icon('skipBack', 20)}</button>
-        <button type="button" class="commute-btn-ctrl commute-btn-play" aria-label="${this.isPlaying ? 'Pause' : 'Play'}">
+        <button type="button" class="commute-btn-ctrl commute-btn-play" aria-label="${this.isPlaying ? t('commute.pause_loop', undefined, 'Pause Loop') : t('commute.play_loop', undefined, 'Play Loop')}">
           ${this.isPlaying ? icon('pause', 22) : icon('play', 22)}
         </button>
         <button type="button" class="commute-btn-ctrl commute-btn-next" aria-label="Next Track">${icon('skipForward', 20)}</button>
@@ -375,7 +376,7 @@ export class CommuteAudioPlayer {
 
       <div class="commute-settings-grid">
         <div class="commute-setting-item">
-          <span class="setting-label">Recall Pause</span>
+          <span class="setting-label">${t('commute.recall_pause', undefined, 'Recall Pause')}</span>
           <div class="commute-pill-group">
             <button type="button" class="pill-btn ${this.delayMs === 2000 ? 'is-active' : ''}" data-delay="2000">2s</button>
             <button type="button" class="pill-btn ${this.delayMs === 3000 ? 'is-active' : ''}" data-delay="3000">3s</button>
@@ -384,7 +385,7 @@ export class CommuteAudioPlayer {
         </div>
 
         <div class="commute-setting-item">
-          <span class="setting-label">Voice Speed</span>
+          <span class="setting-label">${t('commute.voice_speed', undefined, 'Voice Speed')}</span>
           <div class="commute-pill-group">
             <button type="button" class="pill-btn ${this.speechRate === 0.8 ? 'is-active' : ''}" data-rate="0.8">0.8x</button>
             <button type="button" class="pill-btn ${this.speechRate === 1.0 ? 'is-active' : ''}" data-rate="1.0">1.0x</button>

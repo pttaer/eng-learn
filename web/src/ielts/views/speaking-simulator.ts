@@ -15,6 +15,7 @@
 import { h, esc, fmtTime, countdown, Countdown } from '../ui';
 import { playText, Playback } from '../tts';
 import { AcousticEngine } from '../../core/acoustic-engine';
+import { t } from '../../core/i18n';
 
 // ============================================================================
 // DATA STRUCTURES & INTERFACES
@@ -555,7 +556,7 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
     // Header HUD
     const header = h('div', 'ie-sim-header');
     const titleRow = h('div', 'ie-sim-nav-row');
-    const backBtn = h('button', 'ie-btn ie-btn-back', '<span class="ie-back-arrow">←</span> Back to Speaking');
+    const backBtn = h('button', 'ie-btn ie-btn-back', `<span class="ie-back-arrow">←</span> ${t('sim.back_to_speaking', undefined, 'Back to Speaking')}`);
     backBtn.addEventListener('click', () => {
       stopActiveAudio();
       engine.dispose();
@@ -563,22 +564,22 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
       else location.hash = '#speaking';
     });
 
-    const badge = h('span', 'ie-sim-badge', 'Band 7.0–8.5+ Simulator');
+    const badge = h('span', 'ie-sim-badge', t('sim.badge', undefined, 'Band 7.0–8.5+ Simulator'));
     titleRow.append(backBtn, badge);
 
     const intro = h('div', 'ie-sim-intro');
     intro.append(
-      h('h1', 'ie-title', 'IELTS Speaking Examiner Simulator'),
-      h('p', 'ie-lead', 'Interactive examination room practicing Keino Campbell Band 7+ formulas with real-time feedback.')
+      h('h1', 'ie-title', t('sim.title', undefined, 'IELTS Speaking Examiner Simulator')),
+      h('p', 'ie-lead', t('sim.lead', undefined, 'Interactive examination room practicing Keino Campbell Band 7+ formulas with real-time feedback.'))
     );
 
     // Mode Navigation Tabs
     const navRow = h('div', 'ie-tabs ie-sim-tabs');
     const modes = [
-      { id: 'part1', label: 'Part 1: Interview Drill' },
-      { id: 'part2', label: 'Part 2: Cue Card Lab' },
-      { id: 'part3', label: 'Part 3: Abstract & Fillers' },
-      { id: 'deconstruct', label: 'Comparative Deconstruction' }
+      { id: 'part1', label: t('sim.tab_part1', undefined, 'Part 1: Interview Drill') },
+      { id: 'part2', label: t('sim.tab_part2', undefined, 'Part 2: Cue Card Lab') },
+      { id: 'part3', label: t('sim.tab_part3', undefined, 'Part 3: Abstract & Fillers') },
+      { id: 'deconstruct', label: t('sim.tab_deconstruct', undefined, 'Comparative Deconstruction') }
     ];
 
     const contentArea = h('div', 'ie-sim-panel');
@@ -621,19 +622,19 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
 
     const card = h('div', 'ie-passage');
     card.append(
-      h('div', 'ie-testbar', `<span class="ie-plabel">Part 1 Focus</span><strong>Topic: ${esc(prompt.topic)}</strong>`),
+      h('div', 'ie-testbar', `<span class="ie-plabel">${t('sim.p1_focus', undefined, 'Part 1 Focus')}</span><strong>${t('sim.topic_label', { topic: esc(prompt.topic) }, `Topic: ${esc(prompt.topic)}`)}</strong>`),
       h('p', 'ie-cue', esc(prompt.question)),
-      h('p', 'ie-note', '<b>Formula Mandate:</b> Direct Answer + 2–3 sentence extension (20–30s). Avoid 1-word truncation ("Yes", "London") and long rambling monologues.')
+      h('p', 'ie-note', t('sim.p1_mandate', undefined, '<b>Formula Mandate:</b> Direct Answer + 2–3 sentence extension (20–30s). Avoid 1-word truncation ("Yes", "London") and long rambling monologues.'))
     );
 
     const controls = h('div', 'ie-testbar');
-    const listenPromptBtn = h('button', 'ie-btn ie-btn-primary', '🔊 Listen to Examiner Prompt');
+    const listenPromptBtn = h('button', 'ie-btn ie-btn-primary', t('sim.listen_prompt', undefined, '🔊 Listen to Examiner Prompt'));
     listenPromptBtn.addEventListener('click', () => {
       stopActiveAudio();
       activePlayback = playText(prompt.question, { rate: 0.95 });
     });
 
-    const nextPromptBtn = h('button', 'ie-btn', 'Next Question');
+    const nextPromptBtn = h('button', 'ie-btn', t('sim.next_question', undefined, 'Next Question'));
     nextPromptBtn.addEventListener('click', () => {
       promptIndex = (promptIndex + 1) % PART1_PROMPTS.length;
       container.innerHTML = '';
@@ -643,13 +644,13 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
     controls.append(listenPromptBtn, nextPromptBtn);
 
     const inputArea = h('div', 'ie-qcol');
-    inputArea.append(h('label', 'ie-wb-label', 'Speak aloud or type your 2–3 sentence response below:'));
+    inputArea.append(h('label', 'ie-wb-label', t('sim.p1_input_label', undefined, 'Speak aloud or type your 2–3 sentence response below:')));
     const textarea = document.createElement('textarea');
     textarea.className = 'ie-textarea';
     textarea.style.minHeight = '110px';
-    textarea.placeholder = 'Type your response here to evaluate sentence count, word count, and extension formula...';
+    textarea.placeholder = t('sim.p1_placeholder', undefined, 'Type your response here to evaluate sentence count, word count, and extension formula...');
 
-    const evalBtn = h('button', 'ie-btn ie-btn-primary', 'Evaluate Response Formula');
+    const evalBtn = h('button', 'ie-btn ie-btn-primary', t('sim.btn_eval_p1', undefined, 'Evaluate Response Formula'));
     const resultBox = h('div', 'ie-result');
     resultBox.style.display = 'none';
 
@@ -663,15 +664,15 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
             <span class="ie-eval-badge ${val.scoreEstimate === 'Band 8.0+' ? 'band-80' : val.scoreEstimate === 'Band 7.0+' ? 'band-70' : 'band-60'}">${val.scoreEstimate}</span>
           </div>
           <div class="ie-eval-metrics">
-            <span>Sentences: <b>${val.sentenceCount}</b> (Goal: 2–4)</span>
-            <span>Words: <b>${val.wordCount}</b> (Goal: 20–80)</span>
+            <span>${t('sim.sentences_goal', { count: val.sentenceCount }, `Sentences: <b>${val.sentenceCount}</b> (Goal: 2–4)`)}</span>
+            <span>${t('sim.words_goal', { count: val.wordCount }, `Words: <b>${val.wordCount}</b> (Goal: 20–80)`)}</span>
           </div>
           <p class="ie-note">${esc(val.feedback)}</p>
         </div>
         <div class="ie-feedback-col">
-          <h4>Band 8.0+ Model Answer</h4>
+          <h4>${t('sim.model_band8', undefined, 'Band 8.0+ Model Answer')}</h4>
           <p class="ie-model-text">${esc(prompt.modelAnswerBand8)}</p>
-          <p class="ie-note"><b>Rubric Note:</b> ${esc(prompt.rubricNotes)}</p>
+          <p class="ie-note"><b>${t('sim.rubric_note', undefined, 'Rubric Note:')}</b> ${esc(prompt.rubricNotes)}</p>
         </div>
       `;
     });
@@ -686,9 +687,9 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
   const renderPart2 = (container: HTMLElement): void => {
     const cueCard = h('article', 'ie-passage ie-cuecard');
     cueCard.append(
-      h('div', 'ie-testbar', '<span class="ie-plabel">Part 2 Cue Card</span><strong>Pivotal Life Crossroads</strong>'),
+      h('div', 'ie-testbar', `<span class="ie-plabel">${t('sim.p2_cue_card', undefined, 'Part 2 Cue Card')}</span><strong>Pivotal Life Crossroads</strong>`),
       h('p', 'ie-cue', 'Describe a challenging decision you made that had a positive outcome.'),
-      h('p', 'ie-note', 'You should say:'),
+      h('p', 'ie-note', `${t('speaking.you_should_say', undefined, 'You should say:')}`),
       h('ul', '', `
         <li>What the decision was and who was involved</li>
         <li>When and why you were compelled to make it</li>
@@ -700,19 +701,19 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
     const labCard = h('div', 'ie-qcol');
     const timerRow = h('div', 'ie-testbar');
     const clock = h('span', 'ie-clock', '01:00');
-    const startPrepBtn = h('button', 'ie-btn ie-btn-primary', 'Start 1-Minute Prep Countdown');
-    const resetPrepBtn = h('button', 'ie-btn', 'Reset Timer');
+    const startPrepBtn = h('button', 'ie-btn ie-btn-primary', t('sim.btn_start_prep', undefined, 'Start 1-Minute Prep Countdown'));
+    const resetPrepBtn = h('button', 'ie-btn', t('sim.btn_reset_timer', undefined, 'Reset Timer'));
     timerRow.append(clock, startPrepBtn, resetPrepBtn);
 
     const notepadGuide = h('p', 'ie-note',
-      '<b>The Keino Campbell 4-Keyword Notepad:</b> In Part 2, examiners penalize candidates who try to write full sentences during the 60s prep. Instead, anchor your talk with <b>concise keywords (≤ 6 words)</b> across the 4 narrative quadrants.'
+      t('sim.notepad_guide', undefined, '<b>The Keino Campbell 4-Keyword Notepad:</b> In Part 2, examiners penalize candidates who try to write full sentences during the 60s prep. Instead, anchor your talk with <b>concise keywords (≤ 6 words)</b> across the 4 narrative quadrants.')
     );
 
     const quadrants = [
-      { label: 'Quadrant 1: WHO / WHERE / CONTEXT', placeholder: 'e.g. Pivot finance -> tech; startup team' },
-      { label: 'Quadrant 2: CHRONOLOGY / ACTION', placeholder: 'e.g. Resigned corporate; 6mo coding bootcamp' },
-      { label: 'Quadrant 3: EMOTION / ADVERSITY', placeholder: 'e.g. Acute financial precarity; peer skepticism' },
-      { label: 'Quadrant 4: REFLECTION / LEGACY', placeholder: 'e.g. Fulfilling engineering role; resilience' }
+      { label: t('sim.quad_1', undefined, 'Quadrant 1: WHO / WHERE / CONTEXT'), placeholder: 'e.g. Pivot finance -> tech; startup team' },
+      { label: t('sim.quad_2', undefined, 'Quadrant 2: CHRONOLOGY / ACTION'), placeholder: 'e.g. Resigned corporate; 6mo coding bootcamp' },
+      { label: t('sim.quad_3', undefined, 'Quadrant 3: EMOTION / ADVERSITY'), placeholder: 'e.g. Acute financial precarity; peer skepticism' },
+      { label: t('sim.quad_4', undefined, 'Quadrant 4: REFLECTION / LEGACY'), placeholder: 'e.g. Fulfilling engineering role; resilience' }
     ];
 
     const inputs: HTMLInputElement[] = [];
@@ -735,7 +736,7 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
       prepCd = countdown(60, left => {
         clock.textContent = fmtTime(left);
       }, () => {
-        clock.textContent = '00:00 (Time Up!)';
+        clock.textContent = t('sim.time_up', undefined, '00:00 (Time Up!)');
         startPrepBtn.disabled = false;
       });
     });
@@ -746,7 +747,7 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
       startPrepBtn.disabled = false;
     });
 
-    const validateNotepadBtn = h('button', 'ie-btn ie-btn-primary', 'Validate 4-Keyword Notepad');
+    const validateNotepadBtn = h('button', 'ie-btn ie-btn-primary', t('sim.btn_validate_notepad', undefined, 'Validate 4-Keyword Notepad'));
     const notepadResult = h('div', 'ie-result');
     notepadResult.style.display = 'none';
 
@@ -757,8 +758,8 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
       notepadResult.innerHTML = `
         <div class="ie-feedback-col">
           <div class="ie-eval-top">
-            <span class="ie-eval-badge ${res.valid ? 'is-valid' : 'is-invalid'}">${res.valid ? 'NOTEPAD VALIDATED' : 'REVISE NOTEPAD'}</span>
-            <span class="ie-count">Quadrants Filled: ${res.filledCount}/4</span>
+            <span class="ie-eval-badge ${res.valid ? 'is-valid' : 'is-invalid'}">${res.valid ? t('sim.notepad_validated', undefined, 'NOTEPAD VALIDATED') : t('sim.revise_notepad', undefined, 'REVISE NOTEPAD')}</span>
+            <span class="ie-count">${t('sim.quadrants_filled', { filled: res.filledCount }, `Quadrants Filled: ${res.filledCount}/4`)}</span>
           </div>
           <ul class="ie-workbench-feedback">
             ${res.feedback.map(fb => `<li>${esc(fb)}</li>`).join('')}
@@ -770,18 +771,18 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
     // 2-Minute Speech Simulation Section
     const speechSection = h('div', 'ie-passage');
     speechSection.append(
-      h('h3', '', '2-Minute Sustained Speech Simulation'),
-      h('p', 'ie-note', 'Deliver your 2-minute response while referencing your 4-keyword anchors above. Speak continuously until the timer reaches zero.')
+      h('h3', '', t('sim.p2_speech_title', undefined, '2-Minute Sustained Speech Simulation')),
+      h('p', 'ie-note', t('sim.p2_speech_desc', undefined, 'Deliver your 2-minute response while referencing your 4-keyword anchors above. Speak continuously until the timer reaches zero.'))
     );
 
     const speechTimerRow = h('div', 'ie-testbar');
     const speechClock = h('span', 'ie-clock', '02:00');
-    const startTalkBtn = h('button', 'ie-btn ie-btn-primary', 'Start 2-Minute Speech Timer');
-    const quickBtn = h('button', 'ie-btn', '20s answer');
-    const elabBtn = h('button', 'ie-btn', '60s answer');
+    const startTalkBtn = h('button', 'ie-btn ie-btn-primary', t('sim.btn_start_speech', undefined, 'Start 2-Minute Speech Timer'));
+    const quickBtn = h('button', 'ie-btn', t('sim.btn_quick_ans', undefined, '20s answer'));
+    const elabBtn = h('button', 'ie-btn', t('sim.btn_elab_ans', undefined, '60s answer'));
     const rungRow = h('div', 'ie-chips');
     rungRow.append(quickBtn, elabBtn);
-    const phaseCue = h('p', 'ie-note', 'Phase prompts appear during the 2-minute timer.');
+    const phaseCue = h('p', 'ie-note', t('sim.phase_prompt_note', undefined, 'Phase prompts appear during the 2-minute timer.'));
     const startButtons = [startTalkBtn, quickBtn, elabBtn];
     let speechCd: Countdown | null = null;
 
@@ -789,15 +790,15 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
     const startSpeech = (seconds: number, cues: boolean): void => {
       if (speechCd) speechCd.stop();
       startButtons.forEach(b => { b.disabled = true; });
-      if (!cues) phaseCue.textContent = 'Phase prompts appear during the 2-minute timer.';
+      if (!cues) phaseCue.textContent = t('sim.phase_prompt_note', undefined, 'Phase prompts appear during the 2-minute timer.');
       speechCd = countdown(seconds, left => {
         speechClock.textContent = fmtTime(left);
         if (cues) {
           const elapsed = seconds - left;
-          phaseCue.textContent = elapsed < 30 ? 'Who and where' : elapsed < 75 ? 'What happened' : 'Why it mattered to you';
+          phaseCue.textContent = elapsed < 30 ? t('sim.phase_who_where', undefined, 'Who and where') : elapsed < 75 ? t('sim.phase_what_happened', undefined, 'What happened') : t('sim.phase_why_mattered', undefined, 'Why it mattered to you');
         }
       }, () => {
-        speechClock.textContent = '00:00 (Finished)';
+        speechClock.textContent = t('sim.speech_finished', undefined, '00:00 (Finished)');
         startButtons.forEach(b => { b.disabled = false; });
       });
     };
@@ -806,11 +807,11 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
     quickBtn.addEventListener('click', () => startSpeech(20, false));
     elabBtn.addEventListener('click', () => startSpeech(60, false));
 
-    const resetTalkBtn = h('button', 'ie-btn', 'Reset');
+    const resetTalkBtn = h('button', 'ie-btn', t('common.reset', undefined, 'Reset'));
     resetTalkBtn.addEventListener('click', () => {
       if (speechCd) speechCd.stop();
       speechClock.textContent = '02:00';
-      phaseCue.textContent = 'Phase prompts appear during the 2-minute timer.';
+      phaseCue.textContent = t('sim.phase_prompt_note', undefined, 'Phase prompts appear during the 2-minute timer.');
       startButtons.forEach(b => { b.disabled = false; });
     });
 
@@ -828,16 +829,16 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
   const renderPart3 = (container: HTMLElement): void => {
     const introCard = h('div', 'ie-passage');
     introCard.append(
-      h('div', 'ie-testbar', '<span class="ie-plabel">Part 3 Focus</span><strong>Abstract Societal Inquiry & Conversational Fillers</strong>'),
+      h('div', 'ie-testbar', `<span class="ie-plabel">${t('sim.p3_focus', undefined, 'Part 3 Focus')}</span><strong>${t('sim.p3_title', undefined, 'Abstract Societal Inquiry & Conversational Fillers')}</strong>`),
       h('p', 'ie-cue', 'Do you believe automation will displace more employment opportunities than it creates in the coming decades?'),
-      h('p', 'ie-note', '<b>Objective:</b> Eliminate childish "um / uh" hesitations by deploying native academic fillers. Formulate a 3-step abstract response: (1) Macro Generalization $\\to$ (2) Causal Mechanism $\\to$ (3) Societal Nuance.')
+      h('p', 'ie-note', t('sim.p3_obj', undefined, '<b>Objective:</b> Eliminate childish "um / uh" hesitations by deploying native academic fillers. Formulate a 3-step abstract response: (1) Macro Generalization $\\to$ (2) Causal Mechanism $\\to$ (3) Societal Nuance.'))
     );
 
     // Fillers Audio Trainer Bar
     const fillerTrainer = h('div', 'ie-qcol');
     fillerTrainer.append(
-      h('h3', '', 'Interactive Conversational Fillers Trainer (Click 🔊 to hear native delivery)'),
-      h('p', 'ie-note', 'Native speakers use these set phrases to buy 2–3 seconds of planning time without surrendering the conversational floor.')
+      h('h3', '', t('sim.fillers_trainer_title', undefined, 'Interactive Conversational Fillers Trainer (Click 🔊 to hear native delivery)')),
+      h('p', 'ie-note', t('sim.fillers_trainer_desc', undefined, 'Native speakers use these set phrases to buy 2–3 seconds of planning time without surrendering the conversational floor.'))
     );
 
     const fillerGrid = h('div', 'ie-formula-components');
@@ -848,7 +849,7 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
         h('small', 'ie-note', `${esc(cf.phoneticGuide)}`),
         h('p', 'ie-fdesc', esc(cf.contextUsage))
       );
-      const playBtn = h('button', 'ie-btn ie-btn-sm', '🔊 Listen to Filler');
+      const playBtn = h('button', 'ie-btn ie-btn-sm', t('sim.btn_listen_filler', undefined, '🔊 Listen to Filler'));
       playBtn.addEventListener('click', () => {
         stopActiveAudio();
         activePlayback = playText(cf.audioExample, { rate: 0.95 });
@@ -862,16 +863,16 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
     // Interactive Response & Real-Time Filler Usage Counter
     const responseBox = h('div', 'ie-passage');
     responseBox.append(
-      h('h3', '', 'Deliver Your Part 3 Answer'),
-      h('p', 'ie-note', 'Type your transcript or speech below. The real-time counter immediately identifies deployed conversational fillers and scores abstract depth.')
+      h('h3', '', t('sim.p3_deliver_title', undefined, 'Deliver Your Part 3 Answer')),
+      h('p', 'ie-note', t('sim.p3_deliver_desc', undefined, 'Type your transcript or speech below. The real-time counter immediately identifies deployed conversational fillers and scores abstract depth.'))
     );
 
     const textarea = document.createElement('textarea');
     textarea.className = 'ie-textarea';
     textarea.style.minHeight = '120px';
-    textarea.placeholder = 'Type your Part 3 response here... (Try starting with "Well, that is an intriguing inquiry..." or "It largely hinges upon...")';
+    textarea.placeholder = t('sim.p3_placeholder', undefined, 'Type your Part 3 response here... (Try starting with "Well, that is an intriguing inquiry..." or "It largely hinges upon...")');
 
-    const evalBtn = h('button', 'ie-btn ie-btn-primary', 'Analyze Part 3 Answer & Fillers');
+    const evalBtn = h('button', 'ie-btn ie-btn-primary', t('sim.btn_eval_p3', undefined, 'Analyze Part 3 Answer & Fillers'));
     const resultBox = h('div', 'ie-result');
     resultBox.style.display = 'none';
 
@@ -881,14 +882,14 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
       resultBox.innerHTML = `
         <div class="ie-feedback-col">
           <div class="ie-eval-top">
-            <span class="ie-eval-badge ${val.valid ? 'is-valid' : 'is-invalid'}">${val.valid ? 'VALIDATED PART 3' : 'INCOMPLETE STRUCTURE'}</span>
+            <span class="ie-eval-badge ${val.valid ? 'is-valid' : 'is-invalid'}">${val.valid ? t('sim.validated_p3', undefined, 'VALIDATED PART 3') : t('sim.incomplete_struct', undefined, 'INCOMPLETE STRUCTURE')}</span>
             <span class="ie-eval-badge ${val.scoreEstimate === 'Band 8.0+' ? 'band-80' : val.scoreEstimate === 'Band 7.0+' ? 'band-70' : 'band-60'}">${val.scoreEstimate}</span>
           </div>
           <div class="ie-eval-metrics">
-            <span>Fillers Detected: <b>${val.fillerCount}</b></span>
-            <span>Generalization: <b>${val.hasGeneralization ? 'YES' : 'NO'}</b></span>
-            <span>Causal Link: <b>${val.hasCausalMechanism ? 'YES' : 'NO'}</b></span>
-            <span>Nuance: <b>${val.hasNuance ? 'YES' : 'NO'}</b></span>
+            <span>${t('sim.fillers_detected', { count: val.fillerCount }, `Fillers Detected: <b>${val.fillerCount}</b>`)}</span>
+            <span>${t('sim.generalization', { status: val.hasGeneralization ? 'YES' : 'NO' }, `Generalization: <b>${val.hasGeneralization ? 'YES' : 'NO'}</b>`)}</span>
+            <span>${t('sim.causal_link', { status: val.hasCausalMechanism ? 'YES' : 'NO' }, `Causal Link: <b>${val.hasCausalMechanism ? 'YES' : 'NO'}</b>`)}</span>
+            <span>${t('sim.nuance', { status: val.hasNuance ? 'YES' : 'NO' }, `Nuance: <b>${val.hasNuance ? 'YES' : 'NO'}</b>`)}</span>
           </div>
           <ul class="ie-workbench-feedback">
             ${val.feedback.map(f => `<li>${esc(f)}</li>`).join('')}
@@ -922,7 +923,7 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
     const promptCard = h('div', 'ie-passage');
     promptCard.append(
       h('div', 'ie-testbar', `<span class="ie-plabel">${activeCase.part}</span><strong>Prompt: ${esc(activeCase.prompt)}</strong>`),
-      h('p', 'ie-lead', 'Examine the paragraph-by-paragraph comparative breakdown below. Hear how identical prompts diverge from Band 6.5 common errors to Band 8.5 master discourse.')
+      h('p', 'ie-lead', t('sim.deconstruct_lead', undefined, 'Examine the paragraph-by-paragraph comparative breakdown below. Hear how identical prompts diverge from Band 6.5 common errors to Band 8.5 master discourse.'))
     );
 
     const bands: ('6.5' | '7.5' | '8.5')[] = ['6.5', '7.5', '8.5'];
@@ -934,9 +935,9 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
       const badgeClass = band === '8.5' ? 'band-80' : band === '7.5' ? 'band-70' : 'band-60';
 
       mCard.append(
-        h('div', 'ie-testbar', `<span class="ie-eval-badge ${badgeClass}">Band ${band} Model</span>`),
+        h('div', 'ie-testbar', `<span class="ie-eval-badge ${badgeClass}">${t('sim.band_model', { band }, `Band ${band} Model`)}</span>`),
         h('p', 'ie-model-text', `"${esc(m.transcript)}"`),
-        h('h4', 'ie-vocab-label', 'Examiner 4-Criterion Evaluation:')
+        h('h4', 'ie-vocab-label', t('sim.examiner_4criteria', undefined, 'Examiner 4-Criterion Evaluation:'))
       );
 
       const criteriaList = h('ul', 'ie-traps-list');
@@ -947,7 +948,7 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
         <li><b>PR (${m.prScore}):</b> ${esc(m.prAnalysis)}</li>
       `;
 
-      const audioBtn = h('button', 'ie-btn ie-btn-primary ie-btn-sm', `🔊 Listen to Band ${band} Delivery`);
+      const audioBtn = h('button', 'ie-btn ie-btn-primary ie-btn-sm', `${t('sim.listen_delivery', { band }, `🔊 Listen to Band ${band} Delivery`)}`);
       audioBtn.addEventListener('click', () => {
         stopActiveAudio();
         activePlayback = playText(m.transcript, { rate: 0.95 });

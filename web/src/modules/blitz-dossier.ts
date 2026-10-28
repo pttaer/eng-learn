@@ -198,30 +198,29 @@ export class BlitzDossier {
     this.container.innerHTML = `
       <div class="blitz-ready-card" role="dialog" aria-labelledby="blitz-ready-title">
         <div class="blitz-badge-cluster">
-          <span class="blitz-glow-badge">${icon('zap', 12)} Rapid Recall Drill</span>
-          <span class="blitz-high-score-badge">Best Score: <strong>${this.highScore.toLocaleString()} pts</strong></span>
+          <span class="blitz-glow-badge">${icon('zap', 12)} ${t('blitz.rapid_recall', undefined, 'Rapid Recall Drill')}</span>
+          <span class="blitz-high-score-badge">${t('blitz.best_score', undefined, 'Best Score:')} <strong>${this.highScore.toLocaleString()} pts</strong></span>
         </div>
 
         <h1 class="blitz-ready-title" id="blitz-ready-title">${t('blitz.subtitle')}</h1>
         <p class="blitz-ready-desc">
-          Test your lexical fluency with a timed rapid-recall session. 60 seconds of high-frequency collocation
-          and advanced vocabulary practice. Chain correct answers to build your streak multiplier!
+          ${t('blitz.ready_desc', undefined, 'Test your lexical fluency with a timed rapid-recall session. 60 seconds of high-frequency collocation and advanced vocabulary practice. Chain correct answers to build your streak multiplier!')}
         </p>
 
         <div class="blitz-mechanics-grid">
           <div class="blitz-mechanic-card">
             <div class="mechanic-icon">${icon('clock', 22)}</div>
-            <div class="mechanic-title">60s Clock</div>
-            <div class="mechanic-detail">Non-stop rapid-fire decision timer. Clock ticks down continuously.</div>
+            <div class="mechanic-title">${t('blitz.clock_60s', undefined, '60s Clock')}</div>
+            <div class="mechanic-detail">${t('blitz.mechanic_clock_desc', undefined, 'Non-stop rapid-fire decision timer. Clock ticks down continuously.')}</div>
           </div>
           <div class="blitz-mechanic-card">
             <div class="mechanic-icon">${icon('flame', 22)}</div>
-            <div class="mechanic-title">Streak Multipliers</div>
-            <div class="mechanic-detail">5 Streak = 2x • 10 Streak = 3x • 15+ Streak = 4x Max Surge.</div>
+            <div class="mechanic-title">${t('blitz.streak_multipliers', undefined, 'Streak Multipliers')}</div>
+            <div class="mechanic-detail">${t('blitz.mechanic_streak_desc', undefined, '5 Streak = 2x • 10 Streak = 3x • 15+ Streak = 4x Max Surge.')}</div>
           </div>
           <div class="blitz-mechanic-card mechanic-hotkeys">
             <div class="mechanic-icon">${icon('keyboard', 22)}</div>
-            <div class="mechanic-title">Instant Hotkeys</div>
+            <div class="mechanic-title">${t('blitz.instant_hotkeys', undefined, 'Instant Hotkeys')}</div>
             <div class="mechanic-detail">Press <kbd>[1]</kbd> or <kbd>[←]</kbd> for Left • <kbd>[2]</kbd> or <kbd>[→]</kbd> for Right.</div>
           </div>
         </div>
@@ -255,7 +254,7 @@ export class BlitzDossier {
         <!-- Top Telemetry Strip -->
         <header class="blitz-hud-strip">
           <div class="blitz-hud-metric">
-            <span class="metric-label">SCORE</span>
+            <span class="metric-label">${t('blitz.score_label', undefined, 'SCORE')}</span>
             <span class="metric-value metric-score" id="blitz-score-val">${this.score.toLocaleString()}</span>
           </div>
 
@@ -279,7 +278,7 @@ export class BlitzDossier {
           </div>
 
           <div class="blitz-hud-metric text-right">
-            <span class="metric-label">ACCURACY</span>
+            <span class="metric-label">${t('blitz.accuracy_label', undefined, 'ACCURACY')}</span>
             <span class="metric-value metric-accuracy" id="blitz-accuracy-val">${accuracy}%</span>
           </div>
         </header>
@@ -287,8 +286,8 @@ export class BlitzDossier {
         <!-- Combo Gauge Multiplier -->
         <div class="blitz-combo-gauge-container">
           <div class="blitz-combo-pill multiplier-${multiplier}" id="blitz-combo-pill">
-            <span class="multiplier-text">${multiplier}X MULTIPLIER</span>
-            <span class="streak-text">${icon('flame', 12)} ${this.streak} STREAK</span>
+            <span class="multiplier-text">${multiplier}X ${t('blitz.multiplier_label', undefined, 'MULTIPLIER')}</span>
+            <span class="streak-text">${icon('flame', 12)} ${this.streak} ${t('blitz.streak_label', undefined, 'STREAK')}</span>
           </div>
         </div>
 
@@ -359,31 +358,31 @@ export class BlitzDossier {
     this.container.innerHTML = `
       <div class="blitz-summary-card" role="dialog" aria-labelledby="blitz-summary-title">
         <div class="summary-badge-strip">
-          <span class="blitz-glow-badge">BLITZ RUN CONCLUDED</span>
-          ${stats.isNewHighScore ? `<span class="blitz-new-record-badge">${icon('trophy', 12)} NEW ALL-TIME HIGH SCORE!</span>` : ''}
+          <span class="blitz-glow-badge">${t('blitz.concluded', undefined, 'BLITZ RUN CONCLUDED')}</span>
+          ${stats.isNewHighScore ? `<span class="blitz-new-record-badge">${icon('trophy', 12)} ${t('blitz.new_high_score', undefined, 'NEW ALL-TIME HIGH SCORE!')}</span>` : ''}
         </div>
 
-        <h1 class="blitz-summary-title" id="blitz-summary-title">SPRINT COMPLETE</h1>
+        <h1 class="blitz-summary-title" id="blitz-summary-title">${t('blitz.sprint_complete', undefined, 'SPRINT COMPLETE')}</h1>
         <div class="summary-score-hero">
           <div class="hero-score-number">${stats.score.toLocaleString()}</div>
-          <div class="hero-score-label">TOTAL SCORE POINTS</div>
+          <div class="hero-score-label">${t('blitz.total_score', undefined, 'TOTAL SCORE POINTS')}</div>
         </div>
 
         <div class="summary-stats-grid">
           <div class="summary-stat-box">
-            <span class="stat-label">ACCURACY</span>
+            <span class="stat-label">${t('blitz.stat_accuracy', undefined, 'ACCURACY')}</span>
             <span class="stat-val highlight-green">${stats.accuracy}%</span>
-            <span class="stat-sub">${stats.correctCount} / ${stats.totalAnswered} Correct</span>
+            <span class="stat-sub">${stats.correctCount} / ${stats.totalAnswered} ${t('blitz.correct_count', undefined, 'Correct')}</span>
           </div>
 
           <div class="summary-stat-box">
-            <span class="stat-label">MAX COMBO</span>
+            <span class="stat-label">${t('blitz.max_combo', undefined, 'MAX COMBO')}</span>
             <span class="stat-val highlight-gold">${stats.maxStreak} ${icon('flame', 12)}</span>
-            <span class="stat-sub">Peak Multiplier</span>
+            <span class="stat-sub">${t('blitz.peak_multiplier', undefined, 'Peak Multiplier')}</span>
           </div>
 
           <div class="summary-stat-box">
-            <span class="stat-label">XP REWARD</span>
+            <span class="stat-label">${t('blitz.xp_reward', undefined, 'XP REWARD')}</span>
             <span class="stat-val highlight-purple">+${stats.xpEarned} XP</span>
             <span class="stat-sub">Dispatched to RPG Hub</span>
           </div>
@@ -391,10 +390,10 @@ export class BlitzDossier {
 
         <div class="summary-action-cluster">
           <button type="button" class="hud-btn blitz-action-btn btn-restart-blitz" id="btn-restart-blitz" aria-label="Play Another Blitz Run">
-            ${icon('zap')} PLAY AGAIN
+            ${icon('zap')} ${t('blitz.play_again', undefined, 'PLAY AGAIN')}
           </button>
           <button type="button" class="hud-btn blitz-action-btn btn-return-tree" id="btn-return-tree" aria-label="Return to Constellation Skill Tree">
-            ${icon('compass')} BACK TO TREE
+            ${icon('compass')} ${t('blitz.back_to_tree', undefined, 'BACK TO TREE')}
           </button>
         </div>
       </div>
@@ -599,7 +598,7 @@ export class BlitzDossier {
       const mult = this.getMultiplier();
       comboPillEl.className = `blitz-combo-pill multiplier-${mult}`;
       comboPillEl.innerHTML = `
-        <span class="multiplier-text">${mult}X MULTIPLIER</span>
+        <span class="multiplier-text">${mult}X ${t('blitz.multiplier_label', undefined, 'MULTIPLIER')}</span>
         <span class="streak-text">${icon('flame', 12)} ${this.streak} STREAK</span>
       `;
     }
@@ -786,13 +785,6 @@ export class BlitzDossier {
     }
     if (this.state === 'RUNNING') {
       this.state = 'READY';
-      this.timeRemaining = BLITZ_DURATION_SECONDS;
-      this.score = 0;
-      this.streak = 0;
-      this.maxStreak = 0;
-      this.correctCount = 0;
-      this.totalAnswered = 0;
-      this.isProcessingAnswer = false;
     }
   }
 

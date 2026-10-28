@@ -7,13 +7,22 @@ import {
   countWordsAndNumbers
 } from './reading-engine';
 import { esc, h } from './ui';
+import { t } from '../core/i18n';
 
+const TYPE_LABEL_KEYS: Record<string, string> = {
+  tfng: 'questions.type_tfng', ynng: 'questions.type_ynng', heading: 'questions.type_heading', match: 'questions.type_match',
+  features: 'questions.type_features', complete: 'questions.type_complete', sentence: 'questions.type_sentence', summary: 'questions.type_summary',
+  table: 'questions.type_table', mcq: 'questions.type_mcq', short: 'questions.type_short'
+};
 const TYPE_LABEL: Record<string, string> = {
   tfng: 'True / False / Not Given', ynng: 'Yes / No / Not Given', heading: 'Matching headings', match: 'Matching',
   features: 'Matching features', complete: 'Completion', sentence: 'Sentence completion', summary: 'Summary completion',
   table: 'Table completion', mcq: 'Multiple choice', short: 'Short answer'
 };
-export const typeLabel = (t: string): string => TYPE_LABEL[t] || t;
+export const typeLabel = (k: string): string => {
+  const key = TYPE_LABEL_KEYS[k];
+  return key ? t(key, undefined, TYPE_LABEL[k] || k) : (TYPE_LABEL[k] || k);
+};
 
 const keyOf = (opt: string): string => opt.split(/[.)]/)[0].trim();
 
@@ -38,7 +47,7 @@ function control(q: IeltsQuestion, n: number): HTMLElement {
     const sel = h('select', 'ie-select');
     sel.name = q.id;
     sel.setAttribute('aria-label', `Answer for question ${n}`);
-    sel.innerHTML = `<option value="">Choose…</option>` + (q.options || []).map(o => `<option value="${esc(keyOf(o))}">${esc(o)}</option>`).join('');
+    sel.innerHTML = `<option value="">${t('questions.choose', undefined, 'Choose…')}</option>` + (q.options || []).map(o => `<option value="${esc(keyOf(o))}">${esc(o)}</option>`).join('');
     body.append(sel);
   } else {
     const inp = h('input', 'ie-input');
@@ -50,17 +59,17 @@ function control(q: IeltsQuestion, n: number): HTMLElement {
     const limitMatch = q.prompt.match(/(ONE WORD ONLY|NO MORE THAN (?:TWO|THREE) WORDS(?:\s+AND\/OR A NUMBER)?)/i);
     inp.placeholder = limitMatch
       ? limitMatch[1]
-      : (constraint ? `Write no more than ${constraint.maxWords} word${constraint.maxWords === 1 ? '' : 's'}` : 'Write no more than three words');
+      : (constraint ? t('questions.write_no_more_than', { count: constraint.maxWords }, `Write no more than ${constraint.maxWords} word${constraint.maxWords === 1 ? '' : 's'}`) : t('questions.write_no_more_than_three', undefined, 'Write no more than three words'));
     body.append(inp);
 
     if (constraint && constraint.maxWords != null) {
       const formatMeter = (words: number, within: boolean): string => {
         if (constraint.maxWords === 0) {
-          return within ? 'Number only' : 'Words not allowed (Number only!)';
+          return within ? t('questions.meter_number_only', undefined, 'Number only') : t('questions.meter_no_words', undefined, 'Words not allowed (Number only!)');
         }
         return within
-          ? `${words}/${constraint.maxWords} words`
-          : `${words}/${constraint.maxWords} words (Exceeds limit!)`;
+          ? t('questions.meter_words', { words, max: constraint.maxWords }, `${words}/${constraint.maxWords} words`)
+          : t('questions.meter_exceeds', { words, max: constraint.maxWords }, `${words}/${constraint.maxWords} words (Exceeds limit!)`);
       };
       const meter = h('span', 'ie-word-meter', formatMeter(0, true));
       const updateMeter = () => {
@@ -88,7 +97,7 @@ export interface QuestionForm {
 export function renderQuestions(
   questions: IeltsQuestion[],
   startAt = 1,
-  onChange: (answered: number, total: number) => void = () => {}
+  onChange: (answered: number, total: number) => void = () => { }
 ): QuestionForm {
   const el = h('div', 'ie-questions');
   let n = startAt;
@@ -154,19 +163,22 @@ export function renderQuestions(
         const miss = explainMiss(q, given[q.id] || '');
         if (miss === 'exceeded_limit') {
           const limit = q.maxWords ?? resolveQuestionWordConstraint(q)?.maxWords ?? 3;
-          extraHtml += `<div class="ie-miss-warning">Contains correct terms but exceeded word limit (${limit} words max) — automatic zero in IELTS.</div>`;
+          extraHtml += `<div class="ie-miss-warning">${t('questions.exceeded_limit_warning', { limit }, `Contains correct terms but exceeded word limit (${limit} words max) — automatic zero in IELTS.`)}</div>`;
         }
       }
 
       if (q.evidence !== undefined) {
         if (q.evidence === null) {
-          extraHtml += `<div class="ie-evidence-action"><span class="ie-evidence-silent">No evidence in passage (NOT GIVEN)</span></div>`;
+          extraHtml += `<div class="ie-evidence-action"><span class="ie-evidence-silent">${t('questions.no_evidence_not_given', undefined, 'No evidence in passage (NOT GIVEN)')}</span></div>`;
         } else {
-          extraHtml += `<div class="ie-evidence-action"><button type="button" class="ie-btn ie-btn-inspect-evidence" data-qid="${q.id}">🔍 Inspect in passage</button></div>`;
+          extraHtml += `<div class="ie-evidence-action"><button type="button" class="ie-btn ie-btn-inspect-evidence" data-qid="${q.id}">${t('questions.inspect_in_passage', undefined, '🔍 Inspect in passage')}</button></div>`;
         }
       }
 
-      box.append(h('div', 'ie-why', `<strong>${ok ? 'Correct' : `Your answer: ${esc(given[q.id] || '(blank)')} · Correct: ${esc(ans)}`}</strong><span>${esc(q.why)}</span>${extraHtml}`));
+      const blankText = t('questions.blank', undefined, '(blank)');
+      const correctText = t('questions.correct', undefined, 'Correct');
+      const ansDetail = t('questions.your_ans_correct', { given: esc(given[q.id] || blankText), ans: esc(ans) }, `Your answer: ${esc(given[q.id] || blankText)} · Correct: ${esc(ans)}`);
+      box.append(h('div', 'ie-why', `<strong>${ok ? correctText : ansDetail}</strong><span>${esc(q.why)}</span>${extraHtml}`));
     }
     return scoreSet(questions, given);
   };

@@ -120,7 +120,6 @@ export class ScrollAffordance {
     '.dossier-tabs',
     '.day-picker-track',
     '.reading-mobile-tab-bar',
-    '.cd-mobile-tab-bar',
     '.constellation-view-switcher',
     '.workout-tasks',
     '.speaking-mode-cluster',
