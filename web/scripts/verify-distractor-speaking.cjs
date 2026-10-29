@@ -168,7 +168,8 @@ const speakingMod = load('views/speaking.ts', {
   '../progress': { addAttempt: () => {} },
   '../fluency': { fluency: () => null, fluencyNote: () => '' },
   '../writing-heuristics': { DESCRIPTORS: {}, RUBRIC: { speaking: [] } },
-  '../../core/i18n': { t: (k, p, d) => d || k, I18n: { getLocale: () => 'en', onLocaleChange: () => () => {} } }
+  '../../core/i18n': { t: (k, p, d) => d || k, I18n: { getLocale: () => 'en', onLocaleChange: () => () => {} } },
+  './writing': { renderPreFlightChecklist: () => mockUi.h('div', 'preflight', '') }
 });
 
 

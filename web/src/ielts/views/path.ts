@@ -1,6 +1,6 @@
 import { attempts } from '../progress';
 import { esc, h } from '../ui';
-import { SKILLS, ROUTE, FOCUS, estimateStart, currentBands, roadmapWeeks, extendedRoadmap, nextTask, gate, placementFrom, type Skill } from '../path';
+import { SKILLS, ROUTE, FOCUS, estimateStart, currentBands, roadmapWeeks, extendedRoadmap, nextTask, gate, placementFrom, getTarget, type Skill } from '../path';
 import { t } from '../../core/i18n';
 import { icon } from '../../utils/icons';
 
@@ -49,8 +49,9 @@ export function pathView(root: HTMLElement): () => void {
     const placement = placementFrom(att);
     const start = estimateStart(currentBands(att, placement));
     root.innerHTML = '';
+    const curTarget = getTarget();
     root.append(
-      h('h1', 'ie-title', t('ielts.study_path_title', undefined, 'Your 7.0 study path')),
+      h('h1', 'ie-title', t('ielts.study_path_title', { target: curTarget.toFixed(1) }, `Your ${curTarget.toFixed(1)} study path`)),
       h('p', 'ie-lead', t('ielts.path_lead', undefined, 'Length comes from your recent attempts. Reading gets most of the weeks, and the readiness gate shows what is still missing.'))
     );
 
@@ -94,9 +95,10 @@ export function pathView(root: HTMLElement): () => void {
     const next = nextTask(plan, done);
     const focusName = localizedSkillName(FOCUS);
 
+    const targetBand = getTarget();
     root.append(
       h('h2', 'ie-sub', t('ielts.roadmap', undefined, 'Roadmap')),
-      h('p', 'ie-lead', t('ielts.path_current_band_info', { start, weeks, focus: focusName }, `Current band ${start}. Target 7.0 in about ${weeks} weeks. Focus skill: ${esc(focusName)}.`))
+      h('p', 'ie-lead', t('ielts.path_current_band_info', { start, weeks, focus: focusName, target: targetBand.toFixed(1) }, `Current band ${start}. Target ${targetBand.toFixed(1)} in about ${weeks} weeks. Focus skill: ${esc(focusName)}.`))
     );
 
     if (next) {

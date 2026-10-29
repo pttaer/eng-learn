@@ -1034,6 +1034,209 @@ QUESTIONS = [
     }
 ]
 
+CURATED_GRAMMAR_DISTRACTORS = {
+    'gram-a1-1': [
+        "I not am a student.",
+        "I don't am a student.",
+        "I am no a student."
+    ],
+    'gram-a1-2': [
+        "Does she is a teacher?",
+        "She is a teacher?",
+        "Is she teacher?"
+    ],
+    'gram-a1-3': [
+        "He has not a car.",
+        "He does not has a car.",
+        "He do not have a car."
+    ],
+    'gram-a1-4': [
+        "Have you a sister?",
+        "Do you has a sister?",
+        "Does you have a sister?"
+    ],
+    'gram-a1-5': [
+        "Are there a cat in the garden?",
+        "Does there is a cat in the garden?",
+        "Is there cat in the garden?"
+    ],
+    'gram-a1-6': [
+        "There is no apples in the bag.",
+        "There are not apples in the bag.",
+        "There not are apples in the bag."
+    ],
+    'gram-a1-7': [
+        "I can not to swim.",
+        "I don't can swim.",
+        "I cannot swimming."
+    ],
+    'gram-a1-8': [
+        "Does she can cook?",
+        "Can she to cook?",
+        "Can she cooks?"
+    ],
+    'gram-a1-9': [
+        "She work in a shop.",
+        "She is work in a shop.",
+        "She working in a shop."
+    ],
+    'gram-a1-10': [
+        "They does not like fish.",
+        "They not like fish.",
+        "They do not likes fish."
+    ],
+    'gram-a1-11': [
+        "He does not likes tea.",
+        "He do not like tea.",
+        "He is not like tea."
+    ],
+    'gram-a1-12': [
+        "Does you live here?",
+        "Are you live here?",
+        "Do you lives here?"
+    ],
+    'gram-a1-13': [
+        "Does she plays tennis?",
+        "Do she play tennis?",
+        "Is she play tennis?"
+    ],
+    'gram-a1-14': [
+        "When you eat lunch?",
+        "When does you eat lunch?",
+        "When are you eat lunch?"
+    ],
+    'gram-a1-15': [
+        "I eat always breakfast.",
+        "Always I eat breakfast.",
+        "I am always eat breakfast."
+    ],
+    'gram-a1-16': [
+        "He never is late.",
+        "He does never late.",
+        "Never he is late."
+    ],
+    'gram-a2-1': [
+        "I was walk to school yesterday.",
+        "I walking to school yesterday.",
+        "I did walked to school yesterday."
+    ],
+    'gram-a2-2': [
+        "We studyed English and we planed a trip.",
+        "We studied English and we planed a trip.",
+        "We studyed English and we planned a trip."
+    ],
+    'gram-a2-3': [
+        "I goed to the market and buyed some fruit.",
+        "I went to the market and buyed some fruit.",
+        "I was go to the market and bought some fruit."
+    ],
+    'gram-a2-4': [
+        "She did not visited her aunt on Sunday.",
+        "She was not visit her aunt on Sunday.",
+        "She not visited her aunt on Sunday."
+    ],
+    'gram-a2-5': [
+        "Did you watched a film last night?",
+        "Were you watch a film last night?",
+        "Do you watched a film last night?"
+    ],
+    'gram-a2-6': [
+        "What did he bought yesterday?",
+        "What he bought yesterday?",
+        "What was he buy yesterday?"
+    ],
+    'gram-a2-7': [
+        "I were watching TV at eight o'clock last night.",
+        "I was watch TV at eight o'clock last night.",
+        "I watched TV at eight o'clock last night."
+    ],
+    'gram-a2-8': [
+        "I cooked dinner when the phone was ringing.",
+        "I was cooking dinner while the phone was ringing.",
+        "I was cook dinner when the phone rang."
+    ],
+    'gram-a2-9': [
+        "I going to visit my grandmother on Saturday.",
+        "I am going visit my grandmother on Saturday.",
+        "I will going to visit my grandmother on Saturday."
+    ],
+    'gram-a2-10': [
+        "She does not going to buy a new bag.",
+        "She is going not to buy a new bag.",
+        "She not is going to buy a new bag."
+    ],
+    'gram-a2-11': [
+        "Do you going to cook tonight?",
+        "Are you going to cooking tonight?",
+        "Will you going to cook tonight?"
+    ],
+    'gram-a2-12': [
+        "I will to open the window.",
+        "I will opening the window.",
+        "I am open the window."
+    ],
+    'gram-a2-13': [
+        "He will not to come to the meeting.",
+        "He does not will come to the meeting.",
+        "He will not comes to the meeting."
+    ],
+    'gram-a2-14': [
+        "Does it will rain tomorrow?",
+        "Will it to rain tomorrow?",
+        "Will it rains tomorrow?"
+    ],
+    'gram-a2-15': [
+        "I meeting my friend at six tonight.",
+        "I will meeting my friend at six tonight.",
+        "I am meet my friend at six tonight."
+    ],
+    'gram-a2-16': [
+        "He cooks dinner with his friends tomorrow.",
+        "He is cook dinner with his friends tomorrow.",
+        "He has cooked dinner with his friends tomorrow."
+    ],
+    'gram-b1-1': [
+        "I has lost my keys, so I can't open the door.",
+        "I have lose my keys, so I can't open the door.",
+        "I am lost my keys, so I can't open the door."
+    ],
+    'gram-b1-2': [
+        "I has lived here for five years.",
+        "I have lived here since five years.",
+        "I am living here for five years."
+    ],
+    'gram-b1-3': [
+        "She has worked at the bank for 2019.",
+        "She have worked at the bank since 2019.",
+        "She is working at the bank since 2019."
+    ],
+    'gram-b1-4': [
+        "He have just arrived.",
+        "He just has arrived.",
+        "He is just arrived."
+    ],
+    'gram-b1-5': [
+        "I don't need to cook because my brother have already cooked dinner.",
+        "I don't need to cook because my brother already has cooked dinner.",
+        "I don't need to cook because my brother has cooked already dinner."
+    ],
+    'gram-b1-6': [
+        "Have you finish the report yet?",
+        "Did you finish the report yet?",
+        "Have you yet finished the report?"
+    ],
+    'gram-b1-7': [
+        "I has never eaten sushi before.",
+        "I have ever eaten sushi before.",
+        "I haven't never eaten sushi before."
+    ],
+    'gram-b1-8': [
+        "I has been waiting for the bus since six.",
+        "I have waited for the bus since six.",
+        "I am waiting for the bus since six."
+    ]
+}
+
 def load_grammar_items(root_dir):
     grammar_file = os.path.join(root_dir, 'web', 'src', 'assets', 'data', 'grammar.json')
     if not os.path.exists(grammar_file):
@@ -1055,42 +1258,34 @@ def load_grammar_items(root_dir):
         if mode in tense_modes:
             t_id, t_name, fam = tense_modes[mode]
             title = g.get('title', '')
-            if 'Continuous' in title:
+            if 'Perfect Continuous' in title:
+                t_id, t_name, fam = 'present-perfect-continuous', 'Present Perfect Continuous', 'PRESENT'
+            elif 'Continuous' in title:
                 if 'Past' in title:
                     t_id, t_name, fam = 'past-continuous', 'Past Continuous', 'PAST'
                 elif 'Present' in title:
                     t_id, t_name, fam = 'present-continuous', 'Present Continuous', 'PRESENT'
                 elif 'Future' in title:
                     t_id, t_name, fam = 'future-continuous', 'Future Continuous', 'FUTURE'
-            elif 'Perfect Continuous' in title:
-                t_id, t_name, fam = 'present-perfect-continuous', 'Present Perfect Continuous', 'PRESENT'
 
             correct = g.get('targetTransformation', '').strip()
             prompt_sent = g.get('promptSentence', '').strip()
             cue = g.get('grammaticalCue', '').strip()
+            gid = g.get('id', '')
+            distractors = list(CURATED_GRAMMAR_DISTRACTORS.get(gid, []))
+            if len(distractors) < 3:
+                # Fallback to realistic grammatical distractors
+                words = correct.split()
+                d1 = correct.replace(' not ', ' no ').replace('does not', 'do not').replace('have', 'has')
+                d2 = correct.replace('ed', 'ing').replace('was', 'were')
+                d3 = correct.replace('will', 'is').replace('has', 'have').replace('are', 'is')
+                distractors = [d for d in [d1, d2, d3] if d != correct]
+                while len(distractors) < 3:
+                    distractors.append(f"Not {correct}")
 
-            # Create realistic grammatical distractors
-            words = correct.split()
-            d1 = correct.replace(' not ', ' no ').replace('does not', 'do not').replace('have', 'has')
-            if d1 == correct and len(words) > 2:
-                d1 = f"{words[0]} {words[2]} {words[1]} {' '.join(words[3:])}".strip()
-            d2 = correct.replace('ed', 'ing').replace('was', 'were').replace('did not', 'not did')
-            if d2 == correct:
-                d2 = prompt_sent
-            d3 = correct.replace('will', 'is').replace('has', 'have').replace('are', 'is')
-            if d3 == correct or d3 == d1 or d3 == d2:
-                d3 = f"{words[0]} {prompt_sent}"
-
-            opts = [correct, d1, d2, d3]
-            # Ensure unique options
-            seen = set()
-            unique_opts = []
-            for o in opts:
-                if o not in seen:
-                    seen.add(o)
-                    unique_opts.append(o)
-            while len(unique_opts) < 4:
-                unique_opts.append(f"{prompt_sent} ({len(unique_opts)})")
+            ans_pos = len(results) % 4
+            opts = distractors[:3]
+            opts.insert(ans_pos, correct)
 
             results.append({
                 "id": f"q-gram-{g.get('id', '')}",
@@ -1099,8 +1294,8 @@ def load_grammar_items(root_dir):
                 "family": fam,
                 "prompt": f"{prompt_sent} -> [Transform]: {title}",
                 "blankTarget": correct,
-                "options": unique_opts,
-                "answer": 0,
+                "options": opts,
+                "answer": ans_pos,
                 "signal": cue or g.get('formula', ''),
                 "explanation": g.get('analysis', '') or f"Formula: {g.get('formula', '')}",
                 "vietnameseExplanation": g.get('vietnamese', ''),

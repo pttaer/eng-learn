@@ -337,13 +337,13 @@ export class ListeningDossier {
       <div style="font-family: var(--font-sans); font-size: var(--font-body); font-weight: 600; margin-bottom: 8px;">
         ${t('listening.topic_label', undefined, 'Topic')}: ${item.title}
       </div>
-      <div style="display: flex; gap: 8px; margin-bottom: 12px;">
-        <button type="button" class="hud-btn btn-play-audio" style="font-size: var(--font-kicker); padding: 4px 10px;">▶ Play 1.0x</button>
-        <button type="button" class="hud-btn btn-play-slow" style="font-size: var(--font-kicker); padding: 4px 10px;">⏵ Play 0.8x</button>
+      <div style="display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
+        <button type="button" class="hud-btn btn-play-audio" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">▶ Play 1.0x</button>
+        <button type="button" class="hud-btn btn-play-slow" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">⏵ Play 0.8x</button>
       </div>
       <textarea class="listening-transcribe-box" placeholder="${t('listening.transcribe_ph', undefined, 'Pass 2: Transcribe word-for-word here...')}" rows="3" style="width: 100%; font-family: var(--font-mono); font-size: max(16px, var(--font-body)); padding: 10px; border: 1px solid var(--border-subtle); background: var(--bg-surface-sunk); color: var(--ink-primary); border-radius: 6px; outline: none; resize: none; box-sizing: border-box;"></textarea>
       <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); margin-top: 6px;">
-        ${t('listening.flip_hint', undefined, 'Listen at least twice before pressing Space / Flip to reveal phonetic analysis.')}
+        ${t('listening.flip_hint', undefined, 'Listen at least twice before flipping the card to reveal phonetic analysis.')}
       </div>
     `;
 
@@ -389,7 +389,7 @@ export class ListeningDossier {
       <!-- Audio Player Strip with Speed Controls -->
       <div class="cloze-player-strip">
         <div style="display: flex; align-items: center; gap: 6px;">
-          <button type="button" class="hud-btn btn-cloze-play" style="font-size: var(--font-kicker); padding: 4px 12px; font-weight: 700; background: var(--accent-gold); color: var(--bg-canvas); border: none;">
+          <button type="button" class="hud-btn btn-cloze-play" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center; font-weight: 700; background: var(--accent-gold); color: var(--bg-canvas); border: none;">
             ▶ Play Audio
           </button>
         </div>
@@ -411,9 +411,9 @@ export class ListeningDossier {
         <div>
           ${t('listening.transcribe_missing', undefined, 'Listen closely & transcribe the missing phonetic words.')}
         </div>
-        <div style="display: flex; gap: 6px;">
-          <button type="button" class="hud-btn btn-cloze-hint" style="font-size: var(--font-kicker); padding: 2px 8px;">${icon('lightbulb', 11)} Hint</button>
-          <button type="button" class="hud-btn btn-cloze-reset" style="font-size: var(--font-kicker); padding: 2px 8px;">↺ Reset</button>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button type="button" class="hud-btn btn-cloze-hint" style="font-size: var(--font-kicker); padding: 8px 12px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">${icon('lightbulb', 11)} Hint</button>
+          <button type="button" class="hud-btn btn-cloze-reset" style="font-size: var(--font-kicker); padding: 8px 12px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">↺ Reset</button>
         </div>
       </div>
 

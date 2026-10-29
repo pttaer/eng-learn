@@ -10,3 +10,6 @@ worktrees/
 data/scraped-ielts/
 .claude/*.local.json
 data/ielts_tips/articles/
+web/scripts/scan-*
+web/scripts/*-findings.json
+web/scripts/*-output.txt

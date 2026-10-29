@@ -6,12 +6,16 @@
 
 import { ProgressionEngine } from './progression-engine';
 import { StorageManager } from '../utils/storage';
-import { I18n, t, LOCALE_EVENT } from './i18n';
+import { SRSEngine } from './srs-engine';
+import { I18n, LOCALE_EVENT } from './i18n';
+import { NotificationCatalog } from './notification-catalog';
 
 declare global {
   interface Window {
     AndroidWidgetBridge?: {
       updateWidgetData(json: string): void;
+      postNotification?(title: string, body: string, route: string): void;
+      scheduleNotification?(title: string, body: string, route: string, delayMs: number): void;
     };
   }
 }
@@ -34,6 +38,9 @@ export interface WidgetPayload {
   meaning?: string;
   example?: string;
   tags?: string;
+  notification_hook?: string;
+  notification_tip?: string;
+  locale?: string;
 }
 
 const FALLBACK_WORDS: WidgetCustomWord[] = [
@@ -60,6 +67,62 @@ const FALLBACK_WORDS: WidgetCustomWord[] = [
     vietnamese: 'mô hình, khuôn mẫu chuẩn mực',
     example: '“The shift marked an entirely new paradigm in economic thought.”',
     tags: 'Collocations: paradigm shift, dominant paradigm  •  Synonyms: archetype, model, standard'
+  },
+  {
+    word: 'Salient',
+    phonetic: '/ˈseɪ.li.ənt/ • adj',
+    definition: 'Most noticeable, prominent, or of pivotal importance.',
+    vietnamese: 'nổi bật, then chốt, đáng chú ý nhất',
+    example: '“She highlighted the salient features of the academic proposal.”',
+    tags: 'Collocations: salient point, salient feature  •  Synonyms: prominent, conspicuous, pivotal'
+  },
+  {
+    word: 'Mitigate',
+    phonetic: '/ˈmɪt.ɪ.ɡeɪt/ • v',
+    definition: 'Make less severe, serious, painful, or damaging.',
+    vietnamese: 'làm giảm nhẹ, xoa dịu, giảm thiểu tác hại',
+    example: '“Stringent safeguards mitigate systemic failure risk.”',
+    tags: 'Collocations: mitigate risk, mitigate impact  •  Synonyms: alleviate, attenuate, reduce'
+  },
+  {
+    word: 'Juxtapose',
+    phonetic: '/ˌdʒʌk.stəˈpəʊz/ • v',
+    definition: 'Place close together for contrasting effect.',
+    vietnamese: 'đặt cạnh nhau để làm nổi bật tương phản',
+    example: '“The essay juxtaposes urban decay and modern high-tech.”',
+    tags: 'Collocations: juxtapose with, starkly juxtaposed  •  Synonyms: compare, contrast, collate'
+  },
+  {
+    word: 'Plausible',
+    phonetic: '/ˈplɔː.zə.bəl/ • adj',
+    definition: 'Reasonable or probable; having an appearance of truth.',
+    vietnamese: 'hợp lý, đáng tin cậy, có thể xảy ra',
+    example: '“The investigator offered a plausible explanation for the anomaly.”',
+    tags: 'Collocations: plausible explanation, highly plausible  •  Synonyms: credible, believable'
+  },
+  {
+    word: 'Exacerbate',
+    phonetic: '/ɪɡˈzæs.ə.beɪt/ • v',
+    definition: 'Make a problem, bad situation, or negative feeling worse.',
+    vietnamese: 'làm trầm trọng thêm, làm xấu đi tình hình',
+    example: '“Budget cutbacks will exacerbate the existing labor shortage.”',
+    tags: 'Collocations: exacerbate tension, exacerbate crisis  •  Synonyms: aggravate, worsen'
+  },
+  {
+    word: 'Proponent',
+    phonetic: '/prəˈpəʊ.nənt/ • n',
+    definition: 'A person who advocates a theory, proposal, or course of action.',
+    vietnamese: 'người ủng hộ tích cực, người đề xướng',
+    example: '“He was an articulate proponent of sustainable clean energy.”',
+    tags: 'Collocations: leading proponent, vocal proponent  •  Synonyms: advocate, champion'
+  },
+  {
+    word: 'Pragmatic',
+    phonetic: '/præɡˈmæt.ɪk/ • adj',
+    definition: 'Dealing with things sensibly and realistically based on practical results.',
+    vietnamese: 'thực tế, thực dụng, trọng tính khả thi',
+    example: '“They adopted a pragmatic approach to resolve the complex dilemma.”',
+    tags: 'Collocations: pragmatic approach, pragmatic solution  •  Synonyms: practical, sensible'
   }
 ];
 
@@ -143,25 +206,46 @@ export class WidgetBridge {
     try {
       const isVi = I18n.getLocale() === 'vi';
       let streak = 1;
-      let progress = isVi ? t('widget.daily_focus', undefined, 'Tiêu điểm hôm nay') : 'Daily Focus';
+      let level = 1;
+      let completedQuests = 0;
+      let questsLeft = 3;
 
       try {
         const prog = ProgressionEngine.getInstance().getState();
         streak = prog.streak > 0 ? prog.streak : 1;
-        const completedQuests = prog.quests.filter(q => q.completed).length;
-        if (isVi) {
-          progress = `Cấp ${prog.level} • ${completedQuests}/3 Nhiệm vụ`;
-        } else {
-          progress = `Lv.${prog.level} • ${completedQuests}/3 Quests`;
-        }
+        level = prog.level || 1;
+        completedQuests = prog.quests.filter(q => q.completed).length;
+        questsLeft = prog.quests.filter(q => !q.completed).length;
       } catch {
         const state = StorageManager.loadState();
         streak = state.streak?.currentStreak || 1;
       }
 
-      const payload: WidgetPayload = {
+      let dueCount = 0;
+      try {
+        const states = StorageManager.loadState().cardStates;
+        dueCount = SRSEngine.getDueCount(states);
+      } catch {
+        dueCount = 0;
+      }
+
+      // Generate attractive dynamic progress hook for the widget
+      const hook = NotificationCatalog.getWidgetAlertHook({
+        dueCount,
         streak,
-        progress
+        questsLeft,
+        completedQuests,
+        level
+      }, isVi ? 'vi' : 'en');
+
+      const curiosityTip = NotificationCatalog.getWidgetCuriosityTip(isVi ? 'vi' : 'en');
+
+      const payload: WidgetPayload = {
+        notification_tip: `${curiosityTip.kicker}: ${curiosityTip.text}`,
+        streak,
+        progress: hook,
+        notification_hook: hook,
+        locale: isVi ? 'vi' : 'en'
       };
 
       const wordToSync = customWord || this.lastWord || FALLBACK_WORDS[0];

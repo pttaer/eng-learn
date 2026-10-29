@@ -10,7 +10,7 @@
  */
 
 import { Cefr } from '../core/cefr';
-import { SkillId } from '../utils/storage';
+import { StorageManager, SkillId } from '../utils/storage';
 import { SkillTreeEngine } from '../core/skill-tree-engine';
 import { SerlGauntletEngine, SerlErrorRecord, RehabMicroDrill } from '../core/serl-gauntlet-engine';
 import { icon } from '../utils/icons';
@@ -67,7 +67,8 @@ export class AnalyticsDossier {
     const masteries = this.calculateBranchMasteries();
     const overallBand = AnalyticsDossier.estimateIeltsBand(masteries);
     const radarSvg = AnalyticsDossier.generateRadarSvg(masteries, 320);
-    const trajectorySvg = AnalyticsDossier.generateTrajectorySvg(overallBand, 7.5, 480, 180);
+    const targetBand = StorageManager.getTargetBand();
+    const trajectorySvg = AnalyticsDossier.generateTrajectorySvg(overallBand, targetBand, 480, 180);
     const serlStats = SerlGauntletEngine.getStats();
     const dueErrors = SerlGauntletEngine.getActiveRecords();
 
@@ -94,7 +95,7 @@ export class AnalyticsDossier {
             </div>
 
             <!-- Axis Readout Badges -->
-            <div class="radar-axis-readouts" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 14px; border-top: 1px solid var(--border-hairline, rgba(255,255,255,0.08)); padding-top: 12px;">
+            <div class="radar-axis-readouts" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 8px; margin-top: 14px; border-top: 1px solid var(--border-hairline, rgba(255,255,255,0.08)); padding-top: 12px;">
               ${RADAR_AXES.map(axis => {
                 const val = masteries[axis.id] || 0;
                 return `
@@ -151,7 +152,7 @@ export class AnalyticsDossier {
             </p>
 
             <!-- SERL Telemetry Bar -->
-            <div class="serl-telemetry-bar" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px;">
+            <div class="serl-telemetry-bar" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(85px, 1fr)); gap: 10px; margin-bottom: 16px;">
               <div style="background: rgba(255,255,255,0.03); padding: 8px 10px; border-radius: 8px; text-align: center;">
                 <div style="font-size: var(--font-kicker); color: var(--ink-muted, #94a3b8);">${t('analytics.active_queue', undefined, 'ACTIVE QUEUE')}</div>
                 <div style="font-size: var(--font-body); font-weight: 700; color: var(--accent-purple, #a855f7);">${serlStats.totalActive}</div>
@@ -477,7 +478,7 @@ export class AnalyticsDossier {
     }
 
     return `
-      <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" class="cefr-radar-svg" role="img" aria-label="CEFR 6-Axis Competency Radar">
+      <svg width="100%" height="auto" viewBox="0 0 ${size} ${size}" style="max-width: 100%; max-height: ${size}px; display: block;" class="cefr-radar-svg" role="img" aria-label="CEFR 6-Axis Competency Radar">
         <g class="radar-grid">
           ${ringsHtml}
           ${spokesHtml}

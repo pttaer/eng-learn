@@ -1,3 +1,4 @@
+import { t } from '../core/i18n';
 import { h } from './ui';
 
 type View = (root: HTMLElement) => () => void;
@@ -14,7 +15,7 @@ export function lazyView(load: () => Promise<View>): View {
   return root => {
     let off: (() => void) | undefined;
     let dead = false;
-    const placeholder = h('p', 'ie-lead', 'Loading…');
+    const placeholder = h('p', 'ie-lead', t('common.loading', undefined, 'Loading…'));
     root.append(placeholder);
     load().then(
       view => {
@@ -23,7 +24,7 @@ export function lazyView(load: () => Promise<View>): View {
         off = view(root);
       },
       () => {
-        placeholder.textContent = 'This section could not load. Reload when online.';
+        placeholder.textContent = t('common.offline_reload', undefined, 'This section could not load. Reload when online.');
       }
     );
     return () => {

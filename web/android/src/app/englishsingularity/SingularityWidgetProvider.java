@@ -398,6 +398,13 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             views.setTextViewText(R.id.widget_word, word);
             views.setTextViewText(R.id.widget_phonetic, phonetic);
 
+            String hook = prefs.getString("notification_hook", "");
+            String tip = prefs.getString("notification_tip", "");
+            String displayBadge = (hook != null && !hook.trim().isEmpty()) ? hook : tip;
+            if (displayBadge != null && !displayBadge.trim().isEmpty()) {
+                views.setTextViewText(R.id.widget_badge_cefr, displayBadge);
+            }
+
             // Active Recall Masking Toggle
             boolean isMasked = prefs.getBoolean(PREF_RECALL_MASKED, false);
             try {
@@ -443,7 +450,9 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
                 }
             }
 
-            boolean isVietnamese = progress != null && (progress.contains("Cấp") || progress.contains("Nhiệm vụ"));
+            String appLocale = prefs.getString("app_locale", "en");
+            boolean isVietnamese = "vi".equalsIgnoreCase(appLocale) ||
+                (progress != null && (progress.contains("Cấp") || progress.contains("Nhiệm vụ") || progress.contains("chuỗi") || progress.contains("thẻ")));
 
             // --- TAB 2 (Vocab Flash Quiz) ---
             int quizIdx = prefs.getInt(PREF_QUIZ_INDEX, 0);
@@ -580,23 +589,23 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
 
             // Quest Checklist Item 1
             boolean q1Done = completedQuests >= 1;
-            views.setTextViewText(R.id.widget_quest_title_1, (q1Done ? "✔  " : "○  ") + "15 SRS Cards Reviewed");
+            views.setTextViewText(R.id.widget_quest_title_1, (q1Done ? "✔  " : "○  ") + (isVietnamese ? "15 Thẻ SRS Ôn Tập" : "15 SRS Cards Reviewed"));
             views.setTextColor(R.id.widget_quest_title_1, q1Done ? 0xFFA5B4FC : 0xFFF3F4F6);
-            views.setTextViewText(R.id.widget_quest_status_1, q1Done ? "Done (+50 XP)" : "Start →");
+            views.setTextViewText(R.id.widget_quest_status_1, q1Done ? (isVietnamese ? "Xong (+50 XP)" : "Done (+50 XP)") : (isVietnamese ? "Bắt đầu →" : "Start →"));
             views.setTextColor(R.id.widget_quest_status_1, q1Done ? 0xFF64748B : 0xFFA5B4FC);
 
             // Quest Checklist Item 2
             boolean q2Done = completedQuests >= 2;
-            views.setTextViewText(R.id.widget_quest_title_2, (q2Done ? "✔  " : "○  ") + "1 Franklin Rhetorical Copywork");
+            views.setTextViewText(R.id.widget_quest_title_2, (q2Done ? "✔  " : "○  ") + (isVietnamese ? "1 Bài Viết Franklin Copywork" : "1 Franklin Rhetorical Copywork"));
             views.setTextColor(R.id.widget_quest_title_2, q2Done ? 0xFFA5B4FC : 0xFFF3F4F6);
-            views.setTextViewText(R.id.widget_quest_status_2, q2Done ? "Done (+50 XP)" : "Start →");
+            views.setTextViewText(R.id.widget_quest_status_2, q2Done ? (isVietnamese ? "Xong (+50 XP)" : "Done (+50 XP)") : (isVietnamese ? "Bắt đầu →" : "Start →"));
             views.setTextColor(R.id.widget_quest_status_2, q2Done ? 0xFF64748B : 0xFFA5B4FC);
 
             // Quest Checklist Item 3
             boolean q3Done = completedQuests >= 3;
-            views.setTextViewText(R.id.widget_quest_title_3, (q3Done ? "✔  " : "○  ") + "1 Examiner Speaking Simulation");
+            views.setTextViewText(R.id.widget_quest_title_3, (q3Done ? "✔  " : "○  ") + (isVietnamese ? "1 Bài Luyện Nói Examiner" : "1 Examiner Speaking Simulation"));
             views.setTextColor(R.id.widget_quest_title_3, q3Done ? 0xFFA5B4FC : 0xFFF3F4F6);
-            views.setTextViewText(R.id.widget_quest_status_3, q3Done ? "Done (+50 XP)" : "Start →");
+            views.setTextViewText(R.id.widget_quest_status_3, q3Done ? (isVietnamese ? "Xong (+50 XP)" : "Done (+50 XP)") : (isVietnamese ? "Bắt đầu →" : "Start →"));
             views.setTextColor(R.id.widget_quest_status_3, q3Done ? 0xFF64748B : 0xFFA5B4FC);
 
             // Quest Item Launchers
@@ -678,7 +687,10 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
                 context, 500, audioIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
 
             if (layoutId != R.layout.widget_singularity_small) {
-                views.setTextViewText(R.id.widget_progress, progress);
+                String hook = prefs.getString("notification_hook", "");
+                String tip = prefs.getString("notification_tip", "");
+                String displayProgress = (hook != null && !hook.trim().isEmpty()) ? hook : ((tip != null && !tip.trim().isEmpty()) ? tip : progress);
+                views.setTextViewText(R.id.widget_progress, displayProgress);
                 boolean hasExample = example != null && !example.trim().isEmpty();
                 views.setViewVisibility(R.id.widget_example, hasExample ? View.VISIBLE : View.GONE);
                 if (hasExample) {

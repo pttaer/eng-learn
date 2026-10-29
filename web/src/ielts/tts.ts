@@ -25,6 +25,21 @@ const MALE = /\bmale\b|david|george|mark|daniel|ryan|guy|james|richard|william|a
 let preferredAccent: AccentCadenceType = 'uk-rp';
 let roomAmbienceEnabled: boolean = false;
 const activePlaybacks = new Set<Playback>();
+const ALL_ACCENTS: AccentCadenceType[] = ['uk-rp', 'general-american', 'australian', 'scottish'];
+
+export function getResolvedAccent(): AccentCadenceType {
+  const saved = (typeof localStorage !== 'undefined' ? localStorage.getItem('eng_ielts_accent') : null) || preferredAccent;
+  if (saved === 'random') {
+    return ALL_ACCENTS[Math.floor(Math.random() * ALL_ACCENTS.length)];
+  }
+  return (ACCENT_CADENCE_MODELS[saved as AccentCadenceType] ? saved : 'uk-rp') as AccentCadenceType;
+}
+
+export function getUserTtsSpeedMultiplier(): number {
+  if (typeof localStorage === 'undefined') return 1.0;
+  const val = parseFloat(localStorage.getItem('eng_tts_rate') || '1.0');
+  return (!isNaN(val) && val >= 0.5 && val <= 2.0) ? val : 1.0;
+}
 
 export function setPreferredAccent(accent: AccentCadenceType): void {
   if (ACCENT_CADENCE_MODELS[accent]) {
@@ -33,9 +48,7 @@ export function setPreferredAccent(accent: AccentCadenceType): void {
   }
 }
 
-export function getPreferredAccent(): AccentCadenceType {
-  return preferredAccent;
-}
+export const getPreferredAccent = getResolvedAccent;
 
 export function setExamRoomAmbience(enabled: boolean): void {
   roomAmbienceEnabled = enabled;
@@ -102,13 +115,13 @@ export interface PlaySectionOptions {
 export function playSection(sec: ListeningSection, opts: PlaySectionOptions = {}): Playback {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
     opts.onEnd?.();
-    return { stop() {} };
+    return { stop() { } };
   }
 
   const synth = window.speechSynthesis;
   synth.cancel();
 
-  const activeAccent = opts.accent || preferredAccent;
+  const activeAccent = opts.accent || getResolvedAccent();
   const shouldPlayAmbience = opts.roomAmbience ?? roomAmbienceEnabled;
   let roomStarted = false;
 
@@ -146,7 +159,8 @@ export function playSection(sec: ListeningSection, opts: PlaySectionOptions = {}
       u.lang = m.v.lang;
     }
     u.pitch = m?.pitch ?? 1;
-    u.rate = opts.rate ?? AudioSynthesizer.getCadenceModel(activeAccent).rate;
+    const userSpeed = getUserTtsSpeedMultiplier();
+    u.rate = opts.rate ?? (AudioSynthesizer.getCadenceModel(activeAccent).rate * userSpeed);
     u.onstart = () => opts.onLine?.(i);
     u.onend = () => {
       if (!stopped) sectionTimer = setTimeout(() => next(i + 1), 450);
@@ -194,13 +208,13 @@ export interface PlayTextOptions {
 export function playText(text: string, opts?: PlayTextOptions): Playback {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
     opts?.onEnd?.();
-    return { stop() {} };
+    return { stop() { } };
   }
 
   const synth = window.speechSynthesis;
   synth.cancel();
 
-  const activeAccent = opts?.accent || preferredAccent;
+  const activeAccent = opts?.accent || getResolvedAccent();
   const cadenceModel = AudioSynthesizer.getCadenceModel(activeAccent);
   const shouldPlayAmbience = opts?.roomAmbience ?? roomAmbienceEnabled;
   let roomStarted = false;
@@ -240,7 +254,8 @@ export function playText(text: string, opts?: PlayTextOptions): Playback {
       u.lang = cadenceModel.langPrefixes[0] || 'en-GB';
     }
 
-    u.rate = opts?.rate ?? cadenceModel.rate;
+    const userSpeed = getUserTtsSpeedMultiplier();
+    u.rate = opts?.rate ?? (cadenceModel.rate * userSpeed);
     u.pitch = opts?.pitch ?? cadenceModel.pitch;
 
     const lastChar = chunk.slice(-1);
@@ -292,6 +307,6 @@ export function stopAll(): void {
   activePlaybacks.forEach(p => p.stop());
   activePlaybacks.clear();
   if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-    try { window.speechSynthesis.cancel(); } catch {}
+    try { window.speechSynthesis.cancel(); } catch { }
   }
 }

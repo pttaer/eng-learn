@@ -26,6 +26,10 @@ assert(ambientEngineSource.includes('setMusicVolume'), 'Must have setMusicVolume
 assert(ambientEngineSource.includes('getMusicVolume'), 'Must have getMusicVolume method');
 assert(ambientEngineSource.includes('cycleMode'), 'Must have cycleMode method');
 assert(ambientEngineSource.includes('export const ambientMusicEngine'), 'Must export ambientMusicEngine singleton');
+assert(ambientEngineSource.includes('gamma-focus'), 'Must support gamma-focus soundscape');
+assert(ambientEngineSource.includes('rain-piano'), 'Must support rain-piano soundscape');
+assert(ambientEngineSource.includes('binaural-theta'), 'Must support binaural-theta soundscape');
+assert(ambientEngineSource.includes('synthwave-drive'), 'Must support synthwave-drive soundscape');
 
 console.log('✓ ambient-music-engine.ts API verified.');
 

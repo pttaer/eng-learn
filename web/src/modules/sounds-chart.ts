@@ -6,6 +6,7 @@
 
 import { speakText } from '../core/exercise-engine';
 import phonemeData from '../assets/data/phonemes.json';
+import { ArticulatoryBiomechanics } from '../core/articulatory-biomechanics';
 
 interface Phoneme {
   symbol: string;
@@ -36,7 +37,7 @@ export function renderSoundsPanel(): HTMLElement {
   }).join('');
 
   root.innerHTML = `
-    <p class="drill-note">Tap a symbol to hear its example words. Words are read aloud; the sound itself is in the stressed syllable.</p>
+    <p class="drill-note">Tap a symbol to inspect physical articulatory mechanics (jaw drop, tongue placement, formant targets) and hear example words.</p>
     ${groups}
     <div class="sound-detail" aria-live="polite"></div>`;
 
@@ -54,11 +55,46 @@ export function renderSoundsPanel(): HTMLElement {
     if (!p) return;
     root.querySelectorAll('.sound-tile').forEach(t => t.classList.toggle('is-selected', (t as HTMLElement).dataset.sound === symbol));
     const voicing = p.voicing ? `<span class="drill-mono">${p.voicing}</span>` : '';
+    const bioProfile = ArticulatoryBiomechanics.getProfile(p.symbol);
+
+    let biomechanicHtml = '';
+    if (bioProfile) {
+      biomechanicHtml = `
+        <div class="biomechanic-card" style="margin-top: 14px; padding: 14px; background: var(--bg-surface-sunk, rgba(0,0,0,0.2)); border-radius: var(--radius-squircle-sm, 10px); border-left: 3px solid var(--accent-gold); font-size: var(--font-body-compact); line-height: 1.5;">
+          <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-gold); letter-spacing: 0.06em; margin-bottom: 8px;">
+            ARTICULATORY BIOMECHANICAL GUIDELINES
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr; gap: 8px; margin-bottom: 10px;">
+            <div><strong>🦷 Jaw Aperture (~${bioProfile.jawApertureMm}mm):</strong> <span style="color: var(--ink-secondary);">${bioProfile.jawInstruction}</span></div>
+            <div><strong>👅 Tongue Placement:</strong> <span style="color: var(--ink-secondary);">${bioProfile.tonguePosition}</span></div>
+            <div><strong>👄 Lip Posture (${bioProfile.lipPosture.toUpperCase()}):</strong> <span style="color: var(--ink-secondary);">${bioProfile.lipInstruction}</span></div>
+            ${bioProfile.targetFormants ? `
+              <div style="display: flex; gap: 12px; margin-top: 4px; font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--accent-gold);">
+                <span>TARGET F1: ${bioProfile.targetFormants.f1}Hz</span>
+                <span>TARGET F2: ${bioProfile.targetFormants.f2}Hz</span>
+              </div>
+            ` : ''}
+            ${bioProfile.vietnameseL1Contrast ? `
+              <div style="margin-top: 6px; padding: 6px 10px; background: rgba(251,191,36,0.1); border-radius: 6px; color: var(--warning); font-size: var(--font-kicker);">
+                <strong>⚠️ Vietnamese L1 Tip:</strong> ${bioProfile.vietnameseL1Contrast}
+              </div>
+            ` : ''}
+          </div>
+          <!-- Pitch / Rhythm Guideline -->
+          <div style="border-top: 1px solid var(--border-hairline); padding-top: 8px;">
+            <div style="font-size: var(--font-kicker); color: var(--ink-muted); margin-bottom: 4px;">Nuclear Stress Pitch Contour (Declarative Fall):</div>
+            ${ArticulatoryBiomechanics.generatePitchContourSvg('fall', 240, 42)}
+          </div>
+        </div>
+      `;
+    }
+
     detail.innerHTML = `
       <div class="sound-detail-head"><span class="sound-detail-symbol">/${esc(p.symbol)}/</span>${voicing}</div>
       <div class="sound-words">${p.examples.map(w => `
-        <button type="button" class="drill-btn drill-btn-ghost" data-word="${esc(w)}" aria-label="Play ${esc(w)}">${esc(w)} ▶</button>`).join('')}
-      </div>`;
+        <button type="button" class="drill-btn drill-btn-ghost" data-word="${esc(w)}" aria-label="Play ${esc(w)}" style="border-radius: var(--radius-btn, 10px);">${esc(w)} ▶</button>`).join('')}
+      </div>
+      ${biomechanicHtml}`;
   });
 
   return root;

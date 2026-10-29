@@ -285,7 +285,7 @@ export function getComparativeModels(c: SpeakingPart2): ComparativeModelAnswer[]
 function renderComparativeModels(host: HTMLElement, c: SpeakingPart2): void {
   const models = getComparativeModels(c);
   const container = h('div', 'ie-comparative-models');
-  container.append(h('h3', '', 'Comparative Model Answers & Examiner Commentary (Band 6.5 vs 7.5 vs 8.5)'));
+  container.append(h('h3', '', t('speaking.comparative_models_title', undefined, 'Comparative Model Answers & Examiner Commentary (Band 6.5 vs 7.5 vs 8.5)')));
 
   const tabsRow = h('div', 'ie-tabs ie-model-tabs');
   const cardBody = h('div', 'ie-model-card');

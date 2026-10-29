@@ -68,7 +68,7 @@ export class PlacementQuiz {
   }
 
   private card(inner: string): void {
-    this.overlay.innerHTML = `<div class="completion-receipt-card placement-quiz-card squircle-md" style="max-width: 520px; width: 100%; text-align: left; align-items: stretch; box-sizing: border-box; border-radius: var(--radius-squircle-md, 16px); box-shadow: var(--shadow-ambient);">${inner}</div>`;
+    this.overlay.innerHTML = `<div class="completion-receipt-card placement-quiz-card squircle-md" style="max-width: 520px; width: 100%; max-height: calc(100dvh - 32px); overflow-y: auto; text-align: left; align-items: stretch; box-sizing: border-box; border-radius: var(--radius-squircle-md, 16px); box-shadow: var(--shadow-ambient);">${inner}</div>`;
   }
 
   private renderIntro(): void {

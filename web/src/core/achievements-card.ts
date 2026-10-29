@@ -103,7 +103,7 @@ export function achievementsHtml(): string {
   const streak = engine.streak;
   const list = achievementsFor(summary, streak);
   return `
-    <section aria-label="Achievements" style="max-width: 420px; margin: 0 auto var(--space-16); border-radius: var(--radius-squircle-md, 16px); overflow: hidden; background: var(--bg-surface); color: var(--ink-primary); border: 1px solid var(--border-hairline); box-shadow: var(--shadow-card);">
+    <section aria-label="${t('nav.profile', undefined, 'Achievements')}" style="max-width: 420px; margin: 0 auto var(--space-16); border-radius: var(--radius-squircle-md, 16px); overflow: hidden; background: var(--bg-surface); color: var(--ink-primary); border: 1px solid var(--border-hairline); box-shadow: var(--shadow-card);">
       ${headerHtml(info, summary, streak)}
       <div>
         ${list.map(achievementRow).join('')}

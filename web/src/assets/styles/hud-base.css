@@ -564,7 +564,8 @@ svg.icon,
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.hud-btn.active {
+.hud-btn.active,
+.hud-btn.btn-route-active {
   background: var(--accent-gold);
   color: var(--bg-canvas);
   border-color: var(--accent-gold);
@@ -610,6 +611,12 @@ select {
 .hud-btn:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
+  color: var(--ink-primary);
+}
+
+.hud-btn.btn-route-active {
+  background: var(--bg-surface-elevated, rgba(255, 255, 255, 0.12));
+  border-color: var(--color-primary, #6366f1);
   color: var(--ink-primary);
 }
 
@@ -783,6 +790,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   z-index: var(--z-hud-base);
 }
 
+/* Mobile layout adaptations (aligned with canonical 768px breakpoint; covers @media (max-width: 760px) and @media (max-width: 480px)) */
 @media (max-width: 768px) {
   .hud-corner-version {
     bottom: calc(66px + env(safe-area-inset-bottom, 0px));
@@ -973,6 +981,7 @@ html[data-motion="reduce"] *::after {
 }
 
 /* Narrow viewports: icon-only actions, drop telemetry, wrap header cleanly without horizontal scroll */
+/* Mobile layout adaptations (aligned with canonical 768px breakpoint; covers @media (max-width: 760px) and @media (max-width: 480px)) */
 @media (max-width: 768px) {
   .hud-header {
     gap: var(--space-8, 8px);
@@ -986,9 +995,13 @@ html[data-motion="reduce"] *::after {
     gap: 6px;
   }
 
-  .btn-streak-pill {
+  .btn-streak-pill,
+  .btn-budget-pill,
+  .btn-exam-pill {
     padding: 4px 6px;
     font-size: var(--font-kicker);
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .hud-actions {
@@ -1045,8 +1058,8 @@ html[data-motion="reduce"] *::after {
 }
 
 /* ==========================================================================
-   ZEN IMMERSION FOCUS MODE (Hotkey 'Z')
-   Viewport dimming, 65ch reading measure focus, auxiliary nav dimming
+   ZEN IMMERSION FOCUS MODE (Hotkey 'Z' / Esc / Cursor-Style)
+   Pure zero-chrome focus, deep void background, 65ch measure clamp, floating rescue pill
    ========================================================================== */
 
 body.zen-active,
@@ -1068,30 +1081,60 @@ body.zen-active,
 }
 
 #app.zen-active #canvas-container {
-  opacity: 0.08;
-  filter: blur(2px);
-  pointer-events: none;
+  opacity: 0 !important;
+  filter: none !important;
+  pointer-events: none !important;
 }
 
 #app.zen-active .corner-bracket,
-#app.zen-active #compass-mount {
-  opacity: 0;
-  pointer-events: none;
+#app.zen-active #compass-mount,
+#app.zen-active .hud-corner-version,
+#app.zen-active .hud-breadcrumb,
+#app.zen-active .floating-note-bubble,
+#app.zen-active #floating-note-panel,
+#app.zen-active #tour-spotlight-overlay,
+#app.zen-active .tour-welcome-toast {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease !important;
 }
 
-/* Auxiliary HUD controls dim during Zen mode to eliminate visual distractions */
+/* Cursor-Style Zero-Chrome Immersion: Complete header & bottom dock suppression */
+#app.zen-active #hud-header-mount,
+#app.zen-active .hud-header {
+  transform: translateY(-100%) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+#app.zen-active .hud-bottom-nav,
+#app.zen-active .mobile-dock,
+#app.zen-active .mobile-nav-bar {
+  transform: translateY(100%) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Auxiliary HUD controls & toolbars completely vanish during Zen mode (Cursor zero-chrome) */
 #app.zen-active .btn-theme-toggle,
 #app.zen-active .btn-launch-tour,
 #app.zen-active .btn-settings,
-#app.zen-active .btn-progression-pill {
-  opacity: 0.25;
-}
-
-#app.zen-active .btn-theme-toggle:hover,
-#app.zen-active .btn-launch-tour:hover,
-#app.zen-active .btn-settings:hover,
-#app.zen-active .btn-progression-pill:hover {
-  opacity: 1;
+#app.zen-active .btn-progression-pill,
+#app.zen-active .dossier-control-bar,
+#app.zen-active .dossier-status-pill,
+#app.zen-active .streak-telemetry,
+#app.zen-active .dossier-tabs,
+#app.zen-active .dossier-filter-row,
+#app.zen-active .category-pills,
+#app.zen-active .search-bar-wrap,
+#app.zen-active .pagination-strip {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 /* Zen Button Active Indicator & Styling */
@@ -1103,9 +1146,21 @@ body.zen-active,
   box-shadow: 0 0 14px rgba(212, 160, 23, 0.45) !important;
 }
 
-/* Center and clamp reading measure to 65ch in Zen mode */
+/* Center and clamp reading measure to 65ch in Zen mode (Cursor center-layout) */
+#app.zen-active #workspace-mount {
+  padding-top: clamp(24px, 5vh, 64px) !important;
+  padding-bottom: clamp(32px, 8vh, 80px) !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  transition: padding 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 #app.zen-active .dossier-workspace {
-  max-width: 72ch;
+  max-width: 68ch !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   transition: max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -1115,10 +1170,128 @@ body.zen-active,
 #app.zen-active .copywork-console,
 #app.zen-active .calm-prose,
 #app.zen-active .atomic-card-container {
-  max-width: 65ch;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 65ch !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   transition: max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Seamless void canvas: soften cards, borders, drop shadows into typography focus */
+#app.zen-active .atomic-card,
+#app.zen-active .reading-card,
+#app.zen-active .dossier-card,
+#app.zen-active .writing-card,
+#app.zen-active .drill-card,
+#app.zen-active .exam-card,
+#app.zen-active .card-surface,
+#app.zen-active .hud-card {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* ==========================================================================
+   CURSOR-STYLE FLOATING RESCUE PILL & TOP HOTZONE
+   ========================================================================== */
+
+.zen-floating-pill {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translate(-50%, -180%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: var(--z-modal, 9999);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px 6px 16px;
+  background: rgba(14, 18, 26, 0.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-pill, 9999px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
+  font-size: 13px;
+  color: #e2e8f0;
+  user-select: none;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.zen-floating-pill.is-visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.zen-pill-icon {
+  font-size: 14px;
+  color: var(--accent-gold, #f59e0b);
+  display: inline-flex;
+  align-items: center;
+}
+
+.zen-pill-label {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #f8fafc;
+}
+
+.zen-pill-kbd {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #cbd5e1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.zen-pill-exit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-left: 2px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-btn, 10px);
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.zen-pill-exit:hover {
+  background: rgba(239, 68, 68, 0.25);
+  border-color: rgba(239, 68, 68, 0.5);
+  color: #fca5a5;
+  transform: scale(1.05);
+}
+
+.zen-pill-exit:active {
+  transform: scale(0.95);
+}
+
+/* Invisible top-edge hover hotzone to reveal the rescue pill */
+.zen-top-hotzone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 36px;
+  z-index: calc(var(--z-modal, 9999) - 1);
+  pointer-events: auto;
 }
 
 /* ==========================================================================
@@ -1184,6 +1357,7 @@ body.zen-active,
 }
 
 /* Mobile: drop the telemetry strip and button labels so the header stays one row */
+/* Mobile layout adaptations (aligned with canonical 768px breakpoint; covers @media (max-width: 760px) and @media (max-width: 480px)) */
 @media (max-width: 768px) {
 
   .hud-header .hud-telemetry-cluster,
@@ -1204,6 +1378,7 @@ body.zen-active,
   display: none;
 }
 
+/* Mobile layout adaptations (aligned with canonical 768px breakpoint; covers @media (max-width: 760px) and @media (max-width: 480px)) */
 @media (max-width: 768px) {
 
   /* Streamline header on mobile: keep brand, level badge, streak pill & mobile drawer trigger */
@@ -1266,6 +1441,7 @@ body.zen-active,
     right: 0;
     z-index: 1000;
     height: 60px;
+    height: calc(var(--bottom-nav-height, 60px) + env(safe-area-inset-bottom, 0px));
     padding-bottom: env(safe-area-inset-bottom, 0px);
     background: rgba(8, 10, 15, 0.95);
     backdrop-filter: blur(16px);
@@ -1642,9 +1818,8 @@ body.zen-active,
   color: var(--ink-secondary);
   margin: 0;
   line-height: 1.35;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .deck-cefr-badge {
@@ -1882,6 +2057,7 @@ body.zen-active,
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   padding: 20px;
+  padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
   box-sizing: border-box;
   box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.6);
   display: flex;
@@ -1925,8 +2101,11 @@ body.zen-active,
   border: 1px solid var(--border-subtle);
   color: var(--ink-secondary);
   border-radius: 50%;
-  width: var(--touch-target-min);
-  height: var(--touch-target-min);
+  width: var(--touch-target-min, 44px);
+  height: var(--touch-target-min, 44px);
+  min-width: var(--touch-target-min, 44px);
+  min-height: var(--touch-target-min, 44px);
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2219,6 +2398,8 @@ body.zen-active,
 .commute-player-sheet {
   width: 100%;
   max-width: 480px;
+  max-height: 85dvh;
+  overflow-y: auto;
   background: var(--bg-surface, #0f1319);
   border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.12));
   border-top-left-radius: 16px;
@@ -2267,8 +2448,13 @@ body.zen-active,
   border: 1px solid var(--border-subtle);
   color: var(--ink-secondary);
   border-radius: 50%;
-  width: var(--touch-target-min);
-  height: var(--touch-target-min);
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 0;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;

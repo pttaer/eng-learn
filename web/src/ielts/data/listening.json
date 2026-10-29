@@ -926,7 +926,9 @@
     "prompt": "The phone number is 0764 22 ___________ ___________",
     "answer": [
      "44 89",
-     "4489"
+     "4489",
+     "double four eight nine",
+     "four four eight nine"
     ],
     "why": "After self-correction, the customer confirms 'oh seven six four double two double four eight nine,' which is 0764 22 44 89."
    },
@@ -1786,7 +1788,10 @@
     "prompt": "The customer's date of birth:",
     "answer": [
      "14 March 1999",
+     "the fourteenth of March 1999",
+     "the fourteenth of March, 1999",
      "fourteenth of March 1999",
+     "the 14th of March 1999",
      "14/03/1999",
      "14 March, 1999",
      "14th March 1999",

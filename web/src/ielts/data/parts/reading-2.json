@@ -438,7 +438,8 @@
     "prompt": "Summary: Three years after Jenner published his work, around ______ people in England had been vaccinated.",
     "answer": [
      "100,000",
-     "100000"
+     "100000",
+     "one hundred thousand"
     ],
     "why": "Paragraph B: \"By 1801, approximately 100,000 people in England had received vaccinations\"."
    },
@@ -629,7 +630,8 @@
      "11,000 years",
      "11000 years",
      "11,000",
-     "11,000 years ago"
+     "11,000 years ago",
+     "11000 years ago"
     ],
     "why": "Paragraph A: \"with consumption dating back 11,000 years to the Neolithic period\"."
    },

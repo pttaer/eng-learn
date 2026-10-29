@@ -34,16 +34,25 @@ export function currentBands(att: Attempt[], placement: Placement): Placement {
   return out;
 }
 
-/** 6 weeks per band below 7.0 (a half band gives 3), capped at 24. At 7.0 or above there are no weeks left. */
-export function weeksFor(start: number): number {
-  const gap = Math.max(0, TARGET - start);
+/** Current target band: defaults to TARGET (7), reads from localStorage when available. */
+export function getTarget(): number {
+  if (typeof localStorage !== 'undefined') {
+    const val = parseFloat(localStorage.getItem('eng_target_band') || '7.0');
+    return (!isNaN(val) && val >= 5.5 && val <= 8.5) ? val : TARGET;
+  }
+  return TARGET;
+}
+
+/** 6 weeks per band below target band (a half band gives 3), capped at 24. At target or above there are no weeks left. */
+export function weeksFor(start: number, target: number = getTarget()): number {
+  const gap = Math.max(0, target - start);
   return Math.min(24, Math.round(gap * 6));
 }
 
 /** Weeks left. 0 only once all four gates pass; until then at least 4 weeks, one full task cycle ending in a mock. */
-export function roadmapWeeks(start: number, att: Attempt[]): number {
+export function roadmapWeeks(start: number, att: Attempt[], target: number = getTarget()): number {
   if (SKILLS.every(s => gate(s, att).ok)) return 0;
-  return Math.max(4, weeksFor(start));
+  return Math.max(4, weeksFor(start, target));
 }
 
 /** Lowest placement band. An untested skill counts as weakest so it is tested first. */

@@ -25,7 +25,11 @@ export function mountCockpitMockTest(host: HTMLElement, onBack: () => void): () 
   topNav.style.cssText = 'padding: 8px 16px; display: flex; justify-content: space-between; align-items: center; background: var(--bg-surface-sunk, #0f172a); border-bottom: 1px solid var(--border-line, rgba(255,255,255,0.1));';
 
   const backBtn = h('button', 'ie-btn ie-btn-back', `<span class="ie-back-arrow">←</span> ${t('mock.back_to_overview', undefined, 'Back to Mock Overview')}`);
-  backBtn.addEventListener('click', () => {
+  backBtn.addEventListener('click', async () => {
+    if (cockpit.isExamActive()) {
+      const allowed = await cockpit.canDeactivate();
+      if (!allowed) return;
+    }
     cockpit.teardown();
     onBack();
   });

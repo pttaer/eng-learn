@@ -14,6 +14,9 @@ import { ProgressionEngine, getTodayString } from './progression-engine';
 import { UsageTracker, localDayKey } from './usage-tracker';
 import { recentBand, Skill } from '../ielts/progress';
 import collocationsData from '../assets/data/collocations.json';
+import { I18n, t, type Locale } from './i18n';
+import { NotificationCatalog, type NotificationPayload } from './notification-catalog';
+import { SerlGauntletEngine } from './serl-gauntlet-engine';
 
 export type NotificationPermissionState = 'granted' | 'denied' | 'default' | 'unsupported';
 
@@ -83,6 +86,8 @@ export function navigateTo(route: string): void {
 
 export class NotificationEngine {
   private static periodicTimerId: any = null;
+  private static exitTimerId: any = null;
+  private static exitListenerAttached: boolean = false;
 
   /**
    * Checks whether the current runtime environment supports the Web Notification API.
@@ -131,7 +136,7 @@ export class NotificationEngine {
   }
 
   /**
-   * Dispatches a notification across Service Worker or Window Notification,
+   * Dispatches a notification across Android Native Bridge, Service Worker, or Window Notification,
    * falling back to in-app toast if permission is not granted or unsupported.
    */
   public static async dispatch(title: string, options?: NotificationOptions): Promise<boolean> {
@@ -144,7 +149,17 @@ export class NotificationEngine {
 
     const targetRoute = (opts.data && opts.data.route) ? opts.data.route : '#collocations';
 
-    // 1. Try Native Notification if granted
+    // 1. Try Native Android Bridge if running inside Android WebView
+    if (typeof window !== 'undefined') {
+      const bridge = (window as any).AndroidWidgetBridge || (window as any).AndroidNotificationBridge;
+      if (bridge && typeof bridge.postNotification === 'function') {
+        bridge.postNotification(title, opts.body || '', targetRoute);
+        this.recordNotificationTimestamp();
+        return true;
+      }
+    }
+
+    // 2. Try Native Web Notification if granted
     if (this.isSupported() && Notification.permission === 'granted') {
       try {
         // Try Service Worker registration first (standard for mobile PWA)
@@ -173,7 +188,7 @@ export class NotificationEngine {
       }
     }
 
-    // 2. In-App HUD Toast fallback
+    // 3. In-App HUD Toast fallback
     this.showToast(title, opts.body || '', targetRoute);
     this.recordNotificationTimestamp();
     return false;
@@ -210,15 +225,13 @@ export class NotificationEngine {
     }
 
     // 3. Evaluate notification trigger
+    const currentLocale: Locale = (typeof localStorage !== 'undefined' && (localStorage.getItem('eng_locale') as Locale)) || I18n.getLocale() || 'en';
+
+    // SRS Review Due notification
     if (dueCount > 0) {
-      const title = `SRS Review Due (${dueCount} item${dueCount > 1 ? 's' : ''})`;
-      const named = dueSample.words.map(w => `"${w}"`).join(', ');
-      const more = dueCount > dueSample.words.length ? ` and ${dueCount - dueSample.words.length} more` : '';
-      const body = named
-        ? `Review now: ${named}${more}. Retain your mastery!`
-        : `You have ${dueCount} flashcard${dueCount > 1 ? 's' : ''} ready for spaced repetition recall. Retain your mastery!`;
-      const isNative = await this.dispatch(title, {
-        body,
+      const payload = NotificationCatalog.getDueCardsNotification(dueCount, dueSample.words, currentLocale);
+      const isNative = await this.dispatch(payload.title, {
+        body: payload.body,
         icon: DEFAULT_ICON,
         badge: DEFAULT_ICON,
         tag: DEFAULT_TAG,
@@ -234,6 +247,7 @@ export class NotificationEngine {
       };
     }
 
+    // Streak Protection Alert notification
     if (needsStreakReminder) {
       // Show at most once per calendar day
       try {
@@ -246,12 +260,10 @@ export class NotificationEngine {
         // Storage blocked: proceed anyway
       }
 
-      const title = `Streak Protection Alert (${streak} Days)`;
       const left = this.questsLeft();
-      const questNote = left > 0 ? `${left} quest${left === 1 ? '' : 's'} left today.` : 'Today\'s quests are done.';
-      const body = `Don't break your ${streak}-day streak. ${questNote}`;
-      const isNative = await this.dispatch(title, {
-        body,
+      const payload = NotificationCatalog.getStreakReminderNotification(streak, left, currentLocale);
+      const isNative = await this.dispatch(payload.title, {
+        body: payload.body,
         icon: DEFAULT_ICON,
         badge: DEFAULT_ICON,
         tag: DEFAULT_TAG,
@@ -311,26 +323,106 @@ export class NotificationEngine {
       if (new Date().getHours() < REMINDER_HOUR) return null;
       if (localStorage.getItem(REMINDER_DAY_KEY) === localDayKey()) return null;
       if (UsageTracker.summary().todayMinutes > 0) return null;
+      const currentLocale: Locale = (typeof localStorage !== 'undefined' && (localStorage.getItem('eng_locale') as Locale)) || I18n.getLocale() || 'en';
       const info = ProgressionEngine.getLevelInfo();
       const xpToNext = info.spanInLevel - info.progressInLevel;
+      let mistakesCount = 0;
+      try {
+        mistakesCount = SerlGauntletEngine.getActiveRecords().length;
+      } catch {}
       const left = this.questsLeft();
-      const progressLine = `Level ${info.level}, ${xpToNext} XP to the next rank, ${left} quest${left === 1 ? '' : 's'} left.`;
       const focus = weakestIeltsSkill();
-      if (focus) {
-        const name = focus.skill.charAt(0).toUpperCase() + focus.skill.slice(1);
-        return {
-          title: `IELTS focus: ${name} (band ${focus.band.toFixed(1)})`,
-          body: `Ten minutes on your weakest skill today. ${progressLine}`,
-          route: `ielts.html#${focus.skill}`
-        };
-      }
+
+      const notif = NotificationCatalog.getDailyReminderNotification({
+        level: info.level,
+        xpToNext,
+        questsLeft: left,
+        weakSkill: focus?.skill,
+        weakBand: focus?.band,
+        mistakesCount
+      }, currentLocale);
+
       return {
-        title: 'Time to learn today',
-        body: `Ten minutes keeps your streak. ${progressLine}`,
-        route: '#collocations'
+        title: notif.title,
+        body: notif.body,
+        route: notif.route
       };
     } catch {
       return null;
+    }
+  }
+
+  /**
+   * Called when user prepares to exit or switch away from the app (e.g. visibilitychange hidden).
+   * Passes upcoming notifications and state to the native Android notification system
+   * matching the user's latest locale setting.
+   */
+  public static scheduleExitReminder(): void {
+    if (!this.isEnabled()) return;
+    try {
+      const currentLocale: Locale = (typeof localStorage !== 'undefined' && (localStorage.getItem('eng_locale') as Locale)) || I18n.getLocale() || 'en';
+      const states = StorageManager.loadState().cardStates;
+      const dueCount = SRSEngine.getDueCount(states);
+      const prog = ProgressionEngine.getState();
+      const streak = prog.streak || 0;
+      const questsLeft = this.questsLeft();
+      const focus = weakestIeltsSkill();
+      const info = ProgressionEngine.getLevelInfo();
+      const xpToNext = info.spanInLevel - info.progressInLevel;
+      let mistakesCount = 0;
+      try {
+        mistakesCount = SerlGauntletEngine.getActiveRecords().length;
+      } catch {}
+
+      let payload: NotificationPayload;
+      if (dueCount > 0) {
+        payload = NotificationCatalog.getDueCardsNotification(dueCount, dueWords(states).words, currentLocale);
+      } else if (streak > 0 && prog.lastActiveDate !== getTodayString()) {
+        payload = NotificationCatalog.getStreakReminderNotification(streak, questsLeft, currentLocale);
+      } else {
+        payload = NotificationCatalog.getDailyReminderNotification({
+          level: prog.level || info.level,
+          xpToNext,
+          questsLeft,
+          streak,
+          weakSkill: focus?.skill,
+          weakBand: focus?.band,
+          mistakesCount
+        }, currentLocale);
+      }
+
+      if (typeof window !== 'undefined') {
+        try {
+          localStorage.setItem('eng_last_exit_time', String(Date.now()));
+        } catch {}
+
+        const bridge = (window as any).AndroidWidgetBridge || (window as any).AndroidNotificationBridge;
+        if (bridge && typeof bridge.scheduleNotification === 'function') {
+          // Schedule native Android notification 4 hours after exit (14,400,000 ms)
+          bridge.scheduleNotification(payload.title, payload.body, payload.route, 4 * 60 * 60 * 1000);
+        }
+
+        // Web PWA / Browser background timer fallback when tab is hidden
+        if (this.exitTimerId) {
+          clearTimeout(this.exitTimerId);
+          this.exitTimerId = null;
+        }
+        if (this.isSupported() && Notification.permission === 'granted') {
+          this.exitTimerId = setTimeout(() => {
+            if (typeof document !== 'undefined' && document.visibilityState === 'hidden') {
+              this.dispatch(payload.title, {
+                body: payload.body,
+                icon: DEFAULT_ICON,
+                badge: DEFAULT_ICON,
+                tag: DEFAULT_TAG,
+                data: { route: payload.route, type: payload.type }
+              });
+            }
+          }, 3 * 60 * 60 * 1000);
+        }
+      }
+    } catch (err) {
+      console.warn('[NOTIFICATIONS] Failed to schedule exit reminder:', err);
     }
   }
 
@@ -399,7 +491,7 @@ export class NotificationEngine {
         <div class="toast-body" style="font-size: var(--font-body-compact); line-height: 1.4; color: var(--text-secondary, #94a3b8);">${body}</div>
         <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-cyan, #38bdf8); margin-top: 6px; letter-spacing: 0.05em;">TAP TO DRILL →</div>
       </div>
-      <button class="btn-toast-close" aria-label="Dismiss" style="background: none; border: none; color: var(--text-muted, #64748b); font-size: var(--font-body); cursor: pointer; min-width: var(--touch-target-min, 44px); min-height: var(--touch-target-min, 44px); display: inline-flex; align-items: center; justify-content: center; margin: -8px -8px -8px 0; touch-action: manipulation;">&times;</button>
+      <button class="btn-toast-close" aria-label="${t('common.dismiss', undefined, 'Dismiss')}" style="background: none; border: none; color: var(--text-muted, #64748b); font-size: var(--font-body); cursor: pointer; min-width: var(--touch-target-min, 44px); min-height: var(--touch-target-min, 44px); display: inline-flex; align-items: center; justify-content: center; margin: -8px -8px -8px 0; touch-action: manipulation;">&times;</button>
     `;
 
     const dismiss = () => {
@@ -428,6 +520,7 @@ export class NotificationEngine {
     return toast;
   }
 
+
   /**
    * Sets up periodic background checks (e.g. every hour or configurable interval).
    */
@@ -442,6 +535,32 @@ export class NotificationEngine {
     this.periodicTimerId = setInterval(() => {
       this.checkAndNotify().catch(() => {});
     }, intervalMs);
+
+    // Register visibilitychange listener once to handle user exit
+    if (!this.exitListenerAttached && typeof document !== 'undefined') {
+      this.exitListenerAttached = true;
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+          NotificationEngine.scheduleExitReminder();
+        } else if (document.visibilityState === 'visible') {
+          try {
+            const lastExit = parseInt(localStorage.getItem('eng_last_exit_time') || '0', 10);
+            if (lastExit && Date.now() - lastExit > 2 * 60 * 60 * 1000) {
+              NotificationEngine.checkAndNotify().catch(() => {});
+            }
+          } catch {}
+          if (NotificationEngine.exitTimerId) {
+            clearTimeout(NotificationEngine.exitTimerId);
+            NotificationEngine.exitTimerId = null;
+          }
+        }
+      });
+      if (typeof window !== 'undefined') {
+        window.addEventListener('beforeunload', () => {
+          NotificationEngine.scheduleExitReminder();
+        });
+      }
+    }
   }
 
   public static async dispatchNative(title: string, options?: NotificationOptions): Promise<boolean> {

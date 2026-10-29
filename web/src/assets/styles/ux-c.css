@@ -108,24 +108,120 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   }
 
   /* Clean Unified Navigation Controls: Back Button & Level Badge */
-  .hud-header .btn-back-tree,
+  .hud-header {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: clip !important;
+    gap: 4px !important;
+    padding-left: var(--pad-screen-left, 12px) !important;
+    padding-right: var(--pad-screen-right, 12px) !important;
+  }
+
+  .hud-header .hud-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+    overflow: hidden !important;
+  }
+
+  .hud-header .hud-brand-title {
+    font-size: var(--font-kicker) !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .hud-header .active-route-badge {
+    display: none !important;
+  }
+
+  .hud-header .hud-actions {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 4px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .hud-header .btn-back-tree {
+    padding: 0 8px !important;
+    font-size: var(--font-kicker) !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
   .hud-header .btn-level,
   .hud-status-badge.btn-level {
-    min-height: var(--touch-target-min, 44px) !important;
-    min-width: var(--touch-target-min, 44px) !important;
-    padding: 0 12px !important;
-    border-radius: var(--radius-btn, 10px) !important;
+    min-width: 36px !important;
+    padding: 0 6px !important;
+    font-size: var(--font-kicker) !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .hud-header .btn-streak-pill,
+  .hud-header .btn-budget-pill,
+  .hud-header .btn-exam-pill {
+    padding: 0 6px !important;
+    font-size: var(--font-kicker) !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .level-tab {
+    padding: 4px 6px !important;
+    min-width: 36px !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    font-size: var(--font-kicker) !important;
+  }
+
+  .btn-continue-workout {
+    padding: 0 8px !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+  }
+
+  .workout-panel {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .hud-btn.btn-enter-dossier,
+  .hud-btn.lexicon-audio-btn,
+  .hud-btn.lexicon-drawer-close {
+    padding: 0 !important;
+    box-sizing: border-box !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+  }
+
+  .article-tab {
+    padding: 0 10px !important;
     box-sizing: border-box !important;
-    font-size: var(--text-xs) !important;
-    font-family: var(--font-mono) !important;
-    font-weight: 700 !important;
+  }
+
+  .btn-cefr-pill {
+    padding: 4px 6px !important;
+    font-size: var(--font-kicker) !important;
+    box-sizing: border-box !important;
+  }
+
+  .copywork-studio .dossier-control-bar,
+  .copywork-studio .step-indicator {
+    max-width: 100% !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
   }
 
   .dossier-workspace {
-    padding-bottom: 0 !important;
+    padding-bottom: calc(var(--safe-bottom-dock, 84px) + env(safe-area-inset-bottom, 0px) + 32px) !important;
     gap: var(--gap-section, 16px) !important;
     box-sizing: border-box !important;
   }
@@ -234,9 +330,10 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   .vocab-level-selector .level-tab,
   .vocab-level-chips .level-tab,
-  .grammar-level-selector .level-tab {
-    flex: 1 0 auto !important;
-    min-width: 38px !important;
+  .grammar-level-selector .level-tab,
+  .habit-level-chip {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
     min-height: var(--touch-target-min, 44px) !important;
     padding: 6px 4px !important;
     font-size: var(--font-kicker) !important;
@@ -471,7 +568,9 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   .card-bottom-dock .dock-btn-flip,
   .card-action-dock .dock-btn-flip,
   .card-rating-dock .dock-btn-flip {
-    flex: 1.35 1 0 !important;
+    flex: 1.6 1 0 !important;
+    padding: 6px 4px !important;
+    font-size: 11px !important;
   }
 
   .dossier-nav-bar {
@@ -502,7 +601,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   .vocab-seg-btn {
     font-size: 12px !important;
     padding: 6px 8px !important;
-    min-height: 36px !important;
+    min-height: 44px !important;
   }
 
   .vocab-apple-nav {
@@ -517,7 +616,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   .vocab-nav-btn {
     padding: 6px 14px !important;
     font-size: 12px !important;
-    min-height: 38px !important;
+    min-height: 44px !important;
   }
 
   /* 12 Tenses Master Vault Mobile Overhaul */
@@ -1083,11 +1182,10 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   .constellation-view-switcher>.view-switch-btn {
     flex: 1 1 0 !important;
     min-width: 0 !important;
-    min-height: 38px !important;
-    height: 38px !important;
-    padding: 0 12px !important;
+    min-height: var(--touch-target-min, 44px) !important;
+    padding: 8px 12px !important;
     font-size: 12px !important;
-    border-radius: 9px !important;
+    border-radius: var(--radius-btn, 10px) !important;
   }
 
   .mobile-skill-deck {
@@ -1171,7 +1269,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     gap: 6px !important;
     width: 100% !important;
     min-width: 0 !important;
-    padding-right: 16px !important;
+    padding-right: 0 !important;
     box-sizing: border-box !important;
   }
 
@@ -1262,9 +1360,11 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   .deck-branch-tagline {
     font-size: 11px !important;
     color: var(--ink-muted) !important;
-    white-space: nowrap !important;
+    white-space: normal !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
     overflow: hidden !important;
-    text-overflow: ellipsis !important;
     margin: 0 !important;
     font-weight: 500 !important;
     letter-spacing: -0.01em !important;
@@ -1409,6 +1509,9 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     margin: 0 !important;
     border-radius: 12px !important;
     box-sizing: border-box !important;
+    max-height: calc(100dvh - 32px) !important;
+    max-width: calc(100vw - 24px) !important;
+    overflow-y: auto !important;
   }
 
   .feedback-placeholder-state {
@@ -1751,10 +1854,14 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   }
 
   /* Level chips shrink to fit six in a row, but never below the 44px floor */
+  /* Level chips shrink to fit six in a row evenly across 360px */
   .vocab-level-selector .level-tab,
   .vocab-level-chips .level-tab,
-  .grammar-level-selector .level-tab {
-    min-width: var(--touch-target-min) !important;
+  .grammar-level-selector .level-tab,
+  .habit-level-chip {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    padding: 6px 2px !important;
   }
 
   /* Stacked parts of the oscilloscope and repair panels get a real gap */
@@ -1902,4 +2009,164 @@ body:has(.completion-modal-overlay) .notification-toast {
   padding-top: 12px !important;
   border-top: 1px solid var(--border-hairline) !important;
   background: transparent !important;
+}
+
+/* ==========================================================================
+   COGNITIVE LOAD SCAFFOLDING (Gentle Student Mode vs Tactical Cockpit Mode)
+   ========================================================================== */
+html[data-cognitive-mode="gentle"] .cockpit-only,
+html[data-cognitive-mode="gentle"] .telemetry-dense-strip,
+html[data-cognitive-mode="gentle"] .cat-theta-display {
+  display: none !important;
+}
+
+html[data-cognitive-mode="gentle"] .dossier-workspace {
+  line-height: 1.75;
+}
+
+html[data-cognitive-mode="cockpit"] .gentle-only {
+  display: none !important;
+}
+
+.btn-cognitive-mode-toggle {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  min-height: var(--touch-target-min, 44px) !important;
+  padding: 6px 14px !important;
+  border-radius: var(--radius-btn, 10px) !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-body-compact) !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+/* ==========================================================================
+   ENHANCED MOBILE FLEXIBILITY (360PX VIVO RESILIENCE OVERRIDES)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Reading 2-mode switcher in a single sleek row */
+  .reading-mode-bar {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    gap: 8px !important;
+    margin-bottom: 8px !important;
+    padding-bottom: 8px !important;
+  }
+  .reading-mode-bar .hud-btn {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    min-height: var(--touch-target-min, 44px) !important;
+    max-height: 44px !important;
+    padding: 8px 10px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+  }
+
+  /* Compact Reading Skim Timer Card */
+  .skim-timer-panel {
+    padding: 10px 12px !important;
+    gap: 8px !important;
+  }
+  .skim-timer-actions {
+    gap: 8px !important;
+  }
+  .skim-timer-actions .hud-btn {
+    min-height: 40px !important;
+    padding: 6px 10px !important;
+  }
+
+  /* Collocations SRS / Lexicon mode switcher side-by-side */
+  .collocations-mode-header .view-mode-toggle {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    gap: 8px !important;
+  }
+  .collocations-mode-header .view-toggle-btn {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    min-height: var(--touch-target-min, 44px) !important;
+    padding: 8px 8px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    font-size: var(--text-xs) !important;
+  }
+
+  /* Habit tracker day picker smooth scrolling peek */
+  .day-picker-track {
+    gap: 8px !important;
+    padding-bottom: 4px !important;
+  }
+
+  /* Habit Level Chips full-width uniform distribution */
+  .mission-header-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    width: 100% !important;
+  }
+  .habit-level-chips {
+    display: flex !important;
+    width: 100% !important;
+    gap: 4px !important;
+  }
+  .habit-level-chips .habit-level-chip {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    min-height: var(--touch-target-min, 44px) !important;
+    padding: 4px 2px !important;
+    text-align: center !important;
+  }
+
+  /* Habit tracker day picker: anti-truncation */
+  .day-picker-track .day-chip {
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    padding: 6px 10px !important;
+  }
+
+  /* Rule 7: Eradicate concentric borders in RPG progression and Blitz */
+  .progression-modal-card .progression-hero {
+    border: none !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+  }
+  .progression-modal-card .progression-streak-pill {
+    border: none !important;
+    background: rgba(251, 146, 60, 0.16) !important;
+  }
+  .progression-modal-card .progression-quest-card {
+    border: none !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+  }
+  .progression-modal-card .progression-quests-status-badge {
+    border: none !important;
+  }
+  .blitz-ready-card .blitz-mechanic-card,
+  .blitz-summary-card .blitz-mechanic-card {
+    border: none !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+  }
+  .blitz-glow-badge,
+  .blitz-high-score-badge {
+    border: none !important;
+  }
+
+  /* Direction 3: Purge dashed border on vocabulary radar chips */
+  .radar-chip {
+    border: 1px solid var(--border-hairline) !important;
+    border-radius: var(--radius-squircle-sm, 10px) !important;
+    background: var(--bg-surface-raised, rgba(255, 255, 255, 0.04)) !important;
+  }
 }

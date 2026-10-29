@@ -376,6 +376,13 @@
     {
       "file": "listening-1.json",
       "secId": "l1-s3",
+      "qId": "l1-s3-q07",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"green technology investors\" not found in script"
+    },
+    {
+      "file": "listening-1.json",
+      "secId": "l1-s3",
       "qId": "l1-s3-q09",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"3 weeks\" not found in script"
@@ -407,6 +414,13 @@
       "qId": "l2-s1-q03",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"4489\" not found in script"
+    },
+    {
+      "file": "listening-2.json",
+      "secId": "l2-s1",
+      "qId": "l2-s1-q03",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"four four eight nine\" not found in script"
     },
     {
       "file": "listening-2.json",
@@ -589,6 +603,13 @@
       "qId": "l3-s1-q09",
       "type": "COMPLETION_NOT_IN_TRANSCRIPT",
       "detail": "Answer \"14 March 1999\" not found in script"
+    },
+    {
+      "file": "listening-3.json",
+      "secId": "l3-s1",
+      "qId": "l3-s1-q09",
+      "type": "COMPLETION_NOT_IN_TRANSCRIPT",
+      "detail": "Answer \"the 14th of March 1999\" not found in script"
     },
     {
       "file": "listening-3.json",

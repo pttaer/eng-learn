@@ -627,7 +627,7 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
       h('p', 'ie-note', t('sim.p1_mandate', undefined, '<b>Formula Mandate:</b> Direct Answer + 2–3 sentence extension (20–30s). Avoid 1-word truncation ("Yes", "London") and long rambling monologues.'))
     );
 
-    const controls = h('div', 'ie-testbar');
+    const controls = h('div', 'ie-testbar ie-controls-pair');
     const listenPromptBtn = h('button', 'ie-btn ie-btn-primary', t('sim.listen_prompt', undefined, '🔊 Listen to Examiner Prompt'));
     listenPromptBtn.addEventListener('click', () => {
       stopActiveAudio();

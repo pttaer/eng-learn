@@ -319,7 +319,7 @@ export class TensesDossier {
       return `
         <div class="empty-state-notice">
           <p>No questions initialized for Gauntlet Challenge.</p>
-          <button class="hud-btn btn-start-gauntlet" style="margin-top: 12px; font-weight: 700;">Start Gauntlet Challenge</button>
+          <button class="hud-btn btn-start-gauntlet" style="margin-top: 12px; font-weight: 700;">${t('tenses.btn_start_gauntlet', undefined, 'Start Gauntlet Challenge')}</button>
         </div>
       `;
     }
@@ -388,8 +388,8 @@ export class TensesDossier {
           ${this.hasAnswered ? `
             <div class="tenses-explanation-drawer ${this.isCorrect ? 'result-success' : 'result-failure'}">
               <div class="explanation-header">
-                <strong>${this.isCorrect ? '✓ CHÍNH XÁC / WELL DONE!' : '✗ CHƯA ĐÚNG / INCORRECT'}</strong>
-                <span class="correct-answer-callout">Đáp án đúng: <u>${this.escapeHtml(this.currentShuffledOptions[this.currentCorrectIndex])}</u></span>
+                <strong>${this.isCorrect ? t('tenses.feedback_correct', undefined, '✓ CHÍNH XÁC / WELL DONE!') : t('tenses.feedback_incorrect', undefined, '✗ CHƯA ĐÚNG / INCORRECT')}</strong>
+                <span class="correct-answer-callout">${t('tenses.correct_ans_label', undefined, 'Đáp án đúng:')} <u>${this.escapeHtml(this.currentShuffledOptions[this.currentCorrectIndex])}</u></span>
               </div>
               <div class="explanation-body">
                 <p class="explanation-en"><strong>Grammar Rule:</strong> ${this.escapeHtml(q.explanation)}</p>
@@ -399,7 +399,7 @@ export class TensesDossier {
               </div>
               <div class="explanation-actions">
                 <button class="hud-btn btn-next-gauntlet-question" style="background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; padding: 10px 20px;">
-                  ${this.gauntletIndex < 11 ? `NEXT QUESTION (${this.gauntletIndex + 2}/12) &rarr;` : `FINISH & VIEW SCORECARD ${icon('target', 14)}`}
+                  ${this.gauntletIndex < 11 ? t('tenses.btn_next_q', { next: this.gauntletIndex + 2, total: 12 }, `NEXT QUESTION (${this.gauntletIndex + 2}/12) →`) : t('tenses.btn_finish_scorecard', undefined, 'FINISH & VIEW SCORECARD') + ' ' + icon('target', 14)}
                 </button>
               </div>
             </div>
@@ -414,17 +414,17 @@ export class TensesDossier {
     const correctCount = this.gauntletResults.filter(r => r.isCorrect).length;
     const scorePct = Math.round((correctCount / total) * 100);
 
-    let gradeTitle = 'C1/C2 NATIVE TENSE MASTERY';
-    let gradeComment = 'Khả năng chia động từ và phân tích ngữ cảnh thời gian của bạn đạt độ chuẩn xác tuyệt đối!';
+    let gradeTitle = t('tenses.grade_c1_title', undefined, 'C1/C2 NATIVE TENSE MASTERY');
+    let gradeComment = t('tenses.grade_c1_comment', undefined, 'Khả năng chia động từ và phân tích ngữ cảnh thời gian của bạn đạt độ chuẩn xác tuyệt đối!');
     let gradeColor = 'var(--good, #22c55e)';
 
     if (scorePct < 60) {
-      gradeTitle = 'FOUNDATION REVIEW REQUIRED';
-      gradeComment = 'Bạn cần ôn lại công thức và các dấu hiệu nhận biết của các thì cơ bản trong 12 Tenses Codex.';
+      gradeTitle = t('tenses.grade_foundation_title', undefined, 'FOUNDATION REVIEW REQUIRED');
+      gradeComment = t('tenses.grade_foundation_comment', undefined, 'Bạn cần ôn lại công thức và các dấu hiệu nhận biết của các thì cơ bản trong 12 Tenses Codex.');
       gradeColor = 'var(--alarm, #ef4444)';
     } else if (scorePct < 85) {
-      gradeTitle = 'B2 UPPER-INTERMEDIATE';
-      gradeComment = 'Nền tảng khá vững vàng, tuy nhiên bạn cần lưu ý kỹ các thì hoàn thành tiếp diễn và mốc thời gian quá khứ.';
+      gradeTitle = t('tenses.grade_b2_title', undefined, 'B2 UPPER-INTERMEDIATE');
+      gradeComment = t('tenses.grade_b2_comment', undefined, 'Nền tảng khá vững vàng, tuy nhiên bạn cần lưu ý kỹ các thì hoàn thành tiếp diễn và mốc thời gian quá khứ.');
       gradeColor = 'var(--accent-gold, #ca8a04)';
     }
 

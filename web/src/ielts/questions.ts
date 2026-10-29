@@ -8,6 +8,7 @@ import {
 } from './reading-engine';
 import { esc, h } from './ui';
 import { t } from '../core/i18n';
+import { StorageManager } from '../utils/storage';
 
 const TYPE_LABEL_KEYS: Record<string, string> = {
   tfng: 'questions.type_tfng', ynng: 'questions.type_ynng', heading: 'questions.type_heading', match: 'questions.type_match',
@@ -83,6 +84,49 @@ function control(q: IeltsQuestion, n: number): HTMLElement {
     }
   }
   wrap.append(body);
+
+  const isDeepStudy = StorageManager.getStudyMode() === 'deep-study';
+  const studyActionRow = h('div', 'ie-study-action-row');
+  studyActionRow.style.display = isDeepStudy ? 'flex' : 'none';
+  studyActionRow.style.marginTop = '6px';
+  studyActionRow.innerHTML = `<button type="button" class="ie-btn ie-btn-sm ie-btn-check-single" style="font-size: 12px; min-height: 32px; padding: 4px 10px; border-radius: 8px;">💡 ${t('questions.check_instant', undefined, 'Check & Evidence')}</button>`;
+
+  const checkBtn = studyActionRow.querySelector('.ie-btn-check-single');
+  checkBtn?.addEventListener('click', () => {
+    const radio = wrap.querySelector<HTMLInputElement>(`input[name="${q.id}"]:checked`);
+    const field = wrap.querySelector<HTMLInputElement | HTMLSelectElement>(`[name="${q.id}"]:not([type="radio"])`);
+    const val = radio ? radio.value : (field ? field.value : '');
+    const whyBox = wrap.querySelector('.ie-why') || wrap.appendChild(h('div', 'ie-why'));
+    if (!val.trim()) {
+      whyBox.innerHTML = `<span style="color: var(--accent-gold); font-weight: 600;">⚠️ ${t('questions.answer_first', undefined, 'Please choose or enter an answer first.')}</span>`;
+      return;
+    }
+    const ok = isCorrect(q, val);
+    wrap.classList.remove('ie-right', 'ie-wrong');
+    wrap.classList.add(ok ? 'ie-right' : 'ie-wrong');
+    const ans = Array.isArray(q.answer) ? q.answer.join(' / ') : q.answer;
+    let extraHtml = '';
+    if (!ok) {
+      const miss = explainMiss(q, val || '');
+      if (miss === 'exceeded_limit') {
+        const limit = q.maxWords ?? resolveQuestionWordConstraint(q)?.maxWords ?? 3;
+        extraHtml += `<div class="ie-miss-warning">${t('questions.exceeded_limit_warning', { limit }, `Contains correct terms but exceeded word limit (${limit} words max) — automatic zero in IELTS.`)}</div>`;
+      }
+    }
+    if (q.evidence !== undefined) {
+      if (q.evidence === null) {
+        extraHtml += `<div class="ie-evidence-action"><span class="ie-evidence-silent">${t('questions.no_evidence_not_given', undefined, 'No evidence in passage (NOT GIVEN)')}</span></div>`;
+      } else {
+        extraHtml += `<div class="ie-evidence-action"><button type="button" class="ie-btn ie-btn-inspect-evidence" data-qid="${q.id}">${t('questions.inspect_in_passage', undefined, '🔍 Inspect in passage')}</button></div>`;
+      }
+    }
+    const blankText = t('questions.blank', undefined, '(blank)');
+    const correctText = t('questions.correct', undefined, 'Correct');
+    const ansDetail = t('questions.your_ans_correct', { given: esc(val || blankText), ans: esc(ans) }, `Your answer: ${esc(val || blankText)} · Correct: ${esc(ans)}`);
+    whyBox.innerHTML = `<strong>${ok ? correctText : ansDetail}</strong><span>${esc(q.why)}</span>${extraHtml}`;
+  });
+  wrap.append(studyActionRow);
+
   return wrap;
 }
 
@@ -139,6 +183,18 @@ export function renderQuestions(
 
   el.addEventListener('input', handleUpdate);
   el.addEventListener('change', handleUpdate);
+
+  const onModeChange = (e: any) => {
+    if (!el.isConnected) {
+      window.removeEventListener('study-mode-change', onModeChange);
+      return;
+    }
+    const isDeep = e.detail?.mode === 'deep-study';
+    el.querySelectorAll<HTMLElement>('.ie-study-action-row').forEach(row => {
+      row.style.display = isDeep ? 'flex' : 'none';
+    });
+  };
+  window.addEventListener('study-mode-change', onModeChange);
 
   const answers = (): Record<string, string> => {
     const out: Record<string, string> = {};

@@ -949,7 +949,7 @@ export function writingStudioView(root: HTMLElement): () => void {
               <p class="ie-note">${t('wstudio.step2_note', undefined, 'Sentence 1: Dominant trend. Sentence 2: Key contrast. STRICTLY 0 RAW FIGURES!')}</p>
             </div>
           </div>
-          <textarea class="ie-textarea ie-t1-overview-input" placeholder="Overall, it is evident that [dominant trend]... In stark contrast, [key anomaly]..."></textarea>
+          <textarea class="ie-textarea ie-t1-overview-input" placeholder="${t('writing.overview_placeholder', undefined, 'Overall, it is evident that [dominant trend]... In stark contrast, [key anomaly]...')}"></textarea>
           <div class="ie-step-feedback ie-overview-feedback">
             <ul class="ie-checklist-items">
               <li class="chk-numbers">Checking for raw data figures...</li>
@@ -968,7 +968,7 @@ export function writingStudioView(root: HTMLElement): () => void {
               <p class="ie-note">${t('wstudio.step3_note', undefined, 'Group 2-3 dominant trajectories. Detail starting figures, change rates, and peaks.')}</p>
             </div>
           </div>
-          <textarea class="ie-textarea ie-t1-body1-input" placeholder="Regarding the primary categories..."></textarea>
+          <textarea class="ie-textarea ie-t1-body1-input" placeholder="${t('writing.body1_placeholder', undefined, 'Regarding the primary categories...')}"></textarea>
           <div class="ie-step-feedback ie-body1-feedback"></div>
         </div>
 
@@ -981,7 +981,7 @@ export function writingStudioView(root: HTMLElement): () => void {
               <p class="ie-note">${t('wstudio.step4_note', undefined, 'Detail remaining categories, minor fluctuations, or static figures with prepositions.')}</p>
             </div>
           </div>
-          <textarea class="ie-textarea ie-t1-body2-input" placeholder="By contrast, figures for..."></textarea>
+          <textarea class="ie-textarea ie-t1-body2-input" placeholder="${t('writing.body2_placeholder', undefined, 'By contrast, figures for...')}"></textarea>
           <div class="ie-step-feedback ie-body2-feedback"></div>
         </div>
       </div>
@@ -1174,7 +1174,7 @@ export function writingStudioView(root: HTMLElement): () => void {
           <div class="ie-section-head">
             <b>${t('wstudio.t2_step1')}</b>
           </div>
-          <textarea class="ie-textarea ie-t2-intro" placeholder="State background context and direct thesis stance..."></textarea>
+          <textarea class="ie-textarea ie-t2-intro" placeholder="${t('writing.intro_placeholder', undefined, 'State background context and direct thesis stance...')}"></textarea>
         </div>
 
         <!-- Body Paragraph 1 (4-Sentence Formula) -->
@@ -1189,7 +1189,7 @@ export function writingStudioView(root: HTMLElement): () => void {
               <span class="ie-eval-badge ie-b1-band">Band 6.0</span>
             </div>
           </div>
-          <textarea class="ie-textarea ie-t2-b1" placeholder="Sentence 1 (Claim)... Sentence 2 (Causal explanation)... Sentence 3 (Concrete evidence)... Sentence 4 (Concluding impact)..."></textarea>
+          <textarea class="ie-textarea ie-t2-b1" placeholder="${t('writing.b1_placeholder', undefined, 'Sentence 1 (Claim)... Sentence 2 (Causal explanation)... Sentence 3 (Concrete evidence)... Sentence 4 (Concluding impact)...')}"></textarea>
           <div class="ie-body-feedback ie-b1-feedback"></div>
         </div>
 
@@ -1205,7 +1205,7 @@ export function writingStudioView(root: HTMLElement): () => void {
               <span class="ie-eval-badge ie-b2-band">Band 6.0</span>
             </div>
           </div>
-          <textarea class="ie-textarea ie-t2-b2" placeholder="Sentence 1 (Second main claim)... Sentence 2 (Causal logic)... Sentence 3 (Concrete example)... Sentence 4 (Concluding impact)..."></textarea>
+          <textarea class="ie-textarea ie-t2-b2" placeholder="${t('writing.b2_placeholder', undefined, 'Sentence 1 (Second main claim)... Sentence 2 (Causal logic)... Sentence 3 (Concrete example)... Sentence 4 (Concluding impact)...')}"></textarea>
           <div class="ie-body-feedback ie-b2-feedback"></div>
         </div>
 
@@ -1214,7 +1214,7 @@ export function writingStudioView(root: HTMLElement): () => void {
           <div class="ie-section-head">
             <b>${t('wstudio.t2_step4')}</b>
           </div>
-          <textarea class="ie-textarea ie-t2-concl" placeholder="In conclusion, reiterate main positions without introducing brand new points..."></textarea>
+          <textarea class="ie-textarea ie-t2-concl" placeholder="${t('writing.concl_placeholder', undefined, 'In conclusion, reiterate main positions without introducing brand new points...')}"></textarea>
         </div>
       </div>
 

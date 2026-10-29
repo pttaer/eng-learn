@@ -335,7 +335,7 @@ export class StorageManager {
         const parsed = JSON.parse(raw);
         if (parsed.placementDone === true) return true;
       }
-    } catch (e) {}
+    } catch (e) { }
     return this.loadState().placementDone;
   }
 
@@ -402,7 +402,7 @@ export class StorageManager {
         const parsed = parseFloat(v);
         if (!isNaN(parsed)) return Math.max(0, Math.min(1, parsed));
       }
-    } catch {}
+    } catch { }
     return this.loadState().musicVolume ?? 0.35;
   }
 
@@ -413,14 +413,14 @@ export class StorageManager {
     this.saveState(state);
     try {
       localStorage.setItem('eng_music_volume', String(clamped));
-    } catch {}
+    } catch { }
   }
 
   public static getMusicMode(): string {
     try {
       const mode = localStorage.getItem('eng_music_mode');
       if (mode) return mode;
-    } catch {}
+    } catch { }
     return this.loadState().musicMode || 'off';
   }
 
@@ -430,7 +430,7 @@ export class StorageManager {
     this.saveState(state);
     try {
       localStorage.setItem('eng_music_mode', mode);
-    } catch {}
+    } catch { }
   }
 
   public static setHabitTask(dayNum: number, taskIndex: number, checked: boolean, totalTasksForDay: number): void {
@@ -812,4 +812,211 @@ export class StorageManager {
     this.cachedState = { ...DEFAULT_STATE };
     this.saveState(this.cachedState);
   }
+
+  // =========================================================================
+  // PERSONALIZATION & STUDY PREFERENCES (GOAL, ACCENT, TIME BUDGET, WEAKNESS)
+  // =========================================================================
+
+  public static getTargetBand(): number {
+    if (typeof localStorage === 'undefined') return 7.0;
+    const val = parseFloat(localStorage.getItem('eng_target_band') || '7.0');
+    return (!isNaN(val) && val >= 5.5 && val <= 8.5) ? val : 7.0;
+  }
+
+  public static setTargetBand(band: number): void {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('eng_target_band', band.toFixed(1));
+      window.dispatchEvent(new CustomEvent('target-band-change', { detail: { targetBand: band } }));
+    }
+  }
+
+  public static getTargetExamDate(): string | null {
+    if (typeof localStorage === 'undefined') return null;
+    return localStorage.getItem('eng_target_exam_date') || null;
+  }
+
+  public static setTargetExamDate(dateStr: string | null): void {
+    if (typeof localStorage !== 'undefined') {
+      if (dateStr) localStorage.setItem('eng_target_exam_date', dateStr);
+      else localStorage.removeItem('eng_target_exam_date');
+      window.dispatchEvent(new CustomEvent('target-exam-date-change', { detail: { date: dateStr } }));
+    }
+  }
+
+  public static getExamDaysRemaining(): number | null {
+    const d = this.getTargetExamDate();
+    if (!d) return null;
+    const target = new Date(d).getTime();
+    if (isNaN(target)) return null;
+    const now = new Date();
+    now.setHours(0, 0, 0, 0);
+    const diffMs = target - now.getTime();
+    return Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+  }
+
+  public static getDailyTimeBudget(): number {
+    if (typeof localStorage === 'undefined') return 30;
+    const b = parseInt(localStorage.getItem('eng_daily_time_budget') || '30', 10);
+    return (b === 15 || b === 30 || b === 60) ? b : 30;
+  }
+
+  public static setDailyTimeBudget(minutes: number): void {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('eng_daily_time_budget', String(minutes));
+      window.dispatchEvent(new CustomEvent('time-budget-change', { detail: { minutes } }));
+    }
+  }
+
+  public static cycleDailyTimeBudget(): number {
+    const cur = this.getDailyTimeBudget();
+    const next = cur === 15 ? 30 : cur === 30 ? 60 : 15;
+    this.setDailyTimeBudget(next);
+    return next;
+  }
+
+  public static isWeaknessFirstEnabled(): boolean {
+    if (typeof localStorage === 'undefined') return true;
+    return localStorage.getItem('eng_weakness_first') !== 'false';
+  }
+
+  public static setWeaknessFirstEnabled(enabled: boolean): void {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('eng_weakness_first', enabled ? 'true' : 'false');
+      window.dispatchEvent(new CustomEvent('weakness-first-change', { detail: { enabled } }));
+    }
+  }
+
+  public static getStudyMode(): 'deep-study' | 'exam-sprint' {
+    if (typeof localStorage === 'undefined') return 'deep-study';
+    const mode = localStorage.getItem('eng_study_mode');
+    return mode === 'exam-sprint' ? 'exam-sprint' : 'deep-study';
+  }
+
+  public static setStudyMode(mode: 'deep-study' | 'exam-sprint'): void {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('eng_study_mode', mode);
+      window.dispatchEvent(new CustomEvent('study-mode-change', { detail: { mode } }));
+    }
+  }
+
+  public static getActiveGoldenRules(): PreFlightChecklistRule[] {
+    if (typeof localStorage === 'undefined') return DEFAULT_PREFLIGHT_RULES.slice(0, 3);
+    try {
+      const raw = localStorage.getItem('eng_active_golden_rules');
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      }
+    } catch { }
+    return DEFAULT_PREFLIGHT_RULES.slice(0, 3);
+  }
+
+  public static setActiveGoldenRules(rules: PreFlightChecklistRule[]): void {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('eng_active_golden_rules', JSON.stringify(rules.slice(0, 3)));
+      window.dispatchEvent(new CustomEvent('golden-rules-change', { detail: { rules } }));
+    }
+  }
+
+  public static getStarredVocabTopics(): string[] {
+    if (typeof localStorage === 'undefined') return [];
+    try {
+      const raw = localStorage.getItem('eng_vocab_starred_topics');
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed)) return parsed;
+      }
+    } catch { }
+    return [];
+  }
+
+  public static toggleStarredVocabTopic(topic: string): boolean {
+    const current = this.getStarredVocabTopics();
+    const isStarred = !current.includes(topic);
+    const updated = isStarred ? [...current, topic] : current.filter(t => t !== topic);
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('eng_vocab_starred_topics', JSON.stringify(updated));
+      window.dispatchEvent(new CustomEvent('vocab-starred-topics-change', { detail: { topics: updated } }));
+    }
+    return isStarred;
+  }
+
+  public static isTopicStarred(topic: string): boolean {
+    return this.getStarredVocabTopics().includes(topic);
+  }
+
+  public static getIeltsAccent(): string {
+    if (typeof localStorage === 'undefined') return 'uk-rp';
+    return localStorage.getItem('eng_ielts_accent') || 'uk-rp';
+  }
+
+  public static setIeltsAccent(accent: string): void {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('eng_ielts_accent', accent);
+      window.dispatchEvent(new CustomEvent('ielts-accent-change', { detail: { accent } }));
+    }
+  }
 }
+
+export const DEFAULT_PREFLIGHT_RULES: PreFlightChecklistRule[] = [
+  {
+    id: 'rule_gra_tense',
+    code: 'G',
+    ruleTitle: 'Verify Subject-Verb & Tense Inflections',
+    description: 'Ensure past historical events use simple past, singular third-person takes -s, and compound tenses have auxiliary be/have.',
+    goodExample: 'The graph illustrates trends that occurred in 2020.',
+    badExample: 'The graph illustrate trends that occur in 2020.',
+    cleanStreak: 0,
+    createdAt: 1700000000000
+  },
+  {
+    id: 'rule_cc_conjunction',
+    code: 'Coh',
+    ruleTitle: 'Eliminate Dual Conjunction Collisions',
+    description: 'Never pair "Although / Even though" with "But", or "Because" with "So" in the same clause hierarchy.',
+    goodExample: 'Although solar costs declined, adoption remained sluggish.',
+    badExample: 'Although solar costs declined, but adoption remained sluggish.',
+    cleanStreak: 0,
+    createdAt: 1700000000000
+  },
+  {
+    id: 'rule_lr_collocation',
+    code: 'C',
+    ruleTitle: 'Verify Collocational Prepositions',
+    description: 'Lock strict verb + preposition pairs: depend on, spend money on, invest in, an increase of 15% / rose by 15%.',
+    goodExample: 'Government expenditures on healthcare climbed sharply.',
+    badExample: 'Government expenditures for healthcare climbed sharply.',
+    cleanStreak: 0,
+    createdAt: 1700000000000
+  },
+  {
+    id: 'rule_ta_overview',
+    code: 'R',
+    ruleTitle: 'Clear Overview with No Raw Data Figures',
+    description: 'Task 1 overview must state overall key trends/differences without quoting specific numerical stats.',
+    goodExample: 'Overall, renewable power expanded while fossil fuel consumption dwindled.',
+    badExample: 'Overall, renewable rose to 45% while coal dropped to 12%.',
+    cleanStreak: 0,
+    createdAt: 1700000000000
+  },
+  {
+    id: 'rule_cc_paragraph',
+    code: 'Coh',
+    ruleTitle: 'Four-Sentence Paragraph Development',
+    description: 'Each body paragraph follows: Topic sentence -> In-depth explanation -> Empirical example -> Consequential result.',
+    goodExample: 'One primary factor is X. Specifically, Y occurs. For example, in Japan Z. Thus, outcome W.',
+    badExample: 'Factor X is important. Also factor Y. And another thing is Z.',
+    cleanStreak: 0,
+    createdAt: 1700000000000
+  },
+  {
+    id: 'rule_wf_derivation',
+    code: 'WF',
+    ruleTitle: 'Check Word Class & Derivational Suffixes',
+    description: 'Verify part of speech: ensure adverbs modify adjectives/verbs and nouns have correct nominal suffixes (-tion, -ment, -ance).',
+    goodExample: 'Economically viable solutions promote environmental sustainability.',
+    badExample: 'Economic viable solutions promote environmental sustainable.',
+    cleanStreak: 0,
+    createdAt: 1700000000000
+  }
+];

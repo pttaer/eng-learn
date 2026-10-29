@@ -428,10 +428,10 @@
           },
           {
             "id": "mine-reading-a1-3-3",
-            "targetWord": "buy",
+            "targetWord": "buys",
             "partOfSpeech": "verb",
-            "ipa": "/baɪ/",
-            "definition": "To get something and give money for it.",
+            "ipa": "/baɪz/",
+            "definition": "Gets something and gives money for it.",
             "vietnamese": "mua",
             "contextSentence": "My mother buys rice, fish and eggs.",
             "collocations": [
@@ -633,11 +633,11 @@
           },
           {
             "id": "mine-reading-a2-1-4",
-            "targetWord": "swim",
+            "targetWord": "swam",
             "partOfSpeech": "verb",
-            "ipa": "/swɪm/",
-            "definition": "To move through water by using your arms and legs.",
-            "vietnamese": "bơi",
+            "ipa": "/swæm/",
+            "definition": "Moved through water by using arms and legs (past form of swim).",
+            "vietnamese": "đã bơi",
             "contextSentence": "Later, we swam in the sea, but the water was very cold.",
             "collocations": [
               "swim in the sea",
@@ -809,10 +809,10 @@
           },
           {
             "id": "mine-reading-a2-2-2",
-            "targetWord": "vegetable",
+            "targetWord": "vegetables",
             "partOfSpeech": "noun",
-            "ipa": "/ˈvedʒ.tə.bəl/",
-            "definition": "A plant that you eat, such as a carrot or an onion.",
+            "ipa": "/ˈvedʒ.tə.bəlz/",
+            "definition": "Plants that you eat, such as carrots or onions.",
             "vietnamese": "rau, rau củ",
             "contextSentence": "It is also important to eat fruit and vegetables.",
             "collocations": [
@@ -1772,11 +1772,11 @@
           },
           {
             "id": "mine-reading-art-4-4",
-            "targetWord": "rescind",
+            "targetWord": "rescinded",
             "partOfSpeech": "verb",
-            "ipa": "/rɪˈsɪnd/",
-            "definition": "Formally revoke, cancel, or repeal an agreement, law, or decision.",
-            "vietnamese": "hủy bỏ, thu hồi, bãi bỏ (một thỏa thuận, quyết định)",
+            "ipa": "/rɪˈsɪndɪd/",
+            "definition": "Formally revoked, cancelled, or repealed (an agreement, law, or decision).",
+            "vietnamese": "bị hủy bỏ, bị bãi bỏ",
             "contextSentence": "The pact could lapse, but it could not be entirely rescinded.",
             "collocations": [
               "rescind a decision",
@@ -2256,11 +2256,11 @@
           },
           {
             "id": "mine-reading-art-7-2",
-            "targetWord": "inducement",
+            "targetWord": "inducements",
             "partOfSpeech": "noun",
-            "ipa": "/ɪnˈdjuːs.mənt/",
-            "definition": "Something that persuades or influences a person to do something, such as a reward or benefit.",
-            "vietnamese": "sự khuyến khích, động cơ thúc đẩy, khoản ưu đãi",
+            "ipa": "/ɪnˈdjuːs.mənts/",
+            "definition": "Things that persuade or influence a person to do something, such as rewards or benefits.",
+            "vietnamese": "các khoản ưu đãi, động cơ thúc đẩy",
             "contextSentence": "A society in which people feel uneasy whenever they rest is a society in which employers need offer fewer inducements, since the workers will police themselves.",
             "collocations": [
               "offer an inducement",
@@ -2271,10 +2271,10 @@
           },
           {
             "id": "mine-reading-art-7-3",
-            "targetWord": "atrophy",
+            "targetWord": "atrophies",
             "partOfSpeech": "verb",
-            "ipa": "/ˈæt.rə.fi/",
-            "definition": "To waste away or weaken gradually through lack of use.",
+            "ipa": "/ˈæt.rə.fiz/",
+            "definition": "Wastes away or weakens gradually through lack of use.",
             "vietnamese": "teo đi, suy yếu dần do không được sử dụng",
             "contextSentence": "Leisure is a skill, and like any skill it atrophies without practice.",
             "collocations": [
@@ -2649,11 +2649,11 @@
           },
           {
             "id": "mine-reading-art-9-4",
-            "targetWord": "privilege",
+            "targetWord": "privileging",
             "partOfSpeech": "verb",
-            "ipa": "/ˈprɪv.əl.ɪdʒ/",
-            "definition": "Treat one thing as more important or authoritative than others, often without sufficient justification.",
-            "vietnamese": "đặt ưu tiên, coi trọng hơn hẳn, ưu ái một yếu tố so với các yếu tố khác",
+            "ipa": "/ˈprɪv.əl.ɪdʒ.ɪŋ/",
+            "definition": "Treating one thing as more important or authoritative than others.",
+            "vietnamese": "việc đặt ưu tiên, coi trọng hơn hẳn",
             "contextSentence": "Some ecologists have therefore advocated reporting a family of related measures, often expressed as effective numbers of species, rather than privileging any single index.",
             "collocations": [
               "privilege one interpretation over another",
@@ -2799,11 +2799,11 @@
           },
           {
             "id": "mine-reading-b1-1-2",
-            "targetWord": "colleague",
+            "targetWord": "colleagues",
             "partOfSpeech": "noun",
-            "ipa": "/ˈkɒl.iːɡ/",
-            "definition": "A person who works with you in the same company or team.",
-            "vietnamese": "đồng nghiệp",
+            "ipa": "/ˈkɒl.iːɡz/",
+            "definition": "People who work with you in the same company or team.",
+            "vietnamese": "các đồng nghiệp",
             "contextSentence": "Some people have told me that they feel lonely because they rarely see their colleagues.",
             "collocations": [
               "a work colleague",
@@ -3006,11 +3006,11 @@
           },
           {
             "id": "mine-reading-b1-2-2",
-            "targetWord": "recycle",
+            "targetWord": "recycled",
             "partOfSpeech": "verb",
-            "ipa": "/ˌriːˈsaɪ.kəl/",
-            "definition": "To treat used materials so that they can be used again.",
-            "vietnamese": "tái chế",
+            "ipa": "/ˌriːˈsaɪ.kəld/",
+            "definition": "Treated so that materials can be used again.",
+            "vietnamese": "được tái chế",
             "contextSentence": "In some places, old bottles can be returned and recycled, which is a good idea.",
             "collocations": [
               "recycle paper",
@@ -3224,10 +3224,10 @@
           },
           {
             "id": "mine-reading-b1-3-2",
-            "targetWord": "habit",
+            "targetWord": "habits",
             "partOfSpeech": "noun",
-            "ipa": "/ˈhæb.ɪt/",
-            "definition": "Something that you do regularly, often without thinking.",
+            "ipa": "/ˈhæb.ɪts/",
+            "definition": "Things that you do regularly, often without thinking.",
             "vietnamese": "thói quen",
             "contextSentence": "However, I have learned that small habits are more important than big efforts.",
             "collocations": [
@@ -3662,11 +3662,11 @@
           },
           {
             "id": "mine-reading-b2-2-4",
-            "targetWord": "curtail",
+            "targetWord": "curtailing",
             "partOfSpeech": "verb",
-            "ipa": "/kɜːˈteɪl/",
-            "definition": "To reduce in extent, quantity, or duration; to impose restrictions upon.",
-            "vietnamese": "cắt giảm, hạn chế bớt, thu hẹp",
+            "ipa": "/kɜːˈteɪ.lɪŋ/",
+            "definition": "Reducing in extent, quantity, or duration; imposing restrictions upon.",
+            "vietnamese": "việc cắt giảm, hạn chế bớt, thu hẹp",
             "contextSentence": "By curtailing dependency on private automobile transport, municipalities substantially reduce greenhouse emissions and mitigate pervasive respiratory illnesses.",
             "collocations": [
               "curtail emissions",

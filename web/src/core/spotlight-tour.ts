@@ -126,7 +126,7 @@ export class SpotlightTour {
         <div class="tour-card" id="tourCard">
           <div class="tour-card-header">
             <span class="tour-step-badge" id="tourStepBadge">Step 1 of 6</span>
-            <button class="tour-card-close" id="tourCloseBtn" aria-label="Close Spotlight Tour (Esc)" title="Close (Esc)">✕</button>
+            <button class="tour-card-close" id="tourCloseBtn" aria-label="${t('tour.close_title', undefined, 'Close Spotlight Tour (Esc)')}" title="${t('tour.close_title', undefined, 'Close (Esc)')}">✕</button>
           </div>
           <div class="tour-card-title" id="tourTitle">Tour Title</div>
           <p class="tour-card-desc" id="tourDesc">Tour description text</p>
@@ -138,9 +138,9 @@ export class SpotlightTour {
               <span class="tour-step-count" id="tourStepCount">1 / 6</span>
             </div>
             <div class="tour-card-actions">
-              <button class="ctrl" id="tourPrevBtn">← Previous</button>
-              <button class="ctrl" id="tourSkipBtn">Skip</button>
-              <button class="ctrl ctrl-primary" id="tourNextBtn">Next →</button>
+              <button class="ctrl" id="tourPrevBtn">${t('tour.btn_prev', undefined, '← Previous')}</button>
+              <button class="ctrl" id="tourSkipBtn">${t('tour.btn_skip', undefined, 'Skip')}</button>
+              <button class="ctrl ctrl-primary" id="tourNextBtn">${t('tour.btn_next', undefined, 'Next →')}</button>
             </div>
           </div>
         </div>

@@ -600,7 +600,7 @@ export class SkillTreeView {
                 </div>
                 <div class="deck-branch-sub">
                   <span class="hud-status-badge deck-cefr-badge">${b.cefrLevel}</span>
-                  <span class="deck-branch-tagline">${b.tagline}</span>
+                  <span class="deck-branch-tagline">${t(`deck.${b.id}_tagline`, undefined, b.tagline)}</span>
                 </div>
               </div>
 

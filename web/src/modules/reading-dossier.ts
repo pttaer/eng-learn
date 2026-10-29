@@ -8,6 +8,7 @@ import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { SkillTreeEngine } from '../core/skill-tree-engine';
 import readingData from '../assets/data/reading.json';
 import { t } from '../core/i18n';
+import { ExtensiveReaderDossier } from './extensive-reader-dossier';
 
 export interface ReadingArticle {
   id: string;
@@ -389,12 +390,16 @@ export class ReadingDossier {
     });
   }
 
+  private readingMode: 'intensive' | 'extensive' = 'intensive';
+  private extensiveReader: ExtensiveReaderDossier;
+
   constructor() {
     this.container = document.createElement('div');
     this.container.className = 'dossier-workspace dossier-reading interactive';
     this.allArticles = (readingData as any).articles as ReadingArticle[];
     this.activeLevel = defaultLevel(this.allArticles, StorageManager.getSkillLevel('reading'));
     this.articles = this.allArticles.filter(a => a.cefrLevel === this.activeLevel);
+    this.extensiveReader = new ExtensiveReaderDossier();
     window.addEventListener('learner-level-change', () => this.setLevel(defaultLevel(this.allArticles, StorageManager.getSkillLevel('reading'))));
   }
 
@@ -404,13 +409,33 @@ export class ReadingDossier {
     this.currentArticleIndex = 0;
     this.currentPass = 1;
     this.miningCardIndex = 0;
+    this.extensiveReader.setLevel(level);
     if (this.container.isConnected) this.render();
   }
 
   public render(): HTMLElement {
+    if (this.readingMode === 'extensive') {
+      this.container.innerHTML = `
+        <div class="reading-mode-bar" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 10px;">
+          <button class="hud-btn btn-mode-intensive" title="${t('reading.mode_intensive_title', undefined, 'Intensive (4-Pass)')}" style="flex: 1 1 130px; border-radius: var(--radius-btn, 10px); min-height: 44px; justify-content: center;">${t('reading.mode_intensive', undefined, '🔬 Intensive')}</button>
+          <button class="hud-btn btn-mode-extensive active" title="${t('reading.mode_extensive_title', undefined, 'Extensive (Comprehensible Input)')}" style="flex: 1 1 130px; background: var(--accent-gold); color: var(--bg-canvas); border-radius: var(--radius-btn, 10px); font-weight: 700; min-height: 44px; justify-content: center;">${t('reading.mode_extensive', undefined, '📖 Extensive')}</button>
+        </div>
+        <div class="extensive-container-slot"></div>
+      `;
+      const slot = this.container.querySelector('.extensive-container-slot') as HTMLElement;
+      slot.appendChild(this.extensiveReader.render());
+      this.bindModeEvents();
+      return this.container;
+    }
+
     const article = this.articles[this.currentArticleIndex];
 
     this.container.innerHTML = `
+      <div class="reading-mode-bar" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 10px;">
+        <button class="hud-btn btn-mode-intensive active" title="${t('reading.mode_intensive_title', undefined, 'Intensive (4-Pass)')}" style="flex: 1 1 130px; background: var(--accent-gold); color: var(--bg-canvas); border-radius: var(--radius-btn, 10px); font-weight: 700; min-height: 44px; justify-content: center;">${t('reading.mode_intensive', undefined, '🔬 Intensive')}</button>
+        <button class="hud-btn btn-mode-extensive" title="${t('reading.mode_extensive_title', undefined, 'Extensive (Comprehensible Input)')}" style="flex: 1 1 130px; border-radius: var(--radius-btn, 10px); min-height: 44px; justify-content: center;">${t('reading.mode_extensive', undefined, '📖 Extensive')}</button>
+      </div>
+
       <div class="dossier-control-bar">
         <div class="dossier-tabs article-tabs" role="tablist" aria-label="${t('reading.articles')}">
           ${this.articles.map((art, idx) => `
@@ -444,9 +469,27 @@ export class ReadingDossier {
       <div class="reading-content-slot" id="reading-pass-panel" role="tabpanel" aria-labelledby="reading-pass-tab-${this.currentPass}"></div>
     `;
 
+    this.bindModeEvents();
     this.bindEvents();
     this.renderCurrentPass();
     return this.container;
+  }
+
+  private bindModeEvents(): void {
+    this.container.querySelector('.btn-mode-intensive')?.addEventListener('click', () => {
+      if (this.readingMode !== 'intensive') {
+        this.readingMode = 'intensive';
+        this.extensiveReader.stopAudio();
+        this.render();
+      }
+    });
+    this.container.querySelector('.btn-mode-extensive')?.addEventListener('click', () => {
+      if (this.readingMode !== 'extensive') {
+        this.readingMode = 'extensive';
+        this.clearSkimTimer();
+        this.render();
+      }
+    });
   }
 
   public switchPass(pass: ReadingPass, focusTab: boolean = false): void {
@@ -688,7 +731,7 @@ export class ReadingDossier {
           </div>
           <div class="vocab-drawer-actions">
             <button type="button" class="hud-btn btn-vocab-speak" title="Listen to pronunciation">${icon('volume')} Listen</button>
-            <button type="button" class="hud-btn btn-close-drawer" title="Close drawer" aria-label="Close vocabulary drawer">✕ Close</button>
+            <button type="button" class="hud-btn btn-close-drawer" title="${t('reading.close_drawer_tooltip', undefined, 'Close drawer')}" aria-label="${t('reading.close_drawer_aria', undefined, 'Close vocabulary drawer')}">${t('common.close_cross', undefined, '✕ Close')}</button>
           </div>
         </div>
         <div class="vocab-drawer-body">
@@ -834,7 +877,7 @@ export class ReadingDossier {
           </div>
         </article>
 
-        <aside class="reading-sidebar-pane" style="width: 320px; display: flex; flex-direction: column; gap: 16px;">
+        <aside class="reading-sidebar-pane" style="width: 100%; max-width: 320px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px;">
           <!-- Dedicated Vocabulary Drawer Slot -->
           <div class="vocab-drawer-slot"></div>
 
@@ -1157,7 +1200,7 @@ export class ReadingDossier {
             ${synthesis.reconstructionPrompt || 'Close this dossier. In your notebook or writing buffer, reconstruct the central thesis of the article in exactly 3 complex sentences utilizing at least 3 of the mined vocabulary items.'}
           </p>
           <div style="margin-top: 16px;">
-            <button class="hud-btn btn-finish-reading" style="padding: 10px 20px; font-weight: 700; background: var(--accent-gold); color: var(--bg-canvas); border: none; box-shadow: var(--shadow-glow);">
+            <button class="hud-btn btn-finish-reading" style="width: 100%; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 10px 20px; font-weight: 700; background: var(--accent-gold); color: var(--bg-canvas); border: none; border-radius: var(--radius-btn, 10px); box-shadow: var(--shadow-glow);">
               Complete Intensive Pass & Log to Record
             </button>
           </div>

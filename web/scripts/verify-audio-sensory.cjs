@@ -111,9 +111,30 @@ const soundEffectsExtended = [
   'stage-fanfare',
   'radar-reveal',
   'mechanical-click',
-  'keystroke'
+  'keystroke',
+  'success-chord',
+  'nudge',
+  'bubble-pop',
+  'sparkle',
+  'quest-victory',
+  'whoosh',
+  'toggle-on',
+  'toggle-off',
+  'unlock',
+  'celebration',
+  'heartbeat',
+  'card-draw'
 ];
 assert(soundEffectsExtended.includes('stage-fanfare'), 'Stage fanfare effect must be supported');
 assert(soundEffectsExtended.includes('radar-reveal'), 'Radar reveal arpeggio effect must be supported');
+assert(soundEffectsExtended.includes('success-chord'), 'Success chord effect must be supported');
+assert(soundEffectsExtended.includes('nudge'), 'Gentle nudge effect must be supported');
+assert(soundEffectsExtended.includes('bubble-pop'), 'Bubble pop effect must be supported');
+assert(soundEffectsExtended.includes('sparkle'), 'Sparkle crystal effect must be supported');
+assert(soundEffectsExtended.includes('quest-victory'), 'Quest victory celebration effect must be supported');
+assert(soundEffectsExtended.includes('whoosh'), 'Whoosh aerodynamic sweep effect must be supported');
+assert(soundEffectsExtended.includes('unlock'), 'Unlock harmonic arpeggio effect must be supported');
+assert(soundEffectsExtended.includes('celebration'), 'Celebration orchestral major 9th chord effect must be supported');
+assert(soundEffectsExtended.includes('heartbeat'), 'Heartbeat timer effect must be supported');
 
 console.log('✓ All Audio Sensory mathematical assertions, radar arpeggios, and haptic models passed cleanly.');

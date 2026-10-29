@@ -2,6 +2,7 @@ import { PlacementQuiz } from './modules/placement-quiz';
 import { MultiSkillQuizModal } from './modules/multi-skill-quiz-modal';
 import { icon } from './utils/icons';
 import { AudioSynthesizer } from './core/audio-synthesizer';
+import { AcousticHaptics } from './core/acoustic-haptics';
 import { CursorTracker } from './core/cursor-tracker';
 import { PerspectiveCanvas } from './core/perspective-canvas';
 import { Router, RouteId } from './core/router';
@@ -26,6 +27,7 @@ import { ProgressionEngine } from './core/progression-engine';
 import { ProgressionModal } from './modules/progression-modal';
 import { ZenMode } from './core/zen-mode';
 import { LexiconDrawer } from './modules/lexicon-drawer';
+import { FloatingNote } from './modules/floating-note';
 import { BlitzDossier } from './modules/blitz-dossier';
 import { MediationDossier } from './modules/mediation-dossier';
 import { DrillsDossier } from './modules/drills-dossier';
@@ -50,6 +52,7 @@ import collocationsData from './assets/data/collocations.json';
 
 // Expose engines to window for automated headless testing & telemetry inspection
 (window as any).AudioSynthesizer = AudioSynthesizer;
+(window as any).AcousticHaptics = AcousticHaptics;
 (window as any).HapticEngine = HapticEngine;
 (window as any).CommuteAudioPlayer = CommuteAudioPlayer;
 (window as any).MistakeVault = MistakeVault;
@@ -60,6 +63,7 @@ import collocationsData from './assets/data/collocations.json';
 (window as any).ProgressionModal = ProgressionModal;
 (window as any).ZenMode = ZenMode;
 (window as any).LexiconDrawer = LexiconDrawer;
+(window as any).FloatingNote = FloatingNote;
 (window as any).BlitzDossier = BlitzDossier;
 (window as any).MediationDossier = MediationDossier;
 (window as any).AnalyticsDossier = AnalyticsDossier;
@@ -118,9 +122,11 @@ class App {
     // 1. Initialize Subsystems
     AudioSynthesizer.init();
     AmbientMusicEngine.init();
+    AcousticHaptics.bindInteractiveElements(document);
     CursorTracker.init();
     ZenMode.init();
     LexiconDrawer.init();
+    FloatingNote.init();
     CardTiltController.init();
 
     // Global Micro-Interactions: Tactile audio & haptic feedback on button clicks
@@ -223,6 +229,20 @@ class App {
 
     // 4. Initialize Router
     this.router = new Router();
+    this.router.setBeforeNavigate(async (toRoute) => {
+      if (this.activeDossierHandle && typeof this.activeDossierHandle.canDeactivate === 'function') {
+        const allowed = await this.activeDossierHandle.canDeactivate(toRoute);
+        if (!allowed) return false;
+      }
+      return true;
+    });
+    this.router.setBeforeNavigate(async (toRoute, _fromRoute) => {
+      if (this.activeDossierHandle && typeof this.activeDossierHandle.canDeactivate === 'function') {
+        const allowed = await this.activeDossierHandle.canDeactivate(toRoute);
+        if (!allowed) return false;
+      }
+      return true;
+    });
     this.bindNavigation();
     this.bindKeyboardShortcuts();
     ScrollAffordance.initGlobalObserver();
@@ -316,6 +336,7 @@ class App {
   }
 
   private handleRouteChange(route: RouteId): void {
+    AudioSynthesizer.play('whoosh');
     MotionEngine.cancelAll();
     AudioSynthesizer.stopSpeech();
     AudioSynthesizer.stopFocusHum();
@@ -333,7 +354,7 @@ class App {
     HeaderHUD.setContextualDock(null);
 
     // Clean up any stray modals or floating toasts attached to document.body
-    document.querySelectorAll('.completion-modal-overlay, .hud-modal-overlay, #skill-node-modal, #tour-welcome-toast').forEach(el => el.remove());
+    document.querySelectorAll('.completion-modal-overlay, .hud-modal-overlay, #skill-node-modal, #tour-welcome-toast, #hud-confirm-dialog').forEach(el => el.remove());
 
     if (this.activeDossierHandle && typeof this.activeDossierHandle.teardown === 'function') {
       try {
@@ -509,7 +530,7 @@ class App {
   }
 
   private showCompletionReceipt(moduleName: string): void {
-    AudioSynthesizer.play('absorb');
+    AudioSynthesizer.play('celebration');
 
     const state = StorageManager.loadState();
     const modal = document.createElement('div');

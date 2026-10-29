@@ -8,6 +8,7 @@ import { bandBadge, countdown, Countdown, esc, fmtTime, h } from '../ui';
 import { renderParagraphSpans, mergeHighlightRanges } from '../reading-engine';
 import { icon } from '../../utils/icons';
 import { t } from '../../core/i18n';
+import { StorageManager } from '../../utils/storage';
 
 const PASSAGES = readingData as ReadingPassage[];
 
@@ -120,7 +121,94 @@ export function mountReadingTest(
   const clock = h('span', 'ie-clock');
   const submit = h('button', 'ie-btn ie-btn-primary', t('ielts.submit_answers', undefined, 'Submit answers'));
   const tabs = h('div', 'ie-tabs');
-  bar.append(clock, tabs, submit);
+
+  let studyMode = StorageManager.getStudyMode();
+  const modeBtn = h('button', 'ie-btn ie-mode-toggle');
+  modeBtn.type = 'button';
+  const syncModeBtn = () => {
+    const isDeep = studyMode === 'deep-study';
+    modeBtn.textContent = isDeep ? '⚡ Deep Study' : '⏱️ Exam Sprint';
+    modeBtn.title = isDeep ? 'Deep Study: Check answers & explanations immediately' : 'Exam Sprint: Timed exam simulation, answers revealed after submission';
+  };
+  syncModeBtn();
+  modeBtn.addEventListener('click', () => {
+    studyMode = studyMode === 'deep-study' ? 'exam-sprint' : 'deep-study';
+    StorageManager.setStudyMode(studyMode);
+    syncModeBtn();
+  });
+  bar.append(clock, modeBtn, tabs, submit);
+
+  // Reader Ergonomics Bar (Font Size A-/A+, Font Family, Line-Height)
+  const FONT_SIZES = ['14px', '16px', '18px', '20px'];
+  let currentFontSizeIdx = Math.max(0, FONT_SIZES.indexOf(localStorage.getItem('eng_reader_font_size') || '16px'));
+  if (currentFontSizeIdx === -1) currentFontSizeIdx = 1;
+  let isSerif = localStorage.getItem('eng_reader_font_family') === 'serif';
+  let isRelaxed = localStorage.getItem('eng_reader_line_height') === '1.85';
+
+  const applyErgonomics = () => {
+    const size = FONT_SIZES[currentFontSizeIdx];
+    const family = isSerif ? 'Georgia, Cambria, "Times New Roman", serif' : 'var(--font-sans, system-ui, sans-serif)';
+    const lineHeight = isRelaxed ? '1.85' : '1.55';
+    panes.forEach(pane => {
+      const pText = pane.querySelector<HTMLElement>('.ie-passage');
+      if (pText) {
+        pText.style.setProperty('--passage-font-size', size);
+        pText.style.fontSize = size;
+        pText.style.fontFamily = family;
+        pText.style.lineHeight = lineHeight;
+      }
+    });
+    localStorage.setItem('eng_reader_font_size', size);
+    localStorage.setItem('eng_reader_font_family', isSerif ? 'serif' : 'sans');
+    localStorage.setItem('eng_reader_line_height', isRelaxed ? '1.85' : '1.55');
+  };
+
+  const ergoBar = h('div', 'ie-reader-ergobar');
+  ergoBar.style.cssText = 'display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-hairline); border-radius: var(--radius-squircle-sm, 8px); margin: 6px 0; flex-wrap: wrap; font-size: 13px;';
+
+  const updateErgoBarHtml = () => {
+    ergoBar.innerHTML = `
+      <div style="display: flex; align-items: center; gap: 6px;">
+        <span style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted); text-transform: uppercase;">Cỡ chữ:</span>
+        <button type="button" class="ie-btn ie-btn-sm ie-ergo-font-minus" style="min-height: 32px; padding: 2px 10px; font-weight: 700;" ${currentFontSizeIdx === 0 ? 'disabled' : ''}>A-</button>
+        <span style="font-family: var(--font-mono); font-size: 12px; min-width: 32px; text-align: center; color: var(--accent-gold);">${FONT_SIZES[currentFontSizeIdx]}</span>
+        <button type="button" class="ie-btn ie-btn-sm ie-ergo-font-plus" style="min-height: 32px; padding: 2px 10px; font-weight: 700;" ${currentFontSizeIdx === FONT_SIZES.length - 1 ? 'disabled' : ''}>A+</button>
+      </div>
+      <div style="display: flex; align-items: center; gap: 6px;">
+        <button type="button" class="ie-btn ie-btn-sm ie-ergo-font-family ${isSerif ? 'active' : ''}" style="min-height: 32px; padding: 2px 12px;">
+          ${isSerif ? '📖 Serif' : '🔤 Sans'}
+        </button>
+        <button type="button" class="ie-btn ie-btn-sm ie-ergo-line-height ${isRelaxed ? 'active' : ''}" style="min-height: 32px; padding: 2px 12px;">
+          ${isRelaxed ? '↕ Giãn rộng' : '↕ Giãn chuẩn'}
+        </button>
+      </div>
+    `;
+    ergoBar.querySelector('.ie-ergo-font-minus')?.addEventListener('click', () => {
+      if (currentFontSizeIdx > 0) {
+        currentFontSizeIdx--;
+        applyErgonomics();
+        updateErgoBarHtml();
+      }
+    });
+    ergoBar.querySelector('.ie-ergo-font-plus')?.addEventListener('click', () => {
+      if (currentFontSizeIdx < FONT_SIZES.length - 1) {
+        currentFontSizeIdx++;
+        applyErgonomics();
+        updateErgoBarHtml();
+      }
+    });
+    ergoBar.querySelector('.ie-ergo-font-family')?.addEventListener('click', () => {
+      isSerif = !isSerif;
+      applyErgonomics();
+      updateErgoBarHtml();
+    });
+    ergoBar.querySelector('.ie-ergo-line-height')?.addEventListener('click', () => {
+      isRelaxed = !isRelaxed;
+      applyErgonomics();
+      updateErgoBarHtml();
+    });
+  };
+  updateErgoBarHtml();
 
   const highlightsMap = new Map<string, UserHighlight[]>();
   const scrollMap = new Map<string, { passage: number; questions: number }>();
@@ -330,7 +418,8 @@ export function mountReadingTest(
 
   const result = h('section', 'ie-result');
   result.hidden = true;
-  root.append(bar, ...panes, dock, result);
+  root.append(bar, ergoBar, ...panes, dock, result);
+  applyErgonomics();
 
   // Soft keyboard dock handling with 100ms debounce
   let keyboardTimer: ReturnType<typeof setTimeout> | null = null;
@@ -539,7 +628,7 @@ export function readingView(root: HTMLElement): () => void {
     const metaText = t('reading.card_meta', { words, questions: p.questions.length, types }, `${words} words · ${p.questions.length} questions · ${types} types`);
     const topicKey = 'ielts.reading_topic_' + p.topic.toLowerCase().replace(/[^a-z0-9]+/g, '_');
     const topicLabel = t(topicKey, undefined, p.topic);
-    const c = h('button', 'ie-card', `<b>${esc(p.title)}</b><span>${esc(topicLabel)}</span><small>${metaText}</small>`);
+    const c = h('button', 'ie-card ie-passage-card ie-card-action', `<b>${esc(p.title)}</b><span>${esc(topicLabel)}</span><small>${metaText}</small><div class="ie-card-affordance" aria-hidden="true">${icon('chevronRight', 16)}</div>`);
     c.addEventListener('click', () => {
       root.innerHTML = '';
       const back = h('button', 'ie-btn', t('ielts.all_passages', undefined, 'All passages'));

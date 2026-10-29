@@ -335,9 +335,6 @@
      "one degree",
      "one",
      "1",
-     "1 degree",
-     "one",
-     "1",
      "1 degree"
     ],
     "why": "Paragraph A: \"a difference of four minutes between the two clocks corresponds to one degree of longitude\"."
@@ -498,8 +495,6 @@
     "answer": [
      "threshold",
      "quorum threshold",
-     "certain level",
-     "quorum threshold",
      "certain level"
     ],
     "why": "Paragraph C: \"Once the number of scouts at a site rises above a certain level, workers begin to visit it more frequently\" and \"This quorum threshold is important\"."
@@ -530,7 +525,6 @@
     "prompt": "What do older bees have more experience of, according to paragraph F?",
     "answer": [
      "cavity types",
-     "particular cavity types",
      "particular cavity types"
     ],
     "why": "Paragraph F: \"Older bees may have more experience of particular cavity types\"."
@@ -695,7 +689,6 @@
     "prompt": "What colour did the residue turn the water in Perkin's flask?",
     "answer": [
      "purple",
-     "vivid purple",
      "vivid purple"
     ],
     "why": "Paragraph A: \"coloured the water in his flask a vivid purple\"."
@@ -858,8 +851,6 @@
     "prompt": "What emotion can visible unfairness provoke, according to paragraph C?",
     "answer": [
      "resentment",
-     "anger",
-     "angry",
      "anger",
      "angry"
     ],

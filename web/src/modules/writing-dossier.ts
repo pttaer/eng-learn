@@ -8,6 +8,7 @@ import { SkillTreeEngine } from '../core/skill-tree-engine';
 import { MotionEngine } from '../core/motion-engine';
 import drillsData from '../assets/data/drills.json';
 import { t } from '../core/i18n';
+import { SemanticParaphraseEvaluator } from '../core/semantic-paraphrase-evaluator';
 
 export interface WritingItem {
   id: string;
@@ -181,7 +182,7 @@ export class WritingDossier {
         </div>
 
         <!-- Bottom Navigation & Counter -->
-        <div class="dossier-nav-bar" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-hairline); padding-top: var(--space-16); width: 100%; max-width: none; box-sizing: border-box;">
+        <div class="dossier-nav-bar" style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-hairline); padding-top: var(--space-16); width: 100%; max-width: none; box-sizing: border-box;">
           <button class="hud-btn nav-btn-prev" ${this.currentIndex === 0 ? 'disabled' : ''}>${icon('arrowLeft')} ${t('writing.prev_prompt')}</button>
           <span class="telemetry-value card-counter" style="font-family: var(--font-mono); font-size: var(--font-body-compact);">
             ${t('writing.prompt_counter', { current: this.currentIndex + 1, total: this.items.length })}
@@ -222,7 +223,7 @@ export class WritingDossier {
           <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 16px; border-radius: 12px; box-shadow: var(--shadow-card);">
             <div class="copywork-header-row">
               <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.step1_heading')}</span>
-              <button class="hud-btn btn-speak-model" style="padding: 6px 14px; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);" title="Listen to Native Pronunciation">${icon('volume')} ${t('writing.play_model')}</button>
+              <button class="hud-btn btn-speak-model" style="padding: 8px 14px; min-height: 44px; display: inline-flex; align-items: center; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);" title="Listen to Native Pronunciation">${icon('volume')} ${t('writing.play_model')}</button>
             </div>
 
             <div class="model-sentence-display" style="font-size: var(--font-h2); line-height: 1.6; font-weight: 500; color: var(--ink-primary); max-width: 68ch; margin: 16px 0 20px 0; border-left: 3px solid var(--accent-gold); padding-left: 16px;">
@@ -255,7 +256,7 @@ export class WritingDossier {
           <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 16px; border-radius: 12px; box-shadow: var(--shadow-card);">
             <div class="copywork-header-row">
               <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.step2_title', undefined, 'STEP 2 // RECONSTRUCT FROM MEMORY')}</span>
-              <button class="hud-btn btn-peek-model" style="padding: 6px 14px; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);">${icon('eye')} ${t('writing.peek_model', undefined, 'Peek Model (2s)')}</button>
+              <button class="hud-btn btn-peek-model" style="padding: 8px 14px; min-height: 44px; display: inline-flex; align-items: center; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);">${icon('eye')} ${t('writing.peek_model', undefined, 'Peek Model (2s)')}</button>
             </div>
 
             <div id="peek-container" style="display: none; font-size: var(--font-body); line-height: 1.5; color: var(--ink-muted); padding: 12px; background: var(--bg-surface-sunk); border: none; margin-bottom: 16px; border-radius: var(--radius-squircle-sm, 10px);">
@@ -287,6 +288,7 @@ export class WritingDossier {
       case 'diff':
         const metrics = calculateWritingMetrics(item.masterSentence, this.typedContent, this.elapsedSeconds);
         const tokens = computeDiffTokens(item.masterSentence, this.typedContent);
+        const semantic = SemanticParaphraseEvaluator.evaluate(item.masterSentence, this.typedContent);
 
         return `
           <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 16px; border-radius: 12px; box-shadow: var(--shadow-card);">
@@ -324,10 +326,58 @@ export class WritingDossier {
             </div>
 
             <!-- Side-by-Side Highlighted Diff -->
-            <div style="margin-bottom: 24px;">
+            <div style="margin-bottom: 16px;">
               <div class="telemetry-label" style="margin-bottom: 6px;">${t('writing.reconstruction_corrections', undefined, 'YOUR RECONSTRUCTION & CORRECTIONS')}</div>
               <div class="copywork-diff-container" role="region" aria-label="Myers split-diff evaluation" aria-live="polite" aria-atomic="true" style="font-size: var(--font-body); line-height: 1.8; padding: 14px; border: none; border-radius: var(--radius-squircle-sm, 10px); background: var(--bg-canvas);">
                 ${this.renderDiffHTML(tokens)}
+              </div>
+            </div>
+
+            <!-- Intelligent Semantic Paraphrase Evaluation & Flexibility Diagnostic -->
+            <div class="semantic-evaluation-panel" style="margin-bottom: 24px; padding: 14px; background: var(--bg-surface-sunk); border-radius: var(--radius-squircle-sm, 10px); border-left: 3px solid ${semantic.isAcceptableParaphrase ? 'var(--ink-good)' : 'var(--accent-gold)'};">
+              <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px;">
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
+                  <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">SEMANTIC PARAPHRASE EVALUATION</span>
+                  <span class="hud-status-badge" style="background: ${semantic.isAcceptableParaphrase ? 'var(--good-soft)' : 'var(--warning-soft)'}; color: ${semantic.isAcceptableParaphrase ? 'var(--good)' : 'var(--warning)'}; border: none; white-space: nowrap;">
+                    ${semantic.isAcceptableParaphrase ? '✓ VALID PARAPHRASE' : 'SYNTACTIC VARIATION'}
+                  </span>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: var(--font-body-compact); font-weight: 700; color: ${semantic.isAcceptableParaphrase ? 'var(--ink-good)' : 'var(--accent-gold)'};">
+                  OVERALL: ${semantic.overallScore}%
+                </span>
+              </div>
+
+              <!-- Multi-dimensional scoring bars -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 8px; margin-bottom: 12px; font-size: var(--font-kicker);">
+                ${[
+                  ['Concept Recall', `${semantic.conceptCoveragePct}%`, 'var(--ink-primary)'],
+                  ['Syntactic Level', `${semantic.syntacticSophisticationScore}%`, 'var(--ink-primary)'],
+                  ['Collocation Bonus', `+${semantic.collocationBonus} pts`, 'var(--ink-good)']
+                ].map(([label, val, col]) => `
+                  <div style="padding: 6px 10px; background: rgba(255,255,255,0.03); border-radius: 6px;">
+                    <div style="color: var(--ink-muted);">${label}</div>
+                    <div style="font-weight: 700; color: ${col}; font-size: var(--font-body-compact);">${val}</div>
+                  </div>`).join('')}
+              </div>
+
+              <!-- Synonyms & Syntactic shifts badges -->
+              ${semantic.detectedSynonyms.length > 0 ? `
+                <div style="margin-bottom: 8px; font-size: var(--font-kicker); color: var(--ink-muted);">
+                  <strong style="color: var(--accent-gold);">Synonyms Accepted:</strong>
+                  ${semantic.detectedSynonyms.map(s => `<span class="hud-status-badge" style="margin-left: 4px; padding: 2px 8px; border: none; background: rgba(165,180,252,0.12); color: var(--accent-gold);">${s.used} ↔ ${s.original}</span>`).join('')}
+                </div>
+              ` : ''}
+
+              ${semantic.detectedSyntacticShifts.length > 0 ? `
+                <div style="margin-bottom: 8px; font-size: var(--font-kicker); color: var(--ink-muted);">
+                  <strong style="color: var(--accent-gold);">Syntactic Transformations:</strong>
+                  ${semantic.detectedSyntacticShifts.map(s => `<span class="hud-status-badge" style="margin-left: 4px; padding: 2px 8px; border: none; background: var(--good-soft); color: var(--ink-good);">${s}</span>`).join('')}
+                </div>
+              ` : ''}
+
+              <!-- Actionable guidance -->
+              <div style="margin-top: 8px; font-size: var(--font-body-compact); line-height: 1.45; color: var(--ink-secondary);">
+                ${semantic.actionableFeedback.map(fb => `<div>${fb}</div>`).join('')}
               </div>
             </div>
 

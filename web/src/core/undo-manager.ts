@@ -1,4 +1,5 @@
 import { AcousticHaptics } from './acoustic-haptics';
+import { t } from './i18n';
 
 export interface UndoAction {
   id: string;
@@ -75,8 +76,8 @@ class UndoManagerSingleton {
     this.containerEl.innerHTML = `
       <div class="apple-toast-content">
         <span class="apple-toast-text">${message}</span>
-        <button type="button" class="apple-toast-btn" aria-label="Hoàn tác thao tác">
-          <span>Hoàn tác</span>
+        <button type="button" class="apple-toast-btn" aria-label="${t('common.undo_action', undefined, 'Undo action')}">
+          <span>${t('common.undo', undefined, 'Undo')}</span>
           <kbd>Z</kbd>
         </button>
       </div>

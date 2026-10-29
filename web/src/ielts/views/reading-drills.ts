@@ -2,6 +2,7 @@ import { esc, h } from '../ui';
 import { feedback } from '../../core/feedback';
 import { icon } from '../../utils/icons';
 import { t } from '../../core/i18n';
+import { StorageManager } from '../../utils/storage';
 
 export interface SynonymPair {
   promptWord: string;
@@ -101,7 +102,7 @@ export const READING_DRILLS: ReadingDrillItem[] = [
       { promptWord: 'harsh winter weather', passageWord: 'severe maritime winter storms' }
     ],
     inputType: 'text',
-    correctAnswer: ['two months', 'approximately two months'],
+    correctAnswer: ['two months', 'approximately two months', '2 months', 'approximately 2 months'],
     trapExplanation:
       'Word Count Penalty: Writing "of approximately two months" (4 words) is automatically marked incorrect on IELTS. Drop extraneous prepositions.',
     rationale:
@@ -442,11 +443,13 @@ export function readingDrillsView(root: HTMLElement): () => void {
   container.append(head);
 
   // Score HUD
+  const isWeaknessFirst = StorageManager.isWeaknessFirstEnabled();
   const hud = h('div', 'ie-drills-hud');
   hud.innerHTML = `
     <div class="ie-hud-metric">
       <span class="ie-hud-num" id="drills-mastered-count">0 / 14</span>
       <span class="ie-hud-label">${t('rdrills.drills_mastered', undefined, 'Drills Mastered')}</span>
+      ${isWeaknessFirst ? `<span class="ie-badge-band" style="background:rgba(245,158,11,0.15); color:var(--accent-gold, #f59e0b); border:1px solid rgba(245,158,11,0.3); font-size:11px; padding:3px 8px; border-radius:6px; margin-left:8px;">${t('rdrills.weakness_first', undefined, '🎯 Weakness-First')}</span>` : ''}
     </div>
     <div class="ie-hud-actions">
       <a href="#reading" class="ie-btn ie-btn-sm ie-btn-back"><span class="ie-back-arrow">←</span> ${t('rdrills.btn_back_passages', undefined, 'Back to Full Passages')}</a>
@@ -459,7 +462,7 @@ export function readingDrillsView(root: HTMLElement): () => void {
 
   // Nav Tabs Bar
   const navTabs = h('nav', 'ie-drills-nav-tabs', '');
-  navTabs.setAttribute('aria-label', 'Question Types 1 through 14');
+  navTabs.setAttribute('aria-label', t('rdrills.types_nav_aria', undefined, 'Question Types 1 through 14'));
   READING_DRILLS.forEach((d, idx) => {
     const tabBtn = h('button', `ie-drill-tab ${idx === 0 ? 'is-active' : ''}`);
     tabBtn.setAttribute('data-index', String(idx));
@@ -684,6 +687,15 @@ export function readingDrillsView(root: HTMLElement): () => void {
     const nextBtn = h('button', 'ie-btn ie-btn-sm', `${t('rdrills.next_drill', undefined, 'Next Drill')} →`);
     nextBtn.disabled = currentDrillIndex === READING_DRILLS.length - 1;
     nextBtn.addEventListener('click', () => {
+      if (StorageManager.isWeaknessFirstEnabled()) {
+        // Find next unattempted or failed drill
+        const nextWeakIndex = READING_DRILLS.findIndex((d, idx) => idx > currentDrillIndex && !drillEvaluations[d.id]?.correct);
+        if (nextWeakIndex !== -1) {
+          currentDrillIndex = nextWeakIndex;
+          renderDrill();
+          return;
+        }
+      }
       if (currentDrillIndex < READING_DRILLS.length - 1) {
         currentDrillIndex++;
         renderDrill();

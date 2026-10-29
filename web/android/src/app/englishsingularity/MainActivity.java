@@ -41,6 +41,15 @@ public class MainActivity extends Activity {
                 if (obj.has("progress")) {
                     editor.putString(SingularityWidgetProvider.PREF_PROGRESS, obj.optString("progress"));
                 }
+                if (obj.has("notification_hook")) {
+                    editor.putString("notification_hook", obj.optString("notification_hook"));
+                }
+                if (obj.has("notification_tip")) {
+                    editor.putString("notification_tip", obj.optString("notification_tip"));
+                }
+                if (obj.has("locale")) {
+                    editor.putString("app_locale", obj.optString("locale", "en"));
+                }
                 if (obj.has("word")) {
                     editor.putString(SingularityWidgetProvider.PREF_WORD, obj.optString("word"));
                     editor.putString(SingularityWidgetProvider.PREF_PHONETIC, obj.optString("phonetic", ""));
@@ -59,6 +68,22 @@ public class MainActivity extends Activity {
             } catch (Exception e) {
                 Log.e(TAG, "Error updating widget data from JS", e);
             }
+        }
+
+        @JavascriptInterface
+        public void postNotification(String title, String body, String route) {
+            NotificationHelper.showNotification(MainActivity.this, title, body, route);
+        }
+
+        @JavascriptInterface
+        public void scheduleNotification(String title, String body, String route, long delayMs) {
+            try {
+                getSharedPreferences(SingularityWidgetProvider.PREFS_NAME, Context.MODE_PRIVATE)
+                    .edit()
+                    .putLong("last_js_scheduled_reminder", System.currentTimeMillis())
+                    .apply();
+            } catch (Exception ignored) {}
+            NotificationHelper.scheduleNotification(MainActivity.this, title, body, route, delayMs);
         }
     }
 
@@ -112,22 +137,31 @@ public class MainActivity extends Activity {
             }
         });
 
-        // Determine initial URL based on deep-link action
+        // Determine initial URL based on deep-link action or route extra
         String initialUrl = "file:///android_asset/index.html";
         Intent intent = getIntent();
-        if (intent != null && intent.getAction() != null) {
-            if (SingularityWidgetProvider.ACTION_OPEN_VOCAB.equals(intent.getAction())) {
-                initialUrl = "file:///android_asset/index.html#vocab";
-            } else if (SingularityWidgetProvider.ACTION_OPEN_IELTS.equals(intent.getAction())) {
-                initialUrl = "file:///android_asset/ielts.html";
-            } else if (SingularityWidgetProvider.ACTION_OPEN_READING.equals(intent.getAction())) {
-                initialUrl = "file:///android_asset/index.html#reading";
-            } else if (SingularityWidgetProvider.ACTION_OPEN_WRITING.equals(intent.getAction())) {
-                initialUrl = "file:///android_asset/index.html#writing";
-            } else if (SingularityWidgetProvider.ACTION_OPEN_LISTENING.equals(intent.getAction())) {
-                initialUrl = "file:///android_asset/index.html#listening";
-            } else if (SingularityWidgetProvider.ACTION_OPEN_SPEAKING.equals(intent.getAction())) {
-                initialUrl = "file:///android_asset/index.html#speaking";
+        if (intent != null) {
+            String routeExtra = intent.getStringExtra("route");
+            if (routeExtra != null && !routeExtra.isEmpty()) {
+                if (routeExtra.contains("ielts.html")) {
+                    initialUrl = "file:///android_asset/ielts.html" + (routeExtra.contains("#") ? routeExtra.substring(routeExtra.indexOf("#")) : "");
+                } else {
+                    initialUrl = "file:///android_asset/index.html" + (routeExtra.startsWith("#") ? routeExtra : ("#" + routeExtra));
+                }
+            } else if (intent.getAction() != null) {
+                if (SingularityWidgetProvider.ACTION_OPEN_VOCAB.equals(intent.getAction())) {
+                    initialUrl = "file:///android_asset/index.html#vocab";
+                } else if (SingularityWidgetProvider.ACTION_OPEN_IELTS.equals(intent.getAction())) {
+                    initialUrl = "file:///android_asset/ielts.html";
+                } else if (SingularityWidgetProvider.ACTION_OPEN_READING.equals(intent.getAction())) {
+                    initialUrl = "file:///android_asset/index.html#reading";
+                } else if (SingularityWidgetProvider.ACTION_OPEN_WRITING.equals(intent.getAction())) {
+                    initialUrl = "file:///android_asset/index.html#writing";
+                } else if (SingularityWidgetProvider.ACTION_OPEN_LISTENING.equals(intent.getAction())) {
+                    initialUrl = "file:///android_asset/index.html#listening";
+                } else if (SingularityWidgetProvider.ACTION_OPEN_SPEAKING.equals(intent.getAction())) {
+                    initialUrl = "file:///android_asset/index.html#speaking";
+                }
             }
         }
 
@@ -138,19 +172,30 @@ public class MainActivity extends Activity {
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         setIntent(intent);
-        if (intent != null && intent.getAction() != null && webView != null) {
-            if (SingularityWidgetProvider.ACTION_OPEN_VOCAB.equals(intent.getAction())) {
-                webView.loadUrl("file:///android_asset/index.html#vocab");
-            } else if (SingularityWidgetProvider.ACTION_OPEN_IELTS.equals(intent.getAction())) {
-                webView.loadUrl("file:///android_asset/ielts.html");
-            } else if (SingularityWidgetProvider.ACTION_OPEN_READING.equals(intent.getAction())) {
-                webView.loadUrl("file:///android_asset/index.html#reading");
-            } else if (SingularityWidgetProvider.ACTION_OPEN_WRITING.equals(intent.getAction())) {
-                webView.loadUrl("file:///android_asset/index.html#writing");
-            } else if (SingularityWidgetProvider.ACTION_OPEN_LISTENING.equals(intent.getAction())) {
-                webView.loadUrl("file:///android_asset/index.html#listening");
-            } else if (SingularityWidgetProvider.ACTION_OPEN_SPEAKING.equals(intent.getAction())) {
-                webView.loadUrl("file:///android_asset/index.html#speaking");
+        if (intent != null && webView != null) {
+            String routeExtra = intent.getStringExtra("route");
+            if (routeExtra != null && !routeExtra.isEmpty()) {
+                if (routeExtra.contains("ielts.html")) {
+                    webView.loadUrl("file:///android_asset/ielts.html" + (routeExtra.contains("#") ? routeExtra.substring(routeExtra.indexOf("#")) : ""));
+                } else {
+                    webView.loadUrl("file:///android_asset/index.html" + (routeExtra.startsWith("#") ? routeExtra : ("#" + routeExtra)));
+                }
+                return;
+            }
+            if (intent.getAction() != null) {
+                if (SingularityWidgetProvider.ACTION_OPEN_VOCAB.equals(intent.getAction())) {
+                    webView.loadUrl("file:///android_asset/index.html#vocab");
+                } else if (SingularityWidgetProvider.ACTION_OPEN_IELTS.equals(intent.getAction())) {
+                    webView.loadUrl("file:///android_asset/ielts.html");
+                } else if (SingularityWidgetProvider.ACTION_OPEN_READING.equals(intent.getAction())) {
+                    webView.loadUrl("file:///android_asset/index.html#reading");
+                } else if (SingularityWidgetProvider.ACTION_OPEN_WRITING.equals(intent.getAction())) {
+                    webView.loadUrl("file:///android_asset/index.html#writing");
+                } else if (SingularityWidgetProvider.ACTION_OPEN_LISTENING.equals(intent.getAction())) {
+                    webView.loadUrl("file:///android_asset/index.html#listening");
+                } else if (SingularityWidgetProvider.ACTION_OPEN_SPEAKING.equals(intent.getAction())) {
+                    webView.loadUrl("file:///android_asset/index.html#speaking");
+                }
             }
         }
     }
@@ -182,11 +227,13 @@ public class MainActivity extends Activity {
     protected void onPause() {
         super.onPause();
         webView.onPause();
+        NotificationHelper.scheduleInactivityReminder(this);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         webView.onResume();
+        NotificationHelper.cancelPendingReminders(this);
     }
 }

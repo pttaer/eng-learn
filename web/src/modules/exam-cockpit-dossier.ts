@@ -18,6 +18,7 @@
 import { icon } from '../utils/icons';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { I18n, t } from '../core/i18n';
+import { HeaderHUD } from './header-hud';
 import readingData from '../ielts/data/reading.json';
 import originalReadingData from '../ielts/data/originals-reading.json';
 import { ReadingPassage } from '../ielts/types';
@@ -152,6 +153,37 @@ export class ExamCockpitDossier {
   public getActiveFilter(): string { return this.activeFilter; }
   public getIsReviewMode(): boolean { return this.isReviewMode; }
 
+  public isExamActive(): boolean {
+    return this.isExamStarted && !this.isReviewMode;
+  }
+
+  public async canDeactivate(_toRoute?: string): Promise<boolean> {
+    if (!this.isExamActive()) return true;
+
+    const isVi = I18n.getLocale() === 'vi';
+    const testTitle = this.testCatalog[this.selectedTestIndex]?.title || 'IELTS Mock Test';
+    const title = isVi ? 'XÁC NHẬN THOÁT BÀI THI' : 'EXIT EXAM CONFIRMATION';
+    const message = isVi
+      ? `Bạn đang làm bài thi "${testTitle}".\n\nNếu thoát ra ngoài lúc này, toàn bộ câu trả lời và tiến trình sẽ bị huỷ.\nBạn có chắc chắn muốn thoát khỏi bài thi không?`
+      : `You are currently taking "${testTitle}".\n\nIf you navigate away now, your current answers and timer progress will be lost.\nAre you sure you want to exit the exam?`;
+
+    return HeaderHUD.showConfirmDialog({
+      title,
+      message,
+      confirmText: isVi ? 'Thoát bài thi' : 'Exit Exam',
+      cancelText: isVi ? 'Tiếp tục làm bài' : 'Continue Exam',
+      type: 'warning'
+    });
+  }
+
+  private beforeUnloadHandler = (e: BeforeUnloadEvent) => {
+    if (this.isExamActive()) {
+      e.preventDefault();
+      e.returnValue = '';
+      return '';
+    }
+  };
+
   // Mobile Tabbed Split-Screen State (<= 768px)
   private mobileActiveTab: 'passage' | 'questions' = 'passage';
 
@@ -214,6 +246,7 @@ export class ExamCockpitDossier {
 
     this.initQuestions();
     this.initAutosaveRecovery();
+    window.addEventListener('beforeunload', this.beforeUnloadHandler);
   }
 
   private initQuestions(): void {
@@ -442,10 +475,10 @@ export class ExamCockpitDossier {
       <div class="cd-test-hub-overlay" id="cd-test-hub-overlay" role="dialog" aria-modal="true" aria-labelledby="cd-test-hub-title">
         <div class="cd-test-hub-card">
           <header class="cd-test-hub-header">
-            <span class="cd-test-hub-kicker">OFFICIAL CD-IELTS EXAM HUB · DANH SÁCH ĐỀ THI</span>
-            <h2 class="cd-test-hub-title" id="cd-test-hub-title">Chọn Đề Thi Chuẩn Hóa CD-IELTS</h2>
+            <span class="cd-test-hub-kicker">${t('cockpit.test_hub_kicker', undefined, 'OFFICIAL CD-IELTS EXAM HUB · TEST CATALOG')}</span>
+            <h2 class="cd-test-hub-title" id="cd-test-hub-title">${t('cockpit.test_hub_title', undefined, 'Select Standardized CD-IELTS Test')}</h2>
             <p class="cd-test-hub-lead">
-              Vui lòng chọn 1 đề thi bên dưới để bắt đầu. Đồng hồ tính giờ (60:00) <strong>chỉ bắt đầu chạy</strong> khi bạn bấm nút <strong>"Bắt đầu làm bài thi"</strong>.
+              ${t('cockpit.test_hub_lead', undefined, 'Please select a test below to begin. The 60:00 countdown timer will only start when you click "Start Timed Exam".')}
             </p>
           </header>
 
@@ -459,20 +492,20 @@ export class ExamCockpitDossier {
                 aria-pressed="${this.selectedTestIndex === idx}"
               >
                 <div class="cd-test-card-top">
-                  <span class="cd-test-card-kicker">ĐỀ THI 0${tItem.testNumber} // ${tItem.module}</span>
+                  <span class="cd-test-card-kicker">${t('cockpit.card_test_kicker', { testNumber: tItem.testNumber, module: tItem.module }, `TEST 0${tItem.testNumber} // ${tItem.module}`)}</span>
                   <span class="cd-test-card-arrow" aria-hidden="true">${icon('arrowRight', 16)}</span>
                 </div>
                 <h3 class="cd-test-card-title">${this.escapeHtml(tItem.title)}</h3>
                 <div class="cd-test-card-passages">
                   ${tItem.passages.map((p, pIdx) => `
                     <div class="cd-test-card-p-row" title="${this.escapeHtml(p.title)}">
-                      <span>• <strong>Đoạn ${pIdx + 1}:</strong> ${this.escapeHtml(p.title.slice(0, 42))}${p.title.length > 42 ? '...' : ''} (${p.typeDesc.slice(0, 18)})</span>
+                      <span>• <strong>${t('cockpit.passage_num', { n: pIdx + 1 }, `Passage ${pIdx + 1}`)}:</strong> ${this.escapeHtml(p.title.slice(0, 42))}${p.title.length > 42 ? '...' : ''} (${p.typeDesc.slice(0, 18)})</span>
                     </div>
                   `).join('')}
                 </div>
                 <div class="cd-test-card-meta">
-                  <span>⏱️ ${tItem.durationMinutes} PHÚT · 📝 ${tItem.questionCount} CÂU</span>
-                  <span class="cd-test-card-badge">${this.selectedTestIndex === idx ? '✓ ĐÃ CHỌN' : 'CHỌN ĐỀ NÀY'}</span>
+                  <span>⏱️ ${tItem.durationMinutes} ${t('cockpit.mins_upper', undefined, 'MINS')} · 📝 ${tItem.questionCount} ${t('cockpit.questions_upper', undefined, 'QUESTIONS')}</span>
+                  <span class="cd-test-card-badge">${this.selectedTestIndex === idx ? t('cockpit.card_selected', undefined, '✓ SELECTED') : t('cockpit.card_select_this', undefined, 'SELECT THIS TEST')}</span>
                 </div>
               </div>
             `).join('')}
@@ -480,10 +513,10 @@ export class ExamCockpitDossier {
 
           <div class="cd-test-hub-actions">
             <button type="button" class="cd-btn-hub-cancel" id="btn-preview-exam-station">
-              ✕ Xem trước giao diện đề (Chưa tính giờ)
+              ${t('cockpit.btn_preview_exam', undefined, '✕ Preview Exam Station (Untimed)')}
             </button>
             <button type="button" class="cd-btn-hub-start" id="btn-start-selected-exam">
-              ${icon('zap', 14)} Bắt đầu làm bài thi (60:00)
+              ${icon('zap', 14)} ${t('cockpit.btn_start_timed_exam', undefined, 'Start Timed Exam (60:00)')}
             </button>
           </div>
         </div>
@@ -524,8 +557,8 @@ export class ExamCockpitDossier {
       <!-- Top Command Bar (48px) -->
       <header class="cd-top-bar" role="toolbar" aria-label="${t('cockpit.command_bar_aria', undefined, 'Exam Cockpit Command Bar')}">
         <div class="cd-top-left">
-          <button type="button" class="cd-btn cd-btn-open-hub" id="btn-open-test-hub" title="Chọn đề thi khác">
-            ${icon('book', 14)} <span>Danh sách đề</span>
+          <button type="button" class="cd-btn cd-btn-open-hub" id="btn-open-test-hub" title="${t('cockpit.select_other_test', undefined, 'Select another test')}">
+            ${icon('book', 14)} <span>${t('cockpit.btn_test_catalog', undefined, 'Test Catalog')}</span>
           </button>
           <span class="cd-brand-title desktop-only">
             ${t('cockpit.brand_title', undefined, 'IELTS COMPUTER-DELIVERED TEST')}
@@ -542,12 +575,12 @@ export class ExamCockpitDossier {
 
         <div class="cd-top-right">
           ${!this.isExamStarted ? `
-            <button type="button" class="cd-btn cd-btn-start-inline" id="btn-start-exam-inline" title="Bắt đầu tính giờ làm bài">
-              ${icon('zap', 12)} <span>BẮT ĐẦU</span>
+            <button type="button" class="cd-btn cd-btn-start-inline" id="btn-start-exam-inline" title="${t('cockpit.start_timer_title', undefined, 'Start timed test')}">
+              ${icon('zap', 12)} <span>${t('cockpit.btn_start_upper', undefined, 'START')}</span>
             </button>
           ` : `
-            <button type="button" class="cd-btn cd-btn-pause-inline" id="btn-pause-toggle" title="${this.isTimerPaused ? 'Tiếp tục tính giờ' : 'Tạm dừng đồng hồ'}">
-              <span>${this.isTimerPaused ? '▶ Tiếp tục' : '⏸ Tạm dừng'}</span>
+            <button type="button" class="cd-btn cd-btn-pause-inline" id="btn-pause-toggle" title="${this.isTimerPaused ? t('cockpit.resume_timer_title', undefined, 'Resume exam timer') : t('cockpit.pause_timer_title', undefined, 'Pause exam timer')}">
+              <span>${this.isTimerPaused ? t('cockpit.btn_resume', undefined, '▶ Resume') : t('cockpit.btn_pause', undefined, '⏸ Pause')}</span>
             </button>
           `}
 
@@ -1024,8 +1057,14 @@ export class ExamCockpitDossier {
     });
 
     // Module switcher
-    this.container.querySelector('#btn-module-toggle')?.addEventListener('click', () => {
+    this.container.querySelector('#btn-module-toggle')?.addEventListener('click', async () => {
       AudioSynthesizer.play('click');
+      if (this.isExamActive()) {
+        const canExit = await this.canDeactivate();
+        if (!canExit) return;
+        this.isExamStarted = false;
+        if (this.timerInterval) clearInterval(this.timerInterval);
+      }
       this.currentModule = this.currentModule === 'READING' ? 'WRITING' : 'READING';
       this.mobileActiveTab = this.currentModule === 'WRITING' ? 'questions' : 'passage';
       this.render();
@@ -1182,8 +1221,14 @@ export class ExamCockpitDossier {
     });
 
     // Test Hub modal triggers & events
-    this.container.querySelector('#btn-open-test-hub')?.addEventListener('click', () => {
+    this.container.querySelector('#btn-open-test-hub')?.addEventListener('click', async () => {
       AudioSynthesizer.play('click');
+      if (this.isExamActive()) {
+        const canExit = await this.canDeactivate();
+        if (!canExit) return;
+        this.isExamStarted = false;
+        if (this.timerInterval) clearInterval(this.timerInterval);
+      }
       this.openTestHub();
     });
 
@@ -1740,9 +1785,9 @@ export class ExamCockpitDossier {
             </span>
             <div style="font-size: var(--font-body-compact); margin-top: 6px; font-family: var(--font-mono); color: var(--ink-primary); font-weight: 700;">
               ${(() => {
-                const safePct = Number.isFinite(data.pct) ? data.pct : Math.round((raw / 40) * 100);
-                return t('cockpit.raw_score_format', { raw, pct: safePct }, `${raw} / 40 Raw (${safePct}%)`);
-              })()}
+        const safePct = Number.isFinite(data.pct) ? data.pct : Math.round((raw / 40) * 100);
+        return t('cockpit.raw_score_format', { raw, pct: safePct }, `${raw} / 40 Raw (${safePct}%)`);
+      })()}
             </div>
           </div>
         </div>
@@ -1797,7 +1842,7 @@ export class ExamCockpitDossier {
               ${icon('rotateCcw', 16)}<span>${t('cockpit.btn_retake_test', undefined, isVi ? 'Làm lại bài thi' : 'Retake Test')}</span>
             </button>
             <button type="button" class="cd-modal-action-btn btn-hub-return apple-press">
-              ${icon('book', 16)}<span>${isVi ? 'Danh sách đề' : 'Test Catalog'}</span>
+              ${icon('book', 16)}<span>${t('cockpit.btn_test_catalog', undefined, 'Test Catalog')}</span>
             </button>
           </div>
           <button type="button" class="apple-bottom-close-btn btn-close-report apple-press">
@@ -1855,6 +1900,8 @@ export class ExamCockpitDossier {
     if (this.timerInterval) clearInterval(this.timerInterval);
     if (this.autosaveTimer) clearTimeout(this.autosaveTimer);
     this.removeHighlightPopover();
+    window.removeEventListener('beforeunload', this.beforeUnloadHandler);
+    this.isExamStarted = false;
   }
 }
 

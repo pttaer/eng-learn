@@ -92,7 +92,7 @@ export class GrammarDossier {
       <div class="dossier-control-bar">
         <div class="dossier-tabs grammar-mode-tabs">
           <button type="button" class="hud-btn btn-jump-tenses" style="border-color: var(--accent-gold); color: var(--accent-gold); font-weight: 700; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;">
-            ${icon('sparkles', 13)} ${t('dossier.twelve_verb_tenses')}
+            ${icon('clock', 13)} ${t('dossier.twelve_verb_tenses')}
           </button>
           ${modes.map(m => `<button class="hud-btn mode-tab ${this.activeMode === m ? 'active' : ''}" data-mode="${m}">${MODE_TABS[m] || prettyMode(m)}</button>`).join('')}
         </div>

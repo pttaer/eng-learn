@@ -16,6 +16,7 @@ import { ambientMusicEngine, AmbientMusicMode } from '../core/ambient-music-engi
 import { HapticEngine } from '../core/haptic-engine';
 import { MistakeVault } from '../core/mistake-vault';
 import { CommuteAudioPlayer } from '../core/commute-audio-player';
+import { CognitiveScaffoldingEngine } from '../core/cognitive-scaffolding-mode';
 
 export interface ContextualDockAction {
   id: string;
@@ -74,9 +75,13 @@ export class HeaderHUD {
       this.currentTheme = 'dark';
     }
     document.documentElement.setAttribute('data-theme', this.currentTheme);
+    CognitiveScaffoldingEngine.init();
 
     this.render();
     window.addEventListener('learner-level-change', () => this.render());
+    window.addEventListener('time-budget-change', () => this.render());
+    window.addEventListener('target-exam-date-change', () => this.render());
+    window.addEventListener('target-band-change', () => this.render());
     I18n.onLocaleChange(() => this.render());
 
     // Live update trigger pill when XP or Level changes
@@ -114,6 +119,8 @@ export class HeaderHUD {
     const isTree = this.currentRoute === 'tree' || this.currentRoute === 'singularity';
     const progression = ProgressionEngine.getState();
     const currentStreak = progression.streak || state.streak.currentStreak || 0;
+    const timeBudget = StorageManager.getDailyTimeBudget();
+    const examDaysRemaining = StorageManager.getExamDaysRemaining();
 
     this.element.innerHTML = `
       <div class="hud-brand" style="display: flex; align-items: center; gap: 8px;">
@@ -134,13 +141,32 @@ export class HeaderHUD {
         <div class="telemetry-item telemetry-streak-item" title="${t('nav.daily_streak', undefined, 'Consecutive days you finished the daily workout. Click to view Daily Workout on Constellation Tree')}" style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
           <span class="telemetry-label" style="font-size: var(--font-kicker);">${t('nav.daily_streak', undefined, 'STREAK')}:</span>
           <span class="telemetry-value telemetry-streak" style="color: var(--accent-gold); font-weight: 700;">${icon('flame')} ${currentStreak} ${t('nav.days', undefined, 'DAYS')}</span>
-        </div>        <div class="telemetry-item" title="${t('nav.retention', undefined, 'Share of flashcard reviews you recalled correctly')}" style="display: flex; align-items: center; gap: 6px;">
+        </div>
+        <div class="telemetry-item" title="${t('nav.retention', undefined, 'Share of flashcard reviews you recalled correctly')}" style="display: flex; align-items: center; gap: 6px;">
           <span class="telemetry-label" style="font-size: var(--font-kicker);">${t('nav.retention', undefined, 'RETENTION')}:</span>
           <span class="telemetry-value telemetry-retention" style="color: var(--good); font-weight: 700;">${stats.retentionRate}%</span>
         </div>
+        <div class="telemetry-item telemetry-budget-item" title="Quỹ thời gian học: Click để đổi (15m / 30m / 60m)" style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+          <span class="telemetry-label" style="font-size: var(--font-kicker);">BUDGET:</span>
+          <span class="telemetry-value telemetry-budget" style="color: var(--accent-cyan); font-weight: 700;">⏱️ ${timeBudget}m</span>
+        </div>
+        ${examDaysRemaining != null ? `
+          <div class="telemetry-item telemetry-exam-item" title="Đếm ngược ngày thi IELTS" style="display: flex; align-items: center; gap: 6px;">
+            <span class="telemetry-label" style="font-size: var(--font-kicker);">EXAM:</span>
+            <span class="telemetry-value" style="color: var(--accent-gold); font-weight: 700;">⏳ ${examDaysRemaining >= 0 ? `${examDaysRemaining}d` : 'Ended'}</span>
+          </div>
+        ` : ''}
       </div>
 
       <div class="hud-actions header-actions" style="display: flex; gap: 8px; align-items: center;">
+        <button class="hud-btn btn-budget-pill" title="Daily Time Budget: ${timeBudget}m. Click to toggle 15m/30m/60m" aria-label="Daily Time Budget: ${timeBudget} minutes">
+          ⏱️ ${timeBudget}m
+        </button>
+        ${examDaysRemaining != null ? `
+          <button class="hud-btn btn-exam-pill" title="Target Exam: ${examDaysRemaining >= 0 ? `${examDaysRemaining} days remaining` : 'Ended'}. Click to view Settings" aria-label="Target Exam Countdown">
+            ⏳ ${examDaysRemaining >= 0 ? `${examDaysRemaining}d` : 'Ended'}
+          </button>
+        ` : ''}
         <button class="hud-btn btn-streak-pill" title="${t('nav.daily_streak', undefined, 'Daily Streak')}: ${currentStreak} days. ${t('nav.view_workout', undefined, 'Click to view Daily Workout on Constellation Tree')}" aria-label="Daily Streak: ${currentStreak} days">
           ${icon('flame', 13)} ${currentStreak}d
         </button>
@@ -172,6 +198,9 @@ export class HeaderHUD {
         <button class="hud-btn btn-progression-pill" title="${t('nav.rpg_progression', undefined, 'RPG Progression & Daily Quests')}" aria-label="${t('nav.rpg_progression', undefined, 'RPG Progression')}">
           ${icon('zap', 12)} ${t('nav.level', undefined, 'LVL')} ${progression.level}<span class="btn-label"> • ${progression.xp} XP</span>
         </button>
+        <button class="hud-btn btn-cognitive-mode-toggle" title="Toggle Cognitive Scaffolding Mode (Gentle vs Cockpit)" aria-label="Toggle Cognitive Scaffolding Mode">
+          ${CognitiveScaffoldingEngine.isGentle() ? '🌱' : '⚡'}<span class="btn-label"> ${CognitiveScaffoldingEngine.isGentle() ? 'Gentle' : 'Cockpit'}</span>
+        </button>
         <button class="hud-btn btn-zen-toggle ${ZenMode.isZen() ? 'active' : ''}" title="${t('nav.zen_immersion_mode', undefined, 'Toggle Zen Immersion Mode (Hotkey: Z)')}" aria-label="${t('nav.zen_immersion_mode', undefined, 'Toggle Zen Immersion Mode')}" aria-pressed="${ZenMode.isZen()}">${HeaderHUD.zenLabel(ZenMode.isZen())}</button>
         <button class="hud-btn btn-theme-toggle" title="${t('nav.theme_toggle', undefined, 'Toggle Theme (Dark / Light)')}" aria-label="${t('nav.theme_toggle', undefined, 'Toggle Theme')}">${this.themeLabel()}</button>
         <button class="hud-btn btn-locale-toggle" title="${t('settings.language', undefined, 'Language')} [${I18n.getLocale() === 'en' ? 'EN' : 'VI'}]" aria-label="${t('settings.language', undefined, 'Toggle Language')}: ${I18n.getLocale() === 'en' ? 'Tiếng Việt' : 'English'}">
@@ -184,11 +213,11 @@ export class HeaderHUD {
       </div>
 
       <nav class="hud-bottom-nav" aria-label="${t('nav.mobile_menu', undefined, 'Mobile Bottom Navigation')}">
-        <button class="bnav-btn bnav-tree ${isTree ? 'is-active' : ''}" aria-label="${t('nav.tree', undefined, 'Constellation Tree')}" title="${t('nav.tree', undefined, 'Constellation Tree')}">
+        <button class="bnav-btn bnav-tree ${isTree ? 'is-active btn-route-active' : ''}" aria-label="${t('nav.tree', undefined, 'Constellation Tree')}" title="${t('nav.tree', undefined, 'Constellation Tree')}">
           <span class="bnav-icon">${icon('sparkles', 18)}</span>
           <span class="bnav-label">${t('nav.tree', undefined, 'Tree')}</span>
         </button>
-        <button class="bnav-btn bnav-blitz ${this.currentRoute === 'blitz' ? 'is-active' : ''}" aria-label="${t('nav.blitz', undefined, 'Speed Blitz')}" title="${t('nav.blitz', undefined, 'Speed Blitz')}">
+        <button class="bnav-btn bnav-blitz ${this.currentRoute === 'blitz' ? 'is-active btn-route-active' : ''}" aria-label="${t('nav.blitz', undefined, 'Speed Blitz')}" title="${t('nav.blitz', undefined, 'Speed Blitz')}">
           <span class="bnav-icon">${icon('zap', 18)}</span>
           <span class="bnav-label">${t('nav.blitz', undefined, 'Blitz')}</span>
         </button>
@@ -196,7 +225,7 @@ export class HeaderHUD {
           <span class="bnav-icon">${icon('target', 18)}</span>
           <span class="bnav-label">${t('nav.radar', undefined, 'Radar')}</span>
         </button>
-        <button class="bnav-btn bnav-cockpit ${this.currentRoute === 'cockpit' ? 'is-active' : ''}" aria-label="${t('nav.cockpit', undefined, 'Exam Cockpit')}" title="${t('nav.cockpit', undefined, 'Exam Cockpit')}">
+        <button class="bnav-btn bnav-cockpit ${this.currentRoute === 'cockpit' ? 'is-active btn-route-active' : ''}" aria-label="${t('nav.cockpit', undefined, 'Exam Cockpit')}" title="${t('nav.cockpit', undefined, 'Exam Cockpit')}">
           <span class="bnav-icon">${icon('graduationCap', 18)}</span>
           <span class="bnav-label">${t('nav.cockpit', undefined, 'Cockpit')}</span>
         </button>
@@ -226,6 +255,7 @@ export class HeaderHUD {
     document.getElementById('profile-status-dialog')?.remove();
     document.getElementById('profile-transfer-modal')?.remove();
     document.getElementById('settings-dialog')?.remove();
+    document.getElementById('hud-confirm-dialog')?.remove();
   }
 
   public setContextualDock(actions: ContextualDockAction[] | null): void {
@@ -333,6 +363,12 @@ export class HeaderHUD {
       case 'calm-chords': return t('ambient.chords', undefined, 'Chords');
       case 'celestial-void': return t('ambient.void', undefined, 'Void');
       case 'zen-drone': return t('ambient.zen', undefined, 'Zen');
+      case 'alpha-baroque': return t('ambient.baroque', undefined, 'Baroque Flow');
+      case 'lofi-study': return t('ambient.lofi', undefined, 'Lo-Fi Study');
+      case 'gamma-focus': return t('ambient.gamma', undefined, 'Gamma 40Hz');
+      case 'rain-piano': return t('ambient.rain', undefined, 'Rain & Piano');
+      case 'binaural-theta': return t('ambient.theta', undefined, 'Theta 6Hz');
+      case 'synthwave-drive': return t('ambient.synthwave', undefined, 'Synth Sprint');
       default: return t('ambient.music', undefined, 'Music');
     }
   }
@@ -369,6 +405,23 @@ export class HeaderHUD {
   }
 
   private bindEvents(): void {
+    const toggleBudget = () => {
+      StorageManager.cycleDailyTimeBudget();
+      AudioSynthesizer.play('click');
+      HapticEngine.trigger('selection');
+      this.render();
+    };
+    this.element.querySelector('.telemetry-budget-item')?.addEventListener('click', toggleBudget);
+    this.element.querySelector('.btn-budget-pill')?.addEventListener('click', toggleBudget);
+
+    const onExamClick = () => {
+      AudioSynthesizer.play('click');
+      if (this.onNavigateToSettings) this.onNavigateToSettings();
+      else window.location.hash = '#settings';
+    };
+    this.element.querySelector('.telemetry-exam-item')?.addEventListener('click', onExamClick);
+    this.element.querySelector('.btn-exam-pill')?.addEventListener('click', onExamClick);
+
     const blitzBtn = this.element.querySelector('.btn-blitz') as HTMLButtonElement | null;
     blitzBtn?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
@@ -444,6 +497,15 @@ export class HeaderHUD {
     progBtn?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
       ProgressionModal.open();
+    });
+
+    const cogBtn = this.element.querySelector('.btn-cognitive-mode-toggle') as HTMLButtonElement | null;
+    cogBtn?.addEventListener('click', () => {
+      CognitiveScaffoldingEngine.toggle();
+      if (cogBtn) {
+        const isGentle = CognitiveScaffoldingEngine.isGentle();
+        cogBtn.innerHTML = `${isGentle ? '🌱' : '⚡'}<span class="btn-label"> ${isGentle ? 'Gentle' : 'Cockpit'}</span>`;
+      }
     });
 
     const zenBtn = this.element.querySelector('.btn-zen-toggle') as HTMLButtonElement | null;
@@ -582,7 +644,7 @@ export class HeaderHUD {
       this.openMobileActionSheet();
     });
 
-    this.element.querySelectorAll<HTMLElement>('.bnav-btn').forEach((btn) => {
+    this.element.querySelectorAll<HTMLElement>('.bnav-tree, .bnav-blitz, .bnav-cockpit').forEach((btn) => {
       btn.addEventListener('click', () => this.paintBnav(btn));
     });
   }
@@ -599,7 +661,7 @@ export class HeaderHUD {
     modal.setAttribute('aria-modal', 'true');
     modal.setAttribute('aria-label', t('nav.change_level', undefined, 'Choose your level'));
     modal.innerHTML = `
-      <div class="completion-receipt-card" style="max-width: 420px; width: 100%;">
+      <div class="completion-receipt-card" style="max-width: 420px; width: 100%; max-height: calc(100dvh - 32px); overflow-y: auto; box-sizing: border-box;">
         <div class="telemetry-label" style="margin-bottom: 8px;">${t('nav.change_level', undefined, 'YOUR LEVEL')}</div>
         <div class="action-stack" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; width: 100%;">
           <button class="hud-btn btn-open-placement-test" style="width: 100%; box-sizing: border-box; justify-content: center; padding: 10px 14px; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8);">
@@ -680,38 +742,49 @@ export class HeaderHUD {
       <div class="completion-receipt-card mobile-action-sheet" style="max-width: 500px; width: 92%; max-height: 85dvh; display: flex; flex-direction: column; overflow: hidden; padding: 20px; align-items: stretch; text-align: left; box-sizing: border-box;">
         <div class="mobile-action-sheet-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%; box-sizing: border-box; margin-bottom: 16px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px; flex-shrink: 0;">
           <div style="display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1;">
-            <span style="color: var(--accent-gold); display: flex; align-items: center;">${icon('sparkles', 16)}</span>
-            <span class="telemetry-label" style="font-weight: 700; color: var(--ink-primary); white-space: normal;">${t('nav.mobile_controls', undefined, 'MOBILE CONTROLS')}</span>
+            <span style="color: var(--accent-gold); display: flex; align-items: center; flex-shrink: 0;">${icon('menu', 16)}</span>
+            <span class="telemetry-label" style="font-weight: 700; color: var(--ink-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${t('nav.mobile_controls', undefined, 'MOBILE CONTROLS')}</span>
           </div>
+          <button type="button" class="sheet-btn-close btn-modal-close" aria-label="${t('common.close', undefined, 'Close')}">✕</button>
         </div>
 
-        <div class="mobile-sheet-grid" style="display: flex; flex-direction: column; gap: 12px; overflow-y: auto; flex: 1; min-height: 0; padding-right: 2px;">
+        <div class="mobile-sheet-grid" style="display: flex; flex-direction: column; gap: 10px; overflow-y: auto; flex: 1; min-height: 0; padding-right: 2px;">
+          <!-- Time Budget & Exam Countdown -->
+          <button class="hud-btn sheet-btn-budget" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
+            <span style="color: var(--good); display: inline-flex;">⏱️</span> <span style="white-space: normal; line-height: 1.35; text-align: left;">Quỹ thời gian: <strong>${StorageManager.getDailyTimeBudget()}m / ngày</strong> (Đổi 15m/30m/60m)</span>
+          </button>
+          ${StorageManager.getTargetExamDate() ? `
+            <button class="hud-btn sheet-btn-exam" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
+              <span style="color: var(--accent-gold); display: inline-flex;">⏳</span> <span>Thi IELTS: <strong>${(StorageManager.getExamDaysRemaining() ?? 0) >= 0 ? `còn ${StorageManager.getExamDaysRemaining()} ngày` : 'Đã qua'}</strong></span>
+            </button>
+          ` : ''}
+
           <!-- Language Switcher Row -->
-          <button class="hud-btn sheet-btn-locale" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8); gap: 8px;">
-            ${icon('globe', 16)} <span>${t('settings.language', undefined, 'Language')}: ${I18n.getLocale() === 'en' ? 'English (EN)' : 'Tiếng Việt (VI)'}</span>
+          <button class="hud-btn sheet-btn-locale" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
+            <span style="color: var(--accent-cyan, #38bdf8); display: inline-flex;">${icon('globe', 16)}</span> <span>${t('settings.language', undefined, 'Language')}: ${I18n.getLocale() === 'en' ? 'English (EN)' : 'Tiếng Việt (VI)'}</span>
           </button>
 
           <!-- Study Workbenches & RPG Progression -->
-          <button class="hud-btn sheet-btn-progression" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; gap: 8px;">
-            ${icon('zap', 16)} <span>${t('nav.level', undefined, 'Level')} ${progression.level} • ${progression.xp} XP ${t('widget.quests', undefined, 'Quests')}</span>
+          <button class="hud-btn sheet-btn-progression" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
+            <span style="color: var(--accent-gold); display: inline-flex;">${icon('zap', 16)}</span> <span>${t('nav.level', undefined, 'Level')} ${progression.level} • ${progression.xp} XP ${t('widget.quests', undefined, 'Quests')}</span>
           </button>
-          <button class="hud-btn sheet-btn-mediation" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8); gap: 8px;">
-            ${icon('scale', 16)} <span>${t('nav.cefr_mediation', undefined, 'CEFR Mediation Workbench')}</span>
+          <button class="hud-btn sheet-btn-mediation" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
+            <span style="color: var(--accent-cyan, #38bdf8); display: inline-flex;">${icon('scale', 16)}</span> <span>${t('nav.cefr_mediation', undefined, 'CEFR Mediation Workbench')}</span>
           </button>
-          <button class="hud-btn sheet-btn-drills" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-gold); border-color: var(--accent-gold); gap: 8px;">
-            ${icon('layers', 16)} <span>${t('nav.drills', undefined, 'Practice Drills, Sounds & Email')}</span>
+          <button class="hud-btn sheet-btn-drills" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
+            <span style="color: var(--accent-gold); display: inline-flex;">${icon('layers', 16)}</span> <span>${t('nav.drills', undefined, 'Practice Drills, Sounds & Email')}</span>
           </button>
-          <button class="hud-btn sheet-btn-analytics" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-purple, #a855f7); border-color: var(--accent-purple, #a855f7); gap: 8px;">
-            ${icon('layers', 16)} <span>${t('nav.analytics_serl', undefined, 'CEFR Analytics & SERL Dashboard')}</span>
+          <button class="hud-btn sheet-btn-analytics" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
+            <span style="color: var(--accent-purple, #a855f7); display: inline-flex;">${icon('layers', 16)}</span> <span>${t('nav.analytics_serl', undefined, 'CEFR Analytics & SERL Dashboard')}</span>
           </button>
-          <button class="hud-btn sheet-btn-tenses" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold); gap: 8px;">
-            ${icon('clock', 16)} <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${t('dossier.twelve_tenses', undefined, '12 Tenses Master Vault')}</span>
+          <button class="hud-btn sheet-btn-tenses" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
+            <span style="color: var(--accent-gold); display: inline-flex;">${icon('clock', 16)}</span> <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${t('dossier.twelve_tenses', undefined, '12 Tenses Master Vault')}</span>
           </button>
-          <button class="hud-btn sheet-btn-mistake-vault" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; color: var(--critical, #ef4444); border-color: var(--critical, #ef4444); gap: 8px;">
-            ${icon('target', 16)} <span>${t('nav.mistake_vault', undefined, 'Smart Mistake Vault & Blitz')}</span>
+          <button class="hud-btn sheet-btn-mistake-vault" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
+            <span style="color: var(--critical, #ef4444); display: inline-flex;">${icon('target', 16)}</span> <span>${t('nav.mistake_vault', undefined, 'Smart Mistake Vault & Blitz')}</span>
           </button>
-          <button class="hud-btn sheet-btn-commute-audio" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold); gap: 8px;">
-            ${icon('headphones', 16)} <span>${t('nav.commute_audio', undefined, 'Hands-Free Commute Audio Loop')}</span>
+          <button class="hud-btn sheet-btn-commute-audio" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
+            <span style="color: var(--accent-gold); display: inline-flex;">${icon('headphones', 16)}</span> <span>${t('nav.commute_audio', undefined, 'Hands-Free Commute Audio Loop')}</span>
           </button>
 
           <div style="height: 1px; background: var(--border-hairline); margin: 4px 0;"></div>
@@ -786,6 +859,21 @@ export class HeaderHUD {
         AudioSynthesizer.play('click');
         close();
       }
+    });
+
+    sheet.querySelector('.sheet-btn-budget')?.addEventListener('click', () => {
+      StorageManager.cycleDailyTimeBudget();
+      AudioSynthesizer.play('click');
+      HapticEngine.trigger('selection');
+      close();
+      this.openMobileActionSheet();
+    });
+
+    sheet.querySelector('.sheet-btn-exam')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      close();
+      if (this.onNavigateToSettings) this.onNavigateToSettings();
+      else window.location.hash = '#settings';
     });
 
     sheet.querySelector('.sheet-btn-locale')?.addEventListener('click', () => {
@@ -945,8 +1033,11 @@ export class HeaderHUD {
           <button class="hud-btn btn-restart-tour" style="padding: 12px; justify-content: center; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold); gap: 8px;">
             ${icon('compass')} ${t('settings.reset_tour', undefined, 'Re-run Onboarding Tour')}
           </button>
+          <button class="hud-btn btn-cognitive-modal-toggle" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;">
+            ${CognitiveScaffoldingEngine.isGentle() ? '🌱 Mode: Gentle Scaffolding' : '⚡ Mode: Tactical Cockpit'}
+          </button>
           <button class="hud-btn btn-notifications-toggle ${StorageManager.isNotificationsEnabled() ? 'active' : ''}" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;" aria-pressed="${StorageManager.isNotificationsEnabled()}">
-            🔔 ${t('settings.daily_review_alerts', undefined, 'Daily Review Alerts')}: ${StorageManager.isNotificationsEnabled() ? t('settings.alerts_on', undefined, 'ON') : t('settings.alerts_off', undefined, 'OFF')}
+            🔔 Daily Review Alerts: ${StorageManager.isNotificationsEnabled() ? 'ON' : 'OFF'}
           </button>
           <button class="hud-btn btn-backup-export btn-profile-export" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;">
             ${icon('download', 16)} [ ${t('settings.export_profile', undefined, 'EXPORT PROFILE')} ]
@@ -981,6 +1072,12 @@ export class HeaderHUD {
                 <option value="calm-chords" ${ambientMusicEngine.getMode() === 'calm-chords' ? 'selected' : ''}>Calm Chords</option>
                 <option value="celestial-void" ${ambientMusicEngine.getMode() === 'celestial-void' ? 'selected' : ''}>Celestial Void</option>
                 <option value="zen-drone" ${ambientMusicEngine.getMode() === 'zen-drone' ? 'selected' : ''}>Zen Drone</option>
+                <option value="alpha-baroque" ${ambientMusicEngine.getMode() === 'alpha-baroque' ? 'selected' : ''}>Alpha Baroque (60 BPM)</option>
+                <option value="lofi-study" ${ambientMusicEngine.getMode() === 'lofi-study' ? 'selected' : ''}>Lo-Fi Study Beats</option>
+                <option value="gamma-focus" ${ambientMusicEngine.getMode() === 'gamma-focus' ? 'selected' : ''}>Gamma Focus (40Hz)</option>
+                <option value="rain-piano" ${ambientMusicEngine.getMode() === 'rain-piano' ? 'selected' : ''}>Rain & Piano</option>
+                <option value="binaural-theta" ${ambientMusicEngine.getMode() === 'binaural-theta' ? 'selected' : ''}>Binaural Theta (6Hz)</option>
+                <option value="synthwave-drive" ${ambientMusicEngine.getMode() === 'synthwave-drive' ? 'selected' : ''}>Synthwave Sprint (80 BPM)</option>
               </select>
             </div>
           </div>
@@ -1025,6 +1122,18 @@ export class HeaderHUD {
       AudioSynthesizer.play('click');
       closeModal();
       SpotlightTour.start(true);
+    });
+
+    modal.querySelector('.btn-cognitive-modal-toggle')?.addEventListener('click', (e) => {
+      CognitiveScaffoldingEngine.toggle();
+      const isGentle = CognitiveScaffoldingEngine.isGentle();
+      const btn = e.currentTarget as HTMLElement;
+      btn.textContent = isGentle ? '🌱 Mode: Gentle Scaffolding' : '⚡ Mode: Tactical Cockpit';
+      const headerCogBtn = this.element.querySelector('.btn-cognitive-mode-toggle');
+      if (headerCogBtn) {
+        headerCogBtn.innerHTML = `${isGentle ? '🌱' : '⚡'}<span class="btn-label"> ${isGentle ? 'Gentle' : 'Cockpit'}</span>`;
+      }
+      AudioSynthesizer.play('click');
     });
 
     const notifBtn = modal.querySelector('.btn-notifications-toggle') as HTMLElement | null;
@@ -1256,7 +1365,7 @@ export class HeaderHUD {
     dialog.setAttribute('aria-label', options.title);
 
     dialog.innerHTML = `
-      <div class="completion-receipt-card" style="max-width: 440px; width: 100%; border-top: 3px solid ${typeColor};">
+      <div class="completion-receipt-card" style="max-width: 440px; width: 100%; max-height: calc(100dvh - 32px); overflow-y: auto; box-sizing: border-box; border-top: 3px solid ${typeColor};">
         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
           <span style="font-size: var(--font-h3); color: ${typeColor}; font-weight: 700;">${typeIcon}</span>
           <div class="telemetry-label" style="color: ${typeColor}; font-weight: 700;">${options.title}</div>
@@ -1289,6 +1398,78 @@ export class HeaderHUD {
     (dialog.querySelector('.btn-status-confirm') as HTMLElement | null)?.focus();
 
     return dialog;
+  }
+
+  public static showConfirmDialog(options: {
+    title: string;
+    message: string;
+    confirmText?: string;
+    cancelText?: string;
+    type?: 'warning' | 'danger' | 'info';
+  }): Promise<boolean> {
+    document.getElementById('hud-confirm-dialog')?.remove();
+    return new Promise<boolean>((resolve) => {
+      const type = options.type || 'warning';
+      const typeColor = type === 'danger'
+        ? 'var(--urgent, #ef4444)'
+        : type === 'warning'
+          ? 'var(--accent-gold, #f59e0b)'
+          : 'var(--accent-cyan, #38bdf8)';
+      const typeIcon = type === 'danger' ? '⚠️' : type === 'warning' ? '⚠️' : 'ℹ️';
+
+      const isVi = I18n.getLocale() === 'vi';
+      const confirmLabel = options.confirmText || (isVi ? 'Xác nhận' : 'Confirm');
+      const cancelLabel = options.cancelText || (isVi ? 'Huỷ' : 'Cancel');
+
+      const dialog = document.createElement('div');
+      dialog.id = 'hud-confirm-dialog';
+      dialog.className = 'completion-modal-overlay interactive hud-confirm-dialog';
+      dialog.setAttribute('role', 'dialog');
+      dialog.setAttribute('aria-modal', 'true');
+      dialog.setAttribute('aria-label', options.title);
+
+      dialog.innerHTML = `
+        <div class="completion-receipt-card" style="max-width: 440px; width: 100%; max-height: calc(100dvh - 32px); overflow-y: auto; box-sizing: border-box; border-top: 3px solid ${typeColor};">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+            <span style="font-size: var(--font-h3); color: ${typeColor}; font-weight: 700;">${typeIcon}</span>
+            <div class="telemetry-label" style="color: ${typeColor}; font-weight: 700;">${options.title}</div>
+          </div>
+          <div style="font-size: var(--font-h4); line-height: 1.6; color: var(--ink-primary); margin-bottom: 20px; white-space: pre-line;">${options.message}</div>
+          <div class="action-stack" style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
+            <button type="button" class="hud-btn btn-confirm-cancel apple-press" style="width: 100%; justify-content: center; padding: 12px; font-weight: 700; background: var(--accent-gold, #f59e0b); color: #080a0f; border: 1px solid var(--accent-gold, #f59e0b); border-radius: var(--radius-btn, 10px);">
+              ${cancelLabel}
+            </button>
+            <button type="button" class="hud-btn btn-confirm-proceed apple-press" style="width: 100%; justify-content: center; padding: 10px; font-weight: 600; color: var(--urgent, #ef4444); border: 1px solid rgba(239, 68, 68, 0.4); border-radius: var(--radius-btn, 10px); background: rgba(239, 68, 68, 0.08);">
+              ${confirmLabel}
+            </button>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(dialog);
+
+      let finished = false;
+      const finish = (result: boolean) => {
+        if (finished) return;
+        finished = true;
+        document.removeEventListener('keydown', onKey, true);
+        dialog.remove();
+        resolve(result);
+      };
+
+      const onKey = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          e.stopPropagation();
+          finish(false);
+        }
+      };
+      document.addEventListener('keydown', onKey, true);
+
+      dialog.querySelector('.btn-confirm-cancel')?.addEventListener('click', () => finish(false));
+      dialog.querySelector('.btn-confirm-proceed')?.addEventListener('click', () => finish(true));
+      (dialog.querySelector('.btn-confirm-cancel') as HTMLElement | null)?.focus();
+    });
   }
 
   public updateTelemetry(routeName: string): void {

@@ -4,6 +4,7 @@
  */
 
 import emailData from '../assets/data/email-builder.json';
+import { t } from '../core/i18n';
 
 type Register = 'informal' | 'neutral' | 'formal';
 
@@ -50,9 +51,9 @@ export function renderEmailBuilder(): HTMLElement {
     <h3 class="drill-kicker">Phrase tiles</h3>
     ${tiles}
     <label class="drill-kicker" for="email-draft">Your draft</label>
-    <textarea id="email-draft" class="email-draft" rows="6" placeholder="Tap tiles to build your email">${esc(draft)}</textarea>
+    <textarea id="email-draft" class="email-draft" rows="6" placeholder="${t('email.placeholder', undefined, 'Tap tiles to build your email')}">${esc(draft)}</textarea>
     <div class="drill-actions">
-      <button type="button" class="drill-btn drill-btn-ghost" data-clear>Clear draft</button>
+      <button type="button" class="drill-btn drill-btn-ghost" data-clear>${t('email.clear_draft', undefined, 'Clear draft')}</button>
     </div>`;
 
   root.addEventListener('click', e => {

@@ -1,5 +1,6 @@
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { AcousticHaptics } from '../core/acoustic-haptics';
+import { t } from '../core/i18n';
 
 export class CornerCompass {
   private element: HTMLElement;
@@ -15,52 +16,52 @@ export class CornerCompass {
 
     this.element.innerHTML = `
       <div class="compass-radial-menu" inert>
-        <button class="compass-menu-item" data-route="singularity" title="Return to Urchin Singularity">
+        <button class="compass-menu-item" data-route="singularity" title="${t('compass.core_title', undefined, 'Return to Urchin Singularity')}">
           <span class="compass-item-code">00</span>
-          <span class="compass-item-label">CORE</span>
+          <span class="compass-item-label">${t('nav.singularity', undefined, 'CORE')}</span>
         </button>
-        <button class="compass-menu-item" data-route="read" title="Intensive Reading & Sentence Mining">
+        <button class="compass-menu-item" data-route="read" title="${t('compass.read_title', undefined, 'Intensive Reading & Sentence Mining')}">
           <span class="compass-item-code">01</span>
-          <span class="compass-item-label">READ</span>
+          <span class="compass-item-label">${t('dossier.reading', undefined, 'READ')}</span>
         </button>
-        <button class="compass-menu-item" data-route="write" title="Franklin Copywork">
+        <button class="compass-menu-item" data-route="write" title="${t('compass.write_title', undefined, 'Franklin Copywork')}">
           <span class="compass-item-code">02</span>
-          <span class="compass-item-label">WRITE</span>
+          <span class="compass-item-label">${t('dossier.writing', undefined, 'WRITE')}</span>
         </button>
-        <button class="compass-menu-item" data-route="listen" title="Active Transcription">
+        <button class="compass-menu-item" data-route="listen" title="${t('compass.listen_title', undefined, 'Active Transcription')}">
           <span class="compass-item-code">03</span>
-          <span class="compass-item-label">LISTEN</span>
+          <span class="compass-item-label">${t('dossier.listening', undefined, 'LISTEN')}</span>
         </button>
-        <button class="compass-menu-item" data-route="speak" title="4-3-2 Fluency Drill">
+        <button class="compass-menu-item" data-route="speak" title="${t('compass.speak_title', undefined, '4-3-2 Fluency Drill')}">
           <span class="compass-item-code">04</span>
-          <span class="compass-item-label">SPEAK</span>
+          <span class="compass-item-label">${t('dossier.speaking', undefined, 'SPEAK')}</span>
         </button>
-        <button class="compass-menu-item" data-route="vocab" title="Roguelike Vocabulary Engine">
+        <button class="compass-menu-item" data-route="vocab" title="${t('compass.vocab_title', undefined, 'Roguelike Vocabulary Engine')}">
           <span class="compass-item-code">05</span>
-          <span class="compass-item-label">VOCAB</span>
+          <span class="compass-item-label">${t('dossier.vocab', undefined, 'VOCAB')}</span>
         </button>
-        <button class="compass-menu-item" data-route="colloc" title="Collocations Vault">
+        <button class="compass-menu-item" data-route="colloc" title="${t('compass.colloc_title', undefined, 'Collocations Vault')}">
           <span class="compass-item-code">06</span>
-          <span class="compass-item-label">COLLOC</span>
+          <span class="compass-item-label">${t('dossier.collocations', undefined, 'COLLOC')}</span>
         </button>
-        <button class="compass-menu-item" data-route="grammar" title="C1/C2 Advanced Syntactic Matrix">
+        <button class="compass-menu-item" data-route="grammar" title="${t('compass.grammar_title', undefined, 'C1/C2 Advanced Syntactic Matrix')}">
           <span class="compass-item-code">07</span>
-          <span class="compass-item-label">GRAMMAR</span>
+          <span class="compass-item-label">${t('dossier.grammar', undefined, 'GRAMMAR')}</span>
         </button>
-        <button class="compass-menu-item" data-route="tenses" title="12 Tenses Master Vault & Random Drill">
+        <button class="compass-menu-item" data-route="tenses" title="${t('compass.tenses_title', undefined, '12 Tenses Master Vault & Random Drill')}">
           <span class="compass-item-code">08</span>
-          <span class="compass-item-label">TENSES</span>
+          <span class="compass-item-label">${t('dossier.twelve_tenses', undefined, 'TENSES')}</span>
         </button>
-        <button class="compass-menu-item" data-route="habits" title="30-Day Mission Log">
+        <button class="compass-menu-item" data-route="habits" title="${t('compass.habits_title', undefined, '30-Day Mission Log')}">
           <span class="compass-item-code">09</span>
-          <span class="compass-item-label">HABITS</span>
+          <span class="compass-item-label">${t('nav.habits', undefined, 'HABITS')}</span>
         </button>
-        <button class="compass-menu-item" data-route="drills" title="Practice Drills, Sounds & Email">
+        <button class="compass-menu-item" data-route="drills" title="${t('compass.drills_title', undefined, 'Practice Drills, Sounds & Email')}">
           <span class="compass-item-code">10</span>
-          <span class="compass-item-label">DRILLS</span>
+          <span class="compass-item-label">${t('nav.drills', undefined, 'DRILLS')}</span>
         </button>
       </div>
-      <div class="compass-trigger" title="Toggle HUD Quick-Nav">
+      <div class="compass-trigger" title="${t('compass.toggle_nav', undefined, 'Toggle HUD Quick-Nav')}">
         <canvas class="compass-canvas" width="60" height="60"></canvas>
       </div>
     `;

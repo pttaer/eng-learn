@@ -280,7 +280,7 @@ export class LexiconDrawer {
             </button>
           </div>
         </div>
-        <button type="button" class="hud-btn lexicon-drawer-close" id="lexicon-drawer-close" aria-label="${t('lexicon.close')}" title="Close (Esc)">
+        <button type="button" class="hud-btn lexicon-drawer-close" id="lexicon-drawer-close" aria-label="${t('lexicon.close')}" title="${t('common.close', undefined, 'Close')} (Esc)">
           ✕
         </button>
       </div>
@@ -313,7 +313,7 @@ export class LexiconDrawer {
       </div>
 
       <div class="lexicon-drawer-footer apple-modal-footer">
-        <button type="button" class="hud-btn lexicon-srs-btn" id="lexicon-srs-btn" aria-label="Add word to SRS Spaced Repetition Deck">
+        <button type="button" class="hud-btn lexicon-srs-btn" id="lexicon-srs-btn" aria-label="${t('lexicon.add_to_srs_aria', undefined, 'Add word to SRS Spaced Repetition Deck')}">
           ${t('lexicon.bookmark_srs')}
         </button>
         <button type="button" class="apple-bottom-close-btn btn-lexicon-bottom-close" id="lexicon-bottom-close" aria-label="${t('common.close', undefined, 'Close')}">
@@ -348,8 +348,8 @@ export class LexiconDrawer {
     this.floatingPill.className = 'lexicon-floating-pill';
     this.floatingPill.setAttribute('role', 'button');
     this.floatingPill.setAttribute('tabindex', '0');
-    this.floatingPill.setAttribute('aria-label', 'Open Lexicon Drawer for selected text');
-    this.floatingPill.innerHTML = `${icon('book')} <span class="pill-word">Lookup</span>`;
+    this.floatingPill.setAttribute('aria-label', t('lexicon.lookup_aria', undefined, 'Open Lexicon Drawer for selected text'));
+    this.floatingPill.innerHTML = `${icon('book')} <span class="pill-word">${t('lexicon.lookup_selection', undefined, 'Lookup')}</span>`;
 
     // Clean DOM mount inside #hud-overlay (fallback to body)
     const hudOverlay = document.getElementById('hud-overlay') || document.body;

@@ -12,7 +12,9 @@ import {
   ParagraphEvaluation
 } from '../writing-heuristics';
 import { bandBadge, countdown, Countdown, esc, fmtTime, h } from '../ui';
+import { icon } from '../../utils/icons';
 import { t } from '../../core/i18n';
+import { StorageManager, DEFAULT_PREFLIGHT_RULES } from '../../utils/storage';
 
 const T1 = w1Data as Task1Prompt[];
 const T2 = w2Data as Task2Prompt[];
@@ -55,6 +57,161 @@ function insertAtCursor(textarea: HTMLTextAreaElement, text: string): void {
   textarea.selectionStart = textarea.selectionEnd = start + text.length;
   textarea.focus();
   textarea.dispatchEvent(new Event('input', { bubbles: true }));
+}
+
+/**
+ * Pre-Flight Golden Rules Selection Modal
+ * Displays available rules with multi-select checkboxes (up to 3) and Apple-calm layout.
+ */
+function openPreFlightRulesModal(onSave: () => void): void {
+  document.getElementById('preflight-rules-modal')?.remove();
+  const available = DEFAULT_PREFLIGHT_RULES;
+  const currentActiveIds = new Set(StorageManager.getActiveGoldenRules().map(r => r.id));
+  const selectedIds = new Set<string>(currentActiveIds);
+
+  const modal = h('div', 'completion-modal-overlay interactive');
+  modal.id = 'preflight-rules-modal';
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  modal.setAttribute('aria-label', 'Pre-Flight Golden Rules Customization');
+
+  modal.innerHTML = `
+    <div class="completion-receipt-card" style="max-width: 540px; width: 92%; max-height: 85vh; display: flex; flex-direction: column; overflow: hidden; padding: 20px; box-sizing: border-box;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 10px;">
+        <div>
+          <span style="font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700; color: var(--accent-gold); letter-spacing: 0.08em; text-transform: uppercase;">
+            ✈️ PRE-FLIGHT AUDIT COCKPIT
+          </span>
+          <h2 style="margin: 4px 0 0; font-size: var(--font-h3, 16px); font-weight: 700; color: var(--ink-primary);">
+            Chọn 3 tiêu chí tự soát vàng
+          </h2>
+        </div>
+        <span class="rule-count-pill" style="font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--accent-cyan); padding: 4px 8px; background: rgba(56, 189, 248, 0.1); border-radius: 6px;">
+          ${selectedIds.size} / 3
+        </span>
+      </div>
+
+      <div class="rules-selection-list" style="display: flex; flex-direction: column; gap: 8px; overflow-y: auto; flex: 1; min-height: 0; padding-right: 4px; margin-bottom: 16px;">
+        ${available.map((r) => {
+          const isChecked = selectedIds.has(r.id);
+          return `
+            <label class="rule-choice-card ${isChecked ? 'active' : ''}" data-rule-id="${r.id}" style="display: flex; align-items: flex-start; gap: 10px; padding: 10px; border-radius: 8px; border: 1px solid ${isChecked ? 'var(--accent-gold)' : 'var(--border-hairline)'}; background: ${isChecked ? 'rgba(245, 158, 11, 0.08)' : 'rgba(255, 255, 255, 0.02)'}; cursor: pointer; transition: all 0.15s ease;">
+              <input type="checkbox" class="rule-modal-checkbox" data-rule-id="${r.id}" ${isChecked ? 'checked' : ''} style="margin-top: 3px; cursor: pointer;" />
+              <div style="flex: 1; min-width: 0;">
+                <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 2px;">
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; padding: 1px 5px; border-radius: 4px; background: rgba(255, 255, 255, 0.08); color: var(--accent-cyan);">${r.code}</span>
+                  <strong style="font-size: 13px; color: var(--ink-primary);">${esc(r.ruleTitle)}</strong>
+                </div>
+                <div style="font-size: 12px; color: var(--ink-secondary); line-height: 1.4;">${esc(r.description)}</div>
+                <div style="font-size: 11px; color: var(--good); margin-top: 4px; font-family: var(--font-mono); line-height: 1.3;">✓ ${esc(r.goodExample)}</div>
+              </div>
+            </label>
+          `;
+        }).join('')}
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 10px; border-top: 1px solid var(--border-hairline); padding-top: 12px;">
+        <button type="button" class="ie-btn btn-modal-cancel" style="min-height: 38px; padding: 6px 14px;">Hủy</button>
+        <button type="button" class="ie-btn ie-btn-primary btn-modal-save" style="min-height: 38px; padding: 6px 18px; font-weight: 700;">Lưu 3 tiêu chí</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  const countPill = modal.querySelector('.rule-count-pill') as HTMLElement;
+  const updateCards = () => {
+    countPill.textContent = `${selectedIds.size} / 3`;
+    modal.querySelectorAll<HTMLElement>('.rule-choice-card').forEach(card => {
+      const id = card.dataset.ruleId!;
+      const sel = selectedIds.has(id);
+      card.style.borderColor = sel ? 'var(--accent-gold)' : 'var(--border-hairline)';
+      card.style.background = sel ? 'rgba(245, 158, 11, 0.08)' : 'rgba(255, 255, 255, 0.02)';
+      const chk = card.querySelector<HTMLInputElement>('.rule-modal-checkbox');
+      if (chk) chk.checked = sel;
+    });
+  };
+
+  modal.querySelectorAll<HTMLInputElement>('.rule-modal-checkbox').forEach(chk => {
+    chk.addEventListener('change', () => {
+      const id = chk.dataset.ruleId!;
+      if (chk.checked) {
+        if (selectedIds.size >= 3) {
+          // If already 3, remove earliest or prevent
+          const first = selectedIds.values().next().value;
+          if (first) selectedIds.delete(first);
+        }
+        selectedIds.add(id);
+      } else {
+        selectedIds.delete(id);
+      }
+      updateCards();
+    });
+  });
+
+  const close = () => {
+    modal.remove();
+    document.removeEventListener('keydown', onKey);
+  };
+  const onKey = (e: KeyboardEvent) => {
+    if (e.key === 'Escape') close();
+  };
+  document.addEventListener('keydown', onKey);
+
+  modal.querySelector('.btn-modal-cancel')?.addEventListener('click', close);
+  modal.querySelector('.btn-modal-save')?.addEventListener('click', () => {
+    if (selectedIds.size > 0) {
+      const picked = available.filter(r => selectedIds.has(r.id)).slice(0, 3);
+      StorageManager.setActiveGoldenRules(picked);
+      onSave();
+    }
+    close();
+  });
+}
+
+/**
+ * Pre-Flight Golden Rules Checklist Widget
+ * Allows user to audit their response against 3 customized golden rules.
+ */
+export function renderPreFlightChecklist(): HTMLElement {
+  const container = h('div', 'ie-preflight-card');
+  container.style.cssText = 'margin-top: 10px; padding: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-hairline); border-radius: var(--radius-squircle-sm, 8px);';
+
+  const updateList = () => {
+    const rules = StorageManager.getActiveGoldenRules();
+    container.innerHTML = `
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 6px;">
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <span>✈️</span>
+          <span style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-gold); letter-spacing: 0.08em; text-transform: uppercase;">
+            Pre-Flight Golden Rules (3 Tiêu chí tự soát)
+          </span>
+        </div>
+        <button type="button" class="ie-btn ie-btn-sm btn-pick-rules" style="font-size: 11px; padding: 2px 8px; min-height: 28px;">
+          ⚙️ Chọn 3 quy tắc
+        </button>
+      </div>
+      <div class="ie-preflight-rules-list" style="display: flex; flex-direction: column; gap: 6px;">
+        ${rules.map((r, i) => `
+          <label style="display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--ink-secondary); cursor: pointer; line-height: 1.4;">
+            <input type="checkbox" class="ie-rule-checkbox" style="margin-top: 3px; cursor: pointer;" />
+            <div>
+              <strong style="color: var(--ink-primary);">${i + 1}. ${esc(r.ruleTitle)}:</strong>
+              <span> ${esc(r.description)}</span>
+            </div>
+          </label>
+        `).join('')}
+      </div>
+    `;
+
+    container.querySelector('.btn-pick-rules')?.addEventListener('click', () => {
+      openPreFlightRulesModal(() => updateList());
+    });
+  };
+
+  updateList();
+  window.addEventListener('golden-rules-change', updateList);
+  return container;
 }
 
 /**
@@ -384,7 +541,7 @@ function mountEditor(
   area.placeholder = t('writing.editor_ph', undefined, 'Type your answer here. Leave a blank line between paragraphs.');
 
   const editor = h('div', 'ie-qcol');
-  editor.append(area);
+  editor.append(area, renderPreFlightChecklist());
 
   // Mount auxiliary workbenches
   const formulaInspector = task === 1 ? renderFormulaInspector(area) : null;
@@ -581,9 +738,8 @@ export function writingView(root: HTMLElement): () => void {
         const promptDisplay = task === 1 ? label : truncatePrompt(p.prompt);
         const c = h(
           'button',
-          `ie-card ie-prompt-card ie-task${task}-card`,
-          `<b>${esc(promptDisplay)}</b><span>${task === 1 ? esc(getChartKindLabel((p as Task1Prompt).chart.kind) ?? (p as Task1Prompt).chart.kind) : esc(label)
-          }</span>`
+          `ie-card ie-prompt-card ie-task${task}-card ie-card-action`,
+          `<b>${esc(promptDisplay)}</b><span>${task === 1 ? esc(getChartKindLabel((p as Task1Prompt).chart.kind) ?? (p as Task1Prompt).chart.kind) : esc(label)}</span><div class="ie-card-affordance" aria-hidden="true">${icon('chevronRight', 16)}</div>`
         );
         c.setAttribute('data-task', String(task));
         c.addEventListener('click', () => {

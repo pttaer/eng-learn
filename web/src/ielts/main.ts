@@ -14,6 +14,14 @@ import { syncAndroidWidget, WidgetBridge } from '../core/widget-bridge';
 import * as ieltsTts from './tts';
 import { icon, IconName } from '../utils/icons';
 import { I18n, t } from '../core/i18n';
+import { AccentThemeManager } from '../core/accent-theme';
+import { FloatingNote } from '../modules/floating-note';
+import { NotificationEngine } from '../core/notification-engine';
+import { isIeltsTestInProgress, showIeltsConfirmDialog } from './confirm-dialog';
+
+// Initialize customized primary accent theme
+AccentThemeManager.init();
+FloatingNote.init();
 
 (window as any).AudioSynthesizer = AudioSynthesizer;
 (window as any).HapticEngine = HapticEngine;
@@ -22,6 +30,8 @@ import { I18n, t } from '../core/i18n';
 (window as any).SpeechEvaluator = SpeechEvaluator;
 (window as any).ieltsTts = ieltsTts;
 (window as any).WidgetBridge = WidgetBridge;
+(window as any).FloatingNote = FloatingNote;
+(window as any).NotificationEngine = NotificationEngine;
 
 // Global Micro-Interactions: Tactile audio & haptic feedback on button clicks
 document.addEventListener('click', (e) => {
@@ -104,7 +114,7 @@ const ALL_ROUTES: RouteItem[] = [
         progressSection(),
         report()
       );
-      return () => {};
+      return () => { };
     }
   },
   { id: 'diagnostic', label: 'Diagnostic', parentNavId: 'diagnostic', view: lazyView(() => import('./views/diagnostic').then(m => m.diagnosticView)) },
@@ -234,12 +244,12 @@ function homeSuites(): HTMLElement {
 
 const header = document.getElementById('ie-header')!;
 const main = document.getElementById('ie-main')!;
-let cleanup: () => void = () => {};
+let cleanup: () => void = () => { };
 
 function renderHeader(): void {
   header.innerHTML = `
   <div class="ie-top-bar">
-    <a class="ie-back" href="./index.html"><span class="ie-back-arrow">←</span> ${t('ielts.back_to_singularity', undefined, 'English Singularity')}</a>
+    <a class="ie-back" href="./index.html"><span class="ie-back-arrow">←</span> <span class="ie-back-text">${t('ielts.back_to_singularity', undefined, 'English Singularity')}</span></a>
     <a class="ie-brand" href="#home">IELTS <b>7.0</b></a>
     <div class="ie-top-actions" style="margin-left: auto; display: flex; gap: 8px; align-items: center;">
       <button type="button" class="ie-btn ie-btn-sm ie-btn-lang" title="${t('ielts.toggle_lang', undefined, 'Switch language (EN/VI)')}" aria-label="${t('ielts.toggle_lang', undefined, 'Switch language (EN/VI)')}" style="padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: var(--font-kicker);">
@@ -265,6 +275,25 @@ function renderHeader(): void {
     </button>
   </div>
 `;
+
+  header.querySelector('.ie-back')?.addEventListener('click', async (e) => {
+    if (isIeltsTestInProgress()) {
+      e.preventDefault();
+      const isVi = I18n.getLocale() === 'vi';
+      const confirmed = await showIeltsConfirmDialog({
+        title: isVi ? 'Xác nhận rời khỏi bài thi' : 'Confirm Navigation',
+        message: isVi
+          ? 'Bạn đang trong một phiên làm bài thi. Nếu rời đi lúc này, toàn bộ kết quả bài thi chưa nộp sẽ bị mất.\n\nBạn có chắc chắn muốn quay về English Singularity không?'
+          : 'You are currently in an active exam session. Navigating away now will discard your unanswered progress.\n\nAre you sure you want to return to English Singularity?',
+        confirmText: isVi ? 'Rời khỏi bài thi' : 'Leave Exam',
+        cancelText: isVi ? 'Tiếp tục làm bài' : 'Keep Working',
+        type: 'warning'
+      });
+      if (confirmed) {
+        window.location.href = './index.html';
+      }
+    }
+  });
 
   header.querySelector('.ie-btn-lang')?.addEventListener('click', () => {
     AudioSynthesizer.play('click');
@@ -314,7 +343,7 @@ function route(): void {
   } catch (err) {
     console.warn('[IELTS] Route cleanup notice:', err);
   }
-  cleanup = () => {};
+  cleanup = () => { };
 
   // Global teardown: immediately halt audio, speech synthesis, and exam room ambience
   ieltsTts.stopAll();
@@ -382,11 +411,53 @@ I18n.onLocaleChange(() => {
   route();
 });
 
+let lastRouteHash = location.hash || '#home';
+let isRevertingHash = false;
+
+async function handleHashChange(): Promise<void> {
+  if (isRevertingHash) {
+    isRevertingHash = false;
+    return;
+  }
+  const targetHash = location.hash || '#home';
+  if (targetHash === lastRouteHash) return;
+
+  if (isIeltsTestInProgress()) {
+    const isVi = I18n.getLocale() === 'vi';
+    const confirmed = await showIeltsConfirmDialog({
+      title: isVi ? 'Xác nhận rời khỏi bài thi' : 'Confirm Navigation',
+      message: isVi
+        ? 'Bạn đang trong một phiên làm bài thi. Nếu chuyển mục lúc này, toàn bộ kết quả bài thi chưa nộp sẽ bị mất.\n\nBạn có chắc chắn muốn rời đi không?'
+        : 'You are currently in an active exam session. Navigating away now will discard your unanswered progress.\n\nAre you sure you want to leave the exam?',
+      confirmText: isVi ? 'Rời khỏi bài thi' : 'Leave Exam',
+      cancelText: isVi ? 'Tiếp tục làm bài' : 'Keep Working',
+      type: 'warning'
+    });
+
+    if (!confirmed) {
+      isRevertingHash = true;
+      location.hash = lastRouteHash;
+      return;
+    }
+  }
+
+  lastRouteHash = targetHash;
+  route();
+}
+
+window.addEventListener('beforeunload', (e) => {
+  if (isIeltsTestInProgress()) {
+    e.preventDefault();
+    e.returnValue = '';
+  }
+});
+
 renderHeader();
 ScrollAffordance.initGlobalObserver();
-window.addEventListener('hashchange', route);
+window.addEventListener('hashchange', handleHashChange);
 route();
 document.getElementById('boot')?.remove();
 prefetchViews();
 UsageTracker.start();
+NotificationEngine.schedulePeriodicCheck();
 syncAndroidWidget();

@@ -22,8 +22,8 @@ export function cueFor(event: FeedbackEvent): FeedbackCue {
   switch (event.type) {
     case 'answer':
       return event.result === 'correct'
-        ? { sound: 'chime', motion: 'pop', haptic: 'success', copy: withWhy('Correct.', event.why) }
-        : { sound: 'ping', haptic: 'warning', copy: withWhy('Not quite.', event.why) };
+        ? { sound: 'success-chord', motion: 'pop', haptic: 'success', copy: withWhy('Correct.', event.why) }
+        : { sound: 'nudge', haptic: 'warning', copy: withWhy('Not quite.', event.why) };
     case 'hint':
       return { sound: 'tick', haptic: 'selection', copy: event.text };
     case 'milestone':

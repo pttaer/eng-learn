@@ -143,7 +143,7 @@ export class CommuteAudioPlayer {
         artist: `English Singularity — ${item.category}`,
         album: 'Hands-Free Commute Audio Loop'
       });
-    } catch {}
+    } catch { }
   }
 
   public static play(): void {
@@ -152,7 +152,7 @@ export class CommuteAudioPlayer {
 
     // Silent anchor keeps iOS Safari's background audio thread alive
     if (this.silentAudioEl) {
-      this.silentAudioEl.play().catch(() => {});
+      this.silentAudioEl.play().catch(() => { });
     }
 
     if (typeof navigator !== 'undefined' && 'mediaSession' in navigator) {
@@ -367,11 +367,11 @@ export class CommuteAudioPlayer {
       </div>
 
       <div class="commute-controls-row">
-        <button type="button" class="commute-btn-ctrl commute-btn-prev" aria-label="Previous Track">${icon('skipBack', 20)}</button>
+        <button type="button" class="commute-btn-ctrl commute-btn-prev" aria-label="${t('commute.prev_track', undefined, 'Previous Track')}">${icon('skipBack', 20)}</button>
         <button type="button" class="commute-btn-ctrl commute-btn-play" aria-label="${this.isPlaying ? t('commute.pause_loop', undefined, 'Pause Loop') : t('commute.play_loop', undefined, 'Play Loop')}">
           ${this.isPlaying ? icon('pause', 22) : icon('play', 22)}
         </button>
-        <button type="button" class="commute-btn-ctrl commute-btn-next" aria-label="Next Track">${icon('skipForward', 20)}</button>
+        <button type="button" class="commute-btn-ctrl commute-btn-next" aria-label="${t('commute.next_track', undefined, 'Next Track')}">${icon('skipForward', 20)}</button>
       </div>
 
       <div class="commute-settings-grid">

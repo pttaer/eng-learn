@@ -5,6 +5,7 @@ import { ttsAvailable } from '../tts';
 import { esc, h } from '../ui';
 import { icon } from '../../utils/icons';
 import { t } from '../../core/i18n';
+import { StorageManager } from '../../utils/storage';
 
 interface VocabItem {
   id: string;
@@ -59,7 +60,7 @@ function save(s: Record<string, SRSCardState>): void {
 
 // Band 7.5+ items start with the engine's harder ease factor.
 const level = (v: VocabItem): number => (v.band >= 7.5 ? 3 : 1);
-const SESSION = 20;
+const getSessionSize = (): number => ({ 15: 10, 60: 35 }[StorageManager.getDailyTimeBudget()] ?? 20);
 
 export function vocabView(root: HTMLElement): () => void {
   let states = load();
@@ -131,6 +132,19 @@ export function vocabView(root: HTMLElement): () => void {
   const topicSelect = h('select', 'ie-select ie-vselect');
   topicSelect.setAttribute('aria-label', 'Topic');
 
+  // Star Topic button for priority domain focus
+  const starTopicBtn = h('button', 'ie-btn ie-star-topic-btn') as HTMLButtonElement;
+  starTopicBtn.type = 'button';
+  starTopicBtn.setAttribute('aria-label', 'Star active topic for priority focus');
+  starTopicBtn.style.padding = '0 12px';
+  starTopicBtn.style.minWidth = '44px';
+  starTopicBtn.style.minHeight = '44px';
+  starTopicBtn.style.fontSize = '16px';
+  starTopicBtn.style.display = 'inline-flex';
+  starTopicBtn.style.alignItems = 'center';
+  starTopicBtn.style.justifyContent = 'center';
+  starTopicBtn.title = 'Star topic for priority domain focus';
+
   // Band Select
   const bandSelect = h('select', 'ie-select ie-vband');
   bandSelect.setAttribute('aria-label', 'Target Band');
@@ -141,7 +155,7 @@ export function vocabView(root: HTMLElement): () => void {
     <option value="7.5">${t('vocab.band_75')}</option>
   `;
 
-  selectsRow.append(topicSelect, bandSelect);
+  selectsRow.append(topicSelect, starTopicBtn, bandSelect);
 
   // Search input
   const searchInput = h('input', 'ie-input ie-vsearch') as HTMLInputElement;
@@ -162,19 +176,57 @@ export function vocabView(root: HTMLElement): () => void {
     return [...DECK_CORE, ...DECK_IOT];
   }
 
-  function updateTopicOptions(): void {
+  function updateStarBtnState(): void {
+    if (activeTopic === 'all' || activeTopic === 'starred') {
+      starTopicBtn.disabled = true;
+      starTopicBtn.style.opacity = '0.4';
+      starTopicBtn.innerHTML = icon('star', 16);
+      starTopicBtn.style.color = 'inherit';
+      starTopicBtn.title = 'Select a specific topic to toggle star focus';
+    } else {
+      starTopicBtn.disabled = false;
+      starTopicBtn.style.opacity = '1';
+      const isStarred = StorageManager.isTopicStarred(activeTopic);
+      starTopicBtn.innerHTML = icon('star', 16);
+      starTopicBtn.style.color = isStarred ? 'var(--accent-gold, #f59e0b)' : 'inherit';
+      const svg = starTopicBtn.querySelector('svg');
+      if (svg) svg.setAttribute('fill', isStarred ? 'currentColor' : 'none');
+      starTopicBtn.title = isStarred ? `Unstar "${activeTopic}" focus` : `Star "${activeTopic}" for priority focus`;
+    }
+  }
+
+  function updateTopicOptions(keepTopic?: string): void {
     const deck = getActiveDeck();
     const topics = [...new Set(deck.map(v => v.topic))].sort();
-    topicSelect.innerHTML = `<option value="all">${t('vocab.all_topics')}</option>${topics
-      .map(t => `<option value="${t}">${t[0].toUpperCase() + t.slice(1)}</option>`)
+    const starred = StorageManager.getStarredVocabTopics();
+
+    const starredOpt = starred.length > 0
+      ? `<option value="starred">⭐ Starred Domains (${starred.length})</option>`
+      : '';
+
+    topicSelect.innerHTML = `<option value="all">${t('vocab.all_topics')}</option>${starredOpt}${topics
+      .map(t => {
+        const isStar = starred.includes(t.toLowerCase());
+        return `<option value="${t}">${isStar ? '⭐ ' : ''}${t[0].toUpperCase() + t.slice(1)}</option>`;
+      })
       .join('')}`;
-    topicSelect.value = 'all';
-    activeTopic = 'all';
+
+    if (keepTopic && (keepTopic === 'starred' || topics.includes(keepTopic))) {
+      topicSelect.value = keepTopic;
+      activeTopic = keepTopic;
+    } else {
+      topicSelect.value = 'all';
+      activeTopic = 'all';
+    }
+    updateStarBtnState();
   }
 
   function getFilteredPool(): VocabItem[] {
     let pool = getActiveDeck();
-    if (activeTopic !== 'all') {
+    if (activeTopic === 'starred') {
+      const starred = StorageManager.getStarredVocabTopics();
+      pool = pool.filter(v => starred.includes(v.topic.toLowerCase()));
+    } else if (activeTopic !== 'all') {
       pool = pool.filter(v => v.topic === activeTopic);
     }
     if (activeBand !== 'all') {
@@ -303,7 +355,24 @@ export function vocabView(root: HTMLElement): () => void {
   function start(): void {
     states = load();
     const pool = getFilteredPool();
-    queue = SRSEngine.getDueCards(pool, states, SESSION);
+    queue = SRSEngine.getDueCards(pool, states, getSessionSize());
+
+    // Weakness-First Focus: Prioritize items with recorded lapses or lower ease factors
+    if (StorageManager.isWeaknessFirstEnabled()) {
+      queue.sort((a, b) => {
+        const stateA = states[a.id];
+        const stateB = states[b.id];
+        const lapsesA = (stateA?.totalLapses || stateA?.lapses || 0);
+        const lapsesB = (stateB?.totalLapses || stateB?.lapses || 0);
+        if (lapsesA !== lapsesB) {
+          return lapsesB - lapsesA; // items with higher lapses first
+        }
+        const efA = stateA?.easeFactor ?? 2.5;
+        const efB = stateB?.easeFactor ?? 2.5;
+        return efA - efB; // lower ease factor (harder) first
+      });
+    }
+
     next();
   }
 
@@ -344,8 +413,17 @@ export function vocabView(root: HTMLElement): () => void {
     start();
   });
 
+  starTopicBtn.addEventListener('click', () => {
+    if (activeTopic === 'all' || activeTopic === 'starred') return;
+    StorageManager.toggleStarredVocabTopic(activeTopic);
+    updateStarBtnState();
+    updateTopicOptions(activeTopic);
+    start();
+  });
+
   topicSelect.addEventListener('change', () => {
     activeTopic = topicSelect.value;
+    updateStarBtnState();
     start();
   });
 

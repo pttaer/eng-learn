@@ -93,7 +93,7 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
   sections.forEach((s, i) => {
     const pane = h('section', 'ie-qcol ie-listen-pane');
     pane.hidden = i > 0;
-    pane.append(h('h2', '', `Section ${s.section}: ${esc(s.title)}`));
+    pane.append(h('h2', '', `${t('ielts.section', undefined, 'Section')} ${s.section}: ${esc(s.title)}`));
     const form = renderQuestions(s.questions, n);
     n += s.questions.length;
     pane.append(form.el);

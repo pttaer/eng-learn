@@ -19,7 +19,8 @@ import { feedback } from '../core/feedback';
 import collocationsData from '../assets/data/collocations.json';
 import vocabularyData from '../assets/data/vocabulary.json';
 import { pickDecoys, meaningsOverlap } from '../core/decoys';
-import { t } from '../core/i18n';
+import { I18n, t } from '../core/i18n';
+import { HeaderHUD } from './header-hud';
 
 /** Verbs whose collocations are worth blanking; phrases starting with a noun or adjective are skipped. */
 const BLANKABLE_VERBS = new Set(['make', 'take', 'have', 'do', 'get', 'give', 'keep', 'pay', 'break', 'catch', 'set', 'run', 'hold', 'reach', 'draw', 'gain', 'raise', 'bear', 'bring', 'meet', 'lose', 'miss', 'tell', 'say', 'play', 'strike', 'cut', 'save', 'spend', 'waste', 'follow', 'pose', 'conduct', 'carry', 'attract', 'commit', 'launch', 'exert', 'render']);
@@ -620,7 +621,7 @@ export class BlitzDossier {
       const roll = Math.random();
       const prompt = roll < 0.40 ? this.collocationStemPrompt()
         : roll < 0.70 ? this.collocationMeaningPrompt()
-        : this.vocabDefinitionPrompt();
+          : this.vocabDefinitionPrompt();
       if (prompt) return prompt;
     }
 
@@ -775,6 +776,20 @@ export class BlitzDossier {
       clearInterval(this.timerInterval);
       this.timerInterval = null;
     }
+  }
+
+  public async canDeactivate(): Promise<boolean> {
+    if (this.state !== 'RUNNING') return true;
+    const isVi = I18n.getLocale() === 'vi';
+    return HeaderHUD.showConfirmDialog({
+      title: isVi ? 'XÁC NHẬN THOÁT BLITZ' : 'EXIT SPEED BLITZ',
+      message: isVi
+        ? 'Bạn đang trong lượt chạy Speed Blitz 60 giây. Nếu thoát lúc này, kết quả của vòng chơi sẽ bị huỷ.\nBạn có chắc chắn muốn thoát không?'
+        : 'A 60-second Speed Blitz sprint is in progress. Exiting now will cancel this run.\nAre you sure you want to exit?',
+      confirmText: isVi ? 'Thoát' : 'Exit',
+      cancelText: isVi ? 'Tiếp tục' : 'Continue',
+      type: 'warning'
+    });
   }
 
   public teardown(): void {

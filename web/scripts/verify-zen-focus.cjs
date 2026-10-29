@@ -130,8 +130,11 @@ assert(hudCssSrc.includes('body.zen-active') && hudCssSrc.includes('#app.zen-act
 assert(hudCssSrc.includes('#030303'), 'hud-base.css must dim background to #030303 in zen mode');
 assert(hudCssSrc.includes('65ch'), 'hud-base.css must clamp measure to 65ch');
 assert(hudCssSrc.includes('.btn-zen-toggle.active'), 'hud-base.css must style active zen toggle button');
+assert(zenModeSrc.includes('chordPending'), 'zen-mode.ts must implement Cursor chord support');
+assert(zenModeSrc.includes('Escape'), 'zen-mode.ts must implement instant Escape exit');
+assert(hudCssSrc.includes('dossier-control-bar') && hudCssSrc.includes('display: none !important'), 'hud-base.css must enforce zero-chrome suppression');
 
-console.log('  ✓ hud-base.css defines viewport dimming, 65ch measure clamp, and active button styling');
+console.log('  ✓ hud-base.css & zen-mode.ts enforce Cursor zero-chrome, Escape panic-relief, and chord toggle');
 
 // 2. Headless DOM Simulation Checks
 console.log('\n--- Test Suite 2: State Machine & DOM Class Simulation ---');
@@ -174,7 +177,24 @@ function toggleZen() {
   return setZenMode(!zenActive);
 }
 
+let chordPending = false;
 function handleKey(e) {
+  if (zenActive && (e.key === 'Escape' || e.key === 'Esc')) {
+    setZenMode(false);
+    return;
+  }
+
+  if ((e.ctrlKey || e.metaKey) && (e.key === 'k' || e.key === 'K')) {
+    chordPending = true;
+    return;
+  }
+
+  if (chordPending && (e.key === 'z' || e.key === 'Z')) {
+    chordPending = false;
+    toggleZen();
+    return;
+  }
+
   if (e.ctrlKey || e.metaKey || e.altKey) return;
   const target = e.target;
   if (target) {
@@ -229,6 +249,20 @@ assert.strictEqual(zenActive, false, 'Meta+Z must not activate zen mode (protect
 
 handleKey({ key: 'z', altKey: true });
 assert.strictEqual(zenActive, false, 'Alt+Z must not activate zen mode');
+
+// Verification Step 2.6: Instant Escape Panic-Relief Exit
+setZenMode(true);
+assert.strictEqual(zenActive, true, 'Zen mode must be active');
+handleKey({ key: 'Escape' });
+assert.strictEqual(zenActive, false, 'Pressing Escape must instantly exit Zen mode (Cursor panic relief)');
+
+// Verification Step 2.7: Cursor Chord Ctrl+K followed by Z
+handleKey({ ctrlKey: true, key: 'k' });
+assert.strictEqual(chordPending, true, 'Ctrl+K sets chord pending');
+handleKey({ key: 'z' });
+assert.strictEqual(zenActive, true, 'Chord Ctrl+K then Z must activate Zen mode');
+handleKey({ key: 'Escape' });
+assert.strictEqual(zenActive, false, 'Escape restores standard UI');
 
 console.log('  ✓ ZenMode state transitions, DOM class toggles, and input exclusion guards pass 100%');
 

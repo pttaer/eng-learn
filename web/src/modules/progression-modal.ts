@@ -90,12 +90,13 @@ export class ProgressionModal {
     const allCompleted = completedQuests === state.quests.length;
 
     this.overlay.innerHTML = `
-      <div class="progression-modal-card">
+      <div class="progression-modal-card" style="max-height: calc(100dvh - 32px); overflow-y: auto; box-sizing: border-box;">
         <!-- Top Control Bar -->
-        <div class="progression-card-header">
-          <div class="telemetry-label" style="color: var(--accent-gold); display: flex; align-items: center; gap: 6px;">
+        <div class="progression-card-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%; box-sizing: border-box; flex-shrink: 0;">
+          <div class="telemetry-label" style="color: var(--accent-gold); display: flex; align-items: center; gap: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 1;">
             ${t('rpg.telemetry_title', undefined, 'RPG MASTERY TELEMETRY')}
           </div>
+          <button type="button" class="progression-btn-close btn-modal-close" aria-label="${t('common.close', undefined, 'Close')}">✕</button>
         </div>
 
         <!-- Level & Rank Badge Hero -->

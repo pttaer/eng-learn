@@ -222,6 +222,14 @@ it('Verifies synthesis algorithms for all 3 soundscapes in ambient-music-engine.
   // Zen Drone: Theta differential binaural beats and soothing noise wash
   assert(code.includes('createBufferSource') || code.includes('pinkNoiseBuffer') || code.includes('noise'),
     'Zen drone must synthesize meditation texture or noise wash');
+
+  // Alpha Baroque: 60 BPM Suggestopedia flow & 10Hz Alpha pulse
+  assert(code.includes('alpha-baroque'), 'Must support alpha-baroque soundscape');
+  assert(code.includes('createAlphaBaroqueSoundscape'), 'Must implement createAlphaBaroqueSoundscape');
+
+  // Lo-Fi Study: 72 BPM Chillhop beats & jazz 9th Rhodes
+  assert(code.includes('lofi-study'), 'Must support lofi-study soundscape');
+  assert(code.includes('createLoFiStudySoundscape'), 'Must implement createLoFiStudySoundscape');
 });
 
 // -----------------------------------------------------------------------------

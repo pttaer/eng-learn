@@ -93,7 +93,7 @@ it('Verifies CSS rules and selectors in dossiers.css', () => {
   assert(css.includes('min-height: 44px') || css.includes('min-width: 44px'), 'CSS must enforce 44px touch targets');
 
   // Check mobile responsive query
-  assert(css.includes('@media (max-width: 900px)'), 'CSS must include mobile responsive layout under 900px');
+  assert(css.includes('@media (max-width: 768px)') || css.includes('@media (max-width: 900px)'), 'CSS must include mobile responsive layout under 768px');
 
   // Check reduced-motion override
   assert(css.includes('@media (prefers-reduced-motion: reduce)'), 'CSS must include prefers-reduced-motion override');

@@ -22,6 +22,7 @@ import {
   RoleplayMessage
 } from '../core/conversation-partner-engine';
 import drillsData from '../assets/data/drills.json';
+import { ArticulatoryBiomechanics } from '../core/articulatory-biomechanics';
 import { t } from '../core/i18n';
 
 export type SpeakingMode = 'nation' | 'roleplay' | 'formant' | 'ielts';
@@ -408,6 +409,12 @@ export class SpeakingDossier {
       <div class="roleplay-bubble ${isPartner ? 'partner-bubble' : 'learner-bubble'}">
         <div class="bubble-meta">
           <span class="sender-name">${isPartner ? this.partnerEngine.getScenario().partnerRole : 'You'}</span>
+          ${msg.isSurpriseChallenge ? `
+            <span class="hud-status-badge" style="background: rgba(251, 191, 36, 0.2); color: var(--warning); border: none; font-weight: 700;">⚡ EXAMINER SURPRISE FOLLOW-UP</span>
+          ` : ''}
+          ${msg.branchTaken ? `
+            <span class="hud-status-badge" style="background: rgba(165, 180, 252, 0.15); color: var(--accent-gold); border: none;">Branch: ${msg.branchTaken}</span>
+          ` : ''}
           ${isPartner ? `
             <button class="hud-btn btn-speak-bubble" data-text="${msg.text.replace(/"/g, '&quot;')}" title="Listen to spoken audio">
               🔊 Speak
@@ -499,7 +506,7 @@ export class SpeakingDossier {
       btn.addEventListener('click', (e) => {
         const text = (e.currentTarget as HTMLElement).getAttribute('data-text');
         if (text) {
-          AudioSynthesizer.speak(text);
+          AudioSynthesizer.speak(text.replace(/\[.*?\]/g, '').trim());
         }
       });
     });
@@ -742,7 +749,7 @@ export class SpeakingDossier {
       </div>
 
       <!-- Circular Timer HUD & Waveform Area -->
-      <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed var(--border-hairline); padding-top: 8px; gap: 14px;">
+      <div class="speaking-hud-strip" style="display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed var(--border-hairline); padding-top: 8px; gap: 14px; flex-wrap: wrap;">
         <div style="display: flex; flex-direction: column; align-items: center;">
           <div style="position: relative; width: 64px; height: 64px;">
             <svg viewBox="0 0 36 36" style="width: 100%; height: 100%; transform: rotate(-90deg);" aria-hidden="true">
@@ -756,39 +763,39 @@ export class SpeakingDossier {
             </div>
           </div>
           <div style="display: flex; gap: 8px; margin-top: 6px;">
-            <button type="button" class="hud-btn btn-timer-toggle" aria-label="Start or pause timer" title="Start or pause timer" style="padding: 2px 8px; font-size: var(--font-kicker);">${this.isTimerRunning ? '⏸ Pause' : '▶ Start'}</button>
-            <button type="button" class="hud-btn btn-take-complete" aria-label="Stop and finish take" title="Stop and finish take" style="padding: 2px 8px; font-size: var(--font-kicker);" ${!this.isTimerRunning ? 'disabled' : ''}>⏹ Stop</button>
+            <button type="button" class="hud-btn btn-timer-toggle" aria-label="Start or pause timer" title="Start or pause timer" style="padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); font-size: var(--font-kicker); display: inline-flex; align-items: center;">${this.isTimerRunning ? '⏸ Pause' : '▶ Start'}</button>
+            <button type="button" class="hud-btn btn-take-complete" aria-label="Stop and finish take" title="Stop and finish take" style="padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); font-size: var(--font-kicker); display: inline-flex; align-items: center;" ${!this.isTimerRunning ? 'disabled' : ''}>⏹ Stop</button>
           </div>
         </div>
 
         <!-- Dual-Trace Oscilloscope Canvas -->
-        <div class="speaking-oscilloscope-container" style="flex: 1; margin-top: 0;">
+        <div class="speaking-oscilloscope-container" style="flex: 1; min-width: 240px; margin-top: 0;">
           <div class="oscilloscope-header">
             <span>${t('speaking.track1_benchmark', undefined, 'TRACK 1: NATIVE BENCHMARK F₀')}</span>
             <span>TRACK 2: ${this.isTimerRunning ? t('speaking.live_mic_take', undefined, 'LIVE MIC TAKE') : (this.latestAnalysis ? t('speaking.student_pitch_profile', undefined, 'STUDENT PITCH PROFILE') : t('speaking.student_take_idle', undefined, 'STUDENT TAKE IDLE'))}</span>
           </div>
-          <canvas class="speaking-waveform-canvas" width="480" height="72"></canvas>
+          <canvas class="speaking-waveform-canvas" width="480" height="72" style="max-width: 100%; height: auto; display: block;"></canvas>
         </div>
       </div>
 
       <!-- Post-Take Review Strip -->
       ${this.hasCompletedTake && perf ? `
-        <div class="post-take-strip">
-          <div class="post-take-metrics">
+        <div class="post-take-strip" style="display: flex; flex-direction: column; gap: 10px;">
+          <div class="post-take-metrics" style="display: flex; flex-wrap: wrap; gap: 8px;">
             <span>TAKE ${this.currentRoundIdx + 1}: <strong>${Math.round(perf.actualSeconds)}s</strong> / ${perf.allocatedSeconds}s</span>
             <span>SILENCE: <strong>${Math.round(perf.silenceRatio * 100)}%</strong></span>
             <span>COLLOC: <strong>${perf.spottedCollocations}/${perf.totalCollocations}</strong></span>
           </div>
-          <div class="post-take-actions">
-            <button type="button" class="hud-btn btn-play-exemplar" style="font-size: var(--font-kicker); padding: 2px 8px;">▶ Exemplar</button>
-            <button type="button" class="hud-btn btn-play-take" style="font-size: var(--font-kicker); padding: 2px 8px;">▶ Your Take</button>
-            <button type="button" class="hud-btn btn-stop-audio" style="font-size: var(--font-kicker); padding: 2px 8px;">⏹ Stop</button>
+          <div class="post-take-actions" style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <button type="button" class="hud-btn btn-play-exemplar" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">▶ Exemplar</button>
+            <button type="button" class="hud-btn btn-play-take" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">▶ Your Take</button>
+            <button type="button" class="hud-btn btn-stop-audio" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">⏹ Stop</button>
             ${this.currentRoundIdx < 2 ? `
-              <button type="button" class="hud-btn btn-advance-round" style="font-size: var(--font-kicker); padding: 2px 10px; background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none;">
+              <button type="button" class="hud-btn btn-advance-round" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center; background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none;">
                 Advance to Round ${this.currentRoundIdx + 2} (${this.rounds[this.currentRoundIdx + 1] / 60} min) ${icon('arrowRight')}
               </button>
             ` : `
-              <button type="button" class="hud-btn btn-view-matrix" style="font-size: var(--font-kicker); padding: 2px 10px; background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none;">
+              <button type="button" class="hud-btn btn-view-matrix" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center; background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none;">
                 View 3-Round Compression Matrix ${icon('arrowRight')}
               </button>
             `}
@@ -1387,6 +1394,17 @@ export class SpeakingDossier {
               <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-secondary);">
                 Target F1: <strong>${this.activeVowel.f1} Hz</strong> | Target F2: <strong>${this.activeVowel.f2} Hz</strong>
               </div>
+              ${(() => {
+                const bio = ArticulatoryBiomechanics.getProfile(this.activeVowel.phoneme);
+                if (!bio) return '';
+                return `
+                  <div style="font-size: var(--font-kicker); color: var(--ink-secondary); margin-top: 6px; line-height: 1.45;">
+                    <div>📐 <strong>Jaw Aperture:</strong> ~${bio.jawApertureMm}mm (${bio.jawInstruction})</div>
+                    <div>👅 <strong>Tongue Placement:</strong> ${bio.tonguePosition}</div>
+                    <div>👄 <strong>Lip Posture:</strong> ${bio.lipPosture.toUpperCase()} (${bio.lipInstruction})</div>
+                  </div>
+                `;
+              })()}
               <div style="font-size: var(--font-kicker); color: #f59e0b; margin-top: 6px;">
                 ${icon('alertTriangle', 12)} <em>${this.activeVowel.l1Contrast || 'Focus on precise sustained resonance.'}</em>
               </div>
@@ -1400,6 +1418,19 @@ export class SpeakingDossier {
               <div style="font-size: var(--font-body-compact); line-height: 1.4; color: ${this.currentFormant?.nearestVowel?.isTargetMatch ? 'var(--good, #34d399)' : 'var(--ink-secondary)'};">
                 ${hasLiveFormant ? (this.currentFormant!.nearestVowel?.driftGuidance || 'Tracking voice...') : 'Speak or hold target vowel to track resonance on chart.'}
               </div>
+              ${(() => {
+                if (!hasLiveFormant) return '';
+                const diag = ArticulatoryBiomechanics.diagnoseFormants(this.activeVowel.phoneme, this.currentFormant!.f1, this.currentFormant!.f2);
+                if (!diag) return '';
+                return `
+                  <div style="font-size: var(--font-kicker); background: rgba(56, 189, 248, 0.08); border-left: 2px solid var(--accent-cyan); padding: 6px 10px; border-radius: 4px; margin-top: 8px; line-height: 1.45; color: var(--ink-primary);">
+                    <div style="color: var(--accent-cyan); font-weight: 700; margin-bottom: 2px;">⚡ Actionable Physical Adjustments:</div>
+                    <div>• <strong>Jaw:</strong> ${diag.jawAdjustment}</div>
+                    <div>• <strong>Tongue:</strong> ${diag.tongueAdjustment}</div>
+                    <div>• <strong>Lips:</strong> ${diag.lipAdjustment}</div>
+                  </div>
+                `;
+              })()}
               <div style="margin-top: 8px;">
                 <button class="hud-btn btn-sim-resonance" style="font-size: var(--font-kicker); padding: 2px 8px;">
                   ${icon('zap', 11)} ${t('speaking.test_resonance', undefined, 'Test Benchmark Resonance')}
@@ -1464,6 +1495,21 @@ export class SpeakingDossier {
             </div>
           </div>
         </div>
+
+        ${(() => {
+          const minPairDiff = ArticulatoryBiomechanics.getMinimalPairs().find(
+            p => p.pairId === this.activeMinimalPair.id || p.soundA === this.activeMinimalPair.vowelA
+          );
+          if (!minPairDiff) return '';
+          return `
+            <div style="font-size: var(--font-kicker); padding: 8px 12px; background: rgba(165, 180, 252, 0.08); border-radius: 6px; margin-top: 10px; color: var(--ink-secondary); line-height: 1.45; border-left: 2px solid var(--accent-gold);">
+              <strong style="color: var(--accent-gold);">💡 Biomechanical Differential:</strong>
+              <div>• <strong>Jaw Delta:</strong> ${minPairDiff.jawDelta}</div>
+              <div>• <strong>Tongue Delta:</strong> ${minPairDiff.tongueDelta}</div>
+              <div>• <strong>Tactile Check:</strong> ${minPairDiff.tactileCheckMethod}</div>
+            </div>
+          `;
+        })()}
 
         ${this.latestPairResult ? `
           <div class="pair-result-panel" style="padding: 12px 16px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-hairline); border-radius: 6px; margin-top: 10px;">

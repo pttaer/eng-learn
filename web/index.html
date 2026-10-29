@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
   <!-- Apply saved theme and motion before first paint, so light-theme users never see a dark flash -->
-  <script>try{var d=document.documentElement,t=localStorage.getItem('eng_theme');if(t==='light'||t==='dark')d.dataset.theme=t;if(localStorage.getItem('eng_motion')==='reduce')d.dataset.motion='reduce';var l=localStorage.getItem('eng_locale');if(l==='vi'||l==='en')document.documentElement.lang=l}catch(e){}</script>
+  <script>try { var d = document.documentElement, t = localStorage.getItem('eng_theme'); if (t === 'light' || t === 'dark') d.dataset.theme = t; if (localStorage.getItem('eng_motion') === 'reduce') d.dataset.motion = 'reduce'; var l = localStorage.getItem('eng_locale'); if (l === 'vi' || l === 'en') document.documentElement.lang = l } catch (e) { }</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>English Singularity</title>
 
@@ -16,7 +17,8 @@
   <link rel="apple-touch-icon" href="./icon-192.png" />
 
   <!-- Fonts: Inter & JetBrains Mono, vendored in public/fonts (no network request, works offline) -->
-  <link rel="preload" href="./fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2"
+    crossorigin />
   <link rel="stylesheet" href="./fonts/fonts.css" />
 
   <!-- Core Stylesheets -->
@@ -29,23 +31,108 @@
   <link rel="stylesheet" href="./src/assets/styles/ux-c.css" />
   <link rel="stylesheet" href="./src/assets/styles/tour-spotlight.css" />
   <link rel="stylesheet" href="./src/assets/styles/drills.css" />
+  <link rel="stylesheet" href="./src/assets/styles/floating-note.css" />
   <style>
-  #boot{position:fixed;inset:0;z-index:2147483000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:16px;background:var(--bg-canvas,#080a0f);color:var(--ink-secondary,#cbd5e1);font:500 14px/1.5 var(--font-sans,system-ui,sans-serif);text-align:center}
-  #boot .boot-row{display:flex;align-items:center;gap:8px}
-  #boot .boot-dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--accent-cyan,#38bdf8);animation:boot-pulse 1s ease-in-out infinite alternate}
-  #boot .boot-row,#boot button{opacity:0;animation:boot-in .2s ease-out .3s forwards}
-  #boot button{min-height:44px;padding:0 16px;font:inherit;color:var(--ink-primary,#f8fafc);background:none;border:1px solid var(--border-hairline,rgba(255,255,255,.1));border-radius:8px}
-  #boot[data-state=error] .boot-dot{animation:none;background:var(--accent-gold,#a5b4fc)}
-  @keyframes boot-in{to{opacity:1}}@keyframes boot-pulse{from{opacity:.3}to{opacity:1}}
-  @media (prefers-reduced-motion:reduce){#boot .boot-dot{animation:none}#boot .boot-row,#boot button{animation-duration:0s}}
-  html[data-motion=reduce] #boot .boot-dot{animation:none}html[data-motion=reduce] #boot .boot-row,html[data-motion=reduce] #boot button{animation-duration:0s}
+    #boot {
+      position: fixed;
+      inset: 0;
+      z-index: 2147483000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 16px;
+      background: var(--bg-canvas, #080a0f);
+      color: var(--ink-secondary, #cbd5e1);
+      font: 500 14px/1.5 var(--font-sans, system-ui, sans-serif);
+      text-align: center
+    }
+
+    #boot .boot-row {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    #boot .boot-dot {
+      flex: none;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-cyan, #38bdf8);
+      animation: boot-pulse 1s ease-in-out infinite alternate
+    }
+
+    #boot .boot-row,
+    #boot button {
+      opacity: 0;
+      animation: boot-in .2s ease-out .3s forwards
+    }
+
+    #boot button {
+      min-height: 44px;
+      padding: 0 16px;
+      font: inherit;
+      color: var(--ink-primary, #f8fafc);
+      background: none;
+      border: 1px solid var(--border-hairline, rgba(255, 255, 255, .1));
+      border-radius: 8px
+    }
+
+    #boot[data-state=error] .boot-dot {
+      animation: none;
+      background: var(--accent-gold, #a5b4fc)
+    }
+
+    @keyframes boot-in {
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes boot-pulse {
+      from {
+        opacity: .3
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      #boot .boot-dot {
+        animation: none
+      }
+
+      #boot .boot-row,
+      #boot button {
+        animation-duration: 0s
+      }
+    }
+
+    html[data-motion=reduce] #boot .boot-dot {
+      animation: none
+    }
+
+    html[data-motion=reduce] #boot .boot-row,
+    html[data-motion=reduce] #boot button {
+      animation-duration: 0s
+    }
   </style>
 </head>
+
 <body>
-  <div id="boot" role="status" aria-live="polite"><div class="boot-row"><span class="boot-dot" aria-hidden="true"></span><span id="boot-msg">Loading English Singularity</span></div></div>
-  <script>(function(){function f(m){var b=document.getElementById('boot');if(!b)return;b.dataset.state='error';document.getElementById('boot-msg').textContent=m;if(!b.querySelector('button')){var r=document.createElement('button');r.type='button';r.textContent='Reload';r.onclick=function(){location.reload()};b.appendChild(r)}}
-  setTimeout(function(){f('Still loading. Check your connection or reload.')},15000);
-  addEventListener('error',function(e){var t=e.target;if(t&&t!==window&&t.tagName!=='SCRIPT')return;f('The app could not start. Reload to try again.')},true)})();</script>
+  <div id="boot" role="status" aria-live="polite">
+    <div class="boot-row"><span class="boot-dot" aria-hidden="true"></span><span id="boot-msg">Loading English
+        Singularity</span></div>
+  </div>
+  <script>(function () {
+      function f(m) { var b = document.getElementById('boot'); if (!b) return; b.dataset.state = 'error'; document.getElementById('boot-msg').textContent = m; if (!b.querySelector('button')) { var r = document.createElement('button'); r.type = 'button'; r.textContent = 'Reload'; r.onclick = function () { location.reload() }; b.appendChild(r) } }
+      setTimeout(function () { f('Still loading. Check your connection or reload.') }, 15000);
+      addEventListener('error', function (e) { var t = e.target; if (t && t !== window && t.tagName !== 'SCRIPT') return; f('The app could not start. Reload to try again.') }, true)
+    })();</script>
   <div id="app">
     <!-- 2.5D Living Canvas Layer -->
     <div id="canvas-container">
@@ -78,4 +165,5 @@
   <!-- Main Entry Script (includes PWA Service Worker registration with update listener) -->
   <script type="module" src="./src/main.ts"></script>
 </body>
+
 </html>

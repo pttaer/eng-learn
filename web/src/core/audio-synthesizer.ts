@@ -24,7 +24,19 @@ export type SoundEffectType =
   | 'mechanical-click'
   | 'keystroke'
   | 'streak-chime'
-  | 'xp-pickup';
+  | 'xp-pickup'
+  | 'success-chord'
+  | 'nudge'
+  | 'bubble-pop'
+  | 'sparkle'
+  | 'quest-victory'
+  | 'whoosh'
+  | 'toggle-on'
+  | 'toggle-off'
+  | 'unlock'
+  | 'celebration'
+  | 'heartbeat'
+  | 'card-draw';
 
 export type SoundEffect = SoundEffectType;
 
@@ -542,6 +554,7 @@ export class AudioSynthesizer {
         this.musicGain.connect(this.masterGain);
         this.voiceGain.connect(this.masterGain);
         this.masterGain.connect(this.ctx.destination);
+        AcousticHaptics.attachAudioContext(this.ctx, this.sfxGain || this.masterGain);
 
         // Track context state transitions
         this.ctx.addEventListener('statechange', () => {
@@ -828,6 +841,53 @@ export class AudioSynthesizer {
       case 'xp-pickup':
         this.dispatchXpPickup();
         break;
+      case 'success-chord':
+        this.playSuccessChord(t);
+        HapticEngine.trigger('success');
+        break;
+      case 'nudge':
+        this.playNudge(t);
+        HapticEngine.trigger('warning');
+        break;
+      case 'bubble-pop':
+        this.playBubblePop(t);
+        HapticEngine.trigger('selection');
+        break;
+      case 'sparkle':
+        this.playSparkle(t);
+        HapticEngine.trigger('light');
+        break;
+      case 'whoosh':
+        AcousticHaptics.whoosh();
+        break;
+      case 'toggle-on':
+        AcousticHaptics.toggle(true);
+        HapticEngine.trigger('selection');
+        break;
+      case 'toggle-off':
+        AcousticHaptics.toggle(false);
+        HapticEngine.trigger('selection');
+        break;
+      case 'unlock':
+        AcousticHaptics.unlock();
+        HapticEngine.trigger('success');
+        break;
+      case 'celebration':
+        AcousticHaptics.celebration();
+        HapticEngine.trigger('success');
+        break;
+      case 'heartbeat':
+        AcousticHaptics.heartbeat();
+        HapticEngine.trigger('warning');
+        break;
+      case 'card-draw':
+        AcousticHaptics.cardDraw();
+        HapticEngine.trigger('light');
+        break;
+      case 'quest-victory':
+        this.playQuestVictory(t);
+        HapticEngine.trigger('success');
+        break;
       default:
         break;
     }
@@ -1047,16 +1107,18 @@ export class AudioSynthesizer {
   }
 
   /**
-   * Tactile 8-10ms micro-click with triangle wave and exponential decay.
+   * Tactile 8-10ms micro-click with anti-fatigue micro-pitch variance.
    */
   private static playTactileMicroClick(t: number): void {
     if (!this.ctx || !this.masterGain) return;
     const osc = this.ctx.createOscillator();
     const gain = this.ctx.createGain();
 
+    // Subtle ±3% micro-variance to eliminate robotic ear fatigue
+    const jitter = 0.97 + Math.random() * 0.06;
     osc.type = 'triangle';
-    osc.frequency.setValueAtTime(1200, t);
-    osc.frequency.exponentialRampToValueAtTime(300, t + 0.008);
+    osc.frequency.setValueAtTime(1200 * jitter, t);
+    osc.frequency.exponentialRampToValueAtTime(300 * jitter, t + 0.008);
 
     gain.gain.setValueAtTime(this.EPSILON, t);
     gain.gain.exponentialRampToValueAtTime(0.28, t + 0.001);
@@ -1067,6 +1129,166 @@ export class AudioSynthesizer {
 
     osc.start(t);
     osc.stop(t + 0.014);
+  }
+
+  /**
+   * Harmonious Pythagorean Just Intonation C-Major Success Chord:
+   * C5 (523.25Hz), E5 5:4 (654.06Hz), G5 3:2 (784.88Hz), C6 2:1 (1046.50Hz)
+   * Provides immediate, pleasant dopamine reward for cognitive reinforcement.
+   */
+  private static playSuccessChord(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+    const notes = [
+      { freq: 523.25, delay: 0.00, dur: 0.28, peak: 0.18 }, // C5
+      { freq: 654.06, delay: 0.035, dur: 0.30, peak: 0.20 }, // E5
+      { freq: 784.88, delay: 0.07, dur: 0.34, peak: 0.22 },  // G5
+      { freq: 1046.50, delay: 0.11, dur: 0.40, peak: 0.25 }  // C6
+    ];
+
+    notes.forEach(({ freq, delay, dur, peak }) => {
+      const osc = this.ctx!.createOscillator();
+      const gain = this.ctx!.createGain();
+
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(freq, t + delay);
+
+      const nStart = t + delay;
+      const nEnd = nStart + dur;
+
+      gain.gain.setValueAtTime(this.EPSILON, nStart);
+      gain.gain.exponentialRampToValueAtTime(peak, nStart + 0.004);
+      gain.gain.exponentialRampToValueAtTime(this.EPSILON, nEnd - 0.004);
+
+      osc.connect(gain);
+      gain.connect(this.masterGain!);
+
+      osc.start(nStart);
+      osc.stop(nEnd);
+    });
+  }
+
+  /**
+   * Gentle, compassionate retry cue (F4 349.23Hz down to D4 293.66Hz):
+   * Soft warm lowpass filtered triangle tone that signals an incorrect attempt
+   * with zero stress/cortisol induction.
+   */
+  private static playNudge(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+    const osc = this.ctx.createOscillator();
+    const filter = this.ctx.createBiquadFilter();
+    const gain = this.ctx.createGain();
+
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(349.23, t);
+    osc.frequency.exponentialRampToValueAtTime(293.66, t + 0.16);
+
+    filter.type = 'lowpass';
+    filter.frequency.setValueAtTime(800, t);
+
+    gain.gain.setValueAtTime(this.EPSILON, t);
+    gain.gain.exponentialRampToValueAtTime(0.24, t + 0.003);
+    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.18);
+
+    osc.connect(filter);
+    filter.connect(gain);
+    gain.connect(this.masterGain);
+
+    osc.start(t);
+    osc.stop(t + 0.19);
+  }
+
+  /**
+   * Organic bubble pop (550Hz -> 1350Hz in 14ms):
+   * Perfect tactile cue for chip selection and option toggles.
+   */
+  private static playBubblePop(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(550, t);
+    osc.frequency.exponentialRampToValueAtTime(1350, t + 0.014);
+
+    gain.gain.setValueAtTime(this.EPSILON, t);
+    gain.gain.exponentialRampToValueAtTime(0.25, t + 0.001);
+    gain.gain.exponentialRampToValueAtTime(this.EPSILON, t + 0.014);
+
+    osc.connect(gain);
+    gain.connect(this.masterGain);
+
+    osc.start(t);
+    osc.stop(t + 0.016);
+  }
+
+  /**
+   * Crystalline star sparkle arpeggio:
+   */
+  private static playSparkle(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+    const notes = [
+      { freq: 1046.50, delay: 0.00, dur: 0.22, peak: 0.15 },
+      { freq: 1318.51, delay: 0.045, dur: 0.22, peak: 0.16 },
+      { freq: 1567.98, delay: 0.09, dur: 0.24, peak: 0.18 },
+      { freq: 2093.00, delay: 0.135, dur: 0.30, peak: 0.20 }
+    ];
+
+    notes.forEach(({ freq, delay, dur, peak }) => {
+      const osc = this.ctx!.createOscillator();
+      const gain = this.ctx!.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, t + delay);
+
+      const nStart = t + delay;
+      const nEnd = nStart + dur;
+
+      gain.gain.setValueAtTime(this.EPSILON, nStart);
+      gain.gain.exponentialRampToValueAtTime(peak, nStart + 0.003);
+      gain.gain.exponentialRampToValueAtTime(this.EPSILON, nEnd - 0.004);
+
+      osc.connect(gain);
+      gain.connect(this.masterGain!);
+
+      osc.start(nStart);
+      osc.stop(nEnd);
+    });
+  }
+
+  /**
+   * Majestic Quest Victory celebration fanfare:
+   * Ascending C-E-G-B-C brass-like harmonic fanfare with warm presence.
+   */
+  private static playQuestVictory(t: number): void {
+    if (!this.ctx || !this.masterGain) return;
+    const chords = [
+      { freq: 523.25, delay: 0.00, dur: 0.18, peak: 0.22 }, // C5
+      { freq: 654.06, delay: 0.08, dur: 0.18, peak: 0.24 }, // E5
+      { freq: 784.88, delay: 0.16, dur: 0.22, peak: 0.26 }, // G5
+      { freq: 987.77, delay: 0.24, dur: 0.24, peak: 0.28 }, // B5
+      { freq: 1046.50, delay: 0.34, dur: 0.45, peak: 0.32 } // C6
+    ];
+
+    chords.forEach(({ freq, delay, dur, peak }) => {
+      const osc = this.ctx!.createOscillator();
+      const gain = this.ctx!.createGain();
+
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(freq, t + delay);
+
+      const nStart = t + delay;
+      const nEnd = nStart + dur;
+
+      gain.gain.setValueAtTime(this.EPSILON, nStart);
+      gain.gain.exponentialRampToValueAtTime(peak, nStart + 0.006);
+      gain.gain.exponentialRampToValueAtTime(this.EPSILON, nEnd - 0.006);
+
+      osc.connect(gain);
+      gain.connect(this.masterGain!);
+
+      osc.start(nStart);
+      osc.stop(nEnd);
+    });
   }
 
   /**

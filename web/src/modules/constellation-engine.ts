@@ -161,7 +161,7 @@ export class ConstellationEngine {
       {
         id: 'reading',
         name: 'Reading',
-        tagline: 'Hermeneutic & Analytic Intake',
+        tagline: 'Comprehension',
         iconName: 'book',
         routeTarget: 'read',
         skillId: 'reading',
@@ -178,7 +178,7 @@ export class ConstellationEngine {
       {
         id: 'writing',
         name: 'Writing',
-        tagline: 'Rhetorical & Forensic Composition',
+        tagline: 'Composition',
         iconName: 'edit',
         routeTarget: 'write',
         skillId: 'writing',
@@ -195,7 +195,7 @@ export class ConstellationEngine {
       {
         id: 'listening',
         name: 'Listening',
-        tagline: 'Phonetics & Connected Speech Mechanics',
+        tagline: 'Phonetics',
         iconName: 'headphones',
         routeTarget: 'listen',
         skillId: 'listening',
@@ -212,7 +212,7 @@ export class ConstellationEngine {
       {
         id: 'speaking',
         name: 'Speaking',
-        tagline: 'Acoustic & Fluency Lab (4-3-2)',
+        tagline: 'Fluency Lab',
         iconName: 'mic',
         routeTarget: 'speak',
         skillId: 'speaking',
@@ -229,7 +229,7 @@ export class ConstellationEngine {
       {
         id: 'collocations_grammar',
         name: 'Collocations / Grammar',
-        tagline: 'Lexical Collocations & Syntactic Architecture',
+        tagline: 'Syntax & Colloc',
         iconName: 'layers',
         routeTarget: 'colloc',
         skillId: 'vocab',

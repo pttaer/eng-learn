@@ -73,10 +73,10 @@ A woman sells flowers. They are pink and white. I want one flower. I ask, "How m
 - **Collocations**: fresh vegetables, eat vegetables, fruit and vegetables
 - **Etymology**: From Latin vegetabilis (alive, growing).
 
-### buy
+### buys
 - **Part of Speech**: verb
-- **IPA**: /baɪ/
-- **Definition**: To get something and give money for it.
+- **IPA**: /baɪz/
+- **Definition**: Gets something and gives money for it.
 - **Vietnamese**: mua
 - **Context**: My mother buys rice, fish and eggs.
 - **Collocations**: buy food, buy a bag, buy and sell
@@ -392,10 +392,10 @@ Sleep is also very important. Most adults need about eight hours every night. Yo
 - **Collocations**: good habit, bad habit, healthy habit
 - **Etymology**: Latin habitus (condition, way of being).
 
-### vegetable
+### vegetables
 - **Part of Speech**: noun
-- **IPA**: /ˈvedʒ.tə.bəl/
-- **Definition**: A plant that you eat, such as a carrot or an onion.
+- **IPA**: /ˈvedʒ.tə.bəlz/
+- **Definition**: Plants that you eat, such as carrots or onions.
 - **Vietnamese**: rau, rau củ
 - **Context**: It is also important to eat fruit and vegetables.
 - **Collocations**: fresh vegetables, eat vegetables, vegetable soup
@@ -664,11 +664,11 @@ In the evening, we were tired but happy. We sat on a bench and watched the sun g
 - **Collocations**: visit a museum, art museum, museum ticket
 - **Etymology**: Greek mouseion (place of the Muses).
 
-### swim
+### swam
 - **Part of Speech**: verb
-- **IPA**: /swɪm/
-- **Definition**: To move through water by using your arms and legs.
-- **Vietnamese**: bơi
+- **IPA**: /swæm/
+- **Definition**: Moved through water by using arms and legs (past form of swim).
+- **Vietnamese**: đã bơi
 - **Context**: Later, we swam in the sea, but the water was very cold.
 - **Collocations**: swim in the sea, swim in a pool, go for a swim
 - **Etymology**: Old English swimman.
@@ -881,10 +881,10 @@ If you want to learn a language, my advice is simple. Choose a goal that is real
 - **Collocations**: make progress, good progress, slow progress
 - **Etymology**: From Latin progressus, from progredi (to go forward).
 
-### habit
+### habits
 - **Part of Speech**: noun
-- **IPA**: /ˈhæb.ɪt/
-- **Definition**: Something that you do regularly, often without thinking.
+- **IPA**: /ˈhæb.ɪts/
+- **Definition**: Things that you do regularly, often without thinking.
 - **Vietnamese**: thói quen
 - **Context**: However, I have learned that small habits are more important than big efforts.
 - **Collocations**: a good habit, a bad habit, get into the habit
@@ -1010,11 +1010,11 @@ Of course, individual action is not enough on its own. Governments and companies
 - **Collocations**: disappear quickly, disappear completely, disappear from view
 - **Etymology**: From dis- (opposite) + appear, from Latin apparere.
 
-### recycle
+### recycled
 - **Part of Speech**: verb
-- **IPA**: /ˌriːˈsaɪ.kəl/
-- **Definition**: To treat used materials so that they can be used again.
-- **Vietnamese**: tái chế
+- **IPA**: /ˌriːˈsaɪ.kəld/
+- **Definition**: Treated so that materials can be used again.
+- **Vietnamese**: được tái chế
 - **Context**: In some places, old bottles can be returned and recycled, which is a good idea.
 - **Collocations**: recycle paper, recycle plastic, recycle waste
 - **Etymology**: From re- (again) + cycle, from Greek kyklos (circle).
@@ -1140,11 +1140,11 @@ I have tried both ways, and I have learned one important thing. Whatever you cho
 - **Collocations**: organise your time, organise a meeting, organise your work
 - **Etymology**: From French organiser, from Latin organum (tool, instrument).
 
-### colleague
+### colleagues
 - **Part of Speech**: noun
-- **IPA**: /ˈkɒl.iːɡ/
-- **Definition**: A person who works with you in the same company or team.
-- **Vietnamese**: đồng nghiệp
+- **IPA**: /ˈkɒl.iːɡz/
+- **Definition**: People who work with you in the same company or team.
+- **Vietnamese**: các đồng nghiệp
 - **Context**: Some people have told me that they feel lonely because they rarely see their colleagues.
 - **Collocations**: a work colleague, a former colleague, colleagues and friends
 - **Etymology**: From Latin collega (a partner in office).
@@ -1520,11 +1520,11 @@ Equally decisive is the spatial reorganization of residential life. The widespre
 - **Collocations**: regenerative agriculture, regenerative medicine, regenerative energy
 - **Etymology**: From Latin re- (again) + generare (to produce, bring forth).
 
-### curtail
+### curtailing
 - **Part of Speech**: verb
-- **IPA**: /kɜːˈteɪl/
-- **Definition**: To reduce in extent, quantity, or duration; to impose restrictions upon.
-- **Vietnamese**: cắt giảm, hạn chế bớt, thu hẹp
+- **IPA**: /kɜːˈteɪ.lɪŋ/
+- **Definition**: Reducing in extent, quantity, or duration; imposing restrictions upon.
+- **Vietnamese**: việc cắt giảm, hạn chế bớt, thu hẹp
 - **Context**: By curtailing dependency on private automobile transport, municipalities substantially reduce greenhouse emissions and mitigate pervasive respiratory illnesses.
 - **Collocations**: curtail emissions, curtail spending, curtail freedom
 - **Etymology**: From obsolete curtal (shortened horse's tail), influenced by French court (short).
@@ -1648,11 +1648,11 @@ Perhaps, she thought, this was what home had always meant: not a location but a 
 - **Collocations**: vertiginous drop, vertiginous heights, vertiginous sensation, vertiginous rise
 - **Etymology**: Latin vertiginosus (suffering from dizziness), from vertigo (a whirling), from vertere (to turn).
 
-### rescind
+### rescinded
 - **Part of Speech**: verb
-- **IPA**: /rɪˈsɪnd/
-- **Definition**: Formally revoke, cancel, or repeal an agreement, law, or decision.
-- **Vietnamese**: hủy bỏ, thu hồi, bãi bỏ (một thỏa thuận, quyết định)
+- **IPA**: /rɪˈsɪndɪd/
+- **Definition**: Formally revoked, cancelled, or repealed (an agreement, law, or decision).
+- **Vietnamese**: bị hủy bỏ, bị bãi bỏ
 - **Context**: The pact could lapse, but it could not be entirely rescinded.
 - **Collocations**: rescind a decision, rescind an order, rescind a contract, rescind an offer
 - **Etymology**: Latin rescindere (to cut off, annul), from re- (back) + scindere (to split).
@@ -2072,11 +2072,11 @@ Newer techniques appear to offer partial remedies, at least for certain groups o
 - **Collocations**: extrapolate from data, extrapolate a trend, extrapolate beyond the range, cautiously extrapolate
 - **Etymology**: Coined from extra- (outside) + interpolate, from Latin interpolare (to refurbish, alter).
 
-### privilege
+### privileging
 - **Part of Speech**: verb
-- **IPA**: /ˈprɪv.əl.ɪdʒ/
-- **Definition**: Treat one thing as more important or authoritative than others, often without sufficient justification.
-- **Vietnamese**: đặt ưu tiên, coi trọng hơn hẳn, ưu ái một yếu tố so với các yếu tố khác
+- **IPA**: /ˈprɪv.əl.ɪdʒ.ɪŋ/
+- **Definition**: Treating one thing as more important or authoritative than others.
+- **Vietnamese**: việc đặt ưu tiên, coi trọng hơn hẳn
 - **Context**: Some ecologists have therefore advocated reporting a family of related measures, often expressed as effective numbers of species, rather than privileging any single index.
 - **Collocations**: privilege one interpretation over another, privilege theory over practice, privileging any single index
 - **Etymology**: Latin privilegium (a law for an individual), from privus (private) + lex, leg- (law).
@@ -2370,19 +2370,19 @@ A society that wished to be civilized rather than merely busy would therefore tr
 - **Collocations**: reward diligence, due diligence, admirable diligence
 - **Etymology**: Latin diligentia, from diligere (to value, love).
 
-### inducement
+### inducements
 - **Part of Speech**: noun
-- **IPA**: /ɪnˈdjuːs.mənt/
-- **Definition**: Something that persuades or influences a person to do something, such as a reward or benefit.
-- **Vietnamese**: sự khuyến khích, động cơ thúc đẩy, khoản ưu đãi
+- **IPA**: /ɪnˈdjuːs.mənts/
+- **Definition**: Things that persuade or influence a person to do something, such as rewards or benefits.
+- **Vietnamese**: các khoản ưu đãi, động cơ thúc đẩy
 - **Context**: A society in which people feel uneasy whenever they rest is a society in which employers need offer fewer inducements, since the workers will police themselves.
 - **Collocations**: offer an inducement, financial inducement, strong inducement
 - **Etymology**: From Latin inducere (to lead in), via Old French enduire.
 
-### atrophy
+### atrophies
 - **Part of Speech**: verb
-- **IPA**: /ˈæt.rə.fi/
-- **Definition**: To waste away or weaken gradually through lack of use.
+- **IPA**: /ˈæt.rə.fiz/
+- **Definition**: Wastes away or weakens gradually through lack of use.
 - **Vietnamese**: teo đi, suy yếu dần do không được sử dụng
 - **Context**: Leisure is a skill, and like any skill it atrophies without practice.
 - **Collocations**: muscles atrophy, skills atrophy, atrophy through disuse

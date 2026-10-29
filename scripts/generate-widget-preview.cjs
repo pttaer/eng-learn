@@ -350,15 +350,26 @@ async function main() {
   fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
   fs.mkdirSync(path.dirname(OUT_SCREENSHOT), { recursive: true });
 
-  await page.screenshot({
-    path: OUT_FILE,
-    omitBackground: true
-  });
-
-  await page.screenshot({
-    path: OUT_SCREENSHOT,
-    omitBackground: true
-  });
+  const card = await page.$('.widget-card');
+  if (card) {
+    await card.screenshot({
+      path: OUT_FILE,
+      omitBackground: true
+    });
+    await card.screenshot({
+      path: OUT_SCREENSHOT,
+      omitBackground: true
+    });
+  } else {
+    await page.screenshot({
+      path: OUT_FILE,
+      omitBackground: true
+    });
+    await page.screenshot({
+      path: OUT_SCREENSHOT,
+      omitBackground: true
+    });
+  }
 
   await browser.close();
   console.log('✅ Generated widget preview at:', OUT_FILE);
