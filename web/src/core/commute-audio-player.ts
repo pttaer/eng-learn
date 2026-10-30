@@ -62,6 +62,8 @@ export class CommuteAudioPlayer {
   // Every state change bumps this. Callbacks from a superseded speech chain see the mismatch and stop.
   private static runId = 0;
   private static hashListenerAttached = false;
+  private static escHandler: ((e: KeyboardEvent) => void) | null = null;
+  private static isAnswerRevealed = false;
 
   // 0.5 s of 8 kHz 8-bit silence, so the loop has real duration. Whether iOS Safari
   // keeps background audio alive on it is unverified and needs a device test.
@@ -227,6 +229,7 @@ export class CommuteAudioPlayer {
 
     const item = this.playlist[this.currentIndex];
     this.updateMediaMetadata(item);
+    this.isAnswerRevealed = false;
     this.updatePlayerUI();
 
     // Step 1: speak the prompt with the word blanked out
@@ -235,6 +238,8 @@ export class CommuteAudioPlayer {
       this.pauseTimer = window.setTimeout(() => {
         this.pauseTimer = null;
         // Step 3: reveal the word, then the model sentence
+        this.isAnswerRevealed = true;
+        this.updatePlayerUI();
         this.speakUtterance(`${item.answer}. ${item.contextSentence ?? ''}`, run, () => {
           // Step 4: short gap, then the next item
           this.pauseTimer = window.setTimeout(() => {
@@ -300,12 +305,25 @@ export class CommuteAudioPlayer {
       }
     });
 
+    this.escHandler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        this.close();
+      }
+    };
+    window.addEventListener('keydown', this.escHandler, true);
+
     this.renderPlayer(sheet);
     void this.ensurePlaylist();
   }
 
   // Closing the sheet always stops playback, so the loop never runs unseen
   public static close(): void {
+    if (this.escHandler) {
+      window.removeEventListener('keydown', this.escHandler, true);
+      this.escHandler = null;
+    }
     this.pause();
     if (this.modalEl) {
       this.modalEl.remove();
@@ -326,7 +344,15 @@ export class CommuteAudioPlayer {
     const playBtn = this.modalEl.querySelector('.commute-btn-play');
 
     if (promptEl) promptEl.textContent = item.prompt;
-    if (answerEl) answerEl.textContent = item.answer;
+    if (answerEl) {
+      if (this.isAnswerRevealed || !this.isPlaying) {
+        answerEl.textContent = item.answer;
+        answerEl.classList.remove('is-masked');
+      } else {
+        answerEl.textContent = '••••••••';
+        answerEl.classList.add('is-masked');
+      }
+    }
     if (meaningEl) meaningEl.textContent = item.meaning;
     if (categoryEl) categoryEl.textContent = item.category;
     if (indexEl) indexEl.textContent = `${this.currentIndex + 1} / ${this.playlist.length}`;
@@ -359,9 +385,9 @@ export class CommuteAudioPlayer {
           <div class="commute-item-prompt">${item.prompt}</div>
         </div>
 
-        <div class="commute-answer-wrapper">
+        <div class="commute-answer-wrapper" style="cursor: pointer;" title="Tap to toggle answer visibility">
           <span class="commute-sub-label">${t('commute.target_resolution', undefined, 'TARGET RESOLUTION')}</span>
-          <div class="commute-item-answer">${item.answer}</div>
+          <div class="commute-item-answer">${this.isAnswerRevealed || !this.isPlaying ? item.answer : '••••••••'}</div>
           <div class="commute-item-meaning">${item.meaning}</div>
         </div>
       </div>
@@ -396,6 +422,12 @@ export class CommuteAudioPlayer {
     `;
 
     container.querySelector('.commute-btn-close')?.addEventListener('click', () => this.close());
+
+    container.querySelector('.commute-answer-wrapper')?.addEventListener('click', () => {
+      this.isAnswerRevealed = !this.isAnswerRevealed;
+      this.updatePlayerUI();
+      HapticEngine.trigger('selection');
+    });
 
     container.querySelector('.commute-btn-play')?.addEventListener('click', () => {
       this.toggle();

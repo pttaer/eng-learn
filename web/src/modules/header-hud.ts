@@ -147,13 +147,13 @@ export class HeaderHUD {
           <span class="telemetry-value telemetry-retention" style="color: var(--good); font-weight: 700;">${stats.retentionRate}%</span>
         </div>
         <div class="telemetry-item telemetry-budget-item" title="Quỹ thời gian học: Click để đổi (15m / 30m / 60m)" style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
-          <span class="telemetry-label" style="font-size: var(--font-kicker);">BUDGET:</span>
+          <span class="telemetry-label" style="font-size: var(--font-kicker);">${t('nav.budget', undefined, 'BUDGET')}:</span>
           <span class="telemetry-value telemetry-budget" style="color: var(--accent-cyan); font-weight: 700;">⏱️ ${timeBudget}m</span>
         </div>
         ${examDaysRemaining != null ? `
           <div class="telemetry-item telemetry-exam-item" title="Đếm ngược ngày thi IELTS" style="display: flex; align-items: center; gap: 6px;">
-            <span class="telemetry-label" style="font-size: var(--font-kicker);">EXAM:</span>
-            <span class="telemetry-value" style="color: var(--accent-gold); font-weight: 700;">⏳ ${examDaysRemaining >= 0 ? `${examDaysRemaining}d` : 'Ended'}</span>
+            <span class="telemetry-label" style="font-size: var(--font-kicker);">${t('nav.exam', undefined, 'EXAM')}:</span>
+            <span class="telemetry-value" style="color: var(--accent-gold); font-weight: 700;">⏳ ${examDaysRemaining >= 0 ? `${examDaysRemaining}d` : t('nav.ended', undefined, 'Ended')}</span>
           </div>
         ` : ''}
       </div>
@@ -163,8 +163,8 @@ export class HeaderHUD {
           ⏱️ ${timeBudget}m
         </button>
         ${examDaysRemaining != null ? `
-          <button class="hud-btn btn-exam-pill" title="Target Exam: ${examDaysRemaining >= 0 ? `${examDaysRemaining} days remaining` : 'Ended'}. Click to view Settings" aria-label="Target Exam Countdown">
-            ⏳ ${examDaysRemaining >= 0 ? `${examDaysRemaining}d` : 'Ended'}
+          <button class="hud-btn btn-exam-pill" title="Target Exam: ${examDaysRemaining >= 0 ? `${examDaysRemaining} days remaining` : t('nav.ended', undefined, 'Ended')}. Click to view Settings" aria-label="Target Exam Countdown">
+            ⏳ ${examDaysRemaining >= 0 ? `${examDaysRemaining}d` : t('nav.ended', undefined, 'Ended')}
           </button>
         ` : ''}
         <button class="hud-btn btn-streak-pill" title="${t('nav.daily_streak', undefined, 'Daily Streak')}: ${currentStreak} days. ${t('nav.view_workout', undefined, 'Click to view Daily Workout on Constellation Tree')}" aria-label="Daily Streak: ${currentStreak} days">
@@ -199,7 +199,7 @@ export class HeaderHUD {
           ${icon('zap', 12)} ${t('nav.level', undefined, 'LVL')} ${progression.level}<span class="btn-label"> • ${progression.xp} XP</span>
         </button>
         <button class="hud-btn btn-cognitive-mode-toggle" title="Toggle Cognitive Scaffolding Mode (Gentle vs Cockpit)" aria-label="Toggle Cognitive Scaffolding Mode">
-          ${CognitiveScaffoldingEngine.isGentle() ? '🌱' : '⚡'}<span class="btn-label"> ${CognitiveScaffoldingEngine.isGentle() ? 'Gentle' : 'Cockpit'}</span>
+          ${CognitiveScaffoldingEngine.isGentle() ? '🌱' : '⚡'}<span class="btn-label"> ${CognitiveScaffoldingEngine.isGentle() ? t('nav.scaffolding_gentle', undefined, 'Gentle') : t('nav.scaffolding_cockpit', undefined, 'Cockpit')}</span>
         </button>
         <button class="hud-btn btn-zen-toggle ${ZenMode.isZen() ? 'active' : ''}" title="${t('nav.zen_immersion_mode', undefined, 'Toggle Zen Immersion Mode (Hotkey: Z)')}" aria-label="${t('nav.zen_immersion_mode', undefined, 'Toggle Zen Immersion Mode')}" aria-pressed="${ZenMode.isZen()}">${HeaderHUD.zenLabel(ZenMode.isZen())}</button>
         <button class="hud-btn btn-theme-toggle" title="${t('nav.theme_toggle', undefined, 'Toggle Theme (Dark / Light)')}" aria-label="${t('nav.theme_toggle', undefined, 'Toggle Theme')}">${this.themeLabel()}</button>
@@ -743,7 +743,7 @@ export class HeaderHUD {
         <div class="mobile-action-sheet-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%; box-sizing: border-box; margin-bottom: 16px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px; flex-shrink: 0;">
           <div style="display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1;">
             <span style="color: var(--accent-gold); display: flex; align-items: center; flex-shrink: 0;">${icon('menu', 16)}</span>
-            <span class="telemetry-label" style="font-weight: 700; color: var(--ink-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${t('nav.mobile_controls', undefined, 'MOBILE CONTROLS')}</span>
+            <span class="telemetry-label" style="font-weight: 700; color: var(--ink-primary); white-space: normal; line-height: 1.3;">${t('nav.mobile_controls', undefined, 'MOBILE CONTROLS')}</span>
           </div>
           <button type="button" class="sheet-btn-close btn-modal-close" aria-label="${t('common.close', undefined, 'Close')}">✕</button>
         </div>
@@ -768,6 +768,12 @@ export class HeaderHUD {
           <button class="hud-btn sheet-btn-progression" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
             <span style="color: var(--accent-gold); display: inline-flex;">${icon('zap', 16)}</span> <span>${t('nav.level', undefined, 'Level')} ${progression.level} • ${progression.xp} XP ${t('widget.quests', undefined, 'Quests')}</span>
           </button>
+          <button class="hud-btn sheet-btn-habits" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
+            <span style="color: var(--accent-gold); display: inline-flex;">${icon('flame', 16)}</span> <span>${t('nav.habits_mission_log', undefined, 'Habits & 30-Day Mission Log')}</span>
+          </button>
+          <a href="./ielts.html" class="hud-btn sheet-btn-ielts-suite" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px; text-decoration: none; display: flex; align-items: center;">
+            <span style="color: var(--accent-gold); display: inline-flex;">${icon('graduationCap', 16)}</span> <span>${t('nav.ielts_academic_suite', undefined, 'IELTS Academic Suite (7.0+)')}</span>
+          </a>
           <button class="hud-btn sheet-btn-mediation" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
             <span style="color: var(--accent-cyan, #38bdf8); display: inline-flex;">${icon('scale', 16)}</span> <span>${t('nav.cefr_mediation', undefined, 'CEFR Mediation Workbench')}</span>
           </button>
@@ -778,7 +784,7 @@ export class HeaderHUD {
             <span style="color: var(--accent-purple, #a855f7); display: inline-flex;">${icon('layers', 16)}</span> <span>${t('nav.analytics_serl', undefined, 'CEFR Analytics & SERL Dashboard')}</span>
           </button>
           <button class="hud-btn sheet-btn-tenses" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-            <span style="color: var(--accent-gold); display: inline-flex;">${icon('clock', 16)}</span> <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${t('dossier.twelve_tenses', undefined, '12 Tenses Master Vault')}</span>
+            <span style="color: var(--accent-gold); display: inline-flex;">${icon('clock', 16)}</span> <span style="white-space: normal; line-height: 1.35;">${t('dossier.twelve_tenses', undefined, '12 Tenses Master Vault')}</span>
           </button>
           <button class="hud-btn sheet-btn-mistake-vault" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
             <span style="color: var(--critical, #ef4444); display: inline-flex;">${icon('target', 16)}</span> <span>${t('nav.mistake_vault', undefined, 'Smart Mistake Vault & Blitz')}</span>
@@ -889,6 +895,17 @@ export class HeaderHUD {
       AudioSynthesizer.play('click');
       close();
       ProgressionModal.open();
+    });
+
+    sheet.querySelector('.sheet-btn-habits')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      close();
+      window.location.hash = '#habits';
+    });
+
+    sheet.querySelector('.sheet-btn-ielts-suite')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      close();
     });
 
     sheet.querySelector('.sheet-btn-mediation')?.addEventListener('click', () => {

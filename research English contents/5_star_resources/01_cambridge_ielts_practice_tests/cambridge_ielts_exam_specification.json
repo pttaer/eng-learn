@@ -1,0 +1,297 @@
+{
+  "title": "Cambridge IELTS Practice Tests Academic (Books 1 – 19)",
+  "publisher": "Cambridge University Press & Assessment",
+  "evaluation": "⭐⭐⭐⭐⭐ (5/5) — Gold Standard for Academic IELTS",
+  "exam_format": {
+    "listening": {
+      "duration_minutes": 30,
+      "sections": 4,
+      "total_questions": 40,
+      "section_details": [
+        {
+          "section": 1,
+          "context": "Everyday social conversation between 2 speakers",
+          "item_types": "Form completion, notes, table completion",
+          "difficulty": "Moderate (Band 4-6)"
+        },
+        {
+          "section": 2,
+          "context": "Monologue set in everyday social context (e.g. speech, guided tour)",
+          "item_types": "Multiple choice, map/plan/diagram labelling",
+          "difficulty": "Moderate (Band 5-7)"
+        },
+        {
+          "section": 3,
+          "context": "Academic discussion between 2-4 speakers (e.g. university tutor & students)",
+          "item_types": "Matching, multiple choice with 2 answers",
+          "difficulty": "Hard (Band 6-8)"
+        },
+        {
+          "section": 4,
+          "context": "University lecture / academic monologue",
+          "item_types": "Summary completion, notes completion (no pause in middle)",
+          "difficulty": "Very Hard (Band 7-9)"
+        }
+      ]
+    },
+    "reading": {
+      "duration_minutes": 60,
+      "passages": 3,
+      "total_questions": 40,
+      "total_word_count": "2,150 – 2,750 words",
+      "passage_details": [
+        {
+          "passage": 1,
+          "difficulty": "Descriptive / factual academic topic",
+          "questions": 13,
+          "recommended_time": "17 mins"
+        },
+        {
+          "passage": 2,
+          "difficulty": "Discursive / analytical topic with opinions",
+          "questions": 13,
+          "recommended_time": "20 mins"
+        },
+        {
+          "passage": 3,
+          "difficulty": "Complex argumentative / philosophical topic with dense reasoning",
+          "questions": 14,
+          "recommended_time": "23 mins"
+        }
+      ]
+    },
+    "writing": {
+      "duration_minutes": 60,
+      "tasks": [
+        {
+          "task": 1,
+          "type": "Visual data report (Graph, Chart, Table, Process, Map)",
+          "min_words": 150,
+          "weight": "33.3%",
+          "recommended_time": "20 mins"
+        },
+        {
+          "task": 2,
+          "type": "Discursive academic essay",
+          "min_words": 250,
+          "weight": "66.7%",
+          "recommended_time": "40 mins"
+        }
+      ]
+    },
+    "speaking": {
+      "duration_minutes": "11 – 14",
+      "parts": [
+        {
+          "part": 1,
+          "name": "Introduction & Interview",
+          "duration": "4 – 5 mins",
+          "focus": "Familiar personal topics (home, study, hobbies, hometown)"
+        },
+        {
+          "part": 2,
+          "name": "Long Turn (Individual Cue Card)",
+          "duration": "3 – 4 mins (1 min prep, 2 mins speech)",
+          "focus": "Narrative flow, coherence, detailed description"
+        },
+        {
+          "part": 3,
+          "name": "Two-way Discussion",
+          "duration": "4 – 5 mins",
+          "focus": "Abstract analysis, speculation, societal implications"
+        }
+      ]
+    }
+  },
+  "score_conversion_table": {
+    "academic_reading": [
+      {
+        "raw_score": "39-40",
+        "band": 9.0
+      },
+      {
+        "raw_score": "37-38",
+        "band": 8.5
+      },
+      {
+        "raw_score": "35-36",
+        "band": 8.0
+      },
+      {
+        "raw_score": "33-34",
+        "band": 7.5
+      },
+      {
+        "raw_score": "30-32",
+        "band": 7.0
+      },
+      {
+        "raw_score": "27-29",
+        "band": 6.5
+      },
+      {
+        "raw_score": "23-26",
+        "band": 6.0
+      },
+      {
+        "raw_score": "19-22",
+        "band": 5.5
+      },
+      {
+        "raw_score": "15-18",
+        "band": 5.0
+      }
+    ],
+    "listening": [
+      {
+        "raw_score": "39-40",
+        "band": 9.0
+      },
+      {
+        "raw_score": "37-38",
+        "band": 8.5
+      },
+      {
+        "raw_score": "35-36",
+        "band": 8.0
+      },
+      {
+        "raw_score": "32-34",
+        "band": 7.5
+      },
+      {
+        "raw_score": "30-31",
+        "band": 7.0
+      },
+      {
+        "raw_score": "26-29",
+        "band": 6.5
+      },
+      {
+        "raw_score": "23-25",
+        "band": 6.0
+      },
+      {
+        "raw_score": "18-22",
+        "band": 5.5
+      },
+      {
+        "raw_score": "16-17",
+        "band": 5.0
+      }
+    ]
+  },
+  "reading_question_types_taxonomy": [
+    {
+      "type": "Matching Headings",
+      "target_skill": "Grasping central paragraph theme (Skimming & main idea identification)",
+      "rules": "Headings outnumber paragraphs; headings express the essence, not supporting details",
+      "common_traps": "Keywords from distractor headings appear as incidental mentions inside the paragraph",
+      "strategy": "Read paragraph first, formulate personal 1-sentence summary, then match with heading options."
+    },
+    {
+      "type": "True / False / Not Given",
+      "target_skill": "Factual verification against passage claims",
+      "definitions": {
+        "True": "The passage confirms the statement agrees with the information",
+        "False": "The statement directly contradicts the claim in the passage (Passage says X; statement says Opposite of X)",
+        "Not Given": "The passage neither confirms nor contradicts; the specific relationship or claim is absent or cannot be proven"
+      },
+      "common_traps": "Confusing 'False' with 'Not Given'. If statement mentions an unmentioned superlative ('the most important factor'), it is Not Given, not False."
+    },
+    {
+      "type": "Yes / No / Not Given",
+      "target_skill": "Identifying writer's views, claims, or attitude",
+      "definitions": {
+        "Yes": "The statement agrees with the views/claims of the writer",
+        "No": "The statement contradicts the views/claims of the writer",
+        "Not Given": "It is impossible to say what the writer thinks about this"
+      }
+    },
+    {
+      "type": "Summary Completion with Word Bank",
+      "target_skill": "Synthesizing paraphrase and identifying parts of speech",
+      "strategy": "Identify required part of speech (noun, verb, adjective) and grammar agreement before scanning word box."
+    },
+    {
+      "type": "Matching Information to Paragraphs",
+      "target_skill": "Locating specific details across the whole passage (Scanning)",
+      "rules": "Paragraph letters may be used more than once if 'NB: You may use any letter more than once' appears."
+    },
+    {
+      "type": "Multiple Choice (Single & Double Answer)",
+      "target_skill": "Differentiating main assertions from distractor details",
+      "rules": "Distractors often quote verbatim phrases from the text but reverse polarity or add extreme qualifiers."
+    }
+  ],
+  "books_1_to_19_syllabus": [
+    {
+      "book": 19,
+      "year": 2024,
+      "status": "Current Official",
+      "tests_count": 4,
+      "key_passage_themes": [
+        "Tennis racket string physics",
+        "The ecological impact of synthetic dyes",
+        "Archaeological digs in Mesopotamia",
+        "Cognitive psychology of memory consolidation"
+      ]
+    },
+    {
+      "book": 18,
+      "year": 2023,
+      "status": "Current Official",
+      "tests_count": 4,
+      "key_passage_themes": [
+        "Urban farming technologies",
+        "The evolution of the flute",
+        "Forest biomimetics",
+        "Consciousness and sleep research"
+      ]
+    },
+    {
+      "book": 17,
+      "year": 2022,
+      "status": "Current Official",
+      "tests_count": 4,
+      "key_passage_themes": [
+        "The development of London underground railway",
+        "Stadium engineering",
+        "Animal behaviour & tool use",
+        "Antarctic ice core climate samples"
+      ]
+    },
+    {
+      "book": 16,
+      "year": 2021,
+      "status": "Current Official",
+      "tests_count": 4,
+      "key_passage_themes": [
+        "Roman shipbuilding",
+        "Climate change and butterflies",
+        "Plant communication networks",
+        "The future of work & automation"
+      ]
+    },
+    {
+      "book": 15,
+      "year": 2020,
+      "status": "Current Official",
+      "tests_count": 4,
+      "key_passage_themes": [
+        "Nutmeg trade history",
+        "Driverless cars",
+        "Exploration of subterranean caverns",
+        "Environmental tourism in New Zealand"
+      ]
+    },
+    {
+      "books_10_to_14": "Gold Standard Modern Corpus (2015-2019)",
+      "description": "Books 10-14 reflect current modern question formatting, accurate distractor weighting, and contemporary academic themes."
+    },
+    {
+      "books_1_to_9": "Historical Corpus (1996-2014)",
+      "description": "Useful for question drills, but question styles and audio pacing in Books 1-6 reflect older exam standards."
+    }
+  ]
+}

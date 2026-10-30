@@ -824,7 +824,7 @@ export class ReadingDossier {
       <div class="skim-timer-bar">
         <div class="skim-timer-info">
           <span>${t('reading.skim_countdown', undefined, 'SKIM COUNTDOWN:')} </span>
-          <strong class="timer-display-text val-time" role="timer" aria-live="polite" aria-atomic="true" style="font-size: var(--font-body-compact);">00:${String(this.skimSecondsRemaining).padStart(2, '0')}</strong>
+          <strong class="timer-display-text val-time" role="timer" aria-live="polite" aria-atomic="true" style="font-size: var(--font-body-compact);">${String(Math.floor(this.skimSecondsRemaining / 60)).padStart(2, '0')}:${String(this.skimSecondsRemaining % 60).padStart(2, '0')}</strong>
         </div>
         <div class="skim-timer-actions">
           <button type="button" class="hud-btn btn-toggle-timer ${this.isSkimTimerRunning ? 'is-running' : ''}">
@@ -984,7 +984,7 @@ export class ReadingDossier {
         this.skimTimerInterval = setInterval(() => {
           if (this.skimSecondsRemaining > 0) {
             this.skimSecondsRemaining -= 1;
-            if (timerText) timerText.textContent = `00:${String(this.skimSecondsRemaining).padStart(2, '0')}`;
+            if (timerText) timerText.textContent = `${String(Math.floor(this.skimSecondsRemaining / 60)).padStart(2, '0')}:${String(this.skimSecondsRemaining % 60).padStart(2, '0')}`;
           } else {
             clearInterval(this.skimTimerInterval);
             this.isSkimTimerRunning = false;

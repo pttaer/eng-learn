@@ -1,0 +1,322 @@
+{
+  "title": "5-Star English Learning Resources Master Repository",
+  "description": "Comprehensive local crawl and structured knowledge base of all 16 Five-Star (⭐⭐⭐⭐⭐ 5/5) resources identified in ENGLISH_LEARNING_SOURCES.md",
+  "source_document": "research English contents/ENGLISH_LEARNING_SOURCES.md",
+  "total_resources": 16,
+  "resources": [
+    {
+      "folder": "01_cambridge_ielts_practice_tests",
+      "section": "1.1",
+      "name": "Cambridge IELTS Practice Tests (Books 1 – 19)",
+      "source": "Cambridge University Press & Assessment",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "Testing & Academic IELTS",
+      "description": "The absolute gold standard for Academic IELTS testing. Authentic exam structure, raw-to-band score conversion, 14 reading question types taxonomy, distractor analysis, and complete Books 1-19 syllabus.",
+      "files": [
+        {
+          "filename": "cambridge_ielts_exam_specification.json",
+          "size_bytes": 9294
+        },
+        {
+          "filename": "README.md",
+          "size_bytes": 2739
+        }
+      ]
+    },
+    {
+      "folder": "02_ielts_simon",
+      "section": "1.3",
+      "name": "IELTS Simon (Simon Corcoran)",
+      "source": "ielts-simon.com / Simon IELTS Video Courses",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "Testing & Academic IELTS",
+      "description": "Ex-examiner minimalist method: 'Simple is best'. Standard 4-paragraph essay frameworks, Task 1 visual report templates without numbers in overviews, speaking frameworks, and 31 authentic archived blog lessons.",
+      "files": [
+        {
+          "filename": "README.md",
+          "size_bytes": 3933
+        },
+        {
+          "filename": "simon_ielts_methodology_and_archives.json",
+          "size_bytes": 4975
+        }
+      ]
+    },
+    {
+      "folder": "03_manchester_academic_phrasebank",
+      "section": "2.1",
+      "name": "Manchester Academic Phrasebank",
+      "source": "phrasebank.manchester.ac.uk (University of Manchester)",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "Corpora & Academic Writing",
+      "description": "Over 200 academic sentence stems categorized across core research paper stages: Introducing work, Referring to sources, Describing methods, Reporting results, Discussing findings, Writing conclusions, and Hedging/Being critical.",
+      "files": [
+        {
+          "filename": "manchester_phrasebank_complete.json",
+          "size_bytes": 135875
+        },
+        {
+          "filename": "README.md",
+          "size_bytes": 56989
+        }
+      ]
+    },
+    {
+      "folder": "04_skell_sketch_engine",
+      "section": "2.2",
+      "name": "SKELL (Sketch Engine for Language Learning)",
+      "source": "skell.sketchengine.eu",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "Corpora & Collocations",
+      "description": "Streamlined syntactic collocation engine. Word Sketches, syntactic object/subject collocates, dependent prepositions, and real concordance examples for core academic verbs and nouns.",
+      "files": [
+        {
+          "filename": "README.md",
+          "size_bytes": 3022
+        },
+        {
+          "filename": "skell_academic_collocations.json",
+          "size_bytes": 4419
+        }
+      ]
+    },
+    {
+      "folder": "05_longman_dictionary_ldoce",
+      "section": "2.6",
+      "name": "Longman Dictionary of Contemporary English (LDOCE Online)",
+      "source": "ldoceonline.com",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "Lexicography & Grammar Patterns",
+      "description": "Learner dictionary benchmark with Longman 2,000 Defining Vocabulary, syntactic complementation grammar patterns (V + -ing vs V + to-inf), and high-band IELTS theme collocation boxes.",
+      "files": [
+        {
+          "filename": "ldoce_grammar_and_collocations.json",
+          "size_bytes": 4305
+        },
+        {
+          "filename": "README.md",
+          "size_bytes": 2331
+        }
+      ]
+    },
+    {
+      "folder": "06_academic_word_list_awl",
+      "section": "2.7",
+      "name": "Academic Word List (AWL) by Averil Coxhead",
+      "source": "victoria.ac.nz/lals/resources/academicwordlist (Victoria University of Wellington)",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "Academic Vocabulary",
+      "description": "Complete crawl of all 10 AWL Sublists from Victoria University containing 2,542 word forms across 570 headwords, complete word families (noun, verb, adjective, adverb variations).",
+      "files": [
+        {
+          "filename": "awl_complete_sublists_1_to_10.json",
+          "size_bytes": 249151
+        },
+        {
+          "filename": "README.md",
+          "size_bytes": 9227
+        }
+      ]
+    },
+    {
+      "folder": "07_purdue_owl",
+      "section": "3.1",
+      "name": "Purdue OWL (Online Writing Lab)",
+      "source": "owl.purdue.edu (Purdue University)",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "Academic Writing & Rhetoric",
+      "description": "World benchmark for academic composition: Thesis statement formulation formulas (tension & causation), M.E.A.L. paragraph plan, transitional signposts, and wordiness elimination table.",
+      "files": [
+        {
+          "filename": "purdue_owl_academic_writing.json",
+          "size_bytes": 3032
+        },
+        {
+          "filename": "README.md",
+          "size_bytes": 1397
+        }
+      ]
+    },
+    {
+      "folder": "08_dr_geoff_lindsey_phonetics",
+      "section": "4.1",
+      "name": "Dr. Geoff Lindsey (English Speech Services)",
+      "source": "englishspeechservices.com / YouTube Dr. Geoff Lindsey",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "Phonetics & Modern RP",
+      "description": "Acoustic phonetics and Modern British pronunciation (SSBE). Why traditional IPA charts mislead, the GOAT/FLEECE/TRAP shifts, glottal stop /ʔ/ environments, intrusive /r/, and nuclear tone pitch movements.",
+      "files": [
+        {
+          "filename": "geoff_lindsey_modern_phonetics.json",
+          "size_bytes": 1787
+        },
+        {
+          "filename": "README.md",
+          "size_bytes": 1062
+        }
+      ]
+    },
+    {
+      "folder": "09_rachels_english",
+      "section": "4.2",
+      "name": "Rachel's English",
+      "source": "rachelsenglish.com / YouTube Rachel's English",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "Phonetics & General American",
+      "description": "General American phonetics masterclass. The 4 American T sounds (True, Flap, Stop, Silent), stress-timed rhythm, vowel reduction to schwa /ə/, jaw drop, and chest resonance.",
+      "files": [
+        {
+          "filename": "rachels_english_american_phonetics.json",
+          "size_bytes": 2337
+        },
+        {
+          "filename": "README.md",
+          "size_bytes": 1505
+        }
+      ]
+    },
+    {
+      "folder": "10_youglish",
+      "section": "4.4",
+      "name": "YouGlish",
+      "source": "youglish.com",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "Pronunciation in Context",
+      "description": "Search query operators (:us, :uk, :aus, #tag, \"quotes\"), 4-stage shadowing methodology (0.75x -> 1.0x -> simultaneous -> recording), and curated high-impact query packs for tricky minimal pairs.",
+      "files": [
+        {
+          "filename": "README.md",
+          "size_bytes": 2080
+        },
+        {
+          "filename": "youglish_speech_mining_guide.json",
+          "size_bytes": 2790
+        }
+      ]
+    },
+    {
+      "folder": "11_lukes_english_podcast",
+      "section": "5.1",
+      "name": "Luke's English Podcast (LEP)",
+      "source": "teacherluke.co.uk",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "Listening & Natural British English",
+      "description": "CELTA/DELTA extensive listening framework: 1-2 hour unscripted authentic episodes, natural discourse markers, idiom deconstruction, and latest harvested episode feeds.",
+      "files": [
+        {
+          "filename": "lukes_english_podcast_curriculum.json",
+          "size_bytes": 3885
+        },
+        {
+          "filename": "README.md",
+          "size_bytes": 3236
+        }
+      ]
+    },
+    {
+      "folder": "12_npr_podcasts",
+      "section": "5.3",
+      "name": "NPR (Planet Money, Fresh Air)",
+      "source": "npr.org",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "High-Level Spoken & Analytical Listening",
+      "description": "Educated American journalistic audio repository: Planet Money economics, Fresh Air cultural critique, intellectual discourse markers ('As it turns out', 'What struck me was'), and episode transcripts.",
+      "files": [
+        {
+          "filename": "npr_journalism_repository.json",
+          "size_bytes": 4606
+        },
+        {
+          "filename": "README.md",
+          "size_bytes": 3716
+        }
+      ]
+    },
+    {
+      "folder": "13_aeon_essays_psyche",
+      "section": "6.1",
+      "name": "Aeon Essays & Psyche",
+      "source": "aeon.co / psyche.co",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "Critical Reading & Intellectual Essays",
+      "description": "Long-form intellectual essays across Philosophy, Mind, Ecology, and Society. Model prose for IELTS Reading Passage 3 and Band 9 Task 2, counter-argument moves, and syntactic subordination.",
+      "files": [
+        {
+          "filename": "aeon_essays_repository.json",
+          "size_bytes": 3221
+        },
+        {
+          "filename": "README.md",
+          "size_bytes": 2689
+        }
+      ]
+    },
+    {
+      "folder": "14_toastmasters_international",
+      "section": "7.1",
+      "name": "Toastmasters International",
+      "source": "toastmasters.org",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "Speaking, Fluency & Public Discourse",
+      "description": "Public speaking & impromptu mastery: P.R.E.P., O.R.E.O., and Past-Present-Future frameworks; Ah-Counter crutch-word elimination; and 5 curated IELTS Part 3 impromptu prompt themes.",
+      "files": [
+        {
+          "filename": "README.md",
+          "size_bytes": 2645
+        },
+        {
+          "filename": "toastmasters_speaking_playbook.json",
+          "size_bytes": 3742
+        }
+      ]
+    },
+    {
+      "folder": "15_anki_srs_ecosystem",
+      "section": "8.5",
+      "name": "Anki & Spaced Repetition System (SRS)",
+      "source": "apps.ankiweb.net",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "Spaced Repetition & Sentence Mining",
+      "description": "FSRS vs SM-2 modern algorithms, Wozniak's 20 Rules of Formulating Knowledge, and ready-to-import flashcard deck (TSV) with cloze deletions for Academic Word List.",
+      "files": [
+        {
+          "filename": "anki_import_ready_awl_cloze.tsv",
+          "size_bytes": 127460
+        },
+        {
+          "filename": "anki_srs_master_guide.json",
+          "size_bytes": 3235
+        },
+        {
+          "filename": "README.md",
+          "size_bytes": 2076
+        }
+      ]
+    },
+    {
+      "folder": "16_business_economic_english",
+      "section": "8.7",
+      "name": "Business & Economic English (The Economist & HBR)",
+      "source": "economist.com / hbr.org",
+      "rating": "⭐⭐⭐⭐⭐ (5/5)",
+      "category": "Business, Economics & Leadership Writing",
+      "description": "The Economist Style Guide (George Orwell's 5 rules of lean prose), HBR Case Study Analytical Blueprint, and Master Macroeconomic Lexicon with high-tier collocations.",
+      "files": [
+        {
+          "filename": "business_economic_english_guide.json",
+          "size_bytes": 3225
+        },
+        {
+          "filename": "README.md",
+          "size_bytes": 2629
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_resources": 16,
+    "total_files": 33,
+    "total_size_bytes": 731062,
+    "total_size_formatted": "0.70 MB"
+  }
+}

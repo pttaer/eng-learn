@@ -631,8 +631,9 @@ select {
 .hud-btn.btn-back-tree,
 .hud-btn.btn-level,
 .hud-status-badge.btn-level {
-  height: 36px;
-  min-height: 36px;
+  height: var(--touch-target-min, 44px);
+  min-height: var(--touch-target-min, 44px);
+  min-width: var(--touch-target-min, 44px);
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   font-family: var(--font-mono);
@@ -1229,6 +1230,15 @@ body.zen-active,
   pointer-events: auto;
 }
 
+@media (max-width: 768px) {
+  .zen-floating-pill {
+    top: 12px;
+    transform: translate(-50%, 0);
+    opacity: 0.95;
+    pointer-events: auto;
+  }
+}
+
 .zen-pill-icon {
   font-size: 14px;
   color: var(--accent-gold, #f59e0b);
@@ -1499,7 +1509,6 @@ body.zen-active,
     text-transform: uppercase;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
     max-width: 100%;
     text-align: center;
   }
@@ -1533,7 +1542,6 @@ body.zen-active,
     color: var(--accent-gold);
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
     text-align: center;
     clip-path: inset(0 100% 0 0);
     transition: clip-path 420ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -2050,7 +2058,7 @@ body.zen-active,
 .mistake-vault-sheet {
   width: 100%;
   max-width: 540px;
-  max-height: 85vh;
+  max-height: min(85dvh, calc(100dvh - 32px));
   overflow-y: auto;
   background: var(--bg-surface, #0f1319);
   border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.12));

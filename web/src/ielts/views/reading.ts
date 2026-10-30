@@ -9,6 +9,7 @@ import { renderParagraphSpans, mergeHighlightRanges } from '../reading-engine';
 import { icon } from '../../utils/icons';
 import { t } from '../../core/i18n';
 import { StorageManager } from '../../utils/storage';
+import { setIeltsTestInProgress } from '../confirm-dialog';
 
 const PASSAGES = readingData as ReadingPassage[];
 
@@ -116,6 +117,7 @@ export function mountReadingTest(
   onDone?: (r: TestResult) => void
 ): () => void {
   root.innerHTML = '';
+  setIeltsTestInProgress('reading');
   let timer: Countdown | null = null;
   const bar = h('div', 'ie-testbar');
   const clock = h('span', 'ie-clock');
@@ -170,15 +172,15 @@ export function mountReadingTest(
     ergoBar.innerHTML = `
       <div style="display: flex; align-items: center; gap: 6px;">
         <span style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted); text-transform: uppercase;">Cỡ chữ:</span>
-        <button type="button" class="ie-btn ie-btn-sm ie-ergo-font-minus" style="min-height: 32px; padding: 2px 10px; font-weight: 700;" ${currentFontSizeIdx === 0 ? 'disabled' : ''}>A-</button>
+        <button type="button" class="ie-btn ie-btn-sm ie-ergo-font-minus" style="min-height: var(--touch-target-min, 44px); min-width: var(--touch-target-min, 44px); padding: 4px 10px; font-weight: 700;" ${currentFontSizeIdx === 0 ? 'disabled' : ''}>A-</button>
         <span style="font-family: var(--font-mono); font-size: 12px; min-width: 32px; text-align: center; color: var(--accent-gold);">${FONT_SIZES[currentFontSizeIdx]}</span>
-        <button type="button" class="ie-btn ie-btn-sm ie-ergo-font-plus" style="min-height: 32px; padding: 2px 10px; font-weight: 700;" ${currentFontSizeIdx === FONT_SIZES.length - 1 ? 'disabled' : ''}>A+</button>
+        <button type="button" class="ie-btn ie-btn-sm ie-ergo-font-plus" style="min-height: var(--touch-target-min, 44px); min-width: var(--touch-target-min, 44px); padding: 4px 10px; font-weight: 700;" ${currentFontSizeIdx === FONT_SIZES.length - 1 ? 'disabled' : ''}>A+</button>
       </div>
       <div style="display: flex; align-items: center; gap: 6px;">
-        <button type="button" class="ie-btn ie-btn-sm ie-ergo-font-family ${isSerif ? 'active' : ''}" style="min-height: 32px; padding: 2px 12px;">
+        <button type="button" class="ie-btn ie-btn-sm ie-ergo-font-family ${isSerif ? 'active' : ''}" style="min-height: var(--touch-target-min, 44px); padding: 4px 12px;">
           ${isSerif ? '📖 Serif' : '🔤 Sans'}
         </button>
-        <button type="button" class="ie-btn ie-btn-sm ie-ergo-line-height ${isRelaxed ? 'active' : ''}" style="min-height: 32px; padding: 2px 12px;">
+        <button type="button" class="ie-btn ie-btn-sm ie-ergo-line-height ${isRelaxed ? 'active' : ''}" style="min-height: var(--touch-target-min, 44px); padding: 4px 12px;">
           ${isRelaxed ? '↕ Giãn rộng' : '↕ Giãn chuẩn'}
         </button>
       </div>
@@ -558,6 +560,7 @@ export function mountReadingTest(
     dockQuestionsBtn.textContent = `✍️ ${t('ielts.questions_label', undefined, 'Questions')} (${total.raw}/${total.of})`;
     const band = rawToBand('reading', total.raw, total.of);
     addAttempt({ skill: 'reading', itemId: passages.map(p => p.id).join('+'), band, raw: total.raw, of: total.of, byType: total.byType, mock });
+    setIeltsTestInProgress(null);
     result.hidden = false;
     const correctText = t('reading.result_correct', { raw: total.raw, of: total.of }, `${total.raw}/${total.of} correct`);
     const noteText = `${t('reading.result_note', undefined, 'Band is scaled to 40 questions.')} ${total.of < 40 ? t('reading.short_sets_note', undefined, 'Short sets give a rough guide only.') : ''}`;
@@ -588,6 +591,7 @@ export function mountReadingTest(
   }
 
   return () => {
+    setIeltsTestInProgress(null);
     timer?.stop();
     root.removeEventListener('focusin', onFocusIn);
     root.removeEventListener('focusout', onFocusOut);

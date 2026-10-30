@@ -902,9 +902,29 @@ export class MediationDossier {
       </div>
     `;
 
+    const closeModal = () => {
+      window.removeEventListener('keydown', onKeyDown, true);
+      modal.remove();
+    };
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        closeModal();
+      }
+    };
+    window.addEventListener('keydown', onKeyDown, true);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
     modal.querySelector('.btn-close-modal')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
-      modal.remove();
+      closeModal();
     });
 
     document.body.appendChild(modal);

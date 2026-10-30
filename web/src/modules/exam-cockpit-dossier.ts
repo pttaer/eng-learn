@@ -473,7 +473,8 @@ export class ExamCockpitDossier {
 
     return `
       <div class="cd-test-hub-overlay" id="cd-test-hub-overlay" role="dialog" aria-modal="true" aria-labelledby="cd-test-hub-title">
-        <div class="cd-test-hub-card">
+        <div class="cd-test-hub-card" style="position: relative;">
+          <button type="button" class="cd-test-hub-close" id="btn-close-test-hub" aria-label="${t('common.close', undefined, 'Close')}" style="position: absolute; top: 16px; right: 16px; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; background: transparent; border: none; color: var(--ink-muted); font-size: 20px; cursor: pointer; border-radius: var(--radius-btn, 10px); z-index: 5;">✕</button>
           <header class="cd-test-hub-header">
             <span class="cd-test-hub-kicker">${t('cockpit.test_hub_kicker', undefined, 'OFFICIAL CD-IELTS EXAM HUB · TEST CATALOG')}</span>
             <h2 class="cd-test-hub-title" id="cd-test-hub-title">${t('cockpit.test_hub_title', undefined, 'Select Standardized CD-IELTS Test')}</h2>
@@ -1232,9 +1233,16 @@ export class ExamCockpitDossier {
       this.openTestHub();
     });
 
-    this.container.querySelector('#btn-preview-exam-station')?.addEventListener('click', () => {
+    this.container.querySelector('#btn-preview-exam-station, #btn-close-test-hub')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
       this.closeTestHub();
+    });
+
+    this.container.querySelector('#cd-test-hub-overlay')?.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).id === 'cd-test-hub-overlay') {
+        AudioSynthesizer.play('click');
+        this.closeTestHub();
+      }
     });
 
     this.container.querySelector('#btn-start-selected-exam')?.addEventListener('click', () => {
@@ -1484,6 +1492,18 @@ export class ExamCockpitDossier {
     const activeEl = document.activeElement;
     const isInput = activeEl && (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA');
 
+    if (key === 'Escape') {
+      if (this.showTestHubModal) {
+        if (event) { event.preventDefault(); event.stopPropagation(); }
+        this.closeTestHub();
+        return true;
+      }
+      if (this.isExamActive()) {
+        if (event) { event.preventDefault(); event.stopPropagation(); }
+        return true;
+      }
+    }
+
     // Alt + N -> Next question
     if (event && event.altKey && (key === 'n' || key === 'N')) {
       event.preventDefault();
@@ -1607,10 +1627,10 @@ export class ExamCockpitDossier {
           ${t('cockpit.submit_title', undefined, 'Review Before Final Lock')}
         </h2>
 
-        <div class="cd-summary-stats-box" style="display: flex; justify-content: space-around; margin: 16px 0; padding: 12px; background: var(--bg-surface-sunk); border-radius: 6px;">
-          <div><strong>${answeredCount}</strong> / 40 ${t('cockpit.submit_answered', undefined, 'Answered')}</div>
-          <div><strong>${40 - answeredCount}</strong> ${t('cockpit.submit_unanswered', undefined, 'Unanswered')}</div>
-          <div style="color: var(--accent-gold);"><strong>${flaggedCount}</strong> ${t('cockpit.submit_flagged', undefined, 'Flagged')}</div>
+        <div class="cd-summary-stats-box" style="display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; gap: 8px; margin: 16px 0; padding: 12px; background: var(--bg-surface-sunk); border-radius: 8px;">
+          <div style="display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: var(--font-h3); color: var(--accent-cyan);">${answeredCount} / 40</strong><span style="font-size: var(--font-kicker); color: var(--ink-secondary); text-transform: uppercase;">${t('cockpit.submit_answered', undefined, 'Answered')}</span></div>
+          <div style="display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: var(--font-h3); color: var(--ink-muted);">${40 - answeredCount}</strong><span style="font-size: var(--font-kicker); color: var(--ink-secondary); text-transform: uppercase;">${t('cockpit.submit_unanswered', undefined, 'Unanswered')}</span></div>
+          <div style="display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: var(--font-h3); color: var(--accent-gold);">${flaggedCount}</strong><span style="font-size: var(--font-kicker); color: var(--accent-gold); text-transform: uppercase;">${t('cockpit.submit_flagged', undefined, 'Flagged')}</span></div>
         </div>
 
         <p style="font-size: var(--font-body-compact); color: var(--ink-muted); margin-bottom: 20px;">
@@ -1628,14 +1648,34 @@ export class ExamCockpitDossier {
       </div>
     `;
 
+    const closeModal = () => {
+      window.removeEventListener('keydown', onKeyDown, true);
+      modal.remove();
+    };
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        closeModal();
+      }
+    };
+    window.addEventListener('keydown', onKeyDown, true);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
     modal.querySelector('.btn-cancel-submit')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
-      modal.remove();
+      closeModal();
     });
 
     modal.querySelector('.btn-confirm-submit')?.addEventListener('click', () => {
       AudioSynthesizer.play('absorb');
-      modal.remove();
+      closeModal();
       this.submitAndGradeExam(false);
     });
 
@@ -1854,20 +1894,40 @@ export class ExamCockpitDossier {
 
     document.body.appendChild(modal);
 
+    const closeModal = () => {
+      window.removeEventListener('keydown', onKeyDown, true);
+      modal.remove();
+    };
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        closeModal();
+      }
+    };
+    window.addEventListener('keydown', onKeyDown, true);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
     modal.querySelector('.btn-hub-return')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
-      modal.remove();
+      closeModal();
       this.openTestHub();
     });
 
     modal.querySelector('.btn-close-report')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
-      modal.remove();
+      closeModal();
     });
 
     modal.querySelector('.btn-retake-exam')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
-      modal.remove();
+      closeModal();
       this.isReviewMode = false;
       this.timerSeconds = 3600;
       this.activeQuestionIndex = 0;
@@ -1880,7 +1940,7 @@ export class ExamCockpitDossier {
 
     modal.querySelector('.btn-review-exam')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
-      modal.remove();
+      closeModal();
       this.isReviewMode = true;
       this.activeQuestionIndex = 0;
       this.render();

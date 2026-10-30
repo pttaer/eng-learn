@@ -1,0 +1,59 @@
+{
+  "title": "Rachel's English: General American Pronunciation & Connected Speech",
+  "author": "Rachel Smith",
+  "url": "https://rachelsenglish.com",
+  "evaluation": "⭐⭐⭐⭐⭐ (5/5) — Gold Standard for General American Pronunciation",
+  "the_4_american_t_sounds": [
+    {
+      "type": "1. True T [t]",
+      "environment": "At the start of a word or stressed syllable (e.g. *time, return*), or in a consonant cluster like /st/, /tr/ (*stay, train*).",
+      "mechanic": "Clear air burst / puff of air released from the alveolar ridge."
+    },
+    {
+      "type": "2. Flap T [ɾ]",
+      "environment": "When T falls between two vowel sounds and the second syllable is unstressed (e.g. *water, city, better, butter, get it*).",
+      "mechanic": "The tongue tip quickly strikes the alveolar ridge once without building up air pressure. Sounds identical to a quick Spanish single 'r'."
+    },
+    {
+      "type": "3. Stop T / Glottal Stop [t̚]",
+      "environment": "At the end of a word when followed by a consonant sound, or before /n/ (e.g. *fitness, button, written, that book, wait for*).",
+      "mechanic": "Air is stopped completely in the vocal tract or at the vocal cords, but NOT released."
+    },
+    {
+      "type": "4. Silent T [ø]",
+      "environment": "Commonly dropped after 'N' in casual conversational American speech (e.g. *internet* -> 'innernet', *twenty* -> 'twenny', *center* -> 'cenner')."
+    }
+  ],
+  "american_rhythm_and_reductions": {
+    "common_reductions": [
+      {
+        "full": "to",
+        "reduced": "/tə/",
+        "example": "I want to go -> I wanna go"
+      },
+      {
+        "full": "for",
+        "reduced": "/fər/",
+        "example": "This is for you -> /fər juː/"
+      },
+      {
+        "full": "and",
+        "reduced": "/ən/ or /n/",
+        "example": "Black and white -> /blæk ən waɪt/"
+      },
+      {
+        "full": "can",
+        "reduced": "/kən/",
+        "example": "I can do it -> /aɪ kən duː ɪt/ (Unstressed)"
+      },
+      {
+        "full": "have",
+        "reduced": "/əv/",
+        "example": "Could have -> could've /kʊdəv/"
+      }
+    ]
+  },
+  "mouth_mechanics": {
+    "vocal_placement": "American English resonates in the chest and throat, giving it a rich, resonant acoustic quality, compared to British head/nasal placement."
+  }
+}

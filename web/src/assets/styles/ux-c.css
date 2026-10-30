@@ -132,7 +132,6 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     font-size: var(--font-kicker) !important;
     white-space: nowrap !important;
     overflow: hidden !important;
-    text-overflow: ellipsis !important;
   }
 
   .hud-header .active-route-badge {
@@ -157,7 +156,8 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   .hud-header .btn-level,
   .hud-status-badge.btn-level {
-    min-width: 36px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
     padding: 0 6px !important;
     font-size: var(--font-kicker) !important;
     white-space: nowrap !important;
@@ -168,6 +168,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   .hud-header .btn-budget-pill,
   .hud-header .btn-exam-pill {
     padding: 0 6px !important;
+    min-height: 44px !important;
     font-size: var(--font-kicker) !important;
     white-space: nowrap !important;
     flex-shrink: 0 !important;
@@ -175,7 +176,8 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   .level-tab {
     padding: 4px 6px !important;
-    min-width: 36px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
     box-sizing: border-box !important;
     white-space: nowrap !important;
     font-size: var(--font-kicker) !important;
@@ -1206,7 +1208,6 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   .workout-task-chip>span:last-child {
     overflow: hidden !important;
-    text-overflow: ellipsis !important;
     white-space: nowrap !important;
     min-width: 0 !important;
     flex: 1 1 auto !important;
@@ -1411,13 +1412,12 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   }
 
   .deck-branch-name {
-    font-size: 13.5px !important;
+    font-size: var(--font-body-compact) !important;
     font-weight: 700 !important;
     line-height: 1.2 !important;
     margin: 0 !important;
     white-space: nowrap !important;
     overflow: hidden !important;
-    text-overflow: ellipsis !important;
   }
 
   .deck-branch-tagline {
@@ -1643,7 +1643,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   /* Responsive 6-col CEFR selector for modal */
   .skill-level-btn {
-    min-height: 40px !important;
+    min-height: var(--touch-target-min, 44px) !important;
     font-size: 12px !important;
     border-radius: var(--radius-btn, 10px) !important;
   }

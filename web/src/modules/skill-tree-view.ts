@@ -862,15 +862,32 @@ export class SkillTreeView {
     }
 
     const closeModal = () => {
+      window.removeEventListener('keydown', onKeyDown, true);
       AudioSynthesizer.play('click');
       modal.remove();
     };
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        closeModal();
+      }
+    };
+    window.addEventListener('keydown', onKeyDown, true);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
 
     modal.querySelectorAll('.btn-modal-close, .skill-node-close-btn').forEach(btn => {
       btn.addEventListener('click', closeModal);
     });
 
     modal.querySelector('.btn-launch-drill')?.addEventListener('click', () => {
+      window.removeEventListener('keydown', onKeyDown, true);
       AudioSynthesizer.play('click');
       modal.remove();
       if (this.onNavigate) {
@@ -879,6 +896,7 @@ export class SkillTreeView {
     });
 
     modal.querySelector('.btn-train-prereq')?.addEventListener('click', () => {
+      window.removeEventListener('keydown', onKeyDown, true);
       AudioSynthesizer.play('click');
       modal.remove();
       if (this.onNavigate) {

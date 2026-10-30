@@ -298,7 +298,6 @@ html[data-theme="light"] {
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
-  --radius-btn: 10px;
   --radius-full: 9999px;
 
   /* Elevation Shadows & Luminous Glows */
@@ -343,4 +342,17 @@ html[data-theme="light"] {
 
 ::-webkit-scrollbar-corner {
   background: transparent;
+}
+
+/* Canonical Desktop Inset Tier (Single 768px Breakpoint Invariant) */
+@media (width > 768px) {
+  :root {
+    --pad-screen-left: 24px;
+    --pad-screen-right: 24px;
+    --pad-screen-x: 24px;
+    --pad-screen: 24px;
+    --pad-workspace-left: 24px;
+    --pad-workspace-right: 24px;
+    --pad-workspace: 24px 24px 32px 24px;
+  }
 }

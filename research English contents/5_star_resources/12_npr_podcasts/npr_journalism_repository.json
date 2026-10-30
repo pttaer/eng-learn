@@ -1,0 +1,105 @@
+{
+  "title": "NPR Journalistic Spoken English & Audio Repository",
+  "network": "National Public Radio (NPR)",
+  "source": "npr.org",
+  "evaluation": "⭐⭐⭐⭐⭐ (5/5) — Gold Standard for Educated Spoken American English",
+  "intellectual_spoken_features": {
+    "pacing": "Deliberate narrative pacing (140-160 words per minute) with clear rhythmic chunking.",
+    "discourse_markers": [
+      {
+        "marker": "As it turns out...",
+        "function": "Revealing unexpected reality or scientific finding"
+      },
+      {
+        "marker": "What struck me was...",
+        "function": "Highlighting key insight or anomaly"
+      },
+      {
+        "marker": "Here's the thing...",
+        "function": "Directing listener attention to the crux of the problem"
+      },
+      {
+        "marker": "At the end of the day...",
+        "function": "Synthesizing ultimate conclusion or bottom line"
+      }
+    ]
+  },
+  "shows": {
+    "Planet Money": {
+      "category": "Economics, Markets & Human Behavior",
+      "feed": "https://feeds.npr.org/510289/podcast.xml",
+      "episodes": [
+        {
+          "title": "Politicians are afraid to fix taxes. So 100 citizens tried.",
+          "link": "https://www.npr.org/2026/10/28/nx-s1-6019535/connecticut-citizen-assembly-property-tax-lottery"
+        },
+        {
+          "title": "How surveillance crept up on us",
+          "link": "https://www.npr.org/2026/10/23/nx-s1-5991699/surveillance-new-york-city-nypd-police-security"
+        },
+        {
+          "title": "We try to fix election polling (update)",
+          "link": "https://www.npr.org/2026/10/21/nx-s1-6009849/midterms-polling-election-marist"
+        },
+        {
+          "title": "Anatomy of a movie market",
+          "link": "https://www.npr.org/2026/10/16/nx-s1-6005392/sundance-hollywood-movies-apple-disney"
+        },
+        {
+          "title": "Wanna slow down AI? These biologists can help.",
+          "link": "https://www.npr.org/2026/10/14/nx-s1-6002910/ai-scientific-regulation-conference-asilomar"
+        },
+        {
+          "title": "Should we all be getting tariff refunds right now?",
+          "link": "https://www.npr.org/2026/10/09/nx-s1-5996901/days-of-our-tariffs-refunds-video-games"
+        },
+        {
+          "title": "Charles Ponzi's scheme (plus a new scam)",
+          "link": "https://www.npr.org/2026/10/07/nx-s1-5992800/charles-ponzis-scheme-plus-a-new-scam"
+        },
+        {
+          "title": "Where all those weird new drinks are coming from",
+          "link": "https://www.npr.org/2026/10/02/nx-s1-5989651/flavorman-adaptogens-probiotic-functional-soda-seltzer-drink"
+        }
+      ]
+    },
+    "Fresh Air": {
+      "category": "Arts, Culture, Author Interviews & Journalism",
+      "feed": "https://feeds.npr.org/381444908/podcast.xml",
+      "episodes": [
+        {
+          "title": "Who benefits when massive AI data centers come to town?",
+          "link": "https://www.npr.org/2026/10/29/nx-s1-6022239/who-benefits-when-massive-ai-data-centers-come-to-town"
+        },
+        {
+          "title": "How the killing of Jordan Neely on the NYC subway divided America",
+          "link": "https://www.npr.org/2026/10/28/nx-s1-6020558/how-the-killing-of-jordan-neely-on-the-nyc-subway-divided-america"
+        },
+        {
+          "title": "Los Javis filmmakers fight fascism and homophobia with ‘La Bola Negra’",
+          "link": "https://www.npr.org/2026/10/27/nx-s1-6019412/los-javis-filmmakers-fight-fascism-and-homophobia-with-la-bola-negra"
+        },
+        {
+          "title": "'New Yorker' cartoonists confess to nightmare kitchens",
+          "link": "https://www.npr.org/2026/10/26/nx-s1-6017708/new-yorker-cartoonists-confess-to-nightmare-kitchens"
+        },
+        {
+          "title": "Best Of: Meshell Ndegeocello / Betty Gilpin",
+          "link": "https://www.npr.org/2026/10/24/nx-s1-6014572/best-of-meshell-ndegeocello-betty-gilpin"
+        },
+        {
+          "title": "Platinum songwriter Jimmy Webb\n",
+          "link": "https://www.npr.org/2026/10/23/nx-s1-6014569/platinum-songwriter-jimmy-webb"
+        },
+        {
+          "title": "Betty Gilpin is seeking anti-algorithm, weird roles – and it's working",
+          "link": "https://www.npr.org/2026/10/22/nx-s1-6012329/betty-gilpin-is-seeking-anti-algorithm-weird-roles-and-its-working"
+        },
+        {
+          "title": "Election experts share concerns about the midterms",
+          "link": "https://www.npr.org/2026/10/21/nx-s1-6010650/election-experts-share-concerns-about-the-midterms"
+        }
+      ]
+    }
+  }
+}

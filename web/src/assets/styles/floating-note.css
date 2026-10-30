@@ -41,6 +41,19 @@
   border-color: var(--accent-gold, #a5b4fc);
 }
 
+body.has-active-modal .floating-note-bubble,
+body:has(.modal-backdrop) .floating-note-bubble,
+body:has(.hud-modal-overlay) .floating-note-bubble,
+body:has(.mistake-vault-modal-overlay) .floating-note-bubble,
+body:has(.completion-modal-overlay) .floating-note-bubble,
+body:has(#skill-node-modal) .floating-note-bubble,
+body:has(#ielts-confirm-dialog) .floating-note-bubble,
+body:has(.ie-tip-modal-overlay.is-active) .floating-note-bubble {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
 .floating-note-bubble .bubble-grip {
   display: flex;
   align-items: center;
@@ -157,9 +170,8 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--accent-cyan, #a5b4fc);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  line-height: 1.3;
 }
 
 .floating-note-header-controls {

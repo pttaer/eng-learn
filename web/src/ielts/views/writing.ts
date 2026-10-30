@@ -15,6 +15,7 @@ import { bandBadge, countdown, Countdown, esc, fmtTime, h } from '../ui';
 import { icon } from '../../utils/icons';
 import { t } from '../../core/i18n';
 import { StorageManager, DEFAULT_PREFLIGHT_RULES } from '../../utils/storage';
+import { setIeltsTestInProgress } from '../confirm-dialog';
 
 const T1 = w1Data as Task1Prompt[];
 const T2 = w2Data as Task2Prompt[];
@@ -579,6 +580,7 @@ function mountEditor(
     const w = wc();
     count.textContent = `${w} / ${min} words`;
     count.classList.toggle('ie-urgent', w > 0 && w < min);
+    setIeltsTestInProgress(w > 0 && !submit.disabled ? 'writing' : null);
   });
   count.textContent = `0 / ${min} words`;
 
@@ -595,6 +597,7 @@ function mountEditor(
   submit.addEventListener('click', () => {
     timer?.stop();
     timer = null;
+    setIeltsTestInProgress(null);
     submit.disabled = true;
     area.readOnly = true;
     const r = analyse(area.value, task);
@@ -661,7 +664,10 @@ function mountEditor(
     out.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
-  return () => timer?.stop();
+  return () => {
+    setIeltsTestInProgress(null);
+    timer?.stop();
+  };
 }
 
 export function writingView(root: HTMLElement): () => void {

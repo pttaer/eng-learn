@@ -18,6 +18,7 @@ import { bandBadge, esc, h } from '../ui';
 import { TestResult } from './reading';
 import { icon } from '../../utils/icons';
 import { t } from '../../core/i18n';
+import { setIeltsTestInProgress } from '../confirm-dialog';
 
 const SECTIONS = listeningData as ListeningSection[];
 
@@ -46,6 +47,7 @@ export function evidenceLineIndexes(sec: ListeningSection, questionIds: Set<stri
 /** Runs sections in order. exam=true plays each section once (no replay); practice allows replay and shows the transcript after submit. */
 export function mountListeningTest(root: HTMLElement, sections: ListeningSection[], exam: boolean, mock: boolean, onDone?: (r: TestResult) => void): () => void {
   root.innerHTML = '';
+  setIeltsTestInProgress('listening');
   let playback: Playback | null = null;
   const bar = h('div', 'ie-testbar');
   const status = h('span', 'ie-clock', ttsAvailable() ? t('listening.press_play', undefined, 'Press Play to start') : t('listening.tts_unavailable', undefined, 'Text-to-speech is not available in this browser'));
@@ -163,6 +165,7 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
     });
     const band = rawToBand('listening', total.raw, total.of);
     addAttempt({ skill: 'listening', itemId: sections.map(s => s.id).join('+'), band, raw: total.raw, of: total.of, byType: total.byType, mock });
+    setIeltsTestInProgress(null);
     result.hidden = false;
     const correctText = t('reading.result_correct', { raw: total.raw, of: total.of }, `${total.raw}/${total.of} correct`);
     const noteText = t('listening.result_note', undefined, 'Band is scaled to 40 questions. Browser voices are not real exam audio; treat the band as a guide.');
@@ -175,6 +178,7 @@ export function mountListeningTest(root: HTMLElement, sections: ListeningSection
 
   refresh();
   return () => {
+    setIeltsTestInProgress(null);
     playback?.stop();
     replay?.stop();
     setExamRoomAmbience(false);
@@ -192,7 +196,8 @@ export function listeningView(root: HTMLElement): () => void {
     list
   );
   SECTIONS.forEach(s => {
-    const spkText = t('listening.speakers_count', { count: s.speakers.length }, `${s.speakers.length} speakers`);
+    const spkKey = s.speakers.length === 1 ? 'listening.speakers_count_one' : 'listening.speakers_count';
+    const spkText = t(spkKey, { count: s.speakers.length }, s.speakers.length === 1 ? '1 speaker' : `${s.speakers.length} speakers`);
     const qCountText = t('listening.questions_count', { count: s.questions.length }, `${s.questions.length} questions`);
     const c = h('button', 'ie-card', `<b>${t('ielts.section', undefined, 'Section')} ${s.section}: ${esc(s.title)}</b><span>${spkText}</span><small>${qCountText}</small>`);
     c.addEventListener('click', () => {

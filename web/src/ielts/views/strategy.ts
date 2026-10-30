@@ -673,7 +673,7 @@ export function strategyView(root: HTMLElement): () => void {
     h(
       'p',
       'ie-lead',
-      'The IELTS strategy compendium: 46 exam blueprints from the Band 7+ curriculum alongside 746 articles & lessons from IELTS Online Tests.'
+      `The IELTS strategy compendium: ${allCards.length} exam blueprints from the Band 7+ curriculum alongside ${ALL_TIPS.length} articles & lessons from IELTS Online Tests.`
     )
   );
 
@@ -689,10 +689,10 @@ export function strategyView(root: HTMLElement): () => void {
   btnBlueprints.innerHTML = `
     <span class="ie-mode-icon">${icon('layers', 13)}</span>
     <span class="ie-mode-label">
-      <span class="ie-mode-full">${t('strategy.tactical_blueprints', undefined, '46 Tactical Blueprints (Formulas & Traps)')}</span>
+      <span class="ie-mode-full">${t('strategy.tactical_blueprints', { count: allCards.length }, `${allCards.length} Tactical Blueprints (Formulas & Traps)`)}</span>
       <span class="ie-mode-short">Blueprints</span>
     </span>
-    <span class="ie-mode-count">46</span>
+    <span class="ie-mode-count">${allCards.length}</span>
   `;
 
   const btnVault = h('button', 'ie-mode-btn');

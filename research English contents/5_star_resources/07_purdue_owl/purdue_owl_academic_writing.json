@@ -1,0 +1,91 @@
+{
+  "title": "Purdue Online Writing Lab (OWL) Academic Writing Guide",
+  "institution": "Purdue University",
+  "url": "https://owl.purdue.edu",
+  "evaluation": "⭐⭐⭐⭐⭐ (5/5) — The Bible of Academic Writing & Rhetoric",
+  "thesis_statement_mastery": {
+    "definition": "A thesis statement tells the reader how you will interpret the significance of the subject matter under discussion. It is a road map for the paper.",
+    "core_characteristics": [
+      "It makes an argumentative claim, not a factual statement.",
+      "It takes a stand rather than simply announcing a topic.",
+      "It is narrow and specific enough to be defended within the word limit.",
+      "It passes the 'So What?' and 'How and Why?' tests."
+    ],
+    "formula_frameworks": [
+      {
+        "type": "Tension / Counter-argument Thesis Formula",
+        "formula": "Although [Opposing viewpoint / Concession], [Your argument / Thesis claim] because [Reason 1] and [Reason 2]."
+      },
+      {
+        "type": "Causal / Policy Thesis Formula",
+        "formula": "Because of [Root cause X], [Actor Y] must implement [Policy Z] in order to [Outcome W]."
+      }
+    ]
+  },
+  "paragraph_architecture": {
+    "meal_plan": {
+      "M": "Main Idea (Topic sentence asserting a clear mini-claim)",
+      "E": "Evidence (Data, research findings, citations, statistics, facts)",
+      "A": "Analysis (Explaining *how* the evidence proves the main idea; unpack significance)",
+      "L": "Link (Connecting back to the overarching thesis or bridging to the next paragraph)"
+    },
+    "transitions_and_signposting": {
+      "addition": [
+        "furthermore",
+        "moreover",
+        "in addition to",
+        "notably"
+      ],
+      "contrast": [
+        "conversely",
+        "nevertheless",
+        "notwithstanding",
+        "on the contrary"
+      ],
+      "causation": [
+        "consequently",
+        "thereby",
+        "as a direct consequence of",
+        "engenders"
+      ],
+      "concession": [
+        "admittedly",
+        "while it is acknowledged that",
+        "granted that"
+      ],
+      "exemplification": [
+        "to illustrate",
+        "a salient case in point is",
+        "exemplified by"
+      ]
+    }
+  },
+  "academic_style_and_concision": {
+    "eliminating_wordiness": [
+      {
+        "inflated": "due to the fact that",
+        "concise": "because / since"
+      },
+      {
+        "inflated": "at the present point in time",
+        "concise": "currently / now"
+      },
+      {
+        "inflated": "in the event that",
+        "concise": "if"
+      },
+      {
+        "inflated": "conduct an investigation of",
+        "concise": "investigate"
+      },
+      {
+        "inflated": "has the capability to",
+        "concise": "can"
+      }
+    ],
+    "passive_voice_calibration": {
+      "good_passive": "The participants were randomly assigned to two treatment groups. (Methodological objectivity)",
+      "weak_passive": "Mistakes were made by researchers during the process. (Evasive hedging)"
+    }
+  }
+}

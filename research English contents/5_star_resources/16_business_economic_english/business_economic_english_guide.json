@@ -1,0 +1,68 @@
+{
+  "title": "Business & Economic English: The Economist Style & Harvard Business Review Analytical Framework",
+  "sources": [
+    "economist.com",
+    "hbr.org"
+  ],
+  "evaluation": "⭐⭐⭐⭐⭐ (5/5) — Gold Standard for Corporate & Macroeconomic English",
+  "economist_style_commandments": [
+    {
+      "commandment": "1. Never use a metaphor, simile, or other figure of speech which you are used to seeing in print.",
+      "rationale": "Clichés dull the mind and conceal lack of original thought."
+    },
+    {
+      "commandment": "2. Never use a long word where a short one will do.",
+      "rationale": "Clarity is power. Prefer 'use' over 'utilize', 'end' over 'terminate'."
+    },
+    {
+      "commandment": "3. If it is possible to cut a word out, always cut it out.",
+      "rationale": "Economic prose must be muscular and lean."
+    },
+    {
+      "commandment": "4. Never use the passive where you can use the active.",
+      "rationale": "Active verbs identify accountability and establish causality."
+    },
+    {
+      "commandment": "5. Never use a foreign phrase, scientific word, or jargon if you can think of an everyday English equivalent.",
+      "rationale": "Jargon alienates intelligent generalist decision-makers."
+    }
+  ],
+  "macroeconomic_lexicon_for_ielts_and_executives": [
+    {
+      "term": "fiscal austerity",
+      "collocation": "enact / impose fiscal austerity",
+      "definition": "Government policies to reduce budget deficits through spending cuts or tax hikes."
+    },
+    {
+      "term": "supply chain bottlenecks",
+      "collocation": "alleviate supply chain bottlenecks",
+      "definition": "Congestion points that impede the smooth flow of goods from manufacture to retail."
+    },
+    {
+      "term": "inflationary pressures",
+      "collocation": "curb / exacerbate inflationary pressures",
+      "definition": "Factors causing rising price levels across a national economy."
+    },
+    {
+      "term": "market penetration",
+      "collocation": "achieve rapid market penetration",
+      "definition": "The degree to which a product or service is adopted by target consumers."
+    },
+    {
+      "term": "regulatory headwinds",
+      "collocation": "encounter severe regulatory headwinds",
+      "definition": "Legal and governmental compliance constraints that hinder corporate expansion."
+    },
+    {
+      "term": "disruptive innovation",
+      "collocation": "pioneer disruptive innovation",
+      "definition": "Innovations that fundamentally alter how an entire industry operates."
+    }
+  ],
+  "hbr_case_study_analytical_template": {
+    "section_1_executive_summary": "Concise 3-sentence synthesis stating the core strategic dilemma, the root cause, and the recommended intervention.",
+    "section_2_strategic_diagnosis": "Evaluating competitive positioning, macroeconomic constraints, and internal operational bottlenecks.",
+    "section_3_alternative_options": "Contrasting two mutually exclusive courses of action with explicit risk-benefit trade-offs.",
+    "section_4_implementation_roadmap": "Milestone scheduling, resource allocation, and key performance indicators (KPIs)."
+  }
+}

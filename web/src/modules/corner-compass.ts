@@ -126,6 +126,24 @@ export class CornerCompass {
     return this.element;
   }
 
+  public openMenu(): void {
+    const trigger = this.element.querySelector('.compass-trigger') as HTMLElement | null;
+    const menu = this.element.querySelector('.compass-radial-menu') as HTMLElement;
+    this.isMenuOpen = true;
+    trigger?.setAttribute('aria-expanded', 'true');
+    menu?.classList.add('menu-open');
+    if (menu) (menu as any).inert = false;
+  }
+
+  public closeMenu(): void {
+    const trigger = this.element.querySelector('.compass-trigger') as HTMLElement | null;
+    const menu = this.element.querySelector('.compass-radial-menu') as HTMLElement;
+    this.isMenuOpen = false;
+    trigger?.setAttribute('aria-expanded', 'false');
+    menu?.classList.remove('menu-open');
+    if (menu) (menu as any).inert = true;
+  }
+
   private bindEvents(): void {
     const trigger = this.element.querySelector('.compass-trigger') as HTMLElement | null;
     const menu = this.element.querySelector('.compass-radial-menu') as HTMLElement;

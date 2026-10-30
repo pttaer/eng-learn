@@ -14,6 +14,7 @@ export class MistakeVault {
   private static timerInterval: number | null = null;
   private static remainingSeconds: number = 0;
   private static feedbackTimeout: number | null = null;
+  private static escHandler: ((e: KeyboardEvent) => void) | null = null;
 
   public static init(): void {
     if (this.isInitialized) return;
@@ -74,10 +75,23 @@ export class MistakeVault {
       }
     });
 
+    this.escHandler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        this.close();
+      }
+    };
+    window.addEventListener('keydown', this.escHandler, true);
+
     this.renderHome(sheet);
   }
 
   public static close(): void {
+    if (this.escHandler) {
+      window.removeEventListener('keydown', this.escHandler, true);
+      this.escHandler = null;
+    }
     if (this.timerInterval) {
       window.clearInterval(this.timerInterval);
       this.timerInterval = null;

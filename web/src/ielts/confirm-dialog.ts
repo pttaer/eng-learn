@@ -10,35 +10,27 @@ export interface ConfirmDialogOptions {
   type?: 'warning' | 'danger' | 'info';
 }
 
+let activeTestSession: string | null = null;
+
+/**
+ * Sets the active IELTS test in progress ('reading', 'listening', 'writing', 'mock' or null).
+ */
+export function setIeltsTestInProgress(session: string | null): void {
+  activeTestSession = session;
+}
+
+if (typeof window !== 'undefined') {
+  (window as any).setIeltsTestInProgress = setIeltsTestInProgress;
+  (window as any).isIeltsTestInProgress = isIeltsTestInProgress;
+}
+
 /**
  * Returns true if user is actively in a timed exam, test session, or quiz in IELTS.
  */
 export function isIeltsTestInProgress(): boolean {
-  // 1. CD-IELTS Mock Cockpit
+  if (activeTestSession) return true;
+  // CD-IELTS Mock Cockpit in main app
   if (document.querySelector('#btn-pause-toggle')) return true;
-
-  // 2. Reading Test in progress (ie-testbar with submit button not disabled and not hidden)
-  const readingSubmit = document.querySelector<HTMLButtonElement>('.ie-stage .ie-testbar button.ie-btn-primary, .ie-stage .ie-testbar button:last-child');
-  const readingResult = document.querySelector<HTMLElement>('.ie-stage .ie-result');
-  if (readingSubmit && !readingSubmit.disabled && (!readingResult || readingResult.hidden)) {
-    return true;
-  }
-
-  // 3. Listening Test in progress (ie-testbar with submit button not disabled)
-  const listeningSubmit = document.querySelector<HTMLButtonElement>('.ie-testbar button:not(.ie-btn-primary):not(.ie-ambience-btn)');
-  const listeningPlay = document.querySelector<HTMLButtonElement>('.ie-testbar .ie-btn-primary');
-  const listeningResult = document.querySelector<HTMLElement>('.ie-listen-pane ~ .ie-result');
-  if (listeningPlay && !listeningPlay.hidden && listeningSubmit && !listeningSubmit.disabled && (!listeningResult || listeningResult.hidden)) {
-    return true;
-  }
-
-  // 4. Writing Studio active timed essay
-  const writingTimer = document.querySelector<HTMLElement>('.ie-ws-clock');
-  const writingFinishBtn = document.querySelector<HTMLButtonElement>('#btn-finish-writing');
-  if (writingTimer && writingFinishBtn && !writingFinishBtn.disabled) {
-    return true;
-  }
-
   return false;
 }
 

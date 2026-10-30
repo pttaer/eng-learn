@@ -1,0 +1,96 @@
+{
+  "title": "Toastmasters International Impromptu Speaking & Fluency Architecture",
+  "organization": "Toastmasters International",
+  "url": "https://toastmasters.org",
+  "evaluation": "⭐⭐⭐⭐⭐ (5/5) — Benchmark for Public Speaking & Impromptu Fluency",
+  "table_topics_frameworks": [
+    {
+      "framework": "The P.R.E.P. Method",
+      "best_for": "Opinion questions, policy evaluations, direct IELTS Speaking Part 3 prompts",
+      "steps": [
+        {
+          "step": "Point",
+          "description": "State your core stance clearly and decisively in 1 sentence."
+        },
+        {
+          "step": "Reason",
+          "description": "Explain *why* you hold this stance using logical justification."
+        },
+        {
+          "step": "Example",
+          "description": "Illustrate with a vivid personal anecdote, historical precedent, or statistic."
+        },
+        {
+          "step": "Point",
+          "description": "Restate your main point with elevated vocabulary to seal the argument."
+        }
+      ]
+    },
+    {
+      "framework": "The O.R.E.O. Method",
+      "best_for": "Value judgements and moral / philosophical questions",
+      "steps": [
+        {
+          "step": "Opinion",
+          "description": "Express your fundamental value judgement."
+        },
+        {
+          "step": "Reason",
+          "description": "Provide the ethical or pragmatic basis."
+        },
+        {
+          "step": "Explanation / Evidence",
+          "description": "Demonstrate the real-world consequences if this value is ignored."
+        },
+        {
+          "step": "Opinion",
+          "description": "Reaffirm your verdict."
+        }
+      ]
+    },
+    {
+      "framework": "The Past - Present - Future Timeline",
+      "best_for": "Questions about technology, social trends, work habits, urban living",
+      "steps": [
+        {
+          "step": "Past",
+          "description": "A generation ago, how did society handle this issue?"
+        },
+        {
+          "step": "Present",
+          "description": "What is the status quo today? What friction exists?"
+        },
+        {
+          "step": "Future",
+          "description": "What will likely unfold over the next 20 years?"
+        }
+      ]
+    }
+  ],
+  "meeting_evaluations_and_defense_against_fillers": {
+    "ah_counter_role": "Identifies and tallies crutch words: 'um', 'ah', 'er', 'you know', 'like', 'actually', 'sort of'.",
+    "grammarian_protocol": "Tracks fossilized errors, subject-verb agreement slips, and introduces a 'Word of the Day' to expand active lexical range."
+  },
+  "curated_table_topics_ielts_bank": [
+    {
+      "topic": "Artificial Intelligence & Ethics",
+      "prompt": "If artificial intelligence can outperform human doctors, should algorithms have the legal authority to diagnose patients without human oversight?"
+    },
+    {
+      "topic": "Urban Living & Solitude",
+      "prompt": "Despite living in densely populated modern cities, why are more individuals experiencing chronic isolation than previous generations?"
+    },
+    {
+      "topic": "Higher Education vs Vocational Training",
+      "prompt": "Does the traditional 4-year university degree still provide adequate return on investment in today's rapidly evolving global economy?"
+    },
+    {
+      "topic": "Environmental Stewardship",
+      "prompt": "Should individual consumer choices or governmental industrial mandates bear the primary responsibility for reversing climate change?"
+    },
+    {
+      "topic": "Preservation of Cultural Heritage",
+      "prompt": "In an increasingly homogenised global culture, is it essential for nation-states to spend tax revenue preserving obsolete dialects and traditions?"
+    }
+  ]
+}

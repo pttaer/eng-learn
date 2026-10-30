@@ -415,7 +415,9 @@ export class TensesDossier {
     const scorePct = Math.round((correctCount / total) * 100);
 
     let gradeTitle = t('tenses.grade_c1_title', undefined, 'C1/C2 NATIVE TENSE MASTERY');
-    let gradeComment = t('tenses.grade_c1_comment', undefined, 'Khả năng chia động từ và phân tích ngữ cảnh thời gian của bạn đạt độ chuẩn xác tuyệt đối!');
+    let gradeComment = scorePct === 100
+      ? t('tenses.grade_c1_comment', undefined, 'Khả năng chia động từ và phân tích ngữ cảnh thời gian của bạn đạt độ chuẩn xác tuyệt đối 100%!')
+      : t('tenses.grade_c1_near_comment', undefined, 'Khả năng phân tích thì và ngữ cảnh thời gian rất xuất sắc, gần như bản xứ! Chỉ cần lưu ý thêm một vài trường hợp ngoại lệ nhỏ.');
     let gradeColor = 'var(--good, #22c55e)';
 
     if (scorePct < 60) {

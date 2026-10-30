@@ -1,0 +1,160 @@
+{
+  "title": "SKELL: Sketch Engine for Language Learning Academic Collocation Database",
+  "service": "Sketch Engine / Lexical Computing",
+  "url": "https://skell.sketchengine.eu",
+  "evaluation": "⭐⭐⭐⭐⭐ (5/5) — Most Streamlined Collocation Engine",
+  "features": {
+    "word_sketch": "Syntactic collocation matrix showing nouns that act as subjects or objects of a verb, modifiers of a noun, and prepositional patterns.",
+    "similar_words": "Distributional semantic thesaurus identifying words used in identical linguistic environments.",
+    "examples": "Clean, authentic corpus sentences culled from billions of words of vetted web texts."
+  },
+  "core_academic_collocations": [
+    {
+      "headword": "analyze",
+      "pos": "verb",
+      "objects": [
+        "data",
+        "sample",
+        "result",
+        "trend",
+        "impact",
+        "relationship"
+      ],
+      "subjects": [
+        "study",
+        "researcher",
+        "report",
+        "paper",
+        "author"
+      ],
+      "adverbs": [
+        "carefully",
+        "thoroughly",
+        "critically",
+        "statistically"
+      ],
+      "examples": [
+        "The study analyzed data collected from over 5,000 participants.",
+        "Researchers thoroughly analyzed the environmental impact of industrial waste."
+      ]
+    },
+    {
+      "headword": "evidence",
+      "pos": "noun",
+      "modifiers": [
+        "compelling",
+        "empirical",
+        "anecdotal",
+        "substantial",
+        "growing"
+      ],
+      "verbs_with_evidence": [
+        "provide",
+        "suggest",
+        "support",
+        "uncover",
+        "corroborate"
+      ],
+      "prepositions": [
+        "evidence of",
+        "evidence for",
+        "evidence against"
+      ],
+      "examples": [
+        "There is substantial empirical evidence to support the implementation of renewable energy policies.",
+        "Recent clinical trials provide compelling evidence for the efficacy of the treatment."
+      ]
+    },
+    {
+      "headword": "demonstrate",
+      "pos": "verb",
+      "objects": [
+        "feasibility",
+        "efficacy",
+        "importance",
+        "need",
+        "correlation"
+      ],
+      "subjects": [
+        "finding",
+        "experiment",
+        "evidence",
+        "figure",
+        "investigation"
+      ],
+      "adverbs": [
+        "clearly",
+        "convincingly",
+        "empirically",
+        "consistently"
+      ],
+      "examples": [
+        "The figures clearly demonstrate a sharp decline in manufacturing output.",
+        "Extensive research demonstrates the direct correlation between sleep deprivation and cognitive impairment."
+      ]
+    },
+    {
+      "headword": "establish",
+      "pos": "verb",
+      "objects": [
+        "link",
+        "relationship",
+        "framework",
+        "criterion",
+        "consensus"
+      ],
+      "adverbs": [
+        "firmly",
+        "definitively",
+        "formally"
+      ],
+      "examples": [
+        "The commission was formed to establish clear regulatory guidelines.",
+        "Scientists have firmly established the link between carbon emissions and global temperature rise."
+      ]
+    },
+    {
+      "headword": "contribute",
+      "pos": "verb",
+      "preposition": "to (+ noun / gerund)",
+      "adverbs": [
+        "significantly",
+        "substantially",
+        "directly",
+        "greatly"
+      ],
+      "subjects": [
+        "factor",
+        "advancement",
+        "pollution",
+        "urbanization"
+      ],
+      "examples": [
+        "Rapid urbanization has contributed significantly to habitat fragmentation.",
+        "Technological advancements have contributed greatly to remote working capabilities."
+      ]
+    },
+    {
+      "headword": "hypothesis",
+      "pos": "noun",
+      "modifiers": [
+        "plausible",
+        "initial",
+        "underlying",
+        "compelling",
+        "testable"
+      ],
+      "verbs_with_hypothesis": [
+        "formulate",
+        "test",
+        "confirm",
+        "refute",
+        "support"
+      ],
+      "examples": [
+        "Subsequent experiments failed to support the original hypothesis.",
+        "Researchers formulated a testable hypothesis based on preliminary observations."
+      ]
+    }
+  ]
+}

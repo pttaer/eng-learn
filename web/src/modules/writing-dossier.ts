@@ -99,7 +99,10 @@ export function calculateWritingMetrics(targetStr: string, typedStr: string, ela
     }
   }
 
-  const netWpm = Math.max(0, Math.round(((charsTyped / 5) - Math.floor(errorCount / 2)) / minutes));
+  // Active typing errors (excluding untyped trailing characters of target text)
+  const trailingDeletes = normTarget.length > normTyped.length ? (normTarget.length - normTyped.length) : 0;
+  const activeErrors = Math.max(0, errorCount - trailingDeletes);
+  const netWpm = Math.max(0, Math.round(((charsTyped / 5) - Math.floor(activeErrors / 2)) / minutes));
   const accuracyPct = normTarget.length === 0 ? 100 : Math.max(0, Math.min(100, Math.round((matchCount / normTarget.length) * 100)));
   const completed = matchCount === normTarget.length && errorCount === 0;
 
@@ -108,7 +111,7 @@ export function calculateWritingMetrics(targetStr: string, typedStr: string, ela
     netWpm,
     accuracyPct,
     elapsedSec,
-    errorCount,
+    errorCount: activeErrors,
     completed
   };
 }
@@ -290,18 +293,20 @@ export class WritingDossier {
         const tokens = computeDiffTokens(item.masterSentence, this.typedContent);
         const semantic = SemanticParaphraseEvaluator.evaluate(item.masterSentence, this.typedContent);
 
+        const accuracyColor = metrics.accuracyPct >= 80 ? 'var(--ink-good)' : metrics.accuracyPct >= 60 ? 'var(--warning)' : 'var(--critical)';
+
         return `
           <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 16px; border-radius: 12px; box-shadow: var(--shadow-card);">
             <div class="copywork-header-row">
               <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.step3_title', undefined, 'STEP 3 // MYERS-HIRSCHBERG SPLIT-DIFF')}</span>
-              <span class="telemetry-value" style="color: var(--accent-gold); font-size: var(--font-body); font-weight: 700;">${t('writing.accuracy_label', undefined, 'ACCURACY:')} ${metrics.accuracyPct}%</span>
+              <span class="telemetry-value" style="color: ${accuracyColor}; font-size: var(--font-body); font-weight: 700;">${t('writing.accuracy_label', undefined, 'ACCURACY:')} ${metrics.accuracyPct}%</span>
             </div>
 
             <!-- Fluency Metrics Bar -->
             <div class="copywork-metrics-grid">
               <div>
                 <div class="telemetry-label">${t('writing.accuracy', undefined, 'ACCURACY')}</div>
-                <div class="val-accuracy" style="font-size: var(--font-body); font-weight: 700; color: var(--ink-good);">${metrics.accuracyPct}%</div>
+                <div class="val-accuracy" style="font-size: var(--font-body); font-weight: 700; color: ${accuracyColor};">${metrics.accuracyPct}%</div>
               </div>
               <div>
                 <div class="telemetry-label">${t('writing.net_wpm', undefined, 'NET WPM')}</div>
@@ -385,10 +390,10 @@ export class WritingDossier {
             <div style="border-top: 1px solid var(--border-hairline); padding-top: 16px;">
               <div class="telemetry-label" style="text-align: center; margin-bottom: 12px;">${t('writing.log_retention_rating', undefined, 'LOG RETENTION RATING // UPDATE CONSTELLATION MASTERY')}</div>
               <div class="copywork-srs-grid">
-                <button class="hud-btn btn-rate-srs" data-rating="0" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); border-radius: var(--radius-btn, 10px);"><span style="color: var(--critical); font-weight: 700;">✗</span> Again (1)</button>
-                <button class="hud-btn btn-rate-srs" data-rating="2" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); border-radius: var(--radius-btn, 10px);"><span style="color: var(--warning); font-weight: 700;">▲</span> Hard (2)</button>
-                <button class="hud-btn btn-rate-srs" data-rating="3" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); font-weight: 700; border-radius: var(--radius-btn, 10px);"><span style="color: var(--good); font-weight: 700;">✓</span> Good (3)</button>
-                <button class="hud-btn btn-rate-srs" data-rating="5" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); color: var(--accent-gold); font-weight: 700; border-radius: var(--radius-btn, 10px);">☆ Easy (4)</button>
+                <button class="hud-btn btn-rate-srs" data-rating="0" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); border-radius: var(--radius-btn, 10px);"><span style="color: var(--critical); font-weight: 700;">✗</span> ${t('card.again', undefined, 'Again')} (1)</button>
+                <button class="hud-btn btn-rate-srs" data-rating="2" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); border-radius: var(--radius-btn, 10px);"><span style="color: var(--warning); font-weight: 700;">▲</span> ${t('card.hard', undefined, 'Hard')} (2)</button>
+                <button class="hud-btn btn-rate-srs" data-rating="3" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); font-weight: 700; border-radius: var(--radius-btn, 10px);"><span style="color: var(--good); font-weight: 700;">✓</span> ${t('card.good', undefined, 'Good')} (3)</button>
+                <button class="hud-btn btn-rate-srs" data-rating="5" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); color: var(--accent-gold); font-weight: 700; border-radius: var(--radius-btn, 10px);">☆ ${t('card.easy', undefined, 'Easy')} (4)</button>
               </div>
             </div>
           </div>
@@ -397,13 +402,21 @@ export class WritingDossier {
   }
 
   private renderDiffHTML(tokens: ProofreadDiffToken[]): string {
-    return tokens.map(token => {
-      if (token.type === 'match') {
-        return `<span class="diff-match" style="color: var(--ink-primary);">${this.escapeHTML(token.value)}</span>`;
-      } else if (token.type === 'delete') {
-        return `<span class="diff-delete" style="color: #dc2626; text-decoration: line-through; background: rgba(220, 38, 38, 0.1); padding: 0 2px;">${this.escapeHTML(token.value)}</span>`;
+    const chunked: ProofreadDiffToken[] = [];
+    for (const t of tokens) {
+      if (chunked.length > 0 && chunked[chunked.length - 1].type === t.type) {
+        chunked[chunked.length - 1].value += t.value;
       } else {
-        return `<span class="diff-insert" style="color: var(--accent-gold); font-weight: 700; background: var(--accent-gold-soft); padding: 0 2px;">${this.escapeHTML(token.value)}</span>`;
+        chunked.push({ type: t.type, value: t.value });
+      }
+    }
+    return chunked.map(chunk => {
+      if (chunk.type === 'match') {
+        return `<span class="diff-match" style="color: var(--ink-primary);">${this.escapeHTML(chunk.value)}</span>`;
+      } else if (chunk.type === 'delete') {
+        return `<span class="diff-delete" style="color: #dc2626; text-decoration: line-through; background: rgba(220, 38, 38, 0.1); padding: 0 3px; border-radius: 3px;">${this.escapeHTML(chunk.value)}</span>`;
+      } else {
+        return `<span class="diff-insert" style="color: var(--accent-gold); font-weight: 700; background: var(--accent-gold-soft); padding: 0 3px; border-radius: 3px;">${this.escapeHTML(chunk.value)}</span>`;
       }
     }).join('');
   }

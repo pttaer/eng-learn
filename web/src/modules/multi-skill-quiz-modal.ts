@@ -475,6 +475,11 @@ export class MultiSkillQuizModal {
     this.overlay.setAttribute('role', 'dialog');
     this.overlay.setAttribute('aria-modal', 'true');
     this.overlay.setAttribute('aria-label', 'CEFR Multi-Skill Diagnostic & Skill Radar');
+    this.overlay.addEventListener('click', (e) => {
+      if (e.target === this.overlay) {
+        this.close();
+      }
+    });
     document.body.appendChild(this.overlay);
 
     // Global keyboard trap
@@ -521,10 +526,15 @@ export class MultiSkillQuizModal {
 
   private card(inner: string, maxWidth: string = '620px'): void {
     this.overlay.innerHTML = `
-      <div class="completion-receipt-card multi-skill-card" style="max-width: ${maxWidth}; width: 100%; max-height: 90dvh; overflow-y: auto;">
+      <div class="completion-receipt-card multi-skill-card" style="position: relative; max-width: ${maxWidth}; width: 100%; max-height: 90dvh; overflow-y: auto;">
+        <button type="button" class="multi-skill-card-close-btn" aria-label="${t('common.close', undefined, 'Close')}" style="position: absolute; top: 12px; right: 12px; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; background: transparent; border: none; color: var(--ink-muted); font-size: 18px; cursor: pointer; border-radius: var(--radius-btn, 10px); z-index: 5;">✕</button>
         ${inner}
       </div>
     `;
+    this.overlay.querySelector('.multi-skill-card-close-btn')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      this.close();
+    });
   }
 
   // =========================================================================
@@ -703,11 +713,16 @@ export class MultiSkillQuizModal {
       </div>
 
       <!-- Action Strip -->
-      <div class="quiz-footer-strip" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 20px; font-size: var(--font-kicker); color: var(--ink-muted); width: 100%;">
+      <div class="quiz-footer-strip" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 20px; font-size: var(--font-kicker); color: var(--ink-muted); width: 100%; flex-wrap: wrap;">
         <span class="quiz-hotkeys-hint" style="line-height: 1.4;">${t('quiz.hotkeys_hint', undefined, 'Hotkeys: 1 - 4 to select · Esc to exit')}</span>
-        <button class="hud-btn quiz-skip-stage-btn apple-press" style="min-height: 44px; padding: 8px 14px; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);">
-          ${t('quiz.skip_stage', undefined, 'Skip Stage →')}
-        </button>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <button type="button" class="hud-btn quiz-exit-btn apple-press" style="min-height: 44px; padding: 8px 14px; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);">
+            ${t('common.exit', undefined, 'Exit')}
+          </button>
+          <button type="button" class="hud-btn quiz-skip-stage-btn apple-press" style="min-height: 44px; padding: 8px 14px; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);">
+            ${t('quiz.skip_stage', undefined, 'Skip Stage →')}
+          </button>
+        </div>
       </div>
     `);
 
@@ -745,6 +760,12 @@ export class MultiSkillQuizModal {
         }, 250);
       }
     }
+
+    // Wire exit button
+    this.overlay.querySelector('.quiz-exit-btn')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      this.close();
+    });
 
     // Wire skip stage
     this.overlay.querySelector('.quiz-skip-stage-btn')?.addEventListener('click', () => {
@@ -851,7 +872,7 @@ export class MultiSkillQuizModal {
           <span class="skill-badge-pill">${icon('target', 12)} ${t('quiz.overall', { level: overallLevel }, `${overallLevel} OVERALL`)}</span>
         </div>
         <div class="telemetry-label" style="color: var(--ink-muted); font-size: var(--font-kicker); letter-spacing: 0.06em;">
-          ${t('quiz.radar_title', undefined, 'CEFR 5-AXIS SKILL RADAR')}
+          ${t('quiz.radar_title', undefined, 'CEFR 6-AXIS SKILL RADAR')}
         </div>
       </div>
 
@@ -860,11 +881,11 @@ export class MultiSkillQuizModal {
           ${CEFR_LABELS[overallLevel]}
         </h2>
         <p style="font-size: var(--font-body-compact); color: var(--ink-secondary); margin: 4px 0 0 0;">
-          ${t('quiz.radar_desc', undefined, 'Multi-skill diagnostic calibrated across 5 core language axes.')}
+          ${t('quiz.radar_desc', undefined, 'Multi-skill diagnostic calibrated across 6 core language axes.')}
         </p>
       </div>
 
-      <!-- Celestial Radar SVG Pentagram -->
+      <!-- Celestial Radar SVG Hexagon -->
       <div class="radar-chart-container">
         ${radarSvg}
       </div>
@@ -981,29 +1002,30 @@ export class MultiSkillQuizModal {
   }
 
   // =========================================================================
-  // CELESTIAL RADAR SVG PENTAGRAM GENERATOR
+  // CELESTIAL RADAR SVG HEXAGON GENERATOR (6-AXIS CEFR PROFILE)
   // =========================================================================
   public static generateRadarSvg(skills: Record<SkillId, Cefr>, size: number = 320): string {
     const cx = 160;
-    const cy = 130;
-    const maxRadius = 80;
-    const labelRadius = 104;
+    const cy = 120;
+    const maxRadius = 70;
+    const labelRadius = 95;
 
-    // 5 radar axes matching the 5 tested skills
+    // 6 radar axes matching all 6 core CEFR skills
     const axes: Array<{ skill: SkillId; label: string }> = [
-      { skill: 'vocab', label: 'VOCABULARY' },
+      { skill: 'vocab', label: 'VOCAB' },
       { skill: 'grammar', label: 'GRAMMAR' },
       { skill: 'reading', label: 'READING' },
       { skill: 'listening', label: 'LISTENING' },
-      { skill: 'writing', label: 'WRITING' }
+      { skill: 'writing', label: 'WRITING' },
+      { skill: 'speaking', label: 'SPEAKING' }
     ];
 
-    const numAxes = axes.length; // 5
+    const numAxes = axes.length; // 6
 
-    // Angle helper (0 = top, rotating clockwise by 72 deg)
+    // Angle helper (0 = top, rotating clockwise by 60 deg)
     const getAngle = (i: number) => -Math.PI / 2 + (i * 2 * Math.PI) / numAxes;
 
-    // 1. Concentric Pentagram Rings for A1 to C2 (t = 1/6 to 6/6)
+    // 1. Concentric Hexagon Rings for A1 to C2 (t = 1/6 to 6/6)
     const ringsMarkup = CEFR_ORDER.map((tier, k) => {
       const r = maxRadius * ((k + 1) / 6);
       const points = axes.map((_, i) => {
@@ -1014,14 +1036,14 @@ export class MultiSkillQuizModal {
       }).join(' ');
 
       // Tier label placed along the top spoke
-      const labelY = cy - r + 8;
+      const labelY = cy - r + 9;
       return `
         <polygon points="${points}" class="radar-ring radar-ring-${tier}" stroke="var(--ink-muted, #94a3b8)" stroke-width="0.8" stroke-dasharray="2,3" fill="none" opacity="0.35" />
-        <text x="${cx + 3}" y="${labelY.toFixed(1)}" class="radar-tier-label" font-size="8" fill="var(--ink-muted, #94a3b8)" opacity="0.7">${tier}</text>
+        <text x="${cx + 4}" y="${labelY.toFixed(1)}" class="radar-tier-label" font-size="11" font-weight="600" fill="var(--ink-muted, #94a3b8)" opacity="0.75">${tier}</text>
       `;
     }).join('');
 
-    // 2. Axis Spoke Lines & Labels
+    // 2. Axis Spoke Lines & Labels (11px font floor compliance)
     const spokesMarkup = axes.map((axis, i) => {
       const angle = getAngle(i);
       const outerX = cx + maxRadius * Math.cos(angle);
@@ -1032,7 +1054,7 @@ export class MultiSkillQuizModal {
 
       return `
         <line x1="${cx}" y1="${cy}" x2="${outerX.toFixed(1)}" y2="${outerY.toFixed(1)}" class="radar-axis-spoke" stroke="var(--ink-muted, #94a3b8)" stroke-width="1" opacity="0.3" />
-        <text x="${textX.toFixed(1)}" y="${textY.toFixed(1)}" class="radar-axis-label" text-anchor="middle" dominant-baseline="central" font-size="8.5" font-weight="700" letter-spacing="0.05em" fill="var(--ink-secondary, #cbd5e1)">
+        <text x="${textX.toFixed(1)}" y="${textY.toFixed(1)}" class="radar-axis-label" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" letter-spacing="0.05em" fill="var(--ink-secondary, #cbd5e1)">
           ${axis.label} (${skillLevel})
         </text>
       `;

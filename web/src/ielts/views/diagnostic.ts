@@ -229,7 +229,7 @@ export function diagnosticView(root: HTMLElement): () => void {
           : `<span class="ie-bottom-hint is-ready">${t('diag.bottom_hint_ready', undefined, 'All items answered! Ready for final evaluation.')}</span>`}
       </div>
       <div class="ie-bottom-actions">
-        <button class="ie-btn ie-btn-primary ${answeredCount >= 5 ? '' : 'is-disabled'}" id="btn-finish-eval">
+        <button class="ie-btn ie-btn-primary ${answeredCount >= 5 ? '' : 'is-disabled'}" id="btn-finish-eval" ${answeredCount === 0 ? 'disabled' : ''}>
           ${allAnswered
             ? t('diag.btn_generate_assessment', undefined, 'Generate Full Assessment & Study Plan')
             : t('diag.btn_evaluate_progress', { answered: answeredCount, total: totalCount }, `Evaluate Progress (${answeredCount}/${totalCount})`)}

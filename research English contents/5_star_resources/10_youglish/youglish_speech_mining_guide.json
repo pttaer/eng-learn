@@ -1,0 +1,79 @@
+{
+  "title": "YouGlish: Video Speech Mining & Shadowing Engine",
+  "url": "https://youglish.com",
+  "evaluation": "⭐⭐⭐⭐⭐ (5/5) — #1 Tool for In-Context Spoken Pronunciation",
+  "power_query_operators": [
+    {
+      "operator": ":us, :uk, :aus",
+      "description": "Filter results exclusively by accent region",
+      "example": "schedule :uk vs schedule :us"
+    },
+    {
+      "operator": ":m, :f",
+      "description": "Filter by male or female speaker",
+      "example": "entrepreneurship :f"
+    },
+    {
+      "operator": "\"phrase in quotes\"",
+      "description": "Search exact multi-word chunks and collocations",
+      "example": "\"in terms of\" :us"
+    },
+    {
+      "operator": "#topic",
+      "description": "Filter by context/genre hashtag (e.g. #business, #science, #medical)",
+      "example": "hypothesis #science"
+    }
+  ],
+  "four_stage_shadowing_protocol": [
+    {
+      "stage": "Stage 1: Comprehension & Audio Calibration (Speed 0.75x)",
+      "action": "Listen to the YouGlish clip without speaking. Read the subtitles to ensure 100% semantic comprehension and note where the speaker pauses and breathes."
+    },
+    {
+      "stage": "Stage 2: Delayed Shadowing with Subtitles (Speed 1.0x)",
+      "action": "Play the clip at normal speed. Speak out loud approximately 1–2 words behind the speaker, mimicking the exact pitch contour and word reductions."
+    },
+    {
+      "stage": "Stage 3: Simultaneous Shadowing without Subtitles",
+      "action": "Close your eyes or look away from the text. Speak at the exact same millisecond as the native speaker, locking into rhythm and chest resonance."
+    },
+    {
+      "stage": "Stage 4: Recording & Acoustic Comparison",
+      "action": "Record your own voice speaking the sentence. Play your recording alongside the YouGlish native clip to pinpoint dropped consonant clusters or pitch errors."
+    }
+  ],
+  "curated_high_impact_queries": [
+    {
+      "target": "Academic Signposts",
+      "queries": [
+        "\"on the contrary\" :uk",
+        "\"a case in point\" :us",
+        "\"in sharp contrast to\" :uk"
+      ]
+    },
+    {
+      "target": "Tricky Minimal Pairs for Vietnamese Learners",
+      "queries": [
+        "sheep vs ship :us",
+        "fool vs full :uk",
+        "leave vs live :us"
+      ]
+    },
+    {
+      "target": "Ending Consonants /t/ /d/ /s/ /z/",
+      "queries": [
+        "\"texts and emails\" :us",
+        "\"fixed costs\" :uk",
+        "\"products and services\" :us"
+      ]
+    },
+    {
+      "target": "High-Band IELTS Speaking Idioms",
+      "queries": [
+        "\"cost an arm and a leg\"",
+        "\"at the drop of a hat\"",
+        "\"once in a blue moon\""
+      ]
+    }
+  ]
+}

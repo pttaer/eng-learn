@@ -31,7 +31,10 @@ export class Router {
       'reading': 'read',
       'writing': 'write',
       'listening': 'listen',
-      'speaking': 'speak'
+      'speaking': 'speak',
+      'collocations': 'colloc',
+      'collocation': 'colloc',
+      'mistakes': 'tree'
     };
     return validRoutes.find(r => r === rawHash) || aliases[rawHash] || 'tree';
   }

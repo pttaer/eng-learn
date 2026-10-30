@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
+const crypto = require('crypto');
 const { execSync } = require('child_process');
 const puppeteer = require(path.resolve(__dirname, '../web/node_modules/puppeteer-core'));
 
@@ -48,25 +49,75 @@ function createStaticServer() {
   });
 }
 
-const MODAL_SCROLL_SELECTOR = '.modal-body, .mobile-action-sheet, .lexicon-drawer-body, .sheet-body, .drawer-content, .completion-modal-overlay, .commute-player-sheet, .ie-tip-modal-body, .skill-node-card, .ie-tip-modal-box, .cd-band-modal-card';
+const MODAL_SCROLL_SELECTOR = '.modal-body, .mobile-action-sheet, .lexicon-drawer-body, .sheet-body, .drawer-content, .completion-modal-overlay, .commute-player-sheet, .ie-tip-modal-body, .skill-node-card, .ie-tip-modal-box, .cd-band-modal-card, .ie-diag-dashboard, .ie-sim-panel';
 
-async function captureFlowView(page, folderName, baseName, label) {
+const capturedHashes = new Map();
+const duplicatesDetected = [];
+
+function checkDuplicateHash(filePath, relLabel) {
+  const buf = fs.readFileSync(filePath);
+  const hash = crypto.createHash('sha256').update(buf).digest('hex');
+  if (capturedHashes.has(hash)) {
+    const prior = capturedHashes.get(hash);
+    duplicatesDetected.push({ screen: relLabel, prior, hash: hash.slice(0, 12) });
+    console.warn(`  🚨 [DUPLICATE DETECTED] ${relLabel} has identical hash to ${prior}`);
+  } else {
+    capturedHashes.set(hash, relLabel);
+  }
+}
+
+async function cleanPopupsAndOverlays(page) {
+  await page.evaluate(() => {
+    // 1. Remove any unclosed confirm dialogs or welcome toasts
+    document.getElementById('ielts-confirm-dialog')?.remove();
+    document.getElementById('hud-confirm-dialog')?.remove();
+    document.getElementById('tour-welcome-toast')?.remove();
+
+    // 2. Clear any lingering test session in IELTS
+    if (window.setIeltsTestInProgress) {
+      window.setIeltsTestInProgress(null);
+    }
+
+    // 3. Keep the floating note bubble neatly parked in top-right corner so it never obscures bottom CTAs
+    const bubble = document.getElementById('floating-note-bubble');
+    if (bubble && !window.__keepFloatingNoteInPlace) {
+      const targetX = Math.max(16, window.innerWidth - 130);
+      bubble.style.transform = `translate3d(${targetX}px, 56px, 0)`;
+      bubble.style.zIndex = '800';
+    }
+  });
+}
+
+async function captureFlowView(page, folderName, baseName, label, options = {}) {
   const dir = path.join(OUTPUT_BASE, folderName);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
-  // 1. Top capture
-  await page.evaluate((modalSel) => {
-    window.scrollTo(0, 0);
-    const m = document.getElementById('workspace-mount');
-    if (m) m.scrollTop = 0;
-    const body = document.querySelector(modalSel);
-    if (body) body.scrollTop = 0;
-  }, MODAL_SCROLL_SELECTOR);
-  await new Promise(r => setTimeout(r, 300));
+  await cleanPopupsAndOverlays(page);
 
+  // 1. Prepare initial view position
+  if (options.scrollToSelector) {
+    await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      if (el) el.scrollIntoView({ behavior: 'instant', block: 'start' });
+    }, options.scrollToSelector);
+  } else if (!options.preserveScroll) {
+    await page.evaluate((modalSel) => {
+      window.scrollTo(0, 0);
+      const m = document.getElementById('workspace-mount');
+      if (m) m.scrollTop = 0;
+      const body = document.querySelector(modalSel);
+      if (body) body.scrollTop = 0;
+    }, MODAL_SCROLL_SELECTOR);
+  }
+  await new Promise(r => setTimeout(r, 400));
+
+  // Top capture
   const topPath = path.join(dir, `${baseName}-01-top.png`);
   await page.screenshot({ path: topPath, fullPage: false });
+  checkDuplicateHash(topPath, `${folderName}/${baseName}-01-top.png`);
   console.log(`  [📸 TOP] ${folderName}/${baseName}-01-top.png (${label})`);
+
+  if (options.skipScroll) return;
 
   // 2. Measure scrollability
   const scrollInfo = await page.evaluate((modalSel) => {
@@ -93,7 +144,7 @@ async function captureFlowView(page, folderName, baseName, label) {
 
   if (scrollInfo.target && scrollInfo.max > 100) {
     // Mid scroll
-    const midScroll = Math.min(scrollInfo.max, 620);
+    const midScroll = Math.min(scrollInfo.max, 560);
     await page.evaluate((t, s, modalSel) => {
       if (t === 'mount') {
         const m = document.getElementById('workspace-mount');
@@ -105,14 +156,15 @@ async function captureFlowView(page, folderName, baseName, label) {
         window.scrollTo(0, s);
       }
     }, scrollInfo.target, midScroll, MODAL_SCROLL_SELECTOR);
-    await new Promise(r => setTimeout(r, 300));
+    await new Promise(r => setTimeout(r, 350));
 
     const midPath = path.join(dir, `${baseName}-02-scrolled.png`);
     await page.screenshot({ path: midPath, fullPage: false });
+    checkDuplicateHash(midPath, `${folderName}/${baseName}-02-scrolled.png`);
     console.log(`  [📜 MID] ${folderName}/${baseName}-02-scrolled.png`);
 
     // Bottom scroll if very tall
-    if (scrollInfo.max > 1000) {
+    if (scrollInfo.max > 900) {
       await page.evaluate((t, s, modalSel) => {
         if (t === 'mount') {
           const m = document.getElementById('workspace-mount');
@@ -124,10 +176,11 @@ async function captureFlowView(page, folderName, baseName, label) {
           window.scrollTo(0, s);
         }
       }, scrollInfo.target, scrollInfo.max, MODAL_SCROLL_SELECTOR);
-      await new Promise(r => setTimeout(r, 300));
+      await new Promise(r => setTimeout(r, 350));
 
       const btmPath = path.join(dir, `${baseName}-03-bottom.png`);
       await page.screenshot({ path: btmPath, fullPage: false });
+      checkDuplicateHash(btmPath, `${folderName}/${baseName}-03-bottom.png`);
       console.log(`  [⬇️ BTM] ${folderName}/${baseName}-03-bottom.png`);
     }
   }
@@ -154,7 +207,7 @@ async function run() {
     hasTouch: true
   });
 
-  // Set initial localized state
+  // Pre-seed local storage with calibrated learner telemetry
   await page.evaluateOnNewDocument(() => {
     const state = {
       version: 5,
@@ -163,7 +216,7 @@ async function run() {
       placementDone: true,
       soundMuted: true,
       cardStates: {},
-      streak: { currentStreak: 7, longestStreak: 14, lastActiveDate: '2026-10-27' },
+      streak: { currentStreak: 7, longestStreak: 14, lastActiveDate: '2026-10-30' },
       habitProgress: {},
       totalCardsReviewed: 150,
       history: []
@@ -175,6 +228,7 @@ async function run() {
     localStorage.setItem('eng_placement_done', 'true');
     localStorage.setItem('eng_level', 'B2');
     localStorage.setItem('eng_locale', 'vi'); // Bilingual Vietnamese showcase
+    localStorage.setItem('eng_floating_bubble_pos', JSON.stringify({ x: 250, y: 56 }));
   });
 
   try {
@@ -186,7 +240,7 @@ async function run() {
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '01-onboarding-placement', '01-placement-intro', 'Placement Quiz Intro');
 
-    // Click Start Placement
+    // Click Start Placement Question
     await page.evaluate(() => {
       document.querySelector('.placement-start, .btn-start-placement')?.click();
     });
@@ -210,10 +264,12 @@ async function run() {
     });
 
     // Spotlight Tour
-    await page.evaluate(() => {
-      if (window.SpotlightTour) window.SpotlightTour.start();
-    });
+    await page.goto(`${BASE_URL}#tree`, { waitUntil: 'networkidle0' });
     await new Promise(r => setTimeout(r, 500));
+    await page.evaluate(() => {
+      if (window.SpotlightTour) window.SpotlightTour.start(true);
+    });
+    await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '01-onboarding-placement', '03-spotlight-tour', 'Interactive Spotlight Tour');
     await page.evaluate(() => {
       if (window.SpotlightTour) window.SpotlightTour.close();
@@ -221,7 +277,7 @@ async function run() {
     });
 
     // =========================================================================
-    // FLOW 02: NAVIGATION & HUD
+    // FLOW 02: NAVIGATION & SYSTEM HUD
     // =========================================================================
     console.log('\n--- FLOW 02: NAVIGATION & SYSTEM HUD ---');
     await page.goto(`${BASE_URL}#tree`, { waitUntil: 'networkidle0' });
@@ -249,9 +305,8 @@ async function run() {
     await page.evaluate(() => {
       const hud = window.HeaderHUD?.getInstance ? window.HeaderHUD.getInstance() : null;
       if (hud) hud.openSettingsModal();
-      else document.querySelector('.btn-settings')?.click();
     });
-    await new Promise(r => setTimeout(r, 500));
+    await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '02-navigation-hud', '04-settings-modal', 'Settings & Localization Controls Modal');
     await page.evaluate(() => {
       document.querySelector('#settings-modal .btn-modal-close')?.click() || document.getElementById('settings-modal')?.remove();
@@ -354,11 +409,32 @@ async function run() {
       if (window.CommuteAudioPlayer) window.CommuteAudioPlayer.close();
     });
 
+    // Level Picker Modal
+    await page.evaluate(() => {
+      const hud = window.HeaderHUD?.getInstance ? window.HeaderHUD.getInstance() : null;
+      if (hud) hud.openLevelPicker();
+    });
+    await new Promise(r => setTimeout(r, 500));
+    await captureFlowView(page, '02-navigation-hud', '13-level-picker-modal', 'CEFR Level Picker Modal');
+    await page.evaluate(() => {
+      document.querySelector('#level-picker-modal .btn-modal-close')?.click() || document.getElementById('level-picker-modal')?.remove();
+    });
+
+    // Floating Scratchpad Note Window
+    await page.evaluate(() => {
+      if (window.FloatingNote) window.FloatingNote.open();
+    });
+    await new Promise(r => setTimeout(r, 500));
+    await captureFlowView(page, '02-navigation-hud', '14-floating-scratchpad', 'Floating Quick Scratchpad Window');
+    await page.evaluate(() => {
+      if (window.FloatingNote) window.FloatingNote.minimize();
+    });
+
     // =========================================================================
     // FLOW 03: FOUR PILLARS
     // =========================================================================
     console.log('\n--- FLOW 03: FOUR PILLARS STUDY WORKBENCHES ---');
-    // Reading Pass 1 & Pass 2
+    // Reading Pass 1
     await page.goto(`${BASE_URL}#read`, { waitUntil: 'networkidle0' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '03-four-pillars', '01-reading-pass1', 'Reading Lab (Pass 1 Skim Protocol)');
@@ -568,7 +644,8 @@ async function run() {
     // FLOW 06: IELTS ACADEMIC SUITE
     // =========================================================================
     console.log('\n--- FLOW 06: IELTS ACADEMIC SUITE ---');
-    // Set seed attempts for official band report
+
+    // Pre-seed diagnostic profile and IELTS state
     await page.evaluate(() => {
       const attempts = [
         { skill: 'reading', band: 7.5, raw: 33, of: 40, timestamp: Date.now() },
@@ -577,6 +654,31 @@ async function run() {
         { skill: 'speaking', band: 7.5, raw: 7.5, of: 9, timestamp: Date.now() }
       ];
       localStorage.setItem('IELTS_STATE', JSON.stringify({ attempts }));
+
+      const report = {
+        timestamp: Date.now() - 3600000,
+        totalQuestions: 20,
+        score: 16,
+        percentage: 80,
+        bandEstimate: "Band 7.5+",
+        subTypeBreakdown: {
+          subject_verb: { total: 4, correct: 4, percentage: 100 },
+          tenses: { total: 4, correct: 3, percentage: 75 },
+          articles: { total: 3, correct: 2, percentage: 67 },
+          clauses: { total: 3, correct: 3, percentage: 100 },
+          prepositions: { total: 3, correct: 2, percentage: 67 },
+          collocations: { total: 3, correct: 2, percentage: 67 }
+        },
+        flawsDetected: [
+          { subType: 'articles', impactOnBand: 'Limits GRA flexibility under time pressure', recommendation: 'Audit zero-article usage with plural/uncountable abstracts.' },
+          { subType: 'prepositions', impactOnBand: 'Minor lexical slips in dependent structures', recommendation: 'Drill dependent preposition collocations.' }
+        ],
+        checklistItems: [
+          'Audit zero-article usage with plural/uncountable abstracts.',
+          'Drill dependent preposition collocations.'
+        ]
+      };
+      localStorage.setItem('ielts_diagnostic_profile', JSON.stringify(report));
     });
 
     // 01 Home / Overview
@@ -584,16 +686,17 @@ async function run() {
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '01-ielts-overview', 'IELTS Road to 7.0 Overview & Summary');
 
-    // 01b Band Report & 7.0 Readiness Gate
-    await page.evaluate(() => {
-      const rep = document.querySelector('.ie-report');
-      if (rep) rep.scrollIntoView({ behavior: 'instant' });
+    // 01b Band Report & 7.0 Readiness Gate (Specifically scrolled to .ie-report)
+    await captureFlowView(page, '06-ielts-academic', '01b-ielts-band-readiness-report', 'IELTS 4-Skill Band Report & 7.0 Readiness Gate', {
+      scrollToSelector: '.ie-report'
     });
-    await new Promise(r => setTimeout(r, 400));
-    await captureFlowView(page, '06-ielts-academic', '01b-ielts-band-readiness-report', 'IELTS 4-Skill Band Report & 7.0 Readiness Gate');
 
-    // 02 Diagnostic Question View
+    // 02 Diagnostic Question View (clean un-evaluated state)
+    await page.evaluate(() => {
+      localStorage.removeItem('ielts_diagnostic_profile');
+    });
     await page.goto(`${BASE_URL}ielts.html#diagnostic`, { waitUntil: 'networkidle0' });
+    await page.reload({ waitUntil: 'networkidle0' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '02-ielts-diagnostic', 'IELTS 4-Skill Diagnostic Assessment');
 
@@ -624,44 +727,70 @@ async function run() {
       };
       localStorage.setItem('ielts_diagnostic_profile', JSON.stringify(report));
     });
-    await page.goto(`${BASE_URL}ielts.html#diagnostic`, { waitUntil: 'networkidle0' });
+    await page.reload({ waitUntil: 'networkidle0' });
     await new Promise(r => setTimeout(r, 600));
     await page.evaluate(() => {
       document.querySelector('#btn-view-cached')?.click();
     });
     await new Promise(r => setTimeout(r, 600));
-    await captureFlowView(page, '06-ielts-academic', '02b-ielts-diagnostic-taxonomy-report', 'IELTS 6-Vector Error Taxonomy Assessment Report');
+    await captureFlowView(page, '06-ielts-academic', '02b-ielts-diagnostic-taxonomy-report', 'IELTS 6-Vector Error Taxonomy Assessment Report', {
+      scrollToSelector: '.ie-diag-dashboard'
+    });
 
-    // 03 Reading Timed Passages
+    // 03 Reading Timed Passages (Active Test View)
     await page.goto(`${BASE_URL}ielts.html#reading`, { waitUntil: 'networkidle0' });
+    await new Promise(r => setTimeout(r, 600));
+    await page.evaluate(() => {
+      const firstCard = document.querySelector('.ie-passage-card');
+      if (firstCard) firstCard.click();
+    });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '03-ielts-reading-timed', 'IELTS Reading (Timed Passages & Question Grid)');
 
     // 03b Reading Test Calibrated Band Scorecard Result
     await page.evaluate(() => {
-      const submitBtn = Array.from(document.querySelectorAll('.ie-btn')).find(b => b.textContent.includes('Submit answers'));
+      const submitBtn = document.querySelector('.ie-testbar .ie-btn-primary') || Array.from(document.querySelectorAll('.ie-btn')).find(b => b.textContent.includes('Submit'));
       if (submitBtn) submitBtn.click();
     });
     await new Promise(r => setTimeout(r, 600));
-    await captureFlowView(page, '06-ielts-academic', '03b-ielts-reading-test-result', 'IELTS Reading Calibrated Band Scorecard Result');
+    await captureFlowView(page, '06-ielts-academic', '03b-ielts-reading-test-result', 'IELTS Reading Calibrated Band Scorecard Result', {
+      scrollToSelector: '.ie-result'
+    });
+    // Cleanly cancel test state so confirm dialog never blocks subsequent pages
+    await page.evaluate(() => {
+      if (window.setIeltsTestInProgress) window.setIeltsTestInProgress(null);
+      document.getElementById('ielts-confirm-dialog')?.remove();
+    });
 
     // 04 Reading 14 Attack Drills Lab
     await page.goto(`${BASE_URL}ielts.html#reading-drills`, { waitUntil: 'networkidle0' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '04-ielts-reading-attack-drills', 'IELTS Reading (14 Attack Drills Studio)');
 
-    // 05 Listening Audio Sections
+    // 05 Listening Audio Sections (Active Section View)
     await page.goto(`${BASE_URL}ielts.html#listening`, { waitUntil: 'networkidle0' });
+    await new Promise(r => setTimeout(r, 600));
+    await page.evaluate(() => {
+      const firstSection = document.querySelector('.ie-listening-card') || document.querySelector('.ie-cards button.ie-card');
+      if (firstSection) firstSection.click();
+    });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '05-ielts-listening-audio', 'IELTS Listening (Sections 1-4 Multi-Accent Audio)');
 
     // 05b Listening Test Calibrated Band Scorecard Result
     await page.evaluate(() => {
-      const submitBtn = Array.from(document.querySelectorAll('.ie-btn')).find(b => b.textContent.includes('Submit answers'));
+      const submitBtn = Array.from(document.querySelectorAll('.ie-testbar button, .ie-testbar .ie-btn')).find(b => b.textContent.includes('Submit') || b.textContent.includes('Nộp bài'));
       if (submitBtn) submitBtn.click();
     });
     await new Promise(r => setTimeout(r, 600));
-    await captureFlowView(page, '06-ielts-academic', '05b-ielts-listening-test-result', 'IELTS Listening Calibrated Band Scorecard Result');
+    await captureFlowView(page, '06-ielts-academic', '05b-ielts-listening-test-result', 'IELTS Listening Calibrated Band Scorecard Result', {
+      scrollToSelector: '.ie-result'
+    });
+    // Cleanly cancel test state
+    await page.evaluate(() => {
+      if (window.setIeltsTestInProgress) window.setIeltsTestInProgress(null);
+      document.getElementById('ielts-confirm-dialog')?.remove();
+    });
 
     // 06 Listening Traps Lab
     await page.goto(`${BASE_URL}ielts.html#listening-traps`, { waitUntil: 'networkidle0' });
@@ -688,18 +817,13 @@ async function run() {
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '10-ielts-speaking-simulator', 'IELTS Speaking (AI Examiner Simulator & Nation 4-3-2)');
 
-    // 10b Speaking Simulator 4-Criteria Assessment Feedback
+    // 10b Speaking Simulator 4-Criteria Assessment Feedback (Switch to Comparative Deconstruction)
     await page.evaluate(() => {
-      const textarea = document.querySelector('.ie-textarea, textarea');
-      if (textarea) {
-        textarea.value = 'Well, to be perfectly honest, I would definitely say that my morning routine stems from a disciplined habit because it allows me to focus completely without unexpected distractions.';
-        textarea.dispatchEvent(new Event('input', { bubbles: true }));
-      }
-      const evalBtn = Array.from(document.querySelectorAll('.ie-btn')).find(b => b.textContent.includes('Evaluate'));
-      if (evalBtn) evalBtn.click();
+      const tab = Array.from(document.querySelectorAll('.ie-sim-nav button, .ie-tab')).find(b => b.textContent.includes('Deconstruction') || b.getAttribute('data-mode') === 'deconstruct');
+      if (tab) tab.click();
     });
     await new Promise(r => setTimeout(r, 600));
-    await captureFlowView(page, '06-ielts-academic', '10b-ielts-speaking-assessment-feedback', 'IELTS Speaking 4-Criteria Assessment Feedback');
+    await captureFlowView(page, '06-ielts-academic', '10b-ielts-speaking-assessment-feedback', 'IELTS Speaking 4-Criteria Assessment Feedback (Examiner FC/LR/GRA/PR Rubrics)');
 
     // 11 Topic Lexicon
     await page.goto(`${BASE_URL}ielts.html#vocab`, { waitUntil: 'networkidle0' });
@@ -758,7 +882,7 @@ async function run() {
     const flow8Dir = path.join(OUTPUT_BASE, '08-assessments-diagnostics');
     if (!fs.existsSync(flow8Dir)) fs.mkdirSync(flow8Dir, { recursive: true });
 
-    // Copy and organize all 11 curated assessment artifacts
+    // Curate all 11 true assessment artifacts
     const assessmentArtifacts = [
       { src: '01-onboarding-placement/04-placement-result-01-top.png', dest: '01-cefr-placement-assessment-result.png' },
       { src: '02-navigation-hud/06b-multiskill-assessment-intro-01-top.png', dest: '02-multiskill-diagnostic-intro.png' },
@@ -778,12 +902,19 @@ async function run() {
       if (fs.existsSync(fullSrc)) {
         fs.copyFileSync(fullSrc, path.join(flow8Dir, dest));
         console.log(`  [🎯 ASSESSMENT] 08-assessments-diagnostics/${dest}`);
+      } else {
+        console.warn(`  ⚠️ Missing source for assessment: ${src}`);
       }
     });
 
     console.log('\n======================================================');
     console.log('✓ ALL FLOWS AND ASSESSMENT SUITES CAPTURED SUCCESSFULLY');
     console.log(`Target: ${OUTPUT_BASE}`);
+    console.log(`Total captured unique hashes: ${capturedHashes.size}`);
+    console.log(`Total duplicate warnings: ${duplicatesDetected.length}`);
+    if (duplicatesDetected.length > 0) {
+      console.warn('Duplicates list:', duplicatesDetected);
+    }
     console.log('======================================================\n');
 
   } catch (err) {

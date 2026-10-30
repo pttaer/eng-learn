@@ -116,7 +116,7 @@ export class NotificationCatalog {
         body: `Thuật toán SRS Spaced Repetition tính toán đây là thời điểm hoàn hảo nhất để bạn ôn tập.`
       },
       {
-        title: `SRS Review Due (${dueCount} từ): ✨ Tích lũy phản xạ tự nhiên mỗi ngày`,
+        title: `SRS Review Due (${dueCount} từ): 🎯 Tích lũy phản xạ tự nhiên mỗi ngày`,
         body: `Chỉ 5 thẻ mỗi lượt ôn tập là chìa khóa nói trôi chảy không cần dịch nhẩm trong đầu.`
       },
       {
@@ -203,7 +203,7 @@ export class NotificationCatalog {
         body: `The Ebbinghaus spacing algorithm calculated this exact moment for optimal retention.`
       },
       {
-        title: `SRS Review Due (${dueCount} item${dueCount > 1 ? 's' : ''}): ✨ Effortless daily recall workout`,
+        title: `SRS Review Due (${dueCount} item${dueCount > 1 ? 's' : ''}): 🎯 Effortless daily recall workout`,
         body: `Consistency beats intensity. Review ${dueCount} cards today to sound natural without hesitation.`
       },
       {
@@ -958,12 +958,12 @@ export class NotificationCatalog {
     }
 
     const completedHooksVi = [
-      `✨ 3/3 Nhiệm vụ hoàn thành!`,
+      `✓ 3/3 Nhiệm vụ hoàn thành!`,
       `👑 Chuỗi ${ctx.streak || 1}d • Top 5% bền bỉ`,
       `💎 Đã nạp đủ năng lượng hôm nay!`
     ];
     const completedHooksEn = [
-      `✨ 3/3 Quests completed!`,
+      `✓ 3/3 Quests completed!`,
       `👑 ${ctx.streak || 1}d Streak • Top 5% grit`,
       `💎 Daily quota accomplished!`
     ];

@@ -1,0 +1,132 @@
+{
+  "title": "Longman Dictionary of Contemporary English (LDOCE) Grammar & Collocation Guide",
+  "publisher": "Pearson Education",
+  "evaluation": "⭐⭐⭐⭐⭐ (5/5) — #1 Learner's Dictionary for Collocation & Grammar Patterns",
+  "key_pedagogical_pillars": {
+    "2000_defining_vocabulary": "Every word in LDOCE is defined using exclusively the Longman 2,000 Defining Vocabulary, guaranteeing clear, non-circular explanations.",
+    "grammar_patterns": "LDOCE explicitly labels verb and noun syntactic complementation patterns (e.g. [+ that clause], [+ to do], [+ obj from doing]).",
+    "collocation_boxes": "Integrated collocation boxes organize pairings into semantic categories (types, actions, modifiers, prepositions)."
+  },
+  "grammar_patterns_catalog": [
+    {
+      "pattern": "Verb + Object + from + -ing",
+      "target_verbs": [
+        "prevent",
+        "discourage",
+        "deter",
+        "prohibit",
+        "stop",
+        "dissuade"
+      ],
+      "example": "Stricter laws help prevent companies from dumping untreated effluent into rivers.",
+      "common_learner_error": "Saying *prevent companies to dump* (incorrect infinitival complement)."
+    },
+    {
+      "pattern": "Verb + -ing (Gerund only)",
+      "target_verbs": [
+        "consider",
+        "avoid",
+        "postpone",
+        "admit",
+        "suggest",
+        "delay"
+      ],
+      "example": "The government is considering introducing carbon taxes on high-emission vehicles.",
+      "common_learner_error": "Saying *considering to introduce*."
+    },
+    {
+      "pattern": "Noun + of + -ing vs Noun + to-infinitive",
+      "rules": {
+        "chance / prospect / risk": "Take 'of + -ing': *There is a high risk of developing complications.*",
+        "ability / attempt / failure": "Take 'to-infinitive': *The failure to regulate financial markets caused panic.*"
+      }
+    },
+    {
+      "pattern": "Adjective + Preposition pairings",
+      "catalog": [
+        {
+          "adj": "capable",
+          "prep": "of",
+          "example": "capable of performing complex tasks"
+        },
+        {
+          "adj": "susceptible",
+          "prep": "to",
+          "example": "susceptible to environmental stresses"
+        },
+        {
+          "adj": "detrimental",
+          "prep": "to",
+          "example": "detrimental to economic stability"
+        },
+        {
+          "adj": "compatible",
+          "prep": "with",
+          "example": "compatible with sustainable growth"
+        },
+        {
+          "adj": "integral",
+          "prep": "to",
+          "example": "integral to the functioning of society"
+        }
+      ]
+    }
+  ],
+  "collocation_boxes_ielts_themes": {
+    "education": {
+      "verbs_with_curriculum": [
+        "broaden the curriculum",
+        "standardize the curriculum",
+        "revise the curriculum"
+      ],
+      "nouns_with_academic": [
+        "academic performance",
+        "academic rigor",
+        "academic credentials",
+        "academic probation"
+      ],
+      "collocations_with_skills": [
+        "acquire skills",
+        "hone skills",
+        "practical skills",
+        "interpersonal skills"
+      ]
+    },
+    "environment": {
+      "adjectives_with_pollution": [
+        "severe pollution",
+        "industrial pollution",
+        "untreated pollution",
+        "airborne pollutants"
+      ],
+      "verbs_with_resources": [
+        "deplete natural resources",
+        "conserve natural resources",
+        "exploit natural resources"
+      ],
+      "collocations_with_emissions": [
+        "curb emissions",
+        "slash emissions",
+        "greenhouse gas emissions",
+        "carbon footprint"
+      ]
+    },
+    "technology": {
+      "verbs_with_technology": [
+        "embrace technology",
+        "harness technology",
+        "adopt cutting-edge technology"
+      ],
+      "collocations_with_artificial_intelligence": [
+        "rapid development of AI",
+        "ethical implications of AI",
+        "automate routine tasks"
+      ],
+      "adjectives_with_advancement": [
+        "unprecedented advancement",
+        "groundbreaking discovery",
+        "exponential growth"
+      ]
+    }
+  }
+}

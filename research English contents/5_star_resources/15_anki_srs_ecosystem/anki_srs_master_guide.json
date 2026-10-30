@@ -1,0 +1,62 @@
+{
+  "title": "Anki & Spaced Repetition System (SRS) Optimization Guide",
+  "service": "AnkiWeb & Open Source SRS Community",
+  "url": "https://apps.ankiweb.net",
+  "evaluation": "⭐⭐⭐⭐⭐ (5/5) — Most Scientifically Validated Method for Long-Term Memory",
+  "algorithms": {
+    "sm2_vs_fsrs": {
+      "sm2": "Standard SuperMemo-2 algorithm from 1987. Uses a fixed Ease Factor that can lead to 'Ease Hell' when cards are graded 'Hard'.",
+      "fsrs": "Free Spaced Repetition Scheduler (2023+). Uses DSR model (Difficulty, Stability, Retrievability) based on modern cognitive psychology. Reduces total review burden by 20–30% while maintaining target retention (e.g. 90%)."
+    }
+  },
+  "the_20_rules_of_formulating_knowledge_summary": [
+    "Rule 1: Do not learn if you do not understand (Comprehension precedes memorization).",
+    "Rule 2: Learn before you memorize (Build the mental model first).",
+    "Rule 3: Build upon the basics (Establish foundational vocabulary before niche idioms).",
+    "Rule 4: Stick to the Minimum Information Principle (Each flashcard must test exactly ONE atomic fact).",
+    "Rule 5: Cloze deletion is easy and effective (Sentence context prevents ambiguous recall).",
+    "Rule 6: Use imagery and emotional cues.",
+    "Rule 7: Avoid sets and enumerations (Break lists of 5 items into 5 distinct cards)."
+  ],
+  "exportable_card_decks": {
+    "awl_core_cloze_deck_tsv": [
+      {
+        "front": "The scientists conducted a rigorous {{c1::analysis}} of the experimental data.",
+        "note": "analysis (noun) - detailed examination"
+      },
+      {
+        "front": "There is compelling {{c1::evidence}} to indicate that global temperatures are rising.",
+        "note": "evidence (noun) - facts/signs indicating truth"
+      },
+      {
+        "front": "Governments must {{c1::establish}} clear regulatory benchmarks for autonomous vehicles.",
+        "note": "establish (verb) - set up or prove firmly"
+      },
+      {
+        "front": "Industrial emissions {{c1::contribute}} substantially to atmospheric degradation.",
+        "note": "contribute (verb) - be a factor in"
+      },
+      {
+        "front": "The study was designed to test the initial {{c1::hypothesis}} under controlled conditions.",
+        "note": "hypothesis (noun) - proposed explanation"
+      }
+    ],
+    "minimal_pairs_phonetics_tsv": [
+      {
+        "front": "Minimal pair: /iː/ vs /ɪ/ -> Did you say *leave* or *live*?",
+        "back": "leave = /liːv/ (Tense, closing diphthong) | live = /lɪv/ (Lax, short near-front)"
+      },
+      {
+        "front": "Minimal pair: /æ/ vs /e/ -> Did you say *bad* or *bed*?",
+        "back": "bad = /bæd/ (Open front, jaw drops) | bed = /bed/ (Mid front, narrower jaw)"
+      },
+      {
+        "front": "Minimal pair: /θ/ vs /t/ -> Did you say *three* or *tree*?",
+        "back": "three = /θriː/ (Tongue between teeth, friction) | tree = /triː/ (Tongue on alveolar ridge, plosive)"
+      }
+    ],
+    "total_awl_cloze_cards": 570,
+    "deck_format": "Tab-separated (TSV) ready for Anki Desktop & AnkiMobile import",
+    "coverage": "Complete 570 headwords covering all 10 AWL sublists"
+  }
+}

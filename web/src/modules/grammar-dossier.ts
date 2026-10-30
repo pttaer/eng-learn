@@ -110,7 +110,7 @@ export class GrammarDossier {
         </div>
         <div class="telemetry-item">
           <span class="telemetry-label">${t('grammar.cognitive_load_factor', undefined, 'COGNITIVE LOAD FACTOR')}</span>
-          <span class="telemetry-value">${this.activeLevel === 'C1' || this.activeLevel === 'C2' ? 'Ease 2.30 (harder tier)' : 'Ease 2.50 (standard tier)'}</span>
+          <span class="telemetry-value">${this.activeLevel === 'C1' || this.activeLevel === 'C2' ? t('grammar.tier_advanced', undefined, 'Advanced Tier') : t('grammar.tier_standard', undefined, 'Standard Tier')}</span>
         </div>
         <div class="telemetry-item">
           <span class="telemetry-label">${t('grammar.syntax_classifier', undefined, 'SYNTAX CLASSIFIER')}</span>
@@ -208,7 +208,7 @@ export class GrammarDossier {
       statusBadge = srsState.repetitions >= 3 ? 'MASTERED' : 'REVIEW';
     }
 
-    const categoryLabel = `${item.mode.replace('_', ' ')} · ${item.cefrLevel}`;
+    const categoryLabel = `${prettyMode(item.mode)} · ${item.cefrLevel}`;
 
     // FRONT: Prompt sentence, Cue, Formula Bar, and Interactive Transformation Console (ENG-60)
     const frontEl = document.createElement('div');

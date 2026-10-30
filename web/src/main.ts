@@ -73,6 +73,7 @@ import collocationsData from './assets/data/collocations.json';
 (window as any).MultiSkillQuizModal = MultiSkillQuizModal;
 (window as any).PlacementQuiz = PlacementQuiz;
 (window as any).StorageManager = StorageManager;
+(window as any).HeaderHUD = HeaderHUD;
 (window as any).ProfileSyncEngine = ProfileSyncEngine;
 (window as any).SpeechEvaluator = SpeechEvaluator;
 (window as any).ConstellationEngine = ConstellationEngine;
@@ -270,8 +271,11 @@ class App {
     };
 
     const hasQuizHash = window.location.hash === '#placement' || window.location.hash === '#quiz';
+    const hasMistakesHash = window.location.hash === '#mistakes';
     if (hasQuizHash) {
       setTimeout(() => PlacementQuiz.open(promptTour), 300);
+    } else if (hasMistakesHash) {
+      setTimeout(() => MistakeVault.open(), 300);
     } else if (StorageManager.isPlacementDone()) {
       promptTour();
     } else {
@@ -538,22 +542,22 @@ class App {
 
     modal.innerHTML = `
       <div class="completion-receipt-card">
-        <div class="telemetry-label" style="margin-bottom: 8px;">[MISSION DIRECTIVE COMPLETE]</div>
+        <div class="telemetry-label" style="margin-bottom: 8px;">[${t('completion.directive_complete', undefined, 'MISSION DIRECTIVE COMPLETE')}]</div>
         <h2 style="font-family: var(--font-mono); font-size: var(--font-h2); font-weight: 700; margin-bottom: 16px;">
           ${moduleName}
         </h2>
-        <div style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; width: 100%; padding: 16px 0; margin-bottom: 20px; display: flex; justify-content: space-around;">
+        <div style="border-top: 1px solid rgba(255, 255, 255, 0.12); border-bottom: 1px solid rgba(255, 255, 255, 0.12); width: 100%; padding: 16px 0; margin-bottom: 20px; display: flex; justify-content: space-around;">
           <div>
-            <div class="telemetry-label">STREAK</div>
-            <div class="telemetry-value" style="font-size: var(--font-h3);">${state.streak.currentStreak} DAYS</div>
+            <div class="telemetry-label">${t('nav.daily_streak', undefined, 'STREAK')}</div>
+            <div class="telemetry-value" style="font-size: var(--font-h3);">${state.streak.currentStreak} ${t('common.days', undefined, 'DAYS')}</div>
           </div>
           <div>
-            <div class="telemetry-label">TOTAL REVIEWS</div>
+            <div class="telemetry-label">${t('completion.total_reviews', undefined, 'TOTAL REVIEWS')}</div>
             <div class="telemetry-value" style="font-size: var(--font-h3);">${state.totalCardsReviewed}</div>
           </div>
         </div>
         <p style="font-size: var(--font-body-compact); line-height: 1.4; margin-bottom: 24px;">
-          Neural engrams indexed and synchronized into browser memory. All spaced repetition intervals successfully updated.
+          ${t('completion.receipt_desc', undefined, 'Neural engrams indexed and synchronized into browser memory. All spaced repetition intervals successfully updated.')}
         </p>
         <div class="apple-modal-footer">
           <button type="button" class="apple-bottom-close-btn btn-receipt-close">
@@ -563,12 +567,34 @@ class App {
       </div>
     `;
 
-    const closeBtn = modal.querySelector('.btn-receipt-close');
-    closeBtn?.addEventListener('click', () => {
-      AudioSynthesizer.play('click');
+    const cleanup = () => {
+      window.removeEventListener('keydown', onKeyDown);
       modal.remove();
+    };
+
+    const closeModal = () => {
+      AudioSynthesizer.play('click');
+      cleanup();
       this.router.navigate('singularity');
+    };
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        closeModal();
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
     });
+
+    const closeBtn = modal.querySelector('.btn-receipt-close');
+    closeBtn?.addEventListener('click', closeModal);
 
     document.body.appendChild(modal);
   }
@@ -583,17 +609,17 @@ class App {
     toast.innerHTML = `
       <div class="toast-title">
         <span>${icon('compass', 16)}</span>
-        <span>ORIENTATION ADVISORY</span>
+        <span>${t('tour.welcome_title', undefined, 'ORIENTATION ADVISORY')}</span>
       </div>
       <p class="toast-desc">
-        Welcome to English Singularity. Would you like a 60-second interactive guided tour of your command telemetry, skill tree, and habit loop?
+        ${t('tour.welcome_desc', undefined, 'Welcome to English Singularity. Would you like a 60-second interactive guided tour of your command telemetry, skill tree, and habit loop?')}
       </p>
       <div class="toast-actions">
         <button class="hud-btn btn-toast-dismiss" style="padding: 4px 10px; font-size: var(--font-kicker);">
-          DISMISS
+          ${t('common.dismiss', undefined, 'DISMISS')}
         </button>
         <button class="hud-btn btn-toast-start" style="padding: 4px 12px; font-size: var(--font-kicker); font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
-          START TOUR ${icon('arrowRight')}
+          ${t('tour.start_tour', undefined, 'START TOUR')} ${icon('arrowRight')}
         </button>
       </div>
     `;

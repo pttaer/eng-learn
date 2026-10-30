@@ -1,0 +1,53 @@
+{
+  "title": "Dr. Geoff Lindsey: Modern RP (Received Pronunciation) & Acoustic Phonetics",
+  "author": "Dr. Geoff Lindsey (PhD, Linguistics, University College London)",
+  "source": "englishspeechservices.com / YouTube Dr. Geoff Lindsey",
+  "evaluation": "⭐⭐⭐⭐⭐ (5/5) — Pinnacle of Modern British Phonetics",
+  "modern_rp_vowel_shifts": [
+    {
+      "vowel": "GOAT vowel (Trad IPA: /əʊ/ -> Modern: /əw/ or /ʌw/)"
+    },
+    {
+      "vowel": "TRAP vowel (Trad IPA: /æ/ -> Modern: /a/)",
+      "description": "Modern British speakers pronounce TRAP as a fully open front vowel [a], not the tense, raised [æ] of 1950s BBC or General American."
+    },
+    {
+      "vowel": "FOOT vs STRUT split",
+      "description": "Crucial distinction for non-native speakers: /ʊ/ in 'put', 'book' is rounded and near-back; /ʌ/ in 'cut', 'strut' is open-mid central [ɐ]."
+    },
+    {
+      "vowel": "FLEECE vowel (Trad IPA: /iː/ -> Modern: /ɪj/)",
+      "description": "The FLEECE vowel is not a static monophthong; it is phonetically a closing diphthong starting near [ɪ] and ending in high glide [j]."
+    }
+  ],
+  "connected_speech_phenomena": {
+    "glottal_replacement": {
+      "symbol": "/ʔ/"
+    },
+    "linking_and_intrusive_r": {},
+    "yod_coalescence": {
+      "rule": "/t/ + /j/ merges into /tʃ/ ('tune' -> /tʃuːn/); /d/ + /j/ merges into /dʒ/ ('during' -> /dʒʊərɪŋ/)."
+    }
+  },
+  "intonation_and_nucleus": {},
+  "harvested_articles": [
+    {
+      "title": "The American glottal conspiracy revisited"
+    },
+    {
+      "title": "Phonetics Article"
+    },
+    {
+      "title": "Phonetics Article"
+    },
+    {
+      "title": "Phonetics Article"
+    },
+    {
+      "title": "Phonetics Article"
+    },
+    {
+      "title": "Phonetics Article"
+    }
+  ]
+}

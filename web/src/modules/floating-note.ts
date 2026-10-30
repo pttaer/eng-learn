@@ -523,10 +523,12 @@ export class FloatingNote {
     const height = this.bubbleEl.offsetHeight || 44;
     const pad = 12;
 
+    const isMobile = window.innerWidth <= 768;
+    const bottomDockClearance = isMobile ? 96 : 24;
     const minX = pad;
     const maxX = Math.max(pad, window.innerWidth - width - pad);
     const minY = pad;
-    const maxY = Math.max(pad, window.innerHeight - height - pad);
+    const maxY = Math.max(pad, window.innerHeight - height - bottomDockClearance);
 
     this.bubblePos.x = Math.max(minX, Math.min(maxX, this.bubblePos.x));
     this.bubblePos.y = Math.max(minY, Math.min(maxY, this.bubblePos.y));

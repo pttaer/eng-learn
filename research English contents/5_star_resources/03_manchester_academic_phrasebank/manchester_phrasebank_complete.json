@@ -1,0 +1,2344 @@
+{
+  "title": "Manchester Academic Phrasebank",
+  "institution": "The University of Manchester",
+  "author": "Dr. John Morley",
+  "sections": {
+    "introducing-work": {
+      "title": "Introducing Work",
+      "url": "https://www.phrasebank.manchester.ac.uk/introducing-work/",
+      "toggle_count": 17,
+      "phrase_count": 247,
+      "functional_categories": [
+        {
+          "function_category": "Establishing the importance of the topic for the world or society",
+          "phrase_count": 12,
+          "phrases": [
+            "X is a major contributor to ...",
+            "X plays a critical role in the maintenance of ...",
+            "Xs have emerged as powerful platforms for ...",
+            "X is essential for a wide range of technologies...",
+            "X can play an important role in addressing the issue of ...",
+            "There is evidence that X plays a pivotal role in regulating ...",
+            "In the new global economy, X has become a central issue for ...",
+            "Evidence suggests that X is among the most important factors for ...",
+            "Xs are one of the most widely used groups of antibacterial agents and ...",
+            "There is a growing body of literature that recognises the importance of ...",
+            "X is an important component in the climate system, and plays a key role in Y...",
+            "Xs are one of the most widely used groups of Y and have been extensively used for ..."
+          ]
+        },
+        {
+          "function_category": "Establishing the importance of the topic for the discipline",
+          "phrase_count": 16,
+          "phrases": [
+            "X is of interest because ...",
+            "X is a classic problem in ...",
+            "X is an important aspect of ...",
+            "X is a fundamental property of ...",
+            "X is an increasingly important area in ...",
+            "The concepts of X and Y are central to ...",
+            "X is at the heart of our understanding of ...",
+            "Investigating X is a continuing concern within ...",
+            "X is a major area of interest within the field of ...",
+            "X has been an object of research since the 1960s...",
+            "X has been the subject of many classic studies in ...",
+            "X has been instrumental in our understanding of ...",
+            "The theory of X provides a useful account of how ...",
+            "Central to the entire discipline of X is the concept of ...",
+            "The issue of X has received considerable critical attention...",
+            "X has long been a question of great interest in a wide range of fields..."
+          ]
+        },
+        {
+          "function_category": "Establishing the importance of the topic (time frame given)",
+          "phrase_count": 13,
+          "phrases": [
+            "Recently, there has been renewed interest in ...",
+            "Traditionally, Xs have subscribed to the belief that ...",
+            "One of the most important events of the 1970s was ...",
+            "In recent years, there has been an increasing interest in ...",
+            "Recent developments in X have heightened the need for ...",
+            "The last two decades have seen a growing trend towards ...",
+            "Recently, researchers have shown an increased interest in ...",
+            "Recent trends in X have led to a proliferation of studies that ...",
+            "Over the past century, there has been a dramatic increase in ...",
+            "The past decade has seen the rapid development of X in many ...",
+            "Since it was reported in 2015, X has been attracting considerable interest...",
+            "Recent developments in the field of X have led to a renewed interest in ...",
+            "The past thirty years have seen increasingly rapid advances in the field of ..."
+          ]
+        },
+        {
+          "function_category": "Establishing the importance of the topic as a problem to be addressed",
+          "phrase_count": 14,
+          "phrases": [
+            "X is a major problem in ...",
+            "Of particular concern is ...",
+            "One of the main obstacles ...",
+            "One of the greatest challenges ...",
+            "A key issue is the safe disposal of ...",
+            "The main disadvantage of X is that ...",
+            "X impacts negatively upon a range of ...",
+            "It is now well established that X can impair ...",
+            "X has led to the decline in the population of ...",
+            "The main challenge faced by many researchers is the ...",
+            "Lack of X has existed as a health problem for many years...",
+            "Xs are one of the most rapidly declining groups of insects in ...",
+            "Exposure to X has been shown to be related to adverse effects in ...",
+            "There is an urgent need to address the safety problems caused by ..."
+          ]
+        },
+        {
+          "function_category": "Referring to previous work to establish what is already known",
+          "phrase_count": 18,
+          "phrases": [
+            "Recent evidence suggests that ...",
+            "Extensive research has shown that ...",
+            "Studies of X show the importance of ...",
+            "It has previously been observed that ...",
+            "Several attempts have been made to ...",
+            "Previous research has established that ...",
+            "Data from several studies suggest that ...",
+            "Recent research comparing X and Y has found ...",
+            "The existing body of research on X suggests that ...",
+            "There is a growing body of literature that recognises ...",
+            "Several theories on the origin of X have been proposed...",
+            "Existing research recognises the critical role played by ...",
+            "It is now well established from a variety of studies, that ...",
+            "Recently investigators have examined the effects of X on Y...",
+            "Surveys such as that conducted by Smith (2015) have shown that ...",
+            "Factors found to be influencing X have been explored in several studies...",
+            "A number of cross-sectional studies suggest an association between X and Y...",
+            "Studies over the past two decades have provided important information on ..."
+          ]
+        },
+        {
+          "function_category": "Identifying a controversy within the field of study",
+          "phrase_count": 19,
+          "phrases": [
+            "A much debated question is whether ...",
+            "One major issue in early X research concerned ...",
+            "To date there has been little agreement on what ...",
+            "The issue has grown in importance in light of recent ...",
+            "One of the most significant current discussions in X is ...",
+            "In the literature on X, the relative importance of Y is debated...",
+            "One observer has already drawn attention to the paradox in ...",
+            "Questions have been raised about the use of animal subjects in ...",
+            "In many Xs, a debate is taking place between Ys and Zs concerning ...",
+            "Debate continues about the best strategies for the management of ...",
+            "This concept has recently been challenged by X studies demonstrating ...",
+            "The debate about X has gained fresh prominence with many arguing that ...",
+            "Scholars have long debated the impact of X on the creation and diffusion of ...",
+            "More recently, literature has emerged that offers contradictory findings about ...",
+            "One major theoretical issue that has dominated the field for many years concerns ...",
+            "The controversy about scientific evidence for X has raged unabated for over a century...",
+            "The issue of X has been a controversial and much disputed subject within the field of ...",
+            "The causes of X have been the subject of intense debate within the scientific community...",
+            "In the literature on X, the relative importance of Y has been subject to considerable discussion..."
+          ]
+        },
+        {
+          "function_category": "Explaining the inadequacies of previous studies",
+          "phrase_count": 20,
+          "phrases": [
+            "Previous studies of X have not dealt with ...",
+            "Researchers have not treated X in much detail...",
+            "Such expositions are unsatisfactory because they ...",
+            "Most studies in the field of X have only focused on ...",
+            "Such approaches, however, have failed to address ...",
+            "Previous published studies are limited to local surveys...",
+            "Half of the studies evaluated failed to specify whether ...",
+            "The research to date has tended to focus on X rather than Y...",
+            "Previously published studies on the effect of X are not consistent...",
+            "Smith’s analysis does not take account of ..., nor does she examine ...",
+            "The existing accounts fail to resolve the contradiction between X and Y...",
+            "Most studies in X have only been carried out in a small number of areas...",
+            "However, much of the research up to now has been descriptive in nature ...",
+            "The generalisability of much published research on this issue is problematic...",
+            "Research on the subject has been mostly restricted to limited comparisons of ...",
+            "However, few writers have been able to draw on any systematic research into ...",
+            "Short-term studies such as these do not necessarily show subtle changes over time ...",
+            "Although extensive research has been carried out on X, no single study exists which ...",
+            "However, these results were based upon data from over 30 years ago and it is unclear if ...",
+            "The experimental data are rather controversial, and there is no general agreement about ..."
+          ]
+        },
+        {
+          "function_category": "Identifying the paucity or lack of previous research",
+          "phrase_count": 15,
+          "phrases": [
+            "There is little published data on ...",
+            "No previous study has investigated X...",
+            "The use of X has not been investigated...",
+            "Data about the efficacy and safety of X are limited...",
+            "Up to now, far too little attention has been paid to ...",
+            "A search of the literature revealed few studies which ...",
+            "The impact of X on Y is understudied, particularly for ...",
+            "Few studies have investigated X in any systematic way ...",
+            "In addition, no research has been found that surveyed ...",
+            "So far, very little attention has been paid to the role of X...",
+            "Surprisingly, the effects of X have not been closely examined...",
+            "In contrast to X, there is much less information about effects of ...",
+            "A systematic understanding of how X contributes to Y is still lacking...",
+            "Despite the importance of X, there remains a paucity of evidence on ...",
+            "To date, the problem has received scant attention in the research literature..."
+          ]
+        },
+        {
+          "function_category": "Identifying a knowledge gap in the field of study",
+          "phrase_count": 18,
+          "phrases": [
+            "It is still not known whether ...",
+            "... much less is known about X...",
+            "The nature of X remains unclear...",
+            "Currently, there are no data on ...",
+            "What is less clear is the nature of ...",
+            "Very little is currently known about X in ...",
+            "Research to date has not yet determined ...",
+            "What is not yet clear is the impact of X on ...",
+            "There is still uncertainty, however, whether ...",
+            "The response of X to Y is not fully understood...",
+            "Causal factors leading to X remain speculative...",
+            "The neurobiological basis of X is poorly understood...",
+            "Little is known about X and it is not clear what factors ...",
+            "To date, only a limited number of Xs have been identified...",
+            "The mechanisms that underpin X are not fully understood...",
+            "Much uncertainty still exists about the relationship between ...",
+            "This indicates a need to understand the various perceptions of X that exist among ...",
+            "It is now well established that ... However, the influence of X on Y has remained unclear..."
+          ]
+        },
+        {
+          "function_category": "Stating the focus, aim, or argument of a short paper",
+          "phrase_count": 7,
+          "phrases": [
+            "In this paper, I argue that ...",
+            "This paper attempts to show that ...",
+            "The central thesis of this paper is that ...",
+            "In the pages that follow, it will be argued that ...",
+            "In this essay, I attempt to defend the view that ...",
+            "The aim of this essay is to explore the relationship between ...",
+            "The purpose of this paper is to review recent research into the ..."
+          ]
+        },
+        {
+          "function_category": "Stating the purpose of the current research",
+          "phrase_count": 20,
+          "phrases": [
+            "The specific objective of this study was to ...",
+            "An objective of this study was to investigate ...",
+            "This thesis will examine the way in which the ...",
+            "This study set out to investigate the usefulness of ...",
+            "This dissertation seeks to explain the development of ...",
+            "This case study seeks to examine the changing nature of ...",
+            "The objectives of this research are to determine whether ...",
+            "This prospective study was designed to investigate the use of ...",
+            "This research examines the emerging role of X in the context of ...",
+            "This study systematically reviews the data for..., aiming to provide ...",
+            "Drawing upon two strands of research into X, this study attempts to ...",
+            "This thesis intends to determine the extent to which ... and whether ...",
+            "This dissertation aims to unravel some of the mysteries surrounding ...",
+            "This study therefore set out to assess the effect of X ..., and the effect of ...",
+            "The main aim of this study is to investigate the differences between X and Y...",
+            "Part of the aim of this project is to develop software that is compatible with ...",
+            "There are two primary aims of this study: 1... To investigate ... 2... To ascertain ...",
+            "This study seeks to obtain data which will help to address these research gaps...",
+            "One purpose of this study was to assess the extent to which these factors were ...",
+            "The purpose of this investigation is to explore the relationship between X and Y..."
+          ]
+        },
+        {
+          "function_category": "Describing the research design and the methods used",
+          "phrase_count": 15,
+          "phrases": [
+            "Data for this study were collected using ...",
+            "Five works will be examined, all of which ...",
+            "This investigation takes the form of a case-study of the ...",
+            "This study was exploratory and interpretative in nature...",
+            "This study uses a qualitative case study approach to investigate ...",
+            "The research data in this thesis is drawn from four main sources: ...",
+            "The approach to empirical research adopted for this study was one of ...",
+            "This dissertation follows a case-study design, with in-depth analysis of ...",
+            "By employing qualitative modes of enquiry, I attempt to illuminate the ...",
+            "Qualitative and quantitative research designs were adopted to provide ...",
+            "Both qualitative and quantitative methods were used in this investigation...",
+            "A holistic approach is utilised, integrating X, Y and Z material to establish ...",
+            "The study was conducted in the form of a survey, with data being gathered via ...",
+            "The methodological approach taken in this study is a mixed methodology based on ...",
+            "A combination of quantitative and qualitative approaches was used in the data analysis..."
+          ]
+        },
+        {
+          "function_category": "Explaining the significance of the current study",
+          "phrase_count": 16,
+          "phrases": [
+            "This is the first study to ...",
+            "This study provides new insights into ...",
+            "This work will generate fresh insight into ...",
+            "The study offers some important insights into ...",
+            "Understanding the link between X and Y will help ...",
+            "This is the first study to undertake a longitudinal analysis of ...",
+            "The present research explores, for the first time, the effects of ...",
+            "The importance and originality of this study are that it explores ...",
+            "The findings should make an important contribution to the field of ...",
+            "Characterisation of X is important for our increased understanding of ...",
+            "It is hoped that this research will contribute to a deeper understanding of ...",
+            "This study aims to contribute to this growing area of research by exploring ...",
+            "This project provided an important opportunity to advance the understanding of ...",
+            "Therefore, this study makes a major contribution to research on X by demonstrating ...",
+            "There are several important areas where this study makes an original contribution to ...",
+            "The experimental work presented here provides one of the first investigations into how ..."
+          ]
+        },
+        {
+          "function_category": "Describing the limitations of the current study",
+          "phrase_count": 10,
+          "phrases": [
+            "The thesis does not engage with ...",
+            "It is not the task of this paper to examine ...",
+            "This study is unable to encompass the entire ...",
+            "Establishing X is beyond the scope of this study...",
+            "It is beyond the scope of this study to examine the ...",
+            "The analysis of X presented here is based solely on ...",
+            "A full discussion of X lies beyond the scope of this study...",
+            "The reader should bear in mind that the study is based on ...",
+            "Another potential problem is that the scope of my thesis may be too broad...",
+            "Due to practical constraints, this paper cannot provide a comprehensive review of..."
+          ]
+        },
+        {
+          "function_category": "Giving reasons for personal interest in the research*",
+          "phrase_count": 8,
+          "phrases": [
+            "I became interested in Xs after reading ...",
+            "My interest in this area developed while I was ...",
+            "I have worked closely with X for many years and ...",
+            "My personal experience of X has prompted this research...",
+            "My main reason for choosing this topic is personal interest...",
+            "It is my experience of working with X that has driven this research...",
+            "This project was conceived during my time working for X... As a medical advisor, I witnessed ...",
+            "* sometimes found in the humanities, and the applied human sciences"
+          ]
+        },
+        {
+          "function_category": "Outlining the structure of the paper or dissertation",
+          "phrase_count": 13,
+          "phrases": [
+            "The first section of this paper will examine...",
+            "This paper begins by ... It will then go on to ...",
+            "My thesis is composed of four themed chapters...",
+            "The essay has been organised in the following way...",
+            "The remaining part of the paper proceeds as follows: ...",
+            "The main issues addressed in this paper are: a), b) and c)...",
+            "This paper first gives a brief overview of the recent history of X...",
+            "This paper has been divided into four parts... The first part deals with ...",
+            "The third chapter is concerned with the methodology used for this study...",
+            "The overall structure of the study takes the form of six chapters, including ...",
+            "Chapter Four analyses the results of interviews and focus group discussions undertaken during ...",
+            "Chapter Two begins by laying out the theoretical dimensions of the research, and looks at how ...",
+            "The fourth section presents the findings of the research, focusing on the three key themes that ..."
+          ]
+        },
+        {
+          "function_category": "Explaining key terms used in the current work",
+          "phrase_count": 13,
+          "phrases": [
+            "(also refer to Defining terms)",
+            "Throughout this paper, the term ‘X’ will refer to ...",
+            "The term ‘X’ will be used in this thesis to refer to ...",
+            "Historically, the term ‘X’ has been used to describe ...",
+            "It is necessary here to clarify exactly what is meant by ...",
+            "The phrase ‘X’ will be used in this study to describe the ...",
+            "According to Smith (2002), X can be defined as follows: ‘ ... ’",
+            "In this article, the abbreviation XYZ will be used to refer to ...",
+            "Throughout this dissertation, the term ‘X’ will be used to refer to ...",
+            "The term ‘X’ is a relatively new name for ..., commonly referred to as ...",
+            "In this essay, the term ‘X’ will be used in its broadest sense to refer to all ...",
+            "In this dissertation, the terms ‘X’ and ‘Y’ are used interchangeably to mean ...",
+            "While a variety of definitions of the term X have been suggested, this paper will use the definition first suggested by Smith (1968) who saw it as ..."
+          ]
+        }
+      ]
+    },
+    "referring-to-sources": {
+      "title": "Referring to Sources",
+      "url": "https://www.phrasebank.manchester.ac.uk/referring-to-sources/",
+      "toggle_count": 16,
+      "phrase_count": 166,
+      "functional_categories": [
+        {
+          "function_category": "General comments on the relevant literature",
+          "phrase_count": 14,
+          "phrases": [
+            "The literature on X has highlighted several ...",
+            "Different theories exist in the literature regarding ...",
+            "More recent attention has focused on the provision of ...",
+            "There are relatively few historical studies in the area of ...",
+            "A large and growing body of literature has investigated ...",
+            "Much of the literature since the mid-1990s emphasises the ...",
+            "Much of the current literature on X pays particular attention to ...",
+            "There is a large volume of published studies describing the role of ...",
+            "The existing literature on X is extensive and focuses particularly on ...",
+            "There is a relatively small body of literature that is concerned with ...",
+            "The generalisability of much published research on this issue is problematic...",
+            "A considerable amount of literature has been published on X... These studies ...",
+            "The academic literature on X has revealed the emergence of several contrasting themes...",
+            "Previous research findings into X have been inconsistent and contradictory (Smith, 1996; ...)..."
+          ]
+        },
+        {
+          "function_category": "Previous research: a historical perspective",
+          "phrase_count": 16,
+          "phrases": [
+            "Research into X has a long history...",
+            "For many years, this phenomenon was surprisingly neglected by ...",
+            "Only in the past ten years have studies of X directly addressed how ...",
+            "Prior to the work of Smith (1983), the role of X was largely unknown...",
+            "Over the past decade, most research in X has emphasized the use of ...",
+            "In recent years, there has been an increasing amount of literature on ...",
+            "Early examples of research into X include ... (Smith, 1962; Jones, 1974)...",
+            "During the past 30 years, much more information has become available on ...",
+            "The first serious discussions and analyses of X emerged during the 1970s with ...",
+            "Over the past two decades, major advances in molecular biology have allowed ...",
+            "Historically, research investigating the factors associated with X has focused on ...",
+            "It is only since the work of Smith (2001) that the study of X has gained momentum...",
+            "The construct of X was first articulated by Smith (1977) and popularised in his book: ...",
+            "Around the early 1960s, small-scale research and case studies began to emerge linking ...",
+            "It was not until the late 1960s that historians considered X worthy of scholarly attention...",
+            "Awareness of X is not recent, having possibly first been described in the 5th century BCE by ..."
+          ]
+        },
+        {
+          "function_category": "Previous research: methodological approaches taken",
+          "phrase_count": 11,
+          "phrases": [
+            "Most research on X has been carried out in ...",
+            "Most researchers investigating X have utilised ...",
+            "Using this approach, researchers have been able to ...",
+            "Several systematic reviews of X have been undertaken...",
+            "The vast majority of studies on X have been quantitative...",
+            "What we know about X is largely based on observational studies...",
+            "There are a number of large cross-sectional studies which suggest ...",
+            "Much of the previous research on X has been exploratory in nature...",
+            "Much of the X research has focused on identifying and evaluating the ...",
+            "What we know about X is largely based upon empirical studies that investigate ...",
+            "Publications that concentrate on X more frequently adopt a historical or chronological approach ..."
+          ]
+        },
+        {
+          "function_category": "Previous research: area investigated",
+          "phrase_count": 11,
+          "phrases": [
+            "To date, several studies have investigated ...",
+            "A number of studies have begun to examine ...",
+            "Various studies have assessed the efficacy of ...",
+            "Researchers attempted to evaluate the impact of ...",
+            "A great deal of previous research into X has focused on ...",
+            "Several studies have used longitudinal data to examine ...",
+            "Previous studies have explored the relationships between X and Y...",
+            "Twenty cohort study analyses have examined the relationship between ...",
+            "A number of authors have considered the effects of ... (Smith, 2003; Jones, 2004)...",
+            "At least 120 case-control studies worldwide have examined the relationship between ...",
+            "Numerous studies have attempted to explain ... (for example, Smith, 1996; Jones, 1998; ...)..."
+          ]
+        },
+        {
+          "function_category": "Previous research: what has been established or proposed",
+          "phrase_count": 18,
+          "phrases": [
+            "Several lines of evidence suggest that ...",
+            "Previous research has established that ...",
+            "Data from several studies suggest that ...",
+            "Recent evidence suggests that ... (Smith, 2020; ...)...",
+            "It is now well established from a variety of studies that ...",
+            "New findings amongst X provides further evidence that ...",
+            "A number of studies have postulated a convergence between ...",
+            "Recently, considerable evidence has accumulated to show that ...",
+            "Surveys such as that conducted by Smith (2015) have shown that ...",
+            "Many recent studies (e...g... Smith, 2019; Jones, 2020) have shown that ...",
+            "Traditionally, it has been argued that ... (e...g... Smith, 1960; Jones, 1972)...",
+            "Several biographies of Brown have been published... Smith (2016) presents ...",
+            "In previous studies on X, different variables have been found to be related to ...",
+            "Many historians have argued that ... (e...g... Jones, 1997; Brown, 1999; Smith, 2019)...",
+            "There is a consensus among social scientists that ... (e...g... Smith, 2019; Jones, 2020; ...",
+            "Data from several sources have identified the increased X and Y associated with obesity...",
+            "Recently, in vitro studies have shown that X can ... (Smith et al..., 2018; Jones et al..., 2021)...",
+            "It has been demonstrated that a high intake of X results in damage to ... (Smith, 2015; ...)..."
+          ]
+        },
+        {
+          "function_category": "Stating what is currently known about the topic",
+          "phrase_count": 11,
+          "phrases": [
+            "X increases when ... (Smith, 2015)",
+            "X is able to affect Y (Smith, 2015; Jones, 2020)...",
+            "X is positively related to Y (Smith, 2015; Jones, 2020)...",
+            "X is proportional to Y as expressed by the... (Smith, 2015)...",
+            "X is one of the most important ... (Smith, 2015; Jones, 2020)...",
+            "X is one of the most intense reactions following Y (Jones, 2020)...",
+            "A relationship exists between X and Y (Smith, 2015; Jones, 2020)...",
+            "X is a principal determining factor of Y (Smith, 2015; Jones, 2020)...",
+            "There is an unambiguous relationship between X and Y (Smith, 2015)...",
+            "X is significantly reduced during the first months of ... (Smith, 2015; Jones, 2020)...",
+            "X has been found to oppose the anti-inflammatory actions of Y on Z (Smith, 2020)..."
+          ]
+        },
+        {
+          "function_category": "Reference to a previous investigation: researcher prominent",
+          "phrase_count": 6,
+          "phrases": [
+            "Smith’s comparative study (2017) found that ...",
+            "Jones’s comprehensive review concluded that ...",
+            "Brown’s (1998) model of X assumes three main ...",
+            "Smith’s cross-country analysis (2017) showed that ...",
+            "Jones’s (2010) review of the literature concluded that ...",
+            "Brown’s (2022) recent analysis of X provides a strong critique of ..."
+          ]
+        },
+        {
+          "function_category": "Reference to a previous investigation: time prominent",
+          "phrase_count": 5,
+          "phrases": [
+            "In 1959, a seminal article was published entitled ...",
+            "Following this period, Smith actively searched for X...",
+            "In the 1950s, Smith pointed to some of the ways in which ...",
+            "Thirty years later, Smith (1974) reported three cases of X which ...",
+            "Almost 20 years ago, Jones (1995) formulated his X theory, centred around ..."
+          ]
+        },
+        {
+          "function_category": "Reference to a previous investigation: investigation prominent",
+          "phrase_count": 16,
+          "phrases": [
+            "One longitudinal study found that ...",
+            "A seminal study in this area is the work of ...",
+            "One study by Smith (2014) examined the trend in ...",
+            "A recent study by Smith and Jones (2012) involved ...",
+            "A qualitative study by Smith (2003) described how ...",
+            "A recent systematic literature review concluded that ...",
+            "Preliminary work on X was undertaken by Jones (1992)...",
+            "A longitudinal study of X by Smith (2012) reports that ...",
+            "A key study comparing X and Y is that of Smith (2010), in which ...",
+            "The first systematic study of X was reported by Smith et al... in 1986...",
+            "Detailed examination of X by Smith and Jones (1961) showed that ...",
+            "Analysis of the genes involved in X was first carried out by Smith et al... (1983)...",
+            "A significant analysis and discussion on the subject was presented by Smith (1988)...",
+            "The study of the structural behaviour of X was first carried out by Jones et al... (1986)...",
+            "A small scale study by Smith (2015) reached different conclusions, finding no increase in ...",
+            "The study by Jones (1990) offers probably the most comprehensive empirical analysis of ..."
+          ]
+        },
+        {
+          "function_category": "Reference to a previous investigation: topic prominent",
+          "phrase_count": 8,
+          "phrases": [
+            "To determine the effects of X, Jones et al... (2005) compared ...",
+            "X was originally isolated from Y in a soil sample from ... (Jones et al..., 1952)...",
+            "The electronic spectroscopy of X was first studied by Smith and Jones in 1970...",
+            "X formed the central focus of a study by Smith (2002) in which the author found ...",
+            "To better understand the mechanisms of X and its effects, Jones (2013) analysed the ...",
+            "X was first demonstrated experimentally by Pavlov (Smith, 2002)... In his seminal study ...",
+            "The acid-catalyzed condensation reaction between X and Y was first reported by Smith in 1872...",
+            "The way in which X is regulated was studied extensively by Smith and colleagues (Smith et al... 1995 and 1998)..."
+          ]
+        },
+        {
+          "function_category": "Reference to what other writers do in their published work",
+          "phrase_count": 6,
+          "phrases": [
+            "In Chapter 2, Smith provides us with a number of important ...",
+            "In the subsequent chapter, Smith examines the extent to which ...",
+            "By drawing on the concept of X, Smith has been able to show that ...",
+            "Some analysts (e...g... Smith, 2015) have attempted to draw fine distinctions between ...",
+            "Drawing on an extensive range of sources, the authors set out the different ways in which ...",
+            "Other authors (see Smith, 2010; Jones, 2014) question the usefulness of such an approach..."
+          ]
+        },
+        {
+          "function_category": "Reference to another writer's idea or position",
+          "phrase_count": 2,
+          "phrases": [
+            "As noted by Smith (2003) X is far more cost effective, and therefore ...",
+            "According to Smith (2003), preventative medicine is far more cost effective, and therefore ..."
+          ]
+        },
+        {
+          "function_category": "Synthesising material: supporting evidence or ideas",
+          "phrase_count": 10,
+          "phrases": [
+            "Similarly, Jones (2015) found that X ...",
+            "This is consistent with the data obtained by ...",
+            "Smith (1995) makes a similar point in his study of X ...",
+            "In the same vein, Smith (1995) in his book XYZ notes",
+            "This view is supported by Jones (2015) who writes that",
+            "Along the same lines, Smith (1995) subsequently argued that ...",
+            "Smith argues that her data support Jones’s (1995) view that",
+            "Jones’s (1986) work on X is complemented by Smith’s (2009) study of",
+            "Almost every paper that has been written on X includes a section relating to",
+            "A broadly similar point has also recently been made by Johnson (2019), who ..."
+          ]
+        },
+        {
+          "function_category": "Synthesising material: contrasting evidence or ideas",
+          "phrase_count": 10,
+          "phrases": [
+            "Other writers have argued that ...",
+            "Other studies have concluded that ...",
+            "Unlike Smith, Jones (2013) argues that",
+            "In contrast to Smith, Jones (2013) argues that",
+            "Smith (2010) presents an X account, whilst Jones (2011)",
+            "While Smith (2008) focuses on X, Jones (2009) is more concerned with",
+            "A broader perspective has been adopted by Smith (213) who argues that",
+            "Contrary to previously published studies, Jones et al... demonstrated the efficacy of...",
+            "This result conflicts with Smith’s (1965) previously mentioned study which found that ...",
+            "Conversely, Smith (2010) reported no significant difference in mortality between X and Y..."
+          ]
+        },
+        {
+          "function_category": "Some ways of introducing quotations",
+          "phrase_count": 5,
+          "phrases": [
+            "Commenting on X, Smith (2003) argues: ‘... ...’",
+            "As Smith (2004: 215) states: ‘there are many good reasons to be sceptical’...",
+            "As Smith argues: ‘In the past, the purpose of education was to ...’ (Smith, 2000:150)...",
+            "In the final part of the Theses on Feuerbach, Marx writes: ‘Philosophers have hitherto only ...’",
+            "Smith concludes: ‘The idea of development stands today like a ruin in ...’ (Smith, 1992: 156)..."
+          ]
+        },
+        {
+          "function_category": "Summarising the review or parts of the review",
+          "phrase_count": 17,
+          "phrases": [
+            "Together, these studies indicate that ...",
+            "Overall, these studies highlight the need for ...",
+            "Considering all of this evidence, it seems that ...",
+            "Collectively, these studies outline a critical role for...",
+            "In all the studies reviewed here, X is recognised as ...",
+            "The evidence presented in this section suggests that ...",
+            "The studies presented thus far provide evidence that ...",
+            "Taken together, these studies support the notion that ...",
+            "Overall, there seems to be some evidence to indicate that ...",
+            "Together these studies provide important insights into the ...",
+            "All of the studies reviewed here support the hypothesis that ...",
+            "Two important themes emerge from the studies discussed so far:",
+            "However, such studies remain narrow in focus dealing only with ...",
+            "The evidence reviewed here seems to suggest a pertinent role for ...",
+            "These studies clearly indicate that there is a relationship between ...",
+            "In view of all that has been mentioned so far, one may suppose that ...",
+            "There remain several aspects of X about which relatively little is known..."
+          ]
+        }
+      ]
+    },
+    "describing-methods": {
+      "title": "Describing Methods",
+      "url": "https://www.phrasebank.manchester.ac.uk/describing-methods/",
+      "toggle_count": 16,
+      "phrase_count": 191,
+      "functional_categories": [
+        {
+          "function_category": "Describing previously used research methods",
+          "phrase_count": 19,
+          "phrases": [
+            "Many researchers have utilised X to measure ...",
+            "One of the most well-known tools for assessing ...",
+            "Traditionally, X has been assessed by measuring ...",
+            "A number of techniques have been developed to ...",
+            "Different methods have been proposed to classify ...",
+            "X is the main non-invasive method used to determine ...",
+            "Different authors have measured X in a variety of ways...",
+            "Several methods currently exist for the measurement of X...",
+            "Previous studies have based their criteria for selection on ...",
+            "X is one of the most common procedures for determining ...",
+            "There are three main types of study design used to identify ...",
+            "The use of life story data has a relatively long tradition within X...",
+            "Recent advances in X methods have facilitated investigation of ...",
+            "There are a number of instruments available for measuring the ...",
+            "X and Y are currently the most popular methods for investigating ...",
+            "Recently, simpler and more rapid tests of X have been developed...",
+            "In most recent studies, X has been measured in four different ways...",
+            "The use of qualitative case studies is a well-established approach in ...",
+            "Xs have been used in the past to investigate the mechanical properties of ..."
+          ]
+        },
+        {
+          "function_category": "Indicating the methodology for the current research",
+          "phrase_count": 9,
+          "phrases": [
+            "The present study utilises X to analyse ...",
+            "The current study adopts a case study approach...",
+            "A qualitative methodology is employed in this study...",
+            "A mixed methods approach is employed in this research...",
+            "This investigation utilises X analysis and statistical methods to ...",
+            "A participatory qualitative research approach is employed in this study...",
+            "The current investigation utilises an array of assessment techniques to ...",
+            "The current study uses qualitative analysis in order to gain insights into ...",
+            "It was decided that the best method to adopt for this investigation was to ..."
+          ]
+        },
+        {
+          "function_category": "Giving reasons why a method was adopted",
+          "phrase_count": 20,
+          "phrases": [
+            "A major advantage of X is that ...",
+            "The benefit of this approach is that ...",
+            "X based methods provide a means of ...",
+            "X was selected for its reliability and validity...",
+            "A case study approach was used to allow a ...",
+            "This method is particularly useful in studying ...",
+            "A quantitative approach was employed since ...",
+            "Qualitative methods offer an effective way of ...",
+            "The design of the questionnaires was based on ...",
+            "The X method is one of the more practical ways of ...",
+            "The semi-structured approach was chosen because ...",
+            "The X approach has a number of attractive features: ...",
+            "The advantages of Xs are that they are simple to deliver...",
+            "The second advantage of using the multivariate method is ...",
+            "The study uses qualitative analysis in order to gain insights into ...",
+            "One advantage of the X analysis is that it avoids the problem of ...",
+            "Another advantage of using computer simulations is that it allows ...",
+            "Continuous sampling methods have a number of advantages over ...",
+            "The collaborative nature of the focus group offers another advantage ...",
+            "Qualitative methods can be more useful for identifying and characterising ..."
+          ]
+        },
+        {
+          "function_category": "Giving reasons why a method was rejected",
+          "phrase_count": 10,
+          "phrases": [
+            "The limitation of this approach is that ...",
+            "A disadvantage of many cohort studies is that ...",
+            "A major problem with the experimental method is that",
+            "The main disadvantage of the experimental method is that",
+            "The principal limitation of the experimental approach is that ...",
+            "However, there are certain drawbacks associated with the use of",
+            "The disadvantage of this method is its reliance on the availability of ...",
+            "However, this method clearly is not valid for analysing long-term trends in ...",
+            "There are obvious difficulties in accepting the reliability of self-report information...",
+            "There are certain problems with the use of focus groups... One of these is that there is less ..."
+          ]
+        },
+        {
+          "function_category": "Indicating the use of an established method",
+          "phrase_count": 7,
+          "phrases": [
+            "The solution was then assayed for X using the Y method...",
+            "X was prepared according to the procedure used by Jones et al... (1957)...",
+            "The synthesis of X was done according to the procedure of Smith (1973)...",
+            "X was synthesised using the same method that was detailed for Y, using ...",
+            "Samples were analysed for X as previously reported by Smith et al... (2012)...",
+            "Analysis was based on the conceptual framework proposed by Smith et al... (2002)...",
+            "This compound was prepared by adapting the procedure used by Jones et al... (1990)..."
+          ]
+        },
+        {
+          "function_category": "Describing the characteristics of the sample",
+          "phrase_count": 18,
+          "phrases": [
+            "The cohort was divided into two groups according to ...",
+            "A random sample of patients with ... was recruited from ...",
+            "Articles were searched from January 1965 until April 2014...",
+            "The sample was representative with respect to gender and ...",
+            "Forty-seven students studying X were recruited for this study...",
+            "A systematic literature review was conducted of studies that ...",
+            "Just over half the sample (53%) was female, of whom 69% were ...",
+            "Of the initial cohort of 123 students, 66 were female and 57 male...",
+            "Eligible women who matched the selection criteria were identified by ...",
+            "Only children aged between 10 and 15 years were included in the study...",
+            "The participants were divided into two groups based on their performance on ...",
+            "Two groups of subjects were interviewed, namely X and Y... The first group were ...",
+            "The project used a convenience sample of 32 first year modern languages students...",
+            "All of the participants were aged between 18 and 19 at the beginning of the study...",
+            "All studies described as using some sort of X procedure were included in the analysis...",
+            "Participants were recruited from 15 clinics across ..., covering urban and rural areas ...",
+            "The initial sample consisted of 200 students, 75 of whom belonged to minority groups...",
+            "Semi-structured interviews were conducted with 17 male offenders with a mean age of 38 years..."
+          ]
+        },
+        {
+          "function_category": "Indicating criteria for selection or inclusion",
+          "phrase_count": 11,
+          "phrases": [
+            "Criteria for selecting the subjects were as follows:",
+            "Publications were only included in the analysis if...",
+            "The participants in this study were recruited from ...",
+            "To identify X, the following parameters were used: ...",
+            "The area of study was chosen for its relatively small ...",
+            "Primary inclusion criteria for the X participants were ...",
+            "Eligibility criteria required individuals to have received ...",
+            "Five individuals were excluded from the study on the basis of ...",
+            "A small sample was chosen because of the expected difficulty in obtaining ...",
+            "The subjects were selected on the basis of the degree of homogeneity of their ...",
+            "A comparison group of 12 male subjects without any history of X was drawn from a pool of ..."
+          ]
+        },
+        {
+          "function_category": "Describing the process: infinitive of purpose",
+          "phrase_count": 15,
+          "phrases": [
+            "In order to identify X, the participants were asked to ...",
+            "In order to determine whether ..., the cells were incubated for ...",
+            "In order to assess whether and how Xs are produced and received, we measured ...",
+            "In order to understand how X regulates Y, a series of transfections was performed...",
+            "To establish whether ...,",
+            "To measure X, a question asking ... was used...",
+            "To rule out the possibility that X, the participants were ...",
+            "To control for bias, measurements were carried out by another person...",
+            "To see if the two methods gave the same measurement, the data was plotted and ...",
+            "To enable the subjects to see the computer screen clearly, the laptop was configured with ...",
+            "To compare the scores three weeks after initial screening, a global ANOVA F-test was used",
+            "The vials were capped with ... to prevent ...",
+            "The process was repeated several times in order to remove ...",
+            "In an attempt to make each interviewee feel as comfortable as possible, the interviewer ...",
+            "Each X was tested twice with a 4-minute break between to increase the reliability of the measures..."
+          ]
+        },
+        {
+          "function_category": "Describing the process: expressing purpose with 'for'",
+          "phrase_count": 4,
+          "phrases": [
+            "For the attitude questions, a Likert scale was used...",
+            "For the purpose of height measurement, subjects were asked to stand ...",
+            "For the purpose of analysis, two segments were extracted from each ...",
+            "For the estimation of protein concentration, 100 µL of protein sample was mixed with ..."
+          ]
+        },
+        {
+          "function_category": "Describing the process: verbs used in the passive",
+          "phrase_count": 20,
+          "phrases": [
+            "All participants were sent ...",
+            "The data were normalised using ...",
+            "Ethical approval was obtained from ...",
+            "Drugs were administered by icv injection ...",
+            "Descriptive data were generated for all variables...",
+            "The procedures of this study were approved by ...",
+            "Prompts were used as an aid to question two so that ...",
+            "Data were collected using semi-structured interviews in ...",
+            "Participants were thanked for their time and effort and for ...",
+            "The experiments were run using custom software written in...",
+            "Two sets of anonymised questionnaires were completed by ...",
+            "A total of 256 samples were taken from 52 boreholes (Figure 11)...",
+            "The solution was washed three times with deionized water and ...",
+            "Significance levels were set at the 1% level using the student t-test...",
+            "Data management and analysis were performed using SPSS 16...0 (2010)...",
+            "Published studies were identified using a search strategy developed in ...",
+            "Data were gathered from multiple sources at various time points during ...",
+            "Injection solutions were coded by a colleague to reduce experimenter bias...",
+            "The pilot interviews were conducted informally by the trained interviewer ...",
+            "Article references were searched further for additional relevant publications..."
+          ]
+        },
+        {
+          "function_category": "Describing the process: sequence words",
+          "phrase_count": 11,
+          "phrases": [
+            "To begin this process, ...",
+            "The first step in this process was to ...",
+            "The second method used to identify X involved ...",
+            "The soil was then weighed again, and this weight was recorded as ...",
+            "The participants were then shown a film individually and were asked to ...",
+            "The results were corrected for the background readings and then averaged before ...",
+            "These ratings were then made for the ten stimuli to which the subject had been exposed ...",
+            "The analysis was checked when initially performed and then checked again at the end of ...",
+            "Finally, questions were asked as to the role of ...",
+            "In the follow-up phase of the study, participants were asked ...",
+            "The final stage of the study comprised a semi-structured interview with participants who ..."
+          ]
+        },
+        {
+          "function_category": "Describing the process: adverbs of manner",
+          "phrase_count": 6,
+          "phrases": [
+            "The medium was then aseptically transferred to a conical flask...",
+            "A sample of the concentrate was then carefully injected into ...",
+            "The tubes were accurately reweighed to six decimal places using ...",
+            "The soil was then placed in a furnace and gradually heated up to ...",
+            "The vials were shaken manually to allow the soil to mix well with the water...",
+            "The resulting solution was gently mixed at room temperature for ten minutes and ..."
+          ]
+        },
+        {
+          "function_category": "Describing the process: 'using' + instruments",
+          "phrase_count": 9,
+          "phrases": [
+            "Data were collected using two high spectral resolution Xs...",
+            "Semi-automated genotyping was carried out using X software and ...",
+            "Using the X-ray and looking at the actual X, it was possible to identify ...",
+            "Comparisons between the two groups were made using unrelated t-tests...",
+            "The data were recorded on a digital audio recorder and transcribed using a ...",
+            "Statistical significance was analysed using analysis of variance and t-tests as appropriate...",
+            "Using an Anthos Micro plate Reader, we were able to separate single cells into different ...",
+            "15 subjects were recruited using email advertisements requesting healthy students from ...",
+            "All the work on the computer was carried out using Quattro Pro for Windows and ..."
+          ]
+        },
+        {
+          "function_category": "Describing the process: questionnaire design",
+          "phrase_count": 10,
+          "phrases": [
+            "The first question elicited information on ...",
+            "Seven questions, adapted from X, assessed ...",
+            "All survey questions utilised a 5-point Likert scale...",
+            "Using a 5-point Likert scale, participants were asked ...",
+            "A short questionnaire was designed to ascertain the participants’ ...",
+            "The questionnaire was designed to measure the following constructs:",
+            "Participants were asked to respond using a 5-point Likert scale ranging from ...",
+            "The questions asked participants to rate how strongly they agreed with each statement...",
+            "The study began with two open-ended survey questions that asked participants to indicate ...",
+            "The questionnaire asked participants to complete three open-ended questions that asked about ..."
+          ]
+        },
+        {
+          "function_category": "Describing the process: statistical procedures",
+          "phrase_count": 13,
+          "phrases": [
+            "The data were normalised using ...",
+            "A p value <0...05 was considered significant...",
+            "Descriptive data were generated for all variables...",
+            "Reliability was calculated using Cronbach’s alpha...",
+            "All analyses were carried out using SPSS, version 26...",
+            "Non-parametric tests were used to compare the number of ...",
+            "Independent sample t-tests were carried out to assess whether ...",
+            "Statistical analysis was performed using SPSS software (version 26)...",
+            "Significance levels were set at the 1% level using the student t-test...",
+            "Data management and analysis were performed using SPSS 26...0 (2019)...",
+            "A Pearson correlation analysis was conducted in order to assess the strength of ...",
+            "An independent t-test was carried out on each of the variables to determine whether ...",
+            "The mean score for the two trials was subjected to multivariate analysis of variance to determine ..."
+          ]
+        },
+        {
+          "function_category": "Indicating methodological problems or limitations",
+          "phrase_count": 9,
+          "phrases": [
+            "Several issues arose when collecting the ...",
+            "In particular, the analysis of X was problematic...",
+            "In observational studies, there is a potential for bias from ...",
+            "The small size of the dataset meant that it was not possible to ...",
+            "Further data collection is required to determine exactly how X affects Y...",
+            "Another major source of uncertainty is in the method used to calculate X...",
+            "In this investigation there are several sources for error... The main error is ...",
+            "It was not possible to investigate the significant relationships of X and Y further because...",
+            "The responses relating to X were subjective and were therefore susceptible to recall bias..."
+          ]
+        }
+      ]
+    },
+    "reporting-results": {
+      "title": "Reporting Results",
+      "url": "https://www.phrasebank.manchester.ac.uk/reporting-results/",
+      "toggle_count": 13,
+      "phrase_count": 152,
+      "functional_categories": [
+        {
+          "function_category": "Referring back to the research aims or procedures",
+          "phrase_count": 12,
+          "phrases": [
+            "The first set of questions aimed to ...",
+            "To compare the difference between ...",
+            "Simple statistical analysis was used to ...",
+            "The next question asked the informants ...",
+            "Changes in X and Y were compared using ...",
+            "Regression analysis was used to predict the ...",
+            "To distinguish between these two possibilities, ...",
+            "The first set of analyses examined the impact of ...",
+            "The correlation between X and Y was tested using ...",
+            "T-tests were used to analyse the relationship between ...",
+            "The average scores of X and Y were compared in order to ...",
+            "In order to assess Z, repeated-measures ANOVAs were used..."
+          ]
+        },
+        {
+          "function_category": "Highlighting significant data in a table or chart",
+          "phrase_count": 12,
+          "phrases": [
+            "What stands out in the table is ...",
+            "Closer inspection of the table shows ...",
+            "It is apparent from this table that very few ...",
+            "The most interesting aspect of this graph is ...",
+            "In Fig...10 there is a clear trend of decreasing ...",
+            "What is striking about the figures in this table is ...",
+            "What is interesting about the data in this table is that ...",
+            "The differences between X and Y are highlighted in Table 4...",
+            "From the chart, it can be seen that by far the greatest demand is for ...",
+            "From this data, we can see that Study 2 resulted in the lowest value of ...",
+            "This table is quite revealing in several ways... First, unlike the other tables ...",
+            "From the data in Figure 9, it is apparent that the length of time left between ..."
+          ]
+        },
+        {
+          "function_category": "Stating a positive result",
+          "phrase_count": 12,
+          "phrases": [
+            "The mean score for X was ...",
+            "Further analysis showed that ...",
+            "A two-way ANOVA revealed that ...",
+            "On average, Xs were shown to have ...",
+            "Strong evidence of X was found when ...",
+            "This result is significant at the p = 0...05 level...",
+            "The results, as shown in Table 1, indicate that ...",
+            "A positive correlation was found between X and Y...",
+            "There was a significant positive correlation between ...",
+            "The difference between the X and Y groups was significant...",
+            "There was a significant difference in X, t(11) = 2...906, p<0...01",
+            "There was a significant difference between the two conditions ..."
+          ]
+        },
+        {
+          "function_category": "Stating a negative result",
+          "phrase_count": 12,
+          "phrases": [
+            "No increase in X was detected...",
+            "No difference greater than X was observed...",
+            "No significant differences were found between ...",
+            "None of these differences were statistically significant...",
+            "No significant reduction in X was found compared with placebo...",
+            "No evidence was found for non-linear associations between X and Y...",
+            "X appeared to be unaffected by Y...",
+            "Only trace amounts of X were detected in ...",
+            "There was no evidence that X has an influence on ...",
+            "The Chi-square test did not show any significant differences between ...",
+            "Overall, X did not affect males and females differently in these measures...",
+            "A clear benefit of X in the prevention of Y could not be identified in this analysis..."
+          ]
+        },
+        {
+          "function_category": "Reporting positive and negative reactions",
+          "phrase_count": 8,
+          "phrases": [
+            "X occurred with successive increases in Y...",
+            "Increasing the strength of X led to a reduction in ...",
+            "With successive increases in intensity of the X, the Y moved further to ...",
+            "Following the addition of X, a significant increase (p<0...05) in the Y was recorded...",
+            "Combining X with Y did not produce ...",
+            "Stimulation of X with Y did not increase the ...",
+            "Different doses of X showed no measurable effect on ...",
+            "When X cells were stimulated with Y, no significant difference in Z was detected..."
+          ]
+        },
+        {
+          "function_category": "Highlighting interesting or surprising results",
+          "phrase_count": 12,
+          "phrases": [
+            "Of interest here is the increase in ...",
+            "Interestingly, the X was observed to ...",
+            "This result is somewhat counterintuitive...",
+            "Interestingly, this correlation is related to ...",
+            "The more surprising correlation is with the ...",
+            "Surprisingly, only a minority of respondents ...",
+            "The most surprising aspect of the data is in the ...",
+            "The correlation between X and Y is interesting because ...",
+            "The most striking result to emerge from the data is that ...",
+            "Interestingly, a significant interaction of X and Y was also observed...",
+            "It is worth noting that there were also differences in the ratios of ...",
+            "The single most striking observation to emerge from the data comparison was ..."
+          ]
+        },
+        {
+          "function_category": "Surveys and interviews: Reporting response rates",
+          "phrase_count": 8,
+          "phrases": [
+            "The overall response to the survey was poor...",
+            "There were 53 responses to the question: ‘...?’",
+            "Thirty-two individuals returned the questionnaires...",
+            "The total number of responses for this question was ...",
+            "The  response rate was 60% at six months and 56% at 12 months...",
+            "Of the study population, 90 subjects completed and returned the questionnaire...",
+            "Of 150 patients who were sent invitations, 81 returned the reply slip, of whom 60 agreed to ...",
+            "By the end of the survey period, data had been collected from 64 individuals, 23 of whom were ..."
+          ]
+        },
+        {
+          "function_category": "Surveys and interviews: Reporting proportions",
+          "phrase_count": 10,
+          "phrases": [
+            "Over half of those surveyed reported that ...",
+            "A minority of participants (17%) indicated that ...",
+            "70% of those who were interviewed indicated that ...",
+            "Almost two-thirds of the participants (64%) said that ...",
+            "The majority of those who responded to this item felt that ...",
+            "When asked whether ..., 90% of the respondents reported that ...",
+            "Just over half of those who answered this question reported that ...",
+            "In response to Question 1, most of those surveyed indicated that ...",
+            "When the participants were asked ..., the majority commented that ...",
+            "Of the 148 patients who completed the questionnaire, just over half indicated that ..."
+          ]
+        },
+        {
+          "function_category": "Surveys and interviews: Reporting themes",
+          "phrase_count": 12,
+          "phrases": [
+            "Opinions differed as to whether ...",
+            "Concerns were expressed about ...",
+            "These views surfaced mainly in relation to ...",
+            "Concerns regarding X were more widespread...",
+            "Five broad themes emerged from the analysis...",
+            "A common view amongst interviewees was that ...",
+            "One concern expressed regarding X was whether ...",
+            "This theme came up for example in discussions of ...",
+            "The themes of X and Y recurred throughout the dataset...",
+            "Two divergent and often conflicting discourses emerged ...",
+            "Issues related to X were not particularly prominent in the interview data...",
+            "A recurrent theme in the interviews was a sense amongst interviewees that ..."
+          ]
+        },
+        {
+          "function_category": "Surveys and interviews: Reporting participants’ views",
+          "phrase_count": 24,
+          "phrases": [
+            "One interviewee argued that ...",
+            "There were some suggestions that ...",
+            "In all cases, the informants reported that ...",
+            "There were some negative comments about ...",
+            "Some felt that ... , while others considered that ...",
+            "This view was echoed by another informant who ...",
+            "Whilst a minority mentioned that..., all agreed that...",
+            "Only a small number of respondents indicated that ...",
+            "A small number of those interviewed suggested that ...",
+            "For a small number of participants X was the reason for ...",
+            "The majority of participants agreed with the statement that ...",
+            "When asked about X, the participants were unanimous in the view that ...",
+            "felt that ...",
+            "said that ...",
+            "stated that ...",
+            "reported that ...",
+            "indicated that ...",
+            "commented that ...",
+            "attributed X to ...",
+            "questioned whether ...",
+            "expressed a desire for ...",
+            "were reluctant to discuss ...",
+            "were particularly critical of ...",
+            "agreed with the statement that ..."
+          ]
+        },
+        {
+          "function_category": "Surveys and interviews: Introducing excerpts",
+          "phrase_count": 12,
+          "phrases": [
+            "As one interviewee put it: ‘...’",
+            "One informant reported that ...",
+            "One participant commented: ‘ ...’",
+            "The comment below illustrates ...",
+            "For example, one interviewee said: ‘...’",
+            "In one case, the participant thought that ...",
+            "Another interviewee, when asked ..., said: ‘...’",
+            "Other responses to this question included: ‘...’",
+            "Another interviewee alluded to the notion of ...",
+            "Talking about this issue an interviewee said: ‘...’",
+            "Commenting on X, one of the interviewees said ...",
+            "One individual stated that ‘...’ And another commented ‘...’"
+          ]
+        },
+        {
+          "function_category": "Transition: moving to the next result",
+          "phrase_count": 9,
+          "phrases": [
+            "If we now turn to ...",
+            "Further analysis shows that ...",
+            "Further statistical tests revealed ...",
+            "Further analysis of the data reveals ...",
+            "A comparison of the two results reveals ...",
+            "Turning now to the experimental evidence on ...",
+            "Comparing the two results, it can be seen that ...",
+            "The next section of the survey was concerned with ...",
+            "In the final part of the survey, respondents were asked ..."
+          ]
+        },
+        {
+          "function_category": "Summarising the results section",
+          "phrase_count": 9,
+          "phrases": [
+            "These results suggest that ...",
+            "The results also indicate that ...",
+            "Overall, these results indicate that ...",
+            "In summary, these results show that ...",
+            "In summary, for the informants in this study, ...",
+            "What emerges from the results reported here is that ...",
+            "Together these results provide important insights into ...",
+            "Taken together, these results suggest that there is an association between ...",
+            "The results in this chapter indicate that ... The next chapter, therefore, moves on to discuss the ..."
+          ]
+        }
+      ]
+    },
+    "discussing-findings": {
+      "title": "Discussing Findings",
+      "url": "https://www.phrasebank.manchester.ac.uk/discussing-findings/",
+      "toggle_count": 13,
+      "phrase_count": 143,
+      "functional_categories": [
+        {
+          "function_category": "Providing background information: reference to the literature",
+          "phrase_count": 7,
+          "phrases": [
+            "Several reports have shown that ...",
+            "As mentioned in the literature review, ...",
+            "Prior studies that have noted the importance of ...",
+            "Very little was found in the literature on the question of ...",
+            "Previous studies evaluating X observed inconsistent results on whether ...",
+            "A strong relationship between X and Y has been reported in the literature...",
+            "In reviewing the literature, no data was found on the association between X and Y..."
+          ]
+        },
+        {
+          "function_category": "Providing background information: reference to the question",
+          "phrase_count": 7,
+          "phrases": [
+            "The third question in this research was ...",
+            "An initial objective of the project was to identify ...",
+            "The first question in this study sought to determine ...",
+            "It was hypothesised that participants with a history of ...",
+            "The present study was designed to determine the effect of ...",
+            "With respect to the first research question, it was found that ...",
+            "This study set out with the aim of assessing the importance of X in ..."
+          ]
+        },
+        {
+          "function_category": "Restating the result or one of several results",
+          "phrase_count": 9,
+          "phrases": [
+            "This study found that ...",
+            "Another finding is that ...",
+            "The results of this study show that ...",
+            "The current investigation found that ...",
+            "In this study, Xs were found to cause ...",
+            "On the question of X, this study found that ...",
+            "The first part of the questionnaire revealed that ...",
+            "This experiment did not detect any evidence for ...",
+            "The most obvious finding to emerge from the analysis is that ..."
+          ]
+        },
+        {
+          "function_category": "Pointing out interesting or important findings",
+          "phrase_count": 5,
+          "phrases": [
+            "One interesting finding is ...",
+            "Another important finding is that ...",
+            "The most important result was that ...",
+            "Most striking was the substantial difference in ...",
+            "Another finding that stands out from the results reported earlier is ..."
+          ]
+        },
+        {
+          "function_category": "Indicating an unexpected outcome",
+          "phrase_count": 12,
+          "phrases": [
+            "What is surprising is that ...",
+            "Surprisingly, X was found to ...",
+            "One unanticipated result was that ...",
+            "What is curious about this result is that ...",
+            "Surprisingly, no differences were found in ...",
+            "This finding was unexpected and suggests that ...",
+            "One unexpected finding was the extent to which ...",
+            "It is somewhat surprising that no X was noted in this condition ...",
+            "It is interesting to compare Figure 4 with Figure 2 in Smith (2019) that shows ...",
+            "One surprising variable that was found to be significantly associated with X was ...",
+            "Contrary to expectations, this study did not find a significant difference between ...",
+            "These findings are somewhat surprising given the fact that other research shows ..."
+          ]
+        },
+        {
+          "function_category": "Comparing the result: supporting previous findings",
+          "phrase_count": 26,
+          "phrases": [
+            "This study confirms that X is associated with ...",
+            "This finding was also reported by Smith et al... (1989)...",
+            "This finding is consistent with that of Smith (2000) who ...",
+            "Comparison of the findings with those of other studies confirms ...",
+            "This also accords with our earlier observations, which showed that ...",
+            "These results reflect those of Smith et al... (1992) who also found that ...",
+            "Increased activation in the X in this study corroborates these earlier findings...",
+            "These results corroborate the findings of a great deal of the previous work in ...",
+            "This finding broadly supports the work of other studies in this area linking X with Y...",
+            "In accordance with the present results, previous studies have demonstrated that ...",
+            "It is encouraging to compare this figure with that found by Jones (1993) who found that ...",
+            "Consistent with the literature, this research found that participants who reported using X also ...",
+            "This study supports evidence from previous observations (e...g... Smith, 2006; Jones et al..., 2011)...",
+            "There are similarities between the attitudes expressed by X in this study and those described by ...",
+            "further support the idea of ...",
+            "confirm the association between ...",
+            "are consistent with data obtained in ...",
+            "match those observed in earlier studies...",
+            "are in line with those of previous studies...",
+            "are in agreement with those obtained by ...",
+            "are in accord with recent studies indicating that ...",
+            "seem to be consistent with other research which found ...",
+            "are consistent with those of Smith and Jones (2015) who ...",
+            "are in agreement with Smith’s (1999) findings which showed ...",
+            "support previous research into this brain area which links X and Y...",
+            "corroborate the ideas of Smith and Jones (2008), who suggested that ..."
+          ]
+        },
+        {
+          "function_category": "Comparing the result: contradicting previous findings",
+          "phrase_count": 12,
+          "phrases": [
+            "This study has been unable to demonstrate that ...",
+            "However, this result has not previously been described...",
+            "This outcome is contrary to that of Smith et al... (2001) who found ...",
+            "This finding is contrary to previous studies which have suggested that ...",
+            "In contrast to earlier findings, however, no evidence of X was detected...",
+            "The yields in this investigation were higher compared to those of other studies...",
+            "However, the findings of the current study do not support the previous research...",
+            "Smith et al... (1999) showed that ... This differs from the findings presented here ...",
+            "The overall level was found to be 15%, lower than that of previously reported levels...",
+            "It has been suggested that ... (Smith et al..., 2002)... This does not appear to be the case...",
+            "The levels observed in this investigation are far below those observed by Smith et al... (2007)...",
+            "These results differ from Smith’s 2003 estimate of Y, but they are broadly consistent with earlier ..."
+          ]
+        },
+        {
+          "function_category": "Offering an explanation for the findings",
+          "phrase_count": 18,
+          "phrases": [
+            "A possible explanation for this might be ...",
+            "Another possible explanation for this is that ...",
+            "There are several possible explanations for this result...",
+            "Several factors could explain this observation... Firstly, ...",
+            "An alternative explanation for this result is that it is due to ...",
+            "It is difficult to explain this result, but it might be related to ...",
+            "This inconsistency may be due to ...",
+            "This discrepancy could be attributed to ...",
+            "These differences can be explained in part by ...",
+            "These relationships may partly be explained by ...",
+            "The observed increase in X could be attributed to ...",
+            "The observed correlation between X and Y might be explained in this way: ...",
+            "It seems possible that these results are due to ...",
+            "It may be that these participants benefitted from ...",
+            "The possible interference of X cannot be ruled out...",
+            "Differences between X and Y may have influenced ...",
+            "There are two likely causes for the differences between ...",
+            "Since this difference has not been found elsewhere it is probably not due to ..."
+          ]
+        },
+        {
+          "function_category": "Advising cautious interpretation of the findings",
+          "phrase_count": 11,
+          "phrases": [
+            "Another source of uncertainty is ...",
+            "A note of caution is due here since ...",
+            "These findings may be somewhat limited by ...",
+            "These findings cannot be extrapolated to all patients...",
+            "These data must be interpreted with caution because ...",
+            "It could be argued that the positive results were due to ...",
+            "These results therefore need to be interpreted with caution...",
+            "In observational studies, there is a potential for bias from ...",
+            "It is important to bear in mind the possible bias in these responses...",
+            "Although exclusion of X did not ..., these results should be interpreted with caution...",
+            "However, with a small sample size, caution must be applied, as the findings might not be ..."
+          ]
+        },
+        {
+          "function_category": "Suggesting general hypotheses",
+          "phrase_count": 12,
+          "phrases": [
+            "These findings suggest that ...",
+            "It is possible, therefore, that ...",
+            "The findings reported here suggest that ...",
+            "According to these data, we can infer that ...",
+            "The present study raises the possibility that ...",
+            "Hence, it could conceivably be hypothesised that ...",
+            "This observation may support the hypothesis that ...",
+            "It may be the case therefore that these variations ...",
+            "It is therefore likely that such connections exist between ...",
+            "The value of X suggests that a weak link may exist between ...",
+            "These results provide further support for the hypothesis that ...",
+            "Therefore, X could be a major factor, if not the only one, causing ..."
+          ]
+        },
+        {
+          "function_category": "Noting implications of the findings",
+          "phrase_count": 6,
+          "phrases": [
+            "These findings suggest that ...",
+            "It can therefore be assumed that the ...",
+            "An implication of this finding is the possibility that ...",
+            "One of the issues that emerges from these findings is ...",
+            "Some of the issues emerging from this finding relate specifically to ...",
+            "The results of this observational study suggest that X may help prevent ..."
+          ]
+        },
+        {
+          "function_category": "Commenting on the findings",
+          "phrase_count": 6,
+          "phrases": [
+            "This finding is reassuring since ...",
+            "These findings are rather disappointing...",
+            "However, these results were not very encouraging...",
+            "The test was successful as it was able to identify students who ...",
+            "The present results are significant in at least two major respects...",
+            "Unfortunately, these findings are rather difficult to interpret because ..."
+          ]
+        },
+        {
+          "function_category": "Giving suggestions for future work",
+          "phrase_count": 12,
+          "phrases": [
+            "This is an important issue for future research...",
+            "Research questions that could be asked include ...",
+            "Several questions remain unanswered at present...",
+            "Despite these promising results, questions remain...",
+            "Additional research is needed to better understand the ...",
+            "A further study with more focus on X is therefore suggested...",
+            "There is abundant room for further progress in determining ...",
+            "Future studies on the current topic are therefore recommended...",
+            "Further work is needed to develop reliable analytical methods for ...",
+            "To develop a full picture of X, additional studies will be needed that ...",
+            "In future investigations, it might be possible to use a different X in which ...",
+            "Further studies, which take these variables into account, will need to be undertaken..."
+          ]
+        }
+      ]
+    },
+    "writing-conclusions": {
+      "title": "Writing Conclusions",
+      "url": "https://www.phrasebank.manchester.ac.uk/writing-conclusions/",
+      "toggle_count": 8,
+      "phrase_count": 124,
+      "functional_categories": [
+        {
+          "function_category": "Restating the aims of the study",
+          "phrase_count": 10,
+          "phrases": [
+            "This study set out to ...",
+            "This paper has argued that ...",
+            "This essay has discussed the reasons for ...",
+            "In this investigation, the aim was to assess ...",
+            "The aim of the present research was to examine ...",
+            "The purpose of the current study was to determine ...",
+            "The main goal of the current study was to determine ...",
+            "This project was undertaken to design ... and evaluate ...",
+            "The present study was designed to determine the effect of ...",
+            "The second aim of this study was to investigate the effects of ..."
+          ]
+        },
+        {
+          "function_category": "Summarising main research findings",
+          "phrase_count": 12,
+          "phrases": [
+            "This study has identified ...",
+            "The research has also shown that ...",
+            "The second major finding was that ...",
+            "These experiments confirmed that ...",
+            "X made no significant difference to ...",
+            "This study has found that generally ...",
+            "The investigation of X has shown that ...",
+            "The results of this investigation show that ...",
+            "X, Y and Z emerged as reliable predictors of ...",
+            "The most obvious finding to emerge from this study is that ...",
+            "The relevance of X is clearly supported by the current findings...",
+            "One of the more significant findings to emerge from this study is that ..."
+          ]
+        },
+        {
+          "function_category": "Suggesting implications for the field of knowledge",
+          "phrase_count": 18,
+          "phrases": [
+            "The results of this study indicate that ...",
+            "These findings suggest that in general ...",
+            "The findings of this study suggest that ...",
+            "Taken together, these results suggest that ...",
+            "An implication of this is the possibility that ...",
+            "The evidence from this study suggests that ...",
+            "Overall, this study strengthens the idea that ...",
+            "The current data highlight the importance of ...",
+            "The findings of this research provide insights for ...",
+            "The results of this research support the idea that ...",
+            "These data suggest that X can be achieved through ...",
+            "The theoretical implications of these findings are unclear...",
+            "The principal theoretical implication of this study is that ...",
+            "This study has raised important questions about the nature of ...",
+            "Taken together, these findings suggest a role for X in promoting Y...",
+            "The findings of this investigation complement those of earlier studies...",
+            "These findings have significant implications for the understanding of how ...",
+            "Although this study focuses on X, the findings may well have a bearing on ..."
+          ]
+        },
+        {
+          "function_category": "Explaining the significance of the findings or contribution of the study",
+          "phrase_count": 20,
+          "phrases": [
+            "The findings will be of interest to ...",
+            "This thesis has provided a deeper insight into ...",
+            "The findings reported here shed new light on ...",
+            "The study contributes to our understanding of ...",
+            "These results add to the rapidly expanding field of ...",
+            "The contribution of this study has been to confirm ...",
+            "Before this study, evidence of X was purely anecdotal...",
+            "This project is the first comprehensive investigation of ...",
+            "The insights gained from this study may be of assistance to ...",
+            "This work contributes to existing knowledge of X by providing ...",
+            "Prior to this study it was difficult to make predictions about how ...",
+            "The analysis of X undertaken here, has extended our knowledge of ...",
+            "The empirical findings in this study provide a new understanding of ...",
+            "This paper contributes to recent historiographical debates concerning ...",
+            "This approach will prove useful in expanding our understanding of how ...",
+            "This new understanding should help to improve predictions of the impact of ...",
+            "The methods used for this X may be applied to other Xs elsewhere in the world...",
+            "The X that we have identified therefore assists in our understanding of the role of ...",
+            "This is the first study of substantial duration which examines associations between ...",
+            "The findings from this study make several contributions to the current literature... First,..."
+          ]
+        },
+        {
+          "function_category": "Recognising the limitations of the current study",
+          "phrase_count": 18,
+          "phrases": [
+            "A limitation of this study is that ...",
+            "Being limited to X, this study lacks ...",
+            "The small sample size did not allow ...",
+            "The major limitation of this study is the ...",
+            "This study was limited by the absence of ...",
+            "X makes these findings less generalisable to ...",
+            "Thirdly, the study did not evaluate the use of ...",
+            "It is unfortunate that the study did not include ...",
+            "The scope of this study was limited in terms of ...",
+            "The study is limited by the lack of information on ...",
+            "The most important limitation lies in the fact that ...",
+            "The main weakness of this study was the paucity of ...",
+            "Since the study was limited to X, it was not possible to ...",
+            "An additional uncontrolled factor is the possibility that ...",
+            "It was not possible to assess X; therefore, it is unknown if ...",
+            "An issue that was not addressed in this study was whether...",
+            "The generalisability of these results is subject to certain limitations... For instance, ...",
+            "One source of weakness in this study which could have affected the measurements of X was ..."
+          ]
+        },
+        {
+          "function_category": "Acknowledging limitation(s) whilst stating a finding or contribution",
+          "phrase_count": 6,
+          "phrases": [
+            "Notwithstanding these limitations, the study suggests that ...",
+            "Whilst this study did not confirm X, it did partially substantiate ...",
+            "Despite its exploratory nature, this study offers some insight into ...",
+            "In spite of its limitations, the study certainly adds to our understanding of the ...",
+            "Notwithstanding the relatively limited sample, this work offers valuable insights into ...",
+            "Although the current study is based on a small sample of participants, the findings suggest ..."
+          ]
+        },
+        {
+          "function_category": "Making recommendations for further research work",
+          "phrase_count": 20,
+          "phrases": [
+            "Future studies should...",
+            "The question raised by this study is ...",
+            "The study should be repeated using ...",
+            "This would be a fruitful area for further work...",
+            "Several questions still remain to be answered...",
+            "A natural progression of this work is to analyse ...",
+            "More research using controlled trials is needed to ...",
+            "More broadly, research is also needed to determine ...",
+            "A further study could assess the long-term effects of ...",
+            "What is now needed is a cross-national study involving ...",
+            "Considerably more work will need to be done to determine ...",
+            "The precise mechanism of X in plants remains to be elucidated...",
+            "These findings provide the following insights for future research: ...",
+            "Large randomised controlled trials could provide more definitive evidence...",
+            "This research has thrown up many questions in need of further investigation...",
+            "A greater focus on X could produce interesting findings that account more for ...",
+            "The issue of X is an intriguing one which could be usefully explored in further research...",
+            "If the debate is to be moved forward, a better understanding of X needs to be developed...",
+            "I suggest that before X is introduced, a study similar to this one should be carried out on ...",
+            "More information on X would help us to establish a greater degree of accuracy on this matter..."
+          ]
+        },
+        {
+          "function_category": "Setting out recommendations for practice or policy",
+          "phrase_count": 20,
+          "phrases": [
+            "Other types of X could include: a), b)... ...",
+            "There is, therefore, a definite need for ...",
+            "Greater efforts are needed to ensure ...",
+            "Provision of X will enhance Y and reduce Z...",
+            "Another important practical implication is that ...",
+            "Moreover, more X should be made available to ...",
+            "The challenge now is to fabricate Xs that contain ...",
+            "Unless governments adopt X, Y will not be attained...",
+            "These findings suggest several courses of action for ...",
+            "A reasonable approach to tackle this issue could be to ...",
+            "Continued efforts are needed to make X more accessible to ...",
+            "The findings of this study have a number of practical implications...",
+            "There are a number of important changes which need to be made...",
+            "Management to enhance bumble-bee populations might involve ...",
+            "This study suggests that X should be avoided by people who are prone to ...",
+            "A key policy priority should therefore be to plan for the long-term care of ...",
+            "This information can be used to develop targetted interventions aimed at ...",
+            "Taken together, these findings do not support strong recommendations to ...",
+            "Ensuring appropriate systems, services and support for X should be a priority for ...",
+            "The findings of this study have a number of important implications for future practice..."
+          ]
+        }
+      ]
+    },
+    "using-cautious-language": {
+      "title": "Being Cautious",
+      "url": "https://www.phrasebank.manchester.ac.uk/using-cautious-language/",
+      "toggle_count": 6,
+      "phrase_count": 56,
+      "functional_categories": [
+        {
+          "function_category": "Devices that distance the author from a proposition",
+          "phrase_count": 13,
+          "phrases": [
+            "It is thought that ...",
+            "It is believed that ...",
+            "It has been reported that ...",
+            "It is a widely held view that ...",
+            "It has commonly been assumed that ...",
+            "According to Smith (2002), ...",
+            "According to recent reports, ...",
+            "According to many in the field ...",
+            "Many scholars hold the view that ...",
+            "Smith (2001) holds the view that ...",
+            "Recent research has suggested that ...",
+            "There is some evidence to suggest that ...",
+            "If Smith’s (2001) findings are accurate, ..."
+          ]
+        },
+        {
+          "function_category": "Being cautious when explaining results",
+          "phrase_count": 11,
+          "phrases": [
+            "This inconsistency may be due to ...",
+            "This discrepancy could be attributed to ...",
+            "A possible explanation for this might be that ...",
+            "This rather contradictory result may be due to ...",
+            "It seems possible that these results are due to ...",
+            "The observed increase in X could be attributed to ...",
+            "The possible interference of X cannot be ruled out ...",
+            "There are several possible explanations for this result...",
+            "There are two likely causes for the differences between ...",
+            "A possible explanation for these results may be the lack of adequate ...",
+            "Since this difference has not been found elsewhere it is probably not due to ..."
+          ]
+        },
+        {
+          "function_category": "Advising cautious interpretation of results",
+          "phrase_count": 8,
+          "phrases": [
+            "These findings cannot be extrapolated to all patients...",
+            "These data must be interpreted with caution because ...",
+            "These results therefore need to be interpreted with caution...",
+            "These results do not rule out the influence of other factors in ...",
+            "This account must be approached with some caution because ...",
+            "It is important to bear in mind the possible bias in these responses...",
+            "Although exclusion of X did not ..., these results should be interpreted with caution...",
+            "However, with a small sample size, caution must be applied, as the findings might not be ..."
+          ]
+        },
+        {
+          "function_category": "Being cautious when discussing implications",
+          "phrase_count": 7,
+          "phrases": [
+            "The findings of this study suggest that ...",
+            "One possible implication of this is that ...",
+            "Taken together, these results suggest that ...",
+            "The evidence from this study suggests that ...",
+            "Initial observations suggest that there may be a link between ...",
+            "The data reported here appear to support the assumption that ...",
+            "The findings from these studies suggest that X can have an effect on ..."
+          ]
+        },
+        {
+          "function_category": "Being cautious when discussing recommendations",
+          "phrase_count": 6,
+          "phrases": [
+            "Strategies to enhance X might involve ...",
+            "Other types of response could include: a), b)... ...",
+            "These results would seem to suggest that the ...",
+            "There would therefore seem to be a definite need for ...",
+            "A reasonable approach to tackle this issue could be to ...",
+            "Another possible area of future research would be to investigate why ..."
+          ]
+        },
+        {
+          "function_category": "Devices for avoiding over-generalisation",
+          "phrase_count": 11,
+          "phrases": [
+            "In general, this requires ...",
+            "In general terms, this means ...",
+            "Xs use generally accepted principles to ...",
+            "X is generally assumed to play a role in ...",
+            "Authors generally place an emphasis on ...",
+            "Generally accepted methods for X include: ...",
+            "Studies which show no effect are not generally published...",
+            "Research articles generally consist of the following components:",
+            "Quantitative research is generally associated with the positivist paradigm...",
+            "Ozone tends to attack cells and break down tissues...",
+            "There is a tendency for ozone to attack cells..."
+          ]
+        }
+      ]
+    },
+    "being-critical": {
+      "title": "Being Critical",
+      "url": "https://www.phrasebank.manchester.ac.uk/being-critical/",
+      "toggle_count": 8,
+      "phrase_count": 88,
+      "functional_categories": [
+        {
+          "function_category": "Introductory phrases",
+          "phrase_count": 10,
+          "phrases": [
+            "Much of the criticism that X has attracted relates to ...",
+            "Critics question the ability of the X theory to provide ...",
+            "Many aspects of this interpretation have been questioned...",
+            "Non-government agencies are also very critical of the new policies...",
+            "Smith’s meta-analysis has been subjected to considerable criticism...",
+            "A frequent criticism of much of the research on X concerns a general lack of ...",
+            "These claims have been strongly contested in recent years by a number of writers...",
+            "The X theory has been vigorously challenged in recent years by a number of writers...",
+            "More recent arguments against X have been summarised by Smith and Jones (1982)...",
+            "Many analysts now argue that the strategy of X has not been successful... Jones (2003), for example, ..."
+          ]
+        },
+        {
+          "function_category": "Highlighting inadequacies of previous studies",
+          "phrase_count": 12,
+          "phrases": [
+            "Previous studies of X have not dealt with ...",
+            "Researchers have not treated X in much detail...",
+            "Such expositions are unsatisfactory because they ...",
+            "Most studies in the field of X have only focused on ...",
+            "Half of the studies evaluated failed to specify whether ...",
+            "The research to date has tended to focus on X rather than Y...",
+            "Most empirical studies of X have relied upon small sample sizes...",
+            "However, these studies used non-validated methods to measure ...",
+            "The vast majority of researchers have not considered the effects of ...",
+            "The existing accounts fail to resolve the contradiction between X and Y...",
+            "Most studies of X have only been carried out in a small number of areas...",
+            "However, much of the research up to now has been descriptive in nature..."
+          ]
+        },
+        {
+          "function_category": "Identifying a weakness in a single study or paper",
+          "phrase_count": 12,
+          "phrases": [
+            "We are not told how ...",
+            "The study suffers from ...",
+            "The paper fails to specify ...",
+            "No attempt has been made to ...",
+            "The study makes no attempt to ...",
+            "The article makes no reference to ...",
+            "The report provides little evidence that ...",
+            "A major problem with this experiment was that ...",
+            "No attempt was made to quantify the association between X and Y...",
+            "The scope of this research was relatively narrow, being primarily concerned with ...",
+            "Smith’s study of X is considered to be the most important, but it does suffer from the fact that ...",
+            "However, these results were based upon data from over 30 years ago and it is unclear whether ..."
+          ]
+        },
+        {
+          "function_category": "Introducing problems and limitations with a theory or argument",
+          "phrase_count": 12,
+          "phrases": [
+            "The main weakness with this theory is that ...",
+            "The key problem with this explanation is that ...",
+            "However, this theory does not fully explain why ...",
+            "One criticism of much of the literature on X is that ...",
+            "Critics question the ability of the X theory to provide ...",
+            "However, there is an inconsistency with this argument...",
+            "There are limits to how far the concept of X can be taken...",
+            "A serious weakness with this argument, however, is that ...",
+            "However, such explanations tend to overlook the fact that ...",
+            "One question that needs to be asked, however, is whether ...",
+            "One of the main difficulties with this line of reasoning is that ...",
+            "Smith’s argument relies too heavily on qualitative analysis of ..."
+          ]
+        },
+        {
+          "function_category": "Introducing problems and limitations with a method or practice",
+          "phrase_count": 12,
+          "phrases": [
+            "The limitation of this approach is that ...",
+            "A major problem with the X method is that ...",
+            "One major drawback of this approach is that ...",
+            "A criticism of this experimental design is that ...",
+            "The main limitation of this technique, however, is ...",
+            "Selection bias is another potential concern because ...",
+            "Perhaps the most serious disadvantage of this method is that ...",
+            "In recent years, however, this approach has been challenged by ...",
+            "Non-government agencies are also very critical of the new policies...",
+            "All the studies reviewed so far, however, suffer from the fact that ...",
+            "Critics of laboratory-based experiments contend that such studies ...",
+            "The disadvantage of this method is its reliance on the availability of ..."
+          ]
+        },
+        {
+          "function_category": "Criticising an author or an author’s work",
+          "phrase_count": 12,
+          "phrases": [
+            "Smith seems to ignore ...",
+            "Smith fails to grasp that ...",
+            "Smith’s interpretation overlooks ...",
+            "Smith devotes insufficient attention to ...",
+            "Smith overlooks a number of important sources...",
+            "Smith fails to acknowledge the social aspects of ...",
+            "However, Smith’s accounts are clearly ideological...",
+            "Although Smith has argued that ... she neglects to note that ...",
+            "Many aspects of Smith’s interpretation have been questioned...",
+            "Smith’s meta-analysis has been subjected to considerable criticism...",
+            "Smith’s arguments for X have been forcefully questioned in recent years...",
+            "The most important of these criticisms is that Smith failed to note that ..."
+          ]
+        },
+        {
+          "function_category": "Offering constructive suggestions",
+          "phrase_count": 5,
+          "phrases": [
+            "The study would have been more interesting if it had included ...",
+            "These studies would have been more useful if they had focused on ...",
+            "The study would have been more relevant if the researchers had asked ...",
+            "The questionnaire would have been more useful if it had asked participants about ...",
+            "The research would have been more relevant if a wider range of X had been explored..."
+          ]
+        },
+        {
+          "function_category": "Evaluating work positively",
+          "phrase_count": 13,
+          "phrases": [
+            "This article provides a valuable insight into ...",
+            "Overall, X’s study is a powerful explanation of ...",
+            "Smith’s conception of X has been credited with ...",
+            "Smith’s 2015 study is particularly helpful owing to its ...",
+            "Smith’s research is valuable for our understanding of ...",
+            "The first major fieldwork project that was started in X was ...",
+            "In his seminal text, XXXXX, Smith devoted some attention to ...",
+            "Smith’s account of X provides us with a useful lens through which ...",
+            "One of the most influential accounts of X comes from Smith (1986) ...",
+            "Smith’s synthesis remains one of the most comprehensive studies of ...",
+            "Smith makes an interesting contribution with regard to the impact of ...",
+            "In a well-designed and robust study, Smith (1998) examined data from ...",
+            "A good summary of the classification of X has been provided in the work of ..."
+          ]
+        }
+      ]
+    },
+    "classifying-and-listing": {
+      "title": "Classifying and Listing",
+      "url": "https://www.phrasebank.manchester.ac.uk/classifying-and-listing/",
+      "toggle_count": 5,
+      "phrase_count": 56,
+      "functional_categories": [
+        {
+          "function_category": "Classifying a topic",
+          "phrase_count": 11,
+          "phrases": [
+            "X can be classified into Xi and Xii...",
+            "X can be categorised into Xi, Xii and Xiii...",
+            "Several taxonomies for X have been developed ...",
+            "Different methods have been proposed to classify ...",
+            "X may be divided into several groups: a) ..., b) ... or c) ...",
+            "Generally, X provides two types of information: Xi and Xii...",
+            "It has become commonplace to distinguish ‘Xi’ from ‘Xii’ forms of X...",
+            "X is generally classified into two types: Xi, also known as ..., and Xii or ...",
+            "There are two basic approaches currently being adopted in research into X... One is ...",
+            "The theory distinguishes two different types of X, i...e... social X and semantic X (Smith, 2013)...",
+            "The works of Smith fall under three headings: (1) dialogues and ..., (2) collections of facts, and ..."
+          ]
+        },
+        {
+          "function_category": "Describing a specific system of classification",
+          "phrase_count": 10,
+          "phrases": [
+            "Smith (2015) draws a distinction between ...",
+            "Smith (2006) categorised X as being a) ..., b) ..., or c) ...",
+            "Smith’s (1980) typology of X is the one most widely–used...",
+            "Jones (1987) distinguishes between systems that are a) ..., b) ..., or c) ...",
+            "A third method, proposed by Smith et al... (2010), bases the classification on a ...",
+            "To better understand X, Smith et al... (2011) classified Y into three distinct types using ...",
+            "For Smith, X is of four kinds: (1) X which ...; (2) X which ...; (3) X which ...; and (4) X which...",
+            "In Jones’s system, individuals were classified as belonging to upper or lower categories of ...",
+            "Smith’s Taxonomy is a classification system used to define and distinguish different levels of ...",
+            "Smith and Jones (2003) argue that there are two broad categories of Y, which are: a) ..., and b) ..."
+          ]
+        },
+        {
+          "function_category": "Commenting on a system of classification",
+          "phrase_count": 20,
+          "phrases": [
+            "includes ...",
+            "allows for ...",
+            "helps distinguish ...",
+            "is useful because ...",
+            "is very simple and ...",
+            "provides a basis for ...",
+            "was agreed upon after ...",
+            "has been broadened to include ...",
+            "was developed for the purpose of ...",
+            "is more scientific since it is based on ...",
+            "is misleading...",
+            "is now out of date...",
+            "can be problematic...",
+            "is in need of revision...",
+            "is not universally used",
+            "poses a problem for ...",
+            "can vary depending on ...",
+            "has some clear deficiencies...",
+            "is obsolete and tends to be avoided...",
+            "has limited utility with respect to ..."
+          ]
+        },
+        {
+          "function_category": "Introducing lists",
+          "phrase_count": 10,
+          "phrases": [
+            "This topic can best be treated under three headings: X, Y and Z...",
+            "The key aspects of management can be listed as follows: X, Y and Z...",
+            "There are three reasons why the English language has become so dominant... These are:",
+            "There are two types of effect which result when a patient undergoes X... These are ...",
+            "The disadvantages of the new approach can be discussed under three headings, which are: ...",
+            "The Three Voices for Mass is divided into six sections... These are: the Kyrie, Gloria, ...",
+            "Appetitive stimuli have three separable basic functions... Firstly, they ... Secondly, they ...",
+            "During his tour of Britain, he visited the following industrial centres: Manchester, Leeds, and ...",
+            "This section has been included for several reasons: it is ...; it illustrates ...; and it describes...",
+            "The Mass for Four Voices consists of five movements, which are: the Kyrie, Gloria, Credo, Sanctus and Agnus Dei..."
+          ]
+        },
+        {
+          "function_category": "Referring to other people's lists",
+          "phrase_count": 5,
+          "phrases": [
+            "Smith and Jones (1991) list X, Y and Z as the major causes of infant mortality...",
+            "Smith (2003) lists the main features of X as follows: it is X; it is Y; and it has Z...",
+            "Smith (2003) argues that there are two broad categories of Y, which are: a) ... and b) ...",
+            "For Aristotle, motion is of four kinds: (1) motion which ...; (2) motion which ...; (3) motion ...",
+            "Smith (2003) suggests three conditions for X... Firstly, X should be ... Secondly, it needs to be ..."
+          ]
+        }
+      ]
+    },
+    "compare-and-contrast": {
+      "title": "Comparing and Contrasting",
+      "url": "https://www.phrasebank.manchester.ac.uk/compare-and-contrast/",
+      "toggle_count": 4,
+      "phrase_count": 32,
+      "functional_categories": [
+        {
+          "function_category": "Introducing differences",
+          "phrase_count": 9,
+          "phrases": [
+            "X is different from Y in a number of respects...",
+            "X differs from Y in a number of important ways...",
+            "There are a number of important differences between X and Y...",
+            "Areas where significant differences have been found include X and Y...",
+            "In contrast to earlier findings, however, no evidence of X was detected...",
+            "A descriptive case study differs from an exploratory study in that it uses ...",
+            "Smith (2015) found dramatic differences in the rate of decline of X between Y and Z...",
+            "Women and men differ not only in physical attributes but also in the way in which they ...",
+            "The nervous systems of Xs are significantly different from those of Ys in several key respects..."
+          ]
+        },
+        {
+          "function_category": "Introducing similarities",
+          "phrase_count": 9,
+          "phrases": [
+            "Both X and Y share a number of key features...",
+            "There are a number of similarities between X and Y...",
+            "The effects of X on human health are similar to those of Y...",
+            "Both X and Y generally take place in a ‘safe environment’...",
+            "These results are similar to those reported by (Smith et al... 1999)...",
+            "This definition is similar to that found in (Smith, 2001) who writes:",
+            "The return rate is similar to that of comparable studies (e...g... Smith et al... 1999)...",
+            "The approach used in this investigation is similar to that used by other researchers...",
+            "Studies have compared Xs in humans and animals and found that they are essentially identical..."
+          ]
+        },
+        {
+          "function_category": "Comparing within one sentence: comparative forms",
+          "phrase_count": 8,
+          "phrases": [
+            "In the trial, women made more/fewer errors than men...",
+            "Women tend to have greater/less verbal fluency than men...",
+            "Women are more/less likely than men to perform well in tests...",
+            "Women are more/less accurate in tests of target-directed motor skills...",
+            "Women tend to perform better/worse than men on tests of perceptual speed...",
+            "Women are faster/slower than men at certain precision manual tasks, such as ...",
+            "Women are more/less likely to suffer from X when the front part of the brain is damaged...",
+            "The part of the brain connecting the two hemispheres may be more/less extensive in women..."
+          ]
+        },
+        {
+          "function_category": "Indicating similarity across two sentences",
+          "phrase_count": 6,
+          "phrases": [
+            "Likewise,",
+            "In the same way,",
+            "Smith (2015) argues that ...",
+            "Likewise,",
+            "In the same way,",
+            "Jones (2019) holds the view that ..."
+          ]
+        }
+      ]
+    },
+    "writing-definitions": {
+      "title": "Defining Terms",
+      "url": "https://www.phrasebank.manchester.ac.uk/writing-definitions/",
+      "toggle_count": 7,
+      "phrase_count": 66,
+      "functional_categories": [
+        {
+          "function_category": "Introductory phrases",
+          "phrase_count": 7,
+          "phrases": [
+            "The term ‘X’ was first used by ...",
+            "The term ‘X’ can be traced back to ...",
+            "Previous studies mostly defined X as ...",
+            "The term ‘X’ was introduced by Smith in her ...",
+            "Historically, the term ‘X’ has been used to describe ...",
+            "It is necessary here to clarify exactly what is meant by ...",
+            "This shows a need to be explicit about exactly what is meant by the word ‘X’..."
+          ]
+        },
+        {
+          "function_category": "General meanings or application of meanings",
+          "phrase_count": 9,
+          "phrases": [
+            "X can broadly be defined as ...",
+            "X can be loosely described as ...",
+            "X can be defined as ...  It encompasses ...",
+            "In the literature, the term tends to be used to refer to ...",
+            "In broad terms, X can be defined as any stimulus that is ...",
+            "Whereas X refers to the operations of ..., Y refers to the ...",
+            "The broad use of the term ‘X’ is sometimes equated with ...",
+            "The term ‘disease’ refers to a biological event characterised by ...",
+            "Defined as ..., X is now considered a worldwide problem and is associated with ..."
+          ]
+        },
+        {
+          "function_category": "Indicating varying definitions",
+          "phrase_count": 9,
+          "phrases": [
+            "The definition of X has evolved...",
+            "There are multiple definitions of X...",
+            "Several definitions of X have been proposed...",
+            "In the field of X, various definitions of X are found...",
+            "The term ‘X’ embodies a multitude of concepts which ...",
+            "This term has two overlapping, even slightly confusing meanings...",
+            "Widely varying definitions of X have emerged (Smith and Jones, 1999)...",
+            "Despite its common usage, X is used in different disciplines to mean different things...",
+            "Since the definition of X varies among researchers, it is important to clarify how the term is ..."
+          ]
+        },
+        {
+          "function_category": "Indicating difficulties in defining a term",
+          "phrase_count": 16,
+          "phrases": [
+            "X is a contested term...",
+            "X is a rather nebulous term ...",
+            "X is challenging to define because ...",
+            "A precise definition of X has proved elusive...",
+            "A generally accepted definition of X is lacking...",
+            "Unfortunately, X remains a poorly defined term...",
+            "There is no agreed definition on what constitutes ...",
+            "There is little consensus about what X actually means...",
+            "There is a degree of uncertainty around the terminology in ...",
+            "These terms are often used interchangeably and without precision...",
+            "Numerous terms are used to describe X, the most common of which are ...",
+            "The definition of X varies in the literature and there is terminological confusion...",
+            "Smith (2001) identified four abilities that might be subsumed under the term ‘X’: a) ...",
+            "‘X’ is a term frequently used in the literature, but to date there is no consensus about ...",
+            "X is a commonly-used notion in psychology and yet it is a concept difficult to define precisely...",
+            "Although differences of opinion still exist, there appears to be some agreement that X refers to ..."
+          ]
+        },
+        {
+          "function_category": "Specifying terms that are used in an essay or thesis",
+          "phrase_count": 8,
+          "phrases": [
+            "The term ‘X’ is used here to refer to ...",
+            "In the present study, X is defined as ...",
+            "The term ‘X’ will be used solely when referring to ...",
+            "In this essay, the term ‘X’ will be used in its broadest sense to refer to all ...",
+            "In this paper, the term that will be used to describe this phenomenon is ‘X’...",
+            "In this dissertation, the terms ‘X’ and ‘Y’ are used interchangeably to mean ...",
+            "Throughout this thesis, the term ‘X’ is used to refer to informal systems as well as ..."
+          ]
+        },
+        {
+          "function_category": "Referring to people’s definitions: author prominent",
+          "phrase_count": 11,
+          "phrases": [
+            "For Smith (2001), X means ...",
+            "Smith (2001) uses the term ‘X’ to refer to ...",
+            "Smith (1954) was apparently the first to use the term ...",
+            "In 1987, psychologist John Smith popularized the term ‘X’ to describe ...",
+            "According to a definition provided by Smith (2001:23), X is ‘the maximally ...",
+            "This definition is close to those of Smith (2012) and Jones (2013) who define X as ...",
+            "Smith, has shown that, as late as 1920, Jones was using the term ‘X’ to refer to particular ...",
+            "One of the first people to define nursing was Florence Nightingale (1860), who wrote: ‘... ...’",
+            "Chomsky writes that a grammar is a ‘device of some sort for producing the ...’ (1957, p...11)...",
+            "Aristotle defines the imagination as ‘the movement which results upon an actual sensation...’",
+            "Smith et al... (2002) have provided a new definition of health: ‘health is a state of being with ..."
+          ]
+        },
+        {
+          "function_category": "Referring to people’s definitions: author non-prominent",
+          "phrase_count": 6,
+          "phrases": [
+            "X is defined by Smith (2003: 119) as ‘... ...’",
+            "The term ‘X’ is used by Smith (2001) to refer to ...",
+            "X is, for Smith (2012), the situation which occurs when ...",
+            "A further definition of X is given by Smith (1982) who describes ...",
+            "The term ‘X’ is used by Aristotle in four overlapping senses... First, it is the underlying ...",
+            "X is the degree to which an assessment process or device measures ... (Smith et al..., 1986)..."
+          ]
+        }
+      ]
+    },
+    "giving-examples": {
+      "title": "Giving Examples",
+      "url": "https://www.phrasebank.manchester.ac.uk/giving-examples/",
+      "toggle_count": 3,
+      "phrase_count": 36,
+      "functional_categories": [
+        {
+          "function_category": "Examples as the main information in a sentence",
+          "phrase_count": 19,
+          "phrases": [
+            "A well-known example of this is ...",
+            "Another example of what is meant by X is ...",
+            "This is exemplified in the work undertaken by ...",
+            "This distinction is further exemplified in studies using ...",
+            "An example of this is the study carried out by Smith (2004) in which ...",
+            "The effectiveness of the X technique has been exemplified in a report by Smith et al... (2010)",
+            "This is evident in the case of ...",
+            "This is certainly true in the case of ...",
+            "The evidence of X can be clearly seen in the case of ...",
+            "In a similar case in America, Smith (1992) identified ...",
+            "This can be seen in the case of the two London physics laboratories which ...",
+            "X is a good illustration of ...",
+            "X illustrates this point clearly...",
+            "This can be illustrated briefly by ...",
+            "By way of illustration, Smith (2003) shows how the data for ...",
+            "These experiments illustrate that X and Y have distinct functions in ...",
+            "For example, the word ‘doctor’ used to mean a ‘learned man’...",
+            "For example, Smith and Jones (2004) conducted a series of semi-structured interviews in ...",
+            "Young people begin smoking for a variety of reasons... They may, for example, be influenced by ..."
+          ]
+        },
+        {
+          "function_category": "Examples as additional information",
+          "phrase_count": 5,
+          "phrases": [
+            "Young people begin smoking for a variety of reasons, such as pressure from peers or ...",
+            "The prices of resources, such as copper, iron ore, and aluminium, have declined over ...",
+            "Pavlov found that if a stimulus, for example the ringing of a bell, preceded the food, the ...",
+            "Many diseases can result at least in part from stress, including: arthritis, asthma, and migraine...",
+            "Gassendi kept in close contact with many other scholars, such as Kepler, Galileo, Descartes, and ..."
+          ]
+        },
+        {
+          "function_category": "Reporting cases as support",
+          "phrase_count": 12,
+          "phrases": [
+            "This case has shown that ...",
+            "This has been seen in the case of ...",
+            "The case reported here illustrates the ...",
+            "Overall, these cases support the view that ...",
+            "This case study confirms the importance of ...",
+            "The evidence presented thus far supports the idea that ...",
+            "This case demonstrates the need for better strategies for ...",
+            "As this case very clearly demonstrates, it is important that ...",
+            "This case reveals the need for further investigation in patients with ...",
+            "This case demonstrates how X used innovative marketing strategies in ...",
+            "Recent cases reported by Smith et al... (2013) also support the hypothesis that ...",
+            "In support of X, Y has been shown to induce Y in several cases (Smith et al..., 2001)..."
+          ]
+        }
+      ]
+    },
+    "explaining-cause-and-effect": {
+      "title": "Explaining Causality",
+      "url": "https://www.phrasebank.manchester.ac.uk/explaining-cause-and-effect/",
+      "toggle_count": 5,
+      "phrase_count": 39,
+      "functional_categories": [
+        {
+          "function_category": "Verbs indicating contributive agency",
+          "phrase_count": 8,
+          "phrases": [
+            "X has contributed to the decline in ...",
+            "It is now understood that X plays an important role in ...",
+            "A number of factors play a role in determining the effects of ...",
+            "The mixing of X and Y exerts a powerful effect upon Z through...",
+            "Recent research has revealed that X has a detrimental effect on ...",
+            "A number of factors are known to affect the volume and type of ...",
+            "All these factors can impact on the efficiency and effectiveness of ...",
+            "X is only one of many factors that help to determine the quality of"
+          ]
+        },
+        {
+          "function_category": "Nouns indicating causality",
+          "phrase_count": 8,
+          "phrases": [
+            "One reason why Xs have declined is that ...",
+            "A consequence of vitamin A deficiency is blindness...",
+            "The causal role of X in Y has been demonstrated by ...",
+            "The most likely causes of X are poor diet and lack of exercise...",
+            "The causes of X have been the subject of intense debate within ...",
+            "X can have profound health consequences for older people...",
+            "Physical activity is an important factor in maintaining fitness...",
+            "Many other medications have an influence on cholesterol levels..."
+          ]
+        },
+        {
+          "function_category": "Nouns indicating contributive agency",
+          "phrase_count": 10,
+          "phrases": [
+            "X is a key factor in ...",
+            "X is a major influence on ...",
+            "X has a positive effect on ...",
+            "X has a significant impact on ...",
+            "X is an important determinant of ...",
+            "X and Y are important driving factors of Z...",
+            "X is generally seen as a factor strongly related to Y...",
+            "X is a significant contributory factor to the development of ...",
+            "This work has revealed several factors that are responsible for ...",
+            "The study found that loneliness has twice the impact on early death as obesity does..."
+          ]
+        },
+        {
+          "function_category": "Indicating a possible causal relationship",
+          "phrase_count": 7,
+          "phrases": [
+            "X may be an important factor in ...",
+            "X may contribute to the increase in ...",
+            "X may play a vital role in bringing about ...",
+            "X may have been caused by an increase in ...",
+            "There is some evidence that X may affect Y...",
+            "These findings suggest that X could improve ...",
+            "It is not yet clear whether X is made worse by Y..."
+          ]
+        },
+        {
+          "function_category": "Indicating a possible association",
+          "phrase_count": 6,
+          "phrases": [
+            "X appears to be linked to Y...",
+            "The use of X may be linked to ...",
+            "In many cases, X may be associated with ...",
+            "In the literature, X has been associated with Y...",
+            "A high consumption of X could be associated with ...",
+            "This suggests a weak link may exist between X and Y..."
+          ]
+        }
+      ]
+    },
+    "signalling-transition": {
+      "title": "Signalling Transition",
+      "url": "https://www.phrasebank.manchester.ac.uk/signalling-transition/",
+      "toggle_count": 7,
+      "phrase_count": 60,
+      "functional_categories": [
+        {
+          "function_category": "Previewing sections of text",
+          "phrase_count": 9,
+          "phrases": [
+            "The section below describes ...",
+            "What follows is an account of ...",
+            "In the following pages, I will present ...",
+            "The following is a brief description of ...",
+            "In the section that follows, it will be argued that ...",
+            "The problem of X is discussed in the following section...",
+            "A more detailed account of X is given in the following section...",
+            "The structure and functions of X will be explained in the following section...",
+            "The following part of this paper moves on to describe in greater detail the ..."
+          ]
+        },
+        {
+          "function_category": "Introducing a new topic",
+          "phrase_count": 8,
+          "phrases": [
+            "Regarding X, ...",
+            "As regards X, ...",
+            "In terms of X, ...",
+            "In the case of, X ...",
+            "With regard to X, ...",
+            "With respect to X, ...",
+            "On the question of X, ...",
+            "As far as X is concerned, ..."
+          ]
+        },
+        {
+          "function_category": "Reintroducing a topic",
+          "phrase_count": 9,
+          "phrases": [
+            "As discussed above, ...",
+            "As explained earlier, ...",
+            "As previously stated, ...",
+            "As indicated previously, ...",
+            "As described on the previous page, ...",
+            "As was mentioned in the previous chapter, ...",
+            "Returning (briefly) to the (subject/issue) of X, ...",
+            "As explained in the introduction, it is clear that ...",
+            "As was pointed out in the introduction to this paper, ..."
+          ]
+        },
+        {
+          "function_category": "Moving from one section to the next",
+          "phrase_count": 12,
+          "phrases": [
+            "Turning now to ...",
+            "Let us now turn to ...",
+            "Let us now consider ...",
+            "Moving on now to consider ...",
+            "Turning now to the experimental evidence on ...",
+            "Before proceeding to examine X, it is important to ...",
+            "Before explaining these theories, it is necessary to ...",
+            "Having defined what is meant by X, I will now move on to discuss ...",
+            "So far this paper has focused on X... The following section will discuss ...",
+            "This chapter has demonstrated that ... It is now necessary to explain the course of ...",
+            "Having discussed how to construct X, the final section of this paper addresses ways of ...",
+            "This section has analysed the causes of X and has argued that ... The next part of this paper will ..."
+          ]
+        },
+        {
+          "function_category": "Moving from one section to the next, indicating addition or contrast",
+          "phrase_count": 7,
+          "phrases": [
+            "Another significant aspect of X is ...",
+            "In addition, it is important to ask ...",
+            "Unlike Smith, Jones (2014) has argued ...",
+            "In contrast to Smith, Jones (2014) maintains ...",
+            "Despite this, little progress has been made in the ...",
+            "However, this system also has a number of serious drawbacks...",
+            "On the other hand, in spite of these recent findings about the role of ...,"
+          ]
+        },
+        {
+          "function_category": "Summarising a section or chapter",
+          "phrase_count": 9,
+          "phrases": [
+            "Thus far, the thesis has argued that ...",
+            "The previous section has shown that ...",
+            "To conclude this section, the literature identifies ...",
+            "This section has reviewed the three key aspects of ...",
+            "In summary, it has been shown from this review that ...",
+            "This chapter has described the methods used in this investigation and it has ...",
+            "This section has attempted to provide a brief summary of the literature relating to ...",
+            "This chapter began by describing X and arguing that ... It went on to suggest that the ...",
+            "In this section, it has been explained that ... The chapter that follows moves on to consider the..."
+          ]
+        },
+        {
+          "function_category": "Previewing a following chapter",
+          "phrase_count": 6,
+          "phrases": [
+            "In the chapter that follows, I present ...",
+            "The next chapter describes the synthesis and evaluation of ...",
+            "A summary of the main findings, together with ..., is provided in the next chapter...",
+            "The next chapter describes the procedures and methods used in this investigation ...",
+            "In the next section, I will present the principal findings of the current investigation ...",
+            "These analytical procedures and the results obtained from them are described in the next chapter..."
+          ]
+        }
+      ]
+    }
+  },
+  "total_phrases": 1456,
+  "total_functional_categories": 128
+}

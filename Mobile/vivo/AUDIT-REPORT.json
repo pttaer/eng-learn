@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "screen": "06-ielts-academic/01b-ielts-band-readiness-report-01-top.png",
+    "severity": "CRITICAL",
+    "type": "DUPLICATE_SCREENSHOT_HASH",
+    "detail": "Capture byte-identical to prior screen: 06-ielts-academic/01-ielts-overview-03-bottom.png (hash: 9cb0b5194b2b)"
+  }
+]
