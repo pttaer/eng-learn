@@ -4,25 +4,26 @@
    and optimizes mobile viewport ergonomics for all dossiers & views.
    ========================================================================== */
 
-/* 1. Global Lexicon Table Horizontal Scroll (No 1-Letter Crushed Text) */
+/* 1. Global Lexicon Table Flexible Standard (No Horizontal Scroll, Flexible & Responsive) */
 .lexicon-table-scroll-wrapper {
   width: 100% !important;
-  overflow-x: auto !important;
-  -webkit-overflow-scrolling: touch !important;
+  max-width: 100% !important;
+  overflow-x: visible !important;
 }
 
 .lexicon-table {
-  min-width: 600px !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
   width: 100% !important;
   table-layout: auto !important;
 }
 
 .lexicon-table th,
 .lexicon-table td {
-  white-space: nowrap !important;
-  overflow-wrap: normal !important;
-  word-break: normal !important;
-  padding: 10px 14px !important;
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  padding: 8px 10px !important;
 }
 
 .cd-toggle-short {
@@ -303,8 +304,46 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     max-width: 100% !important;
     box-sizing: border-box !important;
     min-width: 0 !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
+    overflow-x: visible !important;
+  }
+
+  .lexicon-table {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    border: none !important;
+  }
+
+  .lexicon-table thead {
+    display: none !important;
+  }
+
+  .lexicon-table tbody {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .lexicon-table tr {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 10px !important;
+    background: var(--bg-surface, #11151f) !important;
+    border: 1px solid var(--border-hairline) !important;
+    border-radius: var(--radius-squircle-sm, 10px) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .lexicon-table td {
+    border: none !important;
+    padding: 2px 4px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
   }
 
   .vocab-level-selector,
@@ -454,7 +493,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     width: 100% !important;
     font-size: var(--font-kicker) !important;
     padding-top: 6px !important;
-    border-top: 1px dashed var(--border-hairline) !important;
+    border-top: 1px solid var(--border-hairline) !important;
   }
 
   /* Drill Mode Vertical Ergonomics on Mobile: Hide redundant search & compress headers */
@@ -753,7 +792,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     text-align: left !important;
     justify-content: flex-start !important;
     line-height: 1.35 !important;
-    border-radius: 8px !important;
+    border-radius: var(--radius-btn, 10px) !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
@@ -789,10 +828,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 @media (max-width: 768px) {
 
   .dossier-tabs,
-  .tenses-family-tabs,
-  .view-mode-toggle,
-  .speaking-mode-cluster,
-  .day-picker-track {
+  .tenses-family-tabs {
     display: flex !important;
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
@@ -802,23 +838,50 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     padding-bottom: 6px !important;
   }
 
+  .view-mode-toggle,
+  .speaking-mode-cluster {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .day-picker-track {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr) !important;
+    gap: 6px !important;
+    width: 100% !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+  }
+
   .dossier-tabs::-webkit-scrollbar,
-  .tenses-family-tabs::-webkit-scrollbar,
-  .view-mode-toggle::-webkit-scrollbar,
-  .speaking-mode-cluster::-webkit-scrollbar,
-  .day-picker-track::-webkit-scrollbar {
+  .tenses-family-tabs::-webkit-scrollbar {
     height: var(--scrollbar-size, 5px) !important;
     display: block !important;
   }
 
   .dossier-tabs>*,
-  .tenses-family-tabs>*,
-  .view-mode-toggle>*,
-  .speaking-mode-cluster>*,
-  .day-picker-track>* {
+  .tenses-family-tabs>* {
     flex: 0 0 auto !important;
     white-space: nowrap !important;
     min-height: 44px !important;
+  }
+
+  .view-mode-toggle>*,
+  .speaking-mode-cluster>* {
+    flex: 1 1 auto !important;
+    white-space: normal !important;
+    min-height: 44px !important;
+  }
+
+  .day-picker-track>* {
+    min-width: 0 !important;
+    width: 100% !important;
+    min-height: 40px !important;
+    padding: 0 !important;
   }
 
   .dossier-reading .article-tab,
@@ -1578,12 +1641,11 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     box-sizing: border-box !important;
   }
 
-  /* Compact single-row CEFR selector for modal */
+  /* Responsive 6-col CEFR selector for modal */
   .skill-level-btn {
-    min-width: 28px !important;
-    min-height: 32px !important;
-    padding: 2px 6px !important;
-    font-size: 11px !important;
+    min-height: 40px !important;
+    font-size: 12px !important;
+    border-radius: var(--radius-btn, 10px) !important;
   }
 }
 
@@ -1681,7 +1743,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
-    border-radius: 6px !important;
+    border-radius: var(--radius-btn, 10px) !important;
   }
 
   .ie-visual-tabs,
@@ -1779,11 +1841,11 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 @media (max-width: 768px),
 (pointer: coarse) {
 
-  .day-chip,
   .hud-chip.habit-level-chip,
   .btn-toggle-timer,
   .btn-toggle-focus,
   .progression-btn-close,
+  .zen-pill-exit,
   .cd-btn-fullscreen,
   .cd-nav-btn,
   .cd-alert-dismiss,
@@ -2125,16 +2187,17 @@ html[data-cognitive-mode="cockpit"] .gentle-only {
     text-align: center !important;
   }
 
-  /* Habit tracker day picker: anti-truncation */
+  /* Habit tracker day picker: anti-truncation & 360px viewport grid fit */
   .day-picker-track .day-chip {
-    min-width: 44px !important;
+    min-width: 0 !important;
+    width: 100% !important;
     min-height: 44px !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
-    padding: 6px 10px !important;
+    font-size: 11px !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
   }
 
   /* Rule 7: Eradicate concentric borders in RPG progression and Blitz */

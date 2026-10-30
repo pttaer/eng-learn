@@ -699,7 +699,7 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
     );
 
     const labCard = h('div', 'ie-qcol');
-    const timerRow = h('div', 'ie-testbar');
+    const timerRow = h('div', 'ie-testbar ie-timer-controls-row');
     const clock = h('span', 'ie-clock', '01:00');
     const startPrepBtn = h('button', 'ie-btn ie-btn-primary', t('sim.btn_start_prep', undefined, 'Start 1-Minute Prep Countdown'));
     const resetPrepBtn = h('button', 'ie-btn', t('sim.btn_reset_timer', undefined, 'Reset Timer'));
@@ -775,7 +775,7 @@ export function speakingSimulatorView(root: HTMLElement, onBack?: () => void): (
       h('p', 'ie-note', t('sim.p2_speech_desc', undefined, 'Deliver your 2-minute response while referencing your 4-keyword anchors above. Speak continuously until the timer reaches zero.'))
     );
 
-    const speechTimerRow = h('div', 'ie-testbar');
+    const speechTimerRow = h('div', 'ie-testbar ie-timer-controls-row');
     const speechClock = h('span', 'ie-clock', '02:00');
     const startTalkBtn = h('button', 'ie-btn ie-btn-primary', t('sim.btn_start_speech', undefined, 'Start 2-Minute Speech Timer'));
     const quickBtn = h('button', 'ie-btn', t('sim.btn_quick_ans', undefined, '20s answer'));

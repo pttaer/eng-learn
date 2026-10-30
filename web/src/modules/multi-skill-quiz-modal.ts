@@ -880,8 +880,10 @@ export class MultiSkillQuizModal {
           const skillLabel = skill === 'vocab' ? 'Vocabulary' : skill.charAt(0).toUpperCase() + skill.slice(1);
           return `
             <div class="skill-card-item">
-              <span class="skill-card-name">${skillLabel}</span>
-              <span class="skill-level-chip" id="chip-${skill}">${current}</span>
+              <div class="skill-card-header">
+                <span class="skill-card-name">${skillLabel}</span>
+                <span class="skill-level-chip" id="chip-${skill}">${current}</span>
+              </div>
               <div class="skill-level-selector" data-skill="${skill}">
                 ${CEFR_ORDER.map(l => `
                   <button class="skill-level-btn ${l === current ? 'active' : ''}" data-level="${l}" title="${skillLabel} ${l}">${l}</button>

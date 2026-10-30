@@ -884,7 +884,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
 .cursor-locked .cursor-ring {
   border-color: var(--ink-primary);
-  border-style: dashed;
+  border-style: solid;
 }
 
 @keyframes spinSlow {

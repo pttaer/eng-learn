@@ -71,7 +71,8 @@
   }
 
   .dossier-reading .reading-pass-stepper {
-    overflow-x: auto;
+    overflow-x: visible;
+    flex-wrap: wrap;
   }
 }
 
@@ -216,16 +217,18 @@
 /* Phones: keep the skill tree legible; pan sideways instead of shrinking labels to nothing */
 @media (max-width: 768px) {
   .constellation-container {
-    overflow-x: auto !important;
+    overflow-x: hidden !important;
     overflow-y: hidden;
     min-height: 360px !important;
-    -webkit-overflow-scrolling: touch;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .constellation-container>svg {
-    width: 820px !important;
-    min-width: 820px;
-    height: 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
   }
 }
 

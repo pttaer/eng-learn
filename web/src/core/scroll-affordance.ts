@@ -115,14 +115,11 @@ export class ScrollAffordance {
   }
 
   public static readonly CANDIDATES = [
-    '.view-mode-toggle',
     '.tenses-family-tabs',
     '.dossier-tabs',
-    '.day-picker-track',
     '.reading-mobile-tab-bar',
     '.constellation-view-switcher',
     '.workout-tasks',
-    '.speaking-mode-cluster',
     '.listening-mode-cluster',
     '.dossier-protocol-tabs',
     '.article-tabs',
@@ -130,7 +127,6 @@ export class ScrollAffordance {
     '.grammar-level-selector',
     '.habit-level-chips',
     '.mediation-category-selector',
-    '.cd-matrix-track',
     '.cd-filter-tabs',
     '.ie-tabs',
     '.ie-visual-tabs',

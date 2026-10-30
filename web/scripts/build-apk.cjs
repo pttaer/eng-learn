@@ -16,7 +16,7 @@ const BUILD = path.join(OUT, 'build');
 const DEX_CACHE = path.join(OUT, 'dex-cache');
 const APK = path.join(OUT, 'English-Singularity-debug.apk');
 
-const SDK = process.env.ANDROID_HOME || 'C:\\Users\\Dell\\AppData\\Local\\Android\\Sdk';
+const SDK = process.env.ANDROID_HOME || path.join(os.homedir(), 'AppData', 'Local', 'Android', 'Sdk');
 const BT = path.join(SDK, 'build-tools', '35.0.0');
 const PLATFORM_JAR = path.join(SDK, 'platforms', 'android-35', 'android.jar');
 const STUDIO_JBR = 'C:\\Program Files\\Android\\Android Studio\\jbr';

@@ -173,7 +173,7 @@ export class SettingsDossier {
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 8px;">
               ${CEFR_ORDER.map(lvl => `
                 <button type="button" class="hud-btn btn-cefr-pill ${lvl === currentLevel ? 'active' : ''}" data-cefr="${lvl}" aria-pressed="${lvl === currentLevel}" style="min-height: var(--touch-target-min, 44px); padding: 8px 12px; justify-content: center; font-weight: 700; font-family: var(--font-mono);">
-                  ${lvl} <span style="font-size: 11px; font-weight: normal; margin-left: 4px; opacity: 0.85;">(${CEFR_LABELS[lvl].split(' ').slice(1).join(' ')})</span>
+                  ${lvl} <span style="font-size: 11px; font-weight: normal; margin-left: 4px; opacity: 0.85;">(${t('cefr.desc.' + lvl, undefined, CEFR_LABELS[lvl].split(' ').slice(1).join(' '))})</span>
                 </button>
               `).join('')}
             </div>

@@ -89,7 +89,7 @@ function control(q: IeltsQuestion, n: number): HTMLElement {
   const studyActionRow = h('div', 'ie-study-action-row');
   studyActionRow.style.display = isDeepStudy ? 'flex' : 'none';
   studyActionRow.style.marginTop = '6px';
-  studyActionRow.innerHTML = `<button type="button" class="ie-btn ie-btn-sm ie-btn-check-single" style="font-size: 12px; min-height: 32px; padding: 4px 10px; border-radius: 8px;">💡 ${t('questions.check_instant', undefined, 'Check & Evidence')}</button>`;
+  studyActionRow.innerHTML = `<button type="button" class="ie-btn ie-btn-sm ie-btn-check-single" style="font-size: var(--font-body-compact, 13px); min-height: var(--touch-target-min, 44px); padding: 8px 14px; border-radius: var(--radius-btn, 10px);">💡 ${t('questions.check_instant', undefined, 'Check & Evidence')}</button>`;
 
   const checkBtn = studyActionRow.querySelector('.ie-btn-check-single');
   checkBtn?.addEventListener('click', () => {

@@ -14,8 +14,9 @@ body {
   font-size: var(--text-sm);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
-  max-width: 100vw;
-  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 button,
@@ -986,18 +987,19 @@ sup {
 }
 
 .ie-table-wrap {
-  overflow-x: auto;
+  overflow-x: visible !important;
   max-width: 100%;
   width: 100%;
-  -webkit-overflow-scrolling: touch;
 }
 
 .ie-table {
   border-collapse: collapse;
-  width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
   font-size: var(--text-xs);
-  min-width: 600px;
-  white-space: nowrap !important;
+  min-width: 0 !important;
+  white-space: normal;
+  table-layout: auto;
 }
 
 .ie-table th,
@@ -1005,6 +1007,8 @@ sup {
   border: 1px solid var(--border-hairline);
   padding: var(--space-4) var(--space-8);
   text-align: right;
+  white-space: normal !important;
+  word-break: break-word !important;
 }
 
 .ie-table th {
@@ -1417,14 +1421,19 @@ sup {
     min-height: 44px !important;
   }
 
-  /* Prevent crushed table headers on mobile */
+  /* Flexible tables on mobile (No horizontal scroll) */
   .ie-table:not(.ie-synonym-table) {
-    min-width: 600px !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto !important;
   }
 
   .ie-table:not(.ie-synonym-table) th,
   .ie-table:not(.ie-synonym-table) td {
-    white-space: nowrap !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    padding: 6px 8px !important;
   }
 
   .ie-synonym-table {
@@ -4294,7 +4303,7 @@ sup {
   background: rgba(148, 163, 184, 0.12);
   text-decoration: line-through;
   opacity: 0.65;
-  border-bottom: 2px dashed #94a3b8;
+  border-bottom: 2px solid rgba(148, 163, 184, 0.4);
 }
 
 .speech-word.is-mispronounced {
@@ -4628,10 +4637,8 @@ sup {
 /* Reusable Horizontal Pill Filter Strip Pattern */
 .scrollable-pill-strip {
   display: flex !important;
-  flex-wrap: nowrap !important;
-  overflow-x: auto !important;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  flex-wrap: wrap !important;
+  overflow-x: visible !important;
   gap: var(--space-8, 8px);
   padding: 4px 2px;
   width: 100%;
@@ -4651,10 +4658,8 @@ sup {
 .ie-tips-chips {
   display: flex;
   gap: var(--space-6);
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
+  flex-wrap: wrap;
+  overflow-x: visible;
   padding-bottom: 2px;
   width: 100%;
 }
@@ -4976,13 +4981,10 @@ sup {
     flex-shrink: 0;
   }
 
-  .ie-back,
-  .ie-btn-back {
+  .ie-top-bar .ie-back {
     margin-left: 0;
     flex: 0 1 auto;
-    max-width: 110px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    max-width: 120px;
     padding: 4px 6px;
     font-size: var(--font-kicker) !important;
     font-weight: 700;
@@ -4997,12 +4999,19 @@ sup {
     box-shadow: none !important;
   }
 
-  .ie-back .ie-back-text {
-    max-width: 85px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .ie-top-bar .ie-back .ie-back-text {
+    max-width: 95px;
     white-space: nowrap;
     display: inline-block;
+  }
+
+  .ie-btn-back {
+    min-height: var(--touch-target-min, 44px);
+    border-radius: var(--radius-btn, 10px);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
   }
 
   .ie-top-actions {
@@ -5274,11 +5283,11 @@ sup {
     padding: 8px 8px !important;
     font-size: var(--text-xs) !important;
     font-weight: 600 !important;
-    border-radius: 8px !important;
+    border-radius: var(--radius-btn, 10px) !important;
     background: rgba(255, 255, 255, 0.05) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     color: var(--ink-primary) !important;
-    min-height: 40px !important;
+    min-height: var(--touch-target-min, 44px) !important;
   }
 
   .ie-sim-nav-row {
@@ -5722,7 +5731,7 @@ sup {
 
 .ie-clause-assembled-box {
   background: var(--bg-surface);
-  border: 1.5px dashed var(--border-subtle);
+  border: 1.5px solid var(--border-hairline);
   border-radius: 8px;
   padding: 14px;
   min-height: 64px;
@@ -5811,7 +5820,8 @@ sup {
 .ie-token-tap-btn.is-selected {
   opacity: 0.45;
   pointer-events: none;
-  border-style: dashed;
+  border-style: solid;
+  border-color: transparent;
 }
 
 .ie-clause-feedback-card {
@@ -6318,6 +6328,26 @@ sup {
 
   .ie-controls-pair > .ie-btn {
     width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .ie-timer-controls-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .ie-timer-controls-row .ie-clock {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .ie-timer-controls-row > .ie-btn {
+    flex: 1 1 calc(50% - 6px) !important;
+    min-height: var(--touch-target-min, 44px) !important;
     justify-content: center !important;
     text-align: center !important;
   }

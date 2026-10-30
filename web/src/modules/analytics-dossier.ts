@@ -118,7 +118,7 @@ export class AnalyticsDossier {
               <span style="font-size: var(--font-kicker); color: var(--ink-muted, #94a3b8);">Target: <strong>Band 7.5</strong> (C1)</span>
             </div>
 
-            <div class="trajectory-svg-container" style="width: 100%; overflow-x: auto;">
+            <div class="trajectory-svg-container" style="width: 100%; overflow-x: hidden;">
               ${trajectorySvg}
             </div>
             <div style="display: flex; justify-content: space-between; font-size: var(--font-kicker); color: var(--ink-muted, #94a3b8); margin-top: 8px;">
@@ -189,7 +189,7 @@ export class AnalyticsDossier {
 
     if (dueErrors.length === 0) {
       return `
-        <div class="serl-empty-state" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border: 1px dashed var(--border-subtle, rgba(255,255,255,0.12)); border-radius: 10px; padding: 30px 20px;">
+        <div class="serl-empty-state" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border: 1px solid var(--border-hairline); border-radius: var(--radius-btn, 10px); padding: 30px 20px;">
           <div style="color: var(--ink-good); margin-bottom: 10px;">${icon('check', 32)}</div>
           <h4 style="margin: 0 0 6px; font-size: var(--font-h4); font-weight: 700;">${t('analytics.queue_clear', undefined, 'Rehabilitation Queue Clear')}</h4>
           <p style="margin: 0 0 16px; font-size: var(--font-body-compact); color: var(--ink-muted, #94a3b8); max-width: 280px;">

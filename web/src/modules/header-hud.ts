@@ -673,7 +673,7 @@ export class HeaderHUD {
         </div>
         <div class="action-stack" style="width: 100%; display: flex; flex-direction: column; gap: 12px; margin-bottom: 18px;">
           ${CEFR_ORDER.map(l => `
-            <button class="hud-btn level-option ${l === current ? 'active' : ''}" data-level="${l}" aria-pressed="${l === current}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 10px 14px; font-weight: 600;">${CEFR_LABELS[l]}</button>
+            <button class="hud-btn level-option ${l === current ? 'active' : ''}" data-level="${l}" aria-pressed="${l === current}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 10px 14px; font-weight: 600;">${l} · ${t('cefr.desc.' + l, undefined, CEFR_LABELS[l])}</button>
           `).join('')}
         </div>
         <div class="apple-modal-footer">
@@ -751,11 +751,11 @@ export class HeaderHUD {
         <div class="mobile-sheet-grid" style="display: flex; flex-direction: column; gap: 10px; overflow-y: auto; flex: 1; min-height: 0; padding-right: 2px;">
           <!-- Time Budget & Exam Countdown -->
           <button class="hud-btn sheet-btn-budget" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-            <span style="color: var(--good); display: inline-flex;">⏱️</span> <span style="white-space: normal; line-height: 1.35; text-align: left;">Quỹ thời gian: <strong>${StorageManager.getDailyTimeBudget()}m / ngày</strong> (Đổi 15m/30m/60m)</span>
+            <span style="color: var(--good); display: inline-flex;">⏱️</span> <span style="white-space: normal; line-height: 1.35; text-align: left;">${t('drawer.time_budget', { budget: StorageManager.getDailyTimeBudget() }, `Quỹ thời gian: <strong>${StorageManager.getDailyTimeBudget()}m / ngày</strong>`)}</span>
           </button>
           ${StorageManager.getTargetExamDate() ? `
             <button class="hud-btn sheet-btn-exam" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-              <span style="color: var(--accent-gold); display: inline-flex;">⏳</span> <span>Thi IELTS: <strong>${(StorageManager.getExamDaysRemaining() ?? 0) >= 0 ? `còn ${StorageManager.getExamDaysRemaining()} ngày` : 'Đã qua'}</strong></span>
+              <span style="color: var(--accent-gold); display: inline-flex;">⏳</span> <span>${(StorageManager.getExamDaysRemaining() ?? 0) >= 0 ? t('drawer.exam_days_left', { days: StorageManager.getExamDaysRemaining() ?? 0 }, `Thi IELTS: còn ${StorageManager.getExamDaysRemaining()} ngày`) : t('drawer.exam_passed', undefined, 'Thi IELTS: Đã qua')}</span>
             </button>
           ` : ''}
 

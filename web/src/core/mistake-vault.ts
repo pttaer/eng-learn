@@ -103,7 +103,7 @@ export class MistakeVault {
           <span class="vault-kicker" style="white-space: normal; line-height: 1.3; word-break: break-word;">${t('vault.kicker', undefined, 'SPACED ERROR REHABILITATION (SERL 2.0)')}</span>
           <h2 class="vault-title" style="white-space: normal; line-height: 1.3; font-size: 16px; margin: 4px 0 0 0;">${icon('target', 20)} ${t('vault.title', undefined, 'Smart Mistake Vault')}</h2>
         </div>
-        <button type="button" class="apple-bottom-close-btn vault-btn-close" aria-label="${t('common.close', undefined, 'Close')}" style="min-width: 36px; min-height: 36px; padding: 0 6px; border-radius: var(--radius-btn, 10px); flex-shrink: 0;">✕</button>
+        <button type="button" class="vault-btn-close btn-modal-close" aria-label="${t('common.close', undefined, 'Close')}">✕</button>
       </div>
 
       <div class="vault-stats-grid">

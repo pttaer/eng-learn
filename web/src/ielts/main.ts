@@ -226,16 +226,36 @@ function homeSuites(): HTMLElement {
   ];
 
   SUITES.forEach(s => {
-    const card = h('div', 'ie-card');
+    const card = h('div', 'ie-card ie-suite-card ie-card-action');
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-label', s.title);
     card.innerHTML = `
-      <div class="ie-card-badge">${s.badge}</div>
-      <b style="font-size: var(--text-base);">${s.title}</b>
-      <span>${s.desc}</span>
-      <div class="ie-card-sublinks">
-        <a class="ie-btn ie-btn-sm ie-btn-primary" href="${s.primaryLink}">${s.primaryText}</a>
-        ${s.subLink ? `<a class="ie-btn ie-btn-sm" href="${s.subLink}">${s.subText}</a>` : ''}
+      <div class="ie-card-header-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <div class="ie-card-badge">${s.badge}</div>
+        <a class="ie-card-affordance" href="${s.primaryLink}" aria-label="${s.primaryText}" style="border: none; background: transparent; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -10px -10px -10px 0; color: var(--ink-muted); transition: transform 0.15s ease, color 0.15s ease;">${icon('arrowRight', 18)}</a>
       </div>
+      <b style="font-size: var(--text-base); line-height: 1.35; margin-top: 4px;">${s.title}</b>
+      <span style="font-size: var(--font-body-compact, 13px); line-height: 1.45; color: var(--ink-secondary);">${s.desc}</span>
+      ${s.subLink ? `
+        <div class="ie-card-subpill-wrap" style="margin-top: 8px;">
+          <a class="ie-suite-subpill" href="${s.subLink}" style="display: inline-flex; align-items: center; gap: 6px; font-size: var(--font-kicker); font-weight: 600; padding: 4px 10px; border-radius: var(--radius-pill, 9999px); background: var(--bg-surface-sunk); color: var(--accent-cyan); text-decoration: none; border: 1px solid var(--border-hairline); min-height: 28px;">
+            <span>${s.subText}</span> →
+          </a>
+        </div>
+      ` : ''}
     `;
+    card.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).closest('a')) return;
+      window.location.hash = s.primaryLink;
+    });
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        if ((e.target as HTMLElement).closest('a')) return;
+        e.preventDefault();
+        window.location.hash = s.primaryLink;
+      }
+    });
     cards.append(card);
   });
 

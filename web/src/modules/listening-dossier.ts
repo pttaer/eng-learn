@@ -598,7 +598,7 @@ export class ListeningDossier {
       <div class="card-ipa-text" style="font-size: var(--font-kicker); margin-bottom: 8px; background: var(--bg-surface-sunk); color: var(--accent-gold); border: 1px solid var(--border-subtle); border-radius: 4px; padding: 6px 10px; font-family: var(--font-mono);">
         IPA: ${this.escapeHTML(item.ipa)}
       </div>
-      <div style="font-family: var(--font-mono); font-size: var(--font-kicker); line-height: 1.4; border-top: 1px dashed var(--border-hairline); padding-top: 6px;">
+      <div style="font-family: var(--font-mono); font-size: var(--font-kicker); line-height: 1.4; border-top: 1px solid var(--border-hairline); padding-top: 6px;">
         <strong>CONNECTED SPEECH PHENOMENA:</strong><br />
         ${this.escapeHTML(item.traps)}
       </div>

@@ -749,7 +749,7 @@ export class SpeakingDossier {
       </div>
 
       <!-- Circular Timer HUD & Waveform Area -->
-      <div class="speaking-hud-strip" style="display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed var(--border-hairline); padding-top: 8px; gap: 14px; flex-wrap: wrap;">
+      <div class="speaking-hud-strip" style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-hairline); padding-top: 8px; gap: 14px; flex-wrap: wrap;">
         <div style="display: flex; flex-direction: column; align-items: center;">
           <div style="position: relative; width: 64px; height: 64px;">
             <svg viewBox="0 0 36 36" style="width: 100%; height: 100%; transform: rotate(-90deg);" aria-hidden="true">
@@ -939,7 +939,7 @@ export class SpeakingDossier {
       </div>
 
       <!-- Phonetics & Prosody Guidance -->
-      <div style="font-family: var(--font-sans); font-size: var(--font-body-compact); border-top: 1px dashed var(--border-hairline); padding-top: 8px; margin-top: 8px;">
+      <div style="font-family: var(--font-sans); font-size: var(--font-body-compact); border-top: 1px solid var(--border-hairline); padding-top: 8px; margin-top: 8px;">
         <strong>Phonetics & Prosody Check:</strong>
         <p style="font-family: var(--font-mono); font-size: var(--font-body-compact); color: var(--ink-secondary); margin-top: 4px;">
           ${item.phonetic}

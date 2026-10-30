@@ -112,7 +112,8 @@
 }
 
 .drill-btn-ghost {
-  border-style: dashed;
+  border-style: solid;
+  border-color: var(--border-hairline);
 }
 
 .drill-list {
@@ -266,7 +267,8 @@
 }
 
 .email-tile-informal {
-  border-style: dashed;
+  border-style: solid;
+  border-color: var(--border-hairline);
 }
 
 .email-tile-formal {
@@ -282,5 +284,3 @@
   resize: vertical;
   box-sizing: border-box;
 }
-
-
