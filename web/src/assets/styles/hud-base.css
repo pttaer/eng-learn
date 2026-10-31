@@ -1585,6 +1585,12 @@ body.zen-active,
     animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
+  /* Bottom sheet docks to the bottom edge, full bleed. ux-c's centred modal overlay would otherwise win */
+  .completion-modal-overlay.mobile-action-sheet-overlay {
+    align-items: flex-end;
+    padding: 0 !important;
+  }
+
   .mobile-action-sheet {
     display: flex !important;
     flex-direction: column !important;
