@@ -2,7 +2,8 @@ import { I18n, t } from '../core/i18n';
 import { AcousticHaptics } from '../core/acoustic-haptics';
 import collocationsData from '../assets/data/collocations.json';
 import { Cefr, CEFR_ORDER, CEFR_LABELS } from '../core/cefr';
-import { icon } from '../utils/icons';
+import { icon, IconName } from '../utils/icons';
+import type { RouteId } from '../core/router';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { SRSEngine } from '../core/srs-engine';
@@ -47,6 +48,33 @@ const ROUTE_NAMES: Record<string, string> = {
   settings: 'SETTINGS • Cài đặt'
 };
 
+const LEARN_SHEET: Array<[RouteId, IconName]> = [
+  ['read', 'book'],
+  ['write', 'edit'],
+  ['listen', 'headphones'],
+  ['speak', 'mic'],
+  ['mediate', 'scale'],
+  ['drills', 'note'],
+];
+
+const WORDS_SHEET: Array<[RouteId, IconName]> = [
+  ['vocab', 'layers'],
+  ['colloc', 'grid'],
+  ['grammar', 'landmark'],
+  ['tenses', 'clock'],
+  ['blitz', 'zap'],
+];
+
+type BnavTab = 'today' | 'learn' | 'words' | 'ielts' | 'me';
+
+const ROUTE_TAB: Record<RouteId, BnavTab> = {
+  tree: 'today', singularity: 'today',
+  read: 'learn', write: 'learn', listen: 'learn', speak: 'learn', mediate: 'learn', drills: 'learn',
+  vocab: 'words', colloc: 'words', grammar: 'words', tenses: 'words', blitz: 'words',
+  cockpit: 'ielts',
+  habits: 'me', analytics: 'me', settings: 'me',
+};
+
 export class HeaderHUD {
   private element: HTMLElement;
   private currentRoute: string = 'tree';
@@ -59,6 +87,7 @@ export class HeaderHUD {
   public onNavigateToAnalytics?: () => void;
   public onNavigateToCockpit?: () => void;
   public onNavigateToSettings?: () => void;
+  public onOpenIelts?: () => void | Promise<void>;
   private static instance: HeaderHUD | null = null;
   private contextualActions: ContextualDockAction[] | null = null;
 
@@ -117,6 +146,7 @@ export class HeaderHUD {
     const stats = SRSEngine.calculateStats(collocationsData.length, state.cardStates);
     const isMuted = AudioSynthesizer.isMute();
     const isTree = this.currentRoute === 'tree' || this.currentRoute === 'singularity';
+    const tab = ROUTE_TAB[this.currentRoute as RouteId] ?? 'today';
     const progression = ProgressionEngine.getState();
     const currentStreak = progression.streak || state.streak.currentStreak || 0;
     const timeBudget = StorageManager.getDailyTimeBudget();
@@ -213,25 +243,25 @@ export class HeaderHUD {
       </div>
 
       <nav class="hud-bottom-nav" aria-label="${t('nav.mobile_menu', undefined, 'Mobile Bottom Navigation')}">
-        <button class="bnav-btn bnav-tree ${isTree ? 'is-active btn-route-active' : ''}" aria-label="${t('nav.tree', undefined, 'Constellation Tree')}" title="${t('nav.tree', undefined, 'Constellation Tree')}">
+        <button class="bnav-btn bnav-tree ${tab === 'today' ? 'is-active btn-route-active' : ''}" aria-label="${t('nav.today', undefined, 'Today')}" title="${t('nav.today', undefined, 'Today')}">
           <span class="bnav-icon">${icon('sparkles', 18)}</span>
-          <span class="bnav-label">${t('nav.tree', undefined, 'Tree')}</span>
+          <span class="bnav-label">${t('nav.today', undefined, 'Today')}</span>
         </button>
-        <button class="bnav-btn bnav-blitz ${this.currentRoute === 'blitz' ? 'is-active btn-route-active' : ''}" aria-label="${t('nav.blitz', undefined, 'Speed Blitz')}" title="${t('nav.blitz', undefined, 'Speed Blitz')}">
-          <span class="bnav-icon">${icon('zap', 18)}</span>
-          <span class="bnav-label">${t('nav.blitz', undefined, 'Blitz')}</span>
+        <button class="bnav-btn bnav-learn ${tab === 'learn' ? 'is-active btn-route-active' : ''}" aria-label="${t('nav.learn', undefined, 'Learn')}" title="${t('nav.learn', undefined, 'Learn')}" aria-haspopup="dialog">
+          <span class="bnav-icon">${icon('book', 18)}</span>
+          <span class="bnav-label">${t('nav.learn', undefined, 'Learn')}</span>
         </button>
-        <button class="bnav-btn bnav-radar" aria-label="${t('nav.radar', undefined, 'Skill Radar')}" title="${t('nav.radar', undefined, 'Skill Radar')}">
-          <span class="bnav-icon">${icon('target', 18)}</span>
-          <span class="bnav-label">${t('nav.radar', undefined, 'Radar')}</span>
+        <button class="bnav-btn bnav-words ${tab === 'words' ? 'is-active btn-route-active' : ''}" aria-label="${t('nav.words', undefined, 'Words')}" title="${t('nav.words', undefined, 'Words')}" aria-haspopup="dialog">
+          <span class="bnav-icon">${icon('layers', 18)}</span>
+          <span class="bnav-label">${t('nav.words', undefined, 'Words')}</span>
         </button>
-        <button class="bnav-btn bnav-cockpit ${this.currentRoute === 'cockpit' ? 'is-active btn-route-active' : ''}" aria-label="${t('nav.cockpit', undefined, 'Exam Cockpit')}" title="${t('nav.cockpit', undefined, 'Exam Cockpit')}">
+        <button class="bnav-btn bnav-ielts ${tab === 'ielts' ? 'is-active btn-route-active' : ''}" aria-label="${t('nav.ielts', undefined, 'IELTS')}" title="${t('nav.ielts', undefined, 'IELTS')}">
           <span class="bnav-icon">${icon('graduationCap', 18)}</span>
-          <span class="bnav-label">${t('nav.cockpit', undefined, 'Cockpit')}</span>
+          <span class="bnav-label">${t('nav.ielts', undefined, 'IELTS')}</span>
         </button>
-        <button class="bnav-btn bnav-more" aria-label="${t('nav.more', undefined, 'More Actions')}" title="${t('nav.more', undefined, 'More Actions')}" aria-haspopup="dialog">
-          <span class="bnav-icon">${icon('menu', 18)}</span>
-          <span class="bnav-label">${t('nav.more', undefined, 'More')}</span>
+        <button class="bnav-btn bnav-me ${tab === 'me' ? 'is-active btn-route-active' : ''}" aria-label="${t('nav.me', undefined, 'Me')}" title="${t('nav.me', undefined, 'Me')}" aria-haspopup="dialog">
+          <span class="bnav-icon">${icon('trophy', 18)}</span>
+          <span class="bnav-label">${t('nav.me', undefined, 'Me')}</span>
         </button>
       </nav>
     `;
@@ -612,39 +642,32 @@ export class HeaderHUD {
       }
     });
 
-    const bnavBlitz = this.element.querySelector('.bnav-blitz');
-    bnavBlitz?.addEventListener('click', () => {
+    const bnavLearn = this.element.querySelector('.bnav-learn');
+    bnavLearn?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
-      if (this.onNavigateToBlitz) {
-        this.onNavigateToBlitz();
-      } else {
-        window.location.hash = '#blitz';
-      }
+      this.openRouteSheet(t('nav.learn_sheet', undefined, 'Learn'), LEARN_SHEET);
     });
 
-    const bnavRadar = this.element.querySelector('.bnav-radar');
-    bnavRadar?.addEventListener('click', () => {
+    const bnavWords = this.element.querySelector('.bnav-words');
+    bnavWords?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
-      MultiSkillQuizModal.open('radar');
+      this.openRouteSheet(t('nav.words_sheet', undefined, 'Words & Grammar'), WORDS_SHEET);
     });
 
-    const bnavCockpit = this.element.querySelector('.bnav-cockpit');
-    bnavCockpit?.addEventListener('click', () => {
+    const bnavIelts = this.element.querySelector('.bnav-ielts');
+    bnavIelts?.addEventListener('click', async () => {
       AudioSynthesizer.play('click');
-      if (this.onNavigateToCockpit) {
-        this.onNavigateToCockpit();
-      } else {
-        window.location.hash = '#cockpit';
-      }
+      if (this.onOpenIelts) await this.onOpenIelts();
+      else window.location.href = './ielts.html';
     });
 
-    const bnavMore = this.element.querySelector('.bnav-more');
-    bnavMore?.addEventListener('click', () => {
+    const bnavMe = this.element.querySelector('.bnav-me');
+    bnavMe?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
       this.openMobileActionSheet();
     });
 
-    this.element.querySelectorAll<HTMLElement>('.bnav-tree, .bnav-blitz, .bnav-cockpit').forEach((btn) => {
+    this.element.querySelectorAll<HTMLElement>('.bnav-tree').forEach((btn) => {
       btn.addEventListener('click', () => this.paintBnav(btn));
     });
   }
@@ -784,6 +807,25 @@ export class HeaderHUD {
     return { sheet, close };
   }
 
+  private openRouteSheet(title: string, items: Array<[RouteId, IconName]>): void {
+    const body = `
+      <div class="sheet-nav-list">
+        ${items.map(([route, ic]) => `
+          <button type="button" class="hud-btn sheet-nav-item" data-route="${route}">
+            ${icon(ic, 16)}<span>${getRouteName(route)}</span>
+          </button>`).join('')}
+      </div>`;
+    const { sheet, close } = this.openSheetShell('mobile-route-sheet', title, body);
+    sheet.querySelectorAll<HTMLElement>('.sheet-nav-item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        AudioSynthesizer.play('click');
+        HapticEngine.trigger('selection');
+        close();
+        window.location.hash = `#${btn.dataset.route}`;
+      });
+    });
+  }
+
   public openMobileActionSheet(): void {
     const isMuted = AudioSynthesizer.isMute();
     const isZen = ZenMode.isZen();
@@ -791,7 +833,7 @@ export class HeaderHUD {
     const ambientMode = ambientMusicEngine.getMode();
     const progression = ProgressionEngine.getState();
 
-    const { sheet, close } = this.openSheetShell('mobile-action-sheet', t('nav.mobile_controls', undefined, 'MOBILE CONTROLS'), `
+    const { sheet, close } = this.openSheetShell('mobile-action-sheet', t('nav.me_sheet', undefined, 'Me: progress & settings'), `
 
         <div class="mobile-sheet-grid" style="display: flex; flex-direction: column; gap: 10px; overflow-y: auto; flex: 1; min-height: 0; padding-right: 2px;">
           <!-- Time Budget & Exam Countdown -->
@@ -816,20 +858,11 @@ export class HeaderHUD {
           <button class="hud-btn sheet-btn-habits" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
             <span style="color: var(--accent-gold); display: inline-flex;">${icon('flame', 16)}</span> <span>${t('nav.habits_mission_log', undefined, 'Habits & 30-Day Mission Log')}</span>
           </button>
-          <a href="./ielts.html" class="hud-btn sheet-btn-ielts-suite" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px; text-decoration: none; display: flex; align-items: center;">
-            <span style="color: var(--accent-gold); display: inline-flex;">${icon('graduationCap', 16)}</span> <span>${t('nav.ielts_academic_suite', undefined, 'IELTS Academic Suite (7.0+)')}</span>
-          </a>
-          <button class="hud-btn sheet-btn-mediation" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-            <span style="color: var(--accent-cyan, #38bdf8); display: inline-flex;">${icon('scale', 16)}</span> <span>${t('nav.cefr_mediation', undefined, 'CEFR Mediation Workbench')}</span>
-          </button>
-          <button class="hud-btn sheet-btn-drills" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-            <span style="color: var(--accent-gold); display: inline-flex;">${icon('layers', 16)}</span> <span>${t('nav.drills', undefined, 'Practice Drills, Sounds & Email')}</span>
-          </button>
           <button class="hud-btn sheet-btn-analytics" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
             <span style="color: var(--accent-purple, #a855f7); display: inline-flex;">${icon('layers', 16)}</span> <span>${t('nav.analytics_serl', undefined, 'CEFR Analytics & SERL Dashboard')}</span>
           </button>
-          <button class="hud-btn sheet-btn-tenses" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-            <span style="color: var(--accent-gold); display: inline-flex;">${icon('clock', 16)}</span> <span style="white-space: normal; line-height: 1.35;">${t('dossier.twelve_tenses', undefined, '12 Tenses Master Vault')}</span>
+          <button class="hud-btn sheet-btn-radar" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
+            ${icon('target', 16)} <span>${t('nav.radar_full', undefined, 'Skill Radar check')}</span>
           </button>
           <button class="hud-btn sheet-btn-mistake-vault" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
             <span style="color: var(--critical, #ef4444); display: inline-flex;">${icon('target', 16)}</span> <span>${t('nav.mistake_vault', undefined, 'Smart Mistake Vault & Blitz')}</span>
@@ -910,24 +943,6 @@ export class HeaderHUD {
       window.location.hash = '#habits';
     });
 
-    sheet.querySelector('.sheet-btn-ielts-suite')?.addEventListener('click', () => {
-      AudioSynthesizer.play('click');
-      close();
-    });
-
-    sheet.querySelector('.sheet-btn-mediation')?.addEventListener('click', () => {
-      AudioSynthesizer.play('click');
-      close();
-      if (this.onNavigateToMediation) this.onNavigateToMediation();
-      else window.location.hash = '#mediate';
-    });
-
-    sheet.querySelector('.sheet-btn-drills')?.addEventListener('click', () => {
-      AudioSynthesizer.play('click');
-      close();
-      window.location.hash = '#drills';
-    });
-
     sheet.querySelector('.sheet-btn-analytics')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
       close();
@@ -935,10 +950,10 @@ export class HeaderHUD {
       else window.location.hash = '#analytics';
     });
 
-    sheet.querySelector('.sheet-btn-tenses')?.addEventListener('click', () => {
+    sheet.querySelector('.sheet-btn-radar')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
       close();
-      window.location.hash = '#tenses';
+      MultiSkillQuizModal.open('radar');
     });
 
     sheet.querySelector('.sheet-btn-mistake-vault')?.addEventListener('click', () => {

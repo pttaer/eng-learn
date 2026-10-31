@@ -333,6 +333,13 @@ class App {
       this.router.navigate('settings');
     };
 
+    // Bottom nav IELTS: leaving the page must still respect the active dossier's exit guard
+    this.headerHud.onOpenIelts = async () => {
+      const handle = this.activeDossierHandle;
+      if (handle && typeof handle.canDeactivate === 'function' && !(await handle.canDeactivate('tree'))) return;
+      window.location.href = './ielts.html';
+    };
+
     // Route listener
     this.router.onRoute((route) => {
       this.handleRouteChange(route);

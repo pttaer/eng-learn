@@ -2603,3 +2603,38 @@ body.zen-active,
   background: var(--accent-gold);
   color: var(--bg-canvas);
 }
+/* Route sheets (Learn, Words): tonal items, no inner border */
+.sheet-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-element);
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+.sheet-nav-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: var(--radius-btn, 10px);
+  background: var(--bg-card);
+  color: var(--ink-primary);
+  font-size: var(--font-body);
+  font-weight: 600;
+  text-align: left;
+}
+
+.sheet-nav-item svg {
+  flex-shrink: 0;
+  display: block;
+}
+
+.sheet-nav-item span {
+  white-space: normal;
+}
