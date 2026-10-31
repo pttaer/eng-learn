@@ -775,9 +775,11 @@ export class HeaderHUD {
 
     document.body.appendChild(sheet);
 
+    // A route change (Android back, a hash link) removes the sheet, so its listeners must go with it
     const close = () => {
       sheet.remove();
       document.removeEventListener('keydown', onKey, true);
+      window.removeEventListener('hashchange', close);
       opener?.focus();
     };
 
@@ -789,6 +791,7 @@ export class HeaderHUD {
       }
     };
     document.addEventListener('keydown', onKey, true);
+    window.addEventListener('hashchange', close);
 
     sheet.querySelectorAll('.btn-modal-close, .sheet-btn-close').forEach(btn => {
       btn.addEventListener('click', () => {
