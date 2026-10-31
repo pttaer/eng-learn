@@ -717,36 +717,81 @@ export class HeaderHUD {
     (modal.querySelector('.level-option.active') as HTMLElement | null)?.focus();
   }
 
-  public openMobileActionSheet(): void {
-    const existing = document.getElementById('mobile-action-sheet');
-    if (existing) existing.remove();
-
-    const isMuted = AudioSynthesizer.isMute();
-    const isZen = ZenMode.isZen();
-    const currentTheme = this.currentTheme;
-    const ambientMode = ambientMusicEngine.getMode();
-    const progression = ProgressionEngine.getState();
+  private openSheetShell(id: string, title: string, bodyHtml: string): { sheet: HTMLElement; close: () => void } {
+    document.getElementById(id)?.remove();
     const opener = document.activeElement as HTMLElement | null;
 
     // Dismiss any active floating toast notifications so they don't occlude modal header
     document.querySelectorAll('.apple-toast, .streak-freeze-card, .toast-container').forEach(t => t.remove());
 
     const sheet = document.createElement('div');
-    sheet.id = 'mobile-action-sheet';
+    sheet.id = id;
     sheet.className = 'completion-modal-overlay interactive mobile-action-sheet-overlay';
     sheet.setAttribute('role', 'dialog');
     sheet.setAttribute('aria-modal', 'true');
-    sheet.setAttribute('aria-label', 'Mobile Navigation Menu');
+    sheet.setAttribute('aria-label', title);
 
     sheet.innerHTML = `
       <div class="completion-receipt-card mobile-action-sheet" style="max-width: 500px; width: 92%; max-height: 85dvh; display: flex; flex-direction: column; overflow: hidden; padding: 20px; align-items: stretch; text-align: left; box-sizing: border-box;">
         <div class="mobile-action-sheet-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%; box-sizing: border-box; margin-bottom: 16px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px; flex-shrink: 0;">
           <div style="display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1;">
             <span style="color: var(--accent-gold); display: flex; align-items: center; flex-shrink: 0;">${icon('menu', 16)}</span>
-            <span class="telemetry-label" style="font-weight: 700; color: var(--ink-primary); white-space: normal; line-height: 1.3;">${t('nav.mobile_controls', undefined, 'MOBILE CONTROLS')}</span>
+            <span class="telemetry-label" style="font-weight: 700; color: var(--ink-primary); white-space: normal; line-height: 1.3;">${title}</span>
           </div>
           <button type="button" class="sheet-btn-close btn-modal-close" aria-label="${t('common.close', undefined, 'Close')}">✕</button>
         </div>
+        ${bodyHtml}
+        <div class="apple-modal-footer">
+          <button type="button" class="apple-bottom-close-btn btn-modal-close sheet-btn-close" aria-label="${t('common.close', undefined, 'Close')}">
+            ${t('common.close', undefined, 'Close')}
+          </button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(sheet);
+
+    const close = () => {
+      sheet.remove();
+      document.removeEventListener('keydown', onKey, true);
+      opener?.focus();
+    };
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        close();
+      }
+    };
+    document.addEventListener('keydown', onKey, true);
+
+    sheet.querySelectorAll('.btn-modal-close, .sheet-btn-close').forEach(btn => {
+      btn.addEventListener('click', () => {
+        AudioSynthesizer.play('click');
+        close();
+      });
+    });
+
+    sheet.addEventListener('click', (e) => {
+      if (e.target === sheet) {
+        AudioSynthesizer.play('click');
+        close();
+      }
+    });
+
+    (sheet.querySelector('.sheet-btn-close') as HTMLElement | null)?.focus();
+    return { sheet, close };
+  }
+
+  public openMobileActionSheet(): void {
+    const isMuted = AudioSynthesizer.isMute();
+    const isZen = ZenMode.isZen();
+    const currentTheme = this.currentTheme;
+    const ambientMode = ambientMusicEngine.getMode();
+    const progression = ProgressionEngine.getState();
+
+    const { sheet, close } = this.openSheetShell('mobile-action-sheet', t('nav.mobile_controls', undefined, 'MOBILE CONTROLS'), `
 
         <div class="mobile-sheet-grid" style="display: flex; flex-direction: column; gap: 10px; overflow-y: auto; flex: 1; min-height: 0; padding-right: 2px;">
           <!-- Time Budget & Exam Countdown -->
@@ -827,45 +872,7 @@ export class HeaderHUD {
             ${icon('settings', 16)} <span>${t('nav.settings_data_management', undefined, 'Settings & Data Management')}</span>
           </button>
         </div>
-
-        <div class="apple-modal-footer">
-          <button type="button" class="apple-bottom-close-btn btn-modal-close sheet-btn-close" aria-label="${t('common.close', undefined, 'Close')}">
-            ${t('common.close', undefined, 'Close')}
-          </button>
-        </div>
-      </div>
-    `;
-
-    document.body.appendChild(sheet);
-
-    const close = () => {
-      sheet.remove();
-      document.removeEventListener('keydown', onKey, true);
-      opener?.focus();
-    };
-
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        e.preventDefault();
-        e.stopPropagation();
-        close();
-      }
-    };
-    document.addEventListener('keydown', onKey, true);
-
-    sheet.querySelectorAll('.btn-modal-close, .sheet-btn-close').forEach(btn => {
-      btn.addEventListener('click', () => {
-        AudioSynthesizer.play('click');
-        close();
-      });
-    });
-
-    sheet.addEventListener('click', (e) => {
-      if (e.target === sheet) {
-        AudioSynthesizer.play('click');
-        close();
-      }
-    });
+    `);
 
     sheet.querySelector('.sheet-btn-budget')?.addEventListener('click', () => {
       StorageManager.cycleDailyTimeBudget();
@@ -1007,8 +1014,6 @@ export class HeaderHUD {
         window.location.hash = '#settings';
       }
     });
-
-    (sheet.querySelector('.sheet-btn-close') as HTMLElement | null)?.focus();
   }
 
   public openSettingsModal(): void {
