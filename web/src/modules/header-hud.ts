@@ -688,10 +688,10 @@ export class HeaderHUD {
       <div class="completion-receipt-card" style="max-width: 420px; width: 100%; max-height: calc(100dvh - 32px); overflow-y: auto; box-sizing: border-box;">
         <div class="telemetry-label" style="margin-bottom: 8px;">${t('nav.change_level', undefined, 'YOUR LEVEL')}</div>
         <div class="action-stack" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; width: 100%;">
-          <button class="hud-btn btn-open-placement-test" style="width: 100%; box-sizing: border-box; justify-content: center; padding: 10px 14px; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8);">
+          <button class="hud-btn btn-open-placement-test" style="width: 100%; box-sizing: border-box; justify-content: center; padding: 10px 14px; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8); white-space: normal; line-height: 1.3; text-align: center;">
             ${icon('compass', 16)}<span>[ ${t('settings.reset_placement', undefined, 'TAKE 2-MIN QUICK PLACEMENT TEST')} ]</span>
           </button>
-          <button class="hud-btn btn-open-skill-radar" style="width: 100%; box-sizing: border-box; justify-content: center; padding: 10px 14px; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
+          <button class="hud-btn btn-open-skill-radar" style="width: 100%; box-sizing: border-box; justify-content: center; padding: 10px 14px; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold); white-space: normal; line-height: 1.3; text-align: center;">
             ${icon('target', 16)}<span>[ ${t('dossier.celestial_radar', undefined, 'CELESTIAL RADAR & DIAGNOSTIC')} ]</span>
           </button>
         </div>

@@ -241,7 +241,7 @@ export class SettingsDossier {
                 ${icon('target', 16)}
                 <span>${t('settings.weakness_first_label', undefined, 'Prioritize Weaknesses (Weakness-First Focus)')}</span>
               </span>
-              <strong style="color: ${weaknessFirst ? 'var(--good)' : 'var(--ink-muted)'};">${weaknessFirst ? t('settings.status_on', undefined, 'ON ●') : t('settings.status_off', undefined, 'OFF')}</strong>
+              <strong style="flex-shrink: 0; white-space: nowrap; color: ${weaknessFirst ? 'var(--good)' : 'var(--ink-muted)'};">${weaknessFirst ? t('settings.status_on', undefined, 'ON ●') : t('settings.status_off', undefined, 'OFF')}</strong>
             </button>
             <span style="font-size: 12px; color: var(--ink-secondary); line-height: 1.4;">
               ${t('settings.weakness_first_desc', undefined, 'Automatically surfaces question types, vocabulary items, and L1 transfer traps you previously missed in the Mistake Vault to the start of practice sessions.')}

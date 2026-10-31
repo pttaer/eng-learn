@@ -867,7 +867,7 @@ export class MultiSkillQuizModal {
 
     this.card(`
       <div class="quiz-telemetry-header" style="margin-bottom: var(--space-12); display: flex; flex-direction: column; gap: 4px;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-8);">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-8); padding-right: 40px;">
           <span class="telemetry-label" style="letter-spacing: 0.08em; font-weight: 700;">${t('quiz.diagnostic_complete', undefined, 'DIAGNOSTIC COMPLETE')}</span>
           <span class="skill-badge-pill">${icon('target', 12)} ${t('quiz.overall', { level: overallLevel }, `${overallLevel} OVERALL`)}</span>
         </div>
@@ -917,11 +917,11 @@ export class MultiSkillQuizModal {
 
       <!-- Actions -->
       <div class="action-stack radar-actions-cluster" style="display: flex; flex-direction: column; gap: 12px; width: 100%; margin-top: 22px;">
-        <button class="hud-btn btn-apply-profile" style="width: 100%; justify-content: center; padding: 12px 0; font-weight: 700; background: var(--accent-gold); color: var(--bg-canvas); border-color: var(--accent-gold);">
+        <button class="hud-btn btn-apply-profile" style="width: 100%; justify-content: center; padding: 12px 16px; font-weight: 700; white-space: normal; line-height: 1.3; text-align: center; background: var(--accent-gold); color: var(--bg-canvas); border-color: var(--accent-gold);">
           ${icon('zap', 14)} ${t('quiz.apply_profile', undefined, 'Apply Profile & Calibrate App')}
         </button>
         <div style="display: flex; gap: 12px;">
-          <button class="hud-btn btn-retake-quiz" style="flex: 1; justify-content: center; padding: 8px 0;">
+          <button class="hud-btn btn-retake-quiz" style="flex: 1; min-width: 0; justify-content: center; padding: 8px 12px; white-space: normal; line-height: 1.3; text-align: center;">
             ${icon('target', 12)} ${t('quiz.retake_diagnostic', undefined, 'Retake Diagnostic')}
           </button>
           <button class="apple-bottom-close-btn btn-cancel-results" style="flex: 1; justify-content: center;">
