@@ -4460,7 +4460,7 @@ sup {
 
 .ie-vsearch {
   width: 100%;
-  min-height: 42px;
+  min-height: 44px;
   padding: 8px 14px;
   font-size: var(--font-body-compact);
   border-radius: var(--radius-squircle-sm, 10px);

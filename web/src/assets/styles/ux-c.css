@@ -1915,14 +1915,22 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     line-height: 1.3 !important;
   }
 
-  /* Level chips shrink to fit six in a row, but never below the 44px floor */
-  /* Level chips shrink to fit six in a row evenly across 360px */
+  /* Six level chips share the 336px row at the 44px floor; the LEVEL label takes its own line */
+  .vocab-level-selector {
+    flex-wrap: wrap !important;
+    row-gap: 6px !important;
+  }
+
+  .vocab-level-selector > .telemetry-label {
+    flex: 0 0 100% !important;
+  }
+
   .vocab-level-selector .level-tab,
   .vocab-level-chips .level-tab,
   .grammar-level-selector .level-tab,
   .habit-level-chip {
     flex: 1 1 0 !important;
-    min-width: 0 !important;
+    min-width: var(--touch-target-min, 44px) !important;
     padding: 6px 2px !important;
   }
 
@@ -2163,7 +2171,7 @@ html[data-cognitive-mode="cockpit"] .gentle-only {
 
   /* Habit tracker day picker smooth scrolling peek */
   .day-picker-track {
-    gap: 8px !important;
+    gap: 4px !important;
     padding-bottom: 4px !important;
   }
 
@@ -2181,7 +2189,7 @@ html[data-cognitive-mode="cockpit"] .gentle-only {
   }
   .habit-level-chips .habit-level-chip {
     flex: 1 1 0 !important;
-    min-width: 0 !important;
+    min-width: var(--touch-target-min, 44px) !important;
     min-height: var(--touch-target-min, 44px) !important;
     padding: 4px 2px !important;
     text-align: center !important;
@@ -2189,7 +2197,7 @@ html[data-cognitive-mode="cockpit"] .gentle-only {
 
   /* Habit tracker day picker: anti-truncation & 360px viewport grid fit */
   .day-picker-track .day-chip {
-    min-width: 0 !important;
+    min-width: var(--touch-target-min, 44px) !important;
     width: 100% !important;
     min-height: 44px !important;
     display: inline-flex !important;

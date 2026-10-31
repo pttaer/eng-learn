@@ -239,7 +239,7 @@ function homeSuites(): HTMLElement {
       <span style="font-size: var(--font-body-compact, 13px); line-height: 1.45; color: var(--ink-secondary);">${s.desc}</span>
       ${s.subLink ? `
         <div class="ie-card-subpill-wrap" style="margin-top: 8px;">
-          <a class="ie-suite-subpill" href="${s.subLink}" style="display: inline-flex; align-items: center; gap: 6px; font-size: var(--font-kicker); font-weight: 600; padding: 4px 10px; border-radius: var(--radius-pill, 9999px); background: var(--bg-surface-sunk); color: var(--accent-cyan); text-decoration: none; border: 1px solid var(--border-hairline); min-height: 28px;">
+          <a class="ie-suite-subpill" href="${s.subLink}" style="display: inline-flex; align-items: center; gap: 6px; font-size: var(--font-kicker); font-weight: 600; padding: 4px 10px; border-radius: var(--radius-pill, 9999px); background: var(--bg-surface-sunk); color: var(--accent-cyan); text-decoration: none; border: 1px solid var(--border-hairline); min-height: 44px;">
             <span>${s.subText}</span> →
           </a>
         </div>
