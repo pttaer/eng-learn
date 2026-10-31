@@ -474,6 +474,8 @@ window.addEventListener('beforeunload', (e) => {
 
 renderHeader();
 ScrollAffordance.initGlobalObserver();
+// Back/forward lands at the top like a fresh route; the browser's restore runs after lazy views render and wins
+history.scrollRestoration = 'manual';
 window.addEventListener('hashchange', handleHashChange);
 route();
 document.getElementById('boot')?.remove();
