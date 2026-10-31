@@ -480,6 +480,11 @@ body:has(.ie-tip-modal-overlay.is-active) .floating-note-bubble {
 
 /* 3. Mobile Refinements (<= 768px) */
 @media (max-width: 768px) {
+  /* Main app: Me sheet > Quick Notes opens the same window, so the bubble would only cover content */
+  body:has(.hud-bottom-nav) .floating-note-bubble {
+    display: none;
+  }
+
   .floating-note-bubble {
     padding: 10px 16px;
   }

@@ -18,6 +18,7 @@ import { HapticEngine } from '../core/haptic-engine';
 import { MistakeVault } from '../core/mistake-vault';
 import { CommuteAudioPlayer } from '../core/commute-audio-player';
 import { CognitiveScaffoldingEngine } from '../core/cognitive-scaffolding-mode';
+import { FloatingNote } from './floating-note';
 
 export interface ContextualDockAction {
   id: string;
@@ -873,6 +874,9 @@ export class HeaderHUD {
           <button class="hud-btn sheet-btn-commute-audio" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
             <span style="color: var(--accent-gold); display: inline-flex;">${icon('headphones', 16)}</span> <span>${t('nav.commute_audio', undefined, 'Hands-Free Commute Audio Loop')}</span>
           </button>
+          <button class="hud-btn sheet-btn-notes" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
+            <span style="color: var(--accent-gold); display: inline-flex;">${icon('note', 16)}</span> <span>${t('nav.quick_notes', undefined, 'Quick Notes')}</span>
+          </button>
 
           <div style="height: 1px; background: var(--border-hairline); margin: 4px 0;"></div>
 
@@ -971,6 +975,12 @@ export class HeaderHUD {
       HapticEngine.trigger('selection');
       close();
       MistakeVault.open();
+    });
+
+    sheet.querySelector('.sheet-btn-notes')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      close();
+      FloatingNote.open();
     });
 
     sheet.querySelector('.sheet-btn-commute-audio')?.addEventListener('click', () => {
