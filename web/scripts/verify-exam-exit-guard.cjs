@@ -72,7 +72,7 @@ console.log('✓ 5. Main Router Guard Wiring verified.\n');
 console.log('Verifying 6. Navigation Bar Color Locking...');
 assert.ok(hudSrc.includes('btn-route-active'), 'header-hud.ts must bind btn-route-active on active routes');
 assert.ok(stylesSrc.includes('.hud-btn.btn-route-active'), 'hud-base.css must define .hud-btn.btn-route-active styles');
-assert.ok(hudSrc.includes('bnav-tree, .bnav-blitz, .bnav-cockpit'), 'Only route buttons in bottom nav should trigger paintBnav');
+assert.ok(hudSrc.includes("querySelectorAll<HTMLElement>('.bnav-tree')"), 'Only the Today route button in bottom nav should trigger paintBnav');
 console.log('✓ 6. Navigation Bar Color Locking verified.\n');
 
 console.log('====================================================');

@@ -191,7 +191,7 @@ async function runMobileTouchQA() {
       });
       assert.ok(bottomNavStats.exists, 'Bottom navigation bar must exist in DOM');
       assert.ok(bottomNavStats.display === 'flex', `Bottom nav must be display: flex on mobile (got ${bottomNavStats.display})`);
-      assert.strictEqual(bottomNavStats.buttonCount, 5, 'Bottom nav must have exactly 5 thumb actions (Tree, Blitz, Radar, Cockpit, More)');
+      assert.strictEqual(bottomNavStats.buttonCount, 5, 'Bottom nav must have exactly 5 thumb actions (Today, Learn, Words, IELTS, Me)');
 
       for (const btn of bottomNavStats.buttons) {
         assert.ok(

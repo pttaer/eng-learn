@@ -58,25 +58,25 @@ console.log('✓ 4. Touch target minimums (>=44x44px and 48px touch zone) verifi
 
 // 5. Bottom Navigation Bar HTML & 5 Primary Thumb Actions
 assert.ok(hudSrc.includes('class="hud-bottom-nav"'), 'HeaderHUD.render() must include .hud-bottom-nav element');
-assert.ok(hudSrc.includes('bnav-tree'), 'Missing [ ✦ Tree ] primary bottom thumb action');
-assert.ok(hudSrc.includes('bnav-blitz'), 'Missing [ ⚡ Blitz ] primary bottom thumb action');
-assert.ok(hudSrc.includes('bnav-radar'), 'Missing [ 🎯 Radar ] primary bottom thumb action');
-assert.ok(hudSrc.includes('bnav-cockpit'), 'Missing [ 🎓 Cockpit ] primary bottom thumb action');
-assert.ok(hudSrc.includes('bnav-more'), 'Missing [ ☰ More ] primary bottom thumb action');
+assert.ok(hudSrc.includes('bnav-tree'), 'Missing [ Today ] primary bottom thumb action');
+assert.ok(hudSrc.includes('bnav-learn'), 'Missing [ Learn ] primary bottom thumb action');
+assert.ok(hudSrc.includes('bnav-words'), 'Missing [ Words ] primary bottom thumb action');
+assert.ok(hudSrc.includes('bnav-ielts'), 'Missing [ IELTS ] primary bottom thumb action');
+assert.ok(hudSrc.includes('bnav-me'), 'Missing [ Me ] primary bottom thumb action');
 
 // Verify all 5 buttons have aria-label
-['bnav-tree', 'bnav-blitz', 'bnav-radar', 'bnav-cockpit', 'bnav-more'].forEach(cls => {
+['bnav-tree', 'bnav-learn', 'bnav-words', 'bnav-ielts', 'bnav-me'].forEach(cls => {
   const match = hudSrc.match(new RegExp(`<button[^>]*class="[^"]*${cls}[^"]*"[^>]*aria-label="([^"]+)"`));
   assert.ok(match && match[1], `Bottom nav button .${cls} must possess an explicit aria-label`);
 });
-console.log('✓ 5. 5 Primary thumb-zone actions (Tree, Blitz, Radar, Cockpit, More) with ARIA labels verified.');
+console.log('✓ 5. 5 Primary thumb-zone actions (Today, Learn, Words, IELTS, Me) with ARIA labels verified.');
 
 // 6. Navigation Event Handlers in HeaderHUD
 assert.ok(hudSrc.includes('bnavTree'), 'Missing bnavTree listener binding');
-assert.ok(hudSrc.includes('bnavBlitz'), 'Missing bnavBlitz listener binding');
-assert.ok(hudSrc.includes('bnavRadar'), 'Missing bnavRadar listener binding');
-assert.ok(hudSrc.includes('bnavCockpit'), 'Missing bnavCockpit listener binding');
-assert.ok(hudSrc.includes('bnavMore'), 'Missing bnavMore listener binding');
+assert.ok(hudSrc.includes('bnavLearn'), 'Missing bnavLearn listener binding');
+assert.ok(hudSrc.includes('bnavWords'), 'Missing bnavWords listener binding');
+assert.ok(hudSrc.includes('bnavIelts'), 'Missing bnavIelts listener binding');
+assert.ok(hudSrc.includes('bnavMe'), 'Missing bnavMe listener binding');
 assert.ok(hudSrc.includes('mobileDrawerBtn'), 'Missing mobileDrawerBtn listener binding');
 console.log('✓ 6. Mobile bottom nav & drawer click handlers verified in HeaderHUD.bindEvents().');
 
