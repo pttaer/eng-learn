@@ -864,6 +864,9 @@ export class HeaderHUD {
           <button class="hud-btn sheet-btn-radar" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
             ${icon('target', 16)} <span>${t('nav.radar_full', undefined, 'Skill Radar check')}</span>
           </button>
+          <button class="hud-btn sheet-btn-cockpit" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
+            ${icon('graduationCap', 16)} <span>${t('nav.cd_ielts_cockpit', undefined, 'CD-IELTS Exam Station')}</span>
+          </button>
           <button class="hud-btn sheet-btn-mistake-vault" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
             <span style="color: var(--critical, #ef4444); display: inline-flex;">${icon('target', 16)}</span> <span>${t('nav.mistake_vault', undefined, 'Smart Mistake Vault & Blitz')}</span>
           </button>
@@ -954,6 +957,13 @@ export class HeaderHUD {
       AudioSynthesizer.play('click');
       close();
       MultiSkillQuizModal.open('radar');
+    });
+
+    sheet.querySelector('.sheet-btn-cockpit')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      close();
+      if (this.onNavigateToCockpit) this.onNavigateToCockpit();
+      else window.location.hash = '#cockpit';
     });
 
     sheet.querySelector('.sheet-btn-mistake-vault')?.addEventListener('click', () => {
