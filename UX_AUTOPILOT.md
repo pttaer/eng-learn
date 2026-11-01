@@ -31,6 +31,11 @@ Gates per commit: `npm test` → `npm run test:mobile` → `npm run build:fast` 
 | AP-14 reading-drills badge | 51436ee; vocab table = other writer TASK-008 | — |
 | AP-15 mistake vault VI gap | 4 `vault.l1_*` keys EN+VI, `t()` in `mistake-vault.ts` | 1926083 |
 | AP-19 IELTS band Overall orphan | `.ie-bandcell-main` spans both columns | in HEAD (swept in) |
+| AP-17 vocab selects chevron overlap | star on own full row; selects `padding-right: 32px` | da85585 |
+| AP-18 strategy placeholder clipped | `strategy.search_cards_ph` EN+VI, shorter | in HEAD (swept in) |
+| AP-13 analytics SVG labels 8–9 units | raised to 11 units (`analytics-dossier.ts`) | 1641aeb (swept in) |
+| AP-16 writing-studio mode tabs | probed: 3 equal 105px cols, uniform height | no change |
+| AP-24 selected day chip white | `.day-chip.selected` → `--accent-cyan` periwinkle | pending commit |
 
 ## Closed without change
 
@@ -42,12 +47,10 @@ Gates per commit: `npm test` → `npm run test:mobile` → `npm run build:fast` 
 ## Open queue (in order)
 
 - AP-12 Progression stat label ellipsis: source not found in CSS (no `text-overflow` on `.telemetry-label`). Verify with Me sheet → progression open before touching.
-- AP-13 Analytics radar labels "8px": measure rendered bbox; SVG viewBox scaling may be a false positive. Enlarge only if rendered <11px.
-- AP-16 Sub-tab rows wrap inconsistently (writing-studio, reading, speaking mode row). Uniform grid or nowrap scroller.
-- AP-17 Vocab: chevron overlaps "Tất cả Band đi…", empty star tile, crowded chip row.
-- AP-18 Strategy search placeholder clipped mid-word: shorter copy.
-- AP-20 Listening traps: empty placeholder box at bottom → empty-state copy or remove.
-- AP-21 Writing task list: "CO₂ Emissions…" chevron touches title → gap.
+- AP-13 remainder: rendered SVG label height ≈9px because the radar viewBox scales to ~0.8 on phone. Real fix = HTML labels or viewBox at rendered width. Not started.
+- AP-16 remainder: speaking mode row stacks full width; reading "Analysis & Exercises" 2-line. Not probed yet.
+- AP-20 Listening traps: empty placeholder box. Selectors not found in `ielts.html#listening-traps`; needs screenshot.
+- AP-21 Writing "CO₂ Emissions…" chevron: text not found in `#writing` DOM via probe; needs screenshot of the task list.
 - AP-22 Action rows cramped ("Học lại", "Lật xem đáp án"): verify by probe first.
 - AP-24 Primary style drift (white "01" chip, white primary in colloc/tenses vs periwinkle) → `--accent` token.
 - Mistake vault loop-complete screen still has EN kicker `L1 TRANSFER REMEDIATION` (`mistake-vault.ts` ~339): add key if in scope.
