@@ -2461,7 +2461,7 @@ sup {
   font-size: var(--font-body-compact);
   font-weight: 800;
   color: var(--ink-secondary, #94a3b8);
-  font-mono: monospace;
+  font-family: var(--font-mono, monospace);
 }
 
 .ie-diag-result-status {
