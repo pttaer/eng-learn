@@ -431,7 +431,7 @@ export class AnalyticsDossier {
       }
       ringsHtml += `
         <polygon points="${ringPoints.join(' ')}" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" stroke-dasharray="2,3" />
-        <text x="${cx + 4}" y="${(cy - r + 3).toFixed(1)}" font-size="8" fill="var(--ink-muted, #94a3b8)" opacity="0.6">${tier}</text>
+        <text x="${cx + 4}" y="${(cy - r + 3).toFixed(1)}" font-size="11" fill="var(--ink-muted, #94a3b8)" opacity="0.6">${tier}</text>
       `;
     });
 
@@ -447,7 +447,7 @@ export class AnalyticsDossier {
 
       spokesHtml += `
         <line x1="${cx}" y1="${cy}" x2="${outerX.toFixed(1)}" y2="${outerY.toFixed(1)}" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
-        <text x="${labelX.toFixed(1)}" y="${labelY.toFixed(1)}" text-anchor="middle" dominant-baseline="central" font-size="9" font-weight="700" fill="${axis.color}">
+        <text x="${labelX.toFixed(1)}" y="${labelY.toFixed(1)}" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="${axis.color}">
           ${axis.label}
         </text>
       `;
@@ -541,12 +541,12 @@ export class AnalyticsDossier {
         <!-- Horizontal Grid Lines (Bands 5.0 to 9.0) -->
         ${[5.0, 6.0, 7.0, 8.0, 9.0].map(b => `
           <line x1="${padX}" y1="${getY(b).toFixed(1)}" x2="${(width - padX).toFixed(1)}" y2="${getY(b).toFixed(1)}" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <text x="${padX - 8}" y="${getY(b).toFixed(1)}" text-anchor="end" dominant-baseline="central" font-size="9" fill="var(--ink-muted, #94a3b8)">${b.toFixed(1)}</text>
+          <text x="${padX - 8}" y="${getY(b).toFixed(1)}" text-anchor="end" dominant-baseline="central" font-size="11" fill="var(--ink-muted, #94a3b8)">${b.toFixed(1)}</text>
         `).join('')}
 
         <!-- Target Line -->
         <line x1="${padX}" y1="${targetY.toFixed(1)}" x2="${(width - padX).toFixed(1)}" y2="${targetY.toFixed(1)}" stroke="var(--accent-gold, #f59e0b)" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.8" />
-        <text x="${width - padX + 4}" y="${targetY.toFixed(1)}" dominant-baseline="central" font-size="9" font-weight="700" fill="var(--accent-gold, #f59e0b)">☆ ${targetBand}</text>
+        <text x="${width - padX + 4}" y="${targetY.toFixed(1)}" dominant-baseline="central" font-size="11" font-weight="700" fill="var(--accent-gold, #f59e0b)">☆ ${targetBand}</text>
 
         <!-- Confidence Corridor -->
         <polygon points="${corridorPoints}" fill="rgba(56, 189, 248, 0.12)" />

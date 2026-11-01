@@ -60,3 +60,8 @@ Added 10:51 alongside ADR-001 above. Both writers share this checkout; neither f
 - **Context**: In `dossiers.css`, `.compression-table-wrapper` had `overflow-x: visible !important;` while `.compression-table` declared `min-width: 0 !important; white-space: normal !important; word-break: break-word !important;`, crushing 5 telemetry columns into illegible 50px vertical strips on narrow screens.
 - **Rule**: AGENTS.md § 1.7 / canonical-spacing.md § 11, § 12 (Crushed table column prevention: wrap in horizontal scroll container, `min-width: 600px; white-space: nowrap !important;`).
 - **Decision**: Configured `.compression-table-wrapper` with `overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin;` and applied `min-width: 600px !important; white-space: nowrap !important;` on mobile (≤768px).
+
+## ADR-010: Enforce 44px Touch Floor on Skill Node Card Dismiss Button
+- **Context**: In `dossiers.css:505`, `.skill-node-card .skill-node-close-btn` hardcoded `width: 32px !important; height: 32px !important;` without a touch floor on touch viewports, violating the 44×44px WCAG 2.2 AAA tap target standard.
+- **Rule**: AGENTS.md § 1.4 & canonical-spacing.md § 11, § 12 (Touch Target Below 44px on Touch Devices: `min-height: var(--touch-target-min)`; smaller only under `(hover: hover) and (pointer: fine)`).
+- **Decision**: Set base mobile touch target to `var(--touch-target-min, 44px)` and restricted 32px compact dimensions strictly to `@media (hover: hover) and (pointer: fine)`.

@@ -506,10 +506,10 @@
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 32px !important;
-  height: 32px !important;
-  min-width: 32px !important;
-  min-height: 32px !important;
+  width: var(--touch-target-min, 44px) !important;
+  height: var(--touch-target-min, 44px) !important;
+  min-width: var(--touch-target-min, 44px) !important;
+  min-height: var(--touch-target-min, 44px) !important;
   padding: 0 !important;
   border-radius: 50% !important;
   background: rgba(255, 255, 255, 0.06) !important;
@@ -517,6 +517,15 @@
   color: var(--ink-secondary) !important;
   cursor: pointer !important;
   transition: background 0.15s, color 0.15s, transform 0.15s !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .skill-node-card .skill-node-close-btn {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+  }
 }
 
 .skill-node-card .skill-node-close-btn:hover {

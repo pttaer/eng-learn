@@ -2,4 +2,4 @@
 
 ## High Priority
 
-*(Current queue empty. Re-auditing at fine-grained interaction tier.)*
+*(Current high-priority queue empty. Proceeding to deeper visual regression and accessibility sweep.)*
