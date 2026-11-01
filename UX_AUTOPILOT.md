@@ -47,6 +47,11 @@ Gates per commit: `npm test` → `npm run test:mobile` → `npm run build:fast` 
 - AP-23 Me sheet nested scroll: D9.
 - AP-25 radar/level-tab/vocab-search/sheet-dock items: verify list, pending re-probe.
 
+## Cockpit (checked after dismissing the test hub)
+
+- Top bar: "BẮT ĐẦU" clipped at the right edge (phone top bar was no-wrap `space-between`). Fixed in e7993f8 (`ux-c.css`: wrap + `max-height: none` on phone; button sits on its own row, right aligned).
+- Reading panel: passage is a fixed-height split-pane scroller (~110px visible above the question grid on a 360×802 phone). Intentional exam layout; not changed. Recommendation for a human: a phone-only "Bài Đọc / Câu hỏi" tab already exists; consider giving the passage the full height when the reading tab is active.
+
 ## Open queue (in order)
 
 - AP-12 Progression label ellipsis: FALSE POSITIVE. Title "THỐNG KÊ TIẾN TRÌNH RPG" renders in full (`modal-progression-0.png`).
