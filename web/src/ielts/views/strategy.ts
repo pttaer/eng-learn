@@ -751,7 +751,7 @@ export function strategyView(root: HTMLElement): () => void {
   const searchBox = h('div', 'ie-search-box');
   const searchInput = h('input', 'ie-input ie-search') as HTMLInputElement;
   searchInput.type = 'search';
-  searchInput.placeholder = 'Search formulas, traps, question types, or synonyms...';
+  searchInput.placeholder = t('strategy.search_cards_ph', undefined, 'Search formulas, traps or synonyms…');
   searchInput.setAttribute('aria-label', 'Search strategy cards');
   searchInput.addEventListener('input', () => {
     searchQuery = searchInput.value.trim().toLowerCase();

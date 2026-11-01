@@ -1090,6 +1090,7 @@ export const EN_DICTIONARY: TranslationDictionary = {
 
   // Strategy view
   'strategy.search_ph': 'Search 746 tips, rules, essays, or grammar lessons...',
+  'strategy.search_cards_ph': 'Search formulas, traps or synonyms…',
   'strategy.sort_views': 'Most Popular (Views)',
   'strategy.sort_rating': 'Highest Rated',
   'strategy.sort_date': 'Newest Added',
@@ -3046,6 +3047,7 @@ export const VI_DICTIONARY: TranslationDictionary = {
 
   // Strategy view
   'strategy.search_ph': 'Tìm kiếm 746 mẹo, quy tắc, bài luận hoặc bài học ngữ pháp...',
+  'strategy.search_cards_ph': 'Tìm công thức, bẫy hoặc từ đồng nghĩa…',
   'strategy.sort_views': 'Phổ biến nhất (Lượt xem)',
   'strategy.sort_rating': 'Đánh giá cao nhất',
   'strategy.sort_date': 'Mới thêm gần đây',

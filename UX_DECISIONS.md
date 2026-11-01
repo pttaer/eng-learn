@@ -50,3 +50,13 @@ Added 10:51 alongside ADR-001 above. Both writers share this checkout; neither f
 - **Context**: In `hud-base.css`, `.hud-status-badge` lacked `white-space: nowrap; flex-shrink: 0;` and used arbitrary `border-radius: 4px;` (and `6px` on `.active-route-badge`).
 - **Rule**: AGENTS.md § 1.10 & canonical-spacing.md § 12.8 (Badge & Pill Anti-Wrap Invariant: `white-space: nowrap; flex-shrink: 0;`) and § 1.5 (Squircle tokens).
 - **Decision**: Updated `.hud-status-badge` to include `white-space: nowrap; flex-shrink: 0;` and bound radius to `var(--radius-squircle-sm, 10px)` (and `var(--radius-btn, 10px)` for `.active-route-badge`).
+
+## ADR-008: Consolidate `.ie-table-wrap` and Enable Responsive Horizontal Scrolling
+- **Context**: In `ielts.css`, `.ie-table-wrap` was defined twice: at line 989 with `overflow-x: visible !important;` and at line 4075 with `overflow-x: auto;`. The `!important` rule at line 989 prevented table horizontal scrolling and caused duplicate rule violations.
+- **Rule**: AGENTS.md § 1.7 / canonical-spacing.md § 5 (One rule per class) & § 12 (Crushed table prevention with horizontal scroll wrap).
+- **Decision**: Consolidated `.ie-table-wrap` into a single canonical definition with `overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin;` and removed the duplicate declaration.
+
+## ADR-009: Eliminate Crushed Columns on Fluency Compression Table
+- **Context**: In `dossiers.css`, `.compression-table-wrapper` had `overflow-x: visible !important;` while `.compression-table` declared `min-width: 0 !important; white-space: normal !important; word-break: break-word !important;`, crushing 5 telemetry columns into illegible 50px vertical strips on narrow screens.
+- **Rule**: AGENTS.md § 1.7 / canonical-spacing.md § 11, § 12 (Crushed table column prevention: wrap in horizontal scroll container, `min-width: 600px; white-space: nowrap !important;`).
+- **Decision**: Configured `.compression-table-wrapper` with `overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin;` and applied `min-width: 600px !important; white-space: nowrap !important;` on mobile (≤768px).
