@@ -137,12 +137,13 @@ svg.icon,
 .ie-btn-back {
   color: var(--ink-secondary) !important;
   text-decoration: none !important;
-  padding: 6px 8px !important;
+  padding: 8px 14px !important;
   border-radius: var(--radius-btn, 10px) !important;
   min-height: var(--touch-target-min, 44px) !important;
   display: inline-flex !important;
   align-items: center !important;
-  gap: 10px !important;
+  justify-content: center !important;
+  gap: 8px !important;
   font-size: var(--text-xs) !important;
   font-weight: 700 !important;
   border: none !important;
@@ -150,7 +151,6 @@ svg.icon,
   box-shadow: none !important;
   outline: none !important;
   transition: color 0.15s ease, background 0.15s ease;
-  cursor: pointer;
 }
 
 .ie-back:hover,
@@ -1150,9 +1150,9 @@ sup {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
   padding: 8px 20px;
-  min-height: 40px;
+  min-height: var(--touch-target-min, 44px);
   border-radius: var(--radius-btn, 10px);
   font-size: var(--text-sm, 14px);
   font-weight: 600;
@@ -5085,7 +5085,9 @@ sup {
     border-radius: var(--radius-btn, 10px);
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 14px;
     white-space: nowrap;
   }
 
@@ -5460,7 +5462,15 @@ sup {
     width: 100% !important;
     min-width: 0 !important;
     min-height: var(--touch-target-min, 44px) !important;
+    padding-right: 32px !important;
     font-size: max(16px, var(--font-body)) !important;
+  }
+
+  /* Star sits on its own full-width row so the two selects keep room for their labels and chevrons */
+  .ie-vocab-selects-row .ie-star-topic-btn {
+    order: 3 !important;
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
   }
 
   .ie-vocab-controls .ie-vsearch {
