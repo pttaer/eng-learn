@@ -2249,3 +2249,13 @@ html[data-cognitive-mode="cockpit"] .gentle-only {
     text-overflow: clip !important;
   }
 }
+
+/* Progression modal on phones: sections keep their natural height (achievement tiers no longer spill out) and the card scrolls */
+@media (max-width: 768px) {
+  .progression-modal-card {
+    overflow-y: auto !important;
+  }
+  .progression-modal-card > * {
+    flex-shrink: 0 !important;
+  }
+}
