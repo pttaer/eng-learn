@@ -20,3 +20,8 @@ Added 10:51 alongside ADR-001 above. Both writers share this checkout; neither f
 - **D7 · Truncation → wrap:** mobile titles and telemetry labels wrap, no `text-overflow: ellipsis` (§11). Short badges stay one unit (`nowrap`); long telemetry badges wrap as a whole.
 - **D8 · Native checkboxes:** `input.task-checkbox` stays native. Hit area = label row, min 44px. The raw-input flag is a false positive when the label is the target.
 - **D9 · Scroll-position artifacts:** audit `covered` at the scroll edge may be capture noise. Scroll into view and re-measure before fixing.
+
+## ADR-002: Align Confirm Dialog with Canonical Z-Index and Spacing Invariants
+- **Context**: `confirm-dialog.ts` used arbitrary `z-index: 10000;`, outdated `border-radius: var(--radius-squircle-md, 14px);` fallback, and non-canonical `gap: 10px;` in `.action-stack`.
+- **Rule**: AGENTS.md § 1.8 (`--z-modal: 900`), § 1.5 (`--radius-squircle-md: 16px`), and § 1.14 (focus-ring clearance requires vertical button stack `gap: 12px !important;`).
+- **Decision**: Replaced literal `z-index: 10000` with `var(--z-modal, 900)`, updated squircle fallback to `16px`, and set `.action-stack` gap to `12px`.

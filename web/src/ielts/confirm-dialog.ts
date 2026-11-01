@@ -62,16 +62,16 @@ export function showIeltsConfirmDialog(options: ConfirmDialogOptions): Promise<b
     dialog.setAttribute('role', 'dialog');
     dialog.setAttribute('aria-modal', 'true');
     dialog.setAttribute('aria-label', title);
-    dialog.style.cssText = 'position: fixed; inset: 0; background: rgba(0, 0, 0, 0.72); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: 10000; padding: 16px;';
+    dialog.style.cssText = 'position: fixed; inset: 0; background: rgba(0, 0, 0, 0.72); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: var(--z-modal, 900); padding: 16px;';
 
     dialog.innerHTML = `
-      <div class="completion-receipt-card" style="max-width: 440px; width: 100%; max-height: calc(100dvh - 32px); overflow-y: auto; box-sizing: border-box; background: var(--bg-card, #141c2e); border: 1px solid var(--border-hairline, rgba(255,255,255,0.12)); border-top: 3px solid ${typeColor}; padding: 22px 18px; border-radius: var(--radius-squircle-md, 14px); box-shadow: var(--shadow-modal, 0 20px 45px rgba(0,0,0,0.6));">
+      <div class="completion-receipt-card" style="max-width: 440px; width: 100%; max-height: calc(100dvh - 32px); overflow-y: auto; box-sizing: border-box; background: var(--bg-card, #141c2e); border: 1px solid var(--border-hairline, rgba(255,255,255,0.12)); border-top: 3px solid ${typeColor}; padding: 22px 18px; border-radius: var(--radius-squircle-md, 16px); box-shadow: var(--shadow-modal, 0 20px 45px rgba(0,0,0,0.6));">
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
           <span style="font-size: 20px; color: ${typeColor}; display: inline-flex;">${typeIcon}</span>
           <div style="font-size: var(--text-sm, 14px); font-weight: 700; color: ${typeColor}; letter-spacing: 0.05em; text-transform: uppercase;">${title}</div>
         </div>
         <div style="font-size: var(--text-sm, 14px); line-height: 1.6; color: var(--ink-primary, #f1f5f9); margin-bottom: 18px; white-space: pre-line;">${options.message}</div>
-        <div class="action-stack" style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+        <div class="action-stack" style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
           <button type="button" class="ie-btn btn-confirm-cancel apple-press" style="width: 100%; justify-content: center; padding: 12px 18px; font-weight: 700; background: var(--accent-gold, #f59e0b); color: #080a0f; border: 1px solid var(--accent-gold, #f59e0b); border-radius: var(--radius-btn, 10px); min-height: 46px; cursor: pointer;">
             ${cancelLabel}
           </button>
