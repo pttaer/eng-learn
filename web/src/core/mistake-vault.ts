@@ -171,14 +171,14 @@ export class MistakeVault {
       <!-- Vietnamese L1 Transfer & Error Taxonomy Diagnostic -->
       <div class="vault-l1-section" style="margin-top: 18px; padding: 14px; background: rgba(165,180,252,0.06); border: 1px solid var(--border-hairline); border-radius: var(--radius-squircle-sm, 10px);">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-          <span class="vault-kicker" style="color: var(--accent-gold);">VIETNAMESE EFL L1 TRANSFER DIAGNOSTIC</span>
-          <span class="hud-status-badge" style="background: var(--warning-soft); color: var(--warning); border: none;">8 PHENOMENA</span>
+          <span class="vault-kicker" style="color: var(--accent-gold);">${t('vault.l1_kicker', undefined, 'VIETNAMESE EFL L1 TRANSFER DIAGNOSTIC')}</span>
+          <span class="hud-status-badge" style="background: var(--warning-soft); color: var(--warning); border: none;">${t('vault.l1_phenomena', undefined, '8 PHENOMENA')}</span>
         </div>
         <p style="font-size: var(--font-body-compact); color: var(--ink-secondary); margin-bottom: 12px; line-height: 1.45;">
-          Systematic interlanguage tracking for suffix omission (-s/-ed), preposition calquing, aspect conflation (đã/rồi), and zero copula adjectives.
+          ${t('vault.l1_desc', undefined, 'Systematic interlanguage tracking for suffix omission (-s/-ed), preposition calquing, aspect conflation (đã/rồi), and zero copula adjectives.')}
         </p>
         <button type="button" class="vault-btn-primary btn-start-l1-loop" style="width: 100%; justify-content: center; background: rgba(165,180,252,0.15); color: var(--accent-gold); border: 1px solid var(--border-subtle); border-radius: var(--radius-btn, 10px); min-height: 44px; font-weight: 700;">
-          🎯 Start Vietnamese L1 Targeted Remediation Loop
+          ${t('vault.l1_start', undefined, '🎯 Start Vietnamese L1 Targeted Remediation Loop')}
         </button>
       </div>
 
