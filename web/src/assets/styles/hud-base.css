@@ -176,11 +176,16 @@ svg.icon,
   stroke: var(--accent-gold);
 }
 
-.hud-btn.active svg.icon,
-.filter-tab.active svg.icon,
 .btn-icon-accent svg {
   color: var(--accent-gold);
   stroke: var(--accent-gold);
+}
+
+/* Active buttons fill with accent-gold, so their icon takes the canvas ink (gold on gold vanished) */
+.hud-btn.active svg.icon,
+.filter-tab.active svg.icon {
+  color: var(--bg-canvas);
+  stroke: var(--bg-canvas);
 }
 
 /* Custom Minimal Scrollbar */
