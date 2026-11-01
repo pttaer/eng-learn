@@ -1330,6 +1330,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   .deck-branch-sub {
     display: flex !important;
+    flex-wrap: wrap !important;
     align-items: center !important;
     gap: 6px !important;
     width: 100% !important;
