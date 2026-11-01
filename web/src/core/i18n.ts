@@ -3678,7 +3678,7 @@ export const VI_DICTIONARY: TranslationDictionary = {
   'cockpit.btn_resume': "▶ Tiếp tục",
   'cockpit.btn_start_timed_exam': "Bắt đầu thi tính giờ (60:00)",
   'cockpit.btn_start_upper': "BẮT ĐẦU",
-  'cockpit.btn_test_catalog': "Đề thi",
+  'cockpit.btn_test_catalog': "Danh mục bài thi",
   'cockpit.btn_unflag_short': "Bỏ cờ",
   'cockpit.card_select_this': "CHỌN BÀI THI NÀY",
   'cockpit.card_selected': "✓ ĐÃ CHỌN",

@@ -546,6 +546,7 @@ export class ExamCockpitDossier {
 
     const activeQ = this.questions[this.activeQuestionIndex] || this.questions[0];
     const pIdx = this.getCurrentPassageIndex();
+    const isVi = I18n.getLocale() === 'vi';
 
     const moduleLabel = this.currentModule === 'READING'
       ? t('cockpit.reading_short', undefined, 'READING')
@@ -558,8 +559,8 @@ export class ExamCockpitDossier {
       <!-- Top Command Bar (48px) -->
       <header class="cd-top-bar" role="toolbar" aria-label="${t('cockpit.command_bar_aria', undefined, 'Exam Cockpit Command Bar')}">
         <div class="cd-top-left">
-          <button type="button" class="cd-btn cd-btn-open-hub" id="btn-open-test-hub" title="${t('cockpit.select_other_test', undefined, 'Select another test')}">
-            ${icon('book', 14)} <span>${t('cockpit.btn_test_catalog', undefined, 'Test Catalog')}</span>
+          <button type="button" class="cd-btn cd-btn-open-hub" id="btn-open-test-hub" title="${t('cockpit.select_other_test', undefined, isVi ? 'Chọn bài thi khác' : 'Select another test')}">
+            ${icon('book', 14)} <span>${t('cockpit.btn_test_catalog', undefined, isVi ? 'Danh mục bài thi' : 'Test Catalog')}</span>
           </button>
           <span class="cd-brand-title desktop-only">
             ${t('cockpit.brand_title', undefined, 'IELTS COMPUTER-DELIVERED TEST')}
