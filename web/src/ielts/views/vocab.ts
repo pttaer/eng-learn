@@ -201,13 +201,13 @@ export function vocabView(root: HTMLElement): () => void {
     const starred = StorageManager.getStarredVocabTopics();
 
     const starredOpt = starred.length > 0
-      ? `<option value="starred">⭐ Starred Domains (${starred.length})</option>`
+      ? `<option value="starred">☆ Starred Domains (${starred.length})</option>`
       : '';
 
     topicSelect.innerHTML = `<option value="all">${t('vocab.all_topics')}</option>${starredOpt}${topics
       .map(t => {
         const isStar = starred.includes(t.toLowerCase());
-        return `<option value="${t}">${isStar ? '⭐ ' : ''}${t[0].toUpperCase() + t.slice(1)}</option>`;
+        return `<option value="${t}">${isStar ? '☆ ' : ''}${t[0].toUpperCase() + t.slice(1)}</option>`;
       })
       .join('')}`;
 
