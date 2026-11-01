@@ -5476,8 +5476,8 @@ sup {
   .ie-vocab-controls .ie-vsearch {
     flex: 0 0 auto !important;
     width: 100% !important;
-    height: 42px !important;
-    min-height: 42px !important;
+    height: var(--touch-target-min, 44px) !important;
+    min-height: var(--touch-target-min, 44px) !important;
   }
 
   .ie-vocab-controls .ie-vstats {
