@@ -3742,6 +3742,11 @@ sup {
   margin-top: var(--space-8);
 }
 
+/* display:flex above would beat the hidden attribute and leave an empty bordered box */
+.ie-trap-deconstruct[hidden] {
+  display: none;
+}
+
 .ie-transcript-box {
   display: flex;
   flex-direction: column;
