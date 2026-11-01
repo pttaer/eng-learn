@@ -52,6 +52,11 @@ Gates per commit: `npm test` → `npm run test:mobile` → `npm run build:fast` 
 - Top bar: "BẮT ĐẦU" clipped at the right edge (phone top bar was no-wrap `space-between`). Fixed in e7993f8 (`ux-c.css`: wrap + `max-height: none` on phone; button sits on its own row, right aligned).
 - Reading panel: passage is a fixed-height split-pane scroller (~110px visible above the question grid on a 360×802 phone). Intentional exam layout; not changed. Recommendation for a human: a phone-only "Bài Đọc / Câu hỏi" tab already exists; consider giving the passage the full height when the reading tab is active.
 
+## EN spot checks (11:30)
+
+- EN tree: "Comprehension" broke mid-word ("Comprehensio / n") because the level badge squeezed the tagline column. Fixed in f7f044d (`ux-c.css`: `.deck-branch-sub` wraps as rows).
+- EN read: tab row fixed (5401248). EN sheet-me: Notes "covered" = AP-02 false positive.
+
 ## Sweep 2 (11:28, after 0f3b082)
 
 Remaining flags are all artifacts: scroll-edge `covered` (radar chip, drill CTA, tenses choice, band pills under nav, habit checkbox → D8/D9), cockpit hub captured open (capture gap), Notes "covered" in Me sheet (AP-02), progression `ell` (AP-12 false positive). No new real defects. 0 undersized targets except raw checkbox inputs (D8).
