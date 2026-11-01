@@ -987,9 +987,11 @@ sup {
 }
 
 .ie-table-wrap {
-  overflow-x: visible !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
   max-width: 100%;
   width: 100%;
+  scrollbar-width: thin;
 }
 
 .ie-table {
@@ -1443,7 +1445,7 @@ sup {
 
   .ie-synonym-table {
     width: 100% !important;
-    min-width: 520px !important;
+    min-width: 600px !important;
     table-layout: auto !important;
   }
 
@@ -4072,11 +4074,6 @@ sup {
   animation: synPulse 1.8s 3 alternate;
 }
 
-.ie-table-wrap {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
 
 .ie-synonym-table {
   width: 100%;
