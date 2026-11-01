@@ -2259,3 +2259,15 @@ html[data-cognitive-mode="cockpit"] .gentle-only {
     flex-shrink: 0 !important;
   }
 }
+
+/* Cockpit top bar on phones: wrap instead of clipping the start button at the right edge */
+@media (max-width: 768px) {
+  .cd-top-bar {
+    flex-wrap: wrap !important;
+    row-gap: 6px !important;
+    max-height: none !important;
+  }
+  .cd-top-right {
+    margin-left: auto !important;
+  }
+}
