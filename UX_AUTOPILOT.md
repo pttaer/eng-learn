@@ -35,7 +35,10 @@ Gates per commit: `npm test` → `npm run test:mobile` → `npm run build:fast` 
 | AP-18 strategy placeholder clipped | `strategy.search_cards_ph` EN+VI, shorter | in HEAD (swept in) |
 | AP-13 analytics SVG labels 8–9 units | raised to 11 units (`analytics-dossier.ts`) | 1641aeb (swept in) |
 | AP-16 writing-studio mode tabs | probed: 3 equal 105px cols, uniform height | no change |
-| AP-24 selected day chip white | `.day-chip.selected` → `--accent-cyan` periwinkle | pending commit |
+| AP-24 selected day chip white | `.day-chip.selected` → `--accent-cyan` periwinkle | in HEAD (swept in) |
+| AP-24 active view-mode toggle white | `.view-mode-toggle .view-toggle-btn.active` → `--accent-cyan` (colloc "Luyện phản xạ SRS") | 30b77f9 |
+| AP-25 vocab search 42px | `.ie-vsearch` height/min-height → `--touch-target-min` | a7c6400 |
+| AP-20 listening traps empty box | `.ie-trap-deconstruct[hidden] { display: none }` (flex beat `hidden`) | af4c657 |
 
 ## Closed without change
 
@@ -49,8 +52,8 @@ Gates per commit: `npm test` → `npm run test:mobile` → `npm run build:fast` 
 - AP-12 Progression stat label ellipsis: source not found in CSS (no `text-overflow` on `.telemetry-label`). Verify with Me sheet → progression open before touching.
 - AP-13 remainder: rendered SVG label height ≈9px because the radar viewBox scales to ~0.8 on phone. Real fix = HTML labels or viewBox at rendered width. Not started.
 - AP-16 remainder: speaking mode row stacks full width; reading "Analysis & Exercises" 2-line. Not probed yet.
-- AP-20 Listening traps: empty placeholder box. Selectors not found in `ielts.html#listening-traps`; needs screenshot.
-- AP-21 Writing "CO₂ Emissions…" chevron: text not found in `#writing` DOM via probe; needs screenshot of the task list.
+- AP-21 Writing "CO₂ Emissions…" chevron: not visible in `ielts-writing-0.png` (Task 1 cards have clean chevrons); the CO₂ item is not on that screen. Not reproduced.
+- Colloc "Cần ôn SRS" chip: empty left gap where an icon should sit (seen in `main-colloc-0.png`). Not started.
 - AP-22 Action rows cramped ("Học lại", "Lật xem đáp án"): verify by probe first.
 - AP-24 Primary style drift (white "01" chip, white primary in colloc/tenses vs periwinkle) → `--accent` token.
 - Mistake vault loop-complete screen still has EN kicker `L1 TRANSFER REMEDIATION` (`mistake-vault.ts` ~339): add key if in scope.
