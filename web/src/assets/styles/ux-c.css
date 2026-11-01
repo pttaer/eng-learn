@@ -1520,6 +1520,14 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     gap: 6px !important;
   }
 
+  /* Equal-width segments: a long label wraps inside its half instead of widening the tab */
+  .reading-mobile-tab-btn {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    text-align: center !important;
+    line-height: 1.25 !important;
+  }
+
   .calm-reader {
     padding: 16px !important;
     margin: 0 !important;
