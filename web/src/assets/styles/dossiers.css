@@ -2142,9 +2142,9 @@
 }
 
 .view-mode-toggle .view-toggle-btn.active {
-  background: var(--ink-primary);
+  background: var(--accent-cyan);
   color: var(--bg-canvas);
-  border-color: var(--ink-primary);
+  border-color: var(--accent-cyan);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
