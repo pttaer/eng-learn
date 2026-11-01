@@ -225,9 +225,9 @@
 }
 
 .day-chip.selected {
-  background: var(--ink-primary);
+  background: var(--accent-cyan);
   color: var(--ink-inverted);
-  border-color: var(--ink-primary);
+  border-color: var(--accent-cyan);
 }
 
 .day-chip.completed {
@@ -6949,7 +6949,7 @@ html[data-motion="reduce"] .mediation-dossier-shell * {
 
 .cd-modal-btn-row {
   display: flex !important;
-  gap: 10px !important;
+  gap: 12px !important;
   width: 100% !important;
 }
 
