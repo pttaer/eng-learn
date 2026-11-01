@@ -49,9 +49,12 @@ Gates per commit: `npm test` → `npm run test:mobile` → `npm run build:fast` 
 
 ## Open queue (in order)
 
-- AP-12 Progression stat label ellipsis: source not found in CSS (no `text-overflow` on `.telemetry-label`). Verify with Me sheet → progression open before touching.
+- AP-12 Progression label ellipsis: FALSE POSITIVE. Title "THỐNG KÊ TIẾN TRÌNH RPG" renders in full (`modal-progression-0.png`).
+- B6 Progression stray circle under "THÀNH TỰU" (real): `section` flex child shrank to 49px. Fixed in 945329c (`ux-c.css`: sections `flex-shrink: 0`, card scrolls on phone).
 - AP-13 remainder: rendered SVG label height ≈9px because the radar viewBox scales to ~0.8 on phone. Real fix = HTML labels or viewBox at rendered width. Not started.
-- AP-16 remainder: speaking mode row stacks full width; reading "Analysis & Exercises" 2-line. Not probed yet.
+- AP-16 remainder: speaking mode row checked in `ielts-speaking-0.png`: 2-col segmented tabs, clean. CLOSED.
+- Active `.hud-btn` / `.filter-tab` icons were gold-on-gold (invisible): fixed in c8131c1 (`hud-base.css`, icon takes `--bg-canvas` on active).
+- Desktop 1440 check after global colour/icon changes: colloc active toggle + filter chip render correctly (`colloc-1440.png`).
 - AP-21 Writing "CO₂ Emissions…" chevron: not visible in `ielts-writing-0.png` (Task 1 cards have clean chevrons); the CO₂ item is not on that screen. Not reproduced.
 - Colloc "Cần ôn SRS" chip: empty left gap where an icon should sit (seen in `main-colloc-0.png`). Not started.
 - AP-22 Action rows cramped ("Học lại", "Lật xem đáp án"): verify by probe first.
