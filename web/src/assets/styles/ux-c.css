@@ -2239,3 +2239,13 @@ html[data-cognitive-mode="cockpit"] .gentle-only {
     background: var(--bg-surface-raised, rgba(255, 255, 255, 0.04)) !important;
   }
 }
+
+/* Phone labels wrap instead of clipping with an ellipsis (cockpit test cards) */
+@media (max-width: 768px) {
+  .cd-test-card-kicker,
+  .cd-test-card-p-row span {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+  }
+}

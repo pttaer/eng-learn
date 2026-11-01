@@ -45,3 +45,8 @@ Added 10:51 alongside ADR-001 above. Both writers share this checkout; neither f
 - **Context**: In `dossiers.css`, `.lexicon-drawer-badge` used `var(--text-2xs, 10px)` (banned 10px literal fallback) and `letter-spacing: 0.12em`. Similarly, `.prompt-category-badge` and `.hero-score-label` used `letter-spacing: 0.12em` instead of the canonical `0.08em`.
 - **Rule**: AGENTS.md § 1.4 & canonical-spacing.md § 4, § 5 (11px floor for kickers; `--font-kicker-spacing: 0.08em`; zero 10px literals).
 - **Decision**: Replaced `var(--text-2xs, 10px)` with `var(--font-kicker)` and updated `letter-spacing` to `var(--font-kicker-spacing, 0.08em)` across all three selectors.
+
+## ADR-007: Anti-Wrap and Squircle Invariant on HUD Status Badges
+- **Context**: In `hud-base.css`, `.hud-status-badge` lacked `white-space: nowrap; flex-shrink: 0;` and used arbitrary `border-radius: 4px;` (and `6px` on `.active-route-badge`).
+- **Rule**: AGENTS.md § 1.10 & canonical-spacing.md § 12.8 (Badge & Pill Anti-Wrap Invariant: `white-space: nowrap; flex-shrink: 0;`) and § 1.5 (Squircle tokens).
+- **Decision**: Updated `.hud-status-badge` to include `white-space: nowrap; flex-shrink: 0;` and bound radius to `var(--radius-squircle-sm, 10px)` (and `var(--radius-btn, 10px)` for `.active-route-badge`).
