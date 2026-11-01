@@ -1882,7 +1882,7 @@ export class ExamCockpitDossier {
               ${icon('rotateCcw', 16)}<span>${t('cockpit.btn_retake_test', undefined, isVi ? 'Làm lại bài thi' : 'Retake Test')}</span>
             </button>
             <button type="button" class="cd-modal-action-btn btn-hub-return apple-press">
-              ${icon('book', 16)}<span>${t('cockpit.btn_test_catalog', undefined, 'Test Catalog')}</span>
+              ${icon('book', 16)}<span>${t('cockpit.btn_test_catalog', undefined, isVi ? 'Danh mục bài thi' : 'Test Catalog')}</span>
             </button>
           </div>
           <button type="button" class="apple-bottom-close-btn btn-close-report apple-press">

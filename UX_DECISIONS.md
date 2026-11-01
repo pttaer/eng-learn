@@ -35,3 +35,8 @@ Added 10:51 alongside ADR-001 above. Both writers share this checkout; neither f
 - **Context**: In `reading-drills.ts:452`, the Weakness-First HUD badge had an ad-hoc `margin-left: 8px;` inside a flex container with existing `gap: var(--space-8)`, a concentric `1px solid` border inside an already-bordered `.ie-drills-hud` surface, and lacked `white-space: nowrap; flex-shrink: 0`.
 - **Rule**: AGENTS.md § 1.10 & canonical-spacing.md § 12.8 (Badge & Pill Anti-Wrap Invariant: `white-space: nowrap; flex-shrink: 0; border: none;`).
 - **Decision**: Removed `margin-left` and concentric border, applied `--radius-pill, 9999px`, and declared `white-space: nowrap; flex-shrink: 0; border: none;`.
+
+## ADR-005: 100% Bilingual Button Consistency in Exam Cockpit Score Report
+- **Context**: In `exam-cockpit-dossier.ts:1885`, `btn-hub-return` lacked a Vietnamese fallback in its `t()` call, rendering 'Test Catalog' in English while adjacent buttons rendered in Vietnamese on Vietnamese locale.
+- **Rule**: AGENTS.md § 1.15 & canonical-spacing.md § 12.13 (100% Bilingual Button Consistency).
+- **Decision**: Added `isVi ? 'Danh mục bài thi' : 'Test Catalog'` fallback, ensuring 100% language alignment across all 4 modal actions.

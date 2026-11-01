@@ -525,7 +525,8 @@ export class FloatingNote {
     const pad = 12;
 
     const isMobile = window.innerWidth <= 768;
-    const bottomDockClearance = isMobile ? 96 : 24;
+    // Only the main app has a bottom nav to clear; IELTS (no nav) lets the disc sit at the edge
+    const bottomDockClearance = isMobile && document.querySelector('.hud-bottom-nav') ? 96 : 24;
     const minX = pad;
     const maxX = Math.max(pad, window.innerWidth - width - pad);
     const minY = pad;

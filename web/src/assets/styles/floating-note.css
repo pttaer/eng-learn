@@ -485,6 +485,20 @@ body:has(.ie-tip-modal-overlay.is-active) .floating-note-bubble {
     display: none;
   }
 
+  /* No bottom nav (IELTS): icon-only 44px disc, so it covers a corner instead of a title. aria-label keeps the name. */
+  body:not(:has(.hud-bottom-nav)) .floating-note-bubble {
+    width: var(--touch-target-min, 44px);
+    height: var(--touch-target-min, 44px);
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  body:not(:has(.hud-bottom-nav)) .floating-note-bubble .bubble-grip,
+  body:not(:has(.hud-bottom-nav)) .floating-note-bubble .bubble-label {
+    display: none;
+  }
+
   .floating-note-bubble {
     padding: 10px 16px;
   }
