@@ -449,7 +449,7 @@ export function readingDrillsView(root: HTMLElement): () => void {
     <div class="ie-hud-metric">
       <span class="ie-hud-num" id="drills-mastered-count">0 / 14</span>
       <span class="ie-hud-label">${t('rdrills.drills_mastered', undefined, 'Drills Mastered')}</span>
-      ${isWeaknessFirst ? `<span class="ie-badge-band" style="background:rgba(245,158,11,0.15); color:var(--accent-gold, #f59e0b); border:1px solid rgba(245,158,11,0.3); font-size:11px; padding:3px 8px; border-radius:6px; margin-left:8px;">${t('rdrills.weakness_first', undefined, '🎯 Weakness-First')}</span>` : ''}
+      ${isWeaknessFirst ? `<span class="ie-badge-band" style="background: var(--warning-soft, rgba(245, 158, 11, 0.15)); color: var(--accent-gold, #f59e0b); border: none; font-size: var(--font-kicker, 11px); font-weight: 700; padding: 3px 10px; border-radius: var(--radius-pill, 9999px); white-space: nowrap; flex-shrink: 0;">${t('rdrills.weakness_first', undefined, '🎯 Weakness-First')}</span>` : ''}
     </div>
     <div class="ie-hud-actions">
       <a href="#reading" class="ie-btn ie-btn-sm ie-btn-back"><span class="ie-back-arrow">←</span> ${t('rdrills.btn_back_passages', undefined, 'Back to Full Passages')}</a>

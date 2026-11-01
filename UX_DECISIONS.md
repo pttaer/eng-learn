@@ -30,3 +30,8 @@ Added 10:51 alongside ADR-001 above. Both writers share this checkout; neither f
 - **Context**: While several components explicitly set `font-size: max(16px, var(--font-body))`, arbitrary inputs, textareas, or selects without explicit mobile font overrides could trigger iOS Safari auto-zoom on focus.
 - **Rule**: AGENTS.md § 1.4 & canonical-spacing.md § 9 (iOS Auto-Zoom Prevention).
 - **Decision**: Added universal mobile rule under `@media (max-width: 768px)` in `hud-base.css` ensuring all text input types, textareas, and selects declare `font-size: max(16px, var(--font-body)) !important`.
+
+## ADR-004: Clean HUD Badge Geometry in IELTS Reading Drills
+- **Context**: In `reading-drills.ts:452`, the Weakness-First HUD badge had an ad-hoc `margin-left: 8px;` inside a flex container with existing `gap: var(--space-8)`, a concentric `1px solid` border inside an already-bordered `.ie-drills-hud` surface, and lacked `white-space: nowrap; flex-shrink: 0`.
+- **Rule**: AGENTS.md § 1.10 & canonical-spacing.md § 12.8 (Badge & Pill Anti-Wrap Invariant: `white-space: nowrap; flex-shrink: 0; border: none;`).
+- **Decision**: Removed `margin-left` and concentric border, applied `--radius-pill, 9999px`, and declared `white-space: nowrap; flex-shrink: 0; border: none;`.
