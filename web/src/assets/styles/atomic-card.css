@@ -324,11 +324,14 @@
     flex: 1 1 auto;
   }
 
+  .card-meta-left {
+    flex-wrap: wrap;
+  }
+
   .card-meta-left .telemetry-badge {
     font-size: 11px;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-shrink: 0;
   }
 
   .card-badge-status,
@@ -360,7 +363,7 @@
     height: 32px;
     padding: 2px 8px;
     font-size: var(--font-kicker);
-    border-radius: 4px;
+    border-radius: var(--radius-btn, 10px);
     white-space: nowrap;
     gap: 4px;
     flex-shrink: 0;

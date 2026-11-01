@@ -367,7 +367,7 @@ svg.icon,
   align-items: center;
   gap: 4px;
   padding: 4px 10px;
-  border-radius: 4px;
+  border-radius: var(--radius-btn, 10px);
   cursor: pointer;
   white-space: nowrap;
   background: var(--bg-surface, #111622);
@@ -392,7 +392,7 @@ svg.icon,
   justify-content: center;
   gap: 8px;
   padding: 12px;
-  border-radius: 6px;
+  border-radius: var(--radius-btn, 10px);
   cursor: pointer;
   width: 100%;
   box-sizing: border-box;
@@ -1428,7 +1428,7 @@ body.zen-active,
     font-size: var(--font-h2);
     font-weight: 700;
     border: 1px solid var(--border-subtle);
-    border-radius: 6px;
+    border-radius: var(--radius-btn, 10px);
     background: var(--bg-surface);
     color: var(--accent-gold);
     cursor: pointer;
@@ -2357,7 +2357,7 @@ body.zen-active,
   background: var(--accent-gold);
   color: var(--bg-canvas);
   border: none;
-  border-radius: 6px;
+  border-radius: var(--radius-btn, 10px);
   font-weight: 700;
   cursor: pointer;
   display: inline-flex;
