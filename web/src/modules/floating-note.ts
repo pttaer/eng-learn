@@ -181,7 +181,8 @@ export class FloatingNote {
       if (rawBubble) {
         this.bubblePos = JSON.parse(rawBubble);
       } else {
-        const defaultX = Math.max(16, window.innerWidth - 170);
+        // Phone: tuck the disc into the right gutter, where card text rarely reaches
+        const defaultX = Math.max(16, window.innerWidth - (window.innerWidth <= 768 ? 56 : 170));
         // Phone: start at the bottom edge so the disc covers a corner, not mid-page text
         const defaultY = Math.max(16, window.innerHeight - (window.innerWidth <= 768 ? 72 : 140));
         this.bubblePos = { x: defaultX, y: defaultY };
