@@ -1388,7 +1388,9 @@
 }
 
 .compression-table-wrapper {
-  overflow-x: visible !important;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
   max-width: 100%;
   width: 100%;
 }
@@ -1422,6 +1424,18 @@
 
 .compression-table tr:hover td {
   background: var(--accent-cyan-soft);
+}
+
+@media (max-width: 768px) {
+  .compression-table {
+    min-width: 600px !important;
+    white-space: nowrap !important;
+  }
+
+  .compression-table th,
+  .compression-table td {
+    white-space: nowrap !important;
+  }
 }
 
 .compression-table td.highlight-fluency {
