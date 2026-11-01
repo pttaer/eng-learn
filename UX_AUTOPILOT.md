@@ -56,6 +56,8 @@ Gates per commit: `npm test` → `npm run test:mobile` → `npm run build:fast` 
 
 - EN tree: "Comprehension" broke mid-word ("Comprehensio / n") because the level badge squeezed the tagline column. Fixed in f7f044d (`ux-c.css`: `.deck-branch-sub` wraps as rows).
 - EN read: tab row fixed (5401248). EN sheet-me: Notes "covered" = AP-02 false positive.
+- EN words sheet: docked, clean (A2 verified).
+- EN IELTS mock: Notes disc covered "played once" on the Listening card. Phone default x moved to the right gutter (`innerWidth - 56`, d6b3914). Disc still overlaps card edges; drag persists per user.
 
 ## Sweep 2 (11:28, after 0f3b082)
 
