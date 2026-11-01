@@ -25,3 +25,8 @@ Added 10:51 alongside ADR-001 above. Both writers share this checkout; neither f
 - **Context**: `confirm-dialog.ts` used arbitrary `z-index: 10000;`, outdated `border-radius: var(--radius-squircle-md, 14px);` fallback, and non-canonical `gap: 10px;` in `.action-stack`.
 - **Rule**: AGENTS.md § 1.8 (`--z-modal: 900`), § 1.5 (`--radius-squircle-md: 16px`), and § 1.14 (focus-ring clearance requires vertical button stack `gap: 12px !important;`).
 - **Decision**: Replaced literal `z-index: 10000` with `var(--z-modal, 900)`, updated squircle fallback to `16px`, and set `.action-stack` gap to `12px`.
+
+## ADR-003: Defensive Mobile Input Font-Size Guarantee
+- **Context**: While several components explicitly set `font-size: max(16px, var(--font-body))`, arbitrary inputs, textareas, or selects without explicit mobile font overrides could trigger iOS Safari auto-zoom on focus.
+- **Rule**: AGENTS.md § 1.4 & canonical-spacing.md § 9 (iOS Auto-Zoom Prevention).
+- **Decision**: Added universal mobile rule under `@media (max-width: 768px)` in `hud-base.css` ensuring all text input types, textareas, and selects declare `font-size: max(16px, var(--font-body)) !important`.

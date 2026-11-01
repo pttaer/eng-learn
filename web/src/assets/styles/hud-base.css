@@ -586,6 +586,20 @@ select {
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="search"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  textarea,
+  select {
+    font-size: max(16px, var(--font-body)) !important;
+  }
+}
+
 /* Base HUD Action Button Standard */
 .hud-btn {
   display: inline-flex !important;
@@ -1483,7 +1497,7 @@ body.zen-active,
     justify-content: center;
     background: transparent;
     border: 1px solid transparent;
-    border-radius: 6px;
+    border-radius: var(--radius-btn, 10px);
     color: var(--ink-secondary);
     font-family: var(--font-mono);
     text-decoration: none;
@@ -1687,7 +1701,7 @@ body.zen-active,
   min-height: 44px;
   min-width: 130px;
   padding: 8px 16px;
-  border-radius: 8px;
+  border-radius: var(--radius-btn, 10px);
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   color: var(--ink-secondary);
@@ -2172,7 +2186,7 @@ body.zen-active,
   color: var(--bg-canvas, #080a0f);
   font-weight: 700;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius-btn, 10px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2315,7 +2329,7 @@ body.zen-active,
   min-height: 44px;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 6px;
+  border-radius: var(--radius-btn, 10px);
   padding: 10px 14px;
   color: var(--ink-primary);
   font-size: var(--font-body);
