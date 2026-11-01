@@ -2878,10 +2878,10 @@
 
 .lexicon-drawer-badge {
   font-family: var(--font-mono, monospace);
-  font-size: var(--text-2xs, 10px);
+  font-size: var(--font-kicker);
   font-weight: 700;
   color: var(--accent-gold, #ca8a04);
-  letter-spacing: 0.12em;
+  letter-spacing: var(--font-kicker-spacing, 0.08em);
   text-transform: uppercase;
 }
 
@@ -2915,7 +2915,7 @@
 
 .lexicon-drawer-pos {
   font-family: var(--font-mono, monospace);
-  font-size: var(--text-2xs, 10px);
+  font-size: var(--font-kicker);
   font-weight: 600;
   color: var(--ink-muted, #71717a);
   text-transform: uppercase;
@@ -2989,7 +2989,7 @@
 
 .lexicon-section-label {
   font-family: var(--font-mono, monospace);
-  font-size: var(--text-2xs, 10px);
+  font-size: var(--font-kicker);
   font-weight: 700;
   color: var(--ink-muted, #71717a);
   letter-spacing: 0.08em;
@@ -3103,7 +3103,7 @@
 
 .lexicon-srs-status {
   font-family: var(--font-mono, monospace);
-  font-size: var(--text-2xs, 10px);
+  font-size: var(--font-kicker);
   color: var(--ink-muted, #71717a);
   text-align: center;
   min-height: 14px;
@@ -3662,7 +3662,7 @@
   font-family: var(--font-mono, monospace);
   font-size: var(--font-kicker);
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--font-kicker-spacing, 0.08em);
   color: var(--accent-gold, #ca8a04);
   text-transform: uppercase;
 }
@@ -3789,7 +3789,7 @@
   font-size: var(--font-kicker);
   font-weight: 700;
   color: var(--ink-muted, #71717a);
-  letter-spacing: 0.12em;
+  letter-spacing: var(--font-kicker-spacing, 0.08em);
 }
 
 .summary-stats-grid {

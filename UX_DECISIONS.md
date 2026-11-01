@@ -40,3 +40,8 @@ Added 10:51 alongside ADR-001 above. Both writers share this checkout; neither f
 - **Context**: In `exam-cockpit-dossier.ts:1885`, `btn-hub-return` lacked a Vietnamese fallback in its `t()` call, rendering 'Test Catalog' in English while adjacent buttons rendered in Vietnamese on Vietnamese locale.
 - **Rule**: AGENTS.md § 1.15 & canonical-spacing.md § 12.13 (100% Bilingual Button Consistency).
 - **Decision**: Added `isVi ? 'Danh mục bài thi' : 'Test Catalog'` fallback, ensuring 100% language alignment across all 4 modal actions.
+
+## ADR-006: Eliminate 10px Literal and Kicker Tracking Drift
+- **Context**: In `dossiers.css`, `.lexicon-drawer-badge` used `var(--text-2xs, 10px)` (banned 10px literal fallback) and `letter-spacing: 0.12em`. Similarly, `.prompt-category-badge` and `.hero-score-label` used `letter-spacing: 0.12em` instead of the canonical `0.08em`.
+- **Rule**: AGENTS.md § 1.4 & canonical-spacing.md § 4, § 5 (11px floor for kickers; `--font-kicker-spacing: 0.08em`; zero 10px literals).
+- **Decision**: Replaced `var(--text-2xs, 10px)` with `var(--font-kicker)` and updated `letter-spacing` to `var(--font-kicker-spacing, 0.08em)` across all three selectors.
