@@ -1,5 +1,6 @@
 import w1Data from '../data/writing1.json';
 import w2Data from '../data/writing2.json';
+import phrasebankData from '../data/academic-phrasebank.json';
 import { Task1Prompt, Task2Prompt } from '../types';
 import { addAttempt } from '../progress';
 import { linkModelToChart, renderChart } from '../chart';
@@ -16,6 +17,7 @@ import { icon } from '../../utils/icons';
 import { t } from '../../core/i18n';
 import { StorageManager, DEFAULT_PREFLIGHT_RULES } from '../../utils/storage';
 import { setIeltsTestInProgress } from '../confirm-dialog';
+import { illustration } from '../../utils/illustrations';
 
 const T1 = w1Data as Task1Prompt[];
 const T2 = w2Data as Task2Prompt[];
@@ -112,8 +114,8 @@ function openPreFlightRulesModal(onSave: () => void): void {
       </div>
 
       <div style="display: flex; justify-content: flex-end; gap: 10px; border-top: 1px solid var(--border-hairline); padding-top: 12px;">
-        <button type="button" class="ie-btn btn-modal-cancel" style="min-height: 38px; padding: 6px 14px;">Hủy</button>
-        <button type="button" class="ie-btn ie-btn-primary btn-modal-save" style="min-height: 38px; padding: 6px 18px; font-weight: 700;">Lưu 3 tiêu chí</button>
+        <button type="button" class="ie-btn btn-modal-cancel" style="min-height: 38px; padding: 6px 14px;">${t('common.cancel', undefined, 'Cancel')}</button>
+        <button type="button" class="ie-btn ie-btn-primary btn-modal-save" style="min-height: 38px; padding: 6px 18px; font-weight: 700;">${t('writing.save_3_criteria', undefined, 'Save 3 criteria')}</button>
       </div>
     </div>
   `;
@@ -287,10 +289,10 @@ export function renderFormulaInspector(targetArea?: HTMLTextAreaElement): HTMLEl
     </div>
 
     <div class="ie-vocab-palette">
-      <h4>🎨 Interactive Academic Vocabulary Palette (Click to Insert)</h4>
+      <h4>🎨 ${t('writing.academic_lexicon_palette', { kind: 'Task 1' }, 'Interactive Academic Vocabulary Palette (Click to Insert)')}</h4>
       
       <div class="ie-vocab-group">
-        <span class="ie-vocab-label">Trend Verbs:</span>
+        <span class="ie-vocab-label">${t('writing.trend_verbs', undefined, 'Trend Verbs:')}</span>
         <div class="ie-chips">
           ${['surged', 'plummeted', 'escalated steadily', 'declined gradually', 'plateaued', 'leveled off', 'peaked at', 'hovered around', 'fluctuated wildly']
       .map(w => `<button type="button" class="ie-chip" data-word="${w}">${w}</button>`)
@@ -299,7 +301,7 @@ export function renderFormulaInspector(targetArea?: HTMLTextAreaElement): HTMLEl
       </div>
 
       <div class="ie-vocab-group">
-        <span class="ie-vocab-label">Degree &amp; Speed:</span>
+        <span class="ie-vocab-label">${t('writing.degree_speed', undefined, 'Degree & Speed:')}</span>
         <div class="ie-chips">
           ${['dramatically', 'substantially', 'marginally', 'exponentially', 'negligibly', 'moderately', 'progressively']
       .map(w => `<button type="button" class="ie-chip" data-word="${w}">${w}</button>`)
@@ -308,7 +310,7 @@ export function renderFormulaInspector(targetArea?: HTMLTextAreaElement): HTMLEl
       </div>
 
       <div class="ie-vocab-group">
-        <span class="ie-vocab-label">Prepositions of Change:</span>
+        <span class="ie-vocab-label">${t('writing.prepositions_change', undefined, 'Prepositions of Change:')}</span>
         <div class="ie-chips">
           ${['increased by 15%', 'rose to 85%', 'commenced at', 'stood at', 'dropped to a trough of']
       .map(w => `<button type="button" class="ie-chip" data-word="${w}">${w}</button>`)
@@ -317,7 +319,7 @@ export function renderFormulaInspector(targetArea?: HTMLTextAreaElement): HTMLEl
       </div>
 
       <div class="ie-vocab-group">
-        <span class="ie-vocab-label">Quantifiers &amp; Proportions:</span>
+        <span class="ie-vocab-label">${t('writing.quantifiers_proportions', undefined, 'Quantifiers & Proportions:')}</span>
         <div class="ie-chips">
           ${['the vast majority', 'a negligible fraction', 'approximately one third', 'roughly two-fifths', 'accounted for', 'doubled']
       .map(w => `<button type="button" class="ie-chip" data-word="${w}">${w}</button>`)
@@ -497,6 +499,154 @@ export function renderParagraphWorkbench(targetArea?: HTMLTextAreaElement): HTML
   return workbench;
 }
 
+interface PhraseCategory {
+  name: string;
+  phrases: string[];
+}
+
+interface PhraseSection {
+  id: string;
+  title: string;
+  categories: PhraseCategory[];
+}
+
+/**
+ * Manchester Academic Phrasebank Workbench
+ * Explores 14 functional categories with click-to-insert or clipboard copy affordances.
+ */
+export function renderPhrasebankWorkbench(targetArea?: HTMLTextAreaElement): HTMLElement {
+  const panel = h('div', 'ie-phrasebank-panel');
+  panel.id = 'academic-phrasebank-panel';
+
+  const sections = (phrasebankData as any).sections as PhraseSection[];
+  let activeSectionId = 'explaining-cause-and-effect';
+  let searchQuery = '';
+
+  panel.innerHTML = `
+    <div class="ie-workbench-head">
+      <div>
+        <h3>📚 ${t('writing.phrasebank_title', undefined, 'Manchester Academic Phrasebank')}</h3>
+        <p class="ie-note">${t('writing.phrasebank_note', undefined, 'Authentic university-level sentence stems for Band 7.5 - 9.0 Academic Writing. Click to insert into your essay or copy.')}</p>
+      </div>
+      <button type="button" class="ie-btn ie-btn-sm ie-phrasebank-close" aria-label="${t('common.close', undefined, 'Close')}">✕ ${t('common.close', undefined, 'Close')}</button>
+    </div>
+
+    <div class="ie-phrasebank-controls" style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 8px;">
+      <select class="ie-select ie-phrasebank-sec-select" style="min-width: 220px; flex: 1;" aria-label="${t('writing.select_category_aria', undefined, 'Select Category')}">
+        ${sections.map(s => `<option value="${s.id}" ${s.id === activeSectionId ? 'selected' : ''}>${esc(s.title)}</option>`).join('')}
+      </select>
+      <input type="search" class="ie-input ie-phrasebank-search" placeholder="${t('writing.search_stems_ph', undefined, 'Search stems (e.g. impact, however, suggest)...')}" style="min-width: 200px; flex: 1;" aria-label="${t('writing.search_stems_aria', undefined, 'Search phrase stems')}" />
+      <span class="ie-phrasebank-count" style="font-family: var(--font-mono); font-size: 12px; color: var(--accent-cyan); white-space: nowrap; padding: 4px 8px; background: rgba(56, 189, 248, 0.1); border-radius: 6px;"></span>
+    </div>
+
+    <div class="ie-phrasebank-list" style="display: flex; flex-direction: column; gap: 8px; max-height: 380px; overflow-y: auto; padding-right: 4px;"></div>
+  `;
+
+  const secSelect = panel.querySelector<HTMLSelectElement>('.ie-phrasebank-sec-select')!;
+  const searchInput = panel.querySelector<HTMLInputElement>('.ie-phrasebank-search')!;
+  const countBadge = panel.querySelector<HTMLElement>('.ie-phrasebank-count')!;
+  const listContainer = panel.querySelector<HTMLElement>('.ie-phrasebank-list')!;
+
+  function renderList(): void {
+    listContainer.innerHTML = '';
+    const q = searchQuery.toLowerCase().trim();
+
+    const items: { catName: string; phrase: string }[] = [];
+
+    if (q) {
+      for (const s of sections) {
+        for (const cat of s.categories) {
+          for (const phrase of cat.phrases) {
+            if (phrase.toLowerCase().includes(q) || cat.name.toLowerCase().includes(q)) {
+              items.push({ catName: `${s.title}: ${cat.name}`, phrase });
+            }
+          }
+        }
+      }
+    } else {
+      const activeSec = sections.find(s => s.id === activeSectionId) || sections[0];
+      for (const cat of activeSec.categories) {
+        for (const phrase of cat.phrases) {
+          items.push({ catName: cat.name, phrase });
+        }
+      }
+    }
+
+    countBadge.textContent = `${items.length} stems`;
+
+    if (items.length === 0) {
+      listContainer.innerHTML = `<div style="text-align: center; padding: 24px; color: var(--ink-secondary); font-size: 13px;">${t('writing.no_matching_stems', undefined, 'No matching phrase stems found.')}</div>`;
+      return;
+    }
+
+    const displayItems = items.slice(0, 50);
+
+    for (const item of displayItems) {
+      const row = h('div', 'ie-phrase-card', `
+        <div style="flex: 1; min-width: 0;">
+          <div style="font-size: 11px; font-family: var(--font-mono); color: var(--accent-gold); margin-bottom: 2px;">${esc(item.catName)}</div>
+          <div class="ie-phrase-text" style="font-size: 13px; color: var(--ink-primary); line-height: 1.4;">${esc(item.phrase)}</div>
+        </div>
+        <button type="button" class="ie-btn ie-btn-xs ie-phrase-btn" style="border-radius: var(--radius-btn, 10px); flex-shrink: 0; min-height: 36px; padding: 6px 14px;">
+          ${targetArea ? '+ Insert' : '📋 Copy'}
+        </button>
+      `);
+
+      const btn = row.querySelector<HTMLButtonElement>('.ie-phrase-btn')!;
+      btn.addEventListener('click', () => {
+        if (targetArea) {
+          insertAtCursor(targetArea, (targetArea.value.trim() ? ' ' : '') + item.phrase + ' ');
+          btn.textContent = '✓ Inserted';
+          btn.style.color = 'var(--accent-cyan)';
+          setTimeout(() => {
+            btn.textContent = '+ Insert';
+            btn.style.color = '';
+          }, 1500);
+        } else {
+          navigator.clipboard?.writeText(item.phrase).catch(() => {});
+          btn.textContent = '✓ Copied';
+          btn.style.color = 'var(--accent-cyan)';
+          setTimeout(() => {
+            btn.textContent = '📋 Copy';
+            btn.style.color = '';
+          }, 1500);
+        }
+      });
+
+      listContainer.append(row);
+    }
+
+    if (items.length > 50) {
+      const moreNote = h('div', 'ie-note', `Showing first 50 of ${items.length} phrases. Refine search query to filter further.`);
+      moreNote.style.textAlign = 'center';
+      moreNote.style.padding = '8px';
+      listContainer.append(moreNote);
+    }
+  }
+
+  secSelect.addEventListener('change', () => {
+    activeSectionId = secSelect.value;
+    renderList();
+  });
+
+  searchInput.addEventListener('input', () => {
+    searchQuery = searchInput.value;
+    renderList();
+  });
+
+  const closeBtn = panel.querySelector('.ie-phrasebank-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      panel.classList.remove('is-open');
+      const toggle = document.getElementById('toggle-academic-phrasebank');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  renderList();
+  return panel;
+}
+
 function mountEditor(
   root: HTMLElement,
   task: 1 | 2,
@@ -527,7 +677,16 @@ function mountEditor(
   }
 
   const submit = h('button', 'ie-btn ie-btn-primary', t('ielts.submit_for_feedback', undefined, 'Submit for feedback'));
-  head.append(clock, count, toggleBtn, submit);
+
+  const togglePhraseBtn = h(
+    'button',
+    'ie-btn ie-phrasebank-toggle',
+    `📚 ${t('writing.phrasebank_btn', undefined, 'Academic Phrasebank')}`
+  );
+  togglePhraseBtn.id = 'toggle-academic-phrasebank';
+  togglePhraseBtn.setAttribute('aria-expanded', 'false');
+
+  head.append(clock, count, toggleBtn, togglePhraseBtn, submit);
 
   const brief = h(
     'article',
@@ -547,12 +706,17 @@ function mountEditor(
   // Mount auxiliary workbenches
   const formulaInspector = task === 1 ? renderFormulaInspector(area) : null;
   const paragraphWorkbench = task === 2 ? renderParagraphWorkbench(area) : null;
+  const phrasebankWorkbench = renderPhrasebankWorkbench(area);
 
   if (formulaInspector) {
     toggleBtn.addEventListener('click', () => {
       const isOpen = formulaInspector.classList.toggle('is-open');
       toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      if (isOpen) formulaInspector.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      if (isOpen) {
+        phrasebankWorkbench.classList.remove('is-open');
+        togglePhraseBtn.setAttribute('aria-expanded', 'false');
+        formulaInspector.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
     });
   }
 
@@ -560,9 +724,29 @@ function mountEditor(
     toggleBtn.addEventListener('click', () => {
       const isOpen = paragraphWorkbench.classList.toggle('is-open');
       toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      if (isOpen) paragraphWorkbench.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      if (isOpen) {
+        phrasebankWorkbench.classList.remove('is-open');
+        togglePhraseBtn.setAttribute('aria-expanded', 'false');
+        paragraphWorkbench.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
     });
   }
+
+  togglePhraseBtn.addEventListener('click', () => {
+    const isOpen = phrasebankWorkbench.classList.toggle('is-open');
+    togglePhraseBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (isOpen) {
+      if (formulaInspector) {
+        formulaInspector.classList.remove('is-open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+      if (paragraphWorkbench) {
+        paragraphWorkbench.classList.remove('is-open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+      phrasebankWorkbench.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  });
 
   const split = h('section', 'ie-split');
   split.append(brief, editor);
@@ -573,6 +757,7 @@ function mountEditor(
   root.append(backBtn, head);
   if (formulaInspector) root.append(formulaInspector);
   if (paragraphWorkbench) root.append(paragraphWorkbench);
+  root.append(phrasebankWorkbench);
   root.append(split, out);
 
   const wc = (): number => (area.value.trim() ? area.value.trim().split(/\s+/).length : 0);
@@ -622,6 +807,59 @@ function mountEditor(
       )
       .join('');
 
+    // Argument Structure HTML
+    const argMatrix = r.argumentStructure.bodyParagraphs.length > 0
+      ? r.argumentStructure.bodyParagraphs.map((bp, i) => `
+        <div class="ie-arg-row">
+          <span class="ie-arg-p-label">${t('writing.body_paragraph_label', { num: i + 1 }, `Body Paragraph ${i + 1}`)}</span>
+          <div class="ie-arg-pills">
+            <span class="ie-pill-check ${bp.hasTopicSentence ? 'is-valid' : 'is-missing'}">
+              ${bp.hasTopicSentence ? '✓ Topic Claim' : '⚠ Missing Topic'}
+            </span>
+            <span class="ie-pill-check ${bp.hasCausalExplanation ? 'is-valid' : 'is-missing'}">
+              ${bp.hasCausalExplanation ? '✓ Causal Logic' : '⚠ Missing Reason'}
+            </span>
+            <span class="ie-pill-check ${bp.hasConcreteEvidence ? 'is-valid' : 'is-missing'}">
+              ${bp.hasConcreteEvidence ? '✓ Evidence Sighted' : '⚠ Missing Evidence'}
+            </span>
+          </div>
+        </div>
+      `).join('')
+      : `<p class="ie-note">${t('writing.no_body_paras', undefined, 'Add multiple body paragraphs to evaluate argument structure.')}</p>`;
+
+    // Phrasebank Style Upgrades HTML
+    const styleUpgradesHtml = r.styleUpgrades.detectedPhrases.length > 0
+      ? `<div class="ie-style-list">` + r.styleUpgrades.detectedPhrases.map(d => `
+        <div class="ie-style-item">
+          <div class="ie-style-item-header">
+            <span class="ie-style-badge-weak">"${esc(d.original)}"</span>
+            <span class="ie-style-cat">${esc(d.category)}</span>
+          </div>
+          <p class="ie-style-reason">${esc(d.reason)}</p>
+          <div class="ie-style-stems">
+            ${d.phrasebankStems.map(stem => `
+              <div class="ie-stem-pill">
+                <span>${esc(stem)}</span>
+                <button type="button" class="ie-stem-copy-btn" data-stem="${esc(stem)}" aria-label="Copy phrase stem">Copy</button>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `).join('') + `</div>`
+      : `<p class="ie-note">✓ ${t('writing.academic_tone_clean', undefined, 'Clean academic register. No colloquial or weak markers detected.')}</p>`;
+
+    // Paragraph Cohesion Flow HTML
+    const cohesionHtml = r.cohesion.transitions.length > 0
+      ? `<div class="ie-cohesion-timeline">` + r.cohesion.transitions.map(tr => `
+        <div class="ie-cohesion-step">
+          <span><b>Para ${tr.fromParagraphIndex + 1} ➔ Para ${tr.toParagraphIndex + 1}:</b> <i>${esc(tr.targetOpening)}</i></span>
+          <span class="ie-pill-check ${tr.hasDiscourseMarker ? 'is-valid' : 'is-missing'}">
+            ${tr.hasDiscourseMarker ? `✓ Connected ("${esc(tr.detectedMarker || '')}")` : '⚠ Abrupt Transition'}
+          </span>
+        </div>
+      `).join('') + `</div>`
+      : `<p class="ie-note">${t('writing.cohesion_single_para', undefined, 'Need at least 2 paragraphs to evaluate inter-paragraph cohesion.')}</p>`;
+
     out.hidden = false;
     out.innerHTML = `<div class="ie-feedback-col">
       <h3>${t('writing.automatic_checks', undefined, 'Automatic checks')}</h3>
@@ -636,6 +874,40 @@ function mountEditor(
       <div class="ie-estimate"></div>
       <button class="ie-btn ie-btn-primary ie-save">${t('ielts.save_estimate', undefined, 'Save estimate')}</button>
     </div>
+    <div class="ie-feedback-diagnostics">
+      <!-- 1. Argument Structure Diagnostic -->
+      <div class="ie-diag-card">
+        <div class="ie-diag-header">
+          <h4 class="ie-diag-title">🏛 ${t('writing.arg_structure_title', undefined, 'Argument Structure Matrix (Claim ➔ Cause ➔ Evidence)')}</h4>
+          <span class="ie-diag-score-chip ${r.argumentStructure.score >= 80 ? 'is-high' : r.argumentStructure.score >= 50 ? 'is-mid' : 'is-low'}">
+            ${r.argumentStructure.score}% Structure Match
+          </span>
+        </div>
+        <div class="ie-arg-matrix">${argMatrix}</div>
+      </div>
+
+      <!-- 2. Manchester Academic Phrasebank Upgrader -->
+      <div class="ie-diag-card">
+        <div class="ie-diag-header">
+          <h4 class="ie-diag-title">📚 ${t('writing.phrasebank_upgrader_title', undefined, 'Manchester Academic Phrasebank Upgrader')}</h4>
+          <span class="ie-diag-score-chip ${r.styleUpgrades.academicToneScore >= 80 ? 'is-high' : r.styleUpgrades.academicToneScore >= 50 ? 'is-mid' : 'is-low'}">
+            ${r.styleUpgrades.academicToneScore}/100 Academic Tone
+          </span>
+        </div>
+        ${styleUpgradesHtml}
+      </div>
+
+      <!-- 3. Paragraph Cohesion Flow -->
+      <div class="ie-diag-card">
+        <div class="ie-diag-header">
+          <h4 class="ie-diag-title">🔗 ${t('writing.cohesion_flow_title', undefined, 'Paragraph Cohesion & Transitional Flow')}</h4>
+          <span class="ie-diag-score-chip is-high">
+            ${r.cohesion.cohesionBandEstimate} Cohesion
+          </span>
+        </div>
+        ${cohesionHtml}
+      </div>
+    </div>
     <div class="ie-feedback-wide"><h3>${t('writing.model_answer_band7', undefined, 'Band 7+ model answer')}</h3><div class="ie-model">${p.model
         .split(/\n\s*\n/)
         .map(x => `<p>${x
@@ -643,6 +915,23 @@ function mountEditor(
           .map((s, i) => `<span class="ie-sent" data-sent="${i}">${esc(s)}</span>`)
           .join(' ')}</p>`)
         .join('')}</div><h3>${t('writing.what_makes_it_7', undefined, 'What makes it band 7')}</h3><p>${esc(p.notes)}</p></div>`;
+
+    // Attach copy affordances for Phrasebank stems
+    out.querySelectorAll<HTMLButtonElement>('.ie-stem-copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const stem = btn.getAttribute('data-stem');
+        if (!stem) return;
+        try {
+          await navigator.clipboard.writeText(stem);
+          const orig = btn.textContent;
+          btn.textContent = 'Copied!';
+          setTimeout(() => { btn.textContent = orig; }, 1800);
+        } catch {
+          btn.textContent = 'Copied!';
+          setTimeout(() => { btn.textContent = 'Copy'; }, 1800);
+        }
+      });
+    });
     const modelEl = out.querySelector('.ie-model') as HTMLElement | null;
     if (task === 1 && modelEl && (p as Task1Prompt).chart) linkModelToChart(modelEl, (p as Task1Prompt).chart);
 
@@ -677,13 +966,24 @@ export function writingView(root: HTMLElement): () => void {
     stop();
     root.innerHTML = '';
 
+    const heroBanner = h(
+      'div',
+      'app-hero-banner ielts-writing-hero',
+      `<div class="app-hero-banner-content">` +
+        `<span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">` +
+          `[IELTS ACADEMIC // WRITING HUB]` +
+        `</span>` +
+        `<h1 class="ie-title" style="margin: 0; font-size: var(--font-h1); line-height: 1.25;">${esc(t('ielts.nav_writing', undefined, 'Academic Writing'))}</h1>` +
+        `<p class="ie-lead" style="margin: 0; font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">${esc(t('writing.view_lead', undefined, 'Task 1: describe the visual in 150+ words (20 min). Task 2: write a 250+ word essay (40 min). Explore the interactive Visual Formula Inspector and 4-Sentence Paragraph Workbench below or inside any prompt.'))}</p>` +
+      `</div>` +
+      `<div class="app-hero-banner-art">` +
+        `${illustration('essay-writing', { size: 'banner', ariaLabel: 'Academic Writing' })}` +
+      `</div>`
+    );
+    heroBanner.style.marginBottom = 'var(--space-12, 12px)';
+
     root.append(
-      h('h1', 'ie-title', t('ielts.nav_writing', undefined, 'Academic Writing')),
-      h(
-        'p',
-        'ie-lead',
-        t('writing.view_lead', undefined, 'Task 1: describe the visual in 150+ words (20 min). Task 2: write a 250+ word essay (40 min). Explore the interactive Visual Formula Inspector and 4-Sentence Paragraph Workbench below or inside any prompt.')
-      )
+      heroBanner
     );
 
     // Quick Hub Tools Bar
@@ -704,20 +1004,31 @@ export function writingView(root: HTMLElement): () => void {
     toggleWbBtn.id = 'toggle-paragraph-workbench';
     toggleWbBtn.setAttribute('aria-expanded', 'false');
 
+    const togglePhraseBtn = h(
+      'button',
+      'ie-btn ie-phrasebank-toggle',
+      `📚 ${t('writing.phrasebank_btn', undefined, 'Manchester Phrasebank')}`
+    );
+    togglePhraseBtn.id = 'toggle-academic-phrasebank';
+    togglePhraseBtn.setAttribute('aria-expanded', 'false');
+
     // Navigation to #writing-studio is unified in main.ts top subnavigation bar
-    quickTools.append(toggleFormulaBtn, toggleWbBtn);
+    quickTools.append(toggleFormulaBtn, toggleWbBtn, togglePhraseBtn);
     root.append(quickTools);
 
     // Mount inspector & workbench containers for standalone use on writing hub
     const hubFormula = renderFormulaInspector();
     const hubWb = renderParagraphWorkbench();
+    const hubPhrasebank = renderPhrasebankWorkbench();
 
     toggleFormulaBtn.addEventListener('click', () => {
       const isOpen = hubFormula.classList.toggle('is-open');
       toggleFormulaBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       if (isOpen) {
         hubWb.classList.remove('is-open');
+        hubPhrasebank.classList.remove('is-open');
         toggleWbBtn.setAttribute('aria-expanded', 'false');
+        togglePhraseBtn.setAttribute('aria-expanded', 'false');
         hubFormula.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
     });
@@ -727,12 +1038,26 @@ export function writingView(root: HTMLElement): () => void {
       toggleWbBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       if (isOpen) {
         hubFormula.classList.remove('is-open');
+        hubPhrasebank.classList.remove('is-open');
         toggleFormulaBtn.setAttribute('aria-expanded', 'false');
+        togglePhraseBtn.setAttribute('aria-expanded', 'false');
         hubWb.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
     });
 
-    root.append(hubFormula, hubWb);
+    togglePhraseBtn.addEventListener('click', () => {
+      const isOpen = hubPhrasebank.classList.toggle('is-open');
+      togglePhraseBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (isOpen) {
+        hubFormula.classList.remove('is-open');
+        hubWb.classList.remove('is-open');
+        toggleFormulaBtn.setAttribute('aria-expanded', 'false');
+        toggleWbBtn.setAttribute('aria-expanded', 'false');
+        hubPhrasebank.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+
+    root.append(hubFormula, hubWb, hubPhrasebank);
 
     for (const [task, list] of [[1, T1], [2, T2]] as const) {
       root.append(h('h2', 'ie-sub', `Task ${task}`));
@@ -740,7 +1065,7 @@ export function writingView(root: HTMLElement): () => void {
       list.forEach(p => {
         const label = task === 1
           ? (p as Task1Prompt).chart.title
-          : (ESSAY_TYPE_LABEL[(p as Task2Prompt).essayType] ?? (p as Task2Prompt).essayType);
+          : t('essay.' + (p as Task2Prompt).essayType, undefined, ESSAY_TYPE_LABEL[(p as Task2Prompt).essayType] ?? (p as Task2Prompt).essayType);
         const promptDisplay = task === 1 ? label : truncatePrompt(p.prompt);
         const c = h(
           'button',

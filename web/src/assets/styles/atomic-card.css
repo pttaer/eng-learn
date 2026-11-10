@@ -190,43 +190,130 @@
 
 .card-prompt-label {
   font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  color: var(--ink-muted);
+  font-size: var(--font-kicker, 11px);
+  font-weight: 700;
+  letter-spacing: var(--font-kicker-spacing, 0.08em);
+  color: var(--accent-gold);
   text-transform: uppercase;
   margin-bottom: var(--space-8);
 }
 
-.card-main-text {
+/* Front Target Stimulus */
+.card-main-text,
+.card-stimulus-text {
   font-family: var(--font-sans);
-  font-size: var(--font-prompt);
-  font-weight: var(--font-prompt-weight);
-  line-height: var(--font-prompt-line);
+  font-size: var(--font-learn-stimulus, clamp(20px, 3.8vw, 24px));
+  font-weight: var(--font-learn-stimulus-weight, 700);
+  line-height: var(--font-learn-stimulus-line, 1.25);
   color: var(--ink-primary);
+  letter-spacing: -0.015em;
   word-break: break-word;
 }
 
-.card-sub-text {
-  font-family: var(--font-sans);
-  font-size: var(--text-base);
-  line-height: 1.6;
-  color: var(--ink-secondary);
-  margin-top: var(--space-12);
+.card-resolution-text {
+  font-size: var(--font-learn-def, 15px);
+  font-weight: 400;
+  line-height: var(--font-learn-def-line, 1.6);
+  white-space: pre-line;
 }
 
+/* Front Context Sentence / Example */
+.card-sub-text,
+.card-context-text {
+  font-family: var(--font-sans);
+  font-size: var(--font-learn-example, 14.5px);
+  line-height: var(--font-learn-example-line, 1.6);
+  color: var(--ink-secondary);
+  margin-top: var(--space-10);
+  max-width: 62ch;
+}
+
+/* Phonetic / IPA Scaffolding */
 .card-ipa-text,
 .card-phonetic-text {
   font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  color: var(--ink-muted);
+  font-size: var(--font-learn-scaffold, 13px);
+  color: var(--accent-cyan);
   margin-top: var(--space-6);
+  letter-spacing: 0.02em;
+}
+
+/* Back Structured Semantic Definition */
+.card-definition-box {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-definition-text {
+  font-family: var(--font-sans);
+  font-size: var(--font-learn-def, 15px);
+  line-height: var(--font-learn-def-line, 1.6);
+  color: var(--ink-primary);
+  margin: 0;
+  max-width: 64ch;
+}
+
+/* Back Structured Vietnamese Translation (Diacritic Safe) */
+.card-vietnamese-box {
+  margin-top: var(--space-10);
+  padding: 10px 14px;
+  background: color-mix(in srgb, var(--accent-cyan, #a5b4fc) 10%, transparent);
+  border-radius: var(--radius-sm, 8px);
+  border-left: 3px solid var(--accent-cyan, #a5b4fc);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-vietnamese-text {
+  font-family: var(--font-sans);
+  font-size: var(--font-learn-vn, 15px);
+  font-weight: var(--font-learn-vn-weight, 600);
+  line-height: var(--font-learn-vn-line, 1.6);
+  color: var(--ink-primary);
+  margin: 0;
+}
+
+/* Back Structured Example Box */
+.card-example-box {
+  margin-top: var(--space-10);
+  padding: 8px 12px;
+  background: var(--bg-surface-sunk);
+  border-radius: var(--radius-sm, 8px);
+  border: 1px solid var(--border-hairline);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-example-text {
+  font-family: var(--font-sans);
+  font-size: var(--font-learn-example, 14px);
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--ink-secondary);
+  margin: 0;
 }
 
 .card-explanation {
   font-family: var(--font-sans);
-  font-size: var(--text-sm);
-  line-height: 1.5;
+  font-size: var(--font-learn-def, 14.5px);
+  line-height: 1.55;
   color: var(--ink-secondary);
   margin-top: var(--space-8);
+}
+
+.card-morphology-box {
+  font-family: var(--font-mono);
+  font-size: var(--font-learn-scaffold, 12.5px);
+  line-height: 1.5;
+  color: var(--ink-muted);
+  margin-top: var(--space-10);
+  padding-top: var(--space-8);
+  border-top: 1px dashed var(--border-hairline);
+  white-space: pre-line;
 }
 
 /* Zone 5: Universal Bottom Dock & Rating Bar */
@@ -376,6 +463,12 @@
     flex-wrap: nowrap;
     gap: 6px;
     width: 100%;
+    position: sticky;
+    bottom: 0;
+    background: var(--bg-card, #121622);
+    padding-top: 8px;
+    padding-bottom: 2px;
+    z-index: 3;
   }
 
   .dock-btn,

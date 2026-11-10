@@ -30,14 +30,18 @@ const STORAGE_MAXIMIZED_KEY = 'eng_floating_note_maximized';
 
 const DEFAULT_NOTE: NoteItem = {
   id: 'default-welcome-note',
-  title: 'Ghi chú & Ý tưởng',
-  content: `# 💡 Ghi chú Học tập
-- **1-Click Workflows:** Mẫu nhanh cho Động não, Tăng tốc, và IELTS.
-- **Tự động lưu:** Dữ liệu được lưu trữ offline an toàn.
+  title: 'Sổ tay ghi chú học tập',
+  content: `# 💡 Sổ tay ghi chú học tập
 
-### Kế hoạch ôn tập
-- [ ] Ôn tập cấu trúc Đảo ngữ & Clefting B2/C2
-- [ ] Luyện nói 1 bài theo phương pháp 4-3-2`,
+- **Kéo thả linh hoạt:** Di chuyển biểu tượng sổ tay đến bất kỳ vị trí thuận tiện trên màn hình.
+- **Mẫu ghi chú nhanh:** Cung cấp sẵn mẫu dàn ý, bứt phá từ vựng, tóm tắt cốt lõi và IELTS.
+- **Tự động lưu:** Mọi ghi chú đều được lưu tự động trên thiết bị của bạn.
+- **Phím tắt:** \`Alt+N\` bật/tắt nhanh, \`Esc\` thu nhỏ, \`Tab\` thụt dòng.
+
+### Ghi chú mẫu
+- [ ] Ôn tập cấu trúc Đảo ngữ & Câu chẻ (Inversion & Clefting)
+- [ ] Viết dàn ý IELTS Task 2 cho đề bài Education
+- [ ] Ghi lại 3 cụm Collocations tâm đắc hôm nay`,
   category: 'brainstorm',
   createdAt: Date.now(),
   updatedAt: Date.now()
@@ -220,8 +224,8 @@ export class FloatingNote {
       } else {
         // Phone: tuck the disc into the right gutter, where card text rarely reaches
         const defaultX = Math.max(16, window.innerWidth - (window.innerWidth <= 768 ? 56 : 170));
-        // Phone: start at the bottom edge so the disc covers a corner, not mid-page text
-        const defaultY = Math.max(16, window.innerHeight - (window.innerWidth <= 768 ? 72 : 140));
+        // Phone: account for bottom safe dock clearance (bottom nav ~84px + 44px + pad) so it doesn't overlap navigation
+        const defaultY = Math.max(16, window.innerHeight - 140);
         this.bubblePos = { x: defaultX, y: defaultY };
       }
     } catch {
@@ -323,9 +327,9 @@ export class FloatingNote {
         <input type="text" class="floating-note-title-input" id="floating-note-title-input" placeholder="${t('note.title_placeholder', undefined, 'Note Title...')}" aria-label="${t('note.title_aria', undefined, 'Note Title')}" />
 
         <div class="floating-note-toolbar">
-          <button type="button" class="floating-note-tool-btn btn-template" id="fn-tool-brainstorm" title="${t('note.tool_brainstorm_title', undefined, 'Insert /brainstorming Strategy Template')}">${t('note.tool_brainstorm', undefined, '💡 /brainstorming')}</button>
-          <button type="button" class="floating-note-tool-btn btn-template" id="fn-tool-boost" title="${t('note.tool_boost_title', undefined, 'Insert /boost High-Velocity Template')}">${t('note.tool_boost', undefined, '⚡ /boost')}</button>
-          <button type="button" class="floating-note-tool-btn btn-template" id="fn-tool-ponytail" title="${t('note.tool_ponytail_title', undefined, 'Insert /ponytail ultra Minimalist Template')}">${t('note.tool_ponytail', undefined, '✂️ /ponytail ultra')}</button>
+          <button type="button" class="floating-note-tool-btn btn-template" id="fn-tool-brainstorm" title="${t('note.tool_brainstorm_title', undefined, 'Insert Strategy & Outline Template')}">${t('note.tool_brainstorm', undefined, '💡 Outline')}</button>
+          <button type="button" class="floating-note-tool-btn btn-template" id="fn-tool-boost" title="${t('note.tool_boost_title', undefined, 'Insert High-Impact Goal Template')}">${t('note.tool_boost', undefined, '⚡ High Impact')}</button>
+          <button type="button" class="floating-note-tool-btn btn-template" id="fn-tool-ponytail" title="${t('note.tool_ponytail_title', undefined, 'Insert Core Summary Template')}">${t('note.tool_ponytail', undefined, '✂️ Core Summary')}</button>
           <button type="button" class="floating-note-tool-btn btn-template" id="fn-tool-ielts" title="${t('note.tool_ielts_title', undefined, 'Insert IELTS Academic Blueprint')}">${t('note.tool_ielts', undefined, '🎯 IELTS Plan')}</button>
           <button type="button" class="floating-note-tool-btn" id="fn-tool-context" title="${t('note.tool_context_title', undefined, 'Attach Current View & Date')}">${t('note.tool_context', undefined, '📍 Context')}</button>
           <button type="button" class="floating-note-tool-btn" id="fn-tool-bullet" title="${t('note.tool_bullet_title', undefined, 'Add Bullet')}">${t('note.tool_bullet', undefined, '• Bullet')}</button>
@@ -337,7 +341,7 @@ export class FloatingNote {
         </div>
 
         <div class="floating-note-editor-wrapper">
-          <textarea class="floating-note-textarea" id="floating-note-textarea" placeholder="${t('note.textarea_placeholder', undefined, 'Type anything... /brainstorming ideas, /boost drills, /ponytail ultra simplifications, IELTS arguments...')}" aria-label="${t('note.textarea_aria', undefined, 'Note Content')}" spellcheck="false"></textarea>
+          <textarea class="floating-note-textarea" id="floating-note-textarea" placeholder="${t('note.textarea_placeholder', undefined, 'Type anything... ideas, vocabulary, grammar notes, IELTS arguments, daily reflections...')}" aria-label="${t('note.textarea_aria', undefined, 'Note Content')}" spellcheck="false"></textarea>
         </div>
       </div>
 
@@ -453,28 +457,28 @@ export class FloatingNote {
       }
     });
 
-    // 6. Quick Tool Buttons: /brainstorming, /boost, /ponytail ultra, IELTS, etc.
+    // 6. Quick Tool Buttons: Outline, High-Impact Goal, Core Summary, IELTS Blueprint
     this.windowEl.querySelector('#fn-tool-brainstorm')?.addEventListener('click', () => {
       this.insertTemplate(
-        `### 💡 /brainstorming // Strategy & Hypotheses\n- **Core Objective:** \n- **Key Hypotheses & Insights:** \n- **Architecture & Design Trade-offs:** \n- **Action Items & Drills:** \n  - [ ] `
+        `### 💡 Dàn ý & Chiến lược học\n- **Mục tiêu chính:** \n- **Ý chính & Luận điểm:** \n- **Từ vựng & Cấu trúc trọng tâm:** \n- **Hành động cụ thể:** \n  - [ ] `
       );
     });
 
     this.windowEl.querySelector('#fn-tool-boost')?.addEventListener('click', () => {
       this.insertTemplate(
-        `### ⚡ /boost // High-Velocity Mastery\n- **Target Bottleneck / Skill Gap:** \n- **Power Lexicon & Phrasal Verbs:** \n- **High-Impact Sentence Pattern:** \n- **Rapid 60-Second Drill Goal:** \n  - [ ] `
+        `### ⚡ Mục tiêu bứt phá\n- **Kỹ năng cần cải thiện:** \n- **Cụm từ then chốt (Collocations):** \n- **Mẫu câu ghi nhớ sâu:** \n- **Mục tiêu luyện tập hôm nay:** \n  - [ ] `
       );
     });
 
     this.windowEl.querySelector('#fn-tool-ponytail')?.addEventListener('click', () => {
       this.insertTemplate(
-        `### ✂️ /ponytail ultra // Ruthless Simplicity\n- **YAGNI Audit:** What can we completely eliminate?\n- **Native / Stdlib Solution (0 deps):** \n- **Shortest Path (1 line before 50):** \n- **Complexity Eliminated:** `
+        `### ✂️ Tóm tắt cốt lõi\n- **Điểm quan trọng nhất:** \n- **Quy tắc / Bài học rút ra:** \n- **Ví dụ ngắn gọn:** \n- **Lỗi cần tránh:** `
       );
     });
 
     this.windowEl.querySelector('#fn-tool-ielts')?.addEventListener('click', () => {
       this.insertTemplate(
-        `### 🎯 IELTS Academic Blueprint\n- **Band Target:** 7.5+\n- **Task Type / Prompt:** \n- **Lexical Resource (AWL / Idiomatic):** \n- **Syntactic Structures (Complex / Passive):** \n- **Main Arguments:** \n  1. \n  2. `
+        `### 🎯 Kế hoạch IELTS Academic\n- **Mục tiêu Band:** 7.5+\n- **Dạng bài / Đề bài:** \n- **Từ vựng nâng cao (Lexical Resource):** \n- **Cấu trúc ngữ pháp đa dạng:** \n- **Ý tưởng triển khai:** \n  1. \n  2. `
       );
     });
 
@@ -586,8 +590,8 @@ export class FloatingNote {
     const pad = 12;
 
     const isMobile = window.innerWidth <= 768;
-    // Only the main app has a bottom nav to clear; IELTS (no nav) lets the disc sit at the edge
-    const bottomDockClearance = isMobile && document.querySelector('.hud-bottom-nav') ? 96 : 24;
+    // Always clear bottom dock (~84px + pad) on mobile so floating object never obscures navigation or primary CTAs
+    const bottomDockClearance = isMobile ? 96 : 24;
     const minX = pad;
     const maxX = Math.max(pad, window.innerWidth - width - pad);
     const minY = pad;

@@ -176,12 +176,12 @@ export class ZenMode {
     pill.id = 'zen-floating-pill';
     pill.className = 'zen-floating-pill';
     pill.setAttribute('role', 'status');
-    pill.setAttribute('aria-label', 'Zen Mode Active');
+    pill.setAttribute('aria-label', t('zen.mode_title', undefined, 'Zen Mode'));
     pill.innerHTML = `
       <span class="zen-pill-icon" aria-hidden="true">☯</span>
-      <span class="zen-pill-label">Zen Mode</span>
+      <span class="zen-pill-label">${t('zen.mode_title', undefined, 'Zen Mode')}</span>
       <kbd class="zen-pill-kbd">Esc</kbd>
-      <button type="button" class="zen-pill-exit" aria-label="${t('reading.exit_zen_tooltip', undefined, 'Exit Zen Mode (Esc)')}" title="Exit Zen Mode (Esc)">✕</button>
+      <button type="button" class="zen-pill-exit" aria-label="${t('reading.exit_zen_tooltip', undefined, 'Exit Zen Mode (Esc)')}" title="${t('reading.exit_zen_tooltip', undefined, 'Exit Zen Mode (Esc)')}">✕</button>
     `;
 
     const hotzone = document.createElement('div');

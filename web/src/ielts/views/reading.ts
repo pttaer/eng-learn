@@ -10,6 +10,7 @@ import { icon } from '../../utils/icons';
 import { t } from '../../core/i18n';
 import { StorageManager } from '../../utils/storage';
 import { setIeltsTestInProgress } from '../confirm-dialog';
+import { illustration } from '../../utils/illustrations';
 
 const PASSAGES = readingData as ReadingPassage[];
 
@@ -171,7 +172,7 @@ export function mountReadingTest(
   const updateErgoBarHtml = () => {
     ergoBar.innerHTML = `
       <div style="display: flex; align-items: center; gap: 6px;">
-        <span style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted); text-transform: uppercase;">Cỡ chữ:</span>
+        <span style="font-size: var(--font-kicker); font-weight: 700; color: var(--ink-muted); text-transform: uppercase;">${t('reading.font_size', undefined, 'Font size:')}</span>
         <button type="button" class="ie-btn ie-btn-sm ie-ergo-font-minus" style="min-height: var(--touch-target-min, 44px); min-width: var(--touch-target-min, 44px); padding: 4px 10px; font-weight: 700;" ${currentFontSizeIdx === 0 ? 'disabled' : ''}>A-</button>
         <span style="font-family: var(--font-mono); font-size: 12px; min-width: 32px; text-align: center; color: var(--accent-gold);">${FONT_SIZES[currentFontSizeIdx]}</span>
         <button type="button" class="ie-btn ie-btn-sm ie-ergo-font-plus" style="min-height: var(--touch-target-min, 44px); min-width: var(--touch-target-min, 44px); padding: 4px 10px; font-weight: 700;" ${currentFontSizeIdx === FONT_SIZES.length - 1 ? 'disabled' : ''}>A+</button>
@@ -181,7 +182,7 @@ export function mountReadingTest(
           ${isSerif ? '📖 Serif' : '🔤 Sans'}
         </button>
         <button type="button" class="ie-btn ie-btn-sm ie-ergo-line-height ${isRelaxed ? 'active' : ''}" style="min-height: var(--touch-target-min, 44px); padding: 4px 12px;">
-          ${isRelaxed ? '↕ Giãn rộng' : '↕ Giãn chuẩn'}
+          ${isRelaxed ? t('reading.line_height_relaxed', undefined, '↕ Relaxed') : t('reading.line_height_normal', undefined, '↕ Normal')}
         </button>
       </div>
     `;
@@ -227,8 +228,8 @@ export function mountReadingTest(
   const pill = h('div', 'ie-selection-pill');
   pill.hidden = true;
   pill.innerHTML = `
-    <button type="button" class="ie-pill-btn ie-pill-mark" title="Highlight text">🖍️ Highlight</button>
-    <button type="button" class="ie-pill-btn ie-pill-clear" title="Clear selection">✕ Clear</button>
+    <button type="button" class="ie-pill-btn ie-pill-mark" title="${t('reading.btn_highlight_title', undefined, 'Highlight text')}">${t('reading.btn_highlight', undefined, '🖍️ Highlight')}</button>
+    <button type="button" class="ie-pill-btn ie-pill-clear" title="${t('reading.btn_clear_title', undefined, 'Clear selection')}">${t('reading.btn_clear', undefined, '✕ Clear')}</button>
   `;
   root.append(pill);
 
@@ -616,13 +617,24 @@ export function readingView(root: HTMLElement): () => void {
   drillsLink.href = '#reading-drills';
   hubBar.append(drillsLink);
 
+  const heroBanner = h(
+    'div',
+    'app-hero-banner ielts-reading-hero',
+    `<div class="app-hero-banner-content">` +
+      `<span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">` +
+        `[IELTS ACADEMIC // READING SUITE]` +
+      `</span>` +
+      `<h1 class="ie-title" style="margin: 0; font-size: var(--font-h1); line-height: 1.25;">${esc(t('ielts.nav_reading', undefined, 'Academic Reading'))}</h1>` +
+      `<p class="ie-lead" style="margin: 0; font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">${esc(t('ielts.reading_lead', undefined, 'One passage, 20 minutes, 13-14 questions. Same question types as the exam. Submit to see the evidence for every answer.'))}</p>` +
+    `</div>` +
+    `<div class="app-hero-banner-art">` +
+      `${illustration('book-lover', { size: 'banner', ariaLabel: 'Academic Reading' })}` +
+    `</div>`
+  );
+  heroBanner.style.marginBottom = 'var(--space-12, 12px)';
+
   root.append(
-    h('h1', 'ie-title', t('ielts.nav_reading', undefined, 'Academic Reading')),
-    h(
-      'p',
-      'ie-lead',
-      t('ielts.reading_lead', undefined, 'One passage, 20 minutes, 13-14 questions. Same question types as the exam. Submit to see the evidence for every answer.')
-    ),
+    heroBanner,
     hubBar,
     list
   );

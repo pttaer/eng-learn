@@ -89,6 +89,7 @@ export class HeaderHUD {
   public onNavigateToCockpit?: () => void;
   public onNavigateToSettings?: () => void;
   public onOpenIelts?: () => void | Promise<void>;
+  public onLaunchExternalApp?: (appId: string) => void;
   private static instance: HeaderHUD | null = null;
   private contextualActions: ContextualDockAction[] | null = null;
 
@@ -157,7 +158,7 @@ export class HeaderHUD {
       <div class="hud-brand" style="display: flex; align-items: center; gap: 8px;">
         ${!isTree ? `
           <button class="hud-btn btn-back-tree" title="${t('nav.back_to_constellation', undefined, 'Return to Constellation Tree')}" aria-label="${t('nav.back_to_constellation', undefined, 'Return to Constellation Tree')}">
-            <span class="back-arrow">←</span><span class="btn-label"> ${t('nav.constellation', undefined, 'CONSTELLATION')}</span> ${t('nav.tree', undefined, 'TREE').toUpperCase()}
+            <span class="back-arrow">←</span> <span class="btn-text">${t('common.back', undefined, 'Back')}</span>
           </button>
           <span class="hud-status-badge active-route-badge" style="font-size: var(--font-kicker);">${getRouteName(this.currentRoute)}</span>
         ` : `
@@ -177,24 +178,24 @@ export class HeaderHUD {
           <span class="telemetry-label" style="font-size: var(--font-kicker);">${t('nav.retention', undefined, 'RETENTION')}:</span>
           <span class="telemetry-value telemetry-retention" style="color: var(--good); font-weight: 700;">${stats.retentionRate}%</span>
         </div>
-        <div class="telemetry-item telemetry-budget-item" title="Quỹ thời gian học: Click để đổi (15m / 30m / 60m)" style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+        <div class="telemetry-item telemetry-budget-item" title="${t('nav.time_budget_tooltip', undefined, 'Daily Time Budget: Click to toggle (15m / 30m / 60m)')}" style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
           <span class="telemetry-label" style="font-size: var(--font-kicker);">${t('nav.budget', undefined, 'BUDGET')}:</span>
           <span class="telemetry-value telemetry-budget" style="color: var(--accent-cyan); font-weight: 700;">⏱️ ${timeBudget}m</span>
         </div>
         ${examDaysRemaining != null ? `
-          <div class="telemetry-item telemetry-exam-item" title="Đếm ngược ngày thi IELTS" style="display: flex; align-items: center; gap: 6px;">
+          <div class="telemetry-item telemetry-exam-item" title="${t('nav.exam_countdown_title', undefined, 'IELTS Exam Countdown')}" style="display: flex; align-items: center; gap: 6px;">
             <span class="telemetry-label" style="font-size: var(--font-kicker);">${t('nav.exam', undefined, 'EXAM')}:</span>
             <span class="telemetry-value" style="color: var(--accent-gold); font-weight: 700;">⏳ ${examDaysRemaining >= 0 ? `${examDaysRemaining}d` : t('nav.ended', undefined, 'Ended')}</span>
           </div>
         ` : ''}
       </div>
 
-      <div class="hud-actions header-actions" style="display: flex; gap: 8px; align-items: center;">
-        <button class="hud-btn btn-budget-pill" title="Daily Time Budget: ${timeBudget}m. Click to toggle 15m/30m/60m" aria-label="Daily Time Budget: ${timeBudget} minutes">
+      <div class="hud-actions header-actions">
+        <button class="hud-btn btn-budget-pill" title="${t('drawer.time_budget', { budget: timeBudget }, `Daily Time Budget: ${timeBudget}m / day`)}" aria-label="${t('drawer.time_budget', { budget: timeBudget }, `Daily Time Budget: ${timeBudget}m / day`)}">
           ⏱️ ${timeBudget}m
         </button>
         ${examDaysRemaining != null ? `
-          <button class="hud-btn btn-exam-pill" title="Target Exam: ${examDaysRemaining >= 0 ? `${examDaysRemaining} days remaining` : t('nav.ended', undefined, 'Ended')}. Click to view Settings" aria-label="Target Exam Countdown">
+          <button class="hud-btn btn-exam-pill" title="${t('nav.exam_countdown_aria', undefined, 'Target Exam Countdown')}" aria-label="${t('nav.exam_countdown_aria', undefined, 'Target Exam Countdown')}">
             ⏳ ${examDaysRemaining >= 0 ? `${examDaysRemaining}d` : t('nav.ended', undefined, 'Ended')}
           </button>
         ` : ''}
@@ -229,7 +230,7 @@ export class HeaderHUD {
         <button class="hud-btn btn-progression-pill" title="${t('nav.rpg_progression', undefined, 'RPG Progression & Daily Quests')}" aria-label="${t('nav.rpg_progression', undefined, 'RPG Progression')}">
           ${icon('zap', 12)} ${t('nav.level', undefined, 'LVL')} ${progression.level}<span class="btn-label"> • ${progression.xp} XP</span>
         </button>
-        <button class="hud-btn btn-cognitive-mode-toggle" title="Toggle Cognitive Scaffolding Mode (Gentle vs Cockpit)" aria-label="Toggle Cognitive Scaffolding Mode">
+        <button class="hud-btn btn-cognitive-mode-toggle" title="${t('nav.cognitive_mode_toggle_title', undefined, 'Toggle Cognitive Scaffolding Mode (Gentle vs Cockpit)')}" aria-label="${t('nav.cognitive_mode_toggle_aria', undefined, 'Toggle Cognitive Scaffolding Mode')}">
           ${CognitiveScaffoldingEngine.isGentle() ? '🌱' : '⚡'}<span class="btn-label"> ${CognitiveScaffoldingEngine.isGentle() ? t('nav.scaffolding_gentle', undefined, 'Gentle') : t('nav.scaffolding_cockpit', undefined, 'Cockpit')}</span>
         </button>
         <button class="hud-btn btn-zen-toggle ${ZenMode.isZen() ? 'active' : ''}" title="${t('nav.zen_immersion_mode', undefined, 'Toggle Zen Immersion Mode (Hotkey: Z)')}" aria-label="${t('nav.zen_immersion_mode', undefined, 'Toggle Zen Immersion Mode')}" aria-pressed="${ZenMode.isZen()}">${HeaderHUD.zenLabel(ZenMode.isZen())}</button>
@@ -659,7 +660,7 @@ export class HeaderHUD {
     bnavIelts?.addEventListener('click', async () => {
       AudioSynthesizer.play('click');
       if (this.onOpenIelts) await this.onOpenIelts();
-      else window.location.href = './ielts.html';
+      else this.onLaunchExternalApp?.('ielts');
     });
 
     const bnavMe = this.element.querySelector('.bnav-me');

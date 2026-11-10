@@ -3,6 +3,7 @@ import { PlacementQuestion, buildQuestions, placeLevel, PASS_MARK, QUESTIONS_PER
 import { StorageManager } from '../utils/storage';
 import { AcousticHaptics } from '../core/acoustic-haptics';
 import { t } from '../core/i18n';
+import { illustration } from '../utils/illustrations';
 import vocabularyData from '../assets/data/vocabulary.json';
 import collocationsData from '../assets/data/collocations.json';
 import diagnosticData from '../assets/data/diagnostic-questions.json';
@@ -73,6 +74,9 @@ export class PlacementQuiz {
 
   private renderIntro(): void {
     this.card(`
+      <div class="app-illustration-wrap" style="margin-bottom: var(--space-16, 16px);">
+        ${illustration('learning', { size: 'card', ariaLabel: t('placement.title', undefined, 'FIND YOUR STARTING POINT') })}
+      </div>
       <div class="telemetry-label" style="margin-bottom: var(--space-8); color: var(--accent-gold); font-weight: 700;">${t('placement.title', undefined, 'FIND YOUR STARTING POINT')}</div>
       <p style="font-size: var(--font-h4); line-height: 1.6; margin: 0 0 var(--space-20, 20px) 0; color: var(--ink-secondary);">
         ${t('placement.intro', undefined, 'Takes about 2 minutes with gentle exploratory questions (from A1 to C2). The test stops dynamically as soon as questions exceed your pace so you never feel exhausted. You can adjust your level anytime.')}
@@ -104,7 +108,7 @@ export class PlacementQuiz {
       </div>
       <div class="placement-prompt-title" style="font-size: var(--font-h3); font-weight: 700; line-height: 1.35; margin: 0 0 ${q.context ? 'var(--space-8)' : 'var(--space-16)'} 0; color: var(--ink-primary);">${this.escape(q.prompt)}</div>
       ${q.context ? `<div class="placement-context-box" style="font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5; margin: 0 0 var(--space-16) 0;">${this.escape(q.context)}</div>` : ''}
-      <div role="group" aria-label="Choose the answer" class="action-stack" style="width: 100%; display: flex; flex-direction: column; gap: 12px; margin-top: 14px;">
+      <div role="group" aria-label="${t('quiz.choose_answer_aria', undefined, 'Choose the answer')}" class="action-stack" style="width: 100%; display: flex; flex-direction: column; gap: 12px; margin-top: 14px;">
         ${q.options.map((o, i) => `<button class="hud-btn placement-option apple-press" data-i="${i}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 12px 14px; text-align: left; white-space: normal; min-height: 44px; text-transform: none; border-radius: var(--radius-btn, 10px); font-family: var(--font-sans); font-size: var(--font-body-compact); line-height: 1.4; display: inline-flex; align-items: center; gap: 8px;"><strong style="font-family: var(--font-mono); flex-shrink: 0;">${i + 1}.</strong> <span>${this.escape(o)}</span></button>`).join('')}
       </div>
       <button class="hud-btn placement-skip apple-press" style="width: 100%; justify-content: center; min-height: 44px; padding: 8px 0; margin-top: 18px; border-radius: var(--radius-btn, 10px);">${t('placement.skip_survey', undefined, 'Skip diagnostic quiz')}</button>
@@ -139,6 +143,9 @@ export class PlacementQuiz {
   public renderResult(): void {
     const level = placeLevel(this.correct);
     this.card(`
+      <div class="app-illustration-wrap" style="margin-bottom: var(--space-16, 16px);">
+        ${illustration('completed', { size: 'card', ariaLabel: `${t('placement.your_level', undefined, 'YOUR LEVEL')}: ${level}` })}
+      </div>
       <div class="telemetry-label" style="margin-bottom: var(--space-8);">${t('placement.your_level', undefined, 'YOUR LEVEL')}</div>
       <div style="font-size: var(--font-h1); font-weight: 700; margin-bottom: var(--space-8);">${CEFR_LABELS[level]}</div>
       <p style="font-size: var(--font-h4); color: var(--ink-secondary); margin-bottom: var(--space-16);">

@@ -7,6 +7,8 @@ import { t } from './i18n';
 import { L1VietnameseDiagnosticEngine } from './l1-vietnamese-diagnostic';
 import { SemanticParaphraseEvaluator } from './semantic-paraphrase-evaluator';
 import { AdversaryRegistry } from './adversary/adversary-registry';
+import { ProgressionEngine } from './progression-engine';
+import { illustration } from '../utils/illustrations';
 
 export class MistakeVault {
   private static isInitialized = false;
@@ -102,7 +104,12 @@ export class MistakeVault {
     };
     window.addEventListener('keydown', this.escHandler, true);
 
-    this.renderHome(sheet);
+    const isL1 = typeof window !== 'undefined' && (window.location.hash.includes('l1') || window.location.hash.includes('trap'));
+    if (isL1) {
+      this.startL1Remediation(sheet, 0);
+    } else {
+      this.renderHome(sheet);
+    }
   }
 
   public static close(): void {
@@ -138,6 +145,23 @@ export class MistakeVault {
         <button type="button" class="vault-btn-close btn-modal-close" aria-label="${t('common.close', undefined, 'Close')}">✕</button>
       </div>
 
+      <!-- Hero L1 Vietnamese Trap Breaker Card (Elevated for High Engagement) -->
+      <div class="vault-hero-l1-card" style="margin-bottom: 16px; padding: 16px; background: linear-gradient(135deg, rgba(202, 138, 4, 0.12), rgba(165, 180, 252, 0.08)); border: 1px solid var(--accent-gold, #ca8a04); border-radius: var(--radius-squircle-md, 16px); box-shadow: 0 4px 16px rgba(0,0,0,0.25);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <span style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-gold); letter-spacing: 0.08em; text-transform: uppercase;">⚡ VIETNAMESE L1 TRAP BREAKER</span>
+          <span style="font-size: 11px; font-weight: 700; background: rgba(202, 138, 4, 0.2); color: var(--accent-gold); padding: 2px 8px; border-radius: var(--radius-pill, 9999px);">${t('vault.classic_traps_count', { count: 11 }, '11 BẪY KINH ĐIỂN')}</span>
+        </div>
+        <h3 style="margin: 0 0 6px 0; font-size: 15px; font-weight: 700; color: var(--ink-primary); line-height: 1.3;">
+          ${t('vault.hero_title', undefined, '🎯 Tiêu diệt thói quen dịch thô tiếng Việt (The Escape Path)')}
+        </h3>
+        <p style="font-size: var(--font-body-compact); color: var(--ink-secondary); margin: 0 0 12px 0; line-height: 1.45;">
+          ${t('vault.hero_desc', undefined, 'Khắc phục 11 bẫy chuyển di: discuss about, although... but, there have, informations, open light, plays indispensable role...')}
+        </p>
+        <button type="button" class="vault-btn-primary btn-start-l1-loop" style="width: 100%; justify-content: center; background: var(--accent-gold, #ca8a04); color: #000; font-weight: 700; border: none; border-radius: var(--radius-btn, 10px); min-height: 44px; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; touch-action: manipulation;">
+          ${icon('zap', 18)} ${t('vault.start_l1_loop', undefined, 'Chém bẫy phản xạ ngay (60s) →')}
+        </button>
+      </div>
+
       <div class="vault-stats-grid">
         <div class="vault-stat-card is-accent">
           <span class="stat-num">${activeRecords.length}</span>
@@ -153,22 +177,24 @@ export class MistakeVault {
         </div>
       </div>
 
-      <div class="vault-main-action">
+      <div class="vault-main-action" style="margin-top: 14px;">
         ${activeRecords.length > 0 ? `
-          <button type="button" class="vault-btn-primary btn-start-blitz">
-            ${icon('zap', 18)} ${t('vault.start_blitz', { count: activeRecords.length }, `Start Recovery Blitz (${activeRecords.length} Due)`)}
+          <button type="button" class="vault-btn-primary btn-start-blitz" style="width: 100%; justify-content: center; min-height: 44px; border-radius: var(--radius-btn, 10px); font-weight: 700; display: inline-flex; align-items: center; gap: 8px;">
+            ${icon('zap', 18)} ⚔️ ${t('vault.start_blitz', { count: activeRecords.length }, `Phục thù lỗi sai (${activeRecords.length} câu)`)}
           </button>
         ` : `
-          <div class="vault-empty-state">
-            <span class="empty-icon" style="color: var(--good, #22c55e); font-size: var(--font-h1);">✓</span>
-            <h3>${t('vault.all_stabilized', undefined, 'All Engrams Stabilized')}</h3>
-            <p>${t('vault.no_mistakes', undefined, 'No mistakes are currently pending rehabilitation. Logged errors will queue here.')}</p>
+          <div class="vault-empty-state" style="padding: 18px 14px; text-align: center; background: var(--bg-surface-sunk, rgba(0,0,0,0.2)); border-radius: var(--radius-squircle-sm, 10px);">
+            <div class="app-illustration-wrap" style="margin-bottom: var(--space-8, 8px);">
+              ${illustration('completed', { size: 'compact', ariaLabel: t('vault.all_stabilized', undefined, 'All Engrams Stabilized') })}
+            </div>
+            <div style="font-weight: 700; font-size: 14px; color: var(--ink-primary); margin: 4px 0;">${t('vault.all_stabilized', undefined, 'All Engrams Stabilized')}</div>
+            <p style="font-size: var(--font-kicker); color: var(--ink-muted); margin: 0;">${t('vault.no_mistakes', undefined, 'Không còn lỗi tồn đọng. Các câu làm sai trong test sẽ tự động lưu vào đây.')}</p>
           </div>
         `}
       </div>
 
       ${allRecords.length > 0 ? `
-        <div class="vault-history-section">
+        <div class="vault-history-section" style="margin-top: 18px;">
           <h3 class="vault-section-title">${t('vault.active_registry', undefined, 'Active Error Registry')}</h3>
           <div class="vault-records-list">
             ${allRecords.slice(0, 15).map(r => `
@@ -186,21 +212,7 @@ export class MistakeVault {
         </div>
       ` : ''}
 
-      <!-- Vietnamese L1 Transfer & Error Taxonomy Diagnostic -->
-      <div class="vault-l1-section" style="margin-top: 18px; padding: 14px; background: rgba(165,180,252,0.06); border: 1px solid var(--border-hairline); border-radius: var(--radius-squircle-sm, 10px);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-          <span class="vault-kicker" style="color: var(--accent-gold);">${t('vault.l1_kicker', undefined, 'VIETNAMESE EFL L1 TRANSFER DIAGNOSTIC')}</span>
-          <span class="hud-status-badge" style="background: var(--warning-soft); color: var(--warning); border: none;">${t('vault.l1_phenomena', undefined, '8 PHENOMENA')}</span>
-        </div>
-        <p style="font-size: var(--font-body-compact); color: var(--ink-secondary); margin-bottom: 12px; line-height: 1.45;">
-          ${t('vault.l1_desc', undefined, 'Systematic interlanguage tracking for suffix omission (-s/-ed), preposition calquing, aspect conflation (đã/rồi), and zero copula adjectives.')}
-        </p>
-        <button type="button" class="vault-btn-primary btn-start-l1-loop" style="width: 100%; justify-content: center; background: rgba(165,180,252,0.15); color: var(--accent-gold); border: 1px solid var(--border-subtle); border-radius: var(--radius-btn, 10px); min-height: 44px; font-weight: 700;">
-          ${t('vault.l1_start', undefined, '🎯 Start Vietnamese L1 Targeted Remediation Loop')}
-        </button>
-      </div>
-
-      <div class="apple-modal-footer">
+      <div class="apple-modal-footer" style="margin-top: 18px;">
         <button type="button" class="apple-bottom-close-btn btn-modal-close" aria-label="${t('common.close', undefined, 'Close')}">
           ${t('common.close', undefined, 'Close')}
         </button>
@@ -239,8 +251,8 @@ export class MistakeVault {
     container.innerHTML = `
       <div class="vault-header">
         <div class="vault-title-group">
-          <span class="vault-kicker">RECOVERY BLITZ // STAGE: ${drill.stage.toUpperCase()}</span>
-          <h2 class="vault-title">Rehabilitation Drill</h2>
+          <span class="vault-kicker">${t('vault.recovery_blitz_kicker', { stage: drill.stage.toUpperCase() }, `RECOVERY BLITZ // STAGE: ${drill.stage.toUpperCase()}`)}</span>
+          <h2 class="vault-title">${t('vault.rehab_drill_title', undefined, 'Rehabilitation Drill')}</h2>
         </div>
         <div class="vault-timer-badge"><span class="timer-count">${this.remainingSeconds}</span>s</div>
       </div>
@@ -333,10 +345,11 @@ export class MistakeVault {
     if (result.success) {
       HapticEngine.trigger(result.graduated ? 'success' : 'light');
       AudioSynthesizer.play('chime');
+      ProgressionEngine.addXP(20);
       if (feedbackMount) {
         feedbackMount.innerHTML = `
           <div class="drill-result-banner is-success">
-            <b>✓ CORRECT!</b> ${result.feedback}
+            <b>${t('vault.correct_xp', { xp: 20 }, '✓ CORRECT (+20 XP)!')}</b> ${result.feedback}
           </div>
         `;
       }
@@ -346,7 +359,7 @@ export class MistakeVault {
       if (feedbackMount) {
         feedbackMount.innerHTML = `
           <div class="drill-result-banner is-failure">
-            <b>✗ REVISION NEEDED:</b> Correct: "${this.activeRecord.expectedOutput}". Interval reset.
+            <b>${t('vault.revision_needed', undefined, '✗ REVISION NEEDED:')}</b> Correct: "${this.activeRecord.expectedOutput}". Interval reset.
           </div>
         `;
       }
@@ -369,19 +382,22 @@ export class MistakeVault {
     const drills = L1VietnameseDiagnosticEngine.getRemediationDrills();
     if (drillIdx >= drills.length) {
       AudioSynthesizer.play('stage-fanfare');
+      ProgressionEngine.addXP(50);
       container.innerHTML = `
         <div class="vault-header">
           <div class="vault-title-group">
-            <span class="vault-kicker">L1 TRANSFER REMEDIATION</span>
-            <h2 class="vault-title">Loop Complete!</h2>
+            <span class="vault-kicker">${t('vault.l1_transfer_kicker', undefined, 'L1 TRANSFER REMEDIATION')}</span>
+            <h2 class="vault-title">${t('vault.all_traps_cleared', { xp: 50 }, '🎉 Toàn bộ bẫy đã được phá giải (+50 XP)!')}</h2>
           </div>
         </div>
         <div style="padding: 24px; text-align: center;">
-          <div style="font-size: 48px; color: var(--good); margin-bottom: 12px;">✓</div>
-          <h3 style="color: var(--ink-primary); margin-bottom: 8px;">All 6 Contrastive L1 Drills Mastered</h3>
-          <p style="color: var(--ink-muted); margin-bottom: 24px;">Your Vietnamese interlanguage error patterns have been systematically recalibrated.</p>
-          <button type="button" class="vault-btn-primary btn-back-home" style="border-radius: var(--radius-btn, 10px); min-height: 44px; padding: 10px 20px;">
-            Back to Mistake Vault
+          <div style="font-size: 48px; color: var(--good, #22c55e); margin-bottom: 12px;">✓</div>
+          <h3 style="color: var(--ink-primary); margin-bottom: 8px;">${t('vault.mastered_l1_traps', undefined, 'Đã làm chủ 6 bẫy tư duy người Việt (L1)')}</h3>
+          <p style="color: var(--ink-muted); margin-bottom: 24px; font-size: var(--font-body-compact); line-height: 1.45;">
+            ${t('vault.remediation_complete_desc', undefined, 'Phản xạ ngôn ngữ của bạn đã được hiệu chỉnh: loại bỏ hoàn toàn các lỗi dịch thô discuss about, although... but, there have.')}
+          </p>
+          <button type="button" class="vault-btn-primary btn-back-home" style="border-radius: var(--radius-btn, 10px); min-height: 44px; padding: 10px 24px; font-weight: 700; background: var(--accent-gold); color: #000; border: none; cursor: pointer;">
+            ${t('vault.back_to_vault', undefined, '← Về Mistake Vault')}
           </button>
         </div>
       `;
@@ -391,38 +407,64 @@ export class MistakeVault {
 
     const drill = drills[drillIdx];
 
+    // One-touch 1-thumb choice options: alternate order predictably
+    const isFirstCorrect = drillIdx % 2 === 0;
+    const choiceOptions = isFirstCorrect
+      ? [drill.expectedCorrection, drill.faultySentence]
+      : [drill.faultySentence, drill.expectedCorrection];
+
     container.innerHTML = `
-      <div class="vault-header">
-        <div class="vault-title-group">
-          <span class="vault-kicker">L1 CONTRASTIVE DRILL [${drillIdx + 1} / ${drills.length}]</span>
-          <h2 class="vault-title">${drill.title}</h2>
+      <div class="vault-header" style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+        <div class="vault-title-group" style="min-width: 0; flex: 1;">
+          <span class="vault-kicker" style="color: var(--accent-gold);">⚡ L1 TRAP BREAKER [${drillIdx + 1} / ${drills.length}]</span>
+          <h2 class="vault-title" style="font-size: 15px; margin: 4px 0 0 0;">${drill.title}</h2>
         </div>
+        <span class="vault-timer-badge" style="font-size: 12px; font-weight: 700; color: var(--accent-cyan); background: rgba(56,189,248,0.1); padding: 4px 8px; border-radius: 6px;">+25 XP</span>
       </div>
 
       <div class="vault-drill-card" style="padding: 16px;">
-        <div class="drill-instructions" style="margin-bottom: 12px; font-weight: 600;">${drill.prompt}</div>
+        <div class="drill-instructions" style="margin-bottom: 12px; font-weight: 600; color: var(--ink-primary);">${drill.prompt}</div>
 
         <!-- Faulty sentence card -->
-        <div style="padding: 12px; background: rgba(248, 113, 113, 0.12); border-left: 3px solid var(--critical); border-radius: var(--radius-squircle-sm, 10px); margin-bottom: 12px; font-size: var(--font-body); color: var(--ink-primary);">
-          <strong>${t('vault.interlanguage_fault', undefined, 'Interlanguage Fault')}:</strong> "${drill.faultySentence}"
+        <div style="padding: 12px; background: rgba(248, 113, 113, 0.12); border-left: 3px solid var(--critical, #ef4444); border-radius: var(--radius-squircle-sm, 10px); margin-bottom: 12px; font-size: var(--font-body); color: var(--ink-primary);">
+          <strong style="color: var(--critical, #ef4444);">${t('vault.interlanguage_fault', undefined, 'Bẫy tiếng Việt (L1 Fault)')}:</strong> "${drill.faultySentence}"
         </div>
 
         <!-- Vietnamese contrastive root cause explanation -->
-        <div style="padding: 10px 12px; background: var(--bg-surface-sunk); border-radius: var(--radius-squircle-sm, 10px); margin-bottom: 16px; font-size: var(--font-kicker); line-height: 1.5; color: var(--ink-secondary);">
-          <strong style="color: var(--accent-gold);">💡 ${t('vault.l1_root_cause', undefined, 'L1 Root Cause')}:</strong> ${drill.contrastiveAnalysis}
+        <div style="padding: 10px 12px; background: var(--bg-surface-sunk, rgba(0,0,0,0.25)); border-radius: var(--radius-squircle-sm, 10px); margin-bottom: 16px; font-size: var(--font-kicker); line-height: 1.5; color: var(--ink-secondary);">
+          <strong style="color: var(--accent-gold);">💡 ${t('vault.l1_root_cause', undefined, 'Nguyên nhân nhầm')}:</strong> ${drill.contrastiveAnalysis}
         </div>
 
-        <div class="drill-input-group" style="display: flex; gap: 8px;">
-          <input type="text" class="vault-text-input l1-input" placeholder="${t('vault.input_l1_placeholder', undefined, 'Type the corrected sentence here...')}" autofocus style="min-height: 44px; flex: 1; padding: 0 12px; border-radius: var(--radius-btn, 10px);" />
-          <button type="button" class="vault-btn-submit btn-verify-l1" style="min-height: 44px; border-radius: var(--radius-btn, 10px); padding: 0 16px;">${icon('check', 16)} ${t('common.verify', undefined, 'Verify')}</button>
+        <!-- 1-Thumb One-Touch Choice Options -->
+        <div class="drill-options-grid" style="margin-bottom: 14px; display: grid; gap: 8px;">
+          <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-gold); letter-spacing: 0.05em; text-transform: uppercase;">
+            CHỌN CÂU CHUẨN XÁC BẢN XỨ (ONE-TOUCH):
+          </div>
+          ${choiceOptions.map((opt, optIdx) => `
+            <button type="button" class="vault-option-btn l1-option-btn" data-val="${opt}" style="min-height: 48px; border-radius: var(--radius-btn, 10px); padding: 10px 14px; font-size: var(--font-body-compact); text-align: left; display: flex; align-items: center; gap: 10px; line-height: 1.4; border: 1px solid var(--border-subtle); background: var(--bg-card); color: var(--ink-primary); cursor: pointer; touch-action: manipulation;">
+              <span style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 6px; background: rgba(255,255,255,0.06); font-weight: 700; font-size: 11px; flex-shrink: 0; color: var(--ink-secondary);">
+                ${String.fromCharCode(65 + optIdx)}
+              </span>
+              <span style="flex: 1;">${opt}</span>
+            </button>
+          `).join('')}
         </div>
+
+        <!-- Optional keyboard text input for desktop learners -->
+        <details style="margin-top: 8px; margin-bottom: 12px;">
+          <summary style="font-size: 12px; color: var(--ink-muted); cursor: pointer; padding: 4px 0;">${t('vault.keyboard_mode_summary', undefined, 'Hoặc tự gõ câu sửa (Keyboard mode)...')}</summary>
+          <div class="drill-input-group" style="display: flex; gap: 8px; margin-top: 8px;">
+            <input type="text" class="vault-text-input l1-input" placeholder="${t('vault.input_l1_placeholder', undefined, 'Gõ câu tiếng Anh chuẩn xác...')}" style="min-height: 44px; flex: 1; padding: 0 12px; border-radius: var(--radius-btn, 10px); background: var(--bg-card); border: 1px solid var(--border-subtle); color: var(--ink-primary);" />
+            <button type="button" class="vault-btn-submit btn-verify-l1" style="min-height: 44px; border-radius: var(--radius-btn, 10px); padding: 0 16px; background: var(--accent-gold); color: #000; font-weight: 700; border: none; cursor: pointer;">${icon('check', 16)} ${t('common.verify', undefined, 'Kiểm tra')}</button>
+          </div>
+        </details>
 
         <div class="l1-feedback-mount" style="min-height: 24px; margin-top: 14px;"></div>
       </div>
 
       <div class="apple-modal-footer" style="margin-top: 14px;">
         <button type="button" class="apple-bottom-close-btn btn-exit-l1" aria-label="${t('vault.exit_drill', undefined, 'Exit Drill')}">
-          ${t('vault.return_to_vault', undefined, 'Return to Vault')}
+          ${t('vault.return_to_vault', undefined, 'Quay lại Mistake Vault')}
         </button>
       </div>
     `;
@@ -434,10 +476,7 @@ export class MistakeVault {
 
     exitBtn?.addEventListener('click', () => this.renderHome(container));
 
-    const checkAnswer = () => {
-      const typed = (inputEl?.value || '').trim();
-      if (!typed) return;
-
+    const handleEvaluation = (userAnswer: string) => {
       const normalizeInput = (str: string) => str
         .toLowerCase()
         .replace(/[’‘]/g, "'")
@@ -446,25 +485,26 @@ export class MistakeVault {
         .replace(/\s+/g, ' ')
         .trim();
 
-      const normTyped = normalizeInput(typed);
+      const normTyped = normalizeInput(userAnswer);
       const normTarget = normalizeInput(drill.expectedCorrection);
 
       // Defensively accept exact match or semantically equivalent paraphrase with L1 error resolved
       const isExact = normTyped === normTarget;
       const isParaphrase = !isExact &&
-        SemanticParaphraseEvaluator.evaluate(drill.expectedCorrection, typed).isAcceptableParaphrase &&
-        !L1VietnameseDiagnosticEngine.analyzeSentence(typed).some(f => f.type === drill.type);
+        SemanticParaphraseEvaluator.evaluate(drill.expectedCorrection, userAnswer).isAcceptableParaphrase &&
+        !L1VietnameseDiagnosticEngine.analyzeSentence(userAnswer).some(f => f.type === drill.type);
 
       if (isExact || isParaphrase) {
         AudioSynthesizer.play('chime');
         HapticEngine.trigger('success');
+        ProgressionEngine.addXP(25);
         if (feedbackMount) {
           feedbackMount.innerHTML = `
-            <div style="padding: 12px; background: var(--good-soft); border-left: 3px solid var(--good); border-radius: 6px; color: var(--ink-good); font-size: var(--font-body-compact); margin-bottom: 10px;">
-              <b>${t('vault.drill_correct', undefined, '✓ CORRECT!')}</b> ${drill.vietnameseExplanation}
+            <div style="padding: 12px; background: var(--good-soft, rgba(34,197,94,0.12)); border-left: 3px solid var(--good, #22c55e); border-radius: 6px; color: var(--ink-good, #22c55e); font-size: var(--font-body-compact); margin-bottom: 10px; line-height: 1.45;">
+              <b>${t('vault.correct_xp', { xp: 25 }, '✓ CHÍNH XÁC (+25 XP)!')}</b> ${drill.vietnameseExplanation}
             </div>
-            <button type="button" class="vault-btn-primary btn-next-l1" style="width: 100%; justify-content: center; border-radius: var(--radius-btn, 10px); min-height: 44px; font-weight: 700;">
-              ${t('vault.next_drill', { current: drillIdx + 2, total: drills.length }, `Next Drill (${drillIdx + 2}/${drills.length}) →`)}
+            <button type="button" class="vault-btn-primary btn-next-l1" style="width: 100%; justify-content: center; border-radius: var(--radius-btn, 10px); min-height: 44px; font-weight: 700; background: var(--good, #22c55e); color: #000; border: none; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+              ${t('vault.next_drill', { current: drillIdx + 2, total: drills.length }, `Tiếp tục bài ${drillIdx + 2}/${drills.length} →`)}
             </button>
           `;
           container.querySelector('.btn-next-l1')?.addEventListener('click', () => {
@@ -476,13 +516,26 @@ export class MistakeVault {
         HapticEngine.trigger('warning');
         if (feedbackMount) {
           feedbackMount.innerHTML = `
-            <div style="padding: 12px; background: var(--critical-soft); border-left: 3px solid var(--critical); border-radius: 6px; color: var(--critical); font-size: var(--font-body-compact);">
-              <b>${t('vault.drill_incorrect', undefined, '✗ INCORRECT:')}</b> ${t('vault.standard_answer', undefined, 'Standard answer:')} "${drill.expectedCorrection}"
+            <div style="padding: 12px; background: var(--critical-soft, rgba(239,68,68,0.12)); border-left: 3px solid var(--critical, #ef4444); border-radius: 6px; color: var(--critical, #ef4444); font-size: var(--font-body-compact); line-height: 1.45;">
+              <b>${t('vault.l1_trap_caught', undefined, '✗ DÍNH BẪY TIẾNG VIỆT:')}</b> ${t('vault.standard_answer', undefined, 'Câu chuẩn bản xứ:')} "${drill.expectedCorrection}"
               <div style="margin-top: 4px; font-size: var(--font-kicker); color: var(--ink-secondary);">${drill.vietnameseExplanation}</div>
             </div>
           `;
         }
       }
+    };
+
+    container.querySelectorAll('.l1-option-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = btn.getAttribute('data-val') || '';
+        handleEvaluation(val);
+      });
+    });
+
+    const checkAnswer = () => {
+      const typed = (inputEl?.value || '').trim();
+      if (!typed) return;
+      handleEvaluation(typed);
     };
 
     inputEl?.addEventListener('keydown', (e) => {

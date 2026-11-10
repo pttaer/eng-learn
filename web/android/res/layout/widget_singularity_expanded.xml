@@ -83,7 +83,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@drawable/widget_folder_body"
-        android:padding="8dp"
+        android:padding="10dp"
         android:inAnimation="@android:anim/fade_in"
         android:outAnimation="@android:anim/fade_out">
 
@@ -166,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:layout_marginTop="1dp">
+                android:layout_marginTop="2dp">
 
                 <TextView
                     android:id="@+id/widget_word"
@@ -174,25 +174,26 @@
                     android:layout_height="wrap_content"
                     android:text="Ephemeral"
                     android:textColor="@color/widget_text_primary"
-                    android:textSize="19sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/widget_phonetic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginStart="9dp"
+                    android:letterSpacing="0.02"
                     android:text="/ɪˈfem.ər.əl/ • adj"
                     android:textColor="@color/widget_accent_primary"
-                    android:textSize="12sp" />
+                    android:textSize="13sp" />
             </LinearLayout>
 
             <!-- Dual Audio & Active Recall Utility Controls -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="4dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -201,13 +202,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/widget_btn_bg"
-                    android:paddingLeft="8dp"
-                    android:paddingTop="3dp"
-                    android:paddingRight="8dp"
-                    android:paddingBottom="3dp"
+                    android:paddingLeft="9dp"
+                    android:paddingTop="3.5dp"
+                    android:paddingRight="9dp"
+                    android:paddingBottom="3.5dp"
                     android:text="@string/widget_btn_audio_word"
                     android:textColor="@color/widget_accent_primary"
-                    android:textSize="11sp"
+                    android:textSize="11.5sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -217,13 +218,13 @@
                     android:layout_marginLeft="6dp"
                     android:layout_marginStart="6dp"
                     android:background="@drawable/widget_btn_bg"
-                    android:paddingLeft="8dp"
-                    android:paddingTop="3dp"
-                    android:paddingRight="8dp"
-                    android:paddingBottom="3dp"
+                    android:paddingLeft="9dp"
+                    android:paddingTop="3.5dp"
+                    android:paddingRight="9dp"
+                    android:paddingBottom="3.5dp"
                     android:text="@string/widget_btn_audio_sentence"
                     android:textColor="@color/widget_accent_primary"
-                    android:textSize="11sp"
+                    android:textSize="11.5sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -233,61 +234,41 @@
                     android:layout_marginLeft="6dp"
                     android:layout_marginStart="6dp"
                     android:background="@drawable/widget_btn_bg"
-                    android:paddingLeft="8dp"
-                    android:paddingTop="3dp"
-                    android:paddingRight="8dp"
-                    android:paddingBottom="3dp"
+                    android:paddingLeft="9dp"
+                    android:paddingTop="3.5dp"
+                    android:paddingRight="9dp"
+                    android:paddingBottom="3.5dp"
                     android:text="@string/widget_btn_recall_hide"
                     android:textColor="@color/widget_text_secondary"
-                    android:textSize="11sp"
+                    android:textSize="11.5sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <!-- Definition Block -->
-            <TextView
-                android:id="@+id/widget_label_def"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:letterSpacing="0.08"
-                android:text="@string/widget_def_label"
-                android:textColor="@color/widget_text_muted"
-                android:textSize="11sp"
-                android:textStyle="bold" />
-
+            <!-- Definition Block (Crisp & High Contrast for Learning) -->
             <TextView
                 android:id="@+id/widget_meaning"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="5dp"
                 android:ellipsize="end"
-                android:maxLines="2"
+                android:lineSpacingExtra="3dp"
+                android:maxLines="4"
                 android:text="Lasting for only a short period of time; fleeting or transient."
                 android:textColor="@color/widget_text_primary"
-                android:textSize="12sp" />
+                android:textSize="13sp" />
 
             <!-- Example Sentence Block -->
-            <TextView
-                android:id="@+id/widget_label_example"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:letterSpacing="0.08"
-                android:text="@string/widget_ex_label"
-                android:textColor="@color/widget_text_muted"
-                android:textSize="11sp"
-                android:textStyle="bold" />
-
             <TextView
                 android:id="@+id/widget_example"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="4dp"
                 android:ellipsize="end"
+                android:lineSpacingExtra="2.5dp"
                 android:maxLines="2"
                 android:text="“Fame in the digital era is intensely ephemeral, vanishing as swiftly as it emerges.”"
                 android:textColor="@color/widget_text_secondary"
-                android:textSize="11.5sp"
+                android:textSize="12sp"
                 android:textStyle="italic" />
 
             <!-- Collocations & Synonyms Tag Block -->
@@ -295,22 +276,23 @@
                 android:id="@+id/widget_tags_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/widget_tag_bg"
-                android:paddingLeft="8dp"
-                android:paddingTop="3.5dp"
-                android:paddingRight="8dp"
-                android:paddingBottom="3.5dp">
+                android:paddingLeft="9dp"
+                android:paddingTop="4dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="4dp">
 
                 <TextView
                     android:id="@+id/widget_tags"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
+                    android:lineSpacingExtra="2dp"
                     android:maxLines="2"
                     android:text="Collocations: ephemeral nature, ephemeral pleasure  •  Synonyms: transient, fleeting"
                     android:textColor="@color/widget_accent_primary"
-                    android:textSize="11sp" />
+                    android:textSize="11.5sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -391,28 +373,28 @@
                 android:id="@+id/widget_quiz_prompt_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="3dp"
                 android:letterSpacing="0.08"
                 android:text="@string/widget_quiz_prompt"
                 android:textColor="@color/widget_text_muted"
-                android:textSize="10.5sp"
+                android:textSize="11sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/widget_quiz_question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="2dp"
                 android:text="Ephemeral"
                 android:textColor="@color/widget_text_primary"
-                android:textSize="17.5sp"
+                android:textSize="18.5sp"
                 android:textStyle="bold" />
 
             <!-- Options Container -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="6dp"
                 android:orientation="vertical">
 
                 <!-- Option A -->
@@ -422,20 +404,21 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
                     android:background="@drawable/widget_btn_bg"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="5dp">
+                    android:paddingLeft="12dp"
+                    android:paddingTop="6.5dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="6.5dp">
 
                     <TextView
                         android:id="@+id/widget_quiz_opt_text_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
+                        android:lineSpacingExtra="1.5dp"
                         android:maxLines="2"
                         android:text="A. Fleeting or transient"
                         android:textColor="@color/widget_text_primary"
-                        android:textSize="11.5sp" />
+                        android:textSize="12sp" />
                 </RelativeLayout>
 
                 <!-- Option B -->
@@ -445,20 +428,21 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
                     android:background="@drawable/widget_btn_bg"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="5dp">
+                    android:paddingLeft="12dp"
+                    android:paddingTop="6.5dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="6.5dp">
 
                     <TextView
                         android:id="@+id/widget_quiz_opt_text_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
+                        android:lineSpacingExtra="1.5dp"
                         android:maxLines="2"
                         android:text="B. Present everywhere"
                         android:textColor="@color/widget_text_primary"
-                        android:textSize="11.5sp" />
+                        android:textSize="12sp" />
                 </RelativeLayout>
 
                 <!-- Option C -->
@@ -467,20 +451,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/widget_btn_bg"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="5dp">
+                    android:paddingLeft="12dp"
+                    android:paddingTop="6.5dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="6.5dp">
 
                     <TextView
                         android:id="@+id/widget_quiz_opt_text_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
+                        android:lineSpacingExtra="1.5dp"
                         android:maxLines="2"
                         android:text="C. Make less severe"
                         android:textColor="@color/widget_text_primary"
-                        android:textSize="11.5sp" />
+                        android:textSize="12sp" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -492,14 +477,15 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/widget_tag_bg"
                 android:ellipsize="end"
+                android:lineSpacingExtra="2dp"
                 android:maxLines="2"
-                android:paddingLeft="8dp"
-                android:paddingTop="4dp"
-                android:paddingRight="8dp"
-                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
                 android:text="@string/widget_quiz_hint"
                 android:textColor="@color/widget_accent_primary"
-                android:textSize="11sp" />
+                android:textSize="11.5sp" />
         </LinearLayout>
 
         <!-- TAB 3: 🎯 Quests -->
@@ -572,10 +558,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/widget_btn_bg"
-                android:paddingLeft="10dp"
-                android:paddingTop="6dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="6dp">
+                android:paddingLeft="12dp"
+                android:paddingTop="7dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="7dp">
 
                 <TextView
                     android:id="@+id/widget_quest_title_1"
@@ -586,7 +572,7 @@
                     android:layout_centerVertical="true"
                     android:text="✔  15 SRS Cards Reviewed"
                     android:textColor="@color/widget_accent_primary"
-                    android:textSize="11.5sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -598,7 +584,7 @@
                     android:layout_centerVertical="true"
                     android:text="Done (+50 XP)"
                     android:textColor="@color/widget_text_muted"
-                    android:textSize="11sp" />
+                    android:textSize="11.5sp" />
             </RelativeLayout>
 
             <!-- Quest Item 2: Pending -->
@@ -608,10 +594,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/widget_btn_bg"
-                android:paddingLeft="10dp"
-                android:paddingTop="6dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="6dp">
+                android:paddingLeft="12dp"
+                android:paddingTop="7dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="7dp">
 
                 <TextView
                     android:id="@+id/widget_quest_title_2"
@@ -622,7 +608,7 @@
                     android:layout_centerVertical="true"
                     android:text="○  1 Franklin Rhetorical Copywork"
                     android:textColor="@color/widget_text_primary"
-                    android:textSize="11.5sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/widget_quest_status_2"
@@ -633,7 +619,7 @@
                     android:layout_centerVertical="true"
                     android:text="Start →"
                     android:textColor="@color/widget_accent_primary"
-                    android:textSize="11sp"
+                    android:textSize="11.5sp"
                     android:textStyle="bold" />
             </RelativeLayout>
 
@@ -643,10 +629,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/widget_btn_bg"
-                android:paddingLeft="10dp"
-                android:paddingTop="6dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="6dp">
+                android:paddingLeft="12dp"
+                android:paddingTop="7dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="7dp">
 
                 <TextView
                     android:id="@+id/widget_quest_title_3"
@@ -657,7 +643,7 @@
                     android:layout_centerVertical="true"
                     android:text="○  1 Examiner Speaking Simulation"
                     android:textColor="@color/widget_text_primary"
-                    android:textSize="11.5sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/widget_quest_status_3"
@@ -668,7 +654,7 @@
                     android:layout_centerVertical="true"
                     android:text="Start →"
                     android:textColor="@color/widget_accent_primary"
-                    android:textSize="11sp"
+                    android:textSize="11.5sp"
                     android:textStyle="bold" />
             </RelativeLayout>
         </LinearLayout>
@@ -704,14 +690,14 @@
                     android:layout_weight="1"
                     android:background="@drawable/widget_btn_bg"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="9dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/widget_pillar_reading"
                         android:textColor="@color/widget_text_primary"
-                        android:textSize="12sp"
+                        android:textSize="13sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -732,14 +718,14 @@
                     android:layout_weight="1"
                     android:background="@drawable/widget_btn_bg"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="9dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/widget_pillar_writing"
                         android:textColor="@color/widget_text_primary"
-                        android:textSize="12sp"
+                        android:textSize="13sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -766,14 +752,14 @@
                     android:layout_weight="1"
                     android:background="@drawable/widget_btn_bg"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="9dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/widget_pillar_listening"
                         android:textColor="@color/widget_text_primary"
-                        android:textSize="12sp"
+                        android:textSize="13sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -794,14 +780,14 @@
                     android:layout_weight="1"
                     android:background="@drawable/widget_btn_bg"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="9dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/widget_pillar_speaking"
                         android:textColor="@color/widget_text_primary"
-                        android:textSize="12sp"
+                        android:textSize="13sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -822,11 +808,11 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/widget_tab_active_bg"
                 android:gravity="center"
-                android:paddingTop="7dp"
-                android:paddingBottom="7dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="@string/widget_btn_launch_ielts"
                 android:textColor="@color/widget_accent_primary"
-                android:textSize="11.5sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </ViewFlipper>
@@ -855,13 +841,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/widget_btn_bg"
-            android:paddingLeft="12dp"
-            android:paddingTop="5dp"
-            android:paddingRight="12dp"
-            android:paddingBottom="5dp"
+            android:paddingLeft="14dp"
+            android:paddingTop="5.5dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="5.5dp"
             android:text="@string/widget_btn_study"
             android:textColor="@color/widget_text_primary"
-            android:textSize="11sp"
+            android:textSize="11.5sp"
             android:textStyle="bold" />
 
         <TextView
@@ -871,12 +857,14 @@
             android:layout_marginLeft="6dp"
             android:layout_marginStart="6dp"
             android:background="@drawable/widget_btn_bg"
-            android:paddingLeft="12dp"
-            android:paddingTop="5dp"
-            android:paddingRight="12dp"
-            android:paddingBottom="5dp"
+            android:paddingLeft="14dp"
+            android:paddingTop="5.5dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="5.5dp"
             android:text="@string/widget_btn_ielts"
             android:textColor="@color/widget_accent_primary"
+            android:textSize="11.5sp"
+            android:textStyle="bold" />
             android:textSize="11sp"
             android:textStyle="bold" />
     </LinearLayout>

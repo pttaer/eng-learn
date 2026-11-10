@@ -24,7 +24,10 @@ export type L1FaultType =
   | 'ZERO_COPULA_ADJECTIVE'
   | 'TOPIC_COMMENT_DUAL_CONJUNCTIONS'
   | 'THERE_HAVE_EXISTENTIAL'
-  | 'PLURAL_MASS_COUNT';
+  | 'PLURAL_MASS_COUNT'
+  | 'FALSE_FRIEND_POLYSEMY'
+  | 'CRAM_TEMPLATE_CLICHE'
+  | 'PRAGMATIC_OVER_BLUNTNESS';
 
 export interface L1PatternDefinition {
   type: L1FaultType;
@@ -155,6 +158,44 @@ export const L1_TAXONOMY: Record<L1FaultType, L1PatternDefinition> = {
       { bad: 'New modern equipments.', good: 'New modern equipment.' }
     ],
     diagnosticRegex: /\b(informations|advices|equipments|furnitures|homeworks|feedbacks|evidences)\b/i
+  },
+
+  FALSE_FRIEND_POLYSEMY: {
+    type: 'FALSE_FRIEND_POLYSEMY',
+    title: 'Polysemy Mismatch (open light / play with friends / convenient)',
+    vietnameseRootCause: 'Dịch máy móc từ đa nghĩa tiếng Việt (mở điện -> open the light; chơi với bạn -> play with friends; bạn có tiện không -> are you convenient?).',
+    linguisticExplanation: 'Direct polysemy transfer. Vietnamese "mở" covers both physical doors and electrical appliances ("turn on"). Adult social interaction uses "hang out", not "play". Adjectives like "convenient" take situational subjects ("Is it convenient for you?").',
+    commonExamples: [
+      { bad: 'Please open the air-conditioner.', good: 'Please turn on the air-conditioner.' },
+      { bad: 'I play with my coworkers on weekends.', good: 'I hang out with my colleagues on weekends.' },
+      { bad: 'Are you convenient tomorrow?', good: 'Is tomorrow convenient for you?' }
+    ],
+    diagnosticRegex: /\b(open\s+(the\s+)?(light|lamp|tv|computer|air-conditioner|fan|radio)|play\s+with\s+(my\s+)?(friends|coworkers|colleagues|adults)|you\s+are\s+convenient)\b/i
+  },
+
+  CRAM_TEMPLATE_CLICHE: {
+    type: 'CRAM_TEMPLATE_CLICHE',
+    title: 'Cram-School Template Addiction ("Học vẹt" Cliché)',
+    vietnameseRootCause: 'Thói quen học thuộc lòng các cụm từ sáo rỗng từ lò luyện thi (every coin has two sides, plays an indispensable role, in this day and age).',
+    linguisticExplanation: 'Overuse of memorized cram-school idioms and formulaic padding that Band 7+ examiners actively penalize for lack of precision and authentic register.',
+    commonExamples: [
+      { bad: 'Internet plays an indispensable role in our society.', good: 'The internet is fundamental to modern communication.' },
+      { bad: 'Every coin has two sides.', good: 'This policy entails significant structural trade-offs.' },
+      { bad: 'In this day and age, science is growing.', good: 'In contemporary research, scientific advancement is accelerating.' }
+    ],
+    diagnosticRegex: /\b(play(s|ed|ing)?\s+(an?\s+)?(indispensable|vital)\s+role|every\s+coin\s+has\s+two\s+sides|a\s+double-edged\s+sword|in\s+this\s+day\s+and\s+age|in\s+a\s+nutshell)\b/i
+  },
+
+  PRAGMATIC_OVER_BLUNTNESS: {
+    type: 'PRAGMATIC_OVER_BLUNTNESS',
+    title: 'Pragmatic Bluntness & Missing Modal Softening',
+    vietnameseRootCause: 'Tiếng Việt biểu đạt lễ phép qua đại từ xưng hô (em, thầy) và tiểu từ cuối câu (ạ, dạ). Khi dịch thô sang tiếng Anh mà bỏ qua khiếm khuyết động từ tình thái (Could you/Would you mind), câu trở nên thô lỗ hoặc ra lệnh.',
+    linguisticExplanation: 'Translating Vietnamese deference particles without English epistemic modal softening results in harsh imperative commands in professional contexts.',
+    commonExamples: [
+      { bad: 'I want you to send me the report now.', good: 'Could you please forward the report when you have a moment?' },
+      { bad: 'You must answer me quickly.', good: 'We would appreciate a prompt response.' }
+    ],
+    diagnosticRegex: /\b(i\s+want\s+you\s+to\s+(send|give|do|tell|come)|you\s+must\s+(give|send|answer)\s+me)\b/i
   }
 };
 
@@ -238,6 +279,36 @@ const REMEDIATION_BANK: RemediationDrill[] = [
     expectedCorrection: 'The whistleblower provided critical information regarding the offshore transactions.',
     vietnameseExplanation: '"Information" là danh từ không đếm được (uncountable), không bao giờ có đuôi số nhiều "-s".',
     contrastiveAnalysis: 'Tiếng Việt đếm "nhiều thông tin", nhưng tiếng Anh coi "information" là khối lượng trừu tượng (mass noun).'
+  },
+  {
+    id: 'rem-polysemy-1',
+    type: 'FALSE_FRIEND_POLYSEMY',
+    title: 'Polysemy: "Open" vs "Turn on"',
+    prompt: 'Correct the mechanical translation of "mở điện":',
+    faultySentence: 'Before leaving the conference room, please open the air-conditioner.',
+    expectedCorrection: 'Before leaving the conference room, please turn on the air-conditioner.',
+    vietnameseExplanation: 'Thiết bị điện tử (air-conditioner, light, fan) dùng "turn on / switch on", không dùng "open" (chỉ dùng cho cửa, nắp hộp, mắt).',
+    contrastiveAnalysis: 'Tiếng Việt dùng từ "mở" cho cả mở cửa lẫn bật điện, nhưng tiếng Anh phân biệt rạch ròi cơ học và mạch điện.'
+  },
+  {
+    id: 'rem-cram-cliche-1',
+    type: 'CRAM_TEMPLATE_CLICHE',
+    title: 'De-Slop: Replacing "Plays an Indispensable Role"',
+    prompt: 'Replace the cram-school cliché with an active academic verb:',
+    faultySentence: 'Digital infrastructure plays an indispensable role in economic resilience.',
+    expectedCorrection: 'Digital infrastructure underpins economic resilience.',
+    vietnameseExplanation: 'Thay thế cụm từ rườm rà "plays an indispensable role in" bằng động từ học thuật cô đọng "underpins" hoặc "is fundamental to".',
+    contrastiveAnalysis: 'Lò luyện thi thường nhồi nhét cấu trúc dài dòng để đếm chữ, trong khi chuẩn viết học thuật Band 8.5+ đánh giá cao tính súc tích và từ động từ mạnh.'
+  },
+  {
+    id: 'rem-bluntness-1',
+    type: 'PRAGMATIC_OVER_BLUNTNESS',
+    title: 'Pragmatic Softening & Modal Hedging',
+    prompt: 'Soften the blunt imperative into a professional request:',
+    faultySentence: 'I want you to send me the quarterly financial audit report immediately.',
+    expectedCorrection: 'Could you please forward the quarterly financial audit report when you have a moment?',
+    vietnameseExplanation: 'Trong giao tiếp chuyên nghiệp, tránh dùng "I want you to" (mang tính ra lệnh). Dùng cấu trúc giảm nhẹ "Could you please..." hoặc "Would you mind...".',
+    contrastiveAnalysis: 'Tiếng Việt dùng từ xưng hô tôn trọng để tỏ ý lễ phép, nhưng tiếng Anh bắt buộc phải dùng động từ tình thái (modal softening).'
   }
 ];
 

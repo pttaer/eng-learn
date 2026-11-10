@@ -6,6 +6,7 @@
  */
 
 import { icon } from '../utils/icons';
+import { illustration } from '../utils/illustrations';
 import { ProgressionEngine, ProgressionState, LevelInfo } from '../core/progression-engine';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { achievementsHtml } from '../core/achievements-card';
@@ -149,6 +150,12 @@ export class ProgressionModal {
               ${t('rpg.completed_status', { completed: completedQuests, total: state.quests.length }, `${completedQuests} / ${state.quests.length} COMPLETED`)}
             </div>
           </div>
+
+          ${allCompleted ? `
+            <div class="app-illustration-wrap" style="margin: var(--space-8, 8px) 0;">
+              ${illustration('special-occasion', { size: 'compact', ariaLabel: t('rpg.all_quests_completed', undefined, 'All daily quests completed!') })}
+            </div>
+          ` : ''}
 
           <div class="progression-quest-list">
             ${state.quests.map((quest) => {

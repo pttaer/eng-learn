@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.ConsoleMessage;
@@ -23,6 +24,7 @@ import org.json.JSONObject;
 public class MainActivity extends Activity {
     private static final String TAG = "ES-WEB";
     private static final int FILE_REQUEST = 1001;
+    private static final int PERMISSION_REQUEST_NOTIFICATIONS = 102;
 
     private WebView webView;
     private ValueCallback<Uri[]> filePathCallback;
@@ -50,6 +52,9 @@ public class MainActivity extends Activity {
                 if (obj.has("locale")) {
                     editor.putString("app_locale", obj.optString("locale", "en"));
                 }
+                if (obj.has("words")) {
+                    editor.putString(SingularityWidgetProvider.PREF_CUSTOM_WORDS_JSON, obj.getJSONArray("words").toString());
+                }
                 if (obj.has("word")) {
                     editor.putString(SingularityWidgetProvider.PREF_WORD, obj.optString("word"));
                     editor.putString(SingularityWidgetProvider.PREF_PHONETIC, obj.optString("phonetic", ""));
@@ -71,6 +76,16 @@ public class MainActivity extends Activity {
         }
 
         @JavascriptInterface
+        public int consumeWidgetQuizScore() {
+            SharedPreferences prefs = getSharedPreferences(SingularityWidgetProvider.PREFS_NAME, Context.MODE_PRIVATE);
+            int score = prefs.getInt(SingularityWidgetProvider.PREF_QUIZ_SCORE, 0);
+            if (score > 0) {
+                prefs.edit().putInt(SingularityWidgetProvider.PREF_QUIZ_SCORE, 0).apply();
+            }
+            return score;
+        }
+
+        @JavascriptInterface
         public void postNotification(String title, String body, String route) {
             NotificationHelper.showNotification(MainActivity.this, title, body, route);
         }
@@ -85,6 +100,41 @@ public class MainActivity extends Activity {
             } catch (Exception ignored) {}
             NotificationHelper.scheduleNotification(MainActivity.this, title, body, route, delayMs);
         }
+
+        @JavascriptInterface
+        public void requestNotificationPermission() {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    checkAndRequestNotificationPermission();
+                }
+            });
+        }
+
+        @JavascriptInterface
+        public boolean hasNotificationPermission() {
+            if (Build.VERSION.SDK_INT >= 33) {
+                return checkSelfPermission("android.permission.POST_NOTIFICATIONS") == android.content.pm.PackageManager.PERMISSION_GRANTED;
+            }
+            return true;
+        }
+
+        @JavascriptInterface
+        public void openNotificationSettings() {
+            try {
+                Intent intent = new Intent();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    intent.setAction(android.provider.Settings.ACTION_APP_NOTIFICATION_SETTINGS);
+                    intent.putExtra(android.provider.Settings.EXTRA_APP_PACKAGE, getPackageName());
+                } else {
+                    intent.setAction(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                    intent.setData(Uri.parse("package:" + getPackageName()));
+                }
+                startActivity(intent);
+            } catch (Exception e) {
+                Log.e(TAG, "Error opening notification settings", e);
+            }
+        }
     }
 
     @Override
@@ -96,6 +146,9 @@ public class MainActivity extends Activity {
 
         webView = new WebView(this);
         setContentView(webView);
+
+        // Auto-request POST_NOTIFICATIONS on Android 13+ (API 33+) so notifications are never silently blocked
+        checkAndRequestNotificationPermission();
 
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
@@ -138,66 +191,113 @@ public class MainActivity extends Activity {
         });
 
         // Determine initial URL based on deep-link action or route extra
-        String initialUrl = "file:///android_asset/index.html";
-        Intent intent = getIntent();
-        if (intent != null) {
-            String routeExtra = intent.getStringExtra("route");
-            if (routeExtra != null && !routeExtra.isEmpty()) {
-                if (routeExtra.contains("ielts.html")) {
-                    initialUrl = "file:///android_asset/ielts.html" + (routeExtra.contains("#") ? routeExtra.substring(routeExtra.indexOf("#")) : "");
-                } else {
-                    initialUrl = "file:///android_asset/index.html" + (routeExtra.startsWith("#") ? routeExtra : ("#" + routeExtra));
-                }
-            } else if (intent.getAction() != null) {
-                if (SingularityWidgetProvider.ACTION_OPEN_VOCAB.equals(intent.getAction())) {
-                    initialUrl = "file:///android_asset/index.html#vocab";
-                } else if (SingularityWidgetProvider.ACTION_OPEN_IELTS.equals(intent.getAction())) {
-                    initialUrl = "file:///android_asset/ielts.html";
-                } else if (SingularityWidgetProvider.ACTION_OPEN_READING.equals(intent.getAction())) {
-                    initialUrl = "file:///android_asset/index.html#reading";
-                } else if (SingularityWidgetProvider.ACTION_OPEN_WRITING.equals(intent.getAction())) {
-                    initialUrl = "file:///android_asset/index.html#writing";
-                } else if (SingularityWidgetProvider.ACTION_OPEN_LISTENING.equals(intent.getAction())) {
-                    initialUrl = "file:///android_asset/index.html#listening";
-                } else if (SingularityWidgetProvider.ACTION_OPEN_SPEAKING.equals(intent.getAction())) {
-                    initialUrl = "file:///android_asset/index.html#speaking";
-                }
+        String initialUrl = resolveInitialUrl(getIntent());
+        webView.loadUrl(initialUrl);
+    }
+
+    private String resolveInitialUrl(Intent intent) {
+        boolean isIeltsPackage = getPackageName().contains("ielts");
+        String defaultPage = isIeltsPackage ? "ielts.html" : "index.html";
+        if (intent == null) return "file:///android_asset/" + defaultPage;
+        String routeExtra = intent.getStringExtra("route");
+        if (routeExtra != null && !routeExtra.isEmpty()) {
+            if (routeExtra.contains("ielts.html")) {
+                return "file:///android_asset/ielts.html" + (routeExtra.contains("#") ? routeExtra.substring(routeExtra.indexOf("#")) : "");
+            } else {
+                return "file:///android_asset/index.html" + (routeExtra.startsWith("#") ? routeExtra : ("#" + routeExtra));
             }
         }
+        String action = intent.getAction();
+        if (action != null) {
+            if (SingularityWidgetProvider.ACTION_OPEN_VOCAB.equals(action)) {
+                return "file:///android_asset/index.html#vocab";
+            } else if (SingularityWidgetProvider.ACTION_OPEN_IELTS.equals(action)) {
+                return "file:///android_asset/ielts.html";
+            } else if (SingularityWidgetProvider.ACTION_OPEN_HABITS.equals(action)) {
+                return "file:///android_asset/index.html#habits";
+            } else if (SingularityWidgetProvider.ACTION_OPEN_QUIZ.equals(action)) {
+                return "file:///android_asset/index.html#blitz";
+            } else if (SingularityWidgetProvider.ACTION_OPEN_READING.equals(action)) {
+                return "file:///android_asset/index.html#reading";
+            } else if (SingularityWidgetProvider.ACTION_OPEN_WRITING.equals(action)) {
+                return "file:///android_asset/index.html#writing";
+            } else if (SingularityWidgetProvider.ACTION_OPEN_LISTENING.equals(action)) {
+                return "file:///android_asset/index.html#listening";
+            } else if (SingularityWidgetProvider.ACTION_OPEN_SPEAKING.equals(action)) {
+                return "file:///android_asset/index.html#speaking";
+            } else if (SingularityWidgetProvider.ACTION_OPEN_TREE.equals(action)) {
+                return "file:///android_asset/index.html#tree";
+            }
+        }
+        return "file:///android_asset/" + defaultPage;
+    }
 
-        webView.loadUrl(initialUrl);
+    private void navigateToTarget(String targetPage, String targetHash) {
+        if (webView == null) return;
+        String currentUrl = webView.getUrl();
+        final String safeHash = targetHash != null ? targetHash : "";
+        if (currentUrl != null && currentUrl.contains(targetPage)) {
+            // Already inside the requested HTML bundle; execute instant client-side route transition
+            final String js = "try { " +
+                "var t = '" + safeHash.replace("'", "\\'") + "'; " +
+                "if (window.location.hash === t) { window.dispatchEvent(new Event('hashchange')); } " +
+                "else { window.location.hash = t; } " +
+                "} catch (e) { window.location.hash = '" + safeHash.replace("'", "\\'") + "'; }";
+            webView.post(new Runnable() {
+                @Override
+                public void run() {
+                    webView.evaluateJavascript(js, null);
+                }
+            });
+        } else {
+            // Different HTML file (e.g. index.html <-> ielts.html); perform full load
+            webView.loadUrl("file:///android_asset/" + targetPage + safeHash);
+        }
+    }
+
+    private void handleNavigationIntent(Intent intent) {
+        if (intent == null || webView == null) return;
+        String routeExtra = intent.getStringExtra("route");
+        if (routeExtra != null && !routeExtra.isEmpty()) {
+            if (routeExtra.contains("ielts.html")) {
+                String hash = routeExtra.contains("#") ? routeExtra.substring(routeExtra.indexOf("#")) : "";
+                navigateToTarget("ielts.html", hash);
+            } else {
+                String hash = routeExtra.startsWith("#") ? routeExtra : ("#" + routeExtra);
+                navigateToTarget("index.html", hash);
+            }
+            return;
+        }
+
+        String action = intent.getAction();
+        if (action != null) {
+            if (SingularityWidgetProvider.ACTION_OPEN_VOCAB.equals(action)) {
+                navigateToTarget("index.html", "#vocab");
+            } else if (SingularityWidgetProvider.ACTION_OPEN_IELTS.equals(action)) {
+                navigateToTarget("ielts.html", "");
+            } else if (SingularityWidgetProvider.ACTION_OPEN_HABITS.equals(action)) {
+                navigateToTarget("index.html", "#habits");
+            } else if (SingularityWidgetProvider.ACTION_OPEN_QUIZ.equals(action)) {
+                navigateToTarget("index.html", "#blitz");
+            } else if (SingularityWidgetProvider.ACTION_OPEN_READING.equals(action)) {
+                navigateToTarget("index.html", "#reading");
+            } else if (SingularityWidgetProvider.ACTION_OPEN_WRITING.equals(action)) {
+                navigateToTarget("index.html", "#writing");
+            } else if (SingularityWidgetProvider.ACTION_OPEN_LISTENING.equals(action)) {
+                navigateToTarget("index.html", "#listening");
+            } else if (SingularityWidgetProvider.ACTION_OPEN_SPEAKING.equals(action)) {
+                navigateToTarget("index.html", "#speaking");
+            } else if (SingularityWidgetProvider.ACTION_OPEN_TREE.equals(action)) {
+                navigateToTarget("index.html", "#tree");
+            }
+        }
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         setIntent(intent);
-        if (intent != null && webView != null) {
-            String routeExtra = intent.getStringExtra("route");
-            if (routeExtra != null && !routeExtra.isEmpty()) {
-                if (routeExtra.contains("ielts.html")) {
-                    webView.loadUrl("file:///android_asset/ielts.html" + (routeExtra.contains("#") ? routeExtra.substring(routeExtra.indexOf("#")) : ""));
-                } else {
-                    webView.loadUrl("file:///android_asset/index.html" + (routeExtra.startsWith("#") ? routeExtra : ("#" + routeExtra)));
-                }
-                return;
-            }
-            if (intent.getAction() != null) {
-                if (SingularityWidgetProvider.ACTION_OPEN_VOCAB.equals(intent.getAction())) {
-                    webView.loadUrl("file:///android_asset/index.html#vocab");
-                } else if (SingularityWidgetProvider.ACTION_OPEN_IELTS.equals(intent.getAction())) {
-                    webView.loadUrl("file:///android_asset/ielts.html");
-                } else if (SingularityWidgetProvider.ACTION_OPEN_READING.equals(intent.getAction())) {
-                    webView.loadUrl("file:///android_asset/index.html#reading");
-                } else if (SingularityWidgetProvider.ACTION_OPEN_WRITING.equals(intent.getAction())) {
-                    webView.loadUrl("file:///android_asset/index.html#writing");
-                } else if (SingularityWidgetProvider.ACTION_OPEN_LISTENING.equals(intent.getAction())) {
-                    webView.loadUrl("file:///android_asset/index.html#listening");
-                } else if (SingularityWidgetProvider.ACTION_OPEN_SPEAKING.equals(intent.getAction())) {
-                    webView.loadUrl("file:///android_asset/index.html#speaking");
-                }
-            }
-        }
+        handleNavigationIntent(intent);
     }
 
     @Override
@@ -223,6 +323,28 @@ public class MainActivity extends Activity {
         }
     }
 
+    private void checkAndRequestNotificationPermission() {
+        if (Build.VERSION.SDK_INT >= 33) {
+            if (checkSelfPermission("android.permission.POST_NOTIFICATIONS") != android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{"android.permission.POST_NOTIFICATIONS"}, PERMISSION_REQUEST_NOTIFICATIONS);
+            }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == PERMISSION_REQUEST_NOTIFICATIONS) {
+            if (grantResults.length > 0 && grantResults[0] == android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                NotificationHelper.createChannel(this);
+                NotificationHelper.scheduleCircadianCadence(this);
+                Log.d(TAG, "POST_NOTIFICATIONS granted by user");
+            } else {
+                Log.d(TAG, "POST_NOTIFICATIONS denied by user");
+            }
+        }
+    }
+
     @Override
     protected void onPause() {
         super.onPause();
@@ -235,5 +357,6 @@ public class MainActivity extends Activity {
         super.onResume();
         webView.onResume();
         NotificationHelper.cancelPendingReminders(this);
+        NotificationHelper.scheduleCircadianCadence(this);
     }
 }

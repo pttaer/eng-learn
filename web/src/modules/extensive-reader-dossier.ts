@@ -16,6 +16,7 @@ import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { AcousticHaptics } from '../core/acoustic-haptics';
+import { t } from '../core/i18n';
 import readingData from '../assets/data/reading.json';
 import lexiconData from '../assets/data/lexicon-dictionary.json';
 
@@ -95,7 +96,7 @@ export class ExtensiveReaderDossier {
 
   public render(): HTMLElement {
     if (this.articles.length === 0) {
-      this.container.innerHTML = '<div class="empty-state-notice">No extensive reading passages available.</div>';
+      this.container.innerHTML = `<div class="empty-state-notice">${t('reader.empty_passages', undefined, 'No extensive reading passages available.')}</div>`;
       return this.container;
     }
 
@@ -113,10 +114,10 @@ export class ExtensiveReaderDossier {
           </div>
           
           <div style="display: flex; align-items: center; gap: 8px;">
-            <button class="hud-btn btn-audio-play" style="padding: 6px 14px; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);" aria-label="Toggle Audio Read-Along">
-              ${this.isAudioPlaying ? '⏸ Pause Audio' : '▶ Listen (TTS)'}
+            <button class="hud-btn btn-audio-play" style="padding: 6px 14px; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);" aria-label="${t('reader.toggle_audio_aria', undefined, 'Toggle Audio Read-Along')}">
+              ${this.isAudioPlaying ? `⏸ ${t('reader.pause_audio', undefined, 'Pause Audio')}` : `▶ ${t('reader.listen_tts', undefined, 'Listen (TTS)')}`}
             </button>
-            <button class="hud-btn btn-speed-toggle" style="padding: 6px 10px; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px); font-family: var(--font-mono);" aria-label="Audio Speed">
+            <button class="hud-btn btn-speed-toggle" style="padding: 6px 10px; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px); font-family: var(--font-mono);" aria-label="${t('reader.audio_speed_aria', undefined, 'Audio Speed')}">
               ${this.currentSpeed}x
             </button>
           </div>
@@ -311,7 +312,7 @@ export class ExtensiveReaderDossier {
           <div style="font-size: var(--font-h4); font-weight: 700; color: var(--ink-primary);">${word} ${ipa ? `<span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--accent-gold); font-weight: 400;">${ipa}</span>` : ''}</div>
           <div style="font-size: var(--font-kicker); font-family: var(--font-mono); color: var(--accent-cyan, #38bdf8);">${pos ? `${pos} • ` : ''}CEFR ${this.activeLevel}</div>
         </div>
-        <button type="button" class="btn-popover-speak hud-btn" style="padding: 4px 8px; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);" title="Pronounce">
+        <button type="button" class="btn-popover-speak hud-btn" style="padding: 4px 8px; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);" title="${t('action.pronounce', undefined, 'Pronounce')}">
           🔊
         </button>
       </div>

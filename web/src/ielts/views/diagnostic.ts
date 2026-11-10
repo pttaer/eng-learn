@@ -5,6 +5,7 @@ import { esc, h } from '../ui';
 import { feedback } from '../../core/feedback';
 import { icon, IconName } from '../../utils/icons';
 import { t } from '../../core/i18n';
+import { illustration } from '../../utils/illustrations';
 
 function getSubTypeName(st: string): string {
   switch (st) {
@@ -42,17 +43,23 @@ export function diagnosticView(root: HTMLElement): () => void {
     container.innerHTML = '';
 
     // Hero Header
-    const header = h('div', 'ie-diag-header');
+    const header = h('div', 'app-hero-banner ie-diag-hero-banner');
     header.innerHTML = `
-      <div class="ie-diag-badge-row">
-        <span class="ie-pill ie-pill-accent">${t('diag.foundation_checkpoint', undefined, 'Foundation Checkpoint')}</span>
-        <span class="ie-pill ie-pill-neutral">${t('diag.checkpoint_meta', undefined, '20 Questions • 15 Mins')}</span>
+      <div class="app-hero-banner-content">
+        <div class="ie-diag-badge-row" style="margin-bottom: 4px;">
+          <span class="ie-pill ie-pill-accent">${t('diag.foundation_checkpoint', undefined, 'Foundation Checkpoint')}</span>
+          <span class="ie-pill ie-pill-neutral">${t('diag.checkpoint_meta', undefined, '20 Questions • 15 Mins')}</span>
+        </div>
+        <h1 class="ie-title" style="margin: 0; font-size: var(--font-h1); line-height: 1.25;">${t('diag.title', undefined, 'Grammar & Vocabulary Diagnostic')}</h1>
+        <p class="ie-lead ie-diag-lead" style="margin: 0; font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">
+          ${t('diag.lead', undefined, 'Identify and isolate high-frequency morphosyntactic and lexical flaws. Calibrated against IELTS band descriptors 5.5–8.5+.')}
+        </p>
       </div>
-      <h1 class="ie-title">${t('diag.title', undefined, 'Grammar & Vocabulary Diagnostic')}</h1>
-      <p class="ie-lead ie-diag-lead">
-        ${t('diag.lead', undefined, 'Identify and isolate high-frequency morphosyntactic and lexical flaws. Calibrated against IELTS band descriptors 5.5–8.5+.')}
-      </p>
+      <div class="app-hero-banner-art">
+        ${illustration('exam-prep', { size: 'banner', ariaLabel: 'Diagnostic Checkpoint' })}
+      </div>
     `;
+    header.style.marginBottom = 'var(--space-12, 12px)';
     container.append(header);
 
     // If already completed or showing results, render results dashboard
@@ -366,25 +373,25 @@ export function diagnosticView(root: HTMLElement): () => void {
       </div>
       <div class="ie-roadmap-grid">
         <div class="ie-roadmap-card">
-          <div class="ie-roadmap-step">Step 1</div>
+          <div class="ie-roadmap-step">${t('diag.step_n', { n: 1 }, 'Step 1')}</div>
           <h4>${t('diag.step1_title', undefined, 'Targeted Clausal & Morphosyntactic Drills')}</h4>
           <p>${t('diag.step1_desc', { vectors: lowestVectors }, `Prioritize remediation on your lowest scoring vectors (${lowestVectors}).`)}</p>
           <a class="ie-roadmap-link" href="#strategy">${t('diag.step1_link', undefined, 'Review Question Strategy & Traps →')}</a>
         </div>
         <div class="ie-roadmap-card">
-          <div class="ie-roadmap-step">Step 2</div>
+          <div class="ie-roadmap-step">${t('diag.step_n', { n: 2 }, 'Step 2')}</div>
           <h4>${t('diag.step2_title', undefined, 'Task 1 Visual Overview & Data Grouping')}</h4>
           <p>${t('diag.step2_desc', undefined, 'Master the Keino Campbell 2-Sentence Overview rule and practice grouping dynamic vs static datasets.')}</p>
           <a class="ie-roadmap-link" href="#writing">${t('diag.step2_link', undefined, 'Open Task 1 Formula Inspector →')}</a>
         </div>
         <div class="ie-roadmap-card">
-          <div class="ie-roadmap-step">Step 3</div>
+          <div class="ie-roadmap-step">${t('diag.step_n', { n: 3 }, 'Step 3')}</div>
           <h4>${t('diag.step3_title', undefined, 'Task 2 4-Sentence Paragraph Workbench')}</h4>
           <p>${t('diag.step3_desc', undefined, 'Compose essays using strictly 4 sentences per body paragraph (Topic -> Explanation -> Evidence -> Impact).')}</p>
           <a class="ie-roadmap-link" href="#writing">${t('diag.step3_link', undefined, 'Launch Paragraph Workbench →')}</a>
         </div>
         <div class="ie-roadmap-card">
-          <div class="ie-roadmap-step">Step 4</div>
+          <div class="ie-roadmap-step">${t('diag.step_n', { n: 4 }, 'Step 4')}</div>
           <h4>${t('diag.step4_title', undefined, 'Timed Mock Simulation & AES Feedback')}</h4>
           <p>${t('diag.step4_desc', undefined, 'Run full-length timed mock tests and evaluate clausal complexity (MLT, clausal density) in the AES Engine.')}</p>
           <a class="ie-roadmap-link" href="#mock">${t('diag.step4_link', undefined, 'Start Computer-Delivered Mock →')}</a>

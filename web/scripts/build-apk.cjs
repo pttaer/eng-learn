@@ -14,7 +14,11 @@ const ANDROID_SRC = path.join(WEB, 'android');
 const OUT = path.join(WEB, 'release', 'android');
 const BUILD = path.join(OUT, 'build');
 const DEX_CACHE = path.join(OUT, 'dex-cache');
-const APK = path.join(OUT, 'English-Singularity-debug.apk');
+
+const isIelts = process.argv.includes('--app=ielts');
+const APP_LABEL = isIelts ? 'IELTS-Cockpit' : 'English-Singularity';
+const MANIFEST = path.join(ANDROID_SRC, isIelts ? 'AndroidManifest-ielts.xml' : 'AndroidManifest.xml');
+const APK = path.join(OUT, `${APP_LABEL}-debug.apk`);
 
 const SDK = process.env.ANDROID_HOME || path.join(os.homedir(), 'AppData', 'Local', 'Android', 'Sdk');
 const BT = path.join(SDK, 'build-tools', '35.0.0');
@@ -100,7 +104,7 @@ if (isApkFresh()) {
 const t0 = Date.now();
 
 // 1. Fresh offline pages
-run('node', [path.join(__dirname, 'build-phone.cjs')]);
+run('node', [path.join(__dirname, 'build-phone.cjs'), ...(process.argv.includes('--force') ? ['--force'] : [])]);
 
 // 2. Clean build tree
 fs.rmSync(BUILD, { recursive: true, force: true });
@@ -133,7 +137,8 @@ const linked = path.join(BUILD, 'linked.apk');
 run(AAPT2, [
   'link', '-o', linked,
   '-I', PLATFORM_JAR,
-  '--manifest', path.join(ANDROID_SRC, 'AndroidManifest.xml'),
+  '--manifest', MANIFEST,
+  '--custom-package', 'app.englishsingularity',
   '-A', dirs.assets,
   '--min-sdk-version', String(MIN_SDK),
   '--target-sdk-version', String(TARGET_SDK),
@@ -147,7 +152,7 @@ run(AAPT2, [
 
 // 6 & 7: Check DEX Cache to skip javac and d8 when Java source is unchanged
 const javaSrcFiles = listFiles(path.join(ANDROID_SRC, 'src'), '.java');
-const cachedDex = path.join(DEX_CACHE, 'classes.dex');
+const cachedDex = path.join(DEX_CACHE, `${APP_LABEL}-classes.dex`);
 const dexFile = path.join(dirs.dex, 'classes.dex');
 
 const javaMtime = Math.max(...javaSrcFiles.map(f => fs.statSync(f).mtimeMs));
@@ -155,9 +160,9 @@ if (fs.existsSync(cachedDex) && fs.statSync(cachedDex).mtimeMs > javaMtime && !p
   fs.copyFileSync(cachedDex, dexFile);
 } else {
   // 6. javac (source/target 11; --release would conflict with android.jar)
-  const rJava = path.join(dirs.gen, 'app', 'englishsingularity', 'R.java');
+  const rJavaFiles = listFiles(dirs.gen, '.java');
   run(JAVAC, ['-source', '11', '-target', '11', '-encoding', 'UTF-8', '-classpath', PLATFORM_JAR,
-    '-d', dirs.classes, rJava, ...javaSrcFiles], { quiet: true });
+    '-d', dirs.classes, ...rJavaFiles, ...javaSrcFiles], { quiet: true });
 
   // 7. d8 -> classes.dex
   const classFiles = listFiles(dirs.classes, '.class');

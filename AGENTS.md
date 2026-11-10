@@ -2,7 +2,8 @@
 
 > **Authority:** Native Antigravity agent configuration and operational invariants.  
 > **Canonical Design Spec:** [`docs/TYPOGRAPHY_SPACING_RULES.md`](file:///e:/Eng/docs/TYPOGRAPHY_SPACING_RULES.md)  
-> **Agent Layout Rule:** [`.agents/rules/canonical-spacing.md`](file:///e:/Eng/.agents/rules/canonical-spacing.md)
+> **Agent Layout Rule:** [`.agents/rules/canonical-spacing.md`](file:///e:/Eng/.agents/rules/canonical-spacing.md)  
+> **Agent Localization Rule:** [`.agents/rules/universal-localization.md`](file:///e:/Eng/.agents/rules/universal-localization.md)
 
 ---
 
@@ -65,6 +66,20 @@
     - The scrollbar MUST NEVER touch adjacent UI elements (cards, buttons, sliders, text, or container borders) and MUST maintain comfortable floating spacing from the right edge of the screen.
     - Universal tokens declare `--scrollbar-size: 8px;` with `::-webkit-scrollbar-track { background: transparent; margin: 4px 0; }` and `::-webkit-scrollbar-thumb { background-color: var(--scrollbar-thumb); border-radius: var(--radius-full, 9999px); border: 2px solid transparent; background-clip: padding-box; }`, creating an inherent 2px transparent floating cushion around the thumb.
     - Page-level scroll containers (`#workspace-mount`) span 100% viewport width while content is safely inset by `--pad-screen-left` (12px) and `--pad-screen-right` (12px), guaranteeing ≥6px negative space between the nearest card/UI border and the scrollbar, and 2px clearance from the right screen boundary. Modals (`.completion-receipt-card`, etc.) enforce ≥16px horizontal padding so internal interactive controls never collide with the scroll track.
+19. **Universal Localization & Immediate i18n Invariant:**
+    - LOCALIZATION RULE: Every new or changed user-facing string MUST be localized immediately in all supported locales in the same change. No hardcoded UI text. A task is not done until the localization check passes.
+    - Localization is a strict mandatory requirement across the entire application suite ([`.agents/rules/universal-localization.md`](file:///e:/Eng/.agents/rules/universal-localization.md)).
+    - Every single new UI text element (labels, buttons, headings, subtitles, placeholders, tooltips, `title`, `aria-label`, alert dialogs, modal receipts, telemetry descriptors, confirmation prompts, and error/status messages) MUST be localized immediately upon introduction via `t('key')` or `data-i18n*` attributes in `web/src/core/i18n.ts`. Zero hardcoded literal strings in UI views.
+    - Strict Symmetrical Dictionary Parity: every key added to `EN_DICTIONARY` must simultaneously be added to `VI_DICTIONARY` with high-quality Vietnamese translation (and vice versa), maintaining 100% mathematical key count equality and identical parameter tokens (`{param}`). Verify via `node web/scripts/verify-i18n.cjs`.
+20. **Canonical Learning View Typography Scale Invariant:**
+    - All learning views (Flashcards/AtomicCard, Vocabulary Dossier, Reading Dossier, Tenses & Grammar Gauntlet, Drills, IELTS Reading, Writing, Vocab) strictly bind to the 7-tier cognitive readability tokens:
+      - Stimulus target word: `--font-learn-stimulus` (`clamp(20px, 3.8vw, 24px)`), line-height `1.25`, weight `700`.
+      - Focus prompt/question: `--font-learn-prompt` (`clamp(17px, 2.4vw, 20px)`), line-height `1.5`, weight `600`.
+      - Reading prose/passages: `--font-learn-prose` (`clamp(15.5px, 1.8vw, 16.5px)`), line-height `1.72`, max-width `68ch`.
+      - Semantic definition: `--font-learn-def` (`15px`), line-height `1.6`, weight `400`.
+      - Vietnamese translation: `--font-learn-vn` (`15px`), line-height `1.6`, weight `600` (diacritic-safe).
+      - Context exemplar: `--font-learn-example` (`14.5px`), line-height `1.6`, italic.
+      - Scaffolding & IPA: `--font-learn-scaffold` (`13px`), monospace or sans.
 
 ---
 
@@ -73,6 +88,7 @@
 - Never quote or document design tokens from memory or speculative design plans.
 - Always cross-reference exact names and values in [`web/src/assets/styles/variables.css`](file:///e:/Eng/web/src/assets/styles/variables.css) (`--shadow-tactile`, `--border-hairline`, `--pad-modal`, etc.) and implementation TypeScript engines.
 - When updating [`docs/TYPOGRAPHY_SPACING_RULES.md`](file:///e:/Eng/docs/TYPOGRAPHY_SPACING_RULES.md), update [`.agents/rules/canonical-spacing.md`](file:///e:/Eng/.agents/rules/canonical-spacing.md), [`CLAUDE.md`](file:///e:/Eng/CLAUDE.md), and [`AGENTS.md`](file:///e:/Eng/AGENTS.md) in lockstep sync.
+- When adding or modifying UI strings, always update [`web/src/core/i18n.ts`](file:///e:/Eng/web/src/core/i18n.ts) and verify parity using `node web/scripts/verify-i18n.cjs`.
 
 ---
 

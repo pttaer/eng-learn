@@ -90,24 +90,43 @@ export class NotificationEngine {
   private static exitListenerAttached: boolean = false;
 
   /**
-   * Checks whether the current runtime environment supports the Web Notification API.
+   * Checks whether the current runtime environment supports the Web Notification API
+   * or the Android Native Notification Bridge.
    */
   public static isSupported(): boolean {
+    if (typeof window !== 'undefined') {
+      const bridge = (window as any).AndroidWidgetBridge || (window as any).AndroidNotificationBridge;
+      if (bridge && typeof bridge.postNotification === 'function') return true;
+    }
     return typeof window !== 'undefined' && 'Notification' in window;
   }
 
   /**
-   * Retrieves the current notification permission status.
+   * Retrieves the current notification permission status across Web and Android bridges.
    */
   public static getPermission(): NotificationPermissionState {
+    if (typeof window !== 'undefined') {
+      const bridge = (window as any).AndroidWidgetBridge || (window as any).AndroidNotificationBridge;
+      if (bridge && typeof bridge.hasNotificationPermission === 'function') {
+        return bridge.hasNotificationPermission() ? 'granted' : 'default';
+      }
+    }
     if (!this.isSupported()) return 'unsupported';
-    return Notification.permission;
+    return (typeof Notification !== 'undefined') ? Notification.permission : 'unsupported';
   }
 
   /**
    * Requests native notification permissions from the user.
+   * On Android 13+ (API 33+), delegates to the native activity runtime dialog.
    */
   public static async requestPermission(): Promise<NotificationPermissionState> {
+    if (typeof window !== 'undefined') {
+      const bridge = (window as any).AndroidWidgetBridge || (window as any).AndroidNotificationBridge;
+      if (bridge && typeof bridge.requestNotificationPermission === 'function') {
+        bridge.requestNotificationPermission();
+        return 'granted';
+      }
+    }
     if (!this.isSupported()) return 'unsupported';
     try {
       const permission = await Notification.requestPermission();
@@ -154,7 +173,7 @@ export class NotificationEngine {
       const bridge = (window as any).AndroidWidgetBridge || (window as any).AndroidNotificationBridge;
       if (bridge && typeof bridge.postNotification === 'function') {
         bridge.postNotification(title, opts.body || '', targetRoute);
-        this.recordNotificationTimestamp();
+        this.recordNotificationTimestamp(title, opts.body || '', targetRoute, 'android');
         return true;
       }
     }
@@ -167,7 +186,7 @@ export class NotificationEngine {
           const reg = await navigator.serviceWorker.getRegistration();
           if (reg && 'showNotification' in reg) {
             await reg.showNotification(title, opts);
-            this.recordNotificationTimestamp();
+            this.recordNotificationTimestamp(title, opts.body || '', targetRoute, 'service_worker');
             return true;
           }
         }
@@ -181,7 +200,7 @@ export class NotificationEngine {
           }
           notif.close();
         };
-        this.recordNotificationTimestamp();
+        this.recordNotificationTimestamp(title, opts.body || '', targetRoute, 'web_notification');
         return true;
       } catch (err) {
         console.warn('[NOTIFICATIONS] Native dispatch failed, displaying toast fallback:', err);
@@ -190,7 +209,7 @@ export class NotificationEngine {
 
     // 3. In-App HUD Toast fallback
     this.showToast(title, opts.body || '', targetRoute);
-    this.recordNotificationTimestamp();
+    this.recordNotificationTimestamp(title, opts.body || '', targetRoute, 'hud_toast');
     return false;
   }
 
@@ -227,7 +246,40 @@ export class NotificationEngine {
     // 3. Evaluate notification trigger
     const currentLocale: Locale = (typeof localStorage !== 'undefined' && (localStorage.getItem('eng_locale') as Locale)) || I18n.getLocale() || 'en';
 
-    // SRS Review Due notification
+    // Check active error ledger for high-converting Personal Revenge Drills
+    let activeErrors: any[] = [];
+    try {
+      activeErrors = SerlGauntletEngine.getActiveRecords();
+    } catch {
+      activeErrors = [];
+    }
+
+    // 3a. Personal Revenge Drill notification (High urgency & dopamine)
+    if (activeErrors.length > 0 && (dueCount === 0 || Math.random() < 0.5)) {
+      const sampleError = activeErrors[0];
+      const payload = NotificationCatalog.getRevengeDrillNotification(
+        sampleError.learnerInput || sampleError.prompt,
+        activeErrors.length,
+        currentLocale
+      );
+      const isNative = await this.dispatch(payload.title, {
+        body: payload.body,
+        icon: DEFAULT_ICON,
+        badge: DEFAULT_ICON,
+        tag: DEFAULT_TAG,
+        data: { route: payload.route, type: 'revenge_drill', mistakeCount: activeErrors.length }
+      });
+
+      return {
+        notified: true,
+        reason: 'due_cards',
+        dueCount,
+        streak,
+        mode: isNative ? 'native' : 'toast'
+      };
+    }
+
+    // 3b. SRS Review Due notification
     if (dueCount > 0) {
       const payload = NotificationCatalog.getDueCardsNotification(dueCount, dueSample.words, currentLocale);
       const isNative = await this.dispatch(payload.title, {
@@ -375,20 +427,39 @@ export class NotificationEngine {
       } catch {}
 
       let payload: NotificationPayload;
-      if (dueCount > 0) {
+      let activeErrors: any[] = [];
+      try {
+        activeErrors = SerlGauntletEngine.getActiveRecords();
+      } catch {
+        activeErrors = [];
+      }
+
+      if (activeErrors.length > 0 && Math.random() < 0.6) {
+        const sampleError = activeErrors[0];
+        payload = NotificationCatalog.getRevengeDrillNotification(
+          sampleError.learnerInput || sampleError.prompt,
+          activeErrors.length,
+          currentLocale
+        );
+      } else if (dueCount > 0) {
         payload = NotificationCatalog.getDueCardsNotification(dueCount, dueWords(states).words, currentLocale);
       } else if (streak > 0 && prog.lastActiveDate !== getTodayString()) {
         payload = NotificationCatalog.getStreakReminderNotification(streak, questsLeft, currentLocale);
       } else {
-        payload = NotificationCatalog.getDailyReminderNotification({
-          level: prog.level || info.level,
-          xpToNext,
-          questsLeft,
-          streak,
-          weakSkill: focus?.skill,
-          weakBand: focus?.band,
-          mistakesCount
-        }, currentLocale);
+        // Rotate between L1 Curiosity Teasers and Daily Reminders
+        if (Math.random() < 0.5) {
+          payload = NotificationCatalog.getL1CuriosityNotification(currentLocale);
+        } else {
+          payload = NotificationCatalog.getDailyReminderNotification({
+            level: prog.level || info.level,
+            xpToNext,
+            questsLeft,
+            streak,
+            weakSkill: focus?.skill,
+            weakBand: focus?.band,
+            mistakesCount
+          }, currentLocale);
+        }
       }
 
       if (typeof window !== 'undefined') {
@@ -396,10 +467,36 @@ export class NotificationEngine {
           localStorage.setItem('eng_last_exit_time', String(Date.now()));
         } catch {}
 
+        // Circadian & Lifecycle Delay Calculation
+        const now = Date.now();
+        const currentHour = new Date().getHours();
+        let firstInstall = 0;
+        try {
+          firstInstall = Number(localStorage.getItem('eng_first_install_time') || 0);
+          if (!firstInstall) {
+            firstInstall = now;
+            localStorage.setItem('eng_first_install_time', String(firstInstall));
+          }
+        } catch {}
+
+        const isDayZero = (now - firstInstall) < 24 * 60 * 60 * 1000;
+        let delayMs = 4 * 60 * 60 * 1000; // Default 4-hour fallback
+
+        if (isDayZero && UsageTracker.summary().todayMinutes < 3) {
+          // Day 0 Onboarding Activation Triage: +2 hours
+          delayMs = 2 * 60 * 60 * 1000;
+          payload = NotificationCatalog.getDayZeroOnboardingNotification('2h', currentLocale);
+        } else if (currentHour >= 18 && currentHour < 21 && streak > 0 && prog.lastActiveDate !== getTodayString()) {
+          // Evening streak urgency -> target 22:30 midnight emergency
+          const minsTo2230 = ((22 - currentHour) * 60) + (30 - new Date().getMinutes());
+          delayMs = Math.max(15 * 60 * 1000, minsTo2230 * 60 * 1000);
+          payload = NotificationCatalog.getCircadianPromptNotification('midnight', streak, currentLocale);
+        }
+
         const bridge = (window as any).AndroidWidgetBridge || (window as any).AndroidNotificationBridge;
         if (bridge && typeof bridge.scheduleNotification === 'function') {
-          // Schedule native Android notification 4 hours after exit (14,400,000 ms)
-          bridge.scheduleNotification(payload.title, payload.body, payload.route, 4 * 60 * 60 * 1000);
+          // Schedule native Android notification with circadian delay
+          bridge.scheduleNotification(payload.title, payload.body, payload.route, delayMs);
         }
 
         // Web PWA / Browser background timer fallback when tab is hidden
@@ -484,12 +581,16 @@ export class NotificationEngine {
       'transition: opacity 0.3s ease, transform 0.3s ease'
     ].join(';');
 
+    const actionLabel = actionRoute === '#mistakes'
+      ? (I18n.getLocale() === 'vi' ? 'PHỤC THÙ NGAY →' : 'REDEEM ERROR →')
+      : (I18n.getLocale() === 'vi' ? 'LUYỆN TẬP NGAY →' : 'TAP TO DRILL →');
+
     toast.innerHTML = `
       <img src="${DEFAULT_ICON}" alt="Notification Icon" style="width: 28px; height: 28px; border-radius: 4px; flex-shrink: 0;" />
       <div style="flex: 1; min-width: 0;">
         <div class="toast-title" style="font-weight: 700; font-size: var(--font-body-compact); line-height: 1.3; color: var(--accent-gold, #ca8a04); margin-bottom: 2px;">${title}</div>
         <div class="toast-body" style="font-size: var(--font-body-compact); line-height: 1.4; color: var(--text-secondary, #94a3b8);">${body}</div>
-        <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-cyan, #38bdf8); margin-top: 6px; letter-spacing: 0.05em;">TAP TO DRILL →</div>
+        <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-cyan, #38bdf8); margin-top: 6px; letter-spacing: 0.05em;">${actionLabel}</div>
       </div>
       <button class="btn-toast-close" aria-label="${t('common.dismiss', undefined, 'Dismiss')}" style="background: none; border: none; color: var(--text-muted, #64748b); font-size: var(--font-body); cursor: pointer; min-width: var(--touch-target-min, 44px); min-height: var(--touch-target-min, 44px); display: inline-flex; align-items: center; justify-content: center; margin: -8px -8px -8px 0; touch-action: manipulation;">&times;</button>
     `;
@@ -586,10 +687,39 @@ export class NotificationEngine {
     return this.showToast(title, body, actionRoute);
   }
 
-  private static recordNotificationTimestamp(): void {
+  private static recordNotificationTimestamp(title: string = '', body: string = '', route: string = '', mode: string = 'native'): void {
     if (typeof localStorage !== 'undefined') {
-      localStorage.setItem(LAST_NOTIFIED_KEY, String(Date.now()));
+      const now = Date.now();
+      localStorage.setItem(LAST_NOTIFIED_KEY, String(now));
+      try {
+        const raw = localStorage.getItem('eng_notification_logs') || '[]';
+        const logs = JSON.parse(raw);
+        logs.unshift({ timestamp: now, title, body, route, mode });
+        if (logs.length > 20) logs.pop();
+        localStorage.setItem('eng_notification_logs', JSON.stringify(logs));
+      } catch {}
     }
+  }
+
+  public static getNotificationLogs(): Array<{ timestamp: number; title: string; body: string; route: string; mode: string }> {
+    if (typeof localStorage === 'undefined') return [];
+    try {
+      const raw = localStorage.getItem('eng_notification_logs') || '[]';
+      return JSON.parse(raw);
+    } catch {
+      return [];
+    }
+  }
+
+  public static clearNotificationLogs(): void {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.removeItem('eng_notification_logs');
+    }
+  }
+
+  public static isQuietHoursActive(): boolean {
+    const hour = new Date().getHours();
+    return hour >= 22 || hour < 8;
   }
 
   public static readonly DEFAULT_ICON = DEFAULT_ICON;

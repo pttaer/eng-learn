@@ -10,6 +10,7 @@ import { mountListeningTest } from './listening';
 import { ExamCockpitDossier } from '../../modules/exam-cockpit-dossier';
 import { icon } from '../../utils/icons';
 import { t } from '../../core/i18n';
+import { illustration } from '../../utils/illustrations';
 
 const PASSAGES = readingData as ReadingPassage[];
 const SECTIONS = listeningData as ListeningSection[];
@@ -67,10 +68,22 @@ export function mockView(root: HTMLElement): () => void {
     stop();
     root.innerHTML = '';
     const mocks = (s: 'reading' | 'listening') => attempts().filter(a => a.skill === s && a.mock).length;
-    root.append(
-      h('h1', 'ie-title', t('mock.title', undefined, 'Mock tests')),
-      h('p', 'ie-lead', t('mock.lead_desc', undefined, 'Exam conditions. Reading: 3 passages, 40 questions, 60 minutes with 10m & 5m warning alerts. Full 1–40 navigator strip, dual-pane split-screen resizer, and post-test 9.0 Band Conversion Modal.'))
+    const heroBanner = h(
+      'div',
+      'app-hero-banner ielts-mock-hero',
+      `<div class="app-hero-banner-content">` +
+        `<span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">` +
+          `[IELTS ACADEMIC // FULL CD-IELTS COCKPIT SIMULATOR]` +
+        `</span>` +
+        `<h1 class="ie-title" style="margin: 0; font-size: var(--font-h1); line-height: 1.25;">${t('mock.title', undefined, 'Mock tests')}</h1>` +
+        `<p class="ie-lead" style="margin: 0; font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">${t('mock.lead_desc', undefined, 'Exam conditions. Reading: 3 passages, 40 questions, 60 minutes with 10m & 5m warning alerts. Full 1–40 navigator strip, dual-pane split-screen resizer, and post-test 9.0 Band Conversion Modal.')}</p>` +
+      `</div>` +
+      `<div class="app-hero-banner-art">` +
+        `${illustration('exam-prep', { size: 'banner', ariaLabel: 'CD-IELTS Cockpit' })}` +
+      `</div>`
     );
+    heroBanner.style.marginBottom = 'var(--space-12, 12px)';
+    root.append(heroBanner);
 
     const cards = h('div', 'ie-cards');
 

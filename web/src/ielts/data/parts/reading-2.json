@@ -36,35 +36,60 @@
     "type": "tfng",
     "prompt": "Kuiper's theory about the belt was confirmed within ten years.",
     "answer": "FALSE",
-    "why": "Paragraph A: Kuiper proposed the region in 1951, \"though its existence was not confirmed until 1992\". That is over forty years later."
+    "why": "Paragraph A: Kuiper proposed the region in 1951, \"though its existence was not confirmed until 1992\". That is over forty years later.",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 309,
+     "end": 358,
+     "evidenceText": "though its existence was not confirmed until 1992"
+    }
    },
    {
     "id": "r07-q02",
     "type": "tfng",
     "prompt": "1992 QB1 is larger than Pluto.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph A gives only the size of 1992 QB1, \"measuring approximately 280 kilometers across\". Pluto's size is never stated, so the comparison cannot be made."
+    "why": "Paragraph A gives only the size of 1992 QB1, \"measuring approximately 280 kilometers across\". Pluto's size is never stated, so the comparison cannot be made.",
+    "evidence": null
    },
    {
     "id": "r07-q03",
     "type": "tfng",
     "prompt": "Under the 2006 rules, a planet must have cleared other objects from its orbit.",
     "answer": "TRUE",
-    "why": "Paragraph B: an object must \"have cleared its orbital neighborhood of other debris\"."
+    "why": "Paragraph B: an object must \"have cleared its orbital neighborhood of other debris\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 551,
+     "end": 604,
+     "evidenceText": "have cleared its orbital neighborhood of other debris"
+    }
    },
    {
     "id": "r07-q04",
     "type": "tfng",
     "prompt": "New Horizons took nine years to reach Pluto.",
     "answer": "TRUE",
-    "why": "Paragraph C: launched in January 2006, it reached Pluto in July 2015, and \"This nine-year journey provided humanity's first close-up images of Pluto\"."
+    "why": "Paragraph C: launched in January 2006, it reached Pluto in July 2015, and \"This nine-year journey provided humanity's first close-up images of Pluto\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 139,
+     "end": 212,
+     "evidenceText": "This nine-year journey provided humanity's first close-up images of Pluto"
+    }
    },
    {
     "id": "r07-q05",
     "type": "tfng",
     "prompt": "The discovery of Eris had no effect on the status of Pluto.",
     "answer": "FALSE",
-    "why": "Paragraph D: \"Eris, discovered in January 2005, triggered Pluto's reclassification\"."
+    "why": "Paragraph D: \"Eris, discovered in January 2005, triggered Pluto's reclassification\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 385,
+     "end": 453,
+     "evidenceText": "Eris, discovered in January 2005, triggered Pluto's reclassification"
+    }
    },
    {
     "id": "r07-q06",
@@ -74,7 +99,13 @@
      "Clyde Tombaugh",
      "Tombaugh"
     ],
-    "why": "Paragraph C: \"in honor of Pluto's discoverer Clyde Tombaugh\"."
+    "why": "Paragraph C: \"in honor of Pluto's discoverer Clyde Tombaugh\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 437,
+     "end": 482,
+     "evidenceText": "in honor of Pluto's discoverer Clyde Tombaugh"
+    }
    },
    {
     "id": "r07-q07",
@@ -83,7 +114,13 @@
     "answer": [
      "solar panels"
     ],
-    "why": "Paragraph F: \"Solar panels become inefficient at such distances\"."
+    "why": "Paragraph F: \"Solar panels become inefficient at such distances\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 631,
+     "end": 680,
+     "evidenceText": "Solar panels become inefficient at such distances"
+    }
    },
    {
     "id": "r07-q08",
@@ -92,7 +129,13 @@
     "answer": [
      "cryovolcanism"
     ],
-    "why": "Paragraph E: \"cryovolcanism, a process in which eruptions of ice or water instead of molten rock occur on the surface\"."
+    "why": "Paragraph E: \"cryovolcanism, a process in which eruptions of ice or water instead of molten rock occur on the surface\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 224,
+     "end": 327,
+     "evidenceText": "cryovolcanism, a process in which eruptions of ice or water instead of molten rock occur on the surface"
+    }
    },
    {
     "id": "r07-q09",
@@ -107,7 +150,13 @@
      "F"
     ],
     "answer": "D",
-    "why": "Paragraph D: \"The total mass of the Kuiper Belt is estimated at approximately 0.1 times the mass of Earth\"."
+    "why": "Paragraph D: \"The total mass of the Kuiper Belt is estimated at approximately 0.1 times the mass of Earth\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 157,
+     "end": 248,
+     "evidenceText": "The total mass of the Kuiper Belt is estimated at approximately 0.1 times the mass of Earth"
+    }
    },
    {
     "id": "r07-q10",
@@ -122,7 +171,13 @@
      "F"
     ],
     "answer": "A",
-    "why": "Paragraph A: \"An astronomical unit, or AU, is defined as the mean distance between Earth and the Sun\"."
+    "why": "Paragraph A: \"An astronomical unit, or AU, is defined as the mean distance between Earth and the Sun\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 143,
+     "end": 229,
+     "evidenceText": "An astronomical unit, or AU, is defined as the mean distance between Earth and the Sun"
+    }
    },
    {
     "id": "r07-q11",
@@ -137,7 +192,13 @@
      "F"
     ],
     "answer": "F",
-    "why": "Paragraph F: \"Japan's space agency JAXA has proposed missions to investigate multiple Kuiper Belt objects\"."
+    "why": "Paragraph F: \"Japan's space agency JAXA has proposed missions to investigate multiple Kuiper Belt objects\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 112,
+     "end": 203,
+     "evidenceText": "Japan's space agency JAXA has proposed missions to investigate multiple Kuiper Belt objects"
+    }
    },
    {
     "id": "r07-q12",
@@ -150,7 +211,13 @@
      "D. close-up photographs taken by the New Horizons spacecraft"
     ],
     "answer": "B",
-    "why": "Paragraph E: \"Evidence for this migration comes from computer simulations that reproduce the current distribution of Kuiper Belt objects\". A, C and D are not offered as evidence of migration."
+    "why": "Paragraph E: \"Evidence for this migration comes from computer simulations that reproduce the current distribution of Kuiper Belt objects\". A, C and D are not offered as evidence of migration.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 791,
+     "end": 913,
+     "evidenceText": "Evidence for this migration comes from computer simulations that reproduce the current distribution of Kuiper Belt objects"
+    }
    },
    {
     "id": "r07-q13",
@@ -163,7 +230,13 @@
      "D. They are the main source of the meteorites reaching Earth."
     ],
     "answer": "A",
-    "why": "Paragraph D: they are \"believed to be remnants from the early solar system, preserved in their icy state\". C is contradicted by paragraph F (\"the vast distances involved\"); B and D are not mentioned."
+    "why": "Paragraph D: they are \"believed to be remnants from the early solar system, preserved in their icy state\". C is contradicted by paragraph F (\"the vast distances involved\"); B and D are not mentioned.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 544,
+     "end": 625,
+     "evidenceText": "believed to be remnants from the early solar system, preserved in their icy state"
+    }
    }
   ]
  },
@@ -204,28 +277,47 @@
     "type": "tfng",
     "prompt": "Blanc's growing system does not need soil.",
     "answer": "TRUE",
-    "why": "Paragraph A: water and nutrients circulate through a vertical growing medium, \"supporting various plant species without requiring soil\"."
+    "why": "Paragraph A: water and nutrients circulate through a vertical growing medium, \"supporting various plant species without requiring soil\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 712,
+     "end": 767,
+     "evidenceText": "supporting various plant species without requiring soil"
+    }
    },
    {
     "id": "r08-q02",
     "type": "tfng",
     "prompt": "Vertical gardens improve air quality as much as traditional parks do.",
     "answer": "FALSE",
-    "why": "Paragraph B: they improve air quality, \"though the scale of impact remains modest compared to traditional parks\"."
+    "why": "Paragraph B: they improve air quality, \"though the scale of impact remains modest compared to traditional parks\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 212,
+     "end": 283,
+     "evidenceText": "though the scale of impact remains modest compared to traditional parks"
+    }
    },
    {
     "id": "r08-q03",
     "type": "tfng",
     "prompt": "Most vertical gardens in Tokyo are on government buildings.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph A only says that \"cities including Singapore, New York, and Tokyo have incorporated vertical gardens\". The type of building used in Tokyo is not mentioned."
+    "why": "Paragraph A only says that \"cities including Singapore, New York, and Tokyo have incorporated vertical gardens\". The type of building used in Tokyo is not mentioned.",
+    "evidence": null
    },
    {
     "id": "r08-q04",
     "type": "tfng",
     "prompt": "In modular systems, one plant unit can be replaced without disturbing the rest of the wall.",
     "answer": "TRUE",
-    "why": "Paragraph E: modular systems \"allow individual plant modules to be replaced independently without disrupting the entire wall\"."
+    "why": "Paragraph E: modular systems \"allow individual plant modules to be replaced independently without disrupting the entire wall\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 241,
+     "end": 335,
+     "evidenceText": "allow individual plant modules to be replaced independently without disrupting the entire wall"
+    }
    },
    {
     "id": "r08-q05",
@@ -239,7 +331,13 @@
      "E. Zurich"
     ],
     "answer": "A",
-    "why": "Paragraph D: Singapore's Vertical Garden Initiative began \"in 2009, designing green wall systems for ten major buildings\"."
+    "why": "Paragraph D: Singapore's Vertical Garden Initiative began \"in 2009, designing green wall systems for ten major buildings\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 205,
+     "end": 266,
+     "evidenceText": "in 2009, designing green wall systems for ten major buildings"
+    }
    },
    {
     "id": "r08-q06",
@@ -253,7 +351,13 @@
      "E. Zurich"
     ],
     "answer": "B",
-    "why": "Paragraph D: Mexico City aimed at 10,000 panels by 2025, \"though progress has been slower than initially projected\"."
+    "why": "Paragraph D: Mexico City aimed at 10,000 panels by 2025, \"though progress has been slower than initially projected\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 714,
+     "end": 770,
+     "evidenceText": "though progress has been slower than initially projected"
+    }
    },
    {
     "id": "r08-q07",
@@ -267,7 +371,13 @@
      "E. Zurich"
     ],
     "answer": "C",
-    "why": "Paragraph D: \"Paris, where the vertical garden concept originated\"."
+    "why": "Paragraph D: \"Paris, where the vertical garden concept originated\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 772,
+     "end": 823,
+     "evidenceText": "Paris, where the vertical garden concept originated"
+    }
    },
    {
     "id": "r08-q08",
@@ -281,7 +391,13 @@
      "E. Zurich"
     ],
     "answer": "D",
-    "why": "Paragraph C: in a Dubai hotel, \"irrigation system malfunction caused 90 percent of the plants to wilt within two weeks\"."
+    "why": "Paragraph C: in a Dubai hotel, \"irrigation system malfunction caused 90 percent of the plants to wilt within two weeks\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 790,
+     "end": 876,
+     "evidenceText": "irrigation system malfunction caused 90 percent of the plants to wilt within two weeks"
+    }
    },
    {
     "id": "r08-q09",
@@ -295,7 +411,13 @@
      "E. Zurich"
     ],
     "answer": "E",
-    "why": "Paragraph E: \"Researchers at ETH Zurich developed a prototype in 2019 that combines photovoltaic cells with plant-supporting trellises\"."
+    "why": "Paragraph E: \"Researchers at ETH Zurich developed a prototype in 2019 that combines photovoltaic cells with plant-supporting trellises\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 669,
+     "end": 789,
+     "evidenceText": "Researchers at ETH Zurich developed a prototype in 2019 that combines photovoltaic cells with plant-supporting trellises"
+    }
    },
    {
     "id": "r08-q10",
@@ -306,7 +428,13 @@
      "2.5 kg",
      "2.5"
     ],
-    "why": "Paragraph B: such a garden \"can absorb approximately 2.5 kilograms of carbon dioxide annually\"."
+    "why": "Paragraph B: such a garden \"can absorb approximately 2.5 kilograms of carbon dioxide annually\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 331,
+     "end": 396,
+     "evidenceText": "can absorb approximately 2.5 kilograms of carbon dioxide annually"
+    }
    },
    {
     "id": "r08-q11",
@@ -317,7 +445,13 @@
      "70%",
      "70"
     ],
-    "why": "Paragraph E: advances \"have reduced water consumption by up to 70 percent compared to traditional landscaping methods\"."
+    "why": "Paragraph E: advances \"have reduced water consumption by up to 70 percent compared to traditional landscaping methods\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 387,
+     "end": 481,
+     "evidenceText": "have reduced water consumption by up to 70 percent compared to traditional landscaping methods"
+    }
    },
    {
     "id": "r08-q12",
@@ -330,7 +464,13 @@
      "D. Most residents dislike the way they look on buildings."
     ],
     "answer": "C",
-    "why": "Paragraph C: \"These operational costs have limited adoption primarily to high-value properties\". A, B and D are not mentioned."
+    "why": "Paragraph C: \"These operational costs have limited adoption primarily to high-value properties\". A, B and D are not mentioned.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 1080,
+     "end": 1160,
+     "evidenceText": "These operational costs have limited adoption primarily to high-value properties"
+    }
    },
    {
     "id": "r08-q13",
@@ -343,7 +483,13 @@
      "D. Workers with views of green walls felt less stress."
     ],
     "answer": "D",
-    "why": "Paragraph F: \"office workers with views of vertical gardens demonstrated 37 percent lower stress levels\". The 37 percent refers to stress, not noise (A); B is the opposite; productivity and creativity (C) are not measured."
+    "why": "Paragraph F: \"office workers with views of vertical gardens demonstrated 37 percent lower stress levels\". The 37 percent refers to stress, not noise (A); B is the opposite; productivity and creativity (C) are not measured.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 303,
+     "end": 392,
+     "evidenceText": "office workers with views of vertical gardens demonstrated 37 percent lower stress levels"
+    }
    }
   ]
  },
@@ -384,35 +530,60 @@
     "type": "tfng",
     "prompt": "The earliest written description of variolation comes from China.",
     "answer": "FALSE",
-    "why": "Paragraph A: \"The earliest documented reference appears in Indian Sanskrit texts dating to approximately 1500 BCE\". Chinese variolation came much later, in the eleventh century."
+    "why": "Paragraph A: \"The earliest documented reference appears in Indian Sanskrit texts dating to approximately 1500 BCE\". Chinese variolation came much later, in the eleventh century.",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 281,
+     "end": 380,
+     "evidenceText": "The earliest documented reference appears in Indian Sanskrit texts dating to approximately 1500 BCE"
+    }
    },
    {
     "id": "r09-q02",
     "type": "tfng",
     "prompt": "Variolation reached the Ottoman Empire before it reached Europe.",
     "answer": "TRUE",
-    "why": "Paragraph A: \"reaching the Ottoman Empire by the sixteenth century. It eventually arrived in Europe during the eighteenth century\"."
+    "why": "Paragraph A: \"reaching the Ottoman Empire by the sixteenth century. It eventually arrived in Europe during the eighteenth century\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 838,
+     "end": 953,
+     "evidenceText": "reaching the Ottoman Empire by the sixteenth century. It eventually arrived in Europe during the eighteenth century"
+    }
    },
    {
     "id": "r09-q03",
     "type": "tfng",
     "prompt": "Sarah Nelmes was paid for providing the material Jenner used.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph B says only that Jenner used \"cowpox material obtained from infected milkmaid Sarah Nelmes\". Nothing is said about payment."
+    "why": "Paragraph B says only that Jenner used \"cowpox material obtained from infected milkmaid Sarah Nelmes\". Nothing is said about payment.",
+    "evidence": null
    },
    {
     "id": "r09-q04",
     "type": "tfng",
     "prompt": "Pasteur gave his rabies vaccine to a patient who had already been exposed to the disease.",
     "answer": "TRUE",
-    "why": "Paragraph C: Pasteur succeeded in \"treating nine-year-old Joseph Meister after rabid dog exposure\"."
+    "why": "Paragraph C: Pasteur succeeded in \"treating nine-year-old Joseph Meister after rabid dog exposure\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 367,
+     "end": 429,
+     "evidenceText": "treating nine-year-old Joseph Meister after rabid dog exposure"
+    }
    },
    {
     "id": "r09-q05",
     "type": "tfng",
     "prompt": "mRNA vaccines had been approved for use against infectious diseases before 2019.",
     "answer": "FALSE",
-    "why": "Paragraph E: mRNA vaccines \"had not received approval for infectious diseases prior to 2019\"."
+    "why": "Paragraph E: mRNA vaccines \"had not received approval for infectious diseases prior to 2019\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 580,
+     "end": 643,
+     "evidenceText": "had not received approval for infectious diseases prior to 2019"
+    }
    },
    {
     "id": "r09-q06",
@@ -421,7 +592,13 @@
     "answer": [
      "cowpox"
     ],
-    "why": "Paragraph B: \"dairy workers infected with cowpox, a mild bovine disease, developed immunity to smallpox\"."
+    "why": "Paragraph B: \"dairy workers infected with cowpox, a mild bovine disease, developed immunity to smallpox\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 166,
+     "end": 255,
+     "evidenceText": "dairy workers infected with cowpox, a mild bovine disease, developed immunity to smallpox"
+    }
    },
    {
     "id": "r09-q07",
@@ -430,7 +607,13 @@
     "answer": [
      "milkmaid"
     ],
-    "why": "Paragraph B: \"cowpox material obtained from infected milkmaid Sarah Nelmes\"."
+    "why": "Paragraph B: \"cowpox material obtained from infected milkmaid Sarah Nelmes\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 403,
+     "end": 463,
+     "evidenceText": "cowpox material obtained from infected milkmaid Sarah Nelmes"
+    }
    },
    {
     "id": "r09-q08",
@@ -441,7 +624,13 @@
      "100000",
      "one hundred thousand"
     ],
-    "why": "Paragraph B: \"By 1801, approximately 100,000 people in England had received vaccinations\"."
+    "why": "Paragraph B: \"By 1801, approximately 100,000 people in England had received vaccinations\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 854,
+     "end": 928,
+     "evidenceText": "By 1801, approximately 100,000 people in England had received vaccinations"
+    }
    },
    {
     "id": "r09-q09",
@@ -450,7 +639,13 @@
     "answer": [
      "mandated"
     ],
-    "why": "Paragraph B: \"By 1807, several European nations mandated vaccination programs as effectiveness became undeniable\"."
+    "why": "Paragraph B: \"By 1807, several European nations mandated vaccination programs as effectiveness became undeniable\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 930,
+     "end": 1028,
+     "evidenceText": "By 1807, several European nations mandated vaccination programs as effectiveness became undeniable"
+    }
    },
    {
     "id": "r09-q10",
@@ -465,7 +660,13 @@
      "vi. Governments as the main funders of research"
     ],
     "answer": "i",
-    "why": "Paragraph C ends: \"These landmark discoveries transformed vaccination from empirical trial-and-error practice into rational science\". Heading i."
+    "why": "Paragraph C ends: \"These landmark discoveries transformed vaccination from empirical trial-and-error practice into rational science\". Heading i.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 1030,
+     "end": 1142,
+     "evidenceText": "These landmark discoveries transformed vaccination from empirical trial-and-error practice into rational science"
+    }
    },
    {
     "id": "r09-q11",
@@ -480,7 +681,13 @@
      "vi. Governments as the main funders of research"
     ],
     "answer": "ii",
-    "why": "Paragraph D: \"The twentieth century brought unprecedented vaccine successes against major infectious diseases\", including the eradication of smallpox. Heading ii."
+    "why": "Paragraph D: \"The twentieth century brought unprecedented vaccine successes against major infectious diseases\", including the eradication of smallpox. Heading ii.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 0,
+     "end": 95,
+     "evidenceText": "The twentieth century brought unprecedented vaccine successes against major infectious diseases"
+    }
    },
    {
     "id": "r09-q12",
@@ -495,7 +702,13 @@
      "vi. Governments as the main funders of research"
     ],
     "answer": "iii",
-    "why": "Paragraph E: \"Recombinant DNA technology developed in the 1970s revolutionized vaccine development\", followed by genetically engineered and mRNA vaccines. Heading iii."
+    "why": "Paragraph E: \"Recombinant DNA technology developed in the 1970s revolutionized vaccine development\", followed by genetically engineered and mRNA vaccines. Heading iii.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 0,
+     "end": 84,
+     "evidenceText": "Recombinant DNA technology developed in the 1970s revolutionized vaccine development"
+    }
    },
    {
     "id": "r09-q13",
@@ -508,7 +721,13 @@
      "D. Vaccination against it began there only in 1990."
     ],
     "answer": "C",
-    "why": "Paragraph F: \"In 2019, United States measles cases reached 1,282, representing the highest number in 27 years\" (27 years before 2019 is 1992). A confuses measles with smallpox; B is contradicted (\"concentrated in communities with low vaccination coverage\"); D is wrong (programs began in 1963)."
+    "why": "Paragraph F: \"In 2019, United States measles cases reached 1,282, representing the highest number in 27 years\" (27 years before 2019 is 1992). A confuses measles with smallpox; B is contradicted (\"concentrated in communities with low vaccination coverage\"); D is wrong (programs began in 1963).",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 380,
+     "end": 475,
+     "evidenceText": "In 2019, United States measles cases reached 1,282, representing the highest number in 27 years"
+    }
    },
    {
     "id": "r09-q14",
@@ -521,7 +740,13 @@
      "D. countries produced all of their own vaccines without imports."
     ],
     "answer": "B",
-    "why": "Paragraph F: \"wealthy nations prioritized vaccine acquisition while lower-income nations faced substantial distribution delays\". A, C and D are not described."
+    "why": "Paragraph F: \"wealthy nations prioritized vaccine acquisition while lower-income nations faced substantial distribution delays\". A, C and D are not described.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 783,
+     "end": 895,
+     "evidenceText": "wealthy nations prioritized vaccine acquisition while lower-income nations faced substantial distribution delays"
+    }
    }
   ]
  },
@@ -562,28 +787,47 @@
     "type": "tfng",
     "prompt": "In ancient Egypt, bread was used to pay workers.",
     "answer": "TRUE",
-    "why": "Paragraph A: bread was \"a standardized medium of labor exchange, with workers receiving daily bread rations as compensation\"."
+    "why": "Paragraph A: bread was \"a standardized medium of labor exchange, with workers receiving daily bread rations as compensation\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 620,
+     "end": 719,
+     "evidenceText": "a standardized medium of labor exchange, with workers receiving daily bread rations as compensation"
+    }
    },
    {
     "id": "r10-q02",
     "type": "tfng",
     "prompt": "Bread prices doubled between 2010 and 2012.",
     "answer": "FALSE",
-    "why": "Paragraph C: it was wheat prices that \"approximately doubled\"; \"bread prices increased by up to 40 percent in some regions\". A 40 percent rise is not a doubling."
+    "why": "Paragraph C: it was wheat prices that \"approximately doubled\"; \"bread prices increased by up to 40 percent in some regions\". A 40 percent rise is not a doubling.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 408,
+     "end": 429,
+     "evidenceText": "approximately doubled"
+    }
    },
    {
     "id": "r10-q03",
     "type": "tfng",
     "prompt": "The slow food movement quickly spread to North America.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph D mentions only \"the slow food movement initiated in Italy in 1986\". Its spread to other regions is not discussed."
+    "why": "Paragraph D mentions only \"the slow food movement initiated in Italy in 1986\". Its spread to other regions is not discussed.",
+    "evidence": null
    },
    {
     "id": "r10-q04",
     "type": "tfng",
     "prompt": "Industrial bread was more nutritious than traditionally made bread.",
     "answer": "FALSE",
-    "why": "Paragraph D: \"industrial production simultaneously reduced nutritional quality through refined flour processing\"."
+    "why": "Paragraph D: \"industrial production simultaneously reduced nutritional quality through refined flour processing\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 587,
+     "end": 684,
+     "evidenceText": "industrial production simultaneously reduced nutritional quality through refined flour processing"
+    }
    },
    {
     "id": "r10-q05",
@@ -592,7 +836,13 @@
     "answer": [
      "80"
     ],
-    "why": "Paragraph B: \"averaging 60 to 80 kilograms per capita annually\"."
+    "why": "Paragraph B: \"averaging 60 to 80 kilograms per capita annually\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 282,
+     "end": 330,
+     "evidenceText": "averaging 60 to 80 kilograms per capita annually"
+    }
    },
    {
     "id": "r10-q06",
@@ -602,7 +852,13 @@
      "black bread",
      "black bread varieties"
     ],
-    "why": "Paragraph B: \"black bread varieties produced from rye remain deeply culturally significant\"."
+    "why": "Paragraph B: \"black bread varieties produced from rye remain deeply culturally significant\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 466,
+     "end": 542,
+     "evidenceText": "black bread varieties produced from rye remain deeply culturally significant"
+    }
    },
    {
     "id": "r10-q07",
@@ -611,7 +867,13 @@
     "answer": [
      "100"
     ],
-    "why": "Paragraph B: \"North African consumption ranges from 80 to 100 kilograms annually\"."
+    "why": "Paragraph B: \"North African consumption ranges from 80 to 100 kilograms annually\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 865,
+     "end": 931,
+     "evidenceText": "North African consumption ranges from 80 to 100 kilograms annually"
+    }
    },
    {
     "id": "r10-q08",
@@ -620,7 +882,13 @@
     "answer": [
      "rice"
     ],
-    "why": "Paragraph B: \"rice rather than bread serves as the primary staple carbohydrate\"."
+    "why": "Paragraph B: \"rice rather than bread serves as the primary staple carbohydrate\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 970,
+     "end": 1034,
+     "evidenceText": "rice rather than bread serves as the primary staple carbohydrate"
+    }
    },
    {
     "id": "r10-q09",
@@ -633,7 +901,13 @@
      "11,000 years ago",
      "11000 years ago"
     ],
-    "why": "Paragraph A: \"with consumption dating back 11,000 years to the Neolithic period\"."
+    "why": "Paragraph A: \"with consumption dating back 11,000 years to the Neolithic period\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 87,
+     "end": 152,
+     "evidenceText": "with consumption dating back 11,000 years to the Neolithic period"
+    }
    },
    {
     "id": "r10-q10",
@@ -642,7 +916,13 @@
     "answer": [
      "grain doles"
     ],
-    "why": "Paragraph A: \"Roman emperors strategically used grain doles to maintain social order and prevent urban unrest\"."
+    "why": "Paragraph A: \"Roman emperors strategically used grain doles to maintain social order and prevent urban unrest\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 732,
+     "end": 827,
+     "evidenceText": "Roman emperors strategically used grain doles to maintain social order and prevent urban unrest"
+    }
    },
    {
     "id": "r10-q11",
@@ -651,7 +931,13 @@
     "answer": [
      "British Medical Journal"
     ],
-    "why": "Paragraph F: \"A meta-analysis of 45 prospective cohort studies published in the British Medical Journal in 2016\"."
+    "why": "Paragraph F: \"A meta-analysis of 45 prospective cohort studies published in the British Medical Journal in 2016\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 648,
+     "end": 745,
+     "evidenceText": "A meta-analysis of 45 prospective cohort studies published in the British Medical Journal in 2016"
+    }
    },
    {
     "id": "r10-q12",
@@ -664,7 +950,13 @@
      "D. Their governments place heavy taxes on bread sales."
     ],
     "answer": "A",
-    "why": "Paragraph C: grain-based foods \"often constitute 60 to 70 percent of total caloric intake for populations living in poverty, creating acute vulnerability\". B, C and D are not mentioned."
+    "why": "Paragraph C: grain-based foods \"often constitute 60 to 70 percent of total caloric intake for populations living in poverty, creating acute vulnerability\". B, C and D are not mentioned.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 187,
+     "end": 308,
+     "evidenceText": "often constitute 60 to 70 percent of total caloric intake for populations living in poverty, creating acute vulnerability"
+    }
    },
    {
     "id": "r10-q13",
@@ -677,7 +969,13 @@
      "D. Cost can stop people acting on nutritional knowledge."
     ],
     "answer": "D",
-    "why": "Paragraph F: \"nutritional knowledge does not translate to dietary change due to economic barriers\". C is the opposite: refined white bread is \"more accessible\". A and B are not stated."
+    "why": "Paragraph F: \"nutritional knowledge does not translate to dietary change due to economic barriers\". C is the opposite: refined white bread is \"more accessible\". A and B are not stated.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 1208,
+     "end": 1291,
+     "evidenceText": "nutritional knowledge does not translate to dietary change due to economic barriers"
+    }
    }
   ]
  },
@@ -718,28 +1016,47 @@
     "type": "tfng",
     "prompt": "Most of the world's cobalt comes from a single country.",
     "answer": "TRUE",
-    "why": "Paragraph A: \"the Democratic Republic of Congo, which supplies over 70 percent of global cobalt\"."
+    "why": "Paragraph A: \"the Democratic Republic of Congo, which supplies over 70 percent of global cobalt\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 811,
+     "end": 892,
+     "evidenceText": "the Democratic Republic of Congo, which supplies over 70 percent of global cobalt"
+    }
    },
    {
     "id": "r11-q02",
     "type": "tfng",
     "prompt": "Sodium is more expensive than lithium.",
     "answer": "FALSE",
-    "why": "Paragraph B: sodium \"costs approximately 20 times less than lithium\"."
+    "why": "Paragraph B: sodium \"costs approximately 20 times less than lithium\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 316,
+     "end": 362,
+     "evidenceText": "costs approximately 20 times less than lithium"
+    }
    },
    {
     "id": "r11-q03",
     "type": "tfng",
     "prompt": "Solid-state batteries are not expected to become commercially viable within this decade.",
     "answer": "FALSE",
-    "why": "Paragraph C: manufacturers have announced production \"beginning in 2027, suggesting commercial viability approaching within the current decade\". The passage expects viability this decade, so FALSE."
+    "why": "Paragraph C: manufacturers have announced production \"beginning in 2027, suggesting commercial viability approaching within the current decade\". The passage expects viability this decade, so FALSE.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 850,
+     "end": 938,
+     "evidenceText": "beginning in 2027, suggesting commercial viability approaching within the current decade"
+    }
    },
    {
     "id": "r11-q04",
     "type": "tfng",
     "prompt": "The YBCO pilot cables have proved more reliable than copper cables.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph E: YBCO cables \"have demonstrated successful operation in pilot installations\", but their reliability is never compared with copper. Only cost is compared."
+    "why": "Paragraph E: YBCO cables \"have demonstrated successful operation in pilot installations\", but their reliability is never compared with copper. Only cost is compared.",
+    "evidence": null
    },
    {
     "id": "r11-q05",
@@ -753,7 +1070,13 @@
      "E. Molten salt storage"
     ],
     "answer": "D",
-    "why": "Paragraph E: they \"operate at temperatures below 77 Kelvin, permitting cooling with liquid nitrogen\"."
+    "why": "Paragraph E: they \"operate at temperatures below 77 Kelvin, permitting cooling with liquid nitrogen\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 536,
+     "end": 616,
+     "evidenceText": "operate at temperatures below 77 Kelvin, permitting cooling with liquid nitrogen"
+    }
    },
    {
     "id": "r11-q06",
@@ -767,7 +1090,13 @@
      "E. Molten salt storage"
     ],
     "answer": "A",
-    "why": "Paragraph B: lower energy density \"limits their suitability for applications requiring compact high-energy storage such as long-range electric vehicles, but makes them well-suited for stationary energy storage\"."
+    "why": "Paragraph B: lower energy density \"limits their suitability for applications requiring compact high-energy storage such as long-range electric vehicles, but makes them well-suited for stationary energy storage\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 854,
+     "end": 1028,
+     "evidenceText": "limits their suitability for applications requiring compact high-energy storage such as long-range electric vehicles, but makes them well-suited for stationary energy storage"
+    }
    },
    {
     "id": "r11-q07",
@@ -781,7 +1110,13 @@
      "E. Molten salt storage"
     ],
     "answer": "C",
-    "why": "Paragraph D: \"lead content in conventional compositions raising environmental concerns\"."
+    "why": "Paragraph D: \"lead content in conventional compositions raising environmental concerns\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 1129,
+     "end": 1201,
+     "evidenceText": "lead content in conventional compositions raising environmental concerns"
+    }
    },
    {
     "id": "r11-q08",
@@ -795,7 +1130,13 @@
      "E. Molten salt storage"
     ],
     "answer": "E",
-    "why": "Paragraph F: molten salt systems allow \"energy storage for 10 to 15 hours with minimal energy loss\"."
+    "why": "Paragraph F: molten salt systems allow \"energy storage for 10 to 15 hours with minimal energy loss\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 346,
+     "end": 404,
+     "evidenceText": "energy storage for 10 to 15 hours with minimal energy loss"
+    }
    },
    {
     "id": "r11-q09",
@@ -809,7 +1150,13 @@
      "E. Molten salt storage"
     ],
     "answer": "B",
-    "why": "Paragraph C: the solid electrolyte means \"eliminating the flammable organic solvents that create fire hazards\"."
+    "why": "Paragraph C: the solid electrolyte means \"eliminating the flammable organic solvents that create fire hazards\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 399,
+     "end": 466,
+     "evidenceText": "eliminating the flammable organic solvents that create fire hazards"
+    }
    },
    {
     "id": "r11-q10",
@@ -820,7 +1167,13 @@
      "89%",
      "89"
     ],
-    "why": "Paragraph D: \"costs declined by approximately 89 percent between 2010 and 2020\"."
+    "why": "Paragraph D: \"costs declined by approximately 89 percent between 2010 and 2020\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 172,
+     "end": 236,
+     "evidenceText": "costs declined by approximately 89 percent between 2010 and 2020"
+    }
    },
    {
     "id": "r11-q11",
@@ -829,7 +1182,13 @@
     "answer": [
      "sunset"
     ],
-    "why": "Paragraph F: \"enabling continuous power generation even during nighttime hours following sunset\"."
+    "why": "Paragraph F: \"enabling continuous power generation even during nighttime hours following sunset\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 555,
+     "end": 636,
+     "evidenceText": "enabling continuous power generation even during nighttime hours following sunset"
+    }
    },
    {
     "id": "r11-q12",
@@ -842,7 +1201,13 @@
      "D. repeated failures in pilot installations"
     ],
     "answer": "C",
-    "why": "Paragraph E: \"capital costs approximately three times higher than conventional copper-based transmission infrastructure\". A is wrong (nitrogen is made \"through well-established industrial processes\"); B and D are contradicted by \"critical current densities sufficient\" and \"successful operation\"."
+    "why": "Paragraph E: \"capital costs approximately three times higher than conventional copper-based transmission infrastructure\". A is wrong (nitrogen is made \"through well-established industrial processes\"); B and D are contradicted by \"critical current densities sufficient\" and \"successful operation\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 1219,
+     "end": 1324,
+     "evidenceText": "capital costs approximately three times higher than conventional copper-based transmission infrastructure"
+    }
    },
    {
     "id": "r11-q13",
@@ -855,7 +1220,13 @@
      "D. are far cheaper to produce than rock or sand."
     ],
     "answer": "B",
-    "why": "Paragraph F: their heat capacities are \"approximately 5 to 10 times higher than rock or sand conventionally used in thermal storage, enabling more compact storage systems\". A and C are contradicted by research on \"stabilizing matrix compounds\" to reach 1,000 cycles; D is not stated."
+    "why": "Paragraph F: their heat capacities are \"approximately 5 to 10 times higher than rock or sand conventionally used in thermal storage, enabling more compact storage systems\". A and C are contradicted by research on \"stabilizing matrix compounds\" to reach 1,000 cycles; D is not stated.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 951,
+     "end": 1081,
+     "evidenceText": "approximately 5 to 10 times higher than rock or sand conventionally used in thermal storage, enabling more compact storage systems"
+    }
    }
   ]
  },
@@ -896,28 +1267,47 @@
     "type": "tfng",
     "prompt": "REM sleep was discovered in the 1950s.",
     "answer": "TRUE",
-    "why": "Paragraph A: \"Modern sleep science emerged during the 1950s when researchers Nathaniel Kleitman and Eugene Aserinsky discovered rapid eye movement\"."
+    "why": "Paragraph A: \"Modern sleep science emerged during the 1950s when researchers Nathaniel Kleitman and Eugene Aserinsky discovered rapid eye movement\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 556,
+     "end": 688,
+     "evidenceText": "Modern sleep science emerged during the 1950s when researchers Nathaniel Kleitman and Eugene Aserinsky discovered rapid eye movement"
+    }
    },
    {
     "id": "r12-q02",
     "type": "tfng",
     "prompt": "Adults spend less of their sleep in non-REM stages than in REM sleep.",
     "answer": "FALSE",
-    "why": "Paragraph A: non-REM sleep makes up \"approximately 75 to 80 percent of sleep time\", against 20 to 25 percent for REM."
+    "why": "Paragraph A: non-REM sleep makes up \"approximately 75 to 80 percent of sleep time\", against 20 to 25 percent for REM.",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 1101,
+     "end": 1145,
+     "evidenceText": "approximately 75 to 80 percent of sleep time"
+    }
    },
    {
     "id": "r12-q03",
     "type": "tfng",
     "prompt": "Hobson and McCarley based their hypothesis on experiments with animals.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph C says only that the hypothesis was \"formulated by Hobson and McCarley in 1977\". How they developed it is not described."
+    "why": "Paragraph C says only that the hypothesis was \"formulated by Hobson and McCarley in 1977\". How they developed it is not described.",
+    "evidence": null
    },
    {
     "id": "r12-q04",
     "type": "tfng",
     "prompt": "Caffeine keeps people awake by interfering with adenosine.",
     "answer": "TRUE",
-    "why": "Paragraph E: \"Caffeine achieves wakefulness-promoting effects through adenosine receptor antagonism, blocking sleep signals\"."
+    "why": "Paragraph E: \"Caffeine achieves wakefulness-promoting effects through adenosine receptor antagonism, blocking sleep signals\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 884,
+     "end": 993,
+     "evidenceText": "Caffeine achieves wakefulness-promoting effects through adenosine receptor antagonism, blocking sleep signals"
+    }
    },
    {
     "id": "r12-q05",
@@ -932,7 +1322,13 @@
      "F"
     ],
     "answer": "C",
-    "why": "Paragraph C: dreams \"arise from the brain's attempt to construct coherent narratives from random neural activation patterns\"."
+    "why": "Paragraph C: dreams \"arise from the brain's attempt to construct coherent narratives from random neural activation patterns\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 656,
+     "end": 758,
+     "evidenceText": "arise from the brain's attempt to construct coherent narratives from random neural activation patterns"
+    }
    },
    {
     "id": "r12-q06",
@@ -947,7 +1343,13 @@
      "F"
     ],
     "answer": "D",
-    "why": "Paragraph D: \"The lethal familial insomnia ... demonstrates sleep's absolute necessity for survival\"."
+    "why": "Paragraph D: \"The lethal familial insomnia ... demonstrates sleep's absolute necessity for survival\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 606,
+     "end": 783,
+     "evidenceText": "The lethal familial insomnia, a rare neurodegenerative disease caused by prion protein mutations affecting sleep regulation, demonstrates sleep's absolute necessity for survival"
+    }
    },
    {
     "id": "r12-q07",
@@ -962,7 +1364,13 @@
      "F"
     ],
     "answer": "F",
-    "why": "Paragraph F: sleep hygiene includes \"bedroom temperature 16-19 degrees Celsius\"."
+    "why": "Paragraph F: sleep hygiene includes \"bedroom temperature 16-19 degrees Celsius\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 729,
+     "end": 770,
+     "evidenceText": "bedroom temperature 16-19 degrees Celsius"
+    }
    },
    {
     "id": "r12-q08",
@@ -977,7 +1385,13 @@
      "F"
     ],
     "answer": "E",
-    "why": "Paragraph E: \"The suprachiasmatic nucleus, a hypothalamic structure containing approximately 20,000 neurons, functions as the central circadian pacemaker\"."
+    "why": "Paragraph E: \"The suprachiasmatic nucleus, a hypothalamic structure containing approximately 20,000 neurons, functions as the central circadian pacemaker\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 136,
+     "end": 275,
+     "evidenceText": "The suprachiasmatic nucleus, a hypothalamic structure containing approximately 20,000 neurons, functions as the central circadian pacemaker"
+    }
    },
    {
     "id": "r12-q09",
@@ -986,7 +1400,13 @@
     "answer": [
      "neocortex"
     ],
-    "why": "Paragraph B: spindles \"facilitate transfer of hippocampal memories to the neocortex\"."
+    "why": "Paragraph B: spindles \"facilitate transfer of hippocampal memories to the neocortex\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 847,
+     "end": 907,
+     "evidenceText": "facilitate transfer of hippocampal memories to the neocortex"
+    }
    },
    {
     "id": "r12-q10",
@@ -995,7 +1415,13 @@
     "answer": [
      "melatonin"
     ],
-    "why": "Paragraph E: \"blue-wavelength light around 480 nanometers, suppresses melatonin and promotes wakefulness\"."
+    "why": "Paragraph E: \"blue-wavelength light around 480 nanometers, suppresses melatonin and promotes wakefulness\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 448,
+     "end": 538,
+     "evidenceText": "blue-wavelength light around 480 nanometers, suppresses melatonin and promotes wakefulness"
+    }
    },
    {
     "id": "r12-q11",
@@ -1004,7 +1430,13 @@
     "answer": [
      "adenosine"
     ],
-    "why": "Paragraph E: \"Homeostatic sleep pressure depends upon accumulation of adenosine\"."
+    "why": "Paragraph E: \"Homeostatic sleep pressure depends upon accumulation of adenosine\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 725,
+     "end": 790,
+     "evidenceText": "Homeostatic sleep pressure depends upon accumulation of adenosine"
+    }
    },
    {
     "id": "r12-q12",
@@ -1017,7 +1449,13 @@
      "D. Research now suggests dreams are mostly neural noise."
     ],
     "answer": "D",
-    "why": "Paragraph C: \"Contrary to Freudian dream theory, contemporary research suggests dreams primarily reflect neural noise rather than encoding meaningful psychological information\". A is the opposite; B and C are not stated."
+    "why": "Paragraph C: \"Contrary to Freudian dream theory, contemporary research suggests dreams primarily reflect neural noise rather than encoding meaningful psychological information\". A is the opposite; B and C are not stated.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 1147,
+     "end": 1308,
+     "evidenceText": "Contrary to Freudian dream theory, contemporary research suggests dreams primarily reflect neural noise rather than encoding meaningful psychological information"
+    }
    },
    {
     "id": "r12-q13",
@@ -1030,7 +1468,13 @@
      "D. need noticeably less sleep overall than others."
     ],
     "answer": "A",
-    "why": "Paragraph B: \"individuals exhibiting higher spindle density demonstrating superior performance on intelligence tests\". B, C and D are not linked to spindles in the passage."
+    "why": "Paragraph B: \"individuals exhibiting higher spindle density demonstrating superior performance on intelligence tests\". B, C and D are not linked to spindles in the passage.",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 1067,
+     "end": 1169,
+     "evidenceText": "individuals exhibiting higher spindle density demonstrating superior performance on intelligence tests"
+    }
    },
    {
     "id": "r12-q14",
@@ -1043,7 +1487,13 @@
      "D. produced improvements more quickly than medication."
     ],
     "answer": "B",
-    "why": "Paragraph F: \"CBT-I produced superior long-term outcomes with 64 percent remission versus 39 percent in the medication group\". A is contradicted by the figures; C and D are not reported."
+    "why": "Paragraph F: \"CBT-I produced superior long-term outcomes with 64 percent remission versus 39 percent in the medication group\". A is contradicted by the figures; C and D are not reported.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 551,
+     "end": 661,
+     "evidenceText": "CBT-I produced superior long-term outcomes with 64 percent remission versus 39 percent in the medication group"
+    }
    }
   ]
  }

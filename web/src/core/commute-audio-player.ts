@@ -385,7 +385,7 @@ export class CommuteAudioPlayer {
           <div class="commute-item-prompt">${item.prompt}</div>
         </div>
 
-        <div class="commute-answer-wrapper" style="cursor: pointer;" title="Tap to toggle answer visibility">
+        <div class="commute-answer-wrapper" style="cursor: pointer;" title="${t('commute.toggle_answer_title', undefined, 'Tap to toggle answer visibility')}">
           <span class="commute-sub-label">${t('commute.target_resolution', undefined, 'TARGET RESOLUTION')}</span>
           <div class="commute-item-answer">${this.isAnswerRevealed || !this.isPlaying ? item.answer : '••••••••'}</div>
           <div class="commute-item-meaning">${item.meaning}</div>

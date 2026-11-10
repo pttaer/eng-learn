@@ -42,6 +42,62 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
     public static final String PREF_QUIZ_INDEX = "widget_quiz_index";
     public static final String PREF_QUIZ_SELECTED = "widget_quiz_selected";
     public static final String PREF_QUIZ_SCORE = "widget_quiz_score";
+    public static final String PREF_CUSTOM_WORDS_JSON = "custom_words_json";
+
+    public static class WordCardData {
+        public final String word;
+        public final String phonetic;
+        public final String meaning;
+        public final String example;
+        public final String tags;
+
+        public WordCardData(String word, String phonetic, String meaning, String example, String tags) {
+            this.word = word;
+            this.phonetic = phonetic;
+            this.meaning = meaning;
+            this.example = example;
+            this.tags = tags;
+        }
+    }
+
+    public static WordCardData getWordCard(SharedPreferences prefs, int index) {
+        String customJson = prefs.getString(PREF_CUSTOM_WORDS_JSON, null);
+        if (customJson != null && !customJson.trim().isEmpty()) {
+            try {
+                org.json.JSONArray arr = new org.json.JSONArray(customJson);
+                if (arr.length() > 0) {
+                    int safe = Math.abs(index) % arr.length();
+                    org.json.JSONObject obj = arr.getJSONObject(safe);
+                    return new WordCardData(
+                        obj.optString("word", "Ephemeral"),
+                        obj.optString("phonetic", ""),
+                        obj.optString("meaning", ""),
+                        obj.optString("example", ""),
+                        obj.optString("tags", "")
+                    );
+                }
+            } catch (Exception ignored) {}
+        }
+
+        if (index == 0 && prefs.contains(PREF_WORD)) {
+            return new WordCardData(
+                prefs.getString(PREF_WORD, OFFLINE_WORDS[0][0]),
+                prefs.getString(PREF_PHONETIC, OFFLINE_WORDS[0][1]),
+                prefs.getString(PREF_MEANING, OFFLINE_WORDS[0][2]),
+                prefs.getString(PREF_EXAMPLE, OFFLINE_WORDS[0][3]),
+                prefs.getString(PREF_TAGS, OFFLINE_WORDS[0][4])
+            );
+        }
+
+        int safeIdx = Math.abs(index) % OFFLINE_WORDS.length;
+        return new WordCardData(
+            OFFLINE_WORDS[safeIdx][0],
+            OFFLINE_WORDS[safeIdx][1],
+            OFFLINE_WORDS[safeIdx][2],
+            OFFLINE_WORDS[safeIdx][3],
+            OFFLINE_WORDS[safeIdx][4]
+        );
+    }
 
     public static final String ACTION_NEXT_WORD = "app.englishsingularity.ACTION_NEXT_WORD";
     public static final String ACTION_SPEAK_WORD = "app.englishsingularity.ACTION_SPEAK_WORD";
@@ -56,6 +112,16 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
     public static final String ACTION_OPEN_WRITING = "app.englishsingularity.ACTION_OPEN_WRITING";
     public static final String ACTION_OPEN_LISTENING = "app.englishsingularity.ACTION_OPEN_LISTENING";
     public static final String ACTION_OPEN_SPEAKING = "app.englishsingularity.ACTION_OPEN_SPEAKING";
+    public static final String ACTION_OPEN_HABITS = "app.englishsingularity.ACTION_OPEN_HABITS";
+    public static final String ACTION_OPEN_QUIZ = "app.englishsingularity.ACTION_OPEN_QUIZ";
+    public static final String ACTION_OPEN_TREE = "app.englishsingularity.ACTION_OPEN_TREE";
+
+    private static PendingIntent createActivityPendingIntent(Context context, String action, int requestCode) {
+        Intent intent = new Intent(context, MainActivity.class);
+        intent.setAction(action);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        return PendingIntent.getActivity(context, requestCode, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+    }
 
     // Curated offline C2 / Academic IELTS pool for standalone offline widget rotation & quiz
     private static final String[][] OFFLINE_WORDS = {
@@ -253,6 +319,9 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        int current = prefs.getInt(PREF_WORD_INDEX, 0);
+        prefs.edit().putInt(PREF_WORD_INDEX, current + 1).apply();
         for (int widgetId : appWidgetIds) {
             updateWidget(context, appWidgetManager, widgetId, null);
         }
@@ -270,12 +339,12 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
         String progress = prefs.getString(PREF_PROGRESS, "Lv.4 • 2/3 Quests");
         int index = prefs.getInt(PREF_WORD_INDEX, 0);
 
-        int safeIdx = Math.abs(index) % OFFLINE_WORDS.length;
-        String word = prefs.getString(PREF_WORD, OFFLINE_WORDS[safeIdx][0]);
-        String phonetic = prefs.getString(PREF_PHONETIC, OFFLINE_WORDS[safeIdx][1]);
-        String meaning = prefs.getString(PREF_MEANING, OFFLINE_WORDS[safeIdx][2]);
-        String example = prefs.getString(PREF_EXAMPLE, OFFLINE_WORDS[safeIdx][3]);
-        String tags = prefs.getString(PREF_TAGS, OFFLINE_WORDS[safeIdx][4]);
+        WordCardData currentWord = getWordCard(prefs, index);
+        String word = currentWord.word;
+        String phonetic = currentWord.phonetic;
+        String meaning = currentWord.meaning;
+        String example = currentWord.example;
+        String tags = currentWord.tags;
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             // Android 12+ multi-size responsive layout map
@@ -316,7 +385,7 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
         RemoteViews views = new RemoteViews(context.getPackageName(), layoutId);
         SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
 
-        // Streak pill (compact: "🔥 12d", standard: "🔥 12-Day Streak")
+        // Streak pill (compact: "🔥 12d", standard: "🔥 12-Day Streak") - one tap jumps to Habits / Daily Quests
         String streakText;
         try {
             int formatRes = isCompact ? R.string.widget_streak_compact_format : R.string.widget_streak_format;
@@ -325,6 +394,7 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             streakText = isCompact ? ("🔥 " + streak + "d") : ("🔥 " + streak + (streak == 1 ? " Day Streak" : "-Day Streak"));
         }
         views.setTextViewText(R.id.widget_streak, streakText);
+        views.setOnClickPendingIntent(R.id.widget_streak, createActivityPendingIntent(context, ACTION_OPEN_HABITS, 201));
 
         // Intent: Tap next word (↻)
         Intent nextIntent = new Intent(context, SingularityWidgetProvider.class);
@@ -333,20 +403,22 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             context, 100, nextIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
         views.setOnClickPendingIntent(R.id.widget_action_next, nextPending);
 
-        // Intent: Open main app on card tap
-        Intent mainIntent = new Intent(context, MainActivity.class);
-        mainIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent mainPending = PendingIntent.getActivity(
-            context, 200, mainIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-        views.setOnClickPendingIntent(R.id.widget_card_content, mainPending);
-        views.setOnClickPendingIntent(R.id.widget_root, mainPending);
-
         if (layoutId == R.layout.widget_singularity_expanded) {
             // ==========================================
             // TABBED EXPANDED WIDGET SETUP (ViewFlipper)
             // ==========================================
             int activeTab = prefs.getInt(PREF_ACTIVE_TAB, 0);
             if (activeTab < 0 || activeTab > 3) activeTab = 0;
+
+            // Context-aware root tap fallback for the active tab view
+            String activeRootAction;
+            switch (activeTab) {
+                case 1: activeRootAction = ACTION_OPEN_QUIZ; break;
+                case 2: activeRootAction = ACTION_OPEN_HABITS; break;
+                case 3: activeRootAction = ACTION_OPEN_IELTS; break;
+                default: activeRootAction = ACTION_OPEN_VOCAB; break;
+            }
+            views.setOnClickPendingIntent(R.id.widget_root, createActivityPendingIntent(context, activeRootAction, 200));
 
             // Switch ViewFlipper active displayed child
             views.setInt(R.id.widget_flipper, "setDisplayedChild", activeTab);
@@ -398,12 +470,32 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             views.setTextViewText(R.id.widget_word, word);
             views.setTextViewText(R.id.widget_phonetic, phonetic);
 
+            // One-tap jump to Vocabulary Dossier on any card element
+            views.setOnClickPendingIntent(R.id.widget_card_content, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 210));
+            views.setOnClickPendingIntent(R.id.widget_word, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 211));
+            views.setOnClickPendingIntent(R.id.widget_phonetic, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 212));
+            views.setOnClickPendingIntent(R.id.widget_meaning, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 213));
+            views.setOnClickPendingIntent(R.id.widget_example, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 214));
+
+            String cefrTag = "C2 ACADEMIC";
+            if (tags != null && tags.contains("CEFR:")) {
+                try {
+                    int idx = tags.indexOf("CEFR:");
+                    String part = tags.substring(idx + 5).trim();
+                    String level = part.split("[^A-Za-z0-9]")[0];
+                    if (!level.isEmpty()) cefrTag = level.toUpperCase() + " ACADEMIC";
+                } catch (Exception ignored) {}
+            }
+
             String hook = prefs.getString("notification_hook", "");
             String tip = prefs.getString("notification_tip", "");
             String displayBadge = (hook != null && !hook.trim().isEmpty()) ? hook : tip;
             if (displayBadge != null && !displayBadge.trim().isEmpty()) {
                 views.setTextViewText(R.id.widget_badge_cefr, displayBadge);
+            } else {
+                views.setTextViewText(R.id.widget_badge_cefr, cefrTag);
             }
+            views.setOnClickPendingIntent(R.id.widget_badge_cefr, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 217));
 
             // Active Recall Masking Toggle
             boolean isMasked = prefs.getBoolean(PREF_RECALL_MASKED, false);
@@ -442,6 +534,8 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             // Collocations & Synonyms Tag Block
             boolean hasTags = tags != null && !tags.trim().isEmpty();
             views.setViewVisibility(R.id.widget_tags_container, hasTags ? View.VISIBLE : View.GONE);
+            views.setOnClickPendingIntent(R.id.widget_tags_container, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 215));
+            views.setOnClickPendingIntent(R.id.widget_tags, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 216));
             if (hasTags) {
                 if (isMasked) {
                     views.setTextViewText(R.id.widget_tags, "[Active Recall Mode] Tap '👁 Reveal' to uncover meaning & collocations");
@@ -459,22 +553,54 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             int quizSelected = prefs.getInt(PREF_QUIZ_SELECTED, -1);
             int quizScore = prefs.getInt(PREF_QUIZ_SCORE, 0);
 
-            int targetWordIdx = Math.abs(quizIdx) % OFFLINE_WORDS.length;
-            String quizWord = OFFLINE_WORDS[targetWordIdx][0];
-            String quizPhonetic = OFFLINE_WORDS[targetWordIdx][1];
-            String correctDef = (isVietnamese && OFFLINE_WORDS[targetWordIdx].length > 5)
-                ? OFFLINE_WORDS[targetWordIdx][5]
-                : OFFLINE_WORDS[targetWordIdx][2];
+            String customJson = prefs.getString(PREF_CUSTOM_WORDS_JSON, null);
+            org.json.JSONArray customArr = null;
+            if (customJson != null && !customJson.trim().isEmpty()) {
+                try {
+                    org.json.JSONArray a = new org.json.JSONArray(customJson);
+                    if (a.length() >= 3) customArr = a;
+                } catch (Exception ignored) {}
+            }
 
-            int distractor1Idx = (targetWordIdx + 3) % OFFLINE_WORDS.length;
-            String distractor1 = (isVietnamese && OFFLINE_WORDS[distractor1Idx].length > 5)
-                ? OFFLINE_WORDS[distractor1Idx][5]
-                : OFFLINE_WORDS[distractor1Idx][2];
+            String quizWord;
+            String quizPhonetic;
+            String correctDef;
+            String distractor1;
+            String distractor2;
 
-            int distractor2Idx = (targetWordIdx + 7) % OFFLINE_WORDS.length;
-            String distractor2 = (isVietnamese && OFFLINE_WORDS[distractor2Idx].length > 5)
-                ? OFFLINE_WORDS[distractor2Idx][5]
-                : OFFLINE_WORDS[distractor2Idx][2];
+            if (customArr != null) {
+                int len = customArr.length();
+                int targetWordIdx = Math.abs(quizIdx) % len;
+                int distractor1Idx = (targetWordIdx + 1) % len;
+                int distractor2Idx = (targetWordIdx + 2) % len;
+
+                org.json.JSONObject targetObj = customArr.optJSONObject(targetWordIdx);
+                org.json.JSONObject d1Obj = customArr.optJSONObject(distractor1Idx);
+                org.json.JSONObject d2Obj = customArr.optJSONObject(distractor2Idx);
+
+                quizWord = targetObj.optString("word", "Ephemeral");
+                quizPhonetic = targetObj.optString("phonetic", "");
+                correctDef = targetObj.optString("meaning", "");
+                distractor1 = d1Obj.optString("meaning", "");
+                distractor2 = d2Obj.optString("meaning", "");
+            } else {
+                int targetWordIdx = Math.abs(quizIdx) % OFFLINE_WORDS.length;
+                quizWord = OFFLINE_WORDS[targetWordIdx][0];
+                quizPhonetic = OFFLINE_WORDS[targetWordIdx][1];
+                correctDef = (isVietnamese && OFFLINE_WORDS[targetWordIdx].length > 5)
+                    ? OFFLINE_WORDS[targetWordIdx][5]
+                    : OFFLINE_WORDS[targetWordIdx][2];
+
+                int distractor1Idx = (targetWordIdx + 3) % OFFLINE_WORDS.length;
+                distractor1 = (isVietnamese && OFFLINE_WORDS[distractor1Idx].length > 5)
+                    ? OFFLINE_WORDS[distractor1Idx][5]
+                    : OFFLINE_WORDS[distractor1Idx][2];
+
+                int distractor2Idx = (targetWordIdx + 7) % OFFLINE_WORDS.length;
+                distractor2 = (isVietnamese && OFFLINE_WORDS[distractor2Idx].length > 5)
+                    ? OFFLINE_WORDS[distractor2Idx][5]
+                    : OFFLINE_WORDS[distractor2Idx][2];
+            }
 
             // Determine randomized correct position (0, 1, or 2)
             int correctSlot = Math.abs(quizIdx * 7 + 1) % 3;
@@ -498,6 +624,13 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
                 ? ("🧠 " + quizScore + " Đúng (+" + (quizScore * 10) + " XP)")
                 : ("🧠 " + quizScore + " Correct (+" + (quizScore * 10) + " XP)");
             views.setTextViewText(R.id.widget_quiz_score, scoreText);
+
+            // One-tap jump to Speed Recall Blitz Quiz in app when tapping quiz header/prompt
+            views.setOnClickPendingIntent(R.id.widget_quiz_prompt_label, createActivityPendingIntent(context, ACTION_OPEN_QUIZ, 220));
+            views.setOnClickPendingIntent(R.id.widget_quiz_question, createActivityPendingIntent(context, ACTION_OPEN_QUIZ, 221));
+            views.setOnClickPendingIntent(R.id.widget_quiz_score, createActivityPendingIntent(context, ACTION_OPEN_QUIZ, 222));
+            views.setOnClickPendingIntent(R.id.widget_quiz_badge_cefr, createActivityPendingIntent(context, ACTION_OPEN_QUIZ, 223));
+            views.setOnClickPendingIntent(R.id.widget_quiz_feedback, createActivityPendingIntent(context, ACTION_OPEN_QUIZ, 224));
 
             int[] optContainerIds = { R.id.widget_quiz_opt_1, R.id.widget_quiz_opt_2, R.id.widget_quiz_opt_3 };
             int[] optTextIds = { R.id.widget_quiz_opt_text_1, R.id.widget_quiz_opt_text_2, R.id.widget_quiz_opt_text_3 };
@@ -586,6 +719,8 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             views.setTextViewText(R.id.widget_quest_banner, bannerTitle);
             views.setProgressBar(R.id.widget_quest_progress_bar, 100, questPct, false);
             views.setTextViewText(R.id.widget_quest_progress_text, completedQuests + "/3 " + (isVietnamese ? "Hoàn thành (" : "Completed (") + questPct + "%)");
+            views.setOnClickPendingIntent(R.id.widget_quest_banner, createActivityPendingIntent(context, ACTION_OPEN_HABITS, 230));
+            views.setOnClickPendingIntent(R.id.widget_quest_progress_text, createActivityPendingIntent(context, ACTION_OPEN_HABITS, 231));
 
             // Quest Checklist Item 1
             boolean q1Done = completedQuests >= 1;
@@ -609,75 +744,36 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             views.setTextColor(R.id.widget_quest_status_3, q3Done ? 0xFF64748B : 0xFFA5B4FC);
 
             // Quest Item Launchers
-            Intent quest1Intent = new Intent(context, MainActivity.class);
-            quest1Intent.setAction(ACTION_OPEN_VOCAB);
-            quest1Intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            views.setOnClickPendingIntent(R.id.widget_quest_item_1, PendingIntent.getActivity(
-                context, 420, quest1Intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
-
-            Intent quest2Intent = new Intent(context, MainActivity.class);
-            quest2Intent.setAction(ACTION_OPEN_WRITING);
-            quest2Intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            views.setOnClickPendingIntent(R.id.widget_quest_item_2, PendingIntent.getActivity(
-                context, 421, quest2Intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
-
-            Intent quest3Intent = new Intent(context, MainActivity.class);
-            quest3Intent.setAction(ACTION_OPEN_SPEAKING);
-            quest3Intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            views.setOnClickPendingIntent(R.id.widget_quest_item_3, PendingIntent.getActivity(
-                context, 422, quest3Intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
+            views.setOnClickPendingIntent(R.id.widget_quest_item_1, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 420));
+            views.setOnClickPendingIntent(R.id.widget_quest_item_2, createActivityPendingIntent(context, ACTION_OPEN_WRITING, 421));
+            views.setOnClickPendingIntent(R.id.widget_quest_item_3, createActivityPendingIntent(context, ACTION_OPEN_SPEAKING, 422));
 
             // --- TAB 3 (4 Pillars Studios) ---
-            Intent readingIntent = new Intent(context, MainActivity.class);
-            readingIntent.setAction(ACTION_OPEN_READING);
-            readingIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            views.setOnClickPendingIntent(R.id.widget_tile_reading, PendingIntent.getActivity(
-                context, 410, readingIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
-
-            Intent writingIntent = new Intent(context, MainActivity.class);
-            writingIntent.setAction(ACTION_OPEN_WRITING);
-            writingIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            views.setOnClickPendingIntent(R.id.widget_tile_writing, PendingIntent.getActivity(
-                context, 411, writingIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
-
-            Intent listeningIntent = new Intent(context, MainActivity.class);
-            listeningIntent.setAction(ACTION_OPEN_LISTENING);
-            listeningIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            views.setOnClickPendingIntent(R.id.widget_tile_listening, PendingIntent.getActivity(
-                context, 412, listeningIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
-
-            Intent speakingIntent = new Intent(context, MainActivity.class);
-            speakingIntent.setAction(ACTION_OPEN_SPEAKING);
-            speakingIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            views.setOnClickPendingIntent(R.id.widget_tile_speaking, PendingIntent.getActivity(
-                context, 413, speakingIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
-
-            Intent suiteIntent = new Intent(context, MainActivity.class);
-            suiteIntent.setAction(ACTION_OPEN_IELTS);
-            suiteIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            views.setOnClickPendingIntent(R.id.widget_btn_launch_ielts, PendingIntent.getActivity(
-                context, 414, suiteIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
+            views.setOnClickPendingIntent(R.id.widget_tile_reading, createActivityPendingIntent(context, ACTION_OPEN_READING, 410));
+            views.setOnClickPendingIntent(R.id.widget_tile_writing, createActivityPendingIntent(context, ACTION_OPEN_WRITING, 411));
+            views.setOnClickPendingIntent(R.id.widget_tile_listening, createActivityPendingIntent(context, ACTION_OPEN_LISTENING, 412));
+            views.setOnClickPendingIntent(R.id.widget_tile_speaking, createActivityPendingIntent(context, ACTION_OPEN_SPEAKING, 413));
+            views.setOnClickPendingIntent(R.id.widget_btn_launch_ielts, createActivityPendingIntent(context, ACTION_OPEN_IELTS, 414));
 
             // Universal bottom deep links
-            Intent vocabIntent = new Intent(context, MainActivity.class);
-            vocabIntent.setAction(ACTION_OPEN_VOCAB);
-            vocabIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            views.setOnClickPendingIntent(R.id.widget_btn_vocab, PendingIntent.getActivity(
-                context, 300, vocabIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
-
-            Intent ieltsIntent = new Intent(context, MainActivity.class);
-            ieltsIntent.setAction(ACTION_OPEN_IELTS);
-            ieltsIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            views.setOnClickPendingIntent(R.id.widget_btn_ielts, PendingIntent.getActivity(
-                context, 400, ieltsIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
+            views.setOnClickPendingIntent(R.id.widget_kicker, createActivityPendingIntent(context, ACTION_OPEN_TREE, 250));
+            views.setOnClickPendingIntent(R.id.widget_btn_vocab, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 300));
+            views.setOnClickPendingIntent(R.id.widget_btn_ielts, createActivityPendingIntent(context, ACTION_OPEN_IELTS, 400));
 
         } else {
             // ==========================================
-            // SMALL & MEDIUM WIDGET SETUP
+            // SMALL, MEDIUM & STANDARD WIDGET SETUP
             // ==========================================
             views.setTextViewText(R.id.widget_word, word);
             views.setTextViewText(R.id.widget_phonetic, phonetic);
             views.setTextViewText(R.id.widget_meaning, meaning);
+
+            // Direct one-tap deep links to Vocabulary Dossier
+            views.setOnClickPendingIntent(R.id.widget_root, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 200));
+            views.setOnClickPendingIntent(R.id.widget_card_content, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 203));
+            views.setOnClickPendingIntent(R.id.widget_word, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 204));
+            views.setOnClickPendingIntent(R.id.widget_phonetic, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 205));
+            views.setOnClickPendingIntent(R.id.widget_meaning, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 206));
 
             // Single audio button
             Intent audioIntent = new Intent(context, SingularityWidgetProvider.class);
@@ -691,23 +787,17 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
                 String tip = prefs.getString("notification_tip", "");
                 String displayProgress = (hook != null && !hook.trim().isEmpty()) ? hook : ((tip != null && !tip.trim().isEmpty()) ? tip : progress);
                 views.setTextViewText(R.id.widget_progress, displayProgress);
+                views.setOnClickPendingIntent(R.id.widget_progress, createActivityPendingIntent(context, ACTION_OPEN_HABITS, 202));
+
                 boolean hasExample = example != null && !example.trim().isEmpty();
                 views.setViewVisibility(R.id.widget_example, hasExample ? View.VISIBLE : View.GONE);
                 if (hasExample) {
                     views.setTextViewText(R.id.widget_example, example);
+                    views.setOnClickPendingIntent(R.id.widget_example, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 207));
                 }
 
-                Intent vocabIntent = new Intent(context, MainActivity.class);
-                vocabIntent.setAction(ACTION_OPEN_VOCAB);
-                vocabIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                views.setOnClickPendingIntent(R.id.widget_btn_vocab, PendingIntent.getActivity(
-                    context, 300, vocabIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
-
-                Intent ieltsIntent = new Intent(context, MainActivity.class);
-                ieltsIntent.setAction(ACTION_OPEN_IELTS);
-                ieltsIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                views.setOnClickPendingIntent(R.id.widget_btn_ielts, PendingIntent.getActivity(
-                    context, 400, ieltsIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
+                views.setOnClickPendingIntent(R.id.widget_btn_vocab, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 300));
+                views.setOnClickPendingIntent(R.id.widget_btn_ielts, createActivityPendingIntent(context, ACTION_OPEN_IELTS, 400));
             }
         }
 
@@ -729,11 +819,6 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             int current = prefs.getInt(PREF_WORD_INDEX, 0);
             prefs.edit()
                 .putInt(PREF_WORD_INDEX, current + 1)
-                .remove(PREF_WORD)
-                .remove(PREF_PHONETIC)
-                .remove(PREF_MEANING)
-                .remove(PREF_EXAMPLE)
-                .remove(PREF_TAGS)
                 .apply();
 
             updateAllWidgets(context);
@@ -779,8 +864,7 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             if (wordToSpeak == null || wordToSpeak.trim().isEmpty()) {
                 SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
                 int index = prefs.getInt(PREF_WORD_INDEX, 0);
-                int safeIdx = Math.abs(index) % OFFLINE_WORDS.length;
-                wordToSpeak = prefs.getString(PREF_WORD, OFFLINE_WORDS[safeIdx][0]);
+                wordToSpeak = getWordCard(prefs, index).word;
             }
             if (wordToSpeak != null) {
                 wordToSpeak = wordToSpeak.replace("“", "").replace("”", "").replace("\"", "").trim();
@@ -792,8 +876,7 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             if (sentenceToSpeak == null || sentenceToSpeak.trim().isEmpty()) {
                 SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
                 int index = prefs.getInt(PREF_WORD_INDEX, 0);
-                int safeIdx = Math.abs(index) % OFFLINE_WORDS.length;
-                sentenceToSpeak = prefs.getString(PREF_EXAMPLE, OFFLINE_WORDS[safeIdx][3]);
+                sentenceToSpeak = getWordCard(prefs, index).example;
             }
             if (sentenceToSpeak != null) {
                 sentenceToSpeak = sentenceToSpeak.replace("“", "").replace("”", "").replace("\"", "").trim();

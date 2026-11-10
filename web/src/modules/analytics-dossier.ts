@@ -112,8 +112,8 @@ export class AnalyticsDossier {
           <div class="analytics-card trajectory-card" style="background: var(--bg-surface, #0f172a); border: 1px solid var(--border-hairline); border-radius: 12px; padding: 16px;">
             <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
               <div>
-                <span class="badge-sub" style="font-size: var(--font-kicker); font-weight: 700; letter-spacing: 0.08em; color: var(--accent-gold, #f59e0b); text-transform: uppercase;">PREDICTIVE 30-DAY CORRIDOR</span>
-                <h3 style="margin: 2px 0 0; font-size: var(--font-body); font-weight: 700;">IELTS Band Trajectory</h3>
+                <span class="badge-sub" style="font-size: var(--font-kicker); font-weight: 700; letter-spacing: 0.08em; color: var(--accent-gold, #f59e0b); text-transform: uppercase;">${t('analytics.predictive_corridor', undefined, 'PREDICTIVE 30-DAY CORRIDOR')}</span>
+                <h3 style="margin: 2px 0 0; font-size: var(--font-body); font-weight: 700;">${t('analytics.band_trajectory_title', undefined, 'IELTS Band Trajectory')}</h3>
               </div>
               <span style="font-size: var(--font-kicker); color: var(--ink-muted, #94a3b8);">Target: <strong>Band 7.5</strong> (C1)</span>
             </div>
@@ -137,8 +137,8 @@ export class AnalyticsDossier {
             
             <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
               <div>
-                <span class="badge-sub" style="font-size: var(--font-kicker); font-weight: 700; letter-spacing: 0.08em; color: var(--accent-purple, #a855f7); text-transform: uppercase;">SERL 2.0 ADAPTIVE ENGINE</span>
-                <h2 style="margin: 2px 0 0; font-size: var(--font-h3); font-weight: 700;">Error Rehabilitation Gauntlet</h2>
+                <span class="badge-sub" style="font-size: var(--font-kicker); font-weight: 700; letter-spacing: 0.08em; color: var(--accent-purple, #a855f7); text-transform: uppercase;">${t('analytics.serl_engine', undefined, 'SERL 2.0 ADAPTIVE ENGINE')}</span>
+                <h2 style="margin: 2px 0 0; font-size: var(--font-h3); font-weight: 700;">${t('analytics.error_rehab_title', undefined, 'Error Rehabilitation Gauntlet')}</h2>
               </div>
               <div class="serl-count-badge" style="background: rgba(168, 85, 247, 0.15); border: none; color: var(--accent-purple, #a855f7); padding: 4px 10px; border-radius: var(--radius-pill, 9999px); font-size: var(--font-kicker); font-weight: 700; white-space: nowrap; flex-shrink: 0;">
                 ${serlStats.totalDue} DUE / ${serlStats.totalActive} ACTIVE
@@ -478,7 +478,7 @@ export class AnalyticsDossier {
     }
 
     return `
-      <svg width="100%" height="auto" viewBox="0 0 ${size} ${size}" style="max-width: 100%; max-height: ${size}px; display: block;" class="cefr-radar-svg" role="img" aria-label="CEFR 6-Axis Competency Radar">
+      <svg width="100%" height="auto" viewBox="0 0 ${size} ${size}" style="max-width: 100%; max-height: ${size}px; display: block;" class="cefr-radar-svg" role="img" aria-label="${t('analytics.radar_aria', undefined, 'CEFR 6-Axis Competency Radar')}">
         <g class="radar-grid">
           ${ringsHtml}
           ${spokesHtml}
@@ -537,7 +537,7 @@ export class AnalyticsDossier {
     const targetY = getY(targetBand);
 
     return `
-      <svg width="100%" height="auto" viewBox="0 0 ${width} ${height}" class="ielts-trajectory-svg" style="max-width: 100%; display: block;" role="img" aria-label="IELTS Band Trajectory Projection">
+      <svg width="100%" height="auto" viewBox="0 0 ${width} ${height}" class="ielts-trajectory-svg" style="max-width: 100%; display: block;" role="img" aria-label="${t('analytics.trajectory_aria', undefined, 'IELTS Band Trajectory Projection')}">
         <!-- Horizontal Grid Lines (Bands 5.0 to 9.0) -->
         ${[5.0, 6.0, 7.0, 8.0, 9.0].map(b => `
           <line x1="${padX}" y1="${getY(b).toFixed(1)}" x2="${(width - padX).toFixed(1)}" y2="${getY(b).toFixed(1)}" stroke="rgba(255,255,255,0.06)" stroke-width="1" />

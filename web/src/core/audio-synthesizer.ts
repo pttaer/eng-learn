@@ -126,7 +126,7 @@ export interface MinimalPairItem {
   focusHint: string;
 }
 
-export type AccentCadenceType = 'uk-rp' | 'general-american' | 'australian' | 'scottish';
+export type AccentCadenceType = 'uk-rp' | 'general-american' | 'australian' | 'scottish' | 'indian' | 'singaporean';
 
 export interface AccentCadenceModel {
   id: AccentCadenceType;
@@ -184,6 +184,28 @@ export const ACCENT_CADENCE_MODELS: Record<AccentCadenceType, AccentCadenceModel
     commaPauseMs: 260,
     periodPauseMs: 450,
     description: 'Scottish cadence featuring distinct prosodic lilts, rolling rhythmic cadences, and extended clause boundaries.'
+  },
+  'indian': {
+    id: 'indian',
+    label: 'Indian English',
+    langPrefixes: ['en-IN', 'en_IN'],
+    preferredVoiceNames: [/ravi/i, /heera/i, /veena/i, /priya/i, /neerja/i, /kalpana/i, /india/i, /hindi/i],
+    rate: 0.96,
+    pitch: 1.04,
+    commaPauseMs: 180,
+    periodPauseMs: 340,
+    description: 'Indian English cadence with syllable-timed rhythm, retroflex stops, and minimal vowel reduction.'
+  },
+  'singaporean': {
+    id: 'singaporean',
+    label: 'Singaporean / SEA English',
+    langPrefixes: ['en-SG', 'en_SG'],
+    preferredVoiceNames: [/singapore/i, /asian/i],
+    rate: 1.02,
+    pitch: 1.02,
+    commaPauseMs: 160,
+    periodPauseMs: 320,
+    description: 'Southeast Asian English cadence with crisp, rapid syllable timing and distinctive prosody.'
   }
 };
 

@@ -11,6 +11,7 @@ import { ScrollAffordance } from '../core/scroll-affordance';
 import { HeaderHUD } from './header-hud';
 import collocationsData from '../assets/data/collocations.json';
 import { t } from '../core/i18n';
+import { illustration } from '../utils/illustrations';
 
 export interface CollocationItem {
   id: string;
@@ -105,14 +106,38 @@ export class CollocationsDossier {
       : t('placeholder.search_collocations');
 
     this.container.innerHTML = `
+      <!-- Collocation Forge Hero Banner -->
+      <div class="app-hero-banner collocations-hero-banner" style="margin-bottom: var(--space-12, 12px);">
+        <div class="app-hero-banner-content">
+          <span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">
+            [${t('colloc.title', undefined, 'COLLOCATION FORGE')}]
+          </span>
+          <h2 style="margin: 0; font-size: var(--font-h3, 16px); font-weight: 700; color: var(--ink-primary); line-height: 1.3;">
+            ${this.viewMode === 'drill' ? t('colloc.active_srs') : t('colloc.full_lexicon', { total: total.toLocaleString() })}
+          </h2>
+          <div style="font-size: var(--font-kicker); color: var(--ink-secondary); display: flex; gap: 8px; flex-wrap: wrap;">
+            <span>CEFR ${this.activeLevel}</span>
+            <span>•</span>
+            <span>${this.activeCategory}</span>
+            <span>•</span>
+            <span>${t('colloc.total_count', { total: total.toLocaleString() })}</span>
+          </div>
+        </div>
+        <div class="app-hero-banner-art">
+          ${illustration('knowledge', { size: 'banner', ariaLabel: t('colloc.title', undefined, 'Collocation Forge') })}
+        </div>
+      </div>
+
       <div class="collocations-mode-header">
         <div class="view-mode-toggle">
           <button class="hud-btn view-toggle-btn ${this.viewMode === 'drill' ? 'active' : ''}" data-view="drill">${icon('zap')} ${t('colloc.active_srs')}</button>
           <button class="hud-btn view-toggle-btn ${this.viewMode === 'dictionary' ? 'active' : ''}" data-view="dictionary">${icon('book')} ${t('colloc.full_lexicon', { total: total.toLocaleString() })}</button>
         </div>
-        <div class="lexicon-badge-summary">
-          <span class="telemetry-value">${t('colloc.total_count', { total: total.toLocaleString() })}</span>
-        </div>
+        ${this.viewMode === 'dictionary' ? `
+          <div class="lexicon-badge-summary">
+            <span class="telemetry-value">${t('colloc.total_count', { total: total.toLocaleString() })}</span>
+          </div>
+        ` : ''}
       </div>
 
       <div class="dossier-control-bar">
@@ -179,19 +204,22 @@ export class CollocationsDossier {
               <tr>
                 <th style="width: 60px; text-align: center;">#</th>
                 <th>${t('colloc.collocation_phrase')}</th>
-                <th style="width: 110px;">CATEGORY</th>
+                <th style="width: 110px;">${t('colloc.th_category', undefined, 'CATEGORY')}</th>
                 <th>${t('colloc.vietnamese_header')}</th>
-                <th style="width: 80px; text-align: center;">AUDIO</th>
-                <th style="width: 110px; text-align: center;">SRS STATUS</th>
-                <th style="width: 80px; text-align: center;">PRACTICE</th>
+                <th style="width: 80px; text-align: center;">${t('colloc.th_audio', undefined, 'AUDIO')}</th>
+                <th style="width: 110px; text-align: center;">${t('colloc.th_srs_status', undefined, 'SRS STATUS')}</th>
+                <th style="width: 80px; text-align: center;">${t('colloc.th_practice', undefined, 'PRACTICE')}</th>
               </tr>
             </thead>
             <tbody>
               ${pageItems.length === 0 ? `
                 <tr>
                   <td colspan="7" class="lexicon-empty-cell">
-                    <div class="telemetry-label">Zero records match query</div>
-                    <p>${t('colloc.zero_records')}</p>
+                    <div class="app-illustration-wrap" style="margin-bottom: var(--space-8, 8px);">
+                      ${illustration('no-data', { size: 'empty', ariaLabel: t('colloc.empty_records', undefined, 'Zero records match query') })}
+                    </div>
+                    <div class="telemetry-label">${t('colloc.empty_records', undefined, 'Zero records match query')}</div>
+                    <p>${t('colloc.empty_desc', undefined, 'No collocation entries found matching the filter criteria.')}</p>
                   </td>
                 </tr>
               ` : pageItems.map(item => {
@@ -207,7 +235,7 @@ export class CollocationsDossier {
                     <td class="lexicon-col-cat"><span class="colloc-cat-badge cat-${item.category.toLowerCase()}">${item.category}</span></td>
                     <td class="lexicon-col-vn">${this.escapeHtml(item.vietnamese)}${item.example ? `<div class="colloc-example">${this.escapeHtml(item.example)}</div>` : ''}</td>
                     <td class="lexicon-col-audio">
-                      <button class="hud-btn btn-speak-colloc" data-phrase="${this.escapeHtml(item.phrase)}" title="Listen to pronunciation [${this.escapeHtml(item.phrase)}]" aria-label="Listen to pronunciation">${icon('volume')}</button>
+                      <button class="hud-btn btn-speak-colloc" data-phrase="${this.escapeHtml(item.phrase)}" title="${t('colloc.listen_title', { phrase: item.phrase }, `Listen to pronunciation [${item.phrase}]`)}" aria-label="${t('action.pronounce', undefined, 'Listen to pronunciation')}">${icon('volume')}</button>
                     </td>
                     <td class="lexicon-col-status">
                       <span class="colloc-status-badge status-${statusBadge.toLowerCase()}">${statusBadge}</span>
@@ -383,8 +411,11 @@ export class CollocationsDossier {
     if (this.currentList.length === 0) {
       slot.innerHTML = `
         <div class="empty-state-notice">
-          <div class="telemetry-label">Zero records match query</div>
-          <p>No collocation entries found matching the filter criteria.</p>
+          <div class="app-illustration-wrap" style="margin-bottom: var(--space-8, 8px);">
+            ${illustration('no-data', { size: 'empty', ariaLabel: t('colloc.empty_records', undefined, 'Zero records match query') })}
+          </div>
+          <div class="telemetry-label">${t('colloc.empty_records', undefined, 'Zero records match query')}</div>
+          <p>${t('colloc.empty_desc', undefined, 'No collocation entries found matching the filter criteria.')}</p>
         </div>
       `;
       return;
@@ -411,8 +442,9 @@ export class CollocationsDossier {
       },
       back: {
         promptLabel: t('colloc.meaning_label', undefined, 'TARGET MEANING & USAGE'),
-        mainText: item.vietnamese,
-        subText: item.example ? `“${this.escapeHtml(item.example)}”` : `Core Category: ${item.category}`
+        vietnamese: item.vietnamese,
+        example: item.example ? `“${this.escapeHtml(item.example)}”` : undefined,
+        subText: `Core Category: ${item.category}`
       },
       audioText: item.phrase,
       onRate: (rating: 'again' | 'good') => {

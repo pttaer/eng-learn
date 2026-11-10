@@ -157,4 +157,40 @@ assert(content.includes('data-i18n-title'), 'data-i18n-title selector handling m
 assert(content.includes('data-i18n-placeholder'), 'data-i18n-placeholder selector handling missing');
 assert(content.includes('data-i18n-aria-label'), 'data-i18n-aria-label selector handling missing');
 
-console.log(`[i18n-verify] All ${requiredKeys.length} required spec keys and ${enKeys.length} total keys verified successfully.`);
+// 6. Hardcoded String Prevention Lint Check
+// Ensures newly authored UI elements declare t('key') or data-i18n attribute
+const srcDirs = [
+  path.join(__dirname, '..', 'src', 'modules'),
+  path.join(__dirname, '..', 'src', 'ielts', 'views')
+];
+
+let hardcodedButtonCount = 0;
+const forbiddenPhrases = [
+  />\s*Save\s*</i, />\s*Cancel\s*</i, />\s*Submit\s*</i,
+  />\s*Close\s*</i, />\s*Delete\s*</i, />\s*Retry\s*</i
+];
+
+for (const dir of srcDirs) {
+  if (!fs.existsSync(dir)) continue;
+  const files = fs.readdirSync(dir).filter(f => f.endsWith('.ts'));
+  for (const f of files) {
+    const fileContent = fs.readFileSync(path.join(dir, f), 'utf8');
+    const lines = fileContent.split('\n');
+    lines.forEach((l, idx) => {
+      for (const rx of forbiddenPhrases) {
+        if (rx.test(l) && !l.includes('${t(') && !l.includes('data-i18n')) {
+          console.error(`[i18n-lint] Potential hardcoded action button in ${f}:${idx + 1}: ${l.trim()}`);
+          hardcodedButtonCount++;
+        }
+      }
+    });
+  }
+}
+
+assert.strictEqual(
+  hardcodedButtonCount,
+  0,
+  `Found ${hardcodedButtonCount} unlocalized action buttons in UI views. Every action string must use t('key') or data-i18n.`
+);
+
+console.log(`[i18n-verify] All ${requiredKeys.length} required spec keys, ${enKeys.length} total keys, and zero unlocalized action buttons verified successfully.`);

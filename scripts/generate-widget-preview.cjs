@@ -198,37 +198,27 @@ const htmlContent = `<!DOCTYPE html>
   }
 
   /* Definition & Example */
-  .field-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    color: #64748b;
-    text-transform: uppercase;
-    margin-top: 8px;
-  }
-
   .field-def {
-    font-size: 13px;
-    line-height: 1.4;
+    font-size: 13.5px;
+    line-height: 1.45;
     color: #f3f4f6;
-    margin-top: 2px;
+    margin-top: 10px;
   }
 
   .field-example {
-    font-size: 12px;
-    line-height: 1.35;
+    font-size: 12.5px;
+    line-height: 1.4;
     color: #9ca3af;
     font-style: italic;
-    margin-top: 2px;
+    margin-top: 8px;
   }
 
   /* Tag Box */
   .tag-box {
-    background: #181f2f;
-    border: 1px solid #2a354d;
+    background: #141a26;
     border-radius: 8px;
-    padding: 5px 10px;
-    margin-top: 9px;
+    padding: 7px 10px;
+    margin-top: 10px;
     font-size: 11.5px;
     color: #a5b4fc;
     line-height: 1.4;
@@ -308,12 +298,8 @@ const htmlContent = `<!DOCTYPE html>
       <div class="action-pill secondary">👁 Hide</div>
     </div>
 
-    <!-- Definition -->
-    <div class="field-label">Definition</div>
+    <!-- Definition & Contextual Example (Clean & Calm without administrative labels) -->
     <div class="field-def">Lasting for only a short period of time; fleeting or transient.</div>
-
-    <!-- Contextual Example -->
-    <div class="field-label">Contextual Example</div>
     <div class="field-example">“Fame in the digital era is intensely ephemeral, vanishing as swiftly as it emerges.”</div>
 
     <!-- Collocations & Synonyms -->
@@ -324,7 +310,7 @@ const htmlContent = `<!DOCTYPE html>
 
   <!-- Bottom Brand & Launchers -->
   <div class="widget-footer">
-    <div class="brand-kicker">ENGLISH SINGULARITY</div>
+    <div class="brand-kicker">C2 ACADEMIC • SRS</div>
     <div class="footer-btns">
       <div class="footer-btn">Study</div>
       <div class="footer-btn ielts">IELTS</div>

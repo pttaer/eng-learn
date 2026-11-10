@@ -500,7 +500,7 @@ export class ExamCockpitDossier {
                 <div class="cd-test-card-passages">
                   ${tItem.passages.map((p, pIdx) => `
                     <div class="cd-test-card-p-row" title="${this.escapeHtml(p.title)}">
-                      <span>• <strong>${t('cockpit.passage_num', { n: pIdx + 1 }, `Passage ${pIdx + 1}`)}:</strong> ${this.escapeHtml(p.title.slice(0, 42))}${p.title.length > 42 ? '...' : ''} (${p.typeDesc.slice(0, 18)})</span>
+                      <span>• <strong>${t('cockpit.passage_num', { n: pIdx + 1 }, `Passage ${pIdx + 1}`)}:</strong> ${this.escapeHtml(p.title)} <span class="cd-passage-types" style="color: var(--ink-muted);">(${p.typeDesc})</span></span>
                     </div>
                   `).join('')}
                 </div>

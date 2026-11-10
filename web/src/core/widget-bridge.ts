@@ -9,6 +9,7 @@ import { StorageManager } from '../utils/storage';
 import { SRSEngine } from './srs-engine';
 import { I18n, LOCALE_EVENT } from './i18n';
 import { NotificationCatalog } from './notification-catalog';
+import collocationsData from '../assets/data/collocations.json';
 
 declare global {
   interface Window {
@@ -16,6 +17,7 @@ declare global {
       updateWidgetData(json: string): void;
       postNotification?(title: string, body: string, route: string): void;
       scheduleNotification?(title: string, body: string, route: string, delayMs: number): void;
+      consumeWidgetQuizScore?(): number;
     };
   }
 }
@@ -38,6 +40,7 @@ export interface WidgetPayload {
   meaning?: string;
   example?: string;
   tags?: string;
+  words?: WidgetCustomWord[];
   notification_hook?: string;
   notification_tip?: string;
   locale?: string;
@@ -126,6 +129,11 @@ const FALLBACK_WORDS: WidgetCustomWord[] = [
   }
 ];
 
+const COLLOC_MAP = new Map<string, any>();
+for (const item of (collocationsData as any[])) {
+  if (item && item.id) COLLOC_MAP.set(item.id, item);
+}
+
 export class WidgetBridge {
   private static instance: WidgetBridge | null = null;
   private lastSyncTime: number = 0;
@@ -143,11 +151,16 @@ export class WidgetBridge {
   }
 
   private initListeners(): void {
+    // Check and claim any pending quiz XP earned on the home screen widget
+    this.claimWidgetQuizXp();
+
     // Sync on page load / visibility change (e.g., app resumed)
     if (typeof document !== 'undefined') {
       document.addEventListener('visibilitychange', () => {
         if (document.visibilityState === 'hidden') {
           this.sync();
+        } else if (document.visibilityState === 'visible') {
+          this.claimWidgetQuizXp();
         }
       });
     }
@@ -185,12 +198,118 @@ export class WidgetBridge {
   }
 
   /**
+   * Consumes and awards any pending XP earned by answering quizzes on the phone widget.
+   */
+  public claimWidgetQuizXp(): void {
+    if (typeof window !== 'undefined' && window.AndroidWidgetBridge?.consumeWidgetQuizScore) {
+      try {
+        const score = window.AndroidWidgetBridge.consumeWidgetQuizScore();
+        if (score > 0) {
+          const xp = score * 10;
+          ProgressionEngine.addXP(xp);
+          window.dispatchEvent(new CustomEvent('eng:progress-update'));
+        }
+      } catch (err) {
+        console.warn('[WidgetBridge] Failed to claim widget quiz XP:', err);
+      }
+    }
+  }
+
+  /**
+   * Builds an active queue of up to 15 personalized words for the widget
+   * based on the learner's overdue SRS cards and current progress.
+   */
+  public getPersonalizedWordsQueue(isVi: boolean): WidgetCustomWord[] {
+    const queue: WidgetCustomWord[] = [];
+    const seenWords = new Set<string>();
+
+    try {
+      const states = StorageManager.loadState().cardStates || {};
+      const now = Date.now();
+      // Sort by urgency: overdue first, then lowest repetitions (least mastered)
+      const sortedCards = Object.entries(states)
+        .sort((a, b) => {
+          const aOverdue = a[1].dueDate <= now;
+          const bOverdue = b[1].dueDate <= now;
+          if (aOverdue && !bOverdue) return -1;
+          if (!aOverdue && bOverdue) return 1;
+          return (a[1].repetitions || 0) - (b[1].repetitions || 0);
+        });
+
+      for (const [cardId] of sortedCards) {
+        if (queue.length >= 15) break;
+        if (COLLOC_MAP.has(cardId)) {
+          const c = COLLOC_MAP.get(cardId);
+          const w = c.phrase || '';
+          if (w && !seenWords.has(w.toLowerCase())) {
+            seenWords.add(w.toLowerCase());
+            const vn = c.vietnamese || '';
+            const def = c.meaning || c.category || '';
+            const meaning = isVi && vn ? (def && def !== vn ? `${def}\n\n🇻🇳 ${vn}` : `🇻🇳 ${vn}`) : def;
+            queue.push({
+              word: w,
+              phonetic: c.cefrLevel ? `[${c.cefrLevel}] • ${c.category || 'Collocation'}` : '',
+              meaning,
+              definition: def,
+              vietnamese: vn,
+              example: c.example ? `“${c.example}”` : '',
+              tags: `CEFR: ${c.cefrLevel || 'B2'}  •  ${c.category || 'Academic'}`
+            });
+          }
+        } else if (cardId.startsWith('lex-')) {
+          const rawWord = cardId.slice(4).replace(/-/g, ' ');
+          if (rawWord && !seenWords.has(rawWord.toLowerCase())) {
+            seenWords.add(rawWord.toLowerCase());
+            queue.push({
+              word: rawWord.charAt(0).toUpperCase() + rawWord.slice(1),
+              phonetic: '/lexicon/ • vocab',
+              meaning: isVi ? 'Từ vựng lưu từ Lexicon Drawer' : 'Saved Lexicon Vocabulary',
+              definition: 'Saved Lexicon Vocabulary',
+              vietnamese: 'Từ vựng trong sổ tay',
+              example: '',
+              tags: 'Source: Lexicon Notebook'
+            });
+          }
+        }
+      }
+    } catch (e) {
+      console.warn('[WidgetBridge] Failed to load personalized SRS cards:', e);
+    }
+
+    // Complement with high-utility curated fallback words to guarantee at least 10 words
+    for (const fb of FALLBACK_WORDS) {
+      if (queue.length >= 15) break;
+      if (!seenWords.has(fb.word.toLowerCase())) {
+        seenWords.add(fb.word.toLowerCase());
+        const baseDef = fb.definition || fb.meaning || '';
+        let meaning = baseDef;
+        if (isVi && fb.vietnamese) {
+          meaning = baseDef && baseDef !== fb.vietnamese ? `${baseDef}\n\n🇻🇳 ${fb.vietnamese}` : `🇻🇳 ${fb.vietnamese}`;
+        }
+        queue.push({
+          word: fb.word,
+          phonetic: fb.phonetic,
+          meaning,
+          definition: fb.definition,
+          vietnamese: fb.vietnamese,
+          example: fb.example,
+          tags: fb.tags
+        });
+      }
+    }
+
+    return queue;
+  }
+
+  /**
    * Syncs latest learning telemetry to the Android native home screen widget.
    */
   public sync(customWord?: WidgetCustomWord): void {
     if (typeof window === 'undefined' || !window.AndroidWidgetBridge) {
       return;
     }
+
+    this.claimWidgetQuizXp();
 
     if (customWord) {
       this.lastWord = customWord;
@@ -240,15 +359,21 @@ export class WidgetBridge {
 
       const curiosityTip = NotificationCatalog.getWidgetCuriosityTip(isVi ? 'vi' : 'en');
 
+      const personalizedQueue = this.getPersonalizedWordsQueue(isVi);
+      if (customWord && customWord.word) {
+        personalizedQueue.unshift(customWord);
+      }
+
       const payload: WidgetPayload = {
         notification_tip: `${curiosityTip.kicker}: ${curiosityTip.text}`,
         streak,
         progress: hook,
         notification_hook: hook,
-        locale: isVi ? 'vi' : 'en'
+        locale: isVi ? 'vi' : 'en',
+        words: personalizedQueue
       };
 
-      const wordToSync = customWord || this.lastWord || FALLBACK_WORDS[0];
+      const wordToSync = customWord || this.lastWord || personalizedQueue[0] || FALLBACK_WORDS[0];
       if (wordToSync && wordToSync.word) {
         payload.word = wordToSync.word;
         payload.phonetic = wordToSync.phonetic || '';

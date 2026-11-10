@@ -1,9 +1,9 @@
 import strategyData from '../data/strategy.json';
-import tipsData from '../../assets/data/ielts-tips.json';
 import { esc, h } from '../ui';
 import { ttsAvailable } from '../tts';
-import { icon, IconName } from '../../utils/icons';
+import { icon } from '../../utils/icons';
 import { t } from '../../core/i18n';
+import { illustration } from '../../utils/illustrations';
 
 export interface StrategyCard {
   id: string;
@@ -645,73 +645,30 @@ function matchesSkillFilter(cardSkill: string, filterId: string): boolean {
   return c.includes(filterId.toLowerCase());
 }
 
-export interface TipItem {
-  id: string;
-  slug: string;
-  title: string;
-  skill: string;
-  category: string;
-  rating: number | null;
-  votes: string;
-  views: number;
-  date: string;
-  summary: string;
-  headings: string[];
-  content_text: string;
-}
-
-const ALL_TIPS: TipItem[] = tipsData as TipItem[];
-
 export function strategyView(root: HTMLElement): () => void {
   const allCards = getAllCards();
   let currentSkillFilter = 'all';
   let searchQuery = '';
 
   root.innerHTML = '';
-  root.append(
-    h('h1', 'ie-title', t('ielts.strategy_title', undefined, 'IELTS Master Strategy & Knowledge Codex')),
-    h(
-      'p',
-      'ie-lead',
-      `The IELTS strategy compendium: ${allCards.length} exam blueprints from the Band 7+ curriculum alongside ${ALL_TIPS.length} articles & lessons from IELTS Online Tests.`
-    )
+  const heroBanner = h(
+    'div',
+    'app-hero-banner ielts-strategy-hero',
+    `<div class="app-hero-banner-content">` +
+      `<span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">` +
+        `[${esc(t('ielts.strategy_codex_kicker', undefined, 'IELTS ACADEMIC // STRATEGY & KNOWLEDGE CODEX'))}]` +
+      `</span>` +
+      `<h1 class="ie-title" style="margin: 0; font-size: var(--font-h1); line-height: 1.25;">${esc(t('ielts.strategy_title', undefined, 'IELTS Master Strategy & Knowledge Codex'))}</h1>` +
+      `<p class="ie-lead" style="margin: 0; font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">${esc(t('ielts.strategy_lead', { total: allCards.length }, `The IELTS tactical compendium: ${allCards.length} exam blueprints covering 14 Reading question types, Listening traps, Writing frameworks, Speaking tactics, and Computer-Based Test (CBT) ergonomics.`))}</p>` +
+    `</div>` +
+    `<div class="app-hero-banner-art">` +
+      `${illustration('strategy', { size: 'banner', ariaLabel: 'Strategy Codex' })}` +
+    `</div>`
   );
+  heroBanner.style.marginBottom = 'var(--space-12, 12px)';
+  root.append(heroBanner);
 
-  // Master Mode Switcher
-  const modeSwitcher = h('div', 'ie-mode-switcher');
-  modeSwitcher.setAttribute('role', 'tablist');
-  modeSwitcher.setAttribute('aria-label', 'Strategy Codex Modes');
-
-  const btnBlueprints = h('button', 'ie-mode-btn is-active');
-  btnBlueprints.setAttribute('type', 'button');
-  btnBlueprints.setAttribute('role', 'tab');
-  btnBlueprints.setAttribute('aria-selected', 'true');
-  btnBlueprints.innerHTML = `
-    <span class="ie-mode-icon">${icon('layers', 13)}</span>
-    <span class="ie-mode-label">
-      <span class="ie-mode-full">${t('strategy.tactical_blueprints', { count: allCards.length }, `${allCards.length} Tactical Blueprints (Formulas & Traps)`)}</span>
-      <span class="ie-mode-short">Blueprints</span>
-    </span>
-    <span class="ie-mode-count">${allCards.length}</span>
-  `;
-
-  const btnVault = h('button', 'ie-mode-btn');
-  btnVault.setAttribute('type', 'button');
-  btnVault.setAttribute('role', 'tab');
-  btnVault.setAttribute('aria-selected', 'false');
-  btnVault.innerHTML = `
-    <span class="ie-mode-icon">${icon('lightbulb', 13)}</span>
-    <span class="ie-mode-label">
-      <span class="ie-mode-full">${t('strategy.knowledge_vault', undefined, '746 Knowledge Vault & Tips Explorer')}</span>
-      <span class="ie-mode-short">Tips Vault</span>
-    </span>
-    <span class="ie-mode-count">746</span>
-  `;
-
-  modeSwitcher.append(btnBlueprints, btnVault);
-  root.append(modeSwitcher);
-
-  // Container 1: Blueprints (Existing 46 cards)
+  // Container: Tactical Blueprints
   const blueprintsContainer = h('div', 'ie-blueprints-container');
 
   // Top Controls Bar: Skill filter tabs + Search input
@@ -722,13 +679,13 @@ export function strategyView(root: HTMLElement): () => void {
   filterTabs.setAttribute('aria-label', 'Filter strategy by skill');
 
   const tabsConfig = [
-    { id: 'all', label: 'All' },
-    { id: 'reading', label: 'Reading (14 Types)' },
-    { id: 'listening', label: 'Listening' },
-    { id: 'writing1', label: 'Writing T1' },
-    { id: 'writing2', label: 'Writing T2' },
-    { id: 'speaking', label: 'Speaking' },
-    { id: 'cbt', label: 'CBT Navigation' }
+    { id: 'all', label: t('ielts.strategy_tab_all', undefined, 'All') },
+    { id: 'reading', label: t('ielts.strategy_tab_reading', undefined, 'Reading (14 Types)') },
+    { id: 'listening', label: t('ielts.strategy_tab_listening', undefined, 'Listening') },
+    { id: 'writing1', label: t('ielts.strategy_tab_writing1', undefined, 'Writing T1') },
+    { id: 'writing2', label: t('ielts.strategy_tab_writing2', undefined, 'Writing T2') },
+    { id: 'speaking', label: t('ielts.strategy_tab_speaking', undefined, 'Speaking') },
+    { id: 'cbt', label: t('ielts.strategy_tab_cbt', undefined, 'CBT Navigation') }
   ];
 
   tabsConfig.forEach(t => {
@@ -817,7 +774,7 @@ export function strategyView(root: HTMLElement): () => void {
         h(
           'div',
           'ie-empty-message',
-          '<p class="ie-note">No strategy cards match your current filter and search query. Try switching skill tabs or clearing search.</p>'
+          `<p class="ie-note">${t('strategy.empty_cards', undefined, 'No strategy cards match your current filter and search query. Try switching skill tabs or clearing search.')}</p>`
         )
       );
       return;
@@ -851,7 +808,7 @@ export function strategyView(root: HTMLElement): () => void {
       if (c.formula) {
         formulaBlock = `
           <div class="ie-drawer-section ie-section-formula">
-            <h4>📐 Tactical Formula &amp; Step-by-Step Algorithm</h4>
+            <h4>📐 ${t('strategy.tactical_formula', undefined, 'Tactical Formula & Step-by-Step Algorithm')}</h4>
             <div class="ie-formula-code">${esc(c.formula)}</div>
           </div>
         `;
@@ -861,7 +818,7 @@ export function strategyView(root: HTMLElement): () => void {
       if (c.traps && c.traps.length) {
         trapsBlock = `
           <div class="ie-drawer-section ie-section-traps">
-            <h4>${icon('alertTriangle', 14)} Common Examiner Traps &amp; Distractors</h4>
+            <h4>${icon('alertTriangle', 14)} ${t('strategy.examiner_traps', undefined, 'Common Examiner Traps & Distractors')}</h4>
             <ul class="ie-traps-list">
               ${c.traps.map(tr => `<li>${esc(tr)}</li>`).join('')}
             </ul>
@@ -873,13 +830,13 @@ export function strategyView(root: HTMLElement): () => void {
       if (c.synonymPairs && c.synonymPairs.length) {
         synBlock = `
           <div class="ie-drawer-section ie-section-synonyms">
-            <h4>${icon('rotateCcw', 14)} Exam Synonym Mapping Engine</h4>
+            <h4>${icon('rotateCcw', 14)} ${t('strategy.synonym_mapping', undefined, 'Exam Synonym Mapping Engine')}</h4>
             <div class="ie-table-wrap">
               <table class="ie-table ie-synonym-table">
                 <thead>
                   <tr>
-                    <th>Prompt / Question Phrase</th>
-                    <th>Passage / Audio Counterpart</th>
+                    <th>${t('strategy.col_prompt', undefined, 'Prompt / Question Phrase')}</th>
+                    <th>${t('strategy.col_passage', undefined, 'Passage / Audio Counterpart')}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -926,304 +883,12 @@ export function strategyView(root: HTMLElement): () => void {
   }
 
   // ==========================================
-  // CONTAINER 2: 746 TIPS VAULT & EXPLORER
-  // ==========================================
-  const vaultContainer = h('div', 'ie-vault-container');
-  vaultContainer.style.display = 'none';
 
-  let vaultSkill = 'all';
-  let vaultQuery = '';
-  let vaultSort = 'views'; // 'views' | 'rating' | 'date'
-  let vaultLimit = 24;
-
-  const vaultControls = h('div', 'ie-tips-controls');
-
-  // Top search & sort row
-  const barTop = h('div', 'ie-tips-bar-top');
-  const searchWrap = h('div', 'ie-tips-search-wrap');
-  const vSearchInput = h('input', 'ie-tips-search') as HTMLInputElement;
-  vSearchInput.type = 'search';
-  vSearchInput.placeholder = t('strategy.search_ph');
-  vSearchInput.setAttribute('aria-label', 'Search IELTS Tips');
-  const searchIcon = h('span', 'ie-tips-search-icon');
-  searchIcon.innerHTML = icon('search', 14);
-  searchWrap.append(searchIcon, vSearchInput);
-
-  const sortSelect = h('select', 'ie-tips-sort') as HTMLSelectElement;
-  sortSelect.setAttribute('aria-label', 'Sort tips');
-  sortSelect.innerHTML = `
-    <option value="views">${t('strategy.sort_views')}</option>
-    <option value="rating">${t('strategy.sort_rating')}</option>
-    <option value="date">${t('strategy.sort_date')}</option>
-  `;
-
-  barTop.append(searchWrap, sortSelect);
-
-  // Skill filter chips
-  const chipsRow = h('div', 'ie-tips-chips scrollable-pill-strip');
-  const skillChips: { id: string; getLabel: () => string; iconName: IconName }[] = [
-    { id: 'all', getLabel: () => t('strategy.chip_all'), iconName: 'globe' },
-    { id: 'Writing', getLabel: () => t('strategy.chip_writing'), iconName: 'edit' },
-    { id: 'Grammar', getLabel: () => t('strategy.chip_grammar'), iconName: 'landmark' },
-    { id: 'Vocabulary', getLabel: () => t('strategy.chip_vocab'), iconName: 'book' },
-    { id: 'Speaking', getLabel: () => t('strategy.chip_speaking'), iconName: 'mic' },
-    { id: 'Reading', getLabel: () => t('strategy.chip_reading'), iconName: 'book' },
-    { id: 'Listening', getLabel: () => t('strategy.chip_listening'), iconName: 'headphones' },
-    { id: 'General & Strategies', getLabel: () => t('strategy.chip_general'), iconName: 'compass' }
-  ];
-
-  function renderChips(): void {
-    chipsRow.innerHTML = '';
-    skillChips.forEach(sc => {
-      const count =
-        sc.id === 'all'
-          ? ALL_TIPS.length
-          : ALL_TIPS.filter(t => t.skill === sc.id).length;
-      const chip = h(
-        'button',
-        `ie-tips-chip ${vaultSkill === sc.id ? 'is-active' : ''}`
-      );
-      chip.innerHTML = `<span>${icon(sc.iconName, 13)}</span> <span>${esc(sc.getLabel())}</span> <span class="ie-tips-chip-count">${count}</span>`;
-      chip.addEventListener('click', () => {
-        vaultSkill = sc.id;
-        vaultLimit = 24;
-        renderChips();
-        renderVault();
-      });
-      chipsRow.append(chip);
-    });
-  }
-
-  vaultControls.append(barTop, chipsRow);
-  vaultContainer.append(vaultControls);
-
-  const vaultStats = h('div', 'ie-count-badge', '');
-  vaultContainer.append(vaultStats);
-
-  const vaultGrid = h('div', 'ie-tips-grid');
-  vaultContainer.append(vaultGrid);
-
-  const loadMoreBtn = h('button', 'ie-btn ie-btn-primary', t('strategy.btn_load_more'));
-  loadMoreBtn.style.margin = 'var(--space-16) 0 0 0';
-  loadMoreBtn.style.display = 'inline-flex';
-  loadMoreBtn.style.alignItems = 'center';
-  loadMoreBtn.style.justifyContent = 'center';
-  loadMoreBtn.addEventListener('click', () => {
-    vaultLimit += 24;
-    renderVault();
-  });
-  vaultContainer.append(loadMoreBtn);
-
-  // Reading Modal Element
-  const modalOverlay = h('div', 'ie-tip-modal-overlay');
-  const modalBox = h('div', 'ie-tip-modal-box');
-  const modalHeader = h('div', 'ie-tip-modal-header');
-  const modalTitle = h('h3', '', t('strategy.guide_modal_title'));
-  modalTitle.style.margin = '0';
-  modalTitle.style.fontSize = 'var(--text-lg)';
-  modalHeader.append(modalTitle);
-
-  const modalBody = h('div', 'ie-tip-modal-body');
-  const modalFooter = h('div', 'apple-modal-footer');
-  const bottomCloseBtn = h('button', 'apple-bottom-close-btn', t('common.close', undefined, 'Close'));
-  modalFooter.append(bottomCloseBtn);
-  modalBox.append(modalHeader, modalBody, modalFooter);
-  modalOverlay.append(modalBox);
-  root.append(modalOverlay);
-
-  function closeModal(): void {
-    modalOverlay.classList.remove('is-active');
-    if (ttsAvailable()) speechSynthesis.cancel();
-  }
-
-  bottomCloseBtn.addEventListener('click', closeModal);
-  modalOverlay.addEventListener('click', e => {
-    if (e.target === modalOverlay) closeModal();
-  });
-  const onKey = (e: KeyboardEvent) => {
-    if (e.key === 'Escape' && modalOverlay.classList.contains('is-active')) {
-      closeModal();
-    }
-  };
-  document.addEventListener('keydown', onKey);
-
-
-  function openTipDetail(tip: TipItem): void {
-    modalTitle.textContent = tip.title;
-    modalBody.innerHTML = '';
-
-    const metaRow = h('div', 'ie-tip-meta-header');
-    metaRow.innerHTML = `
-      <div style="display:flex; gap: var(--space-8); align-items:center;">
-        <span class="ie-skill-badge ie-skill-${esc(tip.skill.split(' ')[0])}">${esc(tip.skill)}</span>
-        <span style="font-size: var(--text-xs); color: var(--ink-muted);">${esc(tip.category)}</span>
-      </div>
-      <div style="font-size: var(--text-xs); color: var(--ink-muted);">
-        👁️ ${tip.views.toLocaleString()} views ${tip.rating ? `· ⭐ ${tip.rating} (${esc(tip.votes)})` : ''} · 📅 ${esc(tip.date)}
-      </div>
-    `;
-
-    const audioRow = h('div', '', '');
-    if (ttsAvailable()) {
-      const listenBtn = h('button', 'ie-btn', t('strategy.btn_listen_audio'));
-      listenBtn.addEventListener('click', () => {
-        speechSynthesis.cancel();
-        const textToRead = `${tip.title}. ${tip.summary}. ${tip.content_text.slice(0, 1500)}`;
-        const u = new SpeechSynthesisUtterance(textToRead);
-        u.lang = 'en-GB';
-        u.rate = 0.95;
-        speechSynthesis.speak(u);
-      });
-      audioRow.append(listenBtn);
-    }
-
-    const summaryBox = h('div', 'ie-tipcard', `
-      <div style="padding: var(--space-12); background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--accent-cyan); border-radius: 8px; margin: var(--space-12) 0;">
-        <b style="color: var(--accent-cyan);">${t('strategy.takeaways_title')}</b>
-        <p style="margin-top: var(--space-6); color: var(--ink-primary);">${esc(tip.summary)}</p>
-      </div>
-    `);
-
-    // Format full article content
-    const contentEl = h('div', 'ie-tip-full-content');
-    const paras = tip.content_text.split(/\n\n+/);
-    paras.forEach(p => {
-      const trimmed = p.trim();
-      if (!trimmed) return;
-      if (trimmed.length < 80 && !trimmed.endsWith('.')) {
-        contentEl.append(h('h3', '', esc(trimmed)));
-      } else {
-        contentEl.append(h('p', '', esc(trimmed)));
-      }
-    });
-
-    modalBody.append(metaRow, audioRow, summaryBox, contentEl);
-    modalOverlay.classList.add('is-active');
-  }
-
-  function renderVault(): void {
-    vaultGrid.innerHTML = '';
-
-    let filtered = ALL_TIPS.filter(t => {
-      if (vaultSkill !== 'all' && t.skill !== vaultSkill) return false;
-      if (!vaultQuery) return true;
-      const q = vaultQuery.toLowerCase();
-      return (
-        t.title.toLowerCase().includes(q) ||
-        t.category.toLowerCase().includes(q) ||
-        t.summary.toLowerCase().includes(q) ||
-        t.headings.some(h => h.toLowerCase().includes(q))
-      );
-    });
-
-    // Sort
-    if (vaultSort === 'views') {
-      filtered.sort((a, b) => b.views - a.views);
-    } else if (vaultSort === 'rating') {
-      filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-    } else if (vaultSort === 'date') {
-      filtered.sort((a, b) => (b.date > a.date ? 1 : -1));
-    }
-
-    const totalViewsInFilter = filtered.reduce((acc, it) => acc + it.views, 0);
-    const inSkillText = vaultSkill !== 'all' ? t('strategy.in_skill', { skill: vaultSkill }) : '';
-    vaultStats.innerHTML = t('strategy.stats_display', {
-      min: Math.min(vaultLimit, filtered.length).toString(),
-      len: filtered.length.toString(),
-      inSkill: inSkillText,
-      views: totalViewsInFilter.toLocaleString()
-    });
-
-    if (!filtered.length) {
-      vaultGrid.append(
-        h(
-          'div',
-          'ie-empty-message',
-          `<p class="ie-note">${t('strategy.empty_message')}</p>`
-        )
-      );
-      loadMoreBtn.style.display = 'none';
-      return;
-    }
-
-    const batch = filtered.slice(0, vaultLimit);
-    batch.forEach(tip => {
-      const card = h('article', 'ie-card ie-tip-vault-card');
-      card.setAttribute('tabindex', '0');
-      card.setAttribute('role', 'button');
-
-      const metaHeader = h('div', 'ie-tip-meta-header');
-      const skillClass = `ie-skill-${esc(tip.skill.split(' ')[0])}`;
-      metaHeader.innerHTML = `
-        <span class="ie-skill-badge ${skillClass}">${esc(tip.skill)}</span>
-        <span class="ie-tip-views">👁️ ${tip.views > 9999 ? (tip.views / 1000).toFixed(1) + 'k' : tip.views} views</span>
-      `;
-
-      const titleEl = h('h3', 'ie-tip-card-title', esc(tip.title));
-      const summaryEl = h('p', 'ie-tip-card-summary', esc(tip.summary));
-
-      const footer = h('div', 'ie-tip-card-footer');
-      footer.innerHTML = `
-        <span style="color: var(--ink-muted); font-size: var(--text-2xs);">${
-          tip.rating ? `⭐ ${tip.rating.toFixed(1)} (${esc(tip.votes)})` : esc(tip.date)
-        }</span>
-        <span class="ie-tip-read-btn">${t('strategy.btn_read_full')}</span>
-      `;
-
-      card.append(metaHeader, titleEl, summaryEl, footer);
-
-      card.addEventListener('click', () => openTipDetail(tip));
-      card.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          openTipDetail(tip);
-        }
-      });
-
-      vaultGrid.append(card);
-    });
-
-    loadMoreBtn.style.display = vaultLimit < filtered.length ? 'block' : 'none';
-  }
-
-  // Switcher event handlers
-  btnBlueprints.addEventListener('click', () => {
-    btnBlueprints.classList.add('is-active');
-    btnBlueprints.setAttribute('aria-selected', 'true');
-    btnVault.classList.remove('is-active');
-    btnVault.setAttribute('aria-selected', 'false');
-    blueprintsContainer.style.display = 'block';
-    vaultContainer.style.display = 'none';
-  });
-
-  btnVault.addEventListener('click', () => {
-    btnVault.classList.add('is-active');
-    btnVault.setAttribute('aria-selected', 'true');
-    btnBlueprints.classList.remove('is-active');
-    btnBlueprints.setAttribute('aria-selected', 'false');
-    blueprintsContainer.style.display = 'none';
-    vaultContainer.style.display = 'block';
-    renderChips();
-    renderVault();
-  });
-
-  vSearchInput.addEventListener('input', () => {
-    vaultQuery = vSearchInput.value.trim();
-    vaultLimit = 24;
-    renderVault();
-  });
-
-  sortSelect.addEventListener('change', () => {
-    vaultSort = sortSelect.value;
-    renderVault();
-  });
-
-  root.append(blueprintsContainer, vaultContainer);
+  root.append(blueprintsContainer);
 
   renderCards();
 
   return () => {
-    document.removeEventListener('keydown', onKey);
     if (ttsAvailable()) speechSynthesis.cancel();
   };
 }

@@ -15,14 +15,20 @@
     "dev": "vite",
     "build": "node scripts/build.cjs",
     "build:fast": "vite build",
+    "build:singularity": "node -e \"process.env.APP_TARGET='singularity'; require('child_process').execSync('vite build', {stdio:'inherit'})\"",
+    "build:ielts": "node -e \"process.env.APP_TARGET='ielts'; require('child_process').execSync('vite build', {stdio:'inherit'})\"",
     "build:phone": "node scripts/build-phone.cjs",
     "build:apk": "node scripts/build-apk.cjs",
+    "build:apk:ielts": "node scripts/build-apk.cjs --app=ielts",
     "preview": "vite preview",
     "electron:start": "electron .",
     "dist:win": "npm run build && electron-builder --win nsis",
     "test": "tsc --noEmit && node scripts/run-verify.cjs",
+    "test:boundaries": "node scripts/verify-decoupling-integrity.cjs",
+    "test:workout": "node scripts/verify-daily-workout.cjs",
     "test:mobile": "node scripts/verify-mobile-touch-qa.cjs",
-    "test:installer": "node scripts/verify-installer-artifact.cjs"
+    "test:installer": "node scripts/verify-installer-artifact.cjs",
+    "undraw": "node C:/Users/thanh/.gemini/config/skills/undraw/scripts/undraw.cjs"
   },
   "dependencies": {
     "animejs": "^4.5.0"

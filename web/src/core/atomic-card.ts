@@ -25,6 +25,10 @@ export interface AtomicCardConfig {
     explanation?: string;
     formula?: string;
     ipa?: string;
+    definition?: string;
+    vietnamese?: string;
+    example?: string;
+    morphology?: string;
     customContent?: HTMLElement;
   };
   audioText?: string;
@@ -136,7 +140,7 @@ export class AtomicCard {
       </div>
       <div class="card-meta-right header-right">
         <span class="card-index-counter">${config.indexStr}</span>
-        ${config.audioText ? `<button type="button" class="card-audio-btn btn-audio-speak" aria-label="Listen to pronunciation of prompt" title="Listen (P)">${icon('volume')} ${t('card.audio', undefined, 'AUDIO')}</button>` : ''}
+        ${config.audioText ? `<button type="button" class="card-audio-btn btn-audio-speak" aria-label="${t('card.audio_aria', undefined, 'Listen to pronunciation of prompt')}" title="${t('card.audio_title', undefined, 'Listen (P)')}">${icon('volume')} ${t('card.audio', undefined, 'AUDIO')}</button>` : ''}
       </div>
     `;
 
@@ -156,8 +160,8 @@ export class AtomicCard {
     } else {
       frontBody.innerHTML = `
         <div class="card-prompt-label">${config.front.promptLabel || t('card.challenge_prompt', undefined, 'CHALLENGE // PROMPT')}</div>
-        <div class="card-main-text">${config.front.mainText || ''}</div>
-        ${config.front.subText ? `<div class="card-sub-text">${config.front.subText}</div>` : ''}
+        <div class="card-main-text card-stimulus-text">${config.front.mainText || ''}</div>
+        ${config.front.subText ? `<div class="card-sub-text card-context-text">${config.front.subText}</div>` : ''}
         ${config.front.phoneticText ? `<div class="card-ipa-text card-phonetic-text">${config.front.phoneticText}</div>` : ''}
       `;
     }
@@ -167,7 +171,7 @@ export class AtomicCard {
     frontDock.className = 'card-bottom-dock card-action-dock';
     if (config.hideFrontRating) {
       frontDock.innerHTML = `
-        <button type="button" class="dock-btn dock-btn-flip btn-flip-trigger" aria-expanded="false" aria-label="Flip card to view answer targets"><span style="color: var(--accent-gold); font-weight: 800;">⟳</span> ${t('card.flip_reveal', undefined, 'Flip Reveal')} <span class="kbd-badge">SPACE</span></button>
+        <button type="button" class="dock-btn dock-btn-flip btn-flip-trigger" aria-expanded="false" aria-label="${t('card.flip_reveal_aria', undefined, 'Flip card to view answer targets')}"><span style="color: var(--accent-gold); font-weight: 800;">⟳</span> ${t('card.flip_reveal', undefined, 'Flip Reveal')} <span class="kbd-badge">SPACE</span></button>
       `;
       frontDock.querySelector('.btn-flip-trigger')?.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -175,9 +179,9 @@ export class AtomicCard {
       });
     } else {
       frontDock.innerHTML = `
-        <button type="button" class="dock-btn dock-btn-again btn-rate-again" aria-label="Rate repetition Again: failed recall, reset interval"><span style="color: var(--critical); font-weight: 800;">✗</span> ${t('card.again', undefined, 'Again')} <span class="kbd-badge">1</span></button>
-        <button type="button" class="dock-btn dock-btn-flip btn-flip-trigger" aria-expanded="false" aria-label="Flip card to view answer targets"><span style="color: var(--accent-gold); font-weight: 800;">⟳</span> ${t('card.flip_reveal', undefined, 'Flip Reveal')} <span class="kbd-badge">SPACE</span></button>
-        <button type="button" class="dock-btn dock-btn-good btn-rate-good" aria-label="Rate repetition Good: successful recall, advance interval"><span style="color: var(--good); font-weight: 800;">✓</span> ${t('card.good', undefined, 'Good')} <span class="kbd-badge">2</span></button>
+        <button type="button" class="dock-btn dock-btn-again btn-rate-again" aria-label="${t('card.again_aria', undefined, 'Rate repetition Again: failed recall, reset interval')}"><span style="color: var(--critical); font-weight: 800;">✗</span> ${t('card.again', undefined, 'Again')} <span class="kbd-badge">1</span></button>
+        <button type="button" class="dock-btn dock-btn-flip btn-flip-trigger" aria-expanded="false" aria-label="${t('card.flip_reveal_aria', undefined, 'Flip card to view answer targets')}"><span style="color: var(--accent-gold); font-weight: 800;">⟳</span> ${t('card.flip_reveal', undefined, 'Flip Reveal')} <span class="kbd-badge">SPACE</span></button>
+        <button type="button" class="dock-btn dock-btn-good btn-rate-good" aria-label="${t('card.good_aria', undefined, 'Rate repetition Good: successful recall, advance interval')}"><span style="color: var(--good); font-weight: 800;">✓</span> ${t('card.good', undefined, 'Good')} <span class="kbd-badge">2</span></button>
       `;
 
       frontDock.querySelector('.btn-rate-again')?.addEventListener('click', (e) => {
@@ -223,7 +227,7 @@ export class AtomicCard {
       </div>
       <div class="card-meta-right header-right">
         <span class="card-index-counter">${config.indexStr}</span>
-        ${config.audioText ? `<button type="button" class="card-audio-btn btn-audio-speak" aria-label="Listen to pronunciation of prompt" title="Listen (P)">${icon('volume')} ${t('card.audio', undefined, 'AUDIO')}</button>` : ''}
+        ${config.audioText ? `<button type="button" class="card-audio-btn btn-audio-speak" aria-label="${t('card.audio_aria', undefined, 'Listen to pronunciation of prompt')}" title="${t('card.audio_title', undefined, 'Listen (P)')}">${icon('volume')} ${t('card.audio', undefined, 'AUDIO')}</button>` : ''}
       </div>
     `;
 
@@ -240,21 +244,72 @@ export class AtomicCard {
     if (config.back.customContent) {
       backBody.appendChild(config.back.customContent);
     } else {
-      backBody.innerHTML = `
-        <div class="card-prompt-label">${config.back.promptLabel || t('card.resolution_translation', undefined, 'RESOLUTION // TRANSLATION')}</div>
-        <div class="card-main-text">${config.back.mainText || ''}</div>
-        ${config.back.ipa ? `<div class="card-ipa-text">${config.back.ipa}</div>` : ''}
-        ${config.back.explanation ? `<div class="card-explanation">${config.back.explanation}</div>` : ''}
-        ${config.back.subText ? `<div class="card-sub-text">${config.back.subText}</div>` : ''}
-      `;
+      const hasStructured = Boolean(config.back.definition || config.back.vietnamese || config.back.example);
+      let backHtml = `<div class="card-prompt-label">${config.back.promptLabel || t('card.resolution_translation', undefined, 'RESOLUTION // TRANSLATION')}</div>`;
+
+      if (hasStructured) {
+        if (config.back.ipa) {
+          backHtml += `<div class="card-ipa-text card-phonetic-text">${config.back.ipa}</div>`;
+        }
+        if (config.back.definition) {
+          backHtml += `
+            <div class="card-definition-box">
+              <span class="telemetry-label">${t('card.definition', undefined, 'DEFINITION')}</span>
+              <p class="card-definition-text">${config.back.definition}</p>
+            </div>
+          `;
+        }
+        if (config.back.vietnamese) {
+          backHtml += `
+            <div class="card-vietnamese-box">
+              <span class="telemetry-label">${t('feedback.vietnamese_translation', undefined, 'VIETNAMESE EQUIVALENT')}</span>
+              <p class="card-vietnamese-text">${config.back.vietnamese}</p>
+            </div>
+          `;
+        }
+        if (config.back.example) {
+          backHtml += `
+            <div class="card-example-box">
+              <span class="telemetry-label">${t('card.example', undefined, 'CONTEXT EXAMPLE')}</span>
+              <p class="card-example-text">${config.back.example}</p>
+            </div>
+          `;
+        }
+        if (config.back.explanation) {
+          backHtml += `<div class="card-explanation">${config.back.explanation}</div>`;
+        }
+        if (config.back.subText) {
+          backHtml += `<div class="card-sub-text card-morphology-box">${config.back.subText}</div>`;
+        }
+      } else {
+        const raw = config.back.mainText || '';
+        const vnMatch = raw.split(/\n\n(?=(?:Vietnamese|Tiếng Việt|🇻🇳):?)/i);
+        if (vnMatch.length > 1) {
+          backHtml += `
+            <div class="card-definition-box">
+              <p class="card-definition-text">${vnMatch[0]}</p>
+            </div>
+            <div class="card-vietnamese-box">
+              <p class="card-vietnamese-text">${vnMatch.slice(1).join('\n\n')}</p>
+            </div>
+          `;
+        } else {
+          backHtml += `<div class="card-main-text card-resolution-text">${raw}</div>`;
+        }
+        if (config.back.ipa) backHtml += `<div class="card-ipa-text">${config.back.ipa}</div>`;
+        if (config.back.explanation) backHtml += `<div class="card-explanation">${config.back.explanation}</div>`;
+        if (config.back.subText) backHtml += `<div class="card-sub-text card-morphology-box">${config.back.subText}</div>`;
+      }
+
+      backBody.innerHTML = backHtml;
     }
 
     const backDock = document.createElement('div');
     backDock.className = 'card-bottom-dock card-rating-dock';
     backDock.innerHTML = `
-      <button type="button" class="dock-btn dock-btn-again btn-rate-again" aria-label="Rate repetition Again: failed recall, reset interval"><span style="color: var(--critical); font-weight: 800;">✗</span> ${t('card.again', undefined, 'Again')} <span class="kbd-badge">1</span></button>
-      <button type="button" class="dock-btn dock-btn-flip btn-flip-back" aria-label="Flip card back to prompt face"><span style="color: var(--accent-gold); font-weight: 800;">⟳</span> ${t('card.flip_return', undefined, 'Flip Return')} <span class="kbd-badge">SPACE</span></button>
-      <button type="button" class="dock-btn dock-btn-good btn-rate-good" aria-label="Rate repetition Good: successful recall, advance interval"><span style="color: var(--good); font-weight: 800;">✓</span> ${t('card.good', undefined, 'Good')} <span class="kbd-badge">2</span></button>
+      <button type="button" class="dock-btn dock-btn-again btn-rate-again" aria-label="${t('card.again_aria', undefined, 'Rate repetition Again: failed recall, reset interval')}"><span style="color: var(--critical); font-weight: 800;">✗</span> ${t('card.again', undefined, 'Again')} <span class="kbd-badge">1</span></button>
+      <button type="button" class="dock-btn dock-btn-flip btn-flip-back" aria-label="${t('card.flip_return_aria', undefined, 'Flip card back to prompt face')}"><span style="color: var(--accent-gold); font-weight: 800;">⟳</span> ${t('card.flip_return', undefined, 'Flip Return')} <span class="kbd-badge">SPACE</span></button>
+      <button type="button" class="dock-btn dock-btn-good btn-rate-good" aria-label="${t('card.good_aria', undefined, 'Rate repetition Good: successful recall, advance interval')}"><span style="color: var(--good); font-weight: 800;">✓</span> ${t('card.good', undefined, 'Good')} <span class="kbd-badge">2</span></button>
     `;
 
     backDock.querySelector('.btn-rate-again')?.addEventListener('click', (e) => {
@@ -292,11 +347,11 @@ export class AtomicCard {
     // ==========================================
     const hintLeft = document.createElement('div');
     hintLeft.className = 'card-swipe-hint hint-left';
-    hintLeft.innerHTML = '<span>◄ AGAIN</span>';
+    hintLeft.innerHTML = `<span>${t('card.again_hint', undefined, '◄ AGAIN')}</span>`;
 
     const hintRight = document.createElement('div');
     hintRight.className = 'card-swipe-hint hint-right';
-    hintRight.innerHTML = '<span>GOOD ►</span>';
+    hintRight.innerHTML = `<span>${t('card.good_hint', undefined, 'GOOD ►')}</span>`;
 
     container.appendChild(hintLeft);
     container.appendChild(hintRight);

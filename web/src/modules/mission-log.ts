@@ -6,6 +6,7 @@ import { ScrollAffordance } from '../core/scroll-affordance';
 import { Cefr } from '../core/cefr';
 import habitsData from '../assets/data/habits.json';
 import { t } from '../core/i18n';
+import { illustration } from '../utils/illustrations';
 
 export interface HabitDay {
   day: number;
@@ -53,6 +54,26 @@ export class MissionLog {
 
   public render(): HTMLElement {
     this.container.innerHTML = `
+      <!-- Habits Roadmap Hero Banner -->
+      <div class="app-hero-banner habits-hero-banner" style="margin-bottom: var(--space-12, 12px);">
+        <div class="app-hero-banner-content">
+          <span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">
+            [${t('habits.kicker', undefined, 'HABITS // KINETIC ROADMAP')}]
+          </span>
+          <h2 style="margin: 0; font-size: var(--font-h3, 16px); font-weight: 700; color: var(--ink-primary); line-height: 1.3;">
+            ${t('habits.daily_workout', undefined, 'Daily Workout & Kinetic Missions')}
+          </h2>
+          <div style="font-size: var(--font-kicker); color: var(--ink-secondary); display: flex; gap: 8px; flex-wrap: wrap;">
+            <span>CEFR ${this.activeLevel}</span>
+            <span>•</span>
+            <span>${t('habits.day_indicator', { current: this.activeDayIndex + 1, total: 30 }, `DAY ${this.activeDayIndex + 1} / 30`)}</span>
+          </div>
+        </div>
+        <div class="app-hero-banner-art">
+          ${illustration('to-the-stars', { size: 'banner', ariaLabel: t('habits.kicker', undefined, 'Habits Roadmap') })}
+        </div>
+      </div>
+
       <div class="dossier-control-bar mission-control-bar" style="display: flex; flex-direction: column; align-items: stretch; gap: 8px; width: 100%;">
         <div class="mission-header-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
           <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-family: var(--font-mono); font-size: var(--font-kicker);">[${t('habits.kicker', undefined, 'HABITS // KINETIC ROADMAP')}]</span>

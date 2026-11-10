@@ -1,11 +1,11 @@
 import vocabData from '../data/vocab.json';
-import iotVocabData from '../../assets/data/iot-vocabulary.json';
 import { SRSEngine, SRSCardState, SRSRating } from '../../core/srs-engine';
 import { ttsAvailable } from '../tts';
 import { esc, h } from '../ui';
 import { icon } from '../../utils/icons';
 import { t } from '../../core/i18n';
 import { StorageManager } from '../../utils/storage';
+import { illustration } from '../../utils/illustrations';
 
 interface VocabItem {
   id: string;
@@ -25,22 +25,6 @@ interface VocabItem {
 // Own storage key: the CEFR app's card states (STARK_ENG_STATE) are never touched.
 const KEY = 'IELTS_VOCAB_SRS';
 const DECK_CORE = vocabData as VocabItem[];
-
-// Format IOT items into compatible VocabItem structures
-const DECK_IOT: VocabItem[] = (iotVocabData as any[]).map((it, idx) => ({
-  id: it.id || `iot-${idx}`,
-  topic: it.topic || 'General Academic',
-  word: it.word,
-  pos: it.pos || 'noun',
-  band: it.band || 7.0,
-  use: ['writing', 'speaking', 'reading'],
-  definition: it.definition || '',
-  collocations: Array.isArray(it.collocations) ? it.collocations : [],
-  paraphrases: [],
-  example: it.example || '',
-  vietnamese: it.vietnamese || '',
-  cefrLevel: it.cefrLevel || 'B2'
-}));
 
 function load(): Record<string, SRSCardState> {
   try {
@@ -64,64 +48,26 @@ const getSessionSize = (): number => ({ 15: 10, 60: 35 }[StorageManager.getDaily
 
 export function vocabView(root: HTMLElement): () => void {
   let states = load();
-  let activeDeckKey = 'core'; // 'core' | 'iot' | 'combined'
   let activeTopic = 'all';
   let activeBand = 'all';
   let searchQuery = '';
   let queue: VocabItem[] = [];
 
-  const titleHeader = h('h1', 'ie-title', t('ielts.vocab_title', undefined, 'IELTS Academic Vocabulary & Collocations'));
-  const leadDesc = h(
-    'p',
-    'ie-lead',
-    t('ielts.vocab_lead', undefined, 'High-yield academic vocabulary and authentic collocations with spaced repetition.')
+  const heroBanner = h(
+    'div',
+    'app-hero-banner ielts-vocab-hero',
+    `<div class="app-hero-banner-content">` +
+      `<span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">` +
+        `[IELTS ACADEMIC // VOCABULARY & COLLOCATIONS]` +
+      `</span>` +
+      `<h1 class="ie-title" style="margin: 0; font-size: var(--font-h1); line-height: 1.25;">${esc(t('ielts.vocab_title', undefined, 'IELTS Academic Vocabulary & Collocations'))}</h1>` +
+      `<p class="ie-lead" style="margin: 0; font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">${esc(t('ielts.vocab_lead', undefined, '1,502 high-yield academic vocabulary items across 20 core topics with authentic collocations and spaced repetition.'))}</p>` +
+    `</div>` +
+    `<div class="app-hero-banner-art">` +
+      `${illustration('knowledge', { size: 'banner', ariaLabel: 'Academic Vocabulary' })}` +
+    `</div>`
   );
-
-  // Deck selector row
-  const deckSwitcher = h('div', 'ie-mode-switcher');
-  deckSwitcher.setAttribute('role', 'tablist');
-  deckSwitcher.setAttribute('aria-label', 'Vocabulary Decks');
-
-  const btnCore = h('button', 'ie-mode-btn is-active');
-  btnCore.setAttribute('type', 'button');
-  btnCore.setAttribute('role', 'tab');
-  btnCore.setAttribute('aria-selected', 'true');
-  btnCore.innerHTML = `
-    <span class="ie-mode-icon">${icon('target', 13)}</span>
-    <span class="ie-mode-label">
-      <span class="ie-mode-full">${t('vocab.deck_core_full')}</span>
-      <span class="ie-mode-short">${t('vocab.deck_core_short')}</span>
-    </span>
-    <span class="ie-mode-count">${DECK_CORE.length.toLocaleString()}</span>
-  `;
-
-  const btnIot = h('button', 'ie-mode-btn');
-  btnIot.setAttribute('type', 'button');
-  btnIot.setAttribute('role', 'tab');
-  btnIot.setAttribute('aria-selected', 'false');
-  btnIot.innerHTML = `
-    <span class="ie-mode-icon">${icon('globe', 13)}</span>
-    <span class="ie-mode-label">
-      <span class="ie-mode-full">${t('vocab.deck_topics_full')}</span>
-      <span class="ie-mode-short">${t('vocab.deck_topics_short')}</span>
-    </span>
-    <span class="ie-mode-count">${DECK_IOT.length.toLocaleString()}</span>
-  `;
-
-  const btnCombined = h('button', 'ie-mode-btn');
-  btnCombined.setAttribute('type', 'button');
-  btnCombined.setAttribute('role', 'tab');
-  btnCombined.setAttribute('aria-selected', 'false');
-  btnCombined.innerHTML = `
-    <span class="ie-mode-icon">${icon('zap', 13)}</span>
-    <span class="ie-mode-label">
-      <span class="ie-mode-full">${t('vocab.deck_combined_full')}</span>
-      <span class="ie-mode-short">${t('vocab.deck_combined_short')}</span>
-    </span>
-    <span class="ie-mode-count">${(DECK_CORE.length + DECK_IOT.length).toLocaleString()}</span>
-  `;
-
-  deckSwitcher.append(btnCore, btnIot, btnCombined);
+  heroBanner.style.marginBottom = 'var(--space-12, 12px)';
 
   // Controls bar
   const bar = h('div', 'ie-vocab-controls');
@@ -168,12 +114,10 @@ export function vocabView(root: HTMLElement): () => void {
   bar.append(selectsRow, searchInput, stats);
 
   const stage = h('div', 'ie-vstage');
-  root.append(titleHeader, leadDesc, deckSwitcher, bar, stage);
+  root.append(heroBanner, bar, stage);
 
   function getActiveDeck(): VocabItem[] {
-    if (activeDeckKey === 'core') return DECK_CORE;
-    if (activeDeckKey === 'iot') return DECK_IOT;
-    return [...DECK_CORE, ...DECK_IOT];
+    return DECK_CORE;
   }
 
   function updateStarBtnState(): void {
@@ -306,9 +250,7 @@ export function vocabView(root: HTMLElement): () => void {
 
       let vnBlock = '';
       if (v.vietnamese) {
-        vnBlock = `<p style="color: var(--accent-cyan); font-weight: 600; margin-bottom: var(--space-6);">🇻🇳 ${esc(
-          v.vietnamese
-        )}</p>`;
+        vnBlock = `<div class="ie-vvn">🇻🇳 ${esc(v.vietnamese)}</div>`;
       }
 
       let collocBlock = '';
@@ -375,43 +317,6 @@ export function vocabView(root: HTMLElement): () => void {
 
     next();
   }
-
-  // Bind Switchers
-  btnCore.addEventListener('click', () => {
-    activeDeckKey = 'core';
-    btnCore.classList.add('is-active');
-    btnCore.setAttribute('aria-selected', 'true');
-    btnIot.classList.remove('is-active');
-    btnIot.setAttribute('aria-selected', 'false');
-    btnCombined.classList.remove('is-active');
-    btnCombined.setAttribute('aria-selected', 'false');
-    updateTopicOptions();
-    start();
-  });
-
-  btnIot.addEventListener('click', () => {
-    activeDeckKey = 'iot';
-    btnIot.classList.add('is-active');
-    btnIot.setAttribute('aria-selected', 'true');
-    btnCore.classList.remove('is-active');
-    btnCore.setAttribute('aria-selected', 'false');
-    btnCombined.classList.remove('is-active');
-    btnCombined.setAttribute('aria-selected', 'false');
-    updateTopicOptions();
-    start();
-  });
-
-  btnCombined.addEventListener('click', () => {
-    activeDeckKey = 'combined';
-    btnCombined.classList.add('is-active');
-    btnCombined.setAttribute('aria-selected', 'true');
-    btnCore.classList.remove('is-active');
-    btnCore.setAttribute('aria-selected', 'false');
-    btnIot.classList.remove('is-active');
-    btnIot.setAttribute('aria-selected', 'false');
-    updateTopicOptions();
-    start();
-  });
 
   starTopicBtn.addEventListener('click', () => {
     if (activeTopic === 'all' || activeTopic === 'starred') return;

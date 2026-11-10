@@ -12,6 +12,7 @@ import { ProgressionEngine } from '../core/progression-engine';
 import { ScrollAffordance } from '../core/scroll-affordance';
 import tensesData from '../assets/data/tenses-bank.json';
 import { t } from '../core/i18n';
+import { illustration } from '../utils/illustrations';
 
 export interface TenseMetadata {
   id: string;
@@ -150,6 +151,29 @@ export class TensesDossier {
   public render(): HTMLElement {
     const accPct = this.totalAttempted > 0 ? Math.round((this.score / this.totalAttempted) * 100) : 0;
     this.container.innerHTML = `
+      <!-- 12 Tenses Vault Hero Banner -->
+      <div class="app-hero-banner tenses-hero-banner" style="margin-bottom: var(--space-12, 12px);">
+        <div class="app-hero-banner-content">
+          <span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">
+            [${t('dossier.twelve_verb_tenses', undefined, '12 VERB TENSES MASTER VAULT')}]
+          </span>
+          <h2 style="margin: 0; font-size: var(--font-h3, 16px); font-weight: 700; color: var(--ink-primary); line-height: 1.3;">
+            ${this.viewMode === 'drill' ? t('tenses.random_drill', { count: this.currentPool.length }) :
+              this.viewMode === 'gauntlet' ? t('tenses.gauntlet') : t('tenses.codex')}
+          </h2>
+          <div style="font-size: var(--font-kicker); color: var(--ink-secondary); display: flex; gap: 8px; flex-wrap: wrap;">
+            <span>FAMILY: ${this.activeFamily}</span>
+            <span>•</span>
+            <span>${this.selectedTenseId === 'ALL' ? t('tenses.all_in_family') : this.selectedTenseId.replace(/_/g, ' ')}</span>
+            <span>•</span>
+            <span>${this.currentPool.length} PROMPTS</span>
+          </div>
+        </div>
+        <div class="app-hero-banner-art">
+          ${illustration('grammar', { size: 'banner', ariaLabel: t('dossier.twelve_verb_tenses', undefined, '12 Verb Tenses') })}
+        </div>
+      </div>
+
       <div class="tenses-mode-header">
         <div class="view-mode-toggle" role="tablist" aria-label="Tenses View Modes">
           <button class="hud-btn view-toggle-btn ${this.viewMode === 'drill' ? 'active' : ''}" data-view="drill" role="tab" aria-selected="${this.viewMode === 'drill'}">
@@ -254,7 +278,7 @@ export class TensesDossier {
           <div class="tenses-badge-row">
             <span class="hud-badge tense-family-badge family-${q.family.toLowerCase()}">${q.family}</span>
             <span class="telemetry-value tense-title-tag" title="${this.escapeHtml(q.tenseName + (vnName ? ' · ' + vnName : ''))}"><span class="tense-en-title">${q.tenseName}</span>${vnName ? ` <span class="tense-vn-title">· ${vnName}</span>` : ''}</span>
-            <button type="button" class="hud-btn btn-speak-prompt" data-text="${this.escapeHtml(spokenText)}" title="Listen to complete sentence audio" aria-label="Listen to sentence">
+            <button type="button" class="hud-btn btn-speak-prompt" data-text="${this.escapeHtml(spokenText)}" title="${t('tenses.listen_complete_sentence', undefined, 'Listen to complete sentence audio')}" aria-label="${t('tenses.listen_sentence_aria', undefined, 'Listen to sentence')}">
               ${icon('volume', 14)} ${t('action.pronounce')}
             </button>
           </div>
@@ -270,7 +294,7 @@ export class TensesDossier {
             </div>
           ` : ''}
 
-          <div class="tenses-choices-grid" role="group" aria-label="Select the correct verb form">
+          <div class="tenses-choices-grid" role="group" aria-label="${t('tenses.select_verb_form_aria', undefined, 'Select the correct verb form')}">
             ${this.currentShuffledOptions.map((opt, idx) => {
               let choiceClass = 'tenses-choice-btn';
               let statusIcon = '';
@@ -328,7 +352,7 @@ export class TensesDossier {
     if (!q) {
       return `
         <div class="empty-state-notice">
-          <p>No questions initialized for Gauntlet Challenge.</p>
+          <p>${t('tenses.gauntlet_empty', undefined, 'No questions initialized for Gauntlet Challenge.')}</p>
           <button class="hud-btn btn-start-gauntlet" style="margin-top: 12px; font-weight: 700;">${t('tenses.btn_start_gauntlet', undefined, 'Start Gauntlet Challenge')}</button>
         </div>
       `;
@@ -354,7 +378,7 @@ export class TensesDossier {
           <div class="tenses-badge-row">
             <span class="hud-badge tense-family-badge family-${q.family.toLowerCase()}">${q.family}</span>
             <span class="telemetry-value tense-title-tag">${q.tenseName}</span>
-            <button type="button" class="hud-btn btn-speak-prompt" data-text="${this.escapeHtml(spokenText)}" title="Listen to complete sentence audio" aria-label="Listen to sentence">
+            <button type="button" class="hud-btn btn-speak-prompt" data-text="${this.escapeHtml(spokenText)}" title="${t('tenses.listen_complete_sentence', undefined, 'Listen to complete sentence audio')}" aria-label="${t('tenses.listen_sentence_aria', undefined, 'Listen to sentence')}">
               ${icon('volume', 14)} ${t('action.pronounce', undefined, 'Pronounce')}
             </button>
           </div>
@@ -370,7 +394,7 @@ export class TensesDossier {
             </div>
           ` : ''}
 
-          <div class="tenses-choices-grid" role="group" aria-label="Select the correct verb form">
+          <div class="tenses-choices-grid" role="group" aria-label="${t('tenses.select_verb_form_aria', undefined, 'Select the correct verb form')}">
             ${this.currentShuffledOptions.map((opt, idx) => {
               let choiceClass = 'tenses-choice-btn';
               let statusIcon = '';
@@ -485,53 +509,53 @@ export class TensesDossier {
   }
 
   private renderReferenceView(): string {
-    const tenses = (tensesData as any).tenses.filter((t: TenseMetadata) =>
-      this.activeFamily === 'ALL' || t.family === this.activeFamily
+    const tenses = (tensesData as any).tenses.filter((item: TenseMetadata) =>
+      this.activeFamily === 'ALL' || item.family === this.activeFamily
     );
 
     return `
       <div class="tenses-reference-grid">
-        ${tenses.map((t: TenseMetadata) => `
-          <div class="tense-codex-card" data-tense="${t.id}">
+        ${tenses.map((item: TenseMetadata) => `
+          <div class="tense-codex-card" data-tense="${item.id}">
             <div class="codex-header">
               <div class="codex-title-wrap">
-                <span class="hud-badge tense-family-badge family-${t.family.toLowerCase()}">${t.family}</span>
-                <h3 class="codex-name">${t.name}</h3>
-                <span class="codex-vn-name">${t.vietnameseName}</span>
+                <span class="hud-badge tense-family-badge family-${item.family.toLowerCase()}">${item.family}</span>
+                <h3 class="codex-name">${item.name}</h3>
+                <span class="codex-vn-name">${item.vietnameseName}</span>
               </div>
-              <button class="hud-btn btn-drill-this-tense" data-tense="${t.id}" title="Drill questions for this tense" style="display: inline-flex; align-items: center; gap: 6px;">
-                ${icon('dice', 12)} Drill
+              <button class="hud-btn btn-drill-this-tense" data-tense="${item.id}" title="${t('tenses.drill_this_tense_title', undefined, 'Drill questions for this tense')}" style="display: inline-flex; align-items: center; gap: 6px;">
+                ${icon('dice', 12)} ${t('action.drill', undefined, 'Drill')}
               </button>
             </div>
 
             <div class="codex-formula-box">
               <div class="telemetry-label" style="margin-bottom: 4px;">SYNTACTIC FORMULA:</div>
-              <div class="formula-line"><span class="formula-type">[ + ]</span> ${this.escapeHtml(t.formula.affirmative)}</div>
-              <div class="formula-line"><span class="formula-type">[ - ]</span> ${this.escapeHtml(t.formula.negative)}</div>
-              <div class="formula-line"><span class="formula-type">[ ? ]</span> ${this.escapeHtml(t.formula.interrogative)}</div>
+              <div class="formula-line"><span class="formula-type">[ + ]</span> ${this.escapeHtml(item.formula.affirmative)}</div>
+              <div class="formula-line"><span class="formula-type">[ - ]</span> ${this.escapeHtml(item.formula.negative)}</div>
+              <div class="formula-line"><span class="formula-type">[ ? ]</span> ${this.escapeHtml(item.formula.interrogative)}</div>
             </div>
 
             <div class="codex-section">
               <div class="telemetry-label">SIGNALS / DẤU HIỆU NHẬN BIẾT:</div>
               <div class="signal-tags-wrap">
-                ${t.signals.map(s => `<span class="signal-tag">${this.escapeHtml(s)}</span>`).join('')}
+                ${item.signals.map(s => `<span class="signal-tag">${this.escapeHtml(s)}</span>`).join('')}
               </div>
             </div>
 
             <div class="codex-section">
               <div class="telemetry-label">CORE USAGE · CÁCH DÙNG:</div>
-              <p class="codex-text">${this.escapeHtml(t.coreUsage)}</p>
+              <p class="codex-text">${this.escapeHtml(item.coreUsage)}</p>
             </div>
 
             <div class="codex-section pitfall-section">
               <div class="telemetry-label" style="color: var(--alarm, #ef4444);">LỖI SAI KINH ĐIỂN · PITFALL:</div>
-              <p class="codex-text">${this.escapeHtml(t.commonPitfall)}</p>
+              <p class="codex-text">${this.escapeHtml(item.commonPitfall)}</p>
             </div>
 
             <div class="codex-example-box">
               <div class="telemetry-label">EXEMPLAR:</div>
-              <div class="example-quote">“${this.escapeHtml(t.example)}”</div>
-              <button class="hud-btn btn-speak-example" data-text="${this.escapeHtml(t.example)}" title="Listen to pronunciation" aria-label="Listen to example">
+              <div class="example-quote">“${this.escapeHtml(item.example)}”</div>
+              <button class="hud-btn btn-speak-example" data-text="${this.escapeHtml(item.example)}" title="${t('tenses.listen_pronunciation_title', undefined, 'Listen to pronunciation')}" aria-label="${t('tenses.listen_example_aria', undefined, 'Listen to example')}">
                 ${icon('volume', 14)}
               </button>
             </div>

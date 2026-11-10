@@ -234,6 +234,14 @@ function playSfx(type: 'absorb' | 'alarm' | 'level-up' | 'click'): void {
   }
 }
 
+function getLocalizedCategoryLabel(label: string): string {
+  if (label.includes('Self-Correction')) return t('ielts.trap_cat_oral_correction', undefined, label);
+  if (label.includes('Qualifier')) return t('ielts.trap_cat_qualifier', undefined, label);
+  if (label.includes('Reversal')) return t('ielts.trap_cat_reversal', undefined, label);
+  if (label.includes('Map') || label.includes('Decoy')) return t('ielts.trap_cat_map_decoy', undefined, label);
+  return label;
+}
+
 export function listeningTrapsView(root: HTMLElement): () => void {
   root.innerHTML = '';
 
@@ -340,7 +348,9 @@ export function listeningTrapsView(root: HTMLElement): () => void {
 
     // Header info
     const metaBar = h('div', 'ie-trap-metabar');
-    const badge = h('span', 'ie-trap-category-pill', `${s.categoryIcon} ${s.categoryLabel} • Section ${s.section}`);
+    const catLabel = getLocalizedCategoryLabel(s.categoryLabel);
+    const secLabel = t('ielts.section_n', { n: s.section }, `Section ${s.section}`);
+    const badge = h('span', 'ie-trap-category-pill', `${s.categoryIcon} ${catLabel} • ${secLabel}`);
     const title = h('h2', 'ie-sub', s.title);
     metaBar.append(badge, title);
 
@@ -512,11 +522,11 @@ export function listeningTrapsView(root: HTMLElement): () => void {
         if (c.cat === s.category) {
           btn.classList.add('is-correct');
           playSfx('absorb');
-          spotterFeedback.innerHTML = `<p class="ie-feedback-msg is-success">${icon('check', 13)} <strong>Spot on!</strong> This is an authentic <strong>${s.categoryLabel}</strong>. Note the cue word: <em>"${s.trapCue}"</em>.</p>`;
+          spotterFeedback.innerHTML = `<p class="ie-feedback-msg is-success">${icon('check', 13)} <strong>${t('listening_traps.spot_on', undefined, 'Spot on!')}</strong> This is an authentic <strong>${s.categoryLabel}</strong>. Note the cue word: <em>"${s.trapCue}"</em>.</p>`;
         } else {
           btn.classList.add('is-incorrect');
           playSfx('alarm');
-          spotterFeedback.innerHTML = `<p class="ie-feedback-msg is-error">${icon('alertTriangle', 13)} Not quite. Listen closely to the speaker's phrasing: did they amend, restrict, reverse, or give spatial direction?</p>`;
+          spotterFeedback.innerHTML = `<p class="ie-feedback-msg is-error">${icon('alertTriangle', 13)} ${t('listening_traps.not_quite', undefined, "Not quite. Listen closely to the speaker's phrasing: did they amend, restrict, reverse, or give spatial direction?")}</p>`;
         }
       });
       spotterGrid.append(btn);
@@ -587,7 +597,7 @@ export function listeningTrapsView(root: HTMLElement): () => void {
         playSfx('level-up');
         masteredSet.add(s.id);
         updateTracker();
-        inputFeedback.innerHTML = `<p class="ie-feedback-msg is-success">${icon('check', 13)} <strong>Correct!</strong> Exact word verified. See the full deconstruction below.</p>`;
+        inputFeedback.innerHTML = `<p class="ie-feedback-msg is-success">${icon('check', 13)} <strong>${t('common.correct', undefined, 'Correct!')}</strong> ${t('traps.correct_feedback', undefined, 'Exact word verified. See the full deconstruction below.')}</p>`;
         renderDeconstruction();
       } else {
         input.classList.add('is-invalid');

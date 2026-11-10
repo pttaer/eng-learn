@@ -163,6 +163,7 @@ const speakingMod = load('views/speaking.ts', {
   '../ui': mockUi,
   '../../core/acoustic-engine': mockAcoustic,
   '../../utils/icons': { icon: () => '<svg></svg>' },
+  '../../utils/illustrations': { illustration: () => '<svg class="app-illustration size-banner"></svg>' },
   '../tts': { playText: () => ({ stop: () => {} }), ttsAvailable: () => true },
   './speaking-simulator': { speakingSimulatorView: () => () => {} },
   '../progress': { addAttempt: () => {} },

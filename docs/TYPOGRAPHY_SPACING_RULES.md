@@ -32,11 +32,21 @@
 | **H3 Card / Section Heading** | `h3`, `.hud-h3`, `.card-title`, `.section-heading`, `.ie-sub` | `--font-sans` | `18px` (`1.125rem`) | `16px` (`1.000rem`) | `1.35` | `600` | `-0.01em` | Normal | Functional card headers, quiz sections, sub-feature banners |
 | **H4 Component Cue / Field Subhead** | `h4`, `.hud-h4`, `.item-title`, `.cue-title` | `--font-sans` | `15px` (`0.9375rem`) | `14px` (`0.875rem`) | `1.40` | `600` | `0` | Normal | Step-by-step cue titles, field grouping subheadings |
 | **Kicker / Overline / Telemetry** | `.hud-kicker`, `.telemetry-label` | `--font-mono` | `11px` (`0.6875rem`) | `11px` (`0.6875rem`) | `1.20` | `700` | `+0.08em` | Uppercase | Coordinate kickers, telemetry labels (`DRILL ACCURACY`, `REGISTER:`, `SIGNAL:`). Minimum 11px floor. |
-| **Focus Prompt / Flashcard Cue** | `.card-cue-text`, `.tenses-prompt-sentence` | `--font-sans` | `22px` (`1.375rem`) | `16px` (`1.000rem`) | `1.35` | `600` | `-0.01em` | Normal | Primary flashcard prompt, copywork sentence, cloze sentence |
-| **Body Prose (Reading Articles)** | `.hud-body`, `.prose-body`, `.article-content` | `--font-sans` | `16px` (`1.000rem`) | `15px` (`0.9375rem`) | `1.65` | `400` | `0` | Normal | Deep reading articles, Band 9 model essays, transcripts (max-width: 68ch) |
+| **Focus Prompt / Flashcard Cue** | `.card-cue-text`, `.tenses-prompt-sentence` | `--font-sans` | `20px` (`1.25rem`) | `17px` (`1.0625rem`) | `1.50` | `600` | `-0.01em` | Normal | Primary flashcard prompt, copywork sentence, cloze sentence |
+| **Body Prose (Reading Articles)** | `.hud-body`, `.prose-body`, `.article-content`, `.ie-para` | `--font-sans` | `16.5px` (`1.03125rem`) | `15.5px` (`0.96875rem`) | `1.72` | `400` | `-0.005em` | Normal | Deep reading articles, Band 9 model essays, transcripts (max-width: 68ch) |
 | **Body Compact / Notes** | `.hud-body-compact`, `.ie-lead`, `.explanation-text` | `--font-sans` | `13px` (`0.8125rem`) | `13px` (`0.8125rem`) | `1.50` | `400` | `0` | Normal | Descriptions, grammatical explanations, feedback hints |
 | **Syntax Formula / Keycaps** | `.code-block`, `.formula-text`, `.keycap` | `--font-mono` | `12px` (`0.750rem`) | `11px` (`0.6875rem`) | `1.45` | `500` | `+0.02em` | Normal | Formula scaffolding (`[+] S + V(s/es)`), keyboard hotkey hints |
 | **Form Inputs & Textareas** | `input`, `textarea`, `select`, `.ie-trap-input` | `--font-sans` | `14px` (`0.875rem`) | `max(16px, var(--font-body))` | `1.40` | `400` | `0` | Normal | Eliminates iOS Safari auto-zoom on field focus |
+
+### 2.1 Canonical Learning View Typography Scale (Cognitive Readability Spec)
+Optimized for cognitive retention, saccadic rhythm, visual hierarchy, and diacritic-safe Vietnamese legibility:
+- **`--font-learn-stimulus` (`clamp(20px, 3.8vw, 24px)`)**: Target word/stimulus on flashcard front and IELTS vocabulary card (`.card-stimulus-text`, `.ie-vword`). Line-height `1.25`, weight `700`. Prominent focal point.
+- **`--font-learn-prompt` (`clamp(17px, 2.4vw, 20px)`)**: Exercise prompt sentences, question stems, grammar transformation baseline (`.tenses-prompt-sentence`, `.ie-q-prompt`). Line-height `1.5`, weight `600`.
+- **`--font-learn-prose` (`clamp(15.5px, 1.8vw, 16.5px)`)**: Continuous reading articles, IELTS passages (`.ie-para`), Band 7+ model essays (`.ie-model p`), listening transcripts. Line-height `1.72`, max-width `68ch`.
+- **`--font-learn-def` (`15px`)**: Semantic dictionary definitions, rule explanations (`.card-definition-text`, `.explanation-en`, `.ie-why`). Line-height `1.6`, weight `400`.
+- **`--font-learn-vn` (`15px`)**: Vietnamese translation and nuances (`.card-vietnamese-text`, `.explanation-vn`, `.ie-vvn`). Line-height `1.6`, weight `600`, diacritic-safe rendering.
+- **`--font-learn-example` (`14.5px`)**: In-situ contextual examples and collocations (`.card-example-text`, `.ie-vex`). Line-height `1.6`, italic, soft background container.
+- **`--font-learn-scaffold` (`13px`)**: Phonetics / IPA (`.card-ipa-text`), morphological analysis, and telemetry tags. Monospace or sans, line-height `1.45`.
 
 ---
 

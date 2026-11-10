@@ -40,28 +40,47 @@
     "type": "tfng",
     "prompt": "The first vent communities were found in an area where sunlight reached the seabed.",
     "answer": "FALSE",
-    "why": "Paragraph A: \"where no sunlight has ever reached\"."
+    "why": "Paragraph A: \"where no sunlight has ever reached\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 170,
+     "end": 204,
+     "evidenceText": "where no sunlight has ever reached"
+    }
    },
    {
     "id": "r22-q02",
     "type": "tfng",
     "prompt": "Chemosynthesis uses energy released when a gas is oxidised.",
     "answer": "TRUE",
-    "why": "Paragraph B: \"oxidise hydrogen sulphide, a gas that is toxic to most animals, and use the energy released to fix carbon dioxide\"."
+    "why": "Paragraph B: \"oxidise hydrogen sulphide, a gas that is toxic to most animals, and use the energy released to fix carbon dioxide\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 126,
+     "end": 239,
+     "evidenceText": "oxidise hydrogen sulphide, a gas that is toxic to most animals, and use the energy released to fix carbon dioxide"
+    }
    },
    {
     "id": "r22-q03",
     "type": "tfng",
     "prompt": "Tube worms at vents grow faster than clams.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph B: \"Some tube worms have no mouth or gut as adults\". The passage describes the worms' internal partners but never compares their growth with that of clams."
+    "why": "Paragraph B: \"Some tube worms have no mouth or gut as adults\". The passage describes the worms' internal partners but never compares their growth with that of clams.",
+    "evidence": null
    },
    {
     "id": "r22-q04",
     "type": "tfng",
     "prompt": "Communities like those at vents also live where methane escapes slowly from the sea floor.",
     "answer": "TRUE",
-    "why": "Paragraph C: \"Similar communities have been found around cold seeps, where methane and other hydrocarbons leak slowly from the seabed\"."
+    "why": "Paragraph C: \"Similar communities have been found around cold seeps, where methane and other hydrocarbons leak slowly from the seabed\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 46,
+     "end": 165,
+     "evidenceText": "Similar communities have been found around cold seeps, where methane and other hydrocarbons leak slowly from the seabed"
+    }
    },
    {
     "id": "r22-q05",
@@ -74,7 +93,13 @@
      "D. It applies only to modern vents, not to the early Earth."
     ],
     "answer": "B",
-    "why": "Paragraph D: \"The hypothesis remains contested, because the early Earth's chemistry is difficult to reconstruct\". A is contradicted by the same sentence; C and D are not stated."
+    "why": "Paragraph D: \"The hypothesis remains contested, because the early Earth's chemistry is difficult to reconstruct\". A is contradicted by the same sentence; C and D are not stated.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 317,
+     "end": 414,
+     "evidenceText": "The hypothesis remains contested, because the early Earth's chemistry is difficult to reconstruct"
+    }
    },
    {
     "id": "r22-q06",
@@ -87,7 +112,13 @@
      "D. Deep-sea mining is the only serious threat that they face."
     ],
     "answer": "C",
-    "why": "Paragraph E: \"The chemical environment changes quickly, and a vent that is active for decades may become silent within a few years\". D is contradicted by the same paragraph, which names changing chemistry as well as mining; A and B are not stated."
+    "why": "Paragraph E: \"The chemical environment changes quickly, and a vent that is active for decades may become silent within a few years\". D is contradicted by the same paragraph, which names changing chemistry as well as mining; A and B are not stated.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 37,
+     "end": 153,
+     "evidenceText": "The chemical environment changes quickly, and a vent that is active for decades may become silent within a few years"
+    }
    },
    {
     "id": "r22-q07",
@@ -104,7 +135,13 @@
      "viii. Migration patterns of deep-sea fish"
     ],
     "answer": "iii",
-    "why": "Paragraph C: \"Chemosynthesis is not confined to deep vents\". Heading iii."
+    "why": "Paragraph C: \"Chemosynthesis is not confined to deep vents\". Heading iii.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 0,
+     "end": 44,
+     "evidenceText": "Chemosynthesis is not confined to deep vents"
+    }
    },
    {
     "id": "r22-q08",
@@ -121,7 +158,13 @@
      "viii. Migration patterns of deep-sea fish"
     ],
     "answer": "vi",
-    "why": "Paragraph E: \"The chemical environment changes quickly, and a vent that is active for decades may become silent within a few years\", then mining as \"a new concern\". Heading vi."
+    "why": "Paragraph E: \"The chemical environment changes quickly, and a vent that is active for decades may become silent within a few years\", then mining as \"a new concern\". Heading vi.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 37,
+     "end": 153,
+     "evidenceText": "The chemical environment changes quickly, and a vent that is active for decades may become silent within a few years"
+    }
    },
    {
     "id": "r22-q09",
@@ -138,7 +181,13 @@
      "viii. Migration patterns of deep-sea fish"
     ],
     "answer": "ii",
-    "why": "Paragraph F: \"Such results suggest that the natural recovery of a vent community depends on the availability of nearby populations\". Heading ii."
+    "why": "Paragraph F: \"Such results suggest that the natural recovery of a vent community depends on the availability of nearby populations\". Heading ii.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 386,
+     "end": 502,
+     "evidenceText": "Such results suggest that the natural recovery of a vent community depends on the availability of nearby populations"
+    }
    },
    {
     "id": "r22-q10",
@@ -147,7 +196,13 @@
     "answer": [
      "sulphide"
     ],
-    "why": "Paragraph B: \"oxidise hydrogen sulphide, a gas that is toxic to most animals\"."
+    "why": "Paragraph B: \"oxidise hydrogen sulphide, a gas that is toxic to most animals\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 126,
+     "end": 188,
+     "evidenceText": "oxidise hydrogen sulphide, a gas that is toxic to most animals"
+    }
    },
    {
     "id": "r22-q11",
@@ -156,7 +211,13 @@
     "answer": [
      "1977"
     ],
-    "why": "Paragraph A: \"In 1977, a team of researchers exploring the Pacific seabed with a submersible found something they had not expected\"."
+    "why": "Paragraph A: \"In 1977, a team of researchers exploring the Pacific seabed with a submersible found something they had not expected\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 0,
+     "end": 116,
+     "evidenceText": "In 1977, a team of researchers exploring the Pacific seabed with a submersible found something they had not expected"
+    }
    },
    {
     "id": "r22-q12",
@@ -166,7 +227,13 @@
      "mouth or gut",
      "mouth and gut"
     ],
-    "why": "Paragraph B: \"Some tube worms have no mouth or gut as adults and depend entirely on these internal partners\"."
+    "why": "Paragraph B: \"Some tube worms have no mouth or gut as adults and depend entirely on these internal partners\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 526,
+     "end": 619,
+     "evidenceText": "Some tube worms have no mouth or gut as adults and depend entirely on these internal partners"
+    }
    },
    {
     "id": "r22-q13",
@@ -175,7 +242,13 @@
     "answer": [
      "methane"
     ],
-    "why": "Paragraph C: \"where methane and other hydrocarbons leak slowly from the seabed\"."
+    "why": "Paragraph C: \"where methane and other hydrocarbons leak slowly from the seabed\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 101,
+     "end": 165,
+     "evidenceText": "where methane and other hydrocarbons leak slowly from the seabed"
+    }
    }
   ]
  },
@@ -220,35 +293,60 @@
     "type": "tfng",
     "prompt": "The 1707 disaster was caused entirely by navigational error.",
     "answer": "FALSE",
-    "why": "Paragraph B: \"The disaster was blamed partly on navigational error\"."
+    "why": "Paragraph B: \"The disaster was blamed partly on navigational error\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 237,
+     "end": 289,
+     "evidenceText": "The disaster was blamed partly on navigational error"
+    }
    },
    {
     "id": "r23-q02",
     "type": "tfng",
     "prompt": "Each hour of time difference corresponds to fifteen degrees of longitude.",
     "answer": "TRUE",
-    "why": "Paragraph A: \"Because the Earth turns by fifteen degrees every hour\"."
+    "why": "Paragraph A: \"Because the Earth turns by fifteen degrees every hour\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 340,
+     "end": 393,
+     "evidenceText": "Because the Earth turns by fifteen degrees every hour"
+    }
    },
    {
     "id": "r23-q03",
     "type": "tfng",
     "prompt": "Harrison's first marine timekeepers were small and simple to build.",
     "answer": "FALSE",
-    "why": "Paragraph D: \"Harrison's early models were large and mechanically complex\"."
+    "why": "Paragraph D: \"Harrison's early models were large and mechanically complex\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 188,
+     "end": 247,
+     "evidenceText": "Harrison's early models were large and mechanically complex"
+    }
    },
    {
     "id": "r23-q04",
     "type": "tfng",
     "prompt": "Lunar distance tables were abandoned by captains as soon as chronometers became available.",
     "answer": "FALSE",
-    "why": "Paragraph E: \"many captains continued to rely on lunar distance tables well into the nineteenth century\"."
+    "why": "Paragraph E: \"many captains continued to rely on lunar distance tables well into the nineteenth century\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 78,
+     "end": 167,
+     "evidenceText": "many captains continued to rely on lunar distance tables well into the nineteenth century"
+    }
    },
    {
     "id": "r23-q05",
     "type": "tfng",
     "prompt": "The reward offered by the Longitude Act was worth more than a naval officer's lifetime pay.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph B: \"The reward, set out in an Act of Parliament, was large enough to attract inventors from across Europe\". The passage says the reward was large but never states its value."
+    "why": "Paragraph B: \"The reward, set out in an Act of Parliament, was large enough to attract inventors from across Europe\". The passage says the reward was large but never states its value.",
+    "evidence": null
    },
    {
     "id": "r23-q06",
@@ -262,7 +360,13 @@
      "E. captains who used lunar distance tables"
     ],
     "answer": "C",
-    "why": "Paragraph D: \"a clockmaker named John Harrison, whose sequence of marine timekeepers culminated in a design\"."
+    "why": "Paragraph D: \"a clockmaker named John Harrison, whose sequence of marine timekeepers culminated in a design\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 27,
+     "end": 120,
+     "evidenceText": "a clockmaker named John Harrison, whose sequence of marine timekeepers culminated in a design"
+    }
    },
    {
     "id": "r23-q07",
@@ -276,7 +380,13 @@
      "E. captains who used lunar distance tables"
     ],
     "answer": "A",
-    "why": "Paragraph D: \"disputes with the Board of Longitude, which doubted that a mechanical device could meet the required standard\"."
+    "why": "Paragraph D: \"disputes with the Board of Longitude, which doubted that a mechanical device could meet the required standard\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 280,
+     "end": 389,
+     "evidenceText": "disputes with the Board of Longitude, which doubted that a mechanical device could meet the required standard"
+    }
    },
    {
     "id": "r23-q08",
@@ -290,7 +400,13 @@
      "E. captains who used lunar distance tables"
     ],
     "answer": "E",
-    "why": "Paragraph E: \"many captains continued to rely on lunar distance tables well into the nineteenth century, partly because they trusted their own calculations more than an unfamiliar device\"."
+    "why": "Paragraph E: \"many captains continued to rely on lunar distance tables well into the nineteenth century, partly because they trusted their own calculations more than an unfamiliar device\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 78,
+     "end": 250,
+     "evidenceText": "many captains continued to rely on lunar distance tables well into the nineteenth century, partly because they trusted their own calculations more than an unfamiliar device"
+    }
    },
    {
     "id": "r23-q09",
@@ -303,7 +419,13 @@
      "D. The necessary tables had been lost in a shipwreck."
     ],
     "answer": "A",
-    "why": "Paragraph C: \"but they were difficult on a moving deck, where the images wavered\". B, C and D are not stated in the passage."
+    "why": "Paragraph C: \"but they were difficult on a moving deck, where the images wavered\". B, C and D are not stated in the passage.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 433,
+     "end": 499,
+     "evidenceText": "but they were difficult on a moving deck, where the images wavered"
+    }
    },
    {
     "id": "r23-q10",
@@ -316,7 +438,13 @@
      "D. Astronomers and clockmakers worked in complete harmony throughout the period."
     ],
     "answer": "A",
-    "why": "Paragraph G: \"The longitude problem is therefore a useful example of how a technical question can carry social, economic and political weight. The solution emerged from a combination of craft skill, public reward and institutional pressure\"."
+    "why": "Paragraph G: \"The longitude problem is therefore a useful example of how a technical question can carry social, economic and political weight. The solution emerged from a combination of craft skill, public reward and institutional pressure\".",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 0,
+     "end": 225,
+     "evidenceText": "The longitude problem is therefore a useful example of how a technical question can carry social, economic and political weight. The solution emerged from a combination of craft skill, public reward and institutional pressure"
+    }
    },
    {
     "id": "r23-q11",
@@ -325,7 +453,13 @@
     "answer": [
      "1707"
     ],
-    "why": "Paragraph B: \"The scale of the difficulty became painfully clear in 1707, when a British fleet returning from operations in the Mediterranean ran aground on the rocks of the Isles of Scilly\"."
+    "why": "Paragraph B: \"The scale of the difficulty became painfully clear in 1707, when a British fleet returning from operations in the Mediterranean ran aground on the rocks of the Isles of Scilly\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 0,
+     "end": 175,
+     "evidenceText": "The scale of the difficulty became painfully clear in 1707, when a British fleet returning from operations in the Mediterranean ran aground on the rocks of the Isles of Scilly"
+    }
    },
    {
     "id": "r23-q12",
@@ -337,7 +471,13 @@
      "1",
      "1 degree"
     ],
-    "why": "Paragraph A: \"a difference of four minutes between the two clocks corresponds to one degree of longitude\"."
+    "why": "Paragraph A: \"a difference of four minutes between the two clocks corresponds to one degree of longitude\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 395,
+     "end": 485,
+     "evidenceText": "a difference of four minutes between the two clocks corresponds to one degree of longitude"
+    }
    },
    {
     "id": "r23-q13",
@@ -346,7 +486,13 @@
     "answer": [
      "Jamaica"
     ],
-    "why": "Paragraph D: \"Only in the 1760s did a voyage to Jamaica confirm that his later chronometer could keep time accurately enough to win the prize\"."
+    "why": "Paragraph D: \"Only in the 1760s did a voyage to Jamaica confirm that his later chronometer could keep time accurately enough to win the prize\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 391,
+     "end": 518,
+     "evidenceText": "Only in the 1760s did a voyage to Jamaica confirm that his later chronometer could keep time accurately enough to win the prize"
+    }
    }
   ]
  },
@@ -391,28 +537,47 @@
     "type": "tfng",
     "prompt": "The search for a new home begins with the scout bees.",
     "answer": "TRUE",
-    "why": "Paragraph B: \"The scouts are the first to search.\""
+    "why": "Paragraph B: \"The scouts are the first to search.\"",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 0,
+     "end": 35,
+     "evidenceText": "The scouts are the first to search."
+    }
    },
    {
     "id": "r24-q02",
     "type": "tfng",
     "prompt": "The queen bee issues orders that decide where the swarm goes.",
     "answer": "FALSE",
-    "why": "Paragraph A: \"What is remarkable is that the colony makes this decision without a leader issuing orders\"."
+    "why": "Paragraph A: \"What is remarkable is that the colony makes this decision without a leader issuing orders\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 386,
+     "end": 475,
+     "evidenceText": "What is remarkable is that the colony makes this decision without a leader issuing orders"
+    }
    },
    {
     "id": "r24-q03",
     "type": "tfng",
     "prompt": "Scouts live longer than foragers in a honeybee colony.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph F: \"Older bees may have more experience of particular cavity types\". The passage discusses experience and age but never states how long scouts or foragers live."
+    "why": "Paragraph F: \"Older bees may have more experience of particular cavity types\". The passage discusses experience and age but never states how long scouts or foragers live.",
+    "evidence": null
    },
    {
     "id": "r24-q04",
     "type": "tfng",
     "prompt": "Honeybee colonies always choose the best nest site available.",
     "answer": "FALSE",
-    "why": "Paragraph D: \"although they do not always find the very best site available\"."
+    "why": "Paragraph D: \"although they do not always find the very best site available\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 204,
+     "end": 265,
+     "evidenceText": "although they do not always find the very best site available"
+    }
    },
    {
     "id": "r24-q05",
@@ -428,7 +593,13 @@
      "G"
     ],
     "answer": "C",
-    "why": "Paragraph C: \"This quorum threshold is important, because it means that the colony commits to a single site in a relatively short time\"."
+    "why": "Paragraph C: \"This quorum threshold is important, because it means that the colony commits to a single site in a relatively short time\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 341,
+     "end": 461,
+     "evidenceText": "This quorum threshold is important, because it means that the colony commits to a single site in a relatively short time"
+    }
    },
    {
     "id": "r24-q06",
@@ -444,7 +615,13 @@
      "G"
     ],
     "answer": "E",
-    "why": "Paragraph E: \"Individual bees do not need to be clever for this to work. Each scout follows simple rules\"."
+    "why": "Paragraph E: \"Individual bees do not need to be clever for this to work. Each scout follows simple rules\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 0,
+     "end": 90,
+     "evidenceText": "Individual bees do not need to be clever for this to work. Each scout follows simple rules"
+    }
    },
    {
     "id": "r24-q07",
@@ -460,7 +637,13 @@
      "G"
     ],
     "answer": "F",
-    "why": "Paragraph F: \"The mix of individuals therefore influences the range of options considered\"."
+    "why": "Paragraph F: \"The mix of individuals therefore influences the range of options considered\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 248,
+     "end": 323,
+     "evidenceText": "The mix of individuals therefore influences the range of options considered"
+    }
    },
    {
     "id": "r24-q08",
@@ -473,7 +656,13 @@
      "D. Speed and accuracy have no effect on each other at all."
     ],
     "answer": "A",
-    "why": "Paragraph D: \"A colony that decides too quickly may settle for an inferior cavity, while a colony that waits too long risks losing the swarm altogether\". C is contradicted by \"they do not always find the very best site available\"; the same paragraph says the colony must balance speed and accuracy, which rules out D."
+    "why": "Paragraph D: \"A colony that decides too quickly may settle for an inferior cavity, while a colony that waits too long risks losing the swarm altogether\". C is contradicted by \"they do not always find the very best site available\"; the same paragraph says the colony must balance speed and accuracy, which rules out D.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 371,
+     "end": 508,
+     "evidenceText": "A colony that decides too quickly may settle for an inferior cavity, while a colony that waits too long risks losing the swarm altogether"
+    }
    },
    {
     "id": "r24-q09",
@@ -486,7 +675,13 @@
      "D. Individual members who each hold complete information at the start."
     ],
     "answer": "C",
-    "why": "Paragraph G: \"consensus need not require a central authority, but it does require mechanisms that can turn scattered opinions into a single commitment\". B is contradicted by \"need not require a central authority\"; D is contradicted by \"without any individual holding complete information\"."
+    "why": "Paragraph G: \"consensus need not require a central authority, but it does require mechanisms that can turn scattered opinions into a single commitment\". B is contradicted by \"need not require a central authority\"; D is contradicted by \"without any individual holding complete information\".",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 337,
+     "end": 473,
+     "evidenceText": "consensus need not require a central authority, but it does require mechanisms that can turn scattered opinions into a single commitment"
+    }
    },
    {
     "id": "r24-q10",
@@ -497,7 +692,13 @@
      "quorum threshold",
      "certain level"
     ],
-    "why": "Paragraph C: \"Once the number of scouts at a site rises above a certain level, workers begin to visit it more frequently\" and \"This quorum threshold is important\"."
+    "why": "Paragraph C: \"Once the number of scouts at a site rises above a certain level, workers begin to visit it more frequently\" and \"This quorum threshold is important\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 154,
+     "end": 260,
+     "evidenceText": "Once the number of scouts at a site rises above a certain level, workers begin to visit it more frequently"
+    }
    },
    {
     "id": "r24-q11",
@@ -507,7 +708,13 @@
      "vigour",
      "vigor"
     ],
-    "why": "Paragraph B: \"the vigour of the dance is thought to signal its quality\"."
+    "why": "Paragraph B: \"the vigour of the dance is thought to signal its quality\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 277,
+     "end": 333,
+     "evidenceText": "the vigour of the dance is thought to signal its quality"
+    }
    },
    {
     "id": "r24-q12",
@@ -517,7 +724,13 @@
      "distance",
      "the distance"
     ],
-    "why": "Paragraph B: \"The duration of the waggle run conveys information about the distance to the site\"."
+    "why": "Paragraph B: \"The duration of the waggle run conveys information about the distance to the site\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 190,
+     "end": 271,
+     "evidenceText": "The duration of the waggle run conveys information about the distance to the site"
+    }
    },
    {
     "id": "r24-q13",
@@ -527,7 +740,13 @@
      "cavity types",
      "particular cavity types"
     ],
-    "why": "Paragraph F: \"Older bees may have more experience of particular cavity types\"."
+    "why": "Paragraph F: \"Older bees may have more experience of particular cavity types\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 140,
+     "end": 202,
+     "evidenceText": "Older bees may have more experience of particular cavity types"
+    }
    },
    {
     "id": "r24-q14",
@@ -536,7 +755,13 @@
     "answer": [
      "swarms"
     ],
-    "why": "Paragraph E: \"A model based on these rules reproduces many features of real swarms\"."
+    "why": "Paragraph E: \"A model based on these rules reproduces many features of real swarms\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 271,
+     "end": 339,
+     "evidenceText": "A model based on these rules reproduces many features of real swarms"
+    }
    }
   ]
  },
@@ -581,28 +806,47 @@
     "type": "tfng",
     "prompt": "Perkin was trying to make a dye when he discovered mauveine.",
     "answer": "FALSE",
-    "why": "Paragraph A: \"was attempting to synthesise quinine, the anti-malarial drug, from coal tar\"."
+    "why": "Paragraph A: \"was attempting to synthesise quinine, the anti-malarial drug, from coal tar\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 59,
+     "end": 134,
+     "evidenceText": "was attempting to synthesise quinine, the anti-malarial drug, from coal tar"
+    }
    },
    {
     "id": "r25-q02",
     "type": "tfng",
     "prompt": "Indigo was grown only in Europe.",
     "answer": "FALSE",
-    "why": "Paragraph B: \"was grown in large quantities in India and the Americas\"."
+    "why": "Paragraph B: \"was grown in large quantities in India and the Americas\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 82,
+     "end": 137,
+     "evidenceText": "was grown in large quantities in India and the Americas"
+    }
    },
    {
     "id": "r25-q03",
     "type": "tfng",
     "prompt": "German chemists were paid higher wages than British chemists.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph D: \"German firms in particular built large research departments, employing trained chemists\". The passage describes the research departments but says nothing about pay."
+    "why": "Paragraph D: \"German firms in particular built large research departments, employing trained chemists\". The passage describes the research departments but says nothing about pay.",
+    "evidence": null
    },
    {
     "id": "r25-q04",
     "type": "tfng",
     "prompt": "Dye chemists could patent the changes they made to molecules.",
     "answer": "TRUE",
-    "why": "Paragraph C: \"Each change could be patented, and this encouraged firms to invest heavily in research laboratories\"."
+    "why": "Paragraph C: \"Each change could be patented, and this encouraged firms to invest heavily in research laboratories\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 501,
+     "end": 600,
+     "evidenceText": "Each change could be patented, and this encouraged firms to invest heavily in research laboratories"
+    }
    },
    {
     "id": "r25-q05",
@@ -615,7 +859,13 @@
      "D. workers who handled aromatic amines"
     ],
     "answer": "B",
-    "why": "Paragraph D: \"German firms in particular built large research departments, employing trained chemists\"."
+    "why": "Paragraph D: \"German firms in particular built large research departments, employing trained chemists\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 87,
+     "end": 174,
+     "evidenceText": "German firms in particular built large research departments, employing trained chemists"
+    }
    },
    {
     "id": "r25-q06",
@@ -628,7 +878,13 @@
      "D. workers who handled aromatic amines"
     ],
     "answer": "D",
-    "why": "Paragraph F: \"documented bladder cancers among workers in certain dye factories\"."
+    "why": "Paragraph F: \"documented bladder cancers among workers in certain dye factories\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 265,
+     "end": 330,
+     "evidenceText": "documented bladder cancers among workers in certain dye factories"
+    }
    },
    {
     "id": "r25-q07",
@@ -641,7 +897,13 @@
      "D. It started a wider change in how chemistry was used."
     ],
     "answer": "D",
-    "why": "Paragraph G: \"Perkin's accident is therefore often told as a story of luck, but it is better understood as an early example of a larger shift\". A is contradicted by the word accident and the story of luck; B is contradicted by the patterns that \"would recur in pharmaceuticals, plastics and fertilisers\"; C is not stated."
+    "why": "Paragraph G: \"Perkin's accident is therefore often told as a story of luck, but it is better understood as an early example of a larger shift\". A is contradicted by the word accident and the story of luck; B is contradicted by the patterns that \"would recur in pharmaceuticals, plastics and fertilisers\"; C is not stated.",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 0,
+     "end": 127,
+     "evidenceText": "Perkin's accident is therefore often told as a story of luck, but it is better understood as an early example of a larger shift"
+    }
    },
    {
     "id": "r25-q08",
@@ -654,7 +916,13 @@
      "D. Natural dyes became more popular than synthetic ones."
     ],
     "answer": "B",
-    "why": "Paragraph E: \"residues that polluted rivers near dye works\". A is contradicted by \"The new colours spread quickly through fashion\"; C by \"Early regulation was limited\"; D by \"replace many natural products\" in paragraph B."
+    "why": "Paragraph E: \"residues that polluted rivers near dye works\". A is contradicted by \"The new colours spread quickly through fashion\"; C by \"Early regulation was limited\"; D by \"replace many natural products\" in paragraph B.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 275,
+     "end": 319,
+     "evidenceText": "residues that polluted rivers near dye works"
+    }
    },
    {
     "id": "r25-q09",
@@ -663,7 +931,13 @@
     "answer": [
      "roots"
     ],
-    "why": "Paragraph B: \"Madder, a red dye obtained from the roots of a plant, was similarly extensive in its cultivation\"."
+    "why": "Paragraph B: \"Madder, a red dye obtained from the roots of a plant, was similarly extensive in its cultivation\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 204,
+     "end": 300,
+     "evidenceText": "Madder, a red dye obtained from the roots of a plant, was similarly extensive in its cultivation"
+    }
    },
    {
     "id": "r25-q10",
@@ -672,7 +946,13 @@
     "answer": [
      "tar"
     ],
-    "why": "Paragraph C: \"The chemistry of coal tar was the key to this transformation. Coal tar, a by-product of coal gas production, contains a complex mixture of aromatic compounds\"."
+    "why": "Paragraph C: \"The chemistry of coal tar was the key to this transformation. Coal tar, a by-product of coal gas production, contains a complex mixture of aromatic compounds\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 0,
+     "end": 157,
+     "evidenceText": "The chemistry of coal tar was the key to this transformation. Coal tar, a by-product of coal gas production, contains a complex mixture of aromatic compounds"
+    }
    },
    {
     "id": "r25-q11",
@@ -681,7 +961,13 @@
     "answer": [
      "limited"
     ],
-    "why": "Paragraph E: \"Early regulation was limited, and it was often left to local authorities to decide what was acceptable\"."
+    "why": "Paragraph E: \"Early regulation was limited, and it was often left to local authorities to decide what was acceptable\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 321,
+     "end": 423,
+     "evidenceText": "Early regulation was limited, and it was often left to local authorities to decide what was acceptable"
+    }
    },
    {
     "id": "r25-q12",
@@ -691,7 +977,13 @@
      "purple",
      "vivid purple"
     ],
-    "why": "Paragraph A: \"coloured the water in his flask a vivid purple\"."
+    "why": "Paragraph A: \"coloured the water in his flask a vivid purple\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 180,
+     "end": 226,
+     "evidenceText": "coloured the water in his flask a vivid purple"
+    }
    },
    {
     "id": "r25-q13",
@@ -700,7 +992,13 @@
     "answer": [
      "mauveine"
     ],
-    "why": "Paragraph A: \"His discovery, mauveine, was among the first synthetic dyes\"."
+    "why": "Paragraph A: \"His discovery, mauveine, was among the first synthetic dyes\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 357,
+     "end": 416,
+     "evidenceText": "His discovery, mauveine, was among the first synthetic dyes"
+    }
    }
   ]
  },
@@ -745,28 +1043,47 @@
     "type": "tfng",
     "prompt": "Waiting seems longer when it is filled with activity.",
     "answer": "FALSE",
-    "why": "Paragraph B: \"Waiting that is unoccupied tends to seem longer than waiting that is filled with activity\"."
+    "why": "Paragraph B: \"Waiting that is unoccupied tends to seem longer than waiting that is filled with activity\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 76,
+     "end": 165,
+     "evidenceText": "Waiting that is unoccupied tends to seem longer than waiting that is filled with activity"
+    }
    },
    {
     "id": "r26-q02",
     "type": "tfng",
     "prompt": "People accept a delay more calmly when they know how long it will last.",
     "answer": "TRUE",
-    "why": "Paragraph B: \"someone told that the wait will be twenty minutes may accept it more calmly\"."
+    "why": "Paragraph B: \"someone told that the wait will be twenty minutes may accept it more calmly\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 349,
+     "end": 424,
+     "evidenceText": "someone told that the wait will be twenty minutes may accept it more calmly"
+    }
    },
    {
     "id": "r26-q03",
     "type": "tfng",
     "prompt": "Single lines are the cheapest option for organisations.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph C: \"a design that tends to be perceived as fairer than separate lines for each counter\". The passage discusses fairness but never discusses cost."
+    "why": "Paragraph C: \"a design that tends to be perceived as fairer than separate lines for each counter\". The passage discusses fairness but never discusses cost.",
+    "evidence": null
    },
    {
     "id": "r26-q04",
     "type": "tfng",
     "prompt": "Jostling crowds make even short waits feel more tolerable.",
     "answer": "FALSE",
-    "why": "Paragraph D: \"a crowd that jostles and pushes can make even a short wait feel intolerable\"."
+    "why": "Paragraph D: \"a crowd that jostles and pushes can make even a short wait feel intolerable\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 369,
+     "end": 444,
+     "evidenceText": "a crowd that jostles and pushes can make even a short wait feel intolerable"
+    }
    },
    {
     "id": "r26-q05",
@@ -783,7 +1100,13 @@
      "viii. Designs that reduce the number of visitors"
     ],
     "answer": "iii",
-    "why": "Paragraph C: \"Queues that allow people to be served in the order in which they arrived are generally seen as legitimate\". Heading iii."
+    "why": "Paragraph C: \"Queues that allow people to be served in the order in which they arrived are generally seen as legitimate\". Heading iii.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 44,
+     "end": 149,
+     "evidenceText": "Queues that allow people to be served in the order in which they arrived are generally seen as legitimate"
+    }
    },
    {
     "id": "r26-q06",
@@ -800,7 +1123,13 @@
      "viii. Designs that reduce the number of visitors"
     ],
     "answer": "ii",
-    "why": "Paragraph D: \"Standing in a cramped space with little shelter from heat or noise makes waiting feel more burdensome\". Heading ii."
+    "why": "Paragraph D: \"Standing in a cramped space with little shelter from heat or noise makes waiting feel more burdensome\". Heading ii.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 54,
+     "end": 155,
+     "evidenceText": "Standing in a cramped space with little shelter from heat or noise makes waiting feel more burdensome"
+    }
    },
    {
     "id": "r26-q07",
@@ -817,7 +1146,13 @@
      "viii. Designs that reduce the number of visitors"
     ],
     "answer": "i",
-    "why": "Paragraph E: \"Explaining the reason for a delay can therefore change how it is judged\". Heading i."
+    "why": "Paragraph E: \"Explaining the reason for a delay can therefore change how it is judged\". Heading i.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 321,
+     "end": 392,
+     "evidenceText": "Explaining the reason for a delay can therefore change how it is judged"
+    }
    },
    {
     "id": "r26-q08",
@@ -830,7 +1165,13 @@
      "D. Designers should aim to avoid all queues where possible."
     ],
     "answer": "A",
-    "why": "Paragraph G: \"The minutes that pass in a queue are fixed by capacity, but the meaning of those minutes is shaped by information, fairness and comfort\". C is contradicted by \"can damage trust long after the queue has moved\"; B and D are not the writer's point."
+    "why": "Paragraph G: \"The minutes that pass in a queue are fixed by capacity, but the meaning of those minutes is shaped by information, fairness and comfort\". C is contradicted by \"can damage trust long after the queue has moved\"; B and D are not the writer's point.",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 76,
+     "end": 211,
+     "evidenceText": "The minutes that pass in a queue are fixed by capacity, but the meaning of those minutes is shaped by information, fairness and comfort"
+    }
    },
    {
     "id": "r26-q09",
@@ -843,7 +1184,13 @@
      "D. Queues in service settings are always organised unfairly."
     ],
     "answer": "C",
-    "why": "Paragraph E: \"People who have paid for a service often expect to be served quickly\" and \"the customer may attribute the delay to carelessness\". D is contradicted by the statement in paragraph C that a fair queue is more acceptable; B is contradicted by the point that an announcement \"may reduce complaints\"; A is not stated."
+    "why": "Paragraph E: \"People who have paid for a service often expect to be served quickly\" and \"the customer may attribute the delay to carelessness\". D is contradicted by the statement in paragraph C that a fair queue is more acceptable; B is contradicted by the point that an announcement \"may reduce complaints\"; A is not stated.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 46,
+     "end": 114,
+     "evidenceText": "People who have paid for a service often expect to be served quickly"
+    }
    },
    {
     "id": "r26-q10",
@@ -854,7 +1201,13 @@
      "anger",
      "angry"
     ],
-    "why": "Paragraph C: \"systems that let some customers jump ahead provoke resentment\" and \"visible unfairness can make people angry out of proportion to the actual delay\"."
+    "why": "Paragraph C: \"systems that let some customers jump ahead provoke resentment\" and \"visible unfairness can make people angry out of proportion to the actual delay\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 157,
+     "end": 218,
+     "evidenceText": "systems that let some customers jump ahead provoke resentment"
+    }
    },
    {
     "id": "r26-q11",
@@ -863,7 +1216,13 @@
     "answer": [
      "respected"
     ],
-    "why": "Paragraph G: \"A well-designed wait can leave people feeling respected even when they are delayed\"."
+    "why": "Paragraph G: \"A well-designed wait can leave people feeling respected even when they are delayed\".",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 213,
+     "end": 295,
+     "evidenceText": "A well-designed wait can leave people feeling respected even when they are delayed"
+    }
    },
    {
     "id": "r26-q12",
@@ -872,7 +1231,13 @@
     "answer": [
      "screens"
     ],
-    "why": "Paragraph B: \"Designers have exploited this by showing estimated waiting times on screens\"."
+    "why": "Paragraph B: \"Designers have exploited this by showing estimated waiting times on screens\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 426,
+     "end": 501,
+     "evidenceText": "Designers have exploited this by showing estimated waiting times on screens"
+    }
    },
    {
     "id": "r26-q13",
@@ -881,7 +1246,13 @@
     "answer": [
      "shorter"
     ],
-    "why": "Paragraph E: \"A brief announcement that a system is under heavy load, for example, may reduce complaints even though the queue is not shorter.\""
+    "why": "Paragraph E: \"A brief announcement that a system is under heavy load, for example, may reduce complaints even though the queue is not shorter.\"",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 394,
+     "end": 522,
+     "evidenceText": "A brief announcement that a system is under heavy load, for example, may reduce complaints even though the queue is not shorter."
+    }
    }
   ]
  }

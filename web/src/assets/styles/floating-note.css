@@ -42,17 +42,38 @@
 }
 
 body.has-active-modal .floating-note-bubble,
+body.has-active-modal .floating-note-window,
 body:has(.modal-backdrop) .floating-note-bubble,
+body:has(.modal-backdrop) .floating-note-window,
 body:has(.hud-modal-overlay) .floating-note-bubble,
+body:has(.hud-modal-overlay) .floating-note-window,
 body:has(.mistake-vault-modal-overlay) .floating-note-bubble,
+body:has(.mistake-vault-modal-overlay) .floating-note-window,
 body:has(.completion-modal-overlay) .floating-note-bubble,
+body:has(.completion-modal-overlay) .floating-note-window,
 body:has(#skill-node-modal) .floating-note-bubble,
+body:has(#skill-node-modal) .floating-note-window,
 body:has(#ielts-confirm-dialog) .floating-note-bubble,
+body:has(#ielts-confirm-dialog) .floating-note-bubble,
+body:has(#ielts-confirm-dialog) .floating-note-window,
 body:has(.tour-overlay.open) .floating-note-bubble,
+body:has(.tour-overlay.open) .floating-note-window,
 body:has(.commute-player-overlay) .floating-note-bubble,
+body:has(.commute-player-overlay) .floating-note-window,
 body:has(.cd-test-hub-overlay) .floating-note-bubble,
+body:has(.cd-test-hub-overlay) .floating-note-window,
 body:has(.lexicon-drawer-backdrop.open) .floating-note-bubble,
-body:has(.ie-tip-modal-overlay.is-active) .floating-note-bubble {
+body:has(.lexicon-drawer-backdrop.open) .floating-note-window,
+body:has(.ie-tip-modal-overlay.is-active) .floating-note-bubble,
+body:has(.ie-tip-modal-overlay.is-active) .floating-note-window,
+body:has(.multi-skill-card) .floating-note-bubble,
+body:has(.multi-skill-card) .floating-note-window,
+body:has(.score-modal-overlay) .floating-note-bubble,
+body:has(.score-modal-overlay) .floating-note-window,
+body:has(.diagnostic-assessment-modal) .floating-note-bubble,
+body:has(.diagnostic-assessment-modal) .floating-note-window,
+body:has([aria-modal="true"]) .floating-note-bubble,
+body:has([aria-modal="true"]) .floating-note-window {
   opacity: 0 !important;
   pointer-events: none !important;
   visibility: hidden !important;
@@ -520,14 +541,15 @@ body:has(.ie-tip-modal-overlay.is-active) .floating-note-bubble {
 
 /* 3. Mobile Refinements (<= 768px) */
 @media (max-width: 768px) {
-
-  /* Main app: Me sheet > Quick Notes opens the same window, so the bubble would only cover content */
-  body:has(.hud-bottom-nav) .floating-note-bubble {
-    display: none;
+  /* Main app and IELTS Cockpit: Bottom navigation handles mobile drawers, hide floating bubble to prevent screen collisions */
+  body:has(.hud-bottom-nav) .floating-note-bubble,
+  body:has(.ie-bottom-nav) .floating-note-bubble,
+  body:has(.ielts-bottom-nav) .floating-note-bubble {
+    display: none !important;
   }
 
-  /* No bottom nav (IELTS): icon-only 44px disc, so it covers a corner instead of a title. aria-label keeps the name. */
-  body:not(:has(.hud-bottom-nav)) .floating-note-bubble {
+  /* No bottom nav (standalone views): icon-only 44px disc, so it covers a corner instead of a title. aria-label keeps the name. */
+  body:not(:has(.hud-bottom-nav)):not(:has(.ie-bottom-nav)):not(:has(.ielts-bottom-nav)) .floating-note-bubble {
     width: var(--touch-target-min, 44px);
     height: var(--touch-target-min, 44px);
     padding: 0;
@@ -535,8 +557,8 @@ body:has(.ie-tip-modal-overlay.is-active) .floating-note-bubble {
     border-radius: 50%;
   }
 
-  body:not(:has(.hud-bottom-nav)) .floating-note-bubble .bubble-grip,
-  body:not(:has(.hud-bottom-nav)) .floating-note-bubble .bubble-label {
+  body:not(:has(.hud-bottom-nav)):not(:has(.ie-bottom-nav)):not(:has(.ielts-bottom-nav)) .floating-note-bubble .bubble-grip,
+  body:not(:has(.hud-bottom-nav)):not(:has(.ie-bottom-nav)):not(:has(.ielts-bottom-nav)) .floating-note-bubble .bubble-label {
     display: none;
   }
 

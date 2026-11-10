@@ -40,28 +40,47 @@
     "type": "tfng",
     "prompt": "Work on the Epidaurus theatre was finished during the 300s BCE.",
     "answer": "TRUE",
-    "why": "Paragraph A: \"The theatre was completed in the fourth century BCE, and for centuries its reputation rested almost entirely on experience rather than on measurement.\""
+    "why": "Paragraph A: \"The theatre was completed in the fourth century BCE, and for centuries its reputation rested almost entirely on experience rather than on measurement.\"",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 498,
+     "end": 648,
+     "evidenceText": "The theatre was completed in the fourth century BCE, and for centuries its reputation rested almost entirely on experience rather than on measurement."
+    }
    },
    {
     "id": "r17-q02",
     "type": "tfng",
     "prompt": "All ancient theatres were cut into the sides of hills.",
     "answer": "FALSE",
-    "why": "Paragraph F: \"Many Roman theatres were freestanding structures on flat ground, supported by vaulted substructures rather than cut into a hillside\". The word all is contradicted by many."
+    "why": "Paragraph F: \"Many Roman theatres were freestanding structures on flat ground, supported by vaulted substructures rather than cut into a hillside\". The word all is contradicted by many.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 42,
+     "end": 173,
+     "evidenceText": "Many Roman theatres were freestanding structures on flat ground, supported by vaulted substructures rather than cut into a hillside"
+    }
    },
    {
     "id": "r17-q03",
     "type": "tfng",
     "prompt": "Vitruvius tested the bronze vessels himself inside a theatre.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph C: \"described in his treatise De Architectura how small bronze vessels might be placed in niches beneath the seats\". The passage describes his account but never says he tested the vessels."
+    "why": "Paragraph C: \"described in his treatise De Architectura how small bronze vessels might be placed in niches beneath the seats\". The passage describes his account but never says he tested the vessels.",
+    "evidence": null
    },
    {
     "id": "r17-q04",
     "type": "tfng",
     "prompt": "Most Greek plays were performed in only one theatre.",
     "answer": "FALSE",
-    "why": "Paragraph E: \"Most plays were performed in many different theatres over the years\"."
+    "why": "Paragraph E: \"Most plays were performed in many different theatres over the years\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 420,
+     "end": 487,
+     "evidenceText": "Most plays were performed in many different theatres over the years"
+    }
    },
    {
     "id": "r17-q05",
@@ -78,7 +97,13 @@
      "viii. The cost of stone construction in antiquity"
     ],
     "answer": "ii",
-    "why": "Paragraph B: \"Their findings suggest that the theatre's clarity is not the result of a single feature but of several working together.\" Heading ii."
+    "why": "Paragraph B: \"Their findings suggest that the theatre's clarity is not the result of a single feature but of several working together.\" Heading ii.",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 235,
+     "end": 355,
+     "evidenceText": "Their findings suggest that the theatre's clarity is not the result of a single feature but of several working together."
+    }
    },
    {
     "id": "r17-q06",
@@ -95,7 +120,13 @@
      "viii. The cost of stone construction in antiquity"
     ],
     "answer": "iv",
-    "why": "Paragraph D: \"In one series of experiments, the shape of the seating bank turned out to matter more than the surface of the stone.\" Heading iv."
+    "why": "Paragraph D: \"In one series of experiments, the shape of the seating bank turned out to matter more than the surface of the stone.\" Heading iv.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 228,
+     "end": 344,
+     "evidenceText": "In one series of experiments, the shape of the seating bank turned out to matter more than the surface of the stone."
+    }
    },
    {
     "id": "r17-q07",
@@ -112,7 +143,13 @@
      "viii. The cost of stone construction in antiquity"
     ],
     "answer": "v",
-    "why": "Paragraph E: \"Some scholars argue that dramatists placed their most important lines where they would carry most easily\". Heading v."
+    "why": "Paragraph E: \"Some scholars argue that dramatists placed their most important lines where they would carry most easily\". Heading v.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 241,
+     "end": 345,
+     "evidenceText": "Some scholars argue that dramatists placed their most important lines where they would carry most easily"
+    }
    },
    {
     "id": "r17-q08",
@@ -129,7 +166,13 @@
      "viii. The cost of stone construction in antiquity"
     ],
     "answer": "vi",
-    "why": "Paragraph F: \"Many Roman theatres were freestanding structures on flat ground\", and the designs \"changed the way sound was reflected\". Heading vi."
+    "why": "Paragraph F: \"Many Roman theatres were freestanding structures on flat ground\", and the designs \"changed the way sound was reflected\". Heading vi.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 42,
+     "end": 105,
+     "evidenceText": "Many Roman theatres were freestanding structures on flat ground"
+    }
    },
    {
     "id": "r17-q09",
@@ -142,7 +185,13 @@
      "D. It was described in great detail by Vitruvius himself."
     ],
     "answer": "C",
-    "why": "Paragraph B: \"the theatre's clarity is not the result of a single feature but of several working together\". A is contradicted by the same sentence; B is wrong because paragraph B reports measurements made \"In recent decades\" with microphones placed \"at different points around the seating\", not one experiment, and says only what the findings \"suggest\"; D is not stated."
+    "why": "Paragraph B: \"the theatre's clarity is not the result of a single feature but of several working together\". A is contradicted by the same sentence; B is wrong because paragraph B reports measurements made \"In recent decades\" with microphones placed \"at different points around the seating\", not one experiment, and says only what the findings \"suggest\"; D is not stated.",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 263,
+     "end": 354,
+     "evidenceText": "the theatre's clarity is not the result of a single feature but of several working together"
+    }
    },
    {
     "id": "r17-q10",
@@ -155,7 +204,13 @@
      "D. Bronze vessels tuned to musical notes beneath the seats."
     ],
     "answer": "B",
-    "why": "Paragraph G: \"For them, a good theatre was one in which the words could be followed and the crowd could share a single experience.\" A and C are ruled out (\"they were not listening to recordings or to amplified voices\"); D is Vitruvius's idea from paragraph C, not the spectators' criterion."
+    "why": "Paragraph G: \"For them, a good theatre was one in which the words could be followed and the crowd could share a single experience.\" A and C are ruled out (\"they were not listening to recordings or to amplified voices\"); D is Vitruvius's idea from paragraph C, not the spectators' criterion.",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 253,
+     "end": 369,
+     "evidenceText": "For them, a good theatre was one in which the words could be followed and the crowd could share a single experience."
+    }
    },
    {
     "id": "r17-q11",
@@ -164,7 +219,13 @@
     "answer": [
      "bronze"
     ],
-    "why": "Paragraph C: \"described in his treatise De Architectura how small bronze vessels might be placed in niches beneath the seats\"."
+    "why": "Paragraph C: \"described in his treatise De Architectura how small bronze vessels might be placed in niches beneath the seats\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 149,
+     "end": 259,
+     "evidenceText": "described in his treatise De Architectura how small bronze vessels might be placed in niches beneath the seats"
+    }
    },
    {
     "id": "r17-q12",
@@ -174,7 +235,13 @@
      "steep slope",
      "steep"
     ],
-    "why": "Paragraph B: \"The seats rise on a steep slope, so sound leaving the stage is not absorbed or blocked by the heads of the people in front.\""
+    "why": "Paragraph B: \"The seats rise on a steep slope, so sound leaving the stage is not absorbed or blocked by the heads of the people in front.\"",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 356,
+     "end": 479,
+     "evidenceText": "The seats rise on a steep slope, so sound leaving the stage is not absorbed or blocked by the heads of the people in front."
+    }
    },
    {
     "id": "r17-q13",
@@ -183,7 +250,13 @@
     "answer": [
      "orchestra"
     ],
-    "why": "Paragraph A: \"A performer standing at the centre of the circular stage area, known as the orchestra, can speak in an ordinary voice\"."
+    "why": "Paragraph A: \"A performer standing at the centre of the circular stage area, known as the orchestra, can speak in an ordinary voice\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 143,
+     "end": 260,
+     "evidenceText": "A performer standing at the centre of the circular stage area, known as the orchestra, can speak in an ordinary voice"
+    }
    },
    {
     "id": "r17-q14",
@@ -192,7 +265,13 @@
     "answer": [
      "shape"
     ],
-    "why": "Paragraph D: \"In one series of experiments, the shape of the seating bank turned out to matter more than the surface of the stone.\""
+    "why": "Paragraph D: \"In one series of experiments, the shape of the seating bank turned out to matter more than the surface of the stone.\"",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 228,
+     "end": 344,
+     "evidenceText": "In one series of experiments, the shape of the seating bank turned out to matter more than the surface of the stone."
+    }
    }
   ]
  },
@@ -237,28 +316,47 @@
     "type": "tfng",
     "prompt": "Lichens take in most of their water and nutrients through their roots.",
     "answer": "FALSE",
-    "why": "Paragraph A: \"Because they absorb water and nutrients mainly from the air and from rain rather than from roots\"."
+    "why": "Paragraph A: \"Because they absorb water and nutrients mainly from the air and from rain rather than from roots\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 376,
+     "end": 472,
+     "evidenceText": "Because they absorb water and nutrients mainly from the air and from rain rather than from roots"
+    }
    },
    {
     "id": "r18-q02",
     "type": "tfng",
     "prompt": "Lichens grow only on the bark of trees.",
     "answer": "FALSE",
-    "why": "Paragraph A: \"Lichens grow on rock, bark, soil and even bare metal\"."
+    "why": "Paragraph A: \"Lichens grow on rock, bark, soil and even bare metal\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 244,
+     "end": 296,
+     "evidenceText": "Lichens grow on rock, bark, soil and even bare metal"
+    }
    },
    {
     "id": "r18-q03",
     "type": "tfng",
     "prompt": "Lichens can live in places where few other organisms survive.",
     "answer": "TRUE",
-    "why": "Paragraph A: \"they can survive for decades in places where few other organisms persist\"."
+    "why": "Paragraph A: \"they can survive for decades in places where few other organisms persist\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 302,
+     "end": 374,
+     "evidenceText": "they can survive for decades in places where few other organisms persist"
+    }
    },
    {
     "id": "r18-q04",
     "type": "tfng",
     "prompt": "Lichens are more numerous in cities than in the countryside.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph B: \"certain species disappeared from trees near factories and busy streets, while others remained\". The passage says which species vanished but gives no comparison of numbers between city and countryside."
+    "why": "Paragraph B: \"certain species disappeared from trees near factories and busy streets, while others remained\". The passage says which species vanished but gives no comparison of numbers between city and countryside.",
+    "evidence": null
    },
    {
     "id": "r18-q05",
@@ -272,7 +370,13 @@
      "E. growers who harvested lichens for dye-making"
     ],
     "answer": "A",
-    "why": "Paragraph B: \"Nineteenth-century observers in cities across Europe reported that certain species disappeared from trees near factories and busy streets\"."
+    "why": "Paragraph B: \"Nineteenth-century observers in cities across Europe reported that certain species disappeared from trees near factories and busy streets\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 82,
+     "end": 219,
+     "evidenceText": "Nineteenth-century observers in cities across Europe reported that certain species disappeared from trees near factories and busy streets"
+    }
    },
    {
     "id": "r18-q06",
@@ -286,7 +390,13 @@
      "E. growers who harvested lichens for dye-making"
     ],
     "answer": "B",
-    "why": "Paragraph C: \"when researchers began to compare lichen communities with measured levels of sulphur dioxide\"."
+    "why": "Paragraph C: \"when researchers began to compare lichen communities with measured levels of sulphur dioxide\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 60,
+     "end": 152,
+     "evidenceText": "when researchers began to compare lichen communities with measured levels of sulphur dioxide"
+    }
    },
    {
     "id": "r18-q07",
@@ -300,7 +410,13 @@
      "E. growers who harvested lichens for dye-making"
     ],
     "answer": "C",
-    "why": "Paragraph E: \"Lichen tissue can be collected and analysed for metals and nitrogen compounds\"."
+    "why": "Paragraph E: \"Lichen tissue can be collected and analysed for metals and nitrogen compounds\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 81,
+     "end": 158,
+     "evidenceText": "Lichen tissue can be collected and analysed for metals and nitrogen compounds"
+    }
    },
    {
     "id": "r18-q08",
@@ -313,7 +429,13 @@
      "D. They are unable to survive for long in clean, unpolluted air."
     ],
     "answer": "A",
-    "why": "Paragraph D: \"Lichens respond to a mixture of pollutants rather than to a single compound\". B contradicts the slow growth rates in the same paragraph; C and D are not stated."
+    "why": "Paragraph D: \"Lichens respond to a mixture of pollutants rather than to a single compound\". B contradicts the slow growth rates in the same paragraph; C and D are not stated.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 32,
+     "end": 107,
+     "evidenceText": "Lichens respond to a mixture of pollutants rather than to a single compound"
+    }
    },
    {
     "id": "r18-q09",
@@ -326,7 +448,13 @@
      "D. They have little value in modern air-quality monitoring."
     ],
     "answer": "C",
-    "why": "Paragraph G: \"The lesson, in the end, is that lichens are most useful when they are read alongside other evidence.\" A is contradicted by \"They cannot replace a calibrated instrument\"; B is contradicted by \"they cannot tell a policymaker exactly what to fix\"; D is contradicted by \"Used carefully, that record can show where the air has been poor\"."
+    "why": "Paragraph G: \"The lesson, in the end, is that lichens are most useful when they are read alongside other evidence.\" A is contradicted by \"They cannot replace a calibrated instrument\"; B is contradicted by \"they cannot tell a policymaker exactly what to fix\"; D is contradicted by \"Used carefully, that record can show where the air has been poor\".",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 0,
+     "end": 100,
+     "evidenceText": "The lesson, in the end, is that lichens are most useful when they are read alongside other evidence."
+    }
    },
    {
     "id": "r18-q10",
@@ -335,7 +463,13 @@
     "answer": [
      "cyanobacterium"
     ],
-    "why": "Paragraph A: \"a partnership between a fungus and a photosynthetic partner, usually an alga or a cyanobacterium\"."
+    "why": "Paragraph A: \"a partnership between a fungus and a photosynthetic partner, usually an alga or a cyanobacterium\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 38,
+     "end": 134,
+     "evidenceText": "a partnership between a fungus and a photosynthetic partner, usually an alga or a cyanobacterium"
+    }
    },
    {
     "id": "r18-q11",
@@ -344,7 +478,13 @@
     "answer": [
      "slow"
     ],
-    "why": "Paragraph D: \"Growth rates are slow, sometimes only a few millimetres a year, which means that a lichen survey describes conditions over many years\"."
+    "why": "Paragraph D: \"Growth rates are slow, sometimes only a few millimetres a year, which means that a lichen survey describes conditions over many years\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 184,
+     "end": 317,
+     "evidenceText": "Growth rates are slow, sometimes only a few millimetres a year, which means that a lichen survey describes conditions over many years"
+    }
    },
    {
     "id": "r18-q12",
@@ -354,7 +494,13 @@
      "sulphur dioxide",
      "sulfur dioxide"
     ],
-    "why": "Paragraph C: \"Sulphur dioxide, released when coal and oil are burned, was a major cause of acid rain\"."
+    "why": "Paragraph C: \"Sulphur dioxide, released when coal and oil are burned, was a major cause of acid rain\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 154,
+     "end": 240,
+     "evidenceText": "Sulphur dioxide, released when coal and oil are burned, was a major cause of acid rain"
+    }
    },
    {
     "id": "r18-q13",
@@ -363,7 +509,13 @@
     "answer": [
      "lowland city"
     ],
-    "why": "Paragraph F: \"a score that is considered healthy in a mountain forest may not be a reliable guide in a lowland city\"."
+    "why": "Paragraph F: \"a score that is considered healthy in a mountain forest may not be a reliable guide in a lowland city\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 424,
+     "end": 525,
+     "evidenceText": "a score that is considered healthy in a mountain forest may not be a reliable guide in a lowland city"
+    }
    }
   ]
  },
@@ -408,28 +560,47 @@
     "type": "tfng",
     "prompt": "Magnetic orientation was first taken seriously by researchers in the 1960s.",
     "answer": "TRUE",
-    "why": "Paragraph B: \"The idea was first taken seriously in the 1960s, when experiments on European robins suggested that the birds could orient themselves using magnetic cues\"."
+    "why": "Paragraph B: \"The idea was first taken seriously in the 1960s, when experiments on European robins suggested that the birds could orient themselves using magnetic cues\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 0,
+     "end": 153,
+     "evidenceText": "The idea was first taken seriously in the 1960s, when experiments on European robins suggested that the birds could orient themselves using magnetic cues"
+    }
    },
    {
     "id": "r19-q02",
     "type": "tfng",
     "prompt": "Birds kept in cages were unable to orient themselves.",
     "answer": "FALSE",
-    "why": "Paragraph B: \"experiments on European robins suggested that the birds could orient themselves using magnetic cues\" and \"their orientation changed when the magnetic field around them was rotated by a set of coils\". The caged birds did orient, so the statement is contradicted."
+    "why": "Paragraph B: \"experiments on European robins suggested that the birds could orient themselves using magnetic cues\" and \"their orientation changed when the magnetic field around them was rotated by a set of coils\". The caged birds did orient, so the statement is contradicted.",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 54,
+     "end": 153,
+     "evidenceText": "experiments on European robins suggested that the birds could orient themselves using magnetic cues"
+    }
    },
    {
     "id": "r19-q03",
     "type": "tfng",
     "prompt": "The radical pair mechanism has been shown in every migratory species.",
     "answer": "FALSE",
-    "why": "Paragraph C: \"the proposed effect has been demonstrated mainly in laboratory conditions and in a limited number of species\"."
+    "why": "Paragraph C: \"the proposed effect has been demonstrated mainly in laboratory conditions and in a limited number of species\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 503,
+     "end": 611,
+     "evidenceText": "the proposed effect has been demonstrated mainly in laboratory conditions and in a limited number of species"
+    }
    },
    {
     "id": "r19-q04",
     "type": "tfng",
     "prompt": "Robins were the species most often used in early magnetic experiments.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph B: \"experiments on European robins suggested\" and \"Subsequent studies on other species produced similar results\". The passage names robins as early subjects but never says how often each species was used."
+    "why": "Paragraph B: \"experiments on European robins suggested\" and \"Subsequent studies on other species produced similar results\". The passage names robins as early subjects but never says how often each species was used.",
+    "evidence": null
    },
    {
     "id": "r19-q05",
@@ -446,7 +617,13 @@
      "viii. How migration routes are mapped by satellites"
     ],
     "answer": "i",
-    "why": "Paragraph D: \"Since the magnetic sense appears to depend on what the bird sees, the eye may be more than an instrument for finding food and avoiding predators\". Heading i."
+    "why": "Paragraph D: \"Since the magnetic sense appears to depend on what the bird sees, the eye may be more than an instrument for finding food and avoiding predators\". Heading i.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 283,
+     "end": 427,
+     "evidenceText": "Since the magnetic sense appears to depend on what the bird sees, the eye may be more than an instrument for finding food and avoiding predators"
+    }
    },
    {
     "id": "r19-q06",
@@ -463,7 +640,13 @@
      "viii. How migration routes are mapped by satellites"
     ],
     "answer": "ii",
-    "why": "Paragraph E: \"Some experiments have found that birds respond to magnetic fields in ways that do not fit the radical pair model\". Heading ii."
+    "why": "Paragraph E: \"Some experiments have found that birds respond to magnetic fields in ways that do not fit the radical pair model\". Heading ii.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 44,
+     "end": 156,
+     "evidenceText": "Some experiments have found that birds respond to magnetic fields in ways that do not fit the radical pair model"
+    }
    },
    {
     "id": "r19-q07",
@@ -480,7 +663,13 @@
      "viii. How migration routes are mapped by satellites"
     ],
     "answer": "iii",
-    "why": "Paragraph F: \"the magnetic sense is useful only if birds can combine it with other cues\". Heading iii."
+    "why": "Paragraph F: \"the magnetic sense is useful only if birds can combine it with other cues\". Heading iii.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 24,
+     "end": 97,
+     "evidenceText": "the magnetic sense is useful only if birds can combine it with other cues"
+    }
    },
    {
     "id": "r19-q08",
@@ -493,7 +682,13 @@
      "D. It may link the magnetic effect to vision."
     ],
     "answer": "D",
-    "why": "Paragraph C: \"The idea is attractive because it links a magnetic effect to a visual signal\". B is contradicted by the laboratory limits in the same paragraph; C describes a different proposal in paragraph E; A is not stated."
+    "why": "Paragraph C: \"The idea is attractive because it links a magnetic effect to a visual signal\". B is contradicted by the laboratory limits in the same paragraph; C describes a different proposal in paragraph E; A is not stated.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 294,
+     "end": 370,
+     "evidenceText": "The idea is attractive because it links a magnetic effect to a visual signal"
+    }
    },
    {
     "id": "r19-q09",
@@ -506,7 +701,13 @@
      "D. Only young birds on their first migration use magnetic cues."
     ],
     "answer": "B",
-    "why": "Paragraph G: \"Researchers can show that a sense exists, and they can measure the effect of altering it, but they still struggle to explain how a weak field becomes a reliable signal in a living body.\" A, C and D all conflict with the passage (paragraphs C, E and F)."
+    "why": "Paragraph G: \"Researchers can show that a sense exists, and they can measure the effect of altering it, but they still struggle to explain how a weak field becomes a reliable signal in a living body.\" A, C and D all conflict with the passage (paragraphs C, E and F).",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 86,
+     "end": 271,
+     "evidenceText": "Researchers can show that a sense exists, and they can measure the effect of altering it, but they still struggle to explain how a weak field becomes a reliable signal in a living body."
+    }
    },
    {
     "id": "r19-q10",
@@ -515,7 +716,13 @@
     "answer": [
      "cryptochrome"
     ],
-    "why": "Paragraph C: \"One explanation focuses on a light-sensitive protein in the eye called cryptochrome\"."
+    "why": "Paragraph C: \"One explanation focuses on a light-sensitive protein in the eye called cryptochrome\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 0,
+     "end": 83,
+     "evidenceText": "One explanation focuses on a light-sensitive protein in the eye called cryptochrome"
+    }
    },
    {
     "id": "r19-q11",
@@ -525,7 +732,13 @@
      "beaks",
      "beak"
     ],
-    "why": "Paragraph E: \"Iron-based receptors have been reported in the beaks of some animals, including pigeons\"."
+    "why": "Paragraph E: \"Iron-based receptors have been reported in the beaks of some animals, including pigeons\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 271,
+     "end": 358,
+     "evidenceText": "Iron-based receptors have been reported in the beaks of some animals, including pigeons"
+    }
    },
    {
     "id": "r19-q12",
@@ -534,7 +747,13 @@
     "answer": [
      "coloured"
     ],
-    "why": "Paragraph D: \"Some studies have shown that birds given light that is too dim or wrongly coloured lose their magnetic orientation\"."
+    "why": "Paragraph D: \"Some studies have shown that birds given light that is too dim or wrongly coloured lose their magnetic orientation\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 117,
+     "end": 231,
+     "evidenceText": "Some studies have shown that birds given light that is too dim or wrongly coloured lose their magnetic orientation"
+    }
    },
    {
     "id": "r19-q13",
@@ -543,7 +762,13 @@
     "answer": [
      "latitude"
     ],
-    "why": "Paragraph F: \"A migrating bird may use the magnetic field to estimate its latitude\"."
+    "why": "Paragraph F: \"A migrating bird may use the magnetic field to estimate its latitude\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 99,
+     "end": 167,
+     "evidenceText": "A migrating bird may use the magnetic field to estimate its latitude"
+    }
    }
   ]
  },
@@ -588,28 +813,47 @@
     "type": "ynng",
     "prompt": "The writer believes that the 1850 Act made public libraries compulsory.",
     "answer": "NO",
-    "why": "Paragraph B: \"but it did not require them to do so\"."
+    "why": "Paragraph B: \"but it did not require them to do so\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 94,
+     "end": 130,
+     "evidenceText": "but it did not require them to do so"
+    }
    },
    {
     "id": "r20-q02",
     "type": "ynng",
     "prompt": "The writer believes that open shelves affected which books people read.",
     "answer": "YES",
-    "why": "Paragraph D: \"the difference had a noticeable effect on what people read\"."
+    "why": "Paragraph D: \"the difference had a noticeable effect on what people read\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 535,
+     "end": 593,
+     "evidenceText": "the difference had a noticeable effect on what people read"
+    }
    },
    {
     "id": "r20-q03",
     "type": "ynng",
     "prompt": "The writer believes that loan records reveal what borrowers really read.",
     "answer": "NO",
-    "why": "Paragraph E: \"a loan record shows what was taken away, not what was read, shared or abandoned at home\"."
+    "why": "Paragraph E: \"a loan record shows what was taken away, not what was read, shared or abandoned at home\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 444,
+     "end": 531,
+     "evidenceText": "a loan record shows what was taken away, not what was read, shared or abandoned at home"
+    }
    },
    {
     "id": "r20-q04",
     "type": "ynng",
     "prompt": "The writer believes that the reading rooms were busier in the evenings than the lending desks.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph F: \"were not permitted to use the reference collections or the reading rooms in the evening\". The passage never compares how busy the reading rooms were with the lending desks."
+    "why": "Paragraph F: \"were not permitted to use the reference collections or the reading rooms in the evening\". The passage never compares how busy the reading rooms were with the lending desks.",
+    "evidence": null
    },
    {
     "id": "r20-q05",
@@ -622,7 +866,13 @@
      "D. It gave women the legal right to borrow library books."
     ],
     "answer": "C",
-    "why": "Paragraph B: \"gave towns the power to levy a rate for buildings and books, but it did not require them to do so\". A, B and D are not stated."
+    "why": "Paragraph B: \"gave towns the power to levy a rate for buildings and books, but it did not require them to do so\". A, B and D are not stated.",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 33,
+     "end": 130,
+     "evidenceText": "gave towns the power to levy a rate for buildings and books, but it did not require them to do so"
+    }
    },
    {
     "id": "r20-q06",
@@ -635,7 +885,13 @@
      "D. unemployed women with plenty of time to read during the day"
     ],
     "answer": "A",
-    "why": "Paragraph D: \"which meant that their users were often clerks, shopkeepers and the sons of the middle class\". B is contradicted (libraries closed or opened \"when working people were at their jobs\"); C and D are not given as the typical users."
+    "why": "Paragraph D: \"which meant that their users were often clerks, shopkeepers and the sons of the middle class\". B is contradicted (libraries closed or opened \"when working people were at their jobs\"); C and D are not given as the typical users.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 182,
+     "end": 274,
+     "evidenceText": "which meant that their users were often clerks, shopkeepers and the sons of the middle class"
+    }
    },
    {
     "id": "r20-q07",
@@ -644,7 +900,13 @@
     "answer": [
      "campaigners"
     ],
-    "why": "Paragraph B: \"Adoption was often driven by local campaigners, such as printers, clergymen and tradesmen\"."
+    "why": "Paragraph B: \"Adoption was often driven by local campaigners, such as printers, clergymen and tradesmen\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 339,
+     "end": 428,
+     "evidenceText": "Adoption was often driven by local campaigners, such as printers, clergymen and tradesmen"
+    }
    },
    {
     "id": "r20-q08",
@@ -653,7 +915,13 @@
     "answer": [
      "counters"
     ],
-    "why": "Paragraph D: \"while others kept volumes behind counters\"."
+    "why": "Paragraph D: \"while others kept volumes behind counters\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 488,
+     "end": 529,
+     "evidenceText": "while others kept volumes behind counters"
+    }
    },
    {
     "id": "r20-q09",
@@ -662,21 +930,39 @@
     "answer": [
      "dress code"
     ],
-    "why": "Paragraph D: \"Reading rooms that required silence and a formal dress code could discourage those who did not feel at ease\"."
+    "why": "Paragraph D: \"Reading rooms that required silence and a formal dress code could discourage those who did not feel at ease\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 276,
+     "end": 383,
+     "evidenceText": "Reading rooms that required silence and a formal dress code could discourage those who did not feel at ease"
+    }
    },
    {
     "id": "r20-q10",
     "type": "tfng",
     "prompt": "Libraries were always open to working people on weekday evenings.",
     "answer": "FALSE",
-    "why": "Paragraph D: \"Many early libraries closed on weekday evenings or opened only at times when working people were at their jobs\"."
+    "why": "Paragraph D: \"Many early libraries closed on weekday evenings or opened only at times when working people were at their jobs\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 70,
+     "end": 180,
+     "evidenceText": "Many early libraries closed on weekday evenings or opened only at times when working people were at their jobs"
+    }
    },
    {
     "id": "r20-q11",
     "type": "tfng",
     "prompt": "Women could use every reading room in every library without restriction.",
     "answer": "FALSE",
-    "why": "Paragraph F: \"In some towns, women were admitted to lending departments but were not permitted to use the reference collections or the reading rooms in the evening\"."
+    "why": "Paragraph F: \"In some towns, women were admitted to lending departments but were not permitted to use the reference collections or the reading rooms in the evening\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 120,
+     "end": 269,
+     "evidenceText": "In some towns, women were admitted to lending departments but were not permitted to use the reference collections or the reading rooms in the evening"
+    }
    },
    {
     "id": "r20-q12",
@@ -685,7 +971,13 @@
     "answer": [
      "improvement"
     ],
-    "why": "Paragraph C: \"The movement's supporters often spoke about improvement, a word that carried moral as well as intellectual meaning.\""
+    "why": "Paragraph C: \"The movement's supporters often spoke about improvement, a word that carried moral as well as intellectual meaning.\"",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 0,
+     "end": 115,
+     "evidenceText": "The movement's supporters often spoke about improvement, a word that carried moral as well as intellectual meaning."
+    }
    },
    {
     "id": "r20-q13",
@@ -694,7 +986,13 @@
     "answer": [
      "buildings and books"
     ],
-    "why": "Paragraph B: \"gave towns the power to levy a rate for buildings and books\"."
+    "why": "Paragraph B: \"gave towns the power to levy a rate for buildings and books\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 33,
+     "end": 92,
+     "evidenceText": "gave towns the power to levy a rate for buildings and books"
+    }
    }
   ]
  },
@@ -739,28 +1037,47 @@
     "type": "tfng",
     "prompt": "Microbeads once added to facial scrubs were a source of microplastic in rivers.",
     "answer": "TRUE",
-    "why": "Paragraph B: \"Microplastics enter rivers in several ways\" and \"such as the microbeads once added to facial scrubs and toothpastes\"."
+    "why": "Paragraph B: \"Microplastics enter rivers in several ways\" and \"such as the microbeads once added to facial scrubs and toothpastes\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 0,
+     "end": 42,
+     "evidenceText": "Microplastics enter rivers in several ways"
+    }
    },
    {
     "id": "r21-q02",
     "type": "tfng",
     "prompt": "Microplastics are found only in the sea.",
     "answer": "FALSE",
-    "why": "Paragraph A: \"have been found in Arctic snow, in deep ocean sediment and in the stomachs of animals that live far from any city\"."
+    "why": "Paragraph A: \"have been found in Arctic snow, in deep ocean sediment and in the stomachs of animals that live far from any city\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 161,
+     "end": 274,
+     "evidenceText": "have been found in Arctic snow, in deep ocean sediment and in the stomachs of animals that live far from any city"
+    }
    },
    {
     "id": "r21-q03",
     "type": "tfng",
     "prompt": "Fish eat more microplastic than they consume in their normal diet.",
     "answer": "FALSE",
-    "why": "Paragraph E: \"the amounts found in wild fish are usually small compared with what the animals eat in their normal diet\"."
+    "why": "Paragraph E: \"the amounts found in wild fish are usually small compared with what the animals eat in their normal diet\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 274,
+     "end": 378,
+     "evidenceText": "the amounts found in wild fish are usually small compared with what the animals eat in their normal diet"
+    }
    },
    {
     "id": "r21-q04",
     "type": "tfng",
     "prompt": "Fibres shed from clothing add more microplastic to rivers than microbeads do.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph B: \"Synthetic fibres shed from clothing are a third source\". The passage lists the sources but never compares their quantities."
+    "why": "Paragraph B: \"Synthetic fibres shed from clothing are a third source\". The passage lists the sources but never compares their quantities.",
+    "evidence": null
    },
    {
     "id": "r21-q05",
@@ -776,7 +1093,13 @@
      "G"
     ],
     "answer": "D",
-    "why": "Paragraph D: \"the smallest particles can pass through the mesh of the net\"."
+    "why": "Paragraph D: \"the smallest particles can pass through the mesh of the net\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 134,
+     "end": 193,
+     "evidenceText": "the smallest particles can pass through the mesh of the net"
+    }
    },
    {
     "id": "r21-q06",
@@ -792,7 +1115,13 @@
      "G"
     ],
     "answer": "F",
-    "why": "Paragraph F: \"grow on the surface of plastic within days, making the fragments heavier and altering how they drift\"."
+    "why": "Paragraph F: \"grow on the surface of plastic within days, making the fragments heavier and altering how they drift\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 135,
+     "end": 235,
+     "evidenceText": "grow on the surface of plastic within days, making the fragments heavier and altering how they drift"
+    }
    },
    {
     "id": "r21-q07",
@@ -808,7 +1137,13 @@
      "G"
     ],
     "answer": "C",
-    "why": "Paragraph C: \"particles tend to be carried downstream and deposited in quieter stretches, such as the inside of bends\"."
+    "why": "Paragraph C: \"particles tend to be carried downstream and deposited in quieter stretches, such as the inside of bends\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 133,
+     "end": 236,
+     "evidenceText": "particles tend to be carried downstream and deposited in quieter stretches, such as the inside of bends"
+    }
    },
    {
     "id": "r21-q08",
@@ -821,7 +1156,13 @@
      "D. operators of wastewater plants"
     ],
     "answer": "A",
-    "why": "Paragraph E: \"small invertebrates, such as water fleas, may eat microplastic particles and that this can reduce their feeding and growth\"."
+    "why": "Paragraph E: \"small invertebrates, such as water fleas, may eat microplastic particles and that this can reduce their feeding and growth\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 96,
+     "end": 218,
+     "evidenceText": "small invertebrates, such as water fleas, may eat microplastic particles and that this can reduce their feeding and growth"
+    }
    },
    {
     "id": "r21-q09",
@@ -834,7 +1175,13 @@
      "D. operators of wastewater plants"
     ],
     "answer": "B",
-    "why": "Paragraph E: \"Fish have been observed to ingest fragments, although the amounts found in wild fish are usually small\"."
+    "why": "Paragraph E: \"Fish have been observed to ingest fragments, although the amounts found in wild fish are usually small\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 220,
+     "end": 322,
+     "evidenceText": "Fish have been observed to ingest fragments, although the amounts found in wild fish are usually small"
+    }
    },
    {
     "id": "r21-q10",
@@ -843,7 +1190,13 @@
     "answer": [
      "wash"
     ],
-    "why": "Paragraph B: \"A single wash of a fleece jacket can release hundreds of fibres\"."
+    "why": "Paragraph B: \"A single wash of a fleece jacket can release hundreds of fibres\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 407,
+     "end": 470,
+     "evidenceText": "A single wash of a fleece jacket can release hundreds of fibres"
+    }
    },
    {
     "id": "r21-q11",
@@ -852,7 +1205,13 @@
     "answer": [
      "perfect"
     ],
-    "why": "Paragraph G: \"although even advanced plants are not perfect filters\"."
+    "why": "Paragraph G: \"although even advanced plants are not perfect filters\".",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 162,
+     "end": 215,
+     "evidenceText": "although even advanced plants are not perfect filters"
+    }
    },
    {
     "id": "r21-q12",
@@ -865,7 +1224,13 @@
      "D. They can be monitored only with advanced chemical methods."
     ],
     "answer": "B",
-    "why": "Paragraph A: \"they are the main route by which plastic travels from land to the ocean\". A is contradicted by \"Microplastics enter rivers in several ways\" in paragraph B; C is not stated; D is contradicted by \"Samples are usually taken with nets or by pumping water through filters\" in paragraph D."
+    "why": "Paragraph A: \"they are the main route by which plastic travels from land to the ocean\". A is contradicted by \"Microplastics enter rivers in several ways\" in paragraph B; C is not stated; D is contradicted by \"Samples are usually taken with nets or by pumping water through filters\" in paragraph D.",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 391,
+     "end": 462,
+     "evidenceText": "they are the main route by which plastic travels from land to the ocean"
+    }
    },
    {
     "id": "r21-q13",
@@ -878,7 +1243,13 @@
      "D. Limiting how much reaches the sea and freshwater animals."
     ],
     "answer": "D",
-    "why": "Paragraph G: \"The aim is not to eliminate every particle, which is unrealistic, but to limit the amounts that reach the sea and the animals that depend on freshwater\". A is explicitly rejected; B and C are not stated."
+    "why": "Paragraph G: \"The aim is not to eliminate every particle, which is unrealistic, but to limit the amounts that reach the sea and the animals that depend on freshwater\". A is explicitly rejected; B and C are not stated.",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 488,
+     "end": 639,
+     "evidenceText": "The aim is not to eliminate every particle, which is unrealistic, but to limit the amounts that reach the sea and the animals that depend on freshwater"
+    }
    },
    {
     "id": "r21-q14",
@@ -887,7 +1258,13 @@
     "answer": [
      "growth"
     ],
-    "why": "Paragraph E: \"this can reduce their feeding and growth\"."
+    "why": "Paragraph E: \"this can reduce their feeding and growth\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 178,
+     "end": 218,
+     "evidenceText": "this can reduce their feeding and growth"
+    }
    }
   ]
  }

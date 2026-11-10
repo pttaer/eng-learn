@@ -33,6 +33,12 @@ html[data-theme="dark"] {
   --accent-cyan-soft: rgba(165, 180, 252, 0.16);
   --cyan: #a5b4fc;
   --cyan-soft: rgba(165, 180, 252, 0.16);
+  --undraw-accent: var(--accent-gold, #a5b4fc);
+  --undraw-shadow: drop-shadow(0 4px 20px rgba(165, 180, 252, 0.12));
+  --undraw-circle-bg: rgba(165, 180, 252, 0.05);
+  --undraw-card-bg: #141c2c;
+  --undraw-screen-bg: #0f1523;
+  --undraw-paper-bg: rgba(255, 255, 255, 0.04);
 
   /* Status Tokens & WCAG 2.2 AAA Contrast Pairs (Dark Mode) */
   --good: #34d399;
@@ -101,7 +107,9 @@ html[data-theme="dark"] {
   /* Spring Physics & Kinematics */
   --spring-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
   --spring-smooth: cubic-bezier(0.16, 1, 0.3, 1);
-  --spring-press: all 120ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  --spring-press: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --spring-settle: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Touch Target & Ergonomics (WCAG 2.2 AAA & Fitts's Law) */
   --touch-target-min: 44px;
@@ -180,9 +188,46 @@ html[data-theme="dark"] {
   --font-body-compact-line: 1.5;
 
   /* Focus Prompt (Flashcard Cue & Tense Sentence) */
-  --font-prompt: clamp(16px, 2.5vw, 22px);
-  --font-prompt-line: 1.35;
+  --font-prompt: clamp(18px, 3vw, 22px);
+  --font-prompt-line: 1.4;
   --font-prompt-weight: 600;
+
+  /* ========================================================================
+     CANONICAL LEARNING VIEW TYPOGRAPHY SCALE (COGNITIVE READABILITY SPEC)
+     Optimized for retention, saccadic rhythm, visual hierarchy & diacritics
+     ======================================================================== */
+  /* Tier 1: Target Stimulus (Focal word, lexical target, cloze blank target) */
+  --font-learn-stimulus: clamp(20px, 3.8vw, 24px);
+  --font-learn-stimulus-line: 1.25;
+  --font-learn-stimulus-weight: 700;
+
+  /* Tier 2: Focus Prompt Sentence (Grammar challenge, tense prompt, drill cue) */
+  --font-learn-prompt: clamp(17px, 2.4vw, 20px);
+  --font-learn-prompt-line: 1.5;
+  --font-learn-prompt-weight: 600;
+
+  /* Tier 3: Reading Prose (Reading passages, model essays, article content) */
+  --font-learn-prose: clamp(15.5px, 1.8vw, 16.5px);
+  --font-learn-prose-line: 1.72;
+  --font-learn-prose-weight: 400;
+
+  /* Tier 4: Semantic Definition (English dictionary explanation) */
+  --font-learn-def: 15px;
+  --font-learn-def-line: 1.6;
+  --font-learn-def-weight: 400;
+
+  /* Tier 5: Vietnamese Translation (Diacritic-safe line-height & weight) */
+  --font-learn-vn: 15px;
+  --font-learn-vn-line: 1.6;
+  --font-learn-vn-weight: 600;
+
+  /* Tier 6: Context Sentence & Exemplar (In-situ example) */
+  --font-learn-example: 14.5px;
+  --font-learn-example-line: 1.6;
+
+  /* Tier 7: Scaffolding, IPA, Morphology & Formulas */
+  --font-learn-scaffold: 13px;
+  --font-learn-scaffold-line: 1.45;
 
   /* ========================================================================
      CANONICAL PADDING RULES (DESKTOP & MOBILE TIERS)
@@ -272,6 +317,12 @@ html[data-theme="light"] {
   --accent-cyan-soft: rgba(91, 91, 214, 0.12);
   --cyan: #5b5bd6;
   --cyan-soft: rgba(91, 91, 214, 0.12);
+  --undraw-accent: var(--accent-gold, #5b5bd6);
+  --undraw-shadow: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.06));
+  --undraw-circle-bg: #f1f5f9;
+  --undraw-card-bg: #f8fafc;
+  --undraw-screen-bg: #ffffff;
+  --undraw-paper-bg: #ffffff;
 
   /* Status Tokens & WCAG 2.2 AAA Contrast Pairs (Light Mode) */
   --good: #10b981;

@@ -1,4 +1,57 @@
 // Offline writing checks. These flag objective, countable features; they never claim to be a band score.
+export interface BodyParagraphDiagnostic {
+  paragraphIndex: number;
+  text: string;
+  hasTopicSentence: boolean;
+  hasCausalExplanation: boolean;
+  hasConcreteEvidence: boolean;
+  missingElements: ('topic' | 'cause' | 'evidence')[];
+  feedback: string[];
+}
+
+export interface ArgumentStructureReport {
+  bodyParagraphs: BodyParagraphDiagnostic[];
+  totalBodyParagraphs: number;
+  fullyDevelopedParagraphs: number;
+  missingOverallEvidence: boolean;
+  missingOverallCausal: boolean;
+  summaryFlags: string[];
+  score: number; // 0 to 100
+}
+
+export interface StyleUpgradeSuggestion {
+  original: string;
+  category: 'Hedging' | 'Causality' | 'Negative Impact' | 'Benefits' | 'Quantity' | 'Solutions' | 'Examples';
+  reason: string;
+  phrasebankStems: string[];
+  occurrenceCount: number;
+}
+
+export interface StyleUpgraderReport {
+  detectedPhrases: StyleUpgradeSuggestion[];
+  academicToneScore: number; // 0 to 100
+  informalCount: number;
+  feedback: string[];
+}
+
+export interface ParagraphTransition {
+  fromParagraphIndex: number;
+  toParagraphIndex: number;
+  targetOpening: string;
+  hasDiscourseMarker: boolean;
+  detectedMarker?: string;
+  transitionType: 'launch' | 'progression' | 'contrast' | 'conclusion' | 'unconnected';
+  recommendedStems: string[];
+}
+
+export interface ParagraphCohesionReport {
+  transitions: ParagraphTransition[];
+  cohesionScore: number; // 0 to 100
+  cohesionBandEstimate: 'Band 5.5' | 'Band 6.5' | 'Band 7.5' | 'Band 8.5';
+  hasAbruptTransitions: boolean;
+  feedback: string[];
+}
+
 export interface WritingReport {
   words: number;
   paragraphs: number;
@@ -21,6 +74,9 @@ export interface WritingReport {
   /** Share of the prompt's key words (first 5 letters) that the answer uses; 1 when no prompt given. */
   topicCoverage: number;
   flags: string[];
+  argumentStructure: ArgumentStructureReport;
+  styleUpgrades: StyleUpgraderReport;
+  cohesion: ParagraphCohesionReport;
 }
 
 const LINKERS = ['however', 'moreover', 'furthermore', 'in addition', 'therefore', 'consequently', 'whereas', 'while', 'although', 'despite', 'in contrast', 'on the other hand', 'for example', 'for instance', 'as a result', 'in conclusion', 'overall', 'nevertheless', 'similarly', 'by contrast', 'in particular', 'as well as', 'in summary'];
@@ -34,6 +90,14 @@ const POSITION = /\b(i (strongly |firmly |partly |largely |fully |completely )?(
 const CONCLUSION = /\b(in conclusion|to conclude|to sum up|in summary|on balance|all things considered|overall|in short|to summari[sz]e)\b/i;
 // Task 1 reports what the visual shows; reasons and opinions are not in the data.
 const SPECULATION = /\b(i think|i believe|in my opinion|due to|because of|driven by|caused by|reflecting|probably|likely because|this suggests|suggesting that|this shows that people)\b/gi;
+
+const CRAM_CLICHES: Array<{ pattern: RegExp; name: string; advice: string }> = [
+  { pattern: /\bplay(s|ed|ing)?\s+(an?\s+)?(indispensable|vital|crucial|important)\s+role\b/i, name: 'play an indispensable role', advice: 'Use precise active verbs: "underpins", "is pivotal to", "drives"' },
+  { pattern: /\b(every\s+coin\s+has\s+two\s+sides|a\s+double-edged\s+sword)\b/i, name: 'every coin has two sides / double-edged sword', advice: 'Avoid canned proverbs. Frame analytically: "presents significant trade-offs", "entails structural caveats"' },
+  { pattern: /\bin\s+(this\s+day\s+and\s+age|today'?s\s+modern\s+world|the\s+modern\s+era)\b/i, name: "in today's modern world", advice: 'Eliminate temporal fluff. Dive directly into the topic: "In contemporary urban contexts..."' },
+  { pattern: /\b(sparked|sparking)\s+a\s+(heated\s+)?debate\b/i, name: 'sparked a heated debate', advice: 'Template cliché. Use: "remains contentious", "has polarized public discourse"' },
+  { pattern: /\bin\s+a\s+nutshell\b/i, name: 'in a nutshell', advice: 'Informal cliché. Use: "In conclusion,", "Ultimately,"' }
+];
 
 const paras = (text: string): string[] => text.trim().split(/\n\s*\n/).filter(p => p.trim());
 const wordList = (text: string): string[] => text.toLowerCase().match(/[a-z'-]+/g) || [];
@@ -93,8 +157,28 @@ export function analyse(text: string, task: 1 | 2, prompt = ''): WritingReport {
   if (repeated.length) flags.push(`Repeated words: ${repeated.map(r => `${r.word} x${r.count}`).join(', ')}. Use synonyms or restructure.`);
   if (promptCopies >= 3) flags.push(`${promptCopies} six-word chunks copied from the question. Examiners do not count copied words; paraphrase the question.`);
   if (task === 2 && words >= 100 && topicCoverage < 0.3) flags.push(`Only ${Math.round(topicCoverage * 100)}% of the question's key words appear. Check you answer every part of this question, not a similar one.`);
+  CRAM_CLICHES.forEach(c => {
+    if (c.pattern.test(clean)) {
+      flags.push(`Cram-school cliché detected: "${c.name}". Band 7.5+ examiners penalize canned templates. ${c.advice}.`);
+    }
+  });
 
-  return { words, paragraphs, sentences: sents.length, avgSentenceLength: Math.round(avg * 10) / 10, lexicalDiversity: Math.round(diversity * 100) / 100, linkers, overusedLinkers, complexSentences, passives, repeated, hasOverview, hasPosition, positionInIntro, positionInConclusion, hasConclusion, speculation, promptCopies, topicCoverage, flags };
+  const argumentStructure = diagnoseArgumentStructure(parts, task);
+  const styleUpgrades = diagnoseStyleUpgrades(clean);
+  const cohesion = evaluateParagraphCohesion(parts, task);
+
+  // Append synthesized pedagogical guidance to flags
+  if (task === 2 && argumentStructure.missingOverallEvidence && words >= 150) {
+    flags.push('Missing concrete evidence in one or more body sections. Band 7 requires fully supported claims ("for instance", "a case in point", or specific study references).');
+  }
+  if (task === 2 && cohesion.hasAbruptTransitions && paragraphs >= 3) {
+    flags.push('Section transitions are abrupt. Use transitional linkers like "On the other hand", "Furthermore", or "Conversely" to bridge ideas.');
+  }
+  if (styleUpgrades.detectedPhrases.length > 0) {
+    flags.push(`Informal expressions detected (${styleUpgrades.detectedPhrases.map(p => `"${p.original}"`).join(', ')}). Upgrade using Academic Phrasebank stems.`);
+  }
+
+  return { words, paragraphs, sentences: sents.length, avgSentenceLength: Math.round(avg * 10) / 10, lexicalDiversity: Math.round(diversity * 100) / 100, linkers, overusedLinkers, complexSentences, passives, repeated, hasOverview, hasPosition, positionInIntro, positionInConclusion, hasConclusion, speculation, promptCopies, topicCoverage, flags, argumentStructure, styleUpgrades, cohesion };
 }
 
 export const RUBRIC = {
@@ -167,7 +251,7 @@ export interface ParagraphEvaluation {
 }
 
 const TOPIC_MARKERS = /\b(one (of the )?(primary|main|key|major|significant|central|crucial)|the (main|primary|chief|key|first|central)|firstly|first and foremost|to begin with|a (major|key|primary|significant|fundamental)|it is (clear|evident|arguable|undeniable|essential)|plays a (vital|crucial|major|key)|argument|advantage|disadvantage|benefit|drawback|factor|reason|cause|problem|solution|should|must|ought to|contend|argue|believe|maintain|suggest)\b/i;
-const CAUSAL_EXPLANATION = /\b(because|since|as a result|leads to|leading to|this means that|this is because|due to|owing to|in order to|thereby|causes|resulting in|results in|enables|allows|consequently|stems from|in turn|by doing so|this occurs because|which makes|triggers|generates|fosters|explains why|serves to|ensures that)\b/i;
+const CAUSAL_EXPLANATION = /\b(because|since|as a result|leads? to|leading to|this means that|this is because|due to|owing to|in order to|thereby|causes?|resulting in|results? in|enables?|allows?|consequently|stems?\s+(not\s+)?from|in turn|by doing so|this occurs because|which makes|triggers?|generates?|fosters?|explains why|serves? to|ensures? that)\b/i;
 const CONCRETE_EVIDENCE = /\b(for instance|for example|specifically|such as|to illustrate|a case in point|evidence (from|suggests|shows)|studies (show|have shown|indicate)|research (indicates|shows|demonstrates)|according to|exemplified by|take (\w+ )?for example|in particular|as seen in|a notable example|data reveals|statistics show|case study)\b/i;
 const IMPACT_CONCLUDING = /\b(consequently|thus|therefore|as a consequence|hence|ultimately|this demonstrates that|this highlights that|this underscores that|this proves that|in this way|as such|it is clear that|clearly shows that|without this|the result is that|in turn|as a direct outcome|this ensures that|serves as|proves crucial)\b/i;
 
@@ -262,6 +346,397 @@ export function validateFourSentenceParagraph(text: string): ParagraphEvaluation
     wordCount,
     feedback,
     scoreEstimate
+  };
+}
+
+/**
+ * Diagnoses argument structure of essay body paragraphs (Task 2 or Task 1 detail paragraphs).
+ * For a 4+ paragraph essay, skips introduction (index 0) and conclusion (last index).
+ * For shorter texts, evaluates all non-introductory paragraphs.
+ */
+export function diagnoseArgumentStructure(paragraphs: string[], _task: 1 | 2): ArgumentStructureReport {
+  const parts = paragraphs.map(p => p.trim()).filter(Boolean);
+  if (parts.length === 0) {
+    return {
+      bodyParagraphs: [],
+      totalBodyParagraphs: 0,
+      fullyDevelopedParagraphs: 0,
+      missingOverallEvidence: true,
+      missingOverallCausal: true,
+      summaryFlags: ['No paragraphs provided to evaluate argument structure.'],
+      score: 0
+    };
+  }
+
+  // Identify body paragraphs: skip intro (index 0) and conclusion (last index if >= 3 paragraphs)
+  let bodyParts: { text: string; originalIndex: number }[] = [];
+  if (parts.length >= 3) {
+    bodyParts = parts.slice(1, parts.length - 1).map((text, idx) => ({ text, originalIndex: idx + 1 }));
+  } else if (parts.length === 2) {
+    bodyParts = [{ text: parts[1], originalIndex: 1 }];
+  } else {
+    bodyParts = [{ text: parts[0], originalIndex: 0 }];
+  }
+
+  const bodyParagraphs: BodyParagraphDiagnostic[] = bodyParts.map((item, bpIdx) => {
+    const pText = item.text;
+    const sents = pText.split(/(?<=[.!?])\s+/).filter(s => s.trim().length > 0);
+    const firstSent = sents[0] || '';
+    const startsWithEvidenceOrImpact = /^(for (example|instance)|specifically|take |such as|consequently|thus|therefore|in conclusion|overall)\b/i.test(firstSent);
+    
+    // Topic sentence heuristic: must open with topic claim or be substantive statement
+    const hasTopicSentence = sents.length >= 1 && (TOPIC_MARKERS.test(firstSent) || (firstSent.split(/\s+/).length >= 6 && !startsWithEvidenceOrImpact));
+    const hasCausalExplanation = CAUSAL_EXPLANATION.test(pText);
+    const hasConcreteEvidence = CONCRETE_EVIDENCE.test(pText);
+
+    const missingElements: ('topic' | 'cause' | 'evidence')[] = [];
+    const feedback: string[] = [];
+
+    if (!hasTopicSentence) {
+      missingElements.push('topic');
+      feedback.push(`Body Paragraph ${bpIdx + 1}: Missing a clear Topic Sentence claim in the opening line.`);
+    } else {
+      feedback.push(`Body Paragraph ${bpIdx + 1}: Topic Sentence clearly established.`);
+    }
+
+    if (!hasCausalExplanation) {
+      missingElements.push('cause');
+      feedback.push(`Body Paragraph ${bpIdx + 1}: Lacks causal reasoning ("because", "this is because", "leads to").`);
+    } else {
+      feedback.push(`Body Paragraph ${bpIdx + 1}: Causal explanation detected.`);
+    }
+
+    if (!hasConcreteEvidence) {
+      missingElements.push('evidence');
+      feedback.push(`Body Paragraph ${bpIdx + 1}: Missing concrete evidence or real-world exemplar ("for instance", "research indicates", "a study by").`);
+    } else {
+      feedback.push(`Body Paragraph ${bpIdx + 1}: Concrete evidence detected.`);
+    }
+
+    return {
+      paragraphIndex: item.originalIndex,
+      text: pText,
+      hasTopicSentence,
+      hasCausalExplanation,
+      hasConcreteEvidence,
+      missingElements,
+      feedback
+    };
+  });
+
+  const totalBody = bodyParagraphs.length;
+  const fullyDeveloped = bodyParagraphs.filter(bp => bp.missingElements.length === 0).length;
+  const missingOverallEvidence = bodyParagraphs.some(bp => !bp.hasConcreteEvidence);
+  const missingOverallCausal = bodyParagraphs.some(bp => !bp.hasCausalExplanation);
+
+  const summaryFlags: string[] = [];
+  bodyParagraphs.forEach((bp, idx) => {
+    if (bp.missingElements.length > 0) {
+      summaryFlags.push(`Body Paragraph ${idx + 1} is missing: ${bp.missingElements.join(', ')}.`);
+    }
+  });
+
+  if (totalBody > 0 && fullyDeveloped === totalBody) {
+    summaryFlags.push('All body paragraphs demonstrate solid 4-sentence claim-cause-evidence development.');
+  }
+
+  // Calculate composite score (0 - 100)
+  let rawScore = 0;
+  if (totalBody > 0) {
+    const totalChecks = totalBody * 3;
+    let passedChecks = 0;
+    bodyParagraphs.forEach(bp => {
+      if (bp.hasTopicSentence) passedChecks++;
+      if (bp.hasCausalExplanation) passedChecks++;
+      if (bp.hasConcreteEvidence) passedChecks++;
+    });
+    rawScore = Math.round((passedChecks / totalChecks) * 100);
+  }
+
+  return {
+    bodyParagraphs,
+    totalBodyParagraphs: totalBody,
+    fullyDevelopedParagraphs: fullyDeveloped,
+    missingOverallEvidence,
+    missingOverallCausal,
+    summaryFlags,
+    score: rawScore
+  };
+}
+
+interface WeakPhraseDefinition {
+  pattern: RegExp;
+  label: string;
+  category: 'Hedging' | 'Causality' | 'Negative Impact' | 'Benefits' | 'Quantity' | 'Solutions' | 'Examples';
+  reason: string;
+  phrasebankStems: string[];
+}
+
+const WEAK_PHRASE_CATALOG: WeakPhraseDefinition[] = [
+  {
+    pattern: /\b(in my opinion|in my view|to my mind)\b/gi,
+    label: 'in my opinion',
+    category: 'Hedging',
+    reason: 'Personal conversational opener; weakens objective academic tone.',
+    phrasebankStems: [
+      'It is widely contended that ...',
+      'Evidence strongly suggests that ...',
+      'From an academic perspective, it is arguable that ...'
+    ]
+  },
+  {
+    pattern: /\b(i think|i believe that|i reckon)\b/gi,
+    label: 'I think',
+    category: 'Hedging',
+    reason: 'Subjective claim; academic writing prefers distanced, hedged propositions.',
+    phrasebankStems: [
+      'It is plausible to maintain that ...',
+      'It can be convincingly argued that ...',
+      'Current observations indicate that ...'
+    ]
+  },
+  {
+    pattern: /\b(a lot of|lots of|plenty of)\b/gi,
+    label: 'a lot of',
+    category: 'Quantity',
+    reason: 'Imprecise colloquial quantifier; lacks academic statistical precision.',
+    phrasebankStems: [
+      'A substantial proportion of ...',
+      'A considerable volume / number of ...',
+      'A significant majority of ...'
+    ]
+  },
+  {
+    pattern: /\b(big problem|huge problem|great problem)\b/gi,
+    label: 'big problem',
+    category: 'Negative Impact',
+    reason: 'Informal noun phrase; fails to specify the nature of the challenge.',
+    phrasebankStems: [
+      'A pressing dilemma confronting ...',
+      'A formidable obstacle in this domain pertains to ...',
+      'This poses an acute challenge to ...'
+    ]
+  },
+  {
+    pattern: /\b(bad effect|bad impact|negative thing)\b/gi,
+    label: 'bad effect',
+    category: 'Negative Impact',
+    reason: 'Elementary evaluative phrase; lacks disciplinary rigor.',
+    phrasebankStems: [
+      'Exerts an adverse impact on ...',
+      'Produces detrimental ramifications for ...',
+      'Yields counterproductive consequences regarding ...'
+    ]
+  },
+  {
+    pattern: /\b(good thing|positive thing|great thing)\b/gi,
+    label: 'good thing',
+    category: 'Benefits',
+    reason: 'Overly simplistic colloquial praise.',
+    phrasebankStems: [
+      'A principal benefit of this is that ...',
+      'A salutary consequence of this approach is ...',
+      'This yields demonstrable advantages with respect to ...'
+    ]
+  },
+  {
+    pattern: /\b(deal with|take care of)\b/gi,
+    label: 'deal with',
+    category: 'Solutions',
+    reason: 'Conversational phrasal verb.',
+    phrasebankStems: [
+      'Institute targeted measures to address ...',
+      'Devise comprehensive strategies to mitigate ...',
+      'Implement robust interventions to counter ...'
+    ]
+  },
+  {
+    pattern: /\b(get rid of)\b/gi,
+    label: 'get rid of',
+    category: 'Solutions',
+    reason: 'Informal idiom unsuitable for academic argumentation.',
+    phrasebankStems: [
+      'Eradicate the root determinants of ...',
+      'Phase out the reliance on ...',
+      'Systematically eliminate the prevalence of ...'
+    ]
+  },
+  {
+    pattern: /\b(kids)\b/gi,
+    label: 'kids',
+    category: 'Quantity',
+    reason: 'Casual spoken slang for young individuals.',
+    phrasebankStems: [
+      'School-aged children',
+      'Adolescents and youth',
+      'The younger generation'
+    ]
+  },
+  {
+    pattern: /\b(more and more)\b/gi,
+    label: 'more and more',
+    category: 'Quantity',
+    reason: 'Redundant informal intensifier.',
+    phrasebankStems: [
+      'An escalating proportion of ...',
+      'A burgeoning trend towards ...',
+      'An increasingly marked inclination to ...'
+    ]
+  }
+];
+
+/**
+ * Scans text for informal/conversational phrases and pairs each with
+ * elevated academic stems from the Manchester Academic Phrasebank.
+ */
+export function diagnoseStyleUpgrades(text: string): StyleUpgraderReport {
+  const clean = text.trim();
+  if (!clean) {
+    return {
+      detectedPhrases: [],
+      academicToneScore: 100,
+      informalCount: 0,
+      feedback: ['No text provided to evaluate academic style.']
+    };
+  }
+
+  const detected: StyleUpgradeSuggestion[] = [];
+  let totalInformalInstances = 0;
+
+  for (const item of WEAK_PHRASE_CATALOG) {
+    const matches = clean.match(item.pattern);
+    if (matches && matches.length > 0) {
+      totalInformalInstances += matches.length;
+      detected.push({
+        original: item.label,
+        category: item.category,
+        reason: item.reason,
+        phrasebankStems: item.phrasebankStems,
+        occurrenceCount: matches.length
+      });
+    }
+  }
+
+  // Calculate Academic Tone Score: base 100, -10 per detected informal expression type (minimum 20)
+  const tonePenalty = detected.reduce((sum, d) => sum + (d.occurrenceCount * 8), 0);
+  const academicToneScore = Math.max(20, 100 - tonePenalty);
+
+  const feedback: string[] = [];
+  if (detected.length === 0) {
+    feedback.push('High academic register: No informal or weak expressions detected.');
+  } else {
+    feedback.push(`Detected ${detected.length} informal phrase type(s) (${totalInformalInstances} total instance(s)). Upgrade with Manchester Academic Phrasebank stems.`);
+  }
+
+  return {
+    detectedPhrases: detected,
+    academicToneScore,
+    informalCount: totalInformalInstances,
+    feedback
+  };
+}
+
+const LAUNCH_TRANSITIONS = /^(firstly|first and foremost|to begin with|a primary (factor|consideration|concern)|one (major|key|primary|significant)|initially)\b/i;
+const PROGRESSION_TRANSITIONS = /^(furthermore|moreover|in addition|additionally|equally important|secondly|a further|similarly|likewise)\b/i;
+const CONTRAST_TRANSITIONS = /^(on the other hand|however|by contrast|in contrast|conversely|nevertheless|nonetheless|alternatively|despite this)\b/i;
+const CONCLUSION_TRANSITIONS = /^(in conclusion|to conclude|to sum up|in summary|on balance|all things considered|overall|in short|to summari[sz]e)\b/i;
+
+export function evaluateParagraphCohesion(paragraphs: string[], _task: 1 | 2): ParagraphCohesionReport {
+  const parts = paragraphs.map(p => p.trim()).filter(Boolean);
+  if (parts.length <= 1) {
+    return {
+      transitions: [],
+      cohesionScore: 50,
+      cohesionBandEstimate: 'Band 5.5',
+      hasAbruptTransitions: false,
+      feedback: ['Multi-paragraph structure required to evaluate cohesion across paragraphs.']
+    };
+  }
+
+  const transitions: ParagraphTransition[] = [];
+  const feedback: string[] = [];
+
+  for (let i = 1; i < parts.length; i++) {
+    const curr = parts[i];
+    const sents = curr.split(/(?<=[.!?])\s+/).filter(s => s.trim().length > 0);
+    const opening = sents[0] || '';
+    const isLast = i === parts.length - 1 && parts.length >= 3;
+
+    let hasMarker = false;
+    let detectedMarker: string | undefined = undefined;
+    let transitionType: 'launch' | 'progression' | 'contrast' | 'conclusion' | 'unconnected' = 'unconnected';
+    let recommendedStems: string[] = [];
+
+    if (isLast) {
+      const match = opening.match(CONCLUSION_TRANSITIONS);
+      if (match) {
+        hasMarker = true;
+        detectedMarker = match[0];
+        transitionType = 'conclusion';
+      } else {
+        recommendedStems = ['In conclusion, ...', 'To conclude, ...', 'On balance, ...'];
+      }
+    } else if (i === 1) {
+      // Intro -> Body 1
+      const match = opening.match(LAUNCH_TRANSITIONS);
+      if (match) {
+        hasMarker = true;
+        detectedMarker = match[0];
+        transitionType = 'launch';
+      } else {
+        recommendedStems = ['To begin with, ...', 'A primary factor is that ...', 'First and foremost, ...'];
+      }
+    } else {
+      // Body 1 -> Body 2 or Body 2 -> Body 3
+      const contrastMatch = opening.match(CONTRAST_TRANSITIONS);
+      const progMatch = opening.match(PROGRESSION_TRANSITIONS);
+      if (contrastMatch) {
+        hasMarker = true;
+        detectedMarker = contrastMatch[0];
+        transitionType = 'contrast';
+      } else if (progMatch) {
+        hasMarker = true;
+        detectedMarker = progMatch[0];
+        transitionType = 'progression';
+      } else {
+        recommendedStems = ['On the other hand, ...', 'Furthermore, ...', 'Conversely, ...', 'In addition, ...'];
+      }
+    }
+
+    if (!hasMarker) {
+      feedback.push(`Paragraph ${i + 1} opens abruptly without a clear transitional discourse marker.`);
+    } else {
+      feedback.push(`Paragraph ${i + 1} links smoothly via "${detectedMarker}".`);
+    }
+
+    transitions.push({
+      fromParagraphIndex: i - 1,
+      toParagraphIndex: i,
+      targetOpening: opening.slice(0, 70) + (opening.length > 70 ? '…' : ''),
+      hasDiscourseMarker: hasMarker,
+      detectedMarker,
+      transitionType,
+      recommendedStems
+    });
+  }
+
+  const validTransitions = transitions.filter(t => t.hasDiscourseMarker).length;
+  const ratio = transitions.length > 0 ? validTransitions / transitions.length : 0;
+  const cohesionScore = Math.round(ratio * 100);
+  const hasAbruptTransitions = transitions.some(t => !t.hasDiscourseMarker);
+
+  let cohesionBandEstimate: 'Band 5.5' | 'Band 6.5' | 'Band 7.5' | 'Band 8.5';
+  if (ratio >= 0.85) cohesionBandEstimate = 'Band 8.5';
+  else if (ratio >= 0.65) cohesionBandEstimate = 'Band 7.5';
+  else if (ratio >= 0.35) cohesionBandEstimate = 'Band 6.5';
+  else cohesionBandEstimate = 'Band 5.5';
+
+  return {
+    transitions,
+    cohesionScore,
+    cohesionBandEstimate,
+    hasAbruptTransitions,
+    feedback
   };
 }
 

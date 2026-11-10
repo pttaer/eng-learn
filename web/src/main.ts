@@ -1,6 +1,7 @@
 import { PlacementQuiz } from './modules/placement-quiz';
 import { MultiSkillQuizModal } from './modules/multi-skill-quiz-modal';
 import { icon } from './utils/icons';
+import { illustration } from './utils/illustrations';
 import { AudioSynthesizer } from './core/audio-synthesizer';
 import { AcousticHaptics } from './core/acoustic-haptics';
 import { CursorTracker } from './core/cursor-tracker';
@@ -344,7 +345,15 @@ class App {
     this.headerHud.onOpenIelts = async () => {
       const handle = this.activeDossierHandle;
       if (handle && typeof handle.canDeactivate === 'function' && !(await handle.canDeactivate('tree'))) return;
-      window.location.href = './ielts.html';
+      const target = './' + 'ielts.html';
+      window.location.assign(target);
+    };
+
+    this.headerHud.onLaunchExternalApp = (appId) => {
+      if (appId === 'ielts') {
+        const target = './' + appId + '.html';
+        window.location.assign(target);
+      }
     };
 
     // Route listener
@@ -557,6 +566,9 @@ class App {
 
     modal.innerHTML = `
       <div class="completion-receipt-card">
+        <div class="app-illustration-wrap" style="margin-bottom: var(--space-12, 12px);">
+          ${illustration('completed', { size: 'card', ariaLabel: t('completion.directive_complete', undefined, 'MISSION DIRECTIVE COMPLETE') })}
+        </div>
         <div class="telemetry-label" style="margin-bottom: 8px;">[${t('completion.directive_complete', undefined, 'MISSION DIRECTIVE COMPLETE')}]</div>
         <h2 style="font-family: var(--font-mono); font-size: var(--font-h2); font-weight: 700; margin-bottom: 16px;">
           ${moduleName}

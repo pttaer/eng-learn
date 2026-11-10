@@ -18,6 +18,11 @@ import { AccentThemeManager } from '../core/accent-theme';
 import { FloatingNote } from '../modules/floating-note';
 import { NotificationEngine } from '../core/notification-engine';
 import { isIeltsTestInProgress, showIeltsConfirmDialog } from './confirm-dialog';
+import { workoutView } from './views/daily-workout';
+import { DailyWorkoutStorage } from './daily-workout/storage';
+import { StorageManager } from '../utils/storage';
+import { IeltsNav } from './nav/ielts-nav';
+import './nav/ielts-nav.css';
 
 // Initialize customized primary accent theme
 AccentThemeManager.init();
@@ -93,6 +98,53 @@ function progressSection(): HTMLElement {
   return box;
 }
 
+function workoutHeroBanner(): HTMLElement {
+  const todayKey = DailyWorkoutStorage.getTodayDateKey();
+  const state = DailyWorkoutStorage.loadWorkoutState(todayKey);
+  const streak = DailyWorkoutStorage.getWorkoutStreak();
+  const budget = StorageManager.getDailyTimeBudget();
+
+  const hero = h('div', 'ie-card ie-workout-hero-banner');
+
+  const statusText = state.completed
+    ? t('ielts.workout_status_completed', undefined, '✓ Completed Today • Streak Active!')
+    : t('ielts.workout_status_progress', { completed: state.completedStepIndexes.length, minutes: budget }, `${state.completedStepIndexes.length}/4 Steps Done • ~${budget} min session`);
+
+  const streakText = streak.currentStreak > 0
+    ? t('ielts.workout_streak_badge', { streak: streak.currentStreak }, `${streak.currentStreak} 🔥 Day Streak`)
+    : t('ielts.start_streak_today', undefined, 'Start your streak today');
+
+  const actionText = state.completed
+    ? t('ielts.review_workout', undefined, 'Review Workout')
+    : state.completedStepIndexes.length > 0
+      ? t('ielts.resume_workout', undefined, 'Resume Workout')
+      : t('ielts.start_daily_workout', undefined, 'Start Daily Workout');
+
+  hero.innerHTML = `
+    <div style="flex: 1; min-width: 240px;">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+        <span class="ie-card-badge" style="background: var(--accent-cyan); color: #0b0f19; font-weight: 800;">
+          DAILY FLOW
+        </span>
+        <span style="font-size: var(--font-kicker, 11px); color: var(--accent-gold); font-weight: 700;">
+          ${streakText}
+        </span>
+      </div>
+      <h3 style="font-size: var(--text-base, 17px); font-weight: 800; margin: 4px 0;">
+        ${t('ielts.hero_daily_workout_title', undefined, "Today's Guided Workout")}
+      </h3>
+      <p style="font-size: var(--font-body-compact, 13px); color: var(--ink-secondary); margin: 0;">
+        ${statusText}
+      </p>
+    </div>
+    <a class="ie-btn ie-btn-primary ie-hero-workout-btn" href="#workout" style="min-height: 44px; padding: 10px 22px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; font-weight: 700; background: #f59e0b !important; color: #0b0f19 !important; box-shadow: 0 2px 10px rgba(245, 158, 11, 0.35) !important;">
+      <span style="color: #0b0f19 !important; font-weight: 700;">${actionText}</span>
+      <span style="color: #0b0f19 !important; display: inline-flex; align-items: center;">${icon('arrowRight', 16)}</span>
+    </a>
+  `;
+  return hero;
+}
+
 const ALL_ROUTES: RouteItem[] = [
   {
     id: 'home',
@@ -110,6 +162,7 @@ const ALL_ROUTES: RouteItem[] = [
             'Exam-format practice for all four skills. Listening and Reading are scored with standard raw-score conversion tables. Writing and Speaking give automatic checks plus rubric ratings. Everything runs 100% offline in your browser.'
           )
         ),
+        workoutHeroBanner(),
         homeSuites(),
         progressSection(),
         report()
@@ -117,6 +170,8 @@ const ALL_ROUTES: RouteItem[] = [
       return () => { };
     }
   },
+  { id: 'workout', label: 'Daily Workout', parentNavId: 'home', view: workoutView },
+  { id: 'daily-workout', label: 'Daily Workout', parentNavId: 'home', view: workoutView },
   { id: 'diagnostic', label: 'Diagnostic', parentNavId: 'diagnostic', view: lazyView(() => import('./views/diagnostic').then(m => m.diagnosticView)) },
   { id: 'reading', label: 'Reading', parentNavId: 'reading', subnavGroup: 'reading', view: lazyView(() => import('./views/reading').then(m => m.readingView)) },
   { id: 'reading-drills', label: 'Reading Drills', parentNavId: 'reading', subnavGroup: 'reading', view: readingDrillsView },
@@ -233,7 +288,7 @@ function homeSuites(): HTMLElement {
     card.innerHTML = `
       <div class="ie-card-header-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
         <div class="ie-card-badge">${s.badge}</div>
-        <a class="ie-card-affordance" href="${s.primaryLink}" aria-label="${s.primaryText}" style="border: none; background: transparent; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -10px -10px -10px 0; color: var(--ink-muted); transition: transform 0.15s ease, color 0.15s ease;">${icon('arrowRight', 18)}</a>
+        <a class="ie-card-affordance" href="${s.primaryLink}" aria-label="${s.primaryText}" style="border: none; background: transparent; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -6px 0 -6px 0; color: var(--ink-muted); transition: transform 0.15s ease, color 0.15s ease;">${icon('arrowRight', 18)}</a>
       </div>
       <b style="font-size: var(--text-base); line-height: 1.35; margin-top: 4px;">${s.title}</b>
       <span style="font-size: var(--font-body-compact, 13px); line-height: 1.45; color: var(--ink-secondary);">${s.desc}</span>
@@ -272,9 +327,10 @@ function renderHeader(): void {
     <a class="ie-back" href="./index.html"><span class="ie-back-arrow">←</span> <span class="ie-back-text">${t('ielts.back_to_singularity', undefined, 'English Singularity')}</span></a>
     <a class="ie-brand" href="#home">IELTS <b>7.0</b></a>
     <div class="ie-top-actions" style="margin-left: auto; display: flex; gap: 8px; align-items: center;">
-      <button type="button" class="ie-btn ie-btn-sm ie-btn-lang" title="${t('ielts.toggle_lang', undefined, 'Switch language (EN/VI)')}" aria-label="${t('ielts.toggle_lang', undefined, 'Switch language (EN/VI)')}" style="padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: var(--font-kicker);">
-        ${icon('globe', 12)} <span class="btn-label">${I18n.getLocale() === 'en' ? 'VI' : 'EN'}</span>
-      </button>
+      <div class="ie-lang-switch" role="group" aria-label="${t('ielts.toggle_lang', undefined, 'Select language (EN / VI)')}">
+        <button type="button" class="ie-lang-pill ${I18n.getLocale() === 'en' ? 'is-active' : ''}" data-lang="en" aria-pressed="${I18n.getLocale() === 'en'}">EN</button>
+        <button type="button" class="ie-lang-pill ${I18n.getLocale() === 'vi' ? 'is-active' : ''}" data-lang="vi" aria-pressed="${I18n.getLocale() === 'vi'}">VI</button>
+      </div>
       <button type="button" class="ie-btn ie-btn-sm ie-btn-commute" title="${t('ielts.commute_tooltip', undefined, 'Hands-Free Commute Audio Loop')}" aria-label="${t('ielts.commute_tooltip', undefined, 'Hands-Free Commute Audio Loop')}" style="padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px;">
         ${icon('headphones', 14)} <span class="ie-action-label" style="font-size: var(--font-kicker); font-weight: 700;">${t('ielts.audio_commute', undefined, 'AUDIO')}</span>
       </button>
@@ -284,13 +340,13 @@ function renderHeader(): void {
     </div>
   </div>
   <div class="ie-nav-track">
-    <button type="button" class="ie-nav-arrow ie-nav-arrow-left" aria-label="Scroll navigation left" tabindex="-1">
+    <button type="button" class="ie-nav-arrow ie-nav-arrow-left" aria-label="${t('ielts.nav_scroll_left', undefined, 'Scroll navigation left')}" tabindex="-1">
       ${icon('chevronLeft', 16)}
     </button>
-    <nav class="ie-nav" aria-label="IELTS sections">
+    <nav class="ie-nav" aria-label="${t('ielts.nav_sections_aria', undefined, 'IELTS sections')}">
       ${PRIMARY_NAV.map(n => `<a href="#${n.id}" data-id="${n.id}">${t(n.labelKey, undefined, n.label)}</a>`).join('')}
     </nav>
-    <button type="button" class="ie-nav-arrow ie-nav-arrow-right" aria-label="Scroll navigation right" tabindex="-1">
+    <button type="button" class="ie-nav-arrow ie-nav-arrow-right" aria-label="${t('ielts.nav_scroll_right', undefined, 'Scroll navigation right')}" tabindex="-1">
       ${icon('chevronRight', 16)}
     </button>
   </div>
@@ -315,11 +371,16 @@ function renderHeader(): void {
     }
   });
 
-  header.querySelector('.ie-btn-lang')?.addEventListener('click', () => {
-    AudioSynthesizer.play('click');
-    HapticEngine.trigger('light');
-    I18n.toggleLocale();
-    document.documentElement.lang = I18n.getLocale();
+  header.querySelectorAll('.ie-lang-pill').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const targetLang = (e.currentTarget as HTMLElement).getAttribute('data-lang') as 'en' | 'vi';
+      if (targetLang && targetLang !== I18n.getLocale()) {
+        AudioSynthesizer.play('click');
+        HapticEngine.trigger('light');
+        I18n.setLocale(targetLang);
+        document.documentElement.lang = targetLang;
+      }
+    });
   });
 
   header.querySelector('.ie-btn-commute')?.addEventListener('click', () => {
@@ -355,6 +416,8 @@ function renderHeader(): void {
   nav.addEventListener('scroll', updateNavArrows, { passive: true });
   window.addEventListener('resize', updateNavArrows, { passive: true });
   updateNavArrows();
+  requestAnimationFrame(updateNavArrows);
+  setTimeout(updateNavArrows, 80);
 }
 
 function route(): void {
@@ -483,3 +546,9 @@ prefetchViews();
 UsageTracker.start();
 NotificationEngine.schedulePeriodicCheck();
 syncAndroidWidget();
+
+const navMount = document.createElement('div');
+document.body.appendChild(navMount);
+const ieltsNav = new IeltsNav(navMount);
+window.addEventListener('hashchange', () => ieltsNav.setActiveRoute(location.hash));
+ieltsNav.setActiveRoute(location.hash);

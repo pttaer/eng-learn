@@ -56,7 +56,7 @@ const hexIcon = (a: Achievement): string => `
   <div style="position: relative; flex: none; width: 48px; height: 48px; color: #4a4f7a; ${a.earned ? '' : 'filter: grayscale(1); opacity: 0.45;'}">
     <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><polygon points="24,2 44,13 44,35 24,46 4,35 4,13" fill="${a.color}"/></svg>
     <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">${icon(a.icon, 20)}</div>
-    <span style="position: absolute; top: -6px; right: -8px; font-size: var(--font-kicker); font-weight: 700; color: #fff; background: #7f83e6; border-radius: 8px; padding: 1px 6px;">+${a.points}</span>
+    <span style="position: absolute; top: -4px; right: 0; font-size: var(--font-kicker); font-weight: 700; color: #fff; background: #7f83e6; border-radius: 8px; padding: 1px 5px;">+${a.points}</span>
   </div>`;
 
 const achievementRow = (a: Achievement): string => {

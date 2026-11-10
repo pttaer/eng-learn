@@ -651,13 +651,21 @@ function compileReading() {
     const synthMatch = body.match(/##\s+Synthesis\r?\n([\s\S]*)$/);
     if (synthMatch) {
       const sText = synthMatch[1];
-      const synth = { modelPrécis: '', incorporatedVocabulary: [], syntacticReconstruction: '' };
+      const synth = { modelPrécis: '', incorporatedVocabulary: [], syntacticReconstruction: '', reconstructionPrompt: '' };
       const pM = sText.match(/-\s+\*\*(?:Model Précis|Model Precis)\*\*:\s*(.*)/);
       if (pM) synth.modelPrécis = pM[1].trim();
       const vM = sText.match(/-\s+\*\*Incorporated Vocabulary\*\*:\s*(.*)/);
       if (vM) synth.incorporatedVocabulary = vM[1].split(',').map(s => s.trim());
       const rM = sText.match(/-\s+\*\*Syntactic Reconstruction\*\*:\s*(.*)/);
       if (rM) synth.syntacticReconstruction = rM[1].trim();
+      const cM = sText.match(/-\s+\*\*Copywork Prompt\*\*:\s*(.*)/);
+      if (cM) synth.copyworkPrompt = cM[1].trim();
+
+      if (synth.syntacticReconstruction) {
+        synth.reconstructionPrompt = `Reconstruct this core sentence from memory: "${synth.syntacticReconstruction}"${synth.copyworkPrompt ? `\n\nCopywork: ${synth.copyworkPrompt}` : ''}`;
+      } else if (synth.copyworkPrompt) {
+        synth.reconstructionPrompt = synth.copyworkPrompt;
+      }
       article.fourPassProtocol.pass4Synthesis = synth;
     }
 

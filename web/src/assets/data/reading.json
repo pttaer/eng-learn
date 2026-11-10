@@ -159,7 +159,9 @@
             "teacher",
             "tired"
           ],
-          "syntacticReconstruction": "I get up at six, and then I eat breakfast."
+          "syntacticReconstruction": "I get up at six, and then I eat breakfast.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"I get up at six, and then I eat breakfast.\"\n\nCopywork: Write the sentence \"My mother cooks dinner at six.\" three times. Notice the -s on \"cooks\".",
+          "copyworkPrompt": "Write the sentence \"My mother cooks dinner at six.\" three times. Notice the -s on \"cooks\"."
         }
       }
     },
@@ -320,7 +322,9 @@
             "soup",
             "happy"
           ],
-          "syntacticReconstruction": "My mother is a nurse, and she makes soup."
+          "syntacticReconstruction": "My mother is a nurse, and she makes soup.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"My mother is a nurse, and she makes soup.\"\n\nCopywork: Write the sentence \"My father is a driver.\" Then write one sentence about your father or mother.",
+          "copyworkPrompt": "Write the sentence \"My father is a driver.\" Then write one sentence about your father or mother."
         }
       }
     },
@@ -481,7 +485,9 @@
             "flower",
             "dollar"
           ],
-          "syntacticReconstruction": "I go to the market, and I buy a flower."
+          "syntacticReconstruction": "I go to the market, and I buy a flower.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"I go to the market, and I buy a flower.\"\n\nCopywork: Write the question \"How much is it?\" and the answer \"It is one dollar.\" Change the number.",
+          "copyworkPrompt": "Write the question \"How much is it?\" and the answer \"It is one dollar.\" Change the number."
         }
       }
     },
@@ -687,7 +693,9 @@
             "bench",
             "mind"
           ],
-          "syntacticReconstruction": "We left early because we wanted to avoid the traffic, so we arrived in time for a sunny morning."
+          "syntacticReconstruction": "We left early because we wanted to avoid the traffic, so we arrived in time for a sunny morning.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"We left early because we wanted to avoid the traffic, so we arrived in time for a sunny morning.\"\n\nCopywork: Copy the sentence \"The train was cheap, so we bought two tickets online.\" and underline the word \"so\".",
+          "copyworkPrompt": "Copy the sentence \"The train was cheap, so we bought two tickets online.\" and underline the word \"so\"."
         }
       }
     },
@@ -893,7 +901,9 @@
             "sleep",
             "rest"
           ],
-          "syntacticReconstruction": "You should eat more vegetables and less sugar because good habits keep you healthy."
+          "syntacticReconstruction": "You should eat more vegetables and less sugar because good habits keep you healthy.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"You should eat more vegetables and less sugar because good habits keep you healthy.\"\n\nCopywork: Copy the sentence \"If you are sick, you must rest and see a doctor.\" and circle the word \"must\".",
+          "copyworkPrompt": "Copy the sentence \"If you are sick, you must rest and see a doctor.\" and circle the word \"must\"."
         }
       }
     },
@@ -1099,7 +1109,9 @@
             "worried",
             "policeman"
           ],
-          "syntacticReconstruction": "Tom had no map, so he asked a woman for help near the station."
+          "syntacticReconstruction": "Tom had no map, so he asked a woman for help near the station.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"Tom had no map, so he asked a woman for help near the station.\"\n\nCopywork: Copy the sentence \"His phone was dead, so he could not use it.\" and underline the word \"could\".",
+          "copyworkPrompt": "Copy the sentence \"His phone was dead, so he could not use it.\" and underline the word \"could\"."
         }
       }
     },
@@ -1261,7 +1273,9 @@
             "asymmetry",
             "deference"
           ],
-          "syntacticReconstruction": "Although the asymmetry between cheap fabrication and costly checking tempts readers either toward gullibility or toward blanket doubt, institutions that explain their methods, instead of demanding deference, can slowly rebuild confidence."
+          "syntacticReconstruction": "Although the asymmetry between cheap fabrication and costly checking tempts readers either toward gullibility or toward blanket doubt, institutions that explain their methods, instead of demanding deference, can slowly rebuild confidence.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"Although the asymmetry between cheap fabrication and costly checking tempts readers either toward gullibility or toward blanket doubt, institutions that explain their methods, instead of demanding deference, can slowly rebuild confidence.\"\n\nCopywork: Transcribe \"Trust of this kind is rebuilt slowly, through repeated demonstrations that checking is worth the effort.\" Notice how the passive verb \"is rebuilt\" keeps the focus on trust itself, and how the closing \"that\" clause states exactly what the demonstrations must show.",
+          "copyworkPrompt": "Transcribe \"Trust of this kind is rebuilt slowly, through repeated demonstrations that checking is worth the effort.\" Notice how the passive verb \"is rebuilt\" keeps the focus on trust itself, and how the closing \"that\" clause states exactly what the demonstrations must show."
         }
       }
     },
@@ -1430,7 +1444,8 @@
             "miscalibration",
             "corollaries"
           ],
-          "syntacticReconstruction": "Rather than celebrating multitasking, sensible institutions ration simultaneous demands so that scarce working memory is spent on understanding instead of on switching."
+          "syntacticReconstruction": "Rather than celebrating multitasking, sensible institutions ration simultaneous demands so that scarce working memory is spent on understanding instead of on switching.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"Rather than celebrating multitasking, sensible institutions ration simultaneous demands so that scarce working memory is spent on understanding instead of on switching.\""
         }
       }
     },
@@ -1594,7 +1609,8 @@
             "vigilance",
             "calibration"
           ],
-          "syntacticReconstruction": "Rather than expecting occupants to defend their own concentration, thoughtful designers build the defence into the walls, the doors and the quiet corners of the building."
+          "syntacticReconstruction": "Rather than expecting occupants to defend their own concentration, thoughtful designers build the defence into the walls, the doors and the quiet corners of the building.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"Rather than expecting occupants to defend their own concentration, thoughtful designers build the defence into the walls, the doors and the quiet corners of the building.\""
         }
       }
     },
@@ -1795,7 +1811,8 @@
             "vertiginous",
             "rescind"
           ],
-          "syntacticReconstruction": "To return to a remembered place is to read a palimpsest whose later layers, however faithfully we try to scrape them away, will not consent to disappear."
+          "syntacticReconstruction": "To return to a remembered place is to read a palimpsest whose later layers, however faithfully we try to scrape them away, will not consent to disappear.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"To return to a remembered place is to read a palimpsest whose later layers, however faithfully we try to scrape them away, will not consent to disappear.\""
         }
       }
     },
@@ -1989,7 +2006,8 @@
             "penumbral",
             "ossify"
           ],
-          "syntacticReconstruction": "While precedent may well ossify the occasional error, to abandon it would not be to banish discretion but merely to relocate it where no one could hold it to account."
+          "syntacticReconstruction": "While precedent may well ossify the occasional error, to abandon it would not be to banish discretion but merely to relocate it where no one could hold it to account.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"While precedent may well ossify the occasional error, to abandon it would not be to banish discretion but merely to relocate it where no one could hold it to account.\""
         }
       }
     },
@@ -2151,7 +2169,9 @@
             "scrutiny",
             "inertia"
           ],
-          "syntacticReconstruction": "Since resolve is perishable and every interruption leaves a residue, deep work is protected less by determination than by a structure that makes distraction hard."
+          "syntacticReconstruction": "Since resolve is perishable and every interruption leaves a residue, deep work is protected less by determination than by a structure that makes distraction hard.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"Since resolve is perishable and every interruption leaves a residue, deep work is protected less by determination than by a structure that makes distraction hard.\"\n\nCopywork: Transcribe the opening sentence of the final paragraph (\"The prescription, then, is neither austere nor mystical.\"), noting how the short negative framing prepares the longer imperative sentence that follows.",
+          "copyworkPrompt": "Transcribe the opening sentence of the final paragraph (\"The prescription, then, is neither austere nor mystical.\"), noting how the short negative framing prepares the longer imperative sentence that follows."
         }
       }
     },
@@ -2308,7 +2328,9 @@
             "atrophy",
             "squander"
           ],
-          "syntacticReconstruction": "Although a workforce that prizes diligence above all else needs few inducements to stay busy, the skill of leisure atrophies when it is never practised, and a society that cannot rest well will squander the very productivity it has gained."
+          "syntacticReconstruction": "Although a workforce that prizes diligence above all else needs few inducements to stay busy, the skill of leisure atrophies when it is never practised, and a society that cannot rest well will squander the very productivity it has gained.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"Although a workforce that prizes diligence above all else needs few inducements to stay busy, the skill of leisure atrophies when it is never practised, and a society that cannot rest well will squander the very productivity it has gained.\"\n\nCopywork: Transcribe \"Guilt is a remarkably cheap form of management. It requires no supervisor, it travels home with the employee each evening, and it persuades even the exhausted that exhaustion is evidence of character.\" Notice how the three coordinated clauses build from the practical to the psychological.",
+          "copyworkPrompt": "Transcribe \"Guilt is a remarkably cheap form of management. It requires no supervisor, it travels home with the employee each evening, and it persuades even the exhausted that exhaustion is evidence of character.\" Notice how the three coordinated clauses build from the practical to the psychological."
         }
       }
     },
@@ -2465,7 +2487,9 @@
             "articulate",
             "irreversible"
           ],
-          "syntacticReconstruction": "Although the habit of speaking in euphemism is diffuse and tempting, it is not irreversible, for citizens who learn to articulate precisely what they mean make evasion far harder to sustain."
+          "syntacticReconstruction": "Although the habit of speaking in euphemism is diffuse and tempting, it is not irreversible, for citizens who learn to articulate precisely what they mean make evasion far harder to sustain.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"Although the habit of speaking in euphemism is diffuse and tempting, it is not irreversible, for citizens who learn to articulate precisely what they mean make evasion far harder to sustain.\"\n\nCopywork: Transcribe \"A useful discipline is to ask of any sentence who is doing what to whom, and to rewrite it until the answer is visible.\" Notice how the two infinitives (\"to ask\", \"to rewrite\") share one subject complement and how the \"until\" clause closes the sentence on a clear goal.",
+          "copyworkPrompt": "Transcribe \"A useful discipline is to ask of any sentence who is doing what to whom, and to rewrite it until the answer is visible.\" Notice how the two infinitives (\"to ask\", \"to rewrite\") share one subject complement and how the \"until\" clause closes the sentence on a clear goal."
         }
       }
     },
@@ -2671,7 +2695,8 @@
             "extrapolate",
             "privilege"
           ],
-          "syntacticReconstruction": "Although environmental DNA may appear to resolve the problem of cryptic species, its detections are perhaps best interpreted as consistent with presence rather than as proof of it."
+          "syntacticReconstruction": "Although environmental DNA may appear to resolve the problem of cryptic species, its detections are perhaps best interpreted as consistent with presence rather than as proof of it.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"Although environmental DNA may appear to resolve the problem of cryptic species, its detections are perhaps best interpreted as consistent with presence rather than as proof of it.\""
         }
       }
     },
@@ -2883,7 +2908,9 @@
             "solution",
             "freedom"
           ],
-          "syntacticReconstruction": "If companies allowed staff to work from home some days, people would enjoy more freedom and still meet their colleagues."
+          "syntacticReconstruction": "If companies allowed staff to work from home some days, people would enjoy more freedom and still meet their colleagues.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"If companies allowed staff to work from home some days, people would enjoy more freedom and still meet their colleagues.\"\n\nCopywork: Copy the second conditional sentence (\"If I worked at home every day, I would probably miss...\") and notice how the past simple after \"if\" matches \"would\" in the main clause.",
+          "copyworkPrompt": "Copy the second conditional sentence (\"If I worked at home every day, I would probably miss...\") and notice how the past simple after \"if\" matches \"would\" in the main clause."
         }
       }
     },
@@ -3090,7 +3117,9 @@
             "charge",
             "packaging"
           ],
-          "syntacticReconstruction": "If shops charged for every plastic bag, people would use fewer of them."
+          "syntacticReconstruction": "If shops charged for every plastic bag, people would use fewer of them.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"If shops charged for every plastic bag, people would use fewer of them.\"\n\nCopywork: Copy the sentence \"Scientists have been studying this problem for many years...\" and notice how the present perfect continuous links the past with now.",
+          "copyworkPrompt": "Copy the sentence \"Scientists have been studying this problem for many years...\" and notice how the present perfect continuous links the past with now."
         }
       }
     },
@@ -3308,7 +3337,9 @@
             "improve",
             "compare"
           ],
-          "syntacticReconstruction": "If you study a little every day, you will make progress, and your confidence will grow."
+          "syntacticReconstruction": "If you study a little every day, you will make progress, and your confidence will grow.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"If you study a little every day, you will make progress, and your confidence will grow.\"\n\nCopywork: Copy the sentence \"I started learning English at the age of twenty-five, and I have made good progress since then.\" and notice the past simple and the present perfect together.",
+          "copyworkPrompt": "Copy the sentence \"I started learning English at the age of twenty-five, and I have made good progress since then.\" and notice the past simple and the present perfect together."
         }
       }
     },
@@ -3514,7 +3545,8 @@
             "asynchronous",
             "viability"
           ],
-          "syntacticReconstruction": "Inasmuch as constant synchronous demands accelerate cognitive exhaustion, establishing asynchronous protocols constitutes a mandatory condition for distributed operational viability."
+          "syntacticReconstruction": "Inasmuch as constant synchronous demands accelerate cognitive exhaustion, establishing asynchronous protocols constitutes a mandatory condition for distributed operational viability.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"Inasmuch as constant synchronous demands accelerate cognitive exhaustion, establishing asynchronous protocols constitutes a mandatory condition for distributed operational viability.\""
         }
       }
     },
@@ -3716,7 +3748,8 @@
             "mitigate",
             "resilient"
           ],
-          "syntacticReconstruction": "Insofar as rigid urban zoning exacerbates environmental pollution, implementing decentralized, regenerative infrastructures mitigates carbon emissions and fosters resilient living environments."
+          "syntacticReconstruction": "Insofar as rigid urban zoning exacerbates environmental pollution, implementing decentralized, regenerative infrastructures mitigates carbon emissions and fosters resilient living environments.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"Insofar as rigid urban zoning exacerbates environmental pollution, implementing decentralized, regenerative infrastructures mitigates carbon emissions and fosters resilient living environments.\""
         }
       }
     },
@@ -3923,7 +3956,8 @@
             "imperative",
             "metacognitive"
           ],
-          "syntacticReconstruction": "Insofar as generative algorithms demonstrate high analytical proficiency, cultivating metacognitive agility constitutes an unavoidable professional imperative to prevent economic displacement."
+          "syntacticReconstruction": "Insofar as generative algorithms demonstrate high analytical proficiency, cultivating metacognitive agility constitutes an unavoidable professional imperative to prevent economic displacement.",
+          "reconstructionPrompt": "Reconstruct this core sentence from memory: \"Insofar as generative algorithms demonstrate high analytical proficiency, cultivating metacognitive agility constitutes an unavoidable professional imperative to prevent economic displacement.\""
         }
       }
     }

@@ -10,6 +10,7 @@ import { levelsWithContent, defaultLevel, levelChipsHtml } from '../core/level-f
 import { SkillTreeEngine } from '../core/skill-tree-engine';
 import { feedback } from '../core/feedback';
 import { t } from '../core/i18n';
+import { illustration } from '../utils/illustrations';
 
 export type GrammarMode = string;
 
@@ -89,6 +90,26 @@ export class GrammarDossier {
     const modes = this.modesAtLevel();
 
     this.container.innerHTML = `
+      <!-- Grammar Codex Hero Banner -->
+      <div class="app-hero-banner grammar-hero-banner" style="margin-bottom: var(--space-12, 12px);">
+        <div class="app-hero-banner-content">
+          <span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">
+            [${t('grammar.title', undefined, 'GRAMMAR CODEX & GAUNTLET')}]
+          </span>
+          <h2 style="margin: 0; font-size: var(--font-h3, 16px); font-weight: 700; color: var(--ink-primary); line-height: 1.3;">
+            ${modeTitles[this.activeMode] || prettyMode(this.activeMode)}
+          </h2>
+          <div style="font-size: var(--font-kicker); color: var(--ink-secondary); display: flex; gap: 8px; flex-wrap: wrap;">
+            <span>CEFR ${this.activeLevel}</span>
+            <span>•</span>
+            <span>NODE ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}</span>
+          </div>
+        </div>
+        <div class="app-hero-banner-art">
+          ${illustration('grammar', { size: 'banner', ariaLabel: t('grammar.title', undefined, 'Grammar Codex') })}
+        </div>
+      </div>
+
       <div class="dossier-control-bar">
         <div class="dossier-tabs grammar-mode-tabs">
           <button type="button" class="hud-btn btn-jump-tenses" style="border-color: var(--accent-gold); color: var(--accent-gold); font-weight: 700; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;">
@@ -193,6 +214,9 @@ export class GrammarDossier {
     if (this.currentList.length === 0) {
       slot.innerHTML = `
         <div class="empty-state-notice">
+          <div class="app-illustration-wrap" style="margin-bottom: var(--space-12, 12px);">
+            ${illustration('no-data', { size: 'empty', ariaLabel: t('vocab.empty_tier') })}
+          </div>
           <div class="telemetry-label">[TIER DEPLETED]</div>
           <p>${t('vocab.empty_tier')}</p>
         </div>
@@ -215,7 +239,7 @@ export class GrammarDossier {
     frontEl.className = 'grammar-front-content';
     frontEl.innerHTML = `
       <div class="card-prompt-label">SYNTAX // ${item.title.toUpperCase()}</div>
-      <div class="card-main-text" style="font-size: var(--font-body); line-height: 1.62; font-weight: 500; max-width: 68ch; margin: 10px 0;">
+      <div class="card-main-text" style="font-family: var(--font-sans); font-size: var(--font-learn-prompt, clamp(17px, 2.5vw, 20px)); line-height: var(--font-learn-prompt-line, 1.55); font-weight: 600; max-width: 68ch; margin: 10px 0; letter-spacing: -0.01em;">
         "${item.promptSentence}"
       </div>
       <div class="card-sub-text" style="font-family: var(--font-mono); font-size: var(--font-body-compact); margin-bottom: 8px;">
@@ -238,10 +262,10 @@ export class GrammarDossier {
             placeholder="${t('placeholder.type_response')}"
             autocomplete="off"
             spellcheck="false"
-            aria-label="Type transformed syntactic resolution"
+            aria-label="${t('grammar.transform_input_aria', undefined, 'Type transformed syntactic resolution')}"
           />
-          <button type="button" class="hud-btn grammar-verify-btn" aria-label="Verify Transformation" data-i18n="grammar.verify_transformation">
-            ${icon('zap', 14)} [ Verify Transformation ]
+          <button type="button" class="hud-btn grammar-verify-btn" aria-label="${t('grammar.verify_transformation_aria', undefined, 'Verify Transformation')}" data-i18n="grammar.verify_transformation">
+            ${icon('zap', 14)} [ ${t('grammar.verify_transformation', undefined, 'Verify Transformation')} ]
           </button>
         </div>
         <div class="grammar-diff-feedback grammar-diff-preview" aria-live="polite"></div>
@@ -257,7 +281,7 @@ export class GrammarDossier {
 
     backEl.innerHTML = `
       <div class="card-prompt-label">${t('grammar.target_resolution', undefined, 'TARGET RESOLUTION')} // ${item.title.toUpperCase()}</div>
-      <div class="card-main-text" style="font-size: var(--font-body); line-height: 1.62; font-weight: 700; max-width: 68ch; margin: 10px 0;">
+      <div class="card-main-text" style="font-family: var(--font-sans); font-size: var(--font-learn-prompt, clamp(17px, 2.5vw, 20px)); line-height: var(--font-learn-prompt-line, 1.55); font-weight: 700; max-width: 68ch; margin: 10px 0; letter-spacing: -0.01em;">
         "${item.targetTransformation}"
       </div>
 

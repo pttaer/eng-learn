@@ -1,17 +1,162 @@
 /* ==========================================================================
    APPLE-CALM MOTION & TACTILE SENSORY DYNAMICS
    Native CSS Spring Physics, Ambient Hints & Forgiving Visual States
+   Mobile-First, GPU-Accelerated Micro-Interactions (Zero CPU Idle Bloat)
    ========================================================================== */
 
-/* Tactile Spring Press */
+/* Universal Tactile Spring Press */
 .apple-press,
 .hud-btn:active,
 .atomic-btn:active,
 .article-tab:active,
 .pass-tab:active,
-.mode-tab:active {
+.mode-tab:active,
+.ie-btn:active,
+.ie-tab:active,
+.ie-tab-btn:active,
+.ie-mode-btn:active,
+.ie-dock-tab:active,
+.bnav-btn:active,
+.ie-subnav-link:active,
+.ie-card-action:active,
+.ie-suite-card:active,
+.deck-branch-card:active,
+.branch-summary-card:active,
+.tenses-choice-btn:active,
+.drill-choice:active,
+.quiz-btn:active,
+.commute-btn-ctrl:active,
+button:not(:disabled):active {
   transform: scale(0.975);
   transition: transform 120ms var(--spring-press, cubic-bezier(0.2, 0.8, 0.2, 1));
+}
+
+/* Fluid Unpressed Spring Settle Dynamics */
+.apple-press,
+.hud-btn,
+.atomic-btn,
+.article-tab,
+.pass-tab,
+.mode-tab,
+.ie-btn,
+.ie-tab,
+.ie-tab-btn,
+.ie-mode-btn,
+.ie-dock-tab,
+.bnav-btn,
+.ie-subnav-link,
+.ie-card,
+.ie-card-action,
+.ie-suite-card,
+.deck-branch-card,
+.branch-summary-card,
+.tenses-choice-btn,
+.drill-choice,
+.quiz-btn,
+.commute-btn-ctrl,
+button:not(:disabled) {
+  transition: transform 160ms var(--spring-smooth, cubic-bezier(0.16, 1, 0.3, 1)),
+              background-color 150ms ease,
+              border-color 150ms ease,
+              box-shadow 180ms var(--spring-smooth, cubic-bezier(0.16, 1, 0.3, 1)),
+              color 150ms ease;
+  touch-action: manipulation;
+}
+
+/* Desktop Hover Elevation (Fine Pointers Only — No Sticky Mobile Hover) */
+@media (hover: hover) and (pointer: fine) {
+  .ie-card-action:hover,
+  .ie-suite-card:hover,
+  .deck-branch-card:hover,
+  .branch-summary-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-ambient, 0 8px 32px -4px rgba(0, 0, 0, 0.35));
+  }
+
+  .ie-card-action:hover .ie-card-affordance {
+    transform: translateY(-50%) translateX(3px);
+    color: var(--accent-cyan);
+  }
+}
+
+/* Liquid Tab & Segmented Control Dynamics */
+.ie-tab,
+.ie-tab-btn,
+.ie-mode-btn,
+.ie-dock-tab,
+.article-tab,
+.pass-tab,
+.mode-tab {
+  transition: background-color 160ms var(--spring-smooth, cubic-bezier(0.16, 1, 0.3, 1)),
+              border-color 160ms var(--spring-smooth, cubic-bezier(0.16, 1, 0.3, 1)),
+              box-shadow 180ms var(--spring-smooth, cubic-bezier(0.16, 1, 0.3, 1)),
+              color 150ms ease,
+              transform 160ms var(--spring-smooth, cubic-bezier(0.16, 1, 0.3, 1));
+  touch-action: manipulation;
+}
+
+/* Fluid Spring Modal & Dialog Reveal */
+@keyframes apple-modal-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes apple-backdrop-enter {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.apple-modal-enter,
+.modal-card.is-open,
+.completion-receipt-card:not(.mobile-action-sheet),
+.progression-modal-card,
+.cd-band-modal-card,
+.cd-submit-modal-card,
+.ie-tip-modal-box {
+  animation: apple-modal-enter 280ms var(--spring-smooth, cubic-bezier(0.16, 1, 0.3, 1)) both;
+}
+
+.modal-backdrop.is-open,
+.completion-modal-overlay:not(.mobile-action-sheet-overlay),
+.progression-modal-overlay,
+.multi-skill-modal-overlay,
+.cd-test-hub-overlay,
+.hud-modal-overlay,
+.ie-tip-modal-overlay.is-active {
+  animation: apple-backdrop-enter 200ms ease-out both;
+}
+
+/* Staggered Content Mask-Rise */
+@keyframes apple-rise-in {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.motion-rise,
+.ie-rise-in {
+  animation: apple-rise-in 320ms var(--spring-smooth, cubic-bezier(0.16, 1, 0.3, 1)) both;
+}
+
+/* Telemetry & Progress Bar Fill Dynamics */
+.progress-bar-fill,
+.branch-bar,
+.ie-progress-fill,
+.ie-progress-bar-inner,
+.hud-progress-fill {
+  transition: width 400ms var(--spring-smooth, cubic-bezier(0.16, 1, 0.3, 1));
+  will-change: width;
 }
 
 /* Gentle Spring Shake for Mistakes (No Aggressive Red Buzzer) */
@@ -108,15 +253,74 @@ html[data-theme="light"] .apple-glass {
   100% { background-position: -200% 0; }
 }
 
-/* Respect User Reduced Motion */
+/* Respect User Reduced Motion & In-App Motion Preference */
 @media (prefers-reduced-motion: reduce) {
   .apple-press,
+  .hud-btn,
   .hud-btn:active,
-  .atomic-btn:active {
+  .atomic-btn,
+  .atomic-btn:active,
+  .article-tab,
+  .article-tab:active,
+  .pass-tab,
+  .pass-tab:active,
+  .mode-tab,
+  .mode-tab:active,
+  .ie-btn,
+  .ie-btn:active,
+  .ie-tab,
+  .ie-tab:active,
+  .ie-tab-btn,
+  .ie-tab-btn:active,
+  .ie-mode-btn,
+  .ie-mode-btn:active,
+  .ie-dock-tab,
+  .ie-dock-tab:active,
+  .bnav-btn,
+  .bnav-btn:active,
+  .ie-subnav-link,
+  .ie-subnav-link:active,
+  .ie-card,
+  .ie-card:active,
+  .ie-card-action,
+  .ie-card-action:active,
+  .ie-suite-card,
+  .ie-suite-card:active,
+  .deck-branch-card,
+  .deck-branch-card:active,
+  .branch-summary-card,
+  .branch-summary-card:active,
+  .tenses-choice-btn,
+  .tenses-choice-btn:active,
+  .drill-choice,
+  .drill-choice:active,
+  .quiz-btn,
+  .quiz-btn:active,
+  .commute-btn-ctrl,
+  .commute-btn-ctrl:active,
+  button,
+  button:active {
     transform: none !important;
+    transition-duration: 0.001ms !important;
   }
   .apple-shake,
   .ambient-hint-pulse,
+  .apple-modal-enter,
+  .modal-card.is-open,
+  .completion-receipt-card,
+  .progression-modal-card,
+  .cd-band-modal-card,
+  .cd-submit-modal-card,
+  .ie-tip-modal-box,
+  .modal-backdrop.is-open,
+  .completion-modal-overlay,
+  .progression-modal-overlay,
+  .multi-skill-modal-overlay,
+  .cd-test-hub-overlay,
+  .hud-modal-overlay,
+  .ie-tip-modal-overlay,
+  .motion-rise,
+  .ie-rise-in,
   .skeleton-box,
   .skeleton-shimmer {
     animation: none !important;
@@ -125,4 +329,96 @@ html[data-theme="light"] .apple-glass {
   .skeleton-shimmer {
     background: var(--shimmer-base, rgba(255, 255, 255, 0.05));
   }
+  .progress-bar-fill,
+  .branch-bar,
+  .ie-progress-fill,
+  .ie-progress-bar-inner,
+  .hud-progress-fill {
+    transition: none !important;
+  }
+}
+
+html[data-motion="reduce"] .apple-press,
+html[data-motion="reduce"] .hud-btn,
+html[data-motion="reduce"] .hud-btn:active,
+html[data-motion="reduce"] .atomic-btn,
+html[data-motion="reduce"] .atomic-btn:active,
+html[data-motion="reduce"] .article-tab,
+html[data-motion="reduce"] .article-tab:active,
+html[data-motion="reduce"] .pass-tab,
+html[data-motion="reduce"] .pass-tab:active,
+html[data-motion="reduce"] .mode-tab,
+html[data-motion="reduce"] .mode-tab:active,
+html[data-motion="reduce"] .ie-btn,
+html[data-motion="reduce"] .ie-btn:active,
+html[data-motion="reduce"] .ie-tab,
+html[data-motion="reduce"] .ie-tab:active,
+html[data-motion="reduce"] .ie-tab-btn,
+html[data-motion="reduce"] .ie-tab-btn:active,
+html[data-motion="reduce"] .ie-mode-btn,
+html[data-motion="reduce"] .ie-mode-btn:active,
+html[data-motion="reduce"] .ie-dock-tab,
+html[data-motion="reduce"] .ie-dock-tab:active,
+html[data-motion="reduce"] .bnav-btn,
+html[data-motion="reduce"] .bnav-btn:active,
+html[data-motion="reduce"] .ie-subnav-link,
+html[data-motion="reduce"] .ie-subnav-link:active,
+html[data-motion="reduce"] .ie-card,
+html[data-motion="reduce"] .ie-card:active,
+html[data-motion="reduce"] .ie-card-action,
+html[data-motion="reduce"] .ie-card-action:active,
+html[data-motion="reduce"] .ie-suite-card,
+html[data-motion="reduce"] .ie-suite-card:active,
+html[data-motion="reduce"] .deck-branch-card,
+html[data-motion="reduce"] .deck-branch-card:active,
+html[data-motion="reduce"] .branch-summary-card,
+html[data-motion="reduce"] .branch-summary-card:active,
+html[data-motion="reduce"] .tenses-choice-btn,
+html[data-motion="reduce"] .tenses-choice-btn:active,
+html[data-motion="reduce"] .drill-choice,
+html[data-motion="reduce"] .drill-choice:active,
+html[data-motion="reduce"] .quiz-btn,
+html[data-motion="reduce"] .quiz-btn:active,
+html[data-motion="reduce"] .commute-btn-ctrl,
+html[data-motion="reduce"] .commute-btn-ctrl:active,
+html[data-motion="reduce"] button,
+html[data-motion="reduce"] button:active {
+  transform: none !important;
+  transition-duration: 0.001ms !important;
+}
+
+html[data-motion="reduce"] .apple-shake,
+html[data-motion="reduce"] .ambient-hint-pulse,
+html[data-motion="reduce"] .apple-modal-enter,
+html[data-motion="reduce"] .modal-card.is-open,
+html[data-motion="reduce"] .completion-receipt-card,
+html[data-motion="reduce"] .progression-modal-card,
+html[data-motion="reduce"] .cd-band-modal-card,
+html[data-motion="reduce"] .cd-submit-modal-card,
+html[data-motion="reduce"] .ie-tip-modal-box,
+html[data-motion="reduce"] .modal-backdrop.is-open,
+html[data-motion="reduce"] .completion-modal-overlay,
+html[data-motion="reduce"] .progression-modal-overlay,
+html[data-motion="reduce"] .multi-skill-modal-overlay,
+html[data-motion="reduce"] .cd-test-hub-overlay,
+html[data-motion="reduce"] .hud-modal-overlay,
+html[data-motion="reduce"] .ie-tip-modal-overlay,
+html[data-motion="reduce"] .motion-rise,
+html[data-motion="reduce"] .ie-rise-in,
+html[data-motion="reduce"] .skeleton-box,
+html[data-motion="reduce"] .skeleton-shimmer {
+  animation: none !important;
+}
+
+html[data-motion="reduce"] .skeleton-box,
+html[data-motion="reduce"] .skeleton-shimmer {
+  background: var(--shimmer-base, rgba(255, 255, 255, 0.05));
+}
+
+html[data-motion="reduce"] .progress-bar-fill,
+html[data-motion="reduce"] .branch-bar,
+html[data-motion="reduce"] .ie-progress-fill,
+html[data-motion="reduce"] .ie-progress-bar-inner,
+html[data-motion="reduce"] .hud-progress-fill {
+  transition: none !important;
 }

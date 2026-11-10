@@ -1,0 +1,732 @@
+[
+  {
+    "id": "S01",
+    "name": "Constellation Skill Tree",
+    "route": "#tree",
+    "zeroScroll": true,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S01-_tree-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": true,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S02",
+    "name": "Speed Blitz Challenge",
+    "route": "#blitz",
+    "zeroScroll": true,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S02-_blitz-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": true,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S03",
+    "name": "Intensive Reading Lab",
+    "route": "#read",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S03-_read-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 10,
+      "smallTouches": [
+        {
+          "tag": "MARK",
+          "cls": "reading-target-word vocab-target",
+          "text": "contingency",
+          "w": 94,
+          "h": 20
+        },
+        {
+          "tag": "MARK",
+          "cls": "reading-target-word vocab-target",
+          "text": "unprecedented flexibility",
+          "w": 189,
+          "h": 20
+        },
+        {
+          "tag": "MARK",
+          "cls": "reading-target-word vocab-target",
+          "text": "unprecedented",
+          "w": 115,
+          "h": 20
+        }
+      ],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 4,
+      "language": 5,
+      "consistency": 5,
+      "overall": 4
+    }
+  },
+  {
+    "id": "S04",
+    "name": "Copywork Studio & Diff",
+    "route": "#write",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S04-_write-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S05",
+    "name": "Acoustic Listening Chamber",
+    "route": "#listen",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S05-_listen-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S06",
+    "name": "Speaking Studio & Examiner",
+    "route": "#speak",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S06-_speak-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S07",
+    "name": "Vocabulary Dossier",
+    "route": "#vocab",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S07-_vocab-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S08",
+    "name": "Collocation Forge",
+    "route": "#colloc",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S08-_colloc-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S09",
+    "name": "Grammar Codex",
+    "route": "#grammar",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S09-_grammar-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S10",
+    "name": "Twelve Verb Tenses",
+    "route": "#tenses",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S10-_tenses-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S11",
+    "name": "Mission Log & Daily Habits",
+    "route": "#habits",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S11-_habits-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S12",
+    "name": "CEFR Mediation Workbench",
+    "route": "#mediate",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S12-_mediate-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S13",
+    "name": "Progress & SERL Analytics",
+    "route": "#analytics",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S13-_analytics-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S14",
+    "name": "Attack Drills Lab",
+    "route": "#drills",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S14-_drills-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S15",
+    "name": "Settings Dossier",
+    "route": "#settings",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S15-_settings-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 1,
+      "smallTouches": [
+        {
+          "tag": "BUTTON",
+          "cls": "hud-btn btn-toggle-haptics active",
+          "text": "Đang bật âm thanh & rung ",
+          "w": 302,
+          "h": 40
+        }
+      ],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 4,
+      "language": 5,
+      "consistency": 5,
+      "overall": 4
+    }
+  },
+  {
+    "id": "S16",
+    "name": "Academic Home Dashboard",
+    "route": "ielts.html#home",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S16-ielts_html_home-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 3129,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S17",
+    "name": "Daily Guided Workout",
+    "route": "ielts.html#workout",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S17-ielts_html_workout-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S18",
+    "name": "Band Score Diagnostic",
+    "route": "ielts.html#diagnostic",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S18-ielts_html_diagnostic-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 8714,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S19",
+    "name": "Academic Reading Passages",
+    "route": "ielts.html#reading",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S19-ielts_html_reading-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 3575,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S20",
+    "name": "Reading Drills Lab",
+    "route": "ielts.html#reading-drills",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S20-ielts_html_reading_drills-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 1303,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S21",
+    "name": "Academic Listening Hub",
+    "route": "ielts.html#listening",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S21-ielts_html_listening-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 3176,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S22",
+    "name": "Listening Traps Lab",
+    "route": "ielts.html#listening-traps",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S22-ielts_html_listening_traps-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 622,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S23",
+    "name": "Academic Writing Hub",
+    "route": "ielts.html#writing",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S23-ielts_html_writing-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 9603,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S24",
+    "name": "Writing Architecture Studio",
+    "route": "ielts.html#writing-studio",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S24-ielts_html_writing_studio-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 2477,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S25",
+    "name": "Speaking Simulator Hub",
+    "route": "ielts.html#speaking",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S25-ielts_html_speaking-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 0,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S26",
+    "name": "Examiner Strategy Codex",
+    "route": "ielts.html#strategy",
+    "zeroScroll": false,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S26-ielts_html_strategy-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 16610,
+      "isZeroScrollExpected": false,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 5,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 5
+    }
+  },
+  {
+    "id": "S27",
+    "name": "CD-IELTS Exam Cockpit",
+    "route": "ielts.html#cockpit",
+    "zeroScroll": true,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S27-ielts_html_cockpit-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 3129,
+      "isZeroScrollExpected": true,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 4,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 4
+    }
+  },
+  {
+    "id": "S28",
+    "name": "IELTS Full Mock Exam",
+    "route": "ielts.html#mock",
+    "zeroScroll": true,
+    "shotPath": "D:\\eng-learn\\docs\\screens\\S28-ielts_html_mock-vi.png",
+    "auditData": {
+      "overflowCount": 0,
+      "overflows": [],
+      "scrollDiff": 1524,
+      "isZeroScrollExpected": true,
+      "smallTouchCount": 0,
+      "smallTouches": [],
+      "unlocalizedCount": 0,
+      "unlocalized": [],
+      "radiusDeviations": 0
+    },
+    "scores": {
+      "fit": 4,
+      "touch": 5,
+      "language": 5,
+      "consistency": 5,
+      "overall": 4
+    }
+  }
+]

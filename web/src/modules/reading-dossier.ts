@@ -728,7 +728,7 @@ export class ReadingDossier {
     }
 
     slot.innerHTML = `
-      <div class="vocab-drawer" role="dialog" aria-label="Vocabulary definition for ${this.escapeHtml(info.targetWord)}">
+      <div class="vocab-drawer" role="dialog" aria-label="${t('reading.vocab_def_aria', { word: info.targetWord }, `Vocabulary definition for ${info.targetWord}`)}">
         <div class="vocab-drawer-header">
           <div class="vocab-drawer-title-cluster">
             <span class="telemetry-label">Lexical Target · Footnote</span>
@@ -736,13 +736,13 @@ export class ReadingDossier {
             <span class="vocab-drawer-pos">${this.escapeHtml(info.partOfSpeech)}${info.ipa ? ` • ${this.escapeHtml(info.ipa)}` : ''}</span>
           </div>
           <div class="vocab-drawer-actions">
-            <button type="button" class="hud-btn btn-vocab-speak" title="Listen to pronunciation">${icon('volume')} Listen</button>
+            <button type="button" class="hud-btn btn-vocab-speak" title="${t('action.pronounce', undefined, 'Listen to pronunciation')}">${icon('volume')} ${t('common.listen', undefined, 'Listen')}</button>
             <button type="button" class="hud-btn btn-close-drawer" title="${t('reading.close_drawer_tooltip', undefined, 'Close drawer')}" aria-label="${t('reading.close_drawer_aria', undefined, 'Close vocabulary drawer')}">${t('common.close_cross', undefined, '✕ Close')}</button>
           </div>
         </div>
         <div class="vocab-drawer-body">
           <div class="vocab-drawer-field">
-            <span class="vocab-field-label">ENGLISH DEFINITION</span>
+            <span class="vocab-field-label">${t('reading.english_definition', undefined, 'ENGLISH DEFINITION')}</span>
             <p class="vocab-field-value">${this.escapeHtml(info.definition)}</p>
           </div>
           <div class="vocab-drawer-field vocab-vietnamese-field">
@@ -844,7 +844,7 @@ export class ReadingDossier {
       </div>
 
       <!-- Mobile Segmented Split-Screen Tab Switcher (<= 768px) -->
-      <nav class="reading-mobile-tab-bar" role="tablist" aria-label="Reading Mobile View Switcher">
+      <nav class="reading-mobile-tab-bar" role="tablist" aria-label="${t('reading.mobile_view_switcher_aria', undefined, 'Reading Mobile View Switcher')}">
         <button
           type="button"
           class="reading-mobile-tab-btn ${this.mobileActiveTab === 'text' ? 'is-active' : ''}"
@@ -852,7 +852,7 @@ export class ReadingDossier {
           role="tab"
           aria-selected="${this.mobileActiveTab === 'text'}"
         >
-          ${icon('book', 14)} Reading Text
+          ${icon('book', 14)} ${t('reading.reading_text', undefined, 'Reading Text')}
         </button>
         <button
           type="button"
@@ -861,7 +861,7 @@ export class ReadingDossier {
           role="tab"
           aria-selected="${this.mobileActiveTab === 'analysis'}"
         >
-          ${icon('search', 14)} Analysis & Exercises
+          ${icon('search', 14)} ${t('reading.tab_analysis', undefined, 'Analysis & Exercises')}
         </button>
       </nav>
 
@@ -1138,7 +1138,9 @@ export class ReadingDossier {
       },
       back: {
         promptLabel: 'DEFINITION & ETYMOLOGY',
-        mainText: `${item.definition}\n\nVietnamese: "${item.vietnamese}"`,
+        definition: item.definition,
+        vietnamese: item.vietnamese,
+        example: item.contextSentence,
         subText: `Collocations: ${item.collocations.join(', ')} • ${item.etymology}`,
         ipa: item.ipa
       },

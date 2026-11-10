@@ -568,11 +568,11 @@ export class SkillTreeView {
 
   private renderViewSwitcher(): string {
     return `
-      <div class="constellation-view-switcher" role="tablist" aria-label="Constellation Display Modes">
-        <button class="view-switch-btn btn-view-skill-deck ${this.viewMode === 'deck' ? 'active' : ''}" data-view="deck" role="tab" aria-selected="${this.viewMode === 'deck'}" aria-label="Switch to Skill Grid View">
+      <div class="constellation-view-switcher" role="tablist" aria-label="${t('tree.display_modes_aria', undefined, 'Constellation Display Modes')}">
+        <button class="view-switch-btn btn-view-skill-deck ${this.viewMode === 'deck' ? 'active' : ''}" data-view="deck" role="tab" aria-selected="${this.viewMode === 'deck'}" aria-label="${t('tree.switch_grid_aria', undefined, 'Switch to Skill Grid View')}">
           <span class="btn-icon">${icon('grid', 16)}</span> <span class="btn-text">${t('tree.skill_grid', undefined, 'Skill Grid')}</span>
         </button>
-        <button class="view-switch-btn btn-view-star-map ${this.viewMode === 'map' ? 'active' : ''}" data-view="map" role="tab" aria-selected="${this.viewMode === 'map'}" aria-label="Switch to Star Map View">
+        <button class="view-switch-btn btn-view-star-map ${this.viewMode === 'map' ? 'active' : ''}" data-view="map" role="tab" aria-selected="${this.viewMode === 'map'}" aria-label="${t('tree.switch_map_aria', undefined, 'Switch to Star Map View')}">
           <span class="btn-icon">${icon('compass', 16)}</span> <span class="btn-text">${t('tree.star_map', undefined, 'Star Map')}</span>
         </button>
       </div>
@@ -583,11 +583,11 @@ export class SkillTreeView {
     const branches = ConstellationEngine.getMobileDeckBranches();
 
     return `
-      <div class="mobile-skill-deck" role="region" aria-label="Skill Grid Roadmap">
+      <div class="mobile-skill-deck" role="region" aria-label="${t('tree.skill_grid_roadmap_aria', undefined, 'Skill Grid Roadmap')}">
         <div class="deck-carousel-track">
           ${branches.map(b => `
-            <div class="deck-branch-card" data-branch="${b.id}" data-route="${b.routeTarget}" tabindex="0" role="region" aria-label="${b.name} Skill Card">
-              <button class="hud-btn btn-enter-dossier" data-route="${b.routeTarget}" aria-label="Enter ${b.name}">
+            <div class="deck-branch-card" data-branch="${b.id}" data-route="${b.routeTarget}" tabindex="0" role="region" aria-label="${t('tree.skill_card_aria', { name: b.name }, `${b.name} Skill Card`)}">
+              <button class="hud-btn btn-enter-dossier" data-route="${b.routeTarget}" aria-label="${t('tree.enter_skill_aria', { name: b.name }, `Enter ${b.name}`)}">
                 ${icon('arrowRight', 16)}
               </button>
 

@@ -24,6 +24,7 @@ import {
 import drillsData from '../assets/data/drills.json';
 import { ArticulatoryBiomechanics } from '../core/articulatory-biomechanics';
 import { t } from '../core/i18n';
+import { illustration } from '../utils/illustrations';
 
 export type SpeakingMode = 'nation' | 'roleplay' | 'formant' | 'ielts';
 
@@ -187,6 +188,32 @@ export class SpeakingDossier {
 
   public render(): HTMLElement {
     this.container.innerHTML = `
+      <!-- Speaking Studio Hero Banner -->
+      <div class="app-hero-banner speaking-hero-banner" style="margin-bottom: var(--space-12, 12px);">
+        <div class="app-hero-banner-content">
+          <span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">
+            [${t('speaking.title', undefined, 'SPEAKING STUDIO')} // ${this.mode.toUpperCase()}]
+          </span>
+          <h2 style="margin: 0; font-size: var(--font-h3, 16px); font-weight: 700; color: var(--ink-primary); line-height: 1.3;">
+            ${this.mode === 'nation' ? t('speaking.mode_nation', undefined, '4-3-2 Fluency') :
+              this.mode === 'roleplay' ? t('speaking.mode_roleplay', undefined, 'Conversation Partner') :
+              this.mode === 'formant' ? t('speaking.mode_formant', undefined, 'Formant & Pairs Lab') :
+              t('speaking.mode_ielts', undefined, 'IELTS Examiner')}
+          </h2>
+          <div style="font-size: var(--font-kicker); color: var(--ink-secondary); display: flex; gap: 8px; flex-wrap: wrap;">
+            <span>CEFR ${this.activeLevel}</span>
+            <span>•</span>
+            <span>${this.mode === 'nation' ? t('speaking.prompts_count', { count: this.items.length }) :
+              this.mode === 'roleplay' ? t('speaking.scenarios_count', { count: BUILTIN_SCENARIOS.length }) :
+              this.mode === 'formant' ? t('speaking.formant_lab_status') :
+              t('speaking.ielts_status')}</span>
+          </div>
+        </div>
+        <div class="app-hero-banner-art">
+          ${illustration('conversation', { size: 'banner', ariaLabel: t('speaking.title', undefined, 'Speaking Studio') })}
+        </div>
+      </div>
+
       <div class="dossier-control-bar">
         <div class="speaking-mode-cluster">
           <button class="hud-btn mode-tab ${this.mode === 'nation' ? 'active-tab' : ''}" data-mode="nation">
@@ -347,7 +374,7 @@ export class SpeakingDossier {
             </button>
 
             <div class="quick-response-box">
-              <input type="text" class="roleplay-text-input" placeholder="Type or confirm spoken response here..." />
+              <input type="text" class="roleplay-text-input" placeholder="${t('speaking.roleplay_input_ph', undefined, 'Type or confirm spoken response here...')}" />
               <button class="hud-btn btn-send-turn">${t('speaking.send_turn')}</button>
             </div>
           </div>
@@ -416,8 +443,8 @@ export class SpeakingDossier {
             <span class="hud-status-badge" style="background: rgba(165, 180, 252, 0.15); color: var(--accent-gold); border: none;">Branch: ${msg.branchTaken}</span>
           ` : ''}
           ${isPartner ? `
-            <button class="hud-btn btn-speak-bubble" data-text="${msg.text.replace(/"/g, '&quot;')}" title="Listen to spoken audio">
-              🔊 Speak
+            <button class="hud-btn btn-speak-bubble" data-text="${msg.text.replace(/"/g, '&quot;')}" title="${t('speaking.listen_spoken_title', undefined, 'Listen to spoken audio')}">
+              🔊 ${t('common.speak', undefined, 'Speak')}
             </button>
           ` : ''}
           ${msg.prosody ? `
@@ -758,13 +785,13 @@ export class SpeakingDossier {
               <path class="timer-progress-ring" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                 fill="none" stroke="var(--accent-gold)" stroke-width="2.5" stroke-dasharray="100, 100" />
             </svg>
-            <div class="timer-display-text" role="timer" aria-live="polite" aria-atomic="true" aria-label="Speaking take countdown timer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: var(--font-body-compact); font-weight: 700;">
+            <div class="timer-display-text" role="timer" aria-live="polite" aria-atomic="true" aria-label="${t('speaking.countdown_timer_aria', undefined, 'Speaking take countdown timer')}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: var(--font-body-compact); font-weight: 700;">
               ${this.formatTime(this.secondsRemaining)}
             </div>
           </div>
           <div style="display: flex; gap: 8px; margin-top: 6px;">
-            <button type="button" class="hud-btn btn-timer-toggle" aria-label="Start or pause timer" title="Start or pause timer" style="padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); font-size: var(--font-kicker); display: inline-flex; align-items: center;">${this.isTimerRunning ? '⏸ Pause' : '▶ Start'}</button>
-            <button type="button" class="hud-btn btn-take-complete" aria-label="Stop and finish take" title="Stop and finish take" style="padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); font-size: var(--font-kicker); display: inline-flex; align-items: center;" ${!this.isTimerRunning ? 'disabled' : ''}>⏹ Stop</button>
+            <button type="button" class="hud-btn btn-timer-toggle" aria-label="${t('speaking.timer_toggle_aria', undefined, 'Start or pause timer')}" title="${t('speaking.timer_toggle_aria', undefined, 'Start or pause timer')}" style="padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); font-size: var(--font-kicker); display: inline-flex; align-items: center;">${this.isTimerRunning ? '⏸ Pause' : '▶ Start'}</button>
+            <button type="button" class="hud-btn btn-take-complete" aria-label="${t('speaking.stop_take_aria', undefined, 'Stop and finish take')}" title="${t('speaking.stop_take_aria', undefined, 'Stop and finish take')}" style="padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); font-size: var(--font-kicker); display: inline-flex; align-items: center;" ${!this.isTimerRunning ? 'disabled' : ''}>⏹ Stop</button>
           </div>
         </div>
 
@@ -1769,8 +1796,8 @@ export class SpeakingDossier {
                 <button class="hud-btn btn-hear-examiner">${icon('volume', 12)} Hear Question</button>
               </div>
               <div style="display: flex; gap: 8px;">
-                <input type="text" class="ielts-text-fallback" placeholder="Or type your spoken response here..." style="flex: 1; padding: 8px 12px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm, 6px); color: var(--ink-primary);" />
-                <button class="hud-btn btn-submit-ielts-turn" style="background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none; padding: 0 16px;">Send</button>
+                <input type="text" class="ielts-text-fallback" placeholder="${t('speaking.type_fallback_ph', undefined, 'Or type your spoken response here...')}" style="flex: 1; padding: 8px 12px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm, 6px); color: var(--ink-primary);" />
+                <button class="hud-btn btn-submit-ielts-turn" style="background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none; padding: 0 16px;">${t('speaking.send_turn', undefined, 'Send')}</button>
               </div>
             </div>
           </div>
@@ -1862,8 +1889,8 @@ export class SpeakingDossier {
                 <button class="hud-btn btn-hear-examiner">${icon('volume', 12)} Hear Question</button>
               </div>
               <div style="display: flex; gap: 8px;">
-                <input type="text" class="ielts-text-fallback" placeholder="Or type your discursive response here..." style="flex: 1; padding: 8px 12px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm, 6px); color: var(--ink-primary);" />
-                <button class="hud-btn btn-submit-ielts-turn" style="background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none; padding: 0 16px;">Send</button>
+                <input type="text" class="ielts-text-fallback" placeholder="${t('speaking.type_fallback_ph', undefined, 'Or type your discursive response here...')}" style="flex: 1; padding: 8px 12px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm, 6px); color: var(--ink-primary);" />
+                <button class="hud-btn btn-submit-ielts-turn" style="background: var(--accent-gold); color: var(--bg-canvas); font-weight: 700; border: none; padding: 0 16px;">${t('speaking.send_turn', undefined, 'Send')}</button>
               </div>
             </div>
           </div>
@@ -1889,17 +1916,17 @@ export class SpeakingDossier {
                 <p style="font-size: var(--font-kicker); color: var(--ink-secondary); margin: 0; line-height: 1.4;">${this.ieltsScorecard?.comments.fc || 'Speaks at length without noticeable effort or loss of coherence.'}</p>
               </div>
               <div class="ielts-criterion-card">
-                <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">LEXICAL RESOURCE</span>
+                <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">${t('speaking.lexical_resource', undefined, 'LEXICAL RESOURCE')}</span>
                 <span class="ielts-criterion-band">Band ${this.ieltsScorecard?.lrBand || 8.0}</span>
                 <p style="font-size: var(--font-kicker); color: var(--ink-secondary); margin: 0; line-height: 1.4;">${this.ieltsScorecard?.comments.lr || 'Uses a wide, flexible vocabulary resource readily and flexibly to discuss topics.'}</p>
               </div>
               <div class="ielts-criterion-card">
-                <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">GRAMMATICAL RANGE</span>
+                <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">${t('speaking.grammatical_range', undefined, 'GRAMMATICAL RANGE')}</span>
                 <span class="ielts-criterion-band">Band ${this.ieltsScorecard?.graBand || 7.5}</span>
                 <p style="font-size: var(--font-kicker); color: var(--ink-secondary); margin: 0; line-height: 1.4;">${this.ieltsScorecard?.comments.gra || 'Produces a wide range of complex structures with good flexibility and accuracy.'}</p>
               </div>
               <div class="ielts-criterion-card">
-                <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">PRONUNCIATION</span>
+                <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">${t('speaking.pronunciation', undefined, 'PRONUNCIATION')}</span>
                 <span class="ielts-criterion-band">Band ${this.ieltsScorecard?.prBand || 7.5}</span>
                 <p style="font-size: var(--font-kicker); color: var(--ink-secondary); margin: 0; line-height: 1.4;">${this.ieltsScorecard?.comments.pr || 'Uses a wide range of phonological features to convey precise subtle meaning.'}</p>
               </div>

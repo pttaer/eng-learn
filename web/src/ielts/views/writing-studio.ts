@@ -1,6 +1,7 @@
 import { countdown, esc, fmtTime, h } from '../ui';
 import { validateFourSentenceParagraph, ParagraphEvaluation } from '../writing-heuristics';
 import { icon } from '../../utils/icons';
+import { illustration } from '../../utils/illustrations';
 import { HapticEngine } from '../../core/haptic-engine';
 import { AudioSynthesizer } from '../../core/audio-synthesizer';
 import { t } from '../../core/i18n';
@@ -518,15 +519,18 @@ export function writingStudioView(root: HTMLElement): () => void {
   const shell = h('div', 'ie-writing-studio-shell');
 
   // Studio Header
-  const header = h('div', 'ie-studio-header');
+  const header = h('div', 'app-hero-banner ie-studio-header');
   header.innerHTML = `
-    <div class="ie-studio-title-block">
-      <span class="ie-studio-badge">${t('wstudio.badge', undefined, 'KEINO CAMPBELL BAND 7+ SUITE')}</span>
+    <div class="app-hero-banner-content ie-studio-title-block">
+      <span class="ie-studio-badge" style="align-self: flex-start;">${t('wstudio.badge', undefined, 'KEINO CAMPBELL BAND 7+ SUITE')}</span>
       <h1 class="ie-title">${t('wstudio.title', undefined, 'Interactive Writing Studio')}</h1>
       <details class="ie-theory-details">
         <summary>${t('wstudio.principles_summary', undefined, 'Task 1 &amp; Task 2 Architecture Principles')}</summary>
         <p class="ie-lead">${t('wstudio.principles_desc', undefined, 'Master Task 1 with 6 progressive visual blueprints (strictly enforcing the 2-Sentence Overview zero-data rule), architect Task 2 with 5 discursive architectures validated by Myers semantic diff, and drill syntactic clause formulas with the Tactical Clause Builder.')}</p>
       </details>
+    </div>
+    <div class="app-hero-banner-art">
+      ${illustration('essay-writing', { size: 'banner', ariaLabel: 'Interactive Writing Studio' })}
     </div>
   `;
 
@@ -887,12 +891,12 @@ export function writingStudioView(root: HTMLElement): () => void {
     const bp = TASK1_BLUEPRINTS[activeT1Index] || TASK1_BLUEPRINTS[0];
 
     const KIND_LABELS: Record<string, { full: string; short: string }> = {
-      line: { full: 'Line Graph', short: 'Line' },
-      bar: { full: 'Bar Chart', short: 'Bar' },
-      pie: { full: 'Pie Chart', short: 'Pie' },
-      table: { full: 'Data Table', short: 'Table' },
-      process: { full: 'Process', short: 'Process' },
-      map: { full: 'Map', short: 'Map' }
+      line: { full: t('ielts.chart_line_full', undefined, 'Line Graph'), short: t('ielts.chart_line_short', undefined, 'Line') },
+      bar: { full: t('ielts.chart_bar_full', undefined, 'Bar Chart'), short: t('ielts.chart_bar_short', undefined, 'Bar') },
+      pie: { full: t('ielts.chart_pie_full', undefined, 'Pie Chart'), short: t('ielts.chart_pie_short', undefined, 'Pie') },
+      table: { full: t('ielts.chart_table_full', undefined, 'Data Table'), short: t('ielts.chart_table_short', undefined, 'Table') },
+      process: { full: t('ielts.chart_process_full', undefined, 'Process Diagram'), short: t('ielts.chart_process_short', undefined, 'Process') },
+      map: { full: t('ielts.chart_map_full', undefined, 'Map Comparison'), short: t('ielts.chart_map_short', undefined, 'Map') }
     };
 
     const visualTabs = h('div', 'ie-tabs ie-visual-tabs');
@@ -952,9 +956,9 @@ export function writingStudioView(root: HTMLElement): () => void {
           <textarea class="ie-textarea ie-t1-overview-input" placeholder="${t('writing.overview_placeholder', undefined, 'Overall, it is evident that [dominant trend]... In stark contrast, [key anomaly]...')}"></textarea>
           <div class="ie-step-feedback ie-overview-feedback">
             <ul class="ie-checklist-items">
-              <li class="chk-numbers">Checking for raw data figures...</li>
-              <li class="chk-trend">Checking for primary trend...</li>
-              <li class="chk-contrast">Checking for contrast / anomaly...</li>
+              <li class="chk-numbers">${t('wstudio.checking_numbers', undefined, 'Checking for raw data figures...')}</li>
+              <li class="chk-trend">${t('wstudio.checking_trend', undefined, 'Checking for primary trend...')}</li>
+              <li class="chk-contrast">${t('wstudio.checking_contrast', undefined, 'Checking for contrast / anomaly...')}</li>
             </ul>
           </div>
         </div>
@@ -988,27 +992,27 @@ export function writingStudioView(root: HTMLElement): () => void {
 
       <!-- Vocabulary Palette for Active Blueprint -->
       <div class="ie-vocab-palette">
-        <h4>🎨 Academic Lexicon Palette for ${esc(bp.kind.toUpperCase())} (Click to Insert)</h4>
+        <h4>🎨 ${t('writing.academic_lexicon_palette', { kind: esc(bp.kind.toUpperCase()) }, `Academic Lexicon Palette for ${esc(bp.kind.toUpperCase())} (Click to Insert)`)}</h4>
         <div class="ie-vocab-group">
-          <span class="ie-vocab-label">Trend &amp; Transform Verbs:</span>
+          <span class="ie-vocab-label">${t('writing.trend_transform_verbs', undefined, 'Trend & Transform Verbs:')}</span>
           <div class="ie-chips">
             ${bp.vocab.verbs.map(v => `<button type="button" class="ie-chip" data-word="${v}">${esc(v)}</button>`).join('')}
           </div>
         </div>
         <div class="ie-vocab-group">
-          <span class="ie-vocab-label">Degree &amp; Sequence Adverbs:</span>
+          <span class="ie-vocab-label">${t('writing.degree_sequence_adverbs', undefined, 'Degree & Sequence Adverbs:')}</span>
           <div class="ie-chips">
             ${bp.vocab.adverbs.map(a => `<button type="button" class="ie-chip" data-word="${a}">${esc(a)}</button>`).join('')}
           </div>
         </div>
         <div class="ie-vocab-group">
-          <span class="ie-vocab-label">Prepositions of Change &amp; Location:</span>
+          <span class="ie-vocab-label">${t('writing.prepositions_change_loc', undefined, 'Prepositions of Change & Location:')}</span>
           <div class="ie-chips">
             ${bp.vocab.prepositions.map(p => `<button type="button" class="ie-chip" data-word="${p}">${esc(p)}</button>`).join('')}
           </div>
         </div>
         <div class="ie-vocab-group">
-          <span class="ie-vocab-label">Quantifiers &amp; Proportions:</span>
+          <span class="ie-vocab-label">${t('writing.quantifiers_proportions', undefined, 'Quantifiers & Proportions:')}</span>
           <div class="ie-chips">
             ${bp.vocab.quantifiers.map(q => `<button type="button" class="ie-chip" data-word="${q}">${esc(q)}</button>`).join('')}
           </div>
@@ -1316,7 +1320,7 @@ export function writingStudioView(root: HTMLElement): () => void {
         const candidate = [introInp.value, b1Inp.value, b2Inp.value, conclInp.value].filter(Boolean).join(' ');
 
         if (!candidate.trim()) {
-          diffStream.innerHTML = '<p class="ie-note">Please enter your essay draft above or load the model before executing diff.</p>';
+          diffStream.innerHTML = `<p class="ie-note">${t('wstudio.enter_draft_prompt', undefined, 'Please enter your essay draft above or load the model before executing diff.')}</p>`;
           return;
         }
 
@@ -1328,16 +1332,16 @@ export function writingStudioView(root: HTMLElement): () => void {
         const renderedDiff = diffTokens
           .map(tok => {
             if (tok.type === 'match') return `<span class="diff-word-match">${esc(tok.value)}</span>`;
-            if (tok.type === 'insert') return `<span class="diff-word-insert" title="Your unique phrasing">${esc(tok.value)}</span>`;
-            return `<span class="diff-word-delete" title="Omitted Band 8.5 benchmark">${esc(tok.value)}</span>`;
+            if (tok.type === 'insert') return `<span class="diff-word-insert" title="${t('writing.diff_insert_title', undefined, 'Your unique phrasing')}">${esc(tok.value)}</span>`;
+            return `<span class="diff-word-delete" title="${t('writing.diff_delete_title', undefined, 'Omitted Band 8.5 benchmark')}">${esc(tok.value)}</span>`;
           })
           .join(' ');
 
         diffStream.innerHTML = `
           <div class="ie-diff-stats">
-            <span>Lexical Overlap: <b>${overlapPct}%</b></span>
-            <span>Total Diff Tokens: <b>${total}</b></span>
-            <span>Shared Word Anchors: <b>${matches}</b></span>
+            <span>${t('writing.lexical_overlap', undefined, 'Lexical Overlap:')} <b>${overlapPct}%</b></span>
+            <span>${t('writing.total_diff_tokens', undefined, 'Total Diff Tokens:')} <b>${total}</b></span>
+            <span>${t('writing.shared_word_anchors', undefined, 'Shared Word Anchors:')} <b>${matches}</b></span>
           </div>
           <div class="ie-diff-tokens-stream">${renderedDiff}</div>
         `;

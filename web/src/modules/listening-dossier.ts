@@ -7,6 +7,7 @@ import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import listeningData from '../assets/data/listening.json';
 import { t } from '../core/i18n';
+import { illustration } from '../utils/illustrations';
 
 export type ListeningMode = 'passive' | 'cloze';
 
@@ -229,6 +230,26 @@ export class ListeningDossier {
 
   public render(): HTMLElement {
     this.container.innerHTML = `
+      <!-- Acoustic Studio Hero Banner -->
+      <div class="app-hero-banner listening-hero-banner" style="margin-bottom: var(--space-12, 12px);">
+        <div class="app-hero-banner-content">
+          <span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">
+            [${t('listening.title')} // ${t('listening.active_transcription')}]
+          </span>
+          <h2 style="margin: 0; font-size: var(--font-h3, 16px); font-weight: 700; color: var(--ink-primary); line-height: 1.3;">
+            ${this.currentMode === 'cloze' ? t('listening.cloze_transcription') : t('listening.passive_passages')}
+          </h2>
+          <div style="font-size: var(--font-kicker); color: var(--ink-secondary); display: flex; gap: 8px; flex-wrap: wrap;">
+            <span>CEFR ${this.activeLevel}</span>
+            <span>•</span>
+            <span>${this.currentMode === 'cloze' ? t('listening.active_cloze') : t('listening.three_pass_protocol')}</span>
+          </div>
+        </div>
+        <div class="app-hero-banner-art">
+          ${illustration('podcast-listener', { size: 'banner', ariaLabel: t('listening.title') })}
+        </div>
+      </div>
+
       <div class="dossier-control-bar">
         <div class="listening-header-row">
           <span class="telemetry-label">${t('listening.active_transcription')}</span>
@@ -236,7 +257,7 @@ export class ListeningDossier {
             <span class="telemetry-value">${this.currentMode === 'cloze' ? t('listening.active_cloze') : t('listening.three_pass_protocol')}</span>
           </div>
         </div>
-        <div class="listening-mode-cluster" role="tablist" aria-label="Listening Mode">
+        <div class="listening-mode-cluster" role="tablist" aria-label="${t('listening.mode_cluster_aria', undefined, 'Listening Mode')}">
           <button type="button" class="hud-btn mode-tab ${this.currentMode === 'passive' ? 'active' : ''}" data-mode="passive" aria-pressed="${this.currentMode === 'passive'}">
             ${icon('headphones', 13)} <span class="tab-label">${t('listening.passive_passages')}</span>
           </button>
@@ -278,7 +299,15 @@ export class ListeningDossier {
     slot.innerHTML = '';
 
     if (this.passages.length === 0) {
-      slot.innerHTML = '<div class="empty-state-notice">No passages available for this level.</div>';
+      slot.innerHTML = `
+        <div class="empty-state-notice">
+          <div class="app-illustration-wrap" style="margin-bottom: var(--space-12, 12px);">
+            ${illustration('no-data', { size: 'empty', ariaLabel: t('reading.no_passages', undefined, 'No passages available for this level.') })}
+          </div>
+          <div class="telemetry-label">[NO CONTENT]</div>
+          <p>${t('reading.no_passages', undefined, 'No passages available for this level.')}</p>
+        </div>
+      `;
       return;
     }
 

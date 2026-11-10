@@ -217,7 +217,7 @@ export class MediationDossier {
     this.container.className = 'mediation-dossier-shell';
     this.container.setAttribute('role', 'region');
     this.container.setAttribute('aria-roledescription', 'mediation-workbench');
-    this.container.setAttribute('aria-label', 'CEFR Split-Screen Mediation Workbench');
+    this.container.setAttribute('aria-label', t('mediation.workbench_aria', undefined, 'CEFR Split-Screen Mediation Workbench'));
 
     this.initScenarios();
   }
@@ -249,9 +249,9 @@ export class MediationDossier {
 
     this.container.innerHTML = `
       <!-- Top Control Bar (Mode Tabs & Level Filter) -->
-      <header class="mediation-control-bar" role="toolbar" aria-label="Mediation Navigation Toolbar">
+      <header class="mediation-control-bar" role="toolbar" aria-label="${t('mediation.toolbar_aria', undefined, 'Mediation Navigation Toolbar')}">
         <div class="control-row">
-          <div class="mediation-category-selector" role="tablist" aria-label="Mediation Modes">
+          <div class="mediation-category-selector" role="tablist" aria-label="${t('mediation.modes_aria', undefined, 'Mediation Modes')}">
             <button class="hud-btn mode-tab ${this.currentMode === 'TEXT_STREAMLINE' ? 'active' : ''}" data-mode="TEXT_STREAMLINE" role="tab" aria-selected="${this.currentMode === 'TEXT_STREAMLINE'}">
               ${icon('book', 12)} <span class="tab-label">${t('mediation.tab_streamline', undefined, 'Text Streamlining')}</span>
             </button>
@@ -267,20 +267,20 @@ export class MediationDossier {
           </div>
 
           <div class="mediation-pagination-cluster">
-            <button class="hud-btn btn-prev-scenario" title="Previous Scenario" aria-label="Previous Scenario" ${this.currentScenarioIndex === 0 ? 'disabled' : ''}>
+            <button class="hud-btn btn-prev-scenario" title="${t('common.prev_scenario', undefined, 'Previous Scenario')}" aria-label="${t('common.prev_scenario', undefined, 'Previous Scenario')}" ${this.currentScenarioIndex === 0 ? 'disabled' : ''}>
               ${icon('arrowLeft', 12)}
             </button>
             <span class="mediation-page-indicator">
-              Scenario <strong>${this.currentScenarioIndex + 1}</strong> of ${this.currentScenarios.length}
+              ${t('mediation.scenario_progress', { current: this.currentScenarioIndex + 1, total: this.currentScenarios.length }, `Scenario <strong>${this.currentScenarioIndex + 1}</strong> of ${this.currentScenarios.length}`)}
             </span>
-            <button class="hud-btn btn-next-scenario" title="Next Scenario" aria-label="Next Scenario" ${this.currentScenarioIndex >= this.currentScenarios.length - 1 ? 'disabled' : ''}>
+            <button class="hud-btn btn-next-scenario" title="${t('common.next_scenario', undefined, 'Next Scenario')}" aria-label="${t('common.next_scenario', undefined, 'Next Scenario')}" ${this.currentScenarioIndex >= this.currentScenarios.length - 1 ? 'disabled' : ''}>
               ${icon('arrowRight', 12)}
             </button>
           </div>
         </div>
 
         <!-- Mobile Segmented Tab Selector (<768px viewport) -->
-        <div class="mediation-mobile-toggle-bar" role="tablist" aria-label="Mobile Workbench Pane View">
+        <div class="mediation-mobile-toggle-bar" role="tablist" aria-label="${t('mediation.mobile_pane_aria', undefined, 'Mobile Workbench Pane View')}">
           <button class="mobile-toggle-btn ${this.activeMobileTab === 'source' ? 'active' : ''}" data-pane="source" role="tab" aria-selected="${this.activeMobileTab === 'source'}">
             ${icon('book', 12)} <span>${t('mediation.source_doc', undefined, '1. Source Document')}</span>
           </button>
@@ -294,12 +294,12 @@ export class MediationDossier {
       <main class="mediation-split-grid ${this.activeMobileTab === 'source' ? 'show-source-mobile' : 'show-workbench-mobile'}">
         
         <!-- Left Pane: Authentic Source Dossier (45%) -->
-        <section class="mediation-source-panel" aria-label="Source Document Dossier">
+        <section class="mediation-source-panel" aria-label="${t('mediation.source_panel_aria', undefined, 'Source Document Dossier')}">
           <div class="panel-header-strip">
             <div class="badge-cluster">
               <span class="hud-status-badge badge-tier">${scenario.level}</span>
-              <span class="hud-status-badge badge-recipient" title="Target Recipient Persona">👤 ${scenario.recipient}</span>
-              <span class="hud-status-badge badge-channel" title="Target Communication Channel">💬 ${scenario.channel}</span>
+              <span class="hud-status-badge badge-recipient" title="${t('mediation.target_recipient_title', undefined, 'Target Recipient Persona')}">👤 ${scenario.recipient}</span>
+              <span class="hud-status-badge badge-channel" title="${t('mediation.target_channel_title', undefined, 'Target Communication Channel')}">💬 ${scenario.channel}</span>
             </div>
             <span class="target-envelope-pill">${t('mediation.target_words', { min: scenario.targetWordRange[0], max: scenario.targetWordRange[1] }, `TARGET: ${scenario.targetWordRange[0]}-${scenario.targetWordRange[1]} WORDS`)}</span>
           </div>
@@ -309,7 +309,7 @@ export class MediationDossier {
             <span class="goal-text"><strong>${t('mediation.goal_label', undefined, 'GOAL:')}</strong> ${scenario.goal}</span>
           </div>
 
-          <div class="source-document-scroll" tabindex="0" role="region" aria-label="Authentic Source Content">
+          <div class="source-document-scroll" tabindex="0" role="region" aria-label="${t('mediation.source_content_aria', undefined, 'Authentic Source Content')}">
             <div class="source-document-header">
               <span class="doc-title">${scenario.title}</span>
               <span class="doc-meta">${t('mediation.source_length', { count: this.countWords(scenario.sourceText) }, `[Source Length: ${this.countWords(scenario.sourceText)} words]`)}</span>
@@ -323,21 +323,21 @@ export class MediationDossier {
             <div class="anchor-tags-wrapper">
               <span class="anchor-label">${t('mediation.key_concepts', undefined, 'KEY CONCEPTS TO MEDIATE:')}</span>
               <div class="anchor-chips-row">
-                ${scenario.keyAnchors.map(a => `<span class="anchor-chip" title="Key concept">${a}</span>`).join('')}
+                ${scenario.keyAnchors.map(a => `<span class="anchor-chip" title="${t('mediation.key_concept_title', undefined, 'Key concept')}">${a}</span>`).join('')}
               </div>
             </div>
           </div>
         </section>
 
         <!-- Right Pane: Active Mediation Composition Console (55%) -->
-        <section class="mediation-workbench-panel" aria-label="Active Mediation Console">
+        <section class="mediation-workbench-panel" aria-label="${t('mediation.console_aria', undefined, 'Active Mediation Console')}">
           <div class="workbench-header-strip">
             <div class="workbench-title-group">
               <span class="telemetry-label">${t('mediation.active_comp', undefined, 'Active Mediation Composition')}</span>
               <span class="telemetry-sub">${t('mediation.synthesize_hint', undefined, 'Synthesize and adapt for recipient without copying verbatim text')}</span>
             </div>
             <div class="word-count-badge" id="live-word-count-badge">
-              0 / ${scenario.targetWordRange[1]} words
+              ${t('mediation.live_word_count', { current: 0, target: scenario.targetWordRange[1] }, `0 / ${scenario.targetWordRange[1]} words`)}
             </div>
           </div>
 
@@ -345,20 +345,20 @@ export class MediationDossier {
             <textarea 
               id="mediation-textarea" 
               class="mediation-textarea" 
-              placeholder="Draft your mediated communication here${matchMedia('(pointer: coarse)').matches ? '' : ' (Press Ctrl+Enter to evaluate)'}..."
-              aria-label="Mediation Draft Input"
+              placeholder="${t('mediation.draft_ph', undefined, 'Draft your mediated communication here...')}"
+              aria-label="${t('mediation.input_aria', undefined, 'Mediation Draft Input')}"
               spellcheck="false"
             ></textarea>
           </div>
 
           <div class="workbench-actions-bar">
-            <button class="hud-btn btn-evaluate-resolution" id="btn-evaluate" title="Evaluate Resolution against CEFR Mediation Rubric (Ctrl+Enter)">
+            <button class="hud-btn btn-evaluate-resolution" id="btn-evaluate" title="${t('mediation.eval_title', undefined, 'Evaluate Resolution against CEFR Mediation Rubric (Ctrl+Enter)')}">
               ${icon('zap', 14)} <span class="btn-text">${t('mediation.evaluate_btn', undefined, 'Evaluate Response')} <span class="kbd-badge kbd-only">[Ctrl+Enter]</span></span>
             </button>
-            <button class="hud-btn btn-toggle-exemplar" id="btn-exemplar" title="Inspect Exemplar Benchmark">
+            <button class="hud-btn btn-toggle-exemplar" id="btn-exemplar" title="${t('mediation.inspect_exemplar_title', undefined, 'Inspect Exemplar Benchmark')}">
               ${icon('eye', 14)} <span class="btn-text">${t('mediation.model_benchmark', undefined, 'Model Benchmark')}</span>
             </button>
-            <button class="hud-btn btn-reset-draft" id="btn-reset" title="Clear Draft">
+            <button class="hud-btn btn-reset-draft" id="btn-reset" title="${t('mediation.clear_draft_title', undefined, 'Clear Draft')}">
               ${icon('rotateCcw', 14)} <span class="btn-text">${t('mediation.clear_draft', undefined, 'Clear')}</span>
             </button>
           </div>
@@ -484,7 +484,7 @@ export class MediationDossier {
       const count = this.countWords(text);
       const scenario = this.getCurrentScenario();
       if (wordBadge && scenario) {
-        wordBadge.textContent = `${count} / ${scenario.targetWordRange[1]} WORDS`;
+        wordBadge.textContent = t('mediation.live_word_count', { current: count, target: scenario.targetWordRange[1] }, `${count} / ${scenario.targetWordRange[1]} words`);
         const [minW, maxW] = scenario.targetWordRange;
         if (count >= minW && count <= maxW) {
           wordBadge.className = 'word-count-badge in-range';
@@ -775,9 +775,9 @@ export class MediationDossier {
       if (tok.type === 'match') {
         return `<span class="diff-word-match">${escaped}</span>`;
       } else if (tok.type === 'insert') {
-        return `<span class="diff-word-insert" title="Your unique phrasing / synthesis">${escaped}</span>`;
+        return `<span class="diff-word-insert" title="${t('mediation.diff_insert_title', undefined, 'Your unique phrasing / synthesis')}">${escaped}</span>`;
       } else {
-        return `<span class="diff-word-delete" title="Omitted benchmark element">${escaped}</span>`;
+        return `<span class="diff-word-delete" title="${t('mediation.diff_delete_title', undefined, 'Omitted benchmark element')}">${escaped}</span>`;
       }
     }).join(' ');
 
@@ -788,7 +788,7 @@ export class MediationDossier {
         <div class="evaluation-header-bar">
           <div class="verdict-group">
             <span class="verdict-icon">${evalResult.isPassed ? '✓' : '⚠'}</span>
-            <span class="verdict-title">${evalResult.isPassed ? 'Mediation Criteria Met' : 'Revision Recommended'}</span>
+            <span class="verdict-title">${evalResult.isPassed ? t('mediation.criteria_met', undefined, 'Mediation Criteria Met') : t('mediation.revision_recommended', undefined, 'Revision Recommended')}</span>
             <span class="hud-status-badge cefr-award-badge">${evalResult.awardedCefr} BAND</span>
           </div>
           <div class="composite-score-box">
@@ -802,22 +802,22 @@ export class MediationDossier {
           <div class="metric-card ${evalResult.scoreFidelity >= 75 ? 'metric-good' : 'metric-warn'}">
             <span class="metric-label">1. FIDELITY (F)</span>
             <span class="metric-val">${evalResult.scoreFidelity}%</span>
-            <span class="metric-desc">${evalResult.matchedAnchors.length}/${scenario.keyAnchors.length} key concepts</span>
+            <span class="metric-desc">${t('mediation.key_concepts_count', { matched: evalResult.matchedAnchors.length, total: scenario.keyAnchors.length }, `${evalResult.matchedAnchors.length}/${scenario.keyAnchors.length} key concepts`)}</span>
           </div>
           <div class="metric-card ${evalResult.scoreSelection >= 75 ? 'metric-good' : 'metric-warn'}">
             <span class="metric-label">2. SELECTION (S)</span>
             <span class="metric-val">${evalResult.scoreSelection}%</span>
-            <span class="metric-desc">${evalResult.wordCount} words (${evalResult.compressionRatio}% size)</span>
+            <span class="metric-desc">${t('mediation.words_compression', { words: evalResult.wordCount, ratio: evalResult.compressionRatio }, `${evalResult.wordCount} words (${evalResult.compressionRatio}% size)`)}</span>
           </div>
           <div class="metric-card ${evalResult.scoreReformulation >= 75 ? 'metric-good' : 'metric-warn'}">
             <span class="metric-label">3. REFORMULATION (R)</span>
             <span class="metric-val">${evalResult.scoreReformulation}%</span>
-            <span class="metric-desc">${evalResult.verbatimPenalties.length === 0 ? 'Zero verbatim leaks' : `${evalResult.verbatimPenalties.length} leaks`}</span>
+            <span class="metric-desc">${evalResult.verbatimPenalties.length === 0 ? t('mediation.zero_verbatim', undefined, 'Zero verbatim leaks') : t('mediation.verbatim_leaks_count', { count: evalResult.verbatimPenalties.length }, `${evalResult.verbatimPenalties.length} leaks`)}</span>
           </div>
           <div class="metric-card ${evalResult.scoreRegister >= 75 ? 'metric-good' : 'metric-warn'}">
             <span class="metric-label">4. REGISTER (A)</span>
             <span class="metric-val">${evalResult.scoreRegister}%</span>
-            <span class="metric-desc">Tone &amp; Netiquette</span>
+            <span class="metric-desc">${t('mediation.tone_netiquette', undefined, 'Tone & Netiquette')}</span>
           </div>
         </div>
 
@@ -874,7 +874,7 @@ export class MediationDossier {
     modal.className = 'completion-modal-overlay interactive';
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-modal', 'true');
-    modal.setAttribute('aria-label', 'Exemplar Mediation Benchmark');
+    modal.setAttribute('aria-label', t('mediation.exemplar_modal_aria', undefined, 'Exemplar Mediation Benchmark'));
 
     modal.innerHTML = `
       <div class="completion-receipt-card exemplar-modal-card">

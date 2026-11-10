@@ -89,16 +89,13 @@ export class LexiconDrawer {
   }
 
   /**
-   * Loads the two large dictionaries on first use, then builds the index once.
+   * Loads the base dictionary on first use, then builds the index once.
    * A failed load is cleared so the next open retries.
    */
   private ensureIndex(): Promise<void> {
     if (!this.indexReady) {
-      this.indexReady = Promise.all([
-        import('../assets/data/lexicon-dictionary.json'),
-        import('../assets/data/iot-vocabulary.json')
-      ])
-        .then(([lexicon, iot]) => this.buildDictionaryIndex(lexicon.default, iot.default))
+      this.indexReady = import('../assets/data/lexicon-dictionary.json')
+        .then((lexicon) => this.buildDictionaryIndex(lexicon.default))
         .catch(err => {
           this.indexReady = null;
           throw err;
@@ -110,7 +107,7 @@ export class LexiconDrawer {
   /**
    * Pre-indexes all lexicon, vocabulary, and collocation data for strict O(1) lookup.
    */
-  private buildDictionaryIndex(lexiconDictionaryData: any, iotVocabularyData: any): void {
+  private buildDictionaryIndex(lexiconDictionaryData: any): void {
     // 1. Ingest base lexicon dictionary
     if (lexiconDictionaryData && typeof lexiconDictionaryData === 'object') {
       if (Array.isArray(lexiconDictionaryData)) {
@@ -170,26 +167,6 @@ export class LexiconDrawer {
           contextSentence: ''
         };
         this.indexEntry(item.phrase, entry, false);
-      }
-    }
-
-    // 4. Ingest IELTS Online Tests Master Vocabulary (3,345 items & 10,015 collocations)
-    if (Array.isArray(iotVocabularyData)) {
-      for (const item of iotVocabularyData as any[]) {
-        if (!item || !item.word) continue;
-        const entry: LexiconEntry = {
-          id: item.id,
-          word: item.word,
-          ipa: '',
-          pos: item.pos || 'academic word',
-          root: item.topic ? 'IELTS Topic: ' + item.topic : '',
-          definition: item.definition || '',
-          vietnamese: item.vietnamese || '',
-          collocations: Array.isArray(item.collocations) ? item.collocations : [],
-          level: item.cefrLevel === 'C1' ? 4 : (item.cefrLevel === 'B2' ? 3 : 2),
-          contextSentence: item.example || ''
-        };
-        this.indexEntry(item.word, entry, false);
       }
     }
   }
@@ -275,7 +252,7 @@ export class LexiconDrawer {
           <div class="lexicon-drawer-subhead">
             <span class="lexicon-drawer-ipa" id="lexicon-drawer-ipa">/ipa/</span>
             <span class="lexicon-drawer-pos" id="lexicon-drawer-pos">POS</span>
-            <button type="button" class="hud-btn lexicon-audio-btn" id="lexicon-audio-btn" aria-label="Listen to pronunciation" title="Pronounce">
+            <button type="button" class="hud-btn lexicon-audio-btn" id="lexicon-audio-btn" aria-label="${t('tenses.listen_sentence_aria', undefined, 'Listen to pronunciation')}" title="${t('action.pronounce', undefined, 'Pronounce')}">
               <span aria-hidden="true">${icon('volume')}</span>
             </button>
           </div>
@@ -650,21 +627,21 @@ export class LexiconDrawer {
     const existing = StorageManager.getCardState(cardId);
 
     if (existing) {
-      this.srsBtn.textContent = `✓ ${t('lexicon.in_srs', undefined, 'In SRS Deck')}`;
+      this.srsBtn.textContent = t('lexicon.in_srs_deck', undefined, '✓ In SRS Deck');
       this.srsBtn.classList.add('is-added');
       this.srsBtn.disabled = true;
 
       const dueDate = new Date(existing.dueDate);
       const isDue = existing.dueDate <= Date.now();
       const statusText = isDue
-        ? `Status: Due for review today (Reps: ${existing.repetitions})`
-        : `Status: Next review in ${existing.interval}d (${dueDate.toLocaleDateString()})`;
+        ? t('lexicon.status_due_today', { reps: existing.repetitions }, `Status: Due for review today (Reps: ${existing.repetitions})`)
+        : t('lexicon.status_next_review', { days: existing.interval, date: dueDate.toLocaleDateString() }, `Status: Next review in ${existing.interval}d (${dueDate.toLocaleDateString()})`);
       this.srsStatusEl.textContent = statusText;
     } else {
-      this.srsBtn.textContent = `+ ${t('lexicon.bookmark_srs', undefined, 'Add to SRS Deck')}`;
+      this.srsBtn.textContent = t('lexicon.add_to_srs_deck', undefined, '+ Add to SRS Deck');
       this.srsBtn.classList.remove('is-added');
       this.srsBtn.disabled = false;
-      this.srsStatusEl.textContent = 'Not yet in your spaced repetition review queue';
+      this.srsStatusEl.textContent = t('lexicon.status_not_in_srs', undefined, 'Not yet in your spaced repetition review queue');
     }
   }
 

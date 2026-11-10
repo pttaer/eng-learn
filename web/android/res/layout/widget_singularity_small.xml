@@ -19,13 +19,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/widget_badge_bg"
-            android:paddingLeft="7dp"
-            android:paddingTop="2dp"
-            android:paddingRight="7dp"
-            android:paddingBottom="2dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="3dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="3dp"
             android:text="🔥 12d"
             android:textColor="@color/widget_accent_primary"
-            android:textSize="11sp"
+            android:textSize="11.5sp"
             android:textStyle="bold" />
 
         <View
@@ -38,13 +38,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/widget_btn_bg"
-            android:paddingLeft="9dp"
-            android:paddingTop="3dp"
-            android:paddingRight="9dp"
-            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="3.5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="3.5dp"
             android:text="@string/widget_next_compact"
             android:textColor="@color/widget_text_secondary"
-            android:textSize="12sp"
+            android:textSize="11.5sp"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -56,7 +56,7 @@
         android:layout_weight="1"
         android:gravity="center_vertical"
         android:orientation="vertical"
-        android:paddingTop="4dp">
+        android:paddingTop="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,7 +72,7 @@
                 android:maxLines="1"
                 android:text="Ephemeral"
                 android:textColor="@color/widget_text_primary"
-                android:textSize="15.5sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -83,9 +83,9 @@
                 android:layout_marginStart="6dp"
                 android:background="@drawable/widget_btn_bg"
                 android:paddingLeft="8dp"
-                android:paddingTop="3dp"
+                android:paddingTop="2.5dp"
                 android:paddingRight="8dp"
-                android:paddingBottom="3dp"
+                android:paddingBottom="2.5dp"
                 android:text="🔊"
                 android:textColor="@color/widget_accent_primary"
                 android:textSize="11sp" />
@@ -100,17 +100,18 @@
             android:maxLines="1"
             android:text="/ɪˈfem.ər.əl/ • adj"
             android:textColor="@color/widget_accent_primary"
-            android:textSize="11sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/widget_meaning"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="3dp"
             android:ellipsize="end"
-            android:maxLines="1"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="2"
             android:text="Lasting for only a short period of time; fleeting."
-            android:textColor="@color/widget_text_secondary"
-            android:textSize="11sp" />
+            android:textColor="@color/widget_text_primary"
+            android:textSize="11.5sp" />
     </LinearLayout>
 </LinearLayout>

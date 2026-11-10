@@ -88,7 +88,8 @@ async function audit() {
     'ielts.html#vocab',
     'ielts.html#path',
     'ielts.html#strategy',
-    'ielts.html#mock'
+    'ielts.html#mock',
+    'ielts.html#workout'
   ];
 
   const results = {};
@@ -153,8 +154,26 @@ async function audit() {
 
           // Check if right edge exceeds viewport
           if (rect.right > winWidth + 2 && rect.width > 0 && rect.height > 0) {
-            // Check if it's intentional scroll container or pure overflow
             const isScrollContainer = style.overflowX === 'auto' || style.overflowX === 'scroll';
+            
+            // Check if element is inside an intentional scroll container that fits the viewport
+            let isContainedInViewportScroller = false;
+            let p = el.parentElement;
+            while (p && p !== document.body && p !== document.documentElement) {
+              const ps = window.getComputedStyle(p);
+              if (ps.overflowX === 'auto' || ps.overflowX === 'scroll') {
+                if (p.getBoundingClientRect().right <= winWidth + 2) {
+                  isContainedInViewportScroller = true;
+                  break;
+                }
+              }
+              p = p.parentElement;
+            }
+
+            if (isContainedInViewportScroller) {
+              continue;
+            }
+
             issues.push({
               type: isScrollContainer ? 'scroll-container-bleed' : 'viewport-bleed',
               tag: el.tagName.toLowerCase(),
@@ -211,7 +230,9 @@ async function audit() {
     server.close();
   }
 
-  fs.writeFileSync('e:/Eng/screenshots/overflow_audit_360.json', JSON.stringify(results, null, 2));
+  const outDir = path.join(__dirname, '../screenshots');
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+  fs.writeFileSync(path.join(outDir, 'overflow_audit_360.json'), JSON.stringify(results, null, 2));
 }
 
 audit().catch(console.error);

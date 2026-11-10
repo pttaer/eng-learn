@@ -27,11 +27,14 @@ import { Cefr, CEFR_ORDER, CEFR_LABELS } from '../core/cefr';
 import { I18n, t } from '../core/i18n';
 import { AccentThemeManager, ACCENT_THEMES, AccentThemeId } from '../core/accent-theme';
 import { FloatingNote } from './floating-note';
+import { NotificationEngine } from '../core/notification-engine';
+import { illustration } from '../utils/illustrations';
 
 export class SettingsDossier {
   private root: HTMLElement;
   private confirmingReset: boolean = false;
   private resetTimeout: any = null;
+  private diagnosticsOpen: boolean = false;
 
   constructor() {
     this.root = document.createElement('div');
@@ -43,6 +46,12 @@ export class SettingsDossier {
     this.root.addEventListener('click', (e) => this.handleClick(e));
     this.root.addEventListener('input', (e) => this.handleInput(e));
     this.root.addEventListener('change', (e) => this.handleChange(e));
+    this.root.addEventListener('toggle', (e) => {
+      const target = e.target as HTMLElement;
+      if (target?.classList?.contains('notif-diagnostics-section')) {
+        this.diagnosticsOpen = (target as HTMLDetailsElement).open;
+      }
+    }, true);
 
     I18n.onLocaleChange(() => {
       if (document.body.contains(this.root)) {
@@ -124,6 +133,9 @@ export class SettingsDossier {
 
     const notifEnabled = StorageManager.isNotificationsEnabled();
     const reminderTime = localStorage.getItem('eng_reminder_time') || '20:00';
+    const notifPerm = typeof Notification !== 'undefined' ? Notification.permission : 'unsupported';
+    const isQuietHours = NotificationEngine.isQuietHoursActive();
+    const notifLogs = NotificationEngine.getNotificationLogs();
     const dailyGoalXp = localStorage.getItem('eng_daily_goal_xp') || '100';
 
     const targetBand = StorageManager.getTargetBand();
@@ -140,19 +152,22 @@ export class SettingsDossier {
     this.root.innerHTML = `
       <div class="settings-container" style="width: 100%; max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--gap-block, 16px); padding-bottom: var(--safe-bottom-dock, 84px); box-sizing: border-box;">
 
-        <!-- Header Block -->
-        <header class="settings-header" style="display: flex; flex-direction: column; gap: 8px; text-align: left; width: 100%;">
-          <div style="display: flex; align-items: center; gap: 8px;">
+        <!-- Header Hero Banner -->
+        <header class="app-hero-banner settings-hero-banner" style="width: 100%; box-sizing: border-box;">
+          <div class="app-hero-banner-content">
             <span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); letter-spacing: var(--font-kicker-spacing, 0.08em); font-weight: 700; font-family: var(--font-mono); text-transform: uppercase;">
               ${t('settings.telemetry_kicker', undefined, 'SYSTEM PREFERENCES & TELEMETRY')}
             </span>
+            <h1 style="margin: 0; font-size: var(--font-h1, 24px); font-family: var(--font-mono); font-weight: 700; color: var(--ink-primary); line-height: 1.2;">
+              ${t('settings.environment_title', undefined, 'Settings & Environment')}
+            </h1>
+            <p style="margin: 0; font-size: var(--font-body-compact, 14px); color: var(--ink-secondary); line-height: 1.5;">
+              ${t('settings.header_desc', undefined, 'Manage CEFR levels, dual audio bus configuration, SRS notifications, focused UI modes, and comprehensive profile backups.')}
+            </p>
           </div>
-          <h1 style="margin: 0; font-size: var(--font-h1, 24px); font-family: var(--font-mono); font-weight: 700; color: var(--ink-primary); line-height: 1.2;">
-            ${t('settings.environment_title', undefined, 'Settings & Environment')}
-          </h1>
-          <p style="margin: 0; font-size: var(--font-body-compact, 14px); color: var(--ink-secondary); line-height: 1.5;">
-            ${t('settings.header_desc', undefined, 'Manage CEFR levels, dual audio bus configuration, SRS notifications, focused UI modes, and comprehensive profile backups.')}
-          </p>
+          <div class="app-hero-banner-art">
+            ${illustration('personal-settings', { size: 'banner', ariaLabel: t('settings.environment_title', undefined, 'Settings & Environment') })}
+          </div>
         </header>
 
         <!-- CARD 1: LỘ TRÌNH & HỒ SƠ HỌC TẬP -->
@@ -263,12 +278,12 @@ export class SettingsDossier {
 
           <!-- Weakness-First Focus Toggle -->
           <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 4px;">
-            <button type="button" class="hud-btn btn-toggle-weakness-first ${weaknessFirst ? 'active' : ''}" style="width: 100%; min-height: var(--touch-target-min, 44px); padding: 10px 14px; justify-content: space-between; font-weight: 600;">
-              <span style="display: flex; align-items: center; gap: 8px;">
+            <button type="button" class="hud-btn btn-toggle-weakness-first ${weaknessFirst ? 'active' : ''}" style="width: 100%; min-height: var(--touch-target-min, 44px); padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-weight: 600;">
+              <span style="display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0; text-align: left; line-height: 1.3;">
                 ${icon('target', 16)}
-                <span>${t('settings.weakness_first_label', undefined, 'Prioritize Weaknesses (Weakness-First Focus)')}</span>
+                <span style="font-size: var(--font-body-compact);">${t('settings.weakness_first_label', undefined, 'Prioritize Weaknesses (Weakness-First Focus)')}</span>
               </span>
-              <strong style="flex-shrink: 0; white-space: nowrap; color: ${weaknessFirst ? 'var(--good)' : 'var(--ink-muted)'};">${weaknessFirst ? t('settings.status_on', undefined, 'ON ●') : t('settings.status_off', undefined, 'OFF')}</strong>
+              <strong style="flex-shrink: 0; white-space: nowrap !important; display: inline-block; min-width: 56px; text-align: right; color: ${weaknessFirst ? 'var(--good)' : 'var(--ink-muted)'};">${weaknessFirst ? t('settings.status_on', undefined, 'ON ●') : t('settings.status_off', undefined, 'OFF')}</strong>
             </button>
             <span style="font-size: 12px; color: var(--ink-secondary); line-height: 1.4;">
               ${t('settings.weakness_first_desc', undefined, 'Automatically surfaces question types, vocabulary items, and L1 transfer traps you previously missed in the Mistake Vault to the start of practice sessions.')}
@@ -281,7 +296,7 @@ export class SettingsDossier {
               ${icon('target', 16)}<span>${t('settings.btn_retake_placement', undefined, 'Retake 2-Min Placement Assessment')}</span>
             </button>
             <button type="button" class="hud-btn btn-action-radar" style="flex: 1; min-width: 220px; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
-              ${icon('compass', 16)}<span>${t('settings.celestial_radar_diagnostic', undefined, 'Celestial Radar & Chẩn đoán')}</span>
+              ${icon('compass', 16)}<span>${t('settings.celestial_radar_diagnostic', undefined, 'Radar Năng lực & Chẩn đoán')}</span>
             </button>
           </div>
         </section>
@@ -375,7 +390,7 @@ export class SettingsDossier {
                 ${t('settings.card3_kicker', undefined, '03 • DUAL AUDIO BUS & VOICES')}
               </span>
             </div>
-            <button type="button" class="hud-btn btn-toggle-mute ${isMuted ? 'active' : ''}" style="min-height: 38px; padding: 6px 12px; font-weight: 700;">
+            <button type="button" class="hud-btn btn-toggle-mute ${isMuted ? 'active' : ''}" style="min-height: var(--touch-target-min, 44px); padding: 8px 14px; font-weight: 700;">
               ${isMuted ? icon('mute', 14) : icon('volume', 14)}<span>${isMuted ? t('settings.sound_status_muted', undefined, 'Muted') : t('settings.sound_status_on', undefined, 'Audio Enabled')}</span>
             </button>
           </div>
@@ -492,6 +507,66 @@ export class SettingsDossier {
                 <option value="22:00" ${reminderTime === '22:00' ? 'selected' : ''}>${t('settings.remind_night', undefined, '22:00 (Before Sleep Winddown)')}</option>
               </select>
             </div>
+
+            <!-- NOTIFICATION DIAGNOSTICS & LOG (F.4) -->
+            <details class="notif-diagnostics-section" ${this.diagnosticsOpen ? 'open' : ''} style="margin-top: 6px; padding: 12px; background: rgba(255, 255, 255, 0.02); border-radius: 8px; border: 1px solid var(--border-hairline);">
+              <summary style="font-size: var(--font-body-compact, 13px); font-weight: 700; color: var(--accent-gold); cursor: pointer; display: flex; align-items: center; justify-content: space-between; user-select: none;">
+                <span>🛠️ ${t('settings.notif_debug_title', undefined, 'Notification Diagnostics & Schedule Log')}</span>
+                <span class="hud-badge" style="font-size: 11px; padding: 2px 8px; border-radius: var(--radius-pill, 9999px); background: ${notifPerm === 'granted' ? 'rgba(16, 185, 129, 0.15)' : 'rgba(239, 68, 68, 0.15)'}; color: ${notifPerm === 'granted' ? 'var(--good, #10b981)' : 'var(--critical, #ef4444)'}; font-family: var(--font-mono); font-weight: 600;">
+                  ${notifPerm.toUpperCase()}
+                </span>
+              </summary>
+              
+              <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 10px;">
+                <!-- Telemetry Row -->
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 12px; color: var(--ink-secondary);">
+                  <div style="display: flex; align-items: center; gap: 6px;">
+                    <span>${t('settings.notif_debug_permission', undefined, 'Permission Status:')}</span>
+                    <strong style="color: ${notifPerm === 'granted' ? 'var(--good, #10b981)' : 'var(--ink-primary)'}; font-family: var(--font-mono);">${notifPerm}</strong>
+                  </div>
+                  <span style="opacity: 0.3;">•</span>
+                  <div style="display: flex; align-items: center; gap: 6px;">
+                    <span>${t('settings.notif_debug_quiet_hours', undefined, 'Quiet Hours (22:00–08:00):')}</span>
+                    <span class="hud-badge" style="font-size: 11px; padding: 1px 6px; border-radius: var(--radius-pill, 9999px); background: ${isQuietHours ? 'rgba(234, 179, 8, 0.15)' : 'rgba(255, 255, 255, 0.05)'}; color: ${isQuietHours ? 'var(--accent-gold, #eab308)' : 'var(--ink-secondary)'};">
+                      ${isQuietHours ? t('settings.notif_debug_active', undefined, 'Active') : t('settings.notif_debug_inactive', undefined, 'Inactive')}
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Action Buttons Stack -->
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  <button type="button" class="hud-btn btn-test-notif-now" style="flex: 1; min-width: 140px; min-height: var(--touch-target-min, 44px); border-radius: var(--radius-btn, 10px); padding: 8px 12px; font-size: 12px; font-weight: 600; justify-content: center;">
+                    ${icon('bell', 14)}<span style="margin-left: 6px;">${t('settings.notif_btn_test_now', undefined, 'Test Immediate Alert')}</span>
+                  </button>
+                  <button type="button" class="hud-btn btn-test-notif-schedule" style="flex: 1; min-width: 140px; min-height: var(--touch-target-min, 44px); border-radius: var(--radius-btn, 10px); padding: 8px 12px; font-size: 12px; font-weight: 600; justify-content: center;">
+                    ${icon('clock', 14)}<span style="margin-left: 6px;">${t('settings.notif_btn_test_schedule', undefined, 'Test 5s Scheduled Alert')}</span>
+                  </button>
+                  <button type="button" class="hud-btn btn-clear-notif-logs" style="min-height: var(--touch-target-min, 44px); border-radius: var(--radius-btn, 10px); padding: 8px 12px; font-size: 12px; font-weight: 600; color: var(--ink-secondary); justify-content: center;">
+                    ${t('settings.notif_btn_clear_logs', undefined, 'Clear Log')}
+                  </button>
+                </div>
+
+                <!-- Event Logs Container -->
+                <div style="margin-top: 4px; max-height: 160px; overflow-y: auto; background: rgba(0, 0, 0, 0.2); border-radius: 6px; padding: 6px 8px; font-family: var(--font-mono); font-size: 11px; display: flex; flex-direction: column; gap: 6px;">
+                  ${notifLogs.length === 0 ? `
+                    <div style="padding: 12px; text-align: center; color: var(--ink-muted); font-size: 12px;">
+                      ${t('settings.notif_logs_empty', undefined, 'No notification events recorded yet.')}
+                    </div>
+                  ` : notifLogs.map(log => `
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 4px;">
+                      <div style="display: flex; flex-direction: column; gap: 2px;">
+                        <span style="color: var(--accent-gold); font-weight: 600;">${log.title || 'Notification'}</span>
+                        <span style="color: var(--ink-secondary);">${log.body || ''}</span>
+                        <span style="color: var(--ink-muted); font-size: 10px;">${new Date(log.timestamp).toLocaleTimeString()} • ${log.route || '#collocations'}</span>
+                      </div>
+                      <span class="hud-badge" style="font-size: 10px; padding: 1px 5px; border-radius: 4px; background: rgba(255, 255, 255, 0.08); color: var(--ink-secondary); text-transform: uppercase;">
+                        ${log.mode || 'native'}
+                      </span>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            </details>
           </div>
         </section>
 
@@ -762,6 +837,50 @@ export class SettingsDossier {
     if (target.closest('.btn-toggle-notifications')) {
       AudioSynthesizer.play('click');
       this.toggleNotifications();
+      return;
+    }
+
+    // Test Immediate Notification
+    if (target.closest('.btn-test-notif-now')) {
+      AudioSynthesizer.play('click');
+      NotificationEngine.dispatch(
+        t('settings.notif_test_title', undefined, 'Vocabulary Review Reminder'),
+        {
+          body: t('settings.notif_test_body', undefined, 'Keep your streak active! 3 high-yield C2 collocations are ready for review.'),
+          data: { route: '#collocations' }
+        }
+      ).then(() => {
+        if (document.body.contains(this.root)) {
+          this.draw();
+        }
+      });
+      return;
+    }
+
+    // Test 5s Scheduled Notification
+    if (target.closest('.btn-test-notif-schedule')) {
+      AudioSynthesizer.play('click');
+      setTimeout(() => {
+        NotificationEngine.dispatch(
+          t('settings.notif_test_title', undefined, 'Vocabulary Review Reminder'),
+          {
+            body: t('settings.notif_test_body', undefined, 'Keep your streak active! 3 high-yield C2 collocations are ready for review.'),
+            data: { route: '#collocations' }
+          }
+        ).then(() => {
+          if (document.body.contains(this.root)) {
+            this.draw();
+          }
+        });
+      }, 5000);
+      return;
+    }
+
+    // Clear Notification Logs
+    if (target.closest('.btn-clear-notif-logs')) {
+      AudioSynthesizer.play('click');
+      NotificationEngine.clearNotificationLogs();
+      this.draw();
       return;
     }
 

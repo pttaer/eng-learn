@@ -8,12 +8,16 @@ import { AcousticHaptics } from '../core/acoustic-haptics';
 import { DrillItem, DrillResponse, DrillSet, DrillSetFile, DrillSkill, isItemCorrect, scoreSet, speakText } from '../core/exercise-engine';
 import { renderSoundsPanel } from './sounds-chart';
 import { renderEmailBuilder } from './email-builder';
+import { renderEscapePathPanel } from './escape-path-panel';
+import { renderWorldEnglishesPanel } from './world-englishes-panel';
 import drillData from '../assets/data/drill-sets.json';
 
-type Tab = 'drills' | 'sounds' | 'email';
+type Tab = 'drills' | 'escape' | 'accents' | 'sounds' | 'email';
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'drills', label: 'Drills' },
+  { id: 'escape', label: 'Escape Path' },
+  { id: 'accents', label: 'World Englishes' },
   { id: 'sounds', label: 'Sounds' },
   { id: 'email', label: 'Email' },
 ];
@@ -85,11 +89,13 @@ export class DrillsDossier {
         <h2 class="drills-title">${t('drills.head_title', undefined, 'Practice sets')}</h2>
       </header>
       <div class="drills-tabs" role="tablist">${TABS.map(tTab => `
-        <button type="button" role="tab" class="drill-tab" data-action="tab" data-value="${tTab.id}" aria-selected="${tTab.id === this.tab}">${t('drills.tab_' + tTab.id, undefined, tTab.label)}</button>`).join('')}
+        <button type="button" role="tab" class="drill-tab" data-action="tab" data-value="${tTab.id}" aria-selected="${tTab.id === this.tab}">${t(('drills.tab_' + tTab.id) as any, undefined, tTab.label)}</button>`).join('')}
       </div>
       <section class="drills-panel" role="tabpanel"></section>`;
     const panel = this.root.querySelector('.drills-panel') as HTMLElement;
     if (this.tab === 'drills') this.renderDrills(panel);
+    else if (this.tab === 'escape') panel.appendChild(renderEscapePathPanel());
+    else if (this.tab === 'accents') panel.appendChild(renderWorldEnglishesPanel());
     else if (this.tab === 'sounds') panel.appendChild(renderSoundsPanel());
     else panel.appendChild(renderEmailBuilder());
   }
@@ -112,7 +118,7 @@ export class DrillsDossier {
         <p class="drill-card-objective">${esc(s.objective)}</p>
       </article>`).join('');
     panel.innerHTML = `
-      <div class="drill-chips" role="group" aria-label="Skill">${chips}</div>
+      <div class="drill-chips" role="group" aria-label="${t('drills.skill_chips_aria', undefined, 'Filter by skill')}">${chips}</div>
       <p class="drill-note">${list.length} ${t('drills.sets_count', undefined, 'sets')}</p>
       <div class="drill-list">${cards}</div>`;
   }
@@ -172,7 +178,7 @@ export class DrillsDossier {
         const rights = item.pairs.map(p => p.right);
         const shown = [...rights.slice(1), rights[0]];
         const chosen = Array.isArray(resp) ? resp : [];
-        body = `<p class="drill-prompt">Match each item to its partner</p>` + item.pairs.map((p, i) => `
+        body = `<p class="drill-prompt">${t('drills.match_partner', undefined, 'Match each item to its partner')}</p>` + item.pairs.map((p, i) => `
           <div class="drill-pair">
             <span class="drill-pair-left">${esc(p.left)}</span>
             <select class="drill-select" data-match="${item.id}" data-pair="${i}" aria-label="Match for ${esc(p.left)}" ${disabled}>

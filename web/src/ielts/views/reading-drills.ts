@@ -577,11 +577,11 @@ export function readingDrillsView(root: HTMLElement): () => void {
           </thead>
           <tbody>
             ${drill.synonymPairs
-              .map(
-                sp =>
-                  `<tr><td><code>${esc(sp.promptWord)}</code></td><td><code>${esc(sp.passageWord)}</code></td></tr>`
-              )
-              .join('')}
+        .map(
+          sp =>
+            `<tr><td><code>${esc(sp.promptWord)}</code></td><td><code>${esc(sp.passageWord)}</code></td></tr>`
+        )
+        .join('')}
           </tbody>
         </table>
       </div>

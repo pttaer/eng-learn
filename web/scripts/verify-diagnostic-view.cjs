@@ -154,6 +154,7 @@ new Function('module', 'exports', 'require', diagViewCode)(diagViewMod, diagView
     };
   }
   if (dep.includes('icons')) return { icon: () => '<svg></svg>' };
+  if (dep.includes('illustrations')) return { illustration: () => '<svg class="app-illustration size-banner"></svg>' };
   if (dep.includes('core/feedback')) return { feedback: { emit: () => {} } };
   if (dep.includes('core/i18n') || dep.includes('i18n')) return { t: (k, p, d) => d || k, I18n: { getLocale: () => 'en', onLocaleChange: () => () => {} } };
   return require(dep);

@@ -51,7 +51,13 @@
      "v. How survey data becomes a usable map"
     ],
     "answer": "ii",
-    "why": "Paragraph C opens with 'The breakthrough came with the echo sounder, which measures depth by timing a sound pulse.'"
+    "why": "Paragraph C opens with 'The breakthrough came with the echo sounder, which measures depth by timing a sound pulse.'",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 0,
+     "end": 90,
+     "evidenceText": "The breakthrough came with the echo sounder, which measures depth by timing a sound pulse."
+    }
    },
    {
     "id": "o01-q02",
@@ -65,35 +71,60 @@
      "v. How survey data becomes a usable map"
     ],
     "answer": "v",
-    "why": "Paragraph G begins 'Once collected, the data is processed into maps' and then describes the grid of depths."
+    "why": "Paragraph G begins 'Once collected, the data is processed into maps' and then describes the grid of depths.",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 0,
+     "end": 47,
+     "evidenceText": "Once collected, the data is processed into maps"
+    }
    },
    {
     "id": "o01-q03",
     "type": "tfng",
     "prompt": "The 1870s expedition measured the Atlantic seabed with lead weights and piano wire.",
     "answer": "TRUE",
-    "why": "Paragraph B states 'using heavy lead weights and piano wire'."
+    "why": "Paragraph B states 'using heavy lead weights and piano wire'.",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 184,
+     "end": 223,
+     "evidenceText": "using heavy lead weights and piano wire"
+    }
    },
    {
     "id": "o01-q04",
     "type": "tfng",
     "prompt": "The 1870s expedition showed that the Atlantic seabed was flat.",
     "answer": "FALSE",
-    "why": "Paragraph B says 'the ocean floor was not flat', and it describes ridges, plains and trenches."
+    "why": "Paragraph B says 'the ocean floor was not flat', and it describes ridges, plains and trenches.",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 257,
+     "end": 285,
+     "evidenceText": "the ocean floor was not flat"
+    }
    },
    {
     "id": "o01-q05",
     "type": "tfng",
     "prompt": "Early echo sounders produced a full picture of the seabed in a single pass.",
     "answer": "FALSE",
-    "why": "Paragraph C says they 'still produced a narrow strip of data rather than a full picture of the seabed'."
+    "why": "Paragraph C says they 'still produced a narrow strip of data rather than a full picture of the seabed'.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 386,
+     "end": 464,
+     "evidenceText": "still produced a narrow strip of data rather than a full picture of the seabed"
+    }
    },
    {
     "id": "o01-q06",
     "type": "tfng",
     "prompt": "Multibeam sonar was first tested in the Pacific Ocean.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph D only says 'Multibeam sonar solved that problem', and the passage never names a test location."
+    "why": "Paragraph D only says 'Multibeam sonar solved that problem', and the passage never names a test location.",
+    "evidence": null
    },
    {
     "id": "o01-q07",
@@ -106,7 +137,13 @@
      "D. Most sea areas were closed to survey ships by law."
     ],
     "answer": "A",
-    "why": "Paragraph A says 'a ship could take hours to measure a single spot'."
+    "why": "Paragraph A says 'a ship could take hours to measure a single spot'.",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 272,
+     "end": 320,
+     "evidenceText": "a ship could take hours to measure a single spot"
+    }
    },
    {
     "id": "o01-q08",
@@ -119,7 +156,13 @@
      "D. It sends many beams across the ship's track."
     ],
     "answer": "D",
-    "why": "Paragraph D says 'a multibeam system sends out a fan of many beams across the ship's track'."
+    "why": "Paragraph D says 'a multibeam system sends out a fan of many beams across the ship's track'.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 81,
+     "end": 145,
+     "evidenceText": "a multibeam system sends out a fan of many beams across the ship"
+    }
    },
    {
     "id": "o01-q09",
@@ -132,7 +175,13 @@
      "D. They decide how deep the survey ship may safely sail."
     ],
     "answer": "B",
-    "why": "Paragraph F says 'Temperature, salinity and pressure all change the speed of sound'."
+    "why": "Paragraph F says 'Temperature, salinity and pressure all change the speed of sound'.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 71,
+     "end": 135,
+     "evidenceText": "Temperature, salinity and pressure all change the speed of sound"
+    }
    },
    {
     "id": "o01-q10",
@@ -141,7 +190,13 @@
     "answer": [
      "rope"
     ],
-    "why": "Paragraph A says mariners 'counted the length of rope that ran out before it touched bottom'."
+    "why": "Paragraph A says mariners 'counted the length of rope that ran out before it touched bottom'.",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 181,
+     "end": 245,
+     "evidenceText": "counted the length of rope that ran out before it touched bottom"
+    }
    },
    {
     "id": "o01-q11",
@@ -150,7 +205,13 @@
     "answer": [
      "air bubbles"
     ],
-    "why": "Paragraph G says 'Software removes spikes caused by fish shoals or air bubbles'."
+    "why": "Paragraph G says 'Software removes spikes caused by fish shoals or air bubbles'.",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 49,
+     "end": 109,
+     "evidenceText": "Software removes spikes caused by fish shoals or air bubbles"
+    }
    },
    {
     "id": "o01-q12",
@@ -160,7 +221,13 @@
      "mid-ocean ridges",
      "mid-ocean ridge"
     ],
-    "why": "Paragraph H describes 'long chains of volcanic mountains running down the centre of the Atlantic'."
+    "why": "Paragraph H describes 'long chains of volcanic mountains running down the centre of the Atlantic'.",
+    "evidence": {
+     "paraIndex": 7,
+     "start": 105,
+     "end": 178,
+     "evidenceText": "long chains of volcanic mountains running down the centre of the Atlantic"
+    }
    },
    {
     "id": "o01-q13",
@@ -169,7 +236,13 @@
     "answer": [
      "temperature"
     ],
-    "why": "Paragraph F says 'Temperature, salinity and pressure all change the speed of sound' and 'Surveyors must measure these properties with profiling instruments, and they apply a correction to the sonar readings'. Salinity and pressure are already named, so only temperature fills the gap."
+    "why": "Paragraph F says 'Temperature, salinity and pressure all change the speed of sound' and 'Surveyors must measure these properties with profiling instruments, and they apply a correction to the sonar readings'. Salinity and pressure are already named, so only temperature fills the gap.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 71,
+     "end": 135,
+     "evidenceText": "Temperature, salinity and pressure all change the speed of sound"
+    }
    }
   ]
  },
@@ -218,35 +291,60 @@
     "type": "tfng",
     "prompt": "Rooftop hives are now found on office blocks and hotels.",
     "answer": "TRUE",
-    "why": "Paragraph A says 'Rooftop hives now appear on office blocks, hotels and railway stations'."
+    "why": "Paragraph A says 'Rooftop hives now appear on office blocks, hotels and railway stations'.",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 241,
+     "end": 311,
+     "evidenceText": "Rooftop hives now appear on office blocks, hotels and railway stations"
+    }
    },
    {
     "id": "o02-q02",
     "type": "tfng",
     "prompt": "Hives in cities have always produced less honey than rural hives.",
     "answer": "FALSE",
-    "why": "Paragraph C reports that city colonies 'produced more honey than comparable colonies in farmland'."
+    "why": "Paragraph C reports that city colonies 'produced more honey than comparable colonies in farmland'.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 108,
+     "end": 164,
+     "evidenceText": "produced more honey than comparable colonies in farmland"
+    }
    },
    {
     "id": "o02-q03",
     "type": "ynng",
     "prompt": "Concentrated urban hives can have no effect on wild pollinators.",
     "answer": "NO",
-    "why": "Paragraph G notes that 'hundreds of hives in a single park could do so', meaning they could affect wild populations."
+    "why": "Paragraph G notes that 'hundreds of hives in a single park could do so', meaning they could affect wild populations.",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 173,
+     "end": 219,
+     "evidenceText": "hundreds of hives in a single park could do so"
+    }
    },
    {
     "id": "o02-q04",
     "type": "ynng",
     "prompt": "The success of urban beekeeping depends mainly on how hives are managed.",
     "answer": "YES",
-    "why": "Paragraph H says 'The debate, then, is less about whether bees belong in cities and more about how they are managed. The most successful projects combine careful hive numbers, public education and planting schemes'."
+    "why": "Paragraph H says 'The debate, then, is less about whether bees belong in cities and more about how they are managed. The most successful projects combine careful hive numbers, public education and planting schemes'.",
+    "evidence": {
+     "paraIndex": 7,
+     "start": 0,
+     "end": 195,
+     "evidenceText": "The debate, then, is less about whether bees belong in cities and more about how they are managed. The most successful projects combine careful hive numbers, public education and planting schemes"
+    }
    },
    {
     "id": "o02-q05",
     "type": "ynng",
     "prompt": "Planting flowers matters more than limiting the number of hives in urban projects.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph H lists hive numbers, education and planting together as 'careful hive numbers, public education and planting schemes', without ranking them."
+    "why": "Paragraph H lists hive numbers, education and planting together as 'careful hive numbers, public education and planting schemes', without ranking them.",
+    "evidence": null
    },
    {
     "id": "o02-q06",
@@ -263,7 +361,13 @@
      "H"
     ],
     "answer": "E",
-    "why": "Paragraph E says 'some beekeepers report that their hives survive winter with fewer losses'."
+    "why": "Paragraph E says 'some beekeepers report that their hives survive winter with fewer losses'.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 297,
+     "end": 369,
+     "evidenceText": "some beekeepers report that their hives survive winter with fewer losses"
+    }
    },
    {
     "id": "o02-q07",
@@ -280,7 +384,13 @@
      "H"
     ],
     "answer": "D",
-    "why": "Paragraph D says 'Neighbours may also worry about stings'."
+    "why": "Paragraph D says 'Neighbours may also worry about stings'.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 346,
+     "end": 384,
+     "evidenceText": "Neighbours may also worry about stings"
+    }
    },
    {
     "id": "o02-q08",
@@ -297,7 +407,13 @@
      "H"
     ],
     "answer": "G",
-    "why": "Paragraph G says 'many programmes now focus on planting flowers that suit both managed and wild bees'."
+    "why": "Paragraph G says 'many programmes now focus on planting flowers that suit both managed and wild bees'.",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 238,
+     "end": 320,
+     "evidenceText": "many programmes now focus on planting flowers that suit both managed and wild bees"
+    }
    },
    {
     "id": "o02-q09",
@@ -306,7 +422,13 @@
     "answer": [
      "a few"
     ],
-    "why": "Paragraph E says 'the temperature is often a few degrees higher than in surrounding farmland'."
+    "why": "Paragraph E says 'the temperature is often a few degrees higher than in surrounding farmland'.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 79,
+     "end": 153,
+     "evidenceText": "the temperature is often a few degrees higher than in surrounding farmland"
+    }
    },
    {
     "id": "o02-q10",
@@ -315,7 +437,13 @@
     "answer": [
      "flowering plants"
     ],
-    "why": "Paragraph B says 'Urban areas often contain a surprising variety of flowering plants'."
+    "why": "Paragraph B says 'Urban areas often contain a surprising variety of flowering plants'.",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 50,
+     "end": 116,
+     "evidenceText": "Urban areas often contain a surprising variety of flowering plants"
+    }
    },
    {
     "id": "o02-q11",
@@ -326,7 +454,13 @@
      "concrete",
      "asphalt"
     ],
-    "why": "Paragraph E says 'concrete and asphalt store heat during the day and release it at night'."
+    "why": "Paragraph E says 'concrete and asphalt store heat during the day and release it at night'.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 163,
+     "end": 233,
+     "evidenceText": "concrete and asphalt store heat during the day and release it at night"
+    }
    },
    {
     "id": "o02-q12",
@@ -339,7 +473,13 @@
      "D. They frighten away visitors from busy city parks."
     ],
     "answer": "A",
-    "why": "Paragraph F says 'large numbers of managed colonies in one place can compete with wild pollinators such as solitary bees, which have fewer resources'."
+    "why": "Paragraph F says 'large numbers of managed colonies in one place can compete with wild pollinators such as solitary bees, which have fewer resources'.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 78,
+     "end": 208,
+     "evidenceText": "large numbers of managed colonies in one place can compete with wild pollinators such as solitary bees, which have fewer resources"
+    }
    },
    {
     "id": "o02-q13",
@@ -352,7 +492,13 @@
      "D. the length of the autumn flowering season."
     ],
     "answer": "C",
-    "why": "Paragraph G says 'Supporters respond that the competition argument depends on the scale of the hives'."
+    "why": "Paragraph G says 'Supporters respond that the competition argument depends on the scale of the hives'.",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 0,
+     "end": 82,
+     "evidenceText": "Supporters respond that the competition argument depends on the scale of the hives"
+    }
    }
   ]
  },
@@ -408,7 +554,13 @@
      "E. Storage conditions"
     ],
     "answer": "C",
-    "why": "Paragraph F says 'farmers who have saved seed for generations may hold knowledge that is not recorded in any database'."
+    "why": "Paragraph F says 'farmers who have saved seed for generations may hold knowledge that is not recorded in any database'.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 147,
+     "end": 246,
+     "evidenceText": "farmers who have saved seed for generations may hold knowledge that is not recorded in any database"
+    }
    },
    {
     "id": "o03-q02",
@@ -422,7 +574,13 @@
      "E. Storage conditions"
     ],
     "answer": "A",
-    "why": "Paragraph D says 'One approach treats the stored seeds as insurance'."
+    "why": "Paragraph D says 'One approach treats the stored seeds as insurance'.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 66,
+     "end": 115,
+     "evidenceText": "One approach treats the stored seeds as insurance"
+    }
    },
    {
     "id": "o03-q03",
@@ -436,7 +594,13 @@
      "E. Storage conditions"
     ],
     "answer": "B",
-    "why": "Paragraph E says 'A second approach focuses on the option value of genetic diversity'."
+    "why": "Paragraph E says 'A second approach focuses on the option value of genetic diversity'.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 0,
+     "end": 66,
+     "evidenceText": "A second approach focuses on the option value of genetic diversity"
+    }
    },
    {
     "id": "o03-q04",
@@ -450,7 +614,13 @@
      "v. Combining several views of seed value"
     ],
     "answer": "iv",
-    "why": "Paragraph B opens with 'The largest seed banks operate at very low temperatures' and explains how seeds are kept viable."
+    "why": "Paragraph B opens with 'The largest seed banks operate at very low temperatures' and explains how seeds are kept viable.",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 0,
+     "end": 55,
+     "evidenceText": "The largest seed banks operate at very low temperatures"
+    }
    },
    {
     "id": "o03-q05",
@@ -464,7 +634,13 @@
      "v. Combining several views of seed value"
     ],
     "answer": "v",
-    "why": "Paragraph H begins 'Looking ahead, the most productive work may lie in combining these perspectives'."
+    "why": "Paragraph H begins 'Looking ahead, the most productive work may lie in combining these perspectives'.",
+    "evidence": {
+     "paraIndex": 7,
+     "start": 0,
+     "end": 79,
+     "evidenceText": "Looking ahead, the most productive work may lie in combining these perspectives"
+    }
    },
    {
     "id": "o03-q06",
@@ -473,7 +649,13 @@
     "answer": [
      "moisture"
     ],
-    "why": "Paragraph B says 'Seeds are dried to a precise moisture level before storage'."
+    "why": "Paragraph B says 'Seeds are dried to a precise moisture level before storage'.",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 151,
+     "end": 209,
+     "evidenceText": "Seeds are dried to a precise moisture level before storage"
+    }
    },
    {
     "id": "o03-q07",
@@ -482,7 +664,13 @@
     "answer": [
      "fees"
     ],
-    "why": "Paragraph C says 'some depend on a mixture of grants, university support and fees charged to researchers'."
+    "why": "Paragraph C says 'some depend on a mixture of grants, university support and fees charged to researchers'.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 223,
+     "end": 309,
+     "evidenceText": "some depend on a mixture of grants, university support and fees charged to researchers"
+    }
    },
    {
     "id": "o03-q08",
@@ -495,7 +683,13 @@
      "D. Nobody can say how likely a disaster is."
     ],
     "answer": "D",
-    "why": "Paragraph D says 'the probability of a disaster is hard to estimate, so the insurance value of any particular collection is uncertain'."
+    "why": "Paragraph D says 'the probability of a disaster is hard to estimate, so the insurance value of any particular collection is uncertain'.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 260,
+     "end": 375,
+     "evidenceText": "the probability of a disaster is hard to estimate, so the insurance value of any particular collection is uncertain"
+    }
    },
    {
     "id": "o03-q09",
@@ -508,28 +702,47 @@
      "D. They give too little weight to social aspects."
     ],
     "answer": "D",
-    "why": "Paragraph F says 'both approaches underrate the social side of conservation'."
+    "why": "Paragraph F says 'both approaches underrate the social side of conservation'.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 19,
+     "end": 76,
+     "evidenceText": "both approaches underrate the social side of conservation"
+    }
    },
    {
     "id": "o03-q10",
     "type": "tfng",
     "prompt": "Most species of seed can be stored for decades.",
     "answer": "TRUE",
-    "why": "Paragraph B says 'Most species can be kept for decades in this way'."
+    "why": "Paragraph B says 'Most species can be kept for decades in this way'.",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 379,
+     "end": 427,
+     "evidenceText": "Most species can be kept for decades in this way"
+    }
    },
    {
     "id": "o03-q11",
     "type": "tfng",
     "prompt": "Seed banks everywhere are funded entirely by governments.",
     "answer": "FALSE",
-    "why": "Paragraph C says 'some depend on a mixture of grants, university support and fees'."
+    "why": "Paragraph C says 'some depend on a mixture of grants, university support and fees'.",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 223,
+     "end": 286,
+     "evidenceText": "some depend on a mixture of grants, university support and fees"
+    }
    },
    {
     "id": "o03-q12",
     "type": "tfng",
     "prompt": "Breeders are the people who set the market price of rare wild relatives of crops.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph E says rare relatives are 'worth more than their current market price implies', but it does not say who sets the price."
+    "why": "Paragraph E says rare relatives are 'worth more than their current market price implies', but it does not say who sets the price.",
+    "evidence": null
    },
    {
     "id": "o03-q13",
@@ -539,7 +752,13 @@
      "returning samples",
      "return samples"
     ],
-    "why": "Paragraph F says 'Some seed banks have therefore begun to work with local growers, returning samples'."
+    "why": "Paragraph F says 'Some seed banks have therefore begun to work with local growers, returning samples'.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 248,
+     "end": 330,
+     "evidenceText": "Some seed banks have therefore begun to work with local growers, returning samples"
+    }
    }
   ]
  }

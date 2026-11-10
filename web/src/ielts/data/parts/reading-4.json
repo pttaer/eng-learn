@@ -40,35 +40,60 @@
     "type": "tfng",
     "prompt": "All mangrove species deal with salt in the same way.",
     "answer": "FALSE",
-    "why": "Paragraph A: \"some species block most salt at the roots, while others excrete it through glands on their leaves\"."
+    "why": "Paragraph A: \"some species block most salt at the roots, while others excrete it through glands on their leaves\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 551,
+     "end": 648,
+     "evidenceText": "some species block most salt at the roots, while others excrete it through glands on their leaves"
+    }
    },
    {
     "id": "r16-q02",
     "type": "tfng",
     "prompt": "Intact mangrove forests can protect villages from even the largest waves.",
     "answer": "FALSE",
-    "why": "Paragraph B: researchers note \"that no forest can stop the largest waves entirely\"."
+    "why": "Paragraph B: researchers note \"that no forest can stop the largest waves entirely\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 656,
+     "end": 706,
+     "evidenceText": "that no forest can stop the largest waves entirely"
+    }
    },
    {
     "id": "r16-q03",
     "type": "tfng",
     "prompt": "Most of the carbon in a mangrove forest is held in the ground.",
     "answer": "TRUE",
-    "why": "Paragraph C: \"In mangroves, the bulk of the carbon is stored not in the trees but in the soil beneath them\"."
+    "why": "Paragraph C: \"In mangroves, the bulk of the carbon is stored not in the trees but in the soil beneath them\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 409,
+     "end": 501,
+     "evidenceText": "In mangroves, the bulk of the carbon is stored not in the trees but in the soil beneath them"
+    }
    },
    {
     "id": "r16-q04",
     "type": "tfng",
     "prompt": "Shrimp farming has been the main cause of mangrove loss in Africa.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph D lists causes including \"the construction of ponds for shrimp farming\", but gives no regional breakdown and does not mention Africa."
+    "why": "Paragraph D lists causes including \"the construction of ponds for shrimp farming\", but gives no regional breakdown and does not mention Africa.",
+    "evidence": null
    },
    {
     "id": "r16-q05",
     "type": "tfng",
     "prompt": "The Kenyan project spends its carbon income on local services.",
     "answer": "TRUE",
-    "why": "Paragraph F: \"the income is spent by the local community on projects such as clean water supplies and books for schools\"."
+    "why": "Paragraph F: \"the income is spent by the local community on projects such as clean water supplies and books for schools\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 295,
+     "end": 400,
+     "evidenceText": "the income is spent by the local community on projects such as clean water supplies and books for schools"
+    }
    },
    {
     "id": "r16-q06",
@@ -77,7 +102,13 @@
     "answer": [
      "pneumatophores"
     ],
-    "why": "Paragraph A: \"aerial roots called pneumatophores, which rise above the mud like pencils and allow the plant to take in oxygen\"."
+    "why": "Paragraph A: \"aerial roots called pneumatophores, which rise above the mud like pencils and allow the plant to take in oxygen\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 381,
+     "end": 492,
+     "evidenceText": "aerial roots called pneumatophores, which rise above the mud like pencils and allow the plant to take in oxygen"
+    }
    },
    {
     "id": "r16-q07",
@@ -88,7 +119,13 @@
      "35%",
      "35"
     ],
-    "why": "Paragraph D: \"roughly 35 percent of the world's mangrove area was lost in the final decades of the twentieth century\"."
+    "why": "Paragraph D: \"roughly 35 percent of the world's mangrove area was lost in the final decades of the twentieth century\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 104,
+     "end": 206,
+     "evidenceText": "roughly 35 percent of the world's mangrove area was lost in the final decades of the twentieth century"
+    }
    },
    {
     "id": "r16-q08",
@@ -97,7 +134,13 @@
     "answer": [
      "2013"
     ],
-    "why": "Paragraph F: \"a community project at Gazi Bay began selling carbon credits in 2013\"."
+    "why": "Paragraph F: \"a community project at Gazi Bay began selling carbon credits in 2013\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 130,
+     "end": 198,
+     "evidenceText": "a community project at Gazi Bay began selling carbon credits in 2013"
+    }
    },
    {
     "id": "r16-q09",
@@ -113,7 +156,13 @@
      "G"
     ],
     "answer": "E",
-    "why": "Paragraph E: \"the seedlings had been placed lower on the shore than mangroves naturally grow, where they were submerged for too long each day\"."
+    "why": "Paragraph E: \"the seedlings had been placed lower on the shore than mangroves naturally grow, where they were submerged for too long each day\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 282,
+     "end": 409,
+     "evidenceText": "the seedlings had been placed lower on the shore than mangroves naturally grow, where they were submerged for too long each day"
+    }
    },
    {
     "id": "r16-q10",
@@ -129,7 +178,13 @@
      "G"
     ],
     "answer": "C",
-    "why": "Paragraph C: \"The term blue carbon was popularised by a United Nations report in 2009\"."
+    "why": "Paragraph C: \"The term blue carbon was popularised by a United Nations report in 2009\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 81,
+     "end": 152,
+     "evidenceText": "The term blue carbon was popularised by a United Nations report in 2009"
+    }
    },
    {
     "id": "r16-q11",
@@ -145,7 +200,13 @@
      "G"
     ],
     "answer": "G",
-    "why": "Paragraph G: \"Where dams upstream hold back that material, the forests may gradually drown\"."
+    "why": "Paragraph G: \"Where dams upstream hold back that material, the forests may gradually drown\".",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 377,
+     "end": 453,
+     "evidenceText": "Where dams upstream hold back that material, the forests may gradually drown"
+    }
    },
    {
     "id": "r16-q12",
@@ -154,7 +215,13 @@
     "answer": [
      "sediment"
     ],
-    "why": "Paragraph G: \"Mangroves can keep pace with a gradual rise by trapping sediment and building up the ground beneath them\"."
+    "why": "Paragraph G: \"Mangroves can keep pace with a gradual rise by trapping sediment and building up the ground beneath them\".",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 202,
+     "end": 306,
+     "evidenceText": "Mangroves can keep pace with a gradual rise by trapping sediment and building up the ground beneath them"
+    }
    },
    {
     "id": "r16-q13",
@@ -163,7 +230,13 @@
     "answer": [
      "Gazi Bay"
     ],
-    "why": "Paragraph F: \"On the southern coast of Kenya, a community project at Gazi Bay began selling carbon credits\"."
+    "why": "Paragraph F: \"On the southern coast of Kenya, a community project at Gazi Bay began selling carbon credits\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 98,
+     "end": 190,
+     "evidenceText": "On the southern coast of Kenya, a community project at Gazi Bay began selling carbon credits"
+    }
    }
   ]
  }

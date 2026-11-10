@@ -21,6 +21,7 @@ import vocabularyData from '../assets/data/vocabulary.json';
 import { pickDecoys, meaningsOverlap } from '../core/decoys';
 import { I18n, t } from '../core/i18n';
 import { HeaderHUD } from './header-hud';
+import { illustration } from '../utils/illustrations';
 
 /** Verbs whose collocations are worth blanking; phrases starting with a noun or adjective are skipped. */
 const BLANKABLE_VERBS = new Set(['make', 'take', 'have', 'do', 'get', 'give', 'keep', 'pay', 'break', 'catch', 'set', 'run', 'hold', 'reach', 'draw', 'gain', 'raise', 'bear', 'bring', 'meet', 'lose', 'miss', 'tell', 'say', 'play', 'strike', 'cut', 'save', 'spend', 'waste', 'follow', 'pose', 'conduct', 'carry', 'attract', 'commit', 'launch', 'exert', 'render']);
@@ -198,6 +199,10 @@ export class BlitzDossier {
   private renderReadyScreen(): void {
     this.container.innerHTML = `
       <div class="blitz-ready-card" role="dialog" aria-labelledby="blitz-ready-title">
+        <div class="app-illustration-wrap" style="margin-bottom: var(--space-12, 12px);">
+          ${illustration('ready-set-go', { size: 'card', ariaLabel: t('blitz.subtitle') })}
+        </div>
+
         <div class="blitz-badge-cluster">
           <span class="blitz-glow-badge">${icon('zap', 12)} ${t('blitz.rapid_recall', undefined, 'Rapid Recall Drill')}</span>
           <span class="blitz-high-score-badge">${t('blitz.best_score', undefined, 'Best Score:')} <strong>${this.highScore.toLocaleString()} pts</strong></span>
@@ -222,15 +227,15 @@ export class BlitzDossier {
           <div class="blitz-mechanic-card mechanic-hotkeys">
             <div class="mechanic-icon">${icon('keyboard', 22)}</div>
             <div class="mechanic-title">${t('blitz.instant_hotkeys', undefined, 'Instant Hotkeys')}</div>
-            <div class="mechanic-detail">Press <kbd>[1]</kbd> or <kbd>[←]</kbd> for Left • <kbd>[2]</kbd> or <kbd>[→]</kbd> for Right.</div>
+            <div class="mechanic-detail">${t('blitz.hotkeys_detail', undefined, 'Press [1] or [←] for Left • [2] or [→] for Right.')}</div>
           </div>
         </div>
 
         <div class="blitz-ready-actions">
-          <button type="button" class="hud-btn blitz-start-btn" id="blitz-start-btn" aria-label="Start 60-Second Blitz Drill">
+          <button type="button" class="hud-btn blitz-start-btn" id="blitz-start-btn" aria-label="${t('blitz.start_aria', undefined, 'Start 60-Second Blitz Drill')}">
             ${icon('zap')} ${t('blitz.start')}
           </button>
-          <span class="blitz-hotkey-hint">Press <kbd>Space</kbd> or <kbd>Enter</kbd> to Launch</span>
+          <span class="blitz-hotkey-hint">${t('blitz.launch_hint', undefined, 'Press Space or Enter to Launch')}</span>
         </div>
       </div>
     `;
@@ -251,7 +256,7 @@ export class BlitzDossier {
     const progressOffset = CIRCUMFERENCE - (this.timeRemaining / BLITZ_DURATION_SECONDS) * CIRCUMFERENCE;
 
     this.container.innerHTML = `
-      <div class="blitz-arena-shell" role="region" aria-label="Active Blitz Sprint">
+      <div class="blitz-arena-shell" role="region" aria-label="${t('blitz.arena_aria', undefined, 'Active Blitz Sprint')}">
         <!-- Top Telemetry Strip -->
         <header class="blitz-hud-strip">
           <div class="blitz-hud-metric">
@@ -358,6 +363,10 @@ export class BlitzDossier {
 
     this.container.innerHTML = `
       <div class="blitz-summary-card" role="dialog" aria-labelledby="blitz-summary-title">
+        <div class="app-illustration-wrap" style="margin-bottom: var(--space-12, 12px);">
+          ${illustration(stats.isNewHighScore ? 'special-occasion' : 'completed', { size: 'card', ariaLabel: stats.isNewHighScore ? t('blitz.new_high_score', undefined, 'NEW ALL-TIME HIGH SCORE!') : t('blitz.sprint_complete', undefined, 'SPRINT COMPLETE') })}
+        </div>
+
         <div class="summary-badge-strip">
           <span class="blitz-glow-badge">${t('blitz.concluded', undefined, 'BLITZ RUN CONCLUDED')}</span>
           ${stats.isNewHighScore ? `<span class="blitz-new-record-badge">${icon('trophy', 12)} ${t('blitz.new_high_score', undefined, 'NEW ALL-TIME HIGH SCORE!')}</span>` : ''}
@@ -385,15 +394,15 @@ export class BlitzDossier {
           <div class="summary-stat-box">
             <span class="stat-label">${t('blitz.xp_reward', undefined, 'XP REWARD')}</span>
             <span class="stat-val highlight-purple">+${stats.xpEarned} XP</span>
-            <span class="stat-sub">Dispatched to RPG Hub</span>
+            <span class="stat-sub">${t('blitz.dispatched_rpg', undefined, 'Dispatched to RPG Hub')}</span>
           </div>
         </div>
 
         <div class="summary-action-cluster">
-          <button type="button" class="hud-btn blitz-action-btn btn-restart-blitz" id="btn-restart-blitz" aria-label="Play Another Blitz Run">
+          <button type="button" class="hud-btn blitz-action-btn btn-restart-blitz" id="btn-restart-blitz" aria-label="${t('blitz.play_again_aria', undefined, 'Play Another Blitz Run')}">
             ${icon('zap')} ${t('blitz.play_again', undefined, 'PLAY AGAIN')}
           </button>
-          <button type="button" class="hud-btn blitz-action-btn btn-return-tree" id="btn-return-tree" aria-label="Return to Constellation Skill Tree">
+          <button type="button" class="hud-btn blitz-action-btn btn-return-tree" id="btn-return-tree" aria-label="${t('blitz.back_to_tree_aria', undefined, 'Return to Constellation Skill Tree')}">
             ${icon('compass')} ${t('blitz.back_to_tree', undefined, 'BACK TO TREE')}
           </button>
         </div>

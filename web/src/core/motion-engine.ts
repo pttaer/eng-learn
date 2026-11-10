@@ -59,7 +59,12 @@ export class MotionEngine {
       delay: stagger(delayStep),
       onComplete: () => {
         const els = typeof targets === 'string' ? document.querySelectorAll<HTMLElement>(targets) : targets;
-        Array.from(els as ArrayLike<HTMLElement>).forEach(el => el.style.removeProperty('opacity'));
+        Array.from(els as ArrayLike<HTMLElement>).forEach(el => {
+          if (el && el.style) {
+            el.style.removeProperty('opacity');
+            el.style.removeProperty('transform');
+          }
+        });
       }
     });
 
@@ -77,6 +82,7 @@ export class MotionEngine {
     suffix: string = '',
     duration: number = 800
   ): JSAnimation | null {
+    if (!targetEl) return null;
     if (this.isReducedMotion()) {
       targetEl.textContent = `${Math.round(endVal)}${suffix}`;
       return null;
@@ -89,6 +95,7 @@ export class MotionEngine {
       ease: 'outExpo',
       duration,
       onUpdate: () => {
+        if (!targetEl || !targetEl.isConnected) return;
         targetEl.textContent = `${obj.val}${suffix}`;
       }
     });
@@ -101,6 +108,7 @@ export class MotionEngine {
    * Fluid spring modal reveal (Backdrop fade + card scale-up)
    */
   public static springModal(modalEl: HTMLElement, cardEl: HTMLElement): Timeline {
+    if (!modalEl || !cardEl) return createTimeline();
     if (this.isReducedMotion()) {
       modalEl.style.opacity = '1';
       cardEl.style.transform = 'none';
@@ -133,6 +141,7 @@ export class MotionEngine {
    * Spatial page/card entrance transition
    */
   public static fadeSlideIn(targetEl: HTMLElement, direction: 'up' | 'down' = 'up'): JSAnimation | null {
+    if (!targetEl) return null;
     if (this.isReducedMotion()) {
       targetEl.style.opacity = '1';
       targetEl.style.transform = 'none';
@@ -144,7 +153,13 @@ export class MotionEngine {
       y: yOffset,
       opacity: [0, 1],
       ease: 'outQuart',
-      duration: 460
+      duration: 460,
+      onComplete: () => {
+        if (targetEl && targetEl.style) {
+          targetEl.style.removeProperty('opacity');
+          targetEl.style.removeProperty('transform');
+        }
+      }
     });
 
     this.trackAnimation(anim);
@@ -161,7 +176,16 @@ export class MotionEngine {
       opacity: [0, 1],
       ease: 'outQuart',
       duration: 560,
-      delay: stagger(delayStep, { start: 80 })
+      delay: stagger(delayStep, { start: 80 }),
+      onComplete: () => {
+        const els = typeof targets === 'string' ? document.querySelectorAll<HTMLElement>(targets) : targets;
+        Array.from(els as ArrayLike<HTMLElement>).forEach(el => {
+          if (el && el.style) {
+            el.style.removeProperty('opacity');
+            el.style.removeProperty('transform');
+          }
+        });
+      }
     });
     this.trackAnimation(anim);
     return anim;
@@ -205,7 +229,7 @@ export class MotionEngine {
    * Hover lift with a gentle spring settle
    */
   public static lift(el: HTMLElement | SVGElement, on: boolean, amount = 3): void {
-    if (this.isReducedMotion()) return;
+    if (!el || this.isReducedMotion()) return;
     utils.remove(el);
     animate(el, { y: on ? -amount : 0, ease: spring({ stiffness: 90, damping: 14 }) });
   }
@@ -214,7 +238,7 @@ export class MotionEngine {
    * Quick confirmation pop (checkbox ticked, answer graded)
    */
   public static pop(el: HTMLElement | SVGElement): void {
-    if (this.isReducedMotion()) return;
+    if (!el || this.isReducedMotion()) return;
     utils.remove(el);
     animate(el, { scale: [1, 1.12, 1], ease: 'outQuad', duration: 420 });
   }
@@ -224,7 +248,7 @@ export class MotionEngine {
    * so fast pointer sweeps do not stack tweens.
    */
   public static hoverScale(el: HTMLElement | SVGElement, on: boolean): void {
-    if (this.isReducedMotion()) return;
+    if (!el || this.isReducedMotion()) return;
     utils.remove(el);
     const anim = animate(el, {
       scale: on ? 1.3 : 1.0,
@@ -238,7 +262,7 @@ export class MotionEngine {
    * Press bounce on click. Cancels the running tween on the same element first.
    */
   public static press(el: HTMLElement | SVGElement): void {
-    if (this.isReducedMotion()) return;
+    if (!el || this.isReducedMotion()) return;
     utils.remove(el);
     const anim = animate(el, {
       scale: [0.92, 1.08, 1.0],

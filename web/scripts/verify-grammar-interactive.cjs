@@ -60,7 +60,7 @@ it('Verifies front-face interactive console markup in grammar-dossier.ts', () =>
   assert(code.includes('class="grammar-transform-input"'), 'Must contain grammar-transform-input class');
   assert(code.includes('id="grammar-transform-input"'), 'Must contain grammar-transform-input id');
   assert(code.includes('grammar-verify-btn'), 'Must contain grammar-verify-btn class');
-  assert(code.includes('[ Verify Transformation ]'), 'Button must include "[ Verify Transformation ]" text');
+  assert(code.includes('[ Verify Transformation ]') || code.includes("t('grammar.verify_transformation'"), 'Button must include "[ Verify Transformation ]" text or i18n key');
   assert(code.includes('grammar-diff-feedback'), 'Must contain grammar-diff-feedback container');
   assert(code.includes('grammar-diff-preview'), 'Must contain grammar-diff-preview class');
   assert(code.includes('aria-live="polite"'), 'Diff preview must declare aria-live="polite"');

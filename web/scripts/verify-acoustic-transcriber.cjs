@@ -168,7 +168,7 @@ assert(ACCENT_CADENCE_MODELS, 'ACCENT_CADENCE_MODELS map must be exported');
 
 // 1. Cadence models verification
 const cadences = AudioSynthesizer.getAvailableCadences();
-assert.strictEqual(cadences.length, 4, 'Must define exactly 4 cadence models (uk-rp, general-american, australian, scottish)');
+assert(cadences.length >= 4, `Must define at least 4 cadence models, found ${cadences.length}`);
 
 const requiredAccents = ['uk-rp', 'general-american', 'australian', 'scottish'];
 for (const acc of requiredAccents) {

@@ -49,7 +49,13 @@
      "vii. How fire damages a growing tree"
     ],
     "answer": "i",
-    "why": "Paragraph B: \"By chaining overlapping samples in this way, researchers build a continuous chronology that stretches back far beyond the lifetime of any single tree\". Heading i."
+    "why": "Paragraph B: \"By chaining overlapping samples in this way, researchers build a continuous chronology that stretches back far beyond the lifetime of any single tree\". Heading i.",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 484,
+     "end": 633,
+     "evidenceText": "By chaining overlapping samples in this way, researchers build a continuous chronology that stretches back far beyond the lifetime of any single tree"
+    }
    },
    {
     "id": "r13-q02",
@@ -65,7 +71,13 @@
      "vii. How fire damages a growing tree"
     ],
     "answer": "ii",
-    "why": "Paragraph D: \"Yet that year is not always the year a building was constructed\", followed by trimmed, reused and stored timber. Heading ii."
+    "why": "Paragraph D: \"Yet that year is not always the year a building was constructed\", followed by trimmed, reused and stored timber. Heading ii.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 227,
+     "end": 290,
+     "evidenceText": "Yet that year is not always the year a building was constructed"
+    }
    },
    {
     "id": "r13-q03",
@@ -81,7 +93,13 @@
      "vii. How fire damages a growing tree"
     ],
     "answer": "iii",
-    "why": "Paragraph E: \"Tree rings have also transformed radiocarbon dating itself\", through calibration curves and fixed markers. Heading iii."
+    "why": "Paragraph E: \"Tree rings have also transformed radiocarbon dating itself\", through calibration curves and fixed markers. Heading iii.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 0,
+     "end": 58,
+     "evidenceText": "Tree rings have also transformed radiocarbon dating itself"
+    }
    },
    {
     "id": "r13-q04",
@@ -97,35 +115,60 @@
      "vii. How fire damages a growing tree"
     ],
     "answer": "iv",
-    "why": "Paragraph F: \"dendroclimatology, uses rings as a record of past climate\", then \"The approach is not without difficulties\", describing the divergence problem. Heading iv."
+    "why": "Paragraph F: \"dendroclimatology, uses rings as a record of past climate\", then \"The approach is not without difficulties\", describing the divergence problem. Heading iv.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 26,
+     "end": 83,
+     "evidenceText": "dendroclimatology, uses rings as a record of past climate"
+    }
    },
    {
     "id": "r13-q05",
     "type": "tfng",
     "prompt": "Douglass first studied tree rings to test whether the Sun affects the climate.",
     "answer": "TRUE",
-    "why": "Paragraph A: Douglass \"was searching for evidence that cycles of sunspot activity influenced the Earth's climate\"."
+    "why": "Paragraph A: Douglass \"was searching for evidence that cycles of sunspot activity influenced the Earth's climate\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 581,
+     "end": 670,
+     "evidenceText": "was searching for evidence that cycles of sunspot activity influenced the Earth's climate"
+    }
    },
    {
     "id": "r13-q06",
     "type": "tfng",
     "prompt": "The beam that closed the gap in 1929 was discovered by Douglass himself.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph B says only that \"a charred beam recovered at Show Low, Arizona, supplied the missing rings\". Who recovered it is not stated."
+    "why": "Paragraph B says only that \"a charred beam recovered at Show Low, Arizona, supplied the missing rings\". Who recovered it is not stated.",
+    "evidence": null
    },
    {
     "id": "r13-q07",
     "type": "tfng",
     "prompt": "Dead bristlecone pine wood rots quickly on the slopes of the White Mountains.",
     "answer": "FALSE",
-    "why": "Paragraph C: dead wood \"lying on the dry slopes, which decays extremely slowly\"."
+    "why": "Paragraph C: dead wood \"lying on the dry slopes, which decays extremely slowly\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 374,
+     "end": 428,
+     "evidenceText": "lying on the dry slopes, which decays extremely slowly"
+    }
    },
    {
     "id": "r13-q08",
     "type": "tfng",
     "prompt": "Radiocarbon dating usually gives a more exact date than tree-ring dating.",
     "answer": "FALSE",
-    "why": "Paragraph D: \"Radiocarbon dating typically yields a range of several decades or more, whereas a successful tree-ring match can identify the year in which the last ring grew\"."
+    "why": "Paragraph D: \"Radiocarbon dating typically yields a range of several decades or more, whereas a successful tree-ring match can identify the year in which the last ring grew\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 67,
+     "end": 225,
+     "evidenceText": "Radiocarbon dating typically yields a range of several decades or more, whereas a successful tree-ring match can identify the year in which the last ring grew"
+    }
    },
    {
     "id": "r13-q09",
@@ -134,7 +177,13 @@
     "answer": [
      "calibration curves"
     ],
-    "why": "Paragraph E: \"measuring rings of known age has allowed scientists to construct calibration curves that convert raw radiocarbon measurements into calendar dates\"."
+    "why": "Paragraph E: \"measuring rings of known age has allowed scientists to construct calibration curves that convert raw radiocarbon measurements into calendar dates\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 227,
+     "end": 372,
+     "evidenceText": "measuring rings of known age has allowed scientists to construct calibration curves that convert raw radiocarbon measurements into calendar dates"
+    }
    },
    {
     "id": "r13-q10",
@@ -143,7 +192,13 @@
     "answer": [
      "cedar"
     ],
-    "why": "Paragraph E: \"a sudden spike in carbon-14 in the rings of a Japanese cedar, dating to the years 774 and 775 CE\"."
+    "why": "Paragraph E: \"a sudden spike in carbon-14 in the rings of a Japanese cedar, dating to the years 774 and 775 CE\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 481,
+     "end": 577,
+     "evidenceText": "a sudden spike in carbon-14 in the rings of a Japanese cedar, dating to the years 774 and 775 CE"
+    }
    },
    {
     "id": "r13-q11",
@@ -152,7 +207,13 @@
     "answer": [
      "markers"
     ],
-    "why": "Paragraph E: \"Because such spikes appear in trees worldwide in the same ring, they act as fixed markers\"."
+    "why": "Paragraph E: \"Because such spikes appear in trees worldwide in the same ring, they act as fixed markers\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 648,
+     "end": 737,
+     "evidenceText": "Because such spikes appear in trees worldwide in the same ring, they act as fixed markers"
+    }
    },
    {
     "id": "r13-q12",
@@ -165,7 +226,13 @@
      "D. Its causes have now been fully explained by researchers."
     ],
     "answer": "A",
-    "why": "Paragraph F: \"it is a reminder that the link between climate and growth may not remain constant\". B is too strong; C is contradicted (\"In some northern forests\"); D is contradicted (\"Researchers still debate the causes\")."
+    "why": "Paragraph F: \"it is a reminder that the link between climate and growth may not remain constant\". B is too strong; C is contradicted (\"In some northern forests\"); D is contradicted (\"Researchers still debate the causes\").",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 721,
+     "end": 802,
+     "evidenceText": "it is a reminder that the link between climate and growth may not remain constant"
+    }
    },
    {
     "id": "r13-q13",
@@ -178,7 +245,13 @@
      "D. showed that Europeans had reached the Americas by 993 CE."
     ],
     "answer": "C",
-    "why": "Paragraph E: \"a team used a later spike, from 993 CE, to show that wood at a Norse site in Newfoundland had been cut in 1021\". A names the wrong spike; B is not mentioned; D confuses the spike year with the felling year."
+    "why": "Paragraph E: \"a team used a later spike, from 993 CE, to show that wood at a Norse site in Newfoundland had been cut in 1021\". A names the wrong spike; B is not mentioned; D confuses the spike year with the felling year.",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 748,
+     "end": 858,
+     "evidenceText": "a team used a later spike, from 993 CE, to show that wood at a Norse site in Newfoundland had been cut in 1021"
+    }
    }
   ]
  },
@@ -227,35 +300,60 @@
     "type": "ynng",
     "prompt": "Languages usually disappear because the people who speak them die.",
     "answer": "NO",
-    "why": "Paragraph A: \"Languages rarely disappear because their speakers simply die out\"; far more often parents switch to a dominant language."
+    "why": "Paragraph A: \"Languages rarely disappear because their speakers simply die out\"; far more often parents switch to a dominant language.",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 439,
+     "end": 503,
+     "evidenceText": "Languages rarely disappear because their speakers simply die out"
+    }
    },
    {
     "id": "r14-q02",
     "type": "ynng",
     "prompt": "The revival of Hebrew is a model that most endangered languages could easily follow.",
     "answer": "NO",
-    "why": "Paragraph B: \"Yet the case is in many ways exceptional\" and \"Few endangered languages have access to all of these advantages at once\"."
+    "why": "Paragraph B: \"Yet the case is in many ways exceptional\" and \"Few endangered languages have access to all of these advantages at once\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 446,
+     "end": 486,
+     "evidenceText": "Yet the case is in many ways exceptional"
+    }
    },
    {
     "id": "r14-q03",
     "type": "ynng",
     "prompt": "Language-learning apps cannot fully replace contact with other speakers.",
     "answer": "YES",
-    "why": "Paragraph F: \"such tools are best understood as supports rather than substitutes\"."
+    "why": "Paragraph F: \"such tools are best understood as supports rather than substitutes\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 336,
+     "end": 402,
+     "evidenceText": "such tools are best understood as supports rather than substitutes"
+    }
    },
    {
     "id": "r14-q04",
     "type": "ynng",
     "prompt": "The Hawaiian language nests have been more successful than the Māori ones.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph D says only that \"The model was soon adapted in Hawaii\". The writer never compares the success of the two programmes."
+    "why": "Paragraph D says only that \"The model was soon adapted in Hawaii\". The writer never compares the success of the two programmes.",
+    "evidence": null
    },
    {
     "id": "r14-q05",
     "type": "ynng",
     "prompt": "The number of fluent speakers is an incomplete measure of a project's success.",
     "answer": "YES",
-    "why": "Paragraph H: \"But that measure misses much of what these programmes achieve\"."
+    "why": "Paragraph H: \"But that measure misses much of what these programmes achieve\".",
+    "evidence": {
+     "paraIndex": 7,
+     "start": 100,
+     "end": 161,
+     "evidenceText": "But that measure misses much of what these programmes achieve"
+    }
    },
    {
     "id": "r14-q06",
@@ -269,7 +367,13 @@
      "E. Eliezer Ben-Yehuda"
     ],
     "answer": "A",
-    "why": "Paragraph A: Krauss estimated \"that as many as nine in ten of the world's languages could be extinct or close to extinction by the end of the twenty-first century\"."
+    "why": "Paragraph A: Krauss estimated \"that as many as nine in ten of the world's languages could be extinct or close to extinction by the end of the twenty-first century\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 219,
+     "end": 350,
+     "evidenceText": "that as many as nine in ten of the world's languages could be extinct or close to extinction by the end of the twenty-first century"
+    }
    },
    {
     "id": "r14-q07",
@@ -283,7 +387,13 @@
      "E. Eliezer Ben-Yehuda"
     ],
     "answer": "B",
-    "why": "Paragraph C: Fishman \"argued that the single most important factor is whether a language is passed on in the home\"."
+    "why": "Paragraph C: Fishman \"argued that the single most important factor is whether a language is passed on in the home\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 33,
+     "end": 124,
+     "evidenceText": "argued that the single most important factor is whether a language is passed on in the home"
+    }
    },
    {
     "id": "r14-q08",
@@ -297,7 +407,13 @@
      "E. Eliezer Ben-Yehuda"
     ],
     "answer": "C",
-    "why": "Paragraph E: Hinton \"helped to develop what became known as the Master-Apprentice programme\", in which elder and learner do \"ordinary activities\"."
+    "why": "Paragraph E: Hinton \"helped to develop what became known as the Master-Apprentice programme\", in which elder and learner do \"ordinary activities\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 182,
+     "end": 252,
+     "evidenceText": "helped to develop what became known as the Master-Apprentice programme"
+    }
    },
    {
     "id": "r14-q09",
@@ -311,7 +427,13 @@
      "E. Eliezer Ben-Yehuda"
     ],
     "answer": "D",
-    "why": "Paragraph G: Zuckermann argued \"it inevitably absorbs features of the languages its new speakers already know\"."
+    "why": "Paragraph G: Zuckermann argued \"it inevitably absorbs features of the languages its new speakers already know\".",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 190,
+     "end": 267,
+     "evidenceText": "it inevitably absorbs features of the languages its new speakers already know"
+    }
    },
    {
     "id": "r14-q10",
@@ -320,7 +442,13 @@
     "answer": [
      "grandparents"
     ],
-    "why": "Paragraph D: children are cared for in Māori, \"often by grandparents who learned the language as their first\"."
+    "why": "Paragraph D: children are cared for in Māori, \"often by grandparents who learned the language as their first\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 249,
+     "end": 310,
+     "evidenceText": "often by grandparents who learned the language as their first"
+    }
    },
    {
     "id": "r14-q11",
@@ -330,7 +458,13 @@
      "university archives",
      "archives"
     ],
-    "why": "Paragraph F: \"Recordings made decades ago by anthropologists, often stored in university archives\"."
+    "why": "Paragraph F: \"Recordings made decades ago by anthropologists, often stored in university archives\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 45,
+     "end": 128,
+     "evidenceText": "Recordings made decades ago by anthropologists, often stored in university archives"
+    }
    },
    {
     "id": "r14-q12",
@@ -339,7 +473,13 @@
     "answer": [
      "1982"
     ],
-    "why": "Paragraph D: \"opened the first kōhanga reo, or language nests, in 1982\"."
+    "why": "Paragraph D: \"opened the first kōhanga reo, or language nests, in 1982\".",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 111,
+     "end": 167,
+     "evidenceText": "opened the first kōhanga reo, or language nests, in 1982"
+    }
    },
    {
     "id": "r14-q13",
@@ -351,7 +491,13 @@
      "cooking, gardening",
      "gardening and cooking"
     ],
-    "why": "Paragraph E: \"doing ordinary activities such as cooking or gardening while speaking only the target language\"."
+    "why": "Paragraph E: \"doing ordinary activities such as cooking or gardening while speaking only the target language\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 331,
+     "end": 425,
+     "evidenceText": "doing ordinary activities such as cooking or gardening while speaking only the target language"
+    }
    }
   ]
  },
@@ -396,28 +542,47 @@
     "type": "ynng",
     "prompt": "Traditional economic theory predicts that pre-selected options should have little influence on choices.",
     "answer": "YES",
-    "why": "Paragraph A: in the standard model, \"A pre-selected option should make almost no difference, because anyone who disliked it could simply choose something else\"."
+    "why": "Paragraph A: in the standard model, \"A pre-selected option should make almost no difference, because anyone who disliked it could simply choose something else\".",
+    "evidence": {
+     "paraIndex": 0,
+     "start": 342,
+     "end": 463,
+     "evidenceText": "A pre-selected option should make almost no difference, because anyone who disliked it could simply choose something else"
+    }
    },
    {
     "id": "r15-q02",
     "type": "ynng",
     "prompt": "High consent rates in opt-out countries lead to equally high rates of actual donation.",
     "answer": "NO",
-    "why": "Paragraph B: \"Registered consent is not the same as actual donation\", and the gap in transplants actually performed \"is considerably narrower\"."
+    "why": "Paragraph B: \"Registered consent is not the same as actual donation\", and the gap in transplants actually performed \"is considerably narrower\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 560,
+     "end": 613,
+     "evidenceText": "Registered consent is not the same as actual donation"
+    }
    },
    {
     "id": "r15-q03",
     "type": "ynng",
     "prompt": "Automatic enrolment improved the pension savings of every employee at the company.",
     "answer": "NO",
-    "why": "Paragraph C: \"Some employees who, under the old system, would have actively chosen to contribute more ended up saving less than they otherwise would have done\"."
+    "why": "Paragraph C: \"Some employees who, under the old system, would have actively chosen to contribute more ended up saving less than they otherwise would have done\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 547,
+     "end": 691,
+     "evidenceText": "Some employees who, under the old system, would have actively chosen to contribute more ended up saving less than they otherwise would have done"
+    }
    },
    {
     "id": "r15-q04",
     "type": "ynng",
     "prompt": "Nudge had more influence on policy in Britain than in the United States.",
     "answer": "NOT GIVEN",
-    "why": "Paragraph E says only that \"In 2010 the British government created a Behavioural Insights Team\" and that similar teams exist elsewhere. No comparison of influence between the two countries is made."
+    "why": "Paragraph E says only that \"In 2010 the British government created a Behavioural Insights Team\" and that similar teams exist elsewhere. No comparison of influence between the two countries is made.",
+    "evidence": null
    },
    {
     "id": "r15-q05",
@@ -433,7 +598,13 @@
      "G"
     ],
     "answer": "F",
-    "why": "Paragraph F: \"the Court of Justice of the European Union ruled that consent to the use of tracking cookies cannot be given through a box that is ticked in advance\"."
+    "why": "Paragraph F: \"the Court of Justice of the European Union ruled that consent to the use of tracking cookies cannot be given through a box that is ticked in advance\".",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 432,
+     "end": 580,
+     "evidenceText": "the Court of Justice of the European Union ruled that consent to the use of tracking cookies cannot be given through a box that is ticked in advance"
+    }
    },
    {
     "id": "r15-q06",
@@ -449,7 +620,13 @@
      "G"
     ],
     "answer": "D",
-    "why": "Paragraph D: \"Researchers have proposed three explanations, which are not mutually exclusive\": effort, implied endorsement and reference points."
+    "why": "Paragraph D: \"Researchers have proposed three explanations, which are not mutually exclusive\": effort, implied endorsement and reference points.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 37,
+     "end": 115,
+     "evidenceText": "Researchers have proposed three explanations, which are not mutually exclusive"
+    }
    },
    {
     "id": "r15-q07",
@@ -465,7 +642,13 @@
      "G"
     ],
     "answer": "G",
-    "why": "Paragraph G: \"there is no such thing as a neutral design\"."
+    "why": "Paragraph G: \"there is no such thing as a neutral design\".",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 71,
+     "end": 113,
+     "evidenceText": "there is no such thing as a neutral design"
+    }
    },
    {
     "id": "r15-q08",
@@ -481,7 +664,13 @@
      "G"
     ],
     "answer": "E",
-    "why": "Paragraph E: \"In 2010 the British government created a Behavioural Insights Team, widely known as the nudge unit\"."
+    "why": "Paragraph E: \"In 2010 the British government created a Behavioural Insights Team, widely known as the nudge unit\".",
+    "evidence": {
+     "paraIndex": 4,
+     "start": 482,
+     "end": 580,
+     "evidenceText": "In 2010 the British government created a Behavioural Insights Team, widely known as the nudge unit"
+    }
    },
    {
     "id": "r15-q09",
@@ -489,9 +678,16 @@
     "prompt": "Table, Organ donation study (opt-in country): recorded consent in Germany was about ______ percent.",
     "answer": [
      "12",
-     "12 percent"
+     "12 percent",
+     "12%"
     ],
-    "why": "Paragraph B: \"with Germany at around 12 percent\"."
+    "why": "Paragraph B: \"with Germany at around 12 percent\".",
+    "evidence": {
+     "paraIndex": 1,
+     "start": 458,
+     "end": 491,
+     "evidenceText": "with Germany at around 12 percent"
+    }
    },
    {
     "id": "r15-q10",
@@ -499,9 +695,16 @@
     "prompt": "Table, Pension study (result): participation among new staff rose to ______ percent.",
     "answer": [
      "86",
-     "86 percent"
+     "86 percent",
+     "86%"
     ],
-    "why": "Paragraph C: \"Participation among new staff rose from about 37 percent to 86 percent\"."
+    "why": "Paragraph C: \"Participation among new staff rose from about 37 percent to 86 percent\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 260,
+     "end": 330,
+     "evidenceText": "Participation among new staff rose from about 37 percent to 86 percent"
+    }
    },
    {
     "id": "r15-q11",
@@ -512,7 +715,13 @@
      "3",
      "3%"
     ],
-    "why": "Paragraph C: \"Most of those enrolled automatically remained at the default contribution rate of 3 percent\"."
+    "why": "Paragraph C: \"Most of those enrolled automatically remained at the default contribution rate of 3 percent\".",
+    "evidence": {
+     "paraIndex": 2,
+     "start": 387,
+     "end": 478,
+     "evidenceText": "Most of those enrolled automatically remained at the default contribution rate of 3 percent"
+    }
    },
    {
     "id": "r15-q12",
@@ -525,7 +734,13 @@
      "D. believe it has been recommended by experts."
     ],
     "answer": "D",
-    "why": "Paragraph D: \"Many people assume that the default has been chosen by experts and therefore represents sensible advice\". A and B are not mentioned; C describes the standard model the passage rejects."
+    "why": "Paragraph D: \"Many people assume that the default has been chosen by experts and therefore represents sensible advice\". A and B are not mentioned; C describes the standard model the passage rejects.",
+    "evidence": {
+     "paraIndex": 3,
+     "start": 296,
+     "end": 399,
+     "evidenceText": "Many people assume that the default has been chosen by experts and therefore represents sensible advice"
+    }
    },
    {
     "id": "r15-q13",
@@ -538,7 +753,13 @@
      "D. to suggest that many nudges may be weaker than first claimed"
     ],
     "answer": "D",
-    "why": "Paragraph F: \"the average effect of many nudges may be far smaller than early research implied\". A is contradicted (\"defaults remain among the more robust interventions\"); B overstates a ruling about one kind of consent box; C is not claimed."
+    "why": "Paragraph F: \"the average effect of many nudges may be far smaller than early research implied\". A is contradicted (\"defaults remain among the more robust interventions\"); B overstates a ruling about one kind of consent box; C is not claimed.",
+    "evidence": {
+     "paraIndex": 5,
+     "start": 701,
+     "end": 781,
+     "evidenceText": "the average effect of many nudges may be far smaller than early research implied"
+    }
    },
    {
     "id": "r15-q14",
@@ -551,7 +772,13 @@
      "D. It is a form of manipulation, especially when people are unaware."
     ],
     "answer": "A",
-    "why": "Paragraph G: active choice \"avoids presuming what people want, but it imposes the very effort that defaults were designed to remove\". B is contradicted (\"no such thing as a neutral design\"); C and D are not stated."
+    "why": "Paragraph G: active choice \"avoids presuming what people want, but it imposes the very effort that defaults were designed to remove\". B is contradicted (\"no such thing as a neutral design\"); C and D are not stated.",
+    "evidence": {
+     "paraIndex": 6,
+     "start": 526,
+     "end": 629,
+     "evidenceText": "avoids presuming what people want, but it imposes the very effort that defaults were designed to remove"
+    }
    }
   ]
  }

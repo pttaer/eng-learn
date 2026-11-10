@@ -3,7 +3,7 @@ const path = require('path');
 const puppeteer = require(path.resolve(__dirname, '../web/node_modules/puppeteer-core'));
 
 const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
-const THIS_CONV_ARTIFACT_DIR = 'C:\\Users\\Dell\\.gemini\\antigravity\\brain\\f76ddff8-47df-43a5-a968-4f3ee2b4bde2';
+const THIS_CONV_ARTIFACT_DIR = process.env.CONV_ARTIFACT_DIR || 'C:\\Users\\thanh\\.gemini\\antigravity\\brain\\c615b0ea-5fd8-42a0-b47d-cdb1d5a6d4ff';
 const OUT_FILE_LOCAL = path.resolve(__dirname, '../screenshots/mobile-widget-preview.png');
 const OUT_FILE_THIS_CONV = path.join(THIS_CONV_ARTIFACT_DIR, 'mobile-widget-preview.png');
 const OUT_FILE_FLOWS = path.resolve(__dirname, '../Mobile/flows/07-android-widgets/01-widget-showcase-all-sizes.png');
@@ -199,16 +199,16 @@ const htmlContent = `<!DOCTYPE html>
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 2px;
+    margin-top: 4px;
   }
   .widget-word {
-    font-size: 17.5px;
+    font-size: 19px;
     font-weight: 700;
     color: #f3f4f6;
     letter-spacing: -0.2px;
   }
   .widget-phonetic {
-    font-size: 11.5px;
+    font-size: 12px;
     color: #a5b4fc;
     font-family: -apple-system, monospace;
     opacity: 0.95;
@@ -219,15 +219,15 @@ const htmlContent = `<!DOCTYPE html>
     display: flex;
     gap: 5px;
     align-items: center;
-    margin-top: 4px;
+    margin-top: 5px;
   }
   .widget-util-btn {
     background: #252b3b;
-    border: 1px solid #2f3647;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 8px;
-    padding: 3px 7px;
-    font-size: 10.5px;
-    font-weight: 700;
+    padding: 3.5px 8px;
+    font-size: 11px;
+    font-weight: 600;
     color: #a5b4fc;
     display: inline-flex;
     align-items: center;
@@ -241,7 +241,7 @@ const htmlContent = `<!DOCTYPE html>
 
   /* Section labels */
   .widget-section-label {
-    font-size: 10.5px;
+    font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.08em;
     color: #64748b;
@@ -250,25 +250,25 @@ const htmlContent = `<!DOCTYPE html>
     display: block;
   }
   .widget-meaning {
-    font-size: 11.5px;
-    line-height: 1.35;
+    font-size: 12px;
+    line-height: 1.45;
     color: #f3f4f6;
-    margin-top: 1px;
+    margin-top: 6px;
   }
   .widget-example {
-    font-size: 11px;
-    line-height: 1.3;
+    font-size: 11.5px;
+    line-height: 1.4;
     color: #9ca3af;
     font-style: italic;
-    margin-top: 1px;
+    margin-top: 5px;
   }
   .widget-tags-box {
     background: #141a26;
-    border: 1px solid #232c3d;
+    border: none;
     border-radius: 8px;
-    padding: 4px 7px;
-    margin-top: 5px;
-    font-size: 10.5px;
+    padding: 6px 9px;
+    margin-top: 8px;
+    font-size: 11px;
     color: #a5b4fc;
     line-height: 1.35;
   }
@@ -642,10 +642,8 @@ const htmlContent = `<!DOCTYPE html>
           <button class="widget-util-btn secondary" title="Toggle active recall mask">👁 Hide</button>
         </div>
 
-        <span class="widget-section-label">Definition</span>
         <div class="widget-meaning">Lasting for only a short period of time; fleeting or transient.</div>
 
-        <span class="widget-section-label">Contextual Example</span>
         <div class="widget-example">“Fame in the digital era is intensely ephemeral, vanishing as swiftly as it emerges.”</div>
 
         <div class="widget-tags-box">
@@ -654,7 +652,7 @@ const htmlContent = `<!DOCTYPE html>
       </div>
 
       <div class="widget-footer">
-        <span class="widget-kicker">ENGLISH SINGULARITY</span>
+        <span class="widget-kicker">C2 ACADEMIC • SRS</span>
         <div class="widget-actions">
           <button class="widget-btn">Study</button>
           <button class="widget-btn ielts">IELTS</button>
@@ -737,19 +735,17 @@ const htmlContent = `<!DOCTYPE html>
             <button class="widget-util-btn secondary" style="padding: 2px 5px;">👁 Hide</button>
           </div>
 
-          <span class="widget-section-label" style="margin-top: 3px;">Definition</span>
-          <div class="widget-meaning" style="font-size: 11px;">Lasting for only a short period; fleeting.</div>
+          <div class="widget-meaning" style="font-size: 11px; margin-top: 4px;">Lasting for only a short period; fleeting.</div>
 
-          <span class="widget-section-label" style="margin-top: 2px;">Contextual Example</span>
-          <div class="widget-example" style="font-size: 10.5px;">“Fame in the digital era is intensely ephemeral.”</div>
+          <div class="widget-example" style="font-size: 10.5px; margin-top: 3px;">“Fame in the digital era is intensely ephemeral.”</div>
 
-          <div class="widget-tags-box" style="font-size: 10px; padding: 3px 5px; margin-top: 3px;">
+          <div class="widget-tags-box" style="font-size: 10px; padding: 3px 5px; margin-top: 4px;">
             Collocations: ephemeral nature &bull; Synonyms: fleeting
           </div>
         </div>
 
         <div class="widget-footer" style="margin-top: 4px; padding-top: 3px;">
-          <span class="widget-kicker">SINGULARITY</span>
+          <span class="widget-kicker">C2 SRS</span>
           <div class="widget-actions">
             <button class="widget-btn" style="padding: 2px 6px;">Study</button>
             <button class="widget-btn ielts" style="padding: 2px 6px;">IELTS</button>
@@ -929,12 +925,12 @@ const htmlContent = `<!DOCTYPE html>
             <span class="widget-streak-badge">🔥 12d</span>
             <button class="widget-btn-next" style="padding: 2px 7px;">↻</button>
           </div>
-          <div style="display: flex; align-items: center; gap: 6px; margin-top: 2px;">
-            <span class="widget-word" style="font-size: 14.5px;">Ephemeral</span>
-            <button class="widget-util-btn" style="padding: 2px 5px;">🔊</button>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: 2px;">
+            <span class="widget-word" style="font-size: 15px;">Ephemeral</span>
+            <button class="widget-util-btn" style="padding: 2px 6px;">🔊</button>
           </div>
-          <div class="widget-phonetic" style="font-size: 10.5px;">/ɪˈfem.ər.əl/ • adj</div>
-          <div style="font-size: 10.5px; color: #9ca3af; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+          <div class="widget-phonetic" style="font-size: 11px;">/ɪˈfem.ər.əl/ • adj</div>
+          <div style="font-size: 11px; color: #e5e7eb; line-height: 1.35; max-height: 2.7em; overflow: hidden; margin-top: 2px;">
             Lasting for only a short period; fleeting.
           </div>
         </div>
@@ -955,13 +951,15 @@ const htmlContent = `<!DOCTYPE html>
             <button class="widget-btn-next">Next ↻</button>
           </div>
 
-          <div style="display: flex; align-items: center; gap: 7px; margin-top: 2px;">
-            <span class="widget-word" style="font-size: 15.5px;">Ubiquitous</span>
-            <button class="widget-util-btn" style="padding: 2px 5px;">🔊</button>
-            <span class="widget-phonetic" style="font-size: 11px;">/juːˈbɪk.wɪ.təs/ • adj</span>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: 2px;">
+            <div style="display: flex; align-items: baseline; gap: 8px;">
+              <span class="widget-word" style="font-size: 16px;">Ubiquitous</span>
+              <span class="widget-phonetic" style="font-size: 11.5px;">/juːˈbɪk.wɪ.təs/ • adj</span>
+            </div>
+            <button class="widget-util-btn" style="padding: 2px 6px;">🔊</button>
           </div>
-          <div class="widget-meaning" style="font-size: 11px;">Present, appearing, or found everywhere simultaneously.</div>
-          <div class="widget-example" style="font-size: 10.5px;">“Mobile devices have become ubiquitous in daily life.”</div>
+          <div class="widget-meaning" style="font-size: 11.5px; color: #f3f4f6; margin-top: 3px;">Present, appearing, or found everywhere simultaneously.</div>
+          <div class="widget-example" style="font-size: 10.5px; color: #9ca3af; margin-top: 2px;">“Mobile devices have become ubiquitous in daily life.”</div>
 
           <div class="widget-footer" style="margin-top: 3px; padding-top: 3px;">
             <span class="widget-kicker">ENGLISH SINGULARITY</span>

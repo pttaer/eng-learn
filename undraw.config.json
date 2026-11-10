@@ -1,0 +1,8 @@
+{
+  "outputDir": "web/src/assets/illustrations",
+  "accentColor": "#a5b4fc",
+  "cssVariable": "--undraw-accent",
+  "fallbackColor": "#ffffff",
+  "mode": "dynamic"
+}
+

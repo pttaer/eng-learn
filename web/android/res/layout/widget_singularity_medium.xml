@@ -65,7 +65,7 @@
             android:textStyle="bold" />
     </RelativeLayout>
 
-    <!-- Center Card: Word / Term, Native Offline TTS Button, and Definition -->
+    <!-- Center Card: Word / Term, Pronunciation, and Definition -->
     <LinearLayout
         android:id="@+id/widget_card_content"
         android:layout_width="match_parent"
@@ -86,10 +86,23 @@
                 android:layout_height="wrap_content"
                 android:text="Ephemeral"
                 android:textColor="@color/widget_text_primary"
-                android:textSize="17sp"
+                android:textSize="18.5sp"
                 android:textStyle="bold" />
 
-            <!-- Offline Audio Pronunciation Trigger -->
+            <TextView
+                android:id="@+id/widget_phonetic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="/ɪˈfem.ər.əl/ • adj"
+                android:textColor="@color/widget_accent_primary"
+                android:textSize="12.5sp" />
+
+            <!-- Offline Audio Pronunciation Trigger cleanly docked at end -->
             <TextView
                 android:id="@+id/widget_btn_audio"
                 android:layout_width="wrap_content"
@@ -97,46 +110,38 @@
                 android:layout_marginLeft="6dp"
                 android:layout_marginStart="6dp"
                 android:background="@drawable/widget_btn_bg"
-                android:paddingLeft="8dp"
-                android:paddingTop="2dp"
-                android:paddingRight="8dp"
-                android:paddingBottom="2dp"
+                android:paddingLeft="9dp"
+                android:paddingTop="3dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="3dp"
                 android:text="🔊"
                 android:textColor="@color/widget_accent_primary"
-                android:textSize="11sp" />
-
-            <TextView
-                android:id="@+id/widget_phonetic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                android:text="/ɪˈfem.ər.əl/ • adj"
-                android:textColor="@color/widget_accent_primary"
-                android:textSize="12sp" />
+                android:textSize="11.5sp" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/widget_meaning"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:ellipsize="end"
-            android:maxLines="2"
+            android:lineSpacingExtra="2.5dp"
+            android:maxLines="3"
             android:text="Lasting for only a short period of time; fleeting or transient."
-            android:textColor="@color/widget_text_secondary"
-            android:textSize="12sp" />
+            android:textColor="@color/widget_text_primary"
+            android:textSize="12.5sp" />
 
         <TextView
             android:id="@+id/widget_example"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="3dp"
             android:ellipsize="end"
-            android:maxLines="1"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="2"
             android:text="“Fame in the digital era is intensely ephemeral.”"
-            android:textColor="@color/widget_text_muted"
-            android:textSize="11sp"
+            android:textColor="@color/widget_text_secondary"
+            android:textSize="11.5sp"
             android:textStyle="italic" />
     </LinearLayout>
 

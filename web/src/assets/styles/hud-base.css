@@ -176,16 +176,11 @@ svg.icon,
   stroke: var(--accent-gold);
 }
 
+.hud-btn.active svg.icon,
+.filter-tab.active svg.icon,
 .btn-icon-accent svg {
   color: var(--accent-gold);
   stroke: var(--accent-gold);
-}
-
-/* Active buttons fill with accent-gold, so their icon takes the canvas ink (gold on gold vanished) */
-.hud-btn.active svg.icon,
-.filter-tab.active svg.icon {
-  color: var(--bg-canvas);
-  stroke: var(--bg-canvas);
 }
 
 /* Custom Minimal Scrollbar */
@@ -557,15 +552,6 @@ svg.icon,
   flex-shrink: 0;
 }
 
-/* Touch cushion pseudo-element: Expands hit target on compact screens without changing visual geometry */
-.hud-btn::before {
-  content: "";
-  position: absolute;
-  top: -6px;
-  bottom: -6px;
-  left: -6px;
-  right: -6px;
-}
 
 .hud-btn:hover {
   background: var(--bg-card);
@@ -1485,12 +1471,19 @@ body.zen-active,
     flex-wrap: nowrap !important;
     justify-content: flex-end !important;
     align-items: center !important;
-    gap: var(--space-8, 8px) !important;
+    gap: 4px !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
   }
 
   /* Hide the other 12 buttons from top row on mobile */
   .hud-header .hud-actions>button:not(.btn-streak-pill):not(.btn-mobile-menu-drawer) {
     display: none !important;
+  }
+
+  .hud-header .hud-actions .btn-streak-pill {
+    padding: 4px 6px !important;
+    font-size: var(--font-kicker) !important;
   }
 
   .btn-mobile-menu-drawer {
@@ -2726,4 +2719,171 @@ body.zen-active,
 
 .sheet-nav-item span {
   white-space: normal;
+}
+
+/* ==========================================================================
+   CANONICAL UNDRAW ILLUSTRATION STYLING & HERO INTEGRATION
+   Responsive vector illustrations with dynamic theme binding
+   ========================================================================== */
+
+.app-illustration-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.app-illustration {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  filter: var(--undraw-shadow);
+  transition: transform var(--duration-fast, 180ms) var(--ease-snappy, cubic-bezier(0.16, 1, 0.3, 1)), filter var(--duration-fast, 180ms) ease;
+}
+
+.app-hero-banner:hover .app-illustration,
+.dossier-card:hover .app-illustration,
+.atomic-card:hover .app-illustration {
+  transform: scale(1.025);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-hero-banner:hover .app-illustration,
+  .dossier-card:hover .app-illustration,
+  .atomic-card:hover .app-illustration {
+    transform: none !important;
+  }
+}
+
+/* Sizing presets */
+.app-illustration.size-hero {
+  max-height: 140px;
+  max-width: 200px;
+}
+
+.app-illustration.size-card {
+  max-height: 120px;
+  max-width: 180px;
+}
+
+.app-illustration.size-banner {
+  max-height: 105px;
+  max-width: 150px;
+}
+
+.app-illustration.size-empty {
+  max-height: 115px;
+  max-width: 160px;
+  opacity: 0.9;
+}
+
+.app-illustration.size-compact {
+  max-height: 75px;
+  max-width: 110px;
+}
+
+/* Hero card with illustration layout */
+.app-hero-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-block, 16px);
+  padding: var(--pad-card, 16px);
+  border-radius: var(--radius-squircle-md, 16px);
+  border: 1px solid var(--border-hairline);
+  background: var(--bg-card);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-tactile);
+}
+
+.app-hero-banner-content {
+  flex: 1 1 65%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-micro, 4px);
+}
+
+.app-hero-banner-art {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 160px;
+}
+
+@media (max-width: 768px) {
+  .app-illustration.size-hero {
+    max-height: 105px;
+    max-width: 150px;
+  }
+  .app-illustration.size-card {
+    max-height: 90px;
+    max-width: 130px;
+  }
+  .app-illustration.size-banner {
+    max-height: 78px;
+    max-width: 105px;
+  }
+  .app-illustration.size-empty {
+    max-height: 90px;
+    max-width: 130px;
+  }
+  .app-illustration.size-compact {
+    max-height: 65px;
+    max-width: 95px;
+  }
+  .app-hero-banner {
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 14px;
+    gap: 12px;
+  }
+  .app-hero-banner-content {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .app-hero-banner-content .ie-title,
+  .app-hero-banner-content h1,
+  .app-hero-banner-content h2 {
+    font-size: clamp(16px, 4.4vw, 18px) !important;
+    line-height: 1.25 !important;
+  }
+  .app-hero-banner-content .ie-lead,
+  .app-hero-banner-content p {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .app-hero-banner-art {
+    flex: 0 0 92px;
+    max-width: 92px;
+    align-self: center;
+  }
+  .app-hero-banner-art .app-illustration {
+    max-height: 76px;
+    max-width: 92px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-hero-banner {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+  .app-hero-banner-art {
+    flex: 0 0 84px;
+    max-width: 84px;
+  }
+  .app-hero-banner-art .app-illustration {
+    max-height: 68px;
+    max-width: 84px;
+  }
 }

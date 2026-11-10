@@ -58,17 +58,17 @@ export function renderEmailBuilder(): HTMLElement {
   }).join('');
 
   root.innerHTML = `
-    <p class="drill-note">Goal: ${esc(scenario.goal)} • To: ${esc(scenario.recipient)}</p>
-    <div class="drill-chips" role="group" aria-label="Scenario">${scenarioButtons}</div>
+    <p class="drill-note">${t('email.goal_label', undefined, 'Goal')}: ${esc(scenario.goal)} • ${t('email.to_label', undefined, 'To')}: ${esc(scenario.recipient)}</p>
+    <div class="drill-chips" role="group" aria-label="${t('email.scenario_chips_aria', undefined, 'Select scenario')}">${scenarioButtons}</div>
     <div class="email-register">
-      <label class="drill-kicker" for="email-register-slider">Tone: <span class="drill-mono" data-register-label>${REGISTER_LABEL[register]}</span></label>
+      <label class="drill-kicker" for="email-register-slider">${t('email.tone_label', undefined, 'Tone')}: <span class="drill-mono" data-register-label>${REGISTER_LABEL[register]}</span></label>
       <input type="range" id="email-register-slider" class="email-slider" min="0" max="2" step="1" value="${registerIndex}" aria-valuetext="${REGISTER_LABEL[register]}">
-      <div class="email-register-scale drill-mono"><span>Informal</span><span>Neutral</span><span>Formal</span></div>
+      <div class="email-register-scale drill-mono"><span>${t('email.reg_informal', undefined, 'Informal')}</span><span>${t('email.reg_neutral', undefined, 'Neutral')}</span><span>${t('email.reg_formal', undefined, 'Formal')}</span></div>
     </div>
     <pre class="email-sample" data-sample>${esc(scenario.registers[register])}</pre>
-    <h3 class="drill-kicker">Phrase tiles</h3>
+    <h3 class="drill-kicker">${t('email.phrase_tiles', undefined, 'Phrase tiles')}</h3>
     ${tiles}
-    <label class="drill-kicker" for="email-draft">Your draft</label>
+    <label class="drill-kicker" for="email-draft">${t('email.your_draft', undefined, 'Your draft')}</label>
     <textarea id="email-draft" class="email-draft" rows="6" placeholder="${t('email.placeholder', undefined, 'Tap tiles to build your email')}">${esc(draft)}</textarea>
     <div class="drill-actions" style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
       <button type="button" class="drill-btn" data-copy style="display: inline-flex; align-items: center; justify-content: center; gap: 8px;">

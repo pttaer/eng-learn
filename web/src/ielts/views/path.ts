@@ -3,6 +3,7 @@ import { esc, h } from '../ui';
 import { SKILLS, ROUTE, estimateStart, currentBands, roadmapWeeks, extendedRoadmap, nextTask, gate, placementFrom, getTarget, weakestSkill, type Skill } from '../path';
 import { t } from '../../core/i18n';
 import { icon } from '../../utils/icons';
+import { illustration } from '../../utils/illustrations';
 
 // Mark-done progress is per viewer (localStorage); a blocked or private browser just starts empty each visit.
 const KEY = 'IELTS_PATH';
@@ -50,10 +51,22 @@ export function pathView(root: HTMLElement): () => void {
     const start = estimateStart(currentBands(att, placement));
     root.innerHTML = '';
     const curTarget = getTarget();
-    root.append(
-      h('h1', 'ie-title', t('ielts.study_path_title', { target: curTarget.toFixed(1) }, `Your ${curTarget.toFixed(1)} study path`)),
-      h('p', 'ie-lead', t('ielts.path_lead', undefined, 'Length comes from your recent attempts. Reading gets most of the weeks, and the readiness gate shows what is still missing.'))
+    const heroBanner = h(
+      'div',
+      'app-hero-banner ielts-path-hero',
+      `<div class="app-hero-banner-content">` +
+        `<span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">` +
+          `[IELTS ACADEMIC // BAND ${curTarget.toFixed(1)} ROADMAP]` +
+        `</span>` +
+        `<h1 class="ie-title" style="margin: 0; font-size: var(--font-h1); line-height: 1.25;">${esc(t('ielts.study_path_title', { target: curTarget.toFixed(1) }, `Your ${curTarget.toFixed(1)} study path`))}</h1>` +
+        `<p class="ie-lead" style="margin: 0; font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">${esc(t('ielts.path_lead', undefined, 'Length comes from your recent attempts. Reading gets most of the weeks, and the readiness gate shows what is still missing.'))}</p>` +
+      `</div>` +
+      `<div class="app-hero-banner-art">` +
+        `${illustration('to-the-stars', { size: 'banner', ariaLabel: 'IELTS Academic Study Path' })}` +
+      `</div>`
     );
+    heroBanner.style.marginBottom = 'var(--space-16, 16px)';
+    root.append(heroBanner);
 
     const cards = h('div', 'ie-cards');
     for (const s of SKILLS) {

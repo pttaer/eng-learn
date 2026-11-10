@@ -8,6 +8,7 @@ import { bandBadge, countdown, Countdown, esc, fmtTime, h } from '../ui';
 import { playText, ttsAvailable, Playback } from '../tts';
 import { icon } from '../../utils/icons';
 import { t } from '../../core/i18n';
+import { illustration } from '../../utils/illustrations';
 
 const DATA = speakingData as SpeakingData;
 const engine = new AcousticEngine();
@@ -313,23 +314,23 @@ function renderComparativeModels(host: HTMLElement, c: SpeakingPart2): void {
           activePlayback = null;
           playBtn.innerHTML = `${icon('volume', 13)} Listen to Model (Band ${m.band})`;
         } else {
-          playBtn.innerHTML = `${icon('stop', 13)} Stop Audio`;
+          playBtn.innerHTML = `${icon('stop', 13)} ${t('common.stop_audio', undefined, 'Stop Audio')}`;
           activePlayback = playText(m.text, {
             rate: 0.95,
             onEnd: () => {
               activePlayback = null;
-              playBtn.innerHTML = `${icon('volume', 13)} Listen to Model (Band ${m.band})`;
+              playBtn.innerHTML = `${icon('volume', 13)} ${t('speaking.listen_model_band', { band: m.band }, `Listen to Model (Band ${m.band})`)}`;
             }
           });
         }
       });
-      playBtn.innerHTML = `${icon('volume', 13)} Listen to Model (Band ${m.band})`;
+      playBtn.innerHTML = `${icon('volume', 13)} ${t('speaking.listen_model_band', { band: m.band }, `Listen to Model (Band ${m.band})`)}`;
     }
     actionsRow.append(playBtn);
 
     const textBox = h('div', 'ie-model-text', `<p>${esc(m.text)}</p>`);
     const commentaryBox = h('div', 'ie-examiner-commentary',
-      `<h4>Examiner Commentary & Rubric Breakdown</h4><div class="ie-note">${m.commentary.split('\n').map(line => `<p>${esc(line)}</p>`).join('')}</div>`
+      `<h4>${t('speaking.examiner_commentary_rubric', undefined, 'Examiner Commentary & Rubric Breakdown')}</h4><div class="ie-note">${m.commentary.split('\n').map(line => `<p>${esc(line)}</p>`).join('')}</div>`
     );
 
     cardBody.append(actionsRow, textBox, commentaryBox);
@@ -376,7 +377,23 @@ export function speakingView(root: HTMLElement): () => void {
     const existingBanner = root.querySelector('.ie-subnav-banner');
     root.innerHTML = '';
     if (existingBanner) root.append(existingBanner);
-    root.append(h('h1', 'ie-title', t('speaking.title', undefined, 'Academic Speaking')), h('p', 'ie-lead', t('speaking.lead', undefined, 'Recordings stay on your device. Pace and pauses are measured from the audio as a hint; the band is your own rubric rating, so it is an estimate.')));
+
+    const heroBanner = h(
+      'div',
+      'app-hero-banner ielts-speaking-hero',
+      `<div class="app-hero-banner-content">` +
+        `<span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">` +
+          `[IELTS ACADEMIC // SPEAKING SUITE]` +
+        `</span>` +
+        `<h1 class="ie-title" style="margin: 0; font-size: var(--font-h1); line-height: 1.25;">${esc(t('speaking.title', undefined, 'Academic Speaking'))}</h1>` +
+        `<p class="ie-lead" style="margin: 0; font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">${esc(t('speaking.lead', undefined, 'Recordings stay on your device. Pace and pauses are measured from the audio as a hint; the band is your own rubric rating, so it is an estimate.'))}</p>` +
+      `</div>` +
+      `<div class="app-hero-banner-art">` +
+        `${illustration('conversation', { size: 'banner', ariaLabel: 'Academic Speaking' })}` +
+      `</div>`
+    );
+    heroBanner.style.marginBottom = 'var(--space-12, 12px)';
+    root.append(heroBanner);
     const cards = h('div', 'ie-cards');
     const f = h('button', 'ie-card', `<b>${t('speaking.full_test_title', undefined, 'Full test')}</b><span>${t('speaking.full_test_sub', undefined, 'Parts 1, 2 and 3 in exam order')}</span><small>${t('speaking.full_test_time', undefined, '11-14 minutes')}</small>`);
     const a = h('button', 'ie-card', `<b>${t('speaking.part1_title', undefined, 'Part 1')}</b><span>${t('speaking.part1_sub', undefined, 'Interview')}</span><small>${t('speaking.part1_topics', { count: DATA.part1.length }, `${DATA.part1.length} topics`)}</small>`);

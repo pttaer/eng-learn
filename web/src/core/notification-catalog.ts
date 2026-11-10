@@ -806,10 +806,10 @@ export class NotificationCatalog {
         title: isWeekend
           ? '🚀 Cuối tuần bứt phá: Dành 15 phút tăng tốc Band IELTS!'
           : (currentHour < 12
-              ? '🌅 Khởi đầu ngày mới: Nạp 3 cụm từ C2 cùng cà phê sáng'
-              : (currentHour < 18
-                  ? '🍱 3 phút nghỉ trưa: Reset não bộ với 1 bài đố phản xạ'
-                  : '🌆 Xả stress cuối ngày: 5 phút luyện nói phản xạ cùng AI')),
+            ? '🌅 Khởi đầu ngày mới: Nạp 3 cụm từ C2 cùng cà phê sáng'
+            : (currentHour < 18
+              ? '🍱 3 phút nghỉ trưa: Reset não bộ với 1 bài đố phản xạ'
+              : '🌆 Xả stress cuối ngày: 5 phút luyện nói phản xạ cùng AI')),
         body: isWeekend
           ? 'Thử sức với 1 bài thi mô phỏng Mock Exam hoàn chỉnh để đo lường thực lực hiện tại!'
           : 'Duy trì đều đặn mỗi ngày là bí quyết duy nhất để biến tiếng Anh thành bản năng thứ hai.',
@@ -887,10 +887,10 @@ export class NotificationCatalog {
         title: isWeekend
           ? '🚀 Weekend Mastery Sprint: Push your IELTS Band Score!'
           : (currentHour < 12
-              ? '🌅 Morning Momentum: Charge 3 C2 collocations with breakfast'
-              : (currentHour < 18
-                  ? '🍱 Midday Reset: Quick 3-minute quiz while taking a break'
-                  : '🌆 Evening Flow: 5 minutes of speech practice to unwind')),
+            ? '🌅 Morning Momentum: Charge 3 C2 collocations with breakfast'
+            : (currentHour < 18
+              ? '🍱 Midday Reset: Quick 3-minute quiz while taking a break'
+              : '🌆 Evening Flow: 5 minutes of speech practice to unwind')),
         body: isWeekend
           ? 'Take a full offline Academic Mock Test to benchmark your true band readiness!'
           : 'Daily continuity transforms English from conscious effort into effortless second nature.',
@@ -907,6 +907,126 @@ export class NotificationCatalog {
       route: picked.route,
       category: 'daily_reminder',
       type: 'daily_reminder',
+      tag: 'srs-review-due'
+    };
+  }
+
+  /**
+   * High-Converting Vietnamese Interlanguage (L1) Curiosity Teasers
+   * Instant lock-screen insights that expose direct translation pitfalls.
+   */
+  public static getL1CuriosityNotification(locale: Locale = 'en'): NotificationPayload {
+    const isVi = locale === 'vi';
+    const templatesVi = [
+      {
+        title: '💡 90% người Việt nói sai câu này khi chào hỏi!',
+        body: 'Tại sao không bao giờ nên nói "I\'m fine, thank you" với người bản xứ? Chạm 3s xem cách phản xạ tự nhiên.'
+      },
+      {
+        title: '💡 Bẫy dịch thô: Tại sao không dùng "discuss about"?',
+        body: 'Người Việt hay nói "thảo luận về", nhưng tiếng Anh là "discuss" trực tiếp. Bấm để bóc 8 bẫy tư duy kinh điển!'
+      },
+      {
+        title: '💡 1 từ duy nhất phân biệt Band 6.5 và 8.0 Task 2!',
+        body: 'Thay từ "big problem" bằng cụm từ học thuật nào để giám khảo Cambridge cộng điểm ngay lập tức?'
+      },
+      {
+        title: '💡 "In my city have many parks" — Bạn có thấy sai?',
+        body: 'Bẫy nhầm lẫn giữa "have" và "there are" do thói quen tiếng Việt. 30 giây chém bẫy phản xạ!'
+      },
+      {
+        title: '💡 "Although... but..." — Lỗi ngữ pháp số 1 người Việt!',
+        body: 'Tiếng Việt quen miệng "Mặc dù... nhưng...", nhưng tiếng Anh chỉ chọn một. Chạm để xem cách nối ý chuẩn C2.'
+      },
+      {
+        title: '💡 "Informations" hay "Information"?',
+        body: 'Tại sao người bản xứ không bao giờ thêm "s" vào danh từ này? Chạm để khám phá quy tắc danh từ khối.'
+      }
+    ];
+
+    const templatesEn = [
+      {
+        title: '💡 1 Single Word Separates Band 6.5 from 8.0!',
+        body: 'What C2 phrase instantly upgrades "big problem" in IELTS Writing Task 2? Tap 3s to see the native model.'
+      },
+      {
+        title: '💡 Interlanguage Trap: Why never say "discuss about"?',
+        body: 'Direct translation causes preposition clutter. Tap to conquer the 8 core Vietnamese EFL transfer traps!'
+      },
+      {
+        title: '💡 Native Reflex: "Although... but..." is a dead giveaway!',
+        body: 'Never use dual subordinating conjunctions. Tap to drill single-conjunction rhetorical precision.'
+      },
+      {
+        title: '💡 Uncountable Nouns: "Informations" vs "Information"',
+        body: 'Why native speakers never pluralize mass nouns. 30-second reflex drill cements the rule forever.'
+      }
+    ];
+
+    const templates = isVi ? templatesVi : templatesEn;
+    const selected = templates[Math.floor(Math.random() * templates.length)];
+
+    return {
+      title: selected.title,
+      body: selected.body,
+      route: '#mistakes',
+      category: 'curiosity',
+      type: 'l1_curiosity',
+      tag: 'srs-review-due'
+    };
+  }
+
+  /**
+   * Personal Error Redemption & Revenge Drill Hook
+   * Pulls the learner\'s actual recent mistakes into an empowering 15-second challenge.
+   */
+  public static getRevengeDrillNotification(
+    sampleFault: string,
+    mistakeCount: number,
+    locale: Locale = 'en'
+  ): NotificationPayload {
+    const isVi = locale === 'vi';
+    const cleanWord = sampleFault.length > 25 ? sampleFault.slice(0, 25) + '…' : sampleFault;
+
+    const templatesVi = [
+      {
+        title: `⚔️ Phục thù câu sai: "${cleanWord}"`,
+        body: `Hôm qua bạn gõ nhầm câu này. 15 giây dứt điểm để biến điểm yếu thành phản xạ chuẩn C2!`
+      },
+      {
+        title: `🎯 Thanh toán ${mistakeCount} lỗi trong Mistake Vault!`,
+        body: `Sửa lỗi sai cá nhân giúp tăng điểm nhanh gấp 3 lần học kiến thức mới. 1 lượt blitz 60s dứt điểm ngay!`
+      },
+      {
+        title: `⚡ Khắc phục lỗi sai trước khi hóa thạch: "${cleanWord}"`,
+        body: `Đừng để thói quen sai cắm rễ vào tiềm thức. 30 giây trả thù câu này trong Mistake Vault!`
+      }
+    ];
+
+    const templatesEn = [
+      {
+        title: `⚔️ Revenge Drill: Redeem "${cleanWord}"`,
+        body: `You slipped on this item yesterday. 15 seconds to turn your vulnerability into an active reflex!`
+      },
+      {
+        title: `🎯 Clear ${mistakeCount} error${mistakeCount > 1 ? 's' : ''} in your Mistake Vault!`,
+        body: `Fixing personal mistakes boosts scores 3x faster than passive study. 60-second recovery blitz!`
+      },
+      {
+        title: `⚡ Don't let "${cleanWord}" fossilize!`,
+        body: `Take a 30-second micro-drill in your Mistake Vault to cement the canonical native formulation.`
+      }
+    ];
+
+    const templates = isVi ? templatesVi : templatesEn;
+    const selected = templates[Math.floor(Math.random() * templates.length)];
+
+    return {
+      title: selected.title,
+      body: selected.body,
+      route: '#mistakes',
+      category: 'mistakes',
+      type: 'revenge_drill',
       tag: 'srs-review-due'
     };
   }
@@ -977,6 +1097,12 @@ export class NotificationCatalog {
   public static getWidgetCuriosityTip(locale: Locale = 'en'): { text: string; kicker: string } {
     const isVi = locale === 'vi';
     const tipsVi = [
+      { kicker: 'BẪY TIẾNG VIỆT', text: 'Tại sao không bao giờ nên nói “discuss about”?' },
+      { kicker: 'PHÁT ÂM', text: '“Receipt” và “Debt” hoàn toàn KHÔNG có âm /p/ và /b/!' },
+      { kicker: 'BẪY GIAO TIẾP', text: 'Tây giật mình khi nghe bạn nói “I am fine, thank you”!' },
+      { kicker: 'BAND 8.0', text: 'Người bản xứ không bao giờ nói “Although... but...”' },
+      { kicker: 'DANH TỪ KHỐI', text: '“Informations” hay “Information”? Coi chừng mất điểm oan' },
+      { kicker: 'THÀNH NGỮ', text: '“Break a leg” không phải chúc gãy chân mà là chúc may mắn!' },
       { kicker: 'COLLOCATION', text: '“inflict damage” chuẩn hơn “make damage”' },
       { kicker: 'C2 UPGRADE', text: 'Thay “big problem” bằng “insurmountable obstacle”' },
       { kicker: 'TASK 2 TIP', text: 'Dùng “It is widely contended that...” thay “In my opinion”' },
@@ -986,6 +1112,12 @@ export class NotificationCatalog {
       { kicker: 'READING TIP', text: 'Phân biệt rạch ròi giữa False (trái ngược) và Not Given' }
     ];
     const tipsEn = [
+      { kicker: 'VIETNAMESE L1', text: 'Why native speakers never say “discuss about”?' },
+      { kicker: 'PRONUNCIATION', text: '“Receipt” & “Debt” have completely silent /p/ and /b/!' },
+      { kicker: 'NATIVE NUANCE', text: 'Never reply “I am fine, thank you” in casual conversation!' },
+      { kicker: 'BAND 8.0', text: 'Never pair “Although... but...” in the same sentence' },
+      { kicker: 'MASS NOUNS', text: '“Information” is uncountable — never add -s!' },
+      { kicker: 'IDIOM SECRET', text: '“Break a leg” means good luck, not injury!' },
       { kicker: 'COLLOCATION', text: 'Say “inflict damage” instead of “make damage”' },
       { kicker: 'C2 UPGRADE', text: 'Upgrade “big problem” to “insurmountable obstacle”' },
       { kicker: 'TASK 2 TIP', text: 'Open with “It is widely contended that...”' },
@@ -996,5 +1128,146 @@ export class NotificationCatalog {
     ];
     const list = isVi ? tipsVi : tipsEn;
     return list[Math.floor(Math.random() * list.length)];
+  }
+
+  /**
+   * The Duolingo-style "Break-Up" circuit breaker.
+   * Triggered when reminders are unengaged for 5+ days to subvert psychological reactance.
+   */
+  public static getDuolingoBreakUpNotification(locale: Locale = 'en'): NotificationPayload {
+    const isVi = locale === 'vi';
+    return {
+      title: isVi ? 'Có vẻ nhắc nhở không còn hiệu quả...' : 'These reminders seem unhelpful...',
+      body: isVi
+        ? 'Ứng dụng xin phép tạm dừng. Khi nào bạn sẵn sàng trở lại, app vẫn ở đây!'
+        : "We'll stop sending them for now. Whenever you're ready, we'll be here.",
+      route: '#vocab',
+      category: 'daily_reminder',
+      type: 'break_up',
+      tag: 'app-breakup'
+    };
+  }
+
+  /**
+   * Day 0 Onboarding Re-engagement hooks (+2h activation triage, +6h leisure reset).
+   */
+  public static getDayZeroOnboardingNotification(windowSlot: '2h' | '6h', locale: Locale = 'en'): NotificationPayload {
+    const isVi = locale === 'vi';
+    if (windowSlot === '2h') {
+      return {
+        title: isVi ? '⚡ Bạn có 60 giây rảnh tay?' : '⚡ Got 60 seconds?',
+        body: isVi
+          ? 'Khởi động phản xạ với 1 cụm từ C2 đắt giá. Nhanh gọn, chuẩn 8.0!'
+          : 'Master 1 sharp C2 collocation right now. Zero pressure, pure progress.',
+        route: '#collocations',
+        category: 'daily_reminder',
+        type: 'day0_triage',
+        tag: 'onboarding-d0'
+      };
+    } else {
+      return {
+        title: isVi ? '☕ Đổi gió 2 phút buổi tối' : '☕ 2-Minute Evening Reset',
+        body: isVi
+          ? 'Thử thách phản xạ với 1 bẫy từ vựng Cambridge. Nhẹ nhàng, dễ nhớ!'
+          : 'Test your intuition on 1 tricky Cambridge collocation before bed.',
+        route: '#collocations',
+        category: 'daily_reminder',
+        type: 'day0_evening',
+        tag: 'onboarding-d0'
+      };
+    }
+  }
+
+  /**
+   * Circadian habit-anchored prompts: morning espresso, lunch reset, evening streak save, midnight emergency.
+   */
+  public static getCircadianPromptNotification(
+    slot: 'morning' | 'lunch' | 'evening' | 'midnight',
+    streak: number = 1,
+    locale: Locale = 'en'
+  ): NotificationPayload {
+    const isVi = locale === 'vi';
+    switch (slot) {
+      case 'morning':
+        return {
+          title: isVi ? '☀️ Cà phê sáng cùng 5 từ vựng C2' : '☀️ Morning Espresso Vocabulary',
+          body: isVi
+            ? 'Kích hoạt não bộ trước khi bận rộn. 5 từ vựng đắt giá trong 2 phút.'
+            : 'Prime your brain before the rush. 5 high-yield words in 2 minutes.',
+          route: '#collocations',
+          category: 'time_context',
+          type: 'circadian_morning',
+          tag: 'circadian-habit'
+        };
+      case 'lunch':
+        return {
+          title: isVi ? '🍱 Đổi gió giờ trưa với 3 từ mới' : '🍱 Quick Lunchtime Brain Reset',
+          body: isVi
+            ? 'Vừa ăn trưa vừa lướt nhẹ 3 cụm từ hay. Biến thời gian rảnh thành tiến bộ!'
+            : 'Give your screen time a purposeful twist. 3 rapid-fire collocations.',
+          route: '#collocations',
+          category: 'time_context',
+          type: 'circadian_lunch',
+          tag: 'circadian-habit'
+        };
+      case 'evening':
+        return {
+          title: isVi ? `🔥 Đừng để mất chuỗi ${streak} ngày!` : `🔥 Don’t lose your ${streak}-day streak!`,
+          body: isVi
+            ? 'Sắp qua ngày mới! Chỉ 1 phút ôn nhanh để giữ vững chuỗi học của bạn.'
+            : 'Midnight is coming. 1 quick quiz saves your progress and keeps flame alive.',
+          route: '#habits',
+          category: 'streak_reminder',
+          type: 'circadian_evening',
+          tag: 'streak-defense'
+        };
+      case 'midnight':
+      default:
+        return {
+          title: isVi ? `⏳ Còn 90 phút: Cứu chuỗi ${streak} ngày!` : `⏳ 90 mins left: Save your streak!`,
+          body: isVi
+            ? 'Chuỗi học sắp biến mất sau nửa đêm. Nhấn vào ôn 60 giây để giữ khiên an toàn!'
+            : `Your ${streak}-day streak expires at midnight. Tap now to keep it safe!`,
+          route: '#habits',
+          category: 'streak_reminder',
+          type: 'circadian_midnight',
+          tag: 'streak-emergency'
+        };
+    }
+  }
+
+  /**
+   * Micro-commitment hook for lowest friction re-entry (BJ Fogg Tiny Habits).
+   */
+  public static getMicroCommitmentNotification(targetWord: string = 'ubiquitous', locale: Locale = 'en'): NotificationPayload {
+    const isVi = locale === 'vi';
+    const safeWord = targetWord.length > 12 ? targetWord.slice(0, 12) + '...' : targetWord;
+    return {
+      title: isVi ? `🎯 Đúng 1 từ: "${safeWord}"` : `🎯 Just 1 word: "${safeWord}"`,
+      body: isVi
+        ? 'Cách dùng cực sang cho bài thi IELTS Writing. Trả lời 1 câu trắc nghiệm là xong!'
+        : 'Master how to use it in IELTS Writing Task 2. Tap once, answer 1 quiz, done.',
+      route: '#collocations',
+      category: 'curiosity',
+      type: 'micro_commitment',
+      tag: 'micro-drill'
+    };
+  }
+
+  /**
+   * High-converting curiosity trap regarding IELTS common pitfalls.
+   */
+  public static getCuriosityTrapNotification(locale: Locale = 'en'): NotificationPayload {
+    const isVi = locale === 'vi';
+    return {
+      title: isVi ? '⚠️ 90% người thi IELTS nhầm từ này' : '⚠️ 90% of IELTS candidates miss this',
+      body: isVi
+        ? 'Bạn có dùng sai "on the contrary"? Xem ngay quy tắc 10 giây giám khảo hay bắt bẻ.'
+        : 'Are you using "on the contrary" wrong? Check the 10-second rule examiners test.',
+      route: 'ielts.html#writing',
+      category: 'ielts',
+      type: 'curiosity_trap',
+      tag: 'curiosity-trap'
+    };
   }
 }
