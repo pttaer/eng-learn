@@ -5,6 +5,7 @@
 
 import emailData from '../assets/data/email-builder.json';
 import { t } from '../core/i18n';
+import { AcousticHaptics } from '../core/acoustic-haptics';
 
 type Register = 'informal' | 'neutral' | 'formal';
 
@@ -23,6 +24,23 @@ const data = emailData as { tiles: Tile[]; scenarios: Scenario[] };
 let scenarioIndex = 0;
 let registerIndex = 1;
 let draft = '';
+
+function fallbackCopy(text: string): void {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.top = '-9999px';
+  ta.style.left = '-9999px';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try {
+    document.execCommand('copy');
+  } catch {
+    // ignore
+  }
+  document.body.removeChild(ta);
+}
 
 export function renderEmailBuilder(): HTMLElement {
   const root = document.createElement('div');
@@ -52,27 +70,77 @@ export function renderEmailBuilder(): HTMLElement {
     ${tiles}
     <label class="drill-kicker" for="email-draft">Your draft</label>
     <textarea id="email-draft" class="email-draft" rows="6" placeholder="${t('email.placeholder', undefined, 'Tap tiles to build your email')}">${esc(draft)}</textarea>
-    <div class="drill-actions">
+    <div class="drill-actions" style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+      <button type="button" class="drill-btn" data-copy style="display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+        <span class="copy-icon" aria-hidden="true" style="font-size: 16px;">📋</span>
+        <span class="copy-label">${t('email.copy_draft', undefined, 'Copy draft')}</span>
+      </button>
       <button type="button" class="drill-btn drill-btn-ghost" data-clear>${t('email.clear_draft', undefined, 'Clear draft')}</button>
+      <span class="email-copy-feedback" aria-live="polite" style="font-size: var(--font-kicker); font-family: var(--font-mono); color: var(--accent-gold); opacity: 0; transition: opacity 0.2s ease;"></span>
     </div>`;
 
   root.addEventListener('click', e => {
-    const target = (e.target as HTMLElement).closest<HTMLElement>('[data-scenario], [data-phrase], [data-clear]');
+    const target = (e.target as HTMLElement).closest<HTMLElement>('[data-scenario], [data-phrase], [data-clear], [data-copy]');
     if (!target) return;
     if (target.dataset.scenario !== undefined) {
+      AcousticHaptics.tap();
       scenarioIndex = Number(target.dataset.scenario);
       rerender(root);
       return;
     }
     if (target.dataset.phrase !== undefined) {
+      AcousticHaptics.tap();
       const area = root.querySelector('#email-draft') as HTMLTextAreaElement;
       draft = (draft ? draft.replace(/\s*$/, ' ') : '') + target.dataset.phrase;
       area.value = draft;
       area.focus();
       return;
     }
-    draft = '';
-    (root.querySelector('#email-draft') as HTMLTextAreaElement).value = '';
+    if (target.dataset.copy !== undefined) {
+      const area = root.querySelector('#email-draft') as HTMLTextAreaElement;
+      const textToCopy = (area ? area.value : draft) || draft;
+      if (!textToCopy.trim()) {
+        AcousticHaptics.nudge();
+        return;
+      }
+      const copyBtn = root.querySelector('[data-copy]') as HTMLElement | null;
+      const copyIcon = copyBtn?.querySelector('.copy-icon') as HTMLElement | null;
+      const copyLabel = copyBtn?.querySelector('.copy-label') as HTMLElement | null;
+      const feedback = root.querySelector('.email-copy-feedback') as HTMLElement | null;
+
+      const onSuccess = () => {
+        AcousticHaptics.chime();
+        if (copyIcon) copyIcon.textContent = '✓';
+        if (copyLabel) copyLabel.textContent = t('email.copied', undefined, 'Copied!');
+        if (feedback) {
+          feedback.textContent = `✓ ${t('email.copied', undefined, 'Copied!')}`;
+          feedback.style.opacity = '1';
+        }
+        setTimeout(() => {
+          if (copyIcon) copyIcon.textContent = '📋';
+          if (copyLabel) copyLabel.textContent = t('email.copy_draft', undefined, 'Copy draft');
+          if (feedback) feedback.style.opacity = '0';
+        }, 2000);
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(textToCopy).then(onSuccess).catch(() => {
+          fallbackCopy(textToCopy);
+          onSuccess();
+        });
+      } else {
+        fallbackCopy(textToCopy);
+        onSuccess();
+      }
+      return;
+    }
+    if (target.dataset.clear !== undefined) {
+      AcousticHaptics.tap();
+      draft = '';
+      const area = root.querySelector('#email-draft') as HTMLTextAreaElement;
+      if (area) area.value = '';
+      return;
+    }
   });
 
   root.addEventListener('input', e => {

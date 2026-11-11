@@ -93,10 +93,11 @@ export function calculateWritingMetrics(targetStr: string, typedStr: string, ela
   const grossWpm = Math.round((charsTyped / 5) / minutes);
 
   const diffTokens = computeDiffTokens(normTarget, normTyped);
-  const targetTokens = tokenizeWords(normTarget);
+  const targetWords = tokenizeWords(normTarget).filter(w => w.trim().length > 0);
   let errorCount = 0;
   let matchCount = 0;
   for (const token of diffTokens) {
+    if (token.value.trim().length === 0) continue;
     if (token.type === 'delete' || token.type === 'insert') {
       errorCount++;
     } else if (token.type === 'match') {
@@ -107,6 +108,7 @@ export function calculateWritingMetrics(targetStr: string, typedStr: string, ela
   // Active typing errors (excluding untyped trailing tokens of target text)
   let trailingDeletes = 0;
   for (let k = diffTokens.length - 1; k >= 0; k--) {
+    if (diffTokens[k].value.trim().length === 0) continue;
     if (diffTokens[k].type === 'delete') {
       trailingDeletes++;
     } else {
@@ -115,9 +117,9 @@ export function calculateWritingMetrics(targetStr: string, typedStr: string, ela
   }
   const activeErrors = Math.max(0, errorCount - trailingDeletes);
   const netWpm = Math.max(0, Math.round(((charsTyped / 5) - Math.floor(activeErrors / 2)) / minutes));
-  const rawAcc = targetTokens.length === 0 ? 100 : Math.round((matchCount / targetTokens.length) * 100);
+  const rawAcc = targetWords.length === 0 ? 100 : Math.round((matchCount / targetWords.length) * 100);
   const accuracyPct = Number.isFinite(rawAcc) ? Math.max(0, Math.min(100, rawAcc)) : 0;
-  const completed = matchCount === targetTokens.length && errorCount === 0;
+  const completed = matchCount === targetWords.length && errorCount === 0;
 
   return {
     grossWpm,
@@ -335,26 +337,28 @@ export class WritingDossier {
               </div>
             </div>
 
-            <!-- Original Exemplar -->
-            <div style="margin-bottom: 16px;">
-              <div class="telemetry-label" style="margin-bottom: 6px;">${t('writing.original_exemplar', undefined, 'ORIGINAL EXEMPLAR')}</div>
-              <div style="font-size: var(--font-body); line-height: 1.6; padding: 14px; background: var(--bg-surface-sunk); border-left: 3px solid var(--accent-gold); border-radius: var(--radius-squircle-sm, 10px); color: var(--ink-primary);">
-                "${item.masterSentence}"
-              </div>
-            </div>
-
-            <!-- Side-by-Side Highlighted Diff -->
-            <div style="margin-bottom: 16px;">
+            <!-- Dual Parallel Pedagogical Comparison: Candidate Attempt vs Target Model -->
+            <div class="copywork-diff-container" role="region" aria-label="Myers split-diff evaluation" aria-live="polite" aria-atomic="true" style="margin-bottom: 16px;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 8px;">
-                <div class="telemetry-label">${t('writing.reconstruction_corrections', undefined, 'YOUR RECONSTRUCTION & CORRECTIONS')}</div>
+                <div class="telemetry-label">${t('writing.reconstruction_corrections', undefined, 'YOUR RECONSTRUCTION (HIGHLIGHTED ERRORS)')}</div>
                 <div class="diff-legend" style="display: flex; gap: 8px; font-size: var(--font-kicker); font-family: var(--font-mono);">
                   <span style="color: var(--ink-primary); display: inline-flex; align-items: center; gap: 4px;">● Matched</span>
-                  <span style="color: #ef4444; display: inline-flex; align-items: center; gap: 4px; text-decoration: line-through;">● Missing</span>
-                  <span style="color: var(--accent-gold); display: inline-flex; align-items: center; gap: 4px; font-weight: 600;">● Inserted</span>
+                  <span style="color: #ef4444; display: inline-flex; align-items: center; gap: 4px; text-decoration: line-through;">● Needs correction</span>
                 </div>
               </div>
-              <div class="copywork-diff-container" role="region" aria-label="Myers split-diff evaluation" aria-live="polite" aria-atomic="true" style="font-size: var(--font-body); line-height: 1.8; padding: 14px; border: none; border-radius: var(--radius-squircle-sm, 10px); background: var(--bg-canvas); white-space: pre-wrap; word-break: break-word;">
-                ${this.renderDiffHTML(tokens)}
+              <div class="diff-sub-block candidate-attempt-container" style="font-size: var(--font-body); line-height: 1.8; padding: 14px; border: 1px solid var(--border-hairline); border-radius: var(--radius-squircle-sm, 10px); background: var(--bg-surface-sunk); white-space: pre-wrap; word-break: break-word; margin-bottom: 14px;">
+                ${this.renderCandidateDiffHTML(tokens)}
+              </div>
+
+              <!-- Exemplar Model with Missed Targets -->
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 8px;">
+                <div class="telemetry-label">${t('writing.original_exemplar', undefined, 'TARGET EXEMPLAR')}</div>
+                <div class="diff-legend" style="display: flex; gap: 8px; font-size: var(--font-kicker); font-family: var(--font-mono);">
+                  <span style="color: var(--accent-gold); display: inline-flex; align-items: center; gap: 4px; font-weight: 600;">● Target / Missed</span>
+                </div>
+              </div>
+              <div class="diff-sub-block target-exemplar-container" style="font-size: var(--font-body); line-height: 1.8; padding: 14px; border-left: 3px solid var(--accent-gold); border-radius: var(--radius-squircle-sm, 10px); background: var(--bg-surface-sunk); white-space: pre-wrap; word-break: break-word;">
+                ${this.renderTargetDiffHTML(tokens)}
               </div>
             </div>
 
@@ -421,7 +425,48 @@ export class WritingDossier {
     }
   }
 
-  private renderDiffHTML(tokens: ProofreadDiffToken[]): string {
+  private renderCandidateDiffHTML(tokens: ProofreadDiffToken[]): string {
+    const candidateTokens = tokens.filter(t => t.type !== 'delete');
+    if (candidateTokens.length === 0) {
+      return `<em style="color: var(--ink-muted); font-style: italic;">[Chưa có văn bản gõ]</em>`;
+    }
+    const chunked: ProofreadDiffToken[] = [];
+    for (const t of candidateTokens) {
+      if (chunked.length > 0 && chunked[chunked.length - 1].type === t.type) {
+        chunked[chunked.length - 1].value += t.value;
+      } else {
+        chunked.push({ type: t.type, value: t.value });
+      }
+    }
+    return chunked.map(chunk => {
+      if (chunk.type === 'match') {
+        return `<span class="diff-match" style="color: var(--ink-primary);">${this.escapeHTML(chunk.value)}</span>`;
+      } else {
+        return `<span class="diff-delete" style="color: #ef4444; text-decoration: line-through; background: rgba(239, 68, 68, 0.12); padding: 1px 4px; border-radius: 4px; margin: 0 1px;">${this.escapeHTML(chunk.value)}</span>`;
+      }
+    }).join('');
+  }
+
+  private renderTargetDiffHTML(tokens: ProofreadDiffToken[]): string {
+    const targetTokens = tokens.filter(t => t.type !== 'insert');
+    const chunked: ProofreadDiffToken[] = [];
+    for (const t of targetTokens) {
+      if (chunked.length > 0 && chunked[chunked.length - 1].type === t.type) {
+        chunked[chunked.length - 1].value += t.value;
+      } else {
+        chunked.push({ type: t.type, value: t.value });
+      }
+    }
+    return chunked.map(chunk => {
+      if (chunk.type === 'match') {
+        return `<span class="diff-match" style="color: var(--ink-primary);">${this.escapeHTML(chunk.value)}</span>`;
+      } else {
+        return `<span class="diff-insert" style="color: var(--accent-gold); font-weight: 600; background: var(--accent-gold-soft); padding: 1px 4px; border-radius: 4px; margin: 0 1px;">${this.escapeHTML(chunk.value)}</span>`;
+      }
+    }).join('');
+  }
+
+  public renderDiffHTML(tokens: ProofreadDiffToken[]): string {
     const chunked: ProofreadDiffToken[] = [];
     for (const t of tokens) {
       if (chunked.length > 0 && chunked[chunked.length - 1].type === t.type) {

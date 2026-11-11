@@ -602,6 +602,10 @@ select {
   box-sizing: border-box;
 }
 
+textarea {
+  resize: none !important;
+}
+
 @media (max-width: 768px) {
 
   input[type="text"],
@@ -1207,7 +1211,7 @@ body.zen-active,
   background: linear-gradient(to bottom, #090d16 0%, #090d16 45%, rgba(9, 13, 22, 0.85) 75%, transparent 100%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  z-index: 9990;
+  z-index: 1000 !important;
   pointer-events: none;
 }
 
@@ -1268,7 +1272,7 @@ body.zen-active,
   transform: translate(-50%, -180%);
   opacity: 0;
   pointer-events: none;
-  z-index: var(--z-modal, 9999);
+  z-index: 10001 !important;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -1300,12 +1304,13 @@ body.zen-active,
   }
 
   .zen-floating-pill {
-    top: 14px;
-    padding: 8px 16px;
-    gap: 8px;
-    transform: translate(-50%, 0);
-    opacity: 0.95;
-    pointer-events: auto;
+    top: 14px !important;
+    padding: 8px 16px !important;
+    gap: 8px !important;
+    transform: translate(-50%, 0) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    z-index: 10001 !important;
   }
 }
 

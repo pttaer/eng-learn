@@ -238,7 +238,7 @@ export class ListeningDossier {
         </div>
         <div class="listening-mode-cluster" role="tablist" aria-label="Listening Mode">
           <button type="button" class="hud-btn mode-tab ${this.currentMode === 'passive' ? 'active' : ''}" data-mode="passive" aria-pressed="${this.currentMode === 'passive'}">
-            ${icon('book', 13)} <span class="tab-label">${t('listening.passive_passages')}</span>
+            ${icon('headphones', 13)} <span class="tab-label">${t('listening.passive_passages')}</span>
           </button>
           <button type="button" class="hud-btn mode-tab ${this.currentMode === 'cloze' ? 'active' : ''}" data-mode="cloze" aria-pressed="${this.currentMode === 'cloze'}">
             ${icon('edit', 13)} <span class="tab-label">${t('listening.cloze_transcription')}</span>

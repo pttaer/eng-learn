@@ -436,31 +436,25 @@ export class ReadingDossier {
 
     this.container.innerHTML = `
       <div class="dossier-control-bar reading-control-bar">
-        <div class="reading-controls-primary">
-          <div class="reading-mode-bar" role="group" aria-label="Reading mode">
-            <button class="hud-btn btn-mode-intensive active" title="${t('reading.mode_intensive_title', undefined, 'Intensive (4-Pass)')}">${t('reading.mode_intensive', undefined, '🔬 Intensive')}</button>
-            <button class="hud-btn btn-mode-extensive" title="${t('reading.mode_extensive_title', undefined, 'Extensive (Comprehensible Input)')}">${t('reading.mode_extensive', undefined, '📖 Extensive')}</button>
-          </div>
-
-          <div class="dossier-tabs article-tabs" role="tablist" aria-label="${t('reading.articles')}">
-            ${this.articles.map((art, idx) => `
-              <button role="tab" aria-selected="${idx === this.currentArticleIndex}" tabindex="${idx === this.currentArticleIndex ? '0' : '-1'}" class="hud-btn article-tab ${idx === this.currentArticleIndex ? 'active' : ''}" data-idx="${idx}" title="${this.escapeHtml(art.title)}" aria-label="Article ${idx + 1}: ${this.escapeHtml(art.title)}">
-                <span class="art-num">Art 0${idx + 1}</span><span class="art-sep">: </span><span class="art-title">${this.escapeHtml(art.title)}</span>
-              </button>
-            `).join('')}
-          </div>
+        <div class="reading-mode-bar" role="group" aria-label="Reading mode">
+          <button class="hud-btn btn-mode-intensive active" title="${t('reading.mode_intensive_title', undefined, 'Intensive (4-Pass)')}">${t('reading.mode_intensive', undefined, '🔬 Intensive')}</button>
+          <button class="hud-btn btn-mode-extensive" title="${t('reading.mode_extensive_title', undefined, 'Extensive (Comprehensible Input)')}">${t('reading.mode_extensive', undefined, '📖 Extensive')}</button>
         </div>
 
-        <div class="reading-controls-secondary">
-          ${levelRowHtml(this.allArticles, this.activeLevel)}
-          <div class="article-meta-telemetry reading-meta-telemetry" aria-label="Article telemetry">
-            <span class="telemetry-value reading-meta-pill reading-meta-art">Art 0${this.currentArticleIndex + 1}</span>
-            <span class="telemetry-value reading-meta-pill reading-meta-cefr">${article.cefrLevel}</span>
-            <span class="reading-meta-dot" aria-hidden="true">•</span>
-            <span class="telemetry-value reading-meta-words">${t('reading.words_count', { count: article.wordCount })}</span>
-            <span class="reading-meta-dot" aria-hidden="true">•</span>
-            <span class="telemetry-value reading-meta-time">${article.readingTime.toUpperCase()}</span>
-          </div>
+        <div class="dossier-tabs article-tabs" role="tablist" aria-label="${t('reading.articles')}">
+          ${this.articles.map((art, idx) => `
+            <button role="tab" aria-selected="${idx === this.currentArticleIndex}" tabindex="${idx === this.currentArticleIndex ? '0' : '-1'}" class="hud-btn article-tab ${idx === this.currentArticleIndex ? 'active' : ''}" data-idx="${idx}" title="${this.escapeHtml(art.title)}" aria-label="Article ${idx + 1}: ${this.escapeHtml(art.title)}">
+              <span class="art-num">Art 0${idx + 1}</span><span class="art-sep">: </span><span class="art-title">${this.escapeHtml(art.title)}</span>
+            </button>
+          `).join('')}
+        </div>
+
+        ${levelRowHtml(this.allArticles, this.activeLevel)}
+
+        <div class="article-meta-telemetry reading-meta-telemetry" aria-label="Article telemetry">
+          <span class="telemetry-value reading-meta-words">${t('reading.words_count', { count: article.wordCount })}</span>
+          <span class="reading-meta-dot" aria-hidden="true">•</span>
+          <span class="telemetry-value reading-meta-time">${article.readingTime.toUpperCase()}</span>
         </div>
       </div>
 

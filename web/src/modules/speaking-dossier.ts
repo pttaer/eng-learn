@@ -680,7 +680,7 @@ export class SpeakingDossier {
       id: item.id,
       pillar: 'SPEAK',
       category: '4-3-2',
-      indexStr: `[ ${String(item.index).padStart(2, '0')} / ${this.items.length} ]`,
+      indexStr: `[ ${String(this.currentIndex + 1).padStart(2, '0')} / ${this.items.length} ]`,
       statusBadge,
       front: {
         customContent: frontEl,
@@ -741,7 +741,7 @@ export class SpeakingDossier {
         <div class="collocation-radar-strip">
           ${targetStatus.map((t) => `
             <button type="button" class="radar-chip ${t.spotted ? 'spotted' : ''}" data-phrase="${t.phrase}" title="${t.spotted ? 'Voiced in take' : 'Click to manually mark as voiced'}">
-              <span>${t.spotted ? '[✓]' : '[ ]'}</span>
+              <span class="radar-indicator" style="display: inline-flex; align-items: center; justify-content: center; width: 14px; font-weight: 700; color: ${t.spotted ? 'var(--ink-good)' : 'var(--ink-muted)'};">${t.spotted ? '✓' : '○'}</span>
               <span>${t.phrase.toUpperCase()}</span>
             </button>
           `).join('')}
@@ -1714,7 +1714,7 @@ export class SpeakingDossier {
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
           <div>
             <h3 style="margin: 0; font-size: var(--font-body); font-weight: 700; color: var(--ink-primary);">${icon('graduationCap', 16)} Official IELTS Speaking Examiner Simulator</h3>
-            <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">CAMBRIDGE 9-BAND CRITERIA (FC, LR, GRA, PR) // MULTI-STAGE EXAMINER INTERLOCUTOR</span>
+            <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">CAMBRIDGE 9-BAND CRITERIA (FC, LR, GRA, PR) · MULTI-STAGE EXAMINER INTERLOCUTOR</span>
           </div>
           <button class="hud-btn btn-restart-ielts" style="font-size: var(--font-kicker); padding: 4px 10px;">
             ↺ Reset Test
@@ -1753,7 +1753,7 @@ export class SpeakingDossier {
               <span class="ielts-examiner-avatar">${icon('graduationCap', 18)}</span>
               <div>
                 <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); display: block; margin-bottom: 4px;">
-                  EXAMINER // PART 1 QUESTION ${this.ieltsQuestionIndex + 1} OF ${this.ieltsPart1Questions.length}
+                  EXAMINER · PART 1 QUESTION ${this.ieltsQuestionIndex + 1} OF ${this.ieltsPart1Questions.length}
                 </span>
                 <div class="ielts-examiner-text">
                   "${this.ieltsPart1Questions[this.ieltsQuestionIndex]}"
@@ -1798,7 +1798,7 @@ export class SpeakingDossier {
                 </div>
               </div>
               <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted);">
-                [PREPARATION TIME REMAINING // SCRATCHPAD ACTIVE]
+                [PREPARATION TIME REMAINING · SCRATCHPAD ACTIVE]
               </span>
             </div>
 
@@ -1846,7 +1846,7 @@ export class SpeakingDossier {
               <span class="ielts-examiner-avatar">${icon('graduationCap', 18)}</span>
               <div>
                 <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); display: block; margin-bottom: 4px;">
-                  EXAMINER // PART 3 ABSTRACT INQUIRY ${this.ieltsQuestionIndex + 1} OF ${this.ieltsPart3Questions.length}
+                  EXAMINER · PART 3 ABSTRACT INQUIRY ${this.ieltsQuestionIndex + 1} OF ${this.ieltsPart3Questions.length}
                 </span>
                 <div class="ielts-examiner-text">
                   "${this.ieltsPart3Questions[this.ieltsQuestionIndex]}"

@@ -625,10 +625,10 @@ export class PerspectiveCanvas {
         ctx.strokeRect(-drawSize / 2 - 3, -drawSize / 2 - 3, drawSize + 6, drawSize + 6);
 
         // Monospace index label
-        const col = ent.collocation as any;
-        const label = col?.headword
-          ? col.headword.slice(0, 6).toUpperCase()
-          : (col?.phrase ? col.phrase.split(' ')[0].slice(0, 6).toUpperCase() : 'LEX');
+        const collocationObj = ent.collocation as any;
+        const label = collocationObj?.headword
+          ? String(collocationObj.headword).slice(0, 6).toUpperCase()
+          : (ent.collocation?.phrase ? ent.collocation.phrase.split(' ')[0].slice(0, 6).toUpperCase() : 'LEX');
         ctx.fillStyle = isDark ? '#f8fafc' : '#000000';
         ctx.font = '700 8px "JetBrains Mono", monospace';
         ctx.textAlign = 'center';

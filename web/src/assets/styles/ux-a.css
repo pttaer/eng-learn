@@ -3,7 +3,6 @@
   flex-wrap: wrap;
 }
 
-.dossier-reading .article-tab,
 .dossier-reading .stepper-step,
 .dossier-reading .hud-btn,
 .dossier-reading .reading-meta-telemetry .telemetry-value,
@@ -30,11 +29,9 @@
   }
 }
 
-/* Reading: full article titles, readable meta row, stacked columns on narrow screens */
+/* Reading: readable meta row, stacked columns on narrow screens */
 .article-tab {
-  white-space: normal;
-  text-align: left;
-  line-height: 1.3;
+  white-space: nowrap;
 }
 
 .reading-meta-telemetry {

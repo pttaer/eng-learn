@@ -132,8 +132,7 @@
   box-sizing: border-box;
 }
 
-.dossier-tabs,
-.collocations-category-tabs {
+.dossier-tabs {
   display: flex;
   align-items: center;
   gap: var(--space-8);
@@ -392,6 +391,91 @@
 .compass-item-code {
   font-size: var(--text-2xs);
   color: var(--ink-muted);
+}
+
+.compass-backdrop {
+  display: none;
+}
+
+.compass-mobile-header {
+  display: none;
+}
+
+.compass-menu-items-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+@media (max-width: 768px) {
+  .corner-compass-container.compass-active .compass-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: var(--modal-backdrop, rgba(5, 7, 13, 0.78)) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    z-index: var(--z-modal, 900);
+  }
+
+  .corner-compass-container.compass-active .compass-trigger {
+    display: none !important;
+  }
+
+  .corner-compass-container.compass-active .compass-radial-menu {
+    position: fixed !important;
+    bottom: calc(var(--safe-bottom-dock, 84px) + 12px) !important;
+    left: var(--pad-screen-left, 12px) !important;
+    right: var(--pad-screen-right, 12px) !important;
+    max-height: calc(100dvh - var(--safe-bottom-dock, 84px) - 36px) !important;
+    background: var(--bg-card, #161c28) !important;
+    border: 1px solid var(--border-hairline) !important;
+    border-radius: var(--radius-squircle-md, 16px) !important;
+    padding: 16px 14px !important;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.8), var(--shadow-modal) !important;
+    z-index: calc(var(--z-modal, 900) + 1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    box-sizing: border-box !important;
+    overflow-y: auto !important;
+    transform: none !important;
+  }
+
+  .compass-mobile-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding-bottom: 8px !important;
+    border-bottom: 1px solid var(--border-hairline) !important;
+    box-sizing: border-box !important;
+  }
+
+  .compass-menu-items-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .compass-menu-items-grid .compass-menu-item {
+    border-radius: var(--radius-btn, 10px) !important;
+    min-height: var(--touch-target-min, 44px) !important;
+    padding: 10px 12px !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    white-space: nowrap !important;
+  }
+
+  .compass-menu-items-grid .compass-menu-item.item-hero {
+    grid-column: 1 / -1 !important;
+    justify-content: center !important;
+    background: rgba(165, 180, 252, 0.12) !important;
+    border-color: var(--accent-gold) !important;
+    color: var(--accent-gold) !important;
+  }
 }
 
 /* ==========================================================================
@@ -1411,27 +1495,29 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 4px 10px;
-  border: 1px solid var(--border-hairline);
-  border-radius: var(--radius-pill, 9999px);
+  padding: 6px 12px;
+  border: none;
+  border-radius: var(--radius-btn, 10px);
   font-family: var(--font-mono);
   font-size: var(--font-kicker);
-  background: transparent;
+  background: var(--bg-surface-sunk);
   color: var(--ink-secondary);
   cursor: pointer;
   transition: all 0.15s ease;
   user-select: none;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .radar-chip:hover {
-  border-color: var(--accent-gold);
+  background: var(--accent-gold-soft);
   color: var(--accent-gold);
 }
 
 .radar-chip.spotted {
-  border: 1px solid var(--accent-gold);
-  background: var(--accent-gold);
-  color: var(--bg-canvas);
+  border: none;
+  background: var(--good-soft);
+  color: var(--ink-good);
   font-weight: 700;
 }
 
@@ -2664,20 +2750,15 @@
   border-radius: 6px;
 }
 
-/* Phones: streamline collocations vault ergonomics, tabs, levels, and searchbox UX */
+/* Phones: wrap control rows instead of clipping them, keep icons and search usable */
 @media (max-width: 768px) {
   .collocations-mode-header {
     flex-wrap: wrap;
-    gap: 6px;
-    padding-bottom: 6px;
-    margin-bottom: 6px;
+    gap: 8px;
   }
 
   .view-mode-toggle .view-toggle-btn {
     flex: 1 1 0;
-    min-height: 38px;
-    padding: 6px 10px;
-    font-size: var(--text-xs, 12px);
   }
 
   .view-mode-toggle .view-toggle-btn svg,
@@ -2685,110 +2766,19 @@
     flex-shrink: 0;
   }
 
-  .dossier-collocations .dossier-control-bar,
-  .collocations-mode-header + .dossier-control-bar,
   .dossier-control-bar {
     flex-wrap: wrap;
-    gap: 6px;
-    padding-bottom: 6px;
-    margin-bottom: 6px;
   }
 
-  /* Smooth horizontal scrolling category tabs without vertical wrapping */
-  .collocations-category-tabs {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-    gap: 6px !important;
-    width: 100% !important;
-    padding-bottom: 2px !important;
-    margin: 0 !important;
-  }
-
-  .collocations-category-tabs::-webkit-scrollbar {
-    display: none !important;
-  }
-
-  .collocations-category-tabs .filter-tab {
-    flex: 0 0 auto !important;
-    white-space: nowrap !important;
-    min-height: 38px !important;
-    padding: 6px 12px !important;
-    font-size: var(--font-kicker, 11px) !important;
-  }
-
-  /* Streamlined control row with compact level chips & searchbox */
-  .dossier-collocations .control-row,
-  .dossier-control-bar .control-row {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 6px !important;
-    width: 100% !important;
-  }
-
-  /* Compact CEFR level selector */
-  .dossier-collocations .vocab-level-selector,
-  .vocab-level-selector {
-    display: flex !important;
-    align-items: center !important;
-    gap: 4px !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-    width: 100% !important;
-    padding-bottom: 2px !important;
-  }
-
-  .vocab-level-selector::-webkit-scrollbar {
-    display: none !important;
-  }
-
-  .vocab-level-selector .telemetry-label {
-    flex-shrink: 0 !important;
-    font-size: var(--font-kicker, 11px) !important;
-  }
-
-  .vocab-level-selector .level-tab {
-    flex: 0 0 auto !important;
-    min-width: 34px !important;
-    min-height: 34px !important;
-    padding: 4px 8px !important;
-    font-size: var(--font-kicker, 11px) !important;
-  }
-
-  /* Compact search wrapper & input */
   .dossier-search-wrapper {
-    flex: 1 1 100% !important;
-    min-width: 0 !important;
-    width: 100% !important;
-    min-height: 40px !important;
+    flex: 1 1 100%;
+    min-width: 0;
   }
 
   .dossier-search-input {
-    width: 100% !important;
-    box-sizing: border-box !important;
-    min-height: 40px !important;
-    padding: 6px 12px !important;
-    font-size: max(16px, var(--font-body, 14px)) !important;
-  }
-
-  /* Reduce table container padding and header gaps so first dictionary entries sit higher above fold */
-  .dossier-collocations .lexicon-table-container {
-    padding: 10px 8px !important;
-    gap: 8px !important;
-    border-radius: var(--radius-squircle-sm, 10px) !important;
-  }
-
-  .dossier-collocations .lexicon-table-header-info {
-    padding-bottom: 4px !important;
-  }
-
-  .dossier-collocations .lexicon-table {
-    min-width: 580px;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 44px;
   }
 
   .dossier-workspace {
@@ -3184,10 +3174,10 @@
 .lexicon-drawer-backdrop {
   position: fixed;
   inset: 0;
-  background: var(--modal-backdrop, rgba(5, 7, 13, 0.78));
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  z-index: var(--z-modal-backdrop, 800);
+  background: var(--modal-backdrop, rgba(5, 7, 13, 0.78)) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  z-index: calc(var(--z-modal, 1200) - 1);
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--duration-fast, 0.22s) cubic-bezier(0.16, 1, 0.3, 1);
@@ -3209,7 +3199,7 @@
   background: var(--bg-surface, #0f1117);
   border-left: 1px solid var(--border-solid, #27272a);
   box-shadow: -12px 0 40px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-  z-index: var(--z-modal, 900);
+  z-index: var(--z-modal, 1200);
   display: flex;
   flex-direction: column;
   transform: translateX(100%);
@@ -3524,7 +3514,8 @@
 .lexicon-drawer-close:focus-visible,
 .lexicon-srs-btn:focus-visible,
 .lexicon-colloc-pill:focus-visible,
-.lexicon-floating-pill:focus-visible {
+.lexicon-floating-pill:focus-visible,
+.btn-lexicon-bottom-close:focus-visible {
   outline: 2px solid #000000;
   outline-offset: 3px;
   box-shadow: 0 0 0 5px #ffffff;
@@ -3532,6 +3523,12 @@
 
 /* 9. Mobile Responsive Layout (<= 768px) */
 @media (max-width: 768px) {
+  .lexicon-drawer-backdrop {
+    z-index: calc(var(--z-modal, 1200) - 1);
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+  }
+
   .lexicon-drawer {
     top: auto;
     bottom: 0;
@@ -3540,11 +3537,12 @@
     width: 100%;
     max-width: 100vw;
     height: auto;
-    max-height: min(82vh, 82dvh);
+    max-height: min(85vh, 85dvh);
     border-left: none;
     border-top: 2px solid var(--accent-gold, #ca8a04);
     border-radius: 16px 16px 0 0;
     transform: translateY(100%);
+    z-index: var(--z-modal, 1200);
   }
 
   .lexicon-drawer.open {
@@ -3553,11 +3551,12 @@
 
   .lexicon-drawer-header {
     padding: var(--space-16, 16px);
+    flex-shrink: 0;
   }
 
   .lexicon-drawer-body {
     padding: var(--space-16, 16px);
-    max-height: calc(min(82vh, 82dvh) - 170px);
+    max-height: calc(min(78vh, 78dvh) - 170px);
   }
 
   .lexicon-drawer-word {
@@ -3565,7 +3564,8 @@
   }
 
   .lexicon-drawer-footer {
-    padding: var(--space-12, 12px) var(--space-16, 16px);
+    padding: 12px 16px max(16px, env(safe-area-inset-bottom)) !important;
+    flex-shrink: 0;
   }
 }
 
@@ -7925,78 +7925,53 @@ html[data-motion="reduce"] .mediation-dossier-shell * {
   }
 
   /* Reading Dossier Compact Mobile Headers & Above-the-Fold Optimizations */
-  .reading-control-bar {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 8px !important;
-    margin-bottom: 8px !important;
-    width: 100% !important;
-  }
-
-  .reading-controls-primary {
+  .dossier-reading .reading-control-bar {
     display: flex !important;
     flex-direction: column !important;
     gap: 8px !important;
     width: 100% !important;
   }
 
-  .reading-controls-secondary {
-    display: flex !important;
-    flex-direction: column !important;
+  .dossier-reading .reading-mode-bar {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
     gap: 6px !important;
     width: 100% !important;
-  }
-
-  .reading-mode-bar {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 6px !important;
-    width: 100% !important;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-  }
-
-  .reading-mode-bar .hud-btn {
-    flex: 1 1 0 !important;
-    min-height: 40px !important;
-    padding: 6px 12px !important;
-    font-size: var(--font-body-compact) !important;
   }
 
   .dossier-reading .article-tabs {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: nowrap !important;
+    gap: 4px !important;
     overflow-x: auto !important;
-    gap: 6px !important;
-    width: 100% !important;
     padding: 0 !important;
-    scrollbar-width: none !important;
-    -webkit-overflow-scrolling: touch !important;
+    grid-auto-columns: auto !important;
+    grid-template-columns: none !important;
   }
 
-  .dossier-reading .article-tabs::-webkit-scrollbar {
-    display: none !important;
-  }
-
-  .dossier-reading .article-tab {
+  .dossier-reading .article-tab,
+  .article-tab {
     flex: 0 0 auto !important;
     max-width: none !important;
-    min-height: 38px !important;
-    padding: 6px 14px !important;
+    padding: 4px 10px !important;
+    min-height: 34px !important;
     white-space: nowrap !important;
-    font-size: var(--font-body-compact) !important;
+    font-size: var(--font-kicker) !important;
   }
 
   .dossier-reading .article-tab .art-sep,
   .dossier-reading .article-tab .art-title {
-    display: inline !important;
+    display: none !important;
+  }
+
+  .reading-mode-bar .hud-btn {
+    min-height: 34px !important;
+    padding: 4px 10px !important;
   }
 
   .reading-meta-telemetry {
-    padding: 4px 10px !important;
+    padding: 2px 8px !important;
     font-size: 11px !important;
-    border-radius: var(--radius-pill, 9999px) !important;
   }
 
   .reading-pass-stepper {
@@ -8729,6 +8704,25 @@ html[data-motion="reduce"] .cd-cockpit-shell * {
   cursor: pointer;
 }
 
+.toggle-text-full {
+  display: inline;
+}
+
+.toggle-text-short {
+  display: none;
+}
+
+.telemetry-desktop-items {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+}
+
+.telemetry-mobile-compact {
+  display: none;
+}
+
 .tenses-telemetry-cluster {
   display: flex;
   gap: 24px;
@@ -8963,15 +8957,119 @@ html[data-motion="reduce"] .cd-cockpit-shell * {
 }
 
 @media (max-width: 768px) {
-  .tenses-reference-grid {
-    grid-template-columns: minmax(0, 1fr) !important;
-    gap: 12px !important;
+  .toggle-text-full {
+    display: none !important;
+  }
+
+  .toggle-text-short {
+    display: inline !important;
+    white-space: nowrap !important;
+  }
+
+  .view-mode-toggle {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    width: 100% !important;
+    gap: 4px !important;
+  }
+
+  .view-mode-toggle .view-toggle-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    padding: 8px 6px !important;
+    min-height: 42px !important;
+    font-size: var(--font-kicker) !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+  }
+
+  .view-mode-toggle .view-toggle-btn svg {
+    flex-shrink: 0 !important;
+    display: block !important;
+  }
+
+  .dossier-control-bar.drill-control-bar .tenses-dropdown-selector,
+  .tenses-control-bar.drill-control-bar .tenses-dropdown-selector {
+    display: none !important;
   }
 
   .tenses-telemetry-cluster {
-    flex-direction: column !important;
-    align-items: stretch !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 6px 12px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .telemetry-desktop-items {
+    display: none !important;
+  }
+
+  .telemetry-mobile-compact {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    font-size: var(--font-kicker) !important;
+    line-height: 1.3 !important;
+  }
+
+  .telemetry-compact-cell {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    white-space: nowrap !important;
+  }
+
+  .hud-sep {
+    opacity: 0.4 !important;
+    padding: 0 2px !important;
+  }
+
+  .tenses-card-question {
+    padding: 12px 14px !important;
     gap: 8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .tenses-prompt-sentence {
+    font-size: clamp(15px, 4vw, 18px) !important;
+    line-height: 1.4 !important;
+    padding: 2px 0 !important;
+  }
+
+  .tenses-signal-pill,
+  .tense-signal-callout {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 4px 8px !important;
+    font-size: var(--font-kicker) !important;
+    margin-bottom: 4px !important;
+  }
+
+  .tenses-choices-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    margin: 0 !important;
+  }
+
+  .tenses-choice-btn {
+    padding: 8px 14px !important;
+    min-height: 44px !important;
+    margin-bottom: 0 !important;
+    font-size: 14px !important;
+    border-radius: var(--radius-btn, 10px) !important;
+  }
+
+  .tenses-reference-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 12px !important;
   }
 }
 
