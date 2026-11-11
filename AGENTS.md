@@ -57,6 +57,14 @@
 16. **File Explorer Folder Tabs & Uniform Grid Distribution Invariant:**
     - Tab headers across multi-tab widgets/cards MUST declare an exact uniform grid distribution (`display: grid; grid-template-columns: repeat(N, 1fr); width: 100%; gap: 4px;` in CSS or `layout_width="0dp"` with equal `layout_weight="1"` in Android XML). Every single tab slot is mathematically identical (e.g. 25.0% width for 4 tabs), preventing active tab pills from stretching unevenly across states.
     - Each tab declares File Explorer index tab shoulders (`border-radius: 8px 8px 0 0`). The active tab shares the exact same elevated background tone (`#182030`) as the folder body below, featuring a top accent indicator (`box-shadow: inset 0 2.5px 0 0 var(--accent, #a5b4fc);`) and seamless zero-divider base (`border-bottom: 1px solid var(--folder-surface)` / `margin-bottom: -1px; z-index: 3`). Inactive tabs remain recessed behind (`#11151f`, muted `#64748b`). Tab labels pair 1 emoji/icon with 1 concise noun (`📖 Word`, `🧠 Quiz`, `🎯 Quests`, `⚡ Pillars`).
+17. **Universal Popup & Modal Backdrop Blur Invariant (`--modal-backdrop` & `--modal-backdrop-blur: 12px`):**
+    - Every modal, popup, dialog, action sheet, and guided tour overlay across the application MUST feature a unified frosted glass backdrop with Apple-calm blur (`background: var(--modal-backdrop, rgba(5, 7, 13, 0.78)) !important; backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important;`).
+    - Eliminates visual clutter, sharp background bleed-through, and text collisions behind active popups.
+    - All floating toast notifications (`#notification-toast-container`, `.apple-toast`, etc.) and floating widgets (`.floating-note-bubble`) are automatically suppressed (`display: none !important;`) whenever any modal or tour popup is active.
+18. **Canonical Scrollbar Gutter & Floating Inset Invariant:**
+    - The scrollbar MUST NEVER touch adjacent UI elements (cards, buttons, sliders, text, or container borders) and MUST maintain comfortable floating spacing from the right edge of the screen.
+    - Universal tokens declare `--scrollbar-size: 8px;` with `::-webkit-scrollbar-track { background: transparent; margin: 4px 0; }` and `::-webkit-scrollbar-thumb { background-color: var(--scrollbar-thumb); border-radius: var(--radius-full, 9999px); border: 2px solid transparent; background-clip: padding-box; }`, creating an inherent 2px transparent floating cushion around the thumb.
+    - Page-level scroll containers (`#workspace-mount`) span 100% viewport width while content is safely inset by `--pad-screen-left` (12px) and `--pad-screen-right` (12px), guaranteeing ≥6px negative space between the nearest card/UI border and the scrollbar, and 2px clearance from the right screen boundary. Modals (`.completion-receipt-card`, etc.) enforce ≥16px horizontal padding so internal interactive controls never collide with the scroll track.
 
 ---
 

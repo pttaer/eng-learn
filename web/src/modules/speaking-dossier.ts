@@ -206,9 +206,9 @@ export class SpeakingDossier {
         <div class="dossier-status-pill">
           <span class="telemetry-value">
             ${this.mode === 'nation' ? t('speaking.prompts_count', { count: this.items.length }) :
-              this.mode === 'roleplay' ? t('speaking.scenarios_count', { count: BUILTIN_SCENARIOS.length }) :
-              this.mode === 'formant' ? t('speaking.formant_lab_status') :
-              t('speaking.ielts_status')}
+        this.mode === 'roleplay' ? t('speaking.scenarios_count', { count: BUILTIN_SCENARIOS.length }) :
+          this.mode === 'formant' ? t('speaking.formant_lab_status') :
+            t('speaking.ielts_status')}
           </span>
         </div>
       </div>
@@ -564,7 +564,7 @@ export class SpeakingDossier {
 
     try {
       await this.acousticEngine.startRecording();
-    } catch {}
+    } catch { }
 
     if (typeof window !== 'undefined') {
       const SpeechRec = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
@@ -586,7 +586,7 @@ export class SpeakingDossier {
             }
           };
           this.partnerSpeechRecognition.start();
-        } catch {}
+        } catch { }
       }
     }
 
@@ -600,7 +600,7 @@ export class SpeakingDossier {
     if (this.partnerSpeechRecognition) {
       try {
         this.partnerSpeechRecognition.stop();
-      } catch {}
+      } catch { }
       this.partnerSpeechRecognition = null;
     }
 
@@ -608,7 +608,7 @@ export class SpeakingDossier {
     try {
       analysis = await this.acousticEngine.stopRecording();
       this.latestPartnerAnalysis = analysis;
-    } catch {}
+    } catch { }
 
     const textInput = this.container.querySelector('.roleplay-text-input') as HTMLInputElement;
     const spokenText = (this.liveTranscriptBuffer || textInput?.value || '').trim();
@@ -899,13 +899,13 @@ export class SpeakingDossier {
           </thead>
           <tbody>
             ${[0, 1, 2].map((rIdx) => {
-              const perf = this.roundsPerformance[rIdx];
-              const allocatedMins = this.rounds[rIdx] / 60;
-              const isRound3 = rIdx === 2;
-              if (perf) {
-                const silencePct = Math.round(perf.silenceRatio * 100);
-                const tag = isRound3 ? ' <span style="font-size: var(--font-kicker); opacity: 0.8;">(Peak Fluency)</span>' : '';
-                return `
+      const perf = this.roundsPerformance[rIdx];
+      const allocatedMins = this.rounds[rIdx] / 60;
+      const isRound3 = rIdx === 2;
+      if (perf) {
+        const silencePct = Math.round(perf.silenceRatio * 100);
+        const tag = isRound3 ? ' <span style="font-size: var(--font-kicker); opacity: 0.8;">(Peak Fluency)</span>' : '';
+        return `
                   <tr class="${isRound3 ? 'highlight-fluency' : ''}">
                     <td><strong>ROUND ${rIdx + 1}</strong> (${allocatedMins} MIN)</td>
                     <td>${allocatedMins}:00</td>
@@ -914,8 +914,8 @@ export class SpeakingDossier {
                     <td>${perf.spottedCollocations} / ${perf.totalCollocations}${tag}</td>
                   </tr>
                 `;
-              } else {
-                return `
+      } else {
+        return `
                   <tr>
                     <td>ROUND ${rIdx + 1} (${allocatedMins} MIN)</td>
                     <td>${allocatedMins}:00</td>
@@ -924,8 +924,8 @@ export class SpeakingDossier {
                     <td style="color: var(--ink-muted);">--</td>
                   </tr>
                 `;
-              }
-            }).join('')}
+      }
+    }).join('')}
           </tbody>
         </table>
       </div>
@@ -961,7 +961,7 @@ export class SpeakingDossier {
       this.isTimerRunning = true;
       this.hasCompletedTake = false;
 
-      this.acousticEngine.startRecording().catch(() => {});
+      this.acousticEngine.startRecording().catch(() => { });
       this.collocationSpotter.startListening(() => {
         AudioSynthesizer.play('absorb');
         this.updateRadarChipDisplays(frontEl);
@@ -1363,17 +1363,17 @@ export class SpeakingDossier {
               <polygon points="${quadPoints}" class="vowel-quad-polygon" />
 
               ${VOWEL_BENCHMARKS.map(b => {
-                const cx = getSvgX(b.f2);
-                const cy = getSvgY(b.f1);
-                const isTarget = b.phoneme === this.activeVowel.phoneme;
-                return `
+      const cx = getSvgX(b.f2);
+      const cy = getSvgY(b.f1);
+      const isTarget = b.phoneme === this.activeVowel.phoneme;
+      return `
                   <g class="vowel-node ${isTarget ? 'active-target-vowel' : ''}" data-phoneme="${b.phoneme}">
                     <circle cx="${cx}" cy="${cy}" r="${isTarget ? 24 : 20}" class="vowel-circle" />
                     <text x="${cx}" y="${cy - 2}" text-anchor="middle" class="vowel-ipa">${b.phoneme}</text>
                     <text x="${cx}" y="${cy + 10}" text-anchor="middle" class="vowel-sample">${b.example}</text>
                   </g>
                 `;
-              }).join('')}
+    }).join('')}
 
               ${hasLiveFormant ? `
                 <g class="live-formant-group">
@@ -1395,16 +1395,16 @@ export class SpeakingDossier {
                 Target F1: <strong>${this.activeVowel.f1} Hz</strong> | Target F2: <strong>${this.activeVowel.f2} Hz</strong>
               </div>
               ${(() => {
-                const bio = ArticulatoryBiomechanics.getProfile(this.activeVowel.phoneme);
-                if (!bio) return '';
-                return `
+        const bio = ArticulatoryBiomechanics.getProfile(this.activeVowel.phoneme);
+        if (!bio) return '';
+        return `
                   <div style="font-size: var(--font-kicker); color: var(--ink-secondary); margin-top: 6px; line-height: 1.45;">
                     <div>📐 <strong>Jaw Aperture:</strong> ~${bio.jawApertureMm}mm (${bio.jawInstruction})</div>
                     <div>👅 <strong>Tongue Placement:</strong> ${bio.tonguePosition}</div>
                     <div>👄 <strong>Lip Posture:</strong> ${bio.lipPosture.toUpperCase()} (${bio.lipInstruction})</div>
                   </div>
                 `;
-              })()}
+      })()}
               <div style="font-size: var(--font-kicker); color: #f59e0b; margin-top: 6px;">
                 ${icon('alertTriangle', 12)} <em>${this.activeVowel.l1Contrast || 'Focus on precise sustained resonance.'}</em>
               </div>
@@ -1419,10 +1419,10 @@ export class SpeakingDossier {
                 ${hasLiveFormant ? (this.currentFormant!.nearestVowel?.driftGuidance || 'Tracking voice...') : 'Speak or hold target vowel to track resonance on chart.'}
               </div>
               ${(() => {
-                if (!hasLiveFormant) return '';
-                const diag = ArticulatoryBiomechanics.diagnoseFormants(this.activeVowel.phoneme, this.currentFormant!.f1, this.currentFormant!.f2);
-                if (!diag) return '';
-                return `
+        if (!hasLiveFormant) return '';
+        const diag = ArticulatoryBiomechanics.diagnoseFormants(this.activeVowel.phoneme, this.currentFormant!.f1, this.currentFormant!.f2);
+        if (!diag) return '';
+        return `
                   <div style="font-size: var(--font-kicker); background: rgba(56, 189, 248, 0.08); border-left: 2px solid var(--accent-cyan); padding: 6px 10px; border-radius: 4px; margin-top: 8px; line-height: 1.45; color: var(--ink-primary);">
                     <div style="color: var(--accent-cyan); font-weight: 700; margin-bottom: 2px;">⚡ Actionable Physical Adjustments:</div>
                     <div>• <strong>Jaw:</strong> ${diag.jawAdjustment}</div>
@@ -1430,7 +1430,7 @@ export class SpeakingDossier {
                     <div>• <strong>Lips:</strong> ${diag.lipAdjustment}</div>
                   </div>
                 `;
-              })()}
+      })()}
               <div style="margin-top: 8px;">
                 <button class="hud-btn btn-sim-resonance" style="font-size: var(--font-kicker); padding: 2px 8px;">
                   ${icon('zap', 11)} ${t('speaking.test_resonance', undefined, 'Test Benchmark Resonance')}
@@ -1497,11 +1497,11 @@ export class SpeakingDossier {
         </div>
 
         ${(() => {
-          const minPairDiff = ArticulatoryBiomechanics.getMinimalPairs().find(
-            p => p.pairId === this.activeMinimalPair.id || p.soundA === this.activeMinimalPair.vowelA
-          );
-          if (!minPairDiff) return '';
-          return `
+        const minPairDiff = ArticulatoryBiomechanics.getMinimalPairs().find(
+          p => p.pairId === this.activeMinimalPair.id || p.soundA === this.activeMinimalPair.vowelA
+        );
+        if (!minPairDiff) return '';
+        return `
             <div style="font-size: var(--font-kicker); padding: 8px 12px; background: rgba(165, 180, 252, 0.08); border-radius: 6px; margin-top: 10px; color: var(--ink-secondary); line-height: 1.45; border-left: 2px solid var(--accent-gold);">
               <strong style="color: var(--accent-gold);">💡 Biomechanical Differential:</strong>
               <div>• <strong>Jaw Delta:</strong> ${minPairDiff.jawDelta}</div>
@@ -1509,7 +1509,7 @@ export class SpeakingDossier {
               <div>• <strong>Tactile Check:</strong> ${minPairDiff.tactileCheckMethod}</div>
             </div>
           `;
-        })()}
+      })()}
 
         ${this.latestPairResult ? `
           <div class="pair-result-panel" style="padding: 12px 16px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-hairline); border-radius: 6px; margin-top: 10px;">
@@ -1618,7 +1618,7 @@ export class SpeakingDossier {
       this.isFormantTracking = true;
       try {
         await this.acousticEngine.startRecording();
-      } catch {}
+      } catch { }
 
       if (this.formantPollInterval) clearInterval(this.formantPollInterval);
       this.formantPollInterval = setInterval(() => {
@@ -1651,7 +1651,7 @@ export class SpeakingDossier {
       let analysis: AcousticAnalysis | null = null;
       try {
         analysis = await this.acousticEngine.stopRecording();
-      } catch {}
+      } catch { }
       take.duration = (analysis?.totalSpeechSeconds || 0.25) * 1000;
       if (key === 'A') {
         const v = VOWEL_BENCHMARKS.find(b => b.phoneme === this.activeMinimalPair.vowelA);
@@ -1668,7 +1668,7 @@ export class SpeakingDossier {
       AudioSynthesizer.play('click');
       try {
         await this.acousticEngine.startRecording();
-      } catch {}
+      } catch { }
       this.renderFormantView();
     }
   }
@@ -1998,7 +1998,7 @@ export class SpeakingDossier {
     AudioSynthesizer.play('absorb');
     try {
       await this.acousticEngine.startRecording();
-    } catch {}
+    } catch { }
     this.renderIeltsView();
   }
 
@@ -2008,7 +2008,7 @@ export class SpeakingDossier {
     let analysis: AcousticAnalysis | null = null;
     try {
       analysis = await this.acousticEngine.stopRecording();
-    } catch {}
+    } catch { }
 
     const textToSubmit = fallbackText || "I am currently living in the central metropolitan district and working in technical education.";
     this.submitIeltsTurn(textToSubmit, analysis);
@@ -2017,7 +2017,7 @@ export class SpeakingDossier {
   private stopIeltsRecording(): void {
     if (this.isIeltsRecording) {
       this.isIeltsRecording = false;
-      this.acousticEngine.stopRecording().catch(() => {});
+      this.acousticEngine.stopRecording().catch(() => { });
     }
   }
 
@@ -2092,7 +2092,7 @@ export class SpeakingDossier {
     this.ieltsTurns.push({ sender: 'examiner', text: monologueNotice, timestamp: Date.now() });
     setTimeout(() => AudioSynthesizer.speak(monologueNotice), 200);
 
-    this.acousticEngine.startRecording().catch(() => {});
+    this.acousticEngine.startRecording().catch(() => { });
 
     this.ieltsTimerInterval = setInterval(() => {
       if (this.ieltsMonologueSeconds > 1) {
@@ -2118,7 +2118,7 @@ export class SpeakingDossier {
     let analysis: AcousticAnalysis | null = null;
     try {
       analysis = await this.acousticEngine.stopRecording();
-    } catch {}
+    } catch { }
 
     this.ieltsTurns.push({
       sender: 'candidate',

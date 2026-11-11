@@ -158,7 +158,7 @@ export class PerspectiveCanvas {
       if (this.activeVoidLens) {
         const lens = this.activeVoidLens;
         const distToLens = Math.hypot(mouseX - lens.x, mouseY - lens.y);
-        
+
         // Absorb button area inside the lens
         const btnY = lens.y + 40;
         const isOverBtn = Math.abs(mouseX - lens.x) < 55 && Math.abs(mouseY - btnY) < 16;
@@ -745,6 +745,15 @@ export class PerspectiveCanvas {
  * calculating 3D perspective tilt (rotateX, rotateY) and holographic specular sheen
  * coordinates (--glare-x, --glare-y, --glare-opacity) with smooth spring return.
  */
+function isReducedMotionActive(): boolean {
+  if (typeof document === 'undefined') return false;
+  return (
+    document.documentElement.getAttribute('data-motion') === 'reduce' ||
+    document.documentElement.dataset.motion === 'reduce' ||
+    (typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches === true)
+  );
+}
+
 export class CardTiltController {
   private static initialized: boolean = false;
   private static activeCard: HTMLElement | null = null;
@@ -804,14 +813,7 @@ export class CardTiltController {
   }
 
   private static checkReducedMotion(): void {
-    if (typeof document !== 'undefined') {
-      const isAttr = document.documentElement.getAttribute('data-motion') === 'reduce' ||
-                     document.documentElement.dataset.motion === 'reduce';
-      const isMedia = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches === true;
-      this.isReducedMotion = isAttr || isMedia;
-    } else {
-      this.isReducedMotion = false;
-    }
+    this.isReducedMotion = isReducedMotionActive();
   }
 
   public static calculateTilt(clientX: number, clientY: number, card: HTMLElement): {
@@ -932,14 +934,7 @@ export class NebulaCanvas {
   }
 
   private checkReducedMotion(): void {
-    if (typeof document !== 'undefined') {
-      const isAttr = document.documentElement.getAttribute('data-motion') === 'reduce' ||
-                     document.documentElement.dataset.motion === 'reduce';
-      const isMedia = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches === true;
-      this.isReducedMotion = isAttr || isMedia;
-    } else {
-      this.isReducedMotion = false;
-    }
+    this.isReducedMotion = isReducedMotionActive();
   }
 
   private setupMotionObserver(): void {

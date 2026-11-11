@@ -14,6 +14,7 @@ import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { ambientMusicEngine, AmbientMusicMode } from '../core/ambient-music-engine';
 import { HapticEngine } from '../core/haptic-engine';
+import { AcousticHaptics } from '../core/acoustic-haptics';
 import { ZenMode } from '../core/zen-mode';
 import { SpotlightTour } from '../core/spotlight-tour';
 import { PlacementQuiz } from './placement-quiz';
@@ -25,6 +26,7 @@ import { icon } from '../utils/icons';
 import { Cefr, CEFR_ORDER, CEFR_LABELS } from '../core/cefr';
 import { I18n, t } from '../core/i18n';
 import { AccentThemeManager, ACCENT_THEMES, AccentThemeId } from '../core/accent-theme';
+import { FloatingNote } from './floating-note';
 
 export class SettingsDossier {
   private root: HTMLElement;
@@ -43,6 +45,12 @@ export class SettingsDossier {
     this.root.addEventListener('change', (e) => this.handleChange(e));
 
     I18n.onLocaleChange(() => {
+      if (document.body.contains(this.root)) {
+        this.draw();
+      }
+    });
+
+    window.addEventListener('eng-floating-note-changed', () => {
       if (document.body.contains(this.root)) {
         this.draw();
       }
@@ -105,6 +113,7 @@ export class SettingsDossier {
     const isReducedMotion = document.documentElement.dataset.motion === 'reduce' || localStorage.getItem('eng_motion') === 'reduce';
     const isZen = ZenMode.isZen();
     const isHighContrast = localStorage.getItem('eng_high_contrast') === 'true';
+    const isFloatingNote = FloatingNote.isEnabled();
 
     const isMuted = AudioSynthesizer.isMute();
     const sfxVol = Math.round(AudioSynthesizer.getVolume() * 100);
@@ -182,10 +191,19 @@ export class SettingsDossier {
           <!-- Daily Goal Selector -->
           <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px;">
             <span style="font-size: var(--font-kicker); color: var(--ink-muted); font-weight: 600; text-transform: uppercase;">${t('settings.daily_xp_goal_label', undefined, 'Daily XP Goal:')}</span>
-            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-              <button type="button" class="hud-btn btn-xp-goal ${dailyGoalXp === '50' ? 'active' : ''}" data-goal="50" style="flex: 1; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 600;">${t('settings.xp_maintain', undefined, '50 XP (Maintain)')}</button>
-              <button type="button" class="hud-btn btn-xp-goal ${dailyGoalXp === '100' ? 'active' : ''}" data-goal="100" style="flex: 1; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 600;">${t('settings.xp_standard', undefined, '100 XP (Standard)')}</button>
-              <button type="button" class="hud-btn btn-xp-goal ${dailyGoalXp === '200' ? 'active' : ''}" data-goal="200" style="flex: 1; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 600;">${t('settings.xp_intensive', undefined, '200 XP (Intensive)')}</button>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+              <button type="button" class="hud-btn btn-xp-goal ${dailyGoalXp === '50' ? 'active' : ''}" data-goal="50" style="min-height: 52px; padding: 6px 4px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2px;">
+                <span style="font-weight: 700; font-size: 13px;">50 XP</span>
+                <span style="font-size: 11px; opacity: 0.8; font-weight: 500; white-space: nowrap;">${t('settings.xp_maintain_short', undefined, 'Duy trì')}</span>
+              </button>
+              <button type="button" class="hud-btn btn-xp-goal ${dailyGoalXp === '100' ? 'active' : ''}" data-goal="100" style="min-height: 52px; padding: 6px 4px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2px;">
+                <span style="font-weight: 700; font-size: 13px;">100 XP</span>
+                <span style="font-size: 11px; opacity: 0.8; font-weight: 500; white-space: nowrap;">${t('settings.xp_standard_short', undefined, 'Tiêu chuẩn')}</span>
+              </button>
+              <button type="button" class="hud-btn btn-xp-goal ${dailyGoalXp === '200' ? 'active' : ''}" data-goal="200" style="min-height: 52px; padding: 6px 4px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2px;">
+                <span style="font-weight: 700; font-size: 13px;">200 XP</span>
+                <span style="font-size: 11px; opacity: 0.8; font-weight: 500; white-space: nowrap;">${t('settings.xp_intensive_short', undefined, 'Chuyên sâu')}</span>
+              </button>
             </div>
           </div>
 
@@ -210,14 +228,14 @@ export class SettingsDossier {
               <label for="settings-target-exam-date" style="font-size: var(--font-body-compact); font-weight: 600; color: var(--ink-primary); display: flex; align-items: center; gap: 8px;">
                 ${icon('clock', 14)} ${t('settings.target_exam_date_label', undefined, 'Target IELTS Exam Date:')}
               </label>
-              <input type="date" id="settings-target-exam-date" value="${targetExamDate || ''}" class="hud-input" style="min-height: 38px; padding: 4px 10px; background: var(--bg-card); color: var(--ink-primary); border: 1px solid var(--border-hairline); border-radius: 8px; font-family: var(--font-mono); font-size: 14px; cursor: pointer;" />
+              <input type="date" id="settings-target-exam-date" value="${targetExamDate || ''}" class="hud-input" style="min-height: 42px; padding: 6px 12px; background: var(--bg-surface-elevated, #161c28); color: var(--ink-primary); border: 1px solid var(--border-hairline); border-radius: var(--radius-btn, 10px); font-family: var(--font-mono); font-size: 14px; cursor: pointer; color-scheme: dark;" />
             </div>
             <div style="font-size: 13px; font-family: var(--font-mono); color: var(--accent-cyan); display: flex; align-items: center; gap: 6px;">
               ${targetExamDate ? (
-                examDaysRemaining != null && examDaysRemaining >= 0
-                  ? t('settings.days_remaining_countdown', { days: examDaysRemaining, date: targetExamDate }, `⏳ ${examDaysRemaining} days remaining until exam (${targetExamDate})`)
-                  : t('settings.exam_date_passed', { date: targetExamDate }, `⚠️ Exam date has passed (${targetExamDate})`)
-              ) : t('settings.exam_date_unset', undefined, 'ℹ️ No exam date set (select a date to activate countdown)')}
+        examDaysRemaining != null && examDaysRemaining >= 0
+          ? t('settings.days_remaining_countdown', { days: examDaysRemaining, date: targetExamDate }, `⏳ ${examDaysRemaining} days remaining until exam (${targetExamDate})`)
+          : t('settings.exam_date_passed', { date: targetExamDate }, `⚠️ Exam date has passed (${targetExamDate})`)
+      ) : t('settings.exam_date_unset', undefined, 'ℹ️ No exam date set (select a date to activate countdown)')}
             </div>
           </div>
 
@@ -227,10 +245,19 @@ export class SettingsDossier {
               <span style="font-size: var(--font-kicker); color: var(--ink-muted); font-weight: 600; text-transform: uppercase;">${t('settings.time_budget_label', undefined, 'Daily Study Time Budget:')}</span>
               <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 700; color: var(--good);">${t('settings.mins_per_day', { mins: dailyTimeBudget }, `${dailyTimeBudget} mins/day`)}</span>
             </div>
-            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-              <button type="button" class="hud-btn btn-time-budget-pill ${dailyTimeBudget === 15 ? 'active' : ''}" data-budget="15" style="flex: 1; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 600;">${t('settings.time_15m', undefined, '15m (Brisk)')}</button>
-              <button type="button" class="hud-btn btn-time-budget-pill ${dailyTimeBudget === 30 ? 'active' : ''}" data-budget="30" style="flex: 1; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 600;">${t('settings.time_30m', undefined, '30m (Standard)')}</button>
-              <button type="button" class="hud-btn btn-time-budget-pill ${dailyTimeBudget === 60 ? 'active' : ''}" data-budget="60" style="flex: 1; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 600;">${t('settings.time_60m', undefined, '60m (Intensive)')}</button>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+              <button type="button" class="hud-btn btn-time-budget-pill ${dailyTimeBudget === 15 ? 'active' : ''}" data-budget="15" style="min-height: 52px; padding: 6px 4px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2px;">
+                <span style="font-weight: 700; font-size: 13px;">15 phút</span>
+                <span style="font-size: 11px; opacity: 0.8; font-weight: 500; white-space: nowrap;">${t('settings.time_15m_short', undefined, 'Nhanh')}</span>
+              </button>
+              <button type="button" class="hud-btn btn-time-budget-pill ${dailyTimeBudget === 30 ? 'active' : ''}" data-budget="30" style="min-height: 52px; padding: 6px 4px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2px;">
+                <span style="font-weight: 700; font-size: 13px;">30 phút</span>
+                <span style="font-size: 11px; opacity: 0.8; font-weight: 500; white-space: nowrap;">${t('settings.time_30m_short', undefined, 'Tiêu chuẩn')}</span>
+              </button>
+              <button type="button" class="hud-btn btn-time-budget-pill ${dailyTimeBudget === 60 ? 'active' : ''}" data-budget="60" style="min-height: 52px; padding: 6px 4px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2px;">
+                <span style="font-weight: 700; font-size: 13px;">60 phút</span>
+                <span style="font-size: 11px; opacity: 0.8; font-weight: 500; white-space: nowrap;">${t('settings.time_60m_short', undefined, 'Chuyên sâu')}</span>
+              </button>
             </div>
           </div>
 
@@ -312,6 +339,12 @@ export class SettingsDossier {
               <span>${t('settings.contrast_label', { status: isHighContrast ? t('settings.contrast_high', undefined, 'High Contrast') : t('settings.contrast_standard', undefined, 'Standard') }, `High Contrast: ${isHighContrast ? 'High Contrast' : 'Standard'}`)}</span>
             </button>
 
+            <!-- Floating Note Toggle -->
+            <button type="button" class="hud-btn btn-toggle-floating-note ${isFloatingNote ? 'active' : ''}" style="min-height: var(--touch-target-min, 44px); padding: 10px 14px; justify-content: flex-start; font-weight: 600; gap: 10px;">
+              ${icon('note', 16)}
+              <span>${t('settings.floating_note', undefined, 'Floating Quick Note')}: <strong style="color: ${isFloatingNote ? 'var(--good)' : 'var(--ink-muted)'};">${isFloatingNote ? t('settings.status_on', undefined, 'ON ●') : t('settings.status_off', undefined, 'OFF')}</strong></span>
+            </button>
+
             <!-- Primary Accent Color Swatches -->
             <div style="display: flex; flex-direction: column; gap: 8px; grid-column: 1 / -1; margin-top: 6px;">
               <span style="font-size: var(--font-kicker); color: var(--ink-muted); font-weight: 600; text-transform: uppercase;">
@@ -319,15 +352,15 @@ export class SettingsDossier {
               </span>
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px;">
                 ${(Object.keys(ACCENT_THEMES) as AccentThemeId[]).map(themeKey => {
-                  const item = ACCENT_THEMES[themeKey];
-                  const isCurrent = currentAccent === themeKey;
-                  return `
+        const item = ACCENT_THEMES[themeKey];
+        const isCurrent = currentAccent === themeKey;
+        return `
                     <button type="button" class="hud-btn btn-accent-swatch ${isCurrent ? 'active' : ''}" data-accent="${themeKey}" aria-pressed="${isCurrent}" style="min-height: var(--touch-target-min, 44px); padding: 8px 10px; justify-content: flex-start; gap: 8px; font-weight: 600; font-size: 13px;">
                       <span style="display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: ${item.swatch}; box-shadow: 0 0 8px ${item.swatch}; flex-shrink: 0;"></span>
                       <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.label.split(' ')[0]}</span>
                     </button>
                   `;
-                }).join('')}
+      }).join('')}
               </div>
             </div>
           </div>
@@ -498,10 +531,10 @@ export class SettingsDossier {
           <!-- Import / Export Actions -->
           <div style="display: flex; flex-wrap: wrap; gap: 8px;">
             <button type="button" class="hud-btn btn-export-profile" style="flex: 1; min-width: 200px; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold);">
-              ${icon('download', 16)}<span>${t('settings.btn_export_profile_json', undefined, '[ 💾 EXPORT PROFILE (JSON) ]')}</span>
+              ${icon('download', 16)}<span>${t('settings.btn_export_profile_json', undefined, 'EXPORT PROFILE BACKUP (JSON)')}</span>
             </button>
             <button type="button" class="hud-btn btn-import-profile" style="flex: 1; min-width: 200px; min-height: var(--touch-target-min, 44px); justify-content: center; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8);">
-              ${icon('upload', 16)}<span>${t('settings.btn_import_profile_json', undefined, '[ 📥 IMPORT PROFILE (JSON) ]')}</span>
+              ${icon('upload', 16)}<span>${t('settings.btn_import_profile_json', undefined, 'IMPORT PROFILE BACKUP (JSON)')}</span>
             </button>
             <input type="file" class="settings-file-input" accept=".json,application/json" style="display: none;" />
           </div>
@@ -682,6 +715,16 @@ export class SettingsDossier {
       localStorage.setItem('eng_high_contrast', (!cur).toString());
       AudioSynthesizer.play('click');
       HapticEngine.trigger('selection');
+      this.draw();
+      return;
+    }
+
+    // Floating Note Toggle
+    if (target.closest('.btn-toggle-floating-note')) {
+      AudioSynthesizer.play('click');
+      AcousticHaptics.tap();
+      HapticEngine.trigger('selection');
+      FloatingNote.toggleEnabled();
       this.draw();
       return;
     }

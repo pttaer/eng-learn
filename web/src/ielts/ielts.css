@@ -1979,7 +1979,11 @@ sup {
   padding: 7px 16px;
   font-size: var(--text-xs);
   border-radius: var(--radius-btn, 10px);
-  white-space: normal !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
 }
 
 /* 36px only for fine-pointer desktops (spec); touch devices keep the 44px floor from the block below */
@@ -2948,6 +2952,9 @@ sup {
 }
 
 .ie-roadmap-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: var(--font-body-compact);
   font-weight: 600;
   color: #a5b4fc;
@@ -4920,14 +4927,14 @@ sup {
 .ie-tip-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(8, 10, 15, 0.85);
-  backdrop-filter: blur(8px);
+  background: var(--modal-backdrop, rgba(5, 7, 13, 0.78));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   z-index: var(--z-modal, 900);
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 16px var(--pad-screen-right) 16px var(--pad-screen-left);
-  box-sizing: border-box;
+  justify-content: center;
+  padding: var(--space-16);
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--duration-normal) var(--ease-out);

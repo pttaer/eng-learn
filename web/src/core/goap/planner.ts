@@ -52,7 +52,7 @@ export class GoapPlanner {
         const nextHash = this.hashState(nextState);
         if (closedList.has(nextHash)) continue;
 
-        const stepCost = action.getDynamicCost(current.state);
+        const stepCost = action.getDynamicCost ? action.getDynamicCost(current.state) : action.cost;
         const gCost = current.gCost + stepCost;
         const hCost = goal.getHeuristic(nextState);
 
@@ -105,3 +105,4 @@ export class GoapPlanner {
     return `${s.timeBudgetMin}|${s.activeBottlenecksCount}|${s.srsDueCount}|${s.weakestSkill}|${s.cognitiveEnergy}`;
   }
 }
+

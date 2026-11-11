@@ -390,49 +390,49 @@ async function run() {
 
   try {
     if (!onlyFlow02) {
-    // =========================================================================
-    // FLOW 01: ONBOARDING & PLACEMENT
-    // =========================================================================
-    console.log('\n--- FLOW 01: ONBOARDING & PLACEMENT ---');
-    await page.goto(`${BASE_URL}#placement`, { waitUntil: 'networkidle0' });
-    await new Promise(r => setTimeout(r, 600));
-    await captureFlowView(page, '01-onboarding-placement', '01-placement-intro', 'Placement Quiz Intro');
+      // =========================================================================
+      // FLOW 01: ONBOARDING & PLACEMENT
+      // =========================================================================
+      console.log('\n--- FLOW 01: ONBOARDING & PLACEMENT ---');
+      await page.goto(`${BASE_URL}#placement`, { waitUntil: 'networkidle0' });
+      await new Promise(r => setTimeout(r, 600));
+      await captureFlowView(page, '01-onboarding-placement', '01-placement-intro', 'Placement Quiz Intro');
 
-    // Click Start Placement Question
-    await page.evaluate(() => {
-      document.querySelector('.placement-start, .btn-start-placement')?.click();
-    });
-    await new Promise(r => setTimeout(r, 500));
-    await captureFlowView(page, '01-onboarding-placement', '02-placement-question', 'Placement Question View');
+      // Click Start Placement Question
+      await page.evaluate(() => {
+        document.querySelector('.placement-start, .btn-start-placement')?.click();
+      });
+      await new Promise(r => setTimeout(r, 500));
+      await captureFlowView(page, '01-onboarding-placement', '02-placement-question', 'Placement Question View');
 
-    // Placement Result Assessment Screen
-    await page.evaluate(() => {
-      if (window.PlacementQuiz && window.PlacementQuiz.activeInstance) {
-        const inst = window.PlacementQuiz.activeInstance;
-        inst.correct = { A1: 2, A2: 2, B1: 2, B2: 2 };
-        inst.asked = { A1: 2, A2: 2, B1: 2, B2: 2 };
-        inst.renderResult();
-      }
-    });
-    await new Promise(r => setTimeout(r, 500));
-    await captureFlowView(page, '01-onboarding-placement', '04-placement-result', 'Placement Quiz Result Assessment');
-    await page.evaluate(() => {
-      document.querySelector('.placement-accept')?.click() || document.getElementById('placement-modal')?.remove();
-      document.querySelectorAll('.completion-modal-overlay').forEach(el => el.remove());
-    });
+      // Placement Result Assessment Screen
+      await page.evaluate(() => {
+        if (window.PlacementQuiz && window.PlacementQuiz.activeInstance) {
+          const inst = window.PlacementQuiz.activeInstance;
+          inst.correct = { A1: 2, A2: 2, B1: 2, B2: 2 };
+          inst.asked = { A1: 2, A2: 2, B1: 2, B2: 2 };
+          inst.renderResult();
+        }
+      });
+      await new Promise(r => setTimeout(r, 500));
+      await captureFlowView(page, '01-onboarding-placement', '04-placement-result', 'Placement Quiz Result Assessment');
+      await page.evaluate(() => {
+        document.querySelector('.placement-accept')?.click() || document.getElementById('placement-modal')?.remove();
+        document.querySelectorAll('.completion-modal-overlay').forEach(el => el.remove());
+      });
 
-    // Spotlight Tour
-    await page.goto(`${BASE_URL}#tree`, { waitUntil: 'networkidle0' });
-    await new Promise(r => setTimeout(r, 500));
-    await page.evaluate(() => {
-      if (window.SpotlightTour) window.SpotlightTour.start(true);
-    });
-    await new Promise(r => setTimeout(r, 600));
-    await captureFlowView(page, '01-onboarding-placement', '03-spotlight-tour', 'Interactive Spotlight Tour');
-    await page.evaluate(() => {
-      if (window.SpotlightTour) window.SpotlightTour.close();
-      document.querySelectorAll('.tour-overlay, .spotlight-overlay').forEach(e => e.remove());
-    });
+      // Spotlight Tour
+      await page.goto(`${BASE_URL}#tree`, { waitUntil: 'networkidle0' });
+      await new Promise(r => setTimeout(r, 500));
+      await page.evaluate(() => {
+        if (window.SpotlightTour) window.SpotlightTour.start(true);
+      });
+      await new Promise(r => setTimeout(r, 600));
+      await captureFlowView(page, '01-onboarding-placement', '03-spotlight-tour', 'Interactive Spotlight Tour');
+      await page.evaluate(() => {
+        if (window.SpotlightTour) window.SpotlightTour.close();
+        document.querySelectorAll('.tour-overlay, .spotlight-overlay').forEach(e => e.remove());
+      });
     } // end !onlyFlow02
 
     // =========================================================================

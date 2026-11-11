@@ -62,7 +62,7 @@ export function showIeltsConfirmDialog(options: ConfirmDialogOptions): Promise<b
     dialog.setAttribute('role', 'dialog');
     dialog.setAttribute('aria-modal', 'true');
     dialog.setAttribute('aria-label', title);
-    dialog.style.cssText = 'position: fixed; inset: 0; background: rgba(0, 0, 0, 0.72); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: var(--z-modal, 900); padding: 16px;';
+    dialog.style.cssText = 'position: fixed; inset: 0; background: var(--modal-backdrop, rgba(5, 7, 13, 0.78)); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: center; z-index: var(--z-modal, 900); padding: 16px;';
 
     dialog.innerHTML = `
       <div class="completion-receipt-card" style="max-width: 440px; width: 100%; max-height: calc(100dvh - 32px); overflow-y: auto; box-sizing: border-box; background: var(--bg-card, #141c2e); border: 1px solid var(--border-hairline, rgba(255,255,255,0.12)); border-top: 3px solid ${typeColor}; padding: 22px 18px; border-radius: var(--radius-squircle-md, 16px); box-shadow: var(--shadow-modal, 0 20px 45px rgba(0,0,0,0.6));">

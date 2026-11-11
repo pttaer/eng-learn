@@ -2,6 +2,20 @@ import { AudioSynthesizer } from '../core/audio-synthesizer';
 import { AcousticHaptics } from '../core/acoustic-haptics';
 import { t } from '../core/i18n';
 
+const COMPASS_ROUTES: [string, string, string, string][] = [
+  ['singularity', '00', 'nav.singularity', 'CORE'],
+  ['read', '01', 'dossier.reading', 'READ'],
+  ['write', '02', 'dossier.writing', 'WRITE'],
+  ['listen', '03', 'dossier.listening', 'LISTEN'],
+  ['speak', '04', 'dossier.speaking', 'SPEAK'],
+  ['vocab', '05', 'dossier.vocab', 'VOCAB'],
+  ['colloc', '06', 'dossier.collocations', 'COLLOC'],
+  ['grammar', '07', 'dossier.grammar', 'GRAMMAR'],
+  ['tenses', '08', 'dossier.twelve_tenses', 'TENSES'],
+  ['habits', '09', 'nav.habits', 'HABITS'],
+  ['drills', '10', 'nav.drills', 'DRILLS']
+];
+
 export class CornerCompass {
   private element: HTMLElement;
   private canvas: HTMLCanvasElement;
@@ -15,51 +29,22 @@ export class CornerCompass {
     this.element.className = 'corner-compass-container interactive';
 
     this.element.innerHTML = `
+      <div class="compass-backdrop"></div>
       <div class="compass-radial-menu" inert>
-        <button class="compass-menu-item" data-route="singularity" title="${t('compass.core_title', undefined, 'Return to Urchin Singularity')}">
-          <span class="compass-item-code">00</span>
-          <span class="compass-item-label">${t('nav.singularity', undefined, 'CORE')}</span>
-        </button>
-        <button class="compass-menu-item" data-route="read" title="${t('compass.read_title', undefined, 'Intensive Reading & Sentence Mining')}">
-          <span class="compass-item-code">01</span>
-          <span class="compass-item-label">${t('dossier.reading', undefined, 'READ')}</span>
-        </button>
-        <button class="compass-menu-item" data-route="write" title="${t('compass.write_title', undefined, 'Franklin Copywork')}">
-          <span class="compass-item-code">02</span>
-          <span class="compass-item-label">${t('dossier.writing', undefined, 'WRITE')}</span>
-        </button>
-        <button class="compass-menu-item" data-route="listen" title="${t('compass.listen_title', undefined, 'Active Transcription')}">
-          <span class="compass-item-code">03</span>
-          <span class="compass-item-label">${t('dossier.listening', undefined, 'LISTEN')}</span>
-        </button>
-        <button class="compass-menu-item" data-route="speak" title="${t('compass.speak_title', undefined, '4-3-2 Fluency Drill')}">
-          <span class="compass-item-code">04</span>
-          <span class="compass-item-label">${t('dossier.speaking', undefined, 'SPEAK')}</span>
-        </button>
-        <button class="compass-menu-item" data-route="vocab" title="${t('compass.vocab_title', undefined, 'Roguelike Vocabulary Engine')}">
-          <span class="compass-item-code">05</span>
-          <span class="compass-item-label">${t('dossier.vocab', undefined, 'VOCAB')}</span>
-        </button>
-        <button class="compass-menu-item" data-route="colloc" title="${t('compass.colloc_title', undefined, 'Collocations Vault')}">
-          <span class="compass-item-code">06</span>
-          <span class="compass-item-label">${t('dossier.collocations', undefined, 'COLLOC')}</span>
-        </button>
-        <button class="compass-menu-item" data-route="grammar" title="${t('compass.grammar_title', undefined, 'C1/C2 Advanced Syntactic Matrix')}">
-          <span class="compass-item-code">07</span>
-          <span class="compass-item-label">${t('dossier.grammar', undefined, 'GRAMMAR')}</span>
-        </button>
-        <button class="compass-menu-item" data-route="tenses" title="${t('compass.tenses_title', undefined, '12 Tenses Master Vault & Random Drill')}">
-          <span class="compass-item-code">08</span>
-          <span class="compass-item-label">${t('dossier.twelve_tenses', undefined, 'TENSES')}</span>
-        </button>
-        <button class="compass-menu-item" data-route="habits" title="${t('compass.habits_title', undefined, '30-Day Mission Log')}">
-          <span class="compass-item-code">09</span>
-          <span class="compass-item-label">${t('nav.habits', undefined, 'HABITS')}</span>
-        </button>
-        <button class="compass-menu-item" data-route="drills" title="${t('compass.drills_title', undefined, 'Practice Drills, Sounds & Email')}">
-          <span class="compass-item-code">10</span>
-          <span class="compass-item-label">${t('nav.drills', undefined, 'DRILLS')}</span>
-        </button>
+        <div class="compass-mobile-header">
+          <div class="telemetry-label" style="color: var(--accent-gold); display: flex; align-items: center; gap: 6px; font-weight: 700;">
+            🧭 ${t('compass.quick_nav_title', undefined, '7-PILLAR QUICK NAVIGATION')}
+          </div>
+          <button type="button" class="compass-btn-close btn-modal-close" aria-label="${t('common.close', undefined, 'Close')}">✕</button>
+        </div>
+        <div class="compass-menu-items-grid">
+          ${COMPASS_ROUTES.map(([route, code, key, def], idx) => `
+            <button class="compass-menu-item${idx === 0 ? ' item-hero' : ''}" data-route="${route}" title="${t(`compass.${route}_title`, undefined, def)}">
+              <span class="compass-item-code">${code}</span>
+              <span class="compass-item-label">${t(key, undefined, def)}</span>
+            </button>
+          `).join('')}
+        </div>
       </div>
       <div class="compass-trigger" title="${t('compass.toggle_nav', undefined, 'Toggle HUD Quick-Nav')}">
         <canvas class="compass-canvas" width="60" height="60"></canvas>
@@ -130,6 +115,7 @@ export class CornerCompass {
     const trigger = this.element.querySelector('.compass-trigger') as HTMLElement | null;
     const menu = this.element.querySelector('.compass-radial-menu') as HTMLElement;
     this.isMenuOpen = true;
+    this.element.classList.add('compass-active');
     trigger?.setAttribute('aria-expanded', 'true');
     menu?.classList.add('menu-open');
     if (menu) (menu as any).inert = false;
@@ -139,6 +125,7 @@ export class CornerCompass {
     const trigger = this.element.querySelector('.compass-trigger') as HTMLElement | null;
     const menu = this.element.querySelector('.compass-radial-menu') as HTMLElement;
     this.isMenuOpen = false;
+    this.element.classList.remove('compass-active');
     trigger?.setAttribute('aria-expanded', 'false');
     menu?.classList.remove('menu-open');
     if (menu) (menu as any).inert = true;
@@ -155,8 +142,10 @@ export class CornerCompass {
       AcousticHaptics.tap();
       AudioSynthesizer.play('click');
       if (this.isMenuOpen) {
+        this.element.classList.add('compass-active');
         menu.classList.add('menu-open'); (menu as HTMLElement).inert = false;
       } else {
+        this.element.classList.remove('compass-active');
         menu.classList.remove('menu-open'); (menu as HTMLElement).inert = true;
       }
     };
@@ -184,6 +173,16 @@ export class CornerCompass {
           this.onNavigate(route);
         }
       });
+    });
+
+    // Close menu when clicking backdrop or close button
+    this.element.querySelector('.compass-backdrop')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.closeMenu();
+    });
+    this.element.querySelector('.compass-btn-close')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.closeMenu();
     });
 
     // Close menu when clicking outside

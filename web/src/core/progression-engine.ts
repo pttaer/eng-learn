@@ -102,7 +102,7 @@ export function generateDynamicQuests(): DailyQuest[] {
     // Safe degrade to defaults if planner unavailable
   }
 
-  return JSON.parse(JSON.stringify(DEFAULT_DAILY_QUESTS));
+  return structuredClone(DEFAULT_DAILY_QUESTS);
 }
 
 export function getTodayString(): string {
@@ -353,20 +353,21 @@ export class ProgressionEngine {
 
     // Normalize category
     const cat = category.toLowerCase().trim();
+    const ALIASES: Record<string, string[]> = {
+      srs: ['colloc', 'vocab', 'srs', 'flashcard', 'srs_review'],
+      srs_review: ['colloc', 'vocab', 'srs', 'flashcard', 'srs_review'],
+      mistake_blitz: ['mistake', 'mistake_blitz', 'serl', 'rehab'],
+      listening_traps: ['listening', 'listening_traps', 'speech'],
+      weakness_drill: ['drill', 'drills', 'weakness_drill'],
+      franklin_studio: ['writing', 'copywork', 'franklin_studio'],
+      studio: ['speech', 'speaking', 'listening', 'grammar', 'studio'],
+      copywork: ['writing', 'copywork']
+    };
 
     for (const quest of this.state.quests) {
       if (quest.completed) continue;
 
-      const matches =
-        quest.category === cat ||
-        (quest.category === 'srs' && (cat === 'colloc' || cat === 'vocab' || cat === 'srs' || cat === 'flashcard' || cat === 'srs_review')) ||
-        (quest.category === 'srs_review' && (cat === 'colloc' || cat === 'vocab' || cat === 'srs' || cat === 'flashcard' || cat === 'srs_review')) ||
-        (quest.category === 'mistake_blitz' && (cat === 'mistake' || cat === 'mistake_blitz' || cat === 'serl' || cat === 'rehab')) ||
-        (quest.category === 'listening_traps' && (cat === 'listening' || cat === 'listening_traps' || cat === 'speech')) ||
-        (quest.category === 'weakness_drill' && (cat === 'drill' || cat === 'drills' || cat === 'weakness_drill')) ||
-        (quest.category === 'franklin_studio' && (cat === 'writing' || cat === 'copywork' || cat === 'franklin_studio')) ||
-        (quest.category === 'studio' && (cat === 'speech' || cat === 'speaking' || cat === 'listening' || cat === 'grammar' || cat === 'studio')) ||
-        (quest.category === 'copywork' && (cat === 'writing' || cat === 'copywork'));
+      const matches = quest.category === cat || (ALIASES[quest.category]?.includes(cat) ?? false);
 
       if (matches) {
         quest.current = Math.min(quest.target, quest.current + amount);

@@ -461,15 +461,15 @@ export class ReadingDossier {
       <!-- Stepped 4-Pass Cognitive Scaffolding Header -->
       <div class="reading-pass-stepper" role="tablist" aria-label="Reading passes" data-i18n-aria-label="reading.reading_passes">
         ${READING_PASS_CONFIGS.map(cfg => {
-          const isActive = cfg.pass === this.currentPass;
-          const isCompleted = cfg.pass < this.currentPass;
-          const statusPrefix = isCompleted ? '✓ ' : '';
-          return `
+      const isActive = cfg.pass === this.currentPass;
+      const isCompleted = cfg.pass < this.currentPass;
+      const statusPrefix = isCompleted ? '✓ ' : '';
+      return `
             <button role="tab" id="reading-pass-tab-${cfg.pass}" aria-controls="reading-pass-panel" aria-selected="${isActive}" tabindex="${isActive ? '0' : '-1'}" class="stepper-step ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''}" data-pass="${cfg.pass}" aria-label="Pass ${cfg.pass}: ${cfg.badge}">
               <span class="step-badge">${statusPrefix}${getReadingPassBadge(cfg.pass)}</span>
             </button>
           `;
-        }).join('<span class="stepper-arrow" aria-hidden="true">→</span>')}
+    }).join('<span class="stepper-arrow" aria-hidden="true">→</span>')}
       </div>
 
       <div class="reading-content-slot" id="reading-pass-panel" role="tabpanel" aria-labelledby="reading-pass-tab-${this.currentPass}"></div>

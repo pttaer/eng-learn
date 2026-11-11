@@ -134,7 +134,10 @@ export class ProgressionModal {
           </div>
         </div>
 
-        ${achievementsHtml()}
+        <div class="telemetry-label" style="margin-top: 14px; margin-bottom: 8px;">
+          ${t('rpg.achievements_header', undefined, 'ACHIEVEMENTS & BADGES')}
+        </div>
+        ${achievementsHtml(false)}
 
         <!-- Daily Quests Checklist -->
         <div class="progression-quests-section">

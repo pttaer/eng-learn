@@ -23,7 +23,7 @@ export const TOUR_STEPS: TourStep[] = [
   {
     target: '.workout-banner',
     fallbackTarget: '#workout-banner',
-    title: "☆ Today's 15-Minute Workout",
+    title: "Today's 15-Minute Workout",
     desc: 'Your mandatory daily tripartite cognitive workout: 10 Spaced Collocations, 1 Benjamin Franklin MEAL Copywork, and 1 Nation 4-3-2 Speaking take.',
     badge: 'DAILY ROUTINE',
     route: 'tree'
@@ -39,7 +39,7 @@ export const TOUR_STEPS: TourStep[] = [
   {
     target: '.constellation-node[data-node-id="voc-1"]',
     fallbackTarget: '.constellation-node',
-    title: '☆ Perk Engram & Gated Criteria',
+    title: 'Perk Skills & Gated Criteria',
     desc: 'Click any star node to inspect syllabus objectives, required prerequisite skills, and retention metrics before launching targeted drills.',
     badge: 'ENGRAM PERK',
     route: 'tree'
@@ -69,6 +69,7 @@ export class SpotlightTour {
   private static spotlight: HTMLElement | null = null;
   private static arrow: HTMLElement | null = null;
   private static card: HTMLElement | null = null;
+  private static currentTargetEl: HTMLElement | null = null;
   private static currentStepIndex = 0;
   private static active = false;
   private static steps: TourStep[] = ONBOARDING_TOUR_STEPS;
@@ -125,7 +126,11 @@ export class SpotlightTour {
         <div class="tour-arrow" id="tourArrow">←</div>
         <div class="tour-card" id="tourCard">
           <div class="tour-card-header">
-            <span class="tour-step-badge" id="tourStepBadge">Step 1 of 6</span>
+            <div class="tour-step-badge" id="tourStepBadge">
+            <span class="tour-step-pill" id="tourStepPill">Step 1 of 6</span>
+            <span class="tour-step-divider" id="tourStepDivider" aria-hidden="true">·</span>
+            <span class="tour-step-kicker" id="tourStepKicker">DIRECTIVE HUD</span>
+          </div>
             <button class="tour-card-close" id="tourCloseBtn" aria-label="${t('tour.close_title', undefined, 'Close Spotlight Tour (Esc)')}" title="${t('tour.close_title', undefined, 'Close (Esc)')}">✕</button>
           </div>
           <div class="tour-card-title" id="tourTitle">Tour Title</div>
@@ -138,7 +143,7 @@ export class SpotlightTour {
               <span class="tour-step-count" id="tourStepCount">1 / 6</span>
             </div>
             <div class="tour-card-actions">
-              <button class="ctrl" id="tourPrevBtn">${t('tour.btn_prev', undefined, '← Previous')}</button>
+              <button class="ctrl" id="tourPrevBtn" style="display: none;">${t('tour.btn_prev', undefined, '← Previous')}</button>
               <button class="ctrl" id="tourSkipBtn">${t('tour.btn_skip', undefined, 'Skip')}</button>
               <button class="ctrl ctrl-primary" id="tourNextBtn">${t('tour.btn_next', undefined, 'Next →')}</button>
             </div>
@@ -259,6 +264,11 @@ export class SpotlightTour {
     if (!this.active) return;
     this.active = false;
 
+    if (this.currentTargetEl) {
+      this.currentTargetEl.classList.remove('tour-highlighted-target');
+      this.currentTargetEl = null;
+    }
+
     if (this.overlay) {
       this.overlay.classList.remove('open');
     }
@@ -311,11 +321,22 @@ export class SpotlightTour {
     const totalSteps = this.steps.length;
     const stepNumber = this.currentStepIndex + 1;
 
-    // Update Step Badge
-    const badgeEl = this.overlay.querySelector('#tourStepBadge');
-    if (badgeEl) {
-      const badgeText = step.badge ? t('tour.badge_' + step.badge.toLowerCase().replace(/[^a-z0-9]+/g, '_'), undefined, step.badge) : '';
-      badgeEl.textContent = badgeText ? t('tour.step_with_badge', { current: stepNumber, total: totalSteps, badge: badgeText }, `STEP ${stepNumber} OF ${totalSteps} // ${badgeText}`) : t('tour.step_of', { current: stepNumber, total: totalSteps }, `Step ${stepNumber} of ${totalSteps}`);
+    // Update Step Badge & Header Meta
+    const badgeEl = this.overlay.querySelector('#tourStepBadge') as HTMLElement | null;
+    const pillEl = this.overlay.querySelector('#tourStepPill') as HTMLElement | null;
+    const kickerEl = this.overlay.querySelector('#tourStepKicker') as HTMLElement | null;
+    const dividerEl = this.overlay.querySelector('#tourStepDivider') as HTMLElement | null;
+
+    const stepLabel = t('tour.step_of', { current: stepNumber, total: totalSteps }, `Step ${stepNumber} of ${totalSteps}`);
+    const badgeText = step.badge ? t('tour.badge_' + step.badge.toLowerCase().replace(/[^a-z0-9]+/g, '_'), undefined, step.badge) : '';
+
+    if (pillEl && kickerEl) {
+      pillEl.textContent = stepLabel;
+      kickerEl.textContent = badgeText;
+      kickerEl.style.display = badgeText ? 'inline' : 'none';
+      if (dividerEl) dividerEl.style.display = badgeText ? 'inline' : 'none';
+    } else if (badgeEl) {
+      badgeEl.textContent = badgeText ? `${stepLabel} · ${badgeText}` : stepLabel;
     }
 
     // Update Title & Desc
@@ -340,7 +361,7 @@ export class SpotlightTour {
     // Navigation buttons state
     const prevBtn = this.overlay.querySelector('#tourPrevBtn') as HTMLElement | null;
     if (prevBtn) {
-      prevBtn.style.visibility = this.currentStepIndex === 0 ? 'hidden' : 'visible';
+      prevBtn.style.display = this.currentStepIndex === 0 ? 'none' : 'inline-flex';
       prevBtn.textContent = t('tour.btn_prev', undefined, '← Previous');
     }
 
@@ -378,6 +399,11 @@ export class SpotlightTour {
     const minTop = 14;
     const maxTop = Math.max(14, window.innerHeight - cardHeight - 16);
 
+    if (this.currentTargetEl && this.currentTargetEl !== targetEl) {
+      this.currentTargetEl.classList.remove('tour-highlighted-target');
+      this.currentTargetEl = null;
+    }
+
     let rect = targetEl ? targetEl.getBoundingClientRect() : null;
 
     // If target element is hidden, detached, or zero-sized: center card and hide spotlight
@@ -391,6 +417,10 @@ export class SpotlightTour {
 
     spotlight.style.display = 'block';
     arrow.style.display = 'block';
+    if (targetEl) {
+      targetEl.classList.add('tour-highlighted-target');
+      this.currentTargetEl = targetEl;
+    }
 
     // Clamp spotlight dimensions so massive containers don't cover whole viewport
     const maxSpotlightH = Math.min(rect.height + pad * 2, Math.max(120, window.innerHeight - 80));

@@ -7,13 +7,17 @@ const http = require('http');
 
 const CHROME_PATH = process.env.PUPPETEER_EXECUTABLE_PATH || 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const DIST_DIR = path.join(__dirname, '../dist');
-const OUTPUT_DIR = path.resolve('E:/Eng/screenshots/vivo-360x802');
-const ARTIFACT_DIR = 'C:\\Users\\Dell\\.gemini\\antigravity\\brain\\b808481f-7c23-46d9-8eaa-6f047f6461b0';
+const OUTPUT_DIR = path.resolve(__dirname, '../screenshots/vivo-360x802');
+const ALT_OUTPUT_DIR = path.resolve('E:/Eng/screenshots/vivo-360x802');
+const ARTIFACT_DIR = process.env.ARTIFACT_DIR || 'C:\\Users\\Dell\\.gemini\\antigravity\\brain\\6cc756d3-5c23-4d8c-8cde-32053f3df8e4';
 const PORT = 4212;
 const BASE_URL = `http://localhost:${PORT}/`;
 
 if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+}
+if (!fs.existsSync(ALT_OUTPUT_DIR)) {
+  fs.mkdirSync(ALT_OUTPUT_DIR, { recursive: true });
 }
 if (!fs.existsSync(ARTIFACT_DIR)) {
   fs.mkdirSync(ARTIFACT_DIR, { recursive: true });
@@ -157,6 +161,8 @@ async function captureVivoFlow() {
     const shot = async (filename, description, category) => {
       const targetPath = path.join(OUTPUT_DIR, filename);
       await page.screenshot({ path: targetPath, fullPage: false });
+      const altPath = path.join(ALT_OUTPUT_DIR, filename);
+      fs.copyFileSync(targetPath, altPath);
       const artifactPath = path.join(ARTIFACT_DIR, filename);
       fs.copyFileSync(targetPath, artifactPath);
       captured.push({ filename, path: targetPath, artifactPath, description, category });
@@ -262,6 +268,18 @@ async function captureVivoFlow() {
     await browser.close();
     server.close();
   }
+
+  const reportData = {
+    timestamp: new Date().toISOString(),
+    viewport: { width: 360, height: 802, dpr: 3 },
+    capturedCount: captured.length,
+    layoutIssuesCount: layoutIssues.length,
+    captured,
+    layoutIssues
+  };
+  fs.writeFileSync(path.join(OUTPUT_DIR, 'report.json'), JSON.stringify(reportData, null, 2), 'utf8');
+  fs.writeFileSync(path.join(ALT_OUTPUT_DIR, 'report.json'), JSON.stringify(reportData, null, 2), 'utf8');
+  fs.writeFileSync(path.join(ARTIFACT_DIR, 'report.json'), JSON.stringify(reportData, null, 2), 'utf8');
 
   console.log(`\n🎉 [COMPLETE] Successfully captured ${captured.length} views for Vivo V2445A (360x802)!`);
   console.log(`Layout Issues Detected: ${layoutIssues.length}`);

@@ -1457,8 +1457,6 @@ export const EN_DICTIONARY: TranslationDictionary = {
   'email.your_draft': "Your draft",
   'email.placeholder': "Tap tiles to build your email",
   'email.clear_draft': "Clear draft",
-  'email.copy_draft': "Copy draft",
-  'email.copied': "Copied!",
 
   // Analytics Dossier
   'analytics.target_band': "Target: <strong>Band 7.5</strong> (C1)",
@@ -1966,6 +1964,11 @@ export const EN_DICTIONARY: TranslationDictionary = {
   'note.copied': "✓ Copied to clipboard!",
   'note.delete_confirm': "Are you sure you want to delete this note?",
   'note.new_note_default': "New {cat} Note",
+  'note.turn_off': "Turn off floating note",
+  'note.turn_off_title': "Turn off floating note (re-enable anytime in Settings)",
+  'note.disabled_toast': "Floating note turned off. You can re-enable anytime in Settings.",
+  'settings.floating_note': "Floating Quick Note",
+  'settings.floating_note_desc': "Show draggable quick scratchpad bubble on screen",
   'compass.core_title': "Return to Urchin Singularity",
   'lexicon.add_to_srs_aria': "Add word to SRS Spaced Repetition Deck",
   'lexicon.lookup_selection': "Lookup",
@@ -3436,8 +3439,6 @@ export const VI_DICTIONARY: TranslationDictionary = {
   'email.your_draft': "Bản nháp của bạn",
   'email.placeholder': "Nhấn vào các ô cụm từ để soạn email...",
   'email.clear_draft': "Xóa bản nháp",
-  'email.copy_draft': "Sao chép thư",
-  'email.copied': "Đã sao chép!",
 
   // Analytics Dossier
   'analytics.target_band': "Mục tiêu: <strong>Band 7.5</strong> (C1)",
@@ -3945,6 +3946,11 @@ export const VI_DICTIONARY: TranslationDictionary = {
   'note.copied': "✓ Đã sao chép vào bộ nhớ tạm!",
   'note.delete_confirm': "Bạn có chắc chắn muốn xóa ghi chú này không?",
   'note.new_note_default': "Ghi chú {cat} mới",
+  'note.turn_off': "Tắt ghi chú nổi",
+  'note.turn_off_title': "Tắt bong bóng ghi chú nổi (Bật lại bất kỳ lúc nào trong Cài đặt)",
+  'note.disabled_toast': "Đã tắt ghi chú nổi. Bạn có thể bật lại bất kỳ lúc nào trong Cài đặt.",
+  'settings.floating_note': "Bong bóng ghi chú nổi",
+  'settings.floating_note_desc': "Hiển thị nút bong bóng ghi chú nhanh nổi trên màn hình",
   'compass.core_title': "Quay về Trung tâm Cầu gai Singularity",
   'lexicon.add_to_srs_aria': "Thêm từ vào bộ thẻ lặp lại ngắt quãng SRS",
   'lexicon.lookup_selection': "Tra từ",

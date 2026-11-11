@@ -9,6 +9,8 @@ import { icon } from '../utils/icons';
 import { t } from '../core/i18n';
 import { AcousticHaptics } from '../core/acoustic-haptics';
 import { HapticEngine } from '../core/haptic-engine';
+import { StorageManager } from '../utils/storage';
+import { NotificationEngine } from '../core/notification-engine';
 
 export type NoteCategory = 'brainstorm' | 'boost' | 'ponytail' | 'vocab' | 'grammar' | 'ielts' | 'ideas' | 'general';
 
@@ -28,18 +30,14 @@ const STORAGE_MAXIMIZED_KEY = 'eng_floating_note_maximized';
 
 const DEFAULT_NOTE: NoteItem = {
   id: 'default-welcome-note',
-  title: 'Scratchpad & Productivity Hub',
-  content: `# 💡 Scratchpad & Productivity Hub
+  title: 'Ghi chú & Ý tưởng',
+  content: `# 💡 Ghi chú Học tập
+- **1-Click Workflows:** Mẫu nhanh cho Động não, Tăng tốc, và IELTS.
+- **Tự động lưu:** Dữ liệu được lưu trữ offline an toàn.
 
-- **Draggable & Expandable:** Drag this floating object anywhere across your study session.
-- **1-Click Workflows:** One-click templates for **/brainstorming**, **/boost**, **/ponytail ultra**, and **IELTS**.
-- **Real-Time Auto-Save:** Automatically saved offline in your browser.
-- **Shortcuts:** \`Alt+N\` to toggle, \`Esc\` to minimize, \`Tab\` for clean indentation.
-
-### Quick Actions
-- [ ] Review B2/C2 Inversion & Clefting patterns
-- [ ] Generate 1 /brainstorming blueprint for IELTS Task 2
-- [ ] Apply /ponytail ultra audit to simplify study notes`,
+### Kế hoạch ôn tập
+- [ ] Ôn tập cấu trúc Đảo ngữ & Clefting B2/C2
+- [ ] Luyện nói 1 bài theo phương pháp 4-3-2`,
   category: 'brainstorm',
   createdAt: Date.now(),
   updatedAt: Date.now()
@@ -60,8 +58,10 @@ export class FloatingNote {
   private charCountEl!: HTMLElement;
   private saveStatusEl!: HTMLElement;
   private maximizeBtnEl!: HTMLButtonElement;
+  private backdropEl!: HTMLElement;
 
   // State
+  private isEnabledState: boolean = true;
   private notes: NoteItem[] = [];
   private activeNoteId: string = '';
   private selectedCategory: string = 'all';
@@ -95,8 +95,12 @@ export class FloatingNote {
   };
 
   constructor() {
+    this.isEnabledState = StorageManager.isFloatingNoteEnabled();
     this.loadNotes();
     this.createDOM();
+    if (!this.isEnabledState) {
+      this.bubbleEl.style.display = 'none';
+    }
     this.restorePositions();
     this.bindEvents();
     this.renderTabs();
@@ -113,6 +117,39 @@ export class FloatingNote {
 
   public static init(): FloatingNote {
     return this.getInstance();
+  }
+
+  public static isEnabled(): boolean {
+    return this.getInstance().isEnabled();
+  }
+
+  public static setEnabled(enabled: boolean): void {
+    this.getInstance().setEnabled(enabled);
+  }
+
+  public static toggleEnabled(): boolean {
+    const inst = this.getInstance();
+    const next = !inst.isEnabled();
+    inst.setEnabled(next);
+    return next;
+  }
+
+  public isEnabled(): boolean {
+    return this.isEnabledState;
+  }
+
+  public setEnabled(enabled: boolean): void {
+    this.isEnabledState = enabled;
+    StorageManager.setFloatingNoteEnabled(enabled);
+    if (!enabled) {
+      this.minimize();
+      this.bubbleEl.style.display = 'none';
+    } else {
+      this.bubbleEl.style.display = '';
+      this.clampBubblePosition();
+      this.applyBubbleTransform();
+    }
+    window.dispatchEvent(new CustomEvent('eng-floating-note-changed', { detail: { enabled } }));
   }
 
   public static open(category?: NoteCategory): void {
@@ -263,6 +300,9 @@ export class FloatingNote {
           <button type="button" class="floating-note-btn btn-icon-only" id="fn-btn-minimize" title="${t('note.minimize', undefined, 'Minimize (Esc)')}" aria-label="${t('note.minimize', undefined, 'Minimize (Esc)')}">
             ${icon('minimize', 13)}
           </button>
+          <button type="button" class="floating-note-btn btn-icon-only btn-turn-off" id="fn-btn-turn-off" title="${t('note.turn_off_title', undefined, 'Turn off floating note (re-enable in Settings)')}" aria-label="${t('note.turn_off', undefined, 'Turn off floating note')}">
+            ${icon('power', 13)}
+          </button>
         </div>
       </header>
 
@@ -308,6 +348,9 @@ export class FloatingNote {
           <span id="fn-char-count">0 chars</span>
         </div>
         <div class="floating-note-telemetry-right">
+          <button type="button" class="floating-note-turn-off-link" id="fn-footer-turn-off" title="${t('note.turn_off_title', undefined, 'Turn off floating note (re-enable in Settings)')}">
+            ${icon('power', 11)} <span>${t('note.turn_off', undefined, 'Tắt ghi chú')}</span>
+          </button>
           <span id="fn-save-status"><span class="save-status-dot"></span>${t('note.saved', undefined, 'Saved')}</span>
         </div>
       </footer>
@@ -323,6 +366,11 @@ export class FloatingNote {
     this.maximizeBtnEl = this.windowEl.querySelector('#fn-btn-maximize') as HTMLButtonElement;
 
     // Clean DOM mount: attach to document.body
+    this.backdropEl = document.createElement('div');
+    this.backdropEl.className = 'floating-note-backdrop';
+    this.backdropEl.style.display = 'none';
+    this.backdropEl.addEventListener('click', () => this.minimize());
+    document.body.appendChild(this.backdropEl);
     document.body.appendChild(this.bubbleEl);
     document.body.appendChild(this.windowEl);
   }
@@ -367,6 +415,18 @@ export class FloatingNote {
     this.windowEl.querySelector('#fn-btn-new')?.addEventListener('click', () => this.createNewNote());
     this.maximizeBtnEl.addEventListener('click', () => this.toggleMaximize());
     this.windowEl.querySelector('#fn-btn-minimize')?.addEventListener('click', () => this.minimize());
+
+    const handleTurnOff = () => {
+      AcousticHaptics.tap();
+      HapticEngine.trigger('selection');
+      this.setEnabled(false);
+      NotificationEngine.showToast(
+        t('note.turn_off', undefined, 'Tắt ghi chú nổi'),
+        t('note.disabled_toast', undefined, 'Đã tắt ghi chú nổi. Bạn có thể bật lại bất kỳ lúc nào trong Cài đặt.')
+      );
+    };
+    this.windowEl.querySelector('#fn-btn-turn-off')?.addEventListener('click', handleTurnOff);
+    this.windowEl.querySelector('#fn-footer-turn-off')?.addEventListener('click', handleTurnOff);
 
     // 4. Categories filter click
     this.categoriesEl.addEventListener('click', (e) => {
@@ -669,7 +729,14 @@ export class FloatingNote {
     this.isOpenState = true;
     this.windowEl.style.display = 'flex';
     this.windowEl.setAttribute('aria-hidden', 'false');
-    this.bubbleEl.style.opacity = '0.35';
+    this.windowEl.classList.add('is-open');
+    if (this.isEnabledState) {
+      this.bubbleEl.style.display = '';
+      this.bubbleEl.style.opacity = '0.35';
+    } else {
+      this.bubbleEl.style.display = 'none';
+    }
+    if (this.backdropEl) this.backdropEl.style.display = 'block';
 
     // Position window reasonably close to the bubble if not set
     this.clampWindowPosition();
@@ -690,7 +757,14 @@ export class FloatingNote {
     this.isOpenState = false;
     this.windowEl.style.display = 'none';
     this.windowEl.setAttribute('aria-hidden', 'true');
-    this.bubbleEl.style.opacity = '1';
+    this.windowEl.classList.remove('is-open');
+    if (this.isEnabledState) {
+      this.bubbleEl.style.display = '';
+      this.bubbleEl.style.opacity = '1';
+    } else {
+      this.bubbleEl.style.display = 'none';
+    }
+    if (this.backdropEl) this.backdropEl.style.display = 'none';
     AcousticHaptics.tap();
     HapticEngine.trigger('light');
   }

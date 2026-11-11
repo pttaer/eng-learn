@@ -395,6 +395,20 @@ export class StorageManager {
     this.saveState(state);
   }
 
+  public static isFloatingNoteEnabled(): boolean {
+    try {
+      const val = localStorage.getItem('eng_floating_note_enabled');
+      if (val !== null) return val !== 'false';
+    } catch { }
+    return true;
+  }
+
+  public static setFloatingNoteEnabled(enabled: boolean): void {
+    try {
+      localStorage.setItem('eng_floating_note_enabled', enabled ? 'true' : 'false');
+    } catch { }
+  }
+
   public static getMusicVolume(): number {
     try {
       const v = localStorage.getItem('eng_music_volume');

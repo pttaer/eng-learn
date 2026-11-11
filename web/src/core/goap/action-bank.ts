@@ -55,8 +55,7 @@ export const ACTION_WEAKNESS_DRILL: GoapAction = {
   applyEffects: (ws: LearnerWorldState) => ({
     ...ws,
     timeBudgetMin: ws.timeBudgetMin - 8
-  }),
-  getDynamicCost: (_ws: LearnerWorldState) => 3
+  })
 };
 
 export const ACTION_FRANKLIN_STUDIO: GoapAction = {

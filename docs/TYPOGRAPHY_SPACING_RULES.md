@@ -426,12 +426,30 @@ The evolution of the mobile Skill Grid from an over-engineered control dashboard
 | **Khoảng thở Focus Outline** | Outline đè lên chữ (*kỳ lúc nào.*) và dính sát nút dưới | Coaxial shadow 2px, buffer ≥8px giữa các nút (gap 12px), ≥18px tới text |
 | **Padding & Spacing Icon** | Icon dính mép trái, lệch trục chữ do margin-left hack | `inline-flex`, `gap: 8px`, `padding: 10px 16px`, cân xứng tuyệt đối |
 | **Phân bổ Tab & Folder** | Tab co giãn lệch lạc theo độ dài chữ, pill lơ lửng | Lưới đều `repeat(N, 1fr)` (25%), tai folder `8px 8px 0 0`, gắn liền thân |
+| **Backdrop Popup & Modal**| Blur không đều (0px, 4px, 8px, thiếu webkit) | 100% đồng nhất `--modal-backdrop` + `blur(12px)` + ẩn toast |
 | **Zero-Scroll vs Cuộn** | Ép zero-scroll mù quáng hoặc để vỡ layout | Zero-scroll cho compact decks; view dài cuộn tự nhiên (`overflow-y: auto`) |
 | **Khả năng tương thích** | Vỡ vụn hoặc bị cắt cụt trên màn hình ngắn | Đạt chuẩn iPhone 6 (375×667px): linh hoạt, không kẹt UI |
 
 ---
 
-## 15. Git Provenance & Evolution History
+### 15. Universal Popup & Modal Backdrop Blur Invariant (`--modal-backdrop` & `--modal-backdrop-blur: 12px`)
+- **Anti-Pattern (View cũ):** Modals and popups having inconsistent backdrop treatments (e.g. spotlight tour overlay had 0px blur with transparent background; completion modals had weak 4px blur without `-webkit-backdrop-filter`, making Safari render 0 blur; other modals had 8px or 16px blur), and floating toast alerts or floating notes bleed through active popups.
+- **Enforced Solution (View mới - Chuẩn Apple Frosted Glass):**
+  - **Universal Frosted Blur:** Every popup, dialog, drawer backdrop, action sheet, and guided tour overlay strictly declares `background: var(--modal-backdrop, rgba(5, 7, 13, 0.78)) !important; backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important;`.
+  - **Zero Background Distraction:** Blurs underlying text and eliminates cognitive clutter while allowing ambient UI tones to shine through softly.
+  - **Automatic Toast & Note Suppression:** All floating toasts (`#notification-toast-container`, `.apple-toast`, etc.) and floating note bubbles (`.floating-note-bubble`) automatically hide (`display: none !important;`) whenever any modal overlay or tour is active.
+
+---
+
+### 16. Universal Scrollbar Gutter & Floating Inset Invariant
+- **Anti-Pattern (View cũ):** Scrollbars clamped directly against cards, modal edges, or sliders with 0px spacing, causing the scroll thumb to collide with UI borders or interactive controls, while leaving an awkward empty void between the scrollbar and the right edge of the screen.
+- **Enforced Solution (View mới - Floating Pill Cushion):**
+  - **Universal Floating Thumb Cushion:** `--scrollbar-size: 8px;` declared with `::-webkit-scrollbar-track { background: transparent; margin: 4px 0; }` and `::-webkit-scrollbar-thumb { background-color: var(--scrollbar-thumb); border-radius: var(--radius-full, 9999px); border: 2px solid transparent; background-clip: padding-box; }`, creating an inherent 2px transparent buffer around the thumb.
+  - **Workspace & Modal Gutter Separation:** `#workspace-mount` spans 100% viewport width while inner content respects canonical screen margins (`--pad-screen-left: 12px;` and `--pad-screen-right: 12px;`). The scrollbar renders along the right viewport boundary with 2px cushion, providing ≥6px clean breathing room between the nearest card border and the thumb. Modal dialog cards maintain ≥16px horizontal padding so internal buttons and sliders never touch the scroll track.
+
+---
+
+## 16. Git Provenance & Evolution History
 
 The master rules above synthesize the following milestone commits from git history:
 

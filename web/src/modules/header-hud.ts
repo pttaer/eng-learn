@@ -687,17 +687,20 @@ export class HeaderHUD {
     modal.innerHTML = `
       <div class="completion-receipt-card" style="max-width: 420px; width: 100%; max-height: calc(100dvh - 32px); overflow-y: auto; box-sizing: border-box;">
         <div class="telemetry-label" style="margin-bottom: 8px;">${t('nav.change_level', undefined, 'YOUR LEVEL')}</div>
-        <div class="action-stack" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; width: 100%;">
+        <div class="action-stack" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; width: 100%;">
           <button class="hud-btn btn-open-placement-test" style="width: 100%; box-sizing: border-box; justify-content: center; padding: 10px 14px; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8); white-space: normal; line-height: 1.3; text-align: center;">
-            ${icon('compass', 16)}<span>[ ${t('settings.reset_placement', undefined, 'TAKE 2-MIN QUICK PLACEMENT TEST')} ]</span>
+            ${icon('compass', 16)}<span>${t('settings.reset_placement', undefined, 'Take 2-Min Placement Test')}</span>
           </button>
           <button class="hud-btn btn-open-skill-radar" style="width: 100%; box-sizing: border-box; justify-content: center; padding: 10px 14px; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold); white-space: normal; line-height: 1.3; text-align: center;">
-            ${icon('target', 16)}<span>[ ${t('dossier.celestial_radar', undefined, 'CELESTIAL RADAR & DIAGNOSTIC')} ]</span>
+            ${icon('target', 16)}<span>${t('dossier.celestial_radar', undefined, 'Skill Radar Diagnostic')}</span>
           </button>
         </div>
-        <div class="action-stack" style="width: 100%; display: flex; flex-direction: column; gap: 12px; margin-bottom: 18px;">
+        <div class="level-picker-grid" style="width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 18px;">
           ${CEFR_ORDER.map(l => `
-            <button class="hud-btn level-option ${l === current ? 'active' : ''}" data-level="${l}" aria-pressed="${l === current}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 10px 14px; font-weight: 600;">${l} · ${t('cefr.desc.' + l, undefined, CEFR_LABELS[l])}</button>
+            <button class="hud-btn level-option ${l === current ? 'active' : ''}" data-level="${l}" aria-pressed="${l === current}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 10px 12px; font-weight: 600; min-height: 48px; ${l === current ? 'background: var(--accent-gold) !important; color: #080a0f !important; font-weight: 700;' : ''}">
+              <span style="font-family: var(--font-mono); font-weight: 800; font-size: 13px; margin-right: 6px;">${l}</span>
+              <span style="font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${t('cefr.desc.' + l, undefined, CEFR_LABELS[l])}</span>
+            </button>
           `).join('')}
         </div>
         <div class="apple-modal-footer">
@@ -1062,10 +1065,10 @@ export class HeaderHUD {
     modal.id = 'settings-modal';
     modal.className = 'completion-modal-overlay interactive';
     modal.innerHTML = `
-      <div class="completion-receipt-card" style="max-width: 520px; width: 100%; max-height: 90dvh; overflow-y: auto; padding: 16px 12px; gap: 12px; box-sizing: border-box;">
-        <div class="telemetry-label" style="margin-bottom: 0;">${t('settings.title', undefined, 'SYSTEM SETTINGS & DATA BACKUP')}</div>
+      <div class="completion-receipt-card" style="max-width: 520px; width: 100%; max-height: 90dvh; overflow-y: auto; padding: 20px 16px; gap: 12px; box-sizing: border-box;">
+        <div class="telemetry-label" style="margin-bottom: 0;">${t('settings.kicker', undefined, 'SYSTEM SETTINGS')}</div>
         <h2 style="font-family: var(--font-mono); font-size: var(--font-h2); font-weight: 700; margin: 0;">
-          ${t('settings.title', undefined, 'Settings & Local Storage')}
+          ${t('settings.storage_title', undefined, 'Storage & Local Data')}
         </h2>
         <p style="font-size: var(--font-body-compact); line-height: 1.5; margin: 0; color: var(--ink-secondary);">
           ${t('settings.storage_desc', undefined, "Your progress, SRS intervals, and streaks are safely stored in your browser's local memory. You can export or import a backup JSON file anytime.")}
@@ -1078,10 +1081,10 @@ export class HeaderHUD {
               ${icon('globe', 12)} ${t('settings.language', undefined, 'LANGUAGE / NGÔN NGỮ')}
             </div>
             <div class="locale-segmented-control" style="display: flex; gap: 8px; width: 100%;">
-              <button type="button" class="hud-btn btn-locale-select ${I18n.getLocale() === 'en' ? 'active' : ''}" data-locale="en" style="flex: 1; justify-content: center; padding: 10px 14px; font-weight: 600; min-height: var(--touch-target-min, 44px); ${I18n.getLocale() === 'en' ? 'border-color: var(--accent-cyan); color: var(--accent-cyan); font-weight: 700;' : ''}">
+              <button type="button" class="hud-btn btn-locale-select ${I18n.getLocale() === 'en' ? 'active' : ''}" data-locale="en" style="flex: 1; justify-content: center; padding: 10px 14px; font-weight: 600; min-height: var(--touch-target-min, 44px); ${I18n.getLocale() === 'en' ? 'background: var(--accent-gold) !important; color: #080a0f !important; font-weight: 700;' : ''}">
                 English
               </button>
-              <button type="button" class="hud-btn btn-locale-select ${I18n.getLocale() === 'vi' ? 'active' : ''}" data-locale="vi" style="flex: 1; justify-content: center; padding: 10px 14px; font-weight: 600; min-height: var(--touch-target-min, 44px); ${I18n.getLocale() === 'vi' ? 'border-color: var(--accent-cyan); color: var(--accent-cyan); font-weight: 700;' : ''}">
+              <button type="button" class="hud-btn btn-locale-select ${I18n.getLocale() === 'vi' ? 'active' : ''}" data-locale="vi" style="flex: 1; justify-content: center; padding: 10px 14px; font-weight: 600; min-height: var(--touch-target-min, 44px); ${I18n.getLocale() === 'vi' ? 'background: var(--accent-gold) !important; color: #080a0f !important; font-weight: 700;' : ''}">
                 Tiếng Việt
               </button>
             </div>
@@ -1094,16 +1097,16 @@ export class HeaderHUD {
             ${icon('compass')} ${t('settings.reset_tour', undefined, 'Re-run Onboarding Tour')}
           </button>
           <button class="hud-btn btn-cognitive-modal-toggle" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;">
-            ${CognitiveScaffoldingEngine.isGentle() ? '🌱 Mode: Gentle Scaffolding' : '⚡ Mode: Tactical Cockpit'}
+            ${CognitiveScaffoldingEngine.isGentle() ? `🌱 ${t('settings.scaffolding_gentle', undefined, 'Mode: Gentle Scaffolding')}` : `⚡ ${t('settings.scaffolding_tactical', undefined, 'Mode: Tactical Cockpit')}`}
           </button>
           <button class="hud-btn btn-notifications-toggle ${StorageManager.isNotificationsEnabled() ? 'active' : ''}" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;" aria-pressed="${StorageManager.isNotificationsEnabled()}">
-            🔔 Daily Review Alerts: ${StorageManager.isNotificationsEnabled() ? 'ON' : 'OFF'}
+            🔔 ${t('settings.daily_alerts', undefined, 'Daily Review Alerts')}: ${StorageManager.isNotificationsEnabled() ? (I18n.getLocale() === 'vi' ? 'BẬT' : 'ON') : (I18n.getLocale() === 'vi' ? 'TẮT' : 'OFF')}
           </button>
           <button class="hud-btn btn-backup-export btn-profile-export" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;">
-            ${icon('download', 16)} [ ${t('settings.export_profile', undefined, 'EXPORT PROFILE')} ]
+            ${icon('download', 16)} ${t('settings.export_profile', undefined, 'Export Profile')}
           </button>
           <button class="hud-btn btn-backup-import btn-profile-import" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;">
-            ${icon('upload', 16)} [ ${t('settings.import_profile', undefined, 'IMPORT PROFILE')} ]
+            ${icon('upload', 16)} ${t('settings.import_profile', undefined, 'Import Profile')}
           </button>
           <!-- Dual Audio Bus Controls -->
           <div class="settings-audio-section" style="display: flex; flex-direction: column; gap: 12px; padding: 12px; background: rgba(255,255,255,0.03); border: none; border-radius: var(--radius-squircle-sm, 10px);">
@@ -1144,6 +1147,9 @@ export class HeaderHUD {
 
           <button class="hud-btn btn-motion-toggle" style="padding: 12px; justify-content: center; font-weight: 600;" aria-pressed="${document.documentElement.dataset.motion === 'reduce'}">
             ${icon('zap')} <span class="motion-label">${document.documentElement.dataset.motion === 'reduce' ? t('settings.reduced_motion', undefined, 'Motion: Reduced') : t('settings.motion', undefined, 'Motion: Full')}</span>
+          </button>
+          <button class="hud-btn btn-floating-note-toggle ${FloatingNote.isEnabled() ? 'active' : ''}" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;" aria-pressed="${FloatingNote.isEnabled()}">
+            ${icon('note', 16)} ${t('settings.floating_note', undefined, 'Floating Quick Note')}: ${FloatingNote.isEnabled() ? (I18n.getLocale() === 'vi' ? 'BẬT' : 'ON') : (I18n.getLocale() === 'vi' ? 'TẮT' : 'OFF')}
           </button>
 
           <div class="apple-modal-footer">
@@ -1277,6 +1283,19 @@ export class HeaderHUD {
       btn.setAttribute('aria-pressed', String(reduce));
       btn.querySelector('.motion-label')!.textContent = reduce ? t('settings.reduced_motion', undefined, 'Motion: Reduced') : t('settings.motion', undefined, 'Motion: Full');
       AudioSynthesizer.play('click');
+    });
+
+    modal.querySelector('.btn-floating-note-toggle')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      AcousticHaptics.tap();
+      HapticEngine.trigger('selection');
+      const next = FloatingNote.toggleEnabled();
+      const btn = modal.querySelector('.btn-floating-note-toggle');
+      if (btn) {
+        btn.classList.toggle('active', next);
+        btn.setAttribute('aria-pressed', String(next));
+        btn.innerHTML = `${icon('note', 16)} ${t('settings.floating_note', undefined, 'Floating Quick Note')}: ${next ? (I18n.getLocale() === 'vi' ? 'BẬT' : 'ON') : (I18n.getLocale() === 'vi' ? 'TẮT' : 'OFF')}`;
+      }
     });
 
     const closeModal = () => {

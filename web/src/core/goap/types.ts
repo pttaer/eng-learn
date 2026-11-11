@@ -25,7 +25,7 @@ export interface GoapAction {
   cost: number;
   preconditions: (ws: LearnerWorldState) => boolean;
   applyEffects: (ws: LearnerWorldState) => LearnerWorldState;
-  getDynamicCost: (ws: LearnerWorldState) => number;
+  getDynamicCost?: (ws: LearnerWorldState) => number;
 }
 
 export interface GoapGoal {

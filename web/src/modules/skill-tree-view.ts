@@ -366,7 +366,7 @@ export class SkillTreeView {
         <div class="workout-panel">
           <div class="workout-panel-info">
             <div class="workout-panel-header">
-              <span class="telemetry-label">☆ ${t('tree.workout', undefined, 'WORKOUT')} [${workout.level}]</span>
+              <span class="telemetry-label">${t('tree.workout', undefined, 'DAILY WORKOUT')} • ${workout.level}</span>
               <span class="telemetry-label workout-remaining-label">${workout.left === 0 ? t('tree.all_done', undefined, 'ALL DONE ✓') : workout.left + ' ' + t('tree.left', undefined, 'LEFT')}</span>
             </div>
             <div class="workout-tasks">
@@ -829,7 +829,7 @@ export class SkillTreeView {
           <div class="skill-mastery-box">
             <div class="skill-mastery-labels">
               <span style="color: var(--ink-secondary); font-weight: 500;">${t('tree.mastery_retention', undefined, 'Mastery retention')}</span>
-              <span style="color: var(--ink-primary); font-weight: 700;">${mastery}% / 80%</span>
+              <span style="color: var(--ink-primary); font-weight: 700; font-family: var(--font-mono);">${mastery}% <span style="font-size: 11px; font-weight: 500; color: var(--ink-muted);">(${t('tree.target_goal', undefined, 'Goal')}: 80%)</span></span>
             </div>
             <div class="skill-mastery-track">
               <div class="skill-mastery-fill" style="width: ${mastery}%;"></div>

@@ -439,9 +439,9 @@ export class NotificationEngine {
       const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
       const posStyles = isMobile ? [
         'position: fixed',
-        'top: max(64px, calc(env(safe-area-inset-top, 0px) + 56px))',
-        'left: 16px',
-        'right: 16px',
+        'bottom: calc(var(--safe-bottom-dock, 84px) + env(safe-area-inset-bottom, 12px) + 8px)',
+        'left: var(--pad-screen-left, 12px)',
+        'right: var(--pad-screen-right, 12px)',
         'z-index: var(--z-toast, 1000)',
         'display: flex',
         'flex-direction: column',

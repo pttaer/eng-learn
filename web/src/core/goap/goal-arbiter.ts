@@ -44,6 +44,9 @@ export class GoalArbiter {
   ];
 
   public static selectGoal(ws: LearnerWorldState): GoapGoal {
-    return [...this.ALL_GOALS].sort((a, b) => b.calculateUtility(ws) - a.calculateUtility(ws))[0];
+    return this.ALL_GOALS.reduce((best, g) =>
+      g.calculateUtility(ws) > best.calculateUtility(ws) ? g : best
+    );
   }
 }
+

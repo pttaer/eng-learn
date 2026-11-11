@@ -96,15 +96,15 @@ function headerHtml(info: LevelInfo, summary: UsageSummary, streak: number): str
 }
 
 /** Achievements screen: gradient header with total points, rank tiers, and achievement rows. */
-export function achievementsHtml(): string {
+export function achievementsHtml(includeHeader = true): string {
   const engine = ProgressionEngine.getState();
   const info = ProgressionEngine.getLevelInfo();
   const summary = UsageTracker.summary();
   const streak = engine.streak;
   const list = achievementsFor(summary, streak);
   return `
-    <section aria-label="${t('nav.profile', undefined, 'Achievements')}" style="max-width: 420px; margin: 0 auto var(--space-16); border-radius: var(--radius-squircle-md, 16px); overflow: hidden; background: var(--bg-surface); color: var(--ink-primary); border: 1px solid var(--border-hairline); box-shadow: var(--shadow-card);">
-      ${headerHtml(info, summary, streak)}
+    <section aria-label="${t('nav.profile', undefined, 'Achievements')}" style="width: 100%; margin: 0 auto var(--space-16); border-radius: var(--radius-squircle-md, 12px); overflow: hidden; background: var(--bg-surface); color: var(--ink-primary); border: 1px solid var(--border-hairline); box-shadow: var(--shadow-card);">
+      ${includeHeader ? headerHtml(info, summary, streak) : ''}
       <div>
         ${list.map(achievementRow).join('')}
       </div>

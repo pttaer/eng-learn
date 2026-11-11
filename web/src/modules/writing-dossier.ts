@@ -379,10 +379,10 @@ export class WritingDossier {
               <!-- Multi-dimensional scoring bars -->
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 8px; margin-bottom: 12px; font-size: var(--font-kicker);">
                 ${[
-                  ['Concept Recall', `${semantic.conceptCoveragePct}%`, 'var(--ink-primary)'],
-                  ['Syntactic Level', `${semantic.syntacticSophisticationScore}%`, 'var(--ink-primary)'],
-                  ['Collocation Bonus', `+${semantic.collocationBonus} pts`, 'var(--ink-good)']
-                ].map(([label, val, col]) => `
+            ['Concept Recall', `${semantic.conceptCoveragePct}%`, 'var(--ink-primary)'],
+            ['Syntactic Level', `${semantic.syntacticSophisticationScore}%`, 'var(--ink-primary)'],
+            ['Collocation Bonus', `+${semantic.collocationBonus} pts`, 'var(--ink-good)']
+          ].map(([label, val, col]) => `
                   <div style="padding: 6px 10px; background: rgba(255,255,255,0.03); border-radius: 6px;">
                     <div style="color: var(--ink-muted);">${label}</div>
                     <div style="font-weight: 700; color: ${col}; font-size: var(--font-body-compact);">${val}</div>

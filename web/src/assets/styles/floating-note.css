@@ -48,6 +48,10 @@ body:has(.mistake-vault-modal-overlay) .floating-note-bubble,
 body:has(.completion-modal-overlay) .floating-note-bubble,
 body:has(#skill-node-modal) .floating-note-bubble,
 body:has(#ielts-confirm-dialog) .floating-note-bubble,
+body:has(.tour-overlay.open) .floating-note-bubble,
+body:has(.commute-player-overlay) .floating-note-bubble,
+body:has(.cd-test-hub-overlay) .floating-note-bubble,
+body:has(.lexicon-drawer-backdrop.open) .floating-note-bubble,
 body:has(.ie-tip-modal-overlay.is-active) .floating-note-bubble {
   opacity: 0 !important;
   pointer-events: none !important;
@@ -92,6 +96,10 @@ body:has(.ie-tip-modal-overlay.is-active) .floating-note-bubble {
   font-size: 11px;
   font-weight: 700;
   line-height: 1;
+}
+
+.floating-note-backdrop {
+  display: none;
 }
 
 /* 2. Expanded Floating Note Window */
@@ -226,6 +234,38 @@ body:has(.ie-tip-modal-overlay.is-active) .floating-note-bubble {
   min-height: 32px;
   min-width: 32px;
   padding: 0;
+}
+
+.floating-note-btn.btn-turn-off {
+  color: var(--ink-muted, #94a3b8);
+}
+
+.floating-note-btn.btn-turn-off:hover {
+  color: var(--danger, #ef4444) !important;
+  background: rgba(239, 68, 68, 0.12) !important;
+  border-color: rgba(239, 68, 68, 0.35) !important;
+}
+
+.floating-note-turn-off-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--ink-muted, #94a3b8);
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  padding: 3px 6px;
+  border-radius: var(--radius-btn, 10px);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.floating-note-turn-off-link:hover {
+  color: var(--danger, #ef4444);
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.25);
 }
 
 /* Category Filter Bar */
@@ -480,6 +520,7 @@ body:has(.ie-tip-modal-overlay.is-active) .floating-note-bubble {
 
 /* 3. Mobile Refinements (<= 768px) */
 @media (max-width: 768px) {
+
   /* Main app: Me sheet > Quick Notes opens the same window, so the bubble would only cover content */
   body:has(.hud-bottom-nav) .floating-note-bubble {
     display: none;
@@ -503,6 +544,15 @@ body:has(.ie-tip-modal-overlay.is-active) .floating-note-bubble {
     padding: 10px 16px;
   }
 
+  .floating-note-backdrop {
+    position: fixed;
+    inset: 0;
+    background: var(--modal-backdrop, rgba(5, 7, 13, 0.78)) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    z-index: calc(var(--z-modal, 900) - 1);
+  }
+
   .floating-note-window {
     left: 10px !important;
     right: 10px !important;
@@ -510,9 +560,23 @@ body:has(.ie-tip-modal-overlay.is-active) .floating-note-bubble {
     max-width: none !important;
     top: auto !important;
     bottom: calc(var(--safe-bottom-dock, 84px) + 12px) !important;
-    height: min(480px, calc(100dvh - var(--safe-bottom-dock, 84px) - 24px)) !important;
+    height: min(520px, calc(100dvh - var(--safe-bottom-dock, 84px) - 24px)) !important;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.8), var(--shadow-modal) !important;
+    border-radius: var(--radius-squircle-md, 16px) !important;
     max-height: calc(100dvh - var(--safe-bottom-dock, 84px) - 20px) !important;
     transform: none !important;
+    z-index: var(--z-modal, 900) !important;
+  }
+
+  .floating-note-btn {
+    min-height: var(--touch-target-min, 44px) !important;
+    min-width: var(--touch-target-min, 44px) !important;
+    padding: 8px 12px !important;
+  }
+
+  .floating-cat-chip {
+    min-height: 38px !important;
+    padding: 6px 12px !important;
   }
 
   .floating-note-window.is-maximized {

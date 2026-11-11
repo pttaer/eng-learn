@@ -4,10 +4,14 @@
    Authoritative Mandate: WCAG 2.2 AAA & Game-like Sci-Fi HUD
    ========================================================================== */
 
-:root, html[data-theme="dark"] {
+:root,
+html[data-theme="dark"] {
   color-scheme: dark;
   --page: #080a0f;
   --scrim: rgba(5, 7, 13, 0.82);
+  --modal-backdrop: rgba(5, 7, 13, 0.78);
+  --modal-backdrop-blur: 12px;
+  --modal-backdrop-filter: blur(12px);
   --bg-canvas: #080a0f;
   --bg-surface: #111622;
   --bg-card: #182030;
@@ -65,16 +69,25 @@
   --border-width: 1px;
 
   /* Canonical Border Radius Hierarchy & Continuous Squircles */
-  --radius-xs: 4px;       /* Micro badges, pills, small tags */
-  --radius-sm: 6px;       /* Form controls, inputs, buttons, search bars, tabs */
-  --radius: 8px;          /* Standard cards, HUD panels, dossier containers */
-  --radius-md: 8px;       /* Alias for standard card/panel radius */
-  --radius-lg: 12px;      /* Modals, feature dialogs, hero cards */
-  --radius-xl: 16px;      /* Outer containers, action sheets */
-  --radius-full: 9999px;  /* Pill buttons, avatar rings */
-  --radius-pill: 9999px;  /* Canonical pill alias */
+  --radius-xs: 4px;
+  /* Micro badges, pills, small tags */
+  --radius-sm: 6px;
+  /* Form controls, inputs, buttons, search bars, tabs */
+  --radius: 8px;
+  /* Standard cards, HUD panels, dossier containers */
+  --radius-md: 8px;
+  /* Alias for standard card/panel radius */
+  --radius-lg: 12px;
+  /* Modals, feature dialogs, hero cards */
+  --radius-xl: 16px;
+  /* Outer containers, action sheets */
+  --radius-full: 9999px;
+  /* Pill buttons, avatar rings */
+  --radius-pill: 9999px;
+  /* Canonical pill alias */
   --radius-squircle-sm: 10px;
-  --radius-btn: 10px;     /* Canonical unified button radius */
+  --radius-btn: 10px;
+  /* Canonical unified button radius */
   --radius-squircle-md: 16px;
   --radius-squircle-lg: 24px;
 
@@ -96,7 +109,7 @@
   --focus-ring-outer: #080a0f;
 
   /* Minimal Universal Scrollbar Tokens */
-  --scrollbar-size: 5px;
+  --scrollbar-size: 8px;
   --scrollbar-track: transparent;
   --scrollbar-thumb: rgba(255, 255, 255, 0.22);
   --scrollbar-thumb-hover: rgba(255, 255, 255, 0.45);
@@ -235,6 +248,9 @@ html[data-theme="light"] {
   color-scheme: light;
   --page: #fafaf9;
   --scrim: rgba(255, 255, 255, 0.92);
+  --modal-backdrop: rgba(255, 255, 255, 0.82);
+  --modal-backdrop-blur: 12px;
+  --modal-backdrop-filter: blur(12px);
   --bg-canvas: #fafaf9;
   --bg-surface: #ffffff;
   --bg-card: #ffffff;
@@ -323,17 +339,20 @@ html[data-theme="light"] {
 }
 
 ::-webkit-scrollbar {
-  width: var(--scrollbar-size, 5px);
-  height: var(--scrollbar-size, 5px);
+  width: var(--scrollbar-size, 8px);
+  height: var(--scrollbar-size, 8px);
 }
 
 ::-webkit-scrollbar-track {
   background: var(--scrollbar-track, transparent);
+  margin: 4px 0;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-thumb);
   border-radius: var(--radius-full, 9999px);
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {

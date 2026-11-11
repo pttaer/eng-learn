@@ -649,7 +649,7 @@ export class MultiSkillQuizModal {
 
     this.card(`
       <!-- Stepper Header -->
-      <div class="stepper-header">
+      <div class="stepper-header" style="padding-right: 48px; box-sizing: border-box;">
         <div class="stepper-steps-track">
           ${STAGES.map((st, i) => {
             let stateClass = '';
@@ -867,9 +867,9 @@ export class MultiSkillQuizModal {
 
     this.card(`
       <div class="quiz-telemetry-header" style="margin-bottom: var(--space-12); display: flex; flex-direction: column; gap: 4px;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-8); padding-right: 40px;">
-          <span class="telemetry-label" style="letter-spacing: 0.08em; font-weight: 700;">${t('quiz.diagnostic_complete', undefined, 'DIAGNOSTIC COMPLETE')}</span>
-          <span class="skill-badge-pill">${icon('target', 12)} ${t('quiz.overall', { level: overallLevel }, `${overallLevel} OVERALL`)}</span>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-8); padding-right: 36px; flex-wrap: nowrap;">
+          <span class="telemetry-label" style="letter-spacing: 0.05em; font-weight: 700; white-space: nowrap; font-size: 11px;">${t('quiz.diagnostic_complete', undefined, 'DIAGNOSTIC COMPLETE')}</span>
+          <span class="skill-badge-pill" style="white-space: nowrap; flex-shrink: 0;">${icon('target', 12)} ${t('quiz.overall', { level: overallLevel }, `${overallLevel} OVERALL`)}</span>
         </div>
         <div class="telemetry-label" style="color: var(--ink-muted); font-size: var(--font-kicker); letter-spacing: 0.06em;">
           ${t('quiz.radar_title', undefined, 'CEFR 6-AXIS SKILL RADAR')}
