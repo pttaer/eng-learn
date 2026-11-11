@@ -416,9 +416,13 @@ export class ReadingDossier {
   public render(): HTMLElement {
     if (this.readingMode === 'extensive') {
       this.container.innerHTML = `
-        <div class="reading-mode-bar" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 10px;">
-          <button class="hud-btn btn-mode-intensive" title="${t('reading.mode_intensive_title', undefined, 'Intensive (4-Pass)')}" style="flex: 1 1 130px; border-radius: var(--radius-btn, 10px); min-height: 44px; justify-content: center;">${t('reading.mode_intensive', undefined, '🔬 Intensive')}</button>
-          <button class="hud-btn btn-mode-extensive active" title="${t('reading.mode_extensive_title', undefined, 'Extensive (Comprehensible Input)')}" style="flex: 1 1 130px; background: var(--accent-gold); color: var(--bg-canvas); border-radius: var(--radius-btn, 10px); font-weight: 700; min-height: 44px; justify-content: center;">${t('reading.mode_extensive', undefined, '📖 Extensive')}</button>
+        <div class="dossier-control-bar reading-control-bar">
+          <div class="reading-controls-primary">
+            <div class="reading-mode-bar" role="group" aria-label="Reading mode">
+              <button class="hud-btn btn-mode-intensive" title="${t('reading.mode_intensive_title', undefined, 'Intensive (4-Pass)')}">${t('reading.mode_intensive', undefined, '🔬 Intensive')}</button>
+              <button class="hud-btn btn-mode-extensive active" title="${t('reading.mode_extensive_title', undefined, 'Extensive (Comprehensible Input)')}">${t('reading.mode_extensive', undefined, '📖 Extensive')}</button>
+            </div>
+          </div>
         </div>
         <div class="extensive-container-slot"></div>
       `;
@@ -431,24 +435,32 @@ export class ReadingDossier {
     const article = this.articles[this.currentArticleIndex];
 
     this.container.innerHTML = `
-      <div class="reading-mode-bar" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 10px;">
-        <button class="hud-btn btn-mode-intensive active" title="${t('reading.mode_intensive_title', undefined, 'Intensive (4-Pass)')}" style="flex: 1 1 130px; background: var(--accent-gold); color: var(--bg-canvas); border-radius: var(--radius-btn, 10px); font-weight: 700; min-height: 44px; justify-content: center;">${t('reading.mode_intensive', undefined, '🔬 Intensive')}</button>
-        <button class="hud-btn btn-mode-extensive" title="${t('reading.mode_extensive_title', undefined, 'Extensive (Comprehensible Input)')}" style="flex: 1 1 130px; border-radius: var(--radius-btn, 10px); min-height: 44px; justify-content: center;">${t('reading.mode_extensive', undefined, '📖 Extensive')}</button>
-      </div>
+      <div class="dossier-control-bar reading-control-bar">
+        <div class="reading-controls-primary">
+          <div class="reading-mode-bar" role="group" aria-label="Reading mode">
+            <button class="hud-btn btn-mode-intensive active" title="${t('reading.mode_intensive_title', undefined, 'Intensive (4-Pass)')}">${t('reading.mode_intensive', undefined, '🔬 Intensive')}</button>
+            <button class="hud-btn btn-mode-extensive" title="${t('reading.mode_extensive_title', undefined, 'Extensive (Comprehensible Input)')}">${t('reading.mode_extensive', undefined, '📖 Extensive')}</button>
+          </div>
 
-      <div class="dossier-control-bar">
-        <div class="dossier-tabs article-tabs" role="tablist" aria-label="${t('reading.articles')}">
-          ${this.articles.map((art, idx) => `
-            <button role="tab" aria-selected="${idx === this.currentArticleIndex}" tabindex="${idx === this.currentArticleIndex ? '0' : '-1'}" class="hud-btn article-tab ${idx === this.currentArticleIndex ? 'active' : ''}" data-idx="${idx}" title="${this.escapeHtml(art.title)}" aria-label="Article ${idx + 1}: ${this.escapeHtml(art.title)}">
-              Art 0${idx + 1}: ${art.title}
-            </button>
-          `).join('')}
+          <div class="dossier-tabs article-tabs" role="tablist" aria-label="${t('reading.articles')}">
+            ${this.articles.map((art, idx) => `
+              <button role="tab" aria-selected="${idx === this.currentArticleIndex}" tabindex="${idx === this.currentArticleIndex ? '0' : '-1'}" class="hud-btn article-tab ${idx === this.currentArticleIndex ? 'active' : ''}" data-idx="${idx}" title="${this.escapeHtml(art.title)}" aria-label="Article ${idx + 1}: ${this.escapeHtml(art.title)}">
+                <span class="art-num">Art 0${idx + 1}</span><span class="art-sep">: </span><span class="art-title">${this.escapeHtml(art.title)}</span>
+              </button>
+            `).join('')}
+          </div>
         </div>
-        ${levelRowHtml(this.allArticles, this.activeLevel)}
-        <div class="article-meta-telemetry reading-meta-telemetry">
-          <span class="telemetry-value">CEFR: ${article.cefrLevel}</span>
-          <span class="telemetry-value">${t('reading.words_count', { count: article.wordCount })}</span>
-          <span class="telemetry-value">${article.readingTime.toUpperCase()}</span>
+
+        <div class="reading-controls-secondary">
+          ${levelRowHtml(this.allArticles, this.activeLevel)}
+          <div class="article-meta-telemetry reading-meta-telemetry" aria-label="Article telemetry">
+            <span class="telemetry-value reading-meta-pill reading-meta-art">Art 0${this.currentArticleIndex + 1}</span>
+            <span class="telemetry-value reading-meta-pill reading-meta-cefr">${article.cefrLevel}</span>
+            <span class="reading-meta-dot" aria-hidden="true">•</span>
+            <span class="telemetry-value reading-meta-words">${t('reading.words_count', { count: article.wordCount })}</span>
+            <span class="reading-meta-dot" aria-hidden="true">•</span>
+            <span class="telemetry-value reading-meta-time">${article.readingTime.toUpperCase()}</span>
+          </div>
         </div>
       </div>
 
@@ -823,8 +835,9 @@ export class ReadingDossier {
       <!-- Pass 1 Skim Timer & Focus Mode Bar -->
       <div class="skim-timer-bar">
         <div class="skim-timer-info">
-          <span>${t('reading.skim_countdown', undefined, 'SKIM COUNTDOWN:')} </span>
-          <strong class="timer-display-text val-time" role="timer" aria-live="polite" aria-atomic="true" style="font-size: var(--font-body-compact);">${String(Math.floor(this.skimSecondsRemaining / 60)).padStart(2, '0')}:${String(this.skimSecondsRemaining % 60).padStart(2, '0')}</strong>
+          <span class="skim-timer-label-full">${t('reading.skim_countdown', undefined, 'SKIM COUNTDOWN:')} </span>
+          <span class="skim-timer-label-compact" aria-hidden="true">⏱ </span>
+          <strong class="timer-display-text val-time" role="timer" aria-live="polite" aria-atomic="true">${String(Math.floor(this.skimSecondsRemaining / 60)).padStart(2, '0')}:${String(this.skimSecondsRemaining % 60).padStart(2, '0')}</strong>
         </div>
         <div class="skim-timer-actions">
           <button type="button" class="hud-btn btn-toggle-timer ${this.isSkimTimerRunning ? 'is-running' : ''}">
@@ -837,7 +850,7 @@ export class ReadingDossier {
       </div>
 
       <!-- Mobile Segmented Split-Screen Tab Switcher (<= 768px) -->
-      <nav class="reading-mobile-tab-bar" role="tablist" aria-label="Reading Mobile View Switcher" style="position: sticky; top: 0; z-index: 10; background: var(--bg-surface); border-bottom: 1px solid var(--border-hairline); padding: 8px; display: flex; gap: 8px;">
+      <nav class="reading-mobile-tab-bar" role="tablist" aria-label="Reading Mobile View Switcher">
         <button
           type="button"
           class="reading-mobile-tab-btn ${this.mobileActiveTab === 'text' ? 'is-active' : ''}"
