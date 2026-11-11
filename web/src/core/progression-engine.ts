@@ -9,6 +9,10 @@
 import { AudioSynthesizer } from './audio-synthesizer';
 import { AcousticHaptics } from './acoustic-haptics';
 import { StorageManager } from '../utils/storage';
+import { WorldStateEngine } from './goap/world-state';
+import { GoalArbiter } from './goap/goal-arbiter';
+import { GoapPlanner } from './goap/planner';
+import { DEFAULT_GOAP_ACTIONS } from './goap/action-bank';
 
 export interface DailyQuest {
   id: string;
@@ -75,6 +79,31 @@ export const DEFAULT_DAILY_QUESTS: DailyQuest[] = [
     category: 'studio'
   }
 ];
+
+export function generateDynamicQuests(): DailyQuest[] {
+  try {
+    const ws = WorldStateEngine.getCurrentState(20);
+    const goal = GoalArbiter.selectGoal(ws);
+    const plan = GoapPlanner.plan(ws, goal, DEFAULT_GOAP_ACTIONS);
+
+    if (plan && plan.actions.length > 0) {
+      return plan.actions.slice(0, 3).map((act, idx) => ({
+        id: `quest_goap_${act.id}_${idx}`,
+        title: act.title,
+        description: `Complete ${act.title} to overcome ${ws.weakestSkill} bottlenecks`,
+        current: 0,
+        target: act.id === 'act_srs_review' ? 15 : (act.id === 'act_mistake_blitz' ? 2 : 1),
+        xpReward: 50 + idx * 25,
+        completed: false,
+        category: act.id.replace('act_', '')
+      }));
+    }
+  } catch {
+    // Safe degrade to defaults if planner unavailable
+  }
+
+  return JSON.parse(JSON.stringify(DEFAULT_DAILY_QUESTS));
+}
 
 export function getTodayString(): string {
   const d = new Date();
@@ -172,13 +201,13 @@ export class ProgressionEngine {
               lastQuestDate: parsed.lastQuestDate || getTodayString(),
               quests: Array.isArray(parsed.quests) && parsed.quests.length === 3
                 ? parsed.quests
-                : JSON.parse(JSON.stringify(DEFAULT_DAILY_QUESTS))
+                : generateDynamicQuests()
             };
 
             // Check if day changed to reset daily quests
             const today = getTodayString();
             if (loadedState.lastQuestDate && loadedState.lastQuestDate !== today) {
-              loadedState.quests = JSON.parse(JSON.stringify(DEFAULT_DAILY_QUESTS));
+              loadedState.quests = generateDynamicQuests();
               loadedState.lastQuestDate = today;
             }
 
@@ -209,7 +238,7 @@ export class ProgressionEngine {
       streak: initialStreak,
       lastActiveDate: initialLastActive,
       lastQuestDate: getTodayString(),
-      quests: JSON.parse(JSON.stringify(DEFAULT_DAILY_QUESTS))
+      quests: generateDynamicQuests()
     };
 
     this.persist(defaultState);
@@ -330,7 +359,12 @@ export class ProgressionEngine {
 
       const matches =
         quest.category === cat ||
-        (quest.category === 'srs' && (cat === 'colloc' || cat === 'vocab' || cat === 'srs' || cat === 'flashcard')) ||
+        (quest.category === 'srs' && (cat === 'colloc' || cat === 'vocab' || cat === 'srs' || cat === 'flashcard' || cat === 'srs_review')) ||
+        (quest.category === 'srs_review' && (cat === 'colloc' || cat === 'vocab' || cat === 'srs' || cat === 'flashcard' || cat === 'srs_review')) ||
+        (quest.category === 'mistake_blitz' && (cat === 'mistake' || cat === 'mistake_blitz' || cat === 'serl' || cat === 'rehab')) ||
+        (quest.category === 'listening_traps' && (cat === 'listening' || cat === 'listening_traps' || cat === 'speech')) ||
+        (quest.category === 'weakness_drill' && (cat === 'drill' || cat === 'drills' || cat === 'weakness_drill')) ||
+        (quest.category === 'franklin_studio' && (cat === 'writing' || cat === 'copywork' || cat === 'franklin_studio')) ||
         (quest.category === 'studio' && (cat === 'speech' || cat === 'speaking' || cat === 'listening' || cat === 'grammar' || cat === 'studio')) ||
         (quest.category === 'copywork' && (cat === 'writing' || cat === 'copywork'));
 
@@ -370,7 +404,7 @@ export class ProgressionEngine {
   }
 
   public resetDailyQuests(): void {
-    this.state.quests = JSON.parse(JSON.stringify(DEFAULT_DAILY_QUESTS));
+    this.state.quests = generateDynamicQuests();
     this.state.lastQuestDate = getTodayString();
     this.persist(this.state);
     this.notifyListeners();
@@ -383,7 +417,7 @@ export class ProgressionEngine {
       streak: 0,
       lastActiveDate: '',
       lastQuestDate: getTodayString(),
-      quests: JSON.parse(JSON.stringify(DEFAULT_DAILY_QUESTS))
+      quests: generateDynamicQuests()
     };
     this.persist(this.state);
     this.notifyListeners();

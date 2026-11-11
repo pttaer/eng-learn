@@ -1,6 +1,6 @@
 import { attempts } from '../progress';
 import { esc, h } from '../ui';
-import { SKILLS, ROUTE, FOCUS, estimateStart, currentBands, roadmapWeeks, extendedRoadmap, nextTask, gate, placementFrom, getTarget, type Skill } from '../path';
+import { SKILLS, ROUTE, estimateStart, currentBands, roadmapWeeks, extendedRoadmap, nextTask, gate, placementFrom, getTarget, weakestSkill, type Skill } from '../path';
 import { t } from '../../core/i18n';
 import { icon } from '../../utils/icons';
 
@@ -91,9 +91,10 @@ export function pathView(root: HTMLElement): () => void {
       return;
     }
     const done = doneWeeks();
-    const plan = extendedRoadmap(weeks, FOCUS, done);
+    const targetWeakest = weakestSkill(placement);
+    const plan = extendedRoadmap(weeks, targetWeakest, done);
     const next = nextTask(plan, done);
-    const focusName = localizedSkillName(FOCUS);
+    const focusName = localizedSkillName(targetWeakest);
 
     const targetBand = getTarget();
     root.append(

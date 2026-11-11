@@ -49,6 +49,9 @@ import { ScrollAffordance } from './core/scroll-affordance';
 import { syncAndroidWidget, WidgetBridge } from './core/widget-bridge';
 import { I18n, t, LOCALE_EVENT } from './core/i18n';
 import collocationsData from './assets/data/collocations.json';
+import { AdversaryRegistry } from './core/adversary/adversary-registry';
+import { AmbushController } from './core/adversary/ambush-controller';
+import { InterceptionModal } from './core/adversary/ui/interception-modal';
 
 // Expose engines to window for automated headless testing & telemetry inspection
 (window as any).AudioSynthesizer = AudioSynthesizer;
@@ -73,6 +76,9 @@ import collocationsData from './assets/data/collocations.json';
 (window as any).MultiSkillQuizModal = MultiSkillQuizModal;
 (window as any).PlacementQuiz = PlacementQuiz;
 (window as any).StorageManager = StorageManager;
+(window as any).AdversaryRegistry = AdversaryRegistry;
+(window as any).AmbushController = AmbushController;
+(window as any).InterceptionModal = InterceptionModal;
 (window as any).HeaderHUD = HeaderHUD;
 (window as any).ProfileSyncEngine = ProfileSyncEngine;
 (window as any).SpeechEvaluator = SpeechEvaluator;
@@ -656,4 +662,14 @@ document.addEventListener('DOMContentLoaded', () => {
   NotificationEngine.schedulePeriodicCheck();
   UsageTracker.start();
   syncAndroidWidget();
+
+  // Cognitive Adversarial Flash Audit Interception Check
+  setTimeout(() => {
+    try {
+      const candidate = AmbushController.getCandidate();
+      if (candidate) {
+        InterceptionModal.launch(candidate);
+      }
+    } catch {}
+  }, 3500);
 });

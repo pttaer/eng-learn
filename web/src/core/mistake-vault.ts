@@ -6,6 +6,7 @@ import { Cefr } from './cefr';
 import { t } from './i18n';
 import { L1VietnameseDiagnosticEngine } from './l1-vietnamese-diagnostic';
 import { SemanticParaphraseEvaluator } from './semantic-paraphrase-evaluator';
+import { AdversaryRegistry } from './adversary/adversary-registry';
 
 export class MistakeVault {
   private static isInitialized = false;
@@ -37,6 +38,23 @@ export class MistakeVault {
         explanation: detail.explanation || 'Recorded for rehabilitation',
         l1VietnameseTip: detail.l1VietnameseTip || ''
       });
+
+      try {
+        AdversaryRegistry.recordEncounter({
+          sourceModule: detail.sourceModule || 'general',
+          category: detail.category as ErrorCategory,
+          academicTitle: detail.academicTitle || `${detail.category} Bottleneck`,
+          cefrLevel: detail.cefrLevel as Cefr,
+          prompt: detail.prompt,
+          userResponse: detail.learnerInput,
+          expectedAnswer: detail.expectedOutput,
+          passed: false,
+          linguisticExplanation: detail.explanation || 'Recorded for cognitive adversary tracking',
+          l1VietnameseTip: detail.l1VietnameseTip || ''
+        });
+      } catch (err) {
+        // Safe degrade if adversary tracking fails
+      }
 
       this.updateVaultBadges();
     });
@@ -292,6 +310,24 @@ export class MistakeVault {
     if (!this.activeRecord) return;
 
     const result = SerlGauntletEngine.evaluateDrillAnswer(this.activeRecord.id, answer);
+
+    try {
+      AdversaryRegistry.recordEncounter({
+        sourceModule: 'serl_gauntlet',
+        category: this.activeRecord.category,
+        academicTitle: `${this.activeRecord.category} Bottleneck`,
+        cefrLevel: this.activeRecord.cefrLevel,
+        prompt: this.activeRecord.prompt,
+        userResponse: answer,
+        expectedAnswer: this.activeRecord.expectedOutput,
+        passed: result.success,
+        linguisticExplanation: this.activeRecord.explanation,
+        l1VietnameseTip: this.activeRecord.l1VietnameseTip
+      });
+    } catch (e) {
+      // Degrade gracefully
+    }
+
     const feedbackMount = container.querySelector('.drill-feedback-mount');
 
     if (result.success) {
