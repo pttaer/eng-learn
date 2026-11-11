@@ -13,3 +13,5 @@ data/ielts_tips/articles/
 web/scripts/scan-*
 web/scripts/*-findings.json
 web/scripts/*-output.txt
+__pycache__/
+*.py[cod]

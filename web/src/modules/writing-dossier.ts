@@ -42,11 +42,15 @@ export interface WritingTelemetry {
   completed: boolean;
 }
 
+export function tokenizeWords(text: string): string[] {
+  return text.match(/[\w'-]+|[^\w\s]|\s+/g) || [];
+}
+
 export function computeDiffTokens(original: string, candidate: string): ProofreadDiffToken[] {
   const normOriginal = original.replace(/[’‘]/g, "'").replace(/[“”]/g, '"');
   const normCandidate = candidate.replace(/[’‘]/g, "'").replace(/[“”]/g, '"');
-  const o = normOriginal.split('');
-  const c = normCandidate.split('');
+  const o = tokenizeWords(normOriginal);
+  const c = tokenizeWords(normCandidate);
   const m = o.length;
   const n = c.length;
 
@@ -89,6 +93,7 @@ export function calculateWritingMetrics(targetStr: string, typedStr: string, ela
   const grossWpm = Math.round((charsTyped / 5) / minutes);
 
   const diffTokens = computeDiffTokens(normTarget, normTyped);
+  const targetTokens = tokenizeWords(normTarget);
   let errorCount = 0;
   let matchCount = 0;
   for (const token of diffTokens) {
@@ -99,12 +104,20 @@ export function calculateWritingMetrics(targetStr: string, typedStr: string, ela
     }
   }
 
-  // Active typing errors (excluding untyped trailing characters of target text)
-  const trailingDeletes = normTarget.length > normTyped.length ? (normTarget.length - normTyped.length) : 0;
+  // Active typing errors (excluding untyped trailing tokens of target text)
+  let trailingDeletes = 0;
+  for (let k = diffTokens.length - 1; k >= 0; k--) {
+    if (diffTokens[k].type === 'delete') {
+      trailingDeletes++;
+    } else {
+      break;
+    }
+  }
   const activeErrors = Math.max(0, errorCount - trailingDeletes);
   const netWpm = Math.max(0, Math.round(((charsTyped / 5) - Math.floor(activeErrors / 2)) / minutes));
-  const accuracyPct = normTarget.length === 0 ? 100 : Math.max(0, Math.min(100, Math.round((matchCount / normTarget.length) * 100)));
-  const completed = matchCount === normTarget.length && errorCount === 0;
+  const rawAcc = targetTokens.length === 0 ? 100 : Math.round((matchCount / targetTokens.length) * 100);
+  const accuracyPct = Number.isFinite(rawAcc) ? Math.max(0, Math.min(100, rawAcc)) : 0;
+  const completed = matchCount === targetTokens.length && errorCount === 0;
 
   return {
     grossWpm,
@@ -258,7 +271,7 @@ export class WritingDossier {
         return `
           <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 16px; border-radius: 12px; box-shadow: var(--shadow-card);">
             <div class="copywork-header-row">
-              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.step2_title', undefined, 'STEP 2 // RECONSTRUCT FROM MEMORY')}</span>
+              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.step2_title', undefined, 'STEP 2 · RECONSTRUCT FROM MEMORY')}</span>
               <button class="hud-btn btn-peek-model" style="padding: 8px 14px; min-height: 44px; display: inline-flex; align-items: center; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);">${icon('eye')} ${t('writing.peek_model', undefined, 'Peek Model (2s)')}</button>
             </div>
 
@@ -298,7 +311,7 @@ export class WritingDossier {
         return `
           <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 16px; border-radius: 12px; box-shadow: var(--shadow-card);">
             <div class="copywork-header-row">
-              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.step3_title', undefined, 'STEP 3 // MYERS-HIRSCHBERG SPLIT-DIFF')}</span>
+              <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.step3_title', undefined, 'STEP 3 · MYERS-HIRSCHBERG SPLIT-DIFF')}</span>
               <span class="telemetry-value" style="color: ${accuracyColor}; font-size: var(--font-body); font-weight: 700;">${t('writing.accuracy_label', undefined, 'ACCURACY:')} ${metrics.accuracyPct}%</span>
             </div>
 
@@ -332,8 +345,15 @@ export class WritingDossier {
 
             <!-- Side-by-Side Highlighted Diff -->
             <div style="margin-bottom: 16px;">
-              <div class="telemetry-label" style="margin-bottom: 6px;">${t('writing.reconstruction_corrections', undefined, 'YOUR RECONSTRUCTION & CORRECTIONS')}</div>
-              <div class="copywork-diff-container" role="region" aria-label="Myers split-diff evaluation" aria-live="polite" aria-atomic="true" style="font-size: var(--font-body); line-height: 1.8; padding: 14px; border: none; border-radius: var(--radius-squircle-sm, 10px); background: var(--bg-canvas);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 8px;">
+                <div class="telemetry-label">${t('writing.reconstruction_corrections', undefined, 'YOUR RECONSTRUCTION & CORRECTIONS')}</div>
+                <div class="diff-legend" style="display: flex; gap: 8px; font-size: var(--font-kicker); font-family: var(--font-mono);">
+                  <span style="color: var(--ink-primary); display: inline-flex; align-items: center; gap: 4px;">● Matched</span>
+                  <span style="color: #ef4444; display: inline-flex; align-items: center; gap: 4px; text-decoration: line-through;">● Missing</span>
+                  <span style="color: var(--accent-gold); display: inline-flex; align-items: center; gap: 4px; font-weight: 600;">● Inserted</span>
+                </div>
+              </div>
+              <div class="copywork-diff-container" role="region" aria-label="Myers split-diff evaluation" aria-live="polite" aria-atomic="true" style="font-size: var(--font-body); line-height: 1.8; padding: 14px; border: none; border-radius: var(--radius-squircle-sm, 10px); background: var(--bg-canvas); white-space: pre-wrap; word-break: break-word;">
                 ${this.renderDiffHTML(tokens)}
               </div>
             </div>
@@ -388,7 +408,7 @@ export class WritingDossier {
 
             <!-- Self-Assessment SRS Rating Bar -->
             <div style="border-top: 1px solid var(--border-hairline); padding-top: 16px;">
-              <div class="telemetry-label" style="text-align: center; margin-bottom: 12px;">${t('writing.log_retention_rating', undefined, 'LOG RETENTION RATING // UPDATE CONSTELLATION MASTERY')}</div>
+              <div class="telemetry-label" style="text-align: center; margin-bottom: 12px;">${t('writing.log_retention_rating', undefined, 'LOG RETENTION RATING · UPDATE CONSTELLATION MASTERY')}</div>
               <div class="copywork-srs-grid">
                 <button class="hud-btn btn-rate-srs" data-rating="0" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); border-radius: var(--radius-btn, 10px);"><span style="color: var(--critical); font-weight: 700;">✗</span> ${t('card.again', undefined, 'Again')} (1)</button>
                 <button class="hud-btn btn-rate-srs" data-rating="2" style="padding: 10px 0; justify-content: center; font-size: var(--font-body-compact); border-radius: var(--radius-btn, 10px);"><span style="color: var(--warning); font-weight: 700;">▲</span> ${t('card.hard', undefined, 'Hard')} (2)</button>
@@ -414,9 +434,9 @@ export class WritingDossier {
       if (chunk.type === 'match') {
         return `<span class="diff-match" style="color: var(--ink-primary);">${this.escapeHTML(chunk.value)}</span>`;
       } else if (chunk.type === 'delete') {
-        return `<span class="diff-delete" style="color: #dc2626; text-decoration: line-through; background: rgba(220, 38, 38, 0.1); padding: 0 3px; border-radius: 3px;">${this.escapeHTML(chunk.value)}</span>`;
+        return `<span class="diff-delete" style="color: #ef4444; text-decoration: line-through; background: rgba(239, 68, 68, 0.12); padding: 1px 4px; border-radius: 4px; margin: 0 1px;">${this.escapeHTML(chunk.value)}</span>`;
       } else {
-        return `<span class="diff-insert" style="color: var(--accent-gold); font-weight: 700; background: var(--accent-gold-soft); padding: 0 3px; border-radius: 3px;">${this.escapeHTML(chunk.value)}</span>`;
+        return `<span class="diff-insert" style="color: var(--accent-gold); font-weight: 600; background: var(--accent-gold-soft); padding: 1px 4px; border-radius: 4px; margin: 0 1px;">${this.escapeHTML(chunk.value)}</span>`;
       }
     }).join('');
   }
