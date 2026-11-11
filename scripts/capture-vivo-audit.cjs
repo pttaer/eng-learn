@@ -189,6 +189,8 @@ async function cleanPopupsAndOverlays(page) {
     document.getElementById('ielts-confirm-dialog')?.remove();
     document.getElementById('hud-confirm-dialog')?.remove();
     document.getElementById('tour-welcome-toast')?.remove();
+    document.getElementById('notification-toast-container')?.remove();
+    document.querySelectorAll('.notification-toast, .apple-toast, .hud-toast').forEach(el => el.remove());
 
     if (window.setIeltsTestInProgress) {
       window.setIeltsTestInProgress(null);
@@ -221,7 +223,14 @@ function checkDuplicateHash(filePath, relLabel) {
   }
 }
 
+const targetFlowArg = process.argv.find(a => a.startsWith('--flow='))?.split('=')[1] || (process.argv.includes('--flow') ? process.argv[process.argv.indexOf('--flow') + 1] : null);
+function shouldRunFlow(folderName) {
+  if (!targetFlowArg) return true;
+  return folderName.includes(targetFlowArg);
+}
+
 async function captureFlowView(page, folderName, baseName, label, options = {}) {
+  if (!shouldRunFlow(folderName)) return;
   const dir = path.join(OUTPUT_BASE, folderName);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
@@ -363,7 +372,10 @@ async function run() {
     localStorage.setItem('eng_floating_bubble_pos', JSON.stringify({ x: 230, y: 55 }));
   });
 
+  const onlyFlow02 = process.argv.includes('--flow-02') || process.argv.includes('--flow-2') || process.argv.includes('--flow=02');
+
   try {
+    if (!onlyFlow02) {
     // =========================================================================
     // FLOW 01: ONBOARDING & PLACEMENT
     // =========================================================================
@@ -407,6 +419,7 @@ async function run() {
       if (window.SpotlightTour) window.SpotlightTour.close();
       document.querySelectorAll('.tour-overlay, .spotlight-overlay').forEach(e => e.remove());
     });
+    } // end !onlyFlow02
 
     // =========================================================================
     // FLOW 02: NAVIGATION & SYSTEM HUD
@@ -435,8 +448,10 @@ async function run() {
 
     // Settings Modal
     await page.evaluate(() => {
-      const hud = window.HeaderHUD?.getInstance ? window.HeaderHUD.getInstance() : null;
-      if (hud) hud.openSettingsModal();
+      const app = window.__singularityApp;
+      if (app && app.headerHud) {
+        app.headerHud.openSettingsModal();
+      }
     });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '02-navigation-hud', '04-settings-modal', 'Settings & Localization Controls Modal');
@@ -520,14 +535,21 @@ async function run() {
 
     // Corner Compass Radial Menu
     await page.goto(`${BASE_URL}#read`, { waitUntil: 'networkidle0' });
-    await new Promise(r => setTimeout(r, 500));
+    await new Promise(r => setTimeout(r, 600));
     await page.evaluate(() => {
-      const trigger = document.querySelector('.compass-orb-trigger, .corner-compass-container canvas');
-      if (trigger) trigger.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      if (window.CornerCompass && window.CornerCompass.openMenu) {
+        window.CornerCompass.openMenu();
+      } else {
+        const trigger = document.querySelector('.compass-trigger, .compass-canvas');
+        if (trigger) trigger.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      }
     });
-    await new Promise(r => setTimeout(r, 500));
-    await captureFlowView(page, '02-navigation-hud', '11-corner-compass', 'Corner Compass Radial Navigation Menu');
+    await new Promise(r => setTimeout(r, 600));
+    await captureFlowView(page, '02-navigation-hud', '11-corner-compass', 'Corner Compass Radial Navigation Menu', { skipScroll: true });
     await page.evaluate(() => {
+      if (window.CornerCompass && window.CornerCompass.closeMenu) {
+        window.CornerCompass.closeMenu();
+      }
       document.body.click();
     });
 
@@ -543,13 +565,12 @@ async function run() {
 
     // Level Picker Modal
     await page.evaluate(() => {
-      const hud = window.HeaderHUD?.getInstance ? window.HeaderHUD.getInstance() : null;
-      if (hud) hud.openLevelPicker();
+      document.querySelector('.btn-level')?.click();
     });
     await new Promise(r => setTimeout(r, 500));
-    await captureFlowView(page, '02-navigation-hud', '13-level-picker-modal', 'CEFR Level Picker Modal');
+    await captureFlowView(page, '02-navigation-hud', '13-level-picker-modal', 'CEFR Level Picker Modal', { skipScroll: true });
     await page.evaluate(() => {
-      document.querySelector('#level-picker-modal .btn-modal-close')?.click() || document.getElementById('level-picker-modal')?.remove();
+      document.querySelector('#level-modal .btn-modal-close, #level-picker-modal .btn-modal-close')?.click() || document.getElementById('level-modal')?.remove() || document.getElementById('level-picker-modal')?.remove();
     });
 
     // Floating Scratchpad Note Window
@@ -561,6 +582,11 @@ async function run() {
     await page.evaluate(() => {
       if (window.FloatingNote) window.FloatingNote.minimize();
     });
+
+    if (onlyFlow02) {
+      console.log('\n[FLOW 02 ONLY] Done capturing all 14 Flow 02 screens!');
+      return;
+    }
 
     // =========================================================================
     // FLOW 03: FOUR PILLARS
@@ -815,15 +841,20 @@ async function run() {
     // 01 Home / Overview
     await page.goto(`${BASE_URL}ielts.html#home`, { waitUntil: 'networkidle0' });
     await new Promise(r => setTimeout(r, 600));
-    await captureFlowView(page, '06-ielts-academic', '01-ielts-overview', 'IELTS Road to 7.0 Overview & Summary');
+    await captureFlowView(page, '06-ielts-academic', '01-ielts-overview', 'IELTS Road to 7.0 Overview & Summary', {
+      skipScroll: true
+    });
 
     // 01b Band Report & 7.0 Readiness Gate (Specifically scrolled to .ie-report)
     await captureFlowView(page, '06-ielts-academic', '01b-ielts-band-readiness-report', 'IELTS 4-Skill Band Report & 7.0 Readiness Gate', {
-      scrollToSelector: '.ie-report'
+      scrollToSelector: '.ie-report',
+      skipScroll: true
     });
 
     // 02 Diagnostic Question View (clean state)
     await page.evaluate(() => {
+      localStorage.removeItem('ieltsDiagnosticProfile');
+      localStorage.removeItem('IELTS_DIAGNOSTIC_PROFILE');
       localStorage.removeItem('ielts_diagnostic_profile');
     });
     await page.goto(`${BASE_URL}ielts.html#diagnostic`, { waitUntil: 'networkidle0' });
@@ -856,6 +887,8 @@ async function run() {
           'Drill dependent preposition collocations.'
         ]
       };
+      localStorage.setItem('ieltsDiagnosticProfile', JSON.stringify(report));
+      localStorage.setItem('IELTS_DIAGNOSTIC_PROFILE', JSON.stringify(report));
       localStorage.setItem('ielts_diagnostic_profile', JSON.stringify(report));
     });
     await page.reload({ waitUntil: 'networkidle0' });
@@ -885,7 +918,8 @@ async function run() {
     });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '03b-ielts-reading-test-result', 'IELTS Reading Calibrated Band Scorecard Result', {
-      scrollToSelector: '.ie-result'
+      scrollToSelector: '.ie-result',
+      skipScroll: true
     });
     // Cleanly cancel test state so confirm dialog never blocks subsequent pages
     await page.evaluate(() => {
@@ -915,7 +949,8 @@ async function run() {
     });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '05b-ielts-listening-test-result', 'IELTS Listening Calibrated Band Scorecard Result', {
-      scrollToSelector: '.ie-result'
+      scrollToSelector: '.ie-result',
+      skipScroll: true
     });
     // Cleanly cancel test state
     await page.evaluate(() => {

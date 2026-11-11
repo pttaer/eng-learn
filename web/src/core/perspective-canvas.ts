@@ -625,11 +625,15 @@ export class PerspectiveCanvas {
         ctx.strokeRect(-drawSize / 2 - 3, -drawSize / 2 - 3, drawSize + 6, drawSize + 6);
 
         // Monospace index label
+        const col = ent.collocation as any;
+        const label = col?.headword
+          ? col.headword.slice(0, 6).toUpperCase()
+          : (col?.phrase ? col.phrase.split(' ')[0].slice(0, 6).toUpperCase() : 'LEX');
         ctx.fillStyle = isDark ? '#f8fafc' : '#000000';
-        ctx.font = '8px "JetBrains Mono", monospace';
+        ctx.font = '700 8px "JetBrains Mono", monospace';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText('ITEM', 0, 0);
+        ctx.fillText(label, 0, 0);
       }
 
       ctx.restore();

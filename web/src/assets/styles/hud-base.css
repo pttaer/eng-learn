@@ -621,7 +621,7 @@ select {
 .hud-btn {
   display: inline-flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: center;
   gap: 8px !important;
   min-height: var(--touch-target-min, 44px);
   padding: 8px 16px;
@@ -1176,6 +1176,8 @@ body.zen-active,
 #app.zen-active .reading-mode-bar,
 #app.zen-active .reading-pass-stepper,
 #app.zen-active .pass-skim-timer-card,
+#app.zen-active .skim-timer-bar,
+#app.zen-active .reading-mobile-tab-bar,
 #app.zen-active .reading-subtabs,
 #app.zen-active .article-meta-telemetry,
 #app.zen-active .dossier-control-bar,
@@ -1192,6 +1194,21 @@ body.zen-active,
   border-color: var(--accent-gold) !important;
   font-weight: 700 !important;
   box-shadow: 0 0 14px rgba(212, 160, 23, 0.45) !important;
+}
+
+/* Top gradient vignette in Zen mode: seamlessly fades scrolling text before the status bar & rescue pill */
+#app.zen-active::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, #090d16 0%, #090d16 45%, rgba(9, 13, 22, 0.85) 75%, transparent 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 9990;
+  pointer-events: none;
 }
 
 /* Center and clamp reading measure to 65ch in Zen mode (Cursor center-layout) */
@@ -1684,7 +1701,7 @@ body.zen-active,
     min-height: 44px !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: center;
     cursor: pointer !important;
     transition: all 0.15s ease !important;
     margin-left: auto !important;
@@ -2642,27 +2659,32 @@ body.zen-active,
 
 .commute-pill-group {
   display: flex;
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 6px;
+  background: var(--bg-surface-sunk, rgba(0, 0, 0, 0.25));
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-btn, 10px);
+  padding: 2px;
+  gap: 2px;
   overflow: hidden;
 }
 
 .commute-pill-group .pill-btn {
   flex: 1;
-  min-height: var(--touch-target-min);
+  min-height: 38px;
   background: transparent;
   border: none;
-  color: var(--ink-muted);
+  border-radius: 7px;
+  color: var(--ink-secondary);
   font-size: var(--font-kicker);
   font-family: var(--font-mono);
   font-weight: 700;
   cursor: pointer;
+  transition: all 0.15s ease;
 }
 
 .commute-pill-group .pill-btn.is-active {
   background: var(--accent-gold);
-  color: var(--bg-canvas);
+  color: #080a0f !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 /* Route sheets (Learn, Words): tonal items, no inner border */
