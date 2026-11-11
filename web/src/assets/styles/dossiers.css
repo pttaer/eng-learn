@@ -4836,17 +4836,26 @@ html[data-motion="reduce"] {
 }
 
 .speaking-mode-cluster .mode-tab {
-  padding: 6px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
   min-height: 44px;
-  white-space: normal;
+  white-space: nowrap;
   line-height: 1.25;
   font-size: var(--font-body-compact);
-  border-radius: var(--radius-sm, 6px);
+  border-radius: var(--radius-btn, 10px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: rgba(15, 23, 42, 0.6);
   color: var(--text-muted, #94a3b8);
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.speaking-mode-cluster .mode-tab svg {
+  flex-shrink: 0;
+  display: block;
 }
 
 .speaking-mode-cluster .mode-tab.active-tab {
