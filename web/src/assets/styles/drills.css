@@ -8,6 +8,16 @@
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.drills-panel {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .drills-head {
@@ -56,8 +66,6 @@
 }
 
 /* Tabs and chips: one row each, 44px targets. */
-.drills-tabs,
-.drill-chips,
 .drill-actions,
 .drill-runner-head,
 .drill-card-meta,
@@ -69,6 +77,58 @@
   flex-wrap: wrap;
   gap: var(--gap-group);
   align-items: center;
+}
+
+/* Enforce uniform 3-column grid on .drills-tabs per Invariant 16 */
+.drills-tabs {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  width: 100% !important;
+  gap: 6px !important;
+}
+
+.drill-tab {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  text-align: center;
+  width: 100%;
+}
+
+/* Fix 3-row wrapping of .drill-chips: horizontal scroll strip per Invariant 7 */
+.drill-chips {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+  -webkit-overflow-scrolling: touch;
+  gap: 8px !important;
+  padding: 4px 0 !important;
+  margin-bottom: 8px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+}
+
+.drill-chips::-webkit-scrollbar {
+  display: none !important;
+}
+
+.drill-chip {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.drill-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-group);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .drill-tab,
@@ -152,6 +212,62 @@
 .drill-card-title {
   font-size: var(--font-h3);
   margin: 0;
+}
+
+/* Card-as-Button per Invariant 9 */
+.drill-card {
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.drill-card:hover {
+  border-color: var(--accent-gold);
+  background: var(--surface-card-hover, rgba(255, 255, 255, 0.02));
+}
+
+.drill-card:focus-visible {
+  outline: 2px solid var(--focus-ring-inner, #f59e0b);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--focus-ring-outer, rgba(245, 158, 11, 0.2));
+}
+
+.drill-card:active {
+  transform: scale(0.99);
+}
+
+.drill-card-head-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.drill-card-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  margin: -10px -10px -10px 0;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  color: var(--accent-gold);
+  opacity: 0.8;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.drill-card:hover .drill-card-arrow,
+.drill-card:focus-visible .drill-card-arrow {
+  opacity: 1 !important;
+  transform: translateX(3px);
 }
 
 .drill-item.is-right {

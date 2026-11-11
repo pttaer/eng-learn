@@ -148,17 +148,18 @@ export class TensesDossier {
   }
 
   public render(): HTMLElement {
+    const accPct = this.totalAttempted > 0 ? Math.round((this.score / this.totalAttempted) * 100) : 0;
     this.container.innerHTML = `
       <div class="tenses-mode-header">
-        <div class="view-mode-toggle">
-          <button class="hud-btn view-toggle-btn ${this.viewMode === 'drill' ? 'active' : ''}" data-view="drill" style="white-space: nowrap;">
-            ${icon('dice', 13)} ${t('tenses.random_drill', { count: this.currentPool.length })}
+        <div class="view-mode-toggle" role="tablist" aria-label="Tenses View Modes">
+          <button class="hud-btn view-toggle-btn ${this.viewMode === 'drill' ? 'active' : ''}" data-view="drill" role="tab" aria-selected="${this.viewMode === 'drill'}">
+            ${icon('dice', 12)} <span class="toggle-text-full">${t('tenses.random_drill', { count: this.currentPool.length })}</span><span class="toggle-text-short">${t('tenses.drill_short', undefined, 'Luyện')}</span>
           </button>
-          <button class="hud-btn view-toggle-btn ${this.viewMode === 'gauntlet' ? 'active' : ''}" data-view="gauntlet" data-mode="gauntlet" style="white-space: nowrap;">
-            ${icon('target', 13)} ${t('tenses.gauntlet')}
+          <button class="hud-btn view-toggle-btn ${this.viewMode === 'gauntlet' ? 'active' : ''}" data-view="gauntlet" data-mode="gauntlet" role="tab" aria-selected="${this.viewMode === 'gauntlet'}">
+            ${icon('target', 12)} <span class="toggle-text-full">${t('tenses.gauntlet')}</span><span class="toggle-text-short">${t('tenses.gauntlet_short', undefined, 'Thử thách')}</span>
           </button>
-          <button class="hud-btn view-toggle-btn ${this.viewMode === 'reference' ? 'active' : ''}" data-view="reference" data-mode="codex" style="white-space: nowrap;">
-            ${icon('book', 13)} ${t('tenses.codex')}
+          <button class="hud-btn view-toggle-btn ${this.viewMode === 'reference' ? 'active' : ''}" data-view="reference" data-mode="codex" role="tab" aria-selected="${this.viewMode === 'reference'}">
+            ${icon('book', 12)} <span class="toggle-text-full">${t('tenses.codex')}</span><span class="toggle-text-short">${t('tenses.codex_short', undefined, 'Cẩm nang')}</span>
           </button>
         </div>
 
@@ -170,7 +171,7 @@ export class TensesDossier {
       </div>
 
       ${this.viewMode !== 'gauntlet' ? `
-        <div class="dossier-control-bar tenses-control-bar">
+        <div class="dossier-control-bar tenses-control-bar ${this.viewMode === 'drill' ? 'drill-control-bar' : ''}">
           <div class="dossier-tabs tenses-family-tabs">
             <button class="hud-btn filter-tab ${this.activeFamily === 'ALL' ? 'active' : ''}" data-family="ALL">${t('tenses.all_tenses')}</button>
             <button class="hud-btn filter-tab ${this.activeFamily === 'PRESENT' ? 'active' : ''}" data-family="PRESENT">${t('tenses.present')}</button>
@@ -192,17 +193,26 @@ export class TensesDossier {
 
         ${this.viewMode === 'drill' ? `
           <div class="tenses-telemetry-cluster">
-            <div class="telemetry-item">
-              <span class="telemetry-label">${t('tenses.drill_accuracy')}</span>
-              <span class="telemetry-value" style="color: var(--accent-gold); font-weight: 700;">${this.score} / ${this.totalAttempted} (${this.totalAttempted > 0 ? Math.round((this.score / this.totalAttempted) * 100) : 0}%)</span>
+            <div class="telemetry-desktop-items">
+              <div class="telemetry-item">
+                <span class="telemetry-label">${t('tenses.drill_accuracy')}</span>
+                <span class="telemetry-value" style="color: var(--accent-gold); font-weight: 700;">${this.score} / ${this.totalAttempted} (${accPct}%)</span>
+              </div>
+              <div class="telemetry-item">
+                <span class="telemetry-label">${t('tenses.hot_streak')}</span>
+                <span class="telemetry-value" style="color: var(--good); font-weight: 700;">${icon('flame', 12)} ${t('tenses.streak_in_row', { count: this.streak })}</span>
+              </div>
+              <div class="telemetry-item">
+                <span class="telemetry-label">${t('tenses.active_pool')}</span>
+                <span class="telemetry-value">${t('tenses.questions_count', { count: this.currentPool.length })}</span>
+              </div>
             </div>
-            <div class="telemetry-item">
-              <span class="telemetry-label">${t('tenses.hot_streak')}</span>
-              <span class="telemetry-value" style="color: var(--good); font-weight: 700;">${icon('flame', 12)} ${t('tenses.streak_in_row', { count: this.streak })}</span>
-            </div>
-            <div class="telemetry-item">
-              <span class="telemetry-label">${t('tenses.active_pool')}</span>
-              <span class="telemetry-value">${t('tenses.questions_count', { count: this.currentPool.length })}</span>
+            <div class="telemetry-mobile-compact">
+              <span class="telemetry-compact-cell"><strong>${t('tenses.hud_accuracy_short', undefined, 'Đúng')}:</strong> <span style="color: var(--accent-gold); font-weight: 700;">${this.score}/${this.totalAttempted} (${accPct}%)</span></span>
+              <span class="hud-sep">·</span>
+              <span class="telemetry-compact-cell"><strong>${t('tenses.hud_streak_short', undefined, 'Chuỗi')}:</strong> <span style="color: var(--good); font-weight: 700;">${icon('flame', 12)} ${this.streak}</span></span>
+              <span class="hud-sep">·</span>
+              <span class="telemetry-compact-cell"><strong>${t('tenses.hud_pool_short', undefined, 'Kho')}:</strong> <span style="color: var(--ink-secondary); font-weight: 600;">${t('tenses.hud_pool_val', { count: this.currentPool.length }, `${this.currentPool.length} câu`)}</span></span>
             </div>
           </div>
         ` : ''}
@@ -243,7 +253,7 @@ export class TensesDossier {
         <div class="tenses-card-question">
           <div class="tenses-badge-row">
             <span class="hud-badge tense-family-badge family-${q.family.toLowerCase()}">${q.family}</span>
-            <span class="telemetry-value tense-title-tag" title="${this.escapeHtml(q.tenseName + (vnName ? ' // ' + vnName : ''))}"><span class="tense-en-title">${q.tenseName}</span>${vnName ? ` <span class="tense-vn-title">// ${vnName}</span>` : ''}</span>
+            <span class="telemetry-value tense-title-tag" title="${this.escapeHtml(q.tenseName + (vnName ? ' · ' + vnName : ''))}"><span class="tense-en-title">${q.tenseName}</span>${vnName ? ` <span class="tense-vn-title">· ${vnName}</span>` : ''}</span>
             <button type="button" class="hud-btn btn-speak-prompt" data-text="${this.escapeHtml(spokenText)}" title="Listen to complete sentence audio" aria-label="Listen to sentence">
               ${icon('volume', 14)} ${t('action.pronounce')}
             </button>
@@ -254,7 +264,7 @@ export class TensesDossier {
           </div>
 
           ${q.signal ? `
-            <div class="tenses-signal-pill">
+            <div class="tenses-signal-pill tense-signal-callout">
               <span class="telemetry-label" style="color: var(--accent-gold);">${icon('target', 12)} ${t('feedback.keyword_signal')}:</span>
               <strong style="color: var(--ink-primary);">${this.escapeHtml(q.signal)}</strong>
             </div>
@@ -345,7 +355,7 @@ export class TensesDossier {
             <span class="hud-badge tense-family-badge family-${q.family.toLowerCase()}">${q.family}</span>
             <span class="telemetry-value tense-title-tag">${q.tenseName}</span>
             <button type="button" class="hud-btn btn-speak-prompt" data-text="${this.escapeHtml(spokenText)}" title="Listen to complete sentence audio" aria-label="Listen to sentence">
-              ${icon('volume', 14)} Pronounce
+              ${icon('volume', 14)} ${t('action.pronounce', undefined, 'Pronounce')}
             </button>
           </div>
 
@@ -354,8 +364,8 @@ export class TensesDossier {
           </div>
 
           ${q.signal ? `
-            <div class="tenses-signal-pill">
-              <span class="telemetry-label" style="color: var(--accent-gold);">${icon('target', 12)} Keyword signal:</span>
+            <div class="tenses-signal-pill tense-signal-callout">
+              <span class="telemetry-label" style="color: var(--accent-gold);">${icon('target', 12)} ${t('feedback.keyword_signal', undefined, 'Keyword signal')}:</span>
               <strong style="color: var(--ink-primary);">${this.escapeHtml(q.signal)}</strong>
             </div>
           ` : ''}
@@ -509,12 +519,12 @@ export class TensesDossier {
             </div>
 
             <div class="codex-section">
-              <div class="telemetry-label">CORE USAGE // CÁCH DÙNG:</div>
+              <div class="telemetry-label">CORE USAGE · CÁCH DÙNG:</div>
               <p class="codex-text">${this.escapeHtml(t.coreUsage)}</p>
             </div>
 
             <div class="codex-section pitfall-section">
-              <div class="telemetry-label" style="color: var(--alarm, #ef4444);">LỖI SAI KINH ĐIỂN // PITFALL:</div>
+              <div class="telemetry-label" style="color: var(--alarm, #ef4444);">LỖI SAI KINH ĐIỂN · PITFALL:</div>
               <p class="codex-text">${this.escapeHtml(t.commonPitfall)}</p>
             </div>
 

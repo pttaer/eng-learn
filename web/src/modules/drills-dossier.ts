@@ -1,4 +1,5 @@
 import { t } from '../core/i18n';
+import { AcousticHaptics } from '../core/acoustic-haptics';
 /**
  * Drills route: 36 Cambridge-style practice sets, a phonemic chart (Sounds) and a
  * business email builder (Email). Sets run in-place: answer, check, read the why.
@@ -57,6 +58,15 @@ export class DrillsDossier {
     this.root.addEventListener('click', e => this.onClick(e));
     this.root.addEventListener('change', e => this.onChange(e));
     this.root.addEventListener('input', e => this.onInput(e));
+    this.root.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        const el = (e.target as HTMLElement).closest<HTMLElement>('[role="button"][data-action]');
+        if (el && el.tagName !== 'BUTTON') {
+          e.preventDefault();
+          el.click();
+        }
+      }
+    });
   }
 
   public render(): HTMLElement {
@@ -74,8 +84,8 @@ export class DrillsDossier {
         <span class="drill-kicker">${t('drills.head_kicker', undefined, 'DRILLS')}</span>
         <h2 class="drills-title">${t('drills.head_title', undefined, 'Practice sets')}</h2>
       </header>
-      <div class="drills-tabs" role="tablist">${TABS.map(t => `
-        <button type="button" role="tab" class="drill-tab" data-action="tab" data-value="${t.id}" aria-selected="${t.id === this.tab}">${t.label}</button>`).join('')}
+      <div class="drills-tabs" role="tablist">${TABS.map(tTab => `
+        <button type="button" role="tab" class="drill-tab" data-action="tab" data-value="${tTab.id}" aria-selected="${tTab.id === this.tab}">${t('drills.tab_' + tTab.id, undefined, tTab.label)}</button>`).join('')}
       </div>
       <section class="drills-panel" role="tabpanel"></section>`;
     const panel = this.root.querySelector('.drills-panel') as HTMLElement;
@@ -93,11 +103,13 @@ export class DrillsDossier {
       <button type="button" class="drill-chip" data-action="skill" data-value="${s.id}" aria-pressed="${this.skill === s.id}">${s.label}</button>`).join('');
     const list = this.sets.filter(s => this.skill === 'all' || s.skill === this.skill);
     const cards = list.map(s => `
-      <article class="drill-card">
-        <div class="drill-card-meta"><span class="drill-kicker">${esc(s.skill)}</span><span class="drill-mono">${s.cefrLevel}</span><span class="drill-mono">${s.minutes} min</span></div>
+      <article class="drill-card" data-action="open" data-value="${s.id}" style="cursor: pointer;" tabindex="0" role="button" aria-label="${esc(s.title)}">
+        <div class="drill-card-head-row" style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <div class="drill-card-meta"><span class="drill-kicker">${esc(s.skill)}</span><span class="drill-mono">${s.cefrLevel}</span><span class="drill-mono">${s.minutes} min</span></div>
+          <span class="drill-card-arrow" aria-hidden="true" style="font-size: 18px; color: var(--accent-gold); opacity: 0.8;">→</span>
+        </div>
         <h3 class="drill-card-title">${esc(s.title)}</h3>
         <p class="drill-card-objective">${esc(s.objective)}</p>
-        <button type="button" class="drill-btn" data-action="open" data-value="${s.id}">${t('drills.start_btn', undefined, 'Start')}</button>
       </article>`).join('');
     panel.innerHTML = `
       <div class="drill-chips" role="group" aria-label="Skill">${chips}</div>
@@ -197,19 +209,23 @@ export class DrillsDossier {
 
     switch (action) {
       case 'tab':
+        AcousticHaptics.tap();
         this.tab = value as Tab;
         this.stopPlayback();
         break;
       case 'skill':
+        AcousticHaptics.tap();
         this.skill = value as DrillSkill | 'all';
         break;
       case 'open':
+        AcousticHaptics.tap();
         this.active = this.sets.find(s => s.id === value) ?? null;
         this.responses = {};
         this.checked = false;
         this.stopPlayback();
         break;
       case 'back':
+        AcousticHaptics.tap();
         this.active = null;
         this.stopPlayback();
         break;

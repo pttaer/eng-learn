@@ -98,6 +98,12 @@ export class CollocationsDossier {
     const total = (collocationsData as CollocationItem[]).length;
     const levelChips = `<button class="hud-btn level-tab ${this.activeLevel === 'ALL' ? 'active' : ''}" data-cefr="ALL" aria-pressed="${this.activeLevel === 'ALL'}">${t('category.all')}</button>`
       + levelChipsHtml(levelsWithContent(collocationsData as CollocationItem[]), this.activeLevel === 'ALL' ? ('' as Cefr) : this.activeLevel);
+    
+    const isMobile = typeof window !== 'undefined' && (window.innerWidth <= 768 || (typeof window.matchMedia === 'function' && window.matchMedia('(max-width: 768px)').matches));
+    const placeholderText = isMobile
+      ? (t('placeholder.search_collocations_mobile', undefined, 'Tìm kiếm cụm từ...') || t('placeholder.search_collocations').replace(/\s*\(Ctrl\+K\)/i, ''))
+      : t('placeholder.search_collocations');
+
     this.container.innerHTML = `
       <div class="collocations-mode-header">
         <div class="view-mode-toggle">
@@ -110,7 +116,7 @@ export class CollocationsDossier {
       </div>
 
       <div class="dossier-control-bar">
-        <div class="dossier-tabs">
+        <div class="dossier-tabs collocations-category-tabs">
           ${this.viewMode === 'drill' ? `<button class="hud-btn filter-tab ${this.activeCategory === 'DUE' ? 'active' : ''}" data-cat="DUE">${icon('zap')} ${t('colloc.srs_due')}</button>` : ''}
           <button class="hud-btn filter-tab ${this.activeCategory === 'ALL' ? 'active' : ''}" data-cat="ALL">${t('category.all_categories')}</button>
           <button class="hud-btn filter-tab ${this.activeCategory === 'EVERYDAY' ? 'active' : ''}" data-cat="EVERYDAY">${t('category.everyday')}</button>
@@ -124,7 +130,7 @@ export class CollocationsDossier {
           ${levelChips}
         </div>`}
         <div class="dossier-search-wrapper">
-          <input type="search" aria-label="Search collocations" class="dossier-search-input" placeholder="${t('placeholder.search_collocations')}" value="${this.escapeHtml(this.searchQuery)}" />
+          <input type="search" aria-label="Search collocations" class="dossier-search-input" placeholder="${this.escapeHtml(placeholderText)}" value="${this.escapeHtml(this.searchQuery)}" />
         </div>
         </div>
       </div>

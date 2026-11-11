@@ -106,8 +106,7 @@ export class VocabularyDossier {
             ${levelChipsHtml(levelsWithContent(this.allDeck), this.activeLevel)}
           </div>
           <div class="vocab-progress-badge">
-            <span class="vocab-count-indicator"><strong class="card-counter">${t('vocab.card_counter', { current: this.currentIndex + 1, total: totalCount })}</strong></span>
-            <span class="streak-counter">${t('vocab.reviewed_count', { count: this.reviewCountInRun })}</span>
+            <span class="vocab-count-indicator"><strong class="card-counter">${t('vocab.card_counter', { current: this.currentIndex + 1, total: totalCount })}</strong></span><span class="vocab-counter-divider" style="opacity: 0.4; margin: 0 6px;">·</span><span class="streak-counter">${t('vocab.reviewed_count', { count: this.reviewCountInRun })}</span>
           </div>
         </div>
 
@@ -182,15 +181,34 @@ export class VocabularyDossier {
     this.activeRemindCard = null; // Clear surprise status on manual step
     this.currentIndex = (this.currentIndex + delta + this.currentList.length) % this.currentList.length;
     this.renderCurrentCard();
+    this.updateProgressCounters();
+  }
+
+  private updateProgressCounters(): void {
+    const totalCount = Math.max(1, this.currentList.length);
     const counter = this.container.querySelector('.card-counter');
     if (counter) {
-      counter.textContent = `${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}`;
+      counter.textContent = t('vocab.card_counter', { current: this.currentIndex + 1, total: totalCount });
+    }
+    const streakEl = this.container.querySelector('.streak-counter');
+    if (streakEl) {
+      streakEl.textContent = t('vocab.reviewed_count', { count: this.reviewCountInRun });
     }
     const fill = this.container.querySelector('.vocab-progress-fill') as HTMLElement | null;
     if (fill) {
-      const pct = Math.min(100, Math.round(((this.currentIndex + 1) / Math.max(1, this.currentList.length)) * 100));
+      const pct = Math.min(100, Math.round(((this.currentIndex + 1) / totalCount) * 100));
       fill.style.width = `${pct}%`;
     }
+  }
+
+  private escapeHtml(raw: any): string {
+    if (raw === undefined || raw === null) return '';
+    return String(raw)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
   }
 
   private renderCurrentCard(): void {
@@ -224,14 +242,79 @@ export class VocabularyDossier {
 
     let backSubText = '';
     if (item.mode === 'ROOT_FORGE') {
-      const b = item.breakdown;
-      backSubText = `Prefix: ${b.prefix} • Root: ${b.root} • Suffix: ${b.suffix}\nFamily: ${b.derivationalFamily.join(', ')}\n${b.morphologyAnalysis}`;
+      const b = item.breakdown || {};
+      const familyChips = Array.isArray(b.derivationalFamily)
+        ? b.derivationalFamily.map((fam: string) => `<span class="morph-chip">${this.escapeHtml(fam)}</span>`).join(' ')
+        : this.escapeHtml(b.derivationalFamily || '—');
+
+      backSubText = `
+        <div class="morph-breakdown-box">
+          <div class="morph-item morph-prefix">
+            <span class="morph-label">Prefix</span>
+            <span class="morph-val">${this.escapeHtml(b.prefix || 'None')}</span>
+          </div>
+          <div class="morph-item morph-root">
+            <span class="morph-label">Root</span>
+            <span class="morph-val highlight-root">${this.escapeHtml(b.root || '—')}</span>
+          </div>
+          <div class="morph-item morph-suffix">
+            <span class="morph-label">Suffix</span>
+            <span class="morph-val">${this.escapeHtml(b.suffix || 'None')}</span>
+          </div>
+          <div class="morph-item morph-family">
+            <span class="morph-label">Family</span>
+            <span class="morph-val morph-chips">${familyChips}</span>
+          </div>
+          <div class="morph-item morph-analysis">
+            <span class="morph-label">Core Analysis</span>
+            <span class="morph-val">${this.escapeHtml(b.morphologyAnalysis || '—')}</span>
+          </div>
+        </div>
+      `;
     } else if (item.mode === 'CEFR_ASCENT') {
-      const b = item.breakdown;
-      backSubText = `CEFR: ${b.cefrRank} • Register: ${b.register}\nCollocates: ${b.collocates}\nSynonyms: ${b.synonyms.join(', ')}`;
+      const b = item.breakdown || {};
+      const synonymsChips = Array.isArray(b.synonyms)
+        ? b.synonyms.map((syn: string) => `<span class="morph-chip">${this.escapeHtml(syn)}</span>`).join(' ')
+        : this.escapeHtml(b.synonyms || '—');
+
+      backSubText = `
+        <div class="morph-breakdown-box">
+          <div class="morph-item">
+            <span class="morph-label">CEFR</span>
+            <span class="morph-val">${this.escapeHtml(b.cefrRank || '')} · ${this.escapeHtml(b.register || '')}</span>
+          </div>
+          <div class="morph-item">
+            <span class="morph-label">Collocates</span>
+            <span class="morph-val">${this.escapeHtml(Array.isArray(b.collocates) ? b.collocates.join(', ') : (b.collocates || '—'))}</span>
+          </div>
+          <div class="morph-item morph-family">
+            <span class="morph-label">Synonyms</span>
+            <span class="morph-val morph-chips">${synonymsChips}</span>
+          </div>
+        </div>
+      `;
     } else if (item.mode === 'PARTICLE_LAB') {
-      const b = item.breakdown;
-      backSubText = `Verb: ${b.verb} • Particle: [ ${b.particle} ]\nArchetype: ${b.semanticArchetype}\nLogic: ${b.particleLogic}`;
+      const b = item.breakdown || {};
+      backSubText = `
+        <div class="morph-breakdown-box">
+          <div class="morph-item">
+            <span class="morph-label">Verb</span>
+            <span class="morph-val">${this.escapeHtml(b.verb || '—')}</span>
+          </div>
+          <div class="morph-item morph-root">
+            <span class="morph-label">Particle</span>
+            <span class="morph-val highlight-root">[ ${this.escapeHtml(b.particle || '—')} ]</span>
+          </div>
+          <div class="morph-item">
+            <span class="morph-label">Archetype</span>
+            <span class="morph-val">${this.escapeHtml(b.semanticArchetype || '—')}</span>
+          </div>
+          <div class="morph-item morph-analysis">
+            <span class="morph-label">Logic</span>
+            <span class="morph-val">${this.escapeHtml(b.particleLogic || '—')}</span>
+          </div>
+        </div>
+      `;
     }
 
     this.currentCardHandle = AtomicCard.create({
@@ -242,7 +325,7 @@ export class VocabularyDossier {
       statusBadge,
       hideFrontRating: true,
       front: {
-        promptLabel: isRemind ? t('vocab.engram_check', undefined, 'RETRIEVAL ENGRAM CHECK') : t('vocab.prompt_label', undefined, 'CHALLENGE // RECALL & DECONSTRUCT'),
+        promptLabel: isRemind ? t('vocab.engram_check', undefined, 'RETRIEVAL ENGRAM CHECK') : t('vocab.prompt_label', undefined, 'CHALLENGE · RECALL & DECONSTRUCT'),
         mainText: item.wordOrChunk,
         subText: item.contextSentence
       },
@@ -281,13 +364,10 @@ export class VocabularyDossier {
       this.reviewCountInRun = Math.max(0, this.reviewCountInRun - 1);
       this.currentIndex = prevIndex;
       this.renderCurrentCard();
+      this.updateProgressCounters();
     });
 
     this.reviewCountInRun += 1;
-    const streakEl = this.container.querySelector('.streak-counter');
-    if (streakEl) {
-      streakEl.textContent = t('vocab.reviewed_words', { count: this.reviewCountInRun });
-    }
 
     // Roguelike surprise encounter logic:
     // Approximately every 7-10 reviews, roll chance to drop a Remind Card if not currently in one
@@ -322,15 +402,7 @@ export class VocabularyDossier {
     }
 
     this.renderCurrentCard();
-    const counter = this.container.querySelector('.card-counter');
-    if (counter) {
-      counter.textContent = `${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}`;
-    }
-    const fill = this.container.querySelector('.vocab-progress-fill') as HTMLElement | null;
-    if (fill) {
-      const pct = Math.min(100, Math.round(((this.currentIndex + 1) / Math.max(1, this.currentList.length)) * 100));
-      fill.style.width = `${pct}%`;
-    }
+    this.updateProgressCounters();
   }
 
   public handleGlobalKey(key: string): boolean {

@@ -228,7 +228,7 @@ export class GrammarDossier {
       <!-- Interactive Syntactic Transformation Console (ENG-60) -->
       <div class="grammar-transform-console">
         <label for="grammar-transform-input" class="telemetry-label" style="display: block; margin-bottom: 6px;">
-          [ ${t('grammar.active_input', undefined, 'ACTIVE SYNTACTIC TRANSFORMATION INPUT')} ]:
+          [ ${t('grammar.active_input', undefined, 'SYNTACTIC TRANSFORMATION (OPTIONAL BEFORE FLIP)')} ]:
         </label>
         <div class="grammar-input-row">
           <input
@@ -301,6 +301,7 @@ export class GrammarDossier {
       category: categoryLabel,
       indexStr: `[ ${this.currentIndex + 1} / ${this.currentList.length} ]`,
       statusBadge,
+      hideFrontRating: true,
       front: {
         customContent: frontEl,
         mainText: item.promptSentence

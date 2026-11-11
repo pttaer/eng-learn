@@ -60,7 +60,7 @@ function createStaticServer() {
   });
 }
 
-const MODAL_SCROLL_SELECTOR = '.modal-body, .mobile-action-sheet, .lexicon-drawer-body, .sheet-body, .drawer-content, .completion-modal-overlay, .commute-player-sheet, .ie-tip-modal-body, .skill-node-card, .ie-tip-modal-box, .cd-band-modal-card, .ie-diag-dashboard, .ie-sim-panel';
+const MODAL_SCROLL_SELECTOR = '.completion-receipt-card, .progression-modal-card, .quiz-modal-card, .mistake-vault-sheet, .floating-note-body, .floating-note-window, .compass-radial-menu, .modal-body, .mobile-action-sheet, .lexicon-drawer-body, .sheet-body, .drawer-content, .completion-modal-overlay, .commute-player-sheet, .ie-tip-modal-body, .skill-node-card, .ie-tip-modal-box, .cd-band-modal-card, .ie-diag-dashboard, .ie-sim-panel';
 
 const auditIssues = [];
 const capturedHashes = new Map(); // hash -> first file path
@@ -246,9 +246,9 @@ async function captureFlowView(page, folderName, baseName, label, options = {}) 
     await page.evaluate((modalSel) => {
       window.scrollTo(0, 0);
       const m = document.getElementById('workspace-mount');
-      if (m) m.scrollTop = 0;
+      if (m) { m.scrollTop = 0; m.scrollLeft = 0; }
       const body = document.querySelector(modalSel);
-      if (body) body.scrollTop = 0;
+      if (body) { body.scrollTop = 0; body.scrollLeft = 0; }
     }, MODAL_SCROLL_SELECTOR);
   }
   await new Promise(r => setTimeout(r, 400));
@@ -260,7 +260,13 @@ async function captureFlowView(page, folderName, baseName, label, options = {}) 
   checkDuplicateHash(topPath, `${folderName}/${baseName}-01-top.png`);
   console.log(`  [📸 TOP] ${folderName}/${baseName}-01-top.png (${label})`);
 
-  if (options.skipScroll) return;
+  if (options.skipScroll) {
+    const midPath = path.join(dir, `${baseName}-02-scrolled.png`);
+    const btmPath = path.join(dir, `${baseName}-03-bottom.png`);
+    if (fs.existsSync(midPath)) fs.unlinkSync(midPath);
+    if (fs.existsSync(btmPath)) fs.unlinkSync(btmPath);
+    return;
+  }
 
   // 2. Measure scrollability
   const scrollInfo = await page.evaluate((modalSel) => {
@@ -327,7 +333,15 @@ async function captureFlowView(page, folderName, baseName, label, options = {}) 
       await page.screenshot({ path: btmPath, fullPage: false });
       checkDuplicateHash(btmPath, `${folderName}/${baseName}-03-bottom.png`);
       console.log(`  [⬇️ BTM] ${folderName}/${baseName}-03-bottom.png`);
+    } else {
+      const btmPath = path.join(dir, `${baseName}-03-bottom.png`);
+      if (fs.existsSync(btmPath)) fs.unlinkSync(btmPath);
     }
+  } else {
+    const midPath = path.join(dir, `${baseName}-02-scrolled.png`);
+    const btmPath = path.join(dir, `${baseName}-03-bottom.png`);
+    if (fs.existsSync(midPath)) fs.unlinkSync(midPath);
+    if (fs.existsSync(btmPath)) fs.unlinkSync(btmPath);
   }
 }
 

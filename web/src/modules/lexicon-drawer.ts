@@ -314,7 +314,7 @@ export class LexiconDrawer {
 
       <div class="lexicon-drawer-footer apple-modal-footer">
         <button type="button" class="hud-btn lexicon-srs-btn" id="lexicon-srs-btn" aria-label="${t('lexicon.add_to_srs_aria', undefined, 'Add word to SRS Spaced Repetition Deck')}">
-          ${t('lexicon.bookmark_srs')}
+          + ${t('lexicon.bookmark_srs', undefined, 'Add to SRS Deck')}
         </button>
         <button type="button" class="apple-bottom-close-btn btn-lexicon-bottom-close" id="lexicon-bottom-close" aria-label="${t('common.close', undefined, 'Close')}">
           ${t('common.close', undefined, 'Close')}
@@ -650,7 +650,7 @@ export class LexiconDrawer {
     const existing = StorageManager.getCardState(cardId);
 
     if (existing) {
-      this.srsBtn.textContent = '✓ In SRS Deck';
+      this.srsBtn.textContent = `✓ ${t('lexicon.in_srs', undefined, 'In SRS Deck')}`;
       this.srsBtn.classList.add('is-added');
       this.srsBtn.disabled = true;
 
@@ -661,7 +661,7 @@ export class LexiconDrawer {
         : `Status: Next review in ${existing.interval}d (${dueDate.toLocaleDateString()})`;
       this.srsStatusEl.textContent = statusText;
     } else {
-      this.srsBtn.textContent = '+ Add to SRS Deck';
+      this.srsBtn.textContent = `+ ${t('lexicon.bookmark_srs', undefined, 'Add to SRS Deck')}`;
       this.srsBtn.classList.remove('is-added');
       this.srsBtn.disabled = false;
       this.srsStatusEl.textContent = 'Not yet in your spaced repetition review queue';
@@ -695,7 +695,7 @@ export class LexiconDrawer {
     }
 
     // Visual feedback
-    this.srsBtn.textContent = '✓ Added to SRS Deck';
+    this.srsBtn.textContent = `✓ ${t('lexicon.in_srs', undefined, 'In SRS Deck')}`;
     this.srsBtn.classList.add('is-added');
     this.srsBtn.disabled = true;
     this.srsStatusEl.textContent = 'Card scheduled! Initial review due in 1 day (EF: 2.50)';

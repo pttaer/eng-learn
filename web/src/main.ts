@@ -153,6 +153,7 @@ class App {
 
     this.cornerCompass = new CornerCompass();
     document.getElementById('compass-mount')?.appendChild(this.cornerCompass.getElement());
+    (window as any).CornerCompass = this.cornerCompass;
 
     // 3. Initialize Study Dossiers (Skill Tree + 6 Pillars + Habits + Mediation + Analytics)
     this.skillTreeView = new SkillTreeView();
@@ -382,6 +383,7 @@ class App {
 
     window.scrollTo(0, 0);
     this.workspaceMount.scrollTop = 0;
+    this.workspaceMount.scrollLeft = 0;
 
     if (route === 'singularity') {
       this.perspectiveCanvas.setVisible(true);
