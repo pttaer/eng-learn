@@ -1250,7 +1250,7 @@ export class HeaderHUD {
 
               <!-- Ghost Actions -->
               <button type="button" class="btn--ghost btn-restart-placement" style="width: 100%;">
-                ${icon('refresh-cw', 16)} <span>${t('settings.reset_placement', undefined, 'Retake 2-Min Placement Assessment')}</span>
+                ${icon('rotateCcw', 16)} <span>${t('settings.reset_placement', undefined, 'Retake 2-Min Placement Assessment')}</span>
               </button>
               <button type="button" class="btn--ghost btn-restart-tour" style="width: 100%;">
                 ${icon('compass', 16)} <span>${t('settings.reset_tour', undefined, 'Re-run Onboarding Tour')}</span>
